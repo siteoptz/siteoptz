@@ -1,0 +1,469 @@
+import { GetStaticPaths, GetStaticProps } from 'next';
+import { useState } from 'react';
+import Head from 'next/head';
+import toolsData from '../../data/tools.json';
+import { generateSEOData } from '../../templates/seo-templates';
+import HeroSection from '../../components/comparison/HeroSection';
+import ComparisonTable from '../../components/comparison/ComparisonTable';
+import PricingCalculator from '../../components/comparison/PricingCalculator';
+import FAQSection from '../../components/comparison/FAQSection';
+import CTASection from '../../components/comparison/CTASection';
+
+interface Tool {
+  tool_name: string;
+  vendor: string;
+  logo_url: string;
+  description: string;
+  features: {
+    core: string[];
+    advanced: string[];
+    integrations: string[];
+  };
+  pros: string[];
+  cons: string[];
+  pricing: {
+    monthly: number;
+    yearly: number;
+    enterprise: string;
+    plans: {
+      plan_name: string;
+      price: string;
+      features_included: string[];
+    }[];
+  };
+  official_url: string;
+  affiliate_link: string;
+  faq: {
+    question: string;
+    answer: string;
+  }[];
+  rating: number;
+  review_count: number;
+  best_use_cases: string[];
+  target_audience: string[];
+  free_trial: boolean;
+  demo_available: boolean;
+}
+
+interface ComparisonPageProps {
+  toolA: Tool;
+  toolB: Tool;
+  seoData: {
+    pageTitle: string;
+    metaDescription: string;
+    schemas: {
+      faq: any;
+      productA: any;
+      productB: any;
+      article: any;
+      breadcrumb: any;
+      howTo: any;
+    };
+    keywords: string;
+  };
+  slug: string;
+  relatedComparisons: Array<{
+    title: string;
+    slug: string;
+    toolAName: string;
+    toolBName: string;
+  }>;
+  allTools: Tool[];
+}
+
+export default function ComparisonPage({ toolA, toolB, seoData, slug, relatedComparisons, allTools }: ComparisonPageProps) {
+  const [showAllFeatures, setShowAllFeatures] = useState(true);
+  
+  // Combine FAQs from both tools
+  const combinedFAQs = [...toolA.faq, ...toolB.faq];
+
+  // SEO schemas are now generated from templates
+
+  return (
+    <>
+      <Head>
+        <title>{seoData.pageTitle}</title>
+        <meta name="description" content={seoData.metaDescription} />
+        <meta name="keywords" content={seoData.keywords} />
+        <meta name="author" content="SiteOptz" />
+        <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
+        
+        {/* Open Graph */}
+        <meta property="og:title" content={seoData.pageTitle} />
+        <meta property="og:description" content={seoData.metaDescription} />
+        <meta property="og:type" content="article" />
+        <meta property="og:url" content={`https://siteoptz.com/compare/${slug}`} />
+        <meta property="og:site_name" content="SiteOptz" />
+        <meta property="og:locale" content="en_US" />
+        <meta property="article:author" content="SiteOptz" />
+        <meta property="article:published_time" content="2025-01-15T00:00:00Z" />
+        <meta property="article:modified_time" content={new Date().toISOString()} />
+        <meta property="article:section" content="Technology" />
+        <meta property="article:tag" content={`${toolA.tool_name}, ${toolB.tool_name}, AI Tools, Comparison`} />
+        
+        {/* Twitter Card */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content={seoData.pageTitle} />
+        <meta name="twitter:description" content={seoData.metaDescription} />
+        
+        {/* Enhanced JSON-LD Schemas */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(seoData.schemas.faq) }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(seoData.schemas.productA) }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(seoData.schemas.productB) }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(seoData.schemas.article) }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(seoData.schemas.breadcrumb) }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(seoData.schemas.howTo) }}
+        />
+        
+        {/* Canonical URL */}
+        <link rel="canonical" href={`https://siteoptz.com/compare/${slug}`} />
+      </Head>
+
+      <div className="min-h-screen bg-gray-50">
+        {/* Hero Section */}
+        <HeroSection toolA={toolA} toolB={toolB} />
+
+        {/* Enhanced Comparison Link */}
+        <div className="bg-white border-b">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
+            <div className="bg-gradient-to-r from-blue-50 to-purple-50 border border-blue-200 rounded-lg p-4">
+              <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between">
+                <div>
+                  <h3 className="text-lg font-semibold text-blue-900 mb-1">
+                    Want to compare more tools?
+                  </h3>
+                  <p className="text-blue-700 text-sm">
+                    Use our interactive comparison table to filter and compare multiple AI tools side-by-side.
+                  </p>
+                </div>
+                <a
+                  href="/compare-tools"
+                  className="mt-3 sm:mt-0 sm:ml-4 bg-blue-600 hover:bg-blue-700 text-white px-6 py-2 rounded-lg transition-colors font-medium text-sm whitespace-nowrap"
+                >
+                  Compare All Tools
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Quick Answer Section */}
+        <section className="py-12 bg-white">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center mb-12">
+              <h2 className="text-3xl font-bold text-gray-900 mb-4">Quick Answer</h2>
+              <p className="text-lg text-gray-600">Choose the right tool based on your specific needs</p>
+            </div>
+            
+            <div className="grid md:grid-cols-2 gap-8">
+              <div className="bg-blue-50 p-8 rounded-xl">
+                <h3 className="text-xl font-semibold text-blue-900 mb-4">Choose {toolA.tool_name} if:</h3>
+                <ul className="space-y-2">
+                  {toolA.pros.slice(0, 4).map((pro, index) => (
+                    <li key={index} className="flex items-start">
+                      <svg className="w-5 h-5 text-green-500 mt-0.5 mr-2 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                        <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                      </svg>
+                      <span className="text-blue-800">{pro}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+              
+              <div className="bg-purple-50 p-8 rounded-xl">
+                <h3 className="text-xl font-semibold text-purple-900 mb-4">Choose {toolB.tool_name} if:</h3>
+                <ul className="space-y-2">
+                  {toolB.pros.slice(0, 4).map((pro, index) => (
+                    <li key={index} className="flex items-start">
+                      <svg className="w-5 h-5 text-green-500 mt-0.5 mr-2 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                        <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                      </svg>
+                      <span className="text-purple-800">{pro}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Comparison Table */}
+        <section className="py-16 bg-gray-50">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center mb-12">
+              <h2 className="text-3xl font-bold text-gray-900 mb-4">Feature Comparison</h2>
+              <div className="flex justify-center mb-8">
+                <div className="bg-white p-1 rounded-lg shadow-sm">
+                  <button
+                    onClick={() => setShowAllFeatures(true)}
+                    className={`px-4 py-2 rounded-md text-sm font-medium transition-colors ${
+                      showAllFeatures
+                        ? 'bg-blue-600 text-white'
+                        : 'text-gray-500 hover:text-gray-700'
+                    }`}
+                  >
+                    All Features
+                  </button>
+                  <button
+                    onClick={() => setShowAllFeatures(false)}
+                    className={`px-4 py-2 rounded-md text-sm font-medium transition-colors ${
+                      !showAllFeatures
+                        ? 'bg-blue-600 text-white'
+                        : 'text-gray-500 hover:text-gray-700'
+                    }`}
+                  >
+                    Key Differences
+                  </button>
+                </div>
+              </div>
+            </div>
+            
+            <ComparisonTable 
+              toolA={toolA} 
+              toolB={toolB} 
+              showAllFeatures={showAllFeatures}
+            />
+          </div>
+        </section>
+
+        {/* Pricing Calculator */}
+        <section className="py-16 bg-white">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center mb-12">
+              <h2 className="text-3xl font-bold text-gray-900 mb-4">Pricing Calculator</h2>
+              <p className="text-lg text-gray-600">Calculate the total cost for your team</p>
+            </div>
+            
+            <PricingCalculator toolA={toolA} toolB={toolB} />
+          </div>
+        </section>
+
+        {/* FAQ Section */}
+        <section className="py-16 bg-gray-50">
+          <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center mb-12">
+              <h2 className="text-3xl font-bold text-gray-900 mb-4">Frequently Asked Questions</h2>
+              <p className="text-lg text-gray-600">Get answers to common questions about {toolA.tool_name} and {toolB.tool_name}</p>
+            </div>
+            
+            <FAQSection faqs={combinedFAQs} />
+          </div>
+        </section>
+
+        {/* Related Comparisons Section */}
+        <section className="py-16 bg-white">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center mb-12">
+              <h2 className="text-3xl font-bold text-gray-900 mb-4">Related Comparisons</h2>
+              <p className="text-lg text-gray-600">Explore other AI tool comparisons</p>
+            </div>
+            
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {relatedComparisons.slice(0, 6).map((comparison, index) => (
+                <div key={index} className="bg-gray-50 rounded-xl p-6 hover:shadow-lg transition-shadow">
+                  <h3 className="text-lg font-semibold text-gray-900 mb-3">
+                    <a 
+                      href={`/compare/${comparison.slug}`}
+                      className="hover:text-blue-600 transition-colors"
+                    >
+                      {comparison.title}
+                    </a>
+                  </h3>
+                  <p className="text-gray-600 text-sm mb-4">
+                    Compare {comparison.toolAName} and {comparison.toolBName} features, pricing, and use cases.
+                  </p>
+                  <a 
+                    href={`/compare/${comparison.slug}`}
+                    className="text-blue-600 hover:text-blue-800 text-sm font-medium transition-colors"
+                  >
+                    Read Comparison →
+                  </a>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Individual Tool Review Links */}
+        <section className="py-16 bg-gray-50">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center mb-12">
+              <h2 className="text-3xl font-bold text-gray-900 mb-4">Individual Tool Reviews</h2>
+              <p className="text-lg text-gray-600">Get detailed insights on each tool</p>
+            </div>
+            
+            <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+              <div className="bg-white rounded-xl p-8 shadow-lg">
+                <div className="flex items-center mb-4">
+                  <img
+                    src={toolA.logo_url}
+                    alt={`${toolA.tool_name} AI tool review logo - ${toolA.vendor} artificial intelligence platform comparison`}
+                    className="w-12 h-12 mr-4"
+                  />
+                  <h3 className="text-xl font-bold text-gray-900">{toolA.tool_name} Review</h3>
+                </div>
+                <p className="text-gray-600 mb-6">
+                  Complete review of {toolA.tool_name} features, pricing, pros, cons, and use cases.
+                </p>
+                <a 
+                  href={`/reviews/${toolA.tool_name.toLowerCase().replace(/\s+/g, '-')}`}
+                  className="inline-flex items-center bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-6 rounded-lg transition-colors"
+                >
+                  Read {toolA.tool_name} Review
+                  <svg className="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                  </svg>
+                </a>
+              </div>
+              
+              <div className="bg-white rounded-xl p-8 shadow-lg">
+                <div className="flex items-center mb-4">
+                  <img
+                    src={toolB.logo_url}
+                    alt={`${toolB.tool_name} AI tool review logo - ${toolB.vendor} artificial intelligence platform comparison`}
+                    className="w-12 h-12 mr-4"
+                  />
+                  <h3 className="text-xl font-bold text-gray-900">{toolB.tool_name} Review</h3>
+                </div>
+                <p className="text-gray-600 mb-6">
+                  Complete review of {toolB.tool_name} features, pricing, pros, cons, and use cases.
+                </p>
+                <a 
+                  href={`/reviews/${toolB.tool_name.toLowerCase().replace(/\s+/g, '-')}`}
+                  className="inline-flex items-center bg-purple-600 hover:bg-purple-700 text-white font-semibold py-3 px-6 rounded-lg transition-colors"
+                >
+                  Read {toolB.tool_name} Review
+                  <svg className="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* CTA Section */}
+        <CTASection toolA={toolA} toolB={toolB} />
+      </div>
+    </>
+  );
+}
+
+export const getStaticPaths: GetStaticPaths = async () => {
+  const tools = toolsData.ai_tools;
+  const paths = [];
+
+  // Generate all possible tool combinations
+  for (let i = 0; i < tools.length; i++) {
+    for (let j = i + 1; j < tools.length; j++) {
+      const toolA = tools[i];
+      const toolB = tools[j];
+      
+      const slug = `${toolA.tool_name.toLowerCase().replace(/\s+/g, '-')}-vs-${toolB.tool_name.toLowerCase().replace(/\s+/g, '-')}`;
+      
+      paths.push({
+        params: {
+          slug: slug
+        }
+      });
+    }
+  }
+
+  return {
+    paths,
+    fallback: false
+  };
+};
+
+export const getStaticProps: GetStaticProps = async ({ params }) => {
+  const slug = params?.slug as string;
+  
+  if (!slug || !slug.includes('-vs-')) {
+    return {
+      notFound: true
+    };
+  }
+  
+  // Parse slug to get tool names
+  const [toolASlug, toolBSlug] = slug.split('-vs-');
+  
+  const tools = toolsData.ai_tools;
+  
+  // Find tools by slug
+  const toolA = tools.find(tool => 
+    tool.tool_name.toLowerCase().replace(/\s+/g, '-') === toolASlug
+  );
+  const toolB = tools.find(tool => 
+    tool.tool_name.toLowerCase().replace(/\s+/g, '-') === toolBSlug
+  );
+
+  if (!toolA || !toolB) {
+    return {
+      notFound: true
+    };
+  }
+
+  // Generate SEO data using templates
+  const seoData = generateSEOData(toolA, toolB, slug);
+
+  // Generate related comparisons (exclude current comparison)
+  const relatedComparisons = [];
+  const currentToolNames = [toolA.tool_name, toolB.tool_name];
+  
+  for (let i = 0; i < tools.length; i++) {
+    for (let j = i + 1; j < tools.length; j++) {
+      const tA = tools[i];
+      const tB = tools[j];
+      
+      // Skip current comparison
+      if ((tA.tool_name === toolA.tool_name && tB.tool_name === toolB.tool_name) ||
+          (tA.tool_name === toolB.tool_name && tB.tool_name === toolA.tool_name)) {
+        continue;
+      }
+      
+      // Prioritize comparisons that include one of the current tools
+      const hasCommonTool = currentToolNames.includes(tA.tool_name) || currentToolNames.includes(tB.tool_name);
+      
+      const comparisonSlug = `${tA.tool_name.toLowerCase().replace(/\s+/g, '-')}-vs-${tB.tool_name.toLowerCase().replace(/\s+/g, '-')}`;
+      
+      relatedComparisons.push({
+        title: `${tA.tool_name} vs ${tB.tool_name}`,
+        slug: comparisonSlug,
+        toolAName: tA.tool_name,
+        toolBName: tB.tool_name,
+        priority: hasCommonTool ? 1 : 2
+      });
+    }
+  }
+  
+  // Sort by priority (related tools first) and limit
+  relatedComparisons.sort((a, b) => a.priority - b.priority);
+
+  return {
+    props: {
+      toolA,
+      toolB,
+      seoData,
+      slug,
+      relatedComparisons: relatedComparisons.slice(0, 12),
+      allTools: tools
+    }
+  };
+};

@@ -1,0 +1,1588 @@
+{
+  "metadata": {
+    "generated": "2025-08-12T21:37:04.179Z",
+    "total_comparisons": 78,
+    "total_reviews": 13,
+    "total_pages": 91,
+    "tools_count": 13
+  },
+  "comparisons": [
+    {
+      "toolA": "ChatGPT",
+      "toolB": "Claude",
+      "slugA": "chatgpt",
+      "slugB": "claude",
+      "comparisonSlug": "chatgpt-vs-claude",
+      "url": "/compare/chatgpt-vs-claude",
+      "title": "ChatGPT vs Claude",
+      "metaTitle": "ChatGPT vs Claude — Features, Pricing, and Comparison [2025]",
+      "metaDescription": "ChatGPT vs Claude: Compare features, pricing ($0 vs $20/month), and pros/cons. Expert analysis for 2025."
+    },
+    {
+      "toolA": "ChatGPT",
+      "toolB": "Jasper AI",
+      "slugA": "chatgpt",
+      "slugB": "jasper-ai",
+      "comparisonSlug": "chatgpt-vs-jasper-ai",
+      "url": "/compare/chatgpt-vs-jasper-ai",
+      "title": "ChatGPT vs Jasper AI",
+      "metaTitle": "ChatGPT vs Jasper AI — Features, Pricing, and Comparison [2025]",
+      "metaDescription": "ChatGPT vs Jasper AI: Compare features, pricing ($0 vs $39/month), and pros/cons. Expert analysis for 2025."
+    },
+    {
+      "toolA": "ChatGPT",
+      "toolB": "Copy.ai",
+      "slugA": "chatgpt",
+      "slugB": "copyai",
+      "comparisonSlug": "chatgpt-vs-copyai",
+      "url": "/compare/chatgpt-vs-copyai",
+      "title": "ChatGPT vs Copy.ai",
+      "metaTitle": "ChatGPT vs Copy.ai — Features, Pricing, and Comparison [2025]",
+      "metaDescription": "ChatGPT vs Copy.ai: Compare features, pricing ($0 vs $0), and pros/cons. Expert analysis for 2025."
+    },
+    {
+      "toolA": "ChatGPT",
+      "toolB": "Writesonic",
+      "slugA": "chatgpt",
+      "slugB": "writesonic",
+      "comparisonSlug": "chatgpt-vs-writesonic",
+      "url": "/compare/chatgpt-vs-writesonic",
+      "title": "ChatGPT vs Writesonic",
+      "metaTitle": "ChatGPT vs Writesonic — Features, Pricing, and Comparison [2025]",
+      "metaDescription": "ChatGPT vs Writesonic: Compare features, pricing ($0 vs $0), and pros/cons. Expert analysis for 2025."
+    },
+    {
+      "toolA": "ChatGPT",
+      "toolB": "Surfer SEO",
+      "slugA": "chatgpt",
+      "slugB": "surfer-seo",
+      "comparisonSlug": "chatgpt-vs-surfer-seo",
+      "url": "/compare/chatgpt-vs-surfer-seo",
+      "title": "ChatGPT vs Surfer SEO",
+      "metaTitle": "ChatGPT vs Surfer SEO — Features, Pricing, and Comparison [2025]",
+      "metaDescription": "ChatGPT vs Surfer SEO: Compare features, pricing ($0 vs $89/month), and pros/cons. Expert analysis for 2025."
+    },
+    {
+      "toolA": "ChatGPT",
+      "toolB": "Frase",
+      "slugA": "chatgpt",
+      "slugB": "frase",
+      "comparisonSlug": "chatgpt-vs-frase",
+      "url": "/compare/chatgpt-vs-frase",
+      "title": "ChatGPT vs Frase",
+      "metaTitle": "ChatGPT vs Frase — Features, Pricing, and Comparison [2025]",
+      "metaDescription": "ChatGPT vs Frase: Compare features, pricing ($0 vs $45/month), and pros/cons. Expert analysis for 2025."
+    },
+    {
+      "toolA": "ChatGPT",
+      "toolB": "Midjourney",
+      "slugA": "chatgpt",
+      "slugB": "midjourney",
+      "comparisonSlug": "chatgpt-vs-midjourney",
+      "url": "/compare/chatgpt-vs-midjourney",
+      "title": "ChatGPT vs Midjourney",
+      "metaTitle": "ChatGPT vs Midjourney — Features, Pricing, and Comparison [2025]",
+      "metaDescription": "ChatGPT vs Midjourney: Compare features, pricing ($0 vs $10/month), and pros/cons. Expert analysis for 2025."
+    },
+    {
+      "toolA": "ChatGPT",
+      "toolB": "Gemini",
+      "slugA": "chatgpt",
+      "slugB": "gemini",
+      "comparisonSlug": "chatgpt-vs-gemini",
+      "url": "/compare/chatgpt-vs-gemini",
+      "title": "ChatGPT vs Gemini",
+      "metaTitle": "ChatGPT vs Gemini — Features, Pricing, and Comparison [2025]",
+      "metaDescription": "ChatGPT vs Gemini: Compare features, pricing ($0 vs $0), and pros/cons. Expert analysis for 2025."
+    },
+    {
+      "toolA": "ChatGPT",
+      "toolB": "Perplexity AI",
+      "slugA": "chatgpt",
+      "slugB": "perplexity-ai",
+      "comparisonSlug": "chatgpt-vs-perplexity-ai",
+      "url": "/compare/chatgpt-vs-perplexity-ai",
+      "title": "ChatGPT vs Perplexity AI",
+      "metaTitle": "ChatGPT vs Perplexity AI — Features, Pricing, and Comparison [2025]",
+      "metaDescription": "ChatGPT vs Perplexity AI: Compare features, pricing ($0 vs $0), and pros/cons. Expert analysis for 2025."
+    },
+    {
+      "toolA": "ChatGPT",
+      "toolB": "Anthropic Claude",
+      "slugA": "chatgpt",
+      "slugB": "anthropic-claude",
+      "comparisonSlug": "chatgpt-vs-anthropic-claude",
+      "url": "/compare/chatgpt-vs-anthropic-claude",
+      "title": "ChatGPT vs Anthropic Claude",
+      "metaTitle": "ChatGPT vs Anthropic Claude — Features, Pricing, and Comparison [2025]",
+      "metaDescription": "ChatGPT vs Anthropic Claude: Compare features, pricing ($0 vs $20/month), and pros/cons. Expert analysis for 2025."
+    },
+    {
+      "toolA": "ChatGPT",
+      "toolB": "GitHub Copilot",
+      "slugA": "chatgpt",
+      "slugB": "github-copilot",
+      "comparisonSlug": "chatgpt-vs-github-copilot",
+      "url": "/compare/chatgpt-vs-github-copilot",
+      "title": "ChatGPT vs GitHub Copilot",
+      "metaTitle": "ChatGPT vs GitHub Copilot — Features, Pricing, and Comparison [2025]",
+      "metaDescription": "ChatGPT vs GitHub Copilot: Compare features, pricing ($0 vs $10/month), and pros/cons. Expert analysis for 2025."
+    },
+    {
+      "toolA": "ChatGPT",
+      "toolB": "Notion AI",
+      "slugA": "chatgpt",
+      "slugB": "notion-ai",
+      "comparisonSlug": "chatgpt-vs-notion-ai",
+      "url": "/compare/chatgpt-vs-notion-ai",
+      "title": "ChatGPT vs Notion AI",
+      "metaTitle": "ChatGPT vs Notion AI — Features, Pricing, and Comparison [2025]",
+      "metaDescription": "ChatGPT vs Notion AI: Compare features, pricing ($0 vs $10/month per user), and pros/cons. Expert analysis for 2025."
+    },
+    {
+      "toolA": "Claude",
+      "toolB": "Jasper AI",
+      "slugA": "claude",
+      "slugB": "jasper-ai",
+      "comparisonSlug": "claude-vs-jasper-ai",
+      "url": "/compare/claude-vs-jasper-ai",
+      "title": "Claude vs Jasper AI",
+      "metaTitle": "Claude vs Jasper AI — Features, Pricing, and Comparison [2025]",
+      "metaDescription": "Claude vs Jasper AI: Compare features, pricing ($20/month vs $39/month), and pros/cons. Expert analysis for 2025."
+    },
+    {
+      "toolA": "Claude",
+      "toolB": "Copy.ai",
+      "slugA": "claude",
+      "slugB": "copyai",
+      "comparisonSlug": "claude-vs-copyai",
+      "url": "/compare/claude-vs-copyai",
+      "title": "Claude vs Copy.ai",
+      "metaTitle": "Claude vs Copy.ai — Features, Pricing, and Comparison [2025]",
+      "metaDescription": "Claude vs Copy.ai: Compare features, pricing ($20/month vs $0), and pros/cons. Expert analysis for 2025."
+    },
+    {
+      "toolA": "Claude",
+      "toolB": "Writesonic",
+      "slugA": "claude",
+      "slugB": "writesonic",
+      "comparisonSlug": "claude-vs-writesonic",
+      "url": "/compare/claude-vs-writesonic",
+      "title": "Claude vs Writesonic",
+      "metaTitle": "Claude vs Writesonic — Features, Pricing, and Comparison [2025]",
+      "metaDescription": "Claude vs Writesonic: Compare features, pricing ($20/month vs $0), and pros/cons. Expert analysis for 2025."
+    },
+    {
+      "toolA": "Claude",
+      "toolB": "Surfer SEO",
+      "slugA": "claude",
+      "slugB": "surfer-seo",
+      "comparisonSlug": "claude-vs-surfer-seo",
+      "url": "/compare/claude-vs-surfer-seo",
+      "title": "Claude vs Surfer SEO",
+      "metaTitle": "Claude vs Surfer SEO — Features, Pricing, and Comparison [2025]",
+      "metaDescription": "Claude vs Surfer SEO: Compare features, pricing ($20/month vs $89/month), and pros/cons. Expert analysis for 2025."
+    },
+    {
+      "toolA": "Claude",
+      "toolB": "Frase",
+      "slugA": "claude",
+      "slugB": "frase",
+      "comparisonSlug": "claude-vs-frase",
+      "url": "/compare/claude-vs-frase",
+      "title": "Claude vs Frase",
+      "metaTitle": "Claude vs Frase — Features, Pricing, and Comparison [2025]",
+      "metaDescription": "Claude vs Frase: Compare features, pricing ($20/month vs $45/month), and pros/cons. Expert analysis for 2025."
+    },
+    {
+      "toolA": "Claude",
+      "toolB": "Midjourney",
+      "slugA": "claude",
+      "slugB": "midjourney",
+      "comparisonSlug": "claude-vs-midjourney",
+      "url": "/compare/claude-vs-midjourney",
+      "title": "Claude vs Midjourney",
+      "metaTitle": "Claude vs Midjourney — Features, Pricing, and Comparison [2025]",
+      "metaDescription": "Claude vs Midjourney: Compare features, pricing ($20/month vs $10/month), and pros/cons. Expert analysis for 2025."
+    },
+    {
+      "toolA": "Claude",
+      "toolB": "Gemini",
+      "slugA": "claude",
+      "slugB": "gemini",
+      "comparisonSlug": "claude-vs-gemini",
+      "url": "/compare/claude-vs-gemini",
+      "title": "Claude vs Gemini",
+      "metaTitle": "Claude vs Gemini — Features, Pricing, and Comparison [2025]",
+      "metaDescription": "Claude vs Gemini: Compare features, pricing ($20/month vs $0), and pros/cons. Expert analysis for 2025."
+    },
+    {
+      "toolA": "Claude",
+      "toolB": "Perplexity AI",
+      "slugA": "claude",
+      "slugB": "perplexity-ai",
+      "comparisonSlug": "claude-vs-perplexity-ai",
+      "url": "/compare/claude-vs-perplexity-ai",
+      "title": "Claude vs Perplexity AI",
+      "metaTitle": "Claude vs Perplexity AI — Features, Pricing, and Comparison [2025]",
+      "metaDescription": "Claude vs Perplexity AI: Compare features, pricing ($20/month vs $0), and pros/cons. Expert analysis for 2025."
+    },
+    {
+      "toolA": "Claude",
+      "toolB": "Anthropic Claude",
+      "slugA": "claude",
+      "slugB": "anthropic-claude",
+      "comparisonSlug": "claude-vs-anthropic-claude",
+      "url": "/compare/claude-vs-anthropic-claude",
+      "title": "Claude vs Anthropic Claude",
+      "metaTitle": "Claude vs Anthropic Claude — Features, Pricing, and Comparison [2025]",
+      "metaDescription": "Claude vs Anthropic Claude: Compare features, pricing ($20/month vs $20/month), and pros/cons. Expert analysis for 2025."
+    },
+    {
+      "toolA": "Claude",
+      "toolB": "GitHub Copilot",
+      "slugA": "claude",
+      "slugB": "github-copilot",
+      "comparisonSlug": "claude-vs-github-copilot",
+      "url": "/compare/claude-vs-github-copilot",
+      "title": "Claude vs GitHub Copilot",
+      "metaTitle": "Claude vs GitHub Copilot — Features, Pricing, and Comparison [2025]",
+      "metaDescription": "Claude vs GitHub Copilot: Compare features, pricing ($20/month vs $10/month), and pros/cons. Expert analysis for 2025."
+    },
+    {
+      "toolA": "Claude",
+      "toolB": "Notion AI",
+      "slugA": "claude",
+      "slugB": "notion-ai",
+      "comparisonSlug": "claude-vs-notion-ai",
+      "url": "/compare/claude-vs-notion-ai",
+      "title": "Claude vs Notion AI",
+      "metaTitle": "Claude vs Notion AI — Features, Pricing, and Comparison [2025]",
+      "metaDescription": "Claude vs Notion AI: Compare features, pricing ($20/month vs $10/month per user), and pros/cons. Expert analysis for 2025."
+    },
+    {
+      "toolA": "Jasper AI",
+      "toolB": "Copy.ai",
+      "slugA": "jasper-ai",
+      "slugB": "copyai",
+      "comparisonSlug": "jasper-ai-vs-copyai",
+      "url": "/compare/jasper-ai-vs-copyai",
+      "title": "Jasper AI vs Copy.ai",
+      "metaTitle": "Jasper AI vs Copy.ai — Features, Pricing, and Comparison [2025]",
+      "metaDescription": "Jasper AI vs Copy.ai: Compare features, pricing ($39/month vs $0), and pros/cons. Expert analysis for 2025."
+    },
+    {
+      "toolA": "Jasper AI",
+      "toolB": "Writesonic",
+      "slugA": "jasper-ai",
+      "slugB": "writesonic",
+      "comparisonSlug": "jasper-ai-vs-writesonic",
+      "url": "/compare/jasper-ai-vs-writesonic",
+      "title": "Jasper AI vs Writesonic",
+      "metaTitle": "Jasper AI vs Writesonic — Features, Pricing, and Comparison [2025]",
+      "metaDescription": "Jasper AI vs Writesonic: Compare features, pricing ($39/month vs $0), and pros/cons. Expert analysis for 2025."
+    },
+    {
+      "toolA": "Jasper AI",
+      "toolB": "Surfer SEO",
+      "slugA": "jasper-ai",
+      "slugB": "surfer-seo",
+      "comparisonSlug": "jasper-ai-vs-surfer-seo",
+      "url": "/compare/jasper-ai-vs-surfer-seo",
+      "title": "Jasper AI vs Surfer SEO",
+      "metaTitle": "Jasper AI vs Surfer SEO — Features, Pricing, and Comparison [2025]",
+      "metaDescription": "Jasper AI vs Surfer SEO: Compare features, pricing ($39/month vs $89/month), and pros/cons. Expert analysis for 2025."
+    },
+    {
+      "toolA": "Jasper AI",
+      "toolB": "Frase",
+      "slugA": "jasper-ai",
+      "slugB": "frase",
+      "comparisonSlug": "jasper-ai-vs-frase",
+      "url": "/compare/jasper-ai-vs-frase",
+      "title": "Jasper AI vs Frase",
+      "metaTitle": "Jasper AI vs Frase — Features, Pricing, and Comparison [2025]",
+      "metaDescription": "Jasper AI vs Frase: Compare features, pricing ($39/month vs $45/month), and pros/cons. Expert analysis for 2025."
+    },
+    {
+      "toolA": "Jasper AI",
+      "toolB": "Midjourney",
+      "slugA": "jasper-ai",
+      "slugB": "midjourney",
+      "comparisonSlug": "jasper-ai-vs-midjourney",
+      "url": "/compare/jasper-ai-vs-midjourney",
+      "title": "Jasper AI vs Midjourney",
+      "metaTitle": "Jasper AI vs Midjourney — Features, Pricing, and Comparison [2025]",
+      "metaDescription": "Jasper AI vs Midjourney: Compare features, pricing ($39/month vs $10/month), and pros/cons. Expert analysis for 2025."
+    },
+    {
+      "toolA": "Jasper AI",
+      "toolB": "Gemini",
+      "slugA": "jasper-ai",
+      "slugB": "gemini",
+      "comparisonSlug": "jasper-ai-vs-gemini",
+      "url": "/compare/jasper-ai-vs-gemini",
+      "title": "Jasper AI vs Gemini",
+      "metaTitle": "Jasper AI vs Gemini — Features, Pricing, and Comparison [2025]",
+      "metaDescription": "Jasper AI vs Gemini: Compare features, pricing ($39/month vs $0), and pros/cons. Expert analysis for 2025."
+    },
+    {
+      "toolA": "Jasper AI",
+      "toolB": "Perplexity AI",
+      "slugA": "jasper-ai",
+      "slugB": "perplexity-ai",
+      "comparisonSlug": "jasper-ai-vs-perplexity-ai",
+      "url": "/compare/jasper-ai-vs-perplexity-ai",
+      "title": "Jasper AI vs Perplexity AI",
+      "metaTitle": "Jasper AI vs Perplexity AI — Features, Pricing, and Comparison [2025]",
+      "metaDescription": "Jasper AI vs Perplexity AI: Compare features, pricing ($39/month vs $0), and pros/cons. Expert analysis for 2025."
+    },
+    {
+      "toolA": "Jasper AI",
+      "toolB": "Anthropic Claude",
+      "slugA": "jasper-ai",
+      "slugB": "anthropic-claude",
+      "comparisonSlug": "jasper-ai-vs-anthropic-claude",
+      "url": "/compare/jasper-ai-vs-anthropic-claude",
+      "title": "Jasper AI vs Anthropic Claude",
+      "metaTitle": "Jasper AI vs Anthropic Claude — Features, Pricing, and Comparison [2025]",
+      "metaDescription": "Jasper AI vs Anthropic Claude: Compare features, pricing ($39/month vs $20/month), and pros/cons. Expert analysis for 2025."
+    },
+    {
+      "toolA": "Jasper AI",
+      "toolB": "GitHub Copilot",
+      "slugA": "jasper-ai",
+      "slugB": "github-copilot",
+      "comparisonSlug": "jasper-ai-vs-github-copilot",
+      "url": "/compare/jasper-ai-vs-github-copilot",
+      "title": "Jasper AI vs GitHub Copilot",
+      "metaTitle": "Jasper AI vs GitHub Copilot — Features, Pricing, and Comparison [2025]",
+      "metaDescription": "Jasper AI vs GitHub Copilot: Compare features, pricing ($39/month vs $10/month), and pros/cons. Expert analysis for 2025."
+    },
+    {
+      "toolA": "Jasper AI",
+      "toolB": "Notion AI",
+      "slugA": "jasper-ai",
+      "slugB": "notion-ai",
+      "comparisonSlug": "jasper-ai-vs-notion-ai",
+      "url": "/compare/jasper-ai-vs-notion-ai",
+      "title": "Jasper AI vs Notion AI",
+      "metaTitle": "Jasper AI vs Notion AI — Features, Pricing, and Comparison [2025]",
+      "metaDescription": "Jasper AI vs Notion AI: Compare features, pricing ($39/month vs $10/month per user), and pros/cons. Expert analysis for 2025."
+    },
+    {
+      "toolA": "Copy.ai",
+      "toolB": "Writesonic",
+      "slugA": "copyai",
+      "slugB": "writesonic",
+      "comparisonSlug": "copyai-vs-writesonic",
+      "url": "/compare/copyai-vs-writesonic",
+      "title": "Copy.ai vs Writesonic",
+      "metaTitle": "Copy.ai vs Writesonic — Features, Pricing, and Comparison [2025]",
+      "metaDescription": "Copy.ai vs Writesonic: Compare features, pricing ($0 vs $0), and pros/cons. Expert analysis for 2025."
+    },
+    {
+      "toolA": "Copy.ai",
+      "toolB": "Surfer SEO",
+      "slugA": "copyai",
+      "slugB": "surfer-seo",
+      "comparisonSlug": "copyai-vs-surfer-seo",
+      "url": "/compare/copyai-vs-surfer-seo",
+      "title": "Copy.ai vs Surfer SEO",
+      "metaTitle": "Copy.ai vs Surfer SEO — Features, Pricing, and Comparison [2025]",
+      "metaDescription": "Copy.ai vs Surfer SEO: Compare features, pricing ($0 vs $89/month), and pros/cons. Expert analysis for 2025."
+    },
+    {
+      "toolA": "Copy.ai",
+      "toolB": "Frase",
+      "slugA": "copyai",
+      "slugB": "frase",
+      "comparisonSlug": "copyai-vs-frase",
+      "url": "/compare/copyai-vs-frase",
+      "title": "Copy.ai vs Frase",
+      "metaTitle": "Copy.ai vs Frase — Features, Pricing, and Comparison [2025]",
+      "metaDescription": "Copy.ai vs Frase: Compare features, pricing ($0 vs $45/month), and pros/cons. Expert analysis for 2025."
+    },
+    {
+      "toolA": "Copy.ai",
+      "toolB": "Midjourney",
+      "slugA": "copyai",
+      "slugB": "midjourney",
+      "comparisonSlug": "copyai-vs-midjourney",
+      "url": "/compare/copyai-vs-midjourney",
+      "title": "Copy.ai vs Midjourney",
+      "metaTitle": "Copy.ai vs Midjourney — Features, Pricing, and Comparison [2025]",
+      "metaDescription": "Copy.ai vs Midjourney: Compare features, pricing ($0 vs $10/month), and pros/cons. Expert analysis for 2025."
+    },
+    {
+      "toolA": "Copy.ai",
+      "toolB": "Gemini",
+      "slugA": "copyai",
+      "slugB": "gemini",
+      "comparisonSlug": "copyai-vs-gemini",
+      "url": "/compare/copyai-vs-gemini",
+      "title": "Copy.ai vs Gemini",
+      "metaTitle": "Copy.ai vs Gemini — Features, Pricing, and Comparison [2025]",
+      "metaDescription": "Copy.ai vs Gemini: Compare features, pricing ($0 vs $0), and pros/cons. Expert analysis for 2025."
+    },
+    {
+      "toolA": "Copy.ai",
+      "toolB": "Perplexity AI",
+      "slugA": "copyai",
+      "slugB": "perplexity-ai",
+      "comparisonSlug": "copyai-vs-perplexity-ai",
+      "url": "/compare/copyai-vs-perplexity-ai",
+      "title": "Copy.ai vs Perplexity AI",
+      "metaTitle": "Copy.ai vs Perplexity AI — Features, Pricing, and Comparison [2025]",
+      "metaDescription": "Copy.ai vs Perplexity AI: Compare features, pricing ($0 vs $0), and pros/cons. Expert analysis for 2025."
+    },
+    {
+      "toolA": "Copy.ai",
+      "toolB": "Anthropic Claude",
+      "slugA": "copyai",
+      "slugB": "anthropic-claude",
+      "comparisonSlug": "copyai-vs-anthropic-claude",
+      "url": "/compare/copyai-vs-anthropic-claude",
+      "title": "Copy.ai vs Anthropic Claude",
+      "metaTitle": "Copy.ai vs Anthropic Claude — Features, Pricing, and Comparison [2025]",
+      "metaDescription": "Copy.ai vs Anthropic Claude: Compare features, pricing ($0 vs $20/month), and pros/cons. Expert analysis for 2025."
+    },
+    {
+      "toolA": "Copy.ai",
+      "toolB": "GitHub Copilot",
+      "slugA": "copyai",
+      "slugB": "github-copilot",
+      "comparisonSlug": "copyai-vs-github-copilot",
+      "url": "/compare/copyai-vs-github-copilot",
+      "title": "Copy.ai vs GitHub Copilot",
+      "metaTitle": "Copy.ai vs GitHub Copilot — Features, Pricing, and Comparison [2025]",
+      "metaDescription": "Copy.ai vs GitHub Copilot: Compare features, pricing ($0 vs $10/month), and pros/cons. Expert analysis for 2025."
+    },
+    {
+      "toolA": "Copy.ai",
+      "toolB": "Notion AI",
+      "slugA": "copyai",
+      "slugB": "notion-ai",
+      "comparisonSlug": "copyai-vs-notion-ai",
+      "url": "/compare/copyai-vs-notion-ai",
+      "title": "Copy.ai vs Notion AI",
+      "metaTitle": "Copy.ai vs Notion AI — Features, Pricing, and Comparison [2025]",
+      "metaDescription": "Copy.ai vs Notion AI: Compare features, pricing ($0 vs $10/month per user), and pros/cons. Expert analysis for 2025."
+    },
+    {
+      "toolA": "Writesonic",
+      "toolB": "Surfer SEO",
+      "slugA": "writesonic",
+      "slugB": "surfer-seo",
+      "comparisonSlug": "writesonic-vs-surfer-seo",
+      "url": "/compare/writesonic-vs-surfer-seo",
+      "title": "Writesonic vs Surfer SEO",
+      "metaTitle": "Writesonic vs Surfer SEO — Features, Pricing, and Comparison [2025]",
+      "metaDescription": "Writesonic vs Surfer SEO: Compare features, pricing ($0 vs $89/month), and pros/cons. Expert analysis for 2025."
+    },
+    {
+      "toolA": "Writesonic",
+      "toolB": "Frase",
+      "slugA": "writesonic",
+      "slugB": "frase",
+      "comparisonSlug": "writesonic-vs-frase",
+      "url": "/compare/writesonic-vs-frase",
+      "title": "Writesonic vs Frase",
+      "metaTitle": "Writesonic vs Frase — Features, Pricing, and Comparison [2025]",
+      "metaDescription": "Writesonic vs Frase: Compare features, pricing ($0 vs $45/month), and pros/cons. Expert analysis for 2025."
+    },
+    {
+      "toolA": "Writesonic",
+      "toolB": "Midjourney",
+      "slugA": "writesonic",
+      "slugB": "midjourney",
+      "comparisonSlug": "writesonic-vs-midjourney",
+      "url": "/compare/writesonic-vs-midjourney",
+      "title": "Writesonic vs Midjourney",
+      "metaTitle": "Writesonic vs Midjourney — Features, Pricing, and Comparison [2025]",
+      "metaDescription": "Writesonic vs Midjourney: Compare features, pricing ($0 vs $10/month), and pros/cons. Expert analysis for 2025."
+    },
+    {
+      "toolA": "Writesonic",
+      "toolB": "Gemini",
+      "slugA": "writesonic",
+      "slugB": "gemini",
+      "comparisonSlug": "writesonic-vs-gemini",
+      "url": "/compare/writesonic-vs-gemini",
+      "title": "Writesonic vs Gemini",
+      "metaTitle": "Writesonic vs Gemini — Features, Pricing, and Comparison [2025]",
+      "metaDescription": "Writesonic vs Gemini: Compare features, pricing ($0 vs $0), and pros/cons. Expert analysis for 2025."
+    },
+    {
+      "toolA": "Writesonic",
+      "toolB": "Perplexity AI",
+      "slugA": "writesonic",
+      "slugB": "perplexity-ai",
+      "comparisonSlug": "writesonic-vs-perplexity-ai",
+      "url": "/compare/writesonic-vs-perplexity-ai",
+      "title": "Writesonic vs Perplexity AI",
+      "metaTitle": "Writesonic vs Perplexity AI — Features, Pricing, and Comparison [2025]",
+      "metaDescription": "Writesonic vs Perplexity AI: Compare features, pricing ($0 vs $0), and pros/cons. Expert analysis for 2025."
+    },
+    {
+      "toolA": "Writesonic",
+      "toolB": "Anthropic Claude",
+      "slugA": "writesonic",
+      "slugB": "anthropic-claude",
+      "comparisonSlug": "writesonic-vs-anthropic-claude",
+      "url": "/compare/writesonic-vs-anthropic-claude",
+      "title": "Writesonic vs Anthropic Claude",
+      "metaTitle": "Writesonic vs Anthropic Claude — Features, Pricing, and Comparison [2025]",
+      "metaDescription": "Writesonic vs Anthropic Claude: Compare features, pricing ($0 vs $20/month), and pros/cons. Expert analysis for 2025."
+    },
+    {
+      "toolA": "Writesonic",
+      "toolB": "GitHub Copilot",
+      "slugA": "writesonic",
+      "slugB": "github-copilot",
+      "comparisonSlug": "writesonic-vs-github-copilot",
+      "url": "/compare/writesonic-vs-github-copilot",
+      "title": "Writesonic vs GitHub Copilot",
+      "metaTitle": "Writesonic vs GitHub Copilot — Features, Pricing, and Comparison [2025]",
+      "metaDescription": "Writesonic vs GitHub Copilot: Compare features, pricing ($0 vs $10/month), and pros/cons. Expert analysis for 2025."
+    },
+    {
+      "toolA": "Writesonic",
+      "toolB": "Notion AI",
+      "slugA": "writesonic",
+      "slugB": "notion-ai",
+      "comparisonSlug": "writesonic-vs-notion-ai",
+      "url": "/compare/writesonic-vs-notion-ai",
+      "title": "Writesonic vs Notion AI",
+      "metaTitle": "Writesonic vs Notion AI — Features, Pricing, and Comparison [2025]",
+      "metaDescription": "Writesonic vs Notion AI: Compare features, pricing ($0 vs $10/month per user), and pros/cons. Expert analysis for 2025."
+    },
+    {
+      "toolA": "Surfer SEO",
+      "toolB": "Frase",
+      "slugA": "surfer-seo",
+      "slugB": "frase",
+      "comparisonSlug": "surfer-seo-vs-frase",
+      "url": "/compare/surfer-seo-vs-frase",
+      "title": "Surfer SEO vs Frase",
+      "metaTitle": "Surfer SEO vs Frase — Features, Pricing, and Comparison [2025]",
+      "metaDescription": "Surfer SEO vs Frase: Compare features, pricing ($89/month vs $45/month), and pros/cons. Expert analysis for 2025."
+    },
+    {
+      "toolA": "Surfer SEO",
+      "toolB": "Midjourney",
+      "slugA": "surfer-seo",
+      "slugB": "midjourney",
+      "comparisonSlug": "surfer-seo-vs-midjourney",
+      "url": "/compare/surfer-seo-vs-midjourney",
+      "title": "Surfer SEO vs Midjourney",
+      "metaTitle": "Surfer SEO vs Midjourney — Features, Pricing, and Comparison [2025]",
+      "metaDescription": "Surfer SEO vs Midjourney: Compare features, pricing ($89/month vs $10/month), and pros/cons. Expert analysis for 2025."
+    },
+    {
+      "toolA": "Surfer SEO",
+      "toolB": "Gemini",
+      "slugA": "surfer-seo",
+      "slugB": "gemini",
+      "comparisonSlug": "surfer-seo-vs-gemini",
+      "url": "/compare/surfer-seo-vs-gemini",
+      "title": "Surfer SEO vs Gemini",
+      "metaTitle": "Surfer SEO vs Gemini — Features, Pricing, and Comparison [2025]",
+      "metaDescription": "Surfer SEO vs Gemini: Compare features, pricing ($89/month vs $0), and pros/cons. Expert analysis for 2025."
+    },
+    {
+      "toolA": "Surfer SEO",
+      "toolB": "Perplexity AI",
+      "slugA": "surfer-seo",
+      "slugB": "perplexity-ai",
+      "comparisonSlug": "surfer-seo-vs-perplexity-ai",
+      "url": "/compare/surfer-seo-vs-perplexity-ai",
+      "title": "Surfer SEO vs Perplexity AI",
+      "metaTitle": "Surfer SEO vs Perplexity AI — Features, Pricing, and Comparison [2025]",
+      "metaDescription": "Surfer SEO vs Perplexity AI: Compare features, pricing ($89/month vs $0), and pros/cons. Expert analysis for 2025."
+    },
+    {
+      "toolA": "Surfer SEO",
+      "toolB": "Anthropic Claude",
+      "slugA": "surfer-seo",
+      "slugB": "anthropic-claude",
+      "comparisonSlug": "surfer-seo-vs-anthropic-claude",
+      "url": "/compare/surfer-seo-vs-anthropic-claude",
+      "title": "Surfer SEO vs Anthropic Claude",
+      "metaTitle": "Surfer SEO vs Anthropic Claude — Features, Pricing, and Comparison [2025]",
+      "metaDescription": "Surfer SEO vs Anthropic Claude: Compare features, pricing ($89/month vs $20/month), and pros/cons. Expert analysis for 2025."
+    },
+    {
+      "toolA": "Surfer SEO",
+      "toolB": "GitHub Copilot",
+      "slugA": "surfer-seo",
+      "slugB": "github-copilot",
+      "comparisonSlug": "surfer-seo-vs-github-copilot",
+      "url": "/compare/surfer-seo-vs-github-copilot",
+      "title": "Surfer SEO vs GitHub Copilot",
+      "metaTitle": "Surfer SEO vs GitHub Copilot — Features, Pricing, and Comparison [2025]",
+      "metaDescription": "Surfer SEO vs GitHub Copilot: Compare features, pricing ($89/month vs $10/month), and pros/cons. Expert analysis for 2025."
+    },
+    {
+      "toolA": "Surfer SEO",
+      "toolB": "Notion AI",
+      "slugA": "surfer-seo",
+      "slugB": "notion-ai",
+      "comparisonSlug": "surfer-seo-vs-notion-ai",
+      "url": "/compare/surfer-seo-vs-notion-ai",
+      "title": "Surfer SEO vs Notion AI",
+      "metaTitle": "Surfer SEO vs Notion AI — Features, Pricing, and Comparison [2025]",
+      "metaDescription": "Surfer SEO vs Notion AI: Compare features, pricing ($89/month vs $10/month per user), and pros/cons. Expert analysis for 2025."
+    },
+    {
+      "toolA": "Frase",
+      "toolB": "Midjourney",
+      "slugA": "frase",
+      "slugB": "midjourney",
+      "comparisonSlug": "frase-vs-midjourney",
+      "url": "/compare/frase-vs-midjourney",
+      "title": "Frase vs Midjourney",
+      "metaTitle": "Frase vs Midjourney — Features, Pricing, and Comparison [2025]",
+      "metaDescription": "Frase vs Midjourney: Compare features, pricing ($45/month vs $10/month), and pros/cons. Expert analysis for 2025."
+    },
+    {
+      "toolA": "Frase",
+      "toolB": "Gemini",
+      "slugA": "frase",
+      "slugB": "gemini",
+      "comparisonSlug": "frase-vs-gemini",
+      "url": "/compare/frase-vs-gemini",
+      "title": "Frase vs Gemini",
+      "metaTitle": "Frase vs Gemini — Features, Pricing, and Comparison [2025]",
+      "metaDescription": "Frase vs Gemini: Compare features, pricing ($45/month vs $0), and pros/cons. Expert analysis for 2025."
+    },
+    {
+      "toolA": "Frase",
+      "toolB": "Perplexity AI",
+      "slugA": "frase",
+      "slugB": "perplexity-ai",
+      "comparisonSlug": "frase-vs-perplexity-ai",
+      "url": "/compare/frase-vs-perplexity-ai",
+      "title": "Frase vs Perplexity AI",
+      "metaTitle": "Frase vs Perplexity AI — Features, Pricing, and Comparison [2025]",
+      "metaDescription": "Frase vs Perplexity AI: Compare features, pricing ($45/month vs $0), and pros/cons. Expert analysis for 2025."
+    },
+    {
+      "toolA": "Frase",
+      "toolB": "Anthropic Claude",
+      "slugA": "frase",
+      "slugB": "anthropic-claude",
+      "comparisonSlug": "frase-vs-anthropic-claude",
+      "url": "/compare/frase-vs-anthropic-claude",
+      "title": "Frase vs Anthropic Claude",
+      "metaTitle": "Frase vs Anthropic Claude — Features, Pricing, and Comparison [2025]",
+      "metaDescription": "Frase vs Anthropic Claude: Compare features, pricing ($45/month vs $20/month), and pros/cons. Expert analysis for 2025."
+    },
+    {
+      "toolA": "Frase",
+      "toolB": "GitHub Copilot",
+      "slugA": "frase",
+      "slugB": "github-copilot",
+      "comparisonSlug": "frase-vs-github-copilot",
+      "url": "/compare/frase-vs-github-copilot",
+      "title": "Frase vs GitHub Copilot",
+      "metaTitle": "Frase vs GitHub Copilot — Features, Pricing, and Comparison [2025]",
+      "metaDescription": "Frase vs GitHub Copilot: Compare features, pricing ($45/month vs $10/month), and pros/cons. Expert analysis for 2025."
+    },
+    {
+      "toolA": "Frase",
+      "toolB": "Notion AI",
+      "slugA": "frase",
+      "slugB": "notion-ai",
+      "comparisonSlug": "frase-vs-notion-ai",
+      "url": "/compare/frase-vs-notion-ai",
+      "title": "Frase vs Notion AI",
+      "metaTitle": "Frase vs Notion AI — Features, Pricing, and Comparison [2025]",
+      "metaDescription": "Frase vs Notion AI: Compare features, pricing ($45/month vs $10/month per user), and pros/cons. Expert analysis for 2025."
+    },
+    {
+      "toolA": "Midjourney",
+      "toolB": "Gemini",
+      "slugA": "midjourney",
+      "slugB": "gemini",
+      "comparisonSlug": "midjourney-vs-gemini",
+      "url": "/compare/midjourney-vs-gemini",
+      "title": "Midjourney vs Gemini",
+      "metaTitle": "Midjourney vs Gemini — Features, Pricing, and Comparison [2025]",
+      "metaDescription": "Midjourney vs Gemini: Compare features, pricing ($10/month vs $0), and pros/cons. Expert analysis for 2025."
+    },
+    {
+      "toolA": "Midjourney",
+      "toolB": "Perplexity AI",
+      "slugA": "midjourney",
+      "slugB": "perplexity-ai",
+      "comparisonSlug": "midjourney-vs-perplexity-ai",
+      "url": "/compare/midjourney-vs-perplexity-ai",
+      "title": "Midjourney vs Perplexity AI",
+      "metaTitle": "Midjourney vs Perplexity AI — Features, Pricing, and Comparison [2025]",
+      "metaDescription": "Midjourney vs Perplexity AI: Compare features, pricing ($10/month vs $0), and pros/cons. Expert analysis for 2025."
+    },
+    {
+      "toolA": "Midjourney",
+      "toolB": "Anthropic Claude",
+      "slugA": "midjourney",
+      "slugB": "anthropic-claude",
+      "comparisonSlug": "midjourney-vs-anthropic-claude",
+      "url": "/compare/midjourney-vs-anthropic-claude",
+      "title": "Midjourney vs Anthropic Claude",
+      "metaTitle": "Midjourney vs Anthropic Claude — Features, Pricing, and Comparison [2025]",
+      "metaDescription": "Midjourney vs Anthropic Claude: Compare features, pricing ($10/month vs $20/month), and pros/cons. Expert analysis for 2025."
+    },
+    {
+      "toolA": "Midjourney",
+      "toolB": "GitHub Copilot",
+      "slugA": "midjourney",
+      "slugB": "github-copilot",
+      "comparisonSlug": "midjourney-vs-github-copilot",
+      "url": "/compare/midjourney-vs-github-copilot",
+      "title": "Midjourney vs GitHub Copilot",
+      "metaTitle": "Midjourney vs GitHub Copilot — Features, Pricing, and Comparison [2025]",
+      "metaDescription": "Midjourney vs GitHub Copilot: Compare features, pricing ($10/month vs $10/month), and pros/cons. Expert analysis for 2025."
+    },
+    {
+      "toolA": "Midjourney",
+      "toolB": "Notion AI",
+      "slugA": "midjourney",
+      "slugB": "notion-ai",
+      "comparisonSlug": "midjourney-vs-notion-ai",
+      "url": "/compare/midjourney-vs-notion-ai",
+      "title": "Midjourney vs Notion AI",
+      "metaTitle": "Midjourney vs Notion AI — Features, Pricing, and Comparison [2025]",
+      "metaDescription": "Midjourney vs Notion AI: Compare features, pricing ($10/month vs $10/month per user), and pros/cons. Expert analysis for 2025."
+    },
+    {
+      "toolA": "Gemini",
+      "toolB": "Perplexity AI",
+      "slugA": "gemini",
+      "slugB": "perplexity-ai",
+      "comparisonSlug": "gemini-vs-perplexity-ai",
+      "url": "/compare/gemini-vs-perplexity-ai",
+      "title": "Gemini vs Perplexity AI",
+      "metaTitle": "Gemini vs Perplexity AI — Features, Pricing, and Comparison [2025]",
+      "metaDescription": "Gemini vs Perplexity AI: Compare features, pricing ($0 vs $0), and pros/cons. Expert analysis for 2025."
+    },
+    {
+      "toolA": "Gemini",
+      "toolB": "Anthropic Claude",
+      "slugA": "gemini",
+      "slugB": "anthropic-claude",
+      "comparisonSlug": "gemini-vs-anthropic-claude",
+      "url": "/compare/gemini-vs-anthropic-claude",
+      "title": "Gemini vs Anthropic Claude",
+      "metaTitle": "Gemini vs Anthropic Claude — Features, Pricing, and Comparison [2025]",
+      "metaDescription": "Gemini vs Anthropic Claude: Compare features, pricing ($0 vs $20/month), and pros/cons. Expert analysis for 2025."
+    },
+    {
+      "toolA": "Gemini",
+      "toolB": "GitHub Copilot",
+      "slugA": "gemini",
+      "slugB": "github-copilot",
+      "comparisonSlug": "gemini-vs-github-copilot",
+      "url": "/compare/gemini-vs-github-copilot",
+      "title": "Gemini vs GitHub Copilot",
+      "metaTitle": "Gemini vs GitHub Copilot — Features, Pricing, and Comparison [2025]",
+      "metaDescription": "Gemini vs GitHub Copilot: Compare features, pricing ($0 vs $10/month), and pros/cons. Expert analysis for 2025."
+    },
+    {
+      "toolA": "Gemini",
+      "toolB": "Notion AI",
+      "slugA": "gemini",
+      "slugB": "notion-ai",
+      "comparisonSlug": "gemini-vs-notion-ai",
+      "url": "/compare/gemini-vs-notion-ai",
+      "title": "Gemini vs Notion AI",
+      "metaTitle": "Gemini vs Notion AI — Features, Pricing, and Comparison [2025]",
+      "metaDescription": "Gemini vs Notion AI: Compare features, pricing ($0 vs $10/month per user), and pros/cons. Expert analysis for 2025."
+    },
+    {
+      "toolA": "Perplexity AI",
+      "toolB": "Anthropic Claude",
+      "slugA": "perplexity-ai",
+      "slugB": "anthropic-claude",
+      "comparisonSlug": "perplexity-ai-vs-anthropic-claude",
+      "url": "/compare/perplexity-ai-vs-anthropic-claude",
+      "title": "Perplexity AI vs Anthropic Claude",
+      "metaTitle": "Perplexity AI vs Anthropic Claude — Features, Pricing, and Comparison [2025]",
+      "metaDescription": "Perplexity AI vs Anthropic Claude: Compare features, pricing ($0 vs $20/month), and pros/cons. Expert analysis for 2025."
+    },
+    {
+      "toolA": "Perplexity AI",
+      "toolB": "GitHub Copilot",
+      "slugA": "perplexity-ai",
+      "slugB": "github-copilot",
+      "comparisonSlug": "perplexity-ai-vs-github-copilot",
+      "url": "/compare/perplexity-ai-vs-github-copilot",
+      "title": "Perplexity AI vs GitHub Copilot",
+      "metaTitle": "Perplexity AI vs GitHub Copilot — Features, Pricing, and Comparison [2025]",
+      "metaDescription": "Perplexity AI vs GitHub Copilot: Compare features, pricing ($0 vs $10/month), and pros/cons. Expert analysis for 2025."
+    },
+    {
+      "toolA": "Perplexity AI",
+      "toolB": "Notion AI",
+      "slugA": "perplexity-ai",
+      "slugB": "notion-ai",
+      "comparisonSlug": "perplexity-ai-vs-notion-ai",
+      "url": "/compare/perplexity-ai-vs-notion-ai",
+      "title": "Perplexity AI vs Notion AI",
+      "metaTitle": "Perplexity AI vs Notion AI — Features, Pricing, and Comparison [2025]",
+      "metaDescription": "Perplexity AI vs Notion AI: Compare features, pricing ($0 vs $10/month per user), and pros/cons. Expert analysis for 2025."
+    },
+    {
+      "toolA": "Anthropic Claude",
+      "toolB": "GitHub Copilot",
+      "slugA": "anthropic-claude",
+      "slugB": "github-copilot",
+      "comparisonSlug": "anthropic-claude-vs-github-copilot",
+      "url": "/compare/anthropic-claude-vs-github-copilot",
+      "title": "Anthropic Claude vs GitHub Copilot",
+      "metaTitle": "Anthropic Claude vs GitHub Copilot — Features, Pricing, and Comparison [2025]",
+      "metaDescription": "Anthropic Claude vs GitHub Copilot: Compare features, pricing ($20/month vs $10/month), and pros/cons. Expert analysis for 2025."
+    },
+    {
+      "toolA": "Anthropic Claude",
+      "toolB": "Notion AI",
+      "slugA": "anthropic-claude",
+      "slugB": "notion-ai",
+      "comparisonSlug": "anthropic-claude-vs-notion-ai",
+      "url": "/compare/anthropic-claude-vs-notion-ai",
+      "title": "Anthropic Claude vs Notion AI",
+      "metaTitle": "Anthropic Claude vs Notion AI — Features, Pricing, and Comparison [2025]",
+      "metaDescription": "Anthropic Claude vs Notion AI: Compare features, pricing ($20/month vs $10/month per user), and pros/cons. Expert analysis for 2025."
+    },
+    {
+      "toolA": "GitHub Copilot",
+      "toolB": "Notion AI",
+      "slugA": "github-copilot",
+      "slugB": "notion-ai",
+      "comparisonSlug": "github-copilot-vs-notion-ai",
+      "url": "/compare/github-copilot-vs-notion-ai",
+      "title": "GitHub Copilot vs Notion AI",
+      "metaTitle": "GitHub Copilot vs Notion AI — Features, Pricing, and Comparison [2025]",
+      "metaDescription": "GitHub Copilot vs Notion AI: Compare features, pricing ($10/month vs $10/month per user), and pros/cons. Expert analysis for 2025."
+    }
+  ],
+  "reviews": [
+    {
+      "toolName": "ChatGPT",
+      "slug": "chatgpt",
+      "url": "/reviews/chatgpt",
+      "title": "ChatGPT Review",
+      "metaTitle": "ChatGPT Review — Features, Pricing, Pros & Cons [2025]",
+      "metaDescription": "ChatGPT review: Features, pricing (from $0), pros, cons, and alternatives. Expert analysis and user guide for 2025.",
+      "category": "AI Tools",
+      "startingPrice": "$0",
+      "hasFreePlan": true,
+      "featureCount": 10,
+      "rating": 4.8
+    },
+    {
+      "toolName": "Claude",
+      "slug": "claude",
+      "url": "/reviews/claude",
+      "title": "Claude Review",
+      "metaTitle": "Claude Review — Features, Pricing, Pros & Cons [2025]",
+      "metaDescription": "Claude review: Features, pricing (from $20/month), pros, cons, and alternatives. Expert analysis and user guide for 2025.",
+      "category": "AI Tools",
+      "startingPrice": "$20/month",
+      "hasFreePlan": false,
+      "featureCount": 10,
+      "rating": 4.7
+    },
+    {
+      "toolName": "Jasper AI",
+      "slug": "jasper-ai",
+      "url": "/reviews/jasper-ai",
+      "title": "Jasper AI Review",
+      "metaTitle": "Jasper AI Review — Features, Pricing, Pros & Cons [2025]",
+      "metaDescription": "Jasper AI review: Features, pricing (from $39/month), pros, cons, and alternatives. Expert analysis and user guide for 2025.",
+      "category": "AI Tools",
+      "startingPrice": "$39/month",
+      "hasFreePlan": false,
+      "featureCount": 10,
+      "rating": 4.5
+    },
+    {
+      "toolName": "Copy.ai",
+      "slug": "copyai",
+      "url": "/reviews/copyai",
+      "title": "Copy.ai Review",
+      "metaTitle": "Copy.ai Review — Features, Pricing, Pros & Cons [2025]",
+      "metaDescription": "Copy.ai review: Features, pricing (from $0), pros, cons, and alternatives. Expert analysis and user guide for 2025.",
+      "category": "AI Tools",
+      "startingPrice": "$0",
+      "hasFreePlan": true,
+      "featureCount": 10,
+      "rating": 4.3
+    },
+    {
+      "toolName": "Writesonic",
+      "slug": "writesonic",
+      "url": "/reviews/writesonic",
+      "title": "Writesonic Review",
+      "metaTitle": "Writesonic Review — Features, Pricing, Pros & Cons [2025]",
+      "metaDescription": "Writesonic review: Features, pricing (from $0), pros, cons, and alternatives. Expert analysis and user guide for 2025.",
+      "category": "AI Tools",
+      "startingPrice": "$0",
+      "hasFreePlan": true,
+      "featureCount": 10,
+      "rating": 4.2
+    },
+    {
+      "toolName": "Surfer SEO",
+      "slug": "surfer-seo",
+      "url": "/reviews/surfer-seo",
+      "title": "Surfer SEO Review",
+      "metaTitle": "Surfer SEO Review — Features, Pricing, Pros & Cons [2025]",
+      "metaDescription": "Surfer SEO review: Features, pricing (from $89/month), pros, cons, and alternatives. Expert analysis and user guide for 2025.",
+      "category": "AI Tools",
+      "startingPrice": "$89/month",
+      "hasFreePlan": false,
+      "featureCount": 10,
+      "rating": 4.6
+    },
+    {
+      "toolName": "Frase",
+      "slug": "frase",
+      "url": "/reviews/frase",
+      "title": "Frase Review",
+      "metaTitle": "Frase Review — Features, Pricing, Pros & Cons [2025]",
+      "metaDescription": "Frase review: Features, pricing (from $45/month), pros, cons, and alternatives. Expert analysis and user guide for 2025.",
+      "category": "AI Tools",
+      "startingPrice": "$45/month",
+      "hasFreePlan": false,
+      "featureCount": 10,
+      "rating": 4.4
+    },
+    {
+      "toolName": "Midjourney",
+      "slug": "midjourney",
+      "url": "/reviews/midjourney",
+      "title": "Midjourney Review",
+      "metaTitle": "Midjourney Review — Features, Pricing, Pros & Cons [2025]",
+      "metaDescription": "Midjourney review: Features, pricing (from $10/month), pros, cons, and alternatives. Expert analysis and user guide for 2025.",
+      "category": "AI Tools",
+      "startingPrice": "$10/month",
+      "hasFreePlan": false,
+      "featureCount": 10,
+      "rating": 4.8
+    },
+    {
+      "toolName": "Gemini",
+      "slug": "gemini",
+      "url": "/reviews/gemini",
+      "title": "Gemini Review",
+      "metaTitle": "Gemini Review — Features, Pricing, Pros & Cons [2025]",
+      "metaDescription": "Gemini review: Features, pricing (from $0), pros, cons, and alternatives. Expert analysis and user guide for 2025.",
+      "category": "AI Tools",
+      "startingPrice": "$0",
+      "hasFreePlan": true,
+      "featureCount": 10,
+      "rating": 4.5
+    },
+    {
+      "toolName": "Perplexity AI",
+      "slug": "perplexity-ai",
+      "url": "/reviews/perplexity-ai",
+      "title": "Perplexity AI Review",
+      "metaTitle": "Perplexity AI Review — Features, Pricing, Pros & Cons [2025]",
+      "metaDescription": "Perplexity AI review: Features, pricing (from $0), pros, cons, and alternatives. Expert analysis and user guide for 2025.",
+      "category": "AI Tools",
+      "startingPrice": "$0",
+      "hasFreePlan": true,
+      "featureCount": 10,
+      "rating": 4.4
+    },
+    {
+      "toolName": "Anthropic Claude",
+      "slug": "anthropic-claude",
+      "url": "/reviews/anthropic-claude",
+      "title": "Anthropic Claude Review",
+      "metaTitle": "Anthropic Claude Review — Features, Pricing, Pros & Cons [2025]",
+      "metaDescription": "Anthropic Claude review: Features, pricing (from $20/month), pros, cons, and alternatives. Expert analysis and user guide for 2025.",
+      "category": "AI Tools",
+      "startingPrice": "$20/month",
+      "hasFreePlan": false,
+      "featureCount": 10,
+      "rating": 4.7
+    },
+    {
+      "toolName": "GitHub Copilot",
+      "slug": "github-copilot",
+      "url": "/reviews/github-copilot",
+      "title": "GitHub Copilot Review",
+      "metaTitle": "GitHub Copilot Review — Features, Pricing, Pros & Cons [2025]",
+      "metaDescription": "GitHub Copilot review: Features, pricing (from $10/month), pros, cons, and alternatives. Expert analysis and user guide for 2025.",
+      "category": "AI Tools",
+      "startingPrice": "$10/month",
+      "hasFreePlan": false,
+      "featureCount": 10,
+      "rating": 4.6
+    },
+    {
+      "toolName": "Notion AI",
+      "slug": "notion-ai",
+      "url": "/reviews/notion-ai",
+      "title": "Notion AI Review",
+      "metaTitle": "Notion AI Review — Features, Pricing, Pros & Cons [2025]",
+      "metaDescription": "Notion AI review: Features, pricing (from $10/month per user), pros, cons, and alternatives. Expert analysis and user guide for 2025.",
+      "category": "AI Tools",
+      "startingPrice": "$10/month per user",
+      "hasFreePlan": true,
+      "featureCount": 10,
+      "rating": 4.3
+    }
+  ],
+  "sitemap": [
+    {
+      "url": "https://siteoptz.com/compare/chatgpt-vs-claude",
+      "lastmod": "2025-08-12",
+      "changefreq": "weekly",
+      "priority": "0.8"
+    },
+    {
+      "url": "https://siteoptz.com/compare/chatgpt-vs-jasper-ai",
+      "lastmod": "2025-08-12",
+      "changefreq": "weekly",
+      "priority": "0.8"
+    },
+    {
+      "url": "https://siteoptz.com/compare/chatgpt-vs-copyai",
+      "lastmod": "2025-08-12",
+      "changefreq": "weekly",
+      "priority": "0.8"
+    },
+    {
+      "url": "https://siteoptz.com/compare/chatgpt-vs-writesonic",
+      "lastmod": "2025-08-12",
+      "changefreq": "weekly",
+      "priority": "0.8"
+    },
+    {
+      "url": "https://siteoptz.com/compare/chatgpt-vs-surfer-seo",
+      "lastmod": "2025-08-12",
+      "changefreq": "weekly",
+      "priority": "0.8"
+    },
+    {
+      "url": "https://siteoptz.com/compare/chatgpt-vs-frase",
+      "lastmod": "2025-08-12",
+      "changefreq": "weekly",
+      "priority": "0.8"
+    },
+    {
+      "url": "https://siteoptz.com/compare/chatgpt-vs-midjourney",
+      "lastmod": "2025-08-12",
+      "changefreq": "weekly",
+      "priority": "0.8"
+    },
+    {
+      "url": "https://siteoptz.com/compare/chatgpt-vs-gemini",
+      "lastmod": "2025-08-12",
+      "changefreq": "weekly",
+      "priority": "0.8"
+    },
+    {
+      "url": "https://siteoptz.com/compare/chatgpt-vs-perplexity-ai",
+      "lastmod": "2025-08-12",
+      "changefreq": "weekly",
+      "priority": "0.8"
+    },
+    {
+      "url": "https://siteoptz.com/compare/chatgpt-vs-anthropic-claude",
+      "lastmod": "2025-08-12",
+      "changefreq": "weekly",
+      "priority": "0.8"
+    },
+    {
+      "url": "https://siteoptz.com/compare/chatgpt-vs-github-copilot",
+      "lastmod": "2025-08-12",
+      "changefreq": "weekly",
+      "priority": "0.8"
+    },
+    {
+      "url": "https://siteoptz.com/compare/chatgpt-vs-notion-ai",
+      "lastmod": "2025-08-12",
+      "changefreq": "weekly",
+      "priority": "0.8"
+    },
+    {
+      "url": "https://siteoptz.com/compare/claude-vs-jasper-ai",
+      "lastmod": "2025-08-12",
+      "changefreq": "weekly",
+      "priority": "0.8"
+    },
+    {
+      "url": "https://siteoptz.com/compare/claude-vs-copyai",
+      "lastmod": "2025-08-12",
+      "changefreq": "weekly",
+      "priority": "0.8"
+    },
+    {
+      "url": "https://siteoptz.com/compare/claude-vs-writesonic",
+      "lastmod": "2025-08-12",
+      "changefreq": "weekly",
+      "priority": "0.8"
+    },
+    {
+      "url": "https://siteoptz.com/compare/claude-vs-surfer-seo",
+      "lastmod": "2025-08-12",
+      "changefreq": "weekly",
+      "priority": "0.8"
+    },
+    {
+      "url": "https://siteoptz.com/compare/claude-vs-frase",
+      "lastmod": "2025-08-12",
+      "changefreq": "weekly",
+      "priority": "0.8"
+    },
+    {
+      "url": "https://siteoptz.com/compare/claude-vs-midjourney",
+      "lastmod": "2025-08-12",
+      "changefreq": "weekly",
+      "priority": "0.8"
+    },
+    {
+      "url": "https://siteoptz.com/compare/claude-vs-gemini",
+      "lastmod": "2025-08-12",
+      "changefreq": "weekly",
+      "priority": "0.8"
+    },
+    {
+      "url": "https://siteoptz.com/compare/claude-vs-perplexity-ai",
+      "lastmod": "2025-08-12",
+      "changefreq": "weekly",
+      "priority": "0.8"
+    },
+    {
+      "url": "https://siteoptz.com/compare/claude-vs-anthropic-claude",
+      "lastmod": "2025-08-12",
+      "changefreq": "weekly",
+      "priority": "0.8"
+    },
+    {
+      "url": "https://siteoptz.com/compare/claude-vs-github-copilot",
+      "lastmod": "2025-08-12",
+      "changefreq": "weekly",
+      "priority": "0.8"
+    },
+    {
+      "url": "https://siteoptz.com/compare/claude-vs-notion-ai",
+      "lastmod": "2025-08-12",
+      "changefreq": "weekly",
+      "priority": "0.8"
+    },
+    {
+      "url": "https://siteoptz.com/compare/jasper-ai-vs-copyai",
+      "lastmod": "2025-08-12",
+      "changefreq": "weekly",
+      "priority": "0.8"
+    },
+    {
+      "url": "https://siteoptz.com/compare/jasper-ai-vs-writesonic",
+      "lastmod": "2025-08-12",
+      "changefreq": "weekly",
+      "priority": "0.8"
+    },
+    {
+      "url": "https://siteoptz.com/compare/jasper-ai-vs-surfer-seo",
+      "lastmod": "2025-08-12",
+      "changefreq": "weekly",
+      "priority": "0.8"
+    },
+    {
+      "url": "https://siteoptz.com/compare/jasper-ai-vs-frase",
+      "lastmod": "2025-08-12",
+      "changefreq": "weekly",
+      "priority": "0.8"
+    },
+    {
+      "url": "https://siteoptz.com/compare/jasper-ai-vs-midjourney",
+      "lastmod": "2025-08-12",
+      "changefreq": "weekly",
+      "priority": "0.8"
+    },
+    {
+      "url": "https://siteoptz.com/compare/jasper-ai-vs-gemini",
+      "lastmod": "2025-08-12",
+      "changefreq": "weekly",
+      "priority": "0.8"
+    },
+    {
+      "url": "https://siteoptz.com/compare/jasper-ai-vs-perplexity-ai",
+      "lastmod": "2025-08-12",
+      "changefreq": "weekly",
+      "priority": "0.8"
+    },
+    {
+      "url": "https://siteoptz.com/compare/jasper-ai-vs-anthropic-claude",
+      "lastmod": "2025-08-12",
+      "changefreq": "weekly",
+      "priority": "0.8"
+    },
+    {
+      "url": "https://siteoptz.com/compare/jasper-ai-vs-github-copilot",
+      "lastmod": "2025-08-12",
+      "changefreq": "weekly",
+      "priority": "0.8"
+    },
+    {
+      "url": "https://siteoptz.com/compare/jasper-ai-vs-notion-ai",
+      "lastmod": "2025-08-12",
+      "changefreq": "weekly",
+      "priority": "0.8"
+    },
+    {
+      "url": "https://siteoptz.com/compare/copyai-vs-writesonic",
+      "lastmod": "2025-08-12",
+      "changefreq": "weekly",
+      "priority": "0.8"
+    },
+    {
+      "url": "https://siteoptz.com/compare/copyai-vs-surfer-seo",
+      "lastmod": "2025-08-12",
+      "changefreq": "weekly",
+      "priority": "0.8"
+    },
+    {
+      "url": "https://siteoptz.com/compare/copyai-vs-frase",
+      "lastmod": "2025-08-12",
+      "changefreq": "weekly",
+      "priority": "0.8"
+    },
+    {
+      "url": "https://siteoptz.com/compare/copyai-vs-midjourney",
+      "lastmod": "2025-08-12",
+      "changefreq": "weekly",
+      "priority": "0.8"
+    },
+    {
+      "url": "https://siteoptz.com/compare/copyai-vs-gemini",
+      "lastmod": "2025-08-12",
+      "changefreq": "weekly",
+      "priority": "0.8"
+    },
+    {
+      "url": "https://siteoptz.com/compare/copyai-vs-perplexity-ai",
+      "lastmod": "2025-08-12",
+      "changefreq": "weekly",
+      "priority": "0.8"
+    },
+    {
+      "url": "https://siteoptz.com/compare/copyai-vs-anthropic-claude",
+      "lastmod": "2025-08-12",
+      "changefreq": "weekly",
+      "priority": "0.8"
+    },
+    {
+      "url": "https://siteoptz.com/compare/copyai-vs-github-copilot",
+      "lastmod": "2025-08-12",
+      "changefreq": "weekly",
+      "priority": "0.8"
+    },
+    {
+      "url": "https://siteoptz.com/compare/copyai-vs-notion-ai",
+      "lastmod": "2025-08-12",
+      "changefreq": "weekly",
+      "priority": "0.8"
+    },
+    {
+      "url": "https://siteoptz.com/compare/writesonic-vs-surfer-seo",
+      "lastmod": "2025-08-12",
+      "changefreq": "weekly",
+      "priority": "0.8"
+    },
+    {
+      "url": "https://siteoptz.com/compare/writesonic-vs-frase",
+      "lastmod": "2025-08-12",
+      "changefreq": "weekly",
+      "priority": "0.8"
+    },
+    {
+      "url": "https://siteoptz.com/compare/writesonic-vs-midjourney",
+      "lastmod": "2025-08-12",
+      "changefreq": "weekly",
+      "priority": "0.8"
+    },
+    {
+      "url": "https://siteoptz.com/compare/writesonic-vs-gemini",
+      "lastmod": "2025-08-12",
+      "changefreq": "weekly",
+      "priority": "0.8"
+    },
+    {
+      "url": "https://siteoptz.com/compare/writesonic-vs-perplexity-ai",
+      "lastmod": "2025-08-12",
+      "changefreq": "weekly",
+      "priority": "0.8"
+    },
+    {
+      "url": "https://siteoptz.com/compare/writesonic-vs-anthropic-claude",
+      "lastmod": "2025-08-12",
+      "changefreq": "weekly",
+      "priority": "0.8"
+    },
+    {
+      "url": "https://siteoptz.com/compare/writesonic-vs-github-copilot",
+      "lastmod": "2025-08-12",
+      "changefreq": "weekly",
+      "priority": "0.8"
+    },
+    {
+      "url": "https://siteoptz.com/compare/writesonic-vs-notion-ai",
+      "lastmod": "2025-08-12",
+      "changefreq": "weekly",
+      "priority": "0.8"
+    },
+    {
+      "url": "https://siteoptz.com/compare/surfer-seo-vs-frase",
+      "lastmod": "2025-08-12",
+      "changefreq": "weekly",
+      "priority": "0.8"
+    },
+    {
+      "url": "https://siteoptz.com/compare/surfer-seo-vs-midjourney",
+      "lastmod": "2025-08-12",
+      "changefreq": "weekly",
+      "priority": "0.8"
+    },
+    {
+      "url": "https://siteoptz.com/compare/surfer-seo-vs-gemini",
+      "lastmod": "2025-08-12",
+      "changefreq": "weekly",
+      "priority": "0.8"
+    },
+    {
+      "url": "https://siteoptz.com/compare/surfer-seo-vs-perplexity-ai",
+      "lastmod": "2025-08-12",
+      "changefreq": "weekly",
+      "priority": "0.8"
+    },
+    {
+      "url": "https://siteoptz.com/compare/surfer-seo-vs-anthropic-claude",
+      "lastmod": "2025-08-12",
+      "changefreq": "weekly",
+      "priority": "0.8"
+    },
+    {
+      "url": "https://siteoptz.com/compare/surfer-seo-vs-github-copilot",
+      "lastmod": "2025-08-12",
+      "changefreq": "weekly",
+      "priority": "0.8"
+    },
+    {
+      "url": "https://siteoptz.com/compare/surfer-seo-vs-notion-ai",
+      "lastmod": "2025-08-12",
+      "changefreq": "weekly",
+      "priority": "0.8"
+    },
+    {
+      "url": "https://siteoptz.com/compare/frase-vs-midjourney",
+      "lastmod": "2025-08-12",
+      "changefreq": "weekly",
+      "priority": "0.8"
+    },
+    {
+      "url": "https://siteoptz.com/compare/frase-vs-gemini",
+      "lastmod": "2025-08-12",
+      "changefreq": "weekly",
+      "priority": "0.8"
+    },
+    {
+      "url": "https://siteoptz.com/compare/frase-vs-perplexity-ai",
+      "lastmod": "2025-08-12",
+      "changefreq": "weekly",
+      "priority": "0.8"
+    },
+    {
+      "url": "https://siteoptz.com/compare/frase-vs-anthropic-claude",
+      "lastmod": "2025-08-12",
+      "changefreq": "weekly",
+      "priority": "0.8"
+    },
+    {
+      "url": "https://siteoptz.com/compare/frase-vs-github-copilot",
+      "lastmod": "2025-08-12",
+      "changefreq": "weekly",
+      "priority": "0.8"
+    },
+    {
+      "url": "https://siteoptz.com/compare/frase-vs-notion-ai",
+      "lastmod": "2025-08-12",
+      "changefreq": "weekly",
+      "priority": "0.8"
+    },
+    {
+      "url": "https://siteoptz.com/compare/midjourney-vs-gemini",
+      "lastmod": "2025-08-12",
+      "changefreq": "weekly",
+      "priority": "0.8"
+    },
+    {
+      "url": "https://siteoptz.com/compare/midjourney-vs-perplexity-ai",
+      "lastmod": "2025-08-12",
+      "changefreq": "weekly",
+      "priority": "0.8"
+    },
+    {
+      "url": "https://siteoptz.com/compare/midjourney-vs-anthropic-claude",
+      "lastmod": "2025-08-12",
+      "changefreq": "weekly",
+      "priority": "0.8"
+    },
+    {
+      "url": "https://siteoptz.com/compare/midjourney-vs-github-copilot",
+      "lastmod": "2025-08-12",
+      "changefreq": "weekly",
+      "priority": "0.8"
+    },
+    {
+      "url": "https://siteoptz.com/compare/midjourney-vs-notion-ai",
+      "lastmod": "2025-08-12",
+      "changefreq": "weekly",
+      "priority": "0.8"
+    },
+    {
+      "url": "https://siteoptz.com/compare/gemini-vs-perplexity-ai",
+      "lastmod": "2025-08-12",
+      "changefreq": "weekly",
+      "priority": "0.8"
+    },
+    {
+      "url": "https://siteoptz.com/compare/gemini-vs-anthropic-claude",
+      "lastmod": "2025-08-12",
+      "changefreq": "weekly",
+      "priority": "0.8"
+    },
+    {
+      "url": "https://siteoptz.com/compare/gemini-vs-github-copilot",
+      "lastmod": "2025-08-12",
+      "changefreq": "weekly",
+      "priority": "0.8"
+    },
+    {
+      "url": "https://siteoptz.com/compare/gemini-vs-notion-ai",
+      "lastmod": "2025-08-12",
+      "changefreq": "weekly",
+      "priority": "0.8"
+    },
+    {
+      "url": "https://siteoptz.com/compare/perplexity-ai-vs-anthropic-claude",
+      "lastmod": "2025-08-12",
+      "changefreq": "weekly",
+      "priority": "0.8"
+    },
+    {
+      "url": "https://siteoptz.com/compare/perplexity-ai-vs-github-copilot",
+      "lastmod": "2025-08-12",
+      "changefreq": "weekly",
+      "priority": "0.8"
+    },
+    {
+      "url": "https://siteoptz.com/compare/perplexity-ai-vs-notion-ai",
+      "lastmod": "2025-08-12",
+      "changefreq": "weekly",
+      "priority": "0.8"
+    },
+    {
+      "url": "https://siteoptz.com/compare/anthropic-claude-vs-github-copilot",
+      "lastmod": "2025-08-12",
+      "changefreq": "weekly",
+      "priority": "0.8"
+    },
+    {
+      "url": "https://siteoptz.com/compare/anthropic-claude-vs-notion-ai",
+      "lastmod": "2025-08-12",
+      "changefreq": "weekly",
+      "priority": "0.8"
+    },
+    {
+      "url": "https://siteoptz.com/compare/github-copilot-vs-notion-ai",
+      "lastmod": "2025-08-12",
+      "changefreq": "weekly",
+      "priority": "0.8"
+    },
+    {
+      "url": "https://siteoptz.com/reviews/chatgpt",
+      "lastmod": "2025-08-12",
+      "changefreq": "weekly",
+      "priority": "0.7"
+    },
+    {
+      "url": "https://siteoptz.com/reviews/claude",
+      "lastmod": "2025-08-12",
+      "changefreq": "weekly",
+      "priority": "0.7"
+    },
+    {
+      "url": "https://siteoptz.com/reviews/jasper-ai",
+      "lastmod": "2025-08-12",
+      "changefreq": "weekly",
+      "priority": "0.7"
+    },
+    {
+      "url": "https://siteoptz.com/reviews/copyai",
+      "lastmod": "2025-08-12",
+      "changefreq": "weekly",
+      "priority": "0.7"
+    },
+    {
+      "url": "https://siteoptz.com/reviews/writesonic",
+      "lastmod": "2025-08-12",
+      "changefreq": "weekly",
+      "priority": "0.7"
+    },
+    {
+      "url": "https://siteoptz.com/reviews/surfer-seo",
+      "lastmod": "2025-08-12",
+      "changefreq": "weekly",
+      "priority": "0.7"
+    },
+    {
+      "url": "https://siteoptz.com/reviews/frase",
+      "lastmod": "2025-08-12",
+      "changefreq": "weekly",
+      "priority": "0.7"
+    },
+    {
+      "url": "https://siteoptz.com/reviews/midjourney",
+      "lastmod": "2025-08-12",
+      "changefreq": "weekly",
+      "priority": "0.7"
+    },
+    {
+      "url": "https://siteoptz.com/reviews/gemini",
+      "lastmod": "2025-08-12",
+      "changefreq": "weekly",
+      "priority": "0.7"
+    },
+    {
+      "url": "https://siteoptz.com/reviews/perplexity-ai",
+      "lastmod": "2025-08-12",
+      "changefreq": "weekly",
+      "priority": "0.7"
+    },
+    {
+      "url": "https://siteoptz.com/reviews/anthropic-claude",
+      "lastmod": "2025-08-12",
+      "changefreq": "weekly",
+      "priority": "0.7"
+    },
+    {
+      "url": "https://siteoptz.com/reviews/github-copilot",
+      "lastmod": "2025-08-12",
+      "changefreq": "weekly",
+      "priority": "0.7"
+    },
+    {
+      "url": "https://siteoptz.com/reviews/notion-ai",
+      "lastmod": "2025-08-12",
+      "changefreq": "weekly",
+      "priority": "0.7"
+    }
+  ]
+}

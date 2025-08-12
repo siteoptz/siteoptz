@@ -1,0 +1,39 @@
+{
+  "page_groups": {
+    "comparisons": {
+      "pages": 78,
+      "url_pattern": "/compare/[tool-a]-vs-[tool-b]",
+      "tracking_events": [
+        "page_view",
+        "tool_click",
+        "affiliate_click",
+        "email_capture"
+      ]
+    },
+    "reviews": {
+      "pages": 13,
+      "url_pattern": "/reviews/[tool-name]",
+      "tracking_events": [
+        "page_view",
+        "tool_click",
+        "affiliate_click",
+        "tab_change"
+      ]
+    }
+  },
+  "conversion_funnels": {
+    "comparison_to_trial": [
+      "comparison_page_view",
+      "tool_cta_click",
+      "affiliate_site_visit",
+      "trial_signup"
+    ],
+    "review_to_trial": [
+      "review_page_view",
+      "pricing_tab_view",
+      "trial_cta_click",
+      "trial_signup"
+    ]
+  },
+  "generated": "2025-08-12T21:37:04.180Z"
+}

@@ -1,0 +1,75 @@
+{
+  "seo_checklist": {
+    "meta_title": {
+      "value": "ChatGPT vs Claude — Features, Pricing, and Comparison [2025]",
+      "length": 60,
+      "optimal": true,
+      "note": "Should be 30-60 characters"
+    },
+    "meta_description": {
+      "value": "ChatGPT vs Claude: Compare features, pricing ($0/month vs $0/month), and pros/cons. Expert analysis for 2025.",
+      "length": 109,
+      "optimal": false,
+      "note": "Should be 155-160 characters"
+    },
+    "url_structure": {
+      "value": "/compare/chatgpt-vs-claude",
+      "optimal": true,
+      "note": "Clean, readable URL structure"
+    },
+    "schema_markup": {
+      "faq_page": true,
+      "product_schema": true,
+      "article_schema": true,
+      "breadcrumb_schema": true,
+      "note": "All required schemas implemented"
+    }
+  },
+  "content_checklist": {
+    "hero_section": {
+      "tool_logos": true,
+      "pricing_preview": true,
+      "key_features": true,
+      "cta_buttons": true
+    },
+    "comparison_table": {
+      "sortable": true,
+      "filterable": true,
+      "winner_indicators": true,
+      "all_features_mode": true
+    },
+    "pricing_calculator": {
+      "team_size_input": true,
+      "billing_frequency": true,
+      "cost_comparison": true,
+      "best_value_indicator": true
+    },
+    "faq_section": {
+      "categorized": true,
+      "expandable": true,
+      "schema_markup": true
+    },
+    "internal_linking": {
+      "related_comparisons": true,
+      "individual_reviews": true,
+      "breadcrumb_navigation": true
+    }
+  },
+  "performance_targets": {
+    "lighthouse_performance": "> 90",
+    "lighthouse_seo": "> 95",
+    "lighthouse_accessibility": "> 90",
+    "lighthouse_best_practices": "> 90",
+    "first_contentful_paint": "< 1.5s",
+    "largest_contentful_paint": "< 2.5s",
+    "cumulative_layout_shift": "< 0.1"
+  },
+  "ahrefs_validation": {
+    "title_tag": "Check for uniqueness and keyword targeting",
+    "meta_description": "Check for uniqueness and click-through appeal",
+    "h1_tag": "Single H1 with target keywords",
+    "internal_links": "Proper anchor text and relevance",
+    "schema_markup": "Validate JSON-LD syntax",
+    "page_speed": "Core Web Vitals compliance"
+  }
+}

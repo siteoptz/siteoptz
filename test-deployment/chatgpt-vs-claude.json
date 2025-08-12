@@ -1,0 +1,169 @@
+{
+  "toolA": {
+    "tool_name": "ChatGPT",
+    "logo_url": "https://upload.wikimedia.org/wikipedia/commons/0/04/ChatGPT_logo.svg",
+    "description": "Conversational AI assistant developed by OpenAI that can help with writing, coding, analysis, and general AI assistance across multiple domains.",
+    "features": [
+      "Conversational AI interface",
+      "Multi-format content creation",
+      "Code generation and debugging",
+      "Mathematical calculations",
+      "Creative writing capabilities",
+      "95+ language support",
+      "Real-time editing and refinement",
+      "Context memory within conversations",
+      "Plugin ecosystem (ChatGPT Plus)",
+      "Mobile app availability"
+    ],
+    "pros": [
+      "Exceptional versatility across content types",
+      "Superior conversational AI for brainstorming",
+      "Strong logical reasoning and problem-solving",
+      "Excellent for educational content",
+      "Budget-friendly pricing at $20/month",
+      "Native mobile apps available",
+      "Large community and ecosystem",
+      "Continuous rapid development"
+    ],
+    "cons": [
+      "No built-in templates or frameworks",
+      "Limited brand voice consistency",
+      "Requires manual prompt engineering",
+      "No integrated SEO guidance",
+      "May generate outdated information",
+      "No real-time data access",
+      "Basic team collaboration features"
+    ],
+    "pricing": [
+      {
+        "plan_name": "Free",
+        "price": "$0/month",
+        "features_included": [
+          "Access to GPT-3.5 model",
+          "Standard response speed",
+          "Limited usage during peak times"
+        ]
+      },
+      {
+        "plan_name": "ChatGPT Plus",
+        "price": "$20/month",
+        "features_included": [
+          "Access to GPT-4 model",
+          "Faster response times",
+          "Priority access during peak usage",
+          "Plugin access",
+          "Advanced data analysis"
+        ]
+      },
+      {
+        "plan_name": "ChatGPT Team",
+        "price": "$25/month per user",
+        "features_included": [
+          "All ChatGPT Plus features",
+          "Higher message limits",
+          "Team workspace",
+          "Admin controls",
+          "Early access to new features"
+        ]
+      },
+      {
+        "plan_name": "ChatGPT Enterprise",
+        "price": "Custom pricing",
+        "features_included": [
+          "Unlimited usage",
+          "Advanced security controls",
+          "SSO integration",
+          "Dedicated customer success"
+        ]
+      }
+    ],
+    "official_url": "https://chat.openai.com",
+    "affiliate_link": "",
+    "faq": [
+      {
+        "question": "Is ChatGPT better than Jasper AI for content creation?",
+        "answer": "ChatGPT is better for general content creation and users on a budget, while Jasper AI excels specifically for marketing content and brand consistency."
+      },
+      {
+        "question": "Can ChatGPT replace other AI writing tools?",
+        "answer": "ChatGPT can handle basic content creation tasks but lacks specialized features like brand voice training and SEO optimization found in dedicated marketing tools."
+      },
+      {
+        "question": "What makes ChatGPT different from other AI tools?",
+        "answer": "ChatGPT's conversational interface, versatility across domains, and strong reasoning capabilities make it unique among AI tools."
+      }
+    ]
+  },
+  "toolB": {
+    "tool_name": "Claude",
+    "logo_url": "https://www.anthropic.com/images/claude-logo.svg",
+    "description": "Advanced AI assistant by Anthropic focused on helpful, harmless, and honest AI interactions with strong reasoning capabilities and safety features.",
+    "features": [
+      "Constitutional AI training",
+      "Long-form content analysis",
+      "Advanced reasoning capabilities",
+      "Code generation and review",
+      "Document analysis",
+      "Creative writing support",
+      "Ethical AI guidelines",
+      "Research assistance",
+      "Multi-language support",
+      "Context-aware responses"
+    ],
+    "pros": [
+      "Superior reasoning and analysis",
+      "Strong ethical guidelines",
+      "Excellent for research tasks",
+      "High-quality creative writing",
+      "Good for technical documentation",
+      "Helpful and honest responses",
+      "Strong safety measures"
+    ],
+    "cons": [
+      "Limited marketing-specific features",
+      "No templates or frameworks",
+      "Higher learning curve",
+      "Limited integrations",
+      "No mobile app",
+      "Fewer business features"
+    ],
+    "pricing": [
+      {
+        "plan_name": "Claude Free",
+        "price": "$0/month",
+        "features_included": [
+          "Limited usage",
+          "Basic features",
+          "Standard response time"
+        ]
+      },
+      {
+        "plan_name": "Claude Pro",
+        "price": "$20/month",
+        "features_included": [
+          "Higher usage limits",
+          "Priority access",
+          "Advanced features",
+          "Faster responses"
+        ]
+      }
+    ],
+    "official_url": "https://claude.ai",
+    "affiliate_link": "",
+    "faq": [
+      {
+        "question": "How does Claude compare to ChatGPT?",
+        "answer": "Claude excels in reasoning and analysis while ChatGPT is more versatile for general tasks. Both are comparable in content quality."
+      },
+      {
+        "question": "Is Claude good for business use?",
+        "answer": "Claude is excellent for research, analysis, and content creation but lacks business-specific features like templates and team collaboration."
+      }
+    ]
+  },
+  "slug": "chatgpt-vs-claude",
+  "title": "ChatGPT vs Claude — Features, Pricing, and Comparison [2025]",
+  "metaDescription": "ChatGPT vs Claude: Compare features, pricing ($0/month vs $0/month), and pros/cons. Expert analysis for 2025.",
+  "url": "/compare/chatgpt-vs-claude",
+  "generated": "2025-08-12T21:12:16.455Z"
+}

@@ -1,0 +1,721 @@
+{
+  "comparisons": [
+    {
+      "source": "/compare/chatgpt-vs-claude",
+      "destination": "/compare/[tool-a]-vs-[tool-b]",
+      "params": {
+        "tool-a": "chatgpt",
+        "tool-b": "claude"
+      }
+    },
+    {
+      "source": "/compare/chatgpt-vs-jasper-ai",
+      "destination": "/compare/[tool-a]-vs-[tool-b]",
+      "params": {
+        "tool-a": "chatgpt",
+        "tool-b": "jasper-ai"
+      }
+    },
+    {
+      "source": "/compare/chatgpt-vs-copyai",
+      "destination": "/compare/[tool-a]-vs-[tool-b]",
+      "params": {
+        "tool-a": "chatgpt",
+        "tool-b": "copyai"
+      }
+    },
+    {
+      "source": "/compare/chatgpt-vs-writesonic",
+      "destination": "/compare/[tool-a]-vs-[tool-b]",
+      "params": {
+        "tool-a": "chatgpt",
+        "tool-b": "writesonic"
+      }
+    },
+    {
+      "source": "/compare/chatgpt-vs-surfer-seo",
+      "destination": "/compare/[tool-a]-vs-[tool-b]",
+      "params": {
+        "tool-a": "chatgpt",
+        "tool-b": "surfer-seo"
+      }
+    },
+    {
+      "source": "/compare/chatgpt-vs-frase",
+      "destination": "/compare/[tool-a]-vs-[tool-b]",
+      "params": {
+        "tool-a": "chatgpt",
+        "tool-b": "frase"
+      }
+    },
+    {
+      "source": "/compare/chatgpt-vs-midjourney",
+      "destination": "/compare/[tool-a]-vs-[tool-b]",
+      "params": {
+        "tool-a": "chatgpt",
+        "tool-b": "midjourney"
+      }
+    },
+    {
+      "source": "/compare/chatgpt-vs-gemini",
+      "destination": "/compare/[tool-a]-vs-[tool-b]",
+      "params": {
+        "tool-a": "chatgpt",
+        "tool-b": "gemini"
+      }
+    },
+    {
+      "source": "/compare/chatgpt-vs-perplexity-ai",
+      "destination": "/compare/[tool-a]-vs-[tool-b]",
+      "params": {
+        "tool-a": "chatgpt",
+        "tool-b": "perplexity-ai"
+      }
+    },
+    {
+      "source": "/compare/chatgpt-vs-anthropic-claude",
+      "destination": "/compare/[tool-a]-vs-[tool-b]",
+      "params": {
+        "tool-a": "chatgpt",
+        "tool-b": "anthropic-claude"
+      }
+    },
+    {
+      "source": "/compare/chatgpt-vs-github-copilot",
+      "destination": "/compare/[tool-a]-vs-[tool-b]",
+      "params": {
+        "tool-a": "chatgpt",
+        "tool-b": "github-copilot"
+      }
+    },
+    {
+      "source": "/compare/chatgpt-vs-notion-ai",
+      "destination": "/compare/[tool-a]-vs-[tool-b]",
+      "params": {
+        "tool-a": "chatgpt",
+        "tool-b": "notion-ai"
+      }
+    },
+    {
+      "source": "/compare/claude-vs-jasper-ai",
+      "destination": "/compare/[tool-a]-vs-[tool-b]",
+      "params": {
+        "tool-a": "claude",
+        "tool-b": "jasper-ai"
+      }
+    },
+    {
+      "source": "/compare/claude-vs-copyai",
+      "destination": "/compare/[tool-a]-vs-[tool-b]",
+      "params": {
+        "tool-a": "claude",
+        "tool-b": "copyai"
+      }
+    },
+    {
+      "source": "/compare/claude-vs-writesonic",
+      "destination": "/compare/[tool-a]-vs-[tool-b]",
+      "params": {
+        "tool-a": "claude",
+        "tool-b": "writesonic"
+      }
+    },
+    {
+      "source": "/compare/claude-vs-surfer-seo",
+      "destination": "/compare/[tool-a]-vs-[tool-b]",
+      "params": {
+        "tool-a": "claude",
+        "tool-b": "surfer-seo"
+      }
+    },
+    {
+      "source": "/compare/claude-vs-frase",
+      "destination": "/compare/[tool-a]-vs-[tool-b]",
+      "params": {
+        "tool-a": "claude",
+        "tool-b": "frase"
+      }
+    },
+    {
+      "source": "/compare/claude-vs-midjourney",
+      "destination": "/compare/[tool-a]-vs-[tool-b]",
+      "params": {
+        "tool-a": "claude",
+        "tool-b": "midjourney"
+      }
+    },
+    {
+      "source": "/compare/claude-vs-gemini",
+      "destination": "/compare/[tool-a]-vs-[tool-b]",
+      "params": {
+        "tool-a": "claude",
+        "tool-b": "gemini"
+      }
+    },
+    {
+      "source": "/compare/claude-vs-perplexity-ai",
+      "destination": "/compare/[tool-a]-vs-[tool-b]",
+      "params": {
+        "tool-a": "claude",
+        "tool-b": "perplexity-ai"
+      }
+    },
+    {
+      "source": "/compare/claude-vs-anthropic-claude",
+      "destination": "/compare/[tool-a]-vs-[tool-b]",
+      "params": {
+        "tool-a": "claude",
+        "tool-b": "anthropic-claude"
+      }
+    },
+    {
+      "source": "/compare/claude-vs-github-copilot",
+      "destination": "/compare/[tool-a]-vs-[tool-b]",
+      "params": {
+        "tool-a": "claude",
+        "tool-b": "github-copilot"
+      }
+    },
+    {
+      "source": "/compare/claude-vs-notion-ai",
+      "destination": "/compare/[tool-a]-vs-[tool-b]",
+      "params": {
+        "tool-a": "claude",
+        "tool-b": "notion-ai"
+      }
+    },
+    {
+      "source": "/compare/jasper-ai-vs-copyai",
+      "destination": "/compare/[tool-a]-vs-[tool-b]",
+      "params": {
+        "tool-a": "jasper-ai",
+        "tool-b": "copyai"
+      }
+    },
+    {
+      "source": "/compare/jasper-ai-vs-writesonic",
+      "destination": "/compare/[tool-a]-vs-[tool-b]",
+      "params": {
+        "tool-a": "jasper-ai",
+        "tool-b": "writesonic"
+      }
+    },
+    {
+      "source": "/compare/jasper-ai-vs-surfer-seo",
+      "destination": "/compare/[tool-a]-vs-[tool-b]",
+      "params": {
+        "tool-a": "jasper-ai",
+        "tool-b": "surfer-seo"
+      }
+    },
+    {
+      "source": "/compare/jasper-ai-vs-frase",
+      "destination": "/compare/[tool-a]-vs-[tool-b]",
+      "params": {
+        "tool-a": "jasper-ai",
+        "tool-b": "frase"
+      }
+    },
+    {
+      "source": "/compare/jasper-ai-vs-midjourney",
+      "destination": "/compare/[tool-a]-vs-[tool-b]",
+      "params": {
+        "tool-a": "jasper-ai",
+        "tool-b": "midjourney"
+      }
+    },
+    {
+      "source": "/compare/jasper-ai-vs-gemini",
+      "destination": "/compare/[tool-a]-vs-[tool-b]",
+      "params": {
+        "tool-a": "jasper-ai",
+        "tool-b": "gemini"
+      }
+    },
+    {
+      "source": "/compare/jasper-ai-vs-perplexity-ai",
+      "destination": "/compare/[tool-a]-vs-[tool-b]",
+      "params": {
+        "tool-a": "jasper-ai",
+        "tool-b": "perplexity-ai"
+      }
+    },
+    {
+      "source": "/compare/jasper-ai-vs-anthropic-claude",
+      "destination": "/compare/[tool-a]-vs-[tool-b]",
+      "params": {
+        "tool-a": "jasper-ai",
+        "tool-b": "anthropic-claude"
+      }
+    },
+    {
+      "source": "/compare/jasper-ai-vs-github-copilot",
+      "destination": "/compare/[tool-a]-vs-[tool-b]",
+      "params": {
+        "tool-a": "jasper-ai",
+        "tool-b": "github-copilot"
+      }
+    },
+    {
+      "source": "/compare/jasper-ai-vs-notion-ai",
+      "destination": "/compare/[tool-a]-vs-[tool-b]",
+      "params": {
+        "tool-a": "jasper-ai",
+        "tool-b": "notion-ai"
+      }
+    },
+    {
+      "source": "/compare/copyai-vs-writesonic",
+      "destination": "/compare/[tool-a]-vs-[tool-b]",
+      "params": {
+        "tool-a": "copyai",
+        "tool-b": "writesonic"
+      }
+    },
+    {
+      "source": "/compare/copyai-vs-surfer-seo",
+      "destination": "/compare/[tool-a]-vs-[tool-b]",
+      "params": {
+        "tool-a": "copyai",
+        "tool-b": "surfer-seo"
+      }
+    },
+    {
+      "source": "/compare/copyai-vs-frase",
+      "destination": "/compare/[tool-a]-vs-[tool-b]",
+      "params": {
+        "tool-a": "copyai",
+        "tool-b": "frase"
+      }
+    },
+    {
+      "source": "/compare/copyai-vs-midjourney",
+      "destination": "/compare/[tool-a]-vs-[tool-b]",
+      "params": {
+        "tool-a": "copyai",
+        "tool-b": "midjourney"
+      }
+    },
+    {
+      "source": "/compare/copyai-vs-gemini",
+      "destination": "/compare/[tool-a]-vs-[tool-b]",
+      "params": {
+        "tool-a": "copyai",
+        "tool-b": "gemini"
+      }
+    },
+    {
+      "source": "/compare/copyai-vs-perplexity-ai",
+      "destination": "/compare/[tool-a]-vs-[tool-b]",
+      "params": {
+        "tool-a": "copyai",
+        "tool-b": "perplexity-ai"
+      }
+    },
+    {
+      "source": "/compare/copyai-vs-anthropic-claude",
+      "destination": "/compare/[tool-a]-vs-[tool-b]",
+      "params": {
+        "tool-a": "copyai",
+        "tool-b": "anthropic-claude"
+      }
+    },
+    {
+      "source": "/compare/copyai-vs-github-copilot",
+      "destination": "/compare/[tool-a]-vs-[tool-b]",
+      "params": {
+        "tool-a": "copyai",
+        "tool-b": "github-copilot"
+      }
+    },
+    {
+      "source": "/compare/copyai-vs-notion-ai",
+      "destination": "/compare/[tool-a]-vs-[tool-b]",
+      "params": {
+        "tool-a": "copyai",
+        "tool-b": "notion-ai"
+      }
+    },
+    {
+      "source": "/compare/writesonic-vs-surfer-seo",
+      "destination": "/compare/[tool-a]-vs-[tool-b]",
+      "params": {
+        "tool-a": "writesonic",
+        "tool-b": "surfer-seo"
+      }
+    },
+    {
+      "source": "/compare/writesonic-vs-frase",
+      "destination": "/compare/[tool-a]-vs-[tool-b]",
+      "params": {
+        "tool-a": "writesonic",
+        "tool-b": "frase"
+      }
+    },
+    {
+      "source": "/compare/writesonic-vs-midjourney",
+      "destination": "/compare/[tool-a]-vs-[tool-b]",
+      "params": {
+        "tool-a": "writesonic",
+        "tool-b": "midjourney"
+      }
+    },
+    {
+      "source": "/compare/writesonic-vs-gemini",
+      "destination": "/compare/[tool-a]-vs-[tool-b]",
+      "params": {
+        "tool-a": "writesonic",
+        "tool-b": "gemini"
+      }
+    },
+    {
+      "source": "/compare/writesonic-vs-perplexity-ai",
+      "destination": "/compare/[tool-a]-vs-[tool-b]",
+      "params": {
+        "tool-a": "writesonic",
+        "tool-b": "perplexity-ai"
+      }
+    },
+    {
+      "source": "/compare/writesonic-vs-anthropic-claude",
+      "destination": "/compare/[tool-a]-vs-[tool-b]",
+      "params": {
+        "tool-a": "writesonic",
+        "tool-b": "anthropic-claude"
+      }
+    },
+    {
+      "source": "/compare/writesonic-vs-github-copilot",
+      "destination": "/compare/[tool-a]-vs-[tool-b]",
+      "params": {
+        "tool-a": "writesonic",
+        "tool-b": "github-copilot"
+      }
+    },
+    {
+      "source": "/compare/writesonic-vs-notion-ai",
+      "destination": "/compare/[tool-a]-vs-[tool-b]",
+      "params": {
+        "tool-a": "writesonic",
+        "tool-b": "notion-ai"
+      }
+    },
+    {
+      "source": "/compare/surfer-seo-vs-frase",
+      "destination": "/compare/[tool-a]-vs-[tool-b]",
+      "params": {
+        "tool-a": "surfer-seo",
+        "tool-b": "frase"
+      }
+    },
+    {
+      "source": "/compare/surfer-seo-vs-midjourney",
+      "destination": "/compare/[tool-a]-vs-[tool-b]",
+      "params": {
+        "tool-a": "surfer-seo",
+        "tool-b": "midjourney"
+      }
+    },
+    {
+      "source": "/compare/surfer-seo-vs-gemini",
+      "destination": "/compare/[tool-a]-vs-[tool-b]",
+      "params": {
+        "tool-a": "surfer-seo",
+        "tool-b": "gemini"
+      }
+    },
+    {
+      "source": "/compare/surfer-seo-vs-perplexity-ai",
+      "destination": "/compare/[tool-a]-vs-[tool-b]",
+      "params": {
+        "tool-a": "surfer-seo",
+        "tool-b": "perplexity-ai"
+      }
+    },
+    {
+      "source": "/compare/surfer-seo-vs-anthropic-claude",
+      "destination": "/compare/[tool-a]-vs-[tool-b]",
+      "params": {
+        "tool-a": "surfer-seo",
+        "tool-b": "anthropic-claude"
+      }
+    },
+    {
+      "source": "/compare/surfer-seo-vs-github-copilot",
+      "destination": "/compare/[tool-a]-vs-[tool-b]",
+      "params": {
+        "tool-a": "surfer-seo",
+        "tool-b": "github-copilot"
+      }
+    },
+    {
+      "source": "/compare/surfer-seo-vs-notion-ai",
+      "destination": "/compare/[tool-a]-vs-[tool-b]",
+      "params": {
+        "tool-a": "surfer-seo",
+        "tool-b": "notion-ai"
+      }
+    },
+    {
+      "source": "/compare/frase-vs-midjourney",
+      "destination": "/compare/[tool-a]-vs-[tool-b]",
+      "params": {
+        "tool-a": "frase",
+        "tool-b": "midjourney"
+      }
+    },
+    {
+      "source": "/compare/frase-vs-gemini",
+      "destination": "/compare/[tool-a]-vs-[tool-b]",
+      "params": {
+        "tool-a": "frase",
+        "tool-b": "gemini"
+      }
+    },
+    {
+      "source": "/compare/frase-vs-perplexity-ai",
+      "destination": "/compare/[tool-a]-vs-[tool-b]",
+      "params": {
+        "tool-a": "frase",
+        "tool-b": "perplexity-ai"
+      }
+    },
+    {
+      "source": "/compare/frase-vs-anthropic-claude",
+      "destination": "/compare/[tool-a]-vs-[tool-b]",
+      "params": {
+        "tool-a": "frase",
+        "tool-b": "anthropic-claude"
+      }
+    },
+    {
+      "source": "/compare/frase-vs-github-copilot",
+      "destination": "/compare/[tool-a]-vs-[tool-b]",
+      "params": {
+        "tool-a": "frase",
+        "tool-b": "github-copilot"
+      }
+    },
+    {
+      "source": "/compare/frase-vs-notion-ai",
+      "destination": "/compare/[tool-a]-vs-[tool-b]",
+      "params": {
+        "tool-a": "frase",
+        "tool-b": "notion-ai"
+      }
+    },
+    {
+      "source": "/compare/midjourney-vs-gemini",
+      "destination": "/compare/[tool-a]-vs-[tool-b]",
+      "params": {
+        "tool-a": "midjourney",
+        "tool-b": "gemini"
+      }
+    },
+    {
+      "source": "/compare/midjourney-vs-perplexity-ai",
+      "destination": "/compare/[tool-a]-vs-[tool-b]",
+      "params": {
+        "tool-a": "midjourney",
+        "tool-b": "perplexity-ai"
+      }
+    },
+    {
+      "source": "/compare/midjourney-vs-anthropic-claude",
+      "destination": "/compare/[tool-a]-vs-[tool-b]",
+      "params": {
+        "tool-a": "midjourney",
+        "tool-b": "anthropic-claude"
+      }
+    },
+    {
+      "source": "/compare/midjourney-vs-github-copilot",
+      "destination": "/compare/[tool-a]-vs-[tool-b]",
+      "params": {
+        "tool-a": "midjourney",
+        "tool-b": "github-copilot"
+      }
+    },
+    {
+      "source": "/compare/midjourney-vs-notion-ai",
+      "destination": "/compare/[tool-a]-vs-[tool-b]",
+      "params": {
+        "tool-a": "midjourney",
+        "tool-b": "notion-ai"
+      }
+    },
+    {
+      "source": "/compare/gemini-vs-perplexity-ai",
+      "destination": "/compare/[tool-a]-vs-[tool-b]",
+      "params": {
+        "tool-a": "gemini",
+        "tool-b": "perplexity-ai"
+      }
+    },
+    {
+      "source": "/compare/gemini-vs-anthropic-claude",
+      "destination": "/compare/[tool-a]-vs-[tool-b]",
+      "params": {
+        "tool-a": "gemini",
+        "tool-b": "anthropic-claude"
+      }
+    },
+    {
+      "source": "/compare/gemini-vs-github-copilot",
+      "destination": "/compare/[tool-a]-vs-[tool-b]",
+      "params": {
+        "tool-a": "gemini",
+        "tool-b": "github-copilot"
+      }
+    },
+    {
+      "source": "/compare/gemini-vs-notion-ai",
+      "destination": "/compare/[tool-a]-vs-[tool-b]",
+      "params": {
+        "tool-a": "gemini",
+        "tool-b": "notion-ai"
+      }
+    },
+    {
+      "source": "/compare/perplexity-ai-vs-anthropic-claude",
+      "destination": "/compare/[tool-a]-vs-[tool-b]",
+      "params": {
+        "tool-a": "perplexity-ai",
+        "tool-b": "anthropic-claude"
+      }
+    },
+    {
+      "source": "/compare/perplexity-ai-vs-github-copilot",
+      "destination": "/compare/[tool-a]-vs-[tool-b]",
+      "params": {
+        "tool-a": "perplexity-ai",
+        "tool-b": "github-copilot"
+      }
+    },
+    {
+      "source": "/compare/perplexity-ai-vs-notion-ai",
+      "destination": "/compare/[tool-a]-vs-[tool-b]",
+      "params": {
+        "tool-a": "perplexity-ai",
+        "tool-b": "notion-ai"
+      }
+    },
+    {
+      "source": "/compare/anthropic-claude-vs-github-copilot",
+      "destination": "/compare/[tool-a]-vs-[tool-b]",
+      "params": {
+        "tool-a": "anthropic-claude",
+        "tool-b": "github-copilot"
+      }
+    },
+    {
+      "source": "/compare/anthropic-claude-vs-notion-ai",
+      "destination": "/compare/[tool-a]-vs-[tool-b]",
+      "params": {
+        "tool-a": "anthropic-claude",
+        "tool-b": "notion-ai"
+      }
+    },
+    {
+      "source": "/compare/github-copilot-vs-notion-ai",
+      "destination": "/compare/[tool-a]-vs-[tool-b]",
+      "params": {
+        "tool-a": "github-copilot",
+        "tool-b": "notion-ai"
+      }
+    }
+  ],
+  "reviews": [
+    {
+      "source": "/reviews/chatgpt",
+      "destination": "/reviews/[tool-name]",
+      "params": {
+        "tool-name": "chatgpt"
+      }
+    },
+    {
+      "source": "/reviews/claude",
+      "destination": "/reviews/[tool-name]",
+      "params": {
+        "tool-name": "claude"
+      }
+    },
+    {
+      "source": "/reviews/jasper-ai",
+      "destination": "/reviews/[tool-name]",
+      "params": {
+        "tool-name": "jasper-ai"
+      }
+    },
+    {
+      "source": "/reviews/copyai",
+      "destination": "/reviews/[tool-name]",
+      "params": {
+        "tool-name": "copyai"
+      }
+    },
+    {
+      "source": "/reviews/writesonic",
+      "destination": "/reviews/[tool-name]",
+      "params": {
+        "tool-name": "writesonic"
+      }
+    },
+    {
+      "source": "/reviews/surfer-seo",
+      "destination": "/reviews/[tool-name]",
+      "params": {
+        "tool-name": "surfer-seo"
+      }
+    },
+    {
+      "source": "/reviews/frase",
+      "destination": "/reviews/[tool-name]",
+      "params": {
+        "tool-name": "frase"
+      }
+    },
+    {
+      "source": "/reviews/midjourney",
+      "destination": "/reviews/[tool-name]",
+      "params": {
+        "tool-name": "midjourney"
+      }
+    },
+    {
+      "source": "/reviews/gemini",
+      "destination": "/reviews/[tool-name]",
+      "params": {
+        "tool-name": "gemini"
+      }
+    },
+    {
+      "source": "/reviews/perplexity-ai",
+      "destination": "/reviews/[tool-name]",
+      "params": {
+        "tool-name": "perplexity-ai"
+      }
+    },
+    {
+      "source": "/reviews/anthropic-claude",
+      "destination": "/reviews/[tool-name]",
+      "params": {
+        "tool-name": "anthropic-claude"
+      }
+    },
+    {
+      "source": "/reviews/github-copilot",
+      "destination": "/reviews/[tool-name]",
+      "params": {
+        "tool-name": "github-copilot"
+      }
+    },
+    {
+      "source": "/reviews/notion-ai",
+      "destination": "/reviews/[tool-name]",
+      "params": {
+        "tool-name": "notion-ai"
+      }
+    }
+  ]
+}
