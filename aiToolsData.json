@@ -1,0 +1,1010 @@
+[
+  {
+    "tool_name": "ChatGPT",
+    "vendor": "OpenAI",
+    "category": "Content Creation",
+    "features": {
+      "core": [
+        "Text generation",
+        "Conversational AI",
+        "Code assistance",
+        "Language translation",
+        "Creative writing",
+        "Problem solving",
+        "Research assistance"
+      ],
+      "advanced": [
+        "GPT-4 model access",
+        "File upload and analysis",
+        "Custom instructions",
+        "Memory across conversations",
+        "Web browsing",
+        "Code interpreter",
+        "DALL-E integration"
+      ],
+      "integrations": [
+        "API access",
+        "Slack",
+        "Discord",
+        "Microsoft Office",
+        "Chrome extensions",
+        "Mobile app"
+      ]
+    },
+    "pricing": {
+      "monthly": 20,
+      "yearly": 200,
+      "enterprise": "Custom"
+    },
+    "free_trial": true,
+    "pros": [
+      "Most advanced AI model available",
+      "Excellent for general-purpose tasks",
+      "Mobile app available",
+      "Strong coding capabilities",
+      "Regular updates and improvements",
+      "Large user community"
+    ],
+    "cons": [
+      "Limited content templates",
+      "No brand voice customization",
+      "Basic SEO optimization",
+      "No built-in plagiarism checker",
+      "Limited team collaboration features"
+    ],
+    "rating": 4.8,
+    "use_cases": [
+      "General AI assistance",
+      "Code development",
+      "Research and analysis",
+      "Creative writing",
+      "Problem solving",
+      "Language learning"
+    ],
+    "affiliate_link": "https://chat.openai.com/",
+    "logo_url": "/images/tools/chatgpt-logo.png",
+    "search_volume": 18750,
+    "cpc": 3.24
+  },
+  {
+    "tool_name": "Jasper AI",
+    "vendor": "Jasper",
+    "category": "Content Creation",
+    "features": {
+      "core": [
+        "50+ content templates",
+        "Brand voice customization",
+        "SEO optimization",
+        "Plagiarism checker",
+        "Content calendar",
+        "Team collaboration",
+        "Multi-language support"
+      ],
+      "advanced": [
+        "Boss Mode for long-form content",
+        "Surfer SEO integration",
+        "Grammarly integration",
+        "Custom templates",
+        "Brand guidelines",
+        "Content scoring",
+        "A/B testing"
+      ],
+      "integrations": [
+        "Surfer SEO",
+        "Grammarly",
+        "WordPress",
+        "Shopify",
+        "HubSpot",
+        "Zapier",
+        "API access"
+      ]
+    },
+    "pricing": {
+      "monthly": 39,
+      "yearly": 390,
+      "enterprise": "Custom"
+    },
+    "free_trial": true,
+    "pros": [
+      "Excellent for content marketing",
+        "Advanced brand voice features",
+        "SEO optimization tools",
+        "Professional templates",
+        "Team collaboration features",
+        "Strong customer support"
+    ],
+    "cons": [
+      "Higher pricing than ChatGPT",
+      "No mobile app",
+      "Limited coding capabilities",
+      "Requires learning curve",
+      "Monthly character limits"
+    ],
+    "rating": 4.6,
+    "use_cases": [
+      "Content marketing",
+      "Blog writing",
+      "Social media content",
+      "Email marketing",
+      "Product descriptions",
+      "SEO content"
+    ],
+    "affiliate_link": "https://jasper.ai/",
+    "logo_url": "/images/tools/jasper-logo.png",
+    "search_volume": 3500,
+    "cpc": 2.80
+  },
+  {
+    "tool_name": "Surfer SEO",
+    "vendor": "Surfer",
+    "category": "SEO & Optimization",
+    "features": {
+      "core": [
+        "Keyword research",
+        "Content optimization",
+        "SERP analysis",
+        "Competitor analysis",
+        "Content editor",
+        "Site audit",
+        "Rank tracking"
+      ],
+      "advanced": [
+        "Content planner",
+        "Keyword clustering",
+        "Content briefs",
+        "AI content generation",
+        "Local SEO tools",
+        "Technical SEO audit",
+        "Backlink analysis"
+      ],
+      "integrations": [
+        "Google Search Console",
+        "Google Analytics",
+        "WordPress",
+        "Shopify",
+        "Jasper AI",
+        "Frase",
+        "API access"
+      ]
+    },
+    "pricing": {
+      "monthly": 59,
+      "yearly": 590,
+      "enterprise": "Custom"
+    },
+    "free_trial": true,
+    "pros": [
+      "Excellent content optimization",
+      "Data-driven recommendations",
+      "User-friendly interface",
+      "Strong SEO focus",
+      "Regular updates",
+      "Good customer support"
+    ],
+    "cons": [
+      "Higher pricing",
+      "Limited to SEO features",
+      "Steep learning curve",
+      "Requires SEO knowledge",
+      "No general AI features"
+    ],
+    "rating": 4.7,
+    "use_cases": [
+      "SEO content optimization",
+      "Keyword research",
+      "Competitor analysis",
+      "Site audits",
+      "Content planning",
+      "Rank tracking"
+    ],
+    "affiliate_link": "https://surferseo.com/",
+    "logo_url": "/images/tools/surfer-logo.png",
+    "search_volume": 2500,
+    "cpc": 2.80
+  },
+  {
+    "tool_name": "Frase",
+    "vendor": "Frase",
+    "category": "SEO & Optimization",
+    "features": {
+      "core": [
+        "Content optimization",
+        "Question research",
+        "SERP analysis",
+        "Content briefs",
+        "Answer optimization",
+        "Topic modeling",
+        "Content scoring"
+      ],
+      "advanced": [
+        "AI content generation",
+        "Content clustering",
+        "Featured snippet optimization",
+        "Voice search optimization",
+        "Content templates",
+        "Team collaboration",
+        "Custom reports"
+      ],
+      "integrations": [
+        "Google Search Console",
+        "Google Analytics",
+        "WordPress",
+        "Shopify",
+        "Jasper AI",
+        "Surfer SEO",
+        "API access"
+      ]
+    },
+    "pricing": {
+      "monthly": 44.99,
+      "yearly": 449.99,
+      "enterprise": "Custom"
+    },
+    "free_trial": true,
+    "pros": [
+      "Excellent for content optimization",
+      "Question-based research",
+      "User-friendly interface",
+      "Strong SEO focus",
+      "Good customer support",
+      "Regular updates"
+    ],
+    "cons": [
+      "Limited to SEO features",
+      "Higher pricing",
+      "Requires SEO knowledge",
+      "No general AI features",
+      "Limited integrations"
+    ],
+    "rating": 4.5,
+    "use_cases": [
+      "Content optimization",
+      "Question research",
+      "SERP analysis",
+      "Content briefs",
+      "Featured snippet optimization",
+      "Voice search optimization"
+    ],
+    "affiliate_link": "https://www.frase.io/",
+    "logo_url": "/images/tools/frase-logo.png",
+    "search_volume": 1800,
+    "cpc": 2.60
+  },
+  {
+    "tool_name": "Midjourney",
+    "vendor": "Midjourney",
+    "category": "Visual Content",
+    "features": {
+      "core": [
+        "AI image generation",
+        "High-quality artwork",
+        "Multiple art styles",
+        "Custom prompts",
+        "Image variations",
+        "Upscaling",
+        "Commercial usage rights"
+      ],
+      "advanced": [
+        "Advanced prompting",
+        "Style mixing",
+        "Aspect ratio control",
+        "Quality settings",
+        "Remix mode",
+        "Pan and zoom",
+        "Custom models"
+      ],
+      "integrations": [
+        "Discord",
+        "API access",
+        "Web interface",
+        "Mobile app",
+        "Third-party tools"
+      ]
+    },
+    "pricing": {
+      "monthly": 10,
+      "yearly": 96,
+      "enterprise": "Custom"
+    },
+    "free_trial": true,
+    "pros": [
+      "Exceptional image quality",
+      "Unique artistic style",
+      "Fast generation",
+      "Commercial usage rights",
+      "Active community",
+      "Regular updates"
+    ],
+    "cons": [
+      "Discord-based interface",
+      "Limited control over details",
+      "No text generation",
+      "Requires Discord account",
+      "Limited editing capabilities"
+    ],
+    "rating": 4.9,
+    "use_cases": [
+      "Digital art creation",
+      "Marketing visuals",
+      "Concept art",
+      "Social media graphics",
+      "Book illustrations",
+      "Product mockups"
+    ],
+    "affiliate_link": "https://www.midjourney.com/",
+    "logo_url": "/images/tools/midjourney-logo.png",
+    "search_volume": 2250,
+    "cpc": 3.36
+  },
+  {
+    "tool_name": "DALL-E",
+    "vendor": "OpenAI",
+    "category": "Visual Content",
+    "features": {
+      "core": [
+        "AI image generation",
+        "Text-to-image",
+        "Image editing",
+        "Variations",
+        "High resolution",
+        "Multiple styles",
+        "Commercial usage"
+      ],
+      "advanced": [
+        "DALL-E 3 model",
+        "Advanced prompting",
+        "Image inpainting",
+        "Outpainting",
+        "Style transfer",
+        "Quality control",
+        "Safety filters"
+      ],
+      "integrations": [
+        "ChatGPT Plus",
+        "API access",
+        "Microsoft Designer",
+        "Bing Image Creator",
+        "Third-party tools"
+      ]
+    },
+    "pricing": {
+      "monthly": 20,
+      "yearly": 200,
+      "enterprise": "Custom"
+    },
+    "free_trial": true,
+    "pros": [
+      "High-quality images",
+      "Excellent text rendering",
+      "Integrated with ChatGPT",
+      "Good safety features",
+      "Commercial usage rights",
+      "Regular updates"
+    ],
+    "cons": [
+      "Limited artistic styles",
+      "Higher pricing",
+      "Requires ChatGPT Plus",
+      "Limited editing tools",
+      "Safety restrictions"
+    ],
+    "rating": 4.7,
+    "use_cases": [
+      "Marketing visuals",
+      "Product images",
+      "Social media graphics",
+      "Illustrations",
+      "Concept art",
+      "Educational materials"
+    ],
+    "affiliate_link": "https://openai.com/dall-e-2",
+    "logo_url": "/images/tools/dalle-logo.png",
+    "search_volume": 1800,
+    "cpc": 2.80
+  },
+  {
+    "tool_name": "Hootsuite AI",
+    "vendor": "Hootsuite",
+    "category": "Social Media",
+    "features": {
+      "core": [
+        "Social media scheduling",
+        "Content calendar",
+        "Analytics dashboard",
+        "Team collaboration",
+        "Multi-platform posting",
+        "Content library",
+        "Engagement monitoring"
+      ],
+      "advanced": [
+        "AI content suggestions",
+        "Best time to post",
+        "Hashtag recommendations",
+        "Content performance predictions",
+        "Automated responses",
+        "Advanced analytics",
+        "Custom workflows"
+      ],
+      "integrations": [
+        "Facebook",
+        "Instagram",
+        "Twitter",
+        "LinkedIn",
+        "TikTok",
+        "YouTube",
+        "Canva"
+      ]
+    },
+    "pricing": {
+      "monthly": 29,
+      "yearly": 290,
+      "enterprise": "Custom"
+    },
+    "free_trial": true,
+    "pros": [
+      "Comprehensive social media management",
+      "AI-powered features",
+      "Excellent analytics",
+      "Team collaboration",
+      "Multi-platform support",
+      "Good customer support"
+    ],
+    "cons": [
+      "Higher pricing",
+      "Complex interface",
+      "Limited AI features",
+      "Requires learning curve",
+      "Some features enterprise-only"
+    ],
+    "rating": 4.4,
+    "use_cases": [
+      "Social media management",
+      "Content scheduling",
+      "Team collaboration",
+      "Analytics and reporting",
+      "Engagement monitoring",
+      "Multi-platform posting"
+    ],
+    "affiliate_link": "https://hootsuite.com/",
+    "logo_url": "/images/tools/hootsuite-logo.png",
+    "search_volume": 2000,
+    "cpc": 2.20
+  },
+  {
+    "tool_name": "Buffer AI",
+    "vendor": "Buffer",
+    "category": "Social Media",
+    "features": {
+      "core": [
+        "Social media scheduling",
+        "Content calendar",
+        "Analytics dashboard",
+        "Team collaboration",
+        "Multi-platform posting",
+        "Content library",
+        "Engagement monitoring"
+      ],
+      "advanced": [
+        "AI content generation",
+        "Hashtag suggestions",
+        "Best time to post",
+        "Content performance insights",
+        "Automated responses",
+        "Advanced analytics",
+        "Custom workflows"
+      ],
+      "integrations": [
+        "Facebook",
+        "Instagram",
+        "Twitter",
+        "LinkedIn",
+        "TikTok",
+        "Pinterest",
+        "Canva"
+      ]
+    },
+    "pricing": {
+      "monthly": 15,
+      "yearly": 150,
+      "enterprise": "Custom"
+    },
+    "free_trial": true,
+    "pros": [
+      "User-friendly interface",
+      "Affordable pricing",
+      "AI content features",
+      "Good analytics",
+      "Multi-platform support",
+      "Excellent customer support"
+    ],
+    "cons": [
+      "Limited advanced features",
+      "Fewer integrations",
+      "Basic AI capabilities",
+      "Limited team features",
+      "No enterprise features"
+    ],
+    "rating": 4.3,
+    "use_cases": [
+      "Social media scheduling",
+      "Content management",
+      "Analytics and reporting",
+      "Team collaboration",
+      "Multi-platform posting",
+      "Content optimization"
+    ],
+    "affiliate_link": "https://buffer.com/",
+    "logo_url": "/images/tools/buffer-logo.png",
+    "search_volume": 1500,
+    "cpc": 1.80
+  },
+  {
+    "tool_name": "Ahrefs AI",
+    "vendor": "Ahrefs",
+    "category": "SEO & Optimization",
+    "features": {
+      "core": [
+        "Keyword research",
+        "Site audit",
+        "Backlink analysis",
+        "Rank tracking",
+        "Content explorer",
+        "Site explorer",
+        "Competitor analysis"
+      ],
+      "advanced": [
+        "AI content generation",
+        "Content gap analysis",
+        "Keyword clustering",
+        "Featured snippet tracking",
+        "Local SEO tools",
+        "Technical SEO audit",
+        "Custom reports"
+      ],
+      "integrations": [
+        "Google Search Console",
+        "Google Analytics",
+        "WordPress",
+        "Shopify",
+        "API access",
+        "Third-party tools"
+      ]
+    },
+    "pricing": {
+      "monthly": 99,
+      "yearly": 990,
+      "enterprise": "Custom"
+    },
+    "free_trial": true,
+    "pros": [
+      "Comprehensive SEO toolkit",
+      "Excellent data accuracy",
+      "AI content features",
+      "Advanced analytics",
+      "Regular updates",
+      "Good customer support"
+    ],
+    "cons": [
+      "High pricing",
+      "Complex interface",
+      "Steep learning curve",
+      "Requires SEO knowledge",
+      "Limited AI features"
+    ],
+    "rating": 4.8,
+    "use_cases": [
+      "Keyword research",
+      "Site audits",
+      "Backlink analysis",
+      "Competitor analysis",
+      "Content optimization",
+      "Rank tracking"
+    ],
+    "affiliate_link": "https://ahrefs.com/",
+    "logo_url": "/images/tools/ahrefs-logo.png",
+    "search_volume": 1875,
+    "cpc": 3.30
+  },
+  {
+    "tool_name": "Semrush AI",
+    "vendor": "Semrush",
+    "category": "SEO & Optimization",
+    "features": {
+      "core": [
+        "Keyword research",
+        "Site audit",
+        "Backlink analysis",
+        "Rank tracking",
+        "Content explorer",
+        "Site explorer",
+        "Competitor analysis"
+      ],
+      "advanced": [
+        "AI content generation",
+        "Content gap analysis",
+        "Keyword clustering",
+        "Featured snippet tracking",
+        "Local SEO tools",
+        "Technical SEO audit",
+        "Custom reports"
+      ],
+      "integrations": [
+        "Google Search Console",
+        "Google Analytics",
+        "WordPress",
+        "Shopify",
+        "API access",
+        "Third-party tools"
+      ]
+    },
+    "pricing": {
+      "monthly": 119.95,
+      "yearly": 1199.95,
+      "enterprise": "Custom"
+    },
+    "free_trial": true,
+    "pros": [
+      "Comprehensive SEO toolkit",
+      "Excellent data accuracy",
+      "AI content features",
+      "Advanced analytics",
+      "Regular updates",
+      "Good customer support"
+    ],
+    "cons": [
+      "High pricing",
+      "Complex interface",
+      "Steep learning curve",
+      "Requires SEO knowledge",
+      "Limited AI features"
+    ],
+    "rating": 4.7,
+    "use_cases": [
+      "Keyword research",
+      "Site audits",
+      "Backlink analysis",
+      "Competitor analysis",
+      "Content optimization",
+      "Rank tracking"
+    ],
+    "affiliate_link": "https://www.semrush.com/",
+    "logo_url": "/images/tools/semrush-logo.png",
+    "search_volume": 1600,
+    "cpc": 3.10
+  },
+  {
+    "tool_name": "Mailchimp AI",
+    "vendor": "Mailchimp",
+    "category": "Email Marketing",
+    "features": {
+      "core": [
+        "Email campaigns",
+        "Automation workflows",
+        "List management",
+        "Template library",
+        "Analytics dashboard",
+        "A/B testing",
+        "Segmentation"
+      ],
+      "advanced": [
+        "AI content generation",
+        "Smart recommendations",
+        "Predictive analytics",
+        "Behavioral targeting",
+        "Advanced automation",
+        "Custom integrations",
+        "Advanced reporting"
+      ],
+      "integrations": [
+        "Shopify",
+        "WordPress",
+        "Salesforce",
+        "Zapier",
+        "API access",
+        "Third-party tools"
+      ]
+    },
+    "pricing": {
+      "monthly": 13,
+      "yearly": 130,
+      "enterprise": "Custom"
+    },
+    "free_trial": true,
+    "pros": [
+      "User-friendly interface",
+      "AI content features",
+      "Good automation",
+      "Excellent templates",
+      "Strong analytics",
+      "Good customer support"
+    ],
+    "cons": [
+      "Limited advanced features",
+      "Higher pricing for scaling",
+      "Basic AI capabilities",
+      "Limited customization",
+      "Some features enterprise-only"
+    ],
+    "rating": 4.2,
+    "use_cases": [
+      "Email marketing",
+      "Automation workflows",
+      "Campaign management",
+      "List segmentation",
+      "Analytics and reporting",
+      "Template creation"
+    ],
+    "affiliate_link": "https://mailchimp.com/",
+    "logo_url": "/images/tools/mailchimp-logo.png",
+    "search_volume": 1750,
+    "cpc": 2.65
+  },
+  {
+    "tool_name": "HubSpot AI",
+    "vendor": "HubSpot",
+    "category": "Email Marketing",
+    "features": {
+      "core": [
+        "Email campaigns",
+        "Automation workflows",
+        "List management",
+        "Template library",
+        "Analytics dashboard",
+        "A/B testing",
+        "Segmentation"
+      ],
+      "advanced": [
+        "AI content generation",
+        "Smart recommendations",
+        "Predictive analytics",
+        "Behavioral targeting",
+        "Advanced automation",
+        "Custom integrations",
+        "Advanced reporting"
+      ],
+      "integrations": [
+        "Salesforce",
+        "WordPress",
+        "Shopify",
+        "Zapier",
+        "API access",
+        "Third-party tools"
+      ]
+    },
+    "pricing": {
+      "monthly": 45,
+      "yearly": 450,
+      "enterprise": "Custom"
+    },
+    "free_trial": true,
+    "pros": [
+      "Comprehensive marketing suite",
+      "AI content features",
+      "Excellent automation",
+      "Strong analytics",
+      "Good integrations",
+      "Excellent customer support"
+    ],
+    "cons": [
+      "High pricing",
+      "Complex interface",
+      "Steep learning curve",
+      "Requires training",
+      "Some features enterprise-only"
+    ],
+    "rating": 4.6,
+    "use_cases": [
+      "Email marketing",
+      "Marketing automation",
+      "Campaign management",
+      "Lead nurturing",
+      "Analytics and reporting",
+      "CRM integration"
+    ],
+    "affiliate_link": "https://www.hubspot.com/",
+    "logo_url": "/images/tools/hubspot-logo.png",
+    "search_volume": 1600,
+    "cpc": 2.90
+  },
+  {
+    "tool_name": "Claude",
+    "vendor": "Anthropic",
+    "category": "Content Creation",
+    "features": {
+      "core": [
+        "Text generation",
+        "Conversational AI",
+        "Code assistance",
+        "Language translation",
+        "Creative writing",
+        "Problem solving",
+        "Research assistance"
+      ],
+      "advanced": [
+        "Claude 3.5 Sonnet",
+        "File upload and analysis",
+        "Custom instructions",
+        "Memory across conversations",
+        "Web browsing",
+        "Code interpreter",
+        "Vision capabilities"
+      ],
+      "integrations": [
+        "API access",
+        "Slack",
+        "Discord",
+        "Chrome extensions",
+        "Third-party tools"
+      ]
+    },
+    "pricing": {
+      "monthly": 20,
+      "yearly": 200,
+      "enterprise": "Custom"
+    },
+    "free_trial": true,
+    "pros": [
+      "Excellent reasoning capabilities",
+      "Strong safety features",
+      "Good coding abilities",
+      "Vision capabilities",
+      "Regular updates",
+      "Strong ethical focus"
+    ],
+    "cons": [
+      "Limited content templates",
+      "No mobile app",
+      "Basic SEO optimization",
+      "Limited integrations",
+      "Smaller user community"
+    ],
+    "rating": 4.7,
+    "use_cases": [
+      "General AI assistance",
+      "Code development",
+      "Research and analysis",
+      "Creative writing",
+      "Problem solving",
+      "Document analysis"
+    ],
+    "affiliate_link": "https://claude.ai/",
+    "logo_url": "/images/tools/claude-logo.png",
+    "search_volume": 4200,
+    "cpc": 2.70
+  },
+  {
+    "tool_name": "Copy.ai",
+    "vendor": "Copy.ai",
+    "category": "Content Creation",
+    "features": {
+      "core": [
+        "Content templates",
+        "Brand voice customization",
+        "SEO optimization",
+        "Plagiarism checker",
+        "Content calendar",
+        "Team collaboration",
+        "Multi-language support"
+      ],
+      "advanced": [
+        "Long-form content",
+        "Custom templates",
+        "Brand guidelines",
+        "Content scoring",
+        "A/B testing",
+        "Advanced analytics",
+        "API access"
+      ],
+      "integrations": [
+        "WordPress",
+        "Shopify",
+        "HubSpot",
+        "Zapier",
+        "API access",
+        "Third-party tools"
+      ]
+    },
+    "pricing": {
+      "monthly": 36,
+      "yearly": 360,
+      "enterprise": "Custom"
+    },
+    "free_trial": true,
+    "pros": [
+      "Good content templates",
+      "Brand voice features",
+      "User-friendly interface",
+      "Team collaboration",
+      "Good customer support",
+      "Regular updates"
+    ],
+    "cons": [
+      "Limited advanced features",
+      "Higher pricing",
+      "Basic AI capabilities",
+      "Limited integrations",
+      "Monthly character limits"
+    ],
+    "rating": 4.3,
+    "use_cases": [
+      "Content marketing",
+      "Blog writing",
+      "Social media content",
+      "Email marketing",
+      "Product descriptions",
+      "SEO content"
+    ],
+    "affiliate_link": "https://www.copy.ai/",
+    "logo_url": "/images/tools/copyai-logo.png",
+    "search_volume": 1200,
+    "cpc": 2.40
+  },
+  {
+    "tool_name": "Writesonic",
+    "vendor": "Writesonic",
+    "category": "Content Creation",
+    "features": {
+      "core": [
+        "Content templates",
+        "Brand voice customization",
+        "SEO optimization",
+        "Plagiarism checker",
+        "Content calendar",
+        "Team collaboration",
+        "Multi-language support"
+      ],
+      "advanced": [
+        "Long-form content",
+        "Custom templates",
+        "Brand guidelines",
+        "Content scoring",
+        "A/B testing",
+        "Advanced analytics",
+        "API access"
+      ],
+      "integrations": [
+        "WordPress",
+        "Shopify",
+        "HubSpot",
+        "Zapier",
+        "API access",
+        "Third-party tools"
+      ]
+    },
+    "pricing": {
+      "monthly": 19,
+      "yearly": 190,
+      "enterprise": "Custom"
+    },
+    "free_trial": true,
+    "pros": [
+      "Affordable pricing",
+      "Good content templates",
+      "User-friendly interface",
+      "Team collaboration",
+      "Good customer support",
+      "Regular updates"
+    ],
+    "cons": [
+      "Limited advanced features",
+      "Basic AI capabilities",
+      "Limited integrations",
+      "Monthly character limits",
+      "Smaller user community"
+    ],
+    "rating": 4.1,
+    "use_cases": [
+      "Content marketing",
+      "Blog writing",
+      "Social media content",
+      "Email marketing",
+      "Product descriptions",
+      "SEO content"
+    ],
+    "affiliate_link": "https://writesonic.com/",
+    "logo_url": "/images/tools/writesonic-logo.png",
+    "search_volume": 800,
+    "cpc": 2.20
+  }
+]
+

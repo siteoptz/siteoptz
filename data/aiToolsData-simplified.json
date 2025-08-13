@@ -1,0 +1,140 @@
+[
+  {
+    "tool_name": "ChatGPT",
+    "description": "ChatGPT is an AI-powered conversational assistant developed by OpenAI that can help with writing, coding, analysis, and creative tasks.",
+    "key_features": [
+      "Text generation and conversation",
+      "Code assistance and debugging",
+      "Language translation",
+      "Creative writing support",
+      "Problem solving",
+      "Research assistance",
+      "GPT-4 model access",
+      "File upload and analysis",
+      "Web browsing",
+      "Code interpreter",
+      "DALL-E integration"
+    ],
+    "pricing": {
+      "free": "Basic access with GPT-3.5 model",
+      "basic": "ChatGPT Plus - $20/month - Access to GPT-4, web browsing, code interpreter, and DALL-E",
+      "pro": "Enterprise - Custom pricing for large organizations"
+    },
+    "target_keywords": [
+      "ChatGPT",
+      "AI chatbot",
+      "OpenAI",
+      "GPT-4",
+      "conversational AI",
+      "text generation",
+      "coding assistant",
+      "AI writing tool",
+      "ChatGPT pricing",
+      "ChatGPT review"
+    ],
+    "meta_description": "ChatGPT review: pricing, features, pros & cons, and alternatives. Expert analysis with real user feedback and implementation tips.",
+    "schema_type": "SoftwareApplication"
+  },
+  {
+    "tool_name": "Claude",
+    "description": "Claude is an AI assistant developed by Anthropic, known for its safety, reasoning abilities, and longer context windows.",
+    "key_features": [
+      "Conversational AI",
+      "Long-form content analysis",
+      "File upload and analysis",
+      "Code assistance",
+      "Research and writing",
+      "Safety-focused responses",
+      "Longer context windows",
+      "Constitutional AI principles",
+      "Advanced reasoning",
+      "Document processing"
+    ],
+    "pricing": {
+      "free": "Basic access with Claude 3 Haiku model",
+      "basic": "Claude Pro - $20/month - Access to Claude 3.5 Sonnet, longer context, priority access",
+      "pro": "Enterprise - Custom pricing for organizations"
+    },
+    "target_keywords": [
+      "Claude",
+      "Anthropic",
+      "AI assistant",
+      "constitutional AI",
+      "safety-focused AI",
+      "reasoning AI",
+      "Claude pricing",
+      "Claude review",
+      "Claude vs ChatGPT"
+    ],
+    "meta_description": "Claude review: pricing, features, pros & cons, and alternatives. Expert analysis with real user feedback and implementation tips.",
+    "schema_type": "SoftwareApplication"
+  },
+  {
+    "tool_name": "Perplexity",
+    "description": "Perplexity is an AI-powered search engine that provides conversational answers with sources and real-time information.",
+    "key_features": [
+      "Conversational search",
+      "Real-time information",
+      "Source citations",
+      "File upload analysis",
+      "Academic research",
+      "Fact-checking",
+      "Current events",
+      "Market research",
+      "Document analysis",
+      "Web search integration"
+    ],
+    "pricing": {
+      "free": "Basic search with limited queries",
+      "basic": "Perplexity Pro - $20/month - Unlimited searches, advanced models, file uploads",
+      "pro": "No enterprise plan available"
+    },
+    "target_keywords": [
+      "Perplexity",
+      "AI search",
+      "research tool",
+      "fact-checking",
+      "source citations",
+      "real-time information",
+      "Perplexity pricing",
+      "Perplexity review",
+      "AI search engine"
+    ],
+    "meta_description": "Perplexity review: pricing, features, pros & cons, and alternatives. Expert analysis with real user feedback and implementation tips.",
+    "schema_type": "SoftwareApplication"
+  },
+  {
+    "tool_name": "Gemini",
+    "description": "Gemini is Google's AI assistant that excels at creative tasks and integrates deeply with Google services.",
+    "key_features": [
+      "Creative writing and content",
+      "Google Workspace integration",
+      "Web search capabilities",
+      "Code generation",
+      "Image analysis",
+      "Multimodal AI",
+      "Advanced reasoning",
+      "Gmail integration",
+      "Google Drive integration",
+      "Real-time collaboration"
+    ],
+    "pricing": {
+      "free": "Basic access with Gemini 1.5 Pro",
+      "basic": "Gemini Advanced - $20/month - Gemini Ultra 1.0, Google Workspace integration, 2TB storage",
+      "pro": "Enterprise through Google Workspace"
+    },
+    "target_keywords": [
+      "Gemini",
+      "Google AI",
+      "multimodal AI",
+      "Google Workspace",
+      "creative AI",
+      "Google integration",
+      "Gemini pricing",
+      "Gemini review",
+      "Google AI assistant"
+    ],
+    "meta_description": "Gemini review: pricing, features, pros & cons, and alternatives. Expert analysis with real user feedback and implementation tips.",
+    "schema_type": "SoftwareApplication"
+  }
+]

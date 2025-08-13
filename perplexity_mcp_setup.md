@@ -176,3 +176,4 @@ claude --debug --mcp-config mcp-config.json
 
 ---
 *This setup guide will help you leverage Perplexity's AI-powered research capabilities to enhance your keyword research and content strategy for SiteOptz.*
+

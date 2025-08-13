@@ -1,0 +1,275 @@
+/* AI Tools Comparison Styles */
+
+/* Table Styles */
+.comparison-table {
+  @apply w-full border-collapse;
+}
+
+.comparison-table th {
+  @apply bg-gray-50 text-left p-4 font-semibold text-gray-900 border-b border-gray-200 sticky top-0 z-10;
+}
+
+.comparison-table td {
+  @apply p-4 border-b border-gray-100 align-top;
+}
+
+.comparison-table tr:hover {
+  @apply bg-gray-50 transition-colors duration-200;
+}
+
+/* Feature Comparison Styles */
+.feature-row {
+  @apply transition-all duration-200;
+}
+
+.feature-row:hover {
+  @apply bg-blue-50 transform scale-[1.01];
+}
+
+.feature-check {
+  @apply text-green-600 font-bold;
+}
+
+.feature-x {
+  @apply text-red-500 font-bold;
+}
+
+.feature-partial {
+  @apply text-yellow-600 font-bold;
+}
+
+/* Pricing Calculator Styles */
+.pricing-calculator {
+  @apply bg-gradient-to-br from-blue-50 to-indigo-50 rounded-2xl p-8;
+}
+
+.pricing-input {
+  @apply border-2 border-gray-200 focus:border-blue-500 transition-colors duration-200;
+}
+
+.pricing-result {
+  @apply bg-white rounded-xl p-6 shadow-lg border border-gray-200;
+}
+
+/* Hero Section Enhancements */
+.hero-gradient {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+}
+
+.hero-pattern {
+  background-image: radial-gradient(circle at 25% 25%, rgba(255,255,255,0.1) 0%, transparent 50%),
+                    radial-gradient(circle at 75% 75%, rgba(255,255,255,0.1) 0%, transparent 50%);
+}
+
+/* Card Hover Effects */
+.comparison-card {
+  @apply transition-all duration-300 hover:shadow-xl hover:-translate-y-1;
+}
+
+.comparison-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+}
+
+/* Tool Logo Styles */
+.tool-logo {
+  @apply transition-transform duration-200 hover:scale-110;
+}
+
+.tool-logo-container {
+  @apply bg-gradient-to-br from-gray-50 to-gray-100 rounded-xl p-4 shadow-sm;
+}
+
+/* CTA Button Enhancements */
+.cta-button-primary {
+  @apply bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 
+         text-white font-semibold py-3 px-6 rounded-lg transition-all duration-200 
+         transform hover:scale-105 shadow-lg hover:shadow-xl;
+}
+
+.cta-button-secondary {
+  @apply bg-gradient-to-r from-gray-100 to-gray-200 hover:from-gray-200 hover:to-gray-300 
+         text-gray-800 font-semibold py-3 px-6 rounded-lg transition-all duration-200 
+         transform hover:scale-105 shadow-md hover:shadow-lg;
+}
+
+/* Email Capture Form Styles */
+.email-capture-form {
+  @apply bg-gradient-to-br from-blue-50 via-white to-indigo-50 border border-blue-200;
+}
+
+.email-capture-input {
+  @apply border-2 border-gray-200 focus:border-blue-500 focus:ring-2 focus:ring-blue-200 
+         transition-all duration-200;
+}
+
+/* FAQ Accordion Styles */
+.faq-accordion {
+  @apply border border-gray-200 rounded-lg overflow-hidden;
+}
+
+.faq-trigger {
+  @apply w-full text-left p-6 bg-white hover:bg-gray-50 transition-colors duration-200 
+         focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-inset;
+}
+
+.faq-content {
+  @apply bg-gray-50 p-6 border-t border-gray-200;
+}
+
+/* Rating Stars */
+.rating-stars {
+  @apply flex items-center gap-1;
+}
+
+.rating-star {
+  @apply text-yellow-400 fill-current;
+}
+
+.rating-star.empty {
+  @apply text-gray-300;
+}
+
+/* Badge Styles */
+.badge-primary {
+  @apply bg-blue-100 text-blue-800 px-2 py-1 rounded-full text-xs font-medium;
+}
+
+.badge-success {
+  @apply bg-green-100 text-green-800 px-2 py-1 rounded-full text-xs font-medium;
+}
+
+.badge-warning {
+  @apply bg-yellow-100 text-yellow-800 px-2 py-1 rounded-full text-xs font-medium;
+}
+
+.badge-danger {
+  @apply bg-red-100 text-red-800 px-2 py-1 rounded-full text-xs font-medium;
+}
+
+/* Loading States */
+.loading-spinner {
+  @apply animate-spin rounded-full border-2 border-gray-300 border-t-blue-600;
+}
+
+.loading-skeleton {
+  @apply animate-pulse bg-gray-200 rounded;
+}
+
+/* Responsive Design Enhancements */
+@media (max-width: 768px) {
+  .comparison-table {
+    @apply text-sm;
+  }
+  
+  .comparison-table th,
+  .comparison-table td {
+    @apply p-2;
+  }
+  
+  .hero-gradient {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  }
+}
+
+/* Dark Mode Support */
+@media (prefers-color-scheme: dark) {
+  .comparison-card {
+    @apply bg-gray-800 border-gray-700;
+  }
+  
+  .comparison-table th {
+    @apply bg-gray-800 text-gray-100 border-gray-700;
+  }
+  
+  .comparison-table td {
+    @apply border-gray-700;
+  }
+  
+  .comparison-table tr:hover {
+    @apply bg-gray-700;
+  }
+}
+
+/* Animation Classes */
+.fade-in {
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+.slide-up {
+  animation: slideUp 0.5s ease-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Print Styles */
+@media print {
+  .comparison-table {
+    @apply border border-gray-400;
+  }
+  
+  .comparison-table th,
+  .comparison-table td {
+    @apply border border-gray-400 p-2;
+  }
+  
+  .cta-button-primary,
+  .cta-button-secondary {
+    @apply hidden;
+  }
+}
+
+/* Accessibility Enhancements */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* Focus Styles */
+.focus-visible {
+  @apply outline-none ring-2 ring-blue-500 ring-offset-2;
+}
+
+/* High Contrast Mode */
+@media (prefers-contrast: high) {
+  .comparison-table th {
+    @apply bg-black text-white border-white;
+  }
+  
+  .comparison-table td {
+    @apply border-white;
+  }
+  
+  .feature-check {
+    @apply text-green-400;
+  }
+  
+  .feature-x {
+    @apply text-red-400;
+  }
+}
