@@ -1,4 +1,5 @@
 {
+  "_comment": "Configuration for Vercel deployment",
   "functions": {
     "pages/api/**/*.js": {
       "maxDuration": 30
