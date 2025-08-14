@@ -21,7 +21,7 @@ const disposableDomains = [
   'sharklasers.com'
 ];
 
-const commonTypos = {
+const commonTypos: Record<string, string> = {
   'gmial.com': 'gmail.com',
   'gmai.com': 'gmail.com',
   'gmail.co': 'gmail.com',
