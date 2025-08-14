@@ -1,6 +1,22 @@
-export default function ToolComparisonTable({ tools, highlight }) {
+interface Tool {
+  id: string;
+  name: string;
+  benchmarks?: Record<string, number>;
+  pricing?: Array<{
+    price_per_month: number;
+    plan_name?: string;
+  }>;
+  [key: string]: any;
+}
+
+interface ToolComparisonTableProps {
+  tools: Tool[];
+  highlight?: string;
+}
+
+export default function ToolComparisonTable({ tools, highlight }: ToolComparisonTableProps) {
   // Calculate overall rating from benchmarks
-  const getOverallRating = (tool) => {
+  const getOverallRating = (tool: Tool) => {
     if (!tool.benchmarks) return 'N/A';
     const scores = Object.values(tool.benchmarks);
     const average = scores.reduce((a, b) => a + b, 0) / scores.length;
@@ -8,7 +24,7 @@ export default function ToolComparisonTable({ tools, highlight }) {
   };
 
   // Get starting price
-  const getStartingPrice = (tool) => {
+  const getStartingPrice = (tool: Tool) => {
     if (!tool.pricing || !Array.isArray(tool.pricing)) return 'N/A';
     const freePlan = tool.pricing.find(p => p.price_per_month === 0);
     if (freePlan) return 'Free';
