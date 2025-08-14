@@ -12,9 +12,10 @@ interface Tool {
 interface ToolComparisonTableProps {
   tools: Tool[];
   highlight?: string;
+  defaultSelected?: string[];
 }
 
-export default function ToolComparisonTable({ tools, highlight }: ToolComparisonTableProps) {
+export default function ToolComparisonTable({ tools, highlight, defaultSelected }: ToolComparisonTableProps) {
   // Calculate overall rating from benchmarks
   const getOverallRating = (tool: Tool) => {
     if (!tool.benchmarks) return 'N/A';
