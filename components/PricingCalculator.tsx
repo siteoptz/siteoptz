@@ -55,9 +55,11 @@ export default function PricingCalculator({ plans, toolName, enablePersistence }
     }
   };
 
-  const handlePlanChange = (planName) => {
+  const handlePlanChange = (planName: string) => {
     const plan = plans.find((p) => p.name === planName);
-    setSelectedPlan(plan);
+    if (plan) {
+      setSelectedPlan(plan);
+    }
     if (enablePersistence) {
       localStorage.setItem(`pricingPlan_${toolName}`, planName);
     }
