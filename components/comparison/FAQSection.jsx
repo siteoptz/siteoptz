@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import Link from 'next/link';
 import { ChevronDown, ChevronUp, HelpCircle, Mail, Download } from 'lucide-react';
 
 const FAQSection = ({ toolName = null, category = null, faqs = [] }) => {
