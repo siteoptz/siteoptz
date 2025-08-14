@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 
 interface PricingPlan {
   name: string;
@@ -18,6 +18,7 @@ export default function PricingCalculator({ plans, toolName, enablePersistence }
   const [quoteSaved, setQuoteSaved] = useState(false);
   const [discount, setDiscount] = useState<string | null>(null);
   const [discountExpired, setDiscountExpired] = useState(false);
+  const [discountCode, setDiscountCode] = useState("");
 
   useEffect(() => {
     const params = new URLSearchParams(window.location.search);
@@ -133,20 +134,21 @@ export default function PricingCalculator({ plans, toolName, enablePersistence }
             <input
               type="text"
               placeholder="Enter discount code"
+              value={discountCode}
+              onChange={(e) => setDiscountCode(e.target.value)}
               className="border rounded px-3 py-2 flex-1 text-sm"
-              onKeyPress={(e) => {
+              onKeyPress={(e: React.KeyboardEvent<HTMLInputElement>) => {
                 if (e.key === 'Enter') {
-                  setDiscount(e.target.value);
-                  applyDiscount(e.target.value);
+                  setDiscount(discountCode);
+                  applyDiscount(discountCode);
                 }
               }}
             />
             <button
               type="button"
-              onClick={(e) => {
-                const input = e.target.previousElementSibling;
-                setDiscount(input.value);
-                applyDiscount(input.value);
+              onClick={() => {
+                setDiscount(discountCode);
+                applyDiscount(discountCode);
               }}
               className="bg-gray-600 text-white px-3 py-2 rounded text-sm hover:bg-gray-700"
             >
