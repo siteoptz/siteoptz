@@ -34,8 +34,8 @@ export default function ToolsPage({ tools, faqs }: { tools: any[], faqs: any }) 
   }, [tools]);
 
   // Save selection when user changes
-  const handleToolChange = (toolName) => {
-    const tool = tools.find((t) => t.name === toolName);
+  const handleToolChange = (toolName: string) => {
+    const tool = tools.find((t: any) => t.name === toolName);
     setSelectedTool(tool);
     localStorage.setItem("selectedTool", toolName);
   };
