@@ -6,14 +6,44 @@ interface PricingPlan {
   features: string[];
 }
 
+interface Tool {
+  id: string;
+  slug: string;
+  name: string;
+  pricing: {
+    plan: string;
+    price_per_month: number;
+    features: string[];
+  }[];
+  [key: string]: any;
+}
+
 interface PricingCalculatorProps {
-  plans: PricingPlan[];
-  toolName: string;
+  tools?: Tool[];
+  onEmailSubmit?: (email: string, data?: any) => void;
+  // Legacy props for backward compatibility
+  plans?: PricingPlan[];
+  toolName?: string;
   enablePersistence?: boolean;
 }
 
-export default function PricingCalculator({ plans, toolName, enablePersistence }: PricingCalculatorProps) {
-  const [selectedPlan, setSelectedPlan] = useState(plans[0]);
+export default function PricingCalculator({ 
+  tools, 
+  onEmailSubmit, 
+  plans, 
+  toolName, 
+  enablePersistence 
+}: PricingCalculatorProps) {
+  // Convert tools to plans format if tools are provided
+  const convertedPlans = tools ? tools.flatMap(tool => 
+    tool.pricing.map(p => ({
+      name: `${tool.name} - ${p.plan}`,
+      price: p.price_per_month === 0 ? 'Free' : `$${p.price_per_month}`,
+      features: p.features
+    }))
+  ) : plans || [];
+
+  const [selectedPlan, setSelectedPlan] = useState(convertedPlans[0] || null);
   const [email, setEmail] = useState("");
   const [quoteSaved, setQuoteSaved] = useState(false);
   const [discount, setDiscount] = useState<string | null>(null);
@@ -34,7 +64,7 @@ export default function PricingCalculator({ plans, toolName, enablePersistence }
           return;
         }
 
-        const matchPlan = plans.find((p) => p.name === data.selectedPlan);
+        const matchPlan = convertedPlans.find((p) => p.name === data.selectedPlan);
         if (matchPlan) {
           setSelectedPlan(matchPlan);
         }
@@ -44,7 +74,7 @@ export default function PricingCalculator({ plans, toolName, enablePersistence }
           applyDiscount(data.discountCode);
         }
       });
-  }, [plans]);
+  }, [convertedPlans]);
 
   // Apply discount logic
   const applyDiscount = (code: string) => {
@@ -57,19 +87,34 @@ export default function PricingCalculator({ plans, toolName, enablePersistence }
   };
 
   const handlePlanChange = (planName: string) => {
-    const plan = plans.find((p) => p.name === planName);
+    const plan = convertedPlans.find((p) => p.name === planName);
     if (plan) {
       setSelectedPlan(plan);
     }
-    if (enablePersistence) {
+    if (enablePersistence && toolName) {
       localStorage.setItem(`pricingPlan_${toolName}`, planName);
     }
   };
 
   const handleSaveQuote = async (e: React.FormEvent) => {
     e.preventDefault();
-    localStorage.setItem(`quoteEmail_${toolName}`, email);
+    
+    if (toolName) {
+      localStorage.setItem(`quoteEmail_${toolName}`, email);
+    }
 
+    // Use onEmailSubmit if provided (new usage)
+    if (onEmailSubmit) {
+      onEmailSubmit(email, {
+        selectedPlan: selectedPlan.name,
+        discountCode: discount,
+        source: 'pricing_calculator'
+      });
+      setQuoteSaved(true);
+      return;
+    }
+
+    // Fall back to legacy API call
     try {
       const response = await fetch("/api/save-quote", {
         method: "POST",
@@ -93,6 +138,14 @@ export default function PricingCalculator({ plans, toolName, enablePersistence }
     }
   };
 
+  if (!selectedPlan || convertedPlans.length === 0) {
+    return (
+      <div className="border rounded-lg p-4 space-y-4">
+        <p className="text-gray-500">No pricing plans available.</p>
+      </div>
+    );
+  }
+
   return (
     <div className="border rounded-lg p-4 space-y-4">
       <label className="block font-medium">Choose a plan:</label>
@@ -101,7 +154,7 @@ export default function PricingCalculator({ plans, toolName, enablePersistence }
         onChange={(e) => handlePlanChange(e.target.value)}
         className="border rounded px-3 py-2 w-full"
       >
-        {plans.map((plan) => (
+        {convertedPlans.map((plan) => (
           <option key={plan.name} value={plan.name}>
             {plan.name} — {plan.price}
           </option>
