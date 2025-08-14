@@ -1,7 +1,8 @@
-import Head from "next/head";
 import fs from "fs";
 import path from "path";
 import { useState, useEffect } from "react";
+import SEOHead from "../../components/SEOHead";
+import { getPageConfig, buildCanonicalUrl } from "../../seo/meta-config.js";
 import ToolComparisonTable from "../../components/ToolComparisonTable";
 import PricingCalculator from "../../components/PricingCalculator";
 import FAQSection from "../../components/FAQSection";
@@ -23,6 +24,7 @@ export async function getStaticProps() {
 
 export default function ToolsPage({ tools, faqs }: { tools: any[], faqs: any }) {
   const [selectedTool, setSelectedTool] = useState(tools[0]);
+  const pageConfig = getPageConfig('tools');
 
   // Load saved selection from localStorage
   useEffect(() => {
@@ -40,16 +42,35 @@ export default function ToolsPage({ tools, faqs }: { tools: any[], faqs: any }) 
     localStorage.setItem("selectedTool", toolName);
   };
 
+  // Generate structured data for the tools directory
+  const structuredData = {
+    "@context": "https://schema.org",
+    "@type": "CollectionPage",
+    "name": pageConfig.title,
+    "description": pageConfig.description,
+    "url": buildCanonicalUrl('/tools'),
+    "mainEntity": {
+      "@type": "ItemList",
+      "numberOfItems": tools.length,
+      "itemListElement": tools.map((tool, index) => ({
+        "@type": "SoftwareApplication",
+        "position": index + 1,
+        "name": tool.name,
+        "description": tool.overview?.description || tool.description,
+        "url": `${buildCanonicalUrl('/tools')}/${tool.slug}`
+      }))
+    }
+  };
+
   return (
     <>
-      <Head>
-        <title>Best AI Tools Comparison | SiteOptz.ai</title>
-        <meta
-          name="description"
-          content="Compare top AI tools with benchmarks, pricing, and features. Find the best AI solution for your business."
-        />
-        <meta name="keywords" content="AI tools, AI comparison, pricing, benchmarks, SiteOptz" />
-      </Head>
+      <SEOHead
+        title={pageConfig.title}
+        description={pageConfig.description}
+        keywords={pageConfig.keywords}
+        canonicalUrl={buildCanonicalUrl('/tools')}
+        schemaData={structuredData}
+      />
 
       <main className="max-w-6xl mx-auto px-4 py-10 space-y-12">
         <section>

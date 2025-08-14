@@ -4,6 +4,7 @@ import ToolComparisonTable from '../../components/ToolComparisonTable';
 import PricingCalculator from '../../components/PricingCalculator';
 import FAQSection from '../../components/FAQSection';
 import SEOHead from '../../components/SEOHead';
+import { generateToolMeta, generateSoftwareApplicationSchema, buildCanonicalUrl } from '../../seo/meta-config.js';
 import { ArrowLeft, ExternalLink, Star, Check, X } from 'lucide-react';
 import fs from 'fs';
 import path from 'path';
@@ -86,15 +87,19 @@ export default function ToolPage({ tool, relatedTools, faqs, allTools }: ToolPag
      tool.benchmarks.value) / 5
   ).toFixed(1);
 
+  // Generate SEO meta data using our configuration system
+  const toolMeta = generateToolMeta(tool);
+  const structuredData = generateSoftwareApplicationSchema(tool);
+
   return (
     <>
       <SEOHead
-        title={tool.meta.title}
-        description={tool.meta.description}
-        canonicalUrl={`https://siteoptz.ai/tools/${tool.slug}`}
+        title={toolMeta?.title || tool.meta?.title}
+        description={toolMeta?.description || tool.meta?.description}
+        canonicalUrl={buildCanonicalUrl(`/tools/${tool.slug}`)}
         ogImage={tool.logo}
-        schemaData={tool.schema}
-        keywords={[`${tool.name}`, `${tool.name} review`, `${tool.name} pricing`, `${tool.name} features`, `${tool.name} alternatives`]}
+        schemaData={structuredData}
+        keywords={toolMeta?.keywords || [`${tool.name}`, `${tool.name} review`, `${tool.name} pricing`, `${tool.name} features`, `${tool.name} alternatives`]}
       />
 
       <div className="min-h-screen bg-gray-50">

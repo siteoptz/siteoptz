@@ -2,7 +2,7 @@ import React from 'react';
 import Link from 'next/link';
 import { GetStaticProps, GetStaticPaths } from 'next';
 import SEOHead from '../../components/SEOHead';
-import { generateComparisonSchema, generateFAQSchema, generateBreadcrumbSchema, generateCombinedSchema } from '../../utils/schemaUtils';
+import { generateComparisonMeta, generateFAQSchema, generateBreadcrumbSchema, buildCanonicalUrl } from '../../seo/meta-config.js';
 // Data will be fetched at build time from public/data/
 
 interface ComparisonPageProps {
@@ -15,46 +15,41 @@ interface ComparisonPageProps {
 const ComparisonPage: React.FC<ComparisonPageProps> = ({ tool1, tool2, faqs1, faqs2 }) => {
   if (!tool1 || !tool2) return <div>Tools not found</div>;
 
-  // Generate schema data
-  const comparisonSchema = generateComparisonSchema(tool1, tool2);
+  // Generate SEO metadata using our configuration system
+  const comparisonMeta = generateComparisonMeta(tool1, tool2);
   const combinedFaqs = [...(faqs1 || []).slice(0, 3), ...(faqs2 || []).slice(0, 3)];
   const faqSchema = generateFAQSchema(combinedFaqs);
   const breadcrumbSchema = generateBreadcrumbSchema([
-    { name: 'Home', url: 'https://siteoptz.ai' },
-    { name: 'AI Tools', url: 'https://siteoptz.ai/tools' },
-    { name: 'Compare', url: 'https://siteoptz.ai/compare' },
-    { name: `${tool1.name} vs ${tool2.name}`, url: `https://siteoptz.ai/compare/${tool1.slug}-vs-${tool2.slug}` }
+    { name: 'Home', url: buildCanonicalUrl('/') },
+    { name: 'AI Tools', url: buildCanonicalUrl('/tools') },
+    { name: 'Compare', url: buildCanonicalUrl('/compare') },
+    { name: `${tool1.name} vs ${tool2.name}`, url: buildCanonicalUrl(`/compare/${tool1.slug}-vs-${tool2.slug}`) }
   ]);
   
-  const combinedSchema = generateCombinedSchema(comparisonSchema, faqSchema, breadcrumbSchema);
-
-  // SEO metadata
-  const title = `${tool1.name} vs ${tool2.name}: Complete Comparison [2025] | SiteOptz`;
-  const description = `Compare ${tool1.name} and ${tool2.name} features, pricing, pros and cons. Expert analysis with benchmarks to help you choose the right AI tool for your needs.`;
-  
-  // Extract keywords for SEO
-  const keywords: string[] = [
-    `${tool1.name} vs ${tool2.name}`,
-    `${tool1.name} comparison`,
-    `${tool2.name} comparison`,
-    `${tool1.name} alternative`,
-    `${tool2.name} alternative`,
-    'AI tool comparison',
-    'AI software comparison',
-    `${tool1.name} pricing`,
-    `${tool2.name} pricing`,
-    `best AI tool 2025`
-  ];
+  // Combine all schemas
+  const combinedSchema = {
+    "@context": "https://schema.org",
+    "@graph": [
+      faqSchema,
+      breadcrumbSchema,
+      {
+        "@type": "WebPage",
+        "name": comparisonMeta?.title,
+        "description": comparisonMeta?.description,
+        "url": buildCanonicalUrl(`/compare/${tool1.slug}-vs-${tool2.slug}`)
+      }
+    ].filter(Boolean)
+  };
 
   return (
     <>
       <SEOHead
-        title={title}
-        description={description}
-        canonicalUrl={`https://siteoptz.ai/compare/${tool1.slug}-vs-${tool2.slug}`}
+        title={comparisonMeta?.title || `${tool1.name} vs ${tool2.name}: Complete Comparison [2025] | SiteOptz`}
+        description={comparisonMeta?.description || `Compare ${tool1.name} and ${tool2.name} features, pricing, pros and cons. Expert analysis with benchmarks to help you choose the right AI tool for your needs.`}
+        canonicalUrl={buildCanonicalUrl(`/compare/${tool1.slug}-vs-${tool2.slug}`)}
         ogImage={`/images/comparisons/${tool1.slug}-vs-${tool2.slug}.png`}
         schemaData={combinedSchema}
-        keywords={keywords}
+        keywords={comparisonMeta?.keywords || [`${tool1.name} vs ${tool2.name}`, `${tool1.name} comparison`, `${tool2.name} comparison`, 'AI tool comparison']}
       />
       
       <div className="max-w-7xl mx-auto px-4 py-8">

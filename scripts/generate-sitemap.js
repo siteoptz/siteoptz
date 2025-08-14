@@ -11,38 +11,51 @@ const path = require('path');
 class SitemapGenerator {
   constructor() {
     this.baseUrl = process.env.NEXT_PUBLIC_BASE_URL || 'https://siteoptz.ai';
-    this.outputPath = path.join(process.cwd(), 'out', 'sitemap.xml');
-    this.urls = [];
+    this.outputDir = path.join(process.cwd(), 'out');
+    this.mainSitemapPath = path.join(this.outputDir, 'sitemap.xml');
+    this.toolsSitemapPath = path.join(this.outputDir, 'sitemap-tools.xml');
+    this.comparisonsSitemapPath = path.join(this.outputDir, 'sitemap-comparisons.xml');
+    
+    this.mainUrls = [];
+    this.toolUrls = [];
+    this.comparisonUrls = [];
     
     // Ensure output directory exists
-    const outputDir = path.dirname(this.outputPath);
-    if (!fs.existsSync(outputDir)) {
-      fs.mkdirSync(outputDir, { recursive: true });
+    if (!fs.existsSync(this.outputDir)) {
+      fs.mkdirSync(this.outputDir, { recursive: true });
     }
   }
 
   async generateSitemap() {
-    console.log('🗺️  Generating Sitemap...\n');
+    console.log('🗺️  Generating Enhanced Sitemaps...\n');
     
     try {
-      // Add static pages
+      // Add static pages to main sitemap
       this.addStaticPages();
       
-      // Add dynamic tool pages
+      // Add dynamic tool pages to tools sitemap
       await this.addToolPages();
       
-      // Add comparison pages
+      // Add comparison pages to comparisons sitemap
       await this.addComparisonPages();
       
-      // Generate XML
-      const xml = this.generateXML();
+      // Generate main sitemap index
+      const mainSitemapXml = this.generateMainSitemapIndex();
+      fs.writeFileSync(this.mainSitemapPath, mainSitemapXml, 'utf8');
       
-      // Write to file
-      fs.writeFileSync(this.outputPath, xml, 'utf8');
+      // Generate tools sitemap
+      const toolsSitemapXml = this.generateXML(this.toolUrls);
+      fs.writeFileSync(this.toolsSitemapPath, toolsSitemapXml, 'utf8');
       
-      console.log('✅ Sitemap generated successfully!');
-      console.log(`📄 Generated ${this.urls.length} URLs`);
-      console.log(`💾 Saved to: ${this.outputPath}`);
+      // Generate comparisons sitemap
+      const comparisonsSitemapXml = this.generateXML(this.comparisonUrls);
+      fs.writeFileSync(this.comparisonsSitemapPath, comparisonsSitemapXml, 'utf8');
+      
+      console.log('✅ Enhanced sitemaps generated successfully!');
+      console.log(`📄 Main sitemap: ${this.mainUrls.length} URLs`);
+      console.log(`🔧 Tools sitemap: ${this.toolUrls.length} URLs`);
+      console.log(`🔄 Comparisons sitemap: ${this.comparisonUrls.length} URLs`);
+      console.log(`📊 Total URLs: ${this.mainUrls.length + this.toolUrls.length + this.comparisonUrls.length}`);
       
     } catch (error) {
       console.error('❌ Error generating sitemap:', error.message);
@@ -54,6 +67,7 @@ class SitemapGenerator {
     const staticPages = [
       { url: '/', priority: 1.0, changefreq: 'daily' },
       { url: '/tools', priority: 0.9, changefreq: 'daily' },
+      { url: '/compare', priority: 0.9, changefreq: 'daily' },
       { url: '/comparisons', priority: 0.8, changefreq: 'weekly' },
       { url: '/about', priority: 0.5, changefreq: 'monthly' },
       { url: '/contact', priority: 0.5, changefreq: 'monthly' },
@@ -62,7 +76,7 @@ class SitemapGenerator {
     ];
 
     for (const page of staticPages) {
-      this.addUrl(page.url, page.priority, page.changefreq);
+      this.addUrl(page.url, page.priority, page.changefreq, null, 'main');
     }
 
     console.log(`✅ Added ${staticPages.length} static pages`);
@@ -70,9 +84,21 @@ class SitemapGenerator {
 
   async addToolPages() {
     try {
-      const toolDataPath = path.join(process.cwd(), 'data', 'tool_data.json');
+      // Try both possible data paths
+      const possiblePaths = [
+        path.join(process.cwd(), 'public/data', 'aiToolsData.json'),
+        path.join(process.cwd(), 'data', 'tool_data.json')
+      ];
       
-      if (!fs.existsSync(toolDataPath)) {
+      let toolDataPath = null;
+      for (const testPath of possiblePaths) {
+        if (fs.existsSync(testPath)) {
+          toolDataPath = testPath;
+          break;
+        }
+      }
+      
+      if (!toolDataPath) {
         console.warn('⚠️  Tool data not found, skipping tool pages');
         return;
       }
@@ -80,7 +106,9 @@ class SitemapGenerator {
       const toolData = JSON.parse(fs.readFileSync(toolDataPath, 'utf8'));
       
       for (const tool of toolData) {
-        this.addUrl(`/tools/${tool.slug}`, 0.8, 'weekly', tool.last_updated);
+        if (tool.slug) {
+          this.addUrl(`/tools/${tool.slug}`, 0.8, 'weekly', tool.last_updated || tool.updated_at, 'tools');
+        }
       }
 
       console.log(`✅ Added ${toolData.length} tool pages`);
@@ -92,15 +120,26 @@ class SitemapGenerator {
 
   async addComparisonPages() {
     try {
-      const toolDataPath = path.join(process.cwd(), 'data', 'tool_data.json');
+      // Try both possible data paths
+      const possiblePaths = [
+        path.join(process.cwd(), 'public/data', 'aiToolsData.json'),
+        path.join(process.cwd(), 'data', 'tool_data.json')
+      ];
       
-      if (!fs.existsSync(toolDataPath)) {
+      let toolDataPath = null;
+      for (const testPath of possiblePaths) {
+        if (fs.existsSync(testPath)) {
+          toolDataPath = testPath;
+          break;
+        }
+      }
+      
+      if (!toolDataPath) {
         console.warn('⚠️  Tool data not found, skipping comparison pages');
         return;
       }
 
       const toolData = JSON.parse(fs.readFileSync(toolDataPath, 'utf8'));
-      const comparisonCount = Math.min(toolData.length, 10); // Limit comparisons
       
       // Generate popular comparisons
       const popularComparisons = [
@@ -108,26 +147,34 @@ class SitemapGenerator {
         ['chatgpt', 'gemini'],
         ['claude', 'gemini'],
         ['chatgpt', 'copilot'],
-        ['claude', 'llama']
+        ['claude', 'llama'],
+        ['chatgpt', 'perplexity'],
+        ['gemini', 'copilot'],
+        ['claude', 'perplexity']
       ];
 
+      let addedComparisons = 0;
       for (const [tool1, tool2] of popularComparisons) {
         const tool1Exists = toolData.some(t => t.slug === tool1);
         const tool2Exists = toolData.some(t => t.slug === tool2);
         
         if (tool1Exists && tool2Exists) {
-          this.addUrl(`/compare/${tool1}-vs-${tool2}`, 0.7, 'weekly');
+          this.addUrl(`/compare/${tool1}-vs-${tool2}`, 0.7, 'weekly', null, 'comparisons');
+          addedComparisons++;
         }
       }
 
-      console.log(`✅ Added ${popularComparisons.length} comparison pages`);
+      // Add /compare/index page
+      this.addUrl('/compare', 0.8, 'daily', null, 'comparisons');
+
+      console.log(`✅ Added ${addedComparisons + 1} comparison pages`);
       
     } catch (error) {
       console.warn('⚠️  Error generating comparison pages:', error.message);
     }
   }
 
-  addUrl(path, priority = 0.5, changefreq = 'monthly', lastmod = null) {
+  addUrl(path, priority = 0.5, changefreq = 'monthly', lastmod = null, sitemap = 'main') {
     const url = {
       loc: `${this.baseUrl}${path}`,
       lastmod: lastmod || new Date().toISOString().split('T')[0],
@@ -135,14 +182,24 @@ class SitemapGenerator {
       priority: priority.toFixed(1)
     };
 
-    this.urls.push(url);
+    // Add to appropriate sitemap array
+    switch (sitemap) {
+      case 'tools':
+        this.toolUrls.push(url);
+        break;
+      case 'comparisons':
+        this.comparisonUrls.push(url);
+        break;
+      default:
+        this.mainUrls.push(url);
+    }
   }
 
-  generateXML() {
+  generateXML(urls) {
     let xml = '<?xml version="1.0" encoding="UTF-8"?>\n';
     xml += '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n';
 
-    for (const url of this.urls) {
+    for (const url of urls) {
       xml += '  <url>\n';
       xml += `    <loc>${this.escapeXml(url.loc)}</loc>\n`;
       xml += `    <lastmod>${url.lastmod}</lastmod>\n`;
@@ -152,6 +209,39 @@ class SitemapGenerator {
     }
 
     xml += '</urlset>\n';
+    return xml;
+  }
+
+  generateMainSitemapIndex() {
+    let xml = '<?xml version="1.0" encoding="UTF-8"?>\n';
+    xml += '<sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n';
+
+    // Main pages sitemap
+    const mainSitemapXml = this.generateXML(this.mainUrls);
+    fs.writeFileSync(path.join(this.outputDir, 'sitemap-main.xml'), mainSitemapXml, 'utf8');
+    
+    xml += '  <sitemap>\n';
+    xml += `    <loc>${this.baseUrl}/sitemap-main.xml</loc>\n`;
+    xml += `    <lastmod>${new Date().toISOString().split('T')[0]}</lastmod>\n`;
+    xml += '  </sitemap>\n';
+
+    // Tools sitemap
+    if (this.toolUrls.length > 0) {
+      xml += '  <sitemap>\n';
+      xml += `    <loc>${this.baseUrl}/sitemap-tools.xml</loc>\n`;
+      xml += `    <lastmod>${new Date().toISOString().split('T')[0]}</lastmod>\n`;
+      xml += '  </sitemap>\n';
+    }
+
+    // Comparisons sitemap
+    if (this.comparisonUrls.length > 0) {
+      xml += '  <sitemap>\n';
+      xml += `    <loc>${this.baseUrl}/sitemap-comparisons.xml</loc>\n`;
+      xml += `    <lastmod>${new Date().toISOString().split('T')[0]}</lastmod>\n`;
+      xml += '  </sitemap>\n';
+    }
+
+    xml += '</sitemapindex>\n';
     return xml;
   }
 
