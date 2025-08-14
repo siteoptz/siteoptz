@@ -2,6 +2,7 @@ import { GetStaticPaths, GetStaticProps } from 'next';
 import { useState } from 'react';
 import Head from 'next/head';
 import Image from 'next/image';
+import Link from 'next/link';
 import toolsData from '../../data/tools.json';
 import FAQSection from '../../components/comparison/FAQSection';
 
@@ -225,11 +226,11 @@ export default function ReviewPage({ tool, pageTitle, slug, relatedTools, relate
             {/* Breadcrumb */}
             <nav className="mb-8">
               <ol className="flex items-center space-x-2 text-blue-100 text-sm">
-                <li><a href="/" className="hover:text-white transition-colors">Home</a></li>
+                <li><Link href="/" className="hover:text-white transition-colors">Home</Link></li>
                 <li><span className="mx-2">/</span></li>
-                <li><a href="/ai-tools" className="hover:text-white transition-colors">AI Tools</a></li>
+                <li><Link href="/tools" className="hover:text-white transition-colors">AI Tools</Link></li>
                 <li><span className="mx-2">/</span></li>
-                <li><a href="/reviews" className="hover:text-white transition-colors">Reviews</a></li>
+                <li><Link href="/reviews" className="hover:text-white transition-colors">Reviews</Link></li>
                 <li><span className="mx-2">/</span></li>
                 <li className="text-blue-200">{tool.tool_name} Review</li>
               </ol>
