@@ -102,8 +102,8 @@ export default function AIToolsComparison({ tools, faqs }: AIToolsPageProps) {
     }).catch(console.error);
 
     // Optional: Track with analytics
-    if (typeof gtag !== 'undefined') {
-      gtag('event', 'email_capture', {
+    if (typeof window !== 'undefined' && window.gtag) {
+      window.gtag('event', 'email_capture', {
         event_category: 'engagement',
         event_label: 'pricing_calculator'
       });
