@@ -21,8 +21,8 @@ export default function PricingCalculator({ selectedTools = [] }) {
     
     selectedTools.forEach(tool => {
       const basePrice = inputs.paymentCycle === 'yearly' 
-        ? tool.pricingPlans.find(p => p.annualPrice > 0)?.annualPrice || 0
-        : tool.pricingPlans.find(p => p.monthlyPrice > 0)?.monthlyPrice || 0;
+        ? tool.pricingPlans?.find(p => p.annualPrice > 0)?.annualPrice || 0
+        : tool.pricingPlans?.find(p => p.monthlyPrice > 0)?.monthlyPrice || 0;
       
       const usageMultiplier = usageMultipliers[inputs.monthlyUsage];
       
@@ -42,47 +42,42 @@ export default function PricingCalculator({ selectedTools = [] }) {
       
       // Calculate savings
       const monthlyPrice = inputs.paymentCycle === 'yearly' 
-        ? tool.pricingPlans.find(p => p.monthlyPrice > 0)?.monthlyPrice || 0 
+        ? tool.pricingPlans?.find(p => p.monthlyPrice > 0)?.monthlyPrice || 0 
         : basePrice;
       const yearlyPrice = inputs.paymentCycle === 'yearly' ? totalPrice : totalPrice * 12;
       const savings = inputs.paymentCycle === 'yearly' ? (monthlyPrice * 12 - yearlyPrice) : 0;
 
       results[tool.id] = {
-        monthlyPrice: inputs.paymentCycle === 'yearly' ? yearlyPrice / 12 : totalPrice,
-        yearlyPrice: inputs.paymentCycle === 'yearly' ? yearlyPrice : totalPrice * 12,
-        savings: savings,
-        perUserPrice: perUserPrice / inputs.teamSize,
-        totalPrice: totalPrice,
-        basePrice: basePrice,
+        monthlyPrice: totalPrice,
+        yearlyPrice,
+        savings,
+        basePrice,
+        usageMultiplier
       };
     });
 
     return results;
-  }, [selectedTools, inputs]);
+  }, [selectedTools, inputs, usageMultipliers]);
 
   const handleInputChange = (field, value) => {
-    setInputs(prev => ({
-      ...prev,
-      [field]: value,
-    }));
-  };
-
-  const getUsageDescription = (usage) => {
-    switch (usage) {
-      case 'low': return 'Light usage (1-2 hours/week)';
-      case 'medium': return 'Moderate usage (5-10 hours/week)';
-      case 'high': return 'Heavy usage (20+ hours/week)';
-      default: return '';
-    }
+    setInputs(prev => ({ ...prev, [field]: value }));
   };
 
   const formatCurrency = (amount) => {
     return new Intl.NumberFormat('en-US', {
       style: 'currency',
       currency: 'USD',
-      minimumFractionDigits: 0,
-      maximumFractionDigits: 0,
+      minimumFractionDigits: 0
     }).format(amount);
+  };
+
+  const getUsageDescription = (usage) => {
+    const descriptions = {
+      low: 'Basic usage - up to 10 hours/month',
+      medium: 'Regular usage - 10-40 hours/month',
+      high: 'Heavy usage - 40+ hours/month'
+    };
+    return descriptions[usage] || '';
   };
 
   return (
@@ -99,89 +94,79 @@ export default function PricingCalculator({ selectedTools = [] }) {
       </div>
 
       {/* Input Controls */}
-      <Card>
-        <CardHeader>
-          <CardTitle className="flex items-center gap-2">
+      <div className="bg-white rounded-lg shadow-lg p-6">
+        <div className="mb-6">
+          <h3 className="flex items-center gap-2 text-xl font-bold text-gray-900 mb-2">
             <Users className="w-5 h-5" />
             Team Configuration
-          </CardTitle>
-          <CardDescription>
+          </h3>
+          <p className="text-gray-600">
             Adjust these settings to see how pricing changes for your specific needs.
-          </CardDescription>
-        </CardHeader>
-        <CardContent>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            <div className="space-y-2">
-                              <label htmlFor="teamSize" className="text-sm font-medium text-gray-700 block">Team Size</label>
-              <input
-                id="teamSize"
-                type="number"
-                min="1"
-                max="100"
-                value={inputs.teamSize}
-                onChange={(e) => handleInputChange('teamSize', parseInt(e.target.value) || 1)}
-                className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-              />
-              <p className="text-xs text-gray-500">
-                Number of team members using the tools
-              </p>
-            </div>
-
-            <div className="space-y-2">
-              <Label htmlFor="monthlyUsage">Monthly Usage</Label>
-              <Select
-                value={inputs.monthlyUsage}
-                onValueChange={(value) => handleInputChange('monthlyUsage', value)}
-              >
-                <SelectTrigger>
-                  <SelectValue placeholder="Select usage level" />
-                </SelectTrigger>
-                <SelectContent>
-                  <SelectItem value="low">Low Usage</SelectItem>
-                  <SelectItem value="medium">Medium Usage</SelectItem>
-                  <SelectItem value="high">High Usage</SelectItem>
-                </SelectContent>
-              </Select>
-              <p className="text-xs text-gray-500">
-                {getUsageDescription(inputs.monthlyUsage)}
-              </p>
-            </div>
-
-            <div className="space-y-2">
-              <Label htmlFor="paymentCycle">Payment Cycle</Label>
-              <Select
-                value={inputs.paymentCycle}
-                onValueChange={(value) => handleInputChange('paymentCycle', value)}
-              >
-                <SelectTrigger>
-                  <SelectValue placeholder="Select payment cycle" />
-                </SelectTrigger>
-                <SelectContent>
-                  <SelectItem value="monthly">Monthly</SelectItem>
-                  <SelectItem value="yearly">Yearly (Save 10-20%)</SelectItem>
-                </SelectContent>
-              </Select>
-              <p className="text-xs text-gray-500">
-                Choose between monthly or annual billing
-              </p>
-            </div>
-          </div>
-        </CardContent>
-      </Card>
-
-      {/* Tool Selection */}
-      {selectedTools.length === 0 ? (
-        <Card>
-          <CardContent className="text-center py-12">
-            <div className="text-gray-400 text-6xl mb-4">📊</div>
-            <h3 className="text-lg font-medium text-gray-900 mb-2">
-              Select Tools to Compare
-            </h3>
-            <p className="text-gray-500">
-              Choose the AI tools you're interested in to see pricing comparisons.
+          </p>
+        </div>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <div className="space-y-2">
+            <label htmlFor="teamSize" className="text-sm font-medium text-gray-700 block">Team Size</label>
+            <input
+              id="teamSize"
+              type="number"
+              min="1"
+              max="100"
+              value={inputs.teamSize}
+              onChange={(e) => handleInputChange('teamSize', parseInt(e.target.value) || 1)}
+              className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+            />
+            <p className="text-xs text-gray-500">
+              Number of team members using the tools
             </p>
-          </CardContent>
-        </Card>
+          </div>
+
+          <div className="space-y-2">
+            <label htmlFor="monthlyUsage" className="text-sm font-medium text-gray-700 block">Monthly Usage</label>
+            <select
+              id="monthlyUsage"
+              value={inputs.monthlyUsage}
+              onChange={(e) => handleInputChange('monthlyUsage', e.target.value)}
+              className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+            >
+              <option value="low">Low Usage</option>
+              <option value="medium">Medium Usage</option>
+              <option value="high">High Usage</option>
+            </select>
+            <p className="text-xs text-gray-500">
+              {getUsageDescription(inputs.monthlyUsage)}
+            </p>
+          </div>
+
+          <div className="space-y-2">
+            <label htmlFor="paymentCycle" className="text-sm font-medium text-gray-700 block">Payment Cycle</label>
+            <select
+              id="paymentCycle"
+              value={inputs.paymentCycle}
+              onChange={(e) => handleInputChange('paymentCycle', e.target.value)}
+              className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+            >
+              <option value="monthly">Monthly</option>
+              <option value="yearly">Yearly (Save 10-20%)</option>
+            </select>
+            <p className="text-xs text-gray-500">
+              Choose between monthly or annual billing
+            </p>
+          </div>
+        </div>
+      </div>
+
+      {/* Results */}
+      {selectedTools.length === 0 ? (
+        <div className="bg-white rounded-lg shadow-lg p-12 text-center">
+          <div className="text-gray-400 text-6xl mb-4">📊</div>
+          <h3 className="text-lg font-medium text-gray-900 mb-2">
+            Select Tools to Compare
+          </h3>
+          <p className="text-gray-500">
+            Choose the AI tools you&apos;re interested in to see pricing comparisons.
+          </p>
+        </div>
       ) : (
         <>
           {/* Individual Tool Pricing */}
@@ -191,26 +176,25 @@ export default function PricingCalculator({ selectedTools = [] }) {
               if (!calc) return null;
 
               return (
-                <Card key={tool.id} className="relative">
-                  <CardHeader>
-                    <div className="flex items-center gap-3">
-                      <div className="w-10 h-10 bg-gray-100 rounded-lg flex items-center justify-center">
-                        <img 
-                          src={tool.logo} 
-                          alt={`${tool.name} logo`}
-                          className="w-8 h-8 object-contain"
-                          onError={(e) => {
-                            e.currentTarget.src = '/images/placeholder-logo.png';
-                          }}
-                        />
-                      </div>
-                      <div>
-                        <CardTitle className="text-lg">{tool.name}</CardTitle>
-                        <CardDescription>by {tool.vendor}</CardDescription>
-                      </div>
+                <div key={tool.id} className="bg-white rounded-lg shadow-lg p-6">
+                  <div className="flex items-center gap-3 mb-6">
+                    <div className="w-10 h-10 bg-gray-100 rounded-lg flex items-center justify-center">
+                      <img 
+                        src={tool.logo} 
+                        alt={`${tool.name} logo`}
+                        className="w-8 h-8 object-contain"
+                        onError={(e) => {
+                          e.currentTarget.src = '/images/placeholder-logo.png';
+                        }}
+                      />
                     </div>
-                  </CardHeader>
-                  <CardContent className="space-y-4">
+                    <div>
+                      <h3 className="text-lg font-bold text-gray-900">{tool.name}</h3>
+                      <p className="text-gray-600">by {tool.vendor}</p>
+                    </div>
+                  </div>
+                  
+                  <div className="space-y-4">
                     <div className="grid grid-cols-2 gap-4">
                       <div className="text-center p-3 bg-gray-50 rounded-lg">
                         <div className="text-2xl font-bold text-gray-900">
@@ -235,99 +219,56 @@ export default function PricingCalculator({ selectedTools = [] }) {
                       </div>
                     )}
 
-                    <div className="flex items-center justify-between text-sm">
-                      <span className="text-gray-600">Per User/Month:</span>
-                      <span className="font-semibold">{formatCurrency(calc.perUserPrice)}</span>
+                    <div className="space-y-2 text-sm text-gray-600">
+                      <div className="flex justify-between">
+                        <span>Base Price:</span>
+                        <span>{formatCurrency(calc.basePrice)}</span>
+                      </div>
+                      <div className="flex justify-between">
+                        <span>Team Size:</span>
+                        <span>{inputs.teamSize} {inputs.teamSize === 1 ? 'user' : 'users'}</span>
+                      </div>
+                      <div className="flex justify-between">
+                        <span>Usage Level:</span>
+                        <span className="capitalize">{inputs.monthlyUsage}</span>
+                      </div>
                     </div>
-
-                    <Button 
-                      className="w-full" 
-                      asChild
-                    >
-                      <a
-                        href={tool.affiliateLink}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                      >
-                        Get Started with {tool.name}
-                      </a>
-                    </Button>
-                  </CardContent>
-                </Card>
+                  </div>
+                </div>
               );
             })}
           </div>
 
           {/* Summary */}
-          <Card>
-            <CardHeader>
-              <CardTitle className="flex items-center gap-2">
-                <DollarSign className="w-5 h-5" />
-                Cost Summary
-              </CardTitle>
-              <CardDescription>
-                Total cost for all selected tools based on your configuration.
-              </CardDescription>
-            </CardHeader>
-            <CardContent>
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-                <div className="text-center p-4 bg-blue-50 rounded-lg">
-                  <div className="text-3xl font-bold text-blue-900">
-                    {formatCurrency(
-                      selectedTools.reduce((sum, tool) => {
-                        const calc = calculations[tool.id];
-                        return sum + (calc ? calc.monthlyPrice : 0);
-                      }, 0)
-                    )}
-                  </div>
-                  <div className="text-sm text-blue-700 font-medium">Total Monthly Cost</div>
+          <div className="bg-blue-50 border border-blue-200 rounded-lg p-6">
+            <div className="flex items-center gap-2 mb-4">
+              <DollarSign className="w-5 h-5 text-blue-600" />
+              <h3 className="text-xl font-bold text-gray-900">Total Cost Summary</h3>
+            </div>
+            
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+              <div className="text-center">
+                <div className="text-3xl font-bold text-blue-600">
+                  {formatCurrency(Object.values(calculations).reduce((sum, calc) => sum + calc.monthlyPrice, 0))}
                 </div>
-                
-                <div className="text-center p-4 bg-gray-50 rounded-lg">
-                  <div className="text-3xl font-bold text-gray-900">
-                    {formatCurrency(
-                      selectedTools.reduce((sum, tool) => {
-                        const calc = calculations[tool.id];
-                        return sum + (calc ? calc.yearlyPrice : 0);
-                      }, 0)
-                    )}
-                  </div>
-                  <div className="text-sm text-gray-700 font-medium">Total Yearly Cost</div>
-                </div>
-                
-                <div className="text-center p-4 bg-green-50 rounded-lg">
-                  <div className="text-3xl font-bold text-green-900">
-                    {formatCurrency(
-                      selectedTools.reduce((sum, tool) => {
-                        const calc = calculations[tool.id];
-                        return sum + (calc ? calc.savings : 0);
-                      }, 0)
-                    )}
-                  </div>
-                  <div className="text-sm text-green-700 font-medium">Total Savings</div>
-                </div>
+                <div className="text-sm text-gray-600">Total Monthly Cost</div>
               </div>
-
-              {/* Additional Info */}
-              <div className="mt-6 p-4 bg-gray-50 rounded-lg">
-                <h4 className="font-semibold text-gray-900 mb-2">Configuration Details:</h4>
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-4 text-sm text-gray-600">
-                  <div className="flex items-center gap-2">
-                    <Users className="w-4 h-4" />
-                    <span>{inputs.teamSize} team member{inputs.teamSize > 1 ? 's' : ''}</span>
-                  </div>
-                  <div className="flex items-center gap-2">
-                    <Zap className="w-4 h-4" />
-                    <span>{inputs.monthlyUsage.charAt(0).toUpperCase() + inputs.monthlyUsage.slice(1)} usage</span>
-                  </div>
-                  <div className="flex items-center gap-2">
-                    <Calendar className="w-4 h-4" />
-                    <span>{inputs.paymentCycle.charAt(0).toUpperCase() + inputs.paymentCycle.slice(1)} billing</span>
-                  </div>
+              
+              <div className="text-center">
+                <div className="text-3xl font-bold text-blue-600">
+                  {formatCurrency(Object.values(calculations).reduce((sum, calc) => sum + calc.yearlyPrice, 0))}
                 </div>
+                <div className="text-sm text-gray-600">Total Yearly Cost</div>
               </div>
-            </CardContent>
-          </Card>
+              
+              <div className="text-center">
+                <div className="text-3xl font-bold text-green-600">
+                  {formatCurrency(Object.values(calculations).reduce((sum, calc) => sum + calc.savings, 0))}
+                </div>
+                <div className="text-sm text-gray-600">Potential Savings</div>
+              </div>
+            </div>
+          </div>
         </>
       )}
     </div>

@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import Head from 'next/head';
+import Link from 'next/link';
 
 const FAQ = ({ 
   faqs = [], 
@@ -202,7 +203,7 @@ const FAQ = ({
           <div className="flex items-center justify-between text-sm text-gray-600">
             <span>
               {filteredFaqs.length} FAQ{filteredFaqs.length !== 1 ? 's' : ''} found
-              {searchTerm && ` for "${searchTerm}"`}
+              {searchTerm && ` for &quot;${searchTerm}&quot;`}
               {selectedCategory !== 'all' && ` in ${selectedCategory.replace('-', ' ')}`}
             </span>
             {filteredFaqs.length > 1 && (
@@ -219,7 +220,7 @@ const FAQ = ({
 
         {/* FAQ Items */}
         <div className="space-y-4">
-          {filteredFaqs.map((faq, index) => (
+          {filteredFaqs.map((faq) => (
             <div
               key={faq.id}
               className="border border-gray-200 rounded-lg overflow-hidden transition-all duration-200 hover:shadow-md"
@@ -296,7 +297,7 @@ const FAQ = ({
             <h3 className="mt-2 text-sm font-medium text-gray-900">No FAQs found</h3>
             <p className="mt-1 text-sm text-gray-500">
               {searchTerm 
-                ? `No FAQs match "${searchTerm}". Try adjusting your search terms.`
+                ? `No FAQs match &quot;${searchTerm}&quot;. Try adjusting your search terms.`
                 : 'No FAQs available in this category.'
               }
             </p>
@@ -320,21 +321,21 @@ const FAQ = ({
             Still have questions?
           </h3>
           <p className="text-indigo-700 mb-4">
-            Can't find what you're looking for? Our team is here to help.
+            Can&apos;t find what you&apos;re looking for? Our team is here to help.
           </p>
           <div className="flex flex-col sm:flex-row gap-3 justify-center">
-            <a
+            <Link
               href="/contact"
               className="inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
             >
               Contact Support
-            </a>
-            <a
+            </Link>
+            <Link
               href="/compare"
               className="inline-flex items-center px-4 py-2 border border-indigo-300 text-sm font-medium rounded-md text-indigo-700 bg-white hover:bg-indigo-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
             >
               Compare Tools
-            </a>
+            </Link>
           </div>
         </div>
       </div>

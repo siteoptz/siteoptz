@@ -1,4 +1,5 @@
 import React from 'react';
+import Link from 'next/link';
 import { GetStaticProps, GetStaticPaths } from 'next';
 import SEOHead from '../../components/SEOHead';
 import { generateComparisonSchema, generateFAQSchema, generateBreadcrumbSchema, generateCombinedSchema } from '../../utils/schemaUtils';
@@ -59,11 +60,11 @@ const ComparisonPage: React.FC<ComparisonPageProps> = ({ tool1, tool2, faqs1, fa
       <div className="max-w-7xl mx-auto px-4 py-8">
         {/* Breadcrumb Navigation */}
         <nav className="mb-6 text-sm text-gray-600">
-          <a href="/" className="hover:text-blue-600">Home</a>
+          <Link href="/" className="hover:text-blue-600">Home</Link>
           <span className="mx-2">/</span>
-          <a href="/tools" className="hover:text-blue-600">AI Tools</a>
+          <Link href="/tools" className="hover:text-blue-600">AI Tools</Link>
           <span className="mx-2">/</span>
-          <a href="/compare" className="hover:text-blue-600">Compare</a>
+          <Link href="/compare" className="hover:text-blue-600">Compare</Link>
           <span className="mx-2">/</span>
           <span className="text-gray-900">{tool1.name} vs {tool2.name}</span>
         </nav>
@@ -321,12 +322,12 @@ const ComparisonPage: React.FC<ComparisonPageProps> = ({ tool1, tool2, faqs1, fa
                   </li>
                 ))}
               </ul>
-              <a 
+              <Link 
                 href={`/tools/${tool1.slug}`}
                 className="inline-block mt-4 px-6 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors"
               >
                 Learn More About {tool1.name}
-              </a>
+              </Link>
             </div>
             <div className="p-6 bg-green-50 rounded-lg">
               <h3 className="text-xl font-semibold text-green-600 mb-3">Choose {tool2.name} If:</h3>
@@ -338,12 +339,12 @@ const ComparisonPage: React.FC<ComparisonPageProps> = ({ tool1, tool2, faqs1, fa
                   </li>
                 ))}
               </ul>
-              <a 
+              <Link 
                 href={`/tools/${tool2.slug}`}
                 className="inline-block mt-4 px-6 py-2 bg-green-600 text-white rounded-lg hover:bg-green-700 transition-colors"
               >
                 Learn More About {tool2.name}
-              </a>
+              </Link>
             </div>
           </div>
         </div>

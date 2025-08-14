@@ -218,7 +218,7 @@ const ComparisonTable = ({ tools, comparisonPoints = [] }) => {
       <div className="px-6 py-2 bg-gray-50 border-b">
         <p className="text-sm text-gray-600">
           Showing {filteredAndSortedTools.length} of {tools.length} tools
-          {searchTerm && ` matching "${searchTerm}"`}
+          {searchTerm && ` matching &quot;${searchTerm}&quot;`}
           {selectedFeatures.length > 0 && ` with selected features`}
         </p>
       </div>
@@ -299,7 +299,9 @@ const ComparisonTable = ({ tools, comparisonPoints = [] }) => {
                       Review
                     </a>
                     <a
-                      href="#"
+                      href={tool.website_url || '#'}
+                      target="_blank"
+                      rel="noopener noreferrer"
                       className="text-green-600 hover:text-green-900 bg-green-50 px-3 py-1 rounded-md text-xs transition-colors"
                       aria-label={`Visit ${tool.tool_name} website`}
                     >

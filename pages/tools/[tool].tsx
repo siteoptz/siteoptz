@@ -1,5 +1,6 @@
 import { useRouter } from 'next/router';
 import { useState } from 'react';
+import Link from 'next/link';
 import Head from 'next/head';
 import toolData from '../../data/tool_data.json';
 import faqData from '../../data/faq_data.json';
@@ -67,13 +68,13 @@ export default function ToolPage() {
       <div className="min-h-screen bg-gray-50 flex items-center justify-center">
         <div className="text-center">
           <h1 className="text-2xl font-bold text-gray-900 mb-4">Tool not found</h1>
-          <p className="text-gray-600 mb-6">The tool you're looking for doesn't exist.</p>
-          <a 
+          <p className="text-gray-600 mb-6">The tool you&apos;re looking for doesn&apos;t exist.</p>
+          <Link 
             href="/tools" 
             className="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700"
           >
             Browse All Tools
-          </a>
+          </Link>
         </div>
       </div>
     );
@@ -191,10 +192,10 @@ export default function ToolPage() {
                 <h1 className="text-2xl font-bold text-gray-900">SiteOptz.ai</h1>
               </div>
               <nav className="hidden md:flex space-x-8">
-                <a href="/" className="text-gray-500 hover:text-gray-900">Home</a>
-                <a href="/tools" className="text-gray-500 hover:text-gray-900">Tools</a>
-                <a href="/comparisons" className="text-gray-500 hover:text-gray-900">Comparisons</a>
-                <a href="/about" className="text-gray-500 hover:text-gray-900">About</a>
+                <Link href="/" className="text-gray-500 hover:text-gray-900">Home</Link>
+                <Link href="/tools" className="text-gray-500 hover:text-gray-900">Tools</Link>
+                <Link href="/comparisons" className="text-gray-500 hover:text-gray-900">Comparisons</Link>
+                <Link href="/about" className="text-gray-500 hover:text-gray-900">About</Link>
               </nav>
             </div>
           </div>
@@ -455,7 +456,7 @@ export default function ToolPage() {
                 <h2 className="text-2xl font-bold text-gray-900 mb-6">Related Tools</h2>
                 <div className="space-y-4">
                   {toolInfo.related_tools.map((related, index) => (
-                    <a 
+                    <Link 
                       key={index}
                       href={`/tools/${related}`} 
                       className="block p-4 border border-gray-200 rounded-lg hover:border-blue-300 hover:bg-blue-50 transition-colors"
@@ -464,7 +465,7 @@ export default function ToolPage() {
                         {related.replace(/-/g, ' ').replace(/\b\w/g, l => l.toUpperCase())}
                       </h3>
                       <p className="text-sm text-gray-600">View comparison</p>
-                    </a>
+                    </Link>
                   ))}
                 </div>
               </section>
@@ -512,25 +513,25 @@ export default function ToolPage() {
               <div>
                 <h4 className="font-semibold mb-4">Tools</h4>
                 <ul className="space-y-2 text-gray-400">
-                  <li><a href="/tools" className="hover:text-white">All Tools</a></li>
-                  <li><a href="/comparisons" className="hover:text-white">Comparisons</a></li>
-                  <li><a href="/rankings" className="hover:text-white">Rankings</a></li>
+                  <li><Link href="/tools" className="hover:text-white">All Tools</Link></li>
+                  <li><Link href="/comparisons" className="hover:text-white">Comparisons</Link></li>
+                  <li><Link href="/rankings" className="hover:text-white">Rankings</Link></li>
                 </ul>
               </div>
               <div>
                 <h4 className="font-semibold mb-4">Resources</h4>
                 <ul className="space-y-2 text-gray-400">
-                  <li><a href="/blog" className="hover:text-white">Blog</a></li>
-                  <li><a href="/guides" className="hover:text-white">Guides</a></li>
-                  <li><a href="/newsletter" className="hover:text-white">Newsletter</a></li>
+                  <li><Link href="/blog" className="hover:text-white">Blog</Link></li>
+                  <li><Link href="/guides" className="hover:text-white">Guides</Link></li>
+                  <li><Link href="/newsletter" className="hover:text-white">Newsletter</Link></li>
                 </ul>
               </div>
               <div>
                 <h4 className="font-semibold mb-4">Company</h4>
                 <ul className="space-y-2 text-gray-400">
-                  <li><a href="/about" className="hover:text-white">About</a></li>
-                  <li><a href="/contact" className="hover:text-white">Contact</a></li>
-                  <li><a href="/privacy" className="hover:text-white">Privacy</a></li>
+                  <li><Link href="/about" className="hover:text-white">About</Link></li>
+                  <li><Link href="/contact" className="hover:text-white">Contact</Link></li>
+                  <li><Link href="/privacy" className="hover:text-white">Privacy</Link></li>
                 </ul>
               </div>
             </div>

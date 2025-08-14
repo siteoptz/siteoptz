@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import Link from 'next/link';
 import aiToolsData from '../aiToolsData.json';
 
 const FAQSection = ({ toolName = null, category = null }) => {
@@ -133,7 +134,7 @@ const FAQSection = ({ toolName = null, category = null }) => {
     return {
       "@context": "https://schema.org",
       "@type": "FAQPage",
-      "mainEntity": faqs.map((faq, index) => ({
+      "mainEntity": faqs.map((faq) => ({
         "@type": "Question",
         "name": faq.question,
         "acceptedAnswer": {
@@ -205,19 +206,19 @@ const FAQSection = ({ toolName = null, category = null }) => {
               <h4 className="font-medium text-gray-900 mb-2">Related Resources</h4>
               <ul className="space-y-2 text-sm text-gray-600">
                 <li>
-                  <a href="/ai-tools-guide" className="text-blue-600 hover:text-blue-800">
+                  <Link href="/ai-tools-guide" className="text-blue-600 hover:text-blue-800">
                     Complete AI Tools Guide
-                  </a>
+                  </Link>
                 </li>
                 <li>
-                  <a href="/ai-tools-comparison" className="text-blue-600 hover:text-blue-800">
+                  <Link href="/ai-tools-comparison" className="text-blue-600 hover:text-blue-800">
                     AI Tools Comparison
-                  </a>
+                  </Link>
                 </li>
                 <li>
-                  <a href="/ai-tools-pricing" className="text-blue-600 hover:text-blue-800">
+                  <Link href="/ai-tools-pricing" className="text-blue-600 hover:text-blue-800">
                     Pricing Guide
-                  </a>
+                  </Link>
                 </li>
               </ul>
             </div>

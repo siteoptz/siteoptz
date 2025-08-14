@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import Link from 'next/link';
 
 interface Tool {
   tool_name: string;
@@ -46,11 +47,11 @@ export default function HeroSection({ toolA, toolB }: HeroSectionProps) {
         {/* Breadcrumb */}
         <nav className="mb-8">
           <ol className="flex items-center space-x-2 text-blue-100 text-sm">
-            <li><a href="/" className="hover:text-white transition-colors">Home</a></li>
+            <li><Link href="/" className="hover:text-white transition-colors">Home</Link></li>
             <li><span className="mx-2">/</span></li>
-            <li><a href="/ai-tools" className="hover:text-white transition-colors">AI Tools</a></li>
+            <li><Link href="/ai-tools" className="hover:text-white transition-colors">AI Tools</Link></li>
             <li><span className="mx-2">/</span></li>
-            <li><a href="/compare" className="hover:text-white transition-colors">Compare</a></li>
+            <li><Link href="/compare" className="hover:text-white transition-colors">Compare</Link></li>
             <li><span className="mx-2">/</span></li>
             <li className="text-blue-200">{toolA.tool_name} vs {toolB.tool_name}</li>
           </ol>

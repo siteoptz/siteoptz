@@ -93,7 +93,7 @@ const FAQSection = ({ toolName = null, category = null, faqs = [] }) => {
       },
       {
         question: "Do I need technical skills to use AI tools?",
-        answer: "Most modern AI tools are designed to be user-friendly and don't require technical skills. They typically offer intuitive interfaces, templates, and guided workflows. However, some advanced features may require basic technical knowledge."
+        answer: "Most modern AI tools are designed to be user-friendly and don&apos;t require technical skills. They typically offer intuitive interfaces, templates, and guided workflows. However, some advanced features may require basic technical knowledge."
       },
       {
         question: "How do AI tools integrate with existing software?",
@@ -114,7 +114,7 @@ const FAQSection = ({ toolName = null, category = null, faqs = [] }) => {
     ];
   };
 
-  const faqs = generateFAQs();
+  const faqList = generateFAQs();
 
   const toggleItem = (index) => {
     const newOpenItems = new Set(openItems);
@@ -131,7 +131,7 @@ const FAQSection = ({ toolName = null, category = null, faqs = [] }) => {
     return {
       "@context": "https://schema.org",
       "@type": "FAQPage",
-      "mainEntity": faqs.map((faq, index) => ({
+      "mainEntity": faqList.map((faq, index) => ({
         "@type": "Question",
         "name": faq.question,
         "acceptedAnswer": {
@@ -164,7 +164,7 @@ const FAQSection = ({ toolName = null, category = null, faqs = [] }) => {
         </div>
 
         <div className="space-y-4">
-          {faqs.map((faq, index) => (
+          {faqList.map((faq, index) => (
             <div key={index} className="border border-gray-200 rounded-lg">
               <div className="pb-3 p-4">
                 <button

@@ -430,6 +430,15 @@ export default function EnhancedComparisonTable({ allTools, onRequestComparison 
                   : 'border-gray-200 hover:border-gray-300 hover:shadow-md'
               }`}
               onClick={() => handleToolSelect(tool)}
+              onKeyDown={(e) => {
+                if (e.key === 'Enter' || e.key === ' ') {
+                  e.preventDefault();
+                  handleToolSelect(tool);
+                }
+              }}
+              tabIndex={0}
+              role="button"
+              aria-label={`Select ${tool.tool_name}`}
             >
               {/* Tool Header */}
               <div className="flex items-start justify-between mb-4">
