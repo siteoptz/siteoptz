@@ -21,7 +21,7 @@ export async function getStaticProps() {
   };
 }
 
-export default function ToolsPage({ tools, faqs }) {
+export default function ToolsPage({ tools, faqs }: { tools: any[], faqs: any }) {
   const [selectedTool, setSelectedTool] = useState(tools[0]);
 
   // Load saved selection from localStorage
