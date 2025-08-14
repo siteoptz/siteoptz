@@ -131,8 +131,9 @@ export class RateLimiter {
       
       // Cleanup expired entries every 5 minutes for memory limiter
       if (this.limiter instanceof MemoryRateLimiter) {
+        const memoryLimiter = this.limiter;
         setInterval(() => {
-          this.limiter.cleanup();
+          memoryLimiter.cleanup();
         }, 5 * 60 * 1000);
       }
     }
