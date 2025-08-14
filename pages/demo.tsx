@@ -35,7 +35,7 @@ export default function DemoPage({ tools, faqs }: DemoPageProps) {
   const simplePricing = convertToSimplePricingFormat(selectedTool.pricing);
 
   // Get all FAQs for demo
-  const allFaqs = Object.values(faqs).flat().slice(0, 10);
+  const allFaqs: any[] = Object.values(faqs).flat().slice(0, 10);
 
   const handleEmailSubmit = (email: string, data: any) => {
     console.log('Email captured:', email);
