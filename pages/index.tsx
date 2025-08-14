@@ -234,8 +234,8 @@ export default function HomePage({ featuredTools, popularComparisons }: HomePage
               </p>
             </div>
 
-            <div className="grid md:grid-cols-2 gap-8">
-              {popularComparisons.slice(0, 4).map((comparison, index) => (
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {popularComparisons.slice(0, 6).map((comparison, index) => (
                 <div key={index} className="bg-white rounded-2xl shadow-lg hover:shadow-xl transition-shadow p-6">
                   <div className="flex items-center justify-between mb-4">
                     <div className="flex items-center gap-3">
@@ -355,22 +355,41 @@ export const getStaticProps: GetStaticProps = async () => {
     const fs = require('fs');
     const path = require('path');
     
-    // Load AI tools data
+    // Load AI tools data from new comprehensive file
     const aiToolsData = JSON.parse(
-      fs.readFileSync(path.join(process.cwd(), 'public/data/aiToolsData.json'), 'utf8')
+      fs.readFileSync(path.join(process.cwd(), 'data/ai-tools.json'), 'utf8')
     );
 
-    // Get featured tools (top rated or most popular)
-    const featuredTools = aiToolsData
-      .filter((tool: any) => tool.rating >= 4.0 || tool.featured)
+    // Transform data to match homepage interface
+    const transformedTools = aiToolsData.ai_tools.map((tool: any) => ({
+      id: tool.toolName.toLowerCase().replace(/\s+/g, '-'),
+      slug: tool.toolName.toLowerCase().replace(/\s+/g, '-'),
+      name: tool.toolName,
+      logo: tool.logo_url,
+      overview: {
+        description: tool.description
+      },
+      rating: tool.rating,
+      features: tool.features,
+      pricing: tool.pricing.plans.map((plan: any) => ({
+        plan: plan.name,
+        price_per_month: parseFloat(plan.price.replace(/[^0-9.]/g, '')) || 0
+      }))
+    }));
+
+    // Get featured tools (all tools with high ratings)
+    const featuredTools = transformedTools
+      .filter((tool: any) => tool.rating >= 4.0)
       .slice(0, 12);
 
-    // Create popular comparisons
+    // Create popular comparisons using transformed tools
     const popularComparisons = [
-      { tool1: aiToolsData.find((t: any) => t.slug === 'chatgpt'), tool2: aiToolsData.find((t: any) => t.slug === 'claude') },
-      { tool1: aiToolsData.find((t: any) => t.slug === 'chatgpt'), tool2: aiToolsData.find((t: any) => t.slug === 'gemini') },
-      { tool1: aiToolsData.find((t: any) => t.slug === 'claude'), tool2: aiToolsData.find((t: any) => t.slug === 'gemini') },
-      { tool1: aiToolsData.find((t: any) => t.slug === 'chatgpt'), tool2: aiToolsData.find((t: any) => t.slug === 'copilot') }
+      { tool1: transformedTools.find((t: any) => t.slug === 'chatgpt'), tool2: transformedTools.find((t: any) => t.slug === 'claude') },
+      { tool1: transformedTools.find((t: any) => t.slug === 'chatgpt'), tool2: transformedTools.find((t: any) => t.slug === 'gemini') },
+      { tool1: transformedTools.find((t: any) => t.slug === 'claude'), tool2: transformedTools.find((t: any) => t.slug === 'gemini') },
+      { tool1: transformedTools.find((t: any) => t.slug === 'jasper-ai'), tool2: transformedTools.find((t: any) => t.slug === 'copy.ai') },
+      { tool1: transformedTools.find((t: any) => t.slug === 'midjourney'), tool2: transformedTools.find((t: any) => t.slug === 'dall-e-3') },
+      { tool1: transformedTools.find((t: any) => t.slug === 'notion-ai'), tool2: transformedTools.find((t: any) => t.slug === 'gamma') }
     ].filter(comparison => comparison.tool1 && comparison.tool2);
 
     return {
