@@ -256,3 +256,4 @@ const ComparisonTable = ({ selectedTools = [], onToolSelect, showAllTools = fals
 
 export default ComparisonTable;
 
+

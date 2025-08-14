@@ -153,3 +153,4 @@
 ```
 
 This simplified approach makes data entry much faster while still providing all the essential information needed for your auto-generating tool pages!
+

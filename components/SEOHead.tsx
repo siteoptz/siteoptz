@@ -1,7 +1,16 @@
 import React from 'react';
 import Head from 'next/head';
 
-const SEOHead = ({ 
+interface SEOHeadProps {
+  title: string;
+  description: string;
+  canonicalUrl?: string;
+  ogImage?: string;
+  schemaData?: any;
+  keywords?: string[];
+}
+
+const SEOHead: React.FC<SEOHeadProps> = ({ 
   title, 
   description, 
   canonicalUrl,

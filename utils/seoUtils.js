@@ -343,3 +343,4 @@ export const generateSitemapXML = (entries) => {
   return xmlHeader + urlsetStart + urls + urlsetEnd;
 };
 
+

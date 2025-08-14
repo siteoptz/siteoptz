@@ -279,3 +279,4 @@ console.log('✅ User experience features');
 console.log('✅ Mobile form optimization');
 
 process.exit(testResults.failed > 0 ? 1 : 0);
+

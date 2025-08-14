@@ -314,3 +314,4 @@ CRM_API_KEY=your_crm_api_key
 **Created for SiteOptz.ai**  
 **Version:** 1.0.0  
 **Last Updated:** December 2024
+

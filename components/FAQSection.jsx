@@ -240,3 +240,4 @@ const FAQSection = ({ toolName = null, category = null }) => {
 
 export default FAQSection;
 
+

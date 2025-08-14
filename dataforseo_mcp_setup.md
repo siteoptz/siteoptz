@@ -228,3 +228,4 @@ const apiPassword = process.env.DATAFORSEO_PASSWORD;
 ---
 *This setup guide provides everything you need to get started with DataForSEO MCP for comprehensive keyword research and analysis.*
 
+
