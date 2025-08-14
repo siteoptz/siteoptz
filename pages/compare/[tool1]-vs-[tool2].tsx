@@ -33,7 +33,7 @@ const ComparisonPage: React.FC<ComparisonPageProps> = ({ tool1, tool2, faqs1, fa
   const description = `Compare ${tool1.name} and ${tool2.name} features, pricing, pros and cons. Expert analysis with benchmarks to help you choose the right AI tool for your needs.`;
   
   // Extract keywords for SEO
-  const keywords = [
+  const keywords: string[] = [
     `${tool1.name} vs ${tool2.name}`,
     `${tool1.name} comparison`,
     `${tool2.name} comparison`,
