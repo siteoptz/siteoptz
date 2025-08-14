@@ -7,7 +7,6 @@
 
 const fs = require('fs');
 const path = require('path');
-const chalk = require('chalk');
 
 class SitemapGenerator {
   constructor() {
@@ -23,7 +22,7 @@ class SitemapGenerator {
   }
 
   async generateSitemap() {
-    console.log(chalk.blue.bold('🗺️  Generating Sitemap...\n'));
+    console.log('🗺️  Generating Sitemap...\n');
     
     try {
       // Add static pages
@@ -41,12 +40,12 @@ class SitemapGenerator {
       // Write to file
       fs.writeFileSync(this.outputPath, xml, 'utf8');
       
-      console.log(chalk.green('✅ Sitemap generated successfully!'));
-      console.log(chalk.blue(`📄 Generated ${this.urls.length} URLs`));
-      console.log(chalk.blue(`💾 Saved to: ${this.outputPath}`));
+      console.log('✅ Sitemap generated successfully!');
+      console.log(`📄 Generated ${this.urls.length} URLs`);
+      console.log(`💾 Saved to: ${this.outputPath}`);
       
     } catch (error) {
-      console.error(chalk.red('❌ Error generating sitemap:'), error.message);
+      console.error('❌ Error generating sitemap:', error.message);
       process.exit(1);
     }
   }
@@ -66,7 +65,7 @@ class SitemapGenerator {
       this.addUrl(page.url, page.priority, page.changefreq);
     }
 
-    console.log(chalk.green(`✅ Added ${staticPages.length} static pages`));
+    console.log(`✅ Added ${staticPages.length} static pages`);
   }
 
   async addToolPages() {
@@ -74,7 +73,7 @@ class SitemapGenerator {
       const toolDataPath = path.join(process.cwd(), 'data', 'tool_data.json');
       
       if (!fs.existsSync(toolDataPath)) {
-        console.log(chalk.yellow('⚠️  Tool data not found, skipping tool pages'));
+        console.warn('⚠️  Tool data not found, skipping tool pages');
         return;
       }
 
@@ -84,10 +83,10 @@ class SitemapGenerator {
         this.addUrl(`/tools/${tool.slug}`, 0.8, 'weekly', tool.last_updated);
       }
 
-      console.log(chalk.green(`✅ Added ${toolData.length} tool pages`));
+      console.log(`✅ Added ${toolData.length} tool pages`);
       
     } catch (error) {
-      console.log(chalk.yellow('⚠️  Error reading tool data:', error.message));
+      console.warn('⚠️  Error reading tool data:', error.message);
     }
   }
 
@@ -96,7 +95,7 @@ class SitemapGenerator {
       const toolDataPath = path.join(process.cwd(), 'data', 'tool_data.json');
       
       if (!fs.existsSync(toolDataPath)) {
-        console.log(chalk.yellow('⚠️  Tool data not found, skipping comparison pages'));
+        console.warn('⚠️  Tool data not found, skipping comparison pages');
         return;
       }
 
@@ -121,10 +120,10 @@ class SitemapGenerator {
         }
       }
 
-      console.log(chalk.green(`✅ Added ${popularComparisons.length} comparison pages`));
+      console.log(`✅ Added ${popularComparisons.length} comparison pages`);
       
     } catch (error) {
-      console.log(chalk.yellow('⚠️  Error generating comparison pages:', error.message));
+      console.warn('⚠️  Error generating comparison pages:', error.message);
     }
   }
 
@@ -191,7 +190,7 @@ Allow: /comparisons/
 `;
 
     fs.writeFileSync(robotsPath, robotsContent, 'utf8');
-    console.log(chalk.green('✅ Generated robots.txt'));
+    console.log('✅ Generated robots.txt');
   }
 }
 
@@ -203,10 +202,10 @@ if (require.main === module) {
     .then(() => {
       // Also generate robots.txt
       generator.generateRobotsTxt();
-      console.log(chalk.blue('\n🎉 SEO files generated successfully!'));
+      console.log('\n🎉 SEO files generated successfully!');
     })
     .catch(error => {
-      console.error(chalk.red('Fatal error:'), error.message);
+      console.error('Fatal error:', error.message);
       process.exit(1);
     });
 }
