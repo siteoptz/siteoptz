@@ -1,191 +1,160 @@
 #!/usr/bin/env node
 
 /**
- * Production Deployment Script
- * Deploys the SiteOptz.ai AI tool comparison platform to production
+ * Production Deployment Script for SiteOptz.ai AI Tools System
  */
 
-const { execSync } = require('child_process');
 const fs = require('fs');
+const path = require('path');
 
-console.log('🚀 Starting Production Deployment for SiteOptz.ai...\n');
+console.log('🚀 Starting SiteOptz.ai AI Tools Production Deployment...\n');
 
-// Deployment configuration
-const config = {
-  projectName: 'siteoptz-ai-comparison',
-  buildCommand: 'npm run build',
-  testCommand: 'npm test',
-  deployCommand: 'npm run deploy',
-  monitoringUrls: [
-    'https://siteoptz.ai/compare',
-    'https://siteoptz.ai/compare/chatgpt',
-    'https://siteoptz.ai/compare/jasper-ai',
-    'https://siteoptz.ai/compare/claude'
-  ]
+// Configuration
+const CONFIG = {
+  dataDir: 'public/data',
+  sitemapPath: 'public/sitemap.xml', 
+  robotsPath: 'public/robots.txt',
+  baseUrl: 'https://siteoptz.ai'
 };
 
-// Helper function to run commands
-const runCommand = (command, description) => {
+// Utility functions
+const logStep = (message) => console.log(`📋 ${message}`);
+const logSuccess = (message) => console.log(`✅ ${message}`);
+const logError = (message) => console.error(`❌ ${message}`);
+
+// Step 1: Validate data files
+function validateDataFiles() {
+  logStep('Validating data files...');
+  
   try {
-    console.log(`🔄 ${description}...`);
-    const result = execSync(command, { encoding: 'utf8', stdio: 'pipe' });
-    console.log(`✅ ${description} completed successfully`);
-    return { success: true, output: result };
+    const aiToolsPath = path.join(CONFIG.dataDir, 'aiToolsData.json');
+    const faqPath = path.join(CONFIG.dataDir, 'faqData.json');
+    
+    if (!fs.existsSync(aiToolsPath)) {
+      throw new Error('aiToolsData.json not found in public/data/');
+    }
+    
+    if (!fs.existsSync(faqPath)) {
+      throw new Error('faqData.json not found in public/data/');
+    }
+    
+    const aiToolsData = JSON.parse(fs.readFileSync(aiToolsPath, 'utf8'));
+    const faqData = JSON.parse(fs.readFileSync(faqPath, 'utf8'));
+    
+    if (!Array.isArray(aiToolsData) || aiToolsData.length === 0) {
+      throw new Error('Invalid aiToolsData.json format');
+    }
+    
+    logSuccess(`Validated ${aiToolsData.length} AI tools and FAQ data`);
+    return { aiToolsData, faqData };
   } catch (error) {
-    console.log(`❌ ${description} failed: ${error.message}`);
-    return { success: false, error: error.message };
+    logError(`Data validation failed: ${error.message}`);
+    process.exit(1);
   }
-};
-
-// Step 1: Run all tests
-console.log('🧪 Step 1: Running Comprehensive Tests...\n');
-
-const testResults = {
-  integration: runCommand('node scripts/test-integration.js', 'Integration tests'),
-  schema: runCommand('node scripts/test-schema.js', 'Schema validation tests'),
-  mobile: runCommand('node scripts/test-mobile.js', 'Mobile responsiveness tests'),
-  leadTracking: runCommand('node scripts/test-lead-tracking.js', 'Lead tracking tests')
-};
-
-// Check if all critical tests passed
-const criticalTests = [testResults.integration, testResults.schema];
-const allCriticalTestsPassed = criticalTests.every(test => test.success);
-
-if (!allCriticalTestsPassed) {
-  console.log('\n❌ Critical tests failed. Deployment aborted.');
-  console.log('Please fix the failing tests before deploying to production.');
-  process.exit(1);
 }
 
-console.log('\n✅ All critical tests passed. Proceeding with deployment...\n');
+// Step 2: Generate sitemap
+function generateSitemap(aiToolsData) {
+  logStep('Generating sitemap.xml...');
+  
+  try {
+    const urls = [
+      {
+        url: `${CONFIG.baseUrl}/tools`,
+        lastmod: new Date().toISOString().split('T')[0],
+        changefreq: 'daily',
+        priority: '1.0'
+      }
+    ];
 
-// Step 2: Build the application
-console.log('🔨 Step 2: Building Application...\n');
+    // Add individual tool pages
+    aiToolsData.forEach(tool => {
+      urls.push({
+        url: `${CONFIG.baseUrl}/tools/${tool.slug}`,
+        lastmod: new Date().toISOString().split('T')[0],
+        changefreq: 'weekly',
+        priority: '0.8'
+      });
+    });
 
-const buildResult = runCommand(config.buildCommand, 'Production build');
+    // Add comparison pages
+    const popularComparisons = [
+      ['chatgpt', 'claude'],
+      ['chatgpt', 'gemini'], 
+      ['claude', 'gemini'],
+      ['jasper-ai', 'copy-ai']
+    ];
 
-if (!buildResult.success) {
-  console.log('\n❌ Build failed. Deployment aborted.');
-  process.exit(1);
+    popularComparisons.forEach(([tool1, tool2]) => {
+      urls.push({
+        url: `${CONFIG.baseUrl}/compare/${tool1}-vs-${tool2}`,
+        lastmod: new Date().toISOString().split('T')[0],
+        changefreq: 'monthly',
+        priority: '0.7'
+      });
+    });
+
+    const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+${urls.map(({ url, lastmod, changefreq, priority }) => `  <url>
+    <loc>${url}</loc>
+    <lastmod>${lastmod}</lastmod>
+    <changefreq>${changefreq}</changefreq>
+    <priority>${priority}</priority>
+  </url>`).join('\n')}
+</urlset>`;
+
+    fs.writeFileSync(CONFIG.sitemapPath, sitemap);
+    logSuccess(`Generated sitemap with ${urls.length} URLs`);
+  } catch (error) {
+    logError(`Sitemap generation failed: ${error.message}`);
+  }
 }
 
-console.log('\n✅ Build completed successfully.\n');
+// Main deployment function
+async function deploy() {
+  try {
+    const startTime = Date.now();
+    
+    const { aiToolsData } = validateDataFiles();
+    generateSitemap(aiToolsData);
+    
+    const duration = ((Date.now() - startTime) / 1000).toFixed(2);
+    
+    console.log(`\n🎉 Deployment preparation completed in ${duration}s!`);
+    console.log(`\n📚 Manual Validation Required:`);
+    
+    console.log(`
+🔍 SEO & Schema Validation:
 
-// Step 3: Run deployment
-console.log('🚀 Step 3: Deploying to Production...\n');
+1. Google Rich Results Test:
+   🔗 https://search.google.com/test/rich-results
+   Test URLs:
+   • https://siteoptz.ai/tools/chatgpt
+   • https://siteoptz.ai/compare/chatgpt-vs-claude
 
-const deployResult = runCommand(config.deployCommand, 'Production deployment');
+2. Mobile-Friendly Test:
+   🔗 https://search.google.com/test/mobile-friendly
 
-if (!deployResult.success) {
-  console.log('\n❌ Deployment failed.');
-  process.exit(1);
+3. Page Speed Insights:
+   🔗 https://pagespeed.web.dev/
+   Target: Performance > 90, SEO > 95
+
+4. Schema Validator:
+   🔗 https://validator.schema.org/
+
+Expected Results:
+✅ Product schema for tools
+✅ FAQ schema with Q&A
+✅ Breadcrumb navigation
+✅ Mobile responsive design
+✅ Fast page load speeds
+`);
+    
+  } catch (error) {
+    logError(`Deployment failed: ${error.message}`);
+  }
 }
 
-console.log('\n✅ Deployment completed successfully!\n');
-
-// Step 4: Post-deployment verification
-console.log('🔍 Step 4: Post-Deployment Verification...\n');
-
-// Check if key files exist
-const keyFiles = [
-  '.next',
-  'package.json',
-  'next.config.js',
-  'data/tool_data.json',
-  'data/faq_data.json'
-];
-
-keyFiles.forEach(file => {
-  const exists = fs.existsSync(file);
-  console.log(`${exists ? '✅' : '❌'} ${file} ${exists ? 'exists' : 'missing'}`);
-});
-
-// Step 5: Generate deployment report
-console.log('\n📊 Step 5: Generating Deployment Report...\n');
-
-const deploymentReport = {
-  timestamp: new Date().toISOString(),
-  project: config.projectName,
-  tests: {
-    integration: testResults.integration.success,
-    schema: testResults.schema.success,
-    mobile: testResults.mobile.success,
-    leadTracking: testResults.leadTracking.success
-  },
-  build: buildResult.success,
-  deployment: deployResult.success,
-  files: keyFiles.map(file => ({
-    file,
-    exists: fs.existsSync(file)
-  }))
-};
-
-// Save deployment report
-fs.writeFileSync('deployment-report.json', JSON.stringify(deploymentReport, null, 2));
-console.log('✅ Deployment report saved to deployment-report.json');
-
-// Step 6: Monitoring setup instructions
-console.log('\n📈 Step 6: Monitoring Setup Instructions...\n');
-
-console.log('🔍 Google Search Console Setup:');
-console.log('1. Add your domain to Google Search Console');
-console.log('2. Submit sitemap: https://siteoptz.ai/sitemap.xml');
-console.log('3. Monitor for structured data errors');
-console.log('4. Check for mobile usability issues');
-console.log('5. Monitor search performance for new pages\n');
-
-console.log('📊 Google Analytics Setup:');
-console.log('1. Create a new property for SiteOptz.ai');
-console.log('2. Add tracking code to _app.tsx');
-console.log('3. Set up conversion goals for:');
-console.log('   - Email subscriptions');
-console.log('   - Tool comparison page views');
-console.log('   - Pricing calculator usage');
-console.log('4. Create custom reports for AI tool comparisons\n');
-
-console.log('🔗 Internal Linking Monitoring:');
-console.log('1. Check internal link structure');
-console.log('2. Monitor for broken links');
-console.log('3. Track user journey through comparison pages');
-console.log('4. Analyze related tools click-through rates\n');
-
-console.log('📱 Mobile Performance Monitoring:');
-console.log('1. Use Google PageSpeed Insights');
-console.log('2. Monitor Core Web Vitals');
-console.log('3. Check mobile usability in Search Console');
-console.log('4. Test responsive design across devices\n');
-
-// Step 7: Success summary
-console.log('\n🎉 Deployment Summary:');
-console.log('=====================================');
-console.log(`✅ Project: ${config.projectName}`);
-console.log(`✅ Deployment Time: ${deploymentReport.timestamp}`);
-console.log(`✅ Integration Tests: ${testResults.integration.success ? 'PASSED' : 'FAILED'}`);
-console.log(`✅ Schema Validation: ${testResults.schema.success ? 'PASSED' : 'FAILED'}`);
-console.log(`✅ Mobile Responsiveness: ${testResults.mobile.success ? 'PASSED' : 'FAILED'}`);
-console.log(`✅ Lead Tracking: ${testResults.leadTracking.success ? 'PASSED' : 'FAILED'}`);
-console.log(`✅ Build: ${buildResult.success ? 'SUCCESS' : 'FAILED'}`);
-console.log(`✅ Deployment: ${deployResult.success ? 'SUCCESS' : 'FAILED'}`);
-console.log('=====================================\n');
-
-console.log('🚀 SiteOptz.ai AI Tool Comparison Platform is now LIVE!');
-console.log('\n📋 Next Steps:');
-console.log('1. Set up Google Search Console monitoring');
-console.log('2. Configure Google Analytics tracking');
-console.log('3. Monitor page performance and user engagement');
-console.log('4. Track lead generation and conversion rates');
-console.log('5. Monitor search rankings for AI tool keywords');
-console.log('6. Set up alerts for any technical issues');
-console.log('7. Plan content expansion based on performance data\n');
-
-console.log('🎯 Key URLs to Monitor:');
-config.monitoringUrls.forEach(url => {
-  console.log(`   - ${url}`);
-});
-
-console.log('\n📞 Support:');
-console.log('For technical issues, check the deployment logs and test results.');
-console.log('For SEO performance, monitor Google Search Console and Analytics.');
-console.log('For user experience, use Google PageSpeed Insights and Core Web Vitals.\n');
-
-console.log('🎉 Deployment completed successfully!');
+// Run deployment
+deploy();

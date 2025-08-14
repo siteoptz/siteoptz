@@ -1,0 +1,782 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Dynamic Meta Tags -->
+    <title>{{comparison.meta_title}}</title>
+    <meta name="description" content="{{comparison.meta_description}}">
+    <meta name="keywords" content="{{comparison.keywords.join(', ')}}">
+    
+    <!-- Open Graph Tags -->
+    <meta property="og:title" content="{{comparison.meta_title}}">
+    <meta property="og:description" content="{{comparison.meta_description}}">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://siteoptz.ai/comparisons/{{comparison.slug}}">
+    <meta property="og:image" content="https://siteoptz.ai/images/comparisons/{{comparison.slug}}.jpg">
+    
+    <!-- Twitter Card Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="{{comparison.meta_title}}">
+    <meta name="twitter:description" content="{{comparison.meta_description}}">
+    <meta name="twitter:image" content="https://siteoptz.ai/images/comparisons/{{comparison.slug}}.jpg">
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://siteoptz.ai/comparisons/{{comparison.slug}}">
+    
+    <!-- JSON-LD Schema Markup -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "ComparisonPage",
+        "name": "{{comparison.title}}",
+        "description": "{{comparison.meta_description}}",
+        "mainEntity": [
+            {% for tool in tools %}
+            {
+                "@type": "SoftwareApplication",
+                "name": "{{tool.tool_name}}",
+                "description": "{{tool.description}}",
+                "applicationCategory": "{{tool.category}}",
+                "aggregateRating": {
+                    "@type": "AggregateRating",
+                    "ratingValue": "{{((tool.benchmarks.content_quality + tool.benchmarks.ease_of_use + tool.benchmarks.value_for_money) / 3).toFixed(1)}}",
+                    "bestRating": "5",
+                    "worstRating": "1"
+                }
+            }{% if not loop.last %},{% endif %}
+            {% endfor %}
+        ]
+    }
+    </script>
+    
+    <!-- Styles -->
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link href="/styles/components.css" rel="stylesheet">
+    
+    <style>
+        .comparison-table {
+            border-collapse: separate;
+            border-spacing: 0;
+        }
+        
+        .comparison-table th,
+        .comparison-table td {
+            border-bottom: 1px solid #e5e7eb;
+        }
+        
+        .comparison-table th:first-child,
+        .comparison-table td:first-child {
+            position: sticky;
+            left: 0;
+            background: white;
+            z-index: 10;
+            border-right: 2px solid #e5e7eb;
+        }
+        
+        .comparison-table th {
+            background: #f9fafb;
+            position: sticky;
+            top: 0;
+            z-index: 20;
+        }
+        
+        .winner-highlight {
+            background-color: #dcfce7 !important;
+            border-left: 4px solid #16a34a;
+        }
+        
+        .slider {
+            -webkit-appearance: none;
+            height: 6px;
+            border-radius: 3px;
+            background: #d1d5db;
+            outline: none;
+        }
+        
+        .slider::-webkit-slider-thumb {
+            -webkit-appearance: none;
+            appearance: none;
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            background: #2563eb;
+            cursor: pointer;
+        }
+        
+        .slider::-moz-range-thumb {
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            background: #2563eb;
+            cursor: pointer;
+            border: none;
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <!-- Header -->
+    <header class="bg-white shadow-sm">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center py-6">
+                <div class="flex items-center">
+                    <h1 class="text-2xl font-bold text-gray-900">SiteOptz.ai</h1>
+                </div>
+                <nav class="hidden md:flex space-x-8">
+                    <a href="/" class="text-gray-500 hover:text-gray-900">Home</a>
+                    <a href="/tools" class="text-gray-500 hover:text-gray-900">Tools</a>
+                    <a href="/comparisons" class="text-gray-500 hover:text-gray-900">Comparisons</a>
+                    <a href="/about" class="text-gray-500 hover:text-gray-900">About</a>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+        <!-- Hero Section -->
+        <section class="text-center mb-12">
+            <h1 class="text-4xl font-bold text-gray-900 mb-4">{{comparison.title}}</h1>
+            <p class="text-xl text-gray-600 max-w-3xl mx-auto">{{comparison.description}}</p>
+            
+            <!-- Tool Overview Cards -->
+            <div class="grid grid-cols-1 md:grid-cols-{{tools.length}} gap-6 mt-8">
+                {% for tool in tools %}
+                <div class="bg-white rounded-lg shadow-sm p-6 border-2 border-gray-200 hover:border-blue-300 transition-colors">
+                    <div class="flex items-center justify-center mb-4">
+                        <div class="w-16 h-16 bg-gradient-to-br from-blue-500 to-purple-600 rounded-lg flex items-center justify-center">
+                            <span class="text-white text-xl font-bold">{{tool.tool_name.charAt(0)}}</span>
+                        </div>
+                    </div>
+                    <h3 class="text-lg font-semibold text-gray-900 mb-2">{{tool.tool_name}}</h3>
+                    <p class="text-sm text-gray-600 mb-4">{{tool.description}}</p>
+                    <div class="flex items-center justify-center space-x-2 mb-4">
+                        <span class="text-yellow-400">★</span>
+                        <span class="text-sm font-medium">{{((tool.benchmarks.content_quality + tool.benchmarks.ease_of_use + tool.benchmarks.value_for_money) / 3).toFixed(1)}}/5</span>
+                    </div>
+                    <a href="/tools/{{tool.slug}}" class="inline-flex items-center justify-center w-full px-4 py-2 text-sm font-medium text-blue-600 bg-blue-50 rounded-md hover:bg-blue-100 transition-colors">
+                        View Details
+                    </a>
+                </div>
+                {% endfor %}
+            </div>
+        </section>
+
+        <!-- Quick Verdict Section -->
+        <section class="bg-white rounded-lg shadow-sm p-8 mb-12">
+            <h2 class="text-2xl font-bold text-gray-900 mb-6 text-center">Quick Verdict</h2>
+            <div class="grid grid-cols-1 md:grid-cols-{{tools.length}} gap-6">
+                {% for tool in tools %}
+                <div class="border border-gray-200 rounded-lg p-6">
+                    <h3 class="text-lg font-semibold text-gray-900 mb-4">Choose {{tool.tool_name}} if:</h3>
+                    <ul class="space-y-2">
+                        {% for strength in tool.strengths %}
+                        <li class="flex items-start space-x-2">
+                            <svg class="w-5 h-5 text-green-500 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                            </svg>
+                            <span class="text-sm text-gray-700">{{strength}}</span>
+                        </li>
+                        {% endfor %}
+                    </ul>
+                </div>
+                {% endfor %}
+            </div>
+        </section>
+
+        <!-- Interactive Comparison Table -->
+        <section class="bg-white rounded-lg shadow-sm p-8 mb-12">
+            <div class="flex flex-col sm:flex-row sm:justify-between sm:items-center mb-6 space-y-4 sm:space-y-0">
+                <h2 class="text-2xl font-bold text-gray-900">Feature Comparison</h2>
+                <div class="flex flex-col sm:flex-row space-y-2 sm:space-y-0 sm:space-x-4">
+                    <button onclick="toggleDifferences()" class="px-4 py-2 text-sm font-medium text-blue-600 hover:text-blue-700 border border-blue-600 rounded-md hover:bg-blue-50 transition-colors">
+                        <span id="diff-toggle">Show Differences</span>
+                    </button>
+                    <button onclick="highlightWinners()" class="px-4 py-2 text-sm font-medium text-green-600 hover:text-green-700 border border-green-600 rounded-md hover:bg-green-50 transition-colors">
+                        Highlight Winners
+                    </button>
+                    <select id="sort-select" onchange="sortTable()" class="px-3 py-2 border border-gray-300 rounded-md text-sm focus:outline-none focus:ring-2 focus:ring-blue-500">
+                        <option value="name">Sort by Name</option>
+                        <option value="rating">Sort by Rating</option>
+                        <option value="price">Sort by Price</option>
+                    </select>
+                </div>
+            </div>
+            
+            <div class="overflow-x-auto">
+                <table class="w-full comparison-table">
+                    <thead class="bg-gray-50">
+                        <tr>
+                            <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider min-w-[200px]">Feature</th>
+                            {% for tool in tools %}
+                            <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider min-w-[150px]">
+                                <div class="flex flex-col items-center space-y-2">
+                                    <div class="w-8 h-8 bg-gradient-to-br from-blue-500 to-purple-600 rounded-lg flex items-center justify-center">
+                                        <span class="text-white text-sm font-bold">{{tool.tool_name.charAt(0)}}</span>
+                                    </div>
+                                    <span class="font-medium text-gray-900 text-center">{{tool.tool_name}}</span>
+                                </div>
+                            </th>
+                            {% endfor %}
+                        </tr>
+                    </thead>
+                    <tbody class="bg-white divide-y divide-gray-200">
+                        <!-- Tool Ratings -->
+                        <tr>
+                            <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">Overall Rating</td>
+                            {% for tool in tools %}
+                            <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-900">
+                                <div class="flex flex-col items-center space-y-1">
+                                    <div class="flex items-center space-x-1">
+                                        <span class="text-yellow-400">★</span>
+                                        <span class="font-medium">{{((tool.benchmarks.content_quality + tool.benchmarks.ease_of_use + tool.benchmarks.value_for_money) / 3).toFixed(1)}}/5</span>
+                                    </div>
+                                    <span class="text-xs text-gray-500">{{tool.review_count || 150}} reviews</span>
+                                </div>
+                            </td>
+                            {% endfor %}
+                        </tr>
+                        
+                        <!-- Content Quality -->
+                        <tr>
+                            <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">Content Quality</td>
+                            {% for tool in tools %}
+                            <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-900">
+                                <div class="flex flex-col items-center space-y-2">
+                                    <div class="w-full bg-gray-200 rounded-full h-2">
+                                        <div class="bg-blue-600 h-2 rounded-full transition-all duration-300" style="width: {{tool.benchmarks.content_quality * 10}}%"></div>
+                                    </div>
+                                    <span class="text-sm font-medium">{{tool.benchmarks.content_quality}}/10</span>
+                                </div>
+                            </td>
+                            {% endfor %}
+                        </tr>
+                        
+                        <!-- Ease of Use -->
+                        <tr>
+                            <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">Ease of Use</td>
+                            {% for tool in tools %}
+                            <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-900">
+                                <div class="flex flex-col items-center space-y-2">
+                                    <div class="w-full bg-gray-200 rounded-full h-2">
+                                        <div class="bg-green-600 h-2 rounded-full transition-all duration-300" style="width: {{tool.benchmarks.ease_of_use * 10}}%"></div>
+                                    </div>
+                                    <span class="text-sm font-medium">{{tool.benchmarks.ease_of_use}}/10</span>
+                                </div>
+                            </td>
+                            {% endfor %}
+                        </tr>
+                        
+                        <!-- SEO Features -->
+                        <tr>
+                            <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">SEO Features</td>
+                            {% for tool in tools %}
+                            <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-900">
+                                <div class="flex flex-col items-center space-y-2">
+                                    <div class="w-full bg-gray-200 rounded-full h-2">
+                                        <div class="bg-purple-600 h-2 rounded-full transition-all duration-300" style="width: {{tool.benchmarks.seo_features * 10}}%"></div>
+                                    </div>
+                                    <span class="text-sm font-medium">{{tool.benchmarks.seo_features}}/10</span>
+                                </div>
+                            </td>
+                            {% endfor %}
+                        </tr>
+                        
+                        <!-- Value for Money -->
+                        <tr>
+                            <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">Value for Money</td>
+                            {% for tool in tools %}
+                            <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-900">
+                                <div class="flex flex-col items-center space-y-2">
+                                    <div class="w-full bg-gray-200 rounded-full h-2">
+                                        <div class="bg-red-600 h-2 rounded-full transition-all duration-300" style="width: {{tool.benchmarks.value_for_money * 10}}%"></div>
+                                    </div>
+                                    <span class="text-sm font-medium">{{tool.benchmarks.value_for_money}}/10</span>
+                                </div>
+                            </td>
+                            {% endfor %}
+                        </tr>
+                        
+                        <!-- Pricing -->
+                        <tr>
+                            <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">Starting Price</td>
+                            {% for tool in tools %}
+                            <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-900">
+                                <div class="text-center">
+                                    {% if tool.pricing.free %}
+                                    <div class="text-green-600 font-medium">Free</div>
+                                    <div class="text-xs text-gray-500">{{tool.pricing.free}}</div>
+                                    {% else %}
+                                    <div class="font-medium">{{tool.starting_price || 'Contact for pricing'}}</div>
+                                    {% endif %}
+                                </div>
+                            </td>
+                            {% endfor %}
+                        </tr>
+                        
+                        <!-- Key Features -->
+                        {% for feature in allFeatures %}
+                        <tr class="feature-row" data-feature="{{feature}}">
+                            <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">{{feature}}</td>
+                            {% for tool in tools %}
+                            <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-900">
+                                <div class="flex justify-center">
+                                    {% if tool.key_features.includes(feature) %}
+                                    <svg class="w-5 h-5 text-green-500" fill="currentColor" viewBox="0 0 20 20">
+                                        <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                                    </svg>
+                                    {% else %}
+                                    <svg class="w-5 h-5 text-red-500" fill="currentColor" viewBox="0 0 20 20">
+                                        <path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"></path>
+                                    </svg>
+                                    {% endif %}
+                                </div>
+                            </td>
+                            {% endfor %}
+                        </tr>
+                        {% endfor %}
+                        
+                        <!-- API Available -->
+                        <tr>
+                            <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">API Available</td>
+                            {% for tool in tools %}
+                            <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-900">
+                                <div class="flex justify-center">
+                                    {% if tool.api_available %}
+                                    <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-green-100 text-green-800">Yes</span>
+                                    {% else %}
+                                    <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-red-100 text-red-800">No</span>
+                                    {% endif %}
+                                </div>
+                            </td>
+                            {% endfor %}
+                        </tr>
+                        
+                        <!-- Free Plan -->
+                        <tr>
+                            <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">Free Plan</td>
+                            {% for tool in tools %}
+                            <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-900">
+                                <div class="flex justify-center">
+                                    {% if tool.pricing.free %}
+                                    <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-green-100 text-green-800">Available</span>
+                                    {% else %}
+                                    <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-gray-100 text-gray-800">Not Available</span>
+                                    {% endif %}
+                                </div>
+                            </td>
+                            {% endfor %}
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <!-- Pricing Calculator -->
+        <section class="bg-white rounded-lg shadow-sm p-8 mb-12">
+            <h2 class="text-2xl font-bold text-gray-900 mb-6">Pricing Calculator</h2>
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                <!-- Calculator Controls -->
+                <div class="space-y-6">
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700 mb-2">Select Tool</label>
+                        <select id="tool-select" onchange="updatePricing()" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500">
+                            {% for tool in tools %}
+                            <option value="{{tool.slug}}">{{tool.tool_name}}</option>
+                            {% endfor %}
+                        </select>
+                    </div>
+                    
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700 mb-2">Plan Type</label>
+                        <select id="plan-select" onchange="updatePricing()" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500">
+                            <option value="free">Free Plan</option>
+                            <option value="basic">Basic Plan</option>
+                            <option value="pro">Pro Plan</option>
+                            <option value="enterprise">Enterprise Plan</option>
+                        </select>
+                    </div>
+                    
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700 mb-2">Usage Level</label>
+                        <input type="range" id="usage-slider" min="1" max="4" value="2" onchange="updatePricing()" class="w-full slider">
+                        <div class="flex justify-between text-xs text-gray-500 mt-1">
+                            <span>Light</span>
+                            <span>Moderate</span>
+                            <span>Heavy</span>
+                            <span>Enterprise</span>
+                        </div>
+                    </div>
+                    
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700 mb-2">Team Size</label>
+                        <input type="number" id="team-size" value="1" min="1" max="100" onchange="updatePricing()" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500">
+                    </div>
+                    
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700 mb-2">Billing Period</label>
+                        <select id="billing-period" onchange="updatePricing()" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500">
+                            <option value="monthly">Monthly</option>
+                            <option value="yearly">Yearly (20% discount)</option>
+                        </select>
+                    </div>
+                </div>
+                
+                <!-- Pricing Results -->
+                <div class="bg-gray-50 rounded-lg p-6">
+                    <h3 class="text-lg font-semibold text-gray-900 mb-4">Estimated Cost</h3>
+                    <div class="space-y-4">
+                        <div class="flex justify-between">
+                            <span class="text-gray-600">Base Plan:</span>
+                            <span id="base-price" class="font-medium">$0</span>
+                        </div>
+                        <div class="flex justify-between">
+                            <span class="text-gray-600">Usage Multiplier:</span>
+                            <span id="usage-multiplier" class="font-medium">1x</span>
+                        </div>
+                        <div class="flex justify-between">
+                            <span class="text-gray-600">Team Members:</span>
+                            <span id="team-cost" class="font-medium">$0</span>
+                        </div>
+                        <div class="flex justify-between">
+                            <span class="text-gray-600">Billing Discount:</span>
+                            <span id="billing-discount" class="font-medium text-green-600">$0</span>
+                        </div>
+                        <hr class="border-gray-300">
+                        <div class="flex justify-between text-lg font-bold">
+                            <span>Total <span id="billing-period-text">Monthly</span>:</span>
+                            <span id="total-price" class="text-blue-600">$0</span>
+                        </div>
+                        <div class="text-center text-sm text-gray-500">
+                            <span id="annual-savings" class="hidden">Save $0/year with annual billing</span>
+                        </div>
+                    </div>
+                    <button onclick="getQuote()" class="w-full mt-6 bg-blue-600 text-white px-4 py-2 rounded-md font-medium hover:bg-blue-700 transition-colors">
+                        Get Custom Quote
+                    </button>
+                    <button onclick="startTrial()" class="w-full mt-2 bg-gray-200 text-gray-800 px-4 py-2 rounded-md font-medium hover:bg-gray-300 transition-colors">
+                        Start Free Trial
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Pros and Cons Comparison -->
+        <section class="bg-white rounded-lg shadow-sm p-8 mb-12">
+            <h2 class="text-2xl font-bold text-gray-900 mb-6 text-center">Pros & Cons Comparison</h2>
+            <div class="grid grid-cols-1 md:grid-cols-{{tools.length}} gap-6">
+                {% for tool in tools %}
+                <div class="border border-gray-200 rounded-lg p-6">
+                    <h3 class="text-lg font-semibold text-gray-900 mb-4 text-center">{{tool.tool_name}}</h3>
+                    
+                    <!-- Pros -->
+                    <div class="mb-6">
+                        <h4 class="text-md font-medium text-green-700 mb-3 flex items-center">
+                            <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                            </svg>
+                            Pros
+                        </h4>
+                        <ul class="space-y-2">
+                            {% for pro in tool.pros %}
+                            <li class="text-sm text-gray-700 flex items-start">
+                                <span class="text-green-500 mr-2 mt-0.5">•</span>
+                                {{pro}}
+                            </li>
+                            {% endfor %}
+                        </ul>
+                    </div>
+                    
+                    <!-- Cons -->
+                    <div>
+                        <h4 class="text-md font-medium text-red-700 mb-3 flex items-center">
+                            <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"></path>
+                            </svg>
+                            Cons
+                        </h4>
+                        <ul class="space-y-2">
+                            {% for con in tool.cons %}
+                            <li class="text-sm text-gray-700 flex items-start">
+                                <span class="text-red-500 mr-2 mt-0.5">•</span>
+                                {{con}}
+                            </li>
+                            {% endfor %}
+                        </ul>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+        </section>
+
+        <!-- CTA Section with Email Capture -->
+        <section class="bg-gradient-to-br from-blue-600 to-purple-600 rounded-lg p-12 text-white text-center">
+            <h2 class="text-3xl font-bold mb-4">Get Expert AI Tool Recommendations</h2>
+            <p class="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">
+                Subscribe to our newsletter and get personalized AI tool recommendations, exclusive insights, and early access to new tool reviews.
+            </p>
+            <form class="max-w-md mx-auto space-y-4" onsubmit="handleEmailCapture(event)">
+                <input type="email" name="email" placeholder="Enter your email address" required class="w-full px-6 py-4 rounded-lg text-gray-900 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-white text-lg">
+                <button type="submit" class="w-full bg-white text-blue-600 px-6 py-4 rounded-lg font-semibold text-lg hover:bg-gray-100 transition-colors">
+                    Get Free Recommendations
+                </button>
+            </form>
+            <p class="text-sm text-blue-200 mt-4">No spam, unsubscribe at any time. We respect your privacy.</p>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">SiteOptz.ai</h3>
+                    <p class="text-gray-400">Your trusted source for AI tool reviews and comparisons.</p>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-4">Tools</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="/tools" class="hover:text-white">All Tools</a></li>
+                        <li><a href="/comparisons" class="hover:text-white">Comparisons</a></li>
+                        <li><a href="/rankings" class="hover:text-white">Rankings</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-4">Resources</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="/blog" class="hover:text-white">Blog</a></li>
+                        <li><a href="/guides" class="hover:text-white">Guides</a></li>
+                        <li><a href="/newsletter" class="hover:text-white">Newsletter</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-4">Company</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="/about" class="hover:text-white">About</a></li>
+                        <li><a href="/contact" class="hover:text-white">Contact</a></li>
+                        <li><a href="/privacy" class="hover:text-white">Privacy</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
+                <p>&copy; 2025 SiteOptz.ai. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script>
+        let showDifferences = false;
+        let winnersHighlighted = false;
+        let toolsData = {{tools | json}};
+
+        // Initialize page
+        document.addEventListener('DOMContentLoaded', function() {
+            updatePricing();
+        });
+
+        // Toggle differences highlighting
+        function toggleDifferences() {
+            showDifferences = !showDifferences;
+            const button = document.getElementById('diff-toggle');
+            button.textContent = showDifferences ? 'Show All' : 'Show Differences';
+            
+            const rows = document.querySelectorAll('.comparison-table tbody tr');
+            rows.forEach(row => {
+                const cells = row.querySelectorAll('td');
+                if (cells.length > 1) {
+                    const values = Array.from(cells).slice(1).map(cell => cell.textContent.trim());
+                    const uniqueValues = [...new Set(values)];
+                    
+                    if (showDifferences && uniqueValues.length === 1) {
+                        row.style.display = 'none';
+                    } else {
+                        row.style.display = '';
+                        if (showDifferences && uniqueValues.length > 1) {
+                            row.style.backgroundColor = '#fef3c7';
+                        } else {
+                            row.style.backgroundColor = '';
+                        }
+                    }
+                }
+            });
+        }
+
+        // Highlight winners in each category
+        function highlightWinners() {
+            winnersHighlighted = !winnersHighlighted;
+            const rows = document.querySelectorAll('.comparison-table tbody tr');
+            
+            rows.forEach(row => {
+                const cells = row.querySelectorAll('td');
+                if (cells.length > 1) {
+                    // Remove existing highlights
+                    cells.forEach(cell => cell.classList.remove('winner-highlight'));
+                    
+                    if (winnersHighlighted) {
+                        // Find the best value in this row
+                        const values = Array.from(cells).slice(1);
+                        let bestCell = null;
+                        let bestValue = -1;
+                        
+                        values.forEach(cell => {
+                            const text = cell.textContent.trim();
+                            // Look for numeric values
+                            const match = text.match(/(\d+(?:\.\d+)?)/);
+                            if (match) {
+                                const value = parseFloat(match[1]);
+                                if (value > bestValue) {
+                                    bestValue = value;
+                                    bestCell = cell;
+                                }
+                            }
+                        });
+                        
+                        if (bestCell) {
+                            bestCell.classList.add('winner-highlight');
+                        }
+                    }
+                }
+            });
+        }
+
+        // Sort table (basic implementation)
+        function sortTable() {
+            const sortBy = document.getElementById('sort-select').value;
+            // Implementation would depend on specific sorting requirements
+            console.log('Sorting by:', sortBy);
+        }
+
+        // Update pricing calculator
+        function updatePricing() {
+            const selectedTool = document.getElementById('tool-select').value;
+            const selectedPlan = document.getElementById('plan-select').value;
+            const usageLevel = parseInt(document.getElementById('usage-slider').value);
+            const teamSize = parseInt(document.getElementById('team-size').value);
+            const billingPeriod = document.getElementById('billing-period').value;
+            
+            const tool = toolsData.find(t => t.slug === selectedTool);
+            if (!tool) return;
+            
+            // Base pricing logic
+            let basePrice = 0;
+            switch (selectedPlan) {
+                case 'free':
+                    basePrice = 0;
+                    break;
+                case 'basic':
+                    basePrice = 29;
+                    break;
+                case 'pro':
+                    basePrice = 79;
+                    break;
+                case 'enterprise':
+                    basePrice = 199;
+                    break;
+            }
+            
+            // Usage multiplier
+            const usageMultipliers = {1: 0.5, 2: 1, 3: 1.5, 4: 2};
+            const usageMultiplier = usageMultipliers[usageLevel] || 1;
+            
+            // Team cost (additional members)
+            const teamCost = Math.max(0, (teamSize - 1) * 15);
+            
+            // Calculate subtotal
+            let subtotal = (basePrice * usageMultiplier) + teamCost;
+            
+            // Apply billing discount
+            let discount = 0;
+            if (billingPeriod === 'yearly' && subtotal > 0) {
+                discount = subtotal * 0.2; // 20% discount
+            }
+            
+            const total = subtotal - discount;
+            
+            // Update display
+            document.getElementById('base-price').textContent = `$${basePrice}`;
+            document.getElementById('usage-multiplier').textContent = `${usageMultiplier}x`;
+            document.getElementById('team-cost').textContent = `$${teamCost}`;
+            document.getElementById('billing-discount').textContent = discount > 0 ? `-$${discount.toFixed(0)}` : '$0';
+            document.getElementById('total-price').textContent = `$${total.toFixed(0)}`;
+            document.getElementById('billing-period-text').textContent = billingPeriod === 'yearly' ? 'Yearly' : 'Monthly';
+            
+            // Show annual savings
+            const annualSavings = document.getElementById('annual-savings');
+            if (billingPeriod === 'yearly' && discount > 0) {
+                annualSavings.textContent = `Save $${(discount * 12).toFixed(0)}/year with annual billing`;
+                annualSavings.classList.remove('hidden');
+            } else {
+                annualSavings.classList.add('hidden');
+            }
+        }
+
+        // Get quote function
+        function getQuote() {
+            const selectedTool = document.getElementById('tool-select').value;
+            const selectedPlan = document.getElementById('plan-select').value;
+            const totalPrice = document.getElementById('total-price').textContent;
+            const billingPeriod = document.getElementById('billing-period').value;
+            
+            // Create quote request data
+            const quoteData = {
+                tool: selectedTool,
+                plan: selectedPlan,
+                price: totalPrice,
+                billing: billingPeriod,
+                teamSize: document.getElementById('team-size').value,
+                usage: document.getElementById('usage-slider').value
+            };
+            
+            // Store in localStorage for quote form
+            localStorage.setItem('quoteRequest', JSON.stringify(quoteData));
+            
+            // Redirect to quote form or show modal
+            window.location.href = '/quote?tool=' + encodeURIComponent(selectedTool);
+        }
+
+        // Start trial function
+        function startTrial() {
+            const selectedTool = document.getElementById('tool-select').value;
+            const tool = toolsData.find(t => t.slug === selectedTool);
+            
+            if (tool && tool.website_url) {
+                window.open(tool.website_url, '_blank');
+            } else {
+                alert('Trial not available for this tool');
+            }
+        }
+
+        // Email capture function
+        async function handleEmailCapture(event) {
+            event.preventDefault();
+            const email = event.target.querySelector('input[type="email"]').value;
+            
+            try {
+                const response = await fetch('/api/subscribe', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify({ 
+                        email,
+                        source: 'comparison_page',
+                        tools: toolsData.map(t => t.tool_name)
+                    })
+                });
+                
+                if (response.ok) {
+                    alert('Thank you for subscribing! You\'ll receive your first recommendations soon.');
+                    event.target.reset();
+                } else {
+                    alert('Something went wrong. Please try again.');
+                }
+            } catch (error) {
+                console.error('Error:', error);
+                alert('Something went wrong. Please try again.');
+            }
+        }
+    </script>
+</body>
+</html>

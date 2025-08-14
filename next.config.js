@@ -2,6 +2,7 @@
 const nextConfig = {
   reactStrictMode: true,
   swcMinify: true,
+  compress: true,
   
   // Enable static site generation for better SEO and performance
   trailingSlash: true,
@@ -9,7 +10,10 @@ const nextConfig = {
   // Image optimization settings
   images: {
     unoptimized: true, // Required for static export
+    formats: ['image/webp', 'image/avif'],
+    minimumCacheTTL: 60 * 60 * 24 * 7, // 7 days
     domains: [
+      'siteoptz.ai',
       'upload.wikimedia.org',
       'cdn.openai.com',
       'assets.claude.ai',
@@ -27,8 +31,77 @@ const nextConfig = {
   generateEtags: true,
   poweredByHeader: false,
   
+  // Headers for SEO and performance
+  async headers() {
+    return [
+      {
+        source: '/(.*)',
+        headers: [
+          {
+            key: 'X-Frame-Options',
+            value: 'DENY',
+          },
+          {
+            key: 'X-Content-Type-Options',
+            value: 'nosniff',
+          },
+          {
+            key: 'Referrer-Policy',
+            value: 'origin-when-cross-origin',
+          },
+          {
+            key: 'X-DNS-Prefetch-Control',
+            value: 'on',
+          },
+        ],
+      },
+      {
+        source: '/data/(.*)',
+        headers: [
+          {
+            key: 'Cache-Control',
+            value: 'public, max-age=86400, s-maxage=86400', // 24 hours
+          },
+        ],
+      },
+      {
+        source: '/_next/static/(.*)',
+        headers: [
+          {
+            key: 'Cache-Control',
+            value: 'public, max-age=31536000, immutable', // 1 year
+          },
+        ],
+      },
+    ];
+  },
+
+  // Redirects for SEO
+  async redirects() {
+    return [
+      {
+        source: '/ai-tools',
+        destination: '/tools',
+        permanent: true,
+      },
+      {
+        source: '/ai-tools/:slug',
+        destination: '/tools/:slug',
+        permanent: true,
+      },
+      {
+        source: '/comparison/:tool1-vs-:tool2',
+        destination: '/compare/:tool1-vs-:tool2',
+        permanent: true,
+      },
+    ];
+  },
+  
   // Experimental features for better performance
-  experimental: {}
+  experimental: {
+    optimizeCss: true,
+    scrollRestoration: true,
+  }
 };
 
 module.exports = nextConfig;

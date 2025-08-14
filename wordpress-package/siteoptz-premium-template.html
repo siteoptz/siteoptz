@@ -1,0 +1,1542 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SiteOptz.ai - AI Tools Comparison Platform | Find Your Perfect AI Solution</title>
+    
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Discover and compare 1000+ AI tools with data-driven insights, personalized recommendations, and real-time pricing. Find your perfect AI solution today.">
+    <meta name="keywords" content="AI tools comparison, artificial intelligence software, AI tool finder, best AI tools 2024, AI comparison platform">
+    <meta name="author" content="SiteOptz.ai">
+    <meta name="robots" content="index, follow">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://siteoptz.ai/">
+    <meta property="og:title" content="SiteOptz.ai - AI Tools Comparison Platform">
+    <meta property="og:description" content="Find your perfect AI tool with data-driven comparisons and personalized recommendations">
+    <meta property="og:image" content="https://siteoptz.ai/assets/og-image.jpg">
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://siteoptz.ai/">
+    <meta property="twitter:title" content="SiteOptz.ai - AI Tools Comparison Platform">
+    <meta property="twitter:description" content="Find your perfect AI tool with data-driven comparisons and personalized recommendations">
+    <meta property="twitter:image" content="https://siteoptz.ai/assets/twitter-image.jpg">
+    
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "name": "SiteOptz.ai",
+      "url": "https://siteoptz.ai",
+      "description": "AI Tools Comparison Platform",
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": "https://siteoptz.ai/tools?search={search_term_string}",
+        "query-input": "required name=search_term_string"
+      }
+    }
+    </script>
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        /* CSS Variables for Premium Design System */
+        :root {
+            /* Colors */
+            --primary: #3b82f6;
+            --primary-dark: #1d4ed8;
+            --secondary: #10b981;
+            --accent: #f59e0b;
+            --success: #059669;
+            --error: #dc2626;
+            --warning: #d97706;
+            
+            /* Neutrals */
+            --gray-50: #f9fafb;
+            --gray-100: #f3f4f6;
+            --gray-200: #e5e7eb;
+            --gray-300: #d1d5db;
+            --gray-400: #9ca3af;
+            --gray-500: #6b7280;
+            --gray-600: #4b5563;
+            --gray-700: #374151;
+            --gray-800: #1f2937;
+            --gray-900: #111827;
+            
+            /* Gradients */
+            --gradient-primary: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            --gradient-secondary: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%);
+            --gradient-hero: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            --gradient-card: linear-gradient(145deg, #ffffff 0%, #f8fafc 100%);
+            
+            /* Shadows */
+            --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+            --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+            --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+            --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+            --shadow-2xl: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+            
+            /* Spacing */
+            --space-xs: 0.5rem;
+            --space-sm: 1rem;
+            --space-md: 1.5rem;
+            --space-lg: 2rem;
+            --space-xl: 3rem;
+            --space-2xl: 4rem;
+            --space-3xl: 6rem;
+            
+            /* Border Radius */
+            --radius-sm: 0.375rem;
+            --radius-md: 0.5rem;
+            --radius-lg: 0.75rem;
+            --radius-xl: 1rem;
+            --radius-2xl: 1.5rem;
+            
+            /* Typography */
+            --font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+        }
+        
+        /* Reset and Base Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        html {
+            scroll-behavior: smooth;
+        }
+        
+        body {
+            font-family: var(--font-family);
+            line-height: 1.6;
+            color: var(--gray-700);
+            background: #ffffff;
+            overflow-x: hidden;
+        }
+        
+        /* Container */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1rem;
+        }
+        
+        .container-wide {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 1rem;
+        }
+        
+        /* Header Styles */
+        .header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(20px);
+            border-bottom: 1px solid var(--gray-200);
+            z-index: 1000;
+            transition: all 0.3s ease;
+        }
+        
+        .header.scrolled {
+            box-shadow: var(--shadow-lg);
+        }
+        
+        .header-content {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 1rem 0;
+        }
+        
+        .logo {
+            display: flex;
+            align-items: center;
+            font-size: 1.5rem;
+            font-weight: 800;
+            color: var(--primary);
+            text-decoration: none;
+            gap: 0.5rem;
+        }
+        
+        .logo-icon {
+            width: 32px;
+            height: 32px;
+            background: var(--gradient-primary);
+            border-radius: var(--radius-lg);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+        }
+        
+        .nav {
+            display: flex;
+            align-items: center;
+            gap: 2rem;
+        }
+        
+        .nav-links {
+            display: flex;
+            align-items: center;
+            gap: 2rem;
+            list-style: none;
+        }
+        
+        .nav-link {
+            color: var(--gray-600);
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s ease;
+            position: relative;
+        }
+        
+        .nav-link:hover {
+            color: var(--primary);
+        }
+        
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            bottom: -4px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--primary);
+            transition: width 0.3s ease;
+        }
+        
+        .nav-link:hover::after {
+            width: 100%;
+        }
+        
+        .cta-button {
+            background: var(--gradient-primary);
+            color: white;
+            padding: 0.75rem 1.5rem;
+            border-radius: var(--radius-xl);
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            border: none;
+            cursor: pointer;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        
+        .cta-button:hover {
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-lg);
+        }
+        
+        /* Hero Section */
+        .hero {
+            padding: 8rem 0 6rem;
+            background: var(--gradient-hero);
+            color: white;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000"><defs><radialGradient id="a" cx="50%" cy="50%" r="50%"><stop offset="0%" stop-color="rgba(255,255,255,0.1)"/><stop offset="100%" stop-color="rgba(255,255,255,0)"/></radialGradient></defs><circle cx="200" cy="200" r="100" fill="url(%23a)"/><circle cx="800" cy="300" r="150" fill="url(%23a)"/><circle cx="400" cy="700" r="120" fill="url(%23a)"/></svg>') no-repeat center;
+            background-size: cover;
+            opacity: 0.3;
+        }
+        
+        .hero-content {
+            text-align: center;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .hero-badge {
+            display: inline-block;
+            background: rgba(255, 255, 255, 0.2);
+            backdrop-filter: blur(10px);
+            padding: 0.5rem 1rem;
+            border-radius: var(--radius-xl);
+            margin-bottom: 2rem;
+            font-weight: 500;
+            border: 1px solid rgba(255, 255, 255, 0.3);
+        }
+        
+        .hero-title {
+            font-size: clamp(3rem, 6vw, 5rem);
+            font-weight: 800;
+            margin-bottom: 1.5rem;
+            line-height: 1.1;
+            background: linear-gradient(135deg, #ffffff 0%, #e0e7ff 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .hero-subtitle {
+            font-size: 1.25rem;
+            margin-bottom: 2rem;
+            opacity: 0.9;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .hero-actions {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-bottom: 4rem;
+        }
+        
+        .hero-button-primary {
+            background: white;
+            color: var(--primary);
+            padding: 1rem 2rem;
+            border-radius: var(--radius-xl);
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            box-shadow: var(--shadow-lg);
+        }
+        
+        .hero-button-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: var(--shadow-2xl);
+        }
+        
+        .hero-button-secondary {
+            background: rgba(255, 255, 255, 0.1);
+            color: white;
+            padding: 1rem 2rem;
+            border-radius: var(--radius-xl);
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            backdrop-filter: blur(10px);
+        }
+        
+        .hero-button-secondary:hover {
+            background: rgba(255, 255, 255, 0.2);
+            transform: translateY(-2px);
+        }
+        
+        .hero-stats {
+            display: flex;
+            justify-content: center;
+            gap: 3rem;
+            flex-wrap: wrap;
+        }
+        
+        .hero-stat {
+            text-align: center;
+        }
+        
+        .hero-stat-number {
+            font-size: 2.5rem;
+            font-weight: 800;
+            display: block;
+            line-height: 1;
+        }
+        
+        .hero-stat-label {
+            font-size: 0.9rem;
+            opacity: 0.8;
+            margin-top: 0.25rem;
+        }
+        
+        /* AI Elements Section */
+        .ai-elements {
+            padding: 6rem 0;
+            background: var(--gray-50);
+            position: relative;
+        }
+        
+        .ai-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+        
+        .ai-card {
+            background: white;
+            padding: 2rem;
+            border-radius: var(--radius-2xl);
+            box-shadow: var(--shadow-md);
+            transition: all 0.3s ease;
+            border: 1px solid var(--gray-200);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .ai-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: var(--gradient-primary);
+        }
+        
+        .ai-card:hover {
+            transform: translateY(-8px);
+            box-shadow: var(--shadow-2xl);
+        }
+        
+        .ai-card-icon {
+            width: 60px;
+            height: 60px;
+            background: var(--gradient-primary);
+            border-radius: var(--radius-xl);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 1.5rem;
+            margin-bottom: 1.5rem;
+        }
+        
+        .ai-card-title {
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            color: var(--gray-900);
+        }
+        
+        .ai-card-description {
+            color: var(--gray-600);
+            margin-bottom: 1.5rem;
+            line-height: 1.6;
+        }
+        
+        .ai-card-features {
+            list-style: none;
+        }
+        
+        .ai-card-feature {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            margin-bottom: 0.5rem;
+            color: var(--gray-700);
+        }
+        
+        .ai-card-feature i {
+            color: var(--secondary);
+            width: 16px;
+        }
+        
+        /* Comparison Table Section */
+        .comparison-section {
+            padding: 6rem 0;
+            background: white;
+        }
+        
+        .section-header {
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+        
+        .section-badge {
+            display: inline-block;
+            background: var(--gradient-secondary);
+            color: var(--gray-700);
+            padding: 0.5rem 1rem;
+            border-radius: var(--radius-xl);
+            font-weight: 600;
+            margin-bottom: 1rem;
+            border: 1px solid var(--gray-200);
+        }
+        
+        .section-title {
+            font-size: clamp(2.5rem, 5vw, 4rem);
+            font-weight: 800;
+            margin-bottom: 1rem;
+            color: var(--gray-900);
+            line-height: 1.1;
+        }
+        
+        .section-subtitle {
+            font-size: 1.25rem;
+            color: var(--gray-600);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        
+        .comparison-filters {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            margin-bottom: 3rem;
+            flex-wrap: wrap;
+        }
+        
+        .filter-button {
+            background: white;
+            border: 2px solid var(--gray-300);
+            padding: 0.75rem 1.5rem;
+            border-radius: var(--radius-xl);
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-weight: 500;
+        }
+        
+        .filter-button:hover,
+        .filter-button.active {
+            border-color: var(--primary);
+            background: var(--primary);
+            color: white;
+        }
+        
+        .comparison-table-container {
+            background: white;
+            border-radius: var(--radius-2xl);
+            overflow: hidden;
+            box-shadow: var(--shadow-lg);
+            border: 1px solid var(--gray-200);
+        }
+        
+        .comparison-table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        
+        .comparison-table th,
+        .comparison-table td {
+            padding: 1.5rem;
+            text-align: left;
+            border-bottom: 1px solid var(--gray-200);
+        }
+        
+        .comparison-table th {
+            background: var(--gray-50);
+            font-weight: 600;
+            color: var(--gray-900);
+        }
+        
+        .comparison-table tbody tr:hover {
+            background: var(--gray-50);
+        }
+        
+        .tool-name {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+        
+        .tool-logo {
+            width: 40px;
+            height: 40px;
+            border-radius: var(--radius-lg);
+            object-fit: cover;
+        }
+        
+        .tool-info h4 {
+            font-weight: 600;
+            color: var(--gray-900);
+            margin-bottom: 0.25rem;
+        }
+        
+        .tool-category {
+            font-size: 0.875rem;
+            color: var(--gray-500);
+        }
+        
+        .pricing-badge {
+            background: var(--gradient-primary);
+            color: white;
+            padding: 0.5rem 1rem;
+            border-radius: var(--radius-lg);
+            font-weight: 600;
+            font-size: 0.875rem;
+        }
+        
+        .rating-stars {
+            color: var(--accent);
+        }
+        
+        /* Pricing Calculator Section */
+        .calculator-section {
+            padding: 6rem 0;
+            background: var(--gradient-secondary);
+        }
+        
+        .calculator-container {
+            background: white;
+            border-radius: var(--radius-2xl);
+            padding: 3rem;
+            box-shadow: var(--shadow-2xl);
+            max-width: 800px;
+            margin: 0 auto;
+            border: 1px solid var(--gray-200);
+        }
+        
+        .calculator-form {
+            display: grid;
+            gap: 2rem;
+        }
+        
+        .form-group {
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+        }
+        
+        .form-label {
+            font-weight: 600;
+            color: var(--gray-900);
+        }
+        
+        .form-select,
+        .form-input {
+            padding: 1rem;
+            border: 2px solid var(--gray-300);
+            border-radius: var(--radius-lg);
+            font-size: 1rem;
+            transition: border-color 0.3s ease;
+        }
+        
+        .form-select:focus,
+        .form-input:focus {
+            outline: none;
+            border-color: var(--primary);
+            box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+        }
+        
+        .range-slider {
+            -webkit-appearance: none;
+            appearance: none;
+            height: 8px;
+            border-radius: var(--radius-lg);
+            background: var(--gray-300);
+            outline: none;
+        }
+        
+        .range-slider::-webkit-slider-thumb {
+            -webkit-appearance: none;
+            appearance: none;
+            width: 24px;
+            height: 24px;
+            border-radius: 50%;
+            background: var(--primary);
+            cursor: pointer;
+            box-shadow: var(--shadow-md);
+        }
+        
+        .calculator-result {
+            background: var(--gradient-primary);
+            color: white;
+            padding: 2rem;
+            border-radius: var(--radius-xl);
+            text-align: center;
+            margin-top: 2rem;
+        }
+        
+        .result-price {
+            font-size: 3rem;
+            font-weight: 800;
+            margin-bottom: 0.5rem;
+        }
+        
+        .result-period {
+            opacity: 0.9;
+            margin-bottom: 1rem;
+        }
+        
+        /* Trust Indicators Section */
+        .trust-section {
+            padding: 4rem 0;
+            background: white;
+            border-top: 1px solid var(--gray-200);
+            border-bottom: 1px solid var(--gray-200);
+        }
+        
+        .trust-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 3rem;
+            align-items: center;
+        }
+        
+        .trust-item {
+            text-align: center;
+            opacity: 0.7;
+            transition: opacity 0.3s ease;
+        }
+        
+        .trust-item:hover {
+            opacity: 1;
+        }
+        
+        .trust-logo {
+            height: 40px;
+            object-fit: contain;
+            filter: grayscale(100%);
+            transition: filter 0.3s ease;
+        }
+        
+        .trust-item:hover .trust-logo {
+            filter: grayscale(0%);
+        }
+        
+        /* CTA Section */
+        .cta-section {
+            padding: 6rem 0;
+            background: var(--gradient-hero);
+            color: white;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .cta-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000"><defs><radialGradient id="b" cx="50%" cy="50%" r="50%"><stop offset="0%" stop-color="rgba(255,255,255,0.05)"/><stop offset="100%" stop-color="rgba(255,255,255,0)"/></radialGradient></defs><circle cx="100" cy="100" r="80" fill="url(%23b)"/><circle cx="900" cy="200" r="120" fill="url(%23b)"/><circle cx="300" cy="800" r="100" fill="url(%23b)"/></svg>') no-repeat center;
+            background-size: cover;
+        }
+        
+        .cta-content {
+            position: relative;
+            z-index: 1;
+        }
+        
+        .cta-title {
+            font-size: clamp(2.5rem, 5vw, 4rem);
+            font-weight: 800;
+            margin-bottom: 1.5rem;
+        }
+        
+        .cta-subtitle {
+            font-size: 1.25rem;
+            margin-bottom: 2rem;
+            opacity: 0.9;
+        }
+        
+        /* Footer */
+        .footer {
+            background: var(--gray-900);
+            color: var(--gray-300);
+            padding: 4rem 0 2rem;
+        }
+        
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 3rem;
+            margin-bottom: 3rem;
+        }
+        
+        .footer-section h4 {
+            color: white;
+            font-weight: 600;
+            margin-bottom: 1rem;
+        }
+        
+        .footer-links {
+            list-style: none;
+        }
+        
+        .footer-links li {
+            margin-bottom: 0.5rem;
+        }
+        
+        .footer-links a {
+            color: var(--gray-400);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        
+        .footer-links a:hover {
+            color: white;
+        }
+        
+        .footer-bottom {
+            border-top: 1px solid var(--gray-700);
+            padding-top: 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+        
+        .social-links {
+            display: flex;
+            gap: 1rem;
+        }
+        
+        .social-link {
+            width: 40px;
+            height: 40px;
+            background: var(--gray-800);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--gray-400);
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+        
+        .social-link:hover {
+            background: var(--primary);
+            color: white;
+            transform: translateY(-2px);
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .container {
+                padding: 0 1rem;
+            }
+            
+            .hero {
+                padding: 6rem 0 4rem;
+            }
+            
+            .hero-actions {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .hero-stats {
+                gap: 2rem;
+            }
+            
+            .nav-links {
+                display: none;
+            }
+            
+            .ai-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .comparison-filters {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .calculator-container {
+                padding: 2rem;
+                margin: 0 1rem;
+            }
+            
+            .footer-bottom {
+                flex-direction: column;
+                text-align: center;
+            }
+        }
+        
+        /* Animation Classes */
+        .fade-in {
+            opacity: 0;
+            transform: translateY(30px);
+            animation: fadeIn 0.8s ease forwards;
+        }
+        
+        @keyframes fadeIn {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        .slide-up {
+            opacity: 0;
+            transform: translateY(50px);
+            animation: slideUp 1s ease forwards;
+        }
+        
+        @keyframes slideUp {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        /* Utility Classes */
+        .text-center { text-align: center; }
+        .text-left { text-align: left; }
+        .text-right { text-align: right; }
+        
+        .mb-1 { margin-bottom: 0.25rem; }
+        .mb-2 { margin-bottom: 0.5rem; }
+        .mb-3 { margin-bottom: 1rem; }
+        .mb-4 { margin-bottom: 1.5rem; }
+        .mb-5 { margin-bottom: 2rem; }
+        
+        .mt-1 { margin-top: 0.25rem; }
+        .mt-2 { margin-top: 0.5rem; }
+        .mt-3 { margin-top: 1rem; }
+        .mt-4 { margin-top: 1.5rem; }
+        .mt-5 { margin-top: 2rem; }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header" id="header">
+        <div class="container">
+            <div class="header-content">
+                <a href="/" class="logo">
+                    <div class="logo-icon">
+                        <i class="fas fa-robot"></i>
+                    </div>
+                    SiteOptz.ai
+                </a>
+                
+                <nav class="nav">
+                    <ul class="nav-links">
+                        <li><a href="#tools" class="nav-link">AI Tools</a></li>
+                        <li><a href="#compare" class="nav-link">Compare</a></li>
+                        <li><a href="#pricing" class="nav-link">Pricing</a></li>
+                        <li><a href="#about" class="nav-link">About</a></li>
+                        <li><a href="#blog" class="nav-link">Blog</a></li>
+                    </ul>
+                    <a href="#get-started" class="cta-button">
+                        Get Started <i class="fas fa-arrow-right"></i>
+                    </a>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-badge fade-in">
+                    <i class="fas fa-sparkles"></i> Trusted by 50,000+ Users
+                </div>
+                
+                <h1 class="hero-title fade-in">
+                    Find Your Perfect<br>
+                    <span class="gradient-text">AI Tool</span>
+                </h1>
+                
+                <p class="hero-subtitle fade-in">
+                    Compare 1000+ AI tools with data-driven insights, real-time pricing, and personalized recommendations. Make informed decisions for your business.
+                </p>
+                
+                <div class="hero-actions fade-in">
+                    <a href="#tools" class="hero-button-primary">
+                        <i class="fas fa-search"></i>
+                        Explore AI Tools
+                    </a>
+                    <a href="#demo" class="hero-button-secondary">
+                        <i class="fas fa-play"></i>
+                        Watch Demo
+                    </a>
+                </div>
+                
+                <div class="hero-stats fade-in">
+                    <div class="hero-stat">
+                        <span class="hero-stat-number">1000+</span>
+                        <span class="hero-stat-label">AI Tools</span>
+                    </div>
+                    <div class="hero-stat">
+                        <span class="hero-stat-number">50K+</span>
+                        <span class="hero-stat-label">Happy Users</span>
+                    </div>
+                    <div class="hero-stat">
+                        <span class="hero-stat-number">24/7</span>
+                        <span class="hero-stat-label">Support</span>
+                    </div>
+                    <div class="hero-stat">
+                        <span class="hero-stat-number">99.9%</span>
+                        <span class="hero-stat-label">Uptime</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- AI Elements Section -->
+    <section class="ai-elements" id="tools">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-badge slide-up">AI Categories</div>
+                <h2 class="section-title slide-up">Discover AI Tools by Category</h2>
+                <p class="section-subtitle slide-up">
+                    Explore our comprehensive database of AI tools across different categories and use cases.
+                </p>
+            </div>
+            
+            <div class="ai-grid">
+                <div class="ai-card slide-up">
+                    <div class="ai-card-icon">
+                        <i class="fas fa-brain"></i>
+                    </div>
+                    <h3 class="ai-card-title">Text Generation</h3>
+                    <p class="ai-card-description">
+                        Advanced AI models for content creation, copywriting, and natural language processing.
+                    </p>
+                    <ul class="ai-card-features">
+                        <li class="ai-card-feature">
+                            <i class="fas fa-check"></i>
+                            Content creation tools
+                        </li>
+                        <li class="ai-card-feature">
+                            <i class="fas fa-check"></i>
+                            Copywriting assistants
+                        </li>
+                        <li class="ai-card-feature">
+                            <i class="fas fa-check"></i>
+                            Language translation
+                        </li>
+                        <li class="ai-card-feature">
+                            <i class="fas fa-check"></i>
+                            Grammar checking
+                        </li>
+                    </ul>
+                </div>
+                
+                <div class="ai-card slide-up">
+                    <div class="ai-card-icon">
+                        <i class="fas fa-image"></i>
+                    </div>
+                    <h3 class="ai-card-title">Image Generation</h3>
+                    <p class="ai-card-description">
+                        Creative AI tools for generating, editing, and enhancing visual content and artwork.
+                    </p>
+                    <ul class="ai-card-features">
+                        <li class="ai-card-feature">
+                            <i class="fas fa-check"></i>
+                            AI art generators
+                        </li>
+                        <li class="ai-card-feature">
+                            <i class="fas fa-check"></i>
+                            Photo editing tools
+                        </li>
+                        <li class="ai-card-feature">
+                            <i class="fas fa-check"></i>
+                            Logo creators
+                        </li>
+                        <li class="ai-card-feature">
+                            <i class="fas fa-check"></i>
+                            Background removers
+                        </li>
+                    </ul>
+                </div>
+                
+                <div class="ai-card slide-up">
+                    <div class="ai-card-icon">
+                        <i class="fas fa-code"></i>
+                    </div>
+                    <h3 class="ai-card-title">Code Generation</h3>
+                    <p class="ai-card-description">
+                        Powerful AI coding assistants for software development, debugging, and code optimization.
+                    </p>
+                    <ul class="ai-card-features">
+                        <li class="ai-card-feature">
+                            <i class="fas fa-check"></i>
+                            Code completion
+                        </li>
+                        <li class="ai-card-feature">
+                            <i class="fas fa-check"></i>
+                            Bug detection
+                        </li>
+                        <li class="ai-card-feature">
+                            <i class="fas fa-check"></i>
+                            Code review
+                        </li>
+                        <li class="ai-card-feature">
+                            <i class="fas fa-check"></i>
+                            Documentation
+                        </li>
+                    </ul>
+                </div>
+                
+                <div class="ai-card slide-up">
+                    <div class="ai-card-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h3 class="ai-card-title">Business Intelligence</h3>
+                    <p class="ai-card-description">
+                        Data analysis and business intelligence tools powered by artificial intelligence.
+                    </p>
+                    <ul class="ai-card-features">
+                        <li class="ai-card-feature">
+                            <i class="fas fa-check"></i>
+                            Data analytics
+                        </li>
+                        <li class="ai-card-feature">
+                            <i class="fas fa-check"></i>
+                            Predictive modeling
+                        </li>
+                        <li class="ai-card-feature">
+                            <i class="fas fa-check"></i>
+                            Report generation
+                        </li>
+                        <li class="ai-card-feature">
+                            <i class="fas fa-check"></i>
+                            Market insights
+                        </li>
+                    </ul>
+                </div>
+                
+                <div class="ai-card slide-up">
+                    <div class="ai-card-icon">
+                        <i class="fas fa-microphone"></i>
+                    </div>
+                    <h3 class="ai-card-title">Voice & Audio</h3>
+                    <p class="ai-card-description">
+                        AI-powered audio processing tools for speech, music, and sound generation.
+                    </p>
+                    <ul class="ai-card-features">
+                        <li class="ai-card-feature">
+                            <i class="fas fa-check"></i>
+                            Speech-to-text
+                        </li>
+                        <li class="ai-card-feature">
+                            <i class="fas fa-check"></i>
+                            Voice synthesis
+                        </li>
+                        <li class="ai-card-feature">
+                            <i class="fas fa-check"></i>
+                            Music generation
+                        </li>
+                        <li class="ai-card-feature">
+                            <i class="fas fa-check"></i>
+                            Audio enhancement
+                        </li>
+                    </ul>
+                </div>
+                
+                <div class="ai-card slide-up">
+                    <div class="ai-card-icon">
+                        <i class="fas fa-comments"></i>
+                    </div>
+                    <h3 class="ai-card-title">Chatbots & Virtual Assistants</h3>
+                    <p class="ai-card-description">
+                        Conversational AI tools for customer service, support, and virtual assistance.
+                    </p>
+                    <ul class="ai-card-features">
+                        <li class="ai-card-feature">
+                            <i class="fas fa-check"></i>
+                            Customer support
+                        </li>
+                        <li class="ai-card-feature">
+                            <i class="fas fa-check"></i>
+                            Lead generation
+                        </li>
+                        <li class="ai-card-feature">
+                            <i class="fas fa-check"></i>
+                            Personal assistants
+                        </li>
+                        <li class="ai-card-feature">
+                            <i class="fas fa-check"></i>
+                            Multi-language support
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Comparison Table Section -->
+    <section class="comparison-section" id="compare">
+        <div class="container-wide">
+            <div class="section-header">
+                <div class="section-badge slide-up">Popular Comparisons</div>
+                <h2 class="section-title slide-up">Compare Top AI Tools</h2>
+                <p class="section-subtitle slide-up">
+                    Side-by-side comparison of the most popular AI tools with real-time pricing and feature analysis.
+                </p>
+            </div>
+            
+            <div class="comparison-filters slide-up">
+                <button class="filter-button active">All Tools</button>
+                <button class="filter-button">Text Generation</button>
+                <button class="filter-button">Image Creation</button>
+                <button class="filter-button">Code Assistance</button>
+                <button class="filter-button">Business Tools</button>
+            </div>
+            
+            <div class="comparison-table-container slide-up">
+                <table class="comparison-table">
+                    <thead>
+                        <tr>
+                            <th>Tool</th>
+                            <th>Category</th>
+                            <th>Pricing</th>
+                            <th>Rating</th>
+                            <th>Key Features</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>
+                                <div class="tool-name">
+                                    <img src="https://via.placeholder.com/40x40/3b82f6/ffffff?text=GPT" alt="ChatGPT" class="tool-logo">
+                                    <div class="tool-info">
+                                        <h4>ChatGPT</h4>
+                                        <span class="tool-category">OpenAI</span>
+                                    </div>
+                                </div>
+                            </td>
+                            <td>Text Generation</td>
+                            <td><span class="pricing-badge">$20/mo</span></td>
+                            <td>
+                                <div class="rating-stars">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    4.8
+                                </div>
+                            </td>
+                            <td>Conversational AI, Code Generation, Creative Writing</td>
+                            <td>
+                                <a href="#" class="cta-button">Compare</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="tool-name">
+                                    <img src="https://via.placeholder.com/40x40/7c3aed/ffffff?text=MJ" alt="Midjourney" class="tool-logo">
+                                    <div class="tool-info">
+                                        <h4>Midjourney</h4>
+                                        <span class="tool-category">Midjourney Inc.</span>
+                                    </div>
+                                </div>
+                            </td>
+                            <td>Image Generation</td>
+                            <td><span class="pricing-badge">$10/mo</span></td>
+                            <td>
+                                <div class="rating-stars">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star-half-alt"></i>
+                                    4.6
+                                </div>
+                            </td>
+                            <td>AI Art Generation, High-Quality Images, Creative Styles</td>
+                            <td>
+                                <a href="#" class="cta-button">Compare</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="tool-name">
+                                    <img src="https://via.placeholder.com/40x40/059669/ffffff?text=CL" alt="Claude" class="tool-logo">
+                                    <div class="tool-info">
+                                        <h4>Claude</h4>
+                                        <span class="tool-category">Anthropic</span>
+                                    </div>
+                                </div>
+                            </td>
+                            <td>Text Generation</td>
+                            <td><span class="pricing-badge">$20/mo</span></td>
+                            <td>
+                                <div class="rating-stars">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star-half-alt"></i>
+                                    4.7
+                                </div>
+                            </td>
+                            <td>Long Context, Safety Focused, Document Analysis</td>
+                            <td>
+                                <a href="#" class="cta-button">Compare</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="tool-name">
+                                    <img src="https://via.placeholder.com/40x40/dc2626/ffffff?text=GH" alt="GitHub Copilot" class="tool-logo">
+                                    <div class="tool-info">
+                                        <h4>GitHub Copilot</h4>
+                                        <span class="tool-category">GitHub</span>
+                                    </div>
+                                </div>
+                            </td>
+                            <td>Code Generation</td>
+                            <td><span class="pricing-badge">$10/mo</span></td>
+                            <td>
+                                <div class="rating-stars">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    4.9
+                                </div>
+                            </td>
+                            <td>Code Completion, Multiple Languages, IDE Integration</td>
+                            <td>
+                                <a href="#" class="cta-button">Compare</a>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Calculator Section -->
+    <section class="calculator-section" id="pricing">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-badge slide-up">Cost Calculator</div>
+                <h2 class="section-title slide-up">Calculate Your AI Tool Costs</h2>
+                <p class="section-subtitle slide-up">
+                    Get accurate pricing estimates based on your usage patterns and requirements.
+                </p>
+            </div>
+            
+            <div class="calculator-container slide-up">
+                <form class="calculator-form">
+                    <div class="form-group">
+                        <label class="form-label">Select AI Tool Category</label>
+                        <select class="form-select">
+                            <option>Text Generation (e.g., ChatGPT, Claude)</option>
+                            <option>Image Generation (e.g., Midjourney, DALL-E)</option>
+                            <option>Code Generation (e.g., GitHub Copilot)</option>
+                            <option>Voice & Audio Tools</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label class="form-label">Expected Monthly Usage</label>
+                        <input type="range" class="range-slider" min="0" max="100000" value="10000">
+                        <div style="display: flex; justify-content: space-between; margin-top: 0.5rem; font-size: 0.875rem; color: var(--gray-500);">
+                            <span>0 requests</span>
+                            <span id="usage-value">10,000 requests</span>
+                            <span>100k+ requests</span>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label class="form-label">Team Size</label>
+                        <select class="form-select">
+                            <option>Individual (1 user)</option>
+                            <option>Small Team (2-10 users)</option>
+                            <option>Medium Team (11-50 users)</option>
+                            <option>Large Team (50+ users)</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label class="form-label">Billing Preference</label>
+                        <select class="form-select">
+                            <option>Monthly Billing</option>
+                            <option>Annual Billing (Save 20%)</option>
+                        </select>
+                    </div>
+                </form>
+                
+                <div class="calculator-result">
+                    <div class="result-price">$89</div>
+                    <div class="result-period">per month</div>
+                    <p>Based on your requirements, here's your estimated monthly cost across top AI tools.</p>
+                    <a href="#get-quote" class="hero-button-secondary">Get Detailed Quote</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Trust Indicators -->
+    <section class="trust-section">
+        <div class="container">
+            <div class="trust-grid">
+                <div class="trust-item">
+                    <img src="https://via.placeholder.com/120x40/666666/ffffff?text=TechCrunch" alt="TechCrunch" class="trust-logo">
+                </div>
+                <div class="trust-item">
+                    <img src="https://via.placeholder.com/120x40/666666/ffffff?text=Forbes" alt="Forbes" class="trust-logo">
+                </div>
+                <div class="trust-item">
+                    <img src="https://via.placeholder.com/120x40/666666/ffffff?text=Wired" alt="Wired" class="trust-logo">
+                </div>
+                <div class="trust-item">
+                    <img src="https://via.placeholder.com/120x40/666666/ffffff?text=VentureBeat" alt="VentureBeat" class="trust-logo">
+                </div>
+                <div class="trust-item">
+                    <img src="https://via.placeholder.com/120x40/666666/ffffff?text=ProductHunt" alt="Product Hunt" class="trust-logo">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section" id="get-started">
+        <div class="container">
+            <div class="cta-content">
+                <h2 class="cta-title slide-up">Ready to Find Your Perfect AI Tool?</h2>
+                <p class="cta-subtitle slide-up">
+                    Join 50,000+ professionals who trust SiteOptz.ai for their AI tool decisions.
+                </p>
+                <div class="hero-actions slide-up">
+                    <a href="#start-comparison" class="hero-button-primary">
+                        <i class="fas fa-rocket"></i>
+                        Start Comparing Now
+                    </a>
+                    <a href="#book-demo" class="hero-button-secondary">
+                        <i class="fas fa-calendar"></i>
+                        Book a Demo
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>SiteOptz.ai</h4>
+                    <p>The most comprehensive AI tools comparison platform. Make informed decisions with data-driven insights.</p>
+                    <div class="social-links">
+                        <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-linkedin"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-github"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-discord"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>AI Tools</h4>
+                    <ul class="footer-links">
+                        <li><a href="#">Text Generation</a></li>
+                        <li><a href="#">Image Creation</a></li>
+                        <li><a href="#">Code Generation</a></li>
+                        <li><a href="#">Voice & Audio</a></li>
+                        <li><a href="#">Business Intelligence</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Resources</h4>
+                    <ul class="footer-links">
+                        <li><a href="#">AI Tool Guide</a></li>
+                        <li><a href="#">Comparison Charts</a></li>
+                        <li><a href="#">Pricing Calculator</a></li>
+                        <li><a href="#">API Documentation</a></li>
+                        <li><a href="#">Blog</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Company</h4>
+                    <ul class="footer-links">
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Contact</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms of Service</a></li>
+                        <li><a href="#">Support</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <div>© 2024 SiteOptz.ai. All rights reserved.</div>
+                <div>Made with ❤️ for the AI community</div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Header scroll effect
+        window.addEventListener('scroll', function() {
+            const header = document.getElementById('header');
+            if (window.scrollY > 100) {
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
+            }
+        });
+
+        // Range slider update
+        const rangeSlider = document.querySelector('.range-slider');
+        const usageValue = document.getElementById('usage-value');
+        
+        if (rangeSlider && usageValue) {
+            rangeSlider.addEventListener('input', function() {
+                const value = parseInt(this.value).toLocaleString();
+                usageValue.textContent = value + ' requests';
+            });
+        }
+
+        // Intersection Observer for animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver(function(entries) {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.animationDelay = '0s';
+                }
+            });
+        }, observerOptions);
+
+        // Observe all animation elements
+        document.querySelectorAll('.fade-in, .slide-up').forEach(el => {
+            observer.observe(el);
+        });
+
+        // Filter buttons functionality
+        const filterButtons = document.querySelectorAll('.filter-button');
+        filterButtons.forEach(button => {
+            button.addEventListener('click', function() {
+                filterButtons.forEach(btn => btn.classList.remove('active'));
+                this.classList.add('active');
+                // Here you would implement the actual filtering logic
+            });
+        });
+
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>

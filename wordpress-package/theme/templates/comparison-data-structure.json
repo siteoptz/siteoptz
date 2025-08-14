@@ -1,0 +1,250 @@
+{
+  "comparison_data_structure": {
+    "comparison": {
+      "meta_title": "ChatGPT vs Claude - AI Chatbot Comparison 2025",
+      "meta_description": "Compare ChatGPT and Claude side by side. Features, pricing, pros & cons analysis to help you choose the right AI chatbot for your needs.",
+      "title": "ChatGPT vs Claude - AI Chatbot Comparison",
+      "description": "Comprehensive comparison of two leading AI chatbots to help you make an informed decision for your business or personal use.",
+      "slug": "chatgpt-vs-claude",
+      "keywords": [
+        "chatgpt vs claude",
+        "ai chatbot comparison",
+        "chatgpt review",
+        "claude review",
+        "best ai chatbot",
+        "ai assistant comparison"
+      ]
+    },
+    "tools": [
+      {
+        "tool_name": "ChatGPT",
+        "slug": "chatgpt",
+        "description": "OpenAI's conversational AI model designed for natural language understanding and generation",
+        "category": "AI Chatbot",
+        "logo": "/images/tools/chatgpt-logo.png",
+        "website_url": "https://chat.openai.com",
+        "starting_price": "$20/month",
+        "review_count": 2500,
+        "api_available": true,
+        "benchmarks": {
+          "content_quality": 9.2,
+          "ease_of_use": 8.8,
+          "seo_features": 7.5,
+          "team_collaboration": 8.0,
+          "value_for_money": 8.5,
+          "customer_support": 8.2
+        },
+        "pricing": {
+          "free": "Limited free access with GPT-3.5",
+          "basic": "ChatGPT Plus at $20/month for GPT-4 access",
+          "pro": "ChatGPT Team at $25/user/month",
+          "enterprise": "ChatGPT Enterprise - Custom pricing"
+        },
+        "key_features": [
+          "Advanced Natural Language Processing",
+          "Code Generation and Debugging",
+          "Web Browsing Capability",
+          "Image Analysis (GPT-4V)",
+          "Plugin Ecosystem",
+          "Custom GPTs",
+          "API Access",
+          "Multi-language Support"
+        ],
+        "pros": [
+          "Highly advanced language model (GPT-4)",
+          "Extensive plugin ecosystem",
+          "Strong coding capabilities",
+          "Large knowledge base",
+          "Active community and resources"
+        ],
+        "cons": [
+          "Can be expensive for heavy usage",
+          "Sometimes generates confident but incorrect information",
+          "Limited free tier",
+          "No real-time internet access in basic version"
+        ],
+        "strengths": [
+          "You need the most advanced language model available",
+          "You want access to plugins and custom GPTs",
+          "You frequently work with code and technical content",
+          "You need web browsing capabilities"
+        ]
+      },
+      {
+        "tool_name": "Claude",
+        "slug": "claude",
+        "description": "Anthropic's AI assistant built to be helpful, harmless, and honest with strong reasoning capabilities",
+        "category": "AI Chatbot",
+        "logo": "/images/tools/claude-logo.png",
+        "website_url": "https://claude.ai",
+        "starting_price": "$18/month",
+        "review_count": 1800,
+        "api_available": true,
+        "benchmarks": {
+          "content_quality": 9.0,
+          "ease_of_use": 9.2,
+          "seo_features": 8.0,
+          "team_collaboration": 8.5,
+          "value_for_money": 9.0,
+          "customer_support": 9.0
+        },
+        "pricing": {
+          "free": "Limited free access with message limits",
+          "basic": "Claude Pro at $18/month for increased usage",
+          "pro": "Claude for Work - Team pricing available",
+          "enterprise": "Claude Enterprise - Custom pricing"
+        },
+        "key_features": [
+          "Constitutional AI Training",
+          "Long Context Understanding",
+          "Document Analysis",
+          "Code Generation",
+          "Mathematical Reasoning",
+          "Creative Writing",
+          "Safety-Focused Design",
+          "Multi-format Input Support"
+        ],
+        "pros": [
+          "Excellent reasoning and analysis capabilities",
+          "Strong safety and alignment features",
+          "Great for long-form content",
+          "Transparent about limitations",
+          "Competitive pricing"
+        ],
+        "cons": [
+          "Smaller plugin ecosystem",
+          "Less widespread adoption",
+          "No web browsing capability",
+          "More conservative in responses"
+        ],
+        "strengths": [
+          "You prioritize safety and ethical AI use",
+          "You need strong analytical and reasoning capabilities",
+          "You work with long documents or complex topics",
+          "You want transparent and honest AI responses"
+        ]
+      }
+    ],
+    "allFeatures": [
+      "Advanced Natural Language Processing",
+      "Code Generation and Debugging",
+      "Web Browsing Capability",
+      "Image Analysis",
+      "Plugin Ecosystem",
+      "Custom Models/GPTs",
+      "API Access",
+      "Multi-language Support",
+      "Constitutional AI Training",
+      "Long Context Understanding",
+      "Document Analysis",
+      "Mathematical Reasoning",
+      "Creative Writing",
+      "Safety-Focused Design",
+      "Multi-format Input Support"
+    ]
+  },
+  "wordpress_acf_fields": {
+    "comparison_meta": {
+      "meta_title": "text",
+      "meta_description": "textarea",
+      "title": "text",
+      "description": "wysiwyg",
+      "slug": "text",
+      "keywords": "repeater > text"
+    },
+    "tool_fields": {
+      "tool_name": "text",
+      "slug": "text",
+      "description": "wysiwyg",
+      "category": "select",
+      "logo": "image",
+      "website_url": "url",
+      "starting_price": "text",
+      "review_count": "number",
+      "api_available": "true_false",
+      "benchmarks": "group",
+      "benchmarks.content_quality": "number",
+      "benchmarks.ease_of_use": "number",
+      "benchmarks.seo_features": "number",
+      "benchmarks.team_collaboration": "number",
+      "benchmarks.value_for_money": "number",
+      "benchmarks.customer_support": "number",
+      "pricing": "group",
+      "pricing.free": "text",
+      "pricing.basic": "text",
+      "pricing.pro": "text",
+      "pricing.enterprise": "text",
+      "key_features": "repeater > text",
+      "pros": "repeater > text",
+      "cons": "repeater > text",
+      "strengths": "repeater > text"
+    }
+  },
+  "comparison_types": {
+    "head_to_head": {
+      "description": "Direct comparison between two specific tools",
+      "url_pattern": "/compare/{tool1}-vs-{tool2}",
+      "example": "/compare/chatgpt-vs-claude"
+    },
+    "category_comparison": {
+      "description": "Comparison of multiple tools in the same category",
+      "url_pattern": "/compare/{category}",
+      "example": "/compare/ai-chatbots"
+    },
+    "feature_comparison": {
+      "description": "Tools compared by specific features",
+      "url_pattern": "/compare/{feature}",
+      "example": "/compare/code-generation-tools"
+    }
+  },
+  "interactive_features": {
+    "comparison_table": {
+      "show_differences": "Hide rows where all tools have identical values",
+      "highlight_winners": "Highlight the best value in each comparison row",
+      "sorting": "Sort tools by rating, price, or alphabetically",
+      "filtering": "Filter by specific features or criteria"
+    },
+    "pricing_calculator": {
+      "tool_selection": "Choose which tool to calculate pricing for",
+      "plan_types": ["free", "basic", "pro", "enterprise"],
+      "usage_levels": ["light", "moderate", "heavy", "enterprise"],
+      "team_size": "Number of team members (affects pricing)",
+      "billing_period": ["monthly", "yearly"],
+      "discounts": "Apply annual billing discounts automatically"
+    },
+    "email_capture": {
+      "source_tracking": "Track which comparison page generated the subscription",
+      "tool_interest": "Record which tools the user was comparing",
+      "personalization": "Use comparison data for personalized recommendations"
+    }
+  },
+  "seo_considerations": {
+    "title_patterns": [
+      "{Tool1} vs {Tool2} - Detailed Comparison 2025",
+      "Compare {Tool1} and {Tool2} - Features, Pricing & Reviews",
+      "{Tool1} vs {Tool2}: Which AI Tool is Better?"
+    ],
+    "description_patterns": [
+      "Compare {Tool1} and {Tool2} side by side. Features, pricing, pros & cons analysis to help you choose the right {category} for your needs.",
+      "Detailed comparison of {Tool1} vs {Tool2} including {feature1}, {feature2}, and more. Get unbiased insights to make informed decisions."
+    ],
+    "schema_markup": {
+      "comparison_page": "Use ComparisonPage schema for better search visibility",
+      "software_application": "Each tool should have SoftwareApplication markup",
+      "aggregate_rating": "Include rating data for each tool",
+      "faq": "Add FAQ schema for common comparison questions"
+    },
+    "internal_linking": {
+      "tool_pages": "Link to individual tool review pages",
+      "category_pages": "Link to category overview pages",
+      "related_comparisons": "Suggest similar comparisons",
+      "alternative_tools": "Link to alternative tool suggestions"
+    }
+  },
+  "performance_optimization": {
+    "lazy_loading": "Load comparison table data progressively",
+    "image_optimization": "Use WebP format for tool logos and screenshots",
+    "caching": "Cache comparison data for frequently accessed pages",
+    "cdn": "Serve static assets from CDN for faster loading"
+  }
+}

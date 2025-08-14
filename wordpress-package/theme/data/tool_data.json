@@ -1,0 +1,995 @@
+{
+  "tools": [
+    {
+      "slug": "chatgpt",
+      "name": "ChatGPT",
+      "developer": "OpenAI",
+      "release_date": "November 2022",
+      "description": "ChatGPT is a general-purpose AI assistant that excels at conversation, brainstorming, and basic content creation tasks.",
+      "features": [
+        "Natural language conversation",
+        "Content generation and editing",
+        "Code writing and debugging",
+        "Research and analysis",
+        "Multi-language support",
+        "Mobile app access",
+        "API integration",
+        "Real-time responses",
+        "Context awareness",
+        "File upload support"
+      ],
+      "pros": [
+        "Excellent for brainstorming and ideation",
+        "Strong general knowledge and reasoning",
+        "Free tier available",
+        "Mobile app for on-the-go access",
+        "Good for research and analysis",
+        "Natural conversation flow",
+        "Code generation capabilities",
+        "Multi-language support"
+      ],
+      "cons": [
+        "Limited content templates",
+        "No brand voice customization",
+        "Basic SEO optimization",
+        "No team collaboration features",
+        "Limited content analytics",
+        "No plagiarism checking",
+        "No content calendar integration"
+      ],
+      "pricing": [
+        {
+          "plan": "Free",
+          "price": "$0",
+          "details": "Basic access with GPT-3.5, limited features"
+        },
+        {
+          "plan": "Plus",
+          "price": "$20/month",
+          "details": "GPT-4 access, priority support, advanced features"
+        },
+        {
+          "plan": "Team",
+          "price": "$25/month per user",
+          "details": "Team collaboration, admin controls, shared workspaces"
+        },
+        {
+          "plan": "Enterprise",
+          "price": "Custom pricing",
+          "details": "Custom solutions, dedicated support, advanced security"
+        }
+      ],
+      "benchmarks": {
+        "speed_score": 9.2,
+        "accuracy_score": 8.8,
+        "cost_efficiency": 9.5
+      },
+      "related_tools": ["claude", "gemini", "perplexity"],
+      "meta": {
+        "title": "ChatGPT Review 2025: Pricing, Features & Alternatives | SiteOptz.ai",
+        "description": "Complete ChatGPT review with pricing, features, pros & cons. Compare with alternatives like Jasper AI and Claude. Expert analysis for 2025."
+      },
+      "schema": {
+        "@context": "https://schema.org",
+        "@type": "SoftwareApplication",
+        "name": "ChatGPT",
+        "applicationCategory": "AI Assistant",
+        "operatingSystem": "Web, iOS, Android",
+        "offers": [
+          {
+            "@type": "Offer",
+            "price": "0",
+            "priceCurrency": "USD",
+            "category": "Free"
+          },
+          {
+            "@type": "Offer",
+            "price": "20",
+            "priceCurrency": "USD",
+            "category": "Plus"
+          },
+          {
+            "@type": "Offer",
+            "price": "25",
+            "priceCurrency": "USD",
+            "category": "Team"
+          }
+        ]
+      }
+    },
+    {
+      "slug": "jasper-ai",
+      "name": "Jasper AI",
+      "developer": "Jasper",
+      "release_date": "February 2021",
+      "description": "Jasper AI is an advanced AI-powered content creation platform designed specifically for marketers and businesses.",
+      "features": [
+        "AI-powered content creation",
+        "SEO optimization tools",
+        "Social media content generation",
+        "Email marketing templates",
+        "Brand voice customization",
+        "Content templates library",
+        "Multi-language support",
+        "Team collaboration features",
+        "Content analytics",
+        "Integration with popular tools",
+        "Plagiarism checking",
+        "Content optimization suggestions"
+      ],
+      "pros": [
+        "Excellent for marketing content",
+        "Advanced brand voice training",
+        "Comprehensive content templates",
+        "Strong SEO optimization features",
+        "Team collaboration tools",
+        "Content analytics and insights",
+        "Multi-language support",
+        "Integration with popular tools"
+      ],
+      "cons": [
+        "Higher pricing than competitors",
+        "No free plan available",
+        "Steep learning curve",
+        "Limited general AI capabilities",
+        "No mobile app",
+        "Requires internet connection",
+        "Limited code generation"
+      ],
+      "pricing": [
+        {
+          "plan": "Creator",
+          "price": "$39/month",
+          "details": "50,000 words, 1 user, basic templates"
+        },
+        {
+          "plan": "Teams",
+          "price": "$99/month",
+          "details": "200,000 words, 5 users, advanced features"
+        },
+        {
+          "plan": "Business",
+          "price": "Custom pricing",
+          "details": "Unlimited words, unlimited users, API access"
+        }
+      ],
+      "benchmarks": {
+        "speed_score": 8.5,
+        "accuracy_score": 9.1,
+        "cost_efficiency": 7.8
+      },
+      "related_tools": ["copy-ai", "chatgpt", "writesonic"],
+      "meta": {
+        "title": "Jasper AI Review 2025: Pricing, Features & Alternatives | SiteOptz.ai",
+        "description": "Complete Jasper AI review with pricing, features, pros & cons. Compare with ChatGPT and other AI writing tools. Expert analysis for 2025."
+      },
+      "schema": {
+        "@context": "https://schema.org",
+        "@type": "SoftwareApplication",
+        "name": "Jasper AI",
+        "applicationCategory": "Content Creation",
+        "operatingSystem": "Web",
+        "offers": [
+          {
+            "@type": "Offer",
+            "price": "39",
+            "priceCurrency": "USD",
+            "category": "Creator"
+          },
+          {
+            "@type": "Offer",
+            "price": "99",
+            "priceCurrency": "USD",
+            "category": "Teams"
+          }
+        ]
+      }
+    },
+    {
+      "slug": "copy-ai",
+      "name": "Copy.ai",
+      "developer": "Copy.ai",
+      "release_date": "October 2020",
+      "description": "Copy.ai is an AI copywriting and content generation platform focused on marketing copy and brand messaging.",
+      "features": [
+        "AI copywriting assistance",
+        "Marketing copy generation",
+        "Social media content creation",
+        "Email marketing templates",
+        "Brand voice training",
+        "Content optimization",
+        "Multi-language support",
+        "Team collaboration",
+        "Content analytics",
+        "Integration capabilities",
+        "SEO content tools",
+        "A/B testing suggestions"
+      ],
+      "pros": [
+        "Excellent for marketing copy",
+        "Strong brand voice training",
+        "Good social media content",
+        "Email marketing templates",
+        "Team collaboration features",
+        "Multi-language support",
+        "Integration with popular tools",
+        "A/B testing capabilities"
+      ],
+      "cons": [
+        "Limited long-form content",
+        "No SEO optimization tools",
+        "Basic content analytics",
+        "No plagiarism checking",
+        "Limited template variety",
+        "No mobile app",
+        "Higher pricing for teams"
+      ],
+      "pricing": [
+        {
+          "plan": "Free",
+          "price": "$0",
+          "details": "2,000 words/month, 1 user, basic features"
+        },
+        {
+          "plan": "Pro",
+          "price": "$36/month",
+          "details": "40,000 words, 5 users, advanced features"
+        },
+        {
+          "plan": "Team",
+          "price": "$186/month",
+          "details": "300,000 words, 25 users, team features"
+        },
+        {
+          "plan": "Enterprise",
+          "price": "Custom pricing",
+          "details": "Unlimited words, unlimited users, API access"
+        }
+      ],
+      "benchmarks": {
+        "speed_score": 8.8,
+        "accuracy_score": 8.9,
+        "cost_efficiency": 8.2
+      },
+      "related_tools": ["jasper-ai", "writesonic", "chatgpt"],
+      "meta": {
+        "title": "Copy.ai Review 2025: Pricing, Features & Alternatives | SiteOptz.ai",
+        "description": "Complete Copy.ai review with pricing, features, pros & cons. Compare with Jasper AI and other copywriting tools. Expert analysis for 2025."
+      },
+      "schema": {
+        "@context": "https://schema.org",
+        "@type": "SoftwareApplication",
+        "name": "Copy.ai",
+        "applicationCategory": "Copywriting",
+        "operatingSystem": "Web",
+        "offers": [
+          {
+            "@type": "Offer",
+            "price": "0",
+            "priceCurrency": "USD",
+            "category": "Free"
+          },
+          {
+            "@type": "Offer",
+            "price": "36",
+            "priceCurrency": "USD",
+            "category": "Pro"
+          },
+          {
+            "@type": "Offer",
+            "price": "186",
+            "priceCurrency": "USD",
+            "category": "Team"
+          }
+        ]
+      }
+    },
+    {
+      "slug": "surfer-seo",
+      "name": "Surfer SEO",
+      "developer": "Surfer",
+      "release_date": "2017",
+      "description": "Surfer SEO is an AI-powered SEO optimization tool that helps content creators optimize their content for search engines.",
+      "features": [
+        "Content optimization",
+        "Keyword research tools",
+        "Competitor analysis",
+        "Content editor with suggestions",
+        "SERP analysis",
+        "Content planning",
+        "Site audit tools",
+        "Rank tracking",
+        "Content briefs",
+        "AI writing assistant",
+        "Technical SEO analysis",
+        "Backlink analysis"
+      ],
+      "pros": [
+        "Excellent SEO optimization",
+        "Comprehensive keyword research",
+        "Content editor with real-time suggestions",
+        "Competitor analysis",
+        "Site audit capabilities",
+        "Rank tracking",
+        "Content briefs",
+        "Technical SEO insights"
+      ],
+      "cons": [
+        "Steep learning curve",
+        "Higher pricing",
+        "No free plan",
+        "Limited content creation",
+        "Requires SEO knowledge",
+        "No mobile app",
+        "Complex interface"
+      ],
+      "pricing": [
+        {
+          "plan": "Basic",
+          "price": "$59/month",
+          "details": "10 content editor uses, basic features"
+        },
+        {
+          "plan": "Pro",
+          "price": "$119/month",
+          "details": "30 content editor uses, advanced features"
+        },
+        {
+          "plan": "Business",
+          "price": "$239/month",
+          "details": "70 content editor uses, API access"
+        }
+      ],
+      "benchmarks": {
+        "speed_score": 8.2,
+        "accuracy_score": 9.3,
+        "cost_efficiency": 7.5
+      },
+      "related_tools": ["frase", "ahrefs", "semrush"],
+      "meta": {
+        "title": "Surfer SEO Review 2025: Pricing, Features & Alternatives | SiteOptz.ai",
+        "description": "Complete Surfer SEO review with pricing, features, pros & cons. Compare with Frase and other SEO tools. Expert analysis for 2025."
+      },
+      "schema": {
+        "@context": "https://schema.org",
+        "@type": "SoftwareApplication",
+        "name": "Surfer SEO",
+        "applicationCategory": "SEO Tool",
+        "operatingSystem": "Web",
+        "offers": [
+          {
+            "@type": "Offer",
+            "price": "59",
+            "priceCurrency": "USD",
+            "category": "Basic"
+          },
+          {
+            "@type": "Offer",
+            "price": "119",
+            "priceCurrency": "USD",
+            "category": "Pro"
+          },
+          {
+            "@type": "Offer",
+            "price": "239",
+            "priceCurrency": "USD",
+            "category": "Business"
+          }
+        ]
+      }
+    },
+    {
+      "slug": "frase",
+      "name": "Frase",
+      "developer": "Frase",
+      "release_date": "2018",
+      "description": "Frase is a content optimization and SEO research tool that helps create content that ranks in search engines.",
+      "features": [
+        "Content optimization",
+        "SEO research",
+        "Content briefs",
+        "Question research",
+        "Content editor",
+        "SERP analysis",
+        "Topic modeling",
+        "Content scoring",
+        "Competitor analysis",
+        "AI writing assistant",
+        "Content planning",
+        "Performance tracking"
+      ],
+      "pros": [
+        "Excellent content optimization",
+        "Comprehensive SEO research",
+        "Content briefs",
+        "Question research",
+        "Content scoring",
+        "Competitor analysis",
+        "Topic modeling",
+        "Performance tracking"
+      ],
+      "cons": [
+        "Higher pricing",
+        "No free plan",
+        "Steep learning curve",
+        "Limited content creation",
+        "Requires SEO knowledge",
+        "No mobile app",
+        "Complex interface"
+      ],
+      "pricing": [
+        {
+          "plan": "Basic",
+          "price": "$44.99/month",
+          "details": "4 content briefs, basic features"
+        },
+        {
+          "plan": "Team",
+          "price": "$114.99/month",
+          "details": "30 content briefs, team features"
+        },
+        {
+          "plan": "Enterprise",
+          "price": "Custom pricing",
+          "details": "Unlimited briefs, custom features"
+        }
+      ],
+      "benchmarks": {
+        "speed_score": 8.0,
+        "accuracy_score": 9.0,
+        "cost_efficiency": 7.8
+      },
+      "related_tools": ["surfer-seo", "ahrefs", "semrush"],
+      "meta": {
+        "title": "Frase Review 2025: Pricing, Features & Alternatives | SiteOptz.ai",
+        "description": "Complete Frase review with pricing, features, pros & cons. Compare with Surfer SEO and other content optimization tools. Expert analysis for 2025."
+      },
+      "schema": {
+        "@context": "https://schema.org",
+        "@type": "SoftwareApplication",
+        "name": "Frase",
+        "applicationCategory": "Content Optimization",
+        "operatingSystem": "Web",
+        "offers": [
+          {
+            "@type": "Offer",
+            "price": "44.99",
+            "priceCurrency": "USD",
+            "category": "Basic"
+          },
+          {
+            "@type": "Offer",
+            "price": "114.99",
+            "priceCurrency": "USD",
+            "category": "Team"
+          }
+        ]
+      }
+    },
+    {
+      "slug": "midjourney",
+      "name": "Midjourney",
+      "developer": "Midjourney",
+      "release_date": "July 2022",
+      "description": "Midjourney is an AI image generation tool that creates high-quality artwork and illustrations from text descriptions.",
+      "features": [
+        "AI image generation",
+        "Text-to-image conversion",
+        "High-resolution output",
+        "Artistic styles",
+        "Custom parameters",
+        "Batch generation",
+        "Community gallery",
+        "Discord integration",
+        "Image variations",
+        "Style customization",
+        "Fast generation",
+        "Commercial usage rights"
+      ],
+      "pros": [
+        "High-quality image generation",
+        "Excellent artistic styles",
+        "Fast generation speed",
+        "Community features",
+        "Commercial usage rights",
+        "Custom parameters",
+        "Batch generation",
+        "Discord integration"
+      ],
+      "cons": [
+        "Discord-only interface",
+        "No free plan",
+        "Limited editing capabilities",
+        "No mobile app",
+        "Requires Discord account",
+        "Limited control over output",
+        "No API access on basic plans"
+      ],
+      "pricing": [
+        {
+          "plan": "Basic",
+          "price": "$10/month",
+          "details": "200 generations, basic features"
+        },
+        {
+          "plan": "Standard",
+          "price": "$30/month",
+          "details": "Unlimited generations, standard features"
+        },
+        {
+          "plan": "Pro",
+          "price": "$60/month",
+          "details": "Unlimited generations, pro features, API access"
+        }
+      ],
+      "benchmarks": {
+        "speed_score": 9.0,
+        "accuracy_score": 9.2,
+        "cost_efficiency": 8.5
+      },
+      "related_tools": ["dalle", "stable-diffusion", "canva-ai"],
+      "meta": {
+        "title": "Midjourney Review 2025: Pricing, Features & Alternatives | SiteOptz.ai",
+        "description": "Complete Midjourney review with pricing, features, pros & cons. Compare with DALL-E and other AI image generators. Expert analysis for 2025."
+      },
+      "schema": {
+        "@context": "https://schema.org",
+        "@type": "SoftwareApplication",
+        "name": "Midjourney",
+        "applicationCategory": "Image Generation",
+        "operatingSystem": "Discord",
+        "offers": [
+          {
+            "@type": "Offer",
+            "price": "10",
+            "priceCurrency": "USD",
+            "category": "Basic"
+          },
+          {
+            "@type": "Offer",
+            "price": "30",
+            "priceCurrency": "USD",
+            "category": "Standard"
+          },
+          {
+            "@type": "Offer",
+            "price": "60",
+            "priceCurrency": "USD",
+            "category": "Pro"
+          }
+        ]
+      }
+    },
+    {
+      "slug": "dalle",
+      "name": "DALL-E",
+      "developer": "OpenAI",
+      "release_date": "January 2021",
+      "description": "DALL-E is OpenAI's AI image generation model that creates images from text descriptions with high quality and creativity.",
+      "features": [
+        "AI image generation",
+        "Text-to-image conversion",
+        "High-resolution output",
+        "Creative variations",
+        "Inpainting and outpainting",
+        "Style customization",
+        "Commercial usage rights",
+        "API integration",
+        "Batch generation",
+        "Image editing",
+        "Multiple aspect ratios",
+        "Safety filters"
+      ],
+      "pros": [
+        "High-quality image generation",
+        "Excellent creativity",
+        "Commercial usage rights",
+        "API integration",
+        "Inpainting capabilities",
+        "Multiple aspect ratios",
+        "Safety filters",
+        "OpenAI ecosystem integration"
+      ],
+      "cons": [
+        "Higher pricing",
+        "No free plan",
+        "Limited editing capabilities",
+        "Requires ChatGPT Plus",
+        "No standalone app",
+        "Limited control over style",
+        "API rate limits"
+      ],
+      "pricing": [
+        {
+          "plan": "ChatGPT Plus",
+          "price": "$20/month",
+          "details": "Includes DALL-E access with ChatGPT Plus"
+        },
+        {
+          "plan": "API",
+          "price": "$0.040 per image",
+          "details": "Pay-per-use API access"
+        }
+      ],
+      "benchmarks": {
+        "speed_score": 8.8,
+        "accuracy_score": 9.0,
+        "cost_efficiency": 7.5
+      },
+      "related_tools": ["midjourney", "stable-diffusion", "canva-ai"],
+      "meta": {
+        "title": "DALL-E Review 2025: Pricing, Features & Alternatives | SiteOptz.ai",
+        "description": "Complete DALL-E review with pricing, features, pros & cons. Compare with Midjourney and other AI image generators. Expert analysis for 2025."
+      },
+      "schema": {
+        "@context": "https://schema.org",
+        "@type": "SoftwareApplication",
+        "name": "DALL-E",
+        "applicationCategory": "Image Generation",
+        "operatingSystem": "Web",
+        "offers": [
+          {
+            "@type": "Offer",
+            "price": "20",
+            "priceCurrency": "USD",
+            "category": "ChatGPT Plus"
+          }
+        ]
+      }
+    },
+    {
+      "slug": "grammarly",
+      "name": "Grammarly",
+      "developer": "Grammarly",
+      "release_date": "2009",
+      "description": "Grammarly is an AI-powered writing assistant that helps improve grammar, style, and clarity in written content.",
+      "features": [
+        "Grammar checking",
+        "Style suggestions",
+        "Plagiarism detection",
+        "Tone analysis",
+        "Writing insights",
+        "Browser extension",
+        "Mobile app",
+        "Document upload",
+        "Team collaboration",
+        "Custom style guides",
+        "Citation suggestions",
+        "Vocabulary enhancement"
+      ],
+      "pros": [
+        "Excellent grammar checking",
+        "Real-time suggestions",
+        "Browser extension",
+        "Mobile app",
+        "Plagiarism detection",
+        "Tone analysis",
+        "Team collaboration",
+        "Custom style guides"
+      ],
+      "cons": [
+        "Limited content creation",
+        "No SEO optimization",
+        "Basic AI features",
+        "Higher pricing for teams",
+        "Requires internet connection",
+        "Limited template library",
+        "No brand voice training"
+      ],
+      "pricing": [
+        {
+          "plan": "Free",
+          "price": "$0",
+          "details": "Basic grammar checking, limited features"
+        },
+        {
+          "plan": "Premium",
+          "price": "$12/month",
+          "details": "Advanced suggestions, plagiarism detection"
+        },
+        {
+          "plan": "Business",
+          "price": "$15/month per user",
+          "details": "Team features, admin controls, analytics"
+        }
+      ],
+      "benchmarks": {
+        "speed_score": 9.5,
+        "accuracy_score": 9.3,
+        "cost_efficiency": 8.8
+      },
+      "related_tools": ["prowritingaid", "hemingway", "chatgpt"],
+      "meta": {
+        "title": "Grammarly Review 2025: Pricing, Features & Alternatives | SiteOptz.ai",
+        "description": "Complete Grammarly review with pricing, features, pros & cons. Compare with other writing assistants. Expert analysis for 2025."
+      },
+      "schema": {
+        "@context": "https://schema.org",
+        "@type": "SoftwareApplication",
+        "name": "Grammarly",
+        "applicationCategory": "Writing Assistant",
+        "operatingSystem": "Web, iOS, Android",
+        "offers": [
+          {
+            "@type": "Offer",
+            "price": "0",
+            "priceCurrency": "USD",
+            "category": "Free"
+          },
+          {
+            "@type": "Offer",
+            "price": "12",
+            "priceCurrency": "USD",
+            "category": "Premium"
+          },
+          {
+            "@type": "Offer",
+            "price": "15",
+            "priceCurrency": "USD",
+            "category": "Business"
+          }
+        ]
+      }
+    },
+    {
+      "slug": "claude",
+      "name": "Claude",
+      "developer": "Anthropic",
+      "release_date": "March 2023",
+      "description": "Claude is an AI assistant developed by Anthropic, known for its helpfulness, harmlessness, and honesty in conversations.",
+      "features": [
+        "Natural language conversation",
+        "Content generation",
+        "Code assistance",
+        "Document analysis",
+        "File upload support",
+        "Long context window",
+        "Safety-focused responses",
+        "Multi-language support",
+        "API integration",
+        "Real-time responses",
+        "Context awareness",
+        "Ethical AI principles"
+      ],
+      "pros": [
+        "Excellent conversation quality",
+        "Strong safety features",
+        "Long context window",
+        "File upload support",
+        "Ethical AI principles",
+        "Good for analysis",
+        "Multi-language support",
+        "API integration"
+      ],
+      "cons": [
+        "Limited free access",
+        "No mobile app",
+        "Basic content templates",
+        "No brand voice training",
+        "Limited SEO features",
+        "No team collaboration",
+        "Higher pricing"
+      ],
+      "pricing": [
+        {
+          "plan": "Free",
+          "price": "$0",
+          "details": "Limited access with Claude 3 Sonnet"
+        },
+        {
+          "plan": "Pro",
+          "price": "$20/month",
+          "details": "Full access to Claude 3 Opus, priority support"
+        },
+        {
+          "plan": "Team",
+          "price": "$25/month per user",
+          "details": "Team collaboration, admin controls"
+        }
+      ],
+      "benchmarks": {
+        "speed_score": 8.9,
+        "accuracy_score": 9.1,
+        "cost_efficiency": 8.0
+      },
+      "related_tools": ["chatgpt", "gemini", "perplexity"],
+      "meta": {
+        "title": "Claude Review 2025: Pricing, Features & Alternatives | SiteOptz.ai",
+        "description": "Complete Claude review with pricing, features, pros & cons. Compare with ChatGPT and other AI assistants. Expert analysis for 2025."
+      },
+      "schema": {
+        "@context": "https://schema.org",
+        "@type": "SoftwareApplication",
+        "name": "Claude",
+        "applicationCategory": "AI Assistant",
+        "operatingSystem": "Web",
+        "offers": [
+          {
+            "@type": "Offer",
+            "price": "0",
+            "priceCurrency": "USD",
+            "category": "Free"
+          },
+          {
+            "@type": "Offer",
+            "price": "20",
+            "priceCurrency": "USD",
+            "category": "Pro"
+          },
+          {
+            "@type": "Offer",
+            "price": "25",
+            "priceCurrency": "USD",
+            "category": "Team"
+          }
+        ]
+      }
+    },
+    {
+      "slug": "gemini",
+      "name": "Gemini",
+      "developer": "Google",
+      "release_date": "December 2023",
+      "description": "Gemini is Google's AI assistant that integrates with Google services and provides multimodal AI capabilities.",
+      "features": [
+        "Multimodal AI capabilities",
+        "Google integration",
+        "Image and text analysis",
+        "Code generation",
+        "Real-time information",
+        "Voice interaction",
+        "Mobile app",
+        "Browser extension",
+        "API access",
+        "Safety features",
+        "Multi-language support",
+        "Context awareness"
+      ],
+      "pros": [
+        "Excellent Google integration",
+        "Multimodal capabilities",
+        "Real-time information",
+        "Mobile app",
+        "Voice interaction",
+        "Browser extension",
+        "Free tier available",
+        "Safety features"
+      ],
+      "cons": [
+        "Limited content templates",
+        "No brand voice training",
+        "Basic SEO features",
+        "No team collaboration",
+        "Limited content analytics",
+        "Requires Google account",
+        "Privacy concerns"
+      ],
+      "pricing": [
+        {
+          "plan": "Free",
+          "price": "$0",
+          "details": "Basic access with Gemini Pro"
+        },
+        {
+          "plan": "Advanced",
+          "price": "$19.99/month",
+          "details": "Gemini Advanced, priority support"
+        }
+      ],
+      "benchmarks": {
+        "speed_score": 8.7,
+        "accuracy_score": 8.9,
+        "cost_efficiency": 9.0
+      },
+      "related_tools": ["chatgpt", "claude", "perplexity"],
+      "meta": {
+        "title": "Gemini Review 2025: Pricing, Features & Alternatives | SiteOptz.ai",
+        "description": "Complete Gemini review with pricing, features, pros & cons. Compare with ChatGPT and other AI assistants. Expert analysis for 2025."
+      },
+      "schema": {
+        "@context": "https://schema.org",
+        "@type": "SoftwareApplication",
+        "name": "Gemini",
+        "applicationCategory": "AI Assistant",
+        "operatingSystem": "Web, iOS, Android",
+        "offers": [
+          {
+            "@type": "Offer",
+            "price": "0",
+            "priceCurrency": "USD",
+            "category": "Free"
+          },
+          {
+            "@type": "Offer",
+            "price": "19.99",
+            "priceCurrency": "USD",
+            "category": "Advanced"
+          }
+        ]
+      }
+    },
+    {
+      "slug": "perplexity",
+      "name": "Perplexity",
+      "developer": "Perplexity AI",
+      "release_date": "August 2022",
+      "description": "Perplexity is an AI-powered search engine that provides conversational answers with real-time information and citations.",
+      "features": [
+        "AI-powered search",
+        "Real-time information",
+        "Source citations",
+        "Conversational interface",
+        "Image search",
+        "Document upload",
+        "Focus modes",
+        "Mobile app",
+        "Browser extension",
+        "API access",
+        "Multi-language support",
+        "Context awareness"
+      ],
+      "pros": [
+        "Excellent for research",
+        "Real-time information",
+        "Source citations",
+        "Conversational interface",
+        "Mobile app",
+        "Browser extension",
+        "Free tier available",
+        "Focus modes"
+      ],
+      "cons": [
+        "Limited content creation",
+        "No brand voice training",
+        "Basic AI features",
+        "No team collaboration",
+        "Limited content analytics",
+        "Requires internet connection",
+        "No content templates"
+      ],
+      "pricing": [
+        {
+          "plan": "Free",
+          "price": "$0",
+          "details": "Basic search with limited features"
+        },
+        {
+          "plan": "Pro",
+          "price": "$20/month",
+          "details": "Advanced features, priority support"
+        }
+      ],
+      "benchmarks": {
+        "speed_score": 9.1,
+        "accuracy_score": 8.8,
+        "cost_efficiency": 9.2
+      },
+      "related_tools": ["chatgpt", "claude", "gemini"],
+      "meta": {
+        "title": "Perplexity Review 2025: Pricing, Features & Alternatives | SiteOptz.ai",
+        "description": "Complete Perplexity review with pricing, features, pros & cons. Compare with ChatGPT and other AI search tools. Expert analysis for 2025."
+      },
+      "schema": {
+        "@context": "https://schema.org",
+        "@type": "SoftwareApplication",
+        "name": "Perplexity",
+        "applicationCategory": "AI Search",
+        "operatingSystem": "Web, iOS, Android",
+        "offers": [
+          {
+            "@type": "Offer",
+            "price": "0",
+            "priceCurrency": "USD",
+            "category": "Free"
+          },
+          {
+            "@type": "Offer",
+            "price": "20",
+            "priceCurrency": "USD",
+            "category": "Pro"
+          }
+        ]
+      }
+    }
+  ]
+}

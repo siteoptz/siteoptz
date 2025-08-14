@@ -1,0 +1,689 @@
+[
+  {
+    "id": "chatgpt",
+    "name": "ChatGPT",
+    "slug": "chatgpt",
+    "logo": "/images/tools/chatgpt-logo.png",
+    "meta": {
+      "title": "ChatGPT Review, Pricing, Features & Alternatives [2025]",
+      "description": "Compare ChatGPT to Claude, Gemini, and other AI tools. See pricing, features, and performance benchmarks. Expert analysis with real user feedback."
+    },
+    "schema": {
+      "@type": "Product",
+      "name": "ChatGPT",
+      "image": "/images/tools/chatgpt-logo.png",
+      "description": "AI chatbot developed by OpenAI with conversational and coding capabilities.",
+      "brand": "OpenAI"
+    },
+    "overview": {
+      "developer": "OpenAI",
+      "release_year": 2022,
+      "description": "ChatGPT is an AI language model capable of text generation, coding, summarization, and more. It's one of the most popular AI assistants for general-purpose tasks."
+    },
+    "features": [
+      "Natural language conversation",
+      "Code generation and debugging",
+      "Text summarization",
+      "Multi-language support",
+      "Web browsing capabilities",
+      "File upload and analysis",
+      "DALL-E image generation",
+      "Custom instructions",
+      "Memory across conversations",
+      "GPT-4 model access"
+    ],
+    "pros": [
+      "Highly accurate language understanding",
+      "Broad integration support",
+      "Frequent updates and improvements",
+      "Strong coding capabilities",
+      "Mobile app available",
+      "Large user community"
+    ],
+    "cons": [
+      "Limited free plan",
+      "Occasional hallucinations",
+      "No brand voice customization",
+      "Basic SEO optimization",
+      "Monthly usage limits"
+    ],
+    "pricing": [
+      {
+        "plan": "Free",
+        "price_per_month": 0,
+        "features": ["GPT-3.5 access", "Limited requests", "Basic features"]
+      },
+      {
+        "plan": "Plus",
+        "price_per_month": 20,
+        "features": ["GPT-4 access", "Faster response times", "Web browsing", "DALL-E access", "Advanced features"]
+      },
+      {
+        "plan": "Enterprise",
+        "price_per_month": 0,
+        "features": ["Custom pricing", "Advanced security", "Dedicated support", "Analytics dashboard"]
+      }
+    ],
+    "benchmarks": {
+      "speed": 8.5,
+      "accuracy": 9.2,
+      "integration": 9.0,
+      "ease_of_use": 9.5,
+      "value": 8.8
+    },
+    "related_tools": ["claude", "gemini", "perplexity", "jasper-ai"]
+  },
+  {
+    "id": "claude",
+    "name": "Claude",
+    "slug": "claude",
+    "logo": "/images/tools/claude-logo.png",
+    "meta": {
+      "title": "Claude Review, Pricing, Features & Alternatives [2025]",
+      "description": "Compare Claude to ChatGPT, Gemini, and other AI tools. See pricing, features, and performance benchmarks. Expert analysis with real user feedback."
+    },
+    "schema": {
+      "@type": "Product",
+      "name": "Claude",
+      "image": "/images/tools/claude-logo.png",
+      "description": "AI assistant developed by Anthropic with focus on safety and reasoning capabilities.",
+      "brand": "Anthropic"
+    },
+    "overview": {
+      "developer": "Anthropic",
+      "release_year": 2022,
+      "description": "Claude is an AI assistant developed by Anthropic, known for its safety, reasoning abilities, and longer context windows. Built with constitutional AI principles."
+    },
+    "features": [
+      "Conversational AI",
+      "Long-form content analysis",
+      "File upload and analysis",
+      "Code assistance",
+      "Research and writing",
+      "Safety-focused responses",
+      "Longer context windows",
+      "Constitutional AI principles",
+      "Advanced reasoning",
+      "Document processing",
+      "Creative writing",
+      "Problem solving"
+    ],
+    "pros": [
+      "Excellent safety and ethical considerations",
+      "Longer context windows",
+      "Strong reasoning abilities",
+      "Constitutional AI principles",
+      "Good for analysis and research",
+      "File upload capabilities"
+    ],
+    "cons": [
+      "Less creative than some alternatives",
+      "Limited web browsing",
+      "Smaller user community",
+      "Fewer integrations",
+      "More conservative responses"
+    ],
+    "pricing": [
+      {
+        "plan": "Free",
+        "price_per_month": 0,
+        "features": ["Claude 3 Haiku access", "Limited requests", "Basic features"]
+      },
+      {
+        "plan": "Pro",
+        "price_per_month": 20,
+        "features": ["Claude 3.5 Sonnet access", "Longer context", "Priority access", "File uploads"]
+      },
+      {
+        "plan": "Enterprise",
+        "price_per_month": 0,
+        "features": ["Custom pricing", "Advanced security", "Dedicated support", "Team management"]
+      }
+    ],
+    "benchmarks": {
+      "speed": 8.0,
+      "accuracy": 9.0,
+      "integration": 7.5,
+      "ease_of_use": 8.5,
+      "value": 8.7
+    },
+    "related_tools": ["chatgpt", "gemini", "perplexity", "jasper-ai"]
+  },
+  {
+    "id": "gemini",
+    "name": "Gemini",
+    "slug": "gemini",
+    "logo": "/images/tools/gemini-logo.png",
+    "meta": {
+      "title": "Gemini Review, Pricing, Features & Alternatives [2025]",
+      "description": "Compare Gemini to ChatGPT, Claude, and other AI tools. See pricing, features, and performance benchmarks. Expert analysis with real user feedback."
+    },
+    "schema": {
+      "@type": "Product",
+      "name": "Gemini",
+      "image": "/images/tools/gemini-logo.png",
+      "description": "Google's AI assistant that excels at creative tasks and integrates with Google services.",
+      "brand": "Google"
+    },
+    "overview": {
+      "developer": "Google",
+      "release_year": 2023,
+      "description": "Gemini is Google's AI assistant that excels at creative tasks and integrates deeply with Google services. Features multimodal AI capabilities."
+    },
+    "features": [
+      "Creative writing and content",
+      "Google Workspace integration",
+      "Web search capabilities",
+      "Code generation",
+      "Image analysis",
+      "Multimodal AI",
+      "Advanced reasoning",
+      "Gmail integration",
+      "Google Drive integration",
+      "Google Docs integration",
+      "Real-time collaboration",
+      "2TB Google One storage"
+    ],
+    "pros": [
+      "Deep Google Workspace integration",
+      "Excellent for creative tasks",
+      "Multimodal AI capabilities",
+      "Real-time collaboration",
+      "2TB Google One storage",
+      "Advanced reasoning"
+    ],
+    "cons": [
+      "Limited to Google ecosystem",
+      "Less flexible than standalone tools",
+      "Privacy concerns with Google",
+      "Limited third-party integrations",
+      "Requires Google account"
+    ],
+    "pricing": [
+      {
+        "plan": "Free",
+        "price_per_month": 0,
+        "features": ["Gemini 1.5 Pro access", "Basic features", "Limited requests"]
+      },
+      {
+        "plan": "Advanced",
+        "price_per_month": 20,
+        "features": ["Gemini Ultra 1.0", "Google Workspace integration", "2TB storage", "Priority access"]
+      }
+    ],
+    "benchmarks": {
+      "speed": 8.8,
+      "accuracy": 8.7,
+      "integration": 9.5,
+      "ease_of_use": 9.0,
+      "value": 8.5
+    },
+    "related_tools": ["chatgpt", "claude", "perplexity", "jasper-ai"]
+  },
+  {
+    "id": "perplexity",
+    "name": "Perplexity",
+    "slug": "perplexity",
+    "logo": "/images/tools/perplexity-logo.png",
+    "meta": {
+      "title": "Perplexity Review, Pricing, Features & Alternatives [2025]",
+      "description": "Compare Perplexity to ChatGPT, Claude, and other AI tools. See pricing, features, and performance benchmarks. Expert analysis with real user feedback."
+    },
+    "schema": {
+      "@type": "Product",
+      "name": "Perplexity",
+      "image": "/images/tools/perplexity-logo.png",
+      "description": "AI-powered search engine that provides conversational answers with sources and real-time information.",
+      "brand": "Perplexity AI"
+    },
+    "overview": {
+      "developer": "Perplexity AI",
+      "release_year": 2022,
+      "description": "Perplexity is an AI-powered search engine that provides conversational answers with sources and real-time information. Excellent for research and fact-checking."
+    },
+    "features": [
+      "Conversational search",
+      "Real-time information",
+      "Source citations",
+      "File upload analysis",
+      "Academic research",
+      "Fact-checking",
+      "Current events",
+      "Market research",
+      "Document analysis",
+      "Web search integration",
+      "Multiple AI models",
+      "Citation tracking"
+    ],
+    "pros": [
+      "Excellent for research and fact-checking",
+      "Real-time information with sources",
+      "Academic research capabilities",
+      "Current events coverage",
+      "Source citations",
+      "File upload analysis"
+    ],
+    "cons": [
+      "Less creative than general AI assistants",
+      "Limited conversational abilities",
+      "Focused primarily on search",
+      "Smaller feature set",
+      "Less suitable for creative tasks"
+    ],
+    "pricing": [
+      {
+        "plan": "Free",
+        "price_per_month": 0,
+        "features": ["Basic search", "Limited queries", "Standard models"]
+      },
+      {
+        "plan": "Pro",
+        "price_per_month": 20,
+        "features": ["Unlimited searches", "Advanced models", "File uploads", "Priority support"]
+      }
+    ],
+    "benchmarks": {
+      "speed": 9.0,
+      "accuracy": 9.5,
+      "integration": 7.0,
+      "ease_of_use": 9.2,
+      "value": 8.8
+    },
+    "related_tools": ["chatgpt", "claude", "gemini", "jasper-ai"]
+  },
+  {
+    "id": "jasper-ai",
+    "name": "Jasper AI",
+    "slug": "jasper-ai",
+    "logo": "/images/tools/jasper-ai-logo.png",
+    "meta": {
+      "title": "Jasper AI Review, Pricing, Features & Alternatives [2025]",
+      "description": "Compare Jasper AI to ChatGPT, Claude, and other AI tools. See pricing, features, and performance benchmarks. Expert analysis with real user feedback."
+    },
+    "schema": {
+      "@type": "Product",
+      "name": "Jasper AI",
+      "image": "/images/tools/jasper-ai-logo.png",
+      "description": "AI-powered content creation platform with brand voice customization and SEO optimization.",
+      "brand": "Jasper"
+    },
+    "overview": {
+      "developer": "Jasper",
+      "release_year": 2021,
+      "description": "Jasper AI is an AI-powered content creation platform with brand voice customization and SEO optimization. Built specifically for marketing teams and content creators."
+    },
+    "features": [
+      "50+ content templates",
+      "Brand voice customization",
+      "SEO optimization",
+      "Plagiarism checker",
+      "Content calendar",
+      "Team collaboration",
+      "Multi-language support",
+      "Boss Mode for long-form content",
+      "Surfer SEO integration",
+      "Grammarly integration",
+      "Custom templates",
+      "Brand guidelines",
+      "Content scoring",
+      "A/B testing"
+    ],
+    "pros": [
+      "Excellent for content marketing",
+      "Advanced brand voice features",
+      "SEO optimization tools",
+      "Professional templates",
+      "Team collaboration features",
+      "Strong customer support"
+    ],
+    "cons": [
+      "Higher pricing than ChatGPT",
+      "No mobile app",
+      "Limited coding capabilities",
+      "Requires learning curve",
+      "Monthly character limits"
+    ],
+    "pricing": [
+      {
+        "plan": "Creator",
+        "price_per_month": 39,
+        "features": ["50+ templates", "Brand voice", "SEO optimization", "Basic features"]
+      },
+      {
+        "plan": "Teams",
+        "price_per_month": 99,
+        "features": ["3+ seats", "Advanced collaboration", "Custom templates", "Priority support"]
+      },
+      {
+        "plan": "Business",
+        "price_per_month": 0,
+        "features": ["Custom pricing", "Advanced features", "Dedicated support", "Enterprise security"]
+      }
+    ],
+    "benchmarks": {
+      "speed": 8.2,
+      "accuracy": 8.8,
+      "integration": 8.5,
+      "ease_of_use": 8.0,
+      "value": 7.5
+    },
+    "related_tools": ["chatgpt", "claude", "copy-ai", "writesonic"]
+  },
+  {
+    "id": "copy-ai",
+    "name": "Copy.ai",
+    "slug": "copy-ai",
+    "logo": "/images/tools/copy-ai-logo.png",
+    "meta": {
+      "title": "Copy.ai Review, Pricing, Features & Alternatives [2025]",
+      "description": "Compare Copy.ai to Jasper AI, ChatGPT, and other AI tools. See pricing, features, and performance benchmarks. Expert analysis with real user feedback."
+    },
+    "schema": {
+      "@type": "Product",
+      "name": "Copy.ai",
+      "image": "/images/tools/copy-ai-logo.png",
+      "description": "AI-powered copywriting tool for marketing content, sales copy, and creative writing.",
+      "brand": "Copy.ai"
+    },
+    "overview": {
+      "developer": "Copy.ai",
+      "release_year": 2020,
+      "description": "Copy.ai is an AI-powered copywriting tool for marketing content, sales copy, and creative writing. Features 90+ templates and brand voice training."
+    },
+    "features": [
+      "90+ content templates",
+      "Long-form content",
+      "Sales copy generation",
+      "Social media content",
+      "Email marketing copy",
+      "Ad copy creation",
+      "Blog post writing",
+      "Product descriptions",
+      "Brand voice training",
+      "Team collaboration",
+      "Multi-language support",
+      "Content optimization",
+      "A/B testing",
+      "Workflow automation"
+    ],
+    "pros": [
+      "Extensive template library",
+      "User-friendly interface",
+      "Good for beginners",
+      "Fast content generation",
+      "Multiple content types",
+      "Affordable pricing"
+    ],
+    "cons": [
+      "Quality varies by template",
+      "Limited long-form capabilities",
+      "No built-in SEO tools",
+      "Basic plagiarism detection",
+      "Limited customization options"
+    ],
+    "pricing": [
+      {
+        "plan": "Free",
+        "price_per_month": 0,
+        "features": ["2,000 words per month", "Basic templates", "Limited features"]
+      },
+      {
+        "plan": "Pro",
+        "price_per_month": 36,
+        "features": ["Unlimited words", "Advanced features", "Priority support", "Brand voice"]
+      },
+      {
+        "plan": "Enterprise",
+        "price_per_month": 0,
+        "features": ["Custom pricing", "Dedicated support", "Advanced security", "Team management"]
+      }
+    ],
+    "benchmarks": {
+      "speed": 8.5,
+      "accuracy": 8.0,
+      "integration": 7.5,
+      "ease_of_use": 9.0,
+      "value": 8.5
+    },
+    "related_tools": ["jasper-ai", "writesonic", "chatgpt", "claude"]
+  },
+  {
+    "id": "writesonic",
+    "name": "Writesonic",
+    "slug": "writesonic",
+    "logo": "/images/tools/writesonic-logo.png",
+    "meta": {
+      "title": "Writesonic Review, Pricing, Features & Alternatives [2025]",
+      "description": "Compare Writesonic to Jasper AI, Copy.ai, and other AI tools. See pricing, features, and performance benchmarks. Expert analysis with real user feedback."
+    },
+    "schema": {
+      "@type": "Product",
+      "name": "Writesonic",
+      "image": "/images/tools/writesonic-logo.png",
+      "description": "AI writing platform with GPT-4 integration for content creation and copywriting.",
+      "brand": "Writesonic"
+    },
+    "overview": {
+      "developer": "Writesonic",
+      "release_year": 2021,
+      "description": "Writesonic is an AI writing platform with GPT-4 integration for content creation and copywriting. Features 100+ templates and bulk content generation."
+    },
+    "features": [
+      "GPT-4 integration",
+      "100+ templates",
+      "Long-form articles",
+      "Landing page copy",
+      "Product descriptions",
+      "Social media content",
+      "Email marketing",
+      "AI chatbot",
+      "Bulk content generation",
+      "Brand voice",
+      "Plagiarism checker",
+      "SEO optimization",
+      "Multi-language support",
+      "Chrome extension"
+    ],
+    "pros": [
+      "GPT-4 integration",
+      "Competitive pricing",
+      "Good template variety",
+      "Bulk content generation",
+      "Chrome extension available",
+      "Multi-language support"
+    ],
+    "cons": [
+      "Content quality inconsistent",
+      "Limited customization",
+      "Basic SEO features",
+      "No mobile app",
+      "Learning curve for advanced features"
+    ],
+    "pricing": [
+      {
+        "plan": "Free Trial",
+        "price_per_month": 0,
+        "features": ["10,000 words", "Basic features", "Limited templates"]
+      },
+      {
+        "plan": "Small Team",
+        "price_per_month": 15,
+        "features": ["100,000 words", "GPT-4", "Advanced features", "Priority support"]
+      },
+      {
+        "plan": "Freelancer",
+        "price_per_month": 20,
+        "features": ["Unlimited words", "Priority support", "Advanced features", "Bulk generation"]
+      },
+      {
+        "plan": "Enterprise",
+        "price_per_month": 0,
+        "features": ["Custom pricing", "Dedicated support", "Advanced security", "Team management"]
+      }
+    ],
+    "benchmarks": {
+      "speed": 8.7,
+      "accuracy": 7.8,
+      "integration": 7.8,
+      "ease_of_use": 8.2,
+      "value": 8.8
+    },
+    "related_tools": ["jasper-ai", "copy-ai", "chatgpt", "claude"]
+  },
+  {
+    "id": "surfer-seo",
+    "name": "Surfer SEO",
+    "slug": "surfer-seo",
+    "logo": "/images/tools/surfer-seo-logo.png",
+    "meta": {
+      "title": "Surfer SEO Review, Pricing, Features & Alternatives [2025]",
+      "description": "Compare Surfer SEO to Frase, Ahrefs, and other SEO tools. See pricing, features, and performance benchmarks. Expert analysis with real user feedback."
+    },
+    "schema": {
+      "@type": "Product",
+      "name": "Surfer SEO",
+      "image": "/images/tools/surfer-seo-logo.png",
+      "description": "Data-driven SEO tool for content optimization and keyword research.",
+      "brand": "Surfer"
+    },
+    "overview": {
+      "developer": "Surfer",
+      "release_year": 2017,
+      "description": "Surfer SEO is a data-driven SEO tool for content optimization and keyword research. Features AI-powered content optimization and SERP analysis."
+    },
+    "features": [
+      "Keyword research",
+      "Content optimization",
+      "SERP analysis",
+      "Competitor analysis",
+      "Content editor",
+      "Site audit",
+      "Rank tracking",
+      "Content planner",
+      "Keyword clustering",
+      "Content briefs",
+      "AI content generation",
+      "Local SEO tools",
+      "Technical SEO audit",
+      "Backlink analysis"
+    ],
+    "pros": [
+      "Excellent content optimization",
+      "Data-driven recommendations",
+      "User-friendly interface",
+      "Strong SEO focus",
+      "Regular updates",
+      "Good customer support"
+    ],
+    "cons": [
+      "Higher pricing",
+      "Limited to SEO features",
+      "Steep learning curve",
+      "Requires SEO knowledge",
+      "No general AI features"
+    ],
+    "pricing": [
+      {
+        "plan": "Basic",
+        "price_per_month": 59,
+        "features": ["Core SEO features", "Content editor", "Site audit", "Basic support"]
+      },
+      {
+        "plan": "Pro",
+        "price_per_month": 119,
+        "features": ["Advanced features", "Content planner", "Keyword clustering", "Priority support"]
+      },
+      {
+        "plan": "Business",
+        "price_per_month": 239,
+        "features": ["Enterprise features", "Custom reports", "Priority support", "Team management"]
+      }
+    ],
+    "benchmarks": {
+      "speed": 8.0,
+      "accuracy": 9.3,
+      "integration": 8.2,
+      "ease_of_use": 7.5,
+      "value": 8.0
+    },
+    "related_tools": ["jasper-ai", "copy-ai", "writesonic", "chatgpt"]
+  },
+  {
+    "id": "midjourney",
+    "name": "Midjourney",
+    "slug": "midjourney",
+    "logo": "/images/tools/midjourney-logo.png",
+    "meta": {
+      "title": "Midjourney Review, Pricing, Features & Alternatives [2025]",
+      "description": "Compare Midjourney to other AI image tools. See pricing, features, and performance benchmarks. Expert analysis with real user feedback."
+    },
+    "schema": {
+      "@type": "Product",
+      "name": "Midjourney",
+      "image": "/images/tools/midjourney-logo.png",
+      "description": "AI image generation tool with exceptional artistic quality and unique style.",
+      "brand": "Midjourney"
+    },
+    "overview": {
+      "developer": "Midjourney",
+      "release_year": 2022,
+      "description": "Midjourney is an AI image generation tool with exceptional artistic quality and unique style. Features high-quality artwork and multiple art styles."
+    },
+    "features": [
+      "AI image generation",
+      "High-quality artwork",
+      "Multiple art styles",
+      "Custom prompts",
+      "Image variations",
+      "Upscaling",
+      "Commercial usage rights",
+      "Advanced prompting",
+      "Style mixing",
+      "Aspect ratio control",
+      "Quality settings",
+      "Remix mode",
+      "Pan and zoom",
+      "Custom models"
+    ],
+    "pros": [
+      "Exceptional image quality",
+      "Unique artistic style",
+      "Fast generation",
+      "Commercial usage rights",
+      "Active community",
+      "Regular updates"
+    ],
+    "cons": [
+      "Discord-based interface",
+      "Limited control over details",
+      "No text generation",
+      "Requires Discord account",
+      "Limited editing capabilities"
+    ],
+    "pricing": [
+      {
+        "plan": "Basic",
+        "price_per_month": 10,
+        "features": ["200 generations per month", "Standard features", "General commercial terms"]
+      },
+      {
+        "plan": "Standard",
+        "price_per_month": 30,
+        "features": ["Unlimited generations", "Priority access", "Stealth mode", "Advanced features"]
+      },
+      {
+        "plan": "Pro",
+        "price_per_month": 60,
+        "features": ["Advanced features", "Custom models", "Priority support", "Maximum usage"]
+      }
+    ],
+    "benchmarks": {
+      "speed": 8.8,
+      "accuracy": 9.5,
+      "integration": 6.5,
+      "ease_of_use": 7.0,
+      "value": 8.2
+    },
+    "related_tools": ["chatgpt", "claude", "gemini", "perplexity"]
+  }
+]

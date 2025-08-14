@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Dynamic Meta Tags -->
+    <title id="meta-title">{{tool.meta_title}}</title>
+    <meta name="description" content="{{tool.meta_description}}">
+    <meta name="keywords" content="{{tool.target_keywords.join(', ')}}">
+    
+    <!-- Open Graph Tags -->
+    <meta property="og:title" content="{{tool.meta_title}}">
+    <meta property="og:description" content="{{tool.meta_description}}">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://siteoptz.ai/tools/{{tool.slug}}">
+    <meta property="og:image" content="https://siteoptz.ai/images/tools/{{tool.slug}}.jpg">
+    
+    <!-- Twitter Card Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="{{tool.meta_title}}">
+    <meta name="twitter:description" content="{{tool.meta_description}}">
+    <meta name="twitter:image" content="https://siteoptz.ai/images/tools/{{tool.slug}}.jpg">
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://siteoptz.ai/tools/{{tool.slug}}">
+    
+    <!-- JSON-LD Schema Markup -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "SoftwareApplication",
+        "name": "{{tool.tool_name}}",
+        "description": "{{tool.description}}",
+        "applicationCategory": "{{tool.category}}",
+        "operatingSystem": "Web",
+        "offers": [
+            {
+                "@type": "Offer",
+                "name": "Free Plan",
+                "description": "{{tool.pricing.free}}",
+                "price": "0",
+                "priceCurrency": "USD"
+            },
+            {
+                "@type": "Offer",
+                "name": "Basic Plan",
+                "description": "{{tool.pricing.basic}}",
+                "priceCurrency": "USD"
+            },
+            {
+                "@type": "Offer",
+                "name": "Pro Plan",
+                "description": "{{tool.pricing.pro}}",
+                "priceCurrency": "USD"
+            },
+            {
+                "@type": "Offer",
+                "name": "Enterprise Plan",
+                "description": "{{tool.pricing.enterprise}}",
+                "priceCurrency": "USD"
+            }
+        ],
+        "featureList": "{{tool.key_features.join(', ')}}",
+        "aggregateRating": {
+            "@type": "AggregateRating",
+            "ratingValue": "{{(tool.benchmarks.content_quality + tool.benchmarks.ease_of_use + tool.benchmarks.value_for_money) / 3}}",
+            "reviewCount": "150"
+        }
+    }
+    </script>
+    
+    <!-- FAQ Schema Markup -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+            {% for faq in faqs %}
+            {
+                "@type": "Question",
+                "name": "{{faq.question}}",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "{{faq.answer}}"
+                }
+            }{% if not loop.last %},{% endif %}
+            {% endfor %}
+        ]
+    }
+    </script>
+    
+    <!-- Styles -->
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link href="/styles/components.css" rel="stylesheet">
+</head>
+<body class="bg-gray-50">
+    <!-- Header -->
+    <header class="bg-white shadow-sm">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center py-6">
+                <div class="flex items-center">
+                    <h1 class="text-2xl font-bold text-gray-900">SiteOptz.ai</h1>
+                </div>
+                <nav class="hidden md:flex space-x-8">
+                    <a href="/" class="text-gray-500 hover:text-gray-900">Home</a>
+                    <a href="/tools" class="text-gray-500 hover:text-gray-900">Tools</a>
+                    <a href="/comparisons" class="text-gray-500 hover:text-gray-900">Comparisons</a>
+                    <a href="/about" class="text-gray-500 hover:text-gray-900">About</a>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+        <!-- Tool Header -->
+        <div class="bg-white rounded-lg shadow-sm p-8 mb-8">
+            <div class="flex items-center space-x-6">
+                <div class="w-20 h-20 bg-gradient-to-br from-blue-500 to-purple-600 rounded-lg flex items-center justify-center">
+                    <span class="text-white text-2xl font-bold">{{tool.tool_name.charAt(0)}}</span>
+                </div>
+                <div class="flex-1">
+                    <h1 class="text-4xl font-bold text-gray-900 mb-2">{{tool.tool_name}}</h1>
+                    <p class="text-xl text-gray-600 mb-4">{{tool.description}}</p>
+                    <div class="flex items-center space-x-4">
+                        <span class="inline-flex items-center px-3 py-1 rounded-full text-sm font-medium bg-blue-100 text-blue-800">
+                            {{tool.category}}
+                        </span>
+                        <div class="flex items-center space-x-1">
+                            <span class="text-yellow-400">★</span>
+                            <span class="text-gray-600">{{((tool.benchmarks.content_quality + tool.benchmarks.ease_of_use + tool.benchmarks.value_for_money) / 3).toFixed(1)}}/5</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="text-right">
+                    <a href="#pricing" class="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700">
+                        View Pricing
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Content Grid -->
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+            <!-- Main Content -->
+            <div class="lg:col-span-2 space-y-8">
+                <!-- Overview Section -->
+                <section class="bg-white rounded-lg shadow-sm p-8">
+                    <h2 class="text-2xl font-bold text-gray-900 mb-6">Overview</h2>
+                    <p class="text-gray-700 leading-relaxed">{{tool.description}}</p>
+                </section>
+
+                <!-- Features Section -->
+                <section class="bg-white rounded-lg shadow-sm p-8">
+                    <h2 class="text-2xl font-bold text-gray-900 mb-6">Key Features</h2>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        {% for feature in tool.key_features %}
+                        <div class="flex items-center space-x-3">
+                            <svg class="w-5 h-5 text-green-500" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                            </svg>
+                            <span class="text-gray-700">{{feature}}</span>
+                        </div>
+                        {% endfor %}
+                    </div>
+                </section>
+
+                <!-- Pros & Cons Section -->
+                <section class="bg-white rounded-lg shadow-sm p-8">
+                    <h2 class="text-2xl font-bold text-gray-900 mb-6">Pros & Cons</h2>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                        <!-- Pros -->
+                        <div>
+                            <h3 class="text-lg font-semibold text-green-700 mb-4">Pros</h3>
+                            <ul class="space-y-3">
+                                {% for pro in tool.pros %}
+                                <li class="flex items-start space-x-3">
+                                    <svg class="w-5 h-5 text-green-500 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+                                        <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                                    </svg>
+                                    <span class="text-gray-700">{{pro}}</span>
+                                </li>
+                                {% endfor %}
+                            </ul>
+                        </div>
+                        <!-- Cons -->
+                        <div>
+                            <h3 class="text-lg font-semibold text-red-700 mb-4">Cons</h3>
+                            <ul class="space-y-3">
+                                {% for con in tool.cons %}
+                                <li class="flex items-start space-x-3">
+                                    <svg class="w-5 h-5 text-red-500 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+                                        <path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"></path>
+                                    </svg>
+                                    <span class="text-gray-700">{{con}}</span>
+                                </li>
+                                {% endfor %}
+                            </ul>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Benchmarks Section -->
+                <section class="bg-white rounded-lg shadow-sm p-8">
+                    <h2 class="text-2xl font-bold text-gray-900 mb-6">Performance Benchmarks</h2>
+                    <div class="grid grid-cols-2 md:grid-cols-3 gap-6">
+                        <div class="text-center">
+                            <div class="text-3xl font-bold text-blue-600 mb-2">{{tool.benchmarks.content_quality}}/10</div>
+                            <div class="text-sm text-gray-600">Content Quality</div>
+                        </div>
+                        <div class="text-center">
+                            <div class="text-3xl font-bold text-green-600 mb-2">{{tool.benchmarks.ease_of_use}}/10</div>
+                            <div class="text-sm text-gray-600">Ease of Use</div>
+                        </div>
+                        <div class="text-center">
+                            <div class="text-3xl font-bold text-purple-600 mb-2">{{tool.benchmarks.seo_features}}/10</div>
+                            <div class="text-sm text-gray-600">SEO Features</div>
+                        </div>
+                        <div class="text-center">
+                            <div class="text-3xl font-bold text-orange-600 mb-2">{{tool.benchmarks.team_collaboration}}/10</div>
+                            <div class="text-sm text-gray-600">Team Collaboration</div>
+                        </div>
+                        <div class="text-center">
+                            <div class="text-3xl font-bold text-red-600 mb-2">{{tool.benchmarks.value_for_money}}/10</div>
+                            <div class="text-sm text-gray-600">Value for Money</div>
+                        </div>
+                        <div class="text-center">
+                            <div class="text-3xl font-bold text-indigo-600 mb-2">{{tool.benchmarks.customer_support}}/10</div>
+                            <div class="text-sm text-gray-600">Customer Support</div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- FAQ Section -->
+                <section class="bg-white rounded-lg shadow-sm p-8">
+                    <h2 class="text-2xl font-bold text-gray-900 mb-6">Frequently Asked Questions</h2>
+                    <div class="space-y-4">
+                        {% for faq in faqs %}
+                        <div class="border border-gray-200 rounded-lg">
+                            <button class="w-full px-6 py-4 text-left focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-inset" onclick="toggleFAQ(this)">
+                                <div class="flex items-center justify-between">
+                                    <h3 class="text-lg font-medium text-gray-900">{{faq.question}}</h3>
+                                    <svg class="w-5 h-5 text-gray-500 transform transition-transform" fill="currentColor" viewBox="0 0 20 20">
+                                        <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path>
+                                    </svg>
+                                </div>
+                            </button>
+                            <div class="px-6 pb-4 hidden">
+                                <p class="text-gray-700">{{faq.answer}}</p>
+                            </div>
+                        </div>
+                        {% endfor %}
+                    </div>
+                </section>
+            </div>
+
+            <!-- Sidebar -->
+            <div class="space-y-8">
+                <!-- Pricing Section -->
+                <section id="pricing" class="bg-white rounded-lg shadow-sm p-8">
+                    <h2 class="text-2xl font-bold text-gray-900 mb-6">Pricing Plans</h2>
+                    <div class="space-y-4">
+                        <div class="border border-gray-200 rounded-lg p-4">
+                            <h3 class="font-semibold text-gray-900 mb-2">Free Plan</h3>
+                            <p class="text-sm text-gray-600">{{tool.pricing.free}}</p>
+                        </div>
+                        <div class="border border-gray-200 rounded-lg p-4">
+                            <h3 class="font-semibold text-gray-900 mb-2">Basic Plan</h3>
+                            <p class="text-sm text-gray-600">{{tool.pricing.basic}}</p>
+                        </div>
+                        <div class="border border-gray-200 rounded-lg p-4">
+                            <h3 class="font-semibold text-gray-900 mb-2">Pro Plan</h3>
+                            <p class="text-sm text-gray-600">{{tool.pricing.pro}}</p>
+                        </div>
+                        <div class="border border-gray-200 rounded-lg p-4">
+                            <h3 class="font-semibold text-gray-900 mb-2">Enterprise Plan</h3>
+                            <p class="text-sm text-gray-600">{{tool.pricing.enterprise}}</p>
+                        </div>
+                    </div>
+                    <div class="mt-6">
+                        <a href="#cta" class="w-full inline-flex justify-center items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700">
+                            Get Started
+                        </a>
+                    </div>
+                </section>
+
+                <!-- Related Tools -->
+                <section class="bg-white rounded-lg shadow-sm p-8">
+                    <h2 class="text-2xl font-bold text-gray-900 mb-6">Related Tools</h2>
+                    <div class="space-y-4">
+                        {% for related in tool.related_tools %}
+                        <a href="/tools/{{related.toLowerCase().replace(' ', '-')}}" class="block p-4 border border-gray-200 rounded-lg hover:border-blue-300 hover:bg-blue-50 transition-colors">
+                            <h3 class="font-medium text-gray-900">{{related}}</h3>
+                            <p class="text-sm text-gray-600">View comparison</p>
+                        </a>
+                        {% endfor %}
+                    </div>
+                </section>
+
+                <!-- Email Capture -->
+                <section id="cta" class="bg-gradient-to-br from-blue-600 to-purple-600 rounded-lg p-8 text-white">
+                    <h2 class="text-2xl font-bold mb-4">Get AI Tool Insights</h2>
+                    <p class="text-blue-100 mb-6">Stay updated with the latest AI tool reviews, comparisons, and exclusive insights.</p>
+                    <form class="space-y-4" onsubmit="handleEmailCapture(event)">
+                        <input type="email" placeholder="Enter your email" required class="w-full px-4 py-3 rounded-md text-gray-900 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-white">
+                        <button type="submit" class="w-full bg-white text-blue-600 px-4 py-3 rounded-md font-medium hover:bg-gray-100 transition-colors">
+                            Subscribe Now
+                        </button>
+                    </form>
+                </section>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">SiteOptz.ai</h3>
+                    <p class="text-gray-400">Your trusted source for AI tool reviews and comparisons.</p>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-4">Tools</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="/tools" class="hover:text-white">All Tools</a></li>
+                        <li><a href="/comparisons" class="hover:text-white">Comparisons</a></li>
+                        <li><a href="/rankings" class="hover:text-white">Rankings</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-4">Resources</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="/blog" class="hover:text-white">Blog</a></li>
+                        <li><a href="/guides" class="hover:text-white">Guides</a></li>
+                        <li><a href="/newsletter" class="hover:text-white">Newsletter</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-4">Company</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="/about" class="hover:text-white">About</a></li>
+                        <li><a href="/contact" class="hover:text-white">Contact</a></li>
+                        <li><a href="/privacy" class="hover:text-white">Privacy</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
+                <p>&copy; 2025 SiteOptz.ai. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script>
+        // FAQ Toggle Function
+        function toggleFAQ(button) {
+            const content = button.nextElementSibling;
+            const icon = button.querySelector('svg');
+            
+            content.classList.toggle('hidden');
+            icon.classList.toggle('rotate-180');
+        }
+
+        // Email Capture Function
+        async function handleEmailCapture(event) {
+            event.preventDefault();
+            const email = event.target.querySelector('input[type="email"]').value;
+            
+            try {
+                const response = await fetch('/api/subscribe', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify({ email })
+                });
+                
+                if (response.ok) {
+                    alert('Thank you for subscribing!');
+                    event.target.reset();
+                } else {
+                    alert('Something went wrong. Please try again.');
+                }
+            } catch (error) {
+                console.error('Error:', error);
+                alert('Something went wrong. Please try again.');
+            }
+        }
+
+        // Load tool data dynamically
+        async function loadToolData() {
+            const toolSlug = window.location.pathname.split('/').pop();
+            try {
+                const response = await fetch('/api/tools/' + toolSlug);
+                const toolData = await response.json();
+                
+                // Update page content with tool data
+                document.getElementById('meta-title').textContent = toolData.meta_title;
+                // Update other elements as needed
+            } catch (error) {
+                console.error('Error loading tool data:', error);
+            }
+        }
+
+        // Initialize page
+        document.addEventListener('DOMContentLoaded', function() {
+            loadToolData();
+        });
+    </script>
+</body>
+</html>

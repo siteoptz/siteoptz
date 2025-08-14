@@ -1,0 +1,279 @@
+{
+  "faqs": [
+    {
+      "tool_slug": "chatgpt",
+      "faq": [
+        {
+          "question": "What is ChatGPT?",
+          "answer": "ChatGPT is an AI language model developed by OpenAI that can engage in natural conversations, answer questions, help with writing tasks, and assist with various creative and analytical projects."
+        },
+        {
+          "question": "How much does ChatGPT cost?",
+          "answer": "ChatGPT offers a free tier with GPT-3.5 access. ChatGPT Plus costs $20/month for GPT-4 access and priority support. Team plans start at $25/month per user."
+        },
+        {
+          "question": "What's the difference between ChatGPT and specialized AI tools?",
+          "answer": "ChatGPT is a general-purpose AI assistant good for brainstorming and basic tasks. Specialized tools like Jasper AI offer features like brand voice training, SEO optimization, and content templates for specific use cases."
+        },
+        {
+          "question": "Can ChatGPT replace human writers?",
+          "answer": "ChatGPT is designed to augment human creativity, not replace it. It excels at research and ideation while humans provide strategy, creativity, and final editing."
+        },
+        {
+          "question": "Is ChatGPT good for SEO content?",
+          "answer": "ChatGPT can help with content ideation and initial drafts, but specialized SEO tools like Surfer SEO or Frase provide better optimization features and keyword research capabilities."
+        }
+      ]
+    },
+    {
+      "tool_slug": "jasper-ai",
+      "faq": [
+        {
+          "question": "What is Jasper AI?",
+          "answer": "Jasper AI is an advanced AI-powered content creation platform designed specifically for marketers and businesses to generate high-quality content, optimize for SEO, and create engaging marketing materials."
+        },
+        {
+          "question": "How much does Jasper AI cost?",
+          "answer": "Jasper AI Creator plan costs $39/month for 50,000 words. Teams plan is $99/month for 200,000 words and 5 users. Business plans have custom pricing for unlimited usage."
+        },
+        {
+          "question": "Is Jasper AI better than ChatGPT for content creation?",
+          "answer": "Jasper AI excels at marketing content with brand voice training, SEO optimization, and content templates. ChatGPT is better for general writing and brainstorming. Choose based on your specific needs."
+        },
+        {
+          "question": "Does Jasper AI have a free plan?",
+          "answer": "No, Jasper AI does not offer a free plan. They offer a 7-day free trial to test the platform before committing to a paid plan."
+        },
+        {
+          "question": "Can Jasper AI help with SEO?",
+          "answer": "Yes, Jasper AI includes SEO optimization tools, keyword research, and content optimization suggestions to help improve search engine rankings."
+        }
+      ]
+    },
+    {
+      "tool_slug": "copy-ai",
+      "faq": [
+        {
+          "question": "What is Copy.ai?",
+          "answer": "Copy.ai is an AI copywriting and content generation platform focused on helping businesses create compelling marketing copy, social media content, and brand messaging."
+        },
+        {
+          "question": "How much does Copy.ai cost?",
+          "answer": "Copy.ai offers a free plan with 2,000 words/month. Pro plan costs $36/month for 40,000 words. Team plan is $186/month for 300,000 words and 25 users."
+        },
+        {
+          "question": "What's the difference between Copy.ai and Jasper AI?",
+          "answer": "Copy.ai specializes in marketing copy and social media content with strong brand voice training. Jasper AI offers broader content creation with SEO optimization and team collaboration features."
+        },
+        {
+          "question": "Does Copy.ai have a free trial?",
+          "answer": "Yes, Copy.ai offers a free plan with 2,000 words per month, allowing you to test the platform before upgrading to a paid plan."
+        },
+        {
+          "question": "Can Copy.ai help with email marketing?",
+          "answer": "Yes, Copy.ai provides email marketing templates and can help generate compelling email copy for campaigns, newsletters, and promotional content."
+        }
+      ]
+    },
+    {
+      "tool_slug": "surfer-seo",
+      "faq": [
+        {
+          "question": "What is Surfer SEO?",
+          "answer": "Surfer SEO is an AI-powered SEO optimization tool that helps content creators optimize their content for search engines through keyword research, competitor analysis, and content optimization."
+        },
+        {
+          "question": "How much does Surfer SEO cost?",
+          "answer": "Surfer SEO Basic plan costs $59/month for 10 content editor uses. Pro plan is $119/month for 30 uses. Business plan is $239/month for 70 uses and API access."
+        },
+        {
+          "question": "Is Surfer SEO good for beginners?",
+          "answer": "Surfer SEO has a steep learning curve and requires some SEO knowledge. It's better suited for content creators and marketers who already understand basic SEO principles."
+        },
+        {
+          "question": "What's the difference between Surfer SEO and Frase?",
+          "answer": "Surfer SEO focuses on content optimization and keyword research. Frase specializes in content briefs and question research. Both are excellent SEO tools but serve different purposes."
+        },
+        {
+          "question": "Does Surfer SEO have a free plan?",
+          "answer": "No, Surfer SEO does not offer a free plan. They offer a 7-day free trial to test the platform before committing to a paid subscription."
+        }
+      ]
+    },
+    {
+      "tool_slug": "frase",
+      "faq": [
+        {
+          "question": "What is Frase?",
+          "answer": "Frase is a content optimization and SEO research tool that helps create content that ranks in search engines through content briefs, question research, and SERP analysis."
+        },
+        {
+          "question": "How much does Frase cost?",
+          "answer": "Frase Basic plan costs $44.99/month for 4 content briefs. Team plan is $114.99/month for 30 briefs. Enterprise plans have custom pricing for unlimited briefs."
+        },
+        {
+          "question": "What's the difference between Frase and Surfer SEO?",
+          "answer": "Frase specializes in content briefs and question research, while Surfer SEO focuses on content optimization and keyword research. Both are complementary SEO tools."
+        },
+        {
+          "question": "Is Frase good for content planning?",
+          "answer": "Yes, Frase excels at content planning through its content briefs, question research, and topic modeling features that help create comprehensive content strategies."
+        },
+        {
+          "question": "Does Frase have a free trial?",
+          "answer": "No, Frase does not offer a free plan or trial. You need to subscribe to a paid plan to access the platform's features."
+        }
+      ]
+    },
+    {
+      "tool_slug": "midjourney",
+      "faq": [
+        {
+          "question": "What is Midjourney?",
+          "answer": "Midjourney is an AI image generation tool that creates high-quality artwork and illustrations from text descriptions, available through Discord integration."
+        },
+        {
+          "question": "How much does Midjourney cost?",
+          "answer": "Midjourney Basic plan costs $10/month for 200 generations. Standard plan is $30/month for unlimited generations. Pro plan is $60/month with API access."
+        },
+        {
+          "question": "What's the difference between Midjourney and DALL-E?",
+          "answer": "Midjourney excels at artistic and creative images with excellent style control. DALL-E is better for realistic images and integrates well with OpenAI's ecosystem."
+        },
+        {
+          "question": "Do I need Discord to use Midjourney?",
+          "answer": "Yes, Midjourney is only available through Discord. You need a Discord account to access and use the platform's image generation features."
+        },
+        {
+          "question": "Can I use Midjourney images commercially?",
+          "answer": "Yes, Midjourney provides commercial usage rights for generated images, allowing you to use them in commercial projects and sell them."
+        }
+      ]
+    },
+    {
+      "tool_slug": "dalle",
+      "faq": [
+        {
+          "question": "What is DALL-E?",
+          "answer": "DALL-E is OpenAI's AI image generation model that creates images from text descriptions with high quality and creativity, available through ChatGPT Plus or API access."
+        },
+        {
+          "question": "How much does DALL-E cost?",
+          "answer": "DALL-E is included with ChatGPT Plus at $20/month. API access costs $0.040 per image generated through the API."
+        },
+        {
+          "question": "What's the difference between DALL-E and Midjourney?",
+          "answer": "DALL-E excels at realistic images and creative variations, while Midjourney is better for artistic styles and has more community features through Discord."
+        },
+        {
+          "question": "Can I use DALL-E without ChatGPT Plus?",
+          "answer": "You can access DALL-E through API integration without ChatGPT Plus, but you'll pay per image generated rather than having unlimited access."
+        },
+        {
+          "question": "Does DALL-E have inpainting capabilities?",
+          "answer": "Yes, DALL-E 3 includes inpainting and outpainting capabilities, allowing you to edit and extend existing images."
+        }
+      ]
+    },
+    {
+      "tool_slug": "grammarly",
+      "faq": [
+        {
+          "question": "What is Grammarly?",
+          "answer": "Grammarly is an AI-powered writing assistant that helps improve grammar, style, and clarity in written content through real-time suggestions and corrections."
+        },
+        {
+          "question": "How much does Grammarly cost?",
+          "answer": "Grammarly offers a free plan with basic grammar checking. Premium plan costs $12/month for advanced suggestions and plagiarism detection. Business plan is $15/month per user."
+        },
+        {
+          "question": "Is Grammarly good for content creation?",
+          "answer": "Grammarly is excellent for editing and improving existing content but has limited content creation capabilities. It's best used alongside content creation tools."
+        },
+        {
+          "question": "Does Grammarly work offline?",
+          "answer": "No, Grammarly requires an internet connection to function. The browser extension and desktop app both need internet access for real-time suggestions."
+        },
+        {
+          "question": "Can Grammarly help with SEO?",
+          "answer": "Grammarly focuses on writing quality and grammar rather than SEO optimization. For SEO, you'd want to pair it with specialized SEO tools."
+        }
+      ]
+    },
+    {
+      "tool_slug": "claude",
+      "faq": [
+        {
+          "question": "What is Claude?",
+          "answer": "Claude is an AI assistant developed by Anthropic, known for its helpfulness, harmlessness, and honesty in conversations, with strong safety features and ethical AI principles."
+        },
+        {
+          "question": "How much does Claude cost?",
+          "answer": "Claude offers limited free access with Claude 3 Sonnet. Pro plan costs $20/month for full access to Claude 3 Opus. Team plan is $25/month per user."
+        },
+        {
+          "question": "What's the difference between Claude and ChatGPT?",
+          "answer": "Claude emphasizes safety and ethical AI principles with a longer context window. ChatGPT offers broader integration and mobile app access. Both are excellent general-purpose AI assistants."
+        },
+        {
+          "question": "Does Claude have a mobile app?",
+          "answer": "No, Claude does not currently have a mobile app. It's only available through web browsers and API integration."
+        },
+        {
+          "question": "Can Claude help with content creation?",
+          "answer": "Yes, Claude can help with content creation, but it lacks specialized features like brand voice training and content templates that tools like Jasper AI offer."
+        }
+      ]
+    },
+    {
+      "tool_slug": "gemini",
+      "faq": [
+        {
+          "question": "What is Gemini?",
+          "answer": "Gemini is Google's AI assistant that integrates with Google services and provides multimodal AI capabilities for text, image, and voice interactions."
+        },
+        {
+          "question": "How much does Gemini cost?",
+          "answer": "Gemini offers a free plan with Gemini Pro access. Gemini Advanced costs $19.99/month for advanced features and priority support."
+        },
+        {
+          "question": "What's the difference between Gemini and ChatGPT?",
+          "answer": "Gemini excels at Google integration and multimodal capabilities (text, image, voice). ChatGPT has broader third-party integrations and a mobile app. Both offer free tiers."
+        },
+        {
+          "question": "Does Gemini have a mobile app?",
+          "answer": "Yes, Gemini has a mobile app available for iOS and Android devices, providing on-the-go access to AI assistance."
+        },
+        {
+          "question": "Can Gemini access real-time information?",
+          "answer": "Yes, Gemini can access real-time information through Google's search capabilities, making it excellent for current events and live data."
+        }
+      ]
+    },
+    {
+      "tool_slug": "perplexity",
+      "faq": [
+        {
+          "question": "What is Perplexity?",
+          "answer": "Perplexity is an AI-powered search engine that provides conversational answers with real-time information and source citations, combining search and AI capabilities."
+        },
+        {
+          "question": "How much does Perplexity cost?",
+          "answer": "Perplexity offers a free plan with basic search features. Pro plan costs $20/month for advanced features and priority support."
+        },
+        {
+          "question": "What's the difference between Perplexity and ChatGPT?",
+          "answer": "Perplexity specializes in real-time information and research with source citations. ChatGPT is better for general conversation and content creation. Both serve different purposes."
+        },
+        {
+          "question": "Does Perplexity have a mobile app?",
+          "answer": "Yes, Perplexity has a mobile app available for iOS and Android devices, providing mobile access to AI-powered search."
+        },
+        {
+          "question": "Can Perplexity help with research?",
+          "answer": "Yes, Perplexity excels at research with real-time information access, source citations, and conversational interface for exploring topics in depth."
+        }
+      ]
+    }
+  ]
+}

@@ -1,285 +1,402 @@
 #!/usr/bin/env node
 
 /**
- * Comprehensive Integration Test Suite
- * Tests all components, templates, and functionality before production deployment
+ * Integration Test Suite for SiteOptz AI
+ * Tests API endpoints, data integrity, and core functionality
  */
 
 const fs = require('fs');
 const path = require('path');
+const { performance } = require('perf_hooks');
+const chalk = require('chalk');
 
-console.log('🧪 Starting Comprehensive Integration Tests...\n');
-
-// Test Results
-const testResults = {
-  passed: 0,
-  failed: 0,
-  total: 0,
-  details: []
+// Test configuration
+const CONFIG = {
+  baseUrl: process.env.TEST_BASE_URL || 'http://localhost:3000',
+  timeout: 10000,
+  retries: 3
 };
 
-// Helper function to log test results
-const logTest = (testName, passed, details = '') => {
-  testResults.total++;
-  if (passed) {
-    testResults.passed++;
-    console.log(`✅ ${testName}`);
-  } else {
-    testResults.failed++;
-    console.log(`❌ ${testName}`);
-    if (details) console.log(`   Details: ${details}`);
+class TestRunner {
+  constructor() {
+    this.tests = [];
+    this.results = {
+      passed: 0,
+      failed: 0,
+      skipped: 0,
+      total: 0
+    };
+    this.startTime = performance.now();
   }
-  testResults.details.push({ name: testName, passed, details });
-};
 
-// Test 1: Check if all required files exist
-console.log('📁 Testing File Structure...');
-const requiredFiles = [
-  'components/faq.jsx',
-  'components/table.jsx',
-  'components/pricing-calculator.jsx',
-  'templates/comparison.jsx',
-  'templates/review.jsx',
-  'templates/ranking.jsx',
-  'data/tool_data.json',
-  'data/faq_data.json',
-  'utils/schema-validator.js',
-  'pages/compare/[tool].jsx',
-  'pages/compare/index.jsx',
-  'pages/api/subscribe.js',
-  'styles/components.css'
-];
-
-requiredFiles.forEach(file => {
-  const exists = fs.existsSync(file);
-  logTest(`File exists: ${file}`, exists, exists ? '' : 'File not found');
-});
-
-// Test 2: Validate JSON data files
-console.log('\n📊 Testing Data Files...');
-
-try {
-  const toolData = JSON.parse(fs.readFileSync('data/tool_data.json', 'utf8'));
-  logTest('tool_data.json is valid JSON', true);
-  logTest('tool_data.json has tools', Array.isArray(toolData) && toolData.length > 0, 
-    `Found ${toolData.length} tools`);
-  
-  if (toolData.length > 0) {
-    const firstTool = toolData[0];
-    const requiredFields = ['tool_name', 'description', 'key_features', 'pricing', 'target_keywords', 'meta_description'];
-    const hasAllFields = requiredFields.every(field => firstTool.hasOwnProperty(field));
-    logTest('Tool data has required fields', hasAllFields, 
-      hasAllFields ? '' : `Missing: ${requiredFields.filter(f => !firstTool.hasOwnProperty(f)).join(', ')}`);
-  }
-} catch (error) {
-  logTest('tool_data.json is valid JSON', false, error.message);
-}
-
-try {
-  const faqData = JSON.parse(fs.readFileSync('data/faq_data.json', 'utf8'));
-  logTest('faq_data.json is valid JSON', true);
-  logTest('faq_data.json has FAQs', Array.isArray(faqData) && faqData.length > 0, 
-    `Found ${faqData.length} FAQs`);
-} catch (error) {
-  logTest('faq_data.json is valid JSON', false, error.message);
-}
-
-// Test 3: Validate component files
-console.log('\n🧩 Testing Component Files...');
-
-const componentFiles = [
-  'components/faq.jsx',
-  'components/table.jsx',
-  'components/pricing-calculator.jsx'
-];
-
-componentFiles.forEach(file => {
-  try {
-    const content = fs.readFileSync(file, 'utf8');
-    const hasReactImport = content.includes('import React');
-    const hasExport = content.includes('export default');
-    const hasJSX = content.includes('return (') || content.includes('return(');
+  async runTests() {
+    console.log(chalk.blue.bold('🚀 Running SiteOptz Integration Tests\n'));
     
-    logTest(`${file} has React import`, hasReactImport);
-    logTest(`${file} has default export`, hasExport);
-    logTest(`${file} has JSX content`, hasJSX);
-  } catch (error) {
-    logTest(`Can read ${file}`, false, error.message);
-  }
-});
-
-// Test 4: Validate template files
-console.log('\n📄 Testing Template Files...');
-
-const templateFiles = [
-  'templates/comparison.jsx',
-  'templates/review.jsx',
-  'templates/ranking.jsx'
-];
-
-templateFiles.forEach(file => {
-  try {
-    const content = fs.readFileSync(file, 'utf8');
-    const hasReactImport = content.includes('import React');
-    const hasHeadImport = content.includes('import Head');
-    const hasStructuredData = content.includes('application/ld+json');
-    const hasMetaTags = content.includes('<title>') || content.includes('generateMetaTitle');
+    // Register all tests
+    this.registerTests();
     
-    logTest(`${file} has React import`, hasReactImport);
-    logTest(`${file} has Head import`, hasHeadImport);
-    logTest(`${file} has structured data`, hasStructuredData);
-    logTest(`${file} has meta tags`, hasMetaTags);
-  } catch (error) {
-    logTest(`Can read ${file}`, false, error.message);
-  }
-});
-
-// Test 5: Validate utility files
-console.log('\n🔧 Testing Utility Files...');
-
-try {
-  const schemaValidator = fs.readFileSync('utils/schema-validator.js', 'utf8');
-  const hasValidationFunctions = schemaValidator.includes('validateSchemaWithGoogle') || 
-                                schemaValidator.includes('validateFAQSchema');
-  const hasExportStatements = schemaValidator.includes('export const') || schemaValidator.includes('export default');
-  
-  logTest('schema-validator.js has validation functions', hasValidationFunctions);
-  logTest('schema-validator.js has exports', hasExportStatements);
-} catch (error) {
-  logTest('Can read schema-validator.js', false, error.message);
-}
-
-// Test 6: Validate page files
-console.log('\n📱 Testing Page Files...');
-
-const pageFiles = [
-  'pages/compare/[tool].jsx',
-  'pages/compare/index.jsx',
-  'pages/api/subscribe.js'
-];
-
-pageFiles.forEach(file => {
-  try {
-    const content = fs.readFileSync(file, 'utf8');
-    const hasReactImport = content.includes('import React') || content.includes('import {');
-    const hasExport = content.includes('export default') || content.includes('export default function');
-    
-    logTest(`${file} has React import`, hasReactImport);
-    logTest(`${file} has export`, hasExport);
-  } catch (error) {
-    logTest(`Can read ${file}`, false, error.message);
-  }
-});
-
-// Test 7: Validate CSS files
-console.log('\n🎨 Testing CSS Files...');
-
-try {
-  const componentsCSS = fs.readFileSync('styles/components.css', 'utf8');
-  const hasSliderStyles = componentsCSS.includes('.slider');
-  const hasModalStyles = componentsCSS.includes('modal');
-  
-  logTest('components.css has slider styles', hasSliderStyles);
-  logTest('components.css has modal styles', hasModalStyles);
-} catch (error) {
-  logTest('Can read components.css', false, error.message);
-}
-
-// Test 8: Check package.json dependencies
-console.log('\n📦 Testing Dependencies...');
-
-try {
-  const packageJson = JSON.parse(fs.readFileSync('package.json', 'utf8'));
-  const hasNextJS = packageJson.dependencies && packageJson.dependencies.next;
-  const hasReact = packageJson.dependencies && packageJson.dependencies.react;
-  const hasTailwind = packageJson.dependencies && packageJson.dependencies.tailwindcss;
-  
-  logTest('package.json has Next.js', hasNextJS);
-  logTest('package.json has React', hasReact);
-  logTest('package.json has Tailwind CSS', hasTailwind);
-} catch (error) {
-  logTest('package.json is valid', false, error.message);
-}
-
-// Test 9: Validate build configuration
-console.log('\n⚙️ Testing Build Configuration...');
-
-try {
-  const nextConfig = fs.readFileSync('next.config.js', 'utf8');
-  const hasConfig = nextConfig.length > 0;
-  logTest('next.config.js exists and has content', hasConfig);
-} catch (error) {
-  logTest('next.config.js exists', false, error.message);
-}
-
-try {
-  const tailwindConfig = fs.readFileSync('tailwind.config.js', 'utf8');
-  const hasConfig = tailwindConfig.length > 0;
-  logTest('tailwind.config.js exists and has content', hasConfig);
-} catch (error) {
-  logTest('tailwind.config.js exists', false, error.message);
-}
-
-// Test 10: Check for common issues
-console.log('\n🔍 Checking for Common Issues...');
-
-// Check for console.log statements in production code
-const productionFiles = [
-  'components/faq.jsx',
-  'components/table.jsx',
-  'components/pricing-calculator.jsx',
-  'templates/comparison.jsx',
-  'templates/review.jsx',
-  'templates/ranking.jsx'
-];
-
-let hasConsoleLogs = false;
-productionFiles.forEach(file => {
-  try {
-    const content = fs.readFileSync(file, 'utf8');
-    if (content.includes('console.log(') && !content.includes('// console.log')) {
-      hasConsoleLogs = true;
+    // Run tests sequentially
+    for (const test of this.tests) {
+      await this.runTest(test);
     }
-  } catch (error) {
-    // Ignore file read errors
+    
+    // Print summary
+    this.printSummary();
+    
+    // Exit with appropriate code
+    process.exit(this.results.failed > 0 ? 1 : 0);
   }
-});
 
-logTest('No console.log statements in production code', !hasConsoleLogs, 
-  hasConsoleLogs ? 'Found console.log statements' : '');
+  registerTests() {
+    // API Tests
+    this.addTest('API: Tool Data Endpoints', this.testToolDataAPI);
+    this.addTest('API: Email Subscription', this.testEmailSubscriptionAPI);
+    this.addTest('API: Rate Limiting', this.testRateLimiting);
+    
+    // Data Integrity Tests
+    this.addTest('Data: Tool Data Structure', this.testToolDataStructure);
+    this.addTest('Data: FAQ Data Structure', this.testFAQDataStructure);
+    this.addTest('Data: Schema Validation', this.testSchemaValidation);
+    
+    // Template Tests
+    this.addTest('Templates: HTML Structure', this.testHTMLTemplates);
+    this.addTest('Templates: PHP Structure', this.testPHPTemplates);
+    
+    // Performance Tests
+    this.addTest('Performance: API Response Times', this.testAPIPerformance);
+    this.addTest('Performance: Static Asset Loading', this.testStaticAssets);
+  }
 
-// Check for TODO comments
-let hasTODOs = false;
-productionFiles.forEach(file => {
-  try {
-    const content = fs.readFileSync(file, 'utf8');
-    if (content.includes('TODO') || content.includes('FIXME')) {
-      hasTODOs = true;
+  addTest(name, testFunction) {
+    this.tests.push({ name, testFunction: testFunction.bind(this) });
+    this.results.total++;
+  }
+
+  async runTest(test) {
+    const startTime = performance.now();
+    
+    try {
+      console.log(chalk.yellow(`⏳ ${test.name}`));
+      
+      await Promise.race([
+        test.testFunction(),
+        new Promise((_, reject) => 
+          setTimeout(() => reject(new Error('Test timeout')), CONFIG.timeout)
+        )
+      ]);
+      
+      const duration = (performance.now() - startTime).toFixed(2);
+      console.log(chalk.green(`✅ ${test.name} (${duration}ms)`));
+      this.results.passed++;
+      
+    } catch (error) {
+      const duration = (performance.now() - startTime).toFixed(2);
+      console.log(chalk.red(`❌ ${test.name} (${duration}ms)`));
+      console.log(chalk.red(`   Error: ${error.message}`));
+      this.results.failed++;
     }
-  } catch (error) {
-    // Ignore file read errors
   }
-});
 
-logTest('No TODO/FIXME comments in production code', !hasTODOs, 
-  hasTODOs ? 'Found TODO/FIXME comments' : '');
+  // API Tests
+  async testToolDataAPI() {
+    const response = await this.fetch('/api/tools/chatgpt');
+    
+    if (response.status !== 200) {
+      throw new Error(`Expected 200, got ${response.status}`);
+    }
+    
+    const data = await response.json();
+    
+    if (!data.slug || !data.name || !data.features) {
+      throw new Error('Missing required tool data fields');
+    }
+    
+    if (!Array.isArray(data.features) || data.features.length === 0) {
+      throw new Error('Features should be a non-empty array');
+    }
+  }
 
-// Summary
-console.log('\n📊 Test Summary:');
-console.log(`Total Tests: ${testResults.total}`);
-console.log(`Passed: ${testResults.passed}`);
-console.log(`Failed: ${testResults.failed}`);
-console.log(`Success Rate: ${((testResults.passed / testResults.total) * 100).toFixed(1)}%`);
-
-if (testResults.failed > 0) {
-  console.log('\n❌ Failed Tests:');
-  testResults.details
-    .filter(test => !test.passed)
-    .forEach(test => {
-      console.log(`  - ${test.name}: ${test.details}`);
+  async testEmailSubscriptionAPI() {
+    const testData = {
+      email: 'test@example.com',
+      source: 'integration_test',
+      tool: 'chatgpt'
+    };
+    
+    const response = await this.fetch('/api/subscribe', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(testData)
     });
-  process.exit(1);
-} else {
-  console.log('\n🎉 All tests passed! Ready for production deployment.');
-  process.exit(0);
+    
+    if (response.status !== 200) {
+      throw new Error(`Expected 200, got ${response.status}`);
+    }
+    
+    const result = await response.json();
+    
+    if (!result.message || !result.data) {
+      throw new Error('Missing response data structure');
+    }
+  }
+
+  async testRateLimiting() {
+    const requests = [];
+    
+    // Send multiple requests rapidly
+    for (let i = 0; i < 10; i++) {
+      requests.push(
+        this.fetch('/api/subscribe', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ email: `test${i}@example.com` })
+        })
+      );
+    }
+    
+    const responses = await Promise.all(requests);
+    const rateLimited = responses.some(r => r.status === 429);
+    
+    if (!rateLimited) {
+      throw new Error('Rate limiting not working - expected 429 status');
+    }
+  }
+
+  // Data Integrity Tests
+  async testToolDataStructure() {
+    const dataPath = path.join(process.cwd(), 'data', 'tool_data.json');
+    
+    if (!fs.existsSync(dataPath)) {
+      throw new Error('tool_data.json not found');
+    }
+    
+    const data = JSON.parse(fs.readFileSync(dataPath, 'utf8'));
+    
+    if (!Array.isArray(data) || data.length === 0) {
+      throw new Error('Tool data should be a non-empty array');
+    }
+    
+    const requiredFields = ['slug', 'name', 'description', 'features', 'pros', 'cons', 'pricing'];
+    
+    for (const tool of data) {
+      for (const field of requiredFields) {
+        if (!(field in tool)) {
+          throw new Error(`Tool ${tool.name || 'unknown'} missing required field: ${field}`);
+        }
+      }
+      
+      // Validate slug format
+      if (!/^[a-z0-9-]+$/.test(tool.slug)) {
+        throw new Error(`Invalid slug format for tool: ${tool.slug}`);
+      }
+      
+      // Validate arrays
+      if (!Array.isArray(tool.features) || !Array.isArray(tool.pros) || !Array.isArray(tool.cons)) {
+        throw new Error(`Features, pros, and cons must be arrays for tool: ${tool.name}`);
+      }
+    }
+  }
+
+  async testFAQDataStructure() {
+    const dataPath = path.join(process.cwd(), 'data', 'faq_data.json');
+    
+    if (!fs.existsSync(dataPath)) {
+      throw new Error('faq_data.json not found');
+    }
+    
+    const data = JSON.parse(fs.readFileSync(dataPath, 'utf8'));
+    
+    if (!Array.isArray(data)) {
+      throw new Error('FAQ data should be an array');
+    }
+    
+    for (const toolFAQ of data) {
+      if (!toolFAQ.tool_slug || !toolFAQ.faq) {
+        throw new Error('FAQ entry missing tool_slug or faq field');
+      }
+      
+      if (!Array.isArray(toolFAQ.faq)) {
+        throw new Error('FAQ field should be an array');
+      }
+      
+      for (const faq of toolFAQ.faq) {
+        if (!faq.question || !faq.answer) {
+          throw new Error('FAQ entry missing question or answer');
+        }
+      }
+    }
+  }
+
+  async testSchemaValidation() {
+    // Test JSON-LD schema structure for tools
+    const toolDataPath = path.join(process.cwd(), 'data', 'tool_data.json');
+    const tools = JSON.parse(fs.readFileSync(toolDataPath, 'utf8'));
+    
+    for (const tool of tools) {
+      if (!tool.schema) {
+        throw new Error(`Tool ${tool.name} missing schema field`);
+      }
+      
+      const schema = tool.schema;
+      const requiredSchemaFields = ['@context', '@type', 'name'];
+      
+      for (const field of requiredSchemaFields) {
+        if (!(field in schema)) {
+          throw new Error(`Schema for ${tool.name} missing required field: ${field}`);
+        }
+      }
+      
+      if (schema['@context'] !== 'https://schema.org') {
+        throw new Error(`Invalid schema context for ${tool.name}`);
+      }
+      
+      if (schema['@type'] !== 'SoftwareApplication') {
+        throw new Error(`Invalid schema type for ${tool.name}`);
+      }
+    }
+  }
+
+  // Template Tests
+  async testHTMLTemplates() {
+    const templatesDir = path.join(process.cwd(), 'wordpress-package', 'theme', 'templates');
+    const requiredTemplates = ['tool_detail.html', 'comparison.html'];
+    
+    for (const template of requiredTemplates) {
+      const templatePath = path.join(templatesDir, template);
+      
+      if (!fs.existsSync(templatePath)) {
+        throw new Error(`Template not found: ${template}`);
+      }
+      
+      const content = fs.readFileSync(templatePath, 'utf8');
+      
+      // Check for essential template variables
+      if (template === 'tool_detail.html') {
+        const requiredVars = ['{{tool.name}}', '{{tool.description}}', '{{tool.features}}'];
+        for (const variable of requiredVars) {
+          if (!content.includes(variable)) {
+            throw new Error(`Template ${template} missing variable: ${variable}`);
+          }
+        }
+      }
+      
+      // Check for proper HTML structure
+      if (!content.includes('<!DOCTYPE html>') || !content.includes('<html')) {
+        throw new Error(`Template ${template} missing proper HTML structure`);
+      }
+    }
+  }
+
+  async testPHPTemplates() {
+    const phpDir = path.join(process.cwd(), 'wordpress-package', 'theme');
+    const requiredFiles = ['single-tool.php', 'page-comparison.php'];
+    
+    for (const file of requiredFiles) {
+      const filePath = path.join(phpDir, file);
+      
+      if (!fs.existsSync(filePath)) {
+        throw new Error(`PHP file not found: ${file}`);
+      }
+      
+      const content = fs.readFileSync(filePath, 'utf8');
+      
+      // Check for PHP opening tag
+      if (!content.includes('<?php')) {
+        throw new Error(`PHP file ${file} missing opening tag`);
+      }
+      
+      // Check for WordPress functions
+      if (!content.includes('get_field') && !content.includes('the_field')) {
+        throw new Error(`PHP file ${file} missing ACF functions`);
+      }
+    }
+  }
+
+  // Performance Tests
+  async testAPIPerformance() {
+    const endpoints = ['/api/tools/chatgpt', '/api/tools/claude'];
+    
+    for (const endpoint of endpoints) {
+      const startTime = performance.now();
+      const response = await this.fetch(endpoint);
+      const endTime = performance.now();
+      
+      const duration = endTime - startTime;
+      
+      if (response.status !== 200) {
+        throw new Error(`Endpoint ${endpoint} returned ${response.status}`);
+      }
+      
+      if (duration > 1000) { // 1 second threshold
+        throw new Error(`Endpoint ${endpoint} too slow: ${duration.toFixed(2)}ms`);
+      }
+    }
+  }
+
+  async testStaticAssets() {
+    const assets = [
+      '/styles/components.css',
+      '/styles/utilities.css'
+    ];
+    
+    for (const asset of assets) {
+      const response = await this.fetch(asset);
+      
+      if (response.status === 404) {
+        console.log(chalk.yellow(`⚠️  Static asset not found (expected): ${asset}`));
+        continue;
+      }
+      
+      if (response.status !== 200) {
+        throw new Error(`Static asset ${asset} returned ${response.status}`);
+      }
+    }
+  }
+
+  // Utility Methods
+  async fetch(url, options = {}) {
+    const fullUrl = url.startsWith('http') ? url : `${CONFIG.baseUrl}${url}`;
+    
+    try {
+      const fetch = (await import('node-fetch')).default;
+      return await fetch(fullUrl, {
+        timeout: CONFIG.timeout,
+        ...options
+      });
+    } catch (error) {
+      throw new Error(`Fetch failed for ${url}: ${error.message}`);
+    }
+  }
+
+  printSummary() {
+    const duration = ((performance.now() - this.startTime) / 1000).toFixed(2);
+    
+    console.log('\n' + chalk.blue.bold('📊 Test Summary'));
+    console.log(chalk.blue('═'.repeat(50)));
+    
+    console.log(`Total Tests: ${this.results.total}`);
+    console.log(chalk.green(`Passed: ${this.results.passed}`));
+    console.log(chalk.red(`Failed: ${this.results.failed}`));
+    console.log(chalk.yellow(`Skipped: ${this.results.skipped}`));
+    console.log(`Duration: ${duration}s`);
+    
+    if (this.results.failed === 0) {
+      console.log('\n' + chalk.green.bold('🎉 All tests passed!'));
+    } else {
+      console.log('\n' + chalk.red.bold('❌ Some tests failed'));
+    }
+    
+    console.log(chalk.blue('═'.repeat(50)));
+  }
 }
+
+// Run tests if called directly
+if (require.main === module) {
+  const runner = new TestRunner();
+  runner.runTests().catch(error => {
+    console.error(chalk.red('Fatal error:'), error.message);
+    process.exit(1);
+  });
+}
+
+module.exports = TestRunner;

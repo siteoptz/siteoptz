@@ -1,0 +1,5 @@
+{
+  "cron": {
+    "send-reminders": "0 12 * * *"
+  }
+}

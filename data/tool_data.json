@@ -1,534 +1,393 @@
 [
   {
-    "tool_name": "Jasper AI",
-    "description": "Jasper AI is an advanced AI-powered content creation platform that helps marketers and businesses generate high-quality content, optimize for SEO, and create engaging marketing materials.",
-    "key_features": [
-      "AI-powered content creation",
-      "SEO optimization tools",
-      "Social media content generation",
-      "Email marketing templates",
-      "Brand voice customization",
-      "Content templates library",
-      "Multi-language support",
-      "Team collaboration features",
-      "Content analytics",
-      "Integration with popular tools",
-      "Plagiarism checking",
-      "Content optimization suggestions"
-    ],
-    "pricing": {
-      "free": "No free plan available",
-      "basic": "Creator Plan - $39/month - 50,000 words, 1 user, basic templates",
-      "pro": "Teams Plan - $99/month - 200,000 words, 5 users, advanced features",
-      "enterprise": "Business Plan - Custom pricing - Unlimited words, unlimited users, API access"
+    "slug": "chatgpt",
+    "name": "ChatGPT",
+    "description": "OpenAI's conversational AI model designed for natural language understanding and generation, capable of answering questions, writing content, and assisting with various tasks.",
+    "meta": {
+      "title": "ChatGPT Review 2025 - Features, Pricing & Alternatives | SiteOptz",
+      "description": "In-depth ChatGPT review covering features, pricing, pros & cons. Compare with alternatives and find out if ChatGPT is right for your AI needs."
     },
-    "target_keywords": [
-      "Jasper AI",
-      "Jasper AI review",
-      "Jasper AI pricing",
-      "Jasper AI alternatives",
-      "AI content creation",
-      "AI writing tool",
-      "content marketing AI",
-      "Jasper AI vs ChatGPT",
-      "Jasper AI vs Copy.ai",
-      "best AI writing tools 2025"
+    "schema": {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "ChatGPT",
+      "applicationCategory": "AI Chatbot",
+      "operatingSystem": "Web, iOS, Android",
+      "offers": {
+        "@type": "Offer",
+        "price": "20",
+        "priceCurrency": "USD"
+      }
+    },
+    "features": [
+      "Advanced Natural Language Processing",
+      "Code Generation and Debugging",
+      "Web Browsing Capability (Plus)",
+      "Image Analysis with GPT-4V",
+      "Plugin Ecosystem",
+      "Custom GPTs Creation",
+      "API Access for Developers",
+      "Multi-language Support",
+      "Voice Conversation Mode",
+      "Data Analysis & Visualization"
     ],
-    "meta_description": "Jasper AI review: pricing, features, pros & cons, and alternatives. Expert analysis with real user feedback and implementation tips for 2025.",
-    "schema_type": "SoftwareApplication"
+    "pros": [
+      "Most advanced language model (GPT-4)",
+      "Extensive plugin ecosystem",
+      "Strong coding and technical capabilities",
+      "Large knowledge base up to 2023",
+      "Active community and resources",
+      "Regular updates and improvements"
+    ],
+    "cons": [
+      "Can be expensive for heavy usage",
+      "Sometimes generates confident but incorrect information",
+      "Limited free tier with GPT-3.5 only",
+      "No real-time internet access in basic version",
+      "Context window limitations"
+    ],
+    "pricing": [
+      {
+        "plan": "Free",
+        "price": "$0/month",
+        "details": "Access to GPT-3.5, limited availability during peak times"
+      },
+      {
+        "plan": "Plus",
+        "price": "$20/month",
+        "details": "GPT-4 access, faster response times, priority access"
+      },
+      {
+        "plan": "Team",
+        "price": "$25/user/month",
+        "details": "Everything in Plus, higher message caps, admin console"
+      },
+      {
+        "plan": "Enterprise",
+        "price": "Custom",
+        "details": "Unlimited GPT-4, advanced admin controls, SSO, dedicated support"
+      }
+    ],
+    "benchmarks": {
+      "content_quality": 9.2,
+      "ease_of_use": 8.8,
+      "value_for_money": 8.5,
+      "seo_features": 7.5,
+      "team_collaboration": 8.0,
+      "customer_support": 8.2,
+      "speed_score": 8.7,
+      "accuracy_score": 8.9,
+      "cost_efficiency": 7.8
+    },
+    "related_tools": ["claude", "gemini", "copilot", "perplexity"],
+    "website_url": "https://chat.openai.com",
+    "logo": "/images/tools/chatgpt-logo.png",
+    "category": "AI Chatbot",
+    "developer": "OpenAI",
+    "founded_year": "2022",
+    "api_available": true,
+    "integrations": [
+      "Slack",
+      "Microsoft Teams",
+      "Zapier",
+      "Make (Integromat)",
+      "Google Workspace",
+      "Microsoft Office",
+      "GitHub",
+      "VS Code"
+    ],
+    "use_cases": [
+      {
+        "title": "Content Creation",
+        "description": "Generate blog posts, articles, social media content, and marketing copy with advanced language understanding",
+        "ideal_for": "Content marketers, bloggers, copywriters"
+      },
+      {
+        "title": "Code Development",
+        "description": "Write, debug, and explain code in multiple programming languages with detailed documentation",
+        "ideal_for": "Developers, programmers, students learning to code"
+      },
+      {
+        "title": "Research & Analysis",
+        "description": "Analyze complex topics, summarize documents, and provide comprehensive research insights",
+        "ideal_for": "Researchers, analysts, students"
+      },
+      {
+        "title": "Customer Support",
+        "description": "Create chatbots and automate customer service responses with natural conversation flow",
+        "ideal_for": "Support teams, small businesses, e-commerce"
+      }
+    ],
+    "last_updated": "2025-01-15",
+    "version": "GPT-4 Turbo",
+    "platforms": ["Web", "iOS", "Android", "API"],
+    "languages": ["95+ languages supported"],
+    "support": {
+      "email": true,
+      "chat": false,
+      "phone": false,
+      "documentation": true,
+      "community": true
+    }
   },
   {
-    "tool_name": "Copy.ai",
-    "description": "Copy.ai is an AI copywriting and content generation platform that helps businesses create compelling marketing copy, social media content, and brand messaging.",
-    "key_features": [
-      "AI copywriting assistance",
-      "Marketing copy generation",
-      "Social media content creation",
-      "Email marketing templates",
-      "Brand voice training",
-      "Content optimization",
-      "Multi-language support",
-      "Team collaboration",
-      "Content analytics",
-      "Integration capabilities",
-      "SEO content tools",
-      "A/B testing suggestions"
-    ],
-    "pricing": {
-      "free": "Free Plan - 2,000 words/month, 1 user, basic features",
-      "basic": "Pro Plan - $36/month - 40,000 words, 5 users, advanced features",
-      "pro": "Team Plan - $186/month - 300,000 words, 25 users, team features",
-      "enterprise": "Enterprise Plan - Custom pricing - Unlimited words, unlimited users, API access"
+    "slug": "claude",
+    "name": "Claude",
+    "description": "Anthropic's AI assistant built to be helpful, harmless, and honest with strong reasoning capabilities and ethical AI principles at its core.",
+    "meta": {
+      "title": "Claude Review 2025 - Anthropic's AI Assistant Features & Pricing | SiteOptz",
+      "description": "Comprehensive Claude review: features, pricing, pros & cons. Discover how Anthropic's AI assistant compares to ChatGPT and other alternatives."
     },
-    "target_keywords": [
-      "Copy.ai",
-      "Copy.ai review",
-      "Copy.ai pricing",
-      "Copy.ai alternatives",
-      "AI copywriting",
-      "marketing copy AI",
-      "Copy.ai vs Jasper AI",
-      "Copy.ai vs ChatGPT",
-      "best copywriting tools",
-      "AI marketing copy"
+    "schema": {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "Claude",
+      "applicationCategory": "AI Assistant",
+      "operatingSystem": "Web, iOS, Android",
+      "offers": {
+        "@type": "Offer",
+        "price": "18",
+        "priceCurrency": "USD"
+      }
+    },
+    "features": [
+      "Constitutional AI Training",
+      "100K+ Token Context Window",
+      "Document Analysis & Summarization",
+      "Code Generation & Review",
+      "Mathematical Reasoning",
+      "Creative Writing Assistance",
+      "Safety-Focused Design",
+      "Multi-format Input Support",
+      "Artifact Creation",
+      "Project Management Features"
     ],
-    "meta_description": "Copy.ai review: pricing, features, pros & cons, and alternatives. Expert analysis with real user feedback and implementation tips for 2025.",
-    "schema_type": "SoftwareApplication"
+    "pros": [
+      "Excellent reasoning and analysis capabilities",
+      "Strong safety and alignment features",
+      "Great for long-form content and documents",
+      "Transparent about limitations",
+      "Competitive pricing",
+      "Larger context window than competitors"
+    ],
+    "cons": [
+      "Smaller plugin ecosystem",
+      "Less widespread adoption than ChatGPT",
+      "No web browsing capability",
+      "More conservative in responses",
+      "Limited image generation features"
+    ],
+    "pricing": [
+      {
+        "plan": "Free",
+        "price": "$0/month",
+        "details": "Limited messages per day, access to Claude 3 Haiku"
+      },
+      {
+        "plan": "Pro",
+        "price": "$18/month",
+        "details": "5x more usage, priority access, Claude 3 Opus access"
+      },
+      {
+        "plan": "Team",
+        "price": "$25/user/month",
+        "details": "Everything in Pro, central billing, team collaboration"
+      },
+      {
+        "plan": "Enterprise",
+        "price": "Custom",
+        "details": "Unlimited usage, SSO, advanced security, dedicated support"
+      }
+    ],
+    "benchmarks": {
+      "content_quality": 9.0,
+      "ease_of_use": 9.2,
+      "value_for_money": 9.0,
+      "seo_features": 8.0,
+      "team_collaboration": 8.5,
+      "customer_support": 9.0,
+      "speed_score": 8.5,
+      "accuracy_score": 9.1,
+      "cost_efficiency": 8.8
+    },
+    "related_tools": ["chatgpt", "gemini", "llama", "mistral"],
+    "website_url": "https://claude.ai",
+    "logo": "/images/tools/claude-logo.png",
+    "category": "AI Assistant",
+    "developer": "Anthropic",
+    "founded_year": "2023",
+    "api_available": true,
+    "integrations": [
+      "Slack",
+      "API Integration",
+      "Cursor IDE",
+      "Continue Dev",
+      "Notion AI",
+      "Perplexity"
+    ],
+    "use_cases": [
+      {
+        "title": "Academic Research",
+        "description": "Analyze research papers, summarize findings, and assist with literature reviews using large context windows",
+        "ideal_for": "Researchers, academics, graduate students"
+      },
+      {
+        "title": "Legal Document Analysis",
+        "description": "Review contracts, analyze legal documents, and provide detailed summaries with high accuracy",
+        "ideal_for": "Lawyers, legal teams, compliance officers"
+      },
+      {
+        "title": "Technical Documentation",
+        "description": "Create and review technical documentation with precise language and clear explanations",
+        "ideal_for": "Technical writers, developers, product teams"
+      },
+      {
+        "title": "Creative Writing",
+        "description": "Develop stories, scripts, and creative content with consistent character and plot development",
+        "ideal_for": "Writers, content creators, storytellers"
+      }
+    ],
+    "last_updated": "2025-01-15",
+    "version": "Claude 3 Opus",
+    "platforms": ["Web", "iOS", "Android", "API"],
+    "languages": ["Multiple languages with English optimization"],
+    "support": {
+      "email": true,
+      "chat": false,
+      "phone": false,
+      "documentation": true,
+      "community": true
+    }
   },
   {
-    "tool_name": "Surfer SEO",
-    "description": "Surfer SEO is an AI-powered SEO optimization tool that helps content creators and marketers optimize their content for search engines and improve rankings.",
-    "key_features": [
-      "Content optimization",
-      "Keyword research tools",
-      "Competitor analysis",
-      "Content editor with suggestions",
-      "SERP analysis",
-      "Content planning",
-      "Site audit tools",
-      "Rank tracking",
-      "Content briefs",
-      "AI writing assistant",
-      "Technical SEO analysis",
-      "Backlink analysis"
-    ],
-    "pricing": {
-      "free": "No free plan available",
-      "basic": "Basic Plan - $59/month - 10 content editor uses, basic features",
-      "pro": "Pro Plan - $119/month - 30 content editor uses, advanced features",
-      "enterprise": "Business Plan - $239/month - 70 content editor uses, API access"
+    "slug": "gemini",
+    "name": "Gemini",
+    "description": "Google's multimodal AI model that can understand and generate text, code, audio, images, and video with advanced reasoning capabilities.",
+    "meta": {
+      "title": "Gemini Review 2025 - Google's AI Features, Pricing & Performance | SiteOptz",
+      "description": "Detailed Gemini review: Explore Google's multimodal AI capabilities, pricing plans, and how it compares to ChatGPT and Claude."
     },
-    "target_keywords": [
-      "Surfer SEO",
-      "Surfer SEO review",
-      "Surfer SEO pricing",
-      "Surfer SEO vs Frase",
-      "SEO optimization tool",
-      "content optimization",
-      "keyword research",
-      "SEO content editor",
-      "Surfer SEO alternatives",
-      "best SEO tools 2025"
-    ],
-    "meta_description": "Surfer SEO review: pricing, features, pros & cons, and alternatives. Expert analysis with real user feedback and implementation tips for 2025.",
-    "schema_type": "SoftwareApplication"
-  },
-  {
-    "tool_name": "Frase",
-    "description": "Frase is an AI content optimization and SEO research tool that helps content creators research topics, optimize content, and improve search rankings.",
-    "key_features": [
-      "Content research tools",
-      "SEO optimization",
-      "Content briefs",
-      "Question research",
-      "Content scoring",
-      "Competitor analysis",
-      "AI writing assistant",
-      "Content templates",
-      "Analytics dashboard",
-      "Team collaboration",
-      "Content planning",
-      "Technical SEO insights"
-    ],
-    "pricing": {
-      "free": "No free plan available",
-      "basic": "Basic Plan - $44.99/month - 4 content briefs, basic features",
-      "pro": "Team Plan - $114.99/month - 30 content briefs, team features",
-      "enterprise": "Enterprise Plan - Custom pricing - Unlimited briefs, API access"
+    "schema": {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "Gemini",
+      "applicationCategory": "Multimodal AI",
+      "operatingSystem": "Web, Mobile, API",
+      "offers": {
+        "@type": "Offer",
+        "price": "19.99",
+        "priceCurrency": "USD"
+      }
     },
-    "target_keywords": [
-      "Frase",
-      "Frase review",
-      "Frase pricing",
-      "Frase vs Surfer SEO",
-      "content optimization",
-      "SEO research tool",
-      "content briefs",
-      "question research",
-      "Frase alternatives",
-      "best content optimization tools"
+    "features": [
+      "Multimodal Understanding",
+      "Google Workspace Integration",
+      "Real-time Web Access",
+      "Image Generation & Analysis",
+      "Code Generation",
+      "YouTube Video Analysis",
+      "Gmail Integration",
+      "Google Docs Collaboration",
+      "Multiple Model Sizes",
+      "Extensions Ecosystem"
     ],
-    "meta_description": "Frase review: pricing, features, pros & cons, and alternatives. Expert analysis with real user feedback and implementation tips for 2025.",
-    "schema_type": "SoftwareApplication"
-  },
-  {
-    "tool_name": "Midjourney",
-    "description": "Midjourney is an AI image generation platform that creates high-quality artwork and visual content using advanced AI models and user prompts.",
-    "key_features": [
-      "AI image generation",
-      "High-quality artwork creation",
-      "Custom style training",
-      "Multiple aspect ratios",
-      "Batch image generation",
-      "Community gallery",
-      "Discord integration",
-      "Advanced prompting",
-      "Style customization",
-      "Commercial usage rights",
-      "Fast generation speed",
-      "Artistic style variety"
+    "pros": [
+      "Deep Google ecosystem integration",
+      "Free tier with advanced features",
+      "Real-time web access",
+      "Multimodal capabilities",
+      "Fast response times",
+      "Direct YouTube integration"
     ],
-    "pricing": {
-      "free": "No free plan available",
-      "basic": "Basic Plan - $10/month - 200 images, basic features",
-      "pro": "Standard Plan - $30/month - Unlimited images, priority access",
-      "enterprise": "Pro Plan - $60/month - Unlimited images, stealth mode, API access"
+    "cons": [
+      "Occasional inaccuracies in responses",
+      "Less refined than competitors",
+      "Limited availability in some regions",
+      "Privacy concerns with Google",
+      "Inconsistent performance"
+    ],
+    "pricing": [
+      {
+        "plan": "Free",
+        "price": "$0/month",
+        "details": "Access to Gemini Pro, limited advanced features"
+      },
+      {
+        "plan": "Advanced",
+        "price": "$19.99/month",
+        "details": "Gemini Ultra, 2TB storage, advanced features in Google Workspace"
+      },
+      {
+        "plan": "Business",
+        "price": "$30/user/month",
+        "details": "Enterprise features, admin controls, enhanced support"
+      },
+      {
+        "plan": "Enterprise",
+        "price": "Custom",
+        "details": "Custom deployment, unlimited usage, dedicated support"
+      }
+    ],
+    "benchmarks": {
+      "content_quality": 8.5,
+      "ease_of_use": 8.7,
+      "value_for_money": 8.8,
+      "seo_features": 8.3,
+      "team_collaboration": 9.0,
+      "customer_support": 7.5,
+      "speed_score": 9.0,
+      "accuracy_score": 8.2,
+      "cost_efficiency": 8.5
     },
-    "target_keywords": [
-      "Midjourney",
-      "Midjourney review",
-      "Midjourney pricing",
-      "Midjourney vs DALL-E",
-      "AI image generation",
-      "AI art generator",
-      "Midjourney alternatives",
-      "AI artwork",
-      "best AI image generators 2025",
-      "AI art creation"
+    "related_tools": ["chatgpt", "claude", "copilot", "bard"],
+    "website_url": "https://gemini.google.com",
+    "logo": "/images/tools/gemini-logo.png",
+    "category": "Multimodal AI",
+    "developer": "Google DeepMind",
+    "founded_year": "2023",
+    "api_available": true,
+    "integrations": [
+      "Google Workspace",
+      "Gmail",
+      "Google Docs",
+      "Google Sheets",
+      "Google Drive",
+      "YouTube",
+      "Google Calendar",
+      "Android"
     ],
-    "meta_description": "Midjourney review: pricing, features, pros & cons, and alternatives. Expert analysis with real user feedback and implementation tips for 2025.",
-    "schema_type": "SoftwareApplication"
-  },
-  {
-    "tool_name": "DALL-E",
-    "description": "DALL-E is OpenAI's AI image generation system that creates images from text descriptions, offering high-quality visual content creation capabilities.",
-    "key_features": [
-      "Text-to-image generation",
-      "High-resolution output",
-      "Multiple image variations",
-      "Style customization",
-      "Commercial usage rights",
-      "API integration",
-      "ChatGPT integration",
-      "Image editing capabilities",
-      "Prompt engineering",
-      "Safe content filtering",
-      "Fast generation",
-      "Multiple aspect ratios"
+    "use_cases": [
+      {
+        "title": "Google Workspace Automation",
+        "description": "Automate tasks across Gmail, Docs, and Sheets with AI-powered assistance",
+        "ideal_for": "Business professionals, administrative staff"
+      },
+      {
+        "title": "Multimodal Content Creation",
+        "description": "Create content combining text, images, and data from various sources",
+        "ideal_for": "Content creators, marketers, designers"
+      },
+      {
+        "title": "Real-time Research",
+        "description": "Get up-to-date information with real-time web access and search integration",
+        "ideal_for": "Journalists, researchers, analysts"
+      },
+      {
+        "title": "Video Content Analysis",
+        "description": "Analyze and summarize YouTube videos directly within the interface",
+        "ideal_for": "Students, content reviewers, educators"
+      }
     ],
-    "pricing": {
-      "free": "No free plan available",
-      "basic": "ChatGPT Plus - $20/month - Includes DALL-E access",
-      "pro": "Enterprise - Custom pricing - API access, bulk generation",
-      "enterprise": "API Access - Pay-per-use pricing for developers"
-    },
-    "target_keywords": [
-      "DALL-E",
-      "DALL-E review",
-      "DALL-E pricing",
-      "DALL-E vs Midjourney",
-      "OpenAI image generation",
-      "AI image creation",
-      "DALL-E alternatives",
-      "text to image AI",
-      "best AI image generators 2025",
-      "OpenAI DALL-E"
-    ],
-    "meta_description": "DALL-E review: pricing, features, pros & cons, and alternatives. Expert analysis with real user feedback and implementation tips for 2025.",
-    "schema_type": "SoftwareApplication"
-  },
-  {
-    "tool_name": "HubSpot AI",
-    "description": "HubSpot AI is a comprehensive marketing automation platform with AI-powered features for lead generation, email marketing, and customer relationship management.",
-    "key_features": [
-      "Marketing automation",
-      "Lead generation tools",
-      "Email marketing",
-      "CRM integration",
-      "Content management",
-      "Analytics and reporting",
-      "AI-powered insights",
-      "Workflow automation",
-      "Social media management",
-      "SEO tools",
-      "Landing page builder",
-      "Customer segmentation"
-    ],
-    "pricing": {
-      "free": "Free Plan - Basic CRM, email marketing, forms",
-      "basic": "Starter Plan - $18/month - 1,000 contacts, basic automation",
-      "pro": "Professional Plan - $800/month - 2,000 contacts, advanced features",
-      "enterprise": "Enterprise Plan - $3,600/month - 10,000 contacts, full features"
-    },
-    "target_keywords": [
-      "HubSpot AI",
-      "HubSpot review",
-      "HubSpot pricing",
-      "HubSpot vs Mailchimp",
-      "marketing automation",
-      "CRM platform",
-      "email marketing",
-      "lead generation",
-      "HubSpot alternatives",
-      "best marketing automation tools"
-    ],
-    "meta_description": "HubSpot AI review: pricing, features, pros & cons, and alternatives. Expert analysis with real user feedback and implementation tips for 2025.",
-    "schema_type": "SoftwareApplication"
-  },
-  {
-    "tool_name": "Mailchimp AI",
-    "description": "Mailchimp AI is an AI-enhanced email marketing platform that helps businesses create, send, and optimize email campaigns with intelligent automation and personalization.",
-    "key_features": [
-      "Email marketing automation",
-      "AI-powered content suggestions",
-      "Personalization tools",
-      "A/B testing",
-      "Analytics and reporting",
-      "Template library",
-      "List management",
-      "Campaign optimization",
-      "Mobile app",
-      "Integration capabilities",
-      "Subject line optimization",
-      "Send time optimization"
-    ],
-    "pricing": {
-      "free": "Free Plan - 500 contacts, 1,000 emails/month",
-      "basic": "Essentials Plan - $13/month - 500 contacts, basic automation",
-      "pro": "Standard Plan - $20/month - 500 contacts, advanced features",
-      "enterprise": "Premium Plan - $350/month - 10,000 contacts, advanced automation"
-    },
-    "target_keywords": [
-      "Mailchimp AI",
-      "Mailchimp review",
-      "Mailchimp pricing",
-      "Mailchimp vs HubSpot",
-      "email marketing",
-      "email automation",
-      "newsletter platform",
-      "email campaigns",
-      "Mailchimp alternatives",
-      "best email marketing tools"
-    ],
-    "meta_description": "Mailchimp AI review: pricing, features, pros & cons, and alternatives. Expert analysis with real user feedback and implementation tips for 2025.",
-    "schema_type": "SoftwareApplication"
-  },
-  {
-    "tool_name": "Hootsuite AI",
-    "description": "Hootsuite AI is an AI-powered social media management platform that helps businesses schedule posts, analyze performance, and engage with audiences across multiple platforms.",
-    "key_features": [
-      "Social media scheduling",
-      "Multi-platform management",
-      "Content calendar",
-      "Analytics and reporting",
-      "Team collaboration",
-      "Content curation",
-      "Hashtag suggestions",
-      "Performance insights",
-      "Automated posting",
-      "Engagement monitoring",
-      "Competitor analysis",
-      "Mobile app"
-    ],
-    "pricing": {
-      "free": "No free plan available",
-      "basic": "Professional Plan - $99/month - 10 social profiles, basic analytics",
-      "pro": "Team Plan - $249/month - 20 social profiles, advanced features",
-      "enterprise": "Enterprise Plan - Custom pricing - Unlimited profiles, API access"
-    },
-    "target_keywords": [
-      "Hootsuite AI",
-      "Hootsuite review",
-      "Hootsuite pricing",
-      "Hootsuite vs Buffer",
-      "social media management",
-      "social media scheduling",
-      "social media automation",
-      "Hootsuite alternatives",
-      "best social media tools",
-      "social media analytics"
-    ],
-    "meta_description": "Hootsuite AI review: pricing, features, pros & cons, and alternatives. Expert analysis with real user feedback and implementation tips for 2025.",
-    "schema_type": "SoftwareApplication"
-  },
-  {
-    "tool_name": "Buffer AI",
-    "description": "Buffer AI is an AI-enhanced social media scheduling platform that helps individuals and businesses manage their social media presence with smart automation and analytics.",
-    "key_features": [
-      "Social media scheduling",
-      "Content calendar",
-      "Analytics dashboard",
-      "Team collaboration",
-      "Content suggestions",
-      "Optimal timing",
-      "Multi-platform posting",
-      "Engagement tracking",
-      "Mobile app",
-      "Integration capabilities",
-      "Performance insights",
-      "Content recycling"
-    ],
-    "pricing": {
-      "free": "Free Plan - 3 social accounts, 10 scheduled posts",
-      "basic": "Essentials Plan - $6/month - 8 social accounts, 100 posts",
-      "pro": "Team Plan - $12/month - 8 social accounts, 2,000 posts",
-      "enterprise": "Agency Plan - $60/month - 25 social accounts, unlimited posts"
-    },
-    "target_keywords": [
-      "Buffer AI",
-      "Buffer review",
-      "Buffer pricing",
-      "Buffer vs Hootsuite",
-      "social media scheduling",
-      "social media management",
-      "Buffer alternatives",
-      "social media automation",
-      "best social media tools",
-      "social media calendar"
-    ],
-    "meta_description": "Buffer AI review: pricing, features, pros & cons, and alternatives. Expert analysis with real user feedback and implementation tips for 2025.",
-    "schema_type": "SoftwareApplication"
-  },
-  {
-    "tool_name": "Ahrefs AI",
-    "description": "Ahrefs AI is an AI-powered SEO and keyword research tool that provides comprehensive website analysis, competitor research, and content optimization insights.",
-    "key_features": [
-      "Keyword research",
-      "Site audit tools",
-      "Competitor analysis",
-      "Backlink analysis",
-      "Content explorer",
-      "Rank tracking",
-      "SEO toolbar",
-      "Content gap analysis",
-      "Technical SEO",
-      "Local SEO tools",
-      "API access",
-      "Advanced reporting"
-    ],
-    "pricing": {
-      "free": "No free plan available",
-      "basic": "Lite Plan - $99/month - 500 keywords, basic features",
-      "pro": "Standard Plan - $199/month - 1,500 keywords, advanced features",
-      "enterprise": "Advanced Plan - $399/month - 10,000 keywords, full features"
-    },
-    "target_keywords": [
-      "Ahrefs AI",
-      "Ahrefs review",
-      "Ahrefs pricing",
-      "Ahrefs vs Semrush",
-      "SEO tools",
-      "keyword research",
-      "backlink analysis",
-      "Ahrefs alternatives",
-      "best SEO tools 2025",
-      "SEO analysis"
-    ],
-    "meta_description": "Ahrefs AI review: pricing, features, pros & cons, and alternatives. Expert analysis with real user feedback and implementation tips for 2025.",
-    "schema_type": "SoftwareApplication"
-  },
-  {
-    "tool_name": "Semrush AI",
-    "description": "Semrush AI is an AI-enhanced SEO and competitive analysis platform that helps marketers research keywords, analyze competitors, and optimize their digital marketing strategies.",
-    "key_features": [
-      "Keyword research",
-      "Competitive analysis",
-      "Site audit",
-      "Position tracking",
-      "Backlink analysis",
-      "Content marketing tools",
-      "Social media analytics",
-      "PPC research",
-      "Local SEO",
-      "Technical SEO",
-      "API access",
-      "Custom reports"
-    ],
-    "pricing": {
-      "free": "No free plan available",
-      "basic": "Pro Plan - $119.95/month - 500 keywords, basic features",
-      "pro": "Guru Plan - $229.95/month - 1,500 keywords, advanced features",
-      "enterprise": "Business Plan - $449.95/month - 5,000 keywords, full features"
-    },
-    "target_keywords": [
-      "Semrush AI",
-      "Semrush review",
-      "Semrush pricing",
-      "Semrush vs Ahrefs",
-      "SEO tools",
-      "competitive analysis",
-      "keyword research",
-      "Semrush alternatives",
-      "best SEO tools 2025",
-      "digital marketing tools"
-    ],
-    "meta_description": "Semrush AI review: pricing, features, pros & cons, and alternatives. Expert analysis with real user feedback and implementation tips for 2025.",
-    "schema_type": "SoftwareApplication"
-  },
-  {
-    "tool_name": "Grammarly",
-    "description": "Grammarly is an AI-powered writing assistant that helps users improve their writing with grammar checking, style suggestions, and tone analysis across various platforms.",
-    "key_features": [
-      "Grammar checking",
-      "Spell checking",
-      "Style suggestions",
-      "Tone analysis",
-      "Plagiarism detection",
-      "Writing insights",
-      "Multi-platform support",
-      "Team collaboration",
-      "Custom style guides",
-      "Vocabulary enhancement",
-      "Readability analysis",
-      "Citation suggestions"
-    ],
-    "pricing": {
-      "free": "Free Plan - Basic grammar and spell checking",
-      "basic": "Premium Plan - $12/month - Advanced grammar, style, tone",
-      "pro": "Business Plan - $15/month per user - Team features, analytics",
-      "enterprise": "Enterprise Plan - Custom pricing - SSO, advanced security"
-    },
-    "target_keywords": [
-      "Grammarly",
-      "Grammarly review",
-      "Grammarly pricing",
-      "grammar checker",
-      "writing assistant",
-      "spell checker",
-      "Grammarly alternatives",
-      "best writing tools",
-      "AI writing assistant",
-      "writing improvement"
-    ],
-    "meta_description": "Grammarly review: pricing, features, pros & cons, and alternatives. Expert analysis with real user feedback and implementation tips for 2025.",
-    "schema_type": "SoftwareApplication"
-  },
-  {
-    "tool_name": "Canva AI",
-    "description": "Canva AI is an AI-powered design platform that helps users create professional graphics, presentations, and visual content with intelligent design suggestions and automation.",
-    "key_features": [
-      "AI design generation",
-      "Template library",
-      "Brand kit management",
-      "Team collaboration",
-      "Design automation",
-      "Photo editing",
-      "Video creation",
-      "Presentation tools",
-      "Social media templates",
-      "Print design",
-      "Mobile app",
-      "Integration capabilities"
-    ],
-    "pricing": {
-      "free": "Free Plan - Basic templates, limited features",
-      "basic": "Pro Plan - $12.99/month - Premium templates, advanced features",
-      "pro": "Team Plan - $14.99/month per user - Team collaboration, brand kit",
-      "enterprise": "Enterprise Plan - Custom pricing - SSO, advanced security"
-    },
-    "target_keywords": [
-      "Canva AI",
-      "Canva review",
-      "Canva pricing",
-      "design platform",
-      "graphic design",
-      "AI design tools",
-      "Canva alternatives",
-      "best design tools",
-      "visual content creation",
-      "design templates"
-    ],
-    "meta_description": "Canva AI review: pricing, features, pros & cons, and alternatives. Expert analysis with real user feedback and implementation tips for 2025.",
-    "schema_type": "SoftwareApplication"
+    "last_updated": "2025-01-15",
+    "version": "Gemini Ultra 1.5",
+    "platforms": ["Web", "Android", "iOS", "API"],
+    "languages": ["40+ languages supported"],
+    "support": {
+      "email": true,
+      "chat": true,
+      "phone": false,
+      "documentation": true,
+      "community": true
+    }
   }
 ]

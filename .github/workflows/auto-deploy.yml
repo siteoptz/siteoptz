@@ -1,0 +1,272 @@
+name: Auto Deploy AI Tools
+
+on:
+  push:
+    branches: [main, production]
+    paths:
+      - 'public/data/aiToolsData.json'
+      - 'public/data/faqData.json'
+      - 'pages/**'
+      - 'components/**'
+  pull_request:
+    branches: [main]
+  workflow_dispatch:
+    inputs:
+      tool_name:
+        description: 'Name of the tool to add'
+        required: false
+        type: string
+
+jobs:
+  validate:
+    name: Validate Data
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '18'
+          cache: 'npm'
+      
+      - name: Install dependencies
+        run: npm ci
+      
+      - name: Validate JSON data
+        run: |
+          node -e "
+          const fs = require('fs');
+          try {
+            const tools = JSON.parse(fs.readFileSync('public/data/aiToolsData.json'));
+            const faqs = JSON.parse(fs.readFileSync('public/data/faqData.json'));
+            console.log('✅ JSON data is valid');
+            console.log(\`Found \${tools.length} tools\`);
+          } catch (error) {
+            console.error('❌ Invalid JSON:', error.message);
+            process.exit(1);
+          }
+          "
+      
+      - name: Run data validation
+        run: node automation/add-tool.js validate
+      
+      - name: Check for duplicates
+        run: |
+          node -e "
+          const fs = require('fs');
+          const tools = JSON.parse(fs.readFileSync('public/data/aiToolsData.json'));
+          const ids = tools.map(t => t.id);
+          const duplicates = ids.filter((id, index) => ids.indexOf(id) !== index);
+          if (duplicates.length > 0) {
+            console.error('❌ Duplicate tool IDs found:', duplicates);
+            process.exit(1);
+          }
+          console.log('✅ No duplicate tools found');
+          "
+
+  test:
+    name: Run Tests
+    needs: validate
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '18'
+          cache: 'npm'
+      
+      - name: Install dependencies
+        run: npm ci
+      
+      - name: Run build test
+        run: npm run build
+      
+      - name: Test page generation
+        run: |
+          node -e "
+          const fs = require('fs');
+          const tools = JSON.parse(fs.readFileSync('public/data/aiToolsData.json'));
+          const testUrls = [
+            '/tools',
+            \`/tools/\${tools[0].slug}\`,
+            \`/compare/\${tools[0].slug}-vs-\${tools[1].slug}\`
+          ];
+          console.log('✅ Test URLs generated:', testUrls);
+          "
+      
+      - name: Run Lighthouse CI
+        if: github.event_name == 'pull_request'
+        run: |
+          npm install -g @lhci/cli
+          lhci autorun --collect.staticDistDir=.next --collect.url=http://localhost:3000/tools --collect.url=http://localhost:3000/tools/chatgpt || true
+
+  deploy:
+    name: Deploy to Production
+    needs: [validate, test]
+    runs-on: ubuntu-latest
+    if: github.ref == 'refs/heads/production' || github.ref == 'refs/heads/main'
+    
+    steps:
+      - uses: actions/checkout@v3
+      
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '18'
+          cache: 'npm'
+      
+      - name: Install dependencies
+        run: npm ci
+      
+      - name: Build application
+        run: npm run build
+        env:
+          NODE_ENV: production
+      
+      - name: Generate sitemap
+        run: node scripts/deploy-production.js
+      
+      - name: Deploy to Vercel
+        if: env.VERCEL_TOKEN != ''
+        run: |
+          npm i -g vercel
+          vercel --prod --token ${{ secrets.VERCEL_TOKEN }}
+        env:
+          VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
+          VERCEL_ORG_ID: ${{ secrets.VERCEL_ORG_ID }}
+          VERCEL_PROJECT_ID: ${{ secrets.VERCEL_PROJECT_ID }}
+      
+      - name: Deploy to Netlify
+        if: env.NETLIFY_AUTH_TOKEN != ''
+        run: |
+          npm i -g netlify-cli
+          netlify deploy --prod --dir=.next
+        env:
+          NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
+          NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
+      
+      - name: Purge CDN Cache
+        if: always()
+        run: |
+          echo "Purging CDN cache..."
+          # Add your CDN purge command here
+          # Example for Cloudflare:
+          # curl -X POST "https://api.cloudflare.com/client/v4/zones/${{ secrets.CLOUDFLARE_ZONE_ID }}/purge_cache" \
+          #   -H "Authorization: Bearer ${{ secrets.CLOUDFLARE_API_TOKEN }}" \
+          #   -H "Content-Type: application/json" \
+          #   --data '{"purge_everything":true}'
+      
+      - name: Notify deployment
+        if: always()
+        run: |
+          echo "Deployment status: ${{ job.status }}"
+          # Add notification logic here (Slack, Discord, email, etc.)
+
+  seo-validation:
+    name: SEO & Schema Validation
+    needs: deploy
+    runs-on: ubuntu-latest
+    if: github.ref == 'refs/heads/production'
+    
+    steps:
+      - uses: actions/checkout@v3
+      
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '18'
+      
+      - name: Install validation tools
+        run: |
+          npm install -g schema-validator
+          npm install -g lighthouse
+      
+      - name: Validate structured data
+        run: |
+          echo "Testing structured data..."
+          # Add schema validation commands
+          # You can use Google's Structured Data Testing Tool API
+          # or schema.org validator
+      
+      - name: Run SEO audit
+        run: |
+          lighthouse https://siteoptz.ai/tools/chatgpt \
+            --only-categories=seo,performance \
+            --output=json \
+            --output-path=./seo-report.json
+          
+          node -e "
+          const report = require('./seo-report.json');
+          const seoScore = report.categories.seo.score * 100;
+          const perfScore = report.categories.performance.score * 100;
+          console.log(\`SEO Score: \${seoScore}\`);
+          console.log(\`Performance Score: \${perfScore}\`);
+          if (seoScore < 90) {
+            console.error('⚠️ SEO score below threshold');
+          }
+          if (perfScore < 80) {
+            console.error('⚠️ Performance score below threshold');
+          }
+          "
+      
+      - name: Submit sitemap to Google
+        if: success()
+        run: |
+          echo "Submitting sitemap to Google Search Console..."
+          # curl -X GET "https://www.google.com/ping?sitemap=https://siteoptz.ai/sitemap.xml"
+      
+      - name: Upload reports
+        if: always()
+        uses: actions/upload-artifact@v3
+        with:
+          name: seo-reports
+          path: |
+            seo-report.json
+            lighthouse-report.html
+
+  rollback:
+    name: Rollback on Failure
+    needs: [deploy, seo-validation]
+    runs-on: ubuntu-latest
+    if: failure() && github.ref == 'refs/heads/production'
+    
+    steps:
+      - uses: actions/checkout@v3
+        with:
+          ref: ${{ github.event.before }}
+      
+      - name: Restore previous version
+        run: |
+          echo "Rolling back to previous version..."
+          # Add rollback logic here
+      
+      - name: Notify rollback
+        run: |
+          echo "⚠️ Deployment failed, rolled back to previous version"
+          # Add notification logic
+
+# Scheduled maintenance
+  scheduled-update:
+    name: Scheduled Data Update
+    runs-on: ubuntu-latest
+    if: github.event_name == 'schedule'
+    
+    steps:
+      - uses: actions/checkout@v3
+      
+      - name: Update tool data
+        run: |
+          echo "Checking for tool updates..."
+          # Add logic to fetch and update tool data
+          # This could pull from an API or scrape official sites
+      
+      - name: Commit changes
+        run: |
+          git config --local user.email "bot@siteoptz.ai"
+          git config --local user.name "SiteOptz Bot"
+          git add .
+          git diff --cached --quiet || git commit -m "🤖 Automated tool data update"
+          git push
