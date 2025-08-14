@@ -4,7 +4,7 @@
       "toolName": "ChatGPT",
       "vendor": "OpenAI",
       "description": "ChatGPT is an AI chatbot developed by OpenAI, designed to generate human-like text responses, assist with tasks, and integrate into workflows. It offers versatile AI capabilities for content creation, coding, and general assistance.",
-      "logo_url": "/images/tools/chatgpt-logo.png",
+      "logo_url": "/images/tools/chatgpt-logo.svg",
       "pricing": {
         "tier": "Freemium",
         "price": "$20/month",
@@ -68,7 +68,7 @@
       "toolName": "Claude",
       "vendor": "Anthropic",
       "description": "Claude is an AI assistant created by Anthropic, focused on safety, natural conversation, and large context understanding. It excels at complex reasoning and long-form content analysis.",
-      "logo_url": "/images/tools/claude-logo.png",
+      "logo_url": "/images/tools/claude-logo.svg",
       "pricing": {
         "tier": "Premium",
         "price": "$20/month",
@@ -126,7 +126,7 @@
       "toolName": "Jasper AI",
       "vendor": "Jasper",
       "description": "Jasper AI is a comprehensive AI content creation platform designed for marketers and businesses. It offers 50+ templates, brand voice training, and advanced SEO optimization capabilities.",
-      "logo_url": "/images/tools/jasper-logo.png",
+      "logo_url": "/images/tools/jasper-ai-logo.svg",
       "pricing": {
         "tier": "Premium",
         "price": "$39/month",
@@ -190,7 +190,7 @@
       "toolName": "Copy.ai",
       "vendor": "Copy.ai",
       "description": "Copy.ai is an AI-powered copywriting platform that helps create marketing copy, sales content, and creative writing. It offers 90+ templates and workflows for various content types.",
-      "logo_url": "/images/tools/copy-ai-logo.png",
+      "logo_url": "/images/tools/copy-ai-logo.svg",
       "pricing": {
         "tier": "Freemium",
         "price": "$36/month",
@@ -254,7 +254,7 @@
       "toolName": "Writesonic",
       "vendor": "Writesonic",
       "description": "Writesonic is an AI writing platform that creates content, copies, and images. It offers factual and up-to-date content with real-time data integration and SEO optimization.",
-      "logo_url": "/images/tools/writesonic-logo.png",
+      "logo_url": "/images/tools/writesonic-logo.svg",
       "pricing": {
         "tier": "Freemium",
         "price": "$19/month",
@@ -318,7 +318,7 @@
       "toolName": "Surfer SEO",
       "vendor": "Surfer",
       "description": "Surfer SEO is an AI-powered SEO optimization platform that helps create data-driven content. It provides keyword research, content optimization, and SERP analysis for better search rankings.",
-      "logo_url": "/images/tools/surfer-seo-logo.png",
+      "logo_url": "/images/tools/surfer-seo-logo.svg",
       "pricing": {
         "tier": "Premium",
         "price": "$89/month",
@@ -382,7 +382,7 @@
       "toolName": "Frase",
       "vendor": "Frase",
       "description": "Frase is an AI-powered content optimization platform that helps research, write, and optimize SEO content. It combines content creation with SEO research and optimization in one platform.",
-      "logo_url": "/images/tools/frase-logo.png",
+      "logo_url": "/images/tools/frase-logo.svg",
       "pricing": {
         "tier": "Premium",
         "price": "$45/month",
@@ -446,7 +446,7 @@
       "toolName": "Midjourney",
       "vendor": "Midjourney Inc.",
       "description": "Midjourney is an AI image generation platform that creates high-quality, artistic images from text descriptions. It's known for producing some of the most visually appealing AI-generated artwork.",
-      "logo_url": "/images/tools/midjourney-logo.png",
+      "logo_url": "/images/tools/midjourney-logo.svg",
       "pricing": {
         "tier": "Premium",
         "price": "$30/month",
@@ -510,7 +510,7 @@
       "toolName": "DALL-E",
       "vendor": "OpenAI",
       "description": "DALL-E is OpenAI's AI image generation system that creates realistic images and art from natural language descriptions. It offers precise control over style, composition, and content.",
-      "logo_url": "/images/tools/dalle-logo.png",
+      "logo_url": "/images/tools/dall-e-logo.svg",
       "pricing": {
         "tier": "Freemium",
         "price": "$15/month",
@@ -569,7 +569,7 @@
       "toolName": "Gemini",
       "vendor": "Google",
       "description": "Gemini is Google's advanced AI model designed for multimodal understanding and generation. It excels at processing text, images, and code with sophisticated reasoning capabilities.",
-      "logo_url": "/images/tools/gemini-logo.png",
+      "logo_url": "/images/tools/gemini-logo.svg",
       "pricing": {
         "tier": "Freemium",
         "price": "$20/month",
@@ -633,7 +633,7 @@
       "toolName": "Perplexity AI",
       "vendor": "Perplexity",
       "description": "Perplexity AI is an AI-powered search engine that provides accurate, real-time answers with cited sources. It combines search capabilities with conversational AI for research and information discovery.",
-      "logo_url": "/images/tools/perplexity-logo.png",
+      "logo_url": "/images/tools/perplexity-ai-logo.svg",
       "pricing": {
         "tier": "Freemium",
         "price": "$20/month",
@@ -697,7 +697,7 @@
       "toolName": "GitHub Copilot",
       "vendor": "GitHub/Microsoft",
       "description": "GitHub Copilot is an AI-powered code completion tool that helps developers write code faster and more efficiently. It provides intelligent suggestions and can generate entire functions.",
-      "logo_url": "/images/tools/github-copilot-logo.png",
+      "logo_url": "/images/tools/github-copilot-logo.svg",
       "pricing": {
         "tier": "Premium",
         "price": "$10/month",
@@ -761,7 +761,7 @@
       "toolName": "Notion AI",
       "vendor": "Notion Labs",
       "description": "Notion AI is an integrated AI assistant within the Notion workspace that helps with writing, editing, summarizing, and organizing content. It seamlessly integrates with Notion's productivity platform.",
-      "logo_url": "/images/tools/notion-ai-logo.png",
+      "logo_url": "/images/tools/notion-ai-logo.svg",
       "pricing": {
         "tier": "Premium",
         "price": "$10/month",

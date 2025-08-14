@@ -169,9 +169,14 @@ export default function HomePage({ featuredTools, popularComparisons }: HomePage
                         alt={`${tool.name} logo`}
                         className="w-12 h-12 object-contain"
                         onError={(e) => {
-                          e.currentTarget.src = '/images/placeholder-logo.png';
+                          e.currentTarget.style.display = 'none';
+                          const sibling = e.currentTarget.nextElementSibling as HTMLElement;
+                          if (sibling) sibling.style.display = 'flex';
                         }}
                       />
+                      <div className="w-12 h-12 bg-gradient-to-br from-blue-500 to-purple-600 rounded-lg flex items-center justify-center text-white text-lg font-bold" style={{display: 'none'}}>
+                        {tool.name.charAt(0)}
+                      </div>
                     </div>
                     <div>
                       <h3 className="text-xl font-semibold text-gray-900">{tool.name}</h3>
@@ -234,26 +239,46 @@ export default function HomePage({ featuredTools, popularComparisons }: HomePage
               </p>
             </div>
 
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {popularComparisons.slice(0, 6).map((comparison, index) => (
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+              {popularComparisons.slice(0, 12).map((comparison, index) => (
                 <div key={index} className="bg-white rounded-2xl shadow-lg hover:shadow-xl transition-shadow p-6">
                   <div className="flex items-center justify-between mb-4">
                     <div className="flex items-center gap-3">
-                      <img 
-                        src={comparison.tool1.logo} 
-                        alt={comparison.tool1.name}
-                        className="w-10 h-10 object-contain"
-                      />
-                      <span className="font-semibold">{comparison.tool1.name}</span>
+                      <div className="w-10 h-10 bg-gray-100 rounded-lg flex items-center justify-center">
+                        <img 
+                          src={comparison.tool1.logo} 
+                          alt={comparison.tool1.name}
+                          className="w-8 h-8 object-contain"
+                          onError={(e) => {
+                            e.currentTarget.style.display = 'none';
+                            const sibling = e.currentTarget.nextElementSibling as HTMLElement;
+                            if (sibling) sibling.style.display = 'flex';
+                          }}
+                        />
+                        <div className="w-8 h-8 bg-gradient-to-br from-blue-500 to-purple-600 rounded-md flex items-center justify-center text-white text-xs font-bold" style={{display: 'none'}}>
+                          {comparison.tool1.name.charAt(0)}
+                        </div>
+                      </div>
+                      <span className="font-semibold text-sm">{comparison.tool1.name}</span>
                     </div>
-                    <div className="text-gray-400 font-bold">VS</div>
+                    <div className="text-gray-400 font-bold text-sm">VS</div>
                     <div className="flex items-center gap-3">
-                      <span className="font-semibold">{comparison.tool2.name}</span>
-                      <img 
-                        src={comparison.tool2.logo} 
-                        alt={comparison.tool2.name}
-                        className="w-10 h-10 object-contain"
-                      />
+                      <span className="font-semibold text-sm">{comparison.tool2.name}</span>
+                      <div className="w-10 h-10 bg-gray-100 rounded-lg flex items-center justify-center">
+                        <img 
+                          src={comparison.tool2.logo} 
+                          alt={comparison.tool2.name}
+                          className="w-8 h-8 object-contain"
+                          onError={(e) => {
+                            e.currentTarget.style.display = 'none';
+                            const sibling = e.currentTarget.nextElementSibling as HTMLElement;
+                            if (sibling) sibling.style.display = 'flex';
+                          }}
+                        />
+                        <div className="w-8 h-8 bg-gradient-to-br from-green-500 to-blue-600 rounded-md flex items-center justify-center text-white text-xs font-bold" style={{display: 'none'}}>
+                          {comparison.tool2.name.charAt(0)}
+                        </div>
+                      </div>
                     </div>
                   </div>
 
@@ -382,14 +407,35 @@ export const getStaticProps: GetStaticProps = async () => {
       .filter((tool: any) => tool.rating >= 4.0)
       .slice(0, 12);
 
-    // Create popular comparisons using transformed tools
+    // Create comprehensive popular comparisons using transformed tools
     const popularComparisons = [
+      // Language Models & Chatbots
       { tool1: transformedTools.find((t: any) => t.slug === 'chatgpt'), tool2: transformedTools.find((t: any) => t.slug === 'claude') },
       { tool1: transformedTools.find((t: any) => t.slug === 'chatgpt'), tool2: transformedTools.find((t: any) => t.slug === 'gemini') },
       { tool1: transformedTools.find((t: any) => t.slug === 'claude'), tool2: transformedTools.find((t: any) => t.slug === 'gemini') },
+      { tool1: transformedTools.find((t: any) => t.slug === 'chatgpt'), tool2: transformedTools.find((t: any) => t.slug === 'perplexity-ai') },
+      
+      // Writing & Content Creation
       { tool1: transformedTools.find((t: any) => t.slug === 'jasper-ai'), tool2: transformedTools.find((t: any) => t.slug === 'copy.ai') },
-      { tool1: transformedTools.find((t: any) => t.slug === 'midjourney'), tool2: transformedTools.find((t: any) => t.slug === 'dall-e-3') },
-      { tool1: transformedTools.find((t: any) => t.slug === 'notion-ai'), tool2: transformedTools.find((t: any) => t.slug === 'gamma') }
+      { tool1: transformedTools.find((t: any) => t.slug === 'jasper-ai'), tool2: transformedTools.find((t: any) => t.slug === 'writesonic') },
+      { tool1: transformedTools.find((t: any) => t.slug === 'copy.ai'), tool2: transformedTools.find((t: any) => t.slug === 'writesonic') },
+      { tool1: transformedTools.find((t: any) => t.slug === 'chatgpt'), tool2: transformedTools.find((t: any) => t.slug === 'jasper-ai') },
+      
+      // SEO & Content Optimization
+      { tool1: transformedTools.find((t: any) => t.slug === 'surfer-seo'), tool2: transformedTools.find((t: any) => t.slug === 'frase') },
+      { tool1: transformedTools.find((t: any) => t.slug === 'jasper-ai'), tool2: transformedTools.find((t: any) => t.slug === 'surfer-seo') },
+      
+      // Image Generation
+      { tool1: transformedTools.find((t: any) => t.slug === 'midjourney'), tool2: transformedTools.find((t: any) => t.slug === 'dall-e') },
+      { tool1: transformedTools.find((t: any) => t.slug === 'midjourney'), tool2: transformedTools.find((t: any) => t.slug === 'chatgpt') },
+      
+      // Coding & Development
+      { tool1: transformedTools.find((t: any) => t.slug === 'github-copilot'), tool2: transformedTools.find((t: any) => t.slug === 'chatgpt') },
+      { tool1: transformedTools.find((t: any) => t.slug === 'github-copilot'), tool2: transformedTools.find((t: any) => t.slug === 'claude') },
+      
+      // Productivity & Workplace
+      { tool1: transformedTools.find((t: any) => t.slug === 'notion-ai'), tool2: transformedTools.find((t: any) => t.slug === 'chatgpt') },
+      { tool1: transformedTools.find((t: any) => t.slug === 'notion-ai'), tool2: transformedTools.find((t: any) => t.slug === 'claude') }
     ].filter(comparison => comparison.tool1 && comparison.tool2);
 
     return {
