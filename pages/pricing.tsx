@@ -57,8 +57,8 @@ export default function PricingPage({ tools, faqs }: { tools: any[], faqs: any }
   }, [router.query, tools]);
 
   // Save selection when user changes tool
-  const handleToolChange = (toolName) => {
-    const tool = tools.find((t) => t.name === toolName);
+  const handleToolChange = (toolName: string) => {
+    const tool = tools.find((t: any) => t.name === toolName);
     setSelectedTool(tool);
     setSelectedPlan(null); // Reset plan selection when tool changes
     localStorage.setItem("selectedTool", toolName);
