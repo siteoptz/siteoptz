@@ -38,7 +38,7 @@ export default function PricingPage({ tools, faqs }: { tools: any[], faqs: any }
         
         // If plan parameter is provided, set it as well
         if (planParam && foundTool.pricing) {
-          const foundPlan = foundTool.pricing.find((p) => p.plan === planParam);
+          const foundPlan = foundTool.pricing.find((p: any) => p.plan === planParam);
           if (foundPlan) {
             setSelectedPlan(foundPlan);
           }
