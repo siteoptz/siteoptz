@@ -1,0 +1,112 @@
+{
+  "general_faqs": [
+    {
+      "question": "What are AI tools?",
+      "answer": "AI tools are software applications that use artificial intelligence to automate, enhance, or streamline various tasks. These tools can help with content creation, data analysis, image generation, coding, and many other activities."
+    },
+    {
+      "question": "How do I choose the right AI tool for my needs?",
+      "answer": "Consider your specific use case, budget, required features, integration needs, and team size. Our comparison guides help you evaluate tools based on pricing, features, pros and cons, and user reviews."
+    },
+    {
+      "question": "Are AI tools worth the investment?",
+      "answer": "Yes, for most businesses and individuals. AI tools can significantly increase productivity, reduce costs, and improve output quality. The ROI typically becomes positive within the first few months of use."
+    },
+    {
+      "question": "Do I need technical skills to use AI tools?",
+      "answer": "Most modern AI tools are designed for non-technical users with intuitive interfaces. However, some advanced features or developer-focused tools may require technical knowledge."
+    },
+    {
+      "question": "Can I try AI tools before purchasing?",
+      "answer": "Many AI tools offer free trials, freemium plans, or money-back guarantees. We recommend testing tools with your specific use cases before committing to a paid plan."
+    }
+  ],
+  "comparison_faqs": [
+    {
+      "question": "ChatGPT vs Jasper AI - Which is better for content creation?",
+      "answer": "Jasper AI is specifically designed for marketing and business content with 50+ templates and brand voice training. ChatGPT is more versatile but requires more prompting expertise. Choose Jasper for marketing-focused content, ChatGPT for general AI assistance."
+    },
+    {
+      "question": "What's the difference between Claude and ChatGPT?",
+      "answer": "Claude excels at complex reasoning and has a larger context window (200k tokens vs ChatGPT's 32k), making it better for long documents. ChatGPT has more integrations and a free tier. Claude is better for analysis, ChatGPT for general use."
+    },
+    {
+      "question": "Midjourney vs DALL-E - Which AI image generator should I choose?",
+      "answer": "Midjourney produces more artistic, stylized images and has a strong creative community. DALL-E creates more realistic images with better prompt understanding. Choose Midjourney for artistic content, DALL-E for realistic images."
+    },
+    {
+      "question": "Surfer SEO vs Frase - Which is better for SEO content?",
+      "answer": "Surfer SEO offers more comprehensive SERP analysis and data-driven insights but is pricier. Frase excels at content research and question-based optimization at a lower cost. Choose Surfer for advanced SEO teams, Frase for content creators."
+    },
+    {
+      "question": "Free vs Paid AI tools - What's the difference?",
+      "answer": "Free tools typically have usage limits, fewer features, and limited support. Paid tools offer unlimited usage, advanced features, priority support, and commercial rights. Paid plans are worth it for regular business use."
+    }
+  ],
+  "pricing_faqs": [
+    {
+      "question": "How much do AI tools typically cost?",
+      "answer": "AI tool pricing varies widely: Free tiers ($0), Basic plans ($10-30/month), Professional plans ($30-100/month), and Enterprise plans ($100+/month). Costs depend on features, usage limits, and support level."
+    },
+    {
+      "question": "Are there any completely free AI tools?",
+      "answer": "Yes, several tools offer generous free tiers: ChatGPT (GPT-3.5), Copy.ai (2,000 words/month), Writesonic (10,000 words/month), and Gemini Pro. However, paid plans unlock more features and higher limits."
+    },
+    {
+      "question": "What factors affect AI tool pricing?",
+      "answer": "Key pricing factors include: usage volume (words, images, queries), model sophistication (GPT-4 vs GPT-3.5), features access, team collaboration tools, support level, and commercial usage rights."
+    },
+    {
+      "question": "Can I switch between AI tool plans?",
+      "answer": "Most AI tools allow plan upgrades/downgrades with prorated billing. Some offer annual discounts (typically 10-20% savings). Check each tool's specific terms for plan change policies."
+    },
+    {
+      "question": "Do AI tools offer refunds?",
+      "answer": "Many AI tools offer money-back guarantees (typically 14-30 days) or free trials to test before purchasing. Always check the refund policy before subscribing to paid plans."
+    }
+  ],
+  "technical_faqs": [
+    {
+      "question": "Do AI tools work offline?",
+      "answer": "Most AI tools require internet connectivity as they rely on cloud-based AI models. Some tools offer limited offline functionality, but full features typically need an active internet connection."
+    },
+    {
+      "question": "Can I integrate AI tools with my existing software?",
+      "answer": "Many AI tools offer APIs, browser extensions, and integrations with popular platforms like WordPress, Google Docs, Slack, and Zapier. Check each tool's integration capabilities before choosing."
+    },
+    {
+      "question": "Are AI tools secure and private?",
+      "answer": "Reputable AI tools implement strong security measures including encryption, secure data centers, and compliance with privacy regulations. Always review privacy policies and security practices before using sensitive data."
+    },
+    {
+      "question": "Can AI tools handle multiple languages?",
+      "answer": "Most major AI tools support multiple languages, with English typically being the strongest. Support quality varies by language and tool. Check specific language capabilities for your needs."
+    },
+    {
+      "question": "What happens to my data when using AI tools?",
+      "answer": "Data handling varies by tool. Some store conversations for improvement, others offer data deletion options. Enterprise plans often include enhanced privacy controls. Always review data policies before use."
+    }
+  ],
+  "business_faqs": [
+    {
+      "question": "How can AI tools improve my business productivity?",
+      "answer": "AI tools can automate content creation, improve customer support, streamline coding, enhance design work, and accelerate research. Businesses typically see 30-50% productivity improvements in AI-assisted tasks."
+    },
+    {
+      "question": "Which AI tools are best for small businesses?",
+      "answer": "Small businesses benefit from versatile, cost-effective tools like ChatGPT Plus ($20/month), Copy.ai Pro ($36/month), or Notion AI ($10/month). Choose tools that handle multiple use cases to maximize value."
+    },
+    {
+      "question": "Can AI tools replace human employees?",
+      "answer": "AI tools augment rather than replace human capabilities. They handle routine tasks, boost creativity, and increase efficiency, allowing employees to focus on higher-value strategic work requiring human judgment."
+    },
+    {
+      "question": "How do I measure ROI from AI tools?",
+      "answer": "Track metrics like time saved, content output increase, cost reduction, and quality improvements. Calculate hourly value of time saved versus tool costs. Most businesses see positive ROI within 2-3 months."
+    },
+    {
+      "question": "What training do employees need for AI tools?",
+      "answer": "Most AI tools require minimal training (1-2 hours for basics). Focus on prompt engineering, feature exploration, and integration workflows. Many tools offer tutorials, documentation, and customer support for onboarding."
+    }
+  ]
+}

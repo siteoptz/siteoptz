@@ -1,0 +1,820 @@
+{
+  "ai_tools": [
+    {
+      "toolName": "ChatGPT",
+      "vendor": "OpenAI",
+      "description": "ChatGPT is an AI chatbot developed by OpenAI, designed to generate human-like text responses, assist with tasks, and integrate into workflows. It offers versatile AI capabilities for content creation, coding, and general assistance.",
+      "logo_url": "/images/tools/chatgpt-logo.png",
+      "pricing": {
+        "tier": "Freemium",
+        "price": "$20/month",
+        "plans": [
+          {
+            "name": "Free",
+            "price": "$0",
+            "features": ["GPT-3.5 access", "Basic chat functionality", "Limited message history"]
+          },
+          {
+            "name": "ChatGPT Plus",
+            "price": "$20/month",
+            "features": ["GPT-4 access", "Priority access", "Faster response speeds", "Web browsing", "Advanced Data Analysis"]
+          },
+          {
+            "name": "ChatGPT Team",
+            "price": "$25/month per user",
+            "features": ["Everything in Plus", "Team workspace", "Admin console", "Early access to features"]
+          }
+        ]
+      },
+      "features": [
+        "Natural language processing",
+        "Conversational AI interface",
+        "Code generation and debugging",
+        "Mathematical calculations",
+        "Multi-format content creation",
+        "Custom GPTs",
+        "Advanced Data Analysis",
+        "Plugin ecosystem",
+        "API access",
+        "Web browsing"
+      ],
+      "pros": [
+        "Highly versatile AI model",
+        "Wide plugin and integration ecosystem",
+        "Frequent updates and improvements",
+        "Large community support",
+        "Excellent for general AI assistance",
+        "Mobile app availability"
+      ],
+      "cons": [
+        "Limited free tier capabilities",
+        "Occasional hallucinations or inaccuracies",
+        "Paid plan required for GPT-4 access",
+        "Can be verbose in responses",
+        "Limited offline functionality"
+      ],
+      "url": "https://chat.openai.com",
+      "affiliate_link": "",
+      "rating": 4.8,
+      "review_count": 50000,
+      "category": "AI Assistants",
+      "use_cases": ["Customer support automation", "Content creation and copywriting", "Code generation and debugging", "Educational assistance"],
+      "keywords": ["chatgpt", "openai", "ai chatbot", "gpt-4", "conversational ai"],
+      "search_volume": 18750,
+      "cpc": 3.24,
+      "last_updated": "2025-01-15"
+    },
+    {
+      "toolName": "Claude",
+      "vendor": "Anthropic",
+      "description": "Claude is an AI assistant created by Anthropic, focused on safety, natural conversation, and large context understanding. It excels at complex reasoning and long-form content analysis.",
+      "logo_url": "/images/tools/claude-logo.png",
+      "pricing": {
+        "tier": "Premium",
+        "price": "$20/month",
+        "plans": [
+          {
+            "name": "Claude Pro",
+            "price": "$20/month",
+            "features": ["Access to Claude 3.5", "Priority performance", "Larger context windows", "Higher usage limits"]
+          },
+          {
+            "name": "Claude API",
+            "price": "Usage-based pricing",
+            "features": ["Claude 3.5 API access", "Developer integration options", "Pay-as-you-go model", "Custom rate limits"]
+          }
+        ]
+      },
+      "features": [
+        "Natural language reasoning",
+        "Extended context window (200k+ tokens)",
+        "Document analysis",
+        "Complex problem solving",
+        "Ethical AI responses",
+        "Constitutional AI training",
+        "File uploads and processing",
+        "Advanced reasoning capabilities",
+        "Safety guardrails"
+      ],
+      "pros": [
+        "Extremely large memory for long conversations",
+        "Very natural, human-like responses",
+        "Strong safety guardrails",
+        "Excellent at complex reasoning",
+        "Superior document analysis",
+        "Honest about limitations"
+      ],
+      "cons": [
+        "No free web version",
+        "Fewer third-party integrations than ChatGPT",
+        "Limited plugin ecosystem",
+        "Higher pricing barrier",
+        "Less widely adopted"
+      ],
+      "url": "https://claude.ai",
+      "affiliate_link": "",
+      "rating": 4.7,
+      "review_count": 22000,
+      "category": "AI Assistants",
+      "use_cases": ["Long-form content analysis", "Complex reasoning tasks", "Document processing", "Research assistance"],
+      "keywords": ["claude ai", "anthropic", "ai assistant", "constitutional ai", "large context"],
+      "search_volume": 12500,
+      "cpc": 2.85,
+      "last_updated": "2025-01-15"
+    },
+    {
+      "toolName": "Jasper AI",
+      "vendor": "Jasper",
+      "description": "Jasper AI is a comprehensive AI content creation platform designed for marketers and businesses. It offers 50+ templates, brand voice training, and advanced SEO optimization capabilities.",
+      "logo_url": "/images/tools/jasper-logo.png",
+      "pricing": {
+        "tier": "Premium",
+        "price": "$39/month",
+        "plans": [
+          {
+            "name": "Starter",
+            "price": "$39/month",
+            "features": ["20,000 words/month", "50+ templates", "Basic support"]
+          },
+          {
+            "name": "Boss Mode",
+            "price": "$99/month",
+            "features": ["50,000 words/month", "Long-form content", "SEO mode", "Plagiarism checker"]
+          },
+          {
+            "name": "Business",
+            "price": "Custom",
+            "features": ["Custom word limits", "Team features", "Priority support", "Custom integrations"]
+          }
+        ]
+      },
+      "features": [
+        "50+ content templates",
+        "Brand voice training",
+        "SEO optimization",
+        "Content generation",
+        "Marketing copy creation",
+        "Boss Mode (long-form content)",
+        "Content workflows",
+        "Team collaboration",
+        "Plagiarism checker",
+        "API access"
+      ],
+      "pros": [
+        "Extensive template library",
+        "Strong brand voice features",
+        "Advanced SEO optimization",
+        "Team collaboration tools",
+        "High-quality output",
+        "Good for marketing content"
+      ],
+      "cons": [
+        "Higher pricing than competitors",
+        "Steep learning curve",
+        "Limited free trial",
+        "Can be overwhelming for beginners",
+        "Word count limitations"
+      ],
+      "url": "https://www.jasper.ai",
+      "affiliate_link": "",
+      "rating": 4.5,
+      "review_count": 25000,
+      "category": "Content Creation",
+      "use_cases": ["Marketing content creation", "Blog writing", "Ad copy generation", "Email marketing"],
+      "keywords": ["jasper ai", "ai content creation", "marketing copy", "brand voice", "seo content"],
+      "search_volume": 24375,
+      "cpc": 3.60,
+      "last_updated": "2025-01-15"
+    },
+    {
+      "toolName": "Copy.ai",
+      "vendor": "Copy.ai",
+      "description": "Copy.ai is an AI-powered copywriting platform that helps create marketing copy, sales content, and creative writing. It offers 90+ templates and workflows for various content types.",
+      "logo_url": "/images/tools/copy-ai-logo.png",
+      "pricing": {
+        "tier": "Freemium",
+        "price": "$36/month",
+        "plans": [
+          {
+            "name": "Free",
+            "price": "$0",
+            "features": ["2,000 words/month", "Basic templates", "Community support"]
+          },
+          {
+            "name": "Pro",
+            "price": "$36/month",
+            "features": ["Unlimited words", "All templates", "Priority support", "Brand voice"]
+          },
+          {
+            "name": "Team",
+            "price": "$186/month",
+            "features": ["Everything in Pro", "Team features", "Advanced workflows", "Usage analytics"]
+          }
+        ]
+      },
+      "features": [
+        "90+ copywriting templates",
+        "Marketing copy generation",
+        "Sales content creation",
+        "Creative writing tools",
+        "Social media content",
+        "Workflows and automation",
+        "Brand voice training",
+        "Long-form content",
+        "Team collaboration",
+        "A/B testing"
+      ],
+      "pros": [
+        "Generous free tier",
+        "90+ specialized templates",
+        "User-friendly interface",
+        "Good for marketing copy",
+        "Strong workflow features",
+        "Regular template updates"
+      ],
+      "cons": [
+        "Limited advanced features on free plan",
+        "Can produce generic content",
+        "Less sophisticated than competitors",
+        "Limited customization options",
+        "Occasional quality inconsistencies"
+      ],
+      "url": "https://www.copy.ai",
+      "affiliate_link": "",
+      "rating": 4.3,
+      "review_count": 20000,
+      "category": "Content Creation",
+      "use_cases": ["Marketing copywriting", "Social media content", "Email marketing", "Ad copy creation"],
+      "keywords": ["copy ai", "ai copywriting", "marketing templates", "sales copy", "content automation"],
+      "search_volume": 8500,
+      "cpc": 2.45,
+      "last_updated": "2025-01-15"
+    },
+    {
+      "toolName": "Writesonic",
+      "vendor": "Writesonic",
+      "description": "Writesonic is an AI writing platform that creates content, copies, and images. It offers factual and up-to-date content with real-time data integration and SEO optimization.",
+      "logo_url": "/images/tools/writesonic-logo.png",
+      "pricing": {
+        "tier": "Freemium",
+        "price": "$19/month",
+        "plans": [
+          {
+            "name": "Free",
+            "price": "$0",
+            "features": ["10,000 words/month", "Basic features", "Limited templates"]
+          },
+          {
+            "name": "Pro",
+            "price": "$19/month",
+            "features": ["Unlimited words", "All features", "Priority support", "Brand voice"]
+          },
+          {
+            "name": "Enterprise",
+            "price": "Custom",
+            "features": ["Custom limits", "Team features", "Advanced integrations", "Dedicated support"]
+          }
+        ]
+      },
+      "features": [
+        "AI article writing",
+        "Real-time data integration",
+        "SEO optimization",
+        "Image generation",
+        "Content templates",
+        "Factual content with sources",
+        "Brand voice customization",
+        "Bulk content generation",
+        "API access",
+        "Chrome extension"
+      ],
+      "pros": [
+        "Real-time data integration",
+        "Factual content with sources",
+        "Competitive pricing",
+        "Good free tier",
+        "SEO optimization features",
+        "Image generation included"
+      ],
+      "cons": [
+        "Less brand recognition",
+        "Smaller template library",
+        "Quality can vary",
+        "Limited advanced features",
+        "Interface could be improved"
+      ],
+      "url": "https://writesonic.com",
+      "affiliate_link": "",
+      "rating": 4.2,
+      "review_count": 12000,
+      "category": "Content Creation",
+      "use_cases": ["Blog content creation", "Factual article writing", "SEO content", "Social media posts"],
+      "keywords": ["writesonic", "ai writing", "factual content", "real-time data", "seo writing"],
+      "search_volume": 6200,
+      "cpc": 2.15,
+      "last_updated": "2025-01-15"
+    },
+    {
+      "toolName": "Surfer SEO",
+      "vendor": "Surfer",
+      "description": "Surfer SEO is an AI-powered SEO optimization platform that helps create data-driven content. It provides keyword research, content optimization, and SERP analysis for better search rankings.",
+      "logo_url": "/images/tools/surfer-seo-logo.png",
+      "pricing": {
+        "tier": "Premium",
+        "price": "$89/month",
+        "plans": [
+          {
+            "name": "Essential",
+            "price": "$89/month",
+            "features": ["20 articles/month", "Basic features", "SERP analyzer"]
+          },
+          {
+            "name": "Advanced",
+            "price": "$179/month",
+            "features": ["50 articles/month", "Content audit", "White label"]
+          },
+          {
+            "name": "Max",
+            "price": "$299/month",
+            "features": ["100 articles/month", "All features", "API access"]
+          }
+        ]
+      },
+      "features": [
+        "Content optimization",
+        "Keyword research",
+        "SERP analysis",
+        "Content planning",
+        "SEO scoring",
+        "AI content generation",
+        "Content audit",
+        "Competitor analysis",
+        "NLP optimization",
+        "Outline builder"
+      ],
+      "pros": [
+        "Data-driven SEO insights",
+        "Comprehensive SERP analysis",
+        "Strong integration ecosystem",
+        "Accurate optimization scoring",
+        "Regular algorithm updates",
+        "Excellent for content planning"
+      ],
+      "cons": [
+        "Higher pricing point",
+        "Steep learning curve",
+        "Limited content generation",
+        "Focused mainly on SEO",
+        "Can be overwhelming for beginners"
+      ],
+      "url": "https://surferseo.com",
+      "affiliate_link": "",
+      "rating": 4.6,
+      "review_count": 8000,
+      "category": "SEO & Optimization",
+      "use_cases": ["SEO content optimization", "Keyword research", "Content planning", "Competitor analysis"],
+      "keywords": ["surfer seo", "seo optimization", "content analysis", "serp analyzer", "keyword research"],
+      "search_volume": 2500,
+      "cpc": 2.80,
+      "last_updated": "2025-01-15"
+    },
+    {
+      "toolName": "Frase",
+      "vendor": "Frase",
+      "description": "Frase is an AI-powered content optimization platform that helps research, write, and optimize SEO content. It combines content creation with SEO research and optimization in one platform.",
+      "logo_url": "/images/tools/frase-logo.png",
+      "pricing": {
+        "tier": "Premium",
+        "price": "$45/month",
+        "plans": [
+          {
+            "name": "Solo",
+            "price": "$45/month",
+            "features": ["4 articles/month", "Basic features", "Research tools"]
+          },
+          {
+            "name": "Basic",
+            "price": "$115/month",
+            "features": ["30 articles/month", "All features", "Team collaboration"]
+          },
+          {
+            "name": "Team",
+            "price": "$665/month",
+            "features": ["Unlimited articles", "Advanced features", "Multiple users"]
+          }
+        ]
+      },
+      "features": [
+        "Content research",
+        "SEO content optimization",
+        "Question research",
+        "Content briefs",
+        "SERP analysis",
+        "AI content generation",
+        "Content scoring",
+        "Competitor analysis",
+        "Topic modeling",
+        "Content templates"
+      ],
+      "pros": [
+        "Strong research capabilities",
+        "Question-based content research",
+        "Good SEO optimization",
+        "Content brief generation",
+        "User-friendly interface",
+        "Competitive analysis"
+      ],
+      "cons": [
+        "Limited content generation",
+        "Higher pricing for features",
+        "Learning curve for new users",
+        "Limited template variety",
+        "Focus mainly on SEO content"
+      ],
+      "url": "https://www.frase.io",
+      "affiliate_link": "",
+      "rating": 4.4,
+      "review_count": 6000,
+      "category": "SEO & Optimization",
+      "use_cases": ["SEO content research", "Content brief creation", "Question-based content", "Competitor content analysis"],
+      "keywords": ["frase", "seo research", "content briefs", "question research", "competitor analysis"],
+      "search_volume": 1850,
+      "cpc": 2.65,
+      "last_updated": "2025-01-15"
+    },
+    {
+      "toolName": "Midjourney",
+      "vendor": "Midjourney Inc.",
+      "description": "Midjourney is an AI image generation platform that creates high-quality, artistic images from text descriptions. It's known for producing some of the most visually appealing AI-generated artwork.",
+      "logo_url": "/images/tools/midjourney-logo.png",
+      "pricing": {
+        "tier": "Premium",
+        "price": "$30/month",
+        "plans": [
+          {
+            "name": "Basic",
+            "price": "$10/month",
+            "features": ["200 generations/month", "General access", "Limited relaxed mode"]
+          },
+          {
+            "name": "Standard",
+            "price": "$30/month",
+            "features": ["Unlimited relaxed mode", "15 hours fast mode", "Commercial usage rights"]
+          },
+          {
+            "name": "Pro",
+            "price": "$60/month",
+            "features": ["30 hours fast mode", "Stealth mode", "Commercial usage rights"]
+          }
+        ]
+      },
+      "features": [
+        "AI image generation",
+        "Text-to-image conversion",
+        "Artistic style variety",
+        "High-resolution outputs",
+        "Discord-based interface",
+        "Style parameters",
+        "Image variations",
+        "Upscaling options",
+        "Custom aspect ratios",
+        "Advanced prompting"
+      ],
+      "pros": [
+        "Highest quality AI images",
+        "Artistic and creative outputs",
+        "Strong community",
+        "Regular model updates",
+        "Commercial usage rights",
+        "Unique aesthetic style"
+      ],
+      "cons": [
+        "Discord-only interface",
+        "No free tier",
+        "Learning curve for prompting",
+        "Limited direct integrations",
+        "Queue times during peak usage"
+      ],
+      "url": "https://www.midjourney.com",
+      "affiliate_link": "",
+      "rating": 4.8,
+      "review_count": 30000,
+      "category": "Visual Content",
+      "use_cases": ["Marketing visuals", "Social media content", "Concept art", "Advertising creatives"],
+      "keywords": ["midjourney", "ai image generation", "text to image", "ai art", "image creator"],
+      "search_volume": 2250,
+      "cpc": 3.36,
+      "last_updated": "2025-01-15"
+    },
+    {
+      "toolName": "DALL-E",
+      "vendor": "OpenAI",
+      "description": "DALL-E is OpenAI's AI image generation system that creates realistic images and art from natural language descriptions. It offers precise control over style, composition, and content.",
+      "logo_url": "/images/tools/dalle-logo.png",
+      "pricing": {
+        "tier": "Freemium",
+        "price": "$15/month",
+        "plans": [
+          {
+            "name": "Free",
+            "price": "$0",
+            "features": ["50 credits on first month", "15 credits monthly thereafter", "Basic resolution"]
+          },
+          {
+            "name": "Credits Pack",
+            "price": "$15 for 115 credits",
+            "features": ["Additional credits", "Higher resolution", "Priority processing"]
+          }
+        ]
+      },
+      "features": [
+        "Text-to-image generation",
+        "Image editing and inpainting",
+        "Style transfer",
+        "High-resolution outputs",
+        "Web-based interface",
+        "Outpainting capabilities",
+        "Variation generation",
+        "API access",
+        "Multiple art styles",
+        "Commercial usage rights"
+      ],
+      "pros": [
+        "High-quality realistic images",
+        "Easy-to-use web interface",
+        "Strong prompt understanding",
+        "Good free tier",
+        "Commercial rights included",
+        "Regular feature updates"
+      ],
+      "cons": [
+        "Credit-based pricing",
+        "Limited free credits",
+        "Content policy restrictions",
+        "Queue times during peak usage",
+        "Less artistic than Midjourney"
+      ],
+      "url": "https://openai.com/dall-e-2",
+      "affiliate_link": "",
+      "rating": 4.5,
+      "review_count": 25000,
+      "category": "Visual Content",
+      "use_cases": ["Marketing images", "Product mockups", "Social media graphics", "Website illustrations"],
+      "keywords": ["dall-e", "dalle", "openai image", "ai image generator", "text to image ai"],
+      "search_volume": 1950,
+      "cpc": 3.15,
+      "last_updated": "2025-01-15"
+    },
+    {
+      "toolName": "Gemini",
+      "vendor": "Google",
+      "description": "Gemini is Google's advanced AI model designed for multimodal understanding and generation. It excels at processing text, images, and code with sophisticated reasoning capabilities.",
+      "logo_url": "/images/tools/gemini-logo.png",
+      "pricing": {
+        "tier": "Freemium",
+        "price": "$20/month",
+        "plans": [
+          {
+            "name": "Gemini Pro (Free)",
+            "price": "$0",
+            "features": ["Limited queries per day", "Gemini Pro model", "Basic multimodal features"]
+          },
+          {
+            "name": "Gemini Advanced",
+            "price": "$20/month",
+            "features": ["Unlimited queries", "Gemini Ultra access", "Priority processing", "Google One benefits"]
+          },
+          {
+            "name": "Gemini API",
+            "price": "Usage-based pricing",
+            "features": ["Developer API access", "Custom rate limits", "Enterprise features"]
+          }
+        ]
+      },
+      "features": [
+        "Multimodal AI processing",
+        "Text and image understanding",
+        "Code generation and analysis",
+        "Real-time information access",
+        "Google Search integration",
+        "Advanced reasoning capabilities",
+        "Large context window",
+        "Google Workspace integration",
+        "Function calling",
+        "Multiple language support"
+      ],
+      "pros": [
+        "Excellent multimodal capabilities",
+        "Strong Google ecosystem integration",
+        "Real-time information access",
+        "Advanced reasoning abilities",
+        "Competitive pricing",
+        "Regular model updates"
+      ],
+      "cons": [
+        "Limited availability in some regions",
+        "Newer platform with fewer integrations",
+        "Privacy concerns with Google",
+        "Learning curve for advanced features",
+        "Limited customization options"
+      ],
+      "url": "https://gemini.google.com",
+      "affiliate_link": "",
+      "rating": 4.5,
+      "review_count": 18000,
+      "category": "AI Assistants",
+      "use_cases": ["Multimodal content analysis", "Code generation and debugging", "Research and fact-checking", "Educational assistance"],
+      "keywords": ["google gemini", "gemini ai", "multimodal ai", "google ai", "ai assistant"],
+      "search_volume": 15600,
+      "cpc": 2.95,
+      "last_updated": "2025-01-15"
+    },
+    {
+      "toolName": "Perplexity AI",
+      "vendor": "Perplexity",
+      "description": "Perplexity AI is an AI-powered search engine that provides accurate, real-time answers with cited sources. It combines search capabilities with conversational AI for research and information discovery.",
+      "logo_url": "/images/tools/perplexity-logo.png",
+      "pricing": {
+        "tier": "Freemium",
+        "price": "$20/month",
+        "plans": [
+          {
+            "name": "Free",
+            "price": "$0",
+            "features": ["5 Pro searches per day", "Basic AI search", "Standard sources"]
+          },
+          {
+            "name": "Pro",
+            "price": "$20/month",
+            "features": ["300+ Pro searches per day", "Advanced AI models", "File uploads", "Academic search"]
+          },
+          {
+            "name": "Enterprise",
+            "price": "Custom",
+            "features": ["Unlimited searches", "Team features", "Custom integrations", "Priority support"]
+          }
+        ]
+      },
+      "features": [
+        "AI-powered search",
+        "Real-time information access",
+        "Source citations",
+        "Conversational interface",
+        "Multi-source aggregation",
+        "Pro search with advanced models",
+        "File upload and analysis",
+        "Academic search mode",
+        "Custom search focus",
+        "API access"
+      ],
+      "pros": [
+        "Accurate source citations",
+        "Real-time information access",
+        "Academic research capabilities",
+        "Clean, focused interface",
+        "Transparent AI responses",
+        "Good free tier"
+      ],
+      "cons": [
+        "Limited creative writing capabilities",
+        "Focused mainly on search/research",
+        "Smaller model ecosystem",
+        "Limited customization",
+        "Pro search limits"
+      ],
+      "url": "https://www.perplexity.ai",
+      "affiliate_link": "",
+      "rating": 4.4,
+      "review_count": 12000,
+      "category": "AI Assistants",
+      "use_cases": ["Research and fact-checking", "Academic research", "News and current events", "Market research"],
+      "keywords": ["perplexity ai", "ai search", "research assistant", "cited sources", "fact checking"],
+      "search_volume": 9800,
+      "cpc": 2.55,
+      "last_updated": "2025-01-15"
+    },
+    {
+      "toolName": "GitHub Copilot",
+      "vendor": "GitHub/Microsoft",
+      "description": "GitHub Copilot is an AI-powered code completion tool that helps developers write code faster and more efficiently. It provides intelligent suggestions and can generate entire functions.",
+      "logo_url": "/images/tools/github-copilot-logo.png",
+      "pricing": {
+        "tier": "Premium",
+        "price": "$10/month",
+        "plans": [
+          {
+            "name": "Individual",
+            "price": "$10/month",
+            "features": ["Code completions", "Chat in IDE", "Command line integration", "Personal use license"]
+          },
+          {
+            "name": "Business",
+            "price": "$19/month per user",
+            "features": ["Everything in Individual", "Organization license", "Policy management", "Usage analytics"]
+          },
+          {
+            "name": "Enterprise",
+            "price": "$39/month per user",
+            "features": ["Everything in Business", "Advanced security", "Audit logs", "Priority support"]
+          }
+        ]
+      },
+      "features": [
+        "AI code completion",
+        "Real-time suggestions",
+        "Multi-language support",
+        "Context-aware recommendations",
+        "IDE integration",
+        "Copilot Chat",
+        "Pull request summaries",
+        "Code explanation",
+        "Test generation",
+        "Security vulnerability detection"
+      ],
+      "pros": [
+        "Excellent code completion accuracy",
+        "Wide language support",
+        "Seamless IDE integration",
+        "Increases development speed",
+        "Regular model improvements",
+        "Strong GitHub ecosystem"
+      ],
+      "cons": [
+        "Requires subscription for full features",
+        "Can suggest suboptimal code",
+        "Limited to coding tasks",
+        "Privacy concerns with code analysis",
+        "Dependency on internet connection"
+      ],
+      "url": "https://github.com/features/copilot",
+      "affiliate_link": "",
+      "rating": 4.6,
+      "review_count": 45000,
+      "category": "Development Tools",
+      "use_cases": ["Code completion and generation", "Learning new programming languages", "Rapid prototyping", "Code documentation"],
+      "keywords": ["github copilot", "ai coding", "code completion", "programming assistant", "developer tools"],
+      "search_volume": 8500,
+      "cpc": 3.50,
+      "last_updated": "2025-01-15"
+    },
+    {
+      "toolName": "Notion AI",
+      "vendor": "Notion Labs",
+      "description": "Notion AI is an integrated AI assistant within the Notion workspace that helps with writing, editing, summarizing, and organizing content. It seamlessly integrates with Notion's productivity platform.",
+      "logo_url": "/images/tools/notion-ai-logo.png",
+      "pricing": {
+        "tier": "Premium",
+        "price": "$10/month",
+        "plans": [
+          {
+            "name": "Notion AI Add-on",
+            "price": "$10/month per user",
+            "features": ["Unlimited AI usage", "All AI features", "Notion workspace integration", "Priority support"]
+          },
+          {
+            "name": "Free Trial",
+            "price": "$0",
+            "features": ["Limited AI responses", "Basic features", "Trial period only"]
+          }
+        ]
+      },
+      "features": [
+        "AI writing assistance",
+        "Content summarization",
+        "Text editing and improvement",
+        "Template generation",
+        "Notion workspace integration",
+        "Database query assistance",
+        "Meeting notes generation",
+        "Project planning",
+        "Content translation",
+        "Custom prompts"
+      ],
+      "pros": [
+        "Seamless Notion integration",
+        "Great for productivity workflows",
+        "Multiple AI writing features",
+        "Database-aware assistance",
+        "Template and planning support",
+        "User-friendly interface"
+      ],
+      "cons": [
+        "Requires Notion subscription",
+        "Limited outside Notion ecosystem",
+        "Less powerful than specialized AI tools",
+        "Additional cost on top of Notion",
+        "Feature limitations compared to dedicated AI tools"
+      ],
+      "url": "https://www.notion.so/product/ai",
+      "affiliate_link": "",
+      "rating": 4.3,
+      "review_count": 15000,
+      "category": "Productivity & Organization",
+      "use_cases": ["Note-taking and organization", "Meeting summaries", "Project planning", "Content creation within Notion"],
+      "keywords": ["notion ai", "productivity assistant", "note taking ai", "workspace ai", "project planning"],
+      "search_volume": 5400,
+      "cpc": 2.25,
+      "last_updated": "2025-01-15"
+    }
+  ]
+}

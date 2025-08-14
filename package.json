@@ -78,6 +78,8 @@
     "@mailchimp/mailchimp_marketing": "^3.0.0",
     "@prisma/client": "^5.4.0",
     "@sendgrid/mail": "^7.7.0",
+    "mongodb": "^6.18.0",
+    "postmark": "^4.0.5",
     "prisma": "^5.4.0",
     "redis": "^4.6.0"
   },
