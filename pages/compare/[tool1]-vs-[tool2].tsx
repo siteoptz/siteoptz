@@ -402,8 +402,8 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
     fs.readFileSync(path.join(process.cwd(), 'public/data/faqData.json'), 'utf8')
   );
 
-  const tool1 = aiToolsData.find((t) => t.slug === params?.tool1);
-  const tool2 = aiToolsData.find((t) => t.slug === params?.tool2);
+  const tool1 = aiToolsData.find((t: any) => t.slug === params?.tool1);
+  const tool2 = aiToolsData.find((t: any) => t.slug === params?.tool2);
   
   const faqs1 = tool1 ? faqData[tool1.id] || [] : [];
   const faqs2 = tool2 ? faqData[tool2.id] || [] : [];
