@@ -94,7 +94,7 @@ export default function ToolPage({ tool, relatedTools, faqs, allTools }: ToolPag
         canonicalUrl={`https://siteoptz.ai/tools/${tool.slug}`}
         ogImage={tool.logo}
         schemaData={tool.schema}
-        keywords={`${tool.name}, ${tool.name} review, ${tool.name} pricing, ${tool.name} features, ${tool.name} alternatives`}
+        keywords={[`${tool.name}`, `${tool.name} review`, `${tool.name} pricing`, `${tool.name} features`, `${tool.name} alternatives`]}
       />
 
       <div className="min-h-screen bg-gray-50">
