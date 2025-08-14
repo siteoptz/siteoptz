@@ -1,10 +1,9 @@
 import React, { useState, useMemo } from 'react';
 import Head from 'next/head';
 import { Search, Filter, Grid, List, Star, DollarSign, Zap } from 'lucide-react';
-import aiToolsData from '../../data/aiToolsData.json';
 import { generateMetaTitle, generateMetaDescription, generateOpenGraphTags } from '../../utils/seoUtils';
 
-export default function CompareIndex() {
+export default function CompareIndex({ aiToolsData }) {
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [sortBy, setSortBy] = useState('name');
@@ -16,10 +15,12 @@ export default function CompareIndex() {
   // Filter and sort tools
   const filteredTools = useMemo(() => {
     let filtered = aiToolsData.filter(tool => {
+      const description = tool.overview?.description || tool.description || '';
       const matchesSearch = tool.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                           tool.description.toLowerCase().includes(searchTerm.toLowerCase());
+                           description.toLowerCase().includes(searchTerm.toLowerCase());
       
-      const matchesCategory = selectedCategory === 'all' || tool.relatedKeywords.some(keyword => 
+      const keywords = tool.relatedKeywords || tool.overview?.keywords || [];
+      const matchesCategory = selectedCategory === 'all' || keywords.some(keyword => 
         keyword.toLowerCase().includes(selectedCategory.toLowerCase())
       );
       
@@ -37,8 +38,9 @@ export default function CompareIndex() {
         break;
       case 'price':
         const getStartingPrice = (tool) => {
-          const paidPlan = tool.pricingPlans.find(plan => plan.monthlyPrice > 0);
-          return paidPlan ? paidPlan.monthlyPrice : 0;
+          const pricing = tool.pricing || tool.pricingPlans || [];
+          const paidPlan = pricing.find(plan => (plan.monthlyPrice || plan.price_per_month) > 0);
+          return paidPlan ? (paidPlan.monthlyPrice || paidPlan.price_per_month) : 0;
         };
         filtered.sort((a, b) => getStartingPrice(a) - getStartingPrice(b));
         break;
@@ -209,8 +211,9 @@ export default function CompareIndex() {
 }
 
 function ToolCard({ tool, viewMode }) {
-  const startingPrice = tool.pricingPlans.find(plan => plan.monthlyPrice > 0)?.monthlyPrice || 0;
-  const hasFreeTrial = tool.pricingPlans.some(plan => plan.monthlyPrice === 0);
+  const pricing = tool.pricing || tool.pricingPlans || [];
+  const startingPrice = pricing.find(plan => (plan.monthlyPrice || plan.price_per_month) > 0)?.monthlyPrice || pricing.find(plan => (plan.monthlyPrice || plan.price_per_month) > 0)?.price_per_month || 0;
+  const hasFreeTrial = pricing.some(plan => (plan.monthlyPrice || plan.price_per_month) === 0);
 
   if (viewMode === 'list') {
     return (
@@ -236,7 +239,7 @@ function ToolCard({ tool, viewMode }) {
                   <h3 className="text-xl font-semibold text-gray-900 mb-1">
                     {tool.name}
                   </h3>
-                  <p className="text-gray-600 mb-2">{tool.description.substring(0, 100)}...</p>
+                  <p className="text-gray-600 mb-2">{(tool.overview?.description || tool.description || '').substring(0, 100)}...</p>
                 </div>
                 <div className="text-right">
                   <div className="text-2xl font-bold text-gray-900">
@@ -258,13 +261,13 @@ function ToolCard({ tool, viewMode }) {
                 </div>
                 <div className="flex items-center gap-1">
                   <Zap className="w-4 h-4 text-blue-500" />
-                  <span>{tool.features.length} features</span>
+                  <span>{(tool.features || []).length} features</span>
                 </div>
                 <span className="px-2 py-1 bg-gray-100 text-gray-700 text-xs rounded-full">AI Tool</span>
               </div>
 
               <p className="text-gray-600 text-sm mb-4 line-clamp-2">
-                {tool.description.substring(0, 150)}...
+                {(tool.overview?.description || tool.description || '').substring(0, 150)}...
               </p>
 
               <div className="flex items-center gap-3">
@@ -304,7 +307,7 @@ function ToolCard({ tool, viewMode }) {
           </div>
           <div>
             <h3 className="text-lg font-semibold text-gray-900">{tool.name}</h3>
-            <p className="text-gray-600 text-sm">{tool.description.substring(0, 50)}...</p>
+            <p className="text-gray-600 text-sm">{(tool.overview?.description || tool.description || '').substring(0, 50)}...</p>
           </div>
         </div>
 
@@ -335,7 +338,7 @@ function ToolCard({ tool, viewMode }) {
           </div>
 
           <p className="text-gray-600 text-sm line-clamp-3">
-            {tool.description.substring(0, 120)}...
+            {(tool.overview?.description || tool.description || '').substring(0, 120)}...
           </p>
 
                     <div className="flex items-center gap-2 pt-2">
@@ -356,4 +359,28 @@ function ToolCard({ tool, viewMode }) {
       </div>
     </div>
   );
+}
+
+export async function getStaticProps() {
+  const fs = require('fs');
+  const path = require('path');
+  
+  try {
+    const aiToolsData = JSON.parse(
+      fs.readFileSync(path.join(process.cwd(), 'public/data/aiToolsData.json'), 'utf8')
+    );
+    
+    return {
+      props: {
+        aiToolsData,
+      },
+    };
+  } catch (error) {
+    console.error('Error loading AI tools data:', error);
+    return {
+      props: {
+        aiToolsData: [],
+      },
+    };
+  }
 }
