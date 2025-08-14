@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 
 interface PricingPlan {
   name: string;
-  price: number;
+  price: string;
   features: string[];
 }
 
@@ -16,7 +16,7 @@ export default function PricingCalculator({ plans, toolName, enablePersistence }
   const [selectedPlan, setSelectedPlan] = useState(plans[0]);
   const [email, setEmail] = useState("");
   const [quoteSaved, setQuoteSaved] = useState(false);
-  const [discount, setDiscount] = useState(null);
+  const [discount, setDiscount] = useState<string | null>(null);
   const [discountExpired, setDiscountExpired] = useState(false);
 
   useEffect(() => {
@@ -46,7 +46,7 @@ export default function PricingCalculator({ plans, toolName, enablePersistence }
   }, [plans]);
 
   // Apply discount logic
-  const applyDiscount = (code) => {
+  const applyDiscount = (code: string) => {
     if (code === "SUMMER2025") {
       setSelectedPlan((prev) => ({
         ...prev,
