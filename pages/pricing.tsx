@@ -110,7 +110,7 @@ export default function PricingPage({ tools, faqs }: { tools: any[], faqs: any }
               <p className="text-sm text-blue-700">
                 📎 <strong>Shareable Link:</strong> 
                 <code className="ml-2 text-blue-800">
-                  {`https://siteoptz.ai/pricing?tool=${encodeURIComponent(selectedTool.name)}${router.query.plan ? `&plan=${encodeURIComponent(router.query.plan)}` : ''}`}
+                  {`https://siteoptz.ai/pricing?tool=${encodeURIComponent(selectedTool.name)}${router.query.plan ? `&plan=${encodeURIComponent(Array.isArray(router.query.plan) ? router.query.plan[0] : router.query.plan)}` : ''}`}
                 </code>
               </p>
             </div>
