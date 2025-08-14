@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import React, { useState, useEffect } from "react";
 
 interface PricingPlan {
   name: string;
@@ -65,7 +65,7 @@ export default function PricingCalculator({ plans, toolName, enablePersistence }
     }
   };
 
-  const handleSaveQuote = async (e) => {
+  const handleSaveQuote = async (e: React.FormEvent) => {
     e.preventDefault();
     localStorage.setItem(`quoteEmail_${toolName}`, email);
 
