@@ -1,6 +1,18 @@
 import { useState, useEffect } from "react";
 
-export default function PricingCalculator({ plans, toolName, enablePersistence }) {
+interface PricingPlan {
+  name: string;
+  price: number;
+  features: string[];
+}
+
+interface PricingCalculatorProps {
+  plans: PricingPlan[];
+  toolName: string;
+  enablePersistence?: boolean;
+}
+
+export default function PricingCalculator({ plans, toolName, enablePersistence }: PricingCalculatorProps) {
   const [selectedPlan, setSelectedPlan] = useState(plans[0]);
   const [email, setEmail] = useState("");
   const [quoteSaved, setQuoteSaved] = useState(false);
