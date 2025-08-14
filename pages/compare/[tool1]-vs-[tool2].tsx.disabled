@@ -367,19 +367,25 @@ export const getStaticPaths: GetStaticPaths = async () => {
   // Generate all possible tool combinations
   for (let i = 0; i < aiToolsData.length; i++) {
     for (let j = i + 1; j < aiToolsData.length; j++) {
-      paths.push({
-        params: { 
-          tool1: aiToolsData[i].slug,
-          tool2: aiToolsData[j].slug
-        },
-      });
-      // Also add reverse order
-      paths.push({
-        params: { 
-          tool1: aiToolsData[j].slug,
-          tool2: aiToolsData[i].slug
-        },
-      });
+      const tool1Slug = aiToolsData[i].slug;
+      const tool2Slug = aiToolsData[j].slug;
+      
+      // Validate slugs exist and are strings
+      if (tool1Slug && tool2Slug && typeof tool1Slug === 'string' && typeof tool2Slug === 'string') {
+        paths.push({
+          params: { 
+            tool1: tool1Slug,
+            tool2: tool2Slug
+          },
+        });
+        // Also add reverse order
+        paths.push({
+          params: { 
+            tool1: tool2Slug,
+            tool2: tool1Slug
+          },
+        });
+      }
     }
   }
 
