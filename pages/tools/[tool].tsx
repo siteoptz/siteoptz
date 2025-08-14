@@ -477,7 +477,7 @@ export default function ToolPage() {
                 {emailSubmitted ? (
                   <div className="text-center">
                     <div className="text-green-100 font-medium">Thank you for subscribing!</div>
-                    <div className="text-blue-200 text-sm mt-2">You'll receive your first insights soon.</div>
+                    <div className="text-blue-200 text-sm mt-2">You&apos;ll receive your first insights soon.</div>
                   </div>
                 ) : (
                   <form className="space-y-4" onSubmit={handleEmailSubmit}>

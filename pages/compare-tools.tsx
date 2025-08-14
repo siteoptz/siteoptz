@@ -204,7 +204,7 @@ export default function CompareToolsPage({ tools }: CompareToolsPageProps) {
                       Get Your Custom Comparison Report
                     </h3>
                     <p className="text-gray-600">
-                      We'll create a detailed comparison of your selected tools and send it to your email.
+                      We&apos;ll create a detailed comparison of your selected tools and send it to your email.
                     </p>
                   </div>
 
@@ -266,7 +266,7 @@ export default function CompareToolsPage({ tools }: CompareToolsPageProps) {
                   </form>
 
                   <p className="text-xs text-gray-500 text-center mt-4">
-                    We'll send you a detailed PDF comparison and occasional updates about AI tools. Unsubscribe anytime.
+                    We&apos;ll send you a detailed PDF comparison and occasional updates about AI tools. Unsubscribe anytime.
                   </p>
                 </>
               ) : (
@@ -281,7 +281,7 @@ export default function CompareToolsPage({ tools }: CompareToolsPageProps) {
                       Comparison Report Requested!
                     </h3>
                     <p className="text-gray-600 mb-6">
-                      We'll create your custom comparison report and send it to your email within 24 hours.
+                      We&apos;ll create your custom comparison report and send it to your email within 24 hours.
                     </p>
                     
                     <button

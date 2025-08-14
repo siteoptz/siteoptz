@@ -359,7 +359,7 @@ export default function ComparisonTable({ toolA, toolB, showAllFeatures }: Compa
       {!showAllFeatures && (
         <div className="bg-blue-50 px-6 py-4 border-t">
           <p className="text-sm text-blue-700">
-            <strong>Note:</strong> Showing only key differences. Toggle to "All Features" to see complete comparison.
+            <strong>Note:</strong> Showing only key differences. Toggle to &quot;All Features&quot; to see complete comparison.
           </p>
         </div>
       )}

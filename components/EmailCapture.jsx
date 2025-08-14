@@ -133,7 +133,7 @@ const EmailCapture = ({
           Your guide has been sent to {formData.email}. Check your inbox and spam folder.
         </p>
         <div className="bg-white rounded-lg p-4 mb-4">
-          <h4 className="font-medium text-gray-900 mb-2">What's Next?</h4>
+          <h4 className="font-medium text-gray-900 mb-2">What&apos;s Next?</h4>
           <ul className="text-sm text-gray-600 space-y-1">
             <li>• Check your email for the download link</li>
             <li>• Follow us on social media for AI tool updates</li>
@@ -240,7 +240,7 @@ const EmailCapture = ({
 
           {/* Benefits */}
           <div className="bg-blue-500 bg-opacity-30 rounded-lg p-4">
-            <h4 className="font-medium text-blue-100 mb-3">What You'll Get:</h4>
+            <h4 className="font-medium text-blue-100 mb-3">What You&apos;ll Get:</h4>
             <ul className="space-y-2 text-sm text-blue-100">
               <li className="flex items-center">
                 <span className="text-green-400 mr-2">✓</span>

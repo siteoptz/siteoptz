@@ -173,7 +173,7 @@ export default function ComparePage({ tools, faqs }: ComparePageProps) {
                 Calculate Your Total Investment
               </h2>
               <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-                Build your AI stack and see exactly how much you'll pay monthly and annually
+                Build your AI stack and see exactly how much you&apos;ll pay monthly and annually
               </p>
             </div>
             <PricingCalculator 

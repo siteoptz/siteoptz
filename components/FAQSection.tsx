@@ -135,7 +135,7 @@ export default function FAQSection({
               </div>
               {searchQuery && (
                 <p className="mt-2 text-sm text-gray-600">
-                  Found {filteredFaqs.length} result{filteredFaqs.length !== 1 ? 's' : ''} for "{searchQuery}"
+                  Found {filteredFaqs.length} result{filteredFaqs.length !== 1 ? 's' : ''} for &quot;{searchQuery}&quot;
                 </p>
               )}
             </div>

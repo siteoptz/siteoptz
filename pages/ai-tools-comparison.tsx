@@ -389,7 +389,7 @@ export default function AIToolsComparison({ tools, faqs }: AIToolsPageProps) {
                   ✅ Thank you for your interest!
                 </div>
                 <p className="text-green-700">
-                  We've sent pricing details to <strong>{emailCaptured}</strong>. 
+                  We&apos;ve sent pricing details to <strong>{emailCaptured}</strong>. 
                   Check your inbox for exclusive offers and recommendations.
                 </p>
               </div>

@@ -209,10 +209,10 @@ const FAQSection = ({ toolName = null, category = null, faqs = [] }) => {
                   </a>
                 </li>
                 <li>
-                  <a href="/ai-tools-comparison" className="text-blue-600 hover:text-blue-800 flex items-center">
+                  <Link href="/ai-tools-comparison" className="text-blue-600 hover:text-blue-800 flex items-center">
                     <Download className="w-4 h-4 mr-2" />
                     AI Tools Comparison
-                  </a>
+                  </Link>
                 </li>
                 <li>
                   <a href="/ai-tools-pricing" className="text-blue-600 hover:text-blue-800 flex items-center">
