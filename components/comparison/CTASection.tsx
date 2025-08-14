@@ -273,9 +273,4 @@ export default function CTASection({ toolA, toolB }: CTASectionProps) {
   );
 }
 
-// Extend Window interface for gtag
-declare global {
-  interface Window {
-    gtag: (command: string, targetId: string, config?: any) => void;
-  }
-}
+// gtag type is declared in types/global.d.ts

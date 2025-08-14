@@ -3,8 +3,9 @@
 declare global {
   interface Window {
     gtag?: (
-      command: string,
-      ...args: any[]
+      command: 'config' | 'event' | 'js' | 'set',
+      targetId: string,
+      config?: any
     ) => void;
   }
 }
