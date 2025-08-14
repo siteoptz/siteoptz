@@ -120,7 +120,7 @@ export default function ComparePage({ tools, faqs }: ComparePageProps) {
         description={pageDescription}
         canonicalUrl={canonicalUrl}
         schemaData={schemaData}
-        keywords="compare AI tools, AI tool comparison, ChatGPT vs Claude, best AI tools, AI pricing calculator"
+        keywords={["compare AI tools", "AI tool comparison", "ChatGPT vs Claude", "best AI tools", "AI pricing calculator"]}
       />
 
       <div className="min-h-screen bg-gray-50">
