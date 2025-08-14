@@ -22,7 +22,7 @@ export async function getStaticProps() {
   };
 }
 
-export default function PricingPage({ tools, faqs }) {
+export default function PricingPage({ tools, faqs }: { tools: any[], faqs: any }) {
   const router = useRouter();
   const [selectedTool, setSelectedTool] = useState(tools[0]);
   const [selectedPlan, setSelectedPlan] = useState(null);
