@@ -1,0 +1,168 @@
+{
+  "category": "research-education",
+  "tools": [
+    {
+      "id": "perplexity-ai",
+      "name": "Perplexity AI",
+      "description": "AI-powered search engine with conversational interface and citations",
+      "category": "research-education",
+      "pricing": {
+        "price": 0,
+        "currency": "USD",
+        "text": "Free with Pro at $20/month"
+      },
+      "rating": 4.7,
+      "reviewCount": 12000,
+      "website": "https://perplexity.ai",
+      "source": "perplexity",
+      "features": [
+        "ai-search",
+        "conversational-interface",
+        "citations",
+        "real-time-data"
+      ],
+      "pros": [
+        "Excellent search results",
+        "Citations provided",
+        "Real-time data",
+        "Free tier"
+      ],
+      "cons": [
+        "Limited advanced features",
+        "Can be slow"
+      ],
+      "lastUpdated": "2025-08-15T18:57:18.195Z"
+    },
+    {
+      "id": "consensus",
+      "name": "Consensus",
+      "description": "AI-powered research tool for finding and analyzing scientific papers",
+      "category": "research-education",
+      "pricing": {
+        "price": 8.99,
+        "currency": "USD",
+        "text": "Starts at $8.99/month"
+      },
+      "rating": 4.5,
+      "reviewCount": 8500,
+      "website": "https://consensus.app",
+      "source": "consensus",
+      "features": [
+        "scientific-research",
+        "paper-analysis",
+        "ai-insights",
+        "academic-focus"
+      ],
+      "pros": [
+        "Excellent for research",
+        "Scientific accuracy",
+        "Good insights",
+        "Academic focus"
+      ],
+      "cons": [
+        "Limited to scientific papers",
+        "Expensive for students"
+      ],
+      "lastUpdated": "2025-08-15T18:57:18.195Z"
+    },
+    {
+      "id": "elicit",
+      "name": "Elicit",
+      "description": "AI research assistant for analyzing and summarizing academic papers",
+      "category": "research-education",
+      "pricing": {
+        "price": 0,
+        "currency": "USD",
+        "text": "Free with paid plans"
+      },
+      "rating": 4.4,
+      "reviewCount": 6500,
+      "website": "https://elicit.org",
+      "source": "elicit",
+      "features": [
+        "research-assistant",
+        "paper-summarization",
+        "question-answering",
+        "academic-focus"
+      ],
+      "pros": [
+        "Great for research",
+        "Free tier available",
+        "Good summarization",
+        "Academic focus"
+      ],
+      "cons": [
+        "Limited to academic papers",
+        "Quality varies"
+      ],
+      "lastUpdated": "2025-08-15T18:57:18.195Z"
+    },
+    {
+      "id": "chatpdf",
+      "name": "ChatPDF",
+      "description": "AI tool for chatting with and analyzing PDF documents",
+      "category": "research-education",
+      "pricing": {
+        "price": 5,
+        "currency": "USD",
+        "text": "Starts at $5/month"
+      },
+      "rating": 4.3,
+      "reviewCount": 9500,
+      "website": "https://chatpdf.com",
+      "source": "chatpdf",
+      "features": [
+        "pdf-analysis",
+        "document-chat",
+        "ai-insights",
+        "easy-upload"
+      ],
+      "pros": [
+        "Easy to use",
+        "Good PDF analysis",
+        "Affordable",
+        "Quick setup"
+      ],
+      "cons": [
+        "Limited to PDFs",
+        "File size limits",
+        "Basic features"
+      ],
+      "lastUpdated": "2025-08-15T18:57:18.195Z"
+    },
+    {
+      "id": "scite-ai",
+      "name": "scite.ai",
+      "description": "AI-powered platform for understanding how research papers are cited",
+      "category": "research-education",
+      "pricing": {
+        "price": 0,
+        "currency": "USD",
+        "text": "Free with paid plans"
+      },
+      "rating": 4.2,
+      "reviewCount": 4500,
+      "website": "https://scite.ai",
+      "source": "scite",
+      "features": [
+        "citation-analysis",
+        "research-validation",
+        "ai-insights",
+        "academic-focus"
+      ],
+      "pros": [
+        "Unique citation analysis",
+        "Research validation",
+        "Academic focus",
+        "Free tier"
+      ],
+      "cons": [
+        "Limited scope",
+        "Complex interface"
+      ],
+      "lastUpdated": "2025-08-15T18:57:18.195Z"
+    }
+  ],
+  "total": 5,
+  "lastUpdated": "2025-08-15T18:57:18.210Z"
+}

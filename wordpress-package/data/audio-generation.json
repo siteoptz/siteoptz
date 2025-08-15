@@ -1,0 +1,168 @@
+{
+  "category": "audio-generation",
+  "tools": [
+    {
+      "id": "elevenlabs",
+      "name": "ElevenLabs",
+      "description": "AI voice generation platform with realistic and customizable voices",
+      "category": "audio-generation",
+      "pricing": {
+        "price": 22,
+        "currency": "USD",
+        "text": "Starts at $22/month"
+      },
+      "rating": 4.7,
+      "reviewCount": 9500,
+      "website": "https://elevenlabs.io",
+      "source": "elevenlabs",
+      "features": [
+        "voice-generation",
+        "text-to-speech",
+        "voice-cloning",
+        "emotion-control"
+      ],
+      "pros": [
+        "High quality voices",
+        "Voice cloning",
+        "Emotion control",
+        "API available"
+      ],
+      "cons": [
+        "Expensive",
+        "Limited free tier",
+        "Ethical concerns"
+      ],
+      "lastUpdated": "2025-08-15T18:57:18.195Z"
+    },
+    {
+      "id": "murph-ai",
+      "name": "Murph AI",
+      "description": "AI voice generator with studio-quality voices and multilingual support",
+      "category": "audio-generation",
+      "pricing": {
+        "price": 26,
+        "currency": "USD",
+        "text": "Starts at $26/month"
+      },
+      "rating": 4.5,
+      "reviewCount": 6500,
+      "website": "https://murph.ai",
+      "source": "murph",
+      "features": [
+        "voice-generation",
+        "studio-quality",
+        "multilingual",
+        "voice-cloning"
+      ],
+      "pros": [
+        "Studio quality",
+        "Multilingual support",
+        "Voice cloning",
+        "Good for commercial use"
+      ],
+      "cons": [
+        "Expensive",
+        "Limited free trial"
+      ],
+      "lastUpdated": "2025-08-15T18:57:18.195Z"
+    },
+    {
+      "id": "play-ht",
+      "name": "Play.ht",
+      "description": "AI text-to-speech platform with natural-sounding voices",
+      "category": "audio-generation",
+      "pricing": {
+        "price": 14,
+        "currency": "USD",
+        "text": "Starts at $14/month"
+      },
+      "rating": 4.4,
+      "reviewCount": 8500,
+      "website": "https://play.ht",
+      "source": "play-ht",
+      "features": [
+        "text-to-speech",
+        "natural-voices",
+        "multilingual",
+        "api-access"
+      ],
+      "pros": [
+        "Natural voices",
+        "Multilingual support",
+        "API available",
+        "Affordable"
+      ],
+      "cons": [
+        "Limited voice cloning",
+        "Quality varies by voice"
+      ],
+      "lastUpdated": "2025-08-15T18:57:18.195Z"
+    },
+    {
+      "id": "synthesys",
+      "name": "Synthesys",
+      "description": "AI voice and video synthesis platform for professional content",
+      "category": "audio-generation",
+      "pricing": {
+        "price": 41,
+        "currency": "USD",
+        "text": "Starts at $41/month"
+      },
+      "rating": 4.3,
+      "reviewCount": 4500,
+      "website": "https://synthesys.io",
+      "source": "synthesys",
+      "features": [
+        "voice-synthesis",
+        "video-synthesis",
+        "professional-quality",
+        "commercial-licensing"
+      ],
+      "pros": [
+        "Professional quality",
+        "Commercial licensing",
+        "Both voice and video",
+        "Good support"
+      ],
+      "cons": [
+        "Expensive",
+        "Limited customization"
+      ],
+      "lastUpdated": "2025-08-15T18:57:18.195Z"
+    },
+    {
+      "id": "wellsaid-labs",
+      "name": "Wellsaid Labs",
+      "description": "AI voice generation platform focused on natural and expressive speech",
+      "category": "audio-generation",
+      "pricing": {
+        "price": 44,
+        "currency": "USD",
+        "text": "Starts at $44/month"
+      },
+      "rating": 4.2,
+      "reviewCount": 3500,
+      "website": "https://wellsaidlabs.com",
+      "source": "wellsaid",
+      "features": [
+        "voice-generation",
+        "natural-speech",
+        "expressive-voices",
+        "enterprise-focus"
+      ],
+      "pros": [
+        "Natural speech",
+        "Expressive voices",
+        "Enterprise focused",
+        "High quality"
+      ],
+      "cons": [
+        "Expensive",
+        "Limited consumer features"
+      ],
+      "lastUpdated": "2025-08-15T18:57:18.195Z"
+    }
+  ],
+  "total": 5,
+  "lastUpdated": "2025-08-15T18:57:18.206Z"
+}

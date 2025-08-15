@@ -1,0 +1,172 @@
+{
+  "category": "productivity",
+  "tools": [
+    {
+      "id": "notion-ai",
+      "name": "Notion AI",
+      "description": "AI-powered workspace with writing, organization, and collaboration features",
+      "category": "productivity",
+      "pricing": {
+        "price": 8,
+        "currency": "USD",
+        "text": "AI add-on at $8/month"
+      },
+      "rating": 4.6,
+      "reviewCount": 25000,
+      "website": "https://notion.so",
+      "source": "notion",
+      "features": [
+        "workspace",
+        "ai-writing",
+        "organization",
+        "collaboration"
+      ],
+      "pros": [
+        "All-in-one workspace",
+        "Great AI writing",
+        "Excellent organization",
+        "Good collaboration"
+      ],
+      "cons": [
+        "AI is expensive add-on",
+        "Learning curve",
+        "Can be overwhelming"
+      ],
+      "lastUpdated": "2025-08-15T18:57:18.195Z"
+    },
+    {
+      "id": "microsoft-copilot",
+      "name": "Microsoft Copilot",
+      "description": "AI assistant integrated across Microsoft 365 applications",
+      "category": "productivity",
+      "pricing": {
+        "price": 30,
+        "currency": "USD",
+        "text": "Copilot for Microsoft 365 at $30/user/month"
+      },
+      "rating": 4.5,
+      "reviewCount": 18000,
+      "website": "https://microsoft.com/copilot",
+      "source": "microsoft",
+      "features": [
+        "office-integration",
+        "ai-assistant",
+        "productivity",
+        "enterprise-focus"
+      ],
+      "pros": [
+        "Seamless Office integration",
+        "Enterprise focused",
+        "Good productivity features",
+        "Familiar interface"
+      ],
+      "cons": [
+        "Expensive",
+        "Microsoft ecosystem only",
+        "Limited customization"
+      ],
+      "lastUpdated": "2025-08-15T18:57:18.195Z"
+    },
+    {
+      "id": "grammarly",
+      "name": "Grammarly",
+      "description": "AI-powered writing assistant for grammar, style, and tone",
+      "category": "productivity",
+      "pricing": {
+        "price": 12,
+        "currency": "USD",
+        "text": "Premium at $12/month"
+      },
+      "rating": 4.4,
+      "reviewCount": 30000,
+      "website": "https://grammarly.com",
+      "source": "grammarly",
+      "features": [
+        "grammar-checking",
+        "style-improvement",
+        "tone-analysis",
+        "plagiarism-detection"
+      ],
+      "pros": [
+        "Excellent grammar checking",
+        "Style improvement",
+        "Tone analysis",
+        "Wide browser support"
+      ],
+      "cons": [
+        "Expensive",
+        "Privacy concerns",
+        "Sometimes over-corrects"
+      ],
+      "lastUpdated": "2025-08-15T18:57:18.195Z"
+    },
+    {
+      "id": "trello-butler",
+      "name": "Trello Butler",
+      "description": "AI-powered automation for Trello boards and workflows",
+      "category": "productivity",
+      "pricing": {
+        "price": 0,
+        "currency": "USD",
+        "text": "Free with paid Trello plans"
+      },
+      "rating": 4.3,
+      "reviewCount": 15000,
+      "website": "https://trello.com/power-ups/butler",
+      "source": "atlassian",
+      "features": [
+        "workflow-automation",
+        "trello-integration",
+        "ai-suggestions",
+        "rule-based-actions"
+      ],
+      "pros": [
+        "Great Trello integration",
+        "Powerful automation",
+        "AI suggestions",
+        "Free tier available"
+      ],
+      "cons": [
+        "Trello only",
+        "Limited AI features",
+        "Complex setup"
+      ],
+      "lastUpdated": "2025-08-15T18:57:18.195Z"
+    },
+    {
+      "id": "zapier-ai",
+      "name": "Zapier AI",
+      "description": "AI-powered automation platform connecting thousands of apps",
+      "category": "productivity",
+      "pricing": {
+        "price": 19.99,
+        "currency": "USD",
+        "text": "Starts at $19.99/month"
+      },
+      "rating": 4.2,
+      "reviewCount": 20000,
+      "website": "https://zapier.com",
+      "source": "zapier",
+      "features": [
+        "app-integration",
+        "workflow-automation",
+        "ai-assistant",
+        "thousands-of-apps"
+      ],
+      "pros": [
+        "Thousands of app integrations",
+        "Powerful automation",
+        "AI assistant",
+        "Reliable"
+      ],
+      "cons": [
+        "Expensive",
+        "Complex for beginners",
+        "Limited AI features"
+      ],
+      "lastUpdated": "2025-08-15T18:57:18.195Z"
+    }
+  ],
+  "total": 5,
+  "lastUpdated": "2025-08-15T18:57:18.210Z"
+}

@@ -1,0 +1,168 @@
+{
+  "category": "image-generation",
+  "tools": [
+    {
+      "id": "midjourney",
+      "name": "Midjourney",
+      "description": "AI art generator for creating stunning images from text descriptions",
+      "category": "image-generation",
+      "pricing": {
+        "price": 10,
+        "currency": "USD",
+        "text": "Basic plan at $10/month"
+      },
+      "rating": 4.7,
+      "reviewCount": 12000,
+      "website": "https://midjourney.com",
+      "source": "midjourney",
+      "features": [
+        "art-generation",
+        "high-quality",
+        "artistic-style",
+        "discord-integration"
+      ],
+      "pros": [
+        "High quality images",
+        "Artistic style",
+        "Active community",
+        "Regular updates"
+      ],
+      "cons": [
+        "Discord only",
+        "No API access",
+        "Limited control"
+      ],
+      "lastUpdated": "2025-08-15T18:57:18.195Z"
+    },
+    {
+      "id": "dall-e",
+      "name": "DALL-E",
+      "description": "OpenAI's AI system for creating realistic images from text descriptions",
+      "category": "image-generation",
+      "pricing": {
+        "price": 0.02,
+        "currency": "USD",
+        "text": "$0.02 per image"
+      },
+      "rating": 4.6,
+      "reviewCount": 15000,
+      "website": "https://openai.com/dall-e-2",
+      "source": "openai",
+      "features": [
+        "image-generation",
+        "realistic-style",
+        "api-access",
+        "high-quality"
+      ],
+      "pros": [
+        "High quality",
+        "Realistic style",
+        "API available",
+        "Easy to use"
+      ],
+      "cons": [
+        "Expensive for bulk",
+        "Limited artistic control"
+      ],
+      "lastUpdated": "2025-08-15T18:57:18.195Z"
+    },
+    {
+      "id": "stable-diffusion",
+      "name": "Stable Diffusion",
+      "description": "Open-source AI image generation model with local deployment options",
+      "category": "image-generation",
+      "pricing": {
+        "price": 0,
+        "currency": "USD",
+        "text": "Free (open source)"
+      },
+      "rating": 4.5,
+      "reviewCount": 18000,
+      "website": "https://stability.ai",
+      "source": "stability-ai",
+      "features": [
+        "open-source",
+        "local-deployment",
+        "customizable",
+        "high-quality"
+      ],
+      "pros": [
+        "Free and open source",
+        "Local deployment",
+        "Highly customizable",
+        "Community support"
+      ],
+      "cons": [
+        "Technical setup required",
+        "Hardware intensive"
+      ],
+      "lastUpdated": "2025-08-15T18:57:18.195Z"
+    },
+    {
+      "id": "leonardo-ai",
+      "name": "Leonardo.ai",
+      "description": "AI art generation platform with advanced control and customization",
+      "category": "image-generation",
+      "pricing": {
+        "price": 10,
+        "currency": "USD",
+        "text": "Starts at $10/month"
+      },
+      "rating": 4.4,
+      "reviewCount": 6500,
+      "website": "https://leonardo.ai",
+      "source": "leonardo",
+      "features": [
+        "art-generation",
+        "advanced-control",
+        "custom-models",
+        "commercial-use"
+      ],
+      "pros": [
+        "Advanced controls",
+        "Custom models",
+        "Commercial licensing",
+        "Good community"
+      ],
+      "cons": [
+        "Learning curve",
+        "Limited free tier"
+      ],
+      "lastUpdated": "2025-08-15T18:57:18.195Z"
+    },
+    {
+      "id": "canva-ai",
+      "name": "Canva AI",
+      "description": "AI-powered design tool with image generation and editing capabilities",
+      "category": "image-generation",
+      "pricing": {
+        "price": 12.99,
+        "currency": "USD",
+        "text": "Pro plan at $12.99/month"
+      },
+      "rating": 4.3,
+      "reviewCount": 25000,
+      "website": "https://canva.com",
+      "source": "canva",
+      "features": [
+        "design-tool",
+        "image-generation",
+        "templates",
+        "collaboration"
+      ],
+      "pros": [
+        "Easy to use",
+        "Great templates",
+        "Collaboration features",
+        "All-in-one design"
+      ],
+      "cons": [
+        "Limited AI features",
+        "Can be expensive"
+      ],
+      "lastUpdated": "2025-08-15T18:57:18.195Z"
+    }
+  ],
+  "total": 5,
+  "lastUpdated": "2025-08-15T18:57:18.206Z"
+}

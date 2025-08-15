@@ -1,0 +1,168 @@
+{
+  "category": "text-generation",
+  "tools": [
+    {
+      "id": "chatgpt",
+      "name": "ChatGPT",
+      "description": "AI-powered chatbot for conversations, content creation, and problem-solving",
+      "category": "text-generation",
+      "pricing": {
+        "price": 0,
+        "currency": "USD",
+        "text": "Free with ChatGPT Plus at $20/month"
+      },
+      "rating": 4.8,
+      "reviewCount": 15000,
+      "website": "https://chat.openai.com",
+      "source": "openai",
+      "features": [
+        "conversational-ai",
+        "content-creation",
+        "code-generation",
+        "problem-solving"
+      ],
+      "pros": [
+        "Highly capable",
+        "Easy to use",
+        "Wide range of applications",
+        "Regular updates"
+      ],
+      "cons": [
+        "Limited free tier",
+        "Sometimes slow",
+        "Can be expensive"
+      ],
+      "lastUpdated": "2025-08-15T18:57:18.190Z"
+    },
+    {
+      "id": "claude",
+      "name": "Claude",
+      "description": "Advanced AI assistant by Anthropic, known for safety and helpfulness",
+      "category": "text-generation",
+      "pricing": {
+        "price": 20,
+        "currency": "USD",
+        "text": "Claude Pro at $20/month"
+      },
+      "rating": 4.7,
+      "reviewCount": 8500,
+      "website": "https://claude.ai",
+      "source": "anthropic",
+      "features": [
+        "conversational-ai",
+        "content-creation",
+        "analysis",
+        "safety-focused"
+      ],
+      "pros": [
+        "Very helpful",
+        "Safety-focused",
+        "Good at analysis",
+        "Reliable"
+      ],
+      "cons": [
+        "Limited availability",
+        "Higher price point"
+      ],
+      "lastUpdated": "2025-08-15T18:57:18.195Z"
+    },
+    {
+      "id": "jasper",
+      "name": "Jasper",
+      "description": "AI writing assistant for marketing, content, and business writing",
+      "category": "text-generation",
+      "pricing": {
+        "price": 39,
+        "currency": "USD",
+        "text": "Starts at $39/month"
+      },
+      "rating": 4.6,
+      "reviewCount": 12000,
+      "website": "https://jasper.ai",
+      "source": "jasper",
+      "features": [
+        "content-writing",
+        "marketing-copy",
+        "seo-optimization",
+        "brand-voice"
+      ],
+      "pros": [
+        "Great for marketing",
+        "SEO features",
+        "Brand voice consistency",
+        "Templates"
+      ],
+      "cons": [
+        "Expensive",
+        "Limited free trial"
+      ],
+      "lastUpdated": "2025-08-15T18:57:18.195Z"
+    },
+    {
+      "id": "copy-ai",
+      "name": "Copy.ai",
+      "description": "AI copywriting tool for marketing, sales, and content creation",
+      "category": "text-generation",
+      "pricing": {
+        "price": 36,
+        "currency": "USD",
+        "text": "Starts at $36/month"
+      },
+      "rating": 4.5,
+      "reviewCount": 9500,
+      "website": "https://copy.ai",
+      "source": "copy-ai",
+      "features": [
+        "copywriting",
+        "marketing",
+        "sales-copy",
+        "social-media"
+      ],
+      "pros": [
+        "Great templates",
+        "Easy to use",
+        "Good for marketing",
+        "Affordable"
+      ],
+      "cons": [
+        "Limited customization",
+        "Quality varies"
+      ],
+      "lastUpdated": "2025-08-15T18:57:18.195Z"
+    },
+    {
+      "id": "writesonic",
+      "name": "Writesonic",
+      "description": "AI writing platform for blogs, ads, and business content",
+      "category": "text-generation",
+      "pricing": {
+        "price": 19,
+        "currency": "USD",
+        "text": "Starts at $19/month"
+      },
+      "rating": 4.4,
+      "reviewCount": 7800,
+      "website": "https://writesonic.com",
+      "source": "writesonic",
+      "features": [
+        "blog-writing",
+        "ad-copy",
+        "business-content",
+        "seo"
+      ],
+      "pros": [
+        "Affordable",
+        "Good templates",
+        "SEO features",
+        "Multiple languages"
+      ],
+      "cons": [
+        "Quality can be inconsistent",
+        "Limited advanced features"
+      ],
+      "lastUpdated": "2025-08-15T18:57:18.195Z"
+    }
+  ],
+  "total": 5,
+  "lastUpdated": "2025-08-15T18:57:18.205Z"
+}

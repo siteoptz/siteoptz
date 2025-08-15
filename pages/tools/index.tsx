@@ -6,24 +6,35 @@ import SEOHead from "../../components/SEOHead";
 import { getPageConfig, buildCanonicalUrl } from "../../seo/meta-config.js";
 import PricingCalculator from "../../components/tools/PricingCalculator";
 import FAQSection from "../../components/FAQ/FAQSection";
+import { loadUnifiedToolsData, getAllCategories, getToolsByCategory, searchTools } from "../../utils/unifiedDataAdapter.js";
 
 export async function getStaticProps() {
-  const toolsPath = path.join(process.cwd(), "data", "ai-tools.json");
   const faqPath = path.join(process.cwd(), "data", "faq-data.json");
-
-  const toolsData = JSON.parse(fs.readFileSync(toolsPath, "utf-8"));
-  const faqData = JSON.parse(fs.readFileSync(faqPath, "utf-8"));
+  
+  // Load unified tools data from both old and new datasets
+  const allTools = loadUnifiedToolsData(fs, path);
+  const categories = getAllCategories(allTools);
+  
+  let faqData = [];
+  if (fs.existsSync(faqPath)) {
+    const rawFaqData = JSON.parse(fs.readFileSync(faqPath, "utf-8"));
+    faqData = rawFaqData.general_faqs || rawFaqData;
+  }
 
   return {
     props: {
-      tools: toolsData.ai_tools || toolsData,
-      faqs: faqData.general_faqs || faqData,
+      tools: allTools,
+      categories: categories,
+      faqs: faqData,
     },
   };
 }
 
-export default function ToolsPage({ tools, faqs }: { tools: any[], faqs: any }) {
+export default function ToolsPage({ tools, categories, faqs }: { tools: any[], categories: string[], faqs: any }) {
   const [selectedTool, setSelectedTool] = useState(tools[0]);
+  const [selectedCategory, setSelectedCategory] = useState('All');
+  const [searchQuery, setSearchQuery] = useState('');
+  const [filteredTools, setFilteredTools] = useState(tools);
   const pageConfig = getPageConfig('tools');
   const router = useRouter();
 
@@ -31,10 +42,32 @@ export default function ToolsPage({ tools, faqs }: { tools: any[], faqs: any }) 
   useEffect(() => {
     const savedToolName = localStorage.getItem("selectedTool");
     if (savedToolName) {
-      const savedTool = tools.find((t) => t.toolName === savedToolName);
+      const savedTool = tools.find((t) => t.toolName === savedToolName || t.tool_name === savedToolName);
       if (savedTool) setSelectedTool(savedTool);
     }
   }, [tools]);
+
+  // Filter tools based on category and search
+  useEffect(() => {
+    let filtered = tools;
+    
+    // Apply category filter
+    if (selectedCategory !== 'All') {
+      filtered = getToolsByCategory(filtered, selectedCategory);
+    }
+    
+    // Apply search filter
+    if (searchQuery.trim()) {
+      filtered = searchTools(filtered, searchQuery);
+    }
+    
+    setFilteredTools(filtered);
+    
+    // Update selected tool if current one is not in filtered results
+    if (filtered.length > 0 && !filtered.find(t => t.tool_name === selectedTool?.tool_name)) {
+      setSelectedTool(filtered[0]);
+    }
+  }, [selectedCategory, searchQuery, tools, selectedTool]);
 
   // Redirect to review page when user changes selection in dropdown
   const handleToolChange = (toolName: string) => {
@@ -44,23 +77,47 @@ export default function ToolsPage({ tools, faqs }: { tools: any[], faqs: any }) 
     router.push(`/reviews/${toolSlug}`);
   };
 
+  // Handle category filter change
+  const handleCategoryChange = (category: string) => {
+    setSelectedCategory(category);
+  };
+
+  // Handle search input change
+  const handleSearchChange = (query: string) => {
+    setSearchQuery(query);
+  };
+
   // Generate structured data for the tools directory
   const structuredData = {
     "@context": "https://schema.org",
     "@type": "CollectionPage",
-    "name": pageConfig.title,
-    "description": pageConfig.description,
+    "name": `${pageConfig.title} - ${tools.length} AI Tools Directory`,
+    "description": `Comprehensive directory of ${tools.length} AI tools across ${categories.length} categories including ${categories.slice(0, 3).join(', ')} and more.`,
     "url": buildCanonicalUrl('/tools'),
     "mainEntity": {
       "@type": "ItemList",
-      "numberOfItems": tools.length,
-      "itemListElement": tools.map((tool, index) => ({
-        "@type": "SoftwareApplication",
-        "position": index + 1,
-        "name": tool.toolName,
-        "description": tool.description,
-        "url": `${buildCanonicalUrl('/tools')}/${tool.toolName.toLowerCase().replace(/\s+/g, '-')}`
-      }))
+      "numberOfItems": filteredTools.length,
+      "itemListElement": filteredTools.map((tool, index) => {
+        const toolName = tool.tool_name || tool.toolName;
+        return {
+          "@type": "SoftwareApplication",
+          "position": index + 1,
+          "name": toolName,
+          "description": tool.description,
+          "applicationCategory": tool.category,
+          "aggregateRating": {
+            "@type": "AggregateRating",
+            "ratingValue": tool.rating,
+            "ratingCount": tool.search_volume || 100
+          },
+          "offers": {
+            "@type": "Offer",
+            "price": tool.pricing?.monthly === 'Free' ? 0 : tool.pricing?.monthly || 0,
+            "priceCurrency": "USD"
+          },
+          "url": `${buildCanonicalUrl('/tools')}/${toolName.toLowerCase().replace(/\s+/g, '-')}`
+        };
+      })
     }
   };
 
@@ -76,116 +133,202 @@ export default function ToolsPage({ tools, faqs }: { tools: any[], faqs: any }) 
 
       <main className="max-w-6xl mx-auto px-4 py-10 space-y-12">
         <section>
-          <h1 className="text-3xl font-bold mb-6">AI Tools Comparison</h1>
+          <h1 className="text-3xl font-bold mb-6">AI Tools Directory</h1>
+          <p className="text-gray-600 mb-8">Discover and compare {tools.length} AI tools across {categories.length} categories</p>
 
-          {/* Tool Selector */}
-          <div className="mb-4">
-            <label className="block mb-1 font-medium">Select Tool to Review:</label>
-            <select
-              value=""
-              onChange={(e) => {
-                if (e.target.value) {
-                  handleToolChange(e.target.value);
-                }
-              }}
-              className="border rounded px-3 py-2"
-            >
-              <option value="">Choose a tool...</option>
-              {tools.map((tool) => (
-                <option key={tool.toolName} value={tool.toolName}>
-                  {tool.toolName}
-                </option>
-              ))}
-            </select>
+          {/* Search and Filters */}
+          <div className="bg-gray-50 p-6 rounded-lg mb-8">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+              {/* Search */}
+              <div>
+                <label className="block mb-2 font-medium text-gray-700">Search Tools:</label>
+                <input
+                  type="text"
+                  placeholder="Search by name or description..."
+                  value={searchQuery}
+                  onChange={(e) => handleSearchChange(e.target.value)}
+                  className="w-full border rounded-lg px-4 py-2 focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+                />
+              </div>
+              
+              {/* Category Filter */}
+              <div>
+                <label className="block mb-2 font-medium text-gray-700">Filter by Category:</label>
+                <select
+                  value={selectedCategory}
+                  onChange={(e) => handleCategoryChange(e.target.value)}
+                  className="w-full border rounded-lg px-4 py-2 focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+                >
+                  <option value="All">All Categories ({tools.length})</option>
+                  {categories.map((category) => {
+                    const count = getToolsByCategory(tools, category).length;
+                    return (
+                      <option key={category} value={category}>
+                        {category} ({count})
+                      </option>
+                    );
+                  })}
+                </select>
+              </div>
+              
+              {/* Quick Tool Selector */}
+              <div>
+                <label className="block mb-2 font-medium text-gray-700">Jump to Tool:</label>
+                <select
+                  value=""
+                  onChange={(e) => {
+                    if (e.target.value) {
+                      handleToolChange(e.target.value);
+                    }
+                  }}
+                  className="w-full border rounded-lg px-4 py-2 focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+                >
+                  <option value="">Choose a tool...</option>
+                  {filteredTools.map((tool) => (
+                    <option key={tool.tool_name} value={tool.tool_name}>
+                      {tool.tool_name}
+                    </option>
+                  ))}
+                </select>
+              </div>
+            </div>
+            
+            {/* Results Count */}
+            <div className="mt-4 text-sm text-gray-600">
+              Showing {filteredTools.length} of {tools.length} tools
+              {selectedCategory !== 'All' && ` in ${selectedCategory}`}
+              {searchQuery && ` matching "${searchQuery}"`}
+            </div>
           </div>
 
           {/* Tools Grid */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {tools.map((tool: any, index: number) => (
-              <div 
-                key={tool.toolName} 
-                className={`border rounded-lg p-6 transition-all hover:shadow-lg cursor-pointer ${
-                  selectedTool?.toolName === tool.toolName ? 'border-blue-500 bg-blue-50' : 'border-gray-200'
-                }`}
-                onClick={() => handleToolChange(tool.toolName)}
-                onKeyDown={(e) => {
-                  if (e.key === 'Enter' || e.key === ' ') {
-                    e.preventDefault();
-                    handleToolChange(tool.toolName);
+            {filteredTools.length === 0 ? (
+              <div className="col-span-full text-center py-12">
+                <div className="text-gray-400 text-6xl mb-4">🔍</div>
+                <h3 className="text-xl font-semibold text-gray-600 mb-2">No tools found</h3>
+                <p className="text-gray-500">
+                  {searchQuery 
+                    ? `No tools match your search for "${searchQuery}"` 
+                    : `No tools found in ${selectedCategory} category`
                   }
-                }}
-                tabIndex={0}
-                role="button"
-                aria-pressed={selectedTool?.toolName === tool.toolName}
-              >
-                <div className="flex items-center mb-4">
-                  <img 
-                    src={tool.logo_url} 
-                    alt={`${tool.toolName} logo`}
-                    className="w-12 h-12 object-contain mr-4"
-                  />
-                  <div>
-                    <h3 className="text-xl font-semibold">{tool.toolName}</h3>
-                    <p className="text-gray-600 text-sm">{tool.vendor}</p>
-                  </div>
-                </div>
-                
-                <p className="text-gray-700 text-sm mb-2 line-clamp-3">
-                  {tool.description}
                 </p>
-                
-                <div className="mb-4">
-                  <a 
-                    href={`/reviews/${tool.toolName.toLowerCase().replace(/\s+/g, '-')}`}
-                    className="text-blue-600 hover:text-blue-800 text-sm font-medium inline-flex items-center"
-                  >
-                    Read full review →
-                  </a>
-                </div>
-                
-                <div className="flex justify-between items-center">
-                  <div>
-                    <span className="text-lg font-bold text-blue-600">{tool.pricing.price}</span>
-                    <span className="text-gray-500 text-sm ml-1">/{tool.pricing.tier}</span>
-                  </div>
-                  <div className="flex items-center">
-                    <span className="text-yellow-400 mr-1">★</span>
-                    <span className="text-sm font-medium">{tool.rating}</span>
-                  </div>
-                </div>
-                
-                <div className="mt-4 pt-4 border-t border-gray-100">
-                  <div className="flex flex-wrap gap-2">
-                    {tool.features.slice(0, 3).map((feature: string, idx: number) => (
-                      <span 
-                        key={idx}
-                        className="px-2 py-1 bg-gray-100 text-gray-600 text-xs rounded-full"
-                      >
-                        {feature}
-                      </span>
-                    ))}
-                    {tool.features.length > 3 && (
-                      <span className="px-2 py-1 bg-gray-100 text-gray-600 text-xs rounded-full">
-                        +{tool.features.length - 3} more
-                      </span>
-                    )}
-                  </div>
-                </div>
+                <button
+                  onClick={() => {
+                    setSearchQuery('');
+                    setSelectedCategory('All');
+                  }}
+                  className="mt-4 px-6 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors"
+                >
+                  Clear Filters
+                </button>
               </div>
-            ))}
+            ) : (
+              filteredTools.map((tool: any, index: number) => {
+                const toolName = tool.tool_name || tool.toolName;
+                const features = tool.features?.core || tool.features || [];
+                
+                return (
+                  <div 
+                    key={toolName} 
+                    className={`border rounded-lg p-6 transition-all hover:shadow-lg cursor-pointer ${
+                      selectedTool?.tool_name === toolName ? 'border-blue-500 bg-blue-50' : 'border-gray-200'
+                    }`}
+                    onClick={() => handleToolChange(toolName)}
+                    onKeyDown={(e) => {
+                      if (e.key === 'Enter' || e.key === ' ') {
+                        e.preventDefault();
+                        handleToolChange(toolName);
+                      }
+                    }}
+                    tabIndex={0}
+                    role="button"
+                    aria-pressed={selectedTool?.tool_name === toolName}
+                  >
+                    <div className="flex items-center justify-between mb-4">
+                      <div className="flex items-center">
+                        <img 
+                          src={tool.logo_url || tool.logo} 
+                          alt={`${toolName} logo`}
+                          className="w-12 h-12 object-contain mr-4"
+                          onError={(e) => {
+                            e.currentTarget.src = '/images/tools/placeholder-logo.svg';
+                          }}
+                        />
+                        <div>
+                          <h3 className="text-xl font-semibold">{toolName}</h3>
+                          <p className="text-gray-600 text-sm">{tool.vendor}</p>
+                        </div>
+                      </div>
+                      <span className="px-2 py-1 bg-blue-100 text-blue-800 text-xs rounded-full">
+                        {tool.category}
+                      </span>
+                    </div>
+                    
+                    <p className="text-gray-700 text-sm mb-4 line-clamp-3">
+                      {tool.description}
+                    </p>
+                    
+                    <div className="flex justify-between items-center mb-4">
+                      <div>
+                        <span className="text-lg font-bold text-blue-600">
+                          {tool.pricing?.price || `$${tool.pricing?.monthly}/month`}
+                        </span>
+                      </div>
+                      <div className="flex items-center">
+                        <span className="text-yellow-400 mr-1">★</span>
+                        <span className="text-sm font-medium">{tool.rating}</span>
+                      </div>
+                    </div>
+                    
+                    <div className="mb-4">
+                      <a 
+                        href={`/reviews/${toolName.toLowerCase().replace(/\s+/g, '-')}`}
+                        className="text-blue-600 hover:text-blue-800 text-sm font-medium inline-flex items-center"
+                        onClick={(e) => e.stopPropagation()}
+                      >
+                        Read full review →
+                      </a>
+                    </div>
+                    
+                    <div className="pt-4 border-t border-gray-100">
+                      <div className="flex flex-wrap gap-2">
+                        {features.slice(0, 3).map((feature: string, idx: number) => (
+                          <span 
+                            key={idx}
+                            className="px-2 py-1 bg-gray-100 text-gray-600 text-xs rounded-full"
+                          >
+                            {feature}
+                          </span>
+                        ))}
+                        {features.length > 3 && (
+                          <span className="px-2 py-1 bg-gray-100 text-gray-600 text-xs rounded-full">
+                            +{features.length - 3} more
+                          </span>
+                        )}
+                      </div>
+                    </div>
+                  </div>
+                );
+              })
+            )}
           </div>
         </section>
 
-        <section>
-          <h2 className="text-2xl font-bold mb-4">Pricing Calculator for {selectedTool?.toolName}</h2>
-          <PricingCalculator
-            tool={selectedTool}
-            onEmailCapture={(data: any) => {
-              console.log('Email captured:', data);
-              // Handle email capture success
-            }}
-          />
-        </section>
+        {selectedTool && (
+          <section>
+            <h2 className="text-2xl font-bold mb-4">
+              Pricing Calculator for {selectedTool.tool_name || selectedTool.toolName}
+            </h2>
+            <PricingCalculator
+              tool={selectedTool}
+              onEmailCapture={(data: any) => {
+                console.log('Email captured:', data);
+                // Handle email capture success
+              }}
+            />
+          </section>
+        )}
 
         <section>
           <h2 className="text-2xl font-bold mb-4">Frequently Asked Questions</h2>

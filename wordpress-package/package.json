@@ -1,0 +1,22 @@
+{
+  "name": "ai-tools-scraper",
+  "version": "1.0.0",
+  "description": "Scrape AI tools from multiple sources using Firecrawl",
+  "main": "main-scraping-script.js",
+  "scripts": {
+    "start": "node main-scraping-script.js",
+    "scrape": "node main-scraping-script.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "firecrawl": "^1.29.3"
+  },
+  "keywords": [
+    "ai-tools",
+    "scraping",
+    "firecrawl",
+    "data-extraction"
+  ],
+  "author": "SiteOptz.ai",
+  "license": "MIT"
+}

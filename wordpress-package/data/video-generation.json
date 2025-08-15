@@ -1,0 +1,170 @@
+{
+  "category": "video-generation",
+  "tools": [
+    {
+      "id": "runway-ml",
+      "name": "Runway ML",
+      "description": "AI-powered video editing and generation platform",
+      "category": "video-generation",
+      "pricing": {
+        "price": 15,
+        "currency": "USD",
+        "text": "Starts at $15/month"
+      },
+      "rating": 4.6,
+      "reviewCount": 8500,
+      "website": "https://runwayml.com",
+      "source": "runway",
+      "features": [
+        "video-editing",
+        "ai-generation",
+        "motion-graphics",
+        "professional-tools"
+      ],
+      "pros": [
+        "Professional quality",
+        "Advanced features",
+        "Good for motion graphics",
+        "Industry standard"
+      ],
+      "cons": [
+        "Expensive",
+        "Learning curve",
+        "Hardware intensive"
+      ],
+      "lastUpdated": "2025-08-15T18:57:18.195Z"
+    },
+    {
+      "id": "synthesia",
+      "name": "Synthesia",
+      "description": "AI video generation platform for creating talking head videos",
+      "category": "video-generation",
+      "pricing": {
+        "price": 30,
+        "currency": "USD",
+        "text": "Starts at $30/month"
+      },
+      "rating": 4.5,
+      "reviewCount": 6500,
+      "website": "https://synthesia.io",
+      "source": "synthesia",
+      "features": [
+        "talking-head",
+        "avatar-generation",
+        "multi-language",
+        "custom-avatars"
+      ],
+      "pros": [
+        "High quality avatars",
+        "Multi-language support",
+        "Easy to use",
+        "Professional results"
+      ],
+      "cons": [
+        "Expensive",
+        "Limited customization",
+        "Avatar limitations"
+      ],
+      "lastUpdated": "2025-08-15T18:57:18.195Z"
+    },
+    {
+      "id": "pictory",
+      "name": "Pictory",
+      "description": "AI video creation tool that turns text into engaging videos",
+      "category": "video-generation",
+      "pricing": {
+        "price": 19,
+        "currency": "USD",
+        "text": "Starts at $19/month"
+      },
+      "rating": 4.4,
+      "reviewCount": 4500,
+      "website": "https://pictory.ai",
+      "source": "pictory",
+      "features": [
+        "text-to-video",
+        "automated-editing",
+        "stock-footage",
+        "social-media"
+      ],
+      "pros": [
+        "Easy to use",
+        "Automated editing",
+        "Good for social media",
+        "Affordable"
+      ],
+      "cons": [
+        "Limited customization",
+        "Quality varies",
+        "Stock footage dependent"
+      ],
+      "lastUpdated": "2025-08-15T18:57:18.195Z"
+    },
+    {
+      "id": "lumen5",
+      "name": "Lumen5",
+      "description": "AI video maker that transforms text content into engaging videos",
+      "category": "video-generation",
+      "pricing": {
+        "price": 19,
+        "currency": "USD",
+        "text": "Starts at $19/month"
+      },
+      "rating": 4.3,
+      "reviewCount": 7800,
+      "website": "https://lumen5.com",
+      "source": "lumen5",
+      "features": [
+        "text-to-video",
+        "social-media",
+        "templates",
+        "branding"
+      ],
+      "pros": [
+        "Great for social media",
+        "Easy to use",
+        "Good templates",
+        "Branding features"
+      ],
+      "cons": [
+        "Limited advanced features",
+        "Quality can be basic"
+      ],
+      "lastUpdated": "2025-08-15T18:57:18.195Z"
+    },
+    {
+      "id": "kapwing",
+      "name": "Kapwing",
+      "description": "Online video editor with AI-powered features and collaboration",
+      "category": "video-generation",
+      "pricing": {
+        "price": 0,
+        "currency": "USD",
+        "text": "Free with Pro at $20/month"
+      },
+      "rating": 4.2,
+      "reviewCount": 12000,
+      "website": "https://kapwing.com",
+      "source": "kapwing",
+      "features": [
+        "online-editor",
+        "collaboration",
+        "ai-features",
+        "social-media"
+      ],
+      "pros": [
+        "Free tier available",
+        "Online collaboration",
+        "Easy to use",
+        "Good for social media"
+      ],
+      "cons": [
+        "Limited AI features",
+        "Watermark in free tier"
+      ],
+      "lastUpdated": "2025-08-15T18:57:18.195Z"
+    }
+  ],
+  "total": 5,
+  "lastUpdated": "2025-08-15T18:57:18.206Z"
+}

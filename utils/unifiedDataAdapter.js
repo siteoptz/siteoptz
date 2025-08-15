@@ -1,0 +1,171 @@
+// Unified data adapter for AI tools from multiple sources
+
+// Category mapping for the new dataset
+const CATEGORY_MAPPING = {
+  'text-generation': 'Content Creation',
+  'image-generation': 'Visual Content', 
+  'code-generation': 'Development',
+  'video-generation': 'Visual Content',
+  'audio-generation': 'Audio',
+  'data-analysis': 'Analytics',
+  'productivity': 'Productivity',
+  'research-education': 'Research'
+};
+
+/**
+ * Convert new dataset tool format to unified format
+ */
+function convertNewFormatTool(tool, categoryName) {
+  const pricingText = tool.pricing?.text || 'Contact for pricing';
+  let monthlyPrice = 'Custom';
+  
+  if (tool.pricing?.price === 0) {
+    monthlyPrice = 'Free';
+  } else if (tool.pricing?.price && tool.pricing.price > 0) {
+    monthlyPrice = tool.pricing.price;
+  }
+
+  return {
+    tool_name: tool.name,
+    vendor: tool.source || tool.name,
+    category: CATEGORY_MAPPING[categoryName] || 'Other',
+    description: tool.description,
+    features: {
+      core: tool.features || [],
+      advanced: [],
+      integrations: []
+    },
+    pricing: {
+      monthly: monthlyPrice,
+      yearly: monthlyPrice === 'Custom' || monthlyPrice === 'Free' ? monthlyPrice : monthlyPrice * 10,
+      enterprise: 'Custom',
+      price: pricingText,
+      tier: 'month'
+    },
+    free_trial: true, // Assume most have trials
+    pros: tool.pros || [],
+    cons: tool.cons || [],
+    rating: tool.rating || 4.0,
+    use_cases: tool.features || [],
+    affiliate_link: tool.website || '#',
+    logo_url: `/images/tools/${tool.id}-logo.svg`,
+    search_volume: tool.reviewCount || 1000,
+    cpc: 2.50,
+    toolName: tool.name, // For backward compatibility
+    logo: `/images/tools/${tool.id}-logo.svg` // For backward compatibility
+  };
+}
+
+/**
+ * Load and merge all AI tools data - SERVER SIDE ONLY
+ * This function is designed to be called only in getStaticProps
+ */
+export function loadUnifiedToolsData(fs, path) {
+  try {
+    // Load existing aiToolsData.json
+    const existingDataPath = path.join(process.cwd(), 'aiToolsData.json');
+    let existingTools = [];
+    
+    if (fs.existsSync(existingDataPath)) {
+      const existingData = JSON.parse(fs.readFileSync(existingDataPath, 'utf-8'));
+      existingTools = existingData.map(tool => ({
+        ...tool,
+        toolName: tool.tool_name, // Ensure backward compatibility
+        logo: tool.logo_url, // Ensure backward compatibility
+        pricing: {
+          ...tool.pricing,
+          price: tool.pricing.enterprise === 'Custom' && tool.pricing.monthly !== 'Free' 
+            ? `$${tool.pricing.monthly}/month` 
+            : tool.pricing.monthly === 'Free' ? 'Free' : `$${tool.pricing.monthly}/month`,
+          tier: 'month'
+        }
+      }));
+    }
+
+    // Load new category-based datasets
+    const newDataDir = path.join(process.cwd(), 'wordpress-package', 'data');
+    const categoryFiles = [
+      'text-generation.json',
+      'image-generation.json', 
+      'code-generation.json',
+      'video-generation.json',
+      'audio-generation.json',
+      'data-analysis.json',
+      'productivity.json',
+      'research-education.json'
+    ];
+
+    const newTools = [];
+    const existingToolNames = new Set(existingTools.map(t => t.tool_name.toLowerCase()));
+
+    categoryFiles.forEach(filename => {
+      const filePath = path.join(newDataDir, filename);
+      if (fs.existsSync(filePath)) {
+        const categoryData = JSON.parse(fs.readFileSync(filePath, 'utf-8'));
+        const categoryName = filename.replace('.json', '');
+        
+        if (categoryData.tools) {
+          categoryData.tools.forEach(tool => {
+            // Only add if not already in existing data
+            if (!existingToolNames.has(tool.name.toLowerCase())) {
+              newTools.push(convertNewFormatTool(tool, categoryName));
+            }
+          });
+        }
+      }
+    });
+
+    // Combine both datasets
+    const allTools = [...existingTools, ...newTools];
+    
+    // Sort by rating (highest first), then by name
+    allTools.sort((a, b) => {
+      if (b.rating !== a.rating) {
+        return b.rating - a.rating;
+      }
+      return a.tool_name.localeCompare(b.tool_name);
+    });
+
+    return allTools;
+  } catch (error) {
+    console.error('Error loading unified tools data:', error);
+    return [];
+  }
+}
+
+/**
+ * Get tools by category
+ */
+export function getToolsByCategory(tools, category) {
+  if (!category) return tools;
+  return tools.filter(tool => tool.category === category);
+}
+
+/**
+ * Get all unique categories
+ */
+export function getAllCategories(tools) {
+  const categories = [...new Set(tools.map(tool => tool.category))];
+  return categories.sort();
+}
+
+/**
+ * Search tools by name or description
+ */
+export function searchTools(tools, query) {
+  if (!query) return tools;
+  
+  const searchTerm = query.toLowerCase();
+  return tools.filter(tool => 
+    tool.tool_name.toLowerCase().includes(searchTerm) ||
+    tool.description.toLowerCase().includes(searchTerm) ||
+    tool.vendor.toLowerCase().includes(searchTerm)
+  );
+}
+
+export default {
+  loadUnifiedToolsData,
+  getToolsByCategory,
+  getAllCategories,
+  searchTools
+};

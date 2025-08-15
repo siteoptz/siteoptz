@@ -1,0 +1,169 @@
+{
+  "category": "code-generation",
+  "tools": [
+    {
+      "id": "github-copilot",
+      "name": "GitHub Copilot",
+      "description": "AI-powered code completion and generation for developers",
+      "category": "code-generation",
+      "pricing": {
+        "price": 10,
+        "currency": "USD",
+        "text": "Individual plan at $10/month"
+      },
+      "rating": 4.6,
+      "reviewCount": 20000,
+      "website": "https://github.com/features/copilot",
+      "source": "github",
+      "features": [
+        "code-completion",
+        "multi-language",
+        "ide-integration",
+        "real-time-suggestions"
+      ],
+      "pros": [
+        "Saves time",
+        "Multi-language support",
+        "IDE integration",
+        "Learns from context"
+      ],
+      "cons": [
+        "Expensive",
+        "Sometimes inaccurate",
+        "Privacy concerns"
+      ],
+      "lastUpdated": "2025-08-15T18:57:18.195Z"
+    },
+    {
+      "id": "cursor",
+      "name": "Cursor",
+      "description": "AI-first code editor with advanced code generation and editing",
+      "category": "code-generation",
+      "pricing": {
+        "price": 20,
+        "currency": "USD",
+        "text": "Pro plan at $20/month"
+      },
+      "rating": 4.5,
+      "reviewCount": 8500,
+      "website": "https://cursor.sh",
+      "source": "cursor",
+      "features": [
+        "code-editor",
+        "ai-assistant",
+        "chat-interface",
+        "multi-language"
+      ],
+      "pros": [
+        "Great AI integration",
+        "Chat interface",
+        "Fast performance",
+        "Good UI"
+      ],
+      "cons": [
+        "Newer tool",
+        "Limited extensions",
+        "Can be expensive"
+      ],
+      "lastUpdated": "2025-08-15T18:57:18.195Z"
+    },
+    {
+      "id": "replit-ghost",
+      "name": "Replit Ghost",
+      "description": "AI-powered coding assistant integrated into Replit's development environment",
+      "category": "code-generation",
+      "pricing": {
+        "price": 7,
+        "currency": "USD",
+        "text": "Hacker plan at $7/month"
+      },
+      "rating": 4.4,
+      "reviewCount": 12000,
+      "website": "https://replit.com",
+      "source": "replit",
+      "features": [
+        "online-ide",
+        "ai-assistant",
+        "collaboration",
+        "deployment"
+      ],
+      "pros": [
+        "Online IDE",
+        "Easy collaboration",
+        "Built-in deployment",
+        "Affordable"
+      ],
+      "cons": [
+        "Limited offline use",
+        "Performance depends on internet"
+      ],
+      "lastUpdated": "2025-08-15T18:57:18.195Z"
+    },
+    {
+      "id": "amazon-codewhisperer",
+      "name": "Amazon CodeWhisperer",
+      "description": "AI-powered code generator with security scanning and AWS integration",
+      "category": "code-generation",
+      "pricing": {
+        "price": 0,
+        "currency": "USD",
+        "text": "Free for individual use"
+      },
+      "rating": 4.3,
+      "reviewCount": 9500,
+      "website": "https://aws.amazon.com/codewhisperer",
+      "source": "amazon",
+      "features": [
+        "code-generation",
+        "security-scanning",
+        "aws-integration",
+        "multi-language"
+      ],
+      "pros": [
+        "Free for individuals",
+        "Security focused",
+        "AWS integration",
+        "Good for enterprise"
+      ],
+      "cons": [
+        "Limited features in free tier",
+        "AWS ecosystem focused"
+      ],
+      "lastUpdated": "2025-08-15T18:57:18.195Z"
+    },
+    {
+      "id": "tabnine",
+      "name": "Tabnine",
+      "description": "AI code completion tool with team learning and customization",
+      "category": "code-generation",
+      "pricing": {
+        "price": 12,
+        "currency": "USD",
+        "text": "Pro plan at $12/month"
+      },
+      "rating": 4.2,
+      "reviewCount": 15000,
+      "website": "https://tabnine.com",
+      "source": "tabnine",
+      "features": [
+        "code-completion",
+        "team-learning",
+        "custom-models",
+        "privacy-focused"
+      ],
+      "pros": [
+        "Privacy focused",
+        "Team learning",
+        "Custom models",
+        "Good performance"
+      ],
+      "cons": [
+        "Less advanced than competitors",
+        "Limited features"
+      ],
+      "lastUpdated": "2025-08-15T18:57:18.195Z"
+    }
+  ],
+  "total": 5,
+  "lastUpdated": "2025-08-15T18:57:18.206Z"
+}

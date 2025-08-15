@@ -1,0 +1,171 @@
+{
+  "category": "data-analysis",
+  "tools": [
+    {
+      "id": "chatgpt-enterprise",
+      "name": "ChatGPT Enterprise",
+      "description": "Enterprise-grade AI assistant with advanced data analysis capabilities",
+      "category": "data-analysis",
+      "pricing": {
+        "price": null,
+        "currency": "USD",
+        "text": "Contact for pricing"
+      },
+      "rating": 4.6,
+      "reviewCount": 2500,
+      "website": "https://openai.com/enterprise",
+      "source": "openai",
+      "features": [
+        "data-analysis",
+        "enterprise-security",
+        "custom-models",
+        "api-access"
+      ],
+      "pros": [
+        "Enterprise security",
+        "Custom models",
+        "Advanced analysis",
+        "API access"
+      ],
+      "cons": [
+        "Expensive",
+        "Limited availability",
+        "Complex setup"
+      ],
+      "lastUpdated": "2025-08-15T18:57:18.195Z"
+    },
+    {
+      "id": "tableau-ai",
+      "name": "Tableau AI",
+      "description": "AI-powered data visualization and analytics platform",
+      "category": "data-analysis",
+      "pricing": {
+        "price": 70,
+        "currency": "USD",
+        "text": "Starts at $70/user/month"
+      },
+      "rating": 4.5,
+      "reviewCount": 15000,
+      "website": "https://tableau.com",
+      "source": "tableau",
+      "features": [
+        "data-visualization",
+        "ai-insights",
+        "business-intelligence",
+        "collaboration"
+      ],
+      "pros": [
+        "Industry standard",
+        "Powerful visualization",
+        "AI insights",
+        "Good integration"
+      ],
+      "cons": [
+        "Expensive",
+        "Learning curve",
+        "Resource intensive"
+      ],
+      "lastUpdated": "2025-08-15T18:57:18.195Z"
+    },
+    {
+      "id": "power-bi",
+      "name": "Power BI",
+      "description": "Microsoft's business analytics platform with AI-powered insights",
+      "category": "data-analysis",
+      "pricing": {
+        "price": 9.99,
+        "currency": "USD",
+        "text": "Pro plan at $9.99/user/month"
+      },
+      "rating": 4.4,
+      "reviewCount": 20000,
+      "website": "https://powerbi.microsoft.com",
+      "source": "microsoft",
+      "features": [
+        "business-intelligence",
+        "ai-insights",
+        "microsoft-integration",
+        "real-time-data"
+      ],
+      "pros": [
+        "Microsoft integration",
+        "Affordable",
+        "Good for enterprise",
+        "Real-time data"
+      ],
+      "cons": [
+        "Limited advanced AI",
+        "Microsoft ecosystem focused"
+      ],
+      "lastUpdated": "2025-08-15T18:57:18.195Z"
+    },
+    {
+      "id": "looker",
+      "name": "Looker",
+      "description": "Google's data platform with AI-powered analytics and insights",
+      "category": "data-analysis",
+      "pricing": {
+        "price": null,
+        "currency": "USD",
+        "text": "Contact for pricing"
+      },
+      "rating": 4.3,
+      "reviewCount": 8500,
+      "website": "https://looker.com",
+      "source": "google",
+      "features": [
+        "data-platform",
+        "ai-analytics",
+        "google-integration",
+        "enterprise-focus"
+      ],
+      "pros": [
+        "Google integration",
+        "Enterprise features",
+        "Good scalability",
+        "Advanced analytics"
+      ],
+      "cons": [
+        "Expensive",
+        "Complex setup",
+        "Google ecosystem focused"
+      ],
+      "lastUpdated": "2025-08-15T18:57:18.195Z"
+    },
+    {
+      "id": "qlik-sense",
+      "name": "Qlik Sense",
+      "description": "AI-powered data analytics platform with associative engine",
+      "category": "data-analysis",
+      "pricing": {
+        "price": 30,
+        "currency": "USD",
+        "text": "Starts at $30/user/month"
+      },
+      "rating": 4.2,
+      "reviewCount": 12000,
+      "website": "https://qlik.com",
+      "source": "qlik",
+      "features": [
+        "data-analytics",
+        "associative-engine",
+        "ai-insights",
+        "self-service"
+      ],
+      "pros": [
+        "Associative engine",
+        "Self-service BI",
+        "Good AI insights",
+        "Flexible deployment"
+      ],
+      "cons": [
+        "Learning curve",
+        "Resource intensive",
+        "Expensive"
+      ],
+      "lastUpdated": "2025-08-15T18:57:18.195Z"
+    }
+  ],
+  "total": 5,
+  "lastUpdated": "2025-08-15T18:57:18.207Z"
+}
