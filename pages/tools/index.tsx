@@ -122,9 +122,18 @@ export default function ToolsPage({ tools, faqs }: { tools: any[], faqs: any }) 
                   </div>
                 </div>
                 
-                <p className="text-gray-700 text-sm mb-4 line-clamp-3">
+                <p className="text-gray-700 text-sm mb-2 line-clamp-3">
                   {tool.description}
                 </p>
+                
+                <div className="mb-4">
+                  <a 
+                    href={`/reviews/${tool.toolName.toLowerCase().replace(/\s+/g, '-')}`}
+                    className="text-blue-600 hover:text-blue-800 text-sm font-medium inline-flex items-center"
+                  >
+                    Read full review →
+                  </a>
+                </div>
                 
                 <div className="flex justify-between items-center">
                   <div>
