@@ -279,7 +279,7 @@ export default function ReviewPage({ tool, pageTitle, slug, relatedTools, relate
                   {tool.description}
                 </p>
 
-                <div className="flex flex-col sm:flex-row gap-4">
+                <div className="flex justify-center">
                   <a
                     href={tool.affiliate_link || tool.official_url}
                     target="_blank"
@@ -287,14 +287,6 @@ export default function ReviewPage({ tool, pageTitle, slug, relatedTools, relate
                     className="bg-white text-blue-600 hover:bg-blue-50 font-bold py-3 px-8 rounded-lg transition-colors text-center"
                   >
                     Try {tool.tool_name} Free
-                  </a>
-                  <a
-                    href={tool.official_url}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="border-2 border-white text-white hover:bg-white hover:text-blue-600 font-semibold py-3 px-8 rounded-lg transition-colors text-center"
-                  >
-                    Visit Official Site
                   </a>
                 </div>
               </div>
