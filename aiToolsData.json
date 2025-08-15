@@ -398,7 +398,7 @@
       "Educational materials"
     ],
     "affiliate_link": "https://openai.com/dall-e-2",
-    "logo_url": "/images/tools/dalle-logo.png",
+    "logo_url": "/images/tools/dall-e-logo.png",
     "search_volume": 1800,
     "cpc": 2.80
   },
@@ -466,7 +466,7 @@
       "Multi-platform posting"
     ],
     "affiliate_link": "https://hootsuite.com/",
-    "logo_url": "/images/tools/hootsuite-logo.png",
+    "logo_url": "/images/tools/placeholder-logo.png",
     "search_volume": 2000,
     "cpc": 2.20
   },
@@ -534,7 +534,7 @@
       "Content optimization"
     ],
     "affiliate_link": "https://buffer.com/",
-    "logo_url": "/images/tools/buffer-logo.png",
+    "logo_url": "/images/tools/placeholder-logo.png",
     "search_volume": 1500,
     "cpc": 1.80
   },
@@ -601,7 +601,7 @@
       "Rank tracking"
     ],
     "affiliate_link": "https://ahrefs.com/",
-    "logo_url": "/images/tools/ahrefs-logo.png",
+    "logo_url": "/images/tools/placeholder-logo.png",
     "search_volume": 1875,
     "cpc": 3.30
   },
@@ -668,7 +668,7 @@
       "Rank tracking"
     ],
     "affiliate_link": "https://www.semrush.com/",
-    "logo_url": "/images/tools/semrush-logo.png",
+    "logo_url": "/images/tools/placeholder-logo.png",
     "search_volume": 1600,
     "cpc": 3.10
   },
@@ -735,7 +735,7 @@
       "Template creation"
     ],
     "affiliate_link": "https://mailchimp.com/",
-    "logo_url": "/images/tools/mailchimp-logo.png",
+    "logo_url": "/images/tools/placeholder-logo.png",
     "search_volume": 1750,
     "cpc": 2.65
   },
@@ -802,7 +802,7 @@
       "CRM integration"
     ],
     "affiliate_link": "https://www.hubspot.com/",
-    "logo_url": "/images/tools/hubspot-logo.png",
+    "logo_url": "/images/tools/placeholder-logo.png",
     "search_volume": 1600,
     "cpc": 2.90
   },
