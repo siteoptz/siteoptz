@@ -1,0 +1,14 @@
+<svg width="64" height="64" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="synthesia-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#4F46E5"/>
+      <stop offset="100%" style="stop-color:#7C3AED"/>
+    </linearGradient>
+  </defs>
+  <rect width="64" height="64" rx="12" fill="url(#synthesia-grad)"/>
+  <g transform="translate(16, 16)">
+    <rect x="6" y="4" width="20" height="16" rx="2" fill="white"/>
+    <circle cx="16" cy="12" r="4" fill="#4F46E5"/>
+    <rect x="10" y="22" width="12" height="6" rx="1" fill="white"/>
+  </g>
+</svg>

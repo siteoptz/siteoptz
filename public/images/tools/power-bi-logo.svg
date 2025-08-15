@@ -1,0 +1,15 @@
+<svg width="64" height="64" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="powerbi-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#F2C811"/>
+      <stop offset="100%" style="stop-color:#E6A500"/>
+    </linearGradient>
+  </defs>
+  <rect width="64" height="64" rx="12" fill="#2C3E50"/>
+  <g transform="translate(14, 14)">
+    <rect x="2" y="20" width="8" height="12" rx="1" fill="url(#powerbi-grad)"/>
+    <rect x="12" y="14" width="8" height="18" rx="1" fill="url(#powerbi-grad)" opacity="0.8"/>
+    <rect x="22" y="8" width="8" height="24" rx="1" fill="url(#powerbi-grad)" opacity="0.6"/>
+    <rect x="32" y="2" width="4" height="30" rx="1" fill="url(#powerbi-grad)" opacity="0.4"/>
+  </g>
+</svg>

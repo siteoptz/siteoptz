@@ -1,0 +1,16 @@
+<svg width="64" height="64" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="tableau-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#E97627"/>
+      <stop offset="50%" style="stop-color:#1F4788"/>
+      <stop offset="100%" style="stop-color:#5B879B"/>
+    </linearGradient>
+  </defs>
+  <rect width="64" height="64" rx="12" fill="white"/>
+  <g transform="translate(16, 16)">
+    <rect x="14" y="2" width="4" height="28" fill="#E97627"/>
+    <rect x="2" y="14" width="28" height="4" fill="#E97627"/>
+    <rect x="8" y="8" width="16" height="16" fill="none" stroke="#1F4788" stroke-width="2"/>
+    <rect x="4" y="4" width="24" height="24" fill="none" stroke="#5B879B" stroke-width="2"/>
+  </g>
+</svg>

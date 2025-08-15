@@ -1,0 +1,15 @@
+<svg width="64" height="64" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="chatgpt-ent-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#10A37F"/>
+      <stop offset="100%" style="stop-color:#0D8F6E"/>
+    </linearGradient>
+  </defs>
+  <rect width="64" height="64" rx="12" fill="#000000"/>
+  <g transform="translate(16, 16)">
+    <path d="M16 2 L28 8 L28 20 L16 26 L4 20 L4 8 Z" fill="url(#chatgpt-ent-grad)"/>
+    <path d="M16 8 L22 11 L22 17 L16 20 L10 17 L10 11 Z" fill="white"/>
+    <circle cx="16" cy="14" r="2" fill="#10A37F"/>
+  </g>
+  <text x="32" y="48" font-family="Arial" font-size="6" font-weight="bold" text-anchor="middle" fill="white">ENTERPRISE</text>
+</svg>

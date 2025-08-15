@@ -9,8 +9,11 @@ export default function CompareIndex({ aiToolsData }) {
   const [sortBy, setSortBy] = useState('name');
   const [viewMode, setViewMode] = useState('grid');
 
-  // Get unique categories based on tool types
-  const categories = ['all', 'AI Assistant', 'Content Creation', 'SEO Tool', 'Image Generation'];
+  // Get unique categories from tools data
+  const categories = useMemo(() => {
+    const cats = new Set(aiToolsData.map(tool => tool.category));
+    return ['all', ...Array.from(cats).sort()];
+  }, [aiToolsData]);
 
   // Filter and sort tools
   const filteredTools = useMemo(() => {
@@ -19,27 +22,7 @@ export default function CompareIndex({ aiToolsData }) {
       const matchesSearch = tool.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
                            description.toLowerCase().includes(searchTerm.toLowerCase());
       
-      // Categorize tools based on their features and purpose
-      const getToolCategory = (tool) => {
-        const name = tool.name.toLowerCase();
-        const description = (tool.overview?.description || tool.description || '').toLowerCase();
-        const features = (tool.features || []).join(' ').toLowerCase();
-        
-        if (name.includes('seo') || features.includes('seo') || name.includes('surfer')) {
-          return 'SEO Tool';
-        }
-        if (name.includes('midjourney') || features.includes('image') || description.includes('image')) {
-          return 'Image Generation';
-        }
-        if (features.includes('content') || features.includes('writing') || features.includes('copy') || 
-            name.includes('jasper') || name.includes('copy') || name.includes('writesonic')) {
-          return 'Content Creation';
-        }
-        return 'AI Assistant';
-      };
-      
-      const toolCategory = getToolCategory(tool);
-      const matchesCategory = selectedCategory === 'all' || toolCategory === selectedCategory;
+      const matchesCategory = selectedCategory === 'all' || tool.category === selectedCategory;
       
       return matchesSearch && matchesCategory;
     });
@@ -228,19 +211,11 @@ export default function CompareIndex({ aiToolsData }) {
 }
 
 function ToolCard({ tool, viewMode }) {
-  const pricing = tool.pricing || tool.pricingPlans || [];
-  const startingPrice = pricing.find(plan => (plan.monthlyPrice || plan.price_per_month) > 0)?.monthlyPrice || pricing.find(plan => (plan.monthlyPrice || plan.price_per_month) > 0)?.price_per_month || 0;
-  const hasFreeTrial = pricing.some(plan => (plan.monthlyPrice || plan.price_per_month) === 0);
-  
-  // Calculate overall rating from benchmarks
-  const calculateOverallRating = (benchmarks) => {
-    if (!benchmarks) return 4.0;
-    const scores = Object.values(benchmarks);
-    const average = scores.reduce((sum, score) => sum + score, 0) / scores.length;
-    return Math.round(average * 10) / 10; // Round to 1 decimal place
-  };
-  
-  const overallRating = calculateOverallRating(tool.benchmarks);
+  const pricing = tool.pricing || {};
+  const startingPrice = pricing.monthly === 'Free' ? 0 : (pricing.monthly === 'Custom' ? 'Custom' : pricing.monthly || 0);
+  const hasFreeTrial = pricing.monthly === 'Free' || tool.free_trial;
+  const toolSlug = tool.name.toLowerCase().replace(/\s+/g, '-').replace(/\./g, '');
+  const overallRating = tool.rating || 4.5;
 
   if (viewMode === 'list') {
     return (
@@ -272,8 +247,16 @@ function ToolCard({ tool, viewMode }) {
                 </div>
                 <div className="text-right">
                   <div className="text-2xl font-bold text-gray-900">
-                    ${startingPrice}
-                    <span className="text-sm font-normal text-gray-500">/month</span>
+                    {startingPrice === 'Custom' ? (
+                      <span>Custom</span>
+                    ) : startingPrice === 0 ? (
+                      <span>Free</span>
+                    ) : (
+                      <>
+                        ${startingPrice}
+                        <span className="text-sm font-normal text-gray-500">/month</span>
+                      </>
+                    )}
                   </div>
                   {hasFreeTrial && (
                     <span className="px-2 py-1 bg-green-100 text-green-700 text-xs rounded-full">
@@ -286,13 +269,13 @@ function ToolCard({ tool, viewMode }) {
               <div className="flex items-center gap-6 text-sm text-gray-600 mb-3">
                 <div className="flex items-center gap-1">
                   <Star className="w-4 h-4 text-yellow-400 fill-current" />
-                  <span>{overallRating}/10</span>
+                  <span>{overallRating}/5</span>
                 </div>
                 <div className="flex items-center gap-1">
                   <Zap className="w-4 h-4 text-blue-500" />
                   <span>{(tool.features || []).length} features</span>
                 </div>
-                <span className="px-2 py-1 bg-gray-100 text-gray-700 text-xs rounded-full">AI Tool</span>
+                <span className="px-2 py-1 bg-blue-100 text-blue-700 text-xs rounded-full">{tool.category}</span>
               </div>
 
               <p className="text-gray-600 text-sm mb-4 line-clamp-2">
@@ -301,7 +284,7 @@ function ToolCard({ tool, viewMode }) {
 
               <div className="flex justify-center">
                 <a 
-                  href={`/tools/${tool.slug}`}
+                  href={`/reviews/${toolSlug}`}
                   className="px-4 py-2 bg-blue-600 text-white text-sm rounded-lg hover:bg-blue-700 transition-colors"
                 >
                   Learn More
@@ -339,9 +322,9 @@ function ToolCard({ tool, viewMode }) {
         <div className="flex items-center justify-between">
           <div className="flex items-center gap-1">
             <Star className="w-4 h-4 text-yellow-400 fill-current" />
-            <span className="text-sm font-medium">{overallRating}/10</span>
+            <span className="text-sm font-medium">{overallRating}/5</span>
           </div>
-          <span className="px-2 py-1 bg-gray-100 text-gray-700 text-xs rounded-full">AI Tool</span>
+          <span className="px-2 py-1 bg-blue-100 text-blue-700 text-xs rounded-full">{tool.category}</span>
         </div>
       </div>
 
@@ -349,8 +332,16 @@ function ToolCard({ tool, viewMode }) {
         <div className="space-y-4">
           <div className="flex items-center justify-between">
             <div className="text-2xl font-bold text-gray-900">
-              ${startingPrice}
-              <span className="text-sm font-normal text-gray-500">/month</span>
+              {startingPrice === 'Custom' ? (
+                <span>Custom</span>
+              ) : startingPrice === 0 ? (
+                <span>Free</span>
+              ) : (
+                <>
+                  ${startingPrice}
+                  <span className="text-sm font-normal text-gray-500">/month</span>
+                </>
+              )}
             </div>
             {hasFreeTrial && (
               <span className="px-2 py-1 bg-green-100 text-green-700 text-xs rounded-full">Free Trial</span>
@@ -368,7 +359,7 @@ function ToolCard({ tool, viewMode }) {
 
                     <div className="flex justify-center pt-2">
             <a
-              href={`/tools/${tool.slug}`}
+              href={`/reviews/${toolSlug}`}
               className="px-4 py-2 bg-blue-600 text-white text-sm rounded-lg hover:bg-blue-700 transition-colors text-center"
             >
               Learn More
@@ -383,11 +374,32 @@ function ToolCard({ tool, viewMode }) {
 export async function getStaticProps() {
   const fs = require('fs');
   const path = require('path');
+  const { loadUnifiedToolsData } = require('../../utils/unifiedDataAdapter');
   
   try {
-    const aiToolsData = JSON.parse(
-      fs.readFileSync(path.join(process.cwd(), 'public/data/aiToolsData.json'), 'utf8')
-    );
+    // Load unified tools data
+    const unifiedTools = loadUnifiedToolsData(fs, path);
+    
+    // Transform data to match the expected format for compare page
+    const aiToolsData = unifiedTools.map(tool => ({
+      name: tool.tool_name || tool.toolName,
+      category: tool.category,
+      description: tool.description || '',
+      overview: { description: tool.description || '' },
+      features: tool.features?.core || tool.features || [],
+      pricing: tool.pricing,
+      pricingPlans: [
+        {
+          plan: 'Monthly',
+          price_per_month: tool.pricing?.monthly === 'Free' ? 0 : tool.pricing?.monthly || 0,
+          monthlyPrice: tool.pricing?.monthly === 'Free' ? 0 : tool.pricing?.monthly || 0
+        }
+      ],
+      logo: tool.logo_url || tool.logo,
+      rating: tool.rating || 4.5,
+      affiliate_link: tool.affiliate_link || '#',
+      search_volume: tool.search_volume || 1000
+    }));
     
     return {
       props: {
