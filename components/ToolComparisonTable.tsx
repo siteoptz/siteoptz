@@ -3,9 +3,12 @@ interface Tool {
   name: string;
   benchmarks?: Record<string, number>;
   pricing?: Array<{
-    price_per_month: number;
+    price_per_month?: number;
+    monthlyPrice?: number;
+    plan?: string;
     plan_name?: string;
   }>;
+  features?: string[];
   [key: string]: any;
 }
 
@@ -27,10 +30,25 @@ export default function ToolComparisonTable({ tools, highlight, defaultSelected 
   // Get starting price
   const getStartingPrice = (tool: Tool) => {
     if (!tool.pricing || !Array.isArray(tool.pricing)) return 'N/A';
-    const freePlan = tool.pricing.find(p => p.price_per_month === 0);
+    
+    // Handle different pricing data structures
+    const freePlan = tool.pricing.find(p => 
+      (p.price_per_month !== undefined && p.price_per_month === 0) ||
+      (p.monthlyPrice !== undefined && p.monthlyPrice === 0) ||
+      (p.plan && p.plan.toLowerCase().includes('free'))
+    );
+    
     if (freePlan) return 'Free';
-    const lowestPrice = Math.min(...tool.pricing.map(p => p.price_per_month).filter(p => p > 0));
-    return lowestPrice > 0 ? `$${lowestPrice}/mo` : 'N/A';
+    
+    // Get the lowest non-zero price from either price_per_month or monthlyPrice
+    const prices = tool.pricing
+      .map(p => p.price_per_month || p.monthlyPrice || 0)
+      .filter(p => p > 0);
+    
+    if (prices.length === 0) return 'Free';
+    
+    const lowestPrice = Math.min(...prices);
+    return `$${lowestPrice}/mo`;
   };
 
   return (
@@ -52,7 +70,7 @@ export default function ToolComparisonTable({ tools, highlight, defaultSelected 
             >
               <td className="border px-4 py-2">{tool.name}</td>
               <td className="border px-4 py-2">
-                {tool.features && Array.isArray(tool.features) 
+                {tool.features && Array.isArray(tool.features) && tool.features.length > 0
                   ? tool.features.slice(0, 3).join(", ") + (tool.features.length > 3 ? "..." : "")
                   : "No features listed"
                 }

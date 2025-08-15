@@ -8,8 +8,8 @@ import PricingCalculator from "../components/PricingCalculator";
 import FAQSection from "../components/FAQSection";
 
 export async function getStaticProps() {
-  const toolsPath = path.join(process.cwd(), "data", "tool_data.json");
-  const faqPath = path.join(process.cwd(), "data", "faq_data.json");
+  const toolsPath = path.join(process.cwd(), "public", "data", "aiToolsData.json");
+  const faqPath = path.join(process.cwd(), "public", "data", "faqData.json");
 
   const toolsData = JSON.parse(fs.readFileSync(toolsPath, "utf-8"));
   const faqData = JSON.parse(fs.readFileSync(faqPath, "utf-8"));
@@ -24,11 +24,12 @@ export async function getStaticProps() {
 
 export default function PricingPage({ tools, faqs }: { tools: any[], faqs: any }) {
   const router = useRouter();
-  const [selectedTool, setSelectedTool] = useState(tools[0]);
+  const [selectedTool, setSelectedTool] = useState(tools?.[0] || null);
   const [selectedPlan, setSelectedPlan] = useState(null);
 
   // Handle URL parameters for deep linking
   useEffect(() => {
+    if (!tools || tools.length === 0) return;
     const { tool: toolParam, plan: planParam } = router.query;
     
     if (toolParam) {
@@ -69,6 +70,16 @@ export default function PricingPage({ tools, faqs }: { tools: any[], faqs: any }
       query: { tool: toolName }
     }, undefined, { shallow: true });
   };
+
+  // Safety check for tools data
+  if (!tools || tools.length === 0) {
+    return (
+      <main className="max-w-6xl mx-auto px-4 py-10">
+        <h1 className="text-3xl font-bold mb-6">AI Tools Pricing Calculator</h1>
+        <p>No tools data available.</p>
+      </main>
+    );
+  }
 
   return (
     <>
@@ -124,13 +135,28 @@ export default function PricingPage({ tools, faqs }: { tools: any[], faqs: any }
 
         <section>
           <h2 className="text-2xl font-bold mb-4">
-            {selectedTool.name} Pricing Calculator
+            {selectedTool.name} Pricing Plans
           </h2>
-          <PricingCalculator
-            plans={selectedTool.pricing}
-            toolName={selectedTool.name}
-            enablePersistence={true}
-          />
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {selectedTool.pricing?.map((plan: any, index: number) => (
+              <div key={index} className="border rounded-lg p-6 shadow-sm hover:shadow-md transition-shadow">
+                <h3 className="text-xl font-semibold mb-2">{plan.plan}</h3>
+                <div className="text-3xl font-bold mb-4 text-blue-600">
+                  {plan.price_per_month === 0 ? 'Free' : `$${plan.price_per_month}/mo`}
+                </div>
+                <ul className="space-y-2">
+                  {plan.features?.map((feature: string, featureIndex: number) => (
+                    <li key={featureIndex} className="flex items-center space-x-2">
+                      <span className="text-green-500">✓</span>
+                      <span className="text-sm">{feature}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            )) || (
+              <p className="text-gray-500">No pricing information available.</p>
+            )}
+          </div>
         </section>
 
         <section>
