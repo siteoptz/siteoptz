@@ -36,11 +36,34 @@ export default function PricingCalculator({
 }: PricingCalculatorProps) {
   // Convert tools to plans format if tools are provided
   const convertedPlans = tools ? tools.flatMap(tool => 
-    tool.pricing.map(p => ({
-      name: `${tool.name} - ${p.plan}`,
-      price: p.price_per_month === 0 ? 'Free' : `$${p.price_per_month}`,
-      features: p.features
-    }))
+    tool.pricing.map(p => {
+      let price: string;
+      
+      // Check if this is actually enterprise/custom pricing vs truly free
+      const isEnterpriseOrCustom = p.price_per_month === 0 && 
+        (p.plan?.toLowerCase().includes('enterprise') || 
+         p.plan?.toLowerCase().includes('custom') ||
+         p.features?.some((f: string) => f.toLowerCase().includes('custom pricing')));
+      
+      const isTrulyFree = p.price_per_month === 0 && 
+        p.plan?.toLowerCase().includes('free');
+      
+      if (isEnterpriseOrCustom) {
+        price = 'Custom';
+      } else if (isTrulyFree) {
+        price = 'Free';
+      } else if (p.price_per_month === 0) {
+        price = 'Custom'; // Default for 0 price when not explicitly free
+      } else {
+        price = `$${p.price_per_month}`;
+      }
+      
+      return {
+        name: `${tool.name} - ${p.plan}`,
+        price,
+        features: p.features
+      };
+    })
   ) : plans || [];
 
   const [selectedPlan, setSelectedPlan] = useState(convertedPlans[0] || null);
