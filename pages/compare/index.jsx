@@ -301,13 +301,13 @@ function ToolCard({ tool, viewMode }) {
 
               <div className="flex items-center gap-3">
                 <a 
-                  href={`/compare/${tool.slug}`}
+                  href={`/tools/${tool.slug}`}
                   className="px-3 py-1 bg-blue-600 text-white text-sm rounded-lg hover:bg-blue-700 transition-colors"
                 >
-                  Try Free
+                  Learn More
                 </a>
                 <a 
-                  href={`/compare/${tool.slug}`}
+                  href={`/tools/${tool.slug}`}
                   className="px-3 py-1 bg-white text-gray-700 text-sm rounded-lg border border-gray-300 hover:bg-gray-50 transition-colors"
                 >
                   View Details
@@ -374,13 +374,13 @@ function ToolCard({ tool, viewMode }) {
 
                     <div className="flex items-center gap-2 pt-2">
             <a
-              href={`/compare/${tool.slug}`}
+              href={`/tools/${tool.slug}`}
               className="flex-1 px-3 py-1 bg-blue-600 text-white text-sm rounded-lg hover:bg-blue-700 transition-colors text-center"
             >
-              Try Free
+              Learn More
             </a>
             <a
-              href={`/compare/${tool.slug}`}
+              href={`/tools/${tool.slug}`}
               className="flex-1 px-3 py-1 bg-white text-gray-700 text-sm rounded-lg border border-gray-300 hover:bg-gray-50 transition-colors text-center"
             >
               Details
