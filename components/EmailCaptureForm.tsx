@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useMemo, useCallback } from 'react';
+import Link from 'next/link';
 import { CheckCircle, Mail, ArrowRight, User, Building, Sparkles, X } from 'lucide-react';
 
 interface EmailCaptureFormProps {
@@ -522,15 +523,65 @@ export default function EmailCaptureForm({
             </button>
           )}
           <div className="p-8 text-center">
-            <CheckCircle className="w-16 h-16 text-green-500 mx-auto mb-4" />
-            <h3 className="text-xl font-bold text-green-900 mb-2">
-              Welcome to SiteOptz! 🎉
+            <div className="relative">
+              <CheckCircle className="w-20 h-20 text-green-500 mx-auto mb-4" />
+              <div className="absolute -top-2 -right-2 w-8 h-8 bg-blue-500 rounded-full flex items-center justify-center">
+                <Mail className="w-4 h-4 text-white" />
+              </div>
+            </div>
+            
+            <h3 className="text-2xl font-bold text-green-900 mb-3">
+              🎉 Welcome to SiteOptz!
             </h3>
-            <p className="text-green-700 mb-6">
-              Thank you for subscribing! You&apos;ll receive your first AI insights newsletter soon. 
-              Check your inbox (and spam folder) for a welcome message.
-            </p>
+            
+            <div className="bg-white/50 rounded-lg p-4 mb-6">
+              <p className="text-green-800 font-medium mb-2">
+                Thank you for subscribing to our AI insights newsletter!
+              </p>
+              <p className="text-green-700 text-sm">
+                You&apos;ve joined over 50,000+ AI enthusiasts who stay ahead with the latest tool reviews, 
+                comparisons, and exclusive insights.
+              </p>
+            </div>
+
+            <div className="bg-blue-50 border border-blue-200 rounded-lg p-4 mb-6">
+              <h4 className="font-semibold text-blue-900 mb-2">What happens next?</h4>
+              <div className="space-y-2 text-left text-sm text-blue-800">
+                <div className="flex items-center">
+                  <span className="w-2 h-2 bg-blue-500 rounded-full mr-3"></span>
+                  <span>Check your inbox for a welcome email (don&apos;t forget spam folder!)</span>
+                </div>
+                <div className="flex items-center">
+                  <span className="w-2 h-2 bg-blue-500 rounded-full mr-3"></span>
+                  <span>Get exclusive AI tool insights every week</span>
+                </div>
+                <div className="flex items-center">
+                  <span className="w-2 h-2 bg-blue-500 rounded-full mr-3"></span>
+                  <span>Access to member-only tool comparisons and guides</span>
+                </div>
+                <div className="flex items-center">
+                  <span className="w-2 h-2 bg-blue-500 rounded-full mr-3"></span>
+                  <span>Early access to new AI tool reviews</span>
+                </div>
+              </div>
+            </div>
+
             <div className="space-y-3">
+              <div className="flex space-x-3">
+                <Link 
+                  href="/tools"
+                  className="flex-1 bg-blue-600 text-white px-4 py-3 rounded-lg hover:bg-blue-700 transition-colors font-medium text-center"
+                >
+                  Explore AI Tools
+                </Link>
+                <Link 
+                  href="/compare"
+                  className="flex-1 bg-purple-600 text-white px-4 py-3 rounded-lg hover:bg-purple-700 transition-colors font-medium text-center"
+                >
+                  Compare Tools
+                </Link>
+              </div>
+              
               <button 
                 onClick={() => {
                   setIsSubmitted(false);
@@ -543,18 +594,27 @@ export default function EmailCaptureForm({
                     interests: []
                   });
                 }}
-                className="w-full bg-green-600 text-white px-4 py-2 rounded-lg hover:bg-green-700 transition-colors"
+                className="w-full bg-green-600 text-white px-4 py-2 rounded-lg hover:bg-green-700 transition-colors text-sm"
               >
                 Subscribe Another Email
               </button>
+              
               {showModal && onClose && (
                 <button 
                   onClick={onClose}
-                  className="w-full bg-white border border-gray-300 text-gray-700 px-4 py-2 rounded-lg hover:bg-gray-50 transition-colors"
+                  className="w-full bg-white border border-gray-300 text-gray-700 px-4 py-2 rounded-lg hover:bg-gray-50 transition-colors text-sm"
                 >
                   Close
                 </button>
               )}
+            </div>
+
+            <div className="mt-6 pt-4 border-t border-green-200">
+              <p className="text-xs text-green-600">
+                Follow us for daily AI updates: 
+                <button className="font-medium hover:underline ml-1 text-green-600">Twitter</button> • 
+                <button className="font-medium hover:underline ml-1 text-green-600">LinkedIn</button>
+              </p>
             </div>
           </div>
         </div>
