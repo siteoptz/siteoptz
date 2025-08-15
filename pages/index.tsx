@@ -195,10 +195,28 @@ export default function HomePage({ featuredTools, popularComparisons }: HomePage
 
                   <div className="flex items-center justify-between mb-4">
                     <div className="text-lg font-bold text-gray-900">
-                      {tool.pricing?.[0]?.price_per_month === 0 
-                        ? 'Free' 
-                        : `$${tool.pricing?.[0]?.price_per_month || 0}/mo`
-                      }
+                      {(() => {
+                        const plan = tool.pricing?.[0];
+                        if (!plan) return '$0/mo';
+                        
+                        // Check if this is actually enterprise/custom pricing vs truly free
+                        const isEnterpriseOrCustom = plan.price_per_month === 0 && 
+                          (plan.plan?.toLowerCase().includes('enterprise') || 
+                           plan.plan?.toLowerCase().includes('custom'));
+                        
+                        const isTrulyFree = plan.price_per_month === 0 && 
+                          plan.plan?.toLowerCase().includes('free');
+                        
+                        if (isEnterpriseOrCustom) {
+                          return 'Custom';
+                        } else if (isTrulyFree) {
+                          return 'Free';
+                        } else if (plan.price_per_month === 0) {
+                          return 'Custom'; // Default for 0 price when not explicitly free
+                        } else {
+                          return `$${plan.price_per_month}/mo`;
+                        }
+                      })()}
                     </div>
                     <span className="px-3 py-1 bg-blue-100 text-blue-700 text-sm rounded-full">
                       {tool.features?.length || 0} features

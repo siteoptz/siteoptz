@@ -245,7 +245,26 @@ export default function ToolPage({ tool, relatedTools, faqs, allTools }: ToolPag
                   <div className="p-6">
                     <h3 className="text-xl font-bold mb-2">{plan.plan}</h3>
                     <div className="text-3xl font-bold mb-4">
-                      {plan.price_per_month === 0 ? 'Free' : `$${plan.price_per_month}`}
+                      {(() => {
+                        // Check if this is actually enterprise/custom pricing vs truly free
+                        const isEnterpriseOrCustom = plan.price_per_month === 0 && 
+                          (plan.plan?.toLowerCase().includes('enterprise') || 
+                           plan.plan?.toLowerCase().includes('custom') ||
+                           plan.features?.some((f: string) => f.toLowerCase().includes('custom pricing')));
+                        
+                        const isTrulyFree = plan.price_per_month === 0 && 
+                          plan.plan?.toLowerCase().includes('free');
+                        
+                        if (isEnterpriseOrCustom) {
+                          return 'Custom';
+                        } else if (isTrulyFree) {
+                          return 'Free';
+                        } else if (plan.price_per_month === 0) {
+                          return 'Custom'; // Default for 0 price when not explicitly free
+                        } else {
+                          return `$${plan.price_per_month}`;
+                        }
+                      })()}
                       {plan.price_per_month > 0 && <span className="text-base font-normal text-gray-500">/month</span>}
                     </div>
                     <ul className="space-y-3 mb-6">

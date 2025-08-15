@@ -13,11 +13,34 @@ export function convertToSimplePricingFormat(pricing: {
   price: string;
   details: string;
 }[] {
-  return pricing.map(p => ({
-    plan: p.plan,
-    price: p.price_per_month === 0 ? 'Free' : `$${p.price_per_month}/mo`,
-    details: p.features.join(' • ')
-  }));
+  return pricing.map(p => {
+    let price: string;
+    
+    // Check if this is actually enterprise/custom pricing vs truly free
+    const isEnterpriseOrCustom = p.price_per_month === 0 && 
+      (p.plan?.toLowerCase().includes('enterprise') || 
+       p.plan?.toLowerCase().includes('custom') ||
+       p.features?.some((f: string) => f.toLowerCase().includes('custom pricing')));
+    
+    const isTrulyFree = p.price_per_month === 0 && 
+      p.plan?.toLowerCase().includes('free');
+    
+    if (isEnterpriseOrCustom) {
+      price = 'Custom';
+    } else if (isTrulyFree) {
+      price = 'Free';
+    } else if (p.price_per_month === 0) {
+      price = 'Custom'; // Default for 0 price when not explicitly free
+    } else {
+      price = `$${p.price_per_month}/mo`;
+    }
+    
+    return {
+      plan: p.plan,
+      price,
+      details: p.features.join(' • ')
+    };
+  });
 }
 
 // Convert tool data for comparison table
