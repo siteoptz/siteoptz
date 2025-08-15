@@ -3,7 +3,7 @@
     "id": "chatgpt",
     "name": "ChatGPT",
     "slug": "chatgpt",
-    "logo": "/images/tools/chatgpt-logo.png",
+    "logo": "/images/tools/chatgpt-logo.svg",
     "meta": {
       "title": "ChatGPT Review, Pricing, Features & Alternatives [2025]",
       "description": "Compare ChatGPT to Claude, Gemini, and other AI tools. See pricing, features, and performance benchmarks. Expert analysis with real user feedback."
@@ -11,7 +11,7 @@
     "schema": {
       "@type": "Product",
       "name": "ChatGPT",
-      "image": "/images/tools/chatgpt-logo.png",
+      "image": "/images/tools/chatgpt-logo.svg",
       "description": "AI chatbot developed by OpenAI with conversational and coding capabilities.",
       "brand": "OpenAI"
     },
@@ -77,7 +77,7 @@
     "id": "claude",
     "name": "Claude",
     "slug": "claude",
-    "logo": "/images/tools/claude-logo.png",
+    "logo": "/images/tools/claude-logo.svg",
     "meta": {
       "title": "Claude Review, Pricing, Features & Alternatives [2025]",
       "description": "Compare Claude to ChatGPT, Gemini, and other AI tools. See pricing, features, and performance benchmarks. Expert analysis with real user feedback."
@@ -85,7 +85,7 @@
     "schema": {
       "@type": "Product",
       "name": "Claude",
-      "image": "/images/tools/claude-logo.png",
+      "image": "/images/tools/claude-logo.svg",
       "description": "AI assistant developed by Anthropic with focus on safety and reasoning capabilities.",
       "brand": "Anthropic"
     },
@@ -153,7 +153,7 @@
     "id": "gemini",
     "name": "Gemini",
     "slug": "gemini",
-    "logo": "/images/tools/gemini-logo.png",
+    "logo": "/images/tools/gemini-logo.svg",
     "meta": {
       "title": "Gemini Review, Pricing, Features & Alternatives [2025]",
       "description": "Compare Gemini to ChatGPT, Claude, and other AI tools. See pricing, features, and performance benchmarks. Expert analysis with real user feedback."
@@ -161,7 +161,7 @@
     "schema": {
       "@type": "Product",
       "name": "Gemini",
-      "image": "/images/tools/gemini-logo.png",
+      "image": "/images/tools/gemini-logo.svg",
       "description": "Google's AI assistant that excels at creative tasks and integrates with Google services.",
       "brand": "Google"
     },
@@ -224,7 +224,7 @@
     "id": "perplexity",
     "name": "Perplexity",
     "slug": "perplexity",
-    "logo": "/images/tools/perplexity-logo.png",
+    "logo": "/images/tools/perplexity-logo.svg",
     "meta": {
       "title": "Perplexity Review, Pricing, Features & Alternatives [2025]",
       "description": "Compare Perplexity to ChatGPT, Claude, and other AI tools. See pricing, features, and performance benchmarks. Expert analysis with real user feedback."
@@ -232,7 +232,7 @@
     "schema": {
       "@type": "Product",
       "name": "Perplexity",
-      "image": "/images/tools/perplexity-logo.png",
+      "image": "/images/tools/perplexity-logo.svg",
       "description": "AI-powered search engine that provides conversational answers with sources and real-time information.",
       "brand": "Perplexity AI"
     },
@@ -295,7 +295,7 @@
     "id": "jasper-ai",
     "name": "Jasper AI",
     "slug": "jasper-ai",
-    "logo": "/images/tools/jasper-ai-logo.png",
+    "logo": "/images/tools/jasper-ai-logo.svg",
     "meta": {
       "title": "Jasper AI Review, Pricing, Features & Alternatives [2025]",
       "description": "Compare Jasper AI to ChatGPT, Claude, and other AI tools. See pricing, features, and performance benchmarks. Expert analysis with real user feedback."
@@ -303,7 +303,7 @@
     "schema": {
       "@type": "Product",
       "name": "Jasper AI",
-      "image": "/images/tools/jasper-ai-logo.png",
+      "image": "/images/tools/jasper-ai-logo.svg",
       "description": "AI-powered content creation platform with brand voice customization and SEO optimization.",
       "brand": "Jasper"
     },
@@ -373,7 +373,7 @@
     "id": "copy-ai",
     "name": "Copy.ai",
     "slug": "copy-ai",
-    "logo": "/images/tools/copy-ai-logo.png",
+    "logo": "/images/tools/copy-ai-logo.svg",
     "meta": {
       "title": "Copy.ai Review, Pricing, Features & Alternatives [2025]",
       "description": "Compare Copy.ai to Jasper AI, ChatGPT, and other AI tools. See pricing, features, and performance benchmarks. Expert analysis with real user feedback."
@@ -381,7 +381,7 @@
     "schema": {
       "@type": "Product",
       "name": "Copy.ai",
-      "image": "/images/tools/copy-ai-logo.png",
+      "image": "/images/tools/copy-ai-logo.svg",
       "description": "AI-powered copywriting tool for marketing content, sales copy, and creative writing.",
       "brand": "Copy.ai"
     },
@@ -451,7 +451,7 @@
     "id": "writesonic",
     "name": "Writesonic",
     "slug": "writesonic",
-    "logo": "/images/tools/writesonic-logo.png",
+    "logo": "/images/tools/writesonic-logo.svg",
     "meta": {
       "title": "Writesonic Review, Pricing, Features & Alternatives [2025]",
       "description": "Compare Writesonic to Jasper AI, Copy.ai, and other AI tools. See pricing, features, and performance benchmarks. Expert analysis with real user feedback."
@@ -459,7 +459,7 @@
     "schema": {
       "@type": "Product",
       "name": "Writesonic",
-      "image": "/images/tools/writesonic-logo.png",
+      "image": "/images/tools/writesonic-logo.svg",
       "description": "AI writing platform with GPT-4 integration for content creation and copywriting.",
       "brand": "Writesonic"
     },
@@ -534,7 +534,7 @@
     "id": "surfer-seo",
     "name": "Surfer SEO",
     "slug": "surfer-seo",
-    "logo": "/images/tools/surfer-seo-logo.png",
+    "logo": "/images/tools/surfer-seo-logo.svg",
     "meta": {
       "title": "Surfer SEO Review, Pricing, Features & Alternatives [2025]",
       "description": "Compare Surfer SEO to Frase, Ahrefs, and other SEO tools. See pricing, features, and performance benchmarks. Expert analysis with real user feedback."
@@ -542,7 +542,7 @@
     "schema": {
       "@type": "Product",
       "name": "Surfer SEO",
-      "image": "/images/tools/surfer-seo-logo.png",
+      "image": "/images/tools/surfer-seo-logo.svg",
       "description": "Data-driven SEO tool for content optimization and keyword research.",
       "brand": "Surfer"
     },
@@ -612,7 +612,7 @@
     "id": "midjourney",
     "name": "Midjourney",
     "slug": "midjourney",
-    "logo": "/images/tools/midjourney-logo.png",
+    "logo": "/images/tools/midjourney-logo.svg",
     "meta": {
       "title": "Midjourney Review, Pricing, Features & Alternatives [2025]",
       "description": "Compare Midjourney to other AI image tools. See pricing, features, and performance benchmarks. Expert analysis with real user feedback."
@@ -620,7 +620,7 @@
     "schema": {
       "@type": "Product",
       "name": "Midjourney",
-      "image": "/images/tools/midjourney-logo.png",
+      "image": "/images/tools/midjourney-logo.svg",
       "description": "AI image generation tool with exceptional artistic quality and unique style.",
       "brand": "Midjourney"
     },
