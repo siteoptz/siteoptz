@@ -299,18 +299,12 @@ function ToolCard({ tool, viewMode }) {
                 {(tool.overview?.description || tool.description || '').substring(0, 150)}...
               </p>
 
-              <div className="flex items-center gap-3">
+              <div className="flex justify-center">
                 <a 
                   href={`/tools/${tool.slug}`}
-                  className="px-3 py-1 bg-blue-600 text-white text-sm rounded-lg hover:bg-blue-700 transition-colors"
+                  className="px-4 py-2 bg-blue-600 text-white text-sm rounded-lg hover:bg-blue-700 transition-colors"
                 >
                   Learn More
-                </a>
-                <a 
-                  href={`/tools/${tool.slug}`}
-                  className="px-3 py-1 bg-white text-gray-700 text-sm rounded-lg border border-gray-300 hover:bg-gray-50 transition-colors"
-                >
-                  View Details
                 </a>
               </div>
             </div>
@@ -372,18 +366,12 @@ function ToolCard({ tool, viewMode }) {
             {(tool.overview?.description || tool.description || '').substring(0, 120)}...
           </p>
 
-                    <div className="flex items-center gap-2 pt-2">
+                    <div className="flex justify-center pt-2">
             <a
               href={`/tools/${tool.slug}`}
-              className="flex-1 px-3 py-1 bg-blue-600 text-white text-sm rounded-lg hover:bg-blue-700 transition-colors text-center"
+              className="px-4 py-2 bg-blue-600 text-white text-sm rounded-lg hover:bg-blue-700 transition-colors text-center"
             >
               Learn More
-            </a>
-            <a
-              href={`/tools/${tool.slug}`}
-              className="flex-1 px-3 py-1 bg-white text-gray-700 text-sm rounded-lg border border-gray-300 hover:bg-gray-50 transition-colors text-center"
-            >
-              Details
             </a>
           </div>
         </div>
