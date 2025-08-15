@@ -1,86 +1,7 @@
 import Head from "next/head";
-import fs from "fs";
-import path from "path";
-import { useState, useEffect } from "react";
-import { useRouter } from "next/router";
-import ToolComparisonTable from "../components/ToolComparisonTable";
-import PricingCalculator from "../components/PricingCalculator";
-import FAQSection from "../components/FAQSection";
+import Link from "next/link";
 
-export async function getStaticProps() {
-  const toolsPath = path.join(process.cwd(), "public", "data", "aiToolsData.json");
-  const faqPath = path.join(process.cwd(), "public", "data", "faqData.json");
-
-  const toolsData = JSON.parse(fs.readFileSync(toolsPath, "utf-8"));
-  const faqData = JSON.parse(fs.readFileSync(faqPath, "utf-8"));
-
-  return {
-    props: {
-      tools: toolsData,
-      faqs: faqData,
-    },
-  };
-}
-
-export default function PricingPage({ tools, faqs }: { tools: any[], faqs: any }) {
-  const router = useRouter();
-  const [selectedTool, setSelectedTool] = useState(tools?.[0] || null);
-  const [selectedPlan, setSelectedPlan] = useState(null);
-
-  // Handle URL parameters for deep linking
-  useEffect(() => {
-    if (!tools || tools.length === 0) return;
-    const { tool: toolParam, plan: planParam } = router.query;
-    
-    if (toolParam) {
-      const foundTool = tools.find((t) => t.name === toolParam);
-      if (foundTool) {
-        setSelectedTool(foundTool);
-        
-        // If plan parameter is provided, set it as well
-        if (planParam && foundTool.pricing) {
-          const foundPlan = foundTool.pricing.find((p: any) => p.plan === planParam);
-          if (foundPlan) {
-            setSelectedPlan(foundPlan);
-          }
-        }
-      }
-    }
-
-    // Load saved selection from localStorage if no URL params
-    if (!toolParam) {
-      const savedToolName = localStorage.getItem("selectedTool");
-      if (savedToolName) {
-        const savedTool = tools.find((t) => t.name === savedToolName);
-        if (savedTool) setSelectedTool(savedTool);
-      }
-    }
-  }, [router.query, tools]);
-
-  // Save selection when user changes tool
-  const handleToolChange = (toolName: string) => {
-    const tool = tools.find((t: any) => t.name === toolName);
-    setSelectedTool(tool);
-    setSelectedPlan(null); // Reset plan selection when tool changes
-    localStorage.setItem("selectedTool", toolName);
-    
-    // Update URL without page refresh
-    router.push({
-      pathname: '/pricing',
-      query: { tool: toolName }
-    }, undefined, { shallow: true });
-  };
-
-  // Safety check for tools data
-  if (!tools || tools.length === 0) {
-    return (
-      <main className="max-w-6xl mx-auto px-4 py-10">
-        <h1 className="text-3xl font-bold mb-6">AI Tools Pricing Calculator</h1>
-        <p>No tools data available.</p>
-      </main>
-    );
-  }
-
+export default function PricingPage() {
   return (
     <>
       <Head>
@@ -93,75 +14,22 @@ export default function PricingPage({ tools, faqs }: { tools: any[], faqs: any }
       </Head>
 
       <main className="max-w-6xl mx-auto px-4 py-10 space-y-12">
-        <section>
+        <section className="text-center">
           <h1 className="text-3xl font-bold mb-6">AI Tools Pricing Calculator</h1>
           <p className="text-gray-600 mb-8">
-            Select an AI tool below to calculate pricing and get personalized quotes.
+            Pricing calculator is temporarily under maintenance. Please check back soon!
           </p>
-
-          {/* Tool Selector */}
-          <div className="mb-6">
-            <label className="block mb-2 font-medium">Select AI Tool:</label>
-            <select
-              value={selectedTool.name}
-              onChange={(e) => handleToolChange(e.target.value)}
-              className="border rounded px-3 py-2 text-lg"
-            >
-              {tools.map((tool) => (
-                <option key={tool.name} value={tool.name}>
-                  {tool.name}
-                </option>
-              ))}
-            </select>
-          </div>
-
-          {/* Show current deep link */}
-          {router.query.tool && (
-            <div className="mb-6 p-3 bg-blue-50 border border-blue-200 rounded">
-              <p className="text-sm text-blue-700">
-                📎 <strong>Shareable Link:</strong> 
-                <code className="ml-2 text-blue-800">
-                  {`https://siteoptz.ai/pricing?tool=${encodeURIComponent(selectedTool.name)}${router.query.plan ? `&plan=${encodeURIComponent(Array.isArray(router.query.plan) ? router.query.plan[0] : router.query.plan)}` : ''}`}
-                </code>
-              </p>
+          <div className="bg-blue-50 border border-blue-200 rounded-lg p-6 max-w-2xl mx-auto">
+            <h2 className="text-xl font-semibold mb-4 text-blue-800">Meanwhile, explore our tools:</h2>
+            <div className="space-y-3">
+              <Link href="/tools" className="block w-full px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors">
+                Browse All AI Tools
+              </Link>
+              <Link href="/compare" className="block w-full px-4 py-2 bg-gray-600 text-white rounded-lg hover:bg-gray-700 transition-colors">
+                Compare AI Tools
+              </Link>
             </div>
-          )}
-        </section>
-
-        <section>
-          <h2 className="text-2xl font-bold mb-4">Compare All Tools</h2>
-          <ToolComparisonTable tools={tools} highlight={selectedTool.name} />
-        </section>
-
-        <section>
-          <h2 className="text-2xl font-bold mb-4">
-            {selectedTool.name} Pricing Plans
-          </h2>
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {selectedTool.pricing?.map((plan: any, index: number) => (
-              <div key={index} className="border rounded-lg p-6 shadow-sm hover:shadow-md transition-shadow">
-                <h3 className="text-xl font-semibold mb-2">{plan.plan}</h3>
-                <div className="text-3xl font-bold mb-4 text-blue-600">
-                  {plan.price_per_month === 0 ? 'Free' : `$${plan.price_per_month}/mo`}
-                </div>
-                <ul className="space-y-2">
-                  {plan.features?.map((feature: string, featureIndex: number) => (
-                    <li key={featureIndex} className="flex items-center space-x-2">
-                      <span className="text-green-500">✓</span>
-                      <span className="text-sm">{feature}</span>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            )) || (
-              <p className="text-gray-500">No pricing information available.</p>
-            )}
           </div>
-        </section>
-
-        <section>
-          <h2 className="text-2xl font-bold mb-4">Frequently Asked Questions</h2>
-          <FAQSection faqs={faqs} />
         </section>
       </main>
     </>
