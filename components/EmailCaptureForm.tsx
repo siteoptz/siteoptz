@@ -551,8 +551,30 @@ export default function EmailCaptureForm({
 
   if (showModal) {
     return (
-      <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 p-4">
-        <div className="relative">
+      <div 
+        className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center p-4" 
+        style={{ pointerEvents: 'auto', zIndex: 9999 }}
+        onClick={(e) => {
+          // Close modal when clicking backdrop
+          if (e.target === e.currentTarget && onClose) {
+            onClose();
+          }
+        }}
+        onKeyDown={(e) => {
+          if (e.key === 'Escape' && onClose) {
+            onClose();
+          }
+        }}
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="email-form-title"
+      >
+        <div 
+          className="relative" 
+          style={{ pointerEvents: 'auto' }}
+          onClick={(e) => e.stopPropagation()}
+          onKeyDown={(e) => e.stopPropagation()}
+        >
           <FormContent />
         </div>
       </div>

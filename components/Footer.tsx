@@ -91,25 +91,14 @@ const Footer: React.FC = () => {
               </p>
             </div>
             <div className="space-y-4">
-              <div className="flex flex-col sm:flex-row gap-3">
-                <div className="relative flex-1">
-                  <Mail className="absolute left-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-gray-400" />
-                  <input
-                    type="email"
-                    placeholder="Enter your email address"
-                    className="w-full pl-11 pr-4 py-3 bg-gray-800 border border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent text-white placeholder-gray-400"
-                    onFocus={() => setShowEmailForm(true)}
-                    readOnly
-                  />
-                </div>
-                <button 
-                  onClick={() => setShowEmailForm(true)}
-                  className="px-6 py-3 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-lg font-semibold hover:from-blue-700 hover:to-purple-700 transform hover:scale-105 transition-all duration-200 shadow-lg hover:shadow-xl flex items-center justify-center space-x-2"
-                >
-                  <span>Subscribe</span>
-                  <ArrowRight className="w-4 h-4" />
-                </button>
-              </div>
+              <button 
+                onClick={() => setShowEmailForm(true)}
+                className="w-full sm:w-auto px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-lg font-semibold hover:from-blue-700 hover:to-purple-700 transform hover:scale-105 transition-all duration-200 shadow-lg hover:shadow-xl flex items-center justify-center space-x-3"
+              >
+                <Mail className="w-5 h-5" />
+                <span>Subscribe to Newsletter</span>
+                <ArrowRight className="w-5 h-5" />
+              </button>
               <p className="text-sm text-gray-400">
                 Join 50,000+ AI enthusiasts. No spam, unsubscribe anytime.
               </p>
