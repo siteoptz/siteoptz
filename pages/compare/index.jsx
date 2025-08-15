@@ -9,8 +9,8 @@ export default function CompareIndex({ aiToolsData }) {
   const [sortBy, setSortBy] = useState('name');
   const [viewMode, setViewMode] = useState('grid');
 
-  // Get unique categories (using a default category for now)
-  const categories = ['all', 'AI Assistant', 'Search Engine', 'Content Creation'];
+  // Get unique categories based on tool types
+  const categories = ['all', 'AI Assistant', 'Content Creation', 'SEO Tool', 'Image Generation'];
 
   // Filter and sort tools
   const filteredTools = useMemo(() => {
@@ -19,10 +19,27 @@ export default function CompareIndex({ aiToolsData }) {
       const matchesSearch = tool.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
                            description.toLowerCase().includes(searchTerm.toLowerCase());
       
-      const keywords = tool.relatedKeywords || tool.overview?.keywords || [];
-      const matchesCategory = selectedCategory === 'all' || keywords.some(keyword => 
-        keyword.toLowerCase().includes(selectedCategory.toLowerCase())
-      );
+      // Categorize tools based on their features and purpose
+      const getToolCategory = (tool) => {
+        const name = tool.name.toLowerCase();
+        const description = (tool.overview?.description || tool.description || '').toLowerCase();
+        const features = (tool.features || []).join(' ').toLowerCase();
+        
+        if (name.includes('seo') || features.includes('seo') || name.includes('surfer')) {
+          return 'SEO Tool';
+        }
+        if (name.includes('midjourney') || features.includes('image') || description.includes('image')) {
+          return 'Image Generation';
+        }
+        if (features.includes('content') || features.includes('writing') || features.includes('copy') || 
+            name.includes('jasper') || name.includes('copy') || name.includes('writesonic')) {
+          return 'Content Creation';
+        }
+        return 'AI Assistant';
+      };
+      
+      const toolCategory = getToolCategory(tool);
+      const matchesCategory = selectedCategory === 'all' || toolCategory === selectedCategory;
       
       return matchesSearch && matchesCategory;
     });
@@ -34,7 +51,7 @@ export default function CompareIndex({ aiToolsData }) {
         break;
       case 'rating':
         // For now, use a default rating since we don't have ratings in new structure
-        filtered.sort((a, b) => 0);
+        // Keep original order for now
         break;
       case 'price':
         const getStartingPrice = (tool) => {
@@ -334,7 +351,7 @@ function ToolCard({ tool, viewMode }) {
 
           <div className="flex items-center gap-2 text-sm text-gray-600">
             <Zap className="w-4 h-4 text-blue-500" />
-            <span>{tool.features.length} features</span>
+            <span>{(tool.features || []).length} features</span>
           </div>
 
           <p className="text-gray-600 text-sm line-clamp-3">
