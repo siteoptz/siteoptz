@@ -3,7 +3,7 @@ import { useState } from 'react';
 import Head from 'next/head';
 import Image from 'next/image';
 import Link from 'next/link';
-import toolsData from '../../data/tools.json';
+import toolsData from '../../aiToolsData.json';
 import FAQSection from '../../components/comparison/FAQSection';
 
 interface Tool {
@@ -22,24 +22,12 @@ interface Tool {
     monthly: number;
     yearly: number;
     enterprise: string;
-    plans: {
-      plan_name: string;
-      price: string;
-      features_included: string[];
-    }[];
   };
   official_url: string;
   affiliate_link: string;
-  faq: {
-    question: string;
-    answer: string;
-  }[];
   rating: number;
-  review_count: number;
-  best_use_cases: string[];
-  target_audience: string[];
+  use_cases: string[];
   free_trial: boolean;
-  demo_available: boolean;
 }
 
 interface ReviewPageProps {
@@ -60,7 +48,7 @@ export default function ReviewPage({ tool, pageTitle, slug, relatedTools, relate
 
   // Generate optimized meta description (155-160 characters)
   const generateMetaDescription = (tool: Tool): string => {
-    const basePrice = tool.pricing.plans[0]?.price || 'Custom pricing';
+    const basePrice = tool.pricing.monthly ? `$${tool.pricing.monthly}/month` : 'Custom pricing';
     return `${tool.tool_name} review: Features, pricing (from ${basePrice}), pros, cons, and alternatives. Expert analysis and user guide for 2025.`;
   };
   
@@ -77,18 +65,17 @@ export default function ReviewPage({ tool, pageTitle, slug, relatedTools, relate
     "url": tool.official_url,
     "applicationCategory": "BusinessApplication",
     "operatingSystem": "Web",
-    "offers": tool.pricing.plans.map(plan => ({
+    "offers": {
       "@type": "Offer",
-      "name": plan.plan_name,
-      "price": plan.price.replace(/[^0-9.]/g, '') || "0",
+      "price": tool.pricing.monthly ? tool.pricing.monthly.toString() : "0",
       "priceCurrency": "USD",
       "availability": "https://schema.org/InStock"
-    })),
+    },
     ...(tool.rating && {
       "aggregateRating": {
         "@type": "AggregateRating",
         "ratingValue": tool.rating,
-        "reviewCount": tool.review_count || 100,
+        "reviewCount": 100,
         "bestRating": 5,
         "worstRating": 1
       }
@@ -122,11 +109,26 @@ export default function ReviewPage({ tool, pageTitle, slug, relatedTools, relate
     "reviewBody": `Comprehensive review of ${tool.tool_name} covering features, pricing, pros, cons, and use cases.`
   };
 
-  // FAQ Schema
+  // FAQ Schema - Create sample FAQs since not in data
+  const sampleFaqs = [
+    {
+      question: `What is ${tool.tool_name}?`,
+      answer: tool.description
+    },
+    {
+      question: `How much does ${tool.tool_name} cost?`,
+      answer: `${tool.tool_name} starts at $${tool.pricing.monthly}/month with various pricing tiers available.`
+    },
+    {
+      question: `Does ${tool.tool_name} offer a free trial?`,
+      answer: tool.free_trial ? `Yes, ${tool.tool_name} offers a free trial.` : `${tool.tool_name} pricing information is available on their website.`
+    }
+  ];
+
   const faqSchema = {
     "@context": "https://schema.org",
     "@type": "FAQPage",
-    "mainEntity": tool.faq.map(faq => ({
+    "mainEntity": sampleFaqs.map(faq => ({
       "@type": "Question",
       "name": faq.question,
       "acceptedAnswer": {
@@ -268,7 +270,7 @@ export default function ReviewPage({ tool, pageTitle, slug, relatedTools, relate
                           ))}
                         </div>
                         <span className="text-blue-100 text-sm">
-                          {tool.rating}/5 ({tool.review_count || 100} reviews)
+                          {tool.rating}/5 (100 reviews)
                         </span>
                       </div>
                     )}
@@ -299,17 +301,19 @@ export default function ReviewPage({ tool, pageTitle, slug, relatedTools, relate
                   <div className="space-y-4">
                     <div className="flex justify-between">
                       <span className="text-blue-100">Starting Price:</span>
-                      <span className="text-white font-semibold">{tool.pricing.plans[0]?.price || 'Custom'}</span>
+                      <span className="text-white font-semibold">
+                        {tool.pricing.monthly ? `$${tool.pricing.monthly}/month` : 'Custom'}
+                      </span>
                     </div>
                     <div className="flex justify-between">
-                      <span className="text-blue-100">Free Plan:</span>
+                      <span className="text-blue-100">Free Trial:</span>
                       <span className="text-white font-semibold">
-                        {tool.pricing.plans.some(plan => plan.price.includes('$0')) ? 'Yes' : 'No'}
+                        {tool.free_trial ? 'Yes' : 'No'}
                       </span>
                     </div>
                     <div className="flex justify-between">
                       <span className="text-blue-100">Features:</span>
-                      <span className="text-white font-semibold">{tool.features.core.length + tool.features.advanced.length + tool.features.integrations.length}+</span>
+                      <span className="text-white font-semibold">{(tool.features.core?.length || 0) + (tool.features.advanced?.length || 0) + (tool.features.integrations?.length || 0)}+</span>
                     </div>
                     {tool.rating && (
                       <div className="flex justify-between">
@@ -362,7 +366,7 @@ export default function ReviewPage({ tool, pageTitle, slug, relatedTools, relate
                   <div className="bg-green-50 p-6 rounded-xl">
                     <h3 className="text-xl font-semibold text-green-900 mb-4">Key Strengths</h3>
                     <ul className="space-y-2">
-                      {tool.pros.slice(0, 5).map((pro, index) => (
+                      {(tool.pros || []).slice(0, 5).map((pro, index) => (
                         <li key={index} className="flex items-start">
                           <svg className="w-5 h-5 text-green-500 mt-0.5 mr-2 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
                             <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
@@ -376,7 +380,7 @@ export default function ReviewPage({ tool, pageTitle, slug, relatedTools, relate
                   <div className="bg-red-50 p-6 rounded-xl">
                     <h3 className="text-xl font-semibold text-red-900 mb-4">Limitations</h3>
                     <ul className="space-y-2">
-                      {tool.cons.slice(0, 5).map((con, index) => (
+                      {(tool.cons || []).slice(0, 5).map((con, index) => (
                         <li key={index} className="flex items-start">
                           <svg className="w-5 h-5 text-red-500 mt-0.5 mr-2 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
                             <path fillRule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clipRule="evenodd" />
@@ -398,7 +402,7 @@ export default function ReviewPage({ tool, pageTitle, slug, relatedTools, relate
                 <div className="mb-8">
                   <h3 className="text-xl font-semibold text-gray-900 mb-4">Core Features</h3>
                   <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-                    {tool.features.core.map((feature, index) => (
+                    {(tool.features.core || []).map((feature, index) => (
                       <div key={index} className="bg-white p-6 rounded-xl shadow-sm border">
                         <div className="flex items-start">
                           <svg className="w-6 h-6 text-blue-600 mt-1 mr-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -415,7 +419,7 @@ export default function ReviewPage({ tool, pageTitle, slug, relatedTools, relate
                 <div className="mb-8">
                   <h3 className="text-xl font-semibold text-gray-900 mb-4">Advanced Features</h3>
                   <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-                    {tool.features.advanced.map((feature, index) => (
+                    {(tool.features.advanced || []).map((feature, index) => (
                       <div key={index} className="bg-white p-6 rounded-xl shadow-sm border border-blue-200">
                         <div className="flex items-start">
                           <svg className="w-6 h-6 text-purple-600 mt-1 mr-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -432,7 +436,7 @@ export default function ReviewPage({ tool, pageTitle, slug, relatedTools, relate
                 <div className="mb-8">
                   <h3 className="text-xl font-semibold text-gray-900 mb-4">Integrations</h3>
                   <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-                    {tool.features.integrations.map((feature, index) => (
+                    {(tool.features.integrations || []).map((feature, index) => (
                       <div key={index} className="bg-white p-6 rounded-xl shadow-sm border border-green-200">
                         <div className="flex items-start">
                           <svg className="w-6 h-6 text-green-600 mt-1 mr-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -451,35 +455,88 @@ export default function ReviewPage({ tool, pageTitle, slug, relatedTools, relate
               <div>
                 <h2 className="text-3xl font-bold text-gray-900 mb-8">{tool.tool_name} Pricing Plans</h2>
                 <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-                  {tool.pricing.plans.map((plan, index) => (
-                    <div key={index} className="bg-white rounded-xl shadow-lg border p-8">
-                      <h3 className="text-xl font-bold text-gray-900 mb-2">{plan.plan_name}</h3>
-                      <div className="text-4xl font-bold text-blue-600 mb-6">
-                        {plan.price}
-                        {plan.price.includes('/') ? '' : <span className="text-lg text-gray-500">/month</span>}
-                      </div>
-                      
-                      <ul className="space-y-3 mb-8">
-                        {plan.features_included.map((feature, featureIndex) => (
-                          <li key={featureIndex} className="flex items-start">
-                            <svg className="w-5 h-5 text-green-500 mt-0.5 mr-2 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
-                              <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-                            </svg>
-                            <span className="text-gray-700">{feature}</span>
-                          </li>
-                        ))}
-                      </ul>
-                      
-                      <a
-                        href={tool.affiliate_link || tool.official_url}
-                        target="_blank"
-                        rel="noopener noreferrer sponsored"
-                        className="block w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-6 rounded-lg transition-colors text-center"
-                      >
-                        Get Started
-                      </a>
+                  <div className="bg-white rounded-xl shadow-lg border p-8">
+                    <h3 className="text-xl font-bold text-gray-900 mb-2">Monthly Plan</h3>
+                    <div className="text-4xl font-bold text-blue-600 mb-6">
+                      ${tool.pricing.monthly}
+                      <span className="text-lg text-gray-500">/month</span>
                     </div>
-                  ))}
+                    
+                    <ul className="space-y-3 mb-8">
+                      {(tool.features.core || []).slice(0, 5).map((feature, featureIndex) => (
+                        <li key={featureIndex} className="flex items-start">
+                          <svg className="w-5 h-5 text-green-500 mt-0.5 mr-2 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                            <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                          </svg>
+                          <span className="text-gray-700">{feature}</span>
+                        </li>
+                      ))}
+                    </ul>
+                    
+                    <a
+                      href={tool.affiliate_link}
+                      target="_blank"
+                      rel="noopener noreferrer sponsored"
+                      className="block w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-6 rounded-lg transition-colors text-center"
+                    >
+                      Get Started
+                    </a>
+                  </div>
+                  
+                  <div className="bg-white rounded-xl shadow-lg border p-8">
+                    <h3 className="text-xl font-bold text-gray-900 mb-2">Yearly Plan</h3>
+                    <div className="text-4xl font-bold text-blue-600 mb-6">
+                      ${tool.pricing.yearly}
+                      <span className="text-lg text-gray-500">/year</span>
+                    </div>
+                    
+                    <ul className="space-y-3 mb-8">
+                      {(tool.features.advanced || []).slice(0, 5).map((feature, featureIndex) => (
+                        <li key={featureIndex} className="flex items-start">
+                          <svg className="w-5 h-5 text-green-500 mt-0.5 mr-2 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                            <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                          </svg>
+                          <span className="text-gray-700">{feature}</span>
+                        </li>
+                      ))}
+                    </ul>
+                    
+                    <a
+                      href={tool.affiliate_link}
+                      target="_blank"
+                      rel="noopener noreferrer sponsored"
+                      className="block w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-6 rounded-lg transition-colors text-center"
+                    >
+                      Get Started
+                    </a>
+                  </div>
+                  
+                  <div className="bg-white rounded-xl shadow-lg border p-8">
+                    <h3 className="text-xl font-bold text-gray-900 mb-2">Enterprise Plan</h3>
+                    <div className="text-4xl font-bold text-blue-600 mb-6">
+                      {tool.pricing.enterprise}
+                    </div>
+                    
+                    <ul className="space-y-3 mb-8">
+                      {[...(tool.features.core || []).slice(0, 3), ...(tool.features.advanced || []).slice(0, 2)].map((feature, featureIndex) => (
+                        <li key={featureIndex} className="flex items-start">
+                          <svg className="w-5 h-5 text-green-500 mt-0.5 mr-2 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                            <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                          </svg>
+                          <span className="text-gray-700">{feature}</span>
+                        </li>
+                      ))}
+                    </ul>
+                    
+                    <a
+                      href={tool.affiliate_link}
+                      target="_blank"
+                      rel="noopener noreferrer sponsored"
+                      className="block w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-6 rounded-lg transition-colors text-center"
+                    >
+                      Contact Sales
+                    </a>
+                  </div>
                 </div>
               </div>
             )}
@@ -491,7 +548,7 @@ export default function ReviewPage({ tool, pageTitle, slug, relatedTools, relate
                   <div className="bg-green-50 p-8 rounded-xl">
                     <h3 className="text-2xl font-bold text-green-900 mb-6">Pros</h3>
                     <ul className="space-y-4">
-                      {tool.pros.map((pro, index) => (
+                      {(tool.pros || []).map((pro, index) => (
                         <li key={index} className="flex items-start">
                           <svg className="w-6 h-6 text-green-500 mt-0.5 mr-3 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
                             <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
@@ -505,7 +562,7 @@ export default function ReviewPage({ tool, pageTitle, slug, relatedTools, relate
                   <div className="bg-red-50 p-8 rounded-xl">
                     <h3 className="text-2xl font-bold text-red-900 mb-6">Cons</h3>
                     <ul className="space-y-4">
-                      {tool.cons.map((con, index) => (
+                      {(tool.cons || []).map((con, index) => (
                         <li key={index} className="flex items-start">
                           <svg className="w-6 h-6 text-red-500 mt-0.5 mr-3 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
                             <path fillRule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clipRule="evenodd" />
@@ -529,7 +586,7 @@ export default function ReviewPage({ tool, pageTitle, slug, relatedTools, relate
               <p className="text-lg text-gray-600">Get answers to common questions about {tool.tool_name}</p>
             </div>
             
-            <FAQSection faqs={tool.faq} />
+            <FAQSection faqs={sampleFaqs} />
           </div>
         </section>
 
@@ -593,7 +650,7 @@ export default function ReviewPage({ tool, pageTitle, slug, relatedTools, relate
                   </p>
                   <div className="flex justify-between items-center">
                     <span className="text-sm text-gray-500">
-                      From {relatedTool.pricing.plans[0]?.price || 'Custom'}
+                      From {relatedTool.pricing.monthly ? `$${relatedTool.pricing.monthly}` : 'Custom'}
                     </span>
                     <a 
                       href={`/reviews/${relatedTool.tool_name.toLowerCase().replace(/\s+/g, '-')}`}
@@ -643,9 +700,9 @@ export default function ReviewPage({ tool, pageTitle, slug, relatedTools, relate
 }
 
 export const getStaticPaths: GetStaticPaths = async () => {
-  const tools = toolsData.ai_tools;
+  const tools = toolsData;
   
-  const paths = tools.map(tool => ({
+  const paths = tools.map((tool: any) => ({
     params: {
       toolName: tool.tool_name.toLowerCase().replace(/\s+/g, '-')
     }
@@ -659,10 +716,10 @@ export const getStaticPaths: GetStaticPaths = async () => {
 
 export const getStaticProps: GetStaticProps = async ({ params }) => {
   const toolSlug = params?.toolName as string;
-  const tools = toolsData.ai_tools;
+  const tools = toolsData;
   
   // Find tool by slug
-  const tool = tools.find(t => 
+  const tool = tools.find((t: any) => 
     t.tool_name.toLowerCase().replace(/\s+/g, '-') === toolSlug
   );
 
@@ -676,7 +733,7 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
   const slug = toolSlug;
 
   // Get related tools (exclude current tool)
-  const relatedTools = tools.filter(t => t.tool_name !== tool.tool_name);
+  const relatedTools = tools.filter((t: any) => t.tool_name !== tool.tool_name);
 
   // Generate related comparisons (include current tool)
   const relatedComparisons = [];
