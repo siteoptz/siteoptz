@@ -146,7 +146,7 @@ export default function FAQSection({
             Contact an Expert
           </a>
           <a
-            href="/guide"
+            href="/compare"
             className="bg-blue-700 text-white px-6 py-2 rounded-lg font-medium hover:bg-blue-800 transition-colors"
           >
             Free Tool Selection Guide

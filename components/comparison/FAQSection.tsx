@@ -184,12 +184,12 @@ export default function FAQSection({ faqs }: FAQSectionProps) {
           >
             Contact an Expert
           </Link>
-          <a
-            href="/guide"
+          <Link
+            href="/compare"
             className="bg-blue-700 text-white px-6 py-2 rounded-lg font-medium hover:bg-blue-800 transition-colors"
           >
             Free Tool Selection Guide
-          </a>
+          </Link>
         </div>
       </div>
     </div>
