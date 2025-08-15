@@ -399,7 +399,7 @@ export default function EmailCaptureForm({
                   value={formData.email}
                   onChange={(e) => handleInputChange('email', e.target.value)}
                   placeholder="Enter your email address"
-                  className={`w-full pl-11 pr-4 py-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent ${
+                  className={`w-full pl-11 pr-4 py-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent text-gray-900 placeholder-gray-500 ${
                     validationErrors.email ? 'border-red-300' : 'border-gray-300'
                   }`}
                   style={{ pointerEvents: 'auto' }}
@@ -428,7 +428,7 @@ export default function EmailCaptureForm({
                     value={formData.name}
                     onChange={(e) => handleInputChange('name', e.target.value)}
                     placeholder="Enter your full name"
-                    className={`w-full pl-11 pr-4 py-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent ${
+                    className={`w-full pl-11 pr-4 py-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent text-gray-900 placeholder-gray-500 ${
                       validationErrors.name ? 'border-red-300' : 'border-gray-300'
                     }`}
                     style={{ pointerEvents: 'auto' }}
@@ -453,7 +453,7 @@ export default function EmailCaptureForm({
                     value={formData.company}
                     onChange={(e) => handleInputChange('company', e.target.value)}
                     placeholder="Enter your company name"
-                    className="w-full pl-11 pr-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                    className="w-full pl-11 pr-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent text-gray-900 placeholder-gray-500"
                     style={{ pointerEvents: 'auto' }}
                     tabIndex={0}
                   />
@@ -477,7 +477,7 @@ export default function EmailCaptureForm({
                       className={`p-3 text-left border rounded-lg transition-all ${
                         formData.useCase === useCase.value
                           ? 'border-blue-500 bg-blue-50 text-blue-700'
-                          : 'border-gray-300 hover:border-gray-400'
+                          : 'border-gray-300 hover:border-gray-400 text-gray-900'
                       }`}
                     >
                       <div className="text-lg">{useCase.icon}</div>
@@ -500,7 +500,7 @@ export default function EmailCaptureForm({
                       className={`px-3 py-1 text-sm border rounded-full transition-all ${
                         formData.interests.includes(interest.value)
                           ? 'border-blue-500 bg-blue-500 text-white'
-                          : 'border-gray-300 hover:border-gray-400'
+                          : 'border-gray-300 hover:border-gray-400 text-gray-900'
                       }`}
                     >
                       {interest.label}
