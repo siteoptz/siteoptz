@@ -70,7 +70,7 @@ export default function CompareIndex({ aiToolsData }) {
     }
 
     return filtered;
-  }, [searchTerm, selectedCategory, sortBy]);
+  }, [aiToolsData, searchTerm, selectedCategory, sortBy]);
 
   const metaTitle = generateMetaTitle(null, null, 'category');
   const metaDescription = generateMetaDescription(null, null, 'category');
@@ -231,6 +231,16 @@ function ToolCard({ tool, viewMode }) {
   const pricing = tool.pricing || tool.pricingPlans || [];
   const startingPrice = pricing.find(plan => (plan.monthlyPrice || plan.price_per_month) > 0)?.monthlyPrice || pricing.find(plan => (plan.monthlyPrice || plan.price_per_month) > 0)?.price_per_month || 0;
   const hasFreeTrial = pricing.some(plan => (plan.monthlyPrice || plan.price_per_month) === 0);
+  
+  // Calculate overall rating from benchmarks
+  const calculateOverallRating = (benchmarks) => {
+    if (!benchmarks) return 4.0;
+    const scores = Object.values(benchmarks);
+    const average = scores.reduce((sum, score) => sum + score, 0) / scores.length;
+    return Math.round(average * 10) / 10; // Round to 1 decimal place
+  };
+  
+  const overallRating = calculateOverallRating(tool.benchmarks);
 
   if (viewMode === 'list') {
     return (
@@ -244,7 +254,9 @@ function ToolCard({ tool, viewMode }) {
                 alt={`${tool.name} logo`}
                 className="w-12 h-12 object-contain"
                 onError={(e) => {
-                  e.currentTarget.src = '/images/placeholder-logo.png';
+                  console.log('Logo failed to load for', tool.name, '- path:', tool.logo);
+                  e.currentTarget.style.display = 'none';
+                  e.currentTarget.parentElement.innerHTML = `<div class="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center text-blue-600 font-semibold text-sm">${tool.name.charAt(0)}</div>`;
                 }}
               />
             </div>
@@ -274,7 +286,7 @@ function ToolCard({ tool, viewMode }) {
               <div className="flex items-center gap-6 text-sm text-gray-600 mb-3">
                 <div className="flex items-center gap-1">
                   <Star className="w-4 h-4 text-yellow-400 fill-current" />
-                  <span>4.5/5</span>
+                  <span>{overallRating}/10</span>
                 </div>
                 <div className="flex items-center gap-1">
                   <Zap className="w-4 h-4 text-blue-500" />
@@ -318,7 +330,9 @@ function ToolCard({ tool, viewMode }) {
               alt={`${tool.name} logo`}
               className="w-8 h-8 object-contain"
               onError={(e) => {
-                e.currentTarget.src = '/images/placeholder-logo.png';
+                console.log('Logo failed to load for', tool.name, '- path:', tool.logo);
+                e.currentTarget.style.display = 'none';
+                e.currentTarget.parentElement.innerHTML = `<div class="w-8 h-8 bg-blue-100 rounded-lg flex items-center justify-center text-blue-600 font-semibold text-xs">${tool.name.charAt(0)}</div>`;
               }}
             />
           </div>
@@ -331,7 +345,7 @@ function ToolCard({ tool, viewMode }) {
         <div className="flex items-center justify-between">
           <div className="flex items-center gap-1">
             <Star className="w-4 h-4 text-yellow-400 fill-current" />
-            <span className="text-sm font-medium">4.5/5</span>
+            <span className="text-sm font-medium">{overallRating}/10</span>
           </div>
           <span className="px-2 py-1 bg-gray-100 text-gray-700 text-xs rounded-full">AI Tool</span>
         </div>
