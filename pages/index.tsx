@@ -287,7 +287,7 @@ export default function HomePage({ featuredTools, popularComparisons }: HomePage
                   </p>
 
                   <Link 
-                    href={`/compare/${comparison.tool1.slug}-vs-${comparison.tool2.slug}`}
+                    href={`/compare/${comparison.tool1.slug}/vs/${comparison.tool2.slug}`}
                     className="block w-full text-center px-4 py-2 bg-purple-600 text-white rounded-xl hover:bg-purple-700 transition-colors"
                   >
                     Compare Now
