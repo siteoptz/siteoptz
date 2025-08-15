@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Link from 'next/link';
 import { 
   Zap, 
@@ -13,9 +13,11 @@ import {
   Star,
   TrendingUp
 } from 'lucide-react';
+import EmailCaptureForm from './EmailCaptureForm';
 
 const Footer: React.FC = () => {
   const currentYear = new Date().getFullYear();
+  const [showEmailForm, setShowEmailForm] = useState(false);
 
   const footerSections = [
     {
@@ -96,9 +98,14 @@ const Footer: React.FC = () => {
                     type="email"
                     placeholder="Enter your email address"
                     className="w-full pl-11 pr-4 py-3 bg-gray-800 border border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent text-white placeholder-gray-400"
+                    onFocus={() => setShowEmailForm(true)}
+                    readOnly
                   />
                 </div>
-                <button className="px-6 py-3 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-lg font-semibold hover:from-blue-700 hover:to-purple-700 transform hover:scale-105 transition-all duration-200 shadow-lg hover:shadow-xl flex items-center justify-center space-x-2">
+                <button 
+                  onClick={() => setShowEmailForm(true)}
+                  className="px-6 py-3 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-lg font-semibold hover:from-blue-700 hover:to-purple-700 transform hover:scale-105 transition-all duration-200 shadow-lg hover:shadow-xl flex items-center justify-center space-x-2"
+                >
                   <span>Subscribe</span>
                   <ArrowRight className="w-4 h-4" />
                 </button>
@@ -229,6 +236,26 @@ const Footer: React.FC = () => {
           </div>
         </div>
       </div>
+
+      {/* Email Capture Modal */}
+      {showEmailForm && (
+        <EmailCaptureForm
+          source="footer_newsletter"
+          showModal={true}
+          onClose={() => setShowEmailForm(false)}
+          onSuccess={() => {
+            setShowEmailForm(false);
+            // Track successful newsletter signup
+            if (typeof window !== 'undefined' && window.gtag) {
+              window.gtag('event', 'newsletter_signup', {
+                event_category: 'engagement',
+                event_label: 'footer',
+                value: 1
+              });
+            }
+          }}
+        />
+      )}
     </footer>
   );
 };

@@ -6,9 +6,11 @@ const subscribeSchema = z.object({
   email: z.string().email('Invalid email address'),
   source: z.string().optional().default('unknown'),
   tool: z.string().optional(),
+  category: z.string().optional(),
   interests: z.array(z.string()).optional().default([]),
   name: z.string().optional(),
   company: z.string().optional(),
+  useCase: z.string().optional(),
   referrer: z.string().optional()
 });
 
@@ -16,9 +18,11 @@ interface SubscriptionData {
   email: string;
   source: string;
   tool?: string;
+  category?: string;
   interests: string[];
   name?: string;
   company?: string;
+  useCase?: string;
   referrer?: string;
   timestamp: string;
   ip_address?: string;
@@ -65,40 +69,71 @@ function checkRateLimit(ip: string): boolean {
 
 // CRM Integration Functions (implement based on your provider)
 async function addToMailchimp(data: SubscriptionData): Promise<{ success: boolean; id?: string }> {
-  // Mailchimp integration example
-  // const mailchimp = require('@mailchimp/mailchimp_marketing');
-  // mailchimp.setConfig({
-  //   apiKey: process.env.MAILCHIMP_API_KEY,
-  //   server: process.env.MAILCHIMP_SERVER_PREFIX,
-  // });
+  // Check if Mailchimp is configured
+  if (!process.env.MAILCHIMP_API_KEY || !process.env.MAILCHIMP_LIST_ID || !process.env.MAILCHIMP_SERVER_PREFIX) {
+    console.log('Mailchimp not configured, skipping...');
+    return { success: true, id: `mock_mc_${Date.now()}` };
+  }
+
+  try {
+    const mailchimp = require('@mailchimp/mailchimp_marketing');
+    mailchimp.setConfig({
+      apiKey: process.env.MAILCHIMP_API_KEY,
+      server: process.env.MAILCHIMP_SERVER_PREFIX,
+    });
   
-  // try {
-  //   const response = await mailchimp.lists.addListMember(process.env.MAILCHIMP_LIST_ID, {
-  //     email_address: data.email,
-  //     status: 'subscribed',
-  //     merge_fields: {
-  //       FNAME: data.name?.split(' ')[0] || '',
-  //       LNAME: data.name?.split(' ').slice(1).join(' ') || '',
-  //       COMPANY: data.company || '',
-  //       SOURCE: data.source,
-  //       TOOL: data.tool || '',
-  //       INTERESTS: data.interests.join(', ')
-  //     },
-  //     tags: [
-  //       data.source,
-  //       ...(data.tool ? [`tool:${data.tool}`] : []),
-  //       ...data.interests.map(interest => `interest:${interest}`)
-  //     ]
-  //   });
-  //   return { success: true, id: response.id };
-  // } catch (error) {
-  //   console.error('Mailchimp error:', error);
-  //   return { success: false };
-  // }
-  
-  // Mock success for now
-  console.log('Would add to Mailchimp:', data);
-  return { success: true, id: `mc_${Date.now()}` };
+    const response = await mailchimp.lists.addListMember(process.env.MAILCHIMP_LIST_ID, {
+      email_address: data.email,
+      status: 'subscribed',
+      merge_fields: {
+        FNAME: data.name?.split(' ')[0] || '',
+        LNAME: data.name?.split(' ').slice(1).join(' ') || '',
+        COMPANY: data.company || '',
+        SOURCE: data.source,
+        TOOL: data.tool || '',
+        INTERESTS: data.interests.join(', '),
+        USECASE: data.useCase || ''
+      },
+      tags: [
+        data.source,
+        ...(data.tool ? [`tool:${data.tool}`] : []),
+        ...(data.useCase ? [`usecase:${data.useCase}`] : []),
+        ...data.interests.map(interest => `interest:${interest}`)
+      ]
+    });
+    
+    console.log('Successfully added to Mailchimp:', response.id);
+    return { success: true, id: response.id };
+  } catch (error: any) {
+    // Handle duplicate email gracefully
+    if (error.status === 400 && error.response?.body?.title === 'Member Exists') {
+      console.log('Email already exists in Mailchimp, updating...');
+      try {
+        const mailchimp = require('@mailchimp/mailchimp_marketing');
+        const emailHash = require('crypto').createHash('md5').update(data.email.toLowerCase()).digest('hex');
+        
+        await mailchimp.lists.updateListMember(process.env.MAILCHIMP_LIST_ID, emailHash, {
+          merge_fields: {
+            FNAME: data.name?.split(' ')[0] || '',
+            LNAME: data.name?.split(' ').slice(1).join(' ') || '',
+            COMPANY: data.company || '',
+            SOURCE: data.source,
+            TOOL: data.tool || '',
+            INTERESTS: data.interests.join(', '),
+            USECASE: data.useCase || ''
+          }
+        });
+        
+        return { success: true, id: emailHash };
+      } catch (updateError) {
+        console.error('Mailchimp update error:', updateError);
+        return { success: false };
+      }
+    }
+    
+    console.error('Mailchimp error:', error);
+    return { success: false };
+  }
 }
 
 async function addToHubSpot(data: SubscriptionData): Promise<{ success: boolean; id?: string }> {
@@ -230,7 +265,7 @@ export default async function handler(
       });
     }
 
-    const { email, source, tool, interests, name, company, referrer } = validation.data;
+    const { email, source, tool, category, interests, name, company, useCase, referrer } = validation.data;
 
     // Additional email validation
     if (!isValidEmail(email)) {
@@ -255,9 +290,11 @@ export default async function handler(
       email: email.toLowerCase().trim(),
       source,
       tool,
+      category,
       interests,
       name: name?.trim(),
       company: company?.trim(),
+      useCase,
       referrer,
       timestamp: new Date().toISOString(),
       ip_address: clientIP,

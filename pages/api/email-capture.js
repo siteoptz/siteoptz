@@ -87,11 +87,236 @@ const saveToDatabase = async (data) => {
 
 // Send email based on provider
 const sendEmail = async (data) => {
-  const { email, tool, calculatedCost, users, planType, source } = data;
+  const { email, tool, calculatedCost, users, planType, source, additionalData } = data;
   
-  const subject = `Your ${tool} Pricing Quote - ${calculatedCost ? `$${calculatedCost}` : 'Custom Pricing'}`;
+  // Handle different email types
+  let subject, htmlContent, textContent;
   
-  const htmlContent = `
+  if (additionalData?.contactForm) {
+    // Contact form notification to info@siteoptz.com
+    subject = `New Contact Form Submission: ${additionalData.subject}`;
+    htmlContent = `
+      <!DOCTYPE html>
+      <html>
+      <head>
+        <meta charset="utf-8">
+        <title>New Contact Form Submission</title>
+        <style>
+          body { font-family: Arial, sans-serif; line-height: 1.6; color: #333; }
+          .container { max-width: 600px; margin: 0 auto; padding: 20px; }
+          .header { background: #f8f9fa; padding: 20px; border-radius: 8px; margin-bottom: 20px; }
+          .content { background: white; padding: 20px; border: 1px solid #dee2e6; border-radius: 8px; }
+          .field { margin-bottom: 15px; padding-bottom: 15px; border-bottom: 1px solid #eee; }
+          .field:last-child { border-bottom: none; }
+          .label { font-weight: bold; color: #495057; margin-bottom: 5px; }
+          .value { color: #212529; }
+        </style>
+      </head>
+      <body>
+        <div class="container">
+          <div class="header">
+            <h1>📧 New Contact Form Submission</h1>
+            <p>Received: ${new Date().toLocaleString()}</p>
+          </div>
+          
+          <div class="content">
+            <div class="field">
+              <div class="label">Name:</div>
+              <div class="value">${additionalData.senderName || 'Not provided'}</div>
+            </div>
+            
+            <div class="field">
+              <div class="label">Email:</div>
+              <div class="value">${additionalData.senderEmail}</div>
+            </div>
+            
+            <div class="field">
+              <div class="label">Company:</div>
+              <div class="value">${additionalData.senderCompany || 'Not provided'}</div>
+            </div>
+            
+            <div class="field">
+              <div class="label">Inquiry Type:</div>
+              <div class="value">${additionalData.inquiryType}</div>
+            </div>
+            
+            <div class="field">
+              <div class="label">Subject:</div>
+              <div class="value">${additionalData.subject}</div>
+            </div>
+            
+            <div class="field">
+              <div class="label">Message:</div>
+              <div class="value" style="white-space: pre-wrap;">${additionalData.message}</div>
+            </div>
+          </div>
+        </div>
+      </body>
+      </html>
+    `;
+    
+    textContent = `
+New Contact Form Submission
+
+Name: ${additionalData.senderName || 'Not provided'}
+Email: ${additionalData.senderEmail}
+Company: ${additionalData.senderCompany || 'Not provided'}
+Inquiry Type: ${additionalData.inquiryType}
+Subject: ${additionalData.subject}
+
+Message:
+${additionalData.message}
+
+Received: ${new Date().toLocaleString()}
+    `;
+  } else if (additionalData?.isConfirmation) {
+    // Confirmation email to sender
+    subject = `Thank you for contacting SiteOptz - We'll be in touch soon!`;
+    htmlContent = `
+      <!DOCTYPE html>
+      <html>
+      <head>
+        <meta charset="utf-8">
+        <title>Thank you for contacting us</title>
+        <style>
+          body { font-family: Arial, sans-serif; line-height: 1.6; color: #333; }
+          .container { max-width: 600px; margin: 0 auto; padding: 20px; }
+          .header { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; padding: 30px; text-align: center; border-radius: 10px 10px 0 0; }
+          .content { background: #f8f9fa; padding: 30px; border-radius: 0 0 10px 10px; }
+          .highlight { background: white; padding: 20px; border-radius: 8px; margin: 20px 0; border-left: 4px solid #667eea; }
+          .footer { text-align: center; padding: 20px; color: #666; font-size: 14px; }
+        </style>
+      </head>
+      <body>
+        <div class="container">
+          <div class="header">
+            <h1>Thank You, ${additionalData.name}! 🎉</h1>
+            <p>We've received your message and appreciate you reaching out.</p>
+          </div>
+          
+          <div class="content">
+            <h2>What happens next?</h2>
+            <ul>
+              <li>✅ Our team will review your inquiry within 24 hours</li>
+              <li>✅ We'll respond with detailed information or next steps</li>
+              <li>✅ For urgent matters, we'll prioritize your request</li>
+            </ul>
+            
+            <div class="highlight">
+              <h3>Your inquiry summary:</h3>
+              <p><strong>Subject:</strong> ${additionalData.originalSubject}</p>
+              <p><strong>Message:</strong> ${additionalData.originalMessage.substring(0, 200)}${additionalData.originalMessage.length > 200 ? '...' : ''}</p>
+            </div>
+            
+            <p>In the meantime, feel free to explore our AI tools directory or read our latest reviews.</p>
+            
+            <p style="text-align: center;">
+              <a href="https://siteoptz.ai/tools" style="display: inline-block; background: #667eea; color: white; padding: 12px 30px; text-decoration: none; border-radius: 6px; margin: 10px;">
+                Browse AI Tools
+              </a>
+            </p>
+          </div>
+          
+          <div class="footer">
+            <p>© 2025 SiteOptz. All rights reserved.</p>
+            <p>If you have any urgent questions, reply directly to this email.</p>
+          </div>
+        </div>
+      </body>
+      </html>
+    `;
+    
+    textContent = `
+Thank You, ${additionalData.name}!
+
+We've received your message and appreciate you reaching out.
+
+What happens next?
+- Our team will review your inquiry within 24 hours
+- We'll respond with detailed information or next steps
+- For urgent matters, we'll prioritize your request
+
+Your inquiry summary:
+Subject: ${additionalData.originalSubject}
+Message: ${additionalData.originalMessage.substring(0, 200)}${additionalData.originalMessage.length > 200 ? '...' : ''}
+
+In the meantime, feel free to explore our AI tools directory at https://siteoptz.ai/tools
+
+© 2025 SiteOptz. All rights reserved.
+If you have any urgent questions, reply directly to this email.
+    `;
+  } else if (additionalData?.subscriberEmail) {
+    // Newsletter subscription notification to info@siteoptz.com
+    subject = `New Newsletter Subscription: ${additionalData.subscriberEmail}`;
+    htmlContent = `
+      <!DOCTYPE html>
+      <html>
+      <head>
+        <meta charset="utf-8">
+        <title>New Newsletter Subscription</title>
+        <style>
+          body { font-family: Arial, sans-serif; line-height: 1.6; color: #333; }
+          .container { max-width: 600px; margin: 0 auto; padding: 20px; }
+          .header { background: #e3f2fd; padding: 20px; border-radius: 8px; margin-bottom: 20px; }
+          .content { background: white; padding: 20px; border: 1px solid #dee2e6; border-radius: 8px; }
+          .field { margin-bottom: 10px; }
+          .label { font-weight: bold; color: #495057; }
+        </style>
+      </head>
+      <body>
+        <div class="container">
+          <div class="header">
+            <h1>📧 New Newsletter Subscription</h1>
+            <p>Someone just subscribed to the SiteOptz newsletter!</p>
+          </div>
+          
+          <div class="content">
+            <div class="field">
+              <span class="label">Email:</span> ${additionalData.subscriberEmail}
+            </div>
+            <div class="field">
+              <span class="label">Name:</span> ${additionalData.subscriberName || 'Not provided'}
+            </div>
+            <div class="field">
+              <span class="label">Company:</span> ${additionalData.subscriberCompany || 'Not provided'}
+            </div>
+            <div class="field">
+              <span class="label">Use Case:</span> ${additionalData.useCase || 'Not specified'}
+            </div>
+            <div class="field">
+              <span class="label">Interests:</span> ${additionalData.interests?.join(', ') || 'None specified'}
+            </div>
+            <div class="field">
+              <span class="label">Source:</span> ${source}
+            </div>
+            <div class="field">
+              <span class="label">Tool/Category:</span> ${additionalData.tool || additionalData.category || 'General'}
+            </div>
+            <div class="field">
+              <span class="label">Timestamp:</span> ${new Date().toLocaleString()}
+            </div>
+          </div>
+        </div>
+      </body>
+      </html>
+    `;
+    
+    textContent = `
+New Newsletter Subscription
+
+Email: ${additionalData.subscriberEmail}
+Name: ${additionalData.subscriberName || 'Not provided'}
+Company: ${additionalData.subscriberCompany || 'Not provided'}
+Use Case: ${additionalData.useCase || 'Not specified'}
+Interests: ${additionalData.interests?.join(', ') || 'None specified'}
+Source: ${source}
+Tool/Category: ${additionalData.tool || additionalData.category || 'General'}
+Timestamp: ${new Date().toLocaleString()}
+    `;
+  } else {
+    // Default pricing quote email
+    subject = `Your ${tool} Pricing Quote - ${calculatedCost ? `$${calculatedCost}` : 'Custom Pricing'}`;
+    htmlContent = `
     <!DOCTYPE html>
     <html>
     <head>
@@ -185,6 +410,7 @@ Need help choosing? Reply to this email and our team will help you find the perf
 © 2025 SiteOptz. All rights reserved.
 Unsubscribe: https://siteoptz.ai/unsubscribe?email=${encodeURIComponent(email)}
   `;
+  }
 
   try {
     if (EMAIL_PROVIDER === 'sendgrid' && emailService) {
