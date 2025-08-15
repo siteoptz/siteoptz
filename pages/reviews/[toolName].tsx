@@ -249,7 +249,7 @@ export default function ReviewPage({ tool, pageTitle, slug, relatedTools, relate
                       className="w-full h-full object-contain"
                       onError={(e) => {
                         console.log('Logo failed to load:', tool.logo_url);
-                        e.currentTarget.src = '/images/tools/placeholder-logo.png';
+                        e.currentTarget.src = '/images/tools/placeholder-logo.svg';
                       }}
                     />
                   </div>
@@ -639,12 +639,12 @@ export default function ReviewPage({ tool, pageTitle, slug, relatedTools, relate
                 <div key={index} className="bg-white rounded-xl p-6 shadow-sm hover:shadow-lg transition-shadow">
                   <div className="flex items-center mb-4">
                     <img
-                      src={relatedTool.logo_url || '/images/tools/placeholder-logo.png'}
+                      src={relatedTool.logo_url || '/images/tools/placeholder-logo.svg'}
                       alt={`${relatedTool.tool_name || 'Tool'} logo`}
                       className="w-10 h-10 mr-3 object-contain"
                       onError={(e) => {
                         console.log('Related tool logo failed to load:', relatedTool.logo_url);
-                        e.currentTarget.src = '/images/tools/placeholder-logo.png';
+                        e.currentTarget.src = '/images/tools/placeholder-logo.svg';
                       }}
                     />
                     <h3 className="font-semibold text-gray-900">{relatedTool.tool_name || 'Unknown Tool'}</h3>
