@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useMemo } from 'react';
 import { CheckCircle, Mail, ArrowRight, User, Building, Sparkles, X } from 'lucide-react';
 
 interface EmailCaptureFormProps {
@@ -344,7 +344,7 @@ export default function EmailCaptureForm({
     );
   }
 
-  const FormContent = () => (
+  const FormContent = useMemo(() => (
     <div className="w-full bg-gradient-to-br from-blue-50 to-indigo-50 border border-blue-200 rounded-2xl overflow-hidden"
          style={{ pointerEvents: 'auto' }}>
       
@@ -559,7 +559,7 @@ export default function EmailCaptureForm({
         </form>
       </div>
     </div>
-  );
+  ), [content, compact, currentStep, formData, validationErrors, error, isSubmitting, currentStepData]);
 
   if (showModal) {
     return (
@@ -600,11 +600,11 @@ export default function EmailCaptureForm({
               <X className="w-5 h-5" />
             </button>
           )}
-          <FormContent />
+          {FormContent}
         </div>
       </div>
     );
   }
 
-  return <FormContent />;
+  return FormContent;
 }
