@@ -14,6 +14,7 @@ interface Tool {
   slug: string;
   name: string;
   logo: string;
+  category?: string;
   overview: {
     description: string;
   };
@@ -147,7 +148,7 @@ export default function HomePage({ featuredTools, popularComparisons }: HomePage
           </div>
         </section>
 
-        {/* Featured Tools */}
+        {/* Top-Rated AI Tools */}
         <section className="py-20">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-16">
@@ -155,90 +156,100 @@ export default function HomePage({ featuredTools, popularComparisons }: HomePage
                 Top-Rated AI Tools
               </h2>
               <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-                Discover the most popular and highly-rated AI tools used by millions of professionals worldwide.
+                Discover all {featuredTools.length} AI tools across 10 categories, used by millions of professionals worldwide.
               </p>
             </div>
 
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {featuredTools.slice(0, 6).map((tool) => (
-                <div key={tool.id} className="bg-white rounded-2xl shadow-lg hover:shadow-xl transition-shadow p-6 border border-gray-100">
-                  <div className="flex items-center gap-4 mb-4">
-                    <div className="w-16 h-16 bg-gray-100 rounded-xl flex items-center justify-center">
-                      <img 
-                        src={tool.logo} 
-                        alt={`${tool.name} logo`}
-                        className="w-12 h-12 object-contain"
-                        onError={(e) => {
-                          e.currentTarget.style.display = 'none';
-                          const sibling = e.currentTarget.nextElementSibling as HTMLElement;
-                          if (sibling) sibling.style.display = 'flex';
-                        }}
-                      />
-                      <div className="w-12 h-12 bg-gradient-to-br from-blue-500 to-purple-600 rounded-lg flex items-center justify-center text-white text-lg font-bold" style={{display: 'none'}}>
-                        {tool.name.charAt(0)}
-                      </div>
-                    </div>
-                    <div>
-                      <h3 className="text-xl font-semibold text-gray-900">{tool.name}</h3>
-                      <div className="flex items-center gap-1">
-                        <Star className="w-4 h-4 text-yellow-400 fill-current" />
-                        <span className="text-sm font-medium text-gray-600">
-                          {tool.rating || 4.5}/5
-                        </span>
-                      </div>
-                    </div>
-                  </div>
+            {/* Tools by Category */}
+            {(() => {
+              // Group tools by category
+              const toolsByCategory = featuredTools.reduce((acc: any, tool: Tool) => {
+                const category = tool.category || 'Other';
+                if (!acc[category]) acc[category] = [];
+                acc[category].push(tool);
+                return acc;
+              }, {});
 
-                  <p className="text-gray-600 mb-4 line-clamp-2">
-                    {tool.overview?.description}
-                  </p>
-
-                  <div className="flex items-center justify-between mb-4">
-                    <div className="text-lg font-bold text-gray-900">
-                      {(() => {
-                        const plan = tool.pricing?.[0];
-                        if (!plan) return '$0/mo';
-                        
-                        // Check if this is actually enterprise/custom pricing vs truly free
-                        const isEnterpriseOrCustom = plan.price_per_month === 0 && 
-                          (plan.plan?.toLowerCase().includes('enterprise') || 
-                           plan.plan?.toLowerCase().includes('custom'));
-                        
-                        const isTrulyFree = plan.price_per_month === 0 && 
-                          plan.plan?.toLowerCase().includes('free');
-                        
-                        if (isEnterpriseOrCustom) {
-                          return 'Custom';
-                        } else if (isTrulyFree) {
-                          return 'Free';
-                        } else if (plan.price_per_month === 0) {
-                          return 'Custom'; // Default for 0 price when not explicitly free
-                        } else {
-                          return `$${plan.price_per_month}/mo`;
-                        }
-                      })()}
-                    </div>
-                    <span className="px-3 py-1 bg-blue-100 text-blue-700 text-sm rounded-full">
-                      {tool.features?.length || 0} features
+              return Object.entries(toolsByCategory).map(([category, tools]: [string, any]) => (
+                <div key={category} className="mb-16">
+                  <div className="flex items-center mb-8">
+                    <h3 className="text-2xl font-bold text-gray-900">{category}</h3>
+                    <span className="ml-3 px-3 py-1 bg-blue-100 text-blue-700 text-sm rounded-full">
+                      {tools.length} tools
                     </span>
                   </div>
+                  
+                  <div className="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+                    {tools.map((tool: Tool) => (
+                      <div key={tool.id} className="bg-white rounded-2xl shadow-lg hover:shadow-xl transition-shadow p-6 border border-gray-100">
+                        <div className="flex items-center gap-3 mb-4">
+                          <div className="w-12 h-12 bg-gray-100 rounded-lg flex items-center justify-center">
+                            <img 
+                              src={tool.logo} 
+                              alt={`${tool.name} logo`}
+                              className="w-8 h-8 object-contain"
+                              onError={(e) => {
+                                e.currentTarget.style.display = 'none';
+                                const sibling = e.currentTarget.nextElementSibling as HTMLElement;
+                                if (sibling) sibling.style.display = 'flex';
+                              }}
+                            />
+                            <div className="w-8 h-8 bg-gradient-to-br from-blue-500 to-purple-600 rounded-lg flex items-center justify-center text-white text-sm font-bold" style={{display: 'none'}}>
+                              {tool.name.charAt(0)}
+                            </div>
+                          </div>
+                          <div className="min-w-0 flex-1">
+                            <h4 className="text-lg font-semibold text-gray-900 truncate">{tool.name}</h4>
+                            <div className="flex items-center gap-1">
+                              <Star className="w-3 h-3 text-yellow-400 fill-current" />
+                              <span className="text-xs font-medium text-gray-600">
+                                {tool.rating || 4.5}/5
+                              </span>
+                            </div>
+                          </div>
+                        </div>
 
-                  <Link 
-                    href={`/tools/${tool.slug}`}
-                    className="block w-full text-center px-4 py-2 bg-blue-600 text-white rounded-xl hover:bg-blue-700 transition-colors"
-                  >
-                    View Details
-                  </Link>
+                        <p className="text-gray-600 text-sm mb-4 line-clamp-2">
+                          {tool.overview?.description}
+                        </p>
+
+                        <div className="flex items-center justify-between mb-4">
+                          <div className="text-sm font-bold text-gray-900">
+                            {(() => {
+                              const plan = tool.pricing?.[0];
+                              if (!plan) return 'Free';
+                              
+                              if (plan.price_per_month === 0) {
+                                return 'Free';
+                              } else {
+                                return `$${plan.price_per_month}/mo`;
+                              }
+                            })()}
+                          </div>
+                          <span className="px-2 py-1 bg-gray-100 text-gray-600 text-xs rounded-full">
+                            {tool.features?.length || 0} features
+                          </span>
+                        </div>
+
+                        <Link 
+                          href={`/reviews/${tool.slug}`}
+                          className="block w-full text-center px-4 py-2 bg-blue-600 text-white text-sm rounded-lg hover:bg-blue-700 transition-colors"
+                        >
+                          View Details
+                        </Link>
+                      </div>
+                    ))}
+                  </div>
                 </div>
-              ))}
-            </div>
+              ));
+            })()}
 
             <div className="text-center mt-12">
               <Link 
                 href="/tools"
                 className="inline-flex items-center px-8 py-4 bg-gray-100 text-gray-900 font-semibold rounded-xl hover:bg-gray-200 transition-colors"
               >
-                View All {featuredTools.length}+ Tools
+                Explore All {featuredTools.length} Tools
                 <ArrowRight className="ml-2 w-5 h-5" />
               </Link>
             </div>
@@ -397,33 +408,39 @@ export const getStaticProps: GetStaticProps = async () => {
   try {
     const fs = require('fs');
     const path = require('path');
+    const { loadUnifiedToolsData } = require('../utils/unifiedDataAdapter');
     
-    // Load AI tools data from new comprehensive file
-    const aiToolsData = JSON.parse(
-      fs.readFileSync(path.join(process.cwd(), 'data/ai-tools.json'), 'utf8')
-    );
+    // Load unified tools data
+    const unifiedTools = loadUnifiedToolsData(fs, path);
 
     // Transform data to match homepage interface
-    const transformedTools = aiToolsData.ai_tools.map((tool: any) => ({
-      id: tool.toolName.toLowerCase().replace(/\s+/g, '-'),
-      slug: tool.toolName.toLowerCase().replace(/\s+/g, '-'),
-      name: tool.toolName,
-      logo: tool.logo_url,
-      overview: {
-        description: tool.description
-      },
-      rating: tool.rating,
-      features: tool.features,
-      pricing: tool.pricing.plans.map((plan: any) => ({
-        plan: plan.name,
-        price_per_month: parseFloat(plan.price.replace(/[^0-9.]/g, '')) || 0
-      }))
-    }));
+    const transformedTools = unifiedTools.map((tool: any) => {
+      const toolSlug = (tool.tool_name || tool.toolName).toLowerCase().replace(/\s+/g, '-').replace(/\./g, '');
+      return {
+        id: toolSlug,
+        slug: toolSlug,
+        name: tool.tool_name || tool.toolName,
+        logo: tool.logo_url || tool.logo,
+        category: tool.category || 'AI Tool',
+        overview: {
+          description: tool.description || ''
+        },
+        rating: tool.rating || 4.5,
+        features: tool.features?.core || tool.features || [],
+        pricing: [
+          {
+            plan: 'Monthly',
+            price_per_month: tool.pricing?.monthly === 'Free' ? 0 : 
+                            tool.pricing?.monthly === 'Custom' ? 0 : 
+                            tool.pricing?.monthly || 0
+          }
+        ]
+      };
+    });
 
-    // Get featured tools (all tools with high ratings)
+    // Get all tools sorted by rating (highest first)
     const featuredTools = transformedTools
-      .filter((tool: any) => tool.rating >= 4.0)
-      .slice(0, 12);
+      .sort((a: any, b: any) => (b.rating || 0) - (a.rating || 0));
 
     // Create comprehensive popular comparisons using transformed tools
     const popularComparisons = [
@@ -434,9 +451,9 @@ export const getStaticProps: GetStaticProps = async () => {
       { tool1: transformedTools.find((t: any) => t.slug === 'chatgpt'), tool2: transformedTools.find((t: any) => t.slug === 'perplexity-ai') },
       
       // Writing & Content Creation
-      { tool1: transformedTools.find((t: any) => t.slug === 'jasper-ai'), tool2: transformedTools.find((t: any) => t.slug === 'copy.ai') },
+      { tool1: transformedTools.find((t: any) => t.slug === 'jasper-ai'), tool2: transformedTools.find((t: any) => t.slug === 'copyai') },
       { tool1: transformedTools.find((t: any) => t.slug === 'jasper-ai'), tool2: transformedTools.find((t: any) => t.slug === 'writesonic') },
-      { tool1: transformedTools.find((t: any) => t.slug === 'copy.ai'), tool2: transformedTools.find((t: any) => t.slug === 'writesonic') },
+      { tool1: transformedTools.find((t: any) => t.slug === 'copyai'), tool2: transformedTools.find((t: any) => t.slug === 'writesonic') },
       { tool1: transformedTools.find((t: any) => t.slug === 'chatgpt'), tool2: transformedTools.find((t: any) => t.slug === 'jasper-ai') },
       
       // SEO & Content Optimization
