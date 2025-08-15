@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import Link from 'next/link';
 
 interface FAQ {
   question: string;
@@ -177,12 +178,12 @@ export default function FAQSection({ faqs }: FAQSectionProps) {
           Our AI tool experts are here to help you make the right choice for your business.
         </p>
         <div className="flex flex-col sm:flex-row gap-3 justify-center">
-          <a
+          <Link
             href="/contact"
             className="bg-white text-blue-600 px-6 py-2 rounded-lg font-medium hover:bg-blue-50 transition-colors"
           >
             Contact an Expert
-          </a>
+          </Link>
           <a
             href="/guide"
             className="bg-blue-700 text-white px-6 py-2 rounded-lg font-medium hover:bg-blue-800 transition-colors"
