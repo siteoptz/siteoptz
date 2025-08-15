@@ -359,7 +359,7 @@ export const getStaticPaths: GetStaticPaths = async () => {
       console.log('aiToolsData.json not found');
       return {
         paths: [],
-        fallback: false,
+        fallback: 'blocking',
       };
     }
     
@@ -369,7 +369,7 @@ export const getStaticPaths: GetStaticPaths = async () => {
       console.log('Invalid or empty aiToolsData');
       return {
         paths: [],
-        fallback: false,
+        fallback: 'blocking',
       };
     }
 
@@ -406,13 +406,13 @@ export const getStaticPaths: GetStaticPaths = async () => {
     
     return {
       paths,
-      fallback: false,
+      fallback: 'blocking',
     };
   } catch (error) {
     console.error('Error in getStaticPaths:', error);
     return {
       paths: [],
-      fallback: false,
+      fallback: 'blocking',
     };
   }
 };
