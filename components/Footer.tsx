@@ -234,8 +234,8 @@ const Footer: React.FC = () => {
           compact={false}
           onClose={() => setShowEmailForm(false)}
           onSuccess={() => {
-            setShowEmailForm(false);
-            // Track successful newsletter signup
+            // Track successful newsletter signup - but don't close modal immediately
+            // Let the thank you message display first
             if (typeof window !== 'undefined' && window.gtag) {
               window.gtag('event', 'newsletter_signup', {
                 event_category: 'engagement',
