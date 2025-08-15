@@ -637,23 +637,23 @@ export default function ReviewPage({ tool, pageTitle, slug, relatedTools, relate
                 <div key={index} className="bg-white rounded-xl p-6 shadow-sm hover:shadow-lg transition-shadow">
                   <div className="flex items-center mb-4">
                     <img
-                      src={relatedTool.logo_url}
-                      alt={`${relatedTool.tool_name} logo`}
+                      src={relatedTool.logo_url || '/images/tools/default-logo.png'}
+                      alt={`${relatedTool.tool_name || 'Tool'} logo`}
                       className="w-10 h-10 mr-3"
                     />
-                    <h3 className="font-semibold text-gray-900">{relatedTool.tool_name}</h3>
+                    <h3 className="font-semibold text-gray-900">{relatedTool.tool_name || 'Unknown Tool'}</h3>
                   </div>
                   <p className="text-gray-600 text-sm mb-4">
-                    {relatedTool.description.length > 100 
-                      ? `${relatedTool.description.substring(0, 100)}...` 
-                      : relatedTool.description}
+                    {(relatedTool.description || '').length > 100 
+                      ? `${(relatedTool.description || '').substring(0, 100)}...` 
+                      : (relatedTool.description || '')}
                   </p>
                   <div className="flex justify-between items-center">
                     <span className="text-sm text-gray-500">
-                      From {relatedTool.pricing.monthly ? `$${relatedTool.pricing.monthly}` : 'Custom'}
+                      From {relatedTool.pricing?.monthly ? `$${relatedTool.pricing.monthly}` : 'Custom'}
                     </span>
                     <a 
-                      href={`/reviews/${relatedTool.tool_name.toLowerCase().replace(/\s+/g, '-')}`}
+                      href={`/reviews/${(relatedTool.tool_name || '').toLowerCase().replace(/\s+/g, '-')}`}
                       className="text-blue-600 hover:text-blue-800 text-sm font-medium"
                     >
                       Review →
