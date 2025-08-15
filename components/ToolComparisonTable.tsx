@@ -7,6 +7,7 @@ interface Tool {
     monthlyPrice?: number;
     plan?: string;
     plan_name?: string;
+    features?: string[];
   }>;
   features?: string[];
   [key: string]: any;
@@ -31,24 +32,42 @@ export default function ToolComparisonTable({ tools, highlight, defaultSelected 
   const getStartingPrice = (tool: Tool) => {
     if (!tool.pricing || !Array.isArray(tool.pricing)) return 'N/A';
     
-    // Handle different pricing data structures
-    const freePlan = tool.pricing.find(p => 
-      (p.price_per_month !== undefined && p.price_per_month === 0) ||
-      (p.monthlyPrice !== undefined && p.monthlyPrice === 0) ||
-      (p.plan && p.plan.toLowerCase().includes('free'))
+    // Check for custom/enterprise pricing (price = 0 but not actually free)
+    const hasCustomPricing = tool.pricing.some(p => 
+      (p.price_per_month === 0 || p.monthlyPrice === 0) &&
+      (p.plan?.toLowerCase().includes('enterprise') || 
+       p.plan?.toLowerCase().includes('custom') ||
+       p.features?.some((f: string) => f.toLowerCase().includes('custom pricing')))
     );
     
-    if (freePlan) return 'Free';
+    // Find truly free plans (price = 0 and explicitly named "free")
+    const trulyFreePlan = tool.pricing.find(p => 
+      ((p.price_per_month !== undefined && p.price_per_month === 0) ||
+       (p.monthlyPrice !== undefined && p.monthlyPrice === 0)) &&
+      p.plan && p.plan.toLowerCase().includes('free')
+    );
     
     // Get the lowest non-zero price from either price_per_month or monthlyPrice
     const prices = tool.pricing
       .map(p => p.price_per_month || p.monthlyPrice || 0)
       .filter(p => p > 0);
     
-    if (prices.length === 0) return 'Free';
-    
-    const lowestPrice = Math.min(...prices);
-    return `$${lowestPrice}/mo`;
+    // Determine what to display
+    if (trulyFreePlan && !hasCustomPricing) {
+      return 'Free';
+    } else if (trulyFreePlan && prices.length > 0) {
+      // Has both free and paid plans
+      return 'Free+';
+    } else if (prices.length > 0) {
+      // Has paid plans
+      const lowestPrice = Math.min(...prices);
+      return `$${lowestPrice}/mo`;
+    } else if (hasCustomPricing) {
+      // Only custom/enterprise pricing
+      return 'Custom';
+    } else {
+      return 'N/A';
+    }
   };
 
   return (
