@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useMemo } from 'react';
+import React, { useState, useEffect, useMemo, useCallback } from 'react';
 import { CheckCircle, Mail, ArrowRight, User, Building, Sparkles, X } from 'lucide-react';
 
 interface EmailCaptureFormProps {
@@ -139,7 +139,7 @@ export default function EmailCaptureForm({
     return isValid;
   };
 
-  const handleInputChange = (field: keyof FormData, value: any) => {
+  const handleInputChange = useCallback((field: keyof FormData, value: any) => {
     console.log('Input change:', field, value);
     setFormData(prev => ({ ...prev, [field]: value }));
     
@@ -147,18 +147,18 @@ export default function EmailCaptureForm({
     if (validationErrors[field]) {
       setValidationErrors(prev => ({ ...prev, [field]: '' }));
     }
-  };
+  }, [validationErrors]);
 
-  const handleInterestToggle = (interest: string) => {
+  const handleInterestToggle = useCallback((interest: string) => {
     setFormData(prev => ({
       ...prev,
       interests: prev.interests.includes(interest)
         ? prev.interests.filter(i => i !== interest)
         : [...prev.interests, interest]
     }));
-  };
+  }, []);
 
-  const handleNext = () => {
+  const handleNext = useCallback(() => {
     console.log('handleNext called', { currentStep, compact, formData });
     if (validateCurrentStep()) {
       console.log('Validation passed for step', currentStep);
@@ -181,11 +181,11 @@ export default function EmailCaptureForm({
     } else {
       console.log('Validation failed for step', currentStep, validationErrors);
     }
-  };
+  }, [currentStep, compact, formData, validationErrors]);
 
-  const handleBack = () => {
+  const handleBack = useCallback(() => {
     setCurrentStep(prev => Math.max(1, prev - 1));
-  };
+  }, []);
 
   const handleSubmit = async () => {
     if (!validateCurrentStep()) return;
@@ -291,60 +291,8 @@ export default function EmailCaptureForm({
   const content = generateContent();
   const currentStepData = FORM_STEPS[currentStep - 1];
 
-  if (isSubmitted) {
-    return (
-      <div className={`${showModal ? 'fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50' : ''}`}>
-        <div className={`w-full max-w-md mx-auto bg-gradient-to-br from-green-50 to-emerald-50 border border-green-200 rounded-2xl ${showModal ? 'relative' : ''}`}>
-          {showModal && onClose && (
-            <button
-              onClick={onClose}
-              className="absolute top-4 right-4 text-green-600 hover:text-green-800"
-            >
-              <X className="w-5 h-5" />
-            </button>
-          )}
-          <div className="p-8 text-center">
-            <CheckCircle className="w-16 h-16 text-green-500 mx-auto mb-4" />
-            <h3 className="text-xl font-bold text-green-900 mb-2">
-              Welcome to SiteOptz! 🎉
-            </h3>
-            <p className="text-green-700 mb-6">
-              Thank you for subscribing! You&apos;ll receive your first AI insights newsletter soon. 
-              Check your inbox (and spam folder) for a welcome message.
-            </p>
-            <div className="space-y-3">
-              <button 
-                onClick={() => {
-                  setIsSubmitted(false);
-                  setCurrentStep(1);
-                  setFormData({
-                    email: '',
-                    name: '',
-                    company: '',
-                    useCase: 'general',
-                    interests: []
-                  });
-                }}
-                className="w-full bg-green-600 text-white px-4 py-2 rounded-lg hover:bg-green-700 transition-colors"
-              >
-                Subscribe Another Email
-              </button>
-              {showModal && onClose && (
-                <button 
-                  onClick={onClose}
-                  className="w-full bg-white border border-gray-300 text-gray-700 px-4 py-2 rounded-lg hover:bg-gray-50 transition-colors"
-                >
-                  Close
-                </button>
-              )}
-            </div>
-          </div>
-        </div>
-      </div>
-    );
-  }
-
-  const FormContent = useMemo(() => (
+  // Create stable form content to prevent re-renders
+  const renderFormContent = () => (
     <div className="w-full bg-gradient-to-br from-blue-50 to-indigo-50 border border-blue-200 rounded-2xl overflow-hidden"
          style={{ pointerEvents: 'auto' }}>
       
@@ -559,7 +507,60 @@ export default function EmailCaptureForm({
         </form>
       </div>
     </div>
-  ), [content, compact, currentStep, formData, validationErrors, error, isSubmitting, currentStepData]);
+  );
+
+  if (isSubmitted) {
+    return (
+      <div className={`${showModal ? 'fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50' : ''}`}>
+        <div className={`w-full max-w-md mx-auto bg-gradient-to-br from-green-50 to-emerald-50 border border-green-200 rounded-2xl ${showModal ? 'relative' : ''}`}>
+          {showModal && onClose && (
+            <button
+              onClick={onClose}
+              className="absolute top-4 right-4 text-green-600 hover:text-green-800"
+            >
+              <X className="w-5 h-5" />
+            </button>
+          )}
+          <div className="p-8 text-center">
+            <CheckCircle className="w-16 h-16 text-green-500 mx-auto mb-4" />
+            <h3 className="text-xl font-bold text-green-900 mb-2">
+              Welcome to SiteOptz! 🎉
+            </h3>
+            <p className="text-green-700 mb-6">
+              Thank you for subscribing! You&apos;ll receive your first AI insights newsletter soon. 
+              Check your inbox (and spam folder) for a welcome message.
+            </p>
+            <div className="space-y-3">
+              <button 
+                onClick={() => {
+                  setIsSubmitted(false);
+                  setCurrentStep(1);
+                  setFormData({
+                    email: '',
+                    name: '',
+                    company: '',
+                    useCase: 'general',
+                    interests: []
+                  });
+                }}
+                className="w-full bg-green-600 text-white px-4 py-2 rounded-lg hover:bg-green-700 transition-colors"
+              >
+                Subscribe Another Email
+              </button>
+              {showModal && onClose && (
+                <button 
+                  onClick={onClose}
+                  className="w-full bg-white border border-gray-300 text-gray-700 px-4 py-2 rounded-lg hover:bg-gray-50 transition-colors"
+                >
+                  Close
+                </button>
+              )}
+            </div>
+          </div>
+        </div>
+      </div>
+    );
+  }
 
   if (showModal) {
     return (
@@ -600,11 +601,11 @@ export default function EmailCaptureForm({
               <X className="w-5 h-5" />
             </button>
           )}
-          {FormContent}
+          {renderFormContent()}
         </div>
       </div>
     );
   }
 
-  return FormContent;
+  return renderFormContent();
 }
