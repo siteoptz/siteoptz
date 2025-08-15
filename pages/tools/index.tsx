@@ -1,6 +1,7 @@
 import fs from "fs";
 import path from "path";
 import { useState, useEffect } from "react";
+import { useRouter } from "next/router";
 import SEOHead from "../../components/SEOHead";
 import { getPageConfig, buildCanonicalUrl } from "../../seo/meta-config.js";
 import PricingCalculator from "../../components/tools/PricingCalculator";
@@ -24,6 +25,7 @@ export async function getStaticProps() {
 export default function ToolsPage({ tools, faqs }: { tools: any[], faqs: any }) {
   const [selectedTool, setSelectedTool] = useState(tools[0]);
   const pageConfig = getPageConfig('tools');
+  const router = useRouter();
 
   // Load saved selection from localStorage
   useEffect(() => {
@@ -34,11 +36,12 @@ export default function ToolsPage({ tools, faqs }: { tools: any[], faqs: any }) 
     }
   }, [tools]);
 
-  // Save selection when user changes
+  // Redirect to review page when user changes selection in dropdown
   const handleToolChange = (toolName: string) => {
-    const tool = tools.find((t: any) => t.toolName === toolName);
-    setSelectedTool(tool);
-    localStorage.setItem("selectedTool", toolName);
+    // Convert tool name to URL slug format
+    const toolSlug = toolName.toLowerCase().replace(/\s+/g, '-');
+    // Redirect to the review page
+    router.push(`/reviews/${toolSlug}`);
   };
 
   // Generate structured data for the tools directory
@@ -77,12 +80,17 @@ export default function ToolsPage({ tools, faqs }: { tools: any[], faqs: any }) 
 
           {/* Tool Selector */}
           <div className="mb-4">
-            <label className="block mb-1 font-medium">Select Tool:</label>
+            <label className="block mb-1 font-medium">Select Tool to Review:</label>
             <select
-              value={selectedTool?.toolName || ''}
-              onChange={(e) => handleToolChange(e.target.value)}
+              value=""
+              onChange={(e) => {
+                if (e.target.value) {
+                  handleToolChange(e.target.value);
+                }
+              }}
               className="border rounded px-3 py-2"
             >
+              <option value="">Choose a tool...</option>
               {tools.map((tool) => (
                 <option key={tool.toolName} value={tool.toolName}>
                   {tool.toolName}
