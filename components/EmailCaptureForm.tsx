@@ -102,6 +102,11 @@ export default function EmailCaptureForm({
     }
   }, [source, tool, category]);
 
+  // Debug current step changes
+  useEffect(() => {
+    console.log('Current step changed to:', currentStep, 'compact:', compact);
+  }, [currentStep, compact]);
+
   const validateField = (field: string, value: any): string => {
     switch (field) {
       case 'email':
@@ -135,6 +140,7 @@ export default function EmailCaptureForm({
   };
 
   const handleInputChange = (field: keyof FormData, value: any) => {
+    console.log('Input change:', field, value);
     setFormData(prev => ({ ...prev, [field]: value }));
     
     // Clear validation error when user starts typing
@@ -153,10 +159,14 @@ export default function EmailCaptureForm({
   };
 
   const handleNext = () => {
+    console.log('handleNext called', { currentStep, compact, formData });
     if (validateCurrentStep()) {
+      console.log('Validation passed for step', currentStep);
       if (compact || currentStep === FORM_STEPS.length) {
+        console.log('Submitting form');
         handleSubmit();
       } else {
+        console.log('Moving to next step', currentStep + 1);
         setCurrentStep(prev => prev + 1);
         
         // Track step progression
@@ -168,6 +178,8 @@ export default function EmailCaptureForm({
           });
         }
       }
+    } else {
+      console.log('Validation failed for step', currentStep, validationErrors);
     }
   };
 

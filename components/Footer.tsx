@@ -231,6 +231,7 @@ const Footer: React.FC = () => {
         <EmailCaptureForm
           source="footer_newsletter"
           showModal={true}
+          compact={false}
           onClose={() => setShowEmailForm(false)}
           onSuccess={() => {
             setShowEmailForm(false);
