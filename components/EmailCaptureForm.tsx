@@ -333,15 +333,8 @@ export default function EmailCaptureForm({
   }
 
   const FormContent = () => (
-    <div className="w-full max-w-md mx-auto bg-gradient-to-br from-blue-50 to-indigo-50 border border-blue-200 rounded-2xl">
-      {showModal && onClose && (
-        <button
-          onClick={onClose}
-          className="absolute top-4 right-4 text-gray-500 hover:text-gray-700"
-        >
-          <X className="w-5 h-5" />
-        </button>
-      )}
+    <div className="w-full bg-gradient-to-br from-blue-50 to-indigo-50 border border-blue-200 rounded-2xl overflow-hidden"
+         style={{ pointerEvents: 'auto' }}>
       
       <div className="text-center pb-4 p-6">
         <div className="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
@@ -409,6 +402,9 @@ export default function EmailCaptureForm({
                   className={`w-full pl-11 pr-4 py-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent ${
                     validationErrors.email ? 'border-red-300' : 'border-gray-300'
                   }`}
+                  style={{ pointerEvents: 'auto' }}
+                  autoFocus={showModal}
+                  tabIndex={0}
                   required
                 />
               </div>
@@ -435,6 +431,8 @@ export default function EmailCaptureForm({
                     className={`w-full pl-11 pr-4 py-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent ${
                       validationErrors.name ? 'border-red-300' : 'border-gray-300'
                     }`}
+                    style={{ pointerEvents: 'auto' }}
+                    tabIndex={0}
                     required
                   />
                 </div>
@@ -456,6 +454,8 @@ export default function EmailCaptureForm({
                     onChange={(e) => handleInputChange('company', e.target.value)}
                     placeholder="Enter your company name"
                     className="w-full pl-11 pr-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                    style={{ pointerEvents: 'auto' }}
+                    tabIndex={0}
                   />
                 </div>
               </div>
@@ -552,8 +552,12 @@ export default function EmailCaptureForm({
   if (showModal) {
     return (
       <div 
-        className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center p-4" 
-        style={{ pointerEvents: 'auto', zIndex: 9999 }}
+        className="fixed inset-0 flex items-center justify-center p-4" 
+        style={{ 
+          backgroundColor: 'rgba(0, 0, 0, 0.5)',
+          zIndex: 10000,
+          pointerEvents: 'auto'
+        }}
         onClick={(e) => {
           // Close modal when clicking backdrop
           if (e.target === e.currentTarget && onClose) {
@@ -570,11 +574,20 @@ export default function EmailCaptureForm({
         aria-labelledby="email-form-title"
       >
         <div 
-          className="relative" 
+          className="relative w-full max-w-md bg-white rounded-2xl shadow-2xl" 
           style={{ pointerEvents: 'auto' }}
           onClick={(e) => e.stopPropagation()}
           onKeyDown={(e) => e.stopPropagation()}
+          role="document"
         >
+          {onClose && (
+            <button
+              onClick={onClose}
+              className="absolute top-4 right-4 z-10 text-gray-500 hover:text-gray-700 bg-white rounded-full p-1 shadow-md"
+            >
+              <X className="w-5 h-5" />
+            </button>
+          )}
           <FormContent />
         </div>
       </div>
