@@ -605,7 +605,7 @@ export default function ReviewPage({ tool, pageTitle, slug, relatedTools, relate
                 <div key={index} className="bg-gray-50 rounded-xl p-6 hover:shadow-lg transition-shadow">
                   <h3 className="text-lg font-semibold text-gray-900 mb-3">
                     <a 
-                      href={`/compare/${comparison.slug}`}
+                      href={`/compare/${comparison.toolAName.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-+|-+$/g, '')}/vs/${comparison.toolBName.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-+|-+$/g, '')}`}
                       className="hover:text-blue-600 transition-colors"
                     >
                       {comparison.title}
@@ -615,7 +615,7 @@ export default function ReviewPage({ tool, pageTitle, slug, relatedTools, relate
                     Compare {comparison.toolAName} and {comparison.toolBName} features, pricing, and use cases.
                   </p>
                   <a 
-                    href={`/compare/${comparison.slug}`}
+                    href={`/compare/${comparison.toolAName.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-+|-+$/g, '')}/vs/${comparison.toolBName.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-+|-+$/g, '')}`}
                     className="text-blue-600 hover:text-blue-800 text-sm font-medium transition-colors"
                   >
                     Read Comparison →
