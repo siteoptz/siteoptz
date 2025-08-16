@@ -53,13 +53,13 @@ const transformedData = sourceData.map(tool => {
     });
   }
 
-  // Generate benchmarks (mock data for now)
+  // Generate benchmarks (mock data for now) - matching tool page expectations
   const benchmarks = {
+    speed: tool.rating ? Math.round(tool.rating * 2) : 8,
+    accuracy: tool.rating ? Math.round(tool.rating * 2) : 8,
+    integration: tool.features?.integrations?.length ? Math.min(10, tool.features.integrations.length) : 5,
     ease_of_use: tool.rating ? Math.round(tool.rating * 2) : 8,
-    features: tool.features?.core?.length ? Math.min(10, Math.round(tool.features.core.length / 2)) : 7,
-    value_for_money: tool.rating ? Math.round(tool.rating * 2) : 7,
-    customer_support: tool.rating ? Math.round(tool.rating * 2) : 6,
-    integration: tool.features?.integrations?.length ? Math.min(10, tool.features.integrations.length) : 5
+    value: tool.rating ? Math.round(tool.rating * 2) : 7
   };
 
   return {
@@ -93,10 +93,30 @@ const transformedData = sourceData.map(tool => {
     cons: tool.cons || [],
     pricing,
     benchmarks,
+    related_tools: [], // Will be populated with related tool IDs
     affiliate_link: tool.affiliate_link || '#',
     search_volume: tool.search_volume || 1000,
     cpc: tool.cpc || 2.5
   };
+});
+
+// Populate related_tools based on similar categories
+transformedData.forEach((tool, index) => {
+  const sameCategory = transformedData.filter(t => 
+    t.overview.category === tool.overview.category && t.id !== tool.id
+  );
+  
+  // Take up to 3 related tools from same category
+  tool.related_tools = sameCategory.slice(0, 3).map(t => t.id);
+  
+  // If less than 3, add some random tools
+  if (tool.related_tools.length < 3) {
+    const otherTools = transformedData.filter(t => 
+      t.id !== tool.id && !tool.related_tools.includes(t.id)
+    );
+    const additionalTools = otherTools.slice(0, 3 - tool.related_tools.length);
+    tool.related_tools.push(...additionalTools.map(t => t.id));
+  }
 });
 
 // Write to public/data directory

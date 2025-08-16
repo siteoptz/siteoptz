@@ -93,12 +93,17 @@
       }
     ],
     "benchmarks": {
+      "speed": 10,
+      "accuracy": 10,
+      "integration": 6,
       "ease_of_use": 10,
-      "features": 4,
-      "value_for_money": 10,
-      "customer_support": 10,
-      "integration": 6
+      "value": 10
     },
+    "related_tools": [
+      "jasper-ai",
+      "claude",
+      "copy-ai"
+    ],
     "affiliate_link": "https://chat.openai.com/",
     "search_volume": 18750,
     "cpc": 3.24
@@ -198,12 +203,17 @@
       }
     ],
     "benchmarks": {
+      "speed": 9,
+      "accuracy": 9,
+      "integration": 7,
       "ease_of_use": 9,
-      "features": 4,
-      "value_for_money": 9,
-      "customer_support": 9,
-      "integration": 7
+      "value": 9
     },
+    "related_tools": [
+      "chatgpt",
+      "claude",
+      "copy-ai"
+    ],
     "affiliate_link": "https://jasper.ai/",
     "search_volume": 3500,
     "cpc": 2.8
@@ -303,12 +313,17 @@
       }
     ],
     "benchmarks": {
+      "speed": 9,
+      "accuracy": 9,
+      "integration": 7,
       "ease_of_use": 9,
-      "features": 4,
-      "value_for_money": 9,
-      "customer_support": 9,
-      "integration": 7
+      "value": 9
     },
+    "related_tools": [
+      "frase",
+      "ahrefs-ai",
+      "semrush-ai"
+    ],
     "affiliate_link": "https://surferseo.com/",
     "search_volume": 2500,
     "cpc": 2.8
@@ -408,12 +423,17 @@
       }
     ],
     "benchmarks": {
+      "speed": 9,
+      "accuracy": 9,
+      "integration": 7,
       "ease_of_use": 9,
-      "features": 4,
-      "value_for_money": 9,
-      "customer_support": 9,
-      "integration": 7
+      "value": 9
     },
+    "related_tools": [
+      "surfer-seo",
+      "ahrefs-ai",
+      "semrush-ai"
+    ],
     "affiliate_link": "https://www.frase.io/",
     "search_volume": 1800,
     "cpc": 2.6
@@ -511,12 +531,17 @@
       }
     ],
     "benchmarks": {
+      "speed": 10,
+      "accuracy": 10,
+      "integration": 5,
       "ease_of_use": 10,
-      "features": 4,
-      "value_for_money": 10,
-      "customer_support": 10,
-      "integration": 5
+      "value": 10
     },
+    "related_tools": [
+      "dall-e",
+      "stable-diffusion",
+      "leonardo-ai"
+    ],
     "affiliate_link": "https://www.midjourney.com/",
     "search_volume": 2250,
     "cpc": 3.36
@@ -614,12 +639,17 @@
       }
     ],
     "benchmarks": {
+      "speed": 9,
+      "accuracy": 9,
+      "integration": 5,
       "ease_of_use": 9,
-      "features": 4,
-      "value_for_money": 9,
-      "customer_support": 9,
-      "integration": 5
+      "value": 9
     },
+    "related_tools": [
+      "midjourney",
+      "stable-diffusion",
+      "leonardo-ai"
+    ],
     "affiliate_link": "https://openai.com/dall-e-2",
     "search_volume": 1800,
     "cpc": 2.8
@@ -719,12 +749,17 @@
       }
     ],
     "benchmarks": {
+      "speed": 9,
+      "accuracy": 9,
+      "integration": 7,
       "ease_of_use": 9,
-      "features": 4,
-      "value_for_money": 9,
-      "customer_support": 9,
-      "integration": 7
+      "value": 9
     },
+    "related_tools": [
+      "buffer-ai",
+      "chatgpt",
+      "jasper-ai"
+    ],
     "affiliate_link": "https://hootsuite.com/",
     "search_volume": 2000,
     "cpc": 2.2
@@ -824,12 +859,17 @@
       }
     ],
     "benchmarks": {
+      "speed": 9,
+      "accuracy": 9,
+      "integration": 7,
       "ease_of_use": 9,
-      "features": 4,
-      "value_for_money": 9,
-      "customer_support": 9,
-      "integration": 7
+      "value": 9
     },
+    "related_tools": [
+      "hootsuite-ai",
+      "chatgpt",
+      "jasper-ai"
+    ],
     "affiliate_link": "https://buffer.com/",
     "search_volume": 1500,
     "cpc": 1.8
@@ -928,12 +968,17 @@
       }
     ],
     "benchmarks": {
+      "speed": 10,
+      "accuracy": 10,
+      "integration": 6,
       "ease_of_use": 10,
-      "features": 4,
-      "value_for_money": 10,
-      "customer_support": 10,
-      "integration": 6
+      "value": 10
     },
+    "related_tools": [
+      "surfer-seo",
+      "frase",
+      "semrush-ai"
+    ],
     "affiliate_link": "https://ahrefs.com/",
     "search_volume": 1875,
     "cpc": 3.3
@@ -1032,12 +1077,17 @@
       }
     ],
     "benchmarks": {
+      "speed": 9,
+      "accuracy": 9,
+      "integration": 6,
       "ease_of_use": 9,
-      "features": 4,
-      "value_for_money": 9,
-      "customer_support": 9,
-      "integration": 6
+      "value": 9
     },
+    "related_tools": [
+      "surfer-seo",
+      "frase",
+      "ahrefs-ai"
+    ],
     "affiliate_link": "https://www.semrush.com/",
     "search_volume": 1600,
     "cpc": 3.1
@@ -1136,12 +1186,17 @@
       }
     ],
     "benchmarks": {
+      "speed": 8,
+      "accuracy": 8,
+      "integration": 6,
       "ease_of_use": 8,
-      "features": 4,
-      "value_for_money": 8,
-      "customer_support": 8,
-      "integration": 6
+      "value": 8
     },
+    "related_tools": [
+      "hubspot-ai",
+      "chatgpt",
+      "jasper-ai"
+    ],
     "affiliate_link": "https://mailchimp.com/",
     "search_volume": 1750,
     "cpc": 2.65
@@ -1240,12 +1295,17 @@
       }
     ],
     "benchmarks": {
+      "speed": 9,
+      "accuracy": 9,
+      "integration": 6,
       "ease_of_use": 9,
-      "features": 4,
-      "value_for_money": 9,
-      "customer_support": 9,
-      "integration": 6
+      "value": 9
     },
+    "related_tools": [
+      "mailchimp-ai",
+      "chatgpt",
+      "jasper-ai"
+    ],
     "affiliate_link": "https://www.hubspot.com/",
     "search_volume": 1600,
     "cpc": 2.9
@@ -1343,12 +1403,17 @@
       }
     ],
     "benchmarks": {
+      "speed": 9,
+      "accuracy": 9,
+      "integration": 5,
       "ease_of_use": 9,
-      "features": 4,
-      "value_for_money": 9,
-      "customer_support": 9,
-      "integration": 5
+      "value": 9
     },
+    "related_tools": [
+      "chatgpt",
+      "jasper-ai",
+      "copy-ai"
+    ],
     "affiliate_link": "https://claude.ai/",
     "search_volume": 4200,
     "cpc": 2.7
@@ -1447,12 +1512,17 @@
       }
     ],
     "benchmarks": {
+      "speed": 9,
+      "accuracy": 9,
+      "integration": 6,
       "ease_of_use": 9,
-      "features": 4,
-      "value_for_money": 9,
-      "customer_support": 9,
-      "integration": 6
+      "value": 9
     },
+    "related_tools": [
+      "chatgpt",
+      "jasper-ai",
+      "claude"
+    ],
     "affiliate_link": "https://www.copy.ai/",
     "search_volume": 1200,
     "cpc": 2.4
@@ -1551,12 +1621,17 @@
       }
     ],
     "benchmarks": {
+      "speed": 8,
+      "accuracy": 8,
+      "integration": 6,
       "ease_of_use": 8,
-      "features": 4,
-      "value_for_money": 8,
-      "customer_support": 8,
-      "integration": 6
+      "value": 8
     },
+    "related_tools": [
+      "chatgpt",
+      "jasper-ai",
+      "claude"
+    ],
     "affiliate_link": "https://writesonic.com/",
     "search_volume": 800,
     "cpc": 2.2
@@ -1654,12 +1729,17 @@
       }
     ],
     "benchmarks": {
+      "speed": 9,
+      "accuracy": 9,
+      "integration": 6,
       "ease_of_use": 9,
-      "features": 4,
-      "value_for_money": 9,
-      "customer_support": 9,
-      "integration": 6
+      "value": 9
     },
+    "related_tools": [
+      "murph-ai",
+      "play-ht",
+      "synthesys"
+    ],
     "affiliate_link": "https://elevenlabs.io/",
     "search_volume": 9500,
     "cpc": 3.2
@@ -1757,12 +1837,17 @@
       }
     ],
     "benchmarks": {
+      "speed": 9,
+      "accuracy": 9,
+      "integration": 6,
       "ease_of_use": 9,
-      "features": 4,
-      "value_for_money": 9,
-      "customer_support": 9,
-      "integration": 6
+      "value": 9
     },
+    "related_tools": [
+      "cursor",
+      "amazon-codewhisperer",
+      "tabnine"
+    ],
     "affiliate_link": "https://github.com/features/copilot",
     "search_volume": 20000,
     "cpc": 4.5
@@ -1861,12 +1946,17 @@
       }
     ],
     "benchmarks": {
+      "speed": 9,
+      "accuracy": 9,
+      "integration": 6,
       "ease_of_use": 9,
-      "features": 4,
-      "value_for_money": 9,
-      "customer_support": 9,
-      "integration": 6
+      "value": 9
     },
+    "related_tools": [
+      "midjourney",
+      "dall-e",
+      "leonardo-ai"
+    ],
     "affiliate_link": "https://stability.ai/",
     "search_volume": 18000,
     "cpc": 2.8
@@ -1964,12 +2054,17 @@
       }
     ],
     "benchmarks": {
+      "speed": 9,
+      "accuracy": 9,
+      "integration": 6,
       "ease_of_use": 9,
-      "features": 4,
-      "value_for_money": 9,
-      "customer_support": 9,
-      "integration": 6
+      "value": 9
     },
+    "related_tools": [
+      "github-copilot",
+      "amazon-codewhisperer",
+      "tabnine"
+    ],
     "affiliate_link": "https://cursor.sh/",
     "search_volume": 8500,
     "cpc": 3.8
@@ -2066,12 +2161,17 @@
       }
     ],
     "benchmarks": {
+      "speed": 9,
+      "accuracy": 9,
+      "integration": 5,
       "ease_of_use": 9,
-      "features": 4,
-      "value_for_money": 9,
-      "customer_support": 9,
-      "integration": 5
+      "value": 9
     },
+    "related_tools": [
+      "consensus",
+      "elicit",
+      "chatpdf"
+    ],
     "affiliate_link": "https://perplexity.ai/",
     "search_volume": 12000,
     "cpc": 2.5
@@ -2169,12 +2269,17 @@
       }
     ],
     "benchmarks": {
+      "speed": 9,
+      "accuracy": 9,
+      "integration": 6,
       "ease_of_use": 9,
-      "features": 4,
-      "value_for_money": 9,
-      "customer_support": 9,
-      "integration": 6
+      "value": 9
     },
+    "related_tools": [
+      "grammarly",
+      "microsoft-copilot",
+      "trello-butler"
+    ],
     "affiliate_link": "https://notion.so/",
     "search_volume": 25000,
     "cpc": 2.3
@@ -2271,12 +2376,17 @@
       }
     ],
     "benchmarks": {
+      "speed": 9,
+      "accuracy": 9,
+      "integration": 5,
       "ease_of_use": 9,
-      "features": 4,
-      "value_for_money": 9,
-      "customer_support": 9,
-      "integration": 5
+      "value": 9
     },
+    "related_tools": [
+      "midjourney",
+      "dall-e",
+      "stable-diffusion"
+    ],
     "affiliate_link": "https://leonardo.ai/",
     "search_volume": 6500,
     "cpc": 3.1
@@ -2373,12 +2483,17 @@
       }
     ],
     "benchmarks": {
+      "speed": 9,
+      "accuracy": 9,
+      "integration": 5,
       "ease_of_use": 9,
-      "features": 4,
-      "value_for_money": 9,
-      "customer_support": 9,
-      "integration": 5
+      "value": 9
     },
+    "related_tools": [
+      "midjourney",
+      "dall-e",
+      "stable-diffusion"
+    ],
     "affiliate_link": "https://runwayml.com/",
     "search_volume": 8500,
     "cpc": 3.5
@@ -2476,12 +2591,17 @@
       }
     ],
     "benchmarks": {
+      "speed": 9,
+      "accuracy": 9,
+      "integration": 6,
       "ease_of_use": 9,
-      "features": 4,
-      "value_for_money": 9,
-      "customer_support": 9,
-      "integration": 6
+      "value": 9
     },
+    "related_tools": [
+      "notion-ai",
+      "microsoft-copilot",
+      "trello-butler"
+    ],
     "affiliate_link": "https://grammarly.com/",
     "search_volume": 30000,
     "cpc": 3.2
@@ -2579,12 +2699,17 @@
       }
     ],
     "benchmarks": {
+      "speed": 9,
+      "accuracy": 9,
+      "integration": 6,
       "ease_of_use": 9,
-      "features": 4,
-      "value_for_money": 9,
-      "customer_support": 9,
-      "integration": 6
+      "value": 9
     },
+    "related_tools": [
+      "power-bi",
+      "looker",
+      "qlik-sense"
+    ],
     "affiliate_link": "https://tableau.com/",
     "search_volume": 15000,
     "cpc": 4.2
@@ -2681,12 +2806,17 @@
       }
     ],
     "benchmarks": {
+      "speed": 9,
+      "accuracy": 9,
+      "integration": 5,
       "ease_of_use": 9,
-      "features": 4,
-      "value_for_money": 9,
-      "customer_support": 9,
-      "integration": 5
+      "value": 9
     },
+    "related_tools": [
+      "midjourney",
+      "dall-e",
+      "stable-diffusion"
+    ],
     "affiliate_link": "https://synthesia.io/",
     "search_volume": 6500,
     "cpc": 3.8
@@ -2784,12 +2914,17 @@
       }
     ],
     "benchmarks": {
+      "speed": 9,
+      "accuracy": 9,
+      "integration": 6,
       "ease_of_use": 9,
-      "features": 4,
-      "value_for_money": 9,
-      "customer_support": 9,
-      "integration": 6
+      "value": 9
     },
+    "related_tools": [
+      "midjourney",
+      "dall-e",
+      "stable-diffusion"
+    ],
     "affiliate_link": "https://canva.com/",
     "search_volume": 25000,
     "cpc": 2.8
@@ -2888,12 +3023,17 @@
       }
     ],
     "benchmarks": {
+      "speed": 9,
+      "accuracy": 9,
+      "integration": 7,
       "ease_of_use": 9,
-      "features": 4,
-      "value_for_money": 9,
-      "customer_support": 9,
-      "integration": 7
+      "value": 9
     },
+    "related_tools": [
+      "github-copilot",
+      "cursor",
+      "tabnine"
+    ],
     "affiliate_link": "https://aws.amazon.com/codewhisperer/",
     "search_volume": 2800,
     "cpc": 4.2
@@ -2992,12 +3132,17 @@
       }
     ],
     "benchmarks": {
+      "speed": 8,
+      "accuracy": 8,
+      "integration": 7,
       "ease_of_use": 8,
-      "features": 4,
-      "value_for_money": 8,
-      "customer_support": 8,
-      "integration": 7
+      "value": 8
     },
+    "related_tools": [
+      "github-copilot",
+      "cursor",
+      "amazon-codewhisperer"
+    ],
     "affiliate_link": "https://tabnine.com/",
     "search_volume": 3200,
     "cpc": 3.6
@@ -3096,12 +3241,17 @@
       }
     ],
     "benchmarks": {
+      "speed": 9,
+      "accuracy": 9,
+      "integration": 7,
       "ease_of_use": 9,
-      "features": 4,
-      "value_for_money": 9,
-      "customer_support": 9,
-      "integration": 7
+      "value": 9
     },
+    "related_tools": [
+      "github-copilot",
+      "cursor",
+      "amazon-codewhisperer"
+    ],
     "affiliate_link": "https://replit.com/",
     "search_volume": 4100,
     "cpc": 2.9
@@ -3200,12 +3350,17 @@
       }
     ],
     "benchmarks": {
+      "speed": 9,
+      "accuracy": 9,
+      "integration": 7,
       "ease_of_use": 9,
-      "features": 4,
-      "value_for_money": 9,
-      "customer_support": 9,
-      "integration": 7
+      "value": 9
     },
+    "related_tools": [
+      "tableau-ai",
+      "looker",
+      "qlik-sense"
+    ],
     "affiliate_link": "https://powerbi.microsoft.com/",
     "search_volume": 18500,
     "cpc": 4.5
@@ -3304,12 +3459,17 @@
       }
     ],
     "benchmarks": {
+      "speed": 9,
+      "accuracy": 9,
+      "integration": 7,
       "ease_of_use": 9,
-      "features": 4,
-      "value_for_money": 9,
-      "customer_support": 9,
-      "integration": 7
+      "value": 9
     },
+    "related_tools": [
+      "tableau-ai",
+      "power-bi",
+      "qlik-sense"
+    ],
     "affiliate_link": "https://looker.com/",
     "search_volume": 8200,
     "cpc": 6.8
@@ -3408,12 +3568,17 @@
       }
     ],
     "benchmarks": {
+      "speed": 8,
+      "accuracy": 8,
+      "integration": 7,
       "ease_of_use": 8,
-      "features": 4,
-      "value_for_money": 8,
-      "customer_support": 8,
-      "integration": 7
+      "value": 8
     },
+    "related_tools": [
+      "tableau-ai",
+      "power-bi",
+      "looker"
+    ],
     "affiliate_link": "https://www.qlik.com/",
     "search_volume": 5400,
     "cpc": 5.2
@@ -3512,12 +3677,17 @@
       }
     ],
     "benchmarks": {
+      "speed": 9,
+      "accuracy": 9,
+      "integration": 7,
       "ease_of_use": 9,
-      "features": 4,
-      "value_for_money": 9,
-      "customer_support": 9,
-      "integration": 7
+      "value": 9
     },
+    "related_tools": [
+      "tableau-ai",
+      "power-bi",
+      "looker"
+    ],
     "affiliate_link": "https://openai.com/enterprise",
     "search_volume": 3100,
     "cpc": 8.9
@@ -3616,12 +3786,17 @@
       }
     ],
     "benchmarks": {
+      "speed": 9,
+      "accuracy": 9,
+      "integration": 7,
       "ease_of_use": 9,
-      "features": 4,
-      "value_for_money": 9,
-      "customer_support": 9,
-      "integration": 7
+      "value": 9
     },
+    "related_tools": [
+      "notion-ai",
+      "grammarly",
+      "trello-butler"
+    ],
     "affiliate_link": "https://microsoft.com/copilot",
     "search_volume": 12000,
     "cpc": 5.8
@@ -3720,12 +3895,17 @@
       }
     ],
     "benchmarks": {
+      "speed": 9,
+      "accuracy": 9,
+      "integration": 7,
       "ease_of_use": 9,
-      "features": 4,
-      "value_for_money": 9,
-      "customer_support": 9,
-      "integration": 7
+      "value": 9
     },
+    "related_tools": [
+      "notion-ai",
+      "grammarly",
+      "microsoft-copilot"
+    ],
     "affiliate_link": "https://trello.com/power-ups/butler",
     "search_volume": 2200,
     "cpc": 1.8
@@ -3824,12 +4004,17 @@
       }
     ],
     "benchmarks": {
+      "speed": 8,
+      "accuracy": 8,
+      "integration": 7,
       "ease_of_use": 8,
-      "features": 4,
-      "value_for_money": 8,
-      "customer_support": 8,
-      "integration": 7
+      "value": 8
     },
+    "related_tools": [
+      "notion-ai",
+      "grammarly",
+      "microsoft-copilot"
+    ],
     "affiliate_link": "https://zapier.com/",
     "search_volume": 8500,
     "cpc": 4.2
@@ -3928,12 +4113,17 @@
       }
     ],
     "benchmarks": {
+      "speed": 9,
+      "accuracy": 9,
+      "integration": 7,
       "ease_of_use": 9,
-      "features": 4,
-      "value_for_money": 9,
-      "customer_support": 9,
-      "integration": 7
+      "value": 9
     },
+    "related_tools": [
+      "elevenlabs",
+      "play-ht",
+      "synthesys"
+    ],
     "affiliate_link": "https://murph.ai/",
     "search_volume": 3800,
     "cpc": 4.1
@@ -4032,12 +4222,17 @@
       }
     ],
     "benchmarks": {
+      "speed": 9,
+      "accuracy": 9,
+      "integration": 7,
       "ease_of_use": 9,
-      "features": 4,
-      "value_for_money": 9,
-      "customer_support": 9,
-      "integration": 7
+      "value": 9
     },
+    "related_tools": [
+      "elevenlabs",
+      "murph-ai",
+      "synthesys"
+    ],
     "affiliate_link": "https://play.ht/",
     "search_volume": 4200,
     "cpc": 3.2
@@ -4136,12 +4331,17 @@
       }
     ],
     "benchmarks": {
+      "speed": 9,
+      "accuracy": 9,
+      "integration": 7,
       "ease_of_use": 9,
-      "features": 4,
-      "value_for_money": 9,
-      "customer_support": 9,
-      "integration": 7
+      "value": 9
     },
+    "related_tools": [
+      "elevenlabs",
+      "murph-ai",
+      "play-ht"
+    ],
     "affiliate_link": "https://synthesys.io/",
     "search_volume": 2600,
     "cpc": 5.4
@@ -4240,12 +4440,17 @@
       }
     ],
     "benchmarks": {
+      "speed": 8,
+      "accuracy": 8,
+      "integration": 7,
       "ease_of_use": 8,
-      "features": 4,
-      "value_for_money": 8,
-      "customer_support": 8,
-      "integration": 7
+      "value": 8
     },
+    "related_tools": [
+      "elevenlabs",
+      "murph-ai",
+      "play-ht"
+    ],
     "affiliate_link": "https://wellsaidlabs.com/",
     "search_volume": 1800,
     "cpc": 6.2
@@ -4344,12 +4549,17 @@
       }
     ],
     "benchmarks": {
+      "speed": 9,
+      "accuracy": 9,
+      "integration": 7,
       "ease_of_use": 9,
-      "features": 4,
-      "value_for_money": 9,
-      "customer_support": 9,
-      "integration": 7
+      "value": 9
     },
+    "related_tools": [
+      "perplexity-ai",
+      "elicit",
+      "chatpdf"
+    ],
     "affiliate_link": "https://consensus.app/",
     "search_volume": 3400,
     "cpc": 4.8
@@ -4448,12 +4658,17 @@
       }
     ],
     "benchmarks": {
+      "speed": 9,
+      "accuracy": 9,
+      "integration": 7,
       "ease_of_use": 9,
-      "features": 4,
-      "value_for_money": 9,
-      "customer_support": 9,
-      "integration": 7
+      "value": 9
     },
+    "related_tools": [
+      "perplexity-ai",
+      "consensus",
+      "chatpdf"
+    ],
     "affiliate_link": "https://elicit.org/",
     "search_volume": 2800,
     "cpc": 3.6
@@ -4552,12 +4767,17 @@
       }
     ],
     "benchmarks": {
+      "speed": 9,
+      "accuracy": 9,
+      "integration": 7,
       "ease_of_use": 9,
-      "features": 4,
-      "value_for_money": 9,
-      "customer_support": 9,
-      "integration": 7
+      "value": 9
     },
+    "related_tools": [
+      "perplexity-ai",
+      "consensus",
+      "elicit"
+    ],
     "affiliate_link": "https://chatpdf.com/",
     "search_volume": 5600,
     "cpc": 2.4
@@ -4656,12 +4876,17 @@
       }
     ],
     "benchmarks": {
+      "speed": 8,
+      "accuracy": 8,
+      "integration": 7,
       "ease_of_use": 8,
-      "features": 4,
-      "value_for_money": 8,
-      "customer_support": 8,
-      "integration": 7
+      "value": 8
     },
+    "related_tools": [
+      "perplexity-ai",
+      "consensus",
+      "elicit"
+    ],
     "affiliate_link": "https://scite.ai/",
     "search_volume": 1900,
     "cpc": 4.2
@@ -4760,12 +4985,17 @@
       }
     ],
     "benchmarks": {
+      "speed": 9,
+      "accuracy": 9,
+      "integration": 7,
       "ease_of_use": 9,
-      "features": 4,
-      "value_for_money": 9,
-      "customer_support": 9,
-      "integration": 7
+      "value": 9
     },
+    "related_tools": [
+      "lumen5",
+      "kapwing",
+      "chatgpt"
+    ],
     "affiliate_link": "https://pictory.ai/",
     "search_volume": 4800,
     "cpc": 3.8
@@ -4864,12 +5094,17 @@
       }
     ],
     "benchmarks": {
+      "speed": 9,
+      "accuracy": 9,
+      "integration": 7,
       "ease_of_use": 9,
-      "features": 4,
-      "value_for_money": 9,
-      "customer_support": 9,
-      "integration": 7
+      "value": 9
     },
+    "related_tools": [
+      "pictory",
+      "kapwing",
+      "chatgpt"
+    ],
     "affiliate_link": "https://lumen5.com/",
     "search_volume": 6200,
     "cpc": 3.4
@@ -4968,12 +5203,17 @@
       }
     ],
     "benchmarks": {
+      "speed": 8,
+      "accuracy": 8,
+      "integration": 7,
       "ease_of_use": 8,
-      "features": 4,
-      "value_for_money": 8,
-      "customer_support": 8,
-      "integration": 7
+      "value": 8
     },
+    "related_tools": [
+      "pictory",
+      "lumen5",
+      "chatgpt"
+    ],
     "affiliate_link": "https://kapwing.com/",
     "search_volume": 8900,
     "cpc": 2.6
