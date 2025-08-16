@@ -301,7 +301,7 @@ export default function CategoryPage({ category, categorySlug, tools, totalCount
         <section className="py-16 bg-gray-100">
           <div className="max-w-4xl mx-auto text-center px-4">
             <h2 className="text-3xl font-bold text-gray-900 mb-4">
-              Can't Find the Right {category} Tool?
+              Can&apos;t Find the Right {category} Tool?
             </h2>
             <p className="text-lg text-gray-600 mb-8">
               Our AI experts can help you choose the perfect {category.toLowerCase()} solution for your specific needs.
