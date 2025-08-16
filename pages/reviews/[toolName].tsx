@@ -747,7 +747,7 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
     const otherTool = tools[i];
     if (otherTool.tool_name === tool.tool_name) continue;
     
-    const comparisonSlug = `${tool.tool_name.toLowerCase().replace(/\s+/g, '-')}-vs-${otherTool.tool_name.toLowerCase().replace(/\s+/g, '-')}`;
+    const comparisonSlug = `${tool.tool_name.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-+|-+$/g, '')}-vs-${otherTool.tool_name.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-+|-+$/g, '')}`;
     
     relatedComparisons.push({
       title: `${tool.tool_name} vs ${otherTool.tool_name}`,
