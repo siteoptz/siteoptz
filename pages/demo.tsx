@@ -21,21 +21,21 @@ interface DemoPageProps {
 
 export default function DemoPage({ tools, faqs }: DemoPageProps) {
   const [calculatorMode, setCalculatorMode] = useState<'advanced' | 'simple'>('advanced');
-  const [selectedTool, setSelectedTool] = useState(tools[0]);
+  const [selectedTool, setSelectedTool] = useState(tools?.[0] || null);
   const [sortBy, setSortBy] = useState<'name' | 'price' | 'rating'>('rating');
   const [filterCategory, setFilterCategory] = useState<string>('');
 
   // Sort and filter tools
   const processedTools = sortTools(
-    filterCategory ? filterTools(tools, { category: filterCategory }) : tools,
+    filterCategory ? filterTools(tools || [], { category: filterCategory }) : (tools || []),
     sortBy
   );
 
   // Convert pricing for simple calculator
-  const simplePricing = convertToSimplePricingFormat(selectedTool.pricing);
+  const simplePricing = selectedTool ? convertToSimplePricingFormat(selectedTool.pricing) : [];
 
   // Get all FAQs for demo
-  const allFaqs: any[] = Object.values(faqs).flat().slice(0, 10);
+  const allFaqs: any[] = faqs ? Object.values(faqs).flat().slice(0, 10) : [];
 
   const handleEmailSubmit = (email: string, data: any) => {
     console.log('Email captured:', email);
@@ -82,26 +82,26 @@ export default function DemoPage({ tools, faqs }: DemoPageProps) {
           
           <div className="grid md:grid-cols-4 gap-4">
             <div className="bg-white p-6 rounded-lg shadow-sm">
-              <div className="text-3xl font-bold text-blue-600">{tools.length}</div>
+              <div className="text-3xl font-bold text-blue-600">{tools?.length || 0}</div>
               <div className="text-gray-600">Total Tools</div>
             </div>
             <div className="bg-white p-6 rounded-lg shadow-sm">
               <div className="text-3xl font-bold text-green-600">
-                {tools.filter(t => t.pricing.some((p: any) => p.price_per_month === 0)).length}
+                {tools?.filter(t => t.pricing?.some((p: any) => p.price_per_month === 0)).length || 0}
               </div>
               <div className="text-gray-600">Free Options</div>
             </div>
             <div className="bg-white p-6 rounded-lg shadow-sm">
               <div className="text-3xl font-bold text-purple-600">
-                {Math.round(
+                {tools?.length ? Math.round(
                   tools.reduce((acc, tool) => acc + calculateOverallRating(tool.benchmarks), 0) / tools.length * 10
-                ) / 10}
+                ) / 10 : 0}
               </div>
               <div className="text-gray-600">Avg Rating</div>
             </div>
             <div className="bg-white p-6 rounded-lg shadow-sm">
               <div className="text-3xl font-bold text-orange-600">
-                {Object.keys(faqs).length * 5}
+                {faqs ? Object.keys(faqs).length * 5 : 0}
               </div>
               <div className="text-gray-600">Total FAQs</div>
             </div>
@@ -206,14 +206,14 @@ export default function DemoPage({ tools, faqs }: DemoPageProps) {
               {/* Tool Selector for Simple Calculator */}
               <div className="mb-4">
                 <select
-                  value={selectedTool.id}
+                  value={selectedTool?.id || ''}
                   onChange={(e) => {
-                    const tool = tools.find(t => t.id === e.target.value);
+                    const tool = tools?.find(t => t.id === e.target.value);
                     if (tool) setSelectedTool(tool);
                   }}
                   className="w-full px-4 py-2 border rounded-lg"
                 >
-                  {tools.map(tool => (
+                  {tools?.map(tool => (
                     <option key={tool.id} value={tool.id}>
                       {tool.name} ({getPriceRange(tool.pricing)})
                     </option>
@@ -223,7 +223,7 @@ export default function DemoPage({ tools, faqs }: DemoPageProps) {
               
               <PricingCalculatorSimple
                 plans={simplePricing}
-                toolName={selectedTool.name}
+                toolName={selectedTool?.name || 'Tool'}
                 onSubmit={handleEmailSubmit}
               />
             </div>
@@ -251,7 +251,7 @@ export default function DemoPage({ tools, faqs }: DemoPageProps) {
         <section className="space-y-6">
           <h2 className="text-3xl font-bold">Tools Grid</h2>
           <div className="grid md:grid-cols-3 gap-6">
-            {processedTools.slice(0, 6).map(tool => (
+            {processedTools?.slice(0, 6).map(tool => (
               <div key={tool.id} className="bg-white rounded-lg shadow-sm p-6 hover:shadow-lg transition-shadow">
                 <div className="flex items-start justify-between mb-4">
                   {tool.logo && (
@@ -345,8 +345,20 @@ export const getStaticProps: GetStaticProps = async () => {
   const aiToolsPath = path.join(process.cwd(), 'public/data/aiToolsData.json');
   const faqPath = path.join(process.cwd(), 'public/data/faqData.json');
   
-  const tools = JSON.parse(fs.readFileSync(aiToolsPath, 'utf8'));
-  const faqs = JSON.parse(fs.readFileSync(faqPath, 'utf8'));
+  let tools = [];
+  let faqs = {};
+  
+  try {
+    tools = JSON.parse(fs.readFileSync(aiToolsPath, 'utf8'));
+  } catch (error) {
+    console.warn('Failed to load aiToolsData.json:', error);
+  }
+  
+  try {
+    faqs = JSON.parse(fs.readFileSync(faqPath, 'utf8'));
+  } catch (error) {
+    console.warn('Failed to load faqData.json:', error);
+  }
   
   return {
     props: {
