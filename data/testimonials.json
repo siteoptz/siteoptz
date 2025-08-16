@@ -1,0 +1,37 @@
+[
+  {
+    "company": "Precision Pain Clinics",
+    "name": "Dr. Sarah Lee",
+    "role": "Founder & CEO",
+    "testimonial": "SiteOptz.ai helped us grow new patient leads by 63% in 3 months.",
+    "logo": "/images/clients/precision.png"
+  },
+  {
+    "company": "AeroTech Dynamics",
+    "name": "Michael Chen",
+    "role": "VP of Engineering",
+    "testimonial": "With SiteOptz.ai's automation tools, our engineering proposal pipeline efficiency improved by 47%.",
+    "logo": "/images/clients/aerotech.png"
+  },
+  {
+    "company": "Stratos Aerospace",
+    "name": "Elena Rodríguez",
+    "role": "Head of R&D",
+    "testimonial": "The AI-powered comparisons accelerated vendor decisions. We cut research time by half.",
+    "logo": "/images/clients/stratos.png"
+  },
+  {
+    "company": "FinEdge Capital",
+    "name": "David Kapoor",
+    "role": "Managing Partner",
+    "testimonial": "Our deal sourcing doubled in 6 months thanks to SiteOptz.ai's AI-driven insights.",
+    "logo": "/images/clients/finedge.png"
+  },
+  {
+    "company": "CloudFlow SaaS",
+    "name": "Rachel Adams",
+    "role": "Chief Product Officer",
+    "testimonial": "The integration templates saved our dev team months of work. Revenue jumped 39% in Q1.",
+    "logo": "/images/clients/cloudflow.png"
+  }
+]

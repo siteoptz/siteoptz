@@ -97,6 +97,26 @@ export const pageConfigs = {
     ogType: 'website'
   },
 
+  // Data Room page
+  dataRoom: {
+    title: 'Data Room - Verified Results & Growth | SiteOptz.ai',
+    description: 'Explore real growth, revenue charts, and testimonials from companies scaling with SiteOptz.ai in healthcare, finance, engineering, and SaaS.',
+    keywords: [
+      'SiteOptz.ai results',
+      'customer testimonials',
+      'growth metrics',
+      'revenue data',
+      'case studies',
+      'ROI calculator',
+      'business growth',
+      'AI platform results',
+      'verified metrics',
+      'client success stories'
+    ],
+    ogType: 'website',
+    ogImage: '/images/data-room-og.png'
+  },
+
   // Contact page
   contact: {
     title: 'Contact SiteOptz - AI Tools Review Questions & Partnership Inquiries',
