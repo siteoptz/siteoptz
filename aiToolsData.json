@@ -64,7 +64,8 @@
     "affiliate_link": "https://chat.openai.com/",
     "logo_url": "/images/tools/chatgpt-logo.svg",
     "search_volume": 18750,
-    "cpc": 3.24
+    "cpc": 3.24,
+    "description": "ChatGPT is OpenAI's advanced conversational AI that offers natural language understanding, code generation, creative writing, and problem-solving capabilities powered by GPT-4."
   },
   {
     "tool_name": "Jasper AI",
@@ -107,11 +108,11 @@
     "free_trial": true,
     "pros": [
       "Excellent for content marketing",
-        "Advanced brand voice features",
-        "SEO optimization tools",
-        "Professional templates",
-        "Team collaboration features",
-        "Strong customer support"
+      "Advanced brand voice features",
+      "SEO optimization tools",
+      "Professional templates",
+      "Team collaboration features",
+      "Strong customer support"
     ],
     "cons": [
       "Higher pricing than ChatGPT",
@@ -132,7 +133,8 @@
     "affiliate_link": "https://jasper.ai/",
     "logo_url": "/images/tools/jasper-ai-logo.svg",
     "search_volume": 3500,
-    "cpc": 2.80
+    "cpc": 2.8,
+    "description": "Jasper AI is an enterprise-grade AI writing assistant that helps create marketing copy, blog posts, social media content, and business documents with brand voice customization."
   },
   {
     "tool_name": "Surfer SEO",
@@ -200,7 +202,8 @@
     "affiliate_link": "https://surferseo.com/",
     "logo_url": "/images/tools/surfer-seo-logo.svg",
     "search_volume": 2500,
-    "cpc": 2.80
+    "cpc": 2.8,
+    "description": "Surfer SEO is an AI-powered content optimization platform that analyzes top-ranking pages to provide data-driven recommendations for improving search engine rankings."
   },
   {
     "tool_name": "Frase",
@@ -268,7 +271,8 @@
     "affiliate_link": "https://www.frase.io/",
     "logo_url": "/images/tools/frase-logo.svg",
     "search_volume": 1800,
-    "cpc": 2.60
+    "cpc": 2.6,
+    "description": "Frase is an AI content optimization tool that helps create SEO-optimized content by analyzing competitors, generating briefs, and providing real-time optimization suggestions."
   },
   {
     "tool_name": "Midjourney",
@@ -334,7 +338,8 @@
     "affiliate_link": "https://www.midjourney.com/",
     "logo_url": "/images/tools/midjourney-logo.svg",
     "search_volume": 2250,
-    "cpc": 3.36
+    "cpc": 3.36,
+    "description": "Midjourney is a leading AI image generation platform that creates stunning artwork, illustrations, and designs from text prompts with exceptional artistic quality."
   },
   {
     "tool_name": "DALL-E",
@@ -400,7 +405,8 @@
     "affiliate_link": "https://openai.com/dall-e-2",
     "logo_url": "/images/tools/dall-e-logo.svg",
     "search_volume": 1800,
-    "cpc": 2.80
+    "cpc": 2.8,
+    "description": "DALL-E is OpenAI's AI image generation system that creates realistic images and art from natural language descriptions with precise control over style and composition."
   },
   {
     "tool_name": "Hootsuite AI",
@@ -468,7 +474,8 @@
     "affiliate_link": "https://hootsuite.com/",
     "logo_url": "/images/tools/placeholder-logo.svg",
     "search_volume": 2000,
-    "cpc": 2.20
+    "cpc": 2.2,
+    "description": "Hootsuite AI enhances social media management with AI-powered content creation, optimal posting time recommendations, and automated social listening capabilities."
   },
   {
     "tool_name": "Buffer AI",
@@ -536,7 +543,8 @@
     "affiliate_link": "https://buffer.com/",
     "logo_url": "/images/tools/placeholder-logo.svg",
     "search_volume": 1500,
-    "cpc": 1.80
+    "cpc": 1.8,
+    "description": "Buffer AI is a social media management platform with AI-driven content suggestions, engagement analytics, and automated scheduling for optimal reach."
   },
   {
     "tool_name": "Ahrefs AI",
@@ -603,7 +611,8 @@
     "affiliate_link": "https://ahrefs.com/",
     "logo_url": "/images/tools/placeholder-logo.svg",
     "search_volume": 1875,
-    "cpc": 3.30
+    "cpc": 3.3,
+    "description": "Ahrefs AI combines traditional SEO tools with AI-powered content analysis, keyword research automation, and competitive intelligence for comprehensive digital marketing."
   },
   {
     "tool_name": "Semrush AI",
@@ -670,7 +679,8 @@
     "affiliate_link": "https://www.semrush.com/",
     "logo_url": "/images/tools/placeholder-logo.svg",
     "search_volume": 1600,
-    "cpc": 3.10
+    "cpc": 3.1,
+    "description": "Semrush AI offers AI-enhanced SEO, content marketing, and competitive research tools with automated insights and recommendations for digital marketing success."
   },
   {
     "tool_name": "Mailchimp AI",
@@ -737,7 +747,8 @@
     "affiliate_link": "https://mailchimp.com/",
     "logo_url": "/images/tools/placeholder-logo.svg",
     "search_volume": 1750,
-    "cpc": 2.65
+    "cpc": 2.65,
+    "description": "Mailchimp AI provides intelligent email marketing automation with AI-driven content creation, audience segmentation, and predictive analytics for campaign optimization."
   },
   {
     "tool_name": "HubSpot AI",
@@ -804,7 +815,8 @@
     "affiliate_link": "https://www.hubspot.com/",
     "logo_url": "/images/tools/placeholder-logo.svg",
     "search_volume": 1600,
-    "cpc": 2.90
+    "cpc": 2.9,
+    "description": "HubSpot AI integrates artificial intelligence across CRM, marketing, sales, and service hubs to automate workflows and provide predictive insights."
   },
   {
     "tool_name": "Claude",
@@ -870,7 +882,8 @@
     "affiliate_link": "https://claude.ai/",
     "logo_url": "/images/tools/claude-logo.svg",
     "search_volume": 4200,
-    "cpc": 2.70
+    "cpc": 2.7,
+    "description": "Claude is Anthropic's advanced AI assistant known for thoughtful, nuanced responses, strong analytical capabilities, and ethical AI principles."
   },
   {
     "tool_name": "Copy.ai",
@@ -937,7 +950,8 @@
     "affiliate_link": "https://www.copy.ai/",
     "logo_url": "/images/tools/copy-ai-logo.svg",
     "search_volume": 1200,
-    "cpc": 2.40
+    "cpc": 2.4,
+    "description": "Copy.ai is an AI-powered copywriting tool that generates marketing copy, blog posts, social media content, and sales materials in seconds."
   },
   {
     "tool_name": "Writesonic",
@@ -1004,7 +1018,8 @@
     "affiliate_link": "https://writesonic.com/",
     "logo_url": "/images/tools/writesonic-logo.svg",
     "search_volume": 800,
-    "cpc": 2.20
+    "cpc": 2.2,
+    "description": "Writesonic is an AI writing assistant that creates SEO-optimized content, landing pages, product descriptions, and marketing copy with built-in templates."
   },
   {
     "tool_name": "ElevenLabs",
@@ -1070,7 +1085,7 @@
     "affiliate_link": "https://elevenlabs.io/",
     "logo_url": "/images/tools/elevenlabs-logo.svg",
     "search_volume": 9500,
-    "cpc": 3.20,
+    "cpc": 3.2,
     "description": "ElevenLabs is a cutting-edge AI voice generation platform that creates incredibly realistic synthetic voices. Using advanced machine learning, it can clone voices from just a few minutes of audio and generate speech in multiple languages with natural intonation and emotion."
   },
   {
@@ -1137,7 +1152,7 @@
     "affiliate_link": "https://github.com/features/copilot",
     "logo_url": "/images/tools/github-copilot-logo.svg",
     "search_volume": 20000,
-    "cpc": 4.50,
+    "cpc": 4.5,
     "description": "GitHub Copilot is an AI-powered code completion tool that helps developers write code faster and more efficiently. Trained on billions of lines of public code, it provides intelligent suggestions, generates entire functions, and assists with debugging and documentation."
   },
   {
@@ -1205,7 +1220,7 @@
     "affiliate_link": "https://stability.ai/",
     "logo_url": "/images/tools/stable-diffusion-logo.svg",
     "search_volume": 18000,
-    "cpc": 2.80,
+    "cpc": 2.8,
     "description": "Stable Diffusion is a revolutionary open-source AI image generation model that creates high-quality images from text descriptions. It can be run locally, customized extensively, and used commercially without restrictions, making it popular among artists, developers, and researchers."
   },
   {
@@ -1272,7 +1287,7 @@
     "affiliate_link": "https://cursor.sh/",
     "logo_url": "/images/tools/cursor-logo.svg",
     "search_volume": 8500,
-    "cpc": 3.80,
+    "cpc": 3.8,
     "description": "Cursor is an AI-first code editor that combines the familiar feel of VS Code with powerful AI capabilities. It features a chat interface for code assistance, advanced generation capabilities, and seamless integration of AI throughout the development workflow."
   },
   {
@@ -1338,7 +1353,7 @@
     "affiliate_link": "https://perplexity.ai/",
     "logo_url": "/images/tools/perplexity-ai-logo.svg",
     "search_volume": 12000,
-    "cpc": 2.50,
+    "cpc": 2.5,
     "description": "Perplexity AI is an AI-powered search engine that provides accurate, cited answers to your questions. It combines the power of large language models with real-time web search to deliver comprehensive, fact-checked responses with proper source attribution."
   },
   {
@@ -1405,7 +1420,7 @@
     "affiliate_link": "https://notion.so/",
     "logo_url": "/images/tools/notion-ai-logo.svg",
     "search_volume": 25000,
-    "cpc": 2.30,
+    "cpc": 2.3,
     "description": "Notion AI is an intelligent writing assistant built into the popular Notion workspace platform. It helps users write, edit, summarize, and organize content more efficiently while maintaining the collaborative and organizational features that make Notion powerful."
   },
   {
@@ -1471,7 +1486,7 @@
     "affiliate_link": "https://leonardo.ai/",
     "logo_url": "/images/tools/leonardo-ai-logo.svg",
     "search_volume": 6500,
-    "cpc": 3.10,
+    "cpc": 3.1,
     "description": "Leonardo.ai is a powerful AI image generation platform that offers advanced control and customization options for creating high-quality digital art. It features custom model training, commercial licensing, and professional-grade tools for artists and designers."
   },
   {
@@ -1537,7 +1552,7 @@
     "affiliate_link": "https://runwayml.com/",
     "logo_url": "/images/tools/runway-ml-logo.svg",
     "search_volume": 8500,
-    "cpc": 3.50,
+    "cpc": 3.5,
     "description": "Runway ML is an AI-powered creative platform that specializes in video generation and editing. It offers cutting-edge tools for creating videos from text, advanced editing capabilities, and collaborative features for creative professionals and content creators."
   },
   {
@@ -1604,7 +1619,7 @@
     "affiliate_link": "https://grammarly.com/",
     "logo_url": "/images/tools/grammarly-logo.svg",
     "search_volume": 30000,
-    "cpc": 3.20,
+    "cpc": 3.2,
     "description": "Grammarly is an AI-powered writing assistant that helps improve writing quality through grammar checking, style suggestions, and tone analysis. It integrates seamlessly across platforms and provides comprehensive writing support for individuals and teams."
   },
   {
@@ -1671,7 +1686,7 @@
     "affiliate_link": "https://tableau.com/",
     "logo_url": "/images/tools/tableau-ai-logo.svg",
     "search_volume": 15000,
-    "cpc": 4.20,
+    "cpc": 4.2,
     "description": "Tableau AI is a leading data visualization and business intelligence platform that helps organizations analyze and understand their data through interactive dashboards and AI-powered insights. It enables users to create compelling visualizations and discover data-driven insights."
   },
   {
@@ -1737,7 +1752,7 @@
     "affiliate_link": "https://synthesia.io/",
     "logo_url": "/images/tools/synthesia-logo.svg",
     "search_volume": 6500,
-    "cpc": 3.80,
+    "cpc": 3.8,
     "description": "Synthesia is an AI video generation platform that creates professional videos with AI avatars. It allows users to generate videos from text in multiple languages, making it ideal for training, marketing, and educational content creation without traditional video production."
   },
   {
@@ -1804,7 +1819,7 @@
     "affiliate_link": "https://canva.com/",
     "logo_url": "/images/tools/canva-ai-logo.svg",
     "search_volume": 25000,
-    "cpc": 2.80,
+    "cpc": 2.8,
     "description": "Canva AI is an all-in-one design platform that combines powerful AI features with an intuitive drag-and-drop interface. It enables users to create professional-quality designs, from social media graphics to presentations, with AI-powered assistance and extensive template libraries."
   },
   {
@@ -1872,7 +1887,7 @@
     "affiliate_link": "https://aws.amazon.com/codewhisperer/",
     "logo_url": "/images/tools/amazon-codewhisperer-logo.svg",
     "search_volume": 2800,
-    "cpc": 4.20,
+    "cpc": 4.2,
     "description": "Amazon CodeWhisperer is a free AI-powered code generator that provides real-time code suggestions and security scanning. Built by AWS, it focuses on security-first development with vulnerability detection and offers seamless integration with AWS services."
   },
   {
@@ -1940,7 +1955,7 @@
     "affiliate_link": "https://tabnine.com/",
     "logo_url": "/images/tools/tabnine-logo.svg",
     "search_volume": 3200,
-    "cpc": 3.60,
+    "cpc": 3.6,
     "description": "Tabnine is an AI code completion tool that prioritizes privacy and team learning. It offers local processing, custom model training, and extensive IDE support, making it ideal for teams that need privacy-focused AI assistance."
   },
   {
@@ -2008,7 +2023,7 @@
     "affiliate_link": "https://replit.com/",
     "logo_url": "/images/tools/replit-ghost-logo.svg",
     "search_volume": 4100,
-    "cpc": 2.90,
+    "cpc": 2.9,
     "description": "Replit Ghost is an AI-powered online IDE that enables collaborative coding in the browser. With instant deployment, real-time collaboration, and cloud-based development, it's perfect for teams and educational environments."
   },
   {
@@ -2076,7 +2091,7 @@
     "affiliate_link": "https://powerbi.microsoft.com/",
     "logo_url": "/images/tools/power-bi-logo.svg",
     "search_volume": 18500,
-    "cpc": 4.50,
+    "cpc": 4.5,
     "description": "Microsoft Power BI is a comprehensive business intelligence platform that transforms data into actionable insights. With AI-powered analytics and seamless Microsoft 365 integration, it's ideal for organizations already using Microsoft tools."
   },
   {
@@ -2144,7 +2159,7 @@
     "affiliate_link": "https://looker.com/",
     "logo_url": "/images/tools/looker-logo.svg",
     "search_volume": 8200,
-    "cpc": 6.80,
+    "cpc": 6.8,
     "description": "Looker is Google's enterprise data platform that provides AI-powered analytics and business intelligence. With advanced data modeling and Google Cloud integration, it's designed for organizations requiring sophisticated data analysis capabilities."
   },
   {
@@ -2212,7 +2227,7 @@
     "affiliate_link": "https://www.qlik.com/",
     "logo_url": "/images/tools/qlik-sense-logo.svg",
     "search_volume": 5400,
-    "cpc": 5.20,
+    "cpc": 5.2,
     "description": "Qlik Sense is an AI-powered analytics platform featuring a unique associative engine that enables users to explore data freely. With strong self-service BI capabilities and augmented analytics, it helps organizations discover hidden insights."
   },
   {
@@ -2280,7 +2295,7 @@
     "affiliate_link": "https://openai.com/enterprise",
     "logo_url": "/images/tools/chatgpt-enterprise-logo.svg",
     "search_volume": 3100,
-    "cpc": 8.90,
+    "cpc": 8.9,
     "description": "ChatGPT Enterprise is OpenAI's enterprise-grade AI solution offering advanced data analysis, custom model training, and enterprise security. Designed for large organizations requiring secure, scalable AI capabilities."
   },
   {
@@ -2348,7 +2363,7 @@
     "affiliate_link": "https://microsoft.com/copilot",
     "logo_url": "/images/tools/microsoft-copilot-logo.svg",
     "search_volume": 12000,
-    "cpc": 5.80,
+    "cpc": 5.8,
     "description": "Microsoft Copilot is an AI assistant integrated across Microsoft 365 applications, designed to enhance productivity through intelligent automation, content generation, and data analysis within familiar Office tools."
   },
   {
@@ -2416,7 +2431,7 @@
     "affiliate_link": "https://trello.com/power-ups/butler",
     "logo_url": "/images/tools/trello-butler-logo.svg",
     "search_volume": 2200,
-    "cpc": 1.80,
+    "cpc": 1.8,
     "description": "Trello Butler is an AI-powered automation tool integrated into Trello that streamlines project management through intelligent workflow automation, rule-based actions, and smart suggestions for better board organization."
   },
   {
@@ -2484,7 +2499,7 @@
     "affiliate_link": "https://zapier.com/",
     "logo_url": "/images/tools/zapier-ai-logo.svg",
     "search_volume": 8500,
-    "cpc": 4.20,
+    "cpc": 4.2,
     "description": "Zapier AI is a comprehensive automation platform that connects thousands of apps with AI-powered workflows, enabling businesses to automate repetitive tasks and streamline operations without coding."
   },
   {
@@ -2552,7 +2567,7 @@
     "affiliate_link": "https://murph.ai/",
     "logo_url": "/images/tools/murph-ai-logo.svg",
     "search_volume": 3800,
-    "cpc": 4.10,
+    "cpc": 4.1,
     "description": "Murph AI is a professional AI voice generation platform that creates studio-quality voiceovers with multilingual support and voice cloning capabilities, ideal for commercial content creation and professional audio production."
   },
   {
@@ -2620,7 +2635,7 @@
     "affiliate_link": "https://play.ht/",
     "logo_url": "/images/tools/play-ht-logo.svg",
     "search_volume": 4200,
-    "cpc": 3.20,
+    "cpc": 3.2,
     "description": "Play.ht is an AI text-to-speech platform that converts text into natural-sounding audio with multilingual support and API integration, making content more accessible and engaging across multiple platforms."
   },
   {
@@ -2688,7 +2703,7 @@
     "affiliate_link": "https://synthesys.io/",
     "logo_url": "/images/tools/synthesys-logo.svg",
     "search_volume": 2600,
-    "cpc": 5.40,
+    "cpc": 5.4,
     "description": "Synthesys is a professional AI platform for voice and video synthesis, offering commercial-grade content creation tools for businesses requiring high-quality multimedia content with commercial licensing."
   },
   {
@@ -2756,7 +2771,7 @@
     "affiliate_link": "https://wellsaidlabs.com/",
     "logo_url": "/images/tools/wellsaid-labs-logo.svg",
     "search_volume": 1800,
-    "cpc": 6.20,
+    "cpc": 6.2,
     "description": "Wellsaid Labs provides enterprise-grade AI voice generation with exceptionally natural and expressive speech, designed for professional and corporate use cases requiring premium audio quality."
   },
   {
@@ -2824,7 +2839,7 @@
     "affiliate_link": "https://consensus.app/",
     "logo_url": "/images/tools/consensus-logo.svg",
     "search_volume": 3400,
-    "cpc": 4.80,
+    "cpc": 4.8,
     "description": "Consensus is an AI-powered research tool that helps users find and analyze scientific papers, providing evidence-based insights from peer-reviewed sources for academic and professional research."
   },
   {
@@ -2892,7 +2907,7 @@
     "affiliate_link": "https://elicit.org/",
     "logo_url": "/images/tools/elicit-logo.svg",
     "search_volume": 2800,
-    "cpc": 3.60,
+    "cpc": 3.6,
     "description": "Elicit is an AI research assistant that helps academics and researchers analyze and summarize academic papers, streamline literature reviews, and answer research questions using peer-reviewed sources."
   },
   {
@@ -2960,7 +2975,7 @@
     "affiliate_link": "https://chatpdf.com/",
     "logo_url": "/images/tools/chatpdf-logo.svg",
     "search_volume": 5600,
-    "cpc": 2.40,
+    "cpc": 2.4,
     "description": "ChatPDF is an AI tool that enables users to chat with and analyze PDF documents, making it easy to extract insights, ask questions, and summarize content from uploaded files."
   },
   {
@@ -3028,7 +3043,7 @@
     "affiliate_link": "https://scite.ai/",
     "logo_url": "/images/tools/scite-ai-logo.svg",
     "search_volume": 1900,
-    "cpc": 4.20,
+    "cpc": 4.2,
     "description": "scite.ai is an AI-powered platform that analyzes how research papers are cited, helping researchers understand the context and impact of citations to validate and discover quality research."
   },
   {
@@ -3096,7 +3111,7 @@
     "affiliate_link": "https://pictory.ai/",
     "logo_url": "/images/tools/pictory-logo.svg",
     "search_volume": 4800,
-    "cpc": 3.80,
+    "cpc": 3.8,
     "description": "Pictory is an AI video creation tool that transforms text content into engaging videos with automated editing, stock footage, and social media optimization for content creators and marketers."
   },
   {
@@ -3164,7 +3179,7 @@
     "affiliate_link": "https://lumen5.com/",
     "logo_url": "/images/tools/lumen5-logo.svg",
     "search_volume": 6200,
-    "cpc": 3.40,
+    "cpc": 3.4,
     "description": "Lumen5 is an AI video maker that transforms text content into engaging videos with templates and automated scene creation, perfect for social media marketing and content promotion."
   },
   {
@@ -3232,7 +3247,7 @@
     "affiliate_link": "https://kapwing.com/",
     "logo_url": "/images/tools/kapwing-logo.svg",
     "search_volume": 8900,
-    "cpc": 2.60,
+    "cpc": 2.6,
     "description": "Kapwing is an online video editor with AI-powered features and collaboration tools, perfect for teams creating social media content and quick video projects in the browser."
   }
 ]
