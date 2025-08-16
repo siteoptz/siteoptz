@@ -659,7 +659,7 @@ export default function ReviewPage({ tool, pageTitle, slug, relatedTools, relate
                       From {relatedTool.pricing?.monthly ? `$${relatedTool.pricing.monthly}` : 'Custom'}
                     </span>
                     <a 
-                      href={`/reviews/${(relatedTool.tool_name || '').toLowerCase().replace(/\s+/g, '-')}`}
+                      href={`/reviews/${(relatedTool.tool_name || '').toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-+|-+$/g, '')}`}
                       className="text-blue-600 hover:text-blue-800 text-sm font-medium"
                     >
                       Review →

@@ -283,7 +283,7 @@ export default function ToolsPage({ tools, categories, faqs }: { tools: any[], c
                     
                     <div className="mb-4">
                       <a 
-                        href={`/reviews/${toolName.toLowerCase().replace(/\s+/g, '-')}`}
+                        href={`/reviews/${toolName.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-+|-+$/g, '')}`}
                         className="text-blue-600 hover:text-blue-800 text-sm font-medium inline-flex items-center"
                         onClick={(e) => e.stopPropagation()}
                       >

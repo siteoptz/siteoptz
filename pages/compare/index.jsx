@@ -214,7 +214,7 @@ function ToolCard({ tool, viewMode }) {
   const pricing = tool.pricing || {};
   const startingPrice = pricing.monthly === 'Free' ? 0 : (pricing.monthly === 'Custom' ? 'Custom' : pricing.monthly || 0);
   const hasFreeTrial = pricing.monthly === 'Free' || tool.free_trial;
-  const toolSlug = tool.name.toLowerCase().replace(/\s+/g, '-').replace(/\./g, '');
+  const toolSlug = tool.name.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-+|-+$/g, '');
   const overallRating = tool.rating || 4.5;
 
   if (viewMode === 'list') {
