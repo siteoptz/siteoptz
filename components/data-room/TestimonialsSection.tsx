@@ -63,7 +63,7 @@ export function TestimonialsSection() {
             </div>
             
             <blockquote className="text-gray-700 italic">
-              "{testimonial.testimonial}"
+              &ldquo;{testimonial.testimonial}&rdquo;
             </blockquote>
             
             <div className="mt-4 flex items-center">

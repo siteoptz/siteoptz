@@ -98,7 +98,7 @@ export function CallToAction() {
                   animate={{ opacity: 1, y: 0 }}
                   className="mt-3 text-white text-sm"
                 >
-                  Thank you! We'll be in touch within 24 hours.
+                  Thank you! We&apos;ll be in touch within 24 hours.
                 </motion.p>
               )}
             </form>
