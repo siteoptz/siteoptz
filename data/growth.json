@@ -1,14 +1,14 @@
 [
   { "month": "Jan", "revenue": 42000, "clients": 15 },
   { "month": "Feb", "revenue": 48500, "clients": 18 },
-  { "month": "Mar", "revenue": 62400, "clients": 24 },
-  { "month": "Apr", "revenue": 73800, "clients": 29 },
-  { "month": "May", "revenue": 95200, "clients": 37 },
-  { "month": "Jun", "revenue": 108600, "clients": 43 },
-  { "month": "Jul", "revenue": 127400, "clients": 52 },
-  { "month": "Aug", "revenue": 142100, "clients": 58 },
-  { "month": "Sep", "revenue": 168300, "clients": 67 },
-  { "month": "Oct", "revenue": 189750, "clients": 74 },
-  { "month": "Nov", "revenue": 224600, "clients": 84 },
+  { "month": "Mar", "revenue": 62400, "clients": 22 },
+  { "month": "Apr", "revenue": 73800, "clients": 27 },
+  { "month": "May", "revenue": 95200, "clients": 35 },
+  { "month": "Jun", "revenue": 108600, "clients": 41 },
+  { "month": "Jul", "revenue": 127400, "clients": 49 },
+  { "month": "Aug", "revenue": 142100, "clients": 54 },
+  { "month": "Sep", "revenue": 168300, "clients": 63 },
+  { "month": "Oct", "revenue": 189750, "clients": 71 },
+  { "month": "Nov", "revenue": 224600, "clients": 82 },
   { "month": "Dec", "revenue": 251800, "clients": 92 }
 ]
