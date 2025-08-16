@@ -710,7 +710,7 @@ export const getStaticPaths: GetStaticPaths = async () => {
   
   const paths = tools.map((tool: any) => ({
     params: {
-      toolName: tool.tool_name.toLowerCase().replace(/\s+/g, '-')
+      toolName: tool.tool_name.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-+|-+$/g, '')
     }
   }));
 
@@ -726,7 +726,7 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
   
   // Find tool by slug
   const tool = tools.find((t: any) => 
-    t.tool_name.toLowerCase().replace(/\s+/g, '-') === toolSlug
+    t.tool_name.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-+|-+$/g, '') === toolSlug
   );
 
   if (!tool) {
