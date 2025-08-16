@@ -451,9 +451,9 @@ export const getStaticProps: GetStaticProps = async () => {
       { tool1: transformedTools.find((t: any) => t.slug === 'chatgpt'), tool2: transformedTools.find((t: any) => t.slug === 'perplexity-ai') },
       
       // Writing & Content Creation
-      { tool1: transformedTools.find((t: any) => t.slug === 'jasper-ai'), tool2: transformedTools.find((t: any) => t.slug === 'copyai') },
+      { tool1: transformedTools.find((t: any) => t.slug === 'jasper-ai'), tool2: transformedTools.find((t: any) => t.slug === 'copy-ai') },
       { tool1: transformedTools.find((t: any) => t.slug === 'jasper-ai'), tool2: transformedTools.find((t: any) => t.slug === 'writesonic') },
-      { tool1: transformedTools.find((t: any) => t.slug === 'copyai'), tool2: transformedTools.find((t: any) => t.slug === 'writesonic') },
+      { tool1: transformedTools.find((t: any) => t.slug === 'copy-ai'), tool2: transformedTools.find((t: any) => t.slug === 'writesonic') },
       { tool1: transformedTools.find((t: any) => t.slug === 'chatgpt'), tool2: transformedTools.find((t: any) => t.slug === 'jasper-ai') },
       
       // SEO & Content Optimization
