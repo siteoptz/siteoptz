@@ -59,7 +59,7 @@ const Header: React.FC = () => {
         { name: 'Claude vs Gemini', href: '/compare/claude/vs/gemini' },
       ]
     },
-    { name: 'Reviews', href: '/reviews/chatgpt', current: router.pathname.startsWith('/reviews') },
+    { name: 'Data Room', href: '/data-room', current: router.pathname.startsWith('/data-room') },
   ];
 
   const toggleMenu = () => setIsMenuOpen(!isMenuOpen);

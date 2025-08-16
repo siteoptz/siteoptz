@@ -41,13 +41,13 @@ const Footer: React.FC = () => {
       ]
     },
     {
-      title: 'Reviews',
+      title: 'Data Room',
       links: [
-        { name: 'ChatGPT Review', href: '/reviews/chatgpt' },
-        { name: 'Claude Review', href: '/reviews/claude' },
-        { name: 'Gemini Review', href: '/reviews/gemini' },
-        { name: 'Jasper AI Review', href: '/reviews/jasper-ai' },
-        { name: 'All Reviews', href: '/tools' },
+        { name: 'Growth Metrics', href: '/data-room' },
+        { name: 'Testimonials', href: '/data-room#testimonials' },
+        { name: 'Case Studies', href: '/data-room#case-studies' },
+        { name: 'Industry Results', href: '/data-room#industries' },
+        { name: 'ROI Calculator', href: '/data-room#calculator' },
       ]
     },
     {
