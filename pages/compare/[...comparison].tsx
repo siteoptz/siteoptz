@@ -343,6 +343,60 @@ const ComparisonPage: React.FC<ComparisonPageProps> = ({ tool1, tool2, faqs1, fa
             </div>
           </div>
         </div>
+
+        {/* Still Have Questions Section */}
+        <div className="bg-gradient-to-br from-blue-600 to-purple-700 rounded-lg shadow-lg p-8 mt-12">
+          <div className="text-center">
+            <h2 className="text-3xl font-bold text-white mb-4">
+              Still Have Questions?
+            </h2>
+            <p className="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">
+              Our AI experts can help you choose between {tool1.name} and {tool2.name} based on your specific needs.
+            </p>
+            
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link
+                href="/contact"
+                className="inline-flex items-center justify-center px-8 py-3 bg-white text-blue-600 font-semibold rounded-lg hover:bg-gray-100 transition-colors"
+              >
+                <svg className="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />
+                </svg>
+                Get Expert Advice
+              </Link>
+              
+              <Link
+                href="/tools"
+                className="inline-flex items-center justify-center px-8 py-3 bg-white/10 backdrop-blur text-white font-semibold rounded-lg hover:bg-white/20 transition-colors border border-white/20"
+              >
+                <svg className="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2" />
+                </svg>
+                Browse All Tools
+              </Link>
+            </div>
+            
+            {/* Trust Indicators */}
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mt-12 pt-8 border-t border-white/20">
+              <div className="text-center">
+                <div className="text-2xl font-bold text-white">500+</div>
+                <div className="text-sm text-blue-100">Tools Reviewed</div>
+              </div>
+              <div className="text-center">
+                <div className="text-2xl font-bold text-white">50K+</div>
+                <div className="text-sm text-blue-100">Users Helped</div>
+              </div>
+              <div className="text-center">
+                <div className="text-2xl font-bold text-white">4.8/5</div>
+                <div className="text-sm text-blue-100">Expert Rating</div>
+              </div>
+              <div className="text-center">
+                <div className="text-2xl font-bold text-white">24/7</div>
+                <div className="text-sm text-blue-100">Support Available</div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </>
   );
