@@ -34,6 +34,20 @@ const Header: React.FC = () => {
       ]
     },
     { 
+      name: 'Categories', 
+      href: '/categories', 
+      current: router.pathname.startsWith('/categories'),
+      hasDropdown: true,
+      dropdownItems: [
+        { name: 'All Categories', href: '/categories' },
+        { name: 'Content Creation', href: '/categories/content-creation' },
+        { name: 'Visual Content', href: '/categories/visual-content' },
+        { name: 'Development', href: '/categories/development' },
+        { name: 'SEO & Optimization', href: '/categories/seo-optimization' },
+        { name: 'Analytics', href: '/categories/analytics' },
+      ]
+    },
+    { 
       name: 'Compare', 
       href: '/compare', 
       current: router.pathname.startsWith('/compare'),
@@ -45,7 +59,6 @@ const Header: React.FC = () => {
         { name: 'Claude vs Gemini', href: '/compare/claude/vs/gemini' },
       ]
     },
-    { name: 'Pricing Calculator', href: '/pricing', current: router.pathname === '/pricing' },
     { name: 'Reviews', href: '/reviews/chatgpt', current: router.pathname.startsWith('/reviews') },
   ];
 

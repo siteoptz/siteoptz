@@ -1,0 +1,143 @@
+{
+  "category": "Email Marketing",
+  "slug": "email-marketing",
+  "tool_count": 2,
+  "tools": [
+    {
+      "tool_name": "Mailchimp AI",
+      "vendor": "Mailchimp",
+      "category": "Email Marketing",
+      "features": {
+        "core": [
+          "Email campaigns",
+          "Automation workflows",
+          "List management",
+          "Template library",
+          "Analytics dashboard",
+          "A/B testing",
+          "Segmentation"
+        ],
+        "advanced": [
+          "AI content generation",
+          "Smart recommendations",
+          "Predictive analytics",
+          "Behavioral targeting",
+          "Advanced automation",
+          "Custom integrations",
+          "Advanced reporting"
+        ],
+        "integrations": [
+          "Shopify",
+          "WordPress",
+          "Salesforce",
+          "Zapier",
+          "API access",
+          "Third-party tools"
+        ]
+      },
+      "pricing": {
+        "monthly": 13,
+        "yearly": 130,
+        "enterprise": "Custom"
+      },
+      "free_trial": true,
+      "pros": [
+        "User-friendly interface",
+        "AI content features",
+        "Good automation",
+        "Excellent templates",
+        "Strong analytics",
+        "Good customer support"
+      ],
+      "cons": [
+        "Limited advanced features",
+        "Higher pricing for scaling",
+        "Basic AI capabilities",
+        "Limited customization",
+        "Some features enterprise-only"
+      ],
+      "rating": 4.2,
+      "use_cases": [
+        "Email marketing",
+        "Automation workflows",
+        "Campaign management",
+        "List segmentation",
+        "Analytics and reporting",
+        "Template creation"
+      ],
+      "affiliate_link": "https://mailchimp.com/",
+      "logo_url": "/images/tools/placeholder-logo.svg",
+      "search_volume": 1750,
+      "cpc": 2.65,
+      "description": "Mailchimp AI provides intelligent email marketing automation with AI-driven content creation, audience segmentation, and predictive analytics for campaign optimization."
+    },
+    {
+      "tool_name": "HubSpot AI",
+      "vendor": "HubSpot",
+      "category": "Email Marketing",
+      "features": {
+        "core": [
+          "Email campaigns",
+          "Automation workflows",
+          "List management",
+          "Template library",
+          "Analytics dashboard",
+          "A/B testing",
+          "Segmentation"
+        ],
+        "advanced": [
+          "AI content generation",
+          "Smart recommendations",
+          "Predictive analytics",
+          "Behavioral targeting",
+          "Advanced automation",
+          "Custom integrations",
+          "Advanced reporting"
+        ],
+        "integrations": [
+          "Salesforce",
+          "WordPress",
+          "Shopify",
+          "Zapier",
+          "API access",
+          "Third-party tools"
+        ]
+      },
+      "pricing": {
+        "monthly": 45,
+        "yearly": 450,
+        "enterprise": "Custom"
+      },
+      "free_trial": true,
+      "pros": [
+        "Comprehensive marketing suite",
+        "AI content features",
+        "Excellent automation",
+        "Strong analytics",
+        "Good integrations",
+        "Excellent customer support"
+      ],
+      "cons": [
+        "High pricing",
+        "Complex interface",
+        "Steep learning curve",
+        "Requires training",
+        "Some features enterprise-only"
+      ],
+      "rating": 4.6,
+      "use_cases": [
+        "Email marketing",
+        "Marketing automation",
+        "Campaign management",
+        "Lead nurturing",
+        "Analytics and reporting",
+        "CRM integration"
+      ],
+      "affiliate_link": "https://www.hubspot.com/",
+      "logo_url": "/images/tools/placeholder-logo.svg",
+      "search_volume": 1600,
+      "cpc": 2.9,
+      "description": "HubSpot AI integrates artificial intelligence across CRM, marketing, sales, and service hubs to automate workflows and provide predictive insights."
+    }
+  ]
+}

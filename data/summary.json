@@ -1,0 +1,62 @@
+{
+  "total_tools": 50,
+  "new_tools_added": 2,
+  "categories": [
+    {
+      "name": "Content Creation",
+      "slug": "content-creation",
+      "count": 7
+    },
+    {
+      "name": "SEO & Optimization",
+      "slug": "seo-optimization",
+      "count": 4
+    },
+    {
+      "name": "Visual Content",
+      "slug": "visual-content",
+      "count": 7
+    },
+    {
+      "name": "Social Media",
+      "slug": "social-media",
+      "count": 2
+    },
+    {
+      "name": "Email Marketing",
+      "slug": "email-marketing",
+      "count": 2
+    },
+    {
+      "name": "Audio",
+      "slug": "audio",
+      "count": 5
+    },
+    {
+      "name": "Development",
+      "slug": "development",
+      "count": 5
+    },
+    {
+      "name": "Research",
+      "slug": "research",
+      "count": 5
+    },
+    {
+      "name": "Productivity",
+      "slug": "productivity",
+      "count": 5
+    },
+    {
+      "name": "Analytics",
+      "slug": "analytics",
+      "count": 5
+    },
+    {
+      "name": "Video",
+      "slug": "video",
+      "count": 3
+    }
+  ],
+  "last_updated": "2025-08-16T18:50:18.234Z"
+}

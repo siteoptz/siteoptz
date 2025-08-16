@@ -1,0 +1,785 @@
+{
+  "category": "image-generation",
+  "tools": [
+    {
+      "id": "midjourney",
+      "name": "Midjourney",
+      "description": "AI art generator for creating stunning images from text descriptions",
+      "category": "image-generation",
+      "pricing": {
+        "price": 10,
+        "currency": "USD",
+        "text": "Basic plan at $10/month",
+        "plans": [
+          {
+            "name": "Pro",
+            "price": 10,
+            "currency": "USD",
+            "features": [
+              "Full features",
+              "Unlimited usage",
+              "Priority support"
+            ],
+            "popular": true
+          }
+        ]
+      },
+      "rating": 4.7,
+      "reviewCount": 12000,
+      "website": "https://midjourney.com",
+      "source": "midjourney",
+      "features": [
+        "art-generation",
+        "high-quality",
+        "artistic-style",
+        "discord-integration"
+      ],
+      "pros": [
+        "High quality images",
+        "Artistic style",
+        "Active community",
+        "Regular updates"
+      ],
+      "cons": [
+        "Discord only",
+        "No API access",
+        "Limited control"
+      ],
+      "lastUpdated": "2025-08-15T18:57:18.195Z",
+      "seo": {
+        "title": "Midjourney - Best image generation AI Tool | SiteOptz.ai",
+        "description": "AI art generator for creating stunning images from text descriptions Compare Midjourney with other image generation AI tools. Rating: 4.7/5, 12000 reviews. Basic plan at $10/month.",
+        "keywords": "Midjourney, image generation, AI tool, artificial intelligence, art-generation, high-quality, artistic-style, discord-integration, High quality images, Artistic style, Active community, Regular updates",
+        "slug": "midjourney",
+        "h1": "Midjourney",
+        "h2": "Midjourney - image generation AI Tool",
+        "h3": "Features, Pricing, and Reviews of Midjourney",
+        "canonicalUrl": "https://siteoptz.ai/tools/midjourney",
+        "robots": "index, follow",
+        "language": "en-US"
+      },
+      "structuredData": {
+        "@context": "https://schema.org",
+        "@type": "SoftwareApplication",
+        "name": "Midjourney",
+        "description": "AI art generator for creating stunning images from text descriptions",
+        "url": "https://midjourney.com",
+        "applicationCategory": "image generation AI Tool",
+        "operatingSystem": "Web",
+        "offers": {
+          "@type": "Offer",
+          "price": 10,
+          "priceCurrency": "USD",
+          "availability": "https://schema.org/InStock"
+        },
+        "aggregateRating": {
+          "@type": "AggregateRating",
+          "ratingValue": 4.7,
+          "ratingCount": 12000,
+          "bestRating": 5,
+          "worstRating": 1
+        },
+        "author": {
+          "@type": "Organization",
+          "name": "midjourney",
+          "url": "https://midjourney.com"
+        },
+        "datePublished": "2025-08-15T18:57:18.195Z",
+        "dateModified": "2025-08-15T18:57:18.195Z"
+      },
+      "metaTags": {
+        "title": "Midjourney - Best image generation AI Tool | SiteOptz.ai",
+        "description": "AI art generator for creating stunning images from text descriptions Compare Midjourney with other image generation AI tools. Rating: 4.7/5, 12000 reviews. Basic plan at $10/month.",
+        "keywords": "Midjourney, image generation, AI tool, artificial intelligence, art-generation, high-quality, artistic-style, discord-integration",
+        "author": "SiteOptz.ai",
+        "viewport": "width=device-width, initial-scale=1",
+        "charset": "UTF-8",
+        "language": "en-US",
+        "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+        "googlebot": "index, follow",
+        "bingbot": "index, follow"
+      },
+      "socialTags": {
+        "og:title": "Midjourney - Best image generation AI Tool",
+        "og:description": "AI art generator for creating stunning images from text descriptions",
+        "og:type": "website",
+        "og:url": "https://siteoptz.ai/tools/midjourney",
+        "og:image": "https://siteoptz.ai/api/og?title=Midjourney&category=image-generation&rating=4.7",
+        "og:site_name": "SiteOptz.ai",
+        "og:locale": "en_US",
+        "twitter:card": "summary_large_image",
+        "twitter:title": "Midjourney - Best image generation AI Tool",
+        "twitter:description": "AI art generator for creating stunning images from text descriptions",
+        "twitter:image": "https://siteoptz.ai/api/og?title=Midjourney&category=image-generation&rating=4.7",
+        "twitter:site": "@siteoptz",
+        "twitter:creator": "@siteoptz"
+      },
+      "canonicalUrl": "https://siteoptz.ai/tools/midjourney",
+      "breadcrumbs": [
+        {
+          "name": "Home",
+          "url": "https://siteoptz.ai"
+        },
+        {
+          "name": "AI Tools",
+          "url": "https://siteoptz.ai/tools"
+        },
+        {
+          "name": "image generation",
+          "url": "https://siteoptz.ai/tools/category/image-generation"
+        },
+        {
+          "name": "Midjourney",
+          "url": "https://siteoptz.ai/tools/midjourney"
+        }
+      ],
+      "relatedTools": [],
+      "comparisonData": {
+        "category": "image-generation",
+        "rating": 4.7,
+        "price": 10,
+        "features": 4,
+        "pros": 4,
+        "cons": 3,
+        "reviewCount": 12000,
+        "lastUpdated": "2025-08-15T18:57:18.195Z"
+      }
+    },
+    {
+      "id": "dall-e",
+      "name": "DALL-E",
+      "description": "OpenAI's AI system for creating realistic images from text descriptions",
+      "category": "image-generation",
+      "pricing": {
+        "price": 0.02,
+        "currency": "USD",
+        "text": "$0.02 per image",
+        "plans": [
+          {
+            "name": "Pro",
+            "price": 0.02,
+            "currency": "USD",
+            "features": [
+              "Full features",
+              "Unlimited usage",
+              "Priority support"
+            ],
+            "popular": true
+          }
+        ]
+      },
+      "rating": 4.6,
+      "reviewCount": 15000,
+      "website": "https://openai.com/dall-e-2",
+      "source": "openai",
+      "features": [
+        "image-generation",
+        "realistic-style",
+        "api-access",
+        "high-quality"
+      ],
+      "pros": [
+        "High quality",
+        "Realistic style",
+        "API available",
+        "Easy to use"
+      ],
+      "cons": [
+        "Expensive for bulk",
+        "Limited artistic control"
+      ],
+      "lastUpdated": "2025-08-15T18:57:18.195Z",
+      "seo": {
+        "title": "DALL-E - Best image generation AI Tool | SiteOptz.ai",
+        "description": "OpenAI's AI system for creating realistic images from text descriptions Compare DALL-E with other image generation AI tools. Rating: 4.6/5, 15000 reviews. $0.02 per image.",
+        "keywords": "DALL-E, image generation, AI tool, artificial intelligence, image-generation, realistic-style, api-access, high-quality, High quality, Realistic style, API available, Easy to use",
+        "slug": "dall-e",
+        "h1": "DALL-E",
+        "h2": "DALL-E - image generation AI Tool",
+        "h3": "Features, Pricing, and Reviews of DALL-E",
+        "canonicalUrl": "https://siteoptz.ai/tools/dall-e",
+        "robots": "index, follow",
+        "language": "en-US"
+      },
+      "structuredData": {
+        "@context": "https://schema.org",
+        "@type": "SoftwareApplication",
+        "name": "DALL-E",
+        "description": "OpenAI's AI system for creating realistic images from text descriptions",
+        "url": "https://openai.com/dall-e-2",
+        "applicationCategory": "image generation AI Tool",
+        "operatingSystem": "Web",
+        "offers": {
+          "@type": "Offer",
+          "price": 0.02,
+          "priceCurrency": "USD",
+          "availability": "https://schema.org/InStock"
+        },
+        "aggregateRating": {
+          "@type": "AggregateRating",
+          "ratingValue": 4.6,
+          "ratingCount": 15000,
+          "bestRating": 5,
+          "worstRating": 1
+        },
+        "author": {
+          "@type": "Organization",
+          "name": "openai",
+          "url": "https://openai.com/dall-e-2"
+        },
+        "datePublished": "2025-08-15T18:57:18.195Z",
+        "dateModified": "2025-08-15T18:57:18.195Z"
+      },
+      "metaTags": {
+        "title": "DALL-E - Best image generation AI Tool | SiteOptz.ai",
+        "description": "OpenAI's AI system for creating realistic images from text descriptions Compare DALL-E with other image generation AI tools. Rating: 4.6/5, 15000 reviews. $0.02 per image.",
+        "keywords": "DALL-E, image generation, AI tool, artificial intelligence, image-generation, realistic-style, api-access, high-quality",
+        "author": "SiteOptz.ai",
+        "viewport": "width=device-width, initial-scale=1",
+        "charset": "UTF-8",
+        "language": "en-US",
+        "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+        "googlebot": "index, follow",
+        "bingbot": "index, follow"
+      },
+      "socialTags": {
+        "og:title": "DALL-E - Best image generation AI Tool",
+        "og:description": "OpenAI's AI system for creating realistic images from text descriptions",
+        "og:type": "website",
+        "og:url": "https://siteoptz.ai/tools/dall-e",
+        "og:image": "https://siteoptz.ai/api/og?title=DALL-E&category=image-generation&rating=4.6",
+        "og:site_name": "SiteOptz.ai",
+        "og:locale": "en_US",
+        "twitter:card": "summary_large_image",
+        "twitter:title": "DALL-E - Best image generation AI Tool",
+        "twitter:description": "OpenAI's AI system for creating realistic images from text descriptions",
+        "twitter:image": "https://siteoptz.ai/api/og?title=DALL-E&category=image-generation&rating=4.6",
+        "twitter:site": "@siteoptz",
+        "twitter:creator": "@siteoptz"
+      },
+      "canonicalUrl": "https://siteoptz.ai/tools/dall-e",
+      "breadcrumbs": [
+        {
+          "name": "Home",
+          "url": "https://siteoptz.ai"
+        },
+        {
+          "name": "AI Tools",
+          "url": "https://siteoptz.ai/tools"
+        },
+        {
+          "name": "image generation",
+          "url": "https://siteoptz.ai/tools/category/image-generation"
+        },
+        {
+          "name": "DALL-E",
+          "url": "https://siteoptz.ai/tools/dall-e"
+        }
+      ],
+      "relatedTools": [],
+      "comparisonData": {
+        "category": "image-generation",
+        "rating": 4.6,
+        "price": 0.02,
+        "features": 4,
+        "pros": 4,
+        "cons": 2,
+        "reviewCount": 15000,
+        "lastUpdated": "2025-08-15T18:57:18.195Z"
+      }
+    },
+    {
+      "id": "stable-diffusion",
+      "name": "Stable Diffusion",
+      "description": "Open-source AI image generation model with local deployment options",
+      "category": "image-generation",
+      "pricing": {
+        "price": 0,
+        "currency": "USD",
+        "text": "Free (open source)",
+        "plans": [
+          {
+            "name": "Free",
+            "price": 0,
+            "currency": "USD",
+            "features": [
+              "Basic features",
+              "Limited usage"
+            ],
+            "popular": false
+          }
+        ]
+      },
+      "rating": 4.5,
+      "reviewCount": 18000,
+      "website": "https://stability.ai",
+      "source": "stability-ai",
+      "features": [
+        "open-source",
+        "local-deployment",
+        "customizable",
+        "high-quality"
+      ],
+      "pros": [
+        "Free and open source",
+        "Local deployment",
+        "Highly customizable",
+        "Community support"
+      ],
+      "cons": [
+        "Technical setup required",
+        "Hardware intensive"
+      ],
+      "lastUpdated": "2025-08-15T18:57:18.195Z",
+      "seo": {
+        "title": "Stable Diffusion - Best image generation AI Tool | SiteOptz.ai",
+        "description": "Open-source AI image generation model with local deployment options Compare Stable Diffusion with other image generation AI tools. Rating: 4.5/5, 18000 reviews. Free (open source).",
+        "keywords": "Stable Diffusion, image generation, AI tool, artificial intelligence, open-source, local-deployment, customizable, high-quality, Free and open source, Local deployment, Highly customizable, Community support",
+        "slug": "stable-diffusion",
+        "h1": "Stable Diffusion",
+        "h2": "Stable Diffusion - image generation AI Tool",
+        "h3": "Features, Pricing, and Reviews of Stable Diffusion",
+        "canonicalUrl": "https://siteoptz.ai/tools/stable-diffusion",
+        "robots": "index, follow",
+        "language": "en-US"
+      },
+      "structuredData": {
+        "@context": "https://schema.org",
+        "@type": "SoftwareApplication",
+        "name": "Stable Diffusion",
+        "description": "Open-source AI image generation model with local deployment options",
+        "url": "https://stability.ai",
+        "applicationCategory": "image generation AI Tool",
+        "operatingSystem": "Web",
+        "offers": {
+          "@type": "Offer",
+          "price": 0,
+          "priceCurrency": "USD",
+          "availability": "https://schema.org/InStock"
+        },
+        "aggregateRating": {
+          "@type": "AggregateRating",
+          "ratingValue": 4.5,
+          "ratingCount": 18000,
+          "bestRating": 5,
+          "worstRating": 1
+        },
+        "author": {
+          "@type": "Organization",
+          "name": "stability-ai",
+          "url": "https://stability.ai"
+        },
+        "datePublished": "2025-08-15T18:57:18.195Z",
+        "dateModified": "2025-08-15T18:57:18.195Z"
+      },
+      "metaTags": {
+        "title": "Stable Diffusion - Best image generation AI Tool | SiteOptz.ai",
+        "description": "Open-source AI image generation model with local deployment options Compare Stable Diffusion with other image generation AI tools. Rating: 4.5/5, 18000 reviews. Free (open source).",
+        "keywords": "Stable Diffusion, image generation, AI tool, artificial intelligence, open-source, local-deployment, customizable, high-quality",
+        "author": "SiteOptz.ai",
+        "viewport": "width=device-width, initial-scale=1",
+        "charset": "UTF-8",
+        "language": "en-US",
+        "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+        "googlebot": "index, follow",
+        "bingbot": "index, follow"
+      },
+      "socialTags": {
+        "og:title": "Stable Diffusion - Best image generation AI Tool",
+        "og:description": "Open-source AI image generation model with local deployment options",
+        "og:type": "website",
+        "og:url": "https://siteoptz.ai/tools/stable-diffusion",
+        "og:image": "https://siteoptz.ai/api/og?title=Stable%20Diffusion&category=image-generation&rating=4.5",
+        "og:site_name": "SiteOptz.ai",
+        "og:locale": "en_US",
+        "twitter:card": "summary_large_image",
+        "twitter:title": "Stable Diffusion - Best image generation AI Tool",
+        "twitter:description": "Open-source AI image generation model with local deployment options",
+        "twitter:image": "https://siteoptz.ai/api/og?title=Stable%20Diffusion&category=image-generation&rating=4.5",
+        "twitter:site": "@siteoptz",
+        "twitter:creator": "@siteoptz"
+      },
+      "canonicalUrl": "https://siteoptz.ai/tools/stable-diffusion",
+      "breadcrumbs": [
+        {
+          "name": "Home",
+          "url": "https://siteoptz.ai"
+        },
+        {
+          "name": "AI Tools",
+          "url": "https://siteoptz.ai/tools"
+        },
+        {
+          "name": "image generation",
+          "url": "https://siteoptz.ai/tools/category/image-generation"
+        },
+        {
+          "name": "Stable Diffusion",
+          "url": "https://siteoptz.ai/tools/stable-diffusion"
+        }
+      ],
+      "relatedTools": [],
+      "comparisonData": {
+        "category": "image-generation",
+        "rating": 4.5,
+        "price": 0,
+        "features": 4,
+        "pros": 4,
+        "cons": 2,
+        "reviewCount": 18000,
+        "lastUpdated": "2025-08-15T18:57:18.195Z"
+      }
+    },
+    {
+      "id": "leonardo-ai",
+      "name": "Leonardo.ai",
+      "description": "AI art generation platform with advanced control and customization",
+      "category": "image-generation",
+      "pricing": {
+        "price": 10,
+        "currency": "USD",
+        "text": "Starts at $10/month",
+        "plans": [
+          {
+            "name": "Pro",
+            "price": 10,
+            "currency": "USD",
+            "features": [
+              "Full features",
+              "Unlimited usage",
+              "Priority support"
+            ],
+            "popular": true
+          }
+        ]
+      },
+      "rating": 4.4,
+      "reviewCount": 6500,
+      "website": "https://leonardo.ai",
+      "source": "leonardo",
+      "features": [
+        "art-generation",
+        "advanced-control",
+        "custom-models",
+        "commercial-use"
+      ],
+      "pros": [
+        "Advanced controls",
+        "Custom models",
+        "Commercial licensing",
+        "Good community"
+      ],
+      "cons": [
+        "Learning curve",
+        "Limited free tier"
+      ],
+      "lastUpdated": "2025-08-15T18:57:18.195Z",
+      "seo": {
+        "title": "Leonardo.ai - Best image generation AI Tool | SiteOptz.ai",
+        "description": "AI art generation platform with advanced control and customization Compare Leonardo.ai with other image generation AI tools. Rating: 4.4/5, 6500 reviews. Starts at $10/month.",
+        "keywords": "Leonardo.ai, image generation, AI tool, artificial intelligence, art-generation, advanced-control, custom-models, commercial-use, Advanced controls, Custom models, Commercial licensing, Good community",
+        "slug": "leonardo-ai",
+        "h1": "Leonardo.ai",
+        "h2": "Leonardo.ai - image generation AI Tool",
+        "h3": "Features, Pricing, and Reviews of Leonardo.ai",
+        "canonicalUrl": "https://siteoptz.ai/tools/leonardo-ai",
+        "robots": "index, follow",
+        "language": "en-US"
+      },
+      "structuredData": {
+        "@context": "https://schema.org",
+        "@type": "SoftwareApplication",
+        "name": "Leonardo.ai",
+        "description": "AI art generation platform with advanced control and customization",
+        "url": "https://leonardo.ai",
+        "applicationCategory": "image generation AI Tool",
+        "operatingSystem": "Web",
+        "offers": {
+          "@type": "Offer",
+          "price": 10,
+          "priceCurrency": "USD",
+          "availability": "https://schema.org/InStock"
+        },
+        "aggregateRating": {
+          "@type": "AggregateRating",
+          "ratingValue": 4.4,
+          "ratingCount": 6500,
+          "bestRating": 5,
+          "worstRating": 1
+        },
+        "author": {
+          "@type": "Organization",
+          "name": "leonardo",
+          "url": "https://leonardo.ai"
+        },
+        "datePublished": "2025-08-15T18:57:18.195Z",
+        "dateModified": "2025-08-15T18:57:18.195Z"
+      },
+      "metaTags": {
+        "title": "Leonardo.ai - Best image generation AI Tool | SiteOptz.ai",
+        "description": "AI art generation platform with advanced control and customization Compare Leonardo.ai with other image generation AI tools. Rating: 4.4/5, 6500 reviews. Starts at $10/month.",
+        "keywords": "Leonardo.ai, image generation, AI tool, artificial intelligence, art-generation, advanced-control, custom-models, commercial-use",
+        "author": "SiteOptz.ai",
+        "viewport": "width=device-width, initial-scale=1",
+        "charset": "UTF-8",
+        "language": "en-US",
+        "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+        "googlebot": "index, follow",
+        "bingbot": "index, follow"
+      },
+      "socialTags": {
+        "og:title": "Leonardo.ai - Best image generation AI Tool",
+        "og:description": "AI art generation platform with advanced control and customization",
+        "og:type": "website",
+        "og:url": "https://siteoptz.ai/tools/leonardo-ai",
+        "og:image": "https://siteoptz.ai/api/og?title=Leonardo.ai&category=image-generation&rating=4.4",
+        "og:site_name": "SiteOptz.ai",
+        "og:locale": "en_US",
+        "twitter:card": "summary_large_image",
+        "twitter:title": "Leonardo.ai - Best image generation AI Tool",
+        "twitter:description": "AI art generation platform with advanced control and customization",
+        "twitter:image": "https://siteoptz.ai/api/og?title=Leonardo.ai&category=image-generation&rating=4.4",
+        "twitter:site": "@siteoptz",
+        "twitter:creator": "@siteoptz"
+      },
+      "canonicalUrl": "https://siteoptz.ai/tools/leonardo-ai",
+      "breadcrumbs": [
+        {
+          "name": "Home",
+          "url": "https://siteoptz.ai"
+        },
+        {
+          "name": "AI Tools",
+          "url": "https://siteoptz.ai/tools"
+        },
+        {
+          "name": "image generation",
+          "url": "https://siteoptz.ai/tools/category/image-generation"
+        },
+        {
+          "name": "Leonardo.ai",
+          "url": "https://siteoptz.ai/tools/leonardo-ai"
+        }
+      ],
+      "relatedTools": [],
+      "comparisonData": {
+        "category": "image-generation",
+        "rating": 4.4,
+        "price": 10,
+        "features": 4,
+        "pros": 4,
+        "cons": 2,
+        "reviewCount": 6500,
+        "lastUpdated": "2025-08-15T18:57:18.195Z"
+      }
+    },
+    {
+      "id": "canva-ai",
+      "name": "Canva AI",
+      "description": "AI-powered design tool with image generation and editing capabilities",
+      "category": "image-generation",
+      "pricing": {
+        "price": 12.99,
+        "currency": "USD",
+        "text": "Pro plan at $12.99/month",
+        "plans": [
+          {
+            "name": "Pro",
+            "price": 12.99,
+            "currency": "USD",
+            "features": [
+              "Full features",
+              "Unlimited usage",
+              "Priority support"
+            ],
+            "popular": true
+          }
+        ]
+      },
+      "rating": 4.3,
+      "reviewCount": 25000,
+      "website": "https://canva.com",
+      "source": "canva",
+      "features": [
+        "design-tool",
+        "image-generation",
+        "templates",
+        "collaboration"
+      ],
+      "pros": [
+        "Easy to use",
+        "Great templates",
+        "Collaboration features",
+        "All-in-one design"
+      ],
+      "cons": [
+        "Limited AI features",
+        "Can be expensive"
+      ],
+      "lastUpdated": "2025-08-15T18:57:18.195Z",
+      "seo": {
+        "title": "Canva AI - Best image generation AI Tool | SiteOptz.ai",
+        "description": "AI-powered design tool with image generation and editing capabilities Compare Canva AI with other image generation AI tools. Rating: 4.3/5, 25000 reviews. Pro plan at $12.99/month.",
+        "keywords": "Canva AI, image generation, AI tool, artificial intelligence, design-tool, image-generation, templates, collaboration, Easy to use, Great templates, Collaboration features, All-in-one design",
+        "slug": "canva-ai",
+        "h1": "Canva AI",
+        "h2": "Canva AI - image generation AI Tool",
+        "h3": "Features, Pricing, and Reviews of Canva AI",
+        "canonicalUrl": "https://siteoptz.ai/tools/canva-ai",
+        "robots": "index, follow",
+        "language": "en-US"
+      },
+      "structuredData": {
+        "@context": "https://schema.org",
+        "@type": "SoftwareApplication",
+        "name": "Canva AI",
+        "description": "AI-powered design tool with image generation and editing capabilities",
+        "url": "https://canva.com",
+        "applicationCategory": "image generation AI Tool",
+        "operatingSystem": "Web",
+        "offers": {
+          "@type": "Offer",
+          "price": 12.99,
+          "priceCurrency": "USD",
+          "availability": "https://schema.org/InStock"
+        },
+        "aggregateRating": {
+          "@type": "AggregateRating",
+          "ratingValue": 4.3,
+          "ratingCount": 25000,
+          "bestRating": 5,
+          "worstRating": 1
+        },
+        "author": {
+          "@type": "Organization",
+          "name": "canva",
+          "url": "https://canva.com"
+        },
+        "datePublished": "2025-08-15T18:57:18.195Z",
+        "dateModified": "2025-08-15T18:57:18.195Z"
+      },
+      "metaTags": {
+        "title": "Canva AI - Best image generation AI Tool | SiteOptz.ai",
+        "description": "AI-powered design tool with image generation and editing capabilities Compare Canva AI with other image generation AI tools. Rating: 4.3/5, 25000 reviews. Pro plan at $12.99/month.",
+        "keywords": "Canva AI, image generation, AI tool, artificial intelligence, design-tool, image-generation, templates, collaboration",
+        "author": "SiteOptz.ai",
+        "viewport": "width=device-width, initial-scale=1",
+        "charset": "UTF-8",
+        "language": "en-US",
+        "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+        "googlebot": "index, follow",
+        "bingbot": "index, follow"
+      },
+      "socialTags": {
+        "og:title": "Canva AI - Best image generation AI Tool",
+        "og:description": "AI-powered design tool with image generation and editing capabilities",
+        "og:type": "website",
+        "og:url": "https://siteoptz.ai/tools/canva-ai",
+        "og:image": "https://siteoptz.ai/api/og?title=Canva%20AI&category=image-generation&rating=4.3",
+        "og:site_name": "SiteOptz.ai",
+        "og:locale": "en_US",
+        "twitter:card": "summary_large_image",
+        "twitter:title": "Canva AI - Best image generation AI Tool",
+        "twitter:description": "AI-powered design tool with image generation and editing capabilities",
+        "twitter:image": "https://siteoptz.ai/api/og?title=Canva%20AI&category=image-generation&rating=4.3",
+        "twitter:site": "@siteoptz",
+        "twitter:creator": "@siteoptz"
+      },
+      "canonicalUrl": "https://siteoptz.ai/tools/canva-ai",
+      "breadcrumbs": [
+        {
+          "name": "Home",
+          "url": "https://siteoptz.ai"
+        },
+        {
+          "name": "AI Tools",
+          "url": "https://siteoptz.ai/tools"
+        },
+        {
+          "name": "image generation",
+          "url": "https://siteoptz.ai/tools/category/image-generation"
+        },
+        {
+          "name": "Canva AI",
+          "url": "https://siteoptz.ai/tools/canva-ai"
+        }
+      ],
+      "relatedTools": [],
+      "comparisonData": {
+        "category": "image-generation",
+        "rating": 4.3,
+        "price": 12.99,
+        "features": 4,
+        "pros": 4,
+        "cons": 2,
+        "reviewCount": 25000,
+        "lastUpdated": "2025-08-15T18:57:18.195Z"
+      }
+    }
+  ],
+  "seo": {
+    "title": "Best image generation AI Tools | SiteOptz.ai",
+    "description": "Discover the top image generation AI tools. Compare features, pricing, and reviews. Find the perfect AI tool for your needs.",
+    "keywords": "image generation, AI tools, artificial intelligence, comparison, reviews",
+    "canonicalUrl": "https://siteoptz.ai/tools/category/image-generation",
+    "structuredData": {
+      "@context": "https://schema.org",
+      "@type": "ItemList",
+      "name": "image generation AI Tools",
+      "description": "Top image generation AI tools with reviews and comparisons",
+      "numberOfItems": 5,
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "item": {
+            "@type": "SoftwareApplication",
+            "name": "Midjourney",
+            "url": "https://siteoptz.ai/tools/midjourney",
+            "description": "AI art generator for creating stunning images from text descriptions"
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "item": {
+            "@type": "SoftwareApplication",
+            "name": "DALL-E",
+            "url": "https://siteoptz.ai/tools/dall-e",
+            "description": "OpenAI's AI system for creating realistic images from text descriptions"
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "item": {
+            "@type": "SoftwareApplication",
+            "name": "Stable Diffusion",
+            "url": "https://siteoptz.ai/tools/stable-diffusion",
+            "description": "Open-source AI image generation model with local deployment options"
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 4,
+          "item": {
+            "@type": "SoftwareApplication",
+            "name": "Leonardo.ai",
+            "url": "https://siteoptz.ai/tools/leonardo-ai",
+            "description": "AI art generation platform with advanced control and customization"
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 5,
+          "item": {
+            "@type": "SoftwareApplication",
+            "name": "Canva AI",
+            "url": "https://siteoptz.ai/tools/canva-ai",
+            "description": "AI-powered design tool with image generation and editing capabilities"
+          }
+        }
+      ]
+    }
+  }
+}

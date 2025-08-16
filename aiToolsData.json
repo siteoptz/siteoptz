@@ -3249,5 +3249,247 @@
     "search_volume": 8900,
     "cpc": 2.6,
     "description": "Kapwing is an online video editor with AI-powered features and collaboration tools, perfect for teams creating social media content and quick video projects in the browser."
+  },
+  {
+    "tool_name": "Gemini",
+    "vendor": "Google",
+    "category": "Content Creation",
+    "description": "Gemini is Google's advanced AI model designed for multimodal understanding and generation. It excels at processing text, images, and code with sophisticated reasoning capabilities.",
+    "logo_url": "https://www.gstatic.com/lamda/images/gemini_sparkle_v002_d4735304ff6292a690345.svg",
+    "features": {
+      "core": [
+        "Multimodal AI processing",
+        "Text and image understanding",
+        "Code generation and analysis",
+        "Real-time information access",
+        "Google Search integration"
+      ],
+      "advanced": [
+        "Gemini Ultra model access",
+        "Advanced reasoning capabilities",
+        "Large context window",
+        "Google Workspace integration",
+        "Function calling"
+      ],
+      "integrations": [
+        "Google Workspace",
+        "Google Search",
+        "Google Cloud Platform",
+        "API access",
+        "Third-party integrations"
+      ]
+    },
+    "pricing": {
+      "monthly": 20,
+      "yearly": 200,
+      "enterprise": "Usage-based API pricing",
+      "plans": [
+        {
+          "plan_name": "Gemini Pro (Free)",
+          "price": "$0",
+          "features_included": [
+            "Limited queries per day",
+            "Gemini Pro model",
+            "Basic multimodal features"
+          ]
+        },
+        {
+          "plan_name": "Gemini Advanced",
+          "price": "$20/month",
+          "features_included": [
+            "Unlimited queries",
+            "Gemini Ultra access",
+            "Priority processing",
+            "Google One benefits"
+          ]
+        },
+        {
+          "plan_name": "Gemini API",
+          "price": "Usage-based pricing",
+          "features_included": [
+            "Developer API access",
+            "Custom rate limits",
+            "Enterprise features"
+          ]
+        }
+      ]
+    },
+    "free_trial": true,
+    "pros": [
+      "Excellent multimodal capabilities",
+      "Strong Google ecosystem integration",
+      "Real-time information access",
+      "Advanced reasoning abilities",
+      "Competitive pricing",
+      "Regular model updates"
+    ],
+    "cons": [
+      "Limited availability in some regions",
+      "Newer platform with fewer integrations",
+      "Privacy concerns with Google",
+      "Learning curve for advanced features",
+      "Limited customization options"
+    ],
+    "official_url": "https://gemini.google.com",
+    "affiliate_link": "",
+    "rating": 4.5,
+    "review_count": 18000,
+    "best_use_cases": [
+      "Multimodal content analysis",
+      "Code generation and debugging",
+      "Research and fact-checking",
+      "Educational assistance",
+      "Creative writing",
+      "Data analysis",
+      "Google Workspace automation"
+    ],
+    "target_audience": [
+      "Google Workspace users",
+      "Developers",
+      "Researchers",
+      "Students",
+      "Enterprise users"
+    ],
+    "demo_available": true,
+    "faq": [
+      {
+        "question": "What is Google Gemini?",
+        "answer": "Gemini is Google's advanced AI model that can understand and generate text, images, and code with sophisticated reasoning capabilities."
+      },
+      {
+        "question": "Is Gemini free to use?",
+        "answer": "Yes, Gemini offers a free tier with limited daily queries. Gemini Advanced costs $20/month for unlimited access."
+      },
+      {
+        "question": "How does Gemini compare to ChatGPT?",
+        "answer": "Gemini excels at multimodal tasks and Google integration, while ChatGPT has a larger plugin ecosystem and more third-party integrations."
+      },
+      {
+        "question": "Can Gemini access real-time information?",
+        "answer": "Yes, Gemini can access current information through Google Search integration, making it excellent for up-to-date queries."
+      }
+    ]
+  },
+  {
+    "tool_name": "Anthropic Claude",
+    "vendor": "Anthropic",
+    "category": "Content Creation",
+    "description": "Claude is Anthropic's advanced AI assistant focused on helpful, harmless, and honest interactions. It excels at complex reasoning, analysis, and maintaining context over long conversations.",
+    "logo_url": "https://upload.wikimedia.org/wikipedia/commons/8/85/Anthropic_logo.svg",
+    "features": {
+      "core": [
+        "Constitutional AI training",
+        "Large context window (200k tokens)",
+        "Advanced reasoning",
+        "Document analysis",
+        "Ethical AI responses"
+      ],
+      "advanced": [
+        "Claude 3 Opus/Sonnet/Haiku models",
+        "Multi-document processing",
+        "Code analysis and generation",
+        "Research assistance",
+        "Safety guardrails"
+      ],
+      "integrations": [
+        "API access",
+        "Slack integration",
+        "Amazon Bedrock",
+        "Custom implementations",
+        "Developer tools"
+      ]
+    },
+    "pricing": {
+      "monthly": 20,
+      "yearly": 200,
+      "enterprise": "Usage-based API pricing",
+      "plans": [
+        {
+          "plan_name": "Claude Pro",
+          "price": "$20/month",
+          "features_included": [
+            "5x more usage",
+            "Priority bandwidth",
+            "Early access to features",
+            "Claude 3 Opus access"
+          ]
+        },
+        {
+          "plan_name": "Claude API",
+          "price": "Usage-based pricing",
+          "features_included": [
+            "Pay-per-token model",
+            "Multiple model options",
+            "Scalable usage",
+            "Developer tools"
+          ]
+        },
+        {
+          "plan_name": "Claude for Work",
+          "price": "$25/month per user",
+          "features_included": [
+            "Team collaboration",
+            "Admin controls",
+            "Enhanced security",
+            "Priority support"
+          ]
+        }
+      ]
+    },
+    "free_trial": true,
+    "pros": [
+      "Exceptional reasoning capabilities",
+      "Large context window",
+      "Strong safety and ethics focus",
+      "Excellent for analysis tasks",
+      "Honest about limitations",
+      "High-quality responses"
+    ],
+    "cons": [
+      "Limited creative capabilities",
+      "Conservative responses",
+      "Fewer integrations than competitors",
+      "Higher API costs",
+      "Limited plugin ecosystem"
+    ],
+    "official_url": "https://claude.ai",
+    "affiliate_link": "",
+    "rating": 4.7,
+    "review_count": 22000,
+    "best_use_cases": [
+      "Complex analysis and reasoning",
+      "Document review and summarization",
+      "Research assistance",
+      "Code review and analysis",
+      "Academic writing support",
+      "Legal document analysis",
+      "Technical writing"
+    ],
+    "target_audience": [
+      "Researchers",
+      "Analysts",
+      "Legal professionals",
+      "Academic professionals",
+      "Enterprise users"
+    ],
+    "demo_available": true,
+    "faq": [
+      {
+        "question": "What is Anthropic Claude?",
+        "answer": "Claude is an AI assistant created by Anthropic, designed to be helpful, harmless, and honest with advanced reasoning capabilities."
+      },
+      {
+        "question": "How large is Claude's context window?",
+        "answer": "Claude supports up to 200,000 tokens, allowing for processing of very long documents and maintaining extended conversations."
+      },
+      {
+        "question": "What makes Claude different from other AI assistants?",
+        "answer": "Claude is trained using Constitutional AI to be more helpful, harmless, and honest, with a focus on safety and ethical responses."
+      },
+      {
+        "question": "Can Claude analyze documents?",
+        "answer": "Yes, Claude excels at document analysis and can process multiple long documents simultaneously with its large context window."
+      }
+    ]
   }
 ]

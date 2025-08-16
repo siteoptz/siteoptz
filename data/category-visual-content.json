@@ -1,0 +1,474 @@
+{
+  "category": "Visual Content",
+  "slug": "visual-content",
+  "tool_count": 7,
+  "tools": [
+    {
+      "tool_name": "Midjourney",
+      "vendor": "Midjourney",
+      "category": "Visual Content",
+      "features": {
+        "core": [
+          "AI image generation",
+          "High-quality artwork",
+          "Multiple art styles",
+          "Custom prompts",
+          "Image variations",
+          "Upscaling",
+          "Commercial usage rights"
+        ],
+        "advanced": [
+          "Advanced prompting",
+          "Style mixing",
+          "Aspect ratio control",
+          "Quality settings",
+          "Remix mode",
+          "Pan and zoom",
+          "Custom models"
+        ],
+        "integrations": [
+          "Discord",
+          "API access",
+          "Web interface",
+          "Mobile app",
+          "Third-party tools"
+        ]
+      },
+      "pricing": {
+        "monthly": 10,
+        "yearly": 96,
+        "enterprise": "Custom"
+      },
+      "free_trial": true,
+      "pros": [
+        "Exceptional image quality",
+        "Unique artistic style",
+        "Fast generation",
+        "Commercial usage rights",
+        "Active community",
+        "Regular updates"
+      ],
+      "cons": [
+        "Discord-based interface",
+        "Limited control over details",
+        "No text generation",
+        "Requires Discord account",
+        "Limited editing capabilities"
+      ],
+      "rating": 4.9,
+      "use_cases": [
+        "Digital art creation",
+        "Marketing visuals",
+        "Concept art",
+        "Social media graphics",
+        "Book illustrations",
+        "Product mockups"
+      ],
+      "affiliate_link": "https://www.midjourney.com/",
+      "logo_url": "/images/tools/midjourney-logo.svg",
+      "search_volume": 2250,
+      "cpc": 3.36,
+      "description": "Midjourney is a leading AI image generation platform that creates stunning artwork, illustrations, and designs from text prompts with exceptional artistic quality."
+    },
+    {
+      "tool_name": "DALL-E",
+      "vendor": "OpenAI",
+      "category": "Visual Content",
+      "features": {
+        "core": [
+          "AI image generation",
+          "Text-to-image",
+          "Image editing",
+          "Variations",
+          "High resolution",
+          "Multiple styles",
+          "Commercial usage"
+        ],
+        "advanced": [
+          "DALL-E 3 model",
+          "Advanced prompting",
+          "Image inpainting",
+          "Outpainting",
+          "Style transfer",
+          "Quality control",
+          "Safety filters"
+        ],
+        "integrations": [
+          "ChatGPT Plus",
+          "API access",
+          "Microsoft Designer",
+          "Bing Image Creator",
+          "Third-party tools"
+        ]
+      },
+      "pricing": {
+        "monthly": 20,
+        "yearly": 200,
+        "enterprise": "Custom"
+      },
+      "free_trial": true,
+      "pros": [
+        "High-quality images",
+        "Excellent text rendering",
+        "Integrated with ChatGPT",
+        "Good safety features",
+        "Commercial usage rights",
+        "Regular updates"
+      ],
+      "cons": [
+        "Limited artistic styles",
+        "Higher pricing",
+        "Requires ChatGPT Plus",
+        "Limited editing tools",
+        "Safety restrictions"
+      ],
+      "rating": 4.7,
+      "use_cases": [
+        "Marketing visuals",
+        "Product images",
+        "Social media graphics",
+        "Illustrations",
+        "Concept art",
+        "Educational materials"
+      ],
+      "affiliate_link": "https://openai.com/dall-e-2",
+      "logo_url": "/images/tools/dall-e-logo.svg",
+      "search_volume": 1800,
+      "cpc": 2.8,
+      "description": "DALL-E is OpenAI's AI image generation system that creates realistic images and art from natural language descriptions with precise control over style and composition."
+    },
+    {
+      "tool_name": "Stable Diffusion",
+      "vendor": "Stability AI",
+      "category": "Visual Content",
+      "features": {
+        "core": [
+          "AI image generation",
+          "Text-to-image conversion",
+          "Open-source model",
+          "Local deployment",
+          "High-resolution output",
+          "Style customization",
+          "Batch processing"
+        ],
+        "advanced": [
+          "Custom model training",
+          "ControlNet integration",
+          "Inpainting and outpainting",
+          "Image-to-image transformation",
+          "LoRA model support",
+          "Advanced prompt engineering",
+          "Negative prompting"
+        ],
+        "integrations": [
+          "ComfyUI",
+          "AUTOMATIC1111",
+          "DreamStudio",
+          "Hugging Face",
+          "Python libraries",
+          "API access"
+        ]
+      },
+      "pricing": {
+        "monthly": 0,
+        "yearly": 0,
+        "enterprise": "Custom"
+      },
+      "free_trial": true,
+      "pros": [
+        "Completely free and open-source",
+        "High-quality image generation",
+        "Extensive customization options",
+        "Active community support",
+        "No usage limits",
+        "Commercial use allowed"
+      ],
+      "cons": [
+        "Requires technical setup",
+        "Hardware intensive (GPU needed)",
+        "Steep learning curve",
+        "Potential for misuse",
+        "No built-in content filtering"
+      ],
+      "rating": 4.5,
+      "use_cases": [
+        "Digital art creation",
+        "Concept art development",
+        "Marketing visuals",
+        "Game asset creation",
+        "Academic research",
+        "Personal projects"
+      ],
+      "affiliate_link": "https://stability.ai/",
+      "logo_url": "/images/tools/stable-diffusion-logo.svg",
+      "search_volume": 18000,
+      "cpc": 2.8,
+      "description": "Stable Diffusion is a revolutionary open-source AI image generation model that creates high-quality images from text descriptions. It can be run locally, customized extensively, and used commercially without restrictions, making it popular among artists, developers, and researchers."
+    },
+    {
+      "tool_name": "Leonardo.ai",
+      "vendor": "Leonardo",
+      "category": "Visual Content",
+      "features": {
+        "core": [
+          "AI image generation",
+          "Advanced control tools",
+          "Custom model training",
+          "High-resolution output",
+          "Style customization",
+          "Batch processing",
+          "Commercial licensing"
+        ],
+        "advanced": [
+          "ControlNet integration",
+          "Fine-tuned models",
+          "Custom dataset training",
+          "Advanced prompting",
+          "Image editing tools",
+          "API access",
+          "Workflow automation"
+        ],
+        "integrations": [
+          "API integration",
+          "Discord bot",
+          "Browser tools",
+          "Mobile apps",
+          "Third-party platforms"
+        ]
+      },
+      "pricing": {
+        "monthly": 10,
+        "yearly": 100,
+        "enterprise": "Custom"
+      },
+      "free_trial": true,
+      "pros": [
+        "Excellent image quality",
+        "Advanced control features",
+        "Good community and resources",
+        "Commercial use allowed",
+        "Regular model updates",
+        "User-friendly interface"
+      ],
+      "cons": [
+        "Limited free tier",
+        "Can be complex for beginners",
+        "Requires credits for generation",
+        "Some features locked behind paywall"
+      ],
+      "rating": 4.4,
+      "use_cases": [
+        "Digital art creation",
+        "Marketing visuals",
+        "Game asset development",
+        "Concept art",
+        "Product design",
+        "Social media content"
+      ],
+      "affiliate_link": "https://leonardo.ai/",
+      "logo_url": "/images/tools/leonardo-ai-logo.svg",
+      "search_volume": 6500,
+      "cpc": 3.1,
+      "description": "Leonardo.ai is a powerful AI image generation platform that offers advanced control and customization options for creating high-quality digital art. It features custom model training, commercial licensing, and professional-grade tools for artists and designers."
+    },
+    {
+      "tool_name": "Runway ML",
+      "vendor": "Runway",
+      "category": "Visual Content",
+      "features": {
+        "core": [
+          "AI video generation",
+          "Text-to-video creation",
+          "Video editing tools",
+          "Image generation",
+          "Motion graphics",
+          "Real-time collaboration",
+          "Cloud-based processing"
+        ],
+        "advanced": [
+          "Custom model training",
+          "Advanced video effects",
+          "Green screen removal",
+          "Style transfer",
+          "Motion tracking",
+          "API integration",
+          "Batch processing"
+        ],
+        "integrations": [
+          "Adobe Creative Suite",
+          "Final Cut Pro",
+          "DaVinci Resolve",
+          "API access",
+          "Mobile apps"
+        ]
+      },
+      "pricing": {
+        "monthly": 15,
+        "yearly": 150,
+        "enterprise": "Custom"
+      },
+      "free_trial": true,
+      "pros": [
+        "Cutting-edge video AI technology",
+        "Professional-grade features",
+        "Good collaboration tools",
+        "Regular feature updates",
+        "Strong community support",
+        "High-quality output"
+      ],
+      "cons": [
+        "Can be expensive for heavy usage",
+        "Steep learning curve",
+        "Requires good internet connection",
+        "Limited free tier"
+      ],
+      "rating": 4.6,
+      "use_cases": [
+        "Video content creation",
+        "Marketing videos",
+        "Film and media production",
+        "Social media content",
+        "Educational videos",
+        "Creative projects"
+      ],
+      "affiliate_link": "https://runwayml.com/",
+      "logo_url": "/images/tools/runway-ml-logo.svg",
+      "search_volume": 8500,
+      "cpc": 3.5,
+      "description": "Runway ML is an AI-powered creative platform that specializes in video generation and editing. It offers cutting-edge tools for creating videos from text, advanced editing capabilities, and collaborative features for creative professionals and content creators."
+    },
+    {
+      "tool_name": "Synthesia",
+      "vendor": "Synthesia",
+      "category": "Visual Content",
+      "features": {
+        "core": [
+          "AI video generation",
+          "Text-to-video conversion",
+          "Realistic AI avatars",
+          "Multiple languages",
+          "Custom backgrounds",
+          "Voice synthesis",
+          "Brand customization"
+        ],
+        "advanced": [
+          "Custom avatar creation",
+          "Advanced scripting",
+          "Team collaboration",
+          "Brand guidelines",
+          "API integration",
+          "Bulk video creation",
+          "Analytics tracking"
+        ],
+        "integrations": [
+          "PowerPoint",
+          "Learning management systems",
+          "Video hosting platforms",
+          "API access",
+          "Third-party tools"
+        ]
+      },
+      "pricing": {
+        "monthly": 30,
+        "yearly": 300,
+        "enterprise": "Custom"
+      },
+      "free_trial": true,
+      "pros": [
+        "High-quality AI avatars",
+        "Supports 120+ languages",
+        "Easy to use interface",
+        "Good for corporate training",
+        "Fast video generation",
+        "Professional appearance"
+      ],
+      "cons": [
+        "Limited avatar customization",
+        "Can look artificial in some cases",
+        "Expensive for small businesses",
+        "Limited creative control"
+      ],
+      "rating": 4.5,
+      "use_cases": [
+        "Corporate training videos",
+        "Educational content",
+        "Marketing videos",
+        "Product demonstrations",
+        "Multilingual content",
+        "Internal communications"
+      ],
+      "affiliate_link": "https://synthesia.io/",
+      "logo_url": "/images/tools/synthesia-logo.svg",
+      "search_volume": 6500,
+      "cpc": 3.8,
+      "description": "Synthesia is an AI video generation platform that creates professional videos with AI avatars. It allows users to generate videos from text in multiple languages, making it ideal for training, marketing, and educational content creation without traditional video production."
+    },
+    {
+      "tool_name": "Canva AI",
+      "vendor": "Canva",
+      "category": "Visual Content",
+      "features": {
+        "core": [
+          "AI-powered design",
+          "Template library",
+          "Drag-and-drop editor",
+          "Brand kit management",
+          "Photo editing",
+          "Text effects",
+          "Collaboration tools"
+        ],
+        "advanced": [
+          "Magic Design AI",
+          "Background remover",
+          "AI image generation",
+          "Brand consistency",
+          "Team management",
+          "Advanced animations",
+          "Print production"
+        ],
+        "integrations": [
+          "Social media platforms",
+          "Google Drive",
+          "Dropbox",
+          "Slack",
+          "Mailchimp",
+          "HubSpot"
+        ]
+      },
+      "pricing": {
+        "monthly": 12.99,
+        "yearly": 119.99,
+        "enterprise": "Custom"
+      },
+      "free_trial": true,
+      "pros": [
+        "User-friendly interface",
+        "Extensive template library",
+        "Good collaboration features",
+        "All-in-one design solution",
+        "Regular feature updates",
+        "Mobile app available"
+      ],
+      "cons": [
+        "Limited advanced design features",
+        "Can be expensive for pro features",
+        "Sometimes slow loading",
+        "Template-dependent design approach"
+      ],
+      "rating": 4.3,
+      "use_cases": [
+        "Social media graphics",
+        "Marketing materials",
+        "Presentations",
+        "Print designs",
+        "Brand identity",
+        "Content creation"
+      ],
+      "affiliate_link": "https://canva.com/",
+      "logo_url": "/images/tools/canva-ai-logo.svg",
+      "search_volume": 25000,
+      "cpc": 2.8,
+      "description": "Canva AI is an all-in-one design platform that combines powerful AI features with an intuitive drag-and-drop interface. It enables users to create professional-quality designs, from social media graphics to presentations, with AI-powered assistance and extensive template libraries."
+    }
+  ]
+}

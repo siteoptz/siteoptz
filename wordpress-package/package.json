@@ -1,22 +1,43 @@
 {
-  "name": "ai-tools-scraper",
+  "name": "siteoptz-ai-tools-orchestrator",
   "version": "1.0.0",
-  "description": "Scrape AI tools from multiple sources using Firecrawl",
-  "main": "main-scraping-script.js",
+  "description": "Comprehensive AI Tools Scraping, Processing, and Automation for SiteOptz.ai",
+  "main": "main-orchestrator.js",
   "scripts": {
-    "start": "node main-scraping-script.js",
-    "scrape": "node main-scraping-script.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node main-orchestrator.js",
+    "pipeline": "node main-orchestrator.js pipeline",
+    "scrape": "node main-orchestrator.js scrape",
+    "convert": "node main-orchestrator.js convert",
+    "scheduler": "node main-orchestrator.js scheduler",
+    "stop": "node main-orchestrator.js stop",
+    "analytics": "node main-orchestrator.js analytics",
+    "status": "node main-orchestrator.js status",
+    "validate": "node main-orchestrator.js validate",
+    "help": "node main-orchestrator.js help",
+    "firecrawl-scrape": "node firecrawl-scraper.js",
+    "siteoptz-convert": "node siteoptz-converter.js",
+    "update-schedule": "node update-scheduler.js"
   },
   "dependencies": {
-    "firecrawl": "^1.29.3"
+    "firecrawl": "^1.29.3",
+    "node-cron": "^3.0.3"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.2"
   },
   "keywords": [
     "ai-tools",
     "scraping",
     "firecrawl",
-    "data-extraction"
+    "siteoptz",
+    "automation",
+    "analytics",
+    "seo",
+    "structured-data"
   ],
   "author": "SiteOptz.ai",
-  "license": "MIT"
+  "license": "MIT",
+  "engines": {
+    "node": ">=18.0.0"
+  }
 }

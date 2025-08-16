@@ -1,0 +1,345 @@
+{
+  "category": "Research",
+  "slug": "research",
+  "tool_count": 5,
+  "tools": [
+    {
+      "tool_name": "Perplexity AI",
+      "vendor": "Perplexity",
+      "category": "Research",
+      "features": {
+        "core": [
+          "AI-powered search",
+          "Conversational interface",
+          "Source citations",
+          "Real-time information",
+          "Multi-source aggregation",
+          "Fact-checking",
+          "Natural language queries"
+        ],
+        "advanced": [
+          "Advanced reasoning",
+          "Academic search mode",
+          "Image analysis",
+          "Follow-up questions",
+          "Search filters",
+          "Export capabilities",
+          "API access"
+        ],
+        "integrations": [
+          "Web browser extensions",
+          "Mobile apps",
+          "API integration",
+          "Slack bot",
+          "Third-party tools"
+        ]
+      },
+      "pricing": {
+        "monthly": 0,
+        "yearly": 0,
+        "enterprise": "Custom"
+      },
+      "free_trial": true,
+      "pros": [
+        "Accurate and up-to-date information",
+        "Excellent source citation",
+        "Free to use",
+        "Fast response times",
+        "Good mobile app",
+        "Academic research friendly"
+      ],
+      "cons": [
+        "Limited customization options",
+        "Can be slow during peak times",
+        "Pro features require subscription",
+        "May miss some niche sources"
+      ],
+      "rating": 4.7,
+      "use_cases": [
+        "Research and fact-checking",
+        "Academic writing",
+        "News analysis",
+        "Market research",
+        "Technical documentation",
+        "Educational content"
+      ],
+      "affiliate_link": "https://perplexity.ai/",
+      "logo_url": "/images/tools/perplexity-ai-logo.svg",
+      "search_volume": 12000,
+      "cpc": 2.5,
+      "description": "Perplexity AI is an AI-powered search engine that provides accurate, cited answers to your questions. It combines the power of large language models with real-time web search to deliver comprehensive, fact-checked responses with proper source attribution."
+    },
+    {
+      "tool_name": "Consensus",
+      "vendor": "Consensus",
+      "category": "Research",
+      "features": {
+        "core": [
+          "Scientific research search",
+          "AI-powered paper analysis",
+          "Evidence-based insights",
+          "Academic focus",
+          "Citation analysis",
+          "Research summarization",
+          "Peer-reviewed sources"
+        ],
+        "advanced": [
+          "Advanced search filters",
+          "Custom research alerts",
+          "Team collaboration",
+          "Research workflows",
+          "Export capabilities",
+          "Integration tools",
+          "Usage analytics"
+        ],
+        "integrations": [
+          "Reference managers",
+          "Academic databases",
+          "Research tools",
+          "Citation tools",
+          "Writing platforms",
+          "Educational systems",
+          "API access"
+        ]
+      },
+      "pricing": {
+        "monthly": 8.99,
+        "yearly": 89.99,
+        "enterprise": "Custom"
+      },
+      "free_trial": true,
+      "pros": [
+        "Excellent for scientific research",
+        "High accuracy for academic content",
+        "Evidence-based insights",
+        "Strong academic focus",
+        "Good citation analysis",
+        "Reliable sources"
+      ],
+      "cons": [
+        "Limited to scientific papers",
+        "Expensive for students",
+        "Narrow scope compared to general AI",
+        "Academic jargon can be complex"
+      ],
+      "rating": 4.5,
+      "use_cases": [
+        "Academic research",
+        "Scientific literature review",
+        "Evidence-based medicine",
+        "Research synthesis",
+        "Academic writing",
+        "Policy research"
+      ],
+      "affiliate_link": "https://consensus.app/",
+      "logo_url": "/images/tools/consensus-logo.svg",
+      "search_volume": 3400,
+      "cpc": 4.8,
+      "description": "Consensus is an AI-powered research tool that helps users find and analyze scientific papers, providing evidence-based insights from peer-reviewed sources for academic and professional research."
+    },
+    {
+      "tool_name": "Elicit",
+      "vendor": "Elicit",
+      "category": "Research",
+      "features": {
+        "core": [
+          "AI research assistant",
+          "Academic paper summarization",
+          "Question answering",
+          "Research workflow automation",
+          "Literature review assistance",
+          "Citation management",
+          "Academic focus"
+        ],
+        "advanced": [
+          "Custom research workflows",
+          "Advanced filtering",
+          "Research collaboration",
+          "Export capabilities",
+          "Integration tools",
+          "Usage tracking",
+          "Custom models"
+        ],
+        "integrations": [
+          "Academic databases",
+          "Reference managers",
+          "Writing tools",
+          "Research platforms",
+          "Citation tools",
+          "Educational systems",
+          "API access"
+        ]
+      },
+      "pricing": {
+        "monthly": "Free",
+        "yearly": "Free",
+        "enterprise": 12
+      },
+      "free_trial": true,
+      "pros": [
+        "Excellent for academic research",
+        "Free tier available",
+        "Good paper summarization",
+        "Academic-focused design",
+        "Helpful for literature reviews",
+        "Easy to use interface"
+      ],
+      "cons": [
+        "Limited to academic papers",
+        "Quality can vary",
+        "Limited advanced features in free tier",
+        "Slower than general AI tools"
+      ],
+      "rating": 4.4,
+      "use_cases": [
+        "Academic research",
+        "Literature reviews",
+        "Research paper analysis",
+        "Academic writing support",
+        "Systematic reviews",
+        "Research methodology"
+      ],
+      "affiliate_link": "https://elicit.org/",
+      "logo_url": "/images/tools/elicit-logo.svg",
+      "search_volume": 2800,
+      "cpc": 3.6,
+      "description": "Elicit is an AI research assistant that helps academics and researchers analyze and summarize academic papers, streamline literature reviews, and answer research questions using peer-reviewed sources."
+    },
+    {
+      "tool_name": "ChatPDF",
+      "vendor": "ChatPDF",
+      "category": "Research",
+      "features": {
+        "core": [
+          "PDF document analysis",
+          "Document chat interface",
+          "AI-powered insights",
+          "Question answering",
+          "Easy document upload",
+          "Text extraction",
+          "Summary generation"
+        ],
+        "advanced": [
+          "Batch processing",
+          "Advanced search",
+          "Team collaboration",
+          "API integration",
+          "Custom workflows",
+          "Export capabilities",
+          "Usage analytics"
+        ],
+        "integrations": [
+          "Cloud storage services",
+          "Document management systems",
+          "Research platforms",
+          "Educational tools",
+          "Content management",
+          "API access",
+          "Third-party apps"
+        ]
+      },
+      "pricing": {
+        "monthly": 5,
+        "yearly": 50,
+        "enterprise": "Custom"
+      },
+      "free_trial": true,
+      "pros": [
+        "Easy to use interface",
+        "Good PDF analysis capabilities",
+        "Affordable pricing",
+        "Quick setup and processing",
+        "Supports various document types",
+        "Fast response times"
+      ],
+      "cons": [
+        "Limited to PDF documents",
+        "File size limitations",
+        "Basic feature set",
+        "Limited advanced analysis"
+      ],
+      "rating": 4.3,
+      "use_cases": [
+        "Document analysis",
+        "Research paper review",
+        "Educational content review",
+        "Legal document analysis",
+        "Report summarization",
+        "Academic research"
+      ],
+      "affiliate_link": "https://chatpdf.com/",
+      "logo_url": "/images/tools/chatpdf-logo.svg",
+      "search_volume": 5600,
+      "cpc": 2.4,
+      "description": "ChatPDF is an AI tool that enables users to chat with and analyze PDF documents, making it easy to extract insights, ask questions, and summarize content from uploaded files."
+    },
+    {
+      "tool_name": "scite.ai",
+      "vendor": "scite",
+      "category": "Research",
+      "features": {
+        "core": [
+          "Citation analysis",
+          "Research validation",
+          "AI-powered insights",
+          "Academic focus",
+          "Citation context",
+          "Research discovery",
+          "Evidence evaluation"
+        ],
+        "advanced": [
+          "Advanced citation metrics",
+          "Research trends analysis",
+          "Team collaboration",
+          "Custom alerts",
+          "Integration tools",
+          "API access",
+          "Usage analytics"
+        ],
+        "integrations": [
+          "Academic databases",
+          "Reference managers",
+          "Research platforms",
+          "Writing tools",
+          "Educational systems",
+          "Citation tools",
+          "API integrations"
+        ]
+      },
+      "pricing": {
+        "monthly": "Free",
+        "yearly": "Free",
+        "enterprise": 20
+      },
+      "free_trial": true,
+      "pros": [
+        "Unique citation analysis approach",
+        "Good research validation",
+        "Academic focus",
+        "Free tier available",
+        "Helps assess research quality",
+        "Evidence-based insights"
+      ],
+      "cons": [
+        "Limited scope of analysis",
+        "Complex interface for beginners",
+        "Requires academic knowledge",
+        "Limited general use cases"
+      ],
+      "rating": 4.2,
+      "use_cases": [
+        "Research validation",
+        "Citation analysis",
+        "Academic writing",
+        "Literature review",
+        "Research quality assessment",
+        "Evidence evaluation"
+      ],
+      "affiliate_link": "https://scite.ai/",
+      "logo_url": "/images/tools/scite-ai-logo.svg",
+      "search_volume": 1900,
+      "cpc": 4.2,
+      "description": "scite.ai is an AI-powered platform that analyzes how research papers are cited, helping researchers understand the context and impact of citations to validate and discover quality research."
+    }
+  ]
+}

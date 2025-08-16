@@ -1,0 +1,787 @@
+{
+  "category": "data-analysis",
+  "tools": [
+    {
+      "id": "chatgpt-enterprise",
+      "name": "ChatGPT Enterprise",
+      "description": "Enterprise-grade AI assistant with advanced data analysis capabilities",
+      "category": "data-analysis",
+      "pricing": {
+        "price": null,
+        "currency": "USD",
+        "text": "Contact for pricing",
+        "plans": [
+          {
+            "name": "Contact Sales",
+            "price": null,
+            "currency": "USD",
+            "features": [
+              "Custom pricing",
+              "Enterprise features"
+            ],
+            "popular": false
+          }
+        ]
+      },
+      "rating": 4.6,
+      "reviewCount": 2500,
+      "website": "https://openai.com/enterprise",
+      "source": "openai",
+      "features": [
+        "data-analysis",
+        "enterprise-security",
+        "custom-models",
+        "api-access"
+      ],
+      "pros": [
+        "Enterprise security",
+        "Custom models",
+        "Advanced analysis",
+        "API access"
+      ],
+      "cons": [
+        "Expensive",
+        "Limited availability",
+        "Complex setup"
+      ],
+      "lastUpdated": "2025-08-15T18:57:18.195Z",
+      "seo": {
+        "title": "ChatGPT Enterprise - Best data analysis AI Tool | SiteOptz.ai",
+        "description": "Enterprise-grade AI assistant with advanced data analysis capabilities Compare ChatGPT Enterprise with other data analysis AI tools. Rating: 4.6/5, 2500 reviews. Contact for pricing.",
+        "keywords": "ChatGPT Enterprise, data analysis, AI tool, artificial intelligence, data-analysis, enterprise-security, custom-models, api-access, Enterprise security, Custom models, Advanced analysis, API access",
+        "slug": "chatgpt-enterprise",
+        "h1": "ChatGPT Enterprise",
+        "h2": "ChatGPT Enterprise - data analysis AI Tool",
+        "h3": "Features, Pricing, and Reviews of ChatGPT Enterprise",
+        "canonicalUrl": "https://siteoptz.ai/tools/chatgpt-enterprise",
+        "robots": "index, follow",
+        "language": "en-US"
+      },
+      "structuredData": {
+        "@context": "https://schema.org",
+        "@type": "SoftwareApplication",
+        "name": "ChatGPT Enterprise",
+        "description": "Enterprise-grade AI assistant with advanced data analysis capabilities",
+        "url": "https://openai.com/enterprise",
+        "applicationCategory": "data analysis AI Tool",
+        "operatingSystem": "Web",
+        "offers": {
+          "@type": "Offer",
+          "price": 0,
+          "priceCurrency": "USD",
+          "availability": "https://schema.org/InStock"
+        },
+        "aggregateRating": {
+          "@type": "AggregateRating",
+          "ratingValue": 4.6,
+          "ratingCount": 2500,
+          "bestRating": 5,
+          "worstRating": 1
+        },
+        "author": {
+          "@type": "Organization",
+          "name": "openai",
+          "url": "https://openai.com/enterprise"
+        },
+        "datePublished": "2025-08-15T18:57:18.195Z",
+        "dateModified": "2025-08-15T18:57:18.195Z"
+      },
+      "metaTags": {
+        "title": "ChatGPT Enterprise - Best data analysis AI Tool | SiteOptz.ai",
+        "description": "Enterprise-grade AI assistant with advanced data analysis capabilities Compare ChatGPT Enterprise with other data analysis AI tools. Rating: 4.6/5, 2500 reviews. Contact for pricing.",
+        "keywords": "ChatGPT Enterprise, data analysis, AI tool, artificial intelligence, data-analysis, enterprise-security, custom-models, api-access",
+        "author": "SiteOptz.ai",
+        "viewport": "width=device-width, initial-scale=1",
+        "charset": "UTF-8",
+        "language": "en-US",
+        "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+        "googlebot": "index, follow",
+        "bingbot": "index, follow"
+      },
+      "socialTags": {
+        "og:title": "ChatGPT Enterprise - Best data analysis AI Tool",
+        "og:description": "Enterprise-grade AI assistant with advanced data analysis capabilities",
+        "og:type": "website",
+        "og:url": "https://siteoptz.ai/tools/chatgpt-enterprise",
+        "og:image": "https://siteoptz.ai/api/og?title=ChatGPT%20Enterprise&category=data-analysis&rating=4.6",
+        "og:site_name": "SiteOptz.ai",
+        "og:locale": "en_US",
+        "twitter:card": "summary_large_image",
+        "twitter:title": "ChatGPT Enterprise - Best data analysis AI Tool",
+        "twitter:description": "Enterprise-grade AI assistant with advanced data analysis capabilities",
+        "twitter:image": "https://siteoptz.ai/api/og?title=ChatGPT%20Enterprise&category=data-analysis&rating=4.6",
+        "twitter:site": "@siteoptz",
+        "twitter:creator": "@siteoptz"
+      },
+      "canonicalUrl": "https://siteoptz.ai/tools/chatgpt-enterprise",
+      "breadcrumbs": [
+        {
+          "name": "Home",
+          "url": "https://siteoptz.ai"
+        },
+        {
+          "name": "AI Tools",
+          "url": "https://siteoptz.ai/tools"
+        },
+        {
+          "name": "data analysis",
+          "url": "https://siteoptz.ai/tools/category/data-analysis"
+        },
+        {
+          "name": "ChatGPT Enterprise",
+          "url": "https://siteoptz.ai/tools/chatgpt-enterprise"
+        }
+      ],
+      "relatedTools": [],
+      "comparisonData": {
+        "category": "data-analysis",
+        "rating": 4.6,
+        "price": null,
+        "features": 4,
+        "pros": 4,
+        "cons": 3,
+        "reviewCount": 2500,
+        "lastUpdated": "2025-08-15T18:57:18.195Z"
+      }
+    },
+    {
+      "id": "tableau-ai",
+      "name": "Tableau AI",
+      "description": "AI-powered data visualization and analytics platform",
+      "category": "data-analysis",
+      "pricing": {
+        "price": 70,
+        "currency": "USD",
+        "text": "Starts at $70/user/month",
+        "plans": [
+          {
+            "name": "Pro",
+            "price": 70,
+            "currency": "USD",
+            "features": [
+              "Full features",
+              "Unlimited usage",
+              "Priority support"
+            ],
+            "popular": true
+          }
+        ]
+      },
+      "rating": 4.5,
+      "reviewCount": 15000,
+      "website": "https://tableau.com",
+      "source": "tableau",
+      "features": [
+        "data-visualization",
+        "ai-insights",
+        "business-intelligence",
+        "collaboration"
+      ],
+      "pros": [
+        "Industry standard",
+        "Powerful visualization",
+        "AI insights",
+        "Good integration"
+      ],
+      "cons": [
+        "Expensive",
+        "Learning curve",
+        "Resource intensive"
+      ],
+      "lastUpdated": "2025-08-15T18:57:18.195Z",
+      "seo": {
+        "title": "Tableau AI - Best data analysis AI Tool | SiteOptz.ai",
+        "description": "AI-powered data visualization and analytics platform Compare Tableau AI with other data analysis AI tools. Rating: 4.5/5, 15000 reviews. Starts at $70/user/month.",
+        "keywords": "Tableau AI, data analysis, AI tool, artificial intelligence, data-visualization, ai-insights, business-intelligence, collaboration, Industry standard, Powerful visualization, AI insights, Good integration",
+        "slug": "tableau-ai",
+        "h1": "Tableau AI",
+        "h2": "Tableau AI - data analysis AI Tool",
+        "h3": "Features, Pricing, and Reviews of Tableau AI",
+        "canonicalUrl": "https://siteoptz.ai/tools/tableau-ai",
+        "robots": "index, follow",
+        "language": "en-US"
+      },
+      "structuredData": {
+        "@context": "https://schema.org",
+        "@type": "SoftwareApplication",
+        "name": "Tableau AI",
+        "description": "AI-powered data visualization and analytics platform",
+        "url": "https://tableau.com",
+        "applicationCategory": "data analysis AI Tool",
+        "operatingSystem": "Web",
+        "offers": {
+          "@type": "Offer",
+          "price": 70,
+          "priceCurrency": "USD",
+          "availability": "https://schema.org/InStock"
+        },
+        "aggregateRating": {
+          "@type": "AggregateRating",
+          "ratingValue": 4.5,
+          "ratingCount": 15000,
+          "bestRating": 5,
+          "worstRating": 1
+        },
+        "author": {
+          "@type": "Organization",
+          "name": "tableau",
+          "url": "https://tableau.com"
+        },
+        "datePublished": "2025-08-15T18:57:18.195Z",
+        "dateModified": "2025-08-15T18:57:18.195Z"
+      },
+      "metaTags": {
+        "title": "Tableau AI - Best data analysis AI Tool | SiteOptz.ai",
+        "description": "AI-powered data visualization and analytics platform Compare Tableau AI with other data analysis AI tools. Rating: 4.5/5, 15000 reviews. Starts at $70/user/month.",
+        "keywords": "Tableau AI, data analysis, AI tool, artificial intelligence, data-visualization, ai-insights, business-intelligence, collaboration",
+        "author": "SiteOptz.ai",
+        "viewport": "width=device-width, initial-scale=1",
+        "charset": "UTF-8",
+        "language": "en-US",
+        "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+        "googlebot": "index, follow",
+        "bingbot": "index, follow"
+      },
+      "socialTags": {
+        "og:title": "Tableau AI - Best data analysis AI Tool",
+        "og:description": "AI-powered data visualization and analytics platform",
+        "og:type": "website",
+        "og:url": "https://siteoptz.ai/tools/tableau-ai",
+        "og:image": "https://siteoptz.ai/api/og?title=Tableau%20AI&category=data-analysis&rating=4.5",
+        "og:site_name": "SiteOptz.ai",
+        "og:locale": "en_US",
+        "twitter:card": "summary_large_image",
+        "twitter:title": "Tableau AI - Best data analysis AI Tool",
+        "twitter:description": "AI-powered data visualization and analytics platform",
+        "twitter:image": "https://siteoptz.ai/api/og?title=Tableau%20AI&category=data-analysis&rating=4.5",
+        "twitter:site": "@siteoptz",
+        "twitter:creator": "@siteoptz"
+      },
+      "canonicalUrl": "https://siteoptz.ai/tools/tableau-ai",
+      "breadcrumbs": [
+        {
+          "name": "Home",
+          "url": "https://siteoptz.ai"
+        },
+        {
+          "name": "AI Tools",
+          "url": "https://siteoptz.ai/tools"
+        },
+        {
+          "name": "data analysis",
+          "url": "https://siteoptz.ai/tools/category/data-analysis"
+        },
+        {
+          "name": "Tableau AI",
+          "url": "https://siteoptz.ai/tools/tableau-ai"
+        }
+      ],
+      "relatedTools": [],
+      "comparisonData": {
+        "category": "data-analysis",
+        "rating": 4.5,
+        "price": 70,
+        "features": 4,
+        "pros": 4,
+        "cons": 3,
+        "reviewCount": 15000,
+        "lastUpdated": "2025-08-15T18:57:18.195Z"
+      }
+    },
+    {
+      "id": "power-bi",
+      "name": "Power BI",
+      "description": "Microsoft's business analytics platform with AI-powered insights",
+      "category": "data-analysis",
+      "pricing": {
+        "price": 9.99,
+        "currency": "USD",
+        "text": "Pro plan at $9.99/user/month",
+        "plans": [
+          {
+            "name": "Pro",
+            "price": 9.99,
+            "currency": "USD",
+            "features": [
+              "Full features",
+              "Unlimited usage",
+              "Priority support"
+            ],
+            "popular": true
+          }
+        ]
+      },
+      "rating": 4.4,
+      "reviewCount": 20000,
+      "website": "https://powerbi.microsoft.com",
+      "source": "microsoft",
+      "features": [
+        "business-intelligence",
+        "ai-insights",
+        "microsoft-integration",
+        "real-time-data"
+      ],
+      "pros": [
+        "Microsoft integration",
+        "Affordable",
+        "Good for enterprise",
+        "Real-time data"
+      ],
+      "cons": [
+        "Limited advanced AI",
+        "Microsoft ecosystem focused"
+      ],
+      "lastUpdated": "2025-08-15T18:57:18.195Z",
+      "seo": {
+        "title": "Power BI - Best data analysis AI Tool | SiteOptz.ai",
+        "description": "Microsoft's business analytics platform with AI-powered insights Compare Power BI with other data analysis AI tools. Rating: 4.4/5, 20000 reviews. Pro plan at $9.99/user/month.",
+        "keywords": "Power BI, data analysis, AI tool, artificial intelligence, business-intelligence, ai-insights, microsoft-integration, real-time-data, Microsoft integration, Affordable, Good for enterprise, Real-time data",
+        "slug": "power-bi",
+        "h1": "Power BI",
+        "h2": "Power BI - data analysis AI Tool",
+        "h3": "Features, Pricing, and Reviews of Power BI",
+        "canonicalUrl": "https://siteoptz.ai/tools/power-bi",
+        "robots": "index, follow",
+        "language": "en-US"
+      },
+      "structuredData": {
+        "@context": "https://schema.org",
+        "@type": "SoftwareApplication",
+        "name": "Power BI",
+        "description": "Microsoft's business analytics platform with AI-powered insights",
+        "url": "https://powerbi.microsoft.com",
+        "applicationCategory": "data analysis AI Tool",
+        "operatingSystem": "Web",
+        "offers": {
+          "@type": "Offer",
+          "price": 9.99,
+          "priceCurrency": "USD",
+          "availability": "https://schema.org/InStock"
+        },
+        "aggregateRating": {
+          "@type": "AggregateRating",
+          "ratingValue": 4.4,
+          "ratingCount": 20000,
+          "bestRating": 5,
+          "worstRating": 1
+        },
+        "author": {
+          "@type": "Organization",
+          "name": "microsoft",
+          "url": "https://powerbi.microsoft.com"
+        },
+        "datePublished": "2025-08-15T18:57:18.195Z",
+        "dateModified": "2025-08-15T18:57:18.195Z"
+      },
+      "metaTags": {
+        "title": "Power BI - Best data analysis AI Tool | SiteOptz.ai",
+        "description": "Microsoft's business analytics platform with AI-powered insights Compare Power BI with other data analysis AI tools. Rating: 4.4/5, 20000 reviews. Pro plan at $9.99/user/month.",
+        "keywords": "Power BI, data analysis, AI tool, artificial intelligence, business-intelligence, ai-insights, microsoft-integration, real-time-data",
+        "author": "SiteOptz.ai",
+        "viewport": "width=device-width, initial-scale=1",
+        "charset": "UTF-8",
+        "language": "en-US",
+        "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+        "googlebot": "index, follow",
+        "bingbot": "index, follow"
+      },
+      "socialTags": {
+        "og:title": "Power BI - Best data analysis AI Tool",
+        "og:description": "Microsoft's business analytics platform with AI-powered insights",
+        "og:type": "website",
+        "og:url": "https://siteoptz.ai/tools/power-bi",
+        "og:image": "https://siteoptz.ai/api/og?title=Power%20BI&category=data-analysis&rating=4.4",
+        "og:site_name": "SiteOptz.ai",
+        "og:locale": "en_US",
+        "twitter:card": "summary_large_image",
+        "twitter:title": "Power BI - Best data analysis AI Tool",
+        "twitter:description": "Microsoft's business analytics platform with AI-powered insights",
+        "twitter:image": "https://siteoptz.ai/api/og?title=Power%20BI&category=data-analysis&rating=4.4",
+        "twitter:site": "@siteoptz",
+        "twitter:creator": "@siteoptz"
+      },
+      "canonicalUrl": "https://siteoptz.ai/tools/power-bi",
+      "breadcrumbs": [
+        {
+          "name": "Home",
+          "url": "https://siteoptz.ai"
+        },
+        {
+          "name": "AI Tools",
+          "url": "https://siteoptz.ai/tools"
+        },
+        {
+          "name": "data analysis",
+          "url": "https://siteoptz.ai/tools/category/data-analysis"
+        },
+        {
+          "name": "Power BI",
+          "url": "https://siteoptz.ai/tools/power-bi"
+        }
+      ],
+      "relatedTools": [],
+      "comparisonData": {
+        "category": "data-analysis",
+        "rating": 4.4,
+        "price": 9.99,
+        "features": 4,
+        "pros": 4,
+        "cons": 2,
+        "reviewCount": 20000,
+        "lastUpdated": "2025-08-15T18:57:18.195Z"
+      }
+    },
+    {
+      "id": "looker",
+      "name": "Looker",
+      "description": "Google's data platform with AI-powered analytics and insights",
+      "category": "data-analysis",
+      "pricing": {
+        "price": null,
+        "currency": "USD",
+        "text": "Contact for pricing",
+        "plans": [
+          {
+            "name": "Contact Sales",
+            "price": null,
+            "currency": "USD",
+            "features": [
+              "Custom pricing",
+              "Enterprise features"
+            ],
+            "popular": false
+          }
+        ]
+      },
+      "rating": 4.3,
+      "reviewCount": 8500,
+      "website": "https://looker.com",
+      "source": "google",
+      "features": [
+        "data-platform",
+        "ai-analytics",
+        "google-integration",
+        "enterprise-focus"
+      ],
+      "pros": [
+        "Google integration",
+        "Enterprise features",
+        "Good scalability",
+        "Advanced analytics"
+      ],
+      "cons": [
+        "Expensive",
+        "Complex setup",
+        "Google ecosystem focused"
+      ],
+      "lastUpdated": "2025-08-15T18:57:18.195Z",
+      "seo": {
+        "title": "Looker - Best data analysis AI Tool | SiteOptz.ai",
+        "description": "Google's data platform with AI-powered analytics and insights Compare Looker with other data analysis AI tools. Rating: 4.3/5, 8500 reviews. Contact for pricing.",
+        "keywords": "Looker, data analysis, AI tool, artificial intelligence, data-platform, ai-analytics, google-integration, enterprise-focus, Google integration, Enterprise features, Good scalability, Advanced analytics",
+        "slug": "looker",
+        "h1": "Looker",
+        "h2": "Looker - data analysis AI Tool",
+        "h3": "Features, Pricing, and Reviews of Looker",
+        "canonicalUrl": "https://siteoptz.ai/tools/looker",
+        "robots": "index, follow",
+        "language": "en-US"
+      },
+      "structuredData": {
+        "@context": "https://schema.org",
+        "@type": "SoftwareApplication",
+        "name": "Looker",
+        "description": "Google's data platform with AI-powered analytics and insights",
+        "url": "https://looker.com",
+        "applicationCategory": "data analysis AI Tool",
+        "operatingSystem": "Web",
+        "offers": {
+          "@type": "Offer",
+          "price": 0,
+          "priceCurrency": "USD",
+          "availability": "https://schema.org/InStock"
+        },
+        "aggregateRating": {
+          "@type": "AggregateRating",
+          "ratingValue": 4.3,
+          "ratingCount": 8500,
+          "bestRating": 5,
+          "worstRating": 1
+        },
+        "author": {
+          "@type": "Organization",
+          "name": "google",
+          "url": "https://looker.com"
+        },
+        "datePublished": "2025-08-15T18:57:18.195Z",
+        "dateModified": "2025-08-15T18:57:18.195Z"
+      },
+      "metaTags": {
+        "title": "Looker - Best data analysis AI Tool | SiteOptz.ai",
+        "description": "Google's data platform with AI-powered analytics and insights Compare Looker with other data analysis AI tools. Rating: 4.3/5, 8500 reviews. Contact for pricing.",
+        "keywords": "Looker, data analysis, AI tool, artificial intelligence, data-platform, ai-analytics, google-integration, enterprise-focus",
+        "author": "SiteOptz.ai",
+        "viewport": "width=device-width, initial-scale=1",
+        "charset": "UTF-8",
+        "language": "en-US",
+        "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+        "googlebot": "index, follow",
+        "bingbot": "index, follow"
+      },
+      "socialTags": {
+        "og:title": "Looker - Best data analysis AI Tool",
+        "og:description": "Google's data platform with AI-powered analytics and insights",
+        "og:type": "website",
+        "og:url": "https://siteoptz.ai/tools/looker",
+        "og:image": "https://siteoptz.ai/api/og?title=Looker&category=data-analysis&rating=4.3",
+        "og:site_name": "SiteOptz.ai",
+        "og:locale": "en_US",
+        "twitter:card": "summary_large_image",
+        "twitter:title": "Looker - Best data analysis AI Tool",
+        "twitter:description": "Google's data platform with AI-powered analytics and insights",
+        "twitter:image": "https://siteoptz.ai/api/og?title=Looker&category=data-analysis&rating=4.3",
+        "twitter:site": "@siteoptz",
+        "twitter:creator": "@siteoptz"
+      },
+      "canonicalUrl": "https://siteoptz.ai/tools/looker",
+      "breadcrumbs": [
+        {
+          "name": "Home",
+          "url": "https://siteoptz.ai"
+        },
+        {
+          "name": "AI Tools",
+          "url": "https://siteoptz.ai/tools"
+        },
+        {
+          "name": "data analysis",
+          "url": "https://siteoptz.ai/tools/category/data-analysis"
+        },
+        {
+          "name": "Looker",
+          "url": "https://siteoptz.ai/tools/looker"
+        }
+      ],
+      "relatedTools": [],
+      "comparisonData": {
+        "category": "data-analysis",
+        "rating": 4.3,
+        "price": null,
+        "features": 4,
+        "pros": 4,
+        "cons": 3,
+        "reviewCount": 8500,
+        "lastUpdated": "2025-08-15T18:57:18.195Z"
+      }
+    },
+    {
+      "id": "qlik-sense",
+      "name": "Qlik Sense",
+      "description": "AI-powered data analytics platform with associative engine",
+      "category": "data-analysis",
+      "pricing": {
+        "price": 30,
+        "currency": "USD",
+        "text": "Starts at $30/user/month",
+        "plans": [
+          {
+            "name": "Pro",
+            "price": 30,
+            "currency": "USD",
+            "features": [
+              "Full features",
+              "Unlimited usage",
+              "Priority support"
+            ],
+            "popular": true
+          }
+        ]
+      },
+      "rating": 4.2,
+      "reviewCount": 12000,
+      "website": "https://qlik.com",
+      "source": "qlik",
+      "features": [
+        "data-analytics",
+        "associative-engine",
+        "ai-insights",
+        "self-service"
+      ],
+      "pros": [
+        "Associative engine",
+        "Self-service BI",
+        "Good AI insights",
+        "Flexible deployment"
+      ],
+      "cons": [
+        "Learning curve",
+        "Resource intensive",
+        "Expensive"
+      ],
+      "lastUpdated": "2025-08-15T18:57:18.195Z",
+      "seo": {
+        "title": "Qlik Sense - Best data analysis AI Tool | SiteOptz.ai",
+        "description": "AI-powered data analytics platform with associative engine Compare Qlik Sense with other data analysis AI tools. Rating: 4.2/5, 12000 reviews. Starts at $30/user/month.",
+        "keywords": "Qlik Sense, data analysis, AI tool, artificial intelligence, data-analytics, associative-engine, ai-insights, self-service, Associative engine, Self-service BI, Good AI insights, Flexible deployment",
+        "slug": "qlik-sense",
+        "h1": "Qlik Sense",
+        "h2": "Qlik Sense - data analysis AI Tool",
+        "h3": "Features, Pricing, and Reviews of Qlik Sense",
+        "canonicalUrl": "https://siteoptz.ai/tools/qlik-sense",
+        "robots": "index, follow",
+        "language": "en-US"
+      },
+      "structuredData": {
+        "@context": "https://schema.org",
+        "@type": "SoftwareApplication",
+        "name": "Qlik Sense",
+        "description": "AI-powered data analytics platform with associative engine",
+        "url": "https://qlik.com",
+        "applicationCategory": "data analysis AI Tool",
+        "operatingSystem": "Web",
+        "offers": {
+          "@type": "Offer",
+          "price": 30,
+          "priceCurrency": "USD",
+          "availability": "https://schema.org/InStock"
+        },
+        "aggregateRating": {
+          "@type": "AggregateRating",
+          "ratingValue": 4.2,
+          "ratingCount": 12000,
+          "bestRating": 5,
+          "worstRating": 1
+        },
+        "author": {
+          "@type": "Organization",
+          "name": "qlik",
+          "url": "https://qlik.com"
+        },
+        "datePublished": "2025-08-15T18:57:18.195Z",
+        "dateModified": "2025-08-15T18:57:18.195Z"
+      },
+      "metaTags": {
+        "title": "Qlik Sense - Best data analysis AI Tool | SiteOptz.ai",
+        "description": "AI-powered data analytics platform with associative engine Compare Qlik Sense with other data analysis AI tools. Rating: 4.2/5, 12000 reviews. Starts at $30/user/month.",
+        "keywords": "Qlik Sense, data analysis, AI tool, artificial intelligence, data-analytics, associative-engine, ai-insights, self-service",
+        "author": "SiteOptz.ai",
+        "viewport": "width=device-width, initial-scale=1",
+        "charset": "UTF-8",
+        "language": "en-US",
+        "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+        "googlebot": "index, follow",
+        "bingbot": "index, follow"
+      },
+      "socialTags": {
+        "og:title": "Qlik Sense - Best data analysis AI Tool",
+        "og:description": "AI-powered data analytics platform with associative engine",
+        "og:type": "website",
+        "og:url": "https://siteoptz.ai/tools/qlik-sense",
+        "og:image": "https://siteoptz.ai/api/og?title=Qlik%20Sense&category=data-analysis&rating=4.2",
+        "og:site_name": "SiteOptz.ai",
+        "og:locale": "en_US",
+        "twitter:card": "summary_large_image",
+        "twitter:title": "Qlik Sense - Best data analysis AI Tool",
+        "twitter:description": "AI-powered data analytics platform with associative engine",
+        "twitter:image": "https://siteoptz.ai/api/og?title=Qlik%20Sense&category=data-analysis&rating=4.2",
+        "twitter:site": "@siteoptz",
+        "twitter:creator": "@siteoptz"
+      },
+      "canonicalUrl": "https://siteoptz.ai/tools/qlik-sense",
+      "breadcrumbs": [
+        {
+          "name": "Home",
+          "url": "https://siteoptz.ai"
+        },
+        {
+          "name": "AI Tools",
+          "url": "https://siteoptz.ai/tools"
+        },
+        {
+          "name": "data analysis",
+          "url": "https://siteoptz.ai/tools/category/data-analysis"
+        },
+        {
+          "name": "Qlik Sense",
+          "url": "https://siteoptz.ai/tools/qlik-sense"
+        }
+      ],
+      "relatedTools": [],
+      "comparisonData": {
+        "category": "data-analysis",
+        "rating": 4.2,
+        "price": 30,
+        "features": 4,
+        "pros": 4,
+        "cons": 3,
+        "reviewCount": 12000,
+        "lastUpdated": "2025-08-15T18:57:18.195Z"
+      }
+    }
+  ],
+  "seo": {
+    "title": "Best data analysis AI Tools | SiteOptz.ai",
+    "description": "Discover the top data analysis AI tools. Compare features, pricing, and reviews. Find the perfect AI tool for your needs.",
+    "keywords": "data analysis, AI tools, artificial intelligence, comparison, reviews",
+    "canonicalUrl": "https://siteoptz.ai/tools/category/data-analysis",
+    "structuredData": {
+      "@context": "https://schema.org",
+      "@type": "ItemList",
+      "name": "data analysis AI Tools",
+      "description": "Top data analysis AI tools with reviews and comparisons",
+      "numberOfItems": 5,
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "item": {
+            "@type": "SoftwareApplication",
+            "name": "ChatGPT Enterprise",
+            "url": "https://siteoptz.ai/tools/chatgpt-enterprise",
+            "description": "Enterprise-grade AI assistant with advanced data analysis capabilities"
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "item": {
+            "@type": "SoftwareApplication",
+            "name": "Tableau AI",
+            "url": "https://siteoptz.ai/tools/tableau-ai",
+            "description": "AI-powered data visualization and analytics platform"
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "item": {
+            "@type": "SoftwareApplication",
+            "name": "Power BI",
+            "url": "https://siteoptz.ai/tools/power-bi",
+            "description": "Microsoft's business analytics platform with AI-powered insights"
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 4,
+          "item": {
+            "@type": "SoftwareApplication",
+            "name": "Looker",
+            "url": "https://siteoptz.ai/tools/looker",
+            "description": "Google's data platform with AI-powered analytics and insights"
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 5,
+          "item": {
+            "@type": "SoftwareApplication",
+            "name": "Qlik Sense",
+            "url": "https://siteoptz.ai/tools/qlik-sense",
+            "description": "AI-powered data analytics platform with associative engine"
+          }
+        }
+      ]
+    }
+  }
+}

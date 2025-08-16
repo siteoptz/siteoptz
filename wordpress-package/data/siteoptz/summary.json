@@ -1,0 +1,17 @@
+{
+  "totalTools": 40,
+  "totalCategories": 8,
+  "totalComparisons": 80,
+  "totalSitemapUrls": 130,
+  "categories": [
+    "text-generation",
+    "image-generation",
+    "code-generation",
+    "video-generation",
+    "audio-generation",
+    "data-analysis",
+    "productivity",
+    "research-education"
+  ],
+  "lastUpdated": "2025-08-16T18:30:57.633Z"
+}

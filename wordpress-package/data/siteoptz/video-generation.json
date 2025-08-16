@@ -1,0 +1,787 @@
+{
+  "category": "video-generation",
+  "tools": [
+    {
+      "id": "runway-ml",
+      "name": "Runway ML",
+      "description": "AI-powered video editing and generation platform",
+      "category": "video-generation",
+      "pricing": {
+        "price": 15,
+        "currency": "USD",
+        "text": "Starts at $15/month",
+        "plans": [
+          {
+            "name": "Pro",
+            "price": 15,
+            "currency": "USD",
+            "features": [
+              "Full features",
+              "Unlimited usage",
+              "Priority support"
+            ],
+            "popular": true
+          }
+        ]
+      },
+      "rating": 4.6,
+      "reviewCount": 8500,
+      "website": "https://runwayml.com",
+      "source": "runway",
+      "features": [
+        "video-editing",
+        "ai-generation",
+        "motion-graphics",
+        "professional-tools"
+      ],
+      "pros": [
+        "Professional quality",
+        "Advanced features",
+        "Good for motion graphics",
+        "Industry standard"
+      ],
+      "cons": [
+        "Expensive",
+        "Learning curve",
+        "Hardware intensive"
+      ],
+      "lastUpdated": "2025-08-15T18:57:18.195Z",
+      "seo": {
+        "title": "Runway ML - Best video generation AI Tool | SiteOptz.ai",
+        "description": "AI-powered video editing and generation platform Compare Runway ML with other video generation AI tools. Rating: 4.6/5, 8500 reviews. Starts at $15/month.",
+        "keywords": "Runway ML, video generation, AI tool, artificial intelligence, video-editing, ai-generation, motion-graphics, professional-tools, Professional quality, Advanced features, Good for motion graphics, Industry standard",
+        "slug": "runway-ml",
+        "h1": "Runway ML",
+        "h2": "Runway ML - video generation AI Tool",
+        "h3": "Features, Pricing, and Reviews of Runway ML",
+        "canonicalUrl": "https://siteoptz.ai/tools/runway-ml",
+        "robots": "index, follow",
+        "language": "en-US"
+      },
+      "structuredData": {
+        "@context": "https://schema.org",
+        "@type": "SoftwareApplication",
+        "name": "Runway ML",
+        "description": "AI-powered video editing and generation platform",
+        "url": "https://runwayml.com",
+        "applicationCategory": "video generation AI Tool",
+        "operatingSystem": "Web",
+        "offers": {
+          "@type": "Offer",
+          "price": 15,
+          "priceCurrency": "USD",
+          "availability": "https://schema.org/InStock"
+        },
+        "aggregateRating": {
+          "@type": "AggregateRating",
+          "ratingValue": 4.6,
+          "ratingCount": 8500,
+          "bestRating": 5,
+          "worstRating": 1
+        },
+        "author": {
+          "@type": "Organization",
+          "name": "runway",
+          "url": "https://runwayml.com"
+        },
+        "datePublished": "2025-08-15T18:57:18.195Z",
+        "dateModified": "2025-08-15T18:57:18.195Z"
+      },
+      "metaTags": {
+        "title": "Runway ML - Best video generation AI Tool | SiteOptz.ai",
+        "description": "AI-powered video editing and generation platform Compare Runway ML with other video generation AI tools. Rating: 4.6/5, 8500 reviews. Starts at $15/month.",
+        "keywords": "Runway ML, video generation, AI tool, artificial intelligence, video-editing, ai-generation, motion-graphics, professional-tools",
+        "author": "SiteOptz.ai",
+        "viewport": "width=device-width, initial-scale=1",
+        "charset": "UTF-8",
+        "language": "en-US",
+        "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+        "googlebot": "index, follow",
+        "bingbot": "index, follow"
+      },
+      "socialTags": {
+        "og:title": "Runway ML - Best video generation AI Tool",
+        "og:description": "AI-powered video editing and generation platform",
+        "og:type": "website",
+        "og:url": "https://siteoptz.ai/tools/runway-ml",
+        "og:image": "https://siteoptz.ai/api/og?title=Runway%20ML&category=video-generation&rating=4.6",
+        "og:site_name": "SiteOptz.ai",
+        "og:locale": "en_US",
+        "twitter:card": "summary_large_image",
+        "twitter:title": "Runway ML - Best video generation AI Tool",
+        "twitter:description": "AI-powered video editing and generation platform",
+        "twitter:image": "https://siteoptz.ai/api/og?title=Runway%20ML&category=video-generation&rating=4.6",
+        "twitter:site": "@siteoptz",
+        "twitter:creator": "@siteoptz"
+      },
+      "canonicalUrl": "https://siteoptz.ai/tools/runway-ml",
+      "breadcrumbs": [
+        {
+          "name": "Home",
+          "url": "https://siteoptz.ai"
+        },
+        {
+          "name": "AI Tools",
+          "url": "https://siteoptz.ai/tools"
+        },
+        {
+          "name": "video generation",
+          "url": "https://siteoptz.ai/tools/category/video-generation"
+        },
+        {
+          "name": "Runway ML",
+          "url": "https://siteoptz.ai/tools/runway-ml"
+        }
+      ],
+      "relatedTools": [],
+      "comparisonData": {
+        "category": "video-generation",
+        "rating": 4.6,
+        "price": 15,
+        "features": 4,
+        "pros": 4,
+        "cons": 3,
+        "reviewCount": 8500,
+        "lastUpdated": "2025-08-15T18:57:18.195Z"
+      }
+    },
+    {
+      "id": "synthesia",
+      "name": "Synthesia",
+      "description": "AI video generation platform for creating talking head videos",
+      "category": "video-generation",
+      "pricing": {
+        "price": 30,
+        "currency": "USD",
+        "text": "Starts at $30/month",
+        "plans": [
+          {
+            "name": "Pro",
+            "price": 30,
+            "currency": "USD",
+            "features": [
+              "Full features",
+              "Unlimited usage",
+              "Priority support"
+            ],
+            "popular": true
+          }
+        ]
+      },
+      "rating": 4.5,
+      "reviewCount": 6500,
+      "website": "https://synthesia.io",
+      "source": "synthesia",
+      "features": [
+        "talking-head",
+        "avatar-generation",
+        "multi-language",
+        "custom-avatars"
+      ],
+      "pros": [
+        "High quality avatars",
+        "Multi-language support",
+        "Easy to use",
+        "Professional results"
+      ],
+      "cons": [
+        "Expensive",
+        "Limited customization",
+        "Avatar limitations"
+      ],
+      "lastUpdated": "2025-08-15T18:57:18.195Z",
+      "seo": {
+        "title": "Synthesia - Best video generation AI Tool | SiteOptz.ai",
+        "description": "AI video generation platform for creating talking head videos Compare Synthesia with other video generation AI tools. Rating: 4.5/5, 6500 reviews. Starts at $30/month.",
+        "keywords": "Synthesia, video generation, AI tool, artificial intelligence, talking-head, avatar-generation, multi-language, custom-avatars, High quality avatars, Multi-language support, Easy to use, Professional results",
+        "slug": "synthesia",
+        "h1": "Synthesia",
+        "h2": "Synthesia - video generation AI Tool",
+        "h3": "Features, Pricing, and Reviews of Synthesia",
+        "canonicalUrl": "https://siteoptz.ai/tools/synthesia",
+        "robots": "index, follow",
+        "language": "en-US"
+      },
+      "structuredData": {
+        "@context": "https://schema.org",
+        "@type": "SoftwareApplication",
+        "name": "Synthesia",
+        "description": "AI video generation platform for creating talking head videos",
+        "url": "https://synthesia.io",
+        "applicationCategory": "video generation AI Tool",
+        "operatingSystem": "Web",
+        "offers": {
+          "@type": "Offer",
+          "price": 30,
+          "priceCurrency": "USD",
+          "availability": "https://schema.org/InStock"
+        },
+        "aggregateRating": {
+          "@type": "AggregateRating",
+          "ratingValue": 4.5,
+          "ratingCount": 6500,
+          "bestRating": 5,
+          "worstRating": 1
+        },
+        "author": {
+          "@type": "Organization",
+          "name": "synthesia",
+          "url": "https://synthesia.io"
+        },
+        "datePublished": "2025-08-15T18:57:18.195Z",
+        "dateModified": "2025-08-15T18:57:18.195Z"
+      },
+      "metaTags": {
+        "title": "Synthesia - Best video generation AI Tool | SiteOptz.ai",
+        "description": "AI video generation platform for creating talking head videos Compare Synthesia with other video generation AI tools. Rating: 4.5/5, 6500 reviews. Starts at $30/month.",
+        "keywords": "Synthesia, video generation, AI tool, artificial intelligence, talking-head, avatar-generation, multi-language, custom-avatars",
+        "author": "SiteOptz.ai",
+        "viewport": "width=device-width, initial-scale=1",
+        "charset": "UTF-8",
+        "language": "en-US",
+        "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+        "googlebot": "index, follow",
+        "bingbot": "index, follow"
+      },
+      "socialTags": {
+        "og:title": "Synthesia - Best video generation AI Tool",
+        "og:description": "AI video generation platform for creating talking head videos",
+        "og:type": "website",
+        "og:url": "https://siteoptz.ai/tools/synthesia",
+        "og:image": "https://siteoptz.ai/api/og?title=Synthesia&category=video-generation&rating=4.5",
+        "og:site_name": "SiteOptz.ai",
+        "og:locale": "en_US",
+        "twitter:card": "summary_large_image",
+        "twitter:title": "Synthesia - Best video generation AI Tool",
+        "twitter:description": "AI video generation platform for creating talking head videos",
+        "twitter:image": "https://siteoptz.ai/api/og?title=Synthesia&category=video-generation&rating=4.5",
+        "twitter:site": "@siteoptz",
+        "twitter:creator": "@siteoptz"
+      },
+      "canonicalUrl": "https://siteoptz.ai/tools/synthesia",
+      "breadcrumbs": [
+        {
+          "name": "Home",
+          "url": "https://siteoptz.ai"
+        },
+        {
+          "name": "AI Tools",
+          "url": "https://siteoptz.ai/tools"
+        },
+        {
+          "name": "video generation",
+          "url": "https://siteoptz.ai/tools/category/video-generation"
+        },
+        {
+          "name": "Synthesia",
+          "url": "https://siteoptz.ai/tools/synthesia"
+        }
+      ],
+      "relatedTools": [],
+      "comparisonData": {
+        "category": "video-generation",
+        "rating": 4.5,
+        "price": 30,
+        "features": 4,
+        "pros": 4,
+        "cons": 3,
+        "reviewCount": 6500,
+        "lastUpdated": "2025-08-15T18:57:18.195Z"
+      }
+    },
+    {
+      "id": "pictory",
+      "name": "Pictory",
+      "description": "AI video creation tool that turns text into engaging videos",
+      "category": "video-generation",
+      "pricing": {
+        "price": 19,
+        "currency": "USD",
+        "text": "Starts at $19/month",
+        "plans": [
+          {
+            "name": "Pro",
+            "price": 19,
+            "currency": "USD",
+            "features": [
+              "Full features",
+              "Unlimited usage",
+              "Priority support"
+            ],
+            "popular": true
+          }
+        ]
+      },
+      "rating": 4.4,
+      "reviewCount": 4500,
+      "website": "https://pictory.ai",
+      "source": "pictory",
+      "features": [
+        "text-to-video",
+        "automated-editing",
+        "stock-footage",
+        "social-media"
+      ],
+      "pros": [
+        "Easy to use",
+        "Automated editing",
+        "Good for social media",
+        "Affordable"
+      ],
+      "cons": [
+        "Limited customization",
+        "Quality varies",
+        "Stock footage dependent"
+      ],
+      "lastUpdated": "2025-08-15T18:57:18.195Z",
+      "seo": {
+        "title": "Pictory - Best video generation AI Tool | SiteOptz.ai",
+        "description": "AI video creation tool that turns text into engaging videos Compare Pictory with other video generation AI tools. Rating: 4.4/5, 4500 reviews. Starts at $19/month.",
+        "keywords": "Pictory, video generation, AI tool, artificial intelligence, text-to-video, automated-editing, stock-footage, social-media, Easy to use, Automated editing, Good for social media, Affordable",
+        "slug": "pictory",
+        "h1": "Pictory",
+        "h2": "Pictory - video generation AI Tool",
+        "h3": "Features, Pricing, and Reviews of Pictory",
+        "canonicalUrl": "https://siteoptz.ai/tools/pictory",
+        "robots": "index, follow",
+        "language": "en-US"
+      },
+      "structuredData": {
+        "@context": "https://schema.org",
+        "@type": "SoftwareApplication",
+        "name": "Pictory",
+        "description": "AI video creation tool that turns text into engaging videos",
+        "url": "https://pictory.ai",
+        "applicationCategory": "video generation AI Tool",
+        "operatingSystem": "Web",
+        "offers": {
+          "@type": "Offer",
+          "price": 19,
+          "priceCurrency": "USD",
+          "availability": "https://schema.org/InStock"
+        },
+        "aggregateRating": {
+          "@type": "AggregateRating",
+          "ratingValue": 4.4,
+          "ratingCount": 4500,
+          "bestRating": 5,
+          "worstRating": 1
+        },
+        "author": {
+          "@type": "Organization",
+          "name": "pictory",
+          "url": "https://pictory.ai"
+        },
+        "datePublished": "2025-08-15T18:57:18.195Z",
+        "dateModified": "2025-08-15T18:57:18.195Z"
+      },
+      "metaTags": {
+        "title": "Pictory - Best video generation AI Tool | SiteOptz.ai",
+        "description": "AI video creation tool that turns text into engaging videos Compare Pictory with other video generation AI tools. Rating: 4.4/5, 4500 reviews. Starts at $19/month.",
+        "keywords": "Pictory, video generation, AI tool, artificial intelligence, text-to-video, automated-editing, stock-footage, social-media",
+        "author": "SiteOptz.ai",
+        "viewport": "width=device-width, initial-scale=1",
+        "charset": "UTF-8",
+        "language": "en-US",
+        "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+        "googlebot": "index, follow",
+        "bingbot": "index, follow"
+      },
+      "socialTags": {
+        "og:title": "Pictory - Best video generation AI Tool",
+        "og:description": "AI video creation tool that turns text into engaging videos",
+        "og:type": "website",
+        "og:url": "https://siteoptz.ai/tools/pictory",
+        "og:image": "https://siteoptz.ai/api/og?title=Pictory&category=video-generation&rating=4.4",
+        "og:site_name": "SiteOptz.ai",
+        "og:locale": "en_US",
+        "twitter:card": "summary_large_image",
+        "twitter:title": "Pictory - Best video generation AI Tool",
+        "twitter:description": "AI video creation tool that turns text into engaging videos",
+        "twitter:image": "https://siteoptz.ai/api/og?title=Pictory&category=video-generation&rating=4.4",
+        "twitter:site": "@siteoptz",
+        "twitter:creator": "@siteoptz"
+      },
+      "canonicalUrl": "https://siteoptz.ai/tools/pictory",
+      "breadcrumbs": [
+        {
+          "name": "Home",
+          "url": "https://siteoptz.ai"
+        },
+        {
+          "name": "AI Tools",
+          "url": "https://siteoptz.ai/tools"
+        },
+        {
+          "name": "video generation",
+          "url": "https://siteoptz.ai/tools/category/video-generation"
+        },
+        {
+          "name": "Pictory",
+          "url": "https://siteoptz.ai/tools/pictory"
+        }
+      ],
+      "relatedTools": [],
+      "comparisonData": {
+        "category": "video-generation",
+        "rating": 4.4,
+        "price": 19,
+        "features": 4,
+        "pros": 4,
+        "cons": 3,
+        "reviewCount": 4500,
+        "lastUpdated": "2025-08-15T18:57:18.195Z"
+      }
+    },
+    {
+      "id": "lumen5",
+      "name": "Lumen5",
+      "description": "AI video maker that transforms text content into engaging videos",
+      "category": "video-generation",
+      "pricing": {
+        "price": 19,
+        "currency": "USD",
+        "text": "Starts at $19/month",
+        "plans": [
+          {
+            "name": "Pro",
+            "price": 19,
+            "currency": "USD",
+            "features": [
+              "Full features",
+              "Unlimited usage",
+              "Priority support"
+            ],
+            "popular": true
+          }
+        ]
+      },
+      "rating": 4.3,
+      "reviewCount": 7800,
+      "website": "https://lumen5.com",
+      "source": "lumen5",
+      "features": [
+        "text-to-video",
+        "social-media",
+        "templates",
+        "branding"
+      ],
+      "pros": [
+        "Great for social media",
+        "Easy to use",
+        "Good templates",
+        "Branding features"
+      ],
+      "cons": [
+        "Limited advanced features",
+        "Quality can be basic"
+      ],
+      "lastUpdated": "2025-08-15T18:57:18.195Z",
+      "seo": {
+        "title": "Lumen5 - Best video generation AI Tool | SiteOptz.ai",
+        "description": "AI video maker that transforms text content into engaging videos Compare Lumen5 with other video generation AI tools. Rating: 4.3/5, 7800 reviews. Starts at $19/month.",
+        "keywords": "Lumen5, video generation, AI tool, artificial intelligence, text-to-video, social-media, templates, branding, Great for social media, Easy to use, Good templates, Branding features",
+        "slug": "lumen5",
+        "h1": "Lumen5",
+        "h2": "Lumen5 - video generation AI Tool",
+        "h3": "Features, Pricing, and Reviews of Lumen5",
+        "canonicalUrl": "https://siteoptz.ai/tools/lumen5",
+        "robots": "index, follow",
+        "language": "en-US"
+      },
+      "structuredData": {
+        "@context": "https://schema.org",
+        "@type": "SoftwareApplication",
+        "name": "Lumen5",
+        "description": "AI video maker that transforms text content into engaging videos",
+        "url": "https://lumen5.com",
+        "applicationCategory": "video generation AI Tool",
+        "operatingSystem": "Web",
+        "offers": {
+          "@type": "Offer",
+          "price": 19,
+          "priceCurrency": "USD",
+          "availability": "https://schema.org/InStock"
+        },
+        "aggregateRating": {
+          "@type": "AggregateRating",
+          "ratingValue": 4.3,
+          "ratingCount": 7800,
+          "bestRating": 5,
+          "worstRating": 1
+        },
+        "author": {
+          "@type": "Organization",
+          "name": "lumen5",
+          "url": "https://lumen5.com"
+        },
+        "datePublished": "2025-08-15T18:57:18.195Z",
+        "dateModified": "2025-08-15T18:57:18.195Z"
+      },
+      "metaTags": {
+        "title": "Lumen5 - Best video generation AI Tool | SiteOptz.ai",
+        "description": "AI video maker that transforms text content into engaging videos Compare Lumen5 with other video generation AI tools. Rating: 4.3/5, 7800 reviews. Starts at $19/month.",
+        "keywords": "Lumen5, video generation, AI tool, artificial intelligence, text-to-video, social-media, templates, branding",
+        "author": "SiteOptz.ai",
+        "viewport": "width=device-width, initial-scale=1",
+        "charset": "UTF-8",
+        "language": "en-US",
+        "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+        "googlebot": "index, follow",
+        "bingbot": "index, follow"
+      },
+      "socialTags": {
+        "og:title": "Lumen5 - Best video generation AI Tool",
+        "og:description": "AI video maker that transforms text content into engaging videos",
+        "og:type": "website",
+        "og:url": "https://siteoptz.ai/tools/lumen5",
+        "og:image": "https://siteoptz.ai/api/og?title=Lumen5&category=video-generation&rating=4.3",
+        "og:site_name": "SiteOptz.ai",
+        "og:locale": "en_US",
+        "twitter:card": "summary_large_image",
+        "twitter:title": "Lumen5 - Best video generation AI Tool",
+        "twitter:description": "AI video maker that transforms text content into engaging videos",
+        "twitter:image": "https://siteoptz.ai/api/og?title=Lumen5&category=video-generation&rating=4.3",
+        "twitter:site": "@siteoptz",
+        "twitter:creator": "@siteoptz"
+      },
+      "canonicalUrl": "https://siteoptz.ai/tools/lumen5",
+      "breadcrumbs": [
+        {
+          "name": "Home",
+          "url": "https://siteoptz.ai"
+        },
+        {
+          "name": "AI Tools",
+          "url": "https://siteoptz.ai/tools"
+        },
+        {
+          "name": "video generation",
+          "url": "https://siteoptz.ai/tools/category/video-generation"
+        },
+        {
+          "name": "Lumen5",
+          "url": "https://siteoptz.ai/tools/lumen5"
+        }
+      ],
+      "relatedTools": [],
+      "comparisonData": {
+        "category": "video-generation",
+        "rating": 4.3,
+        "price": 19,
+        "features": 4,
+        "pros": 4,
+        "cons": 2,
+        "reviewCount": 7800,
+        "lastUpdated": "2025-08-15T18:57:18.195Z"
+      }
+    },
+    {
+      "id": "kapwing",
+      "name": "Kapwing",
+      "description": "Online video editor with AI-powered features and collaboration",
+      "category": "video-generation",
+      "pricing": {
+        "price": 0,
+        "currency": "USD",
+        "text": "Free with Pro at $20/month",
+        "plans": [
+          {
+            "name": "Free",
+            "price": 0,
+            "currency": "USD",
+            "features": [
+              "Basic features",
+              "Limited usage"
+            ],
+            "popular": false
+          }
+        ]
+      },
+      "rating": 4.2,
+      "reviewCount": 12000,
+      "website": "https://kapwing.com",
+      "source": "kapwing",
+      "features": [
+        "online-editor",
+        "collaboration",
+        "ai-features",
+        "social-media"
+      ],
+      "pros": [
+        "Free tier available",
+        "Online collaboration",
+        "Easy to use",
+        "Good for social media"
+      ],
+      "cons": [
+        "Limited AI features",
+        "Watermark in free tier"
+      ],
+      "lastUpdated": "2025-08-15T18:57:18.195Z",
+      "seo": {
+        "title": "Kapwing - Best video generation AI Tool | SiteOptz.ai",
+        "description": "Online video editor with AI-powered features and collaboration Compare Kapwing with other video generation AI tools. Rating: 4.2/5, 12000 reviews. Free with Pro at $20/month.",
+        "keywords": "Kapwing, video generation, AI tool, artificial intelligence, online-editor, collaboration, ai-features, social-media, Free tier available, Online collaboration, Easy to use, Good for social media",
+        "slug": "kapwing",
+        "h1": "Kapwing",
+        "h2": "Kapwing - video generation AI Tool",
+        "h3": "Features, Pricing, and Reviews of Kapwing",
+        "canonicalUrl": "https://siteoptz.ai/tools/kapwing",
+        "robots": "index, follow",
+        "language": "en-US"
+      },
+      "structuredData": {
+        "@context": "https://schema.org",
+        "@type": "SoftwareApplication",
+        "name": "Kapwing",
+        "description": "Online video editor with AI-powered features and collaboration",
+        "url": "https://kapwing.com",
+        "applicationCategory": "video generation AI Tool",
+        "operatingSystem": "Web",
+        "offers": {
+          "@type": "Offer",
+          "price": 0,
+          "priceCurrency": "USD",
+          "availability": "https://schema.org/InStock"
+        },
+        "aggregateRating": {
+          "@type": "AggregateRating",
+          "ratingValue": 4.2,
+          "ratingCount": 12000,
+          "bestRating": 5,
+          "worstRating": 1
+        },
+        "author": {
+          "@type": "Organization",
+          "name": "kapwing",
+          "url": "https://kapwing.com"
+        },
+        "datePublished": "2025-08-15T18:57:18.195Z",
+        "dateModified": "2025-08-15T18:57:18.195Z"
+      },
+      "metaTags": {
+        "title": "Kapwing - Best video generation AI Tool | SiteOptz.ai",
+        "description": "Online video editor with AI-powered features and collaboration Compare Kapwing with other video generation AI tools. Rating: 4.2/5, 12000 reviews. Free with Pro at $20/month.",
+        "keywords": "Kapwing, video generation, AI tool, artificial intelligence, online-editor, collaboration, ai-features, social-media",
+        "author": "SiteOptz.ai",
+        "viewport": "width=device-width, initial-scale=1",
+        "charset": "UTF-8",
+        "language": "en-US",
+        "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+        "googlebot": "index, follow",
+        "bingbot": "index, follow"
+      },
+      "socialTags": {
+        "og:title": "Kapwing - Best video generation AI Tool",
+        "og:description": "Online video editor with AI-powered features and collaboration",
+        "og:type": "website",
+        "og:url": "https://siteoptz.ai/tools/kapwing",
+        "og:image": "https://siteoptz.ai/api/og?title=Kapwing&category=video-generation&rating=4.2",
+        "og:site_name": "SiteOptz.ai",
+        "og:locale": "en_US",
+        "twitter:card": "summary_large_image",
+        "twitter:title": "Kapwing - Best video generation AI Tool",
+        "twitter:description": "Online video editor with AI-powered features and collaboration",
+        "twitter:image": "https://siteoptz.ai/api/og?title=Kapwing&category=video-generation&rating=4.2",
+        "twitter:site": "@siteoptz",
+        "twitter:creator": "@siteoptz"
+      },
+      "canonicalUrl": "https://siteoptz.ai/tools/kapwing",
+      "breadcrumbs": [
+        {
+          "name": "Home",
+          "url": "https://siteoptz.ai"
+        },
+        {
+          "name": "AI Tools",
+          "url": "https://siteoptz.ai/tools"
+        },
+        {
+          "name": "video generation",
+          "url": "https://siteoptz.ai/tools/category/video-generation"
+        },
+        {
+          "name": "Kapwing",
+          "url": "https://siteoptz.ai/tools/kapwing"
+        }
+      ],
+      "relatedTools": [],
+      "comparisonData": {
+        "category": "video-generation",
+        "rating": 4.2,
+        "price": 0,
+        "features": 4,
+        "pros": 4,
+        "cons": 2,
+        "reviewCount": 12000,
+        "lastUpdated": "2025-08-15T18:57:18.195Z"
+      }
+    }
+  ],
+  "seo": {
+    "title": "Best video generation AI Tools | SiteOptz.ai",
+    "description": "Discover the top video generation AI tools. Compare features, pricing, and reviews. Find the perfect AI tool for your needs.",
+    "keywords": "video generation, AI tools, artificial intelligence, comparison, reviews",
+    "canonicalUrl": "https://siteoptz.ai/tools/category/video-generation",
+    "structuredData": {
+      "@context": "https://schema.org",
+      "@type": "ItemList",
+      "name": "video generation AI Tools",
+      "description": "Top video generation AI tools with reviews and comparisons",
+      "numberOfItems": 5,
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "item": {
+            "@type": "SoftwareApplication",
+            "name": "Runway ML",
+            "url": "https://siteoptz.ai/tools/runway-ml",
+            "description": "AI-powered video editing and generation platform"
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "item": {
+            "@type": "SoftwareApplication",
+            "name": "Synthesia",
+            "url": "https://siteoptz.ai/tools/synthesia",
+            "description": "AI video generation platform for creating talking head videos"
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "item": {
+            "@type": "SoftwareApplication",
+            "name": "Pictory",
+            "url": "https://siteoptz.ai/tools/pictory",
+            "description": "AI video creation tool that turns text into engaging videos"
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 4,
+          "item": {
+            "@type": "SoftwareApplication",
+            "name": "Lumen5",
+            "url": "https://siteoptz.ai/tools/lumen5",
+            "description": "AI video maker that transforms text content into engaging videos"
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 5,
+          "item": {
+            "@type": "SoftwareApplication",
+            "name": "Kapwing",
+            "url": "https://siteoptz.ai/tools/kapwing",
+            "description": "Online video editor with AI-powered features and collaboration"
+          }
+        }
+      ]
+    }
+  }
+}

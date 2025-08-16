@@ -1,0 +1,696 @@
+{
+  "urls": [
+    {
+      "url": "https://siteoptz.ai",
+      "priority": 1,
+      "changefreq": "daily"
+    },
+    {
+      "url": "https://siteoptz.ai/tools",
+      "priority": 0.9,
+      "changefreq": "daily"
+    },
+    {
+      "url": "https://siteoptz.ai/tools/category/text-generation",
+      "priority": 0.8,
+      "changefreq": "weekly"
+    },
+    {
+      "url": "https://siteoptz.ai/tools/category/image-generation",
+      "priority": 0.8,
+      "changefreq": "weekly"
+    },
+    {
+      "url": "https://siteoptz.ai/tools/category/code-generation",
+      "priority": 0.8,
+      "changefreq": "weekly"
+    },
+    {
+      "url": "https://siteoptz.ai/tools/category/video-generation",
+      "priority": 0.8,
+      "changefreq": "weekly"
+    },
+    {
+      "url": "https://siteoptz.ai/tools/category/audio-generation",
+      "priority": 0.8,
+      "changefreq": "weekly"
+    },
+    {
+      "url": "https://siteoptz.ai/tools/category/data-analysis",
+      "priority": 0.8,
+      "changefreq": "weekly"
+    },
+    {
+      "url": "https://siteoptz.ai/tools/category/productivity",
+      "priority": 0.8,
+      "changefreq": "weekly"
+    },
+    {
+      "url": "https://siteoptz.ai/tools/category/research-education",
+      "priority": 0.8,
+      "changefreq": "weekly"
+    },
+    {
+      "url": "https://siteoptz.ai/tools/chatgpt",
+      "priority": 0.7,
+      "changefreq": "weekly",
+      "lastmod": "2025-08-15T18:57:18.190Z"
+    },
+    {
+      "url": "https://siteoptz.ai/tools/claude",
+      "priority": 0.7,
+      "changefreq": "weekly",
+      "lastmod": "2025-08-15T18:57:18.195Z"
+    },
+    {
+      "url": "https://siteoptz.ai/tools/jasper",
+      "priority": 0.7,
+      "changefreq": "weekly",
+      "lastmod": "2025-08-15T18:57:18.195Z"
+    },
+    {
+      "url": "https://siteoptz.ai/tools/copy-ai",
+      "priority": 0.7,
+      "changefreq": "weekly",
+      "lastmod": "2025-08-15T18:57:18.195Z"
+    },
+    {
+      "url": "https://siteoptz.ai/tools/writesonic",
+      "priority": 0.7,
+      "changefreq": "weekly",
+      "lastmod": "2025-08-15T18:57:18.195Z"
+    },
+    {
+      "url": "https://siteoptz.ai/tools/midjourney",
+      "priority": 0.7,
+      "changefreq": "weekly",
+      "lastmod": "2025-08-15T18:57:18.195Z"
+    },
+    {
+      "url": "https://siteoptz.ai/tools/dall-e",
+      "priority": 0.7,
+      "changefreq": "weekly",
+      "lastmod": "2025-08-15T18:57:18.195Z"
+    },
+    {
+      "url": "https://siteoptz.ai/tools/stable-diffusion",
+      "priority": 0.7,
+      "changefreq": "weekly",
+      "lastmod": "2025-08-15T18:57:18.195Z"
+    },
+    {
+      "url": "https://siteoptz.ai/tools/leonardo-ai",
+      "priority": 0.7,
+      "changefreq": "weekly",
+      "lastmod": "2025-08-15T18:57:18.195Z"
+    },
+    {
+      "url": "https://siteoptz.ai/tools/canva-ai",
+      "priority": 0.7,
+      "changefreq": "weekly",
+      "lastmod": "2025-08-15T18:57:18.195Z"
+    },
+    {
+      "url": "https://siteoptz.ai/tools/github-copilot",
+      "priority": 0.7,
+      "changefreq": "weekly",
+      "lastmod": "2025-08-15T18:57:18.195Z"
+    },
+    {
+      "url": "https://siteoptz.ai/tools/cursor",
+      "priority": 0.7,
+      "changefreq": "weekly",
+      "lastmod": "2025-08-15T18:57:18.195Z"
+    },
+    {
+      "url": "https://siteoptz.ai/tools/replit-ghost",
+      "priority": 0.7,
+      "changefreq": "weekly",
+      "lastmod": "2025-08-15T18:57:18.195Z"
+    },
+    {
+      "url": "https://siteoptz.ai/tools/amazon-codewhisperer",
+      "priority": 0.7,
+      "changefreq": "weekly",
+      "lastmod": "2025-08-15T18:57:18.195Z"
+    },
+    {
+      "url": "https://siteoptz.ai/tools/tabnine",
+      "priority": 0.7,
+      "changefreq": "weekly",
+      "lastmod": "2025-08-15T18:57:18.195Z"
+    },
+    {
+      "url": "https://siteoptz.ai/tools/runway-ml",
+      "priority": 0.7,
+      "changefreq": "weekly",
+      "lastmod": "2025-08-15T18:57:18.195Z"
+    },
+    {
+      "url": "https://siteoptz.ai/tools/synthesia",
+      "priority": 0.7,
+      "changefreq": "weekly",
+      "lastmod": "2025-08-15T18:57:18.195Z"
+    },
+    {
+      "url": "https://siteoptz.ai/tools/pictory",
+      "priority": 0.7,
+      "changefreq": "weekly",
+      "lastmod": "2025-08-15T18:57:18.195Z"
+    },
+    {
+      "url": "https://siteoptz.ai/tools/lumen5",
+      "priority": 0.7,
+      "changefreq": "weekly",
+      "lastmod": "2025-08-15T18:57:18.195Z"
+    },
+    {
+      "url": "https://siteoptz.ai/tools/kapwing",
+      "priority": 0.7,
+      "changefreq": "weekly",
+      "lastmod": "2025-08-15T18:57:18.195Z"
+    },
+    {
+      "url": "https://siteoptz.ai/tools/elevenlabs",
+      "priority": 0.7,
+      "changefreq": "weekly",
+      "lastmod": "2025-08-15T18:57:18.195Z"
+    },
+    {
+      "url": "https://siteoptz.ai/tools/murph-ai",
+      "priority": 0.7,
+      "changefreq": "weekly",
+      "lastmod": "2025-08-15T18:57:18.195Z"
+    },
+    {
+      "url": "https://siteoptz.ai/tools/play-ht",
+      "priority": 0.7,
+      "changefreq": "weekly",
+      "lastmod": "2025-08-15T18:57:18.195Z"
+    },
+    {
+      "url": "https://siteoptz.ai/tools/synthesys",
+      "priority": 0.7,
+      "changefreq": "weekly",
+      "lastmod": "2025-08-15T18:57:18.195Z"
+    },
+    {
+      "url": "https://siteoptz.ai/tools/wellsaid-labs",
+      "priority": 0.7,
+      "changefreq": "weekly",
+      "lastmod": "2025-08-15T18:57:18.195Z"
+    },
+    {
+      "url": "https://siteoptz.ai/tools/chatgpt-enterprise",
+      "priority": 0.7,
+      "changefreq": "weekly",
+      "lastmod": "2025-08-15T18:57:18.195Z"
+    },
+    {
+      "url": "https://siteoptz.ai/tools/tableau-ai",
+      "priority": 0.7,
+      "changefreq": "weekly",
+      "lastmod": "2025-08-15T18:57:18.195Z"
+    },
+    {
+      "url": "https://siteoptz.ai/tools/power-bi",
+      "priority": 0.7,
+      "changefreq": "weekly",
+      "lastmod": "2025-08-15T18:57:18.195Z"
+    },
+    {
+      "url": "https://siteoptz.ai/tools/looker",
+      "priority": 0.7,
+      "changefreq": "weekly",
+      "lastmod": "2025-08-15T18:57:18.195Z"
+    },
+    {
+      "url": "https://siteoptz.ai/tools/qlik-sense",
+      "priority": 0.7,
+      "changefreq": "weekly",
+      "lastmod": "2025-08-15T18:57:18.195Z"
+    },
+    {
+      "url": "https://siteoptz.ai/tools/notion-ai",
+      "priority": 0.7,
+      "changefreq": "weekly",
+      "lastmod": "2025-08-15T18:57:18.195Z"
+    },
+    {
+      "url": "https://siteoptz.ai/tools/microsoft-copilot",
+      "priority": 0.7,
+      "changefreq": "weekly",
+      "lastmod": "2025-08-15T18:57:18.195Z"
+    },
+    {
+      "url": "https://siteoptz.ai/tools/grammarly",
+      "priority": 0.7,
+      "changefreq": "weekly",
+      "lastmod": "2025-08-15T18:57:18.195Z"
+    },
+    {
+      "url": "https://siteoptz.ai/tools/trello-butler",
+      "priority": 0.7,
+      "changefreq": "weekly",
+      "lastmod": "2025-08-15T18:57:18.195Z"
+    },
+    {
+      "url": "https://siteoptz.ai/tools/zapier-ai",
+      "priority": 0.7,
+      "changefreq": "weekly",
+      "lastmod": "2025-08-15T18:57:18.195Z"
+    },
+    {
+      "url": "https://siteoptz.ai/tools/perplexity-ai",
+      "priority": 0.7,
+      "changefreq": "weekly",
+      "lastmod": "2025-08-15T18:57:18.195Z"
+    },
+    {
+      "url": "https://siteoptz.ai/tools/consensus",
+      "priority": 0.7,
+      "changefreq": "weekly",
+      "lastmod": "2025-08-15T18:57:18.195Z"
+    },
+    {
+      "url": "https://siteoptz.ai/tools/elicit",
+      "priority": 0.7,
+      "changefreq": "weekly",
+      "lastmod": "2025-08-15T18:57:18.195Z"
+    },
+    {
+      "url": "https://siteoptz.ai/tools/chatpdf",
+      "priority": 0.7,
+      "changefreq": "weekly",
+      "lastmod": "2025-08-15T18:57:18.195Z"
+    },
+    {
+      "url": "https://siteoptz.ai/tools/scite-ai",
+      "priority": 0.7,
+      "changefreq": "weekly",
+      "lastmod": "2025-08-15T18:57:18.195Z"
+    },
+    {
+      "url": "https://siteoptz.ai/compare/chatgpt-vs-claude",
+      "priority": 0.6,
+      "changefreq": "monthly"
+    },
+    {
+      "url": "https://siteoptz.ai/compare/chatgpt-vs-jasper",
+      "priority": 0.6,
+      "changefreq": "monthly"
+    },
+    {
+      "url": "https://siteoptz.ai/compare/chatgpt-vs-copy-ai",
+      "priority": 0.6,
+      "changefreq": "monthly"
+    },
+    {
+      "url": "https://siteoptz.ai/compare/chatgpt-vs-writesonic",
+      "priority": 0.6,
+      "changefreq": "monthly"
+    },
+    {
+      "url": "https://siteoptz.ai/compare/claude-vs-jasper",
+      "priority": 0.6,
+      "changefreq": "monthly"
+    },
+    {
+      "url": "https://siteoptz.ai/compare/claude-vs-copy-ai",
+      "priority": 0.6,
+      "changefreq": "monthly"
+    },
+    {
+      "url": "https://siteoptz.ai/compare/claude-vs-writesonic",
+      "priority": 0.6,
+      "changefreq": "monthly"
+    },
+    {
+      "url": "https://siteoptz.ai/compare/jasper-vs-copy-ai",
+      "priority": 0.6,
+      "changefreq": "monthly"
+    },
+    {
+      "url": "https://siteoptz.ai/compare/jasper-vs-writesonic",
+      "priority": 0.6,
+      "changefreq": "monthly"
+    },
+    {
+      "url": "https://siteoptz.ai/compare/copy-ai-vs-writesonic",
+      "priority": 0.6,
+      "changefreq": "monthly"
+    },
+    {
+      "url": "https://siteoptz.ai/compare/midjourney-vs-dall-e",
+      "priority": 0.6,
+      "changefreq": "monthly"
+    },
+    {
+      "url": "https://siteoptz.ai/compare/midjourney-vs-stable-diffusion",
+      "priority": 0.6,
+      "changefreq": "monthly"
+    },
+    {
+      "url": "https://siteoptz.ai/compare/midjourney-vs-leonardo-ai",
+      "priority": 0.6,
+      "changefreq": "monthly"
+    },
+    {
+      "url": "https://siteoptz.ai/compare/midjourney-vs-canva-ai",
+      "priority": 0.6,
+      "changefreq": "monthly"
+    },
+    {
+      "url": "https://siteoptz.ai/compare/dall-e-vs-stable-diffusion",
+      "priority": 0.6,
+      "changefreq": "monthly"
+    },
+    {
+      "url": "https://siteoptz.ai/compare/dall-e-vs-leonardo-ai",
+      "priority": 0.6,
+      "changefreq": "monthly"
+    },
+    {
+      "url": "https://siteoptz.ai/compare/dall-e-vs-canva-ai",
+      "priority": 0.6,
+      "changefreq": "monthly"
+    },
+    {
+      "url": "https://siteoptz.ai/compare/stable-diffusion-vs-leonardo-ai",
+      "priority": 0.6,
+      "changefreq": "monthly"
+    },
+    {
+      "url": "https://siteoptz.ai/compare/stable-diffusion-vs-canva-ai",
+      "priority": 0.6,
+      "changefreq": "monthly"
+    },
+    {
+      "url": "https://siteoptz.ai/compare/leonardo-ai-vs-canva-ai",
+      "priority": 0.6,
+      "changefreq": "monthly"
+    },
+    {
+      "url": "https://siteoptz.ai/compare/github-copilot-vs-cursor",
+      "priority": 0.6,
+      "changefreq": "monthly"
+    },
+    {
+      "url": "https://siteoptz.ai/compare/github-copilot-vs-replit-ghost",
+      "priority": 0.6,
+      "changefreq": "monthly"
+    },
+    {
+      "url": "https://siteoptz.ai/compare/github-copilot-vs-amazon-codewhisperer",
+      "priority": 0.6,
+      "changefreq": "monthly"
+    },
+    {
+      "url": "https://siteoptz.ai/compare/github-copilot-vs-tabnine",
+      "priority": 0.6,
+      "changefreq": "monthly"
+    },
+    {
+      "url": "https://siteoptz.ai/compare/cursor-vs-replit-ghost",
+      "priority": 0.6,
+      "changefreq": "monthly"
+    },
+    {
+      "url": "https://siteoptz.ai/compare/cursor-vs-amazon-codewhisperer",
+      "priority": 0.6,
+      "changefreq": "monthly"
+    },
+    {
+      "url": "https://siteoptz.ai/compare/cursor-vs-tabnine",
+      "priority": 0.6,
+      "changefreq": "monthly"
+    },
+    {
+      "url": "https://siteoptz.ai/compare/replit-ghost-vs-amazon-codewhisperer",
+      "priority": 0.6,
+      "changefreq": "monthly"
+    },
+    {
+      "url": "https://siteoptz.ai/compare/replit-ghost-vs-tabnine",
+      "priority": 0.6,
+      "changefreq": "monthly"
+    },
+    {
+      "url": "https://siteoptz.ai/compare/amazon-codewhisperer-vs-tabnine",
+      "priority": 0.6,
+      "changefreq": "monthly"
+    },
+    {
+      "url": "https://siteoptz.ai/compare/runway-ml-vs-synthesia",
+      "priority": 0.6,
+      "changefreq": "monthly"
+    },
+    {
+      "url": "https://siteoptz.ai/compare/runway-ml-vs-pictory",
+      "priority": 0.6,
+      "changefreq": "monthly"
+    },
+    {
+      "url": "https://siteoptz.ai/compare/runway-ml-vs-lumen5",
+      "priority": 0.6,
+      "changefreq": "monthly"
+    },
+    {
+      "url": "https://siteoptz.ai/compare/runway-ml-vs-kapwing",
+      "priority": 0.6,
+      "changefreq": "monthly"
+    },
+    {
+      "url": "https://siteoptz.ai/compare/synthesia-vs-pictory",
+      "priority": 0.6,
+      "changefreq": "monthly"
+    },
+    {
+      "url": "https://siteoptz.ai/compare/synthesia-vs-lumen5",
+      "priority": 0.6,
+      "changefreq": "monthly"
+    },
+    {
+      "url": "https://siteoptz.ai/compare/synthesia-vs-kapwing",
+      "priority": 0.6,
+      "changefreq": "monthly"
+    },
+    {
+      "url": "https://siteoptz.ai/compare/pictory-vs-lumen5",
+      "priority": 0.6,
+      "changefreq": "monthly"
+    },
+    {
+      "url": "https://siteoptz.ai/compare/pictory-vs-kapwing",
+      "priority": 0.6,
+      "changefreq": "monthly"
+    },
+    {
+      "url": "https://siteoptz.ai/compare/lumen5-vs-kapwing",
+      "priority": 0.6,
+      "changefreq": "monthly"
+    },
+    {
+      "url": "https://siteoptz.ai/compare/elevenlabs-vs-murph-ai",
+      "priority": 0.6,
+      "changefreq": "monthly"
+    },
+    {
+      "url": "https://siteoptz.ai/compare/elevenlabs-vs-play-ht",
+      "priority": 0.6,
+      "changefreq": "monthly"
+    },
+    {
+      "url": "https://siteoptz.ai/compare/elevenlabs-vs-synthesys",
+      "priority": 0.6,
+      "changefreq": "monthly"
+    },
+    {
+      "url": "https://siteoptz.ai/compare/elevenlabs-vs-wellsaid-labs",
+      "priority": 0.6,
+      "changefreq": "monthly"
+    },
+    {
+      "url": "https://siteoptz.ai/compare/murph-ai-vs-play-ht",
+      "priority": 0.6,
+      "changefreq": "monthly"
+    },
+    {
+      "url": "https://siteoptz.ai/compare/murph-ai-vs-synthesys",
+      "priority": 0.6,
+      "changefreq": "monthly"
+    },
+    {
+      "url": "https://siteoptz.ai/compare/murph-ai-vs-wellsaid-labs",
+      "priority": 0.6,
+      "changefreq": "monthly"
+    },
+    {
+      "url": "https://siteoptz.ai/compare/play-ht-vs-synthesys",
+      "priority": 0.6,
+      "changefreq": "monthly"
+    },
+    {
+      "url": "https://siteoptz.ai/compare/play-ht-vs-wellsaid-labs",
+      "priority": 0.6,
+      "changefreq": "monthly"
+    },
+    {
+      "url": "https://siteoptz.ai/compare/synthesys-vs-wellsaid-labs",
+      "priority": 0.6,
+      "changefreq": "monthly"
+    },
+    {
+      "url": "https://siteoptz.ai/compare/chatgpt-enterprise-vs-tableau-ai",
+      "priority": 0.6,
+      "changefreq": "monthly"
+    },
+    {
+      "url": "https://siteoptz.ai/compare/chatgpt-enterprise-vs-power-bi",
+      "priority": 0.6,
+      "changefreq": "monthly"
+    },
+    {
+      "url": "https://siteoptz.ai/compare/chatgpt-enterprise-vs-looker",
+      "priority": 0.6,
+      "changefreq": "monthly"
+    },
+    {
+      "url": "https://siteoptz.ai/compare/chatgpt-enterprise-vs-qlik-sense",
+      "priority": 0.6,
+      "changefreq": "monthly"
+    },
+    {
+      "url": "https://siteoptz.ai/compare/tableau-ai-vs-power-bi",
+      "priority": 0.6,
+      "changefreq": "monthly"
+    },
+    {
+      "url": "https://siteoptz.ai/compare/tableau-ai-vs-looker",
+      "priority": 0.6,
+      "changefreq": "monthly"
+    },
+    {
+      "url": "https://siteoptz.ai/compare/tableau-ai-vs-qlik-sense",
+      "priority": 0.6,
+      "changefreq": "monthly"
+    },
+    {
+      "url": "https://siteoptz.ai/compare/power-bi-vs-looker",
+      "priority": 0.6,
+      "changefreq": "monthly"
+    },
+    {
+      "url": "https://siteoptz.ai/compare/power-bi-vs-qlik-sense",
+      "priority": 0.6,
+      "changefreq": "monthly"
+    },
+    {
+      "url": "https://siteoptz.ai/compare/looker-vs-qlik-sense",
+      "priority": 0.6,
+      "changefreq": "monthly"
+    },
+    {
+      "url": "https://siteoptz.ai/compare/notion-ai-vs-microsoft-copilot",
+      "priority": 0.6,
+      "changefreq": "monthly"
+    },
+    {
+      "url": "https://siteoptz.ai/compare/notion-ai-vs-grammarly",
+      "priority": 0.6,
+      "changefreq": "monthly"
+    },
+    {
+      "url": "https://siteoptz.ai/compare/notion-ai-vs-trello-butler",
+      "priority": 0.6,
+      "changefreq": "monthly"
+    },
+    {
+      "url": "https://siteoptz.ai/compare/notion-ai-vs-zapier-ai",
+      "priority": 0.6,
+      "changefreq": "monthly"
+    },
+    {
+      "url": "https://siteoptz.ai/compare/microsoft-copilot-vs-grammarly",
+      "priority": 0.6,
+      "changefreq": "monthly"
+    },
+    {
+      "url": "https://siteoptz.ai/compare/microsoft-copilot-vs-trello-butler",
+      "priority": 0.6,
+      "changefreq": "monthly"
+    },
+    {
+      "url": "https://siteoptz.ai/compare/microsoft-copilot-vs-zapier-ai",
+      "priority": 0.6,
+      "changefreq": "monthly"
+    },
+    {
+      "url": "https://siteoptz.ai/compare/grammarly-vs-trello-butler",
+      "priority": 0.6,
+      "changefreq": "monthly"
+    },
+    {
+      "url": "https://siteoptz.ai/compare/grammarly-vs-zapier-ai",
+      "priority": 0.6,
+      "changefreq": "monthly"
+    },
+    {
+      "url": "https://siteoptz.ai/compare/trello-butler-vs-zapier-ai",
+      "priority": 0.6,
+      "changefreq": "monthly"
+    },
+    {
+      "url": "https://siteoptz.ai/compare/perplexity-ai-vs-consensus",
+      "priority": 0.6,
+      "changefreq": "monthly"
+    },
+    {
+      "url": "https://siteoptz.ai/compare/perplexity-ai-vs-elicit",
+      "priority": 0.6,
+      "changefreq": "monthly"
+    },
+    {
+      "url": "https://siteoptz.ai/compare/perplexity-ai-vs-chatpdf",
+      "priority": 0.6,
+      "changefreq": "monthly"
+    },
+    {
+      "url": "https://siteoptz.ai/compare/perplexity-ai-vs-scite-ai",
+      "priority": 0.6,
+      "changefreq": "monthly"
+    },
+    {
+      "url": "https://siteoptz.ai/compare/consensus-vs-elicit",
+      "priority": 0.6,
+      "changefreq": "monthly"
+    },
+    {
+      "url": "https://siteoptz.ai/compare/consensus-vs-chatpdf",
+      "priority": 0.6,
+      "changefreq": "monthly"
+    },
+    {
+      "url": "https://siteoptz.ai/compare/consensus-vs-scite-ai",
+      "priority": 0.6,
+      "changefreq": "monthly"
+    },
+    {
+      "url": "https://siteoptz.ai/compare/elicit-vs-chatpdf",
+      "priority": 0.6,
+      "changefreq": "monthly"
+    },
+    {
+      "url": "https://siteoptz.ai/compare/elicit-vs-scite-ai",
+      "priority": 0.6,
+      "changefreq": "monthly"
+    },
+    {
+      "url": "https://siteoptz.ai/compare/chatpdf-vs-scite-ai",
+      "priority": 0.6,
+      "changefreq": "monthly"
+    }
+  ],
+  "total": 130,
+  "lastUpdated": "2025-08-16T18:30:57.628Z"
+}

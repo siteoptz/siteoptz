@@ -1,0 +1,346 @@
+{
+  "category": "Analytics",
+  "slug": "analytics",
+  "tool_count": 5,
+  "tools": [
+    {
+      "tool_name": "Tableau AI",
+      "vendor": "Tableau",
+      "category": "Analytics",
+      "features": {
+        "core": [
+          "Data visualization",
+          "Interactive dashboards",
+          "Drag-and-drop interface",
+          "Multiple data sources",
+          "Real-time analytics",
+          "Mobile compatibility",
+          "Collaborative features"
+        ],
+        "advanced": [
+          "AI-powered insights",
+          "Natural language queries",
+          "Predictive analytics",
+          "Advanced calculations",
+          "Custom visualizations",
+          "Enterprise security",
+          "API integration"
+        ],
+        "integrations": [
+          "SQL databases",
+          "Cloud platforms",
+          "Excel and CSV",
+          "Salesforce",
+          "Google Analytics",
+          "REST APIs"
+        ]
+      },
+      "pricing": {
+        "monthly": 70,
+        "yearly": 840,
+        "enterprise": "Custom"
+      },
+      "free_trial": true,
+      "pros": [
+        "Powerful data visualization capabilities",
+        "User-friendly drag-and-drop interface",
+        "Strong enterprise features",
+        "Excellent community support",
+        "Wide range of data connectors",
+        "Robust security features"
+      ],
+      "cons": [
+        "Expensive licensing costs",
+        "Steep learning curve for advanced features",
+        "Can be slow with large datasets",
+        "Limited customization options"
+      ],
+      "rating": 4.5,
+      "use_cases": [
+        "Business intelligence",
+        "Data analytics",
+        "Performance dashboards",
+        "Financial reporting",
+        "Market analysis",
+        "Operational insights"
+      ],
+      "affiliate_link": "https://tableau.com/",
+      "logo_url": "/images/tools/tableau-ai-logo.svg",
+      "search_volume": 15000,
+      "cpc": 4.2,
+      "description": "Tableau AI is a leading data visualization and business intelligence platform that helps organizations analyze and understand their data through interactive dashboards and AI-powered insights. It enables users to create compelling visualizations and discover data-driven insights."
+    },
+    {
+      "tool_name": "Power BI",
+      "vendor": "Microsoft",
+      "category": "Analytics",
+      "features": {
+        "core": [
+          "Business intelligence dashboards",
+          "AI-powered insights",
+          "Data visualization",
+          "Real-time analytics",
+          "Microsoft 365 integration",
+          "Self-service BI",
+          "Mobile accessibility"
+        ],
+        "advanced": [
+          "Advanced AI analytics",
+          "Custom visuals",
+          "Dataflows",
+          "Premium connectors",
+          "Large dataset support",
+          "Advanced security",
+          "Embedded analytics"
+        ],
+        "integrations": [
+          "Microsoft 365",
+          "Azure",
+          "SharePoint",
+          "Teams",
+          "Excel",
+          "SQL Server",
+          "Third-party connectors"
+        ]
+      },
+      "pricing": {
+        "monthly": 9.99,
+        "yearly": 99.99,
+        "enterprise": 20
+      },
+      "free_trial": true,
+      "pros": [
+        "Seamless Microsoft integration",
+        "Affordable pricing",
+        "User-friendly interface",
+        "Strong enterprise features",
+        "Regular updates",
+        "Good mobile experience"
+      ],
+      "cons": [
+        "Limited advanced AI compared to competitors",
+        "Primarily Microsoft ecosystem",
+        "Can be slow with large datasets",
+        "Limited customization options"
+      ],
+      "rating": 4.4,
+      "use_cases": [
+        "Business intelligence reporting",
+        "Microsoft ecosystem analytics",
+        "Self-service BI",
+        "Executive dashboards",
+        "Real-time monitoring",
+        "Enterprise reporting"
+      ],
+      "affiliate_link": "https://powerbi.microsoft.com/",
+      "logo_url": "/images/tools/power-bi-logo.svg",
+      "search_volume": 18500,
+      "cpc": 4.5,
+      "description": "Microsoft Power BI is a comprehensive business intelligence platform that transforms data into actionable insights. With AI-powered analytics and seamless Microsoft 365 integration, it's ideal for organizations already using Microsoft tools."
+    },
+    {
+      "tool_name": "Looker",
+      "vendor": "Google",
+      "category": "Analytics",
+      "features": {
+        "core": [
+          "Data platform",
+          "AI-powered analytics",
+          "Custom modeling",
+          "Real-time data",
+          "Collaboration tools",
+          "Advanced visualization",
+          "API-first architecture"
+        ],
+        "advanced": [
+          "Machine learning integration",
+          "Advanced governance",
+          "Custom applications",
+          "Embedded analytics",
+          "Advanced security",
+          "Enterprise scalability",
+          "Custom workflows"
+        ],
+        "integrations": [
+          "Google Cloud",
+          "BigQuery",
+          "Google Analytics",
+          "Slack",
+          "Salesforce",
+          "Amazon Redshift",
+          "Snowflake"
+        ]
+      },
+      "pricing": {
+        "monthly": "Custom",
+        "yearly": "Custom",
+        "enterprise": "Custom"
+      },
+      "free_trial": true,
+      "pros": [
+        "Powerful data modeling",
+        "Strong Google Cloud integration",
+        "Enterprise-grade features",
+        "Excellent scalability",
+        "API-first approach",
+        "Advanced governance"
+      ],
+      "cons": [
+        "Complex pricing structure",
+        "Steep learning curve",
+        "Expensive for smaller teams",
+        "Requires technical expertise"
+      ],
+      "rating": 4.3,
+      "use_cases": [
+        "Enterprise data analytics",
+        "Google Cloud analytics",
+        "Data science workflows",
+        "Custom BI applications",
+        "Large-scale data processing",
+        "Advanced data governance"
+      ],
+      "affiliate_link": "https://looker.com/",
+      "logo_url": "/images/tools/looker-logo.svg",
+      "search_volume": 8200,
+      "cpc": 6.8,
+      "description": "Looker is Google's enterprise data platform that provides AI-powered analytics and business intelligence. With advanced data modeling and Google Cloud integration, it's designed for organizations requiring sophisticated data analysis capabilities."
+    },
+    {
+      "tool_name": "Qlik Sense",
+      "vendor": "Qlik",
+      "category": "Analytics",
+      "features": {
+        "core": [
+          "Associative analytics engine",
+          "AI-powered insights",
+          "Self-service BI",
+          "Interactive dashboards",
+          "Data discovery",
+          "Natural language queries",
+          "Augmented analytics"
+        ],
+        "advanced": [
+          "Advanced AI/ML",
+          "Custom extensions",
+          "Enterprise governance",
+          "Multi-cloud deployment",
+          "Advanced security",
+          "Custom applications",
+          "Real-time streaming"
+        ],
+        "integrations": [
+          "Salesforce",
+          "SAP",
+          "Microsoft Office",
+          "Amazon Web Services",
+          "Google Cloud",
+          "Snowflake",
+          "Tableau"
+        ]
+      },
+      "pricing": {
+        "monthly": 30,
+        "yearly": 300,
+        "enterprise": "Custom"
+      },
+      "free_trial": true,
+      "pros": [
+        "Unique associative engine",
+        "Strong self-service capabilities",
+        "Excellent data discovery",
+        "Flexible deployment options",
+        "Good AI integration",
+        "Intuitive user interface"
+      ],
+      "cons": [
+        "Expensive licensing",
+        "Learning curve for advanced features",
+        "Resource-intensive",
+        "Complex administration"
+      ],
+      "rating": 4.2,
+      "use_cases": [
+        "Self-service business intelligence",
+        "Data discovery and exploration",
+        "Executive dashboards",
+        "Operational analytics",
+        "Financial reporting",
+        "Customer analytics"
+      ],
+      "affiliate_link": "https://www.qlik.com/",
+      "logo_url": "/images/tools/qlik-sense-logo.svg",
+      "search_volume": 5400,
+      "cpc": 5.2,
+      "description": "Qlik Sense is an AI-powered analytics platform featuring a unique associative engine that enables users to explore data freely. With strong self-service BI capabilities and augmented analytics, it helps organizations discover hidden insights."
+    },
+    {
+      "tool_name": "ChatGPT Enterprise",
+      "vendor": "OpenAI",
+      "category": "Analytics",
+      "features": {
+        "core": [
+          "Advanced data analysis",
+          "Enterprise-grade security",
+          "Custom model training",
+          "API access",
+          "Team collaboration",
+          "Advanced analytics",
+          "Unlimited usage"
+        ],
+        "advanced": [
+          "Custom GPT models",
+          "Advanced integrations",
+          "Enterprise SSO",
+          "Data residency control",
+          "Advanced admin controls",
+          "Priority support",
+          "Custom deployment"
+        ],
+        "integrations": [
+          "Microsoft 365",
+          "Slack",
+          "Salesforce",
+          "Custom APIs",
+          "Enterprise systems",
+          "Business intelligence tools",
+          "Data warehouses"
+        ]
+      },
+      "pricing": {
+        "monthly": "Custom",
+        "yearly": "Custom",
+        "enterprise": "Custom"
+      },
+      "free_trial": false,
+      "pros": [
+        "Enterprise-grade security",
+        "Unlimited usage",
+        "Custom model capabilities",
+        "Advanced data analysis",
+        "Priority support",
+        "Flexible deployment"
+      ],
+      "cons": [
+        "High cost",
+        "Complex setup",
+        "Limited availability",
+        "Requires enterprise commitment"
+      ],
+      "rating": 4.6,
+      "use_cases": [
+        "Enterprise data analysis",
+        "Business intelligence",
+        "Advanced analytics",
+        "Custom AI solutions",
+        "Large-scale deployments",
+        "Secure AI processing"
+      ],
+      "affiliate_link": "https://openai.com/enterprise",
+      "logo_url": "/images/tools/chatgpt-enterprise-logo.svg",
+      "search_volume": 3100,
+      "cpc": 8.9,
+      "description": "ChatGPT Enterprise is OpenAI's enterprise-grade AI solution offering advanced data analysis, custom model training, and enterprise security. Designed for large organizations requiring secure, scalable AI capabilities."
+    }
+  ]
+}

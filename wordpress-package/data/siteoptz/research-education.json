@@ -1,0 +1,783 @@
+{
+  "category": "research-education",
+  "tools": [
+    {
+      "id": "perplexity-ai",
+      "name": "Perplexity AI",
+      "description": "AI-powered search engine with conversational interface and citations",
+      "category": "research-education",
+      "pricing": {
+        "price": 0,
+        "currency": "USD",
+        "text": "Free with Pro at $20/month",
+        "plans": [
+          {
+            "name": "Free",
+            "price": 0,
+            "currency": "USD",
+            "features": [
+              "Basic features",
+              "Limited usage"
+            ],
+            "popular": false
+          }
+        ]
+      },
+      "rating": 4.7,
+      "reviewCount": 12000,
+      "website": "https://perplexity.ai",
+      "source": "perplexity",
+      "features": [
+        "ai-search",
+        "conversational-interface",
+        "citations",
+        "real-time-data"
+      ],
+      "pros": [
+        "Excellent search results",
+        "Citations provided",
+        "Real-time data",
+        "Free tier"
+      ],
+      "cons": [
+        "Limited advanced features",
+        "Can be slow"
+      ],
+      "lastUpdated": "2025-08-15T18:57:18.195Z",
+      "seo": {
+        "title": "Perplexity AI - Best research education AI Tool | SiteOptz.ai",
+        "description": "AI-powered search engine with conversational interface and citations Compare Perplexity AI with other research education AI tools. Rating: 4.7/5, 12000 reviews. Free with Pro at $20/month.",
+        "keywords": "Perplexity AI, research education, AI tool, artificial intelligence, ai-search, conversational-interface, citations, real-time-data, Excellent search results, Citations provided, Real-time data, Free tier",
+        "slug": "perplexity-ai",
+        "h1": "Perplexity AI",
+        "h2": "Perplexity AI - research education AI Tool",
+        "h3": "Features, Pricing, and Reviews of Perplexity AI",
+        "canonicalUrl": "https://siteoptz.ai/tools/perplexity-ai",
+        "robots": "index, follow",
+        "language": "en-US"
+      },
+      "structuredData": {
+        "@context": "https://schema.org",
+        "@type": "SoftwareApplication",
+        "name": "Perplexity AI",
+        "description": "AI-powered search engine with conversational interface and citations",
+        "url": "https://perplexity.ai",
+        "applicationCategory": "research education AI Tool",
+        "operatingSystem": "Web",
+        "offers": {
+          "@type": "Offer",
+          "price": 0,
+          "priceCurrency": "USD",
+          "availability": "https://schema.org/InStock"
+        },
+        "aggregateRating": {
+          "@type": "AggregateRating",
+          "ratingValue": 4.7,
+          "ratingCount": 12000,
+          "bestRating": 5,
+          "worstRating": 1
+        },
+        "author": {
+          "@type": "Organization",
+          "name": "perplexity",
+          "url": "https://perplexity.ai"
+        },
+        "datePublished": "2025-08-15T18:57:18.195Z",
+        "dateModified": "2025-08-15T18:57:18.195Z"
+      },
+      "metaTags": {
+        "title": "Perplexity AI - Best research education AI Tool | SiteOptz.ai",
+        "description": "AI-powered search engine with conversational interface and citations Compare Perplexity AI with other research education AI tools. Rating: 4.7/5, 12000 reviews. Free with Pro at $20/month.",
+        "keywords": "Perplexity AI, research education, AI tool, artificial intelligence, ai-search, conversational-interface, citations, real-time-data",
+        "author": "SiteOptz.ai",
+        "viewport": "width=device-width, initial-scale=1",
+        "charset": "UTF-8",
+        "language": "en-US",
+        "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+        "googlebot": "index, follow",
+        "bingbot": "index, follow"
+      },
+      "socialTags": {
+        "og:title": "Perplexity AI - Best research education AI Tool",
+        "og:description": "AI-powered search engine with conversational interface and citations",
+        "og:type": "website",
+        "og:url": "https://siteoptz.ai/tools/perplexity-ai",
+        "og:image": "https://siteoptz.ai/api/og?title=Perplexity%20AI&category=research-education&rating=4.7",
+        "og:site_name": "SiteOptz.ai",
+        "og:locale": "en_US",
+        "twitter:card": "summary_large_image",
+        "twitter:title": "Perplexity AI - Best research education AI Tool",
+        "twitter:description": "AI-powered search engine with conversational interface and citations",
+        "twitter:image": "https://siteoptz.ai/api/og?title=Perplexity%20AI&category=research-education&rating=4.7",
+        "twitter:site": "@siteoptz",
+        "twitter:creator": "@siteoptz"
+      },
+      "canonicalUrl": "https://siteoptz.ai/tools/perplexity-ai",
+      "breadcrumbs": [
+        {
+          "name": "Home",
+          "url": "https://siteoptz.ai"
+        },
+        {
+          "name": "AI Tools",
+          "url": "https://siteoptz.ai/tools"
+        },
+        {
+          "name": "research education",
+          "url": "https://siteoptz.ai/tools/category/research-education"
+        },
+        {
+          "name": "Perplexity AI",
+          "url": "https://siteoptz.ai/tools/perplexity-ai"
+        }
+      ],
+      "relatedTools": [],
+      "comparisonData": {
+        "category": "research-education",
+        "rating": 4.7,
+        "price": 0,
+        "features": 4,
+        "pros": 4,
+        "cons": 2,
+        "reviewCount": 12000,
+        "lastUpdated": "2025-08-15T18:57:18.195Z"
+      }
+    },
+    {
+      "id": "consensus",
+      "name": "Consensus",
+      "description": "AI-powered research tool for finding and analyzing scientific papers",
+      "category": "research-education",
+      "pricing": {
+        "price": 8.99,
+        "currency": "USD",
+        "text": "Starts at $8.99/month",
+        "plans": [
+          {
+            "name": "Pro",
+            "price": 8.99,
+            "currency": "USD",
+            "features": [
+              "Full features",
+              "Unlimited usage",
+              "Priority support"
+            ],
+            "popular": true
+          }
+        ]
+      },
+      "rating": 4.5,
+      "reviewCount": 8500,
+      "website": "https://consensus.app",
+      "source": "consensus",
+      "features": [
+        "scientific-research",
+        "paper-analysis",
+        "ai-insights",
+        "academic-focus"
+      ],
+      "pros": [
+        "Excellent for research",
+        "Scientific accuracy",
+        "Good insights",
+        "Academic focus"
+      ],
+      "cons": [
+        "Limited to scientific papers",
+        "Expensive for students"
+      ],
+      "lastUpdated": "2025-08-15T18:57:18.195Z",
+      "seo": {
+        "title": "Consensus - Best research education AI Tool | SiteOptz.ai",
+        "description": "AI-powered research tool for finding and analyzing scientific papers Compare Consensus with other research education AI tools. Rating: 4.5/5, 8500 reviews. Starts at $8.99/month.",
+        "keywords": "Consensus, research education, AI tool, artificial intelligence, scientific-research, paper-analysis, ai-insights, academic-focus, Excellent for research, Scientific accuracy, Good insights, Academic focus",
+        "slug": "consensus",
+        "h1": "Consensus",
+        "h2": "Consensus - research education AI Tool",
+        "h3": "Features, Pricing, and Reviews of Consensus",
+        "canonicalUrl": "https://siteoptz.ai/tools/consensus",
+        "robots": "index, follow",
+        "language": "en-US"
+      },
+      "structuredData": {
+        "@context": "https://schema.org",
+        "@type": "SoftwareApplication",
+        "name": "Consensus",
+        "description": "AI-powered research tool for finding and analyzing scientific papers",
+        "url": "https://consensus.app",
+        "applicationCategory": "research education AI Tool",
+        "operatingSystem": "Web",
+        "offers": {
+          "@type": "Offer",
+          "price": 8.99,
+          "priceCurrency": "USD",
+          "availability": "https://schema.org/InStock"
+        },
+        "aggregateRating": {
+          "@type": "AggregateRating",
+          "ratingValue": 4.5,
+          "ratingCount": 8500,
+          "bestRating": 5,
+          "worstRating": 1
+        },
+        "author": {
+          "@type": "Organization",
+          "name": "consensus",
+          "url": "https://consensus.app"
+        },
+        "datePublished": "2025-08-15T18:57:18.195Z",
+        "dateModified": "2025-08-15T18:57:18.195Z"
+      },
+      "metaTags": {
+        "title": "Consensus - Best research education AI Tool | SiteOptz.ai",
+        "description": "AI-powered research tool for finding and analyzing scientific papers Compare Consensus with other research education AI tools. Rating: 4.5/5, 8500 reviews. Starts at $8.99/month.",
+        "keywords": "Consensus, research education, AI tool, artificial intelligence, scientific-research, paper-analysis, ai-insights, academic-focus",
+        "author": "SiteOptz.ai",
+        "viewport": "width=device-width, initial-scale=1",
+        "charset": "UTF-8",
+        "language": "en-US",
+        "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+        "googlebot": "index, follow",
+        "bingbot": "index, follow"
+      },
+      "socialTags": {
+        "og:title": "Consensus - Best research education AI Tool",
+        "og:description": "AI-powered research tool for finding and analyzing scientific papers",
+        "og:type": "website",
+        "og:url": "https://siteoptz.ai/tools/consensus",
+        "og:image": "https://siteoptz.ai/api/og?title=Consensus&category=research-education&rating=4.5",
+        "og:site_name": "SiteOptz.ai",
+        "og:locale": "en_US",
+        "twitter:card": "summary_large_image",
+        "twitter:title": "Consensus - Best research education AI Tool",
+        "twitter:description": "AI-powered research tool for finding and analyzing scientific papers",
+        "twitter:image": "https://siteoptz.ai/api/og?title=Consensus&category=research-education&rating=4.5",
+        "twitter:site": "@siteoptz",
+        "twitter:creator": "@siteoptz"
+      },
+      "canonicalUrl": "https://siteoptz.ai/tools/consensus",
+      "breadcrumbs": [
+        {
+          "name": "Home",
+          "url": "https://siteoptz.ai"
+        },
+        {
+          "name": "AI Tools",
+          "url": "https://siteoptz.ai/tools"
+        },
+        {
+          "name": "research education",
+          "url": "https://siteoptz.ai/tools/category/research-education"
+        },
+        {
+          "name": "Consensus",
+          "url": "https://siteoptz.ai/tools/consensus"
+        }
+      ],
+      "relatedTools": [],
+      "comparisonData": {
+        "category": "research-education",
+        "rating": 4.5,
+        "price": 8.99,
+        "features": 4,
+        "pros": 4,
+        "cons": 2,
+        "reviewCount": 8500,
+        "lastUpdated": "2025-08-15T18:57:18.195Z"
+      }
+    },
+    {
+      "id": "elicit",
+      "name": "Elicit",
+      "description": "AI research assistant for analyzing and summarizing academic papers",
+      "category": "research-education",
+      "pricing": {
+        "price": 0,
+        "currency": "USD",
+        "text": "Free with paid plans",
+        "plans": [
+          {
+            "name": "Free",
+            "price": 0,
+            "currency": "USD",
+            "features": [
+              "Basic features",
+              "Limited usage"
+            ],
+            "popular": false
+          }
+        ]
+      },
+      "rating": 4.4,
+      "reviewCount": 6500,
+      "website": "https://elicit.org",
+      "source": "elicit",
+      "features": [
+        "research-assistant",
+        "paper-summarization",
+        "question-answering",
+        "academic-focus"
+      ],
+      "pros": [
+        "Great for research",
+        "Free tier available",
+        "Good summarization",
+        "Academic focus"
+      ],
+      "cons": [
+        "Limited to academic papers",
+        "Quality varies"
+      ],
+      "lastUpdated": "2025-08-15T18:57:18.195Z",
+      "seo": {
+        "title": "Elicit - Best research education AI Tool | SiteOptz.ai",
+        "description": "AI research assistant for analyzing and summarizing academic papers Compare Elicit with other research education AI tools. Rating: 4.4/5, 6500 reviews. Free with paid plans.",
+        "keywords": "Elicit, research education, AI tool, artificial intelligence, research-assistant, paper-summarization, question-answering, academic-focus, Great for research, Free tier available, Good summarization, Academic focus",
+        "slug": "elicit",
+        "h1": "Elicit",
+        "h2": "Elicit - research education AI Tool",
+        "h3": "Features, Pricing, and Reviews of Elicit",
+        "canonicalUrl": "https://siteoptz.ai/tools/elicit",
+        "robots": "index, follow",
+        "language": "en-US"
+      },
+      "structuredData": {
+        "@context": "https://schema.org",
+        "@type": "SoftwareApplication",
+        "name": "Elicit",
+        "description": "AI research assistant for analyzing and summarizing academic papers",
+        "url": "https://elicit.org",
+        "applicationCategory": "research education AI Tool",
+        "operatingSystem": "Web",
+        "offers": {
+          "@type": "Offer",
+          "price": 0,
+          "priceCurrency": "USD",
+          "availability": "https://schema.org/InStock"
+        },
+        "aggregateRating": {
+          "@type": "AggregateRating",
+          "ratingValue": 4.4,
+          "ratingCount": 6500,
+          "bestRating": 5,
+          "worstRating": 1
+        },
+        "author": {
+          "@type": "Organization",
+          "name": "elicit",
+          "url": "https://elicit.org"
+        },
+        "datePublished": "2025-08-15T18:57:18.195Z",
+        "dateModified": "2025-08-15T18:57:18.195Z"
+      },
+      "metaTags": {
+        "title": "Elicit - Best research education AI Tool | SiteOptz.ai",
+        "description": "AI research assistant for analyzing and summarizing academic papers Compare Elicit with other research education AI tools. Rating: 4.4/5, 6500 reviews. Free with paid plans.",
+        "keywords": "Elicit, research education, AI tool, artificial intelligence, research-assistant, paper-summarization, question-answering, academic-focus",
+        "author": "SiteOptz.ai",
+        "viewport": "width=device-width, initial-scale=1",
+        "charset": "UTF-8",
+        "language": "en-US",
+        "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+        "googlebot": "index, follow",
+        "bingbot": "index, follow"
+      },
+      "socialTags": {
+        "og:title": "Elicit - Best research education AI Tool",
+        "og:description": "AI research assistant for analyzing and summarizing academic papers",
+        "og:type": "website",
+        "og:url": "https://siteoptz.ai/tools/elicit",
+        "og:image": "https://siteoptz.ai/api/og?title=Elicit&category=research-education&rating=4.4",
+        "og:site_name": "SiteOptz.ai",
+        "og:locale": "en_US",
+        "twitter:card": "summary_large_image",
+        "twitter:title": "Elicit - Best research education AI Tool",
+        "twitter:description": "AI research assistant for analyzing and summarizing academic papers",
+        "twitter:image": "https://siteoptz.ai/api/og?title=Elicit&category=research-education&rating=4.4",
+        "twitter:site": "@siteoptz",
+        "twitter:creator": "@siteoptz"
+      },
+      "canonicalUrl": "https://siteoptz.ai/tools/elicit",
+      "breadcrumbs": [
+        {
+          "name": "Home",
+          "url": "https://siteoptz.ai"
+        },
+        {
+          "name": "AI Tools",
+          "url": "https://siteoptz.ai/tools"
+        },
+        {
+          "name": "research education",
+          "url": "https://siteoptz.ai/tools/category/research-education"
+        },
+        {
+          "name": "Elicit",
+          "url": "https://siteoptz.ai/tools/elicit"
+        }
+      ],
+      "relatedTools": [],
+      "comparisonData": {
+        "category": "research-education",
+        "rating": 4.4,
+        "price": 0,
+        "features": 4,
+        "pros": 4,
+        "cons": 2,
+        "reviewCount": 6500,
+        "lastUpdated": "2025-08-15T18:57:18.195Z"
+      }
+    },
+    {
+      "id": "chatpdf",
+      "name": "ChatPDF",
+      "description": "AI tool for chatting with and analyzing PDF documents",
+      "category": "research-education",
+      "pricing": {
+        "price": 5,
+        "currency": "USD",
+        "text": "Starts at $5/month",
+        "plans": [
+          {
+            "name": "Pro",
+            "price": 5,
+            "currency": "USD",
+            "features": [
+              "Full features",
+              "Unlimited usage",
+              "Priority support"
+            ],
+            "popular": true
+          }
+        ]
+      },
+      "rating": 4.3,
+      "reviewCount": 9500,
+      "website": "https://chatpdf.com",
+      "source": "chatpdf",
+      "features": [
+        "pdf-analysis",
+        "document-chat",
+        "ai-insights",
+        "easy-upload"
+      ],
+      "pros": [
+        "Easy to use",
+        "Good PDF analysis",
+        "Affordable",
+        "Quick setup"
+      ],
+      "cons": [
+        "Limited to PDFs",
+        "File size limits",
+        "Basic features"
+      ],
+      "lastUpdated": "2025-08-15T18:57:18.195Z",
+      "seo": {
+        "title": "ChatPDF - Best research education AI Tool | SiteOptz.ai",
+        "description": "AI tool for chatting with and analyzing PDF documents Compare ChatPDF with other research education AI tools. Rating: 4.3/5, 9500 reviews. Starts at $5/month.",
+        "keywords": "ChatPDF, research education, AI tool, artificial intelligence, pdf-analysis, document-chat, ai-insights, easy-upload, Easy to use, Good PDF analysis, Affordable, Quick setup",
+        "slug": "chatpdf",
+        "h1": "ChatPDF",
+        "h2": "ChatPDF - research education AI Tool",
+        "h3": "Features, Pricing, and Reviews of ChatPDF",
+        "canonicalUrl": "https://siteoptz.ai/tools/chatpdf",
+        "robots": "index, follow",
+        "language": "en-US"
+      },
+      "structuredData": {
+        "@context": "https://schema.org",
+        "@type": "SoftwareApplication",
+        "name": "ChatPDF",
+        "description": "AI tool for chatting with and analyzing PDF documents",
+        "url": "https://chatpdf.com",
+        "applicationCategory": "research education AI Tool",
+        "operatingSystem": "Web",
+        "offers": {
+          "@type": "Offer",
+          "price": 5,
+          "priceCurrency": "USD",
+          "availability": "https://schema.org/InStock"
+        },
+        "aggregateRating": {
+          "@type": "AggregateRating",
+          "ratingValue": 4.3,
+          "ratingCount": 9500,
+          "bestRating": 5,
+          "worstRating": 1
+        },
+        "author": {
+          "@type": "Organization",
+          "name": "chatpdf",
+          "url": "https://chatpdf.com"
+        },
+        "datePublished": "2025-08-15T18:57:18.195Z",
+        "dateModified": "2025-08-15T18:57:18.195Z"
+      },
+      "metaTags": {
+        "title": "ChatPDF - Best research education AI Tool | SiteOptz.ai",
+        "description": "AI tool for chatting with and analyzing PDF documents Compare ChatPDF with other research education AI tools. Rating: 4.3/5, 9500 reviews. Starts at $5/month.",
+        "keywords": "ChatPDF, research education, AI tool, artificial intelligence, pdf-analysis, document-chat, ai-insights, easy-upload",
+        "author": "SiteOptz.ai",
+        "viewport": "width=device-width, initial-scale=1",
+        "charset": "UTF-8",
+        "language": "en-US",
+        "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+        "googlebot": "index, follow",
+        "bingbot": "index, follow"
+      },
+      "socialTags": {
+        "og:title": "ChatPDF - Best research education AI Tool",
+        "og:description": "AI tool for chatting with and analyzing PDF documents",
+        "og:type": "website",
+        "og:url": "https://siteoptz.ai/tools/chatpdf",
+        "og:image": "https://siteoptz.ai/api/og?title=ChatPDF&category=research-education&rating=4.3",
+        "og:site_name": "SiteOptz.ai",
+        "og:locale": "en_US",
+        "twitter:card": "summary_large_image",
+        "twitter:title": "ChatPDF - Best research education AI Tool",
+        "twitter:description": "AI tool for chatting with and analyzing PDF documents",
+        "twitter:image": "https://siteoptz.ai/api/og?title=ChatPDF&category=research-education&rating=4.3",
+        "twitter:site": "@siteoptz",
+        "twitter:creator": "@siteoptz"
+      },
+      "canonicalUrl": "https://siteoptz.ai/tools/chatpdf",
+      "breadcrumbs": [
+        {
+          "name": "Home",
+          "url": "https://siteoptz.ai"
+        },
+        {
+          "name": "AI Tools",
+          "url": "https://siteoptz.ai/tools"
+        },
+        {
+          "name": "research education",
+          "url": "https://siteoptz.ai/tools/category/research-education"
+        },
+        {
+          "name": "ChatPDF",
+          "url": "https://siteoptz.ai/tools/chatpdf"
+        }
+      ],
+      "relatedTools": [],
+      "comparisonData": {
+        "category": "research-education",
+        "rating": 4.3,
+        "price": 5,
+        "features": 4,
+        "pros": 4,
+        "cons": 3,
+        "reviewCount": 9500,
+        "lastUpdated": "2025-08-15T18:57:18.195Z"
+      }
+    },
+    {
+      "id": "scite-ai",
+      "name": "scite.ai",
+      "description": "AI-powered platform for understanding how research papers are cited",
+      "category": "research-education",
+      "pricing": {
+        "price": 0,
+        "currency": "USD",
+        "text": "Free with paid plans",
+        "plans": [
+          {
+            "name": "Free",
+            "price": 0,
+            "currency": "USD",
+            "features": [
+              "Basic features",
+              "Limited usage"
+            ],
+            "popular": false
+          }
+        ]
+      },
+      "rating": 4.2,
+      "reviewCount": 4500,
+      "website": "https://scite.ai",
+      "source": "scite",
+      "features": [
+        "citation-analysis",
+        "research-validation",
+        "ai-insights",
+        "academic-focus"
+      ],
+      "pros": [
+        "Unique citation analysis",
+        "Research validation",
+        "Academic focus",
+        "Free tier"
+      ],
+      "cons": [
+        "Limited scope",
+        "Complex interface"
+      ],
+      "lastUpdated": "2025-08-15T18:57:18.195Z",
+      "seo": {
+        "title": "scite.ai - Best research education AI Tool | SiteOptz.ai",
+        "description": "AI-powered platform for understanding how research papers are cited Compare scite.ai with other research education AI tools. Rating: 4.2/5, 4500 reviews. Free with paid plans.",
+        "keywords": "scite.ai, research education, AI tool, artificial intelligence, citation-analysis, research-validation, ai-insights, academic-focus, Unique citation analysis, Research validation, Academic focus, Free tier",
+        "slug": "scite-ai",
+        "h1": "scite.ai",
+        "h2": "scite.ai - research education AI Tool",
+        "h3": "Features, Pricing, and Reviews of scite.ai",
+        "canonicalUrl": "https://siteoptz.ai/tools/scite-ai",
+        "robots": "index, follow",
+        "language": "en-US"
+      },
+      "structuredData": {
+        "@context": "https://schema.org",
+        "@type": "SoftwareApplication",
+        "name": "scite.ai",
+        "description": "AI-powered platform for understanding how research papers are cited",
+        "url": "https://scite.ai",
+        "applicationCategory": "research education AI Tool",
+        "operatingSystem": "Web",
+        "offers": {
+          "@type": "Offer",
+          "price": 0,
+          "priceCurrency": "USD",
+          "availability": "https://schema.org/InStock"
+        },
+        "aggregateRating": {
+          "@type": "AggregateRating",
+          "ratingValue": 4.2,
+          "ratingCount": 4500,
+          "bestRating": 5,
+          "worstRating": 1
+        },
+        "author": {
+          "@type": "Organization",
+          "name": "scite",
+          "url": "https://scite.ai"
+        },
+        "datePublished": "2025-08-15T18:57:18.195Z",
+        "dateModified": "2025-08-15T18:57:18.195Z"
+      },
+      "metaTags": {
+        "title": "scite.ai - Best research education AI Tool | SiteOptz.ai",
+        "description": "AI-powered platform for understanding how research papers are cited Compare scite.ai with other research education AI tools. Rating: 4.2/5, 4500 reviews. Free with paid plans.",
+        "keywords": "scite.ai, research education, AI tool, artificial intelligence, citation-analysis, research-validation, ai-insights, academic-focus",
+        "author": "SiteOptz.ai",
+        "viewport": "width=device-width, initial-scale=1",
+        "charset": "UTF-8",
+        "language": "en-US",
+        "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+        "googlebot": "index, follow",
+        "bingbot": "index, follow"
+      },
+      "socialTags": {
+        "og:title": "scite.ai - Best research education AI Tool",
+        "og:description": "AI-powered platform for understanding how research papers are cited",
+        "og:type": "website",
+        "og:url": "https://siteoptz.ai/tools/scite-ai",
+        "og:image": "https://siteoptz.ai/api/og?title=scite.ai&category=research-education&rating=4.2",
+        "og:site_name": "SiteOptz.ai",
+        "og:locale": "en_US",
+        "twitter:card": "summary_large_image",
+        "twitter:title": "scite.ai - Best research education AI Tool",
+        "twitter:description": "AI-powered platform for understanding how research papers are cited",
+        "twitter:image": "https://siteoptz.ai/api/og?title=scite.ai&category=research-education&rating=4.2",
+        "twitter:site": "@siteoptz",
+        "twitter:creator": "@siteoptz"
+      },
+      "canonicalUrl": "https://siteoptz.ai/tools/scite-ai",
+      "breadcrumbs": [
+        {
+          "name": "Home",
+          "url": "https://siteoptz.ai"
+        },
+        {
+          "name": "AI Tools",
+          "url": "https://siteoptz.ai/tools"
+        },
+        {
+          "name": "research education",
+          "url": "https://siteoptz.ai/tools/category/research-education"
+        },
+        {
+          "name": "scite.ai",
+          "url": "https://siteoptz.ai/tools/scite-ai"
+        }
+      ],
+      "relatedTools": [],
+      "comparisonData": {
+        "category": "research-education",
+        "rating": 4.2,
+        "price": 0,
+        "features": 4,
+        "pros": 4,
+        "cons": 2,
+        "reviewCount": 4500,
+        "lastUpdated": "2025-08-15T18:57:18.195Z"
+      }
+    }
+  ],
+  "seo": {
+    "title": "Best research education AI Tools | SiteOptz.ai",
+    "description": "Discover the top research education AI tools. Compare features, pricing, and reviews. Find the perfect AI tool for your needs.",
+    "keywords": "research education, AI tools, artificial intelligence, comparison, reviews",
+    "canonicalUrl": "https://siteoptz.ai/tools/category/research-education",
+    "structuredData": {
+      "@context": "https://schema.org",
+      "@type": "ItemList",
+      "name": "research education AI Tools",
+      "description": "Top research education AI tools with reviews and comparisons",
+      "numberOfItems": 5,
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "item": {
+            "@type": "SoftwareApplication",
+            "name": "Perplexity AI",
+            "url": "https://siteoptz.ai/tools/perplexity-ai",
+            "description": "AI-powered search engine with conversational interface and citations"
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "item": {
+            "@type": "SoftwareApplication",
+            "name": "Consensus",
+            "url": "https://siteoptz.ai/tools/consensus",
+            "description": "AI-powered research tool for finding and analyzing scientific papers"
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "item": {
+            "@type": "SoftwareApplication",
+            "name": "Elicit",
+            "url": "https://siteoptz.ai/tools/elicit",
+            "description": "AI research assistant for analyzing and summarizing academic papers"
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 4,
+          "item": {
+            "@type": "SoftwareApplication",
+            "name": "ChatPDF",
+            "url": "https://siteoptz.ai/tools/chatpdf",
+            "description": "AI tool for chatting with and analyzing PDF documents"
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 5,
+          "item": {
+            "@type": "SoftwareApplication",
+            "name": "scite.ai",
+            "url": "https://siteoptz.ai/tools/scite-ai",
+            "description": "AI-powered platform for understanding how research papers are cited"
+          }
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,345 @@
+{
+  "category": "Productivity",
+  "slug": "productivity",
+  "tool_count": 5,
+  "tools": [
+    {
+      "tool_name": "Notion AI",
+      "vendor": "Notion",
+      "category": "Productivity",
+      "features": {
+        "core": [
+          "AI writing assistant",
+          "Content generation",
+          "Document organization",
+          "Note-taking enhancement",
+          "Task automation",
+          "Data analysis",
+          "Template creation"
+        ],
+        "advanced": [
+          "Advanced formatting",
+          "Database automation",
+          "Custom workflows",
+          "Team collaboration",
+          "Integration capabilities",
+          "Advanced search",
+          "AI-powered insights"
+        ],
+        "integrations": [
+          "Google Drive",
+          "Slack",
+          "Figma",
+          "GitHub",
+          "Zapier",
+          "Calendar apps"
+        ]
+      },
+      "pricing": {
+        "monthly": 8,
+        "yearly": 80,
+        "enterprise": "Custom"
+      },
+      "free_trial": true,
+      "pros": [
+        "Seamlessly integrated into Notion",
+        "Excellent for content creation",
+        "Good collaboration features",
+        "Versatile workspace tool",
+        "Regular feature updates",
+        "Strong template library"
+      ],
+      "cons": [
+        "Can be overwhelming for new users",
+        "AI features require subscription",
+        "Limited offline functionality",
+        "Learning curve for advanced features"
+      ],
+      "rating": 4.6,
+      "use_cases": [
+        "Project management",
+        "Content creation",
+        "Team collaboration",
+        "Knowledge management",
+        "Documentation",
+        "Personal productivity"
+      ],
+      "affiliate_link": "https://notion.so/",
+      "logo_url": "/images/tools/notion-ai-logo.svg",
+      "search_volume": 25000,
+      "cpc": 2.3,
+      "description": "Notion AI is an intelligent writing assistant built into the popular Notion workspace platform. It helps users write, edit, summarize, and organize content more efficiently while maintaining the collaborative and organizational features that make Notion powerful."
+    },
+    {
+      "tool_name": "Grammarly",
+      "vendor": "Grammarly",
+      "category": "Productivity",
+      "features": {
+        "core": [
+          "Grammar checking",
+          "Spelling correction",
+          "Punctuation assistance",
+          "Style suggestions",
+          "Tone detection",
+          "Writing clarity",
+          "Vocabulary enhancement"
+        ],
+        "advanced": [
+          "Plagiarism detection",
+          "Citation assistance",
+          "Brand tone consistency",
+          "Writing insights",
+          "Team management",
+          "Custom style guides",
+          "Advanced analytics"
+        ],
+        "integrations": [
+          "Microsoft Office",
+          "Google Docs",
+          "Browser extensions",
+          "Mobile keyboards",
+          "Slack",
+          "Discord"
+        ]
+      },
+      "pricing": {
+        "monthly": 12,
+        "yearly": 144,
+        "enterprise": "Custom"
+      },
+      "free_trial": true,
+      "pros": [
+        "Comprehensive writing assistance",
+        "Wide platform integration",
+        "User-friendly interface",
+        "Reliable grammar checking",
+        "Good mobile support",
+        "Regular feature updates"
+      ],
+      "cons": [
+        "Can be overly aggressive with suggestions",
+        "Premium features require subscription",
+        "May slow down some applications",
+        "Not perfect with creative writing"
+      ],
+      "rating": 4.4,
+      "use_cases": [
+        "Professional writing",
+        "Academic writing",
+        "Email communication",
+        "Content creation",
+        "Social media posts",
+        "Business communications"
+      ],
+      "affiliate_link": "https://grammarly.com/",
+      "logo_url": "/images/tools/grammarly-logo.svg",
+      "search_volume": 30000,
+      "cpc": 3.2,
+      "description": "Grammarly is an AI-powered writing assistant that helps improve writing quality through grammar checking, style suggestions, and tone analysis. It integrates seamlessly across platforms and provides comprehensive writing support for individuals and teams."
+    },
+    {
+      "tool_name": "Microsoft Copilot",
+      "vendor": "Microsoft",
+      "category": "Productivity",
+      "features": {
+        "core": [
+          "Microsoft 365 integration",
+          "AI-powered assistance",
+          "Document generation",
+          "Email drafting",
+          "Meeting summarization",
+          "Data analysis",
+          "Workflow automation"
+        ],
+        "advanced": [
+          "Enterprise security",
+          "Custom prompts",
+          "Advanced analytics",
+          "API integration",
+          "Compliance features",
+          "Admin controls",
+          "Usage insights"
+        ],
+        "integrations": [
+          "Word",
+          "Excel",
+          "PowerPoint",
+          "Outlook",
+          "Teams",
+          "SharePoint",
+          "OneDrive"
+        ]
+      },
+      "pricing": {
+        "monthly": 30,
+        "yearly": 360,
+        "enterprise": "Custom"
+      },
+      "free_trial": true,
+      "pros": [
+        "Seamless Office integration",
+        "Enterprise-focused features",
+        "Strong productivity boost",
+        "Familiar Microsoft interface",
+        "Good security standards",
+        "Regular feature updates"
+      ],
+      "cons": [
+        "Expensive monthly cost",
+        "Microsoft ecosystem dependency",
+        "Limited customization",
+        "Requires specific licenses"
+      ],
+      "rating": 4.5,
+      "use_cases": [
+        "Enterprise productivity",
+        "Document creation",
+        "Data analysis in Excel",
+        "Meeting assistance",
+        "Email management",
+        "Team collaboration"
+      ],
+      "affiliate_link": "https://microsoft.com/copilot",
+      "logo_url": "/images/tools/microsoft-copilot-logo.svg",
+      "search_volume": 12000,
+      "cpc": 5.8,
+      "description": "Microsoft Copilot is an AI assistant integrated across Microsoft 365 applications, designed to enhance productivity through intelligent automation, content generation, and data analysis within familiar Office tools."
+    },
+    {
+      "tool_name": "Trello Butler",
+      "vendor": "Atlassian",
+      "category": "Productivity",
+      "features": {
+        "core": [
+          "Workflow automation",
+          "Rule-based actions",
+          "AI-powered suggestions",
+          "Trello board integration",
+          "Card automation",
+          "Due date management",
+          "Team coordination"
+        ],
+        "advanced": [
+          "Complex automation rules",
+          "Calendar integration",
+          "Advanced triggers",
+          "Custom commands",
+          "Reporting automation",
+          "Integration workflows",
+          "Bulk operations"
+        ],
+        "integrations": [
+          "Trello boards",
+          "Google Calendar",
+          "Slack",
+          "Microsoft Teams",
+          "Email systems",
+          "Third-party apps",
+          "Zapier"
+        ]
+      },
+      "pricing": {
+        "monthly": "Free",
+        "yearly": "Free",
+        "enterprise": 5
+      },
+      "free_trial": true,
+      "pros": [
+        "Free with Trello",
+        "Powerful automation capabilities",
+        "AI-driven suggestions",
+        "Easy to set up",
+        "Great Trello integration",
+        "Time-saving workflows"
+      ],
+      "cons": [
+        "Limited to Trello ecosystem",
+        "Complex rule setup for advanced users",
+        "Limited AI features compared to dedicated tools",
+        "Requires Trello knowledge"
+      ],
+      "rating": 4.3,
+      "use_cases": [
+        "Project management automation",
+        "Task organization",
+        "Team workflow optimization",
+        "Due date management",
+        "Card sorting and organization",
+        "Notification automation"
+      ],
+      "affiliate_link": "https://trello.com/power-ups/butler",
+      "logo_url": "/images/tools/trello-butler-logo.svg",
+      "search_volume": 2200,
+      "cpc": 1.8,
+      "description": "Trello Butler is an AI-powered automation tool integrated into Trello that streamlines project management through intelligent workflow automation, rule-based actions, and smart suggestions for better board organization."
+    },
+    {
+      "tool_name": "Zapier AI",
+      "vendor": "Zapier",
+      "category": "Productivity",
+      "features": {
+        "core": [
+          "App integration automation",
+          "AI-powered workflows",
+          "Trigger-based actions",
+          "Multi-step automations",
+          "Data transformation",
+          "Conditional logic",
+          "Error handling"
+        ],
+        "advanced": [
+          "AI chatbot builder",
+          "Custom app integrations",
+          "Advanced filters",
+          "Webhook support",
+          "Code steps",
+          "Team collaboration",
+          "Usage analytics"
+        ],
+        "integrations": [
+          "6000+ apps",
+          "Gmail",
+          "Slack",
+          "Salesforce",
+          "HubSpot",
+          "Shopify",
+          "Google Sheets"
+        ]
+      },
+      "pricing": {
+        "monthly": 19.99,
+        "yearly": 239.99,
+        "enterprise": "Custom"
+      },
+      "free_trial": true,
+      "pros": [
+        "Massive app ecosystem",
+        "Powerful automation capabilities",
+        "AI-enhanced workflows",
+        "No-code solution",
+        "Reliable performance",
+        "Strong community support"
+      ],
+      "cons": [
+        "Can be expensive for heavy usage",
+        "Learning curve for complex automations",
+        "Limited AI features in basic plans",
+        "Task consumption can add up quickly"
+      ],
+      "rating": 4.2,
+      "use_cases": [
+        "Business process automation",
+        "Data synchronization",
+        "Lead management",
+        "Social media automation",
+        "E-commerce workflows",
+        "Customer service automation"
+      ],
+      "affiliate_link": "https://zapier.com/",
+      "logo_url": "/images/tools/zapier-ai-logo.svg",
+      "search_volume": 8500,
+      "cpc": 4.2,
+      "description": "Zapier AI is a comprehensive automation platform that connects thousands of apps with AI-powered workflows, enabling businesses to automate repetitive tasks and streamline operations without coding."
+    }
+  ]
+}

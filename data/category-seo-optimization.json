@@ -1,0 +1,281 @@
+{
+  "category": "SEO & Optimization",
+  "slug": "seo-optimization",
+  "tool_count": 4,
+  "tools": [
+    {
+      "tool_name": "Surfer SEO",
+      "vendor": "Surfer",
+      "category": "SEO & Optimization",
+      "features": {
+        "core": [
+          "Keyword research",
+          "Content optimization",
+          "SERP analysis",
+          "Competitor analysis",
+          "Content editor",
+          "Site audit",
+          "Rank tracking"
+        ],
+        "advanced": [
+          "Content planner",
+          "Keyword clustering",
+          "Content briefs",
+          "AI content generation",
+          "Local SEO tools",
+          "Technical SEO audit",
+          "Backlink analysis"
+        ],
+        "integrations": [
+          "Google Search Console",
+          "Google Analytics",
+          "WordPress",
+          "Shopify",
+          "Jasper AI",
+          "Frase",
+          "API access"
+        ]
+      },
+      "pricing": {
+        "monthly": 59,
+        "yearly": 590,
+        "enterprise": "Custom"
+      },
+      "free_trial": true,
+      "pros": [
+        "Excellent content optimization",
+        "Data-driven recommendations",
+        "User-friendly interface",
+        "Strong SEO focus",
+        "Regular updates",
+        "Good customer support"
+      ],
+      "cons": [
+        "Higher pricing",
+        "Limited to SEO features",
+        "Steep learning curve",
+        "Requires SEO knowledge",
+        "No general AI features"
+      ],
+      "rating": 4.7,
+      "use_cases": [
+        "SEO content optimization",
+        "Keyword research",
+        "Competitor analysis",
+        "Site audits",
+        "Content planning",
+        "Rank tracking"
+      ],
+      "affiliate_link": "https://surferseo.com/",
+      "logo_url": "/images/tools/surfer-seo-logo.svg",
+      "search_volume": 2500,
+      "cpc": 2.8,
+      "description": "Surfer SEO is an AI-powered content optimization platform that analyzes top-ranking pages to provide data-driven recommendations for improving search engine rankings."
+    },
+    {
+      "tool_name": "Frase",
+      "vendor": "Frase",
+      "category": "SEO & Optimization",
+      "features": {
+        "core": [
+          "Content optimization",
+          "Question research",
+          "SERP analysis",
+          "Content briefs",
+          "Answer optimization",
+          "Topic modeling",
+          "Content scoring"
+        ],
+        "advanced": [
+          "AI content generation",
+          "Content clustering",
+          "Featured snippet optimization",
+          "Voice search optimization",
+          "Content templates",
+          "Team collaboration",
+          "Custom reports"
+        ],
+        "integrations": [
+          "Google Search Console",
+          "Google Analytics",
+          "WordPress",
+          "Shopify",
+          "Jasper AI",
+          "Surfer SEO",
+          "API access"
+        ]
+      },
+      "pricing": {
+        "monthly": 44.99,
+        "yearly": 449.99,
+        "enterprise": "Custom"
+      },
+      "free_trial": true,
+      "pros": [
+        "Excellent for content optimization",
+        "Question-based research",
+        "User-friendly interface",
+        "Strong SEO focus",
+        "Good customer support",
+        "Regular updates"
+      ],
+      "cons": [
+        "Limited to SEO features",
+        "Higher pricing",
+        "Requires SEO knowledge",
+        "No general AI features",
+        "Limited integrations"
+      ],
+      "rating": 4.5,
+      "use_cases": [
+        "Content optimization",
+        "Question research",
+        "SERP analysis",
+        "Content briefs",
+        "Featured snippet optimization",
+        "Voice search optimization"
+      ],
+      "affiliate_link": "https://www.frase.io/",
+      "logo_url": "/images/tools/frase-logo.svg",
+      "search_volume": 1800,
+      "cpc": 2.6,
+      "description": "Frase is an AI content optimization tool that helps create SEO-optimized content by analyzing competitors, generating briefs, and providing real-time optimization suggestions."
+    },
+    {
+      "tool_name": "Ahrefs AI",
+      "vendor": "Ahrefs",
+      "category": "SEO & Optimization",
+      "features": {
+        "core": [
+          "Keyword research",
+          "Site audit",
+          "Backlink analysis",
+          "Rank tracking",
+          "Content explorer",
+          "Site explorer",
+          "Competitor analysis"
+        ],
+        "advanced": [
+          "AI content generation",
+          "Content gap analysis",
+          "Keyword clustering",
+          "Featured snippet tracking",
+          "Local SEO tools",
+          "Technical SEO audit",
+          "Custom reports"
+        ],
+        "integrations": [
+          "Google Search Console",
+          "Google Analytics",
+          "WordPress",
+          "Shopify",
+          "API access",
+          "Third-party tools"
+        ]
+      },
+      "pricing": {
+        "monthly": 99,
+        "yearly": 990,
+        "enterprise": "Custom"
+      },
+      "free_trial": true,
+      "pros": [
+        "Comprehensive SEO toolkit",
+        "Excellent data accuracy",
+        "AI content features",
+        "Advanced analytics",
+        "Regular updates",
+        "Good customer support"
+      ],
+      "cons": [
+        "High pricing",
+        "Complex interface",
+        "Steep learning curve",
+        "Requires SEO knowledge",
+        "Limited AI features"
+      ],
+      "rating": 4.8,
+      "use_cases": [
+        "Keyword research",
+        "Site audits",
+        "Backlink analysis",
+        "Competitor analysis",
+        "Content optimization",
+        "Rank tracking"
+      ],
+      "affiliate_link": "https://ahrefs.com/",
+      "logo_url": "/images/tools/placeholder-logo.svg",
+      "search_volume": 1875,
+      "cpc": 3.3,
+      "description": "Ahrefs AI combines traditional SEO tools with AI-powered content analysis, keyword research automation, and competitive intelligence for comprehensive digital marketing."
+    },
+    {
+      "tool_name": "Semrush AI",
+      "vendor": "Semrush",
+      "category": "SEO & Optimization",
+      "features": {
+        "core": [
+          "Keyword research",
+          "Site audit",
+          "Backlink analysis",
+          "Rank tracking",
+          "Content explorer",
+          "Site explorer",
+          "Competitor analysis"
+        ],
+        "advanced": [
+          "AI content generation",
+          "Content gap analysis",
+          "Keyword clustering",
+          "Featured snippet tracking",
+          "Local SEO tools",
+          "Technical SEO audit",
+          "Custom reports"
+        ],
+        "integrations": [
+          "Google Search Console",
+          "Google Analytics",
+          "WordPress",
+          "Shopify",
+          "API access",
+          "Third-party tools"
+        ]
+      },
+      "pricing": {
+        "monthly": 119.95,
+        "yearly": 1199.95,
+        "enterprise": "Custom"
+      },
+      "free_trial": true,
+      "pros": [
+        "Comprehensive SEO toolkit",
+        "Excellent data accuracy",
+        "AI content features",
+        "Advanced analytics",
+        "Regular updates",
+        "Good customer support"
+      ],
+      "cons": [
+        "High pricing",
+        "Complex interface",
+        "Steep learning curve",
+        "Requires SEO knowledge",
+        "Limited AI features"
+      ],
+      "rating": 4.7,
+      "use_cases": [
+        "Keyword research",
+        "Site audits",
+        "Backlink analysis",
+        "Competitor analysis",
+        "Content optimization",
+        "Rank tracking"
+      ],
+      "affiliate_link": "https://www.semrush.com/",
+      "logo_url": "/images/tools/placeholder-logo.svg",
+      "search_volume": 1600,
+      "cpc": 3.1,
+      "description": "Semrush AI offers AI-enhanced SEO, content marketing, and competitive research tools with automated insights and recommendations for digital marketing success."
+    }
+  ]
+}

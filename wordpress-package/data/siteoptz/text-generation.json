@@ -1,0 +1,785 @@
+{
+  "category": "text-generation",
+  "tools": [
+    {
+      "id": "chatgpt",
+      "name": "ChatGPT",
+      "description": "AI-powered chatbot for conversations, content creation, and problem-solving",
+      "category": "text-generation",
+      "pricing": {
+        "price": 0,
+        "currency": "USD",
+        "text": "Free with ChatGPT Plus at $20/month",
+        "plans": [
+          {
+            "name": "Free",
+            "price": 0,
+            "currency": "USD",
+            "features": [
+              "Basic features",
+              "Limited usage"
+            ],
+            "popular": false
+          }
+        ]
+      },
+      "rating": 4.8,
+      "reviewCount": 15000,
+      "website": "https://chat.openai.com",
+      "source": "openai",
+      "features": [
+        "conversational-ai",
+        "content-creation",
+        "code-generation",
+        "problem-solving"
+      ],
+      "pros": [
+        "Highly capable",
+        "Easy to use",
+        "Wide range of applications",
+        "Regular updates"
+      ],
+      "cons": [
+        "Limited free tier",
+        "Sometimes slow",
+        "Can be expensive"
+      ],
+      "lastUpdated": "2025-08-15T18:57:18.190Z",
+      "seo": {
+        "title": "ChatGPT - Best text generation AI Tool | SiteOptz.ai",
+        "description": "AI-powered chatbot for conversations, content creation, and problem-solving Compare ChatGPT with other text generation AI tools. Rating: 4.8/5, 15000 reviews. Free with ChatGPT Plus at $20/month.",
+        "keywords": "ChatGPT, text generation, AI tool, artificial intelligence, conversational-ai, content-creation, code-generation, problem-solving, Highly capable, Easy to use, Wide range of applications, Regular updates",
+        "slug": "chatgpt",
+        "h1": "ChatGPT",
+        "h2": "ChatGPT - text generation AI Tool",
+        "h3": "Features, Pricing, and Reviews of ChatGPT",
+        "canonicalUrl": "https://siteoptz.ai/tools/chatgpt",
+        "robots": "index, follow",
+        "language": "en-US"
+      },
+      "structuredData": {
+        "@context": "https://schema.org",
+        "@type": "SoftwareApplication",
+        "name": "ChatGPT",
+        "description": "AI-powered chatbot for conversations, content creation, and problem-solving",
+        "url": "https://chat.openai.com",
+        "applicationCategory": "text generation AI Tool",
+        "operatingSystem": "Web",
+        "offers": {
+          "@type": "Offer",
+          "price": 0,
+          "priceCurrency": "USD",
+          "availability": "https://schema.org/InStock"
+        },
+        "aggregateRating": {
+          "@type": "AggregateRating",
+          "ratingValue": 4.8,
+          "ratingCount": 15000,
+          "bestRating": 5,
+          "worstRating": 1
+        },
+        "author": {
+          "@type": "Organization",
+          "name": "openai",
+          "url": "https://chat.openai.com"
+        },
+        "datePublished": "2025-08-15T18:57:18.190Z",
+        "dateModified": "2025-08-15T18:57:18.190Z"
+      },
+      "metaTags": {
+        "title": "ChatGPT - Best text generation AI Tool | SiteOptz.ai",
+        "description": "AI-powered chatbot for conversations, content creation, and problem-solving Compare ChatGPT with other text generation AI tools. Rating: 4.8/5, 15000 reviews. Free with ChatGPT Plus at $20/month.",
+        "keywords": "ChatGPT, text generation, AI tool, artificial intelligence, conversational-ai, content-creation, code-generation, problem-solving",
+        "author": "SiteOptz.ai",
+        "viewport": "width=device-width, initial-scale=1",
+        "charset": "UTF-8",
+        "language": "en-US",
+        "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+        "googlebot": "index, follow",
+        "bingbot": "index, follow"
+      },
+      "socialTags": {
+        "og:title": "ChatGPT - Best text generation AI Tool",
+        "og:description": "AI-powered chatbot for conversations, content creation, and problem-solving",
+        "og:type": "website",
+        "og:url": "https://siteoptz.ai/tools/chatgpt",
+        "og:image": "https://siteoptz.ai/api/og?title=ChatGPT&category=text-generation&rating=4.8",
+        "og:site_name": "SiteOptz.ai",
+        "og:locale": "en_US",
+        "twitter:card": "summary_large_image",
+        "twitter:title": "ChatGPT - Best text generation AI Tool",
+        "twitter:description": "AI-powered chatbot for conversations, content creation, and problem-solving",
+        "twitter:image": "https://siteoptz.ai/api/og?title=ChatGPT&category=text-generation&rating=4.8",
+        "twitter:site": "@siteoptz",
+        "twitter:creator": "@siteoptz"
+      },
+      "canonicalUrl": "https://siteoptz.ai/tools/chatgpt",
+      "breadcrumbs": [
+        {
+          "name": "Home",
+          "url": "https://siteoptz.ai"
+        },
+        {
+          "name": "AI Tools",
+          "url": "https://siteoptz.ai/tools"
+        },
+        {
+          "name": "text generation",
+          "url": "https://siteoptz.ai/tools/category/text-generation"
+        },
+        {
+          "name": "ChatGPT",
+          "url": "https://siteoptz.ai/tools/chatgpt"
+        }
+      ],
+      "relatedTools": [],
+      "comparisonData": {
+        "category": "text-generation",
+        "rating": 4.8,
+        "price": 0,
+        "features": 4,
+        "pros": 4,
+        "cons": 3,
+        "reviewCount": 15000,
+        "lastUpdated": "2025-08-15T18:57:18.190Z"
+      }
+    },
+    {
+      "id": "claude",
+      "name": "Claude",
+      "description": "Advanced AI assistant by Anthropic, known for safety and helpfulness",
+      "category": "text-generation",
+      "pricing": {
+        "price": 20,
+        "currency": "USD",
+        "text": "Claude Pro at $20/month",
+        "plans": [
+          {
+            "name": "Pro",
+            "price": 20,
+            "currency": "USD",
+            "features": [
+              "Full features",
+              "Unlimited usage",
+              "Priority support"
+            ],
+            "popular": true
+          }
+        ]
+      },
+      "rating": 4.7,
+      "reviewCount": 8500,
+      "website": "https://claude.ai",
+      "source": "anthropic",
+      "features": [
+        "conversational-ai",
+        "content-creation",
+        "analysis",
+        "safety-focused"
+      ],
+      "pros": [
+        "Very helpful",
+        "Safety-focused",
+        "Good at analysis",
+        "Reliable"
+      ],
+      "cons": [
+        "Limited availability",
+        "Higher price point"
+      ],
+      "lastUpdated": "2025-08-15T18:57:18.195Z",
+      "seo": {
+        "title": "Claude - Best text generation AI Tool | SiteOptz.ai",
+        "description": "Advanced AI assistant by Anthropic, known for safety and helpfulness Compare Claude with other text generation AI tools. Rating: 4.7/5, 8500 reviews. Claude Pro at $20/month.",
+        "keywords": "Claude, text generation, AI tool, artificial intelligence, conversational-ai, content-creation, analysis, safety-focused, Very helpful, Safety-focused, Good at analysis, Reliable",
+        "slug": "claude",
+        "h1": "Claude",
+        "h2": "Claude - text generation AI Tool",
+        "h3": "Features, Pricing, and Reviews of Claude",
+        "canonicalUrl": "https://siteoptz.ai/tools/claude",
+        "robots": "index, follow",
+        "language": "en-US"
+      },
+      "structuredData": {
+        "@context": "https://schema.org",
+        "@type": "SoftwareApplication",
+        "name": "Claude",
+        "description": "Advanced AI assistant by Anthropic, known for safety and helpfulness",
+        "url": "https://claude.ai",
+        "applicationCategory": "text generation AI Tool",
+        "operatingSystem": "Web",
+        "offers": {
+          "@type": "Offer",
+          "price": 20,
+          "priceCurrency": "USD",
+          "availability": "https://schema.org/InStock"
+        },
+        "aggregateRating": {
+          "@type": "AggregateRating",
+          "ratingValue": 4.7,
+          "ratingCount": 8500,
+          "bestRating": 5,
+          "worstRating": 1
+        },
+        "author": {
+          "@type": "Organization",
+          "name": "anthropic",
+          "url": "https://claude.ai"
+        },
+        "datePublished": "2025-08-15T18:57:18.195Z",
+        "dateModified": "2025-08-15T18:57:18.195Z"
+      },
+      "metaTags": {
+        "title": "Claude - Best text generation AI Tool | SiteOptz.ai",
+        "description": "Advanced AI assistant by Anthropic, known for safety and helpfulness Compare Claude with other text generation AI tools. Rating: 4.7/5, 8500 reviews. Claude Pro at $20/month.",
+        "keywords": "Claude, text generation, AI tool, artificial intelligence, conversational-ai, content-creation, analysis, safety-focused",
+        "author": "SiteOptz.ai",
+        "viewport": "width=device-width, initial-scale=1",
+        "charset": "UTF-8",
+        "language": "en-US",
+        "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+        "googlebot": "index, follow",
+        "bingbot": "index, follow"
+      },
+      "socialTags": {
+        "og:title": "Claude - Best text generation AI Tool",
+        "og:description": "Advanced AI assistant by Anthropic, known for safety and helpfulness",
+        "og:type": "website",
+        "og:url": "https://siteoptz.ai/tools/claude",
+        "og:image": "https://siteoptz.ai/api/og?title=Claude&category=text-generation&rating=4.7",
+        "og:site_name": "SiteOptz.ai",
+        "og:locale": "en_US",
+        "twitter:card": "summary_large_image",
+        "twitter:title": "Claude - Best text generation AI Tool",
+        "twitter:description": "Advanced AI assistant by Anthropic, known for safety and helpfulness",
+        "twitter:image": "https://siteoptz.ai/api/og?title=Claude&category=text-generation&rating=4.7",
+        "twitter:site": "@siteoptz",
+        "twitter:creator": "@siteoptz"
+      },
+      "canonicalUrl": "https://siteoptz.ai/tools/claude",
+      "breadcrumbs": [
+        {
+          "name": "Home",
+          "url": "https://siteoptz.ai"
+        },
+        {
+          "name": "AI Tools",
+          "url": "https://siteoptz.ai/tools"
+        },
+        {
+          "name": "text generation",
+          "url": "https://siteoptz.ai/tools/category/text-generation"
+        },
+        {
+          "name": "Claude",
+          "url": "https://siteoptz.ai/tools/claude"
+        }
+      ],
+      "relatedTools": [],
+      "comparisonData": {
+        "category": "text-generation",
+        "rating": 4.7,
+        "price": 20,
+        "features": 4,
+        "pros": 4,
+        "cons": 2,
+        "reviewCount": 8500,
+        "lastUpdated": "2025-08-15T18:57:18.195Z"
+      }
+    },
+    {
+      "id": "jasper",
+      "name": "Jasper",
+      "description": "AI writing assistant for marketing, content, and business writing",
+      "category": "text-generation",
+      "pricing": {
+        "price": 39,
+        "currency": "USD",
+        "text": "Starts at $39/month",
+        "plans": [
+          {
+            "name": "Pro",
+            "price": 39,
+            "currency": "USD",
+            "features": [
+              "Full features",
+              "Unlimited usage",
+              "Priority support"
+            ],
+            "popular": true
+          }
+        ]
+      },
+      "rating": 4.6,
+      "reviewCount": 12000,
+      "website": "https://jasper.ai",
+      "source": "jasper",
+      "features": [
+        "content-writing",
+        "marketing-copy",
+        "seo-optimization",
+        "brand-voice"
+      ],
+      "pros": [
+        "Great for marketing",
+        "SEO features",
+        "Brand voice consistency",
+        "Templates"
+      ],
+      "cons": [
+        "Expensive",
+        "Limited free trial"
+      ],
+      "lastUpdated": "2025-08-15T18:57:18.195Z",
+      "seo": {
+        "title": "Jasper - Best text generation AI Tool | SiteOptz.ai",
+        "description": "AI writing assistant for marketing, content, and business writing Compare Jasper with other text generation AI tools. Rating: 4.6/5, 12000 reviews. Starts at $39/month.",
+        "keywords": "Jasper, text generation, AI tool, artificial intelligence, content-writing, marketing-copy, seo-optimization, brand-voice, Great for marketing, SEO features, Brand voice consistency, Templates",
+        "slug": "jasper",
+        "h1": "Jasper",
+        "h2": "Jasper - text generation AI Tool",
+        "h3": "Features, Pricing, and Reviews of Jasper",
+        "canonicalUrl": "https://siteoptz.ai/tools/jasper",
+        "robots": "index, follow",
+        "language": "en-US"
+      },
+      "structuredData": {
+        "@context": "https://schema.org",
+        "@type": "SoftwareApplication",
+        "name": "Jasper",
+        "description": "AI writing assistant for marketing, content, and business writing",
+        "url": "https://jasper.ai",
+        "applicationCategory": "text generation AI Tool",
+        "operatingSystem": "Web",
+        "offers": {
+          "@type": "Offer",
+          "price": 39,
+          "priceCurrency": "USD",
+          "availability": "https://schema.org/InStock"
+        },
+        "aggregateRating": {
+          "@type": "AggregateRating",
+          "ratingValue": 4.6,
+          "ratingCount": 12000,
+          "bestRating": 5,
+          "worstRating": 1
+        },
+        "author": {
+          "@type": "Organization",
+          "name": "jasper",
+          "url": "https://jasper.ai"
+        },
+        "datePublished": "2025-08-15T18:57:18.195Z",
+        "dateModified": "2025-08-15T18:57:18.195Z"
+      },
+      "metaTags": {
+        "title": "Jasper - Best text generation AI Tool | SiteOptz.ai",
+        "description": "AI writing assistant for marketing, content, and business writing Compare Jasper with other text generation AI tools. Rating: 4.6/5, 12000 reviews. Starts at $39/month.",
+        "keywords": "Jasper, text generation, AI tool, artificial intelligence, content-writing, marketing-copy, seo-optimization, brand-voice",
+        "author": "SiteOptz.ai",
+        "viewport": "width=device-width, initial-scale=1",
+        "charset": "UTF-8",
+        "language": "en-US",
+        "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+        "googlebot": "index, follow",
+        "bingbot": "index, follow"
+      },
+      "socialTags": {
+        "og:title": "Jasper - Best text generation AI Tool",
+        "og:description": "AI writing assistant for marketing, content, and business writing",
+        "og:type": "website",
+        "og:url": "https://siteoptz.ai/tools/jasper",
+        "og:image": "https://siteoptz.ai/api/og?title=Jasper&category=text-generation&rating=4.6",
+        "og:site_name": "SiteOptz.ai",
+        "og:locale": "en_US",
+        "twitter:card": "summary_large_image",
+        "twitter:title": "Jasper - Best text generation AI Tool",
+        "twitter:description": "AI writing assistant for marketing, content, and business writing",
+        "twitter:image": "https://siteoptz.ai/api/og?title=Jasper&category=text-generation&rating=4.6",
+        "twitter:site": "@siteoptz",
+        "twitter:creator": "@siteoptz"
+      },
+      "canonicalUrl": "https://siteoptz.ai/tools/jasper",
+      "breadcrumbs": [
+        {
+          "name": "Home",
+          "url": "https://siteoptz.ai"
+        },
+        {
+          "name": "AI Tools",
+          "url": "https://siteoptz.ai/tools"
+        },
+        {
+          "name": "text generation",
+          "url": "https://siteoptz.ai/tools/category/text-generation"
+        },
+        {
+          "name": "Jasper",
+          "url": "https://siteoptz.ai/tools/jasper"
+        }
+      ],
+      "relatedTools": [],
+      "comparisonData": {
+        "category": "text-generation",
+        "rating": 4.6,
+        "price": 39,
+        "features": 4,
+        "pros": 4,
+        "cons": 2,
+        "reviewCount": 12000,
+        "lastUpdated": "2025-08-15T18:57:18.195Z"
+      }
+    },
+    {
+      "id": "copy-ai",
+      "name": "Copy.ai",
+      "description": "AI copywriting tool for marketing, sales, and content creation",
+      "category": "text-generation",
+      "pricing": {
+        "price": 36,
+        "currency": "USD",
+        "text": "Starts at $36/month",
+        "plans": [
+          {
+            "name": "Pro",
+            "price": 36,
+            "currency": "USD",
+            "features": [
+              "Full features",
+              "Unlimited usage",
+              "Priority support"
+            ],
+            "popular": true
+          }
+        ]
+      },
+      "rating": 4.5,
+      "reviewCount": 9500,
+      "website": "https://copy.ai",
+      "source": "copy-ai",
+      "features": [
+        "copywriting",
+        "marketing",
+        "sales-copy",
+        "social-media"
+      ],
+      "pros": [
+        "Great templates",
+        "Easy to use",
+        "Good for marketing",
+        "Affordable"
+      ],
+      "cons": [
+        "Limited customization",
+        "Quality varies"
+      ],
+      "lastUpdated": "2025-08-15T18:57:18.195Z",
+      "seo": {
+        "title": "Copy.ai - Best text generation AI Tool | SiteOptz.ai",
+        "description": "AI copywriting tool for marketing, sales, and content creation Compare Copy.ai with other text generation AI tools. Rating: 4.5/5, 9500 reviews. Starts at $36/month.",
+        "keywords": "Copy.ai, text generation, AI tool, artificial intelligence, copywriting, marketing, sales-copy, social-media, Great templates, Easy to use, Good for marketing, Affordable",
+        "slug": "copy-ai",
+        "h1": "Copy.ai",
+        "h2": "Copy.ai - text generation AI Tool",
+        "h3": "Features, Pricing, and Reviews of Copy.ai",
+        "canonicalUrl": "https://siteoptz.ai/tools/copy-ai",
+        "robots": "index, follow",
+        "language": "en-US"
+      },
+      "structuredData": {
+        "@context": "https://schema.org",
+        "@type": "SoftwareApplication",
+        "name": "Copy.ai",
+        "description": "AI copywriting tool for marketing, sales, and content creation",
+        "url": "https://copy.ai",
+        "applicationCategory": "text generation AI Tool",
+        "operatingSystem": "Web",
+        "offers": {
+          "@type": "Offer",
+          "price": 36,
+          "priceCurrency": "USD",
+          "availability": "https://schema.org/InStock"
+        },
+        "aggregateRating": {
+          "@type": "AggregateRating",
+          "ratingValue": 4.5,
+          "ratingCount": 9500,
+          "bestRating": 5,
+          "worstRating": 1
+        },
+        "author": {
+          "@type": "Organization",
+          "name": "copy-ai",
+          "url": "https://copy.ai"
+        },
+        "datePublished": "2025-08-15T18:57:18.195Z",
+        "dateModified": "2025-08-15T18:57:18.195Z"
+      },
+      "metaTags": {
+        "title": "Copy.ai - Best text generation AI Tool | SiteOptz.ai",
+        "description": "AI copywriting tool for marketing, sales, and content creation Compare Copy.ai with other text generation AI tools. Rating: 4.5/5, 9500 reviews. Starts at $36/month.",
+        "keywords": "Copy.ai, text generation, AI tool, artificial intelligence, copywriting, marketing, sales-copy, social-media",
+        "author": "SiteOptz.ai",
+        "viewport": "width=device-width, initial-scale=1",
+        "charset": "UTF-8",
+        "language": "en-US",
+        "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+        "googlebot": "index, follow",
+        "bingbot": "index, follow"
+      },
+      "socialTags": {
+        "og:title": "Copy.ai - Best text generation AI Tool",
+        "og:description": "AI copywriting tool for marketing, sales, and content creation",
+        "og:type": "website",
+        "og:url": "https://siteoptz.ai/tools/copy-ai",
+        "og:image": "https://siteoptz.ai/api/og?title=Copy.ai&category=text-generation&rating=4.5",
+        "og:site_name": "SiteOptz.ai",
+        "og:locale": "en_US",
+        "twitter:card": "summary_large_image",
+        "twitter:title": "Copy.ai - Best text generation AI Tool",
+        "twitter:description": "AI copywriting tool for marketing, sales, and content creation",
+        "twitter:image": "https://siteoptz.ai/api/og?title=Copy.ai&category=text-generation&rating=4.5",
+        "twitter:site": "@siteoptz",
+        "twitter:creator": "@siteoptz"
+      },
+      "canonicalUrl": "https://siteoptz.ai/tools/copy-ai",
+      "breadcrumbs": [
+        {
+          "name": "Home",
+          "url": "https://siteoptz.ai"
+        },
+        {
+          "name": "AI Tools",
+          "url": "https://siteoptz.ai/tools"
+        },
+        {
+          "name": "text generation",
+          "url": "https://siteoptz.ai/tools/category/text-generation"
+        },
+        {
+          "name": "Copy.ai",
+          "url": "https://siteoptz.ai/tools/copy-ai"
+        }
+      ],
+      "relatedTools": [],
+      "comparisonData": {
+        "category": "text-generation",
+        "rating": 4.5,
+        "price": 36,
+        "features": 4,
+        "pros": 4,
+        "cons": 2,
+        "reviewCount": 9500,
+        "lastUpdated": "2025-08-15T18:57:18.195Z"
+      }
+    },
+    {
+      "id": "writesonic",
+      "name": "Writesonic",
+      "description": "AI writing platform for blogs, ads, and business content",
+      "category": "text-generation",
+      "pricing": {
+        "price": 19,
+        "currency": "USD",
+        "text": "Starts at $19/month",
+        "plans": [
+          {
+            "name": "Pro",
+            "price": 19,
+            "currency": "USD",
+            "features": [
+              "Full features",
+              "Unlimited usage",
+              "Priority support"
+            ],
+            "popular": true
+          }
+        ]
+      },
+      "rating": 4.4,
+      "reviewCount": 7800,
+      "website": "https://writesonic.com",
+      "source": "writesonic",
+      "features": [
+        "blog-writing",
+        "ad-copy",
+        "business-content",
+        "seo"
+      ],
+      "pros": [
+        "Affordable",
+        "Good templates",
+        "SEO features",
+        "Multiple languages"
+      ],
+      "cons": [
+        "Quality can be inconsistent",
+        "Limited advanced features"
+      ],
+      "lastUpdated": "2025-08-15T18:57:18.195Z",
+      "seo": {
+        "title": "Writesonic - Best text generation AI Tool | SiteOptz.ai",
+        "description": "AI writing platform for blogs, ads, and business content Compare Writesonic with other text generation AI tools. Rating: 4.4/5, 7800 reviews. Starts at $19/month.",
+        "keywords": "Writesonic, text generation, AI tool, artificial intelligence, blog-writing, ad-copy, business-content, seo, Affordable, Good templates, SEO features, Multiple languages",
+        "slug": "writesonic",
+        "h1": "Writesonic",
+        "h2": "Writesonic - text generation AI Tool",
+        "h3": "Features, Pricing, and Reviews of Writesonic",
+        "canonicalUrl": "https://siteoptz.ai/tools/writesonic",
+        "robots": "index, follow",
+        "language": "en-US"
+      },
+      "structuredData": {
+        "@context": "https://schema.org",
+        "@type": "SoftwareApplication",
+        "name": "Writesonic",
+        "description": "AI writing platform for blogs, ads, and business content",
+        "url": "https://writesonic.com",
+        "applicationCategory": "text generation AI Tool",
+        "operatingSystem": "Web",
+        "offers": {
+          "@type": "Offer",
+          "price": 19,
+          "priceCurrency": "USD",
+          "availability": "https://schema.org/InStock"
+        },
+        "aggregateRating": {
+          "@type": "AggregateRating",
+          "ratingValue": 4.4,
+          "ratingCount": 7800,
+          "bestRating": 5,
+          "worstRating": 1
+        },
+        "author": {
+          "@type": "Organization",
+          "name": "writesonic",
+          "url": "https://writesonic.com"
+        },
+        "datePublished": "2025-08-15T18:57:18.195Z",
+        "dateModified": "2025-08-15T18:57:18.195Z"
+      },
+      "metaTags": {
+        "title": "Writesonic - Best text generation AI Tool | SiteOptz.ai",
+        "description": "AI writing platform for blogs, ads, and business content Compare Writesonic with other text generation AI tools. Rating: 4.4/5, 7800 reviews. Starts at $19/month.",
+        "keywords": "Writesonic, text generation, AI tool, artificial intelligence, blog-writing, ad-copy, business-content, seo",
+        "author": "SiteOptz.ai",
+        "viewport": "width=device-width, initial-scale=1",
+        "charset": "UTF-8",
+        "language": "en-US",
+        "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+        "googlebot": "index, follow",
+        "bingbot": "index, follow"
+      },
+      "socialTags": {
+        "og:title": "Writesonic - Best text generation AI Tool",
+        "og:description": "AI writing platform for blogs, ads, and business content",
+        "og:type": "website",
+        "og:url": "https://siteoptz.ai/tools/writesonic",
+        "og:image": "https://siteoptz.ai/api/og?title=Writesonic&category=text-generation&rating=4.4",
+        "og:site_name": "SiteOptz.ai",
+        "og:locale": "en_US",
+        "twitter:card": "summary_large_image",
+        "twitter:title": "Writesonic - Best text generation AI Tool",
+        "twitter:description": "AI writing platform for blogs, ads, and business content",
+        "twitter:image": "https://siteoptz.ai/api/og?title=Writesonic&category=text-generation&rating=4.4",
+        "twitter:site": "@siteoptz",
+        "twitter:creator": "@siteoptz"
+      },
+      "canonicalUrl": "https://siteoptz.ai/tools/writesonic",
+      "breadcrumbs": [
+        {
+          "name": "Home",
+          "url": "https://siteoptz.ai"
+        },
+        {
+          "name": "AI Tools",
+          "url": "https://siteoptz.ai/tools"
+        },
+        {
+          "name": "text generation",
+          "url": "https://siteoptz.ai/tools/category/text-generation"
+        },
+        {
+          "name": "Writesonic",
+          "url": "https://siteoptz.ai/tools/writesonic"
+        }
+      ],
+      "relatedTools": [],
+      "comparisonData": {
+        "category": "text-generation",
+        "rating": 4.4,
+        "price": 19,
+        "features": 4,
+        "pros": 4,
+        "cons": 2,
+        "reviewCount": 7800,
+        "lastUpdated": "2025-08-15T18:57:18.195Z"
+      }
+    }
+  ],
+  "seo": {
+    "title": "Best text generation AI Tools | SiteOptz.ai",
+    "description": "Discover the top text generation AI tools. Compare features, pricing, and reviews. Find the perfect AI tool for your needs.",
+    "keywords": "text generation, AI tools, artificial intelligence, comparison, reviews",
+    "canonicalUrl": "https://siteoptz.ai/tools/category/text-generation",
+    "structuredData": {
+      "@context": "https://schema.org",
+      "@type": "ItemList",
+      "name": "text generation AI Tools",
+      "description": "Top text generation AI tools with reviews and comparisons",
+      "numberOfItems": 5,
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "item": {
+            "@type": "SoftwareApplication",
+            "name": "ChatGPT",
+            "url": "https://siteoptz.ai/tools/chatgpt",
+            "description": "AI-powered chatbot for conversations, content creation, and problem-solving"
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "item": {
+            "@type": "SoftwareApplication",
+            "name": "Claude",
+            "url": "https://siteoptz.ai/tools/claude",
+            "description": "Advanced AI assistant by Anthropic, known for safety and helpfulness"
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "item": {
+            "@type": "SoftwareApplication",
+            "name": "Jasper",
+            "url": "https://siteoptz.ai/tools/jasper",
+            "description": "AI writing assistant for marketing, content, and business writing"
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 4,
+          "item": {
+            "@type": "SoftwareApplication",
+            "name": "Copy.ai",
+            "url": "https://siteoptz.ai/tools/copy-ai",
+            "description": "AI copywriting tool for marketing, sales, and content creation"
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 5,
+          "item": {
+            "@type": "SoftwareApplication",
+            "name": "Writesonic",
+            "url": "https://siteoptz.ai/tools/writesonic",
+            "description": "AI writing platform for blogs, ads, and business content"
+          }
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,211 @@
+{
+  "category": "Video",
+  "slug": "video",
+  "tool_count": 3,
+  "tools": [
+    {
+      "tool_name": "Pictory",
+      "vendor": "Pictory",
+      "category": "Video",
+      "features": {
+        "core": [
+          "Text-to-video conversion",
+          "Automated video editing",
+          "Stock footage library",
+          "Social media optimization",
+          "AI video generation",
+          "Video summarization",
+          "Brand customization"
+        ],
+        "advanced": [
+          "Advanced editing tools",
+          "Custom branding",
+          "Team collaboration",
+          "Bulk processing",
+          "API integration",
+          "Analytics tracking",
+          "Export options"
+        ],
+        "integrations": [
+          "Social media platforms",
+          "YouTube",
+          "Vimeo",
+          "Marketing tools",
+          "Content management systems",
+          "Cloud storage",
+          "Third-party apps"
+        ]
+      },
+      "pricing": {
+        "monthly": 19,
+        "yearly": 190,
+        "enterprise": "Custom"
+      },
+      "free_trial": true,
+      "pros": [
+        "Easy to use interface",
+        "Automated editing capabilities",
+        "Good for social media content",
+        "Affordable pricing",
+        "Stock footage included",
+        "Quick video creation"
+      ],
+      "cons": [
+        "Limited customization options",
+        "Quality can vary",
+        "Dependent on stock footage",
+        "Limited advanced editing features"
+      ],
+      "rating": 4.4,
+      "use_cases": [
+        "Social media content",
+        "Marketing videos",
+        "Educational content",
+        "Blog video creation",
+        "YouTube content",
+        "Promotional videos"
+      ],
+      "affiliate_link": "https://pictory.ai/",
+      "logo_url": "/images/tools/pictory-logo.svg",
+      "search_volume": 4800,
+      "cpc": 3.8,
+      "description": "Pictory is an AI video creation tool that transforms text content into engaging videos with automated editing, stock footage, and social media optimization for content creators and marketers."
+    },
+    {
+      "tool_name": "Lumen5",
+      "vendor": "Lumen5",
+      "category": "Video",
+      "features": {
+        "core": [
+          "Text-to-video conversion",
+          "Social media video creation",
+          "Template library",
+          "Branding tools",
+          "Automated scene creation",
+          "Stock media library",
+          "Video optimization"
+        ],
+        "advanced": [
+          "Custom branding",
+          "Team collaboration",
+          "Advanced templates",
+          "Analytics tracking",
+          "Bulk processing",
+          "API access",
+          "White-label options"
+        ],
+        "integrations": [
+          "Social media platforms",
+          "Content management systems",
+          "Marketing automation",
+          "Cloud storage",
+          "RSS feeds",
+          "Blog platforms",
+          "Third-party tools"
+        ]
+      },
+      "pricing": {
+        "monthly": 19,
+        "yearly": 190,
+        "enterprise": "Custom"
+      },
+      "free_trial": true,
+      "pros": [
+        "Great for social media content",
+        "Easy-to-use interface",
+        "Good template selection",
+        "Strong branding features",
+        "Automated content creation",
+        "Regular feature updates"
+      ],
+      "cons": [
+        "Limited advanced editing features",
+        "Quality can be basic for complex videos",
+        "Template-dependent approach",
+        "Limited customization in lower tiers"
+      ],
+      "rating": 4.3,
+      "use_cases": [
+        "Social media marketing",
+        "Content marketing videos",
+        "Educational content",
+        "Blog promotion",
+        "Brand storytelling",
+        "Quick video creation"
+      ],
+      "affiliate_link": "https://lumen5.com/",
+      "logo_url": "/images/tools/lumen5-logo.svg",
+      "search_volume": 6200,
+      "cpc": 3.4,
+      "description": "Lumen5 is an AI video maker that transforms text content into engaging videos with templates and automated scene creation, perfect for social media marketing and content promotion."
+    },
+    {
+      "tool_name": "Kapwing",
+      "vendor": "Kapwing",
+      "category": "Video",
+      "features": {
+        "core": [
+          "Online video editor",
+          "AI-powered features",
+          "Collaboration tools",
+          "Social media optimization",
+          "Subtitle generation",
+          "Video templates",
+          "Multi-format support"
+        ],
+        "advanced": [
+          "Advanced editing tools",
+          "Team workspaces",
+          "Brand kit management",
+          "Custom workflows",
+          "API integration",
+          "Analytics tracking",
+          "Enterprise features"
+        ],
+        "integrations": [
+          "Social media platforms",
+          "Google Drive",
+          "Dropbox",
+          "YouTube",
+          "TikTok",
+          "Instagram",
+          "Third-party apps"
+        ]
+      },
+      "pricing": {
+        "monthly": "Free",
+        "yearly": "Free",
+        "enterprise": 20
+      },
+      "free_trial": true,
+      "pros": [
+        "Free tier available",
+        "Excellent collaboration features",
+        "Easy-to-use interface",
+        "Good for social media content",
+        "Regular feature updates",
+        "Browser-based editing"
+      ],
+      "cons": [
+        "Limited AI features compared to dedicated AI tools",
+        "Watermark in free tier",
+        "Performance depends on internet connection",
+        "Limited advanced video editing capabilities"
+      ],
+      "rating": 4.2,
+      "use_cases": [
+        "Social media content creation",
+        "Team video collaboration",
+        "Quick video editing",
+        "Subtitle generation",
+        "Content creation workflows",
+        "Educational video production"
+      ],
+      "affiliate_link": "https://kapwing.com/",
+      "logo_url": "/images/tools/kapwing-logo.svg",
+      "search_volume": 8900,
+      "cpc": 2.6,
+      "description": "Kapwing is an online video editor with AI-powered features and collaboration tools, perfect for teams creating social media content and quick video projects in the browser."
+    }
+  ]
+}

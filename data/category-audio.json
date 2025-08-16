@@ -1,0 +1,346 @@
+{
+  "category": "Audio",
+  "slug": "audio",
+  "tool_count": 5,
+  "tools": [
+    {
+      "tool_name": "ElevenLabs",
+      "vendor": "ElevenLabs",
+      "category": "Audio",
+      "features": {
+        "core": [
+          "AI voice generation",
+          "Text-to-speech conversion",
+          "Voice cloning technology",
+          "Multiple language support",
+          "Custom voice creation",
+          "Real-time voice synthesis",
+          "High-quality audio output"
+        ],
+        "advanced": [
+          "Voice cloning from samples",
+          "Emotion and tone control",
+          "Speech synthesis markup",
+          "Custom model training",
+          "API integration",
+          "Batch processing",
+          "Voice library access"
+        ],
+        "integrations": [
+          "API access",
+          "Discord bot",
+          "Browser extension",
+          "WordPress plugin",
+          "Zapier integration",
+          "Third-party apps"
+        ]
+      },
+      "pricing": {
+        "monthly": 22,
+        "yearly": 220,
+        "enterprise": "Custom"
+      },
+      "free_trial": true,
+      "pros": [
+        "Exceptional voice quality and realism",
+        "Easy voice cloning from short samples",
+        "Supports 29+ languages",
+        "Fast generation speed",
+        "User-friendly interface",
+        "Good API documentation"
+      ],
+      "cons": [
+        "Can be expensive for heavy usage",
+        "Voice cloning requires ethical considerations",
+        "Limited free tier",
+        "Some voices may sound robotic"
+      ],
+      "rating": 4.7,
+      "use_cases": [
+        "Podcast creation",
+        "Audiobook narration",
+        "Video voiceovers",
+        "E-learning content",
+        "Content localization",
+        "Accessibility applications"
+      ],
+      "affiliate_link": "https://elevenlabs.io/",
+      "logo_url": "/images/tools/elevenlabs-logo.svg",
+      "search_volume": 9500,
+      "cpc": 3.2,
+      "description": "ElevenLabs is a cutting-edge AI voice generation platform that creates incredibly realistic synthetic voices. Using advanced machine learning, it can clone voices from just a few minutes of audio and generate speech in multiple languages with natural intonation and emotion."
+    },
+    {
+      "tool_name": "Murph AI",
+      "vendor": "Murph",
+      "category": "Audio",
+      "features": {
+        "core": [
+          "AI voice generation",
+          "Studio-quality voices",
+          "Multilingual support",
+          "Voice cloning",
+          "Text-to-speech",
+          "Professional audio",
+          "Commercial licensing"
+        ],
+        "advanced": [
+          "Custom voice models",
+          "Emotion control",
+          "Advanced editing",
+          "Batch processing",
+          "API integration",
+          "Team collaboration",
+          "Brand voice creation"
+        ],
+        "integrations": [
+          "Video editing software",
+          "E-learning platforms",
+          "Podcast tools",
+          "Marketing platforms",
+          "API access",
+          "Content management systems",
+          "Social media tools"
+        ]
+      },
+      "pricing": {
+        "monthly": 26,
+        "yearly": 260,
+        "enterprise": "Custom"
+      },
+      "free_trial": true,
+      "pros": [
+        "Studio-quality voice output",
+        "Excellent multilingual support",
+        "Professional voice cloning",
+        "Good for commercial use",
+        "High-quality audio generation",
+        "Reliable performance"
+      ],
+      "cons": [
+        "Expensive pricing",
+        "Limited free trial",
+        "Learning curve for advanced features",
+        "Requires good source material for cloning"
+      ],
+      "rating": 4.5,
+      "use_cases": [
+        "Professional voiceovers",
+        "E-learning content",
+        "Podcast production",
+        "Commercial advertisements",
+        "Audiobook creation",
+        "Video narration"
+      ],
+      "affiliate_link": "https://murph.ai/",
+      "logo_url": "/images/tools/murph-ai-logo.svg",
+      "search_volume": 3800,
+      "cpc": 4.1,
+      "description": "Murph AI is a professional AI voice generation platform that creates studio-quality voiceovers with multilingual support and voice cloning capabilities, ideal for commercial content creation and professional audio production."
+    },
+    {
+      "tool_name": "Play.ht",
+      "vendor": "Play.ht",
+      "category": "Audio",
+      "features": {
+        "core": [
+          "Text-to-speech conversion",
+          "Natural-sounding voices",
+          "Multilingual support",
+          "Voice customization",
+          "Audio editing",
+          "Batch processing",
+          "API access"
+        ],
+        "advanced": [
+          "Voice cloning",
+          "Custom pronunciations",
+          "SSML support",
+          "Audio format options",
+          "Team management",
+          "Advanced controls",
+          "Integration tools"
+        ],
+        "integrations": [
+          "WordPress",
+          "Zapier",
+          "API integrations",
+          "Content management systems",
+          "E-learning platforms",
+          "Video tools",
+          "Podcast platforms"
+        ]
+      },
+      "pricing": {
+        "monthly": 14,
+        "yearly": 140,
+        "enterprise": "Custom"
+      },
+      "free_trial": true,
+      "pros": [
+        "Natural-sounding voices",
+        "Affordable pricing",
+        "Good API support",
+        "Multilingual capabilities",
+        "Easy to integrate",
+        "Regular voice updates"
+      ],
+      "cons": [
+        "Limited voice cloning features",
+        "Quality varies by voice",
+        "Basic editing capabilities",
+        "Limited advanced features"
+      ],
+      "rating": 4.4,
+      "use_cases": [
+        "Content accessibility",
+        "E-learning narration",
+        "Podcast creation",
+        "Website audio content",
+        "Multilingual content",
+        "Audio articles"
+      ],
+      "affiliate_link": "https://play.ht/",
+      "logo_url": "/images/tools/play-ht-logo.svg",
+      "search_volume": 4200,
+      "cpc": 3.2,
+      "description": "Play.ht is an AI text-to-speech platform that converts text into natural-sounding audio with multilingual support and API integration, making content more accessible and engaging across multiple platforms."
+    },
+    {
+      "tool_name": "Synthesys",
+      "vendor": "Synthesys",
+      "category": "Audio",
+      "features": {
+        "core": [
+          "AI voice synthesis",
+          "AI video synthesis",
+          "Professional quality output",
+          "Commercial licensing",
+          "Multi-language support",
+          "Custom avatars",
+          "Brand voice creation"
+        ],
+        "advanced": [
+          "Enterprise solutions",
+          "Custom voice models",
+          "Advanced editing",
+          "Bulk processing",
+          "Team collaboration",
+          "White-label solutions",
+          "API integration"
+        ],
+        "integrations": [
+          "Video editing software",
+          "Content management systems",
+          "Marketing platforms",
+          "E-learning tools",
+          "Social media platforms",
+          "Business applications",
+          "API access"
+        ]
+      },
+      "pricing": {
+        "monthly": 41,
+        "yearly": 410,
+        "enterprise": "Custom"
+      },
+      "free_trial": true,
+      "pros": [
+        "Professional quality output",
+        "Both voice and video synthesis",
+        "Commercial licensing included",
+        "Good customer support",
+        "Enterprise-focused features",
+        "Reliable performance"
+      ],
+      "cons": [
+        "Expensive pricing",
+        "Limited customization options",
+        "Steeper learning curve",
+        "Higher resource requirements"
+      ],
+      "rating": 4.3,
+      "use_cases": [
+        "Professional video content",
+        "Corporate training materials",
+        "Marketing videos",
+        "E-learning content",
+        "Commercial advertisements",
+        "Brand communications"
+      ],
+      "affiliate_link": "https://synthesys.io/",
+      "logo_url": "/images/tools/synthesys-logo.svg",
+      "search_volume": 2600,
+      "cpc": 5.4,
+      "description": "Synthesys is a professional AI platform for voice and video synthesis, offering commercial-grade content creation tools for businesses requiring high-quality multimedia content with commercial licensing."
+    },
+    {
+      "tool_name": "Wellsaid Labs",
+      "vendor": "Wellsaid Labs",
+      "category": "Audio",
+      "features": {
+        "core": [
+          "AI voice generation",
+          "Natural and expressive speech",
+          "Enterprise-focused solutions",
+          "Professional voice talent",
+          "Custom voice creation",
+          "Advanced audio controls",
+          "Commercial licensing"
+        ],
+        "advanced": [
+          "Custom enterprise voices",
+          "Team collaboration tools",
+          "Advanced audio editing",
+          "Pronunciation controls",
+          "Brand voice development",
+          "API integration",
+          "Usage analytics"
+        ],
+        "integrations": [
+          "Enterprise software",
+          "Content management systems",
+          "E-learning platforms",
+          "Video production tools",
+          "Marketing automation",
+          "API access",
+          "Business applications"
+        ]
+      },
+      "pricing": {
+        "monthly": 44,
+        "yearly": 440,
+        "enterprise": "Custom"
+      },
+      "free_trial": true,
+      "pros": [
+        "Extremely natural speech",
+        "Expressive voice generation",
+        "Enterprise-grade security",
+        "Professional voice talent",
+        "High-quality output",
+        "Strong customer support"
+      ],
+      "cons": [
+        "Expensive pricing",
+        "Enterprise-focused (limited consumer features)",
+        "Complex setup for advanced features",
+        "Higher learning curve"
+      ],
+      "rating": 4.2,
+      "use_cases": [
+        "Enterprise communications",
+        "Professional training content",
+        "High-end commercial projects",
+        "Corporate presentations",
+        "Premium audiobook production",
+        "Executive communications"
+      ],
+      "affiliate_link": "https://wellsaidlabs.com/",
+      "logo_url": "/images/tools/wellsaid-labs-logo.svg",
+      "search_volume": 1800,
+      "cpc": 6.2,
+      "description": "Wellsaid Labs provides enterprise-grade AI voice generation with exceptionally natural and expressive speech, designed for professional and corporate use cases requiring premium audio quality."
+    }
+  ]
+}
