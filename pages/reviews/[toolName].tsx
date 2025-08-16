@@ -40,6 +40,8 @@ interface ReviewPageProps {
     slug: string;
     toolAName: string;
     toolBName: string;
+    toolASlug?: string;
+    toolBSlug?: string;
   }>;
 }
 
