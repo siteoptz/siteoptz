@@ -54,7 +54,7 @@ export default function DataRoom() {
     "description": "AI-powered platform for business growth and automation",
     "aggregateRating": {
       "@type": "AggregateRating",
-      "ratingValue": "4.9",
+      "ratingValue": "4.8",
       "reviewCount": "92",
       "bestRating": "5"
     }
@@ -152,11 +152,11 @@ export default function DataRoom() {
                 transition={{ duration: 0.5, delay: 0.4 }}
               >
                 <div className="bg-white rounded-lg shadow-md p-4">
-                  <div className="text-3xl font-bold text-blue-600">271%</div>
+                  <div className="text-3xl font-bold text-blue-600">499%</div>
                   <div className="text-sm text-gray-600">Revenue Growth</div>
                 </div>
                 <div className="bg-white rounded-lg shadow-md p-4">
-                  <div className="text-3xl font-bold text-green-600">513%</div>
+                  <div className="text-3xl font-bold text-green-600">427%</div>
                   <div className="text-sm text-gray-600">Average ROI</div>
                 </div>
                 <div className="bg-white rounded-lg shadow-md p-4">
@@ -164,7 +164,7 @@ export default function DataRoom() {
                   <div className="text-sm text-gray-600">Happy Clients</div>
                 </div>
                 <div className="bg-white rounded-lg shadow-md p-4">
-                  <div className="text-3xl font-bold text-orange-600">4.9</div>
+                  <div className="text-3xl font-bold text-orange-600">4.8</div>
                   <div className="text-sm text-gray-600">Customer Rating</div>
                 </div>
               </motion.div>
