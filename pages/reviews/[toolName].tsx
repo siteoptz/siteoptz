@@ -605,7 +605,7 @@ export default function ReviewPage({ tool, pageTitle, slug, relatedTools, relate
                 <div key={index} className="bg-gray-50 rounded-xl p-6 hover:shadow-lg transition-shadow">
                   <h3 className="text-lg font-semibold text-gray-900 mb-3">
                     <a 
-                      href={`/compare/${comparison.toolAName.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-+|-+$/g, '')}/vs/${comparison.toolBName.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-+|-+$/g, '')}`}
+                      href={`/compare/${comparison.toolASlug || comparison.toolAName.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-+|-+$/g, '')}/vs/${comparison.toolBSlug || comparison.toolBName.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-+|-+$/g, '')}`}
                       className="hover:text-blue-600 transition-colors"
                     >
                       {comparison.title}
@@ -615,7 +615,7 @@ export default function ReviewPage({ tool, pageTitle, slug, relatedTools, relate
                     Compare {comparison.toolAName} and {comparison.toolBName} features, pricing, and use cases.
                   </p>
                   <a 
-                    href={`/compare/${comparison.toolAName.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-+|-+$/g, '')}/vs/${comparison.toolBName.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-+|-+$/g, '')}`}
+                    href={`/compare/${comparison.toolASlug || comparison.toolAName.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-+|-+$/g, '')}/vs/${comparison.toolBSlug || comparison.toolBName.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-+|-+$/g, '')}`}
                     className="text-blue-600 hover:text-blue-800 text-sm font-medium transition-colors"
                   >
                     Read Comparison →
@@ -721,8 +721,16 @@ export const getStaticPaths: GetStaticPaths = async () => {
 };
 
 export const getStaticProps: GetStaticProps = async ({ params }) => {
+  const fs = require('fs');
+  const path = require('path');
+  
   const toolSlug = params?.toolName as string;
   const tools = toolsData;
+  
+  // Load the public data to get correct slugs for comparisons
+  const publicToolsData = JSON.parse(
+    fs.readFileSync(path.join(process.cwd(), 'public/data/aiToolsData.json'), 'utf8')
+  );
   
   // Find tool by slug
   const tool = tools.find((t: any) => 
@@ -741,20 +749,35 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
   // Get related tools (exclude current tool)
   const relatedTools = tools.filter((t: any) => t.tool_name !== tool.tool_name);
 
-  // Generate related comparisons (include current tool)
+  // Find the current tool's slug in public data
+  const currentPublicTool = publicToolsData.find((t: any) => 
+    t.name === tool.tool_name || 
+    t.slug === tool.tool_name.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-+|-+$/g, '')
+  );
+  const currentSlug = currentPublicTool?.slug || toolSlug;
+
+  // Generate related comparisons using slugs from public data
   const relatedComparisons = [];
-  for (let i = 0; i < tools.length; i++) {
-    const otherTool = tools[i];
-    if (otherTool.tool_name === tool.tool_name) continue;
+  for (let i = 0; i < publicToolsData.length; i++) {
+    const otherPublicTool = publicToolsData[i];
+    if (otherPublicTool.slug === currentSlug) continue;
     
-    const comparisonSlug = `${tool.tool_name.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-+|-+$/g, '')}-vs-${otherTool.tool_name.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-+|-+$/g, '')}`;
+    // Find corresponding tool in toolsData for display names
+    const otherTool = tools.find((t: any) => 
+      t.tool_name === otherPublicTool.name ||
+      t.tool_name.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-+|-+$/g, '') === otherPublicTool.slug
+    );
     
-    relatedComparisons.push({
-      title: `${tool.tool_name} vs ${otherTool.tool_name}`,
-      slug: comparisonSlug,
-      toolAName: tool.tool_name,
-      toolBName: otherTool.tool_name
-    });
+    if (otherTool) {
+      relatedComparisons.push({
+        title: `${tool.tool_name} vs ${otherTool.tool_name}`,
+        slug: `${currentSlug}/vs/${otherPublicTool.slug}`,
+        toolAName: tool.tool_name,
+        toolBName: otherTool.tool_name,
+        toolASlug: currentSlug,
+        toolBSlug: otherPublicTool.slug
+      });
+    }
   }
 
   return {
