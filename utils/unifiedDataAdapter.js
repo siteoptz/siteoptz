@@ -63,22 +63,43 @@ function convertNewFormatTool(tool, categoryName) {
 export function loadUnifiedToolsData(fs, path) {
   try {
     // Load existing aiToolsData.json
-    const existingDataPath = path.join(process.cwd(), 'aiToolsData.json');
+    const existingDataPath = path.join(process.cwd(), 'public/data/aiToolsData.json');
     let existingTools = [];
     
     if (fs.existsSync(existingDataPath)) {
       const existingData = JSON.parse(fs.readFileSync(existingDataPath, 'utf-8'));
       existingTools = existingData.map(tool => ({
-        ...tool,
-        toolName: tool.tool_name, // Ensure backward compatibility
-        logo: tool.logo_url, // Ensure backward compatibility
+        tool_name: tool.name,
+        vendor: tool.overview?.developer || tool.name,
+        category: tool.overview?.category || 'Other',
+        description: tool.overview?.description || tool.meta?.description || '',
+        features: {
+          core: tool.features || [],
+          advanced: [],
+          integrations: tool.overview?.integrations || []
+        },
         pricing: {
-          ...tool.pricing,
-          price: tool.pricing.enterprise === 'Custom' && tool.pricing.monthly !== 'Free' 
-            ? `$${tool.pricing.monthly}/month` 
-            : tool.pricing.monthly === 'Free' ? 'Free' : `$${tool.pricing.monthly}/month`,
+          monthly: tool.pricing?.[0]?.price_per_month || 'Custom',
+          yearly: tool.pricing?.[1]?.price_per_month || 'Custom',
+          enterprise: tool.pricing?.[2]?.price_per_month || 'Custom',
+          price: tool.pricing?.[0]?.price_per_month === 0 ? 'Free' : `From $${tool.pricing?.[0]?.price_per_month || 0}/month`,
           tier: 'month'
-        }
+        },
+        free_trial: tool.pricing?.[0]?.price_per_month === 0,
+        pros: tool.pros || [],
+        cons: tool.cons || [],
+        rating: ((tool.benchmarks?.speed || 0) + (tool.benchmarks?.accuracy || 0) + 
+                (tool.benchmarks?.integration || 0) + (tool.benchmarks?.ease_of_use || 0) + 
+                (tool.benchmarks?.value || 0)) / 5 / 2 || 4.0,
+        use_cases: tool.overview?.use_cases || [],
+        affiliate_link: tool.affiliate_link || tool.overview?.website || '#',
+        logo_url: tool.logo,
+        search_volume: tool.search_volume || 1000,
+        cpc: tool.cpc || 2.50,
+        toolName: tool.name, // For backward compatibility
+        logo: tool.logo, // For backward compatibility
+        slug: tool.slug,
+        id: tool.id
       }));
     }
 
@@ -96,7 +117,7 @@ export function loadUnifiedToolsData(fs, path) {
     ];
 
     const newTools = [];
-    const existingToolNames = new Set(existingTools.map(t => t.tool_name.toLowerCase()));
+    const existingToolNames = new Set(existingTools.map(t => (t.tool_name || '').toLowerCase()));
 
     categoryFiles.forEach(filename => {
       const filePath = path.join(newDataDir, filename);
