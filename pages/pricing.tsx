@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import Head from 'next/head';
 import { Calculator, Zap, Users, TrendingUp, CheckCircle } from 'lucide-react';
-import PricingCalculatorComponent from '../components/pricing-calculator';
+import PricingCalculatorComponent from '../components/PricingCalculator';
 import { GetStaticProps } from 'next';
 import fs from 'fs';
 import path from 'path';
@@ -22,6 +22,18 @@ interface PricingPageProps {
 }
 
 export default function PricingPage({ tools }: PricingPageProps) {
+  const handleEmailSubmit = async (email: string, data?: any) => {
+    try {
+      console.log('Email submission:', { email, data });
+      // Here you could send the email data to your CRM or email service
+      // For now, we'll just log it
+      return Promise.resolve();
+    } catch (error) {
+      console.error('Error handling email submission:', error);
+      throw error;
+    }
+  };
+
   return (
     <>
       <Head>
@@ -101,7 +113,7 @@ export default function PricingPage({ tools }: PricingPageProps) {
 
             {/* Main Calculator */}
             <div className="max-w-4xl mx-auto">
-              <PricingCalculatorComponent tools={tools} />
+              <PricingCalculatorComponent tools={tools} onEmailSubmit={handleEmailSubmit} />
             </div>
 
             {/* Why Use Our Calculator */}
