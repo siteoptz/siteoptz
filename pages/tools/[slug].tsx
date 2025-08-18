@@ -79,13 +79,13 @@ export default function ToolPage({ tool, relatedTools, faqs, allTools }: ToolPag
     );
   };
 
-  const overallScore = (
+  const overallScore = tool.benchmarks ? (
     (tool.benchmarks.speed + 
      tool.benchmarks.accuracy + 
      tool.benchmarks.integration + 
      tool.benchmarks.ease_of_use + 
      tool.benchmarks.value) / 5
-  ).toFixed(1);
+  ).toFixed(1) : '0.0';
 
   // Generate SEO meta data using our configuration system
   const toolMeta = generateToolMeta(tool);
@@ -153,23 +153,23 @@ export default function ToolPage({ tool, relatedTools, faqs, allTools }: ToolPag
                 <div className="space-y-3">
                   <div className="flex justify-between items-center">
                     <span>Speed</span>
-                    {renderStars(tool.benchmarks.speed)}
+                    {renderStars(tool.benchmarks?.speed || 0)}
                   </div>
                   <div className="flex justify-between items-center">
                     <span>Accuracy</span>
-                    {renderStars(tool.benchmarks.accuracy)}
+                    {renderStars(tool.benchmarks?.accuracy || 0)}
                   </div>
                   <div className="flex justify-between items-center">
                     <span>Integration</span>
-                    {renderStars(tool.benchmarks.integration)}
+                    {renderStars(tool.benchmarks?.integration || 0)}
                   </div>
                   <div className="flex justify-between items-center">
                     <span>Ease of Use</span>
-                    {renderStars(tool.benchmarks.ease_of_use)}
+                    {renderStars(tool.benchmarks?.ease_of_use || 0)}
                   </div>
                   <div className="flex justify-between items-center">
                     <span>Value</span>
-                    {renderStars(tool.benchmarks.value)}
+                    {renderStars(tool.benchmarks?.value || 0)}
                   </div>
                 </div>
               </div>
@@ -183,7 +183,7 @@ export default function ToolPage({ tool, relatedTools, faqs, allTools }: ToolPag
           <section className="mb-16">
             <h2 className="text-3xl font-bold text-gray-900 mb-8">Key Features</h2>
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
-              {tool.features.map((feature, idx) => (
+              {tool.features?.map((feature, idx) => (
                 <div key={idx} className="bg-white rounded-lg p-4 shadow-sm border border-gray-200">
                   <div className="flex items-start gap-3">
                     <Check className="w-5 h-5 text-green-500 flex-shrink-0 mt-0.5" />
@@ -201,7 +201,7 @@ export default function ToolPage({ tool, relatedTools, faqs, allTools }: ToolPag
                 <h3 className="text-2xl font-bold text-gray-900 mb-6">Pros</h3>
                 <div className="bg-white rounded-xl p-6 shadow-sm border border-gray-200">
                   <ul className="space-y-3">
-                    {tool.pros.map((pro, idx) => (
+                    {tool.pros?.map((pro, idx) => (
                       <li key={idx} className="flex items-start gap-3">
                         <Check className="w-5 h-5 text-green-500 flex-shrink-0 mt-0.5" />
                         <span className="text-gray-700">{pro}</span>
@@ -214,7 +214,7 @@ export default function ToolPage({ tool, relatedTools, faqs, allTools }: ToolPag
                 <h3 className="text-2xl font-bold text-gray-900 mb-6">Cons</h3>
                 <div className="bg-white rounded-xl p-6 shadow-sm border border-gray-200">
                   <ul className="space-y-3">
-                    {tool.cons.map((con, idx) => (
+                    {tool.cons?.map((con, idx) => (
                       <li key={idx} className="flex items-start gap-3">
                         <X className="w-5 h-5 text-red-500 flex-shrink-0 mt-0.5" />
                         <span className="text-gray-700">{con}</span>
@@ -230,7 +230,7 @@ export default function ToolPage({ tool, relatedTools, faqs, allTools }: ToolPag
           <section className="mb-16">
             <h2 className="text-3xl font-bold text-gray-900 mb-8">{tool.name} Pricing Plans</h2>
             <div className="grid md:grid-cols-3 gap-6">
-              {tool.pricing.map((plan, idx) => (
+              {tool.pricing?.map((plan, idx) => (
                 <div 
                   key={idx} 
                   className={`bg-white rounded-xl shadow-lg border-2 ${
@@ -268,12 +268,12 @@ export default function ToolPage({ tool, relatedTools, faqs, allTools }: ToolPag
                       {plan.price_per_month > 0 && <span className="text-base font-normal text-gray-500">/month</span>}
                     </div>
                     <ul className="space-y-3 mb-6">
-                      {plan.features.map((feature, fIdx) => (
+                      {plan.features?.map((feature, fIdx) => (
                         <li key={fIdx} className="flex items-start gap-2">
                           <Check className="w-5 h-5 text-green-500 flex-shrink-0" />
                           <span className="text-sm text-gray-700">{feature}</span>
                         </li>
-                      ))}
+                      )) || <li className="text-sm text-gray-500">Contact for details</li>}
                     </ul>
                     <button className={`w-full py-3 rounded-lg font-semibold transition-colors ${
                       idx === 1 
@@ -357,7 +357,7 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
   }
   
   // Get related tools
-  const relatedTools = tool.related_tools
+  const relatedTools = (tool.related_tools || [])
     .map((id: string) => tools.find((t: Tool) => t.id === id))
     .filter(Boolean)
     .slice(0, 3);
