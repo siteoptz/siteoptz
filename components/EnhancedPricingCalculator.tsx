@@ -420,10 +420,9 @@ const EnhancedPricingCalculator: React.FC<EnhancedPricingCalculatorProps> = ({ t
         <GuideDownloadModal
           isOpen={showGuideModal}
           onClose={() => setShowGuideModal(false)}
-          prefilledData={{
-            primaryInterest: selectedTools.length > 0 ? selectedTools[0].toolName : 'AI Tools',
-            estimatedCost: totalCost,
-            selectedTools: selectedTools.map(t => t.toolName).join(', ')
+          onDownload={(data) => {
+            console.log('Guide download request:', data);
+            // The modal handles the download API call internally
           }}
         />
       )}
