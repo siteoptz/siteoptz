@@ -3,8 +3,37 @@ import { useState } from 'react';
 import Head from 'next/head';
 import Image from 'next/image';
 import Link from 'next/link';
-import toolsData from '../../aiToolsData.json';
+import toolsDataRaw from '../../public/data/aiToolsData.json';
 import FAQSection from '../../components/comparison/FAQSection';
+
+// Convert new data format to old format for compatibility
+const toolsData = toolsDataRaw.map((tool: any) => ({
+  tool_name: tool.name,
+  vendor: tool.overview?.developer || tool.name,
+  logo_url: tool.logo,
+  description: tool.overview?.description || tool.meta?.description || '',
+  features: {
+    core: tool.features || [],
+    advanced: [],
+    integrations: tool.overview?.integrations || []
+  },
+  pros: tool.pros || [],
+  cons: tool.cons || [],
+  pricing: {
+    monthly: tool.pricing?.[0]?.price_per_month || 0,
+    yearly: tool.pricing?.[1]?.price_per_month || 0,
+    enterprise: tool.pricing?.[2]?.price_per_month || 'Custom'
+  },
+  official_url: tool.overview?.website || tool.affiliate_link || '#',
+  affiliate_link: tool.affiliate_link || tool.overview?.website || '#',
+  rating: ((tool.benchmarks?.speed || 0) + (tool.benchmarks?.accuracy || 0) + 
+          (tool.benchmarks?.integration || 0) + (tool.benchmarks?.ease_of_use || 0) + 
+          (tool.benchmarks?.value || 0)) / 5 / 2 || 4.0,
+  use_cases: tool.overview?.use_cases || [],
+  free_trial: tool.pricing?.[0]?.price_per_month === 0,
+  slug: tool.slug,
+  id: tool.id
+}));
 
 interface Tool {
   tool_name: string;
@@ -28,6 +57,8 @@ interface Tool {
   rating: number;
   use_cases: string[];
   free_trial: boolean;
+  slug?: string;
+  id?: string;
 }
 
 interface ReviewPageProps {
