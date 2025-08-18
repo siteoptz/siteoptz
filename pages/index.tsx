@@ -453,7 +453,7 @@ export default function HomePage({ featuredTools, popularComparisons, faqs }: Ho
           </div>
         </section>
 
-        {/* FAQ Section */}
+        {/* FAQ Section - Enhanced with comprehensive AI tool questions */}
         <section className="py-20 bg-white">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <FAQSection 
