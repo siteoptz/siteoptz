@@ -8,6 +8,7 @@ import path from 'path';
 
 interface Tool {
   id: string;
+  slug: string;
   name: string;
   pricing: {
     plan: string;
