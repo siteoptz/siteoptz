@@ -9,11 +9,14 @@ const nextConfig = {
   
   // Image optimization settings
   images: {
-    unoptimized: true, // Required for static export
+    unoptimized: false, // Enable optimization
     formats: ['image/webp', 'image/avif'],
-    minimumCacheTTL: 60 * 60 * 24 * 7, // 7 days
+    minimumCacheTTL: 60 * 60 * 24 * 30, // 30 days
+    deviceSizes: [640, 750, 828, 1080, 1200, 1920, 2048, 3840],
+    imageSizes: [16, 32, 48, 64, 96, 128, 256, 384],
     domains: [
       'siteoptz.ai',
+      'www.siteoptz.ai',
       'upload.wikimedia.org',
       'cdn.openai.com',
       'assets.claude.ai',
@@ -53,6 +56,18 @@ const nextConfig = {
             key: 'X-DNS-Prefetch-Control',
             value: 'on',
           },
+          {
+            key: 'Strict-Transport-Security',
+            value: 'max-age=31536000; includeSubDomains; preload',
+          },
+          {
+            key: 'X-XSS-Protection',
+            value: '1; mode=block',
+          },
+          {
+            key: 'Permissions-Policy',
+            value: 'camera=(), microphone=(), geolocation=()',
+          },
         ],
       },
       {
@@ -70,6 +85,28 @@ const nextConfig = {
           {
             key: 'Cache-Control',
             value: 'public, max-age=31536000, immutable', // 1 year
+          },
+        ],
+      },
+      {
+        source: '/images/(.*)',
+        headers: [
+          {
+            key: 'Cache-Control',
+            value: 'public, max-age=2592000, s-maxage=2592000', // 30 days
+          },
+          {
+            key: 'Accept-CH',
+            value: 'DPR, Viewport-Width, Width',
+          },
+        ],
+      },
+      {
+        source: '/(.*).webp',
+        headers: [
+          {
+            key: 'Cache-Control',
+            value: 'public, max-age=31536000, immutable',
           },
         ],
       },

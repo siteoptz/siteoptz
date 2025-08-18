@@ -4,6 +4,12 @@ export default function Document() {
   return (
     <Html lang="en">
       <Head>
+        {/* Mobile Optimization */}
+        <meta name="theme-color" content="#2563eb" />
+        <meta name="mobile-web-app-capable" content="yes" />
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+        
         {/* Favicons */}
         <link rel="icon" href="/favicon.ico" />
         <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
@@ -11,6 +17,11 @@ export default function Document() {
         <link rel="icon" type="image/png" sizes="192x192" href="/favicon-192x192.png" />
         <link rel="icon" type="image/png" sizes="512x512" href="/favicon-512x512.png" />
         <link rel="apple-touch-icon" href="/favicon-192x192.png" />
+        <link rel="manifest" href="/manifest.json" />
+        
+        {/* Preconnect to external domains for better performance */}
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
         
         {/* Google tag (gtag.js) */}
         <script async src="https://www.googletagmanager.com/gtag/js?id=G-06WK4MZERF"></script>
