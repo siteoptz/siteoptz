@@ -29,7 +29,7 @@ interface LeadData {
 
 // Create email transporter
 const createTransporter = () => {
-  return nodemailer.createTransporter({
+  return nodemailer.createTransport({
     host: EMAIL_SMTP_HOST,
     port: EMAIL_SMTP_PORT,
     secure: EMAIL_SMTP_PORT === 465,
