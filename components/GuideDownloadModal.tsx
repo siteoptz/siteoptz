@@ -104,7 +104,18 @@ export default function GuideDownloadModal({ isOpen, onClose, onDownload }: Guid
     <div className="fixed inset-0 z-50 overflow-y-auto">
       <div className="flex min-h-screen items-center justify-center p-4">
         {/* Backdrop */}
-        <div className="fixed inset-0 bg-black/50 transition-opacity" onClick={onClose} />
+        <div 
+          className="fixed inset-0 bg-black/50 transition-opacity" 
+          onClick={onClose}
+          onKeyDown={(e) => {
+            if (e.key === 'Escape') {
+              onClose();
+            }
+          }}
+          role="button"
+          tabIndex={0}
+          aria-label="Close modal"
+        />
         
         {/* Modal */}
         <div className="relative bg-white rounded-xl shadow-2xl max-w-2xl w-full">
