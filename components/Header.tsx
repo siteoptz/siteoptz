@@ -46,7 +46,7 @@ const Header: React.FC = () => {
       ]
     },
     { name: 'Pricing Calculator', href: '/pricing', current: router.pathname === '/pricing' },
-    { name: 'Reviews', href: '/reviews/chatgpt', current: router.pathname.startsWith('/reviews') },
+    { name: 'Data Room', href: '/data-room', current: router.pathname === '/data-room' },
   ];
 
   const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
