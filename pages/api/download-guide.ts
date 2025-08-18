@@ -328,23 +328,30 @@ function generateEmailHTML(leadData: LeadData) {
 // Send email with the guide
 async function sendGuideEmail(leadData: LeadData) {
   try {
+    // Skip email if not configured
+    if (!EMAIL_SMTP_USER || !EMAIL_SMTP_PASS) {
+      console.log('Email not configured, skipping email send');
+      return { messageId: 'skipped-no-config' };
+    }
+
     const transporter = createTransporter();
     
-    // Read the PDF guide (you'll need to generate this from the markdown)
+    // Check if PDF exists, if not send without attachment
     const guidePath = path.join(process.cwd(), 'public', 'guides', 'ai-tools-comparison-guide-2025.pdf');
+    const pdfExists = fs.existsSync(guidePath);
     
     const mailOptions = {
       from: `"SiteOptz Research Team" <${EMAIL_FROM}>`,
       to: leadData.email,
       subject: `${leadData.firstName}, Your Enterprise AI Tools Guide is Ready 📊`,
       html: generateEmailHTML(leadData),
-      attachments: [
+      attachments: pdfExists ? [
         {
           filename: 'Enterprise-AI-Tools-Landscape-2025.pdf',
           path: guidePath,
           contentType: 'application/pdf',
         },
-      ],
+      ] : [],
     };
 
     const info = await transporter.sendMail(mailOptions);
@@ -352,7 +359,8 @@ async function sendGuideEmail(leadData: LeadData) {
     return info;
   } catch (error) {
     console.error('Error sending email:', error);
-    throw error;
+    // Don't throw - we still want to capture the lead even if email fails
+    return { messageId: 'failed', error: error instanceof Error ? error.message : 'Unknown error' };
   }
 }
 
@@ -361,12 +369,15 @@ export default async function handler(
   req: NextApiRequest,
   res: NextApiResponse
 ) {
+  console.log('Download guide API called:', req.method);
+  
   if (req.method !== 'POST') {
     return res.status(405).json({ error: 'Method not allowed' });
   }
 
   try {
     const leadData: LeadData = req.body;
+    console.log('Lead data received:', { email: leadData.email, company: leadData.company });
     
     // Validate required fields
     if (!leadData.firstName || !leadData.lastName || !leadData.email || !leadData.company || !leadData.role || !leadData.companySize) {
@@ -382,8 +393,8 @@ export default async function handler(
     // Add to GoHighLevel CRM (non-blocking)
     const ghlPromise = addToGoHighLevel(leadData);
     
-    // Send email with guide
-    await sendGuideEmail(leadData);
+    // Send email with guide (non-blocking if it fails)
+    const emailResult = await sendGuideEmail(leadData);
     
     // Wait for GoHighLevel to complete (but don't block on failure)
     const ghlResult = await ghlPromise;
@@ -398,6 +409,7 @@ export default async function handler(
       timeline: leadData.timeline,
       timestamp: new Date().toISOString(),
       ghlSuccess: !!ghlResult,
+      emailSuccess: emailResult.messageId !== 'failed',
     });
     
     // Return success response
@@ -408,9 +420,20 @@ export default async function handler(
     });
   } catch (error) {
     console.error('API error:', error);
-    res.status(500).json({
+    
+    // Provide more specific error details for debugging
+    const errorMessage = error instanceof Error ? error.message : 'Unknown error';
+    const errorDetails = {
       error: 'Failed to process request',
-      message: error instanceof Error ? error.message : 'Unknown error',
-    });
+      message: errorMessage,
+      timestamp: new Date().toISOString(),
+      // Add configuration status for debugging
+      hasEmailConfig: !!EMAIL_SMTP_USER && !!EMAIL_SMTP_PASS,
+      hasGhlConfig: !!GHL_API_KEY && !!GHL_LOCATION_ID,
+    };
+    
+    console.error('Detailed error info:', errorDetails);
+    
+    res.status(500).json(errorDetails);
   }
 }
