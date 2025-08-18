@@ -460,7 +460,7 @@ export default function HomePage({ featuredTools, popularComparisons, faqs }: Ho
               faqs={faqs}
               title="Frequently Asked Questions About AI Tools"
               description="Get answers to common questions about AI tools, pricing, safety, and implementation to help you make informed decisions."
-              maxVisible={8}
+              maxVisible={undefined}
               showStructuredData={true}
             />
           </div>
@@ -507,7 +507,7 @@ export const getStaticProps: GetStaticProps = async () => {
     const unifiedTools = loadUnifiedToolsData(fs, path);
     
     // Load enhanced FAQ data
-    let faqData = [];
+    let faqData: any[] = [];
     try {
       const faqPath = path.join(process.cwd(), 'data/enhanced-faq.json');
       if (fs.existsSync(faqPath)) {

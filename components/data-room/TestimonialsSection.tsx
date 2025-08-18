@@ -1,4 +1,4 @@
-import { motion } from 'framer-motion';
+// import { motion } from 'framer-motion';
 import testimonials from '../../data/testimonials.json';
 
 export function TestimonialsSection() {
@@ -34,18 +34,11 @@ export function TestimonialsSection() {
         </p>
       </div>
 
-      <motion.div
-        className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
-        variants={containerVariants}
-        initial="hidden"
-        whileInView="visible"
-        viewport={{ once: true, margin: "-100px" }}
-      >
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
         {testimonials.map((testimonial, index) => (
-          <motion.div
+          <div
             key={index}
             className="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow"
-            variants={itemVariants}
           >
             <div className="flex items-center mb-4">
               <div className="w-16 h-16 bg-gray-200 rounded-lg flex items-center justify-center mr-4">
@@ -80,9 +73,9 @@ export function TestimonialsSection() {
               </div>
               <span className="ml-2 text-sm text-gray-600">5.0</span>
             </div>
-          </motion.div>
+          </div>
         ))}
-      </motion.div>
+      </div>
     </section>
   );
 }

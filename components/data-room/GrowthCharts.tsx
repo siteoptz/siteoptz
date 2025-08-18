@@ -10,7 +10,7 @@ import {
   Legend,
   ResponsiveContainer,
 } from 'recharts';
-import { motion } from 'framer-motion';
+// import { motion } from 'framer-motion';
 import growthData from '../../data/growth.json';
 
 export function GrowthCharts() {
@@ -53,13 +53,7 @@ export function GrowthCharts() {
 
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
         {/* Revenue Chart */}
-        <motion.div
-          className="bg-white rounded-lg shadow-lg p-6"
-          initial={{ opacity: 0, x: -20 }}
-          whileInView={{ opacity: 1, x: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.5 }}
-        >
+        <div className="bg-white rounded-lg shadow-lg p-6">
           <h3 className="text-xl font-semibold text-gray-900 mb-4">
             Monthly Recurring Revenue
           </h3>
@@ -93,16 +87,10 @@ export function GrowthCharts() {
             <span className="text-gray-600">Annual Growth</span>
             <span className="text-green-600 font-semibold">+499% YoY</span>
           </div>
-        </motion.div>
+        </div>
 
         {/* Clients Chart */}
-        <motion.div
-          className="bg-white rounded-lg shadow-lg p-6"
-          initial={{ opacity: 0, x: 20 }}
-          whileInView={{ opacity: 1, x: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.5, delay: 0.2 }}
-        >
+        <div className="bg-white rounded-lg shadow-lg p-6">
           <h3 className="text-xl font-semibold text-gray-900 mb-4">
             Client Acquisition
           </h3>
@@ -132,17 +120,11 @@ export function GrowthCharts() {
             <span className="text-gray-600">Client Growth</span>
             <span className="text-green-600 font-semibold">+513% in 12 months</span>
           </div>
-        </motion.div>
+        </div>
       </div>
 
       {/* Key Metrics */}
-      <motion.div
-        className="mt-12 grid grid-cols-2 md:grid-cols-4 gap-6"
-        initial={{ opacity: 0, y: 20 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true }}
-        transition={{ duration: 0.5, delay: 0.4 }}
-      >
+      <div className="mt-12 grid grid-cols-2 md:grid-cols-4 gap-6">
         <div className="text-center">
           <div className="text-3xl font-bold text-blue-600">427%</div>
           <div className="text-sm text-gray-600 mt-1">ROI Average</div>
@@ -159,7 +141,7 @@ export function GrowthCharts() {
           <div className="text-3xl font-bold text-orange-600">18h</div>
           <div className="text-sm text-gray-600 mt-1">Avg. Response Time</div>
         </div>
-      </motion.div>
+      </div>
     </section>
   );
 }

@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import Link from 'next/link';
-import { motion } from 'framer-motion';
+// import { motion } from 'framer-motion';
 import { ArrowRightIcon } from '@heroicons/react/24/outline';
 
 export function CallToAction() {
@@ -24,13 +24,7 @@ export function CallToAction() {
   };
 
   return (
-    <motion.section
-      className="py-16"
-      initial={{ opacity: 0 }}
-      whileInView={{ opacity: 1 }}
-      viewport={{ once: true }}
-      transition={{ duration: 0.5 }}
-    >
+    <div className="py-16">
       <div className="bg-gradient-to-br from-blue-600 to-purple-700 rounded-2xl shadow-2xl overflow-hidden">
         <div className="px-8 py-12 md:px-12 md:py-16">
           <div className="max-w-4xl mx-auto text-center">
@@ -93,13 +87,9 @@ export function CallToAction() {
                 </button>
               </div>
               {submitted && (
-                <motion.p
-                  initial={{ opacity: 0, y: -10 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  className="mt-3 text-white text-sm"
-                >
+                <p className="mt-3 text-white text-sm">
                   Thank you! We&apos;ll be in touch within 24 hours.
-                </motion.p>
+                </p>
               )}
             </form>
 
@@ -144,6 +134,6 @@ export function CallToAction() {
           </div>
         </div>
       </div>
-    </motion.section>
+    </div>
   );
 }
