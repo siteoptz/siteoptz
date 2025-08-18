@@ -1,0 +1,72 @@
+{
+  "general_ai_tools": [
+    {
+      "question": "What are AI tools and how do they work?",
+      "answer": "AI tools are software applications that use artificial intelligence technologies like machine learning, natural language processing, and neural networks to automate tasks, analyze data, and generate content. They work by processing input data through trained algorithms to produce intelligent outputs, such as text generation, image creation, or data analysis."
+    },
+    {
+      "question": "Which AI tools are best for content creation in 2025?",
+      "answer": "The top AI content creation tools in 2025 include ChatGPT for conversational content, Jasper AI for marketing copy, Claude for detailed analysis, Copy.ai for quick content generation, and Notion AI for integrated workspace content. Each tool has specific strengths depending on your content type and workflow needs."
+    },
+    {
+      "question": "How much do AI tools typically cost?",
+      "answer": "AI tool pricing varies widely. Free tiers are available for most tools with limited usage. Paid plans typically range from $10-50/month for individual users, while enterprise solutions can cost $100-500+ monthly. Many tools offer usage-based pricing, charging per API call, word generated, or feature accessed."
+    },
+    {
+      "question": "Are AI tools safe and secure to use for business?",
+      "answer": "Most reputable AI tools implement enterprise-grade security measures including data encryption, compliance certifications (SOC 2, GDPR), and privacy controls. However, it's important to review each tool's data handling policies, especially for sensitive business information. Look for tools that offer on-premise deployment or don't store user data."
+    },
+    {
+      "question": "Can AI tools replace human workers?",
+      "answer": "AI tools are designed to augment human capabilities rather than replace workers entirely. They excel at automating repetitive tasks, providing data insights, and enhancing productivity. However, human creativity, strategic thinking, emotional intelligence, and complex problem-solving remain essential. The most effective approach is human-AI collaboration."
+    },
+    {
+      "question": "What's the difference between GPT-4, Claude, and Gemini?",
+      "answer": "GPT-4 (OpenAI) excels at creative writing and code generation, Claude (Anthropic) is known for safety and detailed analysis, while Gemini (Google) integrates well with Google services and multimodal tasks. Each has different context windows, training data, and strengths. GPT-4 has the largest ecosystem, Claude focuses on helpfulness and safety, and Gemini offers strong reasoning capabilities."
+    },
+    {
+      "question": "How do I choose the right AI tool for my business?",
+      "answer": "Consider these factors: 1) Specific use case and requirements, 2) Integration with existing tools, 3) Pricing and budget constraints, 4) Data privacy and security needs, 5) Ease of use and learning curve, 6) Customer support quality, 7) Scalability options. Start with free trials to test functionality before committing to paid plans."
+    },
+    {
+      "question": "Do I need technical skills to use AI tools?",
+      "answer": "Most modern AI tools are designed for non-technical users with intuitive interfaces and no coding required. However, advanced features or API integrations may benefit from technical knowledge. Many tools offer tutorials, documentation, and customer support to help users get started regardless of technical background."
+    },
+    {
+      "question": "How accurate are AI tools?",
+      "answer": "AI tool accuracy varies by task and tool. For factual information, always verify outputs as AI can sometimes generate inaccurate or outdated information. For creative tasks, accuracy is more subjective. Best practices include fact-checking, using multiple tools for comparison, and maintaining human oversight for critical decisions."
+    },
+    {
+      "question": "What are the legal considerations when using AI tools?",
+      "answer": "Key legal considerations include: 1) Copyright and intellectual property of AI-generated content, 2) Data privacy compliance (GDPR, CCPA), 3) Terms of service and usage restrictions, 4) Professional liability for AI-assisted work, 5) Industry-specific regulations. Consult legal counsel for specific use cases and maintain awareness of evolving AI legislation."
+    }
+  ],
+  "pricing_faqs": [
+    {
+      "question": "Why do AI tool prices vary so much?",
+      "answer": "AI tool pricing depends on factors like model complexity, computational costs, feature sets, target market, and business model. Premium tools with advanced capabilities, enterprise features, or specialized training typically cost more. Usage-based pricing reflects actual computational resources consumed."
+    },
+    {
+      "question": "Are there free AI tools that work well?",
+      "answer": "Yes, many excellent free AI tools exist including ChatGPT's free tier, Google Bard, Hugging Face models, and open-source alternatives. Free tiers often have usage limits or fewer features but can be sufficient for personal use or small-scale projects. They're great for testing before upgrading to paid plans."
+    },
+    {
+      "question": "What's included in enterprise AI tool pricing?",
+      "answer": "Enterprise plans typically include: unlimited or high usage limits, priority support, admin controls, security features (SSO, audit logs), API access, custom integrations, dedicated account management, SLA guarantees, and sometimes on-premise deployment options. Pricing is often customized based on organization size and needs."
+    }
+  ],
+  "technical_faqs": [
+    {
+      "question": "What APIs do popular AI tools offer?",
+      "answer": "Most AI tools provide REST APIs for integration. OpenAI offers GPT and DALL-E APIs, Anthropic provides Claude API, Google has Gemini API, and many tools offer webhooks, SDKs, and plugin architectures. API access often requires paid plans and includes rate limiting and authentication requirements."
+    },
+    {
+      "question": "How do I integrate AI tools with my existing workflow?",
+      "answer": "Integration options include: 1) Direct API connections, 2) Third-party platforms like Zapier or Make, 3) Browser extensions, 4) Plugin integrations (Slack, Microsoft 365), 5) Webhook automations, 6) Custom development using SDKs. Many tools offer no-code integration options for non-technical users."
+    },
+    {
+      "question": "What are the system requirements for AI tools?",
+      "answer": "Most AI tools are cloud-based requiring only a web browser and internet connection. For local AI tools, requirements may include specific operating systems, GPU capabilities, RAM requirements (often 8GB+), and storage space. Cloud-based tools handle the computational requirements remotely."
+    }
+  ]
+}

@@ -249,7 +249,7 @@ export default function ToolsPage({ tools, categories, faqs }: { tools: any[], c
                       <div className="flex items-center">
                         <img 
                           src={tool.logo_url || tool.logo} 
-                          alt={`${toolName} logo`}
+                          alt={`${toolName} AI tool logo - ${tool.category} software review and pricing`}
                           className="w-12 h-12 object-contain mr-4"
                           onError={(e) => {
                             e.currentTarget.src = '/images/tools/placeholder-logo.svg';

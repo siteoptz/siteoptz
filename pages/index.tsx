@@ -8,6 +8,9 @@ import {
   buildCanonicalUrl 
 } from '../seo/meta-config.js';
 import { Search, Star, TrendingUp, Zap, ArrowRight, CheckCircle } from 'lucide-react';
+import ExternalLink from '../components/ExternalLink';
+import { authoritativeLinks } from '../utils/externalLinks';
+import FAQSection from '../components/FAQ/FAQSection';
 
 interface Tool {
   id: string;
@@ -32,9 +35,10 @@ interface HomePageProps {
     tool1: Tool;
     tool2: Tool;
   }>;
+  faqs: any[];
 }
 
-export default function HomePage({ featuredTools, popularComparisons }: HomePageProps) {
+export default function HomePage({ featuredTools, popularComparisons, faqs }: HomePageProps) {
   const [searchTerm, setSearchTerm] = useState('');
   const pageConfig = getPageConfig('home');
 
@@ -173,7 +177,7 @@ export default function HomePage({ featuredTools, popularComparisons }: HomePage
               return Object.entries(toolsByCategory).map(([category, tools]: [string, any]) => (
                 <div key={category} className="mb-16">
                   <div className="flex items-center mb-8">
-                    <h3 className="text-2xl font-bold text-gray-900">{category}</h3>
+                    <h3 className="text-2xl font-bold text-gray-900">Best {category} AI Tools</h3>
                     <span className="ml-3 px-3 py-1 bg-blue-100 text-blue-700 text-sm rounded-full">
                       {tools.length} tools
                     </span>
@@ -186,7 +190,7 @@ export default function HomePage({ featuredTools, popularComparisons }: HomePage
                           <div className="w-12 h-12 bg-gray-100 rounded-lg flex items-center justify-center">
                             <img 
                               src={tool.logo} 
-                              alt={`${tool.name} logo`}
+                              alt={`${tool.name} AI tool logo - ${tool.category || 'artificial intelligence software'} for professional use`}
                               className="w-8 h-8 object-contain"
                               onError={(e) => {
                                 e.currentTarget.style.display = 'none';
@@ -276,7 +280,7 @@ export default function HomePage({ featuredTools, popularComparisons }: HomePage
                       <div className="w-10 h-10 bg-gray-100 rounded-lg flex items-center justify-center">
                         <img 
                           src={comparison.tool1.logo} 
-                          alt={comparison.tool1.name}
+                          alt={`${comparison.tool1.name} AI tool comparison logo`}
                           className="w-8 h-8 object-contain"
                           onError={(e) => {
                             e.currentTarget.style.display = 'none';
@@ -296,7 +300,7 @@ export default function HomePage({ featuredTools, popularComparisons }: HomePage
                       <div className="w-10 h-10 bg-gray-100 rounded-lg flex items-center justify-center">
                         <img 
                           src={comparison.tool2.logo} 
-                          alt={comparison.tool2.name}
+                          alt={`${comparison.tool2.name} AI tool comparison logo`}
                           className="w-8 h-8 object-contain"
                           onError={(e) => {
                             e.currentTarget.style.display = 'none';
@@ -373,6 +377,95 @@ export default function HomePage({ featuredTools, popularComparisons }: HomePage
           </div>
         </section>
 
+        {/* Industry Insights Section */}
+        <section className="py-16 bg-gray-50">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center mb-12">
+              <h2 className="text-3xl font-bold text-gray-900 mb-4">
+                Industry Insights & Research
+              </h2>
+              <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+                Stay informed with the latest AI research, market analysis, and industry standards from leading authorities.
+              </p>
+            </div>
+
+            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+              <div className="bg-white p-6 rounded-xl shadow-sm border border-gray-200 hover:shadow-md transition-shadow">
+                <h3 className="text-lg font-semibold text-gray-900 mb-3">Market Research</h3>
+                <p className="text-gray-600 text-sm mb-4">
+                  Latest AI market trends and forecasts from industry analysts.
+                </p>
+                <ExternalLink 
+                  href={authoritativeLinks.gartner.url}
+                  title={authoritativeLinks.gartner.title}
+                  description={authoritativeLinks.gartner.description}
+                  className="text-sm font-medium"
+                >
+                  Gartner AI Analysis
+                </ExternalLink>
+              </div>
+
+              <div className="bg-white p-6 rounded-xl shadow-sm border border-gray-200 hover:shadow-md transition-shadow">
+                <h3 className="text-lg font-semibold text-gray-900 mb-3">Academic Research</h3>
+                <p className="text-gray-600 text-sm mb-4">
+                  Cutting-edge AI research from top universities and institutions.
+                </p>
+                <ExternalLink 
+                  href={authoritativeLinks.stanfordAI.url}
+                  title={authoritativeLinks.stanfordAI.title}
+                  description={authoritativeLinks.stanfordAI.description}
+                  className="text-sm font-medium"
+                >
+                  Stanford AI Lab
+                </ExternalLink>
+              </div>
+
+              <div className="bg-white p-6 rounded-xl shadow-sm border border-gray-200 hover:shadow-md transition-shadow">
+                <h3 className="text-lg font-semibold text-gray-900 mb-3">Industry Standards</h3>
+                <p className="text-gray-600 text-sm mb-4">
+                  AI safety guidelines and ethical standards from regulatory bodies.
+                </p>
+                <ExternalLink 
+                  href={authoritativeLinks.nist.url}
+                  title={authoritativeLinks.nist.title}
+                  description={authoritativeLinks.nist.description}
+                  className="text-sm font-medium"
+                >
+                  NIST AI Framework
+                </ExternalLink>
+              </div>
+
+              <div className="bg-white p-6 rounded-xl shadow-sm border border-gray-200 hover:shadow-md transition-shadow">
+                <h3 className="text-lg font-semibold text-gray-900 mb-3">Business Impact</h3>
+                <p className="text-gray-600 text-sm mb-4">
+                  Strategic insights on AI adoption and business transformation.
+                </p>
+                <ExternalLink 
+                  href={authoritativeLinks.mckinsey.url}
+                  title={authoritativeLinks.mckinsey.title}
+                  description={authoritativeLinks.mckinsey.description}
+                  className="text-sm font-medium"
+                >
+                  McKinsey AI Report
+                </ExternalLink>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* FAQ Section */}
+        <section className="py-20 bg-white">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <FAQSection 
+              faqs={faqs}
+              title="Frequently Asked Questions About AI Tools"
+              description="Get answers to common questions about AI tools, pricing, safety, and implementation to help you make informed decisions."
+              maxVisible={8}
+              showStructuredData={true}
+            />
+          </div>
+        </section>
+
         {/* CTA Section */}
         <section className="bg-gradient-to-r from-blue-600 to-purple-600 text-white py-20">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
@@ -412,6 +505,22 @@ export const getStaticProps: GetStaticProps = async () => {
     
     // Load unified tools data
     const unifiedTools = loadUnifiedToolsData(fs, path);
+    
+    // Load enhanced FAQ data
+    let faqData = [];
+    try {
+      const faqPath = path.join(process.cwd(), 'data/enhanced-faq.json');
+      if (fs.existsSync(faqPath)) {
+        const rawFaqData = JSON.parse(fs.readFileSync(faqPath, 'utf8'));
+        faqData = [
+          ...rawFaqData.general_ai_tools,
+          ...rawFaqData.pricing_faqs.slice(0, 2),
+          ...rawFaqData.technical_faqs.slice(0, 1)
+        ];
+      }
+    } catch (error) {
+      console.error('Error loading FAQ data:', error);
+    }
 
     // Transform data to match homepage interface
     const transformedTools = unifiedTools.map((tool: any) => {
@@ -476,7 +585,8 @@ export const getStaticProps: GetStaticProps = async () => {
     return {
       props: {
         featuredTools,
-        popularComparisons
+        popularComparisons,
+        faqs: faqData
       }
     };
   } catch (error) {
@@ -484,7 +594,8 @@ export const getStaticProps: GetStaticProps = async () => {
     return {
       props: {
         featuredTools: [],
-        popularComparisons: []
+        popularComparisons: [],
+        faqs: []
       }
     };
   }
