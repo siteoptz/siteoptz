@@ -570,12 +570,42 @@ export default function EmailCaptureForm({
               <div className="flex space-x-3">
                 <Link 
                   href="/tools"
+                  onClick={() => {
+                    // Track click analytics
+                    if (typeof window !== 'undefined' && window.gtag) {
+                      window.gtag('event', 'newsletter_cta_click', {
+                        event_category: 'email_capture',
+                        event_label: 'explore_ai_tools',
+                        custom_parameter_1: 'post_subscription'
+                      });
+                    }
+                    
+                    // Close modal if it's open
+                    if (onClose) {
+                      onClose();
+                    }
+                  }}
                   className="flex-1 bg-blue-600 text-white px-4 py-3 rounded-lg hover:bg-blue-700 transition-colors font-medium text-center"
                 >
                   Explore AI Tools
                 </Link>
                 <Link 
                   href="/compare"
+                  onClick={() => {
+                    // Track click analytics
+                    if (typeof window !== 'undefined' && window.gtag) {
+                      window.gtag('event', 'newsletter_cta_click', {
+                        event_category: 'email_capture',
+                        event_label: 'compare_tools',
+                        custom_parameter_1: 'post_subscription'
+                      });
+                    }
+                    
+                    // Close modal if it's open
+                    if (onClose) {
+                      onClose();
+                    }
+                  }}
                   className="flex-1 bg-purple-600 text-white px-4 py-3 rounded-lg hover:bg-purple-700 transition-colors font-medium text-center"
                 >
                   Compare Tools
