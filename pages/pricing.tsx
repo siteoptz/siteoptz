@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import Head from 'next/head';
 import { Calculator, Zap, Users, TrendingUp, CheckCircle } from 'lucide-react';
-import PricingCalculatorComponent from '../components/PricingCalculator';
+import EnhancedPricingCalculator from '../components/EnhancedPricingCalculator';
 import { GetStaticProps } from 'next';
 import fs from 'fs';
 import path from 'path';
@@ -82,8 +82,8 @@ export default function PricingPage({ tools }: PricingPageProps) {
                 AI Tools Pricing Calculator
               </h1>
               <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-                Calculate your AI tools costs instantly. Compare plans, estimate monthly expenses, 
-                and find the perfect solution for your business needs and budget.
+                Compare up to 5 AI tools side-by-side, estimate monthly expenses with team scaling, 
+                and get expert guidance to find the perfect solution for your business.
               </p>
             </div>
 
@@ -100,8 +100,8 @@ export default function PricingPage({ tools }: PricingPageProps) {
                 <div className="inline-flex items-center justify-center w-12 h-12 bg-purple-100 rounded-full mb-4">
                   <Users className="w-6 h-6 text-purple-600" />
                 </div>
-                <h3 className="text-lg font-semibold mb-2">Multiple Tools</h3>
-                <p className="text-gray-600">Compare pricing across 200+ AI tools and platforms</p>
+              <h3 className="text-lg font-semibold mb-2">Multi-Tool Comparison</h3>
+                <p className="text-gray-600">Compare up to 5 tools side-by-side with team scaling</p>
               </div>
               <div className="text-center">
                 <div className="inline-flex items-center justify-center w-12 h-12 bg-orange-100 rounded-full mb-4">
@@ -113,8 +113,8 @@ export default function PricingPage({ tools }: PricingPageProps) {
             </div>
 
             {/* Main Calculator */}
-            <div className="max-w-4xl mx-auto">
-              <PricingCalculatorComponent tools={tools} onEmailSubmit={handleEmailSubmit} />
+            <div className="max-w-6xl mx-auto">
+              <EnhancedPricingCalculator tools={tools} onEmailSubmit={handleEmailSubmit} />
             </div>
 
             {/* Why Use Our Calculator */}
@@ -156,8 +156,8 @@ export default function PricingPage({ tools }: PricingPageProps) {
                   <div className="flex items-start">
                     <CheckCircle className="w-6 h-6 text-green-500 mt-1 mr-3 flex-shrink-0" />
                     <div>
-                      <h3 className="font-semibold mb-1">Multi-Tool Comparison</h3>
-                      <p className="text-gray-600">Compare costs across different AI tools to find the best value</p>
+                      <h3 className="font-semibold mb-1">Side-by-Side Comparison</h3>
+                      <p className="text-gray-600">Compare up to 5 AI tools simultaneously with detailed cost breakdowns</p>
                     </div>
                   </div>
                   <div className="flex items-start">
@@ -170,8 +170,8 @@ export default function PricingPage({ tools }: PricingPageProps) {
                   <div className="flex items-start">
                     <CheckCircle className="w-6 h-6 text-green-500 mt-1 mr-3 flex-shrink-0" />
                     <div>
-                      <h3 className="font-semibold mb-1">Custom Recommendations</h3>
-                      <p className="text-gray-600">Get personalized tool recommendations based on your requirements</p>
+                      <h3 className="font-semibold mb-1">Expert Consultation</h3>
+                      <p className="text-gray-600">Connect with AI specialists for personalized recommendations and strategy</p>
                     </div>
                   </div>
                 </div>

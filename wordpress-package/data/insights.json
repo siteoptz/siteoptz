@@ -1,0 +1,16 @@
+{
+  "totalTools": 0,
+  "averageRating": null,
+  "priceDistribution": {
+    "min": null,
+    "max": null,
+    "average": null,
+    "median": null
+  },
+  "categoryDistribution": {},
+  "topRatedTools": [],
+  "mostExpensiveTools": [],
+  "freeToolsCount": 0,
+  "paidToolsCount": 0,
+  "lastUpdated": "2025-08-16T19:06:37.168Z"
+}

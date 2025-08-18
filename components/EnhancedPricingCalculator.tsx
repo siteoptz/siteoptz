@@ -1,0 +1,586 @@
+import React, { useState, useEffect, useMemo } from 'react';
+import { Calculator, Zap, TrendingUp, Mail, ChevronDown, X, Plus, User, Phone, Building, MessageCircle } from 'lucide-react';
+import GuideDownloadModal from './GuideDownloadModal';
+
+interface Tool {
+  id: string;
+  slug: string;
+  name: string;
+  pricing: {
+    plan: string;
+    price_per_month: number;
+    features: string[];
+  }[];
+  category?: string;
+  overview?: {
+    category?: string;
+  };
+}
+
+interface SelectedToolPlan {
+  toolId: string;
+  toolName: string;
+  planName: string;
+  pricePerMonth: number;
+  features: string[];
+  usageLevel: number;
+}
+
+interface ExpertFormData {
+  firstName: string;
+  lastName: string;
+  email: string;
+  company: string;
+  phone: string;
+  message: string;
+  interestedTools: string[];
+  budget: string;
+  timeline: string;
+}
+
+interface EnhancedPricingCalculatorProps {
+  tools: Tool[];
+  onEmailSubmit?: (email: string, data?: any) => void;
+}
+
+const EnhancedPricingCalculator: React.FC<EnhancedPricingCalculatorProps> = ({ tools, onEmailSubmit }) => {
+  const [selectedTools, setSelectedTools] = useState<SelectedToolPlan[]>([]);
+  const [teamSize, setTeamSize] = useState(5);
+  const [billingCycle, setBillingCycle] = useState<'monthly' | 'annual'>('monthly');
+  const [showGuideModal, setShowGuideModal] = useState(false);
+  const [showExpertModal, setShowExpertModal] = useState(false);
+  const [expertForm, setExpertForm] = useState<ExpertFormData>({
+    firstName: '',
+    lastName: '',
+    email: '',
+    company: '',
+    phone: '',
+    message: '',
+    interestedTools: [],
+    budget: '',
+    timeline: ''
+  });
+  const [isSubmittingExpert, setIsSubmittingExpert] = useState(false);
+
+  // Process tools data
+  const processedTools = useMemo(() => {
+    if (!tools || tools.length === 0) return [];
+    
+    return tools
+      .filter(tool => tool.pricing && Array.isArray(tool.pricing) && tool.pricing.length > 0)
+      .map(tool => ({
+        ...tool,
+        pricing: tool.pricing.filter(plan => plan && typeof plan === 'object')
+      }))
+      .filter(tool => tool.pricing.length > 0);
+  }, [tools]);
+
+  // Add a tool to comparison
+  const addToolToComparison = (toolId: string) => {
+    if (selectedTools.length >= 5) return;
+    
+    const tool = processedTools.find(t => t.id === toolId);
+    if (!tool || selectedTools.some(st => st.toolId === toolId)) return;
+
+    const defaultPlan = tool.pricing[0];
+    const newSelection: SelectedToolPlan = {
+      toolId: tool.id,
+      toolName: tool.name,
+      planName: defaultPlan.plan,
+      pricePerMonth: defaultPlan.price_per_month,
+      features: defaultPlan.features,
+      usageLevel: 50
+    };
+
+    setSelectedTools([...selectedTools, newSelection]);
+  };
+
+  // Remove tool from comparison
+  const removeToolFromComparison = (toolId: string) => {
+    setSelectedTools(selectedTools.filter(st => st.toolId !== toolId));
+  };
+
+  // Update tool plan
+  const updateToolPlan = (toolId: string, planName: string) => {
+    const tool = processedTools.find(t => t.id === toolId);
+    if (!tool) return;
+
+    const plan = tool.pricing.find(p => p.plan === planName);
+    if (!plan) return;
+
+    setSelectedTools(selectedTools.map(st => 
+      st.toolId === toolId 
+        ? { ...st, planName, pricePerMonth: plan.price_per_month, features: plan.features }
+        : st
+    ));
+  };
+
+  // Update usage level
+  const updateUsageLevel = (toolId: string, usageLevel: number) => {
+    setSelectedTools(selectedTools.map(st => 
+      st.toolId === toolId ? { ...st, usageLevel } : st
+    ));
+  };
+
+  // Calculate total cost
+  const totalCost = useMemo(() => {
+    const baseTotal = selectedTools.reduce((total, tool) => {
+      const usageMultiplier = tool.usageLevel / 100;
+      const toolCost = tool.pricePerMonth * teamSize * usageMultiplier;
+      return total + toolCost;
+    }, 0);
+
+    if (billingCycle === 'annual') {
+      return baseTotal * 12 * 0.85; // 15% annual discount
+    }
+    return baseTotal;
+  }, [selectedTools, teamSize, billingCycle]);
+
+  // Format price
+  const formatPrice = (price: number) => {
+    if (price === 0) return 'Free';
+    if (price >= 10000) return `$${(price / 1000).toFixed(1)}K`;
+    return `$${Math.round(price).toLocaleString()}`;
+  };
+
+  // Handle expert form submission
+  const handleExpertFormSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    setIsSubmittingExpert(true);
+
+    try {
+      // Add selected tools to interested tools
+      const updatedForm = {
+        ...expertForm,
+        interestedTools: [...expertForm.interestedTools, ...selectedTools.map(t => t.toolName)]
+      };
+
+      console.log('Expert consultation request:', updatedForm);
+      // Here you would send to your CRM or email service
+
+      // Reset form and close modal
+      setExpertForm({
+        firstName: '',
+        lastName: '',
+        email: '',
+        company: '',
+        phone: '',
+        message: '',
+        interestedTools: [],
+        budget: '',
+        timeline: ''
+      });
+      setShowExpertModal(false);
+      alert('Thank you! An expert will contact you within 24 hours.');
+    } catch (error) {
+      console.error('Error submitting expert form:', error);
+      alert('Error submitting request. Please try again.');
+    } finally {
+      setIsSubmittingExpert(false);
+    }
+  };
+
+  return (
+    <div className="bg-white rounded-2xl shadow-xl p-8">
+      {/* Header */}
+      <div className="text-center mb-8">
+        <div className="inline-flex items-center justify-center w-12 h-12 bg-blue-100 rounded-full mb-4">
+          <Calculator className="w-6 h-6 text-blue-600" />
+        </div>
+        <h2 className="text-2xl font-bold text-gray-900 mb-2">Multi-Tool Pricing Calculator</h2>
+        <p className="text-gray-600">Compare up to 5 AI tools and estimate your monthly expenses</p>
+      </div>
+
+      {/* Global Settings */}
+      <div className="grid md:grid-cols-2 gap-6 mb-8 p-6 bg-gray-50 rounded-lg">
+        <div>
+          <label className="block text-sm font-medium text-gray-700 mb-2">Team Size</label>
+          <div className="flex items-center space-x-3">
+            <input
+              type="range"
+              min="1"
+              max="100"
+              value={teamSize}
+              onChange={(e) => setTeamSize(parseInt(e.target.value))}
+              className="flex-1 h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer"
+            />
+            <span className="text-lg font-semibold text-blue-600 min-w-[60px]">{teamSize}</span>
+          </div>
+        </div>
+        
+        <div>
+          <label className="block text-sm font-medium text-gray-700 mb-2">Billing Cycle</label>
+          <div className="flex space-x-4">
+            <label className="flex items-center">
+              <input
+                type="radio"
+                value="monthly"
+                checked={billingCycle === 'monthly'}
+                onChange={(e) => setBillingCycle(e.target.value as 'monthly')}
+                className="mr-2 text-blue-600"
+              />
+              <span className="text-sm">Monthly</span>
+            </label>
+            <label className="flex items-center">
+              <input
+                type="radio"
+                value="annual"
+                checked={billingCycle === 'annual'}
+                onChange={(e) => setBillingCycle(e.target.value as 'annual')}
+                className="mr-2 text-blue-600"
+              />
+              <span className="text-sm">Annual (15% off)</span>
+            </label>
+          </div>
+        </div>
+      </div>
+
+      {/* Tool Selection */}
+      {selectedTools.length < 5 && (
+        <div className="mb-8">
+          <h3 className="text-lg font-semibold mb-4">Add Tools to Compare</h3>
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
+            {processedTools
+              .filter(tool => !selectedTools.some(st => st.toolId === tool.id))
+              .slice(0, 8)
+              .map((tool) => (
+                <button
+                  key={tool.id}
+                  onClick={() => addToolToComparison(tool.id)}
+                  className="p-3 border border-gray-200 rounded-lg hover:border-blue-500 hover:bg-blue-50 transition-colors text-left"
+                >
+                  <div className="font-medium text-sm truncate">{tool.name}</div>
+                  <div className="text-xs text-gray-500 truncate">
+                    {tool.overview?.category || tool.category || 'AI Tool'}
+                  </div>
+                  <div className="text-xs text-blue-600 mt-1">
+                    From {formatPrice(tool.pricing[0]?.price_per_month || 0)}/mo
+                  </div>
+                </button>
+              ))}
+          </div>
+        </div>
+      )}
+
+      {/* Selected Tools Comparison */}
+      {selectedTools.length > 0 && (
+        <div className="mb-8">
+          <h3 className="text-lg font-semibold mb-4">
+            Comparing {selectedTools.length} Tool{selectedTools.length > 1 ? 's' : ''}
+          </h3>
+          
+          <div className="grid gap-6">
+            {selectedTools.map((selectedTool) => {
+              const tool = processedTools.find(t => t.id === selectedTool.toolId);
+              if (!tool) return null;
+
+              const adjustedPrice = selectedTool.pricePerMonth * teamSize * (selectedTool.usageLevel / 100);
+              const finalPrice = billingCycle === 'annual' ? adjustedPrice * 12 * 0.85 : adjustedPrice;
+
+              return (
+                <div key={selectedTool.toolId} className="border border-gray-200 rounded-lg p-6">
+                  <div className="flex items-center justify-between mb-4">
+                    <div className="flex items-center">
+                      <h4 className="text-lg font-semibold">{selectedTool.toolName}</h4>
+                      <span className="ml-2 px-2 py-1 bg-blue-100 text-blue-800 text-xs rounded-full">
+                        {tool.overview?.category || tool.category || 'AI Tool'}
+                      </span>
+                    </div>
+                    <button
+                      onClick={() => removeToolFromComparison(selectedTool.toolId)}
+                      className="text-gray-400 hover:text-red-500"
+                    >
+                      <X className="w-5 h-5" />
+                    </button>
+                  </div>
+
+                  <div className="grid md:grid-cols-3 gap-4">
+                    {/* Plan Selection */}
+                    <div>
+                      <label className="block text-sm font-medium text-gray-700 mb-2">Plan</label>
+                      <select
+                        value={selectedTool.planName}
+                        onChange={(e) => updateToolPlan(selectedTool.toolId, e.target.value)}
+                        className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:border-blue-500 focus:ring-2 focus:ring-blue-200"
+                      >
+                        {tool.pricing.map((plan) => (
+                          <option key={plan.plan} value={plan.plan}>
+                            {plan.plan} - {formatPrice(plan.price_per_month)}/mo
+                          </option>
+                        ))}
+                      </select>
+                    </div>
+
+                    {/* Usage Level */}
+                    <div>
+                      <label className="block text-sm font-medium text-gray-700 mb-2">
+                        Usage Level: {selectedTool.usageLevel}%
+                      </label>
+                      <input
+                        type="range"
+                        min="10"
+                        max="100"
+                        step="10"
+                        value={selectedTool.usageLevel}
+                        onChange={(e) => updateUsageLevel(selectedTool.toolId, parseInt(e.target.value))}
+                        className="w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer"
+                      />
+                      <div className="flex justify-between text-xs text-gray-400 mt-1">
+                        <span>Light</span>
+                        <span>Heavy</span>
+                      </div>
+                    </div>
+
+                    {/* Cost */}
+                    <div>
+                      <label className="block text-sm font-medium text-gray-700 mb-2">
+                        {billingCycle === 'annual' ? 'Annual Cost' : 'Monthly Cost'}
+                      </label>
+                      <div className="text-2xl font-bold text-blue-600">
+                        {formatPrice(finalPrice)}
+                      </div>
+                      <div className="text-sm text-gray-500">
+                        {billingCycle === 'annual' ? 'per year' : 'per month'}
+                      </div>
+                    </div>
+                  </div>
+
+                  {/* Features Preview */}
+                  <div className="mt-4">
+                    <div className="text-sm text-gray-600">
+                      <strong>Includes:</strong> {selectedTool.features.slice(0, 3).join(', ')}
+                      {selectedTool.features.length > 3 && ` +${selectedTool.features.length - 3} more`}
+                    </div>
+                  </div>
+                </div>
+              );
+            })}
+          </div>
+        </div>
+      )}
+
+      {/* Total Cost Summary */}
+      {selectedTools.length > 0 && (
+        <div className="bg-gradient-to-r from-blue-50 to-purple-50 p-6 rounded-lg mb-8">
+          <div className="flex items-center justify-between mb-4">
+            <h3 className="text-xl font-semibold text-gray-900">Total Cost Summary</h3>
+            <TrendingUp className="w-6 h-6 text-green-500" />
+          </div>
+          
+          <div className="grid md:grid-cols-3 gap-6">
+            <div className="text-center">
+              <div className="text-3xl font-bold text-blue-600">{formatPrice(totalCost)}</div>
+              <div className="text-sm text-gray-600">
+                Total {billingCycle === 'annual' ? 'Annual' : 'Monthly'} Cost
+              </div>
+            </div>
+            <div className="text-center">
+              <div className="text-2xl font-bold text-green-600">{selectedTools.length}</div>
+              <div className="text-sm text-gray-600">Tools Selected</div>
+            </div>
+            <div className="text-center">
+              <div className="text-2xl font-bold text-purple-600">{teamSize}</div>
+              <div className="text-sm text-gray-600">Team Members</div>
+            </div>
+          </div>
+
+          {billingCycle === 'annual' && totalCost > 0 && (
+            <div className="mt-4 p-3 bg-green-100 rounded-lg">
+              <div className="text-sm text-green-800 text-center">
+                💰 You save {formatPrice(totalCost * 0.176)} per year with annual billing!
+              </div>
+            </div>
+          )}
+        </div>
+      )}
+
+      {/* Action Buttons */}
+      <div className="grid md:grid-cols-2 gap-4">
+        {/* Connect with Expert */}
+        <button
+          onClick={() => setShowExpertModal(true)}
+          className="flex items-center justify-center px-6 py-4 bg-gradient-to-r from-purple-600 to-blue-600 text-white font-semibold rounded-lg hover:from-purple-700 hover:to-blue-700 transition-colors shadow-lg"
+        >
+          <User className="w-5 h-5 mr-2" />
+          Connect with an Expert
+        </button>
+
+        {/* Get Pricing Guide */}
+        <button
+          onClick={() => setShowGuideModal(true)}
+          className="flex items-center justify-center px-6 py-4 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-purple-700 transition-colors shadow-lg"
+        >
+          <Mail className="w-5 h-5 mr-2" />
+          Get Free Pricing Guide
+        </button>
+      </div>
+
+      {/* Guide Download Modal */}
+      {showGuideModal && (
+        <GuideDownloadModal
+          isOpen={showGuideModal}
+          onClose={() => setShowGuideModal(false)}
+          prefilledData={{
+            primaryInterest: selectedTools.length > 0 ? selectedTools[0].toolName : 'AI Tools',
+            estimatedCost: totalCost,
+            selectedTools: selectedTools.map(t => t.toolName).join(', ')
+          }}
+        />
+      )}
+
+      {/* Expert Consultation Modal */}
+      {showExpertModal && (
+        <div className="fixed inset-0 bg-gray-600 bg-opacity-50 overflow-y-auto h-full w-full z-50">
+          <div className="relative top-10 mx-auto p-5 border w-full max-w-2xl shadow-lg rounded-md bg-white">
+            <div className="flex items-center justify-between mb-6">
+              <h3 className="text-2xl font-bold text-gray-900">Connect with an AI Expert</h3>
+              <button
+                onClick={() => setShowExpertModal(false)}
+                className="text-gray-400 hover:text-gray-600"
+              >
+                <X className="w-6 h-6" />
+              </button>
+            </div>
+
+            <form onSubmit={handleExpertFormSubmit} className="space-y-4">
+              <div className="grid md:grid-cols-2 gap-4">
+                <div>
+                  <label className="block text-sm font-medium text-gray-700 mb-1">First Name *</label>
+                  <input
+                    type="text"
+                    required
+                    value={expertForm.firstName}
+                    onChange={(e) => setExpertForm({...expertForm, firstName: e.target.value})}
+                    className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+                  />
+                </div>
+                <div>
+                  <label className="block text-sm font-medium text-gray-700 mb-1">Last Name *</label>
+                  <input
+                    type="text"
+                    required
+                    value={expertForm.lastName}
+                    onChange={(e) => setExpertForm({...expertForm, lastName: e.target.value})}
+                    className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+                  />
+                </div>
+              </div>
+
+              <div className="grid md:grid-cols-2 gap-4">
+                <div>
+                  <label className="block text-sm font-medium text-gray-700 mb-1">Email *</label>
+                  <input
+                    type="email"
+                    required
+                    value={expertForm.email}
+                    onChange={(e) => setExpertForm({...expertForm, email: e.target.value})}
+                    className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+                  />
+                </div>
+                <div>
+                  <label className="block text-sm font-medium text-gray-700 mb-1">Phone</label>
+                  <input
+                    type="tel"
+                    value={expertForm.phone}
+                    onChange={(e) => setExpertForm({...expertForm, phone: e.target.value})}
+                    className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+                  />
+                </div>
+              </div>
+
+              <div>
+                <label className="block text-sm font-medium text-gray-700 mb-1">Company *</label>
+                <input
+                  type="text"
+                  required
+                  value={expertForm.company}
+                  onChange={(e) => setExpertForm({...expertForm, company: e.target.value})}
+                  className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+                />
+              </div>
+
+              <div className="grid md:grid-cols-2 gap-4">
+                <div>
+                  <label className="block text-sm font-medium text-gray-700 mb-1">Budget Range</label>
+                  <select
+                    value={expertForm.budget}
+                    onChange={(e) => setExpertForm({...expertForm, budget: e.target.value})}
+                    className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+                  >
+                    <option value="">Select budget...</option>
+                    <option value="<$1K">Less than $1,000/month</option>
+                    <option value="$1K-$5K">$1,000 - $5,000/month</option>
+                    <option value="$5K-$15K">$5,000 - $15,000/month</option>
+                    <option value="$15K+">$15,000+/month</option>
+                  </select>
+                </div>
+                <div>
+                  <label className="block text-sm font-medium text-gray-700 mb-1">Timeline</label>
+                  <select
+                    value={expertForm.timeline}
+                    onChange={(e) => setExpertForm({...expertForm, timeline: e.target.value})}
+                    className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+                  >
+                    <option value="">Select timeline...</option>
+                    <option value="Immediate">Immediate (this week)</option>
+                    <option value="Short">Short term (1-2 months)</option>
+                    <option value="Medium">Medium term (3-6 months)</option>
+                    <option value="Long">Long term (6+ months)</option>
+                  </select>
+                </div>
+              </div>
+
+              <div>
+                <label className="block text-sm font-medium text-gray-700 mb-1">
+                  Tell us about your AI needs
+                </label>
+                <textarea
+                  rows={4}
+                  value={expertForm.message}
+                  onChange={(e) => setExpertForm({...expertForm, message: e.target.value})}
+                  placeholder="What AI challenges are you looking to solve? What's your current setup?"
+                  className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+                />
+              </div>
+
+              {selectedTools.length > 0 && (
+                <div className="p-4 bg-blue-50 rounded-lg">
+                  <h4 className="font-medium text-blue-900 mb-2">Tools in your comparison:</h4>
+                  <div className="flex flex-wrap gap-2">
+                    {selectedTools.map((tool) => (
+                      <span key={tool.toolId} className="px-2 py-1 bg-blue-200 text-blue-800 text-sm rounded">
+                        {tool.toolName}
+                      </span>
+                    ))}
+                  </div>
+                  <div className="text-sm text-blue-700 mt-2">
+                    Total estimated cost: {formatPrice(totalCost)} {billingCycle === 'annual' ? '/year' : '/month'}
+                  </div>
+                </div>
+              )}
+
+              <div className="flex space-x-3 pt-4">
+                <button
+                  type="submit"
+                  disabled={isSubmittingExpert}
+                  className="flex-1 px-6 py-3 bg-blue-600 text-white font-semibold rounded-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 disabled:opacity-50"
+                >
+                  {isSubmittingExpert ? 'Submitting...' : 'Schedule Consultation'}
+                </button>
+                <button
+                  type="button"
+                  onClick={() => setShowExpertModal(false)}
+                  className="px-6 py-3 border border-gray-300 text-gray-700 font-semibold rounded-md hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-500"
+                >
+                  Cancel
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      )}
+    </div>
+  );
+};
+
+export default EnhancedPricingCalculator;
