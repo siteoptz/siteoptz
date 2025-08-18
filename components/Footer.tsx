@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 import { 
   Zap, 
   Mail, 
@@ -114,10 +115,13 @@ const Footer: React.FC = () => {
           <div className="lg:col-span-2">
             <Link href="/" className="flex items-center space-x-3 mb-6 group">
               <div className="relative">
-                <div className="w-12 h-12 bg-gradient-to-br from-blue-600 via-purple-600 to-blue-800 rounded-xl flex items-center justify-center shadow-lg group-hover:shadow-xl transition-all duration-300 group-hover:scale-105">
-                  <Zap className="w-7 h-7 text-white" />
-                </div>
-                <div className="absolute -top-1 -right-1 w-4 h-4 bg-gradient-to-r from-orange-400 to-red-500 rounded-full animate-pulse"></div>
+                <Image
+                  src="/images/siteoptz-logo.png"
+                  alt="SiteOptz AI Logo"
+                  width={48}
+                  height={48}
+                  className="w-12 h-12 rounded-xl shadow-lg group-hover:shadow-xl transition-all duration-300 group-hover:scale-105"
+                />
               </div>
               <div>
                 <div className="text-2xl font-bold bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">

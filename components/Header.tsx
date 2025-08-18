@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 import { useRouter } from 'next/router';
 import { Menu, X, ChevronDown, Search, Zap } from 'lucide-react';
 
@@ -66,10 +67,13 @@ const Header: React.FC = () => {
           <div className="flex items-center">
             <Link href="/" className="flex items-center space-x-3 group">
               <div className="relative">
-                <div className="w-10 h-10 lg:w-12 lg:h-12 bg-gradient-to-br from-blue-600 via-purple-600 to-blue-800 rounded-xl flex items-center justify-center shadow-lg group-hover:shadow-xl transition-all duration-300 group-hover:scale-105">
-                  <Zap className="w-6 h-6 lg:w-7 lg:h-7 text-white" />
-                </div>
-                <div className="absolute -top-1 -right-1 w-4 h-4 bg-gradient-to-r from-orange-400 to-red-500 rounded-full animate-pulse"></div>
+                <Image
+                  src="/images/siteoptz-logo.png"
+                  alt="SiteOptz AI Logo"
+                  width={48}
+                  height={48}
+                  className="w-10 h-10 lg:w-12 lg:h-12 rounded-xl shadow-lg group-hover:shadow-xl transition-all duration-300 group-hover:scale-105"
+                />
               </div>
               <div className="hidden sm:block">
                 <div className="text-xl lg:text-2xl font-bold bg-gradient-to-r from-gray-900 via-blue-800 to-purple-800 bg-clip-text text-transparent">
