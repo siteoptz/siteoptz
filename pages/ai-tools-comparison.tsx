@@ -4,6 +4,7 @@ import { useState } from 'react';
 import ToolComparisonTable from '../components/ToolComparisonTable';
 import PricingCalculator from '../components/PricingCalculator';
 import FAQSection from '../components/FAQSection';
+import GuideDownloadModal from '../components/GuideDownloadModal';
 import { Zap, Calculator, HelpCircle, Star, TrendingUp } from 'lucide-react';
 import fs from 'fs';
 import path from 'path';
@@ -61,6 +62,7 @@ interface AIToolsPageProps {
 
 export default function AIToolsComparison({ tools, faqs }: AIToolsPageProps) {
   const [emailCaptured, setEmailCaptured] = useState<string | null>(null);
+  const [showGuideModal, setShowGuideModal] = useState(false);
 
   // Combine all FAQs for the page
   const allFaqs: FAQ[] = Object.values(faqs).flat();
@@ -428,7 +430,10 @@ export default function AIToolsComparison({ tools, faqs }: AIToolsPageProps) {
                 <button className="bg-white text-blue-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
                   Get Free Consultation
                 </button>
-                <button className="bg-transparent border-2 border-white px-8 py-4 rounded-lg font-semibold hover:bg-white/10 transition-colors">
+                <button 
+                  onClick={() => setShowGuideModal(true)}
+                  className="bg-transparent border-2 border-white px-8 py-4 rounded-lg font-semibold hover:bg-white/10 transition-colors"
+                >
                   Download Comparison Guide
                 </button>
               </div>
@@ -441,6 +446,16 @@ export default function AIToolsComparison({ tools, faqs }: AIToolsPageProps) {
 
         </div>
       </div>
+
+      {/* Guide Download Modal */}
+      <GuideDownloadModal
+        isOpen={showGuideModal}
+        onClose={() => setShowGuideModal(false)}
+        onDownload={(formData) => {
+          console.log('Guide download initiated:', formData);
+          // Analytics tracking is handled within the modal
+        }}
+      />
     </>
   );
 }

@@ -2,12 +2,14 @@ import React, { useState, useMemo } from 'react';
 import Head from 'next/head';
 import { Search, Filter, Grid, List, Star, DollarSign, Zap } from 'lucide-react';
 import { generateMetaTitle, generateMetaDescription, generateOpenGraphTags } from '../../utils/seoUtils';
+import GuideDownloadModal from '../../components/GuideDownloadModal';
 
 export default function CompareIndex({ aiToolsData }) {
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [sortBy, setSortBy] = useState('name');
   const [viewMode, setViewMode] = useState('grid');
+  const [showGuideModal, setShowGuideModal] = useState(false);
 
   // Get unique categories from tools data
   const categories = useMemo(() => {
@@ -200,12 +202,25 @@ export default function CompareIndex({ aiToolsData }) {
             <p className="text-xl mb-8 opacity-90">
               Download our comprehensive AI tools comparison guide and get expert recommendations.
             </p>
-            <button className="bg-white text-blue-600 hover:bg-gray-100 px-8 py-4 rounded-lg font-semibold text-lg transition-colors">
+            <button 
+              onClick={() => setShowGuideModal(true)}
+              className="bg-white text-blue-600 hover:bg-gray-100 px-8 py-4 rounded-lg font-semibold text-lg transition-colors"
+            >
               Download Free Guide
             </button>
           </div>
         </section>
       </div>
+
+      {/* Guide Download Modal */}
+      <GuideDownloadModal
+        isOpen={showGuideModal}
+        onClose={() => setShowGuideModal(false)}
+        onDownload={(formData) => {
+          console.log('Guide download initiated:', formData);
+          // Analytics tracking is handled within the modal
+        }}
+      />
     </>
   );
 }

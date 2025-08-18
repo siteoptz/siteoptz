@@ -1,9 +1,11 @@
 import Head from "next/head";
+import { useState } from "react";
 import fs from "fs";
 import path from "path";
 import ToolComparisonTable from "../components/ToolComparisonTable";
 import PricingCalculator from "../components/PricingCalculator";
 import FAQSection from "../components/FAQSection";
+import GuideDownloadModal from "../components/GuideDownloadModal";
 
 // Generate FAQ Schema for SEO
 function generateFAQSchema(faqs: any[]) {
@@ -49,6 +51,8 @@ export default function ToolsPage({
   tools: any[]; 
   faqs: any[]; 
 }) {
+  const [showGuideModal, setShowGuideModal] = useState(false);
+  
   // Generate FAQ schema for SEO
   const faqSchema = generateFAQSchema(faqs.slice(0, 20)); // Limit to first 20 for performance
 
@@ -251,7 +255,10 @@ export default function ToolsPage({
               <button className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
                 Get Free Consultation
               </button>
-              <button className="bg-transparent border-2 border-white px-8 py-3 rounded-lg font-semibold hover:bg-white/10 transition-colors">
+              <button 
+                onClick={() => setShowGuideModal(true)}
+                className="bg-transparent border-2 border-white px-8 py-3 rounded-lg font-semibold hover:bg-white/10 transition-colors"
+              >
                 Download Guide
               </button>
             </div>
@@ -259,6 +266,16 @@ export default function ToolsPage({
 
         </main>
       </div>
+
+      {/* Guide Download Modal */}
+      <GuideDownloadModal
+        isOpen={showGuideModal}
+        onClose={() => setShowGuideModal(false)}
+        onDownload={(formData) => {
+          console.log('Guide download initiated:', formData);
+          // Analytics tracking is handled within the modal
+        }}
+      />
     </>
   );
 }
