@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useMemo } from 'react';
-import { Calculator, Zap, TrendingUp, Mail, ChevronDown, X, Plus, User, Phone, Building, MessageCircle } from 'lucide-react';
+import { Calculator, Zap, TrendingUp, Mail, ChevronDown, X, Plus, User, Phone, Building, MessageCircle, Filter } from 'lucide-react';
 import GuideDownloadModal from './GuideDownloadModal';
 
 interface Tool {
@@ -47,6 +47,7 @@ const EnhancedPricingCalculator: React.FC<EnhancedPricingCalculatorProps> = ({ t
   const [selectedTools, setSelectedTools] = useState<SelectedToolPlan[]>([]);
   const [teamSize, setTeamSize] = useState(5);
   const [billingCycle, setBillingCycle] = useState<'monthly' | 'annual'>('monthly');
+  const [selectedCategory, setSelectedCategory] = useState<string>('all');
   const [showGuideModal, setShowGuideModal] = useState(false);
   const [showExpertModal, setShowExpertModal] = useState(false);
   const [expertForm, setExpertForm] = useState<ExpertFormData>({
@@ -74,6 +75,30 @@ const EnhancedPricingCalculator: React.FC<EnhancedPricingCalculatorProps> = ({ t
       }))
       .filter(tool => tool.pricing.length > 0);
   }, [tools]);
+
+  // Extract unique categories from tools
+  const categories = useMemo(() => {
+    const categorySet = new Set<string>();
+    
+    processedTools.forEach(tool => {
+      const category = tool.overview?.category || tool.category || 'Other';
+      categorySet.add(category);
+    });
+    
+    return Array.from(categorySet).sort();
+  }, [processedTools]);
+
+  // Filter tools by selected category
+  const filteredTools = useMemo(() => {
+    if (selectedCategory === 'all') {
+      return processedTools;
+    }
+    
+    return processedTools.filter(tool => {
+      const toolCategory = tool.overview?.category || tool.category || 'Other';
+      return toolCategory === selectedCategory;
+    });
+  }, [processedTools, selectedCategory]);
 
   // Add a tool to comparison
   const addToolToComparison = (toolId: string) => {
@@ -238,27 +263,98 @@ const EnhancedPricingCalculator: React.FC<EnhancedPricingCalculatorProps> = ({ t
       {/* Tool Selection */}
       {selectedTools.length < 5 && (
         <div className="mb-8">
-          <h3 className="text-lg font-semibold mb-4">Add Tools to Compare</h3>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
-            {processedTools
-              .filter(tool => !selectedTools.some(st => st.toolId === tool.id))
-              .slice(0, 8)
-              .map((tool) => (
-                <button
-                  key={tool.id}
-                  onClick={() => addToolToComparison(tool.id)}
-                  className="p-3 border border-gray-200 rounded-lg hover:border-blue-500 hover:bg-blue-50 transition-colors text-left"
+          <div className="flex items-center justify-between mb-4">
+            <div className="flex items-center space-x-4">
+              <h3 className="text-lg font-semibold">Add Tools to Compare</h3>
+              {selectedCategory !== 'all' && (
+                <div className="flex items-center space-x-2">
+                  <span className="px-3 py-1 bg-blue-100 text-blue-800 text-sm rounded-full">
+                    {selectedCategory} ({filteredTools.length})
+                  </span>
+                  <button
+                    onClick={() => setSelectedCategory('all')}
+                    className="text-xs text-gray-500 hover:text-red-600 underline"
+                  >
+                    Clear filter
+                  </button>
+                </div>
+              )}
+            </div>
+            <div className="flex items-center space-x-3">
+              <div className="flex items-center space-x-2 text-sm font-medium text-gray-700">
+                <Filter className="w-4 h-4" />
+                <span>Filter by Category:</span>
+              </div>
+              <div className="relative">
+                <select
+                  value={selectedCategory}
+                  onChange={(e) => setSelectedCategory(e.target.value)}
+                  className="appearance-none px-4 py-2 pr-8 border border-gray-300 rounded-lg focus:border-blue-500 focus:ring-2 focus:ring-blue-200 bg-white min-w-[200px] font-medium"
                 >
-                  <div className="font-medium text-sm truncate">{tool.name}</div>
-                  <div className="text-xs text-gray-500 truncate">
-                    {tool.overview?.category || tool.category || 'AI Tool'}
-                  </div>
-                  <div className="text-xs text-blue-600 mt-1">
-                    From {formatPrice(tool.pricing[0]?.price_per_month || 0)}/mo
-                  </div>
-                </button>
-              ))}
+                  <option value="all">All Categories ({processedTools.length})</option>
+                  {categories.map((category) => {
+                    const count = processedTools.filter(tool => 
+                      (tool.overview?.category || tool.category || 'Other') === category
+                    ).length;
+                    return (
+                      <option key={category} value={category}>
+                        {category} ({count})
+                      </option>
+                    );
+                  })}
+                </select>
+                <ChevronDown className="absolute right-2 top-1/2 transform -translate-y-1/2 w-4 h-4 text-gray-400 pointer-events-none" />
+              </div>
+            </div>
           </div>
+          
+          {filteredTools.length === 0 ? (
+            <div className="text-center py-8 bg-gray-50 rounded-lg">
+              <p className="text-gray-500">No tools found in the selected category.</p>
+              <button
+                onClick={() => setSelectedCategory('all')}
+                className="mt-2 text-blue-600 hover:text-blue-800 font-medium"
+              >
+                View all tools
+              </button>
+            </div>
+          ) : (
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
+              {filteredTools
+                .filter(tool => !selectedTools.some(st => st.toolId === tool.id))
+                .slice(0, 12)
+                .map((tool) => (
+                  <button
+                    key={tool.id}
+                    onClick={() => addToolToComparison(tool.id)}
+                    className="p-3 border border-gray-200 rounded-lg hover:border-blue-500 hover:bg-blue-50 transition-colors text-left group"
+                  >
+                    <div className="font-medium text-sm truncate group-hover:text-blue-600">
+                      {tool.name}
+                    </div>
+                    <div className="text-xs text-gray-500 truncate">
+                      {tool.overview?.category || tool.category || 'AI Tool'}
+                    </div>
+                    <div className="text-xs text-blue-600 mt-1 font-medium">
+                      From {formatPrice(tool.pricing[0]?.price_per_month || 0)}/mo
+                    </div>
+                    {tool.pricing.length > 1 && (
+                      <div className="text-xs text-gray-400 mt-1">
+                        {tool.pricing.length} plans available
+                      </div>
+                    )}
+                  </button>
+                ))}
+            </div>
+          )}
+          
+          {filteredTools.filter(tool => !selectedTools.some(st => st.toolId === tool.id)).length > 12 && (
+            <div className="text-center mt-4">
+              <p className="text-sm text-gray-500">
+                Showing 12 of {filteredTools.filter(tool => !selectedTools.some(st => st.toolId === tool.id)).length} tools
+              </p>
+            </div>
+          )}
         </div>
       )}
 
