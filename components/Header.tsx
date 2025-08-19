@@ -138,7 +138,7 @@ const Header: React.FC = () => {
           </div>
         </div>
 
-        {/* Mobile Navigation Menu - DEBUG VISIBLE */}
+        {/* Mobile Navigation Menu - ALWAYS VISIBLE DEBUG */}
         <div 
           style={{
             position: 'fixed',
@@ -146,12 +146,11 @@ const Header: React.FC = () => {
             left: 0,
             right: 0,
             bottom: 0,
-            background: isMenuOpen ? 'red' : 'transparent',
+            background: 'red',
             zIndex: 9999,
             overflowY: 'auto',
             display: 'block',
-            border: '5px solid lime',
-            pointerEvents: isMenuOpen ? 'auto' : 'none'
+            border: '5px solid lime'
           }}
           className="lg:hidden"
         >
@@ -165,101 +164,42 @@ const Header: React.FC = () => {
             fontSize: '20px', 
             fontWeight: 'bold' 
           }}>
-            MENU STATE: {isMenuOpen ? 'OPEN' : 'CLOSED'}
+            🍔 ALWAYS VISIBLE TEST - State: {isMenuOpen ? 'OPEN' : 'CLOSED'}
           </div>
-            <div style={{ 
-              padding: '24px',
-              background: 'blue',
-              minHeight: '200px',
-              border: '3px solid yellow'
-            }}>
-              {/* Close button header */}
-              <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '32px' }}>
-                <h3 style={{ 
-                  fontSize: '24px', 
-                  fontWeight: 'bold', 
-                  color: 'yellow',
-                  background: 'black',
-                  padding: '10px',
-                  border: '2px solid white'
-                }}>🍔 MENU CONTENT HERE</h3>
+          
+          <div style={{ 
+            marginTop: '60px',
+            padding: '24px',
+            background: 'blue',
+            minHeight: '200px',
+            border: '3px solid yellow',
+            color: 'white',
+            fontSize: '24px'
+          }}>
+            <h1 style={{ color: 'white', fontSize: '30px', marginBottom: '20px' }}>🔥 FORCED CONTENT TEST</h1>
+            <p style={{ color: 'yellow', fontSize: '20px', marginBottom: '10px' }}>This text should ALWAYS be visible</p>
+            <p style={{ color: 'white', fontSize: '18px', marginBottom: '10px' }}>Menu state: {isMenuOpen ? 'OPEN' : 'CLOSED'}</p>
+            <div style={{ background: 'green', padding: '15px', margin: '10px 0', color: 'white' }}>GREEN BOX TEST</div>
+              <div style={{ background: 'orange', padding: '20px', margin: '20px 0', color: 'black' }}>
+                <h2>📱 NAVIGATION LINKS</h2>
               </div>
               
-              {/* Navigation items */}
-              <div style={{ marginBottom: '32px' }}>
-                {navigation.map((item) => (
-                  <div key={item.name} style={{ marginBottom: '8px' }}>
-                    <Link
-                      href={item.href}
-                      onClick={closeMenu}
-                      style={{
-                        display: 'block',
-                        padding: '16px 24px',
-                        borderRadius: '12px',
-                        fontSize: '18px',
-                        fontWeight: '500',
-                        color: 'black',
-                        backgroundColor: 'yellow',
-                        border: '1px solid red',
-                        textDecoration: 'none'
-                      }}
-                    >
-                      {item.name}
-                    </Link>
-                    {item.hasDropdown && item.dropdownItems && (
-                      <div style={{ marginLeft: '24px', marginTop: '8px' }}>
-                        {item.dropdownItems.map((dropdownItem) => (
-                          <Link
-                            key={dropdownItem.name}
-                            href={dropdownItem.href}
-                            onClick={closeMenu}
-                            style={{
-                              display: 'block',
-                              padding: '8px 16px',
-                              color: 'black',
-                              backgroundColor: 'orange',
-                              fontSize: '14px',
-                              textDecoration: 'none'
-                            }}
-                          >
-                            {dropdownItem.name}
-                          </Link>
-                        ))}
-                      </div>
-                    )}
-                  </div>
-                ))}
+              <div style={{ background: 'purple', padding: '20px', margin: '20px 0', color: 'white' }}>
+                <div style={{ background: 'yellow', color: 'black', padding: '15px', margin: '10px 0', fontSize: '18px', fontWeight: 'bold' }}>🏠 HOME LINK</div>
+                <div style={{ background: 'yellow', color: 'black', padding: '15px', margin: '10px 0', fontSize: '18px', fontWeight: 'bold' }}>🛠️ TOOLS LINK</div>
+                <div style={{ background: 'yellow', color: 'black', padding: '15px', margin: '10px 0', fontSize: '18px', fontWeight: 'bold' }}>💰 PRICING LINK</div>
+                <div style={{ background: 'yellow', color: 'black', padding: '15px', margin: '10px 0', fontSize: '18px', fontWeight: 'bold' }}>📰 BLOG LINK</div>
               </div>
               
-              {/* CTA Button */}
-              <div style={{ 
-                paddingTop: '24px', 
-                borderTop: '3px solid white',
-                background: 'green',
-                padding: '20px'
-              }}>
-                <Link
-                  href="/tools"
-                  onClick={closeMenu}
-                  style={{
-                    display: 'block',
-                    width: '100%',
-                    padding: '16px 24px',
-                    background: 'purple',
-                    color: 'white',
-                    borderRadius: '12px',
-                    fontWeight: 'bold',
-                    textAlign: 'center',
-                    textDecoration: 'none',
-                    fontSize: '20px',
-                    border: '3px solid white'
-                  }}
-                >
-                  🚀 Explore Tools
-                </Link>
+              <div style={{ background: 'cyan', padding: '20px', color: 'black', fontSize: '24px', fontWeight: 'bold', textAlign: 'center' }}>
+                🚀 BIG BUTTON AREA
               </div>
+            
+            <div style={{ background: 'magenta', padding: '30px', color: 'white', fontSize: '20px' }}>
+              🎉 BOTTOM TEST SECTION
             </div>
           </div>
+        </div>
       </nav>
     </header>
   );
