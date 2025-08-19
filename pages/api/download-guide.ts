@@ -364,8 +364,9 @@ async function sendGuideEmail(leadData: LeadData) {
     });
 
     if (result.success) {
-      console.log('Email sent:', result.messageId || 'success');
-      return { messageId: result.messageId || 'success', success: true };
+      const messageId = 'messageId' in result ? result.messageId : 'success';
+      console.log('Email sent:', messageId);
+      return { messageId, success: true };
     } else {
       console.error('Email send failed:', result.error);
       return { messageId: 'failed', error: result.error, success: false };
