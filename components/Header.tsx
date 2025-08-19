@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import { useRouter } from 'next/router';
-import { Menu, X, ChevronDown, Search, Zap } from 'lucide-react';
+import { Menu, X, ChevronDown } from 'lucide-react';
 
 const Header: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -120,16 +120,8 @@ const Header: React.FC = () => {
             ))}
           </div>
 
-          {/* Search and CTA */}
-          <div className="hidden lg:flex items-center space-x-4">
-            <div className="relative">
-              <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 w-4 h-4 text-gray-400" />
-              <input
-                type="text"
-                placeholder="Search AI tools..."
-                className="pl-10 pr-4 py-2 w-64 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent text-sm"
-              />
-            </div>
+          {/* CTA */}
+          <div className="hidden lg:flex items-center">
             <Link
               href="/tools"
               className="px-6 py-2.5 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-lg font-semibold text-sm hover:from-blue-700 hover:to-purple-700 transform hover:scale-105 transition-all duration-200 shadow-lg hover:shadow-xl"
@@ -139,10 +131,7 @@ const Header: React.FC = () => {
           </div>
 
           {/* Mobile menu button */}
-          <div className="lg:hidden flex items-center space-x-3">
-            <button className="p-2 rounded-lg text-gray-600 hover:text-blue-600 hover:bg-gray-50">
-              <Search className="w-5 h-5" />
-            </button>
+          <div className="lg:hidden flex items-center">
             <button
               onClick={toggleMenu}
               className="p-2 rounded-lg text-gray-600 hover:text-blue-600 hover:bg-gray-50 transition-colors"
