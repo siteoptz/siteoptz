@@ -92,6 +92,13 @@
     @apply grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6;
   }
   
+  /* Mobile menu scrolling */
+  .mobile-menu-scroll {
+    -webkit-overflow-scrolling: touch;
+    overscroll-behavior: contain;
+    scroll-behavior: smooth;
+  }
+  
   .bg-gradient-primary {
     @apply bg-gradient-to-br from-blue-600 via-purple-600 to-blue-800;
   }

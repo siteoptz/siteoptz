@@ -44,8 +44,27 @@ const Header: React.FC = () => {
     },
   ];
 
-  const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
-  const closeMenu = () => setIsMenuOpen(false);
+  const toggleMenu = () => {
+    setIsMenuOpen(!isMenuOpen);
+  };
+  
+  const closeMenu = () => {
+    setIsMenuOpen(false);
+  };
+
+  // Prevent body scroll when menu is open on mobile
+  useEffect(() => {
+    if (isMenuOpen) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = 'unset';
+    }
+
+    // Cleanup function to reset overflow when component unmounts
+    return () => {
+      document.body.style.overflow = 'unset';
+    };
+  }, [isMenuOpen]);
 
   return (
     <header 
@@ -143,8 +162,8 @@ const Header: React.FC = () => {
 
         {/* Mobile Navigation Menu */}
         {isMenuOpen && (
-          <div className="lg:hidden absolute top-full left-0 right-0 bg-white border-t border-gray-200 shadow-xl max-h-[calc(100vh-5rem)] overflow-y-auto">
-            <div className="px-4 py-6 space-y-1">
+          <div className="lg:hidden fixed top-16 left-0 right-0 bottom-0 bg-white border-t border-gray-200 shadow-xl overflow-y-auto mobile-menu-scroll z-40">
+            <div className="px-4 py-6 space-y-1 min-h-full">
               {navigation.map((item) => (
                 <div key={item.name}>
                   <Link
