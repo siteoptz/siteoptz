@@ -99,6 +99,16 @@
     scroll-behavior: smooth;
   }
   
+  /* Hero animations */
+  .animate-gradient {
+    background-size: 200% 200%;
+    animation: gradient 3s ease infinite;
+  }
+  
+  .animate-float {
+    animation: float 6s ease-in-out infinite;
+  }
+  
   .bg-gradient-primary {
     @apply bg-gradient-to-br from-blue-600 via-purple-600 to-blue-800;
   }
@@ -172,5 +182,27 @@
   
   html {
     scroll-behavior: auto;
+  }
+}
+
+/* Keyframe animations */
+@keyframes gradient {
+  0%, 100% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  33% {
+    transform: translateY(-10px) rotate(1deg);
+  }
+  66% {
+    transform: translateY(5px) rotate(-1deg);
   }
 }

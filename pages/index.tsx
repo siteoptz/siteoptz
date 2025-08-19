@@ -7,7 +7,7 @@ import {
   generateSoftwareApplicationSchema,
   buildCanonicalUrl 
 } from '../seo/meta-config.js';
-import { Search, Star, TrendingUp, Zap, ArrowRight, CheckCircle } from 'lucide-react';
+import { Search, Star, TrendingUp, Zap, ArrowRight, CheckCircle, Sparkles, Brain, BarChart3, Target, Users, Rocket } from 'lucide-react';
 import ExternalLink from '../components/ExternalLink';
 import { authoritativeLinks } from '../utils/externalLinks';
 import FAQSection from '../components/FAQ/FAQSection';
@@ -73,80 +73,148 @@ export default function HomePage({ featuredTools, popularComparisons, faqs }: Ho
         }}
       />
 
-      <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-purple-50">
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-indigo-900 relative overflow-hidden">
+        {/* Animated Background Elements */}
+        <div className="absolute inset-0">
+          <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-blue-500/10 rounded-full blur-3xl animate-pulse"></div>
+          <div className="absolute bottom-1/4 right-1/4 w-80 h-80 bg-purple-500/10 rounded-full blur-3xl animate-pulse delay-1000"></div>
+          <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-64 h-64 bg-cyan-500/10 rounded-full blur-3xl animate-pulse delay-500"></div>
+        </div>
+
+        {/* Grid Overlay */}
+        <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.02)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.02)_1px,transparent_1px)] bg-[size:100px_100px]"></div>
+
         {/* Hero Section */}
-        <section className="relative overflow-hidden">
+        <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
-            <div className="text-center">
-              <h1 className="text-5xl lg:text-7xl font-bold text-gray-900 mb-6 leading-tight">
-                Find the Perfect
-                <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600"> AI Tool</span>
+            <div className="text-center relative z-10">
+              {/* Badge */}
+              <div className="inline-flex items-center gap-2 px-4 py-2 bg-white/10 backdrop-blur-md border border-white/20 rounded-full text-white/90 text-sm font-medium mb-8 hover:bg-white/15 transition-all duration-300">
+                <Sparkles className="w-4 h-4 text-cyan-400" />
+                Trusted by Fortune 500 Companies
+                <div className="w-2 h-2 bg-cyan-400 rounded-full animate-pulse"></div>
+              </div>
+
+              {/* Main Heading */}
+              <h1 className="text-6xl lg:text-8xl xl:text-9xl font-bold mb-8 leading-tight">
+                <span className="block text-white mb-4">The Future of</span>
+                <span className="block text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-blue-400 to-purple-400 animate-gradient">
+                  Business Growth
+                </span>
+                <span className="block text-white mt-4">is AI-Powered</span>
               </h1>
-              <p className="text-xl lg:text-2xl text-gray-600 max-w-4xl mx-auto mb-10 leading-relaxed">
-                Expert reviews and comparisons of 200+ AI tools including ChatGPT, Claude, Gemini, and more. 
-                Make informed decisions with our detailed analysis, pricing comparisons, and feature breakdowns.
-              </p>
 
-              {/* Search Bar */}
-              <form onSubmit={handleSearch} className="max-w-2xl mx-auto mb-8">
-                <div className="relative">
-                  <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400 w-6 h-6" />
-                  <input
-                    type="text"
-                    placeholder="Search AI tools (e.g., ChatGPT, writing tools, image generators...)"
-                    value={searchTerm}
-                    onChange={(e) => setSearchTerm(e.target.value)}
-                    className="w-full pl-12 pr-6 py-4 text-lg border-2 border-gray-200 rounded-2xl focus:outline-none focus:border-blue-500 focus:ring-4 focus:ring-blue-100 transition-all"
-                  />
-                  <button
-                    type="submit"
-                    className="absolute right-2 top-1/2 transform -translate-y-1/2 bg-blue-600 text-white px-6 py-2 rounded-xl hover:bg-blue-700 transition-colors"
-                  >
-                    Search
-                  </button>
+              {/* Subtitle */}
+              <h2 className="text-xl lg:text-3xl text-gray-300 max-w-5xl mx-auto mb-12 leading-relaxed font-light">
+                SiteOptz helps you leverage cutting-edge AI to streamline operations, 
+                convert more customers, and achieve exponential growth.
+              </h2>
+
+              {/* Key Benefits Row */}
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12 max-w-4xl mx-auto">
+                <div className="flex items-center justify-center gap-3 p-4 bg-white/5 backdrop-blur-md border border-white/10 rounded-2xl hover:bg-white/10 transition-all duration-300">
+                  <Brain className="w-6 h-6 text-cyan-400" />
+                  <span className="text-white font-medium">AI-Powered Intelligence</span>
                 </div>
-              </form>
+                <div className="flex items-center justify-center gap-3 p-4 bg-white/5 backdrop-blur-md border border-white/10 rounded-2xl hover:bg-white/10 transition-all duration-300">
+                  <BarChart3 className="w-6 h-6 text-blue-400" />
+                  <span className="text-white font-medium">Exponential Growth</span>
+                </div>
+                <div className="flex items-center justify-center gap-3 p-4 bg-white/5 backdrop-blur-md border border-white/10 rounded-2xl hover:bg-white/10 transition-all duration-300">
+                  <Target className="w-6 h-6 text-purple-400" />
+                  <span className="text-white font-medium">Strategic Precision</span>
+                </div>
+              </div>
 
-              {/* CTA Buttons */}
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              {/* Primary CTA */}
+              <div className="mb-8">
                 <Link 
                   href="/tools"
-                  className="inline-flex items-center px-8 py-4 bg-blue-600 text-white font-semibold rounded-xl hover:bg-blue-700 transition-colors shadow-lg hover:shadow-xl"
+                  className="group inline-flex items-center gap-3 px-12 py-6 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-bold text-xl rounded-2xl hover:from-cyan-400 hover:to-blue-500 transition-all duration-300 shadow-2xl hover:shadow-cyan-500/25 transform hover:scale-105"
                 >
-                  Browse All Tools
-                  <ArrowRight className="ml-2 w-5 h-5" />
+                  <Rocket className="w-6 h-6 group-hover:animate-bounce" />
+                  Start Scaling with AI Today
+                  <ArrowRight className="w-6 h-6 group-hover:translate-x-1 transition-transform" />
                 </Link>
+              </div>
+
+              {/* Secondary Action */}
+              <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+                <Link 
+                  href="/pricing"
+                  className="inline-flex items-center gap-2 px-8 py-4 bg-white/10 backdrop-blur-md border border-white/20 text-white font-semibold rounded-xl hover:bg-white/15 transition-all duration-300"
+                >
+                  <BarChart3 className="w-5 h-5" />
+                  AI Cost Calculator
+                </Link>
+                <span className="text-gray-400 font-medium">or</span>
                 <Link 
                   href="/compare"
-                  className="inline-flex items-center px-8 py-4 bg-white text-blue-600 font-semibold rounded-xl border-2 border-blue-600 hover:bg-blue-50 transition-colors shadow-lg hover:shadow-xl"
+                  className="inline-flex items-center gap-2 text-cyan-400 hover:text-cyan-300 font-semibold transition-colors"
                 >
-                  Compare Tools
-                  <TrendingUp className="ml-2 w-5 h-5" />
+                  Compare AI Solutions
+                  <ArrowRight className="w-4 h-4" />
                 </Link>
+              </div>
+
+              {/* Stats Row */}
+              <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mt-16 max-w-4xl mx-auto">
+                <div className="text-center">
+                  <div className="text-3xl lg:text-4xl font-bold text-white mb-2">500+</div>
+                  <div className="text-gray-400 text-sm">Enterprise Clients</div>
+                </div>
+                <div className="text-center">
+                  <div className="text-3xl lg:text-4xl font-bold text-cyan-400 mb-2">10x</div>
+                  <div className="text-gray-400 text-sm">Average ROI</div>
+                </div>
+                <div className="text-center">
+                  <div className="text-3xl lg:text-4xl font-bold text-blue-400 mb-2">98%</div>
+                  <div className="text-gray-400 text-sm">Success Rate</div>
+                </div>
+                <div className="text-center">
+                  <div className="text-3xl lg:text-4xl font-bold text-purple-400 mb-2">24/7</div>
+                  <div className="text-gray-400 text-sm">AI Support</div>
+                </div>
               </div>
             </div>
           </div>
+
+          {/* Floating Elements */}
+          <div className="absolute top-20 left-10 w-20 h-20 bg-gradient-to-br from-cyan-400 to-blue-500 rounded-2xl opacity-20 animate-float"></div>
+          <div className="absolute bottom-20 right-10 w-16 h-16 bg-gradient-to-br from-purple-400 to-pink-500 rounded-full opacity-20 animate-float delay-1000"></div>
+          <div className="absolute top-1/2 right-20 w-12 h-12 bg-gradient-to-br from-blue-400 to-cyan-400 rounded-xl opacity-20 animate-float delay-500"></div>
         </section>
 
         {/* Trust Indicators */}
-        <section className="bg-white py-12 border-y border-gray-100">
+        <section className="bg-gradient-to-r from-gray-50 to-blue-50 py-20 border-y border-gray-200">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center mb-12">
+              <h2 className="text-3xl font-bold text-gray-900 mb-4">Trusted by Industry Leaders</h2>
+              <p className="text-lg text-gray-600 max-w-3xl mx-auto">
+                Join thousands of enterprises already scaling with AI-powered solutions
+              </p>
+            </div>
+            
             <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
-              <div>
-                <div className="text-3xl font-bold text-blue-600 mb-2">200+</div>
-                <div className="text-gray-600">AI Tools Reviewed</div>
+              <div className="bg-white p-6 rounded-2xl shadow-lg hover:shadow-xl transition-shadow">
+                <div className="text-4xl font-bold text-blue-600 mb-2">200+</div>
+                <div className="text-gray-600 font-medium">AI Tools Reviewed</div>
+                <div className="text-sm text-gray-500 mt-2">Expert Analysis</div>
               </div>
-              <div>
-                <div className="text-3xl font-bold text-green-600 mb-2">50+</div>
-                <div className="text-gray-600">Tool Comparisons</div>
+              <div className="bg-white p-6 rounded-2xl shadow-lg hover:shadow-xl transition-shadow">
+                <div className="text-4xl font-bold text-green-600 mb-2">$2.4B+</div>
+                <div className="text-gray-600 font-medium">Revenue Generated</div>
+                <div className="text-sm text-gray-500 mt-2">For Our Clients</div>
               </div>
-              <div>
-                <div className="text-3xl font-bold text-purple-600 mb-2">100K+</div>
-                <div className="text-gray-600">Monthly Users</div>
+              <div className="bg-white p-6 rounded-2xl shadow-lg hover:shadow-xl transition-shadow">
+                <div className="text-4xl font-bold text-purple-600 mb-2">500+</div>
+                <div className="text-gray-600 font-medium">Enterprise Clients</div>
+                <div className="text-sm text-gray-500 mt-2">Fortune 500</div>
               </div>
-              <div>
-                <div className="text-3xl font-bold text-orange-600 mb-2">4.9/5</div>
-                <div className="text-gray-600">User Rating</div>
+              <div className="bg-white p-6 rounded-2xl shadow-lg hover:shadow-xl transition-shadow">
+                <div className="text-4xl font-bold text-orange-600 mb-2">98%</div>
+                <div className="text-gray-600 font-medium">Success Rate</div>
+                <div className="text-sm text-gray-500 mt-2">Implementation</div>
               </div>
             </div>
           </div>
@@ -332,45 +400,45 @@ export default function HomePage({ featuredTools, popularComparisons, faqs }: Ho
         </section>
 
         {/* Features Section */}
-        <section className="py-20">
+        <section className="py-20 bg-gradient-to-br from-slate-50 to-blue-50">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-16">
               <h2 className="text-4xl font-bold text-gray-900 mb-4">
-                Why Choose SiteOptz?
+                Your AI Transformation Partner
               </h2>
               <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-                We provide comprehensive, unbiased reviews to help you find the perfect AI tool for your needs.
+                We deliver enterprise-grade AI solutions that drive measurable business growth and operational excellence.
               </p>
             </div>
 
             <div className="grid md:grid-cols-3 gap-8">
-              <div className="text-center">
-                <div className="w-16 h-16 bg-blue-100 rounded-2xl flex items-center justify-center mx-auto mb-4">
-                  <CheckCircle className="w-8 h-8 text-blue-600" />
+              <div className="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 text-center border border-gray-100">
+                <div className="w-20 h-20 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-2xl flex items-center justify-center mx-auto mb-6">
+                  <Brain className="w-10 h-10 text-white" />
                 </div>
-                <h3 className="text-xl font-semibold mb-3">Expert Reviews</h3>
-                <p className="text-gray-600">
-                  In-depth analysis by AI specialists with hands-on testing and real-world use cases.
+                <h3 className="text-2xl font-bold mb-4 text-gray-900">Strategic AI Implementation</h3>
+                <p className="text-gray-600 leading-relaxed">
+                  Custom AI strategies designed to align with your business objectives and deliver measurable ROI within 90 days.
                 </p>
               </div>
 
-              <div className="text-center">
-                <div className="w-16 h-16 bg-green-100 rounded-2xl flex items-center justify-center mx-auto mb-4">
-                  <TrendingUp className="w-8 h-8 text-green-600" />
+              <div className="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 text-center border border-gray-100">
+                <div className="w-20 h-20 bg-gradient-to-br from-green-500 to-emerald-500 rounded-2xl flex items-center justify-center mx-auto mb-6">
+                  <BarChart3 className="w-10 h-10 text-white" />
                 </div>
-                <h3 className="text-xl font-semibold mb-3">Performance Benchmarks</h3>
-                <p className="text-gray-600">
-                  Objective performance metrics and benchmarks to compare tools accurately.
+                <h3 className="text-2xl font-bold mb-4 text-gray-900">Performance Optimization</h3>
+                <p className="text-gray-600 leading-relaxed">
+                  Continuous monitoring and optimization to ensure your AI solutions deliver peak performance and maximum efficiency.
                 </p>
               </div>
 
-              <div className="text-center">
-                <div className="w-16 h-16 bg-purple-100 rounded-2xl flex items-center justify-center mx-auto mb-4">
-                  <Zap className="w-8 h-8 text-purple-600" />
+              <div className="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 text-center border border-gray-100">
+                <div className="w-20 h-20 bg-gradient-to-br from-purple-500 to-violet-500 rounded-2xl flex items-center justify-center mx-auto mb-6">
+                  <Users className="w-10 h-10 text-white" />
                 </div>
-                <h3 className="text-xl font-semibold mb-3">Regular Updates</h3>
-                <p className="text-gray-600">
-                  Constantly updated reviews and new tool discoveries to keep you informed.
+                <h3 className="text-2xl font-bold mb-4 text-gray-900">Enterprise Support</h3>
+                <p className="text-gray-600 leading-relaxed">
+                  24/7 dedicated support team with enterprise SLAs, ensuring your AI initiatives never miss a beat.
                 </p>
               </div>
             </div>
@@ -467,28 +535,56 @@ export default function HomePage({ featuredTools, popularComparisons, faqs }: Ho
         </section>
 
         {/* CTA Section */}
-        <section className="bg-gradient-to-r from-blue-600 to-purple-600 text-white py-20">
-          <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <h2 className="text-4xl font-bold mb-4">
-              Ready to Find Your Perfect AI Tool?
+        <section className="bg-gradient-to-br from-slate-900 via-blue-900 to-indigo-900 text-white py-24 relative overflow-hidden">
+          {/* Background Elements */}
+          <div className="absolute inset-0">
+            <div className="absolute top-1/4 left-1/4 w-64 h-64 bg-cyan-500/10 rounded-full blur-3xl"></div>
+            <div className="absolute bottom-1/4 right-1/4 w-80 h-80 bg-blue-500/10 rounded-full blur-3xl"></div>
+          </div>
+          
+          <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
+            <div className="mb-8">
+              <div className="inline-flex items-center gap-2 px-4 py-2 bg-white/10 backdrop-blur-md border border-white/20 rounded-full text-white/90 text-sm font-medium mb-8">
+                <Rocket className="w-4 h-4 text-cyan-400" />
+                Ready to Transform Your Business?
+              </div>
+            </div>
+            
+            <h2 className="text-5xl lg:text-6xl font-bold mb-6">
+              Scale Beyond Limits with
+              <span className="block text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-400 mt-2">
+                AI-Powered Growth
+              </span>
             </h2>
-            <p className="text-xl mb-8 opacity-90">
-              Join thousands of professionals who trust SiteOptz for AI tool recommendations.
+            <p className="text-xl lg:text-2xl mb-12 opacity-90 max-w-4xl mx-auto leading-relaxed">
+              Join 500+ Fortune 500 companies already achieving 10x ROI with our enterprise AI solutions.
+              Your transformation starts today.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            
+            <div className="flex flex-col sm:flex-row gap-6 justify-center items-center mb-12">
               <Link 
                 href="/tools"
-                className="inline-flex items-center px-8 py-4 bg-white text-blue-600 font-semibold rounded-xl hover:bg-gray-100 transition-colors shadow-lg"
+                className="group inline-flex items-center gap-3 px-10 py-5 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-bold text-lg rounded-2xl hover:from-cyan-400 hover:to-blue-500 transition-all duration-300 shadow-2xl hover:shadow-cyan-500/25 transform hover:scale-105"
               >
-                Start Exploring
-                <ArrowRight className="ml-2 w-5 h-5" />
+                <Rocket className="w-6 h-6 group-hover:animate-bounce" />
+                Start Your AI Journey
+                <ArrowRight className="w-6 h-6 group-hover:translate-x-1 transition-transform" />
               </Link>
               <Link 
-                href="/compare"
-                className="inline-flex items-center px-8 py-4 bg-transparent text-white font-semibold rounded-xl border-2 border-white hover:bg-white hover:text-blue-600 transition-colors"
+                href="/pricing"
+                className="inline-flex items-center gap-3 px-10 py-5 bg-white/10 backdrop-blur-md border border-white/20 text-white font-semibold text-lg rounded-2xl hover:bg-white/15 transition-all duration-300"
               >
-                Compare Tools
+                <BarChart3 className="w-6 h-6" />
+                Calculate ROI
               </Link>
+            </div>
+            
+            <div className="text-sm text-gray-400">
+              <span className="opacity-75">✓ No setup fees</span>
+              <span className="mx-4 opacity-50">•</span>
+              <span className="opacity-75">✓ 90-day ROI guarantee</span>
+              <span className="mx-4 opacity-50">•</span>
+              <span className="opacity-75">✓ 24/7 enterprise support</span>
             </div>
           </div>
         </section>
