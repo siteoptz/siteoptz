@@ -1,5 +1,6 @@
 import Head from 'next/head';
 import { motion } from 'framer-motion';
+import { Heart, TrendingUp, Settings, Cloud, Plane } from 'lucide-react';
 import { TestimonialsSection } from '../components/data-room/TestimonialsSection';
 import { GrowthCharts } from '../components/data-room/GrowthCharts';
 import { CallToAction } from '../components/data-room/CallToAction';
@@ -199,26 +200,33 @@ export default function DataRoom() {
             
             <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6">
               {[
-                { name: 'Healthcare', count: '23', icon: '🏥' },
-                { name: 'Finance', count: '18', icon: '💰' },
-                { name: 'Engineering', count: '15', icon: '⚙️' },
-                { name: 'SaaS', count: '21', icon: '☁️' },
-                { name: 'Aerospace', count: '15', icon: '✈️' },
-              ].map((industry, index) => (
-                <motion.div
-                  key={index}
-                  className="bg-white rounded-lg shadow-md p-6 text-center hover:shadow-lg transition-shadow"
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 0.3, delay: index * 0.1 }}
-                >
-                  <div className="text-3xl mb-2">{industry.icon}</div>
-                  <div className="font-semibold text-gray-900">{industry.name}</div>
-                  <div className="text-2xl font-bold text-blue-600 mt-2">{industry.count}</div>
-                  <div className="text-xs text-gray-500">clients</div>
-                </motion.div>
-              ))}
+                { name: 'Healthcare', count: '23', icon: Heart },
+                { name: 'Finance', count: '18', icon: TrendingUp },
+                { name: 'Engineering', count: '15', icon: Settings },
+                { name: 'SaaS', count: '21', icon: Cloud },
+                { name: 'Aerospace', count: '15', icon: Plane },
+              ].map((industry, index) => {
+                const IconComponent = industry.icon;
+                return (
+                  <motion.div
+                    key={index}
+                    className="bg-white rounded-lg shadow-md p-6 text-center hover:shadow-lg transition-all duration-300 border border-gray-100 hover:border-gray-200"
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.3, delay: index * 0.1 }}
+                  >
+                    <div className="flex justify-center mb-4">
+                      <div className="w-12 h-12 bg-gradient-to-br from-slate-100 to-slate-200 rounded-lg flex items-center justify-center">
+                        <IconComponent className="w-6 h-6 text-slate-600" strokeWidth={1.5} />
+                      </div>
+                    </div>
+                    <div className="font-semibold text-gray-900 mb-2">{industry.name}</div>
+                    <div className="text-2xl font-bold text-slate-700 mb-1">{industry.count}</div>
+                    <div className="text-xs text-gray-500 uppercase tracking-wide">clients</div>
+                  </motion.div>
+                );
+              })}
             </div>
           </motion.section>
 
