@@ -185,49 +185,15 @@ export default function HomePage({ featuredTools, popularComparisons, faqs }: Ho
           <div className="absolute top-1/2 right-20 w-12 h-12 bg-gradient-to-br from-blue-400 to-cyan-400 rounded-xl opacity-20 animate-float delay-500"></div>
         </section>
 
-        {/* Trust Indicators */}
-        <section className="bg-gradient-to-r from-gray-50 to-blue-50 py-20 border-y border-gray-200">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="text-center mb-12">
-              <h2 className="text-3xl font-bold text-gray-900 mb-4">Trusted by Industry Leaders</h2>
-              <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-                Join thousands of enterprises already scaling with AI-powered solutions
-              </p>
-            </div>
-            
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
-              <div className="bg-white p-6 rounded-2xl shadow-lg hover:shadow-xl transition-shadow">
-                <div className="text-4xl font-bold text-blue-600 mb-2">200+</div>
-                <div className="text-gray-600 font-medium">AI Tools Reviewed</div>
-                <div className="text-sm text-gray-500 mt-2">Expert Analysis</div>
-              </div>
-              <div className="bg-white p-6 rounded-2xl shadow-lg hover:shadow-xl transition-shadow">
-                <div className="text-4xl font-bold text-green-600 mb-2">$2.4B+</div>
-                <div className="text-gray-600 font-medium">Revenue Generated</div>
-                <div className="text-sm text-gray-500 mt-2">For Our Clients</div>
-              </div>
-              <div className="bg-white p-6 rounded-2xl shadow-lg hover:shadow-xl transition-shadow">
-                <div className="text-4xl font-bold text-purple-600 mb-2">500+</div>
-                <div className="text-gray-600 font-medium">Enterprise Clients</div>
-                <div className="text-sm text-gray-500 mt-2">Fortune 500</div>
-              </div>
-              <div className="bg-white p-6 rounded-2xl shadow-lg hover:shadow-xl transition-shadow">
-                <div className="text-4xl font-bold text-orange-600 mb-2">98%</div>
-                <div className="text-gray-600 font-medium">Success Rate</div>
-                <div className="text-sm text-gray-500 mt-2">Implementation</div>
-              </div>
-            </div>
-          </div>
-        </section>
 
         {/* Top-Rated AI Tools */}
-        <section className="py-20">
+        <section className="py-20 bg-gradient-to-br from-slate-900 via-blue-900 to-indigo-900">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-16">
-              <h2 className="text-4xl font-bold text-gray-900 mb-4">
+              <h2 className="text-4xl font-bold text-white mb-4">
                 Top-Rated AI Tools
               </h2>
-              <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
                 Discover all {featuredTools.length} AI tools across 10 categories, used by millions of professionals worldwide.
               </p>
             </div>
@@ -245,8 +211,8 @@ export default function HomePage({ featuredTools, popularComparisons, faqs }: Ho
               return Object.entries(toolsByCategory).map(([category, tools]: [string, any]) => (
                 <div key={category} className="mb-16">
                   <div className="flex items-center mb-8">
-                    <h3 className="text-2xl font-bold text-gray-900">Best {category} AI Tools</h3>
-                    <span className="ml-3 px-3 py-1 bg-blue-100 text-blue-700 text-sm rounded-full">
+                    <h3 className="text-2xl font-bold text-white">Best {category} AI Tools</h3>
+                    <span className="ml-3 px-3 py-1 bg-blue-600 text-white text-sm rounded-full">
                       {tools.length} tools
                     </span>
                   </div>
@@ -329,13 +295,13 @@ export default function HomePage({ featuredTools, popularComparisons, faqs }: Ho
         </section>
 
         {/* Popular Comparisons */}
-        <section className="bg-gray-50 py-20">
+        <section className="bg-gradient-to-br from-blue-900 via-indigo-900 to-slate-900 py-20">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-16">
-              <h2 className="text-4xl font-bold text-gray-900 mb-4">
+              <h2 className="text-4xl font-bold text-white mb-4">
                 Popular AI Tool Comparisons
               </h2>
-              <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
                 Side-by-side comparisons of the most popular AI tools to help you choose the right one.
               </p>
             </div>
@@ -400,13 +366,13 @@ export default function HomePage({ featuredTools, popularComparisons, faqs }: Ho
         </section>
 
         {/* Features Section */}
-        <section className="py-20 bg-gradient-to-br from-slate-50 to-blue-50">
+        <section className="py-20 bg-gradient-to-br from-slate-900 via-blue-900 to-indigo-900">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-16">
-              <h2 className="text-4xl font-bold text-gray-900 mb-4">
+              <h2 className="text-4xl font-bold text-white mb-4">
                 Your AI Transformation Partner
               </h2>
-              <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
                 We deliver enterprise-grade AI solutions that drive measurable business growth and operational excellence.
               </p>
             </div>
@@ -446,13 +412,13 @@ export default function HomePage({ featuredTools, popularComparisons, faqs }: Ho
         </section>
 
         {/* Industry Insights Section */}
-        <section className="py-16 bg-gray-50">
+        <section className="py-16 bg-gradient-to-br from-blue-900 via-indigo-900 to-slate-900">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-12">
-              <h2 className="text-3xl font-bold text-gray-900 mb-4">
+              <h2 className="text-3xl font-bold text-white mb-4">
                 Industry Insights & Research
               </h2>
-              <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
                 Stay informed with the latest AI research, market analysis, and industry standards from leading authorities.
               </p>
             </div>
@@ -522,7 +488,7 @@ export default function HomePage({ featuredTools, popularComparisons, faqs }: Ho
         </section>
 
         {/* FAQ Section - Enhanced with comprehensive AI tool questions */}
-        <section className="py-20 bg-white">
+        <section className="py-20 bg-gradient-to-br from-slate-900 via-blue-900 to-indigo-900">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <FAQSection 
               faqs={faqs}

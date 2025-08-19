@@ -9,7 +9,7 @@
   }
   
   body {
-    @apply text-gray-900 antialiased;
+    @apply text-white antialiased bg-gradient-to-br from-slate-900 via-blue-900 to-indigo-900 min-h-screen;
   }
   
   /* Ensure images are responsive by default */
@@ -52,6 +52,10 @@
   
   .card {
     @apply bg-white rounded-xl shadow-lg p-6 border border-gray-200;
+  }
+  
+  .card-dark {
+    @apply bg-white/10 backdrop-blur-md rounded-xl shadow-lg p-6 border border-white/20 text-white;
   }
   
   .card-hover {
