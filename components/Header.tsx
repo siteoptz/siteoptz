@@ -45,7 +45,6 @@ const Header: React.FC = () => {
   ];
 
   const toggleMenu = () => {
-    console.log('Toggle menu clicked, current state:', isMenuOpen);
     setIsMenuOpen(!isMenuOpen);
   };
   
@@ -73,7 +72,6 @@ const Header: React.FC = () => {
 
   // Prevent body scroll when menu is open on mobile
   useEffect(() => {
-    console.log('useEffect triggered, isMenuOpen:', isMenuOpen);
     if (isMenuOpen) {
       document.body.style.overflow = 'hidden';
     } else {
@@ -84,6 +82,21 @@ const Header: React.FC = () => {
     return () => {
       document.body.style.overflow = 'unset';
     };
+  }, [isMenuOpen]);
+
+  // Handle escape key to close menu
+  useEffect(() => {
+    const handleEscape = (e: KeyboardEvent) => {
+      if (e.key === 'Escape' && isMenuOpen) {
+        closeMenu();
+      }
+    };
+
+    if (isMenuOpen) {
+      document.addEventListener('keydown', handleEscape);
+    }
+    
+    return () => document.removeEventListener('keydown', handleEscape);
   }, [isMenuOpen]);
 
   return (
@@ -182,26 +195,59 @@ const Header: React.FC = () => {
 
         {/* Mobile Navigation Menu */}
         {isMenuOpen && (
-          <div className="lg:hidden fixed top-16 left-0 right-0 bottom-0 bg-red-500 z-[9999] p-4">
-            <div className="bg-white p-4 rounded">
-              <h3 className="text-lg font-bold mb-4">MOBILE MENU TEST</h3>
-              <button 
-                onClick={closeMenu}
-                className="bg-blue-500 text-white px-4 py-2 rounded"
-              >
-                Close Menu
-              </button>
-              <div className="mt-4 space-y-2">
-                {navigation.map((item) => (
+          <div className="lg:hidden fixed top-16 left-0 right-0 bottom-0 bg-white border-t border-gray-200 shadow-xl z-50 overflow-y-auto">
+            <div className="px-4 py-6 space-y-1">
+              {/* Close button header */}
+              <div className="flex justify-between items-center mb-6 pb-4 border-b border-gray-200">
+                <h3 className="text-lg font-semibold text-gray-900">Navigation</h3>
+                <button
+                  onClick={closeMenu}
+                  className="p-2 rounded-lg text-gray-500 hover:text-gray-700 hover:bg-gray-100 transition-colors"
+                >
+                  <X className="w-5 h-5" />
+                </button>
+              </div>
+              
+              {/* Navigation items */}
+              {navigation.map((item) => (
+                <div key={item.name}>
                   <Link
-                    key={item.name}
                     href={item.href}
                     onClick={closeMenu}
-                    className="block px-4 py-2 bg-gray-100 rounded text-gray-900 hover:bg-gray-200"
+                    className={`block px-4 py-3 rounded-lg text-base font-medium transition-colors ${
+                      item.current
+                        ? 'bg-blue-50 text-blue-700'
+                        : 'text-gray-700 hover:text-blue-700 hover:bg-gray-50'
+                    }`}
                   >
                     {item.name}
                   </Link>
-                ))}
+                  {item.hasDropdown && item.dropdownItems && (
+                    <div className="ml-4 mt-2 space-y-1">
+                      {item.dropdownItems.map((dropdownItem) => (
+                        <Link
+                          key={dropdownItem.name}
+                          href={dropdownItem.href}
+                          onClick={closeMenu}
+                          className="block px-4 py-2 text-sm text-gray-600 hover:text-blue-600 hover:bg-blue-50 rounded-lg transition-colors"
+                        >
+                          {dropdownItem.name}
+                        </Link>
+                      ))}
+                    </div>
+                  )}
+                </div>
+              ))}
+              
+              {/* CTA Button */}
+              <div className="pt-6 border-t border-gray-200 mt-6">
+                <Link
+                  href="/tools"
+                  onClick={closeMenu}
+                  className="block w-full px-4 py-3 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-lg font-semibold text-center hover:from-blue-700 hover:to-purple-700 transition-all"
+                >
+                  Explore Tools
+                </Link>
               </div>
             </div>
           </div>
