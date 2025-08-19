@@ -138,8 +138,8 @@ const Header: React.FC = () => {
           </div>
         </div>
 
-        {/* Mobile Navigation Menu */}
-        {isMenuOpen && (
+        {/* Mobile Navigation Menu - DEBUG: isMenuOpen = {isMenuOpen ? 'TRUE' : 'FALSE'} */}
+        {(isMenuOpen || true) && (
           <div 
             style={{
               position: 'fixed',
@@ -154,6 +154,11 @@ const Header: React.FC = () => {
             className="lg:hidden"
           >
             <div style={{ padding: '24px' }}>
+              {/* Debug info */}
+              <div style={{ background: 'yellow', color: 'black', padding: '10px', marginBottom: '20px', fontSize: '16px', fontWeight: 'bold' }}>
+                🔍 DEBUG: isMenuOpen = {isMenuOpen ? 'TRUE' : 'FALSE'}
+              </div>
+              
               {/* Close button */}
               <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '32px' }}>
                 <h3 style={{ fontSize: '24px', fontWeight: 'bold', color: 'white' }}>Navigation</h3>
