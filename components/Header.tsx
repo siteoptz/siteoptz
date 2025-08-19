@@ -63,6 +63,13 @@ const Header: React.FC = () => {
     }
   };
 
+  const handleMenuBackgroundKeyDown = (e: React.KeyboardEvent) => {
+    // Handle keyboard events for accessibility
+    if (e.key === 'Escape') {
+      closeMenu();
+    }
+  };
+
   // Prevent body scroll when menu is open on mobile
   useEffect(() => {
     if (isMenuOpen) {
@@ -188,9 +195,11 @@ const Header: React.FC = () => {
           <div 
             className="lg:hidden fixed top-16 left-0 right-0 bottom-0 bg-white border-t border-gray-200 shadow-xl overflow-y-auto mobile-menu-scroll z-[60]"
             onClick={handleMenuBackgroundClick}
+            onKeyDown={handleMenuBackgroundKeyDown}
             role="dialog"
             aria-modal="true"
             aria-label="Mobile navigation menu"
+            tabIndex={-1}
           >
             <div className="px-4 py-6 space-y-1 min-h-full">
               {/* Close button */}
