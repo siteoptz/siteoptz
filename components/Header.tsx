@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import { useRouter } from 'next/router';
@@ -7,17 +7,7 @@ import { Menu, X, ChevronDown } from 'lucide-react';
 const Header: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
-  const [isToolsDropdownOpen, setIsToolsDropdownOpen] = useState(false);
   const router = useRouter();
-
-  useEffect(() => {
-    const handleScroll = () => {
-      setIsScrolled(window.scrollY > 10);
-    };
-
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
 
   const navigation = [
     { name: 'Home', href: '/', current: router.pathname === '/' },
@@ -45,43 +35,16 @@ const Header: React.FC = () => {
   ];
 
   const toggleMenu = () => {
-    console.log('Toggle clicked, current state:', isMenuOpen);
-    setIsMenuOpen(prev => !prev);
+    console.log('🍔 Toggle clicked! Current state:', isMenuOpen);
+    const newState = !isMenuOpen;
+    setIsMenuOpen(newState);
+    console.log('🍔 New state will be:', newState);
   };
   
   const closeMenu = () => {
     setIsMenuOpen(false);
   };
 
-  const handleMenuBackgroundClick = (e: React.MouseEvent) => {
-    // Only close if clicking the background area (outside menu content)
-    const target = e.target as HTMLElement;
-    const isBackgroundClick = target.classList.contains('mobile-menu-scroll') || 
-                              target.getAttribute('role') === 'dialog';
-    
-    if (isBackgroundClick) {
-      closeMenu();
-    }
-  };
-
-  const handleMenuBackgroundKeyDown = (e: React.KeyboardEvent) => {
-    // Handle keyboard events for accessibility
-    if (e.key === 'Escape') {
-      closeMenu();
-    }
-  };
-
-  // Temporarily disabled to prevent page locking
-  // useEffect(() => {
-  //   if (isMenuOpen) {
-  //     document.body.style.overflow = 'hidden';
-  //   } else {
-  //     document.body.style.overflow = 'unset';
-  //   }
-  //   return () => {
-  //     document.body.style.overflow = 'unset';
-  //   };
-  // }, [isMenuOpen]);
 
   return (
     <header 
@@ -127,7 +90,6 @@ const Header: React.FC = () => {
                       ? 'bg-blue-50 text-blue-700 shadow-sm'
                       : 'text-gray-700 hover:text-blue-700 hover:bg-gray-50'
                   }`}
-                  onMouseEnter={() => item.hasDropdown && setIsToolsDropdownOpen(true)}
                 >
                   <span>{item.name}</span>
                   {item.hasDropdown && (
@@ -139,7 +101,6 @@ const Header: React.FC = () => {
                 {item.hasDropdown && item.dropdownItems && (
                   <div 
                     className="absolute top-full left-0 mt-2 w-56 bg-white rounded-xl shadow-xl border border-gray-200/50 py-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 transform translate-y-2 group-hover:translate-y-0"
-                    onMouseLeave={() => setIsToolsDropdownOpen(false)}
                   >
                     {item.dropdownItems.map((dropdownItem) => (
                       <Link
@@ -177,39 +138,39 @@ const Header: React.FC = () => {
           </div>
         </div>
 
-        {/* Mobile Navigation Menu - Debug State: {isMenuOpen ? 'OPEN' : 'CLOSED'} */}
-        {isMenuOpen === true && (
-          <div 
-            style={{
-              position: 'fixed',
-              top: '64px',
-              left: 0,
-              right: 0,
-              bottom: 0,
-              background: 'linear-gradient(to bottom right, #0f172a, #1e3a8a, #312e81)',
-              zIndex: 9999,
-              overflowY: 'auto',
-              display: 'block'
-            }}
-            className="lg:hidden"
-          >
+        {/* Mobile Navigation Menu - DEBUG VISIBLE */}
+        <div 
+          style={{
+            position: 'fixed',
+            top: '64px',
+            left: 0,
+            right: 0,
+            bottom: 0,
+            background: isMenuOpen ? 'red' : 'transparent',
+            zIndex: 9999,
+            overflowY: 'auto',
+            display: 'block',
+            border: '5px solid lime',
+            pointerEvents: isMenuOpen ? 'auto' : 'none'
+          }}
+          className="lg:hidden"
+        >
+          <div style={{ 
+            position: 'absolute', 
+            top: 0, 
+            left: 0, 
+            background: 'yellow', 
+            padding: '10px', 
+            color: 'black', 
+            fontSize: '20px', 
+            fontWeight: 'bold' 
+          }}>
+            MENU STATE: {isMenuOpen ? 'OPEN' : 'CLOSED'}
+          </div>
             <div style={{ padding: '24px' }}>
               {/* Close button header */}
               <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '32px' }}>
                 <h3 style={{ fontSize: '24px', fontWeight: 'bold', color: 'white' }}>Navigation</h3>
-                <button
-                  onClick={closeMenu}
-                  style={{
-                    padding: '8px',
-                    borderRadius: '8px',
-                    color: '#9ca3af',
-                    background: 'transparent',
-                    border: 'none',
-                    cursor: 'pointer'
-                  }}
-                >
-                  <X className="w-6 h-6" />
-                </button>
               </div>
               
               {/* Navigation items */}
@@ -279,7 +240,6 @@ const Header: React.FC = () => {
               </div>
             </div>
           </div>
-        )}
       </nav>
     </header>
   );
