@@ -83,6 +83,15 @@
     @apply bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent;
   }
   
+  /* Mobile overflow prevention */
+  .mobile-safe {
+    @apply overflow-x-hidden max-w-full;
+  }
+  
+  .mobile-grid {
+    @apply grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6;
+  }
+  
   .bg-gradient-primary {
     @apply bg-gradient-to-br from-blue-600 via-purple-600 to-blue-800;
   }

@@ -226,7 +226,7 @@ const EnhancedPricingCalculator: React.FC<EnhancedPricingCalculatorProps> = ({ t
   };
 
   return (
-    <div className="bg-white rounded-2xl shadow-xl p-8">
+    <div className="bg-white rounded-2xl shadow-xl p-4 sm:p-6 lg:p-8 mobile-safe">
       {/* Header */}
       <div className="text-center mb-8">
         <div className="inline-flex items-center justify-center w-12 h-12 bg-blue-100 rounded-full mb-4">
@@ -237,7 +237,7 @@ const EnhancedPricingCalculator: React.FC<EnhancedPricingCalculatorProps> = ({ t
       </div>
 
       {/* Global Settings */}
-      <div className="grid md:grid-cols-2 gap-6 mb-8 p-6 bg-gray-50 rounded-lg">
+      <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6 mb-8 p-4 sm:p-6 bg-gray-50 rounded-lg overflow-hidden">
         <div>
           <label className="block text-sm font-medium text-gray-700 mb-2">Team Size</label>
           <div className="flex items-center space-x-3">
@@ -284,8 +284,8 @@ const EnhancedPricingCalculator: React.FC<EnhancedPricingCalculatorProps> = ({ t
       {selectedTools.length < 5 && (
         <div className="mb-8">
           <div className="flex items-center justify-between mb-4">
-            <div className="flex items-center space-x-4">
-              <h3 className="text-lg font-semibold">Add Tools to Compare</h3>
+            <div className="flex flex-col sm:flex-row sm:items-center space-y-2 sm:space-y-0 sm:space-x-4">
+              <h3 className="text-lg font-semibold whitespace-nowrap">Add Tools to Compare</h3>
               {selectedCategory !== 'all' && (
                 <div className="flex items-center space-x-2">
                   <span className="px-3 py-1 bg-blue-100 text-blue-800 text-sm rounded-full">
@@ -300,16 +300,16 @@ const EnhancedPricingCalculator: React.FC<EnhancedPricingCalculatorProps> = ({ t
                 </div>
               )}
             </div>
-            <div className="flex items-center space-x-3">
+            <div className="flex flex-col sm:flex-row sm:items-center space-y-2 sm:space-y-0 sm:space-x-3">
               <div className="flex items-center space-x-2 text-sm font-medium text-gray-700">
-                <Filter className="w-4 h-4" />
-                <span>Filter by Category:</span>
+                <Filter className="w-4 h-4 flex-shrink-0" />
+                <span className="whitespace-nowrap">Filter by Category:</span>
               </div>
-              <div className="relative">
+              <div className="relative w-full sm:w-auto">
                 <select
                   value={selectedCategory}
                   onChange={(e) => setSelectedCategory(e.target.value)}
-                  className="appearance-none px-4 py-2 pr-8 border border-gray-300 rounded-lg focus:border-blue-500 focus:ring-2 focus:ring-blue-200 bg-white min-w-[200px] font-medium"
+                  className="appearance-none w-full sm:min-w-[200px] px-3 sm:px-4 py-2 pr-8 border border-gray-300 rounded-lg focus:border-blue-500 focus:ring-2 focus:ring-blue-200 bg-white font-medium text-sm"
                 >
                   <option value="all">All Categories ({processedTools.length})</option>
                   {categories.map((category) => {
@@ -339,7 +339,7 @@ const EnhancedPricingCalculator: React.FC<EnhancedPricingCalculatorProps> = ({ t
               </button>
             </div>
           ) : (
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
+            <div className="grid grid-cols-1 xs:grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-3 overflow-hidden">
               {filteredTools
                 .filter(tool => !selectedTools.some(st => st.toolId === tool.id))
                 .slice(0, 12)
@@ -410,7 +410,7 @@ const EnhancedPricingCalculator: React.FC<EnhancedPricingCalculatorProps> = ({ t
                     </button>
                   </div>
 
-                  <div className="grid md:grid-cols-3 gap-4">
+                  <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
                     {/* Plan Selection */}
                     <div>
                       <label className="block text-sm font-medium text-gray-700 mb-2">Plan</label>
@@ -483,7 +483,7 @@ const EnhancedPricingCalculator: React.FC<EnhancedPricingCalculatorProps> = ({ t
             <TrendingUp className="w-6 h-6 text-green-500" />
           </div>
           
-          <div className="grid md:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
             <div className="text-center">
               <div className="text-3xl font-bold text-blue-600">{formatPrice(totalCost)}</div>
               <div className="text-sm text-gray-600">
@@ -511,7 +511,7 @@ const EnhancedPricingCalculator: React.FC<EnhancedPricingCalculatorProps> = ({ t
       )}
 
       {/* Action Buttons */}
-      <div className="grid md:grid-cols-2 gap-4">
+      <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
         {/* Connect with Expert */}
         <button
           onClick={() => setShowExpertModal(true)}
@@ -545,8 +545,8 @@ const EnhancedPricingCalculator: React.FC<EnhancedPricingCalculatorProps> = ({ t
 
       {/* Expert Consultation Modal */}
       {showExpertModal && (
-        <div className="fixed inset-0 bg-gray-600 bg-opacity-50 overflow-y-auto h-full w-full z-50">
-          <div className="relative top-10 mx-auto p-5 border w-full max-w-2xl shadow-lg rounded-md bg-white">
+        <div className="fixed inset-0 bg-gray-600 bg-opacity-50 overflow-y-auto h-full w-full z-50 p-4">
+          <div className="relative top-10 mx-auto p-4 sm:p-5 border w-full max-w-2xl shadow-lg rounded-md bg-white">
             <div className="flex items-center justify-between mb-6">
               <h3 className="text-2xl font-bold text-gray-900">Connect with an AI Expert</h3>
               <button
@@ -558,7 +558,7 @@ const EnhancedPricingCalculator: React.FC<EnhancedPricingCalculatorProps> = ({ t
             </div>
 
             <form onSubmit={handleExpertFormSubmit} className="space-y-4">
-              <div className="grid md:grid-cols-2 gap-4">
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 <div>
                   <label className="block text-sm font-medium text-gray-700 mb-1">First Name *</label>
                   <input
@@ -581,7 +581,7 @@ const EnhancedPricingCalculator: React.FC<EnhancedPricingCalculatorProps> = ({ t
                 </div>
               </div>
 
-              <div className="grid md:grid-cols-2 gap-4">
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 <div>
                   <label className="block text-sm font-medium text-gray-700 mb-1">Email *</label>
                   <input
@@ -614,7 +614,7 @@ const EnhancedPricingCalculator: React.FC<EnhancedPricingCalculatorProps> = ({ t
                 />
               </div>
 
-              <div className="grid md:grid-cols-2 gap-4">
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 <div>
                   <label className="block text-sm font-medium text-gray-700 mb-1">Budget Range</label>
                   <select

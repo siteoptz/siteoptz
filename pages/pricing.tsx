@@ -70,7 +70,7 @@ export default function PricingPage({ tools }: PricingPageProps) {
         />
       </Head>
 
-      <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-purple-50">
+      <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-purple-50 mobile-safe">
         {/* Hero Section */}
         <section className="pt-20 pb-16">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -88,7 +88,7 @@ export default function PricingPage({ tools }: PricingPageProps) {
             </div>
 
             {/* Key Benefits */}
-            <div className="grid md:grid-cols-3 gap-8 mb-16">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 mb-16">
               <div className="text-center">
                 <div className="inline-flex items-center justify-center w-12 h-12 bg-green-100 rounded-full mb-4">
                   <Zap className="w-6 h-6 text-green-600" />
@@ -128,7 +128,7 @@ export default function PricingPage({ tools }: PricingPageProps) {
                 </p>
               </div>
 
-              <div className="grid md:grid-cols-2 gap-8">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8">
                 <div className="space-y-6">
                   <div className="flex items-start">
                     <CheckCircle className="w-6 h-6 text-green-500 mt-1 mr-3 flex-shrink-0" />
@@ -179,7 +179,7 @@ export default function PricingPage({ tools }: PricingPageProps) {
             </div>
 
             {/* Pricing Insights */}
-            <div className="mt-20 grid md:grid-cols-3 gap-8">
+            <div className="mt-20 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
               <div className="bg-gradient-to-br from-blue-500 to-blue-600 text-white p-8 rounded-2xl">
                 <h3 className="text-2xl font-bold mb-4">Average Savings</h3>
                 <div className="text-4xl font-bold mb-2">32%</div>
