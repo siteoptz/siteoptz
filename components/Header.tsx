@@ -167,10 +167,22 @@ const Header: React.FC = () => {
           }}>
             MENU STATE: {isMenuOpen ? 'OPEN' : 'CLOSED'}
           </div>
-            <div style={{ padding: '24px' }}>
+            <div style={{ 
+              padding: '24px',
+              background: 'blue',
+              minHeight: '200px',
+              border: '3px solid yellow'
+            }}>
               {/* Close button header */}
               <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '32px' }}>
-                <h3 style={{ fontSize: '24px', fontWeight: 'bold', color: 'white' }}>Navigation</h3>
+                <h3 style={{ 
+                  fontSize: '24px', 
+                  fontWeight: 'bold', 
+                  color: 'yellow',
+                  background: 'black',
+                  padding: '10px',
+                  border: '2px solid white'
+                }}>🍔 MENU CONTENT HERE</h3>
               </div>
               
               {/* Navigation items */}
@@ -186,8 +198,9 @@ const Header: React.FC = () => {
                         borderRadius: '12px',
                         fontSize: '18px',
                         fontWeight: '500',
-                        color: item.current ? 'white' : '#d1d5db',
-                        backgroundColor: item.current ? '#2563eb' : 'transparent',
+                        color: 'black',
+                        backgroundColor: 'yellow',
+                        border: '1px solid red',
                         textDecoration: 'none'
                       }}
                     >
@@ -203,7 +216,8 @@ const Header: React.FC = () => {
                             style={{
                               display: 'block',
                               padding: '8px 16px',
-                              color: '#9ca3af',
+                              color: 'black',
+                              backgroundColor: 'orange',
                               fontSize: '14px',
                               textDecoration: 'none'
                             }}
@@ -218,7 +232,12 @@ const Header: React.FC = () => {
               </div>
               
               {/* CTA Button */}
-              <div style={{ paddingTop: '24px', borderTop: '1px solid rgba(255,255,255,0.2)' }}>
+              <div style={{ 
+                paddingTop: '24px', 
+                borderTop: '3px solid white',
+                background: 'green',
+                padding: '20px'
+              }}>
                 <Link
                   href="/tools"
                   onClick={closeMenu}
@@ -226,13 +245,14 @@ const Header: React.FC = () => {
                     display: 'block',
                     width: '100%',
                     padding: '16px 24px',
-                    background: 'linear-gradient(to right, #06b6d4, #2563eb)',
+                    background: 'purple',
                     color: 'white',
                     borderRadius: '12px',
                     fontWeight: 'bold',
                     textAlign: 'center',
                     textDecoration: 'none',
-                    fontSize: '16px'
+                    fontSize: '20px',
+                    border: '3px solid white'
                   }}
                 >
                   🚀 Explore Tools
