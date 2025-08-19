@@ -174,32 +174,52 @@ const EnhancedPricingCalculator: React.FC<EnhancedPricingCalculatorProps> = ({ t
     setIsSubmittingExpert(true);
 
     try {
-      // Add selected tools to interested tools
+      // Add selected tools to interested tools and include pricing info
       const updatedForm = {
         ...expertForm,
-        interestedTools: [...expertForm.interestedTools, ...selectedTools.map(t => t.toolName)]
+        interestedTools: [...expertForm.interestedTools, ...selectedTools.map(t => t.toolName)],
+        totalCost: totalCost,
+        billingCycle: billingCycle
       };
 
-      console.log('Expert consultation request:', updatedForm);
-      // Here you would send to your CRM or email service
-
-      // Reset form and close modal
-      setExpertForm({
-        firstName: '',
-        lastName: '',
-        email: '',
-        company: '',
-        phone: '',
-        message: '',
-        interestedTools: [],
-        budget: '',
-        timeline: ''
+      // Debug logging
+      console.log('👨‍💼 Submitting expert consultation form:', updatedForm);
+      const apiUrl = '/api/expert-consultation';
+      console.log(`🔍 Making API call to: ${apiUrl}`);
+      
+      const response = await fetch(apiUrl, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(updatedForm),
       });
-      setShowExpertModal(false);
-      alert('Thank you! An expert will contact you within 24 hours.');
+
+      console.log(`📨 Response status: ${response.status} ${response.statusText}`);
+      const result = await response.json();
+
+      if (response.ok && result.success) {
+        // Reset form and close modal
+        setExpertForm({
+          firstName: '',
+          lastName: '',
+          email: '',
+          company: '',
+          phone: '',
+          message: '',
+          interestedTools: [],
+          budget: '',
+          timeline: ''
+        });
+        setShowExpertModal(false);
+        alert(result.message || 'Thank you! An expert will contact you within 24 hours.');
+      } else {
+        throw new Error(result.error || 'Failed to submit request');
+      }
     } catch (error) {
       console.error('Error submitting expert form:', error);
-      alert('Error submitting request. Please try again.');
+      const errorMessage = error instanceof Error ? error.message : 'Error submitting request. Please try again.';
+      alert(errorMessage);
     } finally {
       setIsSubmittingExpert(false);
     }

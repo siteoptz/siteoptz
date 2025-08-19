@@ -39,8 +39,15 @@ export default function GuideDownloadModal({ isOpen, onClose, onDownload }: Guid
     e.preventDefault();
     setIsSubmitting(true);
     
+    // Debug logging
+    console.log('📄 Submitting guide download form:', formData);
+    
     try {
-      const response = await fetch('/api/download-guide', {
+      const apiUrl = '/api/download-guide';
+      console.log(`🔍 Making API call to: ${apiUrl}`);
+      console.log('📦 Request body:', formData);
+      
+      const response = await fetch(apiUrl, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -48,8 +55,11 @@ export default function GuideDownloadModal({ isOpen, onClose, onDownload }: Guid
         body: JSON.stringify(formData),
       });
       
+      console.log(`📨 Response status: ${response.status} ${response.statusText}`);
+      
       if (!response.ok) {
         const error = await response.json();
+        console.error('❌ API error response:', error);
         throw new Error(error.message || 'Failed to process request');
       }
       

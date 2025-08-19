@@ -1,23 +1,9 @@
 import { MongoClient } from 'mongodb';
-
-// Email service configuration (you can switch between different providers)
-const EMAIL_PROVIDER = process.env.EMAIL_PROVIDER || 'sendgrid'; // 'sendgrid', 'postmark', 'mailgun'
+const { sendEmail } = require('../../lib/email-service');
 
 // Database configuration
 const MONGODB_URI = process.env.MONGODB_URI;
 const DB_NAME = process.env.DB_NAME || 'siteoptz';
-
-// Email service imports and configurations
-let emailService;
-
-if (EMAIL_PROVIDER === 'sendgrid') {
-  const sgMail = require('@sendgrid/mail');
-  sgMail.setApiKey(process.env.SENDGRID_API_KEY);
-  emailService = sgMail;
-} else if (EMAIL_PROVIDER === 'postmark') {
-  const postmark = require('postmark');
-  emailService = new postmark.ServerClient(process.env.POSTMARK_API_TOKEN);
-}
 
 // Rate limiting in-memory store (use Redis in production)
 const rateLimitStore = new Map();
@@ -85,8 +71,8 @@ const saveToDatabase = async (data) => {
   }
 };
 
-// Send email based on provider
-const sendEmail = async (data) => {
+// Prepare and send email
+const prepareAndSendEmail = async (data) => {
   const { email, tool, calculatedCost, users, planType, source, additionalData } = data;
   
   // Handle different email types
@@ -413,42 +399,33 @@ Unsubscribe: https://siteoptz.ai/unsubscribe?email=${encodeURIComponent(email)}
   }
 
   try {
-    if (EMAIL_PROVIDER === 'sendgrid' && emailService) {
-      const msg = {
-        to: email,
-        from: {
-          email: process.env.FROM_EMAIL || 'noreply@siteoptz.ai',
-          name: 'SiteOptz Team'
-        },
-        subject,
-        text: textContent,
-        html: htmlContent,
-        trackingSettings: {
-          clickTracking: { enable: true },
-          openTracking: { enable: true }
-        }
-      };
+    const result = await sendEmail({
+      to: email,
+      subject,
+      html: htmlContent,
+      text: textContent
+    });
+    
+    if (result.success) {
+      console.log('Email sent successfully to:', email);
       
-      await emailService.send(msg);
-      return { success: true, provider: 'sendgrid' };
+      // Send notification to info@siteoptz.ai for new submissions
+      if (additionalData?.contactForm || additionalData?.subscriberEmail) {
+        const notificationEmail = additionalData?.contactForm ? 
+          `New Contact: ${additionalData.senderEmail}` : 
+          `New Subscriber: ${additionalData.subscriberEmail}`;
+          
+        await sendEmail({
+          to: 'info@siteoptz.ai',
+          subject: notificationEmail,
+          html: htmlContent,
+          text: textContent
+        });
+      }
       
-    } else if (EMAIL_PROVIDER === 'postmark' && emailService) {
-      await emailService.sendEmail({
-        From: process.env.FROM_EMAIL || 'noreply@siteoptz.ai',
-        To: email,
-        Subject: subject,
-        HtmlBody: htmlContent,
-        TextBody: textContent,
-        MessageStream: 'outbound',
-        TrackOpens: true,
-        TrackLinks: 'HtmlAndText'
-      });
-      
-      return { success: true, provider: 'postmark' };
+      return { success: true, provider: 'nodemailer' };
     } else {
-      // Fallback: log email (for development)
-      console.log('Email would be sent:', { email, subject, tool });
-      return { success: true, provider: 'console' };
+      throw new Error(result.error || 'Failed to send email');
     }
   } catch (error) {
     console.error('Email send error:', error);
@@ -532,7 +509,7 @@ export default async function handler(req, res) {
     // Save to database (parallel with email sending)
     const [dbResult, emailResult] = await Promise.allSettled([
       saveToDatabase(emailData),
-      sendEmail(emailData)
+      prepareAndSendEmail(emailData)
     ]);
 
     // Check results

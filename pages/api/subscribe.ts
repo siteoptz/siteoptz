@@ -1,5 +1,6 @@
 import { NextApiRequest, NextApiResponse } from 'next';
 import { z } from 'zod';
+const { sendEmail } = require('../../lib/email-service');
 
 // Input validation schema
 const subscribeSchema = z.object({
@@ -198,34 +199,101 @@ async function logToDatabase(data: SubscriptionData): Promise<boolean> {
 }
 
 async function sendWelcomeEmail(email: string, source: string, tool?: string): Promise<boolean> {
-  // Email service integration (SendGrid, AWS SES, etc.)
-  // const sgMail = require('@sendgrid/mail');
-  // sgMail.setApiKey(process.env.SENDGRID_API_KEY);
-  
-  // const welcomeTemplateId = tool 
-  //   ? process.env.SENDGRID_TOOL_WELCOME_TEMPLATE 
-  //   : process.env.SENDGRID_GENERAL_WELCOME_TEMPLATE;
-  
-  // try {
-  //   await sgMail.send({
-  //     to: email,
-  //     from: process.env.FROM_EMAIL,
-  //     templateId: welcomeTemplateId,
-  //     dynamicTemplateData: {
-  //       source,
-  //       tool_name: tool || '',
-  //       unsubscribe_url: `${process.env.NEXT_PUBLIC_BASE_URL}/unsubscribe?email=${encodeURIComponent(email)}`
-  //     }
-  //   });
-  //   return true;
-  // } catch (error) {
-  //   console.error('Welcome email error:', error);
-  //   return false;
-  // }
-  
-  // Mock success for now
-  console.log(`Would send welcome email to ${email} for source: ${source}, tool: ${tool}`);
-  return true;
+  try {
+    // Email HTML content
+    const htmlContent = `
+      <!DOCTYPE html>
+      <html>
+      <head>
+        <meta charset="utf-8">
+        <title>Welcome to SiteOptz Newsletter</title>
+        <style>
+          body { font-family: Arial, sans-serif; line-height: 1.6; color: #333; }
+          .container { max-width: 600px; margin: 0 auto; padding: 20px; }
+          .header { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; padding: 30px; text-align: center; border-radius: 10px 10px 0 0; }
+          .content { background: #f8f9fa; padding: 30px; border-radius: 0 0 10px 10px; }
+          .highlight { background: white; padding: 20px; border-radius: 8px; margin: 20px 0; border-left: 4px solid #667eea; }
+          .footer { text-align: center; padding: 20px; color: #666; font-size: 14px; }
+          .cta-button { display: inline-block; background: #667eea; color: white; padding: 12px 30px; text-decoration: none; border-radius: 6px; margin: 10px; }
+        </style>
+      </head>
+      <body>
+        <div class="container">
+          <div class="header">
+            <h1>Welcome to SiteOptz! 🎉</h1>
+            <p>Your trusted guide to the best AI tools</p>
+          </div>
+          
+          <div class="content">
+            <h2>Thank you for subscribing!</h2>
+            <p>You're now part of our community of 50,000+ AI enthusiasts who receive:</p>
+            <ul>
+              <li>✅ Weekly AI tool reviews and comparisons</li>
+              <li>✅ Exclusive insights and tips</li>
+              <li>✅ Early access to new features</li>
+              <li>✅ Special offers and discounts</li>
+            </ul>
+            
+            ${tool ? `
+            <div class="highlight">
+              <h3>You showed interest in ${tool}</h3>
+              <p>We'll send you specific updates about ${tool} and similar tools to help you make the best choice.</p>
+            </div>
+            ` : ''}
+            
+            <p style="text-align: center;">
+              <a href="https://siteoptz.ai/tools" class="cta-button">Explore AI Tools</a>
+              <a href="https://siteoptz.ai/compare" class="cta-button">Compare Tools</a>
+            </p>
+            
+            <p>Have questions? Simply reply to this email and our team will help you out!</p>
+          </div>
+          
+          <div class="footer">
+            <p>© 2025 SiteOptz. All rights reserved.</p>
+            <p>You received this because you subscribed via ${source}</p>
+            <p><a href="https://siteoptz.ai/unsubscribe?email=${encodeURIComponent(email)}">Unsubscribe</a> | <a href="https://siteoptz.ai/privacy">Privacy Policy</a></p>
+          </div>
+        </div>
+      </body>
+      </html>
+    `;
+
+    const textContent = `
+Welcome to SiteOptz!
+
+Thank you for subscribing!
+
+You're now part of our community of 50,000+ AI enthusiasts who receive:
+- Weekly AI tool reviews and comparisons
+- Exclusive insights and tips
+- Early access to new features
+- Special offers and discounts
+
+${tool ? `You showed interest in ${tool}. We'll send you specific updates about ${tool} and similar tools.\n\n` : ''}
+Explore AI Tools: https://siteoptz.ai/tools
+Compare Tools: https://siteoptz.ai/compare
+
+Have questions? Simply reply to this email!
+
+© 2025 SiteOptz. All rights reserved.
+Unsubscribe: https://siteoptz.ai/unsubscribe?email=${encodeURIComponent(email)}
+    `;
+
+    // Use centralized email service (SendGrid with SMTP fallback)
+    const result = await sendEmail({
+      to: email,
+      subject: `Welcome to SiteOptz Newsletter${tool ? ` - ${tool} Updates` : ''}`,
+      text: textContent,
+      html: htmlContent,
+    });
+
+    console.log('Welcome email sent successfully:', result.messageId);
+    return result.success;
+  } catch (error) {
+    console.error('Welcome email error:', error);
+    return false;
+  }
 }
 
 export default async function handler(
@@ -330,6 +398,30 @@ export default async function handler(
     // Send welcome email
     if (crmSuccess) {
       await sendWelcomeEmail(email, source, tool);
+    }
+
+    // Also send notification to info@siteoptz.ai about new subscription
+    try {
+      await sendEmail({
+        to: 'info@siteoptz.ai',
+        subject: `New Newsletter Subscription: ${email}`,
+        html: `
+          <h2>New Newsletter Subscription</h2>
+          <p><strong>Email:</strong> ${email}</p>
+          <p><strong>Name:</strong> ${name || 'Not provided'}</p>
+          <p><strong>Company:</strong> ${company || 'Not provided'}</p>
+          <p><strong>Source:</strong> ${source}</p>
+          <p><strong>Tool Interest:</strong> ${tool || 'None'}</p>
+          <p><strong>Category:</strong> ${category || 'None'}</p>
+          <p><strong>Use Case:</strong> ${useCase || 'Not specified'}</p>
+          <p><strong>Interests:</strong> ${interests.join(', ') || 'None'}</p>
+          <p><strong>Timestamp:</strong> ${subscriptionData.timestamp}</p>
+        `,
+        text: `New Newsletter Subscription\n\nEmail: ${email}\nName: ${name || 'Not provided'}\nCompany: ${company || 'Not provided'}\nSource: ${source}\nTool: ${tool || 'None'}\nCategory: ${category || 'None'}\nUse Case: ${useCase || 'Not specified'}\nInterests: ${interests.join(', ') || 'None'}\nTimestamp: ${subscriptionData.timestamp}`,
+      });
+    } catch (notificationError) {
+      console.error('Failed to send notification email:', notificationError);
+      // Don't fail the request if notification fails
     }
 
     // Analytics tracking (Google Analytics, Mixpanel, etc.)

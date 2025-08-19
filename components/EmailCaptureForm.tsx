@@ -196,25 +196,42 @@ export default function EmailCaptureForm({
     setIsSubmitting(true);
     setError('');
 
+    // Debug logging
+    console.log('📧 Submitting email form:', {
+      email: formData.email,
+      source,
+      tool,
+      category
+    });
+
     try {
-      const response = await fetch('/api/subscribe', {
+      const apiUrl = '/api/subscribe';
+      const requestBody = {
+        email: formData.email,
+        name: formData.name,
+        company: formData.company,
+        useCase: formData.useCase,
+        interests: formData.interests,
+        tool,
+        category,
+        source,
+        referrer: typeof window !== 'undefined' ? document.referrer : undefined
+      };
+
+      console.log(`🔍 Making API call to: ${apiUrl}`);
+      console.log('📦 Request body:', requestBody);
+
+      const response = await fetch(apiUrl, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({
-          email: formData.email,
-          name: formData.name,
-          company: formData.company,
-          useCase: formData.useCase,
-          interests: formData.interests,
-          tool,
-          category,
-          source,
-          referrer: typeof window !== 'undefined' ? document.referrer : undefined
-        }),
+        body: JSON.stringify(requestBody),
       });
+
+      console.log(`📨 Response status: ${response.status} ${response.statusText}`);
 
       if (!response.ok) {
         const errorData = await response.json();
+        console.error('❌ API error response:', errorData);
         throw new Error(errorData.error || 'Subscription failed');
       }
 

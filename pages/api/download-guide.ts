@@ -8,12 +8,12 @@ const GHL_API_KEY = process.env.GHL_API_KEY || '';
 const GHL_LOCATION_ID = process.env.GHL_LOCATION_ID || '';
 const GHL_API_BASE = 'https://rest.gohighlevel.com/v1';
 
-// Email configuration - support both SendGrid and SMTP
-const EMAIL_FROM = process.env.EMAIL_FROM || process.env.FROM_EMAIL || 'guides@siteoptz.com';
-const EMAIL_SMTP_HOST = process.env.EMAIL_SMTP_HOST || 'smtp.sendgrid.net';
+// Email configuration - use the working SMTP config
+const EMAIL_FROM = process.env.EMAIL_FROM || 'info@siteoptz.ai';
+const EMAIL_SMTP_HOST = process.env.EMAIL_SMTP_HOST || 'smtp.gmail.com';
 const EMAIL_SMTP_PORT = parseInt(process.env.EMAIL_SMTP_PORT || '587');
-const EMAIL_SMTP_USER = process.env.EMAIL_SMTP_USER || 'apikey';
-const EMAIL_SMTP_PASS = process.env.EMAIL_SMTP_PASS || process.env.SENDGRID_API_KEY || '';
+const EMAIL_SMTP_USER = process.env.EMAIL_SMTP_USER;
+const EMAIL_SMTP_PASS = process.env.EMAIL_SMTP_PASS;
 const SENDGRID_API_KEY = process.env.SENDGRID_API_KEY || '';
 
 interface LeadData {
@@ -33,7 +33,7 @@ const createTransporter = () => {
   return nodemailer.createTransport({
     host: EMAIL_SMTP_HOST,
     port: EMAIL_SMTP_PORT,
-    secure: EMAIL_SMTP_PORT === 465,
+    secure: false, // Use TLS for port 587
     auth: {
       user: EMAIL_SMTP_USER,
       pass: EMAIL_SMTP_PASS,
