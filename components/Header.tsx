@@ -50,7 +50,17 @@ const Header: React.FC = () => {
   };
   
   const closeMenu = () => {
+    console.log('Closing menu');
     setIsMenuOpen(false);
+  };
+
+  const handleMenuBackgroundClick = (e: React.MouseEvent) => {
+    // Only close if clicking the background, not the menu content
+    console.log('Menu background clicked', e.target, e.currentTarget);
+    if (e.target === e.currentTarget) {
+      console.log('Closing menu from background click');
+      closeMenu();
+    }
   };
 
   // Prevent body scroll when menu is open on mobile
@@ -65,6 +75,19 @@ const Header: React.FC = () => {
     return () => {
       document.body.style.overflow = 'unset';
     };
+  }, [isMenuOpen]);
+
+  // Handle escape key to close menu
+  useEffect(() => {
+    const handleEscape = (e: KeyboardEvent) => {
+      if (e.key === 'Escape' && isMenuOpen) {
+        console.log('Closing menu with Escape key');
+        closeMenu();
+      }
+    };
+
+    document.addEventListener('keydown', handleEscape);
+    return () => document.removeEventListener('keydown', handleEscape);
   }, [isMenuOpen]);
 
   return (
@@ -163,8 +186,22 @@ const Header: React.FC = () => {
 
         {/* Mobile Navigation Menu */}
         {isMenuOpen && (
-          <div className="lg:hidden fixed top-16 left-0 right-0 bottom-0 bg-white border-t border-gray-200 shadow-xl overflow-y-auto mobile-menu-scroll z-[60] border-4 border-red-500">
-            <div className="px-4 py-6 space-y-1 min-h-full">
+          <div 
+            className="lg:hidden fixed top-16 left-0 right-0 bottom-0 bg-white border-t border-gray-200 shadow-xl overflow-y-auto mobile-menu-scroll z-[60] border-4 border-red-500"
+            onClick={handleMenuBackgroundClick}
+          >
+            <div className="px-4 py-6 space-y-1 min-h-full" onClick={(e) => e.stopPropagation()}>
+              {/* Close button */}
+              <div className="flex justify-between items-center mb-6 pb-4 border-b border-gray-200">
+                <h3 className="text-lg font-semibold text-gray-900">Menu</h3>
+                <button
+                  onClick={closeMenu}
+                  className="p-2 rounded-lg text-gray-500 hover:text-gray-700 hover:bg-gray-100 transition-colors"
+                >
+                  <X className="w-5 h-5" />
+                </button>
+              </div>
+              
               {navigation.map((item) => (
                 <div key={item.name}>
                   <Link
