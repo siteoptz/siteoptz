@@ -1,0 +1,173 @@
+/* PDF Styling for AI Tools Guide */
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+  color: #333;
+  max-width: none;
+  margin: 0;
+  padding: 20px;
+}
+
+/* Headers */
+h1 {
+  color: #2c3e50;
+  font-size: 28px;
+  font-weight: 700;
+  margin: 40px 0 20px 0;
+  page-break-before: always;
+  border-bottom: 3px solid #3498db;
+  padding-bottom: 10px;
+}
+
+h1:first-child {
+  page-break-before: auto;
+  text-align: center;
+  font-size: 36px;
+  margin-bottom: 40px;
+}
+
+h2 {
+  color: #34495e;
+  font-size: 24px;
+  font-weight: 600;
+  margin: 30px 0 15px 0;
+  border-left: 4px solid #3498db;
+  padding-left: 15px;
+}
+
+h3 {
+  color: #2c3e50;
+  font-size: 20px;
+  font-weight: 600;
+  margin: 25px 0 10px 0;
+}
+
+h4 {
+  color: #34495e;
+  font-size: 18px;
+  font-weight: 600;
+  margin: 20px 0 8px 0;
+}
+
+/* Paragraphs */
+p {
+  margin: 12px 0;
+  text-align: justify;
+}
+
+/* Lists */
+ul, ol {
+  margin: 12px 0;
+  padding-left: 25px;
+}
+
+li {
+  margin: 5px 0;
+}
+
+/* Tables */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 20px 0;
+  font-size: 14px;
+}
+
+table th {
+  background-color: #3498db;
+  color: white;
+  padding: 12px 8px;
+  text-align: left;
+  font-weight: 600;
+}
+
+table td {
+  padding: 10px 8px;
+  border-bottom: 1px solid #ddd;
+}
+
+table tr:nth-child(even) {
+  background-color: #f8f9fa;
+}
+
+/* Code blocks */
+code {
+  background-color: #f4f4f4;
+  padding: 2px 4px;
+  font-family: 'Courier New', monospace;
+  font-size: 14px;
+  border-radius: 3px;
+}
+
+pre {
+  background-color: #f8f9fa;
+  border: 1px solid #e9ecef;
+  border-radius: 5px;
+  padding: 15px;
+  margin: 15px 0;
+  overflow-x: auto;
+}
+
+pre code {
+  background: none;
+  padding: 0;
+}
+
+/* Blockquotes */
+blockquote {
+  border-left: 4px solid #3498db;
+  margin: 20px 0;
+  padding: 10px 20px;
+  background-color: #f8f9fa;
+  font-style: italic;
+}
+
+/* Links */
+a {
+  color: #3498db;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* Special formatting */
+.executive-summary {
+  background-color: #e8f6ff;
+  border: 1px solid #3498db;
+  border-radius: 8px;
+  padding: 20px;
+  margin: 20px 0;
+}
+
+/* Page breaks */
+.page-break {
+  page-break-before: always;
+}
+
+/* Avoid breaking inside these elements */
+h2, h3, h4 {
+  page-break-after: avoid;
+}
+
+table, pre, blockquote {
+  page-break-inside: avoid;
+}
+
+/* Footer */
+@page {
+  margin: 1in;
+  @bottom-right {
+    content: counter(page);
+    font-size: 12px;
+    color: #666;
+  }
+  
+  @bottom-center {
+    content: "Enterprise AI Tools Landscape 2025";
+    font-size: 12px;
+    color: #666;
+  }
+}
