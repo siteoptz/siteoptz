@@ -355,6 +355,56 @@ export const getStaticProps: GetStaticProps = async () => {
         name: 'The Verge AI',
         url: 'https://www.theverge.com/ai-artificial-intelligence',
         baseUrl: 'https://www.theverge.com'
+      },
+      {
+        name: 'MIT Technology Review',
+        url: 'https://www.technologyreview.com/topic/artificial-intelligence/',
+        baseUrl: 'https://www.technologyreview.com'
+      },
+      {
+        name: 'Wired AI',
+        url: 'https://www.wired.com/tag/artificial-intelligence/',
+        baseUrl: 'https://www.wired.com'
+      },
+      {
+        name: 'Forbes AI',
+        url: 'https://www.forbes.com/ai/',
+        baseUrl: 'https://www.forbes.com'
+      },
+      {
+        name: 'IEEE Spectrum AI',
+        url: 'https://spectrum.ieee.org/topic/artificial-intelligence/',
+        baseUrl: 'https://spectrum.ieee.org'
+      },
+      {
+        name: 'Ars Technica AI',
+        url: 'https://arstechnica.com/tag/artificial-intelligence/',
+        baseUrl: 'https://arstechnica.com'
+      },
+      {
+        name: 'The Information AI',
+        url: 'https://www.theinformation.com/articles/ai',
+        baseUrl: 'https://www.theinformation.com'
+      },
+      {
+        name: 'AI Research Blog',
+        url: 'https://ai.googleblog.com/',
+        baseUrl: 'https://ai.googleblog.com'
+      },
+      {
+        name: 'OpenAI Blog',
+        url: 'https://openai.com/blog/',
+        baseUrl: 'https://openai.com'
+      },
+      {
+        name: 'DeepMind Blog',
+        url: 'https://deepmind.com/blog/',
+        baseUrl: 'https://deepmind.com'
+      },
+      {
+        name: 'Anthropic News',
+        url: 'https://www.anthropic.com/news',
+        baseUrl: 'https://www.anthropic.com'
       }
     ];
 
@@ -431,6 +481,96 @@ export const getStaticProps: GetStaticProps = async () => {
         source: "The Verge AI",
         tags: ["Tesla", "Autonomous Driving", "Safety", "Transportation"],
         imageUrl: "https://images.unsplash.com/photo-1549317661-bd32c8ce0db2?w=800&h=400&fit=crop&auto=format&q=80"
+      },
+      {
+        title: "MIT Researchers Develop Brain-Computer Interface with 99% Accuracy",
+        url: "https://www.technologyreview.com/mit-bci-breakthrough",
+        excerpt: "MIT scientists have created a revolutionary brain-computer interface that achieves 99% accuracy in translating thoughts to text, offering hope for paralyzed patients and advancing human-AI collaboration possibilities.",
+        publishedAt: new Date(Date.now() - 28 * 3600000).toISOString(),
+        source: "MIT Technology Review",
+        tags: ["MIT", "Brain-Computer Interface", "Healthcare", "Research"],
+        imageUrl: "https://images.unsplash.com/photo-1559757148-5c350d0d3c56?w=800&h=400&fit=crop&auto=format&q=80"
+      },
+      {
+        title: "Wired Analysis: How AI is Reshaping Global Economic Structures",
+        url: "https://www.wired.com/ai-economic-transformation",
+        excerpt: "A comprehensive analysis reveals AI's profound impact on global economics, with automation creating new job categories while displacing others, fundamentally altering labor markets and productivity metrics worldwide.",
+        publishedAt: new Date(Date.now() - 32 * 3600000).toISOString(),
+        source: "Wired AI",
+        tags: ["Economics", "Labor Market", "Automation", "Global Impact"],
+        imageUrl: "https://images.unsplash.com/photo-1526628953301-3e589a6a8b74?w=800&h=400&fit=crop&auto=format&q=80"
+      },
+      {
+        title: "Forbes: AI Unicorns Raise $12B in Record Quarter for Startups",
+        url: "https://www.forbes.com/ai-unicorn-funding-record",
+        excerpt: "AI startups achieved record-breaking funding with $12 billion raised this quarter, led by enterprise AI solutions, robotics companies, and generative AI platforms targeting business automation.",
+        publishedAt: new Date(Date.now() - 36 * 3600000).toISOString(),
+        source: "Forbes AI",
+        tags: ["Funding", "Startups", "Venture Capital", "Enterprise AI"],
+        imageUrl: "https://images.unsplash.com/photo-1559136555-9303baea8ebd?w=800&h=400&fit=crop&auto=format&q=80"
+      },
+      {
+        title: "IEEE Spectrum: Quantum-AI Hybrid Computing Shows Promise",
+        url: "https://spectrum.ieee.org/quantum-ai-hybrid-computing",
+        excerpt: "IEEE researchers demonstrate quantum-enhanced AI algorithms that solve complex optimization problems 1000x faster than classical computers, marking a significant milestone in quantum computing applications.",
+        publishedAt: new Date(Date.now() - 40 * 3600000).toISOString(),
+        source: "IEEE Spectrum AI",
+        tags: ["Quantum Computing", "Research", "Optimization", "IEEE"],
+        imageUrl: "https://images.unsplash.com/photo-1635070041078-e363dbe005cb?w=800&h=400&fit=crop&auto=format&q=80"
+      },
+      {
+        title: "Ars Technica: Linux Foundation Launches Open Source AI Initiative",
+        url: "https://arstechnica.com/linux-foundation-ai-initiative",
+        excerpt: "The Linux Foundation announces a new initiative to accelerate open-source AI development, bringing together major tech companies to create standardized frameworks for AI model training and deployment.",
+        publishedAt: new Date(Date.now() - 44 * 3600000).toISOString(),
+        source: "Ars Technica AI",
+        tags: ["Open Source", "Linux Foundation", "AI Standards", "Collaboration"],
+        imageUrl: "https://images.unsplash.com/photo-1518709268805-4e9042af2176?w=800&h=400&fit=crop&auto=format&q=80"
+      },
+      {
+        title: "The Information: Apple's Secret AI Chip Project Revealed",
+        url: "https://www.theinformation.com/apple-secret-ai-chip",
+        excerpt: "Exclusive reporting reveals Apple's development of a custom AI chip codenamed 'Neural Engine Pro' designed specifically for on-device large language model processing in future iPhones and Macs.",
+        publishedAt: new Date(Date.now() - 48 * 3600000).toISOString(),
+        source: "The Information AI",
+        tags: ["Apple", "AI Chips", "Hardware", "Mobile AI"],
+        imageUrl: "https://images.unsplash.com/photo-1621768216002-5ac171876625?w=800&h=400&fit=crop&auto=format&q=80"
+      },
+      {
+        title: "Google AI Research: Breakthrough in Multi-Agent Coordination",
+        url: "https://ai.googleblog.com/multi-agent-coordination-breakthrough",
+        excerpt: "Google researchers achieve unprecedented coordination between multiple AI agents, enabling complex collaborative tasks in robotics, autonomous vehicles, and distributed problem-solving scenarios.",
+        publishedAt: new Date(Date.now() - 52 * 3600000).toISOString(),
+        source: "AI Research Blog",
+        tags: ["Google AI", "Multi-Agent Systems", "Robotics", "Research"],
+        imageUrl: "https://images.unsplash.com/photo-1485827404703-89b55fcc595e?w=800&h=400&fit=crop&auto=format&q=80"
+      },
+      {
+        title: "OpenAI Releases Safety Guidelines for AI Development",
+        url: "https://openai.com/blog/ai-safety-guidelines-2025",
+        excerpt: "OpenAI publishes comprehensive safety guidelines for AI development, addressing alignment challenges, bias mitigation, and responsible deployment practices for the broader AI community.",
+        publishedAt: new Date(Date.now() - 56 * 3600000).toISOString(),
+        source: "OpenAI Blog",
+        tags: ["OpenAI", "AI Safety", "Guidelines", "Responsible AI"],
+        imageUrl: "https://images.unsplash.com/photo-1555255707-c07966088b7b?w=800&h=400&fit=crop&auto=format&q=80"
+      },
+      {
+        title: "DeepMind Achieves Human-Level Performance in Scientific Discovery",
+        url: "https://deepmind.com/blog/scientific-discovery-ai",
+        excerpt: "DeepMind's latest AI system demonstrates human-level performance in scientific hypothesis generation and experimental design, potentially accelerating research across physics, chemistry, and biology.",
+        publishedAt: new Date(Date.now() - 60 * 3600000).toISOString(),
+        source: "DeepMind Blog",
+        tags: ["DeepMind", "Scientific Discovery", "Research", "AI in Science"],
+        imageUrl: "https://images.unsplash.com/photo-1532094349884-543bc11b234d?w=800&h=400&fit=crop&auto=format&q=80"
+      },
+      {
+        title: "Anthropic Announces Constitutional AI for Enterprise Applications",
+        url: "https://www.anthropic.com/news/constitutional-ai-enterprise",
+        excerpt: "Anthropic introduces enterprise-grade Constitutional AI services, offering businesses safer and more reliable AI assistants with built-in ethical constraints and transparency features.",
+        publishedAt: new Date(Date.now() - 64 * 3600000).toISOString(),
+        source: "Anthropic News",
+        tags: ["Anthropic", "Constitutional AI", "Enterprise", "AI Ethics"],
+        imageUrl: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&h=400&fit=crop&auto=format&q=80"
       }
     ];
     
