@@ -1,5 +1,5 @@
 import { NextApiRequest, NextApiResponse } from 'next';
-import nodemailer from 'nodemailer';
+import { sendEmail } from '../../lib/email-service';
 import fs from 'fs';
 import path from 'path';
 
@@ -8,13 +8,8 @@ const GHL_API_KEY = process.env.GHL_API_KEY || '';
 const GHL_LOCATION_ID = process.env.GHL_LOCATION_ID || '';
 const GHL_API_BASE = 'https://rest.gohighlevel.com/v1';
 
-// Email configuration - use the working SMTP config
+// Email configuration
 const EMAIL_FROM = process.env.EMAIL_FROM || 'info@siteoptz.ai';
-const EMAIL_SMTP_HOST = process.env.EMAIL_SMTP_HOST || 'smtp.gmail.com';
-const EMAIL_SMTP_PORT = parseInt(process.env.EMAIL_SMTP_PORT || '587');
-const EMAIL_SMTP_USER = process.env.EMAIL_SMTP_USER;
-const EMAIL_SMTP_PASS = process.env.EMAIL_SMTP_PASS;
-const SENDGRID_API_KEY = process.env.SENDGRID_API_KEY || '';
 
 interface LeadData {
   firstName: string;
@@ -28,18 +23,49 @@ interface LeadData {
   marketingConsent: boolean;
 }
 
-// Create email transporter
-const createTransporter = () => {
-  return nodemailer.createTransport({
-    host: EMAIL_SMTP_HOST,
-    port: EMAIL_SMTP_PORT,
-    secure: false, // Use TLS for port 587
-    auth: {
-      user: EMAIL_SMTP_USER,
-      pass: EMAIL_SMTP_PASS,
-    },
-  });
-};
+// Generate text version for email
+function generateEmailText(leadData: LeadData) {
+  return `
+Hi ${leadData.firstName},
+
+Thank you for downloading our comprehensive Enterprise AI Tools Landscape 2025 report. This strategic intelligence document contains everything you need to make informed decisions about AI tool adoption and implementation.
+
+🎯 Your Personalized Insights
+Based on your interest in ${leadData.primaryInterest} and your ${leadData.timeline === 'Immediate' ? 'immediate implementation timeline' : `${leadData.timeline} timeline`}, pay special attention to:
+- Section 4: Strategic Tool Evaluation Framework (page 12)
+- Section 5: ${leadData.primaryInterest} Analysis (page 18)  
+- Section 6: Implementation Roadmap for ${leadData.companySize} companies (page 28)
+
+📄 Download Your Guide: ${process.env.NEXT_PUBLIC_SITE_URL}/guides/ai-tools-comparison-guide-2025.pdf
+
+What's Inside Your Guide:
+✓ Comprehensive analysis of 200+ AI tools across all categories
+✓ Strategic evaluation framework for tool selection
+✓ Real-world implementation roadmaps and timelines
+✓ ROI calculators and total cost of ownership models
+✓ Risk assessment matrices and mitigation strategies
+✓ Vendor comparison charts and competitive positioning
+✓ Industry-specific recommendations and use cases
+✓ Future market projections and emerging technologies
+
+💡 Quick Start Tip: Begin with the Executive Summary (page 3) for key insights, then jump to your specific use case section for detailed recommendations tailored to ${leadData.companySize} organizations.
+
+Next Steps:
+1. Review the Executive Summary - Get the key insights in 5 minutes
+2. Identify Your Use Cases - Use our framework to prioritize AI initiatives
+3. Build Your Business Case - Leverage our ROI calculators and benchmarks
+4. Plan Your Implementation - Follow our proven 18-month roadmap
+
+If you have any questions about the report or need help with your AI strategy, feel free to reply to this email or schedule a consultation:
+📅 Schedule a Free AI Strategy Consultation: ${process.env.NEXT_PUBLIC_SITE_URL}/consultation
+
+Best regards,
+The SiteOptz Research Team
+
+© 2025 SiteOptz. All rights reserved.
+You received this email because you downloaded our AI Tools Guide at ${leadData.email}
+  `;
+}
 
 // Add lead to GoHighLevel CRM
 async function addToGoHighLevel(leadData: LeadData) {
@@ -329,39 +355,24 @@ function generateEmailHTML(leadData: LeadData) {
 // Send email with the guide
 async function sendGuideEmail(leadData: LeadData) {
   try {
-    // Check if email is configured (either SMTP or SendGrid)
-    if (!EMAIL_SMTP_PASS && !SENDGRID_API_KEY) {
-      console.log('Email not configured, skipping email send');
-      return { messageId: 'skipped-no-config' };
-    }
-
-    const transporter = createTransporter();
-    
-    // Check if PDF exists, if not send without attachment
-    const guidePath = path.join(process.cwd(), 'public', 'guides', 'ai-tools-comparison-guide-2025.pdf');
-    const pdfExists = fs.existsSync(guidePath);
-    
-    const mailOptions = {
-      from: `"SiteOptz Research Team" <${EMAIL_FROM}>`,
+    const result = await sendEmail({
       to: leadData.email,
       subject: `${leadData.firstName}, Your Enterprise AI Tools Guide is Ready 📊`,
       html: generateEmailHTML(leadData),
-      attachments: pdfExists ? [
-        {
-          filename: 'Enterprise-AI-Tools-Landscape-2025.pdf',
-          path: guidePath,
-          contentType: 'application/pdf',
-        },
-      ] : [],
-    };
+      text: generateEmailText(leadData),
+      from: `"SiteOptz AI" <${EMAIL_FROM}>`
+    });
 
-    const info = await transporter.sendMail(mailOptions);
-    console.log('Email sent:', info.messageId);
-    return info;
+    if (result.success) {
+      console.log('Email sent:', result.messageId);
+      return { messageId: result.messageId, success: true };
+    } else {
+      console.error('Email send failed:', result.error);
+      return { messageId: 'failed', error: result.error, success: false };
+    }
   } catch (error) {
     console.error('Error sending email:', error);
-    // Don't throw - we still want to capture the lead even if email fails
-    return { messageId: 'failed', error: error instanceof Error ? error.message : 'Unknown error' };
+    return { messageId: 'failed', error: error instanceof Error ? error.message : 'Unknown error', success: false };
   }
 }
 
@@ -379,14 +390,6 @@ export default async function handler(
   try {
     const leadData: LeadData = req.body;
     console.log('Lead data received:', { email: leadData.email, company: leadData.company });
-    console.log('Email configuration:', {
-      hasEmailFrom: !!EMAIL_FROM,
-      hasEmailPass: !!EMAIL_SMTP_PASS,
-      hasSendGridKey: !!SENDGRID_API_KEY,
-      emailMethod: SENDGRID_API_KEY ? 'sendgrid' : EMAIL_SMTP_PASS ? 'smtp' : 'none',
-      emailHost: EMAIL_SMTP_HOST,
-      emailUser: EMAIL_SMTP_USER ? EMAIL_SMTP_USER.substring(0, 3) + '***' : 'none'
-    });
     
     // Validate required fields
     if (!leadData.firstName || !leadData.lastName || !leadData.email || !leadData.company || !leadData.role || !leadData.companySize) {
@@ -418,7 +421,7 @@ export default async function handler(
       timeline: leadData.timeline,
       timestamp: new Date().toISOString(),
       ghlSuccess: !!ghlResult,
-      emailSuccess: emailResult.messageId !== 'failed',
+      emailSuccess: emailResult.success || false,
     });
     
     // Return success response
@@ -436,10 +439,7 @@ export default async function handler(
       error: 'Failed to process request',
       message: errorMessage,
       timestamp: new Date().toISOString(),
-      // Add configuration status for debugging
-      hasEmailConfig: !!(EMAIL_SMTP_PASS || SENDGRID_API_KEY),
       hasGhlConfig: !!GHL_API_KEY && !!GHL_LOCATION_ID,
-      emailMethod: SENDGRID_API_KEY ? 'sendgrid' : EMAIL_SMTP_PASS ? 'smtp' : 'none',
     };
     
     console.error('Detailed error info:', errorDetails);
