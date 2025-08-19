@@ -45,6 +45,7 @@ const Header: React.FC = () => {
   ];
 
   const toggleMenu = () => {
+    console.log('Toggle menu clicked, current state:', isMenuOpen);
     setIsMenuOpen(!isMenuOpen);
   };
   
@@ -71,7 +72,7 @@ const Header: React.FC = () => {
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         isScrolled 
           ? 'bg-white/95 backdrop-blur-md shadow-lg border-b border-gray-200/50' 
-          : 'bg-white/80 backdrop-blur-sm'
+          : 'bg-white/90 backdrop-blur-md border-b border-white/20'
       }`}
     >
       <nav className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
@@ -162,7 +163,7 @@ const Header: React.FC = () => {
 
         {/* Mobile Navigation Menu */}
         {isMenuOpen && (
-          <div className="lg:hidden fixed top-16 left-0 right-0 bottom-0 bg-white border-t border-gray-200 shadow-xl overflow-y-auto mobile-menu-scroll z-40">
+          <div className="lg:hidden fixed top-16 left-0 right-0 bottom-0 bg-white border-t border-gray-200 shadow-xl overflow-y-auto mobile-menu-scroll z-[60] border-4 border-red-500">
             <div className="px-4 py-6 space-y-1 min-h-full">
               {navigation.map((item) => (
                 <div key={item.name}>
