@@ -138,7 +138,7 @@ const Header: React.FC = () => {
           </div>
         </div>
 
-        {/* Mobile Navigation Menu - ALWAYS VISIBLE DEBUG */}
+        {/* ULTRA SIMPLE TEST */}
         <div 
           style={{
             position: 'fixed',
@@ -148,57 +148,14 @@ const Header: React.FC = () => {
             bottom: 0,
             background: 'red',
             zIndex: 9999,
-            overflowY: 'auto',
-            display: 'block',
-            border: '5px solid lime'
+            border: '5px solid lime',
+            color: 'white',
+            fontSize: '30px',
+            padding: '20px'
           }}
           className="lg:hidden"
         >
-          <div style={{ 
-            position: 'absolute', 
-            top: 0, 
-            left: 0, 
-            background: 'yellow', 
-            padding: '10px', 
-            color: 'black', 
-            fontSize: '20px', 
-            fontWeight: 'bold' 
-          }}>
-            🍔 ALWAYS VISIBLE TEST - State: {isMenuOpen ? 'OPEN' : 'CLOSED'}
-          </div>
-          
-          <div style={{ 
-            marginTop: '60px',
-            padding: '24px',
-            background: 'blue',
-            minHeight: '200px',
-            border: '3px solid yellow',
-            color: 'white',
-            fontSize: '24px'
-          }}>
-            <h1 style={{ color: 'white', fontSize: '30px', marginBottom: '20px' }}>🔥 FORCED CONTENT TEST</h1>
-            <p style={{ color: 'yellow', fontSize: '20px', marginBottom: '10px' }}>This text should ALWAYS be visible</p>
-            <p style={{ color: 'white', fontSize: '18px', marginBottom: '10px' }}>Menu state: {isMenuOpen ? 'OPEN' : 'CLOSED'}</p>
-            <div style={{ background: 'green', padding: '15px', margin: '10px 0', color: 'white' }}>GREEN BOX TEST</div>
-              <div style={{ background: 'orange', padding: '20px', margin: '20px 0', color: 'black' }}>
-                <h2>📱 NAVIGATION LINKS</h2>
-              </div>
-              
-              <div style={{ background: 'purple', padding: '20px', margin: '20px 0', color: 'white' }}>
-                <div style={{ background: 'yellow', color: 'black', padding: '15px', margin: '10px 0', fontSize: '18px', fontWeight: 'bold' }}>🏠 HOME LINK</div>
-                <div style={{ background: 'yellow', color: 'black', padding: '15px', margin: '10px 0', fontSize: '18px', fontWeight: 'bold' }}>🛠️ TOOLS LINK</div>
-                <div style={{ background: 'yellow', color: 'black', padding: '15px', margin: '10px 0', fontSize: '18px', fontWeight: 'bold' }}>💰 PRICING LINK</div>
-                <div style={{ background: 'yellow', color: 'black', padding: '15px', margin: '10px 0', fontSize: '18px', fontWeight: 'bold' }}>📰 BLOG LINK</div>
-              </div>
-              
-              <div style={{ background: 'cyan', padding: '20px', color: 'black', fontSize: '24px', fontWeight: 'bold', textAlign: 'center' }}>
-                🚀 BIG BUTTON AREA
-              </div>
-            
-            <div style={{ background: 'magenta', padding: '30px', color: 'white', fontSize: '20px' }}>
-              🎉 BOTTOM TEST SECTION
-            </div>
-          </div>
+          🔥 SIMPLE TEST CONTENT
         </div>
       </nav>
     </header>
