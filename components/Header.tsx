@@ -45,20 +45,20 @@ const Header: React.FC = () => {
   ];
 
   const toggleMenu = () => {
-    console.log('Toggle menu clicked, current state:', isMenuOpen);
     setIsMenuOpen(!isMenuOpen);
   };
   
   const closeMenu = () => {
-    console.log('Closing menu');
     setIsMenuOpen(false);
   };
 
   const handleMenuBackgroundClick = (e: React.MouseEvent) => {
-    // Only close if clicking the background, not the menu content
-    console.log('Menu background clicked', e.target, e.currentTarget);
-    if (e.target === e.currentTarget) {
-      console.log('Closing menu from background click');
+    // Only close if clicking the background area (outside menu content)
+    const target = e.target as HTMLElement;
+    const isBackgroundClick = target.classList.contains('mobile-menu-scroll') || 
+                              target.getAttribute('role') === 'dialog';
+    
+    if (isBackgroundClick) {
       closeMenu();
     }
   };
@@ -81,7 +81,6 @@ const Header: React.FC = () => {
   useEffect(() => {
     const handleEscape = (e: KeyboardEvent) => {
       if (e.key === 'Escape' && isMenuOpen) {
-        console.log('Closing menu with Escape key');
         closeMenu();
       }
     };
@@ -187,10 +186,13 @@ const Header: React.FC = () => {
         {/* Mobile Navigation Menu */}
         {isMenuOpen && (
           <div 
-            className="lg:hidden fixed top-16 left-0 right-0 bottom-0 bg-white border-t border-gray-200 shadow-xl overflow-y-auto mobile-menu-scroll z-[60] border-4 border-red-500"
+            className="lg:hidden fixed top-16 left-0 right-0 bottom-0 bg-white border-t border-gray-200 shadow-xl overflow-y-auto mobile-menu-scroll z-[60]"
             onClick={handleMenuBackgroundClick}
+            role="dialog"
+            aria-modal="true"
+            aria-label="Mobile navigation menu"
           >
-            <div className="px-4 py-6 space-y-1 min-h-full" onClick={(e) => e.stopPropagation()}>
+            <div className="px-4 py-6 space-y-1 min-h-full">
               {/* Close button */}
               <div className="flex justify-between items-center mb-6 pb-4 border-b border-gray-200">
                 <h3 className="text-lg font-semibold text-gray-900">Menu</h3>
