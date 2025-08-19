@@ -7,7 +7,7 @@ import {
   MapPin, 
   Phone, 
   Twitter, 
-  Github, 
+  Instagram, 
   Linkedin, 
   Youtube,
   ArrowRight,
@@ -64,10 +64,10 @@ const Footer: React.FC = () => {
 
 
   const socialLinks = [
-    { name: 'Twitter', icon: Twitter, href: '#', color: 'hover:text-blue-400' },
-    { name: 'GitHub', icon: Github, href: '#', color: 'hover:text-gray-900' },
-    { name: 'LinkedIn', icon: Linkedin, href: '#', color: 'hover:text-blue-600' },
-    { name: 'YouTube', icon: Youtube, href: '#', color: 'hover:text-red-600' },
+    { name: 'X', icon: Twitter, href: 'https://x.com/siteoptz', color: 'hover:text-gray-900' },
+    { name: 'Instagram', icon: Instagram, href: 'https://www.instagram.com/siteoptz', color: 'hover:text-pink-500' },
+    { name: 'LinkedIn', icon: Linkedin, href: 'https://www.linkedin.com/company/siteoptz', color: 'hover:text-blue-600' },
+    { name: 'YouTube', icon: Youtube, href: 'https://www.youtube.com/@siteoptz1', color: 'hover:text-red-600' },
   ];
 
   return (
