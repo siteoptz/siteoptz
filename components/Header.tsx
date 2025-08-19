@@ -45,7 +45,8 @@ const Header: React.FC = () => {
   ];
 
   const toggleMenu = () => {
-    setIsMenuOpen(!isMenuOpen);
+    console.log('Toggle clicked, current state:', isMenuOpen);
+    setIsMenuOpen(prev => !prev);
   };
   
   const closeMenu = () => {
@@ -70,32 +71,17 @@ const Header: React.FC = () => {
     }
   };
 
-  // Prevent body scroll when menu is open on mobile
-  useEffect(() => {
-    if (isMenuOpen) {
-      document.body.style.overflow = 'hidden';
-    } else {
-      document.body.style.overflow = 'unset';
-    }
-    return () => {
-      document.body.style.overflow = 'unset';
-    };
-  }, [isMenuOpen]);
-
-  // Handle escape key to close menu
-  useEffect(() => {
-    const handleEscape = (e: KeyboardEvent) => {
-      if (e.key === 'Escape' && isMenuOpen) {
-        closeMenu();
-      }
-    };
-
-    if (isMenuOpen) {
-      document.addEventListener('keydown', handleEscape);
-    }
-    
-    return () => document.removeEventListener('keydown', handleEscape);
-  }, [isMenuOpen]);
+  // Temporarily disabled to prevent page locking
+  // useEffect(() => {
+  //   if (isMenuOpen) {
+  //     document.body.style.overflow = 'hidden';
+  //   } else {
+  //     document.body.style.overflow = 'unset';
+  //   }
+  //   return () => {
+  //     document.body.style.overflow = 'unset';
+  //   };
+  // }, [isMenuOpen]);
 
   return (
     <header 
@@ -191,44 +177,75 @@ const Header: React.FC = () => {
           </div>
         </div>
 
-        {/* Mobile Navigation Menu */}
-        {isMenuOpen && (
-          <div className="lg:hidden fixed top-16 left-0 right-0 bottom-0 bg-gradient-to-br from-slate-900 via-blue-900 to-indigo-900 z-[9999] overflow-y-auto">
-            <div className="p-6">
+        {/* Mobile Navigation Menu - Debug State: {isMenuOpen ? 'OPEN' : 'CLOSED'} */}
+        {isMenuOpen === true && (
+          <div 
+            style={{
+              position: 'fixed',
+              top: '64px',
+              left: 0,
+              right: 0,
+              bottom: 0,
+              background: 'linear-gradient(to bottom right, #0f172a, #1e3a8a, #312e81)',
+              zIndex: 9999,
+              overflowY: 'auto',
+              display: 'block'
+            }}
+            className="lg:hidden"
+          >
+            <div style={{ padding: '24px' }}>
               {/* Close button header */}
-              <div className="flex justify-between items-center mb-8">
-                <h3 className="text-2xl font-bold text-white">Navigation</h3>
+              <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '32px' }}>
+                <h3 style={{ fontSize: '24px', fontWeight: 'bold', color: 'white' }}>Navigation</h3>
                 <button
                   onClick={closeMenu}
-                  className="p-2 rounded-lg text-gray-400 hover:text-white hover:bg-white/10 transition-colors"
+                  style={{
+                    padding: '8px',
+                    borderRadius: '8px',
+                    color: '#9ca3af',
+                    background: 'transparent',
+                    border: 'none',
+                    cursor: 'pointer'
+                  }}
                 >
                   <X className="w-6 h-6" />
                 </button>
               </div>
               
               {/* Navigation items */}
-              <div className="space-y-2 mb-8">
+              <div style={{ marginBottom: '32px' }}>
                 {navigation.map((item) => (
-                  <div key={item.name}>
+                  <div key={item.name} style={{ marginBottom: '8px' }}>
                     <Link
                       href={item.href}
                       onClick={closeMenu}
-                      className={`block px-6 py-4 rounded-xl text-lg font-medium transition-all duration-200 ${
-                        item.current
-                          ? 'bg-blue-600 text-white shadow-lg'
-                          : 'text-gray-300 hover:text-white hover:bg-white/10'
-                      }`}
+                      style={{
+                        display: 'block',
+                        padding: '16px 24px',
+                        borderRadius: '12px',
+                        fontSize: '18px',
+                        fontWeight: '500',
+                        color: item.current ? 'white' : '#d1d5db',
+                        backgroundColor: item.current ? '#2563eb' : 'transparent',
+                        textDecoration: 'none'
+                      }}
                     >
                       {item.name}
                     </Link>
                     {item.hasDropdown && item.dropdownItems && (
-                      <div className="ml-6 mt-2 space-y-1">
+                      <div style={{ marginLeft: '24px', marginTop: '8px' }}>
                         {item.dropdownItems.map((dropdownItem) => (
                           <Link
                             key={dropdownItem.name}
                             href={dropdownItem.href}
                             onClick={closeMenu}
-                            className="block px-4 py-2 text-gray-400 hover:text-white hover:bg-white/5 rounded-lg transition-colors"
+                            style={{
+                              display: 'block',
+                              padding: '8px 16px',
+                              color: '#9ca3af',
+                              fontSize: '14px',
+                              textDecoration: 'none'
+                            }}
                           >
                             {dropdownItem.name}
                           </Link>
@@ -240,11 +257,22 @@ const Header: React.FC = () => {
               </div>
               
               {/* CTA Button */}
-              <div className="pt-6 border-t border-white/20">
+              <div style={{ paddingTop: '24px', borderTop: '1px solid rgba(255,255,255,0.2)' }}>
                 <Link
                   href="/tools"
                   onClick={closeMenu}
-                  className="block w-full px-6 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white rounded-xl font-bold text-center hover:from-cyan-400 hover:to-blue-500 transition-all duration-300 shadow-lg"
+                  style={{
+                    display: 'block',
+                    width: '100%',
+                    padding: '16px 24px',
+                    background: 'linear-gradient(to right, #06b6d4, #2563eb)',
+                    color: 'white',
+                    borderRadius: '12px',
+                    fontWeight: 'bold',
+                    textAlign: 'center',
+                    textDecoration: 'none',
+                    fontSize: '16px'
+                  }}
                 >
                   🚀 Explore Tools
                 </Link>
