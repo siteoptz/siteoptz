@@ -138,72 +138,10 @@ const Header: React.FC = () => {
           </div>
         </div>
 
-        {/* Mobile Navigation Menu */}
-        {isMenuOpen && (
-          <div 
-            style={{
-              position: 'fixed',
-              top: '64px',
-              left: 0,
-              right: 0,
-              bottom: 0,
-              background: 'linear-gradient(to bottom right, #0f172a, #1e3a8a, #312e81)',
-              zIndex: 9999,
-              overflowY: 'auto'
-            }}
-            className="block lg:hidden"
-          >
-            <div style={{ padding: '24px' }}>
-              {/* Navigation Header */}
-              <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '32px' }}>
-                <h3 style={{ fontSize: '24px', fontWeight: 'bold', color: 'white' }}>Navigation</h3>
-                <button
-                  onClick={closeMenu}
-                  style={{
-                    padding: '8px',
-                    borderRadius: '8px',
-                    color: '#9ca3af',
-                    background: 'transparent',
-                    border: 'none',
-                    cursor: 'pointer'
-                  }}
-                >
-                  <X className="w-6 h-6" />
-                </button>
-              </div>
-              
-              {/* Navigation Links */}
-              <div style={{ marginBottom: '32px' }}>
-                <Link href="/" onClick={closeMenu} style={{ display: 'block', padding: '16px 24px', borderRadius: '12px', fontSize: '18px', fontWeight: '500', color: 'white', backgroundColor: 'transparent', textDecoration: 'none', marginBottom: '8px', border: '1px solid rgba(255,255,255,0.2)' }}>🏠 Home</Link>
-                <Link href="/tools" onClick={closeMenu} style={{ display: 'block', padding: '16px 24px', borderRadius: '12px', fontSize: '18px', fontWeight: '500', color: 'white', backgroundColor: 'transparent', textDecoration: 'none', marginBottom: '8px', border: '1px solid rgba(255,255,255,0.2)' }}>🛠️ Tools</Link>
-                <Link href="/pricing" onClick={closeMenu} style={{ display: 'block', padding: '16px 24px', borderRadius: '12px', fontSize: '18px', fontWeight: '500', color: 'white', backgroundColor: 'transparent', textDecoration: 'none', marginBottom: '8px', border: '1px solid rgba(255,255,255,0.2)' }}>💰 Pricing</Link>
-                <Link href="/blog" onClick={closeMenu} style={{ display: 'block', padding: '16px 24px', borderRadius: '12px', fontSize: '18px', fontWeight: '500', color: 'white', backgroundColor: 'transparent', textDecoration: 'none', marginBottom: '8px', border: '1px solid rgba(255,255,255,0.2)' }}>📰 Blog</Link>
-              </div>
-              
-              {/* CTA Button */}
-              <div style={{ paddingTop: '24px', borderTop: '1px solid rgba(255,255,255,0.2)' }}>
-                <Link
-                  href="/tools"
-                  onClick={closeMenu}
-                  style={{
-                    display: 'block',
-                    width: '100%',
-                    padding: '16px 24px',
-                    background: 'linear-gradient(to right, #06b6d4, #2563eb)',
-                    color: 'white',
-                    borderRadius: '12px',
-                    fontWeight: 'bold',
-                    textAlign: 'center',
-                    textDecoration: 'none',
-                    fontSize: '16px'
-                  }}
-                >
-                  🚀 Explore Tools
-                </Link>
-              </div>
-            </div>
-          </div>
-        )}
+        {/* DEBUG: Menu State = {isMenuOpen ? 'OPEN' : 'CLOSED'} */}
+        
+        {/* SIMPLE TEST - Just Text */}
+        {isMenuOpen && <div style={{position: 'fixed', top: '100px', left: '20px', background: 'red', color: 'white', padding: '20px', zIndex: 9999, fontSize: '20px'}}>MENU IS OPEN!</div>}
       </nav>
     </header>
   );
