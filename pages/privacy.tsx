@@ -1,4 +1,5 @@
 import Head from 'next/head';
+import Link from 'next/link';
 import { motion } from 'framer-motion';
 import { Shield, Eye, Cookie, Mail, Server, Lock, Users, Globe } from 'lucide-react';
 
@@ -364,12 +365,12 @@ San Francisco, CA`
                   <Mail className="w-5 h-5 mr-2" />
                   Email Privacy Team
                 </a>
-                <a
+                <Link
                   href="/contact"
                   className="inline-flex items-center px-6 py-3 bg-white border border-gray-300 text-gray-700 rounded-lg font-semibold hover:bg-gray-50 transform hover:scale-105 transition-all duration-200 shadow-sm hover:shadow-md"
                 >
                   Contact Form
-                </a>
+                </Link>
               </div>
             </motion.div>
           </div>

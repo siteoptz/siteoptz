@@ -1,4 +1,5 @@
 import Head from 'next/head';
+import Link from 'next/link';
 import { motion } from 'framer-motion';
 import { Scale, Shield, Eye, Clock } from 'lucide-react';
 
@@ -247,14 +248,14 @@ We typically respond to legal inquiries within 5 business days.`
                 Questions About These Terms?
               </h3>
               <p className="text-gray-600 mb-6">
-                If you have any questions about our Terms of Service, please don't hesitate to contact us.
+                If you have any questions about our Terms of Service, please don&apos;t hesitate to contact us.
               </p>
-              <a
+              <Link
                 href="/contact"
                 className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-lg font-semibold hover:from-blue-700 hover:to-purple-700 transform hover:scale-105 transition-all duration-200 shadow-lg hover:shadow-xl"
               >
                 Contact Us
-              </a>
+              </Link>
             </motion.div>
           </div>
         </section>
