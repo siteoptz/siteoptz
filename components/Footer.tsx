@@ -11,7 +11,6 @@ import {
   Linkedin, 
   Youtube,
   ArrowRight,
-  Star,
   TrendingUp
 } from 'lucide-react';
 import EmailCaptureForm from './EmailCaptureForm';
@@ -52,23 +51,17 @@ const Footer: React.FC = () => {
       ]
     },
     {
-      title: 'Resources',
+      title: 'Popular Tools',
       links: [
-        { name: 'AI News', href: '/blog' },
-        { name: 'How-to Guides', href: '/guides' },
-        { name: 'Tool Directory', href: '/tools' },
-        { name: 'Best Practices', href: '/best-practices' },
-        { name: 'AI Trends', href: '/trends' },
+        { name: 'ChatGPT', href: '/tools/chatgpt' },
+        { name: 'Claude', href: '/tools/claude' },
+        { name: 'Gemini', href: '/tools/gemini' },
+        { name: 'Jasper AI', href: '/tools/jasper-ai' },
+        { name: 'View All Tools', href: '/tools' },
       ]
     }
   ];
 
-  const popularTools = [
-    { name: 'ChatGPT', href: '/tools/chatgpt', rating: '9.2' },
-    { name: 'Claude', href: '/tools/claude', rating: '9.0' },
-    { name: 'Gemini', href: '/tools/gemini', rating: '8.7' },
-    { name: 'Jasper AI', href: '/tools/jasper-ai', rating: '8.8' },
-  ];
 
   const socialLinks = [
     { name: 'Twitter', icon: Twitter, href: '#', color: 'hover:text-blue-400' },
@@ -136,26 +129,6 @@ const Footer: React.FC = () => {
               Your trusted guide to the best AI tools. We review, compare, and recommend the top artificial intelligence 
               solutions to help you work smarter and faster.
             </p>
-            
-            {/* Popular Tools Quick Links */}
-            <div className="mb-6">
-              <h4 className="text-sm font-semibold text-gray-400 uppercase tracking-wider mb-3">Popular Tools</h4>
-              <div className="space-y-2">
-                {popularTools.map((tool) => (
-                  <Link
-                    key={tool.name}
-                    href={tool.href}
-                    className="flex items-center justify-between p-2 rounded-lg hover:bg-gray-800 transition-colors group"
-                  >
-                    <span className="text-gray-300 group-hover:text-white text-sm">{tool.name}</span>
-                    <div className="flex items-center space-x-1">
-                      <Star className="w-3 h-3 text-yellow-400 fill-current" />
-                      <span className="text-xs text-gray-400">{tool.rating}</span>
-                    </div>
-                  </Link>
-                ))}
-              </div>
-            </div>
 
             {/* Social Links */}
             <div>
