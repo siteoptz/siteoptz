@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useMemo, useCallback } from 'react';
 import Link from 'next/link';
+import { useRouter } from 'next/router';
 import { CheckCircle, Mail, ArrowRight, User, Building, Sparkles, X } from 'lucide-react';
 
 interface EmailCaptureFormProps {
@@ -79,6 +80,7 @@ export default function EmailCaptureForm({
   showModal = false,
   onClose
 }: EmailCaptureFormProps) {
+  const router = useRouter();
   const [currentStep, setCurrentStep] = useState(compact ? 1 : 1);
   const [formData, setFormData] = useState<FormData>({
     email: '',
@@ -570,7 +572,10 @@ export default function EmailCaptureForm({
               <div className="flex space-x-3">
                 <Link 
                   href="/tools"
-                  onClick={() => {
+                  onClick={(e) => {
+                    // Prevent immediate navigation
+                    e.preventDefault();
+                    
                     // Track click analytics
                     if (typeof window !== 'undefined' && window.gtag) {
                       window.gtag('event', 'newsletter_cta_click', {
@@ -584,6 +589,11 @@ export default function EmailCaptureForm({
                     if (onClose) {
                       onClose();
                     }
+                    
+                    // Navigate after a short delay to ensure modal closes
+                    setTimeout(() => {
+                      router.push('/tools');
+                    }, 100);
                   }}
                   className="flex-1 bg-blue-600 text-white px-4 py-3 rounded-lg hover:bg-blue-700 transition-colors font-medium text-center"
                 >
@@ -591,7 +601,10 @@ export default function EmailCaptureForm({
                 </Link>
                 <Link 
                   href="/compare"
-                  onClick={() => {
+                  onClick={(e) => {
+                    // Prevent immediate navigation
+                    e.preventDefault();
+                    
                     // Track click analytics
                     if (typeof window !== 'undefined' && window.gtag) {
                       window.gtag('event', 'newsletter_cta_click', {
@@ -605,6 +618,11 @@ export default function EmailCaptureForm({
                     if (onClose) {
                       onClose();
                     }
+                    
+                    // Navigate after a short delay to ensure modal closes
+                    setTimeout(() => {
+                      router.push('/compare');
+                    }, 100);
                   }}
                   className="flex-1 bg-purple-600 text-white px-4 py-3 rounded-lg hover:bg-purple-700 transition-colors font-medium text-center"
                 >
