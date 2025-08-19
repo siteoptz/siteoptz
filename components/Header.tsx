@@ -34,20 +34,14 @@ const Header: React.FC = () => {
         { name: 'Image Generation', href: '/tools?category=image-generation' },
       ]
     },
-    { 
-      name: 'Compare', 
-      href: '/compare', 
-      current: router.pathname.startsWith('/compare'),
-      hasDropdown: true,
-      dropdownItems: [
-        { name: 'Compare Tools', href: '/compare' },
-        { name: 'ChatGPT vs Claude', href: '/compare/chatgpt/vs/claude' },
-        { name: 'ChatGPT vs Gemini', href: '/compare/chatgpt/vs/gemini' },
-        { name: 'Claude vs Gemini', href: '/compare/claude/vs/gemini' },
-      ]
-    },
     { name: 'Pricing Calculator', href: '/pricing', current: router.pathname === '/pricing' },
     { name: 'Data Room', href: '/data-room', current: router.pathname === '/data-room' },
+    { 
+      name: 'AI News', 
+      href: '/blog', 
+      current: router.pathname.startsWith('/blog'),
+      hasDropdown: false
+    },
   ];
 
   const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
@@ -137,10 +131,10 @@ const Header: React.FC = () => {
               />
             </div>
             <Link
-              href="/compare"
+              href="/tools"
               className="px-6 py-2.5 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-lg font-semibold text-sm hover:from-blue-700 hover:to-purple-700 transform hover:scale-105 transition-all duration-200 shadow-lg hover:shadow-xl"
             >
-              Compare Tools
+              Explore Tools
             </Link>
           </div>
 
@@ -193,11 +187,11 @@ const Header: React.FC = () => {
               ))}
               <div className="pt-4 border-t border-gray-200">
                 <Link
-                  href="/compare"
+                  href="/tools"
                   onClick={closeMenu}
                   className="block w-full px-4 py-3 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-lg font-semibold text-center hover:from-blue-700 hover:to-purple-700 transition-all"
                 >
-                  Compare Tools
+                  Explore Tools
                 </Link>
               </div>
             </div>
