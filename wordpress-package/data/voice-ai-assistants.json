@@ -1,5 +1,5 @@
 {
-  "category": "Voice AI & Assistants",
+  "category": "Best Voice AI Tools",
   "description": "AI-powered voice generation, speech synthesis, voice cloning, and conversational AI tools for content creation and automation.",
   "tools": [
     {
@@ -25,7 +25,7 @@
       "website": "https://www.resemble.ai",
       "logo": "/images/tools/resemble-ai-logo.svg",
       "rating": 4.7,
-      "category": "Voice AI & Assistants",
+      "category": "Best Voice AI Tools",
       "pros": [
         "Real-time voice cloning with low latency",
         "Developer-friendly API integration",
@@ -61,9 +61,9 @@
         "enterprise": "Custom"
       },
       "website": "https://murf.ai",
-      "logo": "/images/tools/murf-ai-logo.svg",
+      "logo": "/images/tools/murf-logo.svg",
       "rating": 4.7,
-      "category": "Voice AI & Assistants",
+      "category": "Best Voice AI Tools",
       "pros": [
         "200+ high-quality voices in 20+ languages",
         "99.38% pronunciation accuracy",
@@ -101,7 +101,7 @@
       "website": "https://www.descript.com",
       "logo": "/images/tools/descript-logo.svg",
       "rating": 4.6,
-      "category": "Voice AI & Assistants",
+      "category": "Best Voice AI Tools",
       "pros": [
         "Text-based editing makes complex edits simple",
         "Overdub voice cloning on all plans",
@@ -139,7 +139,7 @@
       "website": "https://speechify.com", 
       "logo": "/images/tools/speechify-logo.svg",
       "rating": 4.5,
-      "category": "Voice AI & Assistants",
+      "category": "Best Voice AI Tools",
       "pros": [
         "Natural-sounding text-to-speech",
         "Cross-platform synchronization",
@@ -177,7 +177,7 @@
       "website": "https://wellsaidlabs.com",
       "logo": "/images/tools/wellsaid-labs-logo.svg",
       "rating": 4.6,
-      "category": "Voice AI & Assistants",
+      "category": "Best Voice AI Tools",
       "pros": [
         "Studio-quality voice generation",
         "Enterprise-grade security and compliance",
@@ -215,7 +215,7 @@
       "website": "https://replicastudios.com",
       "logo": "/images/tools/replica-studios-logo.svg",
       "rating": 4.4,
-      "category": "Voice AI & Assistants",
+      "category": "Best Voice AI Tools",
       "pros": [
         "Specialized for gaming and animation",
         "Unity and Unreal Engine integration",

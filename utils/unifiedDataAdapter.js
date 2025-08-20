@@ -6,12 +6,12 @@ const CATEGORY_MAPPING = {
   'image-generation': 'Visual Content', 
   'code-generation': 'Development',
   'video-generation': 'Visual Content',
-  'audio-generation': 'Audio',
+  'audio-generation': 'Best Voice AI Tools',
   'data-analysis': 'Analytics',
   'productivity': 'Productivity',
   'research-education': 'Research',
   'paid-search-ppc': 'Paid Search & PPC',
-  'voice-ai-assistants': 'Voice AI & Assistants',
+  'voice-ai-assistants': 'Best Voice AI Tools',
   'seo-optimization': 'SEO & Optimization',
   'social-media': 'Social Media'
 };

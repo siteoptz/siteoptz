@@ -2,7 +2,7 @@
 // This is the single source of truth for categories across the application
 
 export const toolCategories = [
-  'Audio Generation',
+  'Best Voice AI Tools',
   'Code Generation',
   'Content Creation',
   'Data Analysis',
@@ -14,7 +14,6 @@ export const toolCategories = [
   'SEO & Optimization',
   'Social Media',
   'Video Generation',
-  'Voice AI & Assistants',
 ] as const;
 
 export type ToolCategory = typeof toolCategories[number];

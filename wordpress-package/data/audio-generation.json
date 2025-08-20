@@ -35,38 +35,6 @@
       "lastUpdated": "2025-08-15T18:57:18.195Z"
     },
     {
-      "id": "murph-ai",
-      "name": "Murph AI",
-      "description": "AI voice generator with studio-quality voices and multilingual support",
-      "category": "audio-generation",
-      "pricing": {
-        "price": 26,
-        "currency": "USD",
-        "text": "Starts at $26/month"
-      },
-      "rating": 4.5,
-      "reviewCount": 6500,
-      "website": "https://murph.ai",
-      "source": "murph",
-      "features": [
-        "voice-generation",
-        "studio-quality",
-        "multilingual",
-        "voice-cloning"
-      ],
-      "pros": [
-        "Studio quality",
-        "Multilingual support",
-        "Voice cloning",
-        "Good for commercial use"
-      ],
-      "cons": [
-        "Expensive",
-        "Limited free trial"
-      ],
-      "lastUpdated": "2025-08-15T18:57:18.195Z"
-    },
-    {
       "id": "play-ht",
       "name": "Play.ht",
       "description": "AI text-to-speech platform with natural-sounding voices",
@@ -163,6 +131,6 @@
       "lastUpdated": "2025-08-15T18:57:18.195Z"
     }
   ],
-  "total": 5,
+  "total": 4,
   "lastUpdated": "2025-08-15T18:57:18.206Z"
 }
