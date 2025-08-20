@@ -295,31 +295,6 @@ export default function AINewsBlog({ articles, lastUpdated, sources }: BlogProps
             </div>
           )}
 
-          {/* CTA Section */}
-          <div className="bg-gray-900 border border-gray-800 rounded-2xl text-white p-8 mt-16">
-            <div className="text-center">
-              <h2 className="text-2xl font-bold mb-4">Stay Updated with AI Insights</h2>
-              <p className="text-blue-100 mb-6 max-w-2xl mx-auto">
-                Get the latest AI tool reviews, comparisons, and industry insights delivered to your inbox weekly.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Link 
-                  href="/tools"
-                  className="bg-white text-blue-600 px-6 py-3 rounded-lg font-medium hover:bg-gray-50 transition-colors inline-flex items-center justify-center"
-                >
-                  Browse AI Tools
-                  <ArrowRight className="w-4 h-4 ml-2" />
-                </Link>
-                <Link 
-                  href="/compare"
-                  className="border border-white text-white px-6 py-3 rounded-lg font-medium hover:bg-white/10 transition-colors inline-flex items-center justify-center"
-                >
-                  Compare Tools
-                  <ExternalLink className="w-4 h-4 ml-2" />
-                </Link>
-              </div>
-            </div>
-          </div>
         </div>
       </div>
     </Layout>
