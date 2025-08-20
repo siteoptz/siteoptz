@@ -73,7 +73,7 @@ export default function HomePage({ featuredTools, popularComparisons, faqs }: Ho
         }}
       />
 
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-indigo-900 relative overflow-hidden">
+      <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-black relative overflow-hidden">
         {/* Animated Background Elements */}
         <div className="absolute inset-0 pointer-events-none">
           <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-blue-500/10 rounded-full blur-3xl animate-pulse"></div>
@@ -187,7 +187,7 @@ export default function HomePage({ featuredTools, popularComparisons, faqs }: Ho
 
 
         {/* Top-Rated AI Tools */}
-        <section className="py-20 bg-gradient-to-br from-slate-900 via-blue-900 to-indigo-900">
+        <section className="py-20 bg-black">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-16">
               <h2 className="text-4xl font-bold text-white mb-4">
@@ -219,9 +219,9 @@ export default function HomePage({ featuredTools, popularComparisons, faqs }: Ho
                   
                   <div className="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
                     {tools.map((tool: Tool) => (
-                      <div key={tool.id} className="bg-white rounded-2xl shadow-lg hover:shadow-xl transition-shadow p-6 border border-gray-100">
+                      <div key={tool.id} className="bg-black border border-gray-800 rounded-2xl shadow-lg hover:shadow-xl transition-all hover:border-gray-600 p-6">
                         <div className="flex items-center gap-3 mb-4">
-                          <div className="w-12 h-12 bg-gray-100 rounded-lg flex items-center justify-center">
+                          <div className="w-12 h-12 bg-gray-900 rounded-lg flex items-center justify-center border border-gray-700">
                             <img 
                               src={tool.logo} 
                               alt={`${tool.name} AI tool logo - ${tool.category || 'artificial intelligence software'} for professional use`}
@@ -237,22 +237,22 @@ export default function HomePage({ featuredTools, popularComparisons, faqs }: Ho
                             </div>
                           </div>
                           <div className="min-w-0 flex-1">
-                            <h4 className="text-lg font-semibold text-gray-900 truncate">{tool.name}</h4>
+                            <h4 className="text-lg font-semibold text-white truncate">{tool.name}</h4>
                             <div className="flex items-center gap-1">
                               <Star className="w-3 h-3 text-yellow-400 fill-current" />
-                              <span className="text-xs font-medium text-gray-600">
+                              <span className="text-xs font-medium text-gray-400">
                                 {tool.rating || 4.5}/5
                               </span>
                             </div>
                           </div>
                         </div>
 
-                        <p className="text-gray-600 text-sm mb-4 line-clamp-2">
+                        <p className="text-gray-300 text-sm mb-4 line-clamp-2">
                           {tool.overview?.description}
                         </p>
 
                         <div className="flex items-center justify-between mb-4">
-                          <div className="text-sm font-bold text-gray-900">
+                          <div className="text-sm font-bold text-white">
                             {(() => {
                               const plan = tool.pricing?.[0];
                               if (!plan) return 'Free';
@@ -264,14 +264,14 @@ export default function HomePage({ featuredTools, popularComparisons, faqs }: Ho
                               }
                             })()}
                           </div>
-                          <span className="px-2 py-1 bg-white text-gray-600 text-xs rounded-full shadow-sm">
+                          <span className="px-2 py-1 bg-gray-900 text-gray-300 text-xs rounded-full border border-gray-700">
                             {tool.features?.length || 0} features
                           </span>
                         </div>
 
                         <Link 
                           href={`/reviews/${tool.slug}`}
-                          className="block w-full text-center px-4 py-2 bg-blue-600 text-white text-sm rounded-lg hover:bg-blue-700 transition-colors"
+                          className="block w-full text-center px-4 py-2 bg-gray-800 text-white text-sm rounded-lg hover:bg-gray-700 transition-colors border border-gray-700"
                         >
                           View Details
                         </Link>
@@ -285,7 +285,7 @@ export default function HomePage({ featuredTools, popularComparisons, faqs }: Ho
             <div className="text-center mt-12">
               <Link 
                 href="/tools"
-                className="inline-flex items-center px-8 py-4 bg-white text-gray-900 font-semibold rounded-xl hover:bg-gray-100 transition-colors shadow-lg"
+                className="inline-flex items-center px-8 py-4 bg-gray-800 text-white font-semibold rounded-xl hover:bg-gray-700 transition-colors shadow-lg border border-gray-700"
               >
                 Explore All {featuredTools.length} Tools
                 <ArrowRight className="ml-2 w-5 h-5" />
@@ -295,7 +295,7 @@ export default function HomePage({ featuredTools, popularComparisons, faqs }: Ho
         </section>
 
         {/* Popular Comparisons */}
-        <section className="bg-gradient-to-br from-blue-900 via-indigo-900 to-slate-900 py-20">
+        <section className="bg-gray-950 py-20">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-16">
               <h2 className="text-4xl font-bold text-white mb-4">
@@ -308,10 +308,10 @@ export default function HomePage({ featuredTools, popularComparisons, faqs }: Ho
 
             <div className="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
               {popularComparisons.slice(0, 12).map((comparison, index) => (
-                <div key={index} className="bg-white rounded-2xl shadow-lg hover:shadow-xl transition-shadow p-6">
+                <div key={index} className="bg-black border border-gray-800 rounded-2xl shadow-lg hover:shadow-xl transition-all hover:border-gray-600 p-6">
                   <div className="flex items-center justify-between mb-4">
                     <div className="flex items-center gap-3">
-                      <div className="w-10 h-10 bg-gray-100 rounded-lg flex items-center justify-center">
+                      <div className="w-10 h-10 bg-gray-900 rounded-lg flex items-center justify-center border border-gray-700">
                         <img 
                           src={comparison.tool1.logo} 
                           alt={`${comparison.tool1.name} AI tool comparison logo`}
@@ -326,12 +326,12 @@ export default function HomePage({ featuredTools, popularComparisons, faqs }: Ho
                           {comparison.tool1.name.charAt(0)}
                         </div>
                       </div>
-                      <span className="font-semibold text-sm">{comparison.tool1.name}</span>
+                      <span className="font-semibold text-sm text-white">{comparison.tool1.name}</span>
                     </div>
                     <div className="text-gray-400 font-bold text-sm">VS</div>
                     <div className="flex items-center gap-3">
-                      <span className="font-semibold text-sm">{comparison.tool2.name}</span>
-                      <div className="w-10 h-10 bg-gray-100 rounded-lg flex items-center justify-center">
+                      <span className="font-semibold text-sm text-white">{comparison.tool2.name}</span>
+                      <div className="w-10 h-10 bg-gray-900 rounded-lg flex items-center justify-center border border-gray-700">
                         <img 
                           src={comparison.tool2.logo} 
                           alt={`${comparison.tool2.name} AI tool comparison logo`}
@@ -349,13 +349,13 @@ export default function HomePage({ featuredTools, popularComparisons, faqs }: Ho
                     </div>
                   </div>
 
-                  <p className="text-gray-600 mb-4">
+                  <p className="text-gray-300 mb-4">
                     Compare features, pricing, and performance between {comparison.tool1.name} and {comparison.tool2.name}.
                   </p>
 
                   <Link 
                     href={`/compare/${comparison.tool1.slug}/vs/${comparison.tool2.slug}`}
-                    className="block w-full text-center px-4 py-2 bg-purple-600 text-white rounded-xl hover:bg-purple-700 transition-colors"
+                    className="block w-full text-center px-4 py-2 bg-gray-800 text-white rounded-xl hover:bg-gray-700 transition-colors border border-gray-700"
                   >
                     Compare Now
                   </Link>
@@ -366,7 +366,7 @@ export default function HomePage({ featuredTools, popularComparisons, faqs }: Ho
         </section>
 
         {/* Features Section */}
-        <section className="py-20 bg-gradient-to-br from-slate-900 via-blue-900 to-indigo-900">
+        <section className="py-20 bg-black">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-16">
               <h2 className="text-4xl font-bold text-white mb-4">
@@ -378,32 +378,32 @@ export default function HomePage({ featuredTools, popularComparisons, faqs }: Ho
             </div>
 
             <div className="grid md:grid-cols-3 gap-8">
-              <div className="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 text-center border border-gray-100">
+              <div className="bg-black border border-gray-800 p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 text-center hover:border-gray-600">
                 <div className="w-20 h-20 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-2xl flex items-center justify-center mx-auto mb-6">
                   <Brain className="w-10 h-10 text-white" />
                 </div>
-                <h3 className="text-2xl font-bold mb-4 text-gray-900">Strategic AI Implementation</h3>
-                <p className="text-gray-600 leading-relaxed">
+                <h3 className="text-2xl font-bold mb-4 text-white">Strategic AI Implementation</h3>
+                <p className="text-gray-300 leading-relaxed">
                   Custom AI strategies designed to align with your business objectives and deliver measurable ROI within 90 days.
                 </p>
               </div>
 
-              <div className="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 text-center border border-gray-100">
+              <div className="bg-black border border-gray-800 p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 text-center hover:border-gray-600">
                 <div className="w-20 h-20 bg-gradient-to-br from-green-500 to-emerald-500 rounded-2xl flex items-center justify-center mx-auto mb-6">
                   <BarChart3 className="w-10 h-10 text-white" />
                 </div>
-                <h3 className="text-2xl font-bold mb-4 text-gray-900">Performance Optimization</h3>
-                <p className="text-gray-600 leading-relaxed">
+                <h3 className="text-2xl font-bold mb-4 text-white">Performance Optimization</h3>
+                <p className="text-gray-300 leading-relaxed">
                   Continuous monitoring and optimization to ensure your AI solutions deliver peak performance and maximum efficiency.
                 </p>
               </div>
 
-              <div className="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 text-center border border-gray-100">
+              <div className="bg-black border border-gray-800 p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 text-center hover:border-gray-600">
                 <div className="w-20 h-20 bg-gradient-to-br from-purple-500 to-violet-500 rounded-2xl flex items-center justify-center mx-auto mb-6">
                   <Users className="w-10 h-10 text-white" />
                 </div>
-                <h3 className="text-2xl font-bold mb-4 text-gray-900">Enterprise Support</h3>
-                <p className="text-gray-600 leading-relaxed">
+                <h3 className="text-2xl font-bold mb-4 text-white">Enterprise Support</h3>
+                <p className="text-gray-300 leading-relaxed">
                   24/7 dedicated support team with enterprise SLAs, ensuring your AI initiatives never miss a beat.
                 </p>
               </div>
@@ -412,7 +412,7 @@ export default function HomePage({ featuredTools, popularComparisons, faqs }: Ho
         </section>
 
         {/* Industry Insights Section */}
-        <section className="py-16 bg-gradient-to-br from-blue-900 via-indigo-900 to-slate-900">
+        <section className="py-16 bg-gray-950">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-12">
               <h2 className="text-3xl font-bold text-white mb-4">
@@ -424,61 +424,61 @@ export default function HomePage({ featuredTools, popularComparisons, faqs }: Ho
             </div>
 
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-              <div className="bg-white p-6 rounded-xl shadow-sm border border-gray-200 hover:shadow-md transition-shadow">
-                <h3 className="text-lg font-semibold text-gray-900 mb-3">Market Research</h3>
-                <p className="text-gray-600 text-sm mb-4">
+              <div className="bg-black border border-gray-800 p-6 rounded-xl shadow-sm hover:shadow-md transition-all hover:border-gray-600">
+                <h3 className="text-lg font-semibold text-white mb-3">Market Research</h3>
+                <p className="text-gray-300 text-sm mb-4">
                   Latest AI market trends and forecasts from industry analysts.
                 </p>
                 <ExternalLink 
                   href={authoritativeLinks.gartner.url}
                   title={authoritativeLinks.gartner.title}
                   description={authoritativeLinks.gartner.description}
-                  className="text-sm font-medium"
+                  className="text-sm font-medium text-gray-400 hover:text-white"
                 >
                   Gartner AI Analysis
                 </ExternalLink>
               </div>
 
-              <div className="bg-white p-6 rounded-xl shadow-sm border border-gray-200 hover:shadow-md transition-shadow">
-                <h3 className="text-lg font-semibold text-gray-900 mb-3">Academic Research</h3>
-                <p className="text-gray-600 text-sm mb-4">
+              <div className="bg-black border border-gray-800 p-6 rounded-xl shadow-sm hover:shadow-md transition-all hover:border-gray-600">
+                <h3 className="text-lg font-semibold text-white mb-3">Academic Research</h3>
+                <p className="text-gray-300 text-sm mb-4">
                   Cutting-edge AI research from top universities and institutions.
                 </p>
                 <ExternalLink 
                   href={authoritativeLinks.stanfordAI.url}
                   title={authoritativeLinks.stanfordAI.title}
                   description={authoritativeLinks.stanfordAI.description}
-                  className="text-sm font-medium"
+                  className="text-sm font-medium text-gray-400 hover:text-white"
                 >
                   Stanford AI Lab
                 </ExternalLink>
               </div>
 
-              <div className="bg-white p-6 rounded-xl shadow-sm border border-gray-200 hover:shadow-md transition-shadow">
-                <h3 className="text-lg font-semibold text-gray-900 mb-3">Industry Standards</h3>
-                <p className="text-gray-600 text-sm mb-4">
+              <div className="bg-black border border-gray-800 p-6 rounded-xl shadow-sm hover:shadow-md transition-all hover:border-gray-600">
+                <h3 className="text-lg font-semibold text-white mb-3">Industry Standards</h3>
+                <p className="text-gray-300 text-sm mb-4">
                   AI safety guidelines and ethical standards from regulatory bodies.
                 </p>
                 <ExternalLink 
                   href={authoritativeLinks.nist.url}
                   title={authoritativeLinks.nist.title}
                   description={authoritativeLinks.nist.description}
-                  className="text-sm font-medium"
+                  className="text-sm font-medium text-gray-400 hover:text-white"
                 >
                   NIST AI Framework
                 </ExternalLink>
               </div>
 
-              <div className="bg-white p-6 rounded-xl shadow-sm border border-gray-200 hover:shadow-md transition-shadow">
-                <h3 className="text-lg font-semibold text-gray-900 mb-3">Business Impact</h3>
-                <p className="text-gray-600 text-sm mb-4">
+              <div className="bg-black border border-gray-800 p-6 rounded-xl shadow-sm hover:shadow-md transition-all hover:border-gray-600">
+                <h3 className="text-lg font-semibold text-white mb-3">Business Impact</h3>
+                <p className="text-gray-300 text-sm mb-4">
                   Strategic insights on AI adoption and business transformation.
                 </p>
                 <ExternalLink 
                   href={authoritativeLinks.mckinsey.url}
                   title={authoritativeLinks.mckinsey.title}
                   description={authoritativeLinks.mckinsey.description}
-                  className="text-sm font-medium"
+                  className="text-sm font-medium text-gray-400 hover:text-white"
                 >
                   McKinsey AI Report
                 </ExternalLink>
@@ -488,7 +488,7 @@ export default function HomePage({ featuredTools, popularComparisons, faqs }: Ho
         </section>
 
         {/* FAQ Section - Enhanced with comprehensive AI tool questions */}
-        <section className="py-20 bg-gradient-to-br from-slate-900 via-blue-900 to-indigo-900">
+        <section className="py-20 bg-black">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <FAQSection 
               faqs={faqs}
@@ -501,7 +501,7 @@ export default function HomePage({ featuredTools, popularComparisons, faqs }: Ho
         </section>
 
         {/* CTA Section */}
-        <section className="bg-gradient-to-br from-slate-900 via-blue-900 to-indigo-900 text-white py-24 relative overflow-hidden">
+        <section className="bg-gray-950 text-white py-24 relative overflow-hidden">
           {/* Background Elements */}
           <div className="absolute inset-0">
             <div className="absolute top-1/4 left-1/4 w-64 h-64 bg-cyan-500/10 rounded-full blur-3xl"></div>

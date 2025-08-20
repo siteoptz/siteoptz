@@ -133,31 +133,31 @@ export default function ToolsPage({ tools, categories, faqs }: { tools: any[], c
 
       <main className="max-w-6xl mx-auto px-4 py-10 space-y-12">
         <section>
-          <h1 className="text-3xl font-bold mb-6">AI Tools Directory</h1>
-          <p className="text-gray-600 mb-8">Discover and compare {tools.length} AI tools across {categories.length} categories</p>
+          <h1 className="text-3xl font-bold mb-6 text-white">AI Tools Directory</h1>
+          <p className="text-gray-300 mb-8">Discover and compare {tools.length} AI tools across {categories.length} categories</p>
 
           {/* Search and Filters */}
-          <div className="bg-gray-50 p-6 rounded-lg mb-8">
+          <div className="bg-black border border-gray-800 p-6 rounded-lg mb-8">
             <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
               {/* Search */}
               <div>
-                <label className="block mb-2 font-medium text-gray-700">Search Tools:</label>
+                <label className="block mb-2 font-medium text-gray-300">Search Tools:</label>
                 <input
                   type="text"
                   placeholder="Search by name or description..."
                   value={searchQuery}
                   onChange={(e) => handleSearchChange(e.target.value)}
-                  className="w-full border rounded-lg px-4 py-2 focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+                  className="w-full bg-gray-900 border border-gray-700 text-white rounded-lg px-4 py-2 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 placeholder-gray-400"
                 />
               </div>
               
               {/* Category Filter */}
               <div>
-                <label className="block mb-2 font-medium text-gray-700">Filter by Category:</label>
+                <label className="block mb-2 font-medium text-gray-300">Filter by Category:</label>
                 <select
                   value={selectedCategory}
                   onChange={(e) => handleCategoryChange(e.target.value)}
-                  className="w-full border rounded-lg px-4 py-2 focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+                  className="w-full bg-gray-900 border border-gray-700 text-white rounded-lg px-4 py-2 focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
                 >
                   <option value="All">All Categories ({tools.length})</option>
                   {categories.map((category) => {
@@ -173,7 +173,7 @@ export default function ToolsPage({ tools, categories, faqs }: { tools: any[], c
               
               {/* Quick Tool Selector */}
               <div>
-                <label className="block mb-2 font-medium text-gray-700">Jump to Tool:</label>
+                <label className="block mb-2 font-medium text-gray-300">Jump to Tool:</label>
                 <select
                   value=""
                   onChange={(e) => {
@@ -181,7 +181,7 @@ export default function ToolsPage({ tools, categories, faqs }: { tools: any[], c
                       handleToolChange(e.target.value);
                     }
                   }}
-                  className="w-full border rounded-lg px-4 py-2 focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+                  className="w-full bg-gray-900 border border-gray-700 text-white rounded-lg px-4 py-2 focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
                 >
                   <option value="">Choose a tool...</option>
                   {filteredTools.map((tool) => (
@@ -194,7 +194,7 @@ export default function ToolsPage({ tools, categories, faqs }: { tools: any[], c
             </div>
             
             {/* Results Count */}
-            <div className="mt-4 text-sm text-gray-600">
+            <div className="mt-4 text-sm text-gray-400">
               Showing {filteredTools.length} of {tools.length} tools
               {selectedCategory !== 'All' && ` in ${selectedCategory}`}
               {searchQuery && ` matching "${searchQuery}"`}
@@ -204,10 +204,10 @@ export default function ToolsPage({ tools, categories, faqs }: { tools: any[], c
           {/* Tools Grid */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {filteredTools.length === 0 ? (
-              <div className="col-span-full text-center py-12 bg-white rounded-xl border border-gray-200 shadow-md">
-                <div className="text-gray-400 text-6xl mb-4">🔍</div>
-                <h3 className="text-xl font-semibold text-gray-800 mb-2">No tools found</h3>
-                <p className="text-gray-600">
+              <div className="col-span-full text-center py-12 bg-black rounded-lg border border-gray-800">
+                <div className="text-gray-500 text-6xl mb-4">🔍</div>
+                <h3 className="text-xl font-semibold text-white mb-2">No tools found</h3>
+                <p className="text-gray-400">
                   {searchQuery 
                     ? `No tools match your search for "${searchQuery}"` 
                     : `No tools found in ${selectedCategory} category`
@@ -218,7 +218,7 @@ export default function ToolsPage({ tools, categories, faqs }: { tools: any[], c
                     setSearchQuery('');
                     setSelectedCategory('All');
                   }}
-                  className="mt-4 px-6 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors"
+                  className="mt-4 px-6 py-2 bg-gray-800 text-white rounded-lg hover:bg-gray-700 transition-colors border border-gray-700"
                 >
                   Clear Filters
                 </button>
@@ -231,8 +231,8 @@ export default function ToolsPage({ tools, categories, faqs }: { tools: any[], c
                 return (
                   <div 
                     key={toolName} 
-                    className={`bg-white border rounded-xl p-6 transition-all hover:shadow-xl cursor-pointer shadow-md ${
-                      selectedTool?.tool_name === toolName ? 'border-blue-500 ring-2 ring-blue-200' : 'border-gray-200 hover:border-gray-300'
+                    className={`bg-black border rounded-lg p-6 transition-all hover:border-gray-600 cursor-pointer ${
+                      selectedTool?.tool_name === toolName ? 'border-white ring-1 ring-gray-500' : 'border-gray-800 hover:border-gray-700'
                     }`}
                     onClick={() => handleToolChange(toolName)}
                     onKeyDown={(e) => {
@@ -256,53 +256,53 @@ export default function ToolsPage({ tools, categories, faqs }: { tools: any[], c
                           }}
                         />
                         <div>
-                          <h3 className="text-xl font-semibold text-gray-900">{toolName}</h3>
-                          <p className="text-gray-600 text-sm">{tool.vendor}</p>
+                          <h3 className="text-xl font-semibold text-white">{toolName}</h3>
+                          <p className="text-gray-400 text-sm">{tool.vendor}</p>
                         </div>
                       </div>
-                      <span className="px-2 py-1 bg-blue-100 text-blue-800 text-xs rounded-full">
+                      <span className="px-2 py-1 bg-gray-800 text-gray-300 text-xs rounded border border-gray-700">
                         {tool.category}
                       </span>
                     </div>
                     
-                    <p className="text-gray-800 text-sm mb-4 line-clamp-3 leading-relaxed">
+                    <p className="text-gray-300 text-sm mb-4 line-clamp-3 leading-relaxed">
                       {tool.description}
                     </p>
                     
                     <div className="flex justify-between items-center mb-4">
                       <div>
-                        <span className="text-lg font-bold text-blue-600">
+                        <span className="text-lg font-bold text-white">
                           {tool.pricing?.price || `$${tool.pricing?.monthly}/month`}
                         </span>
                       </div>
                       <div className="flex items-center">
                         <span className="text-yellow-400 mr-1">★</span>
-                        <span className="text-sm font-medium text-gray-800">{tool.rating}</span>
+                        <span className="text-sm font-medium text-gray-300">{tool.rating}</span>
                       </div>
                     </div>
                     
                     <div className="mb-4">
                       <a 
                         href={`/reviews/${toolName.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-+|-+$/g, '')}`}
-                        className="text-blue-600 hover:text-blue-800 text-sm font-medium inline-flex items-center"
+                        className="text-gray-400 hover:text-white text-sm font-medium inline-flex items-center transition-colors"
                         onClick={(e) => e.stopPropagation()}
                       >
                         Read full review →
                       </a>
                     </div>
                     
-                    <div className="pt-4 border-t border-gray-100">
+                    <div className="pt-4 border-t border-gray-800">
                       <div className="flex flex-wrap gap-2">
                         {features.slice(0, 3).map((feature: string, idx: number) => (
                           <span 
                             key={idx}
-                            className="px-3 py-1 bg-gray-50 text-gray-700 text-xs rounded-full border border-gray-200"
+                            className="px-3 py-1 bg-gray-900 text-gray-300 text-xs rounded border border-gray-700"
                           >
                             {feature}
                           </span>
                         ))}
                         {features.length > 3 && (
-                          <span className="px-3 py-1 bg-gray-50 text-gray-700 text-xs rounded-full border border-gray-200">
+                          <span className="px-3 py-1 bg-gray-900 text-gray-300 text-xs rounded border border-gray-700">
                             +{features.length - 3} more
                           </span>
                         )}
@@ -317,7 +317,7 @@ export default function ToolsPage({ tools, categories, faqs }: { tools: any[], c
 
         {selectedTool && (
           <section>
-            <h2 className="text-2xl font-bold mb-4">
+            <h2 className="text-2xl font-bold mb-4 text-white">
               Pricing Calculator for {selectedTool.tool_name || selectedTool.toolName}
             </h2>
             <PricingCalculator
@@ -331,7 +331,7 @@ export default function ToolsPage({ tools, categories, faqs }: { tools: any[], c
         )}
 
         <section>
-          <h2 className="text-2xl font-bold mb-4">Frequently Asked Questions</h2>
+          <h2 className="text-2xl font-bold mb-4 text-white">Frequently Asked Questions</h2>
           <FAQSection 
             faqs={faqs} 
             description="Find answers to common questions about AI tools, pricing, and features."

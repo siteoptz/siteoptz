@@ -50,8 +50,8 @@ const Header: React.FC = () => {
     <header 
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         isScrolled 
-          ? 'bg-white/95 backdrop-blur-md shadow-lg border-b border-gray-200/50' 
-          : 'bg-white/90 backdrop-blur-md border-b border-white/20'
+          ? 'bg-black/95 backdrop-blur-md shadow-lg border-b border-gray-800/50' 
+          : 'bg-black/90 backdrop-blur-md border-b border-gray-800/20'
       }`}
     >
       <nav className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
@@ -69,10 +69,10 @@ const Header: React.FC = () => {
                 />
               </div>
               <div className="hidden sm:block">
-                <div className="text-xl lg:text-2xl font-bold bg-gradient-to-r from-gray-900 via-blue-800 to-purple-800 bg-clip-text text-transparent">
+                <div className="text-xl lg:text-2xl font-bold bg-gradient-to-r from-white via-cyan-400 to-blue-400 bg-clip-text text-transparent">
                   SiteOptz
                 </div>
-                <div className="text-xs lg:text-sm text-gray-500 font-medium -mt-1">
+                <div className="text-xs lg:text-sm text-gray-400 font-medium -mt-1">
                   AI Tools Expert
                 </div>
               </div>
@@ -87,8 +87,8 @@ const Header: React.FC = () => {
                   href={item.href}
                   className={`px-4 py-2 rounded-lg text-sm font-medium transition-all duration-200 flex items-center space-x-1 ${
                     item.current
-                      ? 'bg-blue-50 text-blue-700 shadow-sm'
-                      : 'text-gray-700 hover:text-blue-700 hover:bg-gray-50'
+                      ? 'bg-gray-800 text-white shadow-sm'
+                      : 'text-gray-300 hover:text-white hover:bg-gray-800'
                   }`}
                 >
                   <span>{item.name}</span>
@@ -100,13 +100,13 @@ const Header: React.FC = () => {
                 {/* Dropdown Menu */}
                 {item.hasDropdown && item.dropdownItems && (
                   <div 
-                    className="absolute top-full left-0 mt-2 w-56 bg-white rounded-xl shadow-xl border border-gray-200/50 py-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 transform translate-y-2 group-hover:translate-y-0"
+                    className="absolute top-full left-0 mt-2 w-56 bg-black rounded-xl shadow-xl border border-gray-800/50 py-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 transform translate-y-2 group-hover:translate-y-0"
                   >
                     {item.dropdownItems.map((dropdownItem) => (
                       <Link
                         key={dropdownItem.name}
                         href={dropdownItem.href}
-                        className="block px-4 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-700 transition-colors"
+                        className="block px-4 py-2 text-sm text-gray-300 hover:bg-gray-800 hover:text-white transition-colors"
                       >
                         {dropdownItem.name}
                       </Link>
@@ -131,7 +131,7 @@ const Header: React.FC = () => {
           <div className="lg:hidden flex items-center">
             <button
               onClick={toggleMenu}
-              className="p-2 rounded-lg text-gray-600 hover:text-blue-600 hover:bg-gray-50 transition-colors"
+              className="p-2 rounded-lg text-gray-300 hover:text-white hover:bg-gray-800 transition-colors"
             >
               {isMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
             </button>

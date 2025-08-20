@@ -9,7 +9,8 @@
   }
   
   body {
-    @apply text-white antialiased bg-gradient-to-br from-slate-900 via-blue-900 to-indigo-900 min-h-screen;
+    @apply text-white antialiased bg-gradient-to-br from-black via-gray-900 to-black min-h-screen;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
   }
   
   /* Ensure images are responsive by default */
@@ -51,11 +52,11 @@
   }
   
   .card {
-    @apply bg-white rounded-xl shadow-lg p-6 border border-gray-200;
+    @apply bg-black rounded-lg border border-gray-800 p-6 shadow-sm;
   }
   
   .card-dark {
-    @apply bg-white/10 backdrop-blur-md rounded-xl shadow-lg p-6 border border-white/20 text-white;
+    @apply bg-black/90 backdrop-blur-md rounded-lg border border-gray-700 p-6 text-white;
   }
   
   .card-hover {
