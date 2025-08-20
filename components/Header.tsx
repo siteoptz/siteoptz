@@ -13,6 +13,13 @@ const Header: React.FC = () => {
   const navigation = [
     { name: 'Home', href: '/', current: router.pathname === '/' },
     { 
+      name: 'AI Category', 
+      href: '/categories', 
+      current: router.pathname.startsWith('/categories'),
+      hasDropdown: true,
+      isCategory: true
+    },
+    { 
       name: 'Tools', 
       href: '/tools', 
       current: router.pathname.startsWith('/tools'),
@@ -92,7 +99,30 @@ const Header: React.FC = () => {
                   )}
                 </Link>
                 
-                {/* Dropdown Menu */}
+                {/* Dropdown Menu - AI Category */}
+                {item.hasDropdown && item.isCategory && (
+                  <div 
+                    className="absolute top-full left-0 mt-2 w-72 bg-black rounded-xl shadow-xl border border-gray-800/50 py-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 transform translate-y-2 group-hover:translate-y-0"
+                  >
+                    <div className="px-4 py-2 text-xs font-semibold text-gray-500 uppercase tracking-wider border-b border-gray-800/50 mb-2">
+                      Browse by Category
+                    </div>
+                    {toolCategories.map((category) => (
+                      <Link
+                        key={category}
+                        href={`/categories/${category.toLowerCase().replace(/[^a-z0-9]+/g, '-')}`}
+                        className="block px-4 py-3 text-sm text-gray-300 hover:bg-gray-800 hover:text-white transition-colors border-l-2 border-transparent hover:border-cyan-400"
+                      >
+                        <div className="flex items-center justify-between">
+                          <span>{category}</span>
+                          <span className="text-xs text-gray-500">→</span>
+                        </div>
+                      </Link>
+                    ))}
+                  </div>
+                )}
+                
+                {/* Dropdown Menu - Tools */}
                 {item.hasDropdown && item.name === 'Tools' && (
                   <div 
                     className="absolute top-full left-0 mt-2 w-64 bg-black rounded-xl shadow-xl border border-gray-800/50 py-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 transform translate-y-2 group-hover:translate-y-0"
@@ -173,6 +203,35 @@ const Header: React.FC = () => {
               overflow: 'auto',
               paddingBottom: '40px'
             }}>
+              <div style={{ marginBottom: '16px' }}>
+                <div style={{ 
+                  color: '#06b6d4', 
+                  fontSize: '16px', 
+                  fontWeight: '600', 
+                  marginBottom: '12px',
+                  textTransform: 'uppercase',
+                  letterSpacing: '0.5px'
+                }}>AI Categories</div>
+                {toolCategories.map((category) => (
+                  <Link 
+                    key={category}
+                    href={`/categories/${category.toLowerCase().replace(/[^a-z0-9]+/g, '-')}`} 
+                    onClick={closeMenu} 
+                    style={{ 
+                      color: 'white', 
+                      textDecoration: 'none', 
+                      fontSize: '16px', 
+                      padding: '12px 16px', 
+                      borderBottom: '1px solid rgba(255,255,255,0.05)',
+                      transition: 'all 0.2s ease',
+                      display: 'block',
+                      marginLeft: '8px'
+                    }}
+                  >
+                    {category}
+                  </Link>
+                ))}
+              </div>
               <Link href="/tools" onClick={closeMenu} style={{ 
                 color: 'white', 
                 textDecoration: 'none', 
@@ -181,7 +240,7 @@ const Header: React.FC = () => {
                 borderBottom: '1px solid rgba(255,255,255,0.1)',
                 transition: 'all 0.2s ease',
                 display: 'block'
-              }}>Tools</Link>
+              }}>All Tools</Link>
               <Link href="/pricing" onClick={closeMenu} style={{ 
                 color: 'white', 
                 textDecoration: 'none', 
