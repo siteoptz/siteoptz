@@ -210,9 +210,10 @@ export default function CategoryPage({ category, tools, content }: CategoryPageP
               <h2 className="text-2xl md:text-3xl font-semibold text-cyan-400 mb-6">
                 {content.hero.subheading}
               </h2>
-              <div className="text-xl text-gray-300 max-w-4xl mx-auto mb-8 leading-relaxed">
-                {content.hero.introText}
-              </div>
+              <div 
+                className="text-xl text-gray-300 max-w-4xl mx-auto mb-8 leading-relaxed"
+                dangerouslySetInnerHTML={{ __html: content.hero.introText }}
+              />
               
               {/* Key Stats */}
               <div className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-3xl mx-auto">
@@ -273,16 +274,14 @@ export default function CategoryPage({ category, tools, content }: CategoryPageP
               {topTools.map((tool: any, index: number) => (
                 <div key={tool.id || index} className="bg-gray-900 border border-gray-800 rounded-lg p-6 hover:border-cyan-400 transition-colors">
                   <div className="flex items-center mb-4">
-                    <div className="relative w-12 h-12 rounded-lg mr-4 overflow-hidden">
+                    <div className="relative w-12 h-12 rounded-lg mr-4 overflow-hidden bg-gray-800 flex items-center justify-center">
                       <Image 
-                        src={tool.logo_url || tool.logo || '/images/tools/placeholder.svg'} 
+                        src={tool.logo || tool.logo_url || `/images/tools/${tool.tool_name?.toLowerCase().replace(/[^a-z0-9]+/g, '-')}-logo.svg` || '/images/tools/placeholder.svg'} 
                         alt={`${tool.tool_name} logo`}
-                        fill
-                        className="object-cover"
-                        sizes="48px"
-                        onError={(e) => {
-                          e.currentTarget.src = '/images/tools/placeholder.svg';
-                        }}
+                        width={48}
+                        height={48}
+                        className="rounded-lg object-contain"
+                        onError={(e) => {\n                          console.log(`Logo not found for ${tool.tool_name}: ${e.currentTarget.src}`);\n                          e.currentTarget.src = '/images/tools/placeholder.svg';\n                        }}
                       />
                     </div>
                     <div>
