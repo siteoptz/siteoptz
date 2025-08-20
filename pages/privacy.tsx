@@ -269,10 +269,20 @@ San Francisco, CA`
         <meta name="robots" content="index, follow" />
       </Head>
 
-      <main className="min-h-screen bg-gray-50">
+      <main className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-black relative overflow-hidden">
+        {/* Animated Background Elements */}
+        <div className="absolute inset-0 pointer-events-none">
+          <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-blue-500/10 rounded-full blur-3xl animate-pulse"></div>
+          <div className="absolute bottom-1/4 right-1/4 w-80 h-80 bg-purple-500/10 rounded-full blur-3xl animate-pulse delay-1000"></div>
+          <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-64 h-64 bg-cyan-500/10 rounded-full blur-3xl animate-pulse delay-500"></div>
+        </div>
+
+        {/* Grid Overlay */}
+        <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.02)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.02)_1px,transparent_1px)] bg-[size:100px_100px] pointer-events-none"></div>
+
         {/* Hero Section */}
         <motion.section
-          className="bg-gradient-to-b from-white to-gray-50 pt-20 pb-16"
+          className="relative z-10 pt-20 pb-16"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 0.5 }}
@@ -290,15 +300,15 @@ San Francisco, CA`
                 </div>
               </div>
               
-              <h1 className="text-4xl md:text-5xl font-bold tracking-tight text-gray-900 mb-6">
+              <h1 className="text-4xl md:text-5xl font-bold tracking-tight text-white mb-6">
                 Privacy Policy
               </h1>
               
-              <p className="text-xl text-gray-600 mb-8">
+              <p className="text-xl text-gray-300 mb-8">
                 Your privacy is important to us. Learn how we protect your data.
               </p>
               
-              <div className="inline-flex items-center px-4 py-2 bg-green-50 text-green-700 rounded-lg text-sm font-medium">
+              <div className="inline-flex items-center px-4 py-2 bg-gray-800 border border-gray-700 text-cyan-400 rounded-lg text-sm font-medium">
                 <Eye className="w-4 h-4 mr-2" />
                 Last updated: {lastUpdated}
               </div>
@@ -307,7 +317,7 @@ San Francisco, CA`
         </motion.section>
 
         {/* Privacy Content */}
-        <section className="py-16">
+        <section className="py-16 relative z-10">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="space-y-12">
               {sections.map((section, index) => {
@@ -315,7 +325,7 @@ San Francisco, CA`
                 return (
                   <motion.div
                     key={index}
-                    className="bg-white rounded-lg shadow-sm border border-gray-200 p-8"
+                    className="bg-black rounded-lg shadow-sm border border-gray-800 p-8"
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
@@ -323,16 +333,16 @@ San Francisco, CA`
                   >
                     <div className="flex items-start space-x-4">
                       <div className="flex-shrink-0">
-                        <div className="w-12 h-12 bg-gradient-to-br from-green-100 to-blue-100 rounded-lg flex items-center justify-center">
-                          <IconComponent className="w-6 h-6 text-green-600" />
+                        <div className="w-12 h-12 bg-gray-800 border border-gray-700 rounded-lg flex items-center justify-center">
+                          <IconComponent className="w-6 h-6 text-cyan-400" />
                         </div>
                       </div>
                       <div className="flex-1">
-                        <h2 className="text-2xl font-bold text-gray-900 mb-4">
+                        <h2 className="text-2xl font-bold text-white mb-4">
                           {section.title}
                         </h2>
                         <div className="prose prose-gray max-w-none">
-                          <div className="text-gray-700 leading-relaxed whitespace-pre-line">
+                          <div className="text-gray-300 leading-relaxed whitespace-pre-line">
                             {section.content}
                           </div>
                         </div>
@@ -345,16 +355,16 @@ San Francisco, CA`
 
             {/* Contact Section */}
             <motion.div
-              className="mt-16 bg-gradient-to-r from-green-50 to-blue-50 rounded-lg p-8 text-center"
+              className="mt-16 bg-black border border-gray-800 rounded-lg p-8 text-center"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5 }}
             >
-              <h3 className="text-2xl font-bold text-gray-900 mb-4">
+              <h3 className="text-2xl font-bold text-white mb-4">
                 Questions About Your Privacy?
               </h3>
-              <p className="text-gray-600 mb-6">
+              <p className="text-gray-300 mb-6">
                 If you have any questions about this Privacy Policy or how we handle your data, please contact us.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -367,7 +377,7 @@ San Francisco, CA`
                 </a>
                 <Link
                   href="/contact"
-                  className="inline-flex items-center px-6 py-3 bg-white border border-gray-300 text-gray-700 rounded-lg font-semibold hover:bg-gray-50 transform hover:scale-105 transition-all duration-200 shadow-sm hover:shadow-md"
+                  className="inline-flex items-center px-6 py-3 bg-gray-800 border border-gray-700 text-white rounded-lg font-semibold hover:bg-gray-700 transform hover:scale-105 transition-all duration-200 shadow-sm hover:shadow-md"
                 >
                   Contact Form
                 </Link>
