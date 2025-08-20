@@ -211,7 +211,7 @@ export default function HomePage({ featuredTools, popularComparisons, faqs }: Ho
               return Object.entries(toolsByCategory).map(([category, tools]: [string, any]) => (
                 <div key={category} className="mb-16">
                   <div className="flex items-center mb-8">
-                    <h3 className="text-2xl font-bold text-white">Best {category} AI Tools</h3>
+                    <h3 className="text-2xl font-bold text-white">{category.startsWith('Best') ? category : `Best ${category} AI Tools`}</h3>
                     <span className="ml-3 px-3 py-1 bg-blue-600 text-white text-sm rounded-full">
                       {tools.length} tools
                     </span>
