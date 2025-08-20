@@ -21,7 +21,13 @@ export default function Document() {
         
         {/* Preconnect to external domains for better performance */}
         <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
+        <link rel="dns-prefetch" href="https://www.google-analytics.com" />
+        
+        {/* Resource hints for better performance */}
+        <link rel="preload" href="/images/siteoptz-logo.png" as="image" type="image/png" />
+        <link rel="prefetch" href="/sitemap.xml" />
         
         {/* Google tag (gtag.js) */}
         <script async src="https://www.googletagmanager.com/gtag/js?id=G-06WK4MZERF"></script>

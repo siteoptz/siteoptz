@@ -6,6 +6,7 @@ Allow: /
 
 # Allow important pages for crawling
 Allow: /tools/
+Allow: /categories/
 Allow: /compare/
 Allow: /comparisons/
 Allow: /reviews/
