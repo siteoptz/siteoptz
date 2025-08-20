@@ -467,13 +467,13 @@ export default function ReviewPage({ tool, pageTitle, slug, relatedTools, relate
 
             {activeTab === 'pricing' && (
               <div>
-                <h2 className="text-3xl font-bold text-gray-900 mb-8">{tool.tool_name} Pricing Plans</h2>
+                <h2 className="text-3xl font-bold text-white mb-8">{tool.tool_name} Pricing Plans</h2>
                 <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-                  <div className="bg-white rounded-xl shadow-lg border p-8">
-                    <h3 className="text-xl font-bold text-gray-900 mb-2">Monthly Plan</h3>
-                    <div className="text-4xl font-bold text-blue-600 mb-6">
+                  <div className="bg-black border border-gray-800 rounded-xl shadow-lg p-8">
+                    <h3 className="text-xl font-bold text-white mb-2">Monthly Plan</h3>
+                    <div className="text-4xl font-bold text-cyan-400 mb-6">
                       ${tool.pricing.monthly}
-                      <span className="text-lg text-gray-500">/month</span>
+                      <span className="text-lg text-gray-400">/month</span>
                     </div>
                     
                     <ul className="space-y-3 mb-8">
