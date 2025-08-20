@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import { useRouter } from 'next/router';
@@ -44,6 +44,20 @@ const Header: React.FC = () => {
   const closeMenu = () => {
     setIsMenuOpen(false);
   };
+
+  // Prevent body scroll when menu is open
+  useEffect(() => {
+    if (isMenuOpen) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = 'unset';
+    }
+    
+    // Cleanup function to restore scroll when component unmounts
+    return () => {
+      document.body.style.overflow = 'unset';
+    };
+  }, [isMenuOpen]);
 
 
   return (
@@ -147,8 +161,11 @@ const Header: React.FC = () => {
             left: 0,
             right: 0,
             bottom: 0,
+            backgroundColor: '#0f172a',
             background: 'linear-gradient(135deg, #0f172a 0%, #1e3a8a 50%, #312e81 100%)',
             zIndex: 9999,
+            overflowY: 'auto',
+            WebkitOverflowScrolling: 'touch',
             padding: '24px'
           }}>
             <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '32px' }}>
