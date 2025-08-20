@@ -107,10 +107,10 @@ export default function DataRoom() {
         />
       </Head>
 
-      <main className="min-h-screen bg-gray-50">
+      <main className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-black">
         {/* Hero Section */}
         <motion.section
-          className="bg-gradient-to-b from-white to-gray-50 pt-20 pb-16"
+          className="bg-gray-950 pt-20 pb-16"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 0.5 }}
@@ -122,13 +122,13 @@ export default function DataRoom() {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: 0.1 }}
               >
-                <span className="inline-flex items-center px-3 py-1 rounded-full text-sm font-medium bg-blue-100 text-blue-800">
+                <span className="inline-flex items-center px-3 py-1 rounded-full text-sm font-medium bg-gray-800 border border-gray-700 text-cyan-400">
                   Transparent Results
                 </span>
               </motion.div>
               
               <motion.h1
-                className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight text-gray-900"
+                className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight text-white"
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: 0.2 }}
@@ -137,7 +137,7 @@ export default function DataRoom() {
               </motion.h1>
               
               <motion.p
-                className="text-xl text-gray-600 max-w-3xl mx-auto"
+                className="text-xl text-gray-300 max-w-3xl mx-auto"
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: 0.3 }}
@@ -152,21 +152,21 @@ export default function DataRoom() {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: 0.4 }}
               >
-                <div className="bg-white rounded-lg shadow-md p-4">
-                  <div className="text-3xl font-bold text-blue-600">499%</div>
-                  <div className="text-sm text-gray-600">Revenue Growth</div>
+                <div className="bg-black border border-gray-800 rounded-lg shadow-md p-4">
+                  <div className="text-3xl font-bold text-blue-400">499%</div>
+                  <div className="text-sm text-gray-300">Revenue Growth</div>
                 </div>
-                <div className="bg-white rounded-lg shadow-md p-4">
-                  <div className="text-3xl font-bold text-green-600">427%</div>
-                  <div className="text-sm text-gray-600">Average ROI</div>
+                <div className="bg-black border border-gray-800 rounded-lg shadow-md p-4">
+                  <div className="text-3xl font-bold text-green-400">427%</div>
+                  <div className="text-sm text-gray-300">Average ROI</div>
                 </div>
-                <div className="bg-white rounded-lg shadow-md p-4">
-                  <div className="text-3xl font-bold text-purple-600">92</div>
-                  <div className="text-sm text-gray-600">Happy Clients</div>
+                <div className="bg-black border border-gray-800 rounded-lg shadow-md p-4">
+                  <div className="text-3xl font-bold text-purple-400">92</div>
+                  <div className="text-sm text-gray-300">Happy Clients</div>
                 </div>
-                <div className="bg-white rounded-lg shadow-md p-4">
-                  <div className="text-3xl font-bold text-orange-600">4.8</div>
-                  <div className="text-sm text-gray-600">Customer Rating</div>
+                <div className="bg-black border border-gray-800 rounded-lg shadow-md p-4">
+                  <div className="text-3xl font-bold text-orange-400">4.8</div>
+                  <div className="text-sm text-gray-300">Customer Rating</div>
                 </div>
               </motion.div>
             </div>
