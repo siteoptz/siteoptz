@@ -1,0 +1,367 @@
+import React from 'react';
+import Head from 'next/head';
+import Link from 'next/link';
+import { GetStaticProps, GetStaticPaths } from 'next';
+import { Star, TrendingUp, Users, Zap, CheckCircle, ArrowRight } from 'lucide-react';
+import { toolCategories } from '../../config/categories';
+import { loadUnifiedToolsData } from '../../utils/unifiedDataAdapter';
+import { categoryContent } from '../../content/categoryContent';
+
+interface CategoryPageProps {
+  category: string;
+  tools: any[];
+  content: any;
+}
+
+export default function CategoryPage({ category, tools, content }: CategoryPageProps) {
+  const topTools = tools.slice(0, 6);
+  const categorySlug = category.toLowerCase().replace(/[^a-z0-9]+/g, '-');
+
+  return (
+    <>
+      <Head>
+        <title>{content.seo.title}</title>
+        <meta name="description" content={content.seo.description} />
+        <meta name="keywords" content={content.seo.keywords.join(', ')} />
+        <link rel="canonical" href={`https://siteoptz.ai/categories/${categorySlug}`} />
+        
+        {/* Open Graph */}
+        <meta property="og:title" content={content.seo.title} />
+        <meta property="og:description" content={content.seo.description} />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content={`https://siteoptz.ai/categories/${categorySlug}`} />
+        
+        {/* FAQ Schema */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "FAQPage",
+              "mainEntity": content.faqs.map((faq: any) => ({
+                "@type": "Question",
+                "name": faq.question,
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": faq.answer
+                }
+              }))
+            })
+          }}
+        />
+      </Head>
+
+      <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-black">
+        {/* Hero Section */}
+        <section className="pt-20 pb-16">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center mb-16">
+              <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+                {content.hero.title}
+              </h1>
+              <p className="text-xl text-gray-300 max-w-4xl mx-auto mb-8">
+                {content.hero.subtitle}
+              </p>
+              
+              {/* Key Stats */}
+              <div className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-3xl mx-auto">
+                <div className="text-center">
+                  <div className="text-3xl font-bold text-cyan-400">{tools.length}+</div>
+                  <div className="text-sm text-gray-400">Tools Reviewed</div>
+                </div>
+                <div className="text-center">
+                  <div className="text-3xl font-bold text-green-400">50K+</div>
+                  <div className="text-sm text-gray-400">Users Helped</div>
+                </div>
+                <div className="text-center">
+                  <div className="text-3xl font-bold text-purple-400">4.8/5</div>
+                  <div className="text-sm text-gray-400">Average Rating</div>
+                </div>
+                <div className="text-center">
+                  <div className="text-3xl font-bold text-orange-400">24/7</div>
+                  <div className="text-sm text-gray-400">Expert Support</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Introduction Section */}
+        <section className="py-16">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="max-w-4xl mx-auto">
+              <div className="bg-black border border-gray-800 rounded-2xl p-8 mb-12">
+                <h2 className="text-3xl font-bold text-white mb-6">
+                  {content.introduction.title}
+                </h2>
+                <div className="prose prose-lg prose-gray-300 max-w-none">
+                  {content.introduction.content.map((paragraph: string, index: number) => (
+                    <p key={index} className="text-gray-300 leading-relaxed mb-4">
+                      {paragraph}
+                    </p>
+                  ))}
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Top Tools Section */}
+        <section className="py-16">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center mb-12">
+              <h2 className="text-3xl font-bold text-white mb-4">
+                Top {category} Tools
+              </h2>
+              <p className="text-xl text-gray-300">
+                Hand-picked and tested by our experts
+              </p>
+            </div>
+            
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {topTools.map((tool: any, index: number) => (
+                <div key={tool.id || index} className="bg-gray-900 border border-gray-800 rounded-lg p-6 hover:border-cyan-400 transition-colors">
+                  <div className="flex items-center mb-4">
+                    <img 
+                      src={tool.logo_url || tool.logo || '/images/tools/placeholder.svg'} 
+                      alt={`${tool.tool_name} logo`}
+                      className="w-12 h-12 rounded-lg mr-4"
+                      onError={(e) => {
+                        e.currentTarget.src = '/images/tools/placeholder.svg';
+                      }}
+                    />
+                    <div>
+                      <h3 className="text-lg font-bold text-white">{tool.tool_name}</h3>
+                      <div className="flex items-center">
+                        <Star className="w-4 h-4 text-yellow-400 mr-1" />
+                        <span className="text-sm text-gray-300">{tool.rating || '4.5'}/5</span>
+                      </div>
+                    </div>
+                  </div>
+                  
+                  <p className="text-gray-400 text-sm mb-4 line-clamp-3">
+                    {tool.description}
+                  </p>
+                  
+                  <div className="flex justify-between items-center">
+                    <div className="text-cyan-400 font-bold">
+                      {tool.pricing?.monthly === 0 ? 'Free' :
+                       tool.pricing?.monthly === 'Custom' ? 'Custom' :
+                       typeof tool.pricing?.monthly === 'number' ? `$${tool.pricing.monthly}/mo` : 'Custom'}
+                    </div>
+                    <Link 
+                      href={`/reviews/${tool.tool_name.toLowerCase().replace(/[^a-z0-9]+/g, '-')}`}
+                      className="bg-cyan-600 hover:bg-cyan-700 text-white px-4 py-2 rounded-lg text-sm transition-colors"
+                    >
+                      Learn More
+                    </Link>
+                  </div>
+                </div>
+              ))}
+            </div>
+            
+            <div className="text-center mt-12">
+              <Link 
+                href={`/tools?category=${encodeURIComponent(category)}`}
+                className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-lg font-medium transition-colors inline-flex items-center"
+              >
+                View All {category} Tools
+                <ArrowRight className="w-5 h-5 ml-2" />
+              </Link>
+            </div>
+          </div>
+        </section>
+
+        {/* Business Cases Section */}
+        <section className="py-16">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center mb-12">
+              <h2 className="text-3xl font-bold text-white mb-4">
+                Real-World Business Cases
+              </h2>
+              <p className="text-xl text-gray-300">
+                How companies are transforming their operations with {category.toLowerCase()}
+              </p>
+            </div>
+            
+            <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+              {content.businessCases.map((businessCase: any, index: number) => (
+                <div key={index} className="bg-black border border-gray-800 rounded-2xl p-8">
+                  <div className="flex items-center mb-6">
+                    <div className="w-12 h-12 bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg flex items-center justify-center mr-4">
+                      <span className="text-white font-bold text-lg">{businessCase.industry.charAt(0)}</span>
+                    </div>
+                    <div>
+                      <h3 className="text-xl font-bold text-white">{businessCase.company}</h3>
+                      <p className="text-cyan-400 text-sm">{businessCase.industry}</p>
+                    </div>
+                  </div>
+                  
+                  <h4 className="text-lg font-semibold text-white mb-3">{businessCase.challenge}</h4>
+                  <p className="text-gray-300 mb-4">{businessCase.solution}</p>
+                  
+                  <div className="border-t border-gray-800 pt-4">
+                    <h5 className="text-sm font-semibold text-white mb-2">Results:</h5>
+                    <ul className="space-y-1">
+                      {businessCase.results.map((result: string, resultIndex: number) => (
+                        <li key={resultIndex} className="text-green-400 text-sm flex items-center">
+                          <CheckCircle className="w-4 h-4 mr-2" />
+                          {result}
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Implementation Examples Section */}
+        <section className="py-16">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="max-w-4xl mx-auto">
+              <h2 className="text-3xl font-bold text-white mb-8 text-center">
+                Implementation Guide
+              </h2>
+              
+              <div className="bg-black border border-gray-800 rounded-2xl p-8">
+                <h3 className="text-2xl font-bold text-white mb-6">
+                  {content.implementation.title}
+                </h3>
+                
+                <div className="space-y-8">
+                  {content.implementation.steps.map((step: any, index: number) => (
+                    <div key={index} className="flex">
+                      <div className="flex-shrink-0 w-8 h-8 bg-cyan-600 rounded-full flex items-center justify-center mr-4">
+                        <span className="text-white font-bold text-sm">{index + 1}</span>
+                      </div>
+                      <div>
+                        <h4 className="text-lg font-semibold text-white mb-2">{step.title}</h4>
+                        <p className="text-gray-300 mb-3">{step.description}</p>
+                        {step.details && (
+                          <ul className="list-disc list-inside text-gray-400 text-sm space-y-1">
+                            {step.details.map((detail: string, detailIndex: number) => (
+                              <li key={detailIndex}>{detail}</li>
+                            ))}
+                          </ul>
+                        )}
+                      </div>
+                    </div>
+                  ))}
+                </div>
+                
+                <div className="mt-8 p-6 bg-gradient-to-r from-green-900/20 to-blue-900/20 border border-green-800/30 rounded-lg">
+                  <h4 className="text-lg font-semibold text-white mb-2">Expected Results</h4>
+                  <p className="text-gray-300">{content.implementation.expectedResults}</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* FAQ Section */}
+        <section className="py-16">
+          <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 className="text-3xl font-bold text-white mb-8 text-center">
+              Frequently Asked Questions
+            </h2>
+            
+            <div className="space-y-4">
+              {content.faqs.map((faq: any, index: number) => (
+                <details key={index} className="bg-black border border-gray-800 rounded-lg">
+                  <summary className="p-6 cursor-pointer hover:bg-gray-900 transition-colors">
+                    <h3 className="text-lg font-semibold text-white inline">
+                      {faq.question}
+                    </h3>
+                  </summary>
+                  <div className="px-6 pb-6">
+                    <p className="text-gray-300 leading-relaxed">
+                      {faq.answer}
+                    </p>
+                  </div>
+                </details>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* CTA Section */}
+        <section className="py-16">
+          <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <div className="bg-gradient-to-r from-blue-600 to-purple-700 rounded-2xl p-12">
+              <h2 className="text-3xl font-bold text-white mb-4">
+                Ready to Transform Your Business with {category}?
+              </h2>
+              <p className="text-xl text-blue-100 mb-8">
+                Join thousands of businesses already using AI to drive growth and innovation.
+              </p>
+              
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <Link 
+                  href={`/tools?category=${encodeURIComponent(category)}`}
+                  className="bg-white text-blue-600 hover:bg-gray-100 px-8 py-3 rounded-lg font-semibold transition-colors"
+                >
+                  Explore {category} Tools
+                </Link>
+                <Link 
+                  href="/contact"
+                  className="bg-blue-800 hover:bg-blue-900 text-white px-8 py-3 rounded-lg font-semibold transition-colors"
+                >
+                  Get Expert Guidance
+                </Link>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+    </>
+  );
+}
+
+export const getStaticPaths: GetStaticPaths = async () => {
+  const paths = toolCategories.map(category => ({
+    params: { 
+      category: category.toLowerCase().replace(/[^a-z0-9]+/g, '-')
+    }
+  }));
+
+  return {
+    paths,
+    fallback: false,
+  };
+};
+
+export const getStaticProps: GetStaticProps = async ({ params }) => {
+  const fs = require('fs');
+  const path = require('path');
+  
+  if (!params?.category || typeof params.category !== 'string') {
+    return { notFound: true };
+  }
+
+  // Find the category from slug
+  const categorySlug = params.category;
+  const category = toolCategories.find(cat => 
+    cat.toLowerCase().replace(/[^a-z0-9]+/g, '-') === categorySlug
+  );
+
+  if (!category) {
+    return { notFound: true };
+  }
+
+  // Load tools for this category
+  const allTools = loadUnifiedToolsData(fs, path);
+  const tools = allTools.filter(tool => tool.category === category);
+
+  // Load category content
+  const content = categoryContent[category];
+
+  return {
+    props: {
+      category,
+      tools,
+      content,
+    },
+  };
+};
