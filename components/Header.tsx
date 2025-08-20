@@ -138,10 +138,36 @@ const Header: React.FC = () => {
           </div>
         </div>
 
-        {/* DEBUG: Menu State = {isMenuOpen ? 'OPEN' : 'CLOSED'} */}
         
-        {/* SIMPLE TEST - Just Text */}
-        {isMenuOpen && <div style={{position: 'fixed', top: '100px', left: '20px', background: 'red', color: 'white', padding: '20px', zIndex: 9999, fontSize: '20px'}}>MENU IS OPEN!</div>}
+        {/* Mobile Navigation Menu */}
+        {isMenuOpen && (
+          <div style={{
+            position: 'fixed',
+            top: '64px',
+            left: 0,
+            right: 0,
+            bottom: 0,
+            background: 'linear-gradient(135deg, #0f172a 0%, #1e3a8a 50%, #312e81 100%)',
+            zIndex: 9999,
+            padding: '24px'
+          }}>
+            <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '32px' }}>
+              <h3 style={{ fontSize: '24px', fontWeight: 'bold', color: 'white' }}>Menu</h3>
+              <button onClick={closeMenu} style={{ background: 'transparent', border: 'none', color: 'white', fontSize: '24px', cursor: 'pointer' }}>✕</button>
+            </div>
+            
+            <div style={{ display: 'flex', flexDirection: 'column', gap: '16px' }}>
+              <Link href="/" onClick={closeMenu} style={{ color: 'white', textDecoration: 'none', fontSize: '18px', padding: '12px 16px', borderRadius: '8px', border: '1px solid rgba(255,255,255,0.2)' }}>🏠 Home</Link>
+              <Link href="/tools" onClick={closeMenu} style={{ color: 'white', textDecoration: 'none', fontSize: '18px', padding: '12px 16px', borderRadius: '8px', border: '1px solid rgba(255,255,255,0.2)' }}>🛠️ Tools</Link>
+              <Link href="/pricing" onClick={closeMenu} style={{ color: 'white', textDecoration: 'none', fontSize: '18px', padding: '12px 16px', borderRadius: '8px', border: '1px solid rgba(255,255,255,0.2)' }}>💰 Pricing</Link>
+              <Link href="/blog" onClick={closeMenu} style={{ color: 'white', textDecoration: 'none', fontSize: '18px', padding: '12px 16px', borderRadius: '8px', border: '1px solid rgba(255,255,255,0.2)' }}>📰 Blog</Link>
+              
+              <div style={{ marginTop: '24px', paddingTop: '24px', borderTop: '1px solid rgba(255,255,255,0.2)' }}>
+                <Link href="/tools" onClick={closeMenu} style={{ display: 'block', width: '100%', padding: '16px', background: 'linear-gradient(to right, #06b6d4, #2563eb)', color: 'white', textDecoration: 'none', borderRadius: '8px', textAlign: 'center', fontWeight: 'bold' }}>🚀 Explore Tools</Link>
+              </div>
+            </div>
+          </div>
+        )}
       </nav>
     </header>
   );
