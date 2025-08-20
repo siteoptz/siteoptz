@@ -5,6 +5,7 @@ import EnhancedPricingCalculator from '../components/EnhancedPricingCalculator';
 import { GetStaticProps } from 'next';
 import fs from 'fs';
 import path from 'path';
+import { loadUnifiedToolsData } from '../utils/unifiedDataAdapter';
 
 interface Tool {
   id: string;
@@ -16,6 +17,9 @@ interface Tool {
     features: string[];
   }[];
   category?: string;
+  overview?: {
+    category?: string;
+  };
 }
 
 interface PricingPageProps {
@@ -205,22 +209,71 @@ export default function PricingPage({ tools }: PricingPageProps) {
 
 export const getStaticProps: GetStaticProps = async () => {
   try {
-    // Load tools data for the calculator
-    const toolsPath = path.join(process.cwd(), 'public/data/aiToolsData.json');
-    let tools = [];
+    // Load all tools using the unified data adapter
+    const allTools = loadUnifiedToolsData(fs, path);
     
-    if (fs.existsSync(toolsPath)) {
-      tools = JSON.parse(fs.readFileSync(toolsPath, 'utf8'));
-    }
+    // Convert tools to format needed for pricing calculator
+    const toolsForCalculator = allTools.map(tool => {
+      // Extract pricing information
+      const monthlyPrice = typeof tool.pricing.monthly === 'number' ? tool.pricing.monthly : 
+                          typeof tool.pricing.monthly === 'string' && tool.pricing.monthly !== 'Free' && tool.pricing.monthly !== 'Custom' ? 
+                          parseFloat(tool.pricing.monthly.toString().replace(/[^0-9.]/g, '')) || 0 : 0;
+      
+      const yearlyPrice = typeof tool.pricing.yearly === 'number' ? tool.pricing.yearly :
+                         typeof tool.pricing.yearly === 'string' && tool.pricing.yearly !== 'Free' && tool.pricing.yearly !== 'Custom' ?
+                         parseFloat(tool.pricing.yearly.toString().replace(/[^0-9.]/g, '')) || 0 : 0;
+
+      // Create pricing plans
+      const pricingPlans = [];
+      
+      if (monthlyPrice >= 0) {
+        pricingPlans.push({
+          plan: tool.pricing.monthly === 'Free' ? 'Free' : 'Monthly',
+          price_per_month: monthlyPrice,
+          features: tool.use_cases || tool.pros || []
+        });
+      }
+      
+      if (yearlyPrice > 0 && yearlyPrice !== monthlyPrice * 12) {
+        pricingPlans.push({
+          plan: 'Yearly',
+          price_per_month: Math.round(yearlyPrice / 12),
+          features: tool.use_cases || tool.pros || []
+        });
+      }
+      
+      if (tool.pricing.enterprise && tool.pricing.enterprise !== 'Custom') {
+        pricingPlans.push({
+          plan: 'Enterprise',
+          price_per_month: 0,
+          features: [...(tool.use_cases || []), 'Custom pricing', 'Enterprise support']
+        });
+      }
+
+      return {
+        id: tool.id || tool.tool_name.toLowerCase().replace(/[^a-z0-9]+/g, '-'),
+        slug: tool.slug || tool.tool_name.toLowerCase().replace(/[^a-z0-9]+/g, '-'),
+        name: tool.tool_name,
+        pricing: pricingPlans.length > 0 ? pricingPlans : [{
+          plan: 'Contact for Pricing',
+          price_per_month: 0,
+          features: tool.use_cases || tool.pros || []
+        }],
+        category: tool.category,
+        overview: {
+          category: tool.category
+        }
+      };
+    }).filter(tool => tool.pricing && tool.pricing.length > 0);
 
     return {
       props: {
-        tools: tools || []
+        tools: toolsForCalculator
       },
       revalidate: 3600 // Revalidate every hour
     };
   } catch (error) {
-    console.error('Error loading tools data:', error);
+    console.error('Error loading unified tools data:', error);
     return {
       props: {
         tools: []
