@@ -264,7 +264,7 @@ export default function HomePage({ featuredTools, popularComparisons, faqs }: Ho
                               }
                             })()}
                           </div>
-                          <span className="px-2 py-1 bg-gray-100 text-gray-600 text-xs rounded-full">
+                          <span className="px-2 py-1 bg-white text-gray-600 text-xs rounded-full shadow-sm">
                             {tool.features?.length || 0} features
                           </span>
                         </div>
@@ -285,7 +285,7 @@ export default function HomePage({ featuredTools, popularComparisons, faqs }: Ho
             <div className="text-center mt-12">
               <Link 
                 href="/tools"
-                className="inline-flex items-center px-8 py-4 bg-gray-100 text-gray-900 font-semibold rounded-xl hover:bg-gray-200 transition-colors"
+                className="inline-flex items-center px-8 py-4 bg-white text-gray-900 font-semibold rounded-xl hover:bg-gray-100 transition-colors shadow-lg"
               >
                 Explore All {featuredTools.length} Tools
                 <ArrowRight className="ml-2 w-5 h-5" />
