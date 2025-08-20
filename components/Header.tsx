@@ -3,6 +3,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { useRouter } from 'next/router';
 import { Menu, X, ChevronDown } from 'lucide-react';
+import { toolCategories, getCategoryUrl } from '../config/categories';
 
 const Header: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -18,17 +19,10 @@ const Header: React.FC = () => {
       hasDropdown: true,
       dropdownItems: [
         { name: 'All AI Tools', href: '/tools' },
-        { name: 'Audio Generation', href: '/tools?category=Audio%20Generation' },
-        { name: 'Code Generation', href: '/tools?category=Code%20Generation' },
-        { name: 'Content Creation', href: '/tools?category=Content%20Creation' },
-        { name: 'Data Analysis', href: '/tools?category=Data%20Analysis' },
-        { name: 'Email Marketing', href: '/tools?category=Email%20Marketing' },
-        { name: 'Image Generation', href: '/tools?category=Image%20Generation' },
-        { name: 'Productivity', href: '/tools?category=Productivity' },
-        { name: 'Research & Education', href: '/tools?category=Research%20%26%20Education' },
-        { name: 'SEO & Optimization', href: '/tools?category=SEO%20%26%20Optimization' },
-        { name: 'Social Media', href: '/tools?category=Social%20Media' },
-        { name: 'Video Generation', href: '/tools?category=Video%20Generation' },
+        ...toolCategories.map(category => ({
+          name: category,
+          href: getCategoryUrl(category)
+        }))
       ]
     },
     { name: 'Pricing Calculator', href: '/pricing', current: router.pathname === '/pricing' },

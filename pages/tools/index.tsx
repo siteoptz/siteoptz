@@ -7,13 +7,13 @@ import { getPageConfig, buildCanonicalUrl } from "../../seo/meta-config.js";
 import PricingCalculator from "../../components/tools/PricingCalculator";
 import FAQSection from "../../components/FAQ/FAQSection";
 import { loadUnifiedToolsData, getAllCategories, getToolsByCategory, searchTools } from "../../utils/unifiedDataAdapter.js";
+import { toolCategories } from "../../config/categories";
 
 export async function getStaticProps() {
   const faqPath = path.join(process.cwd(), "data", "faq-data.json");
   
   // Load unified tools data from both old and new datasets
   const allTools = loadUnifiedToolsData(fs, path);
-  const categories = getAllCategories(allTools);
   
   let faqData = [];
   if (fs.existsSync(faqPath)) {
@@ -24,7 +24,7 @@ export async function getStaticProps() {
   return {
     props: {
       tools: allTools,
-      categories: categories,
+      categories: toolCategories, // Use predefined categories
       faqs: faqData,
     },
   };
