@@ -47,6 +47,16 @@ export default function ToolsPage({ tools, categories, faqs }: { tools: any[], c
     }
   }, [tools]);
 
+  // Handle category from URL query parameter
+  useEffect(() => {
+    if (router.isReady && router.query.category) {
+      const categoryFromUrl = router.query.category as string;
+      if (categoryFromUrl !== selectedCategory) {
+        setSelectedCategory(categoryFromUrl);
+      }
+    }
+  }, [router.isReady, router.query.category, selectedCategory]);
+
   // Filter tools based on category and search
   useEffect(() => {
     let filtered = tools;

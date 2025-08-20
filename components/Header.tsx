@@ -16,14 +16,7 @@ const Header: React.FC = () => {
       name: 'Tools', 
       href: '/tools', 
       current: router.pathname.startsWith('/tools'),
-      hasDropdown: true,
-      dropdownItems: [
-        { name: 'All AI Tools', href: '/tools' },
-        ...toolCategories.map(category => ({
-          name: category,
-          href: getCategoryUrl(category)
-        }))
-      ]
+      hasDropdown: true
     },
     { name: 'Pricing Calculator', href: '/pricing', current: router.pathname === '/pricing' },
     { name: 'Data Room', href: '/data-room', current: router.pathname === '/data-room' },
@@ -100,17 +93,26 @@ const Header: React.FC = () => {
                 </Link>
                 
                 {/* Dropdown Menu */}
-                {item.hasDropdown && item.dropdownItems && (
+                {item.hasDropdown && item.name === 'Tools' && (
                   <div 
                     className="absolute top-full left-0 mt-2 w-64 bg-black rounded-xl shadow-xl border border-gray-800/50 py-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 transform translate-y-2 group-hover:translate-y-0"
                   >
-                    {item.dropdownItems.map((dropdownItem) => (
+                    {/* All Tools Link */}
+                    <Link
+                      href="/tools"
+                      className="block px-4 py-2 text-sm text-gray-300 hover:bg-gray-800 hover:text-white transition-colors"
+                    >
+                      All AI Tools
+                    </Link>
+                    
+                    {/* Category Links */}
+                    {toolCategories.map((category) => (
                       <Link
-                        key={dropdownItem.name}
-                        href={dropdownItem.href}
+                        key={category}
+                        href={getCategoryUrl(category)}
                         className="block px-4 py-2 text-sm text-gray-300 hover:bg-gray-800 hover:text-white transition-colors"
                       >
-                        {dropdownItem.name}
+                        {category}
                       </Link>
                     ))}
                   </div>
