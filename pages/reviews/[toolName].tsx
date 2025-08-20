@@ -252,22 +252,31 @@ export default function ReviewPage({ tool, pageTitle, slug, relatedTools, relate
         <link rel="canonical" href={`https://siteoptz.com/reviews/${slug}`} />
       </Head>
 
-      <div className="min-h-screen bg-gray-50">
+      <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-black relative overflow-hidden">
+        {/* Animated Background Elements */}
+        <div className="absolute inset-0 pointer-events-none">
+          <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-blue-500/10 rounded-full blur-3xl animate-pulse"></div>
+          <div className="absolute bottom-1/4 right-1/4 w-80 h-80 bg-purple-500/10 rounded-full blur-3xl animate-pulse delay-1000"></div>
+          <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-64 h-64 bg-cyan-500/10 rounded-full blur-3xl animate-pulse delay-500"></div>
+        </div>
+
+        {/* Grid Overlay */}
+        <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.02)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.02)_1px,transparent_1px)] bg-[size:100px_100px] pointer-events-none"></div>
+
         {/* Hero Section */}
-        <section className="relative bg-gradient-to-br from-blue-600 via-purple-600 to-blue-800 py-20">
-          <div className="absolute inset-0 bg-black opacity-10"></div>
+        <section className="relative z-10 py-20">
           
-          <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             {/* Breadcrumb */}
             <nav className="mb-8">
-              <ol className="flex items-center space-x-2 text-blue-100 text-sm">
-                <li><Link href="/" className="hover:text-white transition-colors">Home</Link></li>
+              <ol className="flex items-center space-x-2 text-gray-400 text-sm">
+                <li><Link href="/" className="hover:text-cyan-400 transition-colors">Home</Link></li>
                 <li><span className="mx-2">/</span></li>
-                <li><Link href="/tools" className="hover:text-white transition-colors">AI Tools</Link></li>
+                <li><Link href="/tools" className="hover:text-cyan-400 transition-colors">AI Tools</Link></li>
                 <li><span className="mx-2">/</span></li>
-                <li><Link href="/reviews" className="hover:text-white transition-colors">Reviews</Link></li>
+                <li><Link href="/reviews" className="hover:text-cyan-400 transition-colors">Reviews</Link></li>
                 <li><span className="mx-2">/</span></li>
-                <li className="text-blue-200">{tool.tool_name} Review</li>
+                <li className="text-cyan-400">{tool.tool_name} Review</li>
               </ol>
             </nav>
 
@@ -275,7 +284,7 @@ export default function ReviewPage({ tool, pageTitle, slug, relatedTools, relate
               {/* Tool Info */}
               <div className="lg:w-2/3 lg:pr-12 mb-8 lg:mb-0">
                 <div className="flex items-center mb-6">
-                  <div className="w-20 h-20 bg-white rounded-xl p-3 shadow-lg mr-6">
+                  <div className="w-20 h-20 bg-gray-800 border border-gray-700 rounded-xl p-3 shadow-lg mr-6">
                     <img
                       src={tool.logo_url}
                       alt={`${tool.tool_name} logo`}
@@ -321,7 +330,7 @@ export default function ReviewPage({ tool, pageTitle, slug, relatedTools, relate
                     href={tool.affiliate_link || tool.official_url}
                     target="_blank"
                     rel="noopener noreferrer sponsored"
-                    className="bg-white text-blue-600 hover:bg-blue-50 font-bold py-3 px-8 rounded-lg transition-colors text-center"
+                    className="bg-cyan-600 text-white hover:bg-cyan-700 font-bold py-3 px-8 rounded-lg transition-colors text-center"
                   >
                     Try {tool.tool_name} Free
                   </a>
@@ -330,29 +339,29 @@ export default function ReviewPage({ tool, pageTitle, slug, relatedTools, relate
 
               {/* Quick Stats */}
               <div className="lg:w-1/3">
-                <div className="bg-white bg-opacity-10 backdrop-blur-md rounded-2xl p-6 border border-white border-opacity-20">
+                <div className="bg-black border border-gray-800 backdrop-blur-md rounded-2xl p-6">
                   <h3 className="text-lg font-semibold text-white mb-4">Quick Stats</h3>
                   
                   <div className="space-y-4">
                     <div className="flex justify-between">
-                      <span className="text-blue-100">Starting Price:</span>
+                      <span className="text-gray-400">Starting Price:</span>
                       <span className="text-white font-semibold">
                         {tool.pricing.monthly ? `$${tool.pricing.monthly}/month` : 'Custom'}
                       </span>
                     </div>
                     <div className="flex justify-between">
-                      <span className="text-blue-100">Free Trial:</span>
+                      <span className="text-gray-400">Free Trial:</span>
                       <span className="text-white font-semibold">
                         {tool.free_trial ? 'Yes' : 'No'}
                       </span>
                     </div>
                     <div className="flex justify-between">
-                      <span className="text-blue-100">Features:</span>
+                      <span className="text-gray-400">Features:</span>
                       <span className="text-white font-semibold">{(tool.features.core?.length || 0) + (tool.features.advanced?.length || 0) + (tool.features.integrations?.length || 0)}+</span>
                     </div>
                     {tool.rating && (
                       <div className="flex justify-between">
-                        <span className="text-blue-100">Rating:</span>
+                        <span className="text-gray-400">Rating:</span>
                         <span className="text-white font-semibold">{tool.rating}/5</span>
                       </div>
                     )}
@@ -364,7 +373,7 @@ export default function ReviewPage({ tool, pageTitle, slug, relatedTools, relate
         </section>
 
         {/* Navigation Tabs */}
-        <section className="bg-white border-b">
+        <section className="bg-black border-b border-gray-800 relative z-10">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <nav className="flex space-x-8">
               {[
@@ -378,8 +387,8 @@ export default function ReviewPage({ tool, pageTitle, slug, relatedTools, relate
                   onClick={() => setActiveTab(tab.key as typeof activeTab)}
                   className={`py-4 px-2 border-b-2 font-medium text-sm transition-colors ${
                     activeTab === tab.key
-                      ? 'border-blue-500 text-blue-600'
-                      : 'border-transparent text-gray-500 hover:text-gray-700 hover:border-gray-300'
+                      ? 'border-cyan-400 text-cyan-400'
+                      : 'border-transparent text-gray-400 hover:text-white hover:border-gray-600'
                   }`}
                 >
                   {tab.label}
@@ -390,37 +399,37 @@ export default function ReviewPage({ tool, pageTitle, slug, relatedTools, relate
         </section>
 
         {/* Tab Content */}
-        <section className="py-16">
+        <section className="py-16 relative z-10">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             {activeTab === 'overview' && (
               <div className="prose prose-lg max-w-none">
-                <h2 className="text-3xl font-bold text-gray-900 mb-6">What is {tool.tool_name}?</h2>
-                <p className="text-gray-600 mb-8">{tool.description}</p>
+                <h2 className="text-3xl font-bold text-white mb-6">What is {tool.tool_name}?</h2>
+                <p className="text-gray-300 mb-8">{tool.description}</p>
                 
                 <div className="grid md:grid-cols-2 gap-8 not-prose">
-                  <div className="bg-green-50 p-6 rounded-xl">
-                    <h3 className="text-xl font-semibold text-green-900 mb-4">Key Strengths</h3>
+                  <div className="bg-black border border-gray-800 p-6 rounded-xl">
+                    <h3 className="text-xl font-semibold text-green-400 mb-4">Key Strengths</h3>
                     <ul className="space-y-2">
                       {(tool.pros || []).slice(0, 5).map((pro, index) => (
                         <li key={index} className="flex items-start">
                           <svg className="w-5 h-5 text-green-500 mt-0.5 mr-2 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
                             <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
                           </svg>
-                          <span className="text-green-800">{pro}</span>
+                          <span className="text-gray-300">{pro}</span>
                         </li>
                       ))}
                     </ul>
                   </div>
                   
-                  <div className="bg-red-50 p-6 rounded-xl">
-                    <h3 className="text-xl font-semibold text-red-900 mb-4">Limitations</h3>
+                  <div className="bg-black border border-gray-800 p-6 rounded-xl">
+                    <h3 className="text-xl font-semibold text-red-400 mb-4">Limitations</h3>
                     <ul className="space-y-2">
                       {(tool.cons || []).slice(0, 5).map((con, index) => (
                         <li key={index} className="flex items-start">
                           <svg className="w-5 h-5 text-red-500 mt-0.5 mr-2 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
                             <path fillRule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clipRule="evenodd" />
                           </svg>
-                          <span className="text-red-800">{con}</span>
+                          <span className="text-gray-300">{con}</span>
                         </li>
                       ))}
                     </ul>
@@ -431,19 +440,19 @@ export default function ReviewPage({ tool, pageTitle, slug, relatedTools, relate
 
             {activeTab === 'features' && (
               <div>
-                <h2 className="text-3xl font-bold text-gray-900 mb-8">{tool.tool_name} Features</h2>
+                <h2 className="text-3xl font-bold text-white mb-8">{tool.tool_name} Features</h2>
                 
                 {/* Core Features */}
                 <div className="mb-8">
-                  <h3 className="text-xl font-semibold text-gray-900 mb-4">Core Features</h3>
+                  <h3 className="text-xl font-semibold text-white mb-4">Core Features</h3>
                   <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
                     {(tool.features.core || []).map((feature, index) => (
-                      <div key={index} className="bg-white p-6 rounded-xl shadow-sm border">
+                      <div key={index} className="bg-black border border-gray-800 p-6 rounded-xl shadow-sm">
                         <div className="flex items-start">
-                          <svg className="w-6 h-6 text-blue-600 mt-1 mr-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <svg className="w-6 h-6 text-cyan-400 mt-1 mr-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                           </svg>
-                          <span className="text-gray-900 font-medium">{feature}</span>
+                          <span className="text-gray-300 font-medium">{feature}</span>
                         </div>
                       </div>
                     ))}
@@ -503,7 +512,7 @@ export default function ReviewPage({ tool, pageTitle, slug, relatedTools, relate
                           <svg className="w-5 h-5 text-green-500 mt-0.5 mr-2 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
                             <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
                           </svg>
-                          <span className="text-gray-700">{feature}</span>
+                          <span className="text-gray-300">{feature}</span>
                         </li>
                       ))}
                     </ul>
@@ -512,7 +521,7 @@ export default function ReviewPage({ tool, pageTitle, slug, relatedTools, relate
                       href={tool.affiliate_link}
                       target="_blank"
                       rel="noopener noreferrer sponsored"
-                      className="block w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-6 rounded-lg transition-colors text-center"
+                      className="block w-full bg-cyan-600 hover:bg-cyan-700 text-white font-semibold py-3 px-6 rounded-lg transition-colors text-center"
                     >
                       Get Started
                     </a>
@@ -531,7 +540,7 @@ export default function ReviewPage({ tool, pageTitle, slug, relatedTools, relate
                           <svg className="w-5 h-5 text-green-500 mt-0.5 mr-2 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
                             <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
                           </svg>
-                          <span className="text-gray-700">{feature}</span>
+                          <span className="text-gray-300">{feature}</span>
                         </li>
                       ))}
                     </ul>
@@ -540,7 +549,7 @@ export default function ReviewPage({ tool, pageTitle, slug, relatedTools, relate
                       href={tool.affiliate_link}
                       target="_blank"
                       rel="noopener noreferrer sponsored"
-                      className="block w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-6 rounded-lg transition-colors text-center"
+                      className="block w-full bg-cyan-600 hover:bg-cyan-700 text-white font-semibold py-3 px-6 rounded-lg transition-colors text-center"
                     >
                       Get Started
                     </a>
@@ -558,7 +567,7 @@ export default function ReviewPage({ tool, pageTitle, slug, relatedTools, relate
                           <svg className="w-5 h-5 text-green-500 mt-0.5 mr-2 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
                             <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
                           </svg>
-                          <span className="text-gray-700">{feature}</span>
+                          <span className="text-gray-300">{feature}</span>
                         </li>
                       ))}
                     </ul>
@@ -567,7 +576,7 @@ export default function ReviewPage({ tool, pageTitle, slug, relatedTools, relate
                       href={tool.affiliate_link}
                       target="_blank"
                       rel="noopener noreferrer sponsored"
-                      className="block w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-6 rounded-lg transition-colors text-center"
+                      className="block w-full bg-cyan-600 hover:bg-cyan-700 text-white font-semibold py-3 px-6 rounded-lg transition-colors text-center"
                     >
                       Contact Sales
                     </a>
