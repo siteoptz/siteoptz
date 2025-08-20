@@ -229,13 +229,13 @@ const FAQSection = ({
             <div className="flex flex-col sm:flex-row gap-3 justify-center">
               <Link
                 href="/contact"
-                className="bg-gray-800 hover:bg-gray-700 text-white font-semibold py-2 px-6 rounded-lg transition-colors border border-gray-700"
+                className="bg-blue-600 hover:bg-blue-700 text-white font-medium py-3 px-6 rounded-lg transition-colors"
               >
                 Contact Support
               </Link>
               <Link
                 href="/tools"
-                className="border border-gray-700 text-gray-300 hover:bg-gray-800 hover:text-white font-semibold py-2 px-6 rounded-lg transition-colors"
+                className="bg-blue-600 hover:bg-blue-700 text-white font-medium py-3 px-6 rounded-lg transition-colors"
               >
                 Browse AI Tools
               </Link>

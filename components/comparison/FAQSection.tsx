@@ -180,13 +180,13 @@ export default function FAQSection({ faqs }: FAQSectionProps) {
         <div className="flex flex-col sm:flex-row gap-3 justify-center">
           <Link
             href="/contact"
-            className="bg-cyan-600 text-white px-6 py-2 rounded-lg font-medium hover:bg-cyan-700 transition-colors"
+            className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg font-medium transition-colors"
           >
             Contact an Expert
           </Link>
           <Link
             href="/compare"
-            className="bg-gray-800 border border-gray-700 text-white px-6 py-2 rounded-lg font-medium hover:bg-gray-700 transition-colors"
+            className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg font-medium transition-colors"
           >
             Free Tool Selection Guide
           </Link>
