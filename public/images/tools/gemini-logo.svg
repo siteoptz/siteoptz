@@ -1,12 +1,35 @@
 <svg width="64" height="64" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
   <defs>
-    <linearGradient id="grad-gemini" x1="0%" y1="0%" x2="100%" y2="100%">
+    <linearGradient id="gemini-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
       <stop offset="0%" style="stop-color:#4285F4;stop-opacity:1" />
-      <stop offset="100%" style="stop-color:#0f52c1;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#EA4335;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#9333EA;stop-opacity:1" />
     </linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <dropShadow dx="0" dy="2" stdDeviation="3" flood-opacity="0.3"/>
+    </filter>
   </defs>
-  <rect width="64" height="64" rx="12" fill="url(#grad-gemini)" />
-  <text x="32" y="40" font-family="Arial, sans-serif" font-size="20" font-weight="bold" text-anchor="middle" fill="white">
-    G
-  </text>
+  
+  <!-- Background circle -->
+  <circle cx="32" cy="32" r="28" fill="url(#gemini-gradient)" filter="url(#shadow)"/>
+  
+  <!-- Gemini constellation pattern -->
+  <g transform="translate(32,32)">
+    <!-- Twin stars representing Gemini -->
+    <circle cx="-8" cy="-6" r="2.5" fill="white" opacity="0.9"/>
+    <circle cx="8" cy="-6" r="2.5" fill="white" opacity="0.9"/>
+    
+    <!-- Connecting lines -->
+    <path d="M -8,-6 L -4,-2 L 0,2 L 4,-2 L 8,-6" stroke="white" stroke-width="1.5" fill="none" opacity="0.8"/>
+    
+    <!-- Additional constellation points -->
+    <circle cx="-4" cy="-2" r="1.5" fill="white" opacity="0.7"/>
+    <circle cx="4" cy="-2" r="1.5" fill="white" opacity="0.7"/>
+    <circle cx="0" cy="2" r="1.5" fill="white" opacity="0.7"/>
+    
+    <!-- Bottom connecting stars -->
+    <circle cx="-6" cy="8" r="1.8" fill="white" opacity="0.8"/>
+    <circle cx="6" cy="8" r="1.8" fill="white" opacity="0.8"/>
+    <path d="M -6,8 L 0,2 L 6,8" stroke="white" stroke-width="1.2" fill="none" opacity="0.6"/>
+  </g>
 </svg>
