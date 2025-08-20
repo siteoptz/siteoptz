@@ -71,6 +71,70 @@ export default function CategoryPage({ category, tools, content }: CategoryPageP
           }}
         />
         
+        {/* Structured Data - BreadcrumbList */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "BreadcrumbList",
+              "itemListElement": [
+                {
+                  "@type": "ListItem",
+                  "position": 1,
+                  "name": "Home",
+                  "item": "https://siteoptz.ai"
+                },
+                {
+                  "@type": "ListItem",
+                  "position": 2,
+                  "name": "AI Tools",
+                  "item": "https://siteoptz.ai/tools"
+                },
+                {
+                  "@type": "ListItem",
+                  "position": 3,
+                  "name": category,
+                  "item": `https://siteoptz.ai/categories/${categorySlug}`
+                }
+              ]
+            })
+          }}
+        />
+        
+        {/* Structured Data - Article */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "Article",
+              "headline": content.hero.title,
+              "description": content.seo.description,
+              "author": {
+                "@type": "Organization",
+                "name": "SiteOptz",
+                "url": "https://siteoptz.ai"
+              },
+              "publisher": {
+                "@type": "Organization",
+                "name": "SiteOptz",
+                "logo": {
+                  "@type": "ImageObject",
+                  "url": "https://siteoptz.ai/images/logo.png"
+                }
+              },
+              "datePublished": "2025-01-01",
+              "dateModified": new Date().toISOString().split('T')[0],
+              "mainEntityOfPage": {
+                "@type": "WebPage",
+                "@id": `https://siteoptz.ai/categories/${categorySlug}`
+              },
+              "articleBody": content.introduction.content.join(' ')
+            })
+          }}
+        />
+        
         {/* Structured Data - Category Page */}
         <script
           type="application/ld+json"
@@ -143,9 +207,12 @@ export default function CategoryPage({ category, tools, content }: CategoryPageP
               <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
                 {content.hero.title}
               </h1>
-              <p className="text-xl text-gray-300 max-w-4xl mx-auto mb-8">
-                {content.hero.subtitle}
-              </p>
+              <h2 className="text-2xl md:text-3xl font-semibold text-cyan-400 mb-6">
+                {content.hero.subheading}
+              </h2>
+              <div className="text-xl text-gray-300 max-w-4xl mx-auto mb-8 leading-relaxed">
+                {content.hero.introText}
+              </div>
               
               {/* Key Stats */}
               <div className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-3xl mx-auto">
@@ -175,9 +242,9 @@ export default function CategoryPage({ category, tools, content }: CategoryPageP
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="max-w-4xl mx-auto">
               <div className="bg-black border border-gray-800 rounded-2xl p-8 mb-12">
-                <h2 className="text-3xl font-bold text-white mb-6">
+                <h3 className="text-3xl font-bold text-white mb-6">
                   {content.introduction.title}
-                </h2>
+                </h3>
                 <div className="prose prose-lg prose-gray-300 max-w-none">
                   {content.introduction.content.map((paragraph: string, index: number) => (
                     <p key={index} className="text-gray-300 leading-relaxed mb-4">
