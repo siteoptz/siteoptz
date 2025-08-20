@@ -190,10 +190,10 @@ export default function DataRoom() {
             transition={{ duration: 0.5 }}
           >
             <div className="text-center mb-12">
-              <h2 className="text-3xl font-bold text-gray-900 mb-4">
+              <h2 className="text-3xl font-bold text-white mb-4">
                 Industries We Serve
               </h2>
-              <p className="text-lg text-gray-600">
+              <p className="text-lg text-gray-300">
                 Trusted across diverse sectors for AI-driven growth
               </p>
             </div>
@@ -210,20 +210,20 @@ export default function DataRoom() {
                 return (
                   <motion.div
                     key={index}
-                    className="bg-white rounded-lg shadow-md p-6 text-center hover:shadow-lg transition-all duration-300 border border-gray-100 hover:border-gray-200"
+                    className="bg-black border border-gray-800 rounded-lg shadow-md p-6 text-center hover:shadow-lg hover:border-gray-600 transition-all duration-300"
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
                     transition={{ duration: 0.3, delay: index * 0.1 }}
                   >
                     <div className="flex justify-center mb-4">
-                      <div className="w-12 h-12 bg-gradient-to-br from-slate-100 to-slate-200 rounded-lg flex items-center justify-center">
-                        <IconComponent className="w-6 h-6 text-slate-600" strokeWidth={1.5} />
+                      <div className="w-12 h-12 bg-gray-800 border border-gray-700 rounded-lg flex items-center justify-center">
+                        <IconComponent className="w-6 h-6 text-cyan-400" strokeWidth={1.5} />
                       </div>
                     </div>
-                    <div className="font-semibold text-gray-900 mb-2">{industry.name}</div>
-                    <div className="text-2xl font-bold text-slate-700 mb-1">{industry.count}</div>
-                    <div className="text-xs text-gray-500 uppercase tracking-wide">clients</div>
+                    <div className="font-semibold text-white mb-2">{industry.name}</div>
+                    <div className="text-2xl font-bold text-cyan-400 mb-1">{industry.count}</div>
+                    <div className="text-xs text-gray-400 uppercase tracking-wide">clients</div>
                   </motion.div>
                 );
               })}

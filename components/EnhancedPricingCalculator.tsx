@@ -226,20 +226,20 @@ const EnhancedPricingCalculator: React.FC<EnhancedPricingCalculatorProps> = ({ t
   };
 
   return (
-    <div className="bg-white rounded-2xl shadow-xl p-4 sm:p-6 lg:p-8 mobile-safe">
+    <div className="bg-black border border-gray-800 rounded-2xl shadow-xl p-4 sm:p-6 lg:p-8 mobile-safe">
       {/* Header */}
       <div className="text-center mb-8">
-        <div className="inline-flex items-center justify-center w-12 h-12 bg-blue-100 rounded-full mb-4">
-          <Calculator className="w-6 h-6 text-blue-600" />
+        <div className="inline-flex items-center justify-center w-12 h-12 bg-gray-800 border border-gray-700 rounded-full mb-4">
+          <Calculator className="w-6 h-6 text-cyan-400" />
         </div>
-        <h2 className="text-2xl font-bold text-gray-900 mb-2">Multi-Tool Pricing Calculator</h2>
-        <p className="text-gray-600">Compare up to 5 AI tools and estimate your monthly expenses</p>
+        <h2 className="text-2xl font-bold text-white mb-2">Multi-Tool Pricing Calculator</h2>
+        <p className="text-gray-300">Compare up to 5 AI tools and estimate your monthly expenses</p>
       </div>
 
       {/* Global Settings */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6 mb-8 p-4 sm:p-6 bg-gray-50 rounded-lg overflow-hidden">
+      <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6 mb-8 p-4 sm:p-6 bg-gray-900 border border-gray-800 rounded-lg overflow-hidden">
         <div>
-          <label className="block text-sm font-medium text-gray-700 mb-2">Team Size</label>
+          <label className="block text-sm font-medium text-gray-300 mb-2">Team Size</label>
           <div className="flex items-center space-x-3">
             <input
               type="range"
@@ -247,14 +247,14 @@ const EnhancedPricingCalculator: React.FC<EnhancedPricingCalculatorProps> = ({ t
               max="100"
               value={teamSize}
               onChange={(e) => setTeamSize(parseInt(e.target.value))}
-              className="flex-1 h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer"
+              className="flex-1 h-2 bg-gray-700 rounded-lg appearance-none cursor-pointer"
             />
-            <span className="text-lg font-semibold text-blue-600 min-w-[60px]">{teamSize}</span>
+            <span className="text-lg font-semibold text-cyan-400 min-w-[60px]">{teamSize}</span>
           </div>
         </div>
         
         <div>
-          <label className="block text-sm font-medium text-gray-700 mb-2">Billing Cycle</label>
+          <label className="block text-sm font-medium text-gray-300 mb-2">Billing Cycle</label>
           <div className="flex space-x-4">
             <label className="flex items-center">
               <input
@@ -262,9 +262,9 @@ const EnhancedPricingCalculator: React.FC<EnhancedPricingCalculatorProps> = ({ t
                 value="monthly"
                 checked={billingCycle === 'monthly'}
                 onChange={(e) => setBillingCycle(e.target.value as 'monthly')}
-                className="mr-2 text-blue-600"
+                className="mr-2 text-cyan-400"
               />
-              <span className="text-sm">Monthly</span>
+              <span className="text-sm text-gray-300">Monthly</span>
             </label>
             <label className="flex items-center">
               <input
@@ -272,9 +272,9 @@ const EnhancedPricingCalculator: React.FC<EnhancedPricingCalculatorProps> = ({ t
                 value="annual"
                 checked={billingCycle === 'annual'}
                 onChange={(e) => setBillingCycle(e.target.value as 'annual')}
-                className="mr-2 text-blue-600"
+                className="mr-2 text-cyan-400"
               />
-              <span className="text-sm">Annual (15% off)</span>
+              <span className="text-sm text-gray-300">Annual (15% off)</span>
             </label>
           </div>
         </div>
@@ -285,15 +285,15 @@ const EnhancedPricingCalculator: React.FC<EnhancedPricingCalculatorProps> = ({ t
         <div className="mb-8">
           <div className="flex items-center justify-between mb-4">
             <div className="flex flex-col sm:flex-row sm:items-center space-y-2 sm:space-y-0 sm:space-x-4">
-              <h3 className="text-lg font-semibold whitespace-nowrap">Add Tools to Compare</h3>
+              <h3 className="text-lg font-semibold whitespace-nowrap text-white">Add Tools to Compare</h3>
               {selectedCategory !== 'all' && (
                 <div className="flex items-center space-x-2">
-                  <span className="px-3 py-1 bg-blue-100 text-blue-800 text-sm rounded-full">
+                  <span className="px-3 py-1 bg-gray-800 border border-gray-700 text-cyan-400 text-sm rounded-full">
                     {selectedCategory} ({filteredTools.length})
                   </span>
                   <button
                     onClick={() => setSelectedCategory('all')}
-                    className="text-xs text-gray-500 hover:text-red-600 underline"
+                    className="text-xs text-gray-400 hover:text-red-400 underline"
                   >
                     Clear filter
                   </button>
@@ -301,7 +301,7 @@ const EnhancedPricingCalculator: React.FC<EnhancedPricingCalculatorProps> = ({ t
               )}
             </div>
             <div className="flex flex-col sm:flex-row sm:items-center space-y-2 sm:space-y-0 sm:space-x-3">
-              <div className="flex items-center space-x-2 text-sm font-medium text-gray-700">
+              <div className="flex items-center space-x-2 text-sm font-medium text-gray-300">
                 <Filter className="w-4 h-4 flex-shrink-0" />
                 <span className="whitespace-nowrap">Filter by Category:</span>
               </div>
@@ -309,7 +309,7 @@ const EnhancedPricingCalculator: React.FC<EnhancedPricingCalculatorProps> = ({ t
                 <select
                   value={selectedCategory}
                   onChange={(e) => setSelectedCategory(e.target.value)}
-                  className="appearance-none w-full sm:min-w-[200px] px-3 sm:px-4 py-2 pr-8 border border-gray-300 rounded-lg focus:border-blue-500 focus:ring-2 focus:ring-blue-200 bg-white font-medium text-sm"
+                  className="appearance-none w-full sm:min-w-[200px] px-3 sm:px-4 py-2 pr-8 border border-gray-700 rounded-lg focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20 bg-gray-800 text-white font-medium text-sm"
                 >
                   <option value="all">All Categories ({processedTools.length})</option>
                   {categories.map((category) => {
@@ -329,11 +329,11 @@ const EnhancedPricingCalculator: React.FC<EnhancedPricingCalculatorProps> = ({ t
           </div>
           
           {filteredTools.length === 0 ? (
-            <div className="text-center py-8 bg-gray-50 rounded-lg">
-              <p className="text-gray-500">No tools found in the selected category.</p>
+            <div className="text-center py-8 bg-gray-900 border border-gray-800 rounded-lg">
+              <p className="text-gray-400">No tools found in the selected category.</p>
               <button
                 onClick={() => setSelectedCategory('all')}
-                className="mt-2 text-blue-600 hover:text-blue-800 font-medium"
+                className="mt-2 text-cyan-400 hover:text-cyan-300 font-medium"
               >
                 View all tools
               </button>
@@ -347,15 +347,15 @@ const EnhancedPricingCalculator: React.FC<EnhancedPricingCalculatorProps> = ({ t
                   <button
                     key={tool.id}
                     onClick={() => addToolToComparison(tool.id)}
-                    className="p-3 border border-gray-200 rounded-lg hover:border-blue-500 hover:bg-blue-50 transition-colors text-left group"
+                    className="p-3 border border-gray-800 bg-gray-900 rounded-lg hover:border-cyan-400 hover:bg-gray-800 transition-colors text-left group"
                   >
-                    <div className="font-medium text-sm truncate group-hover:text-blue-600">
+                    <div className="font-medium text-sm truncate text-white group-hover:text-cyan-400">
                       {tool.name}
                     </div>
-                    <div className="text-xs text-gray-500 truncate">
+                    <div className="text-xs text-gray-400 truncate">
                       {tool.overview?.category || tool.category || 'AI Tool'}
                     </div>
-                    <div className="text-xs text-blue-600 mt-1 font-medium">
+                    <div className="text-xs text-cyan-400 mt-1 font-medium">
                       From {formatPrice(tool.pricing[0]?.price_per_month || 0)}/mo
                     </div>
                     {tool.pricing.length > 1 && (
@@ -394,11 +394,11 @@ const EnhancedPricingCalculator: React.FC<EnhancedPricingCalculatorProps> = ({ t
               const finalPrice = billingCycle === 'annual' ? adjustedPrice * 12 * 0.85 : adjustedPrice;
 
               return (
-                <div key={selectedTool.toolId} className="border border-gray-200 rounded-lg p-6">
+                <div key={selectedTool.toolId} className="bg-black border border-gray-800 rounded-lg p-6">
                   <div className="flex items-center justify-between mb-4">
                     <div className="flex items-center">
-                      <h4 className="text-lg font-semibold">{selectedTool.toolName}</h4>
-                      <span className="ml-2 px-2 py-1 bg-blue-100 text-blue-800 text-xs rounded-full">
+                      <h4 className="text-lg font-semibold text-white">{selectedTool.toolName}</h4>
+                      <span className="ml-2 px-2 py-1 bg-gray-800 text-cyan-400 text-xs rounded-full">
                         {tool.overview?.category || tool.category || 'AI Tool'}
                       </span>
                     </div>
@@ -413,11 +413,11 @@ const EnhancedPricingCalculator: React.FC<EnhancedPricingCalculatorProps> = ({ t
                   <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
                     {/* Plan Selection */}
                     <div>
-                      <label className="block text-sm font-medium text-gray-700 mb-2">Plan</label>
+                      <label className="block text-sm font-medium text-gray-300 mb-2">Plan</label>
                       <select
                         value={selectedTool.planName}
                         onChange={(e) => updateToolPlan(selectedTool.toolId, e.target.value)}
-                        className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:border-blue-500 focus:ring-2 focus:ring-blue-200"
+                        className="w-full px-3 py-2 bg-gray-900 border border-gray-700 text-white rounded-lg focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20"
                       >
                         {tool.pricing.map((plan) => (
                           <option key={plan.plan} value={plan.plan}>
@@ -429,7 +429,7 @@ const EnhancedPricingCalculator: React.FC<EnhancedPricingCalculatorProps> = ({ t
 
                     {/* Usage Level */}
                     <div>
-                      <label className="block text-sm font-medium text-gray-700 mb-2">
+                      <label className="block text-sm font-medium text-gray-300 mb-2">
                         Usage Level: {selectedTool.usageLevel}%
                       </label>
                       <input
@@ -439,9 +439,9 @@ const EnhancedPricingCalculator: React.FC<EnhancedPricingCalculatorProps> = ({ t
                         step="10"
                         value={selectedTool.usageLevel}
                         onChange={(e) => updateUsageLevel(selectedTool.toolId, parseInt(e.target.value))}
-                        className="w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer"
+                        className="w-full h-2 bg-gray-700 rounded-lg appearance-none cursor-pointer"
                       />
-                      <div className="flex justify-between text-xs text-gray-400 mt-1">
+                      <div className="flex justify-between text-xs text-gray-500 mt-1">
                         <span>Light</span>
                         <span>Heavy</span>
                       </div>
@@ -449,13 +449,13 @@ const EnhancedPricingCalculator: React.FC<EnhancedPricingCalculatorProps> = ({ t
 
                     {/* Cost */}
                     <div>
-                      <label className="block text-sm font-medium text-gray-700 mb-2">
+                      <label className="block text-sm font-medium text-gray-300 mb-2">
                         {billingCycle === 'annual' ? 'Annual Cost' : 'Monthly Cost'}
                       </label>
-                      <div className="text-2xl font-bold text-blue-600">
+                      <div className="text-2xl font-bold text-cyan-400">
                         {formatPrice(finalPrice)}
                       </div>
-                      <div className="text-sm text-gray-500">
+                      <div className="text-sm text-gray-400">
                         {billingCycle === 'annual' ? 'per year' : 'per month'}
                       </div>
                     </div>
@@ -463,8 +463,8 @@ const EnhancedPricingCalculator: React.FC<EnhancedPricingCalculatorProps> = ({ t
 
                   {/* Features Preview */}
                   <div className="mt-4">
-                    <div className="text-sm text-gray-600">
-                      <strong>Includes:</strong> {selectedTool.features.slice(0, 3).join(', ')}
+                    <div className="text-sm text-gray-300">
+                      <strong className="text-white">Includes:</strong> {selectedTool.features.slice(0, 3).join(', ')}
                       {selectedTool.features.length > 3 && ` +${selectedTool.features.length - 3} more`}
                     </div>
                   </div>
@@ -477,32 +477,32 @@ const EnhancedPricingCalculator: React.FC<EnhancedPricingCalculatorProps> = ({ t
 
       {/* Total Cost Summary */}
       {selectedTools.length > 0 && (
-        <div className="bg-gradient-to-r from-blue-50 to-purple-50 p-6 rounded-lg mb-8">
+        <div className="bg-black border border-gray-800 p-6 rounded-lg mb-8">
           <div className="flex items-center justify-between mb-4">
-            <h3 className="text-xl font-semibold text-gray-900">Total Cost Summary</h3>
-            <TrendingUp className="w-6 h-6 text-green-500" />
+            <h3 className="text-xl font-semibold text-white">Total Cost Summary</h3>
+            <TrendingUp className="w-6 h-6 text-green-400" />
           </div>
           
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
             <div className="text-center">
-              <div className="text-3xl font-bold text-blue-600">{formatPrice(totalCost)}</div>
-              <div className="text-sm text-gray-600">
+              <div className="text-3xl font-bold text-cyan-400">{formatPrice(totalCost)}</div>
+              <div className="text-sm text-gray-300">
                 Total {billingCycle === 'annual' ? 'Annual' : 'Monthly'} Cost
               </div>
             </div>
             <div className="text-center">
-              <div className="text-2xl font-bold text-green-600">{selectedTools.length}</div>
-              <div className="text-sm text-gray-600">Tools Selected</div>
+              <div className="text-2xl font-bold text-green-400">{selectedTools.length}</div>
+              <div className="text-sm text-gray-300">Tools Selected</div>
             </div>
             <div className="text-center">
-              <div className="text-2xl font-bold text-purple-600">{teamSize}</div>
-              <div className="text-sm text-gray-600">Team Members</div>
+              <div className="text-2xl font-bold text-purple-400">{teamSize}</div>
+              <div className="text-sm text-gray-300">Team Members</div>
             </div>
           </div>
 
           {billingCycle === 'annual' && totalCost > 0 && (
-            <div className="mt-4 p-3 bg-green-100 rounded-lg">
-              <div className="text-sm text-green-800 text-center">
+            <div className="mt-4 p-3 bg-gray-900 border border-gray-700 rounded-lg">
+              <div className="text-sm text-green-400 text-center">
                 💰 You save {formatPrice(totalCost * 0.176)} per year with annual billing!
               </div>
             </div>
@@ -515,7 +515,7 @@ const EnhancedPricingCalculator: React.FC<EnhancedPricingCalculatorProps> = ({ t
         {/* Connect with Expert */}
         <button
           onClick={() => setShowExpertModal(true)}
-          className="flex items-center justify-center px-6 py-4 bg-gradient-to-r from-purple-600 to-blue-600 text-white font-semibold rounded-lg hover:from-purple-700 hover:to-blue-700 transition-colors shadow-lg"
+          className="flex items-center justify-center px-6 py-4 bg-gradient-to-r from-purple-600 to-blue-600 text-white font-semibold rounded-lg hover:from-purple-700 hover:to-blue-700 transition-colors shadow-lg border border-gray-700"
         >
           <User className="w-5 h-5 mr-2" />
           Connect with an Expert
@@ -524,7 +524,7 @@ const EnhancedPricingCalculator: React.FC<EnhancedPricingCalculatorProps> = ({ t
         {/* Get Pricing Guide */}
         <button
           onClick={() => setShowGuideModal(true)}
-          className="flex items-center justify-center px-6 py-4 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-purple-700 transition-colors shadow-lg"
+          className="flex items-center justify-center px-6 py-4 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-purple-700 transition-colors shadow-lg border border-gray-700"
         >
           <Mail className="w-5 h-5 mr-2" />
           Get Free Pricing Guide
@@ -545,13 +545,13 @@ const EnhancedPricingCalculator: React.FC<EnhancedPricingCalculatorProps> = ({ t
 
       {/* Expert Consultation Modal */}
       {showExpertModal && (
-        <div className="fixed inset-0 bg-gray-600 bg-opacity-50 overflow-y-auto h-full w-full z-50 p-4">
-          <div className="relative top-10 mx-auto p-4 sm:p-5 border w-full max-w-2xl shadow-lg rounded-md bg-white">
+        <div className="fixed inset-0 bg-black bg-opacity-75 overflow-y-auto h-full w-full z-50 p-4">
+          <div className="relative top-10 mx-auto p-4 sm:p-5 border border-gray-800 w-full max-w-2xl shadow-lg rounded-md bg-black">
             <div className="flex items-center justify-between mb-6">
-              <h3 className="text-2xl font-bold text-gray-900">Connect with an AI Expert</h3>
+              <h3 className="text-2xl font-bold text-white">Connect with an AI Expert</h3>
               <button
                 onClick={() => setShowExpertModal(false)}
-                className="text-gray-400 hover:text-gray-600"
+                className="text-gray-400 hover:text-white"
               >
                 <X className="w-6 h-6" />
               </button>
@@ -560,67 +560,67 @@ const EnhancedPricingCalculator: React.FC<EnhancedPricingCalculatorProps> = ({ t
             <form onSubmit={handleExpertFormSubmit} className="space-y-4">
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-1">First Name *</label>
+                  <label className="block text-sm font-medium text-gray-300 mb-1">First Name *</label>
                   <input
                     type="text"
                     required
                     value={expertForm.firstName}
                     onChange={(e) => setExpertForm({...expertForm, firstName: e.target.value})}
-                    className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+                    className="w-full px-3 py-2 bg-gray-900 border border-gray-700 text-white rounded-md focus:outline-none focus:ring-2 focus:ring-cyan-400"
                   />
                 </div>
                 <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-1">Last Name *</label>
+                  <label className="block text-sm font-medium text-gray-300 mb-1">Last Name *</label>
                   <input
                     type="text"
                     required
                     value={expertForm.lastName}
                     onChange={(e) => setExpertForm({...expertForm, lastName: e.target.value})}
-                    className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+                    className="w-full px-3 py-2 bg-gray-900 border border-gray-700 text-white rounded-md focus:outline-none focus:ring-2 focus:ring-cyan-400"
                   />
                 </div>
               </div>
 
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-1">Email *</label>
+                  <label className="block text-sm font-medium text-gray-300 mb-1">Email *</label>
                   <input
                     type="email"
                     required
                     value={expertForm.email}
                     onChange={(e) => setExpertForm({...expertForm, email: e.target.value})}
-                    className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+                    className="w-full px-3 py-2 bg-gray-900 border border-gray-700 text-white rounded-md focus:outline-none focus:ring-2 focus:ring-cyan-400"
                   />
                 </div>
                 <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-1">Phone</label>
+                  <label className="block text-sm font-medium text-gray-300 mb-1">Phone</label>
                   <input
                     type="tel"
                     value={expertForm.phone}
                     onChange={(e) => setExpertForm({...expertForm, phone: e.target.value})}
-                    className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+                    className="w-full px-3 py-2 bg-gray-900 border border-gray-700 text-white rounded-md focus:outline-none focus:ring-2 focus:ring-cyan-400"
                   />
                 </div>
               </div>
 
               <div>
-                <label className="block text-sm font-medium text-gray-700 mb-1">Company *</label>
+                <label className="block text-sm font-medium text-gray-300 mb-1">Company *</label>
                 <input
                   type="text"
                   required
                   value={expertForm.company}
                   onChange={(e) => setExpertForm({...expertForm, company: e.target.value})}
-                  className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+                  className="w-full px-3 py-2 bg-gray-900 border border-gray-700 text-white rounded-md focus:outline-none focus:ring-2 focus:ring-cyan-400"
                 />
               </div>
 
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-1">Budget Range</label>
+                  <label className="block text-sm font-medium text-gray-300 mb-1">Budget Range</label>
                   <select
                     value={expertForm.budget}
                     onChange={(e) => setExpertForm({...expertForm, budget: e.target.value})}
-                    className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+                    className="w-full px-3 py-2 bg-gray-900 border border-gray-700 text-white rounded-md focus:outline-none focus:ring-2 focus:ring-cyan-400"
                   >
                     <option value="">Select budget...</option>
                     <option value="<$1K">Less than $1,000/month</option>
@@ -630,11 +630,11 @@ const EnhancedPricingCalculator: React.FC<EnhancedPricingCalculatorProps> = ({ t
                   </select>
                 </div>
                 <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-1">Timeline</label>
+                  <label className="block text-sm font-medium text-gray-300 mb-1">Timeline</label>
                   <select
                     value={expertForm.timeline}
                     onChange={(e) => setExpertForm({...expertForm, timeline: e.target.value})}
-                    className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+                    className="w-full px-3 py-2 bg-gray-900 border border-gray-700 text-white rounded-md focus:outline-none focus:ring-2 focus:ring-cyan-400"
                   >
                     <option value="">Select timeline...</option>
                     <option value="Immediate">Immediate (this week)</option>
@@ -646,7 +646,7 @@ const EnhancedPricingCalculator: React.FC<EnhancedPricingCalculatorProps> = ({ t
               </div>
 
               <div>
-                <label className="block text-sm font-medium text-gray-700 mb-1">
+                <label className="block text-sm font-medium text-gray-300 mb-1">
                   Tell us about your AI needs
                 </label>
                 <textarea
@@ -654,21 +654,21 @@ const EnhancedPricingCalculator: React.FC<EnhancedPricingCalculatorProps> = ({ t
                   value={expertForm.message}
                   onChange={(e) => setExpertForm({...expertForm, message: e.target.value})}
                   placeholder="What AI challenges are you looking to solve? What's your current setup?"
-                  className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+                  className="w-full px-3 py-2 bg-gray-900 border border-gray-700 text-white rounded-md focus:outline-none focus:ring-2 focus:ring-cyan-400 placeholder-gray-400"
                 />
               </div>
 
               {selectedTools.length > 0 && (
-                <div className="p-4 bg-blue-50 rounded-lg">
-                  <h4 className="font-medium text-blue-900 mb-2">Tools in your comparison:</h4>
+                <div className="p-4 bg-gray-900 border border-gray-700 rounded-lg">
+                  <h4 className="font-medium text-white mb-2">Tools in your comparison:</h4>
                   <div className="flex flex-wrap gap-2">
                     {selectedTools.map((tool) => (
-                      <span key={tool.toolId} className="px-2 py-1 bg-blue-200 text-blue-800 text-sm rounded">
+                      <span key={tool.toolId} className="px-2 py-1 bg-gray-800 text-cyan-400 text-sm rounded">
                         {tool.toolName}
                       </span>
                     ))}
                   </div>
-                  <div className="text-sm text-blue-700 mt-2">
+                  <div className="text-sm text-gray-300 mt-2">
                     Total estimated cost: {formatPrice(totalCost)} {billingCycle === 'annual' ? '/year' : '/month'}
                   </div>
                 </div>
@@ -678,14 +678,14 @@ const EnhancedPricingCalculator: React.FC<EnhancedPricingCalculatorProps> = ({ t
                 <button
                   type="submit"
                   disabled={isSubmittingExpert}
-                  className="flex-1 px-6 py-3 bg-blue-600 text-white font-semibold rounded-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 disabled:opacity-50"
+                  className="flex-1 px-6 py-3 bg-cyan-600 text-white font-semibold rounded-md hover:bg-cyan-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-cyan-500 disabled:opacity-50"
                 >
                   {isSubmittingExpert ? 'Submitting...' : 'Schedule Consultation'}
                 </button>
                 <button
                   type="button"
                   onClick={() => setShowExpertModal(false)}
-                  className="px-6 py-3 border border-gray-300 text-gray-700 font-semibold rounded-md hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-500"
+                  className="px-6 py-3 border border-gray-600 bg-gray-800 text-white font-semibold rounded-md hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-500"
                 >
                   Cancel
                 </button>

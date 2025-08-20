@@ -26,10 +26,10 @@ export function TestimonialsSection() {
   return (
     <section className="py-16">
       <div className="text-center mb-12">
-        <h2 className="text-3xl font-bold text-gray-900 mb-4">
+        <h2 className="text-3xl font-bold text-white mb-4">
           Trusted by Industry Leaders
         </h2>
-        <p className="text-lg text-gray-600">
+        <p className="text-lg text-gray-300">
           Real results from companies using SiteOptz.ai to accelerate growth
         </p>
       </div>
@@ -38,24 +38,24 @@ export function TestimonialsSection() {
         {testimonials.map((testimonial, index) => (
           <div
             key={index}
-            className="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow"
+            className="bg-black border border-gray-800 rounded-lg shadow-lg p-6 hover:shadow-xl hover:border-gray-600 transition-all"
           >
             <div className="flex items-center mb-4">
-              <div className="w-16 h-16 bg-gray-200 rounded-lg flex items-center justify-center mr-4">
+              <div className="w-16 h-16 bg-gray-800 border border-gray-700 rounded-lg flex items-center justify-center mr-4">
                 {/* Logo placeholder - in production, use Next/Image */}
-                <span className="text-xs text-gray-500 text-center">
+                <span className="text-xs text-gray-400 text-center">
                   {testimonial.company.split(' ')[0]}
                 </span>
               </div>
               <div>
-                <h3 className="font-semibold text-gray-900">{testimonial.company}</h3>
-                <p className="text-sm text-gray-500">
+                <h3 className="font-semibold text-white">{testimonial.company}</h3>
+                <p className="text-sm text-gray-400">
                   {testimonial.name}, {testimonial.role}
                 </p>
               </div>
             </div>
             
-            <blockquote className="text-gray-700 italic">
+            <blockquote className="text-gray-300 italic">
               &ldquo;{testimonial.testimonial}&rdquo;
             </blockquote>
             
@@ -71,7 +71,7 @@ export function TestimonialsSection() {
                   </svg>
                 ))}
               </div>
-              <span className="ml-2 text-sm text-gray-600">5.0</span>
+              <span className="ml-2 text-sm text-gray-300">5.0</span>
             </div>
           </div>
         ))}
