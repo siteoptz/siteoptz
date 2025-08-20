@@ -271,7 +271,7 @@ export default function HomePage({ featuredTools, popularComparisons, faqs }: Ho
 
                         <Link 
                           href={`/reviews/${tool.slug}`}
-                          className="block w-full text-center px-4 py-2 bg-gray-800 text-white text-sm rounded-lg hover:bg-gray-700 transition-colors border border-gray-700"
+                          className="block w-full text-center px-4 py-2 bg-gradient-to-r from-blue-600 to-purple-600 text-white text-sm rounded-lg hover:from-blue-700 hover:to-purple-700 transform hover:scale-105 transition-all duration-200 shadow-lg hover:shadow-xl"
                         >
                           View Details
                         </Link>
@@ -285,7 +285,7 @@ export default function HomePage({ featuredTools, popularComparisons, faqs }: Ho
             <div className="text-center mt-12">
               <Link 
                 href="/tools"
-                className="inline-flex items-center px-8 py-4 bg-gray-800 text-white font-semibold rounded-xl hover:bg-gray-700 transition-colors shadow-lg border border-gray-700"
+                className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold rounded-xl hover:from-blue-700 hover:to-purple-700 transform hover:scale-105 transition-all duration-200 shadow-lg hover:shadow-xl"
               >
                 Explore All {featuredTools.length} Tools
                 <ArrowRight className="ml-2 w-5 h-5" />
@@ -355,7 +355,7 @@ export default function HomePage({ featuredTools, popularComparisons, faqs }: Ho
 
                   <Link 
                     href={`/compare/${comparison.tool1.slug}/vs/${comparison.tool2.slug}`}
-                    className="block w-full text-center px-4 py-2 bg-gray-800 text-white rounded-xl hover:bg-gray-700 transition-colors border border-gray-700"
+                    className="block w-full text-center px-4 py-2 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-xl hover:from-blue-700 hover:to-purple-700 transform hover:scale-105 transition-all duration-200 shadow-lg hover:shadow-xl"
                   >
                     Compare Now
                   </Link>

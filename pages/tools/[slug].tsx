@@ -138,7 +138,7 @@ export default function ToolPage({ tool, relatedTools, faqs, allTools }: ToolPag
                   {tool.overview.description}
                 </p>
                 <div className="flex flex-wrap gap-4">
-                  <button className="bg-white text-blue-600 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
+                  <button className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-6 py-3 rounded-lg font-semibold hover:from-blue-700 hover:to-purple-700 transform hover:scale-105 transition-all duration-200 shadow-lg hover:shadow-xl">
                     Try {tool.name} Free
                   </button>
                   <button className="bg-transparent border-2 border-white px-6 py-3 rounded-lg font-semibold hover:bg-white/10 transition-colors">

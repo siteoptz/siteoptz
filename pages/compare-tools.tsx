@@ -258,7 +258,7 @@ export default function CompareToolsPage({ tools }: CompareToolsPageProps) {
                       <button
                         type="submit"
                         disabled={isSubmitting}
-                        className="flex-1 bg-blue-600 hover:bg-blue-700 text-white font-medium py-3 px-6 rounded-lg transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
+                        className="flex-1 bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white font-medium py-3 px-6 rounded-lg transform hover:scale-105 transition-all duration-200 shadow-lg hover:shadow-xl disabled:opacity-50 disabled:cursor-not-allowed"
                       >
                         {isSubmitting ? 'Sending...' : 'Get Comparison'}
                       </button>
@@ -286,7 +286,7 @@ export default function CompareToolsPage({ tools }: CompareToolsPageProps) {
                     
                     <button
                       onClick={closeEmailCapture}
-                      className="bg-blue-600 hover:bg-blue-700 text-white font-medium py-3 px-6 rounded-lg transition-colors"
+                      className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white font-medium py-3 px-6 rounded-lg transform hover:scale-105 transition-all duration-200 shadow-lg hover:shadow-xl"
                     >
                       Continue Exploring
                     </button>

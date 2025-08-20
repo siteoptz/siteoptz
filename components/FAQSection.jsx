@@ -227,7 +227,7 @@ const FAQSection = ({ toolName = null, category = null }) => {
               <p className="text-sm text-gray-600 mb-3">
                 Still unsure which AI tool is right for you?
               </p>
-              <button className="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-md text-sm font-medium transition-colors">
+              <button className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white px-4 py-2 rounded-md text-sm font-medium transform hover:scale-105 transition-all duration-200 shadow-lg hover:shadow-xl">
                 Schedule a Consultation
               </button>
             </div>

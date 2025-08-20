@@ -221,7 +221,7 @@ export default function ContactPage() {
                     inquiryType: 'general'
                   });
                 }}
-                className="bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition-colors mr-4"
+                className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-6 py-3 rounded-lg hover:from-blue-700 hover:to-purple-700 transform hover:scale-105 transition-all duration-200 shadow-lg hover:shadow-xl mr-4"
               >
                 Send Another Message
               </button>

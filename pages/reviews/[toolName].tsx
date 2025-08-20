@@ -330,7 +330,7 @@ export default function ReviewPage({ tool, pageTitle, slug, relatedTools, relate
                     href={tool.affiliate_link || tool.official_url}
                     target="_blank"
                     rel="noopener noreferrer sponsored"
-                    className="bg-cyan-600 text-white hover:bg-cyan-700 font-bold py-3 px-8 rounded-lg transition-colors text-center"
+                    className="bg-gradient-to-r from-blue-600 to-purple-600 text-white hover:from-blue-700 hover:to-purple-700 font-bold py-3 px-8 rounded-lg transform hover:scale-105 transition-all duration-200 shadow-lg hover:shadow-xl text-center"
                   >
                     Try {tool.tool_name} Free
                   </a>
@@ -521,7 +521,7 @@ export default function ReviewPage({ tool, pageTitle, slug, relatedTools, relate
                       href={tool.affiliate_link}
                       target="_blank"
                       rel="noopener noreferrer sponsored"
-                      className="block w-full bg-cyan-600 hover:bg-cyan-700 text-white font-semibold py-3 px-6 rounded-lg transition-colors text-center"
+                      className="block w-full bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white font-semibold py-3 px-6 rounded-lg transform hover:scale-105 transition-all duration-200 shadow-lg hover:shadow-xl text-center"
                     >
                       Get Started
                     </a>
@@ -549,7 +549,7 @@ export default function ReviewPage({ tool, pageTitle, slug, relatedTools, relate
                       href={tool.affiliate_link}
                       target="_blank"
                       rel="noopener noreferrer sponsored"
-                      className="block w-full bg-cyan-600 hover:bg-cyan-700 text-white font-semibold py-3 px-6 rounded-lg transition-colors text-center"
+                      className="block w-full bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white font-semibold py-3 px-6 rounded-lg transform hover:scale-105 transition-all duration-200 shadow-lg hover:shadow-xl text-center"
                     >
                       Get Started
                     </a>
@@ -576,7 +576,7 @@ export default function ReviewPage({ tool, pageTitle, slug, relatedTools, relate
                       href={tool.affiliate_link}
                       target="_blank"
                       rel="noopener noreferrer sponsored"
-                      className="block w-full bg-cyan-600 hover:bg-cyan-700 text-white font-semibold py-3 px-6 rounded-lg transition-colors text-center"
+                      className="block w-full bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white font-semibold py-3 px-6 rounded-lg transform hover:scale-105 transition-all duration-200 shadow-lg hover:shadow-xl text-center"
                     >
                       Contact Sales
                     </a>
@@ -727,7 +727,7 @@ export default function ReviewPage({ tool, pageTitle, slug, relatedTools, relate
                 href={tool.affiliate_link || tool.official_url}
                 target="_blank"
                 rel="noopener noreferrer sponsored"
-                className="bg-cyan-600 text-white hover:bg-cyan-700 font-bold py-4 px-8 rounded-lg transition-colors"
+                className="bg-gradient-to-r from-blue-600 to-purple-600 text-white hover:from-blue-700 hover:to-purple-700 font-bold py-4 px-8 rounded-lg transform hover:scale-105 transition-all duration-200 shadow-lg hover:shadow-xl"
               >
                 Start Free Trial
               </a>
