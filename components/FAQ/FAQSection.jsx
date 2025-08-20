@@ -1,11 +1,12 @@
 import React, { useState } from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
+import PropTypes from 'prop-types';
 
 const FAQSection = ({ 
   faqs, 
   title = "Frequently Asked Questions",
-  description = null,
+  description,
   showStructuredData = true,
   maxVisible = null,
   className = ''
@@ -244,6 +245,18 @@ const FAQSection = ({
       </div>
     </>
   );
+};
+
+FAQSection.propTypes = {
+  faqs: PropTypes.arrayOf(PropTypes.shape({
+    question: PropTypes.string.isRequired,
+    answer: PropTypes.string.isRequired
+  })).isRequired,
+  title: PropTypes.string,
+  description: PropTypes.string,
+  showStructuredData: PropTypes.bool,
+  maxVisible: PropTypes.number,
+  className: PropTypes.string
 };
 
 export default FAQSection;
