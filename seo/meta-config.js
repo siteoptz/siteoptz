@@ -7,8 +7,8 @@
 export const siteConfig = {
   siteName: 'SiteOptz',
   baseUrl: 'https://siteoptz.ai',
-  defaultTitle: 'SiteOptz - AI Tools Reviews & Comparisons | Best AI Software 2025',
-  defaultDescription: 'Discover the best AI tools for 2025. Expert reviews, detailed comparisons, and pricing analysis of ChatGPT, Claude, Gemini, and 200+ AI software solutions.',
+  defaultTitle: 'SiteOptz.ai - AI Tools That Drive ROI | Expert Implementation & Optimization',
+  defaultDescription: 'SiteOptz.ai helps companies unlock measurable growth by selecting, implementing, and optimizing the right AI tools. From strategy to execution, we turn AI into a revenue engine.',
   defaultKeywords: [
     'AI tools',
     'artificial intelligence software',
@@ -27,8 +27,8 @@ export const siteConfig = {
 export const pageConfigs = {
   // Homepage
   home: {
-    title: 'SiteOptz - Best AI Tools Reviews & Comparisons 2025 | Expert Analysis',
-    description: 'Find the perfect AI tool for your needs. Compare 200+ AI software including ChatGPT, Claude, Gemini with expert reviews, pricing analysis, and feature comparisons.',
+    title: 'SiteOptz.ai - AI Tools That Drive ROI | Expert Implementation & Optimization',
+    description: 'SiteOptz.ai helps companies unlock measurable growth by selecting, implementing, and optimizing the right AI tools. From strategy to execution, we turn AI into a revenue engine.',
     keywords: [
       'best AI tools 2025',
       'AI software reviews',
