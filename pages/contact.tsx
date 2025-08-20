@@ -176,20 +176,20 @@ export default function ContactPage() {
           <meta name="description" content="Thank you for contacting SiteOptz. We've received your message and will get back to you soon." />
         </Head>
 
-        <main className="max-w-4xl mx-auto px-4 py-16">
+        <main className="max-w-4xl mx-auto px-4 py-16 bg-gradient-to-br from-black via-gray-900 to-black min-h-screen">
           <div className="text-center">
-            <CheckCircle className="w-16 h-16 text-green-500 mx-auto mb-6" />
-            <h1 className="text-3xl font-bold text-gray-900 mb-4">
+            <CheckCircle className="w-16 h-16 text-green-400 mx-auto mb-6" />
+            <h1 className="text-3xl font-bold text-white mb-4">
               Thank You for Reaching Out! 🎉
             </h1>
-            <p className="text-lg text-gray-600 mb-8 max-w-2xl mx-auto">
+            <p className="text-lg text-gray-300 mb-8 max-w-2xl mx-auto">
               We&apos;ve received your message and really appreciate you taking the time to contact us. 
               Our team will review your inquiry and get back to you within 24 hours.
             </p>
             
-            <div className="bg-blue-50 border border-blue-200 rounded-lg p-6 max-w-2xl mx-auto mb-8">
-              <h2 className="text-lg font-semibold text-blue-900 mb-2">What happens next?</h2>
-              <ul className="text-blue-800 space-y-2 text-left">
+            <div className="bg-black border border-gray-800 rounded-lg p-6 max-w-2xl mx-auto mb-8">
+              <h2 className="text-lg font-semibold text-white mb-2">What happens next?</h2>
+              <ul className="text-gray-300 space-y-2 text-left">
                 <li>✅ You&apos;ll receive a confirmation email shortly</li>
                 <li>✅ Our team will review your inquiry within 24 hours</li>
                 <li>✅ We&apos;ll respond with detailed information or next steps</li>
@@ -238,13 +238,13 @@ export default function ContactPage() {
         <meta name="keywords" content="contact SiteOptz, AI tools support, partnership inquiries, feedback" />
       </Head>
 
-      <main className="max-w-6xl mx-auto px-4 py-16">
+      <main className="max-w-6xl mx-auto px-4 py-16 bg-gradient-to-br from-black via-gray-900 to-black min-h-screen">
         {/* Header */}
         <div className="text-center mb-16">
-          <h1 className="text-4xl font-bold text-gray-900 mb-4">
+          <h1 className="text-4xl font-bold text-white mb-4">
             Get in Touch
           </h1>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
             Have questions about AI tools? Need help choosing the right solution? Want to partner with us? 
             We&apos;d love to hear from you!
           </p>
@@ -253,56 +253,56 @@ export default function ContactPage() {
         <div className="grid lg:grid-cols-3 gap-12">
           {/* Contact Information */}
           <div className="lg:col-span-1">
-            <div className="bg-gradient-to-br from-blue-50 to-indigo-50 rounded-2xl p-8 h-fit">
-              <h2 className="text-2xl font-bold text-gray-900 mb-6">
+            <div className="bg-black border border-gray-800 rounded-2xl p-8 h-fit">
+              <h2 className="text-2xl font-bold text-white mb-6">
                 Contact Information
               </h2>
 
               <div className="space-y-6">
                 <div className="flex items-start space-x-4">
-                  <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center flex-shrink-0">
-                    <Mail className="w-6 h-6 text-blue-600" />
+                  <div className="w-12 h-12 bg-gray-800 border border-gray-700 rounded-lg flex items-center justify-center flex-shrink-0">
+                    <Mail className="w-6 h-6 text-cyan-400" />
                   </div>
                   <div>
-                    <h3 className="font-semibold text-gray-900">Email</h3>
-                    <p className="text-gray-600">info@siteoptz.com</p>
-                    <p className="text-sm text-gray-500">We&apos;ll respond within 24 hours</p>
+                    <h3 className="font-semibold text-white">Email</h3>
+                    <p className="text-gray-300">info@siteoptz.com</p>
+                    <p className="text-sm text-gray-400">We&apos;ll respond within 24 hours</p>
                   </div>
                 </div>
 
                 <div className="flex items-start space-x-4">
-                  <div className="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center flex-shrink-0">
-                    <Clock className="w-6 h-6 text-green-600" />
+                  <div className="w-12 h-12 bg-gray-800 border border-gray-700 rounded-lg flex items-center justify-center flex-shrink-0">
+                    <Clock className="w-6 h-6 text-green-400" />
                   </div>
                   <div>
-                    <h3 className="font-semibold text-gray-900">Response Time</h3>
-                    <p className="text-gray-600">24 hours or less</p>
-                    <p className="text-sm text-gray-500">Monday - Friday, 9 AM - 5 PM PST</p>
+                    <h3 className="font-semibold text-white">Response Time</h3>
+                    <p className="text-gray-300">24 hours or less</p>
+                    <p className="text-sm text-gray-400">Monday - Friday, 9 AM - 5 PM PST</p>
                   </div>
                 </div>
 
                 <div className="flex items-start space-x-4">
-                  <div className="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center flex-shrink-0">
-                    <MapPin className="w-6 h-6 text-purple-600" />
+                  <div className="w-12 h-12 bg-gray-800 border border-gray-700 rounded-lg flex items-center justify-center flex-shrink-0">
+                    <MapPin className="w-6 h-6 text-purple-400" />
                   </div>
                   <div>
-                    <h3 className="font-semibold text-gray-900">Location</h3>
-                    <p className="text-gray-600">San Francisco, CA</p>
-                    <p className="text-sm text-gray-500">Remote-first team</p>
+                    <h3 className="font-semibold text-white">Location</h3>
+                    <p className="text-gray-300">San Francisco, CA</p>
+                    <p className="text-sm text-gray-400">Remote-first team</p>
                   </div>
                 </div>
               </div>
 
-              <div className="mt-8 p-4 bg-white rounded-lg border border-blue-200">
-                <h3 className="font-semibold text-gray-900 mb-2">Quick Stats</h3>
+              <div className="mt-8 p-4 bg-gray-900 border border-gray-800 rounded-lg">
+                <h3 className="font-semibold text-white mb-2">Quick Stats</h3>
                 <div className="grid grid-cols-2 gap-4 text-center">
                   <div>
-                    <div className="text-2xl font-bold text-blue-600">10+</div>
-                    <div className="text-sm text-gray-600">AI Tools Reviewed</div>
+                    <div className="text-2xl font-bold text-cyan-400">10+</div>
+                    <div className="text-sm text-gray-300">AI Tools Reviewed</div>
                   </div>
                   <div>
-                    <div className="text-2xl font-bold text-green-600">50k+</div>
-                    <div className="text-sm text-gray-600">Monthly Users</div>
+                    <div className="text-2xl font-bold text-green-400">50k+</div>
+                    <div className="text-sm text-gray-300">Monthly Users</div>
                   </div>
                 </div>
               </div>
@@ -311,16 +311,16 @@ export default function ContactPage() {
 
           {/* Contact Form */}
           <div className="lg:col-span-2">
-            <div className="bg-white rounded-2xl border border-gray-200 p-8">
-              <h2 className="text-2xl font-bold text-gray-900 mb-6">
+            <div className="bg-black border border-gray-800 rounded-2xl p-8">
+              <h2 className="text-2xl font-bold text-white mb-6">
                 Send us a Message
               </h2>
 
               <form onSubmit={handleSubmit} className="space-y-6">
                 {error && (
-                  <div className="p-4 bg-red-50 border border-red-200 rounded-lg flex items-start space-x-3">
-                    <AlertCircle className="w-5 h-5 text-red-500 flex-shrink-0 mt-0.5" />
-                    <div className="text-red-700">
+                  <div className="p-4 bg-gray-900 border border-red-800 rounded-lg flex items-start space-x-3">
+                    <AlertCircle className="w-5 h-5 text-red-400 flex-shrink-0 mt-0.5" />
+                    <div className="text-red-300">
                       <p className="font-medium">Error sending message</p>
                       <p className="text-sm">{error}</p>
                     </div>

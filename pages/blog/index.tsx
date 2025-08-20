@@ -117,24 +117,24 @@ export default function AINewsBlog({ articles, lastUpdated, sources }: BlogProps
         />
       </Head>
 
-      <div className="min-h-screen bg-gray-50">
+      <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-black">
         {/* Hero Section */}
-        <div className="bg-gradient-to-br from-blue-600 via-purple-600 to-indigo-700 text-white">
+        <div className="bg-gray-950 text-white">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
             <div className="text-center">
               <div className="flex items-center justify-center mb-6">
-                <div className="p-3 bg-white/10 rounded-full backdrop-blur-sm">
-                  <TrendingUp className="w-8 h-8" />
+                <div className="p-3 bg-gray-800 border border-gray-700 rounded-full backdrop-blur-sm">
+                  <TrendingUp className="w-8 h-8 text-cyan-400" />
                 </div>
               </div>
               <h1 className="text-4xl md:text-5xl font-bold mb-4">
                 AI News & Industry Updates
               </h1>
-              <p className="text-xl text-blue-100 mb-6 max-w-3xl mx-auto">
+              <p className="text-xl text-gray-300 mb-6 max-w-3xl mx-auto">
                 Stay ahead with the latest artificial intelligence news, tool reviews, and industry insights 
                 from top sources including TechCrunch, VentureBeat, and The Verge.
               </p>
-              <div className="flex items-center justify-center space-x-6 text-sm text-blue-200">
+              <div className="flex items-center justify-center space-x-6 text-sm text-gray-400">
                 <div className="flex items-center">
                   <Calendar className="w-4 h-4 mr-2" />
                   <span>Updated {formatDate(lastUpdated)}</span>
@@ -150,13 +150,13 @@ export default function AINewsBlog({ articles, lastUpdated, sources }: BlogProps
 
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
           {/* News Sources */}
-          <div className="bg-white rounded-lg shadow-sm border border-gray-200 p-6 mb-12">
-            <h2 className="text-lg font-semibold text-gray-900 mb-4">News Sources</h2>
+          <div className="bg-black border border-gray-800 rounded-lg shadow-sm p-6 mb-12">
+            <h2 className="text-lg font-semibold text-white mb-4">News Sources</h2>
             <div className="flex flex-wrap gap-3">
               {sources.map((source, index) => (
                 <span 
                   key={index}
-                  className="inline-flex items-center px-3 py-1 rounded-full text-sm font-medium bg-blue-50 text-blue-700 border border-blue-200"
+                  className="inline-flex items-center px-3 py-1 rounded-full text-sm font-medium bg-gray-800 text-gray-300 border border-gray-700"
                 >
                   {source}
                 </span>
@@ -167,15 +167,15 @@ export default function AINewsBlog({ articles, lastUpdated, sources }: BlogProps
           {/* Featured Articles */}
           {featuredArticles.length > 0 && (
             <section className="mb-16">
-              <h2 className="text-2xl font-bold text-gray-900 mb-8 flex items-center">
-                <TrendingUp className="w-6 h-6 mr-3 text-blue-600" />
+              <h2 className="text-2xl font-bold text-white mb-8 flex items-center">
+                <TrendingUp className="w-6 h-6 mr-3 text-cyan-400" />
                 Featured Stories
               </h2>
               <div className="grid lg:grid-cols-3 gap-8">
                 {featuredArticles.map((article, index) => (
                   <article 
                     key={index}
-                    className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow border border-gray-200"
+                    className="bg-black border border-gray-800 rounded-xl shadow-lg overflow-hidden hover:shadow-xl hover:border-gray-600 transition-all"
                   >
                     <div className="aspect-video bg-gradient-to-br from-blue-500 to-purple-600 relative">
                       {article.imageUrl ? (
@@ -190,33 +190,33 @@ export default function AINewsBlog({ articles, lastUpdated, sources }: BlogProps
                         </div>
                       )}
                       <div className="absolute top-4 left-4">
-                        <span className="bg-white/90 backdrop-blur-sm text-gray-900 px-2 py-1 rounded-full text-xs font-medium">
+                        <span className="bg-gray-800/90 backdrop-blur-sm text-white px-2 py-1 rounded-full text-xs font-medium border border-gray-700">
                           {article.source}
                         </span>
                       </div>
                     </div>
                     <div className="p-6">
-                      <div className="flex items-center text-sm text-gray-500 mb-3">
+                      <div className="flex items-center text-sm text-gray-400 mb-3">
                         <Clock className="w-4 h-4 mr-1" />
                         <span>{getTimeAgo(article.publishedAt)}</span>
                         {article.tags.length > 0 && (
                           <>
                             <span className="mx-2">•</span>
-                            <span className="text-blue-600 font-medium">{article.tags[0]}</span>
+                            <span className="text-cyan-400 font-medium">{article.tags[0]}</span>
                           </>
                         )}
                       </div>
-                      <h3 className="font-bold text-xl text-gray-900 mb-3 line-clamp-2">
+                      <h3 className="font-bold text-xl text-white mb-3 line-clamp-2">
                         {article.title}
                       </h3>
-                      <p className="text-gray-600 mb-4 line-clamp-3">
+                      <p className="text-gray-300 mb-4 line-clamp-3">
                         {article.excerpt}
                       </p>
                       <a
                         href={article.url}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="inline-flex items-center text-blue-600 hover:text-blue-700 font-medium group"
+                        className="inline-flex items-center text-cyan-400 hover:text-cyan-300 font-medium group"
                       >
                         Read Full Article
                         <ExternalLink className="w-4 h-4 ml-1 group-hover:translate-x-0.5 transition-transform" />
@@ -231,26 +231,26 @@ export default function AINewsBlog({ articles, lastUpdated, sources }: BlogProps
           {/* Latest Articles */}
           {latestArticles.length > 0 && (
             <section>
-              <h2 className="text-2xl font-bold text-gray-900 mb-8 flex items-center">
-                <Calendar className="w-6 h-6 mr-3 text-blue-600" />
+              <h2 className="text-2xl font-bold text-white mb-8 flex items-center">
+                <Calendar className="w-6 h-6 mr-3 text-cyan-400" />
                 Latest Updates
               </h2>
               <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
                 {latestArticles.map((article, index) => (
                   <article 
                     key={index}
-                    className="bg-white rounded-lg shadow-sm border border-gray-200 p-6 hover:shadow-md transition-shadow"
+                    className="bg-black border border-gray-800 rounded-lg shadow-sm p-6 hover:shadow-md hover:border-gray-600 transition-all"
                   >
-                    <div className="flex items-center text-sm text-gray-500 mb-3">
+                    <div className="flex items-center text-sm text-gray-400 mb-3">
                       <Clock className="w-4 h-4 mr-1" />
                       <span>{getTimeAgo(article.publishedAt)}</span>
                       <span className="mx-2">•</span>
-                      <span className="text-blue-600 font-medium">{article.source}</span>
+                      <span className="text-cyan-400 font-medium">{article.source}</span>
                     </div>
-                    <h3 className="font-semibold text-lg text-gray-900 mb-3 line-clamp-2">
+                    <h3 className="font-semibold text-lg text-white mb-3 line-clamp-2">
                       {article.title}
                     </h3>
-                    <p className="text-gray-600 mb-4 line-clamp-2 text-sm">
+                    <p className="text-gray-300 mb-4 line-clamp-2 text-sm">
                       {article.excerpt}
                     </p>
                     <div className="flex items-center justify-between">
@@ -258,7 +258,7 @@ export default function AINewsBlog({ articles, lastUpdated, sources }: BlogProps
                         {article.tags.slice(0, 2).map((tag, tagIndex) => (
                           <span 
                             key={tagIndex}
-                            className="text-xs bg-gray-100 text-gray-600 px-2 py-1 rounded"
+                            className="text-xs bg-gray-800 text-gray-300 px-2 py-1 rounded border border-gray-700"
                           >
                             {tag}
                           </span>
@@ -268,7 +268,7 @@ export default function AINewsBlog({ articles, lastUpdated, sources }: BlogProps
                         href={article.url}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="text-blue-600 hover:text-blue-700 text-sm font-medium flex items-center group"
+                        className="text-cyan-400 hover:text-cyan-300 text-sm font-medium flex items-center group"
                       >
                         Read
                         <ArrowRight className="w-3 h-3 ml-1 group-hover:translate-x-0.5 transition-transform" />
@@ -283,12 +283,12 @@ export default function AINewsBlog({ articles, lastUpdated, sources }: BlogProps
           {/* No Articles Message */}
           {articles.length === 0 && (
             <div className="text-center py-16">
-              <div className="w-16 h-16 bg-gray-100 rounded-full flex items-center justify-center mx-auto mb-4">
+              <div className="w-16 h-16 bg-gray-800 border border-gray-700 rounded-full flex items-center justify-center mx-auto mb-4">
                 <Sparkles className="w-8 h-8 text-gray-400" />
               </div>
-              <h3 className="text-xl font-semibold text-gray-900 mb-2">No Articles Available</h3>
-              <p className="text-gray-600 mb-6">We&apos;re currently fetching the latest AI news. Please check back soon!</p>
-              <Link href="/tools" className="inline-flex items-center bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition-colors">
+              <h3 className="text-xl font-semibold text-white mb-2">No Articles Available</h3>
+              <p className="text-gray-300 mb-6">We&apos;re currently fetching the latest AI news. Please check back soon!</p>
+              <Link href="/tools" className="inline-flex items-center bg-gray-800 border border-gray-700 text-white px-6 py-3 rounded-lg hover:bg-gray-700 transition-colors">
                 Explore AI Tools
                 <ArrowRight className="w-4 h-4 ml-2" />
               </Link>
@@ -296,7 +296,7 @@ export default function AINewsBlog({ articles, lastUpdated, sources }: BlogProps
           )}
 
           {/* CTA Section */}
-          <div className="bg-gradient-to-r from-blue-600 to-purple-600 rounded-2xl text-white p-8 mt-16">
+          <div className="bg-gray-900 border border-gray-800 rounded-2xl text-white p-8 mt-16">
             <div className="text-center">
               <h2 className="text-2xl font-bold mb-4">Stay Updated with AI Insights</h2>
               <p className="text-blue-100 mb-6 max-w-2xl mx-auto">

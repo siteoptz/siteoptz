@@ -70,18 +70,18 @@ export default function PricingPage({ tools }: PricingPageProps) {
         />
       </Head>
 
-      <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-purple-50 mobile-safe">
+      <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-black mobile-safe">
         {/* Hero Section */}
         <section className="pt-20 pb-16">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-16">
-              <div className="inline-flex items-center justify-center w-16 h-16 bg-blue-100 rounded-full mb-6">
-                <Calculator className="w-8 h-8 text-blue-600" />
+              <div className="inline-flex items-center justify-center w-16 h-16 bg-gray-800 border border-gray-700 rounded-full mb-6">
+                <Calculator className="w-8 h-8 text-cyan-400" />
               </div>
-              <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+              <h1 className="text-4xl md:text-5xl font-bold text-white mb-6">
                 AI Tools Pricing Calculator
               </h1>
-              <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
                 Compare up to 5 AI tools side-by-side, estimate monthly expenses with team scaling, 
                 and get expert guidance to find the perfect solution for your business.
               </p>
@@ -90,25 +90,25 @@ export default function PricingPage({ tools }: PricingPageProps) {
             {/* Key Benefits */}
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 mb-16">
               <div className="text-center">
-                <div className="inline-flex items-center justify-center w-12 h-12 bg-green-100 rounded-full mb-4">
-                  <Zap className="w-6 h-6 text-green-600" />
+                <div className="inline-flex items-center justify-center w-12 h-12 bg-gray-800 border border-gray-700 rounded-full mb-4">
+                  <Zap className="w-6 h-6 text-green-400" />
                 </div>
-                <h3 className="text-lg font-semibold mb-2">Real-time Calculations</h3>
-                <p className="text-gray-600">Instant cost estimates as you adjust usage and plans</p>
+                <h3 className="text-lg font-semibold mb-2 text-white">Real-time Calculations</h3>
+                <p className="text-gray-300">Instant cost estimates as you adjust usage and plans</p>
               </div>
               <div className="text-center">
-                <div className="inline-flex items-center justify-center w-12 h-12 bg-purple-100 rounded-full mb-4">
-                  <Users className="w-6 h-6 text-purple-600" />
+                <div className="inline-flex items-center justify-center w-12 h-12 bg-gray-800 border border-gray-700 rounded-full mb-4">
+                  <Users className="w-6 h-6 text-purple-400" />
                 </div>
-              <h3 className="text-lg font-semibold mb-2">Multi-Tool Comparison</h3>
-                <p className="text-gray-600">Compare up to 5 tools side-by-side with team scaling</p>
+              <h3 className="text-lg font-semibold mb-2 text-white">Multi-Tool Comparison</h3>
+                <p className="text-gray-300">Compare up to 5 tools side-by-side with team scaling</p>
               </div>
               <div className="text-center">
-                <div className="inline-flex items-center justify-center w-12 h-12 bg-orange-100 rounded-full mb-4">
-                  <TrendingUp className="w-6 h-6 text-orange-600" />
+                <div className="inline-flex items-center justify-center w-12 h-12 bg-gray-800 border border-gray-700 rounded-full mb-4">
+                  <TrendingUp className="w-6 h-6 text-orange-400" />
                 </div>
-                <h3 className="text-lg font-semibold mb-2">Usage-Based Pricing</h3>
-                <p className="text-gray-600">Accurate estimates based on your actual usage patterns</p>
+                <h3 className="text-lg font-semibold mb-2 text-white">Usage-Based Pricing</h3>
+                <p className="text-gray-300">Accurate estimates based on your actual usage patterns</p>
               </div>
             </div>
 
@@ -118,12 +118,12 @@ export default function PricingPage({ tools }: PricingPageProps) {
             </div>
 
             {/* Why Use Our Calculator */}
-            <div className="mt-20 bg-white rounded-2xl shadow-lg p-8 md:p-12">
+            <div className="mt-20 bg-black border border-gray-800 rounded-2xl shadow-lg p-8 md:p-12">
               <div className="text-center mb-12">
-                <h2 className="text-3xl font-bold text-gray-900 mb-4">
+                <h2 className="text-3xl font-bold text-white mb-4">
                   Why Use Our Pricing Calculator?
                 </h2>
-                <p className="text-lg text-gray-600">
+                <p className="text-lg text-gray-300">
                   Make informed decisions with accurate cost projections
                 </p>
               </div>
@@ -131,47 +131,47 @@ export default function PricingPage({ tools }: PricingPageProps) {
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8">
                 <div className="space-y-6">
                   <div className="flex items-start">
-                    <CheckCircle className="w-6 h-6 text-green-500 mt-1 mr-3 flex-shrink-0" />
+                    <CheckCircle className="w-6 h-6 text-green-400 mt-1 mr-3 flex-shrink-0" />
                     <div>
-                      <h3 className="font-semibold mb-1">Accurate Cost Modeling</h3>
-                      <p className="text-gray-600">Based on real pricing data from 200+ AI tools and actual usage patterns</p>
+                      <h3 className="font-semibold mb-1 text-white">Accurate Cost Modeling</h3>
+                      <p className="text-gray-300">Based on real pricing data from 200+ AI tools and actual usage patterns</p>
                     </div>
                   </div>
                   <div className="flex items-start">
-                    <CheckCircle className="w-6 h-6 text-green-500 mt-1 mr-3 flex-shrink-0" />
+                    <CheckCircle className="w-6 h-6 text-green-400 mt-1 mr-3 flex-shrink-0" />
                     <div>
-                      <h3 className="font-semibold mb-1">Hidden Costs Included</h3>
-                      <p className="text-gray-600">Factors in setup fees, overage charges, and additional feature costs</p>
+                      <h3 className="font-semibold mb-1 text-white">Hidden Costs Included</h3>
+                      <p className="text-gray-300">Factors in setup fees, overage charges, and additional feature costs</p>
                     </div>
                   </div>
                   <div className="flex items-start">
-                    <CheckCircle className="w-6 h-6 text-green-500 mt-1 mr-3 flex-shrink-0" />
+                    <CheckCircle className="w-6 h-6 text-green-400 mt-1 mr-3 flex-shrink-0" />
                     <div>
-                      <h3 className="font-semibold mb-1">Enterprise Scaling</h3>
-                      <p className="text-gray-600">See how costs change as your usage grows from startup to enterprise</p>
+                      <h3 className="font-semibold mb-1 text-white">Enterprise Scaling</h3>
+                      <p className="text-gray-300">See how costs change as your usage grows from startup to enterprise</p>
                     </div>
                   </div>
                 </div>
                 <div className="space-y-6">
                   <div className="flex items-start">
-                    <CheckCircle className="w-6 h-6 text-green-500 mt-1 mr-3 flex-shrink-0" />
+                    <CheckCircle className="w-6 h-6 text-green-400 mt-1 mr-3 flex-shrink-0" />
                     <div>
-                      <h3 className="font-semibold mb-1">Side-by-Side Comparison</h3>
-                      <p className="text-gray-600">Compare up to 5 AI tools simultaneously with detailed cost breakdowns</p>
+                      <h3 className="font-semibold mb-1 text-white">Side-by-Side Comparison</h3>
+                      <p className="text-gray-300">Compare up to 5 AI tools simultaneously with detailed cost breakdowns</p>
                     </div>
                   </div>
                   <div className="flex items-start">
-                    <CheckCircle className="w-6 h-6 text-green-500 mt-1 mr-3 flex-shrink-0" />
+                    <CheckCircle className="w-6 h-6 text-green-400 mt-1 mr-3 flex-shrink-0" />
                     <div>
-                      <h3 className="font-semibold mb-1">ROI Projections</h3>
-                      <p className="text-gray-600">Estimate potential savings and productivity gains from AI adoption</p>
+                      <h3 className="font-semibold mb-1 text-white">ROI Projections</h3>
+                      <p className="text-gray-300">Estimate potential savings and productivity gains from AI adoption</p>
                     </div>
                   </div>
                   <div className="flex items-start">
-                    <CheckCircle className="w-6 h-6 text-green-500 mt-1 mr-3 flex-shrink-0" />
+                    <CheckCircle className="w-6 h-6 text-green-400 mt-1 mr-3 flex-shrink-0" />
                     <div>
-                      <h3 className="font-semibold mb-1">Expert Consultation</h3>
-                      <p className="text-gray-600">Connect with AI specialists for personalized recommendations and strategy</p>
+                      <h3 className="font-semibold mb-1 text-white">Expert Consultation</h3>
+                      <p className="text-gray-300">Connect with AI specialists for personalized recommendations and strategy</p>
                     </div>
                   </div>
                 </div>
@@ -180,17 +180,17 @@ export default function PricingPage({ tools }: PricingPageProps) {
 
             {/* Pricing Insights */}
             <div className="mt-20 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
-              <div className="bg-gradient-to-br from-blue-500 to-blue-600 text-white p-8 rounded-2xl">
+              <div className="bg-gray-900 border border-gray-800 text-white p-8 rounded-2xl">
                 <h3 className="text-2xl font-bold mb-4">Average Savings</h3>
-                <div className="text-4xl font-bold mb-2">32%</div>
-                <p className="opacity-90">Organizations save an average of 32% on AI tool costs by comparing options first</p>
+                <div className="text-4xl font-bold mb-2 text-blue-400">32%</div>
+                <p className="text-gray-300">Organizations save an average of 32% on AI tool costs by comparing options first</p>
               </div>
-              <div className="bg-gradient-to-br from-green-500 to-green-600 text-white p-8 rounded-2xl">
+              <div className="bg-gray-900 border border-gray-800 text-white p-8 rounded-2xl">
                 <h3 className="text-2xl font-bold mb-4">Usage Optimization</h3>
-                <div className="text-4xl font-bold mb-2">45%</div>
-                <p className="opacity-90">Businesses reduce overages by 45% when they plan usage with our calculator</p>
+                <div className="text-4xl font-bold mb-2 text-green-400">45%</div>
+                <p className="text-gray-300">Businesses reduce overages by 45% when they plan usage with our calculator</p>
               </div>
-              <div className="bg-gradient-to-br from-purple-500 to-purple-600 text-white p-8 rounded-2xl">
+              <div className="bg-gray-900 border border-gray-800 text-white p-8 rounded-2xl">
                 <h3 className="text-2xl font-bold mb-4">ROI Timeline</h3>
                 <div className="text-4xl font-bold mb-2">3.2x</div>
                 <p className="opacity-90">Average ROI within 6 months of implementing the right AI tool stack</p>
