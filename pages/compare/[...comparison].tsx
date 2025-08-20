@@ -406,50 +406,60 @@ export const getStaticPaths: GetStaticPaths = async () => {
   try {
     const fs = require('fs');
     const path = require('path');
+    const { loadUnifiedToolsData } = require('../../utils/unifiedDataAdapter');
     
+    // Load all tools from unified adapter
+    const unifiedTools = loadUnifiedToolsData(fs, path);
+    
+    // Also load old format for slugs
     const dataPath = path.join(process.cwd(), 'public/data/aiToolsData.json');
-    
-    if (!fs.existsSync(dataPath)) {
-      console.log('aiToolsData.json not found');
-      return {
-        paths: [],
-        fallback: 'blocking',
-      };
+    let aiToolsData = [];
+    if (fs.existsSync(dataPath)) {
+      aiToolsData = JSON.parse(fs.readFileSync(dataPath, 'utf8'));
     }
     
-    const aiToolsData = JSON.parse(fs.readFileSync(dataPath, 'utf8'));
+    // Create slug mapping for all tools
+    const toolSlugs = new Map();
     
-    if (!Array.isArray(aiToolsData) || aiToolsData.length === 0) {
-      console.log('Invalid or empty aiToolsData');
-      return {
-        paths: [],
-        fallback: 'blocking',
-      };
-    }
+    // Add slugs from old data
+    aiToolsData.forEach((tool: any) => {
+      if (tool?.slug && tool?.name) {
+        toolSlugs.set(tool.name, tool.slug);
+      }
+    });
+    
+    // Add slugs from unified tools (using tool_name)
+    unifiedTools.forEach((tool: any) => {
+      if (!toolSlugs.has(tool.tool_name)) {
+        const slug = tool.slug || tool.tool_name.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-+|-+$/g, '');
+        toolSlugs.set(tool.tool_name, slug);
+      }
+    });
 
     const paths = [];
+    const slugArray = Array.from(toolSlugs.values());
     
     // Generate tool comparison combinations
-    for (let i = 0; i < aiToolsData.length; i++) {
-      for (let j = i + 1; j < aiToolsData.length; j++) {
-        const tool1 = aiToolsData[i];
-        const tool2 = aiToolsData[j];
+    for (let i = 0; i < slugArray.length; i++) {
+      for (let j = i + 1; j < slugArray.length; j++) {
+        const slug1 = slugArray[i];
+        const slug2 = slugArray[j];
         
-        // Ensure both tools have valid slugs
-        if (tool1?.slug && tool2?.slug && 
-            typeof tool1.slug === 'string' && typeof tool2.slug === 'string' &&
-            tool1.slug.trim() !== '' && tool2.slug.trim() !== '') {
+        // Ensure both slugs are valid
+        if (slug1 && slug2 && 
+            typeof slug1 === 'string' && typeof slug2 === 'string' &&
+            slug1.trim() !== '' && slug2.trim() !== '') {
           
           // Add both orderings for each pair with catch-all format
           paths.push({
             params: { 
-              comparison: [tool1.slug, 'vs', tool2.slug]
+              comparison: [slug1, 'vs', slug2]
             }
           });
           
           paths.push({
             params: { 
-              comparison: [tool2.slug, 'vs', tool1.slug]
+              comparison: [slug2, 'vs', slug1]
             }
           });
         }
@@ -475,6 +485,7 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
   try {
     const fs = require('fs');
     const path = require('path');
+    const { loadUnifiedToolsData } = require('../../utils/unifiedDataAdapter');
     
     // Extract tool slugs from comparison array parameter
     const comparison = params?.comparison;
@@ -487,6 +498,10 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
     const tool1Slug = comparison[0];
     const tool2Slug = comparison[2];
     
+    // Load all tools using unified adapter
+    const unifiedTools = loadUnifiedToolsData(fs, path);
+    
+    // Also load old format data for compatibility
     const aiToolsData = JSON.parse(
       fs.readFileSync(path.join(process.cwd(), 'public/data/aiToolsData.json'), 'utf8')
     );
@@ -495,8 +510,92 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
       fs.readFileSync(path.join(process.cwd(), 'public/data/faqData.json'), 'utf8')
     );
 
-    const tool1 = aiToolsData.find((t: any) => t.slug === tool1Slug);
-    const tool2 = aiToolsData.find((t: any) => t.slug === tool2Slug);
+    // First try to find in old data format
+    let tool1 = aiToolsData.find((t: any) => t.slug === tool1Slug);
+    let tool2 = aiToolsData.find((t: any) => t.slug === tool2Slug);
+    
+    // If not found in old data, look in unified tools
+    if (!tool1) {
+      const unifiedTool1 = unifiedTools.find((t: any) => 
+        t.tool_name.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-+|-+$/g, '') === tool1Slug ||
+        t.slug === tool1Slug
+      );
+      
+      if (unifiedTool1) {
+        // Convert unified format to old format for compatibility
+        tool1 = {
+          id: unifiedTool1.id || tool1Slug,
+          name: unifiedTool1.tool_name,
+          slug: tool1Slug,
+          logo: unifiedTool1.logo_url,
+          overview: {
+            description: unifiedTool1.description,
+            category: unifiedTool1.category,
+            developer: unifiedTool1.vendor,
+            website: unifiedTool1.official_url || unifiedTool1.affiliate_link,
+            integrations: unifiedTool1.features?.integrations || [],
+            use_cases: unifiedTool1.use_cases || []
+          },
+          features: unifiedTool1.features?.core || [],
+          pricing: [
+            { tier: 'Starter', price_per_month: unifiedTool1.pricing?.monthly || 0 },
+            { tier: 'Professional', price_per_month: unifiedTool1.pricing?.yearly || 0 },
+            { tier: 'Enterprise', price_per_month: unifiedTool1.pricing?.enterprise === 'Custom' ? 0 : unifiedTool1.pricing?.enterprise || 0 }
+          ],
+          pros: unifiedTool1.pros || [],
+          cons: unifiedTool1.cons || [],
+          benchmarks: {
+            speed: 8,
+            accuracy: 8,
+            integration: 7,
+            ease_of_use: 8,
+            value: 7
+          },
+          affiliate_link: unifiedTool1.affiliate_link
+        };
+      }
+    }
+    
+    if (!tool2) {
+      const unifiedTool2 = unifiedTools.find((t: any) => 
+        t.tool_name.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-+|-+$/g, '') === tool2Slug ||
+        t.slug === tool2Slug
+      );
+      
+      if (unifiedTool2) {
+        // Convert unified format to old format for compatibility
+        tool2 = {
+          id: unifiedTool2.id || tool2Slug,
+          name: unifiedTool2.tool_name,
+          slug: tool2Slug,
+          logo: unifiedTool2.logo_url,
+          overview: {
+            description: unifiedTool2.description,
+            category: unifiedTool2.category,
+            developer: unifiedTool2.vendor,
+            website: unifiedTool2.official_url || unifiedTool2.affiliate_link,
+            integrations: unifiedTool2.features?.integrations || [],
+            use_cases: unifiedTool2.use_cases || []
+          },
+          features: unifiedTool2.features?.core || [],
+          pricing: [
+            { tier: 'Starter', price_per_month: unifiedTool2.pricing?.monthly || 0 },
+            { tier: 'Professional', price_per_month: unifiedTool2.pricing?.yearly || 0 },
+            { tier: 'Enterprise', price_per_month: unifiedTool2.pricing?.enterprise === 'Custom' ? 0 : unifiedTool2.pricing?.enterprise || 0 }
+          ],
+          pros: unifiedTool2.pros || [],
+          cons: unifiedTool2.cons || [],
+          benchmarks: {
+            speed: 7,
+            accuracy: 8,
+            integration: 7,
+            ease_of_use: 7,
+            value: 8
+          },
+          affiliate_link: unifiedTool2.affiliate_link
+        };
+      }
+    }
     
     if (!tool1 || !tool2) {
       return {
