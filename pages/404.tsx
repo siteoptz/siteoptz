@@ -29,10 +29,10 @@ const Custom404: React.FC = () => {
               Oops! Page Not Found
             </h1>
             <p className="text-xl text-gray-300 mb-6">
-              The AI tool or page you're looking for seems to have vanished into the digital void.
+              The AI tool or page you&apos;re looking for seems to have vanished into the digital void.
             </p>
             <p className="text-gray-400">
-              Don't worry though - we have plenty of amazing AI tools to discover!
+              Don&apos;t worry though - we have plenty of amazing AI tools to discover!
             </p>
           </div>
 
@@ -84,7 +84,7 @@ const Custom404: React.FC = () => {
 
           {/* Additional Help */}
           <div className="mt-8 text-gray-500 text-sm">
-            <p>Still can't find what you're looking for?</p>
+            <p>Still can&apos;t find what you&apos;re looking for?</p>
             <Link href="/contact" className="text-cyan-400 hover:text-cyan-300 transition-colors">
               Contact our team for assistance
             </Link>
