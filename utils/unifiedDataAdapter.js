@@ -9,7 +9,11 @@ const CATEGORY_MAPPING = {
   'audio-generation': 'Audio',
   'data-analysis': 'Analytics',
   'productivity': 'Productivity',
-  'research-education': 'Research'
+  'research-education': 'Research',
+  'paid-search-ppc': 'Paid Search & PPC',
+  'voice-ai-assistants': 'Voice AI & Assistants',
+  'seo-optimization': 'SEO & Optimization',
+  'social-media': 'Social Media'
 };
 
 /**
