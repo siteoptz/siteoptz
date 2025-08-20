@@ -16,12 +16,29 @@
       "pricing": {
         "model": "Usage-based",
         "starting_price": "Custom pricing",
-        "free_tier": true
+        "free_tier": true,
+        "price": "Custom",
+        "monthly": "Custom",
+        "yearly": "Custom",
+        "enterprise": "Custom"
       },
       "website": "https://www.resemble.ai",
       "logo": "/images/tools/resemble-ai-logo.svg",
       "rating": 4.7,
-      "category": "Voice AI & Assistants"
+      "category": "Voice AI & Assistants",
+      "pros": [
+        "Real-time voice cloning with low latency",
+        "Developer-friendly API integration",
+        "Neural audio editing capabilities",
+        "Custom voice creation for brands",
+        "Enterprise-grade security features"
+      ],
+      "cons": [
+        "Custom pricing can be expensive",
+        "Requires technical expertise for setup",
+        "Limited voice samples in free tier",
+        "Processing quality depends on training data"
+      ]
     },
     {
       "id": "murf-ai",
@@ -37,12 +54,29 @@
       "pricing": {
         "model": "Freemium",
         "starting_price": "$29/month",
-        "free_tier": true
+        "free_tier": true,
+        "price": 29,
+        "monthly": 29,
+        "yearly": 290,
+        "enterprise": "Custom"
       },
       "website": "https://murf.ai",
       "logo": "/images/tools/murf-ai-logo.svg",
       "rating": 4.7,
-      "category": "Voice AI & Assistants"
+      "category": "Voice AI & Assistants",
+      "pros": [
+        "200+ high-quality voices in 20+ languages",
+        "99.38% pronunciation accuracy",
+        "Sub-200ms latency for real-time use",
+        "Enterprise security and compliance",
+        "Voice cloning with custom training"
+      ],
+      "cons": [
+        "Higher pricing compared to competitors",
+        "Limited customization in lower tiers",
+        "Voice cloning requires multiple samples",
+        "Enterprise features only in top plans"
+      ]
     },
     {
       "id": "descript",
@@ -58,12 +92,29 @@
       "pricing": {
         "model": "Freemium", 
         "starting_price": "$15/month",
-        "free_tier": true
+        "free_tier": true,
+        "price": 15,
+        "monthly": 15,
+        "yearly": 150,
+        "enterprise": "Custom"
       },
       "website": "https://www.descript.com",
       "logo": "/images/tools/descript-logo.svg",
       "rating": 4.6,
-      "category": "Voice AI & Assistants"
+      "category": "Voice AI & Assistants",
+      "pros": [
+        "Text-based editing makes complex edits simple",
+        "Overdub voice cloning on all plans",
+        "Studio Sound enhancement included",
+        "Collaborative editing workflows",
+        "AI transcription with high accuracy"
+      ],
+      "cons": [
+        "Learning curve for new users",
+        "Video editing features still developing",
+        "Limited voice customization options",
+        "Requires good recording quality for cloning"
+      ]
     },
     {
       "id": "speechify",
@@ -79,12 +130,29 @@
       "pricing": {
         "model": "Freemium",
         "starting_price": "$11.58/month",
-        "free_tier": true
+        "free_tier": true,
+        "price": 11.58,
+        "monthly": 11.58,
+        "yearly": 115.8,
+        "enterprise": "Custom"
       },
       "website": "https://speechify.com", 
       "logo": "/images/tools/speechify-logo.svg",
       "rating": 4.5,
-      "category": "Voice AI & Assistants"
+      "category": "Voice AI & Assistants",
+      "pros": [
+        "Natural-sounding text-to-speech",
+        "Cross-platform synchronization",
+        "Accessibility-focused features",
+        "Speed reading capabilities",
+        "Affordable pricing for individuals"
+      ],
+      "cons": [
+        "Limited voice customization",
+        "Premium features require subscription",
+        "Less suitable for commercial use",
+        "Voice quality varies by language"
+      ]
     },
     {
       "id": "wellsaid-labs",
@@ -100,12 +168,29 @@
       "pricing": {
         "model": "Enterprise",
         "starting_price": "Custom pricing",
-        "free_tier": false
+        "free_tier": false,
+        "price": "Custom",
+        "monthly": "Custom",
+        "yearly": "Custom",
+        "enterprise": "Custom"
       },
       "website": "https://wellsaidlabs.com",
       "logo": "/images/tools/wellsaid-labs-logo.svg",
       "rating": 4.6,
-      "category": "Voice AI & Assistants"
+      "category": "Voice AI & Assistants",
+      "pros": [
+        "Studio-quality voice generation",
+        "Enterprise-grade security and compliance",
+        "Custom voice development services",
+        "API designed for business integration",
+        "Team collaboration tools included"
+      ],
+      "cons": [
+        "No free tier available",
+        "Custom pricing may be expensive",
+        "Enterprise-focused, not for individuals",
+        "Limited public information on pricing"
+      ]
     },
     {
       "id": "replica-studios",
@@ -121,12 +206,29 @@
       "pricing": {
         "model": "Paid",
         "starting_price": "$4/month",
-        "free_tier": false
+        "free_tier": false,
+        "price": 4,
+        "monthly": 4,
+        "yearly": 40,
+        "enterprise": "Custom"
       },
       "website": "https://replicastudios.com",
       "logo": "/images/tools/replica-studios-logo.svg",
       "rating": 4.4,
-      "category": "Voice AI & Assistants"
+      "category": "Voice AI & Assistants",
+      "pros": [
+        "Specialized for gaming and animation",
+        "Unity and Unreal Engine integration",
+        "Emotional range control for characters",
+        "Commercial licensing options",
+        "Affordable starting price at $4/month"
+      ],
+      "cons": [
+        "No free tier to test features",
+        "Limited voice variety compared to general platforms",
+        "Niche focus may not suit all use cases",
+        "Smaller community and support resources"
+      ]
     }
   ]
 }

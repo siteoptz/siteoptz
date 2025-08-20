@@ -16,12 +16,28 @@
       "pricing": {
         "model": "Paid",
         "starting_price": "$299/month",
-        "free_tier": false
+        "free_tier": false,
+        "price": 299,
+        "monthly": 299,
+        "yearly": 2988,
+        "enterprise": "Custom"
       },
       "website": "https://www.optmyzr.com",
       "logo": "/images/tools/optmyzr-logo.svg",
       "rating": 4.7,
-      "category": "Paid Search & PPC"
+      "category": "Paid Search & PPC",
+      "pros": [
+        "Comprehensive cross-platform management",
+        "AI-powered optimization algorithms",
+        "Time-saving automation features",
+        "Detailed performance analytics",
+        "Excellent customer support"
+      ],
+      "cons": [
+        "High monthly pricing",
+        "Learning curve for beginners",
+        "Limited free features"
+      ]
     },
     {
       "id": "wordstream",
@@ -37,12 +53,27 @@
       "pricing": {
         "model": "Paid",
         "starting_price": "$49/month",
-        "free_tier": false
+        "free_tier": false,
+        "price": 49,
+        "monthly": 49,
+        "yearly": 490,
+        "enterprise": "Custom"
       },
       "website": "https://www.wordstream.com",
       "logo": "/images/tools/wordstream-logo.svg", 
       "rating": 4.4,
-      "category": "Paid Search & PPC"
+      "category": "Paid Search & PPC",
+      "pros": [
+        "User-friendly '20-minute work week' approach",
+        "Affordable pricing for small businesses",
+        "Good keyword management tools",
+        "Comprehensive reporting dashboard"
+      ],
+      "cons": [
+        "Limited advanced features",
+        "Mainly focused on Google Ads",
+        "Basic optimization capabilities"
+      ]
     },
     {
       "id": "adzooma",
@@ -58,12 +89,27 @@
       "pricing": {
         "model": "Freemium",
         "starting_price": "$0/month",
-        "free_tier": true
+        "free_tier": true,
+        "price": 0,
+        "monthly": 0,
+        "yearly": 0,
+        "enterprise": "Custom"
       },
       "website": "https://www.adzooma.com",
       "logo": "/images/tools/adzooma-logo.svg",
       "rating": 4.6,
-      "category": "Paid Search & PPC"
+      "category": "Paid Search & PPC",
+      "pros": [
+        "Free tier available",
+        "Multi-platform support",
+        "Good value for money",
+        "Automated optimization suggestions"
+      ],
+      "cons": [
+        "Limited advanced features in free plan",
+        "Interface could be more intuitive",
+        "Smaller user community"
+      ]
     },
     {
       "id": "adespresso",
@@ -79,12 +125,27 @@
       "pricing": {
         "model": "Paid",
         "starting_price": "$49/month",
-        "free_tier": false
+        "free_tier": false,
+        "price": 49,
+        "monthly": 49,
+        "yearly": 490,
+        "enterprise": "Custom"
       },
       "website": "https://adespresso.com",
       "logo": "/images/tools/adespresso-logo.svg",
       "rating": 4.5,
-      "category": "Paid Search & PPC"
+      "category": "Paid Search & PPC",
+      "pros": [
+        "Excellent A/B testing capabilities",
+        "Facebook/Instagram specialization",
+        "Easy campaign creation",
+        "Good analytics and reporting"
+      ],
+      "cons": [
+        "Limited to Facebook/Instagram platforms",
+        "Can be expensive for large accounts",
+        "Learning curve for advanced features"
+      ]
     },
     {
       "id": "marin-software",
@@ -100,12 +161,27 @@
       "pricing": {
         "model": "Enterprise",
         "starting_price": "Custom pricing",
-        "free_tier": false
+        "free_tier": false,
+        "price": "Custom",
+        "monthly": "Custom",
+        "yearly": "Custom",
+        "enterprise": "Custom"
       },
       "website": "https://www.marinsoftware.com", 
       "logo": "/images/tools/marin-software-logo.svg",
       "rating": 4.3,
-      "category": "Paid Search & PPC"
+      "category": "Paid Search & PPC",
+      "pros": [
+        "Enterprise-level attribution modeling",
+        "Cross-channel campaign management",
+        "Advanced optimization algorithms",
+        "Comprehensive reporting capabilities"
+      ],
+      "cons": [
+        "Enterprise pricing - very expensive",
+        "Complex setup and implementation",
+        "Steep learning curve"
+      ]
     }
   ]
 }

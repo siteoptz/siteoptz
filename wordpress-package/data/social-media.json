@@ -16,12 +16,29 @@
       "pricing": {
         "model": "Paid",
         "starting_price": "$32/month",
-        "free_tier": false
+        "free_tier": false,
+        "price": 32,
+        "monthly": 32,
+        "yearly": 320,
+        "enterprise": "Custom"
       },
       "website": "https://www.loomly.com",
       "logo": "/images/tools/loomly-logo.svg",
       "rating": 4.6,
-      "category": "Social Media"
+      "category": "Social Media",
+      "pros": [
+        "Drag-and-drop content calendar",
+        "Support for 10+ platforms including TikTok",
+        "Built-in photo and video editing tools",
+        "Advanced team collaboration workflows",
+        "Automated reporting and analytics"
+      ],
+      "cons": [
+        "No free tier available",
+        "Higher starting price at $32/month",
+        "Limited automation features",
+        "Learning curve for new users"
+      ]
     },
     {
       "id": "socialpilot",
@@ -37,12 +54,29 @@
       "pricing": {
         "model": "Paid",
         "starting_price": "$25.50/month",
-        "free_tier": false
+        "free_tier": false,
+        "price": 25.50,
+        "monthly": 25.50,
+        "yearly": 255,
+        "enterprise": "Custom"
       },
       "website": "https://www.socialpilot.co",
       "logo": "/images/tools/socialpilot-logo.svg",
       "rating": 4.5,
-      "category": "Social Media"
+      "category": "Social Media",
+      "pros": [
+        "Support for 10+ social platforms",
+        "White-label solutions for agencies",
+        "Advanced team collaboration features",
+        "Bulk scheduling capabilities",
+        "Competitive pricing at $25.50/month"
+      ],
+      "cons": [
+        "No free tier available",
+        "Interface can feel cluttered",
+        "Limited content creation tools",
+        "Customer support response times vary"
+      ]
     },
     {
       "id": "social-champ",
@@ -58,12 +92,29 @@
       "pricing": {
         "model": "Freemium",
         "starting_price": "$29/month", 
-        "free_tier": true
+        "free_tier": true,
+        "price": 29,
+        "monthly": 29,
+        "yearly": 290,
+        "enterprise": "Custom"
       },
       "website": "https://www.socialchamp.com",
       "logo": "/images/tools/social-champ-logo.svg",
       "rating": 4.4,
-      "category": "Social Media"
+      "category": "Social Media",
+      "pros": [
+        "Support for 11 platforms including newer ones",
+        "Free tier available to test features",
+        "AI-powered content suggestions",
+        "Bulk upload and scheduling",
+        "Good value for money at $29/month"
+      ],
+      "cons": [
+        "Limited features in free tier",
+        "Interface less polished than competitors",
+        "AI suggestions need improvement",
+        "Smaller user community"
+      ]
     },
     {
       "id": "planable",
@@ -79,12 +130,29 @@
       "pricing": {
         "model": "Freemium",
         "starting_price": "$33/month",
-        "free_tier": true
+        "free_tier": true,
+        "price": 33,
+        "monthly": 33,
+        "yearly": 330,
+        "enterprise": "Custom"
       },
       "website": "https://planable.io", 
       "logo": "/images/tools/planable-logo.svg",
       "rating": 4.7,
-      "category": "Social Media"
+      "category": "Social Media",
+      "pros": [
+        "Visual content planning and approval",
+        "Advanced team collaboration features",
+        "Client feedback and approval systems",
+        "Custom calendar time slots",
+        "Free tier available for small teams"
+      ],
+      "cons": [
+        "Limited platforms compared to competitors",
+        "Higher pricing for advanced features",
+        "Steep learning curve for complex workflows",
+        "Limited automation capabilities"
+      ]
     },
     {
       "id": "sendible",
@@ -100,12 +168,29 @@
       "pricing": {
         "model": "Paid",
         "starting_price": "$29/month",
-        "free_tier": false
+        "free_tier": false,
+        "price": 29,
+        "monthly": 29,
+        "yearly": 290,
+        "enterprise": "Custom"
       },
       "website": "https://www.sendible.com",
       "logo": "/images/tools/sendible-logo.svg", 
       "rating": 4.5,
-      "category": "Social Media"
+      "category": "Social Media",
+      "pros": [
+        "White-label dashboard for agencies",
+        "TikTok integration available",
+        "Client management and approval workflows",
+        "Custom branding options",
+        "Comprehensive reporting and analytics"
+      ],
+      "cons": [
+        "No free tier available",
+        "Interface can be overwhelming",
+        "Limited content creation tools",
+        "Higher learning curve for beginners"
+      ]
     },
     {
       "id": "contentstudio",
@@ -121,12 +206,29 @@
       "pricing": {
         "model": "Paid",
         "starting_price": "$25/month",
-        "free_tier": false
+        "free_tier": false,
+        "price": 25,
+        "monthly": 25,
+        "yearly": 250,
+        "enterprise": "Custom"
       },
       "website": "https://contentstudio.io",
       "logo": "/images/tools/contentstudio-logo.svg",
       "rating": 4.3,
-      "category": "Social Media"
+      "category": "Social Media",
+      "pros": [
+        "Content discovery and curation features",
+        "Automation workflows available",
+        "Competitive pricing at $25/month",
+        "Multi-platform scheduling",
+        "Good analytics and performance tracking"
+      ],
+      "cons": [
+        "No free tier available",
+        "Content curation quality varies",
+        "Limited team collaboration features",
+        "Fewer integrations than competitors"
+      ]
     }
   ]
 }

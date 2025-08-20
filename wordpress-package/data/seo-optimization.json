@@ -16,12 +16,29 @@
       "pricing": {
         "model": "Paid",
         "starting_price": "$49/month",
-        "free_tier": false
+        "free_tier": false,
+        "price": 49,
+        "monthly": 49,
+        "yearly": 490,
+        "enterprise": "Custom"
       },
       "website": "https://morningscore.io",
       "logo": "/images/tools/morningscore-logo.svg",
       "rating": 4.6,
-      "category": "SEO & Optimization"
+      "category": "SEO & Optimization",
+      "pros": [
+        "Gamified approach makes SEO engaging",
+        "Dollar-value traffic measurements",
+        "AI-powered SEO insights",
+        "Easy-to-understand XP-based missions",
+        "Comprehensive competitor analysis"
+      ],
+      "cons": [
+        "No free tier available",
+        "Higher starting price at $49/month",
+        "Gamification may not appeal to all users",
+        "Smaller feature set compared to enterprise tools"
+      ]
     },
     {
       "id": "clearscope",
@@ -37,12 +54,29 @@
       "pricing": {
         "model": "Paid", 
         "starting_price": "$189/month",
-        "free_tier": false
+        "free_tier": false,
+        "price": 189,
+        "monthly": 189,
+        "yearly": 1890,
+        "enterprise": "Custom"
       },
       "website": "https://www.clearscope.io",
       "logo": "/images/tools/clearscope-logo.svg",
       "rating": 4.7,
-      "category": "SEO & Optimization"
+      "category": "SEO & Optimization",
+      "pros": [
+        "AI-driven content optimization",
+        "Real-time SERP data integration",
+        "Google Docs and WordPress integration",
+        "NLP-powered content analysis",
+        "Content inventory management"
+      ],
+      "cons": [
+        "Expensive starting price at $189/month",
+        "No free tier to test features",
+        "Content-focused, limited technical SEO",
+        "Steep learning curve for beginners"
+      ]
     },
     {
       "id": "se-ranking",
@@ -58,12 +92,29 @@
       "pricing": {
         "model": "Paid",
         "starting_price": "$52/month",
-        "free_tier": false
+        "free_tier": false,
+        "price": 52,
+        "monthly": 52,
+        "yearly": 520,
+        "enterprise": "Custom"
       },
       "website": "https://seranking.com",
       "logo": "/images/tools/se-ranking-logo.svg",
       "rating": 4.5,
-      "category": "SEO & Optimization"
+      "category": "SEO & Optimization",
+      "pros": [
+        "Comprehensive SEO toolkit in one platform",
+        "White-label reporting for agencies",
+        "Flexible monitoring capabilities",
+        "Technical SEO audit features",
+        "Competitive pricing for features offered"
+      ],
+      "cons": [
+        "No free tier available",
+        "Interface can be overwhelming for beginners",
+        "Limited automation features",
+        "Customer support response times vary"
+      ]
     },
     {
       "id": "mangools",
@@ -79,12 +130,29 @@
       "pricing": {
         "model": "Paid",
         "starting_price": "$30/month",
-        "free_tier": false
+        "free_tier": false,
+        "price": 30,
+        "monthly": 30,
+        "yearly": 300,
+        "enterprise": "Custom"
       },
       "website": "https://mangools.com",
       "logo": "/images/tools/mangools-logo.svg",
       "rating": 4.4,
-      "category": "SEO & Optimization"
+      "category": "SEO & Optimization",
+      "pros": [
+        "Beginner-friendly interface design",
+        "Five integrated tools in one suite",
+        "Affordable pricing at $30/month",
+        "Excellent keyword research capabilities",
+        "Clean, intuitive user experience"
+      ],
+      "cons": [
+        "Limited advanced features for experts",
+        "No free tier available",
+        "Smaller database compared to enterprise tools",
+        "Less comprehensive technical SEO features"
+      ]
     },
     {
       "id": "serpstat",
@@ -100,12 +168,29 @@
       "pricing": {
         "model": "Paid",
         "starting_price": "$69/month",
-        "free_tier": false
+        "free_tier": false,
+        "price": 69,
+        "monthly": 69,
+        "yearly": 690,
+        "enterprise": "Custom"
       },
       "website": "https://serpstat.com",
       "logo": "/images/tools/serpstat-logo.svg",
       "rating": 4.3,
-      "category": "SEO & Optimization"
+      "category": "SEO & Optimization",
+      "pros": [
+        "Excellent for bulk data operations",
+        "Mass keyword tracking capabilities",
+        "Comprehensive competitor analysis",
+        "Audit batching for multiple sites",
+        "Strong keyword clustering features"
+      ],
+      "cons": [
+        "Higher pricing starting at $69/month",
+        "No free tier available",
+        "Interface less intuitive than competitors",
+        "Learning curve for advanced features"
+      ]
     }
   ]
 }
