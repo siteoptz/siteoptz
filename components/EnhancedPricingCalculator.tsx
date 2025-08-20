@@ -517,14 +517,14 @@ const EnhancedPricingCalculator: React.FC<EnhancedPricingCalculatorProps> = ({ t
 
       {/* Action Buttons */}
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-        {/* Connect with Expert */}
-        <button
-          onClick={() => setShowExpertModal(true)}
-          className="flex items-center justify-center px-6 py-4 bg-gradient-to-r from-purple-600 to-blue-600 text-white font-semibold rounded-lg hover:from-purple-700 hover:to-blue-700 transition-colors shadow-lg border border-gray-700"
+        {/* Contact for Pricing */}
+        <a
+          href="/contact/"
+          className="flex items-center justify-center px-6 py-4 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-purple-700 transform hover:scale-105 transition-all duration-200 shadow-lg hover:shadow-xl"
         >
           <User className="w-5 h-5 mr-2" />
-          Connect with an Expert
-        </button>
+          Contact for Pricing
+        </a>
 
         {/* Get Pricing Guide */}
         <button

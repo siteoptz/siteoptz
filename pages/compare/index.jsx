@@ -79,15 +79,15 @@ export default function CompareIndex({ aiToolsData }) {
         <link rel="canonical" href="https://siteoptz.ai/compare" />
       </Head>
 
-      <div className="min-h-screen bg-gradient-to-br from-gray-50 to-blue-50">
+      <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-black">
         {/* Hero Section */}
-        <section className="bg-white border-b">
+        <section className="bg-black border-b border-gray-800">
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-16">
             <div className="text-center">
-              <h1 className="text-4xl lg:text-6xl font-bold text-gray-900 mb-6">
+              <h1 className="text-4xl lg:text-6xl font-bold text-white mb-6">
                 AI Tools Comparison
               </h1>
-              <p className="text-xl text-gray-600 max-w-3xl mx-auto mb-8">
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
                 Compare the best AI tools for content creation, SEO, social media, and more. 
                 Expert reviews, pricing analysis, and feature comparisons to help you choose the right tool.
               </p>
@@ -101,7 +101,7 @@ export default function CompareIndex({ aiToolsData }) {
                     placeholder="Search AI tools..."
                     value={searchTerm}
                     onChange={(e) => setSearchTerm(e.target.value)}
-                    className="pl-10 pr-4 py-3 text-lg w-full border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                    className="pl-10 pr-4 py-3 text-lg w-full bg-gray-900 border border-gray-700 rounded-lg text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-cyan-500"
                   />
                 </div>
               </div>
@@ -110,45 +110,47 @@ export default function CompareIndex({ aiToolsData }) {
         </section>
 
         {/* Filters and Controls */}
-        <section className="bg-white border-b sticky top-0 z-10">
+        <section className="bg-gray-900 border-b border-gray-800 sticky top-0 z-10">
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-4">
-            <div className="flex flex-col sm:flex-row gap-4 items-center justify-between">
-              <div className="flex items-center gap-4">
+            <div className="flex flex-col sm:flex-row gap-4 items-start sm:items-center justify-between">
+              <div className="flex flex-col sm:flex-row items-start sm:items-center gap-4 w-full sm:w-auto">
                 <div className="flex items-center gap-2">
-                  <Filter className="w-4 h-4 text-gray-500" />
-                  <span className="text-sm font-medium text-gray-700">Filter:</span>
+                  <Filter className="w-4 h-4 text-gray-400" />
+                  <span className="text-sm font-medium text-gray-300">Filter:</span>
                 </div>
                 
-                <select 
-                  value={selectedCategory} 
-                  onChange={(e) => setSelectedCategory(e.target.value)}
-                  className="w-48 px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                >
-                  {categories.map(category => (
-                    <option key={category} value={category}>
-                      {category === 'all' ? 'All Categories' : category}
-                    </option>
-                  ))}
-                </select>
+                <div className="flex flex-col sm:flex-row gap-3 w-full sm:w-auto">
+                  <select 
+                    value={selectedCategory} 
+                    onChange={(e) => setSelectedCategory(e.target.value)}
+                    className="w-full sm:w-48 px-3 py-2 bg-black border border-gray-700 text-white rounded-lg focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-cyan-500"
+                  >
+                    {categories.map(category => (
+                      <option key={category} value={category}>
+                        {category === 'all' ? 'All Categories' : category}
+                      </option>
+                    ))}
+                  </select>
 
-                <select 
-                  value={sortBy} 
-                  onChange={(e) => setSortBy(e.target.value)}
-                  className="w-40 px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                >
-                  <option value="name">Name</option>
-                  <option value="rating">Rating</option>
-                  <option value="price">Price</option>
-                  <option value="popularity">Popularity</option>
-                </select>
+                  <select 
+                    value={sortBy} 
+                    onChange={(e) => setSortBy(e.target.value)}
+                    className="w-full sm:w-40 px-3 py-2 bg-black border border-gray-700 text-white rounded-lg focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-cyan-500"
+                  >
+                    <option value="name">Name</option>
+                    <option value="rating">Rating</option>
+                    <option value="price">Price</option>
+                    <option value="popularity">Popularity</option>
+                  </select>
+                </div>
               </div>
 
               <div className="flex items-center gap-2">
                 <button
                   className={`px-3 py-1 rounded-lg text-sm font-medium ${
                     viewMode === 'grid' 
-                      ? 'bg-blue-600 text-white' 
-                      : 'bg-white text-gray-700 border border-gray-300 hover:bg-gray-50'
+                      ? 'bg-cyan-600 text-white' 
+                      : 'bg-black text-gray-300 border border-gray-700 hover:bg-gray-800'
                   }`}
                   onClick={() => setViewMode('grid')}
                 >
@@ -157,8 +159,8 @@ export default function CompareIndex({ aiToolsData }) {
                 <button
                   className={`px-3 py-1 rounded-lg text-sm font-medium ${
                     viewMode === 'list' 
-                      ? 'bg-blue-600 text-white' 
-                      : 'bg-white text-gray-700 border border-gray-300 hover:bg-gray-50'
+                      ? 'bg-cyan-600 text-white' 
+                      : 'bg-black text-gray-300 border border-gray-700 hover:bg-gray-800'
                   }`}
                   onClick={() => setViewMode('list')}
                 >
@@ -167,7 +169,7 @@ export default function CompareIndex({ aiToolsData }) {
               </div>
             </div>
 
-            <div className="mt-4 text-sm text-gray-600">
+            <div className="mt-4 text-sm text-gray-400">
               Showing {filteredTools.length} of {aiToolsData.length} AI tools
             </div>
           </div>
@@ -177,9 +179,9 @@ export default function CompareIndex({ aiToolsData }) {
         <section className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-12">
           {filteredTools.length === 0 ? (
             <div className="text-center py-12">
-              <Search className="w-16 h-16 text-gray-300 mx-auto mb-4" />
-              <h3 className="text-xl font-semibold text-gray-900 mb-2">No tools found</h3>
-              <p className="text-gray-600">Try adjusting your search or filter criteria.</p>
+              <Search className="w-16 h-16 text-gray-500 mx-auto mb-4" />
+              <h3 className="text-xl font-semibold text-white mb-2">No tools found</h3>
+              <p className="text-gray-400">Try adjusting your search or filter criteria.</p>
             </div>
           ) : (
             <div className={viewMode === 'grid' 
@@ -194,7 +196,7 @@ export default function CompareIndex({ aiToolsData }) {
         </section>
 
         {/* CTA Section */}
-        <section className="bg-blue-600 text-white py-16">
+        <section className="bg-gradient-to-br from-cyan-600 to-purple-700 text-white py-16">
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 text-center">
             <h2 className="text-3xl font-bold mb-4">
               Need Help Choosing the Right AI Tool?
@@ -204,7 +206,7 @@ export default function CompareIndex({ aiToolsData }) {
             </p>
             <button 
               onClick={() => setShowGuideModal(true)}
-              className="bg-white text-blue-600 hover:bg-gray-100 px-8 py-4 rounded-lg font-semibold text-lg transition-colors"
+              className="bg-white text-cyan-600 hover:bg-gray-100 px-8 py-4 rounded-lg font-semibold text-lg transition-colors"
             >
               Download Free Guide
             </button>
@@ -234,11 +236,11 @@ function ToolCard({ tool, viewMode }) {
 
   if (viewMode === 'list') {
     return (
-      <div className="bg-white rounded-lg shadow-sm border border-gray-200 hover:shadow-lg transition-shadow">
+      <div className="bg-gray-900 rounded-lg shadow-sm border border-gray-800 hover:shadow-lg transition-shadow">
         <div className="p-6">
           <div className="flex items-center gap-6">
             {/* Tool Logo */}
-            <div className="w-16 h-16 bg-gray-100 rounded-xl flex items-center justify-center flex-shrink-0">
+            <div className="w-16 h-16 bg-gray-800 rounded-xl flex items-center justify-center flex-shrink-0">
               <img 
                 src={tool.logo} 
                 alt={`${tool.name} logo`}
@@ -246,7 +248,7 @@ function ToolCard({ tool, viewMode }) {
                 onError={(e) => {
                   console.log('Logo failed to load for', tool.name, '- path:', tool.logo);
                   e.currentTarget.style.display = 'none';
-                  e.currentTarget.parentElement.innerHTML = `<div class="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center text-blue-600 font-semibold text-sm">${tool.name.charAt(0)}</div>`;
+                  e.currentTarget.parentElement.innerHTML = `<div class="w-12 h-12 bg-cyan-100 rounded-lg flex items-center justify-center text-cyan-600 font-semibold text-sm">${tool.name.charAt(0)}</div>`;
                 }}
               />
             </div>
@@ -255,13 +257,13 @@ function ToolCard({ tool, viewMode }) {
             <div className="flex-1 min-w-0">
               <div className="flex items-start justify-between mb-2">
                 <div>
-                  <h3 className="text-xl font-semibold text-gray-900 mb-1">
+                  <h3 className="text-xl font-semibold text-white mb-1">
                     {tool.name}
                   </h3>
-                  <p className="text-gray-600 mb-2">{(tool.overview?.description || tool.description || '').substring(0, 100)}...</p>
+                  <p className="text-gray-400 mb-2">{(tool.overview?.description || tool.description || '').substring(0, 100)}...</p>
                 </div>
                 <div className="text-right">
-                  <div className="text-2xl font-bold text-gray-900">
+                  <div className="text-2xl font-bold text-white">
                     {startingPrice === 'Custom' ? (
                       <span>Custom</span>
                     ) : startingPrice === 0 ? (
@@ -269,38 +271,38 @@ function ToolCard({ tool, viewMode }) {
                     ) : (
                       <>
                         ${startingPrice}
-                        <span className="text-sm font-normal text-gray-500">/month</span>
+                        <span className="text-sm font-normal text-gray-400">/month</span>
                       </>
                     )}
                   </div>
                   {hasFreeTrial && (
-                    <span className="px-2 py-1 bg-green-100 text-green-700 text-xs rounded-full">
+                    <span className="px-2 py-1 bg-green-900 text-green-300 text-xs rounded-full">
                       Free Trial
                     </span>
                   )}
                 </div>
               </div>
 
-              <div className="flex items-center gap-6 text-sm text-gray-600 mb-3">
+              <div className="flex items-center gap-6 text-sm text-gray-400 mb-3">
                 <div className="flex items-center gap-1">
                   <Star className="w-4 h-4 text-yellow-400 fill-current" />
                   <span>{overallRating}/5</span>
                 </div>
                 <div className="flex items-center gap-1">
-                  <Zap className="w-4 h-4 text-blue-500" />
+                  <Zap className="w-4 h-4 text-cyan-500" />
                   <span>{(tool.features || []).length} features</span>
                 </div>
-                <span className="px-2 py-1 bg-blue-100 text-blue-700 text-xs rounded-full">{tool.category}</span>
+                <span className="px-2 py-1 bg-cyan-900 text-cyan-300 text-xs rounded-full">{tool.category}</span>
               </div>
 
-              <p className="text-gray-600 text-sm mb-4 line-clamp-2">
+              <p className="text-gray-400 text-sm mb-4 line-clamp-2">
                 {(tool.overview?.description || tool.description || '').substring(0, 150)}...
               </p>
 
               <div className="flex justify-center">
                 <a 
                   href={`/reviews/${toolSlug}`}
-                  className="px-4 py-2 bg-blue-600 text-white text-sm rounded-lg hover:bg-blue-700 transition-colors"
+                  className="px-4 py-2 bg-cyan-600 text-white text-sm rounded-lg hover:bg-cyan-700 transition-colors"
                 >
                   Learn More
                 </a>
@@ -313,10 +315,10 @@ function ToolCard({ tool, viewMode }) {
   }
 
   return (
-    <div className="bg-white rounded-lg shadow-sm border border-gray-200 hover:shadow-lg transition-shadow h-full">
+    <div className="bg-gray-900 rounded-lg shadow-sm border border-gray-800 hover:shadow-lg transition-shadow h-full">
       <div className="pb-4 p-6">
         <div className="flex items-center gap-4 mb-4">
-          <div className="w-12 h-12 bg-gray-100 rounded-lg flex items-center justify-center">
+          <div className="w-12 h-12 bg-gray-800 rounded-lg flex items-center justify-center">
             <img 
               src={tool.logo} 
               alt={`${tool.name} logo`}
@@ -324,29 +326,29 @@ function ToolCard({ tool, viewMode }) {
               onError={(e) => {
                 console.log('Logo failed to load for', tool.name, '- path:', tool.logo);
                 e.currentTarget.style.display = 'none';
-                e.currentTarget.parentElement.innerHTML = `<div class="w-8 h-8 bg-blue-100 rounded-lg flex items-center justify-center text-blue-600 font-semibold text-xs">${tool.name.charAt(0)}</div>`;
+                e.currentTarget.parentElement.innerHTML = `<div class="w-8 h-8 bg-cyan-100 rounded-lg flex items-center justify-center text-cyan-600 font-semibold text-xs">${tool.name.charAt(0)}</div>`;
               }}
             />
           </div>
           <div>
-            <h3 className="text-lg font-semibold text-gray-900">{tool.name}</h3>
-            <p className="text-gray-600 text-sm">{(tool.overview?.description || tool.description || '').substring(0, 50)}...</p>
+            <h3 className="text-lg font-semibold text-white">{tool.name}</h3>
+            <p className="text-gray-400 text-sm">{(tool.overview?.description || tool.description || '').substring(0, 50)}...</p>
           </div>
         </div>
 
         <div className="flex items-center justify-between">
           <div className="flex items-center gap-1">
             <Star className="w-4 h-4 text-yellow-400 fill-current" />
-            <span className="text-sm font-medium">{overallRating}/5</span>
+            <span className="text-sm font-medium text-gray-300">{overallRating}/5</span>
           </div>
-          <span className="px-2 py-1 bg-blue-100 text-blue-700 text-xs rounded-full">{tool.category}</span>
+          <span className="px-2 py-1 bg-cyan-900 text-cyan-300 text-xs rounded-full">{tool.category}</span>
         </div>
       </div>
 
       <div className="pt-0 p-6">
         <div className="space-y-4">
           <div className="flex items-center justify-between">
-            <div className="text-2xl font-bold text-gray-900">
+            <div className="text-2xl font-bold text-white">
               {startingPrice === 'Custom' ? (
                 <span>Custom</span>
               ) : startingPrice === 0 ? (
@@ -354,28 +356,28 @@ function ToolCard({ tool, viewMode }) {
               ) : (
                 <>
                   ${startingPrice}
-                  <span className="text-sm font-normal text-gray-500">/month</span>
+                  <span className="text-sm font-normal text-gray-400">/month</span>
                 </>
               )}
             </div>
             {hasFreeTrial && (
-              <span className="px-2 py-1 bg-green-100 text-green-700 text-xs rounded-full">Free Trial</span>
+              <span className="px-2 py-1 bg-green-900 text-green-300 text-xs rounded-full">Free Trial</span>
             )}
           </div>
 
-          <div className="flex items-center gap-2 text-sm text-gray-600">
-            <Zap className="w-4 h-4 text-blue-500" />
+          <div className="flex items-center gap-2 text-sm text-gray-400">
+            <Zap className="w-4 h-4 text-cyan-500" />
             <span>{(tool.features || []).length} features</span>
           </div>
 
-          <p className="text-gray-600 text-sm line-clamp-3">
+          <p className="text-gray-400 text-sm line-clamp-3">
             {(tool.overview?.description || tool.description || '').substring(0, 120)}...
           </p>
 
                     <div className="flex justify-center pt-2">
             <a
               href={`/reviews/${toolSlug}`}
-              className="px-4 py-2 bg-blue-600 text-white text-sm rounded-lg hover:bg-blue-700 transition-colors text-center"
+              className="px-4 py-2 bg-cyan-600 text-white text-sm rounded-lg hover:bg-cyan-700 transition-colors text-center"
             >
               Learn More
             </a>

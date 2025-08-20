@@ -710,7 +710,7 @@ export default function ReviewPage({ tool, pageTitle, slug, relatedTools, relate
             <p className="text-xl text-gray-300 mb-8">
               Start your free trial today and experience {tool.tool_name} for yourself.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="flex justify-center">
               <a
                 href={tool.affiliate_link || tool.official_url}
                 target="_blank"
@@ -718,14 +718,6 @@ export default function ReviewPage({ tool, pageTitle, slug, relatedTools, relate
                 className="bg-gradient-to-r from-blue-600 to-purple-600 text-white hover:from-blue-700 hover:to-purple-700 font-bold py-4 px-8 rounded-lg transform hover:scale-105 transition-all duration-200 shadow-lg hover:shadow-xl"
               >
                 Start Free Trial
-              </a>
-              <a
-                href={tool.official_url}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="border-2 border-gray-600 text-gray-300 hover:bg-gray-600 hover:text-white font-semibold py-4 px-8 rounded-lg transition-colors"
-              >
-                Visit {tool.tool_name}
               </a>
             </div>
           </div>
