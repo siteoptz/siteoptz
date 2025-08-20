@@ -1,0 +1,356 @@
+{
+  "category": "Social Media",
+  "description": "New additions to social media management, analytics, and content creation tools for enhanced social media strategy.",
+  "new_tools": [
+    {
+      "tool_name": "Loomly",
+      "vendor": "Loomly",
+      "logo_url": "/images/tools/loomly-logo.svg",
+      "description": "Collaborative social media platform with content calendars, optimization tools, and team workflows for enhanced productivity.",
+      "features": {
+        "core": [
+          "Content calendar with drag-and-drop scheduling",
+          "10+ platform support including TikTok, Threads",
+          "Built-in photo/video editing tools",
+          "Team collaboration and approval workflows",
+          "Analytics and automated reporting"
+        ],
+        "advanced": [
+          "Content inspiration library",
+          "Custom post optimization",
+          "Audience insights",
+          "Hashtag recommendations"
+        ],
+        "integrations": [
+          "Facebook",
+          "Instagram", 
+          "Twitter/X",
+          "LinkedIn",
+          "TikTok",
+          "YouTube",
+          "Pinterest",
+          "Snapchat",
+          "Google My Business",
+          "Threads"
+        ]
+      },
+      "pricing": {
+        "monthly": 32,
+        "yearly": 320,
+        "enterprise": "Custom pricing available",
+        "plans": [
+          {
+            "plan_name": "Base",
+            "price": "$32/month",
+            "features_included": [
+              "2 users",
+              "10 social accounts",
+              "Basic analytics",
+              "Content library"
+            ]
+          },
+          {
+            "plan_name": "Standard",
+            "price": "$60/month",
+            "features_included": [
+              "6 users",
+              "20 social accounts", 
+              "Advanced analytics",
+              "Custom branding"
+            ]
+          },
+          {
+            "plan_name": "Advanced",
+            "price": "$131/month",
+            "features_included": [
+              "16 users",
+              "35 social accounts",
+              "White-label options",
+              "Priority support"
+            ]
+          }
+        ]
+      },
+      "website": "https://www.loomly.com",
+      "category": "Social Media",
+      "rating": 4.6,
+      "use_cases": [
+        "Social media scheduling",
+        "Team collaboration",
+        "Content planning",
+        "Multi-platform management"
+      ],
+      "target_audience": "Marketing teams, Agencies, Small businesses, Content creators",
+      "last_updated": "2025-01-20",
+      "meta_title": "Loomly: Collaborative Social Media Management & Content Calendar",
+      "meta_description": "Streamline your social media workflow with Loomly's collaborative platform. Schedule content across 10+ platforms with team approval workflows.",
+      "schema_data": {
+        "@type": "SoftwareApplication",
+        "applicationCategory": "Social Media Management Software",
+        "operatingSystem": "Web-based",
+        "offers": {
+          "@type": "Offer",
+          "price": "32.00",
+          "priceCurrency": "USD"
+        }
+      }
+    },
+    {
+      "tool_name": "SocialPilot", 
+      "vendor": "SocialPilot Technologies",
+      "logo_url": "/images/tools/socialpilot-logo.svg",
+      "description": "Comprehensive social media management tool supporting 10+ platforms with team collaboration and white-label solutions.",
+      "features": {
+        "core": [
+          "Publishing across 10+ social platforms",
+          "Advanced analytics and reporting",
+          "Team collaboration with user roles",
+          "Bulk scheduling and content curation",
+          "White-label solutions for agencies"
+        ],
+        "advanced": [
+          "Social media inbox",
+          "Client approval workflows",
+          "Custom branded reports",
+          "Social media calendar"
+        ],
+        "integrations": [
+          "Facebook",
+          "Instagram", 
+          "Twitter/X",
+          "LinkedIn",
+          "YouTube",
+          "Pinterest",
+          "TikTok",
+          "Google My Business",
+          "Tumblr",
+          "VK"
+        ]
+      },
+      "pricing": {
+        "monthly": 25.50,
+        "yearly": 255,
+        "enterprise": "Custom pricing available", 
+        "plans": [
+          {
+            "plan_name": "Professional",
+            "price": "$25.50/month",
+            "features_included": [
+              "1 user",
+              "10 social accounts",
+              "Basic analytics",
+              "Content suggestions"
+            ]
+          },
+          {
+            "plan_name": "Small Team",
+            "price": "$42.50/month",
+            "features_included": [
+              "3 users",
+              "25 social accounts",
+              "Advanced analytics", 
+              "Team collaboration"
+            ]
+          },
+          {
+            "plan_name": "Agency",
+            "price": "$85/month",
+            "features_included": [
+              "6 users",
+              "50 social accounts",
+              "White-label reporting",
+              "Client management"
+            ]
+          }
+        ]
+      },
+      "website": "https://www.socialpilot.co",
+      "category": "Social Media",
+      "rating": 4.5,
+      "use_cases": [
+        "Agency client management",
+        "Multi-platform publishing",
+        "Team collaboration",
+        "Social media analytics"
+      ],
+      "target_audience": "Digital agencies, Marketing teams, Small businesses, Freelancers",
+      "last_updated": "2025-01-20",
+      "meta_title": "SocialPilot: Social Media Management Tool for Agencies & Teams",
+      "meta_description": "Manage 10+ social media platforms with SocialPilot. Team collaboration, white-label reporting, and comprehensive analytics for agencies.",
+      "schema_data": {
+        "@type": "SoftwareApplication",
+        "applicationCategory": "Social Media Management Software",
+        "operatingSystem": "Web-based",
+        "offers": {
+          "@type": "Offer",
+          "price": "25.50",
+          "priceCurrency": "USD" 
+        }
+      }
+    },
+    {
+      "tool_name": "Social Champ",
+      "vendor": "Social Champ",
+      "logo_url": "/images/tools/social-champ-logo.svg", 
+      "description": "Feature-rich social media tool with support for 11 platforms including BlueSky, Threads, and Mastodon with competitive pricing.",
+      "features": {
+        "core": [
+          "11 platform integrations including newer platforms",
+          "AI-powered content suggestions", 
+          "Bulk upload and scheduling",
+          "Advanced analytics dashboard",
+          "Team collaboration tools"
+        ],
+        "advanced": [
+          "RSS feed automation",
+          "Best time to post recommendations", 
+          "Content recycling",
+          "Social media inbox"
+        ],
+        "integrations": [
+          "Facebook",
+          "Instagram",
+          "Twitter/X", 
+          "LinkedIn",
+          "YouTube",
+          "Pinterest",
+          "TikTok",
+          "BlueSky",
+          "Threads",
+          "Mastodon",
+          "Google My Business"
+        ]
+      },
+      "pricing": {
+        "monthly": 0,
+        "yearly": 0,
+        "enterprise": "Paid plans from $29/month",
+        "plans": [
+          {
+            "plan_name": "Free",
+            "price": "$0/month",
+            "features_included": [
+              "3 social accounts",
+              "10 posts per account",
+              "Basic scheduling",
+              "Standard support"
+            ]
+          },
+          {
+            "plan_name": "Champion",
+            "price": "$29/month",
+            "features_included": [
+              "12 social accounts",
+              "Unlimited posts",
+              "Advanced analytics",
+              "Team collaboration"
+            ]
+          }
+        ]
+      },
+      "website": "https://www.socialchamp.com",
+      "category": "Social Media",
+      "rating": 4.4,
+      "use_cases": [
+        "Multi-platform management",
+        "Content automation",
+        "Social media analytics",
+        "Team workflows"
+      ],
+      "target_audience": "Small businesses, Content creators, Marketing teams, Agencies",
+      "last_updated": "2025-01-20",
+      "meta_title": "Social Champ: Manage 11 Social Platforms Including BlueSky & Threads",
+      "meta_description": "Social media management for 11 platforms including newest networks like BlueSky and Threads. AI-powered content suggestions and competitive pricing.",
+      "schema_data": {
+        "@type": "SoftwareApplication",
+        "applicationCategory": "Social Media Management Software",
+        "operatingSystem": "Web-based",
+        "offers": {
+          "@type": "Offer",
+          "price": "0.00",
+          "priceCurrency": "USD"
+        }
+      }
+    },
+    {
+      "tool_name": "Planable",
+      "vendor": "Planable",
+      "logo_url": "/images/tools/planable-logo.svg",
+      "description": "Collaboration-focused social media tool designed for teams with advanced approval workflows and visual content planning.",
+      "features": {
+        "core": [
+          "Visual content planning and approval",
+          "Advanced team collaboration",
+          "Multi-platform scheduling",
+          "Client feedback and approval systems", 
+          "Custom calendar time slots"
+        ],
+        "advanced": [
+          "Visual mockup previews",
+          "Comment and approval workflows",
+          "Content versioning",
+          "Client portal access"
+        ],
+        "integrations": [
+          "Facebook",
+          "Instagram",
+          "Twitter/X",
+          "LinkedIn", 
+          "YouTube",
+          "TikTok",
+          "Google My Business"
+        ]
+      },
+      "pricing": {
+        "monthly": 0,
+        "yearly": 0,
+        "enterprise": "Paid plans from $33/month",
+        "plans": [
+          {
+            "plan_name": "Free",
+            "price": "$0/month",
+            "features_included": [
+              "1 workspace",
+              "50 posts per month",
+              "Basic collaboration",
+              "Standard support"
+            ]
+          },
+          {
+            "plan_name": "Basic",
+            "price": "$33/month",
+            "features_included": [
+              "Unlimited workspaces",
+              "Unlimited posts",
+              "Advanced collaboration",
+              "Priority support"
+            ]
+          }
+        ]
+      },
+      "website": "https://planable.io",
+      "category": "Social Media",
+      "rating": 4.7,
+      "use_cases": [
+        "Agency client collaboration",
+        "Visual content planning",
+        "Team approval workflows",
+        "Client feedback management"
+      ],
+      "target_audience": "Marketing agencies, Creative teams, Brand managers, Client service teams",
+      "last_updated": "2025-01-20",
+      "meta_title": "Planable: Visual Social Media Collaboration & Approval Platform", 
+      "meta_description": "Streamline social media collaboration with Planable's visual planning and approval workflows. Perfect for agencies and creative teams.",
+      "schema_data": {
+        "@type": "SoftwareApplication",
+        "applicationCategory": "Social Media Management Software",
+        "operatingSystem": "Web-based",
+        "offers": {
+          "@type": "Offer",
+          "price": "0.00",
+          "priceCurrency": "USD"
+        }
+      }
+    }
+  ]
+}

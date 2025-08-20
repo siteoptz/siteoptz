@@ -1,0 +1,215 @@
+{
+  "category": "SEO & Optimization",
+  "new_tools": [
+    {
+      "tool_name": "Morningscore",
+      "vendor": "Morningscore",
+      "logo_url": "/images/tools/morningscore-logo.svg",
+      "description": "Gamified SEO tool that measures organic traffic value in dollars and makes SEO engaging through XP-based missions and achievements.",
+      "features": {
+        "core": [
+          "Keyword tracking with gamification elements",
+          "Internal links data analysis", 
+          "AI-powered SEO insights",
+          "Competitor analysis dashboard",
+          "Dollar-value traffic measurements"
+        ],
+        "advanced": [
+          "XP-based mission system",
+          "Gamified team collaboration",
+          "ROI tracking and reporting",
+          "Advanced competitor intelligence"
+        ],
+        "integrations": [
+          "Google Analytics",
+          "Google Search Console",
+          "Third-party APIs"
+        ]
+      },
+      "pricing": {
+        "monthly": 49,
+        "yearly": 490,
+        "enterprise": "Custom pricing available",
+        "plans": [
+          {
+            "plan_name": "Starter",
+            "price": "$49/month",
+            "features_included": [
+              "Up to 5 projects",
+              "Basic keyword tracking",
+              "Gamification features",
+              "Standard reporting"
+            ]
+          }
+        ]
+      },
+      "website": "https://morningscore.io",
+      "category": "SEO & Optimization",
+      "rating": 4.6,
+      "use_cases": [
+        "SEO gamification",
+        "Team motivation",
+        "Traffic value measurement",
+        "Internal link optimization"
+      ],
+      "target_audience": "SEO teams, Digital marketers, Agencies",
+      "last_updated": "2025-01-20",
+      "meta_title": "Morningscore: Gamified SEO Tool for Traffic Value Measurement",
+      "meta_description": "Turn SEO into a game with Morningscore's gamified platform. Track keywords, measure traffic value in dollars, and boost team engagement with XP missions.",
+      "schema_data": {
+        "@type": "SoftwareApplication",
+        "applicationCategory": "SEO Software",
+        "operatingSystem": "Web-based",
+        "offers": {
+          "@type": "Offer",
+          "price": "49.00",
+          "priceCurrency": "USD"
+        }
+      }
+    },
+    {
+      "tool_name": "Clearscope",
+      "vendor": "Clearscope",
+      "logo_url": "/images/tools/clearscope-logo.svg",
+      "description": "Content-first SEO platform that streamlines content optimization using AI-powered analysis and real-time SERP data.",
+      "features": {
+        "core": [
+          "AI-driven content grading and optimization",
+          "Real-time keyword and LSI suggestions",
+          "Google Docs and WordPress integrations",
+          "Content inventory management",
+          "NLP-powered content analysis"
+        ],
+        "advanced": [
+          "Content performance tracking",
+          "Team collaboration workflows",
+          "Custom content scoring",
+          "SERP competitor analysis"
+        ],
+        "integrations": [
+          "Google Docs",
+          "WordPress",
+          "Google Analytics",
+          "Content management systems"
+        ]
+      },
+      "pricing": {
+        "monthly": 189,
+        "yearly": 1890,
+        "enterprise": "Custom pricing available",
+        "plans": [
+          {
+            "plan_name": "Essentials",
+            "price": "$189/month",
+            "features_included": [
+              "Content optimization",
+              "Keyword research",
+              "Google Docs integration",
+              "Basic reporting"
+            ]
+          },
+          {
+            "plan_name": "Business",
+            "price": "$399/month", 
+            "features_included": [
+              "Advanced analytics",
+              "Team collaboration",
+              "Content inventory",
+              "Priority support"
+            ]
+          }
+        ]
+      },
+      "website": "https://www.clearscope.io",
+      "category": "SEO & Optimization",
+      "rating": 4.7,
+      "use_cases": [
+        "Content optimization",
+        "SEO content creation",
+        "Keyword research",
+        "Content performance tracking"
+      ],
+      "target_audience": "Content creators, SEO specialists, Marketing teams",
+      "last_updated": "2025-01-20",
+      "meta_title": "Clearscope: AI-Powered Content Optimization for SEO Success",
+      "meta_description": "Optimize your content for search with Clearscope's AI-driven platform. Get real-time SEO suggestions, keyword analysis, and content scoring.",
+      "schema_data": {
+        "@type": "SoftwareApplication",
+        "applicationCategory": "Content Optimization Software",
+        "operatingSystem": "Web-based",
+        "offers": {
+          "@type": "Offer",
+          "price": "189.00",
+          "priceCurrency": "USD"
+        }
+      }
+    },
+    {
+      "tool_name": "SE Ranking",
+      "vendor": "SE Ranking",
+      "logo_url": "/images/tools/se-ranking-logo.svg",
+      "description": "Comprehensive SEO platform offering keyword research, rank tracking, and site audits with flexible monitoring capabilities.",
+      "features": {
+        "core": [
+          "Position tracking and backlink monitoring",
+          "Website audits and technical SEO",
+          "Keyword research tools",
+          "Competitor analysis",
+          "White-label reporting"
+        ],
+        "advanced": [
+          "Local SEO tracking",
+          "Social media management",
+          "Marketing plan templates",
+          "API access"
+        ],
+        "integrations": [
+          "Google Analytics",
+          "Google Search Console", 
+          "Google My Business",
+          "Social media platforms"
+        ]
+      },
+      "pricing": {
+        "monthly": 52,
+        "yearly": 520,
+        "enterprise": "Custom pricing available",
+        "plans": [
+          {
+            "plan_name": "Essential",
+            "price": "$52/month",
+            "features_included": [
+              "250 keywords tracking",
+              "Website audit",
+              "Backlink checker",
+              "Basic reporting"
+            ]
+          }
+        ]
+      },
+      "website": "https://seranking.com",
+      "category": "SEO & Optimization",
+      "rating": 4.5,
+      "use_cases": [
+        "Rank tracking",
+        "Technical SEO",
+        "Competitor analysis",
+        "Local SEO"
+      ],
+      "target_audience": "SEO agencies, Small businesses, Marketing professionals",
+      "last_updated": "2025-01-20",
+      "meta_title": "SE Ranking: All-in-One SEO Platform for Agencies & Businesses",
+      "meta_description": "Comprehensive SEO platform with rank tracking, site audits, and competitor analysis. White-label reporting for agencies included.",
+      "schema_data": {
+        "@type": "SoftwareApplication",
+        "applicationCategory": "SEO Software",
+        "operatingSystem": "Web-based",
+        "offers": {
+          "@type": "Offer",
+          "price": "52.00",
+          "priceCurrency": "USD"
+        }
+      }
+    }
+  ]
+}

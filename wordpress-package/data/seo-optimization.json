@@ -1,0 +1,106 @@
+{
+  "category": "SEO & Optimization",
+  "description": "Advanced SEO tools for keyword research, content optimization, rank tracking, and technical SEO analysis.",
+  "tools": [
+    {
+      "name": "Morningscore",
+      "description": "Gamified SEO tool that measures organic traffic value in dollars and makes SEO engaging through XP-based missions and achievements.",
+      "features": [
+        "Keyword tracking with gamification elements",
+        "Internal links data analysis",
+        "AI-powered SEO insights", 
+        "Competitor analysis dashboard",
+        "Dollar-value traffic measurements"
+      ],
+      "pricing": {
+        "model": "Paid",
+        "starting_price": "$49/month",
+        "free_tier": false
+      },
+      "website": "https://morningscore.io",
+      "logo": "/images/tools/morningscore-logo.svg",
+      "rating": 4.6,
+      "category": "SEO & Optimization"
+    },
+    {
+      "name": "Clearscope",
+      "description": "Content-first SEO platform that streamlines content optimization using AI-powered analysis and real-time SERP data.",
+      "features": [
+        "AI-driven content grading and optimization",
+        "Real-time keyword and LSI suggestions",
+        "Google Docs and WordPress integrations",
+        "Content inventory management",
+        "NLP-powered content analysis"
+      ],
+      "pricing": {
+        "model": "Paid", 
+        "starting_price": "$189/month",
+        "free_tier": false
+      },
+      "website": "https://www.clearscope.io",
+      "logo": "/images/tools/clearscope-logo.svg",
+      "rating": 4.7,
+      "category": "SEO & Optimization"
+    },
+    {
+      "name": "SE Ranking",
+      "description": "Comprehensive SEO platform offering keyword research, rank tracking, and site audits with flexible monitoring capabilities.",
+      "features": [
+        "Position tracking and backlink monitoring",
+        "Website audits and technical SEO",
+        "Keyword research tools",
+        "Competitor analysis",
+        "White-label reporting"
+      ],
+      "pricing": {
+        "model": "Paid",
+        "starting_price": "$52/month",
+        "free_tier": false
+      },
+      "website": "https://seranking.com",
+      "logo": "/images/tools/se-ranking-logo.svg",
+      "rating": 4.5,
+      "category": "SEO & Optimization"
+    },
+    {
+      "name": "Mangools",
+      "description": "Beginner-friendly SEO toolkit with five integrated tools that simplify SEO without compromising functionality.",
+      "features": [
+        "KWFinder for keyword research",
+        "SERPChecker for SERP analysis", 
+        "SERPWatcher for rank tracking",
+        "LinkMiner for backlink analysis",
+        "SiteProfiler for website analysis"
+      ],
+      "pricing": {
+        "model": "Paid",
+        "starting_price": "$30/month",
+        "free_tier": false
+      },
+      "website": "https://mangools.com",
+      "logo": "/images/tools/mangools-logo.svg",
+      "rating": 4.4,
+      "category": "SEO & Optimization"
+    },
+    {
+      "name": "Serpstat",
+      "description": "SEO platform specialized in handling bulk data queries and mass keyword tracking for large-scale SEO operations.",
+      "features": [
+        "Mass keyword tracking capabilities",
+        "Bulk domain comparisons",
+        "Audit batching for multiple sites",
+        "Keyword research and clustering",
+        "Competitor analysis"
+      ],
+      "pricing": {
+        "model": "Paid",
+        "starting_price": "$69/month",
+        "free_tier": false
+      },
+      "website": "https://serpstat.com",
+      "logo": "/images/tools/serpstat-logo.svg",
+      "rating": 4.3,
+      "category": "SEO & Optimization"
+    }
+  ]
+}

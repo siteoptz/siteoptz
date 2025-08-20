@@ -113,7 +113,11 @@ export function loadUnifiedToolsData(fs, path) {
       'audio-generation.json',
       'data-analysis.json',
       'productivity.json',
-      'research-education.json'
+      'research-education.json',
+      'paid-search-ppc.json',
+      'voice-ai-assistants.json',
+      'seo-optimization.json',
+      'social-media.json'
     ];
 
     const newTools = [];

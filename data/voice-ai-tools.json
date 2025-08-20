@@ -1,0 +1,314 @@
+{
+  "category": "Voice AI & Assistants",
+  "description": "AI-powered voice generation, speech synthesis, voice cloning, and conversational AI tools for content creation and automation.",
+  "tools": [
+    {
+      "tool_name": "Resemble AI",
+      "vendor": "Resemble AI", 
+      "logo_url": "/images/tools/resemble-ai-logo.svg",
+      "description": "Voice cloning platform for developers with real-time speech synthesis and voice conversion APIs for enterprise applications.",
+      "features": {
+        "core": [
+          "Real-time voice cloning API",
+          "Voice conversion technology",
+          "Neural audio editing",
+          "Custom voice creation", 
+          "Developer-friendly integration"
+        ],
+        "advanced": [
+          "Emotional voice control",
+          "Voice morphing capabilities",
+          "Batch processing",
+          "Custom model training"
+        ],
+        "integrations": [
+          "REST API",
+          "Python SDK",
+          "JavaScript SDK",
+          "Unity integration"
+        ]
+      },
+      "pricing": {
+        "monthly": 0,
+        "yearly": 0,
+        "enterprise": "Custom pricing based on usage",
+        "plans": [
+          {
+            "plan_name": "Developer",
+            "price": "Usage-based",
+            "features_included": [
+              "API access",
+              "Voice cloning",
+              "Neural audio editing",
+              "Developer support"
+            ]
+          },
+          {
+            "plan_name": "Enterprise",
+            "price": "Custom",
+            "features_included": [
+              "Unlimited API calls",
+              "Custom voice models",
+              "Priority support",
+              "SLA guarantees"
+            ]
+          }
+        ]
+      },
+      "website": "https://www.resemble.ai",
+      "category": "Voice AI & Assistants",
+      "rating": 4.7,
+      "use_cases": [
+        "Developer voice integration",
+        "Gaming voice synthesis",
+        "Customer service automation",
+        "Content localization"
+      ],
+      "target_audience": "Developers, Gaming companies, Enterprise clients, Tech startups",
+      "last_updated": "2025-01-20",
+      "meta_title": "Resemble AI: Developer-First Voice Cloning & Speech Synthesis API",
+      "meta_description": "Build voice-enabled applications with Resemble AI's real-time voice cloning API. Neural audio editing and voice conversion for developers.",
+      "schema_data": {
+        "@type": "SoftwareApplication",
+        "applicationCategory": "Voice API Software",
+        "operatingSystem": "Web-based",
+        "offers": {
+          "@type": "Offer",
+          "price": "0.00",
+          "priceCurrency": "USD"
+        }
+      }
+    },
+    {
+      "tool_name": "Murf AI",
+      "vendor": "Murf",
+      "logo_url": "/images/tools/murf-ai-logo.svg",
+      "description": "Enterprise-grade AI voice generator with 200+ realistic voices and 99.38% pronunciation accuracy.",
+      "features": {
+        "core": [
+          "200+ voices in 20+ languages",
+          "Voice cloning with custom training",
+          "Sub-200ms latency for real-time use",
+          "API for developer integration",
+          "Enterprise security and compliance"
+        ],
+        "advanced": [
+          "Custom voice development",
+          "Emotional voice control",
+          "SSML support",
+          "Batch processing"
+        ],
+        "integrations": [
+          "REST API",
+          "Zapier",
+          "Video editing software",
+          "Content management systems"
+        ]
+      },
+      "pricing": {
+        "monthly": 0,
+        "yearly": 0,
+        "enterprise": "Custom pricing available",
+        "plans": [
+          {
+            "plan_name": "Free",
+            "price": "$0/month",
+            "features_included": [
+              "10 minutes voice generation",
+              "Basic voices",
+              "Standard quality",
+              "Limited downloads"
+            ]
+          },
+          {
+            "plan_name": "Creator",
+            "price": "$29/month",
+            "features_included": [
+              "2 hours voice generation",
+              "120+ voices", 
+              "High quality audio",
+              "Commercial license"
+            ]
+          }
+        ]
+      },
+      "website": "https://murf.ai",
+      "category": "Voice AI & Assistants", 
+      "rating": 4.7,
+      "use_cases": [
+        "Enterprise voice solutions",
+        "E-learning content",
+        "Marketing videos",
+        "IVR systems"
+      ],
+      "target_audience": "Enterprise clients, E-learning companies, Marketing agencies",
+      "last_updated": "2025-01-20",
+      "meta_title": "Murf AI: Enterprise Voice Generator with 200+ Realistic Voices",
+      "meta_description": "Generate professional AI voices for enterprise use. 200+ voices in 20+ languages with 99.38% pronunciation accuracy and custom voice cloning.",
+      "schema_data": {
+        "@type": "SoftwareApplication",
+        "applicationCategory": "Voice Generation Software", 
+        "operatingSystem": "Web-based",
+        "offers": {
+          "@type": "Offer",
+          "price": "0.00",
+          "priceCurrency": "USD"
+        }
+      }
+    },
+    {
+      "tool_name": "Descript",
+      "vendor": "Descript",
+      "logo_url": "/images/tools/descript-logo.svg",
+      "description": "AI-powered video and podcast editor with Overdub voice cloning for text-based content editing.",
+      "features": {
+        "core": [
+          "Overdub voice cloning on all plans",
+          "Text-based video/audio editing",
+          "Studio Sound enhancement", 
+          "AI transcription and captions",
+          "Collaborative editing workflows"
+        ],
+        "advanced": [
+          "Multi-track editing",
+          "Green screen removal",
+          "Eye contact correction",
+          "Filler word removal"
+        ],
+        "integrations": [
+          "Zapier",
+          "YouTube",
+          "Zoom",
+          "Google Drive"
+        ]
+      },
+      "pricing": {
+        "monthly": 0,
+        "yearly": 0,
+        "enterprise": "Custom pricing available",
+        "plans": [
+          {
+            "plan_name": "Free", 
+            "price": "$0/month",
+            "features_included": [
+              "3 hours transcription",
+              "Basic editing tools",
+              "Overdub voice cloning",
+              "1080p export"
+            ]
+          },
+          {
+            "plan_name": "Creator",
+            "price": "$15/month",
+            "features_included": [
+              "10 hours transcription",
+              "Advanced editing",
+              "4K export",
+              "Priority support"
+            ]
+          }
+        ]
+      },
+      "website": "https://www.descript.com",
+      "category": "Voice AI & Assistants",
+      "rating": 4.6,
+      "use_cases": [
+        "Podcast editing",
+        "Video content creation", 
+        "Voice-over editing",
+        "Content collaboration"
+      ],
+      "target_audience": "Podcasters, Video creators, Content teams, Educators",
+      "last_updated": "2025-01-20",
+      "meta_title": "Descript: AI Video Editor with Voice Cloning & Text-Based Editing",
+      "meta_description": "Edit videos and podcasts like documents with Descript. AI voice cloning, automatic transcription, and collaborative editing in one platform.",
+      "schema_data": {
+        "@type": "SoftwareApplication",
+        "applicationCategory": "Video Editing Software",
+        "operatingSystem": "Web-based, Desktop",
+        "offers": {
+          "@type": "Offer",
+          "price": "0.00", 
+          "priceCurrency": "USD"
+        }
+      }
+    },
+    {
+      "tool_name": "Speechify",
+      "vendor": "Speechify",
+      "logo_url": "/images/tools/speechify-logo.svg",
+      "description": "Text-to-speech platform with natural-sounding voices for accessibility and productivity enhancement.",
+      "features": {
+        "core": [
+          "Natural text-to-speech conversion",
+          "Speed reading capabilities",
+          "Multiple voice options",
+          "Cross-platform synchronization",
+          "Document and webpage reading"
+        ],
+        "advanced": [
+          "Custom voice speed control",
+          "Highlighting and note-taking",
+          "Offline reading capability", 
+          "Voice customization"
+        ],
+        "integrations": [
+          "Chrome extension",
+          "Mobile apps",
+          "PDF readers",
+          "Web browsers"
+        ]
+      },
+      "pricing": {
+        "monthly": 11.58,
+        "yearly": 139,
+        "enterprise": "Custom pricing available",
+        "plans": [
+          {
+            "plan_name": "Free",
+            "price": "$0/month",
+            "features_included": [
+              "Basic text-to-speech",
+              "Standard voices",
+              "Limited speed options",
+              "Basic features"
+            ]
+          },
+          {
+            "plan_name": "Premium",
+            "price": "$11.58/month", 
+            "features_included": [
+              "Premium voices",
+              "High-speed reading",
+              "Offline capability",
+              "Priority support"
+            ]
+          }
+        ]
+      },
+      "website": "https://speechify.com",
+      "category": "Voice AI & Assistants",
+      "rating": 4.5,
+      "use_cases": [
+        "Accessibility support",
+        "Learning and education",
+        "Productivity enhancement",
+        "Content consumption"
+      ],
+      "target_audience": "Students, Professionals, People with disabilities, Busy professionals",
+      "last_updated": "2025-01-20",
+      "meta_title": "Speechify: AI Text-to-Speech for Accessibility & Productivity",
+      "meta_description": "Convert any text to natural speech with Speechify. Perfect for accessibility, learning, and productivity with cross-platform sync and speed control.",
+      "schema_data": {
+        "@type": "SoftwareApplication",
+        "applicationCategory": "Text-to-Speech Software",
+        "operatingSystem": "Web-based, Mobile, Desktop",
+        "offers": {
+          "@type": "Offer",
+          "price": "11.58",
+          "priceCurrency": "USD"
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,126 @@
+{
+  "category": "Social Media",
+  "description": "Advanced social media management, scheduling, analytics, and collaboration tools for enhanced social media strategy.",
+  "tools": [
+    {
+      "name": "Loomly",
+      "description": "Collaborative social media platform with content calendars, optimization tools, and team workflows for enhanced productivity.",
+      "features": [
+        "Content calendar with drag-and-drop scheduling",
+        "10+ platform support including TikTok, Threads",
+        "Built-in photo/video editing tools",
+        "Team collaboration and approval workflows",
+        "Analytics and automated reporting"
+      ],
+      "pricing": {
+        "model": "Paid",
+        "starting_price": "$32/month",
+        "free_tier": false
+      },
+      "website": "https://www.loomly.com",
+      "logo": "/images/tools/loomly-logo.svg",
+      "rating": 4.6,
+      "category": "Social Media"
+    },
+    {
+      "name": "SocialPilot",
+      "description": "Comprehensive social media management tool supporting 10+ platforms with team collaboration and white-label solutions.",
+      "features": [
+        "Publishing across 10+ social platforms",
+        "Advanced analytics and reporting",
+        "Team collaboration with user roles",
+        "Bulk scheduling and content curation",
+        "White-label solutions for agencies"
+      ],
+      "pricing": {
+        "model": "Paid",
+        "starting_price": "$25.50/month",
+        "free_tier": false
+      },
+      "website": "https://www.socialpilot.co",
+      "logo": "/images/tools/socialpilot-logo.svg",
+      "rating": 4.5,
+      "category": "Social Media"
+    },
+    {
+      "name": "Social Champ",
+      "description": "Feature-rich social media tool with support for 11 platforms including BlueSky, Threads, and Mastodon with competitive pricing.",
+      "features": [
+        "11 platform integrations including newer platforms",
+        "AI-powered content suggestions",
+        "Bulk upload and scheduling",
+        "Advanced analytics dashboard",
+        "Team collaboration tools"
+      ],
+      "pricing": {
+        "model": "Freemium",
+        "starting_price": "$29/month", 
+        "free_tier": true
+      },
+      "website": "https://www.socialchamp.com",
+      "logo": "/images/tools/social-champ-logo.svg",
+      "rating": 4.4,
+      "category": "Social Media"
+    },
+    {
+      "name": "Planable",
+      "description": "Collaboration-focused social media tool designed for teams with advanced approval workflows and visual content planning.",
+      "features": [
+        "Visual content planning and approval",
+        "Advanced team collaboration",
+        "Multi-platform scheduling", 
+        "Client feedback and approval systems",
+        "Custom calendar time slots"
+      ],
+      "pricing": {
+        "model": "Freemium",
+        "starting_price": "$33/month",
+        "free_tier": true
+      },
+      "website": "https://planable.io", 
+      "logo": "/images/tools/planable-logo.svg",
+      "rating": 4.7,
+      "category": "Social Media"
+    },
+    {
+      "name": "Sendible",
+      "description": "Agency-focused social media tool with white-label options and comprehensive publishing capabilities.",
+      "features": [
+        "White-label dashboard for agencies",
+        "Multi-platform publishing including TikTok",
+        "Client management and approval workflows",
+        "Custom branding options",
+        "Advanced reporting and analytics"
+      ],
+      "pricing": {
+        "model": "Paid",
+        "starting_price": "$29/month",
+        "free_tier": false
+      },
+      "website": "https://www.sendible.com",
+      "logo": "/images/tools/sendible-logo.svg", 
+      "rating": 4.5,
+      "category": "Social Media"
+    },
+    {
+      "name": "ContentStudio",
+      "description": "Content marketing-focused social media tool with content curation and automation features.",
+      "features": [
+        "Content discovery and curation",
+        "Multi-platform scheduling",
+        "Content automation workflows", 
+        "Analytics and performance tracking",
+        "Team collaboration features"
+      ],
+      "pricing": {
+        "model": "Paid",
+        "starting_price": "$25/month",
+        "free_tier": false
+      },
+      "website": "https://contentstudio.io",
+      "logo": "/images/tools/contentstudio-logo.svg",
+      "rating": 4.3,
+      "category": "Social Media"
+    }
+  ]
+}

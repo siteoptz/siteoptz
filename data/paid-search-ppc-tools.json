@@ -1,0 +1,228 @@
+{
+  "category": "Paid Search & PPC",
+  "description": "Tools for managing pay-per-click advertising, Google Ads optimization, Facebook Ads, and cross-platform PPC campaign management.",
+  "tools": [
+    {
+      "tool_name": "Optmyzr",
+      "vendor": "Optmyzr",
+      "logo_url": "/images/tools/optmyzr-logo.svg", 
+      "description": "AI-enhanced PPC management software that automates bid optimization and campaign management across multiple ad platforms.",
+      "features": {
+        "core": [
+          "Cross-platform campaign management (Google, Microsoft, Amazon, Meta, LinkedIn)",
+          "AI-powered bid and budget optimization",
+          "Real-time campaign monitoring", 
+          "One-click optimization suggestions",
+          "Advanced reporting and analytics"
+        ],
+        "advanced": [
+          "Automated bid management",
+          "Budget reallocation algorithms",
+          "Performance forecasting",
+          "Custom optimization rules"
+        ],
+        "integrations": [
+          "Google Ads",
+          "Microsoft Advertising",
+          "Amazon Advertising",
+          "Meta Ads",
+          "LinkedIn Ads"
+        ]
+      },
+      "pricing": {
+        "monthly": 299,
+        "yearly": 2988,
+        "enterprise": "Custom pricing available",
+        "plans": [
+          {
+            "plan_name": "Essential",
+            "price": "$299/month",
+            "features_included": [
+              "Up to $10k monthly ad spend",
+              "Basic optimization tools",
+              "Standard reporting",
+              "Email support"
+            ]
+          },
+          {
+            "plan_name": "Advanced", 
+            "price": "$799/month",
+            "features_included": [
+              "Up to $50k monthly ad spend",
+              "Advanced optimization",
+              "Custom reporting",
+              "Priority support"
+            ]
+          }
+        ]
+      },
+      "website": "https://www.optmyzr.com",
+      "category": "Paid Search & PPC",
+      "rating": 4.7,
+      "use_cases": [
+        "PPC campaign optimization",
+        "Multi-platform ad management",
+        "Automated bid management",
+        "Performance reporting"
+      ],
+      "target_audience": "PPC managers, Digital agencies, Performance marketers",
+      "last_updated": "2025-01-20",
+      "meta_title": "Optmyzr: AI-Powered PPC Management & Google Ads Optimization",
+      "meta_description": "Automate your PPC campaigns with Optmyzr's AI platform. Manage Google Ads, Microsoft Ads, and more with smart bid optimization and real-time monitoring.",
+      "schema_data": {
+        "@type": "SoftwareApplication",
+        "applicationCategory": "PPC Management Software",
+        "operatingSystem": "Web-based",
+        "offers": {
+          "@type": "Offer", 
+          "price": "299.00",
+          "priceCurrency": "USD"
+        }
+      }
+    },
+    {
+      "tool_name": "WordStream",
+      "vendor": "LOCALiQ",
+      "logo_url": "/images/tools/wordstream-logo.svg",
+      "description": "Digital advertising platform designed to simplify PPC management with '20-Minute Work Week' efficiency focus.",
+      "features": {
+        "core": [
+          "Cross-platform campaign management",
+          "Smart keyword management",
+          "Automated bid optimization", 
+          "Performance reporting dashboards",
+          "Ad creation and testing tools"
+        ],
+        "advanced": [
+          "Landing page optimization",
+          "Call tracking integration",
+          "Conversion tracking",
+          "Custom audience building"
+        ],
+        "integrations": [
+          "Google Ads",
+          "Microsoft Advertising",
+          "Facebook Ads",
+          "Google Analytics",
+          "CRM systems"
+        ]
+      },
+      "pricing": {
+        "monthly": 49,
+        "yearly": 490,
+        "enterprise": "Custom pricing available",
+        "plans": [
+          {
+            "plan_name": "Starter",
+            "price": "$49/month",
+            "features_included": [
+              "Up to $2k monthly ad spend",
+              "Basic optimization",
+              "Standard reporting",
+              "Email support"
+            ]
+          }
+        ]
+      },
+      "website": "https://www.wordstream.com",
+      "category": "Paid Search & PPC",
+      "rating": 4.4,
+      "use_cases": [
+        "Small business PPC",
+        "Google Ads management",
+        "Campaign optimization",
+        "Performance tracking"
+      ],
+      "target_audience": "Small businesses, Marketing agencies, PPC beginners",
+      "last_updated": "2025-01-20", 
+      "meta_title": "WordStream: Simple PPC Management for Google Ads & Facebook",
+      "meta_description": "Manage your PPC campaigns in just 20 minutes per week with WordStream's simplified platform. Perfect for small businesses and agencies.",
+      "schema_data": {
+        "@type": "SoftwareApplication",
+        "applicationCategory": "PPC Management Software",
+        "operatingSystem": "Web-based",
+        "offers": {
+          "@type": "Offer",
+          "price": "49.00",
+          "priceCurrency": "USD"
+        }
+      }
+    },
+    {
+      "tool_name": "Adzooma",
+      "vendor": "Adzooma",
+      "logo_url": "/images/tools/adzooma-logo.svg",
+      "description": "PPC optimization platform offering better value alternative to premium tools with comprehensive campaign management.",
+      "features": {
+        "core": [
+          "Multi-platform ad management",
+          "Automated optimization suggestions",
+          "Performance monitoring",
+          "Budget management tools",
+          "Reporting and analytics"
+        ],
+        "advanced": [
+          "AI-powered recommendations",
+          "Competitor analysis",
+          "Automated bidding",
+          "Custom reporting"
+        ],
+        "integrations": [
+          "Google Ads",
+          "Microsoft Bing Ads", 
+          "Facebook Ads",
+          "Google Analytics"
+        ]
+      },
+      "pricing": {
+        "monthly": 0,
+        "yearly": 0,
+        "enterprise": "Paid plans from $99/month",
+        "plans": [
+          {
+            "plan_name": "Free",
+            "price": "$0/month",
+            "features_included": [
+              "Basic optimization",
+              "Limited reporting",
+              "Standard support"
+            ]
+          },
+          {
+            "plan_name": "Premium",
+            "price": "$99/month",
+            "features_included": [
+              "Advanced optimization",
+              "Unlimited reporting", 
+              "Priority support",
+              "Custom features"
+            ]
+          }
+        ]
+      },
+      "website": "https://www.adzooma.com",
+      "category": "Paid Search & PPC",
+      "rating": 4.6,
+      "use_cases": [
+        "PPC optimization",
+        "Campaign management",
+        "Performance analysis",
+        "Budget optimization"
+      ],
+      "target_audience": "Small to medium businesses, Freelance marketers, Agencies",
+      "last_updated": "2025-01-20",
+      "meta_title": "Adzooma: Free PPC Management Tool for Google Ads & Facebook",
+      "meta_description": "Optimize your PPC campaigns for free with Adzooma. Better value alternative to premium tools with comprehensive campaign management features.",
+      "schema_data": {
+        "@type": "SoftwareApplication",
+        "applicationCategory": "PPC Management Software",
+        "operatingSystem": "Web-based",
+        "offers": {
+          "@type": "Offer",
+          "price": "0.00",
+          "priceCurrency": "USD"
+        }
+      }
+    }
+  ]
+}

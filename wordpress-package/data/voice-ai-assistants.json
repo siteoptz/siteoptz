@@ -1,0 +1,126 @@
+{
+  "category": "Voice AI & Assistants",
+  "description": "AI-powered voice generation, speech synthesis, voice cloning, and conversational AI tools for content creation and automation.",
+  "tools": [
+    {
+      "name": "Resemble AI",
+      "description": "Voice cloning platform for developers with real-time speech synthesis and voice conversion APIs for enterprise applications.",
+      "features": [
+        "Real-time voice cloning API",
+        "Voice conversion technology", 
+        "Neural audio editing",
+        "Custom voice creation",
+        "Developer-friendly integration"
+      ],
+      "pricing": {
+        "model": "Usage-based",
+        "starting_price": "Custom pricing",
+        "free_tier": true
+      },
+      "website": "https://www.resemble.ai",
+      "logo": "/images/tools/resemble-ai-logo.svg",
+      "rating": 4.7,
+      "category": "Voice AI & Assistants"
+    },
+    {
+      "name": "Murf AI",
+      "description": "Enterprise-grade AI voice generator with 200+ realistic voices and 99.38% pronunciation accuracy.",
+      "features": [
+        "200+ voices in 20+ languages",
+        "Voice cloning with custom training",
+        "Sub-200ms latency for real-time use",
+        "API for developer integration", 
+        "Enterprise security and compliance"
+      ],
+      "pricing": {
+        "model": "Freemium",
+        "starting_price": "$29/month",
+        "free_tier": true
+      },
+      "website": "https://murf.ai",
+      "logo": "/images/tools/murf-ai-logo.svg",
+      "rating": 4.7,
+      "category": "Voice AI & Assistants"
+    },
+    {
+      "name": "Descript",
+      "description": "AI-powered video and podcast editor with Overdub voice cloning for text-based content editing.",
+      "features": [
+        "Overdub voice cloning on all plans",
+        "Text-based video/audio editing",
+        "Studio Sound enhancement",
+        "AI transcription and captions",
+        "Collaborative editing workflows"
+      ],
+      "pricing": {
+        "model": "Freemium", 
+        "starting_price": "$15/month",
+        "free_tier": true
+      },
+      "website": "https://www.descript.com",
+      "logo": "/images/tools/descript-logo.svg",
+      "rating": 4.6,
+      "category": "Voice AI & Assistants"
+    },
+    {
+      "name": "Speechify",
+      "description": "Text-to-speech platform with natural-sounding voices for accessibility and productivity enhancement.",
+      "features": [
+        "Natural text-to-speech conversion",
+        "Speed reading capabilities",
+        "Multiple voice options",
+        "Cross-platform synchronization",
+        "Document and webpage reading"
+      ],
+      "pricing": {
+        "model": "Freemium",
+        "starting_price": "$11.58/month",
+        "free_tier": true
+      },
+      "website": "https://speechify.com", 
+      "logo": "/images/tools/speechify-logo.svg",
+      "rating": 4.5,
+      "category": "Voice AI & Assistants"
+    },
+    {
+      "name": "WellSaid Labs",
+      "description": "Enterprise-focused voice AI platform for creating studio-quality voiceovers at scale.",
+      "features": [
+        "Studio-quality voice generation",
+        "Enterprise-grade security", 
+        "Custom voice development",
+        "API for business integration",
+        "Team collaboration tools"
+      ],
+      "pricing": {
+        "model": "Enterprise",
+        "starting_price": "Custom pricing",
+        "free_tier": false
+      },
+      "website": "https://wellsaidlabs.com",
+      "logo": "/images/tools/wellsaid-labs-logo.svg",
+      "rating": 4.6,
+      "category": "Voice AI & Assistants"
+    },
+    {
+      "name": "Replica Studios",
+      "description": "AI voice platform specialized for gaming, animation, and entertainment content creation.",
+      "features": [
+        "Game and animation-focused voices",
+        "Character voice creation",
+        "Emotional range control",
+        "Unity and Unreal Engine integration", 
+        "Commercial licensing options"
+      ],
+      "pricing": {
+        "model": "Paid",
+        "starting_price": "$4/month",
+        "free_tier": false
+      },
+      "website": "https://replicastudios.com",
+      "logo": "/images/tools/replica-studios-logo.svg",
+      "rating": 4.4,
+      "category": "Voice AI & Assistants"
+    }
+  ]
+}

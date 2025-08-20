@@ -1,0 +1,106 @@
+{
+  "category": "Paid Search & PPC", 
+  "description": "Tools for managing pay-per-click advertising, Google Ads optimization, Facebook Ads, and cross-platform PPC campaign management.",
+  "tools": [
+    {
+      "name": "Optmyzr",
+      "description": "AI-enhanced PPC management software that automates bid optimization and campaign management across multiple ad platforms.",
+      "features": [
+        "Cross-platform campaign management (Google, Microsoft, Amazon, Meta, LinkedIn)",
+        "AI-powered bid and budget optimization",
+        "Real-time campaign monitoring",
+        "One-click optimization suggestions",
+        "Advanced reporting and analytics"
+      ],
+      "pricing": {
+        "model": "Paid",
+        "starting_price": "$299/month",
+        "free_tier": false
+      },
+      "website": "https://www.optmyzr.com",
+      "logo": "/images/tools/optmyzr-logo.svg",
+      "rating": 4.7,
+      "category": "Paid Search & PPC"
+    },
+    {
+      "name": "WordStream",
+      "description": "Digital advertising platform designed to simplify PPC management with '20-Minute Work Week' efficiency focus.",
+      "features": [
+        "Cross-platform campaign management",
+        "Smart keyword management",
+        "Automated bid optimization",
+        "Performance reporting dashboards",
+        "Ad creation and testing tools"
+      ],
+      "pricing": {
+        "model": "Paid",
+        "starting_price": "$49/month",
+        "free_tier": false
+      },
+      "website": "https://www.wordstream.com",
+      "logo": "/images/tools/wordstream-logo.svg", 
+      "rating": 4.4,
+      "category": "Paid Search & PPC"
+    },
+    {
+      "name": "Adzooma", 
+      "description": "PPC optimization platform offering better value alternative to premium tools with comprehensive campaign management.",
+      "features": [
+        "Multi-platform ad management",
+        "Automated optimization suggestions",
+        "Performance monitoring",
+        "Budget management tools",
+        "Reporting and analytics"
+      ],
+      "pricing": {
+        "model": "Freemium",
+        "starting_price": "$0/month",
+        "free_tier": true
+      },
+      "website": "https://www.adzooma.com",
+      "logo": "/images/tools/adzooma-logo.svg",
+      "rating": 4.6,
+      "category": "Paid Search & PPC"
+    },
+    {
+      "name": "AdEspresso",
+      "description": "Facebook and Instagram ads optimization platform with A/B testing and campaign management tools.",
+      "features": [
+        "Advanced A/B testing capabilities", 
+        "Facebook/Instagram ad optimization",
+        "Campaign creation and management",
+        "Performance analytics",
+        "Creative testing tools"
+      ],
+      "pricing": {
+        "model": "Paid",
+        "starting_price": "$49/month",
+        "free_tier": false
+      },
+      "website": "https://adespresso.com",
+      "logo": "/images/tools/adespresso-logo.svg",
+      "rating": 4.5,
+      "category": "Paid Search & PPC"
+    },
+    {
+      "name": "Marin Software",
+      "description": "Cross-channel advertising platform with advanced attribution and optimization capabilities for enterprises.",
+      "features": [
+        "Cross-channel campaign management",
+        "Advanced attribution modeling", 
+        "Automated bid optimization",
+        "Budget management across platforms",
+        "Custom reporting and analytics"
+      ],
+      "pricing": {
+        "model": "Enterprise",
+        "starting_price": "Custom pricing",
+        "free_tier": false
+      },
+      "website": "https://www.marinsoftware.com", 
+      "logo": "/images/tools/marin-software-logo.svg",
+      "rating": 4.3,
+      "category": "Paid Search & PPC"
+    }
+  ]
+}

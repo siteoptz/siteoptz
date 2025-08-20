@@ -8,11 +8,13 @@ export const toolCategories = [
   'Data Analysis',
   'Email Marketing',
   'Image Generation',
+  'Paid Search & PPC',
   'Productivity',
   'Research & Education',
   'SEO & Optimization',
   'Social Media',
   'Video Generation',
+  'Voice AI & Assistants',
 ] as const;
 
 export type ToolCategory = typeof toolCategories[number];
