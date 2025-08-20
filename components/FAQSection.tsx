@@ -87,9 +87,9 @@ export default function FAQSection({
         />
       </Head>
 
-      <div className="bg-white rounded-2xl shadow-lg overflow-hidden">
+      <div className="bg-black border border-gray-800 rounded-2xl shadow-lg overflow-hidden">
         {/* Header */}
-        <div className="bg-gradient-to-r from-indigo-600 to-purple-600 text-white p-6">
+        <div className="bg-gray-900 border-b border-gray-800 text-white p-6">
           <div className="flex items-center justify-between">
             <div>
               <div className="flex items-center gap-3 mb-2">
@@ -98,20 +98,20 @@ export default function FAQSection({
                   {toolName ? `${toolName} FAQs` : 'Frequently Asked Questions'}
                 </h2>
               </div>
-              <p className="text-indigo-100">
+              <p className="text-gray-300">
                 Find answers to common questions {toolName && `about ${toolName}`}
               </p>
             </div>
             <div className="hidden md:flex gap-2">
               <button
                 onClick={expandAll}
-                className="px-4 py-2 bg-white/20 hover:bg-white/30 rounded-lg text-sm font-medium transition-colors"
+                className="px-4 py-2 bg-gray-800 hover:bg-gray-700 rounded-lg text-sm font-medium transition-colors border border-gray-700"
               >
                 Expand All
               </button>
               <button
                 onClick={collapseAll}
-                className="px-4 py-2 bg-white/20 hover:bg-white/30 rounded-lg text-sm font-medium transition-colors"
+                className="px-4 py-2 bg-gray-800 hover:bg-gray-700 rounded-lg text-sm font-medium transition-colors border border-gray-700"
               >
                 Collapse All
               </button>
@@ -130,11 +130,11 @@ export default function FAQSection({
                   placeholder="Search FAQs..."
                   value={searchQuery}
                   onChange={(e) => setSearchQuery(e.target.value)}
-                  className="w-full pl-10 pr-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500"
+                  className="w-full pl-10 pr-4 py-3 bg-gray-900 border border-gray-700 text-white rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 placeholder-gray-400"
                 />
               </div>
               {searchQuery && (
-                <p className="mt-2 text-sm text-gray-600">
+                <p className="mt-2 text-sm text-gray-400">
                   Found {filteredFaqs.length} result{filteredFaqs.length !== 1 ? 's' : ''} for &quot;{searchQuery}&quot;
                 </p>
               )}
@@ -145,13 +145,13 @@ export default function FAQSection({
           <div className="flex md:hidden gap-2 mb-4">
             <button
               onClick={expandAll}
-              className="flex-1 px-3 py-2 bg-gray-100 hover:bg-gray-200 rounded-lg text-sm font-medium transition-colors"
+              className="flex-1 px-3 py-2 bg-gray-800 hover:bg-gray-700 text-white rounded-lg text-sm font-medium transition-colors border border-gray-700"
             >
               Expand All
             </button>
             <button
               onClick={collapseAll}
-              className="flex-1 px-3 py-2 bg-gray-100 hover:bg-gray-200 rounded-lg text-sm font-medium transition-colors"
+              className="flex-1 px-3 py-2 bg-gray-800 hover:bg-gray-700 text-white rounded-lg text-sm font-medium transition-colors border border-gray-700"
             >
               Collapse All
             </button>
@@ -165,22 +165,22 @@ export default function FAQSection({
               return (
                 <div
                   key={index}
-                  className="border border-gray-200 rounded-lg overflow-hidden hover:shadow-md transition-shadow"
+                  className="border border-gray-800 bg-gray-900 rounded-lg overflow-hidden hover:shadow-md hover:border-gray-600 transition-all"
                 >
                   <button
                     onClick={() => toggleExpanded(index)}
-                    className="w-full px-6 py-4 text-left flex items-center justify-between hover:bg-gray-50 transition-colors"
+                    className="w-full px-6 py-4 text-left flex items-center justify-between hover:bg-gray-800 transition-colors"
                     aria-expanded={isExpanded}
                     aria-controls={`faq-answer-${index}`}
                   >
-                    <h3 className="font-semibold text-gray-900 pr-4">
+                    <h3 className="font-semibold text-white pr-4">
                       {faq.question}
                     </h3>
                     <div className="flex-shrink-0">
                       {isExpanded ? (
-                        <ChevronUp className="w-5 h-5 text-gray-500" />
+                        <ChevronUp className="w-5 h-5 text-gray-400" />
                       ) : (
-                        <ChevronDown className="w-5 h-5 text-gray-500" />
+                        <ChevronDown className="w-5 h-5 text-gray-400" />
                       )}
                     </div>
                   </button>
@@ -192,14 +192,14 @@ export default function FAQSection({
                     } overflow-hidden`}
                   >
                     <div className="px-6 pb-4">
-                      <div className="text-gray-700 leading-relaxed">
+                      <div className="text-gray-300 leading-relaxed">
                         {faq.answer}
                       </div>
                       
                       {/* Related Questions (optional) */}
                       {index < 2 && isExpanded && (
-                        <div className="mt-4 pt-4 border-t border-gray-100">
-                          <p className="text-sm font-medium text-gray-600 mb-2">
+                        <div className="mt-4 pt-4 border-t border-gray-800">
+                          <p className="text-sm font-medium text-gray-400 mb-2">
                             Related Questions:
                           </p>
                           <div className="flex flex-wrap gap-2">
@@ -218,7 +218,7 @@ export default function FAQSection({
                                     const element = document.getElementById(`faq-answer-${relatedIndex}`);
                                     element?.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
                                   }}
-                                  className="text-sm text-indigo-600 hover:text-indigo-700 hover:underline"
+                                  className="text-sm text-blue-400 hover:text-blue-300 hover:underline"
                                 >
                                   {relatedFaq.question.length > 40
                                     ? relatedFaq.question.substring(0, 40) + '...'
@@ -240,7 +240,7 @@ export default function FAQSection({
             <div className="mt-6 text-center">
               <button
                 onClick={() => setShowAll(!showAll)}
-                className="inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-indigo-600 to-purple-600 text-white rounded-lg font-semibold hover:from-indigo-700 hover:to-purple-700 transition-all"
+                className="inline-flex items-center gap-2 px-6 py-3 bg-gray-800 hover:bg-gray-700 text-white rounded-lg font-semibold transition-all border border-gray-700"
               >
                 {showAll ? (
                   <>
@@ -258,10 +258,10 @@ export default function FAQSection({
           {/* Empty State */}
           {filteredFaqs.length === 0 && (
             <div className="text-center py-12">
-              <HelpCircle className="w-16 h-16 mx-auto mb-4 text-gray-300" />
-              <p className="text-lg font-medium text-gray-600">No FAQs found</p>
+              <HelpCircle className="w-16 h-16 mx-auto mb-4 text-gray-600" />
+              <p className="text-lg font-medium text-gray-300">No FAQs found</p>
               {searchQuery && (
-                <p className="text-sm text-gray-500 mt-2">
+                <p className="text-sm text-gray-400 mt-2">
                   Try searching with different keywords
                 </p>
               )}
@@ -269,17 +269,17 @@ export default function FAQSection({
           )}
 
           {/* FAQ Stats */}
-          <div className="mt-8 pt-6 border-t border-gray-200">
-            <div className="flex flex-wrap gap-6 text-sm text-gray-600">
+          <div className="mt-8 pt-6 border-t border-gray-800">
+            <div className="flex flex-wrap gap-6 text-sm text-gray-400">
               <div>
-                <span className="font-semibold text-gray-900">{faqs.length}</span> Total FAQs
+                <span className="font-semibold text-white">{faqs.length}</span> Total FAQs
               </div>
               <div>
-                <span className="font-semibold text-gray-900">{expandedItems.length}</span> Expanded
+                <span className="font-semibold text-white">{expandedItems.length}</span> Expanded
               </div>
               {searchQuery && (
                 <div>
-                  <span className="font-semibold text-gray-900">{filteredFaqs.length}</span> Matching
+                  <span className="font-semibold text-white">{filteredFaqs.length}</span> Matching
                 </div>
               )}
             </div>
