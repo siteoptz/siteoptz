@@ -293,17 +293,17 @@ const ComparisonPage: React.FC<ComparisonPageProps> = ({ tool1, tool2, faqs1, fa
 
         {/* FAQ Section with schema */}
         {combinedFaqs && combinedFaqs.length > 0 && (
-          <div className="bg-white rounded-lg shadow-lg p-8 mb-8">
-            <h2 className="text-2xl font-bold text-gray-900 mb-6">
+          <div className="bg-black border border-gray-800 rounded-lg shadow-2xl p-8 mb-8">
+            <h2 className="text-2xl font-bold text-white mb-6">
               Frequently Asked Questions: {tool1.name} vs {tool2.name}
             </h2>
             <div className="space-y-6">
               {(combinedFaqs || []).map((faq: any, index: number) => (
-                <div key={index} className="border-b border-gray-200 pb-6 last:border-b-0">
-                  <h3 className="text-lg font-semibold text-gray-900 mb-3">
+                <div key={index} className="border-b border-gray-800 pb-6 last:border-b-0">
+                  <h3 className="text-lg font-semibold text-white mb-3">
                     {faq.question}
                   </h3>
-                  <p className="text-gray-600 leading-relaxed">
+                  <p className="text-gray-300 leading-relaxed">
                     {faq.answer}
                   </p>
                 </div>
@@ -313,8 +313,8 @@ const ComparisonPage: React.FC<ComparisonPageProps> = ({ tool1, tool2, faqs1, fa
         )}
 
         {/* Final Recommendation with H2 keyword optimization */}
-        <div className="bg-white rounded-lg shadow-lg p-8">
-          <h2 className="text-2xl font-bold text-gray-900 mb-6">
+        <div className="bg-black border border-gray-800 rounded-lg shadow-2xl p-8">
+          <h2 className="text-2xl font-bold text-white mb-6">
             Final Verdict: {tool1.name} vs {tool2.name} - Which Should You Choose?
           </h2>
           <div className="grid md:grid-cols-2 gap-8">
