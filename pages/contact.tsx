@@ -227,7 +227,7 @@ export default function ContactPage() {
               </button>
               <Link 
                 href="/"
-                className="bg-gray-100 text-gray-700 px-6 py-3 rounded-lg hover:bg-gray-200 transition-colors inline-block"
+                className="bg-gray-800 text-white px-6 py-3 rounded-lg hover:bg-gray-700 transition-colors inline-block border border-gray-700"
               >
                 Back to Home
               </Link>
@@ -320,8 +320,8 @@ export default function ContactPage() {
                 <h3 className="font-semibold text-white mb-2">Quick Stats</h3>
                 <div className="grid grid-cols-2 gap-4 text-center">
                   <div>
-                    <div className="text-2xl font-bold text-cyan-400">10+</div>
-                    <div className="text-sm text-gray-300">AI Tools Reviewed</div>
+                    <div className="text-2xl font-bold text-cyan-400">10X</div>
+                    <div className="text-sm text-gray-300">Average ROI</div>
                   </div>
                   <div>
                     <div className="text-2xl font-bold text-green-400">50k+</div>
@@ -352,7 +352,7 @@ export default function ContactPage() {
 
                 <div className="grid md:grid-cols-2 gap-6">
                   <div>
-                    <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-2">
+                    <label htmlFor="name" className="block text-sm font-medium text-gray-300 mb-2">
                       Full Name *
                     </label>
                     <input
@@ -360,18 +360,18 @@ export default function ContactPage() {
                       type="text"
                       value={formData.name}
                       onChange={(e) => handleInputChange('name', e.target.value)}
-                      className={`w-full px-4 py-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent ${
-                        validationErrors.name ? 'border-red-300' : 'border-gray-300'
+                      className={`w-full px-4 py-3 bg-gray-900 border rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:border-cyan-400 ${
+                        validationErrors.name ? 'border-red-500' : 'border-gray-700'
                       }`}
                       placeholder="Enter your full name"
                     />
                     {validationErrors.name && (
-                      <p className="text-red-600 text-sm mt-1">{validationErrors.name}</p>
+                      <p className="text-red-400 text-sm mt-1">{validationErrors.name}</p>
                     )}
                   </div>
 
                   <div>
-                    <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2">
+                    <label htmlFor="email" className="block text-sm font-medium text-gray-300 mb-2">
                       Email Address *
                     </label>
                     <input
@@ -379,20 +379,20 @@ export default function ContactPage() {
                       type="email"
                       value={formData.email}
                       onChange={(e) => handleInputChange('email', e.target.value)}
-                      className={`w-full px-4 py-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent ${
-                        validationErrors.email ? 'border-red-300' : 'border-gray-300'
+                      className={`w-full px-4 py-3 bg-gray-900 border rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:border-cyan-400 ${
+                        validationErrors.email ? 'border-red-500' : 'border-gray-700'
                       }`}
                       placeholder="Enter your email address"
                     />
                     {validationErrors.email && (
-                      <p className="text-red-600 text-sm mt-1">{validationErrors.email}</p>
+                      <p className="text-red-400 text-sm mt-1">{validationErrors.email}</p>
                     )}
                   </div>
                 </div>
 
                 <div className="grid md:grid-cols-2 gap-6">
                   <div>
-                    <label htmlFor="company" className="block text-sm font-medium text-gray-700 mb-2">
+                    <label htmlFor="company" className="block text-sm font-medium text-gray-300 mb-2">
                       Company (Optional)
                     </label>
                     <input
@@ -400,20 +400,20 @@ export default function ContactPage() {
                       type="text"
                       value={formData.company}
                       onChange={(e) => handleInputChange('company', e.target.value)}
-                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                      className="w-full px-4 py-3 bg-gray-900 border border-gray-700 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:border-cyan-400"
                       placeholder="Enter your company name"
                     />
                   </div>
 
                   <div>
-                    <label htmlFor="inquiryType" className="block text-sm font-medium text-gray-700 mb-2">
+                    <label htmlFor="inquiryType" className="block text-sm font-medium text-gray-300 mb-2">
                       Inquiry Type
                     </label>
                     <select
                       id="inquiryType"
                       value={formData.inquiryType}
                       onChange={(e) => handleInputChange('inquiryType', e.target.value)}
-                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                      className="w-full px-4 py-3 bg-gray-900 border border-gray-700 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:border-cyan-400"
                     >
                       {inquiryTypes.map((type) => (
                         <option key={type.value} value={type.value}>
@@ -425,7 +425,7 @@ export default function ContactPage() {
                 </div>
 
                 <div>
-                  <label htmlFor="subject" className="block text-sm font-medium text-gray-700 mb-2">
+                  <label htmlFor="subject" className="block text-sm font-medium text-gray-300 mb-2">
                     Subject *
                   </label>
                   <input
@@ -433,18 +433,18 @@ export default function ContactPage() {
                     type="text"
                     value={formData.subject}
                     onChange={(e) => handleInputChange('subject', e.target.value)}
-                    className={`w-full px-4 py-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent ${
-                      validationErrors.subject ? 'border-red-300' : 'border-gray-300'
+                    className={`w-full px-4 py-3 bg-gray-900 border rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:border-cyan-400 ${
+                      validationErrors.subject ? 'border-red-500' : 'border-gray-700'
                     }`}
                     placeholder="What&apos;s this about?"
                   />
                   {validationErrors.subject && (
-                    <p className="text-red-600 text-sm mt-1">{validationErrors.subject}</p>
+                    <p className="text-red-400 text-sm mt-1">{validationErrors.subject}</p>
                   )}
                 </div>
 
                 <div>
-                  <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-2">
+                  <label htmlFor="message" className="block text-sm font-medium text-gray-300 mb-2">
                     Message *
                   </label>
                   <textarea
@@ -452,15 +452,15 @@ export default function ContactPage() {
                     rows={6}
                     value={formData.message}
                     onChange={(e) => handleInputChange('message', e.target.value)}
-                    className={`w-full px-4 py-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent resize-none ${
-                      validationErrors.message ? 'border-red-300' : 'border-gray-300'
+                    className={`w-full px-4 py-3 bg-gray-900 border rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:border-cyan-400 resize-none ${
+                      validationErrors.message ? 'border-red-500' : 'border-gray-700'
                     }`}
                     placeholder="Please provide details about your inquiry..."
                   />
                   {validationErrors.message && (
-                    <p className="text-red-600 text-sm mt-1">{validationErrors.message}</p>
+                    <p className="text-red-400 text-sm mt-1">{validationErrors.message}</p>
                   )}
-                  <p className="text-sm text-gray-500 mt-1">
+                  <p className="text-sm text-gray-400 mt-1">
                     {formData.message.length}/500 characters
                   </p>
                 </div>
@@ -468,7 +468,7 @@ export default function ContactPage() {
                 <button
                   type="submit"
                   disabled={isSubmitting}
-                  className="w-full bg-blue-600 hover:bg-blue-700 text-white py-4 px-6 rounded-lg font-semibold disabled:opacity-50 disabled:cursor-not-allowed transition-colors flex items-center justify-center space-x-2"
+                  className="w-full bg-cyan-600 hover:bg-cyan-700 text-white py-4 px-6 rounded-lg font-semibold disabled:opacity-50 disabled:cursor-not-allowed transition-colors flex items-center justify-center space-x-2"
                 >
                   {isSubmitting ? (
                     <>
@@ -483,7 +483,7 @@ export default function ContactPage() {
                   )}
                 </button>
 
-                <p className="text-sm text-gray-500 text-center">
+                <p className="text-sm text-gray-400 text-center">
                   By sending this message, you agree to our privacy policy. We&apos;ll never share your information.
                 </p>
               </form>
@@ -493,38 +493,38 @@ export default function ContactPage() {
 
         {/* FAQ Section */}
         <div className="mt-16">
-          <h2 className="text-3xl font-bold text-gray-900 text-center mb-12">
+          <h2 className="text-3xl font-bold text-white text-center mb-12">
             Frequently Asked Questions
           </h2>
           
           <div className="grid md:grid-cols-2 gap-8">
-            <div className="bg-gray-50 rounded-lg p-6">
-              <h3 className="font-semibold text-gray-900 mb-2">How quickly do you respond?</h3>
-              <p className="text-gray-600">
+            <div className="bg-black border border-gray-800 rounded-lg p-6">
+              <h3 className="font-semibold text-white mb-2">How quickly do you respond?</h3>
+              <p className="text-gray-300">
                 We typically respond within 24 hours during business days. For urgent inquiries, 
                 we aim to respond within a few hours.
               </p>
             </div>
             
-            <div className="bg-gray-50 rounded-lg p-6">
-              <h3 className="font-semibold text-gray-900 mb-2">Do you offer consultations?</h3>
-              <p className="text-gray-600">
+            <div className="bg-black border border-gray-800 rounded-lg p-6">
+              <h3 className="font-semibold text-white mb-2">Do you offer consultations?</h3>
+              <p className="text-gray-300">
                 Yes! We offer free consultations to help you choose the right AI tools for your specific needs. 
                 Just mention it in your message.
               </p>
             </div>
             
-            <div className="bg-gray-50 rounded-lg p-6">
-              <h3 className="font-semibold text-gray-900 mb-2">Can you review a specific tool?</h3>
-              <p className="text-gray-600">
+            <div className="bg-black border border-gray-800 rounded-lg p-6">
+              <h3 className="font-semibold text-white mb-2">Can you review a specific tool?</h3>
+              <p className="text-gray-300">
                 Absolutely! We&apos;re always looking for new tools to review. Send us your suggestions 
                 and we&apos;ll prioritize based on community interest.
               </p>
             </div>
             
-            <div className="bg-gray-50 rounded-lg p-6">
-              <h3 className="font-semibold text-gray-900 mb-2">Partnership opportunities?</h3>
-              <p className="text-gray-600">
+            <div className="bg-black border border-gray-800 rounded-lg p-6">
+              <h3 className="font-semibold text-white mb-2">Partnership opportunities?</h3>
+              <p className="text-gray-300">
                 We work with AI tool companies, content creators, and industry experts. 
                 Reach out to discuss collaboration opportunities.
               </p>
