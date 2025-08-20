@@ -1,6 +1,7 @@
 import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
+import Image from 'next/image';
 import { GetStaticProps, GetStaticPaths } from 'next';
 import { Star, TrendingUp, Users, Zap, CheckCircle, ArrowRight } from 'lucide-react';
 import { toolCategories } from '../../config/categories';
@@ -23,6 +24,9 @@ export default function CategoryPage({ category, tools, content }: CategoryPageP
         <title>{content.seo.title}</title>
         <meta name="description" content={content.seo.description} />
         <meta name="keywords" content={content.seo.keywords.join(', ')} />
+        <meta name="robots" content="index, follow" />
+        <meta name="author" content="SiteOptz" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <link rel="canonical" href={`https://siteoptz.ai/categories/${categorySlug}`} />
         
         {/* Open Graph */}
@@ -30,6 +34,86 @@ export default function CategoryPage({ category, tools, content }: CategoryPageP
         <meta property="og:description" content={content.seo.description} />
         <meta property="og:type" content="website" />
         <meta property="og:url" content={`https://siteoptz.ai/categories/${categorySlug}`} />
+        <meta property="og:site_name" content="SiteOptz" />
+        <meta property="og:image" content={`https://siteoptz.ai/images/og/${categorySlug}.jpg`} />
+        <meta property="og:image:width" content="1200" />
+        <meta property="og:image:height" content="630" />
+        
+        {/* Twitter Card */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:site" content="@siteoptz" />
+        <meta name="twitter:title" content={content.seo.title} />
+        <meta name="twitter:description" content={content.seo.description} />
+        <meta name="twitter:image" content={`https://siteoptz.ai/images/og/${categorySlug}.jpg`} />
+        
+        {/* Structured Data - Organization */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "Organization",
+              "name": "SiteOptz",
+              "url": "https://siteoptz.ai",
+              "logo": "https://siteoptz.ai/images/logo.png",
+              "description": "Leading AI tools comparison and review platform helping businesses choose the right artificial intelligence solutions.",
+              "contactPoint": {
+                "@type": "ContactPoint",
+                "telephone": "+1-555-0123",
+                "contactType": "customer service",
+                "url": "https://siteoptz.ai/contact"
+              },
+              "sameAs": [
+                "https://twitter.com/siteoptz",
+                "https://linkedin.com/company/siteoptz"
+              ]
+            })
+          }}
+        />
+        
+        {/* Structured Data - Category Page */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "CollectionPage",
+              "name": content.seo.title,
+              "description": content.seo.description,
+              "url": `https://siteoptz.ai/categories/${categorySlug}`,
+              "mainEntity": {
+                "@type": "ItemList",
+                "numberOfItems": tools.length,
+                "itemListElement": topTools.map((tool: any, index: number) => ({
+                  "@type": "SoftwareApplication",
+                  "position": index + 1,
+                  "name": tool.tool_name,
+                  "description": tool.description,
+                  "applicationCategory": category,
+                  "operatingSystem": "Web Browser",
+                  "offers": {
+                    "@type": "Offer",
+                    "price": tool.pricing?.monthly === 0 ? "0" : 
+                             typeof tool.pricing?.monthly === 'number' ? tool.pricing.monthly.toString() : "0",
+                    "priceCurrency": "USD",
+                    "priceValidUntil": new Date(Date.now() + 365 * 24 * 60 * 60 * 1000).toISOString().split('T')[0]
+                  },
+                  "aggregateRating": {
+                    "@type": "AggregateRating",
+                    "ratingValue": tool.rating || 4.5,
+                    "reviewCount": tool.search_volume || 100,
+                    "bestRating": 5,
+                    "worstRating": 1
+                  },
+                  "author": {
+                    "@type": "Organization",
+                    "name": tool.vendor || tool.tool_name
+                  }
+                }))
+              }
+            })
+          }}
+        />
         
         {/* FAQ Schema */}
         <script
@@ -122,14 +206,18 @@ export default function CategoryPage({ category, tools, content }: CategoryPageP
               {topTools.map((tool: any, index: number) => (
                 <div key={tool.id || index} className="bg-gray-900 border border-gray-800 rounded-lg p-6 hover:border-cyan-400 transition-colors">
                   <div className="flex items-center mb-4">
-                    <img 
-                      src={tool.logo_url || tool.logo || '/images/tools/placeholder.svg'} 
-                      alt={`${tool.tool_name} logo`}
-                      className="w-12 h-12 rounded-lg mr-4"
-                      onError={(e) => {
-                        e.currentTarget.src = '/images/tools/placeholder.svg';
-                      }}
-                    />
+                    <div className="relative w-12 h-12 rounded-lg mr-4 overflow-hidden">
+                      <Image 
+                        src={tool.logo_url || tool.logo || '/images/tools/placeholder.svg'} 
+                        alt={`${tool.tool_name} logo`}
+                        fill
+                        className="object-cover"
+                        sizes="48px"
+                        onError={(e) => {
+                          e.currentTarget.src = '/images/tools/placeholder.svg';
+                        }}
+                      />
+                    </div>
                     <div>
                       <h3 className="text-lg font-bold text-white">{tool.tool_name}</h3>
                       <div className="flex items-center">

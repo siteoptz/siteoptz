@@ -3,9 +3,9 @@
 export const categoryContent: Record<string, any> = {
   "Best Voice AI Tools": {
     seo: {
-      title: "Best Voice AI Tools for Businesses in 2025 | SiteOptz",
-      description: "Discover the top voice AI tools for customer service, content creation, and automation. Compare features, pricing, and real-world business cases.",
-      keywords: ["voice AI tools", "AI voice generation", "voice automation", "speech synthesis", "voice AI for business", "AI voice cloning", "voice AI technology 2025"]
+      title: "Best AI Voice Generator Tools 2025 - Text to Speech & Voice Cloning | SiteOptz",
+      description: "Compare top AI voice generators with 50K+ monthly searches. Reviews of ElevenLabs, Murf AI, Resemble for text-to-speech, voice cloning & AI narration. Free trials available.",
+      keywords: ["ai voice generator", "text to speech", "voice cloning", "ai voice over", "voice synthesis", "ai narration", "speech generator", "voice ai", "text to voice", "artificial voice", "voice generator online", "ai speech", "voice cloning software", "synthetic voice"]
     },
     hero: {
       title: "Best Voice AI Tools for Business Growth",
@@ -284,9 +284,9 @@ export const categoryContent: Record<string, any> = {
   // Continue with remaining categories...
   "Content Creation": {
     seo: {
-      title: "Best AI Content Creation Tools for Marketers in 2025 | SiteOptz",
-      description: "Discover top AI writing tools for blogs, social media, and marketing content. Compare features, pricing, and see real business results from content automation.",
-      keywords: ["AI content creation", "AI writing tools", "content automation", "AI copywriting", "marketing content tools", "AI blog writing", "content generation 2025"]
+      title: "Best AI Content Creation Tools 2025 - Writing, Copywriting & Content Generation | SiteOptz",
+      description: "Compare top AI content creation tools with 60K+ monthly searches. Reviews of ChatGPT, Jasper, Copy.ai for AI writing, copywriting & automated content generation.",
+      keywords: ["ai content creation", "ai writing tools", "ai copywriting", "content generator", "ai writer", "automated content", "ai blog writing", "content creation software", "ai content generator", "copywriting tools", "ai article writer", "content automation", "writing assistant", "ai marketing copy"]
     },
     hero: {
       title: "AI Content Creation Tools for Marketing Success",
@@ -424,9 +424,9 @@ export const categoryContent: Record<string, any> = {
 
   "Data Analysis": {
     seo: {
-      title: "Best AI Data Analysis Tools for Business Intelligence 2025 | SiteOptz",
-      description: "Transform your data into actionable insights with top AI analytics tools. Compare features, pricing, and real business intelligence success stories.",
-      keywords: ["AI data analysis", "business intelligence tools", "data analytics AI", "automated reporting", "AI for data science", "predictive analytics tools", "data visualization AI 2025"]
+      title: "Best AI Data Analysis Tools 2025 - Business Intelligence & Analytics Software | SiteOptz",
+      description: "Compare top AI data analysis tools with 40K+ searches monthly. Reviews of Tableau, Power BI, Looker for business intelligence, predictive analytics & automated reporting.",
+      keywords: ["ai data analysis", "business intelligence tools", "data analytics software", "predictive analytics", "automated reporting", "ai analytics", "data science tools", "business intelligence ai", "data visualization", "analytics platform", "ai dashboard", "data mining tools", "statistical analysis software", "big data analytics"]
     },
     hero: {
       title: "AI Data Analysis Tools for Business Intelligence",
