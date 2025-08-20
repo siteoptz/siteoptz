@@ -164,8 +164,44 @@
         "Expensive"
       ],
       "lastUpdated": "2025-08-15T18:57:18.195Z"
+    },
+    {
+      "id": "gemini",
+      "name": "Gemini",
+      "description": "Google's AI assistant with multimodal capabilities and advanced data analysis features",
+      "category": "data-analysis",
+      "pricing": {
+        "price": 0,
+        "currency": "USD",
+        "text": "Free with Advanced at $20/month"
+      },
+      "rating": 4.6,
+      "reviewCount": 15000,
+      "website": "https://gemini.google.com",
+      "source": "google",
+      "features": [
+        "multimodal-ai",
+        "google-workspace-integration",
+        "advanced-reasoning",
+        "data-analysis",
+        "code-generation"
+      ],
+      "pros": [
+        "Deep Google Workspace integration",
+        "Multimodal AI capabilities",
+        "Advanced reasoning",
+        "Real-time collaboration",
+        "Google Drive integration"
+      ],
+      "cons": [
+        "Limited to Google ecosystem",
+        "Privacy concerns with Google",
+        "Requires Google account",
+        "Limited third-party integrations"
+      ],
+      "lastUpdated": "2025-08-20T00:00:00.000Z"
     }
   ],
-  "total": 5,
-  "lastUpdated": "2025-08-15T18:57:18.207Z"
+  "total": 6,
+  "lastUpdated": "2025-08-20T00:00:00.000Z"
 }

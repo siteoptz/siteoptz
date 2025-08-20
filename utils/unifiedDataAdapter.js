@@ -7,7 +7,7 @@ const CATEGORY_MAPPING = {
   'code-generation': 'Development',
   'video-generation': 'Visual Content',
   'audio-generation': 'Best Voice AI Tools',
-  'data-analysis': 'Analytics',
+  'data-analysis': 'Data Analysis',
   'productivity': 'Productivity',
   'research-education': 'Research',
   'paid-search-ppc': 'Paid Search & PPC',
