@@ -167,7 +167,7 @@ const FAQSection = ({
                             ))}
                           </div>
                         </div>
-                      ))
+                      )}
 
                       {/* Helpful rating */}
                       {faq.showHelpful !== false && (
