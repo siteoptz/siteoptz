@@ -176,8 +176,19 @@ export default function ContactPage() {
           <meta name="description" content="Thank you for contacting SiteOptz. We've received your message and will get back to you soon." />
         </Head>
 
-        <main className="max-w-4xl mx-auto px-4 py-16 bg-gradient-to-br from-black via-gray-900 to-black min-h-screen">
-          <div className="text-center">
+        <main className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-black relative overflow-hidden">
+          {/* Animated Background Elements */}
+          <div className="absolute inset-0 pointer-events-none">
+            <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-blue-500/10 rounded-full blur-3xl animate-pulse"></div>
+            <div className="absolute bottom-1/4 right-1/4 w-80 h-80 bg-purple-500/10 rounded-full blur-3xl animate-pulse delay-1000"></div>
+            <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-64 h-64 bg-cyan-500/10 rounded-full blur-3xl animate-pulse delay-500"></div>
+          </div>
+
+          {/* Grid Overlay */}
+          <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.02)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.02)_1px,transparent_1px)] bg-[size:100px_100px] pointer-events-none"></div>
+
+          <div className="max-w-4xl mx-auto px-4 py-16 relative z-10">
+            <div className="text-center">
             <CheckCircle className="w-16 h-16 text-green-400 mx-auto mb-6" />
             <h1 className="text-3xl font-bold text-white mb-4">
               Thank You for Reaching Out! 🎉
@@ -222,6 +233,7 @@ export default function ContactPage() {
               </Link>
             </div>
           </div>
+          </div>
         </main>
       </>
     );
@@ -238,9 +250,20 @@ export default function ContactPage() {
         <meta name="keywords" content="contact SiteOptz, AI tools support, partnership inquiries, feedback" />
       </Head>
 
-      <main className="max-w-6xl mx-auto px-4 py-16 bg-gradient-to-br from-black via-gray-900 to-black min-h-screen">
-        {/* Header */}
-        <div className="text-center mb-16">
+      <main className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-black relative overflow-hidden">
+        {/* Animated Background Elements */}
+        <div className="absolute inset-0 pointer-events-none">
+          <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-blue-500/10 rounded-full blur-3xl animate-pulse"></div>
+          <div className="absolute bottom-1/4 right-1/4 w-80 h-80 bg-purple-500/10 rounded-full blur-3xl animate-pulse delay-1000"></div>
+          <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-64 h-64 bg-cyan-500/10 rounded-full blur-3xl animate-pulse delay-500"></div>
+        </div>
+
+        {/* Grid Overlay */}
+        <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.02)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.02)_1px,transparent_1px)] bg-[size:100px_100px] pointer-events-none"></div>
+
+        <div className="max-w-6xl mx-auto px-4 py-16 relative z-10">
+          {/* Header */}
+          <div className="text-center mb-16">
           <h1 className="text-4xl font-bold text-white mb-4">
             Get in Touch
           </h1>
@@ -507,6 +530,7 @@ export default function ContactPage() {
               </p>
             </div>
           </div>
+        </div>
         </div>
       </main>
     </>
