@@ -3,6 +3,7 @@
   "description": "AI-powered voice generation, speech synthesis, voice cloning, and conversational AI tools for content creation and automation.",
   "tools": [
     {
+      "id": "resemble-ai",
       "name": "Resemble AI",
       "description": "Voice cloning platform for developers with real-time speech synthesis and voice conversion APIs for enterprise applications.",
       "features": [
@@ -23,6 +24,7 @@
       "category": "Voice AI & Assistants"
     },
     {
+      "id": "murf-ai",
       "name": "Murf AI",
       "description": "Enterprise-grade AI voice generator with 200+ realistic voices and 99.38% pronunciation accuracy.",
       "features": [
@@ -43,6 +45,7 @@
       "category": "Voice AI & Assistants"
     },
     {
+      "id": "descript",
       "name": "Descript",
       "description": "AI-powered video and podcast editor with Overdub voice cloning for text-based content editing.",
       "features": [
@@ -63,6 +66,7 @@
       "category": "Voice AI & Assistants"
     },
     {
+      "id": "speechify",
       "name": "Speechify",
       "description": "Text-to-speech platform with natural-sounding voices for accessibility and productivity enhancement.",
       "features": [
@@ -83,6 +87,7 @@
       "category": "Voice AI & Assistants"
     },
     {
+      "id": "wellsaid-labs",
       "name": "WellSaid Labs",
       "description": "Enterprise-focused voice AI platform for creating studio-quality voiceovers at scale.",
       "features": [
@@ -103,6 +108,7 @@
       "category": "Voice AI & Assistants"
     },
     {
+      "id": "replica-studios",
       "name": "Replica Studios",
       "description": "AI voice platform specialized for gaming, animation, and entertainment content creation.",
       "features": [

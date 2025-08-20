@@ -3,6 +3,7 @@
   "description": "Advanced SEO tools for keyword research, content optimization, rank tracking, and technical SEO analysis.",
   "tools": [
     {
+      "id": "morningscore",
       "name": "Morningscore",
       "description": "Gamified SEO tool that measures organic traffic value in dollars and makes SEO engaging through XP-based missions and achievements.",
       "features": [
@@ -23,6 +24,7 @@
       "category": "SEO & Optimization"
     },
     {
+      "id": "clearscope",
       "name": "Clearscope",
       "description": "Content-first SEO platform that streamlines content optimization using AI-powered analysis and real-time SERP data.",
       "features": [
@@ -43,6 +45,7 @@
       "category": "SEO & Optimization"
     },
     {
+      "id": "se-ranking",
       "name": "SE Ranking",
       "description": "Comprehensive SEO platform offering keyword research, rank tracking, and site audits with flexible monitoring capabilities.",
       "features": [
@@ -63,6 +66,7 @@
       "category": "SEO & Optimization"
     },
     {
+      "id": "mangools",
       "name": "Mangools",
       "description": "Beginner-friendly SEO toolkit with five integrated tools that simplify SEO without compromising functionality.",
       "features": [
@@ -83,6 +87,7 @@
       "category": "SEO & Optimization"
     },
     {
+      "id": "serpstat",
       "name": "Serpstat",
       "description": "SEO platform specialized in handling bulk data queries and mass keyword tracking for large-scale SEO operations.",
       "features": [

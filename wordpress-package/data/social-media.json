@@ -3,6 +3,7 @@
   "description": "Advanced social media management, scheduling, analytics, and collaboration tools for enhanced social media strategy.",
   "tools": [
     {
+      "id": "loomly",
       "name": "Loomly",
       "description": "Collaborative social media platform with content calendars, optimization tools, and team workflows for enhanced productivity.",
       "features": [
@@ -23,6 +24,7 @@
       "category": "Social Media"
     },
     {
+      "id": "socialpilot",
       "name": "SocialPilot",
       "description": "Comprehensive social media management tool supporting 10+ platforms with team collaboration and white-label solutions.",
       "features": [
@@ -43,6 +45,7 @@
       "category": "Social Media"
     },
     {
+      "id": "social-champ",
       "name": "Social Champ",
       "description": "Feature-rich social media tool with support for 11 platforms including BlueSky, Threads, and Mastodon with competitive pricing.",
       "features": [
@@ -63,6 +66,7 @@
       "category": "Social Media"
     },
     {
+      "id": "planable",
       "name": "Planable",
       "description": "Collaboration-focused social media tool designed for teams with advanced approval workflows and visual content planning.",
       "features": [
@@ -83,6 +87,7 @@
       "category": "Social Media"
     },
     {
+      "id": "sendible",
       "name": "Sendible",
       "description": "Agency-focused social media tool with white-label options and comprehensive publishing capabilities.",
       "features": [
@@ -103,6 +108,7 @@
       "category": "Social Media"
     },
     {
+      "id": "contentstudio",
       "name": "ContentStudio",
       "description": "Content marketing-focused social media tool with content curation and automation features.",
       "features": [

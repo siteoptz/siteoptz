@@ -3,6 +3,7 @@
   "description": "Tools for managing pay-per-click advertising, Google Ads optimization, Facebook Ads, and cross-platform PPC campaign management.",
   "tools": [
     {
+      "id": "optmyzr",
       "name": "Optmyzr",
       "description": "AI-enhanced PPC management software that automates bid optimization and campaign management across multiple ad platforms.",
       "features": [
@@ -23,6 +24,7 @@
       "category": "Paid Search & PPC"
     },
     {
+      "id": "wordstream",
       "name": "WordStream",
       "description": "Digital advertising platform designed to simplify PPC management with '20-Minute Work Week' efficiency focus.",
       "features": [
@@ -43,6 +45,7 @@
       "category": "Paid Search & PPC"
     },
     {
+      "id": "adzooma",
       "name": "Adzooma", 
       "description": "PPC optimization platform offering better value alternative to premium tools with comprehensive campaign management.",
       "features": [
@@ -63,6 +66,7 @@
       "category": "Paid Search & PPC"
     },
     {
+      "id": "adespresso",
       "name": "AdEspresso",
       "description": "Facebook and Instagram ads optimization platform with A/B testing and campaign management tools.",
       "features": [
@@ -83,6 +87,7 @@
       "category": "Paid Search & PPC"
     },
     {
+      "id": "marin-software",
       "name": "Marin Software",
       "description": "Cross-channel advertising platform with advanced attribution and optimization capabilities for enterprises.",
       "features": [
