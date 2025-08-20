@@ -35,10 +35,7 @@ const Header: React.FC = () => {
   ];
 
   const toggleMenu = () => {
-    console.log('🍔 Toggle clicked! Current state:', isMenuOpen);
-    const newState = !isMenuOpen;
-    setIsMenuOpen(newState);
-    console.log('🍔 New state will be:', newState);
+    setIsMenuOpen(!isMenuOpen);
   };
   
   const closeMenu = () => {
@@ -48,14 +45,18 @@ const Header: React.FC = () => {
   // Prevent body scroll when menu is open
   useEffect(() => {
     if (isMenuOpen) {
+      const scrollBarWidth = window.innerWidth - document.documentElement.clientWidth;
       document.body.style.overflow = 'hidden';
+      document.body.style.paddingRight = `${scrollBarWidth}px`;
     } else {
-      document.body.style.overflow = 'unset';
+      document.body.style.overflow = '';
+      document.body.style.paddingRight = '';
     }
     
     // Cleanup function to restore scroll when component unmounts
     return () => {
-      document.body.style.overflow = 'unset';
+      document.body.style.overflow = '';
+      document.body.style.paddingRight = '';
     };
   }, [isMenuOpen]);
 
@@ -163,7 +164,7 @@ const Header: React.FC = () => {
             height: 'calc(100vh - 80px)',
             backgroundColor: '#000000',
             background: 'linear-gradient(135deg, #000000 0%, #1a1a2e 50%, #16213e 100%)',
-            zIndex: 9999,
+            zIndex: 1000,
             overflowY: 'auto',
             WebkitOverflowScrolling: 'touch',
             padding: '24px',
