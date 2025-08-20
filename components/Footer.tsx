@@ -14,6 +14,7 @@ import {
   TrendingUp
 } from 'lucide-react';
 import EmailCaptureForm from './EmailCaptureForm';
+import { getCategoryUrl } from '../config/categories';
 
 const Footer: React.FC = () => {
   const currentYear = new Date().getFullYear();
@@ -24,10 +25,10 @@ const Footer: React.FC = () => {
       title: 'AI Tools',
       links: [
         { name: 'All AI Tools', href: '/tools' },
-        { name: 'AI Assistants', href: '/tools?category=ai-assistant' },
-        { name: 'Content Creation', href: '/tools?category=content-creation' },
-        { name: 'SEO Tools', href: '/tools?category=seo-tool' },
-        { name: 'Image Generation', href: '/tools?category=image-generation' },
+        { name: 'Voice AI Tools', href: getCategoryUrl('Best Voice AI Tools') },
+        { name: 'Content Creation', href: getCategoryUrl('Content Creation') },
+        { name: 'SEO & Optimization', href: getCategoryUrl('SEO & Optimization') },
+        { name: 'Image Generation', href: getCategoryUrl('Image Generation') },
       ]
     },
     {
@@ -121,7 +122,7 @@ const Footer: React.FC = () => {
                   SiteOptz
                 </div>
                 <div className="text-sm text-gray-400 font-medium -mt-1">
-                  AI Tools Expert
+                  Turning AI Potential Into ROI
                 </div>
               </div>
             </Link>
