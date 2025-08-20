@@ -316,7 +316,8 @@ export default function ReviewPage({ tool, pageTitle, slug, relatedTools, relate
                     <div className="flex justify-between">
                       <span className="text-gray-400">Starting Price:</span>
                       <span className="text-white font-semibold">
-                        {tool.pricing.monthly ? `$${tool.pricing.monthly}/month` : 'Custom'}
+                        {tool.pricing.monthly && tool.pricing.monthly > 0 ? `$${tool.pricing.monthly}/month` : 
+                         tool.pricing.monthly === 0 ? 'Free' : 'Custom'}
                       </span>
                     </div>
                     <div className="flex justify-between">
@@ -472,8 +473,11 @@ export default function ReviewPage({ tool, pageTitle, slug, relatedTools, relate
                   <div className="bg-black border border-gray-800 rounded-xl shadow-lg p-8">
                     <h3 className="text-xl font-bold text-white mb-2">Monthly Plan</h3>
                     <div className="text-4xl font-bold text-cyan-400 mb-6">
-                      ${tool.pricing.monthly}
-                      <span className="text-lg text-gray-400">/month</span>
+                      {tool.pricing.monthly && tool.pricing.monthly > 0 ? `$${tool.pricing.monthly}` : 
+                       tool.pricing.monthly === 0 ? 'Free' : 'Custom'}
+                      {tool.pricing.monthly && tool.pricing.monthly > 0 && (
+                        <span className="text-lg text-gray-400">/month</span>
+                      )}
                     </div>
                     
                     <ul className="space-y-3 mb-8">
@@ -500,8 +504,11 @@ export default function ReviewPage({ tool, pageTitle, slug, relatedTools, relate
                   <div className="bg-black border border-gray-800 rounded-xl shadow-lg p-8">
                     <h3 className="text-xl font-bold text-white mb-2">Yearly Plan</h3>
                     <div className="text-4xl font-bold text-cyan-400 mb-6">
-                      ${tool.pricing.yearly}
-                      <span className="text-lg text-gray-400">/year</span>
+                      {tool.pricing.yearly && tool.pricing.yearly > 0 ? `$${tool.pricing.yearly}` : 
+                       tool.pricing.yearly === 0 ? 'Free' : 'Custom'}
+                      {tool.pricing.yearly && tool.pricing.yearly > 0 && (
+                        <span className="text-lg text-gray-400">/year</span>
+                      )}
                     </div>
                     
                     <ul className="space-y-3 mb-8">
@@ -668,7 +675,8 @@ export default function ReviewPage({ tool, pageTitle, slug, relatedTools, relate
                   </p>
                   <div className="flex justify-between items-center">
                     <span className="text-sm text-gray-400">
-                      From {relatedTool.pricing?.monthly ? `$${relatedTool.pricing.monthly}` : 'Custom'}
+                      From {relatedTool.pricing?.monthly && relatedTool.pricing.monthly > 0 ? `$${relatedTool.pricing.monthly}` : 
+                            relatedTool.pricing?.monthly === 0 ? 'Free' : 'Custom'}
                     </span>
                     <a 
                       href={`/reviews/${(relatedTool.tool_name || '').toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-+|-+$/g, '')}`}

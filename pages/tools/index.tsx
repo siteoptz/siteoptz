@@ -308,7 +308,9 @@ export default function ToolsPage({ tools, categories, faqs }: { tools: any[], c
                     <div className="flex justify-between items-center mb-4">
                       <div>
                         <span className="text-lg font-bold text-white">
-                          {tool.pricing?.price || `$${tool.pricing?.monthly}/month`}
+                          {tool.pricing?.price || 
+                           (tool.pricing?.monthly && tool.pricing.monthly > 0 ? `$${tool.pricing.monthly}/month` :
+                            tool.pricing?.monthly === 0 ? 'Free' : 'Custom')}
                         </span>
                       </div>
                       <div className="flex items-center">

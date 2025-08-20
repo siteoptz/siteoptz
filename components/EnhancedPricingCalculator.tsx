@@ -162,10 +162,15 @@ const EnhancedPricingCalculator: React.FC<EnhancedPricingCalculatorProps> = ({ t
   }, [selectedTools, teamSize, billingCycle]);
 
   // Format price
-  const formatPrice = (price: number) => {
-    if (price === 0) return 'Free';
-    if (price >= 10000) return `$${(price / 1000).toFixed(1)}K`;
-    return `$${Math.round(price).toLocaleString()}`;
+  const formatPrice = (price: number | string) => {
+    if (price === 0 || price === '0') return 'Free';
+    if (typeof price === 'string' && (price.toLowerCase() === 'custom' || price.toLowerCase() === 'free')) {
+      return price;
+    }
+    const numPrice = typeof price === 'string' ? parseFloat(price) : price;
+    if (isNaN(numPrice) || numPrice <= 0) return 'Custom';
+    if (numPrice >= 10000) return `$${(numPrice / 1000).toFixed(1)}K`;
+    return `$${Math.round(numPrice).toLocaleString()}`;
   };
 
   // Handle expert form submission
