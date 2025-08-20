@@ -7945,7 +7945,8 @@
       "developer": "Google",
       "release_year": 2023,
       "description": "Gemini is Google's AI assistant that excels at creative tasks and integrates deeply with Google services. Features multimodal AI capabilities.",
-      "category": "Data Analysis"
+      "category": "Data Analysis",
+      "website": "https://gemini.google.com"
     },
     "features": [
       "Creative writing and content",
@@ -8009,6 +8010,7 @@
       "claude",
       "perplexity",
       "jasper-ai"
-    ]
+    ],
+    "affiliate_link": "https://gemini.google.com"
   }
 ]

@@ -97,6 +97,7 @@ export function loadUnifiedToolsData(fs, path) {
                 (tool.benchmarks?.value || 0)) / 5 / 2 || 4.0,
         use_cases: tool.overview?.use_cases || [],
         affiliate_link: tool.affiliate_link || tool.overview?.website || '#',
+        official_url: tool.overview?.website || tool.affiliate_link || '#',
         logo_url: tool.logo,
         search_volume: tool.search_volume || 1000,
         cpc: tool.cpc || 2.50,
