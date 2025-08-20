@@ -420,8 +420,6 @@ export const categoryContent: Record<string, any> = {
         answer: "Most businesses see immediate time savings and within 2-3 months achieve full ROI through increased content output, improved efficiency, and better content performance metrics."
       }
     ]
-  }
-
   },
 
   "Data Analysis": {
