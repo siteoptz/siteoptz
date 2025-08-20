@@ -120,7 +120,11 @@ export default function ReviewPage({ tool, pageTitle, slug, relatedTools, relate
     },
     {
       question: `How much does ${tool.tool_name} cost?`,
-      answer: `${tool.tool_name} starts at $${tool.pricing.monthly}/month with various pricing tiers available.`
+      answer: tool.pricing.monthly === 'Custom' || tool.pricing.monthly === null || tool.pricing.monthly === undefined ?
+              `${tool.tool_name} has various pricing tiers available.` :
+              tool.pricing.monthly === 0 || tool.pricing.monthly === 'Free' ?
+              `${tool.tool_name} offers a free plan with various pricing tiers available.` :
+              `${tool.tool_name} starts at $${tool.pricing.monthly}/month with various pricing tiers available.`
     },
     {
       question: `Does ${tool.tool_name} offer a free trial?`,
