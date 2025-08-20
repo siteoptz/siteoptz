@@ -42,23 +42,8 @@ const Header: React.FC = () => {
     setIsMenuOpen(false);
   };
 
-  // Prevent body scroll when menu is open
-  useEffect(() => {
-    if (isMenuOpen) {
-      const scrollBarWidth = window.innerWidth - document.documentElement.clientWidth;
-      document.body.style.overflow = 'hidden';
-      document.body.style.paddingRight = `${scrollBarWidth}px`;
-    } else {
-      document.body.style.overflow = '';
-      document.body.style.paddingRight = '';
-    }
-    
-    // Cleanup function to restore scroll when component unmounts
-    return () => {
-      document.body.style.overflow = '';
-      document.body.style.paddingRight = '';
-    };
-  }, [isMenuOpen]);
+  // Body scroll prevention disabled to fix button clicking issues
+  // The mobile menu now allows page scrolling when open
 
 
   return (
