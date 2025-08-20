@@ -18,10 +18,15 @@ const Header: React.FC = () => {
       hasDropdown: true,
       dropdownItems: [
         { name: 'All AI Tools', href: '/tools' },
-        { name: 'AI Assistants', href: '/tools?category=ai-assistant' },
-        { name: 'Content Creation', href: '/tools?category=content-creation' },
-        { name: 'SEO Tools', href: '/tools?category=seo-tool' },
+        { name: 'Text Generation', href: '/tools?category=text-generation' },
         { name: 'Image Generation', href: '/tools?category=image-generation' },
+        { name: 'Audio Generation', href: '/tools?category=audio-generation' },
+        { name: 'Video Generation', href: '/tools?category=video-generation' },
+        { name: 'Code Generation', href: '/tools?category=code-generation' },
+        { name: 'Data Analysis', href: '/tools?category=data-analysis' },
+        { name: 'Productivity', href: '/tools?category=productivity' },
+        { name: 'Research & Education', href: '/tools?category=research-education' },
+        { name: 'Writing Assistant', href: '/tools?category=writing-assistant' },
       ]
     },
     { name: 'Pricing Calculator', href: '/pricing', current: router.pathname === '/pricing' },
@@ -32,6 +37,7 @@ const Header: React.FC = () => {
       current: router.pathname.startsWith('/blog'),
       hasDropdown: false
     },
+    { name: 'Contact', href: '/contact', current: router.pathname === '/contact' },
   ];
 
   const toggleMenu = () => {
@@ -100,7 +106,7 @@ const Header: React.FC = () => {
                 {/* Dropdown Menu */}
                 {item.hasDropdown && item.dropdownItems && (
                   <div 
-                    className="absolute top-full left-0 mt-2 w-56 bg-black rounded-xl shadow-xl border border-gray-800/50 py-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 transform translate-y-2 group-hover:translate-y-0"
+                    className="absolute top-full left-0 mt-2 w-64 bg-black rounded-xl shadow-xl border border-gray-800/50 py-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 transform translate-y-2 group-hover:translate-y-0"
                   >
                     {item.dropdownItems.map((dropdownItem) => (
                       <Link
@@ -205,6 +211,15 @@ const Header: React.FC = () => {
                 transition: 'all 0.2s ease',
                 display: 'block'
               }}>Data Room</Link>
+              <Link href="/contact" onClick={closeMenu} style={{ 
+                color: 'white', 
+                textDecoration: 'none', 
+                fontSize: '18px', 
+                padding: '16px 0', 
+                borderBottom: '1px solid rgba(255,255,255,0.1)',
+                transition: 'all 0.2s ease',
+                display: 'block'
+              }}>Contact</Link>
               
               <div style={{ marginTop: '24px', paddingTop: '24px', borderTop: '1px solid rgba(255,255,255,0.2)' }}>
                 <Link href="/tools" onClick={closeMenu} style={{ 
