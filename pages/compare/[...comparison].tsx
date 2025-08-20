@@ -87,7 +87,7 @@ const ComparisonPage: React.FC<ComparisonPageProps> = ({ tool1, tool2, faqs1, fa
               <p className="text-gray-600">{tool1.overview?.description || tool1.description || ''}</p>
               <div className="mt-4">
                 <span className="text-2xl font-bold text-blue-600">
-                  {tool1.pricing?.[1]?.price_per_month ? `$${tool1.pricing[1].price_per_month}/mo` : 'Free'}
+                  {tool1.pricing?.[1]?.price_per_month ? `$${tool1.pricing?.[1]?.price_per_month}/mo` : 'Free'}
                 </span>
               </div>
             </div>
@@ -97,7 +97,7 @@ const ComparisonPage: React.FC<ComparisonPageProps> = ({ tool1, tool2, faqs1, fa
               <p className="text-gray-600">{tool2.overview?.description || tool2.description || ''}</p>
               <div className="mt-4">
                 <span className="text-2xl font-bold text-green-600">
-                  {tool2.pricing?.[1]?.price_per_month ? `$${tool2.pricing[1].price_per_month}/mo` : 'Free'}
+                  {tool2.pricing?.[1]?.price_per_month ? `$${tool2.pricing?.[1]?.price_per_month}/mo` : 'Free'}
                 </span>
               </div>
             </div>
@@ -122,7 +122,7 @@ const ComparisonPage: React.FC<ComparisonPageProps> = ({ tool1, tool2, faqs1, fa
               </thead>
               <tbody>
                 {tool1.benchmarks && tool2.benchmarks && Object.keys(tool1.benchmarks).map((metric) => {
-                  const score1 = tool1.benchmarks[metric];
+                  const score1 = tool1.benchmarks?.[metric] || 0;
                   const score2 = tool2.benchmarks?.[metric] || 0;
                   const winner = score1 > score2 ? tool1.name : score2 > score1 ? tool2.name : 'Tie';
                   
@@ -200,7 +200,7 @@ const ComparisonPage: React.FC<ComparisonPageProps> = ({ tool1, tool2, faqs1, fa
                       </span>
                     </div>
                     <ul className="text-sm text-gray-600 space-y-1">
-                      {plan.features.map((feature: string, featureIndex: number) => (
+                      {(plan.features || []).map((feature: string, featureIndex: number) => (
                         <li key={featureIndex}>• {feature}</li>
                       ))}
                     </ul>
@@ -220,7 +220,7 @@ const ComparisonPage: React.FC<ComparisonPageProps> = ({ tool1, tool2, faqs1, fa
                       </span>
                     </div>
                     <ul className="text-sm text-gray-600 space-y-1">
-                      {plan.features.map((feature: string, featureIndex: number) => (
+                      {(plan.features || []).map((feature: string, featureIndex: number) => (
                         <li key={featureIndex}>• {feature}</li>
                       ))}
                     </ul>
@@ -289,7 +289,7 @@ const ComparisonPage: React.FC<ComparisonPageProps> = ({ tool1, tool2, faqs1, fa
               Frequently Asked Questions: {tool1.name} vs {tool2.name}
             </h2>
             <div className="space-y-6">
-              {combinedFaqs.map((faq: any, index: number) => (
+              {(combinedFaqs || []).map((faq: any, index: number) => (
                 <div key={index} className="border-b border-gray-200 pb-6 last:border-b-0">
                   <h3 className="text-lg font-semibold text-gray-900 mb-3">
                     {faq.question}
@@ -541,9 +541,9 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
           },
           features: unifiedTool1.features?.core || [],
           pricing: [
-            { tier: 'Starter', price_per_month: unifiedTool1.pricing?.monthly || 0 },
-            { tier: 'Professional', price_per_month: unifiedTool1.pricing?.yearly || 0 },
-            { tier: 'Enterprise', price_per_month: unifiedTool1.pricing?.enterprise === 'Custom' ? 0 : unifiedTool1.pricing?.enterprise || 0 }
+            { tier: 'Starter', price_per_month: unifiedTool1.pricing?.monthly || 0, features: [] },
+            { tier: 'Professional', price_per_month: unifiedTool1.pricing?.yearly || 0, features: [] },
+            { tier: 'Enterprise', price_per_month: unifiedTool1.pricing?.enterprise === 'Custom' ? 0 : unifiedTool1.pricing?.enterprise || 0, features: [] }
           ],
           pros: unifiedTool1.pros || [],
           cons: unifiedTool1.cons || [],
@@ -583,9 +583,9 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
           },
           features: unifiedTool2.features?.core || [],
           pricing: [
-            { tier: 'Starter', price_per_month: unifiedTool2.pricing?.monthly || 0 },
-            { tier: 'Professional', price_per_month: unifiedTool2.pricing?.yearly || 0 },
-            { tier: 'Enterprise', price_per_month: unifiedTool2.pricing?.enterprise === 'Custom' ? 0 : unifiedTool2.pricing?.enterprise || 0 }
+            { tier: 'Starter', price_per_month: unifiedTool2.pricing?.monthly || 0, features: [] },
+            { tier: 'Professional', price_per_month: unifiedTool2.pricing?.yearly || 0, features: [] },
+            { tier: 'Enterprise', price_per_month: unifiedTool2.pricing?.enterprise === 'Custom' ? 0 : unifiedTool2.pricing?.enterprise || 0, features: [] }
           ],
           pros: unifiedTool2.pros || [],
           cons: unifiedTool2.cons || [],
