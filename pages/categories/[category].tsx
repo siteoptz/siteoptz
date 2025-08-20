@@ -281,7 +281,10 @@ export default function CategoryPage({ category, tools, content }: CategoryPageP
                         width={48}
                         height={48}
                         className="rounded-lg object-contain"
-                        onError={(e) => {\n                          console.log(`Logo not found for ${tool.tool_name}: ${e.currentTarget.src}`);\n                          e.currentTarget.src = '/images/tools/placeholder.svg';\n                        }}
+                        onError={(e) => {
+                          console.log(`Logo not found for ${tool.tool_name}: ${e.currentTarget.src}`);
+                          e.currentTarget.src = '/images/tools/placeholder.svg';
+                        }}
                       />
                     </div>
                     <div>
