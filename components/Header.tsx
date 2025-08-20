@@ -175,66 +175,64 @@ const Header: React.FC = () => {
               <button onClick={closeMenu} style={{ background: 'transparent', border: 'none', color: 'white', fontSize: '24px', cursor: 'pointer' }}>✕</button>
             </div>
             
-            <div style={{ display: 'flex', flexDirection: 'column', gap: '20px', minHeight: '300px' }}>
-              <Link href="/" onClick={closeMenu} style={{ 
-                color: 'white', 
-                textDecoration: 'none', 
-                fontSize: '20px', 
-                padding: '16px 20px', 
-                borderRadius: '12px', 
-                border: '1px solid rgba(255,255,255,0.3)',
-                backgroundColor: 'rgba(255,255,255,0.05)',
-                transition: 'all 0.2s ease',
-                display: 'block'
-              }}>🏠 Home</Link>
+            <div style={{ 
+              display: 'flex', 
+              flexDirection: 'column', 
+              gap: '8px', 
+              height: '100%',
+              overflow: 'auto',
+              paddingBottom: '40px'
+            }}>
               <Link href="/tools" onClick={closeMenu} style={{ 
                 color: 'white', 
                 textDecoration: 'none', 
-                fontSize: '20px', 
-                padding: '16px 20px', 
-                borderRadius: '12px', 
-                border: '1px solid rgba(255,255,255,0.3)',
-                backgroundColor: 'rgba(255,255,255,0.05)',
+                fontSize: '18px', 
+                padding: '16px 0', 
+                borderBottom: '1px solid rgba(255,255,255,0.1)',
                 transition: 'all 0.2s ease',
                 display: 'block'
-              }}>🛠️ Tools</Link>
+              }}>Tools</Link>
               <Link href="/pricing" onClick={closeMenu} style={{ 
                 color: 'white', 
                 textDecoration: 'none', 
-                fontSize: '20px', 
-                padding: '16px 20px', 
-                borderRadius: '12px', 
-                border: '1px solid rgba(255,255,255,0.3)',
-                backgroundColor: 'rgba(255,255,255,0.05)',
+                fontSize: '18px', 
+                padding: '16px 0', 
+                borderBottom: '1px solid rgba(255,255,255,0.1)',
                 transition: 'all 0.2s ease',
                 display: 'block'
-              }}>💰 Pricing</Link>
+              }}>Pricing</Link>
               <Link href="/blog" onClick={closeMenu} style={{ 
                 color: 'white', 
                 textDecoration: 'none', 
-                fontSize: '20px', 
-                padding: '16px 20px', 
-                borderRadius: '12px', 
-                border: '1px solid rgba(255,255,255,0.3)',
-                backgroundColor: 'rgba(255,255,255,0.05)',
+                fontSize: '18px', 
+                padding: '16px 0', 
+                borderBottom: '1px solid rgba(255,255,255,0.1)',
                 transition: 'all 0.2s ease',
                 display: 'block'
-              }}>📰 Blog</Link>
+              }}>Blog</Link>
+              <Link href="/data-room" onClick={closeMenu} style={{ 
+                color: 'white', 
+                textDecoration: 'none', 
+                fontSize: '18px', 
+                padding: '16px 0', 
+                borderBottom: '1px solid rgba(255,255,255,0.1)',
+                transition: 'all 0.2s ease',
+                display: 'block'
+              }}>Data Room</Link>
               
-              <div style={{ marginTop: '32px', paddingTop: '32px', borderTop: '1px solid rgba(255,255,255,0.3)' }}>
+              <div style={{ marginTop: '24px', paddingTop: '24px', borderTop: '1px solid rgba(255,255,255,0.2)' }}>
                 <Link href="/tools" onClick={closeMenu} style={{ 
                   display: 'block', 
                   width: '100%', 
-                  padding: '20px', 
+                  padding: '16px', 
                   background: 'linear-gradient(to right, #06b6d4, #2563eb)', 
                   color: 'white', 
                   textDecoration: 'none', 
-                  borderRadius: '12px', 
+                  borderRadius: '8px', 
                   textAlign: 'center', 
-                  fontWeight: 'bold',
-                  fontSize: '18px',
-                  boxShadow: '0 4px 12px rgba(6, 182, 212, 0.3)'
-                }}>🚀 Explore Tools</Link>
+                  fontWeight: '600',
+                  fontSize: '16px'
+                }}>Explore Tools</Link>
               </div>
             </div>
           </div>
