@@ -15,11 +15,11 @@
       ],
       "pricing": {
         "model": "Usage-based",
-        "starting_price": "Custom pricing",
+        "starting_price": "Free tier available",
         "free_tier": true,
-        "price": "Custom",
-        "monthly": "Custom",
-        "yearly": "Custom",
+        "price": 0,
+        "monthly": 0,
+        "yearly": 0,
         "enterprise": "Custom"
       },
       "website": "https://www.resemble.ai",

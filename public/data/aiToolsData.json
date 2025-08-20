@@ -7924,5 +7924,90 @@
     "affiliate_link": "https://synthesia.io/",
     "search_volume": 6500,
     "cpc": 3.8
+  },
+  {
+    "id": "gemini",
+    "name": "Gemini",
+    "slug": "gemini",
+    "logo": "/images/tools/gemini-logo.png",
+    "meta": {
+      "title": "Gemini Review, Pricing, Features & Alternatives [2025]",
+      "description": "Compare Gemini to ChatGPT, Claude, and other AI tools. See pricing, features, and performance benchmarks. Expert analysis with real user feedback."
+    },
+    "schema": {
+      "@type": "Product",
+      "name": "Gemini",
+      "image": "/images/tools/gemini-logo.png",
+      "description": "Google's AI assistant that excels at creative tasks and integrates with Google services.",
+      "brand": "Google"
+    },
+    "overview": {
+      "developer": "Google",
+      "release_year": 2023,
+      "description": "Gemini is Google's AI assistant that excels at creative tasks and integrates deeply with Google services. Features multimodal AI capabilities."
+    },
+    "features": [
+      "Creative writing and content",
+      "Google Workspace integration",
+      "Web search capabilities",
+      "Code generation",
+      "Image analysis",
+      "Multimodal AI",
+      "Advanced reasoning",
+      "Gmail integration",
+      "Google Drive integration",
+      "Google Docs integration",
+      "Real-time collaboration",
+      "2TB Google One storage"
+    ],
+    "pros": [
+      "Deep Google Workspace integration",
+      "Excellent for creative tasks",
+      "Multimodal AI capabilities",
+      "Real-time collaboration",
+      "2TB Google One storage",
+      "Advanced reasoning"
+    ],
+    "cons": [
+      "Limited to Google ecosystem",
+      "Less flexible than standalone tools",
+      "Privacy concerns with Google",
+      "Limited third-party integrations",
+      "Requires Google account"
+    ],
+    "pricing": [
+      {
+        "plan": "Free",
+        "price_per_month": 0,
+        "features": [
+          "Gemini 1.5 Pro access",
+          "Basic features",
+          "Limited requests"
+        ]
+      },
+      {
+        "plan": "Advanced",
+        "price_per_month": 20,
+        "features": [
+          "Gemini Ultra 1.0",
+          "Google Workspace integration",
+          "2TB storage",
+          "Priority access"
+        ]
+      }
+    ],
+    "benchmarks": {
+      "speed": 8.8,
+      "accuracy": 8.7,
+      "integration": 9.5,
+      "ease_of_use": 9,
+      "value": 8.5
+    },
+    "related_tools": [
+      "chatgpt",
+      "claude",
+      "perplexity",
+      "jasper-ai"
+    ]
   }
 ]
