@@ -204,10 +204,10 @@ export default function ToolsPage({ tools, categories, faqs }: { tools: any[], c
           {/* Tools Grid */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {filteredTools.length === 0 ? (
-              <div className="col-span-full text-center py-12">
+              <div className="col-span-full text-center py-12 bg-white rounded-xl border border-gray-200 shadow-md">
                 <div className="text-gray-400 text-6xl mb-4">🔍</div>
-                <h3 className="text-xl font-semibold text-gray-600 mb-2">No tools found</h3>
-                <p className="text-gray-500">
+                <h3 className="text-xl font-semibold text-gray-800 mb-2">No tools found</h3>
+                <p className="text-gray-600">
                   {searchQuery 
                     ? `No tools match your search for "${searchQuery}"` 
                     : `No tools found in ${selectedCategory} category`
@@ -231,8 +231,8 @@ export default function ToolsPage({ tools, categories, faqs }: { tools: any[], c
                 return (
                   <div 
                     key={toolName} 
-                    className={`border rounded-lg p-6 transition-all hover:shadow-lg cursor-pointer ${
-                      selectedTool?.tool_name === toolName ? 'border-blue-500 bg-blue-50' : 'border-gray-200'
+                    className={`bg-white border rounded-xl p-6 transition-all hover:shadow-xl cursor-pointer shadow-md ${
+                      selectedTool?.tool_name === toolName ? 'border-blue-500 ring-2 ring-blue-200' : 'border-gray-200 hover:border-gray-300'
                     }`}
                     onClick={() => handleToolChange(toolName)}
                     onKeyDown={(e) => {
@@ -256,7 +256,7 @@ export default function ToolsPage({ tools, categories, faqs }: { tools: any[], c
                           }}
                         />
                         <div>
-                          <h3 className="text-xl font-semibold">{toolName}</h3>
+                          <h3 className="text-xl font-semibold text-gray-900">{toolName}</h3>
                           <p className="text-gray-600 text-sm">{tool.vendor}</p>
                         </div>
                       </div>
@@ -265,7 +265,7 @@ export default function ToolsPage({ tools, categories, faqs }: { tools: any[], c
                       </span>
                     </div>
                     
-                    <p className="text-gray-700 text-sm mb-4 line-clamp-3">
+                    <p className="text-gray-800 text-sm mb-4 line-clamp-3 leading-relaxed">
                       {tool.description}
                     </p>
                     
@@ -277,7 +277,7 @@ export default function ToolsPage({ tools, categories, faqs }: { tools: any[], c
                       </div>
                       <div className="flex items-center">
                         <span className="text-yellow-400 mr-1">★</span>
-                        <span className="text-sm font-medium">{tool.rating}</span>
+                        <span className="text-sm font-medium text-gray-800">{tool.rating}</span>
                       </div>
                     </div>
                     
@@ -296,13 +296,13 @@ export default function ToolsPage({ tools, categories, faqs }: { tools: any[], c
                         {features.slice(0, 3).map((feature: string, idx: number) => (
                           <span 
                             key={idx}
-                            className="px-2 py-1 bg-gray-100 text-gray-600 text-xs rounded-full"
+                            className="px-3 py-1 bg-gray-50 text-gray-700 text-xs rounded-full border border-gray-200"
                           >
                             {feature}
                           </span>
                         ))}
                         {features.length > 3 && (
-                          <span className="px-2 py-1 bg-gray-100 text-gray-600 text-xs rounded-full">
+                          <span className="px-3 py-1 bg-gray-50 text-gray-700 text-xs rounded-full border border-gray-200">
                             +{features.length - 3} more
                           </span>
                         )}
