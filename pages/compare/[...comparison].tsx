@@ -88,7 +88,9 @@ const ComparisonPage: React.FC<ComparisonPageProps> = ({ tool1, tool2, faqs1, fa
               <p className="text-gray-300">{tool1.overview?.description || tool1.description || ''}</p>
               <div className="mt-4">
                 <span className="text-2xl font-bold text-cyan-400">
-                  {tool1.pricing?.[1]?.price_per_month ? `$${tool1.pricing?.[1]?.price_per_month}/mo` : 'Free'}
+                  {tool1.pricing?.[0]?.price_per_month === 'Custom' ? 'Custom' :
+                   tool1.pricing?.[0]?.price_per_month === 0 ? 'Free' :
+                   tool1.pricing?.[0]?.price_per_month ? `$${tool1.pricing[0].price_per_month}/mo` : 'Custom'}
                 </span>
               </div>
             </div>
@@ -98,7 +100,9 @@ const ComparisonPage: React.FC<ComparisonPageProps> = ({ tool1, tool2, faqs1, fa
               <p className="text-gray-300">{tool2.overview?.description || tool2.description || ''}</p>
               <div className="mt-4">
                 <span className="text-2xl font-bold text-cyan-400">
-                  {tool2.pricing?.[1]?.price_per_month ? `$${tool2.pricing?.[1]?.price_per_month}/mo` : 'Free'}
+                  {tool2.pricing?.[0]?.price_per_month === 'Custom' ? 'Custom' :
+                   tool2.pricing?.[0]?.price_per_month === 0 ? 'Free' :
+                   tool2.pricing?.[0]?.price_per_month ? `$${tool2.pricing[0].price_per_month}/mo` : 'Custom'}
                 </span>
               </div>
             </div>
@@ -195,9 +199,11 @@ const ComparisonPage: React.FC<ComparisonPageProps> = ({ tool1, tool2, faqs1, fa
                 {(tool1.pricing || []).map((plan: any, index: number) => (
                   <div key={index} className="bg-gray-900 border border-gray-800 rounded-lg p-4">
                     <div className="flex justify-between items-center mb-2">
-                      <h4 className="font-semibold text-white">{plan.plan}</h4>
+                      <h4 className="font-semibold text-white">{plan.tier || plan.plan}</h4>
                       <span className="text-lg font-bold text-cyan-400">
-                        {plan.price_per_month === 0 ? 'Free' : `$${plan.price_per_month}/mo`}
+                        {plan.price_per_month === 'Custom' ? 'Custom' :
+                         plan.price_per_month === 0 ? 'Free' : 
+                         `$${plan.price_per_month}/mo`}
                       </span>
                     </div>
                     <ul className="text-sm text-gray-400 space-y-1">
@@ -215,9 +221,11 @@ const ComparisonPage: React.FC<ComparisonPageProps> = ({ tool1, tool2, faqs1, fa
                 {(tool2.pricing || []).map((plan: any, index: number) => (
                   <div key={index} className="bg-gray-900 border border-gray-800 rounded-lg p-4">
                     <div className="flex justify-between items-center mb-2">
-                      <h4 className="font-semibold text-white">{plan.plan}</h4>
+                      <h4 className="font-semibold text-white">{plan.tier || plan.plan}</h4>
                       <span className="text-lg font-bold text-cyan-400">
-                        {plan.price_per_month === 0 ? 'Free' : `$${plan.price_per_month}/mo`}
+                        {plan.price_per_month === 'Custom' ? 'Custom' :
+                         plan.price_per_month === 0 ? 'Free' : 
+                         `$${plan.price_per_month}/mo`}
                       </span>
                     </div>
                     <ul className="text-sm text-gray-400 space-y-1">
@@ -543,9 +551,14 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
           },
           features: unifiedTool1.features?.core || [],
           pricing: [
-            { tier: 'Starter', price_per_month: unifiedTool1.pricing?.monthly || 0, features: [] },
-            { tier: 'Professional', price_per_month: unifiedTool1.pricing?.yearly || 0, features: [] },
-            { tier: 'Enterprise', price_per_month: unifiedTool1.pricing?.enterprise === 'Custom' ? 0 : unifiedTool1.pricing?.enterprise || 0, features: [] }
+            { tier: 'Starter', price_per_month: unifiedTool1.pricing?.monthly === 'Free' || unifiedTool1.pricing?.monthly === 0 ? 0 : 
+                                              typeof unifiedTool1.pricing?.monthly === 'number' ? unifiedTool1.pricing.monthly :
+                                              unifiedTool1.pricing?.monthly === 'Custom' ? 'Custom' : 0, features: [] },
+            { tier: 'Professional', price_per_month: typeof unifiedTool1.pricing?.yearly === 'number' && unifiedTool1.pricing.yearly > 0 ? 
+                                                    Math.round(unifiedTool1.pricing.yearly / 12) :
+                                                    unifiedTool1.pricing?.yearly === 'Custom' ? 'Custom' : 0, features: [] },
+            { tier: 'Enterprise', price_per_month: unifiedTool1.pricing?.enterprise === 'Custom' ? 'Custom' : 
+                                                  typeof unifiedTool1.pricing?.enterprise === 'number' ? unifiedTool1.pricing.enterprise : 'Custom', features: [] }
           ],
           pros: unifiedTool1.pros || [],
           cons: unifiedTool1.cons || [],
@@ -585,9 +598,14 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
           },
           features: unifiedTool2.features?.core || [],
           pricing: [
-            { tier: 'Starter', price_per_month: unifiedTool2.pricing?.monthly || 0, features: [] },
-            { tier: 'Professional', price_per_month: unifiedTool2.pricing?.yearly || 0, features: [] },
-            { tier: 'Enterprise', price_per_month: unifiedTool2.pricing?.enterprise === 'Custom' ? 0 : unifiedTool2.pricing?.enterprise || 0, features: [] }
+            { tier: 'Starter', price_per_month: unifiedTool2.pricing?.monthly === 'Free' || unifiedTool2.pricing?.monthly === 0 ? 0 : 
+                                              typeof unifiedTool2.pricing?.monthly === 'number' ? unifiedTool2.pricing.monthly :
+                                              unifiedTool2.pricing?.monthly === 'Custom' ? 'Custom' : 0, features: [] },
+            { tier: 'Professional', price_per_month: typeof unifiedTool2.pricing?.yearly === 'number' && unifiedTool2.pricing.yearly > 0 ? 
+                                                    Math.round(unifiedTool2.pricing.yearly / 12) :
+                                                    unifiedTool2.pricing?.yearly === 'Custom' ? 'Custom' : 0, features: [] },
+            { tier: 'Enterprise', price_per_month: unifiedTool2.pricing?.enterprise === 'Custom' ? 'Custom' : 
+                                                  typeof unifiedTool2.pricing?.enterprise === 'number' ? unifiedTool2.pricing.enterprise : 'Custom', features: [] }
           ],
           pros: unifiedTool2.pros || [],
           cons: unifiedTool2.cons || [],
