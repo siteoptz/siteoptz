@@ -2,7 +2,6 @@ import { GetStaticProps } from 'next';
 import Head from 'next/head';
 import Link from 'next/link';
 import { Clock, Calendar, ArrowRight, ExternalLink, TrendingUp, Sparkles } from 'lucide-react';
-import Layout from '../../components/Layout';
 
 interface NewsArticle {
   title: string;
@@ -81,7 +80,7 @@ export default function AINewsBlog({ articles, lastUpdated, sources }: BlogProps
   };
 
   return (
-    <Layout>
+    <>
       <Head>
         <title>AI News & Updates - Latest Artificial Intelligence Insights | SiteOptz</title>
         <meta 
@@ -297,7 +296,7 @@ export default function AINewsBlog({ articles, lastUpdated, sources }: BlogProps
 
         </div>
       </div>
-    </Layout>
+    </>
   );
 }
 
