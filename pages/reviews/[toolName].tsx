@@ -527,11 +527,11 @@ export default function ReviewPage({ tool, pageTitle, slug, relatedTools, relate
                     </a>
                   </div>
                   
-                  <div className="bg-white rounded-xl shadow-lg border p-8">
-                    <h3 className="text-xl font-bold text-gray-900 mb-2">Yearly Plan</h3>
-                    <div className="text-4xl font-bold text-blue-600 mb-6">
+                  <div className="bg-black border border-gray-800 rounded-xl shadow-lg p-8">
+                    <h3 className="text-xl font-bold text-white mb-2">Yearly Plan</h3>
+                    <div className="text-4xl font-bold text-cyan-400 mb-6">
                       ${tool.pricing.yearly}
-                      <span className="text-lg text-gray-500">/year</span>
+                      <span className="text-lg text-gray-400">/year</span>
                     </div>
                     
                     <ul className="space-y-3 mb-8">
@@ -555,9 +555,9 @@ export default function ReviewPage({ tool, pageTitle, slug, relatedTools, relate
                     </a>
                   </div>
                   
-                  <div className="bg-white rounded-xl shadow-lg border p-8">
-                    <h3 className="text-xl font-bold text-gray-900 mb-2">Enterprise Plan</h3>
-                    <div className="text-4xl font-bold text-blue-600 mb-6">
+                  <div className="bg-black border border-gray-800 rounded-xl shadow-lg p-8">
+                    <h3 className="text-xl font-bold text-white mb-2">Enterprise Plan</h3>
+                    <div className="text-4xl font-bold text-cyan-400 mb-6">
                       {tool.pricing.enterprise}
                     </div>
                     
@@ -587,31 +587,31 @@ export default function ReviewPage({ tool, pageTitle, slug, relatedTools, relate
 
             {activeTab === 'pros-cons' && (
               <div>
-                <h2 className="text-3xl font-bold text-gray-900 mb-8">{tool.tool_name} Pros and Cons</h2>
+                <h2 className="text-3xl font-bold text-white mb-8">{tool.tool_name} Pros and Cons</h2>
                 <div className="grid md:grid-cols-2 gap-8">
-                  <div className="bg-green-50 p-8 rounded-xl">
-                    <h3 className="text-2xl font-bold text-green-900 mb-6">Pros</h3>
+                  <div className="bg-black border border-gray-800 p-8 rounded-xl">
+                    <h3 className="text-2xl font-bold text-green-400 mb-6">Pros</h3>
                     <ul className="space-y-4">
                       {(tool.pros || []).map((pro, index) => (
                         <li key={index} className="flex items-start">
                           <svg className="w-6 h-6 text-green-500 mt-0.5 mr-3 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
                             <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
                           </svg>
-                          <span className="text-green-800 text-lg">{pro}</span>
+                          <span className="text-gray-300 text-lg">{pro}</span>
                         </li>
                       ))}
                     </ul>
                   </div>
                   
-                  <div className="bg-red-50 p-8 rounded-xl">
-                    <h3 className="text-2xl font-bold text-red-900 mb-6">Cons</h3>
+                  <div className="bg-black border border-gray-800 p-8 rounded-xl">
+                    <h3 className="text-2xl font-bold text-red-400 mb-6">Cons</h3>
                     <ul className="space-y-4">
                       {(tool.cons || []).map((con, index) => (
                         <li key={index} className="flex items-start">
                           <svg className="w-6 h-6 text-red-500 mt-0.5 mr-3 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
                             <path fillRule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clipRule="evenodd" />
                           </svg>
-                          <span className="text-red-800 text-lg">{con}</span>
+                          <span className="text-gray-300 text-lg">{con}</span>
                         </li>
                       ))}
                     </ul>
@@ -623,11 +623,11 @@ export default function ReviewPage({ tool, pageTitle, slug, relatedTools, relate
         </section>
 
         {/* FAQ Section */}
-        <section className="py-16 bg-gray-50">
+        <section className="py-16 relative z-10">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-12">
-              <h2 className="text-3xl font-bold text-gray-900 mb-4">Frequently Asked Questions</h2>
-              <p className="text-lg text-gray-600">Get answers to common questions about {tool.tool_name}</p>
+              <h2 className="text-3xl font-bold text-white mb-4">Frequently Asked Questions</h2>
+              <p className="text-lg text-gray-300">Get answers to common questions about {tool.tool_name}</p>
             </div>
             
             <FAQSection faqs={sampleFaqs} />
@@ -635,30 +635,30 @@ export default function ReviewPage({ tool, pageTitle, slug, relatedTools, relate
         </section>
 
         {/* Related Comparisons */}
-        <section className="py-16 bg-white">
+        <section className="py-16 relative z-10">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-12">
-              <h2 className="text-3xl font-bold text-gray-900 mb-4">{tool.tool_name} Comparisons</h2>
-              <p className="text-lg text-gray-600">See how {tool.tool_name} compares to other AI tools</p>
+              <h2 className="text-3xl font-bold text-white mb-4">{tool.tool_name} Comparisons</h2>
+              <p className="text-lg text-gray-300">See how {tool.tool_name} compares to other AI tools</p>
             </div>
             
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
               {relatedComparisons.slice(0, 6).map((comparison, index) => (
-                <div key={index} className="bg-gray-50 rounded-xl p-6 hover:shadow-lg transition-shadow">
-                  <h3 className="text-lg font-semibold text-gray-900 mb-3">
+                <div key={index} className="bg-black border border-gray-800 rounded-xl p-6 hover:shadow-lg hover:border-gray-600 transition-all">
+                  <h3 className="text-lg font-semibold text-white mb-3">
                     <a 
                       href={`/compare/${comparison.toolASlug || comparison.toolAName.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-+|-+$/g, '')}/vs/${comparison.toolBSlug || comparison.toolBName.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-+|-+$/g, '')}`}
-                      className="hover:text-blue-600 transition-colors"
+                      className="hover:text-cyan-400 transition-colors"
                     >
                       {comparison.title}
                     </a>
                   </h3>
-                  <p className="text-gray-600 text-sm mb-4">
+                  <p className="text-gray-300 text-sm mb-4">
                     Compare {comparison.toolAName} and {comparison.toolBName} features, pricing, and use cases.
                   </p>
                   <a 
                     href={`/compare/${comparison.toolASlug || comparison.toolAName.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-+|-+$/g, '')}/vs/${comparison.toolBSlug || comparison.toolBName.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-+|-+$/g, '')}`}
-                    className="text-blue-600 hover:text-blue-800 text-sm font-medium transition-colors"
+                    className="text-cyan-400 hover:text-cyan-300 text-sm font-medium transition-colors"
                   >
                     Read Comparison →
                   </a>
@@ -669,16 +669,16 @@ export default function ReviewPage({ tool, pageTitle, slug, relatedTools, relate
         </section>
 
         {/* Alternative Tools */}
-        <section className="py-16 bg-gray-50">
+        <section className="py-16 relative z-10">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-12">
-              <h2 className="text-3xl font-bold text-gray-900 mb-4">{tool.tool_name} Alternatives</h2>
-              <p className="text-lg text-gray-600">Explore other AI tools in this category</p>
+              <h2 className="text-3xl font-bold text-white mb-4">{tool.tool_name} Alternatives</h2>
+              <p className="text-lg text-gray-300">Explore other AI tools in this category</p>
             </div>
             
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
               {relatedTools.slice(0, 4).map((relatedTool, index) => (
-                <div key={index} className="bg-white rounded-xl p-6 shadow-sm hover:shadow-lg transition-shadow">
+                <div key={index} className="bg-black border border-gray-800 rounded-xl p-6 shadow-sm hover:shadow-lg hover:border-gray-600 transition-all">
                   <div className="flex items-center mb-4">
                     <img
                       src={relatedTool.logo_url || '/images/tools/placeholder-logo.svg'}
@@ -689,20 +689,20 @@ export default function ReviewPage({ tool, pageTitle, slug, relatedTools, relate
                         e.currentTarget.src = '/images/tools/placeholder-logo.svg';
                       }}
                     />
-                    <h3 className="font-semibold text-gray-900">{relatedTool.tool_name || 'Unknown Tool'}</h3>
+                    <h3 className="font-semibold text-white">{relatedTool.tool_name || 'Unknown Tool'}</h3>
                   </div>
-                  <p className="text-gray-600 text-sm mb-4">
+                  <p className="text-gray-300 text-sm mb-4">
                     {(relatedTool.description || '').length > 100 
                       ? `${(relatedTool.description || '').substring(0, 100)}...` 
                       : (relatedTool.description || '')}
                   </p>
                   <div className="flex justify-between items-center">
-                    <span className="text-sm text-gray-500">
+                    <span className="text-sm text-gray-400">
                       From {relatedTool.pricing?.monthly ? `$${relatedTool.pricing.monthly}` : 'Custom'}
                     </span>
                     <a 
                       href={`/reviews/${(relatedTool.tool_name || '').toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-+|-+$/g, '')}`}
-                      className="text-blue-600 hover:text-blue-800 text-sm font-medium"
+                      className="text-cyan-400 hover:text-cyan-300 text-sm font-medium"
                     >
                       Review →
                     </a>
@@ -714,12 +714,12 @@ export default function ReviewPage({ tool, pageTitle, slug, relatedTools, relate
         </section>
 
         {/* Final CTA */}
-        <section className="py-20 bg-gradient-to-br from-blue-600 via-purple-600 to-blue-800">
-          <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
+        <section className="py-20 relative z-10">
+          <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8 bg-black border border-gray-800 rounded-2xl p-12">
             <h2 className="text-4xl font-bold text-white mb-6">
               Ready to Try {tool.tool_name}?
             </h2>
-            <p className="text-xl text-blue-100 mb-8">
+            <p className="text-xl text-gray-300 mb-8">
               Start your free trial today and experience {tool.tool_name} for yourself.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -727,7 +727,7 @@ export default function ReviewPage({ tool, pageTitle, slug, relatedTools, relate
                 href={tool.affiliate_link || tool.official_url}
                 target="_blank"
                 rel="noopener noreferrer sponsored"
-                className="bg-white text-blue-600 hover:bg-blue-50 font-bold py-4 px-8 rounded-lg transition-colors"
+                className="bg-cyan-600 text-white hover:bg-cyan-700 font-bold py-4 px-8 rounded-lg transition-colors"
               >
                 Start Free Trial
               </a>
@@ -735,7 +735,7 @@ export default function ReviewPage({ tool, pageTitle, slug, relatedTools, relate
                 href={tool.official_url}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="border-2 border-white text-white hover:bg-white hover:text-blue-600 font-semibold py-4 px-8 rounded-lg transition-colors"
+                className="border-2 border-gray-600 text-gray-300 hover:bg-gray-600 hover:text-white font-semibold py-4 px-8 rounded-lg transition-colors"
               >
                 Visit {tool.tool_name}
               </a>
