@@ -84,20 +84,20 @@ const ComparisonPage: React.FC<ComparisonPageProps> = ({ tool1, tool2, faqs1, fa
             <div className="text-center p-6 bg-blue-50 rounded-lg">
               <img src={tool1.logo} alt={`${tool1.name} logo`} className="w-16 h-16 mx-auto mb-4 rounded-lg" />
               <h2 className="text-2xl font-bold text-gray-900 mb-2">{tool1.name}</h2>
-              <p className="text-gray-600">{tool1.overview.description}</p>
+              <p className="text-gray-600">{tool1.overview?.description || tool1.description || ''}</p>
               <div className="mt-4">
                 <span className="text-2xl font-bold text-blue-600">
-                  {tool1.pricing[1]?.price_per_month ? `$${tool1.pricing[1].price_per_month}/mo` : 'Free'}
+                  {tool1.pricing?.[1]?.price_per_month ? `$${tool1.pricing[1].price_per_month}/mo` : 'Free'}
                 </span>
               </div>
             </div>
             <div className="text-center p-6 bg-green-50 rounded-lg">
               <img src={tool2.logo} alt={`${tool2.name} logo`} className="w-16 h-16 mx-auto mb-4 rounded-lg" />
               <h2 className="text-2xl font-bold text-gray-900 mb-2">{tool2.name}</h2>
-              <p className="text-gray-600">{tool2.overview.description}</p>
+              <p className="text-gray-600">{tool2.overview?.description || tool2.description || ''}</p>
               <div className="mt-4">
                 <span className="text-2xl font-bold text-green-600">
-                  {tool2.pricing[1]?.price_per_month ? `$${tool2.pricing[1].price_per_month}/mo` : 'Free'}
+                  {tool2.pricing?.[1]?.price_per_month ? `$${tool2.pricing[1].price_per_month}/mo` : 'Free'}
                 </span>
               </div>
             </div>
@@ -105,6 +105,7 @@ const ComparisonPage: React.FC<ComparisonPageProps> = ({ tool1, tool2, faqs1, fa
         </div>
 
         {/* Performance Benchmarks with H2 keyword optimization */}
+        {tool1.benchmarks && tool2.benchmarks && (
         <div className="bg-white rounded-lg shadow-lg p-8 mb-8">
           <h2 className="text-2xl font-bold text-gray-900 mb-6">
             {tool1.name} vs {tool2.name}: Performance Benchmarks
@@ -120,9 +121,9 @@ const ComparisonPage: React.FC<ComparisonPageProps> = ({ tool1, tool2, faqs1, fa
                 </tr>
               </thead>
               <tbody>
-                {Object.keys(tool1.benchmarks).map((metric) => {
+                {tool1.benchmarks && tool2.benchmarks && Object.keys(tool1.benchmarks).map((metric) => {
                   const score1 = tool1.benchmarks[metric];
-                  const score2 = tool2.benchmarks[metric];
+                  const score2 = tool2.benchmarks?.[metric] || 0;
                   const winner = score1 > score2 ? tool1.name : score2 > score1 ? tool2.name : 'Tie';
                   
                   return (
@@ -148,6 +149,7 @@ const ComparisonPage: React.FC<ComparisonPageProps> = ({ tool1, tool2, faqs1, fa
             </table>
           </div>
         </div>
+        )}
 
         {/* Feature Comparison with H2 keyword optimization */}
         <div className="bg-white rounded-lg shadow-lg p-8 mb-8">
@@ -158,7 +160,7 @@ const ComparisonPage: React.FC<ComparisonPageProps> = ({ tool1, tool2, faqs1, fa
             <div>
               <h3 className="text-xl font-semibold mb-4 text-blue-600">{tool1.name} Features</h3>
               <ul className="space-y-2">
-                {tool1.features.map((feature: string, index: number) => (
+                {(tool1.features || []).map((feature: string, index: number) => (
                   <li key={index} className="flex items-center">
                     <span className="text-green-500 mr-2">✓</span>
                     <span className="text-gray-700">{feature}</span>
@@ -169,7 +171,7 @@ const ComparisonPage: React.FC<ComparisonPageProps> = ({ tool1, tool2, faqs1, fa
             <div>
               <h3 className="text-xl font-semibold mb-4 text-green-600">{tool2.name} Features</h3>
               <ul className="space-y-2">
-                {tool2.features.map((feature: string, index: number) => (
+                {(tool2.features || []).map((feature: string, index: number) => (
                   <li key={index} className="flex items-center">
                     <span className="text-green-500 mr-2">✓</span>
                     <span className="text-gray-700">{feature}</span>
@@ -189,7 +191,7 @@ const ComparisonPage: React.FC<ComparisonPageProps> = ({ tool1, tool2, faqs1, fa
             <div>
               <h3 className="text-xl font-semibold mb-4 text-blue-600">{tool1.name} Pricing</h3>
               <div className="space-y-4">
-                {tool1.pricing.map((plan: any, index: number) => (
+                {(tool1.pricing || []).map((plan: any, index: number) => (
                   <div key={index} className="border border-gray-200 rounded-lg p-4">
                     <div className="flex justify-between items-center mb-2">
                       <h4 className="font-semibold">{plan.plan}</h4>
@@ -209,7 +211,7 @@ const ComparisonPage: React.FC<ComparisonPageProps> = ({ tool1, tool2, faqs1, fa
             <div>
               <h3 className="text-xl font-semibold mb-4 text-green-600">{tool2.name} Pricing</h3>
               <div className="space-y-4">
-                {tool2.pricing.map((plan: any, index: number) => (
+                {(tool2.pricing || []).map((plan: any, index: number) => (
                   <div key={index} className="border border-gray-200 rounded-lg p-4">
                     <div className="flex justify-between items-center mb-2">
                       <h4 className="font-semibold">{plan.plan}</h4>
@@ -241,7 +243,7 @@ const ComparisonPage: React.FC<ComparisonPageProps> = ({ tool1, tool2, faqs1, fa
                 <div>
                   <h4 className="font-semibold text-green-600 mb-2">✅ Pros</h4>
                   <ul className="space-y-1 text-sm">
-                    {tool1.pros.map((pro: string, index: number) => (
+                    {(tool1.pros || []).map((pro: string, index: number) => (
                       <li key={index} className="text-gray-700">• {pro}</li>
                     ))}
                   </ul>
@@ -249,7 +251,7 @@ const ComparisonPage: React.FC<ComparisonPageProps> = ({ tool1, tool2, faqs1, fa
                 <div>
                   <h4 className="font-semibold text-red-600 mb-2">❌ Cons</h4>
                   <ul className="space-y-1 text-sm">
-                    {tool1.cons.map((con: string, index: number) => (
+                    {(tool1.cons || []).map((con: string, index: number) => (
                       <li key={index} className="text-gray-700">• {con}</li>
                     ))}
                   </ul>
@@ -262,7 +264,7 @@ const ComparisonPage: React.FC<ComparisonPageProps> = ({ tool1, tool2, faqs1, fa
                 <div>
                   <h4 className="font-semibold text-green-600 mb-2">✅ Pros</h4>
                   <ul className="space-y-1 text-sm">
-                    {tool2.pros.map((pro: string, index: number) => (
+                    {(tool2.pros || []).map((pro: string, index: number) => (
                       <li key={index} className="text-gray-700">• {pro}</li>
                     ))}
                   </ul>
@@ -270,7 +272,7 @@ const ComparisonPage: React.FC<ComparisonPageProps> = ({ tool1, tool2, faqs1, fa
                 <div>
                   <h4 className="font-semibold text-red-600 mb-2">❌ Cons</h4>
                   <ul className="space-y-1 text-sm">
-                    {tool2.cons.map((con: string, index: number) => (
+                    {(tool2.cons || []).map((con: string, index: number) => (
                       <li key={index} className="text-gray-700">• {con}</li>
                     ))}
                   </ul>
@@ -310,7 +312,7 @@ const ComparisonPage: React.FC<ComparisonPageProps> = ({ tool1, tool2, faqs1, fa
             <div className="p-6 bg-blue-50 rounded-lg">
               <h3 className="text-xl font-semibold text-blue-600 mb-3">Choose {tool1.name} If:</h3>
               <ul className="space-y-2 text-gray-700">
-                {tool1.pros.slice(0, 3).map((pro: string, index: number) => (
+                {(tool1.pros || []).slice(0, 3).map((pro: string, index: number) => (
                   <li key={index} className="flex items-start">
                     <span className="text-blue-500 mr-2">•</span>
                     <span>You prioritize {pro.toLowerCase()}</span>
@@ -327,7 +329,7 @@ const ComparisonPage: React.FC<ComparisonPageProps> = ({ tool1, tool2, faqs1, fa
             <div className="p-6 bg-green-50 rounded-lg">
               <h3 className="text-xl font-semibold text-green-600 mb-3">Choose {tool2.name} If:</h3>
               <ul className="space-y-2 text-gray-700">
-                {tool2.pros.slice(0, 3).map((pro: string, index: number) => (
+                {(tool2.pros || []).slice(0, 3).map((pro: string, index: number) => (
                   <li key={index} className="flex items-start">
                     <span className="text-green-500 mr-2">•</span>
                     <span>You prioritize {pro.toLowerCase()}</span>
@@ -528,6 +530,7 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
           name: unifiedTool1.tool_name,
           slug: tool1Slug,
           logo: unifiedTool1.logo_url,
+          description: unifiedTool1.description,
           overview: {
             description: unifiedTool1.description,
             category: unifiedTool1.category,
@@ -569,6 +572,7 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
           name: unifiedTool2.tool_name,
           slug: tool2Slug,
           logo: unifiedTool2.logo_url,
+          description: unifiedTool2.description,
           overview: {
             description: unifiedTool2.description,
             category: unifiedTool2.category,
