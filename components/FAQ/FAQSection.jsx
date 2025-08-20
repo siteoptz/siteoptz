@@ -5,7 +5,7 @@ import Link from 'next/link';
 const FAQSection = ({ 
   faqs, 
   title = "Frequently Asked Questions",
-  description,
+  description = null,
   showStructuredData = true,
   maxVisible = null,
   className = ''

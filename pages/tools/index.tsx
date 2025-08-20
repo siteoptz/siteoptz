@@ -343,7 +343,7 @@ export default function ToolsPage({ tools, categories, faqs }: { tools: any[], c
 
         <section>
           <FAQSection 
-            faqs={faqs} 
+            faqs={faqs}
           />
         </section>
       </main>
