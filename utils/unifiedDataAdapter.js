@@ -86,7 +86,8 @@ export function loadUnifiedToolsData(fs, path) {
           monthly: tool.pricing?.[0]?.price_per_month || 'Custom',
           yearly: tool.pricing?.[1]?.price_per_month || 'Custom',
           enterprise: tool.pricing?.[2]?.price_per_month || 'Custom',
-          price: tool.pricing?.[0]?.price_per_month === 0 ? 'Free' : `From $${tool.pricing?.[0]?.price_per_month || 0}/month`,
+          price: tool.pricing?.[0]?.price_per_month === 0 ? 'Free' : 
+                 (tool.pricing?.[0]?.price_per_month ? `From $${tool.pricing?.[0]?.price_per_month}/month` : 'Custom'),
           tier: 'month'
         },
         free_trial: tool.pricing?.[0]?.price_per_month === 0,

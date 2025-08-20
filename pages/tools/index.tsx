@@ -309,9 +309,21 @@ export default function ToolsPage({ tools, categories, faqs }: { tools: any[], c
                       <div>
                         <span className="text-lg font-bold text-white">
                           {(() => {
-                            const price = tool.pricing?.price || 
-                                         (tool.pricing?.monthly && tool.pricing.monthly > 0 ? `$${tool.pricing.monthly}/month` :
-                                          tool.pricing?.monthly === 0 ? 'Free' : 'Custom');
+                            // Prioritize monthly pricing over generic price field
+                            let price;
+                            if (tool.pricing?.monthly !== undefined) {
+                              if (tool.pricing.monthly === 0 || tool.pricing.monthly === 'Free') {
+                                price = 'Free';
+                              } else if (tool.pricing.monthly === 'Custom') {
+                                price = 'Custom';
+                              } else if (typeof tool.pricing.monthly === 'number' && tool.pricing.monthly > 0) {
+                                price = `$${tool.pricing.monthly}/month`;
+                              } else {
+                                price = 'Custom';
+                              }
+                            } else {
+                              price = tool.pricing?.price || 'Custom';
+                            }
                             // Remove any "Contact for pricing" text and replace with "Custom"
                             return typeof price === 'string' && price.toLowerCase().includes('contact for pricing') ? 'Custom' : price;
                           })()}
