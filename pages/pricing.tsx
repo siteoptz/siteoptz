@@ -255,7 +255,7 @@ export const getStaticProps: GetStaticProps = async () => {
         slug: tool.slug || tool.tool_name.toLowerCase().replace(/[^a-z0-9]+/g, '-'),
         name: tool.tool_name,
         pricing: pricingPlans.length > 0 ? pricingPlans : [{
-          plan: 'Contact for Pricing',
+          plan: 'Custom Pricing',
           price_per_month: 0,
           features: tool.use_cases || tool.pros || []
         }],

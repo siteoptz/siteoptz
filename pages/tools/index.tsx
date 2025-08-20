@@ -308,9 +308,13 @@ export default function ToolsPage({ tools, categories, faqs }: { tools: any[], c
                     <div className="flex justify-between items-center mb-4">
                       <div>
                         <span className="text-lg font-bold text-white">
-                          {tool.pricing?.price || 
-                           (tool.pricing?.monthly && tool.pricing.monthly > 0 ? `$${tool.pricing.monthly}/month` :
-                            tool.pricing?.monthly === 0 ? 'Free' : 'Custom')}
+                          {(() => {
+                            const price = tool.pricing?.price || 
+                                         (tool.pricing?.monthly && tool.pricing.monthly > 0 ? `$${tool.pricing.monthly}/month` :
+                                          tool.pricing?.monthly === 0 ? 'Free' : 'Custom');
+                            // Remove any "Contact for pricing" text and replace with "Custom"
+                            return typeof price === 'string' && price.toLowerCase().includes('contact for pricing') ? 'Custom' : price;
+                          })()}
                         </span>
                       </div>
                       <div className="flex items-center">
