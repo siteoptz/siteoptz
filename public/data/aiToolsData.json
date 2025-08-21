@@ -1828,7 +1828,7 @@
     "overview": {
       "developer": "Character.AI",
       "release_year": 2023,
-      "category": "SEO & Optimization",
+      "category": "Image Generation",
       "description": "AI platform for creating and chatting with AI characters for entertainment, education, and creative purposes",
       "website": "https://character.ai",
       "support": "Email, Documentation, Community",
@@ -2226,7 +2226,7 @@
     "overview": {
       "developer": "Cohere",
       "release_year": 2023,
-      "category": "Voice",
+      "category": "Content Creation",
       "description": "Enterprise AI platform providing large language models for text generation, classification, and semantic search",
       "website": "https://cohere.ai",
       "support": "Email, Documentation, Community",
@@ -2361,7 +2361,7 @@
     "overview": {
       "developer": "Copy.ai",
       "release_year": 2023,
-      "category": "Voice",
+      "category": "Content Creation",
       "description": "Copy.ai is an AI-powered marketing copy generator that helps businesses create compelling ad copy, social media posts, product descriptions, and marketing content at scale.",
       "website": "https://www.copy.ai/",
       "support": "Email, Chat",
@@ -2660,7 +2660,7 @@
     "overview": {
       "developer": "jasper",
       "release_year": 2023,
-      "category": "Voice",
+      "category": "Content Creation",
       "description": "AI writing assistant for marketing, content, and business writing",
       "website": "https://jasper.ai",
       "support": "Email, Chat",
@@ -2907,7 +2907,7 @@
     "overview": {
       "developer": "Writesonic",
       "release_year": 2023,
-      "category": "Voice",
+      "category": "SEO & Optimization",
       "description": "Writesonic is a comprehensive AI writing platform that combines content generation, SEO optimization, and chatbot capabilities to help businesses create articles, ads, and marketing materials.",
       "website": "https://writesonic.com/",
       "support": "Email, Chat",
@@ -4742,7 +4742,7 @@
     "overview": {
       "developer": "Replicate",
       "release_year": 2023,
-      "category": "Image Generation",
+      "category": "Code Generation",
       "description": "Platform for running machine learning models in the cloud with simple API access to popular AI models",
       "website": "https://replicate.com",
       "support": "Email, Documentation, Community",
@@ -5024,7 +5024,7 @@
     "overview": {
       "developer": "Stability AI",
       "release_year": 2023,
-      "category": "SEO & Optimization",
+      "category": "Image Generation",
       "description": "Web interface for Stability AI's Stable Diffusion model for generating high-quality images from text",
       "website": "https://beta.dreamstudio.ai",
       "support": "Email, Documentation, Community",
@@ -10137,7 +10137,7 @@
     "description": "Shortwave is an AI-powered email client designed to automate and enhance your email management. It offers features like AI-driven organization, scheduling, writing assistance, and advanced search capabilities to save users time and improve productivity. It aims to provide an ultimate inbox experience with features like split inboxes, email bundling, and turning emails into todos.",
     "overview": {
       "description": "Shortwave is an AI-powered email client designed to automate and enhance your email management. It offers features like AI-driven organization, scheduling, writing assistance, and advanced search capabilities to save users time and improve productivity. It aims to provide an ultimate inbox experience with features like split inboxes, email bundling, and turning emails into todos.",
-      "category": "Productivity",
+      "category": "Email Marketing",
       "developer": "Shortwave",
       "website": "https://www.shortwave.com/",
       "integrations": [
@@ -10256,7 +10256,7 @@
       "value": 9
     },
     "affiliate_link": "https://www.shortwave.com/",
-    "category": "Productivity",
+    "category": "Email Marketing",
     "tags": [
       "productivity",
       "ai tool",
@@ -10776,7 +10776,7 @@
     "description": "Microsoft PowerPoint is a presentation software that allows users to create captivating presentations, collaborate in real-time, and design presentations from any device. It offers features for idea generation, confident creation, engagement, and sharing.",
     "overview": {
       "description": "Microsoft PowerPoint is a presentation software that allows users to create captivating presentations, collaborate in real-time, and design presentations from any device. It offers features for idea generation, confident creation, engagement, and sharing.",
-      "category": "Social Media",
+      "category": "Productivity",
       "developer": "Microsoft",
       "website": "https://www.microsoft.com/en-us/microsoft-365/powerpoint",
       "integrations": [
@@ -10900,7 +10900,7 @@
       "value": 7
     },
     "affiliate_link": "https://www.microsoft.com/en-us/microsoft-365/powerpoint",
-    "category": "Social Media",
+    "category": "Productivity",
     "tags": [
       "productivity",
       "ai tool",
