@@ -142,7 +142,19 @@
     ],
     "affiliate_link": "https://elevenlabs.io/",
     "search_volume": 9500,
-    "cpc": 3.2
+    "cpc": 3.2,
+    "use_cases": [
+      "Podcast Creation",
+      "Audiobook Narration",
+      "Video Voiceovers",
+      "Commercial Audio",
+      "Educational Content"
+    ],
+    "tags": [
+      "voice ai",
+      "text-to-speech",
+      "ai voice generation"
+    ]
   },
   {
     "id": "murph-ai",
@@ -288,7 +300,19 @@
     ],
     "affiliate_link": "https://murph.ai/",
     "search_volume": 3800,
-    "cpc": 4.1
+    "cpc": 4.1,
+    "use_cases": [
+      "Podcast Creation",
+      "Audiobook Narration",
+      "Video Voiceovers",
+      "Commercial Audio",
+      "Educational Content"
+    ],
+    "tags": [
+      "voice ai",
+      "text-to-speech",
+      "ai voice generation"
+    ]
   },
   {
     "id": "play-ht",
@@ -434,7 +458,19 @@
     ],
     "affiliate_link": "https://play.ht/",
     "search_volume": 4200,
-    "cpc": 3.2
+    "cpc": 3.2,
+    "use_cases": [
+      "Podcast Creation",
+      "Audiobook Narration",
+      "Video Voiceovers",
+      "Commercial Audio",
+      "Educational Content"
+    ],
+    "tags": [
+      "voice ai",
+      "text-to-speech",
+      "ai voice generation"
+    ]
   },
   {
     "id": "synthesys",
@@ -580,7 +616,19 @@
     ],
     "affiliate_link": "https://synthesys.io/",
     "search_volume": 2600,
-    "cpc": 5.4
+    "cpc": 5.4,
+    "use_cases": [
+      "Podcast Creation",
+      "Audiobook Narration",
+      "Video Voiceovers",
+      "Commercial Audio",
+      "Educational Content"
+    ],
+    "tags": [
+      "voice ai",
+      "text-to-speech",
+      "ai voice generation"
+    ]
   },
   {
     "id": "wellsaid-labs",
@@ -726,7 +774,19 @@
     ],
     "affiliate_link": "https://wellsaidlabs.com/",
     "search_volume": 1800,
-    "cpc": 6.2
+    "cpc": 6.2,
+    "use_cases": [
+      "Podcast Creation",
+      "Audiobook Narration",
+      "Video Voiceovers",
+      "Commercial Audio",
+      "Educational Content"
+    ],
+    "tags": [
+      "voice ai",
+      "text-to-speech",
+      "ai voice generation"
+    ]
   },
   {
     "id": "amazon-codewhisperer",
@@ -7264,7 +7324,7 @@
     "overview": {
       "developer": "Kapwing",
       "release_year": 2023,
-      "category": "Video Generation",
+      "category": "Voice",
       "description": "Kapwing is an online video editor with AI-powered features and collaboration tools, perfect for teams creating social media content and quick video projects in the browser.",
       "website": "https://kapwing.com/",
       "support": "Email, Chat",
@@ -7352,7 +7412,19 @@
     ],
     "affiliate_link": "https://kapwing.com/",
     "search_volume": 8900,
-    "cpc": 2.6
+    "cpc": 2.6,
+    "use_cases": [
+      "Podcast Creation",
+      "Audiobook Narration",
+      "Video Voiceovers",
+      "Commercial Audio",
+      "Educational Content"
+    ],
+    "tags": [
+      "voice ai",
+      "text-to-speech",
+      "ai voice generation"
+    ]
   },
   {
     "id": "lumen5",
@@ -7410,7 +7482,7 @@
     "overview": {
       "developer": "Lumen5",
       "release_year": 2023,
-      "category": "Video Generation",
+      "category": "Voice",
       "description": "Lumen5 is an AI video maker that transforms text content into engaging videos with templates and automated scene creation, perfect for social media marketing and content promotion.",
       "website": "https://lumen5.com/",
       "support": "Email, Chat",
@@ -7498,7 +7570,19 @@
     ],
     "affiliate_link": "https://lumen5.com/",
     "search_volume": 6200,
-    "cpc": 3.4
+    "cpc": 3.4,
+    "use_cases": [
+      "Podcast Creation",
+      "Audiobook Narration",
+      "Video Voiceovers",
+      "Commercial Audio",
+      "Educational Content"
+    ],
+    "tags": [
+      "voice ai",
+      "text-to-speech",
+      "ai voice generation"
+    ]
   },
   {
     "id": "pictory",
@@ -7556,7 +7640,7 @@
     "overview": {
       "developer": "Pictory",
       "release_year": 2023,
-      "category": "Social Media",
+      "category": "Voice",
       "description": "Pictory is an AI video creation tool that transforms text content into engaging videos with automated editing, stock footage, and social media optimization for content creators and marketers.",
       "website": "https://pictory.ai/",
       "support": "Email, Chat",
@@ -7644,7 +7728,19 @@
     ],
     "affiliate_link": "https://pictory.ai/",
     "search_volume": 4800,
-    "cpc": 3.8
+    "cpc": 3.8,
+    "use_cases": [
+      "Podcast Creation",
+      "Audiobook Narration",
+      "Video Voiceovers",
+      "Commercial Audio",
+      "Educational Content"
+    ],
+    "tags": [
+      "voice ai",
+      "text-to-speech",
+      "ai voice generation"
+    ]
   },
   {
     "id": "runway-ml",
@@ -7702,7 +7798,7 @@
     "overview": {
       "developer": "Runway",
       "release_year": 2023,
-      "category": "Video Generation",
+      "category": "Voice",
       "description": "Runway ML is an AI-powered creative platform that specializes in video generation and editing. It offers cutting-edge tools for creating videos from text, advanced editing capabilities, and collaborative features for creative professionals and content creators.",
       "website": "https://runwayml.com/",
       "support": "Email, Chat",
@@ -7788,7 +7884,19 @@
     ],
     "affiliate_link": "https://runwayml.com/",
     "search_volume": 8500,
-    "cpc": 3.5
+    "cpc": 3.5,
+    "use_cases": [
+      "Podcast Creation",
+      "Audiobook Narration",
+      "Video Voiceovers",
+      "Commercial Audio",
+      "Educational Content"
+    ],
+    "tags": [
+      "voice ai",
+      "text-to-speech",
+      "ai voice generation"
+    ]
   },
   {
     "id": "synthesia",
@@ -7846,7 +7954,7 @@
     "overview": {
       "developer": "Synthesia",
       "release_year": 2023,
-      "category": "Video Generation",
+      "category": "Voice",
       "description": "Synthesia is an AI video generation platform that creates professional videos with AI avatars. It allows users to generate videos from text in multiple languages, making it ideal for training, marketing, and educational content creation without traditional video production.",
       "website": "https://synthesia.io/",
       "support": "Email, Chat",
@@ -7932,7 +8040,19 @@
     ],
     "affiliate_link": "https://synthesia.io/",
     "search_volume": 6500,
-    "cpc": 3.8
+    "cpc": 3.8,
+    "use_cases": [
+      "Podcast Creation",
+      "Audiobook Narration",
+      "Video Voiceovers",
+      "Commercial Audio",
+      "Educational Content"
+    ],
+    "tags": [
+      "voice ai",
+      "text-to-speech",
+      "ai voice generation"
+    ]
   },
   {
     "id": "gemini",
