@@ -35,7 +35,7 @@
         "@type": "Brand",
         "name": "elevenlabs"
       },
-      "category": "Voice",
+      "category": null,
       "aggregateRating": {
         "@type": "AggregateRating",
         "ratingValue": 4.7,
@@ -180,7 +180,7 @@
         "@type": "Brand",
         "name": "murph"
       },
-      "category": "Voice",
+      "category": null,
       "aggregateRating": {
         "@type": "AggregateRating",
         "ratingValue": 4.5,
@@ -326,7 +326,7 @@
         "@type": "Brand",
         "name": "play-ht"
       },
-      "category": "Voice",
+      "category": null,
       "aggregateRating": {
         "@type": "AggregateRating",
         "ratingValue": 4.4,
@@ -472,7 +472,7 @@
         "@type": "Brand",
         "name": "synthesys"
       },
-      "category": "Voice",
+      "category": null,
       "aggregateRating": {
         "@type": "AggregateRating",
         "ratingValue": 4.3,
@@ -618,7 +618,7 @@
         "@type": "Brand",
         "name": "wellsaid"
       },
-      "category": "Voice",
+      "category": null,
       "aggregateRating": {
         "@type": "AggregateRating",
         "ratingValue": 4.2,
@@ -764,7 +764,7 @@
         "@type": "Brand",
         "name": "amazon"
       },
-      "category": "Code Generation",
+      "category": null,
       "aggregateRating": {
         "@type": "AggregateRating",
         "ratingValue": 4.3,
@@ -910,7 +910,7 @@
         "@type": "Brand",
         "name": "cursor"
       },
-      "category": "Code Generation",
+      "category": null,
       "aggregateRating": {
         "@type": "AggregateRating",
         "ratingValue": 4.5,
@@ -1055,7 +1055,7 @@
         "@type": "Brand",
         "name": "github"
       },
-      "category": "Code Generation",
+      "category": null,
       "aggregateRating": {
         "@type": "AggregateRating",
         "ratingValue": 4.6,
@@ -1200,7 +1200,7 @@
         "@type": "Brand",
         "name": "Hugging Face"
       },
-      "category": "Code Generation",
+      "category": null,
       "aggregateRating": {
         "@type": "AggregateRating",
         "ratingValue": 4.5,
@@ -1352,7 +1352,7 @@
         "@type": "Brand",
         "name": "replit"
       },
-      "category": "Code Generation",
+      "category": null,
       "aggregateRating": {
         "@type": "AggregateRating",
         "ratingValue": 4.4,
@@ -1498,7 +1498,7 @@
         "@type": "Brand",
         "name": "tabnine"
       },
-      "category": "Code Generation",
+      "category": null,
       "aggregateRating": {
         "@type": "AggregateRating",
         "ratingValue": 4.2,
@@ -1644,7 +1644,7 @@
         "@type": "Brand",
         "name": "Anthropic"
       },
-      "category": "Content Creation",
+      "category": null,
       "aggregateRating": {
         "@type": "AggregateRating",
         "ratingValue": 4.5,
@@ -1796,7 +1796,7 @@
         "@type": "Brand",
         "name": "Character.AI"
       },
-      "category": "Content Creation",
+      "category": null,
       "aggregateRating": {
         "@type": "AggregateRating",
         "ratingValue": 4.5,
@@ -1826,7 +1826,7 @@
     "overview": {
       "developer": "Character.AI",
       "release_year": 2023,
-      "category": "Content Creation",
+      "category": "SEO & Optimization",
       "description": "AI platform for creating and chatting with AI characters for entertainment, education, and creative purposes",
       "website": "https://character.ai",
       "support": "Email, Documentation, Community",
@@ -2040,7 +2040,7 @@
         "@type": "Brand",
         "name": "anthropic"
       },
-      "category": "Content Creation",
+      "category": null,
       "aggregateRating": {
         "@type": "AggregateRating",
         "ratingValue": 4.7,
@@ -2185,7 +2185,7 @@
         "@type": "Brand",
         "name": "Cohere"
       },
-      "category": "SEO & Optimization",
+      "category": null,
       "aggregateRating": {
         "@type": "AggregateRating",
         "ratingValue": 4.5,
@@ -2223,7 +2223,7 @@
     "overview": {
       "developer": "Cohere",
       "release_year": 2023,
-      "category": "SEO & Optimization",
+      "category": "Voice",
       "description": "Enterprise AI platform providing large language models for text generation, classification, and semantic search",
       "website": "https://cohere.ai",
       "support": "Email, Documentation, Community",
@@ -2337,7 +2337,7 @@
         "@type": "Brand",
         "name": "copy-ai"
       },
-      "category": "Voice",
+      "category": null,
       "aggregateRating": {
         "@type": "AggregateRating",
         "ratingValue": 4.5,
@@ -2483,7 +2483,7 @@
         "@type": "Brand",
         "name": "OpenAI"
       },
-      "category": "Content Creation",
+      "category": null,
       "aggregateRating": {
         "@type": "AggregateRating",
         "ratingValue": 4.5,
@@ -2635,7 +2635,7 @@
         "@type": "Brand",
         "name": "jasper"
       },
-      "category": "Voice",
+      "category": null,
       "aggregateRating": {
         "@type": "AggregateRating",
         "ratingValue": 4.6,
@@ -2881,7 +2881,7 @@
         "@type": "Brand",
         "name": "writesonic"
       },
-      "category": "Voice",
+      "category": null,
       "aggregateRating": {
         "@type": "AggregateRating",
         "ratingValue": 4.4,
@@ -3027,7 +3027,7 @@
         "@type": "Brand",
         "name": "openai"
       },
-      "category": "Productivity",
+      "category": null,
       "aggregateRating": {
         "@type": "AggregateRating",
         "ratingValue": 4.6,
@@ -3047,7 +3047,7 @@
     "overview": {
       "developer": "OpenAI",
       "release_year": 2023,
-      "category": "Productivity",
+      "category": "Data Analysis",
       "description": "ChatGPT Enterprise is OpenAI's enterprise-grade AI solution offering advanced data analysis, custom model training, and enterprise security. Designed for large organizations requiring secure, scalable AI capabilities.",
       "website": "https://openai.com/enterprise",
       "support": "Email, Chat",
@@ -3173,7 +3173,7 @@
         "@type": "Brand",
         "name": "google"
       },
-      "category": "Research & Education",
+      "category": null,
       "aggregateRating": {
         "@type": "AggregateRating",
         "ratingValue": 4.3,
@@ -3193,7 +3193,7 @@
     "overview": {
       "developer": "Google",
       "release_year": 2023,
-      "category": "Research & Education",
+      "category": "Data Analysis",
       "description": "Looker is Google's enterprise data platform that provides AI-powered analytics and business intelligence. With advanced data modeling and Google Cloud integration, it's designed for organizations requiring sophisticated data analysis capabilities.",
       "website": "https://looker.com/",
       "support": "Email, Chat",
@@ -3319,7 +3319,7 @@
         "@type": "Brand",
         "name": "microsoft"
       },
-      "category": "Research & Education",
+      "category": null,
       "aggregateRating": {
         "@type": "AggregateRating",
         "ratingValue": 4.4,
@@ -3339,7 +3339,7 @@
     "overview": {
       "developer": "Microsoft",
       "release_year": 2023,
-      "category": "Research & Education",
+      "category": "Data Analysis",
       "description": "Microsoft Power BI is a comprehensive business intelligence platform that transforms data into actionable insights. With AI-powered analytics and seamless Microsoft 365 integration, it's ideal for organizations already using Microsoft tools.",
       "website": "https://powerbi.microsoft.com/",
       "support": "Email, Chat",
@@ -3465,7 +3465,7 @@
         "@type": "Brand",
         "name": "qlik"
       },
-      "category": "Research & Education",
+      "category": null,
       "aggregateRating": {
         "@type": "AggregateRating",
         "ratingValue": 4.2,
@@ -3485,7 +3485,7 @@
     "overview": {
       "developer": "Qlik",
       "release_year": 2023,
-      "category": "Research & Education",
+      "category": "Data Analysis",
       "description": "Qlik Sense is an AI-powered analytics platform featuring a unique associative engine that enables users to explore data freely. With strong self-service BI capabilities and augmented analytics, it helps organizations discover hidden insights.",
       "website": "https://www.qlik.com/",
       "support": "Email, Chat",
@@ -3611,7 +3611,7 @@
         "@type": "Brand",
         "name": "tableau"
       },
-      "category": "Research & Education",
+      "category": null,
       "aggregateRating": {
         "@type": "AggregateRating",
         "ratingValue": 4.5,
@@ -3631,7 +3631,7 @@
     "overview": {
       "developer": "Tableau",
       "release_year": 2023,
-      "category": "Research & Education",
+      "category": "Data Analysis",
       "description": "Tableau AI is a leading data visualization and business intelligence platform that helps organizations analyze and understand their data through interactive dashboards and AI-powered insights. It enables users to create compelling visualizations and discover data-driven insights.",
       "website": "https://tableau.com/",
       "support": "Email, Chat",
@@ -3739,7 +3739,7 @@
     "overview": {
       "developer": "HubSpot",
       "release_year": 2023,
-      "category": "SEO & Optimization",
+      "category": "Email Marketing",
       "description": "HubSpot AI is an integrated CRM and marketing automation platform with AI-powered features for lead scoring, content creation, email marketing, and customer relationship management.",
       "website": "https://www.hubspot.com/",
       "support": "Email, Chat",
@@ -3848,7 +3848,7 @@
     "overview": {
       "developer": "Mailchimp",
       "release_year": 2023,
-      "category": "SEO & Optimization",
+      "category": "Email Marketing",
       "description": "Mailchimp AI is an email marketing platform with intelligent automation, predictive analytics, and AI-powered content suggestions to optimize email campaigns and audience engagement.",
       "website": "https://mailchimp.com/",
       "support": "Email, Chat",
@@ -3974,7 +3974,7 @@
         "@type": "Brand",
         "name": "Adobe"
       },
-      "category": "Video Generation",
+      "category": null,
       "aggregateRating": {
         "@type": "AggregateRating",
         "ratingValue": 4.5,
@@ -4012,7 +4012,7 @@
     "overview": {
       "developer": "Adobe",
       "release_year": 2023,
-      "category": "Video Generation",
+      "category": "Image Generation",
       "description": "Adobe's creative generative AI for producing images, text effects, and creative elements with commercial safety",
       "website": "https://firefly.adobe.com",
       "support": "Email, Documentation, Community",
@@ -4126,7 +4126,7 @@
         "@type": "Brand",
         "name": "canva"
       },
-      "category": "Social Media",
+      "category": null,
       "aggregateRating": {
         "@type": "AggregateRating",
         "ratingValue": 4.3,
@@ -4271,7 +4271,7 @@
         "@type": "Brand",
         "name": "openai"
       },
-      "category": "Image Generation",
+      "category": null,
       "aggregateRating": {
         "@type": "AggregateRating",
         "ratingValue": 4.6,
@@ -4416,7 +4416,7 @@
         "@type": "Brand",
         "name": "leonardo"
       },
-      "category": "Video Generation",
+      "category": null,
       "aggregateRating": {
         "@type": "AggregateRating",
         "ratingValue": 4.4,
@@ -4436,7 +4436,7 @@
     "overview": {
       "developer": "Leonardo",
       "release_year": 2023,
-      "category": "Video Generation",
+      "category": "Image Generation",
       "description": "Leonardo.ai is a powerful AI image generation platform that offers advanced control and customization options for creating high-quality digital art. It features custom model training, commercial licensing, and professional-grade tools for artists and designers.",
       "website": "https://leonardo.ai/",
       "support": "Email, Chat",
@@ -4560,7 +4560,7 @@
         "@type": "Brand",
         "name": "midjourney"
       },
-      "category": "Image Generation",
+      "category": null,
       "aggregateRating": {
         "@type": "AggregateRating",
         "ratingValue": 4.7,
@@ -4705,7 +4705,7 @@
         "@type": "Brand",
         "name": "Replicate"
       },
-      "category": "Video Generation",
+      "category": null,
       "aggregateRating": {
         "@type": "AggregateRating",
         "ratingValue": 4.5,
@@ -4735,7 +4735,7 @@
     "overview": {
       "developer": "Replicate",
       "release_year": 2023,
-      "category": "Video Generation",
+      "category": "Image Generation",
       "description": "Platform for running machine learning models in the cloud with simple API access to popular AI models",
       "website": "https://replicate.com",
       "support": "Email, Documentation, Community",
@@ -4840,7 +4840,7 @@
         "@type": "Brand",
         "name": "stability-ai"
       },
-      "category": "Image Generation",
+      "category": null,
       "aggregateRating": {
         "@type": "AggregateRating",
         "ratingValue": 4.5,
@@ -4986,7 +4986,7 @@
         "@type": "Brand",
         "name": "Stability AI"
       },
-      "category": "Image Generation",
+      "category": null,
       "aggregateRating": {
         "@type": "AggregateRating",
         "ratingValue": 4.5,
@@ -5016,7 +5016,7 @@
     "overview": {
       "developer": "Stability AI",
       "release_year": 2023,
-      "category": "Image Generation",
+      "category": "SEO & Optimization",
       "description": "Web interface for Stability AI's Stable Diffusion model for generating high-quality images from text",
       "website": "https://beta.dreamstudio.ai",
       "support": "Email, Documentation, Community",
@@ -5121,7 +5121,7 @@
         "@type": "Brand",
         "name": "grammarly"
       },
-      "category": "Research & Education",
+      "category": null,
       "aggregateRating": {
         "@type": "AggregateRating",
         "ratingValue": 4.4,
@@ -5141,7 +5141,7 @@
     "overview": {
       "developer": "Grammarly",
       "release_year": 2023,
-      "category": "Research & Education",
+      "category": "Productivity",
       "description": "Grammarly is an AI-powered writing assistant that helps improve writing quality through grammar checking, style suggestions, and tone analysis. It integrates seamlessly across platforms and provides comprehensive writing support for individuals and teams.",
       "website": "https://grammarly.com/",
       "support": "Email, Chat",
@@ -5266,7 +5266,7 @@
         "@type": "Brand",
         "name": "microsoft"
       },
-      "category": "Content Creation",
+      "category": null,
       "aggregateRating": {
         "@type": "AggregateRating",
         "ratingValue": 4.5,
@@ -5286,7 +5286,7 @@
     "overview": {
       "developer": "Microsoft",
       "release_year": 2023,
-      "category": "Content Creation",
+      "category": "Productivity",
       "description": "Microsoft Copilot is an AI assistant integrated across Microsoft 365 applications, designed to enhance productivity through intelligent automation, content generation, and data analysis within familiar Office tools.",
       "website": "https://microsoft.com/copilot",
       "support": "Email, Chat",
@@ -5412,7 +5412,7 @@
         "@type": "Brand",
         "name": "notion"
       },
-      "category": "Research & Education",
+      "category": null,
       "aggregateRating": {
         "@type": "AggregateRating",
         "ratingValue": 4.6,
@@ -5432,7 +5432,7 @@
     "overview": {
       "developer": "Notion",
       "release_year": 2023,
-      "category": "Research & Education",
+      "category": "Productivity",
       "description": "Notion AI is an intelligent writing assistant built into the popular Notion workspace platform. It helps users write, edit, summarize, and organize content more efficiently while maintaining the collaborative and organizational features that make Notion powerful.",
       "website": "https://notion.so/",
       "support": "Email, Chat",
@@ -5557,7 +5557,7 @@
         "@type": "Brand",
         "name": "atlassian"
       },
-      "category": "Productivity",
+      "category": null,
       "aggregateRating": {
         "@type": "AggregateRating",
         "ratingValue": 4.3,
@@ -5703,7 +5703,7 @@
         "@type": "Brand",
         "name": "zapier"
       },
-      "category": "AI Automation",
+      "category": null,
       "aggregateRating": {
         "@type": "AggregateRating",
         "ratingValue": 4.2,
@@ -5849,7 +5849,7 @@
         "@type": "Brand",
         "name": "chatpdf"
       },
-      "category": "SEO & Optimization",
+      "category": null,
       "aggregateRating": {
         "@type": "AggregateRating",
         "ratingValue": 4.3,
@@ -5869,7 +5869,7 @@
     "overview": {
       "developer": "ChatPDF",
       "release_year": 2023,
-      "category": "SEO & Optimization",
+      "category": "Research & Education",
       "description": "ChatPDF is an AI tool that enables users to chat with and analyze PDF documents, making it easy to extract insights, ask questions, and summarize content from uploaded files.",
       "website": "https://chatpdf.com/",
       "support": "Email, Chat",
@@ -5995,7 +5995,7 @@
         "@type": "Brand",
         "name": "consensus"
       },
-      "category": "SEO & Optimization",
+      "category": null,
       "aggregateRating": {
         "@type": "AggregateRating",
         "ratingValue": 4.5,
@@ -6015,7 +6015,7 @@
     "overview": {
       "developer": "Consensus",
       "release_year": 2023,
-      "category": "SEO & Optimization",
+      "category": "Research & Education",
       "description": "Consensus is an AI-powered research tool that helps users find and analyze scientific papers, providing evidence-based insights from peer-reviewed sources for academic and professional research.",
       "website": "https://consensus.app/",
       "support": "Email, Chat",
@@ -6141,7 +6141,7 @@
         "@type": "Brand",
         "name": "elicit"
       },
-      "category": "Productivity",
+      "category": null,
       "aggregateRating": {
         "@type": "AggregateRating",
         "ratingValue": 4.4,
@@ -6161,7 +6161,7 @@
     "overview": {
       "developer": "Elicit",
       "release_year": 2023,
-      "category": "Productivity",
+      "category": "Research & Education",
       "description": "Elicit is an AI research assistant that helps academics and researchers analyze and summarize academic papers, streamline literature reviews, and answer research questions using peer-reviewed sources.",
       "website": "https://elicit.org/",
       "support": "Email, Chat",
@@ -6287,7 +6287,7 @@
         "@type": "Brand",
         "name": "perplexity"
       },
-      "category": "Productivity",
+      "category": null,
       "aggregateRating": {
         "@type": "AggregateRating",
         "ratingValue": 4.7,
@@ -6307,7 +6307,7 @@
     "overview": {
       "developer": "Perplexity",
       "release_year": 2023,
-      "category": "Productivity",
+      "category": "Research & Education",
       "description": "Perplexity AI is an AI-powered search engine that provides accurate, cited answers to your questions. It combines the power of large language models with real-time web search to deliver comprehensive, fact-checked responses with proper source attribution.",
       "website": "https://perplexity.ai/",
       "support": "Email, Chat",
@@ -6431,7 +6431,7 @@
         "@type": "Brand",
         "name": "scite"
       },
-      "category": "Productivity",
+      "category": null,
       "aggregateRating": {
         "@type": "AggregateRating",
         "ratingValue": 4.2,
@@ -6451,7 +6451,7 @@
     "overview": {
       "developer": "scite",
       "release_year": 2023,
-      "category": "Productivity",
+      "category": "Research & Education",
       "description": "scite.ai is an AI-powered platform that analyzes how research papers are cited, helping researchers understand the context and impact of citations to validate and discover quality research.",
       "website": "https://scite.ai/",
       "support": "Email, Chat",
@@ -6669,7 +6669,7 @@
     "overview": {
       "developer": "Frase",
       "release_year": 2023,
-      "category": "Productivity",
+      "category": "SEO & Optimization",
       "description": "Frase is an AI-powered SEO content optimization platform that helps writers create search-optimized articles by analyzing top-ranking content and providing research-backed content briefs.",
       "website": "https://www.frase.io/",
       "support": "Email, Chat",
@@ -7235,7 +7235,7 @@
         "@type": "Brand",
         "name": "kapwing"
       },
-      "category": "Data Analysis",
+      "category": null,
       "aggregateRating": {
         "@type": "AggregateRating",
         "ratingValue": 4.2,
@@ -7255,7 +7255,7 @@
     "overview": {
       "developer": "Kapwing",
       "release_year": 2023,
-      "category": "Data Analysis",
+      "category": "Video Generation",
       "description": "Kapwing is an online video editor with AI-powered features and collaboration tools, perfect for teams creating social media content and quick video projects in the browser.",
       "website": "https://kapwing.com/",
       "support": "Email, Chat",
@@ -7381,7 +7381,7 @@
         "@type": "Brand",
         "name": "lumen5"
       },
-      "category": "Data Analysis",
+      "category": null,
       "aggregateRating": {
         "@type": "AggregateRating",
         "ratingValue": 4.3,
@@ -7401,7 +7401,7 @@
     "overview": {
       "developer": "Lumen5",
       "release_year": 2023,
-      "category": "Data Analysis",
+      "category": "Video Generation",
       "description": "Lumen5 is an AI video maker that transforms text content into engaging videos with templates and automated scene creation, perfect for social media marketing and content promotion.",
       "website": "https://lumen5.com/",
       "support": "Email, Chat",
@@ -7527,7 +7527,7 @@
         "@type": "Brand",
         "name": "pictory"
       },
-      "category": "Social Media",
+      "category": null,
       "aggregateRating": {
         "@type": "AggregateRating",
         "ratingValue": 4.4,
@@ -7673,7 +7673,7 @@
         "@type": "Brand",
         "name": "runway"
       },
-      "category": "Data Analysis",
+      "category": null,
       "aggregateRating": {
         "@type": "AggregateRating",
         "ratingValue": 4.6,
@@ -7693,7 +7693,7 @@
     "overview": {
       "developer": "Runway",
       "release_year": 2023,
-      "category": "Data Analysis",
+      "category": "Video Generation",
       "description": "Runway ML is an AI-powered creative platform that specializes in video generation and editing. It offers cutting-edge tools for creating videos from text, advanced editing capabilities, and collaborative features for creative professionals and content creators.",
       "website": "https://runwayml.com/",
       "support": "Email, Chat",
@@ -7817,7 +7817,7 @@
         "@type": "Brand",
         "name": "synthesia"
       },
-      "category": "Video Generation",
+      "category": null,
       "aggregateRating": {
         "@type": "AggregateRating",
         "ratingValue": 4.5,
@@ -7945,7 +7945,7 @@
       "developer": "Google",
       "release_year": 2023,
       "description": "Gemini is Google's AI assistant that excels at creative tasks and integrates deeply with Google services. Features multimodal AI capabilities.",
-      "category": "Productivity",
+      "category": "Data Analysis",
       "website": "https://gemini.google.com"
     },
     "features": [
@@ -8012,85 +8012,6 @@
       "jasper-ai"
     ],
     "affiliate_link": "https://gemini.google.com"
-  },
-  {
-    "id": "opus-clip",
-    "name": "504 Gateway Time-out",
-    "slug": "504-gateway-time-out",
-    "logo": "/images/tools/opus-clip-logo.svg",
-    "description": "504 Gateway Timeout error indicates that one server did not receive a timely response from another server.",
-    "overview": {
-      "description": "504 Gateway Timeout error indicates that one server did not receive a timely response from another server.",
-      "category": "Voice",
-      "developer": "openresty",
-      "website": "N/A",
-      "integrations": [],
-      "use_cases": [
-        "Diagnosing server communication issues",
-        "Troubleshooting gateway errors"
-      ]
-    },
-    "features": [
-      "Server response monitoring",
-      "Gateway communication management"
-    ],
-    "pricing": [
-      {
-        "tier": "Free",
-        "price_per_month": 0,
-        "billing_period": "month",
-        "features": [
-          "Basic features"
-        ],
-        "description": "Free features",
-        "popular": false
-      },
-      {
-        "tier": "Enterprise",
-        "price_per_month": "Custom",
-        "billing_period": "month",
-        "features": [
-          "Custom features",
-          "Dedicated support",
-          "SLA"
-        ],
-        "description": "Enterprise-grade features",
-        "popular": false
-      }
-    ],
-    "pros": [],
-    "cons": [],
-    "benchmarks": {
-      "speed": 8.6,
-      "accuracy": 8.6,
-      "integration": 7,
-      "ease_of_use": 8.6,
-      "value": 7
-    },
-    "affiliate_link": "N/A",
-    "category": "Voice",
-    "tags": [
-      "server management",
-      "ai tool",
-      "server administrators"
-    ],
-    "last_updated": "2025-08-21T18:12:30.891Z",
-    "rating": 4.3,
-    "review_count": 5292,
-    "free_trial": false,
-    "seo": {
-      "title": "504 Gateway Time-out Review 2025 - Server Management AI Tool | SiteOptz",
-      "description": "504 Gateway Timeout error indicates that one server did not receive a timely response from another server.. Compare pricing, features, pros & cons. Expert Server Management AI tool review.",
-      "keywords": [
-        "504 gateway time-out",
-        "504 gateway time-out review",
-        "server management ai",
-        "server management tools",
-        "ai tools comparison",
-        "siteoptz review"
-      ],
-      "canonical_url": "https://siteoptz.ai/tools/504-gateway-time-out"
-    }
   },
   {
     "id": "google-veo",
@@ -8903,97 +8824,6 @@
     }
   },
   {
-    "id": "notebook-lm",
-    "name": "Google Account Sign-in",
-    "slug": "google-account-sign-in",
-    "logo": "/images/tools/notebook-lm-logo.svg",
-    "description": "Sign in to your Google Account to access Google services. Options include signing in with email or phone, creating an account for personal use, child, or business, and using guest mode for private browsing.",
-    "overview": {
-      "description": "Sign in to your Google Account to access Google services. Options include signing in with email or phone, creating an account for personal use, child, or business, and using guest mode for private browsing.",
-      "category": "Voice",
-      "developer": "Google",
-      "website": "https://accounts.google.com/",
-      "integrations": [
-        "Google Services"
-      ],
-      "use_cases": [
-        "Accessing Gmail",
-        "Using Google Drive",
-        "Managing Google Photos",
-        "Browsing YouTube",
-        "Using Google Maps"
-      ]
-    },
-    "features": [
-      "Sign in with Google Account",
-      "Email or phone sign-in",
-      "Account creation (personal, child, business)",
-      "Guest mode for private browsing",
-      "Forgot email recovery"
-    ],
-    "pricing": [
-      {
-        "tier": "Free",
-        "price_per_month": 0,
-        "billing_period": "month",
-        "features": [
-          "Basic features"
-        ],
-        "description": "Free features",
-        "popular": false
-      },
-      {
-        "tier": "Enterprise",
-        "price_per_month": "Custom",
-        "billing_period": "month",
-        "features": [
-          "Custom features",
-          "Dedicated support",
-          "SLA"
-        ],
-        "description": "Enterprise-grade features",
-        "popular": false
-      }
-    ],
-    "pros": [
-      "Secure access to Google services",
-      "Multiple account options",
-      "Private browsing available"
-    ],
-    "cons": [],
-    "benchmarks": {
-      "speed": 9,
-      "accuracy": 9,
-      "integration": 7,
-      "ease_of_use": 9,
-      "value": 7
-    },
-    "affiliate_link": "https://accounts.google.com/",
-    "category": "Voice",
-    "tags": [
-      "productivity",
-      "ai tool",
-      "all google users"
-    ],
-    "last_updated": "2025-08-21T18:13:09.788Z",
-    "rating": 4.5,
-    "review_count": 1000000000,
-    "free_trial": false,
-    "seo": {
-      "title": "Google Account Sign-in Review 2025 - Productivity AI Tool | SiteOptz",
-      "description": "Sign in to your Google Account to access Google services. Options include signing in with email or phone, creating an ac. Compare pricing, features, pros & cons. Expert Productivity AI tool review.",
-      "keywords": [
-        "google account sign-in",
-        "google account sign-in review",
-        "productivity ai",
-        "productivity tools",
-        "ai tools comparison",
-        "siteoptz review"
-      ],
-      "canonical_url": "https://siteoptz.ai/tools/google-account-sign-in"
-    }
-  },
-  {
     "id": "make",
     "name": "Make",
     "slug": "make",
@@ -9114,7 +8944,7 @@
     "description": "AI-powered research assistant for academic and professional research",
     "overview": {
       "description": "AI-powered research assistant for academic and professional research",
-      "category": "Productivity",
+      "category": "Research & Education",
       "developer": "Deep Research",
       "website": "https://deepresearch.com",
       "integrations": [
@@ -9166,7 +8996,7 @@
       "value": 9
     },
     "affiliate_link": "https://deepresearch.com",
-    "category": "Productivity",
+    "category": "Research & Education",
     "tags": [
       "research & education",
       "ai tool"
@@ -9947,7 +9777,7 @@
     "description": "Fyxer is an AI-powered assistant designed to help users manage their inboxes, draft email responses, and take meeting notes. It aims to reduce the time spent on administrative tasks, allowing users to focus on more important work.",
     "overview": {
       "description": "Fyxer is an AI-powered assistant designed to help users manage their inboxes, draft email responses, and take meeting notes. It aims to reduce the time spent on administrative tasks, allowing users to focus on more important work.",
-      "category": "Email Marketing",
+      "category": "Productivity",
       "developer": "Fyxer AI Limited",
       "website": "https://www.fyxer.ai/",
       "integrations": [
@@ -10035,7 +9865,7 @@
       "value": 9
     },
     "affiliate_link": "https://www.fyxer.ai/",
-    "category": "Email Marketing",
+    "category": "Productivity",
     "tags": [
       "productivity",
       "ai tool",
@@ -10067,7 +9897,7 @@
     "description": "HubSpot's free email marketing tools allow users to create, personalize, and optimize marketing emails without needing to rely on designers or IT. It offers features like AI-generated subject lines and copy, customizable templates, and automation for post-send actions.",
     "overview": {
       "description": "HubSpot's free email marketing tools allow users to create, personalize, and optimize marketing emails without needing to rely on designers or IT. It offers features like AI-generated subject lines and copy, customizable templates, and automation for post-send actions.",
-      "category": "Productivity",
+      "category": "Email Marketing",
       "developer": "HubSpot",
       "website": "https://www.hubspot.com/products/marketing/email",
       "integrations": [
@@ -10191,7 +10021,7 @@
       "value": 9
     },
     "affiliate_link": "https://www.hubspot.com/products/marketing/email",
-    "category": "Productivity",
+    "category": "Email Marketing",
     "tags": [
       "marketing",
       "ai tool",
@@ -10223,7 +10053,7 @@
     "description": "Shortwave is an AI-powered email client designed to automate and enhance your email management. It offers features like AI-driven organization, scheduling, writing assistance, and advanced search capabilities to save users time and improve productivity. It aims to provide an ultimate inbox experience with features like split inboxes, email bundling, and turning emails into todos.",
     "overview": {
       "description": "Shortwave is an AI-powered email client designed to automate and enhance your email management. It offers features like AI-driven organization, scheduling, writing assistance, and advanced search capabilities to save users time and improve productivity. It aims to provide an ultimate inbox experience with features like split inboxes, email bundling, and turning emails into todos.",
-      "category": "Email Marketing",
+      "category": "Productivity",
       "developer": "Shortwave",
       "website": "https://www.shortwave.com/",
       "integrations": [
@@ -10342,7 +10172,7 @@
       "value": 9
     },
     "affiliate_link": "https://www.shortwave.com/",
-    "category": "Email Marketing",
+    "category": "Productivity",
     "tags": [
       "productivity",
       "ai tool",
@@ -10483,7 +10313,7 @@
     "description": "Clockwise is an AI-powered scheduling assistant that optimizes your calendar to create more time for deep work and efficient meetings. It intelligently rearranges events based on user preferences and team schedules, acting like a personal AI scheduling assistant for your entire team.",
     "overview": {
       "description": "Clockwise is an AI-powered scheduling assistant that optimizes your calendar to create more time for deep work and efficient meetings. It intelligently rearranges events based on user preferences and team schedules, acting like a personal AI scheduling assistant for your entire team.",
-      "category": "Content Creation",
+      "category": "Productivity",
       "developer": "Clockwise",
       "website": "https://www.getclockwise.com/",
       "integrations": [
@@ -10576,7 +10406,7 @@
       "value": 9
     },
     "affiliate_link": "https://www.getclockwise.com/",
-    "category": "Content Creation",
+    "category": "Productivity",
     "tags": [
       "productivity",
       "ai tool",
@@ -10725,7 +10555,7 @@
     "description": "Teal is an all-in-one suite of tools designed to simplify and accelerate the job search process. It offers features like an AI resume builder, job tracker, matching mode, and resume checker to help users land their next position faster.",
     "overview": {
       "description": "Teal is an all-in-one suite of tools designed to simplify and accelerate the job search process. It offers features like an AI resume builder, job tracker, matching mode, and resume checker to help users land their next position faster.",
-      "category": "Content Creation",
+      "category": "Productivity",
       "developer": "Teal",
       "website": "https://www.tealhq.com/",
       "integrations": [
@@ -10805,7 +10635,7 @@
       "value": 9
     },
     "affiliate_link": "https://www.tealhq.com/",
-    "category": "Content Creation",
+    "category": "Productivity",
     "tags": [
       "productivity",
       "ai tool",
@@ -10993,7 +10823,7 @@
     "description": "Kickresume is an AI-powered resume builder and cover letter generator designed to help job seekers create professional and impressive application documents quickly and easily. It offers a wide range of customizable templates, AI writing assistance, and examples from successful job seekers to help users land their dream jobs.",
     "overview": {
       "description": "Kickresume is an AI-powered resume builder and cover letter generator designed to help job seekers create professional and impressive application documents quickly and easily. It offers a wide range of customizable templates, AI writing assistance, and examples from successful job seekers to help users land their dream jobs.",
-      "category": "Content Creation",
+      "category": "Productivity",
       "developer": "Kickresume",
       "website": "https://www.kickresume.com/",
       "integrations": [
@@ -11088,7 +10918,7 @@
       "value": 9
     },
     "affiliate_link": "https://www.kickresume.com/",
-    "category": "Content Creation",
+    "category": "Productivity",
     "tags": [
       "productivity",
       "ai tool",
@@ -11697,7 +11527,7 @@
     "description": "AirOps is an AI-powered platform designed to help brands increase their visibility in AI search. It provides a comprehensive solution that takes users from insights to action, enabling them to fill content gaps, optimize for agent readability, and engage in relevant conversations. The platform aims to transform content teams into revenue drivers by offering expert-led training, strategic frameworks, and proven templates.",
     "overview": {
       "description": "AirOps is an AI-powered platform designed to help brands increase their visibility in AI search. It provides a comprehensive solution that takes users from insights to action, enabling them to fill content gaps, optimize for agent readability, and engage in relevant conversations. The platform aims to transform content teams into revenue drivers by offering expert-led training, strategic frameworks, and proven templates.",
-      "category": "Content Creation",
+      "category": "SEO & Optimization",
       "developer": "AirOps",
       "website": "https://www.airops.com/",
       "integrations": [
@@ -11772,7 +11602,7 @@
       "value": 7
     },
     "affiliate_link": "https://www.airops.com/",
-    "category": "Content Creation",
+    "category": "SEO & Optimization",
     "tags": [
       "ai content strategy & optimization",
       "ai tool",
