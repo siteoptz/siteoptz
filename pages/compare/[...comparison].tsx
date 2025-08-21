@@ -202,6 +202,7 @@ const ComparisonPage: React.FC<ComparisonPageProps> = ({ tool1, tool2, faqs1, fa
                       <h4 className="font-semibold text-white">{plan.tier || plan.plan}</h4>
                       <span className="text-lg font-bold text-cyan-400">
                         {plan.price_per_month === 'Custom' ? 'Custom' :
+                         (plan.tier === 'Enterprise' || plan.plan === 'Enterprise') ? 'Custom' :
                          plan.price_per_month === 0 ? 'Free' : 
                          `$${plan.price_per_month}/mo`}
                       </span>
@@ -224,6 +225,7 @@ const ComparisonPage: React.FC<ComparisonPageProps> = ({ tool1, tool2, faqs1, fa
                       <h4 className="font-semibold text-white">{plan.tier || plan.plan}</h4>
                       <span className="text-lg font-bold text-cyan-400">
                         {plan.price_per_month === 'Custom' ? 'Custom' :
+                         (plan.tier === 'Enterprise' || plan.plan === 'Enterprise') ? 'Custom' :
                          plan.price_per_month === 0 ? 'Free' : 
                          `$${plan.price_per_month}/mo`}
                       </span>
@@ -558,7 +560,7 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
                                                     Math.round(unifiedTool1.pricing.yearly / 12) :
                                                     unifiedTool1.pricing?.yearly === 'Custom' ? 'Custom' : 0, features: [] },
             { tier: 'Enterprise', price_per_month: unifiedTool1.pricing?.enterprise === 'Custom' ? 'Custom' : 
-                                                  typeof unifiedTool1.pricing?.enterprise === 'number' ? unifiedTool1.pricing.enterprise : 'Custom', features: [] }
+                                                  typeof unifiedTool1.pricing?.enterprise === 'number' && unifiedTool1.pricing.enterprise > 0 ? unifiedTool1.pricing.enterprise : 'Custom', features: [] }
           ],
           pros: unifiedTool1.pros || [],
           cons: unifiedTool1.cons || [],
@@ -605,7 +607,7 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
                                                     Math.round(unifiedTool2.pricing.yearly / 12) :
                                                     unifiedTool2.pricing?.yearly === 'Custom' ? 'Custom' : 0, features: [] },
             { tier: 'Enterprise', price_per_month: unifiedTool2.pricing?.enterprise === 'Custom' ? 'Custom' : 
-                                                  typeof unifiedTool2.pricing?.enterprise === 'number' ? unifiedTool2.pricing.enterprise : 'Custom', features: [] }
+                                                  typeof unifiedTool2.pricing?.enterprise === 'number' && unifiedTool2.pricing.enterprise > 0 ? unifiedTool2.pricing.enterprise : 'Custom', features: [] }
           ],
           pros: unifiedTool2.pros || [],
           cons: unifiedTool2.cons || [],
