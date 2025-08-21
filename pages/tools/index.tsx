@@ -8,6 +8,7 @@ import PricingCalculator from "../../components/tools/PricingCalculator";
 import FAQSection from "../../components/FAQ/FAQSection";
 import { loadUnifiedToolsData, getAllCategories, getToolsByCategory, searchTools } from "../../utils/unifiedDataAdapter.js";
 import { toolCategories } from "../../config/categories";
+import ToolLogo from "../../components/ToolLogo";
 
 export async function getStaticProps() {
   const faqPath = path.join(process.cwd(), "data", "faq-data.json");
@@ -268,29 +269,13 @@ export default function ToolsPage({ tools, categories, faqs }: { tools: any[], c
                   >
                     <div className="flex items-center justify-between mb-4">
                       <div className="flex items-center">
-                        <img 
-                          src={tool.logo_url || tool.logo || `/images/tools/${toolName.toLowerCase().replace(/\s+/g, '-')}-logo.svg`} 
-                          alt={`${toolName} AI tool logo - ${tool.category} software review and pricing`}
-                          className="w-12 h-12 object-contain mr-4"
-                          onError={(e) => {
-                            // Try alternative logo formats before falling back to placeholder
-                            const currentSrc = e.currentTarget.src;
-                            const toolSlug = toolName.toLowerCase().replace(/\s+/g, '-');
-                            
-                            if (!currentSrc.includes('placeholder-logo')) {
-                              // Try PNG format if SVG fails
-                              if (currentSrc.includes('.svg')) {
-                                e.currentTarget.src = `/images/tools/${toolSlug}-logo.png`;
-                                return;
-                              }
-                              // Try different naming convention if first attempt fails
-                              if (!currentSrc.includes('placeholder')) {
-                                e.currentTarget.src = '/images/tools/placeholder-logo.svg';
-                                return;
-                              }
-                            }
-                          }}
-                        />
+                        <div className="mr-4">
+                          <ToolLogo 
+                            toolName={toolName}
+                            logoUrl={tool.logo_url || tool.logo}
+                            size="md"
+                          />
+                        </div>
                         <div>
                           <h3 className="text-xl font-semibold text-white">{toolName}</h3>
                           <p className="text-gray-400 text-sm">{tool.vendor}</p>

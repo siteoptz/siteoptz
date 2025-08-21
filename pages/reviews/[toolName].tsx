@@ -4,6 +4,7 @@ import Head from 'next/head';
 import Image from 'next/image';
 import Link from 'next/link';
 import FAQSection from '../../components/comparison/FAQSection';
+import ToolLogo from '../../components/ToolLogo';
 
 interface Tool {
   tool_name: string;
@@ -260,15 +261,11 @@ export default function ReviewPage({ tool, pageTitle, slug, relatedTools, relate
               {/* Tool Info */}
               <div className="lg:w-2/3 lg:pr-12 mb-8 lg:mb-0">
                 <div className="flex items-center mb-6">
-                  <div className="w-20 h-20 bg-gray-800 border border-gray-700 rounded-xl p-3 shadow-lg mr-6">
-                    <img
-                      src={tool.logo_url}
-                      alt={`${tool.tool_name} logo`}
-                      className="w-full h-full object-contain"
-                      onError={(e) => {
-                        console.log('Logo failed to load:', tool.logo_url);
-                        e.currentTarget.src = '/images/tools/placeholder-logo.svg';
-                      }}
+                  <div className="mr-6">
+                    <ToolLogo 
+                      toolName={tool.tool_name}
+                      logoUrl={tool.logo_url}
+                      size="xl"
                     />
                   </div>
                   <div>
@@ -666,15 +663,13 @@ export default function ReviewPage({ tool, pageTitle, slug, relatedTools, relate
               {relatedTools.slice(0, 4).map((relatedTool, index) => (
                 <div key={index} className="bg-black border border-gray-800 rounded-xl p-6 shadow-sm hover:shadow-lg hover:border-gray-600 transition-all">
                   <div className="flex items-center mb-4">
-                    <img
-                      src={relatedTool.logo_url || '/images/tools/placeholder-logo.svg'}
-                      alt={`${relatedTool.tool_name || 'Tool'} logo`}
-                      className="w-10 h-10 mr-3 object-contain"
-                      onError={(e) => {
-                        console.log('Related tool logo failed to load:', relatedTool.logo_url);
-                        e.currentTarget.src = '/images/tools/placeholder-logo.svg';
-                      }}
-                    />
+                    <div className="mr-3">
+                      <ToolLogo 
+                        toolName={relatedTool.tool_name || 'Tool'}
+                        logoUrl={relatedTool.logo_url}
+                        size="sm"
+                      />
+                    </div>
                     <h3 className="font-semibold text-white">{relatedTool.tool_name || 'Unknown Tool'}</h3>
                   </div>
                   <p className="text-gray-300 text-sm mb-4">
