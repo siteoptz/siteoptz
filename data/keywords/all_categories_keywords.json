@@ -1,0 +1,746 @@
+{
+  "SEO & Optimization": [
+    {
+      "keyword": "ai seo tools",
+      "search_volume": 8100,
+      "cpc": 3.45,
+      "competition": 0.82
+    },
+    {
+      "keyword": "best ai for seo",
+      "search_volume": 6600,
+      "cpc": 2.89,
+      "competition": 0.78
+    },
+    {
+      "keyword": "ai seo optimization",
+      "search_volume": 4400,
+      "cpc": 3.12,
+      "competition": 0.75
+    },
+    {
+      "keyword": "seo automation tools",
+      "search_volume": 3600,
+      "cpc": 4.23,
+      "competition": 0.81
+    },
+    {
+      "keyword": "ai content optimization",
+      "search_volume": 2900,
+      "cpc": 3.67,
+      "competition": 0.72
+    },
+    {
+      "keyword": "ai keyword research",
+      "search_volume": 2400,
+      "cpc": 2.98,
+      "competition": 0.69
+    },
+    {
+      "keyword": "seo ai software",
+      "search_volume": 1900,
+      "cpc": 3.89,
+      "competition": 0.77
+    },
+    {
+      "keyword": "automated seo tools",
+      "search_volume": 1600,
+      "cpc": 3.45,
+      "competition": 0.73
+    },
+    {
+      "keyword": "ai link building",
+      "search_volume": 1300,
+      "cpc": 4.56,
+      "competition": 0.71
+    },
+    {
+      "keyword": "seo content generator",
+      "search_volume": 1000,
+      "cpc": 2.78,
+      "competition": 0.68
+    }
+  ],
+  "Social Media": [
+    {
+      "keyword": "ai social media tools",
+      "search_volume": 9900,
+      "cpc": 2.89,
+      "competition": 0.79
+    },
+    {
+      "keyword": "social media ai generator",
+      "search_volume": 7700,
+      "cpc": 2.34,
+      "competition": 0.71
+    },
+    {
+      "keyword": "ai content creator",
+      "search_volume": 5500,
+      "cpc": 2.67,
+      "competition": 0.73
+    },
+    {
+      "keyword": "social media automation",
+      "search_volume": 4800,
+      "cpc": 3.45,
+      "competition": 0.82
+    },
+    {
+      "keyword": "ai instagram posts",
+      "search_volume": 3900,
+      "cpc": 1.89,
+      "competition": 0.65
+    },
+    {
+      "keyword": "ai social media scheduler",
+      "search_volume": 2700,
+      "cpc": 3.12,
+      "competition": 0.77
+    },
+    {
+      "keyword": "social media ai assistant",
+      "search_volume": 2100,
+      "cpc": 2.98,
+      "competition": 0.74
+    },
+    {
+      "keyword": "ai hashtag generator",
+      "search_volume": 1800,
+      "cpc": 1.45,
+      "competition": 0.61
+    },
+    {
+      "keyword": "social media analytics ai",
+      "search_volume": 1400,
+      "cpc": 3.89,
+      "competition": 0.79
+    },
+    {
+      "keyword": "ai caption generator",
+      "search_volume": 1200,
+      "cpc": 1.67,
+      "competition": 0.63
+    }
+  ],
+  "Paid Search & PPC": [
+    {
+      "keyword": "ai ppc tools",
+      "search_volume": 5400,
+      "cpc": 5.67,
+      "competition": 0.87
+    },
+    {
+      "keyword": "ai google ads",
+      "search_volume": 4900,
+      "cpc": 4.89,
+      "competition": 0.84
+    },
+    {
+      "keyword": "ppc automation software",
+      "search_volume": 3700,
+      "cpc": 6.23,
+      "competition": 0.89
+    },
+    {
+      "keyword": "ai bid management",
+      "search_volume": 2800,
+      "cpc": 5.45,
+      "competition": 0.85
+    },
+    {
+      "keyword": "ai ad copy generator",
+      "search_volume": 2400,
+      "cpc": 3.78,
+      "competition": 0.76
+    },
+    {
+      "keyword": "ppc optimization ai",
+      "search_volume": 1900,
+      "cpc": 5.12,
+      "competition": 0.83
+    },
+    {
+      "keyword": "ai campaign management",
+      "search_volume": 1600,
+      "cpc": 4.67,
+      "competition": 0.81
+    },
+    {
+      "keyword": "automated ppc tools",
+      "search_volume": 1300,
+      "cpc": 5.89,
+      "competition": 0.86
+    },
+    {
+      "keyword": "ai keyword bidding",
+      "search_volume": 1000,
+      "cpc": 4.34,
+      "competition": 0.79
+    },
+    {
+      "keyword": "ppc reporting ai",
+      "search_volume": 800,
+      "cpc": 4.12,
+      "competition": 0.77
+    }
+  ],
+  "Voice AI": [
+    {
+      "keyword": "ai voice generator",
+      "search_volume": 22000,
+      "cpc": 2.45,
+      "competition": 0.72
+    },
+    {
+      "keyword": "text to speech ai",
+      "search_volume": 18000,
+      "cpc": 2.12,
+      "competition": 0.68
+    },
+    {
+      "keyword": "ai voice cloning",
+      "search_volume": 12000,
+      "cpc": 3.23,
+      "competition": 0.75
+    },
+    {
+      "keyword": "voice synthesis ai",
+      "search_volume": 8900,
+      "cpc": 2.89,
+      "competition": 0.71
+    },
+    {
+      "keyword": "ai voice over generator",
+      "search_volume": 7600,
+      "cpc": 2.67,
+      "competition": 0.69
+    },
+    {
+      "keyword": "realistic ai voices",
+      "search_volume": 5400,
+      "cpc": 2.34,
+      "competition": 0.67
+    },
+    {
+      "keyword": "ai voice assistant",
+      "search_volume": 4200,
+      "cpc": 3.45,
+      "competition": 0.78
+    },
+    {
+      "keyword": "voice ai tools",
+      "search_volume": 3100,
+      "cpc": 2.78,
+      "competition": 0.73
+    },
+    {
+      "keyword": "ai voice changer",
+      "search_volume": 2500,
+      "cpc": 1.89,
+      "competition": 0.62
+    },
+    {
+      "keyword": "multilingual voice ai",
+      "search_volume": 1800,
+      "cpc": 3.12,
+      "competition": 0.74
+    }
+  ],
+  "Code Generation": [
+    {
+      "keyword": "ai code generator",
+      "search_volume": 14500,
+      "cpc": 3.89,
+      "competition": 0.81
+    },
+    {
+      "keyword": "ai coding assistant",
+      "search_volume": 11200,
+      "cpc": 4.23,
+      "competition": 0.83
+    },
+    {
+      "keyword": "code generation ai",
+      "search_volume": 8700,
+      "cpc": 3.67,
+      "competition": 0.79
+    },
+    {
+      "keyword": "ai programming tools",
+      "search_volume": 6900,
+      "cpc": 4.45,
+      "competition": 0.82
+    },
+    {
+      "keyword": "automated code writing",
+      "search_volume": 5200,
+      "cpc": 3.34,
+      "competition": 0.76
+    },
+    {
+      "keyword": "ai code completion",
+      "search_volume": 4100,
+      "cpc": 3.78,
+      "competition": 0.78
+    },
+    {
+      "keyword": "ai software development",
+      "search_volume": 3300,
+      "cpc": 4.89,
+      "competition": 0.84
+    },
+    {
+      "keyword": "code ai tools",
+      "search_volume": 2600,
+      "cpc": 3.56,
+      "competition": 0.77
+    },
+    {
+      "keyword": "ai debugging tools",
+      "search_volume": 2000,
+      "cpc": 3.23,
+      "competition": 0.74
+    },
+    {
+      "keyword": "ai code review",
+      "search_volume": 1500,
+      "cpc": 3.89,
+      "competition": 0.79
+    }
+  ],
+  "Content Creation": [
+    {
+      "keyword": "ai content generator",
+      "search_volume": 27000,
+      "cpc": 2.78,
+      "competition": 0.76
+    },
+    {
+      "keyword": "ai writing tools",
+      "search_volume": 22000,
+      "cpc": 2.45,
+      "competition": 0.73
+    },
+    {
+      "keyword": "content creation ai",
+      "search_volume": 16500,
+      "cpc": 2.89,
+      "competition": 0.75
+    },
+    {
+      "keyword": "ai blog writer",
+      "search_volume": 12300,
+      "cpc": 2.34,
+      "competition": 0.71
+    },
+    {
+      "keyword": "ai article generator",
+      "search_volume": 9800,
+      "cpc": 2.12,
+      "competition": 0.69
+    },
+    {
+      "keyword": "automated content creation",
+      "search_volume": 7200,
+      "cpc": 3.12,
+      "competition": 0.77
+    },
+    {
+      "keyword": "ai copywriting tools",
+      "search_volume": 5600,
+      "cpc": 3.45,
+      "competition": 0.79
+    },
+    {
+      "keyword": "ai content marketing",
+      "search_volume": 4300,
+      "cpc": 2.98,
+      "competition": 0.74
+    },
+    {
+      "keyword": "creative writing ai",
+      "search_volume": 3100,
+      "cpc": 1.89,
+      "competition": 0.65
+    },
+    {
+      "keyword": "ai content optimization",
+      "search_volume": 2400,
+      "cpc": 3.23,
+      "competition": 0.76
+    }
+  ],
+  "Data Analysis": [
+    {
+      "keyword": "ai data analysis tools",
+      "search_volume": 12000,
+      "cpc": 4.56,
+      "competition": 0.85
+    },
+    {
+      "keyword": "data analytics ai",
+      "search_volume": 9800,
+      "cpc": 4.23,
+      "competition": 0.83
+    },
+    {
+      "keyword": "ai business intelligence",
+      "search_volume": 7600,
+      "cpc": 5.12,
+      "competition": 0.87
+    },
+    {
+      "keyword": "predictive analytics ai",
+      "search_volume": 6200,
+      "cpc": 5.67,
+      "competition": 0.88
+    },
+    {
+      "keyword": "ai data visualization",
+      "search_volume": 4900,
+      "cpc": 3.89,
+      "competition": 0.79
+    },
+    {
+      "keyword": "machine learning analytics",
+      "search_volume": 3800,
+      "cpc": 4.78,
+      "competition": 0.84
+    },
+    {
+      "keyword": "ai reporting tools",
+      "search_volume": 2900,
+      "cpc": 4.12,
+      "competition": 0.81
+    },
+    {
+      "keyword": "automated data analysis",
+      "search_volume": 2300,
+      "cpc": 4.45,
+      "competition": 0.82
+    },
+    {
+      "keyword": "ai insights generator",
+      "search_volume": 1700,
+      "cpc": 3.67,
+      "competition": 0.77
+    },
+    {
+      "keyword": "data mining ai tools",
+      "search_volume": 1200,
+      "cpc": 4.89,
+      "competition": 0.85
+    }
+  ],
+  "Image Generation": [
+    {
+      "keyword": "ai image generator",
+      "search_volume": 49500,
+      "cpc": 1.89,
+      "competition": 0.68
+    },
+    {
+      "keyword": "ai art generator",
+      "search_volume": 33000,
+      "cpc": 1.67,
+      "competition": 0.65
+    },
+    {
+      "keyword": "text to image ai",
+      "search_volume": 24500,
+      "cpc": 2.12,
+      "competition": 0.71
+    },
+    {
+      "keyword": "ai picture generator",
+      "search_volume": 18200,
+      "cpc": 1.78,
+      "competition": 0.67
+    },
+    {
+      "keyword": "image creation ai",
+      "search_volume": 13600,
+      "cpc": 2.23,
+      "competition": 0.72
+    },
+    {
+      "keyword": "ai photo generator",
+      "search_volume": 9900,
+      "cpc": 1.89,
+      "competition": 0.68
+    },
+    {
+      "keyword": "ai graphic design",
+      "search_volume": 7300,
+      "cpc": 2.67,
+      "competition": 0.74
+    },
+    {
+      "keyword": "ai illustration generator",
+      "search_volume": 5100,
+      "cpc": 2.34,
+      "competition": 0.71
+    },
+    {
+      "keyword": "ai logo generator",
+      "search_volume": 3800,
+      "cpc": 2.89,
+      "competition": 0.76
+    },
+    {
+      "keyword": "ai avatar creator",
+      "search_volume": 2600,
+      "cpc": 1.56,
+      "competition": 0.63
+    }
+  ],
+  "Research & Education": [
+    {
+      "keyword": "ai research tools",
+      "search_volume": 8900,
+      "cpc": 3.45,
+      "competition": 0.78
+    },
+    {
+      "keyword": "ai for education",
+      "search_volume": 7200,
+      "cpc": 2.89,
+      "competition": 0.74
+    },
+    {
+      "keyword": "academic ai tools",
+      "search_volume": 5600,
+      "cpc": 3.12,
+      "competition": 0.76
+    },
+    {
+      "keyword": "ai study assistant",
+      "search_volume": 4300,
+      "cpc": 2.34,
+      "competition": 0.69
+    },
+    {
+      "keyword": "research paper ai",
+      "search_volume": 3700,
+      "cpc": 2.78,
+      "competition": 0.72
+    },
+    {
+      "keyword": "ai learning tools",
+      "search_volume": 2900,
+      "cpc": 2.56,
+      "competition": 0.71
+    },
+    {
+      "keyword": "educational ai software",
+      "search_volume": 2200,
+      "cpc": 3.23,
+      "competition": 0.75
+    },
+    {
+      "keyword": "ai homework helper",
+      "search_volume": 1800,
+      "cpc": 1.89,
+      "competition": 0.65
+    },
+    {
+      "keyword": "ai citation generator",
+      "search_volume": 1400,
+      "cpc": 1.67,
+      "competition": 0.62
+    },
+    {
+      "keyword": "ai research assistant",
+      "search_volume": 1100,
+      "cpc": 2.98,
+      "competition": 0.73
+    }
+  ],
+  "Productivity": [
+    {
+      "keyword": "ai productivity tools",
+      "search_volume": 13500,
+      "cpc": 3.23,
+      "competition": 0.77
+    },
+    {
+      "keyword": "productivity ai apps",
+      "search_volume": 9800,
+      "cpc": 2.89,
+      "competition": 0.74
+    },
+    {
+      "keyword": "ai task automation",
+      "search_volume": 7600,
+      "cpc": 3.67,
+      "competition": 0.79
+    },
+    {
+      "keyword": "ai workflow tools",
+      "search_volume": 5900,
+      "cpc": 3.45,
+      "competition": 0.78
+    },
+    {
+      "keyword": "ai time management",
+      "search_volume": 4400,
+      "cpc": 2.78,
+      "competition": 0.72
+    },
+    {
+      "keyword": "ai project management",
+      "search_volume": 3600,
+      "cpc": 4.12,
+      "competition": 0.81
+    },
+    {
+      "keyword": "automation ai tools",
+      "search_volume": 2800,
+      "cpc": 3.34,
+      "competition": 0.76
+    },
+    {
+      "keyword": "ai personal assistant",
+      "search_volume": 2100,
+      "cpc": 2.56,
+      "competition": 0.71
+    },
+    {
+      "keyword": "ai scheduling tools",
+      "search_volume": 1600,
+      "cpc": 3.12,
+      "competition": 0.75
+    },
+    {
+      "keyword": "ai note taking",
+      "search_volume": 1200,
+      "cpc": 2.23,
+      "competition": 0.68
+    }
+  ],
+  "Email Marketing": [
+    {
+      "keyword": "ai email marketing",
+      "search_volume": 6600,
+      "cpc": 3.89,
+      "competition": 0.81
+    },
+    {
+      "keyword": "email automation ai",
+      "search_volume": 5200,
+      "cpc": 3.56,
+      "competition": 0.79
+    },
+    {
+      "keyword": "ai email generator",
+      "search_volume": 4100,
+      "cpc": 2.78,
+      "competition": 0.73
+    },
+    {
+      "keyword": "ai email writer",
+      "search_volume": 3300,
+      "cpc": 2.45,
+      "competition": 0.71
+    },
+    {
+      "keyword": "email campaign ai",
+      "search_volume": 2700,
+      "cpc": 3.67,
+      "competition": 0.78
+    },
+    {
+      "keyword": "ai subject line generator",
+      "search_volume": 2100,
+      "cpc": 2.12,
+      "competition": 0.67
+    },
+    {
+      "keyword": "email personalization ai",
+      "search_volume": 1700,
+      "cpc": 3.89,
+      "competition": 0.8
+    },
+    {
+      "keyword": "ai email templates",
+      "search_volume": 1300,
+      "cpc": 2.34,
+      "competition": 0.69
+    },
+    {
+      "keyword": "email analytics ai",
+      "search_volume": 1000,
+      "cpc": 3.45,
+      "competition": 0.77
+    },
+    {
+      "keyword": "ai newsletter creator",
+      "search_volume": 800,
+      "cpc": 2.67,
+      "competition": 0.72
+    }
+  ],
+  "Video Generation": [
+    {
+      "keyword": "ai video generator",
+      "search_volume": 27000,
+      "cpc": 2.67,
+      "competition": 0.74
+    },
+    {
+      "keyword": "text to video ai",
+      "search_volume": 19500,
+      "cpc": 2.34,
+      "competition": 0.71
+    },
+    {
+      "keyword": "ai video creator",
+      "search_volume": 14300,
+      "cpc": 2.45,
+      "competition": 0.72
+    },
+    {
+      "keyword": "ai video editing",
+      "search_volume": 11200,
+      "cpc": 2.89,
+      "competition": 0.75
+    },
+    {
+      "keyword": "video generation ai",
+      "search_volume": 8700,
+      "cpc": 2.78,
+      "competition": 0.73
+    },
+    {
+      "keyword": "ai animation generator",
+      "search_volume": 6400,
+      "cpc": 2.56,
+      "competition": 0.7
+    },
+    {
+      "keyword": "ai video maker",
+      "search_volume": 4900,
+      "cpc": 2.12,
+      "competition": 0.69
+    },
+    {
+      "keyword": "automated video creation",
+      "search_volume": 3600,
+      "cpc": 3.12,
+      "competition": 0.76
+    },
+    {
+      "keyword": "ai video marketing",
+      "search_volume": 2500,
+      "cpc": 3.45,
+      "competition": 0.78
+    },
+    {
+      "keyword": "ai avatar video",
+      "search_volume": 1800,
+      "cpc": 2.23,
+      "competition": 0.68
+    }
+  ]
+}

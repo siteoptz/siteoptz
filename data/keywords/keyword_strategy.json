@@ -1,0 +1,362 @@
+{
+  "seo_optimization": {
+    "category": "SEO & Optimization",
+    "slug": "seo-optimization",
+    "primary_keyword": {
+      "keyword": "ai seo tools",
+      "search_volume": 8100,
+      "cpc": 3.45,
+      "competition": 0.82,
+      "reason": "Highest volume and most relevant to AI-powered SEO solutions"
+    },
+    "secondary_keywords": [
+      "best ai for seo",
+      "ai seo optimization", 
+      "seo automation tools",
+      "ai content optimization",
+      "ai keyword research",
+      "seo ai software",
+      "automated seo tools",
+      "ai link building",
+      "seo content generator"
+    ],
+    "keyword_cluster": [
+      "ai seo tools",
+      "ai for seo",
+      "seo ai",
+      "artificial intelligence seo",
+      "seo automation",
+      "ai powered seo"
+    ]
+  },
+  "social_media": {
+    "category": "Social Media", 
+    "slug": "social-media",
+    "primary_keyword": {
+      "keyword": "ai social media tools",
+      "search_volume": 9900,
+      "cpc": 2.89,
+      "competition": 0.79,
+      "reason": "Highest volume and directly targets AI social media solutions"
+    },
+    "secondary_keywords": [
+      "social media ai generator",
+      "ai content creator",
+      "social media automation",
+      "ai instagram posts",
+      "ai social media scheduler",
+      "social media ai assistant",
+      "ai hashtag generator",
+      "social media analytics ai",
+      "ai caption generator"
+    ],
+    "keyword_cluster": [
+      "ai social media tools",
+      "social media ai",
+      "ai for social media",
+      "social media automation",
+      "ai content creation",
+      "social ai tools"
+    ]
+  },
+  "paid_search_ppc": {
+    "category": "Paid Search & PPC",
+    "slug": "paid-search-ppc", 
+    "primary_keyword": {
+      "keyword": "ai ppc tools",
+      "search_volume": 5400,
+      "cpc": 5.67,
+      "competition": 0.87,
+      "reason": "Most relevant for PPC AI tools with high commercial value"
+    },
+    "secondary_keywords": [
+      "ai google ads",
+      "ppc automation software",
+      "ai bid management",
+      "ai ad copy generator",
+      "ppc optimization ai",
+      "ai campaign management",
+      "automated ppc tools",
+      "ai keyword bidding",
+      "ppc reporting ai"
+    ],
+    "keyword_cluster": [
+      "ai ppc tools",
+      "ppc ai",
+      "ai for ppc",
+      "ppc automation",
+      "ai google ads",
+      "paid search ai"
+    ]
+  },
+  "voice_ai": {
+    "category": "Voice AI",
+    "slug": "voice-ai",
+    "primary_keyword": {
+      "keyword": "ai voice generator",
+      "search_volume": 22000,
+      "cpc": 2.45,
+      "competition": 0.72,
+      "reason": "Highest search volume in voice AI category"
+    },
+    "secondary_keywords": [
+      "text to speech ai",
+      "ai voice cloning",
+      "voice synthesis ai",
+      "ai voice over generator",
+      "realistic ai voices",
+      "ai voice assistant",
+      "voice ai tools",
+      "ai voice changer",
+      "multilingual voice ai"
+    ],
+    "keyword_cluster": [
+      "ai voice generator",
+      "voice ai",
+      "ai voice",
+      "text to speech ai",
+      "voice generation ai",
+      "ai voice tools"
+    ]
+  },
+  "code_generation": {
+    "category": "Code Generation",
+    "slug": "code-generation",
+    "primary_keyword": {
+      "keyword": "ai code generator", 
+      "search_volume": 14500,
+      "cpc": 3.89,
+      "competition": 0.81,
+      "reason": "Highest volume and most direct match for code generation AI"
+    },
+    "secondary_keywords": [
+      "ai coding assistant",
+      "code generation ai",
+      "ai programming tools",
+      "automated code writing",
+      "ai code completion",
+      "ai software development",
+      "code ai tools",
+      "ai debugging tools",
+      "ai code review"
+    ],
+    "keyword_cluster": [
+      "ai code generator",
+      "code generation ai",
+      "ai coding",
+      "ai programming",
+      "code ai",
+      "ai development tools"
+    ]
+  },
+  "content_creation": {
+    "category": "Content Creation",
+    "slug": "content-creation",
+    "primary_keyword": {
+      "keyword": "ai content generator",
+      "search_volume": 27000,
+      "cpc": 2.78,
+      "competition": 0.76,
+      "reason": "Highest search volume in content creation category"
+    },
+    "secondary_keywords": [
+      "ai writing tools",
+      "content creation ai",
+      "ai blog writer",
+      "ai article generator",
+      "automated content creation",
+      "ai copywriting tools",
+      "ai content marketing",
+      "creative writing ai",
+      "ai content optimization"
+    ],
+    "keyword_cluster": [
+      "ai content generator",
+      "content creation ai",
+      "ai writing",
+      "ai content tools",
+      "content ai",
+      "ai writing assistant"
+    ]
+  },
+  "data_analysis": {
+    "category": "Data Analysis",
+    "slug": "data-analysis",
+    "primary_keyword": {
+      "keyword": "ai data analysis tools",
+      "search_volume": 12000,
+      "cpc": 4.56,
+      "competition": 0.85,
+      "reason": "Most comprehensive keyword for AI data analysis solutions"
+    },
+    "secondary_keywords": [
+      "data analytics ai",
+      "ai business intelligence",
+      "predictive analytics ai",
+      "ai data visualization",
+      "machine learning analytics",
+      "ai reporting tools",
+      "automated data analysis",
+      "ai insights generator",
+      "data mining ai tools"
+    ],
+    "keyword_cluster": [
+      "ai data analysis tools",
+      "data analysis ai",
+      "ai analytics",
+      "data ai tools",
+      "ai data science",
+      "data intelligence ai"
+    ]
+  },
+  "image_generation": {
+    "category": "Image Generation",
+    "slug": "image-generation",
+    "primary_keyword": {
+      "keyword": "ai image generator",
+      "search_volume": 49500,
+      "cpc": 1.89,
+      "competition": 0.68,
+      "reason": "Highest search volume across all categories"
+    },
+    "secondary_keywords": [
+      "ai art generator",
+      "text to image ai",
+      "ai picture generator",
+      "image creation ai",
+      "ai photo generator",
+      "ai graphic design",
+      "ai illustration generator",
+      "ai logo generator",
+      "ai avatar creator"
+    ],
+    "keyword_cluster": [
+      "ai image generator",
+      "image generation ai",
+      "ai art",
+      "text to image",
+      "ai graphics",
+      "image ai tools"
+    ]
+  },
+  "research_education": {
+    "category": "Research & Education",
+    "slug": "research-education",
+    "primary_keyword": {
+      "keyword": "ai research tools",
+      "search_volume": 8900,
+      "cpc": 3.45,
+      "competition": 0.78,
+      "reason": "Most relevant for research-focused AI applications"
+    },
+    "secondary_keywords": [
+      "ai for education",
+      "academic ai tools",
+      "ai study assistant",
+      "research paper ai",
+      "ai learning tools",
+      "educational ai software",
+      "ai homework helper",
+      "ai citation generator",
+      "ai research assistant"
+    ],
+    "keyword_cluster": [
+      "ai research tools",
+      "research ai",
+      "ai for research",
+      "educational ai",
+      "ai learning",
+      "academic ai"
+    ]
+  },
+  "productivity": {
+    "category": "Productivity",
+    "slug": "productivity",
+    "primary_keyword": {
+      "keyword": "ai productivity tools",
+      "search_volume": 13500,
+      "cpc": 3.23,
+      "competition": 0.77,
+      "reason": "Most comprehensive for AI productivity solutions"
+    },
+    "secondary_keywords": [
+      "productivity ai apps",
+      "ai task automation",
+      "ai workflow tools",
+      "ai time management",
+      "ai project management",
+      "automation ai tools",
+      "ai personal assistant",
+      "ai scheduling tools",
+      "ai note taking"
+    ],
+    "keyword_cluster": [
+      "ai productivity tools",
+      "productivity ai",
+      "ai automation",
+      "productivity automation",
+      "ai efficiency tools",
+      "workflow ai"
+    ]
+  },
+  "email_marketing": {
+    "category": "Email Marketing",
+    "slug": "email-marketing",
+    "primary_keyword": {
+      "keyword": "ai email marketing",
+      "search_volume": 6600,
+      "cpc": 3.89,
+      "competition": 0.81,
+      "reason": "Most direct match for AI email marketing solutions"
+    },
+    "secondary_keywords": [
+      "email automation ai",
+      "ai email generator",
+      "ai email writer",
+      "email campaign ai",
+      "ai subject line generator",
+      "email personalization ai",
+      "ai email templates",
+      "email analytics ai",
+      "ai newsletter creator"
+    ],
+    "keyword_cluster": [
+      "ai email marketing",
+      "email ai",
+      "ai for email",
+      "email automation ai",
+      "ai email tools",
+      "email marketing automation"
+    ]
+  },
+  "video_generation": {
+    "category": "Video Generation",
+    "slug": "video-generation",
+    "primary_keyword": {
+      "keyword": "ai video generator",
+      "search_volume": 27000,
+      "cpc": 2.67,
+      "competition": 0.74,
+      "reason": "Highest search volume in video generation category"
+    },
+    "secondary_keywords": [
+      "text to video ai",
+      "ai video creator",
+      "ai video editing",
+      "video generation ai",
+      "ai animation generator",
+      "ai video maker",
+      "automated video creation",
+      "ai video marketing",
+      "ai avatar video"
+    ],
+    "keyword_cluster": [
+      "ai video generator",
+      "video generation ai",
+      "ai video",
+      "text to video",
+      "video ai tools",
+      "ai video creation"
+    ]
+  }
+}
