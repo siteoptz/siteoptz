@@ -142,13 +142,6 @@ const nextConfig = {
         destination: '/compare',
         permanent: true,
       },
-      // Ensure www redirects to non-www
-      {
-        source: '/:path*',
-        has: [{ type: 'host', value: 'www.siteoptz.ai' }],
-        destination: 'https://siteoptz.ai/:path*',
-        permanent: true,
-      },
     ];
   },
   
