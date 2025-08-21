@@ -1,0 +1,326 @@
+[
+  {
+    "id": "teal",
+    "source_id": "teal",
+    "tool_name": "Teal",
+    "name": "Teal",
+    "description": "Teal is an all-in-one suite of tools designed to simplify and accelerate the job search process. It offers features like an AI resume builder, job tracker, matching mode, and resume checker to help users land their next position faster.",
+    "category": "Productivity",
+    "pricing": [
+      {
+        "billing_period": "week",
+        "features": [
+          "Everything in Teal Free",
+          "Unlimited Advanced Resume Analysis",
+          "Unlimited Resume Keyword Matching",
+          "Unlimited keywords (hard and soft skills) listed in the job tracker",
+          "Unlimited Email Templates",
+          "Advanced Design Mode",
+          "Premium Resume Templates",
+          "Unlimited Interview Practice"
+        ],
+        "plan": "Premium",
+        "price": 9
+      }
+    ],
+    "features": {
+      "core": [
+        "AI Resume Builder",
+        "Job Tracker",
+        "Matching Mode",
+        "AI Interview Practice",
+        "Resume Checker",
+        "Resume Job Description Match",
+        "Resume Summary Generator",
+        "Resume Templates",
+        "Cover Letter Generator",
+        "Job Search Extension (Chrome)"
+      ],
+      "advanced": [
+        "Chrome Extension"
+      ],
+      "integrations": [
+        "Chrome Extension"
+      ]
+    },
+    "pros": [
+      "Simplifies job search",
+      "Helps land jobs faster",
+      "AI-powered resume and cover letter assistance",
+      "Organizes job applications",
+      "Provides job insights and recommendations",
+      "Offers free resume templates",
+      "Loved by over 2 million members",
+      "Highly rated by users for organization and efficiency"
+    ],
+    "cons": [
+      "Limited AI credits on the free plan",
+      "Basic analysis and keyword matching on the free plan"
+    ],
+    "rating": 4.4,
+    "reviewCount": 2000000,
+    "search_volume": 8109,
+    "website": "https://www.tealhq.com/",
+    "official_url": "https://www.tealhq.com/",
+    "affiliate_link": "https://www.tealhq.com/",
+    "logo": "/images/tools/teal-logo.svg",
+    "logo_url": "/images/tools/teal-logo.svg",
+    "vendor": "Teal",
+    "founded": "Unknown",
+    "targetAudience": "Job seekers",
+    "useCases": [
+      "Resume building and tailoring",
+      "Job application tracking",
+      "Job searching and discovery",
+      "Cover letter generation",
+      "Resume optimization with keywords",
+      "Interview preparation"
+    ],
+    "free_trial": true,
+    "lastUpdated": "2025-08-21T18:16:22.185Z",
+    "scrapedAt": "2025-08-21T18:16:22.185Z",
+    "source": "firecrawl-specific-tools",
+    "slug": "teal",
+    "metaTags": {
+      "title": "Teal Review 2025 - Productivity AI Tool | SiteOptz",
+      "description": "Teal is an all-in-one suite of tools designed to simplify and accelerate the job search process. It offers features like. Compare pricing, features, pros & cons. Expert Productivity AI tool review.",
+      "keywords": [
+        "teal",
+        "teal review",
+        "productivity ai",
+        "productivity tools",
+        "ai tools comparison",
+        "siteoptz review"
+      ]
+    },
+    "structuredData": {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "Teal",
+      "description": "Teal is an all-in-one suite of tools designed to simplify and accelerate the job search process. It offers features like an AI resume builder, job tracker, matching mode, and resume checker to help users land their next position faster.",
+      "applicationCategory": "Productivity",
+      "operatingSystem": "Web Browser",
+      "url": "https://www.tealhq.com/",
+      "offers": [
+        {
+          "@type": "Offer",
+          "name": "Premium",
+          "price": 9,
+          "priceCurrency": "USD",
+          "billingIncrement": "week"
+        }
+      ],
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": 4.4,
+        "reviewCount": 100
+      },
+      "author": {
+        "@type": "Organization",
+        "name": "SiteOptz",
+        "url": "https://siteoptz.ai"
+      }
+    },
+    "canonicalUrl": "https://siteoptz.ai/tools/teal",
+    "breadcrumbs": [
+      {
+        "name": "Home",
+        "url": "https://siteoptz.ai"
+      },
+      {
+        "name": "AI Tools",
+        "url": "https://siteoptz.ai/tools"
+      },
+      {
+        "name": "Productivity",
+        "url": "https://siteoptz.ai/categories/productivity"
+      },
+      {
+        "name": "Teal",
+        "url": "https://siteoptz.ai/tools/teal"
+      }
+    ],
+    "comparisonData": {
+      "keyMetrics": {
+        "easeOfUse": 4.6000000000000005,
+        "features": 4.4,
+        "value": 4,
+        "support": 4
+      },
+      "alternatives": [],
+      "lastCompared": "2025-08-21T18:16:22.185Z"
+    }
+  },
+  {
+    "id": "kickresume",
+    "source_id": "kickresume",
+    "tool_name": "Kickresume",
+    "name": "Kickresume",
+    "description": "Kickresume is an AI-powered resume builder and cover letter generator designed to help job seekers create professional and impressive application documents quickly and easily. It offers a wide range of customizable templates, AI writing assistance, and examples from successful job seekers to help users land their dream jobs.",
+    "category": "Productivity",
+    "pricing": [
+      {
+        "billing_period": "month",
+        "features": [
+          "Unlimited resume downloads",
+          "Access to all templates",
+          "AI Resume Writer",
+          "AI Cover Letter Writer",
+          "Resume Checker",
+          "Personal Website Builder"
+        ],
+        "plan": "Premium",
+        "price": 19
+      },
+      {
+        "billing_period": "year",
+        "features": [
+          "Unlimited resume downloads",
+          "Access to all templates",
+          "AI Resume Writer",
+          "AI Cover Letter Writer",
+          "Resume Checker",
+          "Personal Website Builder"
+        ],
+        "plan": "Premium (Annual)",
+        "price": 96
+      }
+    ],
+    "features": {
+      "core": [
+        "AI Resume Builder powered by GPT-4",
+        "AI Cover Letter Builder",
+        "40+ ATS-friendly resume templates",
+        "Customizable templates with over a million design combinations",
+        "Resume examples and guides from successful job seekers",
+        "AI Resume Checker for feedback and improvement tips",
+        "Personal Website Builder to turn resumes into websites",
+        "AI Resignation Letter Generator",
+        "Kickresume for Mobile app",
+        "LinkedIn data import",
+        "Pre-written phrases for resume sections",
+        "Career Blog with job search advice",
+        "Proofreading services"
+      ],
+      "advanced": [
+        "OpenAI (GPT-4)"
+      ],
+      "integrations": [
+        "OpenAI (GPT-4)"
+      ]
+    },
+    "pros": [
+      "User-friendly interface",
+      "High-quality, professional templates",
+      "Powerful AI writing assistance for resumes and cover letters",
+      "Extensive library of resume examples and guides",
+      "Helped millions of users find jobs at top companies",
+      "Focus on data security and privacy (hosted in EU)",
+      "Offers a free plan with essential features"
+    ],
+    "cons": [
+      "AI-generated content may require editing for personalization.",
+      "Some advanced features might require a paid subscription."
+    ],
+    "rating": 4.6,
+    "reviewCount": 2965,
+    "search_volume": 1844,
+    "website": "https://www.kickresume.com/",
+    "official_url": "https://www.kickresume.com/",
+    "affiliate_link": "https://www.kickresume.com/",
+    "logo": "/images/tools/kickresume-logo.svg",
+    "logo_url": "/images/tools/kickresume-logo.svg",
+    "vendor": "Kickresume",
+    "founded": "2015",
+    "targetAudience": "Job seekers, students, career changers",
+    "useCases": [
+      "Creating resumes",
+      "Writing cover letters",
+      "Improving resume content and design",
+      "Building a personal website",
+      "Getting job application inspiration",
+      "Automating parts of the job application process"
+    ],
+    "free_trial": true,
+    "lastUpdated": "2025-08-21T18:16:29.466Z",
+    "scrapedAt": "2025-08-21T18:16:29.466Z",
+    "source": "firecrawl-specific-tools",
+    "slug": "kickresume",
+    "metaTags": {
+      "title": "Kickresume Review 2025 - Productivity AI Tool | SiteOptz",
+      "description": "Kickresume is an AI-powered resume builder and cover letter generator designed to help job seekers create professional a. Compare pricing, features, pros & cons. Expert Productivity AI tool review.",
+      "keywords": [
+        "kickresume",
+        "kickresume review",
+        "productivity ai",
+        "productivity tools",
+        "ai tools comparison",
+        "siteoptz review"
+      ]
+    },
+    "structuredData": {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "Kickresume",
+      "description": "Kickresume is an AI-powered resume builder and cover letter generator designed to help job seekers create professional and impressive application documents quickly and easily. It offers a wide range of customizable templates, AI writing assistance, and examples from successful job seekers to help users land their dream jobs.",
+      "applicationCategory": "Productivity",
+      "operatingSystem": "Web Browser",
+      "url": "https://www.kickresume.com/",
+      "offers": [
+        {
+          "@type": "Offer",
+          "name": "Premium",
+          "price": 19,
+          "priceCurrency": "USD",
+          "billingIncrement": "month"
+        },
+        {
+          "@type": "Offer",
+          "name": "Premium (Annual)",
+          "price": 96,
+          "priceCurrency": "USD",
+          "billingIncrement": "year"
+        }
+      ],
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": 4.6,
+        "reviewCount": 100
+      },
+      "author": {
+        "@type": "Organization",
+        "name": "SiteOptz",
+        "url": "https://siteoptz.ai"
+      }
+    },
+    "canonicalUrl": "https://siteoptz.ai/tools/kickresume",
+    "breadcrumbs": [
+      {
+        "name": "Home",
+        "url": "https://siteoptz.ai"
+      },
+      {
+        "name": "AI Tools",
+        "url": "https://siteoptz.ai/tools"
+      },
+      {
+        "name": "Productivity",
+        "url": "https://siteoptz.ai/categories/productivity"
+      },
+      {
+        "name": "Kickresume",
+        "url": "https://siteoptz.ai/tools/kickresume"
+      }
+    ],
+    "comparisonData": {
+      "keyMetrics": {
+        "easeOfUse": 4.8,
+        "features": 4.6,
+        "value": 4,
+        "support": 4
+      },
+      "alternatives": [],
+      "lastCompared": "2025-08-21T18:16:29.466Z"
+    }
+  }
+]

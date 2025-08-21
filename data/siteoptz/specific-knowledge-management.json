@@ -1,0 +1,215 @@
+[
+  {
+    "id": "guru",
+    "source_id": "guru",
+    "tool_name": "Guru",
+    "name": "Guru",
+    "description": "Guru is a knowledge management solution that uses AI to help teams find, verify, and share information across their workflows. It integrates with various tools to provide contextual answers and support features like AI search bots, custom pages, and an AI training center.",
+    "category": "Productivity",
+    "pricing": [
+      {
+        "plan": "Free",
+        "price": 0,
+        "billing_period": "month",
+        "features": [
+          "Basic features"
+        ]
+      }
+    ],
+    "features": {
+      "core": [
+        "AI Search",
+        "Knowledge Agents (AI Search Bots)",
+        "Custom Pages for knowledge organization",
+        "AI Training Center for accuracy improvement",
+        "Smart, trusted permissions",
+        "Verification features (SME alerts, reminders)",
+        "Browser extension",
+        "Integrations with Slack, Microsoft Teams, ChatGPT, and more",
+        "Read tracking for critical updates",
+        "AI-assisted content creation and repurposing"
+      ],
+      "advanced": [
+        "Google Chrome",
+        "Microsoft Edge",
+        "Slack",
+        "Microsoft Teams",
+        "ChatGPT",
+        "Salesforce",
+        "HubSpot",
+        "Outreach",
+        "Gong",
+        "Groove",
+        "Box",
+        "Google Drive",
+        "ServiceNow",
+        "Splunk",
+        "PagerDuty",
+        "SolarWinds",
+        "Jira",
+        "Zendesk",
+        "Userlike",
+        "Freshdesk",
+        "Intercom",
+        "Help Scout",
+        "BambooHR",
+        "Lever",
+        "Gusto",
+        "Culture Amp",
+        "TinyPulse",
+        "TalentLMS",
+        "Pluralsight",
+        "Coursera",
+        "Udemy",
+        "GitHub",
+        "CircleCI",
+        "Figma",
+        "UserTesting",
+        "Optimizely",
+        "Mailchimp",
+        "Hootsuite",
+        "Canva"
+      ],
+      "integrations": [
+        "Google Chrome",
+        "Microsoft Edge",
+        "Slack",
+        "Microsoft Teams",
+        "ChatGPT",
+        "Salesforce",
+        "HubSpot",
+        "Outreach",
+        "Gong",
+        "Groove",
+        "Box",
+        "Google Drive",
+        "ServiceNow",
+        "Splunk",
+        "PagerDuty",
+        "SolarWinds",
+        "Jira",
+        "Zendesk",
+        "Userlike",
+        "Freshdesk",
+        "Intercom",
+        "Help Scout",
+        "BambooHR",
+        "Lever",
+        "Gusto",
+        "Culture Amp",
+        "TinyPulse",
+        "TalentLMS",
+        "Pluralsight",
+        "Coursera",
+        "Udemy",
+        "GitHub",
+        "CircleCI",
+        "Figma",
+        "UserTesting",
+        "Optimizely",
+        "Mailchimp",
+        "Hootsuite",
+        "Canva"
+      ]
+    },
+    "pros": [
+      "Centralizes knowledge across tools",
+      "Provides AI-powered contextual answers",
+      "Improves team efficiency and productivity",
+      "Reduces context switching",
+      "Enhances onboarding for new employees",
+      "Offers robust verification and permission controls",
+      "Highly rated by users on review platforms"
+    ],
+    "cons": [],
+    "rating": 4.7,
+    "reviewCount": 3000,
+    "search_volume": 5644,
+    "website": "https://www.getguru.com/",
+    "official_url": "https://www.getguru.com/",
+    "affiliate_link": "https://www.getguru.com/",
+    "logo": "/images/tools/guru-logo.svg",
+    "logo_url": "/images/tools/guru-logo.svg",
+    "vendor": "Guru",
+    "founded": "2014",
+    "targetAudience": "Teams and organizations looking to improve knowledge sharing, internal communication, and operational efficiency.",
+    "useCases": [
+      "Enterprise Search",
+      "Knowledge Base management",
+      "Intranet solutions",
+      "Customer Support",
+      "Operations and IT",
+      "Human Resources",
+      "Learning and Development",
+      "Sales enablement",
+      "Product and Engineering",
+      "Marketing"
+    ],
+    "free_trial": true,
+    "lastUpdated": "2025-08-21T18:15:40.247Z",
+    "scrapedAt": "2025-08-21T18:15:40.247Z",
+    "source": "firecrawl-specific-tools",
+    "slug": "guru",
+    "metaTags": {
+      "title": "Guru Review 2025 - Productivity AI Tool | SiteOptz",
+      "description": "Guru is a knowledge management solution that uses AI to help teams find, verify, and share information across their work. Compare pricing, features, pros & cons. Expert Productivity AI tool review.",
+      "keywords": [
+        "guru",
+        "guru review",
+        "productivity ai",
+        "productivity tools",
+        "ai tools comparison",
+        "siteoptz review"
+      ]
+    },
+    "structuredData": {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "Guru",
+      "description": "Guru is a knowledge management solution that uses AI to help teams find, verify, and share information across their workflows. It integrates with various tools to provide contextual answers and support features like AI search bots, custom pages, and an AI training center.",
+      "applicationCategory": "Productivity",
+      "operatingSystem": "Web Browser",
+      "url": "https://www.getguru.com/",
+      "offers": [],
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": 4.7,
+        "reviewCount": 100
+      },
+      "author": {
+        "@type": "Organization",
+        "name": "SiteOptz",
+        "url": "https://siteoptz.ai"
+      }
+    },
+    "canonicalUrl": "https://siteoptz.ai/tools/guru",
+    "breadcrumbs": [
+      {
+        "name": "Home",
+        "url": "https://siteoptz.ai"
+      },
+      {
+        "name": "AI Tools",
+        "url": "https://siteoptz.ai/tools"
+      },
+      {
+        "name": "Productivity",
+        "url": "https://siteoptz.ai/categories/productivity"
+      },
+      {
+        "name": "Guru",
+        "url": "https://siteoptz.ai/tools/guru"
+      }
+    ],
+    "comparisonData": {
+      "keyMetrics": {
+        "easeOfUse": 4.9,
+        "features": 4.7,
+        "value": 4,
+        "support": 4
+      },
+      "alternatives": [],
+      "lastCompared": "2025-08-21T18:15:40.248Z"
+    }
+  }
+]

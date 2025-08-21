@@ -1,0 +1,420 @@
+[
+  {
+    "id": "sudowrite",
+    "source_id": "sudowrite",
+    "tool_name": "Sudowrite",
+    "name": "Sudowrite",
+    "description": "Sudowrite is an AI writing partner designed for fiction writers, offering tools to assist with various stages of the writing process, from brainstorming and outlining to drafting and editing. It aims to help writers overcome writer's block, enhance descriptions, develop characters, and refine their prose.",
+    "category": "AI Writing Assistant",
+    "pricing": [
+      {
+        "billing_period": "month",
+        "features": [
+          "Unlimited words",
+          "Full access to all features"
+        ],
+        "plan": "Hobby",
+        "price": 10
+      },
+      {
+        "billing_period": "month",
+        "features": [
+          "Unlimited words",
+          "Full access to all features",
+          "Priority support"
+        ],
+        "plan": "Student",
+        "price": 25
+      },
+      {
+        "billing_period": "month",
+        "features": [
+          "Unlimited words",
+          "Full access to all features",
+          "Priority support",
+          "Early access to new features"
+        ],
+        "plan": "Professional",
+        "price": 100
+      }
+    ],
+    "features": {
+      "core": [
+        "Muse 1.5: AI model specifically for fiction.",
+        "Describe: Enhances descriptions to immerse readers.",
+        "Story Bible: Guides users from idea to outline to drafting chapters in their style.",
+        "Write: Autocompletes text, generating up to 300 words in the user's voice.",
+        "Expand: Extends scenes to improve pacing.",
+        "Rewrite: Revises sentences and paragraphs based on user direction.",
+        "Feedback: Provides actionable suggestions for improvement in three areas.",
+        "Canvas: AI-powered brainstorming tool for plot points, character arcs, and themes.",
+        "Brainstorm: Generates ideas for names, items, titles, etc.",
+        "Visualize: Creates art from descriptions for characters and worldbuilding.",
+        "Plugins: Extends functionality with author-made tools.",
+        "Customizable interface with themes and dark modes.",
+        "Focus mode for distraction-free writing.",
+        "Draft and chapter organization within projects."
+      ],
+      "advanced": [
+        "Google Login"
+      ],
+      "integrations": [
+        "Google Login"
+      ]
+    },
+    "pros": [
+      "Helps overcome writer's block.",
+      "Enhances descriptive writing.",
+      "Assists in developing plot and characters.",
+      "Generates text in the user's unique style.",
+      "Provides editing and revision support.",
+      "Offers a user-friendly interface with customization options.",
+      "Supports creative exploration through brainstorming tools.",
+      "Includes features for visual worldbuilding.",
+      "Extensible through plugins."
+    ],
+    "cons": [
+      "Can potentially plagiarize if misused by the user.",
+      "Requires user input and direction to generate optimal results."
+    ],
+    "rating": 4.5,
+    "reviewCount": 10000,
+    "search_volume": 9934,
+    "website": "https://sudowrite.com/",
+    "official_url": "https://sudowrite.com/",
+    "affiliate_link": "https://sudowrite.com/",
+    "logo": "/images/tools/sudowrite-logo.svg",
+    "logo_url": "/images/tools/sudowrite-logo.svg",
+    "vendor": "Sudowrite",
+    "founded": "Unknown",
+    "targetAudience": "Fiction Writers, Novelists, Screenwriters, Authors",
+    "useCases": [
+      "Brainstorming story ideas",
+      "Outlining novels and chapters",
+      "Writing descriptive passages",
+      "Generating dialogue",
+      "Expanding scenes",
+      "Rewriting and editing text",
+      "Getting feedback on writing",
+      "Developing characters and plot points",
+      "Creating worldbuilding documents",
+      "Overcoming writer's block"
+    ],
+    "free_trial": true,
+    "lastUpdated": "2025-08-21T18:15:07.730Z",
+    "scrapedAt": "2025-08-21T18:15:07.730Z",
+    "source": "firecrawl-specific-tools",
+    "slug": "sudowrite",
+    "metaTags": {
+      "title": "Sudowrite Review 2025 - AI Writing Assistant AI Tool | SiteOptz",
+      "description": "Sudowrite is an AI writing partner designed for fiction writers, offering tools to assist with various stages of the wri. Compare pricing, features, pros & cons. Expert AI Writing Assistant AI tool review.",
+      "keywords": [
+        "sudowrite",
+        "sudowrite review",
+        "ai writing assistant ai",
+        "ai writing assistant tools",
+        "ai tools comparison",
+        "siteoptz review"
+      ]
+    },
+    "structuredData": {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "Sudowrite",
+      "description": "Sudowrite is an AI writing partner designed for fiction writers, offering tools to assist with various stages of the writing process, from brainstorming and outlining to drafting and editing. It aims to help writers overcome writer's block, enhance descriptions, develop characters, and refine their prose.",
+      "applicationCategory": "AI Writing Assistant",
+      "operatingSystem": "Web Browser",
+      "url": "https://sudowrite.com/",
+      "offers": [
+        {
+          "@type": "Offer",
+          "name": "Hobby",
+          "price": 10,
+          "priceCurrency": "USD",
+          "billingIncrement": "month"
+        },
+        {
+          "@type": "Offer",
+          "name": "Student",
+          "price": 25,
+          "priceCurrency": "USD",
+          "billingIncrement": "month"
+        },
+        {
+          "@type": "Offer",
+          "name": "Professional",
+          "price": 100,
+          "priceCurrency": "USD",
+          "billingIncrement": "month"
+        }
+      ],
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": 4.5,
+        "reviewCount": 100
+      },
+      "author": {
+        "@type": "Organization",
+        "name": "SiteOptz",
+        "url": "https://siteoptz.ai"
+      }
+    },
+    "canonicalUrl": "https://siteoptz.ai/tools/sudowrite",
+    "breadcrumbs": [
+      {
+        "name": "Home",
+        "url": "https://siteoptz.ai"
+      },
+      {
+        "name": "AI Tools",
+        "url": "https://siteoptz.ai/tools"
+      },
+      {
+        "name": "AI Writing Assistant",
+        "url": "https://siteoptz.ai/categories/ai-writing-assistant"
+      },
+      {
+        "name": "Sudowrite",
+        "url": "https://siteoptz.ai/tools/sudowrite"
+      }
+    ],
+    "comparisonData": {
+      "keyMetrics": {
+        "easeOfUse": 4.7,
+        "features": 4.5,
+        "value": 4,
+        "support": 4
+      },
+      "alternatives": [],
+      "lastCompared": "2025-08-21T18:15:07.730Z"
+    }
+  },
+  {
+    "id": "rytr",
+    "source_id": "rytr",
+    "tool_name": "Rytr",
+    "name": "Rytr",
+    "description": "Rytr is an AI writing assistant designed for short-form content creation, accessible across various platforms. It helps users generate original and compelling content quickly, offering over 40 use cases and templates, including blog posts, social media ads, email responses, and more. Rytr aims to sound like the user, not a robot, by analyzing writing samples and mirroring tone, with options for custom tones. It also emphasizes plagiarism-free content and offers a Chrome Extension for seamless integration into writing workflows.",
+    "category": "AI Writing Assistant",
+    "pricing": [
+      {
+        "billing_period": "month",
+        "features": [
+          "Generate 10k characters per month",
+          "Access 40+ use-cases",
+          "Write in 20+ tones",
+          "Access to chrome extension"
+        ],
+        "plan": "Free",
+        "price": 0
+      },
+      {
+        "billing_period": "month",
+        "features": [
+          "Unlimited generations",
+          "Build 1 personalized tone of voice",
+          "50/m plagiarism checks"
+        ],
+        "plan": "Unlimited",
+        "price": 7.5
+      },
+      {
+        "billing_period": "month",
+        "features": [
+          "Build 5 personal tones of voice",
+          "Increased character input limits",
+          "Write in 40+ languages",
+          "100/m plagiarism checks"
+        ],
+        "plan": "Premium",
+        "price": 24.16
+      }
+    ],
+    "features": {
+      "core": [
+        "AI-powered content generation",
+        "Over 40 content use cases and templates",
+        "Supports 20+ tones of voice",
+        "Customizable tones of voice",
+        "Plagiarism checker",
+        "Chrome Extension for writing anywhere",
+        "AI Autocomplete Text",
+        "Continue Writing feature",
+        "Text Inflator (content expansion)",
+        "Grammar Checker & Text Improver",
+        "AI Paragraph Generator",
+        "Rewording Generator",
+        "Sentence Shortener",
+        "AI Command Generator",
+        "Blog Outline Generator",
+        "AI Blog Generator",
+        "AI Meta Description Generator",
+        "SEO Meta Title Generator",
+        "AI Landing Page Generator",
+        "Keyword Extractor",
+        "AI Keyword Generator",
+        "AI Newsletter Generator",
+        "Custom Poem Generator",
+        "AI Song Generator",
+        "AI Story Generator",
+        "Call To Action Generator",
+        "Social Media Ad Generator",
+        "Google Ad Generator",
+        "AI Caption Generator",
+        "AI SMS Generator",
+        "AI Bio Generator",
+        "Video Description Generator",
+        "Video Channel Description Generator",
+        "Video Idea Generator",
+        "AI LinkedIn Post Generator",
+        "AI Quora Answer Generator",
+        "AI Facebook Post Generator",
+        "AI Product Description Generator",
+        "AI Bullet Point Generator",
+        "AIDA Copywriting Generator",
+        "PAS Copywriting Generator",
+        "AI Response Generator",
+        "Business Pitch Generator",
+        "AI Business Idea Generator",
+        "AI Cover Letter Generator",
+        "Email Generator",
+        "AI Interview Question Generator",
+        "AI Job Description Generator",
+        "AI Tagline Generator",
+        "AI Real Estate Listings"
+      ],
+      "advanced": [
+        "Chrome Extension"
+      ],
+      "integrations": [
+        "Chrome Extension"
+      ]
+    },
+    "pros": [
+      "Affordable pricing",
+      "Easy to use",
+      "Saves time and effort",
+      "Generates original and plagiarism-free content",
+      "Mirrors user's writing tone",
+      "Wide range of use cases and templates",
+      "Free plan available"
+    ],
+    "cons": [
+      "Free plan has limitations on character generation and plagiarism checks."
+    ],
+    "rating": 4.9,
+    "reviewCount": 1000,
+    "search_volume": 9041,
+    "website": "https://rytr.me/",
+    "official_url": "https://rytr.me/",
+    "affiliate_link": "https://rytr.me/",
+    "logo": "/images/tools/rytr-logo.svg",
+    "logo_url": "/images/tools/rytr-logo.svg",
+    "vendor": "Rytr",
+    "founded": "2018",
+    "targetAudience": "Copywriters, marketers, entrepreneurs, freelancers, individuals creating content",
+    "useCases": [
+      "Short-form content creation",
+      "Email writing",
+      "Blog writing",
+      "Social media content",
+      "Marketing copy",
+      "Creative writing",
+      "SEO content",
+      "Business pitches",
+      "Cover letters",
+      "Job descriptions",
+      "Real estate listings",
+      "Product descriptions",
+      "Ad copy"
+    ],
+    "free_trial": true,
+    "lastUpdated": "2025-08-21T18:15:14.844Z",
+    "scrapedAt": "2025-08-21T18:15:14.844Z",
+    "source": "firecrawl-specific-tools",
+    "slug": "rytr",
+    "metaTags": {
+      "title": "Rytr Review 2025 - AI Writing Assistant AI Tool | SiteOptz",
+      "description": "Rytr is an AI writing assistant designed for short-form content creation, accessible across various platforms. It helps . Compare pricing, features, pros & cons. Expert AI Writing Assistant AI tool review.",
+      "keywords": [
+        "rytr",
+        "rytr review",
+        "ai writing assistant ai",
+        "ai writing assistant tools",
+        "ai tools comparison",
+        "siteoptz review"
+      ]
+    },
+    "structuredData": {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "Rytr",
+      "description": "Rytr is an AI writing assistant designed for short-form content creation, accessible across various platforms. It helps users generate original and compelling content quickly, offering over 40 use cases and templates, including blog posts, social media ads, email responses, and more. Rytr aims to sound like the user, not a robot, by analyzing writing samples and mirroring tone, with options for custom tones. It also emphasizes plagiarism-free content and offers a Chrome Extension for seamless integration into writing workflows.",
+      "applicationCategory": "AI Writing Assistant",
+      "operatingSystem": "Web Browser",
+      "url": "https://rytr.me/",
+      "offers": [
+        {
+          "@type": "Offer",
+          "name": "Free",
+          "price": 0,
+          "priceCurrency": "USD",
+          "billingIncrement": "month"
+        },
+        {
+          "@type": "Offer",
+          "name": "Unlimited",
+          "price": 7.5,
+          "priceCurrency": "USD",
+          "billingIncrement": "month"
+        },
+        {
+          "@type": "Offer",
+          "name": "Premium",
+          "price": 24.16,
+          "priceCurrency": "USD",
+          "billingIncrement": "month"
+        }
+      ],
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": 4.9,
+        "reviewCount": 100
+      },
+      "author": {
+        "@type": "Organization",
+        "name": "SiteOptz",
+        "url": "https://siteoptz.ai"
+      }
+    },
+    "canonicalUrl": "https://siteoptz.ai/tools/rytr",
+    "breadcrumbs": [
+      {
+        "name": "Home",
+        "url": "https://siteoptz.ai"
+      },
+      {
+        "name": "AI Tools",
+        "url": "https://siteoptz.ai/tools"
+      },
+      {
+        "name": "AI Writing Assistant",
+        "url": "https://siteoptz.ai/categories/ai-writing-assistant"
+      },
+      {
+        "name": "Rytr",
+        "url": "https://siteoptz.ai/tools/rytr"
+      }
+    ],
+    "comparisonData": {
+      "keyMetrics": {
+        "easeOfUse": 5,
+        "features": 4.9,
+        "value": 4.8,
+        "support": 4
+      },
+      "alternatives": [],
+      "lastCompared": "2025-08-21T18:15:14.844Z"
+    }
+  }
+]

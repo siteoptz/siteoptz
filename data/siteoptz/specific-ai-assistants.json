@@ -1,0 +1,101 @@
+[
+  {
+    "id": "grok",
+    "source_id": "grok",
+    "tool_name": "Grok",
+    "name": "Grok",
+    "description": "AI assistant by xAI with real-time knowledge and witty personality",
+    "category": "AI Assistants",
+    "pricing": [
+      {
+        "plan": "Free",
+        "price": 8,
+        "billing_period": "month",
+        "features": [
+          "Basic features"
+        ]
+      }
+    ],
+    "features": {
+      "core": [
+        "AI-powered ai assistants",
+        "User-friendly interface"
+      ],
+      "advanced": [
+        "API access"
+      ],
+      "integrations": [
+        "Web browser"
+      ]
+    },
+    "pros": [
+      "Easy to use",
+      "Powerful AI capabilities"
+    ],
+    "cons": [
+      "Learning curve",
+      "Internet required"
+    ],
+    "rating": 4.2,
+    "reviewCount": 500,
+    "search_volume": 2000,
+    "website": "https://grok.x.ai",
+    "official_url": "https://grok.x.ai",
+    "affiliate_link": "https://grok.x.ai",
+    "logo": "/images/tools/grok-logo.svg",
+    "logo_url": "/images/tools/grok-logo.svg",
+    "vendor": "Grok",
+    "founded": "2023",
+    "free_trial": true,
+    "lastUpdated": "2025-08-21T18:12:42.243Z",
+    "scrapedAt": "2025-08-21T18:12:42.243Z",
+    "source": "fallback-data",
+    "slug": "grok",
+    "metaTags": {
+      "title": "Grok Review 2025 - AI Assistants AI Tool | SiteOptz",
+      "description": "AI assistant by xAI with real-time knowledge and witty personality. Compare pricing, features, pros & cons. Expert AI Assistants AI tool review.",
+      "keywords": [
+        "grok",
+        "grok review",
+        "ai assistants ai",
+        "ai assistants tools",
+        "ai tools comparison",
+        "siteoptz review"
+      ]
+    },
+    "structuredData": {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "Grok",
+      "description": "AI assistant by xAI with real-time knowledge and witty personality",
+      "applicationCategory": "AI Assistants",
+      "operatingSystem": "Web Browser",
+      "offers": [],
+      "aggregateRating": null,
+      "author": {
+        "@type": "Organization",
+        "name": "SiteOptz",
+        "url": "https://siteoptz.ai"
+      }
+    },
+    "canonicalUrl": "https://siteoptz.ai/tools/grok",
+    "breadcrumbs": [
+      {
+        "name": "Home",
+        "url": "https://siteoptz.ai"
+      },
+      {
+        "name": "AI Tools",
+        "url": "https://siteoptz.ai/tools"
+      },
+      {
+        "name": "AI Assistants",
+        "url": "https://siteoptz.ai/categories/ai-assistants"
+      },
+      {
+        "name": "Grok",
+        "url": "https://siteoptz.ai/tools/grok"
+      }
+    ]
+  }
+]

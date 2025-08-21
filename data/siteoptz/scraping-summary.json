@@ -1,0 +1,31 @@
+{
+  "scrapeCompleted": "2025-08-21T18:17:00.835Z",
+  "totalTools": 28,
+  "successfulScrapes": 28,
+  "failedScrapes": 0,
+  "durationMinutes": 4.59,
+  "outputFile": "/Users/siteoptz/siteoptz/data/siteoptz/specific-tools.json",
+  "failedTools": [],
+  "categories": [
+    "ai-assistants",
+    "video-generation",
+    "meeting-assistants",
+    "automation",
+    "research",
+    "writing",
+    "search-engines",
+    "graphic-design",
+    "app-builders",
+    "knowledge-management",
+    "email",
+    "scheduling",
+    "presentations",
+    "resume-builders",
+    "music-generation",
+    "marketing"
+  ],
+  "apiUsage": {
+    "estimatedRequests": 56,
+    "batchSize": 3
+  }
+}

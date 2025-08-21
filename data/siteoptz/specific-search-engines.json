@@ -1,0 +1,134 @@
+[
+  {
+    "id": "google-ai-mode",
+    "source_id": "google-ai-mode",
+    "tool_name": "Google Search",
+    "name": "Google Search",
+    "description": "Google Search offers an 'AI Mode' that provides personalized suggestions and insights based on user interests and trending topics. It also includes features like 'I'm Feeling Curious' and other playful prompts to encourage exploration. The page also highlights Google devices and AI applications in science and the environment.",
+    "category": "Productivity",
+    "pricing": [
+      {
+        "plan": "Free",
+        "price": 0,
+        "billing_period": "month",
+        "features": [
+          "Basic features"
+        ]
+      }
+    ],
+    "features": {
+      "core": [
+        "AI-powered suggestions and insights",
+        "Personalized content based on user interests",
+        "Playful prompts ('I'm Feeling Curious', 'Hungry', etc.)",
+        "Information on Google devices and AI initiatives",
+        "Links to Google's advertising and business services",
+        "Privacy and Terms information",
+        "Search settings and history management"
+      ],
+      "advanced": [
+        "Google Devices",
+        "Google Ads",
+        "Google Business"
+      ],
+      "integrations": [
+        "Google Devices",
+        "Google Ads",
+        "Google Business"
+      ]
+    },
+    "pros": [
+      "Provides a more engaging and personalized search experience",
+      "Encourages discovery of new information and topics",
+      "Offers a glimpse into Google's AI advancements and product lineup",
+      "Easy access to core Google services and information"
+    ],
+    "cons": [
+      "AI mode can sometimes produce inappropriate predictions.",
+      "Limited customization options for AI mode."
+    ],
+    "rating": 4.5,
+    "reviewCount": 1000000000,
+    "search_volume": 9640,
+    "website": "https://www.google.com/",
+    "official_url": "https://www.google.com/",
+    "affiliate_link": "https://www.google.com/",
+    "logo": "/images/tools/google-ai-mode-logo.svg",
+    "logo_url": "/images/tools/google-ai-mode-logo.svg",
+    "vendor": "Google",
+    "founded": "1998",
+    "targetAudience": "General users",
+    "useCases": [
+      "Discovering new information",
+      "Exploring trending topics",
+      "Getting quick answers and suggestions",
+      "Learning about Google products and AI"
+    ],
+    "free_trial": false,
+    "lastUpdated": "2025-08-21T18:15:20.845Z",
+    "scrapedAt": "2025-08-21T18:15:20.845Z",
+    "source": "firecrawl-specific-tools",
+    "slug": "google-search",
+    "metaTags": {
+      "title": "Google Search Review 2025 - Productivity AI Tool | SiteOptz",
+      "description": "Google Search offers an 'AI Mode' that provides personalized suggestions and insights based on user interests and trendi. Compare pricing, features, pros & cons. Expert Productivity AI tool review.",
+      "keywords": [
+        "google search",
+        "google search review",
+        "productivity ai",
+        "productivity tools",
+        "ai tools comparison",
+        "siteoptz review"
+      ]
+    },
+    "structuredData": {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "Google Search",
+      "description": "Google Search offers an 'AI Mode' that provides personalized suggestions and insights based on user interests and trending topics. It also includes features like 'I'm Feeling Curious' and other playful prompts to encourage exploration. The page also highlights Google devices and AI applications in science and the environment.",
+      "applicationCategory": "Productivity",
+      "operatingSystem": "Web Browser",
+      "url": "https://www.google.com/",
+      "offers": [],
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": 4.5,
+        "reviewCount": 100
+      },
+      "author": {
+        "@type": "Organization",
+        "name": "SiteOptz",
+        "url": "https://siteoptz.ai"
+      }
+    },
+    "canonicalUrl": "https://siteoptz.ai/tools/google-search",
+    "breadcrumbs": [
+      {
+        "name": "Home",
+        "url": "https://siteoptz.ai"
+      },
+      {
+        "name": "AI Tools",
+        "url": "https://siteoptz.ai/tools"
+      },
+      {
+        "name": "Productivity",
+        "url": "https://siteoptz.ai/categories/productivity"
+      },
+      {
+        "name": "Google Search",
+        "url": "https://siteoptz.ai/tools/google-search"
+      }
+    ],
+    "comparisonData": {
+      "keyMetrics": {
+        "easeOfUse": 4.7,
+        "features": 4.5,
+        "value": 4,
+        "support": 4
+      },
+      "alternatives": [],
+      "lastCompared": "2025-08-21T18:15:20.845Z"
+    }
+  }
+]

@@ -1,0 +1,353 @@
+[
+  {
+    "id": "gamma",
+    "source_id": "gamma",
+    "tool_name": "Gamma",
+    "name": "Gamma",
+    "description": "Gamma is an AI design partner that helps users effortlessly create presentations, websites, social media posts, and more. It aims to streamline the design process, allowing users to focus on their ideas rather than the design execution. Gamma supports various content formats and offers AI-powered features for generation, editing, and sharing.",
+    "category": "Content Creation",
+    "pricing": [
+      {
+        "plan": "Free",
+        "price": 0,
+        "billing_period": "month",
+        "features": [
+          "Basic features"
+        ]
+      }
+    ],
+    "features": {
+      "core": [
+        "AI-powered content generation for presentations, websites, social media, and documents",
+        "AI-assisted editing and design adjustments",
+        "Real-time collaboration",
+        "Export options to PPT, PDF, PNG, and Google Slides",
+        "Publishing as websites or social posts",
+        "Engagement tracking",
+        "Importing brand assets",
+        "Over 100 themes",
+        "API for programmatic creation and integration",
+        "AI models for high-quality output",
+        "Instant layout and content generation",
+        "Image generation and AI-powered reworking",
+        "Translation capabilities"
+      ],
+      "advanced": [
+        "PPT",
+        "Google Slides",
+        "Social platforms"
+      ],
+      "integrations": [
+        "PPT",
+        "Google Slides",
+        "Social platforms"
+      ]
+    },
+    "pros": [
+      "Saves time and effort in content creation",
+      "Enables creation of professional-looking content quickly",
+      "Facilitates easy sharing and publishing across platforms",
+      "Offers a balance between customizability and fast workflow",
+      "Improves collaboration",
+      "Reduces reliance on traditional design tools",
+      "Helps validate ideas quickly"
+    ],
+    "cons": [
+      "No specific limitations mentioned, but the focus is on AI-assisted creation, which might not suit users who prefer manual design control."
+    ],
+    "rating": 4.5,
+    "reviewCount": 50000000,
+    "search_volume": 1045,
+    "website": "https://gamma.app/",
+    "official_url": "https://gamma.app/",
+    "affiliate_link": "https://gamma.app/",
+    "logo": "/images/tools/gamma-logo.svg",
+    "logo_url": "/images/tools/gamma-logo.svg",
+    "vendor": "Gamma Tech, Inc.",
+    "founded": "2025",
+    "targetAudience": "Content Creators, Marketers, Educators, Consultants, Sales Professionals, Founders",
+    "useCases": [
+      "Creating presentations",
+      "Designing websites and landing pages",
+      "Generating social media graphics and posts",
+      "Producing proposals and documents",
+      "Automating content creation",
+      "Collaborating on design projects",
+      "Validating business ideas"
+    ],
+    "free_trial": true,
+    "lastUpdated": "2025-08-21T18:16:04.555Z",
+    "scrapedAt": "2025-08-21T18:16:04.555Z",
+    "source": "firecrawl-specific-tools",
+    "slug": "gamma",
+    "metaTags": {
+      "title": "Gamma Review 2025 - Content Creation AI Tool | SiteOptz",
+      "description": "Gamma is an AI design partner that helps users effortlessly create presentations, websites, social media posts, and more. Compare pricing, features, pros & cons. Expert Content Creation AI tool review.",
+      "keywords": [
+        "gamma",
+        "gamma review",
+        "content creation ai",
+        "content creation tools",
+        "ai tools comparison",
+        "siteoptz review"
+      ]
+    },
+    "structuredData": {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "Gamma",
+      "description": "Gamma is an AI design partner that helps users effortlessly create presentations, websites, social media posts, and more. It aims to streamline the design process, allowing users to focus on their ideas rather than the design execution. Gamma supports various content formats and offers AI-powered features for generation, editing, and sharing.",
+      "applicationCategory": "Content Creation",
+      "operatingSystem": "Web Browser",
+      "url": "https://gamma.app/",
+      "offers": [],
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": 4.5,
+        "reviewCount": 100
+      },
+      "author": {
+        "@type": "Organization",
+        "name": "SiteOptz",
+        "url": "https://siteoptz.ai"
+      }
+    },
+    "canonicalUrl": "https://siteoptz.ai/tools/gamma",
+    "breadcrumbs": [
+      {
+        "name": "Home",
+        "url": "https://siteoptz.ai"
+      },
+      {
+        "name": "AI Tools",
+        "url": "https://siteoptz.ai/tools"
+      },
+      {
+        "name": "Content Creation",
+        "url": "https://siteoptz.ai/categories/content-creation"
+      },
+      {
+        "name": "Gamma",
+        "url": "https://siteoptz.ai/tools/gamma"
+      }
+    ],
+    "comparisonData": {
+      "keyMetrics": {
+        "easeOfUse": 4.7,
+        "features": 4.5,
+        "value": 4,
+        "support": 4
+      },
+      "alternatives": [],
+      "lastCompared": "2025-08-21T18:16:04.555Z"
+    }
+  },
+  {
+    "id": "copilot-powerpoint",
+    "source_id": "copilot-powerpoint",
+    "tool_name": "Microsoft PowerPoint",
+    "name": "Microsoft PowerPoint",
+    "description": "Microsoft PowerPoint is a presentation software that allows users to create captivating presentations, collaborate in real-time, and design presentations from any device. It offers features for idea generation, confident creation, engagement, and sharing.",
+    "category": "Productivity",
+    "pricing": [
+      {
+        "billing_period": "year",
+        "features": [
+          "One person",
+          "Sharing and real-time collaboration",
+          "PowerPoint for the web",
+          "Basic spelling and grammar",
+          "Basic templates, fonts, icons, and stickers",
+          "Dictation and voice commands",
+          "5 GB of cloud storage"
+        ],
+        "plan": "Microsoft PowerPoint (Free)",
+        "price": 0
+      },
+      {
+        "billing_period": "year",
+        "features": [
+          "For one person",
+          "Sharing and real-time collaboration",
+          "PowerPoint for the web and desktop app",
+          "Premium templates, fonts, icons, and stickers",
+          "Dictation, voice commands, and transcription",
+          "Advanced grammar, spelling, and editing support",
+          "1 TB of cloud storage",
+          "Word, Excel, PowerPoint, Outlook, OneNote desktop apps",
+          "Microsoft Copilot",
+          "AI-powered image creation and editing with Microsoft Designer",
+          "Advanced digital security",
+          "Ad-free experience",
+          "Works on Windows, macOS, iOS, and Android"
+        ],
+        "plan": "Microsoft 365 Personal",
+        "price": 99.99
+      },
+      {
+        "billing_period": "year",
+        "features": [
+          "For up to six people",
+          "Sharing and real-time collaboration",
+          "PowerPoint for the web and desktop app",
+          "Premium templates, fonts, icons, and stickers",
+          "Dictation, voice commands, and transcription",
+          "Advanced grammar, spelling, and editing support",
+          "Up to 6 TB of cloud storage (1 TB per person)",
+          "Word, Excel, PowerPoint, Outlook, OneNote desktop apps",
+          "Microsoft Copilot",
+          "AI-powered image creation and editing with Microsoft Designer",
+          "Advanced digital security",
+          "Ad-free experience",
+          "Works on Windows, macOS, iOS, and Android"
+        ],
+        "plan": "Microsoft 365 Family",
+        "price": 129.99
+      }
+    ],
+    "features": {
+      "core": [
+        "Design captivating presentations",
+        "Real-time collaboration",
+        "Cross-device accessibility",
+        "AI-powered features with Microsoft Copilot for idea generation and content creation",
+        "Thousands of customizable templates",
+        "Speaker Coach for improving presentation delivery",
+        "Mobile app for on-the-go access",
+        "Integration with other Microsoft 365 apps (Word, Excel, Outlook, OneDrive, etc.)",
+        "AI-powered image creation and editing with Microsoft Designer",
+        "Advanced digital security",
+        "Ad-free experience"
+      ],
+      "advanced": [
+        "Microsoft 365 Suite (Word, Excel, Outlook, OneDrive, Teams, etc.)",
+        "Microsoft Designer",
+        "Clipchamp"
+      ],
+      "integrations": [
+        "Microsoft 365 Suite (Word, Excel, Outlook, OneDrive, Teams, etc.)",
+        "Microsoft Designer",
+        "Clipchamp"
+      ]
+    },
+    "pros": [
+      "User-friendly interface",
+      "Powerful AI features (Copilot) for enhanced productivity",
+      "Extensive library of templates and design tools",
+      "Seamless collaboration capabilities",
+      "Cross-platform availability",
+      "Integration with the broader Microsoft ecosystem"
+    ],
+    "cons": [
+      "Advanced features and full functionality often require a Microsoft 365 subscription.",
+      "AI features like Copilot may have usage limits."
+    ],
+    "rating": 4.5,
+    "reviewCount": 1000000,
+    "search_volume": 4800,
+    "website": "https://www.microsoft.com/en-us/microsoft-365/powerpoint",
+    "official_url": "https://www.microsoft.com/en-us/microsoft-365/powerpoint",
+    "affiliate_link": "https://www.microsoft.com/en-us/microsoft-365/powerpoint",
+    "logo": "/images/tools/copilot-powerpoint-logo.svg",
+    "logo_url": "/images/tools/copilot-powerpoint-logo.svg",
+    "vendor": "Microsoft",
+    "founded": "1990",
+    "targetAudience": "Students, Educators, Business Professionals, Marketers, Content Creators",
+    "useCases": [
+      "Creating business presentations",
+      "Developing educational lectures",
+      "Designing marketing materials",
+      "Pitching ideas to investors",
+      "Collaborating on projects",
+      "Personal use for slideshows"
+    ],
+    "free_trial": false,
+    "lastUpdated": "2025-08-21T18:16:25.127Z",
+    "scrapedAt": "2025-08-21T18:16:25.127Z",
+    "source": "firecrawl-specific-tools",
+    "slug": "microsoft-powerpoint",
+    "metaTags": {
+      "title": "Microsoft PowerPoint Review 2025 - Productivity AI Tool | SiteOptz",
+      "description": "Microsoft PowerPoint is a presentation software that allows users to create captivating presentations, collaborate in re. Compare pricing, features, pros & cons. Expert Productivity AI tool review.",
+      "keywords": [
+        "microsoft powerpoint",
+        "microsoft powerpoint review",
+        "productivity ai",
+        "productivity tools",
+        "ai tools comparison",
+        "siteoptz review"
+      ]
+    },
+    "structuredData": {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "Microsoft PowerPoint",
+      "description": "Microsoft PowerPoint is a presentation software that allows users to create captivating presentations, collaborate in real-time, and design presentations from any device. It offers features for idea generation, confident creation, engagement, and sharing.",
+      "applicationCategory": "Productivity",
+      "operatingSystem": "Web Browser",
+      "url": "https://www.microsoft.com/en-us/microsoft-365/powerpoint",
+      "offers": [
+        {
+          "@type": "Offer",
+          "name": "Microsoft PowerPoint (Free)",
+          "price": 0,
+          "priceCurrency": "USD",
+          "billingIncrement": "year"
+        },
+        {
+          "@type": "Offer",
+          "name": "Microsoft 365 Personal",
+          "price": 99.99,
+          "priceCurrency": "USD",
+          "billingIncrement": "year"
+        },
+        {
+          "@type": "Offer",
+          "name": "Microsoft 365 Family",
+          "price": 129.99,
+          "priceCurrency": "USD",
+          "billingIncrement": "year"
+        }
+      ],
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": 4.5,
+        "reviewCount": 100
+      },
+      "author": {
+        "@type": "Organization",
+        "name": "SiteOptz",
+        "url": "https://siteoptz.ai"
+      }
+    },
+    "canonicalUrl": "https://siteoptz.ai/tools/microsoft-powerpoint",
+    "breadcrumbs": [
+      {
+        "name": "Home",
+        "url": "https://siteoptz.ai"
+      },
+      {
+        "name": "AI Tools",
+        "url": "https://siteoptz.ai/tools"
+      },
+      {
+        "name": "Productivity",
+        "url": "https://siteoptz.ai/categories/productivity"
+      },
+      {
+        "name": "Microsoft PowerPoint",
+        "url": "https://siteoptz.ai/tools/microsoft-powerpoint"
+      }
+    ],
+    "comparisonData": {
+      "keyMetrics": {
+        "easeOfUse": 4.7,
+        "features": 4.5,
+        "value": 4.8,
+        "support": 4
+      },
+      "alternatives": [],
+      "lastCompared": "2025-08-21T18:16:25.127Z"
+    }
+  }
+]

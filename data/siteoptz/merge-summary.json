@@ -1,0 +1,14 @@
+{
+  "mergeCompleted": "2025-08-21T18:17:00.909Z",
+  "stats": {
+    "total": 86,
+    "added": 28,
+    "updated": 0,
+    "skipped": 0,
+    "original": 58,
+    "new": 28
+  },
+  "totalTools": 86,
+  "dataFile": "/Users/siteoptz/siteoptz/public/data/aiToolsData.json",
+  "backupFile": "/Users/siteoptz/siteoptz/public/data/aiToolsData-backup.json"
+}

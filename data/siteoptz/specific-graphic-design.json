@@ -1,0 +1,146 @@
+[
+  {
+    "id": "looka",
+    "source_id": "looka",
+    "tool_name": "Looka",
+    "name": "Looka",
+    "description": "Looka is an AI-powered platform that helps individuals and businesses create professional logos, build brand identities, and design marketing materials. It simplifies the design process, making it accessible to users without prior design experience. Looka offers a comprehensive suite of tools, from logo generation to a full brand kit with templates for various marketing assets.",
+    "category": "Branding & Design",
+    "pricing": [
+      {
+        "billing_period": "one-time",
+        "features": [
+          "Logo design",
+          "Brand Kit",
+          "Logo files (15+ types)",
+          "Social media templates",
+          "Business card designs",
+          "Brand guidelines"
+        ],
+        "plan": "Logo & Brand Kit",
+        "price": 199
+      }
+    ],
+    "features": {
+      "core": [
+        "AI-powered logo maker with endless customization options",
+        "Brand Kit for creating consistent marketing materials (business cards, social media posts, etc.)",
+        "Hundreds of branded templates personalized to logo design",
+        "High-resolution logo files in various formats (SVG, PNG, EPS, PDF)",
+        "Black & white, color, and transparent background variations",
+        "Social media templates for profile and cover photos, posts, and stories",
+        "Business card design and customization",
+        "Brand guidelines including fonts and colors",
+        "Access to exclusive partner offers",
+        "Customer success support via live chat and email",
+        "Explainer video and blog resources on design, branding, and entrepreneurship"
+      ],
+      "advanced": [],
+      "integrations": []
+    },
+    "pros": [
+      "Extremely easy to use, even for beginners with no design skills.",
+      "AI technology generates a wide variety of logo options quickly.",
+      "Provides a complete brand identity solution beyond just a logo.",
+      "Professional-quality marketing materials can be created instantly.",
+      "Cost-effective compared to hiring a professional designer.",
+      "Offers excellent customer support."
+    ],
+    "cons": [
+      "While AI-powered, some users might still desire more granular control over certain design elements than the platform offers out-of-the-box.",
+      "The focus is on logo and brand identity creation, not a full-fledged website builder or advanced marketing suite."
+    ],
+    "rating": 5,
+    "reviewCount": 7000,
+    "search_volume": 8814,
+    "website": "https://looka.com/",
+    "official_url": "https://looka.com/",
+    "affiliate_link": "https://looka.com/",
+    "logo": "/images/tools/looka-logo.svg",
+    "logo_url": "/images/tools/looka-logo.svg",
+    "vendor": "Looka",
+    "founded": "2016",
+    "targetAudience": "Small business owners, entrepreneurs, startups, freelancers, individuals needing a brand identity.",
+    "useCases": [
+      "Creating a new business logo",
+      "Developing a consistent brand identity",
+      "Designing marketing materials (business cards, social media graphics)",
+      "Establishing a professional online presence",
+      "Rebranding an existing business"
+    ],
+    "free_trial": false,
+    "lastUpdated": "2025-08-21T18:15:30.934Z",
+    "scrapedAt": "2025-08-21T18:15:30.934Z",
+    "source": "firecrawl-specific-tools",
+    "slug": "looka",
+    "metaTags": {
+      "title": "Looka Review 2025 - Branding & Design AI Tool | SiteOptz",
+      "description": "Looka is an AI-powered platform that helps individuals and businesses create professional logos, build brand identities,. Compare pricing, features, pros & cons. Expert Branding & Design AI tool review.",
+      "keywords": [
+        "looka",
+        "looka review",
+        "branding & design ai",
+        "branding & design tools",
+        "ai tools comparison",
+        "siteoptz review"
+      ]
+    },
+    "structuredData": {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "Looka",
+      "description": "Looka is an AI-powered platform that helps individuals and businesses create professional logos, build brand identities, and design marketing materials. It simplifies the design process, making it accessible to users without prior design experience. Looka offers a comprehensive suite of tools, from logo generation to a full brand kit with templates for various marketing assets.",
+      "applicationCategory": "Branding & Design",
+      "operatingSystem": "Web Browser",
+      "url": "https://looka.com/",
+      "offers": [
+        {
+          "@type": "Offer",
+          "name": "Logo & Brand Kit",
+          "price": 199,
+          "priceCurrency": "USD",
+          "billingIncrement": "one-time"
+        }
+      ],
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": 5,
+        "reviewCount": 100
+      },
+      "author": {
+        "@type": "Organization",
+        "name": "SiteOptz",
+        "url": "https://siteoptz.ai"
+      }
+    },
+    "canonicalUrl": "https://siteoptz.ai/tools/looka",
+    "breadcrumbs": [
+      {
+        "name": "Home",
+        "url": "https://siteoptz.ai"
+      },
+      {
+        "name": "AI Tools",
+        "url": "https://siteoptz.ai/tools"
+      },
+      {
+        "name": "Branding & Design",
+        "url": "https://siteoptz.ai/categories/branding-design"
+      },
+      {
+        "name": "Looka",
+        "url": "https://siteoptz.ai/tools/looka"
+      }
+    ],
+    "comparisonData": {
+      "keyMetrics": {
+        "easeOfUse": 5,
+        "features": 5,
+        "value": 4,
+        "support": 4
+      },
+      "alternatives": [],
+      "lastCompared": "2025-08-21T18:15:30.934Z"
+    }
+  }
+]

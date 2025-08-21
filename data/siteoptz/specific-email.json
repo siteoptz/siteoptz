@@ -1,0 +1,592 @@
+[
+  {
+    "id": "fyxer",
+    "source_id": "fyxer",
+    "tool_name": "Fyxer",
+    "name": "Fyxer",
+    "description": "Fyxer is an AI-powered assistant designed to help users manage their inboxes, draft email responses, and take meeting notes. It aims to reduce the time spent on administrative tasks, allowing users to focus on more important work.",
+    "category": "Productivity",
+    "pricing": [
+      {
+        "billing_period": "year",
+        "features": [
+          "1 inbox and calendar per user",
+          "Email Sorting and Categorization",
+          "Meeting Notetaker & Scheduler",
+          "Chat support"
+        ],
+        "plan": "Standard",
+        "price": 22.5
+      },
+      {
+        "billing_period": "year",
+        "features": [
+          "Everything included in Standard",
+          "Connect multiple inboxes and calendars",
+          "Advanced Team Calendar Scheduling",
+          "Reads email attachments & CRM Integration"
+        ],
+        "plan": "Pro",
+        "price": 37.5
+      },
+      {
+        "billing_period": "contact us",
+        "features": [
+          "Everything included in Pro",
+          "Bespoke pricing",
+          "Dedicated Account Manager",
+          "SSO & SCIM Provisioning",
+          "Team Analytics",
+          "Bespoke Advanced Security Controls"
+        ],
+        "plan": "Enterprise",
+        "price": 0
+      }
+    ],
+    "features": {
+      "core": [
+        "Inbox organization and categorization",
+        "AI-powered email response drafting",
+        "Meeting note-taking",
+        "Follow-up email generation after meetings",
+        "1-click email provider connection (Gmail, Outlook)",
+        "Spam and marketing email filtering",
+        "Learning user's tone for email responses",
+        "Integration with CRM and attachments (Pro plan)",
+        "Advanced Team Calendar Scheduling (Pro plan)",
+        "SSO & SCIM Provisioning (Enterprise plan)",
+        "Team Analytics (Enterprise plan)",
+        "Bespoke Advanced Security Controls (Enterprise plan)"
+      ],
+      "advanced": [
+        "Gmail",
+        "Outlook",
+        "CRM"
+      ],
+      "integrations": [
+        "Gmail",
+        "Outlook",
+        "CRM"
+      ]
+    },
+    "pros": [
+      "Saves time on email management and meeting notes",
+      "Helps achieve inbox zero",
+      "AI drafts emails in user's tone",
+      "Easy integration with email providers",
+      "Security certifications (AICPA, DSS, GDPR, CCPA, ISO)"
+    ],
+    "cons": [],
+    "rating": 4.3,
+    "reviewCount": 500000,
+    "search_volume": 4816,
+    "website": "https://www.fyxer.ai/",
+    "official_url": "https://www.fyxer.ai/",
+    "affiliate_link": "https://www.fyxer.ai/",
+    "logo": "/images/tools/fyxer-logo.svg",
+    "logo_url": "/images/tools/fyxer-logo.svg",
+    "vendor": "Fyxer AI Limited",
+    "founded": "N/A",
+    "targetAudience": "Individuals and organizations looking to improve email management and productivity",
+    "useCases": [
+      "Inbox management",
+      "Email response drafting",
+      "Meeting note-taking",
+      "Scheduling follow-ups"
+    ],
+    "free_trial": true,
+    "lastUpdated": "2025-08-21T18:15:49.297Z",
+    "scrapedAt": "2025-08-21T18:15:49.297Z",
+    "source": "firecrawl-specific-tools",
+    "slug": "fyxer",
+    "metaTags": {
+      "title": "Fyxer Review 2025 - Productivity AI Tool | SiteOptz",
+      "description": "Fyxer is an AI-powered assistant designed to help users manage their inboxes, draft email responses, and take meeting no. Compare pricing, features, pros & cons. Expert Productivity AI tool review.",
+      "keywords": [
+        "fyxer",
+        "fyxer review",
+        "productivity ai",
+        "productivity tools",
+        "ai tools comparison",
+        "siteoptz review"
+      ]
+    },
+    "structuredData": {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "Fyxer",
+      "description": "Fyxer is an AI-powered assistant designed to help users manage their inboxes, draft email responses, and take meeting notes. It aims to reduce the time spent on administrative tasks, allowing users to focus on more important work.",
+      "applicationCategory": "Productivity",
+      "operatingSystem": "Web Browser",
+      "url": "https://www.fyxer.ai/",
+      "offers": [
+        {
+          "@type": "Offer",
+          "name": "Standard",
+          "price": 22.5,
+          "priceCurrency": "USD",
+          "billingIncrement": "year"
+        },
+        {
+          "@type": "Offer",
+          "name": "Pro",
+          "price": 37.5,
+          "priceCurrency": "USD",
+          "billingIncrement": "year"
+        },
+        {
+          "@type": "Offer",
+          "name": "Enterprise",
+          "price": 0,
+          "priceCurrency": "USD",
+          "billingIncrement": "contact us"
+        }
+      ],
+      "aggregateRating": null,
+      "author": {
+        "@type": "Organization",
+        "name": "SiteOptz",
+        "url": "https://siteoptz.ai"
+      }
+    },
+    "canonicalUrl": "https://siteoptz.ai/tools/fyxer",
+    "breadcrumbs": [
+      {
+        "name": "Home",
+        "url": "https://siteoptz.ai"
+      },
+      {
+        "name": "AI Tools",
+        "url": "https://siteoptz.ai/tools"
+      },
+      {
+        "name": "Productivity",
+        "url": "https://siteoptz.ai/categories/productivity"
+      },
+      {
+        "name": "Fyxer",
+        "url": "https://siteoptz.ai/tools/fyxer"
+      }
+    ],
+    "comparisonData": {
+      "keyMetrics": {
+        "easeOfUse": 4.2,
+        "features": 4.1,
+        "value": 4,
+        "support": 4
+      },
+      "alternatives": [],
+      "lastCompared": "2025-08-21T18:15:49.297Z"
+    }
+  },
+  {
+    "id": "hubspot-email-writer",
+    "source_id": "hubspot-email-writer",
+    "tool_name": "HubSpot Email Marketing Tools",
+    "name": "HubSpot Email Marketing Tools",
+    "description": "HubSpot's free email marketing tools allow users to create, personalize, and optimize marketing emails without needing to rely on designers or IT. It offers features like AI-generated subject lines and copy, customizable templates, and automation for post-send actions.",
+    "category": "Marketing",
+    "pricing": [
+      {
+        "billing_period": "month",
+        "features": [
+          "Free email marketing tools",
+          "Drag-and-drop email editor",
+          "Customizable templates",
+          "Basic automation",
+          "CRM integration"
+        ],
+        "plan": "Free",
+        "price": 0
+      },
+      {
+        "billing_period": "month",
+        "features": [
+          "All Free features",
+          "Advanced automation",
+          "A/B testing",
+          "More templates",
+          "Enhanced analytics",
+          "AI features"
+        ],
+        "plan": "Starter",
+        "price": 23
+      },
+      {
+        "billing_period": "month",
+        "features": [
+          "All Starter features",
+          "Advanced personalization",
+          "More automation workflows",
+          "Campaign management",
+          "SEO tools"
+        ],
+        "plan": "Professional",
+        "price": 800
+      },
+      {
+        "billing_period": "month",
+        "features": [
+          "All Professional features",
+          "Advanced analytics",
+          "Account-based marketing tools",
+          "Dedicated IP address",
+          "Custom objects"
+        ],
+        "plan": "Enterprise",
+        "price": 3200
+      }
+    ],
+    "features": {
+      "core": [
+        "AI-generated subject lines and email copy",
+        "Customizable templates for newsletters, events, etc.",
+        "Email automation with simple workflows",
+        "Drag-and-drop email editor",
+        "Personalization using CRM data",
+        "A/B testing for subject lines and content",
+        "Analytics and reporting on campaign performance",
+        "Integration with HubSpot CRM and Salesforce",
+        "Free online form builder",
+        "AI email writer",
+        "Social media management",
+        "Marketing automation",
+        "Campaign management",
+        "SEO tools",
+        "Live chat and chatbot builder",
+        "Free AI content generator",
+        "SSL certificate",
+        "Newsletter builder",
+        "AI paragraph rewriter",
+        "User permissions",
+        "Custom objects",
+        "Social media agent"
+      ],
+      "advanced": [
+        "HubSpot CRM",
+        "Salesforce",
+        "WhatsApp"
+      ],
+      "integrations": [
+        "HubSpot CRM",
+        "Salesforce",
+        "WhatsApp"
+      ]
+    },
+    "pros": [
+      "User-friendly drag-and-drop editor",
+      "Powerful AI assistance for content creation",
+      "Seamless integration with HubSpot CRM",
+      "Extensive template library",
+      "Robust automation capabilities",
+      "Comprehensive analytics for campaign optimization",
+      "Scalable with different pricing tiers",
+      "Free plan offers significant functionality"
+    ],
+    "cons": [
+      "Premium features require paid plans.",
+      "Some advanced features might have a learning curve."
+    ],
+    "rating": 4.5,
+    "reviewCount": 10000,
+    "search_volume": 9697,
+    "website": "https://www.hubspot.com/products/marketing/email",
+    "official_url": "https://www.hubspot.com/products/marketing/email",
+    "affiliate_link": "https://www.hubspot.com/products/marketing/email",
+    "logo": "/images/tools/hubspot-email-writer-logo.svg",
+    "logo_url": "/images/tools/hubspot-email-writer-logo.svg",
+    "vendor": "HubSpot",
+    "founded": "2006",
+    "targetAudience": "Marketers, Small to Large Businesses, Content Creators",
+    "useCases": [
+      "Creating and sending newsletters",
+      "Promotional email campaigns",
+      "Product launch announcements",
+      "Event invitations",
+      "Customer re-engagement and nurturing",
+      "Personalizing email content",
+      "Automating email follow-ups",
+      "Analyzing email marketing performance"
+    ],
+    "free_trial": true,
+    "lastUpdated": "2025-08-21T18:15:52.176Z",
+    "scrapedAt": "2025-08-21T18:15:52.176Z",
+    "source": "firecrawl-specific-tools",
+    "slug": "hubspot-email-marketing-tools",
+    "metaTags": {
+      "title": "HubSpot Email Marketing Tools Review 2025 - Marketing AI Tool | SiteOptz",
+      "description": "HubSpot's free email marketing tools allow users to create, personalize, and optimize marketing emails without needing t. Compare pricing, features, pros & cons. Expert Marketing AI tool review.",
+      "keywords": [
+        "hubspot email marketing tools",
+        "hubspot email marketing tools review",
+        "marketing ai",
+        "marketing tools",
+        "ai tools comparison",
+        "siteoptz review"
+      ]
+    },
+    "structuredData": {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "HubSpot Email Marketing Tools",
+      "description": "HubSpot's free email marketing tools allow users to create, personalize, and optimize marketing emails without needing to rely on designers or IT. It offers features like AI-generated subject lines and copy, customizable templates, and automation for post-send actions.",
+      "applicationCategory": "Marketing",
+      "operatingSystem": "Web Browser",
+      "url": "https://www.hubspot.com/products/marketing/email",
+      "offers": [
+        {
+          "@type": "Offer",
+          "name": "Free",
+          "price": 0,
+          "priceCurrency": "USD",
+          "billingIncrement": "month"
+        },
+        {
+          "@type": "Offer",
+          "name": "Starter",
+          "price": 23,
+          "priceCurrency": "USD",
+          "billingIncrement": "month"
+        },
+        {
+          "@type": "Offer",
+          "name": "Professional",
+          "price": 800,
+          "priceCurrency": "USD",
+          "billingIncrement": "month"
+        },
+        {
+          "@type": "Offer",
+          "name": "Enterprise",
+          "price": 3200,
+          "priceCurrency": "USD",
+          "billingIncrement": "month"
+        }
+      ],
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": 4.5,
+        "reviewCount": 100
+      },
+      "author": {
+        "@type": "Organization",
+        "name": "SiteOptz",
+        "url": "https://siteoptz.ai"
+      }
+    },
+    "canonicalUrl": "https://siteoptz.ai/tools/hubspot-email-marketing-tools",
+    "breadcrumbs": [
+      {
+        "name": "Home",
+        "url": "https://siteoptz.ai"
+      },
+      {
+        "name": "AI Tools",
+        "url": "https://siteoptz.ai/tools"
+      },
+      {
+        "name": "Marketing",
+        "url": "https://siteoptz.ai/categories/marketing"
+      },
+      {
+        "name": "HubSpot Email Marketing Tools",
+        "url": "https://siteoptz.ai/tools/hubspot-email-marketing-tools"
+      }
+    ],
+    "comparisonData": {
+      "keyMetrics": {
+        "easeOfUse": 4.7,
+        "features": 4.5,
+        "value": 4.8,
+        "support": 4
+      },
+      "alternatives": [],
+      "lastCompared": "2025-08-21T18:15:52.176Z"
+    }
+  },
+  {
+    "id": "shortwave",
+    "source_id": "shortwave",
+    "tool_name": "Shortwave",
+    "name": "Shortwave",
+    "description": "Shortwave is an AI-powered email client designed to automate and enhance your email management. It offers features like AI-driven organization, scheduling, writing assistance, and advanced search capabilities to save users time and improve productivity. It aims to provide an ultimate inbox experience with features like split inboxes, email bundling, and turning emails into todos.",
+    "category": "Productivity",
+    "pricing": [
+      {
+        "plan": "Free",
+        "price": 0,
+        "billing_period": "month",
+        "features": [
+          "Basic features"
+        ]
+      }
+    ],
+    "features": {
+      "core": [
+        "AI-powered email organization",
+        "AI-assisted email writing and enhancement",
+        "AI-powered search and answer finding",
+        "Intelligent email autocompletion",
+        "AI-assisted meeting scheduling",
+        "Split inbox functionality",
+        "Bundling for bulk email triage",
+        "Convert emails into todos",
+        "Scheduled email delivery",
+        "Read status tracking",
+        "Keyboard shortcuts and markdown support",
+        "Real-time team collaboration on emails",
+        "Private commenting on emails within the inbox",
+        "Assigning emails to team members",
+        "Shared labels for team access",
+        "Shared prompts and templates",
+        "Enterprise-grade security",
+        "Advanced AI models",
+        "AI web browsing",
+        "AI memory customization",
+        "Instant AI summaries",
+        "Powerful AI-enhanced search",
+        "AI-powered snooze",
+        "Block & unsubscribe",
+        "Shared thread links",
+        "Integrated calendar",
+        "Link tracking",
+        "Recent opens tracking",
+        "Follow-up reminders",
+        "Granular push controls",
+        "Do Not Disturb mode",
+        "Custom themes",
+        "Saved searches",
+        "Multi-account support",
+        "Command palette",
+        "Advanced privacy features",
+        "CRM integration"
+      ],
+      "advanced": [
+        "Slack",
+        "Calendar",
+        "Notion",
+        "Asana",
+        "Hubspot",
+        "Gmail",
+        "CRM"
+      ],
+      "integrations": [
+        "Slack",
+        "Calendar",
+        "Notion",
+        "Asana",
+        "Hubspot",
+        "Gmail",
+        "CRM"
+      ]
+    },
+    "pros": [
+      "Saves hours each day with AI automation",
+      "Organizes, schedules, writes, and searches with prompts",
+      "Integrates with favorite tools",
+      "Filters emails with AI",
+      "Writes emails that sound like you",
+      "Finds answers from your emails",
+      "Autocompletes intelligently",
+      "Schedules meetings with ease",
+      "Splits inbox for focus",
+      "Triage emails in bundles",
+      "Turns emails into todos",
+      "Makes emails arrive on schedule",
+      "See when people read your emails",
+      "Unleashes keyboard productivity",
+      "Real-time team collaboration",
+      "Comment privately on emails",
+      "Assign next steps on emails",
+      "Share labels with team",
+      "Share prompts & templates",
+      "Trusted by leading professionals",
+      "Available on iOS, Android, Mac & Windows"
+    ],
+    "cons": [
+      "No credit card required"
+    ],
+    "rating": 4.3,
+    "reviewCount": 3561,
+    "search_volume": 1769,
+    "website": "https://www.shortwave.com/",
+    "official_url": "https://www.shortwave.com/",
+    "affiliate_link": "https://www.shortwave.com/",
+    "logo": "/images/tools/shortwave-logo.svg",
+    "logo_url": "/images/tools/shortwave-logo.svg",
+    "vendor": "Shortwave",
+    "founded": "Unknown",
+    "targetAudience": "Professionals, Teams",
+    "useCases": [
+      "Email automation",
+      "Inbox organization",
+      "Email writing assistance",
+      "Meeting scheduling",
+      "Team collaboration",
+      "Information retrieval from emails",
+      "Productivity enhancement"
+    ],
+    "free_trial": true,
+    "lastUpdated": "2025-08-21T18:15:55.482Z",
+    "scrapedAt": "2025-08-21T18:15:55.482Z",
+    "source": "firecrawl-specific-tools",
+    "slug": "shortwave",
+    "metaTags": {
+      "title": "Shortwave Review 2025 - Productivity AI Tool | SiteOptz",
+      "description": "Shortwave is an AI-powered email client designed to automate and enhance your email management. It offers features like . Compare pricing, features, pros & cons. Expert Productivity AI tool review.",
+      "keywords": [
+        "shortwave",
+        "shortwave review",
+        "productivity ai",
+        "productivity tools",
+        "ai tools comparison",
+        "siteoptz review"
+      ]
+    },
+    "structuredData": {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "Shortwave",
+      "description": "Shortwave is an AI-powered email client designed to automate and enhance your email management. It offers features like AI-driven organization, scheduling, writing assistance, and advanced search capabilities to save users time and improve productivity. It aims to provide an ultimate inbox experience with features like split inboxes, email bundling, and turning emails into todos.",
+      "applicationCategory": "Productivity",
+      "operatingSystem": "Web Browser",
+      "url": "https://www.shortwave.com/",
+      "offers": [],
+      "aggregateRating": null,
+      "author": {
+        "@type": "Organization",
+        "name": "SiteOptz",
+        "url": "https://siteoptz.ai"
+      }
+    },
+    "canonicalUrl": "https://siteoptz.ai/tools/shortwave",
+    "breadcrumbs": [
+      {
+        "name": "Home",
+        "url": "https://siteoptz.ai"
+      },
+      {
+        "name": "AI Tools",
+        "url": "https://siteoptz.ai/tools"
+      },
+      {
+        "name": "Productivity",
+        "url": "https://siteoptz.ai/categories/productivity"
+      },
+      {
+        "name": "Shortwave",
+        "url": "https://siteoptz.ai/tools/shortwave"
+      }
+    ],
+    "comparisonData": {
+      "keyMetrics": {
+        "easeOfUse": 4.2,
+        "features": 4.1,
+        "value": 4,
+        "support": 4
+      },
+      "alternatives": [],
+      "lastCompared": "2025-08-21T18:15:55.482Z"
+    }
+  }
+]

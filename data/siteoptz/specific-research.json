@@ -1,0 +1,224 @@
+[
+  {
+    "id": "notebook-lm",
+    "source_id": "notebook-lm",
+    "tool_name": "Google Account Sign-in",
+    "name": "Google Account Sign-in",
+    "description": "Sign in to your Google Account to access Google services. Options include signing in with email or phone, creating an account for personal use, child, or business, and using guest mode for private browsing.",
+    "category": "Productivity",
+    "pricing": [
+      {
+        "plan": "Free",
+        "price": 0,
+        "billing_period": "month",
+        "features": [
+          "Basic features"
+        ]
+      }
+    ],
+    "features": {
+      "core": [
+        "Sign in with Google Account",
+        "Email or phone sign-in",
+        "Account creation (personal, child, business)",
+        "Guest mode for private browsing",
+        "Forgot email recovery"
+      ],
+      "advanced": [
+        "Google Services"
+      ],
+      "integrations": [
+        "Google Services"
+      ]
+    },
+    "pros": [
+      "Secure access to Google services",
+      "Multiple account options",
+      "Private browsing available"
+    ],
+    "cons": [],
+    "rating": 4.5,
+    "reviewCount": 1000000000,
+    "search_volume": 7944,
+    "website": "https://accounts.google.com/",
+    "official_url": "https://accounts.google.com/",
+    "affiliate_link": "https://accounts.google.com/",
+    "logo": "/images/tools/notebook-lm-logo.svg",
+    "logo_url": "/images/tools/notebook-lm-logo.svg",
+    "vendor": "Google",
+    "founded": "1998",
+    "targetAudience": "All Google users",
+    "useCases": [
+      "Accessing Gmail",
+      "Using Google Drive",
+      "Managing Google Photos",
+      "Browsing YouTube",
+      "Using Google Maps"
+    ],
+    "free_trial": false,
+    "lastUpdated": "2025-08-21T18:13:09.788Z",
+    "scrapedAt": "2025-08-21T18:13:09.788Z",
+    "source": "firecrawl-specific-tools",
+    "slug": "google-account-sign-in",
+    "metaTags": {
+      "title": "Google Account Sign-in Review 2025 - Productivity AI Tool | SiteOptz",
+      "description": "Sign in to your Google Account to access Google services. Options include signing in with email or phone, creating an ac. Compare pricing, features, pros & cons. Expert Productivity AI tool review.",
+      "keywords": [
+        "google account sign-in",
+        "google account sign-in review",
+        "productivity ai",
+        "productivity tools",
+        "ai tools comparison",
+        "siteoptz review"
+      ]
+    },
+    "structuredData": {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "Google Account Sign-in",
+      "description": "Sign in to your Google Account to access Google services. Options include signing in with email or phone, creating an account for personal use, child, or business, and using guest mode for private browsing.",
+      "applicationCategory": "Productivity",
+      "operatingSystem": "Web Browser",
+      "url": "https://accounts.google.com/",
+      "offers": [],
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": 4.5,
+        "reviewCount": 100
+      },
+      "author": {
+        "@type": "Organization",
+        "name": "SiteOptz",
+        "url": "https://siteoptz.ai"
+      }
+    },
+    "canonicalUrl": "https://siteoptz.ai/tools/google-account-sign-in",
+    "breadcrumbs": [
+      {
+        "name": "Home",
+        "url": "https://siteoptz.ai"
+      },
+      {
+        "name": "AI Tools",
+        "url": "https://siteoptz.ai/tools"
+      },
+      {
+        "name": "Productivity",
+        "url": "https://siteoptz.ai/categories/productivity"
+      },
+      {
+        "name": "Google Account Sign-in",
+        "url": "https://siteoptz.ai/tools/google-account-sign-in"
+      }
+    ],
+    "comparisonData": {
+      "keyMetrics": {
+        "easeOfUse": 4.7,
+        "features": 4.5,
+        "value": 4,
+        "support": 4
+      },
+      "alternatives": [],
+      "lastCompared": "2025-08-21T18:13:09.788Z"
+    }
+  },
+  {
+    "id": "deep-research",
+    "source_id": "deep-research",
+    "tool_name": "Deep Research",
+    "name": "Deep Research",
+    "description": "AI-powered research assistant for academic and professional research",
+    "category": "Research & Education",
+    "pricing": [
+      {
+        "plan": "Free",
+        "price": 29,
+        "billing_period": "month",
+        "features": [
+          "Basic features"
+        ]
+      }
+    ],
+    "features": {
+      "core": [
+        "AI-powered research & education",
+        "User-friendly interface"
+      ],
+      "advanced": [
+        "API access"
+      ],
+      "integrations": [
+        "Web browser"
+      ]
+    },
+    "pros": [
+      "Easy to use",
+      "Powerful AI capabilities"
+    ],
+    "cons": [
+      "Learning curve",
+      "Internet required"
+    ],
+    "rating": 4.2,
+    "reviewCount": 500,
+    "search_volume": 2000,
+    "website": "https://deepresearch.com",
+    "official_url": "https://deepresearch.com",
+    "affiliate_link": "https://deepresearch.com",
+    "logo": "/images/tools/deep-research-logo.svg",
+    "logo_url": "/images/tools/deep-research-logo.svg",
+    "vendor": "Deep Research",
+    "founded": "2023",
+    "free_trial": true,
+    "lastUpdated": "2025-08-21T18:14:58.321Z",
+    "scrapedAt": "2025-08-21T18:14:58.322Z",
+    "source": "fallback-data",
+    "slug": "deep-research",
+    "metaTags": {
+      "title": "Deep Research Review 2025 - Research & Education AI Tool | SiteOptz",
+      "description": "AI-powered research assistant for academic and professional research. Compare pricing, features, pros & cons. Expert Research & Education AI tool review.",
+      "keywords": [
+        "deep research",
+        "deep research review",
+        "research & education ai",
+        "research & education tools",
+        "ai tools comparison",
+        "siteoptz review"
+      ]
+    },
+    "structuredData": {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "Deep Research",
+      "description": "AI-powered research assistant for academic and professional research",
+      "applicationCategory": "Research & Education",
+      "operatingSystem": "Web Browser",
+      "offers": [],
+      "aggregateRating": null,
+      "author": {
+        "@type": "Organization",
+        "name": "SiteOptz",
+        "url": "https://siteoptz.ai"
+      }
+    },
+    "canonicalUrl": "https://siteoptz.ai/tools/deep-research",
+    "breadcrumbs": [
+      {
+        "name": "Home",
+        "url": "https://siteoptz.ai"
+      },
+      {
+        "name": "AI Tools",
+        "url": "https://siteoptz.ai/tools"
+      },
+      {
+        "name": "Research & Education",
+        "url": "https://siteoptz.ai/categories/research-education"
+      },
+      {
+        "name": "Deep Research",
+        "url": "https://siteoptz.ai/tools/deep-research"
+      }
+    ]
+  }
+]

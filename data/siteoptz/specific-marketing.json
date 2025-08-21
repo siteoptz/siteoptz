@@ -1,0 +1,491 @@
+[
+  {
+    "id": "adcreative-ai",
+    "source_id": "adcreative-ai",
+    "tool_name": "AdCreative.ai",
+    "name": "AdCreative.ai",
+    "description": "AdCreative.ai is an AI-powered platform designed to help businesses create high-converting ad creatives, ad copy, and product photoshoots quickly and efficiently. It aims to boost sales and ROI by leveraging AI to generate professional-quality marketing assets without the need for designers.",
+    "category": "Advertising & Marketing",
+    "pricing": [
+      {
+        "billing_period": "month",
+        "features": [
+          "10 Downloads / Month",
+          "1 Brand Limit",
+          "All AI Assets Unlocked",
+          "Unlimited Generations",
+          "Text Generator AI",
+          "Ad Platform Integrations",
+          "Unlimited Photos by iStock",
+          "Ad Creative Insight AI",
+          "Competitor Insights Access",
+          "1 Total User"
+        ],
+        "plan": "Starter",
+        "price": 39
+      },
+      {
+        "billing_period": "month",
+        "features": [
+          "50 Downloads / Month",
+          "3 Brand Limit",
+          "All AI Assets Unlocked",
+          "Unlimited Generations",
+          "Text Generator AI",
+          "Ad Platform Integrations",
+          "Unlimited Photos by iStock",
+          "Ad Creative Insight AI",
+          "Competitor Insights Access",
+          "10 Total Users"
+        ],
+        "plan": "Professional",
+        "price": 249
+      },
+      {
+        "billing_period": "month",
+        "features": [
+          "100 Downloads / Month",
+          "5 Brand Limit",
+          "All AI Assets Unlocked",
+          "Unlimited Generations",
+          "Text Generator AI",
+          "Ad Platform Integrations",
+          "Unlimited Photos by iStock",
+          "Ad Creative Insight AI",
+          "Competitor Insights Access",
+          "25 Total Users"
+        ],
+        "plan": "Ultimate",
+        "price": 599
+      },
+      {
+        "billing_period": "quarter",
+        "features": [
+          "10 Downloads / Month",
+          "1 Brand Limit",
+          "All AI Assets Unlocked",
+          "Unlimited Generations",
+          "Text Generator AI",
+          "Ad Platform Integrations",
+          "Unlimited Photos by iStock",
+          "Ad Creative Insight AI",
+          "Competitor Insights Access",
+          "1 Total User"
+        ],
+        "plan": "Starter (Quarterly)",
+        "price": 29
+      },
+      {
+        "billing_period": "quarter",
+        "features": [
+          "50 Downloads / Month",
+          "3 Brand Limit",
+          "All AI Assets Unlocked",
+          "Unlimited Generations",
+          "Text Generator AI",
+          "Ad Platform Integrations",
+          "Unlimited Photos by iStock",
+          "Ad Creative Insight AI",
+          "Competitor Insights Access",
+          "10 Total Users"
+        ],
+        "plan": "Professional (Quarterly)",
+        "price": 189
+      },
+      {
+        "billing_period": "quarter",
+        "features": [
+          "100 Downloads / Month",
+          "5 Brand Limit",
+          "All AI Assets Unlocked",
+          "Unlimited Generations",
+          "Text Generator AI",
+          "Ad Platform Integrations",
+          "Unlimited Photos by iStock",
+          "Ad Creative Insight AI",
+          "Competitor Insights Access",
+          "25 Total Users"
+        ],
+        "plan": "Ultimate (Quarterly)",
+        "price": 449
+      },
+      {
+        "billing_period": "year",
+        "features": [
+          "10 Downloads / Month",
+          "1 Brand Limit",
+          "All AI Assets Unlocked",
+          "Unlimited Generations",
+          "Text Generator AI",
+          "Ad Platform Integrations",
+          "Unlimited Photos by iStock",
+          "Ad Creative Insight AI",
+          "Competitor Insights Access",
+          "1 Total User"
+        ],
+        "plan": "Starter (Yearly)",
+        "price": 20
+      },
+      {
+        "billing_period": "year",
+        "features": [
+          "50 Downloads / Month",
+          "3 Brand Limit",
+          "All AI Assets Unlocked",
+          "Unlimited Generations",
+          "Text Generator AI",
+          "Ad Platform Integrations",
+          "Unlimited Photos by iStock",
+          "Ad Creative Insight AI",
+          "Competitor Insights Access",
+          "10 Total Users"
+        ],
+        "plan": "Professional (Yearly)",
+        "price": 125
+      },
+      {
+        "billing_period": "year",
+        "features": [
+          "100 Downloads / Month",
+          "5 Brand Limit",
+          "All AI Assets Unlocked",
+          "Unlimited Generations",
+          "Text Generator AI",
+          "Ad Platform Integrations",
+          "Unlimited Photos by iStock",
+          "Ad Creative Insight AI",
+          "Competitor Insights Access",
+          "25 Total Users"
+        ],
+        "plan": "Ultimate (Yearly)",
+        "price": 300
+      }
+    ],
+    "features": {
+      "core": [
+        "AI-driven ad creative generation",
+        "AI-powered ad copy and text generation",
+        "AI-enhanced product photoshoots",
+        "AI-driven competitor analysis",
+        "AI-powered creative scoring and performance prediction",
+        "Website-to-ad creation",
+        "Persona generation for targeted advertising",
+        "Brand import for on-brand creatives",
+        "Integration with ad platforms",
+        "Over 1 billion ad creatives generated",
+        "Supports over 3,000,000 members",
+        "3 easy steps for ad creation"
+      ],
+      "advanced": [
+        "Google Ads",
+        "Facebook Ads",
+        "iStock"
+      ],
+      "integrations": [
+        "Google Ads",
+        "Facebook Ads",
+        "iStock"
+      ]
+    },
+    "pros": [
+      "Significantly reduces time and cost for ad creation.",
+      "Generates high-quality, conversion-focused creatives.",
+      "AI-powered insights help optimize ad performance.",
+      "User-friendly interface, even for non-designers.",
+      "Offers a wide range of AI tools for different marketing needs.",
+      "Supports multiple ad platforms.",
+      "Provides valuable competitor insights."
+    ],
+    "cons": [
+      "Limited downloads per month on lower-tier plans.",
+      "Some features might require higher-tier plans.",
+      "AI-generated content may still require human review for optimal results."
+    ],
+    "rating": 4.8,
+    "reviewCount": 10000,
+    "search_volume": 7794,
+    "website": "https://www.adcreative.ai/",
+    "official_url": "https://www.adcreative.ai/",
+    "affiliate_link": "https://www.adcreative.ai/",
+    "logo": "/images/tools/adcreative-ai-logo.svg",
+    "logo_url": "/images/tools/adcreative-ai-logo.svg",
+    "vendor": "AdCreative.ai",
+    "founded": "2019",
+    "targetAudience": "Small businesses, marketers, agencies, e-commerce businesses, startups",
+    "useCases": [
+      "Creating social media ads",
+      "Generating display banner ads",
+      "Producing product photoshoots",
+      "Writing ad copy and headlines",
+      "Analyzing competitor ad strategies",
+      "Predicting ad performance",
+      "Optimizing ad campaigns for higher conversions"
+    ],
+    "free_trial": true,
+    "lastUpdated": "2025-08-21T18:16:52.977Z",
+    "scrapedAt": "2025-08-21T18:16:52.977Z",
+    "source": "firecrawl-specific-tools",
+    "slug": "adcreative-ai",
+    "metaTags": {
+      "title": "AdCreative.ai Review 2025 - Advertising & Marketing AI Tool | SiteOptz",
+      "description": "AdCreative.ai is an AI-powered platform designed to help businesses create high-converting ad creatives, ad copy, and pr. Compare pricing, features, pros & cons. Expert Advertising & Marketing AI tool review.",
+      "keywords": [
+        "adcreative.ai",
+        "adcreative.ai review",
+        "advertising & marketing ai",
+        "advertising & marketing tools",
+        "ai tools comparison",
+        "siteoptz review"
+      ]
+    },
+    "structuredData": {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "AdCreative.ai",
+      "description": "AdCreative.ai is an AI-powered platform designed to help businesses create high-converting ad creatives, ad copy, and product photoshoots quickly and efficiently. It aims to boost sales and ROI by leveraging AI to generate professional-quality marketing assets without the need for designers.",
+      "applicationCategory": "Advertising & Marketing",
+      "operatingSystem": "Web Browser",
+      "url": "https://www.adcreative.ai/",
+      "offers": [
+        {
+          "@type": "Offer",
+          "name": "Starter",
+          "price": 39,
+          "priceCurrency": "USD",
+          "billingIncrement": "month"
+        },
+        {
+          "@type": "Offer",
+          "name": "Professional",
+          "price": 249,
+          "priceCurrency": "USD",
+          "billingIncrement": "month"
+        },
+        {
+          "@type": "Offer",
+          "name": "Ultimate",
+          "price": 599,
+          "priceCurrency": "USD",
+          "billingIncrement": "month"
+        },
+        {
+          "@type": "Offer",
+          "name": "Starter (Quarterly)",
+          "price": 29,
+          "priceCurrency": "USD",
+          "billingIncrement": "quarter"
+        },
+        {
+          "@type": "Offer",
+          "name": "Professional (Quarterly)",
+          "price": 189,
+          "priceCurrency": "USD",
+          "billingIncrement": "quarter"
+        },
+        {
+          "@type": "Offer",
+          "name": "Ultimate (Quarterly)",
+          "price": 449,
+          "priceCurrency": "USD",
+          "billingIncrement": "quarter"
+        },
+        {
+          "@type": "Offer",
+          "name": "Starter (Yearly)",
+          "price": 20,
+          "priceCurrency": "USD",
+          "billingIncrement": "year"
+        },
+        {
+          "@type": "Offer",
+          "name": "Professional (Yearly)",
+          "price": 125,
+          "priceCurrency": "USD",
+          "billingIncrement": "year"
+        },
+        {
+          "@type": "Offer",
+          "name": "Ultimate (Yearly)",
+          "price": 300,
+          "priceCurrency": "USD",
+          "billingIncrement": "year"
+        }
+      ],
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": 4.8,
+        "reviewCount": 100
+      },
+      "author": {
+        "@type": "Organization",
+        "name": "SiteOptz",
+        "url": "https://siteoptz.ai"
+      }
+    },
+    "canonicalUrl": "https://siteoptz.ai/tools/adcreative-ai",
+    "breadcrumbs": [
+      {
+        "name": "Home",
+        "url": "https://siteoptz.ai"
+      },
+      {
+        "name": "AI Tools",
+        "url": "https://siteoptz.ai/tools"
+      },
+      {
+        "name": "Advertising & Marketing",
+        "url": "https://siteoptz.ai/categories/advertising-marketing"
+      },
+      {
+        "name": "AdCreative.ai",
+        "url": "https://siteoptz.ai/tools/adcreative-ai"
+      }
+    ],
+    "comparisonData": {
+      "keyMetrics": {
+        "easeOfUse": 5,
+        "features": 4.8,
+        "value": 4,
+        "support": 4
+      },
+      "alternatives": [],
+      "lastCompared": "2025-08-21T18:16:52.977Z"
+    }
+  },
+  {
+    "id": "airops",
+    "source_id": "airops",
+    "tool_name": "AirOps",
+    "name": "AirOps",
+    "description": "AirOps is an AI-powered platform designed to help brands increase their visibility in AI search. It provides a comprehensive solution that takes users from insights to action, enabling them to fill content gaps, optimize for agent readability, and engage in relevant conversations. The platform aims to transform content teams into revenue drivers by offering expert-led training, strategic frameworks, and proven templates.",
+    "category": "AI Content Strategy & Optimization",
+    "pricing": [
+      {
+        "plan": "Free",
+        "price": 49,
+        "billing_period": "month",
+        "features": [
+          "Basic features"
+        ]
+      }
+    ],
+    "features": {
+      "core": [
+        "AI-driven content insights and action planning",
+        "Content gap identification and optimization",
+        "Agent readability optimization",
+        "Team training and enablement for AI adoption",
+        "Data foundation for brand guidelines and market expertise",
+        "AI workflows for content creation and optimization",
+        "Run and review grids for scaling content operations",
+        "Integration with marketing stack and third-party market data",
+        "Content refresh capabilities",
+        "AI Search strategy and best practices"
+      ],
+      "advanced": [
+        "Marketing stack integrations",
+        "Third-party market data"
+      ],
+      "integrations": [
+        "Marketing stack integrations",
+        "Third-party market data"
+      ]
+    },
+    "pros": [
+      "Increases brand visibility in AI search",
+      "Transforms content teams into revenue drivers",
+      "Provides a complete content lifecycle solution from insights to action",
+      "Helps optimize content for AI agents and readability",
+      "Offers expert guidance and training for AI adoption",
+      "Scalable content production capabilities",
+      "Proven results with case studies showing significant growth"
+    ],
+    "cons": [
+      "Pricing details are not explicitly listed and may require contacting sales.",
+      "Some features might require a learning curve for optimal use."
+    ],
+    "rating": 4.3,
+    "reviewCount": 2956,
+    "search_volume": 8341,
+    "website": "https://www.airops.com/",
+    "official_url": "https://www.airops.com/",
+    "affiliate_link": "https://www.airops.com/",
+    "logo": "/images/tools/airops-logo.svg",
+    "logo_url": "/images/tools/airops-logo.svg",
+    "vendor": "AirOps",
+    "founded": "Unknown",
+    "targetAudience": "Content teams, SEO specialists, marketing agencies, e-commerce businesses",
+    "useCases": [
+      "Increasing brand visibility in AI search",
+      "Content creation and optimization",
+      "Content refresh and updates",
+      "Improving SEO and AEO (AI Engine Optimization)",
+      "Scaling content production for clients",
+      "Building AI-driven content workflows",
+      "Training teams on AI for content strategy",
+      "Optimizing product descriptions and catalog pages"
+    ],
+    "free_trial": false,
+    "lastUpdated": "2025-08-21T18:17:00.828Z",
+    "scrapedAt": "2025-08-21T18:17:00.828Z",
+    "source": "firecrawl-specific-tools",
+    "slug": "airops",
+    "metaTags": {
+      "title": "AirOps Review 2025 - AI Content Strategy & Optimization AI Tool | SiteOptz",
+      "description": "AirOps is an AI-powered platform designed to help brands increase their visibility in AI search. It provides a comprehen. Compare pricing, features, pros & cons. Expert AI Content Strategy & Optimization AI tool review.",
+      "keywords": [
+        "airops",
+        "airops review",
+        "ai content strategy & optimization ai",
+        "ai content strategy & optimization tools",
+        "ai tools comparison",
+        "siteoptz review"
+      ]
+    },
+    "structuredData": {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "AirOps",
+      "description": "AirOps is an AI-powered platform designed to help brands increase their visibility in AI search. It provides a comprehensive solution that takes users from insights to action, enabling them to fill content gaps, optimize for agent readability, and engage in relevant conversations. The platform aims to transform content teams into revenue drivers by offering expert-led training, strategic frameworks, and proven templates.",
+      "applicationCategory": "AI Content Strategy & Optimization",
+      "operatingSystem": "Web Browser",
+      "url": "https://www.airops.com/",
+      "offers": [],
+      "aggregateRating": null,
+      "author": {
+        "@type": "Organization",
+        "name": "SiteOptz",
+        "url": "https://siteoptz.ai"
+      }
+    },
+    "canonicalUrl": "https://siteoptz.ai/tools/airops",
+    "breadcrumbs": [
+      {
+        "name": "Home",
+        "url": "https://siteoptz.ai"
+      },
+      {
+        "name": "AI Tools",
+        "url": "https://siteoptz.ai/tools"
+      },
+      {
+        "name": "AI Content Strategy & Optimization",
+        "url": "https://siteoptz.ai/categories/ai-content-strategy-optimization"
+      },
+      {
+        "name": "AirOps",
+        "url": "https://siteoptz.ai/tools/airops"
+      }
+    ],
+    "comparisonData": {
+      "keyMetrics": {
+        "easeOfUse": 4.2,
+        "features": 4.1,
+        "value": 4,
+        "support": 4
+      },
+      "alternatives": [],
+      "lastCompared": "2025-08-21T18:17:00.828Z"
+    }
+  }
+]

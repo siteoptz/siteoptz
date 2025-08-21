@@ -1,0 +1,394 @@
+[
+  {
+    "id": "fathom",
+    "source_id": "fathom",
+    "tool_name": "Fathom",
+    "name": "Fathom",
+    "description": "Fathom is an AI-powered meeting notetaker that automatically transcribes and summarizes meetings from platforms like Zoom, Google Meet, and Microsoft Teams. It aims to free up users to focus on conversations rather than note-taking, providing quick summaries, action items, and searchable transcripts.",
+    "category": "Productivity",
+    "pricing": [
+      {
+        "billing_period": "month",
+        "features": [
+          "Unlimited recording, transcription, and summarization",
+          "AI-generated action items",
+          "12 different meeting summary templates",
+          "30 days of Fathom Premium for free"
+        ],
+        "plan": "Free",
+        "price": 0
+      },
+      {
+        "billing_period": "month",
+        "features": [
+          "All Free features",
+          "Advanced AI summaries",
+          "AI-generated action items",
+          "12 different meeting summary templates"
+        ],
+        "plan": "Premium",
+        "price": 24
+      },
+      {
+        "billing_period": "month",
+        "features": [
+          "Features for teams and managers",
+          "Additional features for organizations"
+        ],
+        "plan": "Team Edition",
+        "price": 29
+      }
+    ],
+    "features": {
+      "core": [
+        "Automatic meeting recording and transcription",
+        "AI-powered meeting summaries",
+        "Action item identification",
+        "Searchable transcripts",
+        "Highlighting and bookmarking key moments",
+        "Sharing of meeting clips and summaries",
+        "CRM integrations (Salesforce, Hubspot, Close)",
+        "Integration with tools like Slack, Google Docs, Gmail, Zapier",
+        "Support for multiple languages",
+        "SOC2 and HIPAA compliance",
+        "Free forever plan with unlimited recording, transcription, and summarization"
+      ],
+      "advanced": [
+        "Zoom",
+        "Microsoft Teams",
+        "Google Meet",
+        "Slack",
+        "Salesforce",
+        "Hubspot",
+        "Close CRM",
+        "Zapier",
+        "Google Docs",
+        "Gmail",
+        "Asana",
+        "Notion",
+        "Todoist"
+      ],
+      "integrations": [
+        "Zoom",
+        "Microsoft Teams",
+        "Google Meet",
+        "Slack",
+        "Salesforce",
+        "Hubspot",
+        "Close CRM",
+        "Zapier",
+        "Google Docs",
+        "Gmail",
+        "Asana",
+        "Notion",
+        "Todoist"
+      ]
+    },
+    "pros": [
+      "Significantly saves time by automating note-taking and summarization",
+      "Allows users to be more present and engaged in meetings",
+      "Accurate transcriptions and summaries",
+      "Generous free tier with unlimited core features",
+      "Wide range of integrations with popular business tools",
+      "User-friendly interface and easy setup",
+      "Strong focus on privacy and security"
+    ],
+    "cons": [
+      "Premium features require a paid subscription.",
+      "While the free version is generous, advanced AI features are behind a paywall."
+    ],
+    "rating": 5,
+    "reviewCount": 4000,
+    "search_volume": 9957,
+    "website": "https://fathom.video/",
+    "official_url": "https://fathom.video/",
+    "affiliate_link": "https://fathom.video/",
+    "logo": "/images/tools/fathom-logo.svg",
+    "logo_url": "/images/tools/fathom-logo.svg",
+    "vendor": "Fathom",
+    "founded": "2020",
+    "targetAudience": "Professionals, Sales Teams, Customer Success Teams, Founders, Operations Teams, Managers, Product Teams, Marketing Teams, Freelancers, Virtual Assistants",
+    "useCases": [
+      "Meeting summarization",
+      "Automated note-taking",
+      "Action item tracking",
+      "Knowledge sharing",
+      "Sales call analysis",
+      "Customer success management",
+      "Interview transcription",
+      "Training new employees",
+      "Content creation from meetings"
+    ],
+    "free_trial": true,
+    "lastUpdated": "2025-08-21T18:12:51.693Z",
+    "scrapedAt": "2025-08-21T18:12:51.693Z",
+    "source": "firecrawl-specific-tools",
+    "slug": "fathom",
+    "metaTags": {
+      "title": "Fathom Review 2025 - Productivity AI Tool | SiteOptz",
+      "description": "Fathom is an AI-powered meeting notetaker that automatically transcribes and summarizes meetings from platforms like Zoo. Compare pricing, features, pros & cons. Expert Productivity AI tool review.",
+      "keywords": [
+        "fathom",
+        "fathom review",
+        "productivity ai",
+        "productivity tools",
+        "ai tools comparison",
+        "siteoptz review"
+      ]
+    },
+    "structuredData": {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "Fathom",
+      "description": "Fathom is an AI-powered meeting notetaker that automatically transcribes and summarizes meetings from platforms like Zoom, Google Meet, and Microsoft Teams. It aims to free up users to focus on conversations rather than note-taking, providing quick summaries, action items, and searchable transcripts.",
+      "applicationCategory": "Productivity",
+      "operatingSystem": "Web Browser",
+      "url": "https://fathom.video/",
+      "offers": [
+        {
+          "@type": "Offer",
+          "name": "Free",
+          "price": 0,
+          "priceCurrency": "USD",
+          "billingIncrement": "month"
+        },
+        {
+          "@type": "Offer",
+          "name": "Premium",
+          "price": 24,
+          "priceCurrency": "USD",
+          "billingIncrement": "month"
+        },
+        {
+          "@type": "Offer",
+          "name": "Team Edition",
+          "price": 29,
+          "priceCurrency": "USD",
+          "billingIncrement": "month"
+        }
+      ],
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": 5,
+        "reviewCount": 100
+      },
+      "author": {
+        "@type": "Organization",
+        "name": "SiteOptz",
+        "url": "https://siteoptz.ai"
+      }
+    },
+    "canonicalUrl": "https://siteoptz.ai/tools/fathom",
+    "breadcrumbs": [
+      {
+        "name": "Home",
+        "url": "https://siteoptz.ai"
+      },
+      {
+        "name": "AI Tools",
+        "url": "https://siteoptz.ai/tools"
+      },
+      {
+        "name": "Productivity",
+        "url": "https://siteoptz.ai/categories/productivity"
+      },
+      {
+        "name": "Fathom",
+        "url": "https://siteoptz.ai/tools/fathom"
+      }
+    ],
+    "comparisonData": {
+      "keyMetrics": {
+        "easeOfUse": 5,
+        "features": 5,
+        "value": 4.8,
+        "support": 4
+      },
+      "alternatives": [],
+      "lastCompared": "2025-08-21T18:12:51.693Z"
+    }
+  },
+  {
+    "id": "nyota",
+    "source_id": "nyota",
+    "tool_name": "Nyota",
+    "name": "Nyota",
+    "description": "Nyota is an AI-powered notetaker designed to align sales, support, and project teams by automating data entry and call workflows. It integrates with meeting platforms to capture notes, action items, and key details, automatically updating CRMs and project management tools. Nyota aims to keep teams focused, organized, and stress-free by handling the administrative tasks associated with meetings.",
+    "category": "Productivity",
+    "pricing": [
+      {
+        "plan": "Free",
+        "price": 15,
+        "billing_period": "month",
+        "features": [
+          "Basic features"
+        ]
+      }
+    ],
+    "features": {
+      "core": [
+        "Automated data entry and call workflows",
+        "CRM and project tool updates from meeting notes",
+        "Comprehensive, high-quality meeting notes",
+        "Support for Zoom, Google Meet, and Microsoft Teams",
+        "Captures decisions, action items, and key points",
+        "Supports 90+ languages",
+        "Automatic syncing of notes and tasks to CRMs and project management tools",
+        "AI agent for asking questions about meeting content",
+        "Customizable reporting with 20+ built-in templates (BANT, SPICED, MEDDICC, etc.)",
+        "Ability to create custom workflows",
+        "Integration with calendars for automatic meeting joining",
+        "Option to invite meet@nyota.ai to meetings",
+        "Summaries tailored for different meeting types (lead qualification, discovery calls, daily updates, retrospectives)",
+        "Sharing notes to platforms like Slack, Hubspot, Salesforce, Close, OneDrive, Notion, Google Drive",
+        "Insights and pattern recognition from meeting data",
+        "Privacy by design with data ownership, no voice recording storage, and data deletion tools",
+        "Encryption of data at rest"
+      ],
+      "advanced": [
+        "Zoom",
+        "Google Meet",
+        "Microsoft Teams",
+        "Salesforce",
+        "Hubspot",
+        "Close",
+        "Jira",
+        "Asana",
+        "Clickup",
+        "Monday",
+        "Linear",
+        "Sharepoint",
+        "Notion",
+        "Google Drive",
+        "Slack",
+        "OneDrive",
+        "Google Calendar",
+        "Microsoft Calendar"
+      ],
+      "integrations": [
+        "Zoom",
+        "Google Meet",
+        "Microsoft Teams",
+        "Salesforce",
+        "Hubspot",
+        "Close",
+        "Jira",
+        "Asana",
+        "Clickup",
+        "Monday",
+        "Linear",
+        "Sharepoint",
+        "Notion",
+        "Google Drive",
+        "Slack",
+        "OneDrive",
+        "Google Calendar",
+        "Microsoft Calendar"
+      ]
+    },
+    "pros": [
+      "Automates tedious meeting-related tasks, saving time and increasing productivity.",
+      "Enhances preparation and focus during meetings by handling note-taking.",
+      "Provides visibility and insights into conversations, aiding better decision-making.",
+      "Improves team communication and collaboration through shared, clear action items.",
+      "Offers a deeper understanding of meetings and business trends.",
+      "Helps balance execution and strategy.",
+      "Strong emphasis on privacy and data ownership."
+    ],
+    "cons": [
+      "No explicit mention of pricing tiers or costs.",
+      "Specific details about the AI's capabilities beyond note-taking are not fully elaborated."
+    ],
+    "rating": 4.3,
+    "reviewCount": 663,
+    "search_volume": 9840,
+    "website": "https://www.nyota.ai/",
+    "official_url": "https://www.nyota.ai/",
+    "affiliate_link": "https://www.nyota.ai/",
+    "logo": "/images/tools/nyota-logo.svg",
+    "logo_url": "/images/tools/nyota-logo.svg",
+    "vendor": "Nyota.ai",
+    "founded": "Unknown",
+    "targetAudience": "Sales, Support, and Project Teams",
+    "useCases": [
+      "Aligning sales, support, and project teams",
+      "Automating data entry and call workflows",
+      "Updating CRMs and project tools from meeting notes",
+      "Sharing meeting updates with teams",
+      "Capturing customer requirements and feedback",
+      "Keeping CRMs up to date with meeting summaries",
+      "Documenting technical requirements accurately",
+      "Sharing solution designs with implementation teams",
+      "Converting discussions into actionable tickets",
+      "Keeping stakeholders aligned with automated updates",
+      "Documenting candidate interviews consistently",
+      "Sharing interview feedback with hiring managers",
+      "Documenting technical decisions and architecture",
+      "Tracking action items from planning meetings",
+      "Capturing customer insights and testimonials",
+      "Documenting campaign planning and reviews"
+    ],
+    "free_trial": false,
+    "lastUpdated": "2025-08-21T18:12:59.191Z",
+    "scrapedAt": "2025-08-21T18:12:59.191Z",
+    "source": "firecrawl-specific-tools",
+    "slug": "nyota",
+    "metaTags": {
+      "title": "Nyota Review 2025 - Productivity AI Tool | SiteOptz",
+      "description": "Nyota is an AI-powered notetaker designed to align sales, support, and project teams by automating data entry and call w. Compare pricing, features, pros & cons. Expert Productivity AI tool review.",
+      "keywords": [
+        "nyota",
+        "nyota review",
+        "productivity ai",
+        "productivity tools",
+        "ai tools comparison",
+        "siteoptz review"
+      ]
+    },
+    "structuredData": {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "Nyota",
+      "description": "Nyota is an AI-powered notetaker designed to align sales, support, and project teams by automating data entry and call workflows. It integrates with meeting platforms to capture notes, action items, and key details, automatically updating CRMs and project management tools. Nyota aims to keep teams focused, organized, and stress-free by handling the administrative tasks associated with meetings.",
+      "applicationCategory": "Productivity",
+      "operatingSystem": "Web Browser",
+      "url": "https://www.nyota.ai/",
+      "offers": [],
+      "aggregateRating": null,
+      "author": {
+        "@type": "Organization",
+        "name": "SiteOptz",
+        "url": "https://siteoptz.ai"
+      }
+    },
+    "canonicalUrl": "https://siteoptz.ai/tools/nyota",
+    "breadcrumbs": [
+      {
+        "name": "Home",
+        "url": "https://siteoptz.ai"
+      },
+      {
+        "name": "AI Tools",
+        "url": "https://siteoptz.ai/tools"
+      },
+      {
+        "name": "Productivity",
+        "url": "https://siteoptz.ai/categories/productivity"
+      },
+      {
+        "name": "Nyota",
+        "url": "https://siteoptz.ai/tools/nyota"
+      }
+    ],
+    "comparisonData": {
+      "keyMetrics": {
+        "easeOfUse": 4.2,
+        "features": 4.1,
+        "value": 4,
+        "support": 4
+      },
+      "alternatives": [],
+      "lastCompared": "2025-08-21T18:12:59.191Z"
+    }
+  }
+]

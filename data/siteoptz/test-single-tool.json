@@ -1,0 +1,143 @@
+{
+  "id": "gamma",
+  "source_id": "gamma",
+  "tool_name": "Gamma",
+  "name": "Gamma",
+  "description": "Gamma is an AI design partner that helps users effortlessly create presentations, websites, social media posts, and more. It aims to streamline the design process, allowing users to focus on their ideas rather than the design execution. Gamma supports various content formats and offers AI-powered features for generation, editing, and sharing.",
+  "category": "Content Creation",
+  "pricing": [
+    {
+      "plan": "Free",
+      "price": 0,
+      "billing_period": "month",
+      "features": [
+        "Basic features"
+      ]
+    }
+  ],
+  "features": {
+    "core": [
+      "AI-powered content generation for presentations, websites, social media, and documents",
+      "AI-assisted editing and design adjustments",
+      "Real-time collaboration",
+      "Export options to PPT, PDF, PNG, and Google Slides",
+      "Publishing as websites or social posts",
+      "Engagement tracking",
+      "Importing brand assets",
+      "Over 100 themes",
+      "API for programmatic creation and integration",
+      "AI models for high-quality output",
+      "Instant layout and content generation",
+      "Image generation and AI-powered reworking",
+      "Translation capabilities"
+    ],
+    "advanced": [
+      "PPT",
+      "Google Slides",
+      "Social platforms"
+    ],
+    "integrations": [
+      "PPT",
+      "Google Slides",
+      "Social platforms"
+    ]
+  },
+  "pros": [
+    "Saves time and effort in content creation",
+    "Enables creation of professional-looking content quickly",
+    "Facilitates easy sharing and publishing across platforms",
+    "Offers a balance between customizability and fast workflow",
+    "Improves collaboration",
+    "Reduces reliance on traditional design tools",
+    "Helps validate ideas quickly"
+  ],
+  "cons": [
+    "No specific limitations mentioned, but the focus is on AI-assisted creation, which might not suit users who prefer manual design control."
+  ],
+  "rating": 4.5,
+  "reviewCount": 50000000,
+  "search_volume": 7531,
+  "website": "https://gamma.app/",
+  "official_url": "https://gamma.app/",
+  "affiliate_link": "https://gamma.app/",
+  "logo": "/images/tools/gamma-logo.svg",
+  "logo_url": "/images/tools/gamma-logo.svg",
+  "vendor": "Gamma Tech, Inc.",
+  "founded": "2025",
+  "targetAudience": "Content Creators, Marketers, Educators, Consultants, Sales Professionals, Founders",
+  "useCases": [
+    "Creating presentations",
+    "Designing websites and landing pages",
+    "Generating social media graphics and posts",
+    "Producing proposals and documents",
+    "Automating content creation",
+    "Collaborating on design projects",
+    "Validating business ideas"
+  ],
+  "free_trial": true,
+  "lastUpdated": "2025-08-21T18:12:09.208Z",
+  "scrapedAt": "2025-08-21T18:12:09.212Z",
+  "source": "firecrawl-specific-tools",
+  "slug": "gamma",
+  "metaTags": {
+    "title": "Gamma Review 2025 - Content Creation AI Tool | SiteOptz",
+    "description": "Gamma is an AI design partner that helps users effortlessly create presentations, websites, social media posts, and more. Compare pricing, features, pros & cons. Expert Content Creation AI tool review.",
+    "keywords": [
+      "gamma",
+      "gamma review",
+      "content creation ai",
+      "content creation tools",
+      "ai tools comparison",
+      "siteoptz review"
+    ]
+  },
+  "structuredData": {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "Gamma",
+    "description": "Gamma is an AI design partner that helps users effortlessly create presentations, websites, social media posts, and more. It aims to streamline the design process, allowing users to focus on their ideas rather than the design execution. Gamma supports various content formats and offers AI-powered features for generation, editing, and sharing.",
+    "applicationCategory": "Content Creation",
+    "operatingSystem": "Web Browser",
+    "url": "https://gamma.app/",
+    "offers": [],
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": 4.5,
+      "reviewCount": 100
+    },
+    "author": {
+      "@type": "Organization",
+      "name": "SiteOptz",
+      "url": "https://siteoptz.ai"
+    }
+  },
+  "canonicalUrl": "https://siteoptz.ai/tools/gamma",
+  "breadcrumbs": [
+    {
+      "name": "Home",
+      "url": "https://siteoptz.ai"
+    },
+    {
+      "name": "AI Tools",
+      "url": "https://siteoptz.ai/tools"
+    },
+    {
+      "name": "Content Creation",
+      "url": "https://siteoptz.ai/categories/content-creation"
+    },
+    {
+      "name": "Gamma",
+      "url": "https://siteoptz.ai/tools/gamma"
+    }
+  ],
+  "comparisonData": {
+    "keyMetrics": {
+      "easeOfUse": 4.7,
+      "features": 4.5,
+      "value": 4,
+      "support": 4
+    },
+    "alternatives": [],
+    "lastCompared": "2025-08-21T18:12:09.212Z"
+  }
+}
