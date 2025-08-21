@@ -11625,5 +11625,228 @@
       ],
       "canonical_url": "https://siteoptz.ai/tools/airops"
     }
+  },
+  {
+    "name": "Optmyzr",
+    "description": "AI-powered PPC management platform that automates Google Ads, Microsoft Ads, and Amazon Ads optimization with advanced bidding strategies and performance insights.",
+    "overview": {
+      "developer": "Optmyzr",
+      "release_year": 2023,
+      "category": "Paid Search",
+      "description": "AI-powered PPC management platform that automates Google Ads, Microsoft Ads, and Amazon Ads optimization with advanced bidding strategies and performance insights.",
+      "website": "https://www.optmyzr.com/",
+      "support": "Email, Chat",
+      "integrations": [
+        "Google Ads",
+        "Microsoft Ads",
+        "Amazon Ads",
+        "Facebook Ads"
+      ],
+      "pricing": {
+        "free_tier": false,
+        "starting_price": 208,
+        "pricing_model": "Subscription"
+      }
+    },
+    "features": [
+      "PPC Automation",
+      "Bid Management",
+      "Keyword Research",
+      "Performance Analytics"
+    ],
+    "use_cases": [
+      "PPC Campaign Management",
+      "Ad Optimization",
+      "Keyword Analysis"
+    ],
+    "pricing": {
+      "free_tier": false,
+      "starting_price": 208,
+      "pricing_model": "Subscription"
+    },
+    "category": "Paid Search",
+    "tags": [
+      "paid search",
+      "ai tool",
+      "ppc management"
+    ]
+  },
+  {
+    "name": "Adzooma",
+    "description": "AI-driven advertising platform that manages Google Ads, Microsoft Ads, and Facebook Ads with automated optimization and performance monitoring.",
+    "overview": {
+      "developer": "Adzooma",
+      "release_year": 2023,
+      "category": "Paid Search",
+      "description": "AI-driven advertising platform that manages Google Ads, Microsoft Ads, and Facebook Ads with automated optimization and performance monitoring.",
+      "website": "https://www.adzooma.com/",
+      "support": "Email, Chat, Phone",
+      "integrations": [
+        "Google Ads",
+        "Microsoft Ads",
+        "Facebook Ads"
+      ],
+      "pricing": {
+        "free_tier": true,
+        "starting_price": 0,
+        "pricing_model": "Freemium"
+      }
+    },
+    "features": [
+      "Multi-Platform Management",
+      "Automated Optimization",
+      "Performance Reports",
+      "Bid Management"
+    ],
+    "use_cases": [
+      "Cross-Platform Advertising",
+      "Campaign Optimization",
+      "Performance Tracking"
+    ],
+    "pricing": {
+      "free_tier": true,
+      "starting_price": 0,
+      "pricing_model": "Freemium"
+    },
+    "category": "Paid Search",
+    "tags": [
+      "paid search",
+      "ai tool",
+      "advertising platform"
+    ]
+  },
+  {
+    "name": "AdEspresso",
+    "description": "Facebook and Instagram advertising platform with AI-powered ad creation, A/B testing, and optimization tools for social media campaigns.",
+    "overview": {
+      "developer": "AdEspresso (Hootsuite)",
+      "release_year": 2023,
+      "category": "Paid Search",
+      "description": "Facebook and Instagram advertising platform with AI-powered ad creation, A/B testing, and optimization tools for social media campaigns.",
+      "website": "https://adespresso.com/",
+      "support": "Email, Chat",
+      "integrations": [
+        "Facebook Ads",
+        "Instagram Ads",
+        "Google Ads"
+      ],
+      "pricing": {
+        "free_tier": false,
+        "starting_price": 49,
+        "pricing_model": "Subscription"
+      }
+    },
+    "features": [
+      "Social Media Advertising",
+      "A/B Testing",
+      "Creative Optimization",
+      "Analytics"
+    ],
+    "use_cases": [
+      "Facebook Advertising",
+      "Instagram Marketing",
+      "Social Media Optimization"
+    ],
+    "pricing": {
+      "free_tier": false,
+      "starting_price": 49,
+      "pricing_model": "Subscription"
+    },
+    "category": "Paid Search",
+    "tags": [
+      "paid search",
+      "ai tool",
+      "social media advertising"
+    ]
+  },
+  {
+    "name": "Wordstream",
+    "description": "AI-powered online advertising platform that helps businesses manage Google Ads, Microsoft Ads, and Facebook Ads with smart automation and optimization.",
+    "overview": {
+      "developer": "WordStream",
+      "release_year": 2023,
+      "category": "Paid Search",
+      "description": "AI-powered online advertising platform that helps businesses manage Google Ads, Microsoft Ads, and Facebook Ads with smart automation and optimization.",
+      "website": "https://www.wordstream.com/",
+      "support": "Email, Chat, Phone",
+      "integrations": [
+        "Google Ads",
+        "Microsoft Ads",
+        "Facebook Ads"
+      ],
+      "pricing": {
+        "free_tier": false,
+        "starting_price": 264,
+        "pricing_model": "Subscription"
+      }
+    },
+    "features": [
+      "Smart Automation",
+      "Cross-Platform Management",
+      "Performance Monitoring",
+      "Keyword Tools"
+    ],
+    "use_cases": [
+      "PPC Management",
+      "Ad Optimization",
+      "Campaign Automation"
+    ],
+    "pricing": {
+      "free_tier": false,
+      "starting_price": 264,
+      "pricing_model": "Subscription"
+    },
+    "category": "Paid Search",
+    "tags": [
+      "paid search",
+      "ai tool",
+      "advertising automation"
+    ]
+  },
+  {
+    "name": "Marin Software",
+    "description": "Enterprise-grade digital advertising platform with AI-powered bidding, cross-channel campaign management, and advanced analytics for large-scale advertisers.",
+    "overview": {
+      "developer": "Marin Software",
+      "release_year": 2023,
+      "category": "Paid Search",
+      "description": "Enterprise-grade digital advertising platform with AI-powered bidding, cross-channel campaign management, and advanced analytics for large-scale advertisers.",
+      "website": "https://www.marinsoftware.com/",
+      "support": "Email, Chat, Phone, Dedicated Support",
+      "integrations": [
+        "Google Ads",
+        "Microsoft Ads",
+        "Facebook Ads",
+        "Amazon Ads",
+        "Apple Search Ads"
+      ],
+      "pricing": {
+        "free_tier": false,
+        "starting_price": 1000,
+        "pricing_model": "Enterprise"
+      }
+    },
+    "features": [
+      "Enterprise Bidding",
+      "Cross-Channel Management",
+      "Advanced Analytics",
+      "Custom Reporting"
+    ],
+    "use_cases": [
+      "Enterprise Advertising",
+      "Large-Scale Campaign Management",
+      "Multi-Channel Optimization"
+    ],
+    "pricing": {
+      "free_tier": false,
+      "starting_price": 1000,
+      "pricing_model": "Enterprise"
+    },
+    "category": "Paid Search",
+    "tags": [
+      "paid search",
+      "ai tool",
+      "enterprise advertising"
+    ]
   }
 ]
