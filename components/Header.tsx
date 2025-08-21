@@ -75,7 +75,7 @@ const Header: React.FC = () => {
                   SiteOptz
                 </div>
                 <div className="text-xs lg:text-sm text-gray-400 font-medium -mt-1">
-                  Turning AI Potential Into ROI
+                  Turning AI Into ROI
                 </div>
               </div>
             </Link>
