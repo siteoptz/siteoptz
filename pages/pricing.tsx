@@ -82,9 +82,12 @@ export default function PricingPage({ tools }: PricingPageProps) {
               <div className="inline-flex items-center justify-center w-16 h-16 bg-gray-800 border border-gray-700 rounded-full mb-6">
                 <Calculator className="w-8 h-8 text-cyan-400" />
               </div>
-              <h1 className="text-4xl md:text-5xl font-bold text-white mb-6">
+              <h1 className="text-4xl md:text-5xl font-bold text-white mb-3">
                 AI Tools Pricing Calculator
               </h1>
+              <p className="text-2xl font-semibold text-cyan-400 mb-6">
+                Turning AI Into ROI
+              </p>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
                 Compare up to 5 AI tools side-by-side, estimate monthly expenses with team scaling, 
                 and get expert guidance to find the perfect solution for your business.
@@ -138,7 +141,7 @@ export default function PricingPage({ tools }: PricingPageProps) {
                     <CheckCircle className="w-6 h-6 text-green-400 mt-1 mr-3 flex-shrink-0" />
                     <div>
                       <h3 className="font-semibold mb-1 text-white">Accurate Cost Modeling</h3>
-                      <p className="text-gray-300">Based on real pricing data from 200+ AI tools and actual usage patterns</p>
+                      <p className="text-gray-300">Based on real pricing data from 79 AI tools and actual usage patterns</p>
                     </div>
                   </div>
                   <div className="flex items-start">
