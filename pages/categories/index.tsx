@@ -189,7 +189,7 @@ export default function CategoriesPage({ categories, totalTools }: CategoriesPag
                 <div className="text-gray-500 text-6xl mb-4">🔍</div>
                 <h3 className="text-xl font-semibold text-white mb-2">No categories found</h3>
                 <p className="text-gray-400">
-                  No categories match your search for "{searchQuery}"
+                  No categories match your search for &ldquo;{searchQuery}&rdquo;
                 </p>
                 <button
                   onClick={() => setSearchQuery('')}
@@ -252,7 +252,7 @@ export default function CategoriesPage({ categories, totalTools }: CategoriesPag
             <div className="mt-16 text-center">
               <div className="bg-gradient-to-r from-gray-900 to-gray-800 rounded-2xl p-8 border border-gray-700">
                 <h2 className="text-2xl font-bold text-white mb-4">
-                  Can't find what you're looking for?
+                  Can&apos;t find what you&apos;re looking for?
                 </h2>
                 <p className="text-gray-300 mb-6">
                   Browse all {totalTools} AI tools or use our comparison tool to find the perfect match
