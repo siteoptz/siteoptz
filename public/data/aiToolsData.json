@@ -1314,7 +1314,8 @@
       "category_rank": 5,
       "total_score": 96,
       "last_updated": "2025-08-18T17:26:51.891Z"
-    }
+    },
+    "related_tools": []
   },
   {
     "id": "replit-ghost",
@@ -1758,7 +1759,8 @@
       "category_rank": 1,
       "total_score": 81,
       "last_updated": "2025-08-18T17:26:51.890Z"
-    }
+    },
+    "related_tools": []
   },
   {
     "id": "anthropic-chatgpt-alternative",
@@ -1893,7 +1895,8 @@
       "category_rank": 5,
       "total_score": 93,
       "last_updated": "2025-08-18T17:26:51.891Z"
-    }
+    },
+    "related_tools": []
   },
   {
     "id": "chatgpt",
@@ -2299,7 +2302,8 @@
       "category_rank": 1,
       "total_score": 97,
       "last_updated": "2025-08-18T17:26:51.891Z"
-    }
+    },
+    "related_tools": []
   },
   {
     "id": "copy-ai",
@@ -2597,7 +2601,8 @@
       "category_rank": 3,
       "total_score": 96,
       "last_updated": "2025-08-18T17:26:51.891Z"
-    }
+    },
+    "related_tools": []
   },
   {
     "id": "jasper",
@@ -2733,7 +2738,8 @@
       "category_rank": 2,
       "total_score": 92,
       "last_updated": "2025-08-18T17:24:32.437Z"
-    }
+    },
+    "related_tools": []
   },
   {
     "id": "jasper-ai",
@@ -4088,7 +4094,8 @@
       "category_rank": 7,
       "total_score": 98,
       "last_updated": "2025-08-18T17:26:51.891Z"
-    }
+    },
+    "related_tools": []
   },
   {
     "id": "canva-ai",
@@ -4802,7 +4809,8 @@
       "category_rank": 3,
       "total_score": 89,
       "last_updated": "2025-08-18T17:26:51.891Z"
-    }
+    },
+    "related_tools": []
   },
   {
     "id": "stable-diffusion",
@@ -5083,7 +5091,8 @@
       "category_rank": 5,
       "total_score": 94,
       "last_updated": "2025-08-18T17:26:51.891Z"
-    }
+    },
+    "related_tools": []
   },
   {
     "id": "grammarly",
@@ -8130,7 +8139,12 @@
         "siteoptz review"
       ],
       "canonical_url": "https://siteoptz.ai/tools/veo"
-    }
+    },
+    "meta": {
+      "title": "Veo Review 2024: Features, Pricing & Alternatives",
+      "description": "Veo is a state-of-the-art video generation model developed by Google DeepMind, designed to empower filmmakers and storytellers with advanced creative capabilities. It offers enhanced realism, improved prompt adherence, and greater creative control, allowing users to generate high-quality videos with sound effects, ambient noise, and dialogue."
+    },
+    "related_tools": []
   },
   {
     "id": "grok",
@@ -8213,7 +8227,12 @@
         "siteoptz review"
       ],
       "canonical_url": "https://siteoptz.ai/tools/grok"
-    }
+    },
+    "meta": {
+      "title": "Grok Review 2024: Features, Pricing & Alternatives",
+      "description": "AI assistant by xAI with real-time knowledge and witty personality"
+    },
+    "related_tools": []
   },
   {
     "id": "fathom",
@@ -8360,7 +8379,12 @@
         "siteoptz review"
       ],
       "canonical_url": "https://siteoptz.ai/tools/fathom"
-    }
+    },
+    "meta": {
+      "title": "Fathom Review 2024: Features, Pricing & Alternatives",
+      "description": "Fathom is an AI-powered meeting notetaker that automatically transcribes and summarizes meetings from platforms like Zoom, Google Meet, and Microsoft Teams. It aims to free up users to focus on conversations rather than note-taking, providing quick summaries, action items, and searchable transcripts."
+    },
+    "related_tools": []
   },
   {
     "id": "n8n",
@@ -8683,7 +8707,12 @@
         "siteoptz review"
       ],
       "canonical_url": "https://siteoptz.ai/tools/n8n"
-    }
+    },
+    "meta": {
+      "title": "n8n Review 2024: Features, Pricing & Alternatives",
+      "description": "n8n is a highly extensible workflow automation tool designed for technical teams. It allows users to connect and automate tasks between various applications and services. It offers flexibility with both code-based (JavaScript, Python) and visual drag-and-drop interfaces, catering to different user preferences and needs. n8n supports self-hosting for on-premise control or offers a cloud-hosted convenience, making it adaptable to various deployment strategies. It's particularly useful for building multi-step AI agents and integrating complex application stacks."
+    },
+    "related_tools": []
   },
   {
     "id": "nyota",
@@ -8821,7 +8850,12 @@
         "siteoptz review"
       ],
       "canonical_url": "https://siteoptz.ai/tools/nyota"
-    }
+    },
+    "meta": {
+      "title": "Nyota Review 2024: Features, Pricing & Alternatives",
+      "description": "Nyota is an AI-powered notetaker designed to align sales, support, and project teams by automating data entry and call workflows. It integrates with meeting platforms to capture notes, action items, and key details, automatically updating CRMs and project management tools. Nyota aims to keep teams focused, organized, and stress-free by handling the administrative tasks associated with meetings."
+    },
+    "related_tools": []
   },
   {
     "id": "make",
@@ -8934,7 +8968,12 @@
         "siteoptz review"
       ],
       "canonical_url": "https://siteoptz.ai/tools/make"
-    }
+    },
+    "meta": {
+      "title": "Make Review 2024: Features, Pricing & Alternatives",
+      "description": "Make is an intuitive no-code development platform that allows users to realize their business's full potential through automation and AI. It enables users to visualize, build, and scale automations for various business processes, fostering collaboration and accelerating innovation."
+    },
+    "related_tools": []
   },
   {
     "id": "deep-research",
@@ -9017,7 +9056,12 @@
         "siteoptz review"
       ],
       "canonical_url": "https://siteoptz.ai/tools/deep-research"
-    }
+    },
+    "meta": {
+      "title": "Deep Research Review 2024: Features, Pricing & Alternatives",
+      "description": "AI-powered research assistant for academic and professional research"
+    },
+    "related_tools": []
   },
   {
     "id": "sudowrite",
@@ -9157,7 +9201,12 @@
         "siteoptz review"
       ],
       "canonical_url": "https://siteoptz.ai/tools/sudowrite"
-    }
+    },
+    "meta": {
+      "title": "Sudowrite Review 2024: Features, Pricing & Alternatives",
+      "description": "Sudowrite is an AI writing partner designed for fiction writers, offering tools to assist with various stages of the writing process, from brainstorming and outlining to drafting and editing. It aims to help writers overcome writer's block, enhance descriptions, develop characters, and refine their prose."
+    },
+    "related_tools": []
   },
   {
     "id": "rytr",
@@ -9335,7 +9384,12 @@
         "siteoptz review"
       ],
       "canonical_url": "https://siteoptz.ai/tools/rytr"
-    }
+    },
+    "meta": {
+      "title": "Rytr Review 2024: Features, Pricing & Alternatives",
+      "description": "Rytr is an AI writing assistant designed for short-form content creation, accessible across various platforms. It helps users generate original and compelling content quickly, offering over 40 use cases and templates, including blog posts, social media ads, email responses, and more. Rytr aims to sound like the user, not a robot, by analyzing writing samples and mirroring tone, with options for custom tones. It also emphasizes plagiarism-free content and offers a Chrome Extension for seamless integration into writing workflows."
+    },
+    "related_tools": []
   },
   {
     "id": "google-ai-mode",
@@ -9433,7 +9487,12 @@
         "siteoptz review"
       ],
       "canonical_url": "https://siteoptz.ai/tools/google-search"
-    }
+    },
+    "meta": {
+      "title": "Google Search Review 2024: Features, Pricing & Alternatives",
+      "description": "Google Search offers an 'AI Mode' that provides personalized suggestions and insights based on user interests and trending topics. It also includes features like 'I'm Feeling Curious' and other playful prompts to encourage exploration. The page also highlights Google devices and AI applications in science and the environment."
+    },
+    "related_tools": []
   },
   {
     "id": "looka",
@@ -9539,7 +9598,12 @@
         "siteoptz review"
       ],
       "canonical_url": "https://siteoptz.ai/tools/looka"
-    }
+    },
+    "meta": {
+      "title": "Looka Review 2024: Features, Pricing & Alternatives",
+      "description": "Looka is an AI-powered platform that helps individuals and businesses create professional logos, build brand identities, and design marketing materials. It simplifies the design process, making it accessible to users without prior design experience. Looka offers a comprehensive suite of tools, from logo generation to a full brand kit with templates for various marketing assets."
+    },
+    "related_tools": []
   },
   {
     "id": "lovable",
@@ -9624,7 +9688,12 @@
         "siteoptz review"
       ],
       "canonical_url": "https://siteoptz.ai/tools/lovable"
-    }
+    },
+    "meta": {
+      "title": "Lovable Review 2024: Features, Pricing & Alternatives",
+      "description": "Create apps and websites by chatting with AI."
+    },
+    "related_tools": []
   },
   {
     "id": "guru",
@@ -9767,7 +9836,12 @@
         "siteoptz review"
       ],
       "canonical_url": "https://siteoptz.ai/tools/guru"
-    }
+    },
+    "meta": {
+      "title": "Guru Review 2024: Features, Pricing & Alternatives",
+      "description": "Guru is a knowledge management solution that uses AI to help teams find, verify, and share information across their workflows. It integrates with various tools to provide contextual answers and support features like AI search bots, custom pages, and an AI training center."
+    },
+    "related_tools": []
   },
   {
     "id": "fyxer",
@@ -9887,7 +9961,12 @@
         "siteoptz review"
       ],
       "canonical_url": "https://siteoptz.ai/tools/fyxer"
-    }
+    },
+    "meta": {
+      "title": "Fyxer Review 2024: Features, Pricing & Alternatives",
+      "description": "Fyxer is an AI-powered assistant designed to help users manage their inboxes, draft email responses, and take meeting notes. It aims to reduce the time spent on administrative tasks, allowing users to focus on more important work."
+    },
+    "related_tools": []
   },
   {
     "id": "hubspot-email-writer",
@@ -10043,7 +10122,12 @@
         "siteoptz review"
       ],
       "canonical_url": "https://siteoptz.ai/tools/hubspot-email-marketing-tools"
-    }
+    },
+    "meta": {
+      "title": "HubSpot Email Marketing Tools Review 2024: Features, Pricing & Alternatives",
+      "description": "HubSpot's free email marketing tools allow users to create, personalize, and optimize marketing emails without needing to rely on designers or IT. It offers features like AI-generated subject lines and copy, customizable templates, and automation for post-send actions."
+    },
+    "related_tools": []
   },
   {
     "id": "shortwave",
@@ -10194,7 +10278,12 @@
         "siteoptz review"
       ],
       "canonical_url": "https://siteoptz.ai/tools/shortwave"
-    }
+    },
+    "meta": {
+      "title": "Shortwave Review 2024: Features, Pricing & Alternatives",
+      "description": "Shortwave is an AI-powered email client designed to automate and enhance your email management. It offers features like AI-driven organization, scheduling, writing assistance, and advanced search capabilities to save users time and improve productivity. It aims to provide an ultimate inbox experience with features like split inboxes, email bundling, and turning emails into todos."
+    },
+    "related_tools": []
   },
   {
     "id": "gamma",
@@ -10303,7 +10392,12 @@
         "siteoptz review"
       ],
       "canonical_url": "https://siteoptz.ai/tools/gamma"
-    }
+    },
+    "meta": {
+      "title": "Gamma Review 2024: Features, Pricing & Alternatives",
+      "description": "Gamma is an AI design partner that helps users effortlessly create presentations, websites, social media posts, and more. It aims to streamline the design process, allowing users to focus on their ideas rather than the design execution. Gamma supports various content formats and offers AI-powered features for generation, editing, and sharing."
+    },
+    "related_tools": []
   },
   {
     "id": "clockwise",
@@ -10428,7 +10522,12 @@
         "siteoptz review"
       ],
       "canonical_url": "https://siteoptz.ai/tools/clockwise"
-    }
+    },
+    "meta": {
+      "title": "Clockwise Review 2024: Features, Pricing & Alternatives",
+      "description": "Clockwise is an AI-powered scheduling assistant that optimizes your calendar to create more time for deep work and efficient meetings. It intelligently rearranges events based on user preferences and team schedules, acting like a personal AI scheduling assistant for your entire team."
+    },
+    "related_tools": []
   },
   {
     "id": "reclaim-ai",
@@ -10545,7 +10644,12 @@
         "siteoptz review"
       ],
       "canonical_url": "https://siteoptz.ai/tools/reclaim-ai"
-    }
+    },
+    "meta": {
+      "title": "Reclaim.ai Review 2024: Features, Pricing & Alternatives",
+      "description": "Reclaim.ai is an AI-powered productivity tool that helps individuals and teams manage their time effectively by automating scheduling, defending focus time, and optimizing workflows. It integrates with calendars and task management tools to provide a seamless experience."
+    },
+    "related_tools": []
   },
   {
     "id": "teal",
@@ -10657,7 +10761,12 @@
         "siteoptz review"
       ],
       "canonical_url": "https://siteoptz.ai/tools/teal"
-    }
+    },
+    "meta": {
+      "title": "Teal Review 2024: Features, Pricing & Alternatives",
+      "description": "Teal is an all-in-one suite of tools designed to simplify and accelerate the job search process. It offers features like an AI resume builder, job tracker, matching mode, and resume checker to help users land their next position faster."
+    },
+    "related_tools": []
   },
   {
     "id": "copilot-powerpoint",
@@ -10813,7 +10922,12 @@
         "siteoptz review"
       ],
       "canonical_url": "https://siteoptz.ai/tools/microsoft-powerpoint"
-    }
+    },
+    "meta": {
+      "title": "Microsoft PowerPoint Review 2024: Features, Pricing & Alternatives",
+      "description": "Microsoft PowerPoint is a presentation software that allows users to create captivating presentations, collaborate in real-time, and design presentations from any device. It offers features for idea generation, confident creation, engagement, and sharing."
+    },
+    "related_tools": []
   },
   {
     "id": "kickresume",
@@ -10940,7 +11054,12 @@
         "siteoptz review"
       ],
       "canonical_url": "https://siteoptz.ai/tools/kickresume"
-    }
+    },
+    "meta": {
+      "title": "Kickresume Review 2024: Features, Pricing & Alternatives",
+      "description": "Kickresume is an AI-powered resume builder and cover letter generator designed to help job seekers create professional and impressive application documents quickly and easily. It offers a wide range of customizable templates, AI writing assistance, and examples from successful job seekers to help users land their dream jobs."
+    },
+    "related_tools": []
   },
   {
     "id": "udio",
@@ -11037,7 +11156,12 @@
         "siteoptz review"
       ],
       "canonical_url": "https://siteoptz.ai/tools/udio"
-    }
+    },
+    "meta": {
+      "title": "Udio Review 2024: Features, Pricing & Alternatives",
+      "description": "Udio is an AI-powered music creation tool that allows users to generate any song imaginable simply by describing it in text. It caters to both professional musicians and amateurs, offering features for ideation, generation of stems, and AI-powered audio editing. Users can export creations to a DAW or upload their own audio."
+    },
+    "related_tools": []
   },
   {
     "id": "suno",
@@ -11246,7 +11370,12 @@
         "siteoptz review"
       ],
       "canonical_url": "https://siteoptz.ai/tools/suno"
-    }
+    },
+    "meta": {
+      "title": "Suno Review 2024: Features, Pricing & Alternatives",
+      "description": "Suno is an AI-powered music creation tool that allows users to generate songs from text prompts. It offers features for both beginners and experienced musicians, enabling the creation of high-quality music with various styles and instruments. Users can start with simple prompts or use advanced editing tools, upload audio, rewrite lyrics, and export stems for use in DAWs."
+    },
+    "related_tools": []
   },
   {
     "id": "adcreative-ai",
@@ -11517,7 +11646,12 @@
         "siteoptz review"
       ],
       "canonical_url": "https://siteoptz.ai/tools/adcreative-ai"
-    }
+    },
+    "meta": {
+      "title": "AdCreative.ai Review 2024: Features, Pricing & Alternatives",
+      "description": "AdCreative.ai is an AI-powered platform designed to help businesses create high-converting ad creatives, ad copy, and product photoshoots quickly and efficiently. It aims to boost sales and ROI by leveraging AI to generate professional-quality marketing assets without the need for designers."
+    },
+    "related_tools": []
   },
   {
     "id": "airops",
@@ -11624,7 +11758,12 @@
         "siteoptz review"
       ],
       "canonical_url": "https://siteoptz.ai/tools/airops"
-    }
+    },
+    "meta": {
+      "title": "AirOps Review 2024: Features, Pricing & Alternatives",
+      "description": "AirOps is an AI-powered platform designed to help brands increase their visibility in AI search. It provides a comprehensive solution that takes users from insights to action, enabling them to fill content gaps, optimize for agent readability, and engage in relevant conversations. The platform aims to transform content teams into revenue drivers by offering expert-led training, strategic frameworks, and proven templates."
+    },
+    "related_tools": []
   },
   {
     "name": "Optmyzr",
@@ -11659,17 +11798,56 @@
       "Ad Optimization",
       "Keyword Analysis"
     ],
-    "pricing": {
-      "free_tier": false,
-      "starting_price": 208,
-      "pricing_model": "Subscription"
-    },
+    "pricing": [
+      {
+        "plan": "Free",
+        "price_per_month": 0,
+        "features": [
+          "Limited features",
+          "Basic support"
+        ]
+      },
+      {
+        "plan": "Professional",
+        "price_per_month": 208,
+        "features": [
+          "PPC Automation",
+          "Bid Management",
+          "Keyword Research",
+          "Performance Analytics"
+        ]
+      }
+    ],
     "category": "Paid Search",
     "tags": [
       "paid search",
       "ai tool",
       "ppc management"
-    ]
+    ],
+    "slug": "optmyzr",
+    "id": "optmyzr",
+    "logo": "/logos/optmyzr.png",
+    "meta": {
+      "title": "Optmyzr Review 2024: Features, Pricing & Alternatives",
+      "description": "AI-powered PPC management platform that automates Google Ads, Microsoft Ads, and Amazon Ads optimization with advanced bidding strategies and performance insights."
+    },
+    "pros": [
+      "AI-powered features",
+      "User-friendly interface",
+      "Good performance"
+    ],
+    "cons": [
+      "Learning curve",
+      "Pricing could be better"
+    ],
+    "related_tools": [],
+    "benchmarks": {
+      "speed": 4.2,
+      "accuracy": 4.3,
+      "integration": 4.1,
+      "ease_of_use": 4,
+      "value": 4.2
+    }
   },
   {
     "name": "Adzooma",
@@ -11703,17 +11881,48 @@
       "Campaign Optimization",
       "Performance Tracking"
     ],
-    "pricing": {
-      "free_tier": true,
-      "starting_price": 0,
-      "pricing_model": "Freemium"
-    },
+    "pricing": [
+      {
+        "plan": "Free",
+        "price_per_month": 0,
+        "features": [
+          "Multi-Platform Management",
+          "Automated Optimization",
+          "Performance Reports",
+          "Bid Management"
+        ]
+      }
+    ],
     "category": "Paid Search",
     "tags": [
       "paid search",
       "ai tool",
       "advertising platform"
-    ]
+    ],
+    "slug": "adzooma",
+    "id": "adzooma",
+    "logo": "/logos/adzooma.png",
+    "meta": {
+      "title": "Adzooma Review 2024: Features, Pricing & Alternatives",
+      "description": "AI-driven advertising platform that manages Google Ads, Microsoft Ads, and Facebook Ads with automated optimization and performance monitoring."
+    },
+    "pros": [
+      "AI-powered features",
+      "User-friendly interface",
+      "Good performance"
+    ],
+    "cons": [
+      "Learning curve",
+      "Pricing could be better"
+    ],
+    "related_tools": [],
+    "benchmarks": {
+      "speed": 4.2,
+      "accuracy": 4.3,
+      "integration": 4.1,
+      "ease_of_use": 4,
+      "value": 4.2
+    }
   },
   {
     "name": "AdEspresso",
@@ -11747,17 +11956,56 @@
       "Instagram Marketing",
       "Social Media Optimization"
     ],
-    "pricing": {
-      "free_tier": false,
-      "starting_price": 49,
-      "pricing_model": "Subscription"
-    },
+    "pricing": [
+      {
+        "plan": "Free",
+        "price_per_month": 0,
+        "features": [
+          "Limited features",
+          "Basic support"
+        ]
+      },
+      {
+        "plan": "Professional",
+        "price_per_month": 49,
+        "features": [
+          "Social Media Advertising",
+          "A/B Testing",
+          "Creative Optimization",
+          "Analytics"
+        ]
+      }
+    ],
     "category": "Paid Search",
     "tags": [
       "paid search",
       "ai tool",
       "social media advertising"
-    ]
+    ],
+    "slug": "adespresso",
+    "id": "adespresso",
+    "logo": "/logos/adespresso.png",
+    "meta": {
+      "title": "AdEspresso Review 2024: Features, Pricing & Alternatives",
+      "description": "Facebook and Instagram advertising platform with AI-powered ad creation, A/B testing, and optimization tools for social media campaigns."
+    },
+    "pros": [
+      "AI-powered features",
+      "User-friendly interface",
+      "Good performance"
+    ],
+    "cons": [
+      "Learning curve",
+      "Pricing could be better"
+    ],
+    "related_tools": [],
+    "benchmarks": {
+      "speed": 4.2,
+      "accuracy": 4.3,
+      "integration": 4.1,
+      "ease_of_use": 4,
+      "value": 4.2
+    }
   },
   {
     "name": "Wordstream",
@@ -11791,17 +12039,56 @@
       "Ad Optimization",
       "Campaign Automation"
     ],
-    "pricing": {
-      "free_tier": false,
-      "starting_price": 264,
-      "pricing_model": "Subscription"
-    },
+    "pricing": [
+      {
+        "plan": "Free",
+        "price_per_month": 0,
+        "features": [
+          "Limited features",
+          "Basic support"
+        ]
+      },
+      {
+        "plan": "Professional",
+        "price_per_month": 264,
+        "features": [
+          "Smart Automation",
+          "Cross-Platform Management",
+          "Performance Monitoring",
+          "Keyword Tools"
+        ]
+      }
+    ],
     "category": "Paid Search",
     "tags": [
       "paid search",
       "ai tool",
       "advertising automation"
-    ]
+    ],
+    "slug": "wordstream",
+    "id": "wordstream",
+    "logo": "/logos/wordstream.png",
+    "meta": {
+      "title": "Wordstream Review 2024: Features, Pricing & Alternatives",
+      "description": "AI-powered online advertising platform that helps businesses manage Google Ads, Microsoft Ads, and Facebook Ads with smart automation and optimization."
+    },
+    "pros": [
+      "AI-powered features",
+      "User-friendly interface",
+      "Good performance"
+    ],
+    "cons": [
+      "Learning curve",
+      "Pricing could be better"
+    ],
+    "related_tools": [],
+    "benchmarks": {
+      "speed": 4.2,
+      "accuracy": 4.3,
+      "integration": 4.1,
+      "ease_of_use": 4,
+      "value": 4.2
+    }
   },
   {
     "name": "Marin Software",
@@ -11837,16 +12124,55 @@
       "Large-Scale Campaign Management",
       "Multi-Channel Optimization"
     ],
-    "pricing": {
-      "free_tier": false,
-      "starting_price": 1000,
-      "pricing_model": "Enterprise"
-    },
+    "pricing": [
+      {
+        "plan": "Free",
+        "price_per_month": 0,
+        "features": [
+          "Limited features",
+          "Basic support"
+        ]
+      },
+      {
+        "plan": "Professional",
+        "price_per_month": 1000,
+        "features": [
+          "Enterprise Bidding",
+          "Cross-Channel Management",
+          "Advanced Analytics",
+          "Custom Reporting"
+        ]
+      }
+    ],
     "category": "Paid Search",
     "tags": [
       "paid search",
       "ai tool",
       "enterprise advertising"
-    ]
+    ],
+    "slug": "marin-software",
+    "id": "marin-software",
+    "logo": "/logos/marin-software.png",
+    "meta": {
+      "title": "Marin Software Review 2024: Features, Pricing & Alternatives",
+      "description": "Enterprise-grade digital advertising platform with AI-powered bidding, cross-channel campaign management, and advanced analytics for large-scale advertisers."
+    },
+    "pros": [
+      "AI-powered features",
+      "User-friendly interface",
+      "Good performance"
+    ],
+    "cons": [
+      "Learning curve",
+      "Pricing could be better"
+    ],
+    "related_tools": [],
+    "benchmarks": {
+      "speed": 4.2,
+      "accuracy": 4.3,
+      "integration": 4.1,
+      "ease_of_use": 4,
+      "value": 4.2
+    }
   }
 ]
