@@ -52,7 +52,11 @@ export default function ReviewPage({ tool, pageTitle, slug, relatedTools, relate
 
   // Generate optimized meta description (155-160 characters)
   const generateMetaDescription = (tool: Tool): string => {
-    const basePrice = tool.pricing.monthly ? `$${tool.pricing.monthly}/month` : 'Custom pricing';
+    const basePrice = typeof tool.pricing.monthly === 'number' && tool.pricing.monthly > 0 ? 
+                      `$${tool.pricing.monthly}/month` : 
+                      tool.pricing.monthly === 0 || 
+                      (typeof tool.pricing.monthly === 'string' && tool.pricing.monthly.toLowerCase() === 'free') ? 
+                      'Free plan available' : 'Custom pricing';
     return `${tool.tool_name} review: Features, pricing (from ${basePrice}), pros, cons, and alternatives. Expert analysis and user guide for 2025.`;
   };
   
@@ -71,7 +75,8 @@ export default function ReviewPage({ tool, pageTitle, slug, relatedTools, relate
     "operatingSystem": "Web",
     "offers": {
       "@type": "Offer",
-      "price": tool.pricing.monthly ? tool.pricing.monthly.toString() : "0",
+      "price": typeof tool.pricing.monthly === 'number' && tool.pricing.monthly > 0 ? 
+               tool.pricing.monthly.toString() : "0",
       "priceCurrency": "USD",
       "availability": "https://schema.org/InStock"
     },
@@ -127,7 +132,9 @@ export default function ReviewPage({ tool, pageTitle, slug, relatedTools, relate
               tool.pricing.monthly === 0 || 
               (typeof tool.pricing.monthly === 'string' && tool.pricing.monthly.toLowerCase() === 'free') ?
               `${tool.tool_name} offers a free plan with various pricing tiers available.` :
-              `${tool.tool_name} starts at $${tool.pricing.monthly}/month with various pricing tiers available.`
+              typeof tool.pricing.monthly === 'number' && tool.pricing.monthly > 0 ? 
+              `${tool.tool_name} starts at $${tool.pricing.monthly}/month with various pricing tiers available.` :
+              `${tool.tool_name} has various pricing tiers available.`
     },
     {
       question: `Does ${tool.tool_name} offer a free trial?`,
@@ -541,7 +548,12 @@ export default function ReviewPage({ tool, pageTitle, slug, relatedTools, relate
                   <div className="bg-black border border-gray-800 rounded-xl shadow-lg p-8">
                     <h3 className="text-xl font-bold text-white mb-2">Enterprise Plan</h3>
                     <div className="text-4xl font-bold text-cyan-400 mb-6">
-                      {tool.pricing.enterprise}
+                      {typeof tool.pricing.enterprise === 'number' && tool.pricing.enterprise > 0 ? `$${tool.pricing.enterprise}` : 
+                       tool.pricing.enterprise === 0 ||
+                       (typeof tool.pricing.enterprise === 'string' && tool.pricing.enterprise.toLowerCase() === 'free') ? 'Free' : 'Custom'}
+                      {typeof tool.pricing.enterprise === 'number' && tool.pricing.enterprise > 0 && (
+                        <span className="text-lg text-gray-400">/month</span>
+                      )}
                     </div>
                     
                     <ul className="space-y-3 mb-8">
