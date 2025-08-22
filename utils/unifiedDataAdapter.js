@@ -84,13 +84,29 @@ export function loadUnifiedToolsData(fs, path) {
         },
         pricing: {
           monthly: tool.pricing?.[0]?.price_per_month !== undefined ? 
-                   (tool.pricing[0].price_per_month === 0 ? 'Free' : tool.pricing[0].price_per_month) : 'Custom',
+                   (tool.pricing[0].price_per_month === 0 ? 
+                    // Check if this is an enterprise/API tool that should show Custom instead of Free
+                    (tool.name?.toLowerCase().includes('enterprise') || 
+                     tool.name?.toLowerCase().includes('api') ||
+                     tool.pricing[0].plan?.toLowerCase().includes('api') ||
+                     tool.id?.includes('enterprise')) ? 'Custom' : 'Free'
+                   : tool.pricing[0].price_per_month) : 'Custom',
           yearly: tool.pricing?.[1]?.price_per_month !== undefined ? 
-                  (tool.pricing[1].price_per_month === 0 ? 'Free' : tool.pricing[1].price_per_month) : 'Custom',
+                  (tool.pricing[1].price_per_month === 0 ? 
+                    // Same logic for yearly
+                    (tool.name?.toLowerCase().includes('enterprise') || 
+                     tool.name?.toLowerCase().includes('api') ||
+                     tool.id?.includes('enterprise')) ? 'Custom' : 'Free'
+                   : tool.pricing[1].price_per_month) : 'Custom',
           enterprise: tool.pricing?.[2]?.price_per_month !== undefined ? 
                       (tool.pricing[2].price_per_month === 0 ? 'Custom' : tool.pricing[2].price_per_month) : 'Custom',
-          price: tool.pricing?.[0]?.price_per_month === 0 ? 'Free' : 
-                 (tool.pricing?.[0]?.price_per_month ? `From $${tool.pricing?.[0]?.price_per_month}/month` : 'Custom'),
+          price: tool.pricing?.[0]?.price_per_month === 0 ? 
+                 // Improved price display logic
+                 (tool.name?.toLowerCase().includes('enterprise') || 
+                  tool.name?.toLowerCase().includes('api') ||
+                  tool.pricing[0]?.plan?.toLowerCase().includes('api') ||
+                  tool.id?.includes('enterprise')) ? 'Custom pricing' : 'Free'
+                 : (tool.pricing?.[0]?.price_per_month ? `From $${tool.pricing?.[0]?.price_per_month}/month` : 'Custom'),
           tier: 'month'
         },
         free_trial: tool.pricing?.[0]?.price_per_month === 0,
