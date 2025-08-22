@@ -9,11 +9,11 @@ let updatedCount = 0;
 const updatedTools = [];
 
 toolsData.forEach((tool, index) => {
-  if (tool.category === 'Paid Search') {
+  if (tool.overview?.category === 'Paid Search') {
     console.log(`Updating tool: ${tool.name || tool.id}`);
-    console.log(`  Old category: ${tool.category}`);
-    tool.category = 'Paid Search & PPC';
-    console.log(`  New category: ${tool.category}`);
+    console.log(`  Old category: ${tool.overview.category}`);
+    tool.overview.category = 'Paid Search & PPC';
+    console.log(`  New category: ${tool.overview.category}`);
     updatedCount++;
     updatedTools.push(tool.name || tool.id);
   }
@@ -36,18 +36,18 @@ const configContent = fs.readFileSync('./config/categories.ts', 'utf8');
 const configCategories = configContent.match(/'([^']+)'/g)?.map(m => m.replace(/'/g, '')) || [];
 
 // Get actual categories from tools
-const actualCategories = [...new Set(toolsData.map(t => t.category).filter(c => c && c !== 'Other'))];
+const actualCategories = [...new Set(toolsData.map(t => t.overview?.category).filter(c => c && c !== 'Other'))];
 
 console.log('\nCategories in config:');
 configCategories.forEach(cat => {
-  const toolCount = toolsData.filter(t => t.category === cat).length;
+  const toolCount = toolsData.filter(t => t.overview?.category === cat).length;
   console.log(`  "${cat}": ${toolCount} tools`);
 });
 
 console.log('\nCategories in data not in config:');
 actualCategories.forEach(cat => {
   if (!configCategories.includes(cat) && cat !== 'Other') {
-    const toolCount = toolsData.filter(t => t.category === cat).length;
+    const toolCount = toolsData.filter(t => t.overview?.category === cat).length;
     console.log(`  "${cat}": ${toolCount} tools`);
   }
 });
