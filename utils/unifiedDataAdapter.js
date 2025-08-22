@@ -96,9 +96,10 @@ export function loadUnifiedToolsData(fs, path) {
         free_trial: tool.pricing?.[0]?.price_per_month === 0,
         pros: tool.pros || [],
         cons: tool.cons || [],
-        rating: ((tool.benchmarks?.speed || 0) + (tool.benchmarks?.accuracy || 0) + 
+        rating: tool.rating ? Math.round(tool.rating * 100) / 100 : 
+                Math.round((((tool.benchmarks?.speed || 0) + (tool.benchmarks?.accuracy || 0) + 
                 (tool.benchmarks?.integration || 0) + (tool.benchmarks?.ease_of_use || 0) + 
-                (tool.benchmarks?.value || 0)) / 5 / 2 || 4.0,
+                (tool.benchmarks?.value || 0)) / 5 / 2 || 4.0) * 100) / 100,
         use_cases: tool.overview?.use_cases || [],
         affiliate_link: tool.affiliate_link || tool.overview?.website || '#',
         official_url: tool.overview?.website || tool.affiliate_link || '#',
