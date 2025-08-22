@@ -44,7 +44,8 @@ function convertNewFormatTool(tool, categoryName) {
       yearly: monthlyPrice === 'Custom' || monthlyPrice === 'Free' ? monthlyPrice : monthlyPrice * 10,
       enterprise: 'Custom',
       price: pricingText,
-      tier: 'month'
+      tier: 'month',
+      yearlyIsMonthlyRate: false // New format uses annual total (monthlyPrice * 10)
     },
     free_trial: true, // Assume most have trials
     pros: tool.pros || [],
@@ -141,7 +142,9 @@ export function loadUnifiedToolsData(fs, path) {
             yearly,
             enterprise,
             price,
-            tier: 'month'
+            tier: 'month',
+            // Add metadata to indicate if yearly price is monthly rate or annual total
+            yearlyIsMonthlyRate: true // Since we're storing price_per_month from yearly plans
           };
         })(),
         free_trial: tool.pricing?.[0]?.price_per_month === 0,

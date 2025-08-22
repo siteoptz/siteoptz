@@ -520,7 +520,9 @@ export default function ReviewPage({ tool, pageTitle, slug, relatedTools, relate
                        tool.pricing.yearly === 0 ||
                        (typeof tool.pricing.yearly === 'string' && tool.pricing.yearly.toLowerCase() === 'free') ? 'Free' : 'Custom'}
                       {typeof tool.pricing.yearly === 'number' && tool.pricing.yearly > 0 && (
-                        <span className="text-lg text-gray-400">/year</span>
+                        <span className="text-lg text-gray-400">
+                          {(tool.pricing as any).yearlyIsMonthlyRate ? '/month' : '/year'}
+                        </span>
                       )}
                     </div>
                     
