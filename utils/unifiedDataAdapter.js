@@ -83,9 +83,12 @@ export function loadUnifiedToolsData(fs, path) {
           integrations: tool.overview?.integrations || []
         },
         pricing: {
-          monthly: tool.pricing?.[0]?.price_per_month || 'Custom',
-          yearly: tool.pricing?.[1]?.price_per_month || 'Custom',
-          enterprise: tool.pricing?.[2]?.price_per_month || 'Custom',
+          monthly: tool.pricing?.[0]?.price_per_month !== undefined ? 
+                   (tool.pricing[0].price_per_month === 0 ? 'Free' : tool.pricing[0].price_per_month) : 'Custom',
+          yearly: tool.pricing?.[1]?.price_per_month !== undefined ? 
+                  (tool.pricing[1].price_per_month === 0 ? 'Free' : tool.pricing[1].price_per_month) : 'Custom',
+          enterprise: tool.pricing?.[2]?.price_per_month !== undefined ? 
+                      (tool.pricing[2].price_per_month === 0 ? 'Custom' : tool.pricing[2].price_per_month) : 'Custom',
           price: tool.pricing?.[0]?.price_per_month === 0 ? 'Free' : 
                  (tool.pricing?.[0]?.price_per_month ? `From $${tool.pricing?.[0]?.price_per_month}/month` : 'Custom'),
           tier: 'month'
