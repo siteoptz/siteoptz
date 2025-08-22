@@ -3,7 +3,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { useRouter } from 'next/router';
 import { Menu, X, ChevronDown } from 'lucide-react';
-import { toolCategories, getCategoryUrl } from '../config/categories';
+import { toolCategories, getCategoryUrl, getCategoryDisplayName } from '../config/categories';
 
 const Header: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -114,7 +114,7 @@ const Header: React.FC = () => {
                         className="block px-4 py-3 text-sm text-gray-300 hover:bg-gray-800 hover:text-white transition-colors border-l-2 border-transparent hover:border-cyan-400"
                       >
                         <div className="flex items-center justify-between">
-                          <span>{category}</span>
+                          <span>{getCategoryDisplayName(category)}</span>
                           <span className="text-xs text-gray-500">→</span>
                         </div>
                       </Link>
@@ -142,7 +142,7 @@ const Header: React.FC = () => {
                         href={getCategoryUrl(category)}
                         className="block px-4 py-2 text-sm text-gray-300 hover:bg-gray-800 hover:text-white transition-colors"
                       >
-                        {category}
+                        {getCategoryDisplayName(category)}
                       </Link>
                     ))}
                   </div>
@@ -228,7 +228,7 @@ const Header: React.FC = () => {
                       marginLeft: '8px'
                     }}
                   >
-                    {category}
+                    {getCategoryDisplayName(category)}
                   </Link>
                 ))}
               </div>

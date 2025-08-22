@@ -7,7 +7,7 @@ import { getPageConfig, buildCanonicalUrl } from "../../seo/meta-config.js";
 import PricingCalculator from "../../components/tools/PricingCalculator";
 import FAQSection from "../../components/FAQ/FAQSection";
 import { loadUnifiedToolsData, getAllCategories, getToolsByCategory, searchTools } from "../../utils/unifiedDataAdapter.js";
-import { toolCategories } from "../../config/categories";
+import { toolCategories, getCategoryDisplayName } from "../../config/categories";
 import ToolLogo from "../../components/ToolLogo";
 
 export async function getStaticProps() {
@@ -186,7 +186,7 @@ export default function ToolsPage({ tools, categories, faqs }: { tools: any[], c
                     const count = getToolsByCategory(tools, category).length;
                     return (
                       <option key={category} value={category}>
-                        {category} ({count})
+                        {getCategoryDisplayName(category)} ({count})
                       </option>
                     );
                   })}
@@ -218,7 +218,7 @@ export default function ToolsPage({ tools, categories, faqs }: { tools: any[], c
             {/* Results Count */}
             <div className="mt-4 text-sm text-gray-400">
               Showing {filteredTools.length} of {tools.length} tools
-              {selectedCategory !== 'All' && ` in ${selectedCategory}`}
+              {selectedCategory !== 'All' && ` in ${getCategoryDisplayName(selectedCategory)}`}
               {searchQuery && ` matching "${searchQuery}"`}
             </div>
           </div>
@@ -232,7 +232,7 @@ export default function ToolsPage({ tools, categories, faqs }: { tools: any[], c
                 <p className="text-gray-400">
                   {searchQuery 
                     ? `No tools match your search for "${searchQuery}"` 
-                    : `No tools found in ${selectedCategory} category`
+                    : `No tools found in ${getCategoryDisplayName(selectedCategory)} category`
                   }
                 </p>
                 <button
