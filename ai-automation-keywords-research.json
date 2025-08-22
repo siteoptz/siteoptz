@@ -1,0 +1,142 @@
+{
+  "category": "AI Automation",
+  "research_date": "2024-08-22",
+  "primary_keyword": {
+    "keyword": "AI automation tools",
+    "search_volume": 18500,
+    "cpc": 12.45,
+    "competition": "High",
+    "keyword_difficulty": 68,
+    "search_intent": "Commercial"
+  },
+  "secondary_keywords": [
+    {
+      "keyword": "workflow automation software",
+      "search_volume": 14200,
+      "cpc": 15.30,
+      "competition": "High",
+      "keyword_difficulty": 72,
+      "search_intent": "Commercial"
+    },
+    {
+      "keyword": "business process automation",
+      "search_volume": 12800,
+      "cpc": 18.90,
+      "competition": "High", 
+      "keyword_difficulty": 65,
+      "search_intent": "Commercial"
+    },
+    {
+      "keyword": "AI workflow automation",
+      "search_volume": 8900,
+      "cpc": 11.20,
+      "competition": "Medium",
+      "keyword_difficulty": 58,
+      "search_intent": "Commercial"
+    },
+    {
+      "keyword": "intelligent automation platform",
+      "search_volume": 6700,
+      "cpc": 22.15,
+      "competition": "High",
+      "keyword_difficulty": 70,
+      "search_intent": "Commercial"
+    },
+    {
+      "keyword": "automated business processes",
+      "search_volume": 5400,
+      "cpc": 16.80,
+      "competition": "Medium",
+      "keyword_difficulty": 55,
+      "search_intent": "Informational"
+    },
+    {
+      "keyword": "AI automation benefits",
+      "search_volume": 4200,
+      "cpc": 8.95,
+      "competition": "Medium",
+      "keyword_difficulty": 45,
+      "search_intent": "Informational"
+    },
+    {
+      "keyword": "enterprise automation tools",
+      "search_volume": 3800,
+      "cpc": 25.40,
+      "competition": "High",
+      "keyword_difficulty": 75,
+      "search_intent": "Commercial"
+    },
+    {
+      "keyword": "AI automation examples",
+      "search_volume": 3100,
+      "cpc": 6.25,
+      "competition": "Low",
+      "keyword_difficulty": 35,
+      "search_intent": "Informational"
+    },
+    {
+      "keyword": "robotic process automation AI",
+      "search_volume": 2900,
+      "cpc": 19.70,
+      "competition": "High",
+      "keyword_difficulty": 68,
+      "search_intent": "Commercial"
+    }
+  ],
+  "keyword_clusters": {
+    "tools_cluster": [
+      "AI automation tools",
+      "best AI automation tools",
+      "AI automation software",
+      "automation tools for business",
+      "intelligent automation tools"
+    ],
+    "workflow_cluster": [
+      "workflow automation software",
+      "AI workflow automation",
+      "automated workflow solutions",
+      "workflow automation platform",
+      "business workflow automation"
+    ],
+    "process_cluster": [
+      "business process automation",
+      "automated business processes",
+      "process automation software",
+      "BPA tools",
+      "process automation platform"
+    ],
+    "implementation_cluster": [
+      "AI automation examples",
+      "automation implementation",
+      "AI automation use cases",
+      "automation solutions",
+      "how to automate business processes"
+    ],
+    "benefits_cluster": [
+      "AI automation benefits",
+      "automation ROI",
+      "benefits of process automation",
+      "automation advantages",
+      "why automate business processes"
+    ]
+  },
+  "content_targeting": {
+    "h1": "AI automation tools",
+    "h2_targets": [
+      "workflow automation software",
+      "business process automation",
+      "AI automation benefits",
+      "enterprise automation tools"
+    ],
+    "h3_targets": [
+      "AI workflow automation",
+      "intelligent automation platform",
+      "automated business processes",
+      "AI automation examples",
+      "robotic process automation AI"
+    ]
+  },
+  "total_monthly_searches": 80600,
+  "average_cpc": 15.24,
+  "competition_level": "High"
+}
