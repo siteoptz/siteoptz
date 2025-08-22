@@ -549,7 +549,7 @@ export default function ReviewPage({ tool, pageTitle, slug, relatedTools, relate
                     <h3 className="text-xl font-bold text-white mb-2">Enterprise Plan</h3>
                     <div className="text-4xl font-bold text-cyan-400 mb-6">
                       {typeof tool.pricing.enterprise === 'number' && tool.pricing.enterprise > 0 ? `$${tool.pricing.enterprise}` : 
-                       tool.pricing.enterprise === 0 ||
+                       (typeof tool.pricing.enterprise === 'number' && tool.pricing.enterprise === 0) ||
                        (typeof tool.pricing.enterprise === 'string' && tool.pricing.enterprise.toLowerCase() === 'free') ? 'Free' : 'Custom'}
                       {typeof tool.pricing.enterprise === 'number' && tool.pricing.enterprise > 0 && (
                         <span className="text-lg text-gray-400">/month</span>
