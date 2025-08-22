@@ -436,7 +436,7 @@ export const categoryContent: Record<string, any> = {
   "Content Creation": {
     seo: {
       title: "AI Content Generator 2025 - Best AI Writing Tools & Blog Writer",
-      description: "Compare top AI content generators for writing & blog creation. AI writing tools, automated content creation, copywriting. 79 tools reviewed. Start free.",
+      description: "Compare top AI content generators for writing & blog creation. AI writing tools, automated content creation, copywriting. 93 tools reviewed. Start free.",
       keywords: [
         "ai content generator", "ai writing tools", "content creation ai", "ai blog writer",
         "ai article generator", "automated content creation", "ai copywriting tools",
@@ -1423,7 +1423,7 @@ export const categoryContent: Record<string, any> = {
   "SEO & Optimization": {
     seo: {
       title: "AI SEO Tools 2025 - Best AI for SEO Optimization & Automation",
-      description: "Compare top AI SEO tools for optimization & automation. Best AI for SEO content, keyword research, link building. 79 tools reviewed. Free trials available.",
+      description: "Compare top AI SEO tools for optimization & automation. Best AI for SEO content, keyword research, link building. 93 tools reviewed. Free trials available.",
       keywords: [
         "ai seo tools", "best ai for seo", "ai seo optimization", "seo automation tools", 
         "ai content optimization", "ai keyword research", "seo ai software", 
@@ -1567,7 +1567,7 @@ export const categoryContent: Record<string, any> = {
   "Social Media": {
     seo: {
       title: "AI Social Media Tools 2025 - Best Social Media AI Generator",
-      description: "Compare top AI social media tools for content creation & automation. Social media AI generator, scheduling, analytics. 79 tools reviewed. Start free.",
+      description: "Compare top AI social media tools for content creation & automation. Social media AI generator, scheduling, analytics. 93 tools reviewed. Start free.",
       keywords: [
         "ai social media tools", "social media ai generator", "ai content creator", 
         "social media automation", "ai instagram posts", "ai social media scheduler",

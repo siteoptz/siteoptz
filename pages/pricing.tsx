@@ -141,7 +141,7 @@ export default function PricingPage({ tools }: PricingPageProps) {
                     <CheckCircle className="w-6 h-6 text-green-400 mt-1 mr-3 flex-shrink-0" />
                     <div>
                       <h3 className="font-semibold mb-1 text-white">Accurate Cost Modeling</h3>
-                      <p className="text-gray-300">Based on real pricing data from 79 AI tools and actual usage patterns</p>
+                      <p className="text-gray-300">Based on real pricing data from 93 AI tools and actual usage patterns</p>
                     </div>
                   </div>
                   <div className="flex items-start">

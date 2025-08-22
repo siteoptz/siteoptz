@@ -39,7 +39,7 @@ Based on your interest in ${leadData.primaryInterest} and your ${leadData.timeli
 📄 Download Your Guide: ${process.env.NEXT_PUBLIC_SITE_URL}/guides/ai-tools-comparison-guide-2025.pdf
 
 What's Inside Your Guide:
-✓ Comprehensive analysis of 200+ AI tools across all categories
+✓ Comprehensive analysis of 93+ AI tools across all categories
 ✓ Strategic evaluation framework for tool selection
 ✓ Real-world implementation roadmaps and timelines
 ✓ ROI calculators and total cost of ownership models
@@ -289,7 +289,7 @@ function generateEmailHTML(leadData: LeadData) {
             
             <h3>What's Inside Your Guide:</h3>
             <ul class="checklist">
-                <li>Comprehensive analysis of 200+ AI tools across all categories</li>
+                <li>Comprehensive analysis of 93+ AI tools across all categories</li>
                 <li>Strategic evaluation framework for tool selection</li>
                 <li>Real-world implementation roadmaps and timelines</li>
                 <li>ROI calculators and total cost of ownership models</li>

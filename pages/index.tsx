@@ -194,7 +194,7 @@ export default function HomePage({ featuredTools, popularComparisons, faqs }: Ho
                 Top-Rated AI Tools
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Discover all {featuredTools.length} AI tools across 10 categories, used by millions of professionals worldwide.
+                Discover all {featuredTools.length} AI tools across 13+ categories, used by millions of professionals worldwide.
               </p>
             </div>
 

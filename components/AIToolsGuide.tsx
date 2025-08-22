@@ -92,7 +92,7 @@ export default function AIToolsGuide() {
           <p className="text-gray-600 leading-relaxed mb-6">
             The artificial intelligence tools market has reached an inflection point in 2025, 
             with enterprise adoption rates exceeding 87% across Fortune 500 companies. 
-            Our comprehensive analysis of 200+ AI tools reveals critical insights for strategic decision-making.
+            Our comprehensive analysis of 93+ AI tools reveals critical insights for strategic decision-making.
           </p>
 
           <div className="bg-slate-50 p-8 rounded-lg my-8">

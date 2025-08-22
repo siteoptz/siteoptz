@@ -7,7 +7,7 @@ export const seoOptimizedCategoryContent: Record<string, any> = {
   "SEO & Optimization": {
     seo: {
       title: "AI SEO Tools 2025 - Best AI for SEO Optimization & Automation", // Primary: "ai seo tools"
-      description: "Compare top AI SEO tools for optimization & automation. Best AI for SEO content, keyword research, link building. 79 tools reviewed. Free trials available.", // Primary + Secondary + CTA
+      description: "Compare top AI SEO tools for optimization & automation. Best AI for SEO content, keyword research, link building. 93 tools reviewed. Free trials available.", // Primary + Secondary + CTA
       keywords: [
         "ai seo tools", "best ai for seo", "ai seo optimization", "seo automation tools", 
         "ai content optimization", "ai keyword research", "seo ai software", 
