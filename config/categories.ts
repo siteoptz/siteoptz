@@ -2,6 +2,7 @@
 // This is the single source of truth for categories across the application
 
 export const toolCategories = [
+  'AI Automation',
   'Best Voice AI Tools',
   'Code Generation',
   'Content Creation',
