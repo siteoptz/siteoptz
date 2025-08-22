@@ -82,33 +82,68 @@ export function loadUnifiedToolsData(fs, path) {
           advanced: [],
           integrations: tool.overview?.integrations || []
         },
-        pricing: {
-          monthly: tool.pricing?.[0]?.price_per_month !== undefined ? 
-                   (tool.pricing[0].price_per_month === 0 ? 
-                    // Check if this is an enterprise/API tool that should show Custom instead of Free
-                    (tool.name?.toLowerCase().includes('enterprise') || 
-                     tool.name?.toLowerCase().includes('api') ||
-                     tool.pricing[0].plan?.toLowerCase().includes('api') ||
-                     tool.id?.includes('enterprise')) ? 'Custom' : 'Free'
-                   : tool.pricing[0].price_per_month) : 'Custom',
-          yearly: tool.pricing?.[1]?.price_per_month !== undefined ? 
-                  (tool.pricing[1].price_per_month === 0 ? 
-                    // Same logic for yearly
-                    (tool.name?.toLowerCase().includes('enterprise') || 
-                     tool.name?.toLowerCase().includes('api') ||
-                     tool.id?.includes('enterprise')) ? 'Custom' : 'Free'
-                   : tool.pricing[1].price_per_month) : 'Custom',
-          enterprise: tool.pricing?.[2]?.price_per_month !== undefined ? 
-                      (tool.pricing[2].price_per_month === 0 ? 'Custom' : tool.pricing[2].price_per_month) : 'Custom',
-          price: tool.pricing?.[0]?.price_per_month === 0 ? 
-                 // Improved price display logic
-                 (tool.name?.toLowerCase().includes('enterprise') || 
-                  tool.name?.toLowerCase().includes('api') ||
-                  tool.pricing[0]?.plan?.toLowerCase().includes('api') ||
-                  tool.id?.includes('enterprise')) ? 'Custom pricing' : 'Free'
-                 : (tool.pricing?.[0]?.price_per_month ? `From $${tool.pricing?.[0]?.price_per_month}/month` : 'Custom'),
-          tier: 'month'
-        },
+        pricing: (() => {
+          // Find the first non-free plan for more accurate pricing display
+          const firstPaidPlan = tool.pricing?.find(p => p.price_per_month > 0);
+          const hasFreePlan = tool.pricing?.some(p => p.price_per_month === 0 && !p.plan?.toLowerCase().includes('enterprise'));
+          
+          // Determine monthly pricing (use first paid plan if available, otherwise first plan)
+          const monthlyPlan = firstPaidPlan || tool.pricing?.[0];
+          const monthlyPrice = monthlyPlan?.price_per_month;
+          
+          const monthly = monthlyPrice !== undefined ? 
+                         (monthlyPrice === 0 ? 
+                          // Check if this is an enterprise/API tool that should show Custom instead of Free
+                          (tool.name?.toLowerCase().includes('enterprise') || 
+                           tool.name?.toLowerCase().includes('api') ||
+                           monthlyPlan?.plan?.toLowerCase().includes('api') ||
+                           tool.id?.includes('enterprise')) ? 'Custom' : 'Free'
+                         : monthlyPrice) : 'Custom';
+          
+          // Use second plan for yearly, or same as monthly
+          const yearlyPlan = tool.pricing?.[1] || monthlyPlan;
+          const yearlyPrice = yearlyPlan?.price_per_month;
+          
+          const yearly = yearlyPrice !== undefined ? 
+                        (yearlyPrice === 0 ? 
+                          (tool.name?.toLowerCase().includes('enterprise') || 
+                           tool.name?.toLowerCase().includes('api') ||
+                           tool.id?.includes('enterprise')) ? 'Custom' : 'Free'
+                        : yearlyPrice) : 'Custom';
+          
+          // Enterprise is typically the last plan or a plan with "enterprise" in the name
+          const enterprisePlan = tool.pricing?.find(p => p.plan?.toLowerCase().includes('enterprise')) || 
+                                tool.pricing?.[tool.pricing.length - 1];
+          const enterprisePrice = enterprisePlan?.price_per_month;
+          
+          const enterprise = enterprisePrice !== undefined ? 
+                           (enterprisePrice === 0 || enterprisePrice === 'Custom' ? 'Custom' : enterprisePrice) : 'Custom';
+          
+          // Determine display price text
+          let price;
+          if (firstPaidPlan) {
+            price = hasFreePlan ? 
+                   `Free plan available, paid from $${firstPaidPlan.price_per_month}/month` :
+                   `From $${firstPaidPlan.price_per_month}/month`;
+          } else if (monthlyPrice === 0) {
+            price = (tool.name?.toLowerCase().includes('enterprise') || 
+                    tool.name?.toLowerCase().includes('api') ||
+                    monthlyPlan?.plan?.toLowerCase().includes('api') ||
+                    tool.id?.includes('enterprise')) ? 'Custom pricing' : 'Free';
+          } else if (monthlyPrice) {
+            price = `From $${monthlyPrice}/month`;
+          } else {
+            price = 'Custom';
+          }
+          
+          return {
+            monthly,
+            yearly,
+            enterprise,
+            price,
+            tier: 'month'
+          };
+        })(),
         free_trial: tool.pricing?.[0]?.price_per_month === 0,
         pros: tool.pros || [],
         cons: tool.cons || [],

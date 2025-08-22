@@ -8742,46 +8742,31 @@
     ],
     "pricing": [
       {
-        "tier": "Enterprise",
+        "plan": "Free",
         "price_per_month": 0,
-        "billing_period": "month",
         "features": [
+          "Self-hosted version",
           "Unlimited workflows",
-          "Unlimited executions",
-          "Unlimited users",
-          "24/7 support",
-          "Dedicated support channel"
-        ],
-        "description": "Enterprise features",
-        "popular": false
+          "Community support"
+        ]
       },
       {
-        "tier": "Pro",
-        "price_per_month": 0,
-        "billing_period": "month",
+        "plan": "Pro",
+        "price_per_month": 20,
         "features": [
-          "Unlimited workflows",
-          "Unlimited executions",
-          "Unlimited users",
-          "24/7 support",
-          "Dedicated support channel"
-        ],
-        "description": "Pro features",
-        "popular": true
+          "Cloud-hosted",
+          "5,000 workflow executions/month",
+          "Priority support"
+        ]
       },
       {
-        "tier": "Free",
+        "plan": "Enterprise",
         "price_per_month": 0,
-        "billing_period": "month",
         "features": [
-          "Unlimited workflows",
+          "Custom hosting options",
           "Unlimited executions",
-          "Unlimited users",
-          "24/7 support",
-          "Dedicated support channel"
-        ],
-        "description": "Free features",
-        "popular": false
+          "Dedicated support"
+        ]
       }
     ],
     "pros": [
@@ -9024,27 +9009,31 @@
     ],
     "pricing": [
       {
-        "tier": "Free",
-        "price_per_month": 0,
-        "billing_period": "month",
+        "plan": "Core",
+        "price_per_month": 9,
         "features": [
-          "No credit card required",
-          "No time limit on Free plan"
-        ],
-        "description": "Free features",
-        "popular": false
+          "10,000 operations/month",
+          "Unlimited active scenarios",
+          "5 minute execution time"
+        ]
       },
       {
-        "tier": "Enterprise",
-        "price_per_month": "Custom",
-        "billing_period": "month",
+        "plan": "Pro",
+        "price_per_month": 16,
         "features": [
-          "Custom features",
-          "Dedicated support",
-          "SLA"
-        ],
-        "description": "Enterprise-grade features",
-        "popular": false
+          "10,000 operations/month",
+          "Unlimited active scenarios",
+          "15 minute execution time"
+        ]
+      },
+      {
+        "plan": "Teams",
+        "price_per_month": 29,
+        "features": [
+          "10,000 operations/month",
+          "Team collaboration features",
+          "40 minute execution time"
+        ]
       }
     ],
     "pros": [
