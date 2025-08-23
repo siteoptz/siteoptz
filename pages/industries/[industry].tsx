@@ -156,19 +156,26 @@ export default function IndustryPage({ industry, content, slug }: IndustryPagePr
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="max-w-4xl mx-auto">
               <div className="bg-black border border-gray-800 rounded-2xl p-8">
-                <p className="text-lg text-gray-300 leading-relaxed">
+                <p className="text-lg text-gray-300 leading-relaxed mb-8">
                   {content.intro.content}
                 </p>
-                <div className="mt-6 flex flex-wrap gap-4">
-                  {content.toolCategories.map((category) => (
-                    <Link
-                      key={category}
-                      href={`/categories/${category.toLowerCase().replace(/[^a-z0-9]+/g, '-')}`}
-                      className="px-4 py-2 bg-gray-900 border border-gray-700 rounded-lg text-sm text-gray-300 hover:bg-gray-800 hover:text-white transition-colors"
-                    >
-                      {category}
-                    </Link>
-                  ))}
+                
+                {/* AI Solutions We Recommend Section */}
+                <div className="border-t border-gray-800 pt-8">
+                  <h3 className="text-2xl font-bold text-white mb-6 text-center">
+                    AI Solutions We Recommend
+                  </h3>
+                  <div className="flex flex-wrap justify-center gap-4">
+                    {content.toolCategories.map((category) => (
+                      <Link
+                        key={category}
+                        href={`/categories/${category.toLowerCase().replace(/[^a-z0-9]+/g, '-')}`}
+                        className="px-6 py-3 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-lg font-semibold hover:from-blue-700 hover:to-purple-700 transform hover:scale-105 transition-all duration-200 shadow-lg hover:shadow-xl"
+                      >
+                        {category}
+                      </Link>
+                    ))}
+                  </div>
                 </div>
               </div>
             </div>
