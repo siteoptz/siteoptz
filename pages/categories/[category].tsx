@@ -7,6 +7,7 @@ import { Star, TrendingUp, Users, Zap, CheckCircle, ArrowRight } from 'lucide-re
 import { toolCategories } from '../../config/categories';
 import { loadUnifiedToolsData } from '../../utils/unifiedDataAdapter';
 import { categoryContent } from '../../content/categoryContent';
+import ToolLogo from '../../components/ToolLogo';
 
 interface CategoryPageProps {
   category: string;
@@ -274,17 +275,11 @@ export default function CategoryPage({ category, tools, content }: CategoryPageP
               {topTools.map((tool: any, index: number) => (
                 <div key={tool.id || index} className="bg-gray-900 border border-gray-800 rounded-lg p-6 hover:border-cyan-400 transition-colors">
                   <div className="flex items-center mb-4">
-                    <div className="relative w-12 h-12 rounded-lg mr-4 overflow-hidden bg-gray-800 flex items-center justify-center">
-                      <Image 
-                        src={tool.logo || tool.logo_url || `/images/tools/${tool.tool_name?.toLowerCase().replace(/[^a-z0-9]+/g, '-')}-logo.svg` || '/images/tools/placeholder.svg'} 
-                        alt={`${tool.tool_name} logo`}
-                        width={48}
-                        height={48}
-                        className="rounded-lg object-contain"
-                        onError={(e) => {
-                          console.log(`Logo not found for ${tool.tool_name}: ${e.currentTarget.src}`);
-                          e.currentTarget.src = '/images/tools/placeholder.svg';
-                        }}
+                    <div className="mr-4">
+                      <ToolLogo 
+                        toolName={tool.tool_name}
+                        logoUrl={tool.logo_url || tool.logo}
+                        size="md"
                       />
                     </div>
                     <div>
