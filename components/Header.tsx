@@ -4,11 +4,27 @@ import Image from 'next/image';
 import { useRouter } from 'next/router';
 import { Menu, X, ChevronDown } from 'lucide-react';
 import { toolCategories, getCategoryUrl, getCategoryDisplayName } from '../config/categories';
+import { industries, industrySlugMap } from '../content/industryContent';
 
 const Header: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   const router = useRouter();
+
+  // Industry dropdown menu items with shortened names
+  const industryMenuItems = [
+    { name: 'Healthcare AI Solutions', industry: 'Healthcare & Life Sciences' },
+    { name: 'Finance & Banking AI', industry: 'Finance & Banking' },
+    { name: 'Retail & E-Commerce AI', industry: 'Retail & E-Commerce' },
+    { name: 'Manufacturing AI', industry: 'Manufacturing & Supply Chain' },
+    { name: 'Transportation & Logistics AI', industry: 'Transportation & Logistics' },
+    { name: 'Marketing & Media AI', industry: 'Marketing, Advertising & Media' },
+    { name: 'Energy & Utilities AI', industry: 'Energy & Utilities' },
+    { name: 'Education AI', industry: 'Education & EdTech' },
+    { name: 'Legal AI', industry: 'Legal & Compliance' },
+    { name: 'HR & Recruiting AI', industry: 'Human Resources & Recruiting' },
+    { name: 'Aerospace & Defense AI', industry: 'Aerospace & Defense' }
+  ];
 
   const navigation = [
     { name: 'Home', href: '/', current: router.pathname === '/' },
@@ -24,6 +40,13 @@ const Header: React.FC = () => {
       href: '/tools', 
       current: router.pathname.startsWith('/tools'),
       hasDropdown: true
+    },
+    {
+      name: 'Industries We Help',
+      href: '/industries',
+      current: router.pathname.startsWith('/industries'),
+      hasDropdown: true,
+      isIndustry: true
     },
     { name: 'Pricing Calculator', href: '/pricing', current: router.pathname === '/pricing' },
     { name: 'Data Room', href: '/data-room', current: router.pathname === '/data-room' },
@@ -147,6 +170,29 @@ const Header: React.FC = () => {
                     ))}
                   </div>
                 )}
+                
+                {/* Dropdown Menu - Industries */}
+                {item.hasDropdown && item.isIndustry && (
+                  <div 
+                    className="absolute top-full left-0 mt-2 w-72 bg-black rounded-xl shadow-xl border border-gray-800/50 py-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 transform translate-y-2 group-hover:translate-y-0"
+                  >
+                    <div className="px-4 py-2 text-xs font-semibold text-gray-500 uppercase tracking-wider border-b border-gray-800/50 mb-2">
+                      Browse by Industry
+                    </div>
+                    {industryMenuItems.map((item) => (
+                      <Link
+                        key={item.industry}
+                        href={`/industries/${industrySlugMap[item.industry]}`}
+                        className="block px-4 py-3 text-sm text-gray-300 hover:bg-gray-800 hover:text-white transition-colors border-l-2 border-transparent hover:border-cyan-400"
+                      >
+                        <div className="flex items-center justify-between">
+                          <span>{item.name}</span>
+                          <span className="text-xs text-gray-500">→</span>
+                        </div>
+                      </Link>
+                    ))}
+                  </div>
+                )}
               </div>
             ))}
           </div>
@@ -229,6 +275,35 @@ const Header: React.FC = () => {
                     }}
                   >
                     {getCategoryDisplayName(category)}
+                  </Link>
+                ))}
+              </div>
+              <div style={{ marginBottom: '16px' }}>
+                <div style={{ 
+                  color: '#06b6d4', 
+                  fontSize: '16px', 
+                  fontWeight: '600', 
+                  marginBottom: '12px',
+                  textTransform: 'uppercase',
+                  letterSpacing: '0.5px'
+                }}>Industries We Help</div>
+                {industryMenuItems.map((item) => (
+                  <Link 
+                    key={item.industry}
+                    href={`/industries/${industrySlugMap[item.industry]}`}
+                    onClick={closeMenu} 
+                    style={{ 
+                      color: 'white', 
+                      textDecoration: 'none', 
+                      fontSize: '16px', 
+                      padding: '12px 16px', 
+                      borderBottom: '1px solid rgba(255,255,255,0.05)',
+                      transition: 'all 0.2s ease',
+                      display: 'block',
+                      marginLeft: '8px'
+                    }}
+                  >
+                    {item.name}
                   </Link>
                 ))}
               </div>
