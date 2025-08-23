@@ -157,7 +157,7 @@ export default function IndustriesPage() {
                 Select Your Industry
               </h2>
               <p className="text-xl text-gray-300">
-                Explore AI solutions tailored to your sector's unique challenges and opportunities
+                Explore AI solutions tailored to your sector&apos;s unique challenges and opportunities
               </p>
             </div>
             
@@ -224,7 +224,7 @@ export default function IndustriesPage() {
                   Tailored Solutions
                 </h3>
                 <p className="text-gray-400">
-                  AI tools configured for your industry's specific processes, compliance requirements, and business models
+                  AI tools configured for your industry&apos;s specific processes, compliance requirements, and business models
                 </p>
               </div>
               
