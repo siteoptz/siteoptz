@@ -503,6 +503,17 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
     
     // Extract tool slugs from comparison array parameter
     const comparison = params?.comparison;
+    
+    // Handle special case: redirect /compare/pricing to /pricing
+    if (Array.isArray(comparison) && comparison.length === 1 && comparison[0] === 'pricing') {
+      return {
+        redirect: {
+          destination: '/pricing',
+          permanent: false,
+        },
+      };
+    }
+    
     if (!Array.isArray(comparison) || comparison.length !== 3 || comparison[1] !== 'vs') {
       return {
         notFound: true,
