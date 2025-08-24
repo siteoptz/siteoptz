@@ -517,6 +517,150 @@ async function sendGuideEmail(leadData: LeadData) {
   }
 }
 
+// Send internal notification about new download
+async function sendNewDownloadNotification(leadData: LeadData) {
+  try {
+    const config = resourceConfigs[leadData.resourceType as keyof typeof resourceConfigs];
+    const timestamp = new Date().toLocaleString('en-US', {
+      timeZone: 'America/New_York',
+      weekday: 'short',
+      year: 'numeric',
+      month: 'short',
+      day: 'numeric',
+      hour: '2-digit',
+      minute: '2-digit',
+      hour12: true
+    });
+
+    const notificationHtml = `
+      <!DOCTYPE html>
+      <html>
+      <head>
+        <meta charset="utf-8">
+        <title>New Download Alert</title>
+        <style>
+          body { font-family: Arial, sans-serif; line-height: 1.6; color: #333; }
+          .container { max-width: 600px; margin: 0 auto; padding: 20px; }
+          .header { background: #e3f2fd; padding: 20px; border-radius: 8px; margin-bottom: 20px; }
+          .content { background: white; padding: 20px; border: 1px solid #dee2e6; border-radius: 8px; }
+          .field { margin-bottom: 15px; padding-bottom: 15px; border-bottom: 1px solid #eee; }
+          .field:last-child { border-bottom: none; }
+          .label { font-weight: bold; color: #495057; margin-bottom: 5px; }
+          .value { color: #212529; }
+          .alert { background: #d4edda; border-left: 4px solid #28a745; padding: 15px; margin: 20px 0; border-radius: 4px; }
+        </style>
+      </head>
+      <body>
+        <div class="container">
+          <div class="header">
+            <h1>📥 New Download Alert</h1>
+            <p>A new user has downloaded a resource from SiteOptz</p>
+          </div>
+          
+          <div class="content">
+            <div class="field">
+              <div class="label">Subject:</div>
+              <div class="value">New Download</div>
+            </div>
+            
+            <div class="field">
+              <div class="label">Email:</div>
+              <div class="value">${leadData.email}</div>
+            </div>
+            
+            <div class="field">
+              <div class="label">Name:</div>
+              <div class="value">${leadData.firstName} ${leadData.lastName}</div>
+            </div>
+            
+            <div class="field">
+              <div class="label">Company:</div>
+              <div class="value">${leadData.company}</div>
+            </div>
+            
+            <div class="field">
+              <div class="label">Source:</div>
+              <div class="value">SiteOptz Resource Download - ${config?.title || leadData.resourceType}</div>
+            </div>
+            
+            <div class="field">
+              <div class="label">Role:</div>
+              <div class="value">${leadData.role}</div>
+            </div>
+            
+            <div class="field">
+              <div class="label">Team Size:</div>
+              <div class="value">${leadData.companySize}</div>
+            </div>
+            
+            <div class="field">
+              <div class="label">Primary Goal:</div>
+              <div class="value">${leadData.primaryInterest || 'Not specified'}</div>
+            </div>
+            
+            <div class="field">
+              <div class="label">Timestamp:</div>
+              <div class="value">${timestamp}</div>
+            </div>
+            
+            <div class="alert">
+              <strong>📋 Additional Details:</strong><br>
+              Timeline: ${leadData.timeline || 'Not specified'}<br>
+              Marketing Consent: ${leadData.marketingConsent ? 'Yes' : 'No'}<br>
+              Downloaded Resource: ${config?.title || leadData.resourceType}
+            </div>
+          </div>
+        </div>
+      </body>
+      </html>
+    `;
+
+    const notificationText = `
+New Download Alert
+==================
+
+Subject: New Download
+
+Email: ${leadData.email}
+
+Name: ${leadData.firstName} ${leadData.lastName}
+
+Company: ${leadData.company}
+
+Source: SiteOptz Resource Download - ${config?.title || leadData.resourceType}
+
+Role: ${leadData.role}
+
+Team Size: ${leadData.companySize}
+
+Primary Goal: ${leadData.primaryInterest || 'Not specified'}
+
+Timestamp: ${timestamp}
+
+Additional Details:
+- Timeline: ${leadData.timeline || 'Not specified'}
+- Marketing Consent: ${leadData.marketingConsent ? 'Yes' : 'No'}
+- Downloaded Resource: ${config?.title || leadData.resourceType}
+    `;
+
+    const result = await sendEmail({
+      to: 'info@siteoptz.ai',
+      subject: `New Download: ${leadData.firstName} ${leadData.lastName} (${leadData.company})`,
+      html: notificationHtml,
+      text: notificationText,
+      from: `"SiteOptz System" <${EMAIL_FROM}>`,
+      bcc: null // No BCC needed for internal notification
+    });
+
+    console.log('New download notification sent:', result.success);
+    return result;
+  } catch (error) {
+    console.error('Error sending download notification:', error);
+    // Don't throw - we still want the main process to continue
+    return { success: false, error: error instanceof Error ? error.message : 'Unknown error' };
+  }
+}
+
 // Main API handler
 export default async function handler(
   req: NextApiRequest,
@@ -553,6 +697,9 @@ export default async function handler(
     
     // Send email with guide (with BCC to info@siteoptz.ai)
     const emailResult = await sendGuideEmail(leadData);
+    
+    // Send internal notification about new download
+    await sendNewDownloadNotification(leadData);
     
     // Wait for GoHighLevel to complete (but don't block on failure)
     const ghlResult = await ghlPromise;
