@@ -127,11 +127,11 @@ export default function AIImplementationPlaybook() {
             </h1>
             
             <p className="text-xl text-gray-300 mb-8">
-              We've sent both the AI Implementation Playbook and Tool Selection Framework to <strong>{formData.email}</strong>
+              We&apos;ve sent both the AI Implementation Playbook and Tool Selection Framework to <strong>{formData.email}</strong>
             </p>
             
             <div className="bg-gradient-to-r from-blue-600/20 to-purple-600/20 rounded-2xl p-8 border border-gray-700 mb-8">
-              <h2 className="text-2xl font-semibold text-white mb-4">What's Next?</h2>
+              <h2 className="text-2xl font-semibold text-white mb-4">What&apos;s Next?</h2>
               <div className="space-y-3 text-gray-300">
                 <div className="flex items-center">
                   <CheckCircle className="w-5 h-5 text-green-400 mr-3" />
@@ -249,7 +249,7 @@ export default function AIImplementationPlaybook() {
                       Download Your Free Playbook
                     </h2>
                     <p className="text-gray-400">
-                      Join 10,000+ business leaders who've transformed their companies with AI
+                      Join 10,000+ business leaders who&apos;ve transformed their companies with AI
                     </p>
                   </div>
                   
@@ -396,7 +396,7 @@ export default function AIImplementationPlaybook() {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-12">
               <h2 className="text-3xl font-bold text-white mb-4">
-                What's Included in Your Download
+                What&apos;s Included in Your Download
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
                 Two comprehensive resources designed to accelerate your AI implementation success
@@ -459,7 +459,7 @@ export default function AIImplementationPlaybook() {
                 What Business Leaders Are Saying
               </h2>
               <p className="text-xl text-gray-300">
-                Join thousands who've transformed their businesses with our resources
+                Join thousands who&apos;ve transformed their businesses with our resources
               </p>
             </div>
             

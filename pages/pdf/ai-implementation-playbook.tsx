@@ -281,7 +281,7 @@ export default function AIImplementationPlaybookPDF() {
           
           <div className="highlight-box">
             <h3 style={{ marginTop: 0, color: '#1e40af', textAlign: 'center' }}>
-              What You'll Learn
+              What You&apos;ll Learn
             </h3>
             <div style={{ display: 'grid', gridTemplateColumns: 'repeat(2, 1fr)', gap: '1rem', marginTop: '1.5rem' }}>
               {keyBenefits.map((benefit, index) => (
@@ -334,7 +334,7 @@ export default function AIImplementationPlaybookPDF() {
         {/* Executive Summary */}
         <h2>1. Executive Summary</h2>
         <p style={{ fontSize: '1.125rem', marginBottom: '2rem' }}>
-          Artificial Intelligence is no longer a futuristic concept—it's a business imperative. 
+          Artificial Intelligence is no longer a futuristic concept&mdash;it&apos;s a business imperative. 
           Companies that successfully implement AI solutions achieve significant competitive advantages, 
           including cost reductions, productivity improvements, and enhanced customer experiences.
         </p>

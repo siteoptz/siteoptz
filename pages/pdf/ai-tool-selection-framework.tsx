@@ -482,7 +482,7 @@ export default function AIToolSelectionFrameworkPDF() {
         {/* Common Mistakes */}
         <h2>4. Common Selection Mistakes to Avoid</h2>
         <p>
-          Learn from others' experiences by avoiding these frequent pitfalls in AI tool selection.
+          Learn from others&apos; experiences by avoiding these frequent pitfalls in AI tool selection.
         </p>
 
         {commonMistakes.map((mistake, index) => (

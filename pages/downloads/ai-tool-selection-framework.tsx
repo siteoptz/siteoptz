@@ -136,11 +136,11 @@ export default function AIToolSelectionFramework() {
             </h1>
             
             <p className="text-xl text-gray-300 mb-8">
-              We've sent the AI Tool Selection Framework to <strong>{formData.email}</strong>
+              We&apos;ve sent the AI Tool Selection Framework to <strong>{formData.email}</strong>
             </p>
             
             <div className="bg-gradient-to-r from-green-600/20 to-cyan-600/20 rounded-2xl p-8 border border-gray-700 mb-8">
-              <h2 className="text-2xl font-semibold text-white mb-4">What You'll Get:</h2>
+              <h2 className="text-2xl font-semibold text-white mb-4">What You&apos;ll Get:</h2>
               <div className="grid md:grid-cols-2 gap-4 text-gray-300">
                 <div className="flex items-center">
                   <CheckCircle className="w-5 h-5 text-green-400 mr-3" />
@@ -507,7 +507,7 @@ export default function AIToolSelectionFramework() {
               Stop Guessing, Start Selecting Smart
             </h2>
             <p className="text-xl text-gray-300 mb-8">
-              Download the framework that's helped 8,500+ companies choose the right AI tools.
+              Download the framework that&apos;s helped 8,500+ companies choose the right AI tools.
             </p>
             <a
               href="#top"

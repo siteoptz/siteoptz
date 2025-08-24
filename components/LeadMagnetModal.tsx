@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import Link from 'next/link';
 import { 
   X,
   Download,
@@ -205,6 +206,10 @@ const LeadMagnetModal: React.FC<LeadMagnetModalProps> = ({
       <div 
         className="fixed inset-0 bg-black bg-opacity-75 transition-opacity"
         onClick={handleClose}
+        onKeyDown={(e) => e.key === 'Escape' && handleClose()}
+        role="button"
+        tabIndex={0}
+        aria-label="Close modal"
       ></div>
       
       {/* Modal */}
@@ -254,13 +259,13 @@ const LeadMagnetModal: React.FC<LeadMagnetModalProps> = ({
                 </div>
                 
                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                  <a
+                  <Link
                     href="/contact"
                     className={`px-6 py-3 bg-gradient-to-r ${colors.button} text-white font-semibold rounded-lg transition-colors flex items-center justify-center`}
                   >
                     <Users className="w-4 h-4 mr-2" />
                     Schedule Free Consultation
-                  </a>
+                  </Link>
                   <button
                     onClick={handleClose}
                     className="px-6 py-3 bg-gray-800 hover:bg-gray-700 text-white font-semibold rounded-lg transition-colors"
