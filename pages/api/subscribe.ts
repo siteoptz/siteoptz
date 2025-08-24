@@ -2,6 +2,11 @@ import { NextApiRequest, NextApiResponse } from 'next';
 import { z } from 'zod';
 const { sendEmail } = require('../../lib/email-service');
 
+// GoHighLevel API configuration
+const GHL_API_KEY = process.env.GHL_API_KEY || '';
+const GHL_LOCATION_ID = process.env.GHL_LOCATION_ID || '';
+const GHL_API_BASE = 'https://rest.gohighlevel.com/v1';
+
 // Input validation schema
 const subscribeSchema = z.object({
   email: z.string().email('Invalid email address'),
@@ -66,6 +71,62 @@ function checkRateLimit(ip: string): boolean {
   
   current.count++;
   return true;
+}
+
+// GoHighLevel CRM Integration
+async function addToGoHighLevel(data: SubscriptionData): Promise<{ success: boolean; id?: string }> {
+  try {
+    const ghlData = {
+      firstName: data.name?.split(' ')[0] || '',
+      lastName: data.name?.split(' ').slice(1).join(' ') || '',
+      email: data.email,
+      phone: '',
+      tags: [
+        'New Lead',  // This tag triggers the 'New Lead Workflow'
+        'Newsletter Subscription',
+        `Source: ${data.source}`,
+        ...(data.tool ? [`Tool Interest: ${data.tool}`] : []),
+        ...(data.category ? [`Category: ${data.category}`] : []),
+        ...(data.useCase ? [`Use Case: ${data.useCase}`] : []),
+        ...data.interests.map(interest => `Interest: ${interest}`),
+        `Subscribed: ${new Date().toLocaleDateString('en-US', { month: 'short', year: 'numeric' })}`
+      ],
+      customField: {
+        company: data.company || '',
+        source: data.source,
+        toolInterest: data.tool || '',
+        category: data.category || '',
+        useCase: data.useCase || '',
+        interests: data.interests.join(', '),
+        subscriptionDate: data.timestamp,
+        referrer: data.referrer || ''
+      },
+      source: 'Newsletter Subscription - SiteOptz Website',
+      locationId: GHL_LOCATION_ID,
+    };
+
+    const response = await fetch(`${GHL_API_BASE}/contacts/`, {
+      method: 'POST',
+      headers: {
+        'Authorization': `Bearer ${GHL_API_KEY}`,
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(ghlData),
+    });
+
+    if (!response.ok) {
+      const errorText = await response.text();
+      console.error('GoHighLevel API error:', errorText);
+      throw new Error(`GoHighLevel API error: ${response.status}`);
+    }
+
+    const result = await response.json();
+    console.log('Successfully added to GoHighLevel:', result.contact?.id);
+    return { success: true, id: result.contact?.id };
+  } catch (error) {
+    console.error('Error adding lead to GoHighLevel:', error);
+    return { success: false };
+  }
 }
 
 // CRM Integration Functions (implement based on your provider)
@@ -371,16 +432,17 @@ export default async function handler(
       user_agent: req.headers['user-agent']
     };
 
-    // Choose CRM based on environment or configuration
-    const crmProvider = process.env.CRM_PROVIDER || 'mailchimp'; // 'mailchimp' | 'hubspot' | 'both'
-    
-    let crmSuccess = false;
-    let subscriptionId: string | undefined;
+    // Add to GoHighLevel CRM (primary)
+    const ghlResult = await addToGoHighLevel(subscriptionData);
+    let crmSuccess = ghlResult.success;
+    let subscriptionId = ghlResult.id;
 
-    // Add to CRM(s)
+    // Optional: Also add to other CRMs if configured
+    const crmProvider = process.env.CRM_PROVIDER || 'gohighlevel'; // 'mailchimp' | 'hubspot' | 'gohighlevel' | 'both'
+    
     if (crmProvider === 'mailchimp' || crmProvider === 'both') {
       const mailchimpResult = await addToMailchimp(subscriptionData);
-      if (mailchimpResult.success) {
+      if (mailchimpResult.success && !crmSuccess) {
         crmSuccess = true;
         subscriptionId = mailchimpResult.id;
       }
@@ -388,7 +450,7 @@ export default async function handler(
 
     if (crmProvider === 'hubspot' || crmProvider === 'both') {
       const hubspotResult = await addToHubSpot(subscriptionData);
-      if (hubspotResult.success) {
+      if (hubspotResult.success && !crmSuccess) {
         crmSuccess = true;
         subscriptionId = subscriptionId || hubspotResult.id;
       }

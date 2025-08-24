@@ -1,6 +1,11 @@
 import { NextApiRequest, NextApiResponse } from 'next';
 import { sendEmail } from '../../lib/email-service';
 
+// GoHighLevel API configuration
+const GHL_API_KEY = process.env.GHL_API_KEY || '';
+const GHL_LOCATION_ID = process.env.GHL_LOCATION_ID || '';
+const GHL_API_BASE = 'https://rest.gohighlevel.com/v1';
+
 interface ExpertConsultationData {
   firstName: string;
   lastName: string;
@@ -19,6 +24,63 @@ interface ApiResponse {
   message: string;
   success: boolean;
   error?: string;
+}
+
+// Add lead to GoHighLevel CRM
+async function addToGoHighLevel(data: ExpertConsultationData) {
+  try {
+    const ghlData = {
+      firstName: data.firstName,
+      lastName: data.lastName,
+      email: data.email,
+      phone: data.phone || '',
+      tags: [
+        'New Lead',  // This tag triggers the 'New Lead Workflow'
+        'Expert Consultation Request',
+        `Company: ${data.company}`,
+        ...(data.budget ? [`Budget: ${data.budget}`] : []),
+        ...(data.timeline ? [`Timeline: ${data.timeline}`] : []),
+        ...(data.interestedTools.length > 0 ? [`Tools: ${data.interestedTools.join(', ')}`] : []),
+        ...(data.totalCost ? [`Estimated Cost: $${data.totalCost}`] : []),
+        `Requested: ${new Date().toLocaleDateString('en-US', { month: 'short', year: 'numeric' })}`
+      ],
+      customField: {
+        company: data.company,
+        consultationType: 'AI Expert Consultation',
+        requestDate: new Date().toISOString(),
+        budget: data.budget || '',
+        timeline: data.timeline || '',
+        interestedTools: data.interestedTools.join(', '),
+        totalCost: data.totalCost?.toString() || '',
+        billingCycle: data.billingCycle || '',
+        message: data.message || ''
+      },
+      source: 'Expert Consultation Request - SiteOptz Website',
+      locationId: GHL_LOCATION_ID,
+    };
+
+    const response = await fetch(`${GHL_API_BASE}/contacts/`, {
+      method: 'POST',
+      headers: {
+        'Authorization': `Bearer ${GHL_API_KEY}`,
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(ghlData),
+    });
+
+    if (!response.ok) {
+      const errorText = await response.text();
+      console.error('GoHighLevel API error:', errorText);
+      throw new Error(`GoHighLevel API error: ${response.status}`);
+    }
+
+    const result = await response.json();
+    console.log('Successfully added consultation request to GoHighLevel:', result.contact?.id);
+    return result;
+  } catch (error) {
+    console.error('Error adding consultation request to GoHighLevel:', error);
+    return null;
+  }
 }
 
 export default async function handler(
@@ -216,6 +278,9 @@ Explore more: https://siteoptz.ai/tools
       bcc: 'info@siteoptz.ai' // BCC for tracking
     });
 
+    // Add to GoHighLevel CRM (non-blocking)
+    const ghlResult = await addToGoHighLevel(data);
+    
     // Send notification email to team
     const teamEmailResult = await sendEmail({
       to: 'info@siteoptz.ai',
@@ -240,9 +305,11 @@ Action Required: Contact within 24 hours`,
       bcc: null // No BCC needed for team notification
     });
 
-    console.log('Expert consultation emails sent:', {
+    console.log('Expert consultation processing completed:', {
       userEmail: userEmailResult.success,
       teamEmail: teamEmailResult.success,
+      ghlSuccess: !!ghlResult,
+      ghlContactId: ghlResult?.contact?.id || 'N/A',
       contact: `${data.firstName} ${data.lastName} (${data.email})`
     });
 
