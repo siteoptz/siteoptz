@@ -221,8 +221,17 @@ const resourceConfigs = {
   }
 };
 
+// Generate download URL based on file type
+function getDownloadUrl(fileName: string) {
+  // Reports go in /reports/, guides go in /guides/
+  const isReport = fileName.includes('report') || fileName.includes('2024');
+  const directory = isReport ? 'reports' : 'guides';
+  return `${process.env.NEXT_PUBLIC_SITE_URL}/${directory}/${fileName}`;
+}
+
 // Generate personalized email text
 function generateEmailText(leadData: LeadData, config: any) {
+  const downloadUrl = getDownloadUrl(config.fileName);
   return `
 Hi ${leadData.firstName},
 
@@ -233,7 +242,7 @@ Based on your role as ${leadData.role} at ${leadData.company}, this guide will h
 
 ${config.benefits.map((benefit: string) => `✓ ${benefit}`).join('\n')}
 
-📄 Download Your Guide: ${process.env.NEXT_PUBLIC_SITE_URL}/guides/${config.fileName}
+📄 Download Your Guide: ${downloadUrl}
 
 💡 Quick Start Tip: 
 Begin with the Executive Summary for key insights, then focus on the sections most relevant to ${leadData.companySize} organizations like yours.
@@ -257,6 +266,7 @@ You received this email because you downloaded our guide at ${leadData.email}
 
 // Generate HTML email template
 function generateEmailHTML(leadData: LeadData, config: any) {
+  const downloadUrl = getDownloadUrl(config.fileName);
   return `
 <!DOCTYPE html>
 <html lang="en">
@@ -371,7 +381,7 @@ function generateEmailHTML(leadData: LeadData, config: any) {
             </div>
             
             <div style="text-align: center; margin: 30px 0;">
-                <a href="${process.env.NEXT_PUBLIC_SITE_URL}/guides/${config.fileName}" class="cta-button">
+                <a href="${downloadUrl}" class="cta-button">
                     📄 Download Your Guide Now
                 </a>
             </div>
@@ -556,7 +566,7 @@ export default async function handler(
     res.status(200).json({
       success: true,
       message: 'Resource sent successfully',
-      downloadUrl: `${process.env.NEXT_PUBLIC_SITE_URL}/guides/${config.fileName}`,
+      downloadUrl: getDownloadUrl(config.fileName),
       resourceTitle: config.title,
     });
   } catch (error) {
