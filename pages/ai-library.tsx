@@ -384,7 +384,7 @@ export default function AILibrary() {
                 Recently Added
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                The latest AI tools we've reviewed and added to our library.
+                The latest AI tools we&apos;ve reviewed and added to our library.
               </p>
             </div>
             
@@ -422,7 +422,7 @@ export default function AILibrary() {
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="bg-gradient-to-r from-blue-600 to-purple-700 rounded-2xl p-12 text-center">
               <h2 className="text-3xl font-bold text-white mb-4">
-                Can't Find the Right AI Tool?
+                Can&apos;t Find the Right AI Tool?
               </h2>
               <p className="text-xl text-blue-100 mb-8">
                 Get personalized AI tool recommendations based on your specific business needs and budget.

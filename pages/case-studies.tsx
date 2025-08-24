@@ -280,7 +280,7 @@ export default function CaseStudies() {
                 
                 <div className="bg-black/30 rounded-lg p-6 border border-gray-800">
                   <blockquote className="text-lg text-white italic mb-4">
-                    "{study.testimonial.quote}"
+                    &ldquo;{study.testimonial.quote}&rdquo;
                   </blockquote>
                   <div className="text-cyan-400 font-medium">
                     — {study.testimonial.author}
@@ -335,7 +335,7 @@ export default function CaseStudies() {
                   
                   <div className="border-t border-gray-800 pt-4">
                     <blockquote className="text-gray-300 text-sm italic mb-3">
-                      "{study.testimonial.quote.substring(0, 100)}..."
+                      &ldquo;{study.testimonial.quote.substring(0, 100)}...&rdquo;
                     </blockquote>
                     <div className="flex items-center justify-between">
                       <span className="text-cyan-400 text-xs font-medium">

@@ -200,7 +200,7 @@ export default function Testimonials() {
                       </div>
                     </div>
                     <blockquote className="text-xl text-white leading-relaxed mb-6">
-                      "{testimonial.quote}"
+                      &ldquo;{testimonial.quote}&rdquo;
                     </blockquote>
                     <div className="flex items-center">
                       <div className="w-12 h-12 bg-gradient-to-br from-blue-600 to-purple-600 rounded-full flex items-center justify-center mr-4">
@@ -261,7 +261,7 @@ export default function Testimonials() {
                   </div>
                   
                   <blockquote className="text-gray-300 mb-6 leading-relaxed">
-                    "{testimonial.quote}"
+                    &ldquo;{testimonial.quote}&rdquo;
                   </blockquote>
                   
                   <div className="border-t border-gray-800 pt-4">
@@ -327,7 +327,7 @@ export default function Testimonials() {
                 Ready to Join Our Success Stories?
               </h2>
               <p className="text-xl text-blue-100 mb-8">
-                Let's create your AI transformation success story. Schedule a consultation today.
+                Let&apos;s create your AI transformation success story. Schedule a consultation today.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Link

@@ -190,7 +190,7 @@ export default function Webinars() {
         "position": index + 1,
         "name": webinar.title,
         "description": webinar.description,
-        "startDate": webinar.date || webinar.recordedDate,
+        "startDate": (webinar as any).date || (webinar as any).recordedDate,
         "eventAttendanceMode": "https://schema.org/OnlineEventAttendanceMode",
         "eventStatus": "https://schema.org/EventScheduled",
         "organizer": {

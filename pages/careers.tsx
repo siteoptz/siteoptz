@@ -270,7 +270,7 @@ export default function Careers() {
                 Why Work at SiteOptz?
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                We're building the future of AI implementation, and we want you to be part of it.
+                We&apos;re building the future of AI implementation, and we want you to be part of it.
               </p>
             </div>
             
@@ -408,7 +408,7 @@ export default function Careers() {
             
             <div className="text-center mt-12">
               <p className="text-gray-400 mb-4">
-                Don't see a position that fits? We're always looking for exceptional talent.
+                Don&apos;t see a position that fits? We&apos;re always looking for exceptional talent.
               </p>
               <Link
                 href="/contact"

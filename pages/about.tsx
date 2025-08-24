@@ -144,7 +144,7 @@ export default function About() {
                 About SiteOptz
               </h1>
               <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
-                We're on a mission to help every business unlock their growth potential 
+                We&apos;re on a mission to help every business unlock their growth potential 
                 through intelligent AI implementation and optimization.
               </p>
             </div>
@@ -179,7 +179,7 @@ export default function About() {
                   or failing to see measurable results.
                 </p>
                 <p className="text-gray-300 text-lg leading-relaxed mb-6">
-                  That's why we created a comprehensive platform that not only helps you discover the best AI tools 
+                  That&apos;s why we created a comprehensive platform that not only helps you discover the best AI tools 
                   but also provides expert guidance on implementation, optimization, and scaling. We turn AI complexity 
                   into business simplicity.
                 </p>
