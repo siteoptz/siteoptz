@@ -58,9 +58,9 @@ const Footer: React.FC = () => {
   ];
 
   const resourcesLinks = [
-    { name: 'Blog', href: '/blog' },
+    { name: 'Resources', href: '/resources' },
     { name: 'Case Studies', href: '/case-studies' },
-    { name: 'AI Library', href: '/tools' },
+    { name: 'AI Library', href: '/ai-library' },
     { name: 'Webinars', href: '/webinars' },
   ];
 
