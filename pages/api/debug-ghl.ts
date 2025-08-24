@@ -105,11 +105,8 @@ export default async function handler(
         lastName: 'Test',
         email: `debug-test-${Date.now()}@example.com`,
         phone: '',
-        tags: ['New Lead', 'Debug Test', 'API Validation'],
-        customField: {
-          source: 'Debug API Test',
-          testDate: new Date().toISOString()
-        },
+        tags: ['New Lead', 'Debug Test', 'API Validation', `Timestamp: ${new Date().toISOString()}`],
+        customFields: [], // Updated to v2.0 API structure
         source: 'Debug Test - SiteOptz API',
         locationId: GHL_LOCATION_ID,
       };
