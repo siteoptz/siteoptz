@@ -159,9 +159,31 @@ const LeadMagnetModal: React.FC<LeadMagnetModalProps> = ({
     setIsSubmitting(true);
     
     try {
-      // Simulate API call - replace with actual implementation
-      await new Promise(resolve => setTimeout(resolve, 1500));
+      // Call the actual API endpoint to send emails
+      const response = await fetch('/api/download-guide', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          firstName: formData.firstName,
+          lastName: formData.lastName,
+          email: formData.email,
+          company: formData.company,
+          role: formData.role,
+          companySize: formData.teamSize || 'Not specified',
+          primaryInterest: resourceType,
+          timeline: 'Not specified',
+          marketingConsent: false,
+        }),
+      });
+
+      const result = await response.json();
       
+      if (!response.ok) {
+        throw new Error(result.message || `Server error: ${response.status}`);
+      }
+
       // Track conversion
       if (typeof window !== 'undefined' && window.gtag) {
         window.gtag('event', 'lead_generation', {
