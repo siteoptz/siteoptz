@@ -1,6 +1,7 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
+import LeadMagnetModal from '../components/LeadMagnetModal';
 import { 
   BookOpen, 
   FileText, 
@@ -16,10 +17,35 @@ import {
   Star,
   Calendar,
   Search,
-  Filter
+  Filter,
+  CheckCircle
 } from 'lucide-react';
 
 export default function Resources() {
+  const [modalState, setModalState] = useState<{
+    isOpen: boolean;
+    resourceType: 'playbook' | 'framework' | 'both';
+    source?: string;
+  }>({
+    isOpen: false,
+    resourceType: 'playbook',
+    source: 'resources_page'
+  });
+
+  const openModal = (resourceType: 'playbook' | 'framework' | 'both', source: string = 'resources_page') => {
+    setModalState({
+      isOpen: true,
+      resourceType,
+      source
+    });
+  };
+
+  const closeModal = () => {
+    setModalState(prev => ({
+      ...prev,
+      isOpen: false
+    }));
+  };
   const resourceCategories = [
     {
       title: "AI Implementation Guides",
@@ -138,7 +164,7 @@ export default function Resources() {
       author: "SiteOptz AI Team",
       downloads: "10,000+",
       rating: 4.9,
-      url: "/downloads/ai-implementation-playbook"
+      resourceType: 'playbook' as const
     },
     {
       title: "AI Tool Selection Framework",
@@ -147,7 +173,7 @@ export default function Resources() {
       author: "Alex Chen, CEO",
       downloads: "8,500+", 
       rating: 4.8,
-      url: "/downloads/ai-tool-selection-framework"
+      resourceType: 'framework' as const
     }
   ];
 
@@ -283,7 +309,7 @@ export default function Resources() {
               </p>
             </div>
             
-            <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+            <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto mb-8">
               {featuredResources.map((resource, index) => (
                 <div
                   key={index}
@@ -317,16 +343,54 @@ export default function Resources() {
                     <div className="text-sm text-gray-400">
                       By {resource.author}
                     </div>
-                    <Link
-                      href={resource.url}
+                    <button
+                      onClick={() => openModal(resource.resourceType, 'featured_downloads')}
                       className="px-6 py-2 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-lg hover:from-blue-700 hover:to-purple-700 transition-colors text-sm font-medium flex items-center"
                     >
                       <Download className="w-4 h-4 mr-2" />
                       Download Free
-                    </Link>
+                    </button>
                   </div>
                 </div>
               ))}
+            </div>
+            
+            {/* Get Both Bundle */}
+            <div className="text-center">
+              <div className="bg-gradient-to-r from-purple-600/20 to-pink-600/20 rounded-2xl p-8 border border-purple-500/50 max-w-2xl mx-auto">
+                <h3 className="text-2xl font-bold text-white mb-4">
+                  🎯 Complete AI Success Bundle
+                </h3>
+                <p className="text-gray-300 mb-6">
+                  Get both the Implementation Playbook AND Tool Selection Framework together. 
+                  Everything you need for successful AI adoption.
+                </p>
+                <div className="flex items-center justify-center space-x-6 mb-6 text-sm">
+                  <div className="flex items-center">
+                    <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
+                    <span className="text-gray-300">50+ page playbook</span>
+                  </div>
+                  <div className="flex items-center">
+                    <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
+                    <span className="text-gray-300">Selection framework</span>
+                  </div>
+                  <div className="flex items-center">
+                    <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
+                    <span className="text-gray-300">Templates & tools</span>
+                  </div>
+                </div>
+                <button
+                  onClick={() => openModal('both', 'bundle_cta')}
+                  className="px-8 py-3 bg-gradient-to-r from-purple-600 to-pink-600 text-white font-semibold rounded-lg hover:from-purple-700 hover:to-pink-700 transition-colors flex items-center justify-center mx-auto"
+                >
+                  <Download className="w-5 h-5 mr-2" />
+                  Get Complete Bundle Free
+                </button>
+                <p className="text-xs text-gray-400 mt-3">
+                  <Star className="w-3 h-3 inline mr-1 text-yellow-400" />
+                  Join 15,000+ business leaders
+                </p>
+              </div>
             </div>
           </div>
         </section>
@@ -475,6 +539,14 @@ export default function Resources() {
           </div>
         </section>
       </div>
+
+      {/* Lead Magnet Modal */}
+      <LeadMagnetModal
+        isOpen={modalState.isOpen}
+        onClose={closeModal}
+        resourceType={modalState.resourceType}
+        source={modalState.source}
+      />
     </>
   );
 }
