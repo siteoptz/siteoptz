@@ -633,10 +633,15 @@ export default async function handler(req, res) {
     const ghlSuccess = ghlResult.status === 'fulfilled' && !!ghlResult.value;
 
     console.log('=== Contact Form Processing Results ===');
+    console.log('Timestamp:', new Date().toISOString());
+    console.log('Request Body:', JSON.stringify(req.body, null, 2));
+    console.log('Email Data:', JSON.stringify(emailData, null, 2));
     console.log('Database:', dbSuccess ? 'success' : 'failed');
     console.log('Email:', emailSuccess ? 'success' : 'failed');
     console.log('GoHighLevel:', ghlSuccess ? 'success' : 'failed');
     console.log('GHL Contact ID:', ghlResult.value?.contact?.id || 'N/A');
+    console.log('GHL Full Result:', JSON.stringify(ghlResult.value, null, 2));
+    console.log('GHL Error:', ghlResult.reason || 'None');
     console.log('========================================');
 
     if (!dbSuccess && !emailSuccess && !ghlSuccess) {
