@@ -18,7 +18,7 @@ import {
 interface LeadMagnetModalProps {
   isOpen: boolean;
   onClose: () => void;
-  resourceType: 'playbook' | 'framework' | 'both';
+  resourceType: 'playbook' | 'framework' | 'both' | 'ai-chatbot-implementation' | 'ai-content-generation' | 'ai-data-analysis' | 'ai-healthcare-2024' | 'gpt4-turbo-business' | 'q4-2024-ai-market' | 'claude3-vs-gpt4';
   source?: string;
 }
 
@@ -82,6 +82,104 @@ const LeadMagnetModal: React.FC<LeadMagnetModalProps> = ({
         'Combined ROI calculators and worksheets',
         'Comprehensive vendor evaluation tools',
         'Complete success methodology'
+      ],
+      downloadUrl: '/downloads/ai-implementation-playbook',
+      color: 'purple'
+    },
+    'ai-chatbot-implementation': {
+      title: 'AI Chatbot Implementation Guide',
+      subtitle: '35-page comprehensive guide',
+      description: 'Learn how to implement AI chatbots from strategy to deployment with real-world case studies.',
+      benefits: [
+        'Complete implementation roadmap',
+        'Platform selection and comparison',
+        'Integration best practices',
+        'ROI measurement frameworks',
+        'Real success stories and case studies'
+      ],
+      downloadUrl: '/guides/ai-chatbot-implementation',
+      color: 'blue'
+    },
+    'ai-content-generation': {
+      title: 'AI Content Generation Guide',
+      subtitle: 'Best practices and tools',
+      description: 'Master AI content creation with proven strategies, tool comparisons, and quality frameworks.',
+      benefits: [
+        'Content strategy development',
+        'Tool comparison and selection',
+        'Quality control frameworks',
+        'SEO optimization techniques',
+        'Workflow integration guides'
+      ],
+      downloadUrl: '/guides/ai-content-generation',
+      color: 'green'
+    },
+    'ai-data-analysis': {
+      title: 'AI Data Analysis Roadmap',
+      subtitle: 'Beginner to expert guide',
+      description: 'Transform your data analysis workflow with AI tools and proven methodologies.',
+      benefits: [
+        'Data analysis fundamentals',
+        'Tool selection criteria',
+        'Implementation timeline',
+        'Automation workflows',
+        'Performance optimization'
+      ],
+      downloadUrl: '/guides/ai-data-analysis',
+      color: 'blue'
+    },
+    'ai-healthcare-2024': {
+      title: 'State of AI in Healthcare 2024',
+      subtitle: 'Industry report with ROI data',
+      description: 'Comprehensive analysis of AI adoption in healthcare with data from 200+ institutions.',
+      benefits: [
+        'Market analysis and trends',
+        'ROI data from 200+ hospitals',
+        'Implementation case studies',
+        'Regulatory compliance guide',
+        'Future predictions and opportunities'
+      ],
+      downloadUrl: '/reports/ai-healthcare-2024',
+      color: 'purple'
+    },
+    'gpt4-turbo-business': {
+      title: 'GPT-4 Turbo Business Guide',
+      subtitle: 'Complete implementation guide',
+      description: 'Master GPT-4 Turbo implementation with cost analysis and proven deployment strategies.',
+      benefits: [
+        'GPT-4 Turbo features overview',
+        'Business use cases and applications',
+        'Implementation strategy roadmap',
+        'Cost analysis and ROI calculations',
+        'Performance optimization tips'
+      ],
+      downloadUrl: '/guides/gpt4-turbo-business',
+      color: 'green'
+    },
+    'q4-2024-ai-market': {
+      title: 'Q4 2024 AI Market Analysis',
+      subtitle: 'Latest market research',
+      description: 'Latest market research on AI tools landscape, trends, and growth projections.',
+      benefits: [
+        'Market size and growth data',
+        'Competitive landscape analysis',
+        'Investment and funding trends',
+        'Emerging technologies overview',
+        '2025 predictions and opportunities'
+      ],
+      downloadUrl: '/reports/q4-2024-ai-market',
+      color: 'blue'
+    },
+    'claude3-vs-gpt4': {
+      title: 'Claude 3 vs GPT-4 Comparison',
+      subtitle: 'Detailed analysis report',
+      description: 'Detailed comparison analysis to help you choose the right AI model for your needs.',
+      benefits: [
+        'Performance benchmarks and testing',
+        'Feature comparison matrix',
+        'Cost analysis and pricing',
+        'Use case recommendations',
+        'Implementation guidelines'
       ],
       downloadUrl: '/downloads/ai-implementation-playbook',
       color: 'purple'
@@ -160,7 +258,7 @@ const LeadMagnetModal: React.FC<LeadMagnetModalProps> = ({
     
     try {
       // Call the actual API endpoint to send emails
-      const response = await fetch('/api/download-guide', {
+      const response = await fetch('/api/download-resource', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -173,6 +271,7 @@ const LeadMagnetModal: React.FC<LeadMagnetModalProps> = ({
           role: formData.role,
           companySize: formData.teamSize || 'Not specified',
           primaryInterest: resourceType,
+          resourceType: resourceType,
           timeline: 'Not specified',
           marketingConsent: false,
         }),
@@ -321,7 +420,7 @@ const LeadMagnetModal: React.FC<LeadMagnetModalProps> = ({
                   </p>
                   
                   <div className="space-y-3 mb-6">
-                    {config.benefits.map((benefit, index) => (
+                    {config.benefits.map((benefit: string, index: number) => (
                       <div key={index} className="flex items-start">
                         <CheckCircle className="w-4 h-4 text-green-400 mr-3 mt-0.5 flex-shrink-0" />
                         <span className="text-gray-300 text-sm">{benefit}</span>
