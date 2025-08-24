@@ -430,25 +430,34 @@ function generateEmailHTML(leadData: LeadData, config: any) {
 async function addToGoHighLevel(leadData: LeadData) {
   try {
     const config = resourceConfigs[leadData.resourceType as keyof typeof resourceConfigs];
+    
+    // Create comprehensive lead data for GoHighLevel
     const ghlData = {
       firstName: leadData.firstName,
       lastName: leadData.lastName,
       email: leadData.email,
       phone: '',
       tags: [
+        'New Lead',  // This tag triggers the 'New Lead Workflow'
+        'Resource Download',
         `Downloaded: ${config?.title || leadData.resourceType}`,
         `Company Size: ${leadData.companySize}`,
         `Role: ${leadData.role}`,
         `Interest: ${leadData.primaryInterest}`,
-        `Timeline: ${leadData.timeline}`,
-        leadData.marketingConsent ? 'Marketing Consent: Yes' : 'Marketing Consent: No'
+        `Timeline: ${leadData.timeline || 'Not specified'}`,
+        leadData.marketingConsent ? 'Marketing Consent: Yes' : 'Marketing Consent: No',
+        `Source: ${new Date().toLocaleDateString('en-US', { month: 'short', year: 'numeric' })}`
       ],
       customField: {
         company: leadData.company,
         downloadedGuide: config?.title || leadData.resourceType,
         downloadDate: new Date().toISOString(),
+        resourceType: leadData.resourceType,
+        companySize: leadData.companySize,
+        role: leadData.role,
       },
-      source: 'AI Resource Download',
+      source: 'AI Resource Download - SiteOptz Website',
+      workflow: ['New Lead Workflow'], // Explicitly add to workflow
     };
 
     const response = await fetch(`${GHL_API_BASE}/contacts/`, {
@@ -490,7 +499,8 @@ async function sendGuideEmail(leadData: LeadData) {
       subject: `${leadData.firstName}, Your ${config.title} is Ready 📊`,
       html: generateEmailHTML(leadData, config),
       text: generateEmailText(leadData, config),
-      from: `"SiteOptz AI" <${EMAIL_FROM}>`
+      from: `"SiteOptz AI" <${EMAIL_FROM}>`,
+      bcc: 'info@siteoptz.ai' // Always BCC info@siteoptz.ai for tracking
     });
 
     if (result.success) {
@@ -541,7 +551,7 @@ export default async function handler(
     // Add to GoHighLevel CRM (non-blocking)
     const ghlPromise = addToGoHighLevel(leadData);
     
-    // Send email with guide
+    // Send email with guide (with BCC to info@siteoptz.ai)
     const emailResult = await sendGuideEmail(leadData);
     
     // Wait for GoHighLevel to complete (but don't block on failure)
@@ -549,8 +559,9 @@ export default async function handler(
     
     const config = resourceConfigs[leadData.resourceType as keyof typeof resourceConfigs];
     
-    // Log the download for analytics
-    console.log('Resource download:', {
+    // Log the download for analytics and tracking
+    console.log('=== LEAD CAPTURE SUCCESS ===');
+    console.log('Resource download details:', {
       email: leadData.email,
       company: leadData.company,
       role: leadData.role,
@@ -559,8 +570,12 @@ export default async function handler(
       resourceTitle: config.title,
       timestamp: new Date().toISOString(),
       ghlSuccess: !!ghlResult,
+      ghlContactId: ghlResult?.id || 'N/A',
       emailSuccess: emailResult.success || false,
+      bccSent: 'info@siteoptz.ai',
+      workflow: 'New Lead Workflow'
     });
+    console.log('===========================');
     
     // Return success response
     res.status(200).json({
