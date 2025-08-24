@@ -286,7 +286,7 @@ export default function ManufacturingAI2024() {
                         <div className="bg-gray-700 rounded-full h-3 overflow-hidden">
                           <div className="bg-gradient-to-r from-red-500 to-orange-500 h-full" style={{width: '100%'}}></div>
                         </div>
-                        <p className="text-xs text-gray-400 mt-1">Traditional "fix when broken" approach</p>
+                        <p className="text-xs text-gray-400 mt-1">Traditional &quot;fix when broken&quot; approach</p>
                       </div>
                       
                       <div className="bg-gray-800 rounded-lg p-4">

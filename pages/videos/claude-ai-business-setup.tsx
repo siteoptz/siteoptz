@@ -256,7 +256,7 @@ export default function ClaudeAIBusinessSetup() {
                           <span>Quality control and output validation</span>
                         </li>
                         <li className="flex items-start">
-                          <span="text-green-400 mr-2">✓</span>
+                          <span className="text-green-400 mr-2">✓</span>
                           <span>ROI measurement and optimization</span>
                         </li>
                       </ul>

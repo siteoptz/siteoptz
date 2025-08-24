@@ -301,7 +301,7 @@ export default function FintechAI2024() {
                       <div className="bg-gray-800 rounded-lg p-4">
                         <div className="flex justify-between items-center mb-2">
                           <span className="text-gray-300">Processing Speed</span>
-                          <span className="text-purple-400 font-bold"><50ms</span>
+                          <span className="text-purple-400 font-bold">&lt;50ms</span>
                         </div>
                         <div className="bg-gray-700 rounded-full h-3 overflow-hidden">
                           <div className="bg-gradient-to-r from-purple-500 to-pink-500 h-full" style={{width: '95%'}}></div>
