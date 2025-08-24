@@ -5,7 +5,7 @@ require('dotenv').config({ path: '.env.local' });
 
 const GHL_API_KEY = process.env.GHL_API_KEY || '';
 const GHL_LOCATION_ID = process.env.GHL_LOCATION_ID || '';
-const GHL_API_BASE = 'https://rest.gohighlevel.com/v1';
+const GHL_API_BASE = 'https://services.leadconnectorhq.com';
 
 console.log('Testing GoHighLevel API Integration');
 console.log('===================================');
@@ -26,6 +26,7 @@ async function testGoHighLevel() {
       headers: {
         'Authorization': `Bearer ${GHL_API_KEY}`,
         'Content-Type': 'application/json',
+        'Version': '2021-04-15',
       },
     });
 
@@ -61,6 +62,7 @@ async function testGoHighLevel() {
       headers: {
         'Authorization': `Bearer ${GHL_API_KEY}`,
         'Content-Type': 'application/json',
+        'Version': '2021-04-15',
       },
       body: JSON.stringify(testContactData),
     });

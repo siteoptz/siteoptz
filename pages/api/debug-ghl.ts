@@ -3,7 +3,7 @@ import { NextApiRequest, NextApiResponse } from 'next';
 // GoHighLevel API configuration
 const GHL_API_KEY = process.env.GHL_API_KEY || '';
 const GHL_LOCATION_ID = process.env.GHL_LOCATION_ID || '';
-const GHL_API_BASE = 'https://rest.gohighlevel.com/v1';
+const GHL_API_BASE = 'https://services.leadconnectorhq.com';
 
 interface DebugResponse {
   timestamp: string;
@@ -69,6 +69,7 @@ export default async function handler(
       headers: {
         'Authorization': `Bearer ${GHL_API_KEY}`,
         'Content-Type': 'application/json',
+        'Version': '2021-04-15',
       },
     });
 
@@ -118,6 +119,7 @@ export default async function handler(
         headers: {
           'Authorization': `Bearer ${GHL_API_KEY}`,
           'Content-Type': 'application/json',
+          'Version': '2021-04-15',
         },
         body: JSON.stringify(testContactData),
       });
