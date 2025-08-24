@@ -1,6 +1,11 @@
 import { MongoClient } from 'mongodb';
 const { sendEmail } = require('../../lib/email-service');
 
+// GoHighLevel API configuration
+const GHL_API_KEY = process.env.GHL_API_KEY || '';
+const GHL_LOCATION_ID = process.env.GHL_LOCATION_ID || '';
+const GHL_API_BASE = 'https://rest.gohighlevel.com/v1';
+
 // Database configuration
 const MONGODB_URI = process.env.MONGODB_URI;
 const DB_NAME = process.env.DB_NAME || 'siteoptz';
@@ -38,6 +43,135 @@ const isRateLimited = (ip) => {
 const isValidEmail = (email) => {
   const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
   return emailRegex.test(email);
+};
+
+// Add lead to GoHighLevel CRM
+const addToGoHighLevel = async (data) => {
+  try {
+    console.log('=== GoHighLevel Contact Form Integration Debug ===');
+    console.log('API Key exists:', !!GHL_API_KEY);
+    console.log('API Key length:', GHL_API_KEY.length);
+    console.log('Location ID:', GHL_LOCATION_ID);
+    console.log('Environment:', process.env.NODE_ENV);
+    
+    // Handle different submission types
+    let ghlData = {
+      locationId: GHL_LOCATION_ID,
+    };
+    
+    if (data.additionalData?.contactForm) {
+      // Contact form submission
+      const { additionalData } = data;
+      ghlData = {
+        ...ghlData,
+        firstName: additionalData.senderName?.split(' ')[0] || '',
+        lastName: additionalData.senderName?.split(' ').slice(1).join(' ') || '',
+        email: additionalData.senderEmail,
+        phone: additionalData.senderPhone || '',
+        tags: [
+          'New Lead',  // This tag triggers the 'New Lead Workflow'
+          'Contact Form Submission',
+          `Inquiry: ${additionalData.inquiryType}`,
+          `Subject: ${additionalData.subject}`,
+          `Submitted: ${new Date().toLocaleDateString('en-US', { month: 'short', year: 'numeric' })}`
+        ],
+        customField: {
+          company: additionalData.senderCompany || '',
+          inquiryType: additionalData.inquiryType,
+          subject: additionalData.subject,
+          message: additionalData.message,
+          submissionDate: new Date().toISOString(),
+          source: 'Contact Form - SiteOptz Website'
+        },
+        source: 'Contact Form - SiteOptz Website',
+      };
+    } else if (data.additionalData?.subscriberEmail) {
+      // Newsletter subscription
+      const { additionalData } = data;
+      ghlData = {
+        ...ghlData,
+        firstName: additionalData.subscriberName?.split(' ')[0] || '',
+        lastName: additionalData.subscriberName?.split(' ').slice(1).join(' ') || '',
+        email: additionalData.subscriberEmail,
+        phone: '',
+        tags: [
+          'New Lead',  // This tag triggers the 'New Lead Workflow'
+          'Newsletter Subscription',
+          `Source: ${data.source}`,
+          ...(additionalData.tool ? [`Tool: ${additionalData.tool}`] : []),
+          ...(additionalData.category ? [`Category: ${additionalData.category}`] : []),
+          ...(additionalData.useCase ? [`Use Case: ${additionalData.useCase}`] : []),
+          `Subscribed: ${new Date().toLocaleDateString('en-US', { month: 'short', year: 'numeric' })}`
+        ],
+        customField: {
+          company: additionalData.subscriberCompany || '',
+          useCase: additionalData.useCase || '',
+          interests: additionalData.interests?.join(', ') || '',
+          tool: additionalData.tool || '',
+          category: additionalData.category || '',
+          subscriptionDate: new Date().toISOString(),
+          source: data.source
+        },
+        source: 'Newsletter Subscription - SiteOptz Website',
+      };
+    } else {
+      // Pricing quote or other submission
+      ghlData = {
+        ...ghlData,
+        firstName: '',
+        lastName: '',
+        email: data.email,
+        phone: '',
+        tags: [
+          'New Lead',  // This tag triggers the 'New Lead Workflow'
+          'Pricing Quote Request',
+          `Tool: ${data.tool}`,
+          `Cost: ${data.calculatedCost ? `$${data.calculatedCost}` : 'Custom'}`,
+          ...(data.users ? [`Users: ${data.users}`] : []),
+          ...(data.planType ? [`Plan: ${data.planType}`] : []),
+          `Requested: ${new Date().toLocaleDateString('en-US', { month: 'short', year: 'numeric' })}`
+        ],
+        customField: {
+          tool: data.tool,
+          calculatedCost: data.calculatedCost?.toString() || '',
+          users: data.users?.toString() || '',
+          planType: data.planType || '',
+          selectedPlan: data.selectedPlan || '',
+          requestDate: new Date().toISOString(),
+          source: data.source
+        },
+        source: 'Pricing Quote - SiteOptz Website',
+      };
+    }
+
+    console.log('Sending contact form data to GoHighLevel:', JSON.stringify(ghlData, null, 2));
+
+    const response = await fetch(`${GHL_API_BASE}/contacts/`, {
+      method: 'POST',
+      headers: {
+        'Authorization': `Bearer ${GHL_API_KEY}`,
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(ghlData),
+    });
+
+    console.log('GoHighLevel Contact Form API Response Status:', response.status);
+    
+    if (!response.ok) {
+      const errorText = await response.text();
+      console.error('GoHighLevel Contact Form API error:', errorText);
+      throw new Error(`GoHighLevel API error: ${response.status} - ${errorText}`);
+    }
+
+    const result = await response.json();
+    console.log('GoHighLevel Contact Form Success:', result);
+    console.log('Contact ID:', result.contact?.id);
+    console.log('=======================================================');
+    return result;
+  } catch (error) {
+    console.error('Error adding contact form lead to GoHighLevel:', error);
+    return null;
+  }
 };
 
 // Save to database
@@ -506,23 +640,33 @@ export default async function handler(req, res) {
       timestamp: new Date().toISOString()
     };
 
-    // Save to database (parallel with email sending)
-    const [dbResult, emailResult] = await Promise.allSettled([
+    // Save to database, send email, and add to GoHighLevel (all in parallel)
+    const [dbResult, emailResult, ghlResult] = await Promise.allSettled([
       saveToDatabase(emailData),
-      prepareAndSendEmail(emailData)
+      prepareAndSendEmail(emailData),
+      addToGoHighLevel(emailData)
     ]);
 
     // Check results
     const dbSuccess = dbResult.status === 'fulfilled' && dbResult.value.success;
     const emailSuccess = emailResult.status === 'fulfilled' && emailResult.value.success;
+    const ghlSuccess = ghlResult.status === 'fulfilled' && !!ghlResult.value;
 
-    if (!dbSuccess && !emailSuccess) {
+    console.log('=== Contact Form Processing Results ===');
+    console.log('Database:', dbSuccess ? 'success' : 'failed');
+    console.log('Email:', emailSuccess ? 'success' : 'failed');
+    console.log('GoHighLevel:', ghlSuccess ? 'success' : 'failed');
+    console.log('GHL Contact ID:', ghlResult.value?.contact?.id || 'N/A');
+    console.log('========================================');
+
+    if (!dbSuccess && !emailSuccess && !ghlSuccess) {
       return res.status(500).json({
         success: false,
         error: 'Failed to process request. Please try again.',
         details: {
           database: dbResult.reason || dbResult.value?.error,
-          email: emailResult.reason || emailResult.value?.error
+          email: emailResult.reason || emailResult.value?.error,
+          gohighlevel: ghlResult.reason || 'Failed to create contact'
         }
       });
     }
@@ -530,10 +674,12 @@ export default async function handler(req, res) {
     // Success response
     return res.status(200).json({
       success: true,
-      message: 'Quote sent successfully!',
+      message: 'Request processed successfully!',
       details: {
         email: emailSuccess ? 'sent' : 'failed',
         database: dbSuccess ? 'saved' : 'failed',
+        gohighlevel: ghlSuccess ? 'created' : 'failed',
+        ghlContactId: ghlResult.value?.contact?.id || null,
         tool,
         timestamp: new Date().toISOString()
       }
