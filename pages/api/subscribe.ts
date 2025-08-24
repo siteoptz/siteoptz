@@ -76,6 +76,11 @@ function checkRateLimit(ip: string): boolean {
 // GoHighLevel CRM Integration
 async function addToGoHighLevel(data: SubscriptionData): Promise<{ success: boolean; id?: string }> {
   try {
+    console.log('=== GoHighLevel Newsletter Integration Debug ===');
+    console.log('API Key exists:', !!GHL_API_KEY);
+    console.log('API Key length:', GHL_API_KEY.length);
+    console.log('Location ID:', GHL_LOCATION_ID);
+    console.log('Environment:', process.env.NODE_ENV);
     const ghlData = {
       firstName: data.name?.split(' ')[0] || '',
       lastName: data.name?.split(' ').slice(1).join(' ') || '',
@@ -105,6 +110,8 @@ async function addToGoHighLevel(data: SubscriptionData): Promise<{ success: bool
       locationId: GHL_LOCATION_ID,
     };
 
+    console.log('Sending newsletter data to GoHighLevel:', JSON.stringify(ghlData, null, 2));
+
     const response = await fetch(`${GHL_API_BASE}/contacts/`, {
       method: 'POST',
       headers: {
@@ -114,14 +121,18 @@ async function addToGoHighLevel(data: SubscriptionData): Promise<{ success: bool
       body: JSON.stringify(ghlData),
     });
 
+    console.log('GoHighLevel Newsletter API Response Status:', response.status);
+    
     if (!response.ok) {
       const errorText = await response.text();
-      console.error('GoHighLevel API error:', errorText);
-      throw new Error(`GoHighLevel API error: ${response.status}`);
+      console.error('GoHighLevel Newsletter API error:', errorText);
+      throw new Error(`GoHighLevel API error: ${response.status} - ${errorText}`);
     }
 
     const result = await response.json();
-    console.log('Successfully added to GoHighLevel:', result.contact?.id);
+    console.log('GoHighLevel Newsletter Success:', result);
+    console.log('Contact ID:', result.contact?.id);
+    console.log('================================================');
     return { success: true, id: result.contact?.id };
   } catch (error) {
     console.error('Error adding lead to GoHighLevel:', error);

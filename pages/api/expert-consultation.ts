@@ -29,6 +29,11 @@ interface ApiResponse {
 // Add lead to GoHighLevel CRM
 async function addToGoHighLevel(data: ExpertConsultationData) {
   try {
+    console.log('=== GoHighLevel Consultation Integration Debug ===');
+    console.log('API Key exists:', !!GHL_API_KEY);
+    console.log('API Key length:', GHL_API_KEY.length);
+    console.log('Location ID:', GHL_LOCATION_ID);
+    console.log('Environment:', process.env.NODE_ENV);
     const ghlData = {
       firstName: data.firstName,
       lastName: data.lastName,
@@ -59,6 +64,8 @@ async function addToGoHighLevel(data: ExpertConsultationData) {
       locationId: GHL_LOCATION_ID,
     };
 
+    console.log('Sending consultation data to GoHighLevel:', JSON.stringify(ghlData, null, 2));
+
     const response = await fetch(`${GHL_API_BASE}/contacts/`, {
       method: 'POST',
       headers: {
@@ -68,14 +75,18 @@ async function addToGoHighLevel(data: ExpertConsultationData) {
       body: JSON.stringify(ghlData),
     });
 
+    console.log('GoHighLevel Consultation API Response Status:', response.status);
+    
     if (!response.ok) {
       const errorText = await response.text();
-      console.error('GoHighLevel API error:', errorText);
-      throw new Error(`GoHighLevel API error: ${response.status}`);
+      console.error('GoHighLevel Consultation API error:', errorText);
+      throw new Error(`GoHighLevel API error: ${response.status} - ${errorText}`);
     }
 
     const result = await response.json();
-    console.log('Successfully added consultation request to GoHighLevel:', result.contact?.id);
+    console.log('GoHighLevel Consultation Success:', result);
+    console.log('Contact ID:', result.contact?.id);
+    console.log('===================================================');
     return result;
   } catch (error) {
     console.error('Error adding consultation request to GoHighLevel:', error);

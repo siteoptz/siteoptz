@@ -429,6 +429,13 @@ function generateEmailHTML(leadData: LeadData, config: any) {
 // Add lead to GoHighLevel CRM
 async function addToGoHighLevel(leadData: LeadData) {
   try {
+    console.log('=== GoHighLevel Integration Debug ===');
+    console.log('API Key exists:', !!GHL_API_KEY);
+    console.log('API Key length:', GHL_API_KEY.length);
+    console.log('Location ID:', GHL_LOCATION_ID);
+    console.log('API Base URL:', GHL_API_BASE);
+    console.log('Environment:', process.env.NODE_ENV);
+    
     const config = resourceConfigs[leadData.resourceType as keyof typeof resourceConfigs];
     
     // Create comprehensive lead data for GoHighLevel
@@ -460,6 +467,8 @@ async function addToGoHighLevel(leadData: LeadData) {
       workflow: ['New Lead Workflow'], // Explicitly add to workflow
     };
 
+    console.log('Sending data to GoHighLevel:', JSON.stringify(ghlData, null, 2));
+
     const response = await fetch(`${GHL_API_BASE}/contacts/`, {
       method: 'POST',
       headers: {
@@ -472,12 +481,19 @@ async function addToGoHighLevel(leadData: LeadData) {
       }),
     });
 
+    console.log('GoHighLevel API Response Status:', response.status);
+    
     if (!response.ok) {
-      console.error('GoHighLevel API error:', await response.text());
-      throw new Error(`GoHighLevel API error: ${response.status}`);
+      const errorText = await response.text();
+      console.error('GoHighLevel API error response:', errorText);
+      console.error('Request headers:', response.headers);
+      throw new Error(`GoHighLevel API error: ${response.status} - ${errorText}`);
     }
 
     const result = await response.json();
+    console.log('GoHighLevel Success Response:', result);
+    console.log('Contact ID:', result.contact?.id);
+    console.log('=====================================');
     return result;
   } catch (error) {
     console.error('Error adding lead to GoHighLevel:', error);
