@@ -40,7 +40,24 @@ export default function CompareIndex({ aiToolsData }) {
         break;
       case 'price':
         const getStartingPrice = (tool) => {
-          const pricing = tool.pricing || tool.pricingPlans || [];
+          // Handle different pricing data structures
+          if (tool.pricing && typeof tool.pricing === 'object') {
+            // If pricing is an object like {monthly: 29, yearly: 290}
+            const monthlyPrice = tool.pricing.monthly;
+            if (typeof monthlyPrice === 'number' && monthlyPrice > 0) {
+              return monthlyPrice;
+            }
+            if (monthlyPrice === 'Free') {
+              return 0;
+            }
+            if (monthlyPrice === 'Custom') {
+              return 999999; // Put custom pricing at the end
+            }
+            return 0;
+          }
+          
+          // Handle array format (pricingPlans)
+          const pricing = tool.pricingPlans || [];
           const paidPlan = pricing.find(plan => (plan.monthlyPrice || plan.price_per_month) > 0);
           return paidPlan ? (paidPlan.monthlyPrice || paidPlan.price_per_month) : 0;
         };
