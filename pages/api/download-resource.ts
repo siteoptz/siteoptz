@@ -485,8 +485,50 @@ async function addToGoHighLevel(leadData: LeadData) {
     }
 
     const result = await response.json();
-    console.log('GoHighLevel Success Response:', result);
+    console.log('GoHighLevel Contact Created:', result);
     console.log('Contact ID:', result.contact?.id);
+    
+    // Now create an Opportunity for this contact
+    if (result.contact?.id) {
+      try {
+        const config = resourceConfigs[leadData.resourceType as keyof typeof resourceConfigs];
+        const opportunityData = {
+          name: `${leadData.firstName} ${leadData.lastName} - ${config?.title || leadData.resourceType}`,
+          contactId: result.contact.id,
+          locationId: GHL_LOCATION_ID,
+          status: 'open',
+          monetaryValue: 0,
+          pipelineId: process.env.GHL_PIPELINE_ID || '', // You may need to set this
+          pipelineStageId: process.env.GHL_PIPELINE_STAGE_ID || '', // You may need to set this
+          source: 'AI Resource Download - SiteOptz Website',
+          customFields: []
+        };
+        
+        console.log('Creating Opportunity:', JSON.stringify(opportunityData, null, 2));
+        
+        const oppResponse = await fetch(`${GHL_API_BASE}/opportunities/`, {
+          method: 'POST',
+          headers: {
+            'Authorization': `Bearer ${GHL_API_KEY}`,
+            'Content-Type': 'application/json',
+            'Version': '2021-04-15',
+          },
+          body: JSON.stringify(opportunityData),
+        });
+        
+        if (oppResponse.ok) {
+          const oppResult = await oppResponse.json();
+          console.log('Opportunity Created:', oppResult);
+          result.opportunity = oppResult.opportunity;
+        } else {
+          const errorText = await oppResponse.text();
+          console.error('Failed to create Opportunity:', errorText);
+        }
+      } catch (oppError) {
+        console.error('Error creating Opportunity:', oppError);
+      }
+    }
+    
     console.log('=====================================');
     return result;
   } catch (error) {
@@ -743,6 +785,7 @@ export default async function handler(
       resourceTitle: config.title,
       ghlSuccess: !!ghlResult,
       ghlContactId: ghlResult?.contact?.id || null,
+      ghlOpportunityId: ghlResult?.opportunity?.id || null,
     });
   } catch (error) {
     console.error('API error:', error);

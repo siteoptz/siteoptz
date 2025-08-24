@@ -146,6 +146,49 @@ const addToGoHighLevel = async (data) => {
     const result = await response.json();
     console.log('GoHighLevel Contact Form Success:', result);
     console.log('Contact ID:', result.contact?.id);
+    
+    // Create an Opportunity for this contact
+    if (result.contact?.id) {
+      try {
+        const opportunityName = data.additionalData?.contactForm 
+          ? `${data.additionalData.senderName} - Contact Form - ${data.additionalData.subject}`
+          : `${data.email} - ${data.tool}`;
+          
+        const opportunityData = {
+          name: opportunityName,
+          contactId: result.contact.id,
+          locationId: GHL_LOCATION_ID,
+          status: 'open',
+          monetaryValue: 0,
+          source: data.additionalData?.contactForm ? 'Contact Form - SiteOptz Website' : 'SiteOptz Website',
+          customFields: []
+        };
+        
+        console.log('Creating Opportunity:', JSON.stringify(opportunityData, null, 2));
+        
+        const oppResponse = await fetch(`${GHL_API_BASE}/opportunities/`, {
+          method: 'POST',
+          headers: {
+            'Authorization': `Bearer ${GHL_API_KEY}`,
+            'Content-Type': 'application/json',
+            'Version': '2021-04-15',
+          },
+          body: JSON.stringify(opportunityData),
+        });
+        
+        if (oppResponse.ok) {
+          const oppResult = await oppResponse.json();
+          console.log('Opportunity Created:', oppResult);
+          result.opportunity = oppResult.opportunity;
+        } else {
+          const errorText = await oppResponse.text();
+          console.error('Failed to create Opportunity:', errorText);
+        }
+      } catch (oppError) {
+        console.error('Error creating Opportunity:', oppError);
+      }
+    }
+    
     console.log('=======================================================');
     return result;
   } catch (error) {
@@ -665,6 +708,7 @@ export default async function handler(req, res) {
         database: dbSuccess ? 'saved' : 'failed',
         gohighlevel: ghlSuccess ? 'created' : 'failed',
         ghlContactId: ghlResult.value?.contact?.id || null,
+      ghlOpportunityId: ghlResult.value?.opportunity?.id || null,
         tool,
         timestamp: new Date().toISOString()
       }
