@@ -343,7 +343,7 @@ export default function ClaudeAIBusinessSetup() {
                     }
                   };
 
-                  const content = chapterContent[index] || { title: item.chapter, details: [] };
+                  const content = chapterContent[index as keyof typeof chapterContent] || { title: item.chapter, details: [] };
 
                   return (
                     <div key={index} className="bg-black border border-gray-800 rounded-xl p-6">

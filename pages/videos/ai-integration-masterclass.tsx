@@ -372,7 +372,7 @@ export default function AIIntegrationMasterclass() {
                     }
                   };
 
-                  const content = sectionContent[index] || { title: item.section, details: [], codeExample: "" };
+                  const content = sectionContent[index as keyof typeof sectionContent] || { title: item.section, details: [], codeExample: "" };
 
                   return (
                     <div key={index} className="bg-black border border-gray-800 rounded-xl p-6">
