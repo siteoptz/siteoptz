@@ -717,7 +717,7 @@ export default async function handler(
     const config = resourceConfigs[leadData.resourceType as keyof typeof resourceConfigs];
     
     // Log the download for analytics and tracking
-    console.log('=== LEAD CAPTURE SUCCESS ===');
+    console.log('=== LEAD CAPTURE RESULTS ===');
     console.log('Resource download details:', {
       email: leadData.email,
       company: leadData.company,
@@ -727,7 +727,8 @@ export default async function handler(
       resourceTitle: config.title,
       timestamp: new Date().toISOString(),
       ghlSuccess: !!ghlResult,
-      ghlContactId: ghlResult?.id || 'N/A',
+      ghlContactId: ghlResult?.contact?.id || 'N/A',
+      ghlFullResponse: ghlResult,
       emailSuccess: emailResult.success || false,
       bccSent: 'info@siteoptz.ai',
       workflow: 'New Lead Workflow'
@@ -740,6 +741,8 @@ export default async function handler(
       message: 'Resource sent successfully',
       downloadUrl: getDownloadUrl(config.fileName),
       resourceTitle: config.title,
+      ghlSuccess: !!ghlResult,
+      ghlContactId: ghlResult?.contact?.id || null,
     });
   } catch (error) {
     console.error('API error:', error);
