@@ -447,6 +447,7 @@ async function addToGoHighLevel(leadData: LeadData) {
       tags: [
         'New Lead',  // This tag triggers the 'New Lead Workflow'
         'Resource Download',
+        `Company: ${leadData.company}`,
         `Downloaded: ${config?.title || leadData.resourceType}`,
         `Company Size: ${leadData.companySize}`,
         `Role: ${leadData.role}`,
@@ -455,16 +456,8 @@ async function addToGoHighLevel(leadData: LeadData) {
         leadData.marketingConsent ? 'Marketing Consent: Yes' : 'Marketing Consent: No',
         `Source: ${new Date().toLocaleDateString('en-US', { month: 'short', year: 'numeric' })}`
       ],
-      customField: {
-        company: leadData.company,
-        downloadedGuide: config?.title || leadData.resourceType,
-        downloadDate: new Date().toISOString(),
-        resourceType: leadData.resourceType,
-        companySize: leadData.companySize,
-        role: leadData.role,
-      },
-      source: 'AI Resource Download - SiteOptz Website',
-      workflow: ['New Lead Workflow'], // Explicitly add to workflow
+      customFields: [],
+      source: 'AI Resource Download - SiteOptz Website'
     };
 
     console.log('Sending data to GoHighLevel:', JSON.stringify(ghlData, null, 2));

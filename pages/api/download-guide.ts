@@ -81,13 +81,10 @@ async function addToGoHighLevel(leadData: LeadData) {
         `Role: ${leadData.role}`,
         `Interest: ${leadData.primaryInterest}`,
         `Timeline: ${leadData.timeline}`,
+        `Company: ${leadData.company}`,
         leadData.marketingConsent ? 'Marketing Consent: Yes' : 'Marketing Consent: No'
       ],
-      customField: {
-        company: leadData.company,
-        downloadedGuide: 'Enterprise AI Tools Landscape 2025',
-        downloadDate: new Date().toISOString(),
-      },
+      customFields: [],
       source: 'AI Tools Comparison Guide',
     };
 

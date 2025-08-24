@@ -48,10 +48,6 @@ async function testGoHighLevel() {
       email: `test-${Date.now()}@example.com`,
       phone: '',
       tags: ['New Lead', 'API Test'],
-      customField: {
-        company: 'Test Company',
-        source: 'API Test',
-      },
       locationId: GHL_LOCATION_ID,
     };
 

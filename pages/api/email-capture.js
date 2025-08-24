@@ -73,16 +73,10 @@ const addToGoHighLevel = async (data) => {
           'Contact Form Submission',
           `Inquiry: ${additionalData.inquiryType}`,
           `Subject: ${additionalData.subject}`,
+          `Company: ${additionalData.senderCompany || 'Not provided'}`,
           `Submitted: ${new Date().toLocaleDateString('en-US', { month: 'short', year: 'numeric' })}`
         ],
-        customField: {
-          company: additionalData.senderCompany || '',
-          inquiryType: additionalData.inquiryType,
-          subject: additionalData.subject,
-          message: additionalData.message,
-          submissionDate: new Date().toISOString(),
-          source: 'Contact Form - SiteOptz Website'
-        },
+        customFields: [],
         source: 'Contact Form - SiteOptz Website',
       };
     } else if (data.additionalData?.subscriberEmail) {
@@ -101,17 +95,10 @@ const addToGoHighLevel = async (data) => {
           ...(additionalData.tool ? [`Tool: ${additionalData.tool}`] : []),
           ...(additionalData.category ? [`Category: ${additionalData.category}`] : []),
           ...(additionalData.useCase ? [`Use Case: ${additionalData.useCase}`] : []),
+          `Company: ${additionalData.subscriberCompany || 'Not provided'}`,
           `Subscribed: ${new Date().toLocaleDateString('en-US', { month: 'short', year: 'numeric' })}`
         ],
-        customField: {
-          company: additionalData.subscriberCompany || '',
-          useCase: additionalData.useCase || '',
-          interests: additionalData.interests?.join(', ') || '',
-          tool: additionalData.tool || '',
-          category: additionalData.category || '',
-          subscriptionDate: new Date().toISOString(),
-          source: data.source
-        },
+        customFields: [],
         source: 'Newsletter Subscription - SiteOptz Website',
       };
     } else {
@@ -131,15 +118,7 @@ const addToGoHighLevel = async (data) => {
           ...(data.planType ? [`Plan: ${data.planType}`] : []),
           `Requested: ${new Date().toLocaleDateString('en-US', { month: 'short', year: 'numeric' })}`
         ],
-        customField: {
-          tool: data.tool,
-          calculatedCost: data.calculatedCost?.toString() || '',
-          users: data.users?.toString() || '',
-          planType: data.planType || '',
-          selectedPlan: data.selectedPlan || '',
-          requestDate: new Date().toISOString(),
-          source: data.source
-        },
+        customFields: [],
         source: 'Pricing Quote - SiteOptz Website',
       };
     }

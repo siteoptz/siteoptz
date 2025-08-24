@@ -47,19 +47,11 @@ async function addToGoHighLevel(data: ExpertConsultationData) {
         ...(data.timeline ? [`Timeline: ${data.timeline}`] : []),
         ...(data.interestedTools.length > 0 ? [`Tools: ${data.interestedTools.join(', ')}`] : []),
         ...(data.totalCost ? [`Estimated Cost: $${data.totalCost}`] : []),
+        `Company: ${data.company}`,
+        `Message: ${data.message ? data.message.substring(0, 50) + '...' : 'No message'}`,
         `Requested: ${new Date().toLocaleDateString('en-US', { month: 'short', year: 'numeric' })}`
       ],
-      customField: {
-        company: data.company,
-        consultationType: 'AI Expert Consultation',
-        requestDate: new Date().toISOString(),
-        budget: data.budget || '',
-        timeline: data.timeline || '',
-        interestedTools: data.interestedTools.join(', '),
-        totalCost: data.totalCost?.toString() || '',
-        billingCycle: data.billingCycle || '',
-        message: data.message || ''
-      },
+      customFields: [],
       source: 'Expert Consultation Request - SiteOptz Website',
       locationId: GHL_LOCATION_ID,
     };

@@ -94,18 +94,10 @@ async function addToGoHighLevel(data: SubscriptionData): Promise<{ success: bool
         ...(data.category ? [`Category: ${data.category}`] : []),
         ...(data.useCase ? [`Use Case: ${data.useCase}`] : []),
         ...data.interests.map(interest => `Interest: ${interest}`),
+        `Company: ${data.company || 'Not provided'}`,
         `Subscribed: ${new Date().toLocaleDateString('en-US', { month: 'short', year: 'numeric' })}`
       ],
-      customField: {
-        company: data.company || '',
-        source: data.source,
-        toolInterest: data.tool || '',
-        category: data.category || '',
-        useCase: data.useCase || '',
-        interests: data.interests.join(', '),
-        subscriptionDate: data.timestamp,
-        referrer: data.referrer || ''
-      },
+      customFields: [],
       source: 'Newsletter Subscription - SiteOptz Website',
       locationId: GHL_LOCATION_ID,
     };
