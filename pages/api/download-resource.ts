@@ -153,6 +153,71 @@ const resourceConfigs = {
       'Integration capabilities and requirements',
       'Security, privacy, and compliance features'
     ]
+  },
+  'fintech-ai-2024': {
+    title: 'Financial Services AI Transformation Report',
+    fileName: 'fintech-ai-2024-report.pdf',
+    description: 'comprehensive analysis of AI adoption in banking and financial services',
+    benefits: [
+      'AI adoption trends in banking and finance',
+      'Fraud detection and risk assessment case studies',
+      'Customer service transformation examples',
+      'Algorithmic trading and investment AI insights',
+      'Regulatory compliance and ethics framework',
+      'ROI analysis and cost-benefit studies'
+    ]
+  },
+  'manufacturing-ai-2024': {
+    title: 'Manufacturing AI Efficiency Study',
+    fileName: 'manufacturing-ai-2024-report.pdf',
+    description: 'data-driven insights on AI improving manufacturing efficiency and quality control',
+    benefits: [
+      'AI implementation in manufacturing processes',
+      'Efficiency improvements and cost savings data',
+      'Quality control and predictive maintenance',
+      'Supply chain optimization strategies',
+      'Smart factory and Industry 4.0 insights',
+      'Case studies from 50+ manufacturers'
+    ]
+  },
+  'claude-ai-business-setup': {
+    title: 'Getting Started with Claude AI for Business',
+    fileName: 'claude-ai-business-setup-resources.pdf',
+    description: 'complete video walkthrough with supplementary resources for Claude AI business setup',
+    benefits: [
+      'Step-by-step Claude AI setup guide',
+      'Advanced prompt engineering techniques',
+      'Business workflow integration methods',
+      'Security and privacy best practices',
+      'Cost optimization strategies',
+      'Real-world business use case examples'
+    ]
+  },
+  'ai-tools-comparison-video': {
+    title: 'ChatGPT vs Claude vs Gemini: Tool Comparison',
+    fileName: 'ai-tools-comparison-guide-2025.pdf',
+    description: 'side-by-side comparison video with supplementary comparison guide',
+    benefits: [
+      'Side-by-side performance comparison',
+      'Detailed benchmarks and testing results',
+      'Cost analysis and pricing comparison',
+      'Use case recommendations for each tool',
+      'Integration capabilities analysis',
+      'Decision-making framework included'
+    ]
+  },
+  'ai-integration-masterclass': {
+    title: 'AI Tool Integration Masterclass',
+    fileName: 'ai-integration-masterclass-resources.pdf',
+    description: 'advanced masterclass with integration templates and code examples',
+    benefits: [
+      'Advanced integration strategies',
+      'Multi-tool workflow automation',
+      'API connections and data synchronization',
+      'Performance optimization techniques',
+      'Troubleshooting common issues',
+      'Enterprise security considerations'
+    ]
   }
 };
 

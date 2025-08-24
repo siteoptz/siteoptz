@@ -18,7 +18,7 @@ import {
 interface LeadMagnetModalProps {
   isOpen: boolean;
   onClose: () => void;
-  resourceType: 'playbook' | 'framework' | 'both' | 'ai-chatbot-implementation' | 'ai-content-generation' | 'ai-data-analysis' | 'ai-healthcare-2024' | 'gpt4-turbo-business' | 'q4-2024-ai-market' | 'claude3-vs-gpt4';
+  resourceType: 'playbook' | 'framework' | 'both' | 'ai-chatbot-implementation' | 'ai-content-generation' | 'ai-data-analysis' | 'ai-healthcare-2024' | 'gpt4-turbo-business' | 'q4-2024-ai-market' | 'claude3-vs-gpt4' | 'fintech-ai-2024' | 'manufacturing-ai-2024' | 'claude-ai-business-setup' | 'ai-tools-comparison-video' | 'ai-integration-masterclass';
   source?: string;
 }
 
@@ -183,6 +183,76 @@ const LeadMagnetModal: React.FC<LeadMagnetModalProps> = ({
       ],
       downloadUrl: '/downloads/ai-implementation-playbook',
       color: 'purple'
+    },
+    'fintech-ai-2024': {
+      title: 'Financial Services AI Report',
+      subtitle: 'Banking & finance AI trends',
+      description: 'Comprehensive analysis of AI adoption in banking and financial services sectors.',
+      benefits: [
+        'AI adoption trends in banking',
+        'Fraud detection case studies',
+        'Customer service transformation',
+        'Regulatory compliance framework',
+        'ROI analysis and benchmarks'
+      ],
+      downloadUrl: '/reports/fintech-ai-2024',
+      color: 'blue'
+    },
+    'manufacturing-ai-2024': {
+      title: 'Manufacturing AI Study',
+      subtitle: 'Industry efficiency research',
+      description: 'Data-driven insights on AI improving manufacturing efficiency and operations.',
+      benefits: [
+        'Manufacturing process optimization',
+        'Efficiency and cost savings data',
+        'Quality control improvements',
+        'Supply chain optimization',
+        'Industry 4.0 case studies'
+      ],
+      downloadUrl: '/reports/manufacturing-ai-2024',
+      color: 'green'
+    },
+    'claude-ai-business-setup': {
+      title: 'Claude AI Business Setup',
+      subtitle: 'Video tutorial + resources',
+      description: 'Complete video walkthrough for setting up Claude AI in your business operations.',
+      benefits: [
+        'Step-by-step setup process',
+        'Advanced prompting techniques',
+        'Workflow integration methods',
+        'Security best practices',
+        'Cost optimization strategies'
+      ],
+      downloadUrl: '/videos/claude-ai-business-setup',
+      color: 'blue'
+    },
+    'ai-tools-comparison-video': {
+      title: 'AI Tools Comparison Video',
+      subtitle: 'ChatGPT vs Claude vs Gemini',
+      description: 'Side-by-side comparison video helping you choose the right AI tool.',
+      benefits: [
+        'Performance comparisons',
+        'Detailed benchmarks',
+        'Cost analysis',
+        'Use case recommendations',
+        'Decision framework'
+      ],
+      downloadUrl: '/videos/ai-tools-comparison',
+      color: 'purple'
+    },
+    'ai-integration-masterclass': {
+      title: 'AI Integration Masterclass',
+      subtitle: 'Advanced integration techniques',
+      description: 'Advanced masterclass on integrating multiple AI tools into business workflows.',
+      benefits: [
+        'Advanced integration strategies',
+        'Workflow automation techniques',
+        'API connections guide',
+        'Performance optimization',
+        'Enterprise security'
+      ],
+      downloadUrl: '/videos/ai-integration-masterclass',
+      color: 'orange'
     }
   };
 
@@ -208,6 +278,13 @@ const LeadMagnetModal: React.FC<LeadMagnetModalProps> = ({
       bg: 'from-purple-600/20 to-pink-600/20',
       text: 'text-purple-400',
       button: 'from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700'
+    },
+    orange: {
+      gradient: 'from-orange-600 to-red-600',
+      border: 'border-orange-500/30',
+      bg: 'from-orange-600/20 to-red-600/20',
+      text: 'text-orange-400',
+      button: 'from-orange-600 to-red-600 hover:from-orange-700 hover:to-red-700'
     }
   };
 
