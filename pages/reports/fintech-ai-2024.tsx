@@ -601,7 +601,7 @@ export default function FintechAI2024() {
                       <div className="mt-4 p-3 bg-yellow-600/20 rounded border border-yellow-500/30">
                         <p className="text-xs text-yellow-300">
                           <strong>Note:</strong> ROI varies by institution size and AI maturity level. 
-                          Large banks (>$50B assets) typically see 25% higher returns.
+                          Large banks (&gt;$50B assets) typically see 25% higher returns.
                         </p>
                       </div>
                     </div>
