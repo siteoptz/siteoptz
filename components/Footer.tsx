@@ -15,52 +15,53 @@ import {
 } from 'lucide-react';
 import EmailCaptureForm from './EmailCaptureForm';
 import { getCategoryUrl } from '../config/categories';
+import { industries, industrySlugMap } from '../content/industryContent';
 
 const Footer: React.FC = () => {
   const currentYear = new Date().getFullYear();
   const [showEmailForm, setShowEmailForm] = useState(false);
 
-  const footerSections = [
-    {
-      title: 'AI Tools',
-      links: [
-        { name: 'All AI Tools', href: '/tools' },
-        { name: 'Voice AI Tools', href: getCategoryUrl('Best Voice AI Tools') },
-        { name: 'Content Creation', href: getCategoryUrl('Content Creation') },
-        { name: 'SEO & Optimization', href: getCategoryUrl('SEO & Optimization') },
-        { name: 'Image Generation', href: getCategoryUrl('Image Generation') },
-      ]
-    },
-    {
-      title: 'Compare',
-      links: [
-        { name: 'Tool Comparison', href: '/compare' },
-        { name: 'ChatGPT vs Claude', href: '/compare/chatgpt/vs/claude' },
-        { name: 'ChatGPT vs Gemini', href: '/compare/chatgpt/vs/gemini' },
-        { name: 'Claude vs Gemini', href: '/compare/claude/vs/gemini' },
-        { name: 'Pricing Calculator', href: '/pricing' },
-      ]
-    },
-    {
-      title: 'Reviews',
-      links: [
-        { name: 'ChatGPT Review', href: '/reviews/chatgpt' },
-        { name: 'Claude Review', href: '/reviews/claude' },
-        { name: 'Gemini Review', href: '/reviews/gemini' },
-        { name: 'Jasper AI Review', href: '/reviews/jasper-ai' },
-        { name: 'All Reviews', href: '/tools' },
-      ]
-    },
-    {
-      title: 'Popular Tools',
-      links: [
-        { name: 'ChatGPT', href: '/tools/chatgpt' },
-        { name: 'Claude', href: '/tools/claude' },
-        { name: 'Gemini', href: '/tools/gemini' },
-        { name: 'Jasper AI', href: '/tools/jasper-ai' },
-        { name: 'View All Tools', href: '/tools' },
-      ]
-    }
+  const solutionsLinks = [
+    { name: 'SEO & Optimization', href: getCategoryUrl('SEO & Optimization') },
+    { name: 'Social Media', href: getCategoryUrl('Social Media') },
+    { name: 'Paid Search', href: getCategoryUrl('Paid Search & PPC') },
+    { name: 'Voice AI', href: getCategoryUrl('Best Voice AI Tools') },
+    { name: 'Code Generation', href: getCategoryUrl('Code Generation') },
+    { name: 'Content Creation', href: getCategoryUrl('Content Creation') },
+    { name: 'Data Analysis', href: getCategoryUrl('Data Analysis') },
+    { name: 'Image Generation', href: getCategoryUrl('Image Generation') },
+    { name: 'Research', href: getCategoryUrl('Research & Education') },
+    { name: 'Productivity', href: getCategoryUrl('Productivity') },
+    { name: 'Email Marketing', href: getCategoryUrl('Email Marketing') },
+    { name: 'Video Generation', href: getCategoryUrl('Video Generation') },
+  ];
+
+  const industriesLinks = [
+    { name: 'Healthcare', href: `/industries/${industrySlugMap['Healthcare & Life Sciences']}` },
+    { name: 'Finance', href: `/industries/${industrySlugMap['Finance & Banking']}` },
+    { name: 'Retail', href: `/industries/${industrySlugMap['Retail & E-Commerce']}` },
+    { name: 'Manufacturing', href: `/industries/${industrySlugMap['Manufacturing & Supply Chain']}` },
+    { name: 'Transport', href: `/industries/${industrySlugMap['Transportation & Logistics']}` },
+    { name: 'Marketing', href: `/industries/${industrySlugMap['Marketing, Advertising & Media']}` },
+    { name: 'Energy', href: `/industries/${industrySlugMap['Energy & Utilities']}` },
+    { name: 'Education', href: `/industries/${industrySlugMap['Education & EdTech']}` },
+    { name: 'Legal', href: `/industries/${industrySlugMap['Legal & Compliance']}` },
+    { name: 'HR', href: `/industries/${industrySlugMap['Human Resources & Recruiting']}` },
+    { name: 'Aerospace', href: `/industries/${industrySlugMap['Aerospace & Defense']}` },
+  ];
+
+  const companyLinks = [
+    { name: 'About Us', href: '/about' },
+    { name: 'Testimonials', href: '/testimonials' },
+    { name: 'Careers', href: '/careers' },
+    { name: 'Contact', href: '/contact' },
+  ];
+
+  const resourcesLinks = [
+    { name: 'Blog', href: '/blog' },
+    { name: 'Case Studies', href: '/case-studies' },
+    { name: 'AI Library', href: '/tools' },
+    { name: 'Webinars', href: '/webinars' },
   ];
 
 
@@ -73,41 +74,13 @@ const Footer: React.FC = () => {
 
   return (
     <footer className="bg-gradient-to-br from-gray-900 via-gray-800 to-black text-white">
-      {/* Newsletter Section */}
-      <div className="border-b border-gray-700">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-          <div className="grid lg:grid-cols-2 gap-8 items-center">
-            <div>
-              <h3 className="text-2xl lg:text-3xl font-bold mb-4 bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
-                Stay Ahead with AI Insights
-              </h3>
-              <p className="text-gray-300 text-lg">
-                Get the latest AI tool reviews, comparisons, and exclusive insights delivered to your inbox weekly.
-              </p>
-            </div>
-            <div className="space-y-4">
-              <button 
-                onClick={() => setShowEmailForm(true)}
-                className="w-full sm:w-auto px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-lg font-semibold hover:from-blue-700 hover:to-purple-700 transform hover:scale-105 transition-all duration-200 shadow-lg hover:shadow-xl flex items-center justify-center space-x-3"
-              >
-                <Mail className="w-5 h-5" />
-                <span>Subscribe to Newsletter</span>
-                <ArrowRight className="w-5 h-5" />
-              </button>
-              <p className="text-sm text-gray-400">
-                Join 50,000+ AI enthusiasts. No spam, unsubscribe anytime.
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-
       {/* Main Footer Content */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-8">
-          {/* Brand Section */}
-          <div className="lg:col-span-2">
-            <Link href="/" className="flex items-center space-x-3 mb-6 group">
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+          {/* Left Column - Logo + Tagline + CTA + Social */}
+          <div className="space-y-6">
+            {/* Logo and Tagline */}
+            <Link href="/" className="flex items-center space-x-3 group">
               <div className="relative">
                 <Image
                   src="/images/siteoptz-logo.png"
@@ -126,14 +99,18 @@ const Footer: React.FC = () => {
                 </div>
               </div>
             </Link>
-            <p className="text-gray-300 mb-6 leading-relaxed">
-              Your trusted guide to the best AI tools. We review, compare, and recommend the top artificial intelligence 
-              solutions to help you work smarter and faster.
-            </p>
 
-            {/* Social Links */}
+            {/* Get Started CTA Button */}
+            <button 
+              onClick={() => setShowEmailForm(true)}
+              className="w-full px-6 py-3 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-lg font-semibold hover:from-blue-700 hover:to-purple-700 transform hover:scale-105 transition-all duration-200 shadow-lg hover:shadow-xl flex items-center justify-center space-x-2"
+            >
+              <Zap className="w-4 h-4" />
+              <span>Get Started</span>
+            </button>
+
+            {/* Social Icons */}
             <div>
-              <h4 className="text-sm font-semibold text-gray-400 uppercase tracking-wider mb-3">Follow Us</h4>
               <div className="flex space-x-3">
                 {socialLinks.map((social) => {
                   const IconComponent = social.icon;
@@ -152,53 +129,97 @@ const Footer: React.FC = () => {
             </div>
           </div>
 
-          {/* Navigation Sections */}
-          {footerSections.map((section) => (
-            <div key={section.title} className="lg:col-span-1">
-              <h3 className="text-sm font-semibold text-gray-400 uppercase tracking-wider mb-4">
-                {section.title}
-              </h3>
-              <ul className="space-y-3">
-                {section.links.map((link) => (
+          {/* Solutions Column */}
+          <div>
+            <h3 className="text-lg font-semibold text-white mb-4">Solutions</h3>
+            <ul className="space-y-2">
+              {solutionsLinks.map((link) => (
+                <li key={link.name}>
+                  <Link
+                    href={link.href}
+                    className="text-gray-300 hover:text-white transition-colors duration-200 text-sm"
+                  >
+                    {link.name}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          {/* Industries Column */}
+          <div>
+            <h3 className="text-lg font-semibold text-white mb-4">Industries</h3>
+            <ul className="space-y-2">
+              {industriesLinks.map((link) => (
+                <li key={link.name}>
+                  <Link
+                    href={link.href}
+                    className="text-gray-300 hover:text-white transition-colors duration-200 text-sm"
+                  >
+                    {link.name}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          {/* Right Column - Company and Resources */}
+          <div className="space-y-8">
+            {/* Company Section */}
+            <div>
+              <h3 className="text-lg font-semibold text-white mb-4">Company</h3>
+              <ul className="space-y-2">
+                {companyLinks.map((link) => (
                   <li key={link.name}>
                     <Link
                       href={link.href}
-                      className="text-gray-300 hover:text-white transition-colors duration-200 text-sm flex items-center space-x-2 group"
+                      className="text-gray-300 hover:text-white transition-colors duration-200 text-sm"
                     >
-                      <span>{link.name}</span>
-                      {link.name.includes('vs') && (
-                        <TrendingUp className="w-3 h-3 text-blue-400 opacity-0 group-hover:opacity-100 transition-opacity" />
-                      )}
+                      {link.name}
                     </Link>
                   </li>
                 ))}
               </ul>
             </div>
-          ))}
+
+            {/* Resources Section */}
+            <div>
+              <h3 className="text-lg font-semibold text-white mb-4">Resources</h3>
+              <ul className="space-y-2">
+                {resourcesLinks.map((link) => (
+                  <li key={link.name}>
+                    <Link
+                      href={link.href}
+                      className="text-gray-300 hover:text-white transition-colors duration-200 text-sm"
+                    >
+                      {link.name}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </div>
         </div>
       </div>
 
-      {/* Bottom Section */}
+      {/* Bottom Legal Section */}
       <div className="border-t border-gray-700">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
           <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
-            <div className="flex flex-col md:flex-row items-center space-y-2 md:space-y-0 md:space-x-6 text-sm text-gray-400">
-              <p>&copy; {currentYear} SiteOptz. All rights reserved.</p>
-              <div className="flex items-center space-x-4">
-                <Link href="/privacy" className="hover:text-white transition-colors">
-                  Privacy Policy
-                </Link>
-                <Link href="/terms" className="hover:text-white transition-colors">
-                  Terms of Service
-                </Link>
-                <Link href="/contact" className="hover:text-white transition-colors">
-                  Contact
-                </Link>
-              </div>
+            <div className="text-sm text-gray-400">
+              <p>&copy; {currentYear} SiteOptz.ai</p>
+              <p>All rights reserved</p>
             </div>
-            <div className="flex items-center space-x-2 text-sm text-gray-400">
-              <MapPin className="w-4 h-4" />
-              <span>San Francisco, CA</span>
+            <div className="flex items-center space-x-6 text-sm text-gray-400">
+              <Link href="/privacy" className="hover:text-white transition-colors">
+                Privacy Policy
+              </Link>
+              <Link href="/terms" className="hover:text-white transition-colors">
+                Terms of Service
+              </Link>
+              <Link href="/cookies" className="hover:text-white transition-colors">
+                Cookie Policy
+              </Link>
             </div>
           </div>
         </div>
@@ -207,17 +228,16 @@ const Footer: React.FC = () => {
       {/* Email Capture Modal */}
       {showEmailForm && (
         <EmailCaptureForm
-          source="footer_newsletter"
+          source="footer_cta"
           showModal={true}
           compact={false}
           onClose={() => setShowEmailForm(false)}
           onSuccess={() => {
-            // Track successful newsletter signup - but don't close modal immediately
-            // Let the thank you message display first
+            // Track successful signup
             if (typeof window !== 'undefined' && window.gtag) {
-              window.gtag('event', 'newsletter_signup', {
+              window.gtag('event', 'get_started_footer', {
                 event_category: 'engagement',
-                event_label: 'footer',
+                event_label: 'footer_cta',
                 value: 1
               });
             }

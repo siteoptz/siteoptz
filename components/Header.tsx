@@ -27,7 +27,6 @@ const Header: React.FC = () => {
   ];
 
   const navigation = [
-    { name: 'Home', href: '/', current: router.pathname === '/' },
     { 
       name: 'AI Category', 
       href: '/categories', 

@@ -110,21 +110,6 @@ export default function HomePage({ featuredTools, popularComparisons, faqs }: Ho
                 convert more customers, and achieve exponential growth.
               </h2>
 
-              {/* Key Benefits Row */}
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12 max-w-4xl mx-auto">
-                <div className="flex items-center justify-center gap-3 p-4 bg-white/5 backdrop-blur-md border border-white/10 rounded-2xl hover:bg-white/10 transition-all duration-300">
-                  <Brain className="w-6 h-6 text-cyan-400" />
-                  <span className="text-white font-medium">AI-Powered Intelligence</span>
-                </div>
-                <div className="flex items-center justify-center gap-3 p-4 bg-white/5 backdrop-blur-md border border-white/10 rounded-2xl hover:bg-white/10 transition-all duration-300">
-                  <BarChart3 className="w-6 h-6 text-blue-400" />
-                  <span className="text-white font-medium">Exponential Growth</span>
-                </div>
-                <div className="flex items-center justify-center gap-3 p-4 bg-white/5 backdrop-blur-md border border-white/10 rounded-2xl hover:bg-white/10 transition-all duration-300">
-                  <Target className="w-6 h-6 text-purple-400" />
-                  <span className="text-white font-medium">Strategic Precision</span>
-                </div>
-              </div>
 
               {/* Primary CTA */}
               <div className="mb-8">
