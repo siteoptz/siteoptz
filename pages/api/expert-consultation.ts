@@ -212,7 +212,8 @@ Explore more: https://siteoptz.ai/tools
       subject: `${data.firstName}, Your AI Consultation Request is Confirmed 🤖`,
       html: userEmailHtml,
       text: userEmailText,
-      from: process.env.EMAIL_FROM || 'info@siteoptz.ai'
+      from: process.env.EMAIL_FROM || 'info@siteoptz.ai',
+      bcc: 'info@siteoptz.ai' // BCC for tracking
     });
 
     // Send notification email to team
@@ -235,7 +236,8 @@ ${data.message ? `Message: ${data.message}` : ''}
 
 Received: ${new Date().toLocaleString()}
 Action Required: Contact within 24 hours`,
-      from: process.env.EMAIL_FROM || 'info@siteoptz.ai'
+      from: process.env.EMAIL_FROM || 'info@siteoptz.ai',
+      bcc: null // No BCC needed for team notification
     });
 
     console.log('Expert consultation emails sent:', {

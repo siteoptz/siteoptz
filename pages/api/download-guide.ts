@@ -360,7 +360,8 @@ async function sendGuideEmail(leadData: LeadData) {
       subject: `${leadData.firstName}, Your Enterprise AI Tools Guide is Ready 📊`,
       html: generateEmailHTML(leadData),
       text: generateEmailText(leadData),
-      from: `"SiteOptz AI" <${EMAIL_FROM}>`
+      from: `"SiteOptz AI" <${EMAIL_FROM}>`,
+      bcc: 'info@siteoptz.ai' // Always BCC info@siteoptz.ai for tracking
     });
 
     if (result.success) {
