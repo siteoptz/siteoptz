@@ -370,7 +370,7 @@ export default function CaseStudyPage({ caseStudy, relatedStudies }: CaseStudyPa
             <div className="bg-gradient-to-br from-blue-600/10 to-purple-600/10 rounded-2xl p-8 lg:p-12 border border-cyan-400/30">
               <Quote className="w-12 h-12 text-cyan-400 mb-6" />
               <blockquote className="text-xl lg:text-2xl text-white italic leading-relaxed mb-8">
-                "{caseStudy.testimonial.quote}"
+                &ldquo;{caseStudy.testimonial.quote}&rdquo;
               </blockquote>
               <div className="flex items-center">
                 <div>
@@ -475,7 +475,7 @@ export default function CaseStudyPage({ caseStudy, relatedStudies }: CaseStudyPa
                 Ready to Achieve Similar Results?
               </h2>
               <p className="text-xl text-blue-100 mb-8">
-                Let's discuss how AI can transform your {caseStudy.industry.toLowerCase()} operations.
+                Let&apos;s discuss how AI can transform your {caseStudy.industry.toLowerCase()} operations.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Link
