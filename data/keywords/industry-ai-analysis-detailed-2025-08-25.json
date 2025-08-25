@@ -1,0 +1,120 @@
+{
+  "timestamp": "2025-08-25T22:30:16.134Z",
+  "startBalance": 48.375,
+  "Healthcare & Life Sciences": {
+    "slug": "healthcare-life-sciences",
+    "keywords": []
+  },
+  "Finance & Banking": {
+    "slug": "finance-banking",
+    "keywords": []
+  },
+  "Retail & E-Commerce": {
+    "slug": "retail-ecommerce",
+    "keywords": []
+  },
+  "Manufacturing & Supply Chain": {
+    "slug": "manufacturing-supply-chain",
+    "keywords": []
+  },
+  "Transportation & Logistics": {
+    "slug": "transportation-logistics",
+    "keywords": []
+  },
+  "Marketing, Advertising & Media": {
+    "slug": "marketing-advertising-media",
+    "keywords": []
+  },
+  "Energy & Utilities": {
+    "slug": "energy-utilities",
+    "keywords": []
+  },
+  "Education & EdTech": {
+    "slug": "education-edtech",
+    "keywords": []
+  },
+  "Legal & Compliance": {
+    "slug": "legal-compliance",
+    "keywords": []
+  },
+  "Human Resources & Recruiting": {
+    "slug": "human-resources-recruiting",
+    "keywords": []
+  },
+  "Aerospace & Defense": {
+    "slug": "aerospace-defense",
+    "keywords": []
+  },
+  "summary": {
+    "totalKeywords": 0,
+    "industryStats": [
+      {
+        "name": "Healthcare & Life Sciences",
+        "count": 0,
+        "topVolume": 0,
+        "topKeyword": "N/A"
+      },
+      {
+        "name": "Finance & Banking",
+        "count": 0,
+        "topVolume": 0,
+        "topKeyword": "N/A"
+      },
+      {
+        "name": "Retail & E-Commerce",
+        "count": 0,
+        "topVolume": 0,
+        "topKeyword": "N/A"
+      },
+      {
+        "name": "Manufacturing & Supply Chain",
+        "count": 0,
+        "topVolume": 0,
+        "topKeyword": "N/A"
+      },
+      {
+        "name": "Transportation & Logistics",
+        "count": 0,
+        "topVolume": 0,
+        "topKeyword": "N/A"
+      },
+      {
+        "name": "Marketing, Advertising & Media",
+        "count": 0,
+        "topVolume": 0,
+        "topKeyword": "N/A"
+      },
+      {
+        "name": "Energy & Utilities",
+        "count": 0,
+        "topVolume": 0,
+        "topKeyword": "N/A"
+      },
+      {
+        "name": "Education & EdTech",
+        "count": 0,
+        "topVolume": 0,
+        "topKeyword": "N/A"
+      },
+      {
+        "name": "Legal & Compliance",
+        "count": 0,
+        "topVolume": 0,
+        "topKeyword": "N/A"
+      },
+      {
+        "name": "Human Resources & Recruiting",
+        "count": 0,
+        "topVolume": 0,
+        "topKeyword": "N/A"
+      },
+      {
+        "name": "Aerospace & Defense",
+        "count": 0,
+        "topVolume": 0,
+        "topKeyword": "N/A"
+      }
+    ],
+    "topOpportunities": []
+  }
+}

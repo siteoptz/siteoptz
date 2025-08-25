@@ -1,0 +1,56 @@
+{
+  "timestamp": "2025-08-25T22:25:53.928Z",
+  "startBalance": 48.375,
+  "totalIndustries": 11,
+  "industries": {
+    "Healthcare & Life Sciences": {
+      "slug": "healthcare-life-sciences",
+      "keywords": []
+    },
+    "Finance & Banking": {
+      "slug": "finance-banking",
+      "keywords": []
+    },
+    "Retail & E-Commerce": {
+      "slug": "retail-ecommerce",
+      "keywords": []
+    },
+    "Manufacturing & Supply Chain": {
+      "slug": "manufacturing-supply-chain",
+      "keywords": []
+    },
+    "Transportation & Logistics": {
+      "slug": "transportation-logistics",
+      "keywords": []
+    },
+    "Marketing, Advertising & Media": {
+      "slug": "marketing-advertising-media",
+      "keywords": []
+    },
+    "Energy & Utilities": {
+      "slug": "energy-utilities",
+      "keywords": []
+    },
+    "Education & EdTech": {
+      "slug": "education-edtech",
+      "keywords": []
+    },
+    "Legal & Compliance": {
+      "slug": "legal-compliance",
+      "keywords": []
+    },
+    "Human Resources & Recruiting": {
+      "slug": "human-resources-recruiting",
+      "keywords": []
+    },
+    "Aerospace & Defense": {
+      "slug": "aerospace-defense",
+      "keywords": []
+    }
+  },
+  "summary": {
+    "totalKeywords": 0,
+    "allKeywords": [],
+    "topOpportunities": []
+  }
+}

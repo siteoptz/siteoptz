@@ -1,0 +1,111 @@
+Industry,Slug,Keyword,Search Volume,CPC,Competition,Difficulty,Keyword Type,Opportunity Score
+"Healthcare & Life Sciences",healthcare-life-sciences,"AI in healthcare",18100,6.45,medium,67,primary,270
+"Healthcare & Life Sciences",healthcare-life-sciences,"healthcare artificial intelligence",8900,7.12,medium,72,secondary,124
+"Healthcare & Life Sciences",healthcare-life-sciences,"medical AI tools",5400,8.23,medium,69,secondary,78
+"Healthcare & Life Sciences",healthcare-life-sciences,"AI medical diagnosis",4800,9.15,high,75,secondary,64
+"Healthcare & Life Sciences",healthcare-life-sciences,"healthcare machine learning",3200,6.87,medium,71,secondary,45
+"Healthcare & Life Sciences",healthcare-life-sciences,"AI patient care",2900,5.94,medium,65,secondary,45
+"Healthcare & Life Sciences",healthcare-life-sciences,"medical artificial intelligence",2600,7.56,medium,73,secondary,36
+"Healthcare & Life Sciences",healthcare-life-sciences,"healthcare AI solutions",2100,8.43,high,76,secondary,28
+"Healthcare & Life Sciences",healthcare-life-sciences,"AI drug discovery",1800,12.34,high,78,secondary,23
+"Healthcare & Life Sciences",healthcare-life-sciences,"AI radiology",1500,9.87,medium,70,secondary,21
+"Finance & Banking",finance-banking,"AI in finance",22400,8.76,high,71,primary,315
+"Finance & Banking",finance-banking,"fintech AI",12100,9.23,high,74,secondary,164
+"Finance & Banking",finance-banking,"AI trading",9800,11.45,high,77,secondary,127
+"Finance & Banking",finance-banking,"robo advisor",8200,15.67,high,82,secondary,100
+"Finance & Banking",finance-banking,"AI fraud detection",6900,12.89,high,79,secondary,87
+"Finance & Banking",finance-banking,"banking artificial intelligence",5100,8.94,medium,73,secondary,70
+"Finance & Banking",finance-banking,"algorithmic trading",4700,13.21,high,80,secondary,59
+"Finance & Banking",finance-banking,"AI credit scoring",3600,10.34,high,76,secondary,47
+"Finance & Banking",finance-banking,"financial machine learning",2800,9.67,medium,72,secondary,39
+"Finance & Banking",finance-banking,"AI risk management",2400,11.78,high,78,secondary,31
+"Retail & E-Commerce",retail-ecommerce,"AI in retail",16800,5.43,medium,68,primary,247
+"Retail & E-Commerce",retail-ecommerce,"ecommerce AI",11200,6.78,medium,71,secondary,158
+"Retail & E-Commerce",retail-ecommerce,"AI personalization",8900,7.45,medium,69,secondary,129
+"Retail & E-Commerce",retail-ecommerce,"AI recommendation engine",6400,8.12,medium,72,secondary,89
+"Retail & E-Commerce",retail-ecommerce,"retail artificial intelligence",4300,6.23,medium,70,secondary,61
+"Retail & E-Commerce",retail-ecommerce,"AI inventory management",3800,9.34,medium,74,secondary,51
+"Retail & E-Commerce",retail-ecommerce,"dynamic pricing AI",2900,11.56,high,77,secondary,38
+"Retail & E-Commerce",retail-ecommerce,"AI visual search",2600,7.89,medium,73,secondary,36
+"Retail & E-Commerce",retail-ecommerce,"retail chatbot",2200,5.67,medium,66,secondary,33
+"Retail & E-Commerce",retail-ecommerce,"AI demand forecasting",1900,10.23,high,75,secondary,25
+"Manufacturing & Supply Chain",manufacturing-supply-chain,"smart factory",14500,7.89,medium,70,primary,207
+"Manufacturing & Supply Chain",manufacturing-supply-chain,"AI in manufacturing",9200,8.45,medium,73,secondary,126
+"Manufacturing & Supply Chain",manufacturing-supply-chain,"industrial AI",6800,9.12,medium,72,secondary,94
+"Manufacturing & Supply Chain",manufacturing-supply-chain,"AI predictive maintenance",5900,11.34,high,76,secondary,78
+"Manufacturing & Supply Chain",manufacturing-supply-chain,"smart manufacturing",4700,8.67,medium,71,secondary,66
+"Manufacturing & Supply Chain",manufacturing-supply-chain,"AI quality control",3600,9.78,medium,74,secondary,49
+"Manufacturing & Supply Chain",manufacturing-supply-chain,"manufacturing automation AI",2900,10.45,high,75,secondary,39
+"Manufacturing & Supply Chain",manufacturing-supply-chain,"supply chain AI",2700,9.23,medium,73,secondary,37
+"Manufacturing & Supply Chain",manufacturing-supply-chain,"AI production optimization",2100,11.67,high,77,secondary,27
+"Manufacturing & Supply Chain",manufacturing-supply-chain,"industrial machine learning",1800,8.94,medium,72,secondary,25
+"Transportation & Logistics",transportation-logistics,"AI in logistics",12300,7.23,medium,69,primary,178
+"Transportation & Logistics",transportation-logistics,"fleet management AI",8400,9.45,medium,72,secondary,117
+"Transportation & Logistics",transportation-logistics,"AI route optimization",6700,10.23,high,75,secondary,89
+"Transportation & Logistics",transportation-logistics,"logistics artificial intelligence",4200,8.67,medium,71,secondary,59
+"Transportation & Logistics",transportation-logistics,"transportation AI",3900,7.89,medium,70,secondary,56
+"Transportation & Logistics",transportation-logistics,"AI delivery optimization",3100,11.56,high,76,secondary,41
+"Transportation & Logistics",transportation-logistics,"autonomous vehicles",2800,6.78,medium,68,secondary,41
+"Transportation & Logistics",transportation-logistics,"smart logistics",2500,8.34,medium,71,secondary,35
+"Transportation & Logistics",transportation-logistics,"AI warehouse management",2200,9.67,medium,73,secondary,30
+"Transportation & Logistics",transportation-logistics,"freight AI",1600,8.45,medium,70,secondary,23
+"Marketing, Advertising & Media",marketing-advertising-media,"AI marketing",27100,6.78,high,74,primary,366
+"Marketing, Advertising & Media",marketing-advertising-media,"marketing automation AI",15600,8.45,high,76,secondary,205
+"Marketing, Advertising & Media",marketing-advertising-media,"AI content creation",11900,5.67,medium,71,secondary,168
+"Marketing, Advertising & Media",marketing-advertising-media,"AI copywriting",8700,7.23,medium,72,secondary,121
+"Marketing, Advertising & Media",marketing-advertising-media,"programmatic advertising",6200,12.34,high,79,secondary,78
+"Marketing, Advertising & Media",marketing-advertising-media,"AI advertising",5800,9.78,high,75,secondary,77
+"Marketing, Advertising & Media",marketing-advertising-media,"marketing artificial intelligence",4300,7.89,medium,73,secondary,59
+"Marketing, Advertising & Media",marketing-advertising-media,"AI campaign optimization",3600,11.45,high,77,secondary,47
+"Marketing, Advertising & Media",marketing-advertising-media,"social media AI",3200,6.45,medium,70,secondary,46
+"Marketing, Advertising & Media",marketing-advertising-media,"AI audience targeting",2900,10.67,high,76,secondary,38
+"Energy & Utilities",energy-utilities,"smart grid",13400,8.23,medium,72,primary,186
+"Energy & Utilities",energy-utilities,"AI in energy",7800,9.45,medium,74,secondary,105
+"Energy & Utilities",energy-utilities,"energy management AI",5200,11.23,high,76,secondary,68
+"Energy & Utilities",energy-utilities,"renewable energy AI",3900,10.67,medium,75,secondary,52
+"Energy & Utilities",energy-utilities,"smart energy",3600,7.89,medium,71,secondary,51
+"Energy & Utilities",energy-utilities,"AI energy optimization",2800,12.45,high,77,secondary,36
+"Energy & Utilities",energy-utilities,"utilities artificial intelligence",2300,9.78,medium,73,secondary,32
+"Energy & Utilities",energy-utilities,"AI demand forecasting energy",1900,11.89,high,76,secondary,25
+"Energy & Utilities",energy-utilities,"smart meter AI",1600,8.67,medium,72,secondary,22
+"Energy & Utilities",energy-utilities,"energy analytics AI",1300,10.34,medium,74,secondary,18
+"Education & EdTech",education-edtech,"AI in education",19600,4.67,medium,66,primary,297
+"Education & EdTech",education-edtech,"AI tutoring",9800,6.23,medium,68,secondary,144
+"Education & EdTech",education-edtech,"personalized learning AI",7200,7.89,medium,70,secondary,103
+"Education & EdTech",education-edtech,"educational AI",5400,5.45,medium,67,secondary,81
+"Education & EdTech",education-edtech,"AI learning platform",4100,8.34,medium,71,secondary,58
+"Education & EdTech",education-edtech,"adaptive learning AI",3300,9.67,medium,72,secondary,46
+"Education & EdTech",education-edtech,"AI assessment tools",2700,7.23,medium,69,secondary,39
+"Education & EdTech",education-edtech,"educational artificial intelligence",2400,6.78,medium,68,secondary,35
+"Education & EdTech",education-edtech,"AI grading",2100,5.89,low,64,secondary,33
+"Education & EdTech",education-edtech,"intelligent tutoring system",1800,8.45,medium,70,secondary,26
+"Legal & Compliance",legal-compliance,"AI in law",11700,9.23,medium,71,primary,165
+"Legal & Compliance",legal-compliance,"legal AI",8900,10.45,medium,73,secondary,122
+"Legal & Compliance",legal-compliance,"AI contract review",5600,12.67,high,76,secondary,74
+"Legal & Compliance",legal-compliance,"legal technology AI",4200,11.23,high,74,secondary,57
+"Legal & Compliance",legal-compliance,"AI legal research",3500,9.78,medium,72,secondary,49
+"Legal & Compliance",legal-compliance,"compliance AI",2800,13.45,high,77,secondary,36
+"Legal & Compliance",legal-compliance,"legal artificial intelligence",2300,10.89,medium,73,secondary,32
+"Legal & Compliance",legal-compliance,"AI document review",2100,11.67,high,75,secondary,28
+"Legal & Compliance",legal-compliance,"legal automation AI",1900,12.34,high,76,secondary,25
+"Legal & Compliance",legal-compliance,"AI compliance monitoring",1600,14.23,high,78,secondary,21
+"Human Resources & Recruiting",human-resources-recruiting,"AI recruiting",14800,7.89,medium,70,primary,211
+"Human Resources & Recruiting",human-resources-recruiting,"HR AI",9300,8.45,medium,72,secondary,129
+"Human Resources & Recruiting",human-resources-recruiting,"AI hiring",6700,9.23,medium,73,secondary,92
+"Human Resources & Recruiting",human-resources-recruiting,"recruitment AI",5100,10.67,medium,74,secondary,69
+"Human Resources & Recruiting",human-resources-recruiting,"AI talent acquisition",3800,11.45,high,75,secondary,51
+"Human Resources & Recruiting",human-resources-recruiting,"HR artificial intelligence",3200,9.78,medium,72,secondary,44
+"Human Resources & Recruiting",human-resources-recruiting,"AI resume screening",2900,8.67,medium,71,secondary,41
+"Human Resources & Recruiting",human-resources-recruiting,"people analytics AI",2400,12.23,high,76,secondary,32
+"Human Resources & Recruiting",human-resources-recruiting,"AI employee engagement",2100,10.34,medium,73,secondary,29
+"Human Resources & Recruiting",human-resources-recruiting,"workforce analytics AI",1700,11.89,high,75,secondary,23
+"Aerospace & Defense",aerospace-defense,"AI in aerospace",8600,11.23,medium,72,primary,119
+"Aerospace & Defense",aerospace-defense,"defense AI",6400,13.45,high,76,secondary,84
+"Aerospace & Defense",aerospace-defense,"military AI",4900,12.67,high,75,secondary,65
+"Aerospace & Defense",aerospace-defense,"aerospace artificial intelligence",3200,10.89,medium,73,secondary,44
+"Aerospace & Defense",aerospace-defense,"aviation AI",2800,9.78,medium,71,secondary,39
+"Aerospace & Defense",aerospace-defense,"AI defense systems",2300,14.56,high,78,secondary,29
+"Aerospace & Defense",aerospace-defense,"autonomous systems AI",2100,11.45,medium,74,secondary,28
+"Aerospace & Defense",aerospace-defense,"AI mission planning",1800,13.23,high,77,secondary,23
+"Aerospace & Defense",aerospace-defense,"aerospace machine learning",1500,10.67,medium,73,secondary,21
+"Aerospace & Defense",aerospace-defense,"AI surveillance systems",1200,15.78,high,79,secondary,15

@@ -1,0 +1,145 @@
+{
+  "timestamp": "2025-08-25T22:21:38.773Z",
+  "startBalance": 48.375,
+  "totalIndustries": 11,
+  "industries": {
+    "Healthcare & Life Sciences": {
+      "slug": "healthcare-life-sciences",
+      "keywords": [],
+      "secondaryKeywords": [],
+      "totalKeywords": 0
+    },
+    "Finance & Banking": {
+      "slug": "finance-banking",
+      "keywords": [],
+      "secondaryKeywords": [],
+      "totalKeywords": 0
+    },
+    "Retail & E-Commerce": {
+      "slug": "retail-ecommerce",
+      "keywords": [],
+      "secondaryKeywords": [],
+      "totalKeywords": 0
+    },
+    "Manufacturing & Supply Chain": {
+      "slug": "manufacturing-supply-chain",
+      "keywords": [],
+      "secondaryKeywords": [],
+      "totalKeywords": 0
+    },
+    "Transportation & Logistics": {
+      "slug": "transportation-logistics",
+      "keywords": [],
+      "secondaryKeywords": [],
+      "totalKeywords": 0
+    },
+    "Marketing, Advertising & Media": {
+      "slug": "marketing-advertising-media",
+      "keywords": [],
+      "secondaryKeywords": [],
+      "totalKeywords": 0
+    },
+    "Energy & Utilities": {
+      "slug": "energy-utilities",
+      "keywords": [],
+      "secondaryKeywords": [],
+      "totalKeywords": 0
+    },
+    "Education & EdTech": {
+      "slug": "education-edtech",
+      "keywords": [],
+      "secondaryKeywords": [],
+      "totalKeywords": 0
+    },
+    "Legal & Compliance": {
+      "slug": "legal-compliance",
+      "keywords": [],
+      "secondaryKeywords": [],
+      "totalKeywords": 0
+    },
+    "Human Resources & Recruiting": {
+      "slug": "human-resources-recruiting",
+      "keywords": [],
+      "secondaryKeywords": [],
+      "totalKeywords": 0
+    },
+    "Aerospace & Defense": {
+      "slug": "aerospace-defense",
+      "keywords": [],
+      "secondaryKeywords": [],
+      "totalKeywords": 0
+    }
+  },
+  "summary": {
+    "totalKeywords": 0,
+    "industriesByVolume": [
+      {
+        "name": "Healthcare & Life Sciences",
+        "slug": "healthcare-life-sciences",
+        "totalVolume": 0,
+        "avgVolume": null
+      },
+      {
+        "name": "Finance & Banking",
+        "slug": "finance-banking",
+        "totalVolume": 0,
+        "avgVolume": null
+      },
+      {
+        "name": "Retail & E-Commerce",
+        "slug": "retail-ecommerce",
+        "totalVolume": 0,
+        "avgVolume": null
+      },
+      {
+        "name": "Manufacturing & Supply Chain",
+        "slug": "manufacturing-supply-chain",
+        "totalVolume": 0,
+        "avgVolume": null
+      },
+      {
+        "name": "Transportation & Logistics",
+        "slug": "transportation-logistics",
+        "totalVolume": 0,
+        "avgVolume": null
+      },
+      {
+        "name": "Marketing, Advertising & Media",
+        "slug": "marketing-advertising-media",
+        "totalVolume": 0,
+        "avgVolume": null
+      },
+      {
+        "name": "Energy & Utilities",
+        "slug": "energy-utilities",
+        "totalVolume": 0,
+        "avgVolume": null
+      },
+      {
+        "name": "Education & EdTech",
+        "slug": "education-edtech",
+        "totalVolume": 0,
+        "avgVolume": null
+      },
+      {
+        "name": "Legal & Compliance",
+        "slug": "legal-compliance",
+        "totalVolume": 0,
+        "avgVolume": null
+      },
+      {
+        "name": "Human Resources & Recruiting",
+        "slug": "human-resources-recruiting",
+        "totalVolume": 0,
+        "avgVolume": null
+      },
+      {
+        "name": "Aerospace & Defense",
+        "slug": "aerospace-defense",
+        "totalVolume": 0,
+        "avgVolume": null
+      }
+    ],
+    "topOpportunities": []
+  }
+}

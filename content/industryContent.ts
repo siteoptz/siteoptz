@@ -43,9 +43,9 @@ export interface IndustryContent {
 export const industryContent: Record<string, IndustryContent> = {
   'healthcare-life-sciences': {
     seo: {
-      title: 'Healthcare AI Solutions | Transform Patient Care with AI Tools',
-      description: 'Discover how AI revolutionizes healthcare with predictive diagnostics, patient care automation, and clinical insights. Expert AI implementation for medical organizations.',
-      keywords: ['healthcare AI', 'medical AI tools', 'clinical AI solutions', 'healthcare automation', 'AI diagnostics', 'medical machine learning', 'patient care AI', 'healthcare technology']
+      title: 'AI in Healthcare | Transform Patient Care with Medical AI Tools',
+      description: 'Discover healthcare artificial intelligence solutions that improve patient outcomes by 40%. Expert AI medical diagnosis, patient care automation & clinical insights.',
+      keywords: ['AI in healthcare', 'healthcare artificial intelligence', 'medical AI tools', 'AI medical diagnosis', 'healthcare machine learning', 'AI patient care', 'medical artificial intelligence', 'healthcare AI solutions', 'AI drug discovery', 'AI radiology']
     },
     hero: {
       headline: 'Healthcare & Life Sciences AI Solutions That Drive Growth',
@@ -134,9 +134,9 @@ export const industryContent: Record<string, IndustryContent> = {
 
   'finance-banking': {
     seo: {
-      title: 'Finance & Banking AI Solutions | Risk, Fraud & Automation Tools',
-      description: 'Transform financial services with AI-powered fraud detection, risk assessment, and automated compliance. Expert implementation for banks and financial institutions.',
-      keywords: ['banking AI', 'financial AI tools', 'fraud detection AI', 'risk management AI', 'fintech automation', 'banking machine learning', 'financial analytics', 'AI compliance']
+      title: 'AI in Finance | Banking AI Solutions for Fraud Detection & Risk',
+      description: 'Transform financial services with AI in finance solutions. Reduce fraud by 95%, improve risk assessment, and boost ROI with fintech AI and banking artificial intelligence.',
+      keywords: ['AI in finance', 'fintech AI', 'AI trading', 'robo advisor', 'AI fraud detection', 'banking artificial intelligence', 'algorithmic trading', 'AI credit scoring', 'financial machine learning', 'AI risk management']
     },
     hero: {
       headline: 'Finance & Banking AI Solutions That Drive Growth',
@@ -225,9 +225,9 @@ export const industryContent: Record<string, IndustryContent> = {
 
   'retail-ecommerce': {
     seo: {
-      title: 'Retail & E-Commerce AI Tools | Boost Sales with Smart Automation',
-      description: 'Transform your retail business with AI-powered personalization, inventory optimization, and predictive analytics. Drive 30% more sales with intelligent automation.',
-      keywords: ['retail AI', 'ecommerce AI tools', 'retail automation', 'AI personalization', 'inventory AI', 'retail analytics', 'ecommerce optimization', 'retail machine learning']
+      title: 'AI in Retail | E-commerce AI Tools for Personalization & Sales',
+      description: 'Transform retail with AI in retail solutions that boost sales by 35%. Implement ecommerce AI personalization, inventory management, and AI recommendation engines.',
+      keywords: ['AI in retail', 'ecommerce AI', 'AI personalization', 'AI recommendation engine', 'retail artificial intelligence', 'AI inventory management', 'dynamic pricing AI', 'AI visual search', 'retail chatbot', 'AI demand forecasting']
     },
     hero: {
       headline: 'Retail & E-Commerce AI Solutions That Drive Growth',
@@ -316,9 +316,9 @@ export const industryContent: Record<string, IndustryContent> = {
 
   'manufacturing-supply-chain': {
     seo: {
-      title: 'Manufacturing AI Solutions | Smart Factory & Supply Chain Tools',
-      description: 'Optimize production with AI-powered predictive maintenance, quality control, and supply chain automation. Reduce downtime by 50% and increase efficiency by 30%.',
-      keywords: ['manufacturing AI', 'smart factory', 'supply chain AI', 'predictive maintenance', 'quality control AI', 'production optimization', 'industrial AI', 'factory automation']
+      title: 'Smart Factory AI | Manufacturing AI Solutions & Supply Chain',
+      description: 'Transform production with smart factory AI and manufacturing AI solutions. Reduce downtime by 50%, increase efficiency by 30% with industrial AI automation.',
+      keywords: ['smart factory', 'AI in manufacturing', 'industrial AI', 'AI predictive maintenance', 'smart manufacturing', 'AI quality control', 'manufacturing automation AI', 'supply chain AI', 'AI production optimization', 'industrial machine learning']
     },
     hero: {
       headline: 'Manufacturing & Supply Chain AI Solutions That Drive Growth',
@@ -407,9 +407,9 @@ export const industryContent: Record<string, IndustryContent> = {
 
   'transportation-logistics': {
     seo: {
-      title: 'Transportation & Logistics AI | Route Optimization & Fleet Tools',
-      description: 'Transform logistics with AI-powered route optimization, fleet management, and predictive analytics. Reduce delivery costs by 25% and improve on-time performance.',
-      keywords: ['logistics AI', 'transportation AI tools', 'route optimization', 'fleet management AI', 'supply chain logistics', 'delivery optimization', 'freight AI', 'logistics automation']
+      title: 'AI in Logistics | Fleet Management AI & Route Optimization Tools',
+      description: 'Transform logistics with AI in logistics solutions. Reduce delivery costs by 25%, improve fleet management, and optimize routes with transportation AI tools.',
+      keywords: ['AI in logistics', 'fleet management AI', 'AI route optimization', 'logistics artificial intelligence', 'transportation AI', 'AI delivery optimization', 'autonomous vehicles', 'smart logistics', 'AI warehouse management', 'freight AI']
     },
     hero: {
       headline: 'Transportation & Logistics AI Solutions That Drive Growth',
@@ -498,9 +498,9 @@ export const industryContent: Record<string, IndustryContent> = {
 
   'marketing-advertising-media': {
     seo: {
-      title: 'Marketing & Advertising AI Tools | Automate Campaigns & Content',
-      description: 'Transform marketing with AI-powered content creation, campaign optimization, and audience targeting. Increase ROI by 40% with intelligent marketing automation.',
-      keywords: ['marketing AI', 'advertising AI tools', 'AI content creation', 'campaign automation', 'marketing analytics', 'AI copywriting', 'programmatic advertising', 'marketing automation']
+      title: 'AI Marketing | Advertising AI Tools & Content Automation',
+      description: 'Transform marketing with AI marketing solutions that increase ROI by 40%. Automate campaigns with advertising AI tools, AI copywriting, and programmatic ads.',
+      keywords: ['AI marketing', 'marketing automation AI', 'AI content creation', 'AI copywriting', 'programmatic advertising', 'AI advertising', 'marketing artificial intelligence', 'AI campaign optimization', 'social media AI', 'AI audience targeting']
     },
     hero: {
       headline: 'Marketing, Advertising & Media AI Solutions That Drive Growth',
@@ -589,9 +589,9 @@ export const industryContent: Record<string, IndustryContent> = {
 
   'energy-utilities': {
     seo: {
-      title: 'Energy & Utilities AI Solutions | Grid Optimization & Sustainability',
-      description: 'Transform energy operations with AI-powered grid management, demand forecasting, and sustainability optimization. Reduce energy waste by 30% with smart automation.',
-      keywords: ['energy AI', 'utilities AI tools', 'smart grid', 'energy optimization', 'sustainability AI', 'demand forecasting', 'renewable energy AI', 'utility automation']
+      title: 'Smart Grid AI | Energy Management & Utilities AI Solutions',
+      description: 'Transform energy operations with smart grid AI and energy management solutions. Reduce energy waste by 30%, optimize renewable energy with utilities AI.',
+      keywords: ['smart grid', 'AI in energy', 'energy management AI', 'renewable energy AI', 'smart energy', 'AI energy optimization', 'utilities artificial intelligence', 'AI demand forecasting energy', 'smart meter AI', 'energy analytics AI']
     },
     hero: {
       headline: 'Energy & Utilities AI Solutions That Drive Growth',
@@ -680,9 +680,9 @@ export const industryContent: Record<string, IndustryContent> = {
 
   'education-edtech': {
     seo: {
-      title: 'Education & EdTech AI Tools | Personalized Learning Solutions',
-      description: 'Transform education with AI-powered personalized learning, automated grading, and adaptive curriculum. Improve student outcomes by 35% with intelligent tutoring.',
-      keywords: ['education AI', 'edtech AI tools', 'personalized learning', 'AI tutoring', 'adaptive learning', 'educational technology', 'AI in education', 'learning analytics']
+      title: 'AI in Education | EdTech AI Tools for Personalized Learning',
+      description: 'Transform education with AI in education solutions that improve outcomes by 35%. Implement AI tutoring, personalized learning, and adaptive curriculum.',
+      keywords: ['AI in education', 'AI tutoring', 'personalized learning AI', 'educational AI', 'AI learning platform', 'adaptive learning AI', 'AI assessment tools', 'educational artificial intelligence', 'AI grading', 'intelligent tutoring system']
     },
     hero: {
       headline: 'Education & EdTech AI Solutions That Drive Growth',
@@ -771,9 +771,9 @@ export const industryContent: Record<string, IndustryContent> = {
 
   'legal-compliance': {
     seo: {
-      title: 'Legal & Compliance AI Tools | Automate Contracts & Research',
-      description: 'Transform legal operations with AI-powered contract analysis, compliance monitoring, and legal research. Reduce review time by 70% with intelligent automation.',
-      keywords: ['legal AI', 'compliance AI tools', 'contract automation', 'legal research AI', 'regulatory compliance', 'legal technology', 'AI contract review', 'compliance automation']
+      title: 'AI in Law | Legal AI Tools for Contract Review & Compliance',
+      description: 'Transform legal operations with AI in law solutions. Reduce contract review time by 70% with legal AI, compliance monitoring, and automated research.',
+      keywords: ['AI in law', 'legal AI', 'AI contract review', 'legal technology AI', 'AI legal research', 'compliance AI', 'legal artificial intelligence', 'AI document review', 'legal automation AI', 'AI compliance monitoring']
     },
     hero: {
       headline: 'Legal & Compliance AI Solutions That Drive Growth',
@@ -862,9 +862,9 @@ export const industryContent: Record<string, IndustryContent> = {
 
   'human-resources-recruiting': {
     seo: {
-      title: 'HR & Recruiting AI Tools | Automate Hiring & Employee Analytics',
-      description: 'Transform HR with AI-powered recruiting, employee analytics, and engagement tools. Reduce hiring time by 50% and improve retention by 35% with intelligent automation.',
-      keywords: ['HR AI', 'recruiting AI tools', 'talent acquisition AI', 'employee analytics', 'HR automation', 'AI recruitment', 'people analytics', 'workforce optimization']
+      title: 'AI Recruiting | HR AI Tools for Talent Acquisition & Analytics',
+      description: 'Transform HR with AI recruiting solutions that reduce hiring time by 50%. Implement HR AI tools for talent acquisition, employee analytics, and retention.',
+      keywords: ['AI recruiting', 'HR AI', 'AI hiring', 'recruitment AI', 'AI talent acquisition', 'HR artificial intelligence', 'AI resume screening', 'people analytics AI', 'AI employee engagement', 'workforce analytics AI']
     },
     hero: {
       headline: 'Human Resources & Recruiting AI Solutions That Drive Growth',
@@ -953,9 +953,9 @@ export const industryContent: Record<string, IndustryContent> = {
 
   'aerospace-defense': {
     seo: {
-      title: 'Aerospace & Defense AI Solutions | Mission-Critical Intelligence',
-      description: 'Transform aerospace and defense operations with AI-powered simulation, predictive maintenance, and autonomous systems. Enhance mission success rates by 40%.',
-      keywords: ['aerospace AI', 'defense AI tools', 'military AI', 'aviation AI', 'defense technology', 'aerospace automation', 'mission planning AI', 'defense analytics']
+      title: 'AI in Aerospace | Defense AI Solutions & Military Intelligence',
+      description: 'Transform aerospace with AI in aerospace solutions that enhance mission success by 40%. Implement defense AI, military AI systems, and aviation intelligence.',
+      keywords: ['AI in aerospace', 'defense AI', 'military AI', 'aerospace artificial intelligence', 'aviation AI', 'AI defense systems', 'autonomous systems AI', 'AI mission planning', 'aerospace machine learning', 'AI surveillance systems']
     },
     hero: {
       headline: 'Aerospace & Defense AI Solutions That Drive Growth',
