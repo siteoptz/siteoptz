@@ -11,7 +11,9 @@ import {
   Linkedin, 
   Youtube,
   ArrowRight,
-  TrendingUp
+  TrendingUp,
+  ChevronDown,
+  ChevronUp
 } from 'lucide-react';
 import EmailCaptureForm from './EmailCaptureForm';
 import { getCategoryUrl } from '../config/categories';
@@ -20,6 +22,21 @@ import { industries, industrySlugMap } from '../content/industryContent';
 const Footer: React.FC = () => {
   const currentYear = new Date().getFullYear();
   const [showEmailForm, setShowEmailForm] = useState(false);
+  
+  // Mobile accordion states
+  const [accordionStates, setAccordionStates] = useState({
+    solutions: false,
+    industries: false,
+    company: false,
+    resources: false,
+  });
+  
+  const toggleAccordion = (section: keyof typeof accordionStates) => {
+    setAccordionStates(prev => ({
+      ...prev,
+      [section]: !prev[section]
+    }));
+  };
 
   const solutionsLinks = [
     { name: 'SEO & Optimization', href: getCategoryUrl('SEO & Optimization') },
@@ -76,7 +93,183 @@ const Footer: React.FC = () => {
     <footer className="bg-gradient-to-br from-gray-900 via-gray-800 to-black text-white">
       {/* Main Footer Content */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+        {/* Mobile Layout */}
+        <div className="block md:hidden space-y-6">
+          {/* Logo + CTA + Social - Mobile */}
+          <div className="space-y-6">
+            <Link href="/" className="flex items-center space-x-3 group">
+              <div className="relative">
+                <Image
+                  src="/images/siteoptz-logo.png"
+                  alt="SiteOptz AI Logo"
+                  width={48}
+                  height={48}
+                  className="w-12 h-12 rounded-xl shadow-lg group-hover:shadow-xl transition-all duration-300 group-hover:scale-105"
+                />
+              </div>
+              <div>
+                <div className="text-2xl font-bold bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
+                  SiteOptz
+                </div>
+                <div className="text-sm text-gray-400 font-medium -mt-1">
+                  Turning AI Into ROI
+                </div>
+              </div>
+            </Link>
+
+            <button 
+              onClick={() => setShowEmailForm(true)}
+              className="w-full px-6 py-3 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-lg font-semibold hover:from-blue-700 hover:to-purple-700 transform hover:scale-105 transition-all duration-200 shadow-lg hover:shadow-xl flex items-center justify-center space-x-2"
+            >
+              <Zap className="w-4 h-4" />
+              <span>Get Started</span>
+            </button>
+
+            <div className="flex space-x-3 justify-center">
+              {socialLinks.map((social) => {
+                const IconComponent = social.icon;
+                return (
+                  <a
+                    key={social.name}
+                    href={social.href}
+                    className={`p-2 bg-gray-800 rounded-lg text-gray-400 ${social.color} hover:bg-gray-700 transition-all duration-200 hover:scale-110`}
+                    aria-label={social.name}
+                  >
+                    <IconComponent className="w-5 h-5" />
+                  </a>
+                );
+              })}
+            </div>
+          </div>
+
+          {/* Mobile Accordion Sections */}
+          {/* Solutions Accordion */}
+          <div className="border-t border-gray-700 pt-4">
+            <button
+              onClick={() => toggleAccordion('solutions')}
+              className="flex items-center justify-between w-full py-3 text-left"
+            >
+              <h3 className="text-lg font-semibold text-white">Solutions</h3>
+              {accordionStates.solutions ? (
+                <ChevronUp className="w-5 h-5 text-gray-400" />
+              ) : (
+                <ChevronDown className="w-5 h-5 text-gray-400" />
+              )}
+            </button>
+            {accordionStates.solutions && (
+              <div className="pb-4">
+                <ul className="space-y-2 pl-4">
+                  {solutionsLinks.map((link) => (
+                    <li key={link.name}>
+                      <Link
+                        href={link.href}
+                        className="text-gray-300 hover:text-white transition-colors duration-200 text-sm block py-1"
+                      >
+                        {link.name}
+                      </Link>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            )}
+          </div>
+
+          {/* Industries Accordion */}
+          <div className="border-t border-gray-700 pt-4">
+            <button
+              onClick={() => toggleAccordion('industries')}
+              className="flex items-center justify-between w-full py-3 text-left"
+            >
+              <h3 className="text-lg font-semibold text-white">Industries</h3>
+              {accordionStates.industries ? (
+                <ChevronUp className="w-5 h-5 text-gray-400" />
+              ) : (
+                <ChevronDown className="w-5 h-5 text-gray-400" />
+              )}
+            </button>
+            {accordionStates.industries && (
+              <div className="pb-4">
+                <ul className="space-y-2 pl-4">
+                  {industriesLinks.map((link) => (
+                    <li key={link.name}>
+                      <Link
+                        href={link.href}
+                        className="text-gray-300 hover:text-white transition-colors duration-200 text-sm block py-1"
+                      >
+                        {link.name}
+                      </Link>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            )}
+          </div>
+
+          {/* Company Accordion */}
+          <div className="border-t border-gray-700 pt-4">
+            <button
+              onClick={() => toggleAccordion('company')}
+              className="flex items-center justify-between w-full py-3 text-left"
+            >
+              <h3 className="text-lg font-semibold text-white">Company</h3>
+              {accordionStates.company ? (
+                <ChevronUp className="w-5 h-5 text-gray-400" />
+              ) : (
+                <ChevronDown className="w-5 h-5 text-gray-400" />
+              )}
+            </button>
+            {accordionStates.company && (
+              <div className="pb-4">
+                <ul className="space-y-2 pl-4">
+                  {companyLinks.map((link) => (
+                    <li key={link.name}>
+                      <Link
+                        href={link.href}
+                        className="text-gray-300 hover:text-white transition-colors duration-200 text-sm block py-1"
+                      >
+                        {link.name}
+                      </Link>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            )}
+          </div>
+
+          {/* Resources Accordion */}
+          <div className="border-t border-gray-700 pt-4">
+            <button
+              onClick={() => toggleAccordion('resources')}
+              className="flex items-center justify-between w-full py-3 text-left"
+            >
+              <h3 className="text-lg font-semibold text-white">Resources</h3>
+              {accordionStates.resources ? (
+                <ChevronUp className="w-5 h-5 text-gray-400" />
+              ) : (
+                <ChevronDown className="w-5 h-5 text-gray-400" />
+              )}
+            </button>
+            {accordionStates.resources && (
+              <div className="pb-4">
+                <ul className="space-y-2 pl-4">
+                  {resourcesLinks.map((link) => (
+                    <li key={link.name}>
+                      <Link
+                        href={link.href}
+                        className="text-gray-300 hover:text-white transition-colors duration-200 text-sm block py-1"
+                      >
+                        {link.name}
+                      </Link>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            )}
+          </div>
+        </div>
+
+        {/* Desktop Layout */}
+        <div className="hidden md:grid md:grid-cols-4 gap-8">
           {/* Left Column - Logo + Tagline + CTA + Social */}
           <div className="space-y-6">
             {/* Logo and Tagline */}

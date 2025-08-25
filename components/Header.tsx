@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import { useRouter } from 'next/router';
-import { Menu, X, ChevronDown } from 'lucide-react';
+import { Menu, X, ChevronDown, ChevronUp } from 'lucide-react';
 import { toolCategories, getCategoryUrl, getCategoryDisplayName } from '../config/categories';
 import { industries, industrySlugMap } from '../content/industryContent';
 
@@ -10,6 +10,21 @@ const Header: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   const router = useRouter();
+  
+  // Mobile accordion states
+  const [mobileAccordions, setMobileAccordions] = useState({
+    categories: false,
+    tools: false,
+    industries: false,
+    resources: false,
+  });
+  
+  const toggleMobileAccordion = (section: keyof typeof mobileAccordions) => {
+    setMobileAccordions(prev => ({
+      ...prev,
+      [section]: !prev[section]
+    }));
+  };
 
   // Industry dropdown menu items with shortened names
   const industryMenuItems = [
