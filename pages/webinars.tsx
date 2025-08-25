@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
+import WebinarRegistrationModal from '../components/WebinarRegistrationModal';
 import { 
   Calendar,
   Clock,
@@ -27,6 +28,8 @@ import {
 export default function Webinars() {
   const [selectedFilter, setSelectedFilter] = useState('All');
   const [searchQuery, setSearchQuery] = useState('');
+  const [showRegistrationModal, setShowRegistrationModal] = useState(false);
+  const [selectedWebinar, setSelectedWebinar] = useState(null);
 
   const upcomingWebinars = [
     {
@@ -134,6 +137,11 @@ export default function Webinars() {
   ];
 
   const categories = ['All', 'Strategy', 'Tools', 'Implementation', 'Marketing', 'Development', 'Compliance', 'Analytics'];
+
+  const handleRegistrationClick = (webinar) => {
+    setSelectedWebinar(webinar);
+    setShowRegistrationModal(true);
+  };
 
   const webinarStats = [
     { number: "50+", label: "Expert Webinars" },
@@ -347,13 +355,13 @@ export default function Webinars() {
                         <div className="text-2xl font-bold text-white mb-2">Free Registration</div>
                         <div className="text-gray-400 text-sm mb-4">Secure your spot today</div>
                         
-                        <Link
-                          href={webinar.registrationUrl}
+                        <button
+                          onClick={() => handleRegistrationClick(webinar)}
                           className="w-full px-6 py-3 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-lg hover:from-blue-700 hover:to-purple-700 transition-colors font-semibold flex items-center justify-center mb-4"
                         >
                           Register Now
                           <ArrowRight className="w-4 h-4 ml-2" />
-                        </Link>
+                        </button>
                         
                         <div className="space-y-2 text-sm text-gray-400">
                           <div className="flex items-center justify-center">
@@ -581,6 +589,13 @@ export default function Webinars() {
           </div>
         </section>
       </div>
+
+      {/* Webinar Registration Modal */}
+      <WebinarRegistrationModal
+        isOpen={showRegistrationModal}
+        onClose={() => setShowRegistrationModal(false)}
+        webinar={selectedWebinar}
+      />
     </>
   );
 }
