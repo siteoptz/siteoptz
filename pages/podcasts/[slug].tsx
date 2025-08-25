@@ -1632,7 +1632,7 @@ export default function PodcastPage({ podcast, relatedPodcasts }: PodcastPagePro
               <div className="bg-black border border-gray-800 rounded-xl p-8 mb-8">
                 <h2 className="text-2xl font-bold text-white mb-6">Episode Overview</h2>
                 <div 
-                  className="prose prose-invert prose-cyan max-w-none"
+                  className="prose prose-invert prose-cyan max-w-none text-white [&>*]:text-white [&>h3]:text-white [&>h4]:text-white [&>p]:text-white [&>ul]:text-white [&>ol]:text-white [&>li]:text-white"
                   dangerouslySetInnerHTML={{ __html: podcast.fullContent }}
                 />
               </div>

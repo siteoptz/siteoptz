@@ -1,0 +1,29 @@
+{
+  "message": "Audio files needed for podcast functionality",
+  "totalEpisodes": 15,
+  "audioFiles": [
+    "ai-automation-revolution-2024.mp3",
+    "chatgpt-enterprise-workflows.mp3",
+    "no-code-ai-tools-revolution.mp3",
+    "claude-vs-gpt-enterprise-comparison.mp3",
+    "ai-customer-service-automation.mp3",
+    "marketing-automation-ai-tools.mp3",
+    "ai-data-analytics-transformation.mp3",
+    "ai-sales-process-automation.mp3",
+    "ai-content-creation-tools-2024.mp3",
+    "ai-cybersecurity-automation.mp3",
+    "ai-healthcare-workflow-automation.mp3",
+    "ai-financial-trading-automation.mp3",
+    "ai-hr-recruitment-automation.mp3",
+    "ai-manufacturing-industry-40.mp3",
+    "ai-ecommerce-personalization.mp3"
+  ],
+  "estimatedTotalDuration": "10.5 hours",
+  "recommendedService": "ElevenLabs for high-quality AI voices",
+  "nextSteps": [
+    "Choose audio creation service",
+    "Create audio from podcast content",
+    "Upload MP3 files to this directory",
+    "Test playback functionality"
+  ]
+}
