@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
+import PodcastSubscribeModal from '../components/PodcastSubscribeModal';
 import { 
   Play,
   Clock,
@@ -36,6 +37,7 @@ export default function PodcastsPage() {
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [sortBy, setSortBy] = useState('latest');
+  const [showSubscribeModal, setShowSubscribeModal] = useState(false);
 
   // Calculate dates for the past 15 weeks (going backwards from today)
   const getWeeklyDate = (weeksAgo: number) => {
@@ -296,6 +298,11 @@ export default function PodcastsPage() {
       month: 'long',
       day: 'numeric'
     });
+  };
+
+  const handleSubscribe = (formData: any) => {
+    console.log('Podcast subscription:', formData);
+    // Additional tracking or actions can be added here
   };
 
   return (
@@ -569,13 +576,13 @@ export default function PodcastsPage() {
                 <Download className="w-5 h-5 mr-2" />
                 Get Free AI Resources
               </Link>
-              <Link
-                href="/subscribe"
+              <button
+                onClick={() => setShowSubscribeModal(true)}
                 className="inline-flex items-center bg-gray-800 text-white px-8 py-4 rounded-lg font-semibold hover:bg-gray-700 transition-colors"
               >
                 <Headphones className="w-5 h-5 mr-2" />
                 Subscribe to Podcast
-              </Link>
+              </button>
             </div>
           </div>
 
@@ -588,16 +595,23 @@ export default function PodcastsPage() {
               Subscribe to our newsletter and get notified when new AI and automation podcasts are released. 
               Plus, get exclusive insights and early access to episodes.
             </p>
-            <Link
-              href="/subscribe"
+            <button
+              onClick={() => setShowSubscribeModal(true)}
               className="inline-flex items-center bg-gradient-to-r from-cyan-600 to-blue-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-700 hover:to-blue-700 transition-colors"
             >
               <Headphones className="w-5 h-5 mr-2" />
               Subscribe Now
-            </Link>
+            </button>
           </div>
         </div>
       </main>
+
+      {/* Podcast Subscribe Modal */}
+      <PodcastSubscribeModal
+        isOpen={showSubscribeModal}
+        onClose={() => setShowSubscribeModal(false)}
+        onSubscribe={handleSubscribe}
+      />
     </>
   );
 }
