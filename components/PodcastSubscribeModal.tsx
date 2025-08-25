@@ -181,7 +181,7 @@ export default function PodcastSubscribeModal({ isOpen, onClose, onSubscribe }: 
             <CheckCircle className="w-16 h-16 text-green-500 mx-auto mb-4" />
             <h3 className="text-2xl font-bold text-white mb-2">Welcome to the AI Leadership Community!</h3>
             <p className="text-gray-300 mb-4">
-              You'll receive our weekly podcast updates and exclusive AI insights directly in your inbox.
+              You&apos;ll receive our weekly podcast updates and exclusive AI insights directly in your inbox.
             </p>
             <p className="text-gray-400 text-sm">This window will close automatically...</p>
           </div>
@@ -398,7 +398,7 @@ export default function PodcastSubscribeModal({ isOpen, onClose, onSubscribe }: 
             <div className="mt-6 p-4 bg-gradient-to-r from-purple-600/10 to-pink-600/10 border border-purple-500/20 rounded-lg">
               <h4 className="text-white font-semibold mb-2 flex items-center">
                 <TrendingUp className="w-4 h-4 mr-2 text-purple-400" />
-                What you'll get:
+                What you&apos;ll get:
               </h4>
               <ul className="text-gray-300 text-sm space-y-1">
                 <li>• Weekly podcast episode notifications</li>
