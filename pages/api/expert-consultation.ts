@@ -79,6 +79,47 @@ async function addToGoHighLevel(data: ExpertConsultationData) {
     const result = await response.json();
     console.log('GoHighLevel Consultation Success:', result);
     console.log('Contact ID:', result.contact?.id);
+    
+    // Create an Opportunity for expert consultation
+    if (result.contact?.id) {
+      try {
+        const opportunityData = {
+          name: `${data.firstName} ${data.lastName} - Expert Consultation - ${data.company}`,
+          contactId: result.contact.id,
+          locationId: GHL_LOCATION_ID,
+          status: 'open',
+          monetaryValue: data.totalCost || 0,
+          pipelineId: process.env.GHL_PIPELINE_ID || '',
+          pipelineStageId: process.env.GHL_PIPELINE_STAGE_ID || '',
+          source: 'Expert Consultation Request - SiteOptz Website',
+          customFields: []
+        };
+        
+        console.log('Creating Consultation Opportunity:', JSON.stringify(opportunityData, null, 2));
+        
+        const oppResponse = await fetch(`${GHL_API_BASE}/opportunities/`, {
+          method: 'POST',
+          headers: {
+            'Authorization': `Bearer ${GHL_API_KEY}`,
+            'Content-Type': 'application/json',
+            'Version': '2021-04-15',
+          },
+          body: JSON.stringify(opportunityData),
+        });
+        
+        if (oppResponse.ok) {
+          const oppResult = await oppResponse.json();
+          console.log('Consultation Opportunity Created:', oppResult);
+          result.opportunity = oppResult.opportunity;
+        } else {
+          const errorText = await oppResponse.text();
+          console.error('Failed to create Consultation Opportunity:', errorText);
+        }
+      } catch (oppError) {
+        console.error('Error creating Consultation Opportunity:', oppError);
+      }
+    }
+    
     console.log('===================================================');
     return result;
   } catch (error) {

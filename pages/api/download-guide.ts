@@ -107,6 +107,50 @@ async function addToGoHighLevel(leadData: LeadData) {
     }
 
     const result = await response.json();
+    console.log('GoHighLevel Guide Download Success:', result);
+    console.log('Contact ID:', result.contact?.id);
+    
+    // Create an Opportunity for guide download
+    if (result.contact?.id) {
+      try {
+        const opportunityData = {
+          name: `${leadData.firstName} ${leadData.lastName} - AI Tools Guide Download`,
+          contactId: result.contact.id,
+          locationId: GHL_LOCATION_ID,
+          status: 'open',
+          monetaryValue: 0,
+          pipelineId: process.env.GHL_PIPELINE_ID || '',
+          pipelineStageId: process.env.GHL_PIPELINE_STAGE_ID || '',
+          source: 'AI Tools Guide Download - SiteOptz Website',
+          customFields: []
+        };
+        
+        console.log('Creating Guide Download Opportunity:', JSON.stringify(opportunityData, null, 2));
+        
+        const oppResponse = await fetch(`${GHL_API_BASE}/opportunities/`, {
+          method: 'POST',
+          headers: {
+            'Authorization': `Bearer ${GHL_API_KEY}`,
+            'Content-Type': 'application/json',
+            'Version': '2021-04-15',
+          },
+          body: JSON.stringify(opportunityData),
+        });
+        
+        if (oppResponse.ok) {
+          const oppResult = await oppResponse.json();
+          console.log('Guide Download Opportunity Created:', oppResult);
+          result.opportunity = oppResult.opportunity;
+        } else {
+          const errorText = await oppResponse.text();
+          console.error('Failed to create Guide Download Opportunity:', errorText);
+        }
+      } catch (oppError) {
+        console.error('Error creating Guide Download Opportunity:', oppError);
+      }
+    }
+    
+    console.log('=====================================');
     return result;
   } catch (error) {
     console.error('Error adding lead to GoHighLevel:', error);
