@@ -28,6 +28,42 @@
     @apply w-2;
   }
   
+  /* Podcast content styling */
+  .podcast-content * {
+    color: #ffffff !important;
+  }
+  
+  .podcast-content ul li::marker {
+    color: #ffffff !important;
+  }
+  
+  .podcast-content ol li::marker {
+    color: #ffffff !important;
+  }
+  
+  .podcast-content ul li,
+  .podcast-content ol li {
+    color: #ffffff !important;
+  }
+  
+  .podcast-content p {
+    color: #ffffff !important;
+  }
+  
+  .podcast-content h3,
+  .podcast-content h4 {
+    color: #ffffff !important;
+  }
+  
+  .podcast-content strong {
+    color: #ffffff !important;
+    font-weight: 600;
+  }
+  
+  .podcast-content em {
+    color: #ffffff !important;
+  }
+  
   ::-webkit-scrollbar-track {
     @apply bg-gray-100;
   }
