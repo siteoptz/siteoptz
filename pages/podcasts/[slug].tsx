@@ -1635,24 +1635,8 @@ export default function PodcastPage({ podcast, relatedPodcasts }: PodcastPagePro
                 <div 
                   className="podcast-content prose prose-invert prose-cyan max-w-none text-white [&>*]:text-white [&>h3]:text-white [&>h4]:text-white [&>p]:text-white [&>ul]:text-white [&>ol]:text-white [&>li]:text-white [&_ul]:text-white [&_ol]:text-white [&_li]:text-white [&_p]:text-white [&_h3]:text-white [&_h4]:text-white [&_strong]:text-white [&>ul>li]:text-white [&>ol>li]:text-white"
                   style={{
-                    '--tw-prose-body': '#ffffff',
-                    '--tw-prose-headings': '#ffffff',
-                    '--tw-prose-lead': '#ffffff',
-                    '--tw-prose-links': '#06b6d4',
-                    '--tw-prose-bold': '#ffffff',
-                    '--tw-prose-counters': '#ffffff',
-                    '--tw-prose-bullets': '#ffffff',
-                    '--tw-prose-hr': '#374151',
-                    '--tw-prose-quotes': '#ffffff',
-                    '--tw-prose-quote-borders': '#374151',
-                    '--tw-prose-captions': '#ffffff',
-                    '--tw-prose-code': '#ffffff',
-                    '--tw-prose-pre-code': '#ffffff',
-                    '--tw-prose-pre-bg': '#1f2937',
-                    '--tw-prose-th-borders': '#374151',
-                    '--tw-prose-td-borders': '#374151',
                     color: '#ffffff'
-                  }}
+                  } as React.CSSProperties}
                   dangerouslySetInnerHTML={{ __html: podcast.fullContent }}
                 />
               </div>
