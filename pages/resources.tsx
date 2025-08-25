@@ -143,7 +143,7 @@ export default function Resources() {
           type: "Podcast",
           readTime: "30 min episodes",
           description: "Weekly discussions with AI leaders, featuring implementation strategies and success stories from Fortune 500 companies.",
-          url: "/podcast/ai-leadership"
+          url: "/podcasts/"
         },
         {
           title: "Monthly AI Tools Webinar Series",
