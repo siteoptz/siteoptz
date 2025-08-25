@@ -77,7 +77,7 @@ const Footer: React.FC = () => {
   const resourcesLinks = [
     { name: 'Resources', href: '/resources' },
     { name: 'Case Studies', href: '/case-studies' },
-    { name: 'AI Library', href: '/ai-library' },
+    { name: 'AI Library', href: 'https://www.siteoptz.ai/tools/' },
     { name: 'Webinars', href: '/webinars' },
   ];
 
