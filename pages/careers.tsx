@@ -1,6 +1,7 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
+import JobApplicationModal from '../components/JobApplicationModal';
 import { 
   Briefcase, 
   MapPin, 
@@ -16,6 +17,19 @@ import {
 } from 'lucide-react';
 
 export default function Careers() {
+  const [selectedPosition, setSelectedPosition] = useState<any>(null);
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
+  const handleApplyClick = (position: any) => {
+    setSelectedPosition(position);
+    setIsModalOpen(true);
+  };
+
+  const closeModal = () => {
+    setIsModalOpen(false);
+    setSelectedPosition(null);
+  };
+
   const openPositions = [
     {
       title: "Senior AI Implementation Consultant",
@@ -378,13 +392,13 @@ export default function Careers() {
                         </span>
                       </div>
                     </div>
-                    <Link
-                      href={`/careers/apply?position=${encodeURIComponent(position.title)}`}
+                    <button
+                      onClick={() => handleApplyClick(position)}
                       className="px-6 py-2 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-lg hover:from-blue-700 hover:to-purple-700 transition-colors text-sm font-medium flex items-center justify-center lg:justify-start"
                     >
                       Apply Now
                       <ArrowRight className="w-4 h-4 ml-2" />
-                    </Link>
+                    </button>
                   </div>
                   
                   <p className="text-gray-300 mb-4 leading-relaxed">
@@ -451,6 +465,13 @@ export default function Careers() {
           </div>
         </section>
       </div>
+
+      {/* Job Application Modal */}
+      <JobApplicationModal
+        isOpen={isModalOpen}
+        onClose={closeModal}
+        position={selectedPosition}
+      />
     </>
   );
 }
