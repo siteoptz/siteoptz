@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
 import PodcastSubscribeModal from '../components/PodcastSubscribeModal';
-import LeadMagnetModal from '../components/LeadMagnetModal';
+import NewsletterModal from '../components/NewsletterModal';
 import { 
   Play,
   Clock,
@@ -616,10 +616,9 @@ export default function PodcastsPage() {
       />
 
       {/* Newsletter Subscribe Modal */}
-      <LeadMagnetModal
+      <NewsletterModal
         isOpen={showNewsletterModal}
         onClose={() => setShowNewsletterModal(false)}
-        resourceType="playbook"
         source="podcast_newsletter"
       />
     </>
