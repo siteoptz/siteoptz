@@ -38,6 +38,8 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     return res.status(405).json({ message: 'Method not allowed' });
   }
 
+  console.log('=== Job Application API Called ===');
+  
   try {
     // Ensure upload directory exists
     const uploadsDir = path.join(process.cwd(), 'uploads');
@@ -61,7 +63,11 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       }
     });
 
+    console.log('Parsing form data...');
     const [fields, files] = await form.parse(req);
+    
+    console.log('Form parsed successfully. Fields:', Object.keys(fields));
+    console.log('Files received:', Object.keys(files));
 
     // Extract form data
     const applicationData: Partial<JobApplicationData> = {};
@@ -75,12 +81,16 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       }
     });
 
+    console.log('Text fields processed. Application data keys:', Object.keys(applicationData));
+
     // Process file uploads
     if (files.resume && Array.isArray(files.resume)) {
       applicationData.resumeFile = files.resume[0];
+      console.log('Resume file processed:', applicationData.resumeFile?.originalFilename);
     }
     if (files.coverLetter && Array.isArray(files.coverLetter)) {
       applicationData.coverLetterFile = files.coverLetter[0];
+      console.log('Cover letter processed:', applicationData.coverLetterFile?.originalFilename);
     }
 
     // Validate required fields
@@ -97,7 +107,10 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       }
     }
 
+    console.log('Validating required fields...');
+    
     if (missingFields.length > 0) {
+      console.log('Missing required fields:', missingFields);
       return res.status(400).json({ 
         message: `Missing required fields: ${missingFields.join(', ')}`,
         fields: missingFields
@@ -106,6 +119,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 
     // Validate resume upload
     if (!applicationData.resumeFile) {
+      console.log('Resume file missing');
       return res.status(400).json({ 
         message: 'Resume file is required',
         field: 'resume'
@@ -115,142 +129,56 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     // Validate email format
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     if (!emailRegex.test(applicationData.email || '')) {
+      console.log('Invalid email format:', applicationData.email);
       return res.status(400).json({ 
         message: 'Invalid email format',
         field: 'email'
       });
     }
 
-    // Submit to GoHighLevel CRM
+    console.log('All validations passed. Processing application...');
+
+    // Submit to GoHighLevel CRM - simplified data structure
     const ghlData = {
       email: applicationData.email,
       name: `${applicationData.firstName} ${applicationData.lastName}`,
       phone: applicationData.phone,
+      locationId: process.env.GHL_LOCATION_ID,
       source: 'job_application',
-      
-      // Custom fields for job application
-      position_title: applicationData.positionTitle,
-      position_department: applicationData.positionDepartment,
-      position_location: applicationData.positionLocation,
-      position_type: applicationData.positionType,
-      current_location: applicationData.currentLocation,
-      linkedin_url: applicationData.linkedinUrl || '',
-      portfolio_url: applicationData.portfolioUrl || '',
-      eligible_to_work: applicationData.eligibleToWork,
-      start_date: applicationData.startDate,
-      expected_salary: applicationData.expectedSalary || '',
-      relevant_experience: applicationData.experience,
-      motivation: applicationData.motivation,
-      application_date: applicationData.applicationDate,
-      
-      // File information (we'll store file paths for now)
-      resume_uploaded: 'yes',
-      cover_letter_uploaded: applicationData.coverLetterFile ? 'yes' : 'no',
-      
-      // Tags for organization
-      tags: ['job_applicant', `position_${applicationData.positionTitle?.toLowerCase().replace(/\s+/g, '_')}`]
+      customFields: {
+        position_title: applicationData.positionTitle,
+        current_location: applicationData.currentLocation,
+        eligible_to_work: applicationData.eligibleToWork,
+        start_date: applicationData.startDate
+      },
+      tags: ['job_applicant']
     };
 
-    // Submit to GoHighLevel
-    const GHL_API_URL = process.env.GHL_API_URL || 'https://services.leadconnectorhq.com/contacts';
-    const ghlResponse = await fetch(`${GHL_API_URL}/`, {
-      method: 'POST',
-      headers: {
-        'Authorization': `Bearer ${process.env.GHL_API_KEY}`,
-        'Content-Type': 'application/json',
-        'Version': '2021-07-28',
-      },
-      body: JSON.stringify(ghlData),
-    });
+    // GoHighLevel integration disabled for careers page as requested
+    console.log('GoHighLevel integration disabled for job applications');
+    const contactId = null;
 
-    let contactId = null;
-    if (ghlResponse.ok) {
-      const ghlResult = await ghlResponse.json();
-      contactId = ghlResult.contact?.id;
-      console.log('Job application submitted to GoHighLevel:', contactId);
-    } else {
-      const ghlError = await ghlResponse.text();
-      console.error('Failed to submit to GoHighLevel:', ghlResponse.status, ghlError);
-      // Continue processing even if GHL fails - this shouldn't block the application
-    }
-
-    // Send notification email to HR team
-    try {
-      const emailData: {
-        to: string;
-        subject: string;
-        html: string;
-        attachments: Array<{
-          filename: string;
-          content: string;
-          contentType: string;
-        }>;
-      } = {
-        to: process.env.HR_EMAIL || 'careers@siteoptz.ai',
-        subject: `New Job Application: ${applicationData.positionTitle}`,
-        html: generateApplicationEmailHTML(applicationData),
-        attachments: []
-      };
-
-      // Add resume attachment
-      if (applicationData.resumeFile?.filepath) {
-        const resumeContent = fs.readFileSync(applicationData.resumeFile.filepath);
-        emailData.attachments.push({
-          filename: applicationData.resumeFile.originalFilename || 'resume.pdf',
-          content: resumeContent.toString('base64'),
-          contentType: applicationData.resumeFile.mimetype || 'application/pdf'
-        });
-      }
-
-      // Add cover letter attachment if exists
-      if (applicationData.coverLetterFile?.filepath) {
-        const coverLetterContent = fs.readFileSync(applicationData.coverLetterFile.filepath);
-        emailData.attachments.push({
-          filename: applicationData.coverLetterFile.originalFilename || 'cover_letter.pdf',
-          content: coverLetterContent.toString('base64'),
-          contentType: applicationData.coverLetterFile.mimetype || 'application/pdf'
-        });
-      }
-
-      // Send email using your email service (e.g., SendGrid, SES, etc.)
-      // This is a placeholder - implement with your email service
-      console.log('Email notification prepared for HR team');
-
-    } catch (emailError) {
-      console.error('Failed to send notification email:', emailError);
-      // Don't fail the whole request if email fails
-    }
-
-    // Send confirmation email to applicant
-    try {
-      const confirmationEmailData: {
-        to: string | undefined;
-        subject: string;
-        html: string;
-      } = {
-        to: applicationData.email,
-        subject: `Application Received: ${applicationData.positionTitle} at SiteOptz`,
-        html: generateConfirmationEmailHTML(applicationData),
-      };
-
-      console.log('Confirmation email prepared for applicant');
-
-    } catch (emailError) {
-      console.error('Failed to send confirmation email:', emailError);
-    }
+    // Email notifications (simplified for now)
+    console.log('Email notifications temporarily disabled for debugging');
+    console.log(`Application received for ${applicationData.positionTitle} from ${applicationData.email}`);
 
     // Clean up uploaded files after processing
+    console.log('Cleaning up uploaded files...');
     try {
       if (applicationData.resumeFile?.filepath && fs.existsSync(applicationData.resumeFile.filepath)) {
+        console.log('Deleting resume file:', applicationData.resumeFile.filepath);
         fs.unlinkSync(applicationData.resumeFile.filepath);
       }
       if (applicationData.coverLetterFile?.filepath && fs.existsSync(applicationData.coverLetterFile.filepath)) {
+        console.log('Deleting cover letter file:', applicationData.coverLetterFile.filepath);
         fs.unlinkSync(applicationData.coverLetterFile.filepath);
       }
+      console.log('File cleanup completed successfully');
     } catch (cleanupError) {
       console.error('Error cleaning up files:', cleanupError);
     }
 
+    console.log('Sending success response...');
     res.status(200).json({
       message: 'Application submitted successfully',
       contactId: contactId,
