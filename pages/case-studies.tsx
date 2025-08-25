@@ -13,96 +13,10 @@ import {
   Zap,
   Award
 } from 'lucide-react';
+import { caseStudiesData } from '../content/caseStudiesData';
 
 export default function CaseStudies() {
-  const caseStudies = [
-    {
-      id: "techflow-ai-chatbot",
-      title: "TechFlow Solutions: 80% Faster Customer Support with AI Chatbots",
-      company: "TechFlow Solutions",
-      industry: "SaaS",
-      companySize: "500-1000 employees",
-      timeline: "3 months",
-      featured: true,
-      challenge: "TechFlow's customer support team was overwhelmed with 1,000+ daily inquiries, leading to 24-hour response times and declining customer satisfaction scores.",
-      solution: "Implemented AI-powered chatbots using Claude and integrated with their existing CRM. Created intelligent routing system and automated responses for common queries.",
-      results: [
-        { metric: "Response Time", before: "24 hours", after: "4.8 hours", improvement: "80% reduction" },
-        { metric: "Customer Satisfaction", before: "3.2/5", after: "4.6/5", improvement: "44% increase" },
-        { metric: "Support Tickets", before: "1,000/day", after: "300/day", improvement: "70% reduction" },
-        { metric: "Annual Cost Savings", before: "$800K", after: "$600K", improvement: "$200K saved" }
-      ],
-      tools: ["Claude", "Intercom", "Zapier"],
-      testimonial: {
-        quote: "SiteOptz transformed our customer support. The AI chatbot handles 70% of inquiries automatically, and our team can focus on complex issues. ROI was immediate.",
-        author: "Sarah Johnson, CEO"
-      },
-      image: "/images/case-studies/techflow-results.jpg"
-    },
-    {
-      id: "growthlabs-content-ai",
-      title: "GrowthLabs: 300% Content Output Increase with AI Writing Tools", 
-      company: "GrowthLabs",
-      industry: "Marketing Agency",
-      companySize: "50-100 employees",
-      timeline: "2 months",
-      challenge: "Marketing agency struggling to scale content production for 50+ clients while maintaining quality and meeting tight deadlines.",
-      solution: "Implemented comprehensive AI content stack including Jasper AI, Copy.ai, and Claude for different content types. Created quality control workflows and brand voice training.",
-      results: [
-        { metric: "Content Output", before: "100 pieces/month", after: "400 pieces/month", improvement: "300% increase" },
-        { metric: "Client Satisfaction", before: "4.1/5", after: "4.8/5", improvement: "17% increase" },
-        { metric: "Production Time", before: "8 hours/piece", after: "3 hours/piece", improvement: "62% reduction" },
-        { metric: "Monthly Revenue", before: "$150K", after: "$280K", improvement: "87% increase" }
-      ],
-      tools: ["Jasper AI", "Copy.ai", "Claude", "Grammarly Business"],
-      testimonial: {
-        quote: "AI tools helped us scale from 20 to 50 clients without hiring additional writers. Quality improved and deadlines became achievable.",
-        author: "Michael Chen, VP of Marketing"
-      }
-    },
-    {
-      id: "datavision-analytics-ai",
-      title: "DataVision: 70% Faster Decision Making with AI Analytics",
-      company: "DataVision Inc",
-      industry: "Data Analytics",
-      companySize: "200-500 employees", 
-      timeline: "4 months",
-      challenge: "Data analysis taking weeks to complete, preventing timely business decisions and competitive response. Manual reporting consuming 60% of analyst time.",
-      solution: "Deployed AI-powered analytics platform with automated report generation, predictive modeling, and natural language query interfaces using Tableau AI and custom ML models.",
-      results: [
-        { metric: "Analysis Speed", before: "2-3 weeks", after: "2-3 days", improvement: "70% faster" },
-        { metric: "Analyst Productivity", before: "40% strategic work", after: "85% strategic work", improvement: "112% increase" },
-        { metric: "Prediction Accuracy", before: "78%", after: "94%", improvement: "16% increase" },
-        { metric: "Revenue Impact", before: "Baseline", after: "+$2.1M", improvement: "15% revenue growth" }
-      ],
-      tools: ["Tableau AI", "DataRobot", "H2O.ai", "Alteryx"],
-      testimonial: {
-        quote: "AI transformed our analytics from reactive reporting to proactive insights. We now predict market trends instead of just reacting to them.",
-        author: "Lisa Rodriguez, CTO"
-      }
-    },
-    {
-      id: "logicorp-route-optimization",
-      title: "LogiCorp: $500K Annual Savings with AI Route Optimization",
-      company: "LogiCorp",
-      industry: "Logistics",
-      companySize: "1000+ employees",
-      timeline: "6 months",
-      challenge: "Rising fuel costs and inefficient routing causing budget overruns. Manual route planning taking 4 hours daily per dispatcher across 50 locations.",
-      solution: "Implemented AI-powered route optimization using OptimoRoute and integrated real-time traffic data, weather conditions, and delivery constraints.",
-      results: [
-        { metric: "Fuel Costs", before: "$2.1M/year", after: "$1.6M/year", improvement: "$500K saved" },
-        { metric: "Delivery Efficiency", before: "75%", after: "92%", improvement: "23% increase" },
-        { metric: "Planning Time", before: "4 hours/day", after: "30 minutes/day", improvement: "87% reduction" },
-        { metric: "Customer Satisfaction", before: "3.8/5", after: "4.5/5", improvement: "18% increase" }
-      ],
-      tools: ["OptimoRoute", "Route4Me", "Google Maps API", "Tableau"],
-      testimonial: {
-        quote: "The AI route optimization saved us half a million in the first year alone. Our drivers are happier, customers are satisfied, and costs are under control.",
-        author: "David Park, Operations Director"
-      }
-    }
-  ];
+  const caseStudies = caseStudiesData;
 
   const industries = [
     { name: "SaaS & Technology", cases: 45, icon: "💻" },
@@ -283,7 +197,7 @@ export default function CaseStudies() {
                     &ldquo;{study.testimonial.quote}&rdquo;
                   </blockquote>
                   <div className="text-cyan-400 font-medium">
-                    — {study.testimonial.author}
+                    — {study.testimonial.author}, {study.testimonial.position}
                   </div>
                 </div>
               </div>
