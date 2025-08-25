@@ -29,7 +29,7 @@ export default function Webinars() {
   const [selectedFilter, setSelectedFilter] = useState('All');
   const [searchQuery, setSearchQuery] = useState('');
   const [showRegistrationModal, setShowRegistrationModal] = useState(false);
-  const [selectedWebinar, setSelectedWebinar] = useState(null);
+  const [selectedWebinar, setSelectedWebinar] = useState<any>(null);
 
   const upcomingWebinars = [
     {
@@ -138,7 +138,7 @@ export default function Webinars() {
 
   const categories = ['All', 'Strategy', 'Tools', 'Implementation', 'Marketing', 'Development', 'Compliance', 'Analytics'];
 
-  const handleRegistrationClick = (webinar) => {
+  const handleRegistrationClick = (webinar: any) => {
     setSelectedWebinar(webinar);
     setShowRegistrationModal(true);
   };
