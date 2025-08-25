@@ -39,6 +39,12 @@ class SitemapGenerator {
       // Add comparison pages to comparisons sitemap
       await this.addComparisonPages();
       
+      // Add podcast pages to main sitemap
+      this.addPodcastPages();
+      
+      // Add guide and report pages to main sitemap
+      this.addResourcePages();
+      
       // Generate main sitemap index
       const mainSitemapXml = this.generateMainSitemapIndex();
       fs.writeFileSync(this.mainSitemapPath, mainSitemapXml, 'utf8');
@@ -65,15 +71,84 @@ class SitemapGenerator {
 
   addStaticPages() {
     const staticPages = [
+      // Core pages
       { url: '/', priority: 1.0, changefreq: 'daily' },
       { url: '/tools', priority: 0.9, changefreq: 'daily' },
       { url: '/compare', priority: 0.9, changefreq: 'daily' },
       { url: '/comparisons', priority: 0.8, changefreq: 'weekly' },
+      
+      // New resource pages
+      { url: '/resources', priority: 0.8, changefreq: 'weekly' },
+      { url: '/podcasts', priority: 0.8, changefreq: 'weekly' },
+      { url: '/webinars', priority: 0.8, changefreq: 'weekly' },
+      { url: '/blog', priority: 0.7, changefreq: 'weekly' },
+      { url: '/case-studies', priority: 0.7, changefreq: 'monthly' },
+      { url: '/ai-library', priority: 0.6, changefreq: 'monthly' },
+      
+      // Tools and features
+      { url: '/pricing', priority: 0.7, changefreq: 'monthly' },
+      { url: '/data-room', priority: 0.6, changefreq: 'monthly' },
+      { url: '/demo', priority: 0.6, changefreq: 'monthly' },
+      { url: '/reviews', priority: 0.6, changefreq: 'weekly' },
+      { url: '/compare-tools', priority: 0.7, changefreq: 'weekly' },
+      
+      // Company pages
       { url: '/about', priority: 0.5, changefreq: 'monthly' },
       { url: '/contact', priority: 0.5, changefreq: 'monthly' },
+      { url: '/testimonials', priority: 0.5, changefreq: 'monthly' },
+      { url: '/careers', priority: 0.4, changefreq: 'monthly' },
+      
+      // Legal pages
       { url: '/privacy', priority: 0.3, changefreq: 'yearly' },
       { url: '/terms', priority: 0.3, changefreq: 'yearly' }
     ];
+
+    // Add category pages
+    const categories = [
+      'best-voice-ai-tools',
+      'code-generation',
+      'content-creation',
+      'data-analysis',
+      'email-marketing',
+      'image-generation',
+      'paid-search-ppc',
+      'productivity',
+      'research-education',
+      'seo-optimization',
+      'social-media',
+      'video-generation'
+    ];
+
+    categories.forEach(category => {
+      staticPages.push({
+        url: `/categories/${category}`,
+        priority: 0.9,
+        changefreq: 'weekly'
+      });
+    });
+
+    // Add industry pages
+    const industries = [
+      'healthcare-life-sciences',
+      'finance-banking',
+      'retail-e-commerce',
+      'manufacturing-supply-chain',
+      'transportation-logistics',
+      'marketing-advertising-media',
+      'energy-utilities',
+      'education-edtech',
+      'legal-compliance',
+      'human-resources-recruiting',
+      'aerospace-defense'
+    ];
+
+    industries.forEach(industry => {
+      staticPages.push({
+        url: `/industries/${industry}`,
+        priority: 0.8,
+        changefreq: 'monthly'
+      });
+    });
 
     for (const page of staticPages) {
       this.addUrl(page.url, page.priority, page.changefreq, null, 'main');
@@ -210,6 +285,83 @@ class SitemapGenerator {
 
     xml += '</urlset>\n';
     return xml;
+  }
+
+  addPodcastPages() {
+    // Add individual podcast episode pages based on our podcast data
+    const podcastEpisodes = [
+      'ai-automation-revolution-2024',
+      'chatgpt-enterprise-workflows', 
+      'no-code-ai-tools-revolution',
+      'claude-vs-gpt-enterprise-comparison',
+      'ai-customer-service-automation',
+      'marketing-automation-ai-tools',
+      'ai-data-analytics-transformation',
+      'ai-sales-process-automation',
+      'ai-content-creation-tools-2024',
+      'ai-cybersecurity-automation',
+      'ai-healthcare-workflow-automation',
+      'ai-financial-trading-automation',
+      'ai-hr-recruitment-automation',
+      'ai-manufacturing-industry-40',
+      'ai-ecommerce-personalization'
+    ];
+
+    let addedPodcasts = 0;
+    podcastEpisodes.forEach(episodeSlug => {
+      this.addUrl(`/podcasts/${episodeSlug}`, 0.7, 'monthly', null, 'main');
+      addedPodcasts++;
+    });
+
+    console.log(`✅ Added ${addedPodcasts} podcast episode pages`);
+  }
+
+  addResourcePages() {
+    // Add guide pages
+    const guides = [
+      'ai-chatbot-implementation',
+      'ai-content-generation',
+      'ai-data-analysis',
+      'gpt4-turbo-business'
+    ];
+
+    guides.forEach(guide => {
+      this.addUrl(`/guides/${guide}`, 0.7, 'monthly', null, 'main');
+    });
+
+    // Add report pages  
+    const reports = [
+      'ai-healthcare-2024',
+      'fintech-ai-2024',
+      'manufacturing-ai-2024',
+      'q4-2024-ai-market'
+    ];
+
+    reports.forEach(report => {
+      this.addUrl(`/reports/${report}`, 0.7, 'monthly', null, 'main');
+    });
+
+    // Add analysis pages
+    const analyses = [
+      'claude3-vs-gpt4'
+    ];
+
+    analyses.forEach(analysis => {
+      this.addUrl(`/analysis/${analysis}`, 0.7, 'monthly', null, 'main');
+    });
+
+    // Add video pages
+    const videos = [
+      'claude-ai-business-setup',
+      'ai-tools-comparison',
+      'ai-integration-masterclass'
+    ];
+
+    videos.forEach(video => {
+      this.addUrl(`/videos/${video}`, 0.6, 'monthly', null, 'main');
+    });
+
+    console.log(`✅ Added ${guides.length} guides, ${reports.length} reports, ${analyses.length} analyses, and ${videos.length} videos`);
   }
 
   generateMainSitemapIndex() {

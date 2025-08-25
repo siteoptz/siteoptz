@@ -1,102 +1,16 @@
-# Robots.txt for SiteOptz AI - AI Tools Reviews & Comparisons
-# Optimized for SEO and search engine crawling
-
 User-agent: *
 Allow: /
 
-# Allow favicon files for search engine display
-Allow: /favicon.ico
-Allow: /favicon*.png
-Allow: /favicon-16x16.png
-Allow: /favicon-32x32.png
-Allow: /favicon-192x192.png
-Allow: /favicon-512x512.png
-Allow: /manifest.json
+# Sitemap
+Sitemap: https://siteoptz.ai/sitemap.xml
 
-# Allow important pages for crawling
-Allow: /tools/
-Allow: /categories/
-Allow: /compare/
-Allow: /comparisons/
-Allow: /reviews/
-
-# Disallow admin and private areas
+# Disallow admin areas (if any)
 Disallow: /admin/
 Disallow: /api/
 Disallow: /_next/
 Disallow: /scripts/
-Disallow: /node_modules/
-Disallow: /.git/
 
-# Disallow private or test pages
-Disallow: /demo/
-Disallow: /test/
-Disallow: /private/
-
-# Disallow search result pages to prevent duplicate content
-Disallow: /tools?*
-Disallow: /search?*
-Disallow: /*?search=*
-
-# Disallow pagination parameters to avoid duplicate content
-Disallow: /*?page=*
-Disallow: /*?p=*
-
-# Allow but limit crawl rate for data files
-Crawl-delay: 1
-
-# Special rules for different crawlers
-
-# Google Bot - Full access
-User-agent: Googlebot
-Allow: /
-Crawl-delay: 0
-
-# Bing Bot - Full access  
-User-agent: Bingbot
-Allow: /
-Crawl-delay: 1
-
-# Yandex Bot - Full access
-User-agent: YandexBot
-Allow: /
-Crawl-delay: 2
-
-# Facebook Bot for Open Graph
-User-agent: facebookexternalhit
-Allow: /
-Crawl-delay: 0
-
-# Twitter Bot for Twitter Cards
-User-agent: Twitterbot
-Allow: /
-Crawl-delay: 0
-
-# LinkedIn Bot
-User-agent: LinkedInBot
-Allow: /
-Crawl-delay: 1
-
-# Block bad bots and scrapers
-User-agent: SemrushBot
-Disallow: /
-
-User-agent: AhrefsBot
-Disallow: /
-
-User-agent: MJ12bot
-Disallow: /
-
-User-agent: DotBot
-Disallow: /
-
-User-agent: BLEXBot
-Disallow: /
-
-# Sitemap location
-Sitemap: https://siteoptz.ai/sitemap.xml
-Sitemap: https://siteoptz.ai/sitemap-tools.xml
-Sitemap: https://siteoptz.ai/sitemap-comparisons.xml
-
-# Host directive (for primary domain)
-Host: https://siteoptz.ai
+# Allow important pages
+Allow: /tools/
+Allow: /compare/
+Allow: /comparisons/

@@ -2,343 +2,559 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://siteoptz.ai/tools/elevenlabs</loc>
-    <lastmod>2025-08-18</lastmod>
+    <lastmod>2025-08-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://siteoptz.ai/tools/murph-ai</loc>
-    <lastmod>2025-08-18</lastmod>
+    <lastmod>2025-08-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://siteoptz.ai/tools/play-ht</loc>
-    <lastmod>2025-08-18</lastmod>
+    <lastmod>2025-08-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://siteoptz.ai/tools/synthesys</loc>
-    <lastmod>2025-08-18</lastmod>
+    <lastmod>2025-08-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://siteoptz.ai/tools/wellsaid-labs</loc>
-    <lastmod>2025-08-18</lastmod>
+    <lastmod>2025-08-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://siteoptz.ai/tools/amazon-codewhisperer</loc>
-    <lastmod>2025-08-18</lastmod>
+    <lastmod>2025-08-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://siteoptz.ai/tools/cursor</loc>
-    <lastmod>2025-08-18</lastmod>
+    <lastmod>2025-08-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://siteoptz.ai/tools/github-copilot</loc>
-    <lastmod>2025-08-18</lastmod>
+    <lastmod>2025-08-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://siteoptz.ai/tools/huggingface-transformers</loc>
-    <lastmod>2025-08-18</lastmod>
+    <lastmod>2025-08-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://siteoptz.ai/tools/replit-ghost</loc>
-    <lastmod>2025-08-18</lastmod>
+    <lastmod>2025-08-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://siteoptz.ai/tools/tabnine</loc>
-    <lastmod>2025-08-18</lastmod>
+    <lastmod>2025-08-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://siteoptz.ai/tools/anthropic-claude</loc>
-    <lastmod>2025-08-18</lastmod>
+    <lastmod>2025-08-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://siteoptz.ai/tools/anthropic-chatgpt-alternative</loc>
-    <lastmod>2025-08-18</lastmod>
+    <lastmod>2025-08-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://siteoptz.ai/tools/chatgpt</loc>
-    <lastmod>2025-08-18</lastmod>
+    <lastmod>2025-08-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://siteoptz.ai/tools/claude</loc>
-    <lastmod>2025-08-18</lastmod>
+    <lastmod>2025-08-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://siteoptz.ai/tools/cohere-ai</loc>
-    <lastmod>2025-08-18</lastmod>
+    <lastmod>2025-08-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://siteoptz.ai/tools/copy-ai</loc>
-    <lastmod>2025-08-18</lastmod>
+    <lastmod>2025-08-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://siteoptz.ai/tools/openai-gpt4</loc>
-    <lastmod>2025-08-18</lastmod>
+    <lastmod>2025-08-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://siteoptz.ai/tools/jasper</loc>
-    <lastmod>2025-08-18</lastmod>
+    <lastmod>2025-08-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://siteoptz.ai/tools/jasper-ai</loc>
-    <lastmod>2025-08-18</lastmod>
+    <lastmod>2025-08-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://siteoptz.ai/tools/writesonic</loc>
-    <lastmod>2025-08-18</lastmod>
+    <lastmod>2025-08-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://siteoptz.ai/tools/chatgpt-enterprise</loc>
-    <lastmod>2025-08-18</lastmod>
+    <lastmod>2025-08-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://siteoptz.ai/tools/looker</loc>
-    <lastmod>2025-08-18</lastmod>
+    <lastmod>2025-08-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://siteoptz.ai/tools/power-bi</loc>
-    <lastmod>2025-08-18</lastmod>
+    <lastmod>2025-08-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://siteoptz.ai/tools/qlik-sense</loc>
-    <lastmod>2025-08-18</lastmod>
+    <lastmod>2025-08-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://siteoptz.ai/tools/tableau-ai</loc>
-    <lastmod>2025-08-18</lastmod>
+    <lastmod>2025-08-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://siteoptz.ai/tools/hubspot-ai</loc>
-    <lastmod>2025-08-18</lastmod>
+    <lastmod>2025-08-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://siteoptz.ai/tools/mailchimp-ai</loc>
-    <lastmod>2025-08-18</lastmod>
+    <lastmod>2025-08-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://siteoptz.ai/tools/adobe-firefly</loc>
-    <lastmod>2025-08-18</lastmod>
+    <lastmod>2025-08-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://siteoptz.ai/tools/canva-ai</loc>
-    <lastmod>2025-08-18</lastmod>
+    <lastmod>2025-08-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://siteoptz.ai/tools/dall-e</loc>
-    <lastmod>2025-08-18</lastmod>
+    <lastmod>2025-08-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://siteoptz.ai/tools/leonardo-ai</loc>
-    <lastmod>2025-08-18</lastmod>
+    <lastmod>2025-08-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://siteoptz.ai/tools/midjourney</loc>
-    <lastmod>2025-08-18</lastmod>
+    <lastmod>2025-08-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://siteoptz.ai/tools/replicate-ai</loc>
-    <lastmod>2025-08-18</lastmod>
+    <lastmod>2025-08-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://siteoptz.ai/tools/stable-diffusion</loc>
-    <lastmod>2025-08-18</lastmod>
+    <lastmod>2025-08-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://siteoptz.ai/tools/stability-ai-stable-diffusion</loc>
-    <lastmod>2025-08-18</lastmod>
+    <lastmod>2025-08-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://siteoptz.ai/tools/grammarly</loc>
-    <lastmod>2025-08-18</lastmod>
+    <lastmod>2025-08-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://siteoptz.ai/tools/microsoft-copilot</loc>
-    <lastmod>2025-08-18</lastmod>
+    <lastmod>2025-08-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://siteoptz.ai/tools/notion-ai</loc>
-    <lastmod>2025-08-18</lastmod>
+    <lastmod>2025-08-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://siteoptz.ai/tools/trello-butler</loc>
-    <lastmod>2025-08-18</lastmod>
+    <lastmod>2025-08-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://siteoptz.ai/tools/zapier-ai</loc>
-    <lastmod>2025-08-18</lastmod>
+    <lastmod>2025-08-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://siteoptz.ai/tools/chatpdf</loc>
-    <lastmod>2025-08-18</lastmod>
+    <lastmod>2025-08-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://siteoptz.ai/tools/consensus</loc>
-    <lastmod>2025-08-18</lastmod>
+    <lastmod>2025-08-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://siteoptz.ai/tools/elicit</loc>
-    <lastmod>2025-08-18</lastmod>
+    <lastmod>2025-08-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://siteoptz.ai/tools/perplexity-ai</loc>
-    <lastmod>2025-08-18</lastmod>
+    <lastmod>2025-08-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://siteoptz.ai/tools/scite-ai</loc>
-    <lastmod>2025-08-18</lastmod>
+    <lastmod>2025-08-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://siteoptz.ai/tools/ahrefs-ai</loc>
-    <lastmod>2025-08-18</lastmod>
+    <lastmod>2025-08-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://siteoptz.ai/tools/frase</loc>
-    <lastmod>2025-08-18</lastmod>
+    <lastmod>2025-08-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://siteoptz.ai/tools/semrush-ai</loc>
-    <lastmod>2025-08-18</lastmod>
+    <lastmod>2025-08-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://siteoptz.ai/tools/surfer-seo</loc>
-    <lastmod>2025-08-18</lastmod>
+    <lastmod>2025-08-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://siteoptz.ai/tools/buffer-ai</loc>
-    <lastmod>2025-08-18</lastmod>
+    <lastmod>2025-08-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://siteoptz.ai/tools/hootsuite-ai</loc>
-    <lastmod>2025-08-18</lastmod>
+    <lastmod>2025-08-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://siteoptz.ai/tools/kapwing</loc>
-    <lastmod>2025-08-18</lastmod>
+    <lastmod>2025-08-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://siteoptz.ai/tools/lumen5</loc>
-    <lastmod>2025-08-18</lastmod>
+    <lastmod>2025-08-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://siteoptz.ai/tools/pictory</loc>
-    <lastmod>2025-08-18</lastmod>
+    <lastmod>2025-08-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://siteoptz.ai/tools/runway-ml</loc>
-    <lastmod>2025-08-18</lastmod>
+    <lastmod>2025-08-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://siteoptz.ai/tools/synthesia</loc>
-    <lastmod>2025-08-18</lastmod>
+    <lastmod>2025-08-25</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://siteoptz.ai/tools/gemini</loc>
+    <lastmod>2025-08-25</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://siteoptz.ai/tools/veo</loc>
+    <lastmod>2025-08-21T18:12:32.072Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://siteoptz.ai/tools/grok</loc>
+    <lastmod>2025-08-21T18:12:42.243Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://siteoptz.ai/tools/fathom</loc>
+    <lastmod>2025-08-21T18:12:51.693Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://siteoptz.ai/tools/n8n</loc>
+    <lastmod>2025-08-21T18:12:53.249Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://siteoptz.ai/tools/nyota</loc>
+    <lastmod>2025-08-21T18:12:59.191Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://siteoptz.ai/tools/make</loc>
+    <lastmod>2025-08-21T18:13:11.676Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://siteoptz.ai/tools/deep-research</loc>
+    <lastmod>2025-08-21T18:14:58.321Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://siteoptz.ai/tools/sudowrite</loc>
+    <lastmod>2025-08-21T18:15:07.730Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://siteoptz.ai/tools/rytr</loc>
+    <lastmod>2025-08-21T18:15:14.844Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://siteoptz.ai/tools/google-search</loc>
+    <lastmod>2025-08-21T18:15:20.845Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://siteoptz.ai/tools/looka</loc>
+    <lastmod>2025-08-21T18:15:30.934Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://siteoptz.ai/tools/lovable</loc>
+    <lastmod>2025-08-21T18:15:37.001Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://siteoptz.ai/tools/guru</loc>
+    <lastmod>2025-08-21T18:15:40.247Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://siteoptz.ai/tools/fyxer</loc>
+    <lastmod>2025-08-21T18:15:49.297Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://siteoptz.ai/tools/hubspot-email-marketing-tools</loc>
+    <lastmod>2025-08-21T18:15:52.176Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://siteoptz.ai/tools/shortwave</loc>
+    <lastmod>2025-08-21T18:15:55.482Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://siteoptz.ai/tools/gamma</loc>
+    <lastmod>2025-08-21T18:16:04.555Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://siteoptz.ai/tools/clockwise</loc>
+    <lastmod>2025-08-21T18:16:13.617Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://siteoptz.ai/tools/reclaim-ai</loc>
+    <lastmod>2025-08-21T18:16:14.587Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://siteoptz.ai/tools/teal</loc>
+    <lastmod>2025-08-21T18:16:22.185Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://siteoptz.ai/tools/microsoft-powerpoint</loc>
+    <lastmod>2025-08-21T18:16:25.127Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://siteoptz.ai/tools/kickresume</loc>
+    <lastmod>2025-08-21T18:16:29.466Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://siteoptz.ai/tools/udio</loc>
+    <lastmod>2025-08-21T18:16:41.735Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://siteoptz.ai/tools/suno</loc>
+    <lastmod>2025-08-21T18:16:43.421Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://siteoptz.ai/tools/adcreative-ai</loc>
+    <lastmod>2025-08-21T18:16:52.977Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://siteoptz.ai/tools/airops</loc>
+    <lastmod>2025-08-21T18:17:00.828Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://siteoptz.ai/tools/optmyzr</loc>
+    <lastmod>2025-08-25</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://siteoptz.ai/tools/adzooma</loc>
+    <lastmod>2025-08-25</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://siteoptz.ai/tools/adespresso</loc>
+    <lastmod>2025-08-25</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://siteoptz.ai/tools/wordstream</loc>
+    <lastmod>2025-08-25</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://siteoptz.ai/tools/marin-software</loc>
+    <lastmod>2025-08-25</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://siteoptz.ai/tools/resemble-ai</loc>
+    <lastmod>2025-08-25</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://siteoptz.ai/tools/descript</loc>
+    <lastmod>2025-08-25</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://siteoptz.ai/tools/speechify</loc>
+    <lastmod>2025-08-25</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://siteoptz.ai/tools/replica-studios</loc>
+    <lastmod>2025-08-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
