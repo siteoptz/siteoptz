@@ -187,7 +187,7 @@ export default function CategoryPage({ category, tools, content }: CategoryPageP
             __html: JSON.stringify({
               "@context": "https://schema.org",
               "@type": "FAQPage",
-              "mainEntity": content.faqs.map((faq: any) => ({
+              "mainEntity": (content.faqs || []).map((faq: any) => ({
                 "@type": "Question",
                 "name": faq.question,
                 "acceptedAnswer": {
@@ -337,7 +337,7 @@ export default function CategoryPage({ category, tools, content }: CategoryPageP
             </div>
             
             <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-              {content.businessCases.map((businessCase: any, index: number) => (
+              {(content.businessCases || []).map((businessCase: any, index: number) => (
                 <div key={index} className="bg-black border border-gray-800 rounded-2xl p-8">
                   <div className="flex items-center mb-6">
                     <div className="w-12 h-12 bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg flex items-center justify-center mr-4">
@@ -355,7 +355,7 @@ export default function CategoryPage({ category, tools, content }: CategoryPageP
                   <div className="border-t border-gray-800 pt-4">
                     <h5 className="text-sm font-semibold text-white mb-2">Results:</h5>
                     <ul className="space-y-1">
-                      {businessCase.results.map((result: string, resultIndex: number) => (
+                      {(businessCase.results || []).map((result: string, resultIndex: number) => (
                         <li key={resultIndex} className="text-green-400 text-sm flex items-center">
                           <CheckCircle className="w-4 h-4 mr-2" />
                           {result}
@@ -383,7 +383,7 @@ export default function CategoryPage({ category, tools, content }: CategoryPageP
                 </h3>
                 
                 <div className="space-y-8">
-                  {content.implementation.steps.map((step: any, index: number) => (
+                  {(content.implementation?.steps || []).map((step: any, index: number) => (
                     <div key={index} className="flex">
                       <div className="flex-shrink-0 w-8 h-8 bg-cyan-600 rounded-full flex items-center justify-center mr-4">
                         <span className="text-white font-bold text-sm">{index + 1}</span>
@@ -393,7 +393,7 @@ export default function CategoryPage({ category, tools, content }: CategoryPageP
                         <p className="text-gray-300 mb-3">{step.description}</p>
                         {step.details && (
                           <ul className="list-disc list-inside text-gray-400 text-sm space-y-1">
-                            {step.details.map((detail: string, detailIndex: number) => (
+                            {(step.details || []).map((detail: string, detailIndex: number) => (
                               <li key={detailIndex}>{detail}</li>
                             ))}
                           </ul>
@@ -420,7 +420,7 @@ export default function CategoryPage({ category, tools, content }: CategoryPageP
             </h2>
             
             <div className="space-y-4">
-              {content.faqs.map((faq: any, index: number) => (
+              {(content.faqs || []).map((faq: any, index: number) => (
                 <details key={index} className="bg-black border border-gray-800 rounded-lg">
                   <summary className="p-6 cursor-pointer hover:bg-gray-900 transition-colors">
                     <h3 className="text-lg font-semibold text-white inline">
@@ -508,6 +508,11 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
 
   // Load category content
   const content = categoryContent[category];
+  
+  if (!content) {
+    console.error(`Category content not found for: ${category}`);
+    return { notFound: true };
+  }
 
   return {
     props: {
