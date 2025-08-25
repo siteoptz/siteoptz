@@ -167,7 +167,7 @@ async function addToGoHighLevel(data: SubscriptionData): Promise<{ success: bool
     }
     
     console.log('================================================');
-    return { success: true, id: result.contact?.id, opportunityId: result.opportunity?.id };
+    return { success: true, id: result.contact?.id };
   } catch (error) {
     console.error('Error adding lead to GoHighLevel:', error);
     return { success: false };
