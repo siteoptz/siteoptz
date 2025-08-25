@@ -39,24 +39,27 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   }
 
   try {
-    // Parse form data including files
-    const form = formidable({
-      uploadDir: path.join(process.cwd(), 'uploads'),
-      keepExtensions: true,
-      maxFileSize: 10 * 1024 * 1024, // 10MB limit
-      filter: (part) => {
-        return part.mimetype?.includes('application/pdf') ||
-               part.mimetype?.includes('application/msword') ||
-               part.mimetype?.includes('application/vnd.openxmlformats-officedocument.wordprocessingml.document') ||
-               !part.mimetype; // Allow non-file fields
-      }
-    });
-
     // Ensure upload directory exists
     const uploadsDir = path.join(process.cwd(), 'uploads');
     if (!fs.existsSync(uploadsDir)) {
       fs.mkdirSync(uploadsDir, { recursive: true });
     }
+
+    // Parse form data including files
+    const form = formidable({
+      uploadDir: uploadsDir,
+      keepExtensions: true,
+      maxFileSize: 10 * 1024 * 1024, // 10MB limit
+      filter: (part) => {
+        // Allow all non-file fields and specific file types
+        if (!part.mimetype) {
+          return true; // Non-file fields
+        }
+        return part.mimetype.includes('application/pdf') ||
+               part.mimetype.includes('application/msword') ||
+               part.mimetype.includes('application/vnd.openxmlformats-officedocument.wordprocessingml.document');
+      }
+    });
 
     const [fields, files] = await form.parse(req);
 
@@ -87,20 +90,34 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       'positionTitle'
     ];
 
+    const missingFields = [];
     for (const field of requiredFields) {
       if (!applicationData[field as keyof JobApplicationData]) {
-        return res.status(400).json({ 
-          message: `Missing required field: ${field}`,
-          field 
-        });
+        missingFields.push(field);
       }
+    }
+
+    if (missingFields.length > 0) {
+      return res.status(400).json({ 
+        message: `Missing required fields: ${missingFields.join(', ')}`,
+        fields: missingFields
+      });
     }
 
     // Validate resume upload
     if (!applicationData.resumeFile) {
       return res.status(400).json({ 
-        message: 'Resume is required',
+        message: 'Resume file is required',
         field: 'resume'
+      });
+    }
+
+    // Validate email format
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailRegex.test(applicationData.email || '')) {
+      return res.status(400).json({ 
+        message: 'Invalid email format',
+        field: 'email'
       });
     }
 
@@ -135,11 +152,13 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     };
 
     // Submit to GoHighLevel
-    const ghlResponse = await fetch(`${process.env.GHL_API_URL}/contacts/`, {
+    const GHL_API_URL = process.env.GHL_API_URL || 'https://services.leadconnectorhq.com/contacts';
+    const ghlResponse = await fetch(`${GHL_API_URL}/`, {
       method: 'POST',
       headers: {
         'Authorization': `Bearer ${process.env.GHL_API_KEY}`,
         'Content-Type': 'application/json',
+        'Version': '2021-07-28',
       },
       body: JSON.stringify(ghlData),
     });
@@ -150,8 +169,9 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       contactId = ghlResult.contact?.id;
       console.log('Job application submitted to GoHighLevel:', contactId);
     } else {
-      console.error('Failed to submit to GoHighLevel:', await ghlResponse.text());
-      // Continue processing even if GHL fails
+      const ghlError = await ghlResponse.text();
+      console.error('Failed to submit to GoHighLevel:', ghlResponse.status, ghlError);
+      // Continue processing even if GHL fails - this shouldn't block the application
     }
 
     // Send notification email to HR team
