@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
 import PodcastSubscribeModal from '../components/PodcastSubscribeModal';
+import LeadMagnetModal from '../components/LeadMagnetModal';
 import { 
   Play,
   Clock,
@@ -38,6 +39,7 @@ export default function PodcastsPage() {
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [sortBy, setSortBy] = useState('latest');
   const [showSubscribeModal, setShowSubscribeModal] = useState(false);
+  const [showNewsletterModal, setShowNewsletterModal] = useState(false);
 
   // Calculate dates for the past 15 weeks (going backwards from today)
   const getWeeklyDate = (weeksAgo: number) => {
@@ -596,11 +598,11 @@ export default function PodcastsPage() {
               Plus, get exclusive insights and early access to episodes.
             </p>
             <button
-              onClick={() => setShowSubscribeModal(true)}
+              onClick={() => setShowNewsletterModal(true)}
               className="inline-flex items-center bg-gradient-to-r from-cyan-600 to-blue-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-700 hover:to-blue-700 transition-colors"
             >
               <Headphones className="w-5 h-5 mr-2" />
-              Subscribe Now
+              Subscribe to Our Newsletter
             </button>
           </div>
         </div>
@@ -611,6 +613,14 @@ export default function PodcastsPage() {
         isOpen={showSubscribeModal}
         onClose={() => setShowSubscribeModal(false)}
         onSubscribe={handleSubscribe}
+      />
+
+      {/* Newsletter Subscribe Modal */}
+      <LeadMagnetModal
+        isOpen={showNewsletterModal}
+        onClose={() => setShowNewsletterModal(false)}
+        resourceType="playbook"
+        source="podcast_newsletter"
       />
     </>
   );
