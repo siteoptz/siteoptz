@@ -1,5 +1,5 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
-import formidable from 'formidable';
+import formidable, { IncomingForm } from 'formidable';
 import fs from 'fs';
 import path from 'path';
 
@@ -48,26 +48,33 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     }
 
     // Parse form data including files
-    const form = formidable({
+    console.log('Creating formidable instance...');
+    const form = new IncomingForm({
       uploadDir: uploadsDir,
       keepExtensions: true,
       maxFileSize: 10 * 1024 * 1024, // 10MB limit
-      filter: (part) => {
+      filter: function({ name, originalFilename, mimetype }) {
         // Allow all non-file fields and specific file types
-        if (!part.mimetype) {
+        if (!mimetype) {
           return true; // Non-file fields
         }
-        return part.mimetype.includes('application/pdf') ||
-               part.mimetype.includes('application/msword') ||
-               part.mimetype.includes('application/vnd.openxmlformats-officedocument.wordprocessingml.document');
+        return mimetype.includes('application/pdf') ||
+               mimetype.includes('application/msword') ||
+               mimetype.includes('application/vnd.openxmlformats-officedocument.wordprocessingml.document');
       }
     });
 
     console.log('Parsing form data...');
-    const [fields, files] = await form.parse(req);
     
-    console.log('Form parsed successfully. Fields:', Object.keys(fields));
-    console.log('Files received:', Object.keys(files));
+    let fields, files;
+    try {
+      [fields, files] = await form.parse(req);
+      console.log('Form parsed successfully. Fields:', Object.keys(fields));
+      console.log('Files received:', Object.keys(files));
+    } catch (parseError) {
+      console.error('Form parsing error:', parseError);
+      throw parseError;
+    }
 
     // Extract form data
     const applicationData: Partial<JobApplicationData> = {};
