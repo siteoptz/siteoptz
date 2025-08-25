@@ -304,9 +304,20 @@ export default function PodcastsPage() {
         <title>AI & Automation Podcasts - Expert Insights | SiteOptz.ai</title>
         <meta 
           name="description" 
-          content="Discover the latest AI and automation podcasts featuring expert insights, case studies, and practical strategies for implementing AI tools in your business." 
+          content="Discover the latest AI and automation podcasts featuring expert insights, case studies, and practical strategies for implementing AI tools in your business. Weekly episodes covering ChatGPT, Claude, no-code AI, and enterprise automation." 
         />
-        <meta name="keywords" content="AI podcasts, automation podcasts, AI tools, business automation, artificial intelligence" />
+        <meta name="keywords" content="AI podcasts, automation podcasts, AI tools, business automation, artificial intelligence, ChatGPT, Claude AI, no-code AI, enterprise AI, machine learning podcasts" />
+        
+        {/* Additional SEO meta tags */}
+        <meta name="robots" content="index, follow" />
+        <link rel="canonical" href="https://siteoptz.ai/podcasts" />
+        
+        {/* Open Graph tags */}
+        <meta property="og:title" content="AI & Automation Podcasts - Expert Insights | SiteOptz.ai" />
+        <meta property="og:description" content="Discover the latest AI and automation podcasts featuring expert insights, case studies, and practical strategies for implementing AI tools in your business." />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://siteoptz.ai/podcasts" />
+        <meta property="og:site_name" content="SiteOptz.ai" />
       </Head>
 
       <main className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-black relative overflow-hidden">
@@ -368,9 +379,11 @@ export default function PodcastsPage() {
                       <span className="text-sm">{podcast.rating}</span>
                     </div>
                   </div>
-                  <h3 className="text-lg font-semibold text-white mb-3 line-clamp-2">
-                    {podcast.title}
-                  </h3>
+                  <Link href={`/podcasts/${podcast.id}`}>
+                    <h3 className="text-lg font-semibold text-white mb-3 line-clamp-2 hover:text-cyan-400 transition-colors cursor-pointer">
+                      {podcast.title}
+                    </h3>
+                  </Link>
                   <p className="text-gray-400 text-sm mb-4 line-clamp-3">
                     {podcast.description}
                   </p>
@@ -384,10 +397,10 @@ export default function PodcastsPage() {
                       {podcast.listens}
                     </div>
                   </div>
-                  <button className="w-full bg-gradient-to-r from-cyan-600 to-blue-600 text-white py-3 rounded-lg hover:from-cyan-700 hover:to-blue-700 transition-colors flex items-center justify-center">
+                  <Link href={`/podcasts/${podcast.id}`} className="w-full bg-gradient-to-r from-cyan-600 to-blue-600 text-white py-3 rounded-lg hover:from-cyan-700 hover:to-blue-700 transition-colors flex items-center justify-center">
                     <Play className="w-4 h-4 mr-2" />
                     Listen Now
-                  </button>
+                  </Link>
                 </div>
               ))}
             </div>
@@ -460,9 +473,11 @@ export default function PodcastsPage() {
                       </div>
                     </div>
                     
-                    <h3 className="text-xl font-semibold text-white mb-3">
-                      {podcast.title}
-                    </h3>
+                    <Link href={`/podcasts/${podcast.id}`}>
+                      <h3 className="text-xl font-semibold text-white mb-3 hover:text-cyan-400 transition-colors cursor-pointer">
+                        {podcast.title}
+                      </h3>
+                    </Link>
                     
                     <p className="text-gray-400 mb-4 line-clamp-2">
                       {podcast.description}
@@ -490,10 +505,10 @@ export default function PodcastsPage() {
                   </div>
                   
                   <div className="lg:col-span-1 flex lg:flex-col gap-3">
-                    <button className="flex-1 bg-gradient-to-r from-cyan-600 to-blue-600 text-white py-3 px-4 rounded-lg hover:from-cyan-700 hover:to-blue-700 transition-colors flex items-center justify-center">
+                    <Link href={`/podcasts/${podcast.id}`} className="flex-1 bg-gradient-to-r from-cyan-600 to-blue-600 text-white py-3 px-4 rounded-lg hover:from-cyan-700 hover:to-blue-700 transition-colors flex items-center justify-center">
                       <Play className="w-4 h-4 mr-2" />
                       Listen
-                    </button>
+                    </Link>
                     {podcast.transcriptUrl && (
                       <button className="flex-1 bg-gray-800 text-gray-300 py-3 px-4 rounded-lg hover:bg-gray-700 transition-colors flex items-center justify-center">
                         <Download className="w-4 h-4 mr-2" />
@@ -508,6 +523,60 @@ export default function PodcastsPage() {
                 </div>
               </div>
             ))}
+          </div>
+
+          {/* AI Leadership Podcast Section */}
+          <div className="mt-16 bg-gradient-to-r from-purple-600/20 to-pink-600/20 border border-purple-500/30 rounded-xl p-8">
+            <div className="text-center mb-8">
+              <h3 className="text-3xl font-bold text-white mb-4">
+                🎯 AI Leadership Podcast: Weekly Insights
+              </h3>
+              <p className="text-gray-300 mb-6 max-w-3xl mx-auto">
+                Join thousands of business leaders getting actionable AI strategies, tool recommendations, 
+                and implementation guides delivered weekly. Transform your business with expert insights.
+              </p>
+            </div>
+            
+            <div className="grid md:grid-cols-3 gap-6 mb-8">
+              <div className="text-center">
+                <div className="bg-purple-600 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <TrendingUp className="w-8 h-8 text-white" />
+                </div>
+                <h4 className="text-lg font-semibold text-white mb-2">Weekly Insights</h4>
+                <p className="text-gray-400">Fresh AI strategies and tool reviews every week</p>
+              </div>
+              <div className="text-center">
+                <div className="bg-purple-600 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <Users className="w-8 h-8 text-white" />
+                </div>
+                <h4 className="text-lg font-semibold text-white mb-2">Expert Guests</h4>
+                <p className="text-gray-400">Industry leaders sharing real-world experiences</p>
+              </div>
+              <div className="text-center">
+                <div className="bg-purple-600 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <Download className="w-8 h-8 text-white" />
+                </div>
+                <h4 className="text-lg font-semibold text-white mb-2">Free Resources</h4>
+                <p className="text-gray-400">Implementation guides, templates, and frameworks</p>
+              </div>
+            </div>
+            
+            <div className="text-center">
+              <Link
+                href="/resources"
+                className="inline-flex items-center bg-gradient-to-r from-purple-600 to-pink-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-purple-700 hover:to-pink-700 transition-colors mr-4"
+              >
+                <Download className="w-5 h-5 mr-2" />
+                Get Free AI Resources
+              </Link>
+              <Link
+                href="/subscribe"
+                className="inline-flex items-center bg-gray-800 text-white px-8 py-4 rounded-lg font-semibold hover:bg-gray-700 transition-colors"
+              >
+                <Headphones className="w-5 h-5 mr-2" />
+                Subscribe to Podcast
+              </Link>
+            </div>
           </div>
 
           {/* Subscribe Section */}
