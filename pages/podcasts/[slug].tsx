@@ -1761,6 +1761,17 @@ export default function PodcastPage({ podcast, relatedPodcasts }: PodcastPagePro
                     </Link>
                   ))}
                 </div>
+                
+                {/* More Episodes Button */}
+                <div className="mt-6 text-center">
+                  <Link
+                    href="/podcasts/"
+                    className="inline-flex items-center bg-gradient-to-r from-cyan-600 to-blue-600 text-white px-6 py-3 rounded-lg font-semibold hover:from-cyan-700 hover:to-blue-700 transition-colors"
+                  >
+                    <Headphones className="w-4 h-4 mr-2" />
+                    More Episodes
+                  </Link>
+                </div>
               </div>
             </div>
           </div>
