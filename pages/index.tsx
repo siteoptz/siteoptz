@@ -195,15 +195,26 @@ export default function HomePage({ featuredTools, popularComparisons, faqs }: Ho
 
               return Object.entries(toolsByCategory).map(([category, tools]: [string, any]) => (
                 <div key={category} className="mb-16">
-                  <div className="flex items-center mb-8">
-                    <h3 className="text-2xl font-bold text-white">{category.startsWith('Best') ? category : `Best ${category} AI Tools`}</h3>
-                    <span className="ml-3 px-3 py-1 bg-blue-600 text-white text-sm rounded-full">
-                      {tools.length} tools
-                    </span>
+                  <div className="flex items-center justify-between mb-8">
+                    <div className="flex items-center">
+                      <h3 className="text-2xl font-bold text-white">{category.startsWith('Best') ? category : `Best ${category} AI Tools`}</h3>
+                      <span className="ml-3 px-3 py-1 bg-blue-600 text-white text-sm rounded-full">
+                        {tools.length} tools
+                      </span>
+                    </div>
+                    {tools.length > 4 && (
+                      <Link 
+                        href={`/tools/?category=${encodeURIComponent(category)}`}
+                        className="text-cyan-400 hover:text-cyan-300 font-semibold text-sm flex items-center gap-2 transition-colors"
+                      >
+                        See All {category} Tools
+                        <ArrowRight className="w-4 h-4" />
+                      </Link>
+                    )}
                   </div>
                   
                   <div className="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
-                    {tools.map((tool: Tool) => (
+                    {tools.slice(0, 4).map((tool: Tool) => (
                       <div key={tool.id} className="bg-black border border-gray-800 rounded-2xl shadow-lg hover:shadow-xl transition-all hover:border-gray-600 p-6">
                         <div className="flex items-center gap-3 mb-4">
                           <div className="w-12 h-12 bg-gray-900 rounded-lg flex items-center justify-center border border-gray-700">
