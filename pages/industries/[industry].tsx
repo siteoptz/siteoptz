@@ -156,9 +156,16 @@ export default function IndustryPage({ industry, content, slug }: IndustryPagePr
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="max-w-4xl mx-auto">
               <div className="bg-black border border-gray-800 rounded-2xl p-8">
-                <p className="text-lg text-gray-300 leading-relaxed mb-8">
-                  {content.intro.content}
-                </p>
+                <div className="mb-8">
+                  {content.intro.content.split('\n\n').map((paragraph, index) => (
+                    <p 
+                      key={index} 
+                      className="text-lg text-gray-300 leading-relaxed mb-6 last:mb-0"
+                    >
+                      {paragraph}
+                    </p>
+                  ))}
+                </div>
                 
                 {/* AI Solutions We Recommend Section */}
                 <div className="border-t border-gray-800 pt-8">
