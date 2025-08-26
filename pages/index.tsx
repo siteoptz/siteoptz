@@ -270,7 +270,7 @@ export default function HomePage({ featuredTools, popularComparisons, faqs }: Ho
                         href={`/tools/?category=${encodeURIComponent(category)}`}
                         className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-cyan-600 to-blue-600 text-white font-semibold rounded-xl hover:from-cyan-700 hover:to-blue-700 transform hover:scale-105 transition-all duration-200 shadow-lg hover:shadow-xl"
                       >
-                        See All {tools.length} {category} Tools
+                        See All {tools.length} {category.endsWith('Tools') || category.endsWith('tools') ? category : `${category} Tools`}
                         <ArrowRight className="ml-2 w-5 h-5" />
                       </Link>
                     </div>
