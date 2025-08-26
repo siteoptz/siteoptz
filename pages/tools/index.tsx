@@ -82,8 +82,9 @@ export default function ToolsPage({ tools, categories, faqs }: { tools: any[], c
 
   // Redirect to review page when user changes selection in dropdown
   const handleToolChange = (toolName: string) => {
-    // Convert tool name to URL slug format
-    const toolSlug = toolName.toLowerCase().replace(/\s+/g, '-');
+    // Find the tool to get its slug
+    const tool = filteredTools.find(t => (t.tool_name || t.toolName) === toolName);
+    const toolSlug = tool?.slug || toolName.toLowerCase().replace(/\s+/g, '-');
     // Redirect to the review page
     router.push(`/reviews/${toolSlug}`);
   };
@@ -322,7 +323,7 @@ export default function ToolsPage({ tools, categories, faqs }: { tools: any[], c
                     
                     <div className="mb-4">
                       <a 
-                        href={`/reviews/${toolName.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-+|-+$/g, '')}`}
+                        href={`/reviews/${tool.slug || toolName.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-+|-+$/g, '')}`}
                         className="text-gray-400 hover:text-white text-sm font-medium inline-flex items-center transition-colors"
                         onClick={(e) => e.stopPropagation()}
                       >
