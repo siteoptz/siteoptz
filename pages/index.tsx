@@ -195,22 +195,11 @@ export default function HomePage({ featuredTools, popularComparisons, faqs }: Ho
 
               return Object.entries(toolsByCategory).map(([category, tools]: [string, any]) => (
                 <div key={category} className="mb-16">
-                  <div className="flex items-center justify-between mb-8">
-                    <div className="flex items-center">
-                      <h3 className="text-2xl font-bold text-white">{category.startsWith('Best') ? category : `Best ${category} AI Tools`}</h3>
-                      <span className="ml-3 px-3 py-1 bg-blue-600 text-white text-sm rounded-full">
-                        {tools.length} tools
-                      </span>
-                    </div>
-                    {tools.length > 4 && (
-                      <Link 
-                        href={`/tools/?category=${encodeURIComponent(category)}`}
-                        className="text-cyan-400 hover:text-cyan-300 font-semibold text-sm flex items-center gap-2 transition-colors"
-                      >
-                        See All {category} Tools
-                        <ArrowRight className="w-4 h-4" />
-                      </Link>
-                    )}
+                  <div className="flex items-center mb-8">
+                    <h3 className="text-2xl font-bold text-white">{category.startsWith('Best') ? category : `Best ${category} AI Tools`}</h3>
+                    <span className="ml-3 px-3 py-1 bg-blue-600 text-white text-sm rounded-full">
+                      {tools.length} tools
+                    </span>
                   </div>
                   
                   <div className="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
@@ -274,6 +263,18 @@ export default function HomePage({ featuredTools, popularComparisons, faqs }: Ho
                       </div>
                     ))}
                   </div>
+                  
+                  {tools.length > 4 && (
+                    <div className="text-center mt-8">
+                      <Link 
+                        href={`/tools/?category=${encodeURIComponent(category)}`}
+                        className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-cyan-600 to-blue-600 text-white font-semibold rounded-xl hover:from-cyan-700 hover:to-blue-700 transform hover:scale-105 transition-all duration-200 shadow-lg hover:shadow-xl"
+                      >
+                        See All {tools.length} {category} Tools
+                        <ArrowRight className="ml-2 w-5 h-5" />
+                      </Link>
+                    </div>
+                  )}
                 </div>
               ));
             })()}
