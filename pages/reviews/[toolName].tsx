@@ -312,7 +312,7 @@ export default function ReviewPage({ tool, pageTitle, slug, relatedTools, relate
                     rel="noopener noreferrer sponsored"
                     className="bg-gradient-to-r from-blue-600 to-purple-600 text-white hover:from-blue-700 hover:to-purple-700 font-bold py-3 px-8 rounded-lg transform hover:scale-105 transition-all duration-200 shadow-lg hover:shadow-xl text-center"
                   >
-                    Try {tool.tool_name} Free
+                    Try {tool.tool_name} Here
                   </a>
                 </div>
               </div>
@@ -684,7 +684,7 @@ export default function ReviewPage({ tool, pageTitle, slug, relatedTools, relate
               Ready to Try {tool.tool_name}?
             </h2>
             <p className="text-xl text-gray-300 mb-8">
-              Start your free trial today and experience {tool.tool_name} for yourself.
+              Get started with {tool.tool_name} today and experience it for yourself.
             </p>
             <div className="flex justify-center">
               <a
@@ -693,7 +693,7 @@ export default function ReviewPage({ tool, pageTitle, slug, relatedTools, relate
                 rel="noopener noreferrer sponsored"
                 className="bg-gradient-to-r from-blue-600 to-purple-600 text-white hover:from-blue-700 hover:to-purple-700 font-bold py-4 px-8 rounded-lg transform hover:scale-105 transition-all duration-200 shadow-lg hover:shadow-xl"
               >
-                Start Free Trial
+                Try {tool.tool_name} Here
               </a>
             </div>
           </div>
