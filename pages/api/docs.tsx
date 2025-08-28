@@ -168,7 +168,7 @@ curl "https://siteoptz.ai/api/v1/tools?category=seo&limit=5"`}
 
                 {/* Tool Details */}
                 <div id="tool-detail" className="mb-8">
-                  <h3 className="text-xl font-semibold text-gray-900 mb-4">GET /tools/{slug}</h3>
+                  <h3 className="text-xl font-semibold text-gray-900 mb-4">GET /tools/&#123;slug&#125;</h3>
                   <p className="text-gray-600 mb-4">Get detailed information about a specific AI tool.</p>
                   
                   <div className="bg-gray-900 rounded-lg p-4 mb-4">
