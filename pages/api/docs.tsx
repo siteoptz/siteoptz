@@ -75,7 +75,7 @@ const APIDocsPage = () => {
                 <div className="bg-blue-50 border border-blue-200 rounded-lg p-4">
                   <h4 className="font-semibold text-blue-900 mb-2">🚀 Quick Start</h4>
                   <p className="text-blue-800 text-sm">
-                    Our API is currently open and doesn't require authentication. 
+                    Our API is currently open and doesn&apos;t require authentication. 
                     Simply make HTTP requests to our endpoints to get started!
                   </p>
                 </div>
@@ -256,8 +256,8 @@ const compareData = await comparison.json();`}
 response = requests.get('https://siteoptz.ai/api/v1/tools?category=writing&limit=10')
 tools = response.json()
 
-for tool in tools['data']:
-    print(f"{tool['name']}: {tool['overview']['description']}")
+for tool in tools[&apos;data&apos;]:
+    print(f&quot;{tool[&apos;name&apos;]}: {tool[&apos;overview&apos;][&apos;description&apos;]}&quot;)
 
 # Search for AI tools
 search_response = requests.get('https://siteoptz.ai/api/v1/tools?search=chatbot')

@@ -313,12 +313,12 @@ const APIKeysPage = () => {
 
           {/* API Documentation Link */}
           <div className="mt-8 text-center">
-            <a 
+            <Link 
               href="/api/docs" 
               className="inline-flex items-center px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors"
             >
               📚 View API Documentation
-            </a>
+            </Link>
           </div>
 
         </div>
