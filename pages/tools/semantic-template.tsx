@@ -418,19 +418,41 @@ export default function SemanticToolPage({ tool, relatedTools }: ToolPageProps) 
   );
 }
 
-// Example static props/paths implementation
-export const getStaticPaths: GetStaticPaths = async () => {
-  return {
-    paths: [],
-    fallback: 'blocking',
-  };
-};
+// Example static props implementation for dynamic routes
+// Note: Only use getStaticPaths with dynamic routes like [slug].tsx
+// export const getStaticPaths: GetStaticPaths = async () => {
+//   return {
+//     paths: [],
+//     fallback: 'blocking',
+//   };
+// };
 
 export const getStaticProps: GetStaticProps = async ({ params }) => {
   // Fetch tool data here
   return {
     props: {
-      tool: {},
+      tool: {
+        name: "Example Tool",
+        meta: {
+          title: "Example Tool - Semantic HTML Template",
+          description: "Example semantic HTML template",
+          keywords: "example, template, semantic, html",
+          canonical: "https://siteoptz.ai/tools/example"
+        },
+        schema: {},
+        overview: {
+          category: "Template",
+          description: "This is an example semantic HTML template",
+          release_year: 2024
+        },
+        logo: "/images/tools/placeholder-logo.svg",
+        slug: "example-tool",
+        pricing: [],
+        use_cases: [],
+        pros: [],
+        cons: [],
+        features: []
+      },
       relatedTools: [],
     },
   };
