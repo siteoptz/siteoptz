@@ -287,7 +287,7 @@ search_results = search_response.json()`}
                     <h4 className="font-semibold text-gray-900 mb-2">Tool List Widget</h4>
                     <p className="text-gray-600 text-sm mb-3">Display a customizable list of AI tools</p>
                     <div className="bg-gray-100 rounded p-2 text-xs text-gray-600">
-                      &lt;div id="siteoptz-tools"&gt;&lt;/div&gt;
+                      &lt;div id=&quot;siteoptz-tools&quot;&gt;&lt;/div&gt;
                     </div>
                   </div>
                   
@@ -295,7 +295,7 @@ search_results = search_response.json()`}
                     <h4 className="font-semibold text-gray-900 mb-2">Search Widget</h4>
                     <p className="text-gray-600 text-sm mb-3">Add AI tool search to your site</p>
                     <div className="bg-gray-100 rounded p-2 text-xs text-gray-600">
-                      &lt;div id="siteoptz-search"&gt;&lt;/div&gt;
+                      &lt;div id=&quot;siteoptz-search&quot;&gt;&lt;/div&gt;
                     </div>
                   </div>
                 </div>
