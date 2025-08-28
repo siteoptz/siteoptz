@@ -1,0 +1,414 @@
+{
+  "aiToolsComparisonData": [
+    {
+      "tool_name": "ChatGPT",
+      "vendor": "OpenAI",
+      "features": {
+        "core": [
+          "Natural language processing",
+          "Conversational AI chat",
+          "Text generation and editing",
+          "Code assistance",
+          "Mathematical calculations",
+          "Language translation",
+          "Content summarization",
+          "Creative writing assistance"
+        ],
+        "advanced": [
+          "GPT-4 Turbo model access",
+          "Custom GPT creation",
+          "DALL-E 3 image generation",
+          "Code interpreter",
+          "Web browsing capability",
+          "File uploads and analysis",
+          "Advanced data analysis",
+          "Plugin ecosystem"
+        ],
+        "integrations": [
+          "OpenAI API",
+          "Microsoft integration",
+          "Third-party apps via API",
+          "Browser extensions",
+          "Mobile applications",
+          "Zapier connectors",
+          "Slack integration",
+          "Discord bots"
+        ]
+      },
+      "pricing": {
+        "monthly": {
+          "free": 0,
+          "plus": 20,
+          "team": 25,
+          "enterprise": "Custom"
+        },
+        "yearly": {
+          "free": 0,
+          "plus": 200,
+          "team": 250,
+          "enterprise": "Custom"
+        },
+        "enterprise": "Custom pricing based on usage and requirements"
+      },
+      "free_trial": true,
+      "pros": [
+        "Most advanced language model available",
+        "Exceptional conversational abilities",
+        "Strong reasoning and problem-solving",
+        "Affordable pricing for individuals",
+        "Large community and extensive documentation",
+        "Regular model updates and improvements",
+        "Versatile for various use cases",
+        "Mobile app availability"
+      ],
+      "cons": [
+        "Internet access limited to Plus users",
+        "Can generate outdated information",
+        "Usage limits on free tier",
+        "Occasional inconsistent responses",
+        "Limited customization options",
+        "No dedicated SEO optimization features",
+        "Brand voice consistency challenges"
+      ],
+      "rating": 4.6,
+      "use_cases": [
+        "General AI assistance and productivity",
+        "Code development and debugging",
+        "Content creation and editing",
+        "Research and data analysis",
+        "Educational tutoring",
+        "Creative writing projects",
+        "Business communication",
+        "Customer support automation"
+      ]
+    },
+    {
+      "tool_name": "Jasper AI",
+      "vendor": "Jasper AI Inc.",
+      "features": {
+        "core": [
+          "AI content generation",
+          "50+ content templates",
+          "Brand voice training",
+          "Multi-language support",
+          "Content optimization",
+          "Plagiarism detection",
+          "Team collaboration tools",
+          "Content calendar"
+        ],
+        "advanced": [
+          "SEO content optimization",
+          "Art generation with DALL-E 2",
+          "Brand voice consistency",
+          "Content performance analytics",
+          "A/B testing capabilities",
+          "Advanced grammar checking",
+          "Content workflow automation",
+          "Custom template creation"
+        ],
+        "integrations": [
+          "Google Docs",
+          "WordPress",
+          "Shopify",
+          "HubSpot",
+          "Salesforce",
+          "Zapier",
+          "Chrome extension",
+          "Surfer SEO"
+        ]
+      },
+      "pricing": {
+        "monthly": {
+          "starter": 39,
+          "boss_mode": 99,
+          "business": "Custom"
+        },
+        "yearly": {
+          "starter": 396,
+          "boss_mode": 1008,
+          "business": "Custom"
+        },
+        "enterprise": "Custom pricing starting at $500/month"
+      },
+      "free_trial": true,
+      "pros": [
+        "Specialized for content marketing",
+        "Excellent brand voice consistency",
+        "Strong SEO optimization features",
+        "50+ ready-made templates",
+        "Good team collaboration tools",
+        "Plagiarism checker included",
+        "Content performance tracking",
+        "WordPress integration"
+      ],
+      "cons": [
+        "Higher pricing than competitors",
+        "Steep learning curve for beginners",
+        "Limited free trial credits",
+        "Less versatile than general AI tools",
+        "Occasional repetitive content",
+        "No mobile app available",
+        "Requires internet connection",
+        "Limited API access on lower tiers"
+      ],
+      "rating": 4.4,
+      "use_cases": [
+        "Content marketing campaigns",
+        "Blog post creation and optimization",
+        "Social media content generation",
+        "Email marketing campaigns",
+        "Ad copy creation",
+        "Product descriptions",
+        "SEO content optimization",
+        "Brand-consistent content creation"
+      ]
+    },
+    {
+      "tool_name": "Claude",
+      "vendor": "Anthropic",
+      "features": {
+        "core": [
+          "Constitutional AI approach",
+          "Long-form conversation capability",
+          "Document analysis and summarization",
+          "Code generation and debugging",
+          "Mathematical reasoning",
+          "Creative writing assistance",
+          "Research and analysis",
+          "Multi-turn conversations"
+        ],
+        "advanced": [
+          "100k+ token context window",
+          "File upload and analysis",
+          "Vision capabilities (image analysis)",
+          "Advanced reasoning tasks",
+          "Ethical AI responses",
+          "Safety-focused outputs",
+          "Academic research assistance",
+          "Complex problem solving"
+        ],
+        "integrations": [
+          "Anthropic API",
+          "Slack integration",
+          "Web interface",
+          "Mobile web access",
+          "Third-party integrations via API",
+          "Browser extensions",
+          "Developer tools",
+          "Enterprise solutions"
+        ]
+      },
+      "pricing": {
+        "monthly": {
+          "free": 0,
+          "pro": 20,
+          "team": 25,
+          "enterprise": "Custom"
+        },
+        "yearly": {
+          "free": 0,
+          "pro": 200,
+          "team": 250,
+          "enterprise": "Custom"
+        },
+        "enterprise": "Custom pricing with volume discounts"
+      },
+      "free_trial": true,
+      "pros": [
+        "Exceptional long-form content handling",
+        "Strong ethical guidelines and safety",
+        "Excellent document analysis capabilities",
+        "Large context window (100k+ tokens)",
+        "High-quality reasoning and analysis",
+        "Good at following complex instructions",
+        "Strong academic and research capabilities",
+        "Transparent AI development approach"
+      ],
+      "cons": [
+        "Smaller ecosystem than ChatGPT",
+        "Less brand recognition",
+        "Newer platform with evolving features",
+        "Limited plugin ecosystem",
+        "Fewer third-party integrations",
+        "No image generation capabilities",
+        "Conservative responses sometimes",
+        "Limited mobile app options"
+      ],
+      "rating": 4.5,
+      "use_cases": [
+        "Academic research and analysis",
+        "Long-form content creation",
+        "Document review and summarization",
+        "Code review and optimization",
+        "Complex reasoning tasks",
+        "Ethical AI applications",
+        "Educational content creation",
+        "Professional writing assistance"
+      ]
+    },
+    {
+      "tool_name": "Gemini",
+      "vendor": "Google",
+      "features": {
+        "core": [
+          "Multimodal AI capabilities",
+          "Text, image, and code processing",
+          "Real-time information access",
+          "Google services integration",
+          "Language understanding and generation",
+          "Search-powered responses",
+          "Voice interaction support",
+          "Mobile and web accessibility"
+        ],
+        "advanced": [
+          "Ultra model for complex tasks",
+          "Image generation and editing",
+          "Advanced coding assistance",
+          "Real-time web search integration",
+          "Google Workspace integration",
+          "Advanced data analysis",
+          "Multi-language capabilities",
+          "Enterprise-grade security"
+        ],
+        "integrations": [
+          "Google Workspace (Docs, Sheets, Gmail)",
+          "Google Search",
+          "Google Cloud Platform",
+          "Android integration",
+          "Chrome browser",
+          "Google Assistant",
+          "YouTube integration",
+          "Google Ads"
+        ]
+      },
+      "pricing": {
+        "monthly": {
+          "free": 0,
+          "advanced": 20,
+          "business": "Custom",
+          "enterprise": "Custom"
+        },
+        "yearly": {
+          "free": 0,
+          "advanced": 200,
+          "business": "Custom",
+          "enterprise": "Custom"
+        },
+        "enterprise": "Volume-based pricing with Google Cloud"
+      },
+      "free_trial": true,
+      "pros": [
+        "Deep Google services integration",
+        "Real-time web information access",
+        "Strong multimodal capabilities",
+        "Excellent search-powered responses",
+        "Free tier with generous usage",
+        "Fast response times",
+        "Google Workspace integration",
+        "Strong mobile experience"
+      ],
+      "cons": [
+        "Newer platform with evolving capabilities",
+        "Less customization options",
+        "Limited third-party integrations",
+        "Heavily tied to Google ecosystem",
+        "Privacy concerns with Google",
+        "Less specialized for specific use cases",
+        "Limited offline capabilities",
+        "Inconsistent availability globally"
+      ],
+      "rating": 4.3,
+      "use_cases": [
+        "Research with real-time information",
+        "Google Workspace productivity",
+        "Multimodal content creation",
+        "Search-enhanced content generation",
+        "Mobile AI assistance",
+        "Google Ads optimization",
+        "Educational content with current info",
+        "Enterprise Google Cloud integration"
+      ]
+    },
+    {
+      "tool_name": "Perplexity AI",
+      "vendor": "Perplexity AI",
+      "features": {
+        "core": [
+          "AI-powered search and research",
+          "Real-time information access",
+          "Source citation and verification",
+          "Conversational search interface",
+          "Multi-source information synthesis",
+          "Academic and web source integration",
+          "Follow-up question suggestions",
+          "Clean, focused responses"
+        ],
+        "advanced": [
+          "Pro search with GPT-4",
+          "File upload and analysis",
+          "Image analysis capabilities",
+          "Advanced search filters",
+          "API access for developers",
+          "Copilot feature for guided research",
+          "Custom search collections",
+          "Export and sharing features"
+        ],
+        "integrations": [
+          "Web browser extensions",
+          "API for developers",
+          "Mobile applications",
+          "Academic databases",
+          "News sources",
+          "Social media integration",
+          "Research tools",
+          "Third-party apps via API"
+        ]
+      },
+      "pricing": {
+        "monthly": {
+          "free": 0,
+          "pro": 20,
+          "enterprise": "Custom"
+        },
+        "yearly": {
+          "free": 0,
+          "pro": 200,
+          "enterprise": "Custom"
+        },
+        "enterprise": "Custom pricing for teams and organizations"
+      },
+      "free_trial": true,
+      "pros": [
+        "Excellent for research and fact-checking",
+        "Real-time, up-to-date information",
+        "Source citations and transparency",
+        "Clean, ad-free interface",
+        "Strong mobile experience",
+        "Academic research capabilities",
+        "Multiple AI model options",
+        "Conversational search experience"
+      ],
+      "cons": [
+        "Limited creative content generation",
+        "Focused primarily on search/research",
+        "Smaller feature set than general AI tools",
+        "Less customization options",
+        "Limited offline capabilities",
+        "Newer platform with smaller community",
+        "No image generation features",
+        "Limited integration ecosystem"
+      ],
+      "rating": 4.4,
+      "use_cases": [
+        "Academic and scientific research",
+        "Fact-checking and verification",
+        "Current events and news analysis",
+        "Market research and analysis",
+        "Competitive intelligence",
+        "Educational content creation",
+        "Journalist research assistance",
+        "Due diligence and investigation"
+      ]
+    }
+  ]
+}

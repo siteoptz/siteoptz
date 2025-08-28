@@ -1,0 +1,119 @@
+{
+  "category": "SEO & Optimization",
+  "tools": [
+    {
+      "id": "airops",
+      "name": "AirOps",
+      "slug": "airops",
+      "logo": "/images/tools/airops-logo.svg",
+      "description": "AirOps is an AI-powered platform designed to help brands increase their visibility in AI search. It provides a comprehensive solution that takes users from insights to action, enabling them to fill content gaps, optimize for agent readability, and engage in relevant conversations. The platform aims to transform content teams into revenue drivers by offering expert-led training, strategic frameworks, and proven templates.",
+      "overview": {
+        "description": "AirOps is an AI-powered platform designed to help brands increase their visibility in AI search. It provides a comprehensive solution that takes users from insights to action, enabling them to fill content gaps, optimize for agent readability, and engage in relevant conversations. The platform aims to transform content teams into revenue drivers by offering expert-led training, strategic frameworks, and proven templates.",
+        "category": "SEO & Optimization",
+        "developer": "AirOps",
+        "website": "https://www.airops.com/",
+        "integrations": [
+          "Marketing stack integrations",
+          "Third-party market data"
+        ],
+        "use_cases": [
+          "Increasing brand visibility in AI search",
+          "Content creation and optimization",
+          "Content refresh and updates",
+          "Improving SEO and AEO (AI Engine Optimization)",
+          "Scaling content production for clients",
+          "Building AI-driven content workflows",
+          "Training teams on AI for content strategy",
+          "Optimizing product descriptions and catalog pages"
+        ]
+      },
+      "features": [
+        "AI-driven content insights and action planning",
+        "Content gap identification and optimization",
+        "Agent readability optimization",
+        "Team training and enablement for AI adoption",
+        "Data foundation for brand guidelines and market expertise",
+        "AI workflows for content creation and optimization",
+        "Run and review grids for scaling content operations",
+        "Integration with marketing stack and third-party market data",
+        "Content refresh capabilities",
+        "AI Search strategy and best practices"
+      ],
+      "pricing": [
+        {
+          "tier": "Free",
+          "price_per_month": 49,
+          "billing_period": "month",
+          "features": [
+            "Basic features"
+          ],
+          "description": "Free features",
+          "popular": false
+        },
+        {
+          "tier": "Enterprise",
+          "price_per_month": "Custom",
+          "billing_period": "month",
+          "features": [
+            "Custom features",
+            "Dedicated support",
+            "SLA"
+          ],
+          "description": "Enterprise-grade features",
+          "popular": false
+        }
+      ],
+      "pros": [
+        "Increases brand visibility in AI search",
+        "Transforms content teams into revenue drivers",
+        "Provides a complete content lifecycle solution from insights to action",
+        "Helps optimize content for AI agents and readability",
+        "Offers expert guidance and training for AI adoption",
+        "Scalable content production capabilities",
+        "Proven results with case studies showing significant growth"
+      ],
+      "cons": [
+        "Pricing details are not explicitly listed and may require contacting sales.",
+        "Some features might require a learning curve for optimal use."
+      ],
+      "benchmarks": {
+        "speed": 8.6,
+        "accuracy": 8.6,
+        "integration": 7,
+        "ease_of_use": 8.6,
+        "value": 7
+      },
+      "affiliate_link": "https://www.airops.com/",
+      "category": "SEO & Optimization",
+      "tags": [
+        "ai content strategy & optimization",
+        "ai tool",
+        "content teams, seo specialists, marketing agencies, e-commerce businesses"
+      ],
+      "last_updated": "2025-08-21T18:17:00.828Z",
+      "rating": 4.3,
+      "review_count": 2956,
+      "free_trial": false,
+      "seo": {
+        "title": "AirOps Review 2025 - AI Content Strategy & Optimization AI Tool | SiteOptz",
+        "description": "AirOps is an AI-powered platform designed to help brands increase their visibility in AI search. It provides a comprehen. Compare pricing, features, pros & cons. Expert AI Content Strategy & Optimization AI tool review.",
+        "keywords": [
+          "airops",
+          "airops review",
+          "ai content strategy & optimization ai",
+          "ai content strategy & optimization tools",
+          "ai tools comparison",
+          "siteoptz review"
+        ],
+        "canonical_url": "https://siteoptz.ai/tools/airops"
+      },
+      "meta": {
+        "title": "AirOps Review 2024: Features, Pricing & Alternatives",
+        "description": "AirOps is an AI-powered platform designed to help brands increase their visibility in AI search. It provides a comprehensive solution that takes users from insights to action, enabling them to fill content gaps, optimize for agent readability, and engage in relevant conversations. The platform aims to transform content teams into revenue drivers by offering expert-led training, strategic frameworks, and proven templates."
+      },
+      "related_tools": []
+    }
+  ],
+  "totalTools": 1,
+  "lastUpdated": "2025-08-28T00:32:02.861Z"
+}

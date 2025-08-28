@@ -1,0 +1,234 @@
+{
+  "timestamp": "2025-08-28T00:32:02.863Z",
+  "summary": {
+    "totalTools": 93,
+    "newToolsAdded": 0,
+    "toolsUpdated": 0,
+    "duplicatesSkipped": 0
+  },
+  "categories": {
+    "other": {
+      "count": 58,
+      "avgRating": 0,
+      "freeTools": 0,
+      "paidTools": 58
+    },
+    "Video Generation": {
+      "count": 1,
+      "avgRating": 5,
+      "freeTools": 0,
+      "paidTools": 1
+    },
+    "AI Automation": {
+      "count": 3,
+      "avgRating": 4.6000000000000005,
+      "freeTools": 0,
+      "paidTools": 3
+    },
+    "Productivity": {
+      "count": 10,
+      "avgRating": 4.51,
+      "freeTools": 0,
+      "paidTools": 10
+    },
+    "Research & Education": {
+      "count": 1,
+      "avgRating": 4.2,
+      "freeTools": 0,
+      "paidTools": 1
+    },
+    "Content Creation": {
+      "count": 4,
+      "avgRating": 4.637499999999999,
+      "freeTools": 0,
+      "paidTools": 4
+    },
+    "Social Media": {
+      "count": 3,
+      "avgRating": 4.766666666666667,
+      "freeTools": 0,
+      "paidTools": 3
+    },
+    "Code Generation": {
+      "count": 1,
+      "avgRating": 4.3,
+      "freeTools": 0,
+      "paidTools": 1
+    },
+    "Email Marketing": {
+      "count": 2,
+      "avgRating": 4.4,
+      "freeTools": 0,
+      "paidTools": 2
+    },
+    "SEO & Optimization": {
+      "count": 1,
+      "avgRating": 4.3,
+      "freeTools": 0,
+      "paidTools": 1
+    },
+    "Paid Search & PPC": {
+      "count": 5,
+      "avgRating": 0,
+      "freeTools": 0,
+      "paidTools": 5
+    },
+    "Best Voice AI Tools": {
+      "count": 4,
+      "avgRating": 0,
+      "freeTools": 0,
+      "paidTools": 4
+    }
+  },
+  "topRatedTools": [
+    {
+      "name": "Veo",
+      "category": "Video Generation",
+      "rating": 5
+    },
+    {
+      "name": "Fathom",
+      "category": "Productivity",
+      "rating": 5
+    },
+    {
+      "name": "Looka",
+      "category": "Social Media",
+      "rating": 5
+    },
+    {
+      "name": "n8n",
+      "category": "AI Automation",
+      "rating": 4.9
+    },
+    {
+      "name": "Rytr",
+      "category": "Content Creation",
+      "rating": 4.9
+    },
+    {
+      "name": "Suno",
+      "category": "Content Creation",
+      "rating": 4.85
+    },
+    {
+      "name": "AdCreative.ai",
+      "category": "Social Media",
+      "rating": 4.8
+    },
+    {
+      "name": "Make",
+      "category": "AI Automation",
+      "rating": 4.7
+    },
+    {
+      "name": "Guru",
+      "category": "Productivity",
+      "rating": 4.7
+    },
+    {
+      "name": "Kickresume",
+      "category": "Productivity",
+      "rating": 4.6
+    }
+  ],
+  "freeTools": [],
+  "paidTools": [
+    "ElevenLabs",
+    "Murph AI",
+    "Play.ht",
+    "Synthesys",
+    "Wellsaid Labs",
+    "Amazon CodeWhisperer",
+    "Cursor",
+    "GitHub Copilot",
+    "Hugging Face",
+    "Replit Ghost",
+    "Tabnine",
+    "Anthropic Claude",
+    "Character.AI",
+    "ChatGPT",
+    "Claude",
+    "Cohere",
+    "Copy.ai",
+    "GPT-4",
+    "Jasper",
+    "Jasper AI",
+    "Writesonic",
+    "ChatGPT Enterprise",
+    "Looker",
+    "Power BI",
+    "Qlik Sense",
+    "Tableau AI",
+    "HubSpot AI",
+    "Mailchimp AI",
+    "Adobe Firefly",
+    "Canva AI",
+    "DALL-E",
+    "Leonardo.ai",
+    "Midjourney",
+    "Replicate",
+    "Stable Diffusion",
+    "Stable Diffusion Web",
+    "Grammarly",
+    "Microsoft Copilot",
+    "Notion AI",
+    "Trello Butler",
+    "Zapier AI",
+    "ChatPDF",
+    "Consensus",
+    "Elicit",
+    "Perplexity AI",
+    "scite.ai",
+    "Ahrefs AI",
+    "Frase",
+    "Semrush AI",
+    "Surfer SEO",
+    "Buffer AI",
+    "Hootsuite AI",
+    "Kapwing",
+    "Lumen5",
+    "Pictory",
+    "Runway ML",
+    "Synthesia",
+    "Gemini",
+    "Veo",
+    "Grok",
+    "Fathom",
+    "n8n",
+    "Nyota",
+    "Make",
+    "Deep Research",
+    "Sudowrite",
+    "Rytr",
+    "Google Search",
+    "Looka",
+    "Lovable",
+    "Guru",
+    "Fyxer",
+    "HubSpot Email Marketing Tools",
+    "Shortwave",
+    "Gamma",
+    "Clockwise",
+    "Reclaim.ai",
+    "Teal",
+    "Microsoft PowerPoint",
+    "Kickresume",
+    "Udio",
+    "Suno",
+    "AdCreative.ai",
+    "AirOps",
+    "Optmyzr",
+    "Adzooma",
+    "AdEspresso",
+    "Wordstream",
+    "Marin Software",
+    "Resemble AI",
+    "Descript",
+    "Speechify",
+    "Replica Studios"
+  ],
+  "sources": {
+    "unknown": 93
+  }
+}

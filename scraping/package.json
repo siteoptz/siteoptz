@@ -1,0 +1,30 @@
+{
+  "name": "siteoptz-ai-tools-scraper",
+  "version": "1.0.0",
+  "description": "AI tools scraping system for SiteOptz.ai using Firecrawl",
+  "main": "run-ai-tools-scraping.js",
+  "scripts": {
+    "scrape-all": "node run-ai-tools-scraping.js",
+    "scrape-new": "node scrape-new-ai-tools.js",
+    "merge": "node merge-tools-data.js",
+    "analytics": "node generate-analytics.js",
+    "test": "node test-scraping.js",
+    "clean": "rm -rf data/scraped/* data/merged/* data/reports/*"
+  },
+  "dependencies": {
+    "@mendable/firecrawl-js": "^1.4.3",
+    "dotenv": "^16.3.1"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.1"
+  },
+  "keywords": [
+    "ai-tools",
+    "scraping",
+    "firecrawl",
+    "siteoptz",
+    "automation"
+  ],
+  "author": "SiteOptz",
+  "license": "MIT"
+}

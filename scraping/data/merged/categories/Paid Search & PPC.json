@@ -1,0 +1,417 @@
+{
+  "category": "Paid Search & PPC",
+  "tools": [
+    {
+      "name": "Optmyzr",
+      "description": "AI-powered PPC management platform that automates Google Ads, Microsoft Ads, and Amazon Ads optimization with advanced bidding strategies and performance insights.",
+      "overview": {
+        "developer": "Optmyzr",
+        "release_year": 2023,
+        "category": "Paid Search & PPC",
+        "description": "AI-powered PPC management platform that automates Google Ads, Microsoft Ads, and Amazon Ads optimization with advanced bidding strategies and performance insights.",
+        "website": "https://www.optmyzr.com/",
+        "support": "Email, Chat",
+        "integrations": [
+          "Google Ads",
+          "Microsoft Ads",
+          "Amazon Ads",
+          "Facebook Ads"
+        ],
+        "pricing": {
+          "free_tier": false,
+          "starting_price": 208,
+          "pricing_model": "Subscription"
+        }
+      },
+      "features": [
+        "PPC Automation",
+        "Bid Management",
+        "Keyword Research",
+        "Performance Analytics"
+      ],
+      "use_cases": [
+        "PPC Campaign Management",
+        "Ad Optimization",
+        "Keyword Analysis"
+      ],
+      "pricing": [
+        {
+          "plan": "Free",
+          "price_per_month": 0,
+          "features": [
+            "Limited features",
+            "Basic support"
+          ]
+        },
+        {
+          "plan": "Professional",
+          "price_per_month": 208,
+          "features": [
+            "PPC Automation",
+            "Bid Management",
+            "Keyword Research",
+            "Performance Analytics"
+          ]
+        }
+      ],
+      "category": "Paid Search & PPC",
+      "tags": [
+        "paid search",
+        "ai tool",
+        "ppc management"
+      ],
+      "slug": "optmyzr",
+      "id": "optmyzr",
+      "logo": "/images/tools/optmyzr-logo.svg",
+      "meta": {
+        "title": "Optmyzr Review 2024: Features, Pricing & Alternatives",
+        "description": "AI-powered PPC management platform that automates Google Ads, Microsoft Ads, and Amazon Ads optimization with advanced bidding strategies and performance insights."
+      },
+      "pros": [
+        "AI-powered features",
+        "User-friendly interface",
+        "Good performance"
+      ],
+      "cons": [
+        "Learning curve",
+        "Pricing could be better"
+      ],
+      "related_tools": [],
+      "benchmarks": {
+        "speed": 4.2,
+        "accuracy": 4.3,
+        "integration": 4.1,
+        "ease_of_use": 4,
+        "value": 4.2
+      }
+    },
+    {
+      "name": "Adzooma",
+      "description": "AI-driven advertising platform that manages Google Ads, Microsoft Ads, and Facebook Ads with automated optimization and performance monitoring.",
+      "overview": {
+        "developer": "Adzooma",
+        "release_year": 2023,
+        "category": "Paid Search & PPC",
+        "description": "AI-driven advertising platform that manages Google Ads, Microsoft Ads, and Facebook Ads with automated optimization and performance monitoring.",
+        "website": "https://www.adzooma.com/",
+        "support": "Email, Chat, Phone",
+        "integrations": [
+          "Google Ads",
+          "Microsoft Ads",
+          "Facebook Ads"
+        ],
+        "pricing": {
+          "free_tier": true,
+          "starting_price": 0,
+          "pricing_model": "Freemium"
+        }
+      },
+      "features": [
+        "Multi-Platform Management",
+        "Automated Optimization",
+        "Performance Reports",
+        "Bid Management"
+      ],
+      "use_cases": [
+        "Cross-Platform Advertising",
+        "Campaign Optimization",
+        "Performance Tracking"
+      ],
+      "pricing": [
+        {
+          "plan": "Free",
+          "price_per_month": 0,
+          "features": [
+            "Multi-Platform Management",
+            "Automated Optimization",
+            "Performance Reports",
+            "Bid Management"
+          ]
+        }
+      ],
+      "category": "Paid Search & PPC",
+      "tags": [
+        "paid search",
+        "ai tool",
+        "advertising platform"
+      ],
+      "slug": "adzooma",
+      "id": "adzooma",
+      "logo": "/images/tools/adzooma-logo.svg",
+      "meta": {
+        "title": "Adzooma Review 2024: Features, Pricing & Alternatives",
+        "description": "AI-driven advertising platform that manages Google Ads, Microsoft Ads, and Facebook Ads with automated optimization and performance monitoring."
+      },
+      "pros": [
+        "AI-powered features",
+        "User-friendly interface",
+        "Good performance"
+      ],
+      "cons": [
+        "Learning curve",
+        "Pricing could be better"
+      ],
+      "related_tools": [],
+      "benchmarks": {
+        "speed": 4.2,
+        "accuracy": 4.3,
+        "integration": 4.1,
+        "ease_of_use": 4,
+        "value": 4.2
+      }
+    },
+    {
+      "name": "AdEspresso",
+      "description": "Facebook and Instagram advertising platform with AI-powered ad creation, A/B testing, and optimization tools for social media campaigns.",
+      "overview": {
+        "developer": "AdEspresso (Hootsuite)",
+        "release_year": 2023,
+        "category": "Paid Search & PPC",
+        "description": "Facebook and Instagram advertising platform with AI-powered ad creation, A/B testing, and optimization tools for social media campaigns.",
+        "website": "https://adespresso.com/",
+        "support": "Email, Chat",
+        "integrations": [
+          "Facebook Ads",
+          "Instagram Ads",
+          "Google Ads"
+        ],
+        "pricing": {
+          "free_tier": false,
+          "starting_price": 49,
+          "pricing_model": "Subscription"
+        }
+      },
+      "features": [
+        "Social Media Advertising",
+        "A/B Testing",
+        "Creative Optimization",
+        "Analytics"
+      ],
+      "use_cases": [
+        "Facebook Advertising",
+        "Instagram Marketing",
+        "Social Media Optimization"
+      ],
+      "pricing": [
+        {
+          "plan": "Free",
+          "price_per_month": 0,
+          "features": [
+            "Limited features",
+            "Basic support"
+          ]
+        },
+        {
+          "plan": "Professional",
+          "price_per_month": 49,
+          "features": [
+            "Social Media Advertising",
+            "A/B Testing",
+            "Creative Optimization",
+            "Analytics"
+          ]
+        }
+      ],
+      "category": "Paid Search & PPC",
+      "tags": [
+        "paid search",
+        "ai tool",
+        "social media advertising"
+      ],
+      "slug": "adespresso",
+      "id": "adespresso",
+      "logo": "/images/tools/adespresso-logo.svg",
+      "meta": {
+        "title": "AdEspresso Review 2024: Features, Pricing & Alternatives",
+        "description": "Facebook and Instagram advertising platform with AI-powered ad creation, A/B testing, and optimization tools for social media campaigns."
+      },
+      "pros": [
+        "AI-powered features",
+        "User-friendly interface",
+        "Good performance"
+      ],
+      "cons": [
+        "Learning curve",
+        "Pricing could be better"
+      ],
+      "related_tools": [],
+      "benchmarks": {
+        "speed": 4.2,
+        "accuracy": 4.3,
+        "integration": 4.1,
+        "ease_of_use": 4,
+        "value": 4.2
+      }
+    },
+    {
+      "name": "Wordstream",
+      "description": "AI-powered online advertising platform that helps businesses manage Google Ads, Microsoft Ads, and Facebook Ads with smart automation and optimization.",
+      "overview": {
+        "developer": "WordStream",
+        "release_year": 2023,
+        "category": "Paid Search & PPC",
+        "description": "AI-powered online advertising platform that helps businesses manage Google Ads, Microsoft Ads, and Facebook Ads with smart automation and optimization.",
+        "website": "https://www.wordstream.com/",
+        "support": "Email, Chat, Phone",
+        "integrations": [
+          "Google Ads",
+          "Microsoft Ads",
+          "Facebook Ads"
+        ],
+        "pricing": {
+          "free_tier": false,
+          "starting_price": 264,
+          "pricing_model": "Subscription"
+        }
+      },
+      "features": [
+        "Smart Automation",
+        "Cross-Platform Management",
+        "Performance Monitoring",
+        "Keyword Tools"
+      ],
+      "use_cases": [
+        "PPC Management",
+        "Ad Optimization",
+        "Campaign Automation"
+      ],
+      "pricing": [
+        {
+          "plan": "Free",
+          "price_per_month": 0,
+          "features": [
+            "Limited features",
+            "Basic support"
+          ]
+        },
+        {
+          "plan": "Professional",
+          "price_per_month": 264,
+          "features": [
+            "Smart Automation",
+            "Cross-Platform Management",
+            "Performance Monitoring",
+            "Keyword Tools"
+          ]
+        }
+      ],
+      "category": "Paid Search & PPC",
+      "tags": [
+        "paid search",
+        "ai tool",
+        "advertising automation"
+      ],
+      "slug": "wordstream",
+      "id": "wordstream",
+      "logo": "/images/tools/wordstream-logo.svg",
+      "meta": {
+        "title": "Wordstream Review 2024: Features, Pricing & Alternatives",
+        "description": "AI-powered online advertising platform that helps businesses manage Google Ads, Microsoft Ads, and Facebook Ads with smart automation and optimization."
+      },
+      "pros": [
+        "AI-powered features",
+        "User-friendly interface",
+        "Good performance"
+      ],
+      "cons": [
+        "Learning curve",
+        "Pricing could be better"
+      ],
+      "related_tools": [],
+      "benchmarks": {
+        "speed": 4.2,
+        "accuracy": 4.3,
+        "integration": 4.1,
+        "ease_of_use": 4,
+        "value": 4.2
+      }
+    },
+    {
+      "name": "Marin Software",
+      "description": "Enterprise-grade digital advertising platform with AI-powered bidding, cross-channel campaign management, and advanced analytics for large-scale advertisers.",
+      "overview": {
+        "developer": "Marin Software",
+        "release_year": 2023,
+        "category": "Paid Search & PPC",
+        "description": "Enterprise-grade digital advertising platform with AI-powered bidding, cross-channel campaign management, and advanced analytics for large-scale advertisers.",
+        "website": "https://www.marinsoftware.com/",
+        "support": "Email, Chat, Phone, Dedicated Support",
+        "integrations": [
+          "Google Ads",
+          "Microsoft Ads",
+          "Facebook Ads",
+          "Amazon Ads",
+          "Apple Search Ads"
+        ],
+        "pricing": {
+          "free_tier": false,
+          "starting_price": 1000,
+          "pricing_model": "Enterprise"
+        }
+      },
+      "features": [
+        "Enterprise Bidding",
+        "Cross-Channel Management",
+        "Advanced Analytics",
+        "Custom Reporting"
+      ],
+      "use_cases": [
+        "Enterprise Advertising",
+        "Large-Scale Campaign Management",
+        "Multi-Channel Optimization"
+      ],
+      "pricing": [
+        {
+          "plan": "Free",
+          "price_per_month": 0,
+          "features": [
+            "Limited features",
+            "Basic support"
+          ]
+        },
+        {
+          "plan": "Professional",
+          "price_per_month": 1000,
+          "features": [
+            "Enterprise Bidding",
+            "Cross-Channel Management",
+            "Advanced Analytics",
+            "Custom Reporting"
+          ]
+        }
+      ],
+      "category": "Paid Search & PPC",
+      "tags": [
+        "paid search",
+        "ai tool",
+        "enterprise advertising"
+      ],
+      "slug": "marin-software",
+      "id": "marin-software",
+      "logo": "/images/tools/marin-software-logo.svg",
+      "meta": {
+        "title": "Marin Software Review 2024: Features, Pricing & Alternatives",
+        "description": "Enterprise-grade digital advertising platform with AI-powered bidding, cross-channel campaign management, and advanced analytics for large-scale advertisers."
+      },
+      "pros": [
+        "AI-powered features",
+        "User-friendly interface",
+        "Good performance"
+      ],
+      "cons": [
+        "Learning curve",
+        "Pricing could be better"
+      ],
+      "related_tools": [],
+      "benchmarks": {
+        "speed": 4.2,
+        "accuracy": 4.3,
+        "integration": 4.1,
+        "ease_of_use": 4,
+        "value": 4.2
+      }
+    }
+  ],
+  "totalTools": 5,
+  "lastUpdated": "2025-08-28T00:32:02.861Z"
+}

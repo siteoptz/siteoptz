@@ -1,0 +1,95 @@
+{
+  "category": "Research & Education",
+  "tools": [
+    {
+      "id": "deep-research",
+      "name": "Deep Research",
+      "slug": "deep-research",
+      "logo": "/images/tools/deep-research-logo.svg",
+      "description": "AI-powered research assistant for academic and professional research",
+      "overview": {
+        "description": "AI-powered research assistant for academic and professional research",
+        "category": "Research & Education",
+        "developer": "Deep Research",
+        "website": "https://deepresearch.com",
+        "integrations": [
+          "Web browser"
+        ],
+        "use_cases": []
+      },
+      "features": [
+        "AI-powered research & education",
+        "User-friendly interface"
+      ],
+      "pricing": [
+        {
+          "tier": "Free",
+          "price_per_month": 29,
+          "billing_period": "month",
+          "features": [
+            "Basic features"
+          ],
+          "description": "Free features",
+          "popular": false
+        },
+        {
+          "tier": "Enterprise",
+          "price_per_month": "Custom",
+          "billing_period": "month",
+          "features": [
+            "Custom features",
+            "Dedicated support",
+            "SLA"
+          ],
+          "description": "Enterprise-grade features",
+          "popular": false
+        }
+      ],
+      "pros": [
+        "Easy to use",
+        "Powerful AI capabilities"
+      ],
+      "cons": [
+        "Learning curve",
+        "Internet required"
+      ],
+      "benchmarks": {
+        "speed": 8.4,
+        "accuracy": 8.4,
+        "integration": 7,
+        "ease_of_use": 8.4,
+        "value": 9
+      },
+      "affiliate_link": "https://deepresearch.com",
+      "category": "Research & Education",
+      "tags": [
+        "research & education",
+        "ai tool"
+      ],
+      "last_updated": "2025-08-21T18:14:58.321Z",
+      "rating": 4.2,
+      "review_count": 500,
+      "free_trial": true,
+      "seo": {
+        "title": "Deep Research Review 2025 - Research & Education AI Tool | SiteOptz",
+        "description": "AI-powered research assistant for academic and professional research. Compare pricing, features, pros & cons. Expert Research & Education AI tool review.",
+        "keywords": [
+          "deep research",
+          "deep research review",
+          "research & education ai",
+          "research & education tools",
+          "ai tools comparison",
+          "siteoptz review"
+        ],
+        "canonical_url": "https://siteoptz.ai/tools/deep-research"
+      },
+      "meta": {
+        "title": "Deep Research Review 2024: Features, Pricing & Alternatives",
+        "description": "AI-powered research assistant for academic and professional research"
+      },
+      "related_tools": []
+    }
+  ],
+  "totalTools": 1,
+  "lastUpdated": "2025-08-28T00:32:02.860Z"
+}

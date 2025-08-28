@@ -1,0 +1,97 @@
+{
+  "category": "Code Generation",
+  "tools": [
+    {
+      "id": "lovable",
+      "name": "Lovable",
+      "slug": "lovable",
+      "logo": "/images/tools/lovable-logo.svg",
+      "description": "Create apps and websites by chatting with AI.",
+      "overview": {
+        "description": "Create apps and websites by chatting with AI.",
+        "category": "Code Generation",
+        "developer": "Lovable",
+        "website": "https://lovable.dev/",
+        "integrations": [],
+        "use_cases": [
+          "Internal Tools",
+          "Website",
+          "Personal",
+          "Consumer App",
+          "B2B App",
+          "Prototype"
+        ]
+      },
+      "features": [
+        "Build apps and websites",
+        "Chat with AI"
+      ],
+      "pricing": [
+        {
+          "tier": "Free",
+          "price_per_month": 0,
+          "billing_period": "month",
+          "features": [
+            "Basic features"
+          ],
+          "description": "Free features",
+          "popular": false
+        },
+        {
+          "tier": "Enterprise",
+          "price_per_month": "Custom",
+          "billing_period": "month",
+          "features": [
+            "Custom features",
+            "Dedicated support",
+            "SLA"
+          ],
+          "description": "Enterprise-grade features",
+          "popular": false
+        }
+      ],
+      "pros": [
+        "Build something lovable"
+      ],
+      "cons": [],
+      "benchmarks": {
+        "speed": 8.6,
+        "accuracy": 8.6,
+        "integration": 7,
+        "ease_of_use": 8.6,
+        "value": 7
+      },
+      "affiliate_link": "https://lovable.dev?via=siteoptz",
+      "category": "Code Generation",
+      "tags": [
+        "app development",
+        "ai tool",
+        "developers, creators"
+      ],
+      "last_updated": "2025-08-21T18:15:37.001Z",
+      "rating": 4.3,
+      "review_count": 3081,
+      "free_trial": false,
+      "seo": {
+        "title": "Lovable Review 2025 - App Development AI Tool | SiteOptz",
+        "description": "Create apps and websites by chatting with AI.. Compare pricing, features, pros & cons. Expert App Development AI tool review.",
+        "keywords": [
+          "lovable",
+          "lovable review",
+          "app development ai",
+          "app development tools",
+          "ai tools comparison",
+          "siteoptz review"
+        ],
+        "canonical_url": "https://siteoptz.ai/tools/lovable"
+      },
+      "meta": {
+        "title": "Lovable Review 2024: Features, Pricing & Alternatives",
+        "description": "Create apps and websites by chatting with AI."
+      },
+      "related_tools": []
+    }
+  ],
+  "totalTools": 1,
+  "lastUpdated": "2025-08-28T00:32:02.860Z"
+}

@@ -1,0 +1,508 @@
+{
+  "category": "Social Media",
+  "tools": [
+    {
+      "id": "looka",
+      "name": "Looka",
+      "slug": "looka",
+      "logo": "/images/tools/looka-logo.svg",
+      "description": "Looka is an AI-powered platform that helps individuals and businesses create professional logos, build brand identities, and design marketing materials. It simplifies the design process, making it accessible to users without prior design experience. Looka offers a comprehensive suite of tools, from logo generation to a full brand kit with templates for various marketing assets.",
+      "overview": {
+        "description": "Looka is an AI-powered platform that helps individuals and businesses create professional logos, build brand identities, and design marketing materials. It simplifies the design process, making it accessible to users without prior design experience. Looka offers a comprehensive suite of tools, from logo generation to a full brand kit with templates for various marketing assets.",
+        "category": "Social Media",
+        "developer": "Looka",
+        "website": "https://looka.com/",
+        "integrations": [],
+        "use_cases": [
+          "Creating a new business logo",
+          "Developing a consistent brand identity",
+          "Designing marketing materials (business cards, social media graphics)",
+          "Establishing a professional online presence",
+          "Rebranding an existing business"
+        ]
+      },
+      "features": [
+        "AI-powered logo maker with endless customization options",
+        "Brand Kit for creating consistent marketing materials (business cards, social media posts, etc.)",
+        "Hundreds of branded templates personalized to logo design",
+        "High-resolution logo files in various formats (SVG, PNG, EPS, PDF)",
+        "Black & white, color, and transparent background variations",
+        "Social media templates for profile and cover photos, posts, and stories",
+        "Business card design and customization",
+        "Brand guidelines including fonts and colors",
+        "Access to exclusive partner offers",
+        "Customer success support via live chat and email",
+        "Explainer video and blog resources on design, branding, and entrepreneurship"
+      ],
+      "pricing": [
+        {
+          "tier": "Logo & Brand Kit",
+          "price_per_month": 199,
+          "billing_period": "one-time",
+          "features": [
+            "Logo design",
+            "Brand Kit",
+            "Logo files (15+ types)",
+            "Social media templates",
+            "Business card designs",
+            "Brand guidelines"
+          ],
+          "description": "Logo & Brand Kit features",
+          "popular": false
+        },
+        {
+          "tier": "Enterprise",
+          "price_per_month": "Custom",
+          "billing_period": "month",
+          "features": [
+            "Custom features",
+            "Dedicated support",
+            "SLA"
+          ],
+          "description": "Enterprise-grade features",
+          "popular": false
+        }
+      ],
+      "pros": [
+        "Extremely easy to use, even for beginners with no design skills.",
+        "AI technology generates a wide variety of logo options quickly.",
+        "Provides a complete brand identity solution beyond just a logo.",
+        "Professional-quality marketing materials can be created instantly.",
+        "Cost-effective compared to hiring a professional designer.",
+        "Offers excellent customer support."
+      ],
+      "cons": [
+        "While AI-powered, some users might still desire more granular control over certain design elements than the platform offers out-of-the-box.",
+        "The focus is on logo and brand identity creation, not a full-fledged website builder or advanced marketing suite."
+      ],
+      "benchmarks": {
+        "speed": 10,
+        "accuracy": 10,
+        "integration": 7,
+        "ease_of_use": 10,
+        "value": 7
+      },
+      "affiliate_link": "https://looka.com/",
+      "category": "Social Media",
+      "tags": [
+        "branding & design",
+        "ai tool",
+        "small business owners, entrepreneurs, startups, freelancers, individuals needing a brand identity."
+      ],
+      "last_updated": "2025-08-21T18:15:30.934Z",
+      "rating": 5,
+      "review_count": 7000,
+      "free_trial": false,
+      "seo": {
+        "title": "Looka Review 2025 - Branding & Design AI Tool | SiteOptz",
+        "description": "Looka is an AI-powered platform that helps individuals and businesses create professional logos, build brand identities,. Compare pricing, features, pros & cons. Expert Branding & Design AI tool review.",
+        "keywords": [
+          "looka",
+          "looka review",
+          "branding & design ai",
+          "branding & design tools",
+          "ai tools comparison",
+          "siteoptz review"
+        ],
+        "canonical_url": "https://siteoptz.ai/tools/looka"
+      },
+      "meta": {
+        "title": "Looka Review 2024: Features, Pricing & Alternatives",
+        "description": "Looka is an AI-powered platform that helps individuals and businesses create professional logos, build brand identities, and design marketing materials. It simplifies the design process, making it accessible to users without prior design experience. Looka offers a comprehensive suite of tools, from logo generation to a full brand kit with templates for various marketing assets."
+      },
+      "related_tools": []
+    },
+    {
+      "id": "gamma",
+      "name": "Gamma",
+      "slug": "gamma",
+      "logo": "/images/tools/gamma-logo.svg",
+      "description": "Gamma is an AI design partner that helps users effortlessly create presentations, websites, social media posts, and more. It aims to streamline the design process, allowing users to focus on their ideas rather than the design execution. Gamma supports various content formats and offers AI-powered features for generation, editing, and sharing.",
+      "overview": {
+        "description": "Gamma is an AI design partner that helps users effortlessly create presentations, websites, social media posts, and more. It aims to streamline the design process, allowing users to focus on their ideas rather than the design execution. Gamma supports various content formats and offers AI-powered features for generation, editing, and sharing.",
+        "category": "Social Media",
+        "developer": "Gamma Tech, Inc.",
+        "website": "https://gamma.app/",
+        "integrations": [
+          "PPT",
+          "Google Slides",
+          "Social platforms"
+        ],
+        "use_cases": [
+          "Creating presentations",
+          "Designing websites and landing pages",
+          "Generating social media graphics and posts",
+          "Producing proposals and documents",
+          "Automating content creation",
+          "Collaborating on design projects",
+          "Validating business ideas"
+        ]
+      },
+      "features": [
+        "AI-powered content generation for presentations, websites, social media, and documents",
+        "AI-assisted editing and design adjustments",
+        "Real-time collaboration",
+        "Export options to PPT, PDF, PNG, and Google Slides",
+        "Publishing as websites or social posts",
+        "Engagement tracking",
+        "Importing brand assets",
+        "Over 100 themes",
+        "API for programmatic creation and integration",
+        "AI models for high-quality output",
+        "Instant layout and content generation",
+        "Image generation and AI-powered reworking",
+        "Translation capabilities"
+      ],
+      "pricing": [
+        {
+          "tier": "Free",
+          "price_per_month": 0,
+          "billing_period": "month",
+          "features": [
+            "Basic features"
+          ],
+          "description": "Free features",
+          "popular": false
+        },
+        {
+          "tier": "Enterprise",
+          "price_per_month": "Custom",
+          "billing_period": "month",
+          "features": [
+            "Custom features",
+            "Dedicated support",
+            "SLA"
+          ],
+          "description": "Enterprise-grade features",
+          "popular": false
+        }
+      ],
+      "pros": [
+        "Saves time and effort in content creation",
+        "Enables creation of professional-looking content quickly",
+        "Facilitates easy sharing and publishing across platforms",
+        "Offers a balance between customizability and fast workflow",
+        "Improves collaboration",
+        "Reduces reliance on traditional design tools",
+        "Helps validate ideas quickly"
+      ],
+      "cons": [
+        "No specific limitations mentioned, but the focus is on AI-assisted creation, which might not suit users who prefer manual design control."
+      ],
+      "benchmarks": {
+        "speed": 9,
+        "accuracy": 9,
+        "integration": 7,
+        "ease_of_use": 9,
+        "value": 9
+      },
+      "affiliate_link": "https://gamma.app/",
+      "category": "Social Media",
+      "tags": [
+        "content creation",
+        "ai tool",
+        "content creators, marketers, educators, consultants, sales professionals, founders"
+      ],
+      "last_updated": "2025-08-21T18:16:04.555Z",
+      "rating": 4.5,
+      "review_count": 50000000,
+      "free_trial": true,
+      "seo": {
+        "title": "Gamma Review 2025 - Content Creation AI Tool | SiteOptz",
+        "description": "Gamma is an AI design partner that helps users effortlessly create presentations, websites, social media posts, and more. Compare pricing, features, pros & cons. Expert Content Creation AI tool review.",
+        "keywords": [
+          "gamma",
+          "gamma review",
+          "content creation ai",
+          "content creation tools",
+          "ai tools comparison",
+          "siteoptz review"
+        ],
+        "canonical_url": "https://siteoptz.ai/tools/gamma"
+      },
+      "meta": {
+        "title": "Gamma Review 2024: Features, Pricing & Alternatives",
+        "description": "Gamma is an AI design partner that helps users effortlessly create presentations, websites, social media posts, and more. It aims to streamline the design process, allowing users to focus on their ideas rather than the design execution. Gamma supports various content formats and offers AI-powered features for generation, editing, and sharing."
+      },
+      "related_tools": []
+    },
+    {
+      "id": "adcreative-ai",
+      "name": "AdCreative.ai",
+      "slug": "adcreative-ai",
+      "logo": "/images/tools/adcreative-ai-logo.svg",
+      "description": "AdCreative.ai is an AI-powered platform designed to help businesses create high-converting ad creatives, ad copy, and product photoshoots quickly and efficiently. It aims to boost sales and ROI by leveraging AI to generate professional-quality marketing assets without the need for designers.",
+      "overview": {
+        "description": "AdCreative.ai is an AI-powered platform designed to help businesses create high-converting ad creatives, ad copy, and product photoshoots quickly and efficiently. It aims to boost sales and ROI by leveraging AI to generate professional-quality marketing assets without the need for designers.",
+        "category": "Social Media",
+        "developer": "AdCreative.ai",
+        "website": "https://www.adcreative.ai/",
+        "integrations": [
+          "Google Ads",
+          "Facebook Ads",
+          "iStock"
+        ],
+        "use_cases": [
+          "Creating social media ads",
+          "Generating display banner ads",
+          "Producing product photoshoots",
+          "Writing ad copy and headlines",
+          "Analyzing competitor ad strategies",
+          "Predicting ad performance",
+          "Optimizing ad campaigns for higher conversions"
+        ]
+      },
+      "features": [
+        "AI-driven ad creative generation",
+        "AI-powered ad copy and text generation",
+        "AI-enhanced product photoshoots",
+        "AI-driven competitor analysis",
+        "AI-powered creative scoring and performance prediction",
+        "Website-to-ad creation",
+        "Persona generation for targeted advertising",
+        "Brand import for on-brand creatives",
+        "Integration with ad platforms",
+        "Over 1 billion ad creatives generated",
+        "Supports over 3,000,000 members",
+        "3 easy steps for ad creation"
+      ],
+      "pricing": [
+        {
+          "tier": "Starter",
+          "price_per_month": 39,
+          "billing_period": "month",
+          "features": [
+            "10 Downloads / Month",
+            "1 Brand Limit",
+            "All AI Assets Unlocked",
+            "Unlimited Generations",
+            "Text Generator AI",
+            "Ad Platform Integrations",
+            "Unlimited Photos by iStock",
+            "Ad Creative Insight AI",
+            "Competitor Insights Access",
+            "1 Total User"
+          ],
+          "description": "Starter features",
+          "popular": false
+        },
+        {
+          "tier": "Professional",
+          "price_per_month": 249,
+          "billing_period": "month",
+          "features": [
+            "50 Downloads / Month",
+            "3 Brand Limit",
+            "All AI Assets Unlocked",
+            "Unlimited Generations",
+            "Text Generator AI",
+            "Ad Platform Integrations",
+            "Unlimited Photos by iStock",
+            "Ad Creative Insight AI",
+            "Competitor Insights Access",
+            "10 Total Users"
+          ],
+          "description": "Professional features",
+          "popular": true
+        },
+        {
+          "tier": "Ultimate",
+          "price_per_month": 599,
+          "billing_period": "month",
+          "features": [
+            "100 Downloads / Month",
+            "5 Brand Limit",
+            "All AI Assets Unlocked",
+            "Unlimited Generations",
+            "Text Generator AI",
+            "Ad Platform Integrations",
+            "Unlimited Photos by iStock",
+            "Ad Creative Insight AI",
+            "Competitor Insights Access",
+            "25 Total Users"
+          ],
+          "description": "Ultimate features",
+          "popular": false
+        },
+        {
+          "tier": "Starter (Quarterly)",
+          "price_per_month": 29,
+          "billing_period": "quarter",
+          "features": [
+            "10 Downloads / Month",
+            "1 Brand Limit",
+            "All AI Assets Unlocked",
+            "Unlimited Generations",
+            "Text Generator AI",
+            "Ad Platform Integrations",
+            "Unlimited Photos by iStock",
+            "Ad Creative Insight AI",
+            "Competitor Insights Access",
+            "1 Total User"
+          ],
+          "description": "Starter (Quarterly) features",
+          "popular": false
+        },
+        {
+          "tier": "Professional (Quarterly)",
+          "price_per_month": 189,
+          "billing_period": "quarter",
+          "features": [
+            "50 Downloads / Month",
+            "3 Brand Limit",
+            "All AI Assets Unlocked",
+            "Unlimited Generations",
+            "Text Generator AI",
+            "Ad Platform Integrations",
+            "Unlimited Photos by iStock",
+            "Ad Creative Insight AI",
+            "Competitor Insights Access",
+            "10 Total Users"
+          ],
+          "description": "Professional (Quarterly) features",
+          "popular": false
+        },
+        {
+          "tier": "Ultimate (Quarterly)",
+          "price_per_month": 449,
+          "billing_period": "quarter",
+          "features": [
+            "100 Downloads / Month",
+            "5 Brand Limit",
+            "All AI Assets Unlocked",
+            "Unlimited Generations",
+            "Text Generator AI",
+            "Ad Platform Integrations",
+            "Unlimited Photos by iStock",
+            "Ad Creative Insight AI",
+            "Competitor Insights Access",
+            "25 Total Users"
+          ],
+          "description": "Ultimate (Quarterly) features",
+          "popular": false
+        },
+        {
+          "tier": "Starter (Yearly)",
+          "price_per_month": 20,
+          "billing_period": "year",
+          "features": [
+            "10 Downloads / Month",
+            "1 Brand Limit",
+            "All AI Assets Unlocked",
+            "Unlimited Generations",
+            "Text Generator AI",
+            "Ad Platform Integrations",
+            "Unlimited Photos by iStock",
+            "Ad Creative Insight AI",
+            "Competitor Insights Access",
+            "1 Total User"
+          ],
+          "description": "Starter (Yearly) features",
+          "popular": false
+        },
+        {
+          "tier": "Professional (Yearly)",
+          "price_per_month": 125,
+          "billing_period": "year",
+          "features": [
+            "50 Downloads / Month",
+            "3 Brand Limit",
+            "All AI Assets Unlocked",
+            "Unlimited Generations",
+            "Text Generator AI",
+            "Ad Platform Integrations",
+            "Unlimited Photos by iStock",
+            "Ad Creative Insight AI",
+            "Competitor Insights Access",
+            "10 Total Users"
+          ],
+          "description": "Professional (Yearly) features",
+          "popular": false
+        },
+        {
+          "tier": "Ultimate (Yearly)",
+          "price_per_month": 300,
+          "billing_period": "year",
+          "features": [
+            "100 Downloads / Month",
+            "5 Brand Limit",
+            "All AI Assets Unlocked",
+            "Unlimited Generations",
+            "Text Generator AI",
+            "Ad Platform Integrations",
+            "Unlimited Photos by iStock",
+            "Ad Creative Insight AI",
+            "Competitor Insights Access",
+            "25 Total Users"
+          ],
+          "description": "Ultimate (Yearly) features",
+          "popular": false
+        },
+        {
+          "tier": "Enterprise",
+          "price_per_month": "Custom",
+          "billing_period": "month",
+          "features": [
+            "Custom features",
+            "Dedicated support",
+            "SLA"
+          ],
+          "description": "Enterprise-grade features",
+          "popular": false
+        }
+      ],
+      "pros": [
+        "Significantly reduces time and cost for ad creation.",
+        "Generates high-quality, conversion-focused creatives.",
+        "AI-powered insights help optimize ad performance.",
+        "User-friendly interface, even for non-designers.",
+        "Offers a wide range of AI tools for different marketing needs.",
+        "Supports multiple ad platforms.",
+        "Provides valuable competitor insights."
+      ],
+      "cons": [
+        "Limited downloads per month on lower-tier plans.",
+        "Some features might require higher-tier plans.",
+        "AI-generated content may still require human review for optimal results."
+      ],
+      "benchmarks": {
+        "speed": 9.6,
+        "accuracy": 9.6,
+        "integration": 7,
+        "ease_of_use": 9.6,
+        "value": 9
+      },
+      "affiliate_link": "https://www.adcreative.ai/",
+      "category": "Social Media",
+      "tags": [
+        "advertising & marketing",
+        "ai tool",
+        "small businesses, marketers, agencies, e-commerce businesses, startups"
+      ],
+      "last_updated": "2025-08-21T18:16:52.977Z",
+      "rating": 4.8,
+      "review_count": 10000,
+      "free_trial": true,
+      "seo": {
+        "title": "AdCreative.ai Review 2025 - Advertising & Marketing AI Tool | SiteOptz",
+        "description": "AdCreative.ai is an AI-powered platform designed to help businesses create high-converting ad creatives, ad copy, and pr. Compare pricing, features, pros & cons. Expert Advertising & Marketing AI tool review.",
+        "keywords": [
+          "adcreative.ai",
+          "adcreative.ai review",
+          "advertising & marketing ai",
+          "advertising & marketing tools",
+          "ai tools comparison",
+          "siteoptz review"
+        ],
+        "canonical_url": "https://siteoptz.ai/tools/adcreative-ai"
+      },
+      "meta": {
+        "title": "AdCreative.ai Review 2024: Features, Pricing & Alternatives",
+        "description": "AdCreative.ai is an AI-powered platform designed to help businesses create high-converting ad creatives, ad copy, and product photoshoots quickly and efficiently. It aims to boost sales and ROI by leveraging AI to generate professional-quality marketing assets without the need for designers."
+      },
+      "related_tools": []
+    }
+  ],
+  "totalTools": 3,
+  "lastUpdated": "2025-08-28T00:32:02.860Z"
+}

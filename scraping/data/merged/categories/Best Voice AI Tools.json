@@ -1,0 +1,299 @@
+{
+  "category": "Best Voice AI Tools",
+  "tools": [
+    {
+      "name": "Resemble AI",
+      "slug": "resemble-ai",
+      "id": "resemble-ai",
+      "logo": "/images/tools/resemble-ai-logo.svg",
+      "description": "AI voice cloning platform that creates realistic synthetic voices from just a few minutes of audio data.",
+      "overview": {
+        "developer": "Resemble AI",
+        "release_year": 2023,
+        "category": "Best Voice AI Tools",
+        "description": "AI voice cloning platform that creates realistic synthetic voices from just a few minutes of audio data.",
+        "website": "https://www.resemble.ai/",
+        "support": "Email, Chat",
+        "integrations": [
+          "API",
+          "Webhooks"
+        ],
+        "pricing": {
+          "free_tier": true,
+          "starting_price": 0,
+          "pricing_model": "Usage-based"
+        }
+      },
+      "features": [
+        "Voice Cloning",
+        "Real-time Voice Conversion",
+        "Speech-to-Speech",
+        "API Integration"
+      ],
+      "use_cases": [
+        "Voice Cloning",
+        "Content Creation",
+        "Gaming",
+        "Audiobooks"
+      ],
+      "pricing": [
+        {
+          "plan": "Free",
+          "price_per_month": 0,
+          "features": [
+            "Basic voice cloning",
+            "Limited usage"
+          ]
+        }
+      ],
+      "category": "Best Voice AI Tools",
+      "tags": [
+        "voice ai",
+        "voice cloning",
+        "ai tool"
+      ],
+      "pros": [
+        "High-quality voice cloning",
+        "Real-time processing",
+        "API access"
+      ],
+      "cons": [
+        "Limited free tier",
+        "Learning curve"
+      ],
+      "benchmarks": {
+        "speed": 4.3,
+        "accuracy": 4.5,
+        "integration": 4.2,
+        "ease_of_use": 4,
+        "value": 4.1
+      },
+      "meta": {
+        "title": "Resemble AI Review 2024: Voice Cloning Features & Pricing",
+        "description": "Comprehensive review of Resemble AI voice cloning platform. Compare features, pricing, and alternatives."
+      },
+      "related_tools": []
+    },
+    {
+      "name": "Descript",
+      "slug": "descript",
+      "id": "descript",
+      "logo": "/images/tools/descript-logo.svg",
+      "description": "All-in-one audio and video editing platform with AI-powered transcription and voice generation.",
+      "overview": {
+        "developer": "Descript",
+        "release_year": 2023,
+        "category": "Best Voice AI Tools",
+        "description": "All-in-one audio and video editing platform with AI-powered transcription and voice generation.",
+        "website": "https://www.descript.com/",
+        "support": "Email, Chat, Community",
+        "integrations": [
+          "Zapier",
+          "API"
+        ],
+        "pricing": {
+          "free_tier": true,
+          "starting_price": 0,
+          "pricing_model": "Subscription"
+        }
+      },
+      "features": [
+        "Voice Synthesis",
+        "Audio Editing",
+        "Video Editing",
+        "Transcription"
+      ],
+      "use_cases": [
+        "Podcast Editing",
+        "Video Content",
+        "Audio Transcription"
+      ],
+      "pricing": [
+        {
+          "plan": "Free",
+          "price_per_month": 0,
+          "features": [
+            "Basic editing",
+            "Limited transcription"
+          ]
+        }
+      ],
+      "category": "Best Voice AI Tools",
+      "tags": [
+        "voice ai",
+        "audio editing",
+        "ai tool"
+      ],
+      "pros": [
+        "All-in-one platform",
+        "AI transcription",
+        "Voice cloning"
+      ],
+      "cons": [
+        "Learning curve",
+        "Resource intensive"
+      ],
+      "benchmarks": {
+        "speed": 4.2,
+        "accuracy": 4.4,
+        "integration": 4.1,
+        "ease_of_use": 3.9,
+        "value": 4.3
+      },
+      "meta": {
+        "title": "Descript Review 2024: AI Audio Editing Features & Pricing",
+        "description": "Comprehensive review of Descript audio editing platform. Compare features, pricing, and alternatives."
+      },
+      "related_tools": [],
+      "affiliate_link": "https://get.descript.com/fken6gf9ux2c"
+    },
+    {
+      "name": "Speechify",
+      "slug": "speechify",
+      "id": "speechify",
+      "logo": "/images/tools/speechify-logo.svg",
+      "description": "AI-powered text-to-speech app that converts written content into natural-sounding audio.",
+      "overview": {
+        "developer": "Speechify",
+        "release_year": 2023,
+        "category": "Best Voice AI Tools",
+        "description": "AI-powered text-to-speech app that converts written content into natural-sounding audio.",
+        "website": "https://speechify.com/",
+        "support": "Email, Chat",
+        "integrations": [
+          "Chrome Extension",
+          "Mobile Apps"
+        ],
+        "pricing": {
+          "free_tier": true,
+          "starting_price": 0,
+          "pricing_model": "Freemium"
+        }
+      },
+      "features": [
+        "Text-to-Speech",
+        "Speed Control",
+        "Voice Selection",
+        "Highlighting"
+      ],
+      "use_cases": [
+        "Reading Assistance",
+        "Learning",
+        "Accessibility",
+        "Content Consumption"
+      ],
+      "pricing": [
+        {
+          "plan": "Free",
+          "price_per_month": 0,
+          "features": [
+            "Basic text-to-speech",
+            "Limited voices"
+          ]
+        }
+      ],
+      "category": "Best Voice AI Tools",
+      "tags": [
+        "voice ai",
+        "text-to-speech",
+        "ai tool"
+      ],
+      "pros": [
+        "Easy to use",
+        "Multiple platforms",
+        "Speed control"
+      ],
+      "cons": [
+        "Limited free features",
+        "Voice quality varies"
+      ],
+      "benchmarks": {
+        "speed": 4.4,
+        "accuracy": 4.2,
+        "integration": 4.3,
+        "ease_of_use": 4.5,
+        "value": 4
+      },
+      "meta": {
+        "title": "Speechify Review 2024: Text-to-Speech Features & Pricing",
+        "description": "Comprehensive review of Speechify text-to-speech platform. Compare features, pricing, and alternatives."
+      },
+      "related_tools": []
+    },
+    {
+      "name": "Replica Studios",
+      "slug": "replica-studios",
+      "id": "replica-studios",
+      "logo": "/images/tools/replica-studios-logo.svg",
+      "description": "AI voice actor platform providing natural-sounding digital voices for games, films, and other media.",
+      "overview": {
+        "developer": "Replica Studios",
+        "release_year": 2023,
+        "category": "Best Voice AI Tools",
+        "description": "AI voice actor platform providing natural-sounding digital voices for games, films, and other media.",
+        "website": "https://replicastudios.com/",
+        "support": "Email, Chat",
+        "integrations": [
+          "API",
+          "Game Engines"
+        ],
+        "pricing": {
+          "free_tier": false,
+          "starting_price": 25,
+          "pricing_model": "Subscription"
+        }
+      },
+      "features": [
+        "AI Voice Acting",
+        "Custom Voice Creation",
+        "Real-time Generation",
+        "Commercial Licensing"
+      ],
+      "use_cases": [
+        "Game Development",
+        "Film Production",
+        "Audiobooks",
+        "Commercials"
+      ],
+      "pricing": [
+        {
+          "plan": "Pro",
+          "price_per_month": 25,
+          "features": [
+            "Professional voices",
+            "Commercial license"
+          ]
+        }
+      ],
+      "category": "Best Voice AI Tools",
+      "tags": [
+        "voice ai",
+        "voice acting",
+        "ai tool"
+      ],
+      "pros": [
+        "Professional quality",
+        "Game integration",
+        "Commercial licensing"
+      ],
+      "cons": [
+        "Higher pricing",
+        "No free tier"
+      ],
+      "benchmarks": {
+        "speed": 4.1,
+        "accuracy": 4.4,
+        "integration": 4.2,
+        "ease_of_use": 4,
+        "value": 3.9
+      },
+      "meta": {
+        "title": "Replica Studios Review 2024: AI Voice Acting Features & Pricing",
+        "description": "Comprehensive review of Replica Studios AI voice platform. Compare features, pricing, and alternatives."
+      },
+      "related_tools": []
+    }
+  ],
+  "totalTools": 4,
+  "lastUpdated": "2025-08-28T00:32:02.861Z"
+}
