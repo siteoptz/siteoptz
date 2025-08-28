@@ -8,8 +8,17 @@ import { Star, CheckCircle, XCircle, ArrowRight, Download, Share2, Bookmark } fr
 
 /**
  * Semantic HTML Template for Tool Detail Pages
- * Demonstrates proper use of HTML5 semantic elements
- * including article, section, aside, nav, header, and proper heading hierarchy
+ * 
+ * This is a TEMPLATE FILE demonstrating proper use of HTML5 semantic elements
+ * including article, section, aside, nav, header, and proper heading hierarchy.
+ * 
+ * Usage:
+ * 1. Copy this file to pages/tools/[slug].tsx or similar
+ * 2. Remove the example data from getStaticProps
+ * 3. Add real data fetching logic
+ * 4. For dynamic routes, add getStaticPaths function
+ * 
+ * Note: This file is in docs/templates to avoid Next.js build issues
  */
 
 interface ToolPageProps {

@@ -231,6 +231,7 @@ Always include skip navigation links:
 - Update all page templates to use semantic components
 - Ensure proper heading hierarchy
 - Add breadcrumb navigation
+- Reference template: `docs/templates/semantic-template.tsx`
 
 ### Phase 3: Forms and Interactions
 - Update all forms with proper labels and fieldsets
