@@ -1,0 +1,326 @@
+{
+  "category": "AI Automation",
+  "description": "Advanced AI-powered workflow automation tools for connecting apps, streamlining processes, and automating business operations.",
+  "tools": [
+    {
+      "id": "n8n",
+      "name": "n8n",
+      "slug": "n8n",
+      "logo": "/images/tools/n8n-logo.svg",
+      "meta": {
+        "title": "n8n Review, Pricing, Features & Alternatives [2025]",
+        "description": "Open-source workflow automation platform with AI-native capabilities. Connect 400+ apps, create complex automations, and integrate AI models with visual workflows.",
+        "keywords": "n8n, n8n review, n8n pricing, n8n alternatives, workflow automation, ai automation, open source automation, zapier alternative, 2025",
+        "canonical": "https://siteoptz.ai/tools/n8n",
+        "openGraph": {
+          "title": "n8n - AI-Native Workflow Automation Platform",
+          "description": "Open-source workflow automation with 70+ AI nodes and LangChain integration",
+          "type": "article",
+          "url": "https://siteoptz.ai/tools/n8n",
+          "image": "https://siteoptz.ai/images/tools/n8n-logo.svg",
+          "site_name": "SiteOptz"
+        },
+        "twitter": {
+          "card": "summary_large_image",
+          "title": "n8n - AI Workflow Automation",
+          "description": "Open-source workflow automation with 70+ AI nodes and LangChain integration",
+          "image": "https://siteoptz.ai/images/tools/n8n-logo.svg"
+        }
+      },
+      "schema": {
+        "@type": "Product",
+        "@context": "https://schema.org",
+        "name": "n8n",
+        "description": "Open-source workflow automation platform with AI-native capabilities",
+        "image": "https://siteoptz.ai/images/tools/n8n-logo.svg",
+        "url": "https://siteoptz.ai/tools/n8n",
+        "brand": {
+          "@type": "Brand",
+          "name": "n8n"
+        },
+        "category": null,
+        "aggregateRating": {
+          "@type": "AggregateRating",
+          "ratingValue": 4.8,
+          "reviewCount": 3500,
+          "bestRating": 5,
+          "worstRating": 1
+        },
+        "offers": {
+          "@type": "Offer",
+          "price": 0,
+          "priceCurrency": "USD",
+          "availability": "https://schema.org/InStock",
+          "url": "https://n8n.io",
+          "description": "Free self-hosted, cloud plans from $20/month"
+        }
+      },
+      "overview": {
+        "developer": "n8n GmbH",
+        "release_year": 2019,
+        "category": "AI Automation",
+        "description": "n8n is an open-source workflow automation platform that combines AI capabilities with business process automation, offering 70+ AI-specific nodes and native LangChain integration for creating intelligent automations.",
+        "website": "https://n8n.io",
+        "support": "Community Forum, Documentation, Email Support",
+        "use_cases": [
+          "Complex AI workflow automation",
+          "Multi-app data synchronization", 
+          "Custom business process automation",
+          "AI model orchestration",
+          "Data transformation pipelines",
+          "API integration and management"
+        ],
+        "integrations": [
+          "400+ app integrations",
+          "LangChain framework",
+          "OpenAI GPT models",
+          "Anthropic Claude",
+          "Database connectors",
+          "Webhook support"
+        ]
+      },
+      "features": [
+        "70+ AI-specific nodes",
+        "Visual workflow builder",
+        "Code integration (JavaScript/Python)",
+        "Self-hosted option",
+        "Advanced error handling",
+        "Custom function nodes",
+        "Real-time execution monitoring"
+      ],
+      "pros": [
+        "Completely free for self-hosted version",
+        "Native AI capabilities with LangChain",
+        "Highly customizable workflows",
+        "Open-source with active community",
+        "No vendor lock-in",
+        "Advanced conditional logic"
+      ],
+      "cons": [
+        "Requires technical knowledge for setup",
+        "Steeper learning curve than Zapier",
+        "Cloud version can be expensive",
+        "Limited customer support on free plan"
+      ],
+      "pricing": [
+        {
+          "plan": "Self-hosted",
+          "price_per_month": 0,
+          "features": [
+            "Unlimited workflows",
+            "Self-managed infrastructure", 
+            "Community support",
+            "Full feature access"
+          ]
+        },
+        {
+          "plan": "Starter",
+          "price_per_month": 20,
+          "features": [
+            "5,000 executions/month",
+            "Cloud hosting",
+            "Email support",
+            "Standard integrations"
+          ]
+        },
+        {
+          "plan": "Pro",
+          "price_per_month": 50,
+          "features": [
+            "100,000 executions/month",
+            "Advanced features",
+            "Priority support",
+            "Team collaboration"
+          ]
+        }
+      ],
+      "benchmarks": {
+        "speed": 9,
+        "accuracy": 9,
+        "integration": 9,
+        "ease_of_use": 6,
+        "value": 10
+      },
+      "related_tools": [
+        "zapier",
+        "make",
+        "microsoft-power-automate"
+      ],
+      "affiliate_link": "https://n8n.io",
+      "search_volume": 3500,
+      "cpc": 2.1,
+      "use_cases": [
+        "AI Workflow Automation",
+        "Complex Business Processes", 
+        "Custom Integrations",
+        "Data Pipeline Automation",
+        "Multi-app Synchronization"
+      ],
+      "tags": [
+        "workflow automation",
+        "ai automation", 
+        "open source"
+      ]
+    },
+    {
+      "id": "make",
+      "name": "Make",
+      "slug": "make",
+      "logo": "/images/tools/make-logo.svg",
+      "meta": {
+        "title": "Make Review, Pricing, Features & Alternatives [2025]",
+        "description": "Visual workflow automation platform for complex integrations. Build sophisticated automations with drag-and-drop interface and advanced logic capabilities.",
+        "keywords": "make, integromat, make review, make pricing, workflow automation, visual automation, zapier alternative, 2025",
+        "canonical": "https://siteoptz.ai/tools/make",
+        "openGraph": {
+          "title": "Make - Visual Workflow Automation Platform",
+          "description": "Build complex automations with drag-and-drop visual interface",
+          "type": "article",
+          "url": "https://siteoptz.ai/tools/make",
+          "image": "https://siteoptz.ai/images/tools/make-logo.svg",
+          "site_name": "SiteOptz"
+        },
+        "twitter": {
+          "card": "summary_large_image",
+          "title": "Make - Visual Automation",
+          "description": "Build complex automations with drag-and-drop visual interface",
+          "image": "https://siteoptz.ai/images/tools/make-logo.svg"
+        }
+      },
+      "schema": {
+        "@type": "Product",
+        "@context": "https://schema.org",
+        "name": "Make",
+        "description": "Visual workflow automation platform for complex integrations",
+        "image": "https://siteoptz.ai/images/tools/make-logo.svg",
+        "url": "https://siteoptz.ai/tools/make",
+        "brand": {
+          "@type": "Brand",
+          "name": "Make"
+        },
+        "category": null,
+        "aggregateRating": {
+          "@type": "AggregateRating",
+          "ratingValue": 4.6,
+          "reviewCount": 2800,
+          "bestRating": 5,
+          "worstRating": 1
+        },
+        "offers": {
+          "@type": "Offer",
+          "price": 9,
+          "priceCurrency": "USD",
+          "availability": "https://schema.org/InStock",
+          "url": "https://make.com",
+          "description": "Starts at $9/month with free tier available"
+        }
+      },
+      "overview": {
+        "developer": "Make (formerly Integromat)",
+        "release_year": 2016,
+        "category": "AI Automation",
+        "description": "Make is a visual automation platform that allows users to build complex workflows with a drag-and-drop interface, offering more advanced logic and data manipulation capabilities than traditional automation tools.",
+        "website": "https://make.com",
+        "support": "Email, Chat, Documentation",
+        "use_cases": [
+          "Complex workflow automation",
+          "Data transformation and routing",
+          "Multi-app process orchestration",
+          "Advanced conditional logic",
+          "API integration management",
+          "Business process optimization"
+        ],
+        "integrations": [
+          "1,000+ app connectors",
+          "HTTP/API modules",
+          "Database integrations",
+          "Cloud storage services",
+          "Marketing platforms",
+          "CRM systems"
+        ]
+      },
+      "features": [
+        "Visual scenario builder",
+        "Advanced data manipulation",
+        "Conditional routing",
+        "Error handling modules",
+        "Data transformation tools",
+        "Real-time monitoring",
+        "Template marketplace"
+      ],
+      "pros": [
+        "Powerful visual workflow builder",
+        "Handles complex automations well",
+        "Competitive pricing for large volumes",
+        "Advanced data manipulation features",
+        "Strong error handling capabilities",
+        "Flexible scheduling options"
+      ],
+      "cons": [
+        "Steeper learning curve than Zapier",
+        "Interface can be overwhelming for beginners", 
+        "Limited free tier",
+        "Less intuitive for simple automations"
+      ],
+      "pricing": [
+        {
+          "plan": "Free",
+          "price_per_month": 0,
+          "features": [
+            "1,000 operations/month",
+            "2 active scenarios",
+            "Basic features",
+            "Community support"
+          ]
+        },
+        {
+          "plan": "Core",
+          "price_per_month": 9,
+          "features": [
+            "10,000 operations/month",
+            "Unlimited scenarios",
+            "Premium apps",
+            "Email support"
+          ]
+        },
+        {
+          "plan": "Pro",
+          "price_per_month": 16,
+          "features": [
+            "40,000 operations/month",
+            "Advanced features",
+            "Priority support",
+            "Custom variables"
+          ]
+        }
+      ],
+      "benchmarks": {
+        "speed": 8,
+        "accuracy": 9,
+        "integration": 8,
+        "ease_of_use": 7,
+        "value": 8
+      },
+      "related_tools": [
+        "zapier",
+        "n8n",
+        "microsoft-power-automate"
+      ],
+      "affiliate_link": "https://make.com",
+      "search_volume": 2800,
+      "cpc": 3.2,
+      "use_cases": [
+        "Visual Workflow Design",
+        "Complex Process Automation",
+        "Data Integration Projects",
+        "Advanced Business Logic",
+        "Multi-step Automations"
+      ],
+      "tags": [
+        "workflow automation",
+        "visual builder",
+        "integromat"
+      ]
+    }
+  ]
+}

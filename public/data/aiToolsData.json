@@ -14669,5 +14669,843 @@
       "ai-tools",
       "automation"
     ]
+  },
+  {
+    "id": "windsurf",
+    "name": "Windsurf",
+    "slug": "windsurf",
+    "logo": "/images/tools/windsurf-logo.svg",
+    "meta": {
+      "title": "Windsurf Review, Pricing, Features & Alternatives [2025]",
+      "description": "First agentic IDE with Cascade technology for deep contextual awareness. AI coding partner that automates routine tasks and maintains project context.",
+      "keywords": "windsurf, windsurf ide, codeium windsurf, agentic ide, cascade technology, ai coding assistant, 2025",
+      "canonical": "https://siteoptz.ai/tools/windsurf",
+      "openGraph": {
+        "title": "Windsurf - First Agentic IDE",
+        "description": "AI coding partner with Cascade technology for contextual awareness",
+        "type": "article",
+        "url": "https://siteoptz.ai/tools/windsurf",
+        "image": "https://siteoptz.ai/images/tools/windsurf-logo.svg",
+        "site_name": "SiteOptz"
+      },
+      "twitter": {
+        "card": "summary_large_image",
+        "title": "Windsurf - Agentic IDE",
+        "description": "AI coding partner with Cascade technology for contextual awareness",
+        "image": "https://siteoptz.ai/images/tools/windsurf-logo.svg"
+      }
+    },
+    "schema": {
+      "@type": "Product",
+      "@context": "https://schema.org",
+      "name": "Windsurf",
+      "description": "First agentic IDE with Cascade technology for deep contextual awareness",
+      "image": "https://siteoptz.ai/images/tools/windsurf-logo.svg",
+      "url": "https://siteoptz.ai/tools/windsurf",
+      "brand": {
+        "@type": "Brand",
+        "name": "Codeium"
+      },
+      "category": null,
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": 4.6,
+        "reviewCount": 2100,
+        "bestRating": 5,
+        "worstRating": 1
+      },
+      "offers": {
+        "@type": "Offer",
+        "price": 15,
+        "priceCurrency": "USD",
+        "availability": "https://schema.org/InStock",
+        "url": "https://codeium.com/windsurf",
+        "description": "Free tier available, Pro at $15/month"
+      }
+    },
+    "overview": {
+      "developer": "Codeium",
+      "release_year": 2024,
+      "category": "Code Generation",
+      "description": "Windsurf is the first agentic IDE that combines deep contextual awareness through Cascade technology with chat-based AI interaction, making AI feel like a true coding partner.",
+      "website": "https://codeium.com/windsurf",
+      "support": "Discord Community, Documentation, Support Team",
+      "use_cases": [
+        "Agentic coding assistance",
+        "Automated routine tasks",
+        "Contextual code generation",
+        "Project-wide refactoring",
+        "Intelligent debugging",
+        "Code documentation"
+      ],
+      "integrations": [
+        "Git version control",
+        "Multiple language support",
+        "Extension marketplace",
+        "Terminal integration",
+        "Debugging tools",
+        "Testing frameworks"
+      ]
+    },
+    "features": [
+      "Cascade contextual awareness",
+      "Chat-based agentic experience",
+      "Automated task execution",
+      "Deep project understanding",
+      "Intelligent code suggestions",
+      "Multi-file editing",
+      "Context-aware debugging"
+    ],
+    "pros": [
+      "Generous free tier offering",
+      "Intuitive chat-based interface",
+      "Advanced contextual awareness",
+      "Feels like coding partner vs tool",
+      "Competitive pricing at $15/month",
+      "Active development and updates"
+    ],
+    "cons": [
+      "Newer platform with less ecosystem",
+      "Limited third-party extensions",
+      "Learning curve for agentic approach",
+      "Requires internet connectivity"
+    ],
+    "pricing": [
+      {
+        "plan": "Free",
+        "price_per_month": 0,
+        "features": [
+          "Unlimited autocomplete",
+          "Chat functionality",
+          "Basic Cascade features",
+          "Community support"
+        ]
+      },
+      {
+        "plan": "Pro",
+        "price_per_month": 15,
+        "features": [
+          "Advanced Cascade features",
+          "Priority model access",
+          "Enhanced chat capabilities",
+          "Premium support"
+        ]
+      }
+    ],
+    "benchmarks": {
+      "speed": 8,
+      "accuracy": 8,
+      "integration": 7,
+      "ease_of_use": 9,
+      "value": 9
+    },
+    "related_tools": [
+      "cursor",
+      "github-copilot",
+      "codeium"
+    ],
+    "affiliate_link": "https://codeium.com/windsurf",
+    "search_volume": 2100,
+    "cpc": 3.8,
+    "use_cases": [
+      "Agentic Development",
+      "Automated Coding Tasks",
+      "Contextual Assistance",
+      "Project Refactoring",
+      "Intelligent Debugging"
+    ],
+    "tags": [
+      "agentic ide",
+      "cascade technology",
+      "chat-based coding"
+    ]
+  },
+  {
+    "id": "midjourney-v6",
+    "name": "Midjourney v6",
+    "slug": "midjourney",
+    "logo": "/images/tools/midjourney-logo.svg",
+    "meta": {
+      "title": "Midjourney Review, Pricing, Features & Alternatives [2025]",
+      "description": "Leading AI art generator known for exceptional artistic quality and photorealistic images. Create professional concept art, fantasy landscapes, and stylized portraits.",
+      "keywords": "midjourney, midjourney v6, ai art generator, ai image creation, photorealistic art, concept art, digital art, 2025",
+      "canonical": "https://siteoptz.ai/tools/midjourney",
+      "openGraph": {
+        "title": "Midjourney v6 - Premium AI Art Generator",
+        "description": "Create exceptionally realistic and artistic images with industry-leading AI",
+        "type": "article",
+        "url": "https://siteoptz.ai/tools/midjourney",
+        "image": "https://siteoptz.ai/images/tools/midjourney-logo.svg",
+        "site_name": "SiteOptz"
+      },
+      "twitter": {
+        "card": "summary_large_image",
+        "title": "Midjourney v6 - AI Art Generator",
+        "description": "Create exceptionally realistic and artistic images with industry-leading AI",
+        "image": "https://siteoptz.ai/images/tools/midjourney-logo.svg"
+      }
+    },
+    "schema": {
+      "@type": "Product",
+      "@context": "https://schema.org",
+      "name": "Midjourney v6",
+      "description": "Leading AI art generator for professional-quality digital artwork",
+      "image": "https://siteoptz.ai/images/tools/midjourney-logo.svg",
+      "url": "https://siteoptz.ai/tools/midjourney",
+      "brand": {
+        "@type": "Brand",
+        "name": "Midjourney Inc"
+      },
+      "category": null,
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": 4.8,
+        "reviewCount": 15000,
+        "bestRating": 5,
+        "worstRating": 1
+      },
+      "offers": {
+        "@type": "Offer",
+        "price": 10,
+        "priceCurrency": "USD",
+        "availability": "https://schema.org/InStock",
+        "url": "https://midjourney.com",
+        "description": "Subscription plans from $10/month, no free tier"
+      }
+    },
+    "overview": {
+      "developer": "Midjourney Inc",
+      "release_year": 2022,
+      "category": "Image Generation",
+      "description": "Midjourney is widely regarded as the benchmark for AI artistic quality, producing richly detailed, cinematic images that look like professional concept art with exceptional realism and precision.",
+      "website": "https://midjourney.com",
+      "support": "Discord Community, Help Center, Guides",
+      "use_cases": [
+        "Professional concept art",
+        "Fantasy landscapes and environments",
+        "Stylized portraits and characters",
+        "Album and poster artwork",
+        "Digital art creation",
+        "Creative visual exploration"
+      ],
+      "integrations": [
+        "Discord bot interface",
+        "Web app with sliders",
+        "API access (limited)",
+        "Third-party workflow tools",
+        "Image editing software",
+        "Creative workflows"
+      ]
+    },
+    "features": [
+      "Photorealistic image generation",
+      "Advanced artistic styles",
+      "Customizable parameters",
+      "High-resolution outputs",
+      "Style consistency",
+      "Batch generation",
+      "Remix and variation tools"
+    ],
+    "pros": [
+      "Industry-leading artistic quality",
+      "Exceptional photorealism and detail",
+      "Consistent, professional results",
+      "Strong community and resources",
+      "Regular model improvements",
+      "Streamlined web interface with sliders"
+    ],
+    "cons": [
+      "No free tier or trial available",
+      "Higher pricing than competitors",
+      "Limited text generation in images",
+      "Subscription-only model",
+      "Discord-based workflow can be limiting"
+    ],
+    "pricing": [
+      {
+        "plan": "Basic",
+        "price_per_month": 10,
+        "features": [
+          "200 image generations/month",
+          "Access to member gallery",
+          "Optional credit top-ups",
+          "General commercial terms"
+        ]
+      },
+      {
+        "plan": "Standard",
+        "price_per_month": 30,
+        "features": [
+          "Unlimited relaxed generations",
+          "15 hours fast generations",
+          "Stealth image generation",
+          "General commercial terms"
+        ]
+      },
+      {
+        "plan": "Pro",
+        "price_per_month": 60,
+        "features": [
+          "Unlimited relaxed generations",
+          "30 hours fast generations",
+          "Stealth mode",
+          "Maximum concurrent jobs"
+        ]
+      }
+    ],
+    "benchmarks": {
+      "speed": 8,
+      "accuracy": 10,
+      "integration": 6,
+      "ease_of_use": 8,
+      "value": 7
+    },
+    "related_tools": [
+      "dall-e-3",
+      "stable-diffusion",
+      "adobe-firefly"
+    ],
+    "affiliate_link": "https://midjourney.com",
+    "search_volume": 15000,
+    "cpc": 5.2,
+    "use_cases": [
+      "Professional Concept Art",
+      "Fantasy Art Creation",
+      "Digital Illustrations",
+      "Creative Visual Design",
+      "Artistic Exploration"
+    ],
+    "tags": [
+      "ai art generator",
+      "photorealistic images",
+      "concept art"
+    ]
+  },
+  {
+    "id": "flux",
+    "name": "Flux",
+    "slug": "flux",
+    "logo": "/images/tools/flux-logo.svg",
+    "meta": {
+      "title": "Flux Review, Pricing, Features & Alternatives [2025]",
+      "description": "Advanced AI image generator by Black Forest Labs that outperforms DALL-E 3 and Midjourney v6.1 in benchmarks for visual quality, prompt accuracy, and output diversity.",
+      "keywords": "flux, flux ai, black forest labs, ai image generator, stable diffusion alternative, visual quality, prompt accuracy, 2025",
+      "canonical": "https://siteoptz.ai/tools/flux",
+      "openGraph": {
+        "title": "Flux - Advanced AI Image Generator",
+        "description": "Outperforms DALL-E 3 and Midjourney in quality and prompt accuracy",
+        "type": "article",
+        "url": "https://siteoptz.ai/tools/flux",
+        "image": "https://siteoptz.ai/images/tools/flux-logo.svg",
+        "site_name": "SiteOptz"
+      },
+      "twitter": {
+        "card": "summary_large_image",
+        "title": "Flux - AI Image Generator",
+        "description": "Outperforms DALL-E 3 and Midjourney in quality and prompt accuracy",
+        "image": "https://siteoptz.ai/images/tools/flux-logo.svg"
+      }
+    },
+    "schema": {
+      "@type": "Product",
+      "@context": "https://schema.org",
+      "name": "Flux",
+      "description": "Advanced AI image generator with superior visual quality and prompt accuracy",
+      "image": "https://siteoptz.ai/images/tools/flux-logo.svg",
+      "url": "https://siteoptz.ai/tools/flux",
+      "brand": {
+        "@type": "Brand",
+        "name": "Black Forest Labs"
+      },
+      "category": null,
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": 4.7,
+        "reviewCount": 3200,
+        "bestRating": 5,
+        "worstRating": 1
+      },
+      "offers": {
+        "@type": "Offer",
+        "price": 0,
+        "priceCurrency": "USD",
+        "availability": "https://schema.org/InStock",
+        "url": "https://flux.ai",
+        "description": "Free tier available with paid options"
+      }
+    },
+    "overview": {
+      "developer": "Black Forest Labs",
+      "release_year": 2024,
+      "category": "Image Generation",
+      "description": "Flux is an advanced AI image generation model by Black Forest Labs that reportedly outperforms well-known competitors like DALL-E 3 and Midjourney v6.1 in benchmarks for visual quality, prompt accuracy, and output diversity.",
+      "website": "https://flux.ai",
+      "support": "Community Support, Documentation, Email",
+      "use_cases": [
+        "High-quality image generation",
+        "Precise prompt interpretation",
+        "Diverse visual outputs",
+        "Professional artwork creation",
+        "Creative content development",
+        "Experimental visual design"
+      ],
+      "integrations": [
+        "API access",
+        "Third-party platforms",
+        "Creative software tools",
+        "Workflow integrations",
+        "Developer tools",
+        "Cloud platforms"
+      ]
+    },
+    "features": [
+      "Superior visual quality",
+      "High prompt accuracy",
+      "Diverse output generation",
+      "Advanced model architecture",
+      "Multiple aspect ratios",
+      "Style consistency",
+      "Professional-grade outputs"
+    ],
+    "pros": [
+      "Outperforms DALL-E 3 in benchmarks",
+      "Superior prompt accuracy vs competitors",
+      "High output diversity and creativity",
+      "Advanced technical architecture",
+      "Strong visual quality results",
+      "Competitive positioning vs established tools"
+    ],
+    "cons": [
+      "Newer platform with smaller user base",
+      "Limited ecosystem compared to Midjourney",
+      "Less established community support",
+      "Fewer third-party integrations available"
+    ],
+    "pricing": [
+      {
+        "plan": "Free",
+        "price_per_month": 0,
+        "features": [
+          "Limited generations per month",
+          "Standard resolution",
+          "Basic features",
+          "Community access"
+        ]
+      },
+      {
+        "plan": "Pro",
+        "price_per_month": 20,
+        "features": [
+          "Increased generation limits",
+          "High resolution outputs",
+          "Priority processing",
+          "Advanced features"
+        ]
+      },
+      {
+        "plan": "Enterprise",
+        "price_per_month": 100,
+        "features": [
+          "Unlimited generations",
+          "API access",
+          "Custom models",
+          "Priority support"
+        ]
+      }
+    ],
+    "benchmarks": {
+      "speed": 8,
+      "accuracy": 10,
+      "integration": 7,
+      "ease_of_use": 8,
+      "value": 9
+    },
+    "related_tools": [
+      "dall-e-3",
+      "midjourney-v6",
+      "stable-diffusion"
+    ],
+    "affiliate_link": "https://flux.ai",
+    "search_volume": 3200,
+    "cpc": 4.1,
+    "use_cases": [
+      "High-Quality Image Creation",
+      "Precise Visual Generation",
+      "Creative Art Projects",
+      "Professional Design Work",
+      "Experimental Visuals"
+    ],
+    "tags": [
+      "advanced ai imaging",
+      "prompt accuracy",
+      "visual quality"
+    ]
+  },
+  {
+    "id": "datarobot",
+    "name": "DataRobot",
+    "slug": "datarobot",
+    "logo": "/images/tools/datarobot-logo.svg",
+    "meta": {
+      "title": "DataRobot Review, Pricing, Features & Alternatives [2025]",
+      "description": "Comprehensive review of DataRobot. Automated machine learning platform for predictive model building and deployment",
+      "keywords": "datarobot, datarobot review, datarobot pricing, datarobot alternatives, datarobot features, data analysis, ai tools, artificial intelligence, software comparison, 2025",
+      "canonical": "https://siteoptz.ai/tools/datarobot",
+      "openGraph": {
+        "title": "DataRobot - AI Tool Review & Pricing",
+        "description": "Automated machine learning platform for predictive model building and deployment",
+        "type": "article",
+        "url": "https://siteoptz.ai/tools/datarobot",
+        "image": "https://siteoptz.ai/images/tools/datarobot-logo.svg",
+        "site_name": "SiteOptz"
+      },
+      "twitter": {
+        "card": "summary_large_image",
+        "title": "DataRobot - AI Tool Review",
+        "description": "Automated machine learning platform for predictive model building and deployment",
+        "image": "https://siteoptz.ai/images/tools/datarobot-logo.svg"
+      }
+    },
+    "schema": {
+      "@type": "Product",
+      "@context": "https://schema.org",
+      "name": "DataRobot",
+      "description": "Automated machine learning platform for predictive model building and deployment",
+      "image": "https://siteoptz.ai/images/tools/datarobot-logo.svg",
+      "url": "https://siteoptz.ai/tools/datarobot",
+      "brand": {
+        "@type": "Brand",
+        "name": "DataRobot"
+      },
+      "category": null,
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": 4.6,
+        "reviewCount": 4785,
+        "bestRating": 5,
+        "worstRating": 1
+      },
+      "offers": {
+        "@type": "Offer",
+        "price": 0,
+        "priceCurrency": "USD",
+        "availability": "https://schema.org/InStock",
+        "url": "https://datarobot.com",
+        "description": "Free to start"
+      }
+    },
+    "overview": {
+      "developer": "DataRobot",
+      "release_year": 2024,
+      "category": "Data Analysis",
+      "description": "Automated machine learning platform for predictive model building and deployment",
+      "website": "https://datarobot.com",
+      "support": "Email, Chat",
+      "use_cases": [
+        "Predictive analytics",
+        "Risk modeling",
+        "Customer insights",
+        "Fraud detection"
+      ],
+      "integrations": []
+    },
+    "features": [
+      "Automated ML",
+      "Model deployment",
+      "Feature engineering",
+      "Model monitoring"
+    ],
+    "pros": [
+      "Automated ML",
+      "Model deployment",
+      "Feature engineering",
+      "User-friendly interface",
+      "Regular updates",
+      "Good customer support"
+    ],
+    "cons": [
+      "Learning curve for beginners",
+      "Pricing may be high for small businesses",
+      "Limited free features"
+    ],
+    "pricing": [
+      {
+        "plan": "Monthly",
+        "price_per_month": 0,
+        "features": [
+          "Basic features included"
+        ]
+      },
+      {
+        "plan": "Enterprise",
+        "price_per_month": 0,
+        "features": [
+          "Custom solutions",
+          "Priority support"
+        ]
+      }
+    ],
+    "benchmarks": {
+      "speed": 8,
+      "accuracy": 8,
+      "integration": 7,
+      "ease_of_use": 8,
+      "value": 7
+    },
+    "related_tools": [],
+    "affiliate_link": "https://datarobot.com",
+    "search_volume": 2401,
+    "cpc": 1.48,
+    "use_cases": [
+      "Predictive analytics",
+      "Risk modeling",
+      "Customer insights",
+      "Fraud detection"
+    ],
+    "tags": [
+      null,
+      "ai-tools",
+      "automation"
+    ]
+  },
+  {
+    "id": "mailchimp",
+    "name": "Mailchimp",
+    "slug": "mailchimp",
+    "logo": "/images/tools/mailchimp-logo.svg",
+    "meta": {
+      "title": "Mailchimp Review, Pricing, Features & Alternatives [2025]",
+      "description": "Comprehensive review of Mailchimp. AI-powered email marketing platform with automation, segmentation, and analytics",
+      "keywords": "mailchimp, mailchimp review, mailchimp pricing, mailchimp alternatives, mailchimp features, email marketing, ai tools, artificial intelligence, software comparison, 2025",
+      "canonical": "https://siteoptz.ai/tools/mailchimp",
+      "openGraph": {
+        "title": "Mailchimp - AI Tool Review & Pricing",
+        "description": "AI-powered email marketing platform with automation, segmentation, and analytics",
+        "type": "article",
+        "url": "https://siteoptz.ai/tools/mailchimp",
+        "image": "https://siteoptz.ai/images/tools/mailchimp-logo.svg",
+        "site_name": "SiteOptz"
+      },
+      "twitter": {
+        "card": "summary_large_image",
+        "title": "Mailchimp - AI Tool Review",
+        "description": "AI-powered email marketing platform with automation, segmentation, and analytics",
+        "image": "https://siteoptz.ai/images/tools/mailchimp-logo.svg"
+      }
+    },
+    "schema": {
+      "@type": "Product",
+      "@context": "https://schema.org",
+      "name": "Mailchimp",
+      "description": "AI-powered email marketing platform with automation, segmentation, and analytics",
+      "image": "https://siteoptz.ai/images/tools/mailchimp-logo.svg",
+      "url": "https://siteoptz.ai/tools/mailchimp",
+      "brand": {
+        "@type": "Brand",
+        "name": "Mailchimp"
+      },
+      "category": null,
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": 4.4,
+        "reviewCount": 3306,
+        "bestRating": 5,
+        "worstRating": 1
+      },
+      "offers": {
+        "@type": "Offer",
+        "price": 0,
+        "priceCurrency": "USD",
+        "availability": "https://schema.org/InStock",
+        "url": "https://mailchimp.com",
+        "description": "Free to start"
+      }
+    },
+    "overview": {
+      "developer": "Mailchimp",
+      "release_year": 2024,
+      "category": "Email Marketing",
+      "description": "AI-powered email marketing platform with automation, segmentation, and analytics",
+      "website": "https://mailchimp.com",
+      "support": "Email, Chat",
+      "use_cases": [
+        "Email campaigns",
+        "Marketing automation",
+        "Customer retention",
+        "Lead nurturing"
+      ],
+      "integrations": []
+    },
+    "features": [
+      "Email automation",
+      "Audience segmentation",
+      "A/B testing",
+      "Analytics"
+    ],
+    "pros": [
+      "Email automation",
+      "Audience segmentation",
+      "A/B testing",
+      "User-friendly interface",
+      "Regular updates",
+      "Good customer support"
+    ],
+    "cons": [
+      "Learning curve for beginners",
+      "Pricing may be high for small businesses",
+      "Limited free features"
+    ],
+    "pricing": [
+      {
+        "plan": "Free",
+        "price_per_month": 0,
+        "features": [
+          "2,000 contacts",
+          "10,000 emails/month"
+        ]
+      }
+    ],
+    "benchmarks": {
+      "speed": 8,
+      "accuracy": 8,
+      "integration": 7,
+      "ease_of_use": 8,
+      "value": 7
+    },
+    "related_tools": [],
+    "affiliate_link": "https://mailchimp.com",
+    "search_volume": 2413,
+    "cpc": 3.83,
+    "use_cases": [
+      "Email campaigns",
+      "Marketing automation",
+      "Customer retention",
+      "Lead nurturing"
+    ],
+    "tags": [
+      null,
+      "ai-tools",
+      "automation"
+    ]
+  },
+  {
+    "id": "runwayml",
+    "name": "RunwayML",
+    "slug": "runwayml",
+    "logo": "/images/tools/runwayml-logo.svg",
+    "meta": {
+      "title": "RunwayML Review, Pricing, Features & Alternatives [2025]",
+      "description": "Comprehensive review of RunwayML. AI-powered video generation and editing platform with Gen-3 Alpha model",
+      "keywords": "runwayml, runwayml review, runwayml pricing, runwayml alternatives, runwayml features, video generation, ai tools, artificial intelligence, software comparison, 2025",
+      "canonical": "https://siteoptz.ai/tools/runwayml",
+      "openGraph": {
+        "title": "RunwayML - AI Tool Review & Pricing",
+        "description": "AI-powered video generation and editing platform with Gen-3 Alpha model",
+        "type": "article",
+        "url": "https://siteoptz.ai/tools/runwayml",
+        "image": "https://siteoptz.ai/images/tools/runwayml-logo.svg",
+        "site_name": "SiteOptz"
+      },
+      "twitter": {
+        "card": "summary_large_image",
+        "title": "RunwayML - AI Tool Review",
+        "description": "AI-powered video generation and editing platform with Gen-3 Alpha model",
+        "image": "https://siteoptz.ai/images/tools/runwayml-logo.svg"
+      }
+    },
+    "schema": {
+      "@type": "Product",
+      "@context": "https://schema.org",
+      "name": "RunwayML",
+      "description": "AI-powered video generation and editing platform with Gen-3 Alpha model",
+      "image": "https://siteoptz.ai/images/tools/runwayml-logo.svg",
+      "url": "https://siteoptz.ai/tools/runwayml",
+      "brand": {
+        "@type": "Brand",
+        "name": "RunwayML"
+      },
+      "category": null,
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": 4.6,
+        "reviewCount": 3836,
+        "bestRating": 5,
+        "worstRating": 1
+      },
+      "offers": {
+        "@type": "Offer",
+        "price": 15,
+        "priceCurrency": "USD",
+        "availability": "https://schema.org/InStock",
+        "url": "https://runwayml.com",
+        "description": "Starts at $15/month"
+      }
+    },
+    "overview": {
+      "developer": "RunwayML",
+      "release_year": 2024,
+      "category": "Video Generation",
+      "description": "AI-powered video generation and editing platform with Gen-3 Alpha model",
+      "website": "https://runwayml.com",
+      "support": "Email, Chat",
+      "use_cases": [
+        "Video creation",
+        "Content editing",
+        "Visual effects",
+        "Creative projects"
+      ],
+      "integrations": []
+    },
+    "features": [
+      "Text-to-video generation",
+      "Video editing",
+      "Green screen removal",
+      "Motion tracking"
+    ],
+    "pros": [
+      "Text-to-video generation",
+      "Video editing",
+      "Green screen removal",
+      "User-friendly interface",
+      "Regular updates",
+      "Good customer support"
+    ],
+    "cons": [
+      "Learning curve for beginners",
+      "Pricing may be high for small businesses",
+      "Limited free features"
+    ],
+    "pricing": [
+      {
+        "plan": "Standard",
+        "price_per_month": 15,
+        "features": [
+          "720 credits",
+          "Gen-3 access"
+        ]
+      }
+    ],
+    "benchmarks": {
+      "speed": 8,
+      "accuracy": 8,
+      "integration": 7,
+      "ease_of_use": 8,
+      "value": 7
+    },
+    "related_tools": [],
+    "affiliate_link": "https://runwayml.com",
+    "search_volume": 9343,
+    "cpc": 2.96,
+    "use_cases": [
+      "Video creation",
+      "Content editing",
+      "Visual effects",
+      "Creative projects"
+    ],
+    "tags": [
+      null,
+      "ai-tools",
+      "automation"
+    ]
   }
 ]
