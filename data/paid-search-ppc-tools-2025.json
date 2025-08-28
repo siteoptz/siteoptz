@@ -1,0 +1,346 @@
+{
+  "category": "Paid Search & PPC",
+  "description": "AI-powered PPC management, Google Ads automation, bid optimization, and paid search campaign tools for maximizing advertising ROI.",
+  "tools": [
+    {
+      "tool_name": "Optmyzr",
+      "vendor": "Optmyzr Inc",
+      "logo_url": "/images/tools/optmyzr-logo.svg",
+      "description": "Award-winning PPC management platform with AI-driven automation for Google, Microsoft, Meta, and Amazon Ads.",
+      "features": {
+        "core": [
+          "Automated bid management across platforms",
+          "PPC Investigator for performance analysis",
+          "Smart campaign optimization suggestions",
+          "Cross-platform reporting and insights",
+          "Advanced auction insights analysis"
+        ],
+        "advanced": [
+          "AI-powered budget allocation",
+          "Custom automation scripts",
+          "Advanced audience targeting",
+          "Performance Max optimization",
+          "Shopping campaign management"
+        ],
+        "integrations": [
+          "Google Ads API",
+          "Microsoft Advertising",
+          "Facebook Ads Manager",
+          "Amazon Advertising",
+          "Google Analytics"
+        ]
+      },
+      "pricing": {
+        "monthly": 209,
+        "yearly": 2208,
+        "enterprise": "Custom enterprise pricing",
+        "plans": [
+          {
+            "plan_name": "Starter",
+            "price": "$209/month",
+            "features_included": [
+              "Up to $10K ad spend",
+              "Core optimization tools",
+              "Basic reporting",
+              "Email support"
+            ]
+          },
+          {
+            "plan_name": "Pro",
+            "price": "$449/month",
+            "features_included": [
+              "Up to $50K ad spend",
+              "Advanced automation",
+              "Custom reporting",
+              "Priority support"
+            ]
+          },
+          {
+            "plan_name": "Enterprise",
+            "price": "Custom",
+            "features_included": [
+              "Unlimited ad spend",
+              "White-label options",
+              "Dedicated support",
+              "Custom integrations"
+            ]
+          }
+        ]
+      },
+      "website": "https://www.optmyzr.com",
+      "category": "Paid Search & PPC",
+      "rating": 4.7,
+      "use_cases": [
+        "Multi-platform PPC management",
+        "Automated bid optimization",
+        "Campaign performance analysis",
+        "Large-scale ad account management",
+        "Agency client reporting"
+      ],
+      "target_audience": "PPC agencies, Enterprise marketers, Google Ads specialists, Multi-platform advertisers",
+      "last_updated": "2025-01-28",
+      "meta_title": "Optmyzr: AI-Powered PPC Management for Google Ads & Multi-Platform",
+      "meta_description": "Automate and optimize PPC campaigns across Google, Microsoft, Meta, and Amazon. Advanced bid management and performance analysis for agencies and enterprises.",
+      "schema_data": {
+        "@type": "SoftwareApplication",
+        "applicationCategory": "PPC Management Software",
+        "operatingSystem": "Web-based",
+        "offers": {
+          "@type": "Offer",
+          "price": "209.00",
+          "priceCurrency": "USD"
+        }
+      }
+    },
+    {
+      "tool_name": "Adalysis",
+      "vendor": "Adalysis Ltd",
+      "logo_url": "/images/tools/adalysis-logo.svg",
+      "description": "PPC optimization software focused on Google and Bing Ads with smart bidding automation and comprehensive reporting.",
+      "features": {
+        "core": [
+          "Smart bid automation and optimization",
+          "Automated ad testing and rotation",
+          "Comprehensive audit and alerts system",
+          "50+ pre-built reporting templates",
+          "Budget management and pacing tools"
+        ],
+        "advanced": [
+          "Quality Score optimization",
+          "Negative keyword automation",
+          "Landing page testing integration",
+          "White-label reporting options",
+          "API access for custom workflows"
+        ],
+        "integrations": [
+          "Google Ads",
+          "Microsoft Advertising",
+          "Google Analytics",
+          "Google Tag Manager",
+          "Third-party tracking tools"
+        ]
+      },
+      "pricing": {
+        "monthly": 149,
+        "yearly": 1548,
+        "enterprise": "Custom pricing available",
+        "plans": [
+          {
+            "plan_name": "Starter",
+            "price": "$149/month",
+            "features_included": [
+              "Up to $50K monthly spend",
+              "Unlimited accounts",
+              "Core optimization tools",
+              "Standard reporting"
+            ]
+          },
+          {
+            "plan_name": "Professional",
+            "price": "$249/month",
+            "features_included": [
+              "Up to $100K monthly spend",
+              "Advanced features",
+              "Custom reporting",
+              "Priority support"
+            ]
+          },
+          {
+            "plan_name": "Agency",
+            "price": "$449/month",
+            "features_included": [
+              "Up to $250K monthly spend",
+              "White-label options",
+              "Multi-client management",
+              "Dedicated support"
+            ]
+          }
+        ]
+      },
+      "website": "https://adalysis.com",
+      "category": "Paid Search & PPC",
+      "rating": 4.6,
+      "use_cases": [
+        "Google Ads optimization",
+        "Automated bid management",
+        "Ad testing and rotation",
+        "PPC performance auditing",
+        "Agency client management"
+      ],
+      "target_audience": "PPC specialists, Digital agencies, Google Ads managers, Performance marketers",
+      "last_updated": "2025-01-28",
+      "meta_title": "Adalysis: Smart PPC Optimization for Google Ads & Bing",
+      "meta_description": "Optimize Google and Bing Ads with automated bidding, ad testing, and comprehensive reporting. Trusted by agencies for PPC campaign management.",
+      "schema_data": {
+        "@type": "SoftwareApplication",
+        "applicationCategory": "PPC Optimization Software",
+        "operatingSystem": "Web-based",
+        "offers": {
+          "@type": "Offer",
+          "price": "149.00",
+          "priceCurrency": "USD"
+        }
+      }
+    },
+    {
+      "tool_name": "Acquisio",
+      "vendor": "Acquisio Inc",
+      "logo_url": "/images/tools/acquisio-logo.svg",
+      "description": "AI-powered advertising platform for scaling PPC campaigns across Google, Meta, and Microsoft with machine learning optimization.",
+      "features": {
+        "core": [
+          "AI-driven bid and budget optimization",
+          "Cross-channel campaign management",
+          "Machine learning audience targeting",
+          "Automated performance reporting",
+          "Local SEM reseller tools"
+        ],
+        "advanced": [
+          "Predictive budget allocation",
+          "Dynamic creative optimization",
+          "Advanced attribution modeling",
+          "White-label platform options",
+          "Enterprise-grade security"
+        ],
+        "integrations": [
+          "Google Ads",
+          "Facebook Ads",
+          "Microsoft Advertising",
+          "Google Analytics",
+          "CRM systems"
+        ]
+      },
+      "pricing": {
+        "monthly": 0,
+        "yearly": 0,
+        "enterprise": "Custom pricing based on ad spend",
+        "plans": [
+          {
+            "plan_name": "Performance",
+            "price": "% of ad spend",
+            "features_included": [
+              "AI optimization",
+              "Cross-platform management",
+              "Basic reporting",
+              "Standard support"
+            ]
+          },
+          {
+            "plan_name": "Enterprise",
+            "price": "Custom pricing",
+            "features_included": [
+              "Advanced AI features",
+              "White-label options",
+              "Custom reporting",
+              "Dedicated support"
+            ]
+          }
+        ]
+      },
+      "website": "https://www.acquisio.com",
+      "category": "Paid Search & PPC",
+      "rating": 4.5,
+      "use_cases": [
+        "Large-scale PPC automation",
+        "Cross-platform campaign optimization",
+        "Local SEM reseller programs",
+        "Enterprise advertising management",
+        "AI-driven bid optimization"
+      ],
+      "target_audience": "Enterprise advertisers, Marketing agencies, Local SEM resellers, Large-scale advertisers",
+      "last_updated": "2025-01-28",
+      "meta_title": "Acquisio: AI-Powered Cross-Platform PPC Management & Optimization",
+      "meta_description": "Scale PPC campaigns with AI-driven optimization across Google, Meta, and Microsoft. Machine learning bidding and budget allocation for enterprise advertisers.",
+      "schema_data": {
+        "@type": "SoftwareApplication",
+        "applicationCategory": "AI Advertising Platform",
+        "operatingSystem": "Web-based",
+        "offers": {
+          "@type": "Offer",
+          "price": "0.00",
+          "priceCurrency": "USD"
+        }
+      }
+    },
+    {
+      "tool_name": "Adzooma",
+      "vendor": "Adzooma Ltd",
+      "logo_url": "/images/tools/adzooma-logo.svg",
+      "description": "Free PPC management platform with AI optimization recommendations and automated campaign improvement tools.",
+      "features": {
+        "core": [
+          "Free PPC account management",
+          "AI-powered optimization recommendations",
+          "Automated rule-based changes",
+          "Performance monitoring dashboard",
+          "Cross-platform campaign insights"
+        ],
+        "advanced": [
+          "Smart bidding automation",
+          "Keyword opportunity identification",
+          "Ad performance analysis",
+          "Budget pacing optimization",
+          "Competitor analysis tools"
+        ],
+        "integrations": [
+          "Google Ads",
+          "Microsoft Advertising",
+          "Facebook Ads",
+          "Google Analytics",
+          "Reporting tools"
+        ]
+      },
+      "pricing": {
+        "monthly": 0,
+        "yearly": 0,
+        "enterprise": "Premium plans available",
+        "plans": [
+          {
+            "plan_name": "Free",
+            "price": "$0/month",
+            "features_included": [
+              "Unlimited accounts",
+              "Basic optimization",
+              "Performance monitoring",
+              "Standard support"
+            ]
+          },
+          {
+            "plan_name": "Premium",
+            "price": "Starting at $99/month",
+            "features_included": [
+              "Advanced automation",
+              "Priority support",
+              "Custom reporting",
+              "White-label options"
+            ]
+          }
+        ]
+      },
+      "website": "https://www.adzooma.com",
+      "category": "Paid Search & PPC",
+      "rating": 4.4,
+      "use_cases": [
+        "Free PPC management",
+        "Small business advertising",
+        "Campaign optimization automation",
+        "Performance monitoring",
+        "Multi-platform ad management"
+      ],
+      "target_audience": "Small businesses, Freelance marketers, Startups, Budget-conscious advertisers",
+      "last_updated": "2025-01-28",
+      "meta_title": "Adzooma: Free PPC Management with AI Optimization Recommendations",
+      "meta_description": "Manage Google, Microsoft, and Facebook Ads for free. AI-powered optimization recommendations and automated campaign improvements for small businesses.",
+      "schema_data": {
+        "@type": "SoftwareApplication",
+        "applicationCategory": "Free PPC Management Software",
+        "operatingSystem": "Web-based",
+        "offers": {
+          "@type": "Offer",
+          "price": "0.00",
+          "priceCurrency": "USD"
+        }
+      }
+    }
+  ]
+}

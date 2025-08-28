@@ -1,0 +1,366 @@
+{
+  "category": "Social Media",
+  "description": "AI-powered social media management, scheduling, analytics, and content creation tools for comprehensive social media marketing.",
+  "tools": [
+    {
+      "tool_name": "Sprout Social",
+      "vendor": "Sprout Social Inc",
+      "logo_url": "/images/tools/sprout-social-logo.svg",
+      "description": "Enterprise-grade social media management platform with AI-powered analytics and comprehensive publishing tools.",
+      "features": {
+        "core": [
+          "Cross-platform social media publishing",
+          "AI-powered social listening and sentiment analysis",
+          "Unified social inbox for engagement",
+          "Advanced analytics and reporting",
+          "Employee advocacy tools"
+        ],
+        "advanced": [
+          "Custom audience targeting",
+          "Competitive benchmarking",
+          "Social CRM integration",
+          "Automated response workflows",
+          "ROI measurement tools"
+        ],
+        "integrations": [
+          "Salesforce CRM",
+          "HubSpot",
+          "Google Analytics",
+          "Zendesk",
+          "Microsoft Dynamics"
+        ]
+      },
+      "pricing": {
+        "monthly": 249,
+        "yearly": 2988,
+        "enterprise": "Custom pricing available",
+        "plans": [
+          {
+            "plan_name": "Standard",
+            "price": "$249/month",
+            "features_included": [
+              "5 social profiles",
+              "All publishing tools",
+              "Social listening",
+              "1 user seat"
+            ]
+          },
+          {
+            "plan_name": "Professional",
+            "price": "$399/month",
+            "features_included": [
+              "10 social profiles",
+              "Competitive reports",
+              "Advanced analytics",
+              "Up to 3 users"
+            ]
+          },
+          {
+            "plan_name": "Advanced",
+            "price": "$499/month",
+            "features_included": [
+              "10 social profiles",
+              "Message spike alerts",
+              "Advanced workflows",
+              "Up to 5 users"
+            ]
+          }
+        ]
+      },
+      "website": "https://sproutsocial.com",
+      "category": "Social Media",
+      "rating": 4.8,
+      "use_cases": [
+        "Enterprise social media management",
+        "Multi-brand social campaigns",
+        "Social customer service",
+        "Influencer relationship management",
+        "Social media ROI tracking"
+      ],
+      "target_audience": "Enterprise companies, Marketing agencies, Social media managers, Customer service teams",
+      "last_updated": "2025-01-28",
+      "meta_title": "Sprout Social: Enterprise Social Media Management with AI Analytics",
+      "meta_description": "Manage social media at scale with AI-powered analytics, unified inbox, and comprehensive publishing tools. Trusted by enterprise brands worldwide.",
+      "schema_data": {
+        "@type": "SoftwareApplication",
+        "applicationCategory": "Social Media Management Software",
+        "operatingSystem": "Web-based, Mobile",
+        "offers": {
+          "@type": "Offer",
+          "price": "249.00",
+          "priceCurrency": "USD"
+        }
+      }
+    },
+    {
+      "tool_name": "Buffer",
+      "vendor": "Buffer Inc",
+      "logo_url": "/images/tools/buffer-logo.svg",
+      "description": "Simple social media scheduling and publishing platform with analytics and team collaboration features.",
+      "features": {
+        "core": [
+          "Multi-platform content scheduling",
+          "Visual content calendar",
+          "Basic analytics and insights",
+          "Team collaboration tools",
+          "Landing page builder"
+        ],
+        "advanced": [
+          "Hashtag suggestions",
+          "Best time to post optimization",
+          "Custom reporting",
+          "Browser extension",
+          "RSS feed integration"
+        ],
+        "integrations": [
+          "Facebook, Instagram, Twitter",
+          "LinkedIn, Pinterest, TikTok",
+          "Google Analytics",
+          "Canva design tool",
+          "Zapier automation"
+        ]
+      },
+      "pricing": {
+        "monthly": 6,
+        "yearly": 60,
+        "enterprise": "Custom pricing available",
+        "plans": [
+          {
+            "plan_name": "Free",
+            "price": "$0/month",
+            "features_included": [
+              "3 social channels",
+              "10 scheduled posts",
+              "Basic analytics",
+              "1 user"
+            ]
+          },
+          {
+            "plan_name": "Essentials",
+            "price": "$6/month",
+            "features_included": [
+              "5 social channels",
+              "Unlimited posts",
+              "Enhanced analytics",
+              "1 user"
+            ]
+          },
+          {
+            "plan_name": "Team",
+            "price": "$12/month",
+            "features_included": [
+              "8 social channels",
+              "Team collaboration",
+              "Advanced analytics",
+              "Unlimited users"
+            ]
+          }
+        ]
+      },
+      "website": "https://buffer.com",
+      "category": "Social Media",
+      "rating": 4.6,
+      "use_cases": [
+        "Small business social media",
+        "Content scheduling automation",
+        "Social media analytics",
+        "Team collaboration",
+        "Multi-platform publishing"
+      ],
+      "target_audience": "Small businesses, Freelancers, Marketing teams, Content creators",
+      "last_updated": "2025-01-28",
+      "meta_title": "Buffer: Simple Social Media Scheduling & Publishing Platform",
+      "meta_description": "Schedule and publish social media content across all platforms. Free plan available with team collaboration and analytics features for growing businesses.",
+      "schema_data": {
+        "@type": "SoftwareApplication",
+        "applicationCategory": "Social Media Scheduling Software",
+        "operatingSystem": "Web-based, Mobile",
+        "offers": {
+          "@type": "Offer",
+          "price": "0.00",
+          "priceCurrency": "USD"
+        }
+      }
+    },
+    {
+      "tool_name": "Hootsuite",
+      "vendor": "Hootsuite Inc",
+      "logo_url": "/images/tools/hootsuite-logo.svg",
+      "description": "Comprehensive social media management platform with AI content creation and advanced scheduling capabilities.",
+      "features": {
+        "core": [
+          "Multi-platform social media management",
+          "OwlyWriter AI content creation",
+          "Advanced scheduling and automation",
+          "Social listening and monitoring",
+          "Team collaboration workflows"
+        ],
+        "advanced": [
+          "Custom analytics dashboards",
+          "Bulk scheduling capabilities",
+          "Social advertising management",
+          "Crisis management tools",
+          "API integration options"
+        ],
+        "integrations": [
+          "150+ app integrations",
+          "Salesforce CRM",
+          "Google Analytics",
+          "Adobe Creative Suite",
+          "Shopify eCommerce"
+        ]
+      },
+      "pricing": {
+        "monthly": 99,
+        "yearly": 948,
+        "enterprise": "Custom enterprise pricing",
+        "plans": [
+          {
+            "plan_name": "Professional",
+            "price": "$99/month",
+            "features_included": [
+              "10 social accounts",
+              "Unlimited scheduling",
+              "AI content creation",
+              "1 user"
+            ]
+          },
+          {
+            "plan_name": "Team",
+            "price": "$249/month",
+            "features_included": [
+              "20 social accounts",
+              "Team collaboration",
+              "Advanced analytics",
+              "3 users"
+            ]
+          },
+          {
+            "plan_name": "Enterprise",
+            "price": "$739/month",
+            "features_included": [
+              "50 social accounts",
+              "Advanced security",
+              "Priority support",
+              "5 users"
+            ]
+          }
+        ]
+      },
+      "website": "https://hootsuite.com",
+      "category": "Social Media",
+      "rating": 4.4,
+      "use_cases": [
+        "Enterprise social media campaigns",
+        "Multi-brand management",
+        "Social media customer service",
+        "Content marketing automation",
+        "Social media advertising"
+      ],
+      "target_audience": "Enterprise companies, Marketing agencies, Social media teams, Large organizations",
+      "last_updated": "2025-01-28",
+      "meta_title": "Hootsuite: AI-Powered Social Media Management for Enterprise",
+      "meta_description": "Manage all social media channels from one dashboard. AI content creation, advanced scheduling, and comprehensive analytics for enterprise social media.",
+      "schema_data": {
+        "@type": "SoftwareApplication",
+        "applicationCategory": "Social Media Management Software",
+        "operatingSystem": "Web-based, Mobile",
+        "offers": {
+          "@type": "Offer",
+          "price": "99.00",
+          "priceCurrency": "USD"
+        }
+      }
+    },
+    {
+      "tool_name": "Later",
+      "vendor": "Later Influence Inc",
+      "logo_url": "/images/tools/later-logo.svg",
+      "description": "Visual-first social media scheduler with AI-powered content creation and comprehensive Instagram marketing tools.",
+      "features": {
+        "core": [
+          "Visual content calendar",
+          "Auto-publishing for all platforms",
+          "Instagram shopping integration",
+          "User-generated content tools",
+          "Link in bio optimization"
+        ],
+        "advanced": [
+          "AI caption writing",
+          "Hashtag suggestions",
+          "Best time to post analytics",
+          "Competitor analysis",
+          "Influencer collaboration tools"
+        ],
+        "integrations": [
+          "Instagram, Facebook, Twitter",
+          "Pinterest, LinkedIn, TikTok",
+          "Shopify integration",
+          "Google Drive",
+          "Unsplash stock photos"
+        ]
+      },
+      "pricing": {
+        "monthly": 25,
+        "yearly": 300,
+        "enterprise": "Custom pricing available",
+        "plans": [
+          {
+            "plan_name": "Starter",
+            "price": "$25/month",
+            "features_included": [
+              "6 social sets",
+              "30 posts per profile",
+              "1 user seat",
+              "Basic analytics"
+            ]
+          },
+          {
+            "plan_name": "Growth",
+            "price": "$45/month",
+            "features_included": [
+              "6 social sets",
+              "Unlimited posts",
+              "3 user seats",
+              "Advanced analytics"
+            ]
+          },
+          {
+            "plan_name": "Advanced",
+            "price": "$80/month",
+            "features_included": [
+              "12 social sets",
+              "Unlimited posts",
+              "6 user seats",
+              "Full feature access"
+            ]
+          }
+        ]
+      },
+      "website": "https://later.com",
+      "category": "Social Media",
+      "rating": 4.5,
+      "use_cases": [
+        "Visual content planning",
+        "Instagram marketing campaigns",
+        "E-commerce social selling",
+        "Influencer content management",
+        "Brand aesthetic maintenance"
+      ],
+      "target_audience": "Visual brands, E-commerce businesses, Influencers, Content creators, Instagram marketers",
+      "last_updated": "2025-01-28",
+      "meta_title": "Later: Visual Social Media Scheduler with Instagram Marketing Tools",
+      "meta_description": "Plan, schedule, and publish visual content across all social platforms. Instagram shopping integration and AI-powered content creation for visual brands.",
+      "schema_data": {
+        "@type": "SoftwareApplication",
+        "applicationCategory": "Social Media Scheduling Software",
+        "operatingSystem": "Web-based, Mobile",
+        "offers": {
+          "@type": "Offer",
+          "price": "25.00",
+          "priceCurrency": "USD"
+        }
+      }
+    }
+  ]
+}

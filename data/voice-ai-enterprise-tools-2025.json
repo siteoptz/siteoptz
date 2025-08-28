@@ -1,0 +1,456 @@
+{
+  "category": "Voice AI & Assistants",
+  "description": "Advanced voice AI tools for transcription, speech-to-text, voice synthesis, and conversational AI solutions for business automation.",
+  "tools": [
+    {
+      "tool_name": "Deepgram",
+      "vendor": "Deepgram Inc",
+      "logo_url": "/images/tools/deepgram-logo.svg",
+      "description": "Enterprise-grade speech-to-text API with Nova-3 model delivering industry-leading accuracy and speed for voice AI applications.",
+      "features": {
+        "core": [
+          "Nova-3 fastest STT model with 54.3% error reduction",
+          "Real-time and batch speech recognition",
+          "99+ language and dialect support",
+          "Advanced speaker diarization",
+          "Custom vocabulary and model training"
+        ],
+        "advanced": [
+          "Live streaming transcription",
+          "Audio intelligence and insights",
+          "Noise reduction and audio enhancement",
+          "Custom model fine-tuning",
+          "Enterprise security compliance"
+        ],
+        "integrations": [
+          "REST API and WebSocket",
+          "Python, JavaScript SDKs",
+          "Twilio, Zoom integrations",
+          "AWS, GCP, Azure",
+          "Call center platforms"
+        ]
+      },
+      "pricing": {
+        "monthly": 0,
+        "yearly": 0,
+        "enterprise": "Usage-based pricing",
+        "plans": [
+          {
+            "plan_name": "Pay-as-you-go",
+            "price": "$0.0043/minute",
+            "features_included": [
+              "Nova-2 model access",
+              "Real-time transcription",
+              "45+ languages",
+              "Standard support"
+            ]
+          },
+          {
+            "plan_name": "Nova-3",
+            "price": "$0.0059/minute",
+            "features_included": [
+              "Latest Nova-3 model",
+              "Highest accuracy",
+              "All language support",
+              "Advanced features"
+            ]
+          },
+          {
+            "plan_name": "Enterprise",
+            "price": "Custom pricing",
+            "features_included": [
+              "Volume discounts",
+              "Custom models",
+              "Priority support",
+              "SLA guarantees"
+            ]
+          }
+        ]
+      },
+      "website": "https://deepgram.com",
+      "category": "Voice AI & Assistants",
+      "rating": 4.9,
+      "use_cases": [
+        "Call center analytics",
+        "Meeting transcription",
+        "Voice agent development",
+        "Media transcription",
+        "Real-time captioning"
+      ],
+      "target_audience": "Enterprise developers, Call centers, Media companies, Voice AI startups",
+      "last_updated": "2025-01-28",
+      "meta_title": "Deepgram: Enterprise Speech-to-Text API with Nova-3 Model",
+      "meta_description": "Industry-leading speech recognition with 54% better accuracy. Real-time transcription, 99+ languages, and enterprise-grade security for voice AI applications.",
+      "schema_data": {
+        "@type": "SoftwareApplication",
+        "applicationCategory": "Speech Recognition API",
+        "operatingSystem": "Cloud-based API",
+        "offers": {
+          "@type": "Offer",
+          "price": "0.0043",
+          "priceCurrency": "USD"
+        }
+      }
+    },
+    {
+      "tool_name": "Speechmatics",
+      "vendor": "Speechmatics Ltd",
+      "logo_url": "/images/tools/speechmatics-logo.svg",
+      "description": "Enterprise voice AI platform with high-accuracy transcription in 50+ languages, trusted by global brands and governments.",
+      "features": {
+        "core": [
+          "Real-time speech recognition in 50+ languages",
+          "Advanced speaker diarization",
+          "Custom language model adaptation",
+          "On-premise and cloud deployment",
+          "Enterprise-grade security"
+        ],
+        "advanced": [
+          "Domain-specific vocabulary",
+          "Punctuation and capitalization",
+          "Confidence scoring",
+          "Audio redaction capabilities",
+          "Batch processing optimization"
+        ],
+        "integrations": [
+          "RESTful API",
+          "WebSocket streaming",
+          "Docker containers",
+          "Kubernetes deployment",
+          "Enterprise systems"
+        ]
+      },
+      "pricing": {
+        "monthly": 0,
+        "yearly": 0,
+        "enterprise": "Usage-based enterprise pricing",
+        "plans": [
+          {
+            "plan_name": "Cloud API",
+            "price": "Usage-based",
+            "features_included": [
+              "Real-time transcription",
+              "Batch processing",
+              "50+ languages",
+              "Standard support"
+            ]
+          },
+          {
+            "plan_name": "On-Premise",
+            "price": "License-based",
+            "features_included": [
+              "Private deployment",
+              "Custom models",
+              "Full control",
+              "Dedicated support"
+            ]
+          },
+          {
+            "plan_name": "Enterprise",
+            "price": "Custom pricing",
+            "features_included": [
+              "Volume discounts",
+              "SLA agreements",
+              "Priority support",
+              "Custom integrations"
+            ]
+          }
+        ]
+      },
+      "website": "https://www.speechmatics.com",
+      "category": "Voice AI & Assistants",
+      "rating": 4.8,
+      "use_cases": [
+        "Government transcription",
+        "Media and broadcasting",
+        "Contact center analytics",
+        "Legal transcription",
+        "Academic research"
+      ],
+      "target_audience": "Government agencies, Media companies, Legal firms, Research institutions",
+      "last_updated": "2025-01-28",
+      "meta_title": "Speechmatics: Enterprise Voice AI with 50+ Language Support",
+      "meta_description": "High-accuracy speech recognition trusted by governments and global brands. On-premise and cloud deployment with advanced speaker diarization.",
+      "schema_data": {
+        "@type": "SoftwareApplication",
+        "applicationCategory": "Enterprise Voice AI Platform",
+        "operatingSystem": "Cloud, On-premise",
+        "offers": {
+          "@type": "Offer",
+          "price": "0.00",
+          "priceCurrency": "USD"
+        }
+      }
+    },
+    {
+      "tool_name": "Rev",
+      "vendor": "Rev.com Inc",
+      "logo_url": "/images/tools/rev-logo.svg",
+      "description": "Professional transcription service combining AI technology with human accuracy for high-quality speech-to-text conversion.",
+      "features": {
+        "core": [
+          "AI and human hybrid transcription",
+          "99% accuracy guarantee",
+          "24-hour turnaround time",
+          "Speaker identification",
+          "Timestamp accuracy"
+        ],
+        "advanced": [
+          "Custom vocabulary integration",
+          "Industry-specific terminology",
+          "Verbatim transcription options",
+          "Multi-format file support",
+          "API integration capabilities"
+        ],
+        "integrations": [
+          "Zoom integration",
+          "Dropbox, Google Drive",
+          "API for developers",
+          "Video platforms",
+          "CRM systems"
+        ]
+      },
+      "pricing": {
+        "monthly": 0,
+        "yearly": 0,
+        "enterprise": "Per-minute pricing",
+        "plans": [
+          {
+            "plan_name": "AI Transcription",
+            "price": "$0.25/minute",
+            "features_included": [
+              "AI-powered transcription",
+              "5-minute turnaround",
+              "Good accuracy",
+              "Basic formatting"
+            ]
+          },
+          {
+            "plan_name": "Human Transcription",
+            "price": "$1.50/minute",
+            "features_included": [
+              "99% accuracy guarantee",
+              "24-hour turnaround",
+              "Professional quality",
+              "Custom formatting"
+            ]
+          },
+          {
+            "plan_name": "Enterprise",
+            "price": "Custom pricing",
+            "features_included": [
+              "Volume discounts",
+              "Priority processing",
+              "API access",
+              "Dedicated support"
+            ]
+          }
+        ]
+      },
+      "website": "https://www.rev.com",
+      "category": "Voice AI & Assistants",
+      "rating": 4.7,
+      "use_cases": [
+        "Legal transcription",
+        "Academic research",
+        "Medical transcription",
+        "Business meetings",
+        "Content creation"
+      ],
+      "target_audience": "Legal professionals, Researchers, Healthcare providers, Content creators",
+      "last_updated": "2025-01-28",
+      "meta_title": "Rev: Professional AI & Human Transcription with 99% Accuracy",
+      "meta_description": "Get professional transcription with 99% accuracy guarantee. AI-powered with human verification for legal, medical, and business transcription needs.",
+      "schema_data": {
+        "@type": "SoftwareApplication",
+        "applicationCategory": "Transcription Service",
+        "operatingSystem": "Web-based",
+        "offers": {
+          "@type": "Offer",
+          "price": "0.25",
+          "priceCurrency": "USD"
+        }
+      }
+    },
+    {
+      "tool_name": "ElevenLabs",
+      "vendor": "ElevenLabs Ltd",
+      "logo_url": "/images/tools/elevenlabs-logo.svg",
+      "description": "Advanced AI voice synthesis platform with voice cloning, multilingual support, and emotional voice control for professional applications.",
+      "features": {
+        "core": [
+          "Natural-sounding AI voice generation",
+          "Voice cloning with minimal samples",
+          "29+ language support",
+          "Emotional voice control",
+          "Real-time voice synthesis API"
+        ],
+        "advanced": [
+          "Custom voice model training",
+          "Speech-to-speech conversion",
+          "Voice isolation and enhancement",
+          "Batch audio processing",
+          "Enterprise security features"
+        ],
+        "integrations": [
+          "REST API",
+          "Python, JavaScript SDKs",
+          "Streaming protocols",
+          "Video editing software",
+          "Content management systems"
+        ]
+      },
+      "pricing": {
+        "monthly": 5,
+        "yearly": 48,
+        "enterprise": "Custom enterprise pricing",
+        "plans": [
+          {
+            "plan_name": "Free",
+            "price": "$0/month",
+            "features_included": [
+              "10,000 characters/month",
+              "3 custom voices",
+              "Basic voice library",
+              "Standard quality"
+            ]
+          },
+          {
+            "plan_name": "Starter",
+            "price": "$5/month",
+            "features_included": [
+              "30,000 characters/month",
+              "10 custom voices",
+              "High-quality synthesis",
+              "API access"
+            ]
+          },
+          {
+            "plan_name": "Creator",
+            "price": "$22/month",
+            "features_included": [
+              "100,000 characters/month",
+              "30 custom voices",
+              "Instant voice cloning",
+              "Priority support"
+            ]
+          }
+        ]
+      },
+      "website": "https://elevenlabs.io",
+      "category": "Voice AI & Assistants",
+      "rating": 4.8,
+      "use_cases": [
+        "Audiobook narration",
+        "Video voice-overs",
+        "Call center automation",
+        "Content localization",
+        "Virtual assistants"
+      ],
+      "target_audience": "Content creators, Media companies, Call centers, E-learning platforms",
+      "last_updated": "2025-01-28",
+      "meta_title": "ElevenLabs: Advanced AI Voice Synthesis with Voice Cloning",
+      "meta_description": "Generate natural AI voices with emotional control and voice cloning. 29+ languages with professional voice synthesis for content creation and automation.",
+      "schema_data": {
+        "@type": "SoftwareApplication",
+        "applicationCategory": "AI Voice Generation Software",
+        "operatingSystem": "Web-based API",
+        "offers": {
+          "@type": "Offer",
+          "price": "0.00",
+          "priceCurrency": "USD"
+        }
+      }
+    },
+    {
+      "tool_name": "Otter.ai",
+      "vendor": "Otter.ai Inc",
+      "logo_url": "/images/tools/otter-ai-logo.svg",
+      "description": "AI-powered meeting assistant with real-time transcription, note-taking, and collaboration features for business productivity.",
+      "features": {
+        "core": [
+          "Real-time meeting transcription",
+          "AI-generated meeting summaries",
+          "Speaker identification",
+          "Searchable transcription history",
+          "Mobile and desktop apps"
+        ],
+        "advanced": [
+          "Custom vocabulary training",
+          "Action item extraction",
+          "Integration with calendars",
+          "Team collaboration features",
+          "Export capabilities"
+        ],
+        "integrations": [
+          "Zoom, Microsoft Teams",
+          "Google Meet, GoToMeeting",
+          "Slack, Notion",
+          "Salesforce CRM",
+          "Zapier automation"
+        ]
+      },
+      "pricing": {
+        "monthly": 10,
+        "yearly": 96,
+        "enterprise": "Custom enterprise pricing",
+        "plans": [
+          {
+            "plan_name": "Basic",
+            "price": "$0/month",
+            "features_included": [
+              "600 minutes/month",
+              "Basic transcription",
+              "Mobile apps",
+              "Limited features"
+            ]
+          },
+          {
+            "plan_name": "Pro",
+            "price": "$10/month",
+            "features_included": [
+              "6,000 minutes/month",
+              "Advanced search",
+              "Export options",
+              "Priority support"
+            ]
+          },
+          {
+            "plan_name": "Business",
+            "price": "$20/month",
+            "features_included": [
+              "Unlimited minutes",
+              "Team features",
+              "Admin controls",
+              "Priority support"
+            ]
+          }
+        ]
+      },
+      "website": "https://otter.ai",
+      "category": "Voice AI & Assistants",
+      "rating": 4.6,
+      "use_cases": [
+        "Meeting documentation",
+        "Interview transcription",
+        "Lecture note-taking",
+        "Team collaboration",
+        "Content research"
+      ],
+      "target_audience": "Business teams, Students, Journalists, Researchers, Remote workers",
+      "last_updated": "2025-01-28",
+      "meta_title": "Otter.ai: AI Meeting Assistant with Real-Time Transcription",
+      "meta_description": "Transform meetings with AI-powered transcription and note-taking. Real-time collaboration, meeting summaries, and searchable transcription history.",
+      "schema_data": {
+        "@type": "SoftwareApplication",
+        "applicationCategory": "Meeting Assistant Software",
+        "operatingSystem": "Web-based, Mobile, Desktop",
+        "offers": {
+          "@type": "Offer",
+          "price": "0.00",
+          "priceCurrency": "USD"
+        }
+      }
+    }
+  ]
+}

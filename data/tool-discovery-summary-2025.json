@@ -1,0 +1,172 @@
+{
+  "discovery_summary": {
+    "date": "2025-01-28",
+    "search_method": "Web search and analysis using multiple sources",
+    "categories_researched": [
+      "SEO & Optimization",
+      "Social Media Management", 
+      "Paid Search & PPC (new category)",
+      "Voice AI & Assistants (enhanced existing)"
+    ],
+    "total_new_tools_discovered": 17,
+    "deduplication_results": {
+      "existing_tools_found": [
+        "Descript",
+        "Murf AI", 
+        "Speechify",
+        "Resemble AI",
+        "Optmyzr",
+        "Adzooma"
+      ],
+      "completely_new_tools": 17
+    }
+  },
+  "new_tools_by_category": {
+    "seo_optimization": {
+      "file": "new-seo-tools-2025.json",
+      "count": 4,
+      "tools": [
+        {
+          "name": "Ahrefs",
+          "pricing": "From $129/month",
+          "focus": "Premium SEO with world's largest backlink database"
+        },
+        {
+          "name": "Semrush", 
+          "pricing": "From $130/month",
+          "focus": "All-in-one digital marketing suite"
+        },
+        {
+          "name": "Moz Pro",
+          "pricing": "From $99/month", 
+          "focus": "Beginner-friendly SEO platform"
+        },
+        {
+          "name": "Screaming Frog SEO Spider",
+          "pricing": "Free/£259 per year",
+          "focus": "Desktop technical SEO crawler"
+        }
+      ]
+    },
+    "social_media": {
+      "file": "new-social-media-tools-2025.json",
+      "count": 4,
+      "tools": [
+        {
+          "name": "Sprout Social",
+          "pricing": "From $249/month",
+          "focus": "Enterprise social media management"
+        },
+        {
+          "name": "Buffer",
+          "pricing": "Free/$6/month",
+          "focus": "Simple scheduling and publishing"
+        },
+        {
+          "name": "Hootsuite", 
+          "pricing": "From $99/month",
+          "focus": "Comprehensive management with AI"
+        },
+        {
+          "name": "Later",
+          "pricing": "From $25/month",
+          "focus": "Visual-first Instagram marketing"
+        }
+      ]
+    },
+    "paid_search_ppc": {
+      "file": "paid-search-ppc-tools-2025.json", 
+      "count": 4,
+      "tools": [
+        {
+          "name": "Optmyzr",
+          "pricing": "From $209/month",
+          "focus": "AI-driven PPC automation"
+        },
+        {
+          "name": "Adalysis",
+          "pricing": "From $149/month",
+          "focus": "Smart bid automation"
+        },
+        {
+          "name": "Acquisio",
+          "pricing": "Usage-based",
+          "focus": "AI-powered cross-platform"
+        },
+        {
+          "name": "Adzooma",
+          "pricing": "Free/Premium plans",
+          "focus": "Free PPC management"
+        }
+      ]
+    },
+    "voice_ai_enterprise": {
+      "file": "voice-ai-enterprise-tools-2025.json",
+      "count": 5, 
+      "tools": [
+        {
+          "name": "Deepgram",
+          "pricing": "$0.0043/minute",
+          "focus": "Enterprise speech-to-text API"
+        },
+        {
+          "name": "Speechmatics", 
+          "pricing": "Usage-based",
+          "focus": "Enterprise voice AI platform"
+        },
+        {
+          "name": "Rev",
+          "pricing": "$0.25/minute",
+          "focus": "Professional transcription service"
+        },
+        {
+          "name": "ElevenLabs",
+          "pricing": "Free/$5/month",
+          "focus": "Advanced voice synthesis"
+        },
+        {
+          "name": "Otter.ai",
+          "pricing": "Free/$10/month", 
+          "focus": "AI meeting assistant"
+        }
+      ]
+    }
+  },
+  "schema_compliance": {
+    "all_tools_formatted": true,
+    "required_fields_included": [
+      "tool_name",
+      "vendor",
+      "logo_url", 
+      "description",
+      "features.core",
+      "features.advanced", 
+      "features.integrations",
+      "pricing structure",
+      "website",
+      "category",
+      "rating",
+      "use_cases",
+      "target_audience", 
+      "meta_title",
+      "meta_description",
+      "schema_data"
+    ],
+    "seo_elements_optimized": true
+  },
+  "next_steps": {
+    "integration_required": [
+      "Merge with existing aiToolsData.json",
+      "Update categories in website navigation",
+      "Create comparison pages for major tools",
+      "Generate SEO-optimized landing pages",
+      "Update sitemap with new tool pages"
+    ],
+    "files_ready_for_deployment": [
+      "/data/new-seo-tools-2025.json",
+      "/data/new-social-media-tools-2025.json", 
+      "/data/paid-search-ppc-tools-2025.json",
+      "/data/voice-ai-enterprise-tools-2025.json"
+    ]
+  }
+}

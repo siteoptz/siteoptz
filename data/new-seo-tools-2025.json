@@ -1,0 +1,356 @@
+{
+  "category": "SEO & Optimization",
+  "description": "Advanced SEO tools for keyword research, technical optimization, content analysis, and search engine ranking improvements.",
+  "tools": [
+    {
+      "tool_name": "Ahrefs",
+      "vendor": "Ahrefs Pte Ltd",
+      "logo_url": "/images/tools/ahrefs-logo.svg",
+      "description": "Premium SEO tool suite with the world's largest backlink database and comprehensive keyword research capabilities.",
+      "features": {
+        "core": [
+          "29 billion keyword database across 9 platforms",
+          "World's largest backlink index",
+          "Site audit with 170+ SEO checks",
+          "Rank tracking across multiple devices",
+          "Content Explorer with 7.1B pages"
+        ],
+        "advanced": [
+          "Keyword difficulty scoring",
+          "SERP overview with traffic estimates",
+          "Content gap analysis",
+          "Organic traffic value calculation",
+          "Advanced link prospecting"
+        ],
+        "integrations": [
+          "Google Analytics",
+          "Google Search Console",
+          "Data Studio",
+          "API access",
+          "Browser extensions"
+        ]
+      },
+      "pricing": {
+        "monthly": 129,
+        "yearly": 1368,
+        "enterprise": "Custom pricing available",
+        "plans": [
+          {
+            "plan_name": "Lite",
+            "price": "$129/month",
+            "features_included": [
+              "5 projects",
+              "750 tracked keywords",
+              "100,000 crawl credits",
+              "6 months data history"
+            ]
+          },
+          {
+            "plan_name": "Standard",
+            "price": "$249/month",
+            "features_included": [
+              "20 projects",
+              "2,000 tracked keywords",
+              "500,000 crawl credits",
+              "2 years data history"
+            ]
+          },
+          {
+            "plan_name": "Advanced",
+            "price": "$449/month",
+            "features_included": [
+              "50 projects",
+              "5,000 tracked keywords",
+              "1.5M crawl credits",
+              "5 years data history"
+            ]
+          }
+        ]
+      },
+      "website": "https://ahrefs.com",
+      "category": "SEO & Optimization",
+      "rating": 4.8,
+      "use_cases": [
+        "Backlink analysis and building",
+        "Keyword research and tracking",
+        "Competitor analysis",
+        "Content planning and optimization",
+        "Technical SEO auditing"
+      ],
+      "target_audience": "SEO agencies, Enterprise marketers, Content creators, Digital marketing teams",
+      "last_updated": "2025-01-28",
+      "meta_title": "Ahrefs: Premium SEO Tool Suite with World's Largest Backlink Database",
+      "meta_description": "Professional SEO toolkit with 29B keyword database, comprehensive backlink analysis, site auditing, and rank tracking. Trusted by marketing agencies worldwide.",
+      "schema_data": {
+        "@type": "SoftwareApplication",
+        "applicationCategory": "SEO Software",
+        "operatingSystem": "Web-based",
+        "offers": {
+          "@type": "Offer",
+          "price": "129.00",
+          "priceCurrency": "USD"
+        }
+      }
+    },
+    {
+      "tool_name": "Semrush",
+      "vendor": "Semrush Holdings Inc",
+      "logo_url": "/images/tools/semrush-logo.svg",
+      "description": "All-in-one digital marketing suite combining SEO, PPC, content marketing, and competitive research tools.",
+      "features": {
+        "core": [
+          "AI-powered keyword research with search intent",
+          "Personal Keyword Difficulty (PKD) scoring",
+          "Comprehensive PPC and social media tools",
+          "Local SEO with listing management",
+          "Content optimization recommendations"
+        ],
+        "advanced": [
+          "Automated keyword clustering",
+          "Market research and trends analysis",
+          "Brand monitoring and mentions",
+          "Link building tool with prospecting",
+          "Advanced competitive intelligence"
+        ],
+        "integrations": [
+          "Google Analytics & Ads",
+          "Google Search Console",
+          "WordPress plugin",
+          "Zapier automation",
+          "CRM integrations"
+        ]
+      },
+      "pricing": {
+        "monthly": 130,
+        "yearly": 1398,
+        "enterprise": "Custom pricing available",
+        "plans": [
+          {
+            "plan_name": "Pro",
+            "price": "$130/month",
+            "features_included": [
+              "5 projects",
+              "500 tracked keywords",
+              "10,000 results per report",
+              "AI writing assistant"
+            ]
+          },
+          {
+            "plan_name": "Guru",
+            "price": "$250/month",
+            "features_included": [
+              "15 projects",
+              "1,500 tracked keywords",
+              "30,000 results per report",
+              "Historical data access"
+            ]
+          },
+          {
+            "plan_name": "Business",
+            "price": "$500/month",
+            "features_included": [
+              "40 projects",
+              "5,000 tracked keywords",
+              "50,000 results per report",
+              "API access included"
+            ]
+          }
+        ]
+      },
+      "website": "https://semrush.com",
+      "category": "SEO & Optimization",
+      "rating": 4.7,
+      "use_cases": [
+        "Comprehensive digital marketing campaigns",
+        "Competitive analysis and benchmarking",
+        "Content strategy development",
+        "PPC campaign optimization",
+        "Local SEO management"
+      ],
+      "target_audience": "Digital marketing agencies, Enterprise teams, Content marketers, PPC specialists",
+      "last_updated": "2025-01-28",
+      "meta_title": "Semrush: All-in-One Digital Marketing Suite with AI-Powered SEO Tools",
+      "meta_description": "Complete digital marketing platform combining SEO, PPC, content marketing, and competitive research. AI-powered insights for better marketing ROI.",
+      "schema_data": {
+        "@type": "SoftwareApplication",
+        "applicationCategory": "Digital Marketing Software",
+        "operatingSystem": "Web-based",
+        "offers": {
+          "@type": "Offer",
+          "price": "130.00",
+          "priceCurrency": "USD"
+        }
+      }
+    },
+    {
+      "tool_name": "Moz Pro",
+      "vendor": "Moz Inc",
+      "logo_url": "/images/tools/moz-logo.svg",
+      "description": "Beginner-friendly SEO platform with comprehensive keyword research, site auditing, and local SEO capabilities.",
+      "features": {
+        "core": [
+          "1.25 billion keyword suggestions",
+          "Site crawl and technical SEO audits",
+          "Rank tracking with SERP features",
+          "Link research and building tools",
+          "Local SEO optimization suite"
+        ],
+        "advanced": [
+          "Custom relevance keyword ratings",
+          "Page optimization recommendations",
+          "Domain authority metrics",
+          "SERP feature tracking",
+          "Competitive analysis tools"
+        ],
+        "integrations": [
+          "Google Analytics",
+          "Google Search Console",
+          "Google My Business",
+          "API for developers",
+          "Third-party tools"
+        ]
+      },
+      "pricing": {
+        "monthly": 99,
+        "yearly": 948,
+        "enterprise": "Custom pricing available",
+        "plans": [
+          {
+            "plan_name": "Starter",
+            "price": "$99/month",
+            "features_included": [
+              "2 campaigns",
+              "300 tracked keywords",
+              "3,000 pages crawled",
+              "Basic link research"
+            ]
+          },
+          {
+            "plan_name": "Standard",
+            "price": "$179/month",
+            "features_included": [
+              "3 campaigns",
+              "750 tracked keywords",
+              "7,500 pages crawled",
+              "Advanced features"
+            ]
+          },
+          {
+            "plan_name": "Medium",
+            "price": "$299/month",
+            "features_included": [
+              "10 campaigns",
+              "2,000 tracked keywords",
+              "25,000 pages crawled",
+              "Full feature access"
+            ]
+          }
+        ]
+      },
+      "website": "https://moz.com",
+      "category": "SEO & Optimization",
+      "rating": 4.5,
+      "use_cases": [
+        "Beginner SEO learning and implementation",
+        "Local business optimization",
+        "Small to medium business SEO",
+        "Educational content creation",
+        "Technical SEO auditing"
+      ],
+      "target_audience": "Small businesses, SEO beginners, Local service providers, Educational institutions",
+      "last_updated": "2025-01-28",
+      "meta_title": "Moz Pro: Beginner-Friendly SEO Platform with Local SEO Tools",
+      "meta_description": "Learn and implement SEO with Moz Pro's user-friendly interface. Comprehensive keyword research, site auditing, and local SEO optimization tools.",
+      "schema_data": {
+        "@type": "SoftwareApplication",
+        "applicationCategory": "SEO Software",
+        "operatingSystem": "Web-based",
+        "offers": {
+          "@type": "Offer",
+          "price": "99.00",
+          "priceCurrency": "USD"
+        }
+      }
+    },
+    {
+      "tool_name": "Screaming Frog SEO Spider",
+      "vendor": "Screaming Frog Ltd",
+      "logo_url": "/images/tools/screaming-frog-logo.svg",
+      "description": "Desktop-based website crawler for comprehensive technical SEO analysis and site auditing.",
+      "features": {
+        "core": [
+          "Website crawling up to 500 URLs (free)",
+          "Technical SEO issue identification",
+          "Page title and meta description analysis",
+          "Broken link detection",
+          "Redirect chain analysis"
+        ],
+        "advanced": [
+          "JavaScript rendering capability",
+          "Custom extraction with XPath",
+          "Log file analysis integration",
+          "API connectivity",
+          "Bulk export functionality"
+        ],
+        "integrations": [
+          "Google Analytics API",
+          "Google Search Console",
+          "Page Speed Insights",
+          "Ahrefs API",
+          "Majestic API"
+        ]
+      },
+      "pricing": {
+        "monthly": 0,
+        "yearly": 259,
+        "enterprise": "Custom licensing available",
+        "plans": [
+          {
+            "plan_name": "Free",
+            "price": "$0",
+            "features_included": [
+              "Crawl up to 500 URLs",
+              "Basic SEO analysis",
+              "Export functionality",
+              "Regular updates"
+            ]
+          },
+          {
+            "plan_name": "Paid License",
+            "price": "£259/year",
+            "features_included": [
+              "Unlimited URL crawling",
+              "Advanced features access",
+              "Priority support",
+              "JavaScript rendering"
+            ]
+          }
+        ]
+      },
+      "website": "https://www.screamingfrog.co.uk",
+      "category": "SEO & Optimization",
+      "rating": 4.6,
+      "use_cases": [
+        "Technical SEO auditing",
+        "Website migration analysis",
+        "Large site optimization",
+        "SEO agency reporting",
+        "Developer SEO integration"
+      ],
+      "target_audience": "SEO specialists, Web developers, Technical SEO consultants, Large enterprises",
+      "last_updated": "2025-01-28",
+      "meta_title": "Screaming Frog SEO Spider: Desktop Website Crawler for Technical SEO",
+      "meta_description": "Professional website crawler for technical SEO analysis. Free version available with 500 URL limit. Advanced features for unlimited crawling and reporting.",
+      "schema_data": {
+        "@type": "SoftwareApplication",
+        "applicationCategory": "SEO Analysis Software",
+        "operatingSystem": "Windows, macOS, Linux",
+        "offers": {
+          "@type": "Offer",
+          "price": "0.00",
+          "priceCurrency": "USD"
+        }
+      }
+    }
+  ]
+}
