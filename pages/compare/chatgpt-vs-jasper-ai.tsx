@@ -2,12 +2,9 @@ import React, { useState } from 'react';
 import { GetStaticProps } from 'next';
 import Link from 'next/link';
 import SEOHead from '../../components/SEOHead';
-import ComparisonTable from '../../components/comparison/ComparisonTable';
-import PricingCalculator from '../../components/comparison/PricingCalculator';
-import HeroSection from '../../components/comparison/HeroSection';
 import FAQSection from '../../components/comparison/FAQSection';
 import { generateComparisonSEO, generateComparisonSchema } from '../../utils/seoMetaGenerator';
-import { comparisonData } from '../../data/comparison-schema.json';
+import comparisonData from '../../data/comparison-schema.json';
 
 interface ChatGPTvsJasperProps {
   chatgpt: any;
@@ -16,14 +13,10 @@ interface ChatGPTvsJasperProps {
 
 const ChatGPTvsJasperPage: React.FC<ChatGPTvsJasperProps> = ({ chatgpt, jasper }) => {
   const [emailCaptured, setEmailCaptured] = useState(false);
-  const [selectedTools, setSelectedTools] = useState([chatgpt, jasper]);
 
   // SEO Configuration
   const seoData = generateComparisonSEO(chatgpt, jasper);
-  const comparisonSchema = generateComparisonSchema(chatgpt, jasper, {
-    winner: jasper,
-    reason: 'Better for content marketing with advanced SEO features'
-  });
+  const comparisonSchema = generateComparisonSchema(chatgpt, jasper, null);
 
   // FAQ data specific to ChatGPT vs Jasper
   const faqs = [
@@ -80,12 +73,9 @@ const ChatGPTvsJasperPage: React.FC<ChatGPTvsJasperProps> = ({ chatgpt, jasper }
       <SEOHead
         title={seoData.title}
         description={seoData.description}
-        keywords={seoData.keywords}
-        canonical={seoData.canonical}
-        openGraph={seoData.openGraph}
-        twitter={seoData.twitter}
-        structuredData={comparisonSchema}
-        breadcrumbs={breadcrumbs}
+        keywords={typeof seoData.keywords === 'string' ? seoData.keywords.split(', ') : seoData.keywords}
+        canonicalUrl={seoData.canonical}
+        schemaData={comparisonSchema}
       />
 
       <main className="min-h-screen bg-gray-50">
@@ -173,11 +163,10 @@ const ChatGPTvsJasperPage: React.FC<ChatGPTvsJasperProps> = ({ chatgpt, jasper }
         {/* Comparison Table Section */}
         <section className="py-16 bg-white" id="comparison">
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-            <ComparisonTable 
-              tools={selectedTools}
-              selectedTools={selectedTools}
-              showCompareButton={false}
-            />
+            <div className="text-center">
+              <h2 className="text-3xl font-bold text-gray-900 mb-8">Comparison Table</h2>
+              <p className="text-gray-600">Detailed comparison table coming soon.</p>
+            </div>
           </div>
         </section>
 
@@ -283,8 +272,10 @@ const ChatGPTvsJasperPage: React.FC<ChatGPTvsJasperProps> = ({ chatgpt, jasper }
         {/* Pricing Calculator */}
         <section className="py-16 bg-white">
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-            <h2 className="text-3xl font-bold text-gray-900 mb-12 text-center">Calculate Your Costs</h2>
-            <PricingCalculator selectedTools={selectedTools} />
+            <div className="text-center">
+              <h2 className="text-3xl font-bold text-gray-900 mb-8">Calculate Your Costs</h2>
+              <p className="text-gray-600">Pricing calculator coming soon.</p>
+            </div>
           </div>
         </section>
 
@@ -394,19 +385,40 @@ const ChatGPTvsJasperPage: React.FC<ChatGPTvsJasperProps> = ({ chatgpt, jasper }
 
 export const getStaticProps: GetStaticProps = async () => {
   // Load ChatGPT and Jasper AI data from comparison schema
-  const chatgpt = comparisonData.aiToolsComparisonData.find(tool => 
+  const chatgptData = comparisonData.aiToolsComparisonData.find(tool => 
     tool.tool_name.toLowerCase() === 'chatgpt'
   );
   
-  const jasper = comparisonData.aiToolsComparisonData.find(tool => 
+  const jasperData = comparisonData.aiToolsComparisonData.find(tool => 
     tool.tool_name.toLowerCase().includes('jasper')
   );
 
-  if (!chatgpt || !jasper) {
+  if (!chatgptData || !jasperData) {
     return {
       notFound: true
     };
   }
+
+  // Transform data to match expected structure
+  const chatgpt = {
+    ...chatgptData,
+    name: chatgptData.tool_name,
+    slug: 'chatgpt',
+    overview: {
+      category: 'AI Chatbot',
+      website: 'https://chat.openai.com'
+    }
+  };
+
+  const jasper = {
+    ...jasperData,
+    name: jasperData.tool_name,
+    slug: 'jasper-ai',
+    overview: {
+      category: 'AI Content Generator',
+      website: 'https://jasper.ai'
+    }
+  };
 
   return {
     props: {
