@@ -40,7 +40,7 @@ export default function SemanticToolPage({ tool, relatedTools }: ToolPageProps) 
 
       {/* Breadcrumb Navigation */}
       <nav aria-label="Breadcrumb" className="bg-gray-50 px-4 py-3">
-        <ol className="max-w-7xl mx-auto flex items-center space-x-2 text-sm" role="list">
+        <ol className="max-w-7xl mx-auto flex items-center space-x-2 text-sm">
           <li>
             <Link href="/" className="text-gray-500 hover:text-gray-700">
               Home
@@ -392,22 +392,22 @@ export default function SemanticToolPage({ tool, relatedTools }: ToolPageProps) 
               
               <ul className="space-y-3">
                 <li>
-                  <a
+                  <Link
                     href="/downloads/ai-tool-selection-framework"
                     className="flex items-center justify-between group"
                   >
                     <span className="group-hover:underline">AI Tool Selection Guide</span>
                     <Download className="w-4 h-4" />
-                  </a>
+                  </Link>
                 </li>
                 <li>
-                  <a
+                  <Link
                     href="/downloads/ai-implementation-playbook"
                     className="flex items-center justify-between group"
                   >
                     <span className="group-hover:underline">Implementation Playbook</span>
                     <Download className="w-4 h-4" />
-                  </a>
+                  </Link>
                 </li>
               </ul>
             </section>
