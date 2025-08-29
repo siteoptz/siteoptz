@@ -16300,5 +16300,1278 @@
       "description": "AI academic writing assistant for better research papers",
       "category": "Writing"
     }
+  },
+  {
+    "id": "motion",
+    "name": "Motion",
+    "slug": "motion",
+    "logo": "/images/tools/motion-logo.svg",
+    "description": "Over 1 million top performers and teams trust Motion",
+    "website": "https://usemotion.com",
+    "category": "AI Automation",
+    "pricing": [
+      {
+        "plan": "Free",
+        "price_per_month": 0,
+        "features": [
+          "Basic features"
+        ]
+      }
+    ],
+    "features": [
+      "Schedule Calendar",
+      "Prioritize Tasks",
+      "Reply to Emails",
+      "Takes Notes",
+      "Update CRM",
+      "Chase Opportunities",
+      "Find Leads",
+      "Personalized Outreach"
+    ],
+    "pros": [
+      "Modern AI technology",
+      "User-friendly interface",
+      "Regular updates"
+    ],
+    "cons": [
+      "Pricing may vary",
+      "Requires internet connection"
+    ],
+    "rating": 4.2,
+    "benchmarks": {
+      "speed": 8,
+      "accuracy": 8,
+      "integration": 7,
+      "ease_of_use": 8,
+      "value": 7
+    },
+    "meta": {
+      "title": "Motion Review, Pricing, Features & Alternatives [2025]",
+      "description": "Over 1 million top performers and teams trust Motion"
+    },
+    "overview": {
+      "developer": "Unknown",
+      "release_year": 2024,
+      "description": "Over 1 million top performers and teams trust Motion",
+      "category": "AI Automation"
+    }
+  },
+  {
+    "id": "fireflies",
+    "name": "Fireflies",
+    "slug": "fireflies",
+    "logo": "/images/tools/fireflies-logo.svg",
+    "description": "!(https://fireflies.ai/website/assets/_next/image?url=%2Fwebsite%2Fassets%2F_next%2Fstatic%2Fmedia%2Fbg-elements.4ec1df64.svg&w=3840&q=75)",
+    "website": "https://fireflies.ai",
+    "category": "AI Automation",
+    "pricing": [
+      {
+        "plan": "Free",
+        "price_per_month": 0,
+        "features": [
+          "Basic features"
+        ]
+      }
+    ],
+    "features": [
+      "AI-powered features",
+      "Easy to use",
+      "Web-based"
+    ],
+    "pros": [
+      "Modern AI technology",
+      "User-friendly interface",
+      "Regular updates"
+    ],
+    "cons": [
+      "Pricing may vary",
+      "Requires internet connection"
+    ],
+    "rating": 4.2,
+    "benchmarks": {
+      "speed": 8,
+      "accuracy": 8,
+      "integration": 7,
+      "ease_of_use": 8,
+      "value": 7
+    },
+    "meta": {
+      "title": "Fireflies Review, Pricing, Features & Alternatives [2025]",
+      "description": "!(https://fireflies.ai/website/assets/_next/image?url=%2Fwebsite%2Fassets%2F_next%2Fstatic%2Fmedia%2Fbg-elements.4ec1df64.svg&w=3840&q=75)"
+    },
+    "overview": {
+      "developer": "Unknown",
+      "release_year": 2024,
+      "description": "!(https://fireflies.ai/website/assets/_next/image?url=%2Fwebsite%2Fassets%2F_next%2Fstatic%2Fmedia%2Fbg-elements.4ec1df64.svg&w=3840&q=75)",
+      "category": "AI Automation"
+    }
+  },
+  {
+    "id": "amazon-alexa",
+    "name": "Amazon Alexa",
+    "slug": "amazon-alexa",
+    "logo": "/images/tools/amazon-alexa-logo.svg",
+    "description": "After Early Access, Alexa+ will be a free Prime benefit(https://www.amazon.com/dp/B0DCCNHWV5?ref_=xaa_spp_d_bb_li_2faqdisclaimer) or available to non-Prime customers for $19.99/month.",
+    "website": "https://alexa.amazon.com",
+    "category": "AI Automation",
+    "pricing": [
+      {
+        "plan": "Free",
+        "price_per_month": 0,
+        "features": [
+          "Basic features"
+        ]
+      },
+      {
+        "plan": "Starter",
+        "price_per_month": 19.99,
+        "features": [
+          "Check website for details"
+        ]
+      },
+      {
+        "plan": "Pro",
+        "price_per_month": 149.99,
+        "features": [
+          "Check website for details"
+        ]
+      },
+      {
+        "plan": "Enterprise",
+        "price_per_month": 14999,
+        "features": [
+          "Check website for details"
+        ]
+      },
+      {
+        "plan": "Enterprise",
+        "price_per_month": 14999,
+        "features": [
+          "Check website for details"
+        ]
+      },
+      {
+        "plan": "Enterprise",
+        "price_per_month": 299.99,
+        "features": [
+          "Check website for details"
+        ]
+      },
+      {
+        "plan": "Enterprise",
+        "price_per_month": 29999,
+        "features": [
+          "Check website for details"
+        ]
+      },
+      {
+        "plan": "Enterprise",
+        "price_per_month": 29999,
+        "features": [
+          "Check website for details"
+        ]
+      },
+      {
+        "plan": "Enterprise",
+        "price_per_month": 399.99,
+        "features": [
+          "Check website for details"
+        ]
+      },
+      {
+        "plan": "Enterprise",
+        "price_per_month": 39999,
+        "features": [
+          "Check website for details"
+        ]
+      },
+      {
+        "plan": "Enterprise",
+        "price_per_month": 39999,
+        "features": [
+          "Check website for details"
+        ]
+      }
+    ],
+    "features": [
+      "Have Alexa handle tasks across thousands of services and devices.",
+      "Enjoy a personalized experience based on your preferences.",
+      "Buy one of the devices below to start enjoying Alexa+ Early Access. Opt",
+      "Vibrant sights, full sound – Content on Prime Video, Netflix, Fire TV Channels,",
+      "Stay in the loop – Video call hands",
+      "Designed to protect your privacy",
+      "MEET THE ALL",
+      "A stunning 15.6\" Full",
+      "Quick lookQuick look",
+      "![In a kitchen, a woman chopping vegetables, looking at Echo Show 21 on counter",
+      "Back to top"
+    ],
+    "pros": [
+      "Modern AI technology",
+      "User-friendly interface",
+      "Regular updates"
+    ],
+    "cons": [
+      "Pricing may vary",
+      "Requires internet connection"
+    ],
+    "rating": 4.2,
+    "benchmarks": {
+      "speed": 8,
+      "accuracy": 8,
+      "integration": 7,
+      "ease_of_use": 8,
+      "value": 7
+    },
+    "meta": {
+      "title": "Amazon Alexa Review, Pricing, Features & Alternatives [2025]",
+      "description": "After Early Access, Alexa+ will be a free Prime benefit(https://www.amazon.com/dp/B0DCCNHWV5?ref_=xaa_spp_d_bb_li_2faqdisclaimer) or available to non-Prime customers for $19.99/month."
+    },
+    "overview": {
+      "developer": "Unknown",
+      "release_year": 2024,
+      "description": "After Early Access, Alexa+ will be a free Prime benefit(https://www.amazon.com/dp/B0DCCNHWV5?ref_=xaa_spp_d_bb_li_2faqdisclaimer) or available to non-Prime customers for $19.99/month.",
+      "category": "AI Automation"
+    }
+  },
+  {
+    "id": "clickup",
+    "name": "ClickUp",
+    "slug": "clickup",
+    "logo": "/images/tools/clickup-logo.svg",
+    "description": "All your apps, projects, and knowledge. One converged AI workspace. A single place for humans, AI, and agents to work—together.",
+    "website": "https://clickup.com",
+    "category": "AI Automation",
+    "pricing": [
+      {
+        "plan": "Free",
+        "price_per_month": 0,
+        "features": [
+          "Basic features"
+        ]
+      }
+    ],
+    "features": [
+      "Free Forever. No credit card.",
+      "Start with what you need, customize as you go.",
+      "that connects every aspect of your work, across all your apps.",
+      "![Connected Brain",
+      "Time Tracking",
+      "Custom Fields",
+      "Reduce delivery time with custom templates"
+    ],
+    "pros": [
+      "Modern AI technology",
+      "User-friendly interface",
+      "Regular updates"
+    ],
+    "cons": [
+      "Pricing may vary",
+      "Requires internet connection"
+    ],
+    "rating": 4.2,
+    "benchmarks": {
+      "speed": 8,
+      "accuracy": 8,
+      "integration": 7,
+      "ease_of_use": 8,
+      "value": 7
+    },
+    "meta": {
+      "title": "ClickUp Review, Pricing, Features & Alternatives [2025]",
+      "description": "All your apps, projects, and knowledge. One converged AI workspace. A single place for humans, AI, and agents to work—together."
+    },
+    "overview": {
+      "developer": "Unknown",
+      "release_year": 2024,
+      "description": "All your apps, projects, and knowledge. One converged AI workspace. A single place for humans, AI, and agents to work—together.",
+      "category": "AI Automation"
+    }
+  },
+  {
+    "id": "manus",
+    "name": "Manus",
+    "slug": "manus",
+    "logo": "/images/tools/manus-logo.svg",
+    "description": "View replay(https://manus.im/share/iLQpYZuEWvzDPIixGEqMC0?replay=1) Charmm-GUI Protein-Membrane Doc\\\\",
+    "website": "https://manus.ai",
+    "category": "AI Automation",
+    "pricing": [
+      {
+        "plan": "Check website",
+        "price_per_month": 0,
+        "features": [
+          "Visit website for pricing details"
+        ]
+      }
+    ],
+    "features": [
+      "traffic French areas lacking EV chargers\\\\"
+    ],
+    "pros": [
+      "Modern AI technology",
+      "User-friendly interface",
+      "Regular updates"
+    ],
+    "cons": [
+      "Pricing may vary",
+      "Requires internet connection"
+    ],
+    "rating": 4.2,
+    "benchmarks": {
+      "speed": 8,
+      "accuracy": 8,
+      "integration": 7,
+      "ease_of_use": 8,
+      "value": 7
+    },
+    "meta": {
+      "title": "Manus Review, Pricing, Features & Alternatives [2025]",
+      "description": "View replay(https://manus.im/share/iLQpYZuEWvzDPIixGEqMC0?replay=1) Charmm-GUI Protein-Membrane Doc\\\\"
+    },
+    "overview": {
+      "developer": "Unknown",
+      "release_year": 2024,
+      "description": "View replay(https://manus.im/share/iLQpYZuEWvzDPIixGEqMC0?replay=1) Charmm-GUI Protein-Membrane Doc\\\\",
+      "category": "AI Automation"
+    }
+  },
+  {
+    "id": "gumloop",
+    "name": "Gumloop",
+    "slug": "gumloop",
+    "logo": "/images/tools/gumloop-logo.svg",
+    "description": "!Gumloop Logo(https://www.gumloop.com/images/gumloop_logo.svg)(https://www.gumloop.com/home)",
+    "website": "https://gumloop.com",
+    "category": "AI Automation",
+    "pricing": [
+      {
+        "plan": "Free",
+        "price_per_month": 0,
+        "features": [
+          "Basic features"
+        ]
+      }
+    ],
+    "features": [
+      "including those without technical skills",
+      "Mar 17, 2028",
+      "Mar 17, 2028\\"
+    ],
+    "pros": [
+      "Modern AI technology",
+      "User-friendly interface",
+      "Regular updates"
+    ],
+    "cons": [
+      "Pricing may vary",
+      "Requires internet connection"
+    ],
+    "rating": 4.2,
+    "benchmarks": {
+      "speed": 8,
+      "accuracy": 8,
+      "integration": 7,
+      "ease_of_use": 8,
+      "value": 7
+    },
+    "meta": {
+      "title": "Gumloop Review, Pricing, Features & Alternatives [2025]",
+      "description": "!Gumloop Logo(https://www.gumloop.com/images/gumloop_logo.svg)(https://www.gumloop.com/home)"
+    },
+    "overview": {
+      "developer": "Unknown",
+      "release_year": 2024,
+      "description": "!Gumloop Logo(https://www.gumloop.com/images/gumloop_logo.svg)(https://www.gumloop.com/home)",
+      "category": "AI Automation"
+    }
+  },
+  {
+    "id": "ltx-studio",
+    "name": "LTX Studio",
+    "slug": "ltx-studio",
+    "logo": "/images/tools/ltx-studio-logo.svg",
+    "description": "!LTX Studio logo(https://cdn.prod.website-files.com/65bb6b901cb133d784d16166/68496acf1f21ddfdceab8506_LTX-Studio-main-logo1.svg)(https://ltx.studio/homepage-2)",
+    "website": "https://ltx.studio",
+    "category": "Video Generation",
+    "pricing": [
+      {
+        "plan": "Free",
+        "price_per_month": 0,
+        "features": [
+          "Basic features"
+        ]
+      }
+    ],
+    "features": [
+      "Press enter for Accessibility for blind people who use screen readers",
+      "Press enter for Keyboard Navigation",
+      "Press enter for Accessibility menu",
+      "Academy Award",
+      "Head of Digital & AI, L’Oréal–McCann Paris",
+      "Chief Marketer, eToro",
+      "Executive Creative Director, CYLNDR Studios",
+      "Video Producer"
+    ],
+    "pros": [
+      "Modern AI technology",
+      "User-friendly interface",
+      "Regular updates"
+    ],
+    "cons": [
+      "Pricing may vary",
+      "Requires internet connection"
+    ],
+    "rating": 4.2,
+    "benchmarks": {
+      "speed": 8,
+      "accuracy": 8,
+      "integration": 7,
+      "ease_of_use": 8,
+      "value": 7
+    },
+    "meta": {
+      "title": "LTX Studio Review, Pricing, Features & Alternatives [2025]",
+      "description": "!LTX Studio logo(https://cdn.prod.website-files.com/65bb6b901cb133d784d16166/68496acf1f21ddfdceab8506_LTX-Studio-main-logo1.svg)(https://ltx.studio/homepage-2)"
+    },
+    "overview": {
+      "developer": "Unknown",
+      "release_year": 2024,
+      "description": "!LTX Studio logo(https://cdn.prod.website-files.com/65bb6b901cb133d784d16166/68496acf1f21ddfdceab8506_LTX-Studio-main-logo1.svg)(https://ltx.studio/homepage-2)",
+      "category": "Video Generation"
+    }
+  },
+  {
+    "id": "dream-machine",
+    "name": "Dream Machine",
+    "slug": "dream-machine",
+    "logo": "/images/tools/dream-machine-logo.svg",
+    "description": "Dream Machine - AI-powered tool in Video Generation",
+    "website": "https://dream-machine.lumalabs.ai",
+    "category": "Video Generation",
+    "pricing": [
+      {
+        "plan": "Check website",
+        "price_per_month": 0,
+        "features": [
+          "Visit website for pricing details"
+        ]
+      }
+    ],
+    "features": [
+      "AI-powered features",
+      "Easy to use",
+      "Web-based"
+    ],
+    "pros": [
+      "Modern AI technology",
+      "User-friendly interface",
+      "Regular updates"
+    ],
+    "cons": [
+      "Pricing may vary",
+      "Requires internet connection"
+    ],
+    "rating": 4.2,
+    "benchmarks": {
+      "speed": 8,
+      "accuracy": 8,
+      "integration": 7,
+      "ease_of_use": 8,
+      "value": 7
+    },
+    "meta": {
+      "title": "Dream Machine Review, Pricing, Features & Alternatives [2025]",
+      "description": "Comprehensive review of Dream Machine. AI-powered tool for Video Generation. Compare features, pricing, and alternatives."
+    },
+    "overview": {
+      "developer": "Unknown",
+      "release_year": 2024,
+      "description": "Dream Machine - AI tool",
+      "category": "Video Generation"
+    }
+  },
+  {
+    "id": "jamie-ai",
+    "name": "Jamie AI",
+    "slug": "jamie-ai",
+    "logo": "/images/tools/jamie-ai-logo.svg",
+    "description": "Summarize your meetings in any software, even in-person meetings. Jamie automatically takes detailed meeting notes, giving you peace of mind by never missing an important detail.",
+    "website": "https://meetjamie.ai",
+    "category": "Productivity",
+    "pricing": [
+      {
+        "plan": "Check website",
+        "price_per_month": 0,
+        "features": [
+          "Visit website for pricing details"
+        ]
+      }
+    ],
+    "features": [
+      "an AI note taker](https://cdn.prod.website",
+      "and offline."
+    ],
+    "pros": [
+      "Modern AI technology",
+      "User-friendly interface",
+      "Regular updates"
+    ],
+    "cons": [
+      "Pricing may vary",
+      "Requires internet connection"
+    ],
+    "rating": 4.2,
+    "benchmarks": {
+      "speed": 8,
+      "accuracy": 8,
+      "integration": 7,
+      "ease_of_use": 8,
+      "value": 7
+    },
+    "meta": {
+      "title": "Jamie AI Review, Pricing, Features & Alternatives [2025]",
+      "description": "Summarize your meetings in any software, even in-person meetings. Jamie automatically takes detailed meeting notes, giving you peace of mind by never missing an important detail."
+    },
+    "overview": {
+      "developer": "Unknown",
+      "release_year": 2024,
+      "description": "Summarize your meetings in any software, even in-person meetings. Jamie automatically takes detailed meeting notes, giving you peace of mind by never missing an important detail.",
+      "category": "Productivity"
+    }
+  },
+  {
+    "id": "read-ai",
+    "name": "Read AI",
+    "slug": "read-ai",
+    "logo": "/images/tools/read-ai-logo.svg",
+    "description": "Zoom selects Read as an Essential App, Premium Features Enabled for Zoom Customers. Learn More.(https://www.read.ai/)",
+    "website": "https://read.ai",
+    "category": "Productivity",
+    "pricing": [
+      {
+        "plan": "Free",
+        "price_per_month": 0,
+        "features": [
+          "Basic features"
+        ]
+      }
+    ],
+    "features": [
+      "# Make Meetings Work for You"
+    ],
+    "pros": [
+      "Modern AI technology",
+      "User-friendly interface",
+      "Regular updates"
+    ],
+    "cons": [
+      "Pricing may vary",
+      "Requires internet connection"
+    ],
+    "rating": 4.2,
+    "benchmarks": {
+      "speed": 8,
+      "accuracy": 8,
+      "integration": 7,
+      "ease_of_use": 8,
+      "value": 7
+    },
+    "meta": {
+      "title": "Read AI Review, Pricing, Features & Alternatives [2025]",
+      "description": "Zoom selects Read as an Essential App, Premium Features Enabled for Zoom Customers. Learn More.(https://www.read.ai/)"
+    },
+    "overview": {
+      "developer": "Unknown",
+      "release_year": 2024,
+      "description": "Zoom selects Read as an Essential App, Premium Features Enabled for Zoom Customers. Learn More.(https://www.read.ai/)",
+      "category": "Productivity"
+    }
+  },
+  {
+    "id": "meet-geek",
+    "name": "Meet Geek",
+    "slug": "meet-geek",
+    "logo": "/images/tools/meet-geek-logo.svg",
+    "description": "Preferences(https://meetgeek.ai/) Deny(https://meetgeek.ai/) Accept(https://meetgeek.ai/)",
+    "website": "https://meetgeek.ai",
+    "category": "Productivity",
+    "pricing": [
+      {
+        "plan": "Free",
+        "price_per_month": 0,
+        "features": [
+          "Basic features"
+        ]
+      }
+    ],
+    "features": [
+      "These items are required to enable basic website functionality.",
+      "##### Record meetings your way",
+      "with or without a Bot",
+      "Calendars (Google & Microsoft)",
+      "Document repos (e.g. GDrive, Notion)",
+      "Chat (e.g. Slack, Teams)",
+      "CRMs (e.g. HubSpot, Salesforce)",
+      "Task management (e.g. Asana, Monday, ClickUp)"
+    ],
+    "pros": [
+      "Modern AI technology",
+      "User-friendly interface",
+      "Regular updates"
+    ],
+    "cons": [
+      "Pricing may vary",
+      "Requires internet connection"
+    ],
+    "rating": 4.2,
+    "benchmarks": {
+      "speed": 8,
+      "accuracy": 8,
+      "integration": 7,
+      "ease_of_use": 8,
+      "value": 7
+    },
+    "meta": {
+      "title": "Meet Geek Review, Pricing, Features & Alternatives [2025]",
+      "description": "Preferences(https://meetgeek.ai/) Deny(https://meetgeek.ai/) Accept(https://meetgeek.ai/)"
+    },
+    "overview": {
+      "developer": "Unknown",
+      "release_year": 2024,
+      "description": "Preferences(https://meetgeek.ai/) Deny(https://meetgeek.ai/) Accept(https://meetgeek.ai/)",
+      "category": "Productivity"
+    }
+  },
+  {
+    "id": "alpha-sense",
+    "name": "Alpha Sense",
+    "slug": "alpha-sense",
+    "logo": "/images/tools/alpha-sense-logo.svg",
+    "description": "Accelerate your workflow with     AI insights you can trust",
+    "website": "https://alpha-sense.com",
+    "category": "Research & Education",
+    "pricing": [
+      {
+        "plan": "Free",
+        "price_per_month": 0,
+        "features": [
+          "Basic features"
+        ]
+      }
+    ],
+    "features": [
+      "[Investment Banking](https://www.alpha",
+      "[Hedge Funds](https://www.alpha",
+      "[Private Equity](https://www.alpha",
+      "[Asset Management](https://www.alpha",
+      "[Consulting](https://www.alpha",
+      "[Life Sciences & Healthcare](https://www.alpha",
+      "[Tech, Media, & Telecom](https://www.alpha",
+      "[Energy](https://www.alpha"
+    ],
+    "pros": [
+      "Modern AI technology",
+      "User-friendly interface",
+      "Regular updates"
+    ],
+    "cons": [
+      "Pricing may vary",
+      "Requires internet connection"
+    ],
+    "rating": 4.2,
+    "benchmarks": {
+      "speed": 8,
+      "accuracy": 8,
+      "integration": 7,
+      "ease_of_use": 8,
+      "value": 7
+    },
+    "meta": {
+      "title": "Alpha Sense Review, Pricing, Features & Alternatives [2025]",
+      "description": "Accelerate your workflow with     AI insights you can trust"
+    },
+    "overview": {
+      "developer": "Unknown",
+      "release_year": 2024,
+      "description": "Accelerate your workflow with     AI insights you can trust",
+      "category": "Research & Education"
+    }
+  },
+  {
+    "id": "research-pal",
+    "name": "Research Pal",
+    "slug": "research-pal",
+    "logo": "/images/tools/research-pal-logo.svg",
+    "description": "Use ResearchPal to find authentic citations from credible journals for your claims within seconds.",
+    "website": "https://researchpal.co",
+    "category": "Research & Education",
+    "pricing": [
+      {
+        "plan": "Free",
+        "price_per_month": 0,
+        "features": [
+          "Basic features"
+        ]
+      },
+      {
+        "plan": "Starter",
+        "price_per_month": 0,
+        "features": [
+          "Check website for details"
+        ]
+      },
+      {
+        "plan": "Pro",
+        "price_per_month": 9,
+        "features": [
+          "Check website for details"
+        ]
+      },
+      {
+        "plan": "Enterprise",
+        "price_per_month": 12,
+        "features": [
+          "Check website for details"
+        ]
+      },
+      {
+        "plan": "Enterprise",
+        "price_per_month": 39.99,
+        "features": [
+          "Check website for details"
+        ]
+      }
+    ],
+    "features": [
+      "| Yes | Yes |",
+      "| Upcoming |"
+    ],
+    "pros": [
+      "Modern AI technology",
+      "User-friendly interface",
+      "Regular updates"
+    ],
+    "cons": [
+      "Pricing may vary",
+      "Requires internet connection"
+    ],
+    "rating": 4.2,
+    "benchmarks": {
+      "speed": 8,
+      "accuracy": 8,
+      "integration": 7,
+      "ease_of_use": 8,
+      "value": 7
+    },
+    "meta": {
+      "title": "Research Pal Review, Pricing, Features & Alternatives [2025]",
+      "description": "Use ResearchPal to find authentic citations from credible journals for your claims within seconds."
+    },
+    "overview": {
+      "developer": "Unknown",
+      "release_year": 2024,
+      "description": "Use ResearchPal to find authentic citations from credible journals for your claims within seconds.",
+      "category": "Research & Education"
+    }
+  },
+  {
+    "id": "blaze-ai",
+    "name": "Blaze AI",
+    "slug": "blaze-ai",
+    "logo": "/images/tools/blaze-ai-logo.svg",
+    "description": "Get started for free(https://app.blaze.ai/signup?referral_page=home&referrer=)",
+    "website": "https://blaze.ai",
+    "category": "Content Creation",
+    "pricing": [
+      {
+        "plan": "Free",
+        "price_per_month": 0,
+        "features": [
+          "Basic features"
+        ]
+      },
+      {
+        "plan": "Starter",
+        "price_per_month": 6,
+        "features": [
+          "Check website for details"
+        ]
+      }
+    ],
+    "features": [
+      "![](https://cdn.prod.website"
+    ],
+    "pros": [
+      "Modern AI technology",
+      "User-friendly interface",
+      "Regular updates"
+    ],
+    "cons": [
+      "Pricing may vary",
+      "Requires internet connection"
+    ],
+    "rating": 4.2,
+    "benchmarks": {
+      "speed": 8,
+      "accuracy": 8,
+      "integration": 7,
+      "ease_of_use": 8,
+      "value": 7
+    },
+    "meta": {
+      "title": "Blaze AI Review, Pricing, Features & Alternatives [2025]",
+      "description": "Get started for free(https://app.blaze.ai/signup?referral_page=home&referrer=)"
+    },
+    "overview": {
+      "developer": "Unknown",
+      "release_year": 2024,
+      "description": "Get started for free(https://app.blaze.ai/signup?referral_page=home&referrer=)",
+      "category": "Content Creation"
+    }
+  },
+  {
+    "id": "gwi",
+    "name": "GWI",
+    "slug": "gwi",
+    "logo": "/images/tools/gwi-logo.svg",
+    "description": "Ready to elevate your strategy? Dive into our platform today with a personalized demo(https://www.gwi.com/book-demo)",
+    "website": "https://gwi.com",
+    "category": "Content Creation",
+    "pricing": [
+      {
+        "plan": "Check website",
+        "price_per_month": 0,
+        "features": [
+          "Visit website for pricing details"
+        ]
+      }
+    ],
+    "features": [
+      "[Sign in](https://signin.globalwebindex.com/)",
+      "[Book a demo](https://www.gwi.com/book",
+      "as our customers make clear."
+    ],
+    "pros": [
+      "Modern AI technology",
+      "User-friendly interface",
+      "Regular updates"
+    ],
+    "cons": [
+      "Pricing may vary",
+      "Requires internet connection"
+    ],
+    "rating": 4.2,
+    "benchmarks": {
+      "speed": 8,
+      "accuracy": 8,
+      "integration": 7,
+      "ease_of_use": 8,
+      "value": 7
+    },
+    "meta": {
+      "title": "GWI Review, Pricing, Features & Alternatives [2025]",
+      "description": "Ready to elevate your strategy? Dive into our platform today with a personalized demo(https://www.gwi.com/book-demo)"
+    },
+    "overview": {
+      "developer": "Unknown",
+      "release_year": 2024,
+      "description": "Ready to elevate your strategy? Dive into our platform today with a personalized demo(https://www.gwi.com/book-demo)",
+      "category": "Content Creation"
+    }
+  },
+  {
+    "id": "ppc-io",
+    "name": "PPC IO",
+    "slug": "ppc-io",
+    "logo": "/images/tools/ppc-io-logo.svg",
+    "description": "!THE AI Playbook(https://ppc.io/_astro/promo-banner-img.BbuIEeoa_2whmJU.webp)\\\\",
+    "website": "https://ppc.io",
+    "category": "Paid Search & PPC",
+    "pricing": [
+      {
+        "plan": "Free",
+        "price_per_month": 0,
+        "features": [
+          "Basic features"
+        ]
+      },
+      {
+        "plan": "Starter",
+        "price_per_month": 600,
+        "features": [
+          "Check website for details"
+        ]
+      },
+      {
+        "plan": "Pro",
+        "price_per_month": 0,
+        "features": [
+          "Check website for details"
+        ]
+      },
+      {
+        "plan": "Enterprise",
+        "price_per_month": 950,
+        "features": [
+          "Check website for details"
+        ]
+      },
+      {
+        "plan": "Enterprise",
+        "price_per_month": 99,
+        "features": [
+          "Check website for details"
+        ]
+      },
+      {
+        "plan": "Enterprise",
+        "price_per_month": 2,
+        "features": [
+          "Check website for details"
+        ]
+      }
+    ],
+    "features": [
+      "THE AI Playbook For PPC Pros](https://ppc.io/book",
+      "$600K Agency Owner",
+      "no need for ad account access!",
+      "Limited Access",
+      "50 Free Credits Per Month",
+      "Every Single PPC AI Agent",
+      "2000 Credits Per Month"
+    ],
+    "pros": [
+      "Modern AI technology",
+      "User-friendly interface",
+      "Regular updates"
+    ],
+    "cons": [
+      "Pricing may vary",
+      "Requires internet connection"
+    ],
+    "rating": 4.2,
+    "benchmarks": {
+      "speed": 8,
+      "accuracy": 8,
+      "integration": 7,
+      "ease_of_use": 8,
+      "value": 7
+    },
+    "meta": {
+      "title": "PPC IO Review, Pricing, Features & Alternatives [2025]",
+      "description": "!THE AI Playbook(https://ppc.io/_astro/promo-banner-img.BbuIEeoa_2whmJU.webp)\\\\"
+    },
+    "overview": {
+      "developer": "Unknown",
+      "release_year": 2024,
+      "description": "!THE AI Playbook(https://ppc.io/_astro/promo-banner-img.BbuIEeoa_2whmJU.webp)\\\\",
+      "category": "Paid Search & PPC"
+    }
+  },
+  {
+    "id": "apify",
+    "name": "Apify",
+    "slug": "apify",
+    "logo": "/images/tools/apify-logo.svg",
+    "description": "Apify is the largest ecosystem where developers build, deploy, and publish web scrapers, AI agents, and automation tools. We call them Actors.",
+    "website": "https://apify.com",
+    "category": "Paid Search & PPC",
+    "pricing": [
+      {
+        "plan": "Free",
+        "price_per_month": 0,
+        "features": [
+          "Basic features"
+        ]
+      },
+      {
+        "plan": "Starter",
+        "price_per_month": 500,
+        "features": [
+          "Check website for details"
+        ]
+      }
+    ],
+    "features": [
+      "our own web crawling and browser automation library."
+    ],
+    "pros": [
+      "Modern AI technology",
+      "User-friendly interface",
+      "Regular updates"
+    ],
+    "cons": [
+      "Pricing may vary",
+      "Requires internet connection"
+    ],
+    "rating": 4.2,
+    "benchmarks": {
+      "speed": 8,
+      "accuracy": 8,
+      "integration": 7,
+      "ease_of_use": 8,
+      "value": 7
+    },
+    "meta": {
+      "title": "Apify Review, Pricing, Features & Alternatives [2025]",
+      "description": "Apify is the largest ecosystem where developers build, deploy, and publish web scrapers, AI agents, and automation tools. We call them Actors."
+    },
+    "overview": {
+      "developer": "Unknown",
+      "release_year": 2024,
+      "description": "Apify is the largest ecosystem where developers build, deploy, and publish web scrapers, AI agents, and automation tools. We call them Actors.",
+      "category": "Paid Search & PPC"
+    }
+  },
+  {
+    "id": "gong-io",
+    "name": "GONG IO",
+    "slug": "gong-io",
+    "logo": "/images/tools/gong-io-logo.svg",
+    "description": "!(https://www.gong.io/marketing-assets/background/squig-02.gif)The \\1 AI Platform for Revenue Teams!(https://www.gong.io/marketing-assets/background/squig-01.gif)",
+    "website": "https://gong.io",
+    "category": "Paid Search & PPC",
+    "pricing": [
+      {
+        "plan": "Check website",
+        "price_per_month": 0,
+        "features": [
+          "Visit website for pricing details"
+        ]
+      }
+    ],
+    "features": [
+      "AI-powered features",
+      "Easy to use",
+      "Web-based"
+    ],
+    "pros": [
+      "Modern AI technology",
+      "User-friendly interface",
+      "Regular updates"
+    ],
+    "cons": [
+      "Pricing may vary",
+      "Requires internet connection"
+    ],
+    "rating": 4.2,
+    "benchmarks": {
+      "speed": 8,
+      "accuracy": 8,
+      "integration": 7,
+      "ease_of_use": 8,
+      "value": 7
+    },
+    "meta": {
+      "title": "GONG IO Review, Pricing, Features & Alternatives [2025]",
+      "description": "!(https://www.gong.io/marketing-assets/background/squig-02.gif)The \\1 AI Platform for Revenue Teams!(https://www.gong.io/marketing-assets/background/squig-01.gif)"
+    },
+    "overview": {
+      "developer": "Unknown",
+      "release_year": 2024,
+      "description": "!(https://www.gong.io/marketing-assets/background/squig-02.gif)The \\1 AI Platform for Revenue Teams!(https://www.gong.io/marketing-assets/background/squig-01.gif)",
+      "category": "Paid Search & PPC"
+    }
+  },
+  {
+    "id": "ideogram",
+    "name": "Ideogram",
+    "slug": "ideogram",
+    "logo": "/images/tools/ideogram-logo.svg",
+    "description": "!(https://ideogram.ai/assets/progressive-image/balanced/response/Q_Zp4aFyRs6GvntRVsL8CA)(https://ideogram.ai/g/BKNcLtX6TGmk2P4eJdCgfg/0)",
+    "website": "https://ideogram.ai",
+    "category": "Image Generation",
+    "pricing": [
+      {
+        "plan": "Check website",
+        "price_per_month": 0,
+        "features": [
+          "Visit website for pricing details"
+        ]
+      }
+    ],
+    "features": [
+      "AI-powered features",
+      "Easy to use",
+      "Web-based"
+    ],
+    "pros": [
+      "Modern AI technology",
+      "User-friendly interface",
+      "Regular updates"
+    ],
+    "cons": [
+      "Pricing may vary",
+      "Requires internet connection"
+    ],
+    "rating": 4.2,
+    "benchmarks": {
+      "speed": 8,
+      "accuracy": 8,
+      "integration": 7,
+      "ease_of_use": 8,
+      "value": 7
+    },
+    "meta": {
+      "title": "Ideogram Review, Pricing, Features & Alternatives [2025]",
+      "description": "!(https://ideogram.ai/assets/progressive-image/balanced/response/Q_Zp4aFyRs6GvntRVsL8CA)(https://ideogram.ai/g/BKNcLtX6TGmk2P4eJdCgfg/0)"
+    },
+    "overview": {
+      "developer": "Unknown",
+      "release_year": 2024,
+      "description": "!(https://ideogram.ai/assets/progressive-image/balanced/response/Q_Zp4aFyRs6GvntRVsL8CA)(https://ideogram.ai/g/BKNcLtX6TGmk2P4eJdCgfg/0)",
+      "category": "Image Generation"
+    }
+  },
+  {
+    "id": "flux-1",
+    "name": "Flux 1",
+    "slug": "flux-1",
+    "logo": "/images/tools/flux-1-logo.svg",
+    "description": "Application error: a client-side exception has occurred while loading bfl.ai (see the browser console for more information).",
+    "website": "https://bfl.ai",
+    "category": "Image Generation",
+    "pricing": [
+      {
+        "plan": "Check website",
+        "price_per_month": 0,
+        "features": [
+          "Visit website for pricing details"
+        ]
+      }
+    ],
+    "features": [
+      "AI-powered features",
+      "Easy to use",
+      "Web-based"
+    ],
+    "pros": [
+      "Modern AI technology",
+      "User-friendly interface",
+      "Regular updates"
+    ],
+    "cons": [
+      "Pricing may vary",
+      "Requires internet connection"
+    ],
+    "rating": 4.2,
+    "benchmarks": {
+      "speed": 8,
+      "accuracy": 8,
+      "integration": 7,
+      "ease_of_use": 8,
+      "value": 7
+    },
+    "meta": {
+      "title": "Flux 1 Review, Pricing, Features & Alternatives [2025]",
+      "description": "Application error: a client-side exception has occurred while loading bfl.ai (see the browser console for more information)."
+    },
+    "overview": {
+      "developer": "Unknown",
+      "release_year": 2024,
+      "description": "Application error: a client-side exception has occurred while loading bfl.ai (see the browser console for more information).",
+      "category": "Image Generation"
+    }
+  },
+  {
+    "id": "reve-image",
+    "name": "Reve Image",
+    "slug": "reve-image",
+    "logo": "/images/tools/reve-image-logo.svg",
+    "description": "A new AI model trained from the ground up to excel at",
+    "website": "https://preview.reve.art",
+    "category": "Image Generation",
+    "pricing": [
+      {
+        "plan": "Check website",
+        "price_per_month": 0,
+        "features": [
+          "Visit website for pricing details"
+        ]
+      }
+    ],
+    "features": [
+      "AI-powered features",
+      "Easy to use",
+      "Web-based"
+    ],
+    "pros": [
+      "Modern AI technology",
+      "User-friendly interface",
+      "Regular updates"
+    ],
+    "cons": [
+      "Pricing may vary",
+      "Requires internet connection"
+    ],
+    "rating": 4.2,
+    "benchmarks": {
+      "speed": 8,
+      "accuracy": 8,
+      "integration": 7,
+      "ease_of_use": 8,
+      "value": 7
+    },
+    "meta": {
+      "title": "Reve Image Review, Pricing, Features & Alternatives [2025]",
+      "description": "A new AI model trained from the ground up to excel at"
+    },
+    "overview": {
+      "developer": "Unknown",
+      "release_year": 2024,
+      "description": "A new AI model trained from the ground up to excel at",
+      "category": "Image Generation"
+    }
+  },
+  {
+    "id": "gemini-25",
+    "name": "Gemini 2.5",
+    "slug": "gemini-25",
+    "logo": "/images/tools/gemini-25-logo.svg",
+    "description": "Gemini 2.5 - AI-powered tool in Image Generation",
+    "website": "https://ai.studio.google.com",
+    "category": "Image Generation",
+    "pricing": [
+      {
+        "plan": "Check website",
+        "price_per_month": 0,
+        "features": [
+          "Visit website for pricing details"
+        ]
+      }
+    ],
+    "features": [
+      "AI-powered features",
+      "Easy to use",
+      "Web-based"
+    ],
+    "pros": [
+      "Modern AI technology",
+      "User-friendly interface",
+      "Regular updates"
+    ],
+    "cons": [
+      "Pricing may vary",
+      "Requires internet connection"
+    ],
+    "rating": 4.2,
+    "benchmarks": {
+      "speed": 8,
+      "accuracy": 8,
+      "integration": 7,
+      "ease_of_use": 8,
+      "value": 7
+    },
+    "meta": {
+      "title": "Gemini 2.5 Review, Pricing, Features & Alternatives [2025]",
+      "description": "Comprehensive review of Gemini 2.5. AI-powered tool for Image Generation. Compare features, pricing, and alternatives."
+    },
+    "overview": {
+      "developer": "Unknown",
+      "release_year": 2024,
+      "description": "Gemini 2.5 - AI tool",
+      "category": "Image Generation"
+    }
   }
 ]
