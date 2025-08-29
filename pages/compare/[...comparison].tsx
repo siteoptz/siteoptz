@@ -330,12 +330,14 @@ const ComparisonPage: React.FC<ComparisonPageProps> = ({ tool1, tool2, faqs1, fa
                   </li>
                 ))}
               </ul>
-              <Link
-                href={`/tools/${tool1.slug}`}
+              <a 
+                href={tool1.overview?.website || tool1.website || tool1.affiliate_link || '#'}
+                target="_blank"
+                rel="noopener noreferrer"
                 className="inline-block mt-4 px-6 py-2 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-lg hover:from-blue-700 hover:to-purple-700 transition-all"
               >
                 Learn More About {tool1.name}
-              </Link>
+              </a>
             </div>
             <div className="p-6 bg-gray-900 border border-gray-800 rounded-lg">
               <h3 className="text-xl font-semibold text-cyan-400 mb-3">Choose {tool2.name} If:</h3>
@@ -347,12 +349,14 @@ const ComparisonPage: React.FC<ComparisonPageProps> = ({ tool1, tool2, faqs1, fa
                   </li>
                 ))}
               </ul>
-              <Link
-                href={`/tools/${tool2.slug}`}
+              <a 
+                href={tool2.overview?.website || tool2.website || tool2.affiliate_link || '#'}
+                target="_blank"
+                rel="noopener noreferrer"
                 className="inline-block mt-4 px-6 py-2 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-lg hover:from-blue-700 hover:to-purple-700 transition-all"
               >
                 Learn More About {tool2.name}
-              </Link>
+              </a>
             </div>
           </div>
         </div>
