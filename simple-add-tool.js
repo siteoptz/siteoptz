@@ -11,18 +11,18 @@ const path = require('path');
 function addSimpleTool() {
   // Example tool - modify this object to add your tool
   const newTool = {
-    "id": "example-ai-tool",
-    "name": "Example AI Tool", 
-    "slug": "example-ai-tool",
-    "logo": "/images/tools/example-ai-tool-logo.svg",
+    "id": "your-tool-id",
+    "name": "Your Tool Name", 
+    "slug": "your-tool-slug",
+    "logo": "/images/tools/your-tool-logo.svg",
     "meta": {
-      "title": "Example AI Tool Review, Pricing, Features & Alternatives [2025]",
-      "description": "Comprehensive review of Example AI Tool. AI-powered example tool for demonstration purposes. Compare features, pricing, and alternatives."
+      "title": "Your Tool Name Review, Pricing, Features & Alternatives [2025]",
+      "description": "Comprehensive review of Your Tool Name. Description of what your tool does. Compare features, pricing, and alternatives."
     },
     "overview": {
-      "developer": "Example Company",
+      "developer": "Your Company",
       "release_year": 2024,
-      "description": "AI-powered example tool for demonstration purposes",
+      "description": "Description of what your AI tool does",
       "category": "Content Creation"
     },
     "features": [

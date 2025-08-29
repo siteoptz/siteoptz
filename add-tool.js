@@ -79,11 +79,11 @@ function addTool(toolData) {
 // Example usage - uncomment and modify to add a tool:
 /*
 const newTool = {
-  id: "example-tool",
-  name: "Example Tool", 
-  slug: "example-tool",
-  description: "An example AI tool for demonstration",
-  website: "https://example.com",
+  id: "your-tool-id",
+  name: "Your Tool Name", 
+  slug: "your-tool-slug",
+  description: "Description of your AI tool",
+  website: "https://your-website.com",
   category: "Content Creation",
   features: [
     "Feature 1",
