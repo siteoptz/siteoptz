@@ -242,7 +242,7 @@ export default function ComprehensiveComparisonPage({ tools, faqs, featuredTools
             <div className="text-center">
               <div className="flex justify-center gap-2 mb-6">
                 <Award className="w-8 h-8 text-yellow-300" />
-                <span className="text-yellow-300 font-semibold">2025's Most Comprehensive Comparison</span>
+                <span className="text-yellow-300 font-semibold">2025&apos;s Most Comprehensive Comparison</span>
               </div>
               
               <h1 className="text-4xl md:text-6xl font-bold mb-6">
