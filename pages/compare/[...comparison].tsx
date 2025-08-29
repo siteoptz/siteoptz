@@ -330,7 +330,7 @@ const ComparisonPage: React.FC<ComparisonPageProps> = ({ tool1, tool2, faqs1, fa
                   </li>
                 ))}
               </ul>
-              <Link 
+              <Link
                 href={`/tools/${tool1.slug}`}
                 className="inline-block mt-4 px-6 py-2 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-lg hover:from-blue-700 hover:to-purple-700 transition-all"
               >
@@ -347,7 +347,7 @@ const ComparisonPage: React.FC<ComparisonPageProps> = ({ tool1, tool2, faqs1, fa
                   </li>
                 ))}
               </ul>
-              <Link 
+              <Link
                 href={`/tools/${tool2.slug}`}
                 className="inline-block mt-4 px-6 py-2 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-lg hover:from-blue-700 hover:to-purple-700 transition-all"
               >
