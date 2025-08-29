@@ -2,6 +2,7 @@ import React from 'react';
 import Link from 'next/link';
 import { GetStaticProps, GetStaticPaths } from 'next';
 import SEOHead from '../../components/SEOHead';
+import ToolLogo from '../../components/ToolLogo';
 import { generateComparisonMeta, generateFAQSchema, generateBreadcrumbSchema, buildCanonicalUrl } from '../../seo/meta-config.js';
 // Data will be fetched at build time from public/data/
 
@@ -83,7 +84,9 @@ const ComparisonPage: React.FC<ComparisonPageProps> = ({ tool1, tool2, faqs1, fa
           {/* Tool Comparison Header */}
           <div className="grid md:grid-cols-2 gap-8 mb-8">
             <div className="text-center p-6 bg-gray-900 border border-gray-800 rounded-lg">
-              <img src={tool1.logo} alt={`${tool1.name} logo`} className="w-16 h-16 mx-auto mb-4 rounded-lg" />
+              <div className="flex justify-center mb-4">
+                <ToolLogo toolName={tool1.name} logoUrl={tool1.logo} size="lg" />
+              </div>
               <h2 className="text-2xl font-bold text-white mb-2">{tool1.name}</h2>
               <p className="text-gray-300">{tool1.overview?.description || tool1.description || ''}</p>
               <div className="mt-4">
@@ -95,7 +98,9 @@ const ComparisonPage: React.FC<ComparisonPageProps> = ({ tool1, tool2, faqs1, fa
               </div>
             </div>
             <div className="text-center p-6 bg-gray-900 border border-gray-800 rounded-lg">
-              <img src={tool2.logo} alt={`${tool2.name} logo`} className="w-16 h-16 mx-auto mb-4 rounded-lg" />
+              <div className="flex justify-center mb-4">
+                <ToolLogo toolName={tool2.name} logoUrl={tool2.logo} size="lg" />
+              </div>
               <h2 className="text-2xl font-bold text-white mb-2">{tool2.name}</h2>
               <p className="text-gray-300">{tool2.overview?.description || tool2.description || ''}</p>
               <div className="mt-4">

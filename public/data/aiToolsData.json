@@ -16298,7 +16298,7 @@
       "developer": "Cactus Communications",
       "release_year": 2022,
       "description": "AI academic writing assistant for better research papers",
-      "category": "Writing"
+      "category": "Content Creation"
     }
   },
   {
@@ -16419,77 +16419,36 @@
         "plan": "Free",
         "price_per_month": 0,
         "features": [
-          "Basic features"
+          "Basic Alexa features",
+          "Voice commands",
+          "Smart home control"
         ]
       },
       {
-        "plan": "Starter",
+        "plan": "Alexa+ (Prime)",
+        "price_per_month": 0,
+        "features": [
+          "Free with Prime membership",
+          "Enhanced AI features",
+          "Personalized responses"
+        ]
+      },
+      {
+        "plan": "Alexa+ (Non-Prime)",
         "price_per_month": 19.99,
         "features": [
-          "Check website for details"
-        ]
-      },
-      {
-        "plan": "Pro",
-        "price_per_month": 149.99,
-        "features": [
-          "Check website for details"
+          "Enhanced AI features",
+          "Personalized responses",
+          "Advanced automation"
         ]
       },
       {
         "plan": "Enterprise",
-        "price_per_month": 14999,
+        "price_per_month": "Custom",
         "features": [
-          "Check website for details"
-        ]
-      },
-      {
-        "plan": "Enterprise",
-        "price_per_month": 14999,
-        "features": [
-          "Check website for details"
-        ]
-      },
-      {
-        "plan": "Enterprise",
-        "price_per_month": 299.99,
-        "features": [
-          "Check website for details"
-        ]
-      },
-      {
-        "plan": "Enterprise",
-        "price_per_month": 29999,
-        "features": [
-          "Check website for details"
-        ]
-      },
-      {
-        "plan": "Enterprise",
-        "price_per_month": 29999,
-        "features": [
-          "Check website for details"
-        ]
-      },
-      {
-        "plan": "Enterprise",
-        "price_per_month": 399.99,
-        "features": [
-          "Check website for details"
-        ]
-      },
-      {
-        "plan": "Enterprise",
-        "price_per_month": 39999,
-        "features": [
-          "Check website for details"
-        ]
-      },
-      {
-        "plan": "Enterprise",
-        "price_per_month": 39999,
-        "features": [
-          "Check website for details"
+          "Custom enterprise solutions",
+          "Volume licensing",
+          "Dedicated support"
         ]
       }
     ],
@@ -17185,7 +17144,7 @@
     "name": "PPC IO",
     "slug": "ppc-io",
     "logo": "/images/tools/ppc-io-logo.svg",
-    "description": "!THE AI Playbook(https://ppc.io/_astro/promo-banner-img.BbuIEeoa_2whmJU.webp)\\\\",
+    "description": "AI-powered PPC optimization platform that helps marketers improve their paid search campaigns with automated bidding, keyword optimization, and performance insights.",
     "website": "https://ppc.io",
     "category": "Paid Search & PPC",
     "pricing": [
@@ -17260,12 +17219,12 @@
     },
     "meta": {
       "title": "PPC IO Review, Pricing, Features & Alternatives [2025]",
-      "description": "!THE AI Playbook(https://ppc.io/_astro/promo-banner-img.BbuIEeoa_2whmJU.webp)\\\\"
+      "description": "AI-powered PPC optimization platform that helps marketers improve their paid search campaigns with automated bidding, keyword optimization, and performance insights."
     },
     "overview": {
       "developer": "Unknown",
       "release_year": 2024,
-      "description": "!THE AI Playbook(https://ppc.io/_astro/promo-banner-img.BbuIEeoa_2whmJU.webp)\\\\",
+      "description": "AI-powered PPC optimization platform that helps marketers improve their paid search campaigns with automated bidding, keyword optimization, and performance insights.",
       "category": "Paid Search & PPC"
     }
   },

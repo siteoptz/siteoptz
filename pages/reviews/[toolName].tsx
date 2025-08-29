@@ -712,7 +712,7 @@ export const getStaticPaths: GetStaticPaths = async () => {
   
   const paths = tools.map((tool: any) => ({
     params: {
-      toolName: tool.tool_name.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-+|-+$/g, '')
+      toolName: tool.slug || tool.tool_name.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-+|-+$/g, '')
     }
   }));
 
@@ -735,8 +735,9 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
     fs.readFileSync(path.join(process.cwd(), 'public/data/aiToolsData.json'), 'utf8')
   );
   
-  // Find tool by slug
+  // Find tool by slug (try actual slug first, then fall back to generated slug)
   const tool = tools.find((t: any) => 
+    t.slug === toolSlug || 
     t.tool_name.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-+|-+$/g, '') === toolSlug
   );
 
