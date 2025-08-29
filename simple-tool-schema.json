@@ -1,0 +1,50 @@
+{
+  "simplified_tool_format": {
+    "id": "unique-tool-id",
+    "name": "Tool Name",
+    "slug": "tool-name",
+    "description": "Brief description of the tool",
+    "logo": "/images/tools/tool-logo.svg",
+    "category": "Category Name",
+    "website": "https://tool-website.com",
+    "features": [
+      "Feature 1",
+      "Feature 2", 
+      "Feature 3"
+    ],
+    "pricing": [
+      {
+        "plan": "Free",
+        "price_per_month": 0,
+        "features": ["Basic feature 1", "Basic feature 2"]
+      },
+      {
+        "plan": "Pro", 
+        "price_per_month": 29,
+        "features": ["Pro feature 1", "Pro feature 2"]
+      },
+      {
+        "plan": "Enterprise",
+        "price_per_month": "Custom",
+        "features": ["Enterprise feature 1", "Enterprise feature 2"]
+      }
+    ],
+    "pros": [
+      "Advantage 1",
+      "Advantage 2"
+    ],
+    "cons": [
+      "Limitation 1", 
+      "Limitation 2"
+    ],
+    "rating": 4.5,
+    "review_count": 1200,
+    "benchmarks": {
+      "speed": 8,
+      "accuracy": 9,
+      "integration": 7,
+      "ease_of_use": 8,
+      "value": 8
+    }
+  }
+}

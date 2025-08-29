@@ -4,38 +4,69 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Project Overview
 
-This is a web scraping project that uses Firecrawl to scrape siteoptz.com. The project consists of a single JavaScript file that performs comprehensive website scraping including the main page, sitemap discovery, and scraping all pages found in the sitemap.
+SiteOptz is a Next.js application for comparing AI tools. It features tool comparisons, pricing calculators, and detailed reviews across 100+ AI tools.
 
 ## Architecture
 
-- **scrape_siteoptz.js**: Main scraping script that uses the Firecrawl API to:
-  - Scrape the main page at siteoptz.com
-  - Retrieve the website's sitemap
-  - Scrape all pages discovered in the sitemap
-  - Output comprehensive results as JSON
+- **Next.js 14.2.31** with TypeScript
+- **Main data source**: `public/data/aiToolsData.json` (single source of truth)
+- **Components**: React components in `/components/` directory
+- **Pages**: Dynamic routing with `/compare/[tool1]/vs/[tool2]` format
+- **SEO**: Schema markup and meta tags for all pages
 
-- **mcp-config.json**: MCP (Model Context Protocol) server configuration for Firecrawl integration
+## Adding New AI Tools (Simplified Process)
 
-## Running the Project
-
+### Quick Method:
 ```bash
-# Install dependencies (Firecrawl will be installed via npx)
-# No package.json exists, dependencies are managed via npx
+# 1. Edit the tool object in simple-add-tool.js
+# 2. Run the script
+node simple-add-tool.js
 
-# Run the scraping script
-node scrape_siteoptz.js
+# 3. Test and deploy
+npm run build
+git add . && git commit -m "Add new AI tool" && git push
 ```
 
-## API Configuration
+### Manual Method:
+1. Open `public/data/aiToolsData.json`
+2. Add new tool object following this format:
+```json
+{
+  "id": "tool-id",
+  "name": "Tool Name",
+  "slug": "tool-slug", 
+  "description": "Tool description",
+  "features": ["Feature 1", "Feature 2"],
+  "pricing": [
+    {"plan": "Free", "price_per_month": 0, "features": []},
+    {"plan": "Pro", "price_per_month": 29, "features": []}
+  ],
+  "pros": ["Advantage 1"],
+  "cons": ["Limitation 1"],
+  "rating": 4.5,
+  "benchmarks": {"speed": 8, "accuracy": 8, "integration": 7, "ease_of_use": 8, "value": 8}
+}
+```
 
-The project uses the Firecrawl API with an API key configured in both:
-- `mcp-config.json` for MCP server integration
-- `scrape_siteoptz.js` for direct API usage
+## Build Commands
 
-## Output
+```bash
+# Development
+npm run dev
 
-The script outputs a comprehensive JSON summary containing:
-- Main page content
-- Sitemap data
-- All scraped pages
-- Timestamp of the scraping operation
+# Production build  
+npm run build
+
+# Type checking
+npm run type-check
+
+# Linting
+npm run lint
+```
+
+## Important Notes
+
+- **Single data source**: Only edit `public/data/aiToolsData.json`
+- **No complex normalization**: Data should be consistent in the file
+- **Required fields**: id, name, slug, features (array), pricing (array)
+- **Arrays only**: features and pricing must always be arrays, never objects

@@ -1,10 +1,12 @@
-import React, { useState, useEffect } from 'react';
-import aiToolsData from '../aiToolsData.json';
+import React, { useState, useMemo } from 'react';
+import { ChevronUp, ChevronDown, Check, X, Star, Filter, Search } from 'lucide-react';
 
-const ComparisonTable = ({ selectedTools = [], onToolSelect, showAllTools = false }) => {
+const ComparisonTable = ({ tools = [], maxSelection = 3, onToolSelect }) => {
+  const [selectedTools, setSelectedTools] = useState([]);
   const [sortConfig, setSortConfig] = useState({ key: 'rating', direction: 'desc' });
   const [filterCategory, setFilterCategory] = useState('all');
   const [searchTerm, setSearchTerm] = useState('');
+  const [comparisonMode, setComparisonMode] = useState(false);
 
   // Get unique categories
   const categories = ['all', ...new Set(aiToolsData.map(tool => tool.category))];
