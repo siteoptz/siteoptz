@@ -15948,5 +15948,357 @@
       "ai-tools",
       "automation"
     ]
+  },
+  {
+    "id": "trace-ai",
+    "name": "Trace AI",
+    "slug": "trace-ai",
+    "logo": "/images/tools/trace-ai-logo.svg",
+    "description": "AI-powered productivity tool that helps automate workflows and boost efficiency with intelligent task management.",
+    "website": "https://trace.ai",
+    "category": "Productivity",
+    "features": [
+      "Workflow automation",
+      "Task management",
+      "AI-powered insights",
+      "Team collaboration",
+      "Integration with popular tools"
+    ],
+    "pricing": [
+      {
+        "plan": "Free",
+        "price_per_month": 0,
+        "features": [
+          "Basic features",
+          "Up to 3 users"
+        ]
+      },
+      {
+        "plan": "Pro",
+        "price_per_month": 29,
+        "features": [
+          "All features",
+          "Unlimited users",
+          "Priority support"
+        ]
+      },
+      {
+        "plan": "Enterprise",
+        "price_per_month": "Custom",
+        "features": [
+          "Custom features",
+          "Dedicated support"
+        ]
+      }
+    ],
+    "pros": [
+      "Easy to use interface",
+      "Powerful automation features",
+      "Good integration options"
+    ],
+    "cons": [
+      "Limited free plan",
+      "Learning curve for advanced features"
+    ],
+    "rating": 4.5,
+    "benchmarks": {
+      "speed": 8,
+      "accuracy": 8,
+      "integration": 9,
+      "ease_of_use": 8,
+      "value": 7
+    },
+    "meta": {
+      "title": "Trace AI Review, Pricing, Features & Alternatives [2025]",
+      "description": "Comprehensive review of Trace AI. AI-powered productivity tool for workflow automation. Compare features, pricing, and alternatives."
+    },
+    "overview": {
+      "developer": "Trace Technologies",
+      "release_year": 2023,
+      "description": "AI-powered productivity tool that helps automate workflows and boost efficiency",
+      "category": "Productivity"
+    }
+  },
+  {
+    "id": "ux-pilot",
+    "name": "UX Pilot",
+    "slug": "ux-pilot",
+    "logo": "/images/tools/ux-pilot-logo.svg",
+    "description": "AI-powered UX design assistant that helps create better user experiences with intelligent design suggestions and automated testing.",
+    "website": "https://uxpilot.ai",
+    "category": "Design",
+    "features": [
+      "AI design suggestions",
+      "Automated UX testing",
+      "User flow optimization",
+      "Accessibility checking",
+      "Design system management"
+    ],
+    "pricing": [
+      {
+        "plan": "Starter",
+        "price_per_month": 19,
+        "features": [
+          "Basic features",
+          "5 projects"
+        ]
+      },
+      {
+        "plan": "Professional",
+        "price_per_month": 49,
+        "features": [
+          "All features",
+          "Unlimited projects"
+        ]
+      },
+      {
+        "plan": "Team",
+        "price_per_month": 99,
+        "features": [
+          "Team collaboration",
+          "Priority support"
+        ]
+      }
+    ],
+    "pros": [
+      "Intelligent design recommendations",
+      "Saves time on UX testing",
+      "Great for design teams"
+    ],
+    "cons": [
+      "No free tier",
+      "Requires design knowledge"
+    ],
+    "rating": 4.3,
+    "benchmarks": {
+      "speed": 7,
+      "accuracy": 8,
+      "integration": 7,
+      "ease_of_use": 8,
+      "value": 8
+    },
+    "meta": {
+      "title": "UX Pilot Review, Pricing, Features & Alternatives [2025]",
+      "description": "Comprehensive review of UX Pilot. AI-powered UX design assistant for better user experiences. Compare features, pricing, and alternatives."
+    },
+    "overview": {
+      "developer": "UX Pilot Inc",
+      "release_year": 2024,
+      "description": "AI-powered UX design assistant for better user experiences",
+      "category": "Design"
+    }
+  },
+  {
+    "id": "kleap-ai",
+    "name": "Kleap",
+    "slug": "kleap-ai",
+    "logo": "/images/tools/kleap-ai-logo.svg",
+    "description": "AI website builder that creates professional websites in minutes with intelligent design and content generation.",
+    "website": "https://kleap.co",
+    "category": "Website Builder",
+    "features": [
+      "AI website generation",
+      "Mobile-first design",
+      "Content writing assistance",
+      "SEO optimization",
+      "Custom domain support",
+      "E-commerce features"
+    ],
+    "pricing": [
+      {
+        "plan": "Free",
+        "price_per_month": 0,
+        "features": [
+          "Basic features",
+          "Kleap subdomain"
+        ]
+      },
+      {
+        "plan": "Creator",
+        "price_per_month": 12,
+        "features": [
+          "Custom domain",
+          "Remove branding"
+        ]
+      },
+      {
+        "plan": "Business",
+        "price_per_month": 39,
+        "features": [
+          "E-commerce",
+          "Advanced features"
+        ]
+      }
+    ],
+    "pros": [
+      "Very easy to use",
+      "Beautiful templates",
+      "Fast website creation",
+      "Good mobile experience"
+    ],
+    "cons": [
+      "Limited customization options",
+      "Basic e-commerce features"
+    ],
+    "rating": 4.4,
+    "benchmarks": {
+      "speed": 9,
+      "accuracy": 7,
+      "integration": 6,
+      "ease_of_use": 9,
+      "value": 8
+    },
+    "meta": {
+      "title": "Kleap AI Website Builder Review, Pricing & Features [2025]",
+      "description": "Comprehensive review of Kleap AI website builder. Create professional websites in minutes with AI. Compare features, pricing, and alternatives."
+    },
+    "overview": {
+      "developer": "Kleap SAS",
+      "release_year": 2022,
+      "description": "AI website builder for creating professional websites in minutes",
+      "category": "Website Builder"
+    }
+  },
+  {
+    "id": "castmagic",
+    "name": "Castmagic",
+    "slug": "castmagic",
+    "logo": "/images/tools/castmagic-logo.svg",
+    "description": "AI-powered podcast and video content repurposing tool that transforms long-form content into multiple formats automatically.",
+    "website": "https://castmagic.io",
+    "category": "Content Creation",
+    "features": [
+      "Automatic transcription",
+      "Content repurposing",
+      "Show notes generation",
+      "Social media clips",
+      "Chapter markers",
+      "SEO-optimized blog posts"
+    ],
+    "pricing": [
+      {
+        "plan": "Hobby",
+        "price_per_month": 23,
+        "features": [
+          "5 hours/month",
+          "Basic features"
+        ]
+      },
+      {
+        "plan": "Starter",
+        "price_per_month": 47,
+        "features": [
+          "10 hours/month",
+          "All features"
+        ]
+      },
+      {
+        "plan": "Pro",
+        "price_per_month": 97,
+        "features": [
+          "25 hours/month",
+          "Priority support"
+        ]
+      }
+    ],
+    "pros": [
+      "Saves hours of content creation time",
+      "High-quality transcription",
+      "Multiple output formats",
+      "Great for podcasters"
+    ],
+    "cons": [
+      "No free plan",
+      "Can be expensive for heavy users"
+    ],
+    "rating": 4.6,
+    "benchmarks": {
+      "speed": 8,
+      "accuracy": 9,
+      "integration": 7,
+      "ease_of_use": 8,
+      "value": 7
+    },
+    "meta": {
+      "title": "Castmagic Review - AI Podcast & Video Repurposing Tool [2025]",
+      "description": "Comprehensive review of Castmagic. Transform podcasts and videos into multiple content formats with AI. Compare features, pricing, and alternatives."
+    },
+    "overview": {
+      "developer": "Castmagic Inc",
+      "release_year": 2023,
+      "description": "AI-powered content repurposing for podcasters and video creators",
+      "category": "Content Creation"
+    }
+  },
+  {
+    "id": "paperpal",
+    "name": "Paperpal",
+    "slug": "paperpal",
+    "logo": "/images/tools/paperpal-logo.svg",
+    "description": "AI academic writing assistant that helps researchers and students write better papers with grammar checking, paraphrasing, and citation tools.",
+    "website": "https://paperpal.com",
+    "category": "Writing",
+    "features": [
+      "Academic grammar checking",
+      "Paraphrasing tool",
+      "Citation formatting",
+      "Plagiarism detection",
+      "Language enhancement",
+      "Research paper templates"
+    ],
+    "pricing": [
+      {
+        "plan": "Free",
+        "price_per_month": 0,
+        "features": [
+          "Basic grammar check",
+          "Limited features"
+        ]
+      },
+      {
+        "plan": "Prime",
+        "price_per_month": 19,
+        "features": [
+          "All features",
+          "Unlimited checks"
+        ]
+      },
+      {
+        "plan": "Team",
+        "price_per_month": "Custom",
+        "features": [
+          "Team collaboration",
+          "Admin controls"
+        ]
+      }
+    ],
+    "pros": [
+      "Specialized for academic writing",
+      "Accurate grammar suggestions",
+      "Multiple citation styles",
+      "Helpful for non-native speakers"
+    ],
+    "cons": [
+      "Limited free version",
+      "Focused only on academic writing"
+    ],
+    "rating": 4.5,
+    "benchmarks": {
+      "speed": 8,
+      "accuracy": 9,
+      "integration": 7,
+      "ease_of_use": 8,
+      "value": 8
+    },
+    "meta": {
+      "title": "Paperpal Review - AI Academic Writing Assistant [2025]",
+      "description": "Comprehensive review of Paperpal. AI-powered academic writing assistant for researchers and students. Compare features, pricing, and alternatives."
+    },
+    "overview": {
+      "developer": "Cactus Communications",
+      "release_year": 2022,
+      "description": "AI academic writing assistant for better research papers",
+      "category": "Writing"
+    }
   }
 ]
