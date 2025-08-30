@@ -43,17 +43,17 @@ const Header: React.FC = () => {
 
   const navigation = [
     { 
-      name: 'AI Category', 
+      name: 'AI Categories', 
       href: '/categories', 
       current: router.pathname.startsWith('/categories'),
       hasDropdown: true,
       isCategory: true
     },
     { 
-      name: 'Tools', 
+      name: 'All Tools', 
       href: '/tools', 
       current: router.pathname.startsWith('/tools'),
-      hasDropdown: true
+      hasDropdown: false
     },
     {
       name: 'Industries We Help',
@@ -62,15 +62,10 @@ const Header: React.FC = () => {
       hasDropdown: true,
       isIndustry: true
     },
-    { name: 'Pricing Calculator', href: '/pricing', current: router.pathname === '/pricing' },
-    { name: 'Data Room', href: '/data-room', current: router.pathname === '/data-room' },
-    { 
-      name: 'AI News', 
-      href: '/blog', 
-      current: router.pathname.startsWith('/blog'),
-      hasDropdown: false
-    },
-    { name: 'Contact', href: '/contact', current: router.pathname === '/contact' },
+    { name: 'Pricing Calculator', href: '/pricing', current: router.pathname === '/pricing', hasDropdown: false },
+    { name: 'Blog', href: '/blog', current: router.pathname.startsWith('/blog'), hasDropdown: false },
+    { name: 'Data Room', href: '/data-room', current: router.pathname === '/data-room', hasDropdown: false },
+    { name: 'Contact', href: '/contact', current: router.pathname === '/contact', hasDropdown: false },
   ];
 
   const toggleMenu = () => {
@@ -159,31 +154,6 @@ const Header: React.FC = () => {
                   </div>
                 )}
                 
-                {/* Dropdown Menu - Tools */}
-                {item.hasDropdown && item.name === 'Tools' && (
-                  <div 
-                    className="absolute top-full left-0 mt-2 w-64 bg-black rounded-xl shadow-xl border border-gray-800/50 py-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 transform translate-y-2 group-hover:translate-y-0"
-                  >
-                    {/* All Tools Link */}
-                    <Link
-                      href="/tools"
-                      className="block px-4 py-2 text-sm text-gray-300 hover:bg-gray-800 hover:text-white transition-colors"
-                    >
-                      All AI Tools
-                    </Link>
-                    
-                    {/* Category Links */}
-                    {toolCategories.map((category) => (
-                      <Link
-                        key={category}
-                        href={getCategoryUrl(category)}
-                        className="block px-4 py-2 text-sm text-gray-300 hover:bg-gray-800 hover:text-white transition-colors"
-                      >
-                        {getCategoryDisplayName(category)}
-                      </Link>
-                    ))}
-                  </div>
-                )}
                 
                 {/* Dropdown Menu - Industries */}
                 {item.hasDropdown && item.isIndustry && (
