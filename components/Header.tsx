@@ -6,6 +6,45 @@ import { Menu, X, ChevronDown, ChevronUp } from 'lucide-react';
 import { toolCategories, getCategoryUrl, getCategoryDisplayName } from '../config/categories';
 import { industries, industrySlugMap } from '../content/industryContent';
 
+// Hierarchical category structure for AI Categories dropdown
+const hierarchicalCategories = [
+  {
+    name: 'Content',
+    subcategories: [
+      { name: 'Content Creation', value: 'Content Creation' },
+      { name: 'Image Generation', value: 'Image Generation' },
+      { name: 'Video Generation', value: 'Video Generation' },
+      { name: 'Best Voice AI Tools', value: 'Best Voice AI Tools' }
+    ]
+  },
+  {
+    name: 'Marketing & Digital',
+    subcategories: [
+      { name: 'Paid Search', value: 'Paid Search & PPC' },
+      { name: 'Social Media', value: 'Social Media' },
+      { name: 'SEO & Optimization', value: 'SEO & Optimization' },
+      { name: 'Email Marketing', value: 'Email Marketing' }
+    ]
+  },
+  {
+    name: 'Development & Technology',
+    subcategories: [
+      { name: 'Code Generation', value: 'Code Generation' },
+      { name: 'AI Automation', value: 'AI Automation' },
+      { name: 'Website Builder', value: 'Website Builder' },
+      { name: 'UX', value: 'UX' }
+    ]
+  },
+  {
+    name: 'Business & Productivity',
+    subcategories: [
+      { name: 'Productivity', value: 'Productivity' },
+      { name: 'Research & Education', value: 'Research & Education' },
+      { name: 'Data Analysis', value: 'Data Analysis' }
+    ]
+  }
+];
+
 const Header: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
@@ -131,26 +170,37 @@ const Header: React.FC = () => {
                   )}
                 </Link>
                 
-                {/* Dropdown Menu - AI Category */}
+                {/* Dropdown Menu - AI Categories */}
                 {item.hasDropdown && item.isCategory && (
                   <div 
-                    className="absolute top-full left-0 mt-2 w-72 bg-black rounded-xl shadow-xl border border-gray-800/50 py-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 transform translate-y-2 group-hover:translate-y-0"
+                    className="absolute top-full left-0 mt-2 w-80 bg-black rounded-xl shadow-xl border border-gray-800/50 py-3 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 transform translate-y-2 group-hover:translate-y-0"
                   >
-                    <div className="px-4 py-2 text-xs font-semibold text-gray-500 uppercase tracking-wider border-b border-gray-800/50 mb-2">
+                    <div className="px-4 py-2 text-xs font-semibold text-gray-500 uppercase tracking-wider border-b border-gray-800/50 mb-3">
                       Browse by Category
                     </div>
-                    {toolCategories.map((category) => (
-                      <Link
-                        key={category}
-                        href={`/categories/${category.toLowerCase().replace(/[^a-z0-9]+/g, '-')}`}
-                        className="block px-4 py-3 text-sm text-gray-300 hover:bg-gray-800 hover:text-white transition-colors border-l-2 border-transparent hover:border-cyan-400"
-                      >
-                        <div className="flex items-center justify-between">
-                          <span>{getCategoryDisplayName(category)}</span>
-                          <span className="text-xs text-gray-500">→</span>
+                    <div className="max-h-96 overflow-y-auto">
+                      {hierarchicalCategories.map((mainCategory, index) => (
+                        <div key={mainCategory.name} className={index > 0 ? 'mt-4' : ''}>
+                          <div className="px-4 py-2 text-xs font-bold text-cyan-400 uppercase tracking-wider">
+                            {mainCategory.name}
+                          </div>
+                          <div className="space-y-1 px-2">
+                            {mainCategory.subcategories.map((subcategory) => (
+                              <Link
+                                key={subcategory.value}
+                                href={getCategoryUrl(subcategory.value)}
+                                className="block px-4 py-2 text-sm text-gray-300 hover:bg-gray-800 hover:text-white transition-all duration-200 rounded-lg border-l-2 border-transparent hover:border-cyan-400"
+                              >
+                                <div className="flex items-center justify-between">
+                                  <span>{subcategory.name}</span>
+                                  <span className="text-xs text-gray-500">→</span>
+                                </div>
+                              </Link>
+                            ))}
+                          </div>
                         </div>
-                      </Link>
-                    ))}
+                      ))}
+                    </div>
                   </div>
                 )}
                 
