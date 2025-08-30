@@ -769,13 +769,13 @@ export const getStaticProps: GetStaticProps = async () => {
 
   formatContentToHTML(content) {
     return content
-      .replace(/###\s+(.+)/g, '<h3 class="text-xl font-semibold text-cyan-400 mb-4 mt-8">$1</h3>')
-      .replace(/\*\*(.+?)\*\*/g, '<strong class="text-white">$1</strong>')
-      .replace(/- (.+)/g, '<li class="text-gray-300 mb-2">$1</li>')
-      .replace(/\n\n/g, '</p><p class="text-gray-300 mb-4">')
-      .replace(/^\s*(.+)$/gm, '<p class="text-gray-300 mb-4">$1</p>')
-      .replace(/<p class="text-gray-300 mb-4"><\/p>/g, '')
-      .replace(/(<li.*?<\/li>\s*)+/gs, '<ul class="list-disc list-inside mb-6 space-y-2">$&</ul>');
+      .replace(/###\s+(.+)/g, '<h3 className="text-xl font-semibold text-cyan-400 mb-4 mt-8">$1</h3>')
+      .replace(/\*\*(.+?)\*\*/g, '<strong className="text-white">$1</strong>')
+      .replace(/- (.+)/g, '<li className="text-gray-300 mb-2">$1</li>')
+      .replace(/\n\n/g, '</p><p className="text-gray-300 mb-4">')
+      .replace(/^\s*(.+)$/gm, '<p className="text-gray-300 mb-4">$1</p>')
+      .replace(/<p className="text-gray-300 mb-4"><\/p>/g, '')
+      .replace(/(<li.*?<\/li>\s*)+/gs, '<ul className="list-disc list-inside mb-6 space-y-2">$&</ul>');
   }
 
   toPascalCase(str) {
