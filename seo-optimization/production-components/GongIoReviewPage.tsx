@@ -534,7 +534,7 @@ export const getStaticProps: GetStaticProps = async () => {
       tool: {
         name: "GONG IO",
         category: "Paid Search & PPC",
-        description: "!(https://www.gong.io/marketing-assets/background/squig-02.gif)The \1 AI Platform for Revenue Teams!(https://www.gong.io/marketing-assets/background/squig-01.gif)",
+        description: "AI-powered revenue intelligence platform for sales teams",
         website: "",
         rating: 4.5,
         slug: "gong-io"
