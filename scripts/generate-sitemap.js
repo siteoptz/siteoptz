@@ -105,6 +105,7 @@ class SitemapGenerator {
 
     // Add category pages
     const categories = [
+      'ai-automation',
       'best-voice-ai-tools',
       'code-generation',
       'content-creation',
@@ -116,7 +117,9 @@ class SitemapGenerator {
       'research-education',
       'seo-optimization',
       'social-media',
-      'video-generation'
+      'ux',
+      'video-generation',
+      'website-builder'
     ];
 
     categories.forEach(category => {
@@ -180,13 +183,16 @@ class SitemapGenerator {
 
       const toolData = JSON.parse(fs.readFileSync(toolDataPath, 'utf8'));
       
+      let toolPagesAdded = 0;
       for (const tool of toolData) {
         if (tool.slug) {
           this.addUrl(`/tools/${tool.slug}`, 0.8, 'weekly', tool.last_updated || tool.updated_at, 'tools');
+          this.addUrl(`/reviews/${tool.slug}`, 0.8, 'weekly', tool.last_updated || tool.updated_at, 'tools');
+          toolPagesAdded += 2;
         }
       }
 
-      console.log(`✅ Added ${toolData.length} tool pages`);
+      console.log(`✅ Added ${toolPagesAdded} tool and review pages`);
       
     } catch (error) {
       console.warn('⚠️  Error reading tool data:', error.message);
