@@ -673,7 +673,7 @@ export default function ${componentName}({ tool }: ${componentName}Props) {
               <p className="text-lg text-gray-300">Get answers to common questions about ${tool.name}</p>
             </div>
             
-            <FAQSection faqs={${JSON.stringify(faqSection.faqs)}} />
+            <FAQSection faqs={${JSON.stringify(faqSection.faqs.map(faq => ({ question: faq.question, answer: faq.answer })))}} />
           </div>
         </section>
 
@@ -768,14 +768,24 @@ export const getStaticProps: GetStaticProps = async () => {
   }
 
   formatContentToHTML(content) {
-    return content
+    // First, handle list items by converting them to a temporary marker
+    let processed = content
       .replace(/###\s+(.+)/g, '<h3 className="text-xl font-semibold text-cyan-400 mb-4 mt-8">$1</h3>')
       .replace(/\*\*(.+?)\*\*/g, '<strong className="text-white">$1</strong>')
-      .replace(/- (.+)/g, '<li className="text-gray-300 mb-2">$1</li>')
+      .replace(/^- (.+)$/gm, '{{LIST_ITEM}}$1{{/LIST_ITEM}}') // Use markers for list items
       .replace(/\n\n/g, '</p><p className="text-gray-300 mb-4">')
       .replace(/^\s*(.+)$/gm, '<p className="text-gray-300 mb-4">$1</p>')
-      .replace(/<p className="text-gray-300 mb-4"><\/p>/g, '')
-      .replace(/(<li.*?<\/li>\s*)+/gs, '<ul className="list-disc list-inside mb-6 space-y-2">$&</ul>');
+      .replace(/<p className="text-gray-300 mb-4"><\/p>/g, '');
+    
+    // Now convert list item markers to proper HTML and wrap in ul
+    processed = processed.replace(/(<p className="text-gray-300 mb-4">)?{{LIST_ITEM}}(.+?){{\/LIST_ITEM}}(<\/p>)?/g, '<li className="text-gray-300 mb-2">$2</li>');
+    
+    // Group consecutive li elements and wrap them in ul
+    processed = processed.replace(/(<li className="text-gray-300 mb-2">.*?<\/li>\s*)+/gs, (match) => {
+      return `<ul className="list-disc list-inside mb-6 space-y-2">${match}</ul>`;
+    });
+    
+    return processed;
   }
 
   toPascalCase(str) {
