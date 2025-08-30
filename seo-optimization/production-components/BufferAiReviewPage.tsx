@@ -260,10 +260,10 @@ export default function BufferAiReviewPage({ tool }: BufferAiReviewPageProps) {
                     rel="noopener noreferrer"
                     className="bg-gradient-to-r from-blue-600 to-purple-600 text-white hover:from-blue-700 hover:to-purple-700 font-bold py-4 px-8 rounded-lg transform hover:scale-105 transition-all duration-200 shadow-lg hover:shadow-xl text-center"
                   >
-                    Try Buffer AI Free
+                    Try Buffer AI Here
                   </a>
                   <Link
-                    href="/compare/buffer-ai/vs/chatgpt"
+                    href="/compare"
                     className="border-2 border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-black font-bold py-4 px-8 rounded-lg transition-all duration-200 text-center"
                   >
                     Compare Alternatives
@@ -457,10 +457,26 @@ export default function BufferAiReviewPage({ tool }: BufferAiReviewPageProps) {
                 </div>
               </Link>
               
-              <Link href="/compare/buffer-ai/vs/chatgpt" className="group">
+              <Link href="/compare/buffer-ai/vs/buffer" className="group">
                 <div className="bg-black border border-gray-800 rounded-xl p-6 hover:border-gray-600 transition-all">
                   <h3 className="text-xl font-semibold text-white mb-3 group-hover:text-cyan-400">
-                    Buffer AI vs ChatGPT
+                    Buffer AI vs Buffer
+                  </h3>
+                  <p className="text-gray-300">Side-by-side comparison of features and pricing</p>
+                </div>
+              </Link>
+              <Link href="/compare/buffer-ai/vs/hootsuite" className="group">
+                <div className="bg-black border border-gray-800 rounded-xl p-6 hover:border-gray-600 transition-all">
+                  <h3 className="text-xl font-semibold text-white mb-3 group-hover:text-cyan-400">
+                    Buffer AI vs Hootsuite
+                  </h3>
+                  <p className="text-gray-300">Side-by-side comparison of features and pricing</p>
+                </div>
+              </Link>
+              <Link href="/compare/buffer-ai/vs/sprout-social" className="group">
+                <div className="bg-black border border-gray-800 rounded-xl p-6 hover:border-gray-600 transition-all">
+                  <h3 className="text-xl font-semibold text-white mb-3 group-hover:text-cyan-400">
+                    Buffer AI vs Sprout Social
                   </h3>
                   <p className="text-gray-300">Side-by-side comparison of features and pricing</p>
                 </div>

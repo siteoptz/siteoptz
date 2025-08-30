@@ -260,10 +260,10 @@ export default function MidjourneyReviewPage({ tool }: MidjourneyReviewPageProps
                     rel="noopener noreferrer"
                     className="bg-gradient-to-r from-blue-600 to-purple-600 text-white hover:from-blue-700 hover:to-purple-700 font-bold py-4 px-8 rounded-lg transform hover:scale-105 transition-all duration-200 shadow-lg hover:shadow-xl text-center"
                   >
-                    Try Midjourney v6 Free
+                    Try Midjourney v6 Here
                   </a>
                   <Link
-                    href="/compare/midjourney/vs/chatgpt"
+                    href="/compare"
                     className="border-2 border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-black font-bold py-4 px-8 rounded-lg transition-all duration-200 text-center"
                   >
                     Compare Alternatives
@@ -457,10 +457,26 @@ export default function MidjourneyReviewPage({ tool }: MidjourneyReviewPageProps
                 </div>
               </Link>
               
-              <Link href="/compare/midjourney/vs/chatgpt" className="group">
+              <Link href="/compare/midjourney/vs/dall-e" className="group">
                 <div className="bg-black border border-gray-800 rounded-xl p-6 hover:border-gray-600 transition-all">
                   <h3 className="text-xl font-semibold text-white mb-3 group-hover:text-cyan-400">
-                    Midjourney v6 vs ChatGPT
+                    Midjourney v6 vs Dall E
+                  </h3>
+                  <p className="text-gray-300">Side-by-side comparison of features and pricing</p>
+                </div>
+              </Link>
+              <Link href="/compare/midjourney/vs/leonardo-ai" className="group">
+                <div className="bg-black border border-gray-800 rounded-xl p-6 hover:border-gray-600 transition-all">
+                  <h3 className="text-xl font-semibold text-white mb-3 group-hover:text-cyan-400">
+                    Midjourney v6 vs Leonardo Ai
+                  </h3>
+                  <p className="text-gray-300">Side-by-side comparison of features and pricing</p>
+                </div>
+              </Link>
+              <Link href="/compare/midjourney/vs/stable-diffusion" className="group">
+                <div className="bg-black border border-gray-800 rounded-xl p-6 hover:border-gray-600 transition-all">
+                  <h3 className="text-xl font-semibold text-white mb-3 group-hover:text-cyan-400">
+                    Midjourney v6 vs Stable Diffusion
                   </h3>
                   <p className="text-gray-300">Side-by-side comparison of features and pricing</p>
                 </div>

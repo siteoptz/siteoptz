@@ -260,10 +260,10 @@ export default function GrammarlyReviewPage({ tool }: GrammarlyReviewPageProps) 
                     rel="noopener noreferrer"
                     className="bg-gradient-to-r from-blue-600 to-purple-600 text-white hover:from-blue-700 hover:to-purple-700 font-bold py-4 px-8 rounded-lg transform hover:scale-105 transition-all duration-200 shadow-lg hover:shadow-xl text-center"
                   >
-                    Try Grammarly Free
+                    Try Grammarly Here
                   </a>
                   <Link
-                    href="/compare/grammarly/vs/chatgpt"
+                    href="/compare"
                     className="border-2 border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-black font-bold py-4 px-8 rounded-lg transition-all duration-200 text-center"
                   >
                     Compare Alternatives
@@ -457,10 +457,26 @@ export default function GrammarlyReviewPage({ tool }: GrammarlyReviewPageProps) 
                 </div>
               </Link>
               
-              <Link href="/compare/grammarly/vs/chatgpt" className="group">
+              <Link href="/compare/grammarly/vs/notion-ai" className="group">
                 <div className="bg-black border border-gray-800 rounded-xl p-6 hover:border-gray-600 transition-all">
                   <h3 className="text-xl font-semibold text-white mb-3 group-hover:text-cyan-400">
-                    Grammarly vs ChatGPT
+                    Grammarly vs Notion Ai
+                  </h3>
+                  <p className="text-gray-300">Side-by-side comparison of features and pricing</p>
+                </div>
+              </Link>
+              <Link href="/compare/grammarly/vs/clickup" className="group">
+                <div className="bg-black border border-gray-800 rounded-xl p-6 hover:border-gray-600 transition-all">
+                  <h3 className="text-xl font-semibold text-white mb-3 group-hover:text-cyan-400">
+                    Grammarly vs Clickup
+                  </h3>
+                  <p className="text-gray-300">Side-by-side comparison of features and pricing</p>
+                </div>
+              </Link>
+              <Link href="/compare/grammarly/vs/motion" className="group">
+                <div className="bg-black border border-gray-800 rounded-xl p-6 hover:border-gray-600 transition-all">
+                  <h3 className="text-xl font-semibold text-white mb-3 group-hover:text-cyan-400">
+                    Grammarly vs Motion
                   </h3>
                   <p className="text-gray-300">Side-by-side comparison of features and pricing</p>
                 </div>

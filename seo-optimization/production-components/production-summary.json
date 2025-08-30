@@ -1,8 +1,8 @@
 {
-  "generated_at": "2025-08-30T02:26:59.381Z",
+  "generated_at": "2025-08-30T03:30:01.166Z",
   "total_components": 144,
-  "total_estimated_words": 258285,
-  "average_words_per_component": 1794,
+  "total_estimated_words": 261154,
+  "average_words_per_component": 1814,
   "components": [
     {
       "slug": "looka",
@@ -10,8 +10,8 @@
       "component_name": "LookaReviewPage",
       "file_path": "LookaReviewPage.tsx",
       "primary_keyword": "looka review",
-      "word_count": 1885,
-      "generated_at": "2025-08-30T02:26:59.317Z"
+      "word_count": 1904,
+      "generated_at": "2025-08-30T03:30:01.100Z"
     },
     {
       "slug": "veo",
@@ -19,8 +19,8 @@
       "component_name": "VeoReviewPage",
       "file_path": "VeoReviewPage.tsx",
       "primary_keyword": "veo review",
-      "word_count": 1845,
-      "generated_at": "2025-08-30T02:26:59.318Z"
+      "word_count": 1864,
+      "generated_at": "2025-08-30T03:30:01.102Z"
     },
     {
       "slug": "fathom",
@@ -28,8 +28,8 @@
       "component_name": "FathomReviewPage",
       "file_path": "FathomReviewPage.tsx",
       "primary_keyword": "fathom review",
-      "word_count": 1810,
-      "generated_at": "2025-08-30T02:26:59.319Z"
+      "word_count": 1829,
+      "generated_at": "2025-08-30T03:30:01.102Z"
     },
     {
       "slug": "rytr",
@@ -37,8 +37,8 @@
       "component_name": "RytrReviewPage",
       "file_path": "RytrReviewPage.tsx",
       "primary_keyword": "rytr review",
-      "word_count": 1981,
-      "generated_at": "2025-08-30T02:26:59.319Z"
+      "word_count": 2001,
+      "generated_at": "2025-08-30T03:30:01.103Z"
     },
     {
       "slug": "n8n",
@@ -46,8 +46,8 @@
       "component_name": "N8nReviewPage",
       "file_path": "N8nReviewPage.tsx",
       "primary_keyword": "n8n review",
-      "word_count": 1965,
-      "generated_at": "2025-08-30T02:26:59.320Z"
+      "word_count": 1984,
+      "generated_at": "2025-08-30T03:30:01.104Z"
     },
     {
       "slug": "suno",
@@ -55,8 +55,8 @@
       "component_name": "SunoReviewPage",
       "file_path": "SunoReviewPage.tsx",
       "primary_keyword": "suno review",
-      "word_count": 1897,
-      "generated_at": "2025-08-30T02:26:59.321Z"
+      "word_count": 1917,
+      "generated_at": "2025-08-30T03:30:01.104Z"
     },
     {
       "slug": "adcreative-ai",
@@ -64,8 +64,8 @@
       "component_name": "AdcreativeAiReviewPage",
       "file_path": "AdcreativeAiReviewPage.tsx",
       "primary_keyword": "adcreative.ai review",
-      "word_count": 1829,
-      "generated_at": "2025-08-30T02:26:59.321Z"
+      "word_count": 1848,
+      "generated_at": "2025-08-30T03:30:01.105Z"
     },
     {
       "slug": "guru",
@@ -73,8 +73,8 @@
       "component_name": "GuruReviewPage",
       "file_path": "GuruReviewPage.tsx",
       "primary_keyword": "guru review",
-      "word_count": 1814,
-      "generated_at": "2025-08-30T02:26:59.321Z"
+      "word_count": 1833,
+      "generated_at": "2025-08-30T03:30:01.105Z"
     },
     {
       "slug": "make",
@@ -82,8 +82,8 @@
       "component_name": "MakeReviewPage",
       "file_path": "MakeReviewPage.tsx",
       "primary_keyword": "make review",
-      "word_count": 1817,
-      "generated_at": "2025-08-30T02:26:59.322Z"
+      "word_count": 1836,
+      "generated_at": "2025-08-30T03:30:01.107Z"
     },
     {
       "slug": "kickresume",
@@ -91,8 +91,8 @@
       "component_name": "KickresumeReviewPage",
       "file_path": "KickresumeReviewPage.tsx",
       "primary_keyword": "kickresume review",
-      "word_count": 1834,
-      "generated_at": "2025-08-30T02:26:59.323Z"
+      "word_count": 1853,
+      "generated_at": "2025-08-30T03:30:01.107Z"
     },
     {
       "slug": "google-search",
@@ -100,8 +100,8 @@
       "component_name": "GoogleSearchReviewPage",
       "file_path": "GoogleSearchReviewPage.tsx",
       "primary_keyword": "google search review",
-      "word_count": 1893,
-      "generated_at": "2025-08-30T02:26:59.323Z"
+      "word_count": 1914,
+      "generated_at": "2025-08-30T03:30:01.108Z"
     },
     {
       "slug": "sudowrite",
@@ -109,8 +109,8 @@
       "component_name": "SudowriteReviewPage",
       "file_path": "SudowriteReviewPage.tsx",
       "primary_keyword": "sudowrite review",
-      "word_count": 1845,
-      "generated_at": "2025-08-30T02:26:59.324Z"
+      "word_count": 1865,
+      "generated_at": "2025-08-30T03:30:01.109Z"
     },
     {
       "slug": "gamma",
@@ -118,8 +118,8 @@
       "component_name": "GammaReviewPage",
       "file_path": "GammaReviewPage.tsx",
       "primary_keyword": "gamma review",
-      "word_count": 1869,
-      "generated_at": "2025-08-30T02:26:59.324Z"
+      "word_count": 1888,
+      "generated_at": "2025-08-30T03:30:01.109Z"
     },
     {
       "slug": "hubspot-email-marketing-tools",
@@ -127,8 +127,8 @@
       "component_name": "HubspotEmailMarketingToolsReviewPage",
       "file_path": "HubspotEmailMarketingToolsReviewPage.tsx",
       "primary_keyword": "hubspot email marketing tools review",
-      "word_count": 1994,
-      "generated_at": "2025-08-30T02:26:59.324Z"
+      "word_count": 2018,
+      "generated_at": "2025-08-30T03:30:01.110Z"
     },
     {
       "slug": "clockwise",
@@ -136,8 +136,8 @@
       "component_name": "ClockwiseReviewPage",
       "file_path": "ClockwiseReviewPage.tsx",
       "primary_keyword": "clockwise review",
-      "word_count": 1810,
-      "generated_at": "2025-08-30T02:26:59.325Z"
+      "word_count": 1829,
+      "generated_at": "2025-08-30T03:30:01.110Z"
     },
     {
       "slug": "lanta-ai",
@@ -145,8 +145,8 @@
       "component_name": "LantaAiReviewPage",
       "file_path": "LantaAiReviewPage.tsx",
       "primary_keyword": "lanta ai review",
-      "word_count": 1764,
-      "generated_at": "2025-08-30T02:26:59.325Z"
+      "word_count": 1785,
+      "generated_at": "2025-08-30T03:30:01.111Z"
     },
     {
       "slug": "teal",
@@ -154,8 +154,8 @@
       "component_name": "TealReviewPage",
       "file_path": "TealReviewPage.tsx",
       "primary_keyword": "teal review",
-      "word_count": 1798,
-      "generated_at": "2025-08-30T02:26:59.326Z"
+      "word_count": 1817,
+      "generated_at": "2025-08-30T03:30:01.112Z"
     },
     {
       "slug": "microsoft-powerpoint",
@@ -163,8 +163,8 @@
       "component_name": "MicrosoftPowerpointReviewPage",
       "file_path": "MicrosoftPowerpointReviewPage.tsx",
       "primary_keyword": "microsoft powerpoint review",
-      "word_count": 1833,
-      "generated_at": "2025-08-30T02:26:59.326Z"
+      "word_count": 1854,
+      "generated_at": "2025-08-30T03:30:01.112Z"
     },
     {
       "slug": "fyxer",
@@ -172,8 +172,8 @@
       "component_name": "FyxerReviewPage",
       "file_path": "FyxerReviewPage.tsx",
       "primary_keyword": "fyxer review",
-      "word_count": 1790,
-      "generated_at": "2025-08-30T02:26:59.327Z"
+      "word_count": 1809,
+      "generated_at": "2025-08-30T03:30:01.112Z"
     },
     {
       "slug": "nyota",
@@ -181,8 +181,8 @@
       "component_name": "NyotaReviewPage",
       "file_path": "NyotaReviewPage.tsx",
       "primary_keyword": "nyota review",
-      "word_count": 1870,
-      "generated_at": "2025-08-30T02:26:59.327Z"
+      "word_count": 1889,
+      "generated_at": "2025-08-30T03:30:01.113Z"
     },
     {
       "slug": "lovable",
@@ -190,8 +190,8 @@
       "component_name": "LovableReviewPage",
       "file_path": "LovableReviewPage.tsx",
       "primary_keyword": "lovable review",
-      "word_count": 1697,
-      "generated_at": "2025-08-30T02:26:59.327Z"
+      "word_count": 1716,
+      "generated_at": "2025-08-30T03:30:01.113Z"
     },
     {
       "slug": "reclaim-ai",
@@ -199,8 +199,8 @@
       "component_name": "ReclaimAiReviewPage",
       "file_path": "ReclaimAiReviewPage.tsx",
       "primary_keyword": "reclaim.ai review",
-      "word_count": 1790,
-      "generated_at": "2025-08-30T02:26:59.328Z"
+      "word_count": 1809,
+      "generated_at": "2025-08-30T03:30:01.114Z"
     },
     {
       "slug": "udio",
@@ -208,8 +208,8 @@
       "component_name": "UdioReviewPage",
       "file_path": "UdioReviewPage.tsx",
       "primary_keyword": "udio review",
-      "word_count": 1873,
-      "generated_at": "2025-08-30T02:26:59.328Z"
+      "word_count": 1893,
+      "generated_at": "2025-08-30T03:30:01.114Z"
     },
     {
       "slug": "shortwave",
@@ -217,8 +217,8 @@
       "component_name": "ShortwaveReviewPage",
       "file_path": "ShortwaveReviewPage.tsx",
       "primary_keyword": "shortwave review",
-      "word_count": 1881,
-      "generated_at": "2025-08-30T02:26:59.329Z"
+      "word_count": 1902,
+      "generated_at": "2025-08-30T03:30:01.115Z"
     },
     {
       "slug": "grok",
@@ -226,8 +226,8 @@
       "component_name": "GrokReviewPage",
       "file_path": "GrokReviewPage.tsx",
       "primary_keyword": "grok review",
-      "word_count": 1705,
-      "generated_at": "2025-08-30T02:26:59.329Z"
+      "word_count": 1724,
+      "generated_at": "2025-08-30T03:30:01.115Z"
     },
     {
       "slug": "airops",
@@ -235,8 +235,8 @@
       "component_name": "AiropsReviewPage",
       "file_path": "AiropsReviewPage.tsx",
       "primary_keyword": "airops review",
-      "word_count": 1932,
-      "generated_at": "2025-08-30T02:26:59.329Z"
+      "word_count": 1951,
+      "generated_at": "2025-08-30T03:30:01.116Z"
     },
     {
       "slug": "lockedin-ai",
@@ -244,8 +244,8 @@
       "component_name": "LockedinAiReviewPage",
       "file_path": "LockedinAiReviewPage.tsx",
       "primary_keyword": "lockedin ai review",
-      "word_count": 1753,
-      "generated_at": "2025-08-30T02:26:59.330Z"
+      "word_count": 1774,
+      "generated_at": "2025-08-30T03:30:01.116Z"
     },
     {
       "slug": "deep-research",
@@ -253,8 +253,8 @@
       "component_name": "DeepResearchReviewPage",
       "file_path": "DeepResearchReviewPage.tsx",
       "primary_keyword": "deep research review",
-      "word_count": 1779,
-      "generated_at": "2025-08-30T02:26:59.330Z"
+      "word_count": 1800,
+      "generated_at": "2025-08-30T03:30:01.116Z"
     },
     {
       "slug": "videotube-ai",
@@ -262,8 +262,8 @@
       "component_name": "VideotubeAiReviewPage",
       "file_path": "VideotubeAiReviewPage.tsx",
       "primary_keyword": "videotube review",
-      "word_count": 1717,
-      "generated_at": "2025-08-30T02:26:59.331Z"
+      "word_count": 1736,
+      "generated_at": "2025-08-30T03:30:01.117Z"
     },
     {
       "slug": "macaron-ai",
@@ -271,8 +271,8 @@
       "component_name": "MacaronAiReviewPage",
       "file_path": "MacaronAiReviewPage.tsx",
       "primary_keyword": "macaron ai review",
-      "word_count": 1772,
-      "generated_at": "2025-08-30T02:26:59.331Z"
+      "word_count": 1793,
+      "generated_at": "2025-08-30T03:30:01.117Z"
     },
     {
       "slug": "explee-ai",
@@ -280,8 +280,8 @@
       "component_name": "ExpleeAiReviewPage",
       "file_path": "ExpleeAiReviewPage.tsx",
       "primary_keyword": "explee review",
-      "word_count": 1686,
-      "generated_at": "2025-08-30T02:26:59.331Z"
+      "word_count": 1705,
+      "generated_at": "2025-08-30T03:30:01.118Z"
     },
     {
       "slug": "elevenlabs",
@@ -289,8 +289,8 @@
       "component_name": "ElevenlabsReviewPage",
       "file_path": "ElevenlabsReviewPage.tsx",
       "primary_keyword": "elevenlabs review",
-      "word_count": 1871,
-      "generated_at": "2025-08-30T02:26:59.332Z"
+      "word_count": 1889,
+      "generated_at": "2025-08-30T03:30:01.118Z"
     },
     {
       "slug": "murph-ai",
@@ -298,8 +298,8 @@
       "component_name": "MurphAiReviewPage",
       "file_path": "MurphAiReviewPage.tsx",
       "primary_keyword": "murph ai review",
-      "word_count": 1886,
-      "generated_at": "2025-08-30T02:26:59.332Z"
+      "word_count": 1906,
+      "generated_at": "2025-08-30T03:30:01.118Z"
     },
     {
       "slug": "synthesys",
@@ -307,8 +307,8 @@
       "component_name": "SynthesysReviewPage",
       "file_path": "SynthesysReviewPage.tsx",
       "primary_keyword": "synthesys review",
-      "word_count": 1811,
-      "generated_at": "2025-08-30T02:26:59.332Z"
+      "word_count": 1829,
+      "generated_at": "2025-08-30T03:30:01.119Z"
     },
     {
       "slug": "play-ht",
@@ -316,8 +316,8 @@
       "component_name": "PlayHtReviewPage",
       "file_path": "PlayHtReviewPage.tsx",
       "primary_keyword": "play.ht review",
-      "word_count": 1819,
-      "generated_at": "2025-08-30T02:26:59.333Z"
+      "word_count": 1837,
+      "generated_at": "2025-08-30T03:30:01.119Z"
     },
     {
       "slug": "wellsaid-labs",
@@ -325,8 +325,8 @@
       "component_name": "WellsaidLabsReviewPage",
       "file_path": "WellsaidLabsReviewPage.tsx",
       "primary_keyword": "wellsaid labs review",
-      "word_count": 1866,
-      "generated_at": "2025-08-30T02:26:59.334Z"
+      "word_count": 1886,
+      "generated_at": "2025-08-30T03:30:01.120Z"
     },
     {
       "slug": "cursor",
@@ -334,8 +334,8 @@
       "component_name": "CursorReviewPage",
       "file_path": "CursorReviewPage.tsx",
       "primary_keyword": "cursor review",
-      "word_count": 1817,
-      "generated_at": "2025-08-30T02:26:59.334Z"
+      "word_count": 1837,
+      "generated_at": "2025-08-30T03:30:01.120Z"
     },
     {
       "slug": "github-copilot",
@@ -343,8 +343,8 @@
       "component_name": "GithubCopilotReviewPage",
       "file_path": "GithubCopilotReviewPage.tsx",
       "primary_keyword": "github copilot review",
-      "word_count": 1876,
-      "generated_at": "2025-08-30T02:26:59.334Z"
+      "word_count": 1897,
+      "generated_at": "2025-08-30T03:30:01.121Z"
     },
     {
       "slug": "amazon-codewhisperer",
@@ -352,8 +352,8 @@
       "component_name": "AmazonCodewhispererReviewPage",
       "file_path": "AmazonCodewhispererReviewPage.tsx",
       "primary_keyword": "amazon codewhisperer review",
-      "word_count": 1860,
-      "generated_at": "2025-08-30T02:26:59.335Z"
+      "word_count": 1881,
+      "generated_at": "2025-08-30T03:30:01.121Z"
     },
     {
       "slug": "replit-ghost",
@@ -361,8 +361,8 @@
       "component_name": "ReplitGhostReviewPage",
       "file_path": "ReplitGhostReviewPage.tsx",
       "primary_keyword": "replit ghost review",
-      "word_count": 1840,
-      "generated_at": "2025-08-30T02:26:59.335Z"
+      "word_count": 1861,
+      "generated_at": "2025-08-30T03:30:01.122Z"
     },
     {
       "slug": "huggingface-transformers",
@@ -370,8 +370,8 @@
       "component_name": "HuggingfaceTransformersReviewPage",
       "file_path": "HuggingfaceTransformersReviewPage.tsx",
       "primary_keyword": "hugging face review",
-      "word_count": 1772,
-      "generated_at": "2025-08-30T02:26:59.336Z"
+      "word_count": 1793,
+      "generated_at": "2025-08-30T03:30:01.122Z"
     },
     {
       "slug": "tabnine",
@@ -379,8 +379,8 @@
       "component_name": "TabnineReviewPage",
       "file_path": "TabnineReviewPage.tsx",
       "primary_keyword": "tabnine review",
-      "word_count": 1801,
-      "generated_at": "2025-08-30T02:26:59.337Z"
+      "word_count": 1821,
+      "generated_at": "2025-08-30T03:30:01.123Z"
     },
     {
       "slug": "anthropic-claude",
@@ -388,8 +388,8 @@
       "component_name": "AnthropicClaudeReviewPage",
       "file_path": "AnthropicClaudeReviewPage.tsx",
       "primary_keyword": "anthropic claude review",
-      "word_count": 1784,
-      "generated_at": "2025-08-30T02:26:59.337Z"
+      "word_count": 1806,
+      "generated_at": "2025-08-30T03:30:01.123Z"
     },
     {
       "slug": "chatgpt",
@@ -397,8 +397,8 @@
       "component_name": "ChatgptReviewPage",
       "file_path": "ChatgptReviewPage.tsx",
       "primary_keyword": "chatgpt review",
-      "word_count": 1757,
-      "generated_at": "2025-08-30T02:26:59.337Z"
+      "word_count": 1777,
+      "generated_at": "2025-08-30T03:30:01.124Z"
     },
     {
       "slug": "anthropic-chatgpt-alternative",
@@ -406,8 +406,8 @@
       "component_name": "AnthropicChatgptAlternativeReviewPage",
       "file_path": "AnthropicChatgptAlternativeReviewPage.tsx",
       "primary_keyword": "character.ai review",
-      "word_count": 1725,
-      "generated_at": "2025-08-30T02:26:59.338Z"
+      "word_count": 1745,
+      "generated_at": "2025-08-30T03:30:01.124Z"
     },
     {
       "slug": "copy-ai",
@@ -415,8 +415,8 @@
       "component_name": "CopyAiReviewPage",
       "file_path": "CopyAiReviewPage.tsx",
       "primary_keyword": "copy.ai review",
-      "word_count": 1761,
-      "generated_at": "2025-08-30T02:26:59.338Z"
+      "word_count": 1780,
+      "generated_at": "2025-08-30T03:30:01.124Z"
     },
     {
       "slug": "claude",
@@ -424,8 +424,8 @@
       "component_name": "ClaudeReviewPage",
       "file_path": "ClaudeReviewPage.tsx",
       "primary_keyword": "claude review",
-      "word_count": 1765,
-      "generated_at": "2025-08-30T02:26:59.339Z"
+      "word_count": 1785,
+      "generated_at": "2025-08-30T03:30:01.125Z"
     },
     {
       "slug": "cohere-ai",
@@ -433,8 +433,8 @@
       "component_name": "CohereAiReviewPage",
       "file_path": "CohereAiReviewPage.tsx",
       "primary_keyword": "cohere review",
-      "word_count": 1721,
-      "generated_at": "2025-08-30T02:26:59.339Z"
+      "word_count": 1741,
+      "generated_at": "2025-08-30T03:30:01.125Z"
     },
     {
       "slug": "jasper",
@@ -442,8 +442,8 @@
       "component_name": "JasperReviewPage",
       "file_path": "JasperReviewPage.tsx",
       "primary_keyword": "jasper review",
-      "word_count": 1701,
-      "generated_at": "2025-08-30T02:26:59.339Z"
+      "word_count": 1721,
+      "generated_at": "2025-08-30T03:30:01.126Z"
     },
     {
       "slug": "openai-gpt4",
@@ -451,8 +451,8 @@
       "component_name": "OpenaiGpt4ReviewPage",
       "file_path": "OpenaiGpt4ReviewPage.tsx",
       "primary_keyword": "gpt-4 review",
-      "word_count": 1717,
-      "generated_at": "2025-08-30T02:26:59.340Z"
+      "word_count": 1737,
+      "generated_at": "2025-08-30T03:30:01.126Z"
     },
     {
       "slug": "jasper-ai",
@@ -460,8 +460,8 @@
       "component_name": "JasperAiReviewPage",
       "file_path": "JasperAiReviewPage.tsx",
       "primary_keyword": "jasper ai review",
-      "word_count": 1832,
-      "generated_at": "2025-08-30T02:26:59.340Z"
+      "word_count": 1853,
+      "generated_at": "2025-08-30T03:30:01.126Z"
     },
     {
       "slug": "writesonic",
@@ -469,8 +469,8 @@
       "component_name": "WritesonicReviewPage",
       "file_path": "WritesonicReviewPage.tsx",
       "primary_keyword": "writesonic review",
-      "word_count": 1788,
-      "generated_at": "2025-08-30T02:26:59.341Z"
+      "word_count": 1807,
+      "generated_at": "2025-08-30T03:30:01.127Z"
     },
     {
       "slug": "looker",
@@ -478,8 +478,8 @@
       "component_name": "LookerReviewPage",
       "file_path": "LookerReviewPage.tsx",
       "primary_keyword": "looker review",
-      "word_count": 1785,
-      "generated_at": "2025-08-30T02:26:59.341Z"
+      "word_count": 1803,
+      "generated_at": "2025-08-30T03:30:01.127Z"
     },
     {
       "slug": "chatgpt-enterprise",
@@ -487,8 +487,8 @@
       "component_name": "ChatgptEnterpriseReviewPage",
       "file_path": "ChatgptEnterpriseReviewPage.tsx",
       "primary_keyword": "chatgpt enterprise review",
-      "word_count": 1828,
-      "generated_at": "2025-08-30T02:26:59.341Z"
+      "word_count": 1848,
+      "generated_at": "2025-08-30T03:30:01.128Z"
     },
     {
       "slug": "power-bi",
@@ -496,8 +496,8 @@
       "component_name": "PowerBiReviewPage",
       "file_path": "PowerBiReviewPage.tsx",
       "primary_keyword": "power bi review",
-      "word_count": 1848,
-      "generated_at": "2025-08-30T02:26:59.342Z"
+      "word_count": 1868,
+      "generated_at": "2025-08-30T03:30:01.128Z"
     },
     {
       "slug": "qlik-sense",
@@ -505,8 +505,8 @@
       "component_name": "QlikSenseReviewPage",
       "file_path": "QlikSenseReviewPage.tsx",
       "primary_keyword": "qlik sense review",
-      "word_count": 1856,
-      "generated_at": "2025-08-30T02:26:59.343Z"
+      "word_count": 1876,
+      "generated_at": "2025-08-30T03:30:01.128Z"
     },
     {
       "slug": "tableau-ai",
@@ -514,8 +514,8 @@
       "component_name": "TableauAiReviewPage",
       "file_path": "TableauAiReviewPage.tsx",
       "primary_keyword": "tableau ai review",
-      "word_count": 1868,
-      "generated_at": "2025-08-30T02:26:59.344Z"
+      "word_count": 1888,
+      "generated_at": "2025-08-30T03:30:01.129Z"
     },
     {
       "slug": "hubspot-ai",
@@ -523,8 +523,8 @@
       "component_name": "HubspotAiReviewPage",
       "file_path": "HubspotAiReviewPage.tsx",
       "primary_keyword": "hubspot ai review",
-      "word_count": 1820,
-      "generated_at": "2025-08-30T02:26:59.344Z"
+      "word_count": 1843,
+      "generated_at": "2025-08-30T03:30:01.129Z"
     },
     {
       "slug": "mailchimp-ai",
@@ -532,8 +532,8 @@
       "component_name": "MailchimpAiReviewPage",
       "file_path": "MailchimpAiReviewPage.tsx",
       "primary_keyword": "mailchimp ai review",
-      "word_count": 1816,
-      "generated_at": "2025-08-30T02:26:59.344Z"
+      "word_count": 1839,
+      "generated_at": "2025-08-30T03:30:01.130Z"
     },
     {
       "slug": "adobe-firefly",
@@ -541,8 +541,8 @@
       "component_name": "AdobeFireflyReviewPage",
       "file_path": "AdobeFireflyReviewPage.tsx",
       "primary_keyword": "adobe firefly review",
-      "word_count": 1784,
-      "generated_at": "2025-08-30T02:26:59.345Z"
+      "word_count": 1806,
+      "generated_at": "2025-08-30T03:30:01.130Z"
     },
     {
       "slug": "canva-ai",
@@ -550,8 +550,8 @@
       "component_name": "CanvaAiReviewPage",
       "file_path": "CanvaAiReviewPage.tsx",
       "primary_keyword": "canva ai review",
-      "word_count": 1872,
-      "generated_at": "2025-08-30T02:26:59.345Z"
+      "word_count": 1893,
+      "generated_at": "2025-08-30T03:30:01.131Z"
     },
     {
       "slug": "leonardo-ai",
@@ -559,8 +559,8 @@
       "component_name": "LeonardoAiReviewPage",
       "file_path": "LeonardoAiReviewPage.tsx",
       "primary_keyword": "leonardo.ai review",
-      "word_count": 1801,
-      "generated_at": "2025-08-30T02:26:59.346Z"
+      "word_count": 1821,
+      "generated_at": "2025-08-30T03:30:01.131Z"
     },
     {
       "slug": "dall-e",
@@ -568,8 +568,8 @@
       "component_name": "DallEReviewPage",
       "file_path": "DallEReviewPage.tsx",
       "primary_keyword": "dall-e review",
-      "word_count": 1765,
-      "generated_at": "2025-08-30T02:26:59.347Z"
+      "word_count": 1785,
+      "generated_at": "2025-08-30T03:30:01.131Z"
     },
     {
       "slug": "replicate-ai",
@@ -577,8 +577,8 @@
       "component_name": "ReplicateAiReviewPage",
       "file_path": "ReplicateAiReviewPage.tsx",
       "primary_keyword": "replicate review",
-      "word_count": 1733,
-      "generated_at": "2025-08-30T02:26:59.347Z"
+      "word_count": 1752,
+      "generated_at": "2025-08-30T03:30:01.132Z"
     },
     {
       "slug": "midjourney",
@@ -586,8 +586,8 @@
       "component_name": "MidjourneyReviewPage",
       "file_path": "MidjourneyReviewPage.tsx",
       "primary_keyword": "midjourney v6 review",
-      "word_count": 1832,
-      "generated_at": "2025-08-30T02:26:59.347Z"
+      "word_count": 1855,
+      "generated_at": "2025-08-30T03:30:01.132Z"
     },
     {
       "slug": "stable-diffusion",
@@ -595,8 +595,8 @@
       "component_name": "StableDiffusionReviewPage",
       "file_path": "StableDiffusionReviewPage.tsx",
       "primary_keyword": "stable diffusion review",
-      "word_count": 1872,
-      "generated_at": "2025-08-30T02:26:59.348Z"
+      "word_count": 1894,
+      "generated_at": "2025-08-30T03:30:01.133Z"
     },
     {
       "slug": "stability-ai-stable-diffusion",
@@ -604,8 +604,8 @@
       "component_name": "StabilityAiStableDiffusionReviewPage",
       "file_path": "StabilityAiStableDiffusionReviewPage.tsx",
       "primary_keyword": "stable diffusion web review",
-      "word_count": 1839,
-      "generated_at": "2025-08-30T02:26:59.348Z"
+      "word_count": 1863,
+      "generated_at": "2025-08-30T03:30:01.133Z"
     },
     {
       "slug": "grammarly",
@@ -613,8 +613,8 @@
       "component_name": "GrammarlyReviewPage",
       "file_path": "GrammarlyReviewPage.tsx",
       "primary_keyword": "grammarly review",
-      "word_count": 1774,
-      "generated_at": "2025-08-30T02:26:59.349Z"
+      "word_count": 1793,
+      "generated_at": "2025-08-30T03:30:01.134Z"
     },
     {
       "slug": "microsoft-copilot",
@@ -622,8 +622,8 @@
       "component_name": "MicrosoftCopilotReviewPage",
       "file_path": "MicrosoftCopilotReviewPage.tsx",
       "primary_keyword": "microsoft copilot review",
-      "word_count": 1809,
-      "generated_at": "2025-08-30T02:26:59.349Z"
+      "word_count": 1830,
+      "generated_at": "2025-08-30T03:30:01.134Z"
     },
     {
       "slug": "zapier-ai",
@@ -631,8 +631,8 @@
       "component_name": "ZapierAiReviewPage",
       "file_path": "ZapierAiReviewPage.tsx",
       "primary_keyword": "zapier ai review",
-      "word_count": 1828,
-      "generated_at": "2025-08-30T02:26:59.350Z"
+      "word_count": 1848,
+      "generated_at": "2025-08-30T03:30:01.134Z"
     },
     {
       "slug": "trello-butler",
@@ -640,8 +640,8 @@
       "component_name": "TrelloButlerReviewPage",
       "file_path": "TrelloButlerReviewPage.tsx",
       "primary_keyword": "trello butler review",
-      "word_count": 1809,
-      "generated_at": "2025-08-30T02:26:59.350Z"
+      "word_count": 1830,
+      "generated_at": "2025-08-30T03:30:01.135Z"
     },
     {
       "slug": "notion-ai",
@@ -649,8 +649,8 @@
       "component_name": "NotionAiReviewPage",
       "file_path": "NotionAiReviewPage.tsx",
       "primary_keyword": "notion ai review",
-      "word_count": 1845,
-      "generated_at": "2025-08-30T02:26:59.350Z"
+      "word_count": 1866,
+      "generated_at": "2025-08-30T03:30:01.136Z"
     },
     {
       "slug": "elicit",
@@ -658,8 +658,8 @@
       "component_name": "ElicitReviewPage",
       "file_path": "ElicitReviewPage.tsx",
       "primary_keyword": "elicit review",
-      "word_count": 1792,
-      "generated_at": "2025-08-30T02:26:59.351Z"
+      "word_count": 1812,
+      "generated_at": "2025-08-30T03:30:01.136Z"
     },
     {
       "slug": "consensus",
@@ -667,8 +667,8 @@
       "component_name": "ConsensusReviewPage",
       "file_path": "ConsensusReviewPage.tsx",
       "primary_keyword": "consensus review",
-      "word_count": 1788,
-      "generated_at": "2025-08-30T02:26:59.351Z"
+      "word_count": 1808,
+      "generated_at": "2025-08-30T03:30:01.136Z"
     },
     {
       "slug": "chatpdf",
@@ -676,8 +676,8 @@
       "component_name": "ChatpdfReviewPage",
       "file_path": "ChatpdfReviewPage.tsx",
       "primary_keyword": "chatpdf review",
-      "word_count": 1804,
-      "generated_at": "2025-08-30T02:26:59.352Z"
+      "word_count": 1823,
+      "generated_at": "2025-08-30T03:30:01.137Z"
     },
     {
       "slug": "perplexity-ai",
@@ -685,8 +685,8 @@
       "component_name": "PerplexityAiReviewPage",
       "file_path": "PerplexityAiReviewPage.tsx",
       "primary_keyword": "perplexity ai review",
-      "word_count": 1891,
-      "generated_at": "2025-08-30T02:26:59.352Z"
+      "word_count": 1912,
+      "generated_at": "2025-08-30T03:30:01.137Z"
     },
     {
       "slug": "scite-ai",
@@ -694,8 +694,8 @@
       "component_name": "SciteAiReviewPage",
       "file_path": "SciteAiReviewPage.tsx",
       "primary_keyword": "scite.ai review",
-      "word_count": 1796,
-      "generated_at": "2025-08-30T02:26:59.352Z"
+      "word_count": 1815,
+      "generated_at": "2025-08-30T03:30:01.138Z"
     },
     {
       "slug": "ahrefs-ai",
@@ -703,8 +703,8 @@
       "component_name": "AhrefsAiReviewPage",
       "file_path": "AhrefsAiReviewPage.tsx",
       "primary_keyword": "ahrefs ai review",
-      "word_count": 1847,
-      "generated_at": "2025-08-30T02:26:59.353Z"
+      "word_count": 1868,
+      "generated_at": "2025-08-30T03:30:01.138Z"
     },
     {
       "slug": "frase",
@@ -712,8 +712,8 @@
       "component_name": "FraseReviewPage",
       "file_path": "FraseReviewPage.tsx",
       "primary_keyword": "frase review",
-      "word_count": 1780,
-      "generated_at": "2025-08-30T02:26:59.353Z"
+      "word_count": 1799,
+      "generated_at": "2025-08-30T03:30:01.138Z"
     },
     {
       "slug": "surfer-seo",
@@ -721,8 +721,8 @@
       "component_name": "SurferSeoReviewPage",
       "file_path": "SurferSeoReviewPage.tsx",
       "primary_keyword": "surfer seo review",
-      "word_count": 1839,
-      "generated_at": "2025-08-30T02:26:59.354Z"
+      "word_count": 1859,
+      "generated_at": "2025-08-30T03:30:01.139Z"
     },
     {
       "slug": "semrush-ai",
@@ -730,8 +730,8 @@
       "component_name": "SemrushAiReviewPage",
       "file_path": "SemrushAiReviewPage.tsx",
       "primary_keyword": "semrush ai review",
-      "word_count": 1835,
-      "generated_at": "2025-08-30T02:26:59.354Z"
+      "word_count": 1856,
+      "generated_at": "2025-08-30T03:30:01.139Z"
     },
     {
       "slug": "kapwing",
@@ -739,8 +739,8 @@
       "component_name": "KapwingReviewPage",
       "file_path": "KapwingReviewPage.tsx",
       "primary_keyword": "kapwing review",
-      "word_count": 1769,
-      "generated_at": "2025-08-30T02:26:59.355Z"
+      "word_count": 1788,
+      "generated_at": "2025-08-30T03:30:01.140Z"
     },
     {
       "slug": "buffer-ai",
@@ -748,8 +748,8 @@
       "component_name": "BufferAiReviewPage",
       "file_path": "BufferAiReviewPage.tsx",
       "primary_keyword": "buffer ai review",
-      "word_count": 1824,
-      "generated_at": "2025-08-30T02:26:59.355Z"
+      "word_count": 1845,
+      "generated_at": "2025-08-30T03:30:01.140Z"
     },
     {
       "slug": "hootsuite-ai",
@@ -757,8 +757,8 @@
       "component_name": "HootsuiteAiReviewPage",
       "file_path": "HootsuiteAiReviewPage.tsx",
       "primary_keyword": "hootsuite ai review",
-      "word_count": 1816,
-      "generated_at": "2025-08-30T02:26:59.355Z"
+      "word_count": 1837,
+      "generated_at": "2025-08-30T03:30:01.141Z"
     },
     {
       "slug": "pictory",
@@ -766,8 +766,8 @@
       "component_name": "PictoryReviewPage",
       "file_path": "PictoryReviewPage.tsx",
       "primary_keyword": "pictory review",
-      "word_count": 1777,
-      "generated_at": "2025-08-30T02:26:59.356Z"
+      "word_count": 1796,
+      "generated_at": "2025-08-30T03:30:01.141Z"
     },
     {
       "slug": "lumen5",
@@ -775,8 +775,8 @@
       "component_name": "Lumen5ReviewPage",
       "file_path": "Lumen5ReviewPage.tsx",
       "primary_keyword": "lumen5 review",
-      "word_count": 1773,
-      "generated_at": "2025-08-30T02:26:59.356Z"
+      "word_count": 1792,
+      "generated_at": "2025-08-30T03:30:01.141Z"
     },
     {
       "slug": "runway-ml",
@@ -784,8 +784,8 @@
       "component_name": "RunwayMlReviewPage",
       "file_path": "RunwayMlReviewPage.tsx",
       "primary_keyword": "runway ml review",
-      "word_count": 1864,
-      "generated_at": "2025-08-30T02:26:59.357Z"
+      "word_count": 1884,
+      "generated_at": "2025-08-30T03:30:01.142Z"
     },
     {
       "slug": "optmyzr",
@@ -793,8 +793,8 @@
       "component_name": "OptmyzrReviewPage",
       "file_path": "OptmyzrReviewPage.tsx",
       "primary_keyword": "optmyzr review",
-      "word_count": 1795,
-      "generated_at": "2025-08-30T02:26:59.357Z"
+      "word_count": 1815,
+      "generated_at": "2025-08-30T03:30:01.142Z"
     },
     {
       "slug": "synthesia",
@@ -802,8 +802,8 @@
       "component_name": "SynthesiaReviewPage",
       "file_path": "SynthesiaReviewPage.tsx",
       "primary_keyword": "synthesia review",
-      "word_count": 1821,
-      "generated_at": "2025-08-30T02:26:59.357Z"
+      "word_count": 1840,
+      "generated_at": "2025-08-30T03:30:01.143Z"
     },
     {
       "slug": "gemini",
@@ -811,8 +811,8 @@
       "component_name": "GeminiReviewPage",
       "file_path": "GeminiReviewPage.tsx",
       "primary_keyword": "gemini review",
-      "word_count": 1745,
-      "generated_at": "2025-08-30T02:26:59.358Z"
+      "word_count": 1754,
+      "generated_at": "2025-08-30T03:30:01.143Z"
     },
     {
       "slug": "adzooma",
@@ -820,8 +820,8 @@
       "component_name": "AdzoomaReviewPage",
       "file_path": "AdzoomaReviewPage.tsx",
       "primary_keyword": "adzooma review",
-      "word_count": 1783,
-      "generated_at": "2025-08-30T02:26:59.358Z"
+      "word_count": 1802,
+      "generated_at": "2025-08-30T03:30:01.144Z"
     },
     {
       "slug": "wordstream",
@@ -829,8 +829,8 @@
       "component_name": "WordstreamReviewPage",
       "file_path": "WordstreamReviewPage.tsx",
       "primary_keyword": "wordstream review",
-      "word_count": 1791,
-      "generated_at": "2025-08-30T02:26:59.359Z"
+      "word_count": 1810,
+      "generated_at": "2025-08-30T03:30:01.144Z"
     },
     {
       "slug": "adespresso",
@@ -838,8 +838,8 @@
       "component_name": "AdespressoReviewPage",
       "file_path": "AdespressoReviewPage.tsx",
       "primary_keyword": "adespresso review",
-      "word_count": 1783,
-      "generated_at": "2025-08-30T02:26:59.359Z"
+      "word_count": 1802,
+      "generated_at": "2025-08-30T03:30:01.144Z"
     },
     {
       "slug": "descript",
@@ -847,8 +847,8 @@
       "component_name": "DescriptReviewPage",
       "file_path": "DescriptReviewPage.tsx",
       "primary_keyword": "descript review",
-      "word_count": 1759,
-      "generated_at": "2025-08-30T02:26:59.359Z"
+      "word_count": 1777,
+      "generated_at": "2025-08-30T03:30:01.145Z"
     },
     {
       "slug": "resemble-ai",
@@ -856,8 +856,8 @@
       "component_name": "ResembleAiReviewPage",
       "file_path": "ResembleAiReviewPage.tsx",
       "primary_keyword": "resemble ai review",
-      "word_count": 1838,
-      "generated_at": "2025-08-30T02:26:59.360Z"
+      "word_count": 1858,
+      "generated_at": "2025-08-30T03:30:01.145Z"
     },
     {
       "slug": "marin-software",
@@ -865,8 +865,8 @@
       "component_name": "MarinSoftwareReviewPage",
       "file_path": "MarinSoftwareReviewPage.tsx",
       "primary_keyword": "marin software review",
-      "word_count": 1834,
-      "generated_at": "2025-08-30T02:26:59.360Z"
+      "word_count": 1855,
+      "generated_at": "2025-08-30T03:30:01.146Z"
     },
     {
       "slug": "ahrefs",
@@ -874,8 +874,8 @@
       "component_name": "AhrefsReviewPage",
       "file_path": "AhrefsReviewPage.tsx",
       "primary_keyword": "ahrefs review",
-      "word_count": 1748,
-      "generated_at": "2025-08-30T02:26:59.361Z"
+      "word_count": 1767,
+      "generated_at": "2025-08-30T03:30:01.146Z"
     },
     {
       "slug": "speechify",
@@ -883,8 +883,8 @@
       "component_name": "SpeechifyReviewPage",
       "file_path": "SpeechifyReviewPage.tsx",
       "primary_keyword": "speechify review",
-      "word_count": 1751,
-      "generated_at": "2025-08-30T02:26:59.361Z"
+      "word_count": 1769,
+      "generated_at": "2025-08-30T03:30:01.146Z"
     },
     {
       "slug": "replica-studios",
@@ -892,8 +892,8 @@
       "component_name": "ReplicaStudiosReviewPage",
       "file_path": "ReplicaStudiosReviewPage.tsx",
       "primary_keyword": "replica studios review",
-      "word_count": 1826,
-      "generated_at": "2025-08-30T02:26:59.361Z"
+      "word_count": 1846,
+      "generated_at": "2025-08-30T03:30:01.147Z"
     },
     {
       "slug": "moz-pro",
@@ -901,8 +901,8 @@
       "component_name": "MozProReviewPage",
       "file_path": "MozProReviewPage.tsx",
       "primary_keyword": "moz pro review",
-      "word_count": 1799,
-      "generated_at": "2025-08-30T02:26:59.362Z"
+      "word_count": 1820,
+      "generated_at": "2025-08-30T03:30:01.147Z"
     },
     {
       "slug": "semrush",
@@ -910,8 +910,8 @@
       "component_name": "SemrushReviewPage",
       "file_path": "SemrushReviewPage.tsx",
       "primary_keyword": "semrush review",
-      "word_count": 1740,
-      "generated_at": "2025-08-30T02:26:59.362Z"
+      "word_count": 1759,
+      "generated_at": "2025-08-30T03:30:01.148Z"
     },
     {
       "slug": "screaming-frog-seo-spider",
@@ -919,8 +919,8 @@
       "component_name": "ScreamingFrogSeoSpiderReviewPage",
       "file_path": "ScreamingFrogSeoSpiderReviewPage.tsx",
       "primary_keyword": "screaming frog seo spider review",
-      "word_count": 1909,
-      "generated_at": "2025-08-30T02:26:59.363Z"
+      "word_count": 1934,
+      "generated_at": "2025-08-30T03:30:01.148Z"
     },
     {
       "slug": "buffer",
@@ -928,8 +928,8 @@
       "component_name": "BufferReviewPage",
       "file_path": "BufferReviewPage.tsx",
       "primary_keyword": "buffer review",
-      "word_count": 1717,
-      "generated_at": "2025-08-30T02:26:59.363Z"
+      "word_count": 1736,
+      "generated_at": "2025-08-30T03:30:01.148Z"
     },
     {
       "slug": "sprout-social",
@@ -937,8 +937,8 @@
       "component_name": "SproutSocialReviewPage",
       "file_path": "SproutSocialReviewPage.tsx",
       "primary_keyword": "sprout social review",
-      "word_count": 1772,
-      "generated_at": "2025-08-30T02:26:59.364Z"
+      "word_count": 1792,
+      "generated_at": "2025-08-30T03:30:01.149Z"
     },
     {
       "slug": "hootsuite",
@@ -946,8 +946,8 @@
       "component_name": "HootsuiteReviewPage",
       "file_path": "HootsuiteReviewPage.tsx",
       "primary_keyword": "hootsuite review",
-      "word_count": 1717,
-      "generated_at": "2025-08-30T02:26:59.364Z"
+      "word_count": 1736,
+      "generated_at": "2025-08-30T03:30:01.149Z"
     },
     {
       "slug": "acquisio",
@@ -955,8 +955,8 @@
       "component_name": "AcquisioReviewPage",
       "file_path": "AcquisioReviewPage.tsx",
       "primary_keyword": "acquisio review",
-      "word_count": 1775,
-      "generated_at": "2025-08-30T02:26:59.364Z"
+      "word_count": 1795,
+      "generated_at": "2025-08-30T03:30:01.150Z"
     },
     {
       "slug": "later",
@@ -964,8 +964,8 @@
       "component_name": "LaterReviewPage",
       "file_path": "LaterReviewPage.tsx",
       "primary_keyword": "later review",
-      "word_count": 1717,
-      "generated_at": "2025-08-30T02:26:59.365Z"
+      "word_count": 1736,
+      "generated_at": "2025-08-30T03:30:01.150Z"
     },
     {
       "slug": "adalysis",
@@ -973,8 +973,8 @@
       "component_name": "AdalysisReviewPage",
       "file_path": "AdalysisReviewPage.tsx",
       "primary_keyword": "adalysis review",
-      "word_count": 1775,
-      "generated_at": "2025-08-30T02:26:59.365Z"
+      "word_count": 1794,
+      "generated_at": "2025-08-30T03:30:01.150Z"
     },
     {
       "slug": "deepgram",
@@ -982,8 +982,8 @@
       "component_name": "DeepgramReviewPage",
       "file_path": "DeepgramReviewPage.tsx",
       "primary_keyword": "deepgram review",
-      "word_count": 1771,
-      "generated_at": "2025-08-30T02:26:59.366Z"
+      "word_count": 1789,
+      "generated_at": "2025-08-30T03:30:01.151Z"
     },
     {
       "slug": "rev",
@@ -991,8 +991,8 @@
       "component_name": "RevReviewPage",
       "file_path": "RevReviewPage.tsx",
       "primary_keyword": "rev review",
-      "word_count": 1763,
-      "generated_at": "2025-08-30T02:26:59.366Z"
+      "word_count": 1781,
+      "generated_at": "2025-08-30T03:30:01.151Z"
     },
     {
       "slug": "speechmatics",
@@ -1000,8 +1000,8 @@
       "component_name": "SpeechmaticsReviewPage",
       "file_path": "SpeechmaticsReviewPage.tsx",
       "primary_keyword": "speechmatics review",
-      "word_count": 1775,
-      "generated_at": "2025-08-30T02:26:59.367Z"
+      "word_count": 1793,
+      "generated_at": "2025-08-30T03:30:01.151Z"
     },
     {
       "slug": "otterai",
@@ -1009,8 +1009,8 @@
       "component_name": "OtteraiReviewPage",
       "file_path": "OtteraiReviewPage.tsx",
       "primary_keyword": "otter.ai review",
-      "word_count": 1763,
-      "generated_at": "2025-08-30T02:26:59.367Z"
+      "word_count": 1781,
+      "generated_at": "2025-08-30T03:30:01.152Z"
     },
     {
       "slug": "windsurf",
@@ -1018,8 +1018,8 @@
       "component_name": "WindsurfReviewPage",
       "file_path": "WindsurfReviewPage.tsx",
       "primary_keyword": "windsurf review",
-      "word_count": 1769,
-      "generated_at": "2025-08-30T02:26:59.367Z"
+      "word_count": 1788,
+      "generated_at": "2025-08-30T03:30:01.152Z"
     },
     {
       "slug": "mailchimp",
@@ -1027,8 +1027,8 @@
       "component_name": "MailchimpReviewPage",
       "file_path": "MailchimpReviewPage.tsx",
       "primary_keyword": "mailchimp review",
-      "word_count": 1701,
-      "generated_at": "2025-08-30T02:26:59.368Z"
+      "word_count": 1722,
+      "generated_at": "2025-08-30T03:30:01.153Z"
     },
     {
       "slug": "flux",
@@ -1036,8 +1036,8 @@
       "component_name": "FluxReviewPage",
       "file_path": "FluxReviewPage.tsx",
       "primary_keyword": "flux review",
-      "word_count": 1797,
-      "generated_at": "2025-08-30T02:26:59.368Z"
+      "word_count": 1817,
+      "generated_at": "2025-08-30T03:30:01.153Z"
     },
     {
       "slug": "datarobot",
@@ -1045,8 +1045,8 @@
       "component_name": "DatarobotReviewPage",
       "file_path": "DatarobotReviewPage.tsx",
       "primary_keyword": "datarobot review",
-      "word_count": 1705,
-      "generated_at": "2025-08-30T02:26:59.369Z"
+      "word_count": 1723,
+      "generated_at": "2025-08-30T03:30:01.153Z"
     },
     {
       "slug": "runwayml",
@@ -1054,8 +1054,8 @@
       "component_name": "RunwaymlReviewPage",
       "file_path": "RunwaymlReviewPage.tsx",
       "primary_keyword": "runwayml review",
-      "word_count": 1705,
-      "generated_at": "2025-08-30T02:26:59.369Z"
+      "word_count": 1724,
+      "generated_at": "2025-08-30T03:30:01.154Z"
     },
     {
       "slug": "trace-ai",
@@ -1063,8 +1063,8 @@
       "component_name": "TraceAiReviewPage",
       "file_path": "TraceAiReviewPage.tsx",
       "primary_keyword": "trace ai review",
-      "word_count": 1741,
-      "generated_at": "2025-08-30T02:26:59.370Z"
+      "word_count": 1762,
+      "generated_at": "2025-08-30T03:30:01.154Z"
     },
     {
       "slug": "ux-pilot",
@@ -1072,8 +1072,8 @@
       "component_name": "UxPilotReviewPage",
       "file_path": "UxPilotReviewPage.tsx",
       "primary_keyword": "ux pilot review",
-      "word_count": 1733,
-      "generated_at": "2025-08-30T02:26:59.370Z"
+      "word_count": 1753,
+      "generated_at": "2025-08-30T03:30:01.154Z"
     },
     {
       "slug": "castmagic",
@@ -1081,8 +1081,8 @@
       "component_name": "CastmagicReviewPage",
       "file_path": "CastmagicReviewPage.tsx",
       "primary_keyword": "castmagic review",
-      "word_count": 1697,
-      "generated_at": "2025-08-30T02:26:59.371Z"
+      "word_count": 1717,
+      "generated_at": "2025-08-30T03:30:01.155Z"
     },
     {
       "slug": "paperpal",
@@ -1090,8 +1090,8 @@
       "component_name": "PaperpalReviewPage",
       "file_path": "PaperpalReviewPage.tsx",
       "primary_keyword": "paperpal review",
-      "word_count": 1697,
-      "generated_at": "2025-08-30T02:26:59.371Z"
+      "word_count": 1717,
+      "generated_at": "2025-08-30T03:30:01.155Z"
     },
     {
       "slug": "kleap-ai",
@@ -1099,8 +1099,8 @@
       "component_name": "KleapAiReviewPage",
       "file_path": "KleapAiReviewPage.tsx",
       "primary_keyword": "kleap review",
-      "word_count": 1701,
-      "generated_at": "2025-08-30T02:26:59.371Z"
+      "word_count": 1719,
+      "generated_at": "2025-08-30T03:30:01.156Z"
     },
     {
       "slug": "amazon-alexa",
@@ -1108,8 +1108,8 @@
       "component_name": "AmazonAlexaReviewPage",
       "file_path": "AmazonAlexaReviewPage.tsx",
       "primary_keyword": "amazon alexa review",
-      "word_count": 1792,
-      "generated_at": "2025-08-30T02:26:59.372Z"
+      "word_count": 1813,
+      "generated_at": "2025-08-30T03:30:01.156Z"
     },
     {
       "slug": "fireflies",
@@ -1117,8 +1117,8 @@
       "component_name": "FirefliesReviewPage",
       "file_path": "FirefliesReviewPage.tsx",
       "primary_keyword": "fireflies review",
-      "word_count": 1669,
-      "generated_at": "2025-08-30T02:26:59.372Z"
+      "word_count": 1688,
+      "generated_at": "2025-08-30T03:30:01.157Z"
     },
     {
       "slug": "motion",
@@ -1126,8 +1126,8 @@
       "component_name": "MotionReviewPage",
       "file_path": "MotionReviewPage.tsx",
       "primary_keyword": "motion review",
-      "word_count": 1701,
-      "generated_at": "2025-08-30T02:26:59.373Z"
+      "word_count": 1720,
+      "generated_at": "2025-08-30T03:30:01.157Z"
     },
     {
       "slug": "gumloop",
@@ -1135,8 +1135,8 @@
       "component_name": "GumloopReviewPage",
       "file_path": "GumloopReviewPage.tsx",
       "primary_keyword": "gumloop review",
-      "word_count": 1673,
-      "generated_at": "2025-08-30T02:26:59.373Z"
+      "word_count": 1692,
+      "generated_at": "2025-08-30T03:30:01.157Z"
     },
     {
       "slug": "manus",
@@ -1144,8 +1144,8 @@
       "component_name": "ManusReviewPage",
       "file_path": "ManusReviewPage.tsx",
       "primary_keyword": "manus review",
-      "word_count": 1685,
-      "generated_at": "2025-08-30T02:26:59.373Z"
+      "word_count": 1704,
+      "generated_at": "2025-08-30T03:30:01.158Z"
     },
     {
       "slug": "clickup",
@@ -1153,8 +1153,8 @@
       "component_name": "ClickupReviewPage",
       "file_path": "ClickupReviewPage.tsx",
       "primary_keyword": "clickup review",
-      "word_count": 1745,
-      "generated_at": "2025-08-30T02:26:59.374Z"
+      "word_count": 1764,
+      "generated_at": "2025-08-30T03:30:01.158Z"
     },
     {
       "slug": "ltx-studio",
@@ -1162,8 +1162,8 @@
       "component_name": "LtxStudioReviewPage",
       "file_path": "LtxStudioReviewPage.tsx",
       "primary_keyword": "ltx studio review",
-      "word_count": 1736,
-      "generated_at": "2025-08-30T02:26:59.374Z"
+      "word_count": 1757,
+      "generated_at": "2025-08-30T03:30:01.159Z"
     },
     {
       "slug": "dream-machine",
@@ -1171,8 +1171,8 @@
       "component_name": "DreamMachineReviewPage",
       "file_path": "DreamMachineReviewPage.tsx",
       "primary_keyword": "dream machine review",
-      "word_count": 1744,
-      "generated_at": "2025-08-30T02:26:59.374Z"
+      "word_count": 1765,
+      "generated_at": "2025-08-30T03:30:01.159Z"
     },
     {
       "slug": "jamie-ai",
@@ -1180,8 +1180,8 @@
       "component_name": "JamieAiReviewPage",
       "file_path": "JamieAiReviewPage.tsx",
       "primary_keyword": "jamie ai review",
-      "word_count": 1805,
-      "generated_at": "2025-08-30T02:26:59.375Z"
+      "word_count": 1826,
+      "generated_at": "2025-08-30T03:30:01.159Z"
     },
     {
       "slug": "meet-geek",
@@ -1189,8 +1189,8 @@
       "component_name": "MeetGeekReviewPage",
       "file_path": "MeetGeekReviewPage.tsx",
       "primary_keyword": "meet geek review",
-      "word_count": 1713,
-      "generated_at": "2025-08-30T02:26:59.375Z"
+      "word_count": 1734,
+      "generated_at": "2025-08-30T03:30:01.160Z"
     },
     {
       "slug": "alpha-sense",
@@ -1198,8 +1198,8 @@
       "component_name": "AlphaSenseReviewPage",
       "file_path": "AlphaSenseReviewPage.tsx",
       "primary_keyword": "alpha sense review",
-      "word_count": 1783,
-      "generated_at": "2025-08-30T02:26:59.376Z"
+      "word_count": 1804,
+      "generated_at": "2025-08-30T03:30:01.161Z"
     },
     {
       "slug": "read-ai",
@@ -1207,8 +1207,8 @@
       "component_name": "ReadAiReviewPage",
       "file_path": "ReadAiReviewPage.tsx",
       "primary_keyword": "read ai review",
-      "word_count": 1761,
-      "generated_at": "2025-08-30T02:26:59.376Z"
+      "word_count": 1782,
+      "generated_at": "2025-08-30T03:30:01.161Z"
     },
     {
       "slug": "gwi",
@@ -1216,8 +1216,8 @@
       "component_name": "GwiReviewPage",
       "file_path": "GwiReviewPage.tsx",
       "primary_keyword": "gwi review",
-      "word_count": 1721,
-      "generated_at": "2025-08-30T02:26:59.376Z"
+      "word_count": 1741,
+      "generated_at": "2025-08-30T03:30:01.162Z"
     },
     {
       "slug": "blaze-ai",
@@ -1225,8 +1225,8 @@
       "component_name": "BlazeAiReviewPage",
       "file_path": "BlazeAiReviewPage.tsx",
       "primary_keyword": "blaze ai review",
-      "word_count": 1740,
-      "generated_at": "2025-08-30T02:26:59.377Z"
+      "word_count": 1762,
+      "generated_at": "2025-08-30T03:30:01.162Z"
     },
     {
       "slug": "research-pal",
@@ -1234,8 +1234,8 @@
       "component_name": "ResearchPalReviewPage",
       "file_path": "ResearchPalReviewPage.tsx",
       "primary_keyword": "research pal review",
-      "word_count": 1803,
-      "generated_at": "2025-08-30T02:26:59.377Z"
+      "word_count": 1824,
+      "generated_at": "2025-08-30T03:30:01.162Z"
     },
     {
       "slug": "gong-io",
@@ -1243,8 +1243,8 @@
       "component_name": "GongIoReviewPage",
       "file_path": "GongIoReviewPage.tsx",
       "primary_keyword": "gong io review",
-      "word_count": 1798,
-      "generated_at": "2025-08-30T02:26:59.378Z"
+      "word_count": 1819,
+      "generated_at": "2025-08-30T03:30:01.163Z"
     },
     {
       "slug": "apify",
@@ -1252,8 +1252,8 @@
       "component_name": "ApifyReviewPage",
       "file_path": "ApifyReviewPage.tsx",
       "primary_keyword": "apify review",
-      "word_count": 1799,
-      "generated_at": "2025-08-30T02:26:59.378Z"
+      "word_count": 1818,
+      "generated_at": "2025-08-30T03:30:01.163Z"
     },
     {
       "slug": "ppc-io",
@@ -1261,8 +1261,8 @@
       "component_name": "PpcIoReviewPage",
       "file_path": "PpcIoReviewPage.tsx",
       "primary_keyword": "ppc io review",
-      "word_count": 1850,
-      "generated_at": "2025-08-30T02:26:59.378Z"
+      "word_count": 1871,
+      "generated_at": "2025-08-30T03:30:01.164Z"
     },
     {
       "slug": "flux-1",
@@ -1270,8 +1270,8 @@
       "component_name": "Flux1ReviewPage",
       "file_path": "Flux1ReviewPage.tsx",
       "primary_keyword": "flux 1 review",
-      "word_count": 1792,
-      "generated_at": "2025-08-30T02:26:59.379Z"
+      "word_count": 1814,
+      "generated_at": "2025-08-30T03:30:01.164Z"
     },
     {
       "slug": "reve-image",
@@ -1279,8 +1279,8 @@
       "component_name": "ReveImageReviewPage",
       "file_path": "ReveImageReviewPage.tsx",
       "primary_keyword": "reve image review",
-      "word_count": 1772,
-      "generated_at": "2025-08-30T02:26:59.380Z"
+      "word_count": 1794,
+      "generated_at": "2025-08-30T03:30:01.165Z"
     },
     {
       "slug": "ideogram",
@@ -1288,8 +1288,8 @@
       "component_name": "IdeogramReviewPage",
       "file_path": "IdeogramReviewPage.tsx",
       "primary_keyword": "ideogram review",
-      "word_count": 1669,
-      "generated_at": "2025-08-30T02:26:59.381Z"
+      "word_count": 1689,
+      "generated_at": "2025-08-30T03:30:01.165Z"
     },
     {
       "slug": "gemini-25",
@@ -1297,8 +1297,8 @@
       "component_name": "Gemini25ReviewPage",
       "file_path": "Gemini25ReviewPage.tsx",
       "primary_keyword": "gemini 2.5 review",
-      "word_count": 1744,
-      "generated_at": "2025-08-30T02:26:59.381Z"
+      "word_count": 1766,
+      "generated_at": "2025-08-30T03:30:01.166Z"
     }
   ]
 }

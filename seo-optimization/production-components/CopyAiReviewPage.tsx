@@ -260,10 +260,10 @@ export default function CopyAiReviewPage({ tool }: CopyAiReviewPageProps) {
                     rel="noopener noreferrer"
                     className="bg-gradient-to-r from-blue-600 to-purple-600 text-white hover:from-blue-700 hover:to-purple-700 font-bold py-4 px-8 rounded-lg transform hover:scale-105 transition-all duration-200 shadow-lg hover:shadow-xl text-center"
                   >
-                    Try Copy.ai Free
+                    Try Copy.ai Here
                   </a>
                   <Link
-                    href="/compare/copy-ai/vs/chatgpt"
+                    href="/compare"
                     className="border-2 border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-black font-bold py-4 px-8 rounded-lg transition-all duration-200 text-center"
                   >
                     Compare Alternatives
@@ -457,10 +457,26 @@ export default function CopyAiReviewPage({ tool }: CopyAiReviewPageProps) {
                 </div>
               </Link>
               
-              <Link href="/compare/copy-ai/vs/chatgpt" className="group">
+              <Link href="/compare/copy-ai/vs/jasper-ai" className="group">
                 <div className="bg-black border border-gray-800 rounded-xl p-6 hover:border-gray-600 transition-all">
                   <h3 className="text-xl font-semibold text-white mb-3 group-hover:text-cyan-400">
-                    Copy.ai vs ChatGPT
+                    Copy.ai vs Jasper Ai
+                  </h3>
+                  <p className="text-gray-300">Side-by-side comparison of features and pricing</p>
+                </div>
+              </Link>
+              <Link href="/compare/copy-ai/vs/writesonic" className="group">
+                <div className="bg-black border border-gray-800 rounded-xl p-6 hover:border-gray-600 transition-all">
+                  <h3 className="text-xl font-semibold text-white mb-3 group-hover:text-cyan-400">
+                    Copy.ai vs Writesonic
+                  </h3>
+                  <p className="text-gray-300">Side-by-side comparison of features and pricing</p>
+                </div>
+              </Link>
+              <Link href="/compare/copy-ai/vs/rytr" className="group">
+                <div className="bg-black border border-gray-800 rounded-xl p-6 hover:border-gray-600 transition-all">
+                  <h3 className="text-xl font-semibold text-white mb-3 group-hover:text-cyan-400">
+                    Copy.ai vs Rytr
                   </h3>
                   <p className="text-gray-300">Side-by-side comparison of features and pricing</p>
                 </div>

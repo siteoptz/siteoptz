@@ -260,10 +260,10 @@ export default function SproutSocialReviewPage({ tool }: SproutSocialReviewPageP
                     rel="noopener noreferrer"
                     className="bg-gradient-to-r from-blue-600 to-purple-600 text-white hover:from-blue-700 hover:to-purple-700 font-bold py-4 px-8 rounded-lg transform hover:scale-105 transition-all duration-200 shadow-lg hover:shadow-xl text-center"
                   >
-                    Try Sprout Social Free
+                    Try Sprout Social Here
                   </a>
                   <Link
-                    href="/compare/sprout-social/vs/chatgpt"
+                    href="/compare"
                     className="border-2 border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-black font-bold py-4 px-8 rounded-lg transition-all duration-200 text-center"
                   >
                     Compare Alternatives
@@ -457,10 +457,26 @@ export default function SproutSocialReviewPage({ tool }: SproutSocialReviewPageP
                 </div>
               </Link>
               
-              <Link href="/compare/sprout-social/vs/chatgpt" className="group">
+              <Link href="/compare/sprout-social/vs/buffer" className="group">
                 <div className="bg-black border border-gray-800 rounded-xl p-6 hover:border-gray-600 transition-all">
                   <h3 className="text-xl font-semibold text-white mb-3 group-hover:text-cyan-400">
-                    Sprout Social vs ChatGPT
+                    Sprout Social vs Buffer
+                  </h3>
+                  <p className="text-gray-300">Side-by-side comparison of features and pricing</p>
+                </div>
+              </Link>
+              <Link href="/compare/sprout-social/vs/hootsuite" className="group">
+                <div className="bg-black border border-gray-800 rounded-xl p-6 hover:border-gray-600 transition-all">
+                  <h3 className="text-xl font-semibold text-white mb-3 group-hover:text-cyan-400">
+                    Sprout Social vs Hootsuite
+                  </h3>
+                  <p className="text-gray-300">Side-by-side comparison of features and pricing</p>
+                </div>
+              </Link>
+              <Link href="/compare/sprout-social/vs/later" className="group">
+                <div className="bg-black border border-gray-800 rounded-xl p-6 hover:border-gray-600 transition-all">
+                  <h3 className="text-xl font-semibold text-white mb-3 group-hover:text-cyan-400">
+                    Sprout Social vs Later
                   </h3>
                   <p className="text-gray-300">Side-by-side comparison of features and pricing</p>
                 </div>
