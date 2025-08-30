@@ -84,6 +84,7 @@ const seoComponents: Record<string, () => Promise<{ default: ComponentType<SEOCo
   'jasper': () => import('../seo-optimization/production-components/JasperReviewPage'),
   'kapwing': () => import('../seo-optimization/production-components/KapwingReviewPage'),
   'kickresume': () => import('../seo-optimization/production-components/KickresumeReviewPage'),
+  'kleap': () => import('../seo-optimization/production-components/KleapAiReviewPage'),
   'kleap-ai': () => import('../seo-optimization/production-components/KleapAiReviewPage'),
   'lanta-ai': () => import('../seo-optimization/production-components/LantaAiReviewPage'),
   'later': () => import('../seo-optimization/production-components/LaterReviewPage'),
