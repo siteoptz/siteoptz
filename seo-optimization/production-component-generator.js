@@ -544,9 +544,9 @@ export default function ${componentName}({ tool }: ${componentName}Props) {
                 </div>
                 
                 {/* Hero Text Content */}
-                <div className="prose prose-lg prose-invert max-w-none mb-8">
-                  <div className="text-xl text-blue-100 leading-relaxed">
-                    ${heroSection.split('\n').slice(1).join('\n').replace(/# /g, '').replace(/\*\*/g, '')}
+                <div className="prose prose-lg prose-invert max-w-none mb-10">
+                  <div className="text-xl text-blue-100 leading-relaxed space-y-4">
+                    ${heroSection.split('\n').slice(1).join('\n').replace(/# /g, '').replace(/\*\*/g, '').split('\n\n').map(p => p.trim()).filter(p => p).map(p => `<p className="mb-4">${p}</p>`).join('\n                    ')}
                   </div>
                 </div>
 
@@ -645,7 +645,9 @@ export default function ${componentName}({ tool }: ${componentName}Props) {
                 </${section.heading.startsWith('##') ? 'h2' : 'h3'}>
                 
                 <div className="prose prose-lg prose-invert max-w-none">
-                  ${this.formatContentToHTML(section.content)}
+                  <div className="space-y-6">
+                    ${this.formatContentToHTML(section.content)}
+                  </div>
                 </div>
                 
                 ${index < images.feature_images.length ? `
@@ -770,19 +772,19 @@ export const getStaticProps: GetStaticProps = async () => {
   formatContentToHTML(content) {
     // First, handle list items by converting them to a temporary marker
     let processed = content
-      .replace(/###\s+(.+)/g, '<h3 className="text-xl font-semibold text-cyan-400 mb-4 mt-8">$1</h3>')
-      .replace(/\*\*(.+?)\*\*/g, '<strong className="text-white">$1</strong>')
+      .replace(/###\s+(.+)/g, '<h3 className="text-xl font-semibold text-cyan-400 mb-6 mt-10">$1</h3>')
+      .replace(/\*\*(.+?)\*\*/g, '<strong className="text-white font-semibold">$1</strong>')
       .replace(/^- (.+)$/gm, '{{LIST_ITEM}}$1{{/LIST_ITEM}}') // Use markers for list items
-      .replace(/\n\n/g, '</p><p className="text-gray-300 mb-4">')
-      .replace(/^\s*(.+)$/gm, '<p className="text-gray-300 mb-4">$1</p>')
-      .replace(/<p className="text-gray-300 mb-4"><\/p>/g, '');
+      .replace(/\n\n/g, '</p><p className="text-gray-300 mb-6 leading-relaxed text-lg">')
+      .replace(/^\s*(.+)$/gm, '<p className="text-gray-300 mb-6 leading-relaxed text-lg">$1</p>')
+      .replace(/<p className="text-gray-300 mb-6 leading-relaxed text-lg"><\/p>/g, '');
     
     // Now convert list item markers to proper HTML and wrap in ul
-    processed = processed.replace(/(<p className="text-gray-300 mb-4">)?{{LIST_ITEM}}(.+?){{\/LIST_ITEM}}(<\/p>)?/g, '<li className="text-gray-300 mb-2">$2</li>');
+    processed = processed.replace(/(<p className="text-gray-300 mb-6 leading-relaxed text-lg">)?{{LIST_ITEM}}(.+?){{\/LIST_ITEM}}(<\/p>)?/g, '<li className="text-gray-300 mb-3 leading-relaxed">$2</li>');
     
     // Group consecutive li elements and wrap them in ul
-    processed = processed.replace(/(<li className="text-gray-300 mb-2">.*?<\/li>\s*)+/gs, (match) => {
-      return `<ul className="list-disc list-inside mb-6 space-y-2">${match}</ul>`;
+    processed = processed.replace(/(<li className="text-gray-300 mb-3 leading-relaxed">.*?<\/li>\s*)+/gs, (match) => {
+      return `<ul className="list-disc list-inside mb-8 space-y-3 text-lg">${match}</ul>`;
     });
     
     return processed;
