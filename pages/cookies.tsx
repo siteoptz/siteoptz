@@ -1,4 +1,5 @@
 import React from 'react';
+import Link from 'next/link';
 import SEOHead from '../components/SEOHead';
 import { buildCanonicalUrl } from '../seo/meta-config';
 
@@ -38,7 +39,7 @@ export default function CookiePolicy() {
               <section>
                 <h2 className="text-2xl font-semibold text-white mb-4">1. Introduction</h2>
                 <p className="text-gray-300 leading-relaxed">
-                  This Cookie Policy explains how SiteOptz AI ("we", "us", or "our") uses cookies and similar technologies to recognize you when you visit our website at <a href="https://www.siteoptz.ai" className="text-cyan-400 hover:text-cyan-300">www.siteoptz.ai</a> ("Website"). It explains what these technologies are and why we use them, as well as your rights to control our use of them.
+                  This Cookie Policy explains how SiteOptz AI (&ldquo;we&rdquo;, &ldquo;us&rdquo;, or &ldquo;our&rdquo;) uses cookies and similar technologies to recognize you when you visit our website at <a href="https://www.siteoptz.ai" className="text-cyan-400 hover:text-cyan-300">www.siteoptz.ai</a> (&ldquo;Website&rdquo;). It explains what these technologies are and why we use them, as well as your rights to control our use of them.
                 </p>
               </section>
 
@@ -48,7 +49,7 @@ export default function CookiePolicy() {
                   Cookies are small data files that are placed on your computer or mobile device when you visit a website. Cookies are widely used by website owners in order to make their websites work, or to work more efficiently, as well as to provide reporting information.
                 </p>
                 <p className="text-gray-300 leading-relaxed">
-                  Cookies set by the website owner (in this case, SiteOptz) are called "first party cookies". Cookies set by parties other than the website owner are called "third party cookies". Third party cookies enable third party features or functionality to be provided on or through the website (e.g., advertising, interactive content, and analytics).
+                  Cookies set by the website owner (in this case, SiteOptz) are called &ldquo;first party cookies&rdquo;. Cookies set by parties other than the website owner are called &ldquo;third party cookies&rdquo;. Third party cookies enable third party features or functionality to be provided on or through the website (e.g., advertising, interactive content, and analytics).
                 </p>
               </section>
 
@@ -126,7 +127,7 @@ export default function CookiePolicy() {
                       <tr>
                         <td className="px-4 py-4 text-sm text-gray-300">selectedTool</td>
                         <td className="px-4 py-4 text-sm text-gray-300">SiteOptz</td>
-                        <td className="px-4 py-4 text-sm text-gray-300">Remembers user's tool selection</td>
+                        <td className="px-4 py-4 text-sm text-gray-300">Remembers user&apos;s tool selection</td>
                         <td className="px-4 py-4 text-sm text-gray-300">Functional</td>
                       </tr>
                       <tr>
@@ -196,25 +197,25 @@ export default function CookiePolicy() {
                     <strong className="text-white">SiteOptz AI</strong><br />
                     Email: <a href="mailto:privacy@siteoptz.ai" className="text-cyan-400 hover:text-cyan-300">privacy@siteoptz.ai</a><br />
                     Website: <a href="https://www.siteoptz.ai" className="text-cyan-400 hover:text-cyan-300">www.siteoptz.ai</a><br />
-                    Contact Form: <a href="/contact" className="text-cyan-400 hover:text-cyan-300">Contact Us</a>
+                    Contact Form: <Link href="/contact" className="text-cyan-400 hover:text-cyan-300">Contact Us</Link>
                   </p>
                 </div>
               </section>
 
               <section className="border-t border-gray-800 pt-8 mt-12">
                 <div className="flex flex-col sm:flex-row gap-4">
-                  <a 
+                  <Link 
                     href="/privacy" 
                     className="inline-flex items-center justify-center px-6 py-3 bg-gray-800 text-white rounded-lg hover:bg-gray-700 transition-colors"
                   >
                     View Privacy Policy
-                  </a>
-                  <a 
+                  </Link>
+                  <Link 
                     href="/terms" 
                     className="inline-flex items-center justify-center px-6 py-3 bg-gray-800 text-white rounded-lg hover:bg-gray-700 transition-colors"
                   >
                     View Terms of Service
-                  </a>
+                  </Link>
                 </div>
               </section>
             </div>
