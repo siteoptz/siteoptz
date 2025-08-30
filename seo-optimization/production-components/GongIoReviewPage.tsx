@@ -27,7 +27,7 @@ export default function GongIoReviewPage({ tool }: GongIoReviewPageProps) {
     "itemReviewed": {
       "@type": "SoftwareApplication",
       "name": "GONG IO",
-      "description": "!(https://www.gong.io/marketing-assets/background/squig-02.gif)The \1 AI Platform for Revenue Teams!(https://www.gong.io/marketing-assets/background/squig-01.gif)",
+      "description": "AI-powered revenue intelligence platform for sales teams",
       "applicationCategory": "Paid Search & PPC",
       "url": "",
       "operatingSystem": "Web, iOS, Android"
