@@ -1,0 +1,178 @@
+// Mapping between tool slugs and SEO-optimized component file names
+// This maps tool slugs to their corresponding SEO component files
+
+import { lazy, ComponentType } from 'react';
+
+// Define the interface for SEO component props
+export interface SEOComponentProps {
+  tool: {
+    name: string;
+    category: string;
+    description: string;
+    website: string;
+    rating: number;
+    slug: string;
+  };
+}
+
+// Lazy load components to improve performance
+const seoComponents: Record<string, () => Promise<{ default: ComponentType<SEOComponentProps> }>> = {
+  'acquisio': () => import('../seo-optimization/production-components/AcquisioReviewPage'),
+  'adalysis': () => import('../seo-optimization/production-components/AdalysisReviewPage'),
+  'adcreative-ai': () => import('../seo-optimization/production-components/AdcreativeAiReviewPage'),
+  'adespresso': () => import('../seo-optimization/production-components/AdespressoReviewPage'),
+  'adobe-firefly': () => import('../seo-optimization/production-components/AdobeFireflyReviewPage'),
+  'adzooma': () => import('../seo-optimization/production-components/AdzoomaReviewPage'),
+  'ahrefs-ai': () => import('../seo-optimization/production-components/AhrefsAiReviewPage'),
+  'ahrefs': () => import('../seo-optimization/production-components/AhrefsReviewPage'),
+  'airops': () => import('../seo-optimization/production-components/AiropsReviewPage'),
+  'alpha-sense': () => import('../seo-optimization/production-components/AlphaSenseReviewPage'),
+  'amazon-alexa': () => import('../seo-optimization/production-components/AmazonAlexaReviewPage'),
+  'amazon-codewhisperer': () => import('../seo-optimization/production-components/AmazonCodewhispererReviewPage'),
+  'anthropic-chatgpt-alternative': () => import('../seo-optimization/production-components/AnthropicChatgptAlternativeReviewPage'),
+  'anthropic-claude': () => import('../seo-optimization/production-components/AnthropicClaudeReviewPage'),
+  'apify': () => import('../seo-optimization/production-components/ApifyReviewPage'),
+  'blaze-ai': () => import('../seo-optimization/production-components/BlazeAiReviewPage'),
+  'buffer-ai': () => import('../seo-optimization/production-components/BufferAiReviewPage'),
+  'buffer': () => import('../seo-optimization/production-components/BufferReviewPage'),
+  'canva-ai': () => import('../seo-optimization/production-components/CanvaAiReviewPage'),
+  'castmagic': () => import('../seo-optimization/production-components/CastmagicReviewPage'),
+  'chatgpt-enterprise': () => import('../seo-optimization/production-components/ChatgptEnterpriseReviewPage'),
+  'chatgpt': () => import('../seo-optimization/production-components/ChatgptReviewPage'),
+  'chatpdf': () => import('../seo-optimization/production-components/ChatpdfReviewPage'),
+  'claude': () => import('../seo-optimization/production-components/ClaudeReviewPage'),
+  'clickup': () => import('../seo-optimization/production-components/ClickupReviewPage'),
+  'clockwise': () => import('../seo-optimization/production-components/ClockwiseReviewPage'),
+  'cohere-ai': () => import('../seo-optimization/production-components/CohereAiReviewPage'),
+  'consensus': () => import('../seo-optimization/production-components/ConsensusReviewPage'),
+  'copy-ai': () => import('../seo-optimization/production-components/CopyAiReviewPage'),
+  'cursor': () => import('../seo-optimization/production-components/CursorReviewPage'),
+  'dall-e': () => import('../seo-optimization/production-components/DallEReviewPage'),
+  'datarobot': () => import('../seo-optimization/production-components/DatarobotReviewPage'),
+  'deep-research': () => import('../seo-optimization/production-components/DeepResearchReviewPage'),
+  'deepgram': () => import('../seo-optimization/production-components/DeepgramReviewPage'),
+  'descript': () => import('../seo-optimization/production-components/DescriptReviewPage'),
+  'dream-machine': () => import('../seo-optimization/production-components/DreamMachineReviewPage'),
+  'elevenlabs': () => import('../seo-optimization/production-components/ElevenlabsReviewPage'),
+  'elicit': () => import('../seo-optimization/production-components/ElicitReviewPage'),
+  'explee-ai': () => import('../seo-optimization/production-components/ExpleeAiReviewPage'),
+  'fathom': () => import('../seo-optimization/production-components/FathomReviewPage'),
+  'fireflies': () => import('../seo-optimization/production-components/FirefliesReviewPage'),
+  'flux-1': () => import('../seo-optimization/production-components/Flux1ReviewPage'),
+  'flux': () => import('../seo-optimization/production-components/FluxReviewPage'),
+  'frase': () => import('../seo-optimization/production-components/FraseReviewPage'),
+  'fyxer': () => import('../seo-optimization/production-components/FyxerReviewPage'),
+  'gamma': () => import('../seo-optimization/production-components/GammaReviewPage'),
+  'gemini-25': () => import('../seo-optimization/production-components/Gemini25ReviewPage'),
+  'gemini': () => import('../seo-optimization/production-components/GeminiReviewPage'),
+  'github-copilot': () => import('../seo-optimization/production-components/GithubCopilotReviewPage'),
+  'gong-io': () => import('../seo-optimization/production-components/GongIoReviewPage'),
+  'google-search': () => import('../seo-optimization/production-components/GoogleSearchReviewPage'),
+  'grammarly': () => import('../seo-optimization/production-components/GrammarlyReviewPage'),
+  'grok': () => import('../seo-optimization/production-components/GrokReviewPage'),
+  'gumloop': () => import('../seo-optimization/production-components/GumloopReviewPage'),
+  'guru': () => import('../seo-optimization/production-components/GuruReviewPage'),
+  'gwi': () => import('../seo-optimization/production-components/GwiReviewPage'),
+  'hootsuite-ai': () => import('../seo-optimization/production-components/HootsuiteAiReviewPage'),
+  'hootsuite': () => import('../seo-optimization/production-components/HootsuiteReviewPage'),
+  'hubspot-ai': () => import('../seo-optimization/production-components/HubspotAiReviewPage'),
+  'hubspot-email-marketing-tools': () => import('../seo-optimization/production-components/HubspotEmailMarketingToolsReviewPage'),
+  'huggingface-transformers': () => import('../seo-optimization/production-components/HuggingfaceTransformersReviewPage'),
+  'ideogram': () => import('../seo-optimization/production-components/IdeogramReviewPage'),
+  'jamie-ai': () => import('../seo-optimization/production-components/JamieAiReviewPage'),
+  'jasper-ai': () => import('../seo-optimization/production-components/JasperAiReviewPage'),
+  'jasper': () => import('../seo-optimization/production-components/JasperReviewPage'),
+  'kapwing': () => import('../seo-optimization/production-components/KapwingReviewPage'),
+  'kickresume': () => import('../seo-optimization/production-components/KickresumeReviewPage'),
+  'kleap-ai': () => import('../seo-optimization/production-components/KleapAiReviewPage'),
+  'lanta-ai': () => import('../seo-optimization/production-components/LantaAiReviewPage'),
+  'later': () => import('../seo-optimization/production-components/LaterReviewPage'),
+  'leonardo-ai': () => import('../seo-optimization/production-components/LeonardoAiReviewPage'),
+  'lockedin-ai': () => import('../seo-optimization/production-components/LockedinAiReviewPage'),
+  'looka': () => import('../seo-optimization/production-components/LookaReviewPage'),
+  'looker': () => import('../seo-optimization/production-components/LookerReviewPage'),
+  'lovable': () => import('../seo-optimization/production-components/LovableReviewPage'),
+  'ltx-studio': () => import('../seo-optimization/production-components/LtxStudioReviewPage'),
+  'lumen5': () => import('../seo-optimization/production-components/Lumen5ReviewPage'),
+  'macaron-ai': () => import('../seo-optimization/production-components/MacaronAiReviewPage'),
+  'mailchimp-ai': () => import('../seo-optimization/production-components/MailchimpAiReviewPage'),
+  'mailchimp': () => import('../seo-optimization/production-components/MailchimpReviewPage'),
+  'make': () => import('../seo-optimization/production-components/MakeReviewPage'),
+  'manus': () => import('../seo-optimization/production-components/ManusReviewPage'),
+  'marin-software': () => import('../seo-optimization/production-components/MarinSoftwareReviewPage'),
+  'meet-geek': () => import('../seo-optimization/production-components/MeetGeekReviewPage'),
+  'microsoft-copilot': () => import('../seo-optimization/production-components/MicrosoftCopilotReviewPage'),
+  'microsoft-powerpoint': () => import('../seo-optimization/production-components/MicrosoftPowerpointReviewPage'),
+  'midjourney': () => import('../seo-optimization/production-components/MidjourneyReviewPage'),
+  'motion': () => import('../seo-optimization/production-components/MotionReviewPage'),
+  'moz-pro': () => import('../seo-optimization/production-components/MozProReviewPage'),
+  'murph-ai': () => import('../seo-optimization/production-components/MurphAiReviewPage'),
+  'n8n': () => import('../seo-optimization/production-components/N8nReviewPage'),
+  'notion-ai': () => import('../seo-optimization/production-components/NotionAiReviewPage'),
+  'nyota': () => import('../seo-optimization/production-components/NyotaReviewPage'),
+  'openai-gpt4': () => import('../seo-optimization/production-components/OpenaiGpt4ReviewPage'),
+  'optmyzr': () => import('../seo-optimization/production-components/OptmyzrReviewPage'),
+  'otterai': () => import('../seo-optimization/production-components/OtteraiReviewPage'),
+  'paperpal': () => import('../seo-optimization/production-components/PaperpalReviewPage'),
+  'perplexity-ai': () => import('../seo-optimization/production-components/PerplexityAiReviewPage'),
+  'pictory': () => import('../seo-optimization/production-components/PictoryReviewPage'),
+  'play-ht': () => import('../seo-optimization/production-components/PlayHtReviewPage'),
+  'power-bi': () => import('../seo-optimization/production-components/PowerBiReviewPage'),
+  'ppc-io': () => import('../seo-optimization/production-components/PpcIoReviewPage'),
+  'qlik-sense': () => import('../seo-optimization/production-components/QlikSenseReviewPage'),
+  'read-ai': () => import('../seo-optimization/production-components/ReadAiReviewPage'),
+  'reclaim-ai': () => import('../seo-optimization/production-components/ReclaimAiReviewPage'),
+  'replica-studios': () => import('../seo-optimization/production-components/ReplicaStudiosReviewPage'),
+  'replicate-ai': () => import('../seo-optimization/production-components/ReplicateAiReviewPage'),
+  'replit-ghost': () => import('../seo-optimization/production-components/ReplitGhostReviewPage'),
+  'research-pal': () => import('../seo-optimization/production-components/ResearchPalReviewPage'),
+  'resemble-ai': () => import('../seo-optimization/production-components/ResembleAiReviewPage'),
+  'rev': () => import('../seo-optimization/production-components/RevReviewPage'),
+  'reve-image': () => import('../seo-optimization/production-components/ReveImageReviewPage'),
+  'runway-ml': () => import('../seo-optimization/production-components/RunwayMlReviewPage'),
+  'rytr': () => import('../seo-optimization/production-components/RytrReviewPage'),
+  'scite-ai': () => import('../seo-optimization/production-components/SciteAiReviewPage'),
+  'screaming-frog-seo-spider': () => import('../seo-optimization/production-components/ScreamingFrogSeoSpiderReviewPage'),
+  'semrush-ai': () => import('../seo-optimization/production-components/SemrushAiReviewPage'),
+  'semrush': () => import('../seo-optimization/production-components/SemrushReviewPage'),
+  'shortwave': () => import('../seo-optimization/production-components/ShortwaveReviewPage'),
+  'speechify': () => import('../seo-optimization/production-components/SpeechifyReviewPage'),
+  'speechmatics': () => import('../seo-optimization/production-components/SpeechmaticsReviewPage'),
+  'sprout-social': () => import('../seo-optimization/production-components/SproutSocialReviewPage'),
+  'stability-ai-stable-diffusion': () => import('../seo-optimization/production-components/StabilityAiStableDiffusionReviewPage'),
+  'stable-diffusion': () => import('../seo-optimization/production-components/StableDiffusionReviewPage'),
+  'sudowrite': () => import('../seo-optimization/production-components/SudowriteReviewPage'),
+  'suno': () => import('../seo-optimization/production-components/SunoReviewPage'),
+  'surfer-seo': () => import('../seo-optimization/production-components/SurferSeoReviewPage'),
+  'synthesia': () => import('../seo-optimization/production-components/SynthesiaReviewPage'),
+  'synthesys': () => import('../seo-optimization/production-components/SynthesysReviewPage'),
+  'tableau-ai': () => import('../seo-optimization/production-components/TableauAiReviewPage'),
+  'tabnine': () => import('../seo-optimization/production-components/TabnineReviewPage'),
+  'teal': () => import('../seo-optimization/production-components/TealReviewPage'),
+  'trace-ai': () => import('../seo-optimization/production-components/TraceAiReviewPage'),
+  'trello-butler': () => import('../seo-optimization/production-components/TrelloButlerReviewPage'),
+  'udio': () => import('../seo-optimization/production-components/UdioReviewPage'),
+  'ux-pilot': () => import('../seo-optimization/production-components/UxPilotReviewPage'),
+  'veo': () => import('../seo-optimization/production-components/VeoReviewPage'),
+  'videotube-ai': () => import('../seo-optimization/production-components/VideotubeAiReviewPage'),
+  'wellsaid-labs': () => import('../seo-optimization/production-components/WellsaidLabsReviewPage'),
+  'windsurf': () => import('../seo-optimization/production-components/WindsurfReviewPage'),
+  'wordstream': () => import('../seo-optimization/production-components/WordstreamReviewPage'),
+  'writesonic': () => import('../seo-optimization/production-components/WritesonicReviewPage'),
+  'zapier-ai': () => import('../seo-optimization/production-components/ZapierAiReviewPage'),
+};
+
+// Check if a SEO-optimized component exists for a given slug
+export function hasSEOComponent(slug: string): boolean {
+  return slug in seoComponents;
+}
+
+// Get the SEO component for a given slug
+export function getSEOComponent(slug: string) {
+  return seoComponents[slug];
+}
+
+// Get all available SEO component slugs
+export function getAllSEOComponentSlugs(): string[] {
+  return Object.keys(seoComponents);
+}

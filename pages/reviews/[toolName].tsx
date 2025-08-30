@@ -5,6 +5,8 @@ import Image from 'next/image';
 import Link from 'next/link';
 import FAQSection from '../../components/comparison/FAQSection';
 import ToolLogo from '../../components/ToolLogo';
+import { hasSEOComponent, getSEOComponent } from '../../utils/seoComponentMapping';
+import dynamic from 'next/dynamic';
 
 interface Tool {
   tool_name: string;
@@ -45,10 +47,30 @@ interface ReviewPageProps {
     toolASlug?: string;
     toolBSlug?: string;
   }>;
+  hasSEOVersion?: boolean;
+  seoData?: {
+    name: string;
+    category: string;
+    description: string;
+    website: string;
+    rating: number;
+    slug: string;
+  };
 }
 
-export default function ReviewPage({ tool, pageTitle, slug, relatedTools, relatedComparisons }: ReviewPageProps) {
+export default function ReviewPage({ tool, pageTitle, slug, relatedTools, relatedComparisons, hasSEOVersion, seoData }: ReviewPageProps) {
   const [activeTab, setActiveTab] = useState<'overview' | 'features' | 'pricing' | 'pros-cons'>('overview');
+
+  // If we have a SEO-optimized version, use it instead
+  if (hasSEOVersion && seoData && hasSEOComponent(slug)) {
+    const SEOComponent = dynamic(getSEOComponent(slug), {
+      loading: () => <div className="min-h-screen bg-black flex items-center justify-center">
+        <div className="text-white">Loading...</div>
+      </div>
+    });
+    
+    return <SEOComponent tool={seoData} />;
+  }
 
   // Generate optimized meta description (155-160 characters)
   const generateMetaDescription = (tool: Tool): string => {
@@ -726,6 +748,7 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
   const fs = require('fs');
   const path = require('path');
   const { loadUnifiedToolsData } = require('../../utils/unifiedDataAdapter');
+  const { hasSEOComponent } = require('../../utils/seoComponentMapping');
   
   const toolSlug = params?.toolName as string;
   const tools = loadUnifiedToolsData(fs, path);
@@ -784,13 +807,32 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
     }
   }
 
+  // Check if we have a SEO-optimized component for this tool
+  const hasOptimizedVersion = hasSEOComponent(toolSlug);
+  
+  // Prepare SEO data if available
+  let seoData = null;
+  if (hasOptimizedVersion) {
+    // Map tool data to SEO component format
+    seoData = {
+      name: tool.tool_name,
+      category: tool.category || 'AI Tools',
+      description: tool.description,
+      website: tool.official_url || '',
+      rating: tool.rating || 4.5,
+      slug: toolSlug
+    };
+  }
+
   return {
     props: {
       tool,
       pageTitle,
       slug,
       relatedTools: relatedTools.slice(0, 8),
-      relatedComparisons: relatedComparisons.slice(0, 12)
+      relatedComparisons: relatedComparisons.slice(0, 12),
+      hasSEOVersion: hasOptimizedVersion,
+      seoData
     }
   };
 };
