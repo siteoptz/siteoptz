@@ -30,8 +30,8 @@ class ProductionComponentGenerator {
 
   async loadOptimizedData() {
     try {
-      // Load the latest keywords and content data
-      const outputDir = path.join(process.cwd(), 'seo-optimization', 'output');
+      // Load the latest keywords and content data  
+      const outputDir = path.join(path.dirname(new URL(import.meta.url).pathname), 'output');
       const files = fs.readdirSync(outputDir).filter(f => f.startsWith('content-'));
       const latestFile = files.sort().reverse()[0];
       
