@@ -366,9 +366,9 @@ export default function LookaReviewPage({ tool }: LookaReviewPageProps) {
                 
                 <div className="mt-8">
                   <Image
-                    src="/images/reviews/looka-looka-pricing.webp"
-                    alt="Looka pricing - detailed view"
-                    title="Looka looka pricing"
+                    src="/images/reviews/looka-features.webp"
+                    alt="Looka Key Features & Capabilities - detailed analysis and breakdown"
+                    title="Looka Key Features & Capabilities"
                     width={800}
                     height={450}
                     className="w-full h-auto rounded-lg"
@@ -402,9 +402,9 @@ export default function LookaReviewPage({ tool }: LookaReviewPageProps) {
                 
                 <div className="mt-8">
                   <Image
-                    src="/images/reviews/looka-looka-features.webp"
-                    alt="Looka features - detailed view"
-                    title="Looka looka features"
+                    src="/images/reviews/looka-pricing.webp"
+                    alt="Looka Pricing Plans & Options - detailed analysis and breakdown"
+                    title="Looka Pricing Plans & Options"
                     width={800}
                     height={450}
                     className="w-full h-auto rounded-lg"
@@ -433,9 +433,9 @@ export default function LookaReviewPage({ tool }: LookaReviewPageProps) {
                 
                 <div className="mt-8">
                   <Image
-                    src="/images/reviews/looka-looka-vs-competitors.webp"
-                    alt="Looka vs competitors - detailed view"
-                    title="Looka looka vs competitors"
+                    src="/images/reviews/looka-use-cases.webp"
+                    alt="Looka Use Cases & Applications - detailed analysis and breakdown"
+                    title="Looka Use Cases & Applications"
                     width={800}
                     height={450}
                     className="w-full h-auto rounded-lg"
@@ -467,6 +467,17 @@ export default function LookaReviewPage({ tool }: LookaReviewPageProps) {
                   </div>
                 </div>
                 
+                
+                <div className="mt-8">
+                  <Image
+                    src="/images/reviews/looka-overview.webp"
+                    alt="Looka Pros and Cons: Honest Assessment - detailed analysis and breakdown"
+                    title="Looka Pros and Cons: Honest Assessment"
+                    width={800}
+                    height={450}
+                    className="w-full h-auto rounded-lg"
+                  />
+                </div>
                 
               </div>
             </div>

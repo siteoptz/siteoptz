@@ -366,9 +366,9 @@ export default function HootsuiteReviewPage({ tool }: HootsuiteReviewPageProps) 
                 
                 <div className="mt-8">
                   <Image
-                    src="/images/reviews/hootsuite-hootsuite-pricing.webp"
-                    alt="Hootsuite pricing - detailed view"
-                    title="Hootsuite hootsuite pricing"
+                    src="/images/reviews/hootsuite-features.webp"
+                    alt="Hootsuite Key Features & Capabilities - detailed analysis and breakdown"
+                    title="Hootsuite Key Features & Capabilities"
                     width={800}
                     height={450}
                     className="w-full h-auto rounded-lg"
@@ -402,9 +402,9 @@ export default function HootsuiteReviewPage({ tool }: HootsuiteReviewPageProps) 
                 
                 <div className="mt-8">
                   <Image
-                    src="/images/reviews/hootsuite-hootsuite-features.webp"
-                    alt="Hootsuite features - detailed view"
-                    title="Hootsuite hootsuite features"
+                    src="/images/reviews/hootsuite-pricing.webp"
+                    alt="Hootsuite Pricing Plans & Options - detailed analysis and breakdown"
+                    title="Hootsuite Pricing Plans & Options"
                     width={800}
                     height={450}
                     className="w-full h-auto rounded-lg"
@@ -433,9 +433,9 @@ export default function HootsuiteReviewPage({ tool }: HootsuiteReviewPageProps) 
                 
                 <div className="mt-8">
                   <Image
-                    src="/images/reviews/hootsuite-hootsuite-vs-competitors.webp"
-                    alt="Hootsuite vs competitors - detailed view"
-                    title="Hootsuite hootsuite vs competitors"
+                    src="/images/reviews/hootsuite-use-cases.webp"
+                    alt="Hootsuite Use Cases & Applications - detailed analysis and breakdown"
+                    title="Hootsuite Use Cases & Applications"
                     width={800}
                     height={450}
                     className="w-full h-auto rounded-lg"
@@ -467,6 +467,17 @@ export default function HootsuiteReviewPage({ tool }: HootsuiteReviewPageProps) 
                   </div>
                 </div>
                 
+                
+                <div className="mt-8">
+                  <Image
+                    src="/images/reviews/hootsuite-overview.webp"
+                    alt="Hootsuite Pros and Cons: Honest Assessment - detailed analysis and breakdown"
+                    title="Hootsuite Pros and Cons: Honest Assessment"
+                    width={800}
+                    height={450}
+                    className="w-full h-auto rounded-lg"
+                  />
+                </div>
                 
               </div>
             </div>

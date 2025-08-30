@@ -366,9 +366,9 @@ export default function GrammarlyReviewPage({ tool }: GrammarlyReviewPageProps) 
                 
                 <div className="mt-8">
                   <Image
-                    src="/images/reviews/grammarly-grammarly-pricing.webp"
-                    alt="Grammarly pricing - detailed view"
-                    title="Grammarly grammarly pricing"
+                    src="/images/reviews/grammarly-features.webp"
+                    alt="Grammarly Key Features & Capabilities - detailed analysis and breakdown"
+                    title="Grammarly Key Features & Capabilities"
                     width={800}
                     height={450}
                     className="w-full h-auto rounded-lg"
@@ -402,9 +402,9 @@ export default function GrammarlyReviewPage({ tool }: GrammarlyReviewPageProps) 
                 
                 <div className="mt-8">
                   <Image
-                    src="/images/reviews/grammarly-grammarly-features.webp"
-                    alt="Grammarly features - detailed view"
-                    title="Grammarly grammarly features"
+                    src="/images/reviews/grammarly-pricing.webp"
+                    alt="Grammarly Pricing Plans & Options - detailed analysis and breakdown"
+                    title="Grammarly Pricing Plans & Options"
                     width={800}
                     height={450}
                     className="w-full h-auto rounded-lg"
@@ -433,9 +433,9 @@ export default function GrammarlyReviewPage({ tool }: GrammarlyReviewPageProps) 
                 
                 <div className="mt-8">
                   <Image
-                    src="/images/reviews/grammarly-grammarly-vs-competitors.webp"
-                    alt="Grammarly vs competitors - detailed view"
-                    title="Grammarly grammarly vs competitors"
+                    src="/images/reviews/grammarly-use-cases.webp"
+                    alt="Grammarly Use Cases & Applications - detailed analysis and breakdown"
+                    title="Grammarly Use Cases & Applications"
                     width={800}
                     height={450}
                     className="w-full h-auto rounded-lg"
@@ -467,6 +467,17 @@ export default function GrammarlyReviewPage({ tool }: GrammarlyReviewPageProps) 
                   </div>
                 </div>
                 
+                
+                <div className="mt-8">
+                  <Image
+                    src="/images/reviews/grammarly-overview.webp"
+                    alt="Grammarly Pros and Cons: Honest Assessment - detailed analysis and breakdown"
+                    title="Grammarly Pros and Cons: Honest Assessment"
+                    width={800}
+                    height={450}
+                    className="w-full h-auto rounded-lg"
+                  />
+                </div>
                 
               </div>
             </div>

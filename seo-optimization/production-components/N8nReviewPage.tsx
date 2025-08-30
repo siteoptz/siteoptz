@@ -366,9 +366,9 @@ export default function N8nReviewPage({ tool }: N8nReviewPageProps) {
                 
                 <div className="mt-8">
                   <Image
-                    src="/images/reviews/n8n-n8n-pricing.webp"
-                    alt="n8n pricing - detailed view"
-                    title="n8n n8n pricing"
+                    src="/images/reviews/n8n-features.webp"
+                    alt="n8n Key Features & Capabilities - detailed analysis and breakdown"
+                    title="n8n Key Features & Capabilities"
                     width={800}
                     height={450}
                     className="w-full h-auto rounded-lg"
@@ -402,9 +402,9 @@ export default function N8nReviewPage({ tool }: N8nReviewPageProps) {
                 
                 <div className="mt-8">
                   <Image
-                    src="/images/reviews/n8n-n8n-features.webp"
-                    alt="n8n features - detailed view"
-                    title="n8n n8n features"
+                    src="/images/reviews/n8n-pricing.webp"
+                    alt="n8n Pricing Plans & Options - detailed analysis and breakdown"
+                    title="n8n Pricing Plans & Options"
                     width={800}
                     height={450}
                     className="w-full h-auto rounded-lg"
@@ -433,9 +433,9 @@ export default function N8nReviewPage({ tool }: N8nReviewPageProps) {
                 
                 <div className="mt-8">
                   <Image
-                    src="/images/reviews/n8n-n8n-vs-competitors.webp"
-                    alt="n8n vs competitors - detailed view"
-                    title="n8n n8n vs competitors"
+                    src="/images/reviews/n8n-use-cases.webp"
+                    alt="n8n Use Cases & Applications - detailed analysis and breakdown"
+                    title="n8n Use Cases & Applications"
                     width={800}
                     height={450}
                     className="w-full h-auto rounded-lg"
@@ -467,6 +467,17 @@ export default function N8nReviewPage({ tool }: N8nReviewPageProps) {
                   </div>
                 </div>
                 
+                
+                <div className="mt-8">
+                  <Image
+                    src="/images/reviews/n8n-overview.webp"
+                    alt="n8n Pros and Cons: Honest Assessment - detailed analysis and breakdown"
+                    title="n8n Pros and Cons: Honest Assessment"
+                    width={800}
+                    height={450}
+                    className="w-full h-auto rounded-lg"
+                  />
+                </div>
                 
               </div>
             </div>

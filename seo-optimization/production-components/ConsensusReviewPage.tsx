@@ -366,9 +366,9 @@ export default function ConsensusReviewPage({ tool }: ConsensusReviewPageProps) 
                 
                 <div className="mt-8">
                   <Image
-                    src="/images/reviews/consensus-consensus-pricing.webp"
-                    alt="Consensus pricing - detailed view"
-                    title="Consensus consensus pricing"
+                    src="/images/reviews/consensus-features.webp"
+                    alt="Consensus Key Features & Capabilities - detailed analysis and breakdown"
+                    title="Consensus Key Features & Capabilities"
                     width={800}
                     height={450}
                     className="w-full h-auto rounded-lg"
@@ -402,9 +402,9 @@ export default function ConsensusReviewPage({ tool }: ConsensusReviewPageProps) 
                 
                 <div className="mt-8">
                   <Image
-                    src="/images/reviews/consensus-consensus-features.webp"
-                    alt="Consensus features - detailed view"
-                    title="Consensus consensus features"
+                    src="/images/reviews/consensus-pricing.webp"
+                    alt="Consensus Pricing Plans & Options - detailed analysis and breakdown"
+                    title="Consensus Pricing Plans & Options"
                     width={800}
                     height={450}
                     className="w-full h-auto rounded-lg"
@@ -433,9 +433,9 @@ export default function ConsensusReviewPage({ tool }: ConsensusReviewPageProps) 
                 
                 <div className="mt-8">
                   <Image
-                    src="/images/reviews/consensus-consensus-vs-competitors.webp"
-                    alt="Consensus vs competitors - detailed view"
-                    title="Consensus consensus vs competitors"
+                    src="/images/reviews/consensus-use-cases.webp"
+                    alt="Consensus Use Cases & Applications - detailed analysis and breakdown"
+                    title="Consensus Use Cases & Applications"
                     width={800}
                     height={450}
                     className="w-full h-auto rounded-lg"
@@ -467,6 +467,17 @@ export default function ConsensusReviewPage({ tool }: ConsensusReviewPageProps) 
                   </div>
                 </div>
                 
+                
+                <div className="mt-8">
+                  <Image
+                    src="/images/reviews/consensus-overview.webp"
+                    alt="Consensus Pros and Cons: Honest Assessment - detailed analysis and breakdown"
+                    title="Consensus Pros and Cons: Honest Assessment"
+                    width={800}
+                    height={450}
+                    className="w-full h-auto rounded-lg"
+                  />
+                </div>
                 
               </div>
             </div>

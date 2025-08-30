@@ -366,9 +366,9 @@ export default function FluxReviewPage({ tool }: FluxReviewPageProps) {
                 
                 <div className="mt-8">
                   <Image
-                    src="/images/reviews/flux-flux-pricing.webp"
-                    alt="Flux pricing - detailed view"
-                    title="Flux flux pricing"
+                    src="/images/reviews/flux-features.webp"
+                    alt="Flux Key Features & Capabilities - detailed analysis and breakdown"
+                    title="Flux Key Features & Capabilities"
                     width={800}
                     height={450}
                     className="w-full h-auto rounded-lg"
@@ -402,9 +402,9 @@ export default function FluxReviewPage({ tool }: FluxReviewPageProps) {
                 
                 <div className="mt-8">
                   <Image
-                    src="/images/reviews/flux-flux-features.webp"
-                    alt="Flux features - detailed view"
-                    title="Flux flux features"
+                    src="/images/reviews/flux-pricing.webp"
+                    alt="Flux Pricing Plans & Options - detailed analysis and breakdown"
+                    title="Flux Pricing Plans & Options"
                     width={800}
                     height={450}
                     className="w-full h-auto rounded-lg"
@@ -433,9 +433,9 @@ export default function FluxReviewPage({ tool }: FluxReviewPageProps) {
                 
                 <div className="mt-8">
                   <Image
-                    src="/images/reviews/flux-flux-vs-competitors.webp"
-                    alt="Flux vs competitors - detailed view"
-                    title="Flux flux vs competitors"
+                    src="/images/reviews/flux-use-cases.webp"
+                    alt="Flux Use Cases & Applications - detailed analysis and breakdown"
+                    title="Flux Use Cases & Applications"
                     width={800}
                     height={450}
                     className="w-full h-auto rounded-lg"
@@ -467,6 +467,17 @@ export default function FluxReviewPage({ tool }: FluxReviewPageProps) {
                   </div>
                 </div>
                 
+                
+                <div className="mt-8">
+                  <Image
+                    src="/images/reviews/flux-overview.webp"
+                    alt="Flux Pros and Cons: Honest Assessment - detailed analysis and breakdown"
+                    title="Flux Pros and Cons: Honest Assessment"
+                    width={800}
+                    height={450}
+                    className="w-full h-auto rounded-lg"
+                  />
+                </div>
                 
               </div>
             </div>

@@ -366,9 +366,9 @@ export default function JamieAiReviewPage({ tool }: JamieAiReviewPageProps) {
                 
                 <div className="mt-8">
                   <Image
-                    src="/images/reviews/jamie-ai-jamie-ai-pricing.webp"
-                    alt="Jamie AI pricing - detailed view"
-                    title="Jamie AI jamie ai pricing"
+                    src="/images/reviews/jamie-ai-features.webp"
+                    alt="Jamie AI Key Features & Capabilities - detailed analysis and breakdown"
+                    title="Jamie AI Key Features & Capabilities"
                     width={800}
                     height={450}
                     className="w-full h-auto rounded-lg"
@@ -402,9 +402,9 @@ export default function JamieAiReviewPage({ tool }: JamieAiReviewPageProps) {
                 
                 <div className="mt-8">
                   <Image
-                    src="/images/reviews/jamie-ai-jamie-ai-features.webp"
-                    alt="Jamie AI features - detailed view"
-                    title="Jamie AI jamie ai features"
+                    src="/images/reviews/jamie-ai-pricing.webp"
+                    alt="Jamie AI Pricing Plans & Options - detailed analysis and breakdown"
+                    title="Jamie AI Pricing Plans & Options"
                     width={800}
                     height={450}
                     className="w-full h-auto rounded-lg"
@@ -433,9 +433,9 @@ export default function JamieAiReviewPage({ tool }: JamieAiReviewPageProps) {
                 
                 <div className="mt-8">
                   <Image
-                    src="/images/reviews/jamie-ai-jamie-ai-vs-competitors.webp"
-                    alt="Jamie AI vs competitors - detailed view"
-                    title="Jamie AI jamie ai vs competitors"
+                    src="/images/reviews/jamie-ai-use-cases.webp"
+                    alt="Jamie AI Use Cases & Applications - detailed analysis and breakdown"
+                    title="Jamie AI Use Cases & Applications"
                     width={800}
                     height={450}
                     className="w-full h-auto rounded-lg"
@@ -467,6 +467,17 @@ export default function JamieAiReviewPage({ tool }: JamieAiReviewPageProps) {
                   </div>
                 </div>
                 
+                
+                <div className="mt-8">
+                  <Image
+                    src="/images/reviews/jamie-ai-overview.webp"
+                    alt="Jamie AI Pros and Cons: Honest Assessment - detailed analysis and breakdown"
+                    title="Jamie AI Pros and Cons: Honest Assessment"
+                    width={800}
+                    height={450}
+                    className="w-full h-auto rounded-lg"
+                  />
+                </div>
                 
               </div>
             </div>

@@ -366,9 +366,9 @@ export default function GeminiReviewPage({ tool }: GeminiReviewPageProps) {
                 
                 <div className="mt-8">
                   <Image
-                    src="/images/reviews/gemini-gemini-pricing.webp"
-                    alt="Gemini pricing - detailed view"
-                    title="Gemini gemini pricing"
+                    src="/images/reviews/gemini-features.webp"
+                    alt="Gemini Key Features & Capabilities - detailed analysis and breakdown"
+                    title="Gemini Key Features & Capabilities"
                     width={800}
                     height={450}
                     className="w-full h-auto rounded-lg"
@@ -402,9 +402,9 @@ export default function GeminiReviewPage({ tool }: GeminiReviewPageProps) {
                 
                 <div className="mt-8">
                   <Image
-                    src="/images/reviews/gemini-gemini-features.webp"
-                    alt="Gemini features - detailed view"
-                    title="Gemini gemini features"
+                    src="/images/reviews/gemini-pricing.webp"
+                    alt="Gemini Pricing Plans & Options - detailed analysis and breakdown"
+                    title="Gemini Pricing Plans & Options"
                     width={800}
                     height={450}
                     className="w-full h-auto rounded-lg"
@@ -433,9 +433,9 @@ export default function GeminiReviewPage({ tool }: GeminiReviewPageProps) {
                 
                 <div className="mt-8">
                   <Image
-                    src="/images/reviews/gemini-gemini-vs-competitors.webp"
-                    alt="Gemini vs competitors - detailed view"
-                    title="Gemini gemini vs competitors"
+                    src="/images/reviews/gemini-use-cases.webp"
+                    alt="Gemini Use Cases & Applications - detailed analysis and breakdown"
+                    title="Gemini Use Cases & Applications"
                     width={800}
                     height={450}
                     className="w-full h-auto rounded-lg"
@@ -467,6 +467,17 @@ export default function GeminiReviewPage({ tool }: GeminiReviewPageProps) {
                   </div>
                 </div>
                 
+                
+                <div className="mt-8">
+                  <Image
+                    src="/images/reviews/gemini-overview.webp"
+                    alt="Gemini Pros and Cons: Honest Assessment - detailed analysis and breakdown"
+                    title="Gemini Pros and Cons: Honest Assessment"
+                    width={800}
+                    height={450}
+                    className="w-full h-auto rounded-lg"
+                  />
+                </div>
                 
               </div>
             </div>

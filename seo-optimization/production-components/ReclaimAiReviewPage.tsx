@@ -366,9 +366,9 @@ export default function ReclaimAiReviewPage({ tool }: ReclaimAiReviewPageProps) 
                 
                 <div className="mt-8">
                   <Image
-                    src="/images/reviews/reclaim-ai-reclaim.ai-pricing.webp"
-                    alt="Reclaim.ai pricing - detailed view"
-                    title="Reclaim.ai reclaim.ai pricing"
+                    src="/images/reviews/reclaim-ai-features.webp"
+                    alt="Reclaim.ai Key Features & Capabilities - detailed analysis and breakdown"
+                    title="Reclaim.ai Key Features & Capabilities"
                     width={800}
                     height={450}
                     className="w-full h-auto rounded-lg"
@@ -402,9 +402,9 @@ export default function ReclaimAiReviewPage({ tool }: ReclaimAiReviewPageProps) 
                 
                 <div className="mt-8">
                   <Image
-                    src="/images/reviews/reclaim-ai-reclaim.ai-features.webp"
-                    alt="Reclaim.ai features - detailed view"
-                    title="Reclaim.ai reclaim.ai features"
+                    src="/images/reviews/reclaim-ai-pricing.webp"
+                    alt="Reclaim.ai Pricing Plans & Options - detailed analysis and breakdown"
+                    title="Reclaim.ai Pricing Plans & Options"
                     width={800}
                     height={450}
                     className="w-full h-auto rounded-lg"
@@ -433,9 +433,9 @@ export default function ReclaimAiReviewPage({ tool }: ReclaimAiReviewPageProps) 
                 
                 <div className="mt-8">
                   <Image
-                    src="/images/reviews/reclaim-ai-reclaim.ai-vs-competitors.webp"
-                    alt="Reclaim.ai vs competitors - detailed view"
-                    title="Reclaim.ai reclaim.ai vs competitors"
+                    src="/images/reviews/reclaim-ai-use-cases.webp"
+                    alt="Reclaim.ai Use Cases & Applications - detailed analysis and breakdown"
+                    title="Reclaim.ai Use Cases & Applications"
                     width={800}
                     height={450}
                     className="w-full h-auto rounded-lg"
@@ -467,6 +467,17 @@ export default function ReclaimAiReviewPage({ tool }: ReclaimAiReviewPageProps) 
                   </div>
                 </div>
                 
+                
+                <div className="mt-8">
+                  <Image
+                    src="/images/reviews/reclaim-ai-overview.webp"
+                    alt="Reclaim.ai Pros and Cons: Honest Assessment - detailed analysis and breakdown"
+                    title="Reclaim.ai Pros and Cons: Honest Assessment"
+                    width={800}
+                    height={450}
+                    className="w-full h-auto rounded-lg"
+                  />
+                </div>
                 
               </div>
             </div>

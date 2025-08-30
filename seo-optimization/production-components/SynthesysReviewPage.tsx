@@ -366,9 +366,9 @@ export default function SynthesysReviewPage({ tool }: SynthesysReviewPageProps) 
                 
                 <div className="mt-8">
                   <Image
-                    src="/images/reviews/synthesys-synthesys-pricing.webp"
-                    alt="Synthesys pricing - detailed view"
-                    title="Synthesys synthesys pricing"
+                    src="/images/reviews/synthesys-features.webp"
+                    alt="Synthesys Key Features & Capabilities - detailed analysis and breakdown"
+                    title="Synthesys Key Features & Capabilities"
                     width={800}
                     height={450}
                     className="w-full h-auto rounded-lg"
@@ -402,9 +402,9 @@ export default function SynthesysReviewPage({ tool }: SynthesysReviewPageProps) 
                 
                 <div className="mt-8">
                   <Image
-                    src="/images/reviews/synthesys-synthesys-features.webp"
-                    alt="Synthesys features - detailed view"
-                    title="Synthesys synthesys features"
+                    src="/images/reviews/synthesys-pricing.webp"
+                    alt="Synthesys Pricing Plans & Options - detailed analysis and breakdown"
+                    title="Synthesys Pricing Plans & Options"
                     width={800}
                     height={450}
                     className="w-full h-auto rounded-lg"
@@ -433,9 +433,9 @@ export default function SynthesysReviewPage({ tool }: SynthesysReviewPageProps) 
                 
                 <div className="mt-8">
                   <Image
-                    src="/images/reviews/synthesys-synthesys-vs-competitors.webp"
-                    alt="Synthesys vs competitors - detailed view"
-                    title="Synthesys synthesys vs competitors"
+                    src="/images/reviews/synthesys-use-cases.webp"
+                    alt="Synthesys Use Cases & Applications - detailed analysis and breakdown"
+                    title="Synthesys Use Cases & Applications"
                     width={800}
                     height={450}
                     className="w-full h-auto rounded-lg"
@@ -467,6 +467,17 @@ export default function SynthesysReviewPage({ tool }: SynthesysReviewPageProps) 
                   </div>
                 </div>
                 
+                
+                <div className="mt-8">
+                  <Image
+                    src="/images/reviews/synthesys-overview.webp"
+                    alt="Synthesys Pros and Cons: Honest Assessment - detailed analysis and breakdown"
+                    title="Synthesys Pros and Cons: Honest Assessment"
+                    width={800}
+                    height={450}
+                    className="w-full h-auto rounded-lg"
+                  />
+                </div>
                 
               </div>
             </div>

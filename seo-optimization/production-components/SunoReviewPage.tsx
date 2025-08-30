@@ -366,9 +366,9 @@ export default function SunoReviewPage({ tool }: SunoReviewPageProps) {
                 
                 <div className="mt-8">
                   <Image
-                    src="/images/reviews/suno-suno-pricing.webp"
-                    alt="Suno pricing - detailed view"
-                    title="Suno suno pricing"
+                    src="/images/reviews/suno-features.webp"
+                    alt="Suno Key Features & Capabilities - detailed analysis and breakdown"
+                    title="Suno Key Features & Capabilities"
                     width={800}
                     height={450}
                     className="w-full h-auto rounded-lg"
@@ -402,9 +402,9 @@ export default function SunoReviewPage({ tool }: SunoReviewPageProps) {
                 
                 <div className="mt-8">
                   <Image
-                    src="/images/reviews/suno-suno-features.webp"
-                    alt="Suno features - detailed view"
-                    title="Suno suno features"
+                    src="/images/reviews/suno-pricing.webp"
+                    alt="Suno Pricing Plans & Options - detailed analysis and breakdown"
+                    title="Suno Pricing Plans & Options"
                     width={800}
                     height={450}
                     className="w-full h-auto rounded-lg"
@@ -433,9 +433,9 @@ export default function SunoReviewPage({ tool }: SunoReviewPageProps) {
                 
                 <div className="mt-8">
                   <Image
-                    src="/images/reviews/suno-suno-vs-competitors.webp"
-                    alt="Suno vs competitors - detailed view"
-                    title="Suno suno vs competitors"
+                    src="/images/reviews/suno-use-cases.webp"
+                    alt="Suno Use Cases & Applications - detailed analysis and breakdown"
+                    title="Suno Use Cases & Applications"
                     width={800}
                     height={450}
                     className="w-full h-auto rounded-lg"
@@ -467,6 +467,17 @@ export default function SunoReviewPage({ tool }: SunoReviewPageProps) {
                   </div>
                 </div>
                 
+                
+                <div className="mt-8">
+                  <Image
+                    src="/images/reviews/suno-overview.webp"
+                    alt="Suno Pros and Cons: Honest Assessment - detailed analysis and breakdown"
+                    title="Suno Pros and Cons: Honest Assessment"
+                    width={800}
+                    height={450}
+                    className="w-full h-auto rounded-lg"
+                  />
+                </div>
                 
               </div>
             </div>

@@ -366,9 +366,9 @@ export default function ClockwiseReviewPage({ tool }: ClockwiseReviewPageProps) 
                 
                 <div className="mt-8">
                   <Image
-                    src="/images/reviews/clockwise-clockwise-pricing.webp"
-                    alt="Clockwise pricing - detailed view"
-                    title="Clockwise clockwise pricing"
+                    src="/images/reviews/clockwise-features.webp"
+                    alt="Clockwise Key Features & Capabilities - detailed analysis and breakdown"
+                    title="Clockwise Key Features & Capabilities"
                     width={800}
                     height={450}
                     className="w-full h-auto rounded-lg"
@@ -402,9 +402,9 @@ export default function ClockwiseReviewPage({ tool }: ClockwiseReviewPageProps) 
                 
                 <div className="mt-8">
                   <Image
-                    src="/images/reviews/clockwise-clockwise-features.webp"
-                    alt="Clockwise features - detailed view"
-                    title="Clockwise clockwise features"
+                    src="/images/reviews/clockwise-pricing.webp"
+                    alt="Clockwise Pricing Plans & Options - detailed analysis and breakdown"
+                    title="Clockwise Pricing Plans & Options"
                     width={800}
                     height={450}
                     className="w-full h-auto rounded-lg"
@@ -433,9 +433,9 @@ export default function ClockwiseReviewPage({ tool }: ClockwiseReviewPageProps) 
                 
                 <div className="mt-8">
                   <Image
-                    src="/images/reviews/clockwise-clockwise-vs-competitors.webp"
-                    alt="Clockwise vs competitors - detailed view"
-                    title="Clockwise clockwise vs competitors"
+                    src="/images/reviews/clockwise-use-cases.webp"
+                    alt="Clockwise Use Cases & Applications - detailed analysis and breakdown"
+                    title="Clockwise Use Cases & Applications"
                     width={800}
                     height={450}
                     className="w-full h-auto rounded-lg"
@@ -467,6 +467,17 @@ export default function ClockwiseReviewPage({ tool }: ClockwiseReviewPageProps) 
                   </div>
                 </div>
                 
+                
+                <div className="mt-8">
+                  <Image
+                    src="/images/reviews/clockwise-overview.webp"
+                    alt="Clockwise Pros and Cons: Honest Assessment - detailed analysis and breakdown"
+                    title="Clockwise Pros and Cons: Honest Assessment"
+                    width={800}
+                    height={450}
+                    className="w-full h-auto rounded-lg"
+                  />
+                </div>
                 
               </div>
             </div>

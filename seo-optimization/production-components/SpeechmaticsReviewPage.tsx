@@ -366,9 +366,9 @@ export default function SpeechmaticsReviewPage({ tool }: SpeechmaticsReviewPageP
                 
                 <div className="mt-8">
                   <Image
-                    src="/images/reviews/speechmatics-speechmatics-pricing.webp"
-                    alt="Speechmatics pricing - detailed view"
-                    title="Speechmatics speechmatics pricing"
+                    src="/images/reviews/speechmatics-features.webp"
+                    alt="Speechmatics Key Features & Capabilities - detailed analysis and breakdown"
+                    title="Speechmatics Key Features & Capabilities"
                     width={800}
                     height={450}
                     className="w-full h-auto rounded-lg"
@@ -402,9 +402,9 @@ export default function SpeechmaticsReviewPage({ tool }: SpeechmaticsReviewPageP
                 
                 <div className="mt-8">
                   <Image
-                    src="/images/reviews/speechmatics-speechmatics-features.webp"
-                    alt="Speechmatics features - detailed view"
-                    title="Speechmatics speechmatics features"
+                    src="/images/reviews/speechmatics-pricing.webp"
+                    alt="Speechmatics Pricing Plans & Options - detailed analysis and breakdown"
+                    title="Speechmatics Pricing Plans & Options"
                     width={800}
                     height={450}
                     className="w-full h-auto rounded-lg"
@@ -433,9 +433,9 @@ export default function SpeechmaticsReviewPage({ tool }: SpeechmaticsReviewPageP
                 
                 <div className="mt-8">
                   <Image
-                    src="/images/reviews/speechmatics-speechmatics-vs-competitors.webp"
-                    alt="Speechmatics vs competitors - detailed view"
-                    title="Speechmatics speechmatics vs competitors"
+                    src="/images/reviews/speechmatics-use-cases.webp"
+                    alt="Speechmatics Use Cases & Applications - detailed analysis and breakdown"
+                    title="Speechmatics Use Cases & Applications"
                     width={800}
                     height={450}
                     className="w-full h-auto rounded-lg"
@@ -467,6 +467,17 @@ export default function SpeechmaticsReviewPage({ tool }: SpeechmaticsReviewPageP
                   </div>
                 </div>
                 
+                
+                <div className="mt-8">
+                  <Image
+                    src="/images/reviews/speechmatics-overview.webp"
+                    alt="Speechmatics Pros and Cons: Honest Assessment - detailed analysis and breakdown"
+                    title="Speechmatics Pros and Cons: Honest Assessment"
+                    width={800}
+                    height={450}
+                    className="w-full h-auto rounded-lg"
+                  />
+                </div>
                 
               </div>
             </div>

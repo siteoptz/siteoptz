@@ -366,9 +366,9 @@ export default function DescriptReviewPage({ tool }: DescriptReviewPageProps) {
                 
                 <div className="mt-8">
                   <Image
-                    src="/images/reviews/descript-descript-pricing.webp"
-                    alt="Descript pricing - detailed view"
-                    title="Descript descript pricing"
+                    src="/images/reviews/descript-features.webp"
+                    alt="Descript Key Features & Capabilities - detailed analysis and breakdown"
+                    title="Descript Key Features & Capabilities"
                     width={800}
                     height={450}
                     className="w-full h-auto rounded-lg"
@@ -402,9 +402,9 @@ export default function DescriptReviewPage({ tool }: DescriptReviewPageProps) {
                 
                 <div className="mt-8">
                   <Image
-                    src="/images/reviews/descript-descript-features.webp"
-                    alt="Descript features - detailed view"
-                    title="Descript descript features"
+                    src="/images/reviews/descript-pricing.webp"
+                    alt="Descript Pricing Plans & Options - detailed analysis and breakdown"
+                    title="Descript Pricing Plans & Options"
                     width={800}
                     height={450}
                     className="w-full h-auto rounded-lg"
@@ -433,9 +433,9 @@ export default function DescriptReviewPage({ tool }: DescriptReviewPageProps) {
                 
                 <div className="mt-8">
                   <Image
-                    src="/images/reviews/descript-descript-vs-competitors.webp"
-                    alt="Descript vs competitors - detailed view"
-                    title="Descript descript vs competitors"
+                    src="/images/reviews/descript-use-cases.webp"
+                    alt="Descript Use Cases & Applications - detailed analysis and breakdown"
+                    title="Descript Use Cases & Applications"
                     width={800}
                     height={450}
                     className="w-full h-auto rounded-lg"
@@ -467,6 +467,17 @@ export default function DescriptReviewPage({ tool }: DescriptReviewPageProps) {
                   </div>
                 </div>
                 
+                
+                <div className="mt-8">
+                  <Image
+                    src="/images/reviews/descript-overview.webp"
+                    alt="Descript Pros and Cons: Honest Assessment - detailed analysis and breakdown"
+                    title="Descript Pros and Cons: Honest Assessment"
+                    width={800}
+                    height={450}
+                    className="w-full h-auto rounded-lg"
+                  />
+                </div>
                 
               </div>
             </div>

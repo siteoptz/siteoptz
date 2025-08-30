@@ -366,9 +366,9 @@ export default function PlayHtReviewPage({ tool }: PlayHtReviewPageProps) {
                 
                 <div className="mt-8">
                   <Image
-                    src="/images/reviews/play-ht-play.ht-pricing.webp"
-                    alt="Play.ht pricing - detailed view"
-                    title="Play.ht play.ht pricing"
+                    src="/images/reviews/play-ht-features.webp"
+                    alt="Play.ht Key Features & Capabilities - detailed analysis and breakdown"
+                    title="Play.ht Key Features & Capabilities"
                     width={800}
                     height={450}
                     className="w-full h-auto rounded-lg"
@@ -402,9 +402,9 @@ export default function PlayHtReviewPage({ tool }: PlayHtReviewPageProps) {
                 
                 <div className="mt-8">
                   <Image
-                    src="/images/reviews/play-ht-play.ht-features.webp"
-                    alt="Play.ht features - detailed view"
-                    title="Play.ht play.ht features"
+                    src="/images/reviews/play-ht-pricing.webp"
+                    alt="Play.ht Pricing Plans & Options - detailed analysis and breakdown"
+                    title="Play.ht Pricing Plans & Options"
                     width={800}
                     height={450}
                     className="w-full h-auto rounded-lg"
@@ -433,9 +433,9 @@ export default function PlayHtReviewPage({ tool }: PlayHtReviewPageProps) {
                 
                 <div className="mt-8">
                   <Image
-                    src="/images/reviews/play-ht-play.ht-vs-competitors.webp"
-                    alt="Play.ht vs competitors - detailed view"
-                    title="Play.ht play.ht vs competitors"
+                    src="/images/reviews/play-ht-use-cases.webp"
+                    alt="Play.ht Use Cases & Applications - detailed analysis and breakdown"
+                    title="Play.ht Use Cases & Applications"
                     width={800}
                     height={450}
                     className="w-full h-auto rounded-lg"
@@ -467,6 +467,17 @@ export default function PlayHtReviewPage({ tool }: PlayHtReviewPageProps) {
                   </div>
                 </div>
                 
+                
+                <div className="mt-8">
+                  <Image
+                    src="/images/reviews/play-ht-overview.webp"
+                    alt="Play.ht Pros and Cons: Honest Assessment - detailed analysis and breakdown"
+                    title="Play.ht Pros and Cons: Honest Assessment"
+                    width={800}
+                    height={450}
+                    className="w-full h-auto rounded-lg"
+                  />
+                </div>
                 
               </div>
             </div>

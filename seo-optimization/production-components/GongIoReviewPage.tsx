@@ -366,9 +366,9 @@ export default function GongIoReviewPage({ tool }: GongIoReviewPageProps) {
                 
                 <div className="mt-8">
                   <Image
-                    src="/images/reviews/gong-io-gong-io-pricing.webp"
-                    alt="GONG IO pricing - detailed view"
-                    title="GONG IO gong io pricing"
+                    src="/images/reviews/gong-io-features.webp"
+                    alt="GONG IO Key Features & Capabilities - detailed analysis and breakdown"
+                    title="GONG IO Key Features & Capabilities"
                     width={800}
                     height={450}
                     className="w-full h-auto rounded-lg"
@@ -402,9 +402,9 @@ export default function GongIoReviewPage({ tool }: GongIoReviewPageProps) {
                 
                 <div className="mt-8">
                   <Image
-                    src="/images/reviews/gong-io-gong-io-features.webp"
-                    alt="GONG IO features - detailed view"
-                    title="GONG IO gong io features"
+                    src="/images/reviews/gong-io-pricing.webp"
+                    alt="GONG IO Pricing Plans & Options - detailed analysis and breakdown"
+                    title="GONG IO Pricing Plans & Options"
                     width={800}
                     height={450}
                     className="w-full h-auto rounded-lg"
@@ -433,9 +433,9 @@ export default function GongIoReviewPage({ tool }: GongIoReviewPageProps) {
                 
                 <div className="mt-8">
                   <Image
-                    src="/images/reviews/gong-io-gong-io-vs-competitors.webp"
-                    alt="GONG IO vs competitors - detailed view"
-                    title="GONG IO gong io vs competitors"
+                    src="/images/reviews/gong-io-use-cases.webp"
+                    alt="GONG IO Use Cases & Applications - detailed analysis and breakdown"
+                    title="GONG IO Use Cases & Applications"
                     width={800}
                     height={450}
                     className="w-full h-auto rounded-lg"
@@ -467,6 +467,17 @@ export default function GongIoReviewPage({ tool }: GongIoReviewPageProps) {
                   </div>
                 </div>
                 
+                
+                <div className="mt-8">
+                  <Image
+                    src="/images/reviews/gong-io-overview.webp"
+                    alt="GONG IO Pros and Cons: Honest Assessment - detailed analysis and breakdown"
+                    title="GONG IO Pros and Cons: Honest Assessment"
+                    width={800}
+                    height={450}
+                    className="w-full h-auto rounded-lg"
+                  />
+                </div>
                 
               </div>
             </div>

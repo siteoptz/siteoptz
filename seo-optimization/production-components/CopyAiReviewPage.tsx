@@ -366,9 +366,9 @@ export default function CopyAiReviewPage({ tool }: CopyAiReviewPageProps) {
                 
                 <div className="mt-8">
                   <Image
-                    src="/images/reviews/copy-ai-copy.ai-pricing.webp"
-                    alt="Copy.ai pricing - detailed view"
-                    title="Copy.ai copy.ai pricing"
+                    src="/images/reviews/copy-ai-features.webp"
+                    alt="Copy.ai Key Features & Capabilities - detailed analysis and breakdown"
+                    title="Copy.ai Key Features & Capabilities"
                     width={800}
                     height={450}
                     className="w-full h-auto rounded-lg"
@@ -402,9 +402,9 @@ export default function CopyAiReviewPage({ tool }: CopyAiReviewPageProps) {
                 
                 <div className="mt-8">
                   <Image
-                    src="/images/reviews/copy-ai-copy.ai-features.webp"
-                    alt="Copy.ai features - detailed view"
-                    title="Copy.ai copy.ai features"
+                    src="/images/reviews/copy-ai-pricing.webp"
+                    alt="Copy.ai Pricing Plans & Options - detailed analysis and breakdown"
+                    title="Copy.ai Pricing Plans & Options"
                     width={800}
                     height={450}
                     className="w-full h-auto rounded-lg"
@@ -433,9 +433,9 @@ export default function CopyAiReviewPage({ tool }: CopyAiReviewPageProps) {
                 
                 <div className="mt-8">
                   <Image
-                    src="/images/reviews/copy-ai-copy.ai-vs-competitors.webp"
-                    alt="Copy.ai vs competitors - detailed view"
-                    title="Copy.ai copy.ai vs competitors"
+                    src="/images/reviews/copy-ai-use-cases.webp"
+                    alt="Copy.ai Use Cases & Applications - detailed analysis and breakdown"
+                    title="Copy.ai Use Cases & Applications"
                     width={800}
                     height={450}
                     className="w-full h-auto rounded-lg"
@@ -467,6 +467,17 @@ export default function CopyAiReviewPage({ tool }: CopyAiReviewPageProps) {
                   </div>
                 </div>
                 
+                
+                <div className="mt-8">
+                  <Image
+                    src="/images/reviews/copy-ai-overview.webp"
+                    alt="Copy.ai Pros and Cons: Honest Assessment - detailed analysis and breakdown"
+                    title="Copy.ai Pros and Cons: Honest Assessment"
+                    width={800}
+                    height={450}
+                    className="w-full h-auto rounded-lg"
+                  />
+                </div>
                 
               </div>
             </div>

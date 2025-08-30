@@ -366,9 +366,9 @@ export default function NyotaReviewPage({ tool }: NyotaReviewPageProps) {
                 
                 <div className="mt-8">
                   <Image
-                    src="/images/reviews/nyota-nyota-pricing.webp"
-                    alt="Nyota pricing - detailed view"
-                    title="Nyota nyota pricing"
+                    src="/images/reviews/nyota-features.webp"
+                    alt="Nyota Key Features & Capabilities - detailed analysis and breakdown"
+                    title="Nyota Key Features & Capabilities"
                     width={800}
                     height={450}
                     className="w-full h-auto rounded-lg"
@@ -402,9 +402,9 @@ export default function NyotaReviewPage({ tool }: NyotaReviewPageProps) {
                 
                 <div className="mt-8">
                   <Image
-                    src="/images/reviews/nyota-nyota-features.webp"
-                    alt="Nyota features - detailed view"
-                    title="Nyota nyota features"
+                    src="/images/reviews/nyota-pricing.webp"
+                    alt="Nyota Pricing Plans & Options - detailed analysis and breakdown"
+                    title="Nyota Pricing Plans & Options"
                     width={800}
                     height={450}
                     className="w-full h-auto rounded-lg"
@@ -433,9 +433,9 @@ export default function NyotaReviewPage({ tool }: NyotaReviewPageProps) {
                 
                 <div className="mt-8">
                   <Image
-                    src="/images/reviews/nyota-nyota-vs-competitors.webp"
-                    alt="Nyota vs competitors - detailed view"
-                    title="Nyota nyota vs competitors"
+                    src="/images/reviews/nyota-use-cases.webp"
+                    alt="Nyota Use Cases & Applications - detailed analysis and breakdown"
+                    title="Nyota Use Cases & Applications"
                     width={800}
                     height={450}
                     className="w-full h-auto rounded-lg"
@@ -467,6 +467,17 @@ export default function NyotaReviewPage({ tool }: NyotaReviewPageProps) {
                   </div>
                 </div>
                 
+                
+                <div className="mt-8">
+                  <Image
+                    src="/images/reviews/nyota-overview.webp"
+                    alt="Nyota Pros and Cons: Honest Assessment - detailed analysis and breakdown"
+                    title="Nyota Pros and Cons: Honest Assessment"
+                    width={800}
+                    height={450}
+                    className="w-full h-auto rounded-lg"
+                  />
+                </div>
                 
               </div>
             </div>

@@ -366,9 +366,9 @@ export default function WindsurfReviewPage({ tool }: WindsurfReviewPageProps) {
                 
                 <div className="mt-8">
                   <Image
-                    src="/images/reviews/windsurf-windsurf-pricing.webp"
-                    alt="Windsurf pricing - detailed view"
-                    title="Windsurf windsurf pricing"
+                    src="/images/reviews/windsurf-features.webp"
+                    alt="Windsurf Key Features & Capabilities - detailed analysis and breakdown"
+                    title="Windsurf Key Features & Capabilities"
                     width={800}
                     height={450}
                     className="w-full h-auto rounded-lg"
@@ -402,9 +402,9 @@ export default function WindsurfReviewPage({ tool }: WindsurfReviewPageProps) {
                 
                 <div className="mt-8">
                   <Image
-                    src="/images/reviews/windsurf-windsurf-features.webp"
-                    alt="Windsurf features - detailed view"
-                    title="Windsurf windsurf features"
+                    src="/images/reviews/windsurf-pricing.webp"
+                    alt="Windsurf Pricing Plans & Options - detailed analysis and breakdown"
+                    title="Windsurf Pricing Plans & Options"
                     width={800}
                     height={450}
                     className="w-full h-auto rounded-lg"
@@ -433,9 +433,9 @@ export default function WindsurfReviewPage({ tool }: WindsurfReviewPageProps) {
                 
                 <div className="mt-8">
                   <Image
-                    src="/images/reviews/windsurf-windsurf-vs-competitors.webp"
-                    alt="Windsurf vs competitors - detailed view"
-                    title="Windsurf windsurf vs competitors"
+                    src="/images/reviews/windsurf-use-cases.webp"
+                    alt="Windsurf Use Cases & Applications - detailed analysis and breakdown"
+                    title="Windsurf Use Cases & Applications"
                     width={800}
                     height={450}
                     className="w-full h-auto rounded-lg"
@@ -467,6 +467,17 @@ export default function WindsurfReviewPage({ tool }: WindsurfReviewPageProps) {
                   </div>
                 </div>
                 
+                
+                <div className="mt-8">
+                  <Image
+                    src="/images/reviews/windsurf-overview.webp"
+                    alt="Windsurf Pros and Cons: Honest Assessment - detailed analysis and breakdown"
+                    title="Windsurf Pros and Cons: Honest Assessment"
+                    width={800}
+                    height={450}
+                    className="w-full h-auto rounded-lg"
+                  />
+                </div>
                 
               </div>
             </div>

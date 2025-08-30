@@ -366,9 +366,9 @@ export default function FathomReviewPage({ tool }: FathomReviewPageProps) {
                 
                 <div className="mt-8">
                   <Image
-                    src="/images/reviews/fathom-fathom-pricing.webp"
-                    alt="Fathom pricing - detailed view"
-                    title="Fathom fathom pricing"
+                    src="/images/reviews/fathom-features.webp"
+                    alt="Fathom Key Features & Capabilities - detailed analysis and breakdown"
+                    title="Fathom Key Features & Capabilities"
                     width={800}
                     height={450}
                     className="w-full h-auto rounded-lg"
@@ -402,9 +402,9 @@ export default function FathomReviewPage({ tool }: FathomReviewPageProps) {
                 
                 <div className="mt-8">
                   <Image
-                    src="/images/reviews/fathom-fathom-features.webp"
-                    alt="Fathom features - detailed view"
-                    title="Fathom fathom features"
+                    src="/images/reviews/fathom-pricing.webp"
+                    alt="Fathom Pricing Plans & Options - detailed analysis and breakdown"
+                    title="Fathom Pricing Plans & Options"
                     width={800}
                     height={450}
                     className="w-full h-auto rounded-lg"
@@ -433,9 +433,9 @@ export default function FathomReviewPage({ tool }: FathomReviewPageProps) {
                 
                 <div className="mt-8">
                   <Image
-                    src="/images/reviews/fathom-fathom-vs-competitors.webp"
-                    alt="Fathom vs competitors - detailed view"
-                    title="Fathom fathom vs competitors"
+                    src="/images/reviews/fathom-use-cases.webp"
+                    alt="Fathom Use Cases & Applications - detailed analysis and breakdown"
+                    title="Fathom Use Cases & Applications"
                     width={800}
                     height={450}
                     className="w-full h-auto rounded-lg"
@@ -467,6 +467,17 @@ export default function FathomReviewPage({ tool }: FathomReviewPageProps) {
                   </div>
                 </div>
                 
+                
+                <div className="mt-8">
+                  <Image
+                    src="/images/reviews/fathom-overview.webp"
+                    alt="Fathom Pros and Cons: Honest Assessment - detailed analysis and breakdown"
+                    title="Fathom Pros and Cons: Honest Assessment"
+                    width={800}
+                    height={450}
+                    className="w-full h-auto rounded-lg"
+                  />
+                </div>
                 
               </div>
             </div>

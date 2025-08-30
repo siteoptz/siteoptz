@@ -366,9 +366,9 @@ export default function ReadAiReviewPage({ tool }: ReadAiReviewPageProps) {
                 
                 <div className="mt-8">
                   <Image
-                    src="/images/reviews/read-ai-read-ai-pricing.webp"
-                    alt="Read AI pricing - detailed view"
-                    title="Read AI read ai pricing"
+                    src="/images/reviews/read-ai-features.webp"
+                    alt="Read AI Key Features & Capabilities - detailed analysis and breakdown"
+                    title="Read AI Key Features & Capabilities"
                     width={800}
                     height={450}
                     className="w-full h-auto rounded-lg"
@@ -402,9 +402,9 @@ export default function ReadAiReviewPage({ tool }: ReadAiReviewPageProps) {
                 
                 <div className="mt-8">
                   <Image
-                    src="/images/reviews/read-ai-read-ai-features.webp"
-                    alt="Read AI features - detailed view"
-                    title="Read AI read ai features"
+                    src="/images/reviews/read-ai-pricing.webp"
+                    alt="Read AI Pricing Plans & Options - detailed analysis and breakdown"
+                    title="Read AI Pricing Plans & Options"
                     width={800}
                     height={450}
                     className="w-full h-auto rounded-lg"
@@ -433,9 +433,9 @@ export default function ReadAiReviewPage({ tool }: ReadAiReviewPageProps) {
                 
                 <div className="mt-8">
                   <Image
-                    src="/images/reviews/read-ai-read-ai-vs-competitors.webp"
-                    alt="Read AI vs competitors - detailed view"
-                    title="Read AI read ai vs competitors"
+                    src="/images/reviews/read-ai-use-cases.webp"
+                    alt="Read AI Use Cases & Applications - detailed analysis and breakdown"
+                    title="Read AI Use Cases & Applications"
                     width={800}
                     height={450}
                     className="w-full h-auto rounded-lg"
@@ -467,6 +467,17 @@ export default function ReadAiReviewPage({ tool }: ReadAiReviewPageProps) {
                   </div>
                 </div>
                 
+                
+                <div className="mt-8">
+                  <Image
+                    src="/images/reviews/read-ai-overview.webp"
+                    alt="Read AI Pros and Cons: Honest Assessment - detailed analysis and breakdown"
+                    title="Read AI Pros and Cons: Honest Assessment"
+                    width={800}
+                    height={450}
+                    className="w-full h-auto rounded-lg"
+                  />
+                </div>
                 
               </div>
             </div>

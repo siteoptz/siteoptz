@@ -366,9 +366,9 @@ export default function BlazeAiReviewPage({ tool }: BlazeAiReviewPageProps) {
                 
                 <div className="mt-8">
                   <Image
-                    src="/images/reviews/blaze-ai-blaze-ai-pricing.webp"
-                    alt="Blaze AI pricing - detailed view"
-                    title="Blaze AI blaze ai pricing"
+                    src="/images/reviews/blaze-ai-features.webp"
+                    alt="Blaze AI Key Features & Capabilities - detailed analysis and breakdown"
+                    title="Blaze AI Key Features & Capabilities"
                     width={800}
                     height={450}
                     className="w-full h-auto rounded-lg"
@@ -402,9 +402,9 @@ export default function BlazeAiReviewPage({ tool }: BlazeAiReviewPageProps) {
                 
                 <div className="mt-8">
                   <Image
-                    src="/images/reviews/blaze-ai-blaze-ai-features.webp"
-                    alt="Blaze AI features - detailed view"
-                    title="Blaze AI blaze ai features"
+                    src="/images/reviews/blaze-ai-pricing.webp"
+                    alt="Blaze AI Pricing Plans & Options - detailed analysis and breakdown"
+                    title="Blaze AI Pricing Plans & Options"
                     width={800}
                     height={450}
                     className="w-full h-auto rounded-lg"
@@ -433,9 +433,9 @@ export default function BlazeAiReviewPage({ tool }: BlazeAiReviewPageProps) {
                 
                 <div className="mt-8">
                   <Image
-                    src="/images/reviews/blaze-ai-blaze-ai-vs-competitors.webp"
-                    alt="Blaze AI vs competitors - detailed view"
-                    title="Blaze AI blaze ai vs competitors"
+                    src="/images/reviews/blaze-ai-use-cases.webp"
+                    alt="Blaze AI Use Cases & Applications - detailed analysis and breakdown"
+                    title="Blaze AI Use Cases & Applications"
                     width={800}
                     height={450}
                     className="w-full h-auto rounded-lg"
@@ -467,6 +467,17 @@ export default function BlazeAiReviewPage({ tool }: BlazeAiReviewPageProps) {
                   </div>
                 </div>
                 
+                
+                <div className="mt-8">
+                  <Image
+                    src="/images/reviews/blaze-ai-overview.webp"
+                    alt="Blaze AI Pros and Cons: Honest Assessment - detailed analysis and breakdown"
+                    title="Blaze AI Pros and Cons: Honest Assessment"
+                    width={800}
+                    height={450}
+                    className="w-full h-auto rounded-lg"
+                  />
+                </div>
                 
               </div>
             </div>

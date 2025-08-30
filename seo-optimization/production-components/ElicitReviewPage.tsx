@@ -366,9 +366,9 @@ export default function ElicitReviewPage({ tool }: ElicitReviewPageProps) {
                 
                 <div className="mt-8">
                   <Image
-                    src="/images/reviews/elicit-elicit-pricing.webp"
-                    alt="Elicit pricing - detailed view"
-                    title="Elicit elicit pricing"
+                    src="/images/reviews/elicit-features.webp"
+                    alt="Elicit Key Features & Capabilities - detailed analysis and breakdown"
+                    title="Elicit Key Features & Capabilities"
                     width={800}
                     height={450}
                     className="w-full h-auto rounded-lg"
@@ -402,9 +402,9 @@ export default function ElicitReviewPage({ tool }: ElicitReviewPageProps) {
                 
                 <div className="mt-8">
                   <Image
-                    src="/images/reviews/elicit-elicit-features.webp"
-                    alt="Elicit features - detailed view"
-                    title="Elicit elicit features"
+                    src="/images/reviews/elicit-pricing.webp"
+                    alt="Elicit Pricing Plans & Options - detailed analysis and breakdown"
+                    title="Elicit Pricing Plans & Options"
                     width={800}
                     height={450}
                     className="w-full h-auto rounded-lg"
@@ -433,9 +433,9 @@ export default function ElicitReviewPage({ tool }: ElicitReviewPageProps) {
                 
                 <div className="mt-8">
                   <Image
-                    src="/images/reviews/elicit-elicit-vs-competitors.webp"
-                    alt="Elicit vs competitors - detailed view"
-                    title="Elicit elicit vs competitors"
+                    src="/images/reviews/elicit-use-cases.webp"
+                    alt="Elicit Use Cases & Applications - detailed analysis and breakdown"
+                    title="Elicit Use Cases & Applications"
                     width={800}
                     height={450}
                     className="w-full h-auto rounded-lg"
@@ -467,6 +467,17 @@ export default function ElicitReviewPage({ tool }: ElicitReviewPageProps) {
                   </div>
                 </div>
                 
+                
+                <div className="mt-8">
+                  <Image
+                    src="/images/reviews/elicit-overview.webp"
+                    alt="Elicit Pros and Cons: Honest Assessment - detailed analysis and breakdown"
+                    title="Elicit Pros and Cons: Honest Assessment"
+                    width={800}
+                    height={450}
+                    className="w-full h-auto rounded-lg"
+                  />
+                </div>
                 
               </div>
             </div>

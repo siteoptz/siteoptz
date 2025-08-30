@@ -366,9 +366,9 @@ export default function UxPilotReviewPage({ tool }: UxPilotReviewPageProps) {
                 
                 <div className="mt-8">
                   <Image
-                    src="/images/reviews/ux-pilot-ux-pilot-pricing.webp"
-                    alt="UX Pilot pricing - detailed view"
-                    title="UX Pilot ux pilot pricing"
+                    src="/images/reviews/ux-pilot-features.webp"
+                    alt="UX Pilot Key Features & Capabilities - detailed analysis and breakdown"
+                    title="UX Pilot Key Features & Capabilities"
                     width={800}
                     height={450}
                     className="w-full h-auto rounded-lg"
@@ -402,9 +402,9 @@ export default function UxPilotReviewPage({ tool }: UxPilotReviewPageProps) {
                 
                 <div className="mt-8">
                   <Image
-                    src="/images/reviews/ux-pilot-ux-pilot-features.webp"
-                    alt="UX Pilot features - detailed view"
-                    title="UX Pilot ux pilot features"
+                    src="/images/reviews/ux-pilot-pricing.webp"
+                    alt="UX Pilot Pricing Plans & Options - detailed analysis and breakdown"
+                    title="UX Pilot Pricing Plans & Options"
                     width={800}
                     height={450}
                     className="w-full h-auto rounded-lg"
@@ -433,9 +433,9 @@ export default function UxPilotReviewPage({ tool }: UxPilotReviewPageProps) {
                 
                 <div className="mt-8">
                   <Image
-                    src="/images/reviews/ux-pilot-ux-pilot-vs-competitors.webp"
-                    alt="UX Pilot vs competitors - detailed view"
-                    title="UX Pilot ux pilot vs competitors"
+                    src="/images/reviews/ux-pilot-use-cases.webp"
+                    alt="UX Pilot Use Cases & Applications - detailed analysis and breakdown"
+                    title="UX Pilot Use Cases & Applications"
                     width={800}
                     height={450}
                     className="w-full h-auto rounded-lg"
@@ -467,6 +467,17 @@ export default function UxPilotReviewPage({ tool }: UxPilotReviewPageProps) {
                   </div>
                 </div>
                 
+                
+                <div className="mt-8">
+                  <Image
+                    src="/images/reviews/ux-pilot-overview.webp"
+                    alt="UX Pilot Pros and Cons: Honest Assessment - detailed analysis and breakdown"
+                    title="UX Pilot Pros and Cons: Honest Assessment"
+                    width={800}
+                    height={450}
+                    className="w-full h-auto rounded-lg"
+                  />
+                </div>
                 
               </div>
             </div>

@@ -366,9 +366,9 @@ export default function ReplicateAiReviewPage({ tool }: ReplicateAiReviewPagePro
                 
                 <div className="mt-8">
                   <Image
-                    src="/images/reviews/replicate-ai-replicate-pricing.webp"
-                    alt="Replicate pricing - detailed view"
-                    title="Replicate replicate pricing"
+                    src="/images/reviews/replicate-ai-features.webp"
+                    alt="Replicate Key Features & Capabilities - detailed analysis and breakdown"
+                    title="Replicate Key Features & Capabilities"
                     width={800}
                     height={450}
                     className="w-full h-auto rounded-lg"
@@ -402,9 +402,9 @@ export default function ReplicateAiReviewPage({ tool }: ReplicateAiReviewPagePro
                 
                 <div className="mt-8">
                   <Image
-                    src="/images/reviews/replicate-ai-replicate-features.webp"
-                    alt="Replicate features - detailed view"
-                    title="Replicate replicate features"
+                    src="/images/reviews/replicate-ai-pricing.webp"
+                    alt="Replicate Pricing Plans & Options - detailed analysis and breakdown"
+                    title="Replicate Pricing Plans & Options"
                     width={800}
                     height={450}
                     className="w-full h-auto rounded-lg"
@@ -433,9 +433,9 @@ export default function ReplicateAiReviewPage({ tool }: ReplicateAiReviewPagePro
                 
                 <div className="mt-8">
                   <Image
-                    src="/images/reviews/replicate-ai-replicate-vs-competitors.webp"
-                    alt="Replicate vs competitors - detailed view"
-                    title="Replicate replicate vs competitors"
+                    src="/images/reviews/replicate-ai-use-cases.webp"
+                    alt="Replicate Use Cases & Applications - detailed analysis and breakdown"
+                    title="Replicate Use Cases & Applications"
                     width={800}
                     height={450}
                     className="w-full h-auto rounded-lg"
@@ -467,6 +467,17 @@ export default function ReplicateAiReviewPage({ tool }: ReplicateAiReviewPagePro
                   </div>
                 </div>
                 
+                
+                <div className="mt-8">
+                  <Image
+                    src="/images/reviews/replicate-ai-overview.webp"
+                    alt="Replicate Pros and Cons: Honest Assessment - detailed analysis and breakdown"
+                    title="Replicate Pros and Cons: Honest Assessment"
+                    width={800}
+                    height={450}
+                    className="w-full h-auto rounded-lg"
+                  />
+                </div>
                 
               </div>
             </div>

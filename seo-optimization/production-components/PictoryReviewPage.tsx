@@ -366,9 +366,9 @@ export default function PictoryReviewPage({ tool }: PictoryReviewPageProps) {
                 
                 <div className="mt-8">
                   <Image
-                    src="/images/reviews/pictory-pictory-pricing.webp"
-                    alt="Pictory pricing - detailed view"
-                    title="Pictory pictory pricing"
+                    src="/images/reviews/pictory-features.webp"
+                    alt="Pictory Key Features & Capabilities - detailed analysis and breakdown"
+                    title="Pictory Key Features & Capabilities"
                     width={800}
                     height={450}
                     className="w-full h-auto rounded-lg"
@@ -402,9 +402,9 @@ export default function PictoryReviewPage({ tool }: PictoryReviewPageProps) {
                 
                 <div className="mt-8">
                   <Image
-                    src="/images/reviews/pictory-pictory-features.webp"
-                    alt="Pictory features - detailed view"
-                    title="Pictory pictory features"
+                    src="/images/reviews/pictory-pricing.webp"
+                    alt="Pictory Pricing Plans & Options - detailed analysis and breakdown"
+                    title="Pictory Pricing Plans & Options"
                     width={800}
                     height={450}
                     className="w-full h-auto rounded-lg"
@@ -433,9 +433,9 @@ export default function PictoryReviewPage({ tool }: PictoryReviewPageProps) {
                 
                 <div className="mt-8">
                   <Image
-                    src="/images/reviews/pictory-pictory-vs-competitors.webp"
-                    alt="Pictory vs competitors - detailed view"
-                    title="Pictory pictory vs competitors"
+                    src="/images/reviews/pictory-use-cases.webp"
+                    alt="Pictory Use Cases & Applications - detailed analysis and breakdown"
+                    title="Pictory Use Cases & Applications"
                     width={800}
                     height={450}
                     className="w-full h-auto rounded-lg"
@@ -467,6 +467,17 @@ export default function PictoryReviewPage({ tool }: PictoryReviewPageProps) {
                   </div>
                 </div>
                 
+                
+                <div className="mt-8">
+                  <Image
+                    src="/images/reviews/pictory-overview.webp"
+                    alt="Pictory Pros and Cons: Honest Assessment - detailed analysis and breakdown"
+                    title="Pictory Pros and Cons: Honest Assessment"
+                    width={800}
+                    height={450}
+                    className="w-full h-auto rounded-lg"
+                  />
+                </div>
                 
               </div>
             </div>

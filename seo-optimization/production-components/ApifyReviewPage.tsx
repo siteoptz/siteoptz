@@ -366,9 +366,9 @@ export default function ApifyReviewPage({ tool }: ApifyReviewPageProps) {
                 
                 <div className="mt-8">
                   <Image
-                    src="/images/reviews/apify-apify-pricing.webp"
-                    alt="Apify pricing - detailed view"
-                    title="Apify apify pricing"
+                    src="/images/reviews/apify-features.webp"
+                    alt="Apify Key Features & Capabilities - detailed analysis and breakdown"
+                    title="Apify Key Features & Capabilities"
                     width={800}
                     height={450}
                     className="w-full h-auto rounded-lg"
@@ -402,9 +402,9 @@ export default function ApifyReviewPage({ tool }: ApifyReviewPageProps) {
                 
                 <div className="mt-8">
                   <Image
-                    src="/images/reviews/apify-apify-features.webp"
-                    alt="Apify features - detailed view"
-                    title="Apify apify features"
+                    src="/images/reviews/apify-pricing.webp"
+                    alt="Apify Pricing Plans & Options - detailed analysis and breakdown"
+                    title="Apify Pricing Plans & Options"
                     width={800}
                     height={450}
                     className="w-full h-auto rounded-lg"
@@ -433,9 +433,9 @@ export default function ApifyReviewPage({ tool }: ApifyReviewPageProps) {
                 
                 <div className="mt-8">
                   <Image
-                    src="/images/reviews/apify-apify-vs-competitors.webp"
-                    alt="Apify vs competitors - detailed view"
-                    title="Apify apify vs competitors"
+                    src="/images/reviews/apify-use-cases.webp"
+                    alt="Apify Use Cases & Applications - detailed analysis and breakdown"
+                    title="Apify Use Cases & Applications"
                     width={800}
                     height={450}
                     className="w-full h-auto rounded-lg"
@@ -467,6 +467,17 @@ export default function ApifyReviewPage({ tool }: ApifyReviewPageProps) {
                   </div>
                 </div>
                 
+                
+                <div className="mt-8">
+                  <Image
+                    src="/images/reviews/apify-overview.webp"
+                    alt="Apify Pros and Cons: Honest Assessment - detailed analysis and breakdown"
+                    title="Apify Pros and Cons: Honest Assessment"
+                    width={800}
+                    height={450}
+                    className="w-full h-auto rounded-lg"
+                  />
+                </div>
                 
               </div>
             </div>

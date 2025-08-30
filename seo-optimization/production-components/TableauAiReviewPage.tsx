@@ -366,9 +366,9 @@ export default function TableauAiReviewPage({ tool }: TableauAiReviewPageProps) 
                 
                 <div className="mt-8">
                   <Image
-                    src="/images/reviews/tableau-ai-tableau-ai-pricing.webp"
-                    alt="Tableau AI pricing - detailed view"
-                    title="Tableau AI tableau ai pricing"
+                    src="/images/reviews/tableau-ai-features.webp"
+                    alt="Tableau AI Key Features & Capabilities - detailed analysis and breakdown"
+                    title="Tableau AI Key Features & Capabilities"
                     width={800}
                     height={450}
                     className="w-full h-auto rounded-lg"
@@ -402,9 +402,9 @@ export default function TableauAiReviewPage({ tool }: TableauAiReviewPageProps) 
                 
                 <div className="mt-8">
                   <Image
-                    src="/images/reviews/tableau-ai-tableau-ai-features.webp"
-                    alt="Tableau AI features - detailed view"
-                    title="Tableau AI tableau ai features"
+                    src="/images/reviews/tableau-ai-pricing.webp"
+                    alt="Tableau AI Pricing Plans & Options - detailed analysis and breakdown"
+                    title="Tableau AI Pricing Plans & Options"
                     width={800}
                     height={450}
                     className="w-full h-auto rounded-lg"
@@ -433,9 +433,9 @@ export default function TableauAiReviewPage({ tool }: TableauAiReviewPageProps) 
                 
                 <div className="mt-8">
                   <Image
-                    src="/images/reviews/tableau-ai-tableau-ai-vs-competitors.webp"
-                    alt="Tableau AI vs competitors - detailed view"
-                    title="Tableau AI tableau ai vs competitors"
+                    src="/images/reviews/tableau-ai-use-cases.webp"
+                    alt="Tableau AI Use Cases & Applications - detailed analysis and breakdown"
+                    title="Tableau AI Use Cases & Applications"
                     width={800}
                     height={450}
                     className="w-full h-auto rounded-lg"
@@ -467,6 +467,17 @@ export default function TableauAiReviewPage({ tool }: TableauAiReviewPageProps) 
                   </div>
                 </div>
                 
+                
+                <div className="mt-8">
+                  <Image
+                    src="/images/reviews/tableau-ai-overview.webp"
+                    alt="Tableau AI Pros and Cons: Honest Assessment - detailed analysis and breakdown"
+                    title="Tableau AI Pros and Cons: Honest Assessment"
+                    width={800}
+                    height={450}
+                    className="w-full h-auto rounded-lg"
+                  />
+                </div>
                 
               </div>
             </div>

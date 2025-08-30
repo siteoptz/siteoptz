@@ -366,9 +366,9 @@ export default function TealReviewPage({ tool }: TealReviewPageProps) {
                 
                 <div className="mt-8">
                   <Image
-                    src="/images/reviews/teal-teal-pricing.webp"
-                    alt="Teal pricing - detailed view"
-                    title="Teal teal pricing"
+                    src="/images/reviews/teal-features.webp"
+                    alt="Teal Key Features & Capabilities - detailed analysis and breakdown"
+                    title="Teal Key Features & Capabilities"
                     width={800}
                     height={450}
                     className="w-full h-auto rounded-lg"
@@ -402,9 +402,9 @@ export default function TealReviewPage({ tool }: TealReviewPageProps) {
                 
                 <div className="mt-8">
                   <Image
-                    src="/images/reviews/teal-teal-features.webp"
-                    alt="Teal features - detailed view"
-                    title="Teal teal features"
+                    src="/images/reviews/teal-pricing.webp"
+                    alt="Teal Pricing Plans & Options - detailed analysis and breakdown"
+                    title="Teal Pricing Plans & Options"
                     width={800}
                     height={450}
                     className="w-full h-auto rounded-lg"
@@ -433,9 +433,9 @@ export default function TealReviewPage({ tool }: TealReviewPageProps) {
                 
                 <div className="mt-8">
                   <Image
-                    src="/images/reviews/teal-teal-vs-competitors.webp"
-                    alt="Teal vs competitors - detailed view"
-                    title="Teal teal vs competitors"
+                    src="/images/reviews/teal-use-cases.webp"
+                    alt="Teal Use Cases & Applications - detailed analysis and breakdown"
+                    title="Teal Use Cases & Applications"
                     width={800}
                     height={450}
                     className="w-full h-auto rounded-lg"
@@ -467,6 +467,17 @@ export default function TealReviewPage({ tool }: TealReviewPageProps) {
                   </div>
                 </div>
                 
+                
+                <div className="mt-8">
+                  <Image
+                    src="/images/reviews/teal-overview.webp"
+                    alt="Teal Pros and Cons: Honest Assessment - detailed analysis and breakdown"
+                    title="Teal Pros and Cons: Honest Assessment"
+                    width={800}
+                    height={450}
+                    className="w-full h-auto rounded-lg"
+                  />
+                </div>
                 
               </div>
             </div>

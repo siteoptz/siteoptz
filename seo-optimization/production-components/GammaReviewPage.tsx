@@ -366,9 +366,9 @@ export default function GammaReviewPage({ tool }: GammaReviewPageProps) {
                 
                 <div className="mt-8">
                   <Image
-                    src="/images/reviews/gamma-gamma-pricing.webp"
-                    alt="Gamma pricing - detailed view"
-                    title="Gamma gamma pricing"
+                    src="/images/reviews/gamma-features.webp"
+                    alt="Gamma Key Features & Capabilities - detailed analysis and breakdown"
+                    title="Gamma Key Features & Capabilities"
                     width={800}
                     height={450}
                     className="w-full h-auto rounded-lg"
@@ -402,9 +402,9 @@ export default function GammaReviewPage({ tool }: GammaReviewPageProps) {
                 
                 <div className="mt-8">
                   <Image
-                    src="/images/reviews/gamma-gamma-features.webp"
-                    alt="Gamma features - detailed view"
-                    title="Gamma gamma features"
+                    src="/images/reviews/gamma-pricing.webp"
+                    alt="Gamma Pricing Plans & Options - detailed analysis and breakdown"
+                    title="Gamma Pricing Plans & Options"
                     width={800}
                     height={450}
                     className="w-full h-auto rounded-lg"
@@ -433,9 +433,9 @@ export default function GammaReviewPage({ tool }: GammaReviewPageProps) {
                 
                 <div className="mt-8">
                   <Image
-                    src="/images/reviews/gamma-gamma-vs-competitors.webp"
-                    alt="Gamma vs competitors - detailed view"
-                    title="Gamma gamma vs competitors"
+                    src="/images/reviews/gamma-use-cases.webp"
+                    alt="Gamma Use Cases & Applications - detailed analysis and breakdown"
+                    title="Gamma Use Cases & Applications"
                     width={800}
                     height={450}
                     className="w-full h-auto rounded-lg"
@@ -467,6 +467,17 @@ export default function GammaReviewPage({ tool }: GammaReviewPageProps) {
                   </div>
                 </div>
                 
+                
+                <div className="mt-8">
+                  <Image
+                    src="/images/reviews/gamma-overview.webp"
+                    alt="Gamma Pros and Cons: Honest Assessment - detailed analysis and breakdown"
+                    title="Gamma Pros and Cons: Honest Assessment"
+                    width={800}
+                    height={450}
+                    className="w-full h-auto rounded-lg"
+                  />
+                </div>
                 
               </div>
             </div>

@@ -366,9 +366,9 @@ export default function QlikSenseReviewPage({ tool }: QlikSenseReviewPageProps) 
                 
                 <div className="mt-8">
                   <Image
-                    src="/images/reviews/qlik-sense-qlik-sense-pricing.webp"
-                    alt="Qlik Sense pricing - detailed view"
-                    title="Qlik Sense qlik sense pricing"
+                    src="/images/reviews/qlik-sense-features.webp"
+                    alt="Qlik Sense Key Features & Capabilities - detailed analysis and breakdown"
+                    title="Qlik Sense Key Features & Capabilities"
                     width={800}
                     height={450}
                     className="w-full h-auto rounded-lg"
@@ -402,9 +402,9 @@ export default function QlikSenseReviewPage({ tool }: QlikSenseReviewPageProps) 
                 
                 <div className="mt-8">
                   <Image
-                    src="/images/reviews/qlik-sense-qlik-sense-features.webp"
-                    alt="Qlik Sense features - detailed view"
-                    title="Qlik Sense qlik sense features"
+                    src="/images/reviews/qlik-sense-pricing.webp"
+                    alt="Qlik Sense Pricing Plans & Options - detailed analysis and breakdown"
+                    title="Qlik Sense Pricing Plans & Options"
                     width={800}
                     height={450}
                     className="w-full h-auto rounded-lg"
@@ -433,9 +433,9 @@ export default function QlikSenseReviewPage({ tool }: QlikSenseReviewPageProps) 
                 
                 <div className="mt-8">
                   <Image
-                    src="/images/reviews/qlik-sense-qlik-sense-vs-competitors.webp"
-                    alt="Qlik Sense vs competitors - detailed view"
-                    title="Qlik Sense qlik sense vs competitors"
+                    src="/images/reviews/qlik-sense-use-cases.webp"
+                    alt="Qlik Sense Use Cases & Applications - detailed analysis and breakdown"
+                    title="Qlik Sense Use Cases & Applications"
                     width={800}
                     height={450}
                     className="w-full h-auto rounded-lg"
@@ -467,6 +467,17 @@ export default function QlikSenseReviewPage({ tool }: QlikSenseReviewPageProps) 
                   </div>
                 </div>
                 
+                
+                <div className="mt-8">
+                  <Image
+                    src="/images/reviews/qlik-sense-overview.webp"
+                    alt="Qlik Sense Pros and Cons: Honest Assessment - detailed analysis and breakdown"
+                    title="Qlik Sense Pros and Cons: Honest Assessment"
+                    width={800}
+                    height={450}
+                    className="w-full h-auto rounded-lg"
+                  />
+                </div>
                 
               </div>
             </div>

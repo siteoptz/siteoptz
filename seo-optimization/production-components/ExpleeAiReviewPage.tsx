@@ -366,9 +366,9 @@ export default function ExpleeAiReviewPage({ tool }: ExpleeAiReviewPageProps) {
                 
                 <div className="mt-8">
                   <Image
-                    src="/images/reviews/explee-ai-explee-pricing.webp"
-                    alt="Explee pricing - detailed view"
-                    title="Explee explee pricing"
+                    src="/images/reviews/explee-ai-features.webp"
+                    alt="Explee Key Features & Capabilities - detailed analysis and breakdown"
+                    title="Explee Key Features & Capabilities"
                     width={800}
                     height={450}
                     className="w-full h-auto rounded-lg"
@@ -402,9 +402,9 @@ export default function ExpleeAiReviewPage({ tool }: ExpleeAiReviewPageProps) {
                 
                 <div className="mt-8">
                   <Image
-                    src="/images/reviews/explee-ai-explee-features.webp"
-                    alt="Explee features - detailed view"
-                    title="Explee explee features"
+                    src="/images/reviews/explee-ai-pricing.webp"
+                    alt="Explee Pricing Plans & Options - detailed analysis and breakdown"
+                    title="Explee Pricing Plans & Options"
                     width={800}
                     height={450}
                     className="w-full h-auto rounded-lg"
@@ -433,9 +433,9 @@ export default function ExpleeAiReviewPage({ tool }: ExpleeAiReviewPageProps) {
                 
                 <div className="mt-8">
                   <Image
-                    src="/images/reviews/explee-ai-explee-vs-competitors.webp"
-                    alt="Explee vs competitors - detailed view"
-                    title="Explee explee vs competitors"
+                    src="/images/reviews/explee-ai-use-cases.webp"
+                    alt="Explee Use Cases & Applications - detailed analysis and breakdown"
+                    title="Explee Use Cases & Applications"
                     width={800}
                     height={450}
                     className="w-full h-auto rounded-lg"
@@ -467,6 +467,17 @@ export default function ExpleeAiReviewPage({ tool }: ExpleeAiReviewPageProps) {
                   </div>
                 </div>
                 
+                
+                <div className="mt-8">
+                  <Image
+                    src="/images/reviews/explee-ai-overview.webp"
+                    alt="Explee Pros and Cons: Honest Assessment - detailed analysis and breakdown"
+                    title="Explee Pros and Cons: Honest Assessment"
+                    width={800}
+                    height={450}
+                    className="w-full h-auto rounded-lg"
+                  />
+                </div>
                 
               </div>
             </div>

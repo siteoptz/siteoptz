@@ -366,9 +366,9 @@ export default function LantaAiReviewPage({ tool }: LantaAiReviewPageProps) {
                 
                 <div className="mt-8">
                   <Image
-                    src="/images/reviews/lanta-ai-lanta-ai-pricing.webp"
-                    alt="Lanta AI pricing - detailed view"
-                    title="Lanta AI lanta ai pricing"
+                    src="/images/reviews/lanta-ai-features.webp"
+                    alt="Lanta AI Key Features & Capabilities - detailed analysis and breakdown"
+                    title="Lanta AI Key Features & Capabilities"
                     width={800}
                     height={450}
                     className="w-full h-auto rounded-lg"
@@ -402,9 +402,9 @@ export default function LantaAiReviewPage({ tool }: LantaAiReviewPageProps) {
                 
                 <div className="mt-8">
                   <Image
-                    src="/images/reviews/lanta-ai-lanta-ai-features.webp"
-                    alt="Lanta AI features - detailed view"
-                    title="Lanta AI lanta ai features"
+                    src="/images/reviews/lanta-ai-pricing.webp"
+                    alt="Lanta AI Pricing Plans & Options - detailed analysis and breakdown"
+                    title="Lanta AI Pricing Plans & Options"
                     width={800}
                     height={450}
                     className="w-full h-auto rounded-lg"
@@ -433,9 +433,9 @@ export default function LantaAiReviewPage({ tool }: LantaAiReviewPageProps) {
                 
                 <div className="mt-8">
                   <Image
-                    src="/images/reviews/lanta-ai-lanta-ai-vs-competitors.webp"
-                    alt="Lanta AI vs competitors - detailed view"
-                    title="Lanta AI lanta ai vs competitors"
+                    src="/images/reviews/lanta-ai-use-cases.webp"
+                    alt="Lanta AI Use Cases & Applications - detailed analysis and breakdown"
+                    title="Lanta AI Use Cases & Applications"
                     width={800}
                     height={450}
                     className="w-full h-auto rounded-lg"
@@ -467,6 +467,17 @@ export default function LantaAiReviewPage({ tool }: LantaAiReviewPageProps) {
                   </div>
                 </div>
                 
+                
+                <div className="mt-8">
+                  <Image
+                    src="/images/reviews/lanta-ai-overview.webp"
+                    alt="Lanta AI Pros and Cons: Honest Assessment - detailed analysis and breakdown"
+                    title="Lanta AI Pros and Cons: Honest Assessment"
+                    width={800}
+                    height={450}
+                    className="w-full h-auto rounded-lg"
+                  />
+                </div>
                 
               </div>
             </div>

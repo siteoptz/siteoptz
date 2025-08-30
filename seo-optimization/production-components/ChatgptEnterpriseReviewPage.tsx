@@ -366,9 +366,9 @@ export default function ChatgptEnterpriseReviewPage({ tool }: ChatgptEnterpriseR
                 
                 <div className="mt-8">
                   <Image
-                    src="/images/reviews/chatgpt-enterprise-chatgpt-enterprise-pricing.webp"
-                    alt="ChatGPT Enterprise pricing - detailed view"
-                    title="ChatGPT Enterprise chatgpt enterprise pricing"
+                    src="/images/reviews/chatgpt-enterprise-features.webp"
+                    alt="ChatGPT Enterprise Key Features & Capabilities - detailed analysis and breakdown"
+                    title="ChatGPT Enterprise Key Features & Capabilities"
                     width={800}
                     height={450}
                     className="w-full h-auto rounded-lg"
@@ -402,9 +402,9 @@ export default function ChatgptEnterpriseReviewPage({ tool }: ChatgptEnterpriseR
                 
                 <div className="mt-8">
                   <Image
-                    src="/images/reviews/chatgpt-enterprise-chatgpt-enterprise-features.webp"
-                    alt="ChatGPT Enterprise features - detailed view"
-                    title="ChatGPT Enterprise chatgpt enterprise features"
+                    src="/images/reviews/chatgpt-enterprise-pricing.webp"
+                    alt="ChatGPT Enterprise Pricing Plans & Options - detailed analysis and breakdown"
+                    title="ChatGPT Enterprise Pricing Plans & Options"
                     width={800}
                     height={450}
                     className="w-full h-auto rounded-lg"
@@ -433,9 +433,9 @@ export default function ChatgptEnterpriseReviewPage({ tool }: ChatgptEnterpriseR
                 
                 <div className="mt-8">
                   <Image
-                    src="/images/reviews/chatgpt-enterprise-chatgpt-enterprise-vs-competitors.webp"
-                    alt="ChatGPT Enterprise vs competitors - detailed view"
-                    title="ChatGPT Enterprise chatgpt enterprise vs competitors"
+                    src="/images/reviews/chatgpt-enterprise-use-cases.webp"
+                    alt="ChatGPT Enterprise Use Cases & Applications - detailed analysis and breakdown"
+                    title="ChatGPT Enterprise Use Cases & Applications"
                     width={800}
                     height={450}
                     className="w-full h-auto rounded-lg"
@@ -467,6 +467,17 @@ export default function ChatgptEnterpriseReviewPage({ tool }: ChatgptEnterpriseR
                   </div>
                 </div>
                 
+                
+                <div className="mt-8">
+                  <Image
+                    src="/images/reviews/chatgpt-enterprise-overview.webp"
+                    alt="ChatGPT Enterprise Pros and Cons: Honest Assessment - detailed analysis and breakdown"
+                    title="ChatGPT Enterprise Pros and Cons: Honest Assessment"
+                    width={800}
+                    height={450}
+                    className="w-full h-auto rounded-lg"
+                  />
+                </div>
                 
               </div>
             </div>

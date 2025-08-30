@@ -366,9 +366,9 @@ export default function ChatgptReviewPage({ tool }: ChatgptReviewPageProps) {
                 
                 <div className="mt-8">
                   <Image
-                    src="/images/reviews/chatgpt-chatgpt-pricing.webp"
-                    alt="ChatGPT pricing - detailed view"
-                    title="ChatGPT chatgpt pricing"
+                    src="/images/reviews/chatgpt-features.webp"
+                    alt="ChatGPT Key Features & Capabilities - detailed analysis and breakdown"
+                    title="ChatGPT Key Features & Capabilities"
                     width={800}
                     height={450}
                     className="w-full h-auto rounded-lg"
@@ -402,9 +402,9 @@ export default function ChatgptReviewPage({ tool }: ChatgptReviewPageProps) {
                 
                 <div className="mt-8">
                   <Image
-                    src="/images/reviews/chatgpt-chatgpt-features.webp"
-                    alt="ChatGPT features - detailed view"
-                    title="ChatGPT chatgpt features"
+                    src="/images/reviews/chatgpt-pricing.webp"
+                    alt="ChatGPT Pricing Plans & Options - detailed analysis and breakdown"
+                    title="ChatGPT Pricing Plans & Options"
                     width={800}
                     height={450}
                     className="w-full h-auto rounded-lg"
@@ -433,9 +433,9 @@ export default function ChatgptReviewPage({ tool }: ChatgptReviewPageProps) {
                 
                 <div className="mt-8">
                   <Image
-                    src="/images/reviews/chatgpt-chatgpt-vs-competitors.webp"
-                    alt="ChatGPT vs competitors - detailed view"
-                    title="ChatGPT chatgpt vs competitors"
+                    src="/images/reviews/chatgpt-use-cases.webp"
+                    alt="ChatGPT Use Cases & Applications - detailed analysis and breakdown"
+                    title="ChatGPT Use Cases & Applications"
                     width={800}
                     height={450}
                     className="w-full h-auto rounded-lg"
@@ -467,6 +467,17 @@ export default function ChatgptReviewPage({ tool }: ChatgptReviewPageProps) {
                   </div>
                 </div>
                 
+                
+                <div className="mt-8">
+                  <Image
+                    src="/images/reviews/chatgpt-overview.webp"
+                    alt="ChatGPT Pros and Cons: Honest Assessment - detailed analysis and breakdown"
+                    title="ChatGPT Pros and Cons: Honest Assessment"
+                    width={800}
+                    height={450}
+                    className="w-full h-auto rounded-lg"
+                  />
+                </div>
                 
               </div>
             </div>

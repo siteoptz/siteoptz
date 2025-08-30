@@ -366,9 +366,9 @@ export default function TabnineReviewPage({ tool }: TabnineReviewPageProps) {
                 
                 <div className="mt-8">
                   <Image
-                    src="/images/reviews/tabnine-tabnine-pricing.webp"
-                    alt="Tabnine pricing - detailed view"
-                    title="Tabnine tabnine pricing"
+                    src="/images/reviews/tabnine-features.webp"
+                    alt="Tabnine Key Features & Capabilities - detailed analysis and breakdown"
+                    title="Tabnine Key Features & Capabilities"
                     width={800}
                     height={450}
                     className="w-full h-auto rounded-lg"
@@ -402,9 +402,9 @@ export default function TabnineReviewPage({ tool }: TabnineReviewPageProps) {
                 
                 <div className="mt-8">
                   <Image
-                    src="/images/reviews/tabnine-tabnine-features.webp"
-                    alt="Tabnine features - detailed view"
-                    title="Tabnine tabnine features"
+                    src="/images/reviews/tabnine-pricing.webp"
+                    alt="Tabnine Pricing Plans & Options - detailed analysis and breakdown"
+                    title="Tabnine Pricing Plans & Options"
                     width={800}
                     height={450}
                     className="w-full h-auto rounded-lg"
@@ -433,9 +433,9 @@ export default function TabnineReviewPage({ tool }: TabnineReviewPageProps) {
                 
                 <div className="mt-8">
                   <Image
-                    src="/images/reviews/tabnine-tabnine-vs-competitors.webp"
-                    alt="Tabnine vs competitors - detailed view"
-                    title="Tabnine tabnine vs competitors"
+                    src="/images/reviews/tabnine-use-cases.webp"
+                    alt="Tabnine Use Cases & Applications - detailed analysis and breakdown"
+                    title="Tabnine Use Cases & Applications"
                     width={800}
                     height={450}
                     className="w-full h-auto rounded-lg"
@@ -467,6 +467,17 @@ export default function TabnineReviewPage({ tool }: TabnineReviewPageProps) {
                   </div>
                 </div>
                 
+                
+                <div className="mt-8">
+                  <Image
+                    src="/images/reviews/tabnine-overview.webp"
+                    alt="Tabnine Pros and Cons: Honest Assessment - detailed analysis and breakdown"
+                    title="Tabnine Pros and Cons: Honest Assessment"
+                    width={800}
+                    height={450}
+                    className="w-full h-auto rounded-lg"
+                  />
+                </div>
                 
               </div>
             </div>

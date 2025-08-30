@@ -366,9 +366,9 @@ export default function WritesonicReviewPage({ tool }: WritesonicReviewPageProps
                 
                 <div className="mt-8">
                   <Image
-                    src="/images/reviews/writesonic-writesonic-pricing.webp"
-                    alt="Writesonic pricing - detailed view"
-                    title="Writesonic writesonic pricing"
+                    src="/images/reviews/writesonic-features.webp"
+                    alt="Writesonic Key Features & Capabilities - detailed analysis and breakdown"
+                    title="Writesonic Key Features & Capabilities"
                     width={800}
                     height={450}
                     className="w-full h-auto rounded-lg"
@@ -402,9 +402,9 @@ export default function WritesonicReviewPage({ tool }: WritesonicReviewPageProps
                 
                 <div className="mt-8">
                   <Image
-                    src="/images/reviews/writesonic-writesonic-features.webp"
-                    alt="Writesonic features - detailed view"
-                    title="Writesonic writesonic features"
+                    src="/images/reviews/writesonic-pricing.webp"
+                    alt="Writesonic Pricing Plans & Options - detailed analysis and breakdown"
+                    title="Writesonic Pricing Plans & Options"
                     width={800}
                     height={450}
                     className="w-full h-auto rounded-lg"
@@ -433,9 +433,9 @@ export default function WritesonicReviewPage({ tool }: WritesonicReviewPageProps
                 
                 <div className="mt-8">
                   <Image
-                    src="/images/reviews/writesonic-writesonic-vs-competitors.webp"
-                    alt="Writesonic vs competitors - detailed view"
-                    title="Writesonic writesonic vs competitors"
+                    src="/images/reviews/writesonic-use-cases.webp"
+                    alt="Writesonic Use Cases & Applications - detailed analysis and breakdown"
+                    title="Writesonic Use Cases & Applications"
                     width={800}
                     height={450}
                     className="w-full h-auto rounded-lg"
@@ -467,6 +467,17 @@ export default function WritesonicReviewPage({ tool }: WritesonicReviewPageProps
                   </div>
                 </div>
                 
+                
+                <div className="mt-8">
+                  <Image
+                    src="/images/reviews/writesonic-overview.webp"
+                    alt="Writesonic Pros and Cons: Honest Assessment - detailed analysis and breakdown"
+                    title="Writesonic Pros and Cons: Honest Assessment"
+                    width={800}
+                    height={450}
+                    className="w-full h-auto rounded-lg"
+                  />
+                </div>
                 
               </div>
             </div>

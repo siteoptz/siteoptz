@@ -366,9 +366,9 @@ export default function DeepgramReviewPage({ tool }: DeepgramReviewPageProps) {
                 
                 <div className="mt-8">
                   <Image
-                    src="/images/reviews/deepgram-deepgram-pricing.webp"
-                    alt="Deepgram pricing - detailed view"
-                    title="Deepgram deepgram pricing"
+                    src="/images/reviews/deepgram-features.webp"
+                    alt="Deepgram Key Features & Capabilities - detailed analysis and breakdown"
+                    title="Deepgram Key Features & Capabilities"
                     width={800}
                     height={450}
                     className="w-full h-auto rounded-lg"
@@ -402,9 +402,9 @@ export default function DeepgramReviewPage({ tool }: DeepgramReviewPageProps) {
                 
                 <div className="mt-8">
                   <Image
-                    src="/images/reviews/deepgram-deepgram-features.webp"
-                    alt="Deepgram features - detailed view"
-                    title="Deepgram deepgram features"
+                    src="/images/reviews/deepgram-pricing.webp"
+                    alt="Deepgram Pricing Plans & Options - detailed analysis and breakdown"
+                    title="Deepgram Pricing Plans & Options"
                     width={800}
                     height={450}
                     className="w-full h-auto rounded-lg"
@@ -433,9 +433,9 @@ export default function DeepgramReviewPage({ tool }: DeepgramReviewPageProps) {
                 
                 <div className="mt-8">
                   <Image
-                    src="/images/reviews/deepgram-deepgram-vs-competitors.webp"
-                    alt="Deepgram vs competitors - detailed view"
-                    title="Deepgram deepgram vs competitors"
+                    src="/images/reviews/deepgram-use-cases.webp"
+                    alt="Deepgram Use Cases & Applications - detailed analysis and breakdown"
+                    title="Deepgram Use Cases & Applications"
                     width={800}
                     height={450}
                     className="w-full h-auto rounded-lg"
@@ -467,6 +467,17 @@ export default function DeepgramReviewPage({ tool }: DeepgramReviewPageProps) {
                   </div>
                 </div>
                 
+                
+                <div className="mt-8">
+                  <Image
+                    src="/images/reviews/deepgram-overview.webp"
+                    alt="Deepgram Pros and Cons: Honest Assessment - detailed analysis and breakdown"
+                    title="Deepgram Pros and Cons: Honest Assessment"
+                    width={800}
+                    height={450}
+                    className="w-full h-auto rounded-lg"
+                  />
+                </div>
                 
               </div>
             </div>

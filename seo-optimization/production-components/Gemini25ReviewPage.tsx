@@ -366,9 +366,9 @@ export default function Gemini25ReviewPage({ tool }: Gemini25ReviewPageProps) {
                 
                 <div className="mt-8">
                   <Image
-                    src="/images/reviews/gemini-25-gemini-2.5-pricing.webp"
-                    alt="Gemini 2.5 pricing - detailed view"
-                    title="Gemini 2.5 gemini 2.5 pricing"
+                    src="/images/reviews/gemini-25-features.webp"
+                    alt="Gemini 2.5 Key Features & Capabilities - detailed analysis and breakdown"
+                    title="Gemini 2.5 Key Features & Capabilities"
                     width={800}
                     height={450}
                     className="w-full h-auto rounded-lg"
@@ -402,9 +402,9 @@ export default function Gemini25ReviewPage({ tool }: Gemini25ReviewPageProps) {
                 
                 <div className="mt-8">
                   <Image
-                    src="/images/reviews/gemini-25-gemini-2.5-features.webp"
-                    alt="Gemini 2.5 features - detailed view"
-                    title="Gemini 2.5 gemini 2.5 features"
+                    src="/images/reviews/gemini-25-pricing.webp"
+                    alt="Gemini 2.5 Pricing Plans & Options - detailed analysis and breakdown"
+                    title="Gemini 2.5 Pricing Plans & Options"
                     width={800}
                     height={450}
                     className="w-full h-auto rounded-lg"
@@ -433,9 +433,9 @@ export default function Gemini25ReviewPage({ tool }: Gemini25ReviewPageProps) {
                 
                 <div className="mt-8">
                   <Image
-                    src="/images/reviews/gemini-25-gemini-2.5-vs-competitors.webp"
-                    alt="Gemini 2.5 vs competitors - detailed view"
-                    title="Gemini 2.5 gemini 2.5 vs competitors"
+                    src="/images/reviews/gemini-25-use-cases.webp"
+                    alt="Gemini 2.5 Use Cases & Applications - detailed analysis and breakdown"
+                    title="Gemini 2.5 Use Cases & Applications"
                     width={800}
                     height={450}
                     className="w-full h-auto rounded-lg"
@@ -467,6 +467,17 @@ export default function Gemini25ReviewPage({ tool }: Gemini25ReviewPageProps) {
                   </div>
                 </div>
                 
+                
+                <div className="mt-8">
+                  <Image
+                    src="/images/reviews/gemini-25-overview.webp"
+                    alt="Gemini 2.5 Pros and Cons: Honest Assessment - detailed analysis and breakdown"
+                    title="Gemini 2.5 Pros and Cons: Honest Assessment"
+                    width={800}
+                    height={450}
+                    className="w-full h-auto rounded-lg"
+                  />
+                </div>
                 
               </div>
             </div>

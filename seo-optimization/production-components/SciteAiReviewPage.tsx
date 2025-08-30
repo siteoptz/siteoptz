@@ -366,9 +366,9 @@ export default function SciteAiReviewPage({ tool }: SciteAiReviewPageProps) {
                 
                 <div className="mt-8">
                   <Image
-                    src="/images/reviews/scite-ai-scite.ai-pricing.webp"
-                    alt="scite.ai pricing - detailed view"
-                    title="scite.ai scite.ai pricing"
+                    src="/images/reviews/scite-ai-features.webp"
+                    alt="scite.ai Key Features & Capabilities - detailed analysis and breakdown"
+                    title="scite.ai Key Features & Capabilities"
                     width={800}
                     height={450}
                     className="w-full h-auto rounded-lg"
@@ -402,9 +402,9 @@ export default function SciteAiReviewPage({ tool }: SciteAiReviewPageProps) {
                 
                 <div className="mt-8">
                   <Image
-                    src="/images/reviews/scite-ai-scite.ai-features.webp"
-                    alt="scite.ai features - detailed view"
-                    title="scite.ai scite.ai features"
+                    src="/images/reviews/scite-ai-pricing.webp"
+                    alt="scite.ai Pricing Plans & Options - detailed analysis and breakdown"
+                    title="scite.ai Pricing Plans & Options"
                     width={800}
                     height={450}
                     className="w-full h-auto rounded-lg"
@@ -433,9 +433,9 @@ export default function SciteAiReviewPage({ tool }: SciteAiReviewPageProps) {
                 
                 <div className="mt-8">
                   <Image
-                    src="/images/reviews/scite-ai-scite.ai-vs-competitors.webp"
-                    alt="scite.ai vs competitors - detailed view"
-                    title="scite.ai scite.ai vs competitors"
+                    src="/images/reviews/scite-ai-use-cases.webp"
+                    alt="scite.ai Use Cases & Applications - detailed analysis and breakdown"
+                    title="scite.ai Use Cases & Applications"
                     width={800}
                     height={450}
                     className="w-full h-auto rounded-lg"
@@ -467,6 +467,17 @@ export default function SciteAiReviewPage({ tool }: SciteAiReviewPageProps) {
                   </div>
                 </div>
                 
+                
+                <div className="mt-8">
+                  <Image
+                    src="/images/reviews/scite-ai-overview.webp"
+                    alt="scite.ai Pros and Cons: Honest Assessment - detailed analysis and breakdown"
+                    title="scite.ai Pros and Cons: Honest Assessment"
+                    width={800}
+                    height={450}
+                    className="w-full h-auto rounded-lg"
+                  />
+                </div>
                 
               </div>
             </div>

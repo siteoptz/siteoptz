@@ -366,9 +366,9 @@ export default function ReveImageReviewPage({ tool }: ReveImageReviewPageProps) 
                 
                 <div className="mt-8">
                   <Image
-                    src="/images/reviews/reve-image-reve-image-pricing.webp"
-                    alt="Reve Image pricing - detailed view"
-                    title="Reve Image reve image pricing"
+                    src="/images/reviews/reve-image-features.webp"
+                    alt="Reve Image Key Features & Capabilities - detailed analysis and breakdown"
+                    title="Reve Image Key Features & Capabilities"
                     width={800}
                     height={450}
                     className="w-full h-auto rounded-lg"
@@ -402,9 +402,9 @@ export default function ReveImageReviewPage({ tool }: ReveImageReviewPageProps) 
                 
                 <div className="mt-8">
                   <Image
-                    src="/images/reviews/reve-image-reve-image-features.webp"
-                    alt="Reve Image features - detailed view"
-                    title="Reve Image reve image features"
+                    src="/images/reviews/reve-image-pricing.webp"
+                    alt="Reve Image Pricing Plans & Options - detailed analysis and breakdown"
+                    title="Reve Image Pricing Plans & Options"
                     width={800}
                     height={450}
                     className="w-full h-auto rounded-lg"
@@ -433,9 +433,9 @@ export default function ReveImageReviewPage({ tool }: ReveImageReviewPageProps) 
                 
                 <div className="mt-8">
                   <Image
-                    src="/images/reviews/reve-image-reve-image-vs-competitors.webp"
-                    alt="Reve Image vs competitors - detailed view"
-                    title="Reve Image reve image vs competitors"
+                    src="/images/reviews/reve-image-use-cases.webp"
+                    alt="Reve Image Use Cases & Applications - detailed analysis and breakdown"
+                    title="Reve Image Use Cases & Applications"
                     width={800}
                     height={450}
                     className="w-full h-auto rounded-lg"
@@ -467,6 +467,17 @@ export default function ReveImageReviewPage({ tool }: ReveImageReviewPageProps) 
                   </div>
                 </div>
                 
+                
+                <div className="mt-8">
+                  <Image
+                    src="/images/reviews/reve-image-overview.webp"
+                    alt="Reve Image Pros and Cons: Honest Assessment - detailed analysis and breakdown"
+                    title="Reve Image Pros and Cons: Honest Assessment"
+                    width={800}
+                    height={450}
+                    className="w-full h-auto rounded-lg"
+                  />
+                </div>
                 
               </div>
             </div>

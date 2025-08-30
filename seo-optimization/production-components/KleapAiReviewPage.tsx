@@ -366,9 +366,9 @@ export default function KleapAiReviewPage({ tool }: KleapAiReviewPageProps) {
                 
                 <div className="mt-8">
                   <Image
-                    src="/images/reviews/kleap-ai-kleap-pricing.webp"
-                    alt="Kleap pricing - detailed view"
-                    title="Kleap kleap pricing"
+                    src="/images/reviews/kleap-ai-features.webp"
+                    alt="Kleap Key Features & Capabilities - detailed analysis and breakdown"
+                    title="Kleap Key Features & Capabilities"
                     width={800}
                     height={450}
                     className="w-full h-auto rounded-lg"
@@ -402,9 +402,9 @@ export default function KleapAiReviewPage({ tool }: KleapAiReviewPageProps) {
                 
                 <div className="mt-8">
                   <Image
-                    src="/images/reviews/kleap-ai-kleap-features.webp"
-                    alt="Kleap features - detailed view"
-                    title="Kleap kleap features"
+                    src="/images/reviews/kleap-ai-pricing.webp"
+                    alt="Kleap Pricing Plans & Options - detailed analysis and breakdown"
+                    title="Kleap Pricing Plans & Options"
                     width={800}
                     height={450}
                     className="w-full h-auto rounded-lg"
@@ -433,9 +433,9 @@ export default function KleapAiReviewPage({ tool }: KleapAiReviewPageProps) {
                 
                 <div className="mt-8">
                   <Image
-                    src="/images/reviews/kleap-ai-kleap-vs-competitors.webp"
-                    alt="Kleap vs competitors - detailed view"
-                    title="Kleap kleap vs competitors"
+                    src="/images/reviews/kleap-ai-use-cases.webp"
+                    alt="Kleap Use Cases & Applications - detailed analysis and breakdown"
+                    title="Kleap Use Cases & Applications"
                     width={800}
                     height={450}
                     className="w-full h-auto rounded-lg"
@@ -467,6 +467,17 @@ export default function KleapAiReviewPage({ tool }: KleapAiReviewPageProps) {
                   </div>
                 </div>
                 
+                
+                <div className="mt-8">
+                  <Image
+                    src="/images/reviews/kleap-ai-overview.webp"
+                    alt="Kleap Pros and Cons: Honest Assessment - detailed analysis and breakdown"
+                    title="Kleap Pros and Cons: Honest Assessment"
+                    width={800}
+                    height={450}
+                    className="w-full h-auto rounded-lg"
+                  />
+                </div>
                 
               </div>
             </div>

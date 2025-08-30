@@ -366,9 +366,9 @@ export default function LookerReviewPage({ tool }: LookerReviewPageProps) {
                 
                 <div className="mt-8">
                   <Image
-                    src="/images/reviews/looker-looker-pricing.webp"
-                    alt="Looker pricing - detailed view"
-                    title="Looker looker pricing"
+                    src="/images/reviews/looker-features.webp"
+                    alt="Looker Key Features & Capabilities - detailed analysis and breakdown"
+                    title="Looker Key Features & Capabilities"
                     width={800}
                     height={450}
                     className="w-full h-auto rounded-lg"
@@ -402,9 +402,9 @@ export default function LookerReviewPage({ tool }: LookerReviewPageProps) {
                 
                 <div className="mt-8">
                   <Image
-                    src="/images/reviews/looker-looker-features.webp"
-                    alt="Looker features - detailed view"
-                    title="Looker looker features"
+                    src="/images/reviews/looker-pricing.webp"
+                    alt="Looker Pricing Plans & Options - detailed analysis and breakdown"
+                    title="Looker Pricing Plans & Options"
                     width={800}
                     height={450}
                     className="w-full h-auto rounded-lg"
@@ -433,9 +433,9 @@ export default function LookerReviewPage({ tool }: LookerReviewPageProps) {
                 
                 <div className="mt-8">
                   <Image
-                    src="/images/reviews/looker-looker-vs-competitors.webp"
-                    alt="Looker vs competitors - detailed view"
-                    title="Looker looker vs competitors"
+                    src="/images/reviews/looker-use-cases.webp"
+                    alt="Looker Use Cases & Applications - detailed analysis and breakdown"
+                    title="Looker Use Cases & Applications"
                     width={800}
                     height={450}
                     className="w-full h-auto rounded-lg"
@@ -467,6 +467,17 @@ export default function LookerReviewPage({ tool }: LookerReviewPageProps) {
                   </div>
                 </div>
                 
+                
+                <div className="mt-8">
+                  <Image
+                    src="/images/reviews/looker-overview.webp"
+                    alt="Looker Pros and Cons: Honest Assessment - detailed analysis and breakdown"
+                    title="Looker Pros and Cons: Honest Assessment"
+                    width={800}
+                    height={450}
+                    className="w-full h-auto rounded-lg"
+                  />
+                </div>
                 
               </div>
             </div>

@@ -366,9 +366,9 @@ export default function CastmagicReviewPage({ tool }: CastmagicReviewPageProps) 
                 
                 <div className="mt-8">
                   <Image
-                    src="/images/reviews/castmagic-castmagic-pricing.webp"
-                    alt="Castmagic pricing - detailed view"
-                    title="Castmagic castmagic pricing"
+                    src="/images/reviews/castmagic-features.webp"
+                    alt="Castmagic Key Features & Capabilities - detailed analysis and breakdown"
+                    title="Castmagic Key Features & Capabilities"
                     width={800}
                     height={450}
                     className="w-full h-auto rounded-lg"
@@ -402,9 +402,9 @@ export default function CastmagicReviewPage({ tool }: CastmagicReviewPageProps) 
                 
                 <div className="mt-8">
                   <Image
-                    src="/images/reviews/castmagic-castmagic-features.webp"
-                    alt="Castmagic features - detailed view"
-                    title="Castmagic castmagic features"
+                    src="/images/reviews/castmagic-pricing.webp"
+                    alt="Castmagic Pricing Plans & Options - detailed analysis and breakdown"
+                    title="Castmagic Pricing Plans & Options"
                     width={800}
                     height={450}
                     className="w-full h-auto rounded-lg"
@@ -433,9 +433,9 @@ export default function CastmagicReviewPage({ tool }: CastmagicReviewPageProps) 
                 
                 <div className="mt-8">
                   <Image
-                    src="/images/reviews/castmagic-castmagic-vs-competitors.webp"
-                    alt="Castmagic vs competitors - detailed view"
-                    title="Castmagic castmagic vs competitors"
+                    src="/images/reviews/castmagic-use-cases.webp"
+                    alt="Castmagic Use Cases & Applications - detailed analysis and breakdown"
+                    title="Castmagic Use Cases & Applications"
                     width={800}
                     height={450}
                     className="w-full h-auto rounded-lg"
@@ -467,6 +467,17 @@ export default function CastmagicReviewPage({ tool }: CastmagicReviewPageProps) 
                   </div>
                 </div>
                 
+                
+                <div className="mt-8">
+                  <Image
+                    src="/images/reviews/castmagic-overview.webp"
+                    alt="Castmagic Pros and Cons: Honest Assessment - detailed analysis and breakdown"
+                    title="Castmagic Pros and Cons: Honest Assessment"
+                    width={800}
+                    height={450}
+                    className="w-full h-auto rounded-lg"
+                  />
+                </div>
                 
               </div>
             </div>

@@ -366,9 +366,9 @@ export default function LeonardoAiReviewPage({ tool }: LeonardoAiReviewPageProps
                 
                 <div className="mt-8">
                   <Image
-                    src="/images/reviews/leonardo-ai-leonardo.ai-pricing.webp"
-                    alt="Leonardo.ai pricing - detailed view"
-                    title="Leonardo.ai leonardo.ai pricing"
+                    src="/images/reviews/leonardo-ai-features.webp"
+                    alt="Leonardo.ai Key Features & Capabilities - detailed analysis and breakdown"
+                    title="Leonardo.ai Key Features & Capabilities"
                     width={800}
                     height={450}
                     className="w-full h-auto rounded-lg"
@@ -402,9 +402,9 @@ export default function LeonardoAiReviewPage({ tool }: LeonardoAiReviewPageProps
                 
                 <div className="mt-8">
                   <Image
-                    src="/images/reviews/leonardo-ai-leonardo.ai-features.webp"
-                    alt="Leonardo.ai features - detailed view"
-                    title="Leonardo.ai leonardo.ai features"
+                    src="/images/reviews/leonardo-ai-pricing.webp"
+                    alt="Leonardo.ai Pricing Plans & Options - detailed analysis and breakdown"
+                    title="Leonardo.ai Pricing Plans & Options"
                     width={800}
                     height={450}
                     className="w-full h-auto rounded-lg"
@@ -433,9 +433,9 @@ export default function LeonardoAiReviewPage({ tool }: LeonardoAiReviewPageProps
                 
                 <div className="mt-8">
                   <Image
-                    src="/images/reviews/leonardo-ai-leonardo.ai-vs-competitors.webp"
-                    alt="Leonardo.ai vs competitors - detailed view"
-                    title="Leonardo.ai leonardo.ai vs competitors"
+                    src="/images/reviews/leonardo-ai-use-cases.webp"
+                    alt="Leonardo.ai Use Cases & Applications - detailed analysis and breakdown"
+                    title="Leonardo.ai Use Cases & Applications"
                     width={800}
                     height={450}
                     className="w-full h-auto rounded-lg"
@@ -467,6 +467,17 @@ export default function LeonardoAiReviewPage({ tool }: LeonardoAiReviewPageProps
                   </div>
                 </div>
                 
+                
+                <div className="mt-8">
+                  <Image
+                    src="/images/reviews/leonardo-ai-overview.webp"
+                    alt="Leonardo.ai Pros and Cons: Honest Assessment - detailed analysis and breakdown"
+                    title="Leonardo.ai Pros and Cons: Honest Assessment"
+                    width={800}
+                    height={450}
+                    className="w-full h-auto rounded-lg"
+                  />
+                </div>
                 
               </div>
             </div>

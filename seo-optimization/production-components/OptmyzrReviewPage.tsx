@@ -366,9 +366,9 @@ export default function OptmyzrReviewPage({ tool }: OptmyzrReviewPageProps) {
                 
                 <div className="mt-8">
                   <Image
-                    src="/images/reviews/optmyzr-optmyzr-pricing.webp"
-                    alt="Optmyzr pricing - detailed view"
-                    title="Optmyzr optmyzr pricing"
+                    src="/images/reviews/optmyzr-features.webp"
+                    alt="Optmyzr Key Features & Capabilities - detailed analysis and breakdown"
+                    title="Optmyzr Key Features & Capabilities"
                     width={800}
                     height={450}
                     className="w-full h-auto rounded-lg"
@@ -402,9 +402,9 @@ export default function OptmyzrReviewPage({ tool }: OptmyzrReviewPageProps) {
                 
                 <div className="mt-8">
                   <Image
-                    src="/images/reviews/optmyzr-optmyzr-features.webp"
-                    alt="Optmyzr features - detailed view"
-                    title="Optmyzr optmyzr features"
+                    src="/images/reviews/optmyzr-pricing.webp"
+                    alt="Optmyzr Pricing Plans & Options - detailed analysis and breakdown"
+                    title="Optmyzr Pricing Plans & Options"
                     width={800}
                     height={450}
                     className="w-full h-auto rounded-lg"
@@ -433,9 +433,9 @@ export default function OptmyzrReviewPage({ tool }: OptmyzrReviewPageProps) {
                 
                 <div className="mt-8">
                   <Image
-                    src="/images/reviews/optmyzr-optmyzr-vs-competitors.webp"
-                    alt="Optmyzr vs competitors - detailed view"
-                    title="Optmyzr optmyzr vs competitors"
+                    src="/images/reviews/optmyzr-use-cases.webp"
+                    alt="Optmyzr Use Cases & Applications - detailed analysis and breakdown"
+                    title="Optmyzr Use Cases & Applications"
                     width={800}
                     height={450}
                     className="w-full h-auto rounded-lg"
@@ -467,6 +467,17 @@ export default function OptmyzrReviewPage({ tool }: OptmyzrReviewPageProps) {
                   </div>
                 </div>
                 
+                
+                <div className="mt-8">
+                  <Image
+                    src="/images/reviews/optmyzr-overview.webp"
+                    alt="Optmyzr Pros and Cons: Honest Assessment - detailed analysis and breakdown"
+                    title="Optmyzr Pros and Cons: Honest Assessment"
+                    width={800}
+                    height={450}
+                    className="w-full h-auto rounded-lg"
+                  />
+                </div>
                 
               </div>
             </div>

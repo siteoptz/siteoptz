@@ -366,9 +366,9 @@ export default function BufferAiReviewPage({ tool }: BufferAiReviewPageProps) {
                 
                 <div className="mt-8">
                   <Image
-                    src="/images/reviews/buffer-ai-buffer-ai-pricing.webp"
-                    alt="Buffer AI pricing - detailed view"
-                    title="Buffer AI buffer ai pricing"
+                    src="/images/reviews/buffer-ai-features.webp"
+                    alt="Buffer AI Key Features & Capabilities - detailed analysis and breakdown"
+                    title="Buffer AI Key Features & Capabilities"
                     width={800}
                     height={450}
                     className="w-full h-auto rounded-lg"
@@ -402,9 +402,9 @@ export default function BufferAiReviewPage({ tool }: BufferAiReviewPageProps) {
                 
                 <div className="mt-8">
                   <Image
-                    src="/images/reviews/buffer-ai-buffer-ai-features.webp"
-                    alt="Buffer AI features - detailed view"
-                    title="Buffer AI buffer ai features"
+                    src="/images/reviews/buffer-ai-pricing.webp"
+                    alt="Buffer AI Pricing Plans & Options - detailed analysis and breakdown"
+                    title="Buffer AI Pricing Plans & Options"
                     width={800}
                     height={450}
                     className="w-full h-auto rounded-lg"
@@ -433,9 +433,9 @@ export default function BufferAiReviewPage({ tool }: BufferAiReviewPageProps) {
                 
                 <div className="mt-8">
                   <Image
-                    src="/images/reviews/buffer-ai-buffer-ai-vs-competitors.webp"
-                    alt="Buffer AI vs competitors - detailed view"
-                    title="Buffer AI buffer ai vs competitors"
+                    src="/images/reviews/buffer-ai-use-cases.webp"
+                    alt="Buffer AI Use Cases & Applications - detailed analysis and breakdown"
+                    title="Buffer AI Use Cases & Applications"
                     width={800}
                     height={450}
                     className="w-full h-auto rounded-lg"
@@ -467,6 +467,17 @@ export default function BufferAiReviewPage({ tool }: BufferAiReviewPageProps) {
                   </div>
                 </div>
                 
+                
+                <div className="mt-8">
+                  <Image
+                    src="/images/reviews/buffer-ai-overview.webp"
+                    alt="Buffer AI Pros and Cons: Honest Assessment - detailed analysis and breakdown"
+                    title="Buffer AI Pros and Cons: Honest Assessment"
+                    width={800}
+                    height={450}
+                    className="w-full h-auto rounded-lg"
+                  />
+                </div>
                 
               </div>
             </div>

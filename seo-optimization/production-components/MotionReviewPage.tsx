@@ -366,9 +366,9 @@ export default function MotionReviewPage({ tool }: MotionReviewPageProps) {
                 
                 <div className="mt-8">
                   <Image
-                    src="/images/reviews/motion-motion-pricing.webp"
-                    alt="Motion pricing - detailed view"
-                    title="Motion motion pricing"
+                    src="/images/reviews/motion-features.webp"
+                    alt="Motion Key Features & Capabilities - detailed analysis and breakdown"
+                    title="Motion Key Features & Capabilities"
                     width={800}
                     height={450}
                     className="w-full h-auto rounded-lg"
@@ -402,9 +402,9 @@ export default function MotionReviewPage({ tool }: MotionReviewPageProps) {
                 
                 <div className="mt-8">
                   <Image
-                    src="/images/reviews/motion-motion-features.webp"
-                    alt="Motion features - detailed view"
-                    title="Motion motion features"
+                    src="/images/reviews/motion-pricing.webp"
+                    alt="Motion Pricing Plans & Options - detailed analysis and breakdown"
+                    title="Motion Pricing Plans & Options"
                     width={800}
                     height={450}
                     className="w-full h-auto rounded-lg"
@@ -433,9 +433,9 @@ export default function MotionReviewPage({ tool }: MotionReviewPageProps) {
                 
                 <div className="mt-8">
                   <Image
-                    src="/images/reviews/motion-motion-vs-competitors.webp"
-                    alt="Motion vs competitors - detailed view"
-                    title="Motion motion vs competitors"
+                    src="/images/reviews/motion-use-cases.webp"
+                    alt="Motion Use Cases & Applications - detailed analysis and breakdown"
+                    title="Motion Use Cases & Applications"
                     width={800}
                     height={450}
                     className="w-full h-auto rounded-lg"
@@ -467,6 +467,17 @@ export default function MotionReviewPage({ tool }: MotionReviewPageProps) {
                   </div>
                 </div>
                 
+                
+                <div className="mt-8">
+                  <Image
+                    src="/images/reviews/motion-overview.webp"
+                    alt="Motion Pros and Cons: Honest Assessment - detailed analysis and breakdown"
+                    title="Motion Pros and Cons: Honest Assessment"
+                    width={800}
+                    height={450}
+                    className="w-full h-auto rounded-lg"
+                  />
+                </div>
                 
               </div>
             </div>

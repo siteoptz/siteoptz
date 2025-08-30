@@ -366,9 +366,9 @@ export default function LovableReviewPage({ tool }: LovableReviewPageProps) {
                 
                 <div className="mt-8">
                   <Image
-                    src="/images/reviews/lovable-lovable-pricing.webp"
-                    alt="Lovable pricing - detailed view"
-                    title="Lovable lovable pricing"
+                    src="/images/reviews/lovable-features.webp"
+                    alt="Lovable Key Features & Capabilities - detailed analysis and breakdown"
+                    title="Lovable Key Features & Capabilities"
                     width={800}
                     height={450}
                     className="w-full h-auto rounded-lg"
@@ -402,9 +402,9 @@ export default function LovableReviewPage({ tool }: LovableReviewPageProps) {
                 
                 <div className="mt-8">
                   <Image
-                    src="/images/reviews/lovable-lovable-features.webp"
-                    alt="Lovable features - detailed view"
-                    title="Lovable lovable features"
+                    src="/images/reviews/lovable-pricing.webp"
+                    alt="Lovable Pricing Plans & Options - detailed analysis and breakdown"
+                    title="Lovable Pricing Plans & Options"
                     width={800}
                     height={450}
                     className="w-full h-auto rounded-lg"
@@ -433,9 +433,9 @@ export default function LovableReviewPage({ tool }: LovableReviewPageProps) {
                 
                 <div className="mt-8">
                   <Image
-                    src="/images/reviews/lovable-lovable-vs-competitors.webp"
-                    alt="Lovable vs competitors - detailed view"
-                    title="Lovable lovable vs competitors"
+                    src="/images/reviews/lovable-use-cases.webp"
+                    alt="Lovable Use Cases & Applications - detailed analysis and breakdown"
+                    title="Lovable Use Cases & Applications"
                     width={800}
                     height={450}
                     className="w-full h-auto rounded-lg"
@@ -467,6 +467,17 @@ export default function LovableReviewPage({ tool }: LovableReviewPageProps) {
                   </div>
                 </div>
                 
+                
+                <div className="mt-8">
+                  <Image
+                    src="/images/reviews/lovable-overview.webp"
+                    alt="Lovable Pros and Cons: Honest Assessment - detailed analysis and breakdown"
+                    title="Lovable Pros and Cons: Honest Assessment"
+                    width={800}
+                    height={450}
+                    className="w-full h-auto rounded-lg"
+                  />
+                </div>
                 
               </div>
             </div>

@@ -366,9 +366,9 @@ export default function GuruReviewPage({ tool }: GuruReviewPageProps) {
                 
                 <div className="mt-8">
                   <Image
-                    src="/images/reviews/guru-guru-pricing.webp"
-                    alt="Guru pricing - detailed view"
-                    title="Guru guru pricing"
+                    src="/images/reviews/guru-features.webp"
+                    alt="Guru Key Features & Capabilities - detailed analysis and breakdown"
+                    title="Guru Key Features & Capabilities"
                     width={800}
                     height={450}
                     className="w-full h-auto rounded-lg"
@@ -402,9 +402,9 @@ export default function GuruReviewPage({ tool }: GuruReviewPageProps) {
                 
                 <div className="mt-8">
                   <Image
-                    src="/images/reviews/guru-guru-features.webp"
-                    alt="Guru features - detailed view"
-                    title="Guru guru features"
+                    src="/images/reviews/guru-pricing.webp"
+                    alt="Guru Pricing Plans & Options - detailed analysis and breakdown"
+                    title="Guru Pricing Plans & Options"
                     width={800}
                     height={450}
                     className="w-full h-auto rounded-lg"
@@ -433,9 +433,9 @@ export default function GuruReviewPage({ tool }: GuruReviewPageProps) {
                 
                 <div className="mt-8">
                   <Image
-                    src="/images/reviews/guru-guru-vs-competitors.webp"
-                    alt="Guru vs competitors - detailed view"
-                    title="Guru guru vs competitors"
+                    src="/images/reviews/guru-use-cases.webp"
+                    alt="Guru Use Cases & Applications - detailed analysis and breakdown"
+                    title="Guru Use Cases & Applications"
                     width={800}
                     height={450}
                     className="w-full h-auto rounded-lg"
@@ -467,6 +467,17 @@ export default function GuruReviewPage({ tool }: GuruReviewPageProps) {
                   </div>
                 </div>
                 
+                
+                <div className="mt-8">
+                  <Image
+                    src="/images/reviews/guru-overview.webp"
+                    alt="Guru Pros and Cons: Honest Assessment - detailed analysis and breakdown"
+                    title="Guru Pros and Cons: Honest Assessment"
+                    width={800}
+                    height={450}
+                    className="w-full h-auto rounded-lg"
+                  />
+                </div>
                 
               </div>
             </div>

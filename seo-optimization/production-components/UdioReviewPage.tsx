@@ -366,9 +366,9 @@ export default function UdioReviewPage({ tool }: UdioReviewPageProps) {
                 
                 <div className="mt-8">
                   <Image
-                    src="/images/reviews/udio-udio-pricing.webp"
-                    alt="Udio pricing - detailed view"
-                    title="Udio udio pricing"
+                    src="/images/reviews/udio-features.webp"
+                    alt="Udio Key Features & Capabilities - detailed analysis and breakdown"
+                    title="Udio Key Features & Capabilities"
                     width={800}
                     height={450}
                     className="w-full h-auto rounded-lg"
@@ -402,9 +402,9 @@ export default function UdioReviewPage({ tool }: UdioReviewPageProps) {
                 
                 <div className="mt-8">
                   <Image
-                    src="/images/reviews/udio-udio-features.webp"
-                    alt="Udio features - detailed view"
-                    title="Udio udio features"
+                    src="/images/reviews/udio-pricing.webp"
+                    alt="Udio Pricing Plans & Options - detailed analysis and breakdown"
+                    title="Udio Pricing Plans & Options"
                     width={800}
                     height={450}
                     className="w-full h-auto rounded-lg"
@@ -433,9 +433,9 @@ export default function UdioReviewPage({ tool }: UdioReviewPageProps) {
                 
                 <div className="mt-8">
                   <Image
-                    src="/images/reviews/udio-udio-vs-competitors.webp"
-                    alt="Udio vs competitors - detailed view"
-                    title="Udio udio vs competitors"
+                    src="/images/reviews/udio-use-cases.webp"
+                    alt="Udio Use Cases & Applications - detailed analysis and breakdown"
+                    title="Udio Use Cases & Applications"
                     width={800}
                     height={450}
                     className="w-full h-auto rounded-lg"
@@ -467,6 +467,17 @@ export default function UdioReviewPage({ tool }: UdioReviewPageProps) {
                   </div>
                 </div>
                 
+                
+                <div className="mt-8">
+                  <Image
+                    src="/images/reviews/udio-overview.webp"
+                    alt="Udio Pros and Cons: Honest Assessment - detailed analysis and breakdown"
+                    title="Udio Pros and Cons: Honest Assessment"
+                    width={800}
+                    height={450}
+                    className="w-full h-auto rounded-lg"
+                  />
+                </div>
                 
               </div>
             </div>

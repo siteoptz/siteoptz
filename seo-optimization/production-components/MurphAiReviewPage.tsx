@@ -366,9 +366,9 @@ export default function MurphAiReviewPage({ tool }: MurphAiReviewPageProps) {
                 
                 <div className="mt-8">
                   <Image
-                    src="/images/reviews/murph-ai-murph-ai-pricing.webp"
-                    alt="Murph AI pricing - detailed view"
-                    title="Murph AI murph ai pricing"
+                    src="/images/reviews/murph-ai-features.webp"
+                    alt="Murph AI Key Features & Capabilities - detailed analysis and breakdown"
+                    title="Murph AI Key Features & Capabilities"
                     width={800}
                     height={450}
                     className="w-full h-auto rounded-lg"
@@ -402,9 +402,9 @@ export default function MurphAiReviewPage({ tool }: MurphAiReviewPageProps) {
                 
                 <div className="mt-8">
                   <Image
-                    src="/images/reviews/murph-ai-murph-ai-features.webp"
-                    alt="Murph AI features - detailed view"
-                    title="Murph AI murph ai features"
+                    src="/images/reviews/murph-ai-pricing.webp"
+                    alt="Murph AI Pricing Plans & Options - detailed analysis and breakdown"
+                    title="Murph AI Pricing Plans & Options"
                     width={800}
                     height={450}
                     className="w-full h-auto rounded-lg"
@@ -433,9 +433,9 @@ export default function MurphAiReviewPage({ tool }: MurphAiReviewPageProps) {
                 
                 <div className="mt-8">
                   <Image
-                    src="/images/reviews/murph-ai-murph-ai-vs-competitors.webp"
-                    alt="Murph AI vs competitors - detailed view"
-                    title="Murph AI murph ai vs competitors"
+                    src="/images/reviews/murph-ai-use-cases.webp"
+                    alt="Murph AI Use Cases & Applications - detailed analysis and breakdown"
+                    title="Murph AI Use Cases & Applications"
                     width={800}
                     height={450}
                     className="w-full h-auto rounded-lg"
@@ -467,6 +467,17 @@ export default function MurphAiReviewPage({ tool }: MurphAiReviewPageProps) {
                   </div>
                 </div>
                 
+                
+                <div className="mt-8">
+                  <Image
+                    src="/images/reviews/murph-ai-overview.webp"
+                    alt="Murph AI Pros and Cons: Honest Assessment - detailed analysis and breakdown"
+                    title="Murph AI Pros and Cons: Honest Assessment"
+                    width={800}
+                    height={450}
+                    className="w-full h-auto rounded-lg"
+                  />
+                </div>
                 
               </div>
             </div>

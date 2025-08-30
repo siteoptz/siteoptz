@@ -366,9 +366,9 @@ export default function CohereAiReviewPage({ tool }: CohereAiReviewPageProps) {
                 
                 <div className="mt-8">
                   <Image
-                    src="/images/reviews/cohere-ai-cohere-pricing.webp"
-                    alt="Cohere pricing - detailed view"
-                    title="Cohere cohere pricing"
+                    src="/images/reviews/cohere-ai-features.webp"
+                    alt="Cohere Key Features & Capabilities - detailed analysis and breakdown"
+                    title="Cohere Key Features & Capabilities"
                     width={800}
                     height={450}
                     className="w-full h-auto rounded-lg"
@@ -402,9 +402,9 @@ export default function CohereAiReviewPage({ tool }: CohereAiReviewPageProps) {
                 
                 <div className="mt-8">
                   <Image
-                    src="/images/reviews/cohere-ai-cohere-features.webp"
-                    alt="Cohere features - detailed view"
-                    title="Cohere cohere features"
+                    src="/images/reviews/cohere-ai-pricing.webp"
+                    alt="Cohere Pricing Plans & Options - detailed analysis and breakdown"
+                    title="Cohere Pricing Plans & Options"
                     width={800}
                     height={450}
                     className="w-full h-auto rounded-lg"
@@ -433,9 +433,9 @@ export default function CohereAiReviewPage({ tool }: CohereAiReviewPageProps) {
                 
                 <div className="mt-8">
                   <Image
-                    src="/images/reviews/cohere-ai-cohere-vs-competitors.webp"
-                    alt="Cohere vs competitors - detailed view"
-                    title="Cohere cohere vs competitors"
+                    src="/images/reviews/cohere-ai-use-cases.webp"
+                    alt="Cohere Use Cases & Applications - detailed analysis and breakdown"
+                    title="Cohere Use Cases & Applications"
                     width={800}
                     height={450}
                     className="w-full h-auto rounded-lg"
@@ -467,6 +467,17 @@ export default function CohereAiReviewPage({ tool }: CohereAiReviewPageProps) {
                   </div>
                 </div>
                 
+                
+                <div className="mt-8">
+                  <Image
+                    src="/images/reviews/cohere-ai-overview.webp"
+                    alt="Cohere Pros and Cons: Honest Assessment - detailed analysis and breakdown"
+                    title="Cohere Pros and Cons: Honest Assessment"
+                    width={800}
+                    height={450}
+                    className="w-full h-auto rounded-lg"
+                  />
+                </div>
                 
               </div>
             </div>

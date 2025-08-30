@@ -366,9 +366,9 @@ export default function OpenaiGpt4ReviewPage({ tool }: OpenaiGpt4ReviewPageProps
                 
                 <div className="mt-8">
                   <Image
-                    src="/images/reviews/openai-gpt4-gpt-4-pricing.webp"
-                    alt="GPT-4 pricing - detailed view"
-                    title="GPT-4 gpt-4 pricing"
+                    src="/images/reviews/openai-gpt4-features.webp"
+                    alt="GPT-4 Key Features & Capabilities - detailed analysis and breakdown"
+                    title="GPT-4 Key Features & Capabilities"
                     width={800}
                     height={450}
                     className="w-full h-auto rounded-lg"
@@ -402,9 +402,9 @@ export default function OpenaiGpt4ReviewPage({ tool }: OpenaiGpt4ReviewPageProps
                 
                 <div className="mt-8">
                   <Image
-                    src="/images/reviews/openai-gpt4-gpt-4-features.webp"
-                    alt="GPT-4 features - detailed view"
-                    title="GPT-4 gpt-4 features"
+                    src="/images/reviews/openai-gpt4-pricing.webp"
+                    alt="GPT-4 Pricing Plans & Options - detailed analysis and breakdown"
+                    title="GPT-4 Pricing Plans & Options"
                     width={800}
                     height={450}
                     className="w-full h-auto rounded-lg"
@@ -433,9 +433,9 @@ export default function OpenaiGpt4ReviewPage({ tool }: OpenaiGpt4ReviewPageProps
                 
                 <div className="mt-8">
                   <Image
-                    src="/images/reviews/openai-gpt4-gpt-4-vs-competitors.webp"
-                    alt="GPT-4 vs competitors - detailed view"
-                    title="GPT-4 gpt-4 vs competitors"
+                    src="/images/reviews/openai-gpt4-use-cases.webp"
+                    alt="GPT-4 Use Cases & Applications - detailed analysis and breakdown"
+                    title="GPT-4 Use Cases & Applications"
                     width={800}
                     height={450}
                     className="w-full h-auto rounded-lg"
@@ -467,6 +467,17 @@ export default function OpenaiGpt4ReviewPage({ tool }: OpenaiGpt4ReviewPageProps
                   </div>
                 </div>
                 
+                
+                <div className="mt-8">
+                  <Image
+                    src="/images/reviews/openai-gpt4-overview.webp"
+                    alt="GPT-4 Pros and Cons: Honest Assessment - detailed analysis and breakdown"
+                    title="GPT-4 Pros and Cons: Honest Assessment"
+                    width={800}
+                    height={450}
+                    className="w-full h-auto rounded-lg"
+                  />
+                </div>
                 
               </div>
             </div>

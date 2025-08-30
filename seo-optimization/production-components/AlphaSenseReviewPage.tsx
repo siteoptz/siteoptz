@@ -366,9 +366,9 @@ export default function AlphaSenseReviewPage({ tool }: AlphaSenseReviewPageProps
                 
                 <div className="mt-8">
                   <Image
-                    src="/images/reviews/alpha-sense-alpha-sense-pricing.webp"
-                    alt="Alpha Sense pricing - detailed view"
-                    title="Alpha Sense alpha sense pricing"
+                    src="/images/reviews/alpha-sense-features.webp"
+                    alt="Alpha Sense Key Features & Capabilities - detailed analysis and breakdown"
+                    title="Alpha Sense Key Features & Capabilities"
                     width={800}
                     height={450}
                     className="w-full h-auto rounded-lg"
@@ -402,9 +402,9 @@ export default function AlphaSenseReviewPage({ tool }: AlphaSenseReviewPageProps
                 
                 <div className="mt-8">
                   <Image
-                    src="/images/reviews/alpha-sense-alpha-sense-features.webp"
-                    alt="Alpha Sense features - detailed view"
-                    title="Alpha Sense alpha sense features"
+                    src="/images/reviews/alpha-sense-pricing.webp"
+                    alt="Alpha Sense Pricing Plans & Options - detailed analysis and breakdown"
+                    title="Alpha Sense Pricing Plans & Options"
                     width={800}
                     height={450}
                     className="w-full h-auto rounded-lg"
@@ -433,9 +433,9 @@ export default function AlphaSenseReviewPage({ tool }: AlphaSenseReviewPageProps
                 
                 <div className="mt-8">
                   <Image
-                    src="/images/reviews/alpha-sense-alpha-sense-vs-competitors.webp"
-                    alt="Alpha Sense vs competitors - detailed view"
-                    title="Alpha Sense alpha sense vs competitors"
+                    src="/images/reviews/alpha-sense-use-cases.webp"
+                    alt="Alpha Sense Use Cases & Applications - detailed analysis and breakdown"
+                    title="Alpha Sense Use Cases & Applications"
                     width={800}
                     height={450}
                     className="w-full h-auto rounded-lg"
@@ -467,6 +467,17 @@ export default function AlphaSenseReviewPage({ tool }: AlphaSenseReviewPageProps
                   </div>
                 </div>
                 
+                
+                <div className="mt-8">
+                  <Image
+                    src="/images/reviews/alpha-sense-overview.webp"
+                    alt="Alpha Sense Pros and Cons: Honest Assessment - detailed analysis and breakdown"
+                    title="Alpha Sense Pros and Cons: Honest Assessment"
+                    width={800}
+                    height={450}
+                    className="w-full h-auto rounded-lg"
+                  />
+                </div>
                 
               </div>
             </div>

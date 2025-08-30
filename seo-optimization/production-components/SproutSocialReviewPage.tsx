@@ -366,9 +366,9 @@ export default function SproutSocialReviewPage({ tool }: SproutSocialReviewPageP
                 
                 <div className="mt-8">
                   <Image
-                    src="/images/reviews/sprout-social-sprout-social-pricing.webp"
-                    alt="Sprout Social pricing - detailed view"
-                    title="Sprout Social sprout social pricing"
+                    src="/images/reviews/sprout-social-features.webp"
+                    alt="Sprout Social Key Features & Capabilities - detailed analysis and breakdown"
+                    title="Sprout Social Key Features & Capabilities"
                     width={800}
                     height={450}
                     className="w-full h-auto rounded-lg"
@@ -402,9 +402,9 @@ export default function SproutSocialReviewPage({ tool }: SproutSocialReviewPageP
                 
                 <div className="mt-8">
                   <Image
-                    src="/images/reviews/sprout-social-sprout-social-features.webp"
-                    alt="Sprout Social features - detailed view"
-                    title="Sprout Social sprout social features"
+                    src="/images/reviews/sprout-social-pricing.webp"
+                    alt="Sprout Social Pricing Plans & Options - detailed analysis and breakdown"
+                    title="Sprout Social Pricing Plans & Options"
                     width={800}
                     height={450}
                     className="w-full h-auto rounded-lg"
@@ -433,9 +433,9 @@ export default function SproutSocialReviewPage({ tool }: SproutSocialReviewPageP
                 
                 <div className="mt-8">
                   <Image
-                    src="/images/reviews/sprout-social-sprout-social-vs-competitors.webp"
-                    alt="Sprout Social vs competitors - detailed view"
-                    title="Sprout Social sprout social vs competitors"
+                    src="/images/reviews/sprout-social-use-cases.webp"
+                    alt="Sprout Social Use Cases & Applications - detailed analysis and breakdown"
+                    title="Sprout Social Use Cases & Applications"
                     width={800}
                     height={450}
                     className="w-full h-auto rounded-lg"
@@ -467,6 +467,17 @@ export default function SproutSocialReviewPage({ tool }: SproutSocialReviewPageP
                   </div>
                 </div>
                 
+                
+                <div className="mt-8">
+                  <Image
+                    src="/images/reviews/sprout-social-overview.webp"
+                    alt="Sprout Social Pros and Cons: Honest Assessment - detailed analysis and breakdown"
+                    title="Sprout Social Pros and Cons: Honest Assessment"
+                    width={800}
+                    height={450}
+                    className="w-full h-auto rounded-lg"
+                  />
+                </div>
                 
               </div>
             </div>

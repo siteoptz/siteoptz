@@ -366,9 +366,9 @@ export default function ResearchPalReviewPage({ tool }: ResearchPalReviewPagePro
                 
                 <div className="mt-8">
                   <Image
-                    src="/images/reviews/research-pal-research-pal-pricing.webp"
-                    alt="Research Pal pricing - detailed view"
-                    title="Research Pal research pal pricing"
+                    src="/images/reviews/research-pal-features.webp"
+                    alt="Research Pal Key Features & Capabilities - detailed analysis and breakdown"
+                    title="Research Pal Key Features & Capabilities"
                     width={800}
                     height={450}
                     className="w-full h-auto rounded-lg"
@@ -402,9 +402,9 @@ export default function ResearchPalReviewPage({ tool }: ResearchPalReviewPagePro
                 
                 <div className="mt-8">
                   <Image
-                    src="/images/reviews/research-pal-research-pal-features.webp"
-                    alt="Research Pal features - detailed view"
-                    title="Research Pal research pal features"
+                    src="/images/reviews/research-pal-pricing.webp"
+                    alt="Research Pal Pricing Plans & Options - detailed analysis and breakdown"
+                    title="Research Pal Pricing Plans & Options"
                     width={800}
                     height={450}
                     className="w-full h-auto rounded-lg"
@@ -433,9 +433,9 @@ export default function ResearchPalReviewPage({ tool }: ResearchPalReviewPagePro
                 
                 <div className="mt-8">
                   <Image
-                    src="/images/reviews/research-pal-research-pal-vs-competitors.webp"
-                    alt="Research Pal vs competitors - detailed view"
-                    title="Research Pal research pal vs competitors"
+                    src="/images/reviews/research-pal-use-cases.webp"
+                    alt="Research Pal Use Cases & Applications - detailed analysis and breakdown"
+                    title="Research Pal Use Cases & Applications"
                     width={800}
                     height={450}
                     className="w-full h-auto rounded-lg"
@@ -467,6 +467,17 @@ export default function ResearchPalReviewPage({ tool }: ResearchPalReviewPagePro
                   </div>
                 </div>
                 
+                
+                <div className="mt-8">
+                  <Image
+                    src="/images/reviews/research-pal-overview.webp"
+                    alt="Research Pal Pros and Cons: Honest Assessment - detailed analysis and breakdown"
+                    title="Research Pal Pros and Cons: Honest Assessment"
+                    width={800}
+                    height={450}
+                    className="w-full h-auto rounded-lg"
+                  />
+                </div>
                 
               </div>
             </div>

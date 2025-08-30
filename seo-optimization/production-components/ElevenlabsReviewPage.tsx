@@ -366,9 +366,9 @@ export default function ElevenlabsReviewPage({ tool }: ElevenlabsReviewPageProps
                 
                 <div className="mt-8">
                   <Image
-                    src="/images/reviews/elevenlabs-elevenlabs-pricing.webp"
-                    alt="ElevenLabs pricing - detailed view"
-                    title="ElevenLabs elevenlabs pricing"
+                    src="/images/reviews/elevenlabs-features.webp"
+                    alt="ElevenLabs Key Features & Capabilities - detailed analysis and breakdown"
+                    title="ElevenLabs Key Features & Capabilities"
                     width={800}
                     height={450}
                     className="w-full h-auto rounded-lg"
@@ -402,9 +402,9 @@ export default function ElevenlabsReviewPage({ tool }: ElevenlabsReviewPageProps
                 
                 <div className="mt-8">
                   <Image
-                    src="/images/reviews/elevenlabs-elevenlabs-features.webp"
-                    alt="ElevenLabs features - detailed view"
-                    title="ElevenLabs elevenlabs features"
+                    src="/images/reviews/elevenlabs-pricing.webp"
+                    alt="ElevenLabs Pricing Plans & Options - detailed analysis and breakdown"
+                    title="ElevenLabs Pricing Plans & Options"
                     width={800}
                     height={450}
                     className="w-full h-auto rounded-lg"
@@ -433,9 +433,9 @@ export default function ElevenlabsReviewPage({ tool }: ElevenlabsReviewPageProps
                 
                 <div className="mt-8">
                   <Image
-                    src="/images/reviews/elevenlabs-elevenlabs-vs-competitors.webp"
-                    alt="ElevenLabs vs competitors - detailed view"
-                    title="ElevenLabs elevenlabs vs competitors"
+                    src="/images/reviews/elevenlabs-use-cases.webp"
+                    alt="ElevenLabs Use Cases & Applications - detailed analysis and breakdown"
+                    title="ElevenLabs Use Cases & Applications"
                     width={800}
                     height={450}
                     className="w-full h-auto rounded-lg"
@@ -467,6 +467,17 @@ export default function ElevenlabsReviewPage({ tool }: ElevenlabsReviewPageProps
                   </div>
                 </div>
                 
+                
+                <div className="mt-8">
+                  <Image
+                    src="/images/reviews/elevenlabs-overview.webp"
+                    alt="ElevenLabs Pros and Cons: Honest Assessment - detailed analysis and breakdown"
+                    title="ElevenLabs Pros and Cons: Honest Assessment"
+                    width={800}
+                    height={450}
+                    className="w-full h-auto rounded-lg"
+                  />
+                </div>
                 
               </div>
             </div>

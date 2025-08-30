@@ -366,9 +366,9 @@ export default function GumloopReviewPage({ tool }: GumloopReviewPageProps) {
                 
                 <div className="mt-8">
                   <Image
-                    src="/images/reviews/gumloop-gumloop-pricing.webp"
-                    alt="Gumloop pricing - detailed view"
-                    title="Gumloop gumloop pricing"
+                    src="/images/reviews/gumloop-features.webp"
+                    alt="Gumloop Key Features & Capabilities - detailed analysis and breakdown"
+                    title="Gumloop Key Features & Capabilities"
                     width={800}
                     height={450}
                     className="w-full h-auto rounded-lg"
@@ -402,9 +402,9 @@ export default function GumloopReviewPage({ tool }: GumloopReviewPageProps) {
                 
                 <div className="mt-8">
                   <Image
-                    src="/images/reviews/gumloop-gumloop-features.webp"
-                    alt="Gumloop features - detailed view"
-                    title="Gumloop gumloop features"
+                    src="/images/reviews/gumloop-pricing.webp"
+                    alt="Gumloop Pricing Plans & Options - detailed analysis and breakdown"
+                    title="Gumloop Pricing Plans & Options"
                     width={800}
                     height={450}
                     className="w-full h-auto rounded-lg"
@@ -433,9 +433,9 @@ export default function GumloopReviewPage({ tool }: GumloopReviewPageProps) {
                 
                 <div className="mt-8">
                   <Image
-                    src="/images/reviews/gumloop-gumloop-vs-competitors.webp"
-                    alt="Gumloop vs competitors - detailed view"
-                    title="Gumloop gumloop vs competitors"
+                    src="/images/reviews/gumloop-use-cases.webp"
+                    alt="Gumloop Use Cases & Applications - detailed analysis and breakdown"
+                    title="Gumloop Use Cases & Applications"
                     width={800}
                     height={450}
                     className="w-full h-auto rounded-lg"
@@ -467,6 +467,17 @@ export default function GumloopReviewPage({ tool }: GumloopReviewPageProps) {
                   </div>
                 </div>
                 
+                
+                <div className="mt-8">
+                  <Image
+                    src="/images/reviews/gumloop-overview.webp"
+                    alt="Gumloop Pros and Cons: Honest Assessment - detailed analysis and breakdown"
+                    title="Gumloop Pros and Cons: Honest Assessment"
+                    width={800}
+                    height={450}
+                    className="w-full h-auto rounded-lg"
+                  />
+                </div>
                 
               </div>
             </div>

@@ -366,9 +366,9 @@ export default function AiropsReviewPage({ tool }: AiropsReviewPageProps) {
                 
                 <div className="mt-8">
                   <Image
-                    src="/images/reviews/airops-airops-pricing.webp"
-                    alt="AirOps pricing - detailed view"
-                    title="AirOps airops pricing"
+                    src="/images/reviews/airops-features.webp"
+                    alt="AirOps Key Features & Capabilities - detailed analysis and breakdown"
+                    title="AirOps Key Features & Capabilities"
                     width={800}
                     height={450}
                     className="w-full h-auto rounded-lg"
@@ -402,9 +402,9 @@ export default function AiropsReviewPage({ tool }: AiropsReviewPageProps) {
                 
                 <div className="mt-8">
                   <Image
-                    src="/images/reviews/airops-airops-features.webp"
-                    alt="AirOps features - detailed view"
-                    title="AirOps airops features"
+                    src="/images/reviews/airops-pricing.webp"
+                    alt="AirOps Pricing Plans & Options - detailed analysis and breakdown"
+                    title="AirOps Pricing Plans & Options"
                     width={800}
                     height={450}
                     className="w-full h-auto rounded-lg"
@@ -433,9 +433,9 @@ export default function AiropsReviewPage({ tool }: AiropsReviewPageProps) {
                 
                 <div className="mt-8">
                   <Image
-                    src="/images/reviews/airops-airops-vs-competitors.webp"
-                    alt="AirOps vs competitors - detailed view"
-                    title="AirOps airops vs competitors"
+                    src="/images/reviews/airops-use-cases.webp"
+                    alt="AirOps Use Cases & Applications - detailed analysis and breakdown"
+                    title="AirOps Use Cases & Applications"
                     width={800}
                     height={450}
                     className="w-full h-auto rounded-lg"
@@ -467,6 +467,17 @@ export default function AiropsReviewPage({ tool }: AiropsReviewPageProps) {
                   </div>
                 </div>
                 
+                
+                <div className="mt-8">
+                  <Image
+                    src="/images/reviews/airops-overview.webp"
+                    alt="AirOps Pros and Cons: Honest Assessment - detailed analysis and breakdown"
+                    title="AirOps Pros and Cons: Honest Assessment"
+                    width={800}
+                    height={450}
+                    className="w-full h-auto rounded-lg"
+                  />
+                </div>
                 
               </div>
             </div>

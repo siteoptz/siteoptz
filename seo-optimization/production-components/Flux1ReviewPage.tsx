@@ -366,9 +366,9 @@ export default function Flux1ReviewPage({ tool }: Flux1ReviewPageProps) {
                 
                 <div className="mt-8">
                   <Image
-                    src="/images/reviews/flux-1-flux-1-pricing.webp"
-                    alt="Flux 1 pricing - detailed view"
-                    title="Flux 1 flux 1 pricing"
+                    src="/images/reviews/flux-1-features.webp"
+                    alt="Flux 1 Key Features & Capabilities - detailed analysis and breakdown"
+                    title="Flux 1 Key Features & Capabilities"
                     width={800}
                     height={450}
                     className="w-full h-auto rounded-lg"
@@ -402,9 +402,9 @@ export default function Flux1ReviewPage({ tool }: Flux1ReviewPageProps) {
                 
                 <div className="mt-8">
                   <Image
-                    src="/images/reviews/flux-1-flux-1-features.webp"
-                    alt="Flux 1 features - detailed view"
-                    title="Flux 1 flux 1 features"
+                    src="/images/reviews/flux-1-pricing.webp"
+                    alt="Flux 1 Pricing Plans & Options - detailed analysis and breakdown"
+                    title="Flux 1 Pricing Plans & Options"
                     width={800}
                     height={450}
                     className="w-full h-auto rounded-lg"
@@ -433,9 +433,9 @@ export default function Flux1ReviewPage({ tool }: Flux1ReviewPageProps) {
                 
                 <div className="mt-8">
                   <Image
-                    src="/images/reviews/flux-1-flux-1-vs-competitors.webp"
-                    alt="Flux 1 vs competitors - detailed view"
-                    title="Flux 1 flux 1 vs competitors"
+                    src="/images/reviews/flux-1-use-cases.webp"
+                    alt="Flux 1 Use Cases & Applications - detailed analysis and breakdown"
+                    title="Flux 1 Use Cases & Applications"
                     width={800}
                     height={450}
                     className="w-full h-auto rounded-lg"
@@ -467,6 +467,17 @@ export default function Flux1ReviewPage({ tool }: Flux1ReviewPageProps) {
                   </div>
                 </div>
                 
+                
+                <div className="mt-8">
+                  <Image
+                    src="/images/reviews/flux-1-overview.webp"
+                    alt="Flux 1 Pros and Cons: Honest Assessment - detailed analysis and breakdown"
+                    title="Flux 1 Pros and Cons: Honest Assessment"
+                    width={800}
+                    height={450}
+                    className="w-full h-auto rounded-lg"
+                  />
+                </div>
                 
               </div>
             </div>

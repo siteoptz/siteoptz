@@ -366,9 +366,9 @@ export default function IdeogramReviewPage({ tool }: IdeogramReviewPageProps) {
                 
                 <div className="mt-8">
                   <Image
-                    src="/images/reviews/ideogram-ideogram-pricing.webp"
-                    alt="Ideogram pricing - detailed view"
-                    title="Ideogram ideogram pricing"
+                    src="/images/reviews/ideogram-features.webp"
+                    alt="Ideogram Key Features & Capabilities - detailed analysis and breakdown"
+                    title="Ideogram Key Features & Capabilities"
                     width={800}
                     height={450}
                     className="w-full h-auto rounded-lg"
@@ -402,9 +402,9 @@ export default function IdeogramReviewPage({ tool }: IdeogramReviewPageProps) {
                 
                 <div className="mt-8">
                   <Image
-                    src="/images/reviews/ideogram-ideogram-features.webp"
-                    alt="Ideogram features - detailed view"
-                    title="Ideogram ideogram features"
+                    src="/images/reviews/ideogram-pricing.webp"
+                    alt="Ideogram Pricing Plans & Options - detailed analysis and breakdown"
+                    title="Ideogram Pricing Plans & Options"
                     width={800}
                     height={450}
                     className="w-full h-auto rounded-lg"
@@ -433,9 +433,9 @@ export default function IdeogramReviewPage({ tool }: IdeogramReviewPageProps) {
                 
                 <div className="mt-8">
                   <Image
-                    src="/images/reviews/ideogram-ideogram-vs-competitors.webp"
-                    alt="Ideogram vs competitors - detailed view"
-                    title="Ideogram ideogram vs competitors"
+                    src="/images/reviews/ideogram-use-cases.webp"
+                    alt="Ideogram Use Cases & Applications - detailed analysis and breakdown"
+                    title="Ideogram Use Cases & Applications"
                     width={800}
                     height={450}
                     className="w-full h-auto rounded-lg"
@@ -467,6 +467,17 @@ export default function IdeogramReviewPage({ tool }: IdeogramReviewPageProps) {
                   </div>
                 </div>
                 
+                
+                <div className="mt-8">
+                  <Image
+                    src="/images/reviews/ideogram-overview.webp"
+                    alt="Ideogram Pros and Cons: Honest Assessment - detailed analysis and breakdown"
+                    title="Ideogram Pros and Cons: Honest Assessment"
+                    width={800}
+                    height={450}
+                    className="w-full h-auto rounded-lg"
+                  />
+                </div>
                 
               </div>
             </div>

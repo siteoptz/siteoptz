@@ -366,9 +366,9 @@ export default function PaperpalReviewPage({ tool }: PaperpalReviewPageProps) {
                 
                 <div className="mt-8">
                   <Image
-                    src="/images/reviews/paperpal-paperpal-pricing.webp"
-                    alt="Paperpal pricing - detailed view"
-                    title="Paperpal paperpal pricing"
+                    src="/images/reviews/paperpal-features.webp"
+                    alt="Paperpal Key Features & Capabilities - detailed analysis and breakdown"
+                    title="Paperpal Key Features & Capabilities"
                     width={800}
                     height={450}
                     className="w-full h-auto rounded-lg"
@@ -402,9 +402,9 @@ export default function PaperpalReviewPage({ tool }: PaperpalReviewPageProps) {
                 
                 <div className="mt-8">
                   <Image
-                    src="/images/reviews/paperpal-paperpal-features.webp"
-                    alt="Paperpal features - detailed view"
-                    title="Paperpal paperpal features"
+                    src="/images/reviews/paperpal-pricing.webp"
+                    alt="Paperpal Pricing Plans & Options - detailed analysis and breakdown"
+                    title="Paperpal Pricing Plans & Options"
                     width={800}
                     height={450}
                     className="w-full h-auto rounded-lg"
@@ -433,9 +433,9 @@ export default function PaperpalReviewPage({ tool }: PaperpalReviewPageProps) {
                 
                 <div className="mt-8">
                   <Image
-                    src="/images/reviews/paperpal-paperpal-vs-competitors.webp"
-                    alt="Paperpal vs competitors - detailed view"
-                    title="Paperpal paperpal vs competitors"
+                    src="/images/reviews/paperpal-use-cases.webp"
+                    alt="Paperpal Use Cases & Applications - detailed analysis and breakdown"
+                    title="Paperpal Use Cases & Applications"
                     width={800}
                     height={450}
                     className="w-full h-auto rounded-lg"
@@ -467,6 +467,17 @@ export default function PaperpalReviewPage({ tool }: PaperpalReviewPageProps) {
                   </div>
                 </div>
                 
+                
+                <div className="mt-8">
+                  <Image
+                    src="/images/reviews/paperpal-overview.webp"
+                    alt="Paperpal Pros and Cons: Honest Assessment - detailed analysis and breakdown"
+                    title="Paperpal Pros and Cons: Honest Assessment"
+                    width={800}
+                    height={450}
+                    className="w-full h-auto rounded-lg"
+                  />
+                </div>
                 
               </div>
             </div>

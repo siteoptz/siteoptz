@@ -366,9 +366,9 @@ export default function AhrefsAiReviewPage({ tool }: AhrefsAiReviewPageProps) {
                 
                 <div className="mt-8">
                   <Image
-                    src="/images/reviews/ahrefs-ai-ahrefs-ai-pricing.webp"
-                    alt="Ahrefs AI pricing - detailed view"
-                    title="Ahrefs AI ahrefs ai pricing"
+                    src="/images/reviews/ahrefs-ai-features.webp"
+                    alt="Ahrefs AI Key Features & Capabilities - detailed analysis and breakdown"
+                    title="Ahrefs AI Key Features & Capabilities"
                     width={800}
                     height={450}
                     className="w-full h-auto rounded-lg"
@@ -402,9 +402,9 @@ export default function AhrefsAiReviewPage({ tool }: AhrefsAiReviewPageProps) {
                 
                 <div className="mt-8">
                   <Image
-                    src="/images/reviews/ahrefs-ai-ahrefs-ai-features.webp"
-                    alt="Ahrefs AI features - detailed view"
-                    title="Ahrefs AI ahrefs ai features"
+                    src="/images/reviews/ahrefs-ai-pricing.webp"
+                    alt="Ahrefs AI Pricing Plans & Options - detailed analysis and breakdown"
+                    title="Ahrefs AI Pricing Plans & Options"
                     width={800}
                     height={450}
                     className="w-full h-auto rounded-lg"
@@ -433,9 +433,9 @@ export default function AhrefsAiReviewPage({ tool }: AhrefsAiReviewPageProps) {
                 
                 <div className="mt-8">
                   <Image
-                    src="/images/reviews/ahrefs-ai-ahrefs-ai-vs-competitors.webp"
-                    alt="Ahrefs AI vs competitors - detailed view"
-                    title="Ahrefs AI ahrefs ai vs competitors"
+                    src="/images/reviews/ahrefs-ai-use-cases.webp"
+                    alt="Ahrefs AI Use Cases & Applications - detailed analysis and breakdown"
+                    title="Ahrefs AI Use Cases & Applications"
                     width={800}
                     height={450}
                     className="w-full h-auto rounded-lg"
@@ -467,6 +467,17 @@ export default function AhrefsAiReviewPage({ tool }: AhrefsAiReviewPageProps) {
                   </div>
                 </div>
                 
+                
+                <div className="mt-8">
+                  <Image
+                    src="/images/reviews/ahrefs-ai-overview.webp"
+                    alt="Ahrefs AI Pros and Cons: Honest Assessment - detailed analysis and breakdown"
+                    title="Ahrefs AI Pros and Cons: Honest Assessment"
+                    width={800}
+                    height={450}
+                    className="w-full h-auto rounded-lg"
+                  />
+                </div>
                 
               </div>
             </div>

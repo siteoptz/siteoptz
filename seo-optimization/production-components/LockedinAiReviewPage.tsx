@@ -366,9 +366,9 @@ export default function LockedinAiReviewPage({ tool }: LockedinAiReviewPageProps
                 
                 <div className="mt-8">
                   <Image
-                    src="/images/reviews/lockedin-ai-lockedin-ai-pricing.webp"
-                    alt="LockedIn AI pricing - detailed view"
-                    title="LockedIn AI lockedin ai pricing"
+                    src="/images/reviews/lockedin-ai-features.webp"
+                    alt="LockedIn AI Key Features & Capabilities - detailed analysis and breakdown"
+                    title="LockedIn AI Key Features & Capabilities"
                     width={800}
                     height={450}
                     className="w-full h-auto rounded-lg"
@@ -402,9 +402,9 @@ export default function LockedinAiReviewPage({ tool }: LockedinAiReviewPageProps
                 
                 <div className="mt-8">
                   <Image
-                    src="/images/reviews/lockedin-ai-lockedin-ai-features.webp"
-                    alt="LockedIn AI features - detailed view"
-                    title="LockedIn AI lockedin ai features"
+                    src="/images/reviews/lockedin-ai-pricing.webp"
+                    alt="LockedIn AI Pricing Plans & Options - detailed analysis and breakdown"
+                    title="LockedIn AI Pricing Plans & Options"
                     width={800}
                     height={450}
                     className="w-full h-auto rounded-lg"
@@ -433,9 +433,9 @@ export default function LockedinAiReviewPage({ tool }: LockedinAiReviewPageProps
                 
                 <div className="mt-8">
                   <Image
-                    src="/images/reviews/lockedin-ai-lockedin-ai-vs-competitors.webp"
-                    alt="LockedIn AI vs competitors - detailed view"
-                    title="LockedIn AI lockedin ai vs competitors"
+                    src="/images/reviews/lockedin-ai-use-cases.webp"
+                    alt="LockedIn AI Use Cases & Applications - detailed analysis and breakdown"
+                    title="LockedIn AI Use Cases & Applications"
                     width={800}
                     height={450}
                     className="w-full h-auto rounded-lg"
@@ -467,6 +467,17 @@ export default function LockedinAiReviewPage({ tool }: LockedinAiReviewPageProps
                   </div>
                 </div>
                 
+                
+                <div className="mt-8">
+                  <Image
+                    src="/images/reviews/lockedin-ai-overview.webp"
+                    alt="LockedIn AI Pros and Cons: Honest Assessment - detailed analysis and breakdown"
+                    title="LockedIn AI Pros and Cons: Honest Assessment"
+                    width={800}
+                    height={450}
+                    className="w-full h-auto rounded-lg"
+                  />
+                </div>
                 
               </div>
             </div>

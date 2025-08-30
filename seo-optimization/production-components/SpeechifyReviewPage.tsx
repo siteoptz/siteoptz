@@ -366,9 +366,9 @@ export default function SpeechifyReviewPage({ tool }: SpeechifyReviewPageProps) 
                 
                 <div className="mt-8">
                   <Image
-                    src="/images/reviews/speechify-speechify-pricing.webp"
-                    alt="Speechify pricing - detailed view"
-                    title="Speechify speechify pricing"
+                    src="/images/reviews/speechify-features.webp"
+                    alt="Speechify Key Features & Capabilities - detailed analysis and breakdown"
+                    title="Speechify Key Features & Capabilities"
                     width={800}
                     height={450}
                     className="w-full h-auto rounded-lg"
@@ -402,9 +402,9 @@ export default function SpeechifyReviewPage({ tool }: SpeechifyReviewPageProps) 
                 
                 <div className="mt-8">
                   <Image
-                    src="/images/reviews/speechify-speechify-features.webp"
-                    alt="Speechify features - detailed view"
-                    title="Speechify speechify features"
+                    src="/images/reviews/speechify-pricing.webp"
+                    alt="Speechify Pricing Plans & Options - detailed analysis and breakdown"
+                    title="Speechify Pricing Plans & Options"
                     width={800}
                     height={450}
                     className="w-full h-auto rounded-lg"
@@ -433,9 +433,9 @@ export default function SpeechifyReviewPage({ tool }: SpeechifyReviewPageProps) 
                 
                 <div className="mt-8">
                   <Image
-                    src="/images/reviews/speechify-speechify-vs-competitors.webp"
-                    alt="Speechify vs competitors - detailed view"
-                    title="Speechify speechify vs competitors"
+                    src="/images/reviews/speechify-use-cases.webp"
+                    alt="Speechify Use Cases & Applications - detailed analysis and breakdown"
+                    title="Speechify Use Cases & Applications"
                     width={800}
                     height={450}
                     className="w-full h-auto rounded-lg"
@@ -467,6 +467,17 @@ export default function SpeechifyReviewPage({ tool }: SpeechifyReviewPageProps) 
                   </div>
                 </div>
                 
+                
+                <div className="mt-8">
+                  <Image
+                    src="/images/reviews/speechify-overview.webp"
+                    alt="Speechify Pros and Cons: Honest Assessment - detailed analysis and breakdown"
+                    title="Speechify Pros and Cons: Honest Assessment"
+                    width={800}
+                    height={450}
+                    className="w-full h-auto rounded-lg"
+                  />
+                </div>
                 
               </div>
             </div>

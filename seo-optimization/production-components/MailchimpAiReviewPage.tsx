@@ -366,9 +366,9 @@ export default function MailchimpAiReviewPage({ tool }: MailchimpAiReviewPagePro
                 
                 <div className="mt-8">
                   <Image
-                    src="/images/reviews/mailchimp-ai-mailchimp-ai-pricing.webp"
-                    alt="Mailchimp AI pricing - detailed view"
-                    title="Mailchimp AI mailchimp ai pricing"
+                    src="/images/reviews/mailchimp-ai-features.webp"
+                    alt="Mailchimp AI Key Features & Capabilities - detailed analysis and breakdown"
+                    title="Mailchimp AI Key Features & Capabilities"
                     width={800}
                     height={450}
                     className="w-full h-auto rounded-lg"
@@ -402,9 +402,9 @@ export default function MailchimpAiReviewPage({ tool }: MailchimpAiReviewPagePro
                 
                 <div className="mt-8">
                   <Image
-                    src="/images/reviews/mailchimp-ai-mailchimp-ai-features.webp"
-                    alt="Mailchimp AI features - detailed view"
-                    title="Mailchimp AI mailchimp ai features"
+                    src="/images/reviews/mailchimp-ai-pricing.webp"
+                    alt="Mailchimp AI Pricing Plans & Options - detailed analysis and breakdown"
+                    title="Mailchimp AI Pricing Plans & Options"
                     width={800}
                     height={450}
                     className="w-full h-auto rounded-lg"
@@ -433,9 +433,9 @@ export default function MailchimpAiReviewPage({ tool }: MailchimpAiReviewPagePro
                 
                 <div className="mt-8">
                   <Image
-                    src="/images/reviews/mailchimp-ai-mailchimp-ai-vs-competitors.webp"
-                    alt="Mailchimp AI vs competitors - detailed view"
-                    title="Mailchimp AI mailchimp ai vs competitors"
+                    src="/images/reviews/mailchimp-ai-use-cases.webp"
+                    alt="Mailchimp AI Use Cases & Applications - detailed analysis and breakdown"
+                    title="Mailchimp AI Use Cases & Applications"
                     width={800}
                     height={450}
                     className="w-full h-auto rounded-lg"
@@ -467,6 +467,17 @@ export default function MailchimpAiReviewPage({ tool }: MailchimpAiReviewPagePro
                   </div>
                 </div>
                 
+                
+                <div className="mt-8">
+                  <Image
+                    src="/images/reviews/mailchimp-ai-overview.webp"
+                    alt="Mailchimp AI Pros and Cons: Honest Assessment - detailed analysis and breakdown"
+                    title="Mailchimp AI Pros and Cons: Honest Assessment"
+                    width={800}
+                    height={450}
+                    className="w-full h-auto rounded-lg"
+                  />
+                </div>
                 
               </div>
             </div>

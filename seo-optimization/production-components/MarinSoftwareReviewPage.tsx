@@ -366,9 +366,9 @@ export default function MarinSoftwareReviewPage({ tool }: MarinSoftwareReviewPag
                 
                 <div className="mt-8">
                   <Image
-                    src="/images/reviews/marin-software-marin-software-pricing.webp"
-                    alt="Marin Software pricing - detailed view"
-                    title="Marin Software marin software pricing"
+                    src="/images/reviews/marin-software-features.webp"
+                    alt="Marin Software Key Features & Capabilities - detailed analysis and breakdown"
+                    title="Marin Software Key Features & Capabilities"
                     width={800}
                     height={450}
                     className="w-full h-auto rounded-lg"
@@ -402,9 +402,9 @@ export default function MarinSoftwareReviewPage({ tool }: MarinSoftwareReviewPag
                 
                 <div className="mt-8">
                   <Image
-                    src="/images/reviews/marin-software-marin-software-features.webp"
-                    alt="Marin Software features - detailed view"
-                    title="Marin Software marin software features"
+                    src="/images/reviews/marin-software-pricing.webp"
+                    alt="Marin Software Pricing Plans & Options - detailed analysis and breakdown"
+                    title="Marin Software Pricing Plans & Options"
                     width={800}
                     height={450}
                     className="w-full h-auto rounded-lg"
@@ -433,9 +433,9 @@ export default function MarinSoftwareReviewPage({ tool }: MarinSoftwareReviewPag
                 
                 <div className="mt-8">
                   <Image
-                    src="/images/reviews/marin-software-marin-software-vs-competitors.webp"
-                    alt="Marin Software vs competitors - detailed view"
-                    title="Marin Software marin software vs competitors"
+                    src="/images/reviews/marin-software-use-cases.webp"
+                    alt="Marin Software Use Cases & Applications - detailed analysis and breakdown"
+                    title="Marin Software Use Cases & Applications"
                     width={800}
                     height={450}
                     className="w-full h-auto rounded-lg"
@@ -467,6 +467,17 @@ export default function MarinSoftwareReviewPage({ tool }: MarinSoftwareReviewPag
                   </div>
                 </div>
                 
+                
+                <div className="mt-8">
+                  <Image
+                    src="/images/reviews/marin-software-overview.webp"
+                    alt="Marin Software Pros and Cons: Honest Assessment - detailed analysis and breakdown"
+                    title="Marin Software Pros and Cons: Honest Assessment"
+                    width={800}
+                    height={450}
+                    className="w-full h-auto rounded-lg"
+                  />
+                </div>
                 
               </div>
             </div>

@@ -366,9 +366,9 @@ export default function HubspotEmailMarketingToolsReviewPage({ tool }: HubspotEm
                 
                 <div className="mt-8">
                   <Image
-                    src="/images/reviews/hubspot-email-marketing-tools-hubspot-email-marketing-tools-pricing.webp"
-                    alt="HubSpot Email Marketing Tools pricing - detailed view"
-                    title="HubSpot Email Marketing Tools hubspot email marketing tools pricing"
+                    src="/images/reviews/hubspot-email-marketing-tools-features.webp"
+                    alt="HubSpot Email Marketing Tools Key Features & Capabilities - detailed analysis and breakdown"
+                    title="HubSpot Email Marketing Tools Key Features & Capabilities"
                     width={800}
                     height={450}
                     className="w-full h-auto rounded-lg"
@@ -402,9 +402,9 @@ export default function HubspotEmailMarketingToolsReviewPage({ tool }: HubspotEm
                 
                 <div className="mt-8">
                   <Image
-                    src="/images/reviews/hubspot-email-marketing-tools-hubspot-email-marketing-tools-features.webp"
-                    alt="HubSpot Email Marketing Tools features - detailed view"
-                    title="HubSpot Email Marketing Tools hubspot email marketing tools features"
+                    src="/images/reviews/hubspot-email-marketing-tools-pricing.webp"
+                    alt="HubSpot Email Marketing Tools Pricing Plans & Options - detailed analysis and breakdown"
+                    title="HubSpot Email Marketing Tools Pricing Plans & Options"
                     width={800}
                     height={450}
                     className="w-full h-auto rounded-lg"
@@ -433,9 +433,9 @@ export default function HubspotEmailMarketingToolsReviewPage({ tool }: HubspotEm
                 
                 <div className="mt-8">
                   <Image
-                    src="/images/reviews/hubspot-email-marketing-tools-hubspot-email-marketing-tools-vs-competitors.webp"
-                    alt="HubSpot Email Marketing Tools vs competitors - detailed view"
-                    title="HubSpot Email Marketing Tools hubspot email marketing tools vs competitors"
+                    src="/images/reviews/hubspot-email-marketing-tools-use-cases.webp"
+                    alt="HubSpot Email Marketing Tools Use Cases & Applications - detailed analysis and breakdown"
+                    title="HubSpot Email Marketing Tools Use Cases & Applications"
                     width={800}
                     height={450}
                     className="w-full h-auto rounded-lg"
@@ -467,6 +467,17 @@ export default function HubspotEmailMarketingToolsReviewPage({ tool }: HubspotEm
                   </div>
                 </div>
                 
+                
+                <div className="mt-8">
+                  <Image
+                    src="/images/reviews/hubspot-email-marketing-tools-overview.webp"
+                    alt="HubSpot Email Marketing Tools Pros and Cons: Honest Assessment - detailed analysis and breakdown"
+                    title="HubSpot Email Marketing Tools Pros and Cons: Honest Assessment"
+                    width={800}
+                    height={450}
+                    className="w-full h-auto rounded-lg"
+                  />
+                </div>
                 
               </div>
             </div>

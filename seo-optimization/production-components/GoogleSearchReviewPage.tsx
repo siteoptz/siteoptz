@@ -366,9 +366,9 @@ export default function GoogleSearchReviewPage({ tool }: GoogleSearchReviewPageP
                 
                 <div className="mt-8">
                   <Image
-                    src="/images/reviews/google-search-google-search-pricing.webp"
-                    alt="Google Search pricing - detailed view"
-                    title="Google Search google search pricing"
+                    src="/images/reviews/google-search-features.webp"
+                    alt="Google Search Key Features & Capabilities - detailed analysis and breakdown"
+                    title="Google Search Key Features & Capabilities"
                     width={800}
                     height={450}
                     className="w-full h-auto rounded-lg"
@@ -402,9 +402,9 @@ export default function GoogleSearchReviewPage({ tool }: GoogleSearchReviewPageP
                 
                 <div className="mt-8">
                   <Image
-                    src="/images/reviews/google-search-google-search-features.webp"
-                    alt="Google Search features - detailed view"
-                    title="Google Search google search features"
+                    src="/images/reviews/google-search-pricing.webp"
+                    alt="Google Search Pricing Plans & Options - detailed analysis and breakdown"
+                    title="Google Search Pricing Plans & Options"
                     width={800}
                     height={450}
                     className="w-full h-auto rounded-lg"
@@ -433,9 +433,9 @@ export default function GoogleSearchReviewPage({ tool }: GoogleSearchReviewPageP
                 
                 <div className="mt-8">
                   <Image
-                    src="/images/reviews/google-search-google-search-vs-competitors.webp"
-                    alt="Google Search vs competitors - detailed view"
-                    title="Google Search google search vs competitors"
+                    src="/images/reviews/google-search-use-cases.webp"
+                    alt="Google Search Use Cases & Applications - detailed analysis and breakdown"
+                    title="Google Search Use Cases & Applications"
                     width={800}
                     height={450}
                     className="w-full h-auto rounded-lg"
@@ -467,6 +467,17 @@ export default function GoogleSearchReviewPage({ tool }: GoogleSearchReviewPageP
                   </div>
                 </div>
                 
+                
+                <div className="mt-8">
+                  <Image
+                    src="/images/reviews/google-search-overview.webp"
+                    alt="Google Search Pros and Cons: Honest Assessment - detailed analysis and breakdown"
+                    title="Google Search Pros and Cons: Honest Assessment"
+                    width={800}
+                    height={450}
+                    className="w-full h-auto rounded-lg"
+                  />
+                </div>
                 
               </div>
             </div>

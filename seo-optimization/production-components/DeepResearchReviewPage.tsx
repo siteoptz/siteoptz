@@ -366,9 +366,9 @@ export default function DeepResearchReviewPage({ tool }: DeepResearchReviewPageP
                 
                 <div className="mt-8">
                   <Image
-                    src="/images/reviews/deep-research-deep-research-pricing.webp"
-                    alt="Deep Research pricing - detailed view"
-                    title="Deep Research deep research pricing"
+                    src="/images/reviews/deep-research-features.webp"
+                    alt="Deep Research Key Features & Capabilities - detailed analysis and breakdown"
+                    title="Deep Research Key Features & Capabilities"
                     width={800}
                     height={450}
                     className="w-full h-auto rounded-lg"
@@ -402,9 +402,9 @@ export default function DeepResearchReviewPage({ tool }: DeepResearchReviewPageP
                 
                 <div className="mt-8">
                   <Image
-                    src="/images/reviews/deep-research-deep-research-features.webp"
-                    alt="Deep Research features - detailed view"
-                    title="Deep Research deep research features"
+                    src="/images/reviews/deep-research-pricing.webp"
+                    alt="Deep Research Pricing Plans & Options - detailed analysis and breakdown"
+                    title="Deep Research Pricing Plans & Options"
                     width={800}
                     height={450}
                     className="w-full h-auto rounded-lg"
@@ -433,9 +433,9 @@ export default function DeepResearchReviewPage({ tool }: DeepResearchReviewPageP
                 
                 <div className="mt-8">
                   <Image
-                    src="/images/reviews/deep-research-deep-research-vs-competitors.webp"
-                    alt="Deep Research vs competitors - detailed view"
-                    title="Deep Research deep research vs competitors"
+                    src="/images/reviews/deep-research-use-cases.webp"
+                    alt="Deep Research Use Cases & Applications - detailed analysis and breakdown"
+                    title="Deep Research Use Cases & Applications"
                     width={800}
                     height={450}
                     className="w-full h-auto rounded-lg"
@@ -467,6 +467,17 @@ export default function DeepResearchReviewPage({ tool }: DeepResearchReviewPageP
                   </div>
                 </div>
                 
+                
+                <div className="mt-8">
+                  <Image
+                    src="/images/reviews/deep-research-overview.webp"
+                    alt="Deep Research Pros and Cons: Honest Assessment - detailed analysis and breakdown"
+                    title="Deep Research Pros and Cons: Honest Assessment"
+                    width={800}
+                    height={450}
+                    className="w-full h-auto rounded-lg"
+                  />
+                </div>
                 
               </div>
             </div>

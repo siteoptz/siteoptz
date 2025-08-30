@@ -366,9 +366,9 @@ export default function FirefliesReviewPage({ tool }: FirefliesReviewPageProps) 
                 
                 <div className="mt-8">
                   <Image
-                    src="/images/reviews/fireflies-fireflies-pricing.webp"
-                    alt="Fireflies pricing - detailed view"
-                    title="Fireflies fireflies pricing"
+                    src="/images/reviews/fireflies-features.webp"
+                    alt="Fireflies Key Features & Capabilities - detailed analysis and breakdown"
+                    title="Fireflies Key Features & Capabilities"
                     width={800}
                     height={450}
                     className="w-full h-auto rounded-lg"
@@ -402,9 +402,9 @@ export default function FirefliesReviewPage({ tool }: FirefliesReviewPageProps) 
                 
                 <div className="mt-8">
                   <Image
-                    src="/images/reviews/fireflies-fireflies-features.webp"
-                    alt="Fireflies features - detailed view"
-                    title="Fireflies fireflies features"
+                    src="/images/reviews/fireflies-pricing.webp"
+                    alt="Fireflies Pricing Plans & Options - detailed analysis and breakdown"
+                    title="Fireflies Pricing Plans & Options"
                     width={800}
                     height={450}
                     className="w-full h-auto rounded-lg"
@@ -433,9 +433,9 @@ export default function FirefliesReviewPage({ tool }: FirefliesReviewPageProps) 
                 
                 <div className="mt-8">
                   <Image
-                    src="/images/reviews/fireflies-fireflies-vs-competitors.webp"
-                    alt="Fireflies vs competitors - detailed view"
-                    title="Fireflies fireflies vs competitors"
+                    src="/images/reviews/fireflies-use-cases.webp"
+                    alt="Fireflies Use Cases & Applications - detailed analysis and breakdown"
+                    title="Fireflies Use Cases & Applications"
                     width={800}
                     height={450}
                     className="w-full h-auto rounded-lg"
@@ -467,6 +467,17 @@ export default function FirefliesReviewPage({ tool }: FirefliesReviewPageProps) 
                   </div>
                 </div>
                 
+                
+                <div className="mt-8">
+                  <Image
+                    src="/images/reviews/fireflies-overview.webp"
+                    alt="Fireflies Pros and Cons: Honest Assessment - detailed analysis and breakdown"
+                    title="Fireflies Pros and Cons: Honest Assessment"
+                    width={800}
+                    height={450}
+                    className="w-full h-auto rounded-lg"
+                  />
+                </div>
                 
               </div>
             </div>

@@ -366,9 +366,9 @@ export default function PerplexityAiReviewPage({ tool }: PerplexityAiReviewPageP
                 
                 <div className="mt-8">
                   <Image
-                    src="/images/reviews/perplexity-ai-perplexity-ai-pricing.webp"
-                    alt="Perplexity AI pricing - detailed view"
-                    title="Perplexity AI perplexity ai pricing"
+                    src="/images/reviews/perplexity-ai-features.webp"
+                    alt="Perplexity AI Key Features & Capabilities - detailed analysis and breakdown"
+                    title="Perplexity AI Key Features & Capabilities"
                     width={800}
                     height={450}
                     className="w-full h-auto rounded-lg"
@@ -402,9 +402,9 @@ export default function PerplexityAiReviewPage({ tool }: PerplexityAiReviewPageP
                 
                 <div className="mt-8">
                   <Image
-                    src="/images/reviews/perplexity-ai-perplexity-ai-features.webp"
-                    alt="Perplexity AI features - detailed view"
-                    title="Perplexity AI perplexity ai features"
+                    src="/images/reviews/perplexity-ai-pricing.webp"
+                    alt="Perplexity AI Pricing Plans & Options - detailed analysis and breakdown"
+                    title="Perplexity AI Pricing Plans & Options"
                     width={800}
                     height={450}
                     className="w-full h-auto rounded-lg"
@@ -433,9 +433,9 @@ export default function PerplexityAiReviewPage({ tool }: PerplexityAiReviewPageP
                 
                 <div className="mt-8">
                   <Image
-                    src="/images/reviews/perplexity-ai-perplexity-ai-vs-competitors.webp"
-                    alt="Perplexity AI vs competitors - detailed view"
-                    title="Perplexity AI perplexity ai vs competitors"
+                    src="/images/reviews/perplexity-ai-use-cases.webp"
+                    alt="Perplexity AI Use Cases & Applications - detailed analysis and breakdown"
+                    title="Perplexity AI Use Cases & Applications"
                     width={800}
                     height={450}
                     className="w-full h-auto rounded-lg"
@@ -467,6 +467,17 @@ export default function PerplexityAiReviewPage({ tool }: PerplexityAiReviewPageP
                   </div>
                 </div>
                 
+                
+                <div className="mt-8">
+                  <Image
+                    src="/images/reviews/perplexity-ai-overview.webp"
+                    alt="Perplexity AI Pros and Cons: Honest Assessment - detailed analysis and breakdown"
+                    title="Perplexity AI Pros and Cons: Honest Assessment"
+                    width={800}
+                    height={450}
+                    className="w-full h-auto rounded-lg"
+                  />
+                </div>
                 
               </div>
             </div>

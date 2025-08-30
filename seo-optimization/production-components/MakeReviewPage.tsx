@@ -366,9 +366,9 @@ export default function MakeReviewPage({ tool }: MakeReviewPageProps) {
                 
                 <div className="mt-8">
                   <Image
-                    src="/images/reviews/make-make-pricing.webp"
-                    alt="Make pricing - detailed view"
-                    title="Make make pricing"
+                    src="/images/reviews/make-features.webp"
+                    alt="Make Key Features & Capabilities - detailed analysis and breakdown"
+                    title="Make Key Features & Capabilities"
                     width={800}
                     height={450}
                     className="w-full h-auto rounded-lg"
@@ -402,9 +402,9 @@ export default function MakeReviewPage({ tool }: MakeReviewPageProps) {
                 
                 <div className="mt-8">
                   <Image
-                    src="/images/reviews/make-make-features.webp"
-                    alt="Make features - detailed view"
-                    title="Make make features"
+                    src="/images/reviews/make-pricing.webp"
+                    alt="Make Pricing Plans & Options - detailed analysis and breakdown"
+                    title="Make Pricing Plans & Options"
                     width={800}
                     height={450}
                     className="w-full h-auto rounded-lg"
@@ -433,9 +433,9 @@ export default function MakeReviewPage({ tool }: MakeReviewPageProps) {
                 
                 <div className="mt-8">
                   <Image
-                    src="/images/reviews/make-make-vs-competitors.webp"
-                    alt="Make vs competitors - detailed view"
-                    title="Make make vs competitors"
+                    src="/images/reviews/make-use-cases.webp"
+                    alt="Make Use Cases & Applications - detailed analysis and breakdown"
+                    title="Make Use Cases & Applications"
                     width={800}
                     height={450}
                     className="w-full h-auto rounded-lg"
@@ -467,6 +467,17 @@ export default function MakeReviewPage({ tool }: MakeReviewPageProps) {
                   </div>
                 </div>
                 
+                
+                <div className="mt-8">
+                  <Image
+                    src="/images/reviews/make-overview.webp"
+                    alt="Make Pros and Cons: Honest Assessment - detailed analysis and breakdown"
+                    title="Make Pros and Cons: Honest Assessment"
+                    width={800}
+                    height={450}
+                    className="w-full h-auto rounded-lg"
+                  />
+                </div>
                 
               </div>
             </div>

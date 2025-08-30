@@ -366,9 +366,9 @@ export default function JasperReviewPage({ tool }: JasperReviewPageProps) {
                 
                 <div className="mt-8">
                   <Image
-                    src="/images/reviews/jasper-jasper-pricing.webp"
-                    alt="Jasper pricing - detailed view"
-                    title="Jasper jasper pricing"
+                    src="/images/reviews/jasper-features.webp"
+                    alt="Jasper Key Features & Capabilities - detailed analysis and breakdown"
+                    title="Jasper Key Features & Capabilities"
                     width={800}
                     height={450}
                     className="w-full h-auto rounded-lg"
@@ -402,9 +402,9 @@ export default function JasperReviewPage({ tool }: JasperReviewPageProps) {
                 
                 <div className="mt-8">
                   <Image
-                    src="/images/reviews/jasper-jasper-features.webp"
-                    alt="Jasper features - detailed view"
-                    title="Jasper jasper features"
+                    src="/images/reviews/jasper-pricing.webp"
+                    alt="Jasper Pricing Plans & Options - detailed analysis and breakdown"
+                    title="Jasper Pricing Plans & Options"
                     width={800}
                     height={450}
                     className="w-full h-auto rounded-lg"
@@ -433,9 +433,9 @@ export default function JasperReviewPage({ tool }: JasperReviewPageProps) {
                 
                 <div className="mt-8">
                   <Image
-                    src="/images/reviews/jasper-jasper-vs-competitors.webp"
-                    alt="Jasper vs competitors - detailed view"
-                    title="Jasper jasper vs competitors"
+                    src="/images/reviews/jasper-use-cases.webp"
+                    alt="Jasper Use Cases & Applications - detailed analysis and breakdown"
+                    title="Jasper Use Cases & Applications"
                     width={800}
                     height={450}
                     className="w-full h-auto rounded-lg"
@@ -467,6 +467,17 @@ export default function JasperReviewPage({ tool }: JasperReviewPageProps) {
                   </div>
                 </div>
                 
+                
+                <div className="mt-8">
+                  <Image
+                    src="/images/reviews/jasper-overview.webp"
+                    alt="Jasper Pros and Cons: Honest Assessment - detailed analysis and breakdown"
+                    title="Jasper Pros and Cons: Honest Assessment"
+                    width={800}
+                    height={450}
+                    className="w-full h-auto rounded-lg"
+                  />
+                </div>
                 
               </div>
             </div>

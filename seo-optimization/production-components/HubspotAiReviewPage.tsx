@@ -366,9 +366,9 @@ export default function HubspotAiReviewPage({ tool }: HubspotAiReviewPageProps) 
                 
                 <div className="mt-8">
                   <Image
-                    src="/images/reviews/hubspot-ai-hubspot-ai-pricing.webp"
-                    alt="HubSpot AI pricing - detailed view"
-                    title="HubSpot AI hubspot ai pricing"
+                    src="/images/reviews/hubspot-ai-features.webp"
+                    alt="HubSpot AI Key Features & Capabilities - detailed analysis and breakdown"
+                    title="HubSpot AI Key Features & Capabilities"
                     width={800}
                     height={450}
                     className="w-full h-auto rounded-lg"
@@ -402,9 +402,9 @@ export default function HubspotAiReviewPage({ tool }: HubspotAiReviewPageProps) 
                 
                 <div className="mt-8">
                   <Image
-                    src="/images/reviews/hubspot-ai-hubspot-ai-features.webp"
-                    alt="HubSpot AI features - detailed view"
-                    title="HubSpot AI hubspot ai features"
+                    src="/images/reviews/hubspot-ai-pricing.webp"
+                    alt="HubSpot AI Pricing Plans & Options - detailed analysis and breakdown"
+                    title="HubSpot AI Pricing Plans & Options"
                     width={800}
                     height={450}
                     className="w-full h-auto rounded-lg"
@@ -433,9 +433,9 @@ export default function HubspotAiReviewPage({ tool }: HubspotAiReviewPageProps) 
                 
                 <div className="mt-8">
                   <Image
-                    src="/images/reviews/hubspot-ai-hubspot-ai-vs-competitors.webp"
-                    alt="HubSpot AI vs competitors - detailed view"
-                    title="HubSpot AI hubspot ai vs competitors"
+                    src="/images/reviews/hubspot-ai-use-cases.webp"
+                    alt="HubSpot AI Use Cases & Applications - detailed analysis and breakdown"
+                    title="HubSpot AI Use Cases & Applications"
                     width={800}
                     height={450}
                     className="w-full h-auto rounded-lg"
@@ -467,6 +467,17 @@ export default function HubspotAiReviewPage({ tool }: HubspotAiReviewPageProps) 
                   </div>
                 </div>
                 
+                
+                <div className="mt-8">
+                  <Image
+                    src="/images/reviews/hubspot-ai-overview.webp"
+                    alt="HubSpot AI Pros and Cons: Honest Assessment - detailed analysis and breakdown"
+                    title="HubSpot AI Pros and Cons: Honest Assessment"
+                    width={800}
+                    height={450}
+                    className="w-full h-auto rounded-lg"
+                  />
+                </div>
                 
               </div>
             </div>

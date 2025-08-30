@@ -366,9 +366,9 @@ export default function RunwaymlReviewPage({ tool }: RunwaymlReviewPageProps) {
                 
                 <div className="mt-8">
                   <Image
-                    src="/images/reviews/runwayml-runwayml-pricing.webp"
-                    alt="RunwayML pricing - detailed view"
-                    title="RunwayML runwayml pricing"
+                    src="/images/reviews/runwayml-features.webp"
+                    alt="RunwayML Key Features & Capabilities - detailed analysis and breakdown"
+                    title="RunwayML Key Features & Capabilities"
                     width={800}
                     height={450}
                     className="w-full h-auto rounded-lg"
@@ -402,9 +402,9 @@ export default function RunwaymlReviewPage({ tool }: RunwaymlReviewPageProps) {
                 
                 <div className="mt-8">
                   <Image
-                    src="/images/reviews/runwayml-runwayml-features.webp"
-                    alt="RunwayML features - detailed view"
-                    title="RunwayML runwayml features"
+                    src="/images/reviews/runwayml-pricing.webp"
+                    alt="RunwayML Pricing Plans & Options - detailed analysis and breakdown"
+                    title="RunwayML Pricing Plans & Options"
                     width={800}
                     height={450}
                     className="w-full h-auto rounded-lg"
@@ -433,9 +433,9 @@ export default function RunwaymlReviewPage({ tool }: RunwaymlReviewPageProps) {
                 
                 <div className="mt-8">
                   <Image
-                    src="/images/reviews/runwayml-runwayml-vs-competitors.webp"
-                    alt="RunwayML vs competitors - detailed view"
-                    title="RunwayML runwayml vs competitors"
+                    src="/images/reviews/runwayml-use-cases.webp"
+                    alt="RunwayML Use Cases & Applications - detailed analysis and breakdown"
+                    title="RunwayML Use Cases & Applications"
                     width={800}
                     height={450}
                     className="w-full h-auto rounded-lg"
@@ -467,6 +467,17 @@ export default function RunwaymlReviewPage({ tool }: RunwaymlReviewPageProps) {
                   </div>
                 </div>
                 
+                
+                <div className="mt-8">
+                  <Image
+                    src="/images/reviews/runwayml-overview.webp"
+                    alt="RunwayML Pros and Cons: Honest Assessment - detailed analysis and breakdown"
+                    title="RunwayML Pros and Cons: Honest Assessment"
+                    width={800}
+                    height={450}
+                    className="w-full h-auto rounded-lg"
+                  />
+                </div>
                 
               </div>
             </div>

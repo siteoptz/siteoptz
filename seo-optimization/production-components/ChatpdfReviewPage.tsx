@@ -366,9 +366,9 @@ export default function ChatpdfReviewPage({ tool }: ChatpdfReviewPageProps) {
                 
                 <div className="mt-8">
                   <Image
-                    src="/images/reviews/chatpdf-chatpdf-pricing.webp"
-                    alt="ChatPDF pricing - detailed view"
-                    title="ChatPDF chatpdf pricing"
+                    src="/images/reviews/chatpdf-features.webp"
+                    alt="ChatPDF Key Features & Capabilities - detailed analysis and breakdown"
+                    title="ChatPDF Key Features & Capabilities"
                     width={800}
                     height={450}
                     className="w-full h-auto rounded-lg"
@@ -402,9 +402,9 @@ export default function ChatpdfReviewPage({ tool }: ChatpdfReviewPageProps) {
                 
                 <div className="mt-8">
                   <Image
-                    src="/images/reviews/chatpdf-chatpdf-features.webp"
-                    alt="ChatPDF features - detailed view"
-                    title="ChatPDF chatpdf features"
+                    src="/images/reviews/chatpdf-pricing.webp"
+                    alt="ChatPDF Pricing Plans & Options - detailed analysis and breakdown"
+                    title="ChatPDF Pricing Plans & Options"
                     width={800}
                     height={450}
                     className="w-full h-auto rounded-lg"
@@ -433,9 +433,9 @@ export default function ChatpdfReviewPage({ tool }: ChatpdfReviewPageProps) {
                 
                 <div className="mt-8">
                   <Image
-                    src="/images/reviews/chatpdf-chatpdf-vs-competitors.webp"
-                    alt="ChatPDF vs competitors - detailed view"
-                    title="ChatPDF chatpdf vs competitors"
+                    src="/images/reviews/chatpdf-use-cases.webp"
+                    alt="ChatPDF Use Cases & Applications - detailed analysis and breakdown"
+                    title="ChatPDF Use Cases & Applications"
                     width={800}
                     height={450}
                     className="w-full h-auto rounded-lg"
@@ -467,6 +467,17 @@ export default function ChatpdfReviewPage({ tool }: ChatpdfReviewPageProps) {
                   </div>
                 </div>
                 
+                
+                <div className="mt-8">
+                  <Image
+                    src="/images/reviews/chatpdf-overview.webp"
+                    alt="ChatPDF Pros and Cons: Honest Assessment - detailed analysis and breakdown"
+                    title="ChatPDF Pros and Cons: Honest Assessment"
+                    width={800}
+                    height={450}
+                    className="w-full h-auto rounded-lg"
+                  />
+                </div>
                 
               </div>
             </div>

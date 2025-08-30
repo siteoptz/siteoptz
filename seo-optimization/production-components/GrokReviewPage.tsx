@@ -366,9 +366,9 @@ export default function GrokReviewPage({ tool }: GrokReviewPageProps) {
                 
                 <div className="mt-8">
                   <Image
-                    src="/images/reviews/grok-grok-pricing.webp"
-                    alt="Grok pricing - detailed view"
-                    title="Grok grok pricing"
+                    src="/images/reviews/grok-features.webp"
+                    alt="Grok Key Features & Capabilities - detailed analysis and breakdown"
+                    title="Grok Key Features & Capabilities"
                     width={800}
                     height={450}
                     className="w-full h-auto rounded-lg"
@@ -402,9 +402,9 @@ export default function GrokReviewPage({ tool }: GrokReviewPageProps) {
                 
                 <div className="mt-8">
                   <Image
-                    src="/images/reviews/grok-grok-features.webp"
-                    alt="Grok features - detailed view"
-                    title="Grok grok features"
+                    src="/images/reviews/grok-pricing.webp"
+                    alt="Grok Pricing Plans & Options - detailed analysis and breakdown"
+                    title="Grok Pricing Plans & Options"
                     width={800}
                     height={450}
                     className="w-full h-auto rounded-lg"
@@ -433,9 +433,9 @@ export default function GrokReviewPage({ tool }: GrokReviewPageProps) {
                 
                 <div className="mt-8">
                   <Image
-                    src="/images/reviews/grok-grok-vs-competitors.webp"
-                    alt="Grok vs competitors - detailed view"
-                    title="Grok grok vs competitors"
+                    src="/images/reviews/grok-use-cases.webp"
+                    alt="Grok Use Cases & Applications - detailed analysis and breakdown"
+                    title="Grok Use Cases & Applications"
                     width={800}
                     height={450}
                     className="w-full h-auto rounded-lg"
@@ -467,6 +467,17 @@ export default function GrokReviewPage({ tool }: GrokReviewPageProps) {
                   </div>
                 </div>
                 
+                
+                <div className="mt-8">
+                  <Image
+                    src="/images/reviews/grok-overview.webp"
+                    alt="Grok Pros and Cons: Honest Assessment - detailed analysis and breakdown"
+                    title="Grok Pros and Cons: Honest Assessment"
+                    width={800}
+                    height={450}
+                    className="w-full h-auto rounded-lg"
+                  />
+                </div>
                 
               </div>
             </div>

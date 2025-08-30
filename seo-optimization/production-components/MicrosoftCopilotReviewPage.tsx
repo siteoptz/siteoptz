@@ -366,9 +366,9 @@ export default function MicrosoftCopilotReviewPage({ tool }: MicrosoftCopilotRev
                 
                 <div className="mt-8">
                   <Image
-                    src="/images/reviews/microsoft-copilot-microsoft-copilot-pricing.webp"
-                    alt="Microsoft Copilot pricing - detailed view"
-                    title="Microsoft Copilot microsoft copilot pricing"
+                    src="/images/reviews/microsoft-copilot-features.webp"
+                    alt="Microsoft Copilot Key Features & Capabilities - detailed analysis and breakdown"
+                    title="Microsoft Copilot Key Features & Capabilities"
                     width={800}
                     height={450}
                     className="w-full h-auto rounded-lg"
@@ -402,9 +402,9 @@ export default function MicrosoftCopilotReviewPage({ tool }: MicrosoftCopilotRev
                 
                 <div className="mt-8">
                   <Image
-                    src="/images/reviews/microsoft-copilot-microsoft-copilot-features.webp"
-                    alt="Microsoft Copilot features - detailed view"
-                    title="Microsoft Copilot microsoft copilot features"
+                    src="/images/reviews/microsoft-copilot-pricing.webp"
+                    alt="Microsoft Copilot Pricing Plans & Options - detailed analysis and breakdown"
+                    title="Microsoft Copilot Pricing Plans & Options"
                     width={800}
                     height={450}
                     className="w-full h-auto rounded-lg"
@@ -433,9 +433,9 @@ export default function MicrosoftCopilotReviewPage({ tool }: MicrosoftCopilotRev
                 
                 <div className="mt-8">
                   <Image
-                    src="/images/reviews/microsoft-copilot-microsoft-copilot-vs-competitors.webp"
-                    alt="Microsoft Copilot vs competitors - detailed view"
-                    title="Microsoft Copilot microsoft copilot vs competitors"
+                    src="/images/reviews/microsoft-copilot-use-cases.webp"
+                    alt="Microsoft Copilot Use Cases & Applications - detailed analysis and breakdown"
+                    title="Microsoft Copilot Use Cases & Applications"
                     width={800}
                     height={450}
                     className="w-full h-auto rounded-lg"
@@ -467,6 +467,17 @@ export default function MicrosoftCopilotReviewPage({ tool }: MicrosoftCopilotRev
                   </div>
                 </div>
                 
+                
+                <div className="mt-8">
+                  <Image
+                    src="/images/reviews/microsoft-copilot-overview.webp"
+                    alt="Microsoft Copilot Pros and Cons: Honest Assessment - detailed analysis and breakdown"
+                    title="Microsoft Copilot Pros and Cons: Honest Assessment"
+                    width={800}
+                    height={450}
+                    className="w-full h-auto rounded-lg"
+                  />
+                </div>
                 
               </div>
             </div>

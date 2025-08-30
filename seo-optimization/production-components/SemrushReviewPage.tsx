@@ -366,9 +366,9 @@ export default function SemrushReviewPage({ tool }: SemrushReviewPageProps) {
                 
                 <div className="mt-8">
                   <Image
-                    src="/images/reviews/semrush-semrush-pricing.webp"
-                    alt="Semrush pricing - detailed view"
-                    title="Semrush semrush pricing"
+                    src="/images/reviews/semrush-features.webp"
+                    alt="Semrush Key Features & Capabilities - detailed analysis and breakdown"
+                    title="Semrush Key Features & Capabilities"
                     width={800}
                     height={450}
                     className="w-full h-auto rounded-lg"
@@ -402,9 +402,9 @@ export default function SemrushReviewPage({ tool }: SemrushReviewPageProps) {
                 
                 <div className="mt-8">
                   <Image
-                    src="/images/reviews/semrush-semrush-features.webp"
-                    alt="Semrush features - detailed view"
-                    title="Semrush semrush features"
+                    src="/images/reviews/semrush-pricing.webp"
+                    alt="Semrush Pricing Plans & Options - detailed analysis and breakdown"
+                    title="Semrush Pricing Plans & Options"
                     width={800}
                     height={450}
                     className="w-full h-auto rounded-lg"
@@ -433,9 +433,9 @@ export default function SemrushReviewPage({ tool }: SemrushReviewPageProps) {
                 
                 <div className="mt-8">
                   <Image
-                    src="/images/reviews/semrush-semrush-vs-competitors.webp"
-                    alt="Semrush vs competitors - detailed view"
-                    title="Semrush semrush vs competitors"
+                    src="/images/reviews/semrush-use-cases.webp"
+                    alt="Semrush Use Cases & Applications - detailed analysis and breakdown"
+                    title="Semrush Use Cases & Applications"
                     width={800}
                     height={450}
                     className="w-full h-auto rounded-lg"
@@ -467,6 +467,17 @@ export default function SemrushReviewPage({ tool }: SemrushReviewPageProps) {
                   </div>
                 </div>
                 
+                
+                <div className="mt-8">
+                  <Image
+                    src="/images/reviews/semrush-overview.webp"
+                    alt="Semrush Pros and Cons: Honest Assessment - detailed analysis and breakdown"
+                    title="Semrush Pros and Cons: Honest Assessment"
+                    width={800}
+                    height={450}
+                    className="w-full h-auto rounded-lg"
+                  />
+                </div>
                 
               </div>
             </div>

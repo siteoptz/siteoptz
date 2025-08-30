@@ -366,9 +366,9 @@ export default function HootsuiteAiReviewPage({ tool }: HootsuiteAiReviewPagePro
                 
                 <div className="mt-8">
                   <Image
-                    src="/images/reviews/hootsuite-ai-hootsuite-ai-pricing.webp"
-                    alt="Hootsuite AI pricing - detailed view"
-                    title="Hootsuite AI hootsuite ai pricing"
+                    src="/images/reviews/hootsuite-ai-features.webp"
+                    alt="Hootsuite AI Key Features & Capabilities - detailed analysis and breakdown"
+                    title="Hootsuite AI Key Features & Capabilities"
                     width={800}
                     height={450}
                     className="w-full h-auto rounded-lg"
@@ -402,9 +402,9 @@ export default function HootsuiteAiReviewPage({ tool }: HootsuiteAiReviewPagePro
                 
                 <div className="mt-8">
                   <Image
-                    src="/images/reviews/hootsuite-ai-hootsuite-ai-features.webp"
-                    alt="Hootsuite AI features - detailed view"
-                    title="Hootsuite AI hootsuite ai features"
+                    src="/images/reviews/hootsuite-ai-pricing.webp"
+                    alt="Hootsuite AI Pricing Plans & Options - detailed analysis and breakdown"
+                    title="Hootsuite AI Pricing Plans & Options"
                     width={800}
                     height={450}
                     className="w-full h-auto rounded-lg"
@@ -433,9 +433,9 @@ export default function HootsuiteAiReviewPage({ tool }: HootsuiteAiReviewPagePro
                 
                 <div className="mt-8">
                   <Image
-                    src="/images/reviews/hootsuite-ai-hootsuite-ai-vs-competitors.webp"
-                    alt="Hootsuite AI vs competitors - detailed view"
-                    title="Hootsuite AI hootsuite ai vs competitors"
+                    src="/images/reviews/hootsuite-ai-use-cases.webp"
+                    alt="Hootsuite AI Use Cases & Applications - detailed analysis and breakdown"
+                    title="Hootsuite AI Use Cases & Applications"
                     width={800}
                     height={450}
                     className="w-full h-auto rounded-lg"
@@ -467,6 +467,17 @@ export default function HootsuiteAiReviewPage({ tool }: HootsuiteAiReviewPagePro
                   </div>
                 </div>
                 
+                
+                <div className="mt-8">
+                  <Image
+                    src="/images/reviews/hootsuite-ai-overview.webp"
+                    alt="Hootsuite AI Pros and Cons: Honest Assessment - detailed analysis and breakdown"
+                    title="Hootsuite AI Pros and Cons: Honest Assessment"
+                    width={800}
+                    height={450}
+                    className="w-full h-auto rounded-lg"
+                  />
+                </div>
                 
               </div>
             </div>

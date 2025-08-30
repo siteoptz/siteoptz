@@ -366,9 +366,9 @@ export default function GwiReviewPage({ tool }: GwiReviewPageProps) {
                 
                 <div className="mt-8">
                   <Image
-                    src="/images/reviews/gwi-gwi-pricing.webp"
-                    alt="GWI pricing - detailed view"
-                    title="GWI gwi pricing"
+                    src="/images/reviews/gwi-features.webp"
+                    alt="GWI Key Features & Capabilities - detailed analysis and breakdown"
+                    title="GWI Key Features & Capabilities"
                     width={800}
                     height={450}
                     className="w-full h-auto rounded-lg"
@@ -402,9 +402,9 @@ export default function GwiReviewPage({ tool }: GwiReviewPageProps) {
                 
                 <div className="mt-8">
                   <Image
-                    src="/images/reviews/gwi-gwi-features.webp"
-                    alt="GWI features - detailed view"
-                    title="GWI gwi features"
+                    src="/images/reviews/gwi-pricing.webp"
+                    alt="GWI Pricing Plans & Options - detailed analysis and breakdown"
+                    title="GWI Pricing Plans & Options"
                     width={800}
                     height={450}
                     className="w-full h-auto rounded-lg"
@@ -433,9 +433,9 @@ export default function GwiReviewPage({ tool }: GwiReviewPageProps) {
                 
                 <div className="mt-8">
                   <Image
-                    src="/images/reviews/gwi-gwi-vs-competitors.webp"
-                    alt="GWI vs competitors - detailed view"
-                    title="GWI gwi vs competitors"
+                    src="/images/reviews/gwi-use-cases.webp"
+                    alt="GWI Use Cases & Applications - detailed analysis and breakdown"
+                    title="GWI Use Cases & Applications"
                     width={800}
                     height={450}
                     className="w-full h-auto rounded-lg"
@@ -467,6 +467,17 @@ export default function GwiReviewPage({ tool }: GwiReviewPageProps) {
                   </div>
                 </div>
                 
+                
+                <div className="mt-8">
+                  <Image
+                    src="/images/reviews/gwi-overview.webp"
+                    alt="GWI Pros and Cons: Honest Assessment - detailed analysis and breakdown"
+                    title="GWI Pros and Cons: Honest Assessment"
+                    width={800}
+                    height={450}
+                    className="w-full h-auto rounded-lg"
+                  />
+                </div>
                 
               </div>
             </div>

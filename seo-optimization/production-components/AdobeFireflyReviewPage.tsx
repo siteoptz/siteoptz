@@ -366,9 +366,9 @@ export default function AdobeFireflyReviewPage({ tool }: AdobeFireflyReviewPageP
                 
                 <div className="mt-8">
                   <Image
-                    src="/images/reviews/adobe-firefly-adobe-firefly-pricing.webp"
-                    alt="Adobe Firefly pricing - detailed view"
-                    title="Adobe Firefly adobe firefly pricing"
+                    src="/images/reviews/adobe-firefly-features.webp"
+                    alt="Adobe Firefly Key Features & Capabilities - detailed analysis and breakdown"
+                    title="Adobe Firefly Key Features & Capabilities"
                     width={800}
                     height={450}
                     className="w-full h-auto rounded-lg"
@@ -402,9 +402,9 @@ export default function AdobeFireflyReviewPage({ tool }: AdobeFireflyReviewPageP
                 
                 <div className="mt-8">
                   <Image
-                    src="/images/reviews/adobe-firefly-adobe-firefly-features.webp"
-                    alt="Adobe Firefly features - detailed view"
-                    title="Adobe Firefly adobe firefly features"
+                    src="/images/reviews/adobe-firefly-pricing.webp"
+                    alt="Adobe Firefly Pricing Plans & Options - detailed analysis and breakdown"
+                    title="Adobe Firefly Pricing Plans & Options"
                     width={800}
                     height={450}
                     className="w-full h-auto rounded-lg"
@@ -433,9 +433,9 @@ export default function AdobeFireflyReviewPage({ tool }: AdobeFireflyReviewPageP
                 
                 <div className="mt-8">
                   <Image
-                    src="/images/reviews/adobe-firefly-adobe-firefly-vs-competitors.webp"
-                    alt="Adobe Firefly vs competitors - detailed view"
-                    title="Adobe Firefly adobe firefly vs competitors"
+                    src="/images/reviews/adobe-firefly-use-cases.webp"
+                    alt="Adobe Firefly Use Cases & Applications - detailed analysis and breakdown"
+                    title="Adobe Firefly Use Cases & Applications"
                     width={800}
                     height={450}
                     className="w-full h-auto rounded-lg"
@@ -467,6 +467,17 @@ export default function AdobeFireflyReviewPage({ tool }: AdobeFireflyReviewPageP
                   </div>
                 </div>
                 
+                
+                <div className="mt-8">
+                  <Image
+                    src="/images/reviews/adobe-firefly-overview.webp"
+                    alt="Adobe Firefly Pros and Cons: Honest Assessment - detailed analysis and breakdown"
+                    title="Adobe Firefly Pros and Cons: Honest Assessment"
+                    width={800}
+                    height={450}
+                    className="w-full h-auto rounded-lg"
+                  />
+                </div>
                 
               </div>
             </div>

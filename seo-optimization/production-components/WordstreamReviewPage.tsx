@@ -366,9 +366,9 @@ export default function WordstreamReviewPage({ tool }: WordstreamReviewPageProps
                 
                 <div className="mt-8">
                   <Image
-                    src="/images/reviews/wordstream-wordstream-pricing.webp"
-                    alt="Wordstream pricing - detailed view"
-                    title="Wordstream wordstream pricing"
+                    src="/images/reviews/wordstream-features.webp"
+                    alt="Wordstream Key Features & Capabilities - detailed analysis and breakdown"
+                    title="Wordstream Key Features & Capabilities"
                     width={800}
                     height={450}
                     className="w-full h-auto rounded-lg"
@@ -402,9 +402,9 @@ export default function WordstreamReviewPage({ tool }: WordstreamReviewPageProps
                 
                 <div className="mt-8">
                   <Image
-                    src="/images/reviews/wordstream-wordstream-features.webp"
-                    alt="Wordstream features - detailed view"
-                    title="Wordstream wordstream features"
+                    src="/images/reviews/wordstream-pricing.webp"
+                    alt="Wordstream Pricing Plans & Options - detailed analysis and breakdown"
+                    title="Wordstream Pricing Plans & Options"
                     width={800}
                     height={450}
                     className="w-full h-auto rounded-lg"
@@ -433,9 +433,9 @@ export default function WordstreamReviewPage({ tool }: WordstreamReviewPageProps
                 
                 <div className="mt-8">
                   <Image
-                    src="/images/reviews/wordstream-wordstream-vs-competitors.webp"
-                    alt="Wordstream vs competitors - detailed view"
-                    title="Wordstream wordstream vs competitors"
+                    src="/images/reviews/wordstream-use-cases.webp"
+                    alt="Wordstream Use Cases & Applications - detailed analysis and breakdown"
+                    title="Wordstream Use Cases & Applications"
                     width={800}
                     height={450}
                     className="w-full h-auto rounded-lg"
@@ -467,6 +467,17 @@ export default function WordstreamReviewPage({ tool }: WordstreamReviewPageProps
                   </div>
                 </div>
                 
+                
+                <div className="mt-8">
+                  <Image
+                    src="/images/reviews/wordstream-overview.webp"
+                    alt="Wordstream Pros and Cons: Honest Assessment - detailed analysis and breakdown"
+                    title="Wordstream Pros and Cons: Honest Assessment"
+                    width={800}
+                    height={450}
+                    className="w-full h-auto rounded-lg"
+                  />
+                </div>
                 
               </div>
             </div>

@@ -366,9 +366,9 @@ export default function KapwingReviewPage({ tool }: KapwingReviewPageProps) {
                 
                 <div className="mt-8">
                   <Image
-                    src="/images/reviews/kapwing-kapwing-pricing.webp"
-                    alt="Kapwing pricing - detailed view"
-                    title="Kapwing kapwing pricing"
+                    src="/images/reviews/kapwing-features.webp"
+                    alt="Kapwing Key Features & Capabilities - detailed analysis and breakdown"
+                    title="Kapwing Key Features & Capabilities"
                     width={800}
                     height={450}
                     className="w-full h-auto rounded-lg"
@@ -402,9 +402,9 @@ export default function KapwingReviewPage({ tool }: KapwingReviewPageProps) {
                 
                 <div className="mt-8">
                   <Image
-                    src="/images/reviews/kapwing-kapwing-features.webp"
-                    alt="Kapwing features - detailed view"
-                    title="Kapwing kapwing features"
+                    src="/images/reviews/kapwing-pricing.webp"
+                    alt="Kapwing Pricing Plans & Options - detailed analysis and breakdown"
+                    title="Kapwing Pricing Plans & Options"
                     width={800}
                     height={450}
                     className="w-full h-auto rounded-lg"
@@ -433,9 +433,9 @@ export default function KapwingReviewPage({ tool }: KapwingReviewPageProps) {
                 
                 <div className="mt-8">
                   <Image
-                    src="/images/reviews/kapwing-kapwing-vs-competitors.webp"
-                    alt="Kapwing vs competitors - detailed view"
-                    title="Kapwing kapwing vs competitors"
+                    src="/images/reviews/kapwing-use-cases.webp"
+                    alt="Kapwing Use Cases & Applications - detailed analysis and breakdown"
+                    title="Kapwing Use Cases & Applications"
                     width={800}
                     height={450}
                     className="w-full h-auto rounded-lg"
@@ -467,6 +467,17 @@ export default function KapwingReviewPage({ tool }: KapwingReviewPageProps) {
                   </div>
                 </div>
                 
+                
+                <div className="mt-8">
+                  <Image
+                    src="/images/reviews/kapwing-overview.webp"
+                    alt="Kapwing Pros and Cons: Honest Assessment - detailed analysis and breakdown"
+                    title="Kapwing Pros and Cons: Honest Assessment"
+                    width={800}
+                    height={450}
+                    className="w-full h-auto rounded-lg"
+                  />
+                </div>
                 
               </div>
             </div>

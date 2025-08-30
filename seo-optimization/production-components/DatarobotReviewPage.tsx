@@ -366,9 +366,9 @@ export default function DatarobotReviewPage({ tool }: DatarobotReviewPageProps) 
                 
                 <div className="mt-8">
                   <Image
-                    src="/images/reviews/datarobot-datarobot-pricing.webp"
-                    alt="DataRobot pricing - detailed view"
-                    title="DataRobot datarobot pricing"
+                    src="/images/reviews/datarobot-features.webp"
+                    alt="DataRobot Key Features & Capabilities - detailed analysis and breakdown"
+                    title="DataRobot Key Features & Capabilities"
                     width={800}
                     height={450}
                     className="w-full h-auto rounded-lg"
@@ -402,9 +402,9 @@ export default function DatarobotReviewPage({ tool }: DatarobotReviewPageProps) 
                 
                 <div className="mt-8">
                   <Image
-                    src="/images/reviews/datarobot-datarobot-features.webp"
-                    alt="DataRobot features - detailed view"
-                    title="DataRobot datarobot features"
+                    src="/images/reviews/datarobot-pricing.webp"
+                    alt="DataRobot Pricing Plans & Options - detailed analysis and breakdown"
+                    title="DataRobot Pricing Plans & Options"
                     width={800}
                     height={450}
                     className="w-full h-auto rounded-lg"
@@ -433,9 +433,9 @@ export default function DatarobotReviewPage({ tool }: DatarobotReviewPageProps) 
                 
                 <div className="mt-8">
                   <Image
-                    src="/images/reviews/datarobot-datarobot-vs-competitors.webp"
-                    alt="DataRobot vs competitors - detailed view"
-                    title="DataRobot datarobot vs competitors"
+                    src="/images/reviews/datarobot-use-cases.webp"
+                    alt="DataRobot Use Cases & Applications - detailed analysis and breakdown"
+                    title="DataRobot Use Cases & Applications"
                     width={800}
                     height={450}
                     className="w-full h-auto rounded-lg"
@@ -467,6 +467,17 @@ export default function DatarobotReviewPage({ tool }: DatarobotReviewPageProps) 
                   </div>
                 </div>
                 
+                
+                <div className="mt-8">
+                  <Image
+                    src="/images/reviews/datarobot-overview.webp"
+                    alt="DataRobot Pros and Cons: Honest Assessment - detailed analysis and breakdown"
+                    title="DataRobot Pros and Cons: Honest Assessment"
+                    width={800}
+                    height={450}
+                    className="w-full h-auto rounded-lg"
+                  />
+                </div>
                 
               </div>
             </div>

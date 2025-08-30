@@ -366,9 +366,9 @@ export default function SemrushAiReviewPage({ tool }: SemrushAiReviewPageProps) 
                 
                 <div className="mt-8">
                   <Image
-                    src="/images/reviews/semrush-ai-semrush-ai-pricing.webp"
-                    alt="Semrush AI pricing - detailed view"
-                    title="Semrush AI semrush ai pricing"
+                    src="/images/reviews/semrush-ai-features.webp"
+                    alt="Semrush AI Key Features & Capabilities - detailed analysis and breakdown"
+                    title="Semrush AI Key Features & Capabilities"
                     width={800}
                     height={450}
                     className="w-full h-auto rounded-lg"
@@ -402,9 +402,9 @@ export default function SemrushAiReviewPage({ tool }: SemrushAiReviewPageProps) 
                 
                 <div className="mt-8">
                   <Image
-                    src="/images/reviews/semrush-ai-semrush-ai-features.webp"
-                    alt="Semrush AI features - detailed view"
-                    title="Semrush AI semrush ai features"
+                    src="/images/reviews/semrush-ai-pricing.webp"
+                    alt="Semrush AI Pricing Plans & Options - detailed analysis and breakdown"
+                    title="Semrush AI Pricing Plans & Options"
                     width={800}
                     height={450}
                     className="w-full h-auto rounded-lg"
@@ -433,9 +433,9 @@ export default function SemrushAiReviewPage({ tool }: SemrushAiReviewPageProps) 
                 
                 <div className="mt-8">
                   <Image
-                    src="/images/reviews/semrush-ai-semrush-ai-vs-competitors.webp"
-                    alt="Semrush AI vs competitors - detailed view"
-                    title="Semrush AI semrush ai vs competitors"
+                    src="/images/reviews/semrush-ai-use-cases.webp"
+                    alt="Semrush AI Use Cases & Applications - detailed analysis and breakdown"
+                    title="Semrush AI Use Cases & Applications"
                     width={800}
                     height={450}
                     className="w-full h-auto rounded-lg"
@@ -467,6 +467,17 @@ export default function SemrushAiReviewPage({ tool }: SemrushAiReviewPageProps) 
                   </div>
                 </div>
                 
+                
+                <div className="mt-8">
+                  <Image
+                    src="/images/reviews/semrush-ai-overview.webp"
+                    alt="Semrush AI Pros and Cons: Honest Assessment - detailed analysis and breakdown"
+                    title="Semrush AI Pros and Cons: Honest Assessment"
+                    width={800}
+                    height={450}
+                    className="w-full h-auto rounded-lg"
+                  />
+                </div>
                 
               </div>
             </div>

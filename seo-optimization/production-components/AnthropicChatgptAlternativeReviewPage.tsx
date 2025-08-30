@@ -366,9 +366,9 @@ export default function AnthropicChatgptAlternativeReviewPage({ tool }: Anthropi
                 
                 <div className="mt-8">
                   <Image
-                    src="/images/reviews/anthropic-chatgpt-alternative-character.ai-pricing.webp"
-                    alt="Character.AI pricing - detailed view"
-                    title="Character.AI character.ai pricing"
+                    src="/images/reviews/anthropic-chatgpt-alternative-features.webp"
+                    alt="Character.AI Key Features & Capabilities - detailed analysis and breakdown"
+                    title="Character.AI Key Features & Capabilities"
                     width={800}
                     height={450}
                     className="w-full h-auto rounded-lg"
@@ -402,9 +402,9 @@ export default function AnthropicChatgptAlternativeReviewPage({ tool }: Anthropi
                 
                 <div className="mt-8">
                   <Image
-                    src="/images/reviews/anthropic-chatgpt-alternative-character.ai-features.webp"
-                    alt="Character.AI features - detailed view"
-                    title="Character.AI character.ai features"
+                    src="/images/reviews/anthropic-chatgpt-alternative-pricing.webp"
+                    alt="Character.AI Pricing Plans & Options - detailed analysis and breakdown"
+                    title="Character.AI Pricing Plans & Options"
                     width={800}
                     height={450}
                     className="w-full h-auto rounded-lg"
@@ -433,9 +433,9 @@ export default function AnthropicChatgptAlternativeReviewPage({ tool }: Anthropi
                 
                 <div className="mt-8">
                   <Image
-                    src="/images/reviews/anthropic-chatgpt-alternative-character.ai-vs-competitors.webp"
-                    alt="Character.AI vs competitors - detailed view"
-                    title="Character.AI character.ai vs competitors"
+                    src="/images/reviews/anthropic-chatgpt-alternative-use-cases.webp"
+                    alt="Character.AI Use Cases & Applications - detailed analysis and breakdown"
+                    title="Character.AI Use Cases & Applications"
                     width={800}
                     height={450}
                     className="w-full h-auto rounded-lg"
@@ -467,6 +467,17 @@ export default function AnthropicChatgptAlternativeReviewPage({ tool }: Anthropi
                   </div>
                 </div>
                 
+                
+                <div className="mt-8">
+                  <Image
+                    src="/images/reviews/anthropic-chatgpt-alternative-overview.webp"
+                    alt="Character.AI Pros and Cons: Honest Assessment - detailed analysis and breakdown"
+                    title="Character.AI Pros and Cons: Honest Assessment"
+                    width={800}
+                    height={450}
+                    className="w-full h-auto rounded-lg"
+                  />
+                </div>
                 
               </div>
             </div>

@@ -366,9 +366,9 @@ export default function AmazonAlexaReviewPage({ tool }: AmazonAlexaReviewPagePro
                 
                 <div className="mt-8">
                   <Image
-                    src="/images/reviews/amazon-alexa-amazon-alexa-pricing.webp"
-                    alt="Amazon Alexa pricing - detailed view"
-                    title="Amazon Alexa amazon alexa pricing"
+                    src="/images/reviews/amazon-alexa-features.webp"
+                    alt="Amazon Alexa Key Features & Capabilities - detailed analysis and breakdown"
+                    title="Amazon Alexa Key Features & Capabilities"
                     width={800}
                     height={450}
                     className="w-full h-auto rounded-lg"
@@ -402,9 +402,9 @@ export default function AmazonAlexaReviewPage({ tool }: AmazonAlexaReviewPagePro
                 
                 <div className="mt-8">
                   <Image
-                    src="/images/reviews/amazon-alexa-amazon-alexa-features.webp"
-                    alt="Amazon Alexa features - detailed view"
-                    title="Amazon Alexa amazon alexa features"
+                    src="/images/reviews/amazon-alexa-pricing.webp"
+                    alt="Amazon Alexa Pricing Plans & Options - detailed analysis and breakdown"
+                    title="Amazon Alexa Pricing Plans & Options"
                     width={800}
                     height={450}
                     className="w-full h-auto rounded-lg"
@@ -433,9 +433,9 @@ export default function AmazonAlexaReviewPage({ tool }: AmazonAlexaReviewPagePro
                 
                 <div className="mt-8">
                   <Image
-                    src="/images/reviews/amazon-alexa-amazon-alexa-vs-competitors.webp"
-                    alt="Amazon Alexa vs competitors - detailed view"
-                    title="Amazon Alexa amazon alexa vs competitors"
+                    src="/images/reviews/amazon-alexa-use-cases.webp"
+                    alt="Amazon Alexa Use Cases & Applications - detailed analysis and breakdown"
+                    title="Amazon Alexa Use Cases & Applications"
                     width={800}
                     height={450}
                     className="w-full h-auto rounded-lg"
@@ -467,6 +467,17 @@ export default function AmazonAlexaReviewPage({ tool }: AmazonAlexaReviewPagePro
                   </div>
                 </div>
                 
+                
+                <div className="mt-8">
+                  <Image
+                    src="/images/reviews/amazon-alexa-overview.webp"
+                    alt="Amazon Alexa Pros and Cons: Honest Assessment - detailed analysis and breakdown"
+                    title="Amazon Alexa Pros and Cons: Honest Assessment"
+                    width={800}
+                    height={450}
+                    className="w-full h-auto rounded-lg"
+                  />
+                </div>
                 
               </div>
             </div>

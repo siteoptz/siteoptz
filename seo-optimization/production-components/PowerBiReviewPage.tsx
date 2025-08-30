@@ -366,9 +366,9 @@ export default function PowerBiReviewPage({ tool }: PowerBiReviewPageProps) {
                 
                 <div className="mt-8">
                   <Image
-                    src="/images/reviews/power-bi-power-bi-pricing.webp"
-                    alt="Power BI pricing - detailed view"
-                    title="Power BI power bi pricing"
+                    src="/images/reviews/power-bi-features.webp"
+                    alt="Power BI Key Features & Capabilities - detailed analysis and breakdown"
+                    title="Power BI Key Features & Capabilities"
                     width={800}
                     height={450}
                     className="w-full h-auto rounded-lg"
@@ -402,9 +402,9 @@ export default function PowerBiReviewPage({ tool }: PowerBiReviewPageProps) {
                 
                 <div className="mt-8">
                   <Image
-                    src="/images/reviews/power-bi-power-bi-features.webp"
-                    alt="Power BI features - detailed view"
-                    title="Power BI power bi features"
+                    src="/images/reviews/power-bi-pricing.webp"
+                    alt="Power BI Pricing Plans & Options - detailed analysis and breakdown"
+                    title="Power BI Pricing Plans & Options"
                     width={800}
                     height={450}
                     className="w-full h-auto rounded-lg"
@@ -433,9 +433,9 @@ export default function PowerBiReviewPage({ tool }: PowerBiReviewPageProps) {
                 
                 <div className="mt-8">
                   <Image
-                    src="/images/reviews/power-bi-power-bi-vs-competitors.webp"
-                    alt="Power BI vs competitors - detailed view"
-                    title="Power BI power bi vs competitors"
+                    src="/images/reviews/power-bi-use-cases.webp"
+                    alt="Power BI Use Cases & Applications - detailed analysis and breakdown"
+                    title="Power BI Use Cases & Applications"
                     width={800}
                     height={450}
                     className="w-full h-auto rounded-lg"
@@ -467,6 +467,17 @@ export default function PowerBiReviewPage({ tool }: PowerBiReviewPageProps) {
                   </div>
                 </div>
                 
+                
+                <div className="mt-8">
+                  <Image
+                    src="/images/reviews/power-bi-overview.webp"
+                    alt="Power BI Pros and Cons: Honest Assessment - detailed analysis and breakdown"
+                    title="Power BI Pros and Cons: Honest Assessment"
+                    width={800}
+                    height={450}
+                    className="w-full h-auto rounded-lg"
+                  />
+                </div>
                 
               </div>
             </div>

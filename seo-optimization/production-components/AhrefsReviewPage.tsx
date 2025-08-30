@@ -366,9 +366,9 @@ export default function AhrefsReviewPage({ tool }: AhrefsReviewPageProps) {
                 
                 <div className="mt-8">
                   <Image
-                    src="/images/reviews/ahrefs-ahrefs-pricing.webp"
-                    alt="Ahrefs pricing - detailed view"
-                    title="Ahrefs ahrefs pricing"
+                    src="/images/reviews/ahrefs-features.webp"
+                    alt="Ahrefs Key Features & Capabilities - detailed analysis and breakdown"
+                    title="Ahrefs Key Features & Capabilities"
                     width={800}
                     height={450}
                     className="w-full h-auto rounded-lg"
@@ -402,9 +402,9 @@ export default function AhrefsReviewPage({ tool }: AhrefsReviewPageProps) {
                 
                 <div className="mt-8">
                   <Image
-                    src="/images/reviews/ahrefs-ahrefs-features.webp"
-                    alt="Ahrefs features - detailed view"
-                    title="Ahrefs ahrefs features"
+                    src="/images/reviews/ahrefs-pricing.webp"
+                    alt="Ahrefs Pricing Plans & Options - detailed analysis and breakdown"
+                    title="Ahrefs Pricing Plans & Options"
                     width={800}
                     height={450}
                     className="w-full h-auto rounded-lg"
@@ -433,9 +433,9 @@ export default function AhrefsReviewPage({ tool }: AhrefsReviewPageProps) {
                 
                 <div className="mt-8">
                   <Image
-                    src="/images/reviews/ahrefs-ahrefs-vs-competitors.webp"
-                    alt="Ahrefs vs competitors - detailed view"
-                    title="Ahrefs ahrefs vs competitors"
+                    src="/images/reviews/ahrefs-use-cases.webp"
+                    alt="Ahrefs Use Cases & Applications - detailed analysis and breakdown"
+                    title="Ahrefs Use Cases & Applications"
                     width={800}
                     height={450}
                     className="w-full h-auto rounded-lg"
@@ -467,6 +467,17 @@ export default function AhrefsReviewPage({ tool }: AhrefsReviewPageProps) {
                   </div>
                 </div>
                 
+                
+                <div className="mt-8">
+                  <Image
+                    src="/images/reviews/ahrefs-overview.webp"
+                    alt="Ahrefs Pros and Cons: Honest Assessment - detailed analysis and breakdown"
+                    title="Ahrefs Pros and Cons: Honest Assessment"
+                    width={800}
+                    height={450}
+                    className="w-full h-auto rounded-lg"
+                  />
+                </div>
                 
               </div>
             </div>

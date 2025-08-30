@@ -366,9 +366,9 @@ export default function ResembleAiReviewPage({ tool }: ResembleAiReviewPageProps
                 
                 <div className="mt-8">
                   <Image
-                    src="/images/reviews/resemble-ai-resemble-ai-pricing.webp"
-                    alt="Resemble AI pricing - detailed view"
-                    title="Resemble AI resemble ai pricing"
+                    src="/images/reviews/resemble-ai-features.webp"
+                    alt="Resemble AI Key Features & Capabilities - detailed analysis and breakdown"
+                    title="Resemble AI Key Features & Capabilities"
                     width={800}
                     height={450}
                     className="w-full h-auto rounded-lg"
@@ -402,9 +402,9 @@ export default function ResembleAiReviewPage({ tool }: ResembleAiReviewPageProps
                 
                 <div className="mt-8">
                   <Image
-                    src="/images/reviews/resemble-ai-resemble-ai-features.webp"
-                    alt="Resemble AI features - detailed view"
-                    title="Resemble AI resemble ai features"
+                    src="/images/reviews/resemble-ai-pricing.webp"
+                    alt="Resemble AI Pricing Plans & Options - detailed analysis and breakdown"
+                    title="Resemble AI Pricing Plans & Options"
                     width={800}
                     height={450}
                     className="w-full h-auto rounded-lg"
@@ -433,9 +433,9 @@ export default function ResembleAiReviewPage({ tool }: ResembleAiReviewPageProps
                 
                 <div className="mt-8">
                   <Image
-                    src="/images/reviews/resemble-ai-resemble-ai-vs-competitors.webp"
-                    alt="Resemble AI vs competitors - detailed view"
-                    title="Resemble AI resemble ai vs competitors"
+                    src="/images/reviews/resemble-ai-use-cases.webp"
+                    alt="Resemble AI Use Cases & Applications - detailed analysis and breakdown"
+                    title="Resemble AI Use Cases & Applications"
                     width={800}
                     height={450}
                     className="w-full h-auto rounded-lg"
@@ -467,6 +467,17 @@ export default function ResembleAiReviewPage({ tool }: ResembleAiReviewPageProps
                   </div>
                 </div>
                 
+                
+                <div className="mt-8">
+                  <Image
+                    src="/images/reviews/resemble-ai-overview.webp"
+                    alt="Resemble AI Pros and Cons: Honest Assessment - detailed analysis and breakdown"
+                    title="Resemble AI Pros and Cons: Honest Assessment"
+                    width={800}
+                    height={450}
+                    className="w-full h-auto rounded-lg"
+                  />
+                </div>
                 
               </div>
             </div>

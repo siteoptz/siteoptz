@@ -366,9 +366,9 @@ export default function LaterReviewPage({ tool }: LaterReviewPageProps) {
                 
                 <div className="mt-8">
                   <Image
-                    src="/images/reviews/later-later-pricing.webp"
-                    alt="Later pricing - detailed view"
-                    title="Later later pricing"
+                    src="/images/reviews/later-features.webp"
+                    alt="Later Key Features & Capabilities - detailed analysis and breakdown"
+                    title="Later Key Features & Capabilities"
                     width={800}
                     height={450}
                     className="w-full h-auto rounded-lg"
@@ -402,9 +402,9 @@ export default function LaterReviewPage({ tool }: LaterReviewPageProps) {
                 
                 <div className="mt-8">
                   <Image
-                    src="/images/reviews/later-later-features.webp"
-                    alt="Later features - detailed view"
-                    title="Later later features"
+                    src="/images/reviews/later-pricing.webp"
+                    alt="Later Pricing Plans & Options - detailed analysis and breakdown"
+                    title="Later Pricing Plans & Options"
                     width={800}
                     height={450}
                     className="w-full h-auto rounded-lg"
@@ -433,9 +433,9 @@ export default function LaterReviewPage({ tool }: LaterReviewPageProps) {
                 
                 <div className="mt-8">
                   <Image
-                    src="/images/reviews/later-later-vs-competitors.webp"
-                    alt="Later vs competitors - detailed view"
-                    title="Later later vs competitors"
+                    src="/images/reviews/later-use-cases.webp"
+                    alt="Later Use Cases & Applications - detailed analysis and breakdown"
+                    title="Later Use Cases & Applications"
                     width={800}
                     height={450}
                     className="w-full h-auto rounded-lg"
@@ -467,6 +467,17 @@ export default function LaterReviewPage({ tool }: LaterReviewPageProps) {
                   </div>
                 </div>
                 
+                
+                <div className="mt-8">
+                  <Image
+                    src="/images/reviews/later-overview.webp"
+                    alt="Later Pros and Cons: Honest Assessment - detailed analysis and breakdown"
+                    title="Later Pros and Cons: Honest Assessment"
+                    width={800}
+                    height={450}
+                    className="w-full h-auto rounded-lg"
+                  />
+                </div>
                 
               </div>
             </div>

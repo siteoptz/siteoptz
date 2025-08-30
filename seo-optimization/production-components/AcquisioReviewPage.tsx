@@ -366,9 +366,9 @@ export default function AcquisioReviewPage({ tool }: AcquisioReviewPageProps) {
                 
                 <div className="mt-8">
                   <Image
-                    src="/images/reviews/acquisio-acquisio-pricing.webp"
-                    alt="Acquisio pricing - detailed view"
-                    title="Acquisio acquisio pricing"
+                    src="/images/reviews/acquisio-features.webp"
+                    alt="Acquisio Key Features & Capabilities - detailed analysis and breakdown"
+                    title="Acquisio Key Features & Capabilities"
                     width={800}
                     height={450}
                     className="w-full h-auto rounded-lg"
@@ -402,9 +402,9 @@ export default function AcquisioReviewPage({ tool }: AcquisioReviewPageProps) {
                 
                 <div className="mt-8">
                   <Image
-                    src="/images/reviews/acquisio-acquisio-features.webp"
-                    alt="Acquisio features - detailed view"
-                    title="Acquisio acquisio features"
+                    src="/images/reviews/acquisio-pricing.webp"
+                    alt="Acquisio Pricing Plans & Options - detailed analysis and breakdown"
+                    title="Acquisio Pricing Plans & Options"
                     width={800}
                     height={450}
                     className="w-full h-auto rounded-lg"
@@ -433,9 +433,9 @@ export default function AcquisioReviewPage({ tool }: AcquisioReviewPageProps) {
                 
                 <div className="mt-8">
                   <Image
-                    src="/images/reviews/acquisio-acquisio-vs-competitors.webp"
-                    alt="Acquisio vs competitors - detailed view"
-                    title="Acquisio acquisio vs competitors"
+                    src="/images/reviews/acquisio-use-cases.webp"
+                    alt="Acquisio Use Cases & Applications - detailed analysis and breakdown"
+                    title="Acquisio Use Cases & Applications"
                     width={800}
                     height={450}
                     className="w-full h-auto rounded-lg"
@@ -467,6 +467,17 @@ export default function AcquisioReviewPage({ tool }: AcquisioReviewPageProps) {
                   </div>
                 </div>
                 
+                
+                <div className="mt-8">
+                  <Image
+                    src="/images/reviews/acquisio-overview.webp"
+                    alt="Acquisio Pros and Cons: Honest Assessment - detailed analysis and breakdown"
+                    title="Acquisio Pros and Cons: Honest Assessment"
+                    width={800}
+                    height={450}
+                    className="w-full h-auto rounded-lg"
+                  />
+                </div>
                 
               </div>
             </div>

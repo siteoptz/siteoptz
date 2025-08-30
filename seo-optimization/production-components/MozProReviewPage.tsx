@@ -366,9 +366,9 @@ export default function MozProReviewPage({ tool }: MozProReviewPageProps) {
                 
                 <div className="mt-8">
                   <Image
-                    src="/images/reviews/moz-pro-moz-pro-pricing.webp"
-                    alt="Moz Pro pricing - detailed view"
-                    title="Moz Pro moz pro pricing"
+                    src="/images/reviews/moz-pro-features.webp"
+                    alt="Moz Pro Key Features & Capabilities - detailed analysis and breakdown"
+                    title="Moz Pro Key Features & Capabilities"
                     width={800}
                     height={450}
                     className="w-full h-auto rounded-lg"
@@ -402,9 +402,9 @@ export default function MozProReviewPage({ tool }: MozProReviewPageProps) {
                 
                 <div className="mt-8">
                   <Image
-                    src="/images/reviews/moz-pro-moz-pro-features.webp"
-                    alt="Moz Pro features - detailed view"
-                    title="Moz Pro moz pro features"
+                    src="/images/reviews/moz-pro-pricing.webp"
+                    alt="Moz Pro Pricing Plans & Options - detailed analysis and breakdown"
+                    title="Moz Pro Pricing Plans & Options"
                     width={800}
                     height={450}
                     className="w-full h-auto rounded-lg"
@@ -433,9 +433,9 @@ export default function MozProReviewPage({ tool }: MozProReviewPageProps) {
                 
                 <div className="mt-8">
                   <Image
-                    src="/images/reviews/moz-pro-moz-pro-vs-competitors.webp"
-                    alt="Moz Pro vs competitors - detailed view"
-                    title="Moz Pro moz pro vs competitors"
+                    src="/images/reviews/moz-pro-use-cases.webp"
+                    alt="Moz Pro Use Cases & Applications - detailed analysis and breakdown"
+                    title="Moz Pro Use Cases & Applications"
                     width={800}
                     height={450}
                     className="w-full h-auto rounded-lg"
@@ -467,6 +467,17 @@ export default function MozProReviewPage({ tool }: MozProReviewPageProps) {
                   </div>
                 </div>
                 
+                
+                <div className="mt-8">
+                  <Image
+                    src="/images/reviews/moz-pro-overview.webp"
+                    alt="Moz Pro Pros and Cons: Honest Assessment - detailed analysis and breakdown"
+                    title="Moz Pro Pros and Cons: Honest Assessment"
+                    width={800}
+                    height={450}
+                    className="w-full h-auto rounded-lg"
+                  />
+                </div>
                 
               </div>
             </div>

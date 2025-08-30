@@ -650,18 +650,7 @@ export default function ${componentName}({ tool }: ${componentName}Props) {
                   </div>
                 </div>
                 
-                ${index < images.feature_images.length ? `
-                <div className="mt-8">
-                  <Image
-                    src="${images.feature_images[index].src}"
-                    alt="${images.feature_images[index].alt}"
-                    title="${images.feature_images[index].title}"
-                    width={${images.feature_images[index].width}}
-                    height={${images.feature_images[index].height}}
-                    className="w-full h-auto rounded-lg"
-                  />
-                </div>
-                ` : ''}
+                ${this.getSectionImage(section.heading, tool, index)}
               </div>`).join('')}
             </div>
           </div>
@@ -767,6 +756,41 @@ export const getStaticProps: GetStaticProps = async () => {
     revalidate: 86400 // 24 hours
   };
 };`;
+  }
+
+  getSectionImage(heading, tool, index) {
+    const cleanHeading = heading.replace(/^#+\s/, '').toLowerCase();
+    
+    // Determine image type based on heading content
+    let imageType = 'overview';
+    let imageTitle = heading.replace(/^#+\s/, '');
+    
+    if (cleanHeading.includes('pricing') || cleanHeading.includes('cost') || cleanHeading.includes('plan')) {
+      imageType = 'pricing';
+      imageTitle = `${tool.name} Pricing Plans & Options`;
+    } else if (cleanHeading.includes('features') || cleanHeading.includes('capabilities')) {
+      imageType = 'features';
+      imageTitle = `${tool.name} Key Features & Capabilities`;
+    } else if (cleanHeading.includes('comparison') || cleanHeading.includes('competitors') || cleanHeading.includes('alternatives') || cleanHeading.includes('vs')) {
+      imageType = 'vs-competitors';
+      imageTitle = `${tool.name} vs Competitors Comparison`;
+    } else if (cleanHeading.includes('use case') || cleanHeading.includes('application')) {
+      imageType = 'use-cases';
+      imageTitle = `${tool.name} Use Cases & Applications`;
+    }
+    
+    return `
+                <div className="mt-8">
+                  <Image
+                    src="/images/reviews/${tool.slug}-${imageType}.webp"
+                    alt="${imageTitle} - detailed analysis and breakdown"
+                    title="${imageTitle}"
+                    width={800}
+                    height={450}
+                    className="w-full h-auto rounded-lg"
+                  />
+                </div>
+                `;
   }
 
   formatContentToHTML(content) {

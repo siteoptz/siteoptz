@@ -366,9 +366,9 @@ export default function FyxerReviewPage({ tool }: FyxerReviewPageProps) {
                 
                 <div className="mt-8">
                   <Image
-                    src="/images/reviews/fyxer-fyxer-pricing.webp"
-                    alt="Fyxer pricing - detailed view"
-                    title="Fyxer fyxer pricing"
+                    src="/images/reviews/fyxer-features.webp"
+                    alt="Fyxer Key Features & Capabilities - detailed analysis and breakdown"
+                    title="Fyxer Key Features & Capabilities"
                     width={800}
                     height={450}
                     className="w-full h-auto rounded-lg"
@@ -402,9 +402,9 @@ export default function FyxerReviewPage({ tool }: FyxerReviewPageProps) {
                 
                 <div className="mt-8">
                   <Image
-                    src="/images/reviews/fyxer-fyxer-features.webp"
-                    alt="Fyxer features - detailed view"
-                    title="Fyxer fyxer features"
+                    src="/images/reviews/fyxer-pricing.webp"
+                    alt="Fyxer Pricing Plans & Options - detailed analysis and breakdown"
+                    title="Fyxer Pricing Plans & Options"
                     width={800}
                     height={450}
                     className="w-full h-auto rounded-lg"
@@ -433,9 +433,9 @@ export default function FyxerReviewPage({ tool }: FyxerReviewPageProps) {
                 
                 <div className="mt-8">
                   <Image
-                    src="/images/reviews/fyxer-fyxer-vs-competitors.webp"
-                    alt="Fyxer vs competitors - detailed view"
-                    title="Fyxer fyxer vs competitors"
+                    src="/images/reviews/fyxer-use-cases.webp"
+                    alt="Fyxer Use Cases & Applications - detailed analysis and breakdown"
+                    title="Fyxer Use Cases & Applications"
                     width={800}
                     height={450}
                     className="w-full h-auto rounded-lg"
@@ -467,6 +467,17 @@ export default function FyxerReviewPage({ tool }: FyxerReviewPageProps) {
                   </div>
                 </div>
                 
+                
+                <div className="mt-8">
+                  <Image
+                    src="/images/reviews/fyxer-overview.webp"
+                    alt="Fyxer Pros and Cons: Honest Assessment - detailed analysis and breakdown"
+                    title="Fyxer Pros and Cons: Honest Assessment"
+                    width={800}
+                    height={450}
+                    className="w-full h-auto rounded-lg"
+                  />
+                </div>
                 
               </div>
             </div>

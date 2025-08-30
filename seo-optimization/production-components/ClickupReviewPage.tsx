@@ -366,9 +366,9 @@ export default function ClickupReviewPage({ tool }: ClickupReviewPageProps) {
                 
                 <div className="mt-8">
                   <Image
-                    src="/images/reviews/clickup-clickup-pricing.webp"
-                    alt="ClickUp pricing - detailed view"
-                    title="ClickUp clickup pricing"
+                    src="/images/reviews/clickup-features.webp"
+                    alt="ClickUp Key Features & Capabilities - detailed analysis and breakdown"
+                    title="ClickUp Key Features & Capabilities"
                     width={800}
                     height={450}
                     className="w-full h-auto rounded-lg"
@@ -402,9 +402,9 @@ export default function ClickupReviewPage({ tool }: ClickupReviewPageProps) {
                 
                 <div className="mt-8">
                   <Image
-                    src="/images/reviews/clickup-clickup-features.webp"
-                    alt="ClickUp features - detailed view"
-                    title="ClickUp clickup features"
+                    src="/images/reviews/clickup-pricing.webp"
+                    alt="ClickUp Pricing Plans & Options - detailed analysis and breakdown"
+                    title="ClickUp Pricing Plans & Options"
                     width={800}
                     height={450}
                     className="w-full h-auto rounded-lg"
@@ -433,9 +433,9 @@ export default function ClickupReviewPage({ tool }: ClickupReviewPageProps) {
                 
                 <div className="mt-8">
                   <Image
-                    src="/images/reviews/clickup-clickup-vs-competitors.webp"
-                    alt="ClickUp vs competitors - detailed view"
-                    title="ClickUp clickup vs competitors"
+                    src="/images/reviews/clickup-use-cases.webp"
+                    alt="ClickUp Use Cases & Applications - detailed analysis and breakdown"
+                    title="ClickUp Use Cases & Applications"
                     width={800}
                     height={450}
                     className="w-full h-auto rounded-lg"
@@ -467,6 +467,17 @@ export default function ClickupReviewPage({ tool }: ClickupReviewPageProps) {
                   </div>
                 </div>
                 
+                
+                <div className="mt-8">
+                  <Image
+                    src="/images/reviews/clickup-overview.webp"
+                    alt="ClickUp Pros and Cons: Honest Assessment - detailed analysis and breakdown"
+                    title="ClickUp Pros and Cons: Honest Assessment"
+                    width={800}
+                    height={450}
+                    className="w-full h-auto rounded-lg"
+                  />
+                </div>
                 
               </div>
             </div>

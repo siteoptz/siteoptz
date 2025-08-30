@@ -366,9 +366,9 @@ export default function NotionAiReviewPage({ tool }: NotionAiReviewPageProps) {
                 
                 <div className="mt-8">
                   <Image
-                    src="/images/reviews/notion-ai-notion-ai-pricing.webp"
-                    alt="Notion AI pricing - detailed view"
-                    title="Notion AI notion ai pricing"
+                    src="/images/reviews/notion-ai-features.webp"
+                    alt="Notion AI Key Features & Capabilities - detailed analysis and breakdown"
+                    title="Notion AI Key Features & Capabilities"
                     width={800}
                     height={450}
                     className="w-full h-auto rounded-lg"
@@ -402,9 +402,9 @@ export default function NotionAiReviewPage({ tool }: NotionAiReviewPageProps) {
                 
                 <div className="mt-8">
                   <Image
-                    src="/images/reviews/notion-ai-notion-ai-features.webp"
-                    alt="Notion AI features - detailed view"
-                    title="Notion AI notion ai features"
+                    src="/images/reviews/notion-ai-pricing.webp"
+                    alt="Notion AI Pricing Plans & Options - detailed analysis and breakdown"
+                    title="Notion AI Pricing Plans & Options"
                     width={800}
                     height={450}
                     className="w-full h-auto rounded-lg"
@@ -433,9 +433,9 @@ export default function NotionAiReviewPage({ tool }: NotionAiReviewPageProps) {
                 
                 <div className="mt-8">
                   <Image
-                    src="/images/reviews/notion-ai-notion-ai-vs-competitors.webp"
-                    alt="Notion AI vs competitors - detailed view"
-                    title="Notion AI notion ai vs competitors"
+                    src="/images/reviews/notion-ai-use-cases.webp"
+                    alt="Notion AI Use Cases & Applications - detailed analysis and breakdown"
+                    title="Notion AI Use Cases & Applications"
                     width={800}
                     height={450}
                     className="w-full h-auto rounded-lg"
@@ -467,6 +467,17 @@ export default function NotionAiReviewPage({ tool }: NotionAiReviewPageProps) {
                   </div>
                 </div>
                 
+                
+                <div className="mt-8">
+                  <Image
+                    src="/images/reviews/notion-ai-overview.webp"
+                    alt="Notion AI Pros and Cons: Honest Assessment - detailed analysis and breakdown"
+                    title="Notion AI Pros and Cons: Honest Assessment"
+                    width={800}
+                    height={450}
+                    className="w-full h-auto rounded-lg"
+                  />
+                </div>
                 
               </div>
             </div>

@@ -366,9 +366,9 @@ export default function CanvaAiReviewPage({ tool }: CanvaAiReviewPageProps) {
                 
                 <div className="mt-8">
                   <Image
-                    src="/images/reviews/canva-ai-canva-ai-pricing.webp"
-                    alt="Canva AI pricing - detailed view"
-                    title="Canva AI canva ai pricing"
+                    src="/images/reviews/canva-ai-features.webp"
+                    alt="Canva AI Key Features & Capabilities - detailed analysis and breakdown"
+                    title="Canva AI Key Features & Capabilities"
                     width={800}
                     height={450}
                     className="w-full h-auto rounded-lg"
@@ -402,9 +402,9 @@ export default function CanvaAiReviewPage({ tool }: CanvaAiReviewPageProps) {
                 
                 <div className="mt-8">
                   <Image
-                    src="/images/reviews/canva-ai-canva-ai-features.webp"
-                    alt="Canva AI features - detailed view"
-                    title="Canva AI canva ai features"
+                    src="/images/reviews/canva-ai-pricing.webp"
+                    alt="Canva AI Pricing Plans & Options - detailed analysis and breakdown"
+                    title="Canva AI Pricing Plans & Options"
                     width={800}
                     height={450}
                     className="w-full h-auto rounded-lg"
@@ -433,9 +433,9 @@ export default function CanvaAiReviewPage({ tool }: CanvaAiReviewPageProps) {
                 
                 <div className="mt-8">
                   <Image
-                    src="/images/reviews/canva-ai-canva-ai-vs-competitors.webp"
-                    alt="Canva AI vs competitors - detailed view"
-                    title="Canva AI canva ai vs competitors"
+                    src="/images/reviews/canva-ai-use-cases.webp"
+                    alt="Canva AI Use Cases & Applications - detailed analysis and breakdown"
+                    title="Canva AI Use Cases & Applications"
                     width={800}
                     height={450}
                     className="w-full h-auto rounded-lg"
@@ -467,6 +467,17 @@ export default function CanvaAiReviewPage({ tool }: CanvaAiReviewPageProps) {
                   </div>
                 </div>
                 
+                
+                <div className="mt-8">
+                  <Image
+                    src="/images/reviews/canva-ai-overview.webp"
+                    alt="Canva AI Pros and Cons: Honest Assessment - detailed analysis and breakdown"
+                    title="Canva AI Pros and Cons: Honest Assessment"
+                    width={800}
+                    height={450}
+                    className="w-full h-auto rounded-lg"
+                  />
+                </div>
                 
               </div>
             </div>

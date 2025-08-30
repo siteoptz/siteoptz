@@ -366,9 +366,9 @@ export default function SurferSeoReviewPage({ tool }: SurferSeoReviewPageProps) 
                 
                 <div className="mt-8">
                   <Image
-                    src="/images/reviews/surfer-seo-surfer-seo-pricing.webp"
-                    alt="Surfer SEO pricing - detailed view"
-                    title="Surfer SEO surfer seo pricing"
+                    src="/images/reviews/surfer-seo-features.webp"
+                    alt="Surfer SEO Key Features & Capabilities - detailed analysis and breakdown"
+                    title="Surfer SEO Key Features & Capabilities"
                     width={800}
                     height={450}
                     className="w-full h-auto rounded-lg"
@@ -402,9 +402,9 @@ export default function SurferSeoReviewPage({ tool }: SurferSeoReviewPageProps) 
                 
                 <div className="mt-8">
                   <Image
-                    src="/images/reviews/surfer-seo-surfer-seo-features.webp"
-                    alt="Surfer SEO features - detailed view"
-                    title="Surfer SEO surfer seo features"
+                    src="/images/reviews/surfer-seo-pricing.webp"
+                    alt="Surfer SEO Pricing Plans & Options - detailed analysis and breakdown"
+                    title="Surfer SEO Pricing Plans & Options"
                     width={800}
                     height={450}
                     className="w-full h-auto rounded-lg"
@@ -433,9 +433,9 @@ export default function SurferSeoReviewPage({ tool }: SurferSeoReviewPageProps) 
                 
                 <div className="mt-8">
                   <Image
-                    src="/images/reviews/surfer-seo-surfer-seo-vs-competitors.webp"
-                    alt="Surfer SEO vs competitors - detailed view"
-                    title="Surfer SEO surfer seo vs competitors"
+                    src="/images/reviews/surfer-seo-use-cases.webp"
+                    alt="Surfer SEO Use Cases & Applications - detailed analysis and breakdown"
+                    title="Surfer SEO Use Cases & Applications"
                     width={800}
                     height={450}
                     className="w-full h-auto rounded-lg"
@@ -467,6 +467,17 @@ export default function SurferSeoReviewPage({ tool }: SurferSeoReviewPageProps) 
                   </div>
                 </div>
                 
+                
+                <div className="mt-8">
+                  <Image
+                    src="/images/reviews/surfer-seo-overview.webp"
+                    alt="Surfer SEO Pros and Cons: Honest Assessment - detailed analysis and breakdown"
+                    title="Surfer SEO Pros and Cons: Honest Assessment"
+                    width={800}
+                    height={450}
+                    className="w-full h-auto rounded-lg"
+                  />
+                </div>
                 
               </div>
             </div>

@@ -366,9 +366,9 @@ export default function RytrReviewPage({ tool }: RytrReviewPageProps) {
                 
                 <div className="mt-8">
                   <Image
-                    src="/images/reviews/rytr-rytr-pricing.webp"
-                    alt="Rytr pricing - detailed view"
-                    title="Rytr rytr pricing"
+                    src="/images/reviews/rytr-features.webp"
+                    alt="Rytr Key Features & Capabilities - detailed analysis and breakdown"
+                    title="Rytr Key Features & Capabilities"
                     width={800}
                     height={450}
                     className="w-full h-auto rounded-lg"
@@ -402,9 +402,9 @@ export default function RytrReviewPage({ tool }: RytrReviewPageProps) {
                 
                 <div className="mt-8">
                   <Image
-                    src="/images/reviews/rytr-rytr-features.webp"
-                    alt="Rytr features - detailed view"
-                    title="Rytr rytr features"
+                    src="/images/reviews/rytr-pricing.webp"
+                    alt="Rytr Pricing Plans & Options - detailed analysis and breakdown"
+                    title="Rytr Pricing Plans & Options"
                     width={800}
                     height={450}
                     className="w-full h-auto rounded-lg"
@@ -433,9 +433,9 @@ export default function RytrReviewPage({ tool }: RytrReviewPageProps) {
                 
                 <div className="mt-8">
                   <Image
-                    src="/images/reviews/rytr-rytr-vs-competitors.webp"
-                    alt="Rytr vs competitors - detailed view"
-                    title="Rytr rytr vs competitors"
+                    src="/images/reviews/rytr-use-cases.webp"
+                    alt="Rytr Use Cases & Applications - detailed analysis and breakdown"
+                    title="Rytr Use Cases & Applications"
                     width={800}
                     height={450}
                     className="w-full h-auto rounded-lg"
@@ -467,6 +467,17 @@ export default function RytrReviewPage({ tool }: RytrReviewPageProps) {
                   </div>
                 </div>
                 
+                
+                <div className="mt-8">
+                  <Image
+                    src="/images/reviews/rytr-overview.webp"
+                    alt="Rytr Pros and Cons: Honest Assessment - detailed analysis and breakdown"
+                    title="Rytr Pros and Cons: Honest Assessment"
+                    width={800}
+                    height={450}
+                    className="w-full h-auto rounded-lg"
+                  />
+                </div>
                 
               </div>
             </div>

@@ -366,9 +366,9 @@ export default function ManusReviewPage({ tool }: ManusReviewPageProps) {
                 
                 <div className="mt-8">
                   <Image
-                    src="/images/reviews/manus-manus-pricing.webp"
-                    alt="Manus pricing - detailed view"
-                    title="Manus manus pricing"
+                    src="/images/reviews/manus-features.webp"
+                    alt="Manus Key Features & Capabilities - detailed analysis and breakdown"
+                    title="Manus Key Features & Capabilities"
                     width={800}
                     height={450}
                     className="w-full h-auto rounded-lg"
@@ -402,9 +402,9 @@ export default function ManusReviewPage({ tool }: ManusReviewPageProps) {
                 
                 <div className="mt-8">
                   <Image
-                    src="/images/reviews/manus-manus-features.webp"
-                    alt="Manus features - detailed view"
-                    title="Manus manus features"
+                    src="/images/reviews/manus-pricing.webp"
+                    alt="Manus Pricing Plans & Options - detailed analysis and breakdown"
+                    title="Manus Pricing Plans & Options"
                     width={800}
                     height={450}
                     className="w-full h-auto rounded-lg"
@@ -433,9 +433,9 @@ export default function ManusReviewPage({ tool }: ManusReviewPageProps) {
                 
                 <div className="mt-8">
                   <Image
-                    src="/images/reviews/manus-manus-vs-competitors.webp"
-                    alt="Manus vs competitors - detailed view"
-                    title="Manus manus vs competitors"
+                    src="/images/reviews/manus-use-cases.webp"
+                    alt="Manus Use Cases & Applications - detailed analysis and breakdown"
+                    title="Manus Use Cases & Applications"
                     width={800}
                     height={450}
                     className="w-full h-auto rounded-lg"
@@ -467,6 +467,17 @@ export default function ManusReviewPage({ tool }: ManusReviewPageProps) {
                   </div>
                 </div>
                 
+                
+                <div className="mt-8">
+                  <Image
+                    src="/images/reviews/manus-overview.webp"
+                    alt="Manus Pros and Cons: Honest Assessment - detailed analysis and breakdown"
+                    title="Manus Pros and Cons: Honest Assessment"
+                    width={800}
+                    height={450}
+                    className="w-full h-auto rounded-lg"
+                  />
+                </div>
                 
               </div>
             </div>

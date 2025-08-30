@@ -366,9 +366,9 @@ export default function FraseReviewPage({ tool }: FraseReviewPageProps) {
                 
                 <div className="mt-8">
                   <Image
-                    src="/images/reviews/frase-frase-pricing.webp"
-                    alt="Frase pricing - detailed view"
-                    title="Frase frase pricing"
+                    src="/images/reviews/frase-features.webp"
+                    alt="Frase Key Features & Capabilities - detailed analysis and breakdown"
+                    title="Frase Key Features & Capabilities"
                     width={800}
                     height={450}
                     className="w-full h-auto rounded-lg"
@@ -402,9 +402,9 @@ export default function FraseReviewPage({ tool }: FraseReviewPageProps) {
                 
                 <div className="mt-8">
                   <Image
-                    src="/images/reviews/frase-frase-features.webp"
-                    alt="Frase features - detailed view"
-                    title="Frase frase features"
+                    src="/images/reviews/frase-pricing.webp"
+                    alt="Frase Pricing Plans & Options - detailed analysis and breakdown"
+                    title="Frase Pricing Plans & Options"
                     width={800}
                     height={450}
                     className="w-full h-auto rounded-lg"
@@ -433,9 +433,9 @@ export default function FraseReviewPage({ tool }: FraseReviewPageProps) {
                 
                 <div className="mt-8">
                   <Image
-                    src="/images/reviews/frase-frase-vs-competitors.webp"
-                    alt="Frase vs competitors - detailed view"
-                    title="Frase frase vs competitors"
+                    src="/images/reviews/frase-use-cases.webp"
+                    alt="Frase Use Cases & Applications - detailed analysis and breakdown"
+                    title="Frase Use Cases & Applications"
                     width={800}
                     height={450}
                     className="w-full h-auto rounded-lg"
@@ -467,6 +467,17 @@ export default function FraseReviewPage({ tool }: FraseReviewPageProps) {
                   </div>
                 </div>
                 
+                
+                <div className="mt-8">
+                  <Image
+                    src="/images/reviews/frase-overview.webp"
+                    alt="Frase Pros and Cons: Honest Assessment - detailed analysis and breakdown"
+                    title="Frase Pros and Cons: Honest Assessment"
+                    width={800}
+                    height={450}
+                    className="w-full h-auto rounded-lg"
+                  />
+                </div>
                 
               </div>
             </div>

@@ -366,9 +366,9 @@ export default function KickresumeReviewPage({ tool }: KickresumeReviewPageProps
                 
                 <div className="mt-8">
                   <Image
-                    src="/images/reviews/kickresume-kickresume-pricing.webp"
-                    alt="Kickresume pricing - detailed view"
-                    title="Kickresume kickresume pricing"
+                    src="/images/reviews/kickresume-features.webp"
+                    alt="Kickresume Key Features & Capabilities - detailed analysis and breakdown"
+                    title="Kickresume Key Features & Capabilities"
                     width={800}
                     height={450}
                     className="w-full h-auto rounded-lg"
@@ -402,9 +402,9 @@ export default function KickresumeReviewPage({ tool }: KickresumeReviewPageProps
                 
                 <div className="mt-8">
                   <Image
-                    src="/images/reviews/kickresume-kickresume-features.webp"
-                    alt="Kickresume features - detailed view"
-                    title="Kickresume kickresume features"
+                    src="/images/reviews/kickresume-pricing.webp"
+                    alt="Kickresume Pricing Plans & Options - detailed analysis and breakdown"
+                    title="Kickresume Pricing Plans & Options"
                     width={800}
                     height={450}
                     className="w-full h-auto rounded-lg"
@@ -433,9 +433,9 @@ export default function KickresumeReviewPage({ tool }: KickresumeReviewPageProps
                 
                 <div className="mt-8">
                   <Image
-                    src="/images/reviews/kickresume-kickresume-vs-competitors.webp"
-                    alt="Kickresume vs competitors - detailed view"
-                    title="Kickresume kickresume vs competitors"
+                    src="/images/reviews/kickresume-use-cases.webp"
+                    alt="Kickresume Use Cases & Applications - detailed analysis and breakdown"
+                    title="Kickresume Use Cases & Applications"
                     width={800}
                     height={450}
                     className="w-full h-auto rounded-lg"
@@ -467,6 +467,17 @@ export default function KickresumeReviewPage({ tool }: KickresumeReviewPageProps
                   </div>
                 </div>
                 
+                
+                <div className="mt-8">
+                  <Image
+                    src="/images/reviews/kickresume-overview.webp"
+                    alt="Kickresume Pros and Cons: Honest Assessment - detailed analysis and breakdown"
+                    title="Kickresume Pros and Cons: Honest Assessment"
+                    width={800}
+                    height={450}
+                    className="w-full h-auto rounded-lg"
+                  />
+                </div>
                 
               </div>
             </div>

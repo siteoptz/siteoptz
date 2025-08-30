@@ -366,9 +366,9 @@ export default function OtteraiReviewPage({ tool }: OtteraiReviewPageProps) {
                 
                 <div className="mt-8">
                   <Image
-                    src="/images/reviews/otterai-otter.ai-pricing.webp"
-                    alt="Otter.ai pricing - detailed view"
-                    title="Otter.ai otter.ai pricing"
+                    src="/images/reviews/otterai-features.webp"
+                    alt="Otter.ai Key Features & Capabilities - detailed analysis and breakdown"
+                    title="Otter.ai Key Features & Capabilities"
                     width={800}
                     height={450}
                     className="w-full h-auto rounded-lg"
@@ -402,9 +402,9 @@ export default function OtteraiReviewPage({ tool }: OtteraiReviewPageProps) {
                 
                 <div className="mt-8">
                   <Image
-                    src="/images/reviews/otterai-otter.ai-features.webp"
-                    alt="Otter.ai features - detailed view"
-                    title="Otter.ai otter.ai features"
+                    src="/images/reviews/otterai-pricing.webp"
+                    alt="Otter.ai Pricing Plans & Options - detailed analysis and breakdown"
+                    title="Otter.ai Pricing Plans & Options"
                     width={800}
                     height={450}
                     className="w-full h-auto rounded-lg"
@@ -433,9 +433,9 @@ export default function OtteraiReviewPage({ tool }: OtteraiReviewPageProps) {
                 
                 <div className="mt-8">
                   <Image
-                    src="/images/reviews/otterai-otter.ai-vs-competitors.webp"
-                    alt="Otter.ai vs competitors - detailed view"
-                    title="Otter.ai otter.ai vs competitors"
+                    src="/images/reviews/otterai-use-cases.webp"
+                    alt="Otter.ai Use Cases & Applications - detailed analysis and breakdown"
+                    title="Otter.ai Use Cases & Applications"
                     width={800}
                     height={450}
                     className="w-full h-auto rounded-lg"
@@ -467,6 +467,17 @@ export default function OtteraiReviewPage({ tool }: OtteraiReviewPageProps) {
                   </div>
                 </div>
                 
+                
+                <div className="mt-8">
+                  <Image
+                    src="/images/reviews/otterai-overview.webp"
+                    alt="Otter.ai Pros and Cons: Honest Assessment - detailed analysis and breakdown"
+                    title="Otter.ai Pros and Cons: Honest Assessment"
+                    width={800}
+                    height={450}
+                    className="w-full h-auto rounded-lg"
+                  />
+                </div>
                 
               </div>
             </div>

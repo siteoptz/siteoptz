@@ -366,9 +366,9 @@ export default function ZapierAiReviewPage({ tool }: ZapierAiReviewPageProps) {
                 
                 <div className="mt-8">
                   <Image
-                    src="/images/reviews/zapier-ai-zapier-ai-pricing.webp"
-                    alt="Zapier AI pricing - detailed view"
-                    title="Zapier AI zapier ai pricing"
+                    src="/images/reviews/zapier-ai-features.webp"
+                    alt="Zapier AI Key Features & Capabilities - detailed analysis and breakdown"
+                    title="Zapier AI Key Features & Capabilities"
                     width={800}
                     height={450}
                     className="w-full h-auto rounded-lg"
@@ -402,9 +402,9 @@ export default function ZapierAiReviewPage({ tool }: ZapierAiReviewPageProps) {
                 
                 <div className="mt-8">
                   <Image
-                    src="/images/reviews/zapier-ai-zapier-ai-features.webp"
-                    alt="Zapier AI features - detailed view"
-                    title="Zapier AI zapier ai features"
+                    src="/images/reviews/zapier-ai-pricing.webp"
+                    alt="Zapier AI Pricing Plans & Options - detailed analysis and breakdown"
+                    title="Zapier AI Pricing Plans & Options"
                     width={800}
                     height={450}
                     className="w-full h-auto rounded-lg"
@@ -433,9 +433,9 @@ export default function ZapierAiReviewPage({ tool }: ZapierAiReviewPageProps) {
                 
                 <div className="mt-8">
                   <Image
-                    src="/images/reviews/zapier-ai-zapier-ai-vs-competitors.webp"
-                    alt="Zapier AI vs competitors - detailed view"
-                    title="Zapier AI zapier ai vs competitors"
+                    src="/images/reviews/zapier-ai-use-cases.webp"
+                    alt="Zapier AI Use Cases & Applications - detailed analysis and breakdown"
+                    title="Zapier AI Use Cases & Applications"
                     width={800}
                     height={450}
                     className="w-full h-auto rounded-lg"
@@ -467,6 +467,17 @@ export default function ZapierAiReviewPage({ tool }: ZapierAiReviewPageProps) {
                   </div>
                 </div>
                 
+                
+                <div className="mt-8">
+                  <Image
+                    src="/images/reviews/zapier-ai-overview.webp"
+                    alt="Zapier AI Pros and Cons: Honest Assessment - detailed analysis and breakdown"
+                    title="Zapier AI Pros and Cons: Honest Assessment"
+                    width={800}
+                    height={450}
+                    className="w-full h-auto rounded-lg"
+                  />
+                </div>
                 
               </div>
             </div>
