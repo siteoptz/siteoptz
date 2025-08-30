@@ -143,7 +143,7 @@ export default function SynthesysReviewPage({ tool }: SynthesysReviewPageProps) 
         <meta property="og:description" content="synthesys review. Compare Synthesys  features, pricing & alternatives. Expert analysis & user guide for 2025. Get started today!" />
         <meta property="og:url" content="https://siteoptz.ai/reviews/synthesys" />
         <meta property="og:site_name" content="SiteOptz" />
-        <meta property="og:image" content="https://siteoptz.ai/images/reviews/synthesys-review-2025.webp" />
+        <meta property="og:image" content="https://siteoptz.ai/og-image.png" />
         <meta property="og:image:width" content="1200" />
         <meta property="og:image:height" content="630" />
         <meta property="og:locale" content="en_US" />
@@ -152,7 +152,7 @@ export default function SynthesysReviewPage({ tool }: SynthesysReviewPageProps) 
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Synthesys Review:  | SiteOptz" />
         <meta name="twitter:description" content="synthesys review. Compare Synthesys  features, pricing & alternatives. Expert analysis & user guide for 2025. Get started today!" />
-        <meta name="twitter:image" content="https://siteoptz.ai/images/reviews/synthesys-review-2025.webp" />
+        <meta name="twitter:image" content="https://siteoptz.ai/og-image.png" />
         <meta name="twitter:creator" content="@siteoptz" />
         
         {/* Additional SEO Tags */}
@@ -209,7 +209,6 @@ export default function SynthesysReviewPage({ tool }: SynthesysReviewPageProps) 
                   <div className="mr-6">
                     <ToolLogo 
                       toolName="Synthesys"
-                      logoUrl="/images/reviews/synthesys-review-2025.webp"
                       size="xl"
                       className="w-16 h-16"
                     />
@@ -271,18 +270,6 @@ export default function SynthesysReviewPage({ tool }: SynthesysReviewPageProps) 
                   </Link>
                 </div>
 
-                {/* Hero Image */}
-                <div className="relative rounded-xl overflow-hidden">
-                  <Image
-                    src="/images/reviews/synthesys-review-2025.webp"
-                    alt="synthesys review - Synthesys dashboard and key features screenshot"
-                    title="Synthesys Interface - synthesys review"
-                    width={1200}
-                    height={630}
-                    className="w-full h-auto"
-                    priority
-                  />
-                </div>
               </div>
 
               {/* Sidebar Quick Info */}
@@ -364,17 +351,6 @@ export default function SynthesysReviewPage({ tool }: SynthesysReviewPageProps) 
                 </div>
                 
                 
-                <div className="mt-8">
-                  <Image
-                    src="/images/reviews/synthesys-features.webp"
-                    alt="Synthesys Key Features & Capabilities - detailed analysis and breakdown"
-                    title="Synthesys Key Features & Capabilities"
-                    width={800}
-                    height={450}
-                    className="w-full h-auto rounded-lg"
-                  />
-                </div>
-                
               </div>
               <div className="mb-16" id="synthesys-pricing-plans-value-analysis">
                 <h2 className="text-3xl font-bold text-white mb-8">
@@ -400,17 +376,6 @@ export default function SynthesysReviewPage({ tool }: SynthesysReviewPageProps) 
                 </div>
                 
                 
-                <div className="mt-8">
-                  <Image
-                    src="/images/reviews/synthesys-pricing.webp"
-                    alt="Synthesys Pricing Plans & Options - detailed analysis and breakdown"
-                    title="Synthesys Pricing Plans & Options"
-                    width={800}
-                    height={450}
-                    className="w-full h-auto rounded-lg"
-                  />
-                </div>
-                
               </div>
               <div className="mb-16" id="real-world-synthesys-use-cases-applications">
                 <h2 className="text-3xl font-bold text-white mb-8">
@@ -430,17 +395,6 @@ export default function SynthesysReviewPage({ tool }: SynthesysReviewPageProps) 
                   </div>
                 </div>
                 
-                
-                <div className="mt-8">
-                  <Image
-                    src="/images/reviews/synthesys-use-cases.webp"
-                    alt="Synthesys Use Cases & Applications - detailed analysis and breakdown"
-                    title="Synthesys Use Cases & Applications"
-                    width={800}
-                    height={450}
-                    className="w-full h-auto rounded-lg"
-                  />
-                </div>
                 
               </div>
               <div className="mb-16" id="synthesys-pros-and-cons-honest-assessment">
@@ -467,17 +421,6 @@ export default function SynthesysReviewPage({ tool }: SynthesysReviewPageProps) 
                   </div>
                 </div>
                 
-                
-                <div className="mt-8">
-                  <Image
-                    src="/images/reviews/synthesys-overview.webp"
-                    alt="Synthesys Pros and Cons: Honest Assessment - detailed analysis and breakdown"
-                    title="Synthesys Pros and Cons: Honest Assessment"
-                    width={800}
-                    height={450}
-                    className="w-full h-auto rounded-lg"
-                  />
-                </div>
                 
               </div>
             </div>

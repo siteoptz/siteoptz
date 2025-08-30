@@ -143,7 +143,7 @@ export default function GammaReviewPage({ tool }: GammaReviewPageProps) {
         <meta property="og:description" content="gamma review. Compare Gamma  features, pricing & alternatives. Expert analysis & user guide for 2025. Get started today!" />
         <meta property="og:url" content="https://siteoptz.ai/reviews/gamma" />
         <meta property="og:site_name" content="SiteOptz" />
-        <meta property="og:image" content="https://siteoptz.ai/images/reviews/gamma-review-2025.webp" />
+        <meta property="og:image" content="https://siteoptz.ai/og-image.png" />
         <meta property="og:image:width" content="1200" />
         <meta property="og:image:height" content="630" />
         <meta property="og:locale" content="en_US" />
@@ -152,7 +152,7 @@ export default function GammaReviewPage({ tool }: GammaReviewPageProps) {
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Gamma Review:  | SiteOptz" />
         <meta name="twitter:description" content="gamma review. Compare Gamma  features, pricing & alternatives. Expert analysis & user guide for 2025. Get started today!" />
-        <meta name="twitter:image" content="https://siteoptz.ai/images/reviews/gamma-review-2025.webp" />
+        <meta name="twitter:image" content="https://siteoptz.ai/og-image.png" />
         <meta name="twitter:creator" content="@siteoptz" />
         
         {/* Additional SEO Tags */}
@@ -209,7 +209,6 @@ export default function GammaReviewPage({ tool }: GammaReviewPageProps) {
                   <div className="mr-6">
                     <ToolLogo 
                       toolName="Gamma"
-                      logoUrl="/images/reviews/gamma-review-2025.webp"
                       size="xl"
                       className="w-16 h-16"
                     />
@@ -271,18 +270,6 @@ export default function GammaReviewPage({ tool }: GammaReviewPageProps) {
                   </Link>
                 </div>
 
-                {/* Hero Image */}
-                <div className="relative rounded-xl overflow-hidden">
-                  <Image
-                    src="/images/reviews/gamma-review-2025.webp"
-                    alt="gamma review - Gamma dashboard and key features screenshot"
-                    title="Gamma Interface - gamma review"
-                    width={1200}
-                    height={630}
-                    className="w-full h-auto"
-                    priority
-                  />
-                </div>
               </div>
 
               {/* Sidebar Quick Info */}
@@ -364,17 +351,6 @@ export default function GammaReviewPage({ tool }: GammaReviewPageProps) {
                 </div>
                 
                 
-                <div className="mt-8">
-                  <Image
-                    src="/images/reviews/gamma-features.webp"
-                    alt="Gamma Key Features & Capabilities - detailed analysis and breakdown"
-                    title="Gamma Key Features & Capabilities"
-                    width={800}
-                    height={450}
-                    className="w-full h-auto rounded-lg"
-                  />
-                </div>
-                
               </div>
               <div className="mb-16" id="gamma-pricing-plans-value-analysis">
                 <h2 className="text-3xl font-bold text-white mb-8">
@@ -400,17 +376,6 @@ export default function GammaReviewPage({ tool }: GammaReviewPageProps) {
                 </div>
                 
                 
-                <div className="mt-8">
-                  <Image
-                    src="/images/reviews/gamma-pricing.webp"
-                    alt="Gamma Pricing Plans & Options - detailed analysis and breakdown"
-                    title="Gamma Pricing Plans & Options"
-                    width={800}
-                    height={450}
-                    className="w-full h-auto rounded-lg"
-                  />
-                </div>
-                
               </div>
               <div className="mb-16" id="real-world-gamma-use-cases-applications">
                 <h2 className="text-3xl font-bold text-white mb-8">
@@ -430,17 +395,6 @@ export default function GammaReviewPage({ tool }: GammaReviewPageProps) {
                   </div>
                 </div>
                 
-                
-                <div className="mt-8">
-                  <Image
-                    src="/images/reviews/gamma-use-cases.webp"
-                    alt="Gamma Use Cases & Applications - detailed analysis and breakdown"
-                    title="Gamma Use Cases & Applications"
-                    width={800}
-                    height={450}
-                    className="w-full h-auto rounded-lg"
-                  />
-                </div>
                 
               </div>
               <div className="mb-16" id="gamma-pros-and-cons-honest-assessment">
@@ -467,17 +421,6 @@ export default function GammaReviewPage({ tool }: GammaReviewPageProps) {
                   </div>
                 </div>
                 
-                
-                <div className="mt-8">
-                  <Image
-                    src="/images/reviews/gamma-overview.webp"
-                    alt="Gamma Pros and Cons: Honest Assessment - detailed analysis and breakdown"
-                    title="Gamma Pros and Cons: Honest Assessment"
-                    width={800}
-                    height={450}
-                    className="w-full h-auto rounded-lg"
-                  />
-                </div>
                 
               </div>
             </div>

@@ -143,7 +143,7 @@ export default function RevReviewPage({ tool }: RevReviewPageProps) {
         <meta property="og:description" content="rev review. Compare Rev  features, pricing & alternatives. Expert analysis & user guide for 2025. Get started today!" />
         <meta property="og:url" content="https://siteoptz.ai/reviews/rev" />
         <meta property="og:site_name" content="SiteOptz" />
-        <meta property="og:image" content="https://siteoptz.ai/images/reviews/rev-review-2025.webp" />
+        <meta property="og:image" content="https://siteoptz.ai/og-image.png" />
         <meta property="og:image:width" content="1200" />
         <meta property="og:image:height" content="630" />
         <meta property="og:locale" content="en_US" />
@@ -152,7 +152,7 @@ export default function RevReviewPage({ tool }: RevReviewPageProps) {
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Rev Review:  | SiteOptz" />
         <meta name="twitter:description" content="rev review. Compare Rev  features, pricing & alternatives. Expert analysis & user guide for 2025. Get started today!" />
-        <meta name="twitter:image" content="https://siteoptz.ai/images/reviews/rev-review-2025.webp" />
+        <meta name="twitter:image" content="https://siteoptz.ai/og-image.png" />
         <meta name="twitter:creator" content="@siteoptz" />
         
         {/* Additional SEO Tags */}
@@ -209,7 +209,6 @@ export default function RevReviewPage({ tool }: RevReviewPageProps) {
                   <div className="mr-6">
                     <ToolLogo 
                       toolName="Rev"
-                      logoUrl="/images/reviews/rev-review-2025.webp"
                       size="xl"
                       className="w-16 h-16"
                     />
@@ -271,18 +270,6 @@ export default function RevReviewPage({ tool }: RevReviewPageProps) {
                   </Link>
                 </div>
 
-                {/* Hero Image */}
-                <div className="relative rounded-xl overflow-hidden">
-                  <Image
-                    src="/images/reviews/rev-review-2025.webp"
-                    alt="rev review - Rev dashboard and key features screenshot"
-                    title="Rev Interface - rev review"
-                    width={1200}
-                    height={630}
-                    className="w-full h-auto"
-                    priority
-                  />
-                </div>
               </div>
 
               {/* Sidebar Quick Info */}
@@ -364,17 +351,6 @@ export default function RevReviewPage({ tool }: RevReviewPageProps) {
                 </div>
                 
                 
-                <div className="mt-8">
-                  <Image
-                    src="/images/reviews/rev-features.webp"
-                    alt="Rev Key Features & Capabilities - detailed analysis and breakdown"
-                    title="Rev Key Features & Capabilities"
-                    width={800}
-                    height={450}
-                    className="w-full h-auto rounded-lg"
-                  />
-                </div>
-                
               </div>
               <div className="mb-16" id="rev-pricing-plans-value-analysis">
                 <h2 className="text-3xl font-bold text-white mb-8">
@@ -400,17 +376,6 @@ export default function RevReviewPage({ tool }: RevReviewPageProps) {
                 </div>
                 
                 
-                <div className="mt-8">
-                  <Image
-                    src="/images/reviews/rev-pricing.webp"
-                    alt="Rev Pricing Plans & Options - detailed analysis and breakdown"
-                    title="Rev Pricing Plans & Options"
-                    width={800}
-                    height={450}
-                    className="w-full h-auto rounded-lg"
-                  />
-                </div>
-                
               </div>
               <div className="mb-16" id="real-world-rev-use-cases-applications">
                 <h2 className="text-3xl font-bold text-white mb-8">
@@ -430,17 +395,6 @@ export default function RevReviewPage({ tool }: RevReviewPageProps) {
                   </div>
                 </div>
                 
-                
-                <div className="mt-8">
-                  <Image
-                    src="/images/reviews/rev-use-cases.webp"
-                    alt="Rev Use Cases & Applications - detailed analysis and breakdown"
-                    title="Rev Use Cases & Applications"
-                    width={800}
-                    height={450}
-                    className="w-full h-auto rounded-lg"
-                  />
-                </div>
                 
               </div>
               <div className="mb-16" id="rev-pros-and-cons-honest-assessment">
@@ -467,17 +421,6 @@ export default function RevReviewPage({ tool }: RevReviewPageProps) {
                   </div>
                 </div>
                 
-                
-                <div className="mt-8">
-                  <Image
-                    src="/images/reviews/rev-overview.webp"
-                    alt="Rev Pros and Cons: Honest Assessment - detailed analysis and breakdown"
-                    title="Rev Pros and Cons: Honest Assessment"
-                    width={800}
-                    height={450}
-                    className="w-full h-auto rounded-lg"
-                  />
-                </div>
                 
               </div>
             </div>

@@ -143,7 +143,7 @@ export default function DallEReviewPage({ tool }: DallEReviewPageProps) {
         <meta property="og:description" content="dall-e review. Compare DALL-E  features, pricing & alternatives. Expert analysis & user guide for 2025. Get started today!" />
         <meta property="og:url" content="https://siteoptz.ai/reviews/dall-e" />
         <meta property="og:site_name" content="SiteOptz" />
-        <meta property="og:image" content="https://siteoptz.ai/images/reviews/dall-e-review-2025.webp" />
+        <meta property="og:image" content="https://siteoptz.ai/og-image.png" />
         <meta property="og:image:width" content="1200" />
         <meta property="og:image:height" content="630" />
         <meta property="og:locale" content="en_US" />
@@ -152,7 +152,7 @@ export default function DallEReviewPage({ tool }: DallEReviewPageProps) {
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="DALL-E Review:  | SiteOptz" />
         <meta name="twitter:description" content="dall-e review. Compare DALL-E  features, pricing & alternatives. Expert analysis & user guide for 2025. Get started today!" />
-        <meta name="twitter:image" content="https://siteoptz.ai/images/reviews/dall-e-review-2025.webp" />
+        <meta name="twitter:image" content="https://siteoptz.ai/og-image.png" />
         <meta name="twitter:creator" content="@siteoptz" />
         
         {/* Additional SEO Tags */}
@@ -209,7 +209,6 @@ export default function DallEReviewPage({ tool }: DallEReviewPageProps) {
                   <div className="mr-6">
                     <ToolLogo 
                       toolName="DALL-E"
-                      logoUrl="/images/reviews/dall-e-review-2025.webp"
                       size="xl"
                       className="w-16 h-16"
                     />
@@ -271,18 +270,6 @@ export default function DallEReviewPage({ tool }: DallEReviewPageProps) {
                   </Link>
                 </div>
 
-                {/* Hero Image */}
-                <div className="relative rounded-xl overflow-hidden">
-                  <Image
-                    src="/images/reviews/dall-e-review-2025.webp"
-                    alt="dall-e review - DALL-E dashboard and key features screenshot"
-                    title="DALL-E Interface - dall-e review"
-                    width={1200}
-                    height={630}
-                    className="w-full h-auto"
-                    priority
-                  />
-                </div>
               </div>
 
               {/* Sidebar Quick Info */}
@@ -364,17 +351,6 @@ export default function DallEReviewPage({ tool }: DallEReviewPageProps) {
                 </div>
                 
                 
-                <div className="mt-8">
-                  <Image
-                    src="/images/reviews/dall-e-features.webp"
-                    alt="DALL-E Key Features & Capabilities - detailed analysis and breakdown"
-                    title="DALL-E Key Features & Capabilities"
-                    width={800}
-                    height={450}
-                    className="w-full h-auto rounded-lg"
-                  />
-                </div>
-                
               </div>
               <div className="mb-16" id="dall-e-pricing-plans-value-analysis">
                 <h2 className="text-3xl font-bold text-white mb-8">
@@ -400,17 +376,6 @@ export default function DallEReviewPage({ tool }: DallEReviewPageProps) {
                 </div>
                 
                 
-                <div className="mt-8">
-                  <Image
-                    src="/images/reviews/dall-e-pricing.webp"
-                    alt="DALL-E Pricing Plans & Options - detailed analysis and breakdown"
-                    title="DALL-E Pricing Plans & Options"
-                    width={800}
-                    height={450}
-                    className="w-full h-auto rounded-lg"
-                  />
-                </div>
-                
               </div>
               <div className="mb-16" id="real-world-dall-e-use-cases-applications">
                 <h2 className="text-3xl font-bold text-white mb-8">
@@ -430,17 +395,6 @@ export default function DallEReviewPage({ tool }: DallEReviewPageProps) {
                   </div>
                 </div>
                 
-                
-                <div className="mt-8">
-                  <Image
-                    src="/images/reviews/dall-e-use-cases.webp"
-                    alt="DALL-E Use Cases & Applications - detailed analysis and breakdown"
-                    title="DALL-E Use Cases & Applications"
-                    width={800}
-                    height={450}
-                    className="w-full h-auto rounded-lg"
-                  />
-                </div>
                 
               </div>
               <div className="mb-16" id="dall-e-pros-and-cons-honest-assessment">
@@ -467,17 +421,6 @@ export default function DallEReviewPage({ tool }: DallEReviewPageProps) {
                   </div>
                 </div>
                 
-                
-                <div className="mt-8">
-                  <Image
-                    src="/images/reviews/dall-e-overview.webp"
-                    alt="DALL-E Pros and Cons: Honest Assessment - detailed analysis and breakdown"
-                    title="DALL-E Pros and Cons: Honest Assessment"
-                    width={800}
-                    height={450}
-                    className="w-full h-auto rounded-lg"
-                  />
-                </div>
                 
               </div>
             </div>

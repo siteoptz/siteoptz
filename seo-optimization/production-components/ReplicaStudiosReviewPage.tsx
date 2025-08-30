@@ -143,7 +143,7 @@ export default function ReplicaStudiosReviewPage({ tool }: ReplicaStudiosReviewP
         <meta property="og:description" content="replica studios review. Compare Replica Studios  features, pricing & alternatives. Expert analysis & user guide for 2025. Get started today!" />
         <meta property="og:url" content="https://siteoptz.ai/reviews/replica-studios" />
         <meta property="og:site_name" content="SiteOptz" />
-        <meta property="og:image" content="https://siteoptz.ai/images/reviews/replica-studios-review-2025.webp" />
+        <meta property="og:image" content="https://siteoptz.ai/og-image.png" />
         <meta property="og:image:width" content="1200" />
         <meta property="og:image:height" content="630" />
         <meta property="og:locale" content="en_US" />
@@ -152,7 +152,7 @@ export default function ReplicaStudiosReviewPage({ tool }: ReplicaStudiosReviewP
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Replica Studios Review:  | SiteOptz" />
         <meta name="twitter:description" content="replica studios review. Compare Replica Studios  features, pricing & alternatives. Expert analysis & user guide for 2025. Get started today!" />
-        <meta name="twitter:image" content="https://siteoptz.ai/images/reviews/replica-studios-review-2025.webp" />
+        <meta name="twitter:image" content="https://siteoptz.ai/og-image.png" />
         <meta name="twitter:creator" content="@siteoptz" />
         
         {/* Additional SEO Tags */}
@@ -209,7 +209,6 @@ export default function ReplicaStudiosReviewPage({ tool }: ReplicaStudiosReviewP
                   <div className="mr-6">
                     <ToolLogo 
                       toolName="Replica Studios"
-                      logoUrl="/images/reviews/replica-studios-review-2025.webp"
                       size="xl"
                       className="w-16 h-16"
                     />
@@ -271,18 +270,6 @@ export default function ReplicaStudiosReviewPage({ tool }: ReplicaStudiosReviewP
                   </Link>
                 </div>
 
-                {/* Hero Image */}
-                <div className="relative rounded-xl overflow-hidden">
-                  <Image
-                    src="/images/reviews/replica-studios-review-2025.webp"
-                    alt="replica studios review - Replica Studios dashboard and key features screenshot"
-                    title="Replica Studios Interface - replica studios review"
-                    width={1200}
-                    height={630}
-                    className="w-full h-auto"
-                    priority
-                  />
-                </div>
               </div>
 
               {/* Sidebar Quick Info */}
@@ -364,17 +351,6 @@ export default function ReplicaStudiosReviewPage({ tool }: ReplicaStudiosReviewP
                 </div>
                 
                 
-                <div className="mt-8">
-                  <Image
-                    src="/images/reviews/replica-studios-features.webp"
-                    alt="Replica Studios Key Features & Capabilities - detailed analysis and breakdown"
-                    title="Replica Studios Key Features & Capabilities"
-                    width={800}
-                    height={450}
-                    className="w-full h-auto rounded-lg"
-                  />
-                </div>
-                
               </div>
               <div className="mb-16" id="replica-studios-pricing-plans-value-analysis">
                 <h2 className="text-3xl font-bold text-white mb-8">
@@ -400,17 +376,6 @@ export default function ReplicaStudiosReviewPage({ tool }: ReplicaStudiosReviewP
                 </div>
                 
                 
-                <div className="mt-8">
-                  <Image
-                    src="/images/reviews/replica-studios-pricing.webp"
-                    alt="Replica Studios Pricing Plans & Options - detailed analysis and breakdown"
-                    title="Replica Studios Pricing Plans & Options"
-                    width={800}
-                    height={450}
-                    className="w-full h-auto rounded-lg"
-                  />
-                </div>
-                
               </div>
               <div className="mb-16" id="real-world-replica-studios-use-cases-applications">
                 <h2 className="text-3xl font-bold text-white mb-8">
@@ -430,17 +395,6 @@ export default function ReplicaStudiosReviewPage({ tool }: ReplicaStudiosReviewP
                   </div>
                 </div>
                 
-                
-                <div className="mt-8">
-                  <Image
-                    src="/images/reviews/replica-studios-use-cases.webp"
-                    alt="Replica Studios Use Cases & Applications - detailed analysis and breakdown"
-                    title="Replica Studios Use Cases & Applications"
-                    width={800}
-                    height={450}
-                    className="w-full h-auto rounded-lg"
-                  />
-                </div>
                 
               </div>
               <div className="mb-16" id="replica-studios-pros-and-cons-honest-assessment">
@@ -467,17 +421,6 @@ export default function ReplicaStudiosReviewPage({ tool }: ReplicaStudiosReviewP
                   </div>
                 </div>
                 
-                
-                <div className="mt-8">
-                  <Image
-                    src="/images/reviews/replica-studios-overview.webp"
-                    alt="Replica Studios Pros and Cons: Honest Assessment - detailed analysis and breakdown"
-                    title="Replica Studios Pros and Cons: Honest Assessment"
-                    width={800}
-                    height={450}
-                    className="w-full h-auto rounded-lg"
-                  />
-                </div>
                 
               </div>
             </div>

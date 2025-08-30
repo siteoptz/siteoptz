@@ -143,7 +143,7 @@ export default function SproutSocialReviewPage({ tool }: SproutSocialReviewPageP
         <meta property="og:description" content="sprout social review. Compare Sprout Social  features, pricing & alternatives. Expert analysis & user guide for 2025. Get started today!" />
         <meta property="og:url" content="https://siteoptz.ai/reviews/sprout-social" />
         <meta property="og:site_name" content="SiteOptz" />
-        <meta property="og:image" content="https://siteoptz.ai/images/reviews/sprout-social-review-2025.webp" />
+        <meta property="og:image" content="https://siteoptz.ai/og-image.png" />
         <meta property="og:image:width" content="1200" />
         <meta property="og:image:height" content="630" />
         <meta property="og:locale" content="en_US" />
@@ -152,7 +152,7 @@ export default function SproutSocialReviewPage({ tool }: SproutSocialReviewPageP
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Sprout Social Review:  | SiteOptz" />
         <meta name="twitter:description" content="sprout social review. Compare Sprout Social  features, pricing & alternatives. Expert analysis & user guide for 2025. Get started today!" />
-        <meta name="twitter:image" content="https://siteoptz.ai/images/reviews/sprout-social-review-2025.webp" />
+        <meta name="twitter:image" content="https://siteoptz.ai/og-image.png" />
         <meta name="twitter:creator" content="@siteoptz" />
         
         {/* Additional SEO Tags */}
@@ -209,7 +209,6 @@ export default function SproutSocialReviewPage({ tool }: SproutSocialReviewPageP
                   <div className="mr-6">
                     <ToolLogo 
                       toolName="Sprout Social"
-                      logoUrl="/images/reviews/sprout-social-review-2025.webp"
                       size="xl"
                       className="w-16 h-16"
                     />
@@ -271,18 +270,6 @@ export default function SproutSocialReviewPage({ tool }: SproutSocialReviewPageP
                   </Link>
                 </div>
 
-                {/* Hero Image */}
-                <div className="relative rounded-xl overflow-hidden">
-                  <Image
-                    src="/images/reviews/sprout-social-review-2025.webp"
-                    alt="sprout social review - Sprout Social dashboard and key features screenshot"
-                    title="Sprout Social Interface - sprout social review"
-                    width={1200}
-                    height={630}
-                    className="w-full h-auto"
-                    priority
-                  />
-                </div>
               </div>
 
               {/* Sidebar Quick Info */}
@@ -364,17 +351,6 @@ export default function SproutSocialReviewPage({ tool }: SproutSocialReviewPageP
                 </div>
                 
                 
-                <div className="mt-8">
-                  <Image
-                    src="/images/reviews/sprout-social-features.webp"
-                    alt="Sprout Social Key Features & Capabilities - detailed analysis and breakdown"
-                    title="Sprout Social Key Features & Capabilities"
-                    width={800}
-                    height={450}
-                    className="w-full h-auto rounded-lg"
-                  />
-                </div>
-                
               </div>
               <div className="mb-16" id="sprout-social-pricing-plans-value-analysis">
                 <h2 className="text-3xl font-bold text-white mb-8">
@@ -400,17 +376,6 @@ export default function SproutSocialReviewPage({ tool }: SproutSocialReviewPageP
                 </div>
                 
                 
-                <div className="mt-8">
-                  <Image
-                    src="/images/reviews/sprout-social-pricing.webp"
-                    alt="Sprout Social Pricing Plans & Options - detailed analysis and breakdown"
-                    title="Sprout Social Pricing Plans & Options"
-                    width={800}
-                    height={450}
-                    className="w-full h-auto rounded-lg"
-                  />
-                </div>
-                
               </div>
               <div className="mb-16" id="real-world-sprout-social-use-cases-applications">
                 <h2 className="text-3xl font-bold text-white mb-8">
@@ -430,17 +395,6 @@ export default function SproutSocialReviewPage({ tool }: SproutSocialReviewPageP
                   </div>
                 </div>
                 
-                
-                <div className="mt-8">
-                  <Image
-                    src="/images/reviews/sprout-social-use-cases.webp"
-                    alt="Sprout Social Use Cases & Applications - detailed analysis and breakdown"
-                    title="Sprout Social Use Cases & Applications"
-                    width={800}
-                    height={450}
-                    className="w-full h-auto rounded-lg"
-                  />
-                </div>
                 
               </div>
               <div className="mb-16" id="sprout-social-pros-and-cons-honest-assessment">
@@ -467,17 +421,6 @@ export default function SproutSocialReviewPage({ tool }: SproutSocialReviewPageP
                   </div>
                 </div>
                 
-                
-                <div className="mt-8">
-                  <Image
-                    src="/images/reviews/sprout-social-overview.webp"
-                    alt="Sprout Social Pros and Cons: Honest Assessment - detailed analysis and breakdown"
-                    title="Sprout Social Pros and Cons: Honest Assessment"
-                    width={800}
-                    height={450}
-                    className="w-full h-auto rounded-lg"
-                  />
-                </div>
                 
               </div>
             </div>

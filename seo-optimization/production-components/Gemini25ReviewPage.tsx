@@ -143,7 +143,7 @@ export default function Gemini25ReviewPage({ tool }: Gemini25ReviewPageProps) {
         <meta property="og:description" content="gemini 2.5 review. Compare Gemini 2.5  features, pricing & alternatives. Expert analysis & user guide for 2025. Get started today!" />
         <meta property="og:url" content="https://siteoptz.ai/reviews/gemini-25" />
         <meta property="og:site_name" content="SiteOptz" />
-        <meta property="og:image" content="https://siteoptz.ai/images/reviews/gemini-25-review-2025.webp" />
+        <meta property="og:image" content="https://siteoptz.ai/og-image.png" />
         <meta property="og:image:width" content="1200" />
         <meta property="og:image:height" content="630" />
         <meta property="og:locale" content="en_US" />
@@ -152,7 +152,7 @@ export default function Gemini25ReviewPage({ tool }: Gemini25ReviewPageProps) {
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Gemini 2.5 Review:  | SiteOptz" />
         <meta name="twitter:description" content="gemini 2.5 review. Compare Gemini 2.5  features, pricing & alternatives. Expert analysis & user guide for 2025. Get started today!" />
-        <meta name="twitter:image" content="https://siteoptz.ai/images/reviews/gemini-25-review-2025.webp" />
+        <meta name="twitter:image" content="https://siteoptz.ai/og-image.png" />
         <meta name="twitter:creator" content="@siteoptz" />
         
         {/* Additional SEO Tags */}
@@ -209,7 +209,6 @@ export default function Gemini25ReviewPage({ tool }: Gemini25ReviewPageProps) {
                   <div className="mr-6">
                     <ToolLogo 
                       toolName="Gemini 2.5"
-                      logoUrl="/images/reviews/gemini-25-review-2025.webp"
                       size="xl"
                       className="w-16 h-16"
                     />
@@ -271,18 +270,6 @@ export default function Gemini25ReviewPage({ tool }: Gemini25ReviewPageProps) {
                   </Link>
                 </div>
 
-                {/* Hero Image */}
-                <div className="relative rounded-xl overflow-hidden">
-                  <Image
-                    src="/images/reviews/gemini-25-review-2025.webp"
-                    alt="gemini 2.5 review - Gemini 2.5 dashboard and key features screenshot"
-                    title="Gemini 2.5 Interface - gemini 2.5 review"
-                    width={1200}
-                    height={630}
-                    className="w-full h-auto"
-                    priority
-                  />
-                </div>
               </div>
 
               {/* Sidebar Quick Info */}
@@ -364,17 +351,6 @@ export default function Gemini25ReviewPage({ tool }: Gemini25ReviewPageProps) {
                 </div>
                 
                 
-                <div className="mt-8">
-                  <Image
-                    src="/images/reviews/gemini-25-features.webp"
-                    alt="Gemini 2.5 Key Features & Capabilities - detailed analysis and breakdown"
-                    title="Gemini 2.5 Key Features & Capabilities"
-                    width={800}
-                    height={450}
-                    className="w-full h-auto rounded-lg"
-                  />
-                </div>
-                
               </div>
               <div className="mb-16" id="gemini-2-5-pricing-plans-value-analysis">
                 <h2 className="text-3xl font-bold text-white mb-8">
@@ -400,17 +376,6 @@ export default function Gemini25ReviewPage({ tool }: Gemini25ReviewPageProps) {
                 </div>
                 
                 
-                <div className="mt-8">
-                  <Image
-                    src="/images/reviews/gemini-25-pricing.webp"
-                    alt="Gemini 2.5 Pricing Plans & Options - detailed analysis and breakdown"
-                    title="Gemini 2.5 Pricing Plans & Options"
-                    width={800}
-                    height={450}
-                    className="w-full h-auto rounded-lg"
-                  />
-                </div>
-                
               </div>
               <div className="mb-16" id="real-world-gemini-2-5-use-cases-applications">
                 <h2 className="text-3xl font-bold text-white mb-8">
@@ -430,17 +395,6 @@ export default function Gemini25ReviewPage({ tool }: Gemini25ReviewPageProps) {
                   </div>
                 </div>
                 
-                
-                <div className="mt-8">
-                  <Image
-                    src="/images/reviews/gemini-25-use-cases.webp"
-                    alt="Gemini 2.5 Use Cases & Applications - detailed analysis and breakdown"
-                    title="Gemini 2.5 Use Cases & Applications"
-                    width={800}
-                    height={450}
-                    className="w-full h-auto rounded-lg"
-                  />
-                </div>
                 
               </div>
               <div className="mb-16" id="gemini-2-5-pros-and-cons-honest-assessment">
@@ -467,17 +421,6 @@ export default function Gemini25ReviewPage({ tool }: Gemini25ReviewPageProps) {
                   </div>
                 </div>
                 
-                
-                <div className="mt-8">
-                  <Image
-                    src="/images/reviews/gemini-25-overview.webp"
-                    alt="Gemini 2.5 Pros and Cons: Honest Assessment - detailed analysis and breakdown"
-                    title="Gemini 2.5 Pros and Cons: Honest Assessment"
-                    width={800}
-                    height={450}
-                    className="w-full h-auto rounded-lg"
-                  />
-                </div>
                 
               </div>
             </div>

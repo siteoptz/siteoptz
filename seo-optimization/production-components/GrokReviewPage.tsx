@@ -143,7 +143,7 @@ export default function GrokReviewPage({ tool }: GrokReviewPageProps) {
         <meta property="og:description" content="grok review. Compare Grok  features, pricing & alternatives. Expert analysis & user guide for 2025. Get started today!" />
         <meta property="og:url" content="https://siteoptz.ai/reviews/grok" />
         <meta property="og:site_name" content="SiteOptz" />
-        <meta property="og:image" content="https://siteoptz.ai/images/reviews/grok-review-2025.webp" />
+        <meta property="og:image" content="https://siteoptz.ai/og-image.png" />
         <meta property="og:image:width" content="1200" />
         <meta property="og:image:height" content="630" />
         <meta property="og:locale" content="en_US" />
@@ -152,7 +152,7 @@ export default function GrokReviewPage({ tool }: GrokReviewPageProps) {
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Grok Review:  | SiteOptz" />
         <meta name="twitter:description" content="grok review. Compare Grok  features, pricing & alternatives. Expert analysis & user guide for 2025. Get started today!" />
-        <meta name="twitter:image" content="https://siteoptz.ai/images/reviews/grok-review-2025.webp" />
+        <meta name="twitter:image" content="https://siteoptz.ai/og-image.png" />
         <meta name="twitter:creator" content="@siteoptz" />
         
         {/* Additional SEO Tags */}
@@ -209,7 +209,6 @@ export default function GrokReviewPage({ tool }: GrokReviewPageProps) {
                   <div className="mr-6">
                     <ToolLogo 
                       toolName="Grok"
-                      logoUrl="/images/reviews/grok-review-2025.webp"
                       size="xl"
                       className="w-16 h-16"
                     />
@@ -271,18 +270,6 @@ export default function GrokReviewPage({ tool }: GrokReviewPageProps) {
                   </Link>
                 </div>
 
-                {/* Hero Image */}
-                <div className="relative rounded-xl overflow-hidden">
-                  <Image
-                    src="/images/reviews/grok-review-2025.webp"
-                    alt="grok review - Grok dashboard and key features screenshot"
-                    title="Grok Interface - grok review"
-                    width={1200}
-                    height={630}
-                    className="w-full h-auto"
-                    priority
-                  />
-                </div>
               </div>
 
               {/* Sidebar Quick Info */}
@@ -364,17 +351,6 @@ export default function GrokReviewPage({ tool }: GrokReviewPageProps) {
                 </div>
                 
                 
-                <div className="mt-8">
-                  <Image
-                    src="/images/reviews/grok-features.webp"
-                    alt="Grok Key Features & Capabilities - detailed analysis and breakdown"
-                    title="Grok Key Features & Capabilities"
-                    width={800}
-                    height={450}
-                    className="w-full h-auto rounded-lg"
-                  />
-                </div>
-                
               </div>
               <div className="mb-16" id="grok-pricing-plans-value-analysis">
                 <h2 className="text-3xl font-bold text-white mb-8">
@@ -400,17 +376,6 @@ export default function GrokReviewPage({ tool }: GrokReviewPageProps) {
                 </div>
                 
                 
-                <div className="mt-8">
-                  <Image
-                    src="/images/reviews/grok-pricing.webp"
-                    alt="Grok Pricing Plans & Options - detailed analysis and breakdown"
-                    title="Grok Pricing Plans & Options"
-                    width={800}
-                    height={450}
-                    className="w-full h-auto rounded-lg"
-                  />
-                </div>
-                
               </div>
               <div className="mb-16" id="real-world-grok-use-cases-applications">
                 <h2 className="text-3xl font-bold text-white mb-8">
@@ -430,17 +395,6 @@ export default function GrokReviewPage({ tool }: GrokReviewPageProps) {
                   </div>
                 </div>
                 
-                
-                <div className="mt-8">
-                  <Image
-                    src="/images/reviews/grok-use-cases.webp"
-                    alt="Grok Use Cases & Applications - detailed analysis and breakdown"
-                    title="Grok Use Cases & Applications"
-                    width={800}
-                    height={450}
-                    className="w-full h-auto rounded-lg"
-                  />
-                </div>
                 
               </div>
               <div className="mb-16" id="grok-pros-and-cons-honest-assessment">
@@ -467,17 +421,6 @@ export default function GrokReviewPage({ tool }: GrokReviewPageProps) {
                   </div>
                 </div>
                 
-                
-                <div className="mt-8">
-                  <Image
-                    src="/images/reviews/grok-overview.webp"
-                    alt="Grok Pros and Cons: Honest Assessment - detailed analysis and breakdown"
-                    title="Grok Pros and Cons: Honest Assessment"
-                    width={800}
-                    height={450}
-                    className="w-full h-auto rounded-lg"
-                  />
-                </div>
                 
               </div>
             </div>

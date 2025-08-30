@@ -143,7 +143,7 @@ export default function ResembleAiReviewPage({ tool }: ResembleAiReviewPageProps
         <meta property="og:description" content="resemble ai review. Compare Resemble AI  features, pricing & alternatives. Expert analysis & user guide for 2025. Get started today!" />
         <meta property="og:url" content="https://siteoptz.ai/reviews/resemble-ai" />
         <meta property="og:site_name" content="SiteOptz" />
-        <meta property="og:image" content="https://siteoptz.ai/images/reviews/resemble-ai-review-2025.webp" />
+        <meta property="og:image" content="https://siteoptz.ai/og-image.png" />
         <meta property="og:image:width" content="1200" />
         <meta property="og:image:height" content="630" />
         <meta property="og:locale" content="en_US" />
@@ -152,7 +152,7 @@ export default function ResembleAiReviewPage({ tool }: ResembleAiReviewPageProps
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Resemble AI Review:  | SiteOptz" />
         <meta name="twitter:description" content="resemble ai review. Compare Resemble AI  features, pricing & alternatives. Expert analysis & user guide for 2025. Get started today!" />
-        <meta name="twitter:image" content="https://siteoptz.ai/images/reviews/resemble-ai-review-2025.webp" />
+        <meta name="twitter:image" content="https://siteoptz.ai/og-image.png" />
         <meta name="twitter:creator" content="@siteoptz" />
         
         {/* Additional SEO Tags */}
@@ -209,7 +209,6 @@ export default function ResembleAiReviewPage({ tool }: ResembleAiReviewPageProps
                   <div className="mr-6">
                     <ToolLogo 
                       toolName="Resemble AI"
-                      logoUrl="/images/reviews/resemble-ai-review-2025.webp"
                       size="xl"
                       className="w-16 h-16"
                     />
@@ -271,18 +270,6 @@ export default function ResembleAiReviewPage({ tool }: ResembleAiReviewPageProps
                   </Link>
                 </div>
 
-                {/* Hero Image */}
-                <div className="relative rounded-xl overflow-hidden">
-                  <Image
-                    src="/images/reviews/resemble-ai-review-2025.webp"
-                    alt="resemble ai review - Resemble AI dashboard and key features screenshot"
-                    title="Resemble AI Interface - resemble ai review"
-                    width={1200}
-                    height={630}
-                    className="w-full h-auto"
-                    priority
-                  />
-                </div>
               </div>
 
               {/* Sidebar Quick Info */}
@@ -364,17 +351,6 @@ export default function ResembleAiReviewPage({ tool }: ResembleAiReviewPageProps
                 </div>
                 
                 
-                <div className="mt-8">
-                  <Image
-                    src="/images/reviews/resemble-ai-features.webp"
-                    alt="Resemble AI Key Features & Capabilities - detailed analysis and breakdown"
-                    title="Resemble AI Key Features & Capabilities"
-                    width={800}
-                    height={450}
-                    className="w-full h-auto rounded-lg"
-                  />
-                </div>
-                
               </div>
               <div className="mb-16" id="resemble-ai-pricing-plans-value-analysis">
                 <h2 className="text-3xl font-bold text-white mb-8">
@@ -400,17 +376,6 @@ export default function ResembleAiReviewPage({ tool }: ResembleAiReviewPageProps
                 </div>
                 
                 
-                <div className="mt-8">
-                  <Image
-                    src="/images/reviews/resemble-ai-pricing.webp"
-                    alt="Resemble AI Pricing Plans & Options - detailed analysis and breakdown"
-                    title="Resemble AI Pricing Plans & Options"
-                    width={800}
-                    height={450}
-                    className="w-full h-auto rounded-lg"
-                  />
-                </div>
-                
               </div>
               <div className="mb-16" id="real-world-resemble-ai-use-cases-applications">
                 <h2 className="text-3xl font-bold text-white mb-8">
@@ -430,17 +395,6 @@ export default function ResembleAiReviewPage({ tool }: ResembleAiReviewPageProps
                   </div>
                 </div>
                 
-                
-                <div className="mt-8">
-                  <Image
-                    src="/images/reviews/resemble-ai-use-cases.webp"
-                    alt="Resemble AI Use Cases & Applications - detailed analysis and breakdown"
-                    title="Resemble AI Use Cases & Applications"
-                    width={800}
-                    height={450}
-                    className="w-full h-auto rounded-lg"
-                  />
-                </div>
                 
               </div>
               <div className="mb-16" id="resemble-ai-pros-and-cons-honest-assessment">
@@ -467,17 +421,6 @@ export default function ResembleAiReviewPage({ tool }: ResembleAiReviewPageProps
                   </div>
                 </div>
                 
-                
-                <div className="mt-8">
-                  <Image
-                    src="/images/reviews/resemble-ai-overview.webp"
-                    alt="Resemble AI Pros and Cons: Honest Assessment - detailed analysis and breakdown"
-                    title="Resemble AI Pros and Cons: Honest Assessment"
-                    width={800}
-                    height={450}
-                    className="w-full h-auto rounded-lg"
-                  />
-                </div>
                 
               </div>
             </div>

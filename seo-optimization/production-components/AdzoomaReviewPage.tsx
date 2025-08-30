@@ -143,7 +143,7 @@ export default function AdzoomaReviewPage({ tool }: AdzoomaReviewPageProps) {
         <meta property="og:description" content="adzooma review. Compare Adzooma  features, pricing & alternatives. Expert analysis & user guide for 2025. Get started today!" />
         <meta property="og:url" content="https://siteoptz.ai/reviews/adzooma" />
         <meta property="og:site_name" content="SiteOptz" />
-        <meta property="og:image" content="https://siteoptz.ai/images/reviews/adzooma-review-2025.webp" />
+        <meta property="og:image" content="https://siteoptz.ai/og-image.png" />
         <meta property="og:image:width" content="1200" />
         <meta property="og:image:height" content="630" />
         <meta property="og:locale" content="en_US" />
@@ -152,7 +152,7 @@ export default function AdzoomaReviewPage({ tool }: AdzoomaReviewPageProps) {
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Adzooma Review:  | SiteOptz" />
         <meta name="twitter:description" content="adzooma review. Compare Adzooma  features, pricing & alternatives. Expert analysis & user guide for 2025. Get started today!" />
-        <meta name="twitter:image" content="https://siteoptz.ai/images/reviews/adzooma-review-2025.webp" />
+        <meta name="twitter:image" content="https://siteoptz.ai/og-image.png" />
         <meta name="twitter:creator" content="@siteoptz" />
         
         {/* Additional SEO Tags */}
@@ -209,7 +209,6 @@ export default function AdzoomaReviewPage({ tool }: AdzoomaReviewPageProps) {
                   <div className="mr-6">
                     <ToolLogo 
                       toolName="Adzooma"
-                      logoUrl="/images/reviews/adzooma-review-2025.webp"
                       size="xl"
                       className="w-16 h-16"
                     />
@@ -271,18 +270,6 @@ export default function AdzoomaReviewPage({ tool }: AdzoomaReviewPageProps) {
                   </Link>
                 </div>
 
-                {/* Hero Image */}
-                <div className="relative rounded-xl overflow-hidden">
-                  <Image
-                    src="/images/reviews/adzooma-review-2025.webp"
-                    alt="adzooma review - Adzooma dashboard and key features screenshot"
-                    title="Adzooma Interface - adzooma review"
-                    width={1200}
-                    height={630}
-                    className="w-full h-auto"
-                    priority
-                  />
-                </div>
               </div>
 
               {/* Sidebar Quick Info */}
@@ -364,17 +351,6 @@ export default function AdzoomaReviewPage({ tool }: AdzoomaReviewPageProps) {
                 </div>
                 
                 
-                <div className="mt-8">
-                  <Image
-                    src="/images/reviews/adzooma-features.webp"
-                    alt="Adzooma Key Features & Capabilities - detailed analysis and breakdown"
-                    title="Adzooma Key Features & Capabilities"
-                    width={800}
-                    height={450}
-                    className="w-full h-auto rounded-lg"
-                  />
-                </div>
-                
               </div>
               <div className="mb-16" id="adzooma-pricing-plans-value-analysis">
                 <h2 className="text-3xl font-bold text-white mb-8">
@@ -400,17 +376,6 @@ export default function AdzoomaReviewPage({ tool }: AdzoomaReviewPageProps) {
                 </div>
                 
                 
-                <div className="mt-8">
-                  <Image
-                    src="/images/reviews/adzooma-pricing.webp"
-                    alt="Adzooma Pricing Plans & Options - detailed analysis and breakdown"
-                    title="Adzooma Pricing Plans & Options"
-                    width={800}
-                    height={450}
-                    className="w-full h-auto rounded-lg"
-                  />
-                </div>
-                
               </div>
               <div className="mb-16" id="real-world-adzooma-use-cases-applications">
                 <h2 className="text-3xl font-bold text-white mb-8">
@@ -430,17 +395,6 @@ export default function AdzoomaReviewPage({ tool }: AdzoomaReviewPageProps) {
                   </div>
                 </div>
                 
-                
-                <div className="mt-8">
-                  <Image
-                    src="/images/reviews/adzooma-use-cases.webp"
-                    alt="Adzooma Use Cases & Applications - detailed analysis and breakdown"
-                    title="Adzooma Use Cases & Applications"
-                    width={800}
-                    height={450}
-                    className="w-full h-auto rounded-lg"
-                  />
-                </div>
                 
               </div>
               <div className="mb-16" id="adzooma-pros-and-cons-honest-assessment">
@@ -467,17 +421,6 @@ export default function AdzoomaReviewPage({ tool }: AdzoomaReviewPageProps) {
                   </div>
                 </div>
                 
-                
-                <div className="mt-8">
-                  <Image
-                    src="/images/reviews/adzooma-overview.webp"
-                    alt="Adzooma Pros and Cons: Honest Assessment - detailed analysis and breakdown"
-                    title="Adzooma Pros and Cons: Honest Assessment"
-                    width={800}
-                    height={450}
-                    className="w-full h-auto rounded-lg"
-                  />
-                </div>
                 
               </div>
             </div>

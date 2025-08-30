@@ -143,7 +143,7 @@ export default function SemrushReviewPage({ tool }: SemrushReviewPageProps) {
         <meta property="og:description" content="semrush review. Compare Semrush  features, pricing & alternatives. Expert analysis & user guide for 2025. Get started today!" />
         <meta property="og:url" content="https://siteoptz.ai/reviews/semrush" />
         <meta property="og:site_name" content="SiteOptz" />
-        <meta property="og:image" content="https://siteoptz.ai/images/reviews/semrush-review-2025.webp" />
+        <meta property="og:image" content="https://siteoptz.ai/og-image.png" />
         <meta property="og:image:width" content="1200" />
         <meta property="og:image:height" content="630" />
         <meta property="og:locale" content="en_US" />
@@ -152,7 +152,7 @@ export default function SemrushReviewPage({ tool }: SemrushReviewPageProps) {
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Semrush Review:  | SiteOptz" />
         <meta name="twitter:description" content="semrush review. Compare Semrush  features, pricing & alternatives. Expert analysis & user guide for 2025. Get started today!" />
-        <meta name="twitter:image" content="https://siteoptz.ai/images/reviews/semrush-review-2025.webp" />
+        <meta name="twitter:image" content="https://siteoptz.ai/og-image.png" />
         <meta name="twitter:creator" content="@siteoptz" />
         
         {/* Additional SEO Tags */}
@@ -209,7 +209,6 @@ export default function SemrushReviewPage({ tool }: SemrushReviewPageProps) {
                   <div className="mr-6">
                     <ToolLogo 
                       toolName="Semrush"
-                      logoUrl="/images/reviews/semrush-review-2025.webp"
                       size="xl"
                       className="w-16 h-16"
                     />
@@ -271,18 +270,6 @@ export default function SemrushReviewPage({ tool }: SemrushReviewPageProps) {
                   </Link>
                 </div>
 
-                {/* Hero Image */}
-                <div className="relative rounded-xl overflow-hidden">
-                  <Image
-                    src="/images/reviews/semrush-review-2025.webp"
-                    alt="semrush review - Semrush dashboard and key features screenshot"
-                    title="Semrush Interface - semrush review"
-                    width={1200}
-                    height={630}
-                    className="w-full h-auto"
-                    priority
-                  />
-                </div>
               </div>
 
               {/* Sidebar Quick Info */}
@@ -364,17 +351,6 @@ export default function SemrushReviewPage({ tool }: SemrushReviewPageProps) {
                 </div>
                 
                 
-                <div className="mt-8">
-                  <Image
-                    src="/images/reviews/semrush-features.webp"
-                    alt="Semrush Key Features & Capabilities - detailed analysis and breakdown"
-                    title="Semrush Key Features & Capabilities"
-                    width={800}
-                    height={450}
-                    className="w-full h-auto rounded-lg"
-                  />
-                </div>
-                
               </div>
               <div className="mb-16" id="semrush-pricing-plans-value-analysis">
                 <h2 className="text-3xl font-bold text-white mb-8">
@@ -400,17 +376,6 @@ export default function SemrushReviewPage({ tool }: SemrushReviewPageProps) {
                 </div>
                 
                 
-                <div className="mt-8">
-                  <Image
-                    src="/images/reviews/semrush-pricing.webp"
-                    alt="Semrush Pricing Plans & Options - detailed analysis and breakdown"
-                    title="Semrush Pricing Plans & Options"
-                    width={800}
-                    height={450}
-                    className="w-full h-auto rounded-lg"
-                  />
-                </div>
-                
               </div>
               <div className="mb-16" id="real-world-semrush-use-cases-applications">
                 <h2 className="text-3xl font-bold text-white mb-8">
@@ -430,17 +395,6 @@ export default function SemrushReviewPage({ tool }: SemrushReviewPageProps) {
                   </div>
                 </div>
                 
-                
-                <div className="mt-8">
-                  <Image
-                    src="/images/reviews/semrush-use-cases.webp"
-                    alt="Semrush Use Cases & Applications - detailed analysis and breakdown"
-                    title="Semrush Use Cases & Applications"
-                    width={800}
-                    height={450}
-                    className="w-full h-auto rounded-lg"
-                  />
-                </div>
                 
               </div>
               <div className="mb-16" id="semrush-pros-and-cons-honest-assessment">
@@ -467,17 +421,6 @@ export default function SemrushReviewPage({ tool }: SemrushReviewPageProps) {
                   </div>
                 </div>
                 
-                
-                <div className="mt-8">
-                  <Image
-                    src="/images/reviews/semrush-overview.webp"
-                    alt="Semrush Pros and Cons: Honest Assessment - detailed analysis and breakdown"
-                    title="Semrush Pros and Cons: Honest Assessment"
-                    width={800}
-                    height={450}
-                    className="w-full h-auto rounded-lg"
-                  />
-                </div>
                 
               </div>
             </div>

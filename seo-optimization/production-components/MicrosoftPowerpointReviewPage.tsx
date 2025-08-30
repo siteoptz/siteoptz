@@ -143,7 +143,7 @@ export default function MicrosoftPowerpointReviewPage({ tool }: MicrosoftPowerpo
         <meta property="og:description" content="microsoft powerpoint review. Compare Microsoft PowerPoint  features, pricing & alternatives. Expert analysis & user guide for 2025. Get started today!" />
         <meta property="og:url" content="https://siteoptz.ai/reviews/microsoft-powerpoint" />
         <meta property="og:site_name" content="SiteOptz" />
-        <meta property="og:image" content="https://siteoptz.ai/images/reviews/microsoft-powerpoint-review-2025.webp" />
+        <meta property="og:image" content="https://siteoptz.ai/og-image.png" />
         <meta property="og:image:width" content="1200" />
         <meta property="og:image:height" content="630" />
         <meta property="og:locale" content="en_US" />
@@ -152,7 +152,7 @@ export default function MicrosoftPowerpointReviewPage({ tool }: MicrosoftPowerpo
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Microsoft PowerPoint Review:  | SiteOptz" />
         <meta name="twitter:description" content="microsoft powerpoint review. Compare Microsoft PowerPoint  features, pricing & alternatives. Expert analysis & user guide for 2025. Get started today!" />
-        <meta name="twitter:image" content="https://siteoptz.ai/images/reviews/microsoft-powerpoint-review-2025.webp" />
+        <meta name="twitter:image" content="https://siteoptz.ai/og-image.png" />
         <meta name="twitter:creator" content="@siteoptz" />
         
         {/* Additional SEO Tags */}
@@ -209,7 +209,6 @@ export default function MicrosoftPowerpointReviewPage({ tool }: MicrosoftPowerpo
                   <div className="mr-6">
                     <ToolLogo 
                       toolName="Microsoft PowerPoint"
-                      logoUrl="/images/reviews/microsoft-powerpoint-review-2025.webp"
                       size="xl"
                       className="w-16 h-16"
                     />
@@ -271,18 +270,6 @@ export default function MicrosoftPowerpointReviewPage({ tool }: MicrosoftPowerpo
                   </Link>
                 </div>
 
-                {/* Hero Image */}
-                <div className="relative rounded-xl overflow-hidden">
-                  <Image
-                    src="/images/reviews/microsoft-powerpoint-review-2025.webp"
-                    alt="microsoft powerpoint review - Microsoft PowerPoint dashboard and key features screenshot"
-                    title="Microsoft PowerPoint Interface - microsoft powerpoint review"
-                    width={1200}
-                    height={630}
-                    className="w-full h-auto"
-                    priority
-                  />
-                </div>
               </div>
 
               {/* Sidebar Quick Info */}
@@ -364,17 +351,6 @@ export default function MicrosoftPowerpointReviewPage({ tool }: MicrosoftPowerpo
                 </div>
                 
                 
-                <div className="mt-8">
-                  <Image
-                    src="/images/reviews/microsoft-powerpoint-features.webp"
-                    alt="Microsoft PowerPoint Key Features & Capabilities - detailed analysis and breakdown"
-                    title="Microsoft PowerPoint Key Features & Capabilities"
-                    width={800}
-                    height={450}
-                    className="w-full h-auto rounded-lg"
-                  />
-                </div>
-                
               </div>
               <div className="mb-16" id="microsoft-powerpoint-pricing-plans-value-analysis">
                 <h2 className="text-3xl font-bold text-white mb-8">
@@ -400,17 +376,6 @@ export default function MicrosoftPowerpointReviewPage({ tool }: MicrosoftPowerpo
                 </div>
                 
                 
-                <div className="mt-8">
-                  <Image
-                    src="/images/reviews/microsoft-powerpoint-pricing.webp"
-                    alt="Microsoft PowerPoint Pricing Plans & Options - detailed analysis and breakdown"
-                    title="Microsoft PowerPoint Pricing Plans & Options"
-                    width={800}
-                    height={450}
-                    className="w-full h-auto rounded-lg"
-                  />
-                </div>
-                
               </div>
               <div className="mb-16" id="real-world-microsoft-powerpoint-use-cases-applications">
                 <h2 className="text-3xl font-bold text-white mb-8">
@@ -430,17 +395,6 @@ export default function MicrosoftPowerpointReviewPage({ tool }: MicrosoftPowerpo
                   </div>
                 </div>
                 
-                
-                <div className="mt-8">
-                  <Image
-                    src="/images/reviews/microsoft-powerpoint-use-cases.webp"
-                    alt="Microsoft PowerPoint Use Cases & Applications - detailed analysis and breakdown"
-                    title="Microsoft PowerPoint Use Cases & Applications"
-                    width={800}
-                    height={450}
-                    className="w-full h-auto rounded-lg"
-                  />
-                </div>
                 
               </div>
               <div className="mb-16" id="microsoft-powerpoint-pros-and-cons-honest-assessment">
@@ -467,17 +421,6 @@ export default function MicrosoftPowerpointReviewPage({ tool }: MicrosoftPowerpo
                   </div>
                 </div>
                 
-                
-                <div className="mt-8">
-                  <Image
-                    src="/images/reviews/microsoft-powerpoint-overview.webp"
-                    alt="Microsoft PowerPoint Pros and Cons: Honest Assessment - detailed analysis and breakdown"
-                    title="Microsoft PowerPoint Pros and Cons: Honest Assessment"
-                    width={800}
-                    height={450}
-                    className="w-full h-auto rounded-lg"
-                  />
-                </div>
                 
               </div>
             </div>

@@ -143,7 +143,7 @@ export default function CursorReviewPage({ tool }: CursorReviewPageProps) {
         <meta property="og:description" content="cursor review. Compare Cursor  features, pricing & alternatives. Expert analysis & user guide for 2025. Get started today!" />
         <meta property="og:url" content="https://siteoptz.ai/reviews/cursor" />
         <meta property="og:site_name" content="SiteOptz" />
-        <meta property="og:image" content="https://siteoptz.ai/images/reviews/cursor-review-2025.webp" />
+        <meta property="og:image" content="https://siteoptz.ai/og-image.png" />
         <meta property="og:image:width" content="1200" />
         <meta property="og:image:height" content="630" />
         <meta property="og:locale" content="en_US" />
@@ -152,7 +152,7 @@ export default function CursorReviewPage({ tool }: CursorReviewPageProps) {
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Cursor Review:  | SiteOptz" />
         <meta name="twitter:description" content="cursor review. Compare Cursor  features, pricing & alternatives. Expert analysis & user guide for 2025. Get started today!" />
-        <meta name="twitter:image" content="https://siteoptz.ai/images/reviews/cursor-review-2025.webp" />
+        <meta name="twitter:image" content="https://siteoptz.ai/og-image.png" />
         <meta name="twitter:creator" content="@siteoptz" />
         
         {/* Additional SEO Tags */}
@@ -209,7 +209,6 @@ export default function CursorReviewPage({ tool }: CursorReviewPageProps) {
                   <div className="mr-6">
                     <ToolLogo 
                       toolName="Cursor"
-                      logoUrl="/images/reviews/cursor-review-2025.webp"
                       size="xl"
                       className="w-16 h-16"
                     />
@@ -271,18 +270,6 @@ export default function CursorReviewPage({ tool }: CursorReviewPageProps) {
                   </Link>
                 </div>
 
-                {/* Hero Image */}
-                <div className="relative rounded-xl overflow-hidden">
-                  <Image
-                    src="/images/reviews/cursor-review-2025.webp"
-                    alt="cursor review - Cursor dashboard and key features screenshot"
-                    title="Cursor Interface - cursor review"
-                    width={1200}
-                    height={630}
-                    className="w-full h-auto"
-                    priority
-                  />
-                </div>
               </div>
 
               {/* Sidebar Quick Info */}
@@ -364,17 +351,6 @@ export default function CursorReviewPage({ tool }: CursorReviewPageProps) {
                 </div>
                 
                 
-                <div className="mt-8">
-                  <Image
-                    src="/images/reviews/cursor-features.webp"
-                    alt="Cursor Key Features & Capabilities - detailed analysis and breakdown"
-                    title="Cursor Key Features & Capabilities"
-                    width={800}
-                    height={450}
-                    className="w-full h-auto rounded-lg"
-                  />
-                </div>
-                
               </div>
               <div className="mb-16" id="cursor-pricing-plans-value-analysis">
                 <h2 className="text-3xl font-bold text-white mb-8">
@@ -400,17 +376,6 @@ export default function CursorReviewPage({ tool }: CursorReviewPageProps) {
                 </div>
                 
                 
-                <div className="mt-8">
-                  <Image
-                    src="/images/reviews/cursor-pricing.webp"
-                    alt="Cursor Pricing Plans & Options - detailed analysis and breakdown"
-                    title="Cursor Pricing Plans & Options"
-                    width={800}
-                    height={450}
-                    className="w-full h-auto rounded-lg"
-                  />
-                </div>
-                
               </div>
               <div className="mb-16" id="real-world-cursor-use-cases-applications">
                 <h2 className="text-3xl font-bold text-white mb-8">
@@ -430,17 +395,6 @@ export default function CursorReviewPage({ tool }: CursorReviewPageProps) {
                   </div>
                 </div>
                 
-                
-                <div className="mt-8">
-                  <Image
-                    src="/images/reviews/cursor-use-cases.webp"
-                    alt="Cursor Use Cases & Applications - detailed analysis and breakdown"
-                    title="Cursor Use Cases & Applications"
-                    width={800}
-                    height={450}
-                    className="w-full h-auto rounded-lg"
-                  />
-                </div>
                 
               </div>
               <div className="mb-16" id="cursor-pros-and-cons-honest-assessment">
@@ -467,17 +421,6 @@ export default function CursorReviewPage({ tool }: CursorReviewPageProps) {
                   </div>
                 </div>
                 
-                
-                <div className="mt-8">
-                  <Image
-                    src="/images/reviews/cursor-overview.webp"
-                    alt="Cursor Pros and Cons: Honest Assessment - detailed analysis and breakdown"
-                    title="Cursor Pros and Cons: Honest Assessment"
-                    width={800}
-                    height={450}
-                    className="w-full h-auto rounded-lg"
-                  />
-                </div>
                 
               </div>
             </div>

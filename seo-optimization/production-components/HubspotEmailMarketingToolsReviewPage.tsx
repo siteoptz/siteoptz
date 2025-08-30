@@ -143,7 +143,7 @@ export default function HubspotEmailMarketingToolsReviewPage({ tool }: HubspotEm
         <meta property="og:description" content="HubSpot Email Marketing Tools review: features, pricing, pros & cons. Expert analysis & comparison guide. Start free today!" />
         <meta property="og:url" content="https://siteoptz.ai/reviews/hubspot-email-marketing-tools" />
         <meta property="og:site_name" content="SiteOptz" />
-        <meta property="og:image" content="https://siteoptz.ai/images/reviews/hubspot-email-marketing-tools-review-2025.webp" />
+        <meta property="og:image" content="https://siteoptz.ai/og-image.png" />
         <meta property="og:image:width" content="1200" />
         <meta property="og:image:height" content="630" />
         <meta property="og:locale" content="en_US" />
@@ -152,7 +152,7 @@ export default function HubspotEmailMarketingToolsReviewPage({ tool }: HubspotEm
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="HubSpot Email Marketing Tools Review:  | SiteOptz" />
         <meta name="twitter:description" content="HubSpot Email Marketing Tools review: features, pricing, pros & cons. Expert analysis & comparison guide. Start free today!" />
-        <meta name="twitter:image" content="https://siteoptz.ai/images/reviews/hubspot-email-marketing-tools-review-2025.webp" />
+        <meta name="twitter:image" content="https://siteoptz.ai/og-image.png" />
         <meta name="twitter:creator" content="@siteoptz" />
         
         {/* Additional SEO Tags */}
@@ -209,7 +209,6 @@ export default function HubspotEmailMarketingToolsReviewPage({ tool }: HubspotEm
                   <div className="mr-6">
                     <ToolLogo 
                       toolName="HubSpot Email Marketing Tools"
-                      logoUrl="/images/reviews/hubspot-email-marketing-tools-review-2025.webp"
                       size="xl"
                       className="w-16 h-16"
                     />
@@ -271,18 +270,6 @@ export default function HubspotEmailMarketingToolsReviewPage({ tool }: HubspotEm
                   </Link>
                 </div>
 
-                {/* Hero Image */}
-                <div className="relative rounded-xl overflow-hidden">
-                  <Image
-                    src="/images/reviews/hubspot-email-marketing-tools-review-2025.webp"
-                    alt="hubspot email marketing tools review - HubSpot Email Marketing Tools dashboard and key features screenshot"
-                    title="HubSpot Email Marketing Tools Interface - hubspot email marketing tools review"
-                    width={1200}
-                    height={630}
-                    className="w-full h-auto"
-                    priority
-                  />
-                </div>
               </div>
 
               {/* Sidebar Quick Info */}
@@ -364,17 +351,6 @@ export default function HubspotEmailMarketingToolsReviewPage({ tool }: HubspotEm
                 </div>
                 
                 
-                <div className="mt-8">
-                  <Image
-                    src="/images/reviews/hubspot-email-marketing-tools-features.webp"
-                    alt="HubSpot Email Marketing Tools Key Features & Capabilities - detailed analysis and breakdown"
-                    title="HubSpot Email Marketing Tools Key Features & Capabilities"
-                    width={800}
-                    height={450}
-                    className="w-full h-auto rounded-lg"
-                  />
-                </div>
-                
               </div>
               <div className="mb-16" id="hubspot-email-marketing-tools-pricing-plans-value-analysis">
                 <h2 className="text-3xl font-bold text-white mb-8">
@@ -400,17 +376,6 @@ export default function HubspotEmailMarketingToolsReviewPage({ tool }: HubspotEm
                 </div>
                 
                 
-                <div className="mt-8">
-                  <Image
-                    src="/images/reviews/hubspot-email-marketing-tools-pricing.webp"
-                    alt="HubSpot Email Marketing Tools Pricing Plans & Options - detailed analysis and breakdown"
-                    title="HubSpot Email Marketing Tools Pricing Plans & Options"
-                    width={800}
-                    height={450}
-                    className="w-full h-auto rounded-lg"
-                  />
-                </div>
-                
               </div>
               <div className="mb-16" id="real-world-hubspot-email-marketing-tools-use-cases-applications">
                 <h2 className="text-3xl font-bold text-white mb-8">
@@ -430,17 +395,6 @@ export default function HubspotEmailMarketingToolsReviewPage({ tool }: HubspotEm
                   </div>
                 </div>
                 
-                
-                <div className="mt-8">
-                  <Image
-                    src="/images/reviews/hubspot-email-marketing-tools-use-cases.webp"
-                    alt="HubSpot Email Marketing Tools Use Cases & Applications - detailed analysis and breakdown"
-                    title="HubSpot Email Marketing Tools Use Cases & Applications"
-                    width={800}
-                    height={450}
-                    className="w-full h-auto rounded-lg"
-                  />
-                </div>
                 
               </div>
               <div className="mb-16" id="hubspot-email-marketing-tools-pros-and-cons-honest-assessment">
@@ -467,17 +421,6 @@ export default function HubspotEmailMarketingToolsReviewPage({ tool }: HubspotEm
                   </div>
                 </div>
                 
-                
-                <div className="mt-8">
-                  <Image
-                    src="/images/reviews/hubspot-email-marketing-tools-overview.webp"
-                    alt="HubSpot Email Marketing Tools Pros and Cons: Honest Assessment - detailed analysis and breakdown"
-                    title="HubSpot Email Marketing Tools Pros and Cons: Honest Assessment"
-                    width={800}
-                    height={450}
-                    className="w-full h-auto rounded-lg"
-                  />
-                </div>
                 
               </div>
             </div>

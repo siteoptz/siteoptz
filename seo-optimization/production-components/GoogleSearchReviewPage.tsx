@@ -143,7 +143,7 @@ export default function GoogleSearchReviewPage({ tool }: GoogleSearchReviewPageP
         <meta property="og:description" content="google search review. Compare Google Search  features, pricing & alternatives. Expert analysis & user guide for 2025. Get started today!" />
         <meta property="og:url" content="https://siteoptz.ai/reviews/google-search" />
         <meta property="og:site_name" content="SiteOptz" />
-        <meta property="og:image" content="https://siteoptz.ai/images/reviews/google-search-review-2025.webp" />
+        <meta property="og:image" content="https://siteoptz.ai/og-image.png" />
         <meta property="og:image:width" content="1200" />
         <meta property="og:image:height" content="630" />
         <meta property="og:locale" content="en_US" />
@@ -152,7 +152,7 @@ export default function GoogleSearchReviewPage({ tool }: GoogleSearchReviewPageP
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Google Search Review:  | SiteOptz" />
         <meta name="twitter:description" content="google search review. Compare Google Search  features, pricing & alternatives. Expert analysis & user guide for 2025. Get started today!" />
-        <meta name="twitter:image" content="https://siteoptz.ai/images/reviews/google-search-review-2025.webp" />
+        <meta name="twitter:image" content="https://siteoptz.ai/og-image.png" />
         <meta name="twitter:creator" content="@siteoptz" />
         
         {/* Additional SEO Tags */}
@@ -209,7 +209,6 @@ export default function GoogleSearchReviewPage({ tool }: GoogleSearchReviewPageP
                   <div className="mr-6">
                     <ToolLogo 
                       toolName="Google Search"
-                      logoUrl="/images/reviews/google-search-review-2025.webp"
                       size="xl"
                       className="w-16 h-16"
                     />
@@ -271,18 +270,6 @@ export default function GoogleSearchReviewPage({ tool }: GoogleSearchReviewPageP
                   </Link>
                 </div>
 
-                {/* Hero Image */}
-                <div className="relative rounded-xl overflow-hidden">
-                  <Image
-                    src="/images/reviews/google-search-review-2025.webp"
-                    alt="google search review - Google Search dashboard and key features screenshot"
-                    title="Google Search Interface - google search review"
-                    width={1200}
-                    height={630}
-                    className="w-full h-auto"
-                    priority
-                  />
-                </div>
               </div>
 
               {/* Sidebar Quick Info */}
@@ -364,17 +351,6 @@ export default function GoogleSearchReviewPage({ tool }: GoogleSearchReviewPageP
                 </div>
                 
                 
-                <div className="mt-8">
-                  <Image
-                    src="/images/reviews/google-search-features.webp"
-                    alt="Google Search Key Features & Capabilities - detailed analysis and breakdown"
-                    title="Google Search Key Features & Capabilities"
-                    width={800}
-                    height={450}
-                    className="w-full h-auto rounded-lg"
-                  />
-                </div>
-                
               </div>
               <div className="mb-16" id="google-search-pricing-plans-value-analysis">
                 <h2 className="text-3xl font-bold text-white mb-8">
@@ -400,17 +376,6 @@ export default function GoogleSearchReviewPage({ tool }: GoogleSearchReviewPageP
                 </div>
                 
                 
-                <div className="mt-8">
-                  <Image
-                    src="/images/reviews/google-search-pricing.webp"
-                    alt="Google Search Pricing Plans & Options - detailed analysis and breakdown"
-                    title="Google Search Pricing Plans & Options"
-                    width={800}
-                    height={450}
-                    className="w-full h-auto rounded-lg"
-                  />
-                </div>
-                
               </div>
               <div className="mb-16" id="real-world-google-search-use-cases-applications">
                 <h2 className="text-3xl font-bold text-white mb-8">
@@ -430,17 +395,6 @@ export default function GoogleSearchReviewPage({ tool }: GoogleSearchReviewPageP
                   </div>
                 </div>
                 
-                
-                <div className="mt-8">
-                  <Image
-                    src="/images/reviews/google-search-use-cases.webp"
-                    alt="Google Search Use Cases & Applications - detailed analysis and breakdown"
-                    title="Google Search Use Cases & Applications"
-                    width={800}
-                    height={450}
-                    className="w-full h-auto rounded-lg"
-                  />
-                </div>
                 
               </div>
               <div className="mb-16" id="google-search-pros-and-cons-honest-assessment">
@@ -467,17 +421,6 @@ export default function GoogleSearchReviewPage({ tool }: GoogleSearchReviewPageP
                   </div>
                 </div>
                 
-                
-                <div className="mt-8">
-                  <Image
-                    src="/images/reviews/google-search-overview.webp"
-                    alt="Google Search Pros and Cons: Honest Assessment - detailed analysis and breakdown"
-                    title="Google Search Pros and Cons: Honest Assessment"
-                    width={800}
-                    height={450}
-                    className="w-full h-auto rounded-lg"
-                  />
-                </div>
                 
               </div>
             </div>

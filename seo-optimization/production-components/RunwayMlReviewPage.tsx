@@ -143,7 +143,7 @@ export default function RunwaymlReviewPage({ tool }: RunwaymlReviewPageProps) {
         <meta property="og:description" content="runwayml review. Compare RunwayML  features, pricing & alternatives. Expert analysis & user guide for 2025. Get started today!" />
         <meta property="og:url" content="https://siteoptz.ai/reviews/runwayml" />
         <meta property="og:site_name" content="SiteOptz" />
-        <meta property="og:image" content="https://siteoptz.ai/images/reviews/runwayml-review-2025.webp" />
+        <meta property="og:image" content="https://siteoptz.ai/og-image.png" />
         <meta property="og:image:width" content="1200" />
         <meta property="og:image:height" content="630" />
         <meta property="og:locale" content="en_US" />
@@ -152,7 +152,7 @@ export default function RunwaymlReviewPage({ tool }: RunwaymlReviewPageProps) {
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="RunwayML Review:  | SiteOptz" />
         <meta name="twitter:description" content="runwayml review. Compare RunwayML  features, pricing & alternatives. Expert analysis & user guide for 2025. Get started today!" />
-        <meta name="twitter:image" content="https://siteoptz.ai/images/reviews/runwayml-review-2025.webp" />
+        <meta name="twitter:image" content="https://siteoptz.ai/og-image.png" />
         <meta name="twitter:creator" content="@siteoptz" />
         
         {/* Additional SEO Tags */}
@@ -209,7 +209,6 @@ export default function RunwaymlReviewPage({ tool }: RunwaymlReviewPageProps) {
                   <div className="mr-6">
                     <ToolLogo 
                       toolName="RunwayML"
-                      logoUrl="/images/reviews/runwayml-review-2025.webp"
                       size="xl"
                       className="w-16 h-16"
                     />
@@ -271,18 +270,6 @@ export default function RunwaymlReviewPage({ tool }: RunwaymlReviewPageProps) {
                   </Link>
                 </div>
 
-                {/* Hero Image */}
-                <div className="relative rounded-xl overflow-hidden">
-                  <Image
-                    src="/images/reviews/runwayml-review-2025.webp"
-                    alt="runwayml review - RunwayML dashboard and key features screenshot"
-                    title="RunwayML Interface - runwayml review"
-                    width={1200}
-                    height={630}
-                    className="w-full h-auto"
-                    priority
-                  />
-                </div>
               </div>
 
               {/* Sidebar Quick Info */}
@@ -364,17 +351,6 @@ export default function RunwaymlReviewPage({ tool }: RunwaymlReviewPageProps) {
                 </div>
                 
                 
-                <div className="mt-8">
-                  <Image
-                    src="/images/reviews/runwayml-features.webp"
-                    alt="RunwayML Key Features & Capabilities - detailed analysis and breakdown"
-                    title="RunwayML Key Features & Capabilities"
-                    width={800}
-                    height={450}
-                    className="w-full h-auto rounded-lg"
-                  />
-                </div>
-                
               </div>
               <div className="mb-16" id="runwayml-pricing-plans-value-analysis">
                 <h2 className="text-3xl font-bold text-white mb-8">
@@ -400,17 +376,6 @@ export default function RunwaymlReviewPage({ tool }: RunwaymlReviewPageProps) {
                 </div>
                 
                 
-                <div className="mt-8">
-                  <Image
-                    src="/images/reviews/runwayml-pricing.webp"
-                    alt="RunwayML Pricing Plans & Options - detailed analysis and breakdown"
-                    title="RunwayML Pricing Plans & Options"
-                    width={800}
-                    height={450}
-                    className="w-full h-auto rounded-lg"
-                  />
-                </div>
-                
               </div>
               <div className="mb-16" id="real-world-runwayml-use-cases-applications">
                 <h2 className="text-3xl font-bold text-white mb-8">
@@ -430,17 +395,6 @@ export default function RunwaymlReviewPage({ tool }: RunwaymlReviewPageProps) {
                   </div>
                 </div>
                 
-                
-                <div className="mt-8">
-                  <Image
-                    src="/images/reviews/runwayml-use-cases.webp"
-                    alt="RunwayML Use Cases & Applications - detailed analysis and breakdown"
-                    title="RunwayML Use Cases & Applications"
-                    width={800}
-                    height={450}
-                    className="w-full h-auto rounded-lg"
-                  />
-                </div>
                 
               </div>
               <div className="mb-16" id="runwayml-pros-and-cons-honest-assessment">
@@ -467,17 +421,6 @@ export default function RunwaymlReviewPage({ tool }: RunwaymlReviewPageProps) {
                   </div>
                 </div>
                 
-                
-                <div className="mt-8">
-                  <Image
-                    src="/images/reviews/runwayml-overview.webp"
-                    alt="RunwayML Pros and Cons: Honest Assessment - detailed analysis and breakdown"
-                    title="RunwayML Pros and Cons: Honest Assessment"
-                    width={800}
-                    height={450}
-                    className="w-full h-auto rounded-lg"
-                  />
-                </div>
                 
               </div>
             </div>

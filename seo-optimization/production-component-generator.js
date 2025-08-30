@@ -449,16 +449,16 @@ export default function ${componentName}({ tool }: ${componentName}Props) {
         <meta property="og:description" content="${metaTags.description}" />
         <meta property="og:url" content="https://siteoptz.ai/reviews/${slug}" />
         <meta property="og:site_name" content="SiteOptz" />
-        <meta property="og:image" content="https://siteoptz.ai${images.hero_image.src}" />
-        <meta property="og:image:width" content="${images.hero_image.width}" />
-        <meta property="og:image:height" content="${images.hero_image.height}" />
+        <meta property="og:image" content="https://siteoptz.ai/og-image.png" />
+        <meta property="og:image:width" content="1200" />
+        <meta property="og:image:height" content="630" />
         <meta property="og:locale" content="en_US" />
         
         {/* Twitter Card Tags */}
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="${metaTags.title}" />
         <meta name="twitter:description" content="${metaTags.description}" />
-        <meta name="twitter:image" content="https://siteoptz.ai${images.hero_image.src}" />
+        <meta name="twitter:image" content="https://siteoptz.ai/og-image.png" />
         <meta name="twitter:creator" content="@siteoptz" />
         
         {/* Additional SEO Tags */}
@@ -515,7 +515,6 @@ export default function ${componentName}({ tool }: ${componentName}Props) {
                   <div className="mr-6">
                     <ToolLogo 
                       toolName="${tool.name}"
-                      logoUrl="${images.hero_image.src}"
                       size="xl"
                       className="w-16 h-16"
                     />
@@ -568,18 +567,6 @@ export default function ${componentName}({ tool }: ${componentName}Props) {
                   </Link>
                 </div>
 
-                {/* Hero Image */}
-                <div className="relative rounded-xl overflow-hidden">
-                  <Image
-                    src="${images.hero_image.src}"
-                    alt="${images.hero_image.alt}"
-                    title="${images.hero_image.title}"
-                    width={${images.hero_image.width}}
-                    height={${images.hero_image.height}}
-                    className="w-full h-auto"
-                    priority
-                  />
-                </div>
               </div>
 
               {/* Sidebar Quick Info */}
@@ -759,38 +746,8 @@ export const getStaticProps: GetStaticProps = async () => {
   }
 
   getSectionImage(heading, tool, index) {
-    const cleanHeading = heading.replace(/^#+\s/, '').toLowerCase();
-    
-    // Determine image type based on heading content
-    let imageType = 'overview';
-    let imageTitle = heading.replace(/^#+\s/, '');
-    
-    if (cleanHeading.includes('pricing') || cleanHeading.includes('cost') || cleanHeading.includes('plan')) {
-      imageType = 'pricing';
-      imageTitle = `${tool.name} Pricing Plans & Options`;
-    } else if (cleanHeading.includes('features') || cleanHeading.includes('capabilities')) {
-      imageType = 'features';
-      imageTitle = `${tool.name} Key Features & Capabilities`;
-    } else if (cleanHeading.includes('comparison') || cleanHeading.includes('competitors') || cleanHeading.includes('alternatives') || cleanHeading.includes('vs')) {
-      imageType = 'vs-competitors';
-      imageTitle = `${tool.name} vs Competitors Comparison`;
-    } else if (cleanHeading.includes('use case') || cleanHeading.includes('application')) {
-      imageType = 'use-cases';
-      imageTitle = `${tool.name} Use Cases & Applications`;
-    }
-    
-    return `
-                <div className="mt-8">
-                  <Image
-                    src="/images/reviews/${tool.slug}-${imageType}.webp"
-                    alt="${imageTitle} - detailed analysis and breakdown"
-                    title="${imageTitle}"
-                    width={800}
-                    height={450}
-                    className="w-full h-auto rounded-lg"
-                  />
-                </div>
-                `;
+    // Return empty string - no images since they don't exist
+    return '';
   }
 
   formatContentToHTML(content) {

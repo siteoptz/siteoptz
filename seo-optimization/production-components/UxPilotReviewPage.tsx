@@ -143,7 +143,7 @@ export default function UxPilotReviewPage({ tool }: UxPilotReviewPageProps) {
         <meta property="og:description" content="ux pilot review. Compare UX Pilot  features, pricing & alternatives. Expert analysis & user guide for 2025. Get started today!" />
         <meta property="og:url" content="https://siteoptz.ai/reviews/ux-pilot" />
         <meta property="og:site_name" content="SiteOptz" />
-        <meta property="og:image" content="https://siteoptz.ai/images/reviews/ux-pilot-review-2025.webp" />
+        <meta property="og:image" content="https://siteoptz.ai/og-image.png" />
         <meta property="og:image:width" content="1200" />
         <meta property="og:image:height" content="630" />
         <meta property="og:locale" content="en_US" />
@@ -152,7 +152,7 @@ export default function UxPilotReviewPage({ tool }: UxPilotReviewPageProps) {
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="UX Pilot Review:  | SiteOptz" />
         <meta name="twitter:description" content="ux pilot review. Compare UX Pilot  features, pricing & alternatives. Expert analysis & user guide for 2025. Get started today!" />
-        <meta name="twitter:image" content="https://siteoptz.ai/images/reviews/ux-pilot-review-2025.webp" />
+        <meta name="twitter:image" content="https://siteoptz.ai/og-image.png" />
         <meta name="twitter:creator" content="@siteoptz" />
         
         {/* Additional SEO Tags */}
@@ -209,7 +209,6 @@ export default function UxPilotReviewPage({ tool }: UxPilotReviewPageProps) {
                   <div className="mr-6">
                     <ToolLogo 
                       toolName="UX Pilot"
-                      logoUrl="/images/reviews/ux-pilot-review-2025.webp"
                       size="xl"
                       className="w-16 h-16"
                     />
@@ -271,18 +270,6 @@ export default function UxPilotReviewPage({ tool }: UxPilotReviewPageProps) {
                   </Link>
                 </div>
 
-                {/* Hero Image */}
-                <div className="relative rounded-xl overflow-hidden">
-                  <Image
-                    src="/images/reviews/ux-pilot-review-2025.webp"
-                    alt="ux pilot review - UX Pilot dashboard and key features screenshot"
-                    title="UX Pilot Interface - ux pilot review"
-                    width={1200}
-                    height={630}
-                    className="w-full h-auto"
-                    priority
-                  />
-                </div>
               </div>
 
               {/* Sidebar Quick Info */}
@@ -364,17 +351,6 @@ export default function UxPilotReviewPage({ tool }: UxPilotReviewPageProps) {
                 </div>
                 
                 
-                <div className="mt-8">
-                  <Image
-                    src="/images/reviews/ux-pilot-features.webp"
-                    alt="UX Pilot Key Features & Capabilities - detailed analysis and breakdown"
-                    title="UX Pilot Key Features & Capabilities"
-                    width={800}
-                    height={450}
-                    className="w-full h-auto rounded-lg"
-                  />
-                </div>
-                
               </div>
               <div className="mb-16" id="ux-pilot-pricing-plans-value-analysis">
                 <h2 className="text-3xl font-bold text-white mb-8">
@@ -400,17 +376,6 @@ export default function UxPilotReviewPage({ tool }: UxPilotReviewPageProps) {
                 </div>
                 
                 
-                <div className="mt-8">
-                  <Image
-                    src="/images/reviews/ux-pilot-pricing.webp"
-                    alt="UX Pilot Pricing Plans & Options - detailed analysis and breakdown"
-                    title="UX Pilot Pricing Plans & Options"
-                    width={800}
-                    height={450}
-                    className="w-full h-auto rounded-lg"
-                  />
-                </div>
-                
               </div>
               <div className="mb-16" id="real-world-ux-pilot-use-cases-applications">
                 <h2 className="text-3xl font-bold text-white mb-8">
@@ -430,17 +395,6 @@ export default function UxPilotReviewPage({ tool }: UxPilotReviewPageProps) {
                   </div>
                 </div>
                 
-                
-                <div className="mt-8">
-                  <Image
-                    src="/images/reviews/ux-pilot-use-cases.webp"
-                    alt="UX Pilot Use Cases & Applications - detailed analysis and breakdown"
-                    title="UX Pilot Use Cases & Applications"
-                    width={800}
-                    height={450}
-                    className="w-full h-auto rounded-lg"
-                  />
-                </div>
                 
               </div>
               <div className="mb-16" id="ux-pilot-pros-and-cons-honest-assessment">
@@ -467,17 +421,6 @@ export default function UxPilotReviewPage({ tool }: UxPilotReviewPageProps) {
                   </div>
                 </div>
                 
-                
-                <div className="mt-8">
-                  <Image
-                    src="/images/reviews/ux-pilot-overview.webp"
-                    alt="UX Pilot Pros and Cons: Honest Assessment - detailed analysis and breakdown"
-                    title="UX Pilot Pros and Cons: Honest Assessment"
-                    width={800}
-                    height={450}
-                    className="w-full h-auto rounded-lg"
-                  />
-                </div>
                 
               </div>
             </div>

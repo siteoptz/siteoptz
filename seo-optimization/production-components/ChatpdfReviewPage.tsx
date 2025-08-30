@@ -143,7 +143,7 @@ export default function ChatpdfReviewPage({ tool }: ChatpdfReviewPageProps) {
         <meta property="og:description" content="chatpdf review. Compare ChatPDF  features, pricing & alternatives. Expert analysis & user guide for 2025. Get started today!" />
         <meta property="og:url" content="https://siteoptz.ai/reviews/chatpdf" />
         <meta property="og:site_name" content="SiteOptz" />
-        <meta property="og:image" content="https://siteoptz.ai/images/reviews/chatpdf-review-2025.webp" />
+        <meta property="og:image" content="https://siteoptz.ai/og-image.png" />
         <meta property="og:image:width" content="1200" />
         <meta property="og:image:height" content="630" />
         <meta property="og:locale" content="en_US" />
@@ -152,7 +152,7 @@ export default function ChatpdfReviewPage({ tool }: ChatpdfReviewPageProps) {
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="ChatPDF Review:  | SiteOptz" />
         <meta name="twitter:description" content="chatpdf review. Compare ChatPDF  features, pricing & alternatives. Expert analysis & user guide for 2025. Get started today!" />
-        <meta name="twitter:image" content="https://siteoptz.ai/images/reviews/chatpdf-review-2025.webp" />
+        <meta name="twitter:image" content="https://siteoptz.ai/og-image.png" />
         <meta name="twitter:creator" content="@siteoptz" />
         
         {/* Additional SEO Tags */}
@@ -209,7 +209,6 @@ export default function ChatpdfReviewPage({ tool }: ChatpdfReviewPageProps) {
                   <div className="mr-6">
                     <ToolLogo 
                       toolName="ChatPDF"
-                      logoUrl="/images/reviews/chatpdf-review-2025.webp"
                       size="xl"
                       className="w-16 h-16"
                     />
@@ -271,18 +270,6 @@ export default function ChatpdfReviewPage({ tool }: ChatpdfReviewPageProps) {
                   </Link>
                 </div>
 
-                {/* Hero Image */}
-                <div className="relative rounded-xl overflow-hidden">
-                  <Image
-                    src="/images/reviews/chatpdf-review-2025.webp"
-                    alt="chatpdf review - ChatPDF dashboard and key features screenshot"
-                    title="ChatPDF Interface - chatpdf review"
-                    width={1200}
-                    height={630}
-                    className="w-full h-auto"
-                    priority
-                  />
-                </div>
               </div>
 
               {/* Sidebar Quick Info */}
@@ -364,17 +351,6 @@ export default function ChatpdfReviewPage({ tool }: ChatpdfReviewPageProps) {
                 </div>
                 
                 
-                <div className="mt-8">
-                  <Image
-                    src="/images/reviews/chatpdf-features.webp"
-                    alt="ChatPDF Key Features & Capabilities - detailed analysis and breakdown"
-                    title="ChatPDF Key Features & Capabilities"
-                    width={800}
-                    height={450}
-                    className="w-full h-auto rounded-lg"
-                  />
-                </div>
-                
               </div>
               <div className="mb-16" id="chatpdf-pricing-plans-value-analysis">
                 <h2 className="text-3xl font-bold text-white mb-8">
@@ -400,17 +376,6 @@ export default function ChatpdfReviewPage({ tool }: ChatpdfReviewPageProps) {
                 </div>
                 
                 
-                <div className="mt-8">
-                  <Image
-                    src="/images/reviews/chatpdf-pricing.webp"
-                    alt="ChatPDF Pricing Plans & Options - detailed analysis and breakdown"
-                    title="ChatPDF Pricing Plans & Options"
-                    width={800}
-                    height={450}
-                    className="w-full h-auto rounded-lg"
-                  />
-                </div>
-                
               </div>
               <div className="mb-16" id="real-world-chatpdf-use-cases-applications">
                 <h2 className="text-3xl font-bold text-white mb-8">
@@ -430,17 +395,6 @@ export default function ChatpdfReviewPage({ tool }: ChatpdfReviewPageProps) {
                   </div>
                 </div>
                 
-                
-                <div className="mt-8">
-                  <Image
-                    src="/images/reviews/chatpdf-use-cases.webp"
-                    alt="ChatPDF Use Cases & Applications - detailed analysis and breakdown"
-                    title="ChatPDF Use Cases & Applications"
-                    width={800}
-                    height={450}
-                    className="w-full h-auto rounded-lg"
-                  />
-                </div>
                 
               </div>
               <div className="mb-16" id="chatpdf-pros-and-cons-honest-assessment">
@@ -467,17 +421,6 @@ export default function ChatpdfReviewPage({ tool }: ChatpdfReviewPageProps) {
                   </div>
                 </div>
                 
-                
-                <div className="mt-8">
-                  <Image
-                    src="/images/reviews/chatpdf-overview.webp"
-                    alt="ChatPDF Pros and Cons: Honest Assessment - detailed analysis and breakdown"
-                    title="ChatPDF Pros and Cons: Honest Assessment"
-                    width={800}
-                    height={450}
-                    className="w-full h-auto rounded-lg"
-                  />
-                </div>
                 
               </div>
             </div>

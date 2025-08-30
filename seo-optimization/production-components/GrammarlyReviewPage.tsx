@@ -143,7 +143,7 @@ export default function GrammarlyReviewPage({ tool }: GrammarlyReviewPageProps) 
         <meta property="og:description" content="grammarly review. Compare Grammarly  features, pricing & alternatives. Expert analysis & user guide for 2025. Get started today!" />
         <meta property="og:url" content="https://siteoptz.ai/reviews/grammarly" />
         <meta property="og:site_name" content="SiteOptz" />
-        <meta property="og:image" content="https://siteoptz.ai/images/reviews/grammarly-review-2025.webp" />
+        <meta property="og:image" content="https://siteoptz.ai/og-image.png" />
         <meta property="og:image:width" content="1200" />
         <meta property="og:image:height" content="630" />
         <meta property="og:locale" content="en_US" />
@@ -152,7 +152,7 @@ export default function GrammarlyReviewPage({ tool }: GrammarlyReviewPageProps) 
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Grammarly Review:  | SiteOptz" />
         <meta name="twitter:description" content="grammarly review. Compare Grammarly  features, pricing & alternatives. Expert analysis & user guide for 2025. Get started today!" />
-        <meta name="twitter:image" content="https://siteoptz.ai/images/reviews/grammarly-review-2025.webp" />
+        <meta name="twitter:image" content="https://siteoptz.ai/og-image.png" />
         <meta name="twitter:creator" content="@siteoptz" />
         
         {/* Additional SEO Tags */}
@@ -209,7 +209,6 @@ export default function GrammarlyReviewPage({ tool }: GrammarlyReviewPageProps) 
                   <div className="mr-6">
                     <ToolLogo 
                       toolName="Grammarly"
-                      logoUrl="/images/reviews/grammarly-review-2025.webp"
                       size="xl"
                       className="w-16 h-16"
                     />
@@ -271,18 +270,6 @@ export default function GrammarlyReviewPage({ tool }: GrammarlyReviewPageProps) 
                   </Link>
                 </div>
 
-                {/* Hero Image */}
-                <div className="relative rounded-xl overflow-hidden">
-                  <Image
-                    src="/images/reviews/grammarly-review-2025.webp"
-                    alt="grammarly review - Grammarly dashboard and key features screenshot"
-                    title="Grammarly Interface - grammarly review"
-                    width={1200}
-                    height={630}
-                    className="w-full h-auto"
-                    priority
-                  />
-                </div>
               </div>
 
               {/* Sidebar Quick Info */}
@@ -364,17 +351,6 @@ export default function GrammarlyReviewPage({ tool }: GrammarlyReviewPageProps) 
                 </div>
                 
                 
-                <div className="mt-8">
-                  <Image
-                    src="/images/reviews/grammarly-features.webp"
-                    alt="Grammarly Key Features & Capabilities - detailed analysis and breakdown"
-                    title="Grammarly Key Features & Capabilities"
-                    width={800}
-                    height={450}
-                    className="w-full h-auto rounded-lg"
-                  />
-                </div>
-                
               </div>
               <div className="mb-16" id="grammarly-pricing-plans-value-analysis">
                 <h2 className="text-3xl font-bold text-white mb-8">
@@ -400,17 +376,6 @@ export default function GrammarlyReviewPage({ tool }: GrammarlyReviewPageProps) 
                 </div>
                 
                 
-                <div className="mt-8">
-                  <Image
-                    src="/images/reviews/grammarly-pricing.webp"
-                    alt="Grammarly Pricing Plans & Options - detailed analysis and breakdown"
-                    title="Grammarly Pricing Plans & Options"
-                    width={800}
-                    height={450}
-                    className="w-full h-auto rounded-lg"
-                  />
-                </div>
-                
               </div>
               <div className="mb-16" id="real-world-grammarly-use-cases-applications">
                 <h2 className="text-3xl font-bold text-white mb-8">
@@ -430,17 +395,6 @@ export default function GrammarlyReviewPage({ tool }: GrammarlyReviewPageProps) 
                   </div>
                 </div>
                 
-                
-                <div className="mt-8">
-                  <Image
-                    src="/images/reviews/grammarly-use-cases.webp"
-                    alt="Grammarly Use Cases & Applications - detailed analysis and breakdown"
-                    title="Grammarly Use Cases & Applications"
-                    width={800}
-                    height={450}
-                    className="w-full h-auto rounded-lg"
-                  />
-                </div>
                 
               </div>
               <div className="mb-16" id="grammarly-pros-and-cons-honest-assessment">
@@ -467,17 +421,6 @@ export default function GrammarlyReviewPage({ tool }: GrammarlyReviewPageProps) 
                   </div>
                 </div>
                 
-                
-                <div className="mt-8">
-                  <Image
-                    src="/images/reviews/grammarly-overview.webp"
-                    alt="Grammarly Pros and Cons: Honest Assessment - detailed analysis and breakdown"
-                    title="Grammarly Pros and Cons: Honest Assessment"
-                    width={800}
-                    height={450}
-                    className="w-full h-auto rounded-lg"
-                  />
-                </div>
                 
               </div>
             </div>

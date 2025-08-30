@@ -143,7 +143,7 @@ export default function AhrefsAiReviewPage({ tool }: AhrefsAiReviewPageProps) {
         <meta property="og:description" content="ahrefs ai review. Compare Ahrefs AI  features, pricing & alternatives. Expert analysis & user guide for 2025. Get started today!" />
         <meta property="og:url" content="https://siteoptz.ai/reviews/ahrefs-ai" />
         <meta property="og:site_name" content="SiteOptz" />
-        <meta property="og:image" content="https://siteoptz.ai/images/reviews/ahrefs-ai-review-2025.webp" />
+        <meta property="og:image" content="https://siteoptz.ai/og-image.png" />
         <meta property="og:image:width" content="1200" />
         <meta property="og:image:height" content="630" />
         <meta property="og:locale" content="en_US" />
@@ -152,7 +152,7 @@ export default function AhrefsAiReviewPage({ tool }: AhrefsAiReviewPageProps) {
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Ahrefs AI Review:  | SiteOptz" />
         <meta name="twitter:description" content="ahrefs ai review. Compare Ahrefs AI  features, pricing & alternatives. Expert analysis & user guide for 2025. Get started today!" />
-        <meta name="twitter:image" content="https://siteoptz.ai/images/reviews/ahrefs-ai-review-2025.webp" />
+        <meta name="twitter:image" content="https://siteoptz.ai/og-image.png" />
         <meta name="twitter:creator" content="@siteoptz" />
         
         {/* Additional SEO Tags */}
@@ -209,7 +209,6 @@ export default function AhrefsAiReviewPage({ tool }: AhrefsAiReviewPageProps) {
                   <div className="mr-6">
                     <ToolLogo 
                       toolName="Ahrefs AI"
-                      logoUrl="/images/reviews/ahrefs-ai-review-2025.webp"
                       size="xl"
                       className="w-16 h-16"
                     />
@@ -271,18 +270,6 @@ export default function AhrefsAiReviewPage({ tool }: AhrefsAiReviewPageProps) {
                   </Link>
                 </div>
 
-                {/* Hero Image */}
-                <div className="relative rounded-xl overflow-hidden">
-                  <Image
-                    src="/images/reviews/ahrefs-ai-review-2025.webp"
-                    alt="ahrefs ai review - Ahrefs AI dashboard and key features screenshot"
-                    title="Ahrefs AI Interface - ahrefs ai review"
-                    width={1200}
-                    height={630}
-                    className="w-full h-auto"
-                    priority
-                  />
-                </div>
               </div>
 
               {/* Sidebar Quick Info */}
@@ -364,17 +351,6 @@ export default function AhrefsAiReviewPage({ tool }: AhrefsAiReviewPageProps) {
                 </div>
                 
                 
-                <div className="mt-8">
-                  <Image
-                    src="/images/reviews/ahrefs-ai-features.webp"
-                    alt="Ahrefs AI Key Features & Capabilities - detailed analysis and breakdown"
-                    title="Ahrefs AI Key Features & Capabilities"
-                    width={800}
-                    height={450}
-                    className="w-full h-auto rounded-lg"
-                  />
-                </div>
-                
               </div>
               <div className="mb-16" id="ahrefs-ai-pricing-plans-value-analysis">
                 <h2 className="text-3xl font-bold text-white mb-8">
@@ -400,17 +376,6 @@ export default function AhrefsAiReviewPage({ tool }: AhrefsAiReviewPageProps) {
                 </div>
                 
                 
-                <div className="mt-8">
-                  <Image
-                    src="/images/reviews/ahrefs-ai-pricing.webp"
-                    alt="Ahrefs AI Pricing Plans & Options - detailed analysis and breakdown"
-                    title="Ahrefs AI Pricing Plans & Options"
-                    width={800}
-                    height={450}
-                    className="w-full h-auto rounded-lg"
-                  />
-                </div>
-                
               </div>
               <div className="mb-16" id="real-world-ahrefs-ai-use-cases-applications">
                 <h2 className="text-3xl font-bold text-white mb-8">
@@ -430,17 +395,6 @@ export default function AhrefsAiReviewPage({ tool }: AhrefsAiReviewPageProps) {
                   </div>
                 </div>
                 
-                
-                <div className="mt-8">
-                  <Image
-                    src="/images/reviews/ahrefs-ai-use-cases.webp"
-                    alt="Ahrefs AI Use Cases & Applications - detailed analysis and breakdown"
-                    title="Ahrefs AI Use Cases & Applications"
-                    width={800}
-                    height={450}
-                    className="w-full h-auto rounded-lg"
-                  />
-                </div>
                 
               </div>
               <div className="mb-16" id="ahrefs-ai-pros-and-cons-honest-assessment">
@@ -467,17 +421,6 @@ export default function AhrefsAiReviewPage({ tool }: AhrefsAiReviewPageProps) {
                   </div>
                 </div>
                 
-                
-                <div className="mt-8">
-                  <Image
-                    src="/images/reviews/ahrefs-ai-overview.webp"
-                    alt="Ahrefs AI Pros and Cons: Honest Assessment - detailed analysis and breakdown"
-                    title="Ahrefs AI Pros and Cons: Honest Assessment"
-                    width={800}
-                    height={450}
-                    className="w-full h-auto rounded-lg"
-                  />
-                </div>
                 
               </div>
             </div>
