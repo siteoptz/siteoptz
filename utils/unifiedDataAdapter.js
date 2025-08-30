@@ -76,7 +76,7 @@ export function loadUnifiedToolsData(fs, path) {
       existingTools = existingData.map(tool => ({
         tool_name: tool.name,
         vendor: tool.overview?.developer || tool.name,
-        category: tool.overview?.category || 'Other',
+        category: tool.category || tool.overview?.category || 'Other',
         description: tool.overview?.description || tool.meta?.description || '',
         features: {
           core: tool.features || [],
