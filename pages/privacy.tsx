@@ -368,13 +368,6 @@ San Francisco, CA`
                 If you have any questions about this Privacy Policy or how we handle your data, please contact us.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <a
-                  href="mailto:privacy@siteoptz.ai"
-                  className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-green-600 to-blue-600 text-white rounded-lg font-semibold hover:from-green-700 hover:to-blue-700 transform hover:scale-105 transition-all duration-200 shadow-lg hover:shadow-xl"
-                >
-                  <Mail className="w-5 h-5 mr-2" />
-                  Email Privacy Team
-                </a>
                 <Link
                   href="/contact"
                   className="inline-flex items-center px-6 py-3 bg-gray-800 border border-gray-700 text-white rounded-lg font-semibold hover:bg-gray-700 transform hover:scale-105 transition-all duration-200 shadow-sm hover:shadow-md"
