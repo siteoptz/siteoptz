@@ -11,7 +11,7 @@ export default function CookiePolicy() {
       <SEOHead
         title="Cookie Policy - SiteOptz AI"
         description="Learn about how SiteOptz uses cookies and similar technologies to improve your browsing experience and provide personalized content."
-        keywords="cookie policy, privacy, data protection, cookies, tracking, SiteOptz"
+        keywords={["cookie policy", "privacy", "data protection", "cookies", "tracking", "SiteOptz"]}
         canonicalUrl={buildCanonicalUrl('/cookies')}
       />
       
