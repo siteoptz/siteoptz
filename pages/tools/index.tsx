@@ -92,6 +92,15 @@ export default function ToolsPage({ tools, categories, faqs }: { tools: any[], c
   // Handle category filter change
   const handleCategoryChange = (category: string) => {
     setSelectedCategory(category);
+    
+    // Update URL to reflect the category change
+    if (category === 'All') {
+      // Remove category parameter when "All" is selected
+      router.push('/tools/', undefined, { shallow: true });
+    } else {
+      // Add/update category parameter
+      router.push(`/tools/?category=${encodeURIComponent(category)}`, undefined, { shallow: true });
+    }
   };
 
   // Handle search input change
