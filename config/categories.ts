@@ -14,7 +14,9 @@ export const toolCategories = [
   'Research & Education',
   'SEO & Optimization',
   'Social Media',
+  'UX',
   'Video Generation',
+  'Website Builder',
 ] as const;
 
 export type ToolCategory = typeof toolCategories[number];

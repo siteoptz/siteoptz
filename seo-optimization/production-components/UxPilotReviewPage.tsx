@@ -28,7 +28,7 @@ export default function UxPilotReviewPage({ tool }: UxPilotReviewPageProps) {
       "@type": "SoftwareApplication",
       "name": "UX Pilot",
       "description": "AI-powered UX design assistant for better user experiences",
-      "applicationCategory": "Design",
+      "applicationCategory": "UX",
       "url": "",
       "operatingSystem": "Web, iOS, Android"
     },
@@ -59,7 +59,7 @@ export default function UxPilotReviewPage({ tool }: UxPilotReviewPageProps) {
       {
         "@type": "ListItem", 
         "position": 2,
-        "name": "Design",
+        "name": "UX",
         "item": "https://siteoptz.ai/tools/?category=Design"
       },
       {
@@ -533,7 +533,7 @@ export const getStaticProps: GetStaticProps = async () => {
     props: {
       tool: {
         name: "UX Pilot",
-        category: "Design",
+        category: "UX",
         description: "AI-powered UX design assistant for better user experiences",
         website: "",
         rating: 4.5,
