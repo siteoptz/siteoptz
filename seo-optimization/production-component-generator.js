@@ -292,13 +292,40 @@ ${tool.name} represents a strong choice in the ${tool.category} category, with a
   }
 
   generateInternalLinkingStrategy(tool) {
+    // Create diverse comparisons based on category
+    const categoryComparisons = {
+      'content creation': ['jasper-ai', 'writesonic', 'copy-ai', 'rytr', 'surfer-seo'],
+      'code generation': ['github-copilot', 'cursor', 'tabnine', 'replit-ghost', 'amazon-codewhisperer'],
+      'image generation': ['midjourney', 'dall-e', 'leonardo-ai', 'stable-diffusion', 'canva-ai'],
+      'video generation': ['runway-ml', 'pictory', 'lumen5', 'synthesia', 'descript'],
+      'voice ai': ['elevenlabs', 'murf-ai', 'speechify', 'wellsaid-labs', 'resemble-ai'],
+      'productivity': ['notion-ai', 'clickup', 'motion', 'reclaim-ai', 'clockwise'],
+      'email marketing': ['mailchimp', 'hubspot-email-marketing-tools', 'buffer', 'hootsuite', 'later'],
+      'seo & optimization': ['semrush', 'ahrefs', 'surfer-seo', 'frase', 'screaming-frog-seo-spider'],
+      'paid search & ppc': ['google-ads', 'optmyzr', 'acquisio', 'marin-software', 'adalysis'],
+      'social media': ['buffer', 'hootsuite', 'sprout-social', 'later', 'social-pilot'],
+      'research & education': ['perplexity-ai', 'consensus', 'elicit', 'scite-ai', 'chatpdf'],
+      'ai automation': ['zapier-ai', 'make', 'n8n', 'gumloop', 'apify']
+    };
+
+    // Get category-specific alternatives
+    const toolCategory = tool.category.toLowerCase();
+    let alternatives = categoryComparisons[toolCategory] || ['chatgpt', 'claude', 'gemini'];
+    
+    // Remove current tool from alternatives if it exists
+    alternatives = alternatives.filter(alt => alt !== tool.slug);
+    
+    // If no category match, use popular general tools
+    if (alternatives.length === 0) {
+      alternatives = ['chatgpt', 'claude', 'gemini', 'copilot', 'jasper-ai'];
+    }
+    
+    // Take up to 3 different alternatives
+    const selectedAlternatives = alternatives.slice(0, 3);
+    
     return {
       category_page: `/tools/?category=${encodeURIComponent(tool.category)}`,
-      comparison_pages: [
-        `/compare/${tool.slug}/vs/chatgpt`,
-        `/compare/${tool.slug}/vs/claude`,
-        `/compare/${tool.slug}/vs/notion-ai`
-      ],
+      comparison_pages: selectedAlternatives.map(alt => `/compare/${tool.slug}/vs/${alt}`),
       related_tools: `/categories/${tool.category.toLowerCase().replace(/\s+/g, '-')}`,
       pricing_calculator: '/pricing',
       alternatives_page: `/alternatives/${tool.slug}`,
@@ -557,10 +584,10 @@ export default function ${componentName}({ tool }: ${componentName}Props) {
                     rel="noopener noreferrer"
                     className="bg-gradient-to-r from-blue-600 to-purple-600 text-white hover:from-blue-700 hover:to-purple-700 font-bold py-4 px-8 rounded-lg transform hover:scale-105 transition-all duration-200 shadow-lg hover:shadow-xl text-center"
                   >
-                    Try ${tool.name} Free
+                    Try ${tool.name} Here
                   </a>
                   <Link
-                    href="${internalLinks.comparison_pages[0]}"
+                    href="/compare"
                     className="border-2 border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-black font-bold py-4 px-8 rounded-lg transition-all duration-200 text-center"
                   >
                     Compare Alternatives
@@ -673,14 +700,19 @@ export default function ${componentName}({ tool }: ${componentName}Props) {
                 </div>
               </Link>
               
-              <Link href="${internalLinks.comparison_pages[0]}" className="group">
+              ${internalLinks.comparison_pages.map((comparisonUrl, index) => {
+                const competitorName = comparisonUrl.split('/vs/')[1].split('-').map(word => 
+                  word.charAt(0).toUpperCase() + word.slice(1)
+                ).join(' ');
+                return `<Link href="${comparisonUrl}" className="group">
                 <div className="bg-black border border-gray-800 rounded-xl p-6 hover:border-gray-600 transition-all">
                   <h3 className="text-xl font-semibold text-white mb-3 group-hover:text-cyan-400">
-                    ${tool.name} vs ChatGPT
+                    ${tool.name} vs ${competitorName}
                   </h3>
                   <p className="text-gray-300">Side-by-side comparison of features and pricing</p>
                 </div>
-              </Link>
+              </Link>`;
+              }).join('\n              ')}
               
               <Link href="${internalLinks.pricing_calculator}" className="group">
                 <div className="bg-black border border-gray-800 rounded-xl p-6 hover:border-gray-600 transition-all">
