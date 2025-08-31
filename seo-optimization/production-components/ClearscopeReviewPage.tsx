@@ -490,6 +490,34 @@ export default function ClearscopeReviewPage({ tool }: ClearscopeReviewPageProps
               </Link>
             </div>
           </div>
+        </section>{/* Final CTA Section */}
+        <section className="relative z-10 py-20">
+          <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
+            <div className="bg-gradient-to-r from-blue-900/20 to-purple-900/20 border border-gray-800 rounded-2xl p-12">
+              <h2 className="text-4xl font-bold text-white mb-6">
+                Still Have Questions?
+              </h2>
+              <p className="text-xl text-gray-300 mb-8">
+                Our AI specialists can help you find the perfect SEO optimization solution for your needs.
+              </p>
+              <div className="mb-8">
+                <h3 className="text-2xl font-bold text-white mb-4">
+                  Ready to Get Started with Clearscope?
+                </h3>
+                <p className="text-lg text-gray-300 mb-6">
+                  Join thousands of content marketers using Clearscope to optimize their content for better search performance.
+                </p>
+              </div>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <Link
+                  href="/contact"
+                  className="bg-gradient-to-r from-blue-600 to-purple-600 text-white hover:from-blue-700 hover:to-purple-700 font-bold py-4 px-8 rounded-lg transform hover:scale-105 transition-all duration-200 shadow-lg hover:shadow-xl"
+                >
+                  Schedule a Meeting With an AI Specialist
+                </Link>
+              </div>
+            </div>
+          </div>
         </section>
         {/* SiteOptz.ai Promotional Section */}
         <section className="relative z-10 py-16 bg-gradient-to-r from-gray-900/50 to-black/50">
@@ -563,35 +591,7 @@ export default function ClearscopeReviewPage({ tool }: ClearscopeReviewPageProps
 
 
 
-        {/* Final CTA Section */}
-        <section className="relative z-10 py-20">
-          <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
-            <div className="bg-gradient-to-r from-blue-900/20 to-purple-900/20 border border-gray-800 rounded-2xl p-12">
-              <h2 className="text-4xl font-bold text-white mb-6">
-                Still Have Questions?
-              </h2>
-              <p className="text-xl text-gray-300 mb-8">
-                Our AI specialists can help you find the perfect SEO optimization solution for your needs.
-              </p>
-              <div className="mb-8">
-                <h3 className="text-2xl font-bold text-white mb-4">
-                  Ready to Get Started with Clearscope?
-                </h3>
-                <p className="text-lg text-gray-300 mb-6">
-                  Join thousands of content marketers using Clearscope to optimize their content for better search performance.
-                </p>
-              </div>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Link
-                  href="/contact"
-                  className="bg-gradient-to-r from-blue-600 to-purple-600 text-white hover:from-blue-700 hover:to-purple-700 font-bold py-4 px-8 rounded-lg transform hover:scale-105 transition-all duration-200 shadow-lg hover:shadow-xl"
-                >
-                  Schedule a Meeting With an AI Specialist
-                </Link>
-              </div>
-            </div>
-          </div>
-        </section>
+        
       </div>
     </>
   );
