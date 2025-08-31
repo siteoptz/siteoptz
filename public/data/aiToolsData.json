@@ -10893,6 +10893,128 @@
     "cpc": 3.3
   },
   {
+    "id": "clearscope",
+    "name": "Clearscope",
+    "slug": "clearscope",
+    "logo": "/images/tools/clearscope-logo.svg",
+    "meta": {
+      "title": "Clearscope Review, Pricing, Features & Alternatives [2025]",
+      "description": "Comprehensive review of Clearscope. Compare features, pricing, and alternatives."
+    },
+    "schema": {
+      "@type": "Product",
+      "name": "Clearscope",
+      "image": "/images/tools/clearscope-logo.svg",
+      "description": "AI-powered content optimization platform for SEO",
+      "brand": "Clearscope"
+    },
+    "overview": {
+      "developer": "Clearscope",
+      "release_year": 2016,
+      "category": "SEO & Optimization",
+      "description": "Clearscope is an AI-powered content optimization platform that helps businesses improve their SEO and organic search performance through data-driven content creation and optimization.",
+      "website": "https://www.clearscope.io/",
+      "support": "Email, Chat, Phone",
+      "use_cases": [
+        "Content optimization",
+        "Keyword research",
+        "SEO content strategy",
+        "Content performance monitoring",
+        "Competitive content analysis",
+        "Search intent matching"
+      ],
+      "integrations": [
+        "Google Search Console",
+        "Google Analytics",
+        "WordPress",
+        "Contentful",
+        "HubSpot",
+        "Drupal",
+        "API access"
+      ]
+    },
+    "features": [
+      "AI-powered content optimization",
+      "Keyword research and discovery",
+      "Content grading and scoring",
+      "SERP analysis",
+      "Content monitoring",
+      "Search intent analysis",
+      "Competitive intelligence",
+      "Content briefs generation",
+      "Real-time optimization suggestions",
+      "Content performance tracking"
+    ],
+    "pros": [
+      "Excellent content optimization",
+      "Data-driven insights",
+      "User-friendly interface",
+      "Strong SEO focus",
+      "Comprehensive keyword research",
+      "Regular platform updates",
+      "Good customer support"
+    ],
+    "cons": [
+      "Higher pricing point",
+      "Steep learning curve",
+      "Limited to SEO features",
+      "Requires ongoing content strategy",
+      "No free plan available"
+    ],
+    "pricing": [
+      {
+        "plan": "Essentials",
+        "price_per_month": 189,
+        "features": [
+          "100 Content Inventory Pages",
+          "50 monthly Keyword Discoveries",
+          "20 monthly Content Reports",
+          "Unlimited users and projects",
+          "Priority support"
+        ]
+      },
+      {
+        "plan": "Business", 
+        "price_per_month": 399,
+        "features": [
+          "300 Content Inventory Pages",
+          "50 monthly Keyword Discoveries", 
+          "20 monthly Content Reports",
+          "Dedicated Account Manager",
+          "Priority support"
+        ]
+      },
+      {
+        "plan": "Enterprise",
+        "price_per_month": "Custom",
+        "features": [
+          "Custom credits",
+          "Custom agreements",
+          "Crawler whitelisting",
+          "Single sign-on (SSO)",
+          "Custom onboarding"
+        ]
+      }
+    ],
+    "benchmarks": {
+      "speed": 8,
+      "accuracy": 9,
+      "integration": 8,
+      "ease_of_use": 7,
+      "value": 7
+    },
+    "related_tools": [
+      "frase",
+      "surfer-seo",
+      "ahrefs-ai",
+      "semrush-ai"
+    ],
+    "rating": 4.4,
+    "affiliate_link": "https://www.clearscope.io/",
+    "search_volume": 2100,
+    "cpc": 4.2
+  },
+  {
     "id": "frase",
     "name": "Frase",
     "slug": "frase",

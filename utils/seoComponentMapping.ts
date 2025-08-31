@@ -40,6 +40,7 @@ const seoComponents: Record<string, () => Promise<{ default: ComponentType<SEOCo
   'chatgpt-enterprise': () => import('../seo-optimization/production-components/ChatgptEnterpriseReviewPage'),
   'chatgpt': () => import('../seo-optimization/production-components/ChatgptReviewPage'),
   'chatpdf': () => import('../seo-optimization/production-components/ChatpdfReviewPage'),
+  'clearscope': () => import('../seo-optimization/production-components/ClearscopeReviewPage'),
   'claude': () => import('../seo-optimization/production-components/ClaudeReviewPage'),
   'clickup': () => import('../seo-optimization/production-components/ClickupReviewPage'),
   'clockwise': () => import('../seo-optimization/production-components/ClockwiseReviewPage'),
