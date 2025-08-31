@@ -252,15 +252,7 @@ export default function CanvaAiReviewPage({ tool }: CanvaAiReviewPageProps) {
                 </div>
 
                 {/* CTA Buttons */}
-                <div className="flex flex-col sm:flex-row gap-4 mb-8">
-                  <a
-                    href="https://canva.com/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="bg-gradient-to-r from-blue-600 to-purple-600 text-white hover:from-blue-700 hover:to-purple-700 font-bold py-4 px-8 rounded-lg transform hover:scale-105 transition-all duration-200 shadow-lg hover:shadow-xl text-center"
-                  >
-                    Try Canva AI Here
-                  </a>
+                <div className="flex justify-center mb-8">
                   <Link
                     href="/compare"
                     className="border-2 border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-black font-bold py-4 px-8 rounded-lg transition-all duration-200 text-center"
