@@ -182,13 +182,7 @@ export default function FAQSection({ faqs }: FAQSectionProps) {
             href="/contact"
             className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg font-medium transition-colors"
           >
-            Contact an Expert
-          </Link>
-          <Link
-            href="/compare"
-            className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg font-medium transition-colors"
-          >
-            Free Tool Selection Guide
+            Schedule a Meeting With an AI Specialist
           </Link>
         </div>
       </div>

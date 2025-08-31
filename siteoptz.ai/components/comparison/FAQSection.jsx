@@ -143,13 +143,7 @@ export default function FAQSection({
             href="/contact"
             className="bg-white text-blue-600 px-6 py-2 rounded-lg font-medium hover:bg-blue-50 transition-colors"
           >
-            Contact an Expert
-          </a>
-          <a
-            href="/compare"
-            className="bg-blue-700 text-white px-6 py-2 rounded-lg font-medium hover:bg-blue-800 transition-colors"
-          >
-            Free Tool Selection Guide
+            Schedule a Meeting With an AI Specialist
           </a>
         </div>
       </div>
