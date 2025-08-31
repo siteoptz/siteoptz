@@ -142,10 +142,8 @@ export default function AIIntegrationMasterclass() {
                   <div className="bg-gray-800 rounded-xl mb-6 aspect-video flex items-center justify-center relative overflow-hidden">
                     <div className="absolute inset-0 bg-gradient-to-br from-orange-600/20 to-red-600/20"></div>
                     <div className="flex items-center space-x-2 relative z-10">
-                      <div className="w-8 h-8 bg-blue-500 rounded border-2 border-white"></div>
-                      <div className="w-2 h-2 bg-white rounded-full"></div>
-                      <div className="w-8 h-8 bg-green-500 rounded border-2 border-white"></div>
-                      <div className="w-2 h-2 bg-white rounded-full"></div>
+                      
+                      
                       <div className="w-8 h-8 bg-purple-500 rounded border-2 border-white"></div>
                     </div>
                     <Play className="w-16 h-16 text-white absolute" />

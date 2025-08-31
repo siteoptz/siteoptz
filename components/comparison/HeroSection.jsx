@@ -156,8 +156,7 @@ export default function HeroSection({ tool }) {
             </div>
 
             {/* Background Decoration */}
-            <div className="absolute -top-4 -right-4 w-32 h-32 bg-blue-100 rounded-full opacity-50 -z-10"></div>
-            <div className="absolute -bottom-4 -left-4 w-24 h-24 bg-indigo-100 rounded-full opacity-50 -z-10"></div>
+            
           </div>
         </div>
       </div>
