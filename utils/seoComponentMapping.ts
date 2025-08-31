@@ -131,6 +131,7 @@ const seoComponents: Record<string, () => Promise<{ default: ComponentType<SEOCo
   'rev': () => import('../seo-optimization/production-components/RevReviewPage'),
   'reve-image': () => import('../seo-optimization/production-components/ReveImageReviewPage'),
   'runway-ml': () => import('../seo-optimization/production-components/RunwayMlReviewPage'),
+  'runwayml': () => import('../seo-optimization/production-components/RunwaymlReviewPage'),
   'rytr': () => import('../seo-optimization/production-components/RytrReviewPage'),
   'scite-ai': () => import('../seo-optimization/production-components/SciteAiReviewPage'),
   'screaming-frog-seo-spider': () => import('../seo-optimization/production-components/ScreamingFrogSeoSpiderReviewPage'),
