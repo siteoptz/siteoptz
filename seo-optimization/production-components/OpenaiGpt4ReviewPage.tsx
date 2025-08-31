@@ -377,7 +377,7 @@ export default function OpenaiGpt4ReviewPage({ tool }: OpenaiGpt4ReviewPageProps
                 
                 
               </div>
-              <div className="mb-16" id="real-world-gpt-4-use-cases-applications">
+              <div className="mb-16" id="use-cases">
                 <h2 className="text-3xl font-bold text-white mb-8">
                   Real-World GPT-4 Use Cases & Applications
                 </h2>
@@ -397,7 +397,7 @@ export default function OpenaiGpt4ReviewPage({ tool }: OpenaiGpt4ReviewPageProps
                 
                 
               </div>
-              <div className="mb-16" id="gpt-4-pros-and-cons-honest-assessment">
+              <div className="mb-16" id="pros-cons">
                 <h2 className="text-3xl font-bold text-white mb-8">
                   GPT-4 Pros and Cons: Honest Assessment
                 </h2>

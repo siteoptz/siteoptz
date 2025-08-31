@@ -377,7 +377,7 @@ export default function MozProReviewPage({ tool }: MozProReviewPageProps) {
                 
                 
               </div>
-              <div className="mb-16" id="real-world-moz-pro-use-cases-applications">
+              <div className="mb-16" id="use-cases">
                 <h2 className="text-3xl font-bold text-white mb-8">
                   Real-World Moz Pro Use Cases & Applications
                 </h2>
@@ -397,7 +397,7 @@ export default function MozProReviewPage({ tool }: MozProReviewPageProps) {
                 
                 
               </div>
-              <div className="mb-16" id="moz-pro-pros-and-cons-honest-assessment">
+              <div className="mb-16" id="pros-cons">
                 <h2 className="text-3xl font-bold text-white mb-8">
                   Moz Pro Pros and Cons: Honest Assessment
                 </h2>

@@ -377,7 +377,7 @@ export default function HubspotAiReviewPage({ tool }: HubspotAiReviewPageProps) 
                 
                 
               </div>
-              <div className="mb-16" id="real-world-hubspot-ai-use-cases-applications">
+              <div className="mb-16" id="use-cases">
                 <h2 className="text-3xl font-bold text-white mb-8">
                   Real-World HubSpot AI Use Cases & Applications
                 </h2>
@@ -397,7 +397,7 @@ export default function HubspotAiReviewPage({ tool }: HubspotAiReviewPageProps) 
                 
                 
               </div>
-              <div className="mb-16" id="hubspot-ai-pros-and-cons-honest-assessment">
+              <div className="mb-16" id="pros-cons">
                 <h2 className="text-3xl font-bold text-white mb-8">
                   HubSpot AI Pros and Cons: Honest Assessment
                 </h2>

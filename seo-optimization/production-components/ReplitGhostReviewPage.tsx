@@ -377,7 +377,7 @@ export default function ReplitGhostReviewPage({ tool }: ReplitGhostReviewPagePro
                 
                 
               </div>
-              <div className="mb-16" id="real-world-replit-ghost-use-cases-applications">
+              <div className="mb-16" id="use-cases">
                 <h2 className="text-3xl font-bold text-white mb-8">
                   Real-World Replit Ghost Use Cases & Applications
                 </h2>
@@ -397,7 +397,7 @@ export default function ReplitGhostReviewPage({ tool }: ReplitGhostReviewPagePro
                 
                 
               </div>
-              <div className="mb-16" id="replit-ghost-pros-and-cons-honest-assessment">
+              <div className="mb-16" id="pros-cons">
                 <h2 className="text-3xl font-bold text-white mb-8">
                   Replit Ghost Pros and Cons: Honest Assessment
                 </h2>

@@ -377,7 +377,7 @@ export default function QlikSenseReviewPage({ tool }: QlikSenseReviewPageProps) 
                 
                 
               </div>
-              <div className="mb-16" id="real-world-qlik-sense-use-cases-applications">
+              <div className="mb-16" id="use-cases">
                 <h2 className="text-3xl font-bold text-white mb-8">
                   Real-World Qlik Sense Use Cases & Applications
                 </h2>
@@ -397,7 +397,7 @@ export default function QlikSenseReviewPage({ tool }: QlikSenseReviewPageProps) 
                 
                 
               </div>
-              <div className="mb-16" id="qlik-sense-pros-and-cons-honest-assessment">
+              <div className="mb-16" id="pros-cons">
                 <h2 className="text-3xl font-bold text-white mb-8">
                   Qlik Sense Pros and Cons: Honest Assessment
                 </h2>

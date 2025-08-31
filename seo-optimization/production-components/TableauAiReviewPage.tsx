@@ -377,7 +377,7 @@ export default function TableauAiReviewPage({ tool }: TableauAiReviewPageProps) 
                 
                 
               </div>
-              <div className="mb-16" id="real-world-tableau-ai-use-cases-applications">
+              <div className="mb-16" id="use-cases">
                 <h2 className="text-3xl font-bold text-white mb-8">
                   Real-World Tableau AI Use Cases & Applications
                 </h2>
@@ -397,7 +397,7 @@ export default function TableauAiReviewPage({ tool }: TableauAiReviewPageProps) 
                 
                 
               </div>
-              <div className="mb-16" id="tableau-ai-pros-and-cons-honest-assessment">
+              <div className="mb-16" id="pros-cons">
                 <h2 className="text-3xl font-bold text-white mb-8">
                   Tableau AI Pros and Cons: Honest Assessment
                 </h2>

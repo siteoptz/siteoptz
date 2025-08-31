@@ -377,7 +377,7 @@ export default function ChatgptEnterpriseReviewPage({ tool }: ChatgptEnterpriseR
                 
                 
               </div>
-              <div className="mb-16" id="real-world-chatgpt-enterprise-use-cases-applications">
+              <div className="mb-16" id="use-cases">
                 <h2 className="text-3xl font-bold text-white mb-8">
                   Real-World ChatGPT Enterprise Use Cases & Applications
                 </h2>
@@ -397,7 +397,7 @@ export default function ChatgptEnterpriseReviewPage({ tool }: ChatgptEnterpriseR
                 
                 
               </div>
-              <div className="mb-16" id="chatgpt-enterprise-pros-and-cons-honest-assessment">
+              <div className="mb-16" id="pros-cons">
                 <h2 className="text-3xl font-bold text-white mb-8">
                   ChatGPT Enterprise Pros and Cons: Honest Assessment
                 </h2>

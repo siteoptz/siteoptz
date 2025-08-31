@@ -329,7 +329,7 @@ export default function FirefliesReviewPage({ tool }: FirefliesReviewPageProps) 
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="max-w-4xl mx-auto">
               
-              <div className="mb-16" id="fireflies-key-features-capabilities">
+              <div className="mb-16" id="features">
                 <h2 className="text-3xl font-bold text-white mb-8">
                   Fireflies Key Features & Capabilities
                 </h2>
@@ -352,7 +352,7 @@ export default function FirefliesReviewPage({ tool }: FirefliesReviewPageProps) 
                 
                 
               </div>
-              <div className="mb-16" id="fireflies-pricing-plans-value-analysis">
+              <div className="mb-16" id="pricing">
                 <h2 className="text-3xl font-bold text-white mb-8">
                   Fireflies Pricing Plans & Value Analysis
                 </h2>
@@ -377,7 +377,7 @@ export default function FirefliesReviewPage({ tool }: FirefliesReviewPageProps) 
                 
                 
               </div>
-              <div className="mb-16" id="real-world-fireflies-use-cases-applications">
+              <div className="mb-16" id="use-cases">
                 <h2 className="text-3xl font-bold text-white mb-8">
                   Real-World Fireflies Use Cases & Applications
                 </h2>
@@ -397,7 +397,7 @@ export default function FirefliesReviewPage({ tool }: FirefliesReviewPageProps) 
                 
                 
               </div>
-              <div className="mb-16" id="fireflies-pros-and-cons-honest-assessment">
+              <div className="mb-16" id="pros-cons">
                 <h2 className="text-3xl font-bold text-white mb-8">
                   Fireflies Pros and Cons: Honest Assessment
                 </h2>

@@ -377,7 +377,7 @@ export default function DreamMachineReviewPage({ tool }: DreamMachineReviewPageP
                 
                 
               </div>
-              <div className="mb-16" id="real-world-dream-machine-use-cases-applications">
+              <div className="mb-16" id="use-cases">
                 <h2 className="text-3xl font-bold text-white mb-8">
                   Real-World Dream Machine Use Cases & Applications
                 </h2>
@@ -397,7 +397,7 @@ export default function DreamMachineReviewPage({ tool }: DreamMachineReviewPageP
                 
                 
               </div>
-              <div className="mb-16" id="dream-machine-pros-and-cons-honest-assessment">
+              <div className="mb-16" id="pros-cons">
                 <h2 className="text-3xl font-bold text-white mb-8">
                   Dream Machine Pros and Cons: Honest Assessment
                 </h2>

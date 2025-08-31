@@ -377,7 +377,7 @@ export default function LockedinAiReviewPage({ tool }: LockedinAiReviewPageProps
                 
                 
               </div>
-              <div className="mb-16" id="real-world-lockedin-ai-use-cases-applications">
+              <div className="mb-16" id="use-cases">
                 <h2 className="text-3xl font-bold text-white mb-8">
                   Real-World LockedIn AI Use Cases & Applications
                 </h2>
@@ -397,7 +397,7 @@ export default function LockedinAiReviewPage({ tool }: LockedinAiReviewPageProps
                 
                 
               </div>
-              <div className="mb-16" id="lockedin-ai-pros-and-cons-honest-assessment">
+              <div className="mb-16" id="pros-cons">
                 <h2 className="text-3xl font-bold text-white mb-8">
                   LockedIn AI Pros and Cons: Honest Assessment
                 </h2>

@@ -329,7 +329,7 @@ export default function GuruReviewPage({ tool }: GuruReviewPageProps) {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="max-w-4xl mx-auto">
               
-              <div className="mb-16" id="guru-key-features-capabilities">
+              <div className="mb-16" id="features">
                 <h2 className="text-3xl font-bold text-white mb-8">
                   Guru Key Features & Capabilities
                 </h2>
@@ -352,7 +352,7 @@ export default function GuruReviewPage({ tool }: GuruReviewPageProps) {
                 
                 
               </div>
-              <div className="mb-16" id="guru-pricing-plans-value-analysis">
+              <div className="mb-16" id="pricing">
                 <h2 className="text-3xl font-bold text-white mb-8">
                   Guru Pricing Plans & Value Analysis
                 </h2>
@@ -377,7 +377,7 @@ export default function GuruReviewPage({ tool }: GuruReviewPageProps) {
                 
                 
               </div>
-              <div className="mb-16" id="real-world-guru-use-cases-applications">
+              <div className="mb-16" id="use-cases">
                 <h2 className="text-3xl font-bold text-white mb-8">
                   Real-World Guru Use Cases & Applications
                 </h2>
@@ -397,7 +397,7 @@ export default function GuruReviewPage({ tool }: GuruReviewPageProps) {
                 
                 
               </div>
-              <div className="mb-16" id="guru-pros-and-cons-honest-assessment">
+              <div className="mb-16" id="pros-cons">
                 <h2 className="text-3xl font-bold text-white mb-8">
                   Guru Pros and Cons: Honest Assessment
                 </h2>

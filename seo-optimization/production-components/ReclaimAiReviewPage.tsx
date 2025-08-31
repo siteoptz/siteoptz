@@ -377,7 +377,7 @@ export default function ReclaimAiReviewPage({ tool }: ReclaimAiReviewPageProps) 
                 
                 
               </div>
-              <div className="mb-16" id="real-world-reclaim-ai-use-cases-applications">
+              <div className="mb-16" id="use-cases">
                 <h2 className="text-3xl font-bold text-white mb-8">
                   Real-World Reclaim.ai Use Cases & Applications
                 </h2>
@@ -397,7 +397,7 @@ export default function ReclaimAiReviewPage({ tool }: ReclaimAiReviewPageProps) 
                 
                 
               </div>
-              <div className="mb-16" id="reclaim-ai-pros-and-cons-honest-assessment">
+              <div className="mb-16" id="pros-cons">
                 <h2 className="text-3xl font-bold text-white mb-8">
                   Reclaim.ai Pros and Cons: Honest Assessment
                 </h2>

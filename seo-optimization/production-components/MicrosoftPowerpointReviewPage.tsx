@@ -377,7 +377,7 @@ export default function MicrosoftPowerpointReviewPage({ tool }: MicrosoftPowerpo
                 
                 
               </div>
-              <div className="mb-16" id="real-world-microsoft-powerpoint-use-cases-applications">
+              <div className="mb-16" id="use-cases">
                 <h2 className="text-3xl font-bold text-white mb-8">
                   Real-World Microsoft PowerPoint Use Cases & Applications
                 </h2>
@@ -397,7 +397,7 @@ export default function MicrosoftPowerpointReviewPage({ tool }: MicrosoftPowerpo
                 
                 
               </div>
-              <div className="mb-16" id="microsoft-powerpoint-pros-and-cons-honest-assessment">
+              <div className="mb-16" id="pros-cons">
                 <h2 className="text-3xl font-bold text-white mb-8">
                   Microsoft PowerPoint Pros and Cons: Honest Assessment
                 </h2>

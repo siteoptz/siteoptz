@@ -329,7 +329,7 @@ export default function GammaReviewPage({ tool }: GammaReviewPageProps) {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="max-w-4xl mx-auto">
               
-              <div className="mb-16" id="gamma-key-features-capabilities">
+              <div className="mb-16" id="features">
                 <h2 className="text-3xl font-bold text-white mb-8">
                   Gamma Key Features & Capabilities
                 </h2>
@@ -352,7 +352,7 @@ export default function GammaReviewPage({ tool }: GammaReviewPageProps) {
                 
                 
               </div>
-              <div className="mb-16" id="gamma-pricing-plans-value-analysis">
+              <div className="mb-16" id="pricing">
                 <h2 className="text-3xl font-bold text-white mb-8">
                   Gamma Pricing Plans & Value Analysis
                 </h2>
@@ -377,7 +377,7 @@ export default function GammaReviewPage({ tool }: GammaReviewPageProps) {
                 
                 
               </div>
-              <div className="mb-16" id="real-world-gamma-use-cases-applications">
+              <div className="mb-16" id="use-cases">
                 <h2 className="text-3xl font-bold text-white mb-8">
                   Real-World Gamma Use Cases & Applications
                 </h2>
@@ -397,7 +397,7 @@ export default function GammaReviewPage({ tool }: GammaReviewPageProps) {
                 
                 
               </div>
-              <div className="mb-16" id="gamma-pros-and-cons-honest-assessment">
+              <div className="mb-16" id="pros-cons">
                 <h2 className="text-3xl font-bold text-white mb-8">
                   Gamma Pros and Cons: Honest Assessment
                 </h2>

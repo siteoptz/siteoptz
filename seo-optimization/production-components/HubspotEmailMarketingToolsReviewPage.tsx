@@ -377,7 +377,7 @@ export default function HubspotEmailMarketingToolsReviewPage({ tool }: HubspotEm
                 
                 
               </div>
-              <div className="mb-16" id="real-world-hubspot-email-marketing-tools-use-cases-applications">
+              <div className="mb-16" id="use-cases">
                 <h2 className="text-3xl font-bold text-white mb-8">
                   Real-World HubSpot Email Marketing Tools Use Cases & Applications
                 </h2>
@@ -397,7 +397,7 @@ export default function HubspotEmailMarketingToolsReviewPage({ tool }: HubspotEm
                 
                 
               </div>
-              <div className="mb-16" id="hubspot-email-marketing-tools-pros-and-cons-honest-assessment">
+              <div className="mb-16" id="pros-cons">
                 <h2 className="text-3xl font-bold text-white mb-8">
                   HubSpot Email Marketing Tools Pros and Cons: Honest Assessment
                 </h2>

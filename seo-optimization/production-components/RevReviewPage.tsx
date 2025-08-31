@@ -329,7 +329,7 @@ export default function RevReviewPage({ tool }: RevReviewPageProps) {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="max-w-4xl mx-auto">
               
-              <div className="mb-16" id="rev-key-features-capabilities">
+              <div className="mb-16" id="features">
                 <h2 className="text-3xl font-bold text-white mb-8">
                   Rev Key Features & Capabilities
                 </h2>
@@ -352,7 +352,7 @@ export default function RevReviewPage({ tool }: RevReviewPageProps) {
                 
                 
               </div>
-              <div className="mb-16" id="rev-pricing-plans-value-analysis">
+              <div className="mb-16" id="pricing">
                 <h2 className="text-3xl font-bold text-white mb-8">
                   Rev Pricing Plans & Value Analysis
                 </h2>
@@ -377,7 +377,7 @@ export default function RevReviewPage({ tool }: RevReviewPageProps) {
                 
                 
               </div>
-              <div className="mb-16" id="real-world-rev-use-cases-applications">
+              <div className="mb-16" id="use-cases">
                 <h2 className="text-3xl font-bold text-white mb-8">
                   Real-World Rev Use Cases & Applications
                 </h2>
@@ -397,7 +397,7 @@ export default function RevReviewPage({ tool }: RevReviewPageProps) {
                 
                 
               </div>
-              <div className="mb-16" id="rev-pros-and-cons-honest-assessment">
+              <div className="mb-16" id="pros-cons">
                 <h2 className="text-3xl font-bold text-white mb-8">
                   Rev Pros and Cons: Honest Assessment
                 </h2>

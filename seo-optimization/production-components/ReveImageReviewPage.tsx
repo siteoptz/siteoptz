@@ -377,7 +377,7 @@ export default function ReveImageReviewPage({ tool }: ReveImageReviewPageProps) 
                 
                 
               </div>
-              <div className="mb-16" id="real-world-reve-image-use-cases-applications">
+              <div className="mb-16" id="use-cases">
                 <h2 className="text-3xl font-bold text-white mb-8">
                   Real-World Reve Image Use Cases & Applications
                 </h2>
@@ -397,7 +397,7 @@ export default function ReveImageReviewPage({ tool }: ReveImageReviewPageProps) 
                 
                 
               </div>
-              <div className="mb-16" id="reve-image-pros-and-cons-honest-assessment">
+              <div className="mb-16" id="pros-cons">
                 <h2 className="text-3xl font-bold text-white mb-8">
                   Reve Image Pros and Cons: Honest Assessment
                 </h2>

@@ -377,7 +377,7 @@ export default function PowerBiReviewPage({ tool }: PowerBiReviewPageProps) {
                 
                 
               </div>
-              <div className="mb-16" id="real-world-power-bi-use-cases-applications">
+              <div className="mb-16" id="use-cases">
                 <h2 className="text-3xl font-bold text-white mb-8">
                   Real-World Power BI Use Cases & Applications
                 </h2>
@@ -397,7 +397,7 @@ export default function PowerBiReviewPage({ tool }: PowerBiReviewPageProps) {
                 
                 
               </div>
-              <div className="mb-16" id="power-bi-pros-and-cons-honest-assessment">
+              <div className="mb-16" id="pros-cons">
                 <h2 className="text-3xl font-bold text-white mb-8">
                   Power BI Pros and Cons: Honest Assessment
                 </h2>

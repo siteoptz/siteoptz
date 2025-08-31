@@ -377,7 +377,7 @@ export default function GoogleSearchReviewPage({ tool }: GoogleSearchReviewPageP
                 
                 
               </div>
-              <div className="mb-16" id="real-world-google-search-use-cases-applications">
+              <div className="mb-16" id="use-cases">
                 <h2 className="text-3xl font-bold text-white mb-8">
                   Real-World Google Search Use Cases & Applications
                 </h2>
@@ -397,7 +397,7 @@ export default function GoogleSearchReviewPage({ tool }: GoogleSearchReviewPageP
                 
                 
               </div>
-              <div className="mb-16" id="google-search-pros-and-cons-honest-assessment">
+              <div className="mb-16" id="pros-cons">
                 <h2 className="text-3xl font-bold text-white mb-8">
                   Google Search Pros and Cons: Honest Assessment
                 </h2>

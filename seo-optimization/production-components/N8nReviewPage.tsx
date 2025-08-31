@@ -329,7 +329,7 @@ export default function N8nReviewPage({ tool }: N8nReviewPageProps) {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="max-w-4xl mx-auto">
               
-              <div className="mb-16" id="n8n-key-features-capabilities">
+              <div className="mb-16" id="features">
                 <h2 className="text-3xl font-bold text-white mb-8">
                   n8n Key Features & Capabilities
                 </h2>
@@ -352,7 +352,7 @@ export default function N8nReviewPage({ tool }: N8nReviewPageProps) {
                 
                 
               </div>
-              <div className="mb-16" id="n8n-pricing-plans-value-analysis">
+              <div className="mb-16" id="pricing">
                 <h2 className="text-3xl font-bold text-white mb-8">
                   n8n Pricing Plans & Value Analysis
                 </h2>
@@ -377,7 +377,7 @@ export default function N8nReviewPage({ tool }: N8nReviewPageProps) {
                 
                 
               </div>
-              <div className="mb-16" id="real-world-n8n-use-cases-applications">
+              <div className="mb-16" id="use-cases">
                 <h2 className="text-3xl font-bold text-white mb-8">
                   Real-World n8n Use Cases & Applications
                 </h2>
@@ -397,7 +397,7 @@ export default function N8nReviewPage({ tool }: N8nReviewPageProps) {
                 
                 
               </div>
-              <div className="mb-16" id="n8n-pros-and-cons-honest-assessment">
+              <div className="mb-16" id="pros-cons">
                 <h2 className="text-3xl font-bold text-white mb-8">
                   n8n Pros and Cons: Honest Assessment
                 </h2>

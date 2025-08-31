@@ -377,7 +377,7 @@ export default function WellsaidLabsReviewPage({ tool }: WellsaidLabsReviewPageP
                 
                 
               </div>
-              <div className="mb-16" id="real-world-wellsaid-labs-use-cases-applications">
+              <div className="mb-16" id="use-cases">
                 <h2 className="text-3xl font-bold text-white mb-8">
                   Real-World Wellsaid Labs Use Cases & Applications
                 </h2>
@@ -397,7 +397,7 @@ export default function WellsaidLabsReviewPage({ tool }: WellsaidLabsReviewPageP
                 
                 
               </div>
-              <div className="mb-16" id="wellsaid-labs-pros-and-cons-honest-assessment">
+              <div className="mb-16" id="pros-cons">
                 <h2 className="text-3xl font-bold text-white mb-8">
                   Wellsaid Labs Pros and Cons: Honest Assessment
                 </h2>

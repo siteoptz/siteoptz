@@ -377,7 +377,7 @@ export default function DeepResearchReviewPage({ tool }: DeepResearchReviewPageP
                 
                 
               </div>
-              <div className="mb-16" id="real-world-deep-research-use-cases-applications">
+              <div className="mb-16" id="use-cases">
                 <h2 className="text-3xl font-bold text-white mb-8">
                   Real-World Deep Research Use Cases & Applications
                 </h2>
@@ -397,7 +397,7 @@ export default function DeepResearchReviewPage({ tool }: DeepResearchReviewPageP
                 
                 
               </div>
-              <div className="mb-16" id="deep-research-pros-and-cons-honest-assessment">
+              <div className="mb-16" id="pros-cons">
                 <h2 className="text-3xl font-bold text-white mb-8">
                   Deep Research Pros and Cons: Honest Assessment
                 </h2>

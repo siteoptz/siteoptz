@@ -377,7 +377,7 @@ export default function StabilityAiStableDiffusionReviewPage({ tool }: Stability
                 
                 
               </div>
-              <div className="mb-16" id="real-world-stable-diffusion-web-use-cases-applications">
+              <div className="mb-16" id="use-cases">
                 <h2 className="text-3xl font-bold text-white mb-8">
                   Real-World Stable Diffusion Web Use Cases & Applications
                 </h2>
@@ -397,7 +397,7 @@ export default function StabilityAiStableDiffusionReviewPage({ tool }: Stability
                 
                 
               </div>
-              <div className="mb-16" id="stable-diffusion-web-pros-and-cons-honest-assessment">
+              <div className="mb-16" id="pros-cons">
                 <h2 className="text-3xl font-bold text-white mb-8">
                   Stable Diffusion Web Pros and Cons: Honest Assessment
                 </h2>

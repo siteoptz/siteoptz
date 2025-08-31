@@ -377,7 +377,7 @@ export default function HuggingfaceTransformersReviewPage({ tool }: HuggingfaceT
                 
                 
               </div>
-              <div className="mb-16" id="real-world-hugging-face-use-cases-applications">
+              <div className="mb-16" id="use-cases">
                 <h2 className="text-3xl font-bold text-white mb-8">
                   Real-World Hugging Face Use Cases & Applications
                 </h2>
@@ -397,7 +397,7 @@ export default function HuggingfaceTransformersReviewPage({ tool }: HuggingfaceT
                 
                 
               </div>
-              <div className="mb-16" id="hugging-face-pros-and-cons-honest-assessment">
+              <div className="mb-16" id="pros-cons">
                 <h2 className="text-3xl font-bold text-white mb-8">
                   Hugging Face Pros and Cons: Honest Assessment
                 </h2>

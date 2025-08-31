@@ -377,7 +377,7 @@ export default function SproutSocialReviewPage({ tool }: SproutSocialReviewPageP
                 
                 
               </div>
-              <div className="mb-16" id="real-world-sprout-social-use-cases-applications">
+              <div className="mb-16" id="use-cases">
                 <h2 className="text-3xl font-bold text-white mb-8">
                   Real-World Sprout Social Use Cases & Applications
                 </h2>
@@ -397,7 +397,7 @@ export default function SproutSocialReviewPage({ tool }: SproutSocialReviewPageP
                 
                 
               </div>
-              <div className="mb-16" id="sprout-social-pros-and-cons-honest-assessment">
+              <div className="mb-16" id="pros-cons">
                 <h2 className="text-3xl font-bold text-white mb-8">
                   Sprout Social Pros and Cons: Honest Assessment
                 </h2>

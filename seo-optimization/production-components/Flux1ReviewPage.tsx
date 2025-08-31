@@ -377,7 +377,7 @@ export default function Flux1ReviewPage({ tool }: Flux1ReviewPageProps) {
                 
                 
               </div>
-              <div className="mb-16" id="real-world-flux-1-use-cases-applications">
+              <div className="mb-16" id="use-cases">
                 <h2 className="text-3xl font-bold text-white mb-8">
                   Real-World Flux 1 Use Cases & Applications
                 </h2>
@@ -397,7 +397,7 @@ export default function Flux1ReviewPage({ tool }: Flux1ReviewPageProps) {
                 
                 
               </div>
-              <div className="mb-16" id="flux-1-pros-and-cons-honest-assessment">
+              <div className="mb-16" id="pros-cons">
                 <h2 className="text-3xl font-bold text-white mb-8">
                   Flux 1 Pros and Cons: Honest Assessment
                 </h2>
