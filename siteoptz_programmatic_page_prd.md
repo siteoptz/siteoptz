@@ -105,6 +105,7 @@ Create a high-performing, SEO-optimized comparison page template that can be sys
 - **Internal Linking:** Link to related AI tool comparisons and reviews
 - **Meta Tags:** Optimized title, description, and Open Graph tags
 - **URL Structure:** `/ai-tools/chatgpt-vs-jasper-ai-comparison-2025/`
+- **SEO Components:** All tools must have corresponding SEO-optimized review page components in `seo-optimization/production-components/` with proper mapping in `utils/seoComponentMapping.ts`
 
 #### **Performance Requirements**
 - **Page Load Speed:** < 3 seconds
