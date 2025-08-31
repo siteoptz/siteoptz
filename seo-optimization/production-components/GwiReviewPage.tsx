@@ -499,25 +499,17 @@ export default function GwiReviewPage({ tool }: GwiReviewPageProps) {
           <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
             <div className="bg-gradient-to-r from-blue-900/20 to-purple-900/20 border border-gray-800 rounded-2xl p-12">
               <h2 className="text-4xl font-bold text-white mb-6">
-                Ready to Get Started with GWI?
+                Ready to Get Started with Gwi?
               </h2>
               <p className="text-xl text-gray-300 mb-8">
-                Join thousands of professionals using GWI to streamline their content creation workflows.
+                Join thousands of professionals using Gwi to streamline their workflows.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <a
-                  href=""
-                  target="_blank"
-                  rel="noopener noreferrer"
+                <Link
+                  href="/contact"
                   className="bg-gradient-to-r from-blue-600 to-purple-600 text-white hover:from-blue-700 hover:to-purple-700 font-bold py-4 px-8 rounded-lg transform hover:scale-105 transition-all duration-200 shadow-lg hover:shadow-xl"
                 >
-                  Start Free Trial
-                </a>
-                <Link
-                  href="/alternatives/gwi"
-                  className="border-2 border-gray-600 text-gray-300 hover:border-cyan-400 hover:text-cyan-400 font-bold py-4 px-8 rounded-lg transition-all duration-200"
-                >
-                  View Alternatives
+                  Schedule a Meeting With an AI Specialist
                 </Link>
               </div>
             </div>
