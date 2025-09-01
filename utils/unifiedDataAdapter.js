@@ -227,7 +227,10 @@ export function loadUnifiedToolsData(fs, path) {
  */
 export function getToolsByCategory(tools, category) {
   if (!category) return tools;
-  return tools.filter(tool => tool.category === category);
+  return tools.filter(tool => 
+    tool.category === category || 
+    tool.overview?.category === category
+  );
 }
 
 /**
