@@ -11,60 +11,57 @@ const path = require('path');
 function addSimpleTool() {
   // Example tool - modify this object to add your tool
   const newTool = {
-    "id": "your-tool-id",
-    "name": "Your Tool Name", 
-    "slug": "your-tool-slug",
-    "logo": "/images/tools/your-tool-logo.svg",
+    "id": "google-ads",
+    "name": "Google Ads",
+    "slug": "google-ads",
+    "logo": "/images/tools/google-ads-logo.svg",
     "meta": {
-      "title": "Your Tool Name Review, Pricing, Features & Alternatives [2025]",
-      "description": "Comprehensive review of Your Tool Name. Description of what your tool does. Compare features, pricing, and alternatives."
+      "title": "Google Ads Review, Pricing, Features & Alternatives [2025]",
+      "description": "Comprehensive review of Google Ads. World's largest PPC advertising platform. Compare features, pricing, and alternatives."
     },
     "overview": {
-      "developer": "Your Company",
-      "release_year": 2024,
-      "description": "Description of what your AI tool does",
-      "category": "Content Creation"
+      "developer": "Google",
+      "release_year": 2000,
+      "description": "Google Ads is the world's largest pay-per-click advertising platform, allowing businesses to create and manage ads across Google Search, Display Network, YouTube, and other Google properties.",
+      "category": "Paid Search & PPC"
     },
     "features": [
-      "Feature 1",
-      "Feature 2", 
-      "Feature 3"
+      "Search Network advertising with keyword targeting",
+      "Display Network campaigns across millions of websites",
+      "YouTube video advertising and remarketing",
+      "Smart Bidding with machine learning optimization",
+      "Conversion tracking and attribution modeling"
     ],
     "pros": [
-      "Easy to use",
-      "Good value for money",
-      "Fast performance"
+      "Largest search advertising reach",
+      "Advanced targeting and automation",
+      "Comprehensive campaign types"
     ],
     "cons": [
-      "Limited free plan",
-      "No offline mode"
+      "Complex interface for beginners",
+      "Can be expensive without optimization"
     ],
     "pricing": [
       {
-        "plan": "Free",
-        "price_per_month": 0,
-        "features": ["Basic features", "Limited usage"]
+        "plan": "Pay-per-click",
+        "price_per_month": "Variable",
+        "features": ["Pay only when someone clicks your ad", "Set daily budgets and bid limits", "No minimum spend requirements"]
       },
       {
-        "plan": "Pro",
-        "price_per_month": 29,
-        "features": ["All features", "Unlimited usage", "Priority support"]
-      },
-      {
-        "plan": "Enterprise", 
-        "price_per_month": "Custom",
-        "features": ["Custom features", "Dedicated support", "SLA"]
+        "plan": "Smart Campaigns",
+        "price_per_month": "Variable",
+        "features": ["Automated ad management", "Machine learning optimization", "Simplified setup process"]
       }
     ],
     "benchmarks": {
-      "speed": 8,
-      "accuracy": 8,
-      "integration": 7,
-      "ease_of_use": 9,
+      "speed": 9,
+      "accuracy": 9,
+      "integration": 10,
+      "ease_of_use": 7,
       "value": 8
     },
     "rating": 4.5,
-    "review_count": 1200
+    "review_count": 12500
   };
 
   // Load existing tools

@@ -68,6 +68,7 @@ const seoComponents: Record<string, () => Promise<{ default: ComponentType<SEOCo
   'gemini': () => import('../seo-optimization/production-components/GeminiReviewPage'),
   'github-copilot': () => import('../seo-optimization/production-components/GithubCopilotReviewPage'),
   'gong-io': () => import('../seo-optimization/production-components/GongIoReviewPage'),
+  'google-ads': () => import('../seo-optimization/production-components/GoogleAdsReviewPage'),
   'google-search': () => import('../seo-optimization/production-components/GoogleSearchReviewPage'),
   'grammarly': () => import('../seo-optimization/production-components/GrammarlyReviewPage'),
   'grok': () => import('../seo-optimization/production-components/GrokReviewPage'),
