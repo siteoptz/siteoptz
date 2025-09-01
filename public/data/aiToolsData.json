@@ -18611,5 +18611,460 @@
     ],
     "rating": 4.3,
     "review_count": 120
+  },
+  {
+    "id": "loomly",
+    "name": "Loomly",
+    "slug": "loomly",
+    "logo": "/images/tools/loomly-logo.svg",
+    "description": "Collaborative social media platform with content calendars, optimization tools, and team workflows for enhanced productivity.",
+    "overview": {
+      "description": "Loomly is a collaborative social media platform with content calendars, optimization tools, and team workflows for enhanced productivity.",
+      "category": "Social Media",
+      "developer": "Loomly",
+      "website": "https://www.loomly.com",
+      "integrations": [
+        "Facebook",
+        "Instagram",
+        "Twitter",
+        "LinkedIn",
+        "TikTok",
+        "Threads"
+      ],
+      "use_cases": [
+        "Content calendar management",
+        "Team collaboration workflows",
+        "Multi-platform scheduling",
+        "Analytics and reporting",
+        "Content optimization"
+      ]
+    },
+    "features": [
+      "Content calendar with drag-and-drop scheduling",
+      "10+ platform support including TikTok, Threads",
+      "Built-in photo/video editing tools",
+      "Team collaboration and approval workflows",
+      "Analytics and automated reporting"
+    ],
+    "pricing": [
+      {
+        "tier": "Standard",
+        "price_per_month": 32,
+        "billing_period": "month",
+        "features": [
+          "Content calendar",
+          "Team collaboration",
+          "Basic analytics"
+        ],
+        "description": "Standard social media management",
+        "popular": true
+      },
+      {
+        "tier": "Enterprise",
+        "price_per_month": "Custom",
+        "billing_period": "month",
+        "features": [
+          "Advanced features",
+          "Priority support",
+          "Custom solutions"
+        ],
+        "description": "Enterprise-grade social media",
+        "popular": false
+      }
+    ],
+    "pros": [
+      "Drag-and-drop content calendar",
+      "Support for 10+ platforms including TikTok",
+      "Built-in photo and video editing tools",
+      "Advanced team collaboration workflows",
+      "Automated reporting and analytics"
+    ],
+    "cons": [
+      "No free tier available",
+      "Higher starting price at $32/month",
+      "Limited automation features",
+      "Learning curve for new users"
+    ],
+    "benchmarks": {
+      "speed": 8,
+      "accuracy": 8,
+      "integration": 8,
+      "ease_of_use": 8,
+      "value": 7
+    },
+    "affiliate_link": "https://www.loomly.com",
+    "category": "Social Media",
+    "tags": [
+      "social media",
+      "content calendar",
+      "team collaboration",
+      "scheduling"
+    ],
+    "rating": 4.6,
+    "review_count": 160
+  },
+  {
+    "id": "socialpilot",
+    "name": "SocialPilot",
+    "slug": "socialpilot",
+    "logo": "/images/tools/socialpilot-logo.svg",
+    "description": "Comprehensive social media management tool supporting 10+ platforms with team collaboration and white-label solutions.",
+    "overview": {
+      "description": "SocialPilot is a comprehensive social media management tool supporting 10+ platforms with team collaboration and white-label solutions.",
+      "category": "Social Media",
+      "developer": "SocialPilot",
+      "website": "https://www.socialpilot.co",
+      "integrations": [
+        "Facebook",
+        "Instagram",
+        "Twitter",
+        "LinkedIn",
+        "Pinterest",
+        "TikTok"
+      ],
+      "use_cases": [
+        "Multi-platform publishing",
+        "Team collaboration",
+        "White-label solutions",
+        "Bulk scheduling",
+        "Analytics and reporting"
+      ]
+    },
+    "features": [
+      "Publishing across 10+ social platforms",
+      "Advanced analytics and reporting",
+      "Team collaboration with user roles",
+      "Bulk scheduling and content curation",
+      "White-label solutions for agencies"
+    ],
+    "pricing": [
+      {
+        "tier": "Professional",
+        "price_per_month": 25.50,
+        "billing_period": "month",
+        "features": [
+          "Multi-platform publishing",
+          "Team collaboration",
+          "Basic analytics"
+        ],
+        "description": "Professional social media management",
+        "popular": true
+      },
+      {
+        "tier": "Enterprise",
+        "price_per_month": "Custom",
+        "billing_period": "month",
+        "features": [
+          "Advanced features",
+          "Priority support",
+          "Custom solutions"
+        ],
+        "description": "Enterprise-grade social media",
+        "popular": false
+      }
+    ],
+    "pros": [
+      "Support for 10+ social platforms",
+      "White-label solutions for agencies",
+      "Advanced team collaboration features",
+      "Bulk scheduling capabilities",
+      "Competitive pricing at $25.50/month"
+    ],
+    "cons": [
+      "No free tier available",
+      "Interface can feel cluttered",
+      "Limited content creation tools",
+      "Customer support response times vary"
+    ],
+    "benchmarks": {
+      "speed": 8,
+      "accuracy": 8,
+      "integration": 8,
+      "ease_of_use": 7,
+      "value": 8
+    },
+    "affiliate_link": "https://www.socialpilot.co",
+    "category": "Social Media",
+    "tags": [
+      "social media",
+      "multi-platform",
+      "team collaboration",
+      "white-label"
+    ],
+    "rating": 4.5,
+    "review_count": 140
+  },
+  {
+    "id": "social-champ",
+    "name": "Social Champ",
+    "slug": "social-champ",
+    "logo": "/images/tools/social-champ-logo.svg",
+    "description": "Feature-rich social media tool with support for 11 platforms including BlueSky, Threads, and Mastodon with competitive pricing.",
+    "overview": {
+      "description": "Social Champ is a feature-rich social media tool with support for 11 platforms including BlueSky, Threads, and Mastodon with competitive pricing.",
+      "category": "Social Media",
+      "developer": "Social Champ",
+      "website": "https://www.socialchamp.com",
+      "integrations": [
+        "Facebook",
+        "Instagram",
+        "Twitter",
+        "LinkedIn",
+        "BlueSky",
+        "Threads",
+        "Mastodon"
+      ],
+      "use_cases": [
+        "Multi-platform scheduling",
+        "AI content suggestions",
+        "Bulk upload and scheduling",
+        "Analytics dashboard",
+        "Team collaboration"
+      ]
+    },
+    "features": [
+      "11 platform integrations including newer platforms",
+      "AI-powered content suggestions",
+      "Bulk upload and scheduling",
+      "Advanced analytics dashboard",
+      "Team collaboration tools"
+    ],
+    "pricing": [
+      {
+        "tier": "Free",
+        "price_per_month": 0,
+        "billing_period": "month",
+        "features": [
+          "Basic scheduling",
+          "Limited platforms",
+          "Basic analytics"
+        ],
+        "description": "Free tier for small teams",
+        "popular": false
+      },
+      {
+        "tier": "Champion",
+        "price_per_month": 29,
+        "billing_period": "month",
+        "features": [
+          "All platforms",
+          "AI content suggestions",
+          "Advanced analytics"
+        ],
+        "description": "Full-featured social media management",
+        "popular": true
+      }
+    ],
+    "pros": [
+      "Support for 11 platforms including newer ones",
+      "Free tier available to test features",
+      "AI-powered content suggestions",
+      "Bulk upload and scheduling",
+      "Good value for money at $29/month"
+    ],
+    "cons": [
+      "Limited features in free tier",
+      "Interface less polished than competitors",
+      "AI suggestions need improvement",
+      "Smaller user community"
+    ],
+    "benchmarks": {
+      "speed": 8,
+      "accuracy": 7,
+      "integration": 8,
+      "ease_of_use": 8,
+      "value": 8
+    },
+    "affiliate_link": "https://www.socialchamp.com",
+    "category": "Social Media",
+    "tags": [
+      "social media",
+      "multi-platform",
+      "ai content",
+      "freemium"
+    ],
+    "rating": 4.4,
+    "review_count": 110
+  },
+  {
+    "id": "sendible",
+    "name": "Sendible",
+    "slug": "sendible",
+    "logo": "/images/tools/sendible-logo.svg",
+    "description": "Agency-focused social media tool with white-label options and comprehensive publishing capabilities.",
+    "overview": {
+      "description": "Sendible is an agency-focused social media tool with white-label options and comprehensive publishing capabilities.",
+      "category": "Social Media",
+      "developer": "Sendible",
+      "website": "https://www.sendible.com",
+      "integrations": [
+        "Facebook",
+        "Instagram",
+        "Twitter",
+        "LinkedIn",
+        "TikTok",
+        "YouTube"
+      ],
+      "use_cases": [
+        "Agency client management",
+        "White-label solutions",
+        "Multi-platform publishing",
+        "Client approval workflows",
+        "Custom branding"
+      ]
+    },
+    "features": [
+      "White-label dashboard for agencies",
+      "Multi-platform publishing including TikTok",
+      "Client management and approval workflows",
+      "Custom branding options",
+      "Advanced reporting and analytics"
+    ],
+    "pricing": [
+      {
+        "tier": "Creator",
+        "price_per_month": 29,
+        "billing_period": "month",
+        "features": [
+          "Multi-platform publishing",
+          "Basic analytics",
+          "Team collaboration"
+        ],
+        "description": "For creators and small teams",
+        "popular": true
+      },
+      {
+        "tier": "Enterprise",
+        "price_per_month": "Custom",
+        "billing_period": "month",
+        "features": [
+          "Advanced features",
+          "Priority support",
+          "Custom solutions"
+        ],
+        "description": "Enterprise-grade social media",
+        "popular": false
+      }
+    ],
+    "pros": [
+      "White-label dashboard for agencies",
+      "TikTok integration available",
+      "Client management and approval workflows",
+      "Custom branding options",
+      "Comprehensive reporting and analytics"
+    ],
+    "cons": [
+      "No free tier available",
+      "Interface can be overwhelming",
+      "Limited content creation tools",
+      "Higher learning curve for beginners"
+    ],
+    "benchmarks": {
+      "speed": 8,
+      "accuracy": 8,
+      "integration": 8,
+      "ease_of_use": 7,
+      "value": 7
+    },
+    "affiliate_link": "https://www.sendible.com",
+    "category": "Social Media",
+    "tags": [
+      "social media",
+      "agency tools",
+      "white-label",
+      "client management"
+    ],
+    "rating": 4.5,
+    "review_count": 130
+  },
+  {
+    "id": "contentstudio",
+    "name": "ContentStudio",
+    "slug": "contentstudio",
+    "logo": "/images/tools/contentstudio-logo.svg",
+    "description": "Content marketing-focused social media tool with content curation and automation features.",
+    "overview": {
+      "description": "ContentStudio is a content marketing-focused social media tool with content curation and automation features.",
+      "category": "Social Media",
+      "developer": "ContentStudio",
+      "website": "https://contentstudio.io",
+      "integrations": [
+        "Facebook",
+        "Instagram",
+        "Twitter",
+        "LinkedIn",
+        "Pinterest"
+      ],
+      "use_cases": [
+        "Content discovery and curation",
+        "Multi-platform scheduling",
+        "Content automation",
+        "Performance tracking",
+        "Team collaboration"
+      ]
+    },
+    "features": [
+      "Content discovery and curation",
+      "Multi-platform scheduling",
+      "Content automation workflows",
+      "Analytics and performance tracking",
+      "Team collaboration features"
+    ],
+    "pricing": [
+      {
+        "tier": "Starter",
+        "price_per_month": 25,
+        "billing_period": "month",
+        "features": [
+          "Multi-platform scheduling",
+          "Content curation",
+          "Basic analytics"
+        ],
+        "description": "Essential content management",
+        "popular": true
+      },
+      {
+        "tier": "Enterprise",
+        "price_per_month": "Custom",
+        "billing_period": "month",
+        "features": [
+          "Advanced features",
+          "Priority support",
+          "Custom solutions"
+        ],
+        "description": "Enterprise-grade content management",
+        "popular": false
+      }
+    ],
+    "pros": [
+      "Content discovery and curation features",
+      "Automation workflows available",
+      "Competitive pricing at $25/month",
+      "Multi-platform scheduling",
+      "Good analytics and performance tracking"
+    ],
+    "cons": [
+      "No free tier available",
+      "Content curation quality varies",
+      "Limited team collaboration features",
+      "Fewer integrations than competitors"
+    ],
+    "benchmarks": {
+      "speed": 8,
+      "accuracy": 7,
+      "integration": 7,
+      "ease_of_use": 8,
+      "value": 8
+    },
+    "affiliate_link": "https://contentstudio.io",
+    "category": "Social Media",
+    "tags": [
+      "social media",
+      "content curation",
+      "automation",
+      "content marketing"
+    ],
+    "rating": 4.3,
+    "review_count": 100
   }
 ]
