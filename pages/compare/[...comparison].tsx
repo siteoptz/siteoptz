@@ -459,7 +459,7 @@ export const getStaticPaths: GetStaticPaths = async () => {
       }
     });
 
-    const paths = [];
+    const paths: { params: { comparison: string[] } }[] = [];
     const slugArray = Array.from(toolSlugs.values());
     
     // Only generate top 5 most popular comparison pages to reduce build size
