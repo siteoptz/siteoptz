@@ -59,7 +59,7 @@ interface ReviewPageProps {
 }
 
 export default function ReviewPage({ tool, pageTitle, slug, relatedTools, relatedComparisons, hasSEOVersion, seoData }: ReviewPageProps) {
-  const [activeTab, setActiveTab] = useState<'overview' | 'features' | 'pricing' | 'pros-cons'>('overview');
+  const [activeTab, setActiveTab] = useState<'overview' | 'features' | 'pricing' | 'use-cases' | 'pros-cons' | 'faq'>('overview');
 
   // If we have a SEO-optimized version, use it instead
   if (hasSEOVersion && seoData && hasSEOComponent(slug)) {
@@ -381,9 +381,11 @@ export default function ReviewPage({ tool, pageTitle, slug, relatedTools, relate
             <nav className="flex space-x-8">
               {[
                 { key: 'overview', label: 'Overview' },
-                { key: 'features', label: 'Features' },
-                { key: 'pricing', label: 'Pricing' },
-                { key: 'pros-cons', label: 'Pros & Cons' }
+                { key: 'features', label: 'Key Features' },
+                { key: 'pricing', label: 'Pricing Plans' },
+                { key: 'use-cases', label: 'Use Cases' },
+                { key: 'pros-cons', label: 'Pros & Cons' },
+                { key: 'faq', label: 'FAQ' }
               ].map((tab) => (
                 <button
                   key={tab.key}
@@ -570,6 +572,76 @@ export default function ReviewPage({ tool, pageTitle, slug, relatedTools, relate
               </div>
             )}
 
+            {activeTab === 'use-cases' && (
+              <div>
+                <h2 className="text-3xl font-bold text-white mb-8">{tool.tool_name} Use Cases</h2>
+                <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                  {((tool as any).overview?.use_cases || (tool as any).use_cases || []).map((useCase: string, index: number) => (
+                    <div key={index} className="bg-black border border-gray-800 p-6 rounded-xl">
+                      <div className="flex items-start">
+                        <svg className="w-6 h-6 text-purple-400 mt-1 mr-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
+                        </svg>
+                        <div>
+                          <h3 className="text-lg font-semibold text-white mb-2">{useCase}</h3>
+                          <p className="text-gray-400 text-sm">Perfect for businesses looking to implement {useCase.toLowerCase()} with {tool.tool_name}.</p>
+                        </div>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+                
+                {/* Additional use case information */}
+                <div className="mt-12 bg-black border border-gray-800 p-8 rounded-xl">
+                  <h3 className="text-2xl font-bold text-cyan-400 mb-6">Who Should Use {tool.tool_name}?</h3>
+                  <div className="grid md:grid-cols-2 gap-6">
+                    <div>
+                      <h4 className="text-lg font-semibold text-white mb-3">Ideal For:</h4>
+                      <ul className="space-y-2">
+                        <li className="flex items-start">
+                          <span className="text-cyan-400 mr-2">•</span>
+                          <span className="text-gray-300">Marketing teams and agencies</span>
+                        </li>
+                        <li className="flex items-start">
+                          <span className="text-cyan-400 mr-2">•</span>
+                          <span className="text-gray-300">Content creators and influencers</span>
+                        </li>
+                        <li className="flex items-start">
+                          <span className="text-cyan-400 mr-2">•</span>
+                          <span className="text-gray-300">Small to enterprise businesses</span>
+                        </li>
+                        <li className="flex items-start">
+                          <span className="text-cyan-400 mr-2">•</span>
+                          <span className="text-gray-300">E-commerce and retail brands</span>
+                        </li>
+                      </ul>
+                    </div>
+                    <div>
+                      <h4 className="text-lg font-semibold text-white mb-3">Best Scenarios:</h4>
+                      <ul className="space-y-2">
+                        <li className="flex items-start">
+                          <span className="text-green-400 mr-2">✓</span>
+                          <span className="text-gray-300">Managing multiple social media accounts</span>
+                        </li>
+                        <li className="flex items-start">
+                          <span className="text-green-400 mr-2">✓</span>
+                          <span className="text-gray-300">Streamlining content workflows</span>
+                        </li>
+                        <li className="flex items-start">
+                          <span className="text-green-400 mr-2">✓</span>
+                          <span className="text-gray-300">Improving team collaboration</span>
+                        </li>
+                        <li className="flex items-start">
+                          <span className="text-green-400 mr-2">✓</span>
+                          <span className="text-gray-300">Scaling social media operations</span>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            )}
+
             {activeTab === 'pros-cons' && (
               <div>
                 <h2 className="text-3xl font-bold text-white mb-8">{tool.tool_name} Pros and Cons</h2>
@@ -604,20 +676,23 @@ export default function ReviewPage({ tool, pageTitle, slug, relatedTools, relate
                 </div>
               </div>
             )}
+
+            {activeTab === 'faq' && (
+              <div>
+                <h2 className="text-3xl font-bold text-white mb-8">Frequently Asked Questions about {tool.tool_name}</h2>
+                <div className="space-y-6">
+                  {sampleFaqs.map((faq, index) => (
+                    <div key={index} className="bg-black border border-gray-800 p-6 rounded-xl">
+                      <h3 className="text-lg font-semibold text-cyan-400 mb-3">{faq.question}</h3>
+                      <p className="text-gray-300">{faq.answer}</p>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            )}
           </div>
         </section>
 
-        {/* FAQ Section */}
-        <section className="py-16 relative z-10">
-          <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="text-center mb-12">
-              <h2 className="text-3xl font-bold text-white mb-4">Frequently Asked Questions</h2>
-              <p className="text-lg text-gray-300">Get answers to common questions about {tool.tool_name}</p>
-            </div>
-            
-            <FAQSection faqs={sampleFaqs} />
-          </div>
-        </section>
 
         {/* Related Comparisons */}
         <section className="py-16 relative z-10">
