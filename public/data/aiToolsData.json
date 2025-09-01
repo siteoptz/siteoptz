@@ -10974,11 +10974,11 @@
         ]
       },
       {
-        "plan": "Business", 
+        "plan": "Business",
         "price_per_month": 399,
         "features": [
           "300 Content Inventory Pages",
-          "50 monthly Keyword Discoveries", 
+          "50 monthly Keyword Discoveries",
           "20 monthly Content Reports",
           "Dedicated Account Manager",
           "Priority support"
@@ -17654,5 +17654,67 @@
       "description": "Gemini 2.5 - AI tool",
       "category": "Image Generation"
     }
+  },
+  {
+    "id": "spyfu",
+    "name": "SpyFu",
+    "slug": "spyfu",
+    "logo": "/images/tools/spyfu-logo.svg",
+    "meta": {
+      "title": "SpyFu Review, Pricing, Features & Alternatives [2025]",
+      "description": "Comprehensive review of SpyFu. Competitive intelligence tool for PPC and SEO analysis. Compare features, pricing, and alternatives."
+    },
+    "overview": {
+      "developer": "SpyFu",
+      "release_year": 2006,
+      "description": "SpyFu is a competitive intelligence tool that provides insights into competitors' PPC and SEO strategies, helping businesses optimize their digital marketing campaigns.",
+      "category": "Paid Search"
+    },
+    "features": [
+      "Competitor keyword research and analysis",
+      "PPC ad copy and budget insights",
+      "SEO competitor analysis and backlink data",
+      "Historical keyword rankings and trends",
+      "Ad spend estimates and bidding strategies"
+    ],
+    "pros": [
+      "Comprehensive competitor analysis",
+      "Historical data going back years",
+      "User-friendly interface"
+    ],
+    "cons": [
+      "Limited international data",
+      "Estimates may not be 100% accurate"
+    ],
+    "pricing": [
+      {
+        "plan": "Basic",
+        "price_per_month": 39,
+        "features": [
+          "10,000 row search results",
+          "6 months data export",
+          "250 sales leads & domain contacts"
+        ]
+      },
+      {
+        "plan": "Professional",
+        "price_per_month": 79,
+        "features": [
+          "Unlimited search results",
+          "Unlimited data export",
+          "500 sales leads & domain contacts",
+          "API access"
+        ]
+      }
+    ],
+    "benchmarks": {
+      "speed": 8,
+      "accuracy": 7,
+      "integration": 8,
+      "ease_of_use": 9,
+      "value": 8
+    },
+    "rating": 4.3,
+    "review_count": 850
   }
 ]

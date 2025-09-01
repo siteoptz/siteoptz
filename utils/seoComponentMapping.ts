@@ -140,6 +140,7 @@ const seoComponents: Record<string, () => Promise<{ default: ComponentType<SEOCo
   'shortwave': () => import('../seo-optimization/production-components/ShortwaveReviewPage'),
   'speechify': () => import('../seo-optimization/production-components/SpeechifyReviewPage'),
   'speechmatics': () => import('../seo-optimization/production-components/SpeechmaticsReviewPage'),
+  'spyfu': () => import('../seo-optimization/production-components/SpyfuReviewPage'),
   'sprout-social': () => import('../seo-optimization/production-components/SproutSocialReviewPage'),
   'stability-ai-stable-diffusion': () => import('../seo-optimization/production-components/StabilityAiStableDiffusionReviewPage'),
   'stable-diffusion': () => import('../seo-optimization/production-components/StableDiffusionReviewPage'),
