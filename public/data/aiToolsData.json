@@ -17777,5 +17777,57 @@
     },
     "rating": 4.5,
     "review_count": 12500
+  },
+  {
+    "id": "google-ads-editor",
+    "name": "Google Ads Editor",
+    "slug": "google-ads-editor",
+    "logo": "/images/tools/google-ads-editor-logo.svg",
+    "meta": {
+      "title": "Google Ads Editor Review, Pricing, Features & Alternatives [2025]",
+      "description": "Comprehensive review of Google Ads Editor. Desktop application for bulk campaign management. Compare features, pricing, and alternatives."
+    },
+    "overview": {
+      "developer": "Google",
+      "release_year": 2006,
+      "description": "Google Ads Editor is a free desktop application that allows advertisers to make bulk changes to Google Ads campaigns offline, then upload changes when ready.",
+      "category": "Paid Search & PPC"
+    },
+    "features": [
+      "Bulk editing and campaign management",
+      "Offline campaign development and optimization",
+      "Advanced search and filter capabilities",
+      "Copy and move operations across accounts",
+      "Import and export functionality for large datasets"
+    ],
+    "pros": [
+      "Free desktop application",
+      "Efficient bulk editing capabilities",
+      "Offline functionality"
+    ],
+    "cons": [
+      "Desktop-only, no web version",
+      "Requires Google Ads account"
+    ],
+    "pricing": [
+      {
+        "plan": "Free",
+        "price_per_month": 0,
+        "features": [
+          "Full bulk editing capabilities",
+          "Offline campaign management",
+          "Unlimited account access"
+        ]
+      }
+    ],
+    "benchmarks": {
+      "speed": 9,
+      "accuracy": 10,
+      "integration": 9,
+      "ease_of_use": 8,
+      "value": 10
+    },
+    "rating": 4.6,
+    "review_count": 3200
   }
 ]

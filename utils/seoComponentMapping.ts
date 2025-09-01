@@ -69,6 +69,7 @@ const seoComponents: Record<string, () => Promise<{ default: ComponentType<SEOCo
   'github-copilot': () => import('../seo-optimization/production-components/GithubCopilotReviewPage'),
   'gong-io': () => import('../seo-optimization/production-components/GongIoReviewPage'),
   'google-ads': () => import('../seo-optimization/production-components/GoogleAdsReviewPage'),
+  'google-ads-editor': () => import('../seo-optimization/production-components/GoogleAdsEditorReviewPage'),
   'google-search': () => import('../seo-optimization/production-components/GoogleSearchReviewPage'),
   'grammarly': () => import('../seo-optimization/production-components/GrammarlyReviewPage'),
   'grok': () => import('../seo-optimization/production-components/GrokReviewPage'),
