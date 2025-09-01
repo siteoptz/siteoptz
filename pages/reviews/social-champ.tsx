@@ -345,7 +345,7 @@ export default function SocialChampReviewPage() {
                     </ul>
                     
                     <h3 className="text-xl font-semibold text-cyan-400 mb-6 mt-10">Platform Coverage Excellence</h3>
-                    <p className="text-gray-300 mb-6 leading-relaxed text-lg">Social Champ&apos;s standout feature is its extensive platform support, covering 11 major social networks including emerging platforms that many competitors haven't adopted yet. This forward-thinking approach positions users to reach audiences across both established and growing social communities.</p>
+                    <p className="text-gray-300 mb-6 leading-relaxed text-lg">Social Champ&apos;s standout feature is its extensive platform support, covering 11 major social networks including emerging platforms that many competitors haven&apos;t adopted yet. This forward-thinking approach positions users to reach audiences across both established and growing social communities.</p>
                     
                     <h3 className="text-xl font-semibold text-cyan-400 mb-6 mt-10">Performance Benchmarks</h3>
                     <p className="text-gray-300 mb-6 leading-relaxed text-lg">Our testing reveals Social Champ delivers solid performance across core functionalities. While the interface may feel less polished than premium competitors, the feature-to-price ratio provides excellent value for budget-conscious users and growing teams.</p>

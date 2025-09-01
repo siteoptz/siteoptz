@@ -419,7 +419,7 @@ export default function ContentStudioReviewPage() {
                     <p className="text-gray-300 mb-6 leading-relaxed text-lg">Software companies use ContentStudio to curate technology news, industry trends, and educational content relevant to their audience. Automation features help maintain consistent thought leadership while supporting lead generation efforts.</p>
                     
                     <p className="text-gray-300 mb-6 leading-relaxed text-lg"><strong className="text-white font-semibold">Digital Marketing Agencies:</strong></p>
-                    <p className="text-gray-300 mb-6 leading-relaxed text-lg">Marketing agencies leverage ContentStudio to manage content curation for multiple clients efficiently. The platform's organization features and automation capabilities allow agencies to scale content operations without proportional staff increases.</p>
+                    <p className="text-gray-300 mb-6 leading-relaxed text-lg">Marketing agencies leverage ContentStudio to manage content curation for multiple clients efficiently. The platform&apos;s organization features and automation capabilities allow agencies to scale content operations without proportional staff increases.</p>
                     
                     <h3 className="text-xl font-semibold text-cyan-400 mb-6 mt-10">Implementation Examples</h3>
                     

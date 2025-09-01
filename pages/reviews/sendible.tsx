@@ -416,7 +416,7 @@ export default function SendibleReviewPage() {
                     <h3 className="text-xl font-semibold text-cyan-400 mb-6 mt-10">Industry-Specific Applications</h3>
                     
                     <p className="text-gray-300 mb-6 leading-relaxed text-lg"><strong className="text-white font-semibold">Creative Agency Services:</strong></p>
-                    <p className="text-gray-300 mb-6 leading-relaxed text-lg">Creative agencies use Sendible to showcase visual content management capabilities to potential clients. The platform's content library features and collaborative tools support creative workflows while maintaining professional client presentation.</p>
+                    <p className="text-gray-300 mb-6 leading-relaxed text-lg">Creative agencies use Sendible to showcase visual content management capabilities to potential clients. The platform&apos;s content library features and collaborative tools support creative workflows while maintaining professional client presentation.</p>
                     
                     <p className="text-gray-300 mb-6 leading-relaxed text-lg"><strong className="text-white font-semibold">PR and Communications Firms:</strong></p>
                     <p className="text-gray-300 mb-6 leading-relaxed text-lg">PR firms leverage Sendible&apos;s monitoring and reporting capabilities to track brand mentions and campaign performance. Professional-grade analytics support client reporting requirements while social listening features aid crisis management.</p>
