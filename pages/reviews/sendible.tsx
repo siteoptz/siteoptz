@@ -360,7 +360,7 @@ export default function SendibleReviewPage() {
                 
                 <div className="prose prose-lg prose-invert max-w-none">
                   <div className="space-y-6">
-                    <p className="text-gray-300 mb-6 leading-relaxed text-lg">Understanding Sendible&apos;s agency-focused pricing structure is crucial for evaluating ROI and determining the optimal plan for your agency size. Our comprehensive analysis examines each tier's value proposition for professional service providers.</p>
+                    <p className="text-gray-300 mb-6 leading-relaxed text-lg">Understanding Sendible&apos;s agency-focused pricing structure is crucial for evaluating ROI and determining the optimal plan for your agency size. Our comprehensive analysis examines each tier&apos;s value proposition for professional service providers.</p>
                     
                     <h3 className="text-xl font-semibold text-cyan-400 mb-6 mt-10">Pricing Structure Overview</h3>
                     <p className="text-gray-300 mb-6 leading-relaxed text-lg">Sendible offers tiered pricing designed to scale with agency growth and client portfolio size:</p>

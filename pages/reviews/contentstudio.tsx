@@ -360,7 +360,7 @@ export default function ContentStudioReviewPage() {
                 
                 <div className="prose prose-lg prose-invert max-w-none">
                   <div className="space-y-6">
-                    <p className="text-gray-300 mb-6 leading-relaxed text-lg">Understanding ContentStudio&apos;s pricing structure is crucial for evaluating ROI in content marketing contexts. Our comprehensive analysis examines each tier's value proposition for content-focused marketing teams and strategies.</p>
+                    <p className="text-gray-300 mb-6 leading-relaxed text-lg">Understanding ContentStudio&apos;s pricing structure is crucial for evaluating ROI in content marketing contexts. Our comprehensive analysis examines each tier&apos;s value proposition for content-focused marketing teams and strategies.</p>
                     
                     <h3 className="text-xl font-semibold text-cyan-400 mb-6 mt-10">Pricing Structure Overview</h3>
                     <p className="text-gray-300 mb-6 leading-relaxed text-lg">ContentStudio offers tiered pricing designed to accommodate different content volume needs and team sizes:</p>
@@ -405,7 +405,7 @@ export default function ContentStudioReviewPage() {
                     <h3 className="text-xl font-semibold text-cyan-400 mb-6 mt-10">Primary Use Cases</h3>
                     
                     <p className="text-gray-300 mb-6 leading-relaxed text-lg"><strong className="text-white font-semibold">Content Marketing Team Operations:</strong></p>
-                    <p className="text-gray-300 mb-6 leading-relaxed text-lg">Content marketing teams use ContentStudio to automate content discovery and curation workflows. The platform's ability to identify trending topics and relevant content significantly reduces research time while maintaining consistent posting schedules across multiple platforms.</p>
+                    <p className="text-gray-300 mb-6 leading-relaxed text-lg">Content marketing teams use ContentStudio to automate content discovery and curation workflows. The platform&apos;s ability to identify trending topics and relevant content significantly reduces research time while maintaining consistent posting schedules across multiple platforms.</p>
                     
                     <p className="text-gray-300 mb-6 leading-relaxed text-lg"><strong className="text-white font-semibold">Blog-to-Social Automation:</strong></p>
                     <p className="text-gray-300 mb-6 leading-relaxed text-lg">Content creators leverage ContentStudio&apos;s RSS feed integration to automatically share blog posts and articles across social networks. This automation ensures consistent social media presence while driving traffic back to original content properties.</p>
