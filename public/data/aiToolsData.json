@@ -18253,5 +18253,363 @@
     "rating": 4.4,
     "review_count": 1250,
     "category": "Paid Search & PPC"
+  },
+  {
+    "id": "morningscore",
+    "name": "Morningscore",
+    "slug": "morningscore",
+    "logo": "/images/tools/morningscore-logo.svg",
+    "description": "Gamified SEO tool that measures organic traffic value in dollars and makes SEO engaging through XP-based missions and achievements.",
+    "overview": {
+      "description": "Morningscore is a gamified SEO tool that measures organic traffic value in dollars and makes SEO engaging through XP-based missions and achievements.",
+      "category": "SEO & Optimization",
+      "developer": "Morningscore",
+      "website": "https://morningscore.io",
+      "integrations": [
+        "Google Analytics",
+        "Google Search Console"
+      ],
+      "use_cases": [
+        "Keyword tracking with gamification elements",
+        "Internal links data analysis",
+        "AI-powered SEO insights",
+        "Competitor analysis dashboard",
+        "Dollar-value traffic measurements"
+      ]
+    },
+    "features": [
+      "Keyword tracking with gamification elements",
+      "Internal links data analysis",
+      "AI-powered SEO insights", 
+      "Competitor analysis dashboard",
+      "Dollar-value traffic measurements",
+      "XP-based missions and achievements",
+      "Organic traffic value measurement"
+    ],
+    "pricing": [
+      {
+        "tier": "Starter",
+        "price_per_month": 49,
+        "billing_period": "month",
+        "features": [
+          "Basic keyword tracking",
+          "SEO insights",
+          "Traffic value measurement"
+        ],
+        "description": "Essential SEO tracking",
+        "popular": false
+      },
+      {
+        "tier": "Enterprise",
+        "price_per_month": "Custom",
+        "billing_period": "month",
+        "features": [
+          "Advanced features",
+          "Priority support",
+          "Custom solutions"
+        ],
+        "description": "Enterprise-grade SEO",
+        "popular": false
+      }
+    ],
+    "pros": [
+      "Gamified approach makes SEO engaging",
+      "Dollar-value traffic measurements",
+      "AI-powered SEO insights",
+      "Easy-to-understand XP-based missions",
+      "Comprehensive competitor analysis"
+    ],
+    "cons": [
+      "No free tier available",
+      "Higher starting price at $49/month",
+      "Gamification may not appeal to all users",
+      "Smaller feature set compared to enterprise tools"
+    ],
+    "benchmarks": {
+      "speed": 8,
+      "accuracy": 8,
+      "integration": 7,
+      "ease_of_use": 9,
+      "value": 7
+    },
+    "affiliate_link": "https://morningscore.io",
+    "category": "SEO & Optimization",
+    "tags": [
+      "seo",
+      "keyword tracking",
+      "gamification",
+      "traffic analysis"
+    ],
+    "rating": 4.6,
+    "review_count": 150
+  },
+  {
+    "id": "se-ranking",
+    "name": "SE Ranking",
+    "slug": "se-ranking",
+    "logo": "/images/tools/se-ranking-logo.svg",
+    "description": "Comprehensive SEO platform offering keyword research, rank tracking, and site audits with flexible monitoring capabilities.",
+    "overview": {
+      "description": "SE Ranking is a comprehensive SEO platform offering keyword research, rank tracking, and site audits with flexible monitoring capabilities.",
+      "category": "SEO & Optimization",
+      "developer": "SE Ranking",
+      "website": "https://seranking.com",
+      "integrations": [
+        "Google Analytics",
+        "Google Search Console"
+      ],
+      "use_cases": [
+        "Position tracking and backlink monitoring",
+        "Website audits and technical SEO",
+        "Keyword research tools",
+        "Competitor analysis",
+        "White-label reporting"
+      ]
+    },
+    "features": [
+      "Position tracking and backlink monitoring",
+      "Website audits and technical SEO",
+      "Keyword research tools",
+      "Competitor analysis",
+      "White-label reporting",
+      "Flexible monitoring capabilities"
+    ],
+    "pricing": [
+      {
+        "tier": "Essential",
+        "price_per_month": 52,
+        "billing_period": "month",
+        "features": [
+          "Basic SEO tools",
+          "Keyword tracking",
+          "Site audits"
+        ],
+        "description": "Essential SEO features",
+        "popular": false
+      },
+      {
+        "tier": "Enterprise",
+        "price_per_month": "Custom",
+        "billing_period": "month",
+        "features": [
+          "Advanced features",
+          "Priority support",
+          "Custom solutions"
+        ],
+        "description": "Enterprise-grade SEO",
+        "popular": false
+      }
+    ],
+    "pros": [
+      "Comprehensive SEO toolkit in one platform",
+      "White-label reporting for agencies",
+      "Flexible monitoring capabilities",
+      "Technical SEO audit features",
+      "Competitive pricing for features offered"
+    ],
+    "cons": [
+      "No free tier available",
+      "Interface can be overwhelming for beginners",
+      "Limited automation features",
+      "Customer support response times vary"
+    ],
+    "benchmarks": {
+      "speed": 8,
+      "accuracy": 8,
+      "integration": 7,
+      "ease_of_use": 7,
+      "value": 8
+    },
+    "affiliate_link": "https://seranking.com",
+    "category": "SEO & Optimization",
+    "tags": [
+      "seo",
+      "keyword research",
+      "rank tracking",
+      "site audit"
+    ],
+    "rating": 4.5,
+    "review_count": 200
+  },
+  {
+    "id": "mangools",
+    "name": "Mangools",
+    "slug": "mangools",
+    "logo": "/images/tools/mangools-logo.svg",
+    "description": "Beginner-friendly SEO toolkit with five integrated tools that simplify SEO without compromising functionality.",
+    "overview": {
+      "description": "Mangools is a beginner-friendly SEO toolkit with five integrated tools that simplify SEO without compromising functionality.",
+      "category": "SEO & Optimization",
+      "developer": "Mangools",
+      "website": "https://mangools.com",
+      "integrations": [
+        "KWFinder",
+        "SERPChecker",
+        "SERPWatcher",
+        "LinkMiner",
+        "SiteProfiler"
+      ],
+      "use_cases": [
+        "KWFinder for keyword research",
+        "SERPChecker for SERP analysis", 
+        "SERPWatcher for rank tracking",
+        "LinkMiner for backlink analysis",
+        "SiteProfiler for website analysis"
+      ]
+    },
+    "features": [
+      "KWFinder for keyword research",
+      "SERPChecker for SERP analysis", 
+      "SERPWatcher for rank tracking",
+      "LinkMiner for backlink analysis",
+      "SiteProfiler for website analysis",
+      "Beginner-friendly interface",
+      "Five integrated SEO tools"
+    ],
+    "pricing": [
+      {
+        "tier": "Basic",
+        "price_per_month": 30,
+        "billing_period": "month",
+        "features": [
+          "Basic keyword research",
+          "SERP analysis",
+          "Rank tracking"
+        ],
+        "description": "Essential SEO toolkit",
+        "popular": true
+      },
+      {
+        "tier": "Enterprise",
+        "price_per_month": "Custom",
+        "billing_period": "month",
+        "features": [
+          "Advanced features",
+          "Priority support",
+          "Custom solutions"
+        ],
+        "description": "Enterprise-grade SEO",
+        "popular": false
+      }
+    ],
+    "pros": [
+      "Beginner-friendly interface design",
+      "Five integrated tools in one suite",
+      "Affordable pricing at $30/month",
+      "Excellent keyword research capabilities",
+      "Clean, intuitive user experience"
+    ],
+    "cons": [
+      "Limited advanced features for experts",
+      "No free tier available",
+      "Smaller database compared to enterprise tools",
+      "Less comprehensive technical SEO features"
+    ],
+    "benchmarks": {
+      "speed": 8,
+      "accuracy": 8,
+      "integration": 7,
+      "ease_of_use": 9,
+      "value": 8
+    },
+    "affiliate_link": "https://mangools.com",
+    "category": "SEO & Optimization",
+    "tags": [
+      "seo",
+      "keyword research",
+      "serp analysis",
+      "rank tracking"
+    ],
+    "rating": 4.4,
+    "review_count": 180
+  },
+  {
+    "id": "serpstat",
+    "name": "Serpstat",
+    "slug": "serpstat",
+    "logo": "/images/tools/serpstat-logo.svg",
+    "description": "SEO platform specialized in handling bulk data queries and mass keyword tracking for large-scale SEO operations.",
+    "overview": {
+      "description": "Serpstat is an SEO platform specialized in handling bulk data queries and mass keyword tracking for large-scale SEO operations.",
+      "category": "SEO & Optimization",
+      "developer": "Serpstat",
+      "website": "https://serpstat.com",
+      "integrations": [
+        "Google Analytics",
+        "Google Search Console"
+      ],
+      "use_cases": [
+        "Mass keyword tracking capabilities",
+        "Bulk domain comparisons",
+        "Audit batching for multiple sites",
+        "Keyword research and clustering",
+        "Competitor analysis"
+      ]
+    },
+    "features": [
+      "Mass keyword tracking capabilities",
+      "Bulk domain comparisons",
+      "Audit batching for multiple sites",
+      "Keyword research and clustering",
+      "Competitor analysis",
+      "Large-scale SEO operations",
+      "Bulk data handling"
+    ],
+    "pricing": [
+      {
+        "tier": "Lite",
+        "price_per_month": 69,
+        "billing_period": "month",
+        "features": [
+          "Basic keyword tracking",
+          "Site audit",
+          "Competitor analysis"
+        ],
+        "description": "Essential SEO tracking",
+        "popular": false
+      },
+      {
+        "tier": "Enterprise",
+        "price_per_month": "Custom",
+        "billing_period": "month",
+        "features": [
+          "Advanced features",
+          "Priority support",
+          "Custom solutions"
+        ],
+        "description": "Enterprise-grade SEO",
+        "popular": false
+      }
+    ],
+    "pros": [
+      "Excellent for bulk data operations",
+      "Mass keyword tracking capabilities",
+      "Comprehensive competitor analysis",
+      "Audit batching for multiple sites",
+      "Strong keyword clustering features"
+    ],
+    "cons": [
+      "Higher pricing starting at $69/month",
+      "No free tier available",
+      "Interface less intuitive than competitors",
+      "Learning curve for advanced features"
+    ],
+    "benchmarks": {
+      "speed": 8,
+      "accuracy": 8,
+      "integration": 7,
+      "ease_of_use": 6,
+      "value": 7
+    },
+    "affiliate_link": "https://serpstat.com",
+    "category": "SEO & Optimization",
+    "tags": [
+      "seo",
+      "keyword research",
+      "bulk operations",
+      "competitor analysis"
+    ],
+    "rating": 4.3,
+    "review_count": 120
   }
 ]
