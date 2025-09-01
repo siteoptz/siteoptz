@@ -225,16 +225,16 @@ export default function SocialPilotReviewPage() {
                 {/* Hero Text Content */}
                 <div className="prose prose-lg prose-invert max-w-none mb-10">
                   <div className="text-xl text-blue-100 leading-relaxed space-y-4">
-                    <p className="mb-4">Looking for a comprehensive SocialPilot review? You've come to the right place. SocialPilot has emerged as a leading social media management solution, helping thousands of agencies and businesses streamline their social media workflows and boost client results.</p>
-                    <p className="mb-4">SocialPilot is a comprehensive social media management tool supporting 10+ platforms with team collaboration and white-label solutions. Whether you&apos;re a digital agency, marketing team, or enterprise business, understanding SocialPilot's capabilities is crucial for making an informed decision.</p>
-                    <p className="mb-4">In this detailed SocialPilot review, we'll dive deep into SocialPilot's key features, pricing structure, real-world use cases, and how it stacks up against competitors in the social media management space. Our expert analysis covers everything from white-label capabilities to bulk scheduling, giving you the insights needed to determine if SocialPilot is the right fit for your agency requirements.</p>
+                    <p className="mb-4">Looking for a comprehensive SocialPilot review? You&apos;ve come to the right place. SocialPilot has emerged as a leading social media management solution, helping thousands of agencies and businesses streamline their social media workflows and boost client results.</p>
+                    <p className="mb-4">SocialPilot is a comprehensive social media management tool supporting 10+ platforms with team collaboration and white-label solutions. Whether you&apos;re a digital agency, marketing team, or enterprise business, understanding SocialPilot&apos;s capabilities is crucial for making an informed decision.</p>
+                    <p className="mb-4">In this detailed SocialPilot review, we'll dive deep into SocialPilot&apos;s key features, pricing structure, real-world use cases, and how it stacks up against competitors in the social media management space. Our expert analysis covers everything from white-label capabilities to bulk scheduling, giving you the insights needed to determine if SocialPilot is the right fit for your agency requirements.</p>
                     <p className="mb-4">What you'll discover:
 - Comprehensive feature breakdown and agency capabilities
 - Detailed pricing analysis and white-label value assessment  
 - Real-world agency use cases and implementation examples
 - Honest pros and cons from actual users
 - Side-by-side comparisons with top alternatives</p>
-                    <p className="mb-4">Let's explore why SocialPilot might be the agency-focused social media management solution you've been searching for.</p>
+                    <p className="mb-4">Let's explore why SocialPilot might be the agency-focused social media management solution you&apos;ve been searching for.</p>
                   </div>
                 </div>
 
@@ -427,7 +427,7 @@ export default function SocialPilotReviewPage() {
                     <p className="text-gray-300 mb-6 leading-relaxed text-lg"><strong className="text-white font-semibold">Case Study 2 - E-commerce Brand:</strong></p>
                     <p className="text-gray-300 mb-6 leading-relaxed text-lg">A multi-brand retail company deployed SocialPilot across their marketing team. Key outcomes included 45% increase in social media leads and 30% reduction in content creation costs.</p>
                     
-                    <p className="text-gray-300 mb-6 leading-relaxed text-lg">These real-world applications demonstrate SocialPilot's effectiveness for agency-focused social media management.</p>
+                    <p className="text-gray-300 mb-6 leading-relaxed text-lg">These real-world applications demonstrate SocialPilot&apos;s effectiveness for agency-focused social media management.</p>
                   </div>
                 </div>
               </div>
