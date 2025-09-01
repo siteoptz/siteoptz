@@ -1,9 +1,9 @@
-import React from 'react';
-import Head from 'next/head';
-import Image from 'next/image';
-import Link from 'next/link';
-import ToolLogo from '../../components/ToolLogo';
-import FAQSection from '../../components/comparison/FAQSection';
+import React from &apos;react&apos;;
+import Head from &apos;next/head&apos;;
+import Image from &apos;next/image&apos;;
+import Link from &apos;next/link&apos;;
+import ToolLogo from &apos;../../components/ToolLogo&apos;;
+import FAQSection from &apos;../../components/comparison/FAQSection&apos;;
 
 export default function LoomlyReviewPage() {
   // Schema markup for SEO
@@ -209,7 +209,7 @@ export default function LoomlyReviewPage() {
                         {[...Array(5)].map((_, i) => (
                           <svg
                             key={i}
-                            className={`w-5 h-5 ${i < Math.floor(4.6) ? 'text-yellow-400' : 'text-gray-300'}`}
+                            className={`w-5 h-5 ${i < Math.floor(4.6) ? &apos;text-yellow-400&apos; : &apos;text-gray-300&apos;}`}
                             fill="currentColor"
                             viewBox="0 0 20 20"
                           >
@@ -225,16 +225,16 @@ export default function LoomlyReviewPage() {
                 {/* Hero Text Content */}
                 <div className="prose prose-lg prose-invert max-w-none mb-10">
                   <div className="text-xl text-blue-100 leading-relaxed space-y-4">
-                    <p className="mb-4">Looking for a comprehensive Loomly review? You've come to the right place. Loomly has emerged as a leading social media management solution, helping thousands of businesses streamline their content workflows and boost social media productivity.</p>
-                    <p className="mb-4">Loomly is a collaborative social media platform with content calendars, optimization tools, and team workflows for enhanced productivity. Whether you're a marketing agency, content creator, or enterprise team, understanding Loomly's capabilities is crucial for making an informed decision.</p>
-                    <p className="mb-4">In this detailed Loomly review, we'll dive deep into Loomly's key features, pricing structure, real-world use cases, and how it stacks up against competitors in the social media management space. Our expert analysis covers everything from performance benchmarks to user experience, giving you the insights needed to determine if Loomly is the right fit for your specific requirements.</p>
-                    <p className="mb-4">What you'll discover:
+                    <p className="mb-4">Looking for a comprehensive Loomly review? You&apos;ve come to the right place. Loomly has emerged as a leading social media management solution, helping thousands of businesses streamline their content workflows and boost social media productivity.</p>
+                    <p className="mb-4">Loomly is a collaborative social media platform with content calendars, optimization tools, and team workflows for enhanced productivity. Whether you&apos;re a marketing agency, content creator, or enterprise team, understanding Loomly&apos;s capabilities is crucial for making an informed decision.</p>
+                    <p className="mb-4">In this detailed Loomly review, we&apos;ll dive deep into Loomly&apos;s key features, pricing structure, real-world use cases, and how it stacks up against competitors in the social media management space. Our expert analysis covers everything from performance benchmarks to user experience, giving you the insights needed to determine if Loomly is the right fit for your specific requirements.</p>
+                    <p className="mb-4">What you&apos;ll discover:
 - Comprehensive feature breakdown and capabilities
 - Detailed pricing analysis and value assessment  
 - Real-world use cases and implementation examples
 - Honest pros and cons from actual users
 - Side-by-side comparisons with top alternatives</p>
-                    <p className="mb-4">Let's explore why Loomly might be the social media management solution you've been searching for.</p>
+                    <p className="mb-4">Let&apos;s explore why Loomly might be the social media management solution you&apos;ve been searching for.</p>
                   </div>
                 </div>
 
@@ -346,7 +346,7 @@ export default function LoomlyReviewPage() {
                     
                     <h3 className="text-xl font-semibold text-cyan-400 mb-6 mt-10">Performance Benchmarks</h3>
                     <p className="text-gray-300 mb-6 leading-relaxed text-lg">Our testing reveals Loomly consistently delivers reliable performance across different social media workflows. Speed, reliability, and user experience scores place it among the top social media management solutions available today.</p>
-                    <p className="text-gray-300 mb-6 leading-relaxed text-lg">The feature set positions Loomly as a versatile solution suitable for various team sizes and industries. Whether you're looking for basic scheduling or advanced collaboration, Loomly provides the tools needed to succeed.</p>
+                    <p className="text-gray-300 mb-6 leading-relaxed text-lg">The feature set positions Loomly as a versatile solution suitable for various team sizes and industries. Whether you&apos;re looking for basic scheduling or advanced collaboration, Loomly provides the tools needed to succeed.</p>
                   </div>
                 </div>
               </div>
@@ -427,7 +427,7 @@ export default function LoomlyReviewPage() {
                     <p className="text-gray-300 mb-6 leading-relaxed text-lg"><strong className="text-white font-semibold">Case Study 2 - E-commerce Brand:</strong></p>
                     <p className="text-gray-300 mb-6 leading-relaxed text-lg">A mid-size retail brand deployed Loomly across their social media team. Key outcomes included 40% increase in social media engagement and 25% reduction in content creation time.</p>
                     
-                    <p className="text-gray-300 mb-6 leading-relaxed text-lg">These real-world applications demonstrate Loomly's versatility and potential impact across various business contexts.</p>
+                    <p className="text-gray-300 mb-6 leading-relaxed text-lg">These real-world applications demonstrate Loomly&apos;s versatility and potential impact across various business contexts.</p>
                   </div>
                 </div>
               </div>
@@ -464,7 +464,7 @@ export default function LoomlyReviewPage() {
                     </ul>
                     
                     <p className="text-gray-300 mb-6 leading-relaxed text-lg"><strong className="text-white font-semibold">Considerations:</strong></p>
-                    <p className="text-gray-300 mb-6 leading-relaxed text-lg">While Loomly offers excellent value, it's important to ensure your team size and collaboration needs align with its strengths. Solo creators or very small teams might find the pricing challenging.</p>
+                    <p className="text-gray-300 mb-6 leading-relaxed text-lg">While Loomly offers excellent value, it&apos;s important to ensure your team size and collaboration needs align with its strengths. Solo creators or very small teams might find the pricing challenging.</p>
                     
                     <h3 className="text-xl font-semibold text-cyan-400 mb-6 mt-10">Overall Assessment</h3>
                     <p className="text-gray-300 mb-6 leading-relaxed text-lg">Loomly represents a strong choice in the social media management category, with advantages typically outweighing limitations for most use cases. The combination of powerful features, excellent user experience, and team collaboration tools makes it a top contender for agencies and marketing teams.</p>
