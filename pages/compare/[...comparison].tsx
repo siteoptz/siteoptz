@@ -462,16 +462,17 @@ export const getStaticPaths: GetStaticPaths = async () => {
     const paths = [];
     const slugArray = Array.from(toolSlugs.values());
     
-    // Generate tool comparison combinations
-    for (let i = 0; i < slugArray.length; i++) {
-      for (let j = i + 1; j < slugArray.length; j++) {
-        const slug1 = slugArray[i];
-        const slug2 = slugArray[j];
-        
-        // Ensure both slugs are valid
-        if (slug1 && slug2 && 
-            typeof slug1 === 'string' && typeof slug2 === 'string' &&
-            slug1.trim() !== '' && slug2.trim() !== '') {
+    // Only generate top 5 most popular comparison pages to reduce build size
+    const popularComparisons = [
+      ['chatgpt', 'claude'],
+      ['chatgpt', 'jasper-ai'],
+      ['claude', 'copy-ai'],
+      ['midjourney', 'dall-e'],
+      ['grammarly', 'jasper-ai']
+    ];
+    
+    popularComparisons.forEach(([slug1, slug2]) => {
+      if (slug1 && slug2) {
           
           // Add both orderings for each pair with catch-all format
           paths.push({
@@ -486,8 +487,7 @@ export const getStaticPaths: GetStaticPaths = async () => {
             }
           });
         }
-      }
-    }
+    });
 
     console.log(`Generated ${paths.length} comparison paths`);
     

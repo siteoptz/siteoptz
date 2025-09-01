@@ -725,21 +725,22 @@ export default function ReviewPage({ tool, pageTitle, slug, relatedTools, relate
 }
 
 export const getStaticPaths: GetStaticPaths = async () => {
-  const fs = require('fs');
-  const path = require('path');
-  const { loadUnifiedToolsData } = require('../../utils/unifiedDataAdapter');
+  // Only pre-generate top 5 most popular tool reviews to reduce build size under 50MB
+  const popularToolSlugs = [
+    'chatgpt',
+    'claude', 
+    'midjourney',
+    'jasper-ai',
+    'copy-ai'
+  ];
   
-  const tools = loadUnifiedToolsData(fs, path);
-  
-  const paths = tools.map((tool: any) => ({
-    params: {
-      toolName: tool.slug || tool.tool_name.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-+|-+$/g, '')
-    }
+  const paths = popularToolSlugs.map((toolName) => ({
+    params: { toolName }
   }));
 
   return {
     paths,
-    fallback: false
+    fallback: 'blocking'
   };
 };
 

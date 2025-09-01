@@ -328,16 +328,22 @@ export default function ToolPage({ tool, relatedTools, faqs, allTools }: ToolPag
 }
 
 export const getStaticPaths: GetStaticPaths = async () => {
-  const aiToolsPath = path.join(process.cwd(), 'public/data/aiToolsData.json');
-  const tools = JSON.parse(fs.readFileSync(aiToolsPath, 'utf8'));
+  // Only pre-generate top 5 most popular tools to reduce build size under 50MB
+  const popularToolSlugs = [
+    'chatgpt',
+    'claude', 
+    'midjourney',
+    'jasper-ai',
+    'copy-ai'
+  ];
   
-  const paths = tools.map((tool: Tool) => ({
-    params: { slug: tool.slug }
+  const paths = popularToolSlugs.map((slug) => ({
+    params: { slug }
   }));
   
   return {
     paths,
-    fallback: true
+    fallback: 'blocking'
   };
 };
 
