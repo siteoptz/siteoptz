@@ -23,7 +23,8 @@ const hierarchicalCategories = [
       { name: 'Paid Search', value: 'Paid Search & PPC' },
       { name: 'Social Media', value: 'Social Media' },
       { name: 'SEO & Optimization', value: 'SEO & Optimization' },
-      { name: 'Email Marketing', value: 'Email Marketing' }
+      { name: 'Email Marketing', value: 'Email Marketing' },
+      { name: 'E-Commerce', value: 'E-commerce' }
     ]
   },
   {
@@ -40,7 +41,9 @@ const hierarchicalCategories = [
     subcategories: [
       { name: 'Productivity', value: 'Productivity' },
       { name: 'Research & Education', value: 'Research & Education' },
-      { name: 'Data Analysis', value: 'Data Analysis' }
+      { name: 'Data Analysis', value: 'Data Analysis' },
+      { name: 'Lead Generation', value: 'Lead Generation' },
+      { name: 'Finance AI', value: 'Finance AI' }
     ]
   }
 ];

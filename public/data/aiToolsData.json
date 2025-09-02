@@ -2066,7 +2066,7 @@
       "developer": "Apollo",
       "release_year": 2022,
       "description": "Sales intelligence and engagement platform helping users find and engage potential leads using B2B data, with tools for automated outreach and pipeline management.",
-      "category": "AI Sales",
+      "category": "Lead Generation",
       "website": "https://apollo.io"
     },
     "features": [
@@ -2182,7 +2182,7 @@
       "Integration complexity"
     ],
     "rating": 4,
-    "category": "AI Sales",
+    "category": "Lead Generation",
     "website": "https://apolloio.com",
     "benchmarks": {
       "speed": 8,
@@ -3951,7 +3951,7 @@
       "developer": "Clay",
       "release_year": 2022,
       "description": "Platform to enhance outbound marketing through data enrichment, offering AI to automate personalized outreach and research.",
-      "category": "AI Sales",
+      "category": "Lead Generation",
       "website": "https://clay.com"
     },
     "features": [
@@ -6185,7 +6185,7 @@
       "developer": "DubVid",
       "release_year": 2022,
       "description": "Translate Videos in just 1-Click with AI. Break language barriers with Translations, Voice Cloning, and Lip-Syncing.",
-      "category": "AI Translator",
+      "category": "Best Voice AI Tools",
       "website": "https://dubvid.com"
     },
     "features": [
@@ -6259,7 +6259,7 @@
       "developer": "Echofox",
       "release_year": 2022,
       "description": "24/7 AI sales robot converting visitors to buyers, resolving 70% of customer questions instantly",
-      "category": "AI Sales",
+      "category": "Lead Generation",
       "website": "https://echofox.ai"
     },
     "features": [
@@ -6716,7 +6716,7 @@
       "developer": "EnterpriseDNA",
       "release_year": 2022,
       "description": "Learn how to use AI. Future-Proof Your Career Master Data Skills Upskill in AI. Join 220,000+ learning the latest data and AI skills.",
-      "category": "AI Education",
+      "category": "Research & Education",
       "website": "https://enterprisedna.co"
     },
     "features": [
@@ -10041,7 +10041,7 @@
       "developer": "Interview Study",
       "release_year": 2022,
       "description": "Turn your job interview into a job offer using AI. Offers over 1700 real-world interview questions with AI feedback and insights.",
-      "category": "AI Education",
+      "category": "Research & Education",
       "website": "https://interview.study"
     },
     "features": [
@@ -11838,7 +11838,7 @@
       "developer": "Lovo AI",
       "release_year": 2022,
       "description": "Comprehensive voice generation platform with emotion-rich text-to-speech capabilities.",
-      "category": "Voice AI",
+      "category": "Best Voice AI Tools",
       "website": "https://lovo.ai"
     },
     "features": [
@@ -13997,7 +13997,7 @@
       "developer": "Murf",
       "release_year": 2022,
       "description": "Transform text into speech using a versatile AI voice generator. Leverage AI-powered, authentic human-like voices to effortlessly create high-quality voiceovers within minutes.",
-      "category": "Voice AI",
+      "category": "Best Voice AI Tools",
       "website": "https://murf.ai"
     },
     "features": [
@@ -15199,7 +15199,7 @@
       "developer": "Octopus CRM",
       "release_year": 2022,
       "description": "LinkedIn automation made simple and effective. This all-in-one automation tool will help you simplify prospecting, grow your business and increase sales meetings.",
-      "category": "AI Sales",
+      "category": "Lead Generation",
       "website": "https://octopuscrm.io"
     },
     "features": [
@@ -15316,7 +15316,7 @@
       "Integration complexity"
     ],
     "rating": 3.7,
-    "category": "AI Sales",
+    "category": "Lead Generation",
     "website": "https://octopuscrm.com",
     "benchmarks": {
       "speed": 8,
@@ -15635,7 +15635,7 @@
     "logo": "/images/tools/paperpal-logo.svg",
     "description": "AI academic writing assistant that helps researchers and students write better papers with grammar checking, paraphrasing, and citation tools.",
     "website": "https://paperpal.com",
-    "category": "Writing",
+    "category": "Content Creation",
     "features": [
       "Academic grammar checking",
       "Paraphrasing tool",
@@ -16949,7 +16949,7 @@
       "developer": "Regie",
       "release_year": 2022,
       "description": "AI tool helping sales, marketing, and success teams write engaging content faster.",
-      "category": "AI Sales",
+      "category": "Lead Generation",
       "website": "https://regie.ai"
     },
     "features": [
@@ -18260,7 +18260,7 @@
       "developer": "SalesBlink",
       "release_year": 2022,
       "description": "AI-powered sales automation platform streamlining cold email outreach, meeting scheduling, and CRM integration.",
-      "category": "AI Sales",
+      "category": "Lead Generation",
       "website": "https://salesblink.io"
     },
     "features": [
@@ -18336,7 +18336,7 @@
       "developer": "Salesflow",
       "release_year": 2022,
       "description": "Automate your outreach efforts and close more leads. LinkedIn automation that will generate leads and sales way faster.",
-      "category": "AI Sales",
+      "category": "Lead Generation",
       "website": "https://salesflow.io"
     },
     "features": [
@@ -18863,7 +18863,7 @@
       "developer": "Seamless AI",
       "release_year": 2022,
       "description": "Real-time sales leads search engine that finds and verifies contact information for potential customers, enabling B2B companies to enhance sales prospecting.",
-      "category": "AI Sales",
+      "category": "Lead Generation",
       "website": "https://seamless.ai"
     },
     "features": [
@@ -18979,7 +18979,7 @@
       "Integration complexity"
     ],
     "rating": 3.9,
-    "category": "AI Sales",
+    "category": "Lead Generation",
     "website": "https://seamlessai.com",
     "benchmarks": {
       "speed": 8,
@@ -21671,7 +21671,7 @@
       "developer": "Synthflow Technologies",
       "release_year": 2023,
       "description": "Synthflow AI is a no-code platform for building intelligent voice assistants and phone automation systems. Create AI-powered customer service bots, appointment schedulers, and lead qualification systems with natural conversation flows and CRM integrations.",
-      "category": "Voice AI",
+      "category": "Best Voice AI Tools",
       "website": "https://synthflow.ai"
     },
     "features": [
@@ -22178,7 +22178,7 @@
       "developer": "TaxGPT",
       "release_year": 2022,
       "description": "AI-powered copilot designed for tax professionals to streamline workflows. Research tool for analyzing complex tax questions with speed and accuracy.",
-      "category": "AI For Business",
+      "category": "Content Creation",
       "website": "https://taxgpt.com"
     },
     "features": [
@@ -23405,7 +23405,7 @@
       "developer": "WellMeRight",
       "release_year": 2022,
       "description": "Platform for health and wellness resources, connecting users with holistic practitioners, nutrition experts, and offering AI matching and health coaching tools.",
-      "category": "Health AI",
+      "category": "Productivity",
       "website": "https://wellmeright.com"
     },
     "features": [

@@ -5,7 +5,7 @@ export const toolCategories = [
   'AI Automation',
   'AI Education',
   'AI For Business',
-  'AI Sales',
+  'Lead Generation',
   'AI Translator',
   'AI Website Builder',
   'Best Voice AI Tools',
