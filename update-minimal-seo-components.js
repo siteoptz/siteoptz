@@ -1,21 +1,55 @@
-import React from 'react';
+const fs = require('fs');
+const path = require('path');
+
+// Tools mentioned that need full SEO structure
+const toolsToUpdate = [
+  'bertha-ai', 'nichesss', 'tugan-ai', 'saleshandy', 'vowel', 'quickads', 
+  'wellmeright', 'lovo-ai', 'regie-ai', 'chatbit', 'stammer-ai', '10web', 
+  'browse-ai', 'copymatic', 'manychat', 'octobot-cloud'
+];
+
+// Load tools data
+function loadToolsData() {
+  try {
+    return JSON.parse(fs.readFileSync('./public/data/aiToolsData.json', 'utf8'));
+  } catch (error) {
+    console.error('Error loading tools data:', error);
+    return [];
+  }
+}
+
+// Generate complete SEO component
+function generateFullSEOComponent(toolData) {
+  const toolName = toolData.name || toolData.slug.split('-').map(word => 
+    word.charAt(0).toUpperCase() + word.slice(1)
+  ).join(' ');
+  
+  const componentName = toolData.slug.split('-').map(word => 
+    word.charAt(0).toUpperCase() + word.slice(1)
+  ).join('') + 'ReviewPage';
+  
+  const category = toolData.category || 'AI Tools';
+  const startingPrice = toolData.pricing?.[0]?.price_per_month === 0 ? 'Free' : 
+                       toolData.pricing?.[0]?.price_per_month ? `$${toolData.pricing[0].price_per_month}/month` : 'Custom';
+  
+  return `import React from 'react';
 import Head from 'next/head';
 import Image from 'next/image';
 import Link from 'next/link';
 import ToolLogo from '../../components/ToolLogo';
 import FAQSection from '../../components/comparison/FAQSection';
 
-export default function BrowseAiReviewPage() {
+export default function ${componentName}() {
   // Schema markup for SEO
   const reviewSchema = {
     "@context": "https://schema.org",
     "@type": "Review",
     "itemReviewed": {
       "@type": "SoftwareApplication",
-      "name": "Browse AI",
-      "description": "Browse AI is an innovative AI solution designed to enhance productivity and streamline workflows.",
-      "applicationCategory": "AI Tools",
-      "url": "https://browseai.com",
+      "name": "${toolName}",
+      "description": "${toolData.description || `${toolName} is an innovative AI solution designed to enhance productivity and streamline workflows.`}",
+      "applicationCategory": "${category}",
+      "url": "${toolData.website || `https://${toolData.slug.replace(/-/g, '')}.com`}",
       "operatingSystem": "Web"
     },
     "author": {
@@ -25,11 +59,11 @@ export default function BrowseAiReviewPage() {
     },
     "reviewRating": {
       "@type": "Rating",
-      "ratingValue": 4.7,
+      "ratingValue": ${toolData.rating || 4.2},
       "bestRating": 5,
       "worstRating": 1
     },
-    "reviewBody": "Comprehensive browse ai review covering features, pricing, and alternatives."
+    "reviewBody": "Comprehensive ${toolName.toLowerCase()} review covering features, pricing, and alternatives."
   };
 
   const breadcrumbSchema = {
@@ -45,8 +79,8 @@ export default function BrowseAiReviewPage() {
       {
         "@type": "ListItem", 
         "position": 2,
-        "name": "AI Tools",
-        "item": "https://siteoptz.ai/tools/?category=AI%20Tools"
+        "name": "${category}",
+        "item": "https://siteoptz.ai/tools/?category=${encodeURIComponent(category)}"
       },
       {
         "@type": "ListItem",
@@ -57,8 +91,8 @@ export default function BrowseAiReviewPage() {
       {
         "@type": "ListItem",
         "position": 4,
-        "name": "Browse AI Review",
-        "item": "https://siteoptz.ai/reviews/browse-ai"
+        "name": "${toolName} Review",
+        "item": "https://siteoptz.ai/reviews/${toolData.slug}"
       }
     ]
   };
@@ -69,34 +103,34 @@ export default function BrowseAiReviewPage() {
     "mainEntity": [
         {
             "@type": "Question",
-            "name": "What is Browse AI and how does it work?",
+            "name": "What is ${toolName} and how does it work?",
             "acceptedAnswer": {
                 "@type": "Answer",
-                "text": "Browse AI is an innovative ai tools solution that helps users enhance productivity and streamline workflows through advanced technology."
+                "text": "${toolData.description || `${toolName} is an innovative ${category.toLowerCase()} solution that helps users enhance productivity and streamline workflows through advanced technology.`}"
             }
         },
         {
             "@type": "Question",
-            "name": "How much does Browse AI cost?",
+            "name": "How much does ${toolName} cost?",
             "acceptedAnswer": {
                 "@type": "Answer",
-                "text": "Browse AI pricing starts at $29/month. Professional plans and enterprise solutions are available based on specific requirements and usage needs."
+                "text": "${toolName} pricing starts at ${startingPrice}. Professional plans and enterprise solutions are available based on specific requirements and usage needs."
             }
         },
         {
             "@type": "Question",
-            "name": "What are the best Browse AI alternatives?",
+            "name": "What are the best ${toolName} alternatives?",
             "acceptedAnswer": {
                 "@type": "Answer",
-                "text": "Popular Browse AI alternatives include other leading ai tools tools. The best alternative depends on your specific needs, budget, and feature requirements. Our comparison guide evaluates top alternatives based on features, pricing, and user experience."
+                "text": "Popular ${toolName} alternatives include other leading ${category.toLowerCase()} tools. The best alternative depends on your specific needs, budget, and feature requirements. Our comparison guide evaluates top alternatives based on features, pricing, and user experience."
             }
         },
         {
             "@type": "Question",
-            "name": "Is Browse AI suitable for businesses?",
+            "name": "Is ${toolName} suitable for businesses?",
             "acceptedAnswer": {
                 "@type": "Answer",
-                "text": "Yes, Browse AI is designed for business use with professional features, scalability options, and enterprise-grade capabilities that support team collaboration and workflow optimization."
+                "text": "Yes, ${toolName} is designed for business use with professional features, scalability options, and enterprise-grade capabilities that support team collaboration and workflow optimization."
             }
         }
     ]
@@ -106,20 +140,20 @@ export default function BrowseAiReviewPage() {
     <>
       <Head>
         {/* Primary SEO Tags */}
-        <title>Browse AI Review: Complete AI Tools Analysis | SiteOptz</title>
-        <meta name="description" content="Comprehensive Browse AI review. Browse AI features, pricing & alternatives compared. Expert analysis & user guide for 2025." />
-        <meta name="keywords" content="browse-ai review, browse-ai pricing, browse-ai features, browse-ai alternatives, ai tools" />
+        <title>${toolName} Review: Complete ${category} Analysis | SiteOptz</title>
+        <meta name="description" content="Comprehensive ${toolName} review. ${toolData.description || `${toolName} features, pricing & alternatives compared.`} Expert analysis & user guide for 2025." />
+        <meta name="keywords" content="${toolData.slug} review, ${toolData.slug} pricing, ${toolData.slug} features, ${toolData.slug} alternatives, ${category.toLowerCase().replace(/\s+/g, ' ')}" />
         <meta name="author" content="SiteOptz" />
         <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
         
         {/* Canonical URL */}
-        <link rel="canonical" href="https://siteoptz.ai/reviews/browse-ai" />
+        <link rel="canonical" href="https://siteoptz.ai/reviews/${toolData.slug}" />
         
         {/* Open Graph Meta Tags */}
         <meta property="og:type" content="article" />
-        <meta property="og:title" content="Browse AI Review: Complete AI Tools Analysis | SiteOptz" />
-        <meta property="og:description" content="Comprehensive Browse AI review. Features, pricing & alternatives compared. Expert analysis for 2025." />
-        <meta property="og:url" content="https://siteoptz.ai/reviews/browse-ai" />
+        <meta property="og:title" content="${toolName} Review: Complete ${category} Analysis | SiteOptz" />
+        <meta property="og:description" content="Comprehensive ${toolName} review. ${toolData.description || 'Features, pricing & alternatives compared.'} Expert analysis for 2025." />
+        <meta property="og:url" content="https://siteoptz.ai/reviews/${toolData.slug}" />
         <meta property="og:site_name" content="SiteOptz" />
         <meta property="og:image" content="https://siteoptz.ai/og-image.png" />
         <meta property="og:image:width" content="1200" />
@@ -128,8 +162,8 @@ export default function BrowseAiReviewPage() {
         
         {/* Twitter Card Tags */}
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Browse AI Review: Complete Analysis" />
-        <meta name="twitter:description" content="Comprehensive Browse AI review with features, pricing & alternatives" />
+        <meta name="twitter:title" content="${toolName} Review: Complete Analysis" />
+        <meta name="twitter:description" content="Comprehensive ${toolName} review with features, pricing & alternatives" />
         <meta name="twitter:image" content="https://siteoptz.ai/og-image.png" />
         <meta name="twitter:creator" content="@siteoptz" />
         
@@ -164,11 +198,11 @@ export default function BrowseAiReviewPage() {
             <ol className="flex items-center space-x-2 text-gray-400 text-sm">
               <li><Link href="/" className="hover:text-cyan-400 transition-colors">Home</Link></li>
               <li><span className="mx-2">/</span></li>
-              <li><Link href="/tools/?category=AI%20Tools" className="hover:text-cyan-400 transition-colors">AI Tools</Link></li>
+              <li><Link href="/tools/?category=${encodeURIComponent(category)}" className="hover:text-cyan-400 transition-colors">${category}</Link></li>
               <li><span className="mx-2">/</span></li>
               <li><Link href="/reviews" className="hover:text-cyan-400 transition-colors">Reviews</Link></li>
               <li><span className="mx-2">/</span></li>
-              <li className="text-cyan-400" aria-current="page">Browse AI</li>
+              <li className="text-cyan-400" aria-current="page">${toolName}</li>
             </ol>
           </div>
         </nav>
@@ -182,14 +216,14 @@ export default function BrowseAiReviewPage() {
                 <div className="flex items-center mb-8">
                   <div className="mr-6">
                     <ToolLogo 
-                      toolName="Browse AI"
+                      toolName="${toolName}"
                       size="xl"
                       className="w-16 h-16"
                     />
                   </div>
                   <div>
                     <h1 className="text-4xl md:text-5xl font-bold text-white mb-4">
-                      Browse AI Review
+                      ${toolName} Review
                     </h1>
                     {/* Rating Display */}
                     <div className="flex items-center mb-4">
@@ -197,7 +231,7 @@ export default function BrowseAiReviewPage() {
                         {[...Array(5)].map((_, i) => (
                           <svg
                             key={i}
-                            className={`w-5 h-5 ${i < Math.floor(4.7) ? 'text-yellow-400' : 'text-gray-300'}`}
+                            className={\`w-5 h-5 \${i < Math.floor(${toolData.rating || 4.2}) ? 'text-yellow-400' : 'text-gray-300'}\`}
                             fill="currentColor"
                             viewBox="0 0 20 20"
                           >
@@ -205,7 +239,7 @@ export default function BrowseAiReviewPage() {
                           </svg>
                         ))}
                       </div>
-                      <span className="text-blue-100 text-sm">4.7/5 (Expert Review)</span>
+                      <span className="text-blue-100 text-sm">${toolData.rating || 4.2}/5 (Expert Review)</span>
                     </div>
                   </div>
                 </div>
@@ -213,16 +247,16 @@ export default function BrowseAiReviewPage() {
                 {/* Hero Text Content */}
                 <div className="prose prose-lg prose-invert max-w-none mb-10">
                   <div className="text-xl text-blue-100 leading-relaxed space-y-4">
-                    <p className="mb-4">Looking for a comprehensive Browse AI review? You&apos;ve come to the right place. Browse AI has emerged as a leading ai tools solution, helping businesses streamline their workflows and boost productivity.</p>
-                    <p className="mb-4">Browse AI is an innovative ai tools solution designed to enhance productivity and streamline workflows through advanced technology.</p>
-                    <p className="mb-4">In this detailed Browse AI review, we&apos;ll dive deep into Browse AI&apos;s key features, pricing structure, real-world use cases, and how it stacks up against competitors in the ai tools space. Our expert analysis covers everything from performance benchmarks to user experience.</p>
+                    <p className="mb-4">Looking for a comprehensive ${toolName} review? You&apos;ve come to the right place. ${toolName} has emerged as a leading ${category.toLowerCase()} solution, helping businesses streamline their workflows and boost productivity.</p>
+                    <p className="mb-4">${toolData.description || `${toolName} is an innovative ${category.toLowerCase()} solution designed to enhance productivity and streamline workflows through advanced technology.`}</p>
+                    <p className="mb-4">In this detailed ${toolName} review, we&apos;ll dive deep into ${toolName}&apos;s key features, pricing structure, real-world use cases, and how it stacks up against competitors in the ${category.toLowerCase()} space. Our expert analysis covers everything from performance benchmarks to user experience.</p>
                     <p className="mb-4">What you&apos;ll discover:
 - Comprehensive feature breakdown and capabilities
 - Detailed pricing analysis and value assessment  
 - Real-world use cases and implementation examples
 - Honest pros and cons from actual users
 - Side-by-side comparisons with top alternatives</p>
-                    <p className="mb-4">Let&apos;s explore why Browse AI might be the ai tools solution you&apos;ve been searching for.</p>
+                    <p className="mb-4">Let&apos;s explore why ${toolName} might be the ${category.toLowerCase()} solution you&apos;ve been searching for.</p>
                   </div>
                 </div>
               </div>
@@ -235,21 +269,21 @@ export default function BrowseAiReviewPage() {
                   <div className="space-y-4">
                     <div className="flex justify-between items-center">
                       <span className="text-gray-400">Category:</span>
-                      <Link href="/tools/?category=AI%20Tools" className="text-cyan-400 hover:underline text-sm">
-                        AI Tools
+                      <Link href="/tools/?category=${encodeURIComponent(category)}" className="text-cyan-400 hover:underline text-sm">
+                        ${category}
                       </Link>
                     </div>
                     <div className="flex justify-between items-center">
                       <span className="text-gray-400">Best For:</span>
-                      <span className="text-white text-sm font-semibold">Professionals</span>
+                      <span className="text-white text-sm font-semibold">${category === 'Social Media' ? 'Marketing Teams' : category === 'Content Creation' ? 'Content Creators' : category === 'AI Sales' ? 'Sales Teams' : 'Professionals'}</span>
                     </div>
                     <div className="flex justify-between items-center">
                       <span className="text-gray-400">Starting Price:</span>
-                      <span className="text-green-400 text-sm font-semibold">$29/month</span>
+                      <span className="text-green-400 text-sm font-semibold">${startingPrice}</span>
                     </div>
                     <div className="flex justify-between items-center">
                       <span className="text-gray-400">Rating:</span>
-                      <span className="text-yellow-400 text-sm font-semibold">★ 4.7/5</span>
+                      <span className="text-yellow-400 text-sm font-semibold">★ ${toolData.rating || 4.2}/5</span>
                     </div>
                   </div>
                   
@@ -286,53 +320,52 @@ export default function BrowseAiReviewPage() {
               
               <div className="mb-16" id="features">
                 <h2 className="text-3xl font-bold text-white mb-8">
-                  Browse AI Key Features & Capabilities
+                  ${toolName} Key Features & Capabilities
                 </h2>
                 
                 <div className="prose prose-lg prose-invert max-w-none">
                   <div className="space-y-6">
-                    <p className="text-gray-300 mb-6 leading-relaxed text-lg">When evaluating Browse AI, understanding its core features is essential for determining fit. Our analysis reveals several standout capabilities that set Browse AI apart in the ai tools market.</p>
+                    <p className="text-gray-300 mb-6 leading-relaxed text-lg">When evaluating ${toolName}, understanding its core features is essential for determining fit. Our analysis reveals several standout capabilities that set ${toolName} apart in the ${category.toLowerCase()} market.</p>
                     
                     <h3 className="text-xl font-semibold text-cyan-400 mb-6 mt-10">Core Features Overview</h3>
-                    <p className="text-gray-300 mb-6 leading-relaxed text-lg">Browse AI offers a comprehensive suite of features designed for ai tools applications:</p>
+                    <p className="text-gray-300 mb-6 leading-relaxed text-lg">${toolName} offers a comprehensive suite of features designed for ${category.toLowerCase()} applications:</p>
                     
                     <p className="text-gray-300 mb-6 leading-relaxed text-lg"><strong className="text-white font-semibold">Primary Capabilities:</strong></p>
                     <ul className="list-disc list-inside mb-8 space-y-3 text-lg">
-                      <li className="text-gray-300 mb-3 leading-relaxed"><strong className="text-white font-semibold">Workflow automation</strong>: Enhanced functionality for improved results</li>
-                      <li className="text-gray-300 mb-3 leading-relaxed"><strong className="text-white font-semibold">No-code setup</strong>: Enhanced functionality for improved results</li>
-                      <li className="text-gray-300 mb-3 leading-relaxed"><strong className="text-white font-semibold">Integration capabilities</strong>: Enhanced functionality for improved results</li>
-                      <li className="text-gray-300 mb-3 leading-relaxed"><strong className="text-white font-semibold">Data processing</strong>: Enhanced functionality for improved results</li>
-                      <li className="text-gray-300 mb-3 leading-relaxed"><strong className="text-white font-semibold">Real-time monitoring</strong>: Enhanced functionality for improved results</li>
+                      ${(toolData.features || ['Advanced AI integration', 'User-friendly interface', 'Scalable architecture', 'Real-time processing', 'Integration support']).slice(0, 5).map(feature => 
+                        `<li className="text-gray-300 mb-3 leading-relaxed"><strong className="text-white font-semibold">${feature}</strong>: Enhanced functionality for improved results</li>`
+                      ).join('\n                      ')}
                     </ul>
                     
                     <h3 className="text-xl font-semibold text-cyan-400 mb-6 mt-10">Performance Benchmarks</h3>
-                    <p className="text-gray-300 mb-6 leading-relaxed text-lg">Our testing reveals Browse AI consistently delivers reliable performance across different ai tools use cases. Speed, accuracy, and reliability scores place it among the top solutions available today.</p>
-                    <p className="text-gray-300 mb-6 leading-relaxed text-lg">The feature set positions Browse AI as a versatile solution suitable for various business sizes and industries. Whether you&apos;re looking for basic functionality or advanced capabilities, Browse AI provides the tools needed to succeed.</p>
+                    <p className="text-gray-300 mb-6 leading-relaxed text-lg">Our testing reveals ${toolName} consistently delivers reliable performance across different ${category.toLowerCase()} use cases. Speed, accuracy, and reliability scores place it among the top solutions available today.</p>
+                    <p className="text-gray-300 mb-6 leading-relaxed text-lg">The feature set positions ${toolName} as a versatile solution suitable for various business sizes and industries. Whether you&apos;re looking for basic functionality or advanced capabilities, ${toolName} provides the tools needed to succeed.</p>
                   </div>
                 </div>
               </div>
 
               <div className="mb-16" id="pricing">
                 <h2 className="text-3xl font-bold text-white mb-8">
-                  Browse AI Pricing Plans & Value Analysis
+                  ${toolName} Pricing Plans & Value Analysis
                 </h2>
                 
                 <div className="prose prose-lg prose-invert max-w-none">
                   <div className="space-y-6">
-                    <p className="text-gray-300 mb-6 leading-relaxed text-lg">Understanding Browse AI pricing is crucial for budget planning and ROI assessment. Our analysis breaks down each plan to help you choose the most cost-effective option.</p>
+                    <p className="text-gray-300 mb-6 leading-relaxed text-lg">Understanding ${toolName} pricing is crucial for budget planning and ROI assessment. Our analysis breaks down each plan to help you choose the most cost-effective option.</p>
                     
                     <h3 className="text-xl font-semibold text-cyan-400 mb-6 mt-10">Pricing Structure Overview</h3>
-                    <p className="text-gray-300 mb-6 leading-relaxed text-lg">Browse AI offers tiered pricing designed to accommodate different business needs and budgets:</p>
+                    <p className="text-gray-300 mb-6 leading-relaxed text-lg">${toolName} offers tiered pricing designed to accommodate different business needs and budgets:</p>
                     
                     <p className="text-gray-300 mb-6 leading-relaxed text-lg"><strong className="text-white font-semibold">Plan Comparison:</strong></p>
                     <ul className="list-disc list-inside mb-8 space-y-3 text-lg">
-                      <li className="text-gray-300 mb-3 leading-relaxed"><strong className="text-white font-semibold">Starter ($29/month)</strong>: Basic features, Email support, Standard usage</li>
-                      <li className="text-gray-300 mb-3 leading-relaxed"><strong className="text-white font-semibold">Professional ($79/month)</strong>: Advanced features, Priority support, Increased usage</li>
-                      <li className="text-gray-300 mb-3 leading-relaxed"><strong className="text-white font-semibold">Enterprise ($199/month)</strong>: Full features, Dedicated support, Unlimited usage</li>
+                      ${toolData.pricing ? toolData.pricing.map(plan => 
+                        `<li className="text-gray-300 mb-3 leading-relaxed"><strong className="text-white font-semibold">${plan.plan} ${plan.price_per_month === 0 ? '(Free)' : typeof plan.price_per_month === 'number' ? `($${plan.price_per_month}/month)` : '(Custom)'}</strong>: ${plan.features ? plan.features.join(', ') : 'Comprehensive feature set'}</li>`
+                      ).join('\n                      ') : 
+                      `<li className="text-gray-300 mb-3 leading-relaxed"><strong className="text-white font-semibold">Contact for Pricing</strong>: Custom pricing based on usage and requirements</li>`}
                     </ul>
                     
                     <h3 className="text-xl font-semibold text-cyan-400 mb-6 mt-10">Value Assessment</h3>
-                    <p className="text-gray-300 mb-6 leading-relaxed text-lg">When evaluating Browse AI pricing, consider these key factors:</p>
+                    <p className="text-gray-300 mb-6 leading-relaxed text-lg">When evaluating ${toolName} pricing, consider these key factors:</p>
                     
                     <p className="text-gray-300 mb-6 leading-relaxed text-lg"><strong className="text-white font-semibold">Cost-Benefit Analysis:</strong></p>
                     <ul className="list-disc list-inside mb-8 space-y-3 text-lg">
@@ -343,49 +376,49 @@ export default function BrowseAiReviewPage() {
                     </ul>
                     
                     <p className="text-gray-300 mb-6 leading-relaxed text-lg"><strong className="text-white font-semibold">ROI Considerations:</strong></p>
-                    <p className="text-gray-300 mb-6 leading-relaxed text-lg">Most businesses see positive ROI within 2-4 months when properly implementing Browse AI. The combination of time savings, improved efficiency, and enhanced capabilities typically justifies the investment.</p>
+                    <p className="text-gray-300 mb-6 leading-relaxed text-lg">Most businesses see positive ROI within 2-4 months when properly implementing ${toolName}. The combination of time savings, improved efficiency, and enhanced capabilities typically justifies the investment.</p>
                   </div>
                 </div>
               </div>
 
               <div className="mb-16" id="use-cases">
                 <h2 className="text-3xl font-bold text-white mb-8">
-                  Real-World Browse AI Use Cases & Applications
+                  Real-World ${toolName} Use Cases & Applications
                 </h2>
                 
                 <div className="prose prose-lg prose-invert max-w-none">
                   <div className="space-y-6">
-                    <p className="text-gray-300 mb-6 leading-relaxed text-lg">Understanding how Browse AI performs in real-world scenarios helps evaluate its potential impact on your specific needs. Our research identifies several key use cases where Browse AI excels.</p>
+                    <p className="text-gray-300 mb-6 leading-relaxed text-lg">Understanding how ${toolName} performs in real-world scenarios helps evaluate its potential impact on your specific needs. Our research identifies several key use cases where ${toolName} excels.</p>
                     
                     <h3 className="text-xl font-semibold text-cyan-400 mb-6 mt-10">Primary Use Cases</h3>
                     
                     <p className="text-gray-300 mb-6 leading-relaxed text-lg"><strong className="text-white font-semibold">Professional Implementation:</strong></p>
-                    <p className="text-gray-300 mb-6 leading-relaxed text-lg">Businesses leverage Browse AI for ai tools workflows requiring advanced capabilities and reliable performance. The platform&apos;s features make it ideal for professional environments with demanding requirements.</p>
+                    <p className="text-gray-300 mb-6 leading-relaxed text-lg">Businesses leverage ${toolName} for ${category.toLowerCase()} workflows requiring advanced capabilities and reliable performance. The platform&apos;s features make it ideal for professional environments with demanding requirements.</p>
                     
                     <p className="text-gray-300 mb-6 leading-relaxed text-lg"><strong className="text-white font-semibold">Team Collaboration:</strong></p>
-                    <p className="text-gray-300 mb-6 leading-relaxed text-lg">Teams use Browse AI to coordinate projects and enhance productivity. Collaboration features and shared workflows improve efficiency across departments and streamline communication.</p>
+                    <p className="text-gray-300 mb-6 leading-relaxed text-lg">Teams use ${toolName} to coordinate projects and enhance productivity. Collaboration features and shared workflows improve efficiency across departments and streamline communication.</p>
                     
                     <p className="text-gray-300 mb-6 leading-relaxed text-lg"><strong className="text-white font-semibold">Enterprise Solutions:</strong></p>
-                    <p className="text-gray-300 mb-6 leading-relaxed text-lg">Large organizations implement Browse AI to standardize ai tools processes across multiple teams. Enterprise-grade security and management features support organization-wide adoption.</p>
+                    <p className="text-gray-300 mb-6 leading-relaxed text-lg">Large organizations implement ${toolName} to standardize ${category.toLowerCase()} processes across multiple teams. Enterprise-grade security and management features support organization-wide adoption.</p>
                     
                     <h3 className="text-xl font-semibold text-cyan-400 mb-6 mt-10">Industry-Specific Applications</h3>
                     
-                    <p className="text-gray-300 mb-6 leading-relaxed text-lg"><strong className="text-white font-semibold">AI Tools Sector:</strong></p>
-                    <p className="text-gray-300 mb-6 leading-relaxed text-lg">Within the ai tools industry, Browse AI addresses specific challenges like workflow optimization, resource management, and performance tracking. Industry-specific features provide immediate value for specialized use cases.</p>
+                    <p className="text-gray-300 mb-6 leading-relaxed text-lg"><strong className="text-white font-semibold">${category} Sector:</strong></p>
+                    <p className="text-gray-300 mb-6 leading-relaxed text-lg">Within the ${category.toLowerCase()} industry, ${toolName} addresses specific challenges like workflow optimization, resource management, and performance tracking. Industry-specific features provide immediate value for specialized use cases.</p>
                     
                     <h3 className="text-xl font-semibold text-cyan-400 mb-6 mt-10">Implementation Examples</h3>
                     
                     <p className="text-gray-300 mb-6 leading-relaxed text-lg"><strong className="text-white font-semibold">Small Business Implementation:</strong></p>
-                    <p className="text-gray-300 mb-6 leading-relaxed text-lg">Small teams leverage Browse AI to maximize productivity with limited resources. Results typically include improved efficiency and better ai tools outcomes within budget constraints.</p>
+                    <p className="text-gray-300 mb-6 leading-relaxed text-lg">Small teams leverage ${toolName} to maximize productivity with limited resources. Results typically include improved efficiency and better ${category.toLowerCase()} outcomes within budget constraints.</p>
                     
-                    <p className="text-gray-300 mb-6 leading-relaxed text-lg">These real-world applications demonstrate Browse AI&apos;s versatility and potential impact across various business contexts and team sizes.</p>
+                    <p className="text-gray-300 mb-6 leading-relaxed text-lg">These real-world applications demonstrate ${toolName}&apos;s versatility and potential impact across various business contexts and team sizes.</p>
                   </div>
                 </div>
               </div>
 
               <div className="mb-16" id="pros-cons">
                 <h2 className="text-3xl font-bold text-white mb-8">
-                  Browse AI Pros and Cons: Honest Assessment
+                  ${toolName} Pros and Cons: Honest Assessment
                 </h2>
                 
                 <div className="prose prose-lg prose-invert max-w-none">
@@ -395,22 +428,21 @@ export default function BrowseAiReviewPage() {
                     <h3 className="text-xl font-semibold text-cyan-400 mb-6 mt-10">Advantages</h3>
                     <p className="text-gray-300 mb-6 leading-relaxed text-lg"><strong className="text-white font-semibold">Key Strengths:</strong></p>
                     <ul className="list-disc list-inside mb-8 space-y-3 text-lg">
-                      <li className="text-gray-300 mb-3 leading-relaxed"><strong className="text-white font-semibold">User-friendly interface</strong></li>
-                      <li className="text-gray-300 mb-3 leading-relaxed"><strong className="text-white font-semibold">Comprehensive feature set</strong></li>
-                      <li className="text-gray-300 mb-3 leading-relaxed"><strong className="text-white font-semibold">Good integration options</strong></li>
-                      <li className="text-gray-300 mb-3 leading-relaxed"><strong className="text-white font-semibold">Competitive pricing</strong></li>
+                      ${(toolData.pros || ['User-friendly interface', 'Comprehensive feature set', 'Good integration options', 'Competitive pricing', 'Regular updates']).map(pro => 
+                        `<li className="text-gray-300 mb-3 leading-relaxed"><strong className="text-white font-semibold">${pro}</strong></li>`
+                      ).join('\n                      ')}
                     </ul>
                     
                     <h3 className="text-xl font-semibold text-cyan-400 mb-6 mt-10">Limitations</h3>
                     <p className="text-gray-300 mb-6 leading-relaxed text-lg"><strong className="text-white font-semibold">Areas for Improvement:</strong></p>
                     <ul className="list-disc list-inside mb-8 space-y-3 text-lg">
-                      <li className="text-gray-300 mb-3 leading-relaxed"><strong className="text-white font-semibold">Learning curve for advanced features</strong></li>
-                      <li className="text-gray-300 mb-3 leading-relaxed"><strong className="text-white font-semibold">Limited free tier</strong></li>
-                      <li className="text-gray-300 mb-3 leading-relaxed"><strong className="text-white font-semibold">Subscription required for full access</strong></li>
+                      ${(toolData.cons || ['Learning curve for advanced features', 'Limited free tier', 'Subscription required for full access', 'Integration complexity']).map(con => 
+                        `<li className="text-gray-300 mb-3 leading-relaxed"><strong className="text-white font-semibold">${con}</strong></li>`
+                      ).join('\n                      ')}
                     </ul>
                     
                     <h3 className="text-xl font-semibold text-cyan-400 mb-6 mt-10">Overall Assessment</h3>
-                    <p className="text-gray-300 mb-6 leading-relaxed text-lg">Browse AI represents a strong choice in the ai tools category, with advantages typically outweighing limitations for most use cases. The combination of powerful features and user-friendly design makes it a top contender for businesses looking to enhance their ai tools capabilities.</p>
+                    <p className="text-gray-300 mb-6 leading-relaxed text-lg">${toolName} represents a strong choice in the ${category.toLowerCase()} category, with advantages typically outweighing limitations for most use cases. The combination of powerful features and user-friendly design makes it a top contender for businesses looking to enhance their ${category.toLowerCase()} capabilities.</p>
                   </div>
                 </div>
               </div>
@@ -422,16 +454,16 @@ export default function BrowseAiReviewPage() {
         <section className="relative z-10 py-16 bg-gray-900/50" id="faq">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-12">
-              <h2 className="text-3xl font-bold text-white mb-4">Frequently Asked Questions About Browse AI</h2>
-              <p className="text-lg text-gray-300">Get answers to common questions about Browse AI</p>
+              <h2 className="text-3xl font-bold text-white mb-4">Frequently Asked Questions About ${toolName}</h2>
+              <p className="text-lg text-gray-300">Get answers to common questions about ${toolName}</p>
             </div>
             
             <FAQSection faqs={[
-              {"question":"What is Browse AI and how does it work?","answer":"Browse AI is an innovative ai tools solution that helps users enhance productivity through advanced technology and features."},
-              {"question":"How much does Browse AI cost?","answer":"Browse AI pricing starts at $29/month. Professional plans and enterprise solutions are available based on specific requirements and usage needs."},
-              {"question":"What are the best Browse AI alternatives?","answer":"Popular Browse AI alternatives include other leading ai tools tools. The best alternative depends on your specific needs, budget, and feature requirements. Our comparison guide evaluates top alternatives based on features, pricing, and user experience."},
-              {"question":"Is Browse AI suitable for businesses?","answer":"Yes, Browse AI is designed for business use with professional features, scalability options, and enterprise-grade capabilities that support team collaboration and workflow optimization."},
-              {"question":"How does Browse AI compare to competitors?","answer":"Browse AI offers competitive advantages in the ai tools space through its unique feature set, pricing structure, and user experience. Our detailed comparison analysis helps you understand how it stacks up against alternatives."}
+              {"question":"What is ${toolName} and how does it work?","answer":"${toolData.description || `${toolName} is an innovative ${category.toLowerCase()} solution that helps users enhance productivity through advanced technology and features.`}"},
+              {"question":"How much does ${toolName} cost?","answer":"${toolName} pricing starts at ${startingPrice}. Professional plans and enterprise solutions are available based on specific requirements and usage needs."},
+              {"question":"What are the best ${toolName} alternatives?","answer":"Popular ${toolName} alternatives include other leading ${category.toLowerCase()} tools. The best alternative depends on your specific needs, budget, and feature requirements. Our comparison guide evaluates top alternatives based on features, pricing, and user experience."},
+              {"question":"Is ${toolName} suitable for businesses?","answer":"Yes, ${toolName} is designed for business use with professional features, scalability options, and enterprise-grade capabilities that support team collaboration and workflow optimization."},
+              {"question":"How does ${toolName} compare to competitors?","answer":"${toolName} offers competitive advantages in the ${category.toLowerCase()} space through its unique feature set, pricing structure, and user experience. Our detailed comparison analysis helps you understand how it stacks up against alternatives."}
             ]} />
           </div>
         </section>
@@ -440,17 +472,17 @@ export default function BrowseAiReviewPage() {
         <section className="relative z-10 py-16">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-12">
-              <h2 className="text-3xl font-bold text-white mb-4">Explore More AI Tools Tools</h2>
-              <p className="text-lg text-gray-300">Compare Browse AI with other leading solutions</p>
+              <h2 className="text-3xl font-bold text-white mb-4">Explore More ${category} Tools</h2>
+              <p className="text-lg text-gray-300">Compare ${toolName} with other leading solutions</p>
             </div>
             
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-              <Link href="/tools/?category=AI%20Tools" className="group">
+              <Link href="/tools/?category=${encodeURIComponent(category)}" className="group">
                 <div className="bg-black border border-gray-800 rounded-xl p-6 hover:border-gray-600 transition-all">
                   <h3 className="text-xl font-semibold text-white mb-3 group-hover:text-cyan-400">
-                    Browse AI Tools Tools
+                    Browse ${category} Tools
                   </h3>
-                  <p className="text-gray-300">Discover all ai tools solutions in our directory</p>
+                  <p className="text-gray-300">Discover all ${category.toLowerCase()} solutions in our directory</p>
                 </div>
               </Link>
               
@@ -463,10 +495,10 @@ export default function BrowseAiReviewPage() {
                 </div>
               </Link>
               
-              <Link href="/compare/browse-ai/vs/alternatives" className="group">
+              <Link href="/compare/${toolData.slug}/vs/alternatives" className="group">
                 <div className="bg-black border border-gray-800 rounded-xl p-6 hover:border-gray-600 transition-all">
                   <h3 className="text-xl font-semibold text-white mb-3 group-hover:text-cyan-400">
-                    Browse AI Comparisons
+                    ${toolName} Comparisons
                   </h3>
                   <p className="text-gray-300">Side-by-side comparisons with alternatives</p>
                 </div>
@@ -480,10 +512,10 @@ export default function BrowseAiReviewPage() {
           <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
             <div className="bg-gradient-to-r from-blue-900/20 to-purple-900/20 border border-gray-800 rounded-2xl p-12">
               <h2 className="text-4xl font-bold text-white mb-6">
-                Ready to Get Started with Browse AI?
+                Ready to Get Started with ${toolName}?
               </h2>
               <p className="text-xl text-gray-300 mb-8">
-                Join thousands of professionals using Browse AI to enhance their ai tools workflows.
+                Join thousands of professionals using ${toolName} to enhance their ${category.toLowerCase()} workflows.
               </p>
               <div className="flex justify-center">
                 <Link
@@ -499,4 +531,57 @@ export default function BrowseAiReviewPage() {
       </div>
     </>
   );
+}`;
 }
+
+// Main function to update all tools
+async function updateSpecificTools() {
+  console.log('🚀 Starting specific tool SEO component updates...\n');
+  
+  const toolsData = loadToolsData();
+  let successful = 0;
+  let failed = 0;
+  let notFound = 0;
+  
+  for (const toolSlug of toolsToUpdate) {
+    console.log(`\nProcessing: ${toolSlug}`);
+    
+    // Find tool data
+    const toolData = toolsData.find(t => t.slug === toolSlug);
+    if (!toolData) {
+      console.log(`❌ Tool not found in database: ${toolSlug}`);
+      notFound++;
+      continue;
+    }
+    
+    // Generate component file path
+    const componentName = toolSlug.split('-').map(word => 
+      word.charAt(0).toUpperCase() + word.slice(1)
+    ).join('') + 'ReviewPage';
+    
+    const filePath = `./seo-optimization/production-components/${componentName}.tsx`;
+    
+    try {
+      // Generate and write the component
+      const component = generateFullSEOComponent(toolData);
+      fs.writeFileSync(filePath, component);
+      console.log(`✅ Successfully updated ${toolName} (${toolSlug})`);
+      successful++;
+    } catch (error) {
+      console.error(`❌ Error updating ${toolSlug}:`, error.message);
+      failed++;
+    }
+  }
+  
+  console.log(`\n📊 Summary:`);
+  console.log(`✅ Successfully updated: ${successful} components`);
+  console.log(`❌ Failed to update: ${failed} components`);
+  console.log(`❓ Not found in database: ${notFound} components`);
+  console.log(`📁 Total processed: ${toolsToUpdate.length} tools`);
+}
+
+if (require.main === module) {
+  updateSpecificTools().catch(console.error);
+}
+
+module.exports = { generateFullSEOComponent, updateSpecificTools };
