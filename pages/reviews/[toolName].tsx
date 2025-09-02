@@ -326,16 +326,6 @@ export default function ReviewPage({ tool, pageTitle, slug, relatedTools, relate
                   {tool.description}
                 </p>
 
-                <div className="flex justify-center">
-                  <a
-                    href={tool.affiliate_link || tool.official_url}
-                    target="_blank"
-                    rel="noopener noreferrer sponsored"
-                    className="bg-gradient-to-r from-blue-600 to-purple-600 text-white hover:from-blue-700 hover:to-purple-700 font-bold py-3 px-8 rounded-lg transform hover:scale-105 transition-all duration-200 shadow-lg hover:shadow-xl text-center"
-                  >
-                    Try {tool.tool_name} Here
-                  </a>
-                </div>
               </div>
 
               {/* Quick Stats */}
@@ -783,14 +773,12 @@ export default function ReviewPage({ tool, pageTitle, slug, relatedTools, relate
               Get started with {tool.tool_name} today and experience it for yourself.
             </p>
             <div className="flex justify-center">
-              <a
-                href={tool.affiliate_link || tool.official_url}
-                target="_blank"
-                rel="noopener noreferrer sponsored"
+              <Link
+                href="/contact"
                 className="bg-gradient-to-r from-blue-600 to-purple-600 text-white hover:from-blue-700 hover:to-purple-700 font-bold py-4 px-8 rounded-lg transform hover:scale-105 transition-all duration-200 shadow-lg hover:shadow-xl"
               >
-                Try {tool.tool_name} Here
-              </a>
+                Talk to an AI Expert
+              </Link>
             </div>
           </div>
         </section>
