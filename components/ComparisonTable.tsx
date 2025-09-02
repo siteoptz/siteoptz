@@ -162,7 +162,7 @@ const ComparisonTable: React.FC<ComparisonTableProps> = ({
     return (
       <div className="flex items-center gap-1">
         {stars} 
-        <span className="text-sm text-gray-600 ml-1">{rating?.toFixed(1)}</span>
+        <span className="text-sm text-gray-600 ml-1">{typeof rating === 'number' ? rating.toFixed(1) : 'N/A'}</span>
       </div>
     );
   };

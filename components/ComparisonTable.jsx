@@ -247,8 +247,8 @@ const ComparisonTable = ({ tools = [], maxSelection = 3, onToolSelect }) => {
         <div className="flex justify-between items-center text-sm text-gray-600">
           <span>Showing {filteredAndSortedTools.length} of {aiToolsData.length} tools</span>
           <div className="flex gap-4">
-            <span>Avg Rating: {(filteredAndSortedTools.reduce((sum, tool) => sum + tool.rating, 0) / filteredAndSortedTools.length).toFixed(1)}</span>
-            <span>Avg Price: ${(filteredAndSortedTools.reduce((sum, tool) => sum + tool.pricing.monthly, 0) / filteredAndSortedTools.length).toFixed(0)}/mo</span>
+            <span>Avg Rating: {filteredAndSortedTools.length > 0 ? (filteredAndSortedTools.reduce((sum, tool) => sum + (tool.rating || 0), 0) / filteredAndSortedTools.length).toFixed(1) : 'N/A'}</span>
+            <span>Avg Price: ${filteredAndSortedTools.length > 0 ? (filteredAndSortedTools.reduce((sum, tool) => sum + (tool.pricing?.monthly || 0), 0) / filteredAndSortedTools.length).toFixed(0) : 'N/A'}/mo</span>
           </div>
         </div>
       </div>

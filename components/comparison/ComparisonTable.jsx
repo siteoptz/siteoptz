@@ -458,7 +458,7 @@ export default function ComparisonTable({ tools, selectedTools = [], onToolSelec
               }, 0) / Math.max(filteredAndSortedTools.length, 1)).toFixed(0)}/mo
             </span>
             <span>
-              Avg Rating: {(filteredAndSortedTools.reduce((sum, tool) => sum + tool.rating, 0) / Math.max(filteredAndSortedTools.length, 1)).toFixed(1)}/5
+              Avg Rating: {(filteredAndSortedTools.reduce((sum, tool) => sum + (tool.rating || 0), 0) / Math.max(filteredAndSortedTools.length, 1)).toFixed(1)}/5
             </span>
           </div>
         </div>
