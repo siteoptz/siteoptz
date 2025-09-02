@@ -205,7 +205,25 @@ export function loadUnifiedToolsData(fs, path) {
     });
 
     // Combine both datasets
-    const allTools = [...existingTools, ...newTools];
+    let allTools = [...existingTools, ...newTools];
+    
+    // Remove duplicates based on tool name (keep the one with valid ID)
+    const toolMap = new Map();
+    allTools.forEach(tool => {
+      const key = tool.tool_name.toLowerCase();
+      const existing = toolMap.get(key);
+      
+      if (!existing) {
+        toolMap.set(key, tool);
+      } else {
+        // Keep the tool with a valid ID (not NaN or undefined)
+        if (tool.id && tool.id !== 'NaN' && (!existing.id || existing.id === 'NaN')) {
+          toolMap.set(key, tool);
+        }
+      }
+    });
+    
+    allTools = Array.from(toolMap.values());
     
     // Sort by rating (highest first), then by name
     allTools.sort((a, b) => {
