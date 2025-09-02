@@ -329,7 +329,7 @@ export default function ComprehensiveComparisonPage({ tools, faqs, featuredTools
                           />
                         ))}
                         <span className="text-sm text-gray-600 ml-1">
-                          {tool.rating?.toFixed(1)}
+                          {typeof tool.rating === 'number' ? tool.rating.toFixed(1) : tool.rating || 'N/A'}
                         </span>
                       </div>
                     </div>
@@ -427,7 +427,7 @@ export default function ComprehensiveComparisonPage({ tools, faqs, featuredTools
                               />
                             ))}
                           </div>
-                          <span className="text-sm text-gray-600">{tool.rating?.toFixed(1)}</span>
+                          <span className="text-sm text-gray-600">{typeof tool.rating === 'number' ? tool.rating.toFixed(1) : tool.rating || 'N/A'}</span>
                         </td>
                       ))}
                     </tr>
