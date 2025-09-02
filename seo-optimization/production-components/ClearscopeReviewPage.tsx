@@ -291,22 +291,22 @@ export default function ClearscopeReviewPage({ tool }: ClearscopeReviewPageProps
                   <div className="mt-6 pt-6 border-t border-gray-800">
                     <h3 className="text-sm font-semibold text-gray-400 mb-4">Table of Contents</h3>
                     <nav className="space-y-2">
-                      <a href="#features" className="block text-cyan-400 hover:underline text-sm">
-                        → Key Features
-                      </a>
-                      <a href="#pricing" className="block text-cyan-400 hover:underline text-sm">
-                        → Pricing Plans
-                      </a>
-                      <a href="#use-cases" className="block text-cyan-400 hover:underline text-sm">
-                        → Use Cases
-                      </a>
-                      <a href="#pros-cons" className="block text-cyan-400 hover:underline text-sm">
-                        → Pros & Cons
-                      </a>
-                      <a href="#faq" className="block text-cyan-400 hover:underline text-sm">
-                        → FAQ
-                      </a>
-                    </nav>
+      <a href="#features" className="block text-cyan-400 hover:underline text-sm">
+        → Key Features
+      </a>
+      <a href="#pricing" className="block text-cyan-400 hover:underline text-sm">
+        → Pricing Plans
+      </a>
+      <a href="#use-cases" className="block text-cyan-400 hover:underline text-sm">
+        → Use Cases
+      </a>
+      <a href="#pros-cons" className="block text-cyan-400 hover:underline text-sm">
+        → Pros & Cons
+      </a>
+      <a href="#faq" className="block text-cyan-400 hover:underline text-sm">
+        → FAQ
+      </a>
+    </nav>
                   </div>
                 </div>
               </div>
@@ -418,7 +418,7 @@ export default function ClearscopeReviewPage({ tool }: ClearscopeReviewPageProps
 
         {/* FAQ Section */}
         <section className="relative z-10 py-16 bg-gray-900/50" id="faq">
-          <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-12">
               <h2 className="text-3xl font-bold text-white mb-4"> Frequently Asked Questions About Clearscope</h2>
               <p className="text-lg text-gray-300">Get answers to common questions about Clearscope</p>
@@ -495,7 +495,7 @@ export default function ClearscopeReviewPage({ tool }: ClearscopeReviewPageProps
                 <h3 className="text-2xl font-bold text-white mb-4">
                   Ready to Get Started with Clearscope?
                 </h3>
-                <p className="text-lg text-gray-300 mb-6">
+                <p className="text-lg text-xl text-gray-300 mb-8">
                   Join thousands of content marketers using Clearscope to optimize their content for better search performance.
                 </p>
               </div>
@@ -511,10 +511,10 @@ export default function ClearscopeReviewPage({ tool }: ClearscopeReviewPageProps
         </section>
         {/* SiteOptz.ai Promotional Section */}
         <section className="relative z-10 py-16 bg-gradient-to-r from-gray-900/50 to-black/50">
-          <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
             <div className="bg-black border border-gray-800 rounded-2xl p-8">
               <div className="text-center mb-8">
-                <p className="text-lg text-gray-300 leading-relaxed mb-6">
+                <p className="text-xl text-gray-300 mb-8 mb-6">
                   SiteOptz.ai offers expert AI-powered tools and personalized support to rapidly enhance seo & optimization strategies, helping organizations achieve dramatic boosts in organic traffic and search rankings, while maximizing their ROI.
                 </p>
               </div>

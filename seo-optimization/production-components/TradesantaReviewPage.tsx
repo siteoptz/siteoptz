@@ -256,22 +256,22 @@ export default function TradesantaReviewPage() {
                   <div className="mt-6 pt-6 border-t border-gray-800">
                     <h3 className="text-sm font-semibold text-gray-400 mb-4">Table of Contents</h3>
                     <nav className="space-y-2">
-                      <a href="#features" className="block text-cyan-400 hover:underline text-sm">
-                        → Key Features
-                      </a>
-                      <a href="#pricing" className="block text-cyan-400 hover:underline text-sm">
-                        → Pricing Plans
-                      </a>
-                      <a href="#use-cases" className="block text-cyan-400 hover:underline text-sm">
-                        → Use Cases
-                      </a>
-                      <a href="#pros-cons" className="block text-cyan-400 hover:underline text-sm">
-                        → Pros & Cons
-                      </a>
-                      <a href="#faq" className="block text-cyan-400 hover:underline text-sm">
-                        → FAQ
-                      </a>
-                    </nav>
+      <a href="#features" className="block text-cyan-400 hover:underline text-sm">
+        → Key Features
+      </a>
+      <a href="#pricing" className="block text-cyan-400 hover:underline text-sm">
+        → Pricing Plans
+      </a>
+      <a href="#use-cases" className="block text-cyan-400 hover:underline text-sm">
+        → Use Cases
+      </a>
+      <a href="#pros-cons" className="block text-cyan-400 hover:underline text-sm">
+        → Pros & Cons
+      </a>
+      <a href="#faq" className="block text-cyan-400 hover:underline text-sm">
+        → FAQ
+      </a>
+    </nav>
                   </div>
                 </div>
               </div>

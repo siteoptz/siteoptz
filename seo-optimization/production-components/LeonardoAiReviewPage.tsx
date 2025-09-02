@@ -299,22 +299,22 @@ export default function LeonardoAiReviewPage({ tool }: LeonardoAiReviewPageProps
                   <div className="mt-6 pt-6 border-t border-gray-800">
                     <h3 className="text-sm font-semibold text-gray-400 mb-4">Table of Contents</h3>
                     <nav className="space-y-2">
-                      <a href="#leonardo-ai-key-features-capabilities" className="block text-cyan-400 hover:underline text-sm">
-                        → Key Features
-                      </a>
-                      <a href="#leonardo-ai-pricing-plans-value-analysis" className="block text-cyan-400 hover:underline text-sm">
-                        → Pricing Plans
-                      </a>
-                      <a href="#real-world-leonardo-ai-use-cases-applications" className="block text-cyan-400 hover:underline text-sm">
-                        → Use Cases
-                      </a>
-                      <a href="#leonardo-ai-pros-and-cons-honest-assessment" className="block text-cyan-400 hover:underline text-sm">
-                        → Pros & Cons
-                      </a>
-                      <a href="#faq" className="block text-cyan-400 hover:underline text-sm">
-                        → FAQ
-                      </a>
-                    </nav>
+      <a href="#leonardo-ai-key-features-capabilities" className="block text-cyan-400 hover:underline text-sm">
+        → Key Features
+      </a>
+      <a href="#leonardo-ai-pricing-plans-value-analysis" className="block text-cyan-400 hover:underline text-sm">
+        → Pricing Plans
+      </a>
+      <a href="#real-world-leonardo-ai-use-cases-applications" className="block text-cyan-400 hover:underline text-sm">
+        → Use Cases
+      </a>
+      <a href="#leonardo-ai-pros-and-cons-honest-assessment" className="block text-cyan-400 hover:underline text-sm">
+        → Pros & Cons
+      </a>
+      <a href="#faq" className="block text-cyan-400 hover:underline text-sm">
+        → FAQ
+      </a>
+    </nav>
                   </div>
                 </div>
               </div>
@@ -427,7 +427,7 @@ export default function LeonardoAiReviewPage({ tool }: LeonardoAiReviewPageProps
 
         {/* FAQ Section */}
         <section className="relative z-10 py-16 bg-gray-900/50" id="faq">
-          <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-12">
               <h2 className="text-3xl font-bold text-white mb-4"> Frequently Asked Questions About Leonardo.ai</h2>
               <p className="text-lg text-gray-300">Get answers to common questions about Leonardo.ai</p>
@@ -493,18 +493,18 @@ export default function LeonardoAiReviewPage({ tool }: LeonardoAiReviewPageProps
         </section>
 
         /* SiteOptz.ai Promotional Section */
-        <section className="relative z-10 py-16 bg-gray-900/30">
-          <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="bg-gradient-to-r from-gray-900/80 to-black/80 border border-gray-800 rounded-2xl p-10">
+        <section className="relative z-10 py-20">
+          <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
+            <div className="bg-gradient-to-r from-blue-900/20 to-purple-900/20 border border-gray-800 rounded-2xl p-12">
               <div className="text-center mb-8">
-                <p className="text-lg text-gray-300 leading-relaxed">
+                <p className="text-xl text-gray-300 mb-8">
                   SiteOptz.ai offers expert AI-powered tools and personalized support to rapidly enhance Image Generation strategies, helping organizations achieve dramatic boosts in organic traffic and search rankings, while maximizing their ROI.
                 </p>
               </div>
               
               <div className="grid md:grid-cols-2 gap-8 mb-8">
                 <div>
-                  <h3 className="text-xl font-semibold text-cyan-400 mb-4">Why Choose SiteOptz.ai</h3>
+                  <h3 className="text-4xl font-bold text-white mb-6">Why Choose SiteOptz.ai</h3>
                   <ul className="space-y-3 text-gray-300">
                     <li className="flex items-start">
                       <span className="text-cyan-400 mr-3">•</span>
@@ -518,7 +518,7 @@ export default function LeonardoAiReviewPage({ tool }: LeonardoAiReviewPageProps
                 </div>
                 
                 <div>
-                  <h3 className="text-xl font-semibold text-cyan-400 mb-4">Boost ROI With AI-Driven SEO</h3>
+                  <h3 className="text-4xl font-bold text-white mb-6">Boost ROI With AI-Driven SEO</h3>
                   <ul className="space-y-3 text-gray-300">
                     <li className="flex items-start">
                       <span className="text-cyan-400 mr-3">•</span>
@@ -537,18 +537,20 @@ export default function LeonardoAiReviewPage({ tool }: LeonardoAiReviewPageProps
               </div>
               
               <div className="text-center">
-                <h3 className="text-xl font-semibold text-white mb-4">Get Started With SiteOptz.ai</h3>
-                <p className="text-gray-300 mb-6">
+                <h2 className="text-4xl font-bold text-white mb-6">Get Started With SiteOptz.ai</h2>
+                <p className="text-xl text-gray-300 mb-8">
                   Join thousands of organizations maximizing their search performance and returns by integrating SiteOptz.ai&apos;s comprehensive toolset and expertise into their content workflows. Get in touch with AI experts today to unlock smarter, faster, and higher-ROI SEO solutions.
                 </p>
-                <a 
+                <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                  <a 
                   href="https://siteoptz.ai/contact" 
                   target="_blank" 
                   rel="noopener noreferrer"
-                  className="inline-block bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-bold py-4 px-8 rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-200"
+                  className="bg-gradient-to-r from-blue-600 to-purple-600 text-white hover:from-blue-700 hover:to-purple-700 font-bold py-4 px-8 rounded-lg transform hover:scale-105 transition-all duration-200 shadow-lg hover:shadow-xl"
                 >
                   Contact Our AI Experts
-                </a>
+                  </a>
+                </div>
               </div>
             </div>
           </div>
