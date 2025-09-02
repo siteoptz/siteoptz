@@ -251,26 +251,7 @@ export default function SciteAiReviewPage({ tool }: SciteAiReviewPageProps) {
                     <p className="mb-4">Let's explore why scite.ai might be the research & education solution you've been searching for.</p>
                   </div>
                 </div>
-
-                {/* CTA Buttons */}
-                <div className="flex flex-col sm:flex-row gap-4 mb-8">
-                  <a
-                    href="https://scite.ai/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="bg-gradient-to-r from-blue-600 to-purple-600 text-white hover:from-blue-700 hover:to-purple-700 font-bold py-4 px-8 rounded-lg transform hover:scale-105 transition-all duration-200 shadow-lg hover:shadow-xl text-center"
-                  >
-                    Try scite.ai Here
-                  </a>
-                  <Link
-                    href="/compare"
-                    className="border-2 border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-black font-bold py-4 px-8 rounded-lg transition-all duration-200 text-center"
-                  >
-                    Compare Alternatives
-                  </Link>
-                </div>
-
-              </div>
+</div>
 
               {/* Sidebar Quick Info */}
               <div className="lg:w-1/3">
@@ -504,20 +485,12 @@ export default function SciteAiReviewPage({ tool }: SciteAiReviewPageProps) {
               <p className="text-xl text-gray-300 mb-8">
                 Join thousands of professionals using scite.ai to streamline their research & education workflows.
               </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <a
-                  href="https://scite.ai/"
-                  target="_blank"
-                  rel="noopener noreferrer"
+              <div className="flex justify-center">
+                <Link
+                  href="/contact"
                   className="bg-gradient-to-r from-blue-600 to-purple-600 text-white hover:from-blue-700 hover:to-purple-700 font-bold py-4 px-8 rounded-lg transform hover:scale-105 transition-all duration-200 shadow-lg hover:shadow-xl"
                 >
-                  Start Free Trial
-                </a>
-                <Link
-                  href="/alternatives/scite-ai"
-                  className="border-2 border-gray-600 text-gray-300 hover:border-cyan-400 hover:text-cyan-400 font-bold py-4 px-8 rounded-lg transition-all duration-200"
-                >
-                  View Alternatives
+                  Talk to an AI Expert
                 </Link>
               </div>
             </div>

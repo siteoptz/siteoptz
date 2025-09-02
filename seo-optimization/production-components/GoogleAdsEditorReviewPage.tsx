@@ -251,26 +251,7 @@ export default function GoogleAdsEditorReviewPage({ tool }: GoogleAdsEditorRevie
                     <p className="mb-4">Let's explore why Google Ads Editor might be the campaign management solution you've been searching for.</p>
                   </div>
                 </div>
-
-                {/* CTA Buttons */}
-                <div className="flex flex-col sm:flex-row gap-4 mb-8">
-                  <a
-                    href="https://ads.google.com/home/tools/ads-editor/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="bg-gradient-to-r from-blue-600 to-purple-600 text-white hover:from-blue-700 hover:to-purple-700 font-bold py-4 px-8 rounded-lg transform hover:scale-105 transition-all duration-200 shadow-lg hover:shadow-xl text-center"
-                  >
-                    Download Google Ads Editor
-                  </a>
-                  <Link
-                    href="/compare"
-                    className="border-2 border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-black font-bold py-4 px-8 rounded-lg transition-all duration-200 text-center"
-                  >
-                    Compare Alternatives
-                  </Link>
-                </div>
-
-              </div>
+</div>
 
               {/* Sidebar Quick Info */}
               <div className="lg:w-1/3">
