@@ -1,21 +1,81 @@
-import React from 'react';
+const fs = require('fs');
+const path = require('path');
+
+// Priority tools that need full SEO structure updates
+const priorityTools = [
+  'chatgpt', 'claude', 'gemini', 'midjourney', 'jasper-ai', 'copy-ai', 
+  'notion-ai', 'grammarly', 'canva-ai', 'synthesia', 'elevenlabs', 'murf-ai',
+  'writesonic', 'rytr', 'semrush', 'ahrefs', 'surfer-seo', 'frase'
+];
+
+// Get the Loomly template as our reference
+const loomlyTemplate = fs.readFileSync('./pages/reviews/loomly.tsx', 'utf8');
+
+// Function to extract sections from Loomly template
+function extractLoomlyStructure() {
+  // Extract the key sections we need
+  const sections = {
+    imports: loomlyTemplate.match(/import[\s\S]*?;/g).join('\n'),
+    schemaStructure: loomlyTemplate.match(/const reviewSchema = \{[\s\S]*?\};/)[0],
+    breadcrumbSchema: loomlyTemplate.match(/const breadcrumbSchema = \{[\s\S]*?\};/)[0],
+    faqSchema: loomlyTemplate.match(/const faqSchema = \{[\s\S]*?\};/)[0],
+    heroSection: loomlyTemplate.match(/<section className="relative z-10 py-12">[\s\S]*?<\/section>/)[0],
+    contentStructure: loomlyTemplate.match(/<section className="relative z-10 py-16">[\s\S]*?<\/section>/)[0]
+  };
+  
+  return sections;
+}
+
+// Function to generate tool-specific content based on actual data
+async function getToolData(toolSlug) {
+  try {
+    const toolsData = JSON.parse(fs.readFileSync('./public/data/aiToolsData.json', 'utf8'));
+    const tool = toolsData.find(t => t.slug === toolSlug);
+    
+    if (!tool) {
+      console.log(`⚠️  Tool data not found for ${toolSlug}`);
+      return null;
+    }
+    
+    return tool;
+  } catch (error) {
+    console.error('Error reading tools data:', error);
+    return null;
+  }
+}
+
+// Function to create full SEO component for a tool
+async function createFullSEOComponent(toolSlug) {
+  const toolData = await getToolData(toolSlug);
+  if (!toolData) return false;
+  
+  const toolName = toolData.name || toolSlug.split('-').map(word => 
+    word.charAt(0).toUpperCase() + word.slice(1)
+  ).join(' ');
+  
+  const componentName = toolSlug.split('-').map(word => 
+    word.charAt(0).toUpperCase() + word.slice(1)
+  ).join('') + 'ReviewPage';
+  
+  // Generate component based on Loomly structure
+  const component = `import React from 'react';
 import Head from 'next/head';
 import Image from 'next/image';
 import Link from 'next/link';
 import ToolLogo from '../../components/ToolLogo';
 import FAQSection from '../../components/comparison/FAQSection';
 
-export default function SurferSeoReviewPage() {
+export default function ${componentName}() {
   // Schema markup for SEO
   const reviewSchema = {
     "@context": "https://schema.org",
     "@type": "Review",
     "itemReviewed": {
       "@type": "SoftwareApplication",
-      "name": "Surfer SEO",
-      "description": "Surfer SEO is an innovative AI solution designed to enhance productivity and streamline workflows.",
-      "applicationCategory": "AI Tools",
-      "url": "https://surfer-seo.com",
+      "name": "${toolName}",
+      "description": "${toolData.description || `${toolName} is an innovative AI solution designed to enhance productivity and streamline workflows.`}",
+      "applicationCategory": "${toolData.category || 'AI Tools'}",
+      "url": "${toolData.website || `https://${toolSlug}.com`}",
       "operatingSystem": "Web"
     },
     "author": {
@@ -25,11 +85,11 @@ export default function SurferSeoReviewPage() {
     },
     "reviewRating": {
       "@type": "Rating",
-      "ratingValue": 4.2,
+      "ratingValue": ${toolData.rating || 4.2},
       "bestRating": 5,
       "worstRating": 1
     },
-    "reviewBody": "Comprehensive surfer seo review covering features, pricing, and alternatives."
+    "reviewBody": "Comprehensive ${toolName.toLowerCase()} review covering features, pricing, and alternatives."
   };
 
   const breadcrumbSchema = {
@@ -45,8 +105,8 @@ export default function SurferSeoReviewPage() {
       {
         "@type": "ListItem", 
         "position": 2,
-        "name": "AI Tools",
-        "item": "https://siteoptz.ai/tools/?category=AI%20Tools"
+        "name": "${toolData.category || 'AI Tools'}",
+        "item": "https://siteoptz.ai/tools/?category=${encodeURIComponent(toolData.category || 'AI Tools')}"
       },
       {
         "@type": "ListItem",
@@ -57,8 +117,8 @@ export default function SurferSeoReviewPage() {
       {
         "@type": "ListItem",
         "position": 4,
-        "name": "Surfer SEO Review",
-        "item": "https://siteoptz.ai/reviews/surfer-seo"
+        "name": "${toolName} Review",
+        "item": "https://siteoptz.ai/reviews/${toolSlug}"
       }
     ]
   };
@@ -69,26 +129,26 @@ export default function SurferSeoReviewPage() {
     "mainEntity": [
         {
             "@type": "Question",
-            "name": "What is Surfer SEO and how does it work?",
+            "name": "What is ${toolName} and how does it work?",
             "acceptedAnswer": {
                 "@type": "Answer",
-                "text": "Surfer SEO is an innovative AI solution that helps users enhance productivity and streamline workflows through advanced technology and intuitive features."
+                "text": "${toolData.description || `${toolName} is an innovative AI solution that helps users enhance productivity and streamline workflows through advanced technology and intuitive features.`}"
             }
         },
         {
             "@type": "Question",
-            "name": "How much does Surfer SEO cost?",
+            "name": "How much does ${toolName} cost?",
             "acceptedAnswer": {
                 "@type": "Answer",
-                "text": "Surfer SEO offers multiple pricing options starting from $59/month. Professional plans and enterprise solutions are available based on specific requirements."
+                "text": "${toolName} offers multiple pricing options starting from ${toolData.pricing?.[0]?.price_per_month === 0 ? 'free' : `$${toolData.pricing?.[0]?.price_per_month || 'custom pricing'}/month`}. Professional plans and enterprise solutions are available based on specific requirements."
             }
         },
         {
             "@type": "Question",
-            "name": "What are the best Surfer SEO alternatives?",
+            "name": "What are the best ${toolName} alternatives?",
             "acceptedAnswer": {
                 "@type": "Answer",
-                "text": "Popular Surfer SEO alternatives include other leading AI tools. The best alternative depends on your specific needs, budget, and feature requirements. Our comparison guide evaluates top alternatives based on features, pricing, and user experience."
+                "text": "Popular ${toolName} alternatives include other leading ${toolData.category || 'AI'} tools. The best alternative depends on your specific needs, budget, and feature requirements. Our comparison guide evaluates top alternatives based on features, pricing, and user experience."
             }
         }
     ]
@@ -98,20 +158,20 @@ export default function SurferSeoReviewPage() {
     <>
       <Head>
         {/* Primary SEO Tags */}
-        <title>Surfer SEO Review: Complete AI Tool Analysis | SiteOptz</title>
-        <meta name="description" content="Comprehensive Surfer SEO review. Surfer SEO features, pricing & alternatives compared. Expert analysis & user guide for 2025." />
-        <meta name="keywords" content="surfer-seo review, surfer-seo pricing, surfer-seo features, surfer-seo alternatives, ai tools" />
+        <title>${toolName} Review: ${toolData.description?.slice(0, 60) || 'Complete AI Tool Analysis'} | SiteOptz</title>
+        <meta name="description" content="Comprehensive ${toolName} review. ${toolData.description || `${toolName} features, pricing & alternatives compared.`} Expert analysis & user guide for 2025." />
+        <meta name="keywords" content="${toolSlug} review, ${toolSlug} pricing, ${toolSlug} features, ${toolSlug} alternatives, ${toolData.category?.toLowerCase() || 'ai tools'}" />
         <meta name="author" content="SiteOptz" />
         <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
         
         {/* Canonical URL */}
-        <link rel="canonical" href="https://siteoptz.ai/reviews/surfer-seo" />
+        <link rel="canonical" href="https://siteoptz.ai/reviews/${toolSlug}" />
         
         {/* Open Graph Meta Tags */}
         <meta property="og:type" content="article" />
-        <meta property="og:title" content="Surfer SEO Review: Complete Analysis | SiteOptz" />
-        <meta property="og:description" content="Comprehensive Surfer SEO review. Features, pricing & alternatives compared. Expert analysis for 2025." />
-        <meta property="og:url" content="https://siteoptz.ai/reviews/surfer-seo" />
+        <meta property="og:title" content="${toolName} Review: Complete Analysis | SiteOptz" />
+        <meta property="og:description" content="Comprehensive ${toolName} review. Features, pricing & alternatives compared. Expert analysis for 2025." />
+        <meta property="og:url" content="https://siteoptz.ai/reviews/${toolSlug}" />
         <meta property="og:site_name" content="SiteOptz" />
         <meta property="og:image" content="https://siteoptz.ai/og-image.png" />
         <meta property="og:image:width" content="1200" />
@@ -120,8 +180,8 @@ export default function SurferSeoReviewPage() {
         
         {/* Twitter Card Tags */}
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Surfer SEO Review: Complete Analysis" />
-        <meta name="twitter:description" content="Comprehensive Surfer SEO review with features, pricing & alternatives" />
+        <meta name="twitter:title" content="${toolName} Review: Complete Analysis" />
+        <meta name="twitter:description" content="Comprehensive ${toolName} review with features, pricing & alternatives" />
         <meta name="twitter:image" content="https://siteoptz.ai/og-image.png" />
         <meta name="twitter:creator" content="@siteoptz" />
         
@@ -156,11 +216,11 @@ export default function SurferSeoReviewPage() {
             <ol className="flex items-center space-x-2 text-gray-400 text-sm">
               <li><Link href="/" className="hover:text-cyan-400 transition-colors">Home</Link></li>
               <li><span className="mx-2">/</span></li>
-              <li><Link href="/tools/?category=AI%20Tools" className="hover:text-cyan-400 transition-colors">AI Tools</Link></li>
+              <li><Link href="/tools/?category=${encodeURIComponent(toolData.category || 'AI Tools')}" className="hover:text-cyan-400 transition-colors">${toolData.category || 'AI Tools'}</Link></li>
               <li><span className="mx-2">/</span></li>
               <li><Link href="/reviews" className="hover:text-cyan-400 transition-colors">Reviews</Link></li>
               <li><span className="mx-2">/</span></li>
-              <li className="text-cyan-400" aria-current="page">Surfer SEO</li>
+              <li className="text-cyan-400" aria-current="page">${toolName}</li>
             </ol>
           </div>
         </nav>
@@ -174,14 +234,14 @@ export default function SurferSeoReviewPage() {
                 <div className="flex items-center mb-8">
                   <div className="mr-6">
                     <ToolLogo 
-                      toolName="Surfer SEO"
+                      toolName="${toolName}"
                       size="xl"
                       className="w-16 h-16"
                     />
                   </div>
                   <div>
                     <h1 className="text-4xl md:text-5xl font-bold text-white mb-4">
-                      Surfer SEO Review
+                      ${toolName} Review
                     </h1>
                     {/* Rating Display */}
                     <div className="flex items-center mb-4">
@@ -189,7 +249,7 @@ export default function SurferSeoReviewPage() {
                         {[...Array(5)].map((_, i) => (
                           <svg
                             key={i}
-                            className={`w-5 h-5 ${i < Math.floor(4.2) ? 'text-yellow-400' : 'text-gray-300'}`}
+                            className={\`w-5 h-5 \${i < Math.floor(${toolData.rating || 4.2}) ? 'text-yellow-400' : 'text-gray-300'}\`}
                             fill="currentColor"
                             viewBox="0 0 20 20"
                           >
@@ -197,7 +257,7 @@ export default function SurferSeoReviewPage() {
                           </svg>
                         ))}
                       </div>
-                      <span className="text-blue-100 text-sm">4.2/5 (Expert Review)</span>
+                      <span className="text-blue-100 text-sm">${toolData.rating || 4.2}/5 (Expert Review)</span>
                     </div>
                   </div>
                 </div>
@@ -205,16 +265,16 @@ export default function SurferSeoReviewPage() {
                 {/* Hero Text Content */}
                 <div className="prose prose-lg prose-invert max-w-none mb-10">
                   <div className="text-xl text-blue-100 leading-relaxed space-y-4">
-                    <p className="mb-4">Looking for a comprehensive Surfer SEO review? You&apos;ve come to the right place. Surfer SEO has emerged as a leading AI solution, helping businesses streamline their workflows and boost productivity.</p>
-                    <p className="mb-4">Surfer SEO is an innovative AI solution designed to enhance productivity and streamline workflows through advanced technology.</p>
-                    <p className="mb-4">In this detailed Surfer SEO review, we&apos;ll dive deep into Surfer SEO&apos;s key features, pricing structure, real-world use cases, and how it stacks up against competitors. Our expert analysis covers everything from performance benchmarks to user experience.</p>
+                    <p className="mb-4">Looking for a comprehensive ${toolName} review? You&apos;ve come to the right place. ${toolName} has emerged as a leading ${toolData.category?.toLowerCase() || 'AI'} solution, helping businesses streamline their workflows and boost productivity.</p>
+                    <p className="mb-4">${toolData.description || `${toolName} is an innovative AI solution designed to enhance productivity and streamline workflows through advanced technology.`}</p>
+                    <p className="mb-4">In this detailed ${toolName} review, we&apos;ll dive deep into ${toolName}&apos;s key features, pricing structure, real-world use cases, and how it stacks up against competitors. Our expert analysis covers everything from performance benchmarks to user experience.</p>
                     <p className="mb-4">What you&apos;ll discover:
 - Comprehensive feature breakdown and capabilities
 - Detailed pricing analysis and value assessment  
 - Real-world use cases and implementation examples
 - Honest pros and cons from actual users
 - Side-by-side comparisons with top alternatives</p>
-                    <p className="mb-4">Let&apos;s explore why Surfer SEO might be the solution you&apos;ve been searching for.</p>
+                    <p className="mb-4">Let&apos;s explore why ${toolName} might be the solution you&apos;ve been searching for.</p>
                   </div>
                 </div>
               </div>
@@ -227,23 +287,24 @@ export default function SurferSeoReviewPage() {
                   <div className="space-y-4">
                     <div className="flex justify-between items-center">
                       <span className="text-gray-400">Category:</span>
-                      <Link href="/tools/?category=AI%20Tools" className="text-cyan-400 hover:underline text-sm">
-                        AI Tools
+                      <Link href="/tools/?category=${encodeURIComponent(toolData.category || 'AI Tools')}" className="text-cyan-400 hover:underline text-sm">
+                        ${toolData.category || 'AI Tools'}
                       </Link>
                     </div>
                     <div className="flex justify-between items-center">
                       <span className="text-gray-400">Best For:</span>
-                      <span className="text-white text-sm font-semibold">Professionals</span>
+                      <span className="text-white text-sm font-semibold">${toolData.category === 'Social Media' ? 'Marketing Teams' : toolData.category === 'Content Creation' ? 'Content Creators' : 'Professionals'}</span>
                     </div>
                     <div className="flex justify-between items-center">
                       <span className="text-gray-400">Starting Price:</span>
                       <span className="text-green-400 text-sm font-semibold">
-                        $59/month
+                        ${toolData.pricing?.[0]?.price_per_month === 0 ? 'Free' : 
+                          toolData.pricing?.[0]?.price_per_month ? `$${toolData.pricing[0].price_per_month}/month` : 'Custom'}
                       </span>
                     </div>
                     <div className="flex justify-between items-center">
                       <span className="text-gray-400">Rating:</span>
-                      <span className="text-yellow-400 text-sm font-semibold">★ 4.2/5</span>
+                      <span className="text-yellow-400 text-sm font-semibold">★ ${toolData.rating || 4.2}/5</span>
                     </div>
                   </div>
                   
@@ -280,82 +341,81 @@ export default function SurferSeoReviewPage() {
               
               <div className="mb-16" id="features">
                 <h2 className="text-3xl font-bold text-white mb-8">
-                  Surfer SEO Key Features & Capabilities
+                  ${toolName} Key Features & Capabilities
                 </h2>
                 
                 <div className="prose prose-lg prose-invert max-w-none">
                   <div className="space-y-6">
-                    <p className="text-gray-300 mb-6 leading-relaxed text-lg">When evaluating Surfer SEO, understanding its core features is essential for determining fit. Our analysis reveals several standout capabilities that set Surfer SEO apart in the AI tools market.</p>
+                    <p className="text-gray-300 mb-6 leading-relaxed text-lg">When evaluating ${toolName}, understanding its core features is essential for determining fit. Our analysis reveals several standout capabilities that set ${toolName} apart in the ${toolData.category || 'AI tools'} market.</p>
                     
                     <h3 className="text-xl font-semibold text-cyan-400 mb-6 mt-10">Core Features Overview</h3>
-                    <p className="text-gray-300 mb-6 leading-relaxed text-lg">Surfer SEO offers a comprehensive suite of features designed for AI applications:</p>
+                    <p className="text-gray-300 mb-6 leading-relaxed text-lg">${toolName} offers a comprehensive suite of features designed for ${toolData.category?.toLowerCase() || 'AI'} applications:</p>
                     
                     <p className="text-gray-300 mb-6 leading-relaxed text-lg"><strong className="text-white font-semibold">Primary Capabilities:</strong></p>
                     <ul className="list-disc list-inside mb-8 space-y-3 text-lg">
-                      <li className="text-gray-300 mb-3 leading-relaxed"><strong className="text-white font-semibold">Keyword research</strong>: Enhanced functionality for improved results</li>
-                      <li className="text-gray-300 mb-3 leading-relaxed"><strong className="text-white font-semibold">Content optimization</strong>: Enhanced functionality for improved results</li>
-                      <li className="text-gray-300 mb-3 leading-relaxed"><strong className="text-white font-semibold">SERP analysis</strong>: Enhanced functionality for improved results</li>
-                      <li className="text-gray-300 mb-3 leading-relaxed"><strong className="text-white font-semibold">Competitor analysis</strong>: Enhanced functionality for improved results</li>
-                      <li className="text-gray-300 mb-3 leading-relaxed"><strong className="text-white font-semibold">Content editor</strong>: Enhanced functionality for improved results</li>
+                      ${(toolData.features || ['Advanced AI integration', 'User-friendly interface', 'Scalable architecture', 'Real-time processing']).slice(0, 5).map(feature => 
+                        `<li className="text-gray-300 mb-3 leading-relaxed"><strong className="text-white font-semibold">${feature}</strong>: Enhanced functionality for improved results</li>`
+                      ).join('\n                      ')}
                     </ul>
                     
                     <h3 className="text-xl font-semibold text-cyan-400 mb-6 mt-10">Performance Benchmarks</h3>
-                    <p className="text-gray-300 mb-6 leading-relaxed text-lg">Our testing reveals Surfer SEO consistently delivers reliable performance across different use cases. The platform&apos;s capabilities position it among the top AI solutions available today.</p>
+                    <p className="text-gray-300 mb-6 leading-relaxed text-lg">Our testing reveals ${toolName} consistently delivers reliable performance across different use cases. The platform&apos;s capabilities position it among the top ${toolData.category?.toLowerCase() || 'AI'} solutions available today.</p>
                   </div>
                 </div>
               </div>
 
               <div className="mb-16" id="pricing">
                 <h2 className="text-3xl font-bold text-white mb-8">
-                  Surfer SEO Pricing Plans & Value Analysis
+                  ${toolName} Pricing Plans & Value Analysis
                 </h2>
                 
                 <div className="prose prose-lg prose-invert max-w-none">
                   <div className="space-y-6">
-                    <p className="text-gray-300 mb-6 leading-relaxed text-lg">Understanding Surfer SEO pricing is crucial for budget planning and ROI assessment. Our analysis breaks down each plan to help you choose the most cost-effective option.</p>
+                    <p className="text-gray-300 mb-6 leading-relaxed text-lg">Understanding ${toolName} pricing is crucial for budget planning and ROI assessment. Our analysis breaks down each plan to help you choose the most cost-effective option.</p>
                     
                     <h3 className="text-xl font-semibold text-cyan-400 mb-6 mt-10">Pricing Structure Overview</h3>
-                    <p className="text-gray-300 mb-6 leading-relaxed text-lg">Surfer SEO offers tiered pricing designed to accommodate different business needs and budgets:</p>
+                    <p className="text-gray-300 mb-6 leading-relaxed text-lg">${toolName} offers tiered pricing designed to accommodate different business needs and budgets:</p>
                     
                     <p className="text-gray-300 mb-6 leading-relaxed text-lg"><strong className="text-white font-semibold">Plan Comparison:</strong></p>
                     <ul className="list-disc list-inside mb-8 space-y-3 text-lg">
-                      <li className="text-gray-300 mb-3 leading-relaxed"><strong className="text-white font-semibold">Monthly ($59/month)</strong>: Keyword research, Content optimization, SERP analysis</li>
-                      <li className="text-gray-300 mb-3 leading-relaxed"><strong className="text-white font-semibold">Yearly ($49/month)</strong>: Content planner, Keyword clustering, Content briefs</li>
-                      <li className="text-gray-300 mb-3 leading-relaxed"><strong className="text-white font-semibold">Enterprise (Free)</strong>: Google Search Console, Google Analytics, WordPress</li>
+                      ${toolData.pricing ? toolData.pricing.map(plan => 
+                        `<li className="text-gray-300 mb-3 leading-relaxed"><strong className="text-white font-semibold">${plan.plan} ${plan.price_per_month === 0 ? '(Free)' : `($${plan.price_per_month}/month)`}</strong>: ${plan.features?.join(', ') || 'Comprehensive feature set'}</li>`
+                      ).join('\n                      ') : 
+                      `<li className="text-gray-300 mb-3 leading-relaxed"><strong className="text-white font-semibold">Contact for Pricing</strong>: Custom pricing based on usage and requirements</li>`}
                     </ul>
                     
                     <h3 className="text-xl font-semibold text-cyan-400 mb-6 mt-10">Value Assessment</h3>
-                    <p className="text-gray-300 mb-6 leading-relaxed text-lg">When evaluating Surfer SEO pricing, consider the ROI potential and feature utilization for your specific use case.</p>
+                    <p className="text-gray-300 mb-6 leading-relaxed text-lg">When evaluating ${toolName} pricing, consider the ROI potential and feature utilization for your specific use case.</p>
                   </div>
                 </div>
               </div>
 
               <div className="mb-16" id="use-cases">
                 <h2 className="text-3xl font-bold text-white mb-8">
-                  Real-World Surfer SEO Use Cases & Applications
+                  Real-World ${toolName} Use Cases & Applications
                 </h2>
                 
                 <div className="prose prose-lg prose-invert max-w-none">
                   <div className="space-y-6">
-                    <p className="text-gray-300 mb-6 leading-relaxed text-lg">Understanding how Surfer SEO performs in real-world scenarios helps evaluate its potential impact on your specific needs. Our research identifies several key use cases where Surfer SEO excels.</p>
+                    <p className="text-gray-300 mb-6 leading-relaxed text-lg">Understanding how ${toolName} performs in real-world scenarios helps evaluate its potential impact on your specific needs. Our research identifies several key use cases where ${toolName} excels.</p>
                     
                     <h3 className="text-xl font-semibold text-cyan-400 mb-6 mt-10">Primary Use Cases</h3>
                     
                     <p className="text-gray-300 mb-6 leading-relaxed text-lg"><strong className="text-white font-semibold">Professional Implementation:</strong></p>
-                    <p className="text-gray-300 mb-6 leading-relaxed text-lg">Businesses leverage Surfer SEO for workflow optimization requiring advanced capabilities and reliable performance. The platform&apos;s features make it ideal for professional environments.</p>
+                    <p className="text-gray-300 mb-6 leading-relaxed text-lg">Businesses leverage ${toolName} for ${toolData.category?.toLowerCase() || 'workflow optimization'} requiring advanced capabilities and reliable performance. The platform&apos;s features make it ideal for professional environments.</p>
                     
                     <p className="text-gray-300 mb-6 leading-relaxed text-lg"><strong className="text-white font-semibold">Team Collaboration:</strong></p>
-                    <p className="text-gray-300 mb-6 leading-relaxed text-lg">Teams use Surfer SEO to coordinate projects and enhance productivity. Collaboration features and shared workflows improve efficiency across departments.</p>
+                    <p className="text-gray-300 mb-6 leading-relaxed text-lg">Teams use ${toolName} to coordinate projects and enhance productivity. Collaboration features and shared workflows improve efficiency across departments.</p>
                     
                     <h3 className="text-xl font-semibold text-cyan-400 mb-6 mt-10">Industry Applications</h3>
-                    <p className="text-gray-300 mb-6 leading-relaxed text-lg">Surfer SEO serves various industries with specialized features and capabilities tailored to specific sector requirements.</p>
+                    <p className="text-gray-300 mb-6 leading-relaxed text-lg">${toolName} serves various industries with specialized features and capabilities tailored to specific sector requirements.</p>
                   </div>
                 </div>
               </div>
 
               <div className="mb-16" id="pros-cons">
                 <h2 className="text-3xl font-bold text-white mb-8">
-                  Surfer SEO Pros and Cons: Honest Assessment
+                  ${toolName} Pros and Cons: Honest Assessment
                 </h2>
                 
                 <div className="prose prose-lg prose-invert max-w-none">
@@ -365,26 +425,21 @@ export default function SurferSeoReviewPage() {
                     <h3 className="text-xl font-semibold text-cyan-400 mb-6 mt-10">Advantages</h3>
                     <p className="text-gray-300 mb-6 leading-relaxed text-lg"><strong className="text-white font-semibold">Key Strengths:</strong></p>
                     <ul className="list-disc list-inside mb-8 space-y-3 text-lg">
-                      <li className="text-gray-300 mb-3 leading-relaxed"><strong className="text-white font-semibold">Excellent content optimization</strong></li>
-                      <li className="text-gray-300 mb-3 leading-relaxed"><strong className="text-white font-semibold">Data-driven recommendations</strong></li>
-                      <li className="text-gray-300 mb-3 leading-relaxed"><strong className="text-white font-semibold">User-friendly interface</strong></li>
-                      <li className="text-gray-300 mb-3 leading-relaxed"><strong className="text-white font-semibold">Strong SEO focus</strong></li>
-                      <li className="text-gray-300 mb-3 leading-relaxed"><strong className="text-white font-semibold">Regular updates</strong></li>
-                      <li className="text-gray-300 mb-3 leading-relaxed"><strong className="text-white font-semibold">Good customer support</strong></li>
+                      ${(toolData.pros || ['Innovative technology', 'User-friendly design', 'Reliable performance', 'Regular updates']).map(pro => 
+                        `<li className="text-gray-300 mb-3 leading-relaxed"><strong className="text-white font-semibold">${pro}</strong></li>`
+                      ).join('\n                      ')}
                     </ul>
                     
                     <h3 className="text-xl font-semibold text-cyan-400 mb-6 mt-10">Limitations</h3>
                     <p className="text-gray-300 mb-6 leading-relaxed text-lg"><strong className="text-white font-semibold">Areas for Improvement:</strong></p>
                     <ul className="list-disc list-inside mb-8 space-y-3 text-lg">
-                      <li className="text-gray-300 mb-3 leading-relaxed"><strong className="text-white font-semibold">Higher pricing</strong></li>
-                      <li className="text-gray-300 mb-3 leading-relaxed"><strong className="text-white font-semibold">Limited to SEO features</strong></li>
-                      <li className="text-gray-300 mb-3 leading-relaxed"><strong className="text-white font-semibold">Steep learning curve</strong></li>
-                      <li className="text-gray-300 mb-3 leading-relaxed"><strong className="text-white font-semibold">Requires SEO knowledge</strong></li>
-                      <li className="text-gray-300 mb-3 leading-relaxed"><strong className="text-white font-semibold">No general AI features</strong></li>
+                      ${(toolData.cons || ['Learning curve', 'Pricing considerations', 'Feature limitations', 'Integration complexity']).map(con => 
+                        `<li className="text-gray-300 mb-3 leading-relaxed"><strong className="text-white font-semibold">${con}</strong></li>`
+                      ).join('\n                      ')}
                     </ul>
                     
                     <h3 className="text-xl font-semibold text-cyan-400 mb-6 mt-10">Overall Assessment</h3>
-                    <p className="text-gray-300 mb-6 leading-relaxed text-lg">Surfer SEO represents a strong choice in the AI tools category, with advantages typically outweighing limitations for most use cases.</p>
+                    <p className="text-gray-300 mb-6 leading-relaxed text-lg">${toolName} represents a strong choice in the ${toolData.category || 'AI tools'} category, with advantages typically outweighing limitations for most use cases.</p>
                   </div>
                 </div>
               </div>
@@ -396,15 +451,15 @@ export default function SurferSeoReviewPage() {
         <section className="relative z-10 py-16 bg-gray-900/50" id="faq">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-12">
-              <h2 className="text-3xl font-bold text-white mb-4">Frequently Asked Questions About Surfer SEO</h2>
-              <p className="text-lg text-gray-300">Get answers to common questions about Surfer SEO</p>
+              <h2 className="text-3xl font-bold text-white mb-4">Frequently Asked Questions About ${toolName}</h2>
+              <p className="text-lg text-gray-300">Get answers to common questions about ${toolName}</p>
             </div>
             
             <FAQSection faqs={[
-              {"question":"What is Surfer SEO and how does it work?","answer":"Surfer SEO is an innovative AI solution that helps users enhance productivity through advanced technology and features."},
-              {"question":"How much does Surfer SEO cost?","answer":"Surfer SEO offers multiple pricing options starting from $59/month. Professional and enterprise solutions are available based on specific requirements."},
-              {"question":"What are the best Surfer SEO alternatives?","answer":"Popular Surfer SEO alternatives include other leading AI tools. The best alternative depends on your specific needs, budget, and feature requirements."},
-              {"question":"Is Surfer SEO suitable for businesses?","answer":"Yes, Surfer SEO is designed for business use with professional features, scalability options, and enterprise-grade capabilities."}
+              {"question":"What is ${toolName} and how does it work?","answer":"${toolData.description || `${toolName} is an innovative AI solution that helps users enhance productivity through advanced technology and features.`}"},
+              {"question":"How much does ${toolName} cost?","answer":"${toolName} offers multiple pricing options starting from ${toolData.pricing?.[0]?.price_per_month === 0 ? 'free' : toolData.pricing?.[0]?.price_per_month ? `$${toolData.pricing[0].price_per_month}/month` : 'custom pricing'}. Professional and enterprise solutions are available based on specific requirements."},
+              {"question":"What are the best ${toolName} alternatives?","answer":"Popular ${toolName} alternatives include other leading ${toolData.category || 'AI'} tools. The best alternative depends on your specific needs, budget, and feature requirements."},
+              {"question":"Is ${toolName} suitable for businesses?","answer":"Yes, ${toolName} is designed for business use with professional features, scalability options, and enterprise-grade capabilities."}
             ]} />
           </div>
         </section>
@@ -413,17 +468,17 @@ export default function SurferSeoReviewPage() {
         <section className="relative z-10 py-16">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-12">
-              <h2 className="text-3xl font-bold text-white mb-4">Explore More AI Tools</h2>
-              <p className="text-lg text-gray-300">Compare Surfer SEO with other leading solutions</p>
+              <h2 className="text-3xl font-bold text-white mb-4">Explore More ${toolData.category || 'AI'} Tools</h2>
+              <p className="text-lg text-gray-300">Compare ${toolName} with other leading solutions</p>
             </div>
             
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-              <Link href="/tools/?category=AI%20Tools" className="group">
+              <Link href="/tools/?category=${encodeURIComponent(toolData.category || 'AI Tools')}" className="group">
                 <div className="bg-black border border-gray-800 rounded-xl p-6 hover:border-gray-600 transition-all">
                   <h3 className="text-xl font-semibold text-white mb-3 group-hover:text-cyan-400">
-                    Browse AI Tools
+                    Browse ${toolData.category || 'AI'} Tools
                   </h3>
-                  <p className="text-gray-300">Discover all AI solutions in our directory</p>
+                  <p className="text-gray-300">Discover all ${toolData.category?.toLowerCase() || 'AI'} solutions in our directory</p>
                 </div>
               </Link>
               
@@ -444,10 +499,10 @@ export default function SurferSeoReviewPage() {
           <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
             <div className="bg-gradient-to-r from-blue-900/20 to-purple-900/20 border border-gray-800 rounded-2xl p-12">
               <h2 className="text-4xl font-bold text-white mb-6">
-                Ready to Get Started with Surfer SEO?
+                Ready to Get Started with ${toolName}?
               </h2>
               <p className="text-xl text-gray-300 mb-8">
-                Join thousands of professionals using Surfer SEO to enhance their workflows.
+                Join thousands of professionals using ${toolName} to enhance their ${toolData.category?.toLowerCase() || 'workflows'}.
               </p>
               <div className="flex justify-center">
                 <Link
@@ -463,4 +518,54 @@ export default function SurferSeoReviewPage() {
       </div>
     </>
   );
+}`;
+
+  return component;
 }
+
+// Function to update existing component or create new one
+async function updatePriorityComponent(toolSlug) {
+  const filePath = `./seo-optimization/production-components/${toolSlug.split('-').map(word => 
+    word.charAt(0).toUpperCase() + word.slice(1)
+  ).join('')}ReviewPage.tsx`;
+  
+  console.log(`Updating: ${toolSlug} -> ${filePath}`);
+  
+  try {
+    const newComponent = await createFullSEOComponent(toolSlug);
+    fs.writeFileSync(filePath, newComponent);
+    console.log(`✅ Successfully updated ${toolSlug}`);
+    return true;
+  } catch (error) {
+    console.error(`❌ Error updating ${toolSlug}:`, error.message);
+    return false;
+  }
+}
+
+// Main execution function
+async function main() {
+  console.log('🚀 Starting priority SEO component updates...\n');
+  
+  let successful = 0;
+  let failed = 0;
+  
+  for (const toolSlug of priorityTools) {
+    const success = await updatePriorityComponent(toolSlug);
+    if (success) {
+      successful++;
+    } else {
+      failed++;
+    }
+  }
+  
+  console.log(`\n📊 Summary:`);
+  console.log(`✅ Successfully updated: ${successful} components`);
+  console.log(`❌ Failed to update: ${failed} components`);
+  console.log(`📁 Total processed: ${priorityTools.length} priority tools`);
+}
+
+if (require.main === module) {
+  main().catch(console.error);
+}
+
+module.exports = { updatePriorityComponent, createFullSEOComponent };
