@@ -3,11 +3,19 @@
 
 export const toolCategories = [
   'AI Automation',
+  'AI Education',
+  'AI For Business',
+  'AI Sales',
+  'AI Translator',
+  'AI Website Builder',
   'Best Voice AI Tools',
   'Code Generation',
   'Content Creation',
   'Data Analysis',
+  'E-commerce',
   'Email Marketing',
+  'Finance AI',
+  'Health AI',
   'Image Generation',
   'Paid Search & PPC',
   'Productivity',
@@ -16,7 +24,9 @@ export const toolCategories = [
   'Social Media',
   'UX',
   'Video Generation',
+  'Voice AI',
   'Website Builder',
+  'Writing',
 ] as const;
 
 export type ToolCategory = typeof toolCategories[number];

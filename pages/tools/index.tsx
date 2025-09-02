@@ -7,7 +7,7 @@ import { getPageConfig, buildCanonicalUrl } from "../../seo/meta-config.js";
 import PricingCalculator from "../../components/tools/PricingCalculator";
 import FAQSection from "../../components/FAQ/FAQSection";
 import { loadUnifiedToolsData, getAllCategories, getToolsByCategory, searchTools } from "../../utils/unifiedDataAdapter.js";
-import { toolCategories, getCategoryDisplayName } from "../../config/categories";
+import { getCategoryDisplayName } from "../../config/categories";
 import ToolLogo from "../../components/ToolLogo";
 
 export async function getStaticProps() {
@@ -15,6 +15,9 @@ export async function getStaticProps() {
   
   // Load unified tools data from both old and new datasets
   const allTools = loadUnifiedToolsData(fs, path);
+  
+  // Get actual categories from the data
+  const actualCategories = getAllCategories(allTools);
   
   let faqData = [];
   if (fs.existsSync(faqPath)) {
@@ -25,7 +28,7 @@ export async function getStaticProps() {
   return {
     props: {
       tools: allTools,
-      categories: toolCategories, // Use predefined categories
+      categories: actualCategories, // Use actual categories from data
       faqs: faqData,
     },
   };
@@ -51,12 +54,12 @@ export default function ToolsPage({ tools, categories, faqs }: { tools: any[], c
   // Handle category from URL query parameter
   useEffect(() => {
     if (router.isReady && router.query.category) {
-      const categoryFromUrl = router.query.category as string;
+      const categoryFromUrl = decodeURIComponent(router.query.category as string);
       if (categoryFromUrl !== selectedCategory) {
         setSelectedCategory(categoryFromUrl);
       }
     }
-  }, [router.isReady, router.query.category, selectedCategory]);
+  }, [router.isReady, router.query.category]);
 
   // Filter tools based on category and search
   useEffect(() => {
@@ -75,10 +78,10 @@ export default function ToolsPage({ tools, categories, faqs }: { tools: any[], c
     setFilteredTools(filtered);
     
     // Update selected tool if current one is not in filtered results
-    if (filtered.length > 0 && !filtered.find(t => t.tool_name === selectedTool?.tool_name)) {
+    if (filtered.length > 0 && selectedTool && !filtered.find(t => t.tool_name === selectedTool?.tool_name)) {
       setSelectedTool(filtered[0]);
     }
-  }, [selectedCategory, searchQuery, tools, selectedTool]);
+  }, [selectedCategory, searchQuery, tools]);
 
   // Redirect to review page when user changes selection in dropdown
   const handleToolChange = (toolName: string) => {
