@@ -9,59 +9,65 @@ const path = require('path');
  */
 
 function addSimpleTool() {
-  // Example tool - modify this object to add your tool
+  // New tool from Insidr.ai scraping
   const newTool = {
-    "id": "google-ads",
-    "name": "Google Ads",
-    "slug": "google-ads",
-    "logo": "/images/tools/google-ads-logo.svg",
+    "id": "tugan-ai",
+    "name": "Tugan AI",
+    "slug": "tugan-ai",
+    "logo": "/images/tools/tugan-ai-logo.svg",
     "meta": {
-      "title": "Google Ads Review, Pricing, Features & Alternatives [2025]",
-      "description": "Comprehensive review of Google Ads. World's largest PPC advertising platform. Compare features, pricing, and alternatives."
+      "title": "Tugan AI Review: Content Transformation Tool [2025] | SiteOptz",
+      "description": "Comprehensive Tugan AI review. Transform existing content into marketing materials, emails & social posts. Features, pricing & alternatives compared."
     },
     "overview": {
-      "developer": "Google",
-      "release_year": 2000,
-      "description": "Google Ads is the world's largest pay-per-click advertising platform, allowing businesses to create and manage ads across Google Search, Display Network, YouTube, and other Google properties.",
-      "category": "Paid Search & PPC"
+      "developer": "Tugan AI Inc.",
+      "release_year": 2023,
+      "description": "Tugan AI is an AI-powered content transformation tool that converts existing content into original marketing material, emails, and social media posts. Features instant repurposing, multiple format generation, and brand voice adaptation for efficient content marketing workflows.",
+      "category": "Content Creation",
+      "website": "https://tugan.ai"
     },
     "features": [
-      "Search Network advertising with keyword targeting",
-      "Display Network campaigns across millions of websites",
-      "YouTube video advertising and remarketing",
-      "Smart Bidding with machine learning optimization",
-      "Conversion tracking and attribution modeling"
+      "Instant content repurposing from any source material",
+      "Multiple format generation (emails, social posts, articles)",
+      "Brand voice adaptation and tone consistency",
+      "Automatic content optimization for different platforms",
+      "Bulk content transformation capabilities"
     ],
     "pros": [
-      "Largest search advertising reach",
-      "Advanced targeting and automation",
-      "Comprehensive campaign types"
+      "Saves significant time on content creation",
+      "Maintains brand voice across formats",
+      "Easy-to-use interface with one-click generation"
     ],
     "cons": [
-      "Complex interface for beginners",
-      "Can be expensive without optimization"
+      "Requires quality source content for best results",
+      "Limited customization options in lower tiers"
     ],
     "pricing": [
       {
-        "plan": "Pay-per-click",
-        "price_per_month": "Variable",
-        "features": ["Pay only when someone clicks your ad", "Set daily budgets and bid limits", "No minimum spend requirements"]
+        "plan": "Free",
+        "price_per_month": 0,
+        "features": ["3 content transformations per month", "Basic templates", "Email support"]
       },
       {
-        "plan": "Smart Campaigns",
-        "price_per_month": "Variable",
-        "features": ["Automated ad management", "Machine learning optimization", "Simplified setup process"]
+        "plan": "Starter",
+        "price_per_month": 29,
+        "features": ["50 content transformations per month", "All templates", "Priority support", "Brand voice training"]
+      },
+      {
+        "plan": "Pro",
+        "price_per_month": 79,
+        "features": ["Unlimited transformations", "Custom templates", "API access", "Team collaboration", "Advanced analytics"]
       }
     ],
     "benchmarks": {
-      "speed": 9,
-      "accuracy": 9,
-      "integration": 10,
-      "ease_of_use": 7,
+      "speed": 8,
+      "accuracy": 8,
+      "integration": 7,
+      "ease_of_use": 9,
       "value": 8
     },
-    "rating": 4.5,
-    "review_count": 12500
+    "rating": 4.3,
+    "review_count": 850
   };
 
   // Load existing tools

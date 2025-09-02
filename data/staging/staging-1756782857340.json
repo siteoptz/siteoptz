@@ -1,0 +1,270 @@
+{
+  "timestamp": "2025-09-02T03:14:17.340Z",
+  "tool_count": 4,
+  "categories": [
+    "Social Media",
+    "Customer Support",
+    "Image Generation",
+    "AI Tools"
+  ],
+  "tools": [
+    {
+      "name": "VideoCreate AI",
+      "category": "Social Media",
+      "website": "https://videocreate-ai.com",
+      "description": "AI-powered video creation platform for generating professional marketing videos, tutorials, and soci..."
+    },
+    {
+      "name": "ChatBot Builder",
+      "category": "Customer Support",
+      "website": "https://chatbot-builder.com",
+      "description": "Intelligent chatbot development platform that uses AI to create conversational agents for customer s..."
+    },
+    {
+      "name": "ImageGen Pro",
+      "category": "Image Generation",
+      "website": "https://imagegen-pro.com",
+      "description": "Advanced AI image generation tool for creating custom artwork, product photos, and marketing visuals..."
+    },
+    {
+      "name": "CodeAssist AI",
+      "category": "AI Tools",
+      "website": "https://codeassist-ai.com",
+      "description": "AI-powered coding assistant that helps developers write, debug, and optimize code across multiple pr..."
+    }
+  ],
+  "full_data": [
+    {
+      "name": "VideoCreate AI",
+      "description": "AI-powered video creation platform for generating professional marketing videos, tutorials, and social media content with automated editing and customizable templates",
+      "website": "https://videocreate-ai.com",
+      "developer": "VideoCreate Studios",
+      "discovered_at": "2025-09-02T03:14:17.337Z",
+      "category": "Social Media",
+      "features": [
+        "Post scheduling",
+        "Analytics dashboard",
+        "Multi-platform support",
+        "Content creation"
+      ],
+      "pricing": [
+        {
+          "plan": "Free",
+          "price_per_month": 0,
+          "features": [
+            "Basic features",
+            "Limited usage",
+            "Community support"
+          ]
+        },
+        {
+          "plan": "Pro",
+          "price_per_month": 29,
+          "features": [
+            "All features",
+            "Unlimited usage",
+            "Priority support"
+          ]
+        },
+        {
+          "plan": "Enterprise",
+          "price_per_month": 99,
+          "features": [
+            "Custom integrations",
+            "Advanced analytics",
+            "Dedicated support"
+          ]
+        }
+      ],
+      "pros": [
+        "Comprehensive feature set",
+        "Excellent user experience",
+        "Strong performance and reliability",
+        "Good value for money"
+      ],
+      "cons": [
+        "Learning curve for advanced features",
+        "Premium pricing for full functionality",
+        "Limited free tier features"
+      ],
+      "rating": 4.113419676472136,
+      "review_count": 601,
+      "enriched": true,
+      "enriched_at": "2025-09-02T03:14:17.339Z"
+    },
+    {
+      "name": "ChatBot Builder",
+      "description": "Intelligent chatbot development platform that uses AI to create conversational agents for customer support, sales, and lead generation with natural language processing",
+      "website": "https://chatbot-builder.com",
+      "developer": "ChatBot Technologies",
+      "discovered_at": "2025-09-02T03:14:17.338Z",
+      "category": "Customer Support",
+      "features": [
+        "Advanced AI capabilities",
+        "User-friendly interface",
+        "Integration support",
+        "Real-time processing"
+      ],
+      "pricing": [
+        {
+          "plan": "Free",
+          "price_per_month": 0,
+          "features": [
+            "Basic features",
+            "Limited usage",
+            "Community support"
+          ]
+        },
+        {
+          "plan": "Pro",
+          "price_per_month": 29,
+          "features": [
+            "All features",
+            "Unlimited usage",
+            "Priority support"
+          ]
+        },
+        {
+          "plan": "Enterprise",
+          "price_per_month": 99,
+          "features": [
+            "Custom integrations",
+            "Advanced analytics",
+            "Dedicated support"
+          ]
+        }
+      ],
+      "pros": [
+        "Comprehensive feature set",
+        "Excellent user experience",
+        "Strong performance and reliability",
+        "Good value for money"
+      ],
+      "cons": [
+        "Learning curve for advanced features",
+        "Premium pricing for full functionality",
+        "Limited free tier features"
+      ],
+      "rating": 4.295827608076237,
+      "review_count": 707,
+      "enriched": true,
+      "enriched_at": "2025-09-02T03:14:17.339Z"
+    },
+    {
+      "name": "ImageGen Pro",
+      "description": "Advanced AI image generation tool for creating custom artwork, product photos, and marketing visuals with style transfer and brand consistency features",
+      "website": "https://imagegen-pro.com",
+      "developer": "ImageGen Labs",
+      "discovered_at": "2025-09-02T03:14:17.338Z",
+      "category": "Image Generation",
+      "features": [
+        "Advanced AI capabilities",
+        "User-friendly interface",
+        "Integration support",
+        "Real-time processing"
+      ],
+      "pricing": [
+        {
+          "plan": "Free",
+          "price_per_month": 0,
+          "features": [
+            "Basic features",
+            "Limited usage",
+            "Community support"
+          ]
+        },
+        {
+          "plan": "Pro",
+          "price_per_month": 29,
+          "features": [
+            "All features",
+            "Unlimited usage",
+            "Priority support"
+          ]
+        },
+        {
+          "plan": "Enterprise",
+          "price_per_month": 99,
+          "features": [
+            "Custom integrations",
+            "Advanced analytics",
+            "Dedicated support"
+          ]
+        }
+      ],
+      "pros": [
+        "Comprehensive feature set",
+        "Excellent user experience",
+        "Strong performance and reliability",
+        "Good value for money"
+      ],
+      "cons": [
+        "Learning curve for advanced features",
+        "Premium pricing for full functionality",
+        "Limited free tier features"
+      ],
+      "rating": 4.8260198848868985,
+      "review_count": 408,
+      "enriched": true,
+      "enriched_at": "2025-09-02T03:14:17.339Z"
+    },
+    {
+      "name": "CodeAssist AI",
+      "description": "AI-powered coding assistant that helps developers write, debug, and optimize code across multiple programming languages with intelligent suggestions and best practices",
+      "website": "https://codeassist-ai.com",
+      "developer": "CodeAssist Corp",
+      "discovered_at": "2025-09-02T03:14:17.339Z",
+      "category": "AI Tools",
+      "features": [
+        "Advanced AI capabilities",
+        "User-friendly interface",
+        "Integration support",
+        "Real-time processing"
+      ],
+      "pricing": [
+        {
+          "plan": "Free",
+          "price_per_month": 0,
+          "features": [
+            "Basic features",
+            "Limited usage",
+            "Community support"
+          ]
+        },
+        {
+          "plan": "Pro",
+          "price_per_month": 29,
+          "features": [
+            "All features",
+            "Unlimited usage",
+            "Priority support"
+          ]
+        },
+        {
+          "plan": "Enterprise",
+          "price_per_month": 99,
+          "features": [
+            "Custom integrations",
+            "Advanced analytics",
+            "Dedicated support"
+          ]
+        }
+      ],
+      "pros": [
+        "Comprehensive feature set",
+        "Excellent user experience",
+        "Strong performance and reliability",
+        "Good value for money"
+      ],
+      "cons": [
+        "Learning curve for advanced features",
+        "Premium pricing for full functionality",
+        "Limited free tier features"
+      ],
+      "rating": 4.781750003591969,
+      "review_count": 270,
+      "enriched": true,
+      "enriched_at": "2025-09-02T03:14:17.339Z"
+    }
+  ]
+}

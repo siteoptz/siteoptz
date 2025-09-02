@@ -1,0 +1,32 @@
+[
+  {
+    "name": "Tugan AI",
+    "description": "AI-powered content transformation tool that converts existing content into original marketing material, emails, and social media posts. Features instant repurposing, multiple format generation, and brand voice adaptation for efficient content marketing workflows.",
+    "website": "https://tugan.ai",
+    "developer": "Tugan AI Inc."
+  },
+  {
+    "name": "Synthflow AI",
+    "description": "No-code AI voice assistant builder for automating customer interactions and phone calls. Create intelligent voice bots that handle customer service, lead qualification, and appointment scheduling with natural conversation flows.",
+    "website": "https://synthflow.ai",
+    "developer": "Synthflow Technologies"
+  },
+  {
+    "name": "Colossyan Creator",
+    "description": "AI video platform for creating professional training and educational videos with AI avatars. Features customizable synthetic actors, multilingual support, and automatic scene generation for corporate learning content.",
+    "website": "https://colossyan.com",
+    "developer": "Colossyan Ltd"
+  },
+  {
+    "name": "Wondershare Virbo",
+    "description": "AI avatar video generator with 300+ voices and templates for professional video creation. Create spokesperson videos, product demonstrations, and marketing content with realistic AI presenters in multiple languages.",
+    "website": "https://virbo.wondershare.com",
+    "developer": "Wondershare Technology"
+  },
+  {
+    "name": "Elai.io",
+    "description": "AI video generation platform with customizable avatars for creating training and marketing videos. Transform text into engaging video content with lifelike AI presenters and automated voice synchronization.",
+    "website": "https://elai.io",
+    "developer": "Elai Technologies"
+  }
+]

@@ -1,0 +1,961 @@
+{
+  "timestamp": "2025-09-02T15:14:29.145Z",
+  "tool_count": 15,
+  "categories": [
+    "Social Media",
+    "Voice AI",
+    "Video Generation",
+    "AI Tools",
+    "Image Generation",
+    "Customer Support"
+  ],
+  "tools": [
+    {
+      "name": "Opus Clip",
+      "category": "Social Media",
+      "website": "https://www.opus.pro",
+      "description": "AI-powered video clipping tool that automatically creates short-form content from long videos. Featu..."
+    },
+    {
+      "name": "ElevenLabs Voice Design",
+      "category": "Voice AI",
+      "website": "https://elevenlabs.io/voice-design",
+      "description": "Advanced AI voice generation platform offering ultra-realistic text-to-speech, voice cloning, and vo..."
+    },
+    {
+      "name": "Pika Labs",
+      "category": "Video Generation",
+      "website": "https://pika.art",
+      "description": "AI video generation platform that transforms text and images into cinematic videos. Features include..."
+    },
+    {
+      "name": "Tome",
+      "category": "AI Tools",
+      "website": "https://tome.app",
+      "description": "AI-native presentation builder that creates stunning presentations from prompts. Combines generative..."
+    },
+    {
+      "name": "Playground AI",
+      "category": "Image Generation",
+      "website": "https://playgroundai.com",
+      "description": "Professional AI image generation and editing platform with advanced controls. Features mixed image e..."
+    },
+    {
+      "name": "Krea AI",
+      "category": "Image Generation",
+      "website": "https://krea.ai",
+      "description": "Real-time AI image generation tool with live canvas editing. Paint and see AI generate in real-time,..."
+    },
+    {
+      "name": "Magnific AI",
+      "category": "Image Generation",
+      "website": "https://magnific.ai",
+      "description": "AI-powered image upscaler and enhancer that adds incredible detail to images. Specializes in face en..."
+    },
+    {
+      "name": "Vectorizer AI",
+      "category": "Image Generation",
+      "website": "https://vectorizer.ai",
+      "description": "Advanced AI tool that converts raster images to vector graphics with unprecedented accuracy. Perfect..."
+    },
+    {
+      "name": "Lexica Art",
+      "category": "Image Generation",
+      "website": "https://lexica.art",
+      "description": "AI art generation platform with a massive searchable database of AI-generated images. Features custo..."
+    },
+    {
+      "name": "Reka AI",
+      "category": "Voice AI",
+      "website": "https://reka.ai",
+      "description": "Multimodal AI platform for understanding and generating content across text, images, video, and audi..."
+    },
+    {
+      "name": "Cohere Command R",
+      "category": "Customer Support",
+      "website": "https://cohere.com/command",
+      "description": "Enterprise-grade LLM optimized for retrieval augmented generation (RAG) and tool use. Features multi..."
+    },
+    {
+      "name": "Mistral Large",
+      "category": "Customer Support",
+      "website": "https://mistral.ai",
+      "description": "Cutting-edge large language model with exceptional reasoning capabilities and multilingual support. ..."
+    },
+    {
+      "name": "Groq",
+      "category": "AI Tools",
+      "website": "https://groq.com",
+      "description": "Ultra-fast AI inference platform delivering LLM responses at unprecedented speeds. Powered by custom..."
+    },
+    {
+      "name": "Together AI",
+      "category": "AI Tools",
+      "website": "https://together.ai",
+      "description": "Platform for running, fine-tuning, and deploying open-source AI models at scale. Features model opti..."
+    },
+    {
+      "name": "Fireworks AI",
+      "category": "AI Tools",
+      "website": "https://fireworks.ai",
+      "description": "Fast and affordable platform for deploying production AI applications. Specializes in low-latency in..."
+    }
+  ],
+  "full_data": [
+    {
+      "name": "Opus Clip",
+      "description": "AI-powered video clipping tool that automatically creates short-form content from long videos. Features intelligent scene detection, automatic captioning, and viral moment identification for social media optimization.",
+      "website": "https://www.opus.pro",
+      "developer": "Opus Pro Inc.",
+      "category": "Social Media",
+      "features": [
+        "Post scheduling",
+        "Analytics dashboard",
+        "Multi-platform support",
+        "Content creation"
+      ],
+      "pricing": [
+        {
+          "plan": "Free",
+          "price_per_month": 0,
+          "features": [
+            "Basic features",
+            "Limited usage",
+            "Community support"
+          ]
+        },
+        {
+          "plan": "Pro",
+          "price_per_month": 29,
+          "features": [
+            "All features",
+            "Unlimited usage",
+            "Priority support"
+          ]
+        },
+        {
+          "plan": "Enterprise",
+          "price_per_month": 99,
+          "features": [
+            "Custom integrations",
+            "Advanced analytics",
+            "Dedicated support"
+          ]
+        }
+      ],
+      "pros": [
+        "Comprehensive feature set",
+        "Excellent user experience",
+        "Strong performance and reliability",
+        "Good value for money"
+      ],
+      "cons": [
+        "Learning curve for advanced features",
+        "Premium pricing for full functionality",
+        "Limited free tier features"
+      ],
+      "rating": 4.655979244613507,
+      "review_count": 952,
+      "enriched": true,
+      "enriched_at": "2025-09-02T15:14:29.143Z"
+    },
+    {
+      "name": "ElevenLabs Voice Design",
+      "description": "Advanced AI voice generation platform offering ultra-realistic text-to-speech, voice cloning, and voice design capabilities. Create custom voices with emotional range and multilingual support.",
+      "website": "https://elevenlabs.io/voice-design",
+      "developer": "ElevenLabs",
+      "category": "Voice AI",
+      "features": [
+        "Natural voice synthesis",
+        "Multiple voice options",
+        "Audio customization",
+        "API access"
+      ],
+      "pricing": [
+        {
+          "plan": "Free",
+          "price_per_month": 0,
+          "features": [
+            "Basic features",
+            "Limited usage",
+            "Community support"
+          ]
+        },
+        {
+          "plan": "Pro",
+          "price_per_month": 29,
+          "features": [
+            "All features",
+            "Unlimited usage",
+            "Priority support"
+          ]
+        },
+        {
+          "plan": "Enterprise",
+          "price_per_month": 99,
+          "features": [
+            "Custom integrations",
+            "Advanced analytics",
+            "Dedicated support"
+          ]
+        }
+      ],
+      "pros": [
+        "Comprehensive feature set",
+        "Excellent user experience",
+        "Strong performance and reliability",
+        "Good value for money"
+      ],
+      "cons": [
+        "Learning curve for advanced features",
+        "Premium pricing for full functionality",
+        "Limited free tier features"
+      ],
+      "rating": 4.94117409596862,
+      "review_count": 622,
+      "enriched": true,
+      "enriched_at": "2025-09-02T15:14:29.144Z"
+    },
+    {
+      "name": "Pika Labs",
+      "description": "AI video generation platform that transforms text and images into cinematic videos. Features include camera controls, style consistency, and professional-grade video editing capabilities.",
+      "website": "https://pika.art",
+      "developer": "Pika Labs Inc.",
+      "category": "Video Generation",
+      "features": [
+        "Advanced AI capabilities",
+        "User-friendly interface",
+        "Integration support",
+        "Real-time processing"
+      ],
+      "pricing": [
+        {
+          "plan": "Free",
+          "price_per_month": 0,
+          "features": [
+            "Basic features",
+            "Limited usage",
+            "Community support"
+          ]
+        },
+        {
+          "plan": "Pro",
+          "price_per_month": 29,
+          "features": [
+            "All features",
+            "Unlimited usage",
+            "Priority support"
+          ]
+        },
+        {
+          "plan": "Enterprise",
+          "price_per_month": 99,
+          "features": [
+            "Custom integrations",
+            "Advanced analytics",
+            "Dedicated support"
+          ]
+        }
+      ],
+      "pros": [
+        "Comprehensive feature set",
+        "Excellent user experience",
+        "Strong performance and reliability",
+        "Good value for money"
+      ],
+      "cons": [
+        "Learning curve for advanced features",
+        "Premium pricing for full functionality",
+        "Limited free tier features"
+      ],
+      "rating": 4.036773381976317,
+      "review_count": 138,
+      "enriched": true,
+      "enriched_at": "2025-09-02T15:14:29.144Z"
+    },
+    {
+      "name": "Tome",
+      "description": "AI-native presentation builder that creates stunning presentations from prompts. Combines generative AI with design intelligence to produce professional decks in minutes.",
+      "website": "https://tome.app",
+      "developer": "Tome Inc.",
+      "category": "AI Tools",
+      "features": [
+        "Advanced AI capabilities",
+        "User-friendly interface",
+        "Integration support",
+        "Real-time processing"
+      ],
+      "pricing": [
+        {
+          "plan": "Free",
+          "price_per_month": 0,
+          "features": [
+            "Basic features",
+            "Limited usage",
+            "Community support"
+          ]
+        },
+        {
+          "plan": "Pro",
+          "price_per_month": 29,
+          "features": [
+            "All features",
+            "Unlimited usage",
+            "Priority support"
+          ]
+        },
+        {
+          "plan": "Enterprise",
+          "price_per_month": 99,
+          "features": [
+            "Custom integrations",
+            "Advanced analytics",
+            "Dedicated support"
+          ]
+        }
+      ],
+      "pros": [
+        "Comprehensive feature set",
+        "Excellent user experience",
+        "Strong performance and reliability",
+        "Good value for money"
+      ],
+      "cons": [
+        "Learning curve for advanced features",
+        "Premium pricing for full functionality",
+        "Limited free tier features"
+      ],
+      "rating": 4.720147218959005,
+      "review_count": 213,
+      "enriched": true,
+      "enriched_at": "2025-09-02T15:14:29.144Z"
+    },
+    {
+      "name": "Playground AI",
+      "description": "Professional AI image generation and editing platform with advanced controls. Features mixed image editing, style presets, and commercial-use licensing for creative professionals.",
+      "website": "https://playgroundai.com",
+      "developer": "Playground AI Inc.",
+      "category": "Image Generation",
+      "features": [
+        "Advanced AI capabilities",
+        "User-friendly interface",
+        "Integration support",
+        "Real-time processing"
+      ],
+      "pricing": [
+        {
+          "plan": "Free",
+          "price_per_month": 0,
+          "features": [
+            "Basic features",
+            "Limited usage",
+            "Community support"
+          ]
+        },
+        {
+          "plan": "Pro",
+          "price_per_month": 29,
+          "features": [
+            "All features",
+            "Unlimited usage",
+            "Priority support"
+          ]
+        },
+        {
+          "plan": "Enterprise",
+          "price_per_month": 99,
+          "features": [
+            "Custom integrations",
+            "Advanced analytics",
+            "Dedicated support"
+          ]
+        }
+      ],
+      "pros": [
+        "Comprehensive feature set",
+        "Excellent user experience",
+        "Strong performance and reliability",
+        "Good value for money"
+      ],
+      "cons": [
+        "Learning curve for advanced features",
+        "Premium pricing for full functionality",
+        "Limited free tier features"
+      ],
+      "rating": 4.024406747240571,
+      "review_count": 499,
+      "enriched": true,
+      "enriched_at": "2025-09-02T15:14:29.144Z"
+    },
+    {
+      "name": "Krea AI",
+      "description": "Real-time AI image generation tool with live canvas editing. Paint and see AI generate in real-time, perfect for concept art, design iteration, and creative exploration.",
+      "website": "https://krea.ai",
+      "developer": "Krea Inc.",
+      "category": "Image Generation",
+      "features": [
+        "Advanced AI capabilities",
+        "User-friendly interface",
+        "Integration support",
+        "Real-time processing"
+      ],
+      "pricing": [
+        {
+          "plan": "Free",
+          "price_per_month": 0,
+          "features": [
+            "Basic features",
+            "Limited usage",
+            "Community support"
+          ]
+        },
+        {
+          "plan": "Pro",
+          "price_per_month": 29,
+          "features": [
+            "All features",
+            "Unlimited usage",
+            "Priority support"
+          ]
+        },
+        {
+          "plan": "Enterprise",
+          "price_per_month": 99,
+          "features": [
+            "Custom integrations",
+            "Advanced analytics",
+            "Dedicated support"
+          ]
+        }
+      ],
+      "pros": [
+        "Comprehensive feature set",
+        "Excellent user experience",
+        "Strong performance and reliability",
+        "Good value for money"
+      ],
+      "cons": [
+        "Learning curve for advanced features",
+        "Premium pricing for full functionality",
+        "Limited free tier features"
+      ],
+      "rating": 4.9078357854122645,
+      "review_count": 1086,
+      "enriched": true,
+      "enriched_at": "2025-09-02T15:14:29.144Z"
+    },
+    {
+      "name": "Magnific AI",
+      "description": "AI-powered image upscaler and enhancer that adds incredible detail to images. Specializes in face enhancement, texture generation, and resolution enhancement up to 16x.",
+      "website": "https://magnific.ai",
+      "developer": "Magnific",
+      "category": "Image Generation",
+      "features": [
+        "Advanced AI capabilities",
+        "User-friendly interface",
+        "Integration support",
+        "Real-time processing"
+      ],
+      "pricing": [
+        {
+          "plan": "Free",
+          "price_per_month": 0,
+          "features": [
+            "Basic features",
+            "Limited usage",
+            "Community support"
+          ]
+        },
+        {
+          "plan": "Pro",
+          "price_per_month": 29,
+          "features": [
+            "All features",
+            "Unlimited usage",
+            "Priority support"
+          ]
+        },
+        {
+          "plan": "Enterprise",
+          "price_per_month": 99,
+          "features": [
+            "Custom integrations",
+            "Advanced analytics",
+            "Dedicated support"
+          ]
+        }
+      ],
+      "pros": [
+        "Comprehensive feature set",
+        "Excellent user experience",
+        "Strong performance and reliability",
+        "Good value for money"
+      ],
+      "cons": [
+        "Learning curve for advanced features",
+        "Premium pricing for full functionality",
+        "Limited free tier features"
+      ],
+      "rating": 4.622747366965007,
+      "review_count": 398,
+      "enriched": true,
+      "enriched_at": "2025-09-02T15:14:29.144Z"
+    },
+    {
+      "name": "Vectorizer AI",
+      "description": "Advanced AI tool that converts raster images to vector graphics with unprecedented accuracy. Perfect for logo design, illustration work, and print production.",
+      "website": "https://vectorizer.ai",
+      "developer": "Cedar Lake Ventures",
+      "category": "Image Generation",
+      "features": [
+        "Advanced AI capabilities",
+        "User-friendly interface",
+        "Integration support",
+        "Real-time processing"
+      ],
+      "pricing": [
+        {
+          "plan": "Free",
+          "price_per_month": 0,
+          "features": [
+            "Basic features",
+            "Limited usage",
+            "Community support"
+          ]
+        },
+        {
+          "plan": "Pro",
+          "price_per_month": 29,
+          "features": [
+            "All features",
+            "Unlimited usage",
+            "Priority support"
+          ]
+        },
+        {
+          "plan": "Enterprise",
+          "price_per_month": 99,
+          "features": [
+            "Custom integrations",
+            "Advanced analytics",
+            "Dedicated support"
+          ]
+        }
+      ],
+      "pros": [
+        "Comprehensive feature set",
+        "Excellent user experience",
+        "Strong performance and reliability",
+        "Good value for money"
+      ],
+      "cons": [
+        "Learning curve for advanced features",
+        "Premium pricing for full functionality",
+        "Limited free tier features"
+      ],
+      "rating": 4.700027630132314,
+      "review_count": 509,
+      "enriched": true,
+      "enriched_at": "2025-09-02T15:14:29.144Z"
+    },
+    {
+      "name": "Lexica Art",
+      "description": "AI art generation platform with a massive searchable database of AI-generated images. Features custom model training and commercial licensing options.",
+      "website": "https://lexica.art",
+      "developer": "Lexica Inc.",
+      "category": "Image Generation",
+      "features": [
+        "Advanced AI capabilities",
+        "User-friendly interface",
+        "Integration support",
+        "Real-time processing"
+      ],
+      "pricing": [
+        {
+          "plan": "Free",
+          "price_per_month": 0,
+          "features": [
+            "Basic features",
+            "Limited usage",
+            "Community support"
+          ]
+        },
+        {
+          "plan": "Pro",
+          "price_per_month": 29,
+          "features": [
+            "All features",
+            "Unlimited usage",
+            "Priority support"
+          ]
+        },
+        {
+          "plan": "Enterprise",
+          "price_per_month": 99,
+          "features": [
+            "Custom integrations",
+            "Advanced analytics",
+            "Dedicated support"
+          ]
+        }
+      ],
+      "pros": [
+        "Comprehensive feature set",
+        "Excellent user experience",
+        "Strong performance and reliability",
+        "Good value for money"
+      ],
+      "cons": [
+        "Learning curve for advanced features",
+        "Premium pricing for full functionality",
+        "Limited free tier features"
+      ],
+      "rating": 4.396876185416868,
+      "review_count": 499,
+      "enriched": true,
+      "enriched_at": "2025-09-02T15:14:29.144Z"
+    },
+    {
+      "name": "Reka AI",
+      "description": "Multimodal AI platform for understanding and generating content across text, images, video, and audio. Features advanced reasoning capabilities and API access for developers.",
+      "website": "https://reka.ai",
+      "developer": "Reka",
+      "category": "Voice AI",
+      "features": [
+        "Natural voice synthesis",
+        "Multiple voice options",
+        "Audio customization",
+        "API access"
+      ],
+      "pricing": [
+        {
+          "plan": "Free",
+          "price_per_month": 0,
+          "features": [
+            "Basic features",
+            "Limited usage",
+            "Community support"
+          ]
+        },
+        {
+          "plan": "Pro",
+          "price_per_month": 29,
+          "features": [
+            "All features",
+            "Unlimited usage",
+            "Priority support"
+          ]
+        },
+        {
+          "plan": "Enterprise",
+          "price_per_month": 99,
+          "features": [
+            "Custom integrations",
+            "Advanced analytics",
+            "Dedicated support"
+          ]
+        }
+      ],
+      "pros": [
+        "Comprehensive feature set",
+        "Excellent user experience",
+        "Strong performance and reliability",
+        "Good value for money"
+      ],
+      "cons": [
+        "Learning curve for advanced features",
+        "Premium pricing for full functionality",
+        "Limited free tier features"
+      ],
+      "rating": 4.02380359435364,
+      "review_count": 978,
+      "enriched": true,
+      "enriched_at": "2025-09-02T15:14:29.144Z"
+    },
+    {
+      "name": "Cohere Command R",
+      "description": "Enterprise-grade LLM optimized for retrieval augmented generation (RAG) and tool use. Features multilingual support and advanced reasoning for business applications.",
+      "website": "https://cohere.com/command",
+      "developer": "Cohere",
+      "category": "Customer Support",
+      "features": [
+        "Advanced AI capabilities",
+        "User-friendly interface",
+        "Integration support",
+        "Real-time processing"
+      ],
+      "pricing": [
+        {
+          "plan": "Free",
+          "price_per_month": 0,
+          "features": [
+            "Basic features",
+            "Limited usage",
+            "Community support"
+          ]
+        },
+        {
+          "plan": "Pro",
+          "price_per_month": 29,
+          "features": [
+            "All features",
+            "Unlimited usage",
+            "Priority support"
+          ]
+        },
+        {
+          "plan": "Enterprise",
+          "price_per_month": 99,
+          "features": [
+            "Custom integrations",
+            "Advanced analytics",
+            "Dedicated support"
+          ]
+        }
+      ],
+      "pros": [
+        "Comprehensive feature set",
+        "Excellent user experience",
+        "Strong performance and reliability",
+        "Good value for money"
+      ],
+      "cons": [
+        "Learning curve for advanced features",
+        "Premium pricing for full functionality",
+        "Limited free tier features"
+      ],
+      "rating": 4.535779170680957,
+      "review_count": 160,
+      "enriched": true,
+      "enriched_at": "2025-09-02T15:14:29.144Z"
+    },
+    {
+      "name": "Mistral Large",
+      "description": "Cutting-edge large language model with exceptional reasoning capabilities and multilingual support. Offers both API access and on-premise deployment options.",
+      "website": "https://mistral.ai",
+      "developer": "Mistral AI",
+      "category": "Customer Support",
+      "features": [
+        "Advanced AI capabilities",
+        "User-friendly interface",
+        "Integration support",
+        "Real-time processing"
+      ],
+      "pricing": [
+        {
+          "plan": "Free",
+          "price_per_month": 0,
+          "features": [
+            "Basic features",
+            "Limited usage",
+            "Community support"
+          ]
+        },
+        {
+          "plan": "Pro",
+          "price_per_month": 29,
+          "features": [
+            "All features",
+            "Unlimited usage",
+            "Priority support"
+          ]
+        },
+        {
+          "plan": "Enterprise",
+          "price_per_month": 99,
+          "features": [
+            "Custom integrations",
+            "Advanced analytics",
+            "Dedicated support"
+          ]
+        }
+      ],
+      "pros": [
+        "Comprehensive feature set",
+        "Excellent user experience",
+        "Strong performance and reliability",
+        "Good value for money"
+      ],
+      "cons": [
+        "Learning curve for advanced features",
+        "Premium pricing for full functionality",
+        "Limited free tier features"
+      ],
+      "rating": 4.8957367408444945,
+      "review_count": 779,
+      "enriched": true,
+      "enriched_at": "2025-09-02T15:14:29.144Z"
+    },
+    {
+      "name": "Groq",
+      "description": "Ultra-fast AI inference platform delivering LLM responses at unprecedented speeds. Powered by custom LPU chips for real-time AI applications.",
+      "website": "https://groq.com",
+      "developer": "Groq Inc.",
+      "category": "AI Tools",
+      "features": [
+        "Advanced AI capabilities",
+        "User-friendly interface",
+        "Integration support",
+        "Real-time processing"
+      ],
+      "pricing": [
+        {
+          "plan": "Free",
+          "price_per_month": 0,
+          "features": [
+            "Basic features",
+            "Limited usage",
+            "Community support"
+          ]
+        },
+        {
+          "plan": "Pro",
+          "price_per_month": 29,
+          "features": [
+            "All features",
+            "Unlimited usage",
+            "Priority support"
+          ]
+        },
+        {
+          "plan": "Enterprise",
+          "price_per_month": 99,
+          "features": [
+            "Custom integrations",
+            "Advanced analytics",
+            "Dedicated support"
+          ]
+        }
+      ],
+      "pros": [
+        "Comprehensive feature set",
+        "Excellent user experience",
+        "Strong performance and reliability",
+        "Good value for money"
+      ],
+      "cons": [
+        "Learning curve for advanced features",
+        "Premium pricing for full functionality",
+        "Limited free tier features"
+      ],
+      "rating": 4.174734519840179,
+      "review_count": 860,
+      "enriched": true,
+      "enriched_at": "2025-09-02T15:14:29.145Z"
+    },
+    {
+      "name": "Together AI",
+      "description": "Platform for running, fine-tuning, and deploying open-source AI models at scale. Features model optimization and serverless GPU infrastructure.",
+      "website": "https://together.ai",
+      "developer": "Together Computer",
+      "category": "AI Tools",
+      "features": [
+        "Advanced AI capabilities",
+        "User-friendly interface",
+        "Integration support",
+        "Real-time processing"
+      ],
+      "pricing": [
+        {
+          "plan": "Free",
+          "price_per_month": 0,
+          "features": [
+            "Basic features",
+            "Limited usage",
+            "Community support"
+          ]
+        },
+        {
+          "plan": "Pro",
+          "price_per_month": 29,
+          "features": [
+            "All features",
+            "Unlimited usage",
+            "Priority support"
+          ]
+        },
+        {
+          "plan": "Enterprise",
+          "price_per_month": 99,
+          "features": [
+            "Custom integrations",
+            "Advanced analytics",
+            "Dedicated support"
+          ]
+        }
+      ],
+      "pros": [
+        "Comprehensive feature set",
+        "Excellent user experience",
+        "Strong performance and reliability",
+        "Good value for money"
+      ],
+      "cons": [
+        "Learning curve for advanced features",
+        "Premium pricing for full functionality",
+        "Limited free tier features"
+      ],
+      "rating": 4.350780811118128,
+      "review_count": 274,
+      "enriched": true,
+      "enriched_at": "2025-09-02T15:14:29.145Z"
+    },
+    {
+      "name": "Fireworks AI",
+      "description": "Fast and affordable platform for deploying production AI applications. Specializes in low-latency inference and model optimization for enterprise use.",
+      "website": "https://fireworks.ai",
+      "developer": "Fireworks.ai",
+      "category": "AI Tools",
+      "features": [
+        "Advanced AI capabilities",
+        "User-friendly interface",
+        "Integration support",
+        "Real-time processing"
+      ],
+      "pricing": [
+        {
+          "plan": "Free",
+          "price_per_month": 0,
+          "features": [
+            "Basic features",
+            "Limited usage",
+            "Community support"
+          ]
+        },
+        {
+          "plan": "Pro",
+          "price_per_month": 29,
+          "features": [
+            "All features",
+            "Unlimited usage",
+            "Priority support"
+          ]
+        },
+        {
+          "plan": "Enterprise",
+          "price_per_month": 99,
+          "features": [
+            "Custom integrations",
+            "Advanced analytics",
+            "Dedicated support"
+          ]
+        }
+      ],
+      "pros": [
+        "Comprehensive feature set",
+        "Excellent user experience",
+        "Strong performance and reliability",
+        "Good value for money"
+      ],
+      "cons": [
+        "Learning curve for advanced features",
+        "Premium pricing for full functionality",
+        "Limited free tier features"
+      ],
+      "rating": 4.3737589320179415,
+      "review_count": 853,
+      "enriched": true,
+      "enriched_at": "2025-09-02T15:14:29.145Z"
+    }
+  ]
+}

@@ -1,0 +1,162 @@
+[
+  {
+    "name": "Surfer",
+    "description": "Best SEO tools that will help write amazing SEO-optimized content with data-driven insights and keyword suggestions.",
+    "website": "https://surferseo.com",
+    "developer": "Surfer",
+    "category": "SEO & Optimization",
+    "pricing": [{"plan": "Essential", "price": 69, "billing_period": "month"}]
+  },
+  {
+    "name": "Taskade",
+    "description": "AI-powered productivity tool that enhances collaboration and efficiency with custom AI agents and project management features.",
+    "website": "https://taskade.com",
+    "developer": "Taskade Inc.",
+    "category": "Productivity",
+    "pricing": [{"plan": "Pro", "price": 8, "billing_period": "month"}]
+  },
+  {
+    "name": "Crayo",
+    "description": "Generate viral-ready clips in seconds with AI voiceovers, engaging subtitles, and gameplay optimization for social media.",
+    "website": "https://crayo.ai",
+    "developer": "Crayo AI",
+    "category": "Video Generation",
+    "pricing": [{"plan": "Starter", "price": 13, "billing_period": "month"}]
+  },
+  {
+    "name": "VEED",
+    "description": "All-in-one AI video generator and editor with text-to-video, text-to-voice, and stock footage integration capabilities.",
+    "website": "https://veed.io",
+    "developer": "VEED.IO",
+    "category": "Video Generation",
+    "pricing": [{"plan": "Basic", "price": 10, "billing_period": "month"}]
+  },
+  {
+    "name": "Tugan",
+    "description": "AI tool that transforms existing content into original marketing material, emails, and social media posts instantly.",
+    "website": "https://tugan.ai",
+    "developer": "Tugan.ai",
+    "category": "Content Creation",
+    "pricing": [{"plan": "Starter", "price": 29, "billing_period": "month"}]
+  },
+  {
+    "name": "WellSaid Labs",
+    "description": "AI voice generation platform creating high-quality, natural-sounding voiceovers with customizable voices for scalable audio production.",
+    "website": "https://wellsaidlabs.com",
+    "developer": "WellSaid Labs",
+    "category": "Voice AI",
+    "pricing": [{"plan": "Maker", "price": 44, "billing_period": "month"}]
+  },
+  {
+    "name": "Dante AI",
+    "description": "Personalized AI chatbots trained using your data without coding. Deploy GPT-4 chatbots quickly with easy website integration.",
+    "website": "https://dante-ai.com",
+    "developer": "Dante AI",
+    "category": "AI Automation",
+    "pricing": [{"plan": "Starter", "price": 19, "billing_period": "month"}]
+  },
+  {
+    "name": "Chatbase",
+    "description": "Custom ChatGPT-like chatbot for specific content and data with website widget integration and API options.",
+    "website": "https://chatbase.co",
+    "developer": "Chatbase",
+    "category": "AI Automation",
+    "pricing": [{"plan": "Hobby", "price": 19, "billing_period": "month"}]
+  },
+  {
+    "name": "Opus Clip",
+    "description": "AI-powered video clipping tool that automatically creates short-form content from long videos with intelligent scene detection.",
+    "website": "https://opus.pro",
+    "developer": "Opus Pro",
+    "category": "Video Generation",
+    "pricing": [{"plan": "Starter", "price": 15, "billing_period": "month"}]
+  },
+  {
+    "name": "HeyGen",
+    "description": "AI video generation platform that creates professional videos with AI avatars and voices in multiple languages.",
+    "website": "https://heygen.com",
+    "developer": "HeyGen",
+    "category": "Video Generation",
+    "pricing": [{"plan": "Creator", "price": 24, "billing_period": "month"}]
+  },
+  {
+    "name": "Fliki",
+    "description": "AI-powered text-to-video and text-to-speech platform that creates videos with lifelike voiceovers in 75+ languages.",
+    "website": "https://fliki.ai",
+    "developer": "Fliki",
+    "category": "Video Generation",
+    "pricing": [{"plan": "Standard", "price": 21, "billing_period": "month"}]
+  },
+  {
+    "name": "Synthflow AI",
+    "description": "No-code AI voice assistant builder for automating customer interactions and phone calls.",
+    "website": "https://synthflow.ai",
+    "developer": "Synthflow",
+    "category": "Voice AI",
+    "pricing": [{"plan": "Starter", "price": 29, "billing_period": "month"}]
+  },
+  {
+    "name": "Voiceflow",
+    "description": "Collaborative platform for designing, prototyping, and building voice and chat assistants.",
+    "website": "https://voiceflow.com",
+    "developer": "Voiceflow",
+    "category": "AI Automation",
+    "pricing": [{"plan": "Pro", "price": 40, "billing_period": "month"}]
+  },
+  {
+    "name": "Descript",
+    "description": "All-in-one audio and video editing platform with AI-powered transcription and overdub features.",
+    "website": "https://descript.com",
+    "developer": "Descript",
+    "category": "Video Generation",
+    "pricing": [{"plan": "Creator", "price": 12, "billing_period": "month"}]
+  },
+  {
+    "name": "Invideo AI",
+    "description": "AI video creation platform that turns ideas into videos with automated editing and voiceovers.",
+    "website": "https://invideo.io",
+    "developer": "InVideo",
+    "category": "Video Generation",
+    "pricing": [{"plan": "Plus", "price": 20, "billing_period": "month"}]
+  },
+  {
+    "name": "Colossyan",
+    "description": "AI video platform for creating training videos with AI avatars in minutes.",
+    "website": "https://colossyan.com",
+    "developer": "Colossyan",
+    "category": "Video Generation",
+    "pricing": [{"plan": "Starter", "price": 19, "billing_period": "month"}]
+  },
+  {
+    "name": "Wondershare Virbo",
+    "description": "AI avatar video generator with 300+ voices and templates for professional video creation.",
+    "website": "https://virbo.wondershare.com",
+    "developer": "Wondershare",
+    "category": "Video Generation",
+    "pricing": [{"plan": "Monthly", "price": 9.9, "billing_period": "month"}]
+  },
+  {
+    "name": "Elai.io",
+    "description": "AI video generation platform with customizable avatars for creating training and marketing videos.",
+    "website": "https://elai.io",
+    "developer": "Elai.io",
+    "category": "Video Generation",
+    "pricing": [{"plan": "Basic", "price": 23, "billing_period": "month"}]
+  },
+  {
+    "name": "Pictory",
+    "description": "AI video creation tool that automatically creates short videos from long-form content.",
+    "website": "https://pictory.ai",
+    "developer": "Pictory",
+    "category": "Video Generation",
+    "pricing": [{"plan": "Starter", "price": 19, "billing_period": "month"}]
+  },
+  {
+    "name": "Simplified",
+    "description": "All-in-one AI-powered design and content creation platform for modern marketing teams.",
+    "website": "https://simplified.com",
+    "developer": "Simplified",
+    "category": "Content Creation",
+    "pricing": [{"plan": "Small Team", "price": 12, "billing_period": "month"}]
+  }
+]

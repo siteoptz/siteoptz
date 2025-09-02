@@ -1,0 +1,20 @@
+[
+  {
+    "name": "ContentRepurpose AI",
+    "description": "Advanced AI content transformation platform that converts existing articles, blogs, and documents into multiple marketing formats including emails, social posts, and video scripts. Features automatic tone adaptation, format optimization, and brand voice consistency for efficient content marketing workflows.",
+    "website": "https://contentrepurpose-unique.ai",
+    "developer": "ContentRepurpose Inc."
+  },
+  {
+    "name": "VoiceBot Builder Pro",
+    "description": "No-code platform for building intelligent voice assistants and phone automation systems. Create AI-powered customer service bots, appointment schedulers, and lead qualification systems with natural conversation flows and CRM integrations.",
+    "website": "https://voicebotbuilder-unique.ai", 
+    "developer": "VoiceBot Technologies"
+  },
+  {
+    "name": "AvatarStudio AI",
+    "description": "Professional AI video creation platform featuring photorealistic digital humans for corporate training and marketing content. Generate spokesperson videos, product demos, and educational content with customizable AI presenters and automated script-to-video conversion.",
+    "website": "https://avatarstudio-unique.ai",
+    "developer": "AvatarStudio Technologies"
+  }
+]

@@ -1,0 +1,373 @@
+[
+  {
+    "name": "Creatify",
+    "description": "The fastest way to create short video ads. AI-powered app that generates high-quality marketing videos from a simple product link or description.",
+    "website": "https://creatify.ai",
+    "developer": "Creatify",
+    "category": "Video Generation"
+  },
+  {
+    "name": "Stammer AI",
+    "description": "Build Custom AI Agents for Any Business. Answer customer questions about your business instantly. Generate new leads and collect data from within a conversation.",
+    "website": "https://stammer.ai",
+    "developer": "Stammer",
+    "category": "AI Automation"
+  },
+  {
+    "name": "Media.io",
+    "description": "Easy Edits, Engaging Videos. Drag-and-drop interface, flexible editing, a vast template library, powerful AI tools, all in your browser.",
+    "website": "https://media.io",
+    "developer": "Wondershare",
+    "category": "Video Generation"
+  },
+  {
+    "name": "Sitekick",
+    "description": "Create a beautiful landing page or website with AI in seconds. Simplifies the process of crafting visually stunning landing pages and websites that convert.",
+    "website": "https://sitekick.ai",
+    "developer": "Sitekick",
+    "category": "AI Website Builder"
+  },
+  {
+    "name": "TaxGPT",
+    "description": "AI-powered copilot designed for tax professionals to streamline workflows. Research tool for analyzing complex tax questions with speed and accuracy.",
+    "website": "https://taxgpt.com",
+    "developer": "TaxGPT",
+    "category": "AI For Business"
+  },
+  {
+    "name": "Gigasheet",
+    "description": "Big data spreadsheet tool that simplifies managing vast datasets without complex databases or coding, offering automated repetitive tasks and cloud integration.",
+    "website": "https://gigasheet.com",
+    "developer": "Gigasheet",
+    "category": "Data Analysis"
+  },
+  {
+    "name": "Arcwise",
+    "description": "ChatGPT AI Copilot for Spreadsheets that helps ask questions about spreadsheets, clean messy data, write formulas, and scrape web data.",
+    "website": "https://arcwise.com",
+    "developer": "Arcwise",
+    "category": "Data Analysis"
+  },
+  {
+    "name": "WellMeRight",
+    "description": "Platform for health and wellness resources, connecting users with holistic practitioners, nutrition experts, and offering AI matching and health coaching tools.",
+    "website": "https://wellmeright.com",
+    "developer": "WellMeRight",
+    "category": "Health AI"
+  },
+  {
+    "name": "Octobot Cloud",
+    "description": "Crypto investment platform that enables automated trading using investment strategies.",
+    "website": "https://octobot.cloud",
+    "developer": "Octobot",
+    "category": "Finance AI"
+  },
+  {
+    "name": "Regie AI",
+    "description": "AI tool helping sales, marketing, and success teams write engaging content faster.",
+    "website": "https://regie.ai",
+    "developer": "Regie",
+    "category": "AI Sales"
+  },
+  {
+    "name": "Apollo.io",
+    "description": "Sales intelligence and engagement platform helping users find and engage potential leads using B2B data, with tools for automated outreach and pipeline management.",
+    "website": "https://apollo.io",
+    "developer": "Apollo",
+    "category": "AI Sales"
+  },
+  {
+    "name": "Seamless AI",
+    "description": "Real-time sales leads search engine that finds and verifies contact information for potential customers, enabling B2B companies to enhance sales prospecting.",
+    "website": "https://seamless.ai",
+    "developer": "Seamless AI",
+    "category": "AI Sales"
+  },
+  {
+    "name": "Clay",
+    "description": "Platform to enhance outbound marketing through data enrichment, offering AI to automate personalized outreach and research.",
+    "website": "https://clay.com",
+    "developer": "Clay",
+    "category": "AI Sales"
+  },
+  {
+    "name": "SalesBlink",
+    "description": "AI-powered sales automation platform streamlining cold email outreach, meeting scheduling, and CRM integration.",
+    "website": "https://salesblink.io",
+    "developer": "SalesBlink",
+    "category": "AI Sales"
+  },
+  {
+    "name": "Chatbit",
+    "description": "AI Chatbot for your website. Boost engagement, answer questions & capture leads. Trained and optimized on your data.",
+    "website": "https://chatbit.co",
+    "developer": "Chatbit",
+    "category": "AI Automation"
+  },
+  {
+    "name": "Veeroll",
+    "description": "Grow your business with AI social media videos. Create quality videos frequently without filming yourself.",
+    "website": "https://veeroll.com",
+    "developer": "Veeroll",
+    "category": "Video Generation"
+  },
+  {
+    "name": "DubVid",
+    "description": "Translate Videos in just 1-Click with AI. Break language barriers with Translations, Voice Cloning, and Lip-Syncing.",
+    "website": "https://dubvid.com",
+    "developer": "DubVid",
+    "category": "AI Translator"
+  },
+  {
+    "name": "AuraticAI",
+    "description": "Unlock creativity and monetize your ideas with AuraticAI: the ultimate AI-powered platform for content creation and revenue generation.",
+    "website": "https://auraticai.com",
+    "developer": "AuraticAI",
+    "category": "Content Creation"
+  },
+  {
+    "name": "Nichesss",
+    "description": "AI copywriting software that speeds up content creation for blogs, ads, social media, and more.",
+    "website": "https://nichesss.com",
+    "developer": "Nichesss",
+    "category": "Content Creation"
+  },
+  {
+    "name": "Interview Study",
+    "description": "Turn your job interview into a job offer using AI. Offers over 1700 real-world interview questions with AI feedback and insights.",
+    "website": "https://interview.study",
+    "developer": "Interview Study",
+    "category": "AI Education"
+  },
+  {
+    "name": "Taplio",
+    "description": "AI-powered LinkedIn growth tool for creating posts, scheduling, and network expansion",
+    "website": "https://taplio.com",
+    "developer": "Taplio",
+    "category": "Social Media"
+  },
+  {
+    "name": "Carboncopy",
+    "description": "Content creation platform with over 50 templates for ad copy, product descriptions, images, and audio",
+    "website": "https://carboncopy.pro",
+    "developer": "Carboncopy",
+    "category": "Content Creation"
+  },
+  {
+    "name": "Quickads",
+    "description": "AI ad generator creating high-performance social media posts in 30 seconds across 35 languages",
+    "website": "https://quickads.ai",
+    "developer": "Quickads",
+    "category": "Social Media"
+  },
+  {
+    "name": "Echofox",
+    "description": "24/7 AI sales robot converting visitors to buyers, resolving 70% of customer questions instantly",
+    "website": "https://echofox.ai",
+    "developer": "Echofox",
+    "category": "AI Sales"
+  },
+  {
+    "name": "HeyGen",
+    "description": "AI platform turning text into videos with avatars and voices, ideal for personalized content creation",
+    "website": "https://heygen.com",
+    "developer": "HeyGen",
+    "category": "Video Generation"
+  },
+  {
+    "name": "Murf AI",
+    "description": "Transform text into speech using a versatile AI voice generator. Leverage AI-powered, authentic human-like voices to effortlessly create high-quality voiceovers within minutes.",
+    "website": "https://murf.ai",
+    "developer": "Murf",
+    "category": "Voice AI"
+  },
+  {
+    "name": "Superluminal",
+    "description": "Elevate your data dashboard with Superluminal's AI API. Offer frictionless, conversational data interactions to delight your customers.",
+    "website": "https://superluminal.ai",
+    "developer": "Superluminal",
+    "category": "Data Analysis"
+  },
+  {
+    "name": "Headshot Generator",
+    "description": "Your Selfies to Professional Headshots. Top quality AI Headshot Generator Used by Pros & Amateurs.",
+    "website": "https://headshots.com",
+    "developer": "Headshot Generator",
+    "category": "Image Generation"
+  },
+  {
+    "name": "EnterpriseDNA",
+    "description": "Learn how to use AI. Future-Proof Your Career Master Data Skills Upskill in AI. Join 220,000+ learning the latest data and AI skills.",
+    "website": "https://enterprisedna.co",
+    "developer": "EnterpriseDNA",
+    "category": "AI Education"
+  },
+  {
+    "name": "Tradesanta",
+    "description": "All-inclusive automated cryptocurrency trading bot. Without becoming a pro, trade cryptocurrency like one.",
+    "website": "https://tradesanta.com",
+    "developer": "Tradesanta",
+    "category": "Finance AI"
+  },
+  {
+    "name": "Gunbot",
+    "description": "Gunbot is an AI crypto trading bot that lets you automate your trading and earn on autopilot. Supports 100+ well known crypto exchanges.",
+    "website": "https://gunbot.com",
+    "developer": "Gunbot",
+    "category": "Finance AI"
+  },
+  {
+    "name": "10web",
+    "description": "AI-Powered WordPress Platform. Automated Website Builder, Hosting, and PageSpeed Booster, to say the least.",
+    "website": "https://10web.io",
+    "developer": "10web",
+    "category": "AI Website Builder"
+  },
+  {
+    "name": "Branchbob",
+    "description": "With the power of AI, create an online store in a matter of seconds.",
+    "website": "https://branchbob.com",
+    "developer": "Branchbob",
+    "category": "E-commerce"
+  },
+  {
+    "name": "Dropship",
+    "description": "Discover winning products to sell. Find and monitor stores to gain insights into their revenue, sales, products, apps, and more.",
+    "website": "https://dropship.io",
+    "developer": "Dropship",
+    "category": "E-commerce"
+  },
+  {
+    "name": "ContentForge",
+    "description": "Make all text content in one click. Create texts for websites, blog, ad copy, emails, social media, and more.",
+    "website": "https://contentforge.ai",
+    "developer": "ContentForge",
+    "category": "Content Creation"
+  },
+  {
+    "name": "AlliAI",
+    "description": "Optimize, automate, deploy & scale SEO. Create rules for site-wide optimization and quickly apply code updates.",
+    "website": "https://alliai.com",
+    "developer": "AlliAI",
+    "category": "SEO & Optimization"
+  },
+  {
+    "name": "Bertha AI",
+    "description": "Create persuasive marketing text and high-quality website content quickly using AI-driven copywriting.",
+    "website": "https://bertha.ai",
+    "developer": "Bertha",
+    "category": "Content Creation"
+  },
+  {
+    "name": "Copymatic",
+    "description": "Generate content and copy in seconds. Automatically write unique, engaging content for blogs, landing pages, and digital ads.",
+    "website": "https://copymatic.ai",
+    "developer": "Copymatic",
+    "category": "Content Creation"
+  },
+  {
+    "name": "Browse AI",
+    "description": "Extract and monitor data in seconds with browse AI. Train the robot easily and no code required.",
+    "website": "https://browse.ai",
+    "developer": "Browse AI",
+    "category": "AI Automation"
+  },
+  {
+    "name": "Salesflow",
+    "description": "Automate your outreach efforts and close more leads. LinkedIn automation that will generate leads and sales way faster.",
+    "website": "https://salesflow.io",
+    "developer": "Salesflow",
+    "category": "AI Sales"
+  },
+  {
+    "name": "Vowel",
+    "description": "AI-powered meetings for fast-moving teams. Vowel is the AI tool for teams to host, summarize, search, and share video meetings — no add-ons required.",
+    "website": "https://vowel.com",
+    "developer": "Vowel",
+    "category": "Productivity"
+  },
+  {
+    "name": "Octopus CRM",
+    "description": "LinkedIn automation made simple and effective. This all-in-one automation tool will help you simplify prospecting, grow your business and increase sales meetings.",
+    "website": "https://octopuscrm.io",
+    "developer": "Octopus CRM",
+    "category": "AI Sales"
+  },
+  {
+    "name": "Saleshandy",
+    "description": "Automate your cold outreach strategy with saleshandy. High email deliverability and personalized emails automatically.",
+    "website": "https://saleshandy.com",
+    "developer": "Saleshandy",
+    "category": "Email Marketing"
+  },
+  {
+    "name": "Manychat",
+    "description": "Automate interactive conversations in Instagram Direct Messages, Facebook Messenger, and SMS to grow your brand.",
+    "website": "https://manychat.com",
+    "developer": "Manychat",
+    "category": "Social Media"
+  },
+  {
+    "name": "Predis AI",
+    "description": "Helps create social media creatives in seconds. Creates images, video, carousels, and captions in one place. Integrates with platforms, helps stay active on social media, available in 18 languages.",
+    "website": "https://predis.ai",
+    "developer": "Predis AI",
+    "category": "Social Media"
+  },
+  {
+    "name": "Kenji",
+    "description": "AI-powered Instagram growth solution that gets more followers, likes, and engagement. No technical knowledge required.",
+    "website": "https://kenji.ai",
+    "developer": "Kenji",
+    "category": "Social Media"
+  },
+  {
+    "name": "Ocoya",
+    "description": "Platform to create, auto-generate and schedule content quicker. Content marketing, copywriting and social media in minutes.",
+    "website": "https://ocoya.com",
+    "developer": "Ocoya",
+    "category": "Social Media"
+  },
+  {
+    "name": "Nando AI",
+    "description": "Create High-Converting Copy For Your Online Business In Seconds. Explore Over 60 Powerful Tools to Craft Compelling Product Descriptions, Video Scripts, Ad Concepts, Copy, Blog Posts, Social Media Content, and Much More.",
+    "website": "https://nando.ai",
+    "developer": "Nando AI",
+    "category": "Content Creation"
+  },
+  {
+    "name": "Cosmos AI",
+    "description": "Cosmos AI is your all-in-one AI content generator. Create the content that matters the most; whether it's blog posts, social media captions, AI images, speech to text, coding assistant, or anything else.",
+    "website": "https://cosmosai.tech",
+    "developer": "Cosmos AI",
+    "category": "Content Creation"
+  },
+  {
+    "name": "Lovo AI",
+    "description": "Comprehensive voice generation platform with emotion-rich text-to-speech capabilities.",
+    "website": "https://lovo.ai",
+    "developer": "Lovo AI",
+    "category": "Voice AI"
+  },
+  {
+    "name": "AdsDog",
+    "description": "AI-powered video creation tool that simplifies producing professional videos with digital human avatars",
+    "website": "https://adsdog.ai",
+    "developer": "AdsDog",
+    "category": "Video Generation"
+  },
+  {
+    "name": "Fliki",
+    "description": "Create videos from scripts or blog posts using realistic voices in 2 minutes",
+    "website": "https://fliki.ai",
+    "developer": "Fliki",
+    "category": "Video Generation"
+  },
+  {
+    "name": "Submagic",
+    "description": "Transform videos with AI-powered subtitles and highlighted phrases",
+    "website": "https://submagic.co",
+    "developer": "Submagic",
+    "category": "Video Generation"
+  }
+]

@@ -1,0 +1,125 @@
+{
+  "workflow_id": "workflow-1756826069142",
+  "timestamp": "2025-09-02T15:14:29.151Z",
+  "metadata": {
+    "sourceType": "json",
+    "sourceFile": "new-ai-tools-to-add.json",
+    "enrichedFile": "/Users/siteoptz/siteoptz/data/workflows/workflow-1756826069142/enriched-tools.json",
+    "stagingFile": "/Users/siteoptz/siteoptz/data/workflows/workflow-1756826069142/staging-summary.json",
+    "autoPublish": true
+  },
+  "statistics": {
+    "total_tools": 15,
+    "categories": {
+      "Social Media": 1,
+      "Voice AI": 2,
+      "Video Generation": 1,
+      "AI Tools": 4,
+      "Image Generation": 5,
+      "Customer Support": 2
+    },
+    "avg_rating": "4.49",
+    "pricing_distribution": {
+      "free": 15,
+      "paid": 0
+    }
+  },
+  "tools_summary": [
+    {
+      "name": "Opus Clip",
+      "category": "Social Media",
+      "rating": 4.655979244613507,
+      "starting_price": 0
+    },
+    {
+      "name": "ElevenLabs Voice Design",
+      "category": "Voice AI",
+      "rating": 4.94117409596862,
+      "starting_price": 0
+    },
+    {
+      "name": "Pika Labs",
+      "category": "Video Generation",
+      "rating": 4.036773381976317,
+      "starting_price": 0
+    },
+    {
+      "name": "Tome",
+      "category": "AI Tools",
+      "rating": 4.720147218959005,
+      "starting_price": 0
+    },
+    {
+      "name": "Playground AI",
+      "category": "Image Generation",
+      "rating": 4.024406747240571,
+      "starting_price": 0
+    },
+    {
+      "name": "Krea AI",
+      "category": "Image Generation",
+      "rating": 4.9078357854122645,
+      "starting_price": 0
+    },
+    {
+      "name": "Magnific AI",
+      "category": "Image Generation",
+      "rating": 4.622747366965007,
+      "starting_price": 0
+    },
+    {
+      "name": "Vectorizer AI",
+      "category": "Image Generation",
+      "rating": 4.700027630132314,
+      "starting_price": 0
+    },
+    {
+      "name": "Lexica Art",
+      "category": "Image Generation",
+      "rating": 4.396876185416868,
+      "starting_price": 0
+    },
+    {
+      "name": "Reka AI",
+      "category": "Voice AI",
+      "rating": 4.02380359435364,
+      "starting_price": 0
+    },
+    {
+      "name": "Cohere Command R",
+      "category": "Customer Support",
+      "rating": 4.535779170680957,
+      "starting_price": 0
+    },
+    {
+      "name": "Mistral Large",
+      "category": "Customer Support",
+      "rating": 4.8957367408444945,
+      "starting_price": 0
+    },
+    {
+      "name": "Groq",
+      "category": "AI Tools",
+      "rating": 4.174734519840179,
+      "starting_price": 0
+    },
+    {
+      "name": "Together AI",
+      "category": "AI Tools",
+      "rating": 4.350780811118128,
+      "starting_price": 0
+    },
+    {
+      "name": "Fireworks AI",
+      "category": "AI Tools",
+      "rating": 4.3737589320179415,
+      "starting_price": 0
+    }
+  ],
+  "next_steps": [
+    "Review staging summary in data/staging/",
+    "Run quality checks on generated components",
+    "Test build: npm run build",
+    "Publish to production when ready"
+  ]
+}

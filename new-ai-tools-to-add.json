@@ -1,0 +1,92 @@
+[
+  {
+    "name": "Opus Clip",
+    "description": "AI-powered video clipping tool that automatically creates short-form content from long videos. Features intelligent scene detection, automatic captioning, and viral moment identification for social media optimization.",
+    "website": "https://www.opus.pro",
+    "developer": "Opus Pro Inc."
+  },
+  {
+    "name": "ElevenLabs Voice Design",
+    "description": "Advanced AI voice generation platform offering ultra-realistic text-to-speech, voice cloning, and voice design capabilities. Create custom voices with emotional range and multilingual support.",
+    "website": "https://elevenlabs.io/voice-design",
+    "developer": "ElevenLabs"
+  },
+  {
+    "name": "Pika Labs",
+    "description": "AI video generation platform that transforms text and images into cinematic videos. Features include camera controls, style consistency, and professional-grade video editing capabilities.",
+    "website": "https://pika.art",
+    "developer": "Pika Labs Inc."
+  },
+  {
+    "name": "Tome",
+    "description": "AI-native presentation builder that creates stunning presentations from prompts. Combines generative AI with design intelligence to produce professional decks in minutes.",
+    "website": "https://tome.app",
+    "developer": "Tome Inc."
+  },
+  {
+    "name": "Playground AI",
+    "description": "Professional AI image generation and editing platform with advanced controls. Features mixed image editing, style presets, and commercial-use licensing for creative professionals.",
+    "website": "https://playgroundai.com",
+    "developer": "Playground AI Inc."
+  },
+  {
+    "name": "Krea AI",
+    "description": "Real-time AI image generation tool with live canvas editing. Paint and see AI generate in real-time, perfect for concept art, design iteration, and creative exploration.",
+    "website": "https://krea.ai",
+    "developer": "Krea Inc."
+  },
+  {
+    "name": "Magnific AI",
+    "description": "AI-powered image upscaler and enhancer that adds incredible detail to images. Specializes in face enhancement, texture generation, and resolution enhancement up to 16x.",
+    "website": "https://magnific.ai",
+    "developer": "Magnific"
+  },
+  {
+    "name": "Vectorizer AI",
+    "description": "Advanced AI tool that converts raster images to vector graphics with unprecedented accuracy. Perfect for logo design, illustration work, and print production.",
+    "website": "https://vectorizer.ai",
+    "developer": "Cedar Lake Ventures"
+  },
+  {
+    "name": "Lexica Art",
+    "description": "AI art generation platform with a massive searchable database of AI-generated images. Features custom model training and commercial licensing options.",
+    "website": "https://lexica.art",
+    "developer": "Lexica Inc."
+  },
+  {
+    "name": "Reka AI",
+    "description": "Multimodal AI platform for understanding and generating content across text, images, video, and audio. Features advanced reasoning capabilities and API access for developers.",
+    "website": "https://reka.ai",
+    "developer": "Reka"
+  },
+  {
+    "name": "Cohere Command R",
+    "description": "Enterprise-grade LLM optimized for retrieval augmented generation (RAG) and tool use. Features multilingual support and advanced reasoning for business applications.",
+    "website": "https://cohere.com/command",
+    "developer": "Cohere"
+  },
+  {
+    "name": "Mistral Large",
+    "description": "Cutting-edge large language model with exceptional reasoning capabilities and multilingual support. Offers both API access and on-premise deployment options.",
+    "website": "https://mistral.ai",
+    "developer": "Mistral AI"
+  },
+  {
+    "name": "Groq",
+    "description": "Ultra-fast AI inference platform delivering LLM responses at unprecedented speeds. Powered by custom LPU chips for real-time AI applications.",
+    "website": "https://groq.com",
+    "developer": "Groq Inc."
+  },
+  {
+    "name": "Together AI",
+    "description": "Platform for running, fine-tuning, and deploying open-source AI models at scale. Features model optimization and serverless GPU infrastructure.",
+    "website": "https://together.ai",
+    "developer": "Together Computer"
+  },
+  {
+    "name": "Fireworks AI",
+    "description": "Fast and affordable platform for deploying production AI applications. Specializes in low-latency inference and model optimization for enterprise use.",
+    "website": "https://fireworks.ai",
+    "developer": "Fireworks.ai"
+  }
+]

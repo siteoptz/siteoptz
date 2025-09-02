@@ -1,0 +1,334 @@
+{
+  "timestamp": "2025-09-02T03:13:26.756Z",
+  "tool_count": 5,
+  "categories": [
+    "SEO & Optimization",
+    "Voice AI",
+    "Social Media",
+    "Data Analysis"
+  ],
+  "tools": [
+    {
+      "name": "ContentCraft AI",
+      "category": "SEO & Optimization",
+      "website": "https://contentcraft-ai.com",
+      "description": "Advanced AI-powered content creation platform that helps businesses generate high-quality blog posts..."
+    },
+    {
+      "name": "VoiceGen Pro",
+      "category": "Voice AI",
+      "website": "https://voicegen-pro.com",
+      "description": "Professional AI voice generation tool for creating realistic voiceovers, podcasts, and audio content..."
+    },
+    {
+      "name": "SEO Master AI",
+      "category": "SEO & Optimization",
+      "website": "https://seo-master-ai.com",
+      "description": "Comprehensive SEO optimization platform powered by artificial intelligence. Provides keyword researc..."
+    },
+    {
+      "name": "SocialBoost AI",
+      "category": "Social Media",
+      "website": "https://socialboost-ai.com",
+      "description": "AI-driven social media management tool that automates content creation, scheduling, and engagement a..."
+    },
+    {
+      "name": "DataViz AI",
+      "category": "Data Analysis",
+      "website": "https://dataviz-ai.com",
+      "description": "Intelligent data visualization and analytics platform that transforms complex datasets into actionab..."
+    }
+  ],
+  "full_data": [
+    {
+      "name": "ContentCraft AI",
+      "description": "Advanced AI-powered content creation platform that helps businesses generate high-quality blog posts, social media content, and marketing copy. Features include SEO optimization, brand voice customization, and multi-language support.",
+      "website": "https://contentcraft-ai.com",
+      "developer": "ContentCraft Inc",
+      "discovered_at": "2025-09-02T10:00:00Z",
+      "category": "SEO & Optimization",
+      "features": [
+        "Keyword research",
+        "Ranking tracking",
+        "Backlink analysis",
+        "Technical SEO"
+      ],
+      "pricing": [
+        {
+          "plan": "Free",
+          "price_per_month": 0,
+          "features": [
+            "Basic features",
+            "Limited usage",
+            "Community support"
+          ]
+        },
+        {
+          "plan": "Pro",
+          "price_per_month": 29,
+          "features": [
+            "All features",
+            "Unlimited usage",
+            "Priority support"
+          ]
+        },
+        {
+          "plan": "Enterprise",
+          "price_per_month": 99,
+          "features": [
+            "Custom integrations",
+            "Advanced analytics",
+            "Dedicated support"
+          ]
+        }
+      ],
+      "pros": [
+        "Comprehensive feature set",
+        "Excellent user experience",
+        "Strong performance and reliability",
+        "Good value for money"
+      ],
+      "cons": [
+        "Learning curve for advanced features",
+        "Premium pricing for full functionality",
+        "Limited free tier features"
+      ],
+      "rating": 4.917839950792482,
+      "review_count": 235,
+      "enriched": true,
+      "enriched_at": "2025-09-02T03:13:26.754Z"
+    },
+    {
+      "name": "VoiceGen Pro",
+      "description": "Professional AI voice generation tool for creating realistic voiceovers, podcasts, and audio content. Supports multiple languages, emotions, and custom voice cloning with enterprise-grade quality.",
+      "website": "https://voicegen-pro.com",
+      "developer": "VoiceGen Technologies",
+      "discovered_at": "2025-09-02T10:05:00Z",
+      "category": "Voice AI",
+      "features": [
+        "Natural voice synthesis",
+        "Multiple voice options",
+        "Audio customization",
+        "API access"
+      ],
+      "pricing": [
+        {
+          "plan": "Free",
+          "price_per_month": 0,
+          "features": [
+            "Basic features",
+            "Limited usage",
+            "Community support"
+          ]
+        },
+        {
+          "plan": "Pro",
+          "price_per_month": 29,
+          "features": [
+            "All features",
+            "Unlimited usage",
+            "Priority support"
+          ]
+        },
+        {
+          "plan": "Enterprise",
+          "price_per_month": 99,
+          "features": [
+            "Custom integrations",
+            "Advanced analytics",
+            "Dedicated support"
+          ]
+        }
+      ],
+      "pros": [
+        "Comprehensive feature set",
+        "Excellent user experience",
+        "Strong performance and reliability",
+        "Good value for money"
+      ],
+      "cons": [
+        "Learning curve for advanced features",
+        "Premium pricing for full functionality",
+        "Limited free tier features"
+      ],
+      "rating": 4.410636619277379,
+      "review_count": 979,
+      "enriched": true,
+      "enriched_at": "2025-09-02T03:13:26.755Z"
+    },
+    {
+      "name": "SEO Master AI",
+      "description": "Comprehensive SEO optimization platform powered by artificial intelligence. Provides keyword research, content optimization, technical SEO audits, and competitor analysis to boost search rankings.",
+      "website": "https://seo-master-ai.com",
+      "developer": "SEO Master LLC",
+      "discovered_at": "2025-09-02T10:10:00Z",
+      "category": "SEO & Optimization",
+      "features": [
+        "Keyword research",
+        "Ranking tracking",
+        "Backlink analysis",
+        "Technical SEO"
+      ],
+      "pricing": [
+        {
+          "plan": "Free",
+          "price_per_month": 0,
+          "features": [
+            "Basic features",
+            "Limited usage",
+            "Community support"
+          ]
+        },
+        {
+          "plan": "Pro",
+          "price_per_month": 29,
+          "features": [
+            "All features",
+            "Unlimited usage",
+            "Priority support"
+          ]
+        },
+        {
+          "plan": "Enterprise",
+          "price_per_month": 99,
+          "features": [
+            "Custom integrations",
+            "Advanced analytics",
+            "Dedicated support"
+          ]
+        }
+      ],
+      "pros": [
+        "Comprehensive feature set",
+        "Excellent user experience",
+        "Strong performance and reliability",
+        "Good value for money"
+      ],
+      "cons": [
+        "Learning curve for advanced features",
+        "Premium pricing for full functionality",
+        "Limited free tier features"
+      ],
+      "rating": 4.30382344397236,
+      "review_count": 196,
+      "enriched": true,
+      "enriched_at": "2025-09-02T03:13:26.755Z"
+    },
+    {
+      "name": "SocialBoost AI",
+      "description": "AI-driven social media management tool that automates content creation, scheduling, and engagement across multiple platforms. Includes hashtag optimization and audience targeting features.",
+      "website": "https://socialboost-ai.com",
+      "developer": "SocialBoost Corp",
+      "discovered_at": "2025-09-02T10:15:00Z",
+      "category": "Social Media",
+      "features": [
+        "Post scheduling",
+        "Analytics dashboard",
+        "Multi-platform support",
+        "Content creation"
+      ],
+      "pricing": [
+        {
+          "plan": "Free",
+          "price_per_month": 0,
+          "features": [
+            "Basic features",
+            "Limited usage",
+            "Community support"
+          ]
+        },
+        {
+          "plan": "Pro",
+          "price_per_month": 29,
+          "features": [
+            "All features",
+            "Unlimited usage",
+            "Priority support"
+          ]
+        },
+        {
+          "plan": "Enterprise",
+          "price_per_month": 99,
+          "features": [
+            "Custom integrations",
+            "Advanced analytics",
+            "Dedicated support"
+          ]
+        }
+      ],
+      "pros": [
+        "Comprehensive feature set",
+        "Excellent user experience",
+        "Strong performance and reliability",
+        "Good value for money"
+      ],
+      "cons": [
+        "Learning curve for advanced features",
+        "Premium pricing for full functionality",
+        "Limited free tier features"
+      ],
+      "rating": 4.325067999925198,
+      "review_count": 118,
+      "enriched": true,
+      "enriched_at": "2025-09-02T03:13:26.755Z"
+    },
+    {
+      "name": "DataViz AI",
+      "description": "Intelligent data visualization and analytics platform that transforms complex datasets into actionable insights through AI-powered charts, dashboards, and predictive modeling.",
+      "website": "https://dataviz-ai.com",
+      "developer": "DataViz Solutions",
+      "discovered_at": "2025-09-02T10:20:00Z",
+      "category": "Data Analysis",
+      "features": [
+        "Advanced AI capabilities",
+        "User-friendly interface",
+        "Integration support",
+        "Real-time processing"
+      ],
+      "pricing": [
+        {
+          "plan": "Free",
+          "price_per_month": 0,
+          "features": [
+            "Basic features",
+            "Limited usage",
+            "Community support"
+          ]
+        },
+        {
+          "plan": "Pro",
+          "price_per_month": 29,
+          "features": [
+            "All features",
+            "Unlimited usage",
+            "Priority support"
+          ]
+        },
+        {
+          "plan": "Enterprise",
+          "price_per_month": 99,
+          "features": [
+            "Custom integrations",
+            "Advanced analytics",
+            "Dedicated support"
+          ]
+        }
+      ],
+      "pros": [
+        "Comprehensive feature set",
+        "Excellent user experience",
+        "Strong performance and reliability",
+        "Good value for money"
+      ],
+      "cons": [
+        "Learning curve for advanced features",
+        "Premium pricing for full functionality",
+        "Limited free tier features"
+      ],
+      "rating": 4.340217232988062,
+      "review_count": 145,
+      "enriched": true,
+      "enriched_at": "2025-09-02T03:13:26.756Z"
+    }
+  ]
+}

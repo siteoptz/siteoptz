@@ -1,0 +1,207 @@
+{
+  "workflow_id": "workflow-1756826013413",
+  "timestamp": "2025-09-02T15:13:33.419Z",
+  "metadata": {
+    "sourceType": "json",
+    "sourceFile": "data/siteoptz/specific-tools.json",
+    "enrichedFile": "/Users/siteoptz/siteoptz/data/workflows/workflow-1756826013413/enriched-tools.json",
+    "stagingFile": "/Users/siteoptz/siteoptz/data/workflows/workflow-1756826013413/staging-summary.json",
+    "autoPublish": false
+  },
+  "statistics": {
+    "total_tools": 28,
+    "categories": {
+      "AI Tools": 9,
+      "Video Generation": 1,
+      "AI Automation": 6,
+      "Email Marketing": 1,
+      "Content Creation": 4,
+      "Social Media": 2,
+      "Customer Support": 1,
+      "Productivity": 1,
+      "Voice AI": 2,
+      "Image Generation": 1
+    },
+    "avg_rating": "4.57",
+    "pricing_distribution": {
+      "free": 28,
+      "paid": 0
+    }
+  },
+  "tools_summary": [
+    {
+      "name": "504 Gateway Time-out",
+      "category": "AI Tools",
+      "rating": 4.68281219288283,
+      "starting_price": 0
+    },
+    {
+      "name": "Veo",
+      "category": "Video Generation",
+      "rating": 4.848560861837893,
+      "starting_price": 0
+    },
+    {
+      "name": "Grok",
+      "category": "AI Tools",
+      "rating": 4.830781732201995,
+      "starting_price": 0
+    },
+    {
+      "name": "Fathom",
+      "category": "AI Automation",
+      "rating": 4.202049916615108,
+      "starting_price": 0
+    },
+    {
+      "name": "n8n",
+      "category": "AI Automation",
+      "rating": 4.17669544023401,
+      "starting_price": 0
+    },
+    {
+      "name": "Nyota",
+      "category": "AI Automation",
+      "rating": 4.947028087376261,
+      "starting_price": 0
+    },
+    {
+      "name": "Google Account Sign-in",
+      "category": "Email Marketing",
+      "rating": 4.881352809515916,
+      "starting_price": 0
+    },
+    {
+      "name": "Make",
+      "category": "AI Automation",
+      "rating": 4.566402813693451,
+      "starting_price": 0
+    },
+    {
+      "name": "Deep Research",
+      "category": "AI Tools",
+      "rating": 4.975167252156637,
+      "starting_price": 0
+    },
+    {
+      "name": "Sudowrite",
+      "category": "Content Creation",
+      "rating": 4.2859578018737565,
+      "starting_price": 0
+    },
+    {
+      "name": "Rytr",
+      "category": "Social Media",
+      "rating": 4.810875440217964,
+      "starting_price": 0
+    },
+    {
+      "name": "Google Search",
+      "category": "AI Tools",
+      "rating": 4.349051481802714,
+      "starting_price": 0
+    },
+    {
+      "name": "Looka",
+      "category": "AI Tools",
+      "rating": 4.9372418060017464,
+      "starting_price": 0
+    },
+    {
+      "name": "Lovable",
+      "category": "AI Tools",
+      "rating": 4.259449384279647,
+      "starting_price": 0
+    },
+    {
+      "name": "Guru",
+      "category": "Customer Support",
+      "rating": 4.784928435809624,
+      "starting_price": 0
+    },
+    {
+      "name": "Fyxer",
+      "category": "Productivity",
+      "rating": 4.584162518452437,
+      "starting_price": 0
+    },
+    {
+      "name": "HubSpot Email Marketing Tools",
+      "category": "AI Automation",
+      "rating": 4.408459717826521,
+      "starting_price": 0
+    },
+    {
+      "name": "Shortwave",
+      "category": "Content Creation",
+      "rating": 4.810362275241789,
+      "starting_price": 0
+    },
+    {
+      "name": "Gamma",
+      "category": "Social Media",
+      "rating": 4.080158038781333,
+      "starting_price": 0
+    },
+    {
+      "name": "Clockwise",
+      "category": "AI Tools",
+      "rating": 4.808276192346259,
+      "starting_price": 0
+    },
+    {
+      "name": "Reclaim.ai",
+      "category": "AI Automation",
+      "rating": 4.367922834433752,
+      "starting_price": 0
+    },
+    {
+      "name": "Teal",
+      "category": "AI Tools",
+      "rating": 4.422029223164657,
+      "starting_price": 0
+    },
+    {
+      "name": "Microsoft PowerPoint",
+      "category": "AI Tools",
+      "rating": 4.540865267948398,
+      "starting_price": 0
+    },
+    {
+      "name": "Kickresume",
+      "category": "Content Creation",
+      "rating": 4.393692622994836,
+      "starting_price": 0
+    },
+    {
+      "name": "Udio",
+      "category": "Voice AI",
+      "rating": 4.132489578236388,
+      "starting_price": 0
+    },
+    {
+      "name": "Suno",
+      "category": "Voice AI",
+      "rating": 4.837001579587628,
+      "starting_price": 0
+    },
+    {
+      "name": "AdCreative.ai",
+      "category": "Image Generation",
+      "rating": 4.75801808972512,
+      "starting_price": 0
+    },
+    {
+      "name": "AirOps",
+      "category": "Content Creation",
+      "rating": 4.247860825914092,
+      "starting_price": 0
+    }
+  ],
+  "next_steps": [
+    "Review staging summary in data/staging/",
+    "Run quality checks on generated components",
+    "Test build: npm run build",
+    "Publish to production when ready"
+  ]
+}

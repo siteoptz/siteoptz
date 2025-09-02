@@ -1,0 +1,63 @@
+{
+  "workflow_id": "workflow-1756782806752",
+  "timestamp": "2025-09-02T03:13:26.756Z",
+  "metadata": {
+    "sourceType": "json",
+    "sourceFile": "automation/test-data/sample-tools.json",
+    "enrichedFile": "/Users/siteoptz/siteoptz/data/workflows/workflow-1756782806752/enriched-tools.json",
+    "stagingFile": "/Users/siteoptz/siteoptz/data/workflows/workflow-1756782806752/staging-summary.json",
+    "autoPublish": false
+  },
+  "statistics": {
+    "total_tools": 5,
+    "categories": {
+      "SEO & Optimization": 2,
+      "Voice AI": 1,
+      "Social Media": 1,
+      "Data Analysis": 1
+    },
+    "avg_rating": "4.46",
+    "pricing_distribution": {
+      "free": 5,
+      "paid": 0
+    }
+  },
+  "tools_summary": [
+    {
+      "name": "ContentCraft AI",
+      "category": "SEO & Optimization",
+      "rating": 4.917839950792482,
+      "starting_price": 0
+    },
+    {
+      "name": "VoiceGen Pro",
+      "category": "Voice AI",
+      "rating": 4.410636619277379,
+      "starting_price": 0
+    },
+    {
+      "name": "SEO Master AI",
+      "category": "SEO & Optimization",
+      "rating": 4.30382344397236,
+      "starting_price": 0
+    },
+    {
+      "name": "SocialBoost AI",
+      "category": "Social Media",
+      "rating": 4.325067999925198,
+      "starting_price": 0
+    },
+    {
+      "name": "DataViz AI",
+      "category": "Data Analysis",
+      "rating": 4.340217232988062,
+      "starting_price": 0
+    }
+  ],
+  "next_steps": [
+    "Review staging summary in data/staging/",
+    "Run quality checks on generated components",
+    "Test build: npm run build",
+    "Publish to production when ready"
+  ]
+}
