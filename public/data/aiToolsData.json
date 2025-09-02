@@ -70,7 +70,8 @@
       "value": 9
     },
     "rating": "4.7",
-    "review_count": 172
+    "review_count": 172,
+    "logo_url": "/images/tools/10web-logo.svg"
   },
   {
     "id": "acquisio",
@@ -211,7 +212,8 @@
       "paid-search-&-ppc",
       "ai-tools",
       "automation"
-    ]
+    ],
+    "logo_url": "/images/tools/acquisio-logo.svg"
   },
   {
     "id": "adalysis",
@@ -362,7 +364,8 @@
       "paid-search-&-ppc",
       "ai-tools",
       "automation"
-    ]
+    ],
+    "logo_url": "/images/tools/adalysis-logo.svg"
   },
   {
     "id": "adbeat",
@@ -423,7 +426,8 @@
     },
     "rating": 4,
     "review_count": 180,
-    "category": "Paid Search & PPC"
+    "category": "Paid Search & PPC",
+    "logo_url": "/images/tools/adbeat-logo.svg"
   },
   {
     "id": "adcreative-ai",
@@ -699,7 +703,8 @@
       "title": "AdCreative.ai Review 2024: Features, Pricing & Alternatives",
       "description": "AdCreative.ai is an AI-powered platform designed to help businesses create high-converting ad creatives, ad copy, and product photoshoots quickly and efficiently. It aims to boost sales and ROI by leveraging AI to generate professional-quality marketing assets without the need for designers."
     },
-    "related_tools": []
+    "related_tools": [],
+    "logo_url": "/images/tools/adcreative-ai-logo.svg"
   },
   {
     "name": "AdEspresso",
@@ -782,7 +787,8 @@
       "integration": 4.1,
       "ease_of_use": 4,
       "value": 4.2
-    }
+    },
+    "logo_url": "/images/tools/adespresso-logo.svg"
   },
   {
     "id": "adobe-firefly",
@@ -935,7 +941,8 @@
       "total_score": 98,
       "last_updated": "2025-08-18T17:26:51.891Z"
     },
-    "related_tools": []
+    "related_tools": [],
+    "logo_url": "/images/tools/adobe-firefly-logo.svg"
   },
   {
     "id": "adsdog",
@@ -1017,7 +1024,8 @@
       "value": 7
     },
     "rating": "4.0",
-    "review_count": 111
+    "review_count": 111,
+    "logo_url": "/images/tools/adsdog-logo.svg"
   },
   {
     "name": "Adzooma",
@@ -1092,7 +1100,8 @@
       "integration": 4.1,
       "ease_of_use": 4,
       "value": 4.2
-    }
+    },
+    "logo_url": "/images/tools/adzooma-logo.svg"
   },
   {
     "id": "ahrefs",
@@ -1243,7 +1252,8 @@
       "seo-&-optimization",
       "ai-tools",
       "automation"
-    ]
+    ],
+    "logo_url": "/images/tools/ahrefs-logo.svg"
   },
   {
     "id": "ahrefs-ai",
@@ -1352,7 +1362,8 @@
     ],
     "affiliate_link": "https://ahrefs.com/",
     "search_volume": 1875,
-    "cpc": 3.3
+    "cpc": 3.3,
+    "logo_url": "/images/tools/placeholder-logo.svg"
   },
   {
     "id": "airops",
@@ -1464,7 +1475,8 @@
       "title": "AirOps Review 2024: Features, Pricing & Alternatives",
       "description": "AirOps is an AI-powered platform designed to help brands increase their visibility in AI search. It provides a comprehensive solution that takes users from insights to action, enabling them to fill content gaps, optimize for agent readability, and engage in relevant conversations. The platform aims to transform content teams into revenue drivers by offering expert-led training, strategic frameworks, and proven templates."
     },
-    "related_tools": []
+    "related_tools": [],
+    "logo_url": "/images/tools/airops-logo.svg"
   },
   {
     "id": "alliai",
@@ -1537,7 +1549,8 @@
       "value": 7
     },
     "rating": "3.7",
-    "review_count": 123
+    "review_count": 123,
+    "logo_url": "/images/tools/alliai-logo.svg"
   },
   {
     "id": "alpha-sense",
@@ -1592,7 +1605,8 @@
       "release_year": 2024,
       "description": "Accelerate your workflow with     AI insights you can trust",
       "category": "Research & Education"
-    }
+    },
+    "logo_url": "/images/tools/alpha-sense-logo.svg"
   },
   {
     "id": "amazon-alexa",
@@ -1679,7 +1693,8 @@
       "release_year": 2024,
       "description": "After Early Access, Alexa+ will be a free Prime benefit(https://www.amazon.com/dp/B0DCCNHWV5?ref_=xaa_spp_d_bb_li_2faqdisclaimer) or available to non-Prime customers for $19.99/month.",
       "category": "AI Automation"
-    }
+    },
+    "logo_url": "/images/tools/amazon-alexa-logo.svg"
   },
   {
     "id": "amazon-codewhisperer",
@@ -1825,7 +1840,8 @@
     ],
     "affiliate_link": "https://aws.amazon.com/codewhisperer/",
     "search_volume": 2800,
-    "cpc": 4.2
+    "cpc": 4.2,
+    "logo_url": "/images/tools/amazon-codewhisperer-logo.svg"
   },
   {
     "id": "anthropic-claude",
@@ -1978,7 +1994,8 @@
       "total_score": 81,
       "last_updated": "2025-08-18T17:26:51.890Z"
     },
-    "related_tools": []
+    "related_tools": [],
+    "logo_url": "/images/tools/anthropic-claude-logo.svg"
   },
   {
     "id": "apify",
@@ -2033,7 +2050,8 @@
       "release_year": 2024,
       "description": "Apify is the largest ecosystem where developers build, deploy, and publish web scrapers, AI agents, and automation tools. We call them Actors.",
       "category": "Paid Search & PPC"
-    }
+    },
+    "logo_url": "/images/tools/apify-logo.svg"
   },
   {
     "id": "apollo-io",
@@ -2106,7 +2124,8 @@
       "value": 9
     },
     "rating": "4.0",
-    "review_count": 193
+    "review_count": 193,
+    "logo_url": "/images/tools/apollo-io-logo.svg"
   },
   {
     "id": "NaN",
@@ -2173,7 +2192,9 @@
       "value": 8
     },
     "featured": false,
-    "popularity_score": 50
+    "popularity_score": 50,
+    "logo": null,
+    "logo_url": null
   },
   {
     "id": "arcwise",
@@ -2246,7 +2267,8 @@
       "value": 8
     },
     "rating": "3.9",
-    "review_count": 277
+    "review_count": 277,
+    "logo_url": "/images/tools/arcwise-logo.svg"
   },
   {
     "id": "auraticai",
@@ -2319,7 +2341,8 @@
       "value": 7
     },
     "rating": "3.7",
-    "review_count": 202
+    "review_count": 202,
+    "logo_url": "/images/tools/auraticai-logo.svg"
   },
   {
     "id": "bertha-ai",
@@ -2392,7 +2415,8 @@
       "value": 7
     },
     "rating": "5.0",
-    "review_count": 290
+    "review_count": 290,
+    "logo_url": "/images/tools/bertha-ai-logo.svg"
   },
   {
     "id": "blaze-ai",
@@ -2447,7 +2471,8 @@
       "release_year": 2024,
       "description": "Get started for free(https://app.blaze.ai/signup?referral_page=home&referrer=)",
       "category": "Content Creation"
-    }
+    },
+    "logo_url": "/images/tools/blaze-ai-logo.svg"
   },
   {
     "id": "branchbob",
@@ -2520,7 +2545,8 @@
       "value": 8
     },
     "rating": "4.4",
-    "review_count": 91
+    "review_count": 91,
+    "logo_url": "/images/tools/branchbob-logo.svg"
   },
   {
     "id": "browse-ai",
@@ -2593,7 +2619,8 @@
       "value": 8
     },
     "rating": "4.7",
-    "review_count": 195
+    "review_count": 195,
+    "logo_url": "/images/tools/browse-ai-logo.svg"
   },
   {
     "id": "buffer",
@@ -2744,7 +2771,8 @@
       "social-media",
       "ai-tools",
       "automation"
-    ]
+    ],
+    "logo_url": "/images/tools/buffer-logo.svg"
   },
   {
     "id": "buffer-ai",
@@ -2854,7 +2882,8 @@
     ],
     "affiliate_link": "https://buffer.com/",
     "search_volume": 1500,
-    "cpc": 1.8
+    "cpc": 1.8,
+    "logo_url": "/images/tools/placeholder-logo.svg"
   },
   {
     "id": "canva-ai",
@@ -2999,7 +3028,8 @@
     ],
     "affiliate_link": "https://canva.com/",
     "search_volume": 25000,
-    "cpc": 2.8
+    "cpc": 2.8,
+    "logo_url": "/images/tools/canva-ai-logo.svg"
   },
   {
     "id": "carboncopy",
@@ -3072,7 +3102,8 @@
       "value": 9
     },
     "rating": "4.3",
-    "review_count": 242
+    "review_count": 242,
+    "logo_url": "/images/tools/carboncopy-logo.svg"
   },
   {
     "id": "castmagic",
@@ -3143,7 +3174,8 @@
       "release_year": 2023,
       "description": "AI-powered content repurposing for podcasters and video creators",
       "category": "Content Creation"
-    }
+    },
+    "logo_url": "/images/tools/castmagic-logo.svg"
   },
   {
     "id": "anthropic-chatgpt-alternative",
@@ -3279,7 +3311,8 @@
       "total_score": 93,
       "last_updated": "2025-08-18T17:26:51.891Z"
     },
-    "related_tools": []
+    "related_tools": [],
+    "logo_url": "/images/tools/anthropic-chatgpt-alternative-logo.svg"
   },
   {
     "id": "chatbit",
@@ -3352,7 +3385,8 @@
       "value": 9
     },
     "rating": "4.8",
-    "review_count": 276
+    "review_count": 276,
+    "logo_url": "/images/tools/chatbit-logo.svg"
   },
   {
     "id": "chatgpt",
@@ -3461,7 +3495,8 @@
     ],
     "affiliate_link": "https://chat.openai.com/",
     "search_volume": 18750,
-    "cpc": 3.24
+    "cpc": 3.24,
+    "logo_url": "/images/tools/chatgpt-logo.svg"
   },
   {
     "id": "chatgpt-enterprise",
@@ -3607,7 +3642,8 @@
     ],
     "affiliate_link": "https://openai.com/enterprise",
     "search_volume": 3100,
-    "cpc": 8.9
+    "cpc": 8.9,
+    "logo_url": "/images/tools/chatgpt-enterprise-logo.svg"
   },
   {
     "id": "chatpdf",
@@ -3753,7 +3789,8 @@
     ],
     "affiliate_link": "https://chatpdf.com/",
     "search_volume": 5600,
-    "cpc": 2.4
+    "cpc": 2.4,
+    "logo_url": "/images/tools/chatpdf-logo.svg"
   },
   {
     "id": "claude",
@@ -3898,7 +3935,8 @@
     ],
     "affiliate_link": "https://claude.ai/",
     "search_volume": 4200,
-    "cpc": 2.7
+    "cpc": 2.7,
+    "logo_url": "/images/tools/claude-logo.svg"
   },
   {
     "id": "clay",
@@ -3971,7 +4009,8 @@
       "value": 7
     },
     "rating": "4.2",
-    "review_count": 302
+    "review_count": 302,
+    "logo_url": "/images/tools/clay-logo.svg"
   },
   {
     "id": "clearscope",
@@ -4093,7 +4132,8 @@
     "rating": 4.4,
     "affiliate_link": "https://www.clearscope.io/",
     "search_volume": 2100,
-    "cpc": 4.2
+    "cpc": 4.2,
+    "logo_url": "/images/tools/clearscope-logo.svg"
   },
   {
     "id": "clickup",
@@ -4147,7 +4187,8 @@
       "release_year": 2024,
       "description": "All your apps, projects, and knowledge. One converged AI workspace. A single place for humans, AI, and agents to work—together.",
       "category": "AI Automation"
-    }
+    },
+    "logo_url": "/images/tools/clickup-logo.svg"
   },
   {
     "id": "clockwise",
@@ -4277,7 +4318,8 @@
       "title": "Clockwise Review 2024: Features, Pricing & Alternatives",
       "description": "Clockwise is an AI-powered scheduling assistant that optimizes your calendar to create more time for deep work and efficient meetings. It intelligently rearranges events based on user preferences and team schedules, acting like a personal AI scheduling assistant for your entire team."
     },
-    "related_tools": []
+    "related_tools": [],
+    "logo_url": "/images/tools/clockwise-logo.svg"
   },
   {
     "id": "cohere-ai",
@@ -4430,7 +4472,8 @@
       "total_score": 97,
       "last_updated": "2025-08-18T17:26:51.891Z"
     },
-    "related_tools": []
+    "related_tools": [],
+    "logo_url": "/images/tools/cohere-ai-logo.svg"
   },
   {
     "id": "colossyan-creator",
@@ -4507,7 +4550,8 @@
       "value": 8
     },
     "rating": 4.2,
-    "review_count": 180
+    "review_count": 180,
+    "logo_url": "/images/tools/colossyan-creator-logo.svg"
   },
   {
     "id": "consensus",
@@ -4653,7 +4697,8 @@
     ],
     "affiliate_link": "https://consensus.app/",
     "search_volume": 3400,
-    "cpc": 4.8
+    "cpc": 4.8,
+    "logo_url": "/images/tools/consensus-logo.svg"
   },
   {
     "id": "contentforge",
@@ -4726,7 +4771,8 @@
       "value": 7
     },
     "rating": "3.6",
-    "review_count": 262
+    "review_count": 262,
+    "logo_url": "/images/tools/contentforge-logo.svg"
   },
   {
     "id": "contentstudio",
@@ -4816,7 +4862,8 @@
       "content marketing"
     ],
     "rating": 4.3,
-    "review_count": 100
+    "review_count": 100,
+    "logo_url": "/images/tools/contentstudio-logo.svg"
   },
   {
     "id": "copy-ai",
@@ -4962,7 +5009,8 @@
     ],
     "affiliate_link": "https://www.copy.ai/",
     "search_volume": 1200,
-    "cpc": 2.4
+    "cpc": 2.4,
+    "logo_url": "/images/tools/copy-ai-logo.svg"
   },
   {
     "id": "copymatic",
@@ -5035,7 +5083,8 @@
       "value": 9
     },
     "rating": "4.7",
-    "review_count": 99
+    "review_count": 99,
+    "logo_url": "/images/tools/copymatic-logo.svg"
   },
   {
     "id": "cosmos-ai",
@@ -5108,7 +5157,8 @@
       "value": 9
     },
     "rating": "3.5",
-    "review_count": 373
+    "review_count": 373,
+    "logo_url": "/images/tools/cosmos-ai-logo.svg"
   },
   {
     "id": "NaN",
@@ -5175,7 +5225,9 @@
       "value": 8
     },
     "featured": false,
-    "popularity_score": 50
+    "popularity_score": 50,
+    "logo": null,
+    "logo_url": null
   },
   {
     "id": "creatify",
@@ -5257,7 +5309,8 @@
       "value": 9
     },
     "rating": "4.1",
-    "review_count": 397
+    "review_count": 397,
+    "logo_url": "/images/tools/creatify-logo.svg"
   },
   {
     "id": "cursor",
@@ -5402,7 +5455,8 @@
     ],
     "affiliate_link": "https://cursor.sh/",
     "search_volume": 8500,
-    "cpc": 3.8
+    "cpc": 3.8,
+    "logo_url": "/images/tools/cursor-logo.svg"
   },
   {
     "id": "dall-e",
@@ -5547,7 +5601,8 @@
     ],
     "affiliate_link": "https://openai.com/dall-e-2",
     "search_volume": 1800,
-    "cpc": 2.8
+    "cpc": 2.8,
+    "logo_url": "/images/tools/dall-e-logo.svg"
   },
   {
     "id": "datarobot",
@@ -5674,7 +5729,8 @@
       null,
       "ai-tools",
       "automation"
-    ]
+    ],
+    "logo_url": "/images/tools/datarobot-logo.svg"
   },
   {
     "id": "deep-research",
@@ -5762,7 +5818,8 @@
       "title": "Deep Research Review 2024: Features, Pricing & Alternatives",
       "description": "AI-powered research assistant for academic and professional research"
     },
-    "related_tools": []
+    "related_tools": [],
+    "logo_url": "/images/tools/deep-research-logo.svg"
   },
   {
     "id": "deepgram",
@@ -5913,7 +5970,8 @@
       "voice-ai-&-assistants",
       "ai-tools",
       "automation"
-    ]
+    ],
+    "logo_url": "/images/tools/deepgram-logo.svg"
   },
   {
     "name": "Descript",
@@ -5986,7 +6044,8 @@
       "description": "Comprehensive review of Descript audio editing platform. Compare features, pricing, and alternatives."
     },
     "related_tools": [],
-    "affiliate_link": "https://get.descript.com/fken6gf9ux2c"
+    "affiliate_link": "https://get.descript.com/fken6gf9ux2c",
+    "logo_url": "/images/tools/descript-logo.svg"
   },
   {
     "id": "dream-machine",
@@ -6036,7 +6095,8 @@
       "release_year": 2024,
       "description": "Dream Machine - AI tool",
       "category": "Video Generation"
-    }
+    },
+    "logo_url": "/images/tools/dream-machine-logo.svg"
   },
   {
     "id": "dropship",
@@ -6109,7 +6169,8 @@
       "value": 8
     },
     "rating": "3.6",
-    "review_count": 54
+    "review_count": 54,
+    "logo_url": "/images/tools/dropship-logo.svg"
   },
   {
     "id": "dubvid",
@@ -6182,7 +6243,8 @@
       "value": 7
     },
     "rating": "4.1",
-    "review_count": 93
+    "review_count": 93,
+    "logo_url": "/images/tools/dubvid-logo.svg"
   },
   {
     "id": "echofox",
@@ -6255,7 +6317,8 @@
       "value": 8
     },
     "rating": "3.8",
-    "review_count": 261
+    "review_count": 261,
+    "logo_url": "/images/tools/echofox-logo.svg"
   },
   {
     "id": "elai-io",
@@ -6332,7 +6395,8 @@
       "value": 7
     },
     "rating": 4.1,
-    "review_count": 95
+    "review_count": 95,
+    "logo_url": "/images/tools/elai-io-logo.svg"
   },
   {
     "id": "elevenlabs",
@@ -6489,7 +6553,8 @@
       "voice ai",
       "text-to-speech",
       "ai voice generation"
-    ]
+    ],
+    "logo_url": "/images/tools/elevenlabs-logo.svg"
   },
   {
     "id": "elicit",
@@ -6635,7 +6700,8 @@
     ],
     "affiliate_link": "https://elicit.org/",
     "search_volume": 2800,
-    "cpc": 3.6
+    "cpc": 3.6,
+    "logo_url": "/images/tools/elicit-logo.svg"
   },
   {
     "id": "enterprisedna",
@@ -6708,7 +6774,8 @@
       "value": 7
     },
     "rating": "4.1",
-    "review_count": 275
+    "review_count": 275,
+    "logo_url": "/images/tools/enterprisedna-logo.svg"
   },
   {
     "id": "explee-ai",
@@ -6796,7 +6863,8 @@
     "search_volume": 2200,
     "cpc": 5.5,
     "affiliate_link": "https://explee.com",
-    "free_trial": true
+    "free_trial": true,
+    "logo_url": "/images/tools/explee-ai-logo.svg"
   },
   {
     "id": "fathom",
@@ -6948,7 +7016,8 @@
       "title": "Fathom Review 2024: Features, Pricing & Alternatives",
       "description": "Fathom is an AI-powered meeting notetaker that automatically transcribes and summarizes meetings from platforms like Zoom, Google Meet, and Microsoft Teams. It aims to free up users to focus on conversations rather than note-taking, providing quick summaries, action items, and searchable transcripts."
     },
-    "related_tools": []
+    "related_tools": [],
+    "logo_url": "/images/tools/fathom-logo.svg"
   },
   {
     "id": "fireflies",
@@ -6998,7 +7067,8 @@
       "release_year": 2024,
       "description": "!(https://fireflies.ai/website/assets/_next/image?url=%2Fwebsite%2Fassets%2F_next%2Fstatic%2Fmedia%2Fbg-elements.4ec1df64.svg&w=3840&q=75)",
       "category": "AI Automation"
-    }
+    },
+    "logo_url": "/images/tools/fireflies-logo.svg"
   },
   {
     "id": "fliki",
@@ -7080,7 +7150,8 @@
       "value": 8
     },
     "rating": "4.2",
-    "review_count": 321
+    "review_count": 321,
+    "logo_url": "/images/tools/fliki-logo.svg"
   },
   {
     "id": "flux",
@@ -7240,7 +7311,8 @@
       "advanced ai imaging",
       "prompt accuracy",
       "visual quality"
-    ]
+    ],
+    "logo_url": "/images/tools/flux-logo.svg"
   },
   {
     "id": "flux-1",
@@ -7290,7 +7362,8 @@
       "release_year": 2024,
       "description": "Application error: a client-side exception has occurred while loading bfl.ai (see the browser console for more information).",
       "category": "Image Generation"
-    }
+    },
+    "logo_url": "/images/tools/flux-1-logo.svg"
   },
   {
     "id": "frase",
@@ -7400,7 +7473,8 @@
     ],
     "affiliate_link": "https://www.frase.io/",
     "search_volume": 1800,
-    "cpc": 2.6
+    "cpc": 2.6,
+    "logo_url": "/images/tools/frase-logo.svg"
   },
   {
     "id": "fyxer",
@@ -7525,7 +7599,8 @@
       "title": "Fyxer Review 2024: Features, Pricing & Alternatives",
       "description": "Fyxer is an AI-powered assistant designed to help users manage their inboxes, draft email responses, and take meeting notes. It aims to reduce the time spent on administrative tasks, allowing users to focus on more important work."
     },
-    "related_tools": []
+    "related_tools": [],
+    "logo_url": "/images/tools/fyxer-logo.svg"
   },
   {
     "id": "gamma",
@@ -7639,7 +7714,8 @@
       "title": "Gamma Review 2024: Features, Pricing & Alternatives",
       "description": "Gamma is an AI design partner that helps users effortlessly create presentations, websites, social media posts, and more. It aims to streamline the design process, allowing users to focus on their ideas rather than the design execution. Gamma supports various content formats and offers AI-powered features for generation, editing, and sharing."
     },
-    "related_tools": []
+    "related_tools": [],
+    "logo_url": "/images/tools/gamma-logo.svg"
   },
   {
     "id": "gemini",
@@ -7727,7 +7803,8 @@
       "perplexity",
       "jasper-ai"
     ],
-    "affiliate_link": "https://gemini.google.com"
+    "affiliate_link": "https://gemini.google.com",
+    "logo_url": "/images/tools/gemini-logo.svg"
   },
   {
     "id": "gemini-25",
@@ -7777,7 +7854,8 @@
       "release_year": 2024,
       "description": "Gemini 2.5 - AI tool",
       "category": "Image Generation"
-    }
+    },
+    "logo_url": "/images/tools/gemini-25-logo.svg"
   },
   {
     "id": "gigasheet",
@@ -7851,7 +7929,8 @@
       "value": 9
     },
     "rating": "3.7",
-    "review_count": 227
+    "review_count": 227,
+    "logo_url": "/images/tools/gigasheet-logo.svg"
   },
   {
     "id": "github-copilot",
@@ -7996,7 +8075,8 @@
     ],
     "affiliate_link": "https://github.com/features/copilot",
     "search_volume": 20000,
-    "cpc": 4.5
+    "cpc": 4.5,
+    "logo_url": "/images/tools/github-copilot-logo.svg"
   },
   {
     "id": "gong-io",
@@ -8046,7 +8126,8 @@
       "release_year": 2024,
       "description": "!(https://www.gong.io/marketing-assets/background/squig-02.gif)The \\1 AI Platform for Revenue Teams!(https://www.gong.io/marketing-assets/background/squig-01.gif)",
       "category": "Paid Search & PPC"
-    }
+    },
+    "logo_url": "/images/tools/gong-io-logo.svg"
   },
   {
     "id": "google-ads",
@@ -8107,7 +8188,8 @@
       "value": 8
     },
     "rating": 4.5,
-    "review_count": 12500
+    "review_count": 12500,
+    "logo_url": "/images/tools/google-ads-logo.svg"
   },
   {
     "id": "google-ads-editor",
@@ -8159,7 +8241,8 @@
       "value": 10
     },
     "rating": 4.6,
-    "review_count": 3200
+    "review_count": 3200,
+    "logo_url": "/images/tools/google-ads-editor-logo.svg"
   },
   {
     "id": "google-ai-mode",
@@ -8262,7 +8345,8 @@
       "title": "Google Search Review 2024: Features, Pricing & Alternatives",
       "description": "Google Search offers an 'AI Mode' that provides personalized suggestions and insights based on user interests and trending topics. It also includes features like 'I'm Feeling Curious' and other playful prompts to encourage exploration. The page also highlights Google devices and AI applications in science and the environment."
     },
-    "related_tools": []
+    "related_tools": [],
+    "logo_url": "/images/tools/google-ai-mode-logo.svg"
   },
   {
     "id": "openai-gpt4",
@@ -8415,7 +8499,8 @@
       "total_score": 96,
       "last_updated": "2025-08-18T17:26:51.891Z"
     },
-    "related_tools": []
+    "related_tools": [],
+    "logo_url": "/images/tools/openai-gpt4-logo.svg"
   },
   {
     "id": "grammarly",
@@ -8560,7 +8645,8 @@
     ],
     "affiliate_link": "https://grammarly.com/",
     "search_volume": 30000,
-    "cpc": 3.2
+    "cpc": 3.2,
+    "logo_url": "/images/tools/grammarly-logo.svg"
   },
   {
     "id": "grok",
@@ -8648,7 +8734,8 @@
       "title": "Grok Review 2024: Features, Pricing & Alternatives",
       "description": "AI assistant by xAI with real-time knowledge and witty personality"
     },
-    "related_tools": []
+    "related_tools": [],
+    "logo_url": "/images/tools/grok-logo.svg"
   },
   {
     "id": "gumloop",
@@ -8698,7 +8785,8 @@
       "release_year": 2024,
       "description": "AI-powered automation platform that enables users to build, test, and deploy automated workflows without coding.",
       "category": "AI Automation"
-    }
+    },
+    "logo_url": "/images/tools/gumloop-logo.svg"
   },
   {
     "id": "gunbot",
@@ -8771,7 +8859,8 @@
       "value": 7
     },
     "rating": "3.8",
-    "review_count": 60
+    "review_count": 60,
+    "logo_url": "/images/tools/gunbot-logo.svg"
   },
   {
     "id": "guru",
@@ -8919,7 +9008,8 @@
       "title": "Guru Review 2024: Features, Pricing & Alternatives",
       "description": "Guru is a knowledge management solution that uses AI to help teams find, verify, and share information across their workflows. It integrates with various tools to provide contextual answers and support features like AI search bots, custom pages, and an AI training center."
     },
-    "related_tools": []
+    "related_tools": [],
+    "logo_url": "/images/tools/guru-logo.svg"
   },
   {
     "id": "gwi",
@@ -8969,7 +9059,8 @@
       "release_year": 2024,
       "description": "Ready to elevate your strategy? Dive into our platform today with a personalized demo(https://www.gwi.com/book-demo)",
       "category": "Content Creation"
-    }
+    },
+    "logo_url": "/images/tools/gwi-logo.svg"
   },
   {
     "id": "headshot-generator",
@@ -9042,7 +9133,8 @@
       "value": 8
     },
     "rating": "3.9",
-    "review_count": 219
+    "review_count": 219,
+    "logo_url": "/images/tools/headshot-generator-logo.svg"
   },
   {
     "id": "NaN",
@@ -9109,7 +9201,9 @@
       "value": 8
     },
     "featured": false,
-    "popularity_score": 50
+    "popularity_score": 50,
+    "logo": null,
+    "logo_url": null
   },
   {
     "id": "heygen",
@@ -9191,7 +9285,8 @@
       "value": 8
     },
     "rating": "4.1",
-    "review_count": 102
+    "review_count": 102,
+    "logo_url": "/images/tools/heygen-logo.svg"
   },
   {
     "id": "hootsuite",
@@ -9342,7 +9437,8 @@
       "social-media",
       "ai-tools",
       "automation"
-    ]
+    ],
+    "logo_url": "/images/tools/hootsuite-logo.svg"
   },
   {
     "id": "hootsuite-ai",
@@ -9452,7 +9548,8 @@
     ],
     "affiliate_link": "https://hootsuite.com/",
     "search_volume": 2000,
-    "cpc": 2.2
+    "cpc": 2.2,
+    "logo_url": "/images/tools/placeholder-logo.svg"
   },
   {
     "id": "hubspot-ai",
@@ -9561,7 +9658,8 @@
     ],
     "affiliate_link": "https://www.hubspot.com/",
     "search_volume": 1600,
-    "cpc": 2.9
+    "cpc": 2.9,
+    "logo_url": "/images/tools/placeholder-logo.svg"
   },
   {
     "id": "hubspot-email-writer",
@@ -9722,7 +9820,8 @@
       "title": "HubSpot Email Marketing Tools Review 2024: Features, Pricing & Alternatives",
       "description": "HubSpot's free email marketing tools allow users to create, personalize, and optimize marketing emails without needing to rely on designers or IT. It offers features like AI-generated subject lines and copy, customizable templates, and automation for post-send actions."
     },
-    "related_tools": []
+    "related_tools": [],
+    "logo_url": "/images/tools/hubspot-email-writer-logo.svg"
   },
   {
     "id": "huggingface-transformers",
@@ -9875,7 +9974,8 @@
       "total_score": 96,
       "last_updated": "2025-08-18T17:26:51.891Z"
     },
-    "related_tools": []
+    "related_tools": [],
+    "logo_url": "/images/tools/huggingface-transformers-logo.svg"
   },
   {
     "id": "ideogram",
@@ -9925,7 +10025,8 @@
       "release_year": 2024,
       "description": "!(https://ideogram.ai/assets/progressive-image/balanced/response/Q_Zp4aFyRs6GvntRVsL8CA)(https://ideogram.ai/g/BKNcLtX6TGmk2P4eJdCgfg/0)",
       "category": "Image Generation"
-    }
+    },
+    "logo_url": "/images/tools/ideogram-logo.svg"
   },
   {
     "id": "interview-study",
@@ -9998,7 +10099,8 @@
       "value": 8
     },
     "rating": "4.3",
-    "review_count": 343
+    "review_count": 343,
+    "logo_url": "/images/tools/interview-study-logo.svg"
   },
   {
     "id": "NaN",
@@ -10065,7 +10167,9 @@
       "value": 8
     },
     "featured": false,
-    "popularity_score": 50
+    "popularity_score": 50,
+    "logo": null,
+    "logo_url": null
   },
   {
     "id": "jamie-ai",
@@ -10114,7 +10218,8 @@
       "release_year": 2024,
       "description": "Summarize your meetings in any software, even in-person meetings. Jamie automatically takes detailed meeting notes, giving you peace of mind by never missing an important detail.",
       "category": "Productivity"
-    }
+    },
+    "logo_url": "/images/tools/jamie-ai-logo.svg"
   },
   {
     "id": "jasper",
@@ -10251,7 +10356,8 @@
       "total_score": 92,
       "last_updated": "2025-08-18T17:24:32.437Z"
     },
-    "related_tools": []
+    "related_tools": [],
+    "logo_url": "/images/tools/jasper-ai-logo.svg"
   },
   {
     "id": "jasper-ai",
@@ -10361,7 +10467,8 @@
     ],
     "affiliate_link": "https://jasper.ai/",
     "search_volume": 3500,
-    "cpc": 2.8
+    "cpc": 2.8,
+    "logo_url": "/images/tools/jasper-ai-logo.svg"
   },
   {
     "id": "kapwing",
@@ -10519,7 +10626,8 @@
       "voice ai",
       "text-to-speech",
       "ai voice generation"
-    ]
+    ],
+    "logo_url": "/images/tools/kapwing-logo.svg"
   },
   {
     "id": "kenji",
@@ -10592,7 +10700,8 @@
       "value": 9
     },
     "rating": "4.3",
-    "review_count": 354
+    "review_count": 354,
+    "logo_url": "/images/tools/kenji-logo.svg"
   },
   {
     "id": "kickresume",
@@ -10724,7 +10833,8 @@
       "title": "Kickresume Review 2024: Features, Pricing & Alternatives",
       "description": "Kickresume is an AI-powered resume builder and cover letter generator designed to help job seekers create professional and impressive application documents quickly and easily. It offers a wide range of customizable templates, AI writing assistance, and examples from successful job seekers to help users land their dream jobs."
     },
-    "related_tools": []
+    "related_tools": [],
+    "logo_url": "/images/tools/kickresume-logo.svg"
   },
   {
     "id": "kleap-ai",
@@ -10795,7 +10905,8 @@
       "release_year": 2022,
       "description": "AI website builder for creating professional websites in minutes",
       "category": "Website Builder"
-    }
+    },
+    "logo_url": "/images/tools/kleap-ai-logo.svg"
   },
   {
     "id": "lanta-ai",
@@ -10883,7 +10994,8 @@
     "search_volume": 1500,
     "cpc": 4.2,
     "affiliate_link": "https://lantaai.com",
-    "free_trial": true
+    "free_trial": true,
+    "logo_url": "/images/tools/lanta-ai-logo.svg"
   },
   {
     "id": "later",
@@ -11034,7 +11146,8 @@
       "social-media",
       "ai-tools",
       "automation"
-    ]
+    ],
+    "logo_url": "/images/tools/later-logo.svg"
   },
   {
     "id": "leonardo-ai",
@@ -11178,7 +11291,8 @@
     ],
     "affiliate_link": "https://leonardo.ai/",
     "search_volume": 6500,
-    "cpc": 3.1
+    "cpc": 3.1,
+    "logo_url": "/images/tools/leonardo-ai-logo.svg"
   },
   {
     "id": "lockedin-ai",
@@ -11266,7 +11380,8 @@
     "search_volume": 1200,
     "cpc": 4.5,
     "affiliate_link": "https://lockedinai.com",
-    "free_trial": true
+    "free_trial": true,
+    "logo_url": "/images/tools/lockedin-ai-logo.svg"
   },
   {
     "id": "looka",
@@ -11377,7 +11492,8 @@
       "title": "Looka Review 2024: Features, Pricing & Alternatives",
       "description": "Looka is an AI-powered platform that helps individuals and businesses create professional logos, build brand identities, and design marketing materials. It simplifies the design process, making it accessible to users without prior design experience. Looka offers a comprehensive suite of tools, from logo generation to a full brand kit with templates for various marketing assets."
     },
-    "related_tools": []
+    "related_tools": [],
+    "logo_url": "/images/tools/looka-logo.svg"
   },
   {
     "id": "looker",
@@ -11523,7 +11639,8 @@
     ],
     "affiliate_link": "https://looker.com/",
     "search_volume": 8200,
-    "cpc": 6.8
+    "cpc": 6.8,
+    "logo_url": "/images/tools/looker-logo.svg"
   },
   {
     "id": "loomly",
@@ -11614,7 +11731,8 @@
       "scheduling"
     ],
     "rating": 4.6,
-    "review_count": 160
+    "review_count": 160,
+    "logo_url": "/images/tools/loomly-logo.svg"
   },
   {
     "id": "lovable",
@@ -11704,7 +11822,8 @@
       "title": "Lovable Review 2024: Features, Pricing & Alternatives",
       "description": "Create apps and websites by chatting with AI."
     },
-    "related_tools": []
+    "related_tools": [],
+    "logo_url": "/images/tools/lovable-logo.svg"
   },
   {
     "id": "lovo-ai",
@@ -11777,7 +11896,8 @@
       "value": 9
     },
     "rating": "4.9",
-    "review_count": 64
+    "review_count": 64,
+    "logo_url": "/images/tools/lovo-ai-logo.svg"
   },
   {
     "id": "ltx-studio",
@@ -11832,7 +11952,8 @@
       "release_year": 2024,
       "description": "!LTX Studio logo(https://cdn.prod.website-files.com/65bb6b901cb133d784d16166/68496acf1f21ddfdceab8506_LTX-Studio-main-logo1.svg)(https://ltx.studio/homepage-2)",
       "category": "Video Generation"
-    }
+    },
+    "logo_url": "/images/tools/ltx-studio-logo.svg"
   },
   {
     "id": "lumen5",
@@ -11990,7 +12111,8 @@
       "voice ai",
       "text-to-speech",
       "ai voice generation"
-    ]
+    ],
+    "logo_url": "/images/tools/lumen5-logo.svg"
   },
   {
     "id": "macaron-ai",
@@ -12079,7 +12201,8 @@
     "search_volume": 800,
     "cpc": 3.8,
     "affiliate_link": "https://macaron.ai",
-    "free_trial": true
+    "free_trial": true,
+    "logo_url": "/images/tools/macaron-ai-logo.svg"
   },
   {
     "id": "mailchimp",
@@ -12199,7 +12322,8 @@
       null,
       "ai-tools",
       "automation"
-    ]
+    ],
+    "logo_url": "/images/tools/mailchimp-logo.svg"
   },
   {
     "id": "mailchimp-ai",
@@ -12308,7 +12432,8 @@
     ],
     "affiliate_link": "https://mailchimp.com/",
     "search_volume": 1750,
-    "cpc": 2.65
+    "cpc": 2.65,
+    "logo_url": "/images/tools/placeholder-logo.svg"
   },
   {
     "id": "make",
@@ -12430,7 +12555,8 @@
       "title": "Make Review 2024: Features, Pricing & Alternatives",
       "description": "Make is an intuitive no-code development platform that allows users to realize their business's full potential through automation and AI. It enables users to visualize, build, and scale automations for various business processes, fostering collaboration and accelerating innovation."
     },
-    "related_tools": []
+    "related_tools": [],
+    "logo_url": "/images/tools/make-logo.svg"
   },
   {
     "id": "mangools",
@@ -12522,7 +12648,8 @@
       "rank tracking"
     ],
     "rating": 4.4,
-    "review_count": 180
+    "review_count": 180,
+    "logo_url": "/images/tools/mangools-logo.svg"
   },
   {
     "id": "manus",
@@ -12570,7 +12697,8 @@
       "release_year": 2024,
       "description": "View replay(https://manus.im/share/iLQpYZuEWvzDPIixGEqMC0?replay=1) Charmm-GUI Protein-Membrane Doc\\\\",
       "category": "AI Automation"
-    }
+    },
+    "logo_url": "/images/tools/manus-logo.svg"
   },
   {
     "id": "manychat",
@@ -12643,7 +12771,8 @@
       "value": 8
     },
     "rating": "4.7",
-    "review_count": 310
+    "review_count": 310,
+    "logo_url": "/images/tools/manychat-logo.svg"
   },
   {
     "name": "Marin Software",
@@ -12728,7 +12857,8 @@
       "integration": 4.1,
       "ease_of_use": 4,
       "value": 4.2
-    }
+    },
+    "logo_url": "/images/tools/marin-software-logo.svg"
   },
   {
     "id": "media-io",
@@ -12811,7 +12941,8 @@
       "value": 8
     },
     "rating": "4.4",
-    "review_count": 335
+    "review_count": 335,
+    "logo_url": "/images/tools/media-io-logo.svg"
   },
   {
     "id": "NaN",
@@ -12878,7 +13009,9 @@
       "value": 8
     },
     "featured": false,
-    "popularity_score": 50
+    "popularity_score": 50,
+    "logo": null,
+    "logo_url": null
   },
   {
     "id": "meet-geek",
@@ -12933,7 +13066,8 @@
       "release_year": 2024,
       "description": "Preferences(https://meetgeek.ai/) Deny(https://meetgeek.ai/) Accept(https://meetgeek.ai/)",
       "category": "Productivity"
-    }
+    },
+    "logo_url": "/images/tools/meet-geek-logo.svg"
   },
   {
     "id": "microsoft-copilot",
@@ -13079,7 +13213,8 @@
     ],
     "affiliate_link": "https://microsoft.com/copilot",
     "search_volume": 12000,
-    "cpc": 5.8
+    "cpc": 5.8,
+    "logo_url": "/images/tools/microsoft-copilot-logo.svg"
   },
   {
     "id": "copilot-powerpoint",
@@ -13240,7 +13375,8 @@
       "title": "Microsoft PowerPoint Review 2024: Features, Pricing & Alternatives",
       "description": "Microsoft PowerPoint is a presentation software that allows users to create captivating presentations, collaborate in real-time, and design presentations from any device. It offers features for idea generation, confident creation, engagement, and sharing."
     },
-    "related_tools": []
+    "related_tools": [],
+    "logo_url": "/images/tools/copilot-powerpoint-logo.svg"
   },
   {
     "id": "midjourney",
@@ -13385,7 +13521,8 @@
     ],
     "affiliate_link": "https://www.midjourney.com/",
     "search_volume": 2250,
-    "cpc": 3.36
+    "cpc": 3.36,
+    "logo_url": "/images/tools/midjourney-logo.svg"
   },
   {
     "id": "midjourney-v6",
@@ -13546,7 +13683,8 @@
       "ai art generator",
       "photorealistic images",
       "concept art"
-    ]
+    ],
+    "logo_url": "/images/tools/midjourney-logo.svg"
   },
   {
     "id": "morningscore",
@@ -13635,7 +13773,8 @@
       "traffic analysis"
     ],
     "rating": 4.6,
-    "review_count": 150
+    "review_count": 150,
+    "logo_url": "/images/tools/morningscore-logo.svg"
   },
   {
     "id": "motion",
@@ -13690,7 +13829,8 @@
       "release_year": 2024,
       "description": "Over 1 million top performers and teams trust Motion",
       "category": "AI Automation"
-    }
+    },
+    "logo_url": "/images/tools/motion-logo.svg"
   },
   {
     "id": "moz-pro",
@@ -13841,7 +13981,8 @@
       "seo-&-optimization",
       "ai-tools",
       "automation"
-    ]
+    ],
+    "logo_url": "/images/tools/moz-logo.svg"
   },
   {
     "id": "murf-ai",
@@ -13914,7 +14055,8 @@
       "value": 7
     },
     "rating": "3.5",
-    "review_count": 350
+    "review_count": 350,
+    "logo_url": "/images/tools/murf-ai-logo.svg"
   },
   {
     "id": "murph-ai",
@@ -14072,7 +14214,8 @@
       "voice ai",
       "text-to-speech",
       "ai voice generation"
-    ]
+    ],
+    "logo_url": "/images/tools/murph-ai-logo.svg"
   },
   {
     "id": "n8n",
@@ -14385,7 +14528,8 @@
       "title": "n8n Review 2024: Features, Pricing & Alternatives",
       "description": "n8n is a highly extensible workflow automation tool designed for technical teams. It allows users to connect and automate tasks between various applications and services. It offers flexibility with both code-based (JavaScript, Python) and visual drag-and-drop interfaces, catering to different user preferences and needs. n8n supports self-hosting for on-premise control or offers a cloud-hosted convenience, making it adaptable to various deployment strategies. It's particularly useful for building multi-step AI agents and integrating complex application stacks."
     },
-    "related_tools": []
+    "related_tools": [],
+    "logo_url": "/images/tools/n8n-logo.svg"
   },
   {
     "id": "nando-ai",
@@ -14458,7 +14602,8 @@
       "value": 9
     },
     "rating": "4.3",
-    "review_count": 318
+    "review_count": 318,
+    "logo_url": "/images/tools/nando-ai-logo.svg"
   },
   {
     "id": "NaN",
@@ -14525,7 +14670,9 @@
       "value": 8
     },
     "featured": false,
-    "popularity_score": 50
+    "popularity_score": 50,
+    "logo": null,
+    "logo_url": null
   },
   {
     "id": "nichesss",
@@ -14598,7 +14745,8 @@
       "value": 7
     },
     "rating": "4.3",
-    "review_count": 107
+    "review_count": 107,
+    "logo_url": "/images/tools/nichesss-logo.svg"
   },
   {
     "id": "notion-ai",
@@ -14743,7 +14891,8 @@
     ],
     "affiliate_link": "https://notion.so/",
     "search_volume": 25000,
-    "cpc": 2.3
+    "cpc": 2.3,
+    "logo_url": "/images/tools/notion-ai-logo.svg"
   },
   {
     "id": "nyota",
@@ -14886,7 +15035,8 @@
       "title": "Nyota Review 2024: Features, Pricing & Alternatives",
       "description": "Nyota is an AI-powered notetaker designed to align sales, support, and project teams by automating data entry and call workflows. It integrates with meeting platforms to capture notes, action items, and key details, automatically updating CRMs and project management tools. Nyota aims to keep teams focused, organized, and stress-free by handling the administrative tasks associated with meetings."
     },
-    "related_tools": []
+    "related_tools": [],
+    "logo_url": "/images/tools/nyota-logo.svg"
   },
   {
     "id": "ocoya",
@@ -14959,7 +15109,8 @@
       "value": 7
     },
     "rating": "4.6",
-    "review_count": 91
+    "review_count": 91,
+    "logo_url": "/images/tools/ocoya-logo.svg"
   },
   {
     "id": "octobot-cloud",
@@ -15032,7 +15183,8 @@
       "value": 7
     },
     "rating": "4.7",
-    "review_count": 232
+    "review_count": 232,
+    "logo_url": "/images/tools/octobot-cloud-logo.svg"
   },
   {
     "id": "octopus-crm",
@@ -15106,7 +15258,8 @@
       "value": 7
     },
     "rating": "3.7",
-    "review_count": 224
+    "review_count": 224,
+    "logo_url": "/images/tools/octopus-crm-logo.svg"
   },
   {
     "id": "NaN",
@@ -15173,7 +15326,9 @@
       "value": 8
     },
     "featured": false,
-    "popularity_score": 50
+    "popularity_score": 50,
+    "logo": null,
+    "logo_url": null
   },
   {
     "id": "optimizely",
@@ -15233,7 +15388,8 @@
     },
     "rating": 4.3,
     "review_count": 650,
-    "category": "Paid Search & PPC"
+    "category": "Paid Search & PPC",
+    "logo_url": "/images/tools/optimizely-logo.svg"
   },
   {
     "name": "Optmyzr",
@@ -15317,7 +15473,8 @@
       "integration": 4.1,
       "ease_of_use": 4,
       "value": 4.2
-    }
+    },
+    "logo_url": "/images/tools/optmyzr-logo.svg"
   },
   {
     "id": "otterai",
@@ -15468,7 +15625,8 @@
       "voice-ai-&-assistants",
       "ai-tools",
       "automation"
-    ]
+    ],
+    "logo_url": "/images/tools/otter-ai-logo.svg"
   },
   {
     "id": "paperpal",
@@ -15539,7 +15697,8 @@
       "release_year": 2022,
       "description": "AI academic writing assistant for better research papers",
       "category": "Content Creation"
-    }
+    },
+    "logo_url": "/images/tools/paperpal-logo.svg"
   },
   {
     "id": "perplexity-ai",
@@ -15683,7 +15842,8 @@
     ],
     "affiliate_link": "https://perplexity.ai/",
     "search_volume": 12000,
-    "cpc": 2.5
+    "cpc": 2.5,
+    "logo_url": "/images/tools/perplexity-ai-logo.svg"
   },
   {
     "id": "pictory",
@@ -15841,7 +16001,8 @@
       "voice ai",
       "text-to-speech",
       "ai voice generation"
-    ]
+    ],
+    "logo_url": "/images/tools/pictory-logo.svg"
   },
   {
     "id": "play-ht",
@@ -15999,7 +16160,8 @@
       "voice ai",
       "text-to-speech",
       "ai voice generation"
-    ]
+    ],
+    "logo_url": "/images/tools/play-ht-logo.svg"
   },
   {
     "id": "power-bi",
@@ -16145,7 +16307,8 @@
     ],
     "affiliate_link": "https://powerbi.microsoft.com/",
     "search_volume": 18500,
-    "cpc": 4.5
+    "cpc": 4.5,
+    "logo_url": "/images/tools/power-bi-logo.svg"
   },
   {
     "id": "ppc-io",
@@ -16234,7 +16397,8 @@
       "release_year": 2024,
       "description": "AI-powered PPC optimization platform that helps marketers improve their paid search campaigns with automated bidding, keyword optimization, and performance insights.",
       "category": "Paid Search & PPC"
-    }
+    },
+    "logo_url": "/images/tools/ppc-io-logo.svg"
   },
   {
     "id": "predis-ai",
@@ -16307,7 +16471,8 @@
       "value": 9
     },
     "rating": "4.6",
-    "review_count": 336
+    "review_count": 336,
+    "logo_url": "/images/tools/predis-ai-logo.svg"
   },
   {
     "id": "NaN",
@@ -16374,7 +16539,9 @@
       "value": 8
     },
     "featured": false,
-    "popularity_score": 50
+    "popularity_score": 50,
+    "logo": null,
+    "logo_url": null
   },
   {
     "id": "qlik-sense",
@@ -16520,7 +16687,8 @@
     ],
     "affiliate_link": "https://www.qlik.com/",
     "search_volume": 5400,
-    "cpc": 5.2
+    "cpc": 5.2,
+    "logo_url": "/images/tools/qlik-sense-logo.svg"
   },
   {
     "id": "quickads",
@@ -16593,7 +16761,8 @@
       "value": 8
     },
     "rating": "5.0",
-    "review_count": 323
+    "review_count": 323,
+    "logo_url": "/images/tools/quickads-logo.svg"
   },
   {
     "id": "read-ai",
@@ -16641,7 +16810,8 @@
       "release_year": 2024,
       "description": "Zoom selects Read as an Essential App, Premium Features Enabled for Zoom Customers. Learn More.(https://www.read.ai/)",
       "category": "Productivity"
-    }
+    },
+    "logo_url": "/images/tools/read-ai-logo.svg"
   },
   {
     "id": "reclaim-ai",
@@ -16763,7 +16933,8 @@
       "title": "Reclaim.ai Review 2024: Features, Pricing & Alternatives",
       "description": "Reclaim.ai is an AI-powered productivity tool that helps individuals and teams manage their time effectively by automating scheduling, defending focus time, and optimizing workflows. It integrates with calendars and task management tools to provide a seamless experience."
     },
-    "related_tools": []
+    "related_tools": [],
+    "logo_url": "/images/tools/reclaim-ai-logo.svg"
   },
   {
     "id": "regie-ai",
@@ -16836,7 +17007,8 @@
       "value": 7
     },
     "rating": "4.9",
-    "review_count": 62
+    "review_count": 62,
+    "logo_url": "/images/tools/regie-ai-logo.svg"
   },
   {
     "name": "Replica Studios",
@@ -16909,7 +17081,8 @@
       "title": "Replica Studios Review 2024: AI Voice Acting Features & Pricing",
       "description": "Comprehensive review of Replica Studios AI voice platform. Compare features, pricing, and alternatives."
     },
-    "related_tools": []
+    "related_tools": [],
+    "logo_url": "/images/tools/replica-studios-logo.svg"
   },
   {
     "id": "replicate-ai",
@@ -17045,7 +17218,8 @@
       "total_score": 89,
       "last_updated": "2025-08-18T17:26:51.891Z"
     },
-    "related_tools": []
+    "related_tools": [],
+    "logo_url": "/images/tools/replicate-ai-logo.svg"
   },
   {
     "id": "replit-ghost",
@@ -17191,7 +17365,8 @@
     ],
     "affiliate_link": "https://replit.com/",
     "search_volume": 4100,
-    "cpc": 2.9
+    "cpc": 2.9,
+    "logo_url": "/images/tools/replit-ghost-logo.svg"
   },
   {
     "id": "reportgarden",
@@ -17252,7 +17427,8 @@
     },
     "rating": 4.1,
     "review_count": 420,
-    "category": "Paid Search & PPC"
+    "category": "Paid Search & PPC",
+    "logo_url": "/images/tools/reportgarden-logo.svg"
   },
   {
     "id": "research-pal",
@@ -17329,7 +17505,8 @@
       "release_year": 2024,
       "description": "Use ResearchPal to find authentic citations from credible journals for your claims within seconds.",
       "category": "Research & Education"
-    }
+    },
+    "logo_url": "/images/tools/research-pal-logo.svg"
   },
   {
     "name": "Resemble AI",
@@ -17402,7 +17579,8 @@
       "title": "Resemble AI Review 2024: Voice Cloning Features & Pricing",
       "description": "Comprehensive review of Resemble AI voice cloning platform. Compare features, pricing, and alternatives."
     },
-    "related_tools": []
+    "related_tools": [],
+    "logo_url": "/images/tools/resemble-ai-logo.svg"
   },
   {
     "id": "rev",
@@ -17553,7 +17731,8 @@
       "voice-ai-&-assistants",
       "ai-tools",
       "automation"
-    ]
+    ],
+    "logo_url": "/images/tools/rev-logo.svg"
   },
   {
     "id": "reve-image",
@@ -17603,7 +17782,8 @@
       "release_year": 2024,
       "description": "A new AI model trained from the ground up to excel at",
       "category": "Image Generation"
-    }
+    },
+    "logo_url": "/images/tools/reve-image-logo.svg"
   },
   {
     "id": "runway-ml",
@@ -17759,7 +17939,8 @@
       "voice ai",
       "text-to-speech",
       "ai voice generation"
-    ]
+    ],
+    "logo_url": "/images/tools/runway-ml-logo.svg"
   },
   {
     "id": "runwayml",
@@ -17879,7 +18060,8 @@
       null,
       "ai-tools",
       "automation"
-    ]
+    ],
+    "logo_url": "/images/tools/runwayml-logo.svg"
   },
   {
     "id": "rytr",
@@ -18062,7 +18244,8 @@
       "title": "Rytr Review 2024: Features, Pricing & Alternatives",
       "description": "Rytr is an AI writing assistant designed for short-form content creation, accessible across various platforms. It helps users generate original and compelling content quickly, offering over 40 use cases and templates, including blog posts, social media ads, email responses, and more. Rytr aims to sound like the user, not a robot, by analyzing writing samples and mirroring tone, with options for custom tones. It also emphasizes plagiarism-free content and offers a Chrome Extension for seamless integration into writing workflows."
     },
-    "related_tools": []
+    "related_tools": [],
+    "logo_url": "/images/tools/rytr-logo.svg"
   },
   {
     "id": "salesblink",
@@ -18137,7 +18320,8 @@
       "value": 9
     },
     "rating": "4.5",
-    "review_count": 305
+    "review_count": 305,
+    "logo_url": "/images/tools/salesblink-logo.svg"
   },
   {
     "id": "salesflow",
@@ -18211,7 +18395,8 @@
       "value": 7
     },
     "rating": "4.1",
-    "review_count": 174
+    "review_count": 174,
+    "logo_url": "/images/tools/salesflow-logo.svg"
   },
   {
     "id": "saleshandy",
@@ -18284,7 +18469,8 @@
       "value": 8
     },
     "rating": "3.9",
-    "review_count": 197
+    "review_count": 197,
+    "logo_url": "/images/tools/saleshandy-logo.svg"
   },
   {
     "id": "scite-ai",
@@ -18430,7 +18616,8 @@
     ],
     "affiliate_link": "https://scite.ai/",
     "search_volume": 1900,
-    "cpc": 4.2
+    "cpc": 4.2,
+    "logo_url": "/images/tools/scite-ai-logo.svg"
   },
   {
     "id": "screaming-frog-seo-spider",
@@ -18571,7 +18758,8 @@
       "seo-&-optimization",
       "ai-tools",
       "automation"
-    ]
+    ],
+    "logo_url": "/images/tools/screaming-frog-logo.svg"
   },
   {
     "id": "se-ranking",
@@ -18659,7 +18847,8 @@
       "site audit"
     ],
     "rating": 4.5,
-    "review_count": 200
+    "review_count": 200,
+    "logo_url": "/images/tools/se-ranking-logo.svg"
   },
   {
     "id": "seamless-ai",
@@ -18732,7 +18921,8 @@
       "value": 8
     },
     "rating": "3.9",
-    "review_count": 146
+    "review_count": 146,
+    "logo_url": "/images/tools/seamless-ai-logo.svg"
   },
   {
     "id": "NaN",
@@ -18799,7 +18989,9 @@
       "value": 8
     },
     "featured": false,
-    "popularity_score": 50
+    "popularity_score": 50,
+    "logo": null,
+    "logo_url": null
   },
   {
     "id": "semrush",
@@ -18950,7 +19142,8 @@
       "seo-&-optimization",
       "ai-tools",
       "automation"
-    ]
+    ],
+    "logo_url": "/images/tools/semrush-logo.svg"
   },
   {
     "id": "semrush-ai",
@@ -19059,7 +19252,8 @@
     ],
     "affiliate_link": "https://www.semrush.com/",
     "search_volume": 1600,
-    "cpc": 3.1
+    "cpc": 3.1,
+    "logo_url": "/images/tools/placeholder-logo.svg"
   },
   {
     "id": "sendible",
@@ -19150,7 +19344,8 @@
       "client management"
     ],
     "rating": 4.5,
-    "review_count": 130
+    "review_count": 130,
+    "logo_url": "/images/tools/sendible-logo.svg"
   },
   {
     "id": "serpstat",
@@ -19239,7 +19434,8 @@
       "competitor analysis"
     ],
     "rating": 4.3,
-    "review_count": 120
+    "review_count": 120,
+    "logo_url": "/images/tools/serpstat-logo.svg"
   },
   {
     "id": "shortwave",
@@ -19395,7 +19591,8 @@
       "title": "Shortwave Review 2024: Features, Pricing & Alternatives",
       "description": "Shortwave is an AI-powered email client designed to automate and enhance your email management. It offers features like AI-driven organization, scheduling, writing assistance, and advanced search capabilities to save users time and improve productivity. It aims to provide an ultimate inbox experience with features like split inboxes, email bundling, and turning emails into todos."
     },
-    "related_tools": []
+    "related_tools": [],
+    "logo_url": "/images/tools/shortwave-logo.svg"
   },
   {
     "id": "similarweb",
@@ -19454,7 +19651,8 @@
     },
     "rating": 4.2,
     "review_count": 1800,
-    "category": "Paid Search & PPC"
+    "category": "Paid Search & PPC",
+    "logo_url": "/images/tools/similarweb-logo.svg"
   },
   {
     "id": "sitekick",
@@ -19527,7 +19725,8 @@
       "value": 9
     },
     "rating": "3.6",
-    "review_count": 307
+    "review_count": 307,
+    "logo_url": "/images/tools/sitekick-logo.svg"
   },
   {
     "id": "social-champ",
@@ -19619,7 +19818,8 @@
       "freemium"
     ],
     "rating": 4.4,
-    "review_count": 110
+    "review_count": 110,
+    "logo_url": "/images/tools/social-champ-logo.svg"
   },
   {
     "id": "socialpilot",
@@ -19710,7 +19910,8 @@
       "white-label"
     ],
     "rating": 4.5,
-    "review_count": 140
+    "review_count": 140,
+    "logo_url": "/images/tools/socialpilot-logo.svg"
   },
   {
     "name": "Speechify",
@@ -19783,7 +19984,8 @@
       "title": "Speechify Review 2024: Text-to-Speech Features & Pricing",
       "description": "Comprehensive review of Speechify text-to-speech platform. Compare features, pricing, and alternatives."
     },
-    "related_tools": []
+    "related_tools": [],
+    "logo_url": "/images/tools/speechify-logo.svg"
   },
   {
     "id": "speechmatics",
@@ -19934,7 +20136,8 @@
       "voice-ai-&-assistants",
       "ai-tools",
       "automation"
-    ]
+    ],
+    "logo_url": "/images/tools/speechmatics-logo.svg"
   },
   {
     "id": "sprout-social",
@@ -20085,7 +20288,8 @@
       "social-media",
       "ai-tools",
       "automation"
-    ]
+    ],
+    "logo_url": "/images/tools/sprout-social-logo.svg"
   },
   {
     "id": "spyfu",
@@ -20147,7 +20351,8 @@
       "value": 8
     },
     "rating": 4.3,
-    "review_count": 850
+    "review_count": 850,
+    "logo_url": "/images/tools/spyfu-logo.svg"
   },
   {
     "id": "stable-diffusion",
@@ -20293,7 +20498,8 @@
     ],
     "affiliate_link": "https://stability.ai/",
     "search_volume": 18000,
-    "cpc": 2.8
+    "cpc": 2.8,
+    "logo_url": "/images/tools/stable-diffusion-logo.svg"
   },
   {
     "id": "stability-ai-stable-diffusion",
@@ -20429,7 +20635,8 @@
       "total_score": 94,
       "last_updated": "2025-08-18T17:26:51.891Z"
     },
-    "related_tools": []
+    "related_tools": [],
+    "logo_url": "/images/tools/stability-ai-stable-diffusion-logo.svg"
   },
   {
     "id": "stammer-ai",
@@ -20502,7 +20709,8 @@
       "value": 7
     },
     "rating": "4.8",
-    "review_count": 222
+    "review_count": 222,
+    "logo_url": "/images/tools/stammer-ai-logo.svg"
   },
   {
     "id": "submagic",
@@ -20584,7 +20792,8 @@
       "value": 8
     },
     "rating": "3.9",
-    "review_count": 83
+    "review_count": 83,
+    "logo_url": "/images/tools/submagic-logo.svg"
   },
   {
     "id": "sudowrite",
@@ -20729,7 +20938,8 @@
       "title": "Sudowrite Review 2024: Features, Pricing & Alternatives",
       "description": "Sudowrite is an AI writing partner designed for fiction writers, offering tools to assist with various stages of the writing process, from brainstorming and outlining to drafting and editing. It aims to help writers overcome writer's block, enhance descriptions, develop characters, and refine their prose."
     },
-    "related_tools": []
+    "related_tools": [],
+    "logo_url": "/images/tools/sudowrite-logo.svg"
   },
   {
     "id": "suno",
@@ -20943,7 +21153,8 @@
       "title": "Suno Review 2024: Features, Pricing & Alternatives",
       "description": "Suno is an AI-powered music creation tool that allows users to generate songs from text prompts. It offers features for both beginners and experienced musicians, enabling the creation of high-quality music with various styles and instruments. Users can start with simple prompts or use advanced editing tools, upload audio, rewrite lyrics, and export stems for use in DAWs."
     },
-    "related_tools": []
+    "related_tools": [],
+    "logo_url": "/images/tools/suno-logo.svg"
   },
   {
     "id": "superluminal",
@@ -21017,7 +21228,8 @@
       "value": 8
     },
     "rating": "3.8",
-    "review_count": 86
+    "review_count": 86,
+    "logo_url": "/images/tools/superluminal-logo.svg"
   },
   {
     "id": "surfer-seo",
@@ -21127,7 +21339,8 @@
     ],
     "affiliate_link": "https://surferseo.com/",
     "search_volume": 2500,
-    "cpc": 2.8
+    "cpc": 2.8,
+    "logo_url": "/images/tools/surfer-seo-logo.svg"
   },
   {
     "id": "synthesia",
@@ -21283,7 +21496,8 @@
       "voice ai",
       "text-to-speech",
       "ai voice generation"
-    ]
+    ],
+    "logo_url": "/images/tools/synthesia-logo.svg"
   },
   {
     "id": "synthesys",
@@ -21441,7 +21655,8 @@
       "voice ai",
       "text-to-speech",
       "ai voice generation"
-    ]
+    ],
+    "logo_url": "/images/tools/synthesys-logo.svg"
   },
   {
     "id": "synthflow-ai",
@@ -21518,7 +21733,8 @@
       "value": 8
     },
     "rating": 4.4,
-    "review_count": 320
+    "review_count": 320,
+    "logo_url": "/images/tools/synthflow-ai-logo.svg"
   },
   {
     "id": "tableau-ai",
@@ -21663,7 +21879,8 @@
     ],
     "affiliate_link": "https://tableau.com/",
     "search_volume": 15000,
-    "cpc": 4.2
+    "cpc": 4.2,
+    "logo_url": "/images/tools/tableau-ai-logo.svg"
   },
   {
     "id": "tabnine",
@@ -21809,7 +22026,8 @@
     ],
     "affiliate_link": "https://tabnine.com/",
     "search_volume": 3200,
-    "cpc": 3.6
+    "cpc": 3.6,
+    "logo_url": "/images/tools/tabnine-logo.svg"
   },
   {
     "id": "tapclicks",
@@ -21870,7 +22088,8 @@
     },
     "rating": 4.2,
     "review_count": 320,
-    "category": "Paid Search & PPC"
+    "category": "Paid Search & PPC",
+    "logo_url": "/images/tools/tapclicks-logo.svg"
   },
   {
     "id": "taplio",
@@ -21943,7 +22162,8 @@
       "value": 8
     },
     "rating": "4.5",
-    "review_count": 73
+    "review_count": 73,
+    "logo_url": "/images/tools/taplio-logo.svg"
   },
   {
     "id": "taxgpt",
@@ -22016,7 +22236,8 @@
       "value": 9
     },
     "rating": "4.4",
-    "review_count": 68
+    "review_count": 68,
+    "logo_url": "/images/tools/taxgpt-logo.svg"
   },
   {
     "id": "teal",
@@ -22133,7 +22354,8 @@
       "title": "Teal Review 2024: Features, Pricing & Alternatives",
       "description": "Teal is an all-in-one suite of tools designed to simplify and accelerate the job search process. It offers features like an AI resume builder, job tracker, matching mode, and resume checker to help users land their next position faster."
     },
-    "related_tools": []
+    "related_tools": [],
+    "logo_url": "/images/tools/teal-logo.svg"
   },
   {
     "id": "trace-ai",
@@ -22203,7 +22425,8 @@
       "release_year": 2023,
       "description": "AI-powered productivity tool that helps automate workflows and boost efficiency",
       "category": "Productivity"
-    }
+    },
+    "logo_url": "/images/tools/trace-ai-logo.svg"
   },
   {
     "id": "tradesanta",
@@ -22276,7 +22499,8 @@
       "value": 9
     },
     "rating": "4.2",
-    "review_count": 95
+    "review_count": 95,
+    "logo_url": "/images/tools/tradesanta-logo.svg"
   },
   {
     "id": "trello-butler",
@@ -22422,7 +22646,8 @@
     ],
     "affiliate_link": "https://trello.com/power-ups/butler",
     "search_volume": 2200,
-    "cpc": 1.8
+    "cpc": 1.8,
+    "logo_url": "/images/tools/trello-butler-logo.svg"
   },
   {
     "id": "trueclicks",
@@ -22483,7 +22708,8 @@
     },
     "rating": 4.4,
     "review_count": 180,
-    "category": "Paid Search & PPC"
+    "category": "Paid Search & PPC",
+    "logo_url": "/images/tools/trueclicks-logo.svg"
   },
   {
     "id": "tugan-ai",
@@ -22557,7 +22783,8 @@
       "value": 8
     },
     "rating": 4.3,
-    "review_count": 850
+    "review_count": 850,
+    "logo_url": "/images/tools/tugan-ai-logo.svg"
   },
   {
     "id": "udio",
@@ -22659,7 +22886,8 @@
       "title": "Udio Review 2024: Features, Pricing & Alternatives",
       "description": "Udio is an AI-powered music creation tool that allows users to generate any song imaginable simply by describing it in text. It caters to both professional musicians and amateurs, offering features for ideation, generation of stems, and AI-powered audio editing. Users can export creations to a DAW or upload their own audio."
     },
-    "related_tools": []
+    "related_tools": [],
+    "logo_url": "/images/tools/udio-logo.svg"
   },
   {
     "id": "unbounce",
@@ -22720,7 +22948,8 @@
     },
     "rating": 4.4,
     "review_count": 1250,
-    "category": "Paid Search & PPC"
+    "category": "Paid Search & PPC",
+    "logo_url": "/images/tools/unbounce-logo.svg"
   },
   {
     "id": "ux-pilot",
@@ -22789,7 +23018,8 @@
       "release_year": 2024,
       "description": "AI-powered UX design assistant for better user experiences",
       "category": "Design"
-    }
+    },
+    "logo_url": "/images/tools/ux-pilot-logo.svg"
   },
   {
     "id": "veeroll",
@@ -22871,7 +23101,8 @@
       "value": 9
     },
     "rating": "4.7",
-    "review_count": 332
+    "review_count": 332,
+    "logo_url": "/images/tools/veeroll-logo.svg"
   },
   {
     "id": "google-veo",
@@ -22995,7 +23226,8 @@
       "title": "Veo Review 2024: Features, Pricing & Alternatives",
       "description": "Veo is a state-of-the-art video generation model developed by Google DeepMind, designed to empower filmmakers and storytellers with advanced creative capabilities. It offers enhanced realism, improved prompt adherence, and greater creative control, allowing users to generate high-quality videos with sound effects, ambient noise, and dialogue."
     },
-    "related_tools": []
+    "related_tools": [],
+    "logo_url": "/images/tools/google-veo-logo.svg"
   },
   {
     "id": "videotube-ai",
@@ -23083,7 +23315,8 @@
     "search_volume": 2500,
     "cpc": 3.2,
     "affiliate_link": "https://videotube.ai",
-    "free_trial": true
+    "free_trial": true,
+    "logo_url": "/images/tools/videotube-ai-logo.svg"
   },
   {
     "id": "vowel",
@@ -23156,7 +23389,8 @@
       "value": 7
     },
     "rating": "4.4",
-    "review_count": 383
+    "review_count": 383,
+    "logo_url": "/images/tools/vowel-logo.svg"
   },
   {
     "id": "wellmeright",
@@ -23229,7 +23463,8 @@
       "value": 8
     },
     "rating": "5.0",
-    "review_count": 356
+    "review_count": 356,
+    "logo_url": "/images/tools/wellmeright-logo.svg"
   },
   {
     "id": "wellsaid-labs",
@@ -23387,7 +23622,8 @@
       "voice ai",
       "text-to-speech",
       "ai voice generation"
-    ]
+    ],
+    "logo_url": "/images/tools/wellsaid-labs-logo.svg"
   },
   {
     "id": "windsurf",
@@ -23537,7 +23773,8 @@
       "agentic ide",
       "cascade technology",
       "chat-based coding"
-    ]
+    ],
+    "logo_url": "/images/tools/windsurf-logo.svg"
   },
   {
     "name": "Wordstream",
@@ -23620,7 +23857,8 @@
       "integration": 4.1,
       "ease_of_use": 4,
       "value": 4.2
-    }
+    },
+    "logo_url": "/images/tools/wordstream-logo.svg"
   },
   {
     "id": "writesonic",
@@ -23766,7 +24004,8 @@
     ],
     "affiliate_link": "https://writesonic.com/",
     "search_volume": 800,
-    "cpc": 2.2
+    "cpc": 2.2,
+    "logo_url": "/images/tools/writesonic-logo.svg"
   },
   {
     "id": "zapier-ai",
@@ -23912,6 +24151,7 @@
     ],
     "affiliate_link": "https://zapier.com/",
     "search_volume": 8500,
-    "cpc": 4.2
+    "cpc": 4.2,
+    "logo_url": "/images/tools/zapier-ai-logo.svg"
   }
 ]
