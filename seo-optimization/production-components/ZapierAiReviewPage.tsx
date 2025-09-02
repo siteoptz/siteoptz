@@ -511,14 +511,9 @@ export default function ZapierAiReviewPage({ tool }: ZapierAiReviewPageProps) {
                   rel="noopener noreferrer"
                   className="bg-gradient-to-r from-blue-600 to-purple-600 text-white hover:from-blue-700 hover:to-purple-700 font-bold py-4 px-8 rounded-lg transform hover:scale-105 transition-all duration-200 shadow-lg hover:shadow-xl"
                 >
-                  Start Free Trial
+                  Schedule a Meeting With an AI Specialist
                 </a>
                 <Link
-                  href="/alternatives/zapier-ai"
-                  className="border-2 border-gray-600 text-gray-300 hover:border-cyan-400 hover:text-cyan-400 font-bold py-4 px-8 rounded-lg transition-all duration-200"
-                >
-                  View Alternatives
-                </Link>
               </div>
             </div>
           </div>

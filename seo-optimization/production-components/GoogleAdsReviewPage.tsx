@@ -548,11 +548,6 @@ export default function GoogleAdsReviewPage({ tool }: GoogleAdsReviewPageProps) 
                   Start Advertising
                 </a>
                 <Link
-                  href="/alternatives/google-ads"
-                  className="border-2 border-gray-600 text-gray-300 hover:border-cyan-400 hover:text-cyan-400 font-bold py-4 px-8 rounded-lg transition-all duration-200"
-                >
-                  View Alternatives
-                </Link>
               </div>
             </div>
           </div>
