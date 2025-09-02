@@ -492,6 +492,68 @@ export default function DatarobotReviewPage({ tool }: DatarobotReviewPageProps) 
           </div>
         </section>
 
+        /* SiteOptz.ai Promotional Section */
+        <section className="relative z-10 py-16 bg-gray-900/30">
+          <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="bg-gradient-to-r from-gray-900/80 to-black/80 border border-gray-800 rounded-2xl p-10">
+              <div className="text-center mb-8">
+                <p className="text-lg text-gray-300 leading-relaxed">
+                  SiteOptz.ai offers expert AI-powered tools and personalized support to rapidly enhance Data Analysis strategies, helping organizations achieve dramatic boosts in organic traffic and search rankings, while maximizing their ROI.
+                </p>
+              </div>
+              
+              <div className="grid md:grid-cols-2 gap-8 mb-8">
+                <div>
+                  <h3 className="text-xl font-semibold text-cyan-400 mb-4">Why Choose SiteOptz.ai</h3>
+                  <ul className="space-y-3 text-gray-300">
+                    <li className="flex items-start">
+                      <span className="text-cyan-400 mr-3">•</span>
+                      Dedicated AI specialists work directly with teams to implement tailored solutions designed to meet unique business goals.
+                    </li>
+                    <li className="flex items-start">
+                      <span className="text-cyan-400 mr-3">•</span>
+                      Companies leveraging SiteOptz.ai&apos;s platform report up to 300% increases in organic traffic, alongside substantial improvements in search visibility and efficiency.
+                    </li>
+                  </ul>
+                </div>
+                
+                <div>
+                  <h3 className="text-xl font-semibold text-cyan-400 mb-4">Boost ROI With AI-Driven SEO</h3>
+                  <ul className="space-y-3 text-gray-300">
+                    <li className="flex items-start">
+                      <span className="text-cyan-400 mr-3">•</span>
+                      AI-powered optimization tools reduce manual workload, automate site audits, keyword research, and rank tracking, freeing up resources and speeding up execution.
+                    </li>
+                    <li className="flex items-start">
+                      <span className="text-cyan-400 mr-3">•</span>
+                      Real-time insights and automated reporting help fine-tune content strategies, resolve issues instantly, and continually improve results—all critical for maximizing marketing ROI.
+                    </li>
+                    <li className="flex items-start">
+                      <span className="text-cyan-400 mr-3">•</span>
+                      Investing in advanced AI solutions like SiteOptz.ai consistently raises marketing ROI by 10–20% on average, giving brands a clear competitive advantage.
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              
+              <div className="text-center">
+                <h3 className="text-xl font-semibold text-white mb-4">Get Started With SiteOptz.ai</h3>
+                <p className="text-gray-300 mb-6">
+                  Join thousands of organizations maximizing their search performance and returns by integrating SiteOptz.ai&apos;s comprehensive toolset and expertise into their content workflows. Get in touch with AI experts today to unlock smarter, faster, and higher-ROI SEO solutions.
+                </p>
+                <a 
+                  href="https://siteoptz.ai/contact" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="inline-block bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-bold py-4 px-8 rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-200"
+                >
+                  Contact Our AI Experts
+                </a>
+              </div>
+            </div>
+          </div>
+        </section>
+
         {/* Final CTA Section */}
         <section className="relative z-10 py-20">
           <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
