@@ -310,77 +310,8 @@ export default function MidjourneyReviewPage({ tool }: MidjourneyReviewPageProps
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="max-w-4xl mx-auto">
               
-              <div className="mb-16" id="midjourney-v6-key-features-capabilities">
-                <h2 className="text-3xl font-bold text-white mb-8">
-                  Midjourney v6 Key Features & Capabilities
-                </h2>
-                
-                <div className="prose prose-lg prose-invert max-w-none">
-                  <div className="space-y-6">
-                    <p className="text-gray-300 mb-6 leading-relaxed text-lg">When evaluating Midjourney v6, understanding its core features is essential for determining fit. Our analysis reveals several standout capabilities that set Midjourney v6 apart in the Image Generation market.</p><p className="text-gray-300 mb-6 leading-relaxed text-lg"><h3 className="text-xl font-semibold text-cyan-400 mb-6 mt-10">Core Features Overview</h3></p>
-<p className="text-gray-300 mb-6 leading-relaxed text-lg">Midjourney v6 offers a comprehensive suite of features designed for image generation applications:</p><p className="text-gray-300 mb-6 leading-relaxed text-lg"><strong className="text-white font-semibold">Primary Capabilities:</strong></p>
-<ul className="list-disc list-inside mb-8 space-y-3 text-lg"><li className="text-gray-300 mb-3 leading-relaxed"><strong className="text-white font-semibold">Advanced AI Integration</strong>: Leverages cutting-edge AI technology for enhanced performance</li>
-<li className="text-gray-300 mb-3 leading-relaxed"><strong className="text-white font-semibold">Intuitive User Interface</strong>: Clean, modern design that prioritizes user experience</li>
-<li className="text-gray-300 mb-3 leading-relaxed"><strong className="text-white font-semibold">Scalable Architecture</strong>: Built to grow with your business needs</li>
-<li className="text-gray-300 mb-3 leading-relaxed"><strong className="text-white font-semibold">Real-time Collaboration</strong>: Team features for seamless workflow management</li></ul><p className="text-gray-300 mb-6 leading-relaxed text-lg"><strong className="text-white font-semibold">Advanced Features:</strong></p>
-<ul className="list-disc list-inside mb-8 space-y-3 text-lg"><li className="text-gray-300 mb-3 leading-relaxed"><strong className="text-white font-semibold">Custom Workflows</strong>: Tailor processes to match your specific requirements  </li>
-<li className="text-gray-300 mb-3 leading-relaxed"><strong className="text-white font-semibold">Integration Ecosystem</strong>: Connect with popular tools and platforms</li>
-<li className="text-gray-300 mb-3 leading-relaxed"><strong className="text-white font-semibold">Analytics & Reporting</strong>: Comprehensive insights into performance metrics</li>
-<li className="text-gray-300 mb-3 leading-relaxed"><strong className="text-white font-semibold">Enterprise Security</strong>: Bank-level encryption and compliance features</li></ul><p className="text-gray-300 mb-6 leading-relaxed text-lg"><h3 className="text-xl font-semibold text-cyan-400 mb-6 mt-10">Performance Benchmarks</h3></p>
-<p className="text-gray-300 mb-6 leading-relaxed text-lg">Our testing reveals Midjourney v6 consistently delivers reliable performance across different use cases. Speed, accuracy, and reliability scores place it among the top image generation solutions available today.</p><p className="text-gray-300 mb-6 leading-relaxed text-lg">The feature set positions Midjourney v6 as a versatile solution suitable for various business sizes and industries. Whether you're looking for basic functionality or advanced capabilities, Midjourney v6 provides the tools needed to succeed.</p>
-                  </div>
-                </div>
-                
-                
-              </div>
-              <div className="mb-16" id="midjourney-v6-pricing-plans-value-analysis">
-                <h2 className="text-3xl font-bold text-white mb-8">
-                  Midjourney v6 Pricing Plans & Value Analysis
-                </h2>
-                
-                <div className="prose prose-lg prose-invert max-w-none">
-                  <div className="space-y-6">
-                    <p className="text-gray-300 mb-6 leading-relaxed text-lg">Understanding Midjourney v6 pricing is crucial for budget planning and ROI assessment. Our analysis breaks down each plan to help you choose the most cost-effective option.</p><p className="text-gray-300 mb-6 leading-relaxed text-lg"><h3 className="text-xl font-semibold text-cyan-400 mb-6 mt-10">Pricing Structure Overview</h3></p>
-<p className="text-gray-300 mb-6 leading-relaxed text-lg">Midjourney v6 offers tiered pricing designed to accommodate different business needs and budgets:</p><p className="text-gray-300 mb-6 leading-relaxed text-lg"><strong className="text-white font-semibold">Plan Comparison:</strong></p>
-<ul className="list-disc list-inside mb-8 space-y-3 text-lg"><li className="text-gray-300 mb-3 leading-relaxed"><strong className="text-white font-semibold">Free/Starter Plan</strong>: Perfect for individuals and small teams getting started</li>
-<li className="text-gray-300 mb-3 leading-relaxed"><strong className="text-white font-semibold">Professional Plan</strong>: Mid-tier option with advanced features for growing businesses  </li>
-<li className="text-gray-300 mb-3 leading-relaxed"><strong className="text-white font-semibold">Enterprise Plan</strong>: Full-featured solution with premium support and customization</li>
-<li className="text-gray-300 mb-3 leading-relaxed"><strong className="text-white font-semibold">Custom Solutions</strong>: Tailored packages for large organizations with specific requirements</li></ul><p className="text-gray-300 mb-6 leading-relaxed text-lg"><h3 className="text-xl font-semibold text-cyan-400 mb-6 mt-10">Value Assessment</h3></p>
-<p className="text-gray-300 mb-6 leading-relaxed text-lg">When evaluating Midjourney v6 pricing, consider these key factors:</p><p className="text-gray-300 mb-6 leading-relaxed text-lg"><strong className="text-white font-semibold">Cost-Benefit Analysis:</strong></p>
-<ul className="list-disc list-inside mb-8 space-y-3 text-lg"><li className="text-gray-300 mb-3 leading-relaxed"><strong className="text-white font-semibold">Implementation Time</strong>: Faster setup reduces onboarding costs</li>
-<li className="text-gray-300 mb-3 leading-relaxed"><strong className="text-white font-semibold">Feature Utilization</strong>: Ensure you'll use enough features to justify the investment</li>
-<li className="text-gray-300 mb-3 leading-relaxed"><strong className="text-white font-semibold">Scalability</strong>: Plans that grow with your business prevent costly migrations</li>
-<li className="text-gray-300 mb-3 leading-relaxed"><strong className="text-white font-semibold">Support Quality</strong>: Premium support can save significant time and resources</li></ul><p className="text-gray-300 mb-6 leading-relaxed text-lg"><strong className="text-white font-semibold">ROI Considerations:</strong></p>
-<p className="text-gray-300 mb-6 leading-relaxed text-lg">Our research indicates most businesses see positive ROI within 3-6 months when properly implementing Midjourney v6. The combination of time savings, improved efficiency, and enhanced capabilities typically justifies the investment across all plan tiers.</p><p className="text-gray-300 mb-6 leading-relaxed text-lg"><h3 className="text-xl font-semibold text-cyan-400 mb-6 mt-10">Pricing Comparison</h3></p>
-<p className="text-gray-300 mb-6 leading-relaxed text-lg">Compared to alternatives in the Image Generation space, Midjourney v6 offers competitive value. While not always the cheapest option, the feature-to-price ratio consistently ranks among the best available.</p>
-                  </div>
-                </div>
-                
-                
-              </div>
-              <div className="mb-16" id="real-world-midjourney-v6-use-cases-applications">
-                <h2 className="text-3xl font-bold text-white mb-8">
-                  Real-World Midjourney v6 Use Cases & Applications
-                </h2>
-                
-                <div className="prose prose-lg prose-invert max-w-none">
-                  <div className="space-y-6">
-                    <p className="text-gray-300 mb-6 leading-relaxed text-lg">Understanding how Midjourney v6 performs in real-world scenarios helps evaluate its potential impact on your specific needs. Our research identifies several key use cases where Midjourney v6 excels.</p><p className="text-gray-300 mb-6 leading-relaxed text-lg"><h3 className="text-xl font-semibold text-cyan-400 mb-6 mt-10">Primary Use Cases</h3></p><p className="text-gray-300 mb-6 leading-relaxed text-lg"><strong className="text-white font-semibold">Enterprise Implementation:</strong></p>
-<p className="text-gray-300 mb-6 leading-relaxed text-lg">Large organizations leverage Midjourney v6 for complex workflows requiring scalability and security. Features like advanced user management, enterprise-grade security, and custom integrations make it ideal for corporate environments.</p><p className="text-gray-300 mb-6 leading-relaxed text-lg"><strong className="text-white font-semibold">Team Collaboration:</strong></p>
-<p className="text-gray-300 mb-6 leading-relaxed text-lg">Cross-functional teams use Midjourney v6 to streamline communication and project management. Real-time collaboration features, shared workspaces, and integrated communication tools enhance productivity across departments.</p><p className="text-gray-300 mb-6 leading-relaxed text-lg"><strong className="text-white font-semibold">Automation & Efficiency:</strong></p>
-<p className="text-gray-300 mb-6 leading-relaxed text-lg">Businesses implement Midjourney v6 to automate repetitive tasks and optimize workflows. Custom automation rules, AI-powered suggestions, and integration capabilities significantly reduce manual work.</p><p className="text-gray-300 mb-6 leading-relaxed text-lg"><h3 className="text-xl font-semibold text-cyan-400 mb-6 mt-10">Industry-Specific Applications</h3></p><p className="text-gray-300 mb-6 leading-relaxed text-lg"><strong className="text-white font-semibold">Image Generation Sector:</strong></p>
-<p className="text-gray-300 mb-6 leading-relaxed text-lg">Within the image generation industry, Midjourney v6 addresses specific challenges like workflow optimization, resource management, and performance tracking. Industry-specific templates and features provide immediate value.</p><p className="text-gray-300 mb-6 leading-relaxed text-lg"><strong className="text-white font-semibold">Professional Services:</strong></p>
-<p className="text-gray-300 mb-6 leading-relaxed text-lg">Consulting firms, agencies, and service providers use Midjourney v6 to manage client projects, track billable hours, and deliver consistent results. Client collaboration features and reporting capabilities streamline service delivery.</p><p className="text-gray-300 mb-6 leading-relaxed text-lg"><h3 className="text-xl font-semibold text-cyan-400 mb-6 mt-10">Implementation Examples</h3></p><p className="text-gray-300 mb-6 leading-relaxed text-lg"><strong className="text-white font-semibold">Case Study 1 - Small Business:</strong></p>
-<p className="text-gray-300 mb-6 leading-relaxed text-lg">A 15-person marketing agency implemented Midjourney v6 to manage client campaigns. Results included 40% faster project completion and improved client satisfaction scores.</p><p className="text-gray-300 mb-6 leading-relaxed text-lg"><strong className="text-white font-semibold">Case Study 2 - Enterprise:</strong></p>
-<p className="text-gray-300 mb-6 leading-relaxed text-lg">A Fortune 500 company deployed Midjourney v6 across 500+ users. Key outcomes included 25% reduction in project timelines and significant improvement in cross-team collaboration.</p><p className="text-gray-300 mb-6 leading-relaxed text-lg">These real-world applications demonstrate Midjourney v6's versatility and potential impact across various business contexts.</p>
-                  </div>
-                </div>
-                
-                
-              </div>
-              <div className="mb-16" id="midjourney-v6-pros-and-cons-honest-assessment">
-                <h2 className="text-3xl font-bold text-white mb-8">
-                  Midjourney v6 Pros and Cons: Honest Assessment
+              <div className="mb-16" id="pros-cons">
+                  <h2 className="text-3xl font-bold text-white mb-6">Midjourney v6 Pros and Cons: Honest Assessment
                 </h2>
                 
                 <div className="prose prose-lg prose-invert max-w-none">
