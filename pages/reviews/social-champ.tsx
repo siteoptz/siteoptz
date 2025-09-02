@@ -416,7 +416,7 @@ export default function SocialChampReviewPage() {
                     <h3 className="text-xl font-semibold text-cyan-400 mb-6 mt-10">Industry-Specific Applications</h3>
                     
                     <p className="text-gray-300 mb-6 leading-relaxed text-lg"><strong className="text-white font-semibold">E-commerce Startups:</strong></p>
-                    <p className="text-gray-300 mb-6 leading-relaxed text-lg">Growing e-commerce brands use Social Champ to maintain social presence while controlling costs. The platform's affordable pricing and comprehensive features support sustainable growth without premium tool expenses.</p>
+                    <p className="text-gray-300 mb-6 leading-relaxed text-lg">Growing e-commerce brands use Social Champ to maintain social presence while controlling costs. The platform&apos;s affordable pricing and comprehensive features support sustainable growth without premium tool expenses.</p>
                     
                     <p className="text-gray-300 mb-6 leading-relaxed text-lg"><strong className="text-white font-semibold">Non-Profit Organizations:</strong></p>
                     <p className="text-gray-300 mb-6 leading-relaxed text-lg">Non-profits with limited budgets utilize Social Champ&apos;s free tier and affordable paid plans to maximize outreach across multiple platforms. Bulk scheduling and content curation features help stretched teams maintain consistent messaging.</p>
