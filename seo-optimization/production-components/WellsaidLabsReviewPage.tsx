@@ -254,16 +254,14 @@ export default function WellsaidLabsReviewPage({ tool }: WellsaidLabsReviewPageP
 
                 {/* CTA Buttons */}
                 <div className="flex flex-col sm:flex-row gap-4 mb-8">
-                  <a
-                    href="https://wellsaidlabs.com/"
+<Link href="https://wellsaidlabs.com/"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="bg-gradient-to-r from-blue-600 to-purple-600 text-white hover:from-blue-700 hover:to-purple-700 font-bold py-4 px-8 rounded-lg transform hover:scale-105 transition-all duration-200 shadow-lg hover:shadow-xl text-center"
                   >
                     Try Wellsaid Labs Here
-                  </a>
-                  <Link
-                    href="/compare"
+                  </Link>
+<Link href="/compare"
                     className="border-2 border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-black font-bold py-4 px-8 rounded-lg transition-all duration-200 text-center"
                   >
                     Compare Alternatives
@@ -505,15 +503,13 @@ export default function WellsaidLabsReviewPage({ tool }: WellsaidLabsReviewPageP
                 Join thousands of professionals using Wellsaid Labs to streamline their best voice ai tools workflows.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <a
-                  href="https://wellsaidlabs.com/"
+<Link href="https://wellsaidlabs.com/"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="bg-gradient-to-r from-blue-600 to-purple-600 text-white hover:from-blue-700 hover:to-purple-700 font-bold py-4 px-8 rounded-lg transform hover:scale-105 transition-all duration-200 shadow-lg hover:shadow-xl"
                 >
                   Schedule a Meeting With an AI Specialist
-                </a>
-                <Link
+                </Link>
               </div>
             </div>
           </div>

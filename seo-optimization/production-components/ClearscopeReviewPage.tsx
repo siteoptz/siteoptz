@@ -253,8 +253,7 @@ export default function ClearscopeReviewPage({ tool }: ClearscopeReviewPageProps
 
                 {/* CTA Buttons */}
                 <div className="flex justify-center mb-8">
-                  <Link
-                    href="/compare"
+<Link href="/compare"
                     className="border-2 border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-black font-bold py-4 px-8 rounded-lg transition-all duration-200 text-center"
                   >
                     Compare Alternatives
@@ -501,8 +500,7 @@ export default function ClearscopeReviewPage({ tool }: ClearscopeReviewPageProps
                 </p>
               </div>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Link
-                  href="/contact"
+<Link href="/contact"
                   className="bg-gradient-to-r from-blue-600 to-purple-600 text-white hover:from-blue-700 hover:to-purple-700 font-bold py-4 px-8 rounded-lg transform hover:scale-105 transition-all duration-200 shadow-lg hover:shadow-xl"
                 >
                   Schedule a Meeting With an AI Specialist
@@ -570,8 +568,7 @@ export default function ClearscopeReviewPage({ tool }: ClearscopeReviewPageProps
               </div>
               
               <div className="text-center">
-                <Link
-                  href="/contact"
+<Link href="/contact"
                   className="inline-block bg-gradient-to-r from-cyan-600 to-blue-600 text-white hover:from-cyan-700 hover:to-blue-700 font-bold py-3 px-8 rounded-lg transform hover:scale-105 transition-all duration-200 shadow-lg hover:shadow-xl"
                 >
                   Get in Touch With AI Experts Today

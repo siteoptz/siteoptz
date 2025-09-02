@@ -539,15 +539,13 @@ export default function GoogleAdsReviewPage({ tool }: GoogleAdsReviewPageProps) 
                 Join millions of businesses using Google Ads to reach customers and grow their business online.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <a
-                  href="https://ads.google.com"
+<Link href="https://ads.google.com"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="bg-gradient-to-r from-blue-600 to-purple-600 text-white hover:from-blue-700 hover:to-purple-700 font-bold py-4 px-8 rounded-lg transform hover:scale-105 transition-all duration-200 shadow-lg hover:shadow-xl"
                 >
                   Start Advertising
-                </a>
-                <Link
+                </Link>
               </div>
             </div>
           </div>
