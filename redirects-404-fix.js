@@ -1156,6 +1156,33 @@ const redirects404Fix = [
     source: '/compare/:tool/vs/alternatives',
     destination: '/compare',
     permanent: true,
+  },
+  
+  // Redirect specific comparisons with non-existent tools
+  {
+    source: '/compare/google-ads/vs/microsoft-ads',
+    destination: '/tools/google-ads',
+    permanent: true,
+  },
+  {
+    source: '/compare/microsoft-ads/vs/:tool',
+    destination: '/compare',
+    permanent: true,
+  },
+  {
+    source: '/compare/:tool/vs/microsoft-ads',
+    destination: '/compare',
+    permanent: true,
+  },
+  {
+    source: '/compare/bing-ads/vs/:tool',
+    destination: '/compare',
+    permanent: true,
+  },
+  {
+    source: '/compare/:tool/vs/bing-ads',
+    destination: '/compare',
+    permanent: true,
   }
 ];
 

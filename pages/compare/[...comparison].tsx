@@ -500,13 +500,13 @@ export const getStaticPaths: GetStaticPaths = async () => {
     
     return {
       paths,
-      fallback: false, // Changed to false to ensure all pages are pre-generated for GA tagging
+      fallback: 'blocking', // Use blocking to generate pages on-demand while maintaining SEO
     };
   } catch (error) {
     console.error('Error in getStaticPaths:', error);
     return {
       paths: [],
-      fallback: false, // Changed to false to ensure all pages are pre-generated for GA tagging
+      fallback: 'blocking', // Use blocking to generate pages on-demand while maintaining SEO
     };
   }
 };
