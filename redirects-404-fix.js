@@ -1149,6 +1149,13 @@ const redirects404Fix = [
     source: '/compare/chatgpt-vs-gemini',
     destination: '/compare/chatgpt/vs/gemini',
     permanent: true,
+  },
+  
+  // Fix all /vs/alternatives URLs (these don't exist, redirect to main compare page)
+  {
+    source: '/compare/:tool/vs/alternatives',
+    destination: '/compare',
+    permanent: true,
   }
 ];
 
