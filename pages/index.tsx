@@ -7,7 +7,7 @@ import {
   generateSoftwareApplicationSchema,
   buildCanonicalUrl 
 } from '../seo/meta-config.js';
-import { Search, Star, TrendingUp, Zap, ArrowRight, CheckCircle, Sparkles, Brain, BarChart3, Target, Users, Rocket } from 'lucide-react';
+import { Search, Star, TrendingUp, Zap, ArrowRight, CheckCircle, Sparkles, Brain, BarChart3, Target, Users, Rocket, Calendar } from 'lucide-react';
 import ExternalLink from '../components/ExternalLink';
 import { authoritativeLinks } from '../utils/externalLinks';
 import FAQSection from '../components/FAQ/FAQSection';
@@ -278,47 +278,248 @@ export default function HomePage({ featuredTools, popularComparisons, faqs }: Ho
           </div>
         </section>
 
-        {/* Features Section */}
+        {/* Consulting Services Section */}
         <section className="py-20 bg-black">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-16">
               <h2 className="text-4xl font-bold text-white mb-4">
-                Your AI Transformation Partner
+                AI Implementation Services
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                We deliver enterprise-grade AI solutions that drive measurable business growth and operational excellence.
+                From strategy to deployment, we handle the complete AI transformation journey for your business.
               </p>
             </div>
 
             <div className="grid md:grid-cols-3 gap-8">
-              <div className="bg-black border border-gray-800 p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 text-center hover:border-gray-600">
-                <div className="w-20 h-20 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-2xl flex items-center justify-center mx-auto mb-6">
-                  <Brain className="w-10 h-10 text-white" />
+              {/* Starter Package */}
+              <div className="bg-gradient-to-b from-gray-900 to-black border border-gray-700 p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 hover:border-cyan-500/50 group">
+                <div className="text-center mb-6">
+                  <div className="text-lg font-semibold text-gray-400 mb-2">STARTER</div>
+                  <div className="text-4xl font-bold text-white mb-2">$2,500</div>
+                  <div className="text-gray-400">One-time fee</div>
                 </div>
-                <h3 className="text-2xl font-bold mb-4 text-white">Strategic AI Implementation</h3>
-                <p className="text-gray-300 leading-relaxed">
-                  Custom AI strategies designed to align with your business objectives and deliver measurable ROI within 90 days.
+                
+                <h3 className="text-2xl font-bold mb-4 text-white text-center">Custom AI Roadmap</h3>
+                <ul className="space-y-3 mb-8">
+                  <li className="flex items-center text-gray-300">
+                    <CheckCircle className="w-5 h-5 text-cyan-400 mr-3 flex-shrink-0" />
+                    90-day implementation timeline
+                  </li>
+                  <li className="flex items-center text-gray-300">
+                    <CheckCircle className="w-5 h-5 text-cyan-400 mr-3 flex-shrink-0" />
+                    Tool selection & prioritization
+                  </li>
+                  <li className="flex items-center text-gray-300">
+                    <CheckCircle className="w-5 h-5 text-cyan-400 mr-3 flex-shrink-0" />
+                    ROI projections & benchmarks
+                  </li>
+                  <li className="flex items-center text-gray-300">
+                    <CheckCircle className="w-5 h-5 text-cyan-400 mr-3 flex-shrink-0" />
+                    Basic implementation support
+                  </li>
+                </ul>
+                
+                <Link 
+                  href="/contact"
+                  className="block w-full text-center px-6 py-3 bg-gradient-to-r from-cyan-600 to-blue-600 text-white font-semibold rounded-xl hover:from-cyan-700 hover:to-blue-700 transition-all duration-200 group-hover:scale-105"
+                >
+                  Get Started
+                </Link>
+              </div>
+
+              {/* Professional Package */}
+              <div className="bg-gradient-to-b from-gray-900 to-black border-2 border-cyan-500 p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 hover:shadow-cyan-500/25 group relative">
+                <div className="absolute -top-4 left-1/2 transform -translate-x-1/2 px-6 py-2 bg-gradient-to-r from-cyan-500 to-blue-600 text-white text-sm font-bold rounded-full">
+                  MOST POPULAR
+                </div>
+                
+                <div className="text-center mb-6">
+                  <div className="text-lg font-semibold text-cyan-400 mb-2">PROFESSIONAL</div>
+                  <div className="text-4xl font-bold text-white mb-2">$7,500</div>
+                  <div className="text-gray-400">One-time fee</div>
+                </div>
+                
+                <h3 className="text-2xl font-bold mb-4 text-white text-center">Full Implementation</h3>
+                <ul className="space-y-3 mb-8">
+                  <li className="flex items-center text-gray-300">
+                    <CheckCircle className="w-5 h-5 text-cyan-400 mr-3 flex-shrink-0" />
+                    Everything in Starter
+                  </li>
+                  <li className="flex items-center text-gray-300">
+                    <CheckCircle className="w-5 h-5 text-cyan-400 mr-3 flex-shrink-0" />
+                    Complete technical setup
+                  </li>
+                  <li className="flex items-center text-gray-300">
+                    <CheckCircle className="w-5 h-5 text-cyan-400 mr-3 flex-shrink-0" />
+                    Team training & onboarding
+                  </li>
+                  <li className="flex items-center text-gray-300">
+                    <CheckCircle className="w-5 h-5 text-cyan-400 mr-3 flex-shrink-0" />
+                    60-day support & optimization
+                  </li>
+                </ul>
+                
+                <Link 
+                  href="/contact"
+                  className="block w-full text-center px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-bold rounded-xl hover:from-cyan-400 hover:to-blue-500 transition-all duration-200 group-hover:scale-105 shadow-lg"
+                >
+                  Get Started
+                </Link>
+              </div>
+
+              {/* Enterprise Package */}
+              <div className="bg-gradient-to-b from-gray-900 to-black border border-gray-700 p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 hover:border-purple-500/50 group">
+                <div className="text-center mb-6">
+                  <div className="text-lg font-semibold text-gray-400 mb-2">ENTERPRISE</div>
+                  <div className="text-4xl font-bold text-white mb-2">$15,000+</div>
+                  <div className="text-gray-400">Custom pricing</div>
+                </div>
+                
+                <h3 className="text-2xl font-bold mb-4 text-white text-center">Custom Deployment</h3>
+                <ul className="space-y-3 mb-8">
+                  <li className="flex items-center text-gray-300">
+                    <CheckCircle className="w-5 h-5 text-purple-400 mr-3 flex-shrink-0" />
+                    Everything in Professional
+                  </li>
+                  <li className="flex items-center text-gray-300">
+                    <CheckCircle className="w-5 h-5 text-purple-400 mr-3 flex-shrink-0" />
+                    Custom AI tool development
+                  </li>
+                  <li className="flex items-center text-gray-300">
+                    <CheckCircle className="w-5 h-5 text-purple-400 mr-3 flex-shrink-0" />
+                    Ongoing optimization retainer
+                  </li>
+                  <li className="flex items-center text-gray-300">
+                    <CheckCircle className="w-5 h-5 text-purple-400 mr-3 flex-shrink-0" />
+                    Dedicated success manager
+                  </li>
+                </ul>
+                
+                <Link 
+                  href="/contact"
+                  className="block w-full text-center px-6 py-3 bg-gradient-to-r from-purple-600 to-violet-600 text-white font-semibold rounded-xl hover:from-purple-700 hover:to-violet-700 transition-all duration-200 group-hover:scale-105"
+                >
+                  Contact Sales
+                </Link>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Our Methodology Section */}
+        <section className="py-20 bg-gray-950">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl font-bold text-white mb-4">
+                Our Proven 4-Step AI Implementation Process
+              </h2>
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                A systematic approach that eliminates guesswork and delivers measurable results in 90 days.
+              </p>
+            </div>
+
+            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+              {/* Step 1 */}
+              <div className="text-center">
+                <div className="w-16 h-16 bg-gradient-to-br from-cyan-500 to-blue-500 rounded-full flex items-center justify-center mx-auto mb-6 text-white font-bold text-xl">
+                  1
+                </div>
+                <h3 className="text-xl font-bold text-white mb-3">Discovery & Audit</h3>
+                <p className="text-gray-400 text-sm leading-relaxed">
+                  Analyze your current processes, identify inefficiencies, and map AI opportunities to your business goals.
                 </p>
               </div>
 
-              <div className="bg-black border border-gray-800 p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 text-center hover:border-gray-600">
-                <div className="w-20 h-20 bg-gradient-to-br from-green-500 to-emerald-500 rounded-2xl flex items-center justify-center mx-auto mb-6">
-                  <BarChart3 className="w-10 h-10 text-white" />
+              {/* Step 2 */}
+              <div className="text-center">
+                <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-purple-500 rounded-full flex items-center justify-center mx-auto mb-6 text-white font-bold text-xl">
+                  2
                 </div>
-                <h3 className="text-2xl font-bold mb-4 text-white">Performance Optimization</h3>
-                <p className="text-gray-300 leading-relaxed">
-                  Continuous monitoring and optimization to ensure your AI solutions deliver peak performance and maximum efficiency.
+                <h3 className="text-xl font-bold text-white mb-3">Custom Strategy</h3>
+                <p className="text-gray-400 text-sm leading-relaxed">
+                  Create your personalized 90-day AI roadmap with specific tools, timelines, and success metrics.
                 </p>
               </div>
 
-              <div className="bg-black border border-gray-800 p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 text-center hover:border-gray-600">
-                <div className="w-20 h-20 bg-gradient-to-br from-purple-500 to-violet-500 rounded-2xl flex items-center justify-center mx-auto mb-6">
-                  <Users className="w-10 h-10 text-white" />
+              {/* Step 3 */}
+              <div className="text-center">
+                <div className="w-16 h-16 bg-gradient-to-br from-purple-500 to-pink-500 rounded-full flex items-center justify-center mx-auto mb-6 text-white font-bold text-xl">
+                  3
                 </div>
-                <h3 className="text-2xl font-bold mb-4 text-white">Enterprise Support</h3>
-                <p className="text-gray-300 leading-relaxed">
-                  24/7 dedicated support team with enterprise SLAs, ensuring your AI initiatives never miss a beat.
+                <h3 className="text-xl font-bold text-white mb-3">Implementation</h3>
+                <p className="text-gray-400 text-sm leading-relaxed">
+                  Deploy and integrate AI tools with your existing systems, including team training and workflow optimization.
                 </p>
+              </div>
+
+              {/* Step 4 */}
+              <div className="text-center">
+                <div className="w-16 h-16 bg-gradient-to-br from-pink-500 to-cyan-500 rounded-full flex items-center justify-center mx-auto mb-6 text-white font-bold text-xl">
+                  4
+                </div>
+                <h3 className="text-xl font-bold text-white mb-3">Optimize & Scale</h3>
+                <p className="text-gray-400 text-sm leading-relaxed">
+                  Monitor performance, iterate on strategies, and scale successful implementations across your organization.
+                </p>
+              </div>
+            </div>
+
+            {/* Process Benefits */}
+            <div className="mt-16 bg-black border border-gray-800 rounded-2xl p-8">
+              <div className="grid md:grid-cols-2 gap-12">
+                <div>
+                  <h3 className="text-2xl font-bold text-white mb-6">Why Our Process Works</h3>
+                  <ul className="space-y-4">
+                    <li className="flex items-start gap-3">
+                      <CheckCircle className="w-5 h-5 text-cyan-400 mt-1 flex-shrink-0" />
+                      <div>
+                        <div className="text-white font-semibold">Data-Driven Approach</div>
+                        <div className="text-gray-400 text-sm">Every recommendation backed by performance benchmarks</div>
+                      </div>
+                    </li>
+                    <li className="flex items-start gap-3">
+                      <CheckCircle className="w-5 h-5 text-cyan-400 mt-1 flex-shrink-0" />
+                      <div>
+                        <div className="text-white font-semibold">Industry-Specific Experience</div>
+                        <div className="text-gray-400 text-sm">Specialized knowledge across 20+ business sectors</div>
+                      </div>
+                    </li>
+                    <li className="flex items-start gap-3">
+                      <CheckCircle className="w-5 h-5 text-cyan-400 mt-1 flex-shrink-0" />
+                      <div>
+                        <div className="text-white font-semibold">Risk-Free Implementation</div>
+                        <div className="text-gray-400 text-sm">Phased rollout with success milestones</div>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+                
+                <div>
+                  <h3 className="text-2xl font-bold text-white mb-6">DIY vs. Professional Implementation</h3>
+                  <div className="space-y-4">
+                    <div className="flex justify-between items-center">
+                      <span className="text-gray-300">Time to Results</span>
+                      <div className="flex gap-4">
+                        <span className="text-red-400">6-12 months (DIY)</span>
+                        <span className="text-cyan-400 font-semibold">90 days (With Us)</span>
+                      </div>
+                    </div>
+                    <div className="flex justify-between items-center">
+                      <span className="text-gray-300">Success Rate</span>
+                      <div className="flex gap-4">
+                        <span className="text-red-400">23% (DIY)</span>
+                        <span className="text-cyan-400 font-semibold">98% (With Us)</span>
+                      </div>
+                    </div>
+                    <div className="flex justify-between items-center">
+                      <span className="text-gray-300">Cost of Mistakes</span>
+                      <div className="flex gap-4">
+                        <span className="text-red-400">$50K+ (DIY)</span>
+                        <span className="text-cyan-400 font-semibold">$0 (With Us)</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
@@ -413,56 +614,51 @@ export default function HomePage({ featuredTools, popularComparisons, faqs }: Ho
           </div>
         </section>
 
-        {/* CTA Section */}
+        {/* Final CTA Section */}
         <section className="bg-gray-950 text-white py-24 relative overflow-hidden">
-          {/* Background Elements */}
-          <div className="absolute inset-0">
-            
-          </div>
-          
           <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
             <div className="mb-8">
               <div className="inline-flex items-center gap-2 px-4 py-2 bg-white/10 backdrop-blur-md border border-white/20 rounded-full text-white/90 text-sm font-medium mb-8">
-                <Rocket className="w-4 h-4 text-cyan-400" />
-                Ready to Transform Your Business?
+                <Calendar className="w-4 h-4 text-cyan-400" />
+                Ready to Stop Wasting Time on Wrong AI Tools?
               </div>
             </div>
             
             <h2 className="text-5xl lg:text-6xl font-bold mb-6">
-              Scale Beyond Limits with
+              Get Your Custom AI Roadmap
               <span className="block text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-400 mt-2">
-                AI-Powered Growth
+                In 30 Minutes
               </span>
             </h2>
             <p className="text-xl lg:text-2xl mb-12 opacity-90 max-w-4xl mx-auto leading-relaxed">
-              Join 500+ Fortune 500 companies already achieving 10x ROI with our enterprise AI solutions.
-              Your transformation starts today.
+              Join 500+ companies who chose professional AI implementation over costly trial-and-error.
+              Book your free strategy session and get a custom roadmap worth $2,500.
             </p>
             
             <div className="flex flex-col sm:flex-row gap-6 justify-center items-center mb-12">
               <Link 
-                href="/tools"
-                className="group inline-flex items-center gap-3 px-10 py-5 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-bold text-lg rounded-2xl hover:from-cyan-400 hover:to-blue-500 transition-all duration-300 shadow-2xl hover:shadow-cyan-500/25 transform hover:scale-105"
+                href="/contact"
+                className="group inline-flex items-center gap-3 px-12 py-6 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-bold text-xl rounded-2xl hover:from-cyan-400 hover:to-blue-500 transition-all duration-300 shadow-2xl hover:shadow-cyan-500/25 transform hover:scale-105"
               >
-                <Rocket className="w-6 h-6 group-hover:animate-bounce" />
-                Start Your AI Journey
+                <Calendar className="w-6 h-6 group-hover:animate-bounce" />
+                Book Free Strategy Session
                 <ArrowRight className="w-6 h-6 group-hover:translate-x-1 transition-transform" />
               </Link>
               <Link 
-                href="/pricing"
-                className="inline-flex items-center gap-3 px-10 py-5 bg-white/10 backdrop-blur-md border border-white/20 text-white font-semibold text-lg rounded-2xl hover:bg-white/15 transition-all duration-300"
+                href="/tools"
+                className="inline-flex items-center gap-3 px-8 py-4 bg-white/10 backdrop-blur-md border border-white/20 text-white font-semibold text-lg rounded-2xl hover:bg-white/15 transition-all duration-300"
               >
-                <BarChart3 className="w-6 h-6" />
-                Calculate ROI
+                <TrendingUp className="w-6 h-6" />
+                Browse Tools Database
               </Link>
             </div>
             
             <div className="text-sm text-gray-400">
-              <span className="opacity-75">✓ No setup fees</span>
+              <span className="opacity-75">✓ No sales pitch guaranteed</span>
               <span className="mx-4 opacity-50">•</span>
-              <span className="opacity-75">✓ 90-day ROI guarantee</span>
+              <span className="opacity-75">✓ Custom roadmap included</span>
               <span className="mx-4 opacity-50">•</span>
-              <span className="opacity-75">✓ 24/7 enterprise support</span>
+              <span className="opacity-75">✓ 98% success rate</span>
             </div>
           </div>
         </section>
