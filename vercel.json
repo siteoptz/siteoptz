@@ -23,5 +23,27 @@
         }
       ]
     }
+  ],
+  "redirects": [
+    {
+      "source": "/tools/copy.ai",
+      "destination": "/tools/copy-ai",
+      "permanent": true
+    },
+    {
+      "source": "/categories/:category/",
+      "destination": "/categories/:category",
+      "permanent": true
+    },
+    {
+      "source": "/tools/:tool/",
+      "destination": "/tools/:tool",
+      "permanent": true
+    },
+    {
+      "source": "/compare/:comparison/",
+      "destination": "/compare/:comparison",
+      "permanent": true
+    }
   ]
 }
