@@ -788,22 +788,26 @@ export default function ReviewPage({ tool, pageTitle, slug, relatedTools, relate
 }
 
 export const getStaticPaths: GetStaticPaths = async () => {
-  // Only pre-generate top 5 most popular tool reviews to reduce build size under 50MB
-  const popularToolSlugs = [
-    'chatgpt',
-    'claude', 
-    'midjourney',
-    'jasper-ai',
-    'copy-ai'
-  ];
+  const fs = require('fs');
+  const path = require('path');
   
-  const paths = popularToolSlugs.map((toolName) => ({
-    params: { toolName }
-  }));
+  // Load all tools from aiToolsData.json to ensure all pages are pre-generated
+  const dataPath = path.join(process.cwd(), 'public/data/aiToolsData.json');
+  const toolsData = JSON.parse(fs.readFileSync(dataPath, 'utf8'));
+  
+  // Static review pages that already exist (to avoid conflicts)
+  const staticReviewPages = ['contentstudio', 'loomly', 'sendible', 'social-champ', 'socialpilot'];
+  
+  // Generate paths for all tools except those with static pages
+  const paths = toolsData
+    .filter((tool: any) => !staticReviewPages.includes(tool.slug))
+    .map((tool: any) => ({
+      params: { toolName: tool.slug }
+    }));
 
   return {
     paths,
-    fallback: 'blocking'
+    fallback: false // Changed to false to pre-generate all pages for GA tagging
   };
 };
 

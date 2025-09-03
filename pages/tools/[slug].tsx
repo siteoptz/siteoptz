@@ -328,22 +328,21 @@ export default function ToolPage({ tool, relatedTools, faqs, allTools }: ToolPag
 }
 
 export const getStaticPaths: GetStaticPaths = async () => {
-  // Only pre-generate top 5 most popular tools to reduce build size under 50MB
-  const popularToolSlugs = [
-    'chatgpt',
-    'claude', 
-    'midjourney',
-    'jasper-ai',
-    'copy-ai'
-  ];
+  const fs = require('fs');
+  const path = require('path');
   
-  const paths = popularToolSlugs.map((slug) => ({
-    params: { slug }
+  // Load all tools from aiToolsData.json to ensure all pages are pre-generated
+  const dataPath = path.join(process.cwd(), 'public/data/aiToolsData.json');
+  const toolsData = JSON.parse(fs.readFileSync(dataPath, 'utf8'));
+  
+  // Generate paths for all tools to ensure Google Analytics tags them
+  const paths = toolsData.map((tool: any) => ({
+    params: { slug: tool.slug }
   }));
   
   return {
     paths,
-    fallback: 'blocking'
+    fallback: false // Changed to false to pre-generate all pages for GA tagging
   };
 };
 

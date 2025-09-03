@@ -493,13 +493,13 @@ export const getStaticPaths: GetStaticPaths = async () => {
     
     return {
       paths,
-      fallback: 'blocking',
+      fallback: false, // Changed to false to ensure all pages are pre-generated for GA tagging
     };
   } catch (error) {
     console.error('Error in getStaticPaths:', error);
     return {
       paths: [],
-      fallback: 'blocking',
+      fallback: false, // Changed to false to ensure all pages are pre-generated for GA tagging
     };
   }
 };
