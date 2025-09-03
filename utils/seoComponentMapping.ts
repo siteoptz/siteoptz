@@ -225,6 +225,8 @@ const seoComponents: Record<string, () => Promise<{ default: ComponentType<SEOCo
   'adsdog': () => import('../seo-optimization/production-components/AdsdogReviewPage'),
   'fliki': () => import('../seo-optimization/production-components/FlikiReviewPage'),
   'submagic': () => import('../seo-optimization/production-components/SubmagicReviewPage'),
+  'synthflow-ai': () => import('../seo-optimization/production-components/SynthflowAiReviewPage'),
+  'morningscore': () => import('../seo-optimization/production-components/MorningscoreReviewPage'),
 };
 
 // Check if a SEO-optimized component exists for a given slug
