@@ -129,7 +129,7 @@ export default function PictoryReviewPage({ tool }: PictoryReviewPageProps) {
       <Head>
         {/* Primary SEO Tags */}
         <title>Pictory Review: AI Video Creation Tool | SiteOptz</title>
-        <meta name="description" content="pictory review. Compare Pictory  features, pricing & alternatives. Expert analysis & user guide for 2025. Get started today!" />
+        <meta name="description" content="Pictory Review 2025: AI-powered video creation platform that transforms text content into engaging videos. Automated editing and voiceover features. Compare pricing, features & alternatives." />
         <meta name="keywords" content="pictory review, pictory pricing, pictory features, pictory vs competitors, pictory alternatives" />
         <meta name="author" content="SiteOptz" />
         <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />

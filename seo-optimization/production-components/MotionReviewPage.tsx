@@ -129,7 +129,7 @@ export default function MotionReviewPage({ tool }: MotionReviewPageProps) {
       <Head>
         {/* Primary SEO Tags */}
         <title>Motion Review: AI Task Management Tool | SiteOptz</title>
-        <meta name="description" content="motion review. Compare Motion  features, pricing & alternatives. Expert analysis & user guide for 2025. Get started today!" />
+        <meta name="description" content="Motion Review 2025: AI-powered calendar and task management platform for scheduling optimization and productivity tracking. Intelligent time blocking features. Compare pricing, features & alternatives." />
         <meta name="keywords" content="motion review, motion pricing, motion features, motion vs competitors, motion alternatives" />
         <meta name="author" content="SiteOptz" />
         <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />

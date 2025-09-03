@@ -129,7 +129,7 @@ export default function IdeogramReviewPage({ tool }: IdeogramReviewPageProps) {
       <Head>
         {/* Primary SEO Tags */}
         <title>Ideogram Review: AI Image Generator | SiteOptz</title>
-        <meta name="description" content="ideogram review. Compare Ideogram  features, pricing & alternatives. Expert analysis & user guide for 2025. Get started today!" />
+        <meta name="description" content="Ideogram Review 2025: Advanced AI image generation tool for creating high-quality visual content. Professional image creation. Compare pricing, features & alternatives." />
         <meta name="keywords" content="ideogram review, ideogram pricing, ideogram features, ideogram vs competitors, ideogram alternatives" />
         <meta name="author" content="SiteOptz" />
         <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
@@ -140,7 +140,7 @@ export default function IdeogramReviewPage({ tool }: IdeogramReviewPageProps) {
         {/* Open Graph Meta Tags */}
         <meta property="og:type" content="article" />
         <meta property="og:title" content="Ideogram Review: AI Image Generator | SiteOptz" />
-        <meta property="og:description" content="ideogram review. Compare Ideogram  features, pricing & alternatives. Expert analysis & user guide for 2025. Get started today!" />
+        <meta property="og:description" content="Ideogram Review 2025: Advanced AI image generation tool for creating high-quality visual content. Professional image creation. Compare pricing, features & alternatives." />
         <meta property="og:url" content="https://siteoptz.ai/reviews/ideogram" />
         <meta property="og:site_name" content="SiteOptz" />
         <meta property="og:image" content="https://siteoptz.ai/og-image.png" />
@@ -151,7 +151,7 @@ export default function IdeogramReviewPage({ tool }: IdeogramReviewPageProps) {
         {/* Twitter Card Tags */}
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Ideogram Review: AI Image Generator | SiteOptz" />
-        <meta name="twitter:description" content="ideogram review. Compare Ideogram  features, pricing & alternatives. Expert analysis & user guide for 2025. Get started today!" />
+        <meta name="twitter:description" content="Ideogram Review 2025: Advanced AI image generation tool for creating high-quality visual content. Professional image creation. Compare pricing, features & alternatives." />
         <meta name="twitter:image" content="https://siteoptz.ai/og-image.png" />
         <meta name="twitter:creator" content="@siteoptz" />
         

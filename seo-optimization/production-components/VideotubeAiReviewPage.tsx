@@ -129,7 +129,7 @@ export default function VideotubeAiReviewPage({ tool }: VideotubeAiReviewPagePro
       <Head>
         {/* Primary SEO Tags */}
         <title>VideoTube Review: Text-to-Video Creator | SiteOptz</title>
-        <meta name="description" content="videotube review. Compare VideoTube  features, pricing & alternatives. Expert analysis & user guide for 2025. Get started today!" />
+        <meta name="description" content="Videotube AI Review 2025: AI-powered video creation and editing platform for YouTube content creators. Automated thumbnail and title generation. Compare pricing, features & alternatives." />
         <meta name="keywords" content="videotube review, videotube pricing, videotube features, videotube vs competitors, videotube alternatives" />
         <meta name="author" content="SiteOptz" />
         <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />

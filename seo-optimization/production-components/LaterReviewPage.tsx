@@ -129,7 +129,7 @@ export default function LaterReviewPage({ tool }: LaterReviewPageProps) {
       <Head>
         {/* Primary SEO Tags */}
         <title>Later Review: Social Media Scheduler | SiteOptz</title>
-        <meta name="description" content="later review. Compare Later  features, pricing & alternatives. Expert analysis & user guide for 2025. Get started today!" />
+        <meta name="description" content="Later Review 2025: Visual-first social media scheduler with AI-powered content creation. Comprehensive Instagram marketing tools. Compare pricing, features & alternatives." />
         <meta name="keywords" content="later review, later pricing, later features, later vs competitors, later alternatives" />
         <meta name="author" content="SiteOptz" />
         <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
@@ -140,7 +140,7 @@ export default function LaterReviewPage({ tool }: LaterReviewPageProps) {
         {/* Open Graph Meta Tags */}
         <meta property="og:type" content="article" />
         <meta property="og:title" content="Later Review: Social Media Scheduler | SiteOptz" />
-        <meta property="og:description" content="later review. Compare Later  features, pricing & alternatives. Expert analysis & user guide for 2025. Get started today!" />
+        <meta property="og:description" content="Later Review 2025: Visual-first social media scheduler with AI-powered content creation. Comprehensive Instagram marketing tools. Compare pricing, features & alternatives." />
         <meta property="og:url" content="https://siteoptz.ai/reviews/later" />
         <meta property="og:site_name" content="SiteOptz" />
         <meta property="og:image" content="https://siteoptz.ai/og-image.png" />
@@ -151,7 +151,7 @@ export default function LaterReviewPage({ tool }: LaterReviewPageProps) {
         {/* Twitter Card Tags */}
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Later Review: Social Media Scheduler | SiteOptz" />
-        <meta name="twitter:description" content="later review. Compare Later  features, pricing & alternatives. Expert analysis & user guide for 2025. Get started today!" />
+        <meta name="twitter:description" content="Later Review 2025: Visual-first social media scheduler with AI-powered content creation. Comprehensive Instagram marketing tools. Compare pricing, features & alternatives." />
         <meta name="twitter:image" content="https://siteoptz.ai/og-image.png" />
         <meta name="twitter:creator" content="@siteoptz" />
         

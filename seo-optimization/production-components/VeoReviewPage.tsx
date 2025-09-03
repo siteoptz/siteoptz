@@ -129,7 +129,7 @@ export default function VeoReviewPage({ tool }: VeoReviewPageProps) {
       <Head>
         {/* Primary SEO Tags */}
         <title>Veo Review: Google's Video Generation AI | SiteOptz</title>
-        <meta name="description" content="veo review. Compare Veo  features, pricing & alternatives. Expert analysis & user guide for 2025. Get started today!" />
+        <meta name="description" content="Veo Review 2025: AI-powered video generation platform for creating high-quality videos from text prompts. Advanced video synthesis technology. Compare pricing, features & alternatives." />
         <meta name="keywords" content="veo review, veo pricing, veo features, veo vs competitors, veo alternatives" />
         <meta name="author" content="SiteOptz" />
         <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />

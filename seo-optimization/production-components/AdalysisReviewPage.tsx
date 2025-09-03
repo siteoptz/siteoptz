@@ -129,7 +129,7 @@ export default function AdalysisReviewPage({ tool }: AdalysisReviewPageProps) {
       <Head>
         {/* Primary SEO Tags */}
         <title>Adalysis Review: AI Tool | SiteOptz</title>
-        <meta name="description" content="adalysis review. Compare Adalysis  features, pricing & alternatives. Expert analysis & user guide for 2025. Get started today!" />
+        <meta name="description" content="Adalysis Review 2025: Advanced Google Ads optimization tool with automated testing. Quality score improvement & landing page analysis. Compare features." />
         <meta name="keywords" content="adalysis review, adalysis pricing, adalysis features, adalysis vs competitors, adalysis alternatives" />
         <meta name="author" content="SiteOptz" />
         <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
@@ -140,7 +140,7 @@ export default function AdalysisReviewPage({ tool }: AdalysisReviewPageProps) {
         {/* Open Graph Meta Tags */}
         <meta property="og:type" content="article" />
         <meta property="og:title" content="Adalysis Review: AI Tool | SiteOptz" />
-        <meta property="og:description" content="adalysis review. Compare Adalysis  features, pricing & alternatives. Expert analysis & user guide for 2025. Get started today!" />
+        <meta property="og:description" content="Adalysis Review 2025: Advanced Google Ads optimization tool with automated testing. Quality score improvement & landing page analysis. Compare features." />
         <meta property="og:url" content="https://siteoptz.ai/reviews/adalysis" />
         <meta property="og:site_name" content="SiteOptz" />
         <meta property="og:image" content="https://siteoptz.ai/og-image.png" />
@@ -151,7 +151,7 @@ export default function AdalysisReviewPage({ tool }: AdalysisReviewPageProps) {
         {/* Twitter Card Tags */}
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Adalysis Review: AI Tool | SiteOptz" />
-        <meta name="twitter:description" content="adalysis review. Compare Adalysis  features, pricing & alternatives. Expert analysis & user guide for 2025. Get started today!" />
+        <meta name="twitter:description" content="Adalysis Review 2025: Advanced Google Ads optimization tool with automated testing. Quality score improvement & landing page analysis. Compare features." />
         <meta name="twitter:image" content="https://siteoptz.ai/og-image.png" />
         <meta name="twitter:creator" content="@siteoptz" />
         

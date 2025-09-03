@@ -129,7 +129,7 @@ export default function AcquisioReviewPage({ tool }: AcquisioReviewPageProps) {
       <Head>
         {/* Primary SEO Tags */}
         <title>Acquisio Review: AI-Powered PPC Platform | SiteOptz</title>
-        <meta name="description" content="acquisio review. Compare Acquisio  features, pricing & alternatives. Expert analysis & user guide for 2025. Get started today!" />
+        <meta name="description" content="Acquisio Review 2025: PPC automation platform for Google Ads & Facebook campaigns. AI-powered bid optimization and reporting. Compare pricing & alternatives." />
         <meta name="keywords" content="acquisio review, acquisio pricing, acquisio features, acquisio vs competitors, acquisio alternatives" />
         <meta name="author" content="SiteOptz" />
         <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
@@ -140,7 +140,7 @@ export default function AcquisioReviewPage({ tool }: AcquisioReviewPageProps) {
         {/* Open Graph Meta Tags */}
         <meta property="og:type" content="article" />
         <meta property="og:title" content="Acquisio Review: AI-Powered PPC Platform | SiteOptz" />
-        <meta property="og:description" content="acquisio review. Compare Acquisio  features, pricing & alternatives. Expert analysis & user guide for 2025. Get started today!" />
+        <meta property="og:description" content="Acquisio Review 2025: PPC automation platform for Google Ads & Facebook campaigns. AI-powered bid optimization and reporting. Compare pricing & alternatives." />
         <meta property="og:url" content="https://siteoptz.ai/reviews/acquisio" />
         <meta property="og:site_name" content="SiteOptz" />
         <meta property="og:image" content="https://siteoptz.ai/og-image.png" />
@@ -151,7 +151,7 @@ export default function AcquisioReviewPage({ tool }: AcquisioReviewPageProps) {
         {/* Twitter Card Tags */}
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Acquisio Review: AI-Powered PPC Platform | SiteOptz" />
-        <meta name="twitter:description" content="acquisio review. Compare Acquisio  features, pricing & alternatives. Expert analysis & user guide for 2025. Get started today!" />
+        <meta name="twitter:description" content="Acquisio Review 2025: PPC automation platform for Google Ads & Facebook campaigns. AI-powered bid optimization and reporting. Compare pricing & alternatives." />
         <meta name="twitter:image" content="https://siteoptz.ai/og-image.png" />
         <meta name="twitter:creator" content="@siteoptz" />
         

@@ -129,7 +129,7 @@ export default function MarinSoftwareReviewPage({ tool }: MarinSoftwareReviewPag
       <Head>
         {/* Primary SEO Tags */}
         <title>Marin Software Review: Enterprise PPC Platform | SiteOptz</title>
-        <meta name="description" content="marin software review. Compare Marin Software  features, pricing & alternatives. Expert analysis & user guide for 2025. Get started today!" />
+        <meta name="description" content="Marin Software Review 2025: Digital advertising management platform for optimizing search and social campaigns. Advanced bid management features. Compare pricing, features & alternatives." />
         <meta name="keywords" content="marin software review, marin software pricing, marin software features, marin software vs competitors, marin software alternatives" />
         <meta name="author" content="SiteOptz" />
         <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />

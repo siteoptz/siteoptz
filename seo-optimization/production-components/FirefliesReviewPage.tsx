@@ -129,7 +129,7 @@ export default function FirefliesReviewPage({ tool }: FirefliesReviewPageProps) 
       <Head>
         {/* Primary SEO Tags */}
         <title>Fireflies Review: AI Tool | SiteOptz</title>
-        <meta name="description" content="fireflies review. Compare Fireflies  features, pricing & alternatives. Expert analysis & user guide for 2025. Get started today!" />
+        <meta name="description" content="Fireflies Review 2025: AI meeting recorder and transcription tool for automated note-taking. Smart meeting summaries. Compare pricing, features & alternatives." />
         <meta name="keywords" content="fireflies review, fireflies pricing, fireflies features, fireflies vs competitors, fireflies alternatives" />
         <meta name="author" content="SiteOptz" />
         <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
@@ -140,7 +140,7 @@ export default function FirefliesReviewPage({ tool }: FirefliesReviewPageProps) 
         {/* Open Graph Meta Tags */}
         <meta property="og:type" content="article" />
         <meta property="og:title" content="Fireflies Review: AI Tool | SiteOptz" />
-        <meta property="og:description" content="fireflies review. Compare Fireflies  features, pricing & alternatives. Expert analysis & user guide for 2025. Get started today!" />
+        <meta property="og:description" content="Fireflies Review 2025: AI meeting recorder and transcription tool for automated note-taking. Smart meeting summaries. Compare pricing, features & alternatives." />
         <meta property="og:url" content="https://siteoptz.ai/reviews/fireflies" />
         <meta property="og:site_name" content="SiteOptz" />
         <meta property="og:image" content="https://siteoptz.ai/og-image.png" />
@@ -151,7 +151,7 @@ export default function FirefliesReviewPage({ tool }: FirefliesReviewPageProps) 
         {/* Twitter Card Tags */}
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Fireflies Review: AI Tool | SiteOptz" />
-        <meta name="twitter:description" content="fireflies review. Compare Fireflies  features, pricing & alternatives. Expert analysis & user guide for 2025. Get started today!" />
+        <meta name="twitter:description" content="Fireflies Review 2025: AI meeting recorder and transcription tool for automated note-taking. Smart meeting summaries. Compare pricing, features & alternatives." />
         <meta name="twitter:image" content="https://siteoptz.ai/og-image.png" />
         <meta name="twitter:creator" content="@siteoptz" />
         

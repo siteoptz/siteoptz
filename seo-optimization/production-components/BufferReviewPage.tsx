@@ -129,7 +129,7 @@ export default function BufferReviewPage({ tool }: BufferReviewPageProps) {
       <Head>
         {/* Primary SEO Tags */}
         <title>Buffer Review: AI Tool | SiteOptz</title>
-        <meta name="description" content="buffer review. Compare Buffer  features, pricing & alternatives. Expert analysis & user guide for 2025. Get started today!" />
+        <meta name="description" content="Buffer Review 2025: Social media scheduling platform with analytics and team features. Simple scheduling tools. Compare pricing, features & alternatives." />
         <meta name="keywords" content="buffer review, buffer pricing, buffer features, buffer vs competitors, buffer alternatives" />
         <meta name="author" content="SiteOptz" />
         <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
@@ -140,7 +140,7 @@ export default function BufferReviewPage({ tool }: BufferReviewPageProps) {
         {/* Open Graph Meta Tags */}
         <meta property="og:type" content="article" />
         <meta property="og:title" content="Buffer Review: AI Tool | SiteOptz" />
-        <meta property="og:description" content="buffer review. Compare Buffer  features, pricing & alternatives. Expert analysis & user guide for 2025. Get started today!" />
+        <meta property="og:description" content="Buffer Review 2025: Social media scheduling platform with analytics and team features. Simple scheduling tools. Compare pricing, features & alternatives." />
         <meta property="og:url" content="https://siteoptz.ai/reviews/buffer" />
         <meta property="og:site_name" content="SiteOptz" />
         <meta property="og:image" content="https://siteoptz.ai/og-image.png" />
@@ -151,7 +151,7 @@ export default function BufferReviewPage({ tool }: BufferReviewPageProps) {
         {/* Twitter Card Tags */}
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Buffer Review: AI Tool | SiteOptz" />
-        <meta name="twitter:description" content="buffer review. Compare Buffer  features, pricing & alternatives. Expert analysis & user guide for 2025. Get started today!" />
+        <meta name="twitter:description" content="Buffer Review 2025: Social media scheduling platform with analytics and team features. Simple scheduling tools. Compare pricing, features & alternatives." />
         <meta name="twitter:image" content="https://siteoptz.ai/og-image.png" />
         <meta name="twitter:creator" content="@siteoptz" />
         

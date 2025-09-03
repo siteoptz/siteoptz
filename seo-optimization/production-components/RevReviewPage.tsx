@@ -129,7 +129,7 @@ export default function RevReviewPage({ tool }: RevReviewPageProps) {
       <Head>
         {/* Primary SEO Tags */}
         <title>Rev Review: AI Transcription Service | SiteOptz</title>
-        <meta name="description" content="rev review. Compare Rev  features, pricing & alternatives. Expert analysis & user guide for 2025. Get started today!" />
+        <meta name="description" content="Rev Review 2025: Professional transcription and captioning service platform with human-quality accuracy. Audio and video transcription capabilities. Compare pricing, features & alternatives." />
         <meta name="keywords" content="rev review, rev pricing, rev features, rev vs competitors, rev alternatives" />
         <meta name="author" content="SiteOptz" />
         <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />

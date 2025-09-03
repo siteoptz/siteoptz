@@ -129,7 +129,7 @@ export default function TableauAiReviewPage({ tool }: TableauAiReviewPageProps) 
       <Head>
         {/* Primary SEO Tags */}
         <title>Tableau AI Review: Data Visualization Platform | SiteOptz</title>
-        <meta name="description" content="tableau ai review. Compare Tableau AI  features, pricing & alternatives. Expert analysis & user guide for 2025. Get started today!" />
+        <meta name="description" content="Tableau AI Review 2025: AI-enhanced data visualization and business intelligence platform with automated insights generation. Advanced analytics capabilities. Compare pricing, features & alternatives." />
         <meta name="keywords" content="tableau ai review, tableau ai pricing, tableau ai features, tableau ai vs competitors, tableau ai alternatives" />
         <meta name="author" content="SiteOptz" />
         <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />

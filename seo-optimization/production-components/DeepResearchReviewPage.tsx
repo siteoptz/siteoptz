@@ -129,7 +129,7 @@ export default function DeepResearchReviewPage({ tool }: DeepResearchReviewPageP
       <Head>
         {/* Primary SEO Tags */}
         <title>Deep Research Review: AI Tool | SiteOptz</title>
-        <meta name="description" content="deep research review. Compare Deep Research  features, pricing & alternatives. Expert analysis & user guide for 2025. Get started today!" />
+        <meta name="description" content="Deep Research Review 2025: AI-powered research assistant for academic and professional research. Advanced research capabilities. Compare pricing, features & alternatives." />
         <meta name="keywords" content="deep research review, deep research pricing, deep research features, deep research vs competitors, deep research alternatives" />
         <meta name="author" content="SiteOptz" />
         <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
@@ -140,7 +140,7 @@ export default function DeepResearchReviewPage({ tool }: DeepResearchReviewPageP
         {/* Open Graph Meta Tags */}
         <meta property="og:type" content="article" />
         <meta property="og:title" content="Deep Research Review: AI Tool | SiteOptz" />
-        <meta property="og:description" content="deep research review. Compare Deep Research  features, pricing & alternatives. Expert analysis & user guide for 2025. Get started today!" />
+        <meta property="og:description" content="Deep Research Review 2025: AI-powered research assistant for academic and professional research. Advanced research capabilities. Compare pricing, features & alternatives." />
         <meta property="og:url" content="https://siteoptz.ai/reviews/deep-research" />
         <meta property="og:site_name" content="SiteOptz" />
         <meta property="og:image" content="https://siteoptz.ai/og-image.png" />
@@ -151,7 +151,7 @@ export default function DeepResearchReviewPage({ tool }: DeepResearchReviewPageP
         {/* Twitter Card Tags */}
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Deep Research Review: AI Tool | SiteOptz" />
-        <meta name="twitter:description" content="deep research review. Compare Deep Research  features, pricing & alternatives. Expert analysis & user guide for 2025. Get started today!" />
+        <meta name="twitter:description" content="Deep Research Review 2025: AI-powered research assistant for academic and professional research. Advanced research capabilities. Compare pricing, features & alternatives." />
         <meta name="twitter:image" content="https://siteoptz.ai/og-image.png" />
         <meta name="twitter:creator" content="@siteoptz" />
         

@@ -129,7 +129,7 @@ export default function ResearchPalReviewPage({ tool }: ResearchPalReviewPagePro
       <Head>
         {/* Primary SEO Tags */}
         <title>Research Pal Review: Citation Finder Tool | SiteOptz</title>
-        <meta name="description" content="research pal review. Compare Research Pal  features, pricing & alternatives. Expert analysis & user guide for 2025. Get started today!" />
+        <meta name="description" content="Research Pal Review 2025: AI-powered research assistant platform for academic writing and literature reviews. Automated citation management features. Compare pricing, features & alternatives." />
         <meta name="keywords" content="research pal review, research pal pricing, research pal features, research pal vs competitors, research pal alternatives" />
         <meta name="author" content="SiteOptz" />
         <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />

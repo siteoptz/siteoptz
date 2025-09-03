@@ -129,7 +129,7 @@ export default function MakeReviewPage({ tool }: MakeReviewPageProps) {
       <Head>
         {/* Primary SEO Tags */}
         <title>Make Review: No-Code Automation Platform | SiteOptz</title>
-        <meta name="description" content="make review. Compare Make  features, pricing & alternatives. Expert analysis & user guide for 2025. Get started today!" />
+        <meta name="description" content="Make Review 2025: Visual automation platform for connecting apps and automating workflows without coding. Drag-and-drop interface design. Compare pricing, features & alternatives." />
         <meta name="keywords" content="make review, make pricing, make features, make vs competitors, make alternatives" />
         <meta name="author" content="SiteOptz" />
         <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />

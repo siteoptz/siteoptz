@@ -129,7 +129,7 @@ export default function ReadAiReviewPage({ tool }: ReadAiReviewPageProps) {
       <Head>
         {/* Primary SEO Tags */}
         <title>Read AI Review: Meeting Analytics Tool | SiteOptz</title>
-        <meta name="description" content="read ai review. Compare Read AI  features, pricing & alternatives. Expert analysis & user guide for 2025. Get started today!" />
+        <meta name="description" content="Read AI Review 2025: AI-powered meeting analytics platform for video call insights and team collaboration optimization. Automated meeting summaries. Compare pricing, features & alternatives." />
         <meta name="keywords" content="read ai review, read ai pricing, read ai features, read ai vs competitors, read ai alternatives" />
         <meta name="author" content="SiteOptz" />
         <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />

@@ -129,7 +129,7 @@ export default function PaperpalReviewPage({ tool }: PaperpalReviewPageProps) {
       <Head>
         {/* Primary SEO Tags */}
         <title>Paperpal Review: Academic Writing Assistant | SiteOptz</title>
-        <meta name="description" content="paperpal review. Compare Paperpal  features, pricing & alternatives. Expert analysis & user guide for 2025. Get started today!" />
+        <meta name="description" content="Paperpal Review 2025: AI-powered academic writing assistant for research papers and scholarly documents. Advanced grammar and style checking. Compare pricing, features & alternatives." />
         <meta name="keywords" content="paperpal review, paperpal pricing, paperpal features, paperpal vs competitors, paperpal alternatives" />
         <meta name="author" content="SiteOptz" />
         <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />

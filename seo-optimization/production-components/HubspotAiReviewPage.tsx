@@ -129,7 +129,7 @@ export default function HubspotAiReviewPage({ tool }: HubspotAiReviewPageProps) 
       <Head>
         {/* Primary SEO Tags */}
         <title>HubSpot AI Review: CRM Marketing Platform | SiteOptz</title>
-        <meta name="description" content="hubspot ai review. Compare HubSpot AI  features, pricing & alternatives. Expert analysis & user guide for 2025. Get started today!" />
+        <meta name="description" content="HubSpot AI Review 2025: Integrated CRM with AI-powered lead scoring, content creation, and email marketing automation. Complete business solution. Compare pricing, features & alternatives." />
         <meta name="keywords" content="hubspot ai review, hubspot ai pricing, hubspot ai features, hubspot ai vs competitors, hubspot ai alternatives" />
         <meta name="author" content="SiteOptz" />
         <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
@@ -140,7 +140,7 @@ export default function HubspotAiReviewPage({ tool }: HubspotAiReviewPageProps) 
         {/* Open Graph Meta Tags */}
         <meta property="og:type" content="article" />
         <meta property="og:title" content="HubSpot AI Review: CRM Marketing Platform | SiteOptz" />
-        <meta property="og:description" content="hubspot ai review. Compare HubSpot AI  features, pricing & alternatives. Expert analysis & user guide for 2025. Get started today!" />
+        <meta property="og:description" content="HubSpot AI Review 2025: Integrated CRM with AI-powered lead scoring, content creation, and email marketing automation. Complete business solution. Compare pricing, features & alternatives." />
         <meta property="og:url" content="https://siteoptz.ai/reviews/hubspot-ai" />
         <meta property="og:site_name" content="SiteOptz" />
         <meta property="og:image" content="https://siteoptz.ai/og-image.png" />
@@ -151,7 +151,7 @@ export default function HubspotAiReviewPage({ tool }: HubspotAiReviewPageProps) 
         {/* Twitter Card Tags */}
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="HubSpot AI Review: CRM Marketing Platform | SiteOptz" />
-        <meta name="twitter:description" content="hubspot ai review. Compare HubSpot AI  features, pricing & alternatives. Expert analysis & user guide for 2025. Get started today!" />
+        <meta name="twitter:description" content="HubSpot AI Review 2025: Integrated CRM with AI-powered lead scoring, content creation, and email marketing automation. Complete business solution. Compare pricing, features & alternatives." />
         <meta name="twitter:image" content="https://siteoptz.ai/og-image.png" />
         <meta name="twitter:creator" content="@siteoptz" />
         

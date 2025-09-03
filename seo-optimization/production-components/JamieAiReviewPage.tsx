@@ -129,7 +129,7 @@ export default function JamieAiReviewPage({ tool }: JamieAiReviewPageProps) {
       <Head>
         {/* Primary SEO Tags */}
         <title>Jamie AI Review: Meeting Summarizer | SiteOptz</title>
-        <meta name="description" content="jamie ai review. Compare Jamie AI  features, pricing & alternatives. Expert analysis & user guide for 2025. Get started today!" />
+        <meta name="description" content="Jamie AI Review 2025: Automated meeting summarization for any software including in-person meetings. Detailed note-taking solution. Compare pricing, features & alternatives." />
         <meta name="keywords" content="jamie ai review, jamie ai pricing, jamie ai features, jamie ai vs competitors, jamie ai alternatives" />
         <meta name="author" content="SiteOptz" />
         <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
@@ -140,7 +140,7 @@ export default function JamieAiReviewPage({ tool }: JamieAiReviewPageProps) {
         {/* Open Graph Meta Tags */}
         <meta property="og:type" content="article" />
         <meta property="og:title" content="Jamie AI Review: Meeting Summarizer | SiteOptz" />
-        <meta property="og:description" content="jamie ai review. Compare Jamie AI  features, pricing & alternatives. Expert analysis & user guide for 2025. Get started today!" />
+        <meta property="og:description" content="Jamie AI Review 2025: Automated meeting summarization for any software including in-person meetings. Detailed note-taking solution. Compare pricing, features & alternatives." />
         <meta property="og:url" content="https://siteoptz.ai/reviews/jamie-ai" />
         <meta property="og:site_name" content="SiteOptz" />
         <meta property="og:image" content="https://siteoptz.ai/og-image.png" />
@@ -151,7 +151,7 @@ export default function JamieAiReviewPage({ tool }: JamieAiReviewPageProps) {
         {/* Twitter Card Tags */}
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Jamie AI Review: Meeting Summarizer | SiteOptz" />
-        <meta name="twitter:description" content="jamie ai review. Compare Jamie AI  features, pricing & alternatives. Expert analysis & user guide for 2025. Get started today!" />
+        <meta name="twitter:description" content="Jamie AI Review 2025: Automated meeting summarization for any software including in-person meetings. Detailed note-taking solution. Compare pricing, features & alternatives." />
         <meta name="twitter:image" content="https://siteoptz.ai/og-image.png" />
         <meta name="twitter:creator" content="@siteoptz" />
         

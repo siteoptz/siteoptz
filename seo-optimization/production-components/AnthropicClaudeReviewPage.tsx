@@ -129,7 +129,7 @@ export default function AnthropicClaudeReviewPage({ tool }: AnthropicClaudeRevie
       <Head>
         {/* Primary SEO Tags */}
         <title>Anthropic Claude Review: Advanced AI Assistant | SiteOptz</title>
-        <meta name="description" content="anthropic claude review. Compare Anthropic Claude  features, pricing & alternatives. Expert analysis & user guide for 2025. Get started today!" />
+        <meta name="description" content="Claude Review 2025: Advanced AI assistant by Anthropic. Safety-focused reasoning for complex tasks with large context windows. Compare pricing & features." />
         <meta name="keywords" content="anthropic claude review, anthropic claude pricing, anthropic claude features, anthropic claude vs competitors, anthropic claude alternatives" />
         <meta name="author" content="SiteOptz" />
         <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
@@ -140,7 +140,7 @@ export default function AnthropicClaudeReviewPage({ tool }: AnthropicClaudeRevie
         {/* Open Graph Meta Tags */}
         <meta property="og:type" content="article" />
         <meta property="og:title" content="Anthropic Claude Review: Advanced AI Assistant | SiteOptz" />
-        <meta property="og:description" content="anthropic claude review. Compare Anthropic Claude  features, pricing & alternatives. Expert analysis & user guide for 2025. Get started today!" />
+        <meta property="og:description" content="Claude Review 2025: Advanced AI assistant by Anthropic. Safety-focused reasoning for complex tasks with large context windows. Compare pricing & features." />
         <meta property="og:url" content="https://siteoptz.ai/reviews/anthropic-claude" />
         <meta property="og:site_name" content="SiteOptz" />
         <meta property="og:image" content="https://siteoptz.ai/og-image.png" />
@@ -151,7 +151,7 @@ export default function AnthropicClaudeReviewPage({ tool }: AnthropicClaudeRevie
         {/* Twitter Card Tags */}
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Anthropic Claude Review: Advanced AI Assistant | SiteOptz" />
-        <meta name="twitter:description" content="anthropic claude review. Compare Anthropic Claude  features, pricing & alternatives. Expert analysis & user guide for 2025. Get started today!" />
+        <meta name="twitter:description" content="Claude Review 2025: Advanced AI assistant by Anthropic. Safety-focused reasoning for complex tasks with large context windows. Compare pricing & features." />
         <meta name="twitter:image" content="https://siteoptz.ai/og-image.png" />
         <meta name="twitter:creator" content="@siteoptz" />
         

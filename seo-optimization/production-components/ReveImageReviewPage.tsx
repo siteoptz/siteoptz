@@ -129,7 +129,7 @@ export default function ReveImageReviewPage({ tool }: ReveImageReviewPageProps) 
       <Head>
         {/* Primary SEO Tags */}
         <title>Reve Image Review: AI Image Generation Model | SiteOptz</title>
-        <meta name="description" content="reve image review. Compare Reve Image  features, pricing & alternatives. Expert analysis & user guide for 2025. Get started today!" />
+        <meta name="description" content="Reve Image Review 2025: AI-powered image generation and editing platform for creating professional visual content. Advanced photo enhancement features. Compare pricing, features & alternatives." />
         <meta name="keywords" content="reve image review, reve image pricing, reve image features, reve image vs competitors, reve image alternatives" />
         <meta name="author" content="SiteOptz" />
         <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />

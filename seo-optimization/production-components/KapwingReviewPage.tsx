@@ -129,7 +129,7 @@ export default function KapwingReviewPage({ tool }: KapwingReviewPageProps) {
       <Head>
         {/* Primary SEO Tags */}
         <title>Kapwing Review: Online Video Editor | SiteOptz</title>
-        <meta name="description" content="kapwing review. Compare Kapwing  features, pricing & alternatives. Expert analysis & user guide for 2025. Get started today!" />
+        <meta name="description" content="Kapwing Review 2025: Online video editor with AI-powered features and collaboration tools. Browser-based content creation. Compare pricing, features & alternatives." />
         <meta name="keywords" content="kapwing review, kapwing pricing, kapwing features, kapwing vs competitors, kapwing alternatives" />
         <meta name="author" content="SiteOptz" />
         <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
@@ -140,7 +140,7 @@ export default function KapwingReviewPage({ tool }: KapwingReviewPageProps) {
         {/* Open Graph Meta Tags */}
         <meta property="og:type" content="article" />
         <meta property="og:title" content="Kapwing Review: Online Video Editor | SiteOptz" />
-        <meta property="og:description" content="kapwing review. Compare Kapwing  features, pricing & alternatives. Expert analysis & user guide for 2025. Get started today!" />
+        <meta property="og:description" content="Kapwing Review 2025: Online video editor with AI-powered features and collaboration tools. Browser-based content creation. Compare pricing, features & alternatives." />
         <meta property="og:url" content="https://siteoptz.ai/reviews/kapwing" />
         <meta property="og:site_name" content="SiteOptz" />
         <meta property="og:image" content="https://siteoptz.ai/og-image.png" />
@@ -151,7 +151,7 @@ export default function KapwingReviewPage({ tool }: KapwingReviewPageProps) {
         {/* Twitter Card Tags */}
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Kapwing Review: Online Video Editor | SiteOptz" />
-        <meta name="twitter:description" content="kapwing review. Compare Kapwing  features, pricing & alternatives. Expert analysis & user guide for 2025. Get started today!" />
+        <meta name="twitter:description" content="Kapwing Review 2025: Online video editor with AI-powered features and collaboration tools. Browser-based content creation. Compare pricing, features & alternatives." />
         <meta name="twitter:image" content="https://siteoptz.ai/og-image.png" />
         <meta name="twitter:creator" content="@siteoptz" />
         

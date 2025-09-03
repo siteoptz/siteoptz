@@ -129,7 +129,7 @@ export default function SpeechmaticsReviewPage({ tool }: SpeechmaticsReviewPageP
       <Head>
         {/* Primary SEO Tags */}
         <title>Speechmatics Review: Enterprise Voice AI Platform | SiteOptz</title>
-        <meta name="description" content="speechmatics review. Compare Speechmatics  features, pricing & alternatives. Expert analysis & user guide for 2025. Get started today!" />
+        <meta name="description" content="Speechmatics Review 2025: AI-powered speech recognition and transcription platform with multi-language support. Real-time processing capabilities. Compare pricing, features & alternatives." />
         <meta name="keywords" content="speechmatics review, speechmatics pricing, speechmatics features, speechmatics vs competitors, speechmatics alternatives" />
         <meta name="author" content="SiteOptz" />
         <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />

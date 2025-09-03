@@ -129,7 +129,7 @@ export default function MicrosoftCopilotReviewPage({ tool }: MicrosoftCopilotRev
       <Head>
         {/* Primary SEO Tags */}
         <title>Microsoft Copilot Review: AI Assistant for Office | SiteOptz</title>
-        <meta name="description" content="microsoft copilot review. Compare Microsoft Copilot  features, pricing & alternatives. Expert analysis & user guide for 2025. Get started today!" />
+        <meta name="description" content="Microsoft Copilot Review 2025: AI-powered productivity assistant integrated across Microsoft 365 applications. Intelligent automation and coding support. Compare pricing, features & alternatives." />
         <meta name="keywords" content="microsoft copilot review, microsoft copilot pricing, microsoft copilot features, microsoft copilot vs competitors, microsoft copilot alternatives" />
         <meta name="author" content="SiteOptz" />
         <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />

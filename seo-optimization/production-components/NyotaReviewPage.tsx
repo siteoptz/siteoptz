@@ -129,7 +129,7 @@ export default function NyotaReviewPage({ tool }: NyotaReviewPageProps) {
       <Head>
         {/* Primary SEO Tags */}
         <title>Nyota Review: AI Meeting Notetaker | SiteOptz</title>
-        <meta name="description" content="nyota review. Compare Nyota  features, pricing & alternatives. Expert analysis & user guide for 2025. Get started today!" />
+        <meta name="description" content="Nyota Review 2025: AI-powered data analytics platform for business intelligence and predictive insights. Advanced machine learning algorithms. Compare pricing, features & alternatives." />
         <meta name="keywords" content="nyota review, nyota pricing, nyota features, nyota vs competitors, nyota alternatives" />
         <meta name="author" content="SiteOptz" />
         <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />

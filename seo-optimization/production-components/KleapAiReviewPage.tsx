@@ -129,7 +129,7 @@ export default function KleapAiReviewPage({ tool }: KleapAiReviewPageProps) {
       <Head>
         {/* Primary SEO Tags */}
         <title>Kleap Review: AI Website Builder | SiteOptz</title>
-        <meta name="description" content="kleap review. Compare Kleap  features, pricing & alternatives. Expert analysis & user guide for 2025. Get started today!" />
+        <meta name="description" content="Kleap Review 2025: AI website builder for creating professional websites in minutes. Fast automated web development. Compare pricing, features & alternatives." />
         <meta name="keywords" content="kleap review, kleap pricing, kleap features, kleap vs competitors, kleap alternatives" />
         <meta name="author" content="SiteOptz" />
         <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
@@ -140,7 +140,7 @@ export default function KleapAiReviewPage({ tool }: KleapAiReviewPageProps) {
         {/* Open Graph Meta Tags */}
         <meta property="og:type" content="article" />
         <meta property="og:title" content="Kleap Review: AI Website Builder | SiteOptz" />
-        <meta property="og:description" content="kleap review. Compare Kleap  features, pricing & alternatives. Expert analysis & user guide for 2025. Get started today!" />
+        <meta property="og:description" content="Kleap Review 2025: AI website builder for creating professional websites in minutes. Fast automated web development. Compare pricing, features & alternatives." />
         <meta property="og:url" content="https://siteoptz.ai/reviews/kleap-ai" />
         <meta property="og:site_name" content="SiteOptz" />
         <meta property="og:image" content="https://siteoptz.ai/og-image.png" />
@@ -151,7 +151,7 @@ export default function KleapAiReviewPage({ tool }: KleapAiReviewPageProps) {
         {/* Twitter Card Tags */}
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Kleap Review: AI Website Builder | SiteOptz" />
-        <meta name="twitter:description" content="kleap review. Compare Kleap  features, pricing & alternatives. Expert analysis & user guide for 2025. Get started today!" />
+        <meta name="twitter:description" content="Kleap Review 2025: AI website builder for creating professional websites in minutes. Fast automated web development. Compare pricing, features & alternatives." />
         <meta name="twitter:image" content="https://siteoptz.ai/og-image.png" />
         <meta name="twitter:creator" content="@siteoptz" />
         

@@ -129,7 +129,7 @@ export default function AnthropicChatgptAlternativeReviewPage({ tool }: Anthropi
       <Head>
         {/* Primary SEO Tags */}
         <title>Character.AI Review: AI Tool | SiteOptz</title>
-        <meta name="description" content="character.ai review. Compare Character.AI  features, pricing & alternatives. Expert analysis & user guide for 2025. Get started today!" />
+        <meta name="description" content="Character.AI Review 2025: Create & chat with AI characters for entertainment & education. Custom personalities & conversational AI. Compare pricing." />
         <meta name="keywords" content="character.ai review, character.ai pricing, character.ai features, character.ai vs competitors, character.ai alternatives" />
         <meta name="author" content="SiteOptz" />
         <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
@@ -140,7 +140,7 @@ export default function AnthropicChatgptAlternativeReviewPage({ tool }: Anthropi
         {/* Open Graph Meta Tags */}
         <meta property="og:type" content="article" />
         <meta property="og:title" content="Character.AI Review: AI Tool | SiteOptz" />
-        <meta property="og:description" content="character.ai review. Compare Character.AI  features, pricing & alternatives. Expert analysis & user guide for 2025. Get started today!" />
+        <meta property="og:description" content="Character.AI Review 2025: Create & chat with AI characters for entertainment & education. Custom personalities & conversational AI. Compare pricing." />
         <meta property="og:url" content="https://siteoptz.ai/reviews/anthropic-chatgpt-alternative" />
         <meta property="og:site_name" content="SiteOptz" />
         <meta property="og:image" content="https://siteoptz.ai/og-image.png" />
@@ -151,7 +151,7 @@ export default function AnthropicChatgptAlternativeReviewPage({ tool }: Anthropi
         {/* Twitter Card Tags */}
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Character.AI Review: AI Tool | SiteOptz" />
-        <meta name="twitter:description" content="character.ai review. Compare Character.AI  features, pricing & alternatives. Expert analysis & user guide for 2025. Get started today!" />
+        <meta name="twitter:description" content="Character.AI Review 2025: Create & chat with AI characters for entertainment & education. Custom personalities & conversational AI. Compare pricing." />
         <meta name="twitter:image" content="https://siteoptz.ai/og-image.png" />
         <meta name="twitter:creator" content="@siteoptz" />
         

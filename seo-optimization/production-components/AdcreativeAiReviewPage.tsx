@@ -129,7 +129,7 @@ export default function AdcreativeAiReviewPage({ tool }: AdcreativeAiReviewPageP
       <Head>
         {/* Primary SEO Tags */}
         <title>AdCreative.ai Review: AI Tool | SiteOptz</title>
-        <meta name="description" content="adcreative.ai review. Compare AdCreative.ai  features, pricing & alternatives. Expert analysis & user guide for 2025. Get started today!" />
+        <meta name="description" content="AdCreative.ai Review 2025: AI-powered ad creative generator for social media & display ads. Generate high-converting creatives in seconds. Compare pricing." />
         <meta name="keywords" content="adcreative.ai review, adcreative.ai pricing, adcreative.ai features, adcreative.ai vs competitors, adcreative.ai alternatives" />
         <meta name="author" content="SiteOptz" />
         <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
@@ -140,7 +140,7 @@ export default function AdcreativeAiReviewPage({ tool }: AdcreativeAiReviewPageP
         {/* Open Graph Meta Tags */}
         <meta property="og:type" content="article" />
         <meta property="og:title" content="AdCreative.ai Review: AI Tool | SiteOptz" />
-        <meta property="og:description" content="adcreative.ai review. Compare AdCreative.ai  features, pricing & alternatives. Expert analysis & user guide for 2025. Get started today!" />
+        <meta property="og:description" content="AdCreative.ai Review 2025: AI-powered ad creative generator for social media & display ads. Generate high-converting creatives in seconds. Compare pricing." />
         <meta property="og:url" content="https://siteoptz.ai/reviews/adcreative-ai" />
         <meta property="og:site_name" content="SiteOptz" />
         <meta property="og:image" content="https://siteoptz.ai/og-image.png" />
@@ -151,7 +151,7 @@ export default function AdcreativeAiReviewPage({ tool }: AdcreativeAiReviewPageP
         {/* Twitter Card Tags */}
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="AdCreative.ai Review: AI Tool | SiteOptz" />
-        <meta name="twitter:description" content="adcreative.ai review. Compare AdCreative.ai  features, pricing & alternatives. Expert analysis & user guide for 2025. Get started today!" />
+        <meta name="twitter:description" content="AdCreative.ai Review 2025: AI-powered ad creative generator for social media & display ads. Generate high-converting creatives in seconds. Compare pricing." />
         <meta name="twitter:image" content="https://siteoptz.ai/og-image.png" />
         <meta name="twitter:creator" content="@siteoptz" />
         

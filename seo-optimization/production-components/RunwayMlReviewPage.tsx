@@ -129,7 +129,7 @@ export default function RunwaymlReviewPage({ tool }: RunwaymlReviewPageProps) {
       <Head>
         {/* Primary SEO Tags */}
         <title>RunwayML Review: AI Video Generation Platform | SiteOptz</title>
-        <meta name="description" content="runwayml review. Compare RunwayML  features, pricing & alternatives. Expert analysis & user guide for 2025. Get started today!" />
+        <meta name="description" content="Runway ML Review 2025: AI-powered creative toolkit for video editing, image generation, and content creation. Advanced machine learning models. Compare pricing, features & alternatives." />
         <meta name="keywords" content="runwayml review, runwayml pricing, runwayml features, runwayml vs competitors, runwayml alternatives" />
         <meta name="author" content="SiteOptz" />
         <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />

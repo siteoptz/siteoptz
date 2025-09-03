@@ -129,7 +129,7 @@ export default function AdespressoReviewPage({ tool }: AdespressoReviewPageProps
       <Head>
         {/* Primary SEO Tags */}
         <title>AdEspresso Review: AI Tool | SiteOptz</title>
-        <meta name="description" content="adespresso review. Compare AdEspresso  features, pricing & alternatives. Expert analysis & user guide for 2025. Get started today!" />
+        <meta name="description" content="AdEspresso Review 2025: Social media advertising platform for Facebook, Instagram & Google Ads. Advanced split testing & optimization tools. Compare pricing." />
         <meta name="keywords" content="adespresso review, adespresso pricing, adespresso features, adespresso vs competitors, adespresso alternatives" />
         <meta name="author" content="SiteOptz" />
         <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
@@ -140,7 +140,7 @@ export default function AdespressoReviewPage({ tool }: AdespressoReviewPageProps
         {/* Open Graph Meta Tags */}
         <meta property="og:type" content="article" />
         <meta property="og:title" content="AdEspresso Review: AI Tool | SiteOptz" />
-        <meta property="og:description" content="adespresso review. Compare AdEspresso  features, pricing & alternatives. Expert analysis & user guide for 2025. Get started today!" />
+        <meta property="og:description" content="AdEspresso Review 2025: Social media advertising platform for Facebook, Instagram & Google Ads. Advanced split testing & optimization tools. Compare pricing." />
         <meta property="og:url" content="https://siteoptz.ai/reviews/adespresso" />
         <meta property="og:site_name" content="SiteOptz" />
         <meta property="og:image" content="https://siteoptz.ai/og-image.png" />
@@ -151,7 +151,7 @@ export default function AdespressoReviewPage({ tool }: AdespressoReviewPageProps
         {/* Twitter Card Tags */}
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="AdEspresso Review: AI Tool | SiteOptz" />
-        <meta name="twitter:description" content="adespresso review. Compare AdEspresso  features, pricing & alternatives. Expert analysis & user guide for 2025. Get started today!" />
+        <meta name="twitter:description" content="AdEspresso Review 2025: Social media advertising platform for Facebook, Instagram & Google Ads. Advanced split testing & optimization tools. Compare pricing." />
         <meta name="twitter:image" content="https://siteoptz.ai/og-image.png" />
         <meta name="twitter:creator" content="@siteoptz" />
         

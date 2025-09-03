@@ -129,7 +129,7 @@ export default function CastmagicReviewPage({ tool }: CastmagicReviewPageProps) 
       <Head>
         {/* Primary SEO Tags */}
         <title>Castmagic Review: Content Repurposing Tool | SiteOptz</title>
-        <meta name="description" content="castmagic review. Compare Castmagic  features, pricing & alternatives. Expert analysis & user guide for 2025. Get started today!" />
+        <meta name="description" content="Castmagic Review 2025: AI-powered content repurposing for podcasters and video creators. Transform audio content efficiently. Compare pricing, features & alternatives." />
         <meta name="keywords" content="castmagic review, castmagic pricing, castmagic features, castmagic vs competitors, castmagic alternatives" />
         <meta name="author" content="SiteOptz" />
         <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
@@ -140,7 +140,7 @@ export default function CastmagicReviewPage({ tool }: CastmagicReviewPageProps) 
         {/* Open Graph Meta Tags */}
         <meta property="og:type" content="article" />
         <meta property="og:title" content="Castmagic Review: Content Repurposing Tool | SiteOptz" />
-        <meta property="og:description" content="castmagic review. Compare Castmagic  features, pricing & alternatives. Expert analysis & user guide for 2025. Get started today!" />
+        <meta property="og:description" content="Castmagic Review 2025: AI-powered content repurposing for podcasters and video creators. Transform audio content efficiently. Compare pricing, features & alternatives." />
         <meta property="og:url" content="https://siteoptz.ai/reviews/castmagic" />
         <meta property="og:site_name" content="SiteOptz" />
         <meta property="og:image" content="https://siteoptz.ai/og-image.png" />
@@ -151,7 +151,7 @@ export default function CastmagicReviewPage({ tool }: CastmagicReviewPageProps) 
         {/* Twitter Card Tags */}
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Castmagic Review: Content Repurposing Tool | SiteOptz" />
-        <meta name="twitter:description" content="castmagic review. Compare Castmagic  features, pricing & alternatives. Expert analysis & user guide for 2025. Get started today!" />
+        <meta name="twitter:description" content="Castmagic Review 2025: AI-powered content repurposing for podcasters and video creators. Transform audio content efficiently. Compare pricing, features & alternatives." />
         <meta name="twitter:image" content="https://siteoptz.ai/og-image.png" />
         <meta name="twitter:creator" content="@siteoptz" />
         

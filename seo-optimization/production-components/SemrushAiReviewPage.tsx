@@ -129,7 +129,7 @@ export default function SemrushAiReviewPage({ tool }: SemrushAiReviewPageProps) 
       <Head>
         {/* Primary SEO Tags */}
         <title>Semrush AI Review: Digital Marketing Platform | SiteOptz</title>
-        <meta name="description" content="semrush ai review. Compare Semrush AI  features, pricing & alternatives. Expert analysis & user guide for 2025. Get started today!" />
+        <meta name="description" content="Semrush AI Review 2025: AI-enhanced SEO and digital marketing platform with intelligent content optimization and competitive analysis. Advanced keyword research tools. Compare pricing, features & alternatives." />
         <meta name="keywords" content="semrush ai review, semrush ai pricing, semrush ai features, semrush ai vs competitors, semrush ai alternatives" />
         <meta name="author" content="SiteOptz" />
         <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />

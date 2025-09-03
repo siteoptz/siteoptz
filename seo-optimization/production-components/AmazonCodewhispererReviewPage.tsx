@@ -129,7 +129,7 @@ export default function AmazonCodewhispererReviewPage({ tool }: AmazonCodewhispe
       <Head>
         {/* Primary SEO Tags */}
         <title>Amazon CodeWhisperer Review: AI Code Generator | SiteOptz</title>
-        <meta name="description" content="amazon codewhisperer review. Compare Amazon CodeWhisperer  features, pricing & alternatives. Expert analysis & user guide for 2025. Get started today!" />
+        <meta name="description" content="Amazon CodeWhisperer Review 2025: Free AI code generator with security scanning. Real-time suggestions for AWS development. Compare features." />
         <meta name="keywords" content="amazon codewhisperer review, amazon codewhisperer pricing, amazon codewhisperer features, amazon codewhisperer vs competitors, amazon codewhisperer alternatives" />
         <meta name="author" content="SiteOptz" />
         <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
@@ -140,7 +140,7 @@ export default function AmazonCodewhispererReviewPage({ tool }: AmazonCodewhispe
         {/* Open Graph Meta Tags */}
         <meta property="og:type" content="article" />
         <meta property="og:title" content="Amazon CodeWhisperer Review: AI Code Generator | SiteOptz" />
-        <meta property="og:description" content="amazon codewhisperer review. Compare Amazon CodeWhisperer  features, pricing & alternatives. Expert analysis & user guide for 2025. Get started today!" />
+        <meta property="og:description" content="Amazon CodeWhisperer Review 2025: Free AI code generator with security scanning. Real-time suggestions for AWS development. Compare features." />
         <meta property="og:url" content="https://siteoptz.ai/reviews/amazon-codewhisperer" />
         <meta property="og:site_name" content="SiteOptz" />
         <meta property="og:image" content="https://siteoptz.ai/og-image.png" />
@@ -151,7 +151,7 @@ export default function AmazonCodewhispererReviewPage({ tool }: AmazonCodewhispe
         {/* Twitter Card Tags */}
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Amazon CodeWhisperer Review: AI Code Generator | SiteOptz" />
-        <meta name="twitter:description" content="amazon codewhisperer review. Compare Amazon CodeWhisperer  features, pricing & alternatives. Expert analysis & user guide for 2025. Get started today!" />
+        <meta name="twitter:description" content="Amazon CodeWhisperer Review 2025: Free AI code generator with security scanning. Real-time suggestions for AWS development. Compare features." />
         <meta name="twitter:image" content="https://siteoptz.ai/og-image.png" />
         <meta name="twitter:creator" content="@siteoptz" />
         

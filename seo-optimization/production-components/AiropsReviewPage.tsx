@@ -129,7 +129,7 @@ export default function AiropsReviewPage({ tool }: AiropsReviewPageProps) {
       <Head>
         {/* Primary SEO Tags */}
         <title>AirOps Review: AI Search Optimization | SiteOptz</title>
-        <meta name="description" content="airops review. Compare AirOps  features, pricing & alternatives. Expert analysis & user guide for 2025. Get started today!" />
+        <meta name="description" content="AirOps Review 2025: AI-powered platform for AI search optimization. Increase brand visibility in AI search results. Compare features & pricing." />
         <meta name="keywords" content="airops review, airops pricing, airops features, airops vs competitors, airops alternatives" />
         <meta name="author" content="SiteOptz" />
         <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
@@ -140,7 +140,7 @@ export default function AiropsReviewPage({ tool }: AiropsReviewPageProps) {
         {/* Open Graph Meta Tags */}
         <meta property="og:type" content="article" />
         <meta property="og:title" content="AirOps Review: AI Search Optimization | SiteOptz" />
-        <meta property="og:description" content="airops review. Compare AirOps  features, pricing & alternatives. Expert analysis & user guide for 2025. Get started today!" />
+        <meta property="og:description" content="AirOps Review 2025: AI-powered platform for AI search optimization. Increase brand visibility in AI search results. Compare features & pricing." />
         <meta property="og:url" content="https://siteoptz.ai/reviews/airops" />
         <meta property="og:site_name" content="SiteOptz" />
         <meta property="og:image" content="https://siteoptz.ai/og-image.png" />
@@ -151,7 +151,7 @@ export default function AiropsReviewPage({ tool }: AiropsReviewPageProps) {
         {/* Twitter Card Tags */}
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="AirOps Review: AI Search Optimization | SiteOptz" />
-        <meta name="twitter:description" content="airops review. Compare AirOps  features, pricing & alternatives. Expert analysis & user guide for 2025. Get started today!" />
+        <meta name="twitter:description" content="AirOps Review 2025: AI-powered platform for AI search optimization. Increase brand visibility in AI search results. Compare features & pricing." />
         <meta name="twitter:image" content="https://siteoptz.ai/og-image.png" />
         <meta name="twitter:creator" content="@siteoptz" />
         

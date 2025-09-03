@@ -129,7 +129,7 @@ export default function MailchimpReviewPage({ tool }: MailchimpReviewPageProps) 
       <Head>
         {/* Primary SEO Tags */}
         <title>Mailchimp Review: Email Marketing Platform | SiteOptz</title>
-        <meta name="description" content="mailchimp review. Compare Mailchimp  features, pricing & alternatives. Expert analysis & user guide for 2025. Get started today!" />
+        <meta name="description" content="Mailchimp Review 2025: All-in-one email marketing platform with campaign automation and audience management tools. Advanced analytics features. Compare pricing, features & alternatives." />
         <meta name="keywords" content="mailchimp review, mailchimp pricing, mailchimp features, mailchimp vs competitors, mailchimp alternatives" />
         <meta name="author" content="SiteOptz" />
         <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />

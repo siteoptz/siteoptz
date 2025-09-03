@@ -129,7 +129,7 @@ export default function ChatgptEnterpriseReviewPage({ tool }: ChatgptEnterpriseR
       <Head>
         {/* Primary SEO Tags */}
         <title>ChatGPT Enterprise Review: AI Business Tool | SiteOptz</title>
-        <meta name="description" content="chatgpt enterprise review. Compare ChatGPT Enterprise  features, pricing & alternatives. Expert analysis & user guide for 2025. Get started today!" />
+        <meta name="description" content="ChatGPT Enterprise Review 2025: Enterprise-grade AI with advanced data analysis and custom training. Secure scalable solution. Compare pricing, features & alternatives." />
         <meta name="keywords" content="chatgpt enterprise review, chatgpt enterprise pricing, chatgpt enterprise features, chatgpt enterprise vs competitors, chatgpt enterprise alternatives" />
         <meta name="author" content="SiteOptz" />
         <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
@@ -140,7 +140,7 @@ export default function ChatgptEnterpriseReviewPage({ tool }: ChatgptEnterpriseR
         {/* Open Graph Meta Tags */}
         <meta property="og:type" content="article" />
         <meta property="og:title" content="ChatGPT Enterprise Review: AI Business Tool | SiteOptz" />
-        <meta property="og:description" content="chatgpt enterprise review. Compare ChatGPT Enterprise  features, pricing & alternatives. Expert analysis & user guide for 2025. Get started today!" />
+        <meta property="og:description" content="ChatGPT Enterprise Review 2025: Enterprise-grade AI with advanced data analysis and custom training. Secure scalable solution. Compare pricing, features & alternatives." />
         <meta property="og:url" content="https://siteoptz.ai/reviews/chatgpt-enterprise" />
         <meta property="og:site_name" content="SiteOptz" />
         <meta property="og:image" content="https://siteoptz.ai/og-image.png" />
@@ -151,7 +151,7 @@ export default function ChatgptEnterpriseReviewPage({ tool }: ChatgptEnterpriseR
         {/* Twitter Card Tags */}
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="ChatGPT Enterprise Review: AI Business Tool | SiteOptz" />
-        <meta name="twitter:description" content="chatgpt enterprise review. Compare ChatGPT Enterprise  features, pricing & alternatives. Expert analysis & user guide for 2025. Get started today!" />
+        <meta name="twitter:description" content="ChatGPT Enterprise Review 2025: Enterprise-grade AI with advanced data analysis and custom training. Secure scalable solution. Compare pricing, features & alternatives." />
         <meta name="twitter:image" content="https://siteoptz.ai/og-image.png" />
         <meta name="twitter:creator" content="@siteoptz" />
         

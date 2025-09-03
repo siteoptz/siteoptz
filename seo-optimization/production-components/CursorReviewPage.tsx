@@ -129,7 +129,7 @@ export default function CursorReviewPage({ tool }: CursorReviewPageProps) {
       <Head>
         {/* Primary SEO Tags */}
         <title>Cursor Review: AI-First Code Editor | SiteOptz</title>
-        <meta name="description" content="cursor review. Compare Cursor  features, pricing & alternatives. Expert analysis & user guide for 2025. Get started today!" />
+        <meta name="description" content="Cursor Review 2025: AI-first code editor combining VS Code feel with powerful AI capabilities. Chat interface for coding. Compare pricing, features & alternatives." />
         <meta name="keywords" content="cursor review, cursor pricing, cursor features, cursor vs competitors, cursor alternatives" />
         <meta name="author" content="SiteOptz" />
         <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
@@ -140,7 +140,7 @@ export default function CursorReviewPage({ tool }: CursorReviewPageProps) {
         {/* Open Graph Meta Tags */}
         <meta property="og:type" content="article" />
         <meta property="og:title" content="Cursor Review: AI-First Code Editor | SiteOptz" />
-        <meta property="og:description" content="cursor review. Compare Cursor  features, pricing & alternatives. Expert analysis & user guide for 2025. Get started today!" />
+        <meta property="og:description" content="Cursor Review 2025: AI-first code editor combining VS Code feel with powerful AI capabilities. Chat interface for coding. Compare pricing, features & alternatives." />
         <meta property="og:url" content="https://siteoptz.ai/reviews/cursor" />
         <meta property="og:site_name" content="SiteOptz" />
         <meta property="og:image" content="https://siteoptz.ai/og-image.png" />
@@ -151,7 +151,7 @@ export default function CursorReviewPage({ tool }: CursorReviewPageProps) {
         {/* Twitter Card Tags */}
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Cursor Review: AI-First Code Editor | SiteOptz" />
-        <meta name="twitter:description" content="cursor review. Compare Cursor  features, pricing & alternatives. Expert analysis & user guide for 2025. Get started today!" />
+        <meta name="twitter:description" content="Cursor Review 2025: AI-first code editor combining VS Code feel with powerful AI capabilities. Chat interface for coding. Compare pricing, features & alternatives." />
         <meta name="twitter:image" content="https://siteoptz.ai/og-image.png" />
         <meta name="twitter:creator" content="@siteoptz" />
         

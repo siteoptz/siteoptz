@@ -129,7 +129,7 @@ export default function SciteAiReviewPage({ tool }: SciteAiReviewPageProps) {
       <Head>
         {/* Primary SEO Tags */}
         <title>scite.ai Review: Citation Analysis Platform | SiteOptz</title>
-        <meta name="description" content="scite.ai review. Compare scite.ai  features, pricing & alternatives. Expert analysis & user guide for 2025. Get started today!" />
+        <meta name="description" content="Scite AI Review 2025: AI-powered research platform for scientific literature analysis and citation intelligence. Smart research discovery tools. Compare pricing, features & alternatives." />
         <meta name="keywords" content="scite.ai review, scite.ai pricing, scite.ai features, scite.ai vs competitors, scite.ai alternatives" />
         <meta name="author" content="SiteOptz" />
         <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />

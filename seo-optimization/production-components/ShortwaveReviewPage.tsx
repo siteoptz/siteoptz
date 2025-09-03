@@ -129,7 +129,7 @@ export default function ShortwaveReviewPage({ tool }: ShortwaveReviewPageProps) 
       <Head>
         {/* Primary SEO Tags */}
         <title>Shortwave Review: AI-Powered Email Client | SiteOptz</title>
-        <meta name="description" content="shortwave review. Compare Shortwave  features, pricing & alternatives. Expert analysis & user guide for 2025. Get started today!" />
+        <meta name="description" content="Shortwave Review 2025: AI-powered email client for Gmail with intelligent inbox management and productivity features. Smart email organization tools. Compare pricing, features & alternatives." />
         <meta name="keywords" content="shortwave review, shortwave pricing, shortwave features, shortwave vs competitors, shortwave alternatives" />
         <meta name="author" content="SiteOptz" />
         <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />

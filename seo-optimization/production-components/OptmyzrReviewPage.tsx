@@ -129,7 +129,7 @@ export default function OptmyzrReviewPage({ tool }: OptmyzrReviewPageProps) {
       <Head>
         {/* Primary SEO Tags */}
         <title>Optmyzr Review: PPC Management Platform | SiteOptz</title>
-        <meta name="description" content="optmyzr review. Compare Optmyzr  features, pricing & alternatives. Expert analysis & user guide for 2025. Get started today!" />
+        <meta name="description" content="Optmyzr Review 2025: PPC optimization and automation platform for Google Ads and Microsoft Ads management. Advanced bid optimization features. Compare pricing, features & alternatives." />
         <meta name="keywords" content="optmyzr review, optmyzr pricing, optmyzr features, optmyzr vs competitors, optmyzr alternatives" />
         <meta name="author" content="SiteOptz" />
         <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />

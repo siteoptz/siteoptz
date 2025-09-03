@@ -129,7 +129,7 @@ export default function GwiReviewPage({ tool }: GwiReviewPageProps) {
       <Head>
         {/* Primary SEO Tags */}
         <title>GWI Review: AI Tool | SiteOptz</title>
-        <meta name="description" content="gwi review. Compare GWI  features, pricing & alternatives. Expert analysis & user guide for 2025. Get started today!" />
+        <meta name="description" content="GWI Review 2025: Consumer insights platform for elevated marketing strategies. Personalized demo available for businesses. Compare pricing, features & alternatives." />
         <meta name="keywords" content="gwi review, gwi pricing, gwi features, gwi vs competitors, gwi alternatives" />
         <meta name="author" content="SiteOptz" />
         <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
@@ -140,7 +140,7 @@ export default function GwiReviewPage({ tool }: GwiReviewPageProps) {
         {/* Open Graph Meta Tags */}
         <meta property="og:type" content="article" />
         <meta property="og:title" content="GWI Review: AI Tool | SiteOptz" />
-        <meta property="og:description" content="gwi review. Compare GWI  features, pricing & alternatives. Expert analysis & user guide for 2025. Get started today!" />
+        <meta property="og:description" content="GWI Review 2025: Consumer insights platform for elevated marketing strategies. Personalized demo available for businesses. Compare pricing, features & alternatives." />
         <meta property="og:url" content="https://siteoptz.ai/reviews/gwi" />
         <meta property="og:site_name" content="SiteOptz" />
         <meta property="og:image" content="https://siteoptz.ai/og-image.png" />
@@ -151,7 +151,7 @@ export default function GwiReviewPage({ tool }: GwiReviewPageProps) {
         {/* Twitter Card Tags */}
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="GWI Review: AI Tool | SiteOptz" />
-        <meta name="twitter:description" content="gwi review. Compare GWI  features, pricing & alternatives. Expert analysis & user guide for 2025. Get started today!" />
+        <meta name="twitter:description" content="GWI Review 2025: Consumer insights platform for elevated marketing strategies. Personalized demo available for businesses. Compare pricing, features & alternatives." />
         <meta name="twitter:image" content="https://siteoptz.ai/og-image.png" />
         <meta name="twitter:creator" content="@siteoptz" />
         

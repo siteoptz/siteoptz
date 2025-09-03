@@ -129,7 +129,7 @@ export default function SproutSocialReviewPage({ tool }: SproutSocialReviewPageP
       <Head>
         {/* Primary SEO Tags */}
         <title>Sprout Social Review: Enterprise Social Media Management | SiteOptz</title>
-        <meta name="description" content="sprout social review. Compare Sprout Social  features, pricing & alternatives. Expert analysis & user guide for 2025. Get started today!" />
+        <meta name="description" content="Sprout Social Review 2025: Comprehensive social media management platform with analytics, scheduling, and team collaboration features. Advanced social listening tools. Compare pricing, features & alternatives." />
         <meta name="keywords" content="sprout social review, sprout social pricing, sprout social features, sprout social vs competitors, sprout social alternatives" />
         <meta name="author" content="SiteOptz" />
         <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />

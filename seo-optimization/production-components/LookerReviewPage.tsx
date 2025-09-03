@@ -129,7 +129,7 @@ export default function LookerReviewPage({ tool }: LookerReviewPageProps) {
       <Head>
         {/* Primary SEO Tags */}
         <title>Looker Review: Google Analytics Platform | SiteOptz</title>
-        <meta name="description" content="looker review. Compare Looker  features, pricing & alternatives. Expert analysis & user guide for 2025. Get started today!" />
+        <meta name="description" content="Looker Review 2025: Google's enterprise data platform with AI-powered analytics and business intelligence. Advanced data modeling capabilities. Compare pricing, features & alternatives." />
         <meta name="keywords" content="looker review, looker pricing, looker features, looker vs competitors, looker alternatives" />
         <meta name="author" content="SiteOptz" />
         <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />

@@ -129,7 +129,7 @@ export default function BlazeAiReviewPage({ tool }: BlazeAiReviewPageProps) {
       <Head>
         {/* Primary SEO Tags */}
         <title>Blaze AI Review: Content Creation Tool | SiteOptz</title>
-        <meta name="description" content="blaze ai review. Compare Blaze AI  features, pricing & alternatives. Expert analysis & user guide for 2025. Get started today!" />
+        <meta name="description" content="Blaze AI Review 2025: AI content creation platform for marketing teams. Free plan available. Compare pricing, features & alternatives." />
         <meta name="keywords" content="blaze ai review, blaze ai pricing, blaze ai features, blaze ai vs competitors, blaze ai alternatives" />
         <meta name="author" content="SiteOptz" />
         <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
@@ -140,7 +140,7 @@ export default function BlazeAiReviewPage({ tool }: BlazeAiReviewPageProps) {
         {/* Open Graph Meta Tags */}
         <meta property="og:type" content="article" />
         <meta property="og:title" content="Blaze AI Review: Content Creation Tool | SiteOptz" />
-        <meta property="og:description" content="blaze ai review. Compare Blaze AI  features, pricing & alternatives. Expert analysis & user guide for 2025. Get started today!" />
+        <meta property="og:description" content="Blaze AI Review 2025: AI content creation platform for marketing teams. Free plan available. Compare pricing, features & alternatives." />
         <meta property="og:url" content="https://siteoptz.ai/reviews/blaze-ai" />
         <meta property="og:site_name" content="SiteOptz" />
         <meta property="og:image" content="https://siteoptz.ai/og-image.png" />
@@ -151,7 +151,7 @@ export default function BlazeAiReviewPage({ tool }: BlazeAiReviewPageProps) {
         {/* Twitter Card Tags */}
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Blaze AI Review: Content Creation Tool | SiteOptz" />
-        <meta name="twitter:description" content="blaze ai review. Compare Blaze AI  features, pricing & alternatives. Expert analysis & user guide for 2025. Get started today!" />
+        <meta name="twitter:description" content="Blaze AI Review 2025: AI content creation platform for marketing teams. Free plan available. Compare pricing, features & alternatives." />
         <meta name="twitter:image" content="https://siteoptz.ai/og-image.png" />
         <meta name="twitter:creator" content="@siteoptz" />
         

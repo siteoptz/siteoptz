@@ -129,7 +129,7 @@ export default function N8nReviewPage({ tool }: N8nReviewPageProps) {
       <Head>
         {/* Primary SEO Tags */}
         <title>n8n Review: Workflow Automation Tool | SiteOptz</title>
-        <meta name="description" content="n8n review. Compare n8n  features, pricing & alternatives. Expert analysis & user guide for 2025. Get started today!" />
+        <meta name="description" content="n8n Review 2025: Fair-code workflow automation platform for connecting applications and automating business processes. Visual workflow designer interface. Compare pricing, features & alternatives." />
         <meta name="keywords" content="n8n review, n8n pricing, n8n features, n8n vs competitors, n8n alternatives" />
         <meta name="author" content="SiteOptz" />
         <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />

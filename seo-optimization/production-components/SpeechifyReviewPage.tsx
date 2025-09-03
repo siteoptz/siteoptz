@@ -129,7 +129,7 @@ export default function SpeechifyReviewPage({ tool }: SpeechifyReviewPageProps) 
       <Head>
         {/* Primary SEO Tags */}
         <title>Speechify Review: AI Text-to-Speech App | SiteOptz</title>
-        <meta name="description" content="speechify review. Compare Speechify  features, pricing & alternatives. Expert analysis & user guide for 2025. Get started today!" />
+        <meta name="description" content="Speechify Review 2025: AI-powered text-to-speech platform for converting written content to natural audio. Speed reading assistance features. Compare pricing, features & alternatives." />
         <meta name="keywords" content="speechify review, speechify pricing, speechify features, speechify vs competitors, speechify alternatives" />
         <meta name="author" content="SiteOptz" />
         <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />

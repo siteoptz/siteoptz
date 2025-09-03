@@ -129,7 +129,7 @@ export default function SudowriteReviewPage({ tool }: SudowriteReviewPageProps) 
       <Head>
         {/* Primary SEO Tags */}
         <title>Sudowrite Review: AI Fiction Writing Partner | SiteOptz</title>
-        <meta name="description" content="sudowrite review. Compare Sudowrite  features, pricing & alternatives. Expert analysis & user guide for 2025. Get started today!" />
+        <meta name="description" content="Sudowrite Review 2025: AI-powered creative writing assistant for fiction authors and storytellers. Advanced plot and character development tools. Compare pricing, features & alternatives." />
         <meta name="keywords" content="sudowrite review, sudowrite pricing, sudowrite features, sudowrite vs competitors, sudowrite alternatives" />
         <meta name="author" content="SiteOptz" />
         <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />

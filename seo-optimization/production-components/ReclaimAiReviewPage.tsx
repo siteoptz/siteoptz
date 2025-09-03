@@ -129,7 +129,7 @@ export default function ReclaimAiReviewPage({ tool }: ReclaimAiReviewPageProps) 
       <Head>
         {/* Primary SEO Tags */}
         <title>Reclaim.ai Review: AI Scheduling Tool | SiteOptz</title>
-        <meta name="description" content="reclaim.ai review. Compare Reclaim.ai  features, pricing & alternatives. Expert analysis & user guide for 2025. Get started today!" />
+        <meta name="description" content="Reclaim AI Review 2025: AI-powered time management platform for scheduling optimization and productivity tracking. Smart calendar automation features. Compare pricing, features & alternatives." />
         <meta name="keywords" content="reclaim.ai review, reclaim.ai pricing, reclaim.ai features, reclaim.ai vs competitors, reclaim.ai alternatives" />
         <meta name="author" content="SiteOptz" />
         <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />

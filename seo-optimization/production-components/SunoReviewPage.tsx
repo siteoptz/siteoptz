@@ -129,7 +129,7 @@ export default function SunoReviewPage({ tool }: SunoReviewPageProps) {
       <Head>
         {/* Primary SEO Tags */}
         <title>Suno Review: AI Music Generation Tool | SiteOptz</title>
-        <meta name="description" content="suno review. Compare Suno  features, pricing & alternatives. Expert analysis & user guide for 2025. Get started today!" />
+        <meta name="description" content="Suno Review 2025: AI-powered music generation platform for creating original songs and compositions from text prompts. Advanced audio synthesis technology. Compare pricing, features & alternatives." />
         <meta name="keywords" content="suno review, suno pricing, suno features, suno vs competitors, suno alternatives" />
         <meta name="author" content="SiteOptz" />
         <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />

@@ -129,7 +129,7 @@ export default function AhrefsAiReviewPage({ tool }: AhrefsAiReviewPageProps) {
       <Head>
         {/* Primary SEO Tags */}
         <title>Ahrefs AI Review: AI Tool | SiteOptz</title>
-        <meta name="description" content="ahrefs ai review. Compare Ahrefs AI  features, pricing & alternatives. Expert analysis & user guide for 2025. Get started today!" />
+        <meta name="description" content="Ahrefs Review 2025: Leading SEO toolkit with AI features. Keyword research, backlink analysis & competitive insights. Compare pricing & alternatives." />
         <meta name="keywords" content="ahrefs ai review, ahrefs ai pricing, ahrefs ai features, ahrefs ai vs competitors, ahrefs ai alternatives" />
         <meta name="author" content="SiteOptz" />
         <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
@@ -140,7 +140,7 @@ export default function AhrefsAiReviewPage({ tool }: AhrefsAiReviewPageProps) {
         {/* Open Graph Meta Tags */}
         <meta property="og:type" content="article" />
         <meta property="og:title" content="Ahrefs AI Review: AI Tool | SiteOptz" />
-        <meta property="og:description" content="ahrefs ai review. Compare Ahrefs AI  features, pricing & alternatives. Expert analysis & user guide for 2025. Get started today!" />
+        <meta property="og:description" content="Ahrefs Review 2025: Leading SEO toolkit with AI features. Keyword research, backlink analysis & competitive insights. Compare pricing & alternatives." />
         <meta property="og:url" content="https://siteoptz.ai/reviews/ahrefs-ai" />
         <meta property="og:site_name" content="SiteOptz" />
         <meta property="og:image" content="https://siteoptz.ai/og-image.png" />
@@ -151,7 +151,7 @@ export default function AhrefsAiReviewPage({ tool }: AhrefsAiReviewPageProps) {
         {/* Twitter Card Tags */}
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Ahrefs AI Review: AI Tool | SiteOptz" />
-        <meta name="twitter:description" content="ahrefs ai review. Compare Ahrefs AI  features, pricing & alternatives. Expert analysis & user guide for 2025. Get started today!" />
+        <meta name="twitter:description" content="Ahrefs Review 2025: Leading SEO toolkit with AI features. Keyword research, backlink analysis & competitive insights. Compare pricing & alternatives." />
         <meta name="twitter:image" content="https://siteoptz.ai/og-image.png" />
         <meta name="twitter:creator" content="@siteoptz" />
         

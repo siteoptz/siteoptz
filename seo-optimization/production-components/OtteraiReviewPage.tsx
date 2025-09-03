@@ -129,7 +129,7 @@ export default function OtteraiReviewPage({ tool }: OtteraiReviewPageProps) {
       <Head>
         {/* Primary SEO Tags */}
         <title>Otter.ai Review: Meeting Transcription | SiteOptz</title>
-        <meta name="description" content="otter.ai review. Compare Otter.ai  features, pricing & alternatives. Expert analysis & user guide for 2025. Get started today!" />
+        <meta name="description" content="Otter.ai Review 2025: AI-powered meeting transcription and note-taking platform with real-time collaboration features. Automated summary generation. Compare pricing, features & alternatives." />
         <meta name="keywords" content="otter.ai review, otter.ai pricing, otter.ai features, otter.ai vs competitors, otter.ai alternatives" />
         <meta name="author" content="SiteOptz" />
         <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />

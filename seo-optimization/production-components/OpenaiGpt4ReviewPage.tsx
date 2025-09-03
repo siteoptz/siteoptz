@@ -129,7 +129,7 @@ export default function OpenaiGpt4ReviewPage({ tool }: OpenaiGpt4ReviewPageProps
       <Head>
         {/* Primary SEO Tags */}
         <title>GPT-4 Review: Advanced Language Model | SiteOptz</title>
-        <meta name="description" content="gpt-4 review. Compare GPT-4  features, pricing & alternatives. Expert analysis & user guide for 2025. Get started today!" />
+        <meta name="description" content="OpenAI GPT-4 Review 2025: Advanced language model for text generation, code assistance, and complex reasoning tasks. Multimodal capabilities. Compare pricing, features & alternatives." />
         <meta name="keywords" content="gpt-4 review, gpt-4 pricing, gpt-4 features, gpt-4 vs competitors, gpt-4 alternatives" />
         <meta name="author" content="SiteOptz" />
         <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />

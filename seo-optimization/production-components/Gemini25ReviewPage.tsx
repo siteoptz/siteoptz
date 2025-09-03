@@ -129,7 +129,7 @@ export default function Gemini25ReviewPage({ tool }: Gemini25ReviewPageProps) {
       <Head>
         {/* Primary SEO Tags */}
         <title>Gemini 2.5 Review: Google's AI Assistant | SiteOptz</title>
-        <meta name="description" content="gemini 2.5 review. Compare Gemini 2.5  features, pricing & alternatives. Expert analysis & user guide for 2025. Get started today!" />
+        <meta name="description" content="Gemini 2.5 Review 2025: Advanced AI model for multimodal content generation and analysis. Next-generation AI capabilities. Compare pricing, features & alternatives." />
         <meta name="keywords" content="gemini 2.5 review, gemini 2.5 pricing, gemini 2.5 features, gemini 2.5 vs competitors, gemini 2.5 alternatives" />
         <meta name="author" content="SiteOptz" />
         <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
@@ -140,7 +140,7 @@ export default function Gemini25ReviewPage({ tool }: Gemini25ReviewPageProps) {
         {/* Open Graph Meta Tags */}
         <meta property="og:type" content="article" />
         <meta property="og:title" content="Gemini 2.5 Review: Google's AI Assistant | SiteOptz" />
-        <meta property="og:description" content="gemini 2.5 review. Compare Gemini 2.5  features, pricing & alternatives. Expert analysis & user guide for 2025. Get started today!" />
+        <meta property="og:description" content="Gemini 2.5 Review 2025: Advanced AI model for multimodal content generation and analysis. Next-generation AI capabilities. Compare pricing, features & alternatives." />
         <meta property="og:url" content="https://siteoptz.ai/reviews/gemini-25" />
         <meta property="og:site_name" content="SiteOptz" />
         <meta property="og:image" content="https://siteoptz.ai/og-image.png" />
@@ -151,7 +151,7 @@ export default function Gemini25ReviewPage({ tool }: Gemini25ReviewPageProps) {
         {/* Twitter Card Tags */}
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Gemini 2.5 Review: Google's AI Assistant | SiteOptz" />
-        <meta name="twitter:description" content="gemini 2.5 review. Compare Gemini 2.5  features, pricing & alternatives. Expert analysis & user guide for 2025. Get started today!" />
+        <meta name="twitter:description" content="Gemini 2.5 Review 2025: Advanced AI model for multimodal content generation and analysis. Next-generation AI capabilities. Compare pricing, features & alternatives." />
         <meta name="twitter:image" content="https://siteoptz.ai/og-image.png" />
         <meta name="twitter:creator" content="@siteoptz" />
         

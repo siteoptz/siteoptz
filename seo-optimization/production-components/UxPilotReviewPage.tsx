@@ -129,7 +129,7 @@ export default function UxPilotReviewPage({ tool }: UxPilotReviewPageProps) {
       <Head>
         {/* Primary SEO Tags */}
         <title>UX Pilot Review: AI-Powered UX Design Assistant | SiteOptz</title>
-        <meta name="description" content="ux pilot review. Compare UX Pilot  features, pricing & alternatives. Expert analysis & user guide for 2025. Get started today!" />
+        <meta name="description" content="UX Pilot Review 2025: AI-powered UX design and user experience optimization platform with automated testing capabilities. Advanced design analysis tools. Compare pricing, features & alternatives." />
         <meta name="keywords" content="ux pilot review, ux pilot pricing, ux pilot features, ux pilot vs competitors, ux pilot alternatives" />
         <meta name="author" content="SiteOptz" />
         <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />

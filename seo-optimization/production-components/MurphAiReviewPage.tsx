@@ -129,7 +129,7 @@ export default function MurphAiReviewPage({ tool }: MurphAiReviewPageProps) {
       <Head>
         {/* Primary SEO Tags */}
         <title>Murph AI Review: Professional Voice Platform | SiteOptz</title>
-        <meta name="description" content="murph ai review. Compare Murph AI  features, pricing & alternatives. Expert analysis & user guide for 2025. Get started today!" />
+        <meta name="description" content="Murph AI Review 2025: AI-powered voice generation platform for creating realistic voiceovers and audio content. Natural speech synthesis technology. Compare pricing, features & alternatives." />
         <meta name="keywords" content="murph ai review, murph ai pricing, murph ai features, murph ai vs competitors, murph ai alternatives" />
         <meta name="author" content="SiteOptz" />
         <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />

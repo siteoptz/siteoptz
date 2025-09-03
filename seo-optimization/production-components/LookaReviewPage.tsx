@@ -129,7 +129,7 @@ export default function LookaReviewPage({ tool }: LookaReviewPageProps) {
       <Head>
         {/* Primary SEO Tags */}
         <title>Looka Review: AI Logo Design Platform | SiteOptz</title>
-        <meta name="description" content="looka review. Compare Looka  features, pricing & alternatives. Expert analysis & user guide for 2025. Get started today!" />
+        <meta name="description" content="Looka Review 2025: AI-powered logo design platform for creating professional brand identities. Intuitive design tools with brand kit templates. Compare pricing, features & alternatives." />
         <meta name="keywords" content="looka review, looka pricing, looka features, looka vs competitors, looka alternatives" />
         <meta name="author" content="SiteOptz" />
         <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />

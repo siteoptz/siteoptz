@@ -129,7 +129,7 @@ export default function Lumen5ReviewPage({ tool }: Lumen5ReviewPageProps) {
       <Head>
         {/* Primary SEO Tags */}
         <title>Lumen5 Review: AI Video Creation Platform | SiteOptz</title>
-        <meta name="description" content="lumen5 review. Compare Lumen5  features, pricing & alternatives. Expert analysis & user guide for 2025. Get started today!" />
+        <meta name="description" content="Lumen5 Review 2025: AI-powered video creation platform that transforms blog posts and articles into engaging video content. Automated editing features. Compare pricing, features & alternatives." />
         <meta name="keywords" content="lumen5 review, lumen5 pricing, lumen5 features, lumen5 vs competitors, lumen5 alternatives" />
         <meta name="author" content="SiteOptz" />
         <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />

@@ -129,7 +129,7 @@ export default function LovableReviewPage({ tool }: LovableReviewPageProps) {
       <Head>
         {/* Primary SEO Tags */}
         <title>Lovable Review: AI App Builder | SiteOptz</title>
-        <meta name="description" content="lovable review. Compare Lovable  features, pricing & alternatives. Expert analysis & user guide for 2025. Get started today!" />
+        <meta name="description" content="Lovable Review 2025: AI-powered web development platform for building applications with intelligent coding assistance. Rapid prototyping capabilities. Compare pricing, features & alternatives." />
         <meta name="keywords" content="lovable review, lovable pricing, lovable features, lovable vs competitors, lovable alternatives" />
         <meta name="author" content="SiteOptz" />
         <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />

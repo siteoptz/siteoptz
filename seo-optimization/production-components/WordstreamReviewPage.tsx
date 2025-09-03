@@ -129,7 +129,7 @@ export default function WordstreamReviewPage({ tool }: WordstreamReviewPageProps
       <Head>
         {/* Primary SEO Tags */}
         <title>Wordstream Review: AI-Powered Online Advertising | SiteOptz</title>
-        <meta name="description" content="wordstream review. Compare Wordstream  features, pricing & alternatives. Expert analysis & user guide for 2025. Get started today!" />
+        <meta name="description" content="WordStream Review 2025: PPC management and advertising optimization platform for Google Ads and Microsoft Ads campaigns. Automated bid management features. Compare pricing, features & alternatives." />
         <meta name="keywords" content="wordstream review, wordstream pricing, wordstream features, wordstream vs competitors, wordstream alternatives" />
         <meta name="author" content="SiteOptz" />
         <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />

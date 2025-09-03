@@ -129,7 +129,7 @@ export default function ManusReviewPage({ tool }: ManusReviewPageProps) {
       <Head>
         {/* Primary SEO Tags */}
         <title>Manus Review: AI Automation Platform | SiteOptz</title>
-        <meta name="description" content="manus review. Compare Manus  features, pricing & alternatives. Expert analysis & user guide for 2025. Get started today!" />
+        <meta name="description" content="Manus Review 2025: Professional motion capture gloves for VR/AR applications and animation projects. High-precision finger tracking technology. Compare pricing, features & alternatives." />
         <meta name="keywords" content="manus review, manus pricing, manus features, manus vs competitors, manus alternatives" />
         <meta name="author" content="SiteOptz" />
         <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />

@@ -129,7 +129,7 @@ export default function MozProReviewPage({ tool }: MozProReviewPageProps) {
       <Head>
         {/* Primary SEO Tags */}
         <title>Moz Pro Review: SEO Tools Platform | SiteOptz</title>
-        <meta name="description" content="moz pro review. Compare Moz Pro  features, pricing & alternatives. Expert analysis & user guide for 2025. Get started today!" />
+        <meta name="description" content="Moz Pro Review 2025: Comprehensive SEO toolset for keyword research, site audits, and rank tracking. Advanced competitive analysis features. Compare pricing, features & alternatives." />
         <meta name="keywords" content="moz pro review, moz pro pricing, moz pro features, moz pro vs competitors, moz pro alternatives" />
         <meta name="author" content="SiteOptz" />
         <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />

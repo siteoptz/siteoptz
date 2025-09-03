@@ -129,7 +129,7 @@ export default function HubspotEmailMarketingToolsReviewPage({ tool }: HubspotEm
       <Head>
         {/* Primary SEO Tags */}
         <title>HubSpot Email Marketing Tools Review: Email Suite | SiteOptz</title>
-        <meta name="description" content="HubSpot Email Marketing Tools review: features, pricing, pros & cons. Expert analysis & comparison guide. Start free today!" />
+        <meta name="description" content="HubSpot Email Marketing Tools Review 2025: Free email marketing with AI-generated content and customizable templates. No designers needed. Compare pricing, features & alternatives." />
         <meta name="keywords" content="hubspot email marketing tools review, hubspot email marketing tools pricing, hubspot email marketing tools features, hubspot email marketing tools vs competitors, hubspot email marketing tools alternatives" />
         <meta name="author" content="SiteOptz" />
         <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
@@ -140,7 +140,7 @@ export default function HubspotEmailMarketingToolsReviewPage({ tool }: HubspotEm
         {/* Open Graph Meta Tags */}
         <meta property="og:type" content="article" />
         <meta property="og:title" content="HubSpot Email Marketing Tools Review: Email Suite | SiteOptz" />
-        <meta property="og:description" content="HubSpot Email Marketing Tools review: features, pricing, pros & cons. Expert analysis & comparison guide. Start free today!" />
+        <meta property="og:description" content="HubSpot Email Marketing Tools Review 2025: Free email marketing with AI-generated content and customizable templates. No designers needed. Compare pricing, features & alternatives." />
         <meta property="og:url" content="https://siteoptz.ai/reviews/hubspot-email-marketing-tools" />
         <meta property="og:site_name" content="SiteOptz" />
         <meta property="og:image" content="https://siteoptz.ai/og-image.png" />
@@ -151,7 +151,7 @@ export default function HubspotEmailMarketingToolsReviewPage({ tool }: HubspotEm
         {/* Twitter Card Tags */}
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="HubSpot Email Marketing Tools Review: Email Suite | SiteOptz" />
-        <meta name="twitter:description" content="HubSpot Email Marketing Tools review: features, pricing, pros & cons. Expert analysis & comparison guide. Start free today!" />
+        <meta name="twitter:description" content="HubSpot Email Marketing Tools Review 2025: Free email marketing with AI-generated content and customizable templates. No designers needed. Compare pricing, features & alternatives." />
         <meta name="twitter:image" content="https://siteoptz.ai/og-image.png" />
         <meta name="twitter:creator" content="@siteoptz" />
         

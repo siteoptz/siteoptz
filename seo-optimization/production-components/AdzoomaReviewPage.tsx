@@ -129,7 +129,7 @@ export default function AdzoomaReviewPage({ tool }: AdzoomaReviewPageProps) {
       <Head>
         {/* Primary SEO Tags */}
         <title>Adzooma Review: AI Tool | SiteOptz</title>
-        <meta name="description" content="adzooma review. Compare Adzooma  features, pricing & alternatives. Expert analysis & user guide for 2025. Get started today!" />
+        <meta name="description" content="Adzooma Review 2025: Free PPC management platform for Google Ads, Facebook & Microsoft Ads. AI-powered optimization and automated reporting. Compare features." />
         <meta name="keywords" content="adzooma review, adzooma pricing, adzooma features, adzooma vs competitors, adzooma alternatives" />
         <meta name="author" content="SiteOptz" />
         <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
@@ -140,7 +140,7 @@ export default function AdzoomaReviewPage({ tool }: AdzoomaReviewPageProps) {
         {/* Open Graph Meta Tags */}
         <meta property="og:type" content="article" />
         <meta property="og:title" content="Adzooma Review: AI Tool | SiteOptz" />
-        <meta property="og:description" content="adzooma review. Compare Adzooma  features, pricing & alternatives. Expert analysis & user guide for 2025. Get started today!" />
+        <meta property="og:description" content="Adzooma Review 2025: Free PPC management platform for Google Ads, Facebook & Microsoft Ads. AI-powered optimization and automated reporting. Compare features." />
         <meta property="og:url" content="https://siteoptz.ai/reviews/adzooma" />
         <meta property="og:site_name" content="SiteOptz" />
         <meta property="og:image" content="https://siteoptz.ai/og-image.png" />
@@ -151,7 +151,7 @@ export default function AdzoomaReviewPage({ tool }: AdzoomaReviewPageProps) {
         {/* Twitter Card Tags */}
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Adzooma Review: AI Tool | SiteOptz" />
-        <meta name="twitter:description" content="adzooma review. Compare Adzooma  features, pricing & alternatives. Expert analysis & user guide for 2025. Get started today!" />
+        <meta name="twitter:description" content="Adzooma Review 2025: Free PPC management platform for Google Ads, Facebook & Microsoft Ads. AI-powered optimization and automated reporting. Compare features." />
         <meta name="twitter:image" content="https://siteoptz.ai/og-image.png" />
         <meta name="twitter:creator" content="@siteoptz" />
         

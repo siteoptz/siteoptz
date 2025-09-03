@@ -129,7 +129,7 @@ export default function PlayHtReviewPage({ tool }: PlayHtReviewPageProps) {
       <Head>
         {/* Primary SEO Tags */}
         <title>Play.ht Review: AI Text-to-Speech | SiteOptz</title>
-        <meta name="description" content="play.ht review. Compare Play.ht  features, pricing & alternatives. Expert analysis & user guide for 2025. Get started today!" />
+        <meta name="description" content="Play.ht Review 2025: AI-powered text-to-speech platform for creating realistic voiceovers and audio content. Multiple voice options available. Compare pricing, features & alternatives." />
         <meta name="keywords" content="play.ht review, play.ht pricing, play.ht features, play.ht vs competitors, play.ht alternatives" />
         <meta name="author" content="SiteOptz" />
         <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />

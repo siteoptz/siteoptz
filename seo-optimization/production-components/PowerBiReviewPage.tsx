@@ -129,7 +129,7 @@ export default function PowerBiReviewPage({ tool }: PowerBiReviewPageProps) {
       <Head>
         {/* Primary SEO Tags */}
         <title>Power BI Review: Microsoft BI Platform | SiteOptz</title>
-        <meta name="description" content="power bi review. Compare Power BI  features, pricing & alternatives. Expert analysis & user guide for 2025. Get started today!" />
+        <meta name="description" content="Power BI Review 2025: Microsoft's business intelligence platform for data visualization and analytics dashboards. Advanced reporting capabilities. Compare pricing, features & alternatives." />
         <meta name="keywords" content="power bi review, power bi pricing, power bi features, power bi vs competitors, power bi alternatives" />
         <meta name="author" content="SiteOptz" />
         <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />

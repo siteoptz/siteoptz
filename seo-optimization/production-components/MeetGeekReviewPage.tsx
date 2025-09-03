@@ -129,7 +129,7 @@ export default function MeetGeekReviewPage({ tool }: MeetGeekReviewPageProps) {
       <Head>
         {/* Primary SEO Tags */}
         <title>Meet Geek Review: Meeting Assistant Tool | SiteOptz</title>
-        <meta name="description" content="meet geek review. Compare Meet Geek  features, pricing & alternatives. Expert analysis & user guide for 2025. Get started today!" />
+        <meta name="description" content="MeetGeek Review 2025: AI-powered meeting assistant for automatic recording, transcription, and meeting insights. Smart summary generation features. Compare pricing, features & alternatives." />
         <meta name="keywords" content="meet geek review, meet geek pricing, meet geek features, meet geek vs competitors, meet geek alternatives" />
         <meta name="author" content="SiteOptz" />
         <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
