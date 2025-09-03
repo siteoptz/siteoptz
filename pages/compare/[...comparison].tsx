@@ -462,31 +462,38 @@ export const getStaticPaths: GetStaticPaths = async () => {
     const paths: { params: { comparison: string[] } }[] = [];
     const slugArray = Array.from(toolSlugs.values());
     
-    // Only generate top 5 most popular comparison pages to reduce build size
-    const popularComparisons = [
-      ['chatgpt', 'claude'],
-      ['chatgpt', 'jasper-ai'],
-      ['claude', 'copy-ai'],
-      ['midjourney', 'dall-e'],
-      ['grammarly', 'jasper-ai']
+    // Generate comparison pages for popular tools with all others
+    // This ensures scite-ai/vs/chatgpt and similar comparisons work
+    const popularTools = ['chatgpt', 'claude', 'gemini', 'jasper-ai', 'copy-ai'];
+    
+    // Generate comparisons for popular tools with select other tools (not all)
+    // This includes scite-ai/vs/chatgpt but keeps the total reasonable
+    const importantTools = [
+      ...popularTools,
+      'midjourney', 'dall-e', 'grammarly', 'writesonic', 'perplexity-ai',
+      'scite-ai', 'anthropic-claude', 'openai-gpt4', 'huggingface-transformers',
+      'stable-diffusion', 'leonardo-ai', 'runway-ml', 'elevenlabs', 'synthesia',
+      'heygen', 'd-id', 'murf-ai', 'play-ht', 'descript', 'notion-ai'
     ];
     
-    popularComparisons.forEach(([slug1, slug2]) => {
-      if (slug1 && slug2) {
-          
-          // Add both orderings for each pair with catch-all format
+    // Only generate comparisons between popular tools and important tools
+    popularTools.forEach((popularSlug) => {
+      importantTools.forEach((otherSlug) => {
+        if (popularSlug !== otherSlug) {
+          // Add both orderings
           paths.push({
             params: { 
-              comparison: [slug1, 'vs', slug2]
+              comparison: [popularSlug, 'vs', otherSlug]
             }
           });
           
           paths.push({
             params: { 
-              comparison: [slug2, 'vs', slug1]
+              comparison: [otherSlug, 'vs', popularSlug]
             }
           });
         }
+      });
     });
 
     console.log(`Generated ${paths.length} comparison paths`);
