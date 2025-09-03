@@ -142,6 +142,139 @@ const nextConfig = {
         destination: '/compare',
         permanent: true,
       },
+      
+      // Legacy/invalid URL redirects
+      {
+        source: '/sample-page',
+        destination: '/tools',
+        permanent: true,
+      },
+      {
+        source: '/sample-page/',
+        destination: '/tools',
+        permanent: true,
+      },
+      {
+        source: '/feed',
+        destination: '/',
+        permanent: true,
+      },
+      {
+        source: '/feed/',
+        destination: '/',
+        permanent: true,
+      },
+      {
+        source: '/category/:path*',
+        destination: '/categories/:path*',
+        permanent: true,
+      },
+      {
+        source: '/author/:path*',
+        destination: '/about',
+        permanent: true,
+      },
+      {
+        source: '/:year(\\d{4})/:month(\\d{2})/:day(\\d{2})/:path*',
+        destination: '/blog',
+        permanent: true,
+      },
+      
+      // Fix comparison URL formats (claude-vs-gemini → claude/vs/gemini)
+      {
+        source: '/compare/claude-vs-gemini',
+        destination: '/compare/claude/vs/gemini',
+        permanent: true,
+      },
+      {
+        source: '/compare/chatgpt-vs-claude',
+        destination: '/compare/chatgpt/vs/claude',
+        permanent: true,
+      },
+      {
+        source: '/compare/chatgpt-vs-gemini',
+        destination: '/compare/chatgpt/vs/gemini',
+        permanent: true,
+      },
+      {
+        source: '/compare/jasper-ai-vs-copy-ai',
+        destination: '/compare/jasper-ai/vs/copy-ai',
+        permanent: true,
+      },
+      {
+        source: '/compare/:tool1-vs-:tool2',
+        destination: '/compare/:tool1/vs/:tool2',
+        permanent: true,
+      },
+      
+      // Tool name variations
+      {
+        source: '/tools/hugging-face',
+        destination: '/tools/huggingface-transformers',
+        permanent: true,
+      },
+      {
+        source: '/tools/leonardo.ai',
+        destination: '/tools/leonardo-ai',
+        permanent: true,
+      },
+      {
+        source: '/tools/perplexity',
+        destination: '/tools/perplexity-ai',
+        permanent: true,
+      },
+      {
+        source: '/tools/cohere',
+        destination: '/tools/cohere-ai',
+        permanent: true,
+      },
+      {
+        source: '/tools/adcreative.ai',
+        destination: '/tools/adcreative-ai',
+        permanent: true,
+      },
+      {
+        source: '/tools/reclaim.ai',
+        destination: '/tools/reclaim-ai',
+        permanent: true,
+      },
+      {
+        source: '/tools/character.ai',
+        destination: '/tools/anthropic-claude',
+        permanent: true,
+      },
+      {
+        source: '/tools/stable-diffusion-web',
+        destination: '/tools/stable-diffusion',
+        permanent: true,
+      },
+      {
+        source: '/tools/gpt-4',
+        destination: '/tools/openai-gpt4',
+        permanent: true,
+      },
+      {
+        source: '/tools/replicate',
+        destination: '/tools/replicate-ai',
+        permanent: true,
+      },
+      {
+        source: '/tools/play.ht',
+        destination: '/tools/play-ht',
+        permanent: true,
+      },
+      {
+        source: '/tools/copy.ai',
+        destination: '/tools/copy-ai',
+        permanent: true,
+      },
+      
+      // Invalid paths redirects
+      {
+        source: '/comparisons',
+        destination: '/compare',
+        permanent: true,
+      },
     ];
   },
   
