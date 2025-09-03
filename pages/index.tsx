@@ -11,6 +11,7 @@ import { Search, Star, TrendingUp, Zap, ArrowRight, CheckCircle, Sparkles, Brain
 import ExternalLink from '../components/ExternalLink';
 import { authoritativeLinks } from '../utils/externalLinks';
 import FAQSection from '../components/FAQ/FAQSection';
+import HeroSection from '../components/HeroSection';
 
 interface Tool {
   id: string;
@@ -76,7 +77,6 @@ export default function HomePage({ featuredTools, popularComparisons, faqs }: Ho
       <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-black relative overflow-hidden">
         {/* Animated Background Elements */}
         <div className="absolute inset-0 pointer-events-none">
-          
           <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-64 h-64 bg-cyan-500/10 rounded-full blur-3xl animate-pulse delay-500"></div>
         </div>
 
@@ -84,89 +84,7 @@ export default function HomePage({ featuredTools, popularComparisons, faqs }: Ho
         <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.02)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.02)_1px,transparent_1px)] bg-[size:100px_100px] pointer-events-none"></div>
 
         {/* Hero Section */}
-        <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
-            <div className="text-center relative z-10">
-              {/* Badge */}
-              <div className="inline-flex items-center gap-2 px-4 py-2 bg-white/10 backdrop-blur-md border border-white/20 rounded-full text-white/90 text-sm font-medium mb-8 hover:bg-white/15 transition-all duration-300">
-                <Sparkles className="w-4 h-4 text-cyan-400" />
-                Trusted by Fortune 500 Companies
-                <div className="w-2 h-2 bg-cyan-400 rounded-full animate-pulse"></div>
-              </div>
-
-              {/* Main Heading */}
-              <h1 className="text-6xl lg:text-8xl xl:text-9xl font-bold mb-8 leading-tight">
-                <span className="block text-white mb-4">The Future of</span>
-                <span className="block text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-blue-400 to-purple-400 animate-gradient">
-                  Business Growth
-                </span>
-                <span className="block text-white mt-4">is AI-Powered</span>
-              </h1>
-
-              {/* Subtitle */}
-              <h2 className="text-xl lg:text-3xl text-gray-300 max-w-5xl mx-auto mb-12 leading-relaxed font-light">
-                SiteOptz helps you leverage cutting-edge AI to streamline operations, 
-                convert more customers, and achieve exponential growth.
-              </h2>
-
-
-              {/* Primary CTA */}
-              <div className="mb-8">
-                <Link 
-                  href="/tools"
-                  className="group inline-flex items-center gap-3 px-12 py-6 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-bold text-xl rounded-2xl hover:from-cyan-400 hover:to-blue-500 transition-all duration-300 shadow-2xl hover:shadow-cyan-500/25 transform hover:scale-105"
-                >
-                  <Rocket className="w-6 h-6 group-hover:animate-bounce" />
-                  Start Scaling with AI Today
-                  <ArrowRight className="w-6 h-6 group-hover:translate-x-1 transition-transform" />
-                </Link>
-              </div>
-
-              {/* Secondary Action */}
-              <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-                <Link 
-                  href="/pricing"
-                  className="inline-flex items-center gap-2 px-8 py-4 bg-white/10 backdrop-blur-md border border-white/20 text-white font-semibold rounded-xl hover:bg-white/15 transition-all duration-300"
-                >
-                  <BarChart3 className="w-5 h-5" />
-                  AI Cost Calculator
-                </Link>
-                <span className="text-gray-400 font-medium">or</span>
-                <Link 
-                  href="/compare"
-                  className="inline-flex items-center gap-2 text-cyan-400 hover:text-cyan-300 font-semibold transition-colors"
-                >
-                  Compare AI Solutions
-                  <ArrowRight className="w-4 h-4" />
-                </Link>
-              </div>
-
-              {/* Stats Row */}
-              <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mt-16 max-w-4xl mx-auto">
-                <div className="text-center">
-                  <div className="text-3xl lg:text-4xl font-bold text-white mb-2">500+</div>
-                  <div className="text-gray-400 text-sm">Enterprise Clients</div>
-                </div>
-                <div className="text-center">
-                  <div className="text-3xl lg:text-4xl font-bold text-cyan-400 mb-2">10x</div>
-                  <div className="text-gray-400 text-sm">Average ROI</div>
-                </div>
-                <div className="text-center">
-                  <div className="text-3xl lg:text-4xl font-bold text-blue-400 mb-2">98%</div>
-                  <div className="text-gray-400 text-sm">Success Rate</div>
-                </div>
-                <div className="text-center">
-                  <div className="text-3xl lg:text-4xl font-bold text-purple-400 mb-2">24/7</div>
-                  <div className="text-gray-400 text-sm">AI Support</div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          {/* Floating Elements */}
-          
-          <div className="absolute top-1/2 right-20 w-12 h-12 bg-gradient-to-br from-blue-400 to-cyan-400 rounded-xl opacity-20 animate-float delay-500 pointer-events-none"></div>
-        </section>
+        <HeroSection />
 
 
         {/* Top-Rated AI Tools */}
