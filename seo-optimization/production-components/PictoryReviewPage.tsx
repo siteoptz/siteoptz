@@ -128,7 +128,7 @@ export default function PictoryReviewPage({ tool }: PictoryReviewPageProps) {
     <>
       <Head>
         {/* Primary SEO Tags */}
-        <title>Pictory Review:  | SiteOptz</title>
+        <title>Pictory Review: AI Video Creation Tool | SiteOptz</title>
         <meta name="description" content="pictory review. Compare Pictory  features, pricing & alternatives. Expert analysis & user guide for 2025. Get started today!" />
         <meta name="keywords" content="pictory review, pictory pricing, pictory features, pictory vs competitors, pictory alternatives" />
         <meta name="author" content="SiteOptz" />
@@ -139,7 +139,7 @@ export default function PictoryReviewPage({ tool }: PictoryReviewPageProps) {
         
         {/* Open Graph Meta Tags */}
         <meta property="og:type" content="article" />
-        <meta property="og:title" content="Pictory Review:  | SiteOptz" />
+        <meta property="og:title" content="Pictory Review: AI Video Creation Tool | SiteOptz" />
         <meta property="og:description" content="pictory review. Compare Pictory  features, pricing & alternatives. Expert analysis & user guide for 2025. Get started today!" />
         <meta property="og:url" content="https://siteoptz.ai/reviews/pictory" />
         <meta property="og:site_name" content="SiteOptz" />
@@ -150,7 +150,7 @@ export default function PictoryReviewPage({ tool }: PictoryReviewPageProps) {
         
         {/* Twitter Card Tags */}
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Pictory Review:  | SiteOptz" />
+        <meta name="twitter:title" content="Pictory Review: AI Video Creation Tool | SiteOptz" />
         <meta name="twitter:description" content="pictory review. Compare Pictory  features, pricing & alternatives. Expert analysis & user guide for 2025. Get started today!" />
         <meta name="twitter:image" content="https://siteoptz.ai/og-image.png" />
         <meta name="twitter:creator" content="@siteoptz" />

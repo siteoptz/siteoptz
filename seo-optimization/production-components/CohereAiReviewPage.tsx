@@ -128,7 +128,7 @@ export default function CohereAiReviewPage({ tool }: CohereAiReviewPageProps) {
     <>
       <Head>
         {/* Primary SEO Tags */}
-        <title>Cohere Review:  | SiteOptz</title>
+        <title>Cohere Review: AI Tool | SiteOptz</title>
         <meta name="description" content="cohere review. Compare Cohere  features, pricing & alternatives. Expert analysis & user guide for 2025. Get started today!" />
         <meta name="keywords" content="cohere review, cohere pricing, cohere features, cohere vs competitors, cohere alternatives" />
         <meta name="author" content="SiteOptz" />
@@ -139,7 +139,7 @@ export default function CohereAiReviewPage({ tool }: CohereAiReviewPageProps) {
         
         {/* Open Graph Meta Tags */}
         <meta property="og:type" content="article" />
-        <meta property="og:title" content="Cohere Review:  | SiteOptz" />
+        <meta property="og:title" content="Cohere Review: AI Tool | SiteOptz" />
         <meta property="og:description" content="cohere review. Compare Cohere  features, pricing & alternatives. Expert analysis & user guide for 2025. Get started today!" />
         <meta property="og:url" content="https://siteoptz.ai/reviews/cohere-ai" />
         <meta property="og:site_name" content="SiteOptz" />
@@ -150,7 +150,7 @@ export default function CohereAiReviewPage({ tool }: CohereAiReviewPageProps) {
         
         {/* Twitter Card Tags */}
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Cohere Review:  | SiteOptz" />
+        <meta name="twitter:title" content="Cohere Review: AI Tool | SiteOptz" />
         <meta name="twitter:description" content="cohere review. Compare Cohere  features, pricing & alternatives. Expert analysis & user guide for 2025. Get started today!" />
         <meta name="twitter:image" content="https://siteoptz.ai/og-image.png" />
         <meta name="twitter:creator" content="@siteoptz" />

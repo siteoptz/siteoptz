@@ -128,7 +128,7 @@ export default function CursorReviewPage({ tool }: CursorReviewPageProps) {
     <>
       <Head>
         {/* Primary SEO Tags */}
-        <title>Cursor Review:  | SiteOptz</title>
+        <title>Cursor Review: AI-First Code Editor | SiteOptz</title>
         <meta name="description" content="cursor review. Compare Cursor  features, pricing & alternatives. Expert analysis & user guide for 2025. Get started today!" />
         <meta name="keywords" content="cursor review, cursor pricing, cursor features, cursor vs competitors, cursor alternatives" />
         <meta name="author" content="SiteOptz" />
@@ -139,7 +139,7 @@ export default function CursorReviewPage({ tool }: CursorReviewPageProps) {
         
         {/* Open Graph Meta Tags */}
         <meta property="og:type" content="article" />
-        <meta property="og:title" content="Cursor Review:  | SiteOptz" />
+        <meta property="og:title" content="Cursor Review: AI-First Code Editor | SiteOptz" />
         <meta property="og:description" content="cursor review. Compare Cursor  features, pricing & alternatives. Expert analysis & user guide for 2025. Get started today!" />
         <meta property="og:url" content="https://siteoptz.ai/reviews/cursor" />
         <meta property="og:site_name" content="SiteOptz" />
@@ -150,7 +150,7 @@ export default function CursorReviewPage({ tool }: CursorReviewPageProps) {
         
         {/* Twitter Card Tags */}
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Cursor Review:  | SiteOptz" />
+        <meta name="twitter:title" content="Cursor Review: AI-First Code Editor | SiteOptz" />
         <meta name="twitter:description" content="cursor review. Compare Cursor  features, pricing & alternatives. Expert analysis & user guide for 2025. Get started today!" />
         <meta name="twitter:image" content="https://siteoptz.ai/og-image.png" />
         <meta name="twitter:creator" content="@siteoptz" />

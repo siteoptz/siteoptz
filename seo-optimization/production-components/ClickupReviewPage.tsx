@@ -128,7 +128,7 @@ export default function ClickupReviewPage({ tool }: ClickupReviewPageProps) {
     <>
       <Head>
         {/* Primary SEO Tags */}
-        <title>ClickUp Review:  | SiteOptz</title>
+        <title>ClickUp Review: Project Management Tool | SiteOptz</title>
         <meta name="description" content="clickup review. Compare ClickUp  features, pricing & alternatives. Expert analysis & user guide for 2025. Get started today!" />
         <meta name="keywords" content="clickup review, clickup pricing, clickup features, clickup vs competitors, clickup alternatives" />
         <meta name="author" content="SiteOptz" />
@@ -139,7 +139,7 @@ export default function ClickupReviewPage({ tool }: ClickupReviewPageProps) {
         
         {/* Open Graph Meta Tags */}
         <meta property="og:type" content="article" />
-        <meta property="og:title" content="ClickUp Review:  | SiteOptz" />
+        <meta property="og:title" content="ClickUp Review: Project Management Tool | SiteOptz" />
         <meta property="og:description" content="clickup review. Compare ClickUp  features, pricing & alternatives. Expert analysis & user guide for 2025. Get started today!" />
         <meta property="og:url" content="https://siteoptz.ai/reviews/clickup" />
         <meta property="og:site_name" content="SiteOptz" />
@@ -150,7 +150,7 @@ export default function ClickupReviewPage({ tool }: ClickupReviewPageProps) {
         
         {/* Twitter Card Tags */}
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="ClickUp Review:  | SiteOptz" />
+        <meta name="twitter:title" content="ClickUp Review: Project Management Tool | SiteOptz" />
         <meta name="twitter:description" content="clickup review. Compare ClickUp  features, pricing & alternatives. Expert analysis & user guide for 2025. Get started today!" />
         <meta name="twitter:image" content="https://siteoptz.ai/og-image.png" />
         <meta name="twitter:creator" content="@siteoptz" />

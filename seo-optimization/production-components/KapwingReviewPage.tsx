@@ -128,7 +128,7 @@ export default function KapwingReviewPage({ tool }: KapwingReviewPageProps) {
     <>
       <Head>
         {/* Primary SEO Tags */}
-        <title>Kapwing Review:  | SiteOptz</title>
+        <title>Kapwing Review: Online Video Editor | SiteOptz</title>
         <meta name="description" content="kapwing review. Compare Kapwing  features, pricing & alternatives. Expert analysis & user guide for 2025. Get started today!" />
         <meta name="keywords" content="kapwing review, kapwing pricing, kapwing features, kapwing vs competitors, kapwing alternatives" />
         <meta name="author" content="SiteOptz" />
@@ -139,7 +139,7 @@ export default function KapwingReviewPage({ tool }: KapwingReviewPageProps) {
         
         {/* Open Graph Meta Tags */}
         <meta property="og:type" content="article" />
-        <meta property="og:title" content="Kapwing Review:  | SiteOptz" />
+        <meta property="og:title" content="Kapwing Review: Online Video Editor | SiteOptz" />
         <meta property="og:description" content="kapwing review. Compare Kapwing  features, pricing & alternatives. Expert analysis & user guide for 2025. Get started today!" />
         <meta property="og:url" content="https://siteoptz.ai/reviews/kapwing" />
         <meta property="og:site_name" content="SiteOptz" />
@@ -150,7 +150,7 @@ export default function KapwingReviewPage({ tool }: KapwingReviewPageProps) {
         
         {/* Twitter Card Tags */}
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Kapwing Review:  | SiteOptz" />
+        <meta name="twitter:title" content="Kapwing Review: Online Video Editor | SiteOptz" />
         <meta name="twitter:description" content="kapwing review. Compare Kapwing  features, pricing & alternatives. Expert analysis & user guide for 2025. Get started today!" />
         <meta name="twitter:image" content="https://siteoptz.ai/og-image.png" />
         <meta name="twitter:creator" content="@siteoptz" />

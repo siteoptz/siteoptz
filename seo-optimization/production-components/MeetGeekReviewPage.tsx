@@ -128,7 +128,7 @@ export default function MeetGeekReviewPage({ tool }: MeetGeekReviewPageProps) {
     <>
       <Head>
         {/* Primary SEO Tags */}
-        <title>Meet Geek Review:  | SiteOptz</title>
+        <title>Meet Geek Review: Meeting Assistant Tool | SiteOptz</title>
         <meta name="description" content="meet geek review. Compare Meet Geek  features, pricing & alternatives. Expert analysis & user guide for 2025. Get started today!" />
         <meta name="keywords" content="meet geek review, meet geek pricing, meet geek features, meet geek vs competitors, meet geek alternatives" />
         <meta name="author" content="SiteOptz" />
@@ -139,7 +139,7 @@ export default function MeetGeekReviewPage({ tool }: MeetGeekReviewPageProps) {
         
         {/* Open Graph Meta Tags */}
         <meta property="og:type" content="article" />
-        <meta property="og:title" content="Meet Geek Review:  | SiteOptz" />
+        <meta property="og:title" content="Meet Geek Review: Meeting Assistant Tool | SiteOptz" />
         <meta property="og:description" content="meet geek review. Compare Meet Geek  features, pricing & alternatives. Expert analysis & user guide for 2025. Get started today!" />
         <meta property="og:url" content="https://siteoptz.ai/reviews/meet-geek" />
         <meta property="og:site_name" content="SiteOptz" />
@@ -150,7 +150,7 @@ export default function MeetGeekReviewPage({ tool }: MeetGeekReviewPageProps) {
         
         {/* Twitter Card Tags */}
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Meet Geek Review:  | SiteOptz" />
+        <meta name="twitter:title" content="Meet Geek Review: Meeting Assistant Tool | SiteOptz" />
         <meta name="twitter:description" content="meet geek review. Compare Meet Geek  features, pricing & alternatives. Expert analysis & user guide for 2025. Get started today!" />
         <meta name="twitter:image" content="https://siteoptz.ai/og-image.png" />
         <meta name="twitter:creator" content="@siteoptz" />

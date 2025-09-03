@@ -128,7 +128,7 @@ export default function ChatgptEnterpriseReviewPage({ tool }: ChatgptEnterpriseR
     <>
       <Head>
         {/* Primary SEO Tags */}
-        <title>ChatGPT Enterprise Review:  | SiteOptz</title>
+        <title>ChatGPT Enterprise Review: AI Business Tool | SiteOptz</title>
         <meta name="description" content="chatgpt enterprise review. Compare ChatGPT Enterprise  features, pricing & alternatives. Expert analysis & user guide for 2025. Get started today!" />
         <meta name="keywords" content="chatgpt enterprise review, chatgpt enterprise pricing, chatgpt enterprise features, chatgpt enterprise vs competitors, chatgpt enterprise alternatives" />
         <meta name="author" content="SiteOptz" />
@@ -139,7 +139,7 @@ export default function ChatgptEnterpriseReviewPage({ tool }: ChatgptEnterpriseR
         
         {/* Open Graph Meta Tags */}
         <meta property="og:type" content="article" />
-        <meta property="og:title" content="ChatGPT Enterprise Review:  | SiteOptz" />
+        <meta property="og:title" content="ChatGPT Enterprise Review: AI Business Tool | SiteOptz" />
         <meta property="og:description" content="chatgpt enterprise review. Compare ChatGPT Enterprise  features, pricing & alternatives. Expert analysis & user guide for 2025. Get started today!" />
         <meta property="og:url" content="https://siteoptz.ai/reviews/chatgpt-enterprise" />
         <meta property="og:site_name" content="SiteOptz" />
@@ -150,7 +150,7 @@ export default function ChatgptEnterpriseReviewPage({ tool }: ChatgptEnterpriseR
         
         {/* Twitter Card Tags */}
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="ChatGPT Enterprise Review:  | SiteOptz" />
+        <meta name="twitter:title" content="ChatGPT Enterprise Review: AI Business Tool | SiteOptz" />
         <meta name="twitter:description" content="chatgpt enterprise review. Compare ChatGPT Enterprise  features, pricing & alternatives. Expert analysis & user guide for 2025. Get started today!" />
         <meta name="twitter:image" content="https://siteoptz.ai/og-image.png" />
         <meta name="twitter:creator" content="@siteoptz" />

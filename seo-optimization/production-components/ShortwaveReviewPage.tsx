@@ -128,7 +128,7 @@ export default function ShortwaveReviewPage({ tool }: ShortwaveReviewPageProps) 
     <>
       <Head>
         {/* Primary SEO Tags */}
-        <title>Shortwave Review:  | SiteOptz</title>
+        <title>Shortwave Review: AI-Powered Email Client | SiteOptz</title>
         <meta name="description" content="shortwave review. Compare Shortwave  features, pricing & alternatives. Expert analysis & user guide for 2025. Get started today!" />
         <meta name="keywords" content="shortwave review, shortwave pricing, shortwave features, shortwave vs competitors, shortwave alternatives" />
         <meta name="author" content="SiteOptz" />
@@ -139,7 +139,7 @@ export default function ShortwaveReviewPage({ tool }: ShortwaveReviewPageProps) 
         
         {/* Open Graph Meta Tags */}
         <meta property="og:type" content="article" />
-        <meta property="og:title" content="Shortwave Review:  | SiteOptz" />
+        <meta property="og:title" content="Shortwave Review: AI-Powered Email Client | SiteOptz" />
         <meta property="og:description" content="shortwave review. Compare Shortwave  features, pricing & alternatives. Expert analysis & user guide for 2025. Get started today!" />
         <meta property="og:url" content="https://siteoptz.ai/reviews/shortwave" />
         <meta property="og:site_name" content="SiteOptz" />
@@ -150,7 +150,7 @@ export default function ShortwaveReviewPage({ tool }: ShortwaveReviewPageProps) 
         
         {/* Twitter Card Tags */}
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Shortwave Review:  | SiteOptz" />
+        <meta name="twitter:title" content="Shortwave Review: AI-Powered Email Client | SiteOptz" />
         <meta name="twitter:description" content="shortwave review. Compare Shortwave  features, pricing & alternatives. Expert analysis & user guide for 2025. Get started today!" />
         <meta name="twitter:image" content="https://siteoptz.ai/og-image.png" />
         <meta name="twitter:creator" content="@siteoptz" />

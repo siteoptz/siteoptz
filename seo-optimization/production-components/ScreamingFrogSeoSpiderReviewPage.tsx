@@ -128,7 +128,7 @@ export default function ScreamingFrogSeoSpiderReviewPage({ tool }: ScreamingFrog
     <>
       <Head>
         {/* Primary SEO Tags */}
-        <title>Screaming Frog SEO Spider Review:  | SiteOptz</title>
+        <title>Screaming Frog SEO Spider Review: Technical SEO Crawler | SiteOptz</title>
         <meta name="description" content="Screaming Frog SEO Spider review: features, pricing, pros & cons. Expert analysis & comparison guide. Start free today!" />
         <meta name="keywords" content="screaming frog seo spider review, screaming frog seo spider pricing, screaming frog seo spider features, screaming frog seo spider vs competitors, screaming frog seo spider alternatives" />
         <meta name="author" content="SiteOptz" />
@@ -139,7 +139,7 @@ export default function ScreamingFrogSeoSpiderReviewPage({ tool }: ScreamingFrog
         
         {/* Open Graph Meta Tags */}
         <meta property="og:type" content="article" />
-        <meta property="og:title" content="Screaming Frog SEO Spider Review:  | SiteOptz" />
+        <meta property="og:title" content="Screaming Frog SEO Spider Review: Technical SEO Crawler | SiteOptz" />
         <meta property="og:description" content="Screaming Frog SEO Spider review: features, pricing, pros & cons. Expert analysis & comparison guide. Start free today!" />
         <meta property="og:url" content="https://siteoptz.ai/reviews/screaming-frog-seo-spider" />
         <meta property="og:site_name" content="SiteOptz" />
@@ -150,7 +150,7 @@ export default function ScreamingFrogSeoSpiderReviewPage({ tool }: ScreamingFrog
         
         {/* Twitter Card Tags */}
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Screaming Frog SEO Spider Review:  | SiteOptz" />
+        <meta name="twitter:title" content="Screaming Frog SEO Spider Review: Technical SEO Crawler | SiteOptz" />
         <meta name="twitter:description" content="Screaming Frog SEO Spider review: features, pricing, pros & cons. Expert analysis & comparison guide. Start free today!" />
         <meta name="twitter:image" content="https://siteoptz.ai/og-image.png" />
         <meta name="twitter:creator" content="@siteoptz" />

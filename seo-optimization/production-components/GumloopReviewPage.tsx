@@ -128,7 +128,7 @@ export default function GumloopReviewPage({ tool }: GumloopReviewPageProps) {
     <>
       <Head>
         {/* Primary SEO Tags */}
-        <title>Gumloop Review:  | SiteOptz</title>
+        <title>Gumloop Review: AI Tool | SiteOptz</title>
         <meta name="description" content="gumloop review. Compare Gumloop  features, pricing & alternatives. Expert analysis & user guide for 2025. Get started today!" />
         <meta name="keywords" content="gumloop review, gumloop pricing, gumloop features, gumloop vs competitors, gumloop alternatives" />
         <meta name="author" content="SiteOptz" />
@@ -139,7 +139,7 @@ export default function GumloopReviewPage({ tool }: GumloopReviewPageProps) {
         
         {/* Open Graph Meta Tags */}
         <meta property="og:type" content="article" />
-        <meta property="og:title" content="Gumloop Review:  | SiteOptz" />
+        <meta property="og:title" content="Gumloop Review: AI Tool | SiteOptz" />
         <meta property="og:description" content="gumloop review. Compare Gumloop  features, pricing & alternatives. Expert analysis & user guide for 2025. Get started today!" />
         <meta property="og:url" content="https://siteoptz.ai/reviews/gumloop" />
         <meta property="og:site_name" content="SiteOptz" />
@@ -150,7 +150,7 @@ export default function GumloopReviewPage({ tool }: GumloopReviewPageProps) {
         
         {/* Twitter Card Tags */}
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Gumloop Review:  | SiteOptz" />
+        <meta name="twitter:title" content="Gumloop Review: AI Tool | SiteOptz" />
         <meta name="twitter:description" content="gumloop review. Compare Gumloop  features, pricing & alternatives. Expert analysis & user guide for 2025. Get started today!" />
         <meta name="twitter:image" content="https://siteoptz.ai/og-image.png" />
         <meta name="twitter:creator" content="@siteoptz" />

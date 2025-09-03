@@ -128,7 +128,7 @@ export default function AiropsReviewPage({ tool }: AiropsReviewPageProps) {
     <>
       <Head>
         {/* Primary SEO Tags */}
-        <title>AirOps Review:  | SiteOptz</title>
+        <title>AirOps Review: AI Search Optimization | SiteOptz</title>
         <meta name="description" content="airops review. Compare AirOps  features, pricing & alternatives. Expert analysis & user guide for 2025. Get started today!" />
         <meta name="keywords" content="airops review, airops pricing, airops features, airops vs competitors, airops alternatives" />
         <meta name="author" content="SiteOptz" />
@@ -139,7 +139,7 @@ export default function AiropsReviewPage({ tool }: AiropsReviewPageProps) {
         
         {/* Open Graph Meta Tags */}
         <meta property="og:type" content="article" />
-        <meta property="og:title" content="AirOps Review:  | SiteOptz" />
+        <meta property="og:title" content="AirOps Review: AI Search Optimization | SiteOptz" />
         <meta property="og:description" content="airops review. Compare AirOps  features, pricing & alternatives. Expert analysis & user guide for 2025. Get started today!" />
         <meta property="og:url" content="https://siteoptz.ai/reviews/airops" />
         <meta property="og:site_name" content="SiteOptz" />
@@ -150,7 +150,7 @@ export default function AiropsReviewPage({ tool }: AiropsReviewPageProps) {
         
         {/* Twitter Card Tags */}
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="AirOps Review:  | SiteOptz" />
+        <meta name="twitter:title" content="AirOps Review: AI Search Optimization | SiteOptz" />
         <meta name="twitter:description" content="airops review. Compare AirOps  features, pricing & alternatives. Expert analysis & user guide for 2025. Get started today!" />
         <meta name="twitter:image" content="https://siteoptz.ai/og-image.png" />
         <meta name="twitter:creator" content="@siteoptz" />

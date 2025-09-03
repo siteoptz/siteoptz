@@ -128,7 +128,7 @@ export default function DreamMachineReviewPage({ tool }: DreamMachineReviewPageP
     <>
       <Head>
         {/* Primary SEO Tags */}
-        <title>Dream Machine Review:  | SiteOptz</title>
+        <title>Dream Machine Review: AI Tool | SiteOptz</title>
         <meta name="description" content="dream machine review. Compare Dream Machine  features, pricing & alternatives. Expert analysis & user guide for 2025. Get started today!" />
         <meta name="keywords" content="dream machine review, dream machine pricing, dream machine features, dream machine vs competitors, dream machine alternatives" />
         <meta name="author" content="SiteOptz" />
@@ -139,7 +139,7 @@ export default function DreamMachineReviewPage({ tool }: DreamMachineReviewPageP
         
         {/* Open Graph Meta Tags */}
         <meta property="og:type" content="article" />
-        <meta property="og:title" content="Dream Machine Review:  | SiteOptz" />
+        <meta property="og:title" content="Dream Machine Review: AI Tool | SiteOptz" />
         <meta property="og:description" content="dream machine review. Compare Dream Machine  features, pricing & alternatives. Expert analysis & user guide for 2025. Get started today!" />
         <meta property="og:url" content="https://siteoptz.ai/reviews/dream-machine" />
         <meta property="og:site_name" content="SiteOptz" />
@@ -150,7 +150,7 @@ export default function DreamMachineReviewPage({ tool }: DreamMachineReviewPageP
         
         {/* Twitter Card Tags */}
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Dream Machine Review:  | SiteOptz" />
+        <meta name="twitter:title" content="Dream Machine Review: AI Tool | SiteOptz" />
         <meta name="twitter:description" content="dream machine review. Compare Dream Machine  features, pricing & alternatives. Expert analysis & user guide for 2025. Get started today!" />
         <meta name="twitter:image" content="https://siteoptz.ai/og-image.png" />
         <meta name="twitter:creator" content="@siteoptz" />

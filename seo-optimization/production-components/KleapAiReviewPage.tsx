@@ -128,7 +128,7 @@ export default function KleapAiReviewPage({ tool }: KleapAiReviewPageProps) {
     <>
       <Head>
         {/* Primary SEO Tags */}
-        <title>Kleap Review:  | SiteOptz</title>
+        <title>Kleap Review: AI Website Builder | SiteOptz</title>
         <meta name="description" content="kleap review. Compare Kleap  features, pricing & alternatives. Expert analysis & user guide for 2025. Get started today!" />
         <meta name="keywords" content="kleap review, kleap pricing, kleap features, kleap vs competitors, kleap alternatives" />
         <meta name="author" content="SiteOptz" />
@@ -139,7 +139,7 @@ export default function KleapAiReviewPage({ tool }: KleapAiReviewPageProps) {
         
         {/* Open Graph Meta Tags */}
         <meta property="og:type" content="article" />
-        <meta property="og:title" content="Kleap Review:  | SiteOptz" />
+        <meta property="og:title" content="Kleap Review: AI Website Builder | SiteOptz" />
         <meta property="og:description" content="kleap review. Compare Kleap  features, pricing & alternatives. Expert analysis & user guide for 2025. Get started today!" />
         <meta property="og:url" content="https://siteoptz.ai/reviews/kleap-ai" />
         <meta property="og:site_name" content="SiteOptz" />
@@ -150,7 +150,7 @@ export default function KleapAiReviewPage({ tool }: KleapAiReviewPageProps) {
         
         {/* Twitter Card Tags */}
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Kleap Review:  | SiteOptz" />
+        <meta name="twitter:title" content="Kleap Review: AI Website Builder | SiteOptz" />
         <meta name="twitter:description" content="kleap review. Compare Kleap  features, pricing & alternatives. Expert analysis & user guide for 2025. Get started today!" />
         <meta name="twitter:image" content="https://siteoptz.ai/og-image.png" />
         <meta name="twitter:creator" content="@siteoptz" />

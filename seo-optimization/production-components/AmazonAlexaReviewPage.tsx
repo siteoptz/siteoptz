@@ -128,7 +128,7 @@ export default function AmazonAlexaReviewPage({ tool }: AmazonAlexaReviewPagePro
     <>
       <Head>
         {/* Primary SEO Tags */}
-        <title>Amazon Alexa Review:  | SiteOptz</title>
+        <title>Amazon Alexa Review: AI Tool | SiteOptz</title>
         <meta name="description" content="amazon alexa review. Compare Amazon Alexa  features, pricing & alternatives. Expert analysis & user guide for 2025. Get started today!" />
         <meta name="keywords" content="amazon alexa review, amazon alexa pricing, amazon alexa features, amazon alexa vs competitors, amazon alexa alternatives" />
         <meta name="author" content="SiteOptz" />
@@ -139,7 +139,7 @@ export default function AmazonAlexaReviewPage({ tool }: AmazonAlexaReviewPagePro
         
         {/* Open Graph Meta Tags */}
         <meta property="og:type" content="article" />
-        <meta property="og:title" content="Amazon Alexa Review:  | SiteOptz" />
+        <meta property="og:title" content="Amazon Alexa Review: AI Tool | SiteOptz" />
         <meta property="og:description" content="amazon alexa review. Compare Amazon Alexa  features, pricing & alternatives. Expert analysis & user guide for 2025. Get started today!" />
         <meta property="og:url" content="https://siteoptz.ai/reviews/amazon-alexa" />
         <meta property="og:site_name" content="SiteOptz" />
@@ -150,7 +150,7 @@ export default function AmazonAlexaReviewPage({ tool }: AmazonAlexaReviewPagePro
         
         {/* Twitter Card Tags */}
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Amazon Alexa Review:  | SiteOptz" />
+        <meta name="twitter:title" content="Amazon Alexa Review: AI Tool | SiteOptz" />
         <meta name="twitter:description" content="amazon alexa review. Compare Amazon Alexa  features, pricing & alternatives. Expert analysis & user guide for 2025. Get started today!" />
         <meta name="twitter:image" content="https://siteoptz.ai/og-image.png" />
         <meta name="twitter:creator" content="@siteoptz" />

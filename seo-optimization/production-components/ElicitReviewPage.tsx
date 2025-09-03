@@ -128,7 +128,7 @@ export default function ElicitReviewPage({ tool }: ElicitReviewPageProps) {
     <>
       <Head>
         {/* Primary SEO Tags */}
-        <title>Elicit Review:  | SiteOptz</title>
+        <title>Elicit Review: AI Tool | SiteOptz</title>
         <meta name="description" content="elicit review. Compare Elicit  features, pricing & alternatives. Expert analysis & user guide for 2025. Get started today!" />
         <meta name="keywords" content="elicit review, elicit pricing, elicit features, elicit vs competitors, elicit alternatives" />
         <meta name="author" content="SiteOptz" />
@@ -139,7 +139,7 @@ export default function ElicitReviewPage({ tool }: ElicitReviewPageProps) {
         
         {/* Open Graph Meta Tags */}
         <meta property="og:type" content="article" />
-        <meta property="og:title" content="Elicit Review:  | SiteOptz" />
+        <meta property="og:title" content="Elicit Review: AI Tool | SiteOptz" />
         <meta property="og:description" content="elicit review. Compare Elicit  features, pricing & alternatives. Expert analysis & user guide for 2025. Get started today!" />
         <meta property="og:url" content="https://siteoptz.ai/reviews/elicit" />
         <meta property="og:site_name" content="SiteOptz" />
@@ -150,7 +150,7 @@ export default function ElicitReviewPage({ tool }: ElicitReviewPageProps) {
         
         {/* Twitter Card Tags */}
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Elicit Review:  | SiteOptz" />
+        <meta name="twitter:title" content="Elicit Review: AI Tool | SiteOptz" />
         <meta name="twitter:description" content="elicit review. Compare Elicit  features, pricing & alternatives. Expert analysis & user guide for 2025. Get started today!" />
         <meta name="twitter:image" content="https://siteoptz.ai/og-image.png" />
         <meta name="twitter:creator" content="@siteoptz" />

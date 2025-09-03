@@ -128,7 +128,7 @@ export default function TrelloButlerReviewPage({ tool }: TrelloButlerReviewPageP
     <>
       <Head>
         {/* Primary SEO Tags */}
-        <title>Trello Butler Review:  | SiteOptz</title>
+        <title>Trello Butler Review: AI Project Automation | SiteOptz</title>
         <meta name="description" content="trello butler review. Compare Trello Butler  features, pricing & alternatives. Expert analysis & user guide for 2025. Get started today!" />
         <meta name="keywords" content="trello butler review, trello butler pricing, trello butler features, trello butler vs competitors, trello butler alternatives" />
         <meta name="author" content="SiteOptz" />
@@ -139,7 +139,7 @@ export default function TrelloButlerReviewPage({ tool }: TrelloButlerReviewPageP
         
         {/* Open Graph Meta Tags */}
         <meta property="og:type" content="article" />
-        <meta property="og:title" content="Trello Butler Review:  | SiteOptz" />
+        <meta property="og:title" content="Trello Butler Review: AI Project Automation | SiteOptz" />
         <meta property="og:description" content="trello butler review. Compare Trello Butler  features, pricing & alternatives. Expert analysis & user guide for 2025. Get started today!" />
         <meta property="og:url" content="https://siteoptz.ai/reviews/trello-butler" />
         <meta property="og:site_name" content="SiteOptz" />
@@ -150,7 +150,7 @@ export default function TrelloButlerReviewPage({ tool }: TrelloButlerReviewPageP
         
         {/* Twitter Card Tags */}
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Trello Butler Review:  | SiteOptz" />
+        <meta name="twitter:title" content="Trello Butler Review: AI Project Automation | SiteOptz" />
         <meta name="twitter:description" content="trello butler review. Compare Trello Butler  features, pricing & alternatives. Expert analysis & user guide for 2025. Get started today!" />
         <meta name="twitter:image" content="https://siteoptz.ai/og-image.png" />
         <meta name="twitter:creator" content="@siteoptz" />

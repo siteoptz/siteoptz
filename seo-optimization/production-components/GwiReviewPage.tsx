@@ -128,7 +128,7 @@ export default function GwiReviewPage({ tool }: GwiReviewPageProps) {
     <>
       <Head>
         {/* Primary SEO Tags */}
-        <title>GWI Review:  | SiteOptz</title>
+        <title>GWI Review: AI Tool | SiteOptz</title>
         <meta name="description" content="gwi review. Compare GWI  features, pricing & alternatives. Expert analysis & user guide for 2025. Get started today!" />
         <meta name="keywords" content="gwi review, gwi pricing, gwi features, gwi vs competitors, gwi alternatives" />
         <meta name="author" content="SiteOptz" />
@@ -139,7 +139,7 @@ export default function GwiReviewPage({ tool }: GwiReviewPageProps) {
         
         {/* Open Graph Meta Tags */}
         <meta property="og:type" content="article" />
-        <meta property="og:title" content="GWI Review:  | SiteOptz" />
+        <meta property="og:title" content="GWI Review: AI Tool | SiteOptz" />
         <meta property="og:description" content="gwi review. Compare GWI  features, pricing & alternatives. Expert analysis & user guide for 2025. Get started today!" />
         <meta property="og:url" content="https://siteoptz.ai/reviews/gwi" />
         <meta property="og:site_name" content="SiteOptz" />
@@ -150,7 +150,7 @@ export default function GwiReviewPage({ tool }: GwiReviewPageProps) {
         
         {/* Twitter Card Tags */}
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="GWI Review:  | SiteOptz" />
+        <meta name="twitter:title" content="GWI Review: AI Tool | SiteOptz" />
         <meta name="twitter:description" content="gwi review. Compare GWI  features, pricing & alternatives. Expert analysis & user guide for 2025. Get started today!" />
         <meta name="twitter:image" content="https://siteoptz.ai/og-image.png" />
         <meta name="twitter:creator" content="@siteoptz" />

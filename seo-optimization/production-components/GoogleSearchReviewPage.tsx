@@ -128,7 +128,7 @@ export default function GoogleSearchReviewPage({ tool }: GoogleSearchReviewPageP
     <>
       <Head>
         {/* Primary SEO Tags */}
-        <title>Google Search Review:  | SiteOptz</title>
+        <title>Google Search Review: AI Search Engine | SiteOptz</title>
         <meta name="description" content="google search review. Compare Google Search  features, pricing & alternatives. Expert analysis & user guide for 2025. Get started today!" />
         <meta name="keywords" content="google search review, google search pricing, google search features, google search vs competitors, google search alternatives" />
         <meta name="author" content="SiteOptz" />
@@ -139,7 +139,7 @@ export default function GoogleSearchReviewPage({ tool }: GoogleSearchReviewPageP
         
         {/* Open Graph Meta Tags */}
         <meta property="og:type" content="article" />
-        <meta property="og:title" content="Google Search Review:  | SiteOptz" />
+        <meta property="og:title" content="Google Search Review: AI Search Engine | SiteOptz" />
         <meta property="og:description" content="google search review. Compare Google Search  features, pricing & alternatives. Expert analysis & user guide for 2025. Get started today!" />
         <meta property="og:url" content="https://siteoptz.ai/reviews/google-search" />
         <meta property="og:site_name" content="SiteOptz" />
@@ -150,7 +150,7 @@ export default function GoogleSearchReviewPage({ tool }: GoogleSearchReviewPageP
         
         {/* Twitter Card Tags */}
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Google Search Review:  | SiteOptz" />
+        <meta name="twitter:title" content="Google Search Review: AI Search Engine | SiteOptz" />
         <meta name="twitter:description" content="google search review. Compare Google Search  features, pricing & alternatives. Expert analysis & user guide for 2025. Get started today!" />
         <meta name="twitter:image" content="https://siteoptz.ai/og-image.png" />
         <meta name="twitter:creator" content="@siteoptz" />

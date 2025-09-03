@@ -128,7 +128,7 @@ export default function ManusReviewPage({ tool }: ManusReviewPageProps) {
     <>
       <Head>
         {/* Primary SEO Tags */}
-        <title>Manus Review:  | SiteOptz</title>
+        <title>Manus Review: AI Automation Platform | SiteOptz</title>
         <meta name="description" content="manus review. Compare Manus  features, pricing & alternatives. Expert analysis & user guide for 2025. Get started today!" />
         <meta name="keywords" content="manus review, manus pricing, manus features, manus vs competitors, manus alternatives" />
         <meta name="author" content="SiteOptz" />
@@ -139,7 +139,7 @@ export default function ManusReviewPage({ tool }: ManusReviewPageProps) {
         
         {/* Open Graph Meta Tags */}
         <meta property="og:type" content="article" />
-        <meta property="og:title" content="Manus Review:  | SiteOptz" />
+        <meta property="og:title" content="Manus Review: AI Automation Platform | SiteOptz" />
         <meta property="og:description" content="manus review. Compare Manus  features, pricing & alternatives. Expert analysis & user guide for 2025. Get started today!" />
         <meta property="og:url" content="https://siteoptz.ai/reviews/manus" />
         <meta property="og:site_name" content="SiteOptz" />
@@ -150,7 +150,7 @@ export default function ManusReviewPage({ tool }: ManusReviewPageProps) {
         
         {/* Twitter Card Tags */}
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Manus Review:  | SiteOptz" />
+        <meta name="twitter:title" content="Manus Review: AI Automation Platform | SiteOptz" />
         <meta name="twitter:description" content="manus review. Compare Manus  features, pricing & alternatives. Expert analysis & user guide for 2025. Get started today!" />
         <meta name="twitter:image" content="https://siteoptz.ai/og-image.png" />
         <meta name="twitter:creator" content="@siteoptz" />

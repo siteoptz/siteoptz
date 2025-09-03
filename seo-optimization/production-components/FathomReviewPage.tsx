@@ -128,7 +128,7 @@ export default function FathomReviewPage({ tool }: FathomReviewPageProps) {
     <>
       <Head>
         {/* Primary SEO Tags */}
-        <title>Fathom Review:  | SiteOptz</title>
+        <title>Fathom Review: AI Tool | SiteOptz</title>
         <meta name="description" content="fathom review. Compare Fathom  features, pricing & alternatives. Expert analysis & user guide for 2025. Get started today!" />
         <meta name="keywords" content="fathom review, fathom pricing, fathom features, fathom vs competitors, fathom alternatives" />
         <meta name="author" content="SiteOptz" />
@@ -139,7 +139,7 @@ export default function FathomReviewPage({ tool }: FathomReviewPageProps) {
         
         {/* Open Graph Meta Tags */}
         <meta property="og:type" content="article" />
-        <meta property="og:title" content="Fathom Review:  | SiteOptz" />
+        <meta property="og:title" content="Fathom Review: AI Tool | SiteOptz" />
         <meta property="og:description" content="fathom review. Compare Fathom  features, pricing & alternatives. Expert analysis & user guide for 2025. Get started today!" />
         <meta property="og:url" content="https://siteoptz.ai/reviews/fathom" />
         <meta property="og:site_name" content="SiteOptz" />
@@ -150,7 +150,7 @@ export default function FathomReviewPage({ tool }: FathomReviewPageProps) {
         
         {/* Twitter Card Tags */}
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Fathom Review:  | SiteOptz" />
+        <meta name="twitter:title" content="Fathom Review: AI Tool | SiteOptz" />
         <meta name="twitter:description" content="fathom review. Compare Fathom  features, pricing & alternatives. Expert analysis & user guide for 2025. Get started today!" />
         <meta name="twitter:image" content="https://siteoptz.ai/og-image.png" />
         <meta name="twitter:creator" content="@siteoptz" />

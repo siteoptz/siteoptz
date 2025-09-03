@@ -128,7 +128,7 @@ export default function OtteraiReviewPage({ tool }: OtteraiReviewPageProps) {
     <>
       <Head>
         {/* Primary SEO Tags */}
-        <title>Otter.ai Review:  | SiteOptz</title>
+        <title>Otter.ai Review: Meeting Transcription | SiteOptz</title>
         <meta name="description" content="otter.ai review. Compare Otter.ai  features, pricing & alternatives. Expert analysis & user guide for 2025. Get started today!" />
         <meta name="keywords" content="otter.ai review, otter.ai pricing, otter.ai features, otter.ai vs competitors, otter.ai alternatives" />
         <meta name="author" content="SiteOptz" />
@@ -139,7 +139,7 @@ export default function OtteraiReviewPage({ tool }: OtteraiReviewPageProps) {
         
         {/* Open Graph Meta Tags */}
         <meta property="og:type" content="article" />
-        <meta property="og:title" content="Otter.ai Review:  | SiteOptz" />
+        <meta property="og:title" content="Otter.ai Review: Meeting Transcription | SiteOptz" />
         <meta property="og:description" content="otter.ai review. Compare Otter.ai  features, pricing & alternatives. Expert analysis & user guide for 2025. Get started today!" />
         <meta property="og:url" content="https://siteoptz.ai/reviews/otterai" />
         <meta property="og:site_name" content="SiteOptz" />
@@ -150,7 +150,7 @@ export default function OtteraiReviewPage({ tool }: OtteraiReviewPageProps) {
         
         {/* Twitter Card Tags */}
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Otter.ai Review:  | SiteOptz" />
+        <meta name="twitter:title" content="Otter.ai Review: Meeting Transcription | SiteOptz" />
         <meta name="twitter:description" content="otter.ai review. Compare Otter.ai  features, pricing & alternatives. Expert analysis & user guide for 2025. Get started today!" />
         <meta name="twitter:image" content="https://siteoptz.ai/og-image.png" />
         <meta name="twitter:creator" content="@siteoptz" />

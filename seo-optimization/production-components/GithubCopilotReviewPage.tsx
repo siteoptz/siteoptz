@@ -128,7 +128,7 @@ export default function GithubCopilotReviewPage({ tool }: GithubCopilotReviewPag
     <>
       <Head>
         {/* Primary SEO Tags */}
-        <title>GitHub Copilot Review:  | SiteOptz</title>
+        <title>GitHub Copilot Review: AI Code Completion Tool | SiteOptz</title>
         <meta name="description" content="github copilot review. Compare GitHub Copilot  features, pricing & alternatives. Expert analysis & user guide for 2025. Get started today!" />
         <meta name="keywords" content="github copilot review, github copilot pricing, github copilot features, github copilot vs competitors, github copilot alternatives" />
         <meta name="author" content="SiteOptz" />
@@ -139,7 +139,7 @@ export default function GithubCopilotReviewPage({ tool }: GithubCopilotReviewPag
         
         {/* Open Graph Meta Tags */}
         <meta property="og:type" content="article" />
-        <meta property="og:title" content="GitHub Copilot Review:  | SiteOptz" />
+        <meta property="og:title" content="GitHub Copilot Review: AI Code Completion Tool | SiteOptz" />
         <meta property="og:description" content="github copilot review. Compare GitHub Copilot  features, pricing & alternatives. Expert analysis & user guide for 2025. Get started today!" />
         <meta property="og:url" content="https://siteoptz.ai/reviews/github-copilot" />
         <meta property="og:site_name" content="SiteOptz" />
@@ -150,7 +150,7 @@ export default function GithubCopilotReviewPage({ tool }: GithubCopilotReviewPag
         
         {/* Twitter Card Tags */}
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="GitHub Copilot Review:  | SiteOptz" />
+        <meta name="twitter:title" content="GitHub Copilot Review: AI Code Completion Tool | SiteOptz" />
         <meta name="twitter:description" content="github copilot review. Compare GitHub Copilot  features, pricing & alternatives. Expert analysis & user guide for 2025. Get started today!" />
         <meta name="twitter:image" content="https://siteoptz.ai/og-image.png" />
         <meta name="twitter:creator" content="@siteoptz" />

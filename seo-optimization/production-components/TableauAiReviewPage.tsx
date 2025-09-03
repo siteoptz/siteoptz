@@ -128,7 +128,7 @@ export default function TableauAiReviewPage({ tool }: TableauAiReviewPageProps) 
     <>
       <Head>
         {/* Primary SEO Tags */}
-        <title>Tableau AI Review:  | SiteOptz</title>
+        <title>Tableau AI Review: Data Visualization Platform | SiteOptz</title>
         <meta name="description" content="tableau ai review. Compare Tableau AI  features, pricing & alternatives. Expert analysis & user guide for 2025. Get started today!" />
         <meta name="keywords" content="tableau ai review, tableau ai pricing, tableau ai features, tableau ai vs competitors, tableau ai alternatives" />
         <meta name="author" content="SiteOptz" />
@@ -139,7 +139,7 @@ export default function TableauAiReviewPage({ tool }: TableauAiReviewPageProps) 
         
         {/* Open Graph Meta Tags */}
         <meta property="og:type" content="article" />
-        <meta property="og:title" content="Tableau AI Review:  | SiteOptz" />
+        <meta property="og:title" content="Tableau AI Review: Data Visualization Platform | SiteOptz" />
         <meta property="og:description" content="tableau ai review. Compare Tableau AI  features, pricing & alternatives. Expert analysis & user guide for 2025. Get started today!" />
         <meta property="og:url" content="https://siteoptz.ai/reviews/tableau-ai" />
         <meta property="og:site_name" content="SiteOptz" />
@@ -150,7 +150,7 @@ export default function TableauAiReviewPage({ tool }: TableauAiReviewPageProps) 
         
         {/* Twitter Card Tags */}
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Tableau AI Review:  | SiteOptz" />
+        <meta name="twitter:title" content="Tableau AI Review: Data Visualization Platform | SiteOptz" />
         <meta name="twitter:description" content="tableau ai review. Compare Tableau AI  features, pricing & alternatives. Expert analysis & user guide for 2025. Get started today!" />
         <meta name="twitter:image" content="https://siteoptz.ai/og-image.png" />
         <meta name="twitter:creator" content="@siteoptz" />

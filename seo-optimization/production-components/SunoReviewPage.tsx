@@ -128,7 +128,7 @@ export default function SunoReviewPage({ tool }: SunoReviewPageProps) {
     <>
       <Head>
         {/* Primary SEO Tags */}
-        <title>Suno Review:  | SiteOptz</title>
+        <title>Suno Review: AI Music Generation Tool | SiteOptz</title>
         <meta name="description" content="suno review. Compare Suno  features, pricing & alternatives. Expert analysis & user guide for 2025. Get started today!" />
         <meta name="keywords" content="suno review, suno pricing, suno features, suno vs competitors, suno alternatives" />
         <meta name="author" content="SiteOptz" />
@@ -139,7 +139,7 @@ export default function SunoReviewPage({ tool }: SunoReviewPageProps) {
         
         {/* Open Graph Meta Tags */}
         <meta property="og:type" content="article" />
-        <meta property="og:title" content="Suno Review:  | SiteOptz" />
+        <meta property="og:title" content="Suno Review: AI Music Generation Tool | SiteOptz" />
         <meta property="og:description" content="suno review. Compare Suno  features, pricing & alternatives. Expert analysis & user guide for 2025. Get started today!" />
         <meta property="og:url" content="https://siteoptz.ai/reviews/suno" />
         <meta property="og:site_name" content="SiteOptz" />
@@ -150,7 +150,7 @@ export default function SunoReviewPage({ tool }: SunoReviewPageProps) {
         
         {/* Twitter Card Tags */}
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Suno Review:  | SiteOptz" />
+        <meta name="twitter:title" content="Suno Review: AI Music Generation Tool | SiteOptz" />
         <meta name="twitter:description" content="suno review. Compare Suno  features, pricing & alternatives. Expert analysis & user guide for 2025. Get started today!" />
         <meta name="twitter:image" content="https://siteoptz.ai/og-image.png" />
         <meta name="twitter:creator" content="@siteoptz" />

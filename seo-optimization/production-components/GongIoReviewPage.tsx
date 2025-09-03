@@ -128,7 +128,7 @@ export default function GongIoReviewPage({ tool }: GongIoReviewPageProps) {
     <>
       <Head>
         {/* Primary SEO Tags */}
-        <title>GONG IO Review:  | SiteOptz</title>
+        <title>GONG IO Review: AI Tool | SiteOptz</title>
         <meta name="description" content="gong io review. Compare GONG IO  features, pricing & alternatives. Expert analysis & user guide for 2025. Get started today!" />
         <meta name="keywords" content="gong io review, gong io pricing, gong io features, gong io vs competitors, gong io alternatives" />
         <meta name="author" content="SiteOptz" />
@@ -139,7 +139,7 @@ export default function GongIoReviewPage({ tool }: GongIoReviewPageProps) {
         
         {/* Open Graph Meta Tags */}
         <meta property="og:type" content="article" />
-        <meta property="og:title" content="GONG IO Review:  | SiteOptz" />
+        <meta property="og:title" content="GONG IO Review: AI Tool | SiteOptz" />
         <meta property="og:description" content="gong io review. Compare GONG IO  features, pricing & alternatives. Expert analysis & user guide for 2025. Get started today!" />
         <meta property="og:url" content="https://siteoptz.ai/reviews/gong-io" />
         <meta property="og:site_name" content="SiteOptz" />
@@ -150,7 +150,7 @@ export default function GongIoReviewPage({ tool }: GongIoReviewPageProps) {
         
         {/* Twitter Card Tags */}
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="GONG IO Review:  | SiteOptz" />
+        <meta name="twitter:title" content="GONG IO Review: AI Tool | SiteOptz" />
         <meta name="twitter:description" content="gong io review. Compare GONG IO  features, pricing & alternatives. Expert analysis & user guide for 2025. Get started today!" />
         <meta name="twitter:image" content="https://siteoptz.ai/og-image.png" />
         <meta name="twitter:creator" content="@siteoptz" />

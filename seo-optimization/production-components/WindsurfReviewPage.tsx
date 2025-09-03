@@ -128,7 +128,7 @@ export default function WindsurfReviewPage({ tool }: WindsurfReviewPageProps) {
     <>
       <Head>
         {/* Primary SEO Tags */}
-        <title>Windsurf Review:  | SiteOptz</title>
+        <title>Windsurf Review: Agentic AI Code Editor | SiteOptz</title>
         <meta name="description" content="windsurf review. Compare Windsurf  features, pricing & alternatives. Expert analysis & user guide for 2025. Get started today!" />
         <meta name="keywords" content="windsurf review, windsurf pricing, windsurf features, windsurf vs competitors, windsurf alternatives" />
         <meta name="author" content="SiteOptz" />
@@ -139,7 +139,7 @@ export default function WindsurfReviewPage({ tool }: WindsurfReviewPageProps) {
         
         {/* Open Graph Meta Tags */}
         <meta property="og:type" content="article" />
-        <meta property="og:title" content="Windsurf Review:  | SiteOptz" />
+        <meta property="og:title" content="Windsurf Review: Agentic AI Code Editor | SiteOptz" />
         <meta property="og:description" content="windsurf review. Compare Windsurf  features, pricing & alternatives. Expert analysis & user guide for 2025. Get started today!" />
         <meta property="og:url" content="https://siteoptz.ai/reviews/windsurf" />
         <meta property="og:site_name" content="SiteOptz" />
@@ -150,7 +150,7 @@ export default function WindsurfReviewPage({ tool }: WindsurfReviewPageProps) {
         
         {/* Twitter Card Tags */}
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Windsurf Review:  | SiteOptz" />
+        <meta name="twitter:title" content="Windsurf Review: Agentic AI Code Editor | SiteOptz" />
         <meta name="twitter:description" content="windsurf review. Compare Windsurf  features, pricing & alternatives. Expert analysis & user guide for 2025. Get started today!" />
         <meta name="twitter:image" content="https://siteoptz.ai/og-image.png" />
         <meta name="twitter:creator" content="@siteoptz" />

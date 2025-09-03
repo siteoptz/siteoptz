@@ -128,7 +128,7 @@ export default function OpenaiGpt4ReviewPage({ tool }: OpenaiGpt4ReviewPageProps
     <>
       <Head>
         {/* Primary SEO Tags */}
-        <title>GPT-4 Review:  | SiteOptz</title>
+        <title>GPT-4 Review: Advanced Language Model | SiteOptz</title>
         <meta name="description" content="gpt-4 review. Compare GPT-4  features, pricing & alternatives. Expert analysis & user guide for 2025. Get started today!" />
         <meta name="keywords" content="gpt-4 review, gpt-4 pricing, gpt-4 features, gpt-4 vs competitors, gpt-4 alternatives" />
         <meta name="author" content="SiteOptz" />
@@ -139,7 +139,7 @@ export default function OpenaiGpt4ReviewPage({ tool }: OpenaiGpt4ReviewPageProps
         
         {/* Open Graph Meta Tags */}
         <meta property="og:type" content="article" />
-        <meta property="og:title" content="GPT-4 Review:  | SiteOptz" />
+        <meta property="og:title" content="GPT-4 Review: Advanced Language Model | SiteOptz" />
         <meta property="og:description" content="gpt-4 review. Compare GPT-4  features, pricing & alternatives. Expert analysis & user guide for 2025. Get started today!" />
         <meta property="og:url" content="https://siteoptz.ai/reviews/openai-gpt4" />
         <meta property="og:site_name" content="SiteOptz" />
@@ -150,7 +150,7 @@ export default function OpenaiGpt4ReviewPage({ tool }: OpenaiGpt4ReviewPageProps
         
         {/* Twitter Card Tags */}
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="GPT-4 Review:  | SiteOptz" />
+        <meta name="twitter:title" content="GPT-4 Review: Advanced Language Model | SiteOptz" />
         <meta name="twitter:description" content="gpt-4 review. Compare GPT-4  features, pricing & alternatives. Expert analysis & user guide for 2025. Get started today!" />
         <meta name="twitter:image" content="https://siteoptz.ai/og-image.png" />
         <meta name="twitter:creator" content="@siteoptz" />

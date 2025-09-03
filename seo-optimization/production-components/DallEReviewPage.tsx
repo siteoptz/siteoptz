@@ -128,7 +128,7 @@ export default function DallEReviewPage({ tool }: DallEReviewPageProps) {
     <>
       <Head>
         {/* Primary SEO Tags */}
-        <title>DALL-E Review:  | SiteOptz</title>
+        <title>DALL-E Review: AI Image Generator | SiteOptz</title>
         <meta name="description" content="dall-e review. Compare DALL-E  features, pricing & alternatives. Expert analysis & user guide for 2025. Get started today!" />
         <meta name="keywords" content="dall-e review, dall-e pricing, dall-e features, dall-e vs competitors, dall-e alternatives" />
         <meta name="author" content="SiteOptz" />
@@ -139,7 +139,7 @@ export default function DallEReviewPage({ tool }: DallEReviewPageProps) {
         
         {/* Open Graph Meta Tags */}
         <meta property="og:type" content="article" />
-        <meta property="og:title" content="DALL-E Review:  | SiteOptz" />
+        <meta property="og:title" content="DALL-E Review: AI Image Generator | SiteOptz" />
         <meta property="og:description" content="dall-e review. Compare DALL-E  features, pricing & alternatives. Expert analysis & user guide for 2025. Get started today!" />
         <meta property="og:url" content="https://siteoptz.ai/reviews/dall-e" />
         <meta property="og:site_name" content="SiteOptz" />
@@ -150,7 +150,7 @@ export default function DallEReviewPage({ tool }: DallEReviewPageProps) {
         
         {/* Twitter Card Tags */}
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="DALL-E Review:  | SiteOptz" />
+        <meta name="twitter:title" content="DALL-E Review: AI Image Generator | SiteOptz" />
         <meta name="twitter:description" content="dall-e review. Compare DALL-E  features, pricing & alternatives. Expert analysis & user guide for 2025. Get started today!" />
         <meta name="twitter:image" content="https://siteoptz.ai/og-image.png" />
         <meta name="twitter:creator" content="@siteoptz" />

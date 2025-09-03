@@ -128,7 +128,7 @@ export default function ReplicateAiReviewPage({ tool }: ReplicateAiReviewPagePro
     <>
       <Head>
         {/* Primary SEO Tags */}
-        <title>Replicate Review:  | SiteOptz</title>
+        <title>Replicate Review: ML Models Cloud Platform | SiteOptz</title>
         <meta name="description" content="replicate review. Compare Replicate  features, pricing & alternatives. Expert analysis & user guide for 2025. Get started today!" />
         <meta name="keywords" content="replicate review, replicate pricing, replicate features, replicate vs competitors, replicate alternatives" />
         <meta name="author" content="SiteOptz" />
@@ -139,7 +139,7 @@ export default function ReplicateAiReviewPage({ tool }: ReplicateAiReviewPagePro
         
         {/* Open Graph Meta Tags */}
         <meta property="og:type" content="article" />
-        <meta property="og:title" content="Replicate Review:  | SiteOptz" />
+        <meta property="og:title" content="Replicate Review: ML Models Cloud Platform | SiteOptz" />
         <meta property="og:description" content="replicate review. Compare Replicate  features, pricing & alternatives. Expert analysis & user guide for 2025. Get started today!" />
         <meta property="og:url" content="https://siteoptz.ai/reviews/replicate-ai" />
         <meta property="og:site_name" content="SiteOptz" />
@@ -150,7 +150,7 @@ export default function ReplicateAiReviewPage({ tool }: ReplicateAiReviewPagePro
         
         {/* Twitter Card Tags */}
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Replicate Review:  | SiteOptz" />
+        <meta name="twitter:title" content="Replicate Review: ML Models Cloud Platform | SiteOptz" />
         <meta name="twitter:description" content="replicate review. Compare Replicate  features, pricing & alternatives. Expert analysis & user guide for 2025. Get started today!" />
         <meta name="twitter:image" content="https://siteoptz.ai/og-image.png" />
         <meta name="twitter:creator" content="@siteoptz" />

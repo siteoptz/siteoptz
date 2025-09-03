@@ -128,7 +128,7 @@ export default function ZapierAiReviewPage({ tool }: ZapierAiReviewPageProps) {
     <>
       <Head>
         {/* Primary SEO Tags */}
-        <title>Zapier AI Review:  | SiteOptz</title>
+        <title>Zapier AI Review: AI Automation Platform | SiteOptz</title>
         <meta name="description" content="zapier ai review. Compare Zapier AI  features, pricing & alternatives. Expert analysis & user guide for 2025. Get started today!" />
         <meta name="keywords" content="zapier ai review, zapier ai pricing, zapier ai features, zapier ai vs competitors, zapier ai alternatives" />
         <meta name="author" content="SiteOptz" />
@@ -139,7 +139,7 @@ export default function ZapierAiReviewPage({ tool }: ZapierAiReviewPageProps) {
         
         {/* Open Graph Meta Tags */}
         <meta property="og:type" content="article" />
-        <meta property="og:title" content="Zapier AI Review:  | SiteOptz" />
+        <meta property="og:title" content="Zapier AI Review: AI Automation Platform | SiteOptz" />
         <meta property="og:description" content="zapier ai review. Compare Zapier AI  features, pricing & alternatives. Expert analysis & user guide for 2025. Get started today!" />
         <meta property="og:url" content="https://siteoptz.ai/reviews/zapier-ai" />
         <meta property="og:site_name" content="SiteOptz" />
@@ -150,7 +150,7 @@ export default function ZapierAiReviewPage({ tool }: ZapierAiReviewPageProps) {
         
         {/* Twitter Card Tags */}
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Zapier AI Review:  | SiteOptz" />
+        <meta name="twitter:title" content="Zapier AI Review: AI Automation Platform | SiteOptz" />
         <meta name="twitter:description" content="zapier ai review. Compare Zapier AI  features, pricing & alternatives. Expert analysis & user guide for 2025. Get started today!" />
         <meta name="twitter:image" content="https://siteoptz.ai/og-image.png" />
         <meta name="twitter:creator" content="@siteoptz" />

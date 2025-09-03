@@ -128,7 +128,7 @@ export default function AdobeFireflyReviewPage({ tool }: AdobeFireflyReviewPageP
     <>
       <Head>
         {/* Primary SEO Tags */}
-        <title>Adobe Firefly Review:  | SiteOptz</title>
+        <title>Adobe Firefly Review: AI Tool | SiteOptz</title>
         <meta name="description" content="adobe firefly review. Compare Adobe Firefly  features, pricing & alternatives. Expert analysis & user guide for 2025. Get started today!" />
         <meta name="keywords" content="adobe firefly review, adobe firefly pricing, adobe firefly features, adobe firefly vs competitors, adobe firefly alternatives" />
         <meta name="author" content="SiteOptz" />
@@ -139,7 +139,7 @@ export default function AdobeFireflyReviewPage({ tool }: AdobeFireflyReviewPageP
         
         {/* Open Graph Meta Tags */}
         <meta property="og:type" content="article" />
-        <meta property="og:title" content="Adobe Firefly Review:  | SiteOptz" />
+        <meta property="og:title" content="Adobe Firefly Review: AI Tool | SiteOptz" />
         <meta property="og:description" content="adobe firefly review. Compare Adobe Firefly  features, pricing & alternatives. Expert analysis & user guide for 2025. Get started today!" />
         <meta property="og:url" content="https://siteoptz.ai/reviews/adobe-firefly" />
         <meta property="og:site_name" content="SiteOptz" />
@@ -150,7 +150,7 @@ export default function AdobeFireflyReviewPage({ tool }: AdobeFireflyReviewPageP
         
         {/* Twitter Card Tags */}
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Adobe Firefly Review:  | SiteOptz" />
+        <meta name="twitter:title" content="Adobe Firefly Review: AI Tool | SiteOptz" />
         <meta name="twitter:description" content="adobe firefly review. Compare Adobe Firefly  features, pricing & alternatives. Expert analysis & user guide for 2025. Get started today!" />
         <meta name="twitter:image" content="https://siteoptz.ai/og-image.png" />
         <meta name="twitter:creator" content="@siteoptz" />

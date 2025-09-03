@@ -128,7 +128,7 @@ export default function WordstreamReviewPage({ tool }: WordstreamReviewPageProps
     <>
       <Head>
         {/* Primary SEO Tags */}
-        <title>Wordstream Review:  | SiteOptz</title>
+        <title>Wordstream Review: AI-Powered Online Advertising | SiteOptz</title>
         <meta name="description" content="wordstream review. Compare Wordstream  features, pricing & alternatives. Expert analysis & user guide for 2025. Get started today!" />
         <meta name="keywords" content="wordstream review, wordstream pricing, wordstream features, wordstream vs competitors, wordstream alternatives" />
         <meta name="author" content="SiteOptz" />
@@ -139,7 +139,7 @@ export default function WordstreamReviewPage({ tool }: WordstreamReviewPageProps
         
         {/* Open Graph Meta Tags */}
         <meta property="og:type" content="article" />
-        <meta property="og:title" content="Wordstream Review:  | SiteOptz" />
+        <meta property="og:title" content="Wordstream Review: AI-Powered Online Advertising | SiteOptz" />
         <meta property="og:description" content="wordstream review. Compare Wordstream  features, pricing & alternatives. Expert analysis & user guide for 2025. Get started today!" />
         <meta property="og:url" content="https://siteoptz.ai/reviews/wordstream" />
         <meta property="og:site_name" content="SiteOptz" />
@@ -150,7 +150,7 @@ export default function WordstreamReviewPage({ tool }: WordstreamReviewPageProps
         
         {/* Twitter Card Tags */}
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Wordstream Review:  | SiteOptz" />
+        <meta name="twitter:title" content="Wordstream Review: AI-Powered Online Advertising | SiteOptz" />
         <meta name="twitter:description" content="wordstream review. Compare Wordstream  features, pricing & alternatives. Expert analysis & user guide for 2025. Get started today!" />
         <meta name="twitter:image" content="https://siteoptz.ai/og-image.png" />
         <meta name="twitter:creator" content="@siteoptz" />

@@ -128,7 +128,7 @@ export default function Lumen5ReviewPage({ tool }: Lumen5ReviewPageProps) {
     <>
       <Head>
         {/* Primary SEO Tags */}
-        <title>Lumen5 Review:  | SiteOptz</title>
+        <title>Lumen5 Review: AI Video Creation Platform | SiteOptz</title>
         <meta name="description" content="lumen5 review. Compare Lumen5  features, pricing & alternatives. Expert analysis & user guide for 2025. Get started today!" />
         <meta name="keywords" content="lumen5 review, lumen5 pricing, lumen5 features, lumen5 vs competitors, lumen5 alternatives" />
         <meta name="author" content="SiteOptz" />
@@ -139,7 +139,7 @@ export default function Lumen5ReviewPage({ tool }: Lumen5ReviewPageProps) {
         
         {/* Open Graph Meta Tags */}
         <meta property="og:type" content="article" />
-        <meta property="og:title" content="Lumen5 Review:  | SiteOptz" />
+        <meta property="og:title" content="Lumen5 Review: AI Video Creation Platform | SiteOptz" />
         <meta property="og:description" content="lumen5 review. Compare Lumen5  features, pricing & alternatives. Expert analysis & user guide for 2025. Get started today!" />
         <meta property="og:url" content="https://siteoptz.ai/reviews/lumen5" />
         <meta property="og:site_name" content="SiteOptz" />
@@ -150,7 +150,7 @@ export default function Lumen5ReviewPage({ tool }: Lumen5ReviewPageProps) {
         
         {/* Twitter Card Tags */}
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Lumen5 Review:  | SiteOptz" />
+        <meta name="twitter:title" content="Lumen5 Review: AI Video Creation Platform | SiteOptz" />
         <meta name="twitter:description" content="lumen5 review. Compare Lumen5  features, pricing & alternatives. Expert analysis & user guide for 2025. Get started today!" />
         <meta name="twitter:image" content="https://siteoptz.ai/og-image.png" />
         <meta name="twitter:creator" content="@siteoptz" />

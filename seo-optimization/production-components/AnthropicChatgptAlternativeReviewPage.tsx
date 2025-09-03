@@ -128,7 +128,7 @@ export default function AnthropicChatgptAlternativeReviewPage({ tool }: Anthropi
     <>
       <Head>
         {/* Primary SEO Tags */}
-        <title>Character.AI Review:  | SiteOptz</title>
+        <title>Character.AI Review: AI Tool | SiteOptz</title>
         <meta name="description" content="character.ai review. Compare Character.AI  features, pricing & alternatives. Expert analysis & user guide for 2025. Get started today!" />
         <meta name="keywords" content="character.ai review, character.ai pricing, character.ai features, character.ai vs competitors, character.ai alternatives" />
         <meta name="author" content="SiteOptz" />
@@ -139,7 +139,7 @@ export default function AnthropicChatgptAlternativeReviewPage({ tool }: Anthropi
         
         {/* Open Graph Meta Tags */}
         <meta property="og:type" content="article" />
-        <meta property="og:title" content="Character.AI Review:  | SiteOptz" />
+        <meta property="og:title" content="Character.AI Review: AI Tool | SiteOptz" />
         <meta property="og:description" content="character.ai review. Compare Character.AI  features, pricing & alternatives. Expert analysis & user guide for 2025. Get started today!" />
         <meta property="og:url" content="https://siteoptz.ai/reviews/anthropic-chatgpt-alternative" />
         <meta property="og:site_name" content="SiteOptz" />
@@ -150,7 +150,7 @@ export default function AnthropicChatgptAlternativeReviewPage({ tool }: Anthropi
         
         {/* Twitter Card Tags */}
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Character.AI Review:  | SiteOptz" />
+        <meta name="twitter:title" content="Character.AI Review: AI Tool | SiteOptz" />
         <meta name="twitter:description" content="character.ai review. Compare Character.AI  features, pricing & alternatives. Expert analysis & user guide for 2025. Get started today!" />
         <meta name="twitter:image" content="https://siteoptz.ai/og-image.png" />
         <meta name="twitter:creator" content="@siteoptz" />

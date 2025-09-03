@@ -128,7 +128,7 @@ export default function SpeechmaticsReviewPage({ tool }: SpeechmaticsReviewPageP
     <>
       <Head>
         {/* Primary SEO Tags */}
-        <title>Speechmatics Review:  | SiteOptz</title>
+        <title>Speechmatics Review: Enterprise Voice AI Platform | SiteOptz</title>
         <meta name="description" content="speechmatics review. Compare Speechmatics  features, pricing & alternatives. Expert analysis & user guide for 2025. Get started today!" />
         <meta name="keywords" content="speechmatics review, speechmatics pricing, speechmatics features, speechmatics vs competitors, speechmatics alternatives" />
         <meta name="author" content="SiteOptz" />
@@ -139,7 +139,7 @@ export default function SpeechmaticsReviewPage({ tool }: SpeechmaticsReviewPageP
         
         {/* Open Graph Meta Tags */}
         <meta property="og:type" content="article" />
-        <meta property="og:title" content="Speechmatics Review:  | SiteOptz" />
+        <meta property="og:title" content="Speechmatics Review: Enterprise Voice AI Platform | SiteOptz" />
         <meta property="og:description" content="speechmatics review. Compare Speechmatics  features, pricing & alternatives. Expert analysis & user guide for 2025. Get started today!" />
         <meta property="og:url" content="https://siteoptz.ai/reviews/speechmatics" />
         <meta property="og:site_name" content="SiteOptz" />
@@ -150,7 +150,7 @@ export default function SpeechmaticsReviewPage({ tool }: SpeechmaticsReviewPageP
         
         {/* Twitter Card Tags */}
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Speechmatics Review:  | SiteOptz" />
+        <meta name="twitter:title" content="Speechmatics Review: Enterprise Voice AI Platform | SiteOptz" />
         <meta name="twitter:description" content="speechmatics review. Compare Speechmatics  features, pricing & alternatives. Expert analysis & user guide for 2025. Get started today!" />
         <meta name="twitter:image" content="https://siteoptz.ai/og-image.png" />
         <meta name="twitter:creator" content="@siteoptz" />

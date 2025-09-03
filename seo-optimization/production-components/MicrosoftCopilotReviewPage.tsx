@@ -128,7 +128,7 @@ export default function MicrosoftCopilotReviewPage({ tool }: MicrosoftCopilotRev
     <>
       <Head>
         {/* Primary SEO Tags */}
-        <title>Microsoft Copilot Review:  | SiteOptz</title>
+        <title>Microsoft Copilot Review: AI Assistant for Office | SiteOptz</title>
         <meta name="description" content="microsoft copilot review. Compare Microsoft Copilot  features, pricing & alternatives. Expert analysis & user guide for 2025. Get started today!" />
         <meta name="keywords" content="microsoft copilot review, microsoft copilot pricing, microsoft copilot features, microsoft copilot vs competitors, microsoft copilot alternatives" />
         <meta name="author" content="SiteOptz" />
@@ -139,7 +139,7 @@ export default function MicrosoftCopilotReviewPage({ tool }: MicrosoftCopilotRev
         
         {/* Open Graph Meta Tags */}
         <meta property="og:type" content="article" />
-        <meta property="og:title" content="Microsoft Copilot Review:  | SiteOptz" />
+        <meta property="og:title" content="Microsoft Copilot Review: AI Assistant for Office | SiteOptz" />
         <meta property="og:description" content="microsoft copilot review. Compare Microsoft Copilot  features, pricing & alternatives. Expert analysis & user guide for 2025. Get started today!" />
         <meta property="og:url" content="https://siteoptz.ai/reviews/microsoft-copilot" />
         <meta property="og:site_name" content="SiteOptz" />
@@ -150,7 +150,7 @@ export default function MicrosoftCopilotReviewPage({ tool }: MicrosoftCopilotRev
         
         {/* Twitter Card Tags */}
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Microsoft Copilot Review:  | SiteOptz" />
+        <meta name="twitter:title" content="Microsoft Copilot Review: AI Assistant for Office | SiteOptz" />
         <meta name="twitter:description" content="microsoft copilot review. Compare Microsoft Copilot  features, pricing & alternatives. Expert analysis & user guide for 2025. Get started today!" />
         <meta name="twitter:image" content="https://siteoptz.ai/og-image.png" />
         <meta name="twitter:creator" content="@siteoptz" />

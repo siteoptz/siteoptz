@@ -128,7 +128,7 @@ export default function PpcIoReviewPage({ tool }: PpcIoReviewPageProps) {
     <>
       <Head>
         {/* Primary SEO Tags */}
-        <title>PPC IO Review:  | SiteOptz</title>
+        <title>PPC IO Review: AI PPC Optimization Tool | SiteOptz</title>
         <meta name="description" content="ppc io review. Compare PPC IO  features, pricing & alternatives. Expert analysis & user guide for 2025. Get started today!" />
         <meta name="keywords" content="ppc io review, ppc io pricing, ppc io features, ppc io vs competitors, ppc io alternatives" />
         <meta name="author" content="SiteOptz" />
@@ -139,7 +139,7 @@ export default function PpcIoReviewPage({ tool }: PpcIoReviewPageProps) {
         
         {/* Open Graph Meta Tags */}
         <meta property="og:type" content="article" />
-        <meta property="og:title" content="PPC IO Review:  | SiteOptz" />
+        <meta property="og:title" content="PPC IO Review: AI PPC Optimization Tool | SiteOptz" />
         <meta property="og:description" content="ppc io review. Compare PPC IO  features, pricing & alternatives. Expert analysis & user guide for 2025. Get started today!" />
         <meta property="og:url" content="https://siteoptz.ai/reviews/ppc-io" />
         <meta property="og:site_name" content="SiteOptz" />
@@ -150,7 +150,7 @@ export default function PpcIoReviewPage({ tool }: PpcIoReviewPageProps) {
         
         {/* Twitter Card Tags */}
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="PPC IO Review:  | SiteOptz" />
+        <meta name="twitter:title" content="PPC IO Review: AI PPC Optimization Tool | SiteOptz" />
         <meta name="twitter:description" content="ppc io review. Compare PPC IO  features, pricing & alternatives. Expert analysis & user guide for 2025. Get started today!" />
         <meta name="twitter:image" content="https://siteoptz.ai/og-image.png" />
         <meta name="twitter:creator" content="@siteoptz" />

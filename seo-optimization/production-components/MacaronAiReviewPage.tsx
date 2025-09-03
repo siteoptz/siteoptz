@@ -128,7 +128,7 @@ export default function MacaronAiReviewPage({ tool }: MacaronAiReviewPageProps) 
     <>
       <Head>
         {/* Primary SEO Tags */}
-        <title>Macaron AI Review:  | SiteOptz</title>
+        <title>Macaron AI Review: Personal AI Agent | SiteOptz</title>
         <meta name="description" content="macaron ai review. Compare Macaron AI  features, pricing & alternatives. Expert analysis & user guide for 2025. Get started today!" />
         <meta name="keywords" content="macaron ai review, macaron ai pricing, macaron ai features, macaron ai vs competitors, macaron ai alternatives" />
         <meta name="author" content="SiteOptz" />
@@ -139,7 +139,7 @@ export default function MacaronAiReviewPage({ tool }: MacaronAiReviewPageProps) 
         
         {/* Open Graph Meta Tags */}
         <meta property="og:type" content="article" />
-        <meta property="og:title" content="Macaron AI Review:  | SiteOptz" />
+        <meta property="og:title" content="Macaron AI Review: Personal AI Agent | SiteOptz" />
         <meta property="og:description" content="macaron ai review. Compare Macaron AI  features, pricing & alternatives. Expert analysis & user guide for 2025. Get started today!" />
         <meta property="og:url" content="https://siteoptz.ai/reviews/macaron-ai" />
         <meta property="og:site_name" content="SiteOptz" />
@@ -150,7 +150,7 @@ export default function MacaronAiReviewPage({ tool }: MacaronAiReviewPageProps) 
         
         {/* Twitter Card Tags */}
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Macaron AI Review:  | SiteOptz" />
+        <meta name="twitter:title" content="Macaron AI Review: Personal AI Agent | SiteOptz" />
         <meta name="twitter:description" content="macaron ai review. Compare Macaron AI  features, pricing & alternatives. Expert analysis & user guide for 2025. Get started today!" />
         <meta name="twitter:image" content="https://siteoptz.ai/og-image.png" />
         <meta name="twitter:creator" content="@siteoptz" />

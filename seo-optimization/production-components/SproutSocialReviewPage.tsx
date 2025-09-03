@@ -128,7 +128,7 @@ export default function SproutSocialReviewPage({ tool }: SproutSocialReviewPageP
     <>
       <Head>
         {/* Primary SEO Tags */}
-        <title>Sprout Social Review:  | SiteOptz</title>
+        <title>Sprout Social Review: Enterprise Social Media Management | SiteOptz</title>
         <meta name="description" content="sprout social review. Compare Sprout Social  features, pricing & alternatives. Expert analysis & user guide for 2025. Get started today!" />
         <meta name="keywords" content="sprout social review, sprout social pricing, sprout social features, sprout social vs competitors, sprout social alternatives" />
         <meta name="author" content="SiteOptz" />
@@ -139,7 +139,7 @@ export default function SproutSocialReviewPage({ tool }: SproutSocialReviewPageP
         
         {/* Open Graph Meta Tags */}
         <meta property="og:type" content="article" />
-        <meta property="og:title" content="Sprout Social Review:  | SiteOptz" />
+        <meta property="og:title" content="Sprout Social Review: Enterprise Social Media Management | SiteOptz" />
         <meta property="og:description" content="sprout social review. Compare Sprout Social  features, pricing & alternatives. Expert analysis & user guide for 2025. Get started today!" />
         <meta property="og:url" content="https://siteoptz.ai/reviews/sprout-social" />
         <meta property="og:site_name" content="SiteOptz" />
@@ -150,7 +150,7 @@ export default function SproutSocialReviewPage({ tool }: SproutSocialReviewPageP
         
         {/* Twitter Card Tags */}
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Sprout Social Review:  | SiteOptz" />
+        <meta name="twitter:title" content="Sprout Social Review: Enterprise Social Media Management | SiteOptz" />
         <meta name="twitter:description" content="sprout social review. Compare Sprout Social  features, pricing & alternatives. Expert analysis & user guide for 2025. Get started today!" />
         <meta name="twitter:image" content="https://siteoptz.ai/og-image.png" />
         <meta name="twitter:creator" content="@siteoptz" />

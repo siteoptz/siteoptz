@@ -128,7 +128,7 @@ export default function HootsuiteAiReviewPage({ tool }: HootsuiteAiReviewPagePro
     <>
       <Head>
         {/* Primary SEO Tags */}
-        <title>Hootsuite AI Review:  | SiteOptz</title>
+        <title>Hootsuite AI Review: AI Tool | SiteOptz</title>
         <meta name="description" content="hootsuite ai review. Compare Hootsuite AI  features, pricing & alternatives. Expert analysis & user guide for 2025. Get started today!" />
         <meta name="keywords" content="hootsuite ai review, hootsuite ai pricing, hootsuite ai features, hootsuite ai vs competitors, hootsuite ai alternatives" />
         <meta name="author" content="SiteOptz" />
@@ -139,7 +139,7 @@ export default function HootsuiteAiReviewPage({ tool }: HootsuiteAiReviewPagePro
         
         {/* Open Graph Meta Tags */}
         <meta property="og:type" content="article" />
-        <meta property="og:title" content="Hootsuite AI Review:  | SiteOptz" />
+        <meta property="og:title" content="Hootsuite AI Review: AI Tool | SiteOptz" />
         <meta property="og:description" content="hootsuite ai review. Compare Hootsuite AI  features, pricing & alternatives. Expert analysis & user guide for 2025. Get started today!" />
         <meta property="og:url" content="https://siteoptz.ai/reviews/hootsuite-ai" />
         <meta property="og:site_name" content="SiteOptz" />
@@ -150,7 +150,7 @@ export default function HootsuiteAiReviewPage({ tool }: HootsuiteAiReviewPagePro
         
         {/* Twitter Card Tags */}
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Hootsuite AI Review:  | SiteOptz" />
+        <meta name="twitter:title" content="Hootsuite AI Review: AI Tool | SiteOptz" />
         <meta name="twitter:description" content="hootsuite ai review. Compare Hootsuite AI  features, pricing & alternatives. Expert analysis & user guide for 2025. Get started today!" />
         <meta name="twitter:image" content="https://siteoptz.ai/og-image.png" />
         <meta name="twitter:creator" content="@siteoptz" />

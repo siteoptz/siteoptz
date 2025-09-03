@@ -128,7 +128,7 @@ export default function LookerReviewPage({ tool }: LookerReviewPageProps) {
     <>
       <Head>
         {/* Primary SEO Tags */}
-        <title>Looker Review:  | SiteOptz</title>
+        <title>Looker Review: Google Analytics Platform | SiteOptz</title>
         <meta name="description" content="looker review. Compare Looker  features, pricing & alternatives. Expert analysis & user guide for 2025. Get started today!" />
         <meta name="keywords" content="looker review, looker pricing, looker features, looker vs competitors, looker alternatives" />
         <meta name="author" content="SiteOptz" />
@@ -139,7 +139,7 @@ export default function LookerReviewPage({ tool }: LookerReviewPageProps) {
         
         {/* Open Graph Meta Tags */}
         <meta property="og:type" content="article" />
-        <meta property="og:title" content="Looker Review:  | SiteOptz" />
+        <meta property="og:title" content="Looker Review: Google Analytics Platform | SiteOptz" />
         <meta property="og:description" content="looker review. Compare Looker  features, pricing & alternatives. Expert analysis & user guide for 2025. Get started today!" />
         <meta property="og:url" content="https://siteoptz.ai/reviews/looker" />
         <meta property="og:site_name" content="SiteOptz" />
@@ -150,7 +150,7 @@ export default function LookerReviewPage({ tool }: LookerReviewPageProps) {
         
         {/* Twitter Card Tags */}
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Looker Review:  | SiteOptz" />
+        <meta name="twitter:title" content="Looker Review: Google Analytics Platform | SiteOptz" />
         <meta name="twitter:description" content="looker review. Compare Looker  features, pricing & alternatives. Expert analysis & user guide for 2025. Get started today!" />
         <meta name="twitter:image" content="https://siteoptz.ai/og-image.png" />
         <meta name="twitter:creator" content="@siteoptz" />

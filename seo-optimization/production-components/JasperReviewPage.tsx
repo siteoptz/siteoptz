@@ -128,7 +128,7 @@ export default function JasperReviewPage({ tool }: JasperReviewPageProps) {
     <>
       <Head>
         {/* Primary SEO Tags */}
-        <title>Jasper Review:  | SiteOptz</title>
+        <title>Jasper Review: AI Writing Assistant | SiteOptz</title>
         <meta name="description" content="jasper review. Compare Jasper  features, pricing & alternatives. Expert analysis & user guide for 2025. Get started today!" />
         <meta name="keywords" content="jasper review, jasper pricing, jasper features, jasper vs competitors, jasper alternatives" />
         <meta name="author" content="SiteOptz" />
@@ -139,7 +139,7 @@ export default function JasperReviewPage({ tool }: JasperReviewPageProps) {
         
         {/* Open Graph Meta Tags */}
         <meta property="og:type" content="article" />
-        <meta property="og:title" content="Jasper Review:  | SiteOptz" />
+        <meta property="og:title" content="Jasper Review: AI Writing Assistant | SiteOptz" />
         <meta property="og:description" content="jasper review. Compare Jasper  features, pricing & alternatives. Expert analysis & user guide for 2025. Get started today!" />
         <meta property="og:url" content="https://siteoptz.ai/reviews/jasper" />
         <meta property="og:site_name" content="SiteOptz" />
@@ -150,7 +150,7 @@ export default function JasperReviewPage({ tool }: JasperReviewPageProps) {
         
         {/* Twitter Card Tags */}
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Jasper Review:  | SiteOptz" />
+        <meta name="twitter:title" content="Jasper Review: AI Writing Assistant | SiteOptz" />
         <meta name="twitter:description" content="jasper review. Compare Jasper  features, pricing & alternatives. Expert analysis & user guide for 2025. Get started today!" />
         <meta name="twitter:image" content="https://siteoptz.ai/og-image.png" />
         <meta name="twitter:creator" content="@siteoptz" />

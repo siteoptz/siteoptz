@@ -128,7 +128,7 @@ export default function RevReviewPage({ tool }: RevReviewPageProps) {
     <>
       <Head>
         {/* Primary SEO Tags */}
-        <title>Rev Review:  | SiteOptz</title>
+        <title>Rev Review: AI Transcription Service | SiteOptz</title>
         <meta name="description" content="rev review. Compare Rev  features, pricing & alternatives. Expert analysis & user guide for 2025. Get started today!" />
         <meta name="keywords" content="rev review, rev pricing, rev features, rev vs competitors, rev alternatives" />
         <meta name="author" content="SiteOptz" />
@@ -139,7 +139,7 @@ export default function RevReviewPage({ tool }: RevReviewPageProps) {
         
         {/* Open Graph Meta Tags */}
         <meta property="og:type" content="article" />
-        <meta property="og:title" content="Rev Review:  | SiteOptz" />
+        <meta property="og:title" content="Rev Review: AI Transcription Service | SiteOptz" />
         <meta property="og:description" content="rev review. Compare Rev  features, pricing & alternatives. Expert analysis & user guide for 2025. Get started today!" />
         <meta property="og:url" content="https://siteoptz.ai/reviews/rev" />
         <meta property="og:site_name" content="SiteOptz" />
@@ -150,7 +150,7 @@ export default function RevReviewPage({ tool }: RevReviewPageProps) {
         
         {/* Twitter Card Tags */}
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Rev Review:  | SiteOptz" />
+        <meta name="twitter:title" content="Rev Review: AI Transcription Service | SiteOptz" />
         <meta name="twitter:description" content="rev review. Compare Rev  features, pricing & alternatives. Expert analysis & user guide for 2025. Get started today!" />
         <meta name="twitter:image" content="https://siteoptz.ai/og-image.png" />
         <meta name="twitter:creator" content="@siteoptz" />

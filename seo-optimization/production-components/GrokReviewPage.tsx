@@ -128,7 +128,7 @@ export default function GrokReviewPage({ tool }: GrokReviewPageProps) {
     <>
       <Head>
         {/* Primary SEO Tags */}
-        <title>Grok Review:  | SiteOptz</title>
+        <title>Grok Review: AI Tool | SiteOptz</title>
         <meta name="description" content="grok review. Compare Grok  features, pricing & alternatives. Expert analysis & user guide for 2025. Get started today!" />
         <meta name="keywords" content="grok review, grok pricing, grok features, grok vs competitors, grok alternatives" />
         <meta name="author" content="SiteOptz" />
@@ -139,7 +139,7 @@ export default function GrokReviewPage({ tool }: GrokReviewPageProps) {
         
         {/* Open Graph Meta Tags */}
         <meta property="og:type" content="article" />
-        <meta property="og:title" content="Grok Review:  | SiteOptz" />
+        <meta property="og:title" content="Grok Review: AI Tool | SiteOptz" />
         <meta property="og:description" content="grok review. Compare Grok  features, pricing & alternatives. Expert analysis & user guide for 2025. Get started today!" />
         <meta property="og:url" content="https://siteoptz.ai/reviews/grok" />
         <meta property="og:site_name" content="SiteOptz" />
@@ -150,7 +150,7 @@ export default function GrokReviewPage({ tool }: GrokReviewPageProps) {
         
         {/* Twitter Card Tags */}
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Grok Review:  | SiteOptz" />
+        <meta name="twitter:title" content="Grok Review: AI Tool | SiteOptz" />
         <meta name="twitter:description" content="grok review. Compare Grok  features, pricing & alternatives. Expert analysis & user guide for 2025. Get started today!" />
         <meta name="twitter:image" content="https://siteoptz.ai/og-image.png" />
         <meta name="twitter:creator" content="@siteoptz" />
