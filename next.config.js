@@ -275,6 +275,18 @@ const nextConfig = {
         destination: '/compare',
         permanent: true,
       },
+      
+      // Category name corrections
+      {
+        source: '/categories/voice-ai-tools',
+        destination: '/categories/best-voice-ai-tools',
+        permanent: true,
+      },
+      {
+        source: '/categories/voice-ai-tools/',
+        destination: '/categories/best-voice-ai-tools',
+        permanent: true,
+      },
     ];
   },
   
