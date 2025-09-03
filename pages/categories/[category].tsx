@@ -143,19 +143,25 @@ export default function CategoryPage({ category, tools, content }: CategoryPageP
             __html: JSON.stringify({
               "@context": "https://schema.org",
               "@type": "CollectionPage",
+              "@id": `https://siteoptz.ai/categories/${categorySlug}`,
               "name": content.seo.title,
               "description": content.seo.description,
               "url": `https://siteoptz.ai/categories/${categorySlug}`,
               "mainEntity": {
                 "@type": "ItemList",
+                "@id": `https://siteoptz.ai/categories/${categorySlug}#itemlist`,
+                "name": `${category} Tools Collection`,
+                "description": `Curated list of the best ${category.toLowerCase()} tools`,
                 "numberOfItems": tools.length,
                 "itemListElement": topTools.map((tool: any, index: number) => ({
                   "@type": "SoftwareApplication",
+                  "@id": `https://siteoptz.ai/reviews/${tool.tool_name?.toLowerCase().replace(/[^a-z0-9]+/g, '-')}`,
                   "position": index + 1,
                   "name": tool.tool_name,
                   "description": tool.description,
                   "applicationCategory": category,
                   "operatingSystem": "Web Browser",
+                  "url": tool.website || `https://siteoptz.ai/reviews/${tool.tool_name?.toLowerCase().replace(/[^a-z0-9]+/g, '-')}`,
                   "offers": {
                     "@type": "Offer",
                     "price": tool.pricing?.monthly === 0 ? "0" : 
