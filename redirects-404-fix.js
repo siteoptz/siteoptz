@@ -1,5 +1,27 @@
 // Comprehensive redirects for all 404 URLs
 const redirects404Fix = [
+  // HIGH PRIORITY: Specific non-existent tool redirects (must be first)
+  {
+    source: '/compare/google-ads/vs/microsoft-ads',
+    destination: '/tools/google-ads',
+    permanent: true,
+  },
+  {
+    source: '/compare/google-ads/vs/facebook-ads',
+    destination: '/tools/google-ads',
+    permanent: true,
+  },
+  {
+    source: '/compare/facebook-ads/vs/google-ads',
+    destination: '/tools/google-ads',
+    permanent: true,
+  },
+  {
+    source: '/compare/microsoft-ads/vs/google-ads',
+    destination: '/tools/google-ads',
+    permanent: true,
+  },
+
   // Tool redirects - map to existing tools or fallback
   {
     source: '/tools/copy.ai',
@@ -1155,28 +1177,6 @@ const redirects404Fix = [
   {
     source: '/compare/:tool/vs/alternatives',
     destination: '/compare',
-    permanent: true,
-  },
-  
-  // Redirect specific comparisons with non-existent tools
-  {
-    source: '/compare/google-ads/vs/microsoft-ads',
-    destination: '/tools/google-ads',
-    permanent: true,
-  },
-  {
-    source: '/compare/google-ads/vs/facebook-ads',
-    destination: '/tools/google-ads',
-    permanent: true,
-  },
-  {
-    source: '/compare/facebook-ads/vs/google-ads',
-    destination: '/tools/google-ads',
-    permanent: true,
-  },
-  {
-    source: '/compare/microsoft-ads/vs/google-ads',
-    destination: '/tools/google-ads',
     permanent: true,
   },
   {
