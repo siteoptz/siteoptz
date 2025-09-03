@@ -255,7 +255,7 @@ export default function ReviewPage({ tool, pageTitle, slug, relatedTools, relate
         />
         
         {/* Canonical URL */}
-        <link rel="canonical" href={`https://siteoptz.com/reviews/${slug}`} />
+        <link rel="canonical" href={`https://siteoptz.ai/reviews/${slug}`} />
       </Head>
 
       <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-black relative overflow-hidden">

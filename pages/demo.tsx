@@ -1,5 +1,6 @@
 import { GetStaticProps } from 'next';
 import { useState } from 'react';
+import Head from 'next/head';
 import ToolComparisonTable from '../components/ToolComparisonTable';
 import PricingCalculator from '../components/PricingCalculator';
 import PricingCalculatorSimple from '../components/PricingCalculatorSimple';
@@ -44,7 +45,18 @@ export default function DemoPage({ tools, faqs }: DemoPageProps) {
   };
 
   return (
-    <div className="min-h-screen bg-gray-50">
+    <>
+      <Head>
+        <title>AI Tools Demo - Try Before You Buy | SiteOptz.ai</title>
+        <meta 
+          name="description" 
+          content="Experience AI tools with interactive demos, pricing calculators, and feature comparisons. Test functionality and find the perfect solution for your needs." 
+        />
+        <meta name="keywords" content="AI tools demo, interactive pricing calculator, tool comparison, test AI tools" />
+        <link rel="canonical" href="https://siteoptz.ai/demo" />
+      </Head>
+
+      <div className="min-h-screen bg-gray-50">
       {/* Header */}
       <div className="bg-gradient-to-r from-blue-600 to-purple-600 text-white py-12">
         <div className="max-w-7xl mx-auto px-4">
@@ -338,6 +350,7 @@ const simplePricing = convertToSimplePricingFormat(tool.pricing);`}
         </section>
       </div>
     </div>
+    </>
   );
 }
 

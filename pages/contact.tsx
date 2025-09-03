@@ -247,6 +247,7 @@ export default function ContactPage() {
           content="Contact SiteOptz for AI tool inquiries, partnerships, support, or feedback. We&apos;re here to help you find the perfect AI solution." 
         />
         <meta name="keywords" content="contact SiteOptz, AI tools support, partnership inquiries, feedback" />
+        <link rel="canonical" href="https://siteoptz.ai/contact" />
       </Head>
 
       <main className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-black relative overflow-hidden">
