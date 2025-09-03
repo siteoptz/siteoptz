@@ -319,12 +319,14 @@ export default function HomePage({ featuredTools, popularComparisons, faqs }: Ho
                   </li>
                 </ul>
                 
-                <Link 
-                  href="/contact"
+                <a 
+                  href="https://api.leadconnectorhq.com/widget/booking/yPjkVmsauPst8XlrOQUl"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="block w-full text-center px-6 py-3 bg-gradient-to-r from-cyan-600 to-blue-600 text-white font-semibold rounded-xl hover:from-cyan-700 hover:to-blue-700 transition-all duration-200 group-hover:scale-105"
                 >
                   Get Started
-                </Link>
+                </a>
               </div>
 
               {/* Professional Package */}
@@ -359,12 +361,14 @@ export default function HomePage({ featuredTools, popularComparisons, faqs }: Ho
                   </li>
                 </ul>
                 
-                <Link 
-                  href="/contact"
+                <a 
+                  href="https://api.leadconnectorhq.com/widget/booking/yPjkVmsauPst8XlrOQUl"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="block w-full text-center px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-bold rounded-xl hover:from-cyan-400 hover:to-blue-500 transition-all duration-200 group-hover:scale-105 shadow-lg"
                 >
                   Get Started
-                </Link>
+                </a>
               </div>
 
               {/* Enterprise Package */}
@@ -395,12 +399,14 @@ export default function HomePage({ featuredTools, popularComparisons, faqs }: Ho
                   </li>
                 </ul>
                 
-                <Link 
-                  href="/contact"
+                <a 
+                  href="https://api.leadconnectorhq.com/widget/booking/yPjkVmsauPst8XlrOQUl"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="block w-full text-center px-6 py-3 bg-gradient-to-r from-purple-600 to-violet-600 text-white font-semibold rounded-xl hover:from-purple-700 hover:to-violet-700 transition-all duration-200 group-hover:scale-105"
                 >
                   Contact Sales
-                </Link>
+                </a>
               </div>
             </div>
           </div>
@@ -636,14 +642,16 @@ export default function HomePage({ featuredTools, popularComparisons, faqs }: Ho
             </p>
             
             <div className="flex flex-col sm:flex-row gap-6 justify-center items-center mb-12">
-              <Link 
-                href="/contact"
+              <a 
+                href="https://api.leadconnectorhq.com/widget/booking/yPjkVmsauPst8XlrOQUl"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="group inline-flex items-center gap-3 px-12 py-6 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-bold text-xl rounded-2xl hover:from-cyan-400 hover:to-blue-500 transition-all duration-300 shadow-2xl hover:shadow-cyan-500/25 transform hover:scale-105"
               >
                 <Calendar className="w-6 h-6 group-hover:animate-bounce" />
                 Book Free Strategy Session
                 <ArrowRight className="w-6 h-6 group-hover:translate-x-1 transition-transform" />
-              </Link>
+              </a>
               <Link 
                 href="/tools"
                 className="inline-flex items-center gap-3 px-8 py-4 bg-white/10 backdrop-blur-md border border-white/20 text-white font-semibold text-lg rounded-2xl hover:bg-white/15 transition-all duration-300"

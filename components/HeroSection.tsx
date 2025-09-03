@@ -40,14 +40,16 @@ const HeroSection: React.FC = () => {
 
           {/* Primary CTA */}
           <div className="mb-8">
-            <Link 
-              href="/contact"
+            <a 
+              href="https://api.leadconnectorhq.com/widget/booking/yPjkVmsauPst8XlrOQUl"
+              target="_blank"
+              rel="noopener noreferrer"
               className="group inline-flex items-center gap-3 px-12 py-6 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-bold text-xl rounded-2xl hover:from-cyan-400 hover:to-blue-500 transition-all duration-300 shadow-2xl hover:shadow-cyan-500/25 transform hover:scale-105"
             >
               <Calendar className="w-6 h-6 group-hover:animate-bounce" />
               Book Free Strategy Session
               <ArrowRight className="w-6 h-6 group-hover:translate-x-1 transition-transform" />
-            </Link>
+            </a>
           </div>
 
           {/* Secondary CTA */}
