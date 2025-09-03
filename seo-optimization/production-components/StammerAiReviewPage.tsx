@@ -279,6 +279,30 @@ export default function StammerAiReviewPage() {
           </div>
         </section>
 
+        
+
+
+        {/* Final CTA Section */}
+        <section className="relative z-10 py-20">
+          <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
+            <div className="bg-gradient-to-r from-blue-900/20 to-purple-900/20 border border-gray-800 rounded-2xl p-12">
+              <h2 className="text-4xl font-bold text-white mb-6">
+                Ready to Get Started with Stammer AI?
+              </h2>
+              <p className="text-xl text-gray-300 mb-8">
+                Join thousands of professionals using Stammer AI to enhance their ai tools workflows.
+              </p>
+              <div className="flex justify-center">
+<Link href="/contact"
+                  className="bg-gradient-to-r from-blue-600 to-purple-600 text-white hover:from-blue-700 hover:to-purple-700 font-bold py-4 px-8 rounded-lg transform hover:scale-105 transition-all duration-200 shadow-lg hover:shadow-xl"
+                >
+                  Talk to an AI Expert
+                </Link>
+              </div>
+            </div>
+          </div>
+        </section>
+
         {/* Main Content Sections */}
         <section className="relative z-10 py-16">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -471,27 +495,6 @@ export default function StammerAiReviewPage() {
                   <p className="text-gray-300">Side-by-side comparisons with alternatives</p>
                 </div>
               </Link>
-            </div>
-          </div>
-        </section>
-
-        {/* Final CTA Section */}
-        <section className="relative z-10 py-20">
-          <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
-            <div className="bg-gradient-to-r from-blue-900/20 to-purple-900/20 border border-gray-800 rounded-2xl p-12">
-              <h2 className="text-4xl font-bold text-white mb-6">
-                Ready to Get Started with Stammer AI?
-              </h2>
-              <p className="text-xl text-gray-300 mb-8">
-                Join thousands of professionals using Stammer AI to enhance their ai tools workflows.
-              </p>
-              <div className="flex justify-center">
-<Link href="/contact"
-                  className="bg-gradient-to-r from-blue-600 to-purple-600 text-white hover:from-blue-700 hover:to-purple-700 font-bold py-4 px-8 rounded-lg transform hover:scale-105 transition-all duration-200 shadow-lg hover:shadow-xl"
-                >
-                  Talk to an AI Expert
-                </Link>
-              </div>
             </div>
           </div>
         </section>

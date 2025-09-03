@@ -322,6 +322,32 @@ export default function AnthropicChatgptAlternativeReviewPage({ tool }: Anthropi
           </div>
         </section>
 
+        
+
+
+        {/* Final CTA Section */}
+        <section className="relative z-10 py-20">
+          <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
+            <div className="bg-gradient-to-r from-blue-900/20 to-purple-900/20 border border-gray-800 rounded-2xl p-12">
+              <h2 className="text-4xl font-bold text-white mb-6">
+                Ready to Get Started with Character.AI?
+              </h2>
+              <p className="text-xl text-gray-300 mb-8">
+                Join thousands of professionals using Character.AI to streamline their image generation workflows.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+<Link href="https://character.ai"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="bg-gradient-to-r from-blue-600 to-purple-600 text-white hover:from-blue-700 hover:to-purple-700 font-bold py-4 px-8 rounded-lg transform hover:scale-105 transition-all duration-200 shadow-lg hover:shadow-xl"
+                >
+                  Schedule a Meeting With an AI Specialist
+                </Link>
+              </div>
+            </div>
+          </div>
+        </section>
+
         {/* Main Content Sections */}
         <section className="relative z-10 py-16">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -551,29 +577,6 @@ export default function AnthropicChatgptAlternativeReviewPage({ tool }: Anthropi
                   Contact Our AI Experts
                   </a>
                 </div>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* Final CTA Section */}
-        <section className="relative z-10 py-20">
-          <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
-            <div className="bg-gradient-to-r from-blue-900/20 to-purple-900/20 border border-gray-800 rounded-2xl p-12">
-              <h2 className="text-4xl font-bold text-white mb-6">
-                Ready to Get Started with Character.AI?
-              </h2>
-              <p className="text-xl text-gray-300 mb-8">
-                Join thousands of professionals using Character.AI to streamline their image generation workflows.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-<Link href="https://character.ai"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="bg-gradient-to-r from-blue-600 to-purple-600 text-white hover:from-blue-700 hover:to-purple-700 font-bold py-4 px-8 rounded-lg transform hover:scale-105 transition-all duration-200 shadow-lg hover:shadow-xl"
-                >
-                  Schedule a Meeting With an AI Specialist
-                </Link>
               </div>
             </div>
           </div>
