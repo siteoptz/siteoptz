@@ -539,6 +539,29 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
     const tool1Slug = comparison[0];
     const tool2Slug = comparison[2];
     
+    // Handle redirects for non-existent ad platform tools
+    const nonExistentAdTools = ['facebook-ads', 'microsoft-ads', 'bing-ads'];
+    
+    // If either tool is a non-existent ad platform, redirect appropriately
+    if (nonExistentAdTools.includes(tool1Slug) || nonExistentAdTools.includes(tool2Slug)) {
+      // If google-ads is one of the tools, redirect to google-ads tool page
+      if (tool1Slug === 'google-ads' || tool2Slug === 'google-ads') {
+        return {
+          redirect: {
+            destination: '/tools/google-ads',
+            permanent: true,
+          },
+        };
+      }
+      // Otherwise redirect to compare homepage
+      return {
+        redirect: {
+          destination: '/compare',
+          permanent: true,
+        },
+      };
+    }
+    
     // Load all tools using unified adapter
     const unifiedTools = loadUnifiedToolsData(fs, path);
     
