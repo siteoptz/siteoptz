@@ -5,7 +5,7 @@ const nextConfig = {
   compress: true,
   
   // Enable static site generation for better SEO and performance
-  trailingSlash: true,
+  trailingSlash: false,
   
   // Image optimization settings
   images: {
