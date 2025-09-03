@@ -1165,6 +1165,31 @@ const redirects404Fix = [
     permanent: true,
   },
   {
+    source: '/compare/google-ads/vs/facebook-ads',
+    destination: '/tools/google-ads',
+    permanent: true,
+  },
+  {
+    source: '/compare/facebook-ads/vs/google-ads',
+    destination: '/tools/google-ads',
+    permanent: true,
+  },
+  {
+    source: '/compare/microsoft-ads/vs/google-ads',
+    destination: '/tools/google-ads',
+    permanent: true,
+  },
+  {
+    source: '/compare/facebook-ads/vs/:tool',
+    destination: '/compare',
+    permanent: true,
+  },
+  {
+    source: '/compare/:tool/vs/facebook-ads',
+    destination: '/compare',
+    permanent: true,
+  },
+  {
     source: '/compare/microsoft-ads/vs/:tool',
     destination: '/compare',
     permanent: true,
