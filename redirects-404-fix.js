@@ -3,22 +3,22 @@ const redirects404Fix = [
   // HIGH PRIORITY: Specific non-existent tool redirects (must be first)
   {
     source: '/compare/google-ads/vs/microsoft-ads',
-    destination: '/tools/google-ads',
+    destination: '/compare',
     permanent: true,
   },
   {
     source: '/compare/google-ads/vs/facebook-ads',
-    destination: '/tools/google-ads',
+    destination: '/compare',
     permanent: true,
   },
   {
     source: '/compare/facebook-ads/vs/google-ads',
-    destination: '/tools/google-ads',
+    destination: '/compare',
     permanent: true,
   },
   {
     source: '/compare/microsoft-ads/vs/google-ads',
-    destination: '/tools/google-ads',
+    destination: '/compare',
     permanent: true,
   },
 
