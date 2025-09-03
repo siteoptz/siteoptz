@@ -227,6 +227,15 @@ const seoComponents: Record<string, () => Promise<{ default: ComponentType<SEOCo
   'submagic': () => import('../seo-optimization/production-components/SubmagicReviewPage'),
   'synthflow-ai': () => import('../seo-optimization/production-components/SynthflowAiReviewPage'),
   'morningscore': () => import('../seo-optimization/production-components/MorningscoreReviewPage'),
+  
+  // URL alias mappings for common variations
+  'videotube': () => import('../seo-optimization/production-components/VideotubeAiReviewPage'),
+  'kleap': () => import('../seo-optimization/production-components/KleapAiReviewPage'),
+  'otter.ai': () => import('../seo-optimization/production-components/OtteraiReviewPage'),
+  'explee': () => import('../seo-optimization/production-components/ExpleeAiReviewPage'),
+  'gemini-2.5': () => import('../seo-optimization/production-components/Gemini25ReviewPage'),
+  'midjourney-v6': () => import('../seo-optimization/production-components/MidjourneyReviewPage'),
+  'scite.ai': () => import('../seo-optimization/production-components/SciteAiReviewPage'),
 };
 
 // Check if a SEO-optimized component exists for a given slug
