@@ -484,12 +484,12 @@ export default function ReviewPage({ tool, pageTitle, slug, relatedTools, relate
                     </ul>
                     
                     <a
-                      href={tool.affiliate_link}
+                      href="https://api.leadconnectorhq.com/widget/booking/yPjkVmsauPst8XlrOQUl"
                       target="_blank"
-                      rel="noopener noreferrer sponsored"
+                      rel="noopener noreferrer"
                       className="block w-full bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white font-semibold py-3 px-6 rounded-lg transform hover:scale-105 transition-all duration-200 shadow-lg hover:shadow-xl text-center"
                     >
-                      Get Started
+                      Book Your Free AI Strategy Session
                     </a>
                   </div>
                   
@@ -518,12 +518,12 @@ export default function ReviewPage({ tool, pageTitle, slug, relatedTools, relate
                     </ul>
                     
                     <a
-                      href={tool.affiliate_link}
+                      href="https://api.leadconnectorhq.com/widget/booking/yPjkVmsauPst8XlrOQUl"
                       target="_blank"
-                      rel="noopener noreferrer sponsored"
+                      rel="noopener noreferrer"
                       className="block w-full bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white font-semibold py-3 px-6 rounded-lg transform hover:scale-105 transition-all duration-200 shadow-lg hover:shadow-xl text-center"
                     >
-                      Get Started
+                      Book Your Free AI Strategy Session
                     </a>
                   </div>
                   
@@ -550,12 +550,12 @@ export default function ReviewPage({ tool, pageTitle, slug, relatedTools, relate
                     </ul>
                     
                     <a
-                      href={tool.affiliate_link}
+                      href="https://api.leadconnectorhq.com/widget/booking/yPjkVmsauPst8XlrOQUl"
                       target="_blank"
-                      rel="noopener noreferrer sponsored"
+                      rel="noopener noreferrer"
                       className="block w-full bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white font-semibold py-3 px-6 rounded-lg transform hover:scale-105 transition-all duration-200 shadow-lg hover:shadow-xl text-center"
                     >
-                      Contact Sales
+                      Book Your Free AI Strategy Session
                     </a>
                   </div>
                 </div>
