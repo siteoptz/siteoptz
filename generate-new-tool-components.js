@@ -6,9 +6,16 @@ const path = require('path');
 console.log('🚀 Starting component generation for new AI tools...\n');
 
 function toPascalCase(str) {
-  return str.split('-').map(word => 
+  let result = str.split('-').map(word => 
     word.charAt(0).toUpperCase() + word.slice(1)
   ).join('');
+  
+  // If the result starts with a number, prefix with 'Tool'
+  if (/^[0-9]/.test(result)) {
+    result = 'Tool' + result;
+  }
+  
+  return result;
 }
 
 function generateProductionComponent(tool) {
