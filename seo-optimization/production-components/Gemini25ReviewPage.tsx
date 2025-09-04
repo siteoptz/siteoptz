@@ -336,7 +336,7 @@ export default function Gemini25ReviewPage({ tool }: Gemini25ReviewPageProps) {
                 Join thousands of professionals using Gemini 2.5 to streamline their image generation workflows.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-<Link href=""
+<Link href="https://api.leadconnectorhq.com/widget/booking/yPjkVmsauPst8XlrOQUl"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="bg-gradient-to-r from-blue-600 to-purple-600 text-white hover:from-blue-700 hover:to-purple-700 font-bold py-4 px-8 rounded-lg transform hover:scale-105 transition-all duration-200 shadow-lg hover:shadow-xl"

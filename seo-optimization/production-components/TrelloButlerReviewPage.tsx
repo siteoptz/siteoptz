@@ -336,7 +336,7 @@ export default function TrelloButlerReviewPage({ tool }: TrelloButlerReviewPageP
                 Join thousands of professionals using Trello Butler to streamline their productivity workflows.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-<Link href="https://trello.com/power-ups/butler"
+<Link href="https://api.leadconnectorhq.com/widget/booking/yPjkVmsauPst8XlrOQUl"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="bg-gradient-to-r from-blue-600 to-purple-600 text-white hover:from-blue-700 hover:to-purple-700 font-bold py-4 px-8 rounded-lg transform hover:scale-105 transition-all duration-200 shadow-lg hover:shadow-xl"
