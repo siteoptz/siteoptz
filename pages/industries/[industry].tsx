@@ -139,13 +139,15 @@ export default function IndustryPage({ industry, content, slug }: IndustryPagePr
               <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
                 {content.hero.subheadline}
               </p>
-              <Link
-                href="/contact"
+              <a
+                href="https://api.leadconnectorhq.com/widget/booking/yPjkVmsauPst8XlrOQUl"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-purple-700 transform hover:scale-105 transition-all duration-200 shadow-lg hover:shadow-xl"
               >
                 {content.hero.ctaText}
                 <ArrowRight className="ml-2 w-5 h-5" />
-              </Link>
+              </a>
             </div>
           </div>
         </section>
@@ -327,12 +329,14 @@ export default function IndustryPage({ industry, content, slug }: IndustryPagePr
                 Join thousands of organizations already using AI to drive innovation and growth.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Link
-                  href="/contact"
+                <a
+                  href="https://api.leadconnectorhq.com/widget/booking/yPjkVmsauPst8XlrOQUl"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="px-8 py-3 bg-white text-blue-600 font-semibold rounded-lg hover:bg-gray-100 transition-colors"
                 >
                   Get a Free AI Growth Roadmap
-                </Link>
+                </a>
                 <Link
                   href="/tools"
                   className="px-8 py-3 bg-blue-800 hover:bg-blue-900 text-white font-semibold rounded-lg transition-colors"
