@@ -140,9 +140,9 @@ export default function ReviewsIndex({ tools, categories }: ReviewsIndexProps) {
               Our AI experts can help you find the perfect tool for your specific needs and budget.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link href="/contact" className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-blue-700 hover:to-purple-700 transition-all">
-                Get Expert Advice
-              </Link>
+              <a href="https://api.leadconnectorhq.com/widget/booking/yPjkVmsauPst8XlrOQUl" target="_blank" rel="noopener noreferrer" className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-blue-700 hover:to-purple-700 transition-all">
+                Book Your Free AI Strategy Session
+              </a>
               <Link href="/tools" className="border border-gray-600 text-gray-300 px-8 py-3 rounded-lg font-semibold hover:bg-gray-800 hover:text-white transition-all">
                 Browse All Tools
               </Link>

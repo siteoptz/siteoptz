@@ -546,12 +546,14 @@ export default function ContentStudioReviewPage() {
                 Join thousands of content marketers using ContentStudio to automate content curation and streamline social publishing.
               </p>
               <div className="flex justify-center">
-                <Link
-                  href="/contact"
+                <a
+                  href="https://api.leadconnectorhq.com/widget/booking/yPjkVmsauPst8XlrOQUl"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="bg-gradient-to-r from-blue-600 to-purple-600 text-white hover:from-blue-700 hover:to-purple-700 font-bold py-4 px-8 rounded-lg transform hover:scale-105 transition-all duration-200 shadow-lg hover:shadow-xl"
                 >
-                  Talk to an AI Expert
-                </Link>
+                  Book Your Free AI Strategy Session
+                </a>
               </div>
             </div>
           </div>
