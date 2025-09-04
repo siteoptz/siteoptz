@@ -10902,7 +10902,7 @@
       "developer": "Kleap SAS",
       "release_year": 2022,
       "description": "AI website builder for creating professional websites in minutes",
-      "category": "Website Builder"
+      "category": "AI Website Builder"
     },
     "logo_url": "/images/tools/kleap-ai-logo.svg"
   },
@@ -22900,7 +22900,7 @@
     "logo": "/images/tools/ux-pilot-logo.svg",
     "description": "AI-powered UX design assistant that helps create better user experiences with intelligent design suggestions and automated testing.",
     "website": "https://uxpilot.ai",
-    "category": "UX",
+    "category": "AI Website Builder",
     "features": [
       "AI design suggestions",
       "Automated UX testing",
@@ -22959,7 +22959,7 @@
       "developer": "UX Pilot Inc",
       "release_year": 2024,
       "description": "AI-powered UX design assistant for better user experiences",
-      "category": "Design"
+      "category": "AI Website Builder"
     },
     "logo_url": "/images/tools/ux-pilot-logo.svg"
   },
@@ -24912,7 +24912,7 @@
       "developer": "Speechki - Text-to-Speech AI",
       "release_year": 2024,
       "description": "Speechki - Text-to-Speech AI is an innovative AI tool designed to enhance productivity and streamline workflows.",
-      "category": "Voice AI",
+      "category": "Best Voice AI Tools",
       "website": "https://www.b12.io/static/30366476efe6148d7048520bf66a79c8/922af/speechki.png"
     },
     "features": [
@@ -25496,7 +25496,7 @@
       "developer": "Unreal Speech - Cost-Effective Text-to-Speech API",
       "release_year": 2024,
       "description": "Unreal Speech - Cost-Effective Text-to-Speech API is an innovative AI tool designed to enhance productivity and streamline workflows.",
-      "category": "Voice AI",
+      "category": "Best Voice AI Tools",
       "website": "https://www.b12.io/static/3bf5b361480f5b4b07db1b0f8c86d3c3/922af/unreal-speech.png"
     },
     "features": [
