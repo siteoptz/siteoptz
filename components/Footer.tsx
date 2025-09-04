@@ -118,13 +118,15 @@ const Footer: React.FC = () => {
               </div>
             </Link>
 
-            <button 
-              onClick={() => setShowEmailForm(true)}
+            <a 
+              href="https://api.leadconnectorhq.com/widget/booking/yPjkVmsauPst8XlrOQUl"
+              target="_blank"
+              rel="noopener noreferrer"
               className="w-full px-6 py-3 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-lg font-semibold hover:from-blue-700 hover:to-purple-700 transform hover:scale-105 transition-all duration-200 shadow-lg hover:shadow-xl flex items-center justify-center space-x-2"
             >
               <Zap className="w-4 h-4" />
               <span>Get Started</span>
-            </button>
+            </a>
 
             <div className="flex space-x-3 justify-center">
               {socialLinks.map((social) => {
@@ -295,13 +297,15 @@ const Footer: React.FC = () => {
             </Link>
 
             {/* Get Started CTA Button */}
-            <button 
-              onClick={() => setShowEmailForm(true)}
+            <a 
+              href="https://api.leadconnectorhq.com/widget/booking/yPjkVmsauPst8XlrOQUl"
+              target="_blank"
+              rel="noopener noreferrer"
               className="w-full px-6 py-3 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-lg font-semibold hover:from-blue-700 hover:to-purple-700 transform hover:scale-105 transition-all duration-200 shadow-lg hover:shadow-xl flex items-center justify-center space-x-2"
             >
               <Zap className="w-4 h-4" />
               <span>Get Started</span>
-            </button>
+            </a>
 
             {/* Social Icons */}
             <div>
