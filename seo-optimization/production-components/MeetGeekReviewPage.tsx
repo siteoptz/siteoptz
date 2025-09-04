@@ -128,8 +128,8 @@ export default function MeetGeekReviewPage({ tool }: MeetGeekReviewPageProps) {
     <>
       <Head>
         {/* Primary SEO Tags */}
-        <title>Meet Geek Review: Meeting Assistant Tool | SiteOptz</title>
-        <meta name="description" content="MeetGeek Review 2025: AI-powered meeting assistant for automatic recording, transcription, and meeting insights. Smart summary generation features. Compare pricing, features & alternatives." />
+        <title>Meet Geek Review:  | SiteOptz</title>
+        <meta name="description" content="meet geek review. Compare Meet Geek  features, pricing & alternatives. Expert analysis & user guide for 2025. Get started today!" />
         <meta name="keywords" content="meet geek review, meet geek pricing, meet geek features, meet geek vs competitors, meet geek alternatives" />
         <meta name="author" content="SiteOptz" />
         <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
@@ -139,7 +139,7 @@ export default function MeetGeekReviewPage({ tool }: MeetGeekReviewPageProps) {
         
         {/* Open Graph Meta Tags */}
         <meta property="og:type" content="article" />
-        <meta property="og:title" content="Meet Geek Review: Meeting Assistant Tool | SiteOptz" />
+        <meta property="og:title" content="Meet Geek Review:  | SiteOptz" />
         <meta property="og:description" content="meet geek review. Compare Meet Geek  features, pricing & alternatives. Expert analysis & user guide for 2025. Get started today!" />
         <meta property="og:url" content="https://siteoptz.ai/reviews/meet-geek" />
         <meta property="og:site_name" content="SiteOptz" />
@@ -150,7 +150,7 @@ export default function MeetGeekReviewPage({ tool }: MeetGeekReviewPageProps) {
         
         {/* Twitter Card Tags */}
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Meet Geek Review: Meeting Assistant Tool | SiteOptz" />
+        <meta name="twitter:title" content="Meet Geek Review:  | SiteOptz" />
         <meta name="twitter:description" content="meet geek review. Compare Meet Geek  features, pricing & alternatives. Expert analysis & user guide for 2025. Get started today!" />
         <meta name="twitter:image" content="https://siteoptz.ai/og-image.png" />
         <meta name="twitter:creator" content="@siteoptz" />
@@ -254,14 +254,16 @@ export default function MeetGeekReviewPage({ tool }: MeetGeekReviewPageProps) {
 
                 {/* CTA Buttons */}
                 <div className="flex flex-col sm:flex-row gap-4 mb-8">
-<Link href=""
+                  <a
+                    href=""
                     target="_blank"
                     rel="noopener noreferrer"
                     className="bg-gradient-to-r from-blue-600 to-purple-600 text-white hover:from-blue-700 hover:to-purple-700 font-bold py-4 px-8 rounded-lg transform hover:scale-105 transition-all duration-200 shadow-lg hover:shadow-xl text-center"
                   >
                     Try Meet Geek Here
-                  </Link>
-<Link href="/compare"
+                  </a>
+                  <Link
+                    href="/compare"
                     className="border-2 border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-black font-bold py-4 px-8 rounded-lg transition-all duration-200 text-center"
                   >
                     Compare Alternatives
@@ -299,50 +301,24 @@ export default function MeetGeekReviewPage({ tool }: MeetGeekReviewPageProps) {
                   <div className="mt-6 pt-6 border-t border-gray-800">
                     <h3 className="text-sm font-semibold text-gray-400 mb-4">Table of Contents</h3>
                     <nav className="space-y-2">
-      <a href="#meet-geek-key-features-capabilities" className="block text-cyan-400 hover:underline text-sm">
-        → Key Features
-      </a>
-      <a href="#meet-geek-pricing-plans-value-analysis" className="block text-cyan-400 hover:underline text-sm">
-        → Pricing Plans
-      </a>
-      <a href="#real-world-meet-geek-use-cases-applications" className="block text-cyan-400 hover:underline text-sm">
-        → Use Cases
-      </a>
-      <a href="#meet-geek-pros-and-cons-honest-assessment" className="block text-cyan-400 hover:underline text-sm">
-        → Pros & Cons
-      </a>
-      <a href="#faq" className="block text-cyan-400 hover:underline text-sm">
-        → FAQ
-      </a>
-    </nav>
+                      <a href="#features" className="block text-cyan-400 hover:underline text-sm">
+                        → Key Features
+                      </a>
+                      <a href="#pricing" className="block text-cyan-400 hover:underline text-sm">
+                        → Pricing Plans
+                      </a>
+                      <a href="#use-cases" className="block text-cyan-400 hover:underline text-sm">
+                        → Use Cases
+                      </a>
+                      <a href="#pros-cons" className="block text-cyan-400 hover:underline text-sm">
+                        → Pros & Cons
+                      </a>
+                      <a href="#faq" className="block text-cyan-400 hover:underline text-sm">
+                        → FAQ
+                      </a>
+                    </nav>
                   </div>
                 </div>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        
-
-
-        {/* Final CTA Section */}
-        <section className="relative z-10 py-20">
-          <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
-            <div className="bg-gradient-to-r from-blue-900/20 to-purple-900/20 border border-gray-800 rounded-2xl p-12">
-              <h2 className="text-4xl font-bold text-white mb-6">
-                Ready to Get Started with Meet Geek?
-              </h2>
-              <p className="text-xl text-gray-300 mb-8">
-                Join thousands of professionals using Meet Geek to streamline their productivity workflows.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-<Link href="https://api.leadconnectorhq.com/widget/booking/yPjkVmsauPst8XlrOQUl"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="bg-gradient-to-r from-blue-600 to-purple-600 text-white hover:from-blue-700 hover:to-purple-700 font-bold py-4 px-8 rounded-lg transform hover:scale-105 transition-all duration-200 shadow-lg hover:shadow-xl"
-                >
-                  Schedule a Meeting With an AI Specialist
-                </Link>
               </div>
             </div>
           </div>
@@ -453,7 +429,7 @@ export default function MeetGeekReviewPage({ tool }: MeetGeekReviewPageProps) {
 
         {/* FAQ Section */}
         <section className="relative z-10 py-16 bg-gray-900/50" id="faq">
-          <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
+          <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-12">
               <h2 className="text-3xl font-bold text-white mb-4"> Frequently Asked Questions About Meet Geek</h2>
               <p className="text-lg text-gray-300">Get answers to common questions about Meet Geek</p>
@@ -518,65 +494,31 @@ export default function MeetGeekReviewPage({ tool }: MeetGeekReviewPageProps) {
           </div>
         </section>
 
-        /* SiteOptz.ai Promotional Section */
+        {/* Final CTA Section */}
         <section className="relative z-10 py-20">
           <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
             <div className="bg-gradient-to-r from-blue-900/20 to-purple-900/20 border border-gray-800 rounded-2xl p-12">
-              <div className="text-center mb-8">
-                <p className="text-xl text-gray-300 mb-8">
-                  SiteOptz.ai offers expert AI-powered tools and personalized support to rapidly enhance Productivity strategies, helping organizations achieve dramatic boosts in organic traffic and search rankings, while maximizing their ROI.
-                </p>
-              </div>
-              
-              <div className="grid md:grid-cols-2 gap-8 mb-8">
-                <div>
-                  <h3 className="text-4xl font-bold text-white mb-6">Why Choose SiteOptz.ai</h3>
-                  <ul className="space-y-3 text-gray-300">
-                    <li className="flex items-start">
-                      <span className="text-cyan-400 mr-3">•</span>
-                      Dedicated AI specialists work directly with teams to implement tailored solutions designed to meet unique business goals.
-                    </li>
-                    <li className="flex items-start">
-                      <span className="text-cyan-400 mr-3">•</span>
-                      Companies leveraging SiteOptz.ai&apos;s platform report up to 300% increases in organic traffic, alongside substantial improvements in search visibility and efficiency.
-                    </li>
-                  </ul>
-                </div>
-                
-                <div>
-                  <h3 className="text-4xl font-bold text-white mb-6">Boost ROI With AI-Driven SEO</h3>
-                  <ul className="space-y-3 text-gray-300">
-                    <li className="flex items-start">
-                      <span className="text-cyan-400 mr-3">•</span>
-                      AI-powered optimization tools reduce manual workload, automate site audits, keyword research, and rank tracking, freeing up resources and speeding up execution.
-                    </li>
-                    <li className="flex items-start">
-                      <span className="text-cyan-400 mr-3">•</span>
-                      Real-time insights and automated reporting help fine-tune content strategies, resolve issues instantly, and continually improve results—all critical for maximizing marketing ROI.
-                    </li>
-                    <li className="flex items-start">
-                      <span className="text-cyan-400 mr-3">•</span>
-                      Investing in advanced AI solutions like SiteOptz.ai consistently raises marketing ROI by 10–20% on average, giving brands a clear competitive advantage.
-                    </li>
-                  </ul>
-                </div>
-              </div>
-              
-              <div className="text-center">
-                <h2 className="text-4xl font-bold text-white mb-6">Get Started With SiteOptz.ai</h2>
-                <p className="text-xl text-gray-300 mb-8">
-                  Join thousands of organizations maximizing their search performance and returns by integrating SiteOptz.ai&apos;s comprehensive toolset and expertise into their content workflows. Get in touch with AI experts today to unlock smarter, faster, and higher-ROI SEO solutions.
-                </p>
-                <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                  <a 
-                  href="https://api.leadconnectorhq.com/widget/booking/yPjkVmsauPst8XlrOQUl" 
-                  target="_blank" 
+              <h2 className="text-4xl font-bold text-white mb-6">
+                Ready to Get Started with Meet Geek?
+              </h2>
+              <p className="text-xl text-gray-300 mb-8">
+                Join thousands of professionals using Meet Geek to streamline their productivity workflows.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <a
+                  href=""
+                  target="_blank"
                   rel="noopener noreferrer"
                   className="bg-gradient-to-r from-blue-600 to-purple-600 text-white hover:from-blue-700 hover:to-purple-700 font-bold py-4 px-8 rounded-lg transform hover:scale-105 transition-all duration-200 shadow-lg hover:shadow-xl"
                 >
-                  Get Your Free AI Assessment
-                  </a>
-                </div>
+                  Start Free Trial
+                </a>
+                <Link
+                  href="/alternatives/meet-geek"
+                  className="border-2 border-gray-600 text-gray-300 hover:border-cyan-400 hover:text-cyan-400 font-bold py-4 px-8 rounded-lg transition-all duration-200"
+                >
+                  View Alternatives
+                </Link>
               </div>
             </div>
           </div>
