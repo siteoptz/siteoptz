@@ -16,12 +16,17 @@ const HeroSection: React.FC = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
         <div className="text-center relative z-10">
           {/* Free Consultation Badge */}
-          <div className="inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-cyan-500/20 to-blue-500/20 backdrop-blur-md border border-cyan-400/30 rounded-full text-white/90 text-sm font-medium mb-8 hover:bg-gradient-to-r hover:from-cyan-500/30 hover:to-blue-500/30 transition-all duration-300">
+          <a 
+            href="https://api.leadconnectorhq.com/widget/booking/yPjkVmsauPst8XlrOQUl"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-cyan-500/20 to-blue-500/20 backdrop-blur-md border border-cyan-400/30 rounded-full text-white/90 text-sm font-medium mb-8 hover:bg-gradient-to-r hover:from-cyan-500/30 hover:to-blue-500/30 transition-all duration-300 cursor-pointer transform hover:scale-105"
+          >
             <Calendar className="w-4 h-4 text-cyan-400" />
             <span className="text-cyan-400 font-bold">FREE</span>
             <span>30-Minute Strategy Session</span>
             <span className="text-xs bg-cyan-400 text-black px-2 py-1 rounded-full font-bold">$2,500 VALUE</span>
-          </div>
+          </a>
 
           {/* Main Heading */}
           <h1 className="text-5xl lg:text-7xl xl:text-8xl font-bold mb-8 leading-tight">
