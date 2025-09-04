@@ -763,11 +763,11 @@ export default function ReviewPage({ tool, pageTitle, slug, relatedTools, relate
           </div>
         </section>
 
-        {/* Final CTA */}
+        {/* Ready to Get Started CTA */}
         <section className="py-20 relative z-10">
           <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8 bg-black border border-gray-800 rounded-2xl p-12">
             <h2 className="text-4xl font-bold text-white mb-6">
-              Ready to Try {tool.tool_name}?
+              Ready to Get Started with {tool.tool_name}?
             </h2>
             <p className="text-xl text-gray-300 mb-8">
               Get started with {tool.tool_name} today and experience it for yourself.
@@ -779,7 +779,29 @@ export default function ReviewPage({ tool, pageTitle, slug, relatedTools, relate
                 rel="noopener noreferrer"
                 className="bg-gradient-to-r from-blue-600 to-purple-600 text-white hover:from-blue-700 hover:to-purple-700 font-bold py-4 px-8 rounded-lg transform hover:scale-105 transition-all duration-200 shadow-lg hover:shadow-xl"
               >
-                Book Your Free AI Strategy Session
+                Schedule a Meeting With an AI Specialist
+              </a>
+            </div>
+          </div>
+        </section>
+
+        {/* Still Have Questions CTA */}
+        <section className="py-20 relative z-10">
+          <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-gray-900/50 to-black border border-gray-700 rounded-2xl p-12">
+            <h2 className="text-4xl font-bold text-white mb-6">
+              Still Have Questions?
+            </h2>
+            <p className="text-xl text-gray-300 mb-8">
+              Our AI specialists are here to help you choose the right tools for your specific needs.
+            </p>
+            <div className="flex justify-center">
+              <a
+                href="https://api.leadconnectorhq.com/widget/booking/yPjkVmsauPst8XlrOQUl"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="bg-gradient-to-r from-cyan-600 to-blue-600 text-white hover:from-cyan-700 hover:to-blue-700 font-bold py-4 px-8 rounded-lg transform hover:scale-105 transition-all duration-200 shadow-lg hover:shadow-xl"
+              >
+                Schedule a Meeting With an AI Specialist
               </a>
             </div>
           </div>
