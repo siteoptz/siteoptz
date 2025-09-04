@@ -236,12 +236,14 @@ const Header: React.FC = () => {
 
           {/* CTA */}
           <div className="hidden lg:flex items-center">
-            <Link
-              href="/tools"
+            <a
+              href="https://api.leadconnectorhq.com/widget/booking/yPjkVmsauPst8XlrOQUl"
+              target="_blank"
+              rel="noopener noreferrer"
               className="px-6 py-2.5 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-lg font-semibold text-sm hover:from-blue-700 hover:to-purple-700 transform hover:scale-105 transition-all duration-200 shadow-lg hover:shadow-xl"
             >
-              Explore Tools
-            </Link>
+              Get Started
+            </a>
           </div>
 
           {/* Mobile menu button */}
@@ -391,7 +393,7 @@ const Header: React.FC = () => {
               }}>Contact</Link>
               
               <div style={{ marginTop: '24px', paddingTop: '24px', borderTop: '1px solid rgba(255,255,255,0.2)' }}>
-                <Link href="/tools" onClick={closeMenu} style={{ 
+                <a href="https://api.leadconnectorhq.com/widget/booking/yPjkVmsauPst8XlrOQUl" target="_blank" rel="noopener noreferrer" onClick={closeMenu} style={{ 
                   display: 'block', 
                   width: '100%', 
                   padding: '16px', 
@@ -402,7 +404,7 @@ const Header: React.FC = () => {
                   textAlign: 'center', 
                   fontWeight: '600',
                   fontSize: '16px'
-                }}>Explore Tools</Link>
+                }}>Get Started</a>
               </div>
             </div>
           </div>
