@@ -462,12 +462,14 @@ export default function CategoryPage({ category, tools, content }: CategoryPageP
                 >
                   Explore {category} Tools
                 </Link>
-                <Link 
-                  href="/contact"
+                <a 
+                  href="https://api.leadconnectorhq.com/widget/booking/yPjkVmsauPst8XlrOQUl"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="bg-blue-800 hover:bg-blue-900 text-white px-8 py-3 rounded-lg font-semibold transition-colors"
                 >
-                  Get Expert Guidance
-                </Link>
+                  Book Your Free AI Consultation
+                </a>
               </div>
             </div>
           </div>
