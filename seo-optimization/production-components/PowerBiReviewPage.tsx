@@ -506,7 +506,7 @@ export default function PowerBiReviewPage({ tool }: PowerBiReviewPageProps) {
             <p className="text-lg text-gray-400 mb-8">
               Get Your Custom AI Roadmap in 30 Minutes
             </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <div className="flex justify-center">
                 <a
                   href="https://powerbi.microsoft.com/"
                   target="_blank"
@@ -515,12 +515,6 @@ export default function PowerBiReviewPage({ tool }: PowerBiReviewPageProps) {
                 >
                   Talk 1:1 With an AI Implementation Expert
                 </a>
-                <Link
-                  href="/alternatives/power-bi"
-                  className="border-2 border-gray-600 text-gray-300 hover:border-cyan-400 hover:text-cyan-400 font-bold py-4 px-8 rounded-lg transition-all duration-200"
-                >
-                  View Alternatives
-                </Link>
               </div>
             </div>
           </div>
