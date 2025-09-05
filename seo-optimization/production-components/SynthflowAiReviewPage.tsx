@@ -299,7 +299,7 @@ export default function SynthflowAiReviewPage({ tool }: SynthflowAiReviewPagePro
                   <div className="mt-6 pt-6 border-t border-gray-800">
                     <h3 className="text-sm font-semibold text-gray-400 mb-4">Table of Contents</h3>
                     <nav className="space-y-2">
-      <a href="#acquisio-key-features-capabilities" className="block text-cyan-400 hover:underline text-sm">
+      <a href="#features" className="block text-cyan-400 hover:underline text-sm">
         → Key Features
       </a>
       <a href="#acquisio-pricing-plans-value-analysis" className="block text-cyan-400 hover:underline text-sm">
@@ -343,7 +343,7 @@ export default function SynthflowAiReviewPage({ tool }: SynthflowAiReviewPagePro
                   rel="noopener noreferrer"
                   className="bg-gradient-to-r from-blue-600 to-purple-600 text-white hover:from-blue-700 hover:to-purple-700 font-bold py-4 px-8 rounded-lg transform hover:scale-105 transition-all duration-200 shadow-lg hover:shadow-xl"
                 >
-                  Schedule a Meeting With an AI Specialist
+                  Talk 1:1 With an AI Implementation Expert
                 </Link>
               </div>
             </div>

@@ -255,12 +255,12 @@ export default function GeminiReviewPage({ tool }: GeminiReviewPageProps) {
                 {/* CTA Buttons */}
                 <div className="flex flex-col sm:flex-row gap-4 mb-8">
                   <a
-                    href="https://gemini.google.com"
+                    href="https://api.leadconnectorhq.com/widget/booking/yPjkVmsauPst8XlrOQUl"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="bg-gradient-to-r from-blue-600 to-purple-600 text-white hover:from-blue-700 hover:to-purple-700 font-bold py-4 px-8 rounded-lg transform hover:scale-105 transition-all duration-200 shadow-lg hover:shadow-xl text-center"
                   >
-                    Try Gemini Here
+                    Talk 1:1 With an AI Implementation Expert
                   </a>
                   <Link
                     href="/compare"
@@ -505,7 +505,7 @@ export default function GeminiReviewPage({ tool }: GeminiReviewPageProps) {
                   rel="noopener noreferrer"
                   className="bg-gradient-to-r from-blue-600 to-purple-600 text-white hover:from-blue-700 hover:to-purple-700 font-bold py-4 px-8 rounded-lg transform hover:scale-105 transition-all duration-200 shadow-lg hover:shadow-xl"
                 >
-                  Start Free Trial
+                  Talk 1:1 With an AI Implementation Expert
                 </a>
                 <Link
                   href="/alternatives/gemini"

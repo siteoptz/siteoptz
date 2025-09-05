@@ -337,7 +337,7 @@ export default function ClearscopeReviewPage({ tool }: ClearscopeReviewPageProps
 <Link href="https://api.leadconnectorhq.com/widget/booking/yPjkVmsauPst8XlrOQUl"
                   className="bg-gradient-to-r from-blue-600 to-purple-600 text-white hover:from-blue-700 hover:to-purple-700 font-bold py-4 px-8 rounded-lg transform hover:scale-105 transition-all duration-200 shadow-lg hover:shadow-xl"
                 >
-                  Schedule a Meeting With an AI Specialist
+                  Talk 1:1 With an AI Implementation Expert
                 </Link>
               </div>
             </div>
@@ -571,7 +571,7 @@ export default function ClearscopeReviewPage({ tool }: ClearscopeReviewPageProps
               </div>
               
               <div className="text-center">
-<Link href="/contact"
+<Link href="https://api.leadconnectorhq.com/widget/booking/yPjkVmsauPst8XlrOQUl"
                   className="inline-block bg-gradient-to-r from-cyan-600 to-blue-600 text-white hover:from-cyan-700 hover:to-blue-700 font-bold py-3 px-8 rounded-lg transform hover:scale-105 transition-all duration-200 shadow-lg hover:shadow-xl"
                 >
                   Get in Touch With AI Experts Today
