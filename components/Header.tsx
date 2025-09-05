@@ -105,6 +105,7 @@ const Header: React.FC = () => {
       isIndustry: true
     },
     { name: 'Pricing Calculator', href: '/pricing', current: router.pathname === '/pricing', hasDropdown: false },
+    { name: 'Why Us', href: '/why-us', current: router.pathname === '/why-us', hasDropdown: false },
     { name: 'Blog', href: '/blog', current: router.pathname.startsWith('/blog'), hasDropdown: false },
     { name: 'Data Room', href: '/data-room', current: router.pathname === '/data-room', hasDropdown: false },
     { name: 'Contact', href: '/contact', current: router.pathname === '/contact', hasDropdown: false },
