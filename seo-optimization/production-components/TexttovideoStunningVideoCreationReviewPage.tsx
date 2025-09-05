@@ -58,7 +58,7 @@ export default function TexttovideoStunningVideoCreationReviewPage() {
         "@type": "ListItem",
         "position": 4,
         "name": "Text-to-Video - Stunning Video Creation Review",
-        "item": "https://siteoptz.ai/tools/texttovideo-stunning-video-creation"
+        "item": "https://siteoptz.ai/reviews/texttovideo-stunning-video-creation"
       }
     ]
   };
@@ -113,13 +113,13 @@ export default function TexttovideoStunningVideoCreationReviewPage() {
         <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
         
         {/* Canonical URL */}
-        <link rel="canonical" href="https://siteoptz.ai/tools/texttovideo-stunning-video-creation" />
+        <link rel="canonical" href="https://siteoptz.ai/reviews/texttovideo-stunning-video-creation" />
         
         {/* Open Graph Meta Tags */}
         <meta property="og:type" content="article" />
         <meta property="og:title" content="Text-to-Video - Stunning Video Creation Review: Complete Video Generation Tool Analysis | SiteOptz" />
         <meta property="og:description" content="Comprehensive Text-to-Video - Stunning Video Creation review. Compare Text-to-Video - Stunning Video Creation features, pricing & alternatives. Expert analysis & user guide for 2025. Get started today!" />
-        <meta property="og:url" content="https://siteoptz.ai/tools/texttovideo-stunning-video-creation" />
+        <meta property="og:url" content="https://siteoptz.ai/reviews/texttovideo-stunning-video-creation" />
         <meta property="og:site_name" content="SiteOptz" />
         <meta property="og:image" content="https://siteoptz.ai/og-image.png" />
         <meta property="og:image:width" content="1200" />
