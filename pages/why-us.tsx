@@ -386,7 +386,7 @@ export default function WhyUs() {
                 <h3 className="text-2xl font-bold text-white mb-4">Our Solution</h3>
                 <p className="text-gray-300 mb-6">
                   End-to-end AI consulting that goes beyond strategy to actual implementation and optimization. 
-                  We're the engineering-capable consultants who deliver 90-day wins, not 9-month projects.
+                  We&apos;re the engineering-capable consultants who deliver 90-day wins, not 9-month projects.
                 </p>
                 <a
                   href="https://api.leadconnectorhq.com/widget/booking/yPjkVmsauPst8XlrOQUl"
@@ -394,7 +394,7 @@ export default function WhyUs() {
                   rel="noopener noreferrer"
                   className="inline-flex items-center text-cyan-400 hover:text-cyan-300 font-semibold"
                 >
-                  See How We're Different <ArrowRight className="ml-2 w-4 h-4" />
+                  See How We&apos;re Different <ArrowRight className="ml-2 w-4 h-4" />
                 </a>
               </div>
             </div>
@@ -409,7 +409,7 @@ export default function WhyUs() {
                 Why SaaS & E-commerce Leaders Choose SiteOptz
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                We're not your typical AI consultants. We combine strategic thinking with hands-on technical implementation to deliver real results.
+                We&apos;re not your typical AI consultants. We combine strategic thinking with hands-on technical implementation to deliver real results.
               </p>
             </div>
 
@@ -484,7 +484,7 @@ export default function WhyUs() {
                 Common Concerns We Address
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                We understand your hesitations about AI consulting. Here's how we're different.
+                We understand your hesitations about AI consulting. Here&apos;s how we&apos;re different.
               </p>
             </div>
 
