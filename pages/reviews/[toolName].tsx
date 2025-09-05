@@ -802,11 +802,23 @@ export const getStaticPaths: GetStaticPaths = async () => {
   const staticReviewPages = ['contentstudio', 'loomly', 'sendible', 'social-champ', 'socialpilot'];
   
   // Generate paths for all tools except those with static pages
-  const paths = toolsData
+  const paths = [];
+  
+  toolsData
     .filter((tool: any) => !staticReviewPages.includes(tool.slug))
-    .map((tool: any) => ({
-      params: { toolName: tool.slug }
-    }));
+    .forEach((tool: any) => {
+      // Add the primary slug
+      paths.push({
+        params: { toolName: tool.slug }
+      });
+      
+      // Add alternative slug for specific tools that have variations
+      if (tool.slug === '6sense-aidriven-revenue-growth-optimization') {
+        paths.push({
+          params: { toolName: '6sense-ai-driven-revenue-growth-optimization' }
+        });
+      }
+    });
 
   return {
     paths,
@@ -828,11 +840,16 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
     fs.readFileSync(path.join(process.cwd(), 'public/data/aiToolsData.json'), 'utf8')
   );
   
-  // Find tool by slug (try actual slug first, then fall back to generated slug)
-  const tool = tools.find((t: any) => 
+  // Find tool by slug (try actual slug first, then fall back to generated slug, then handle variations)
+  let tool = tools.find((t: any) => 
     t.slug === toolSlug || 
     t.tool_name.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-+|-+$/g, '') === toolSlug
   );
+  
+  // Handle specific slug variations
+  if (!tool && toolSlug === '6sense-ai-driven-revenue-growth-optimization') {
+    tool = tools.find((t: any) => t.slug === '6sense-aidriven-revenue-growth-optimization');
+  }
 
   if (!tool) {
     return {
