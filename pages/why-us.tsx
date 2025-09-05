@@ -290,6 +290,19 @@ export default function WhyUs() {
         <meta name="twitter:description" content="90-day AI wins, not 9-month projects. Engineering-capable consulting that delivers real implementation results." />
         <meta name="twitter:image" content="https://siteoptz.ai/images/why-us-twitter.jpg" />
         
+        {/* Prevent horizontal scroll on mobile */}
+        <style>{`
+          html, body {
+            overflow-x: hidden;
+            width: 100%;
+            max-width: 100vw;
+          }
+          * {
+            max-width: 100%;
+            box-sizing: border-box;
+          }
+        `}</style>
+        
         {/* Structured Data */}
         <script
           type="application/ld+json"
@@ -297,19 +310,19 @@ export default function WhyUs() {
         />
       </Head>
 
-      <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-black">
+      <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-black overflow-x-hidden">
         {/* Animated Background Elements */}
-        <div className="absolute inset-0 pointer-events-none">
-          <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-blue-500/10 rounded-full blur-3xl animate-pulse"></div>
-          <div className="absolute bottom-1/4 right-1/4 w-80 h-80 bg-purple-500/10 rounded-full blur-3xl animate-pulse delay-1000"></div>
+        <div className="absolute inset-0 pointer-events-none overflow-hidden">
+          <div className="absolute top-1/4 left-1/4 w-64 sm:w-96 h-64 sm:h-96 bg-blue-500/10 rounded-full blur-3xl animate-pulse"></div>
+          <div className="absolute bottom-1/4 right-1/4 w-48 sm:w-80 h-48 sm:h-80 bg-purple-500/10 rounded-full blur-3xl animate-pulse delay-1000"></div>
         </div>
 
         {/* Grid Overlay */}
-        <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.02)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.02)_1px,transparent_1px)] bg-[size:100px_100px] pointer-events-none"></div>
+        <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.02)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.02)_1px,transparent_1px)] bg-[size:50px_50px] sm:bg-[size:100px_100px] pointer-events-none"></div>
 
         {/* Hero Section */}
         <section className="relative pt-24 pb-16 overflow-hidden">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full">
             <div className="text-center mb-16">
               <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight">
                 AI Tools Roadmap & Implementation Consulting for Growing Businesses
@@ -353,7 +366,7 @@ export default function WhyUs() {
 
         {/* Stop Guessing Section */}
         <section className="py-16 bg-gray-900/50">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
             <div className="text-center mb-12">
               <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-6 px-2">
                 Stop Guessing Which AI Tools Will Drive ROI
@@ -364,7 +377,7 @@ export default function WhyUs() {
               </p>
             </div>
 
-            <div className="grid md:grid-cols-2 gap-12 items-center">
+            <div className="grid md:grid-cols-2 gap-6 lg:gap-12 items-center w-full">
               <div>
                 <div className="space-y-6">
                   {[
@@ -403,7 +416,7 @@ export default function WhyUs() {
 
         {/* Value Props Section */}
         <section className="py-20">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
             <div className="text-center mb-16">
               <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-6 px-2">
                 Why SaaS & E-commerce Leaders Choose SiteOptz
@@ -413,7 +426,7 @@ export default function WhyUs() {
               </p>
             </div>
 
-            <div className="grid sm:grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8">
+            <div className="grid sm:grid-cols-1 md:grid-cols-3 gap-4 sm:gap-6 lg:gap-8">
               {valueProps.map((prop, index) => (
                 <div key={index} className="bg-black border border-gray-800 rounded-2xl p-6 lg:p-8 hover:border-gray-600 transition-all">
                   <div className="flex items-start sm:items-center mb-4">
@@ -531,7 +544,7 @@ export default function WhyUs() {
 
         {/* AI Implementation Services Section */}
         <section className="py-20 bg-black">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
             <div className="text-center mb-16">
               <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-4 px-2">
                 AI Implementation Services
@@ -541,7 +554,7 @@ export default function WhyUs() {
               </p>
             </div>
 
-            <div className="grid sm:grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8">
+            <div className="grid sm:grid-cols-1 md:grid-cols-3 gap-4 sm:gap-6 lg:gap-8">
               {/* Starter Package */}
               <div className="bg-gradient-to-b from-gray-900 to-black border border-gray-700 p-6 lg:p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 hover:border-cyan-500/50 group">
                 <div className="text-center mb-6">
@@ -581,8 +594,8 @@ export default function WhyUs() {
               </div>
 
               {/* Professional Package */}
-              <div className="bg-gradient-to-b from-gray-900 to-black border-2 border-cyan-500 p-6 lg:p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 hover:shadow-cyan-500/25 group relative">
-                <div className="absolute -top-4 left-1/2 transform -translate-x-1/2 px-4 lg:px-6 py-2 bg-gradient-to-r from-cyan-500 to-blue-600 text-white text-xs lg:text-sm font-bold rounded-full">
+              <div className="bg-gradient-to-b from-gray-900 to-black border-2 border-cyan-500 p-6 lg:p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 hover:shadow-cyan-500/25 group relative overflow-visible">
+                <div className="absolute -top-4 left-1/2 transform -translate-x-1/2 px-3 sm:px-4 lg:px-6 py-2 bg-gradient-to-r from-cyan-500 to-blue-600 text-white text-xs lg:text-sm font-bold rounded-full whitespace-nowrap">
                   MOST POPULAR
                 </div>
                 
@@ -752,27 +765,27 @@ export default function WhyUs() {
                 </div>
                 
                 <div>
-                  <h3 className="text-2xl font-bold text-white mb-6">DIY vs. Professional Implementation</h3>
-                  <div className="space-y-4">
-                    <div className="flex justify-between items-center">
-                      <span className="text-gray-300">Time to Results</span>
-                      <div className="flex gap-4">
-                        <span className="text-red-400">6-12 months (DIY)</span>
-                        <span className="text-cyan-400 font-semibold">90 days (With Us)</span>
+                  <h3 className="text-xl lg:text-2xl font-bold text-white mb-6">DIY vs. Professional Implementation</h3>
+                  <div className="space-y-4 overflow-x-auto">
+                    <div className="flex justify-between items-center min-w-0">
+                      <span className="text-gray-300 text-sm lg:text-base">Time to Results</span>
+                      <div className="flex gap-2 lg:gap-4 text-right">
+                        <span className="text-red-400 text-xs lg:text-sm">6-12 months (DIY)</span>
+                        <span className="text-cyan-400 font-semibold text-xs lg:text-sm">90 days (With Us)</span>
                       </div>
                     </div>
-                    <div className="flex justify-between items-center">
-                      <span className="text-gray-300">Success Rate</span>
-                      <div className="flex gap-4">
-                        <span className="text-red-400">23% (DIY)</span>
-                        <span className="text-cyan-400 font-semibold">98% (With Us)</span>
+                    <div className="flex justify-between items-center min-w-0">
+                      <span className="text-gray-300 text-sm lg:text-base">Success Rate</span>
+                      <div className="flex gap-2 lg:gap-4 text-right">
+                        <span className="text-red-400 text-xs lg:text-sm">23% (DIY)</span>
+                        <span className="text-cyan-400 font-semibold text-xs lg:text-sm">98% (With Us)</span>
                       </div>
                     </div>
-                    <div className="flex justify-between items-center">
-                      <span className="text-gray-300">Cost of Mistakes</span>
-                      <div className="flex gap-4">
-                        <span className="text-red-400">$50K+ (DIY)</span>
-                        <span className="text-cyan-400 font-semibold">$0 (With Us)</span>
+                    <div className="flex justify-between items-center min-w-0">
+                      <span className="text-gray-300 text-sm lg:text-base">Cost of Mistakes</span>
+                      <div className="flex gap-2 lg:gap-4 text-right">
+                        <span className="text-red-400 text-xs lg:text-sm">$50K+ (DIY)</span>
+                        <span className="text-cyan-400 font-semibold text-xs lg:text-sm">$0 (With Us)</span>
                       </div>
                     </div>
                   </div>
