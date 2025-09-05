@@ -374,7 +374,7 @@ const ColossyanCreatorReviewPage: React.FC<ColossyanCreatorReviewPageProps> = ()
         {/* Call to Action */}
         <div className="text-center py-16">
           <h2 className="text-4xl font-bold text-white mb-6">
-              Work Directly With Experts Who've Helped Businesses Scale With AI
+              Work Directly With Experts Who&apos;ve Helped Businesses Scale With AI
             </h2>
             <p className="text-xl text-gray-300 mb-4">
               Not Another Demo. A Real Strategy Session For Your Business.

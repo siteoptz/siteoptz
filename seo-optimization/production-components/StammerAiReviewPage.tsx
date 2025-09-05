@@ -286,7 +286,7 @@ export default function StammerAiReviewPage() {
         <section className="relative z-10 py-20">
           <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
             <div className="bg-gradient-to-r from-blue-900/20 to-purple-900/20 border border-gray-800 rounded-2xl p-12">            <h2 className="text-4xl font-bold text-white mb-6">
-              Work Directly With Experts Who've Helped Businesses Scale With AI
+              Work Directly With Experts Who&apos;ve Helped Businesses Scale With AI
             </h2>
             <p className="text-xl text-gray-300 mb-4">
               Not Another Demo. A Real Strategy Session For Your Business.
