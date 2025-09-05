@@ -802,7 +802,7 @@ export const getStaticPaths: GetStaticPaths = async () => {
   const staticReviewPages = ['contentstudio', 'loomly', 'sendible', 'social-champ', 'socialpilot'];
   
   // Generate paths for all tools except those with static pages
-  const paths = [];
+  const paths: Array<{ params: { toolName: string } }> = [];
   
   toolsData
     .filter((tool: any) => !staticReviewPages.includes(tool.slug))
