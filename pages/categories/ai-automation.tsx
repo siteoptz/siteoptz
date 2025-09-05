@@ -441,25 +441,30 @@ export const getStaticProps: GetStaticProps = async () => {
     const jsonData = fs.readFileSync(dataPath, 'utf8');
     const allTools: any[] = JSON.parse(jsonData);
 
-    // Filter for AI Automation tools
+    // Filter for AI Automation tools - be specific to avoid cross-category contamination
     const automationTools = allTools.filter(tool => {
       const toolName = tool.name?.toLowerCase() || '';
       const toolDesc = tool.description?.toLowerCase() || '';
       const category = tool.category?.toLowerCase() || '';
       
-      return (
-        category === 'ai automation' ||
-        toolName.includes('zapier') ||
-        toolName.includes('automation') ||
-        toolName.includes('workflow') ||
-        toolName.includes('process') ||
-        toolDesc.includes('automation') ||
-        toolDesc.includes('workflow') ||
-        toolDesc.includes('integrate') ||
-        toolDesc.includes('automate') ||
-        category.includes('automation') ||
-        category.includes('productivity')
-      );
+      // Primary filter: exact category match
+      if (category === 'ai automation') {
+        return true;
+      }
+      
+      // Secondary filter: specific automation tools by name
+      const automationToolNames = ['zapier', 'make', 'integromat', 'n8n', 'power automate', 'gumloop', 'bardeen'];
+      if (automationToolNames.some(name => toolName.includes(name))) {
+        return true;
+      }
+      
+      // Tertiary filter: tools with automation in name AND description contains workflow/process terms
+      if (toolName.includes('automation') && 
+          (toolDesc.includes('workflow') || toolDesc.includes('integrate') || toolDesc.includes('automate'))) {
+        return true;
+      }
+      
+      return false;
     });
 
     return {
