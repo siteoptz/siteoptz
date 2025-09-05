@@ -87,7 +87,7 @@ export default function ReviewsIndex({ tools, categories }: ReviewsIndexProps) {
 
               <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
                 {toolsByCategory[category].map((tool: Tool) => {
-                  const toolSlug = tool.tool_name.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-+|-+$/g, '');
+                  const toolSlug = tool.slug || tool.tool_name.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-+|-+$/g, '');
                   return (
                     <Link key={tool.tool_name} href={`/reviews/${toolSlug}`}>
                       <div className="bg-black border border-gray-800 rounded-xl p-6 hover:border-cyan-400 transition-all cursor-pointer group">

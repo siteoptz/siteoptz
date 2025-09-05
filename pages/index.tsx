@@ -451,9 +451,9 @@ export const getStaticProps: GetStaticProps = async () => {
 
     // Transform data to match homepage interface
     const transformedTools = unifiedTools.map((tool: any) => {
-      const toolSlug = (tool.tool_name || tool.toolName).toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-+|-+$/g, '');
+      const toolSlug = tool.slug || (tool.tool_name || tool.toolName).toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-+|-+$/g, '');
       return {
-        id: toolSlug,
+        id: tool.id || toolSlug,
         slug: toolSlug,
         name: tool.tool_name || tool.toolName,
         logo: tool.logo_url || tool.logo,

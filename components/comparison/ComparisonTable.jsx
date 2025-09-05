@@ -258,7 +258,7 @@ export default function ComparisonTable({ tools, selectedTools = [], onToolSelec
               </button>
             )}
             <Link
-              href={`/reviews/${tool.toolName.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-+|-+$/g, '')}`}
+              href={`/reviews/${tool.slug || tool.toolName.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-+|-+$/g, '')}`}
               className="w-full px-3 py-1 text-sm bg-white text-gray-700 border border-gray-300 hover:bg-gray-50 rounded-lg transition-colors inline-flex items-center justify-center gap-1"
             >
               View Review
