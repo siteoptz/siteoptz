@@ -571,26 +571,45 @@ export const getStaticProps: GetStaticProps = async () => {
     const jsonData = fs.readFileSync(dataPath, 'utf8');
     const allTools: any[] = JSON.parse(jsonData);
 
-    // Filter for SEO tools
+    // Filter for SEO tools - be specific to avoid cross-category contamination
     const seoTools = allTools.filter(tool => {
       const toolName = tool.name?.toLowerCase() || '';
       const toolDesc = tool.description?.toLowerCase() || '';
       const category = tool.category?.toLowerCase() || '';
       
-      return (
-        toolName.includes('seo') ||
-        toolName.includes('semrush') ||
-        toolName.includes('ahrefs') ||
-        toolName.includes('surfer') ||
-        toolName.includes('clearscope') ||
-        toolName.includes('frase') ||
-        toolDesc.includes('seo') ||
-        toolDesc.includes('search engine') ||
-        toolDesc.includes('keyword') ||
-        toolDesc.includes('rank') ||
-        category.includes('seo') ||
-        category.includes('marketing')
-      );
+      // Exclude email marketing tools specifically
+      if (category.includes('email') || toolName.includes('email marketing')) {
+        return false;
+      }
+      
+      // Primary filter: exact SEO category match
+      if (category.includes('seo')) {
+        return true;
+      }
+      
+      // Secondary filter: specific SEO tool names
+      const seoToolNames = ['semrush', 'ahrefs', 'surfer', 'clearscope', 'frase', 'screaming frog', 'moz', 'serpstat'];
+      if (seoToolNames.some(name => toolName.includes(name))) {
+        return true;
+      }
+      
+      // Tertiary filter: tools with SEO-specific terms in name
+      if (toolName.includes('seo')) {
+        return true;
+      }
+      
+      // Quaternary filter: tools with SEO-specific terms in description (but not email/social marketing)
+      if ((toolDesc.includes('seo') || 
+           toolDesc.includes('search engine') || 
+           toolDesc.includes('serp') ||
+           (toolDesc.includes('keyword') && toolDesc.includes('research')) ||
+           (toolDesc.includes('rank') && toolDesc.includes('track'))) &&
+          !toolDesc.includes('email') && 
+          !toolDesc.includes('social media')) {
+        return true;
+      }
+      
+      return false;
     });
 
     return {
