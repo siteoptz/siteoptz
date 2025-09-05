@@ -409,7 +409,7 @@ export default function WhyUs() {
                 Why SaaS & E-commerce Leaders Choose SiteOptz
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                We're not your typical AI consultants. We combine strategic thinking with hands-on technical implementation to deliver real results.
+                We&apos;re not your typical AI consultants. We combine strategic thinking with hands-on technical implementation to deliver real results.
               </p>
             </div>
 
@@ -484,7 +484,7 @@ export default function WhyUs() {
                 Common Concerns We Address
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                We understand your hesitations about AI consulting. Here's how we're different.
+                We understand your hesitations about AI consulting. Here&apos;s how we&apos;re different.
               </p>
             </div>
 
@@ -496,7 +496,7 @@ export default function WhyUs() {
                       <item.icon className="w-6 h-6 text-white" />
                     </div>
                     <div className="flex-1">
-                      <h3 className="text-xl font-bold text-white mb-3">"{item.objection}"</h3>
+                      <h3 className="text-xl font-bold text-white mb-3">&quot;{item.objection}&quot;</h3>
                       <p className="text-gray-300 text-lg">{item.rebuttal}</p>
                     </div>
                   </div>
@@ -561,7 +561,7 @@ export default function WhyUs() {
         <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-600">
           <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
             <h2 className="text-4xl font-bold text-white mb-6">
-              Work Directly With Experts Who've Helped Businesses Scale With AI
+              Work Directly With Experts Who&apos;ve Helped Businesses Scale With AI
             </h2>
             <p className="text-xl text-blue-100 mb-4">
               Not Another Demo. A Real Strategy Session For Your Business.
