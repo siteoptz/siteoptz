@@ -253,6 +253,7 @@ const seoComponents: Record<string, () => Promise<{ default: ComponentType<SEOCo
   'website-generator-meta-ai': () => import('../seo-optimization/production-components/WebsiteGeneratorMetaAiReviewPage'),
   'zapt-powerful-ai-app-builder': () => import('../seo-optimization/production-components/ZaptPowerfulAiAppBuilderReviewPage'),
   '6sense-aidriven-revenue-growth-optimization': () => import('../seo-optimization/production-components/_6senseAidrivenRevenueGrowthOptimizationReviewPage'),
+  '6sense-ai-driven-revenue-growth-optimization': () => import('../seo-optimization/production-components/_6senseAidrivenRevenueGrowthOptimizationReviewPage'),
   'ai-actions-by-zapier-gpt': () => import('../seo-optimization/production-components/AiActionsByZapierGptReviewPage'),
   'bottr-your-personal-ai-assistant': () => import('../seo-optimization/production-components/BottrYourPersonalAiAssistantReviewPage'),
   'brainybear-easily-build-ai-chatbots': () => import('../seo-optimization/production-components/BrainybearEasilyBuildAiChatbotsReviewPage'),
