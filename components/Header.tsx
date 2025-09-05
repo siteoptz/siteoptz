@@ -62,10 +62,15 @@ const Header: React.FC = () => {
   });
   
   const toggleMobileAccordion = (section: keyof typeof mobileAccordions) => {
-    setMobileAccordions(prev => ({
-      ...prev,
-      [section]: !prev[section]
-    }));
+    console.log(`Toggling ${section} accordion. Current state:`, mobileAccordions[section]);
+    setMobileAccordions(prev => {
+      const newState = {
+        ...prev,
+        [section]: !prev[section]
+      };
+      console.log('New accordion states:', newState);
+      return newState;
+    });
   };
 
   // Industry dropdown menu items with shortened names
@@ -115,6 +120,13 @@ const Header: React.FC = () => {
   
   const closeMenu = () => {
     setIsMenuOpen(false);
+    // Reset accordion states when menu closes
+    setMobileAccordions({
+      categories: false,
+      tools: false,
+      industries: false,
+      resources: false,
+    });
   };
 
   // Body scroll prevention disabled to fix button clicking issues
@@ -289,7 +301,10 @@ const Header: React.FC = () => {
             }}>
               <div style={{ marginBottom: '16px', borderBottom: '1px solid rgba(255,255,255,0.1)' }}>
                 <button
-                  onClick={() => toggleMobileAccordion('categories')}
+                  onClick={() => {
+                    console.log('Categories accordion clicked');
+                    toggleMobileAccordion('categories');
+                  }}
                   style={{
                     width: '100%',
                     display: 'flex',
@@ -303,7 +318,8 @@ const Header: React.FC = () => {
                     padding: '12px 0',
                     textTransform: 'uppercase',
                     letterSpacing: '0.5px',
-                    cursor: 'pointer'
+                    cursor: 'pointer',
+                    WebkitTapHighlightColor: 'transparent'
                   }}
                 >
                   AI Categories
@@ -342,7 +358,10 @@ const Header: React.FC = () => {
               </div>
               <div style={{ marginBottom: '16px', borderBottom: '1px solid rgba(255,255,255,0.1)' }}>
                 <button
-                  onClick={() => toggleMobileAccordion('industries')}
+                  onClick={() => {
+                    console.log('Industries accordion clicked');
+                    toggleMobileAccordion('industries');
+                  }}
                   style={{
                     width: '100%',
                     display: 'flex',
@@ -356,7 +375,8 @@ const Header: React.FC = () => {
                     padding: '12px 0',
                     textTransform: 'uppercase',
                     letterSpacing: '0.5px',
-                    cursor: 'pointer'
+                    cursor: 'pointer',
+                    WebkitTapHighlightColor: 'transparent'
                   }}
                 >
                   Industries We Help
