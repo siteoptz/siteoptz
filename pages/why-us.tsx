@@ -152,8 +152,8 @@ export default function WhyUs() {
 
   const objections = [
     {
-      objection: "We've tried AI consultants before with mixed results",
-      rebuttal: "Our engineering-capable team doesn't just recommend—we implement, test, and optimize until you see ROI. Every engagement includes 90-day win metrics.",
+      objection: "We&apos;ve tried AI consultants before with mixed results",
+      rebuttal: "Our engineering-capable team doesn&apos;t just recommend—we implement, test, and optimize until you see ROI. Every engagement includes 90-day win metrics.",
       icon: Target
     },
     {
@@ -163,7 +163,7 @@ export default function WhyUs() {
     },
     {
       objection: "We need to focus on core business, not experiment with AI",
-      rebuttal: "AI isn't experimental anymore—it's competitive advantage. We handle the complexity so you can focus on your business while gaining efficiency and market edge.",
+      rebuttal: "AI isn&apos;t experimental anymore—it&apos;s competitive advantage. We handle the complexity so you can focus on your business while gaining efficiency and market edge.",
       icon: Zap
     }
   ];
@@ -496,7 +496,7 @@ export default function WhyUs() {
                       <item.icon className="w-6 h-6 text-white" />
                     </div>
                     <div className="flex-1">
-                      <h3 className="text-xl font-bold text-white mb-3">&quot;{item.objection}&quot;</h3>
+                      <h3 className="text-xl font-bold text-white mb-3">&ldquo;{item.objection}&rdquo;</h3>
                       <p className="text-gray-300 text-lg">{item.rebuttal}</p>
                     </div>
                   </div>
