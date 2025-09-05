@@ -341,12 +341,15 @@ const MangoolsReviewPage: React.FC<MangoolsReviewPageProps> = () => {
 
         {/* Call to Action */}
         <div className="text-center py-16">
-          <h2 className="text-3xl font-bold text-white mb-6">
-            Ready to Try Mangools?
-          </h2>
-          <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
-            Mangools is a beginner-friendly SEO toolkit with five integrated tools that simplify SEO without compromising functionality.
-          </p>
+          <h2 className="text-4xl font-bold text-white mb-6">
+              Work Directly With Experts Who've Helped Businesses Scale With AI
+            </h2>
+            <p className="text-xl text-gray-300 mb-4">
+              Not Another Demo. A Real Strategy Session For Your Business.
+            </p>
+            <p className="text-lg text-gray-400 mb-8">
+              Get Your Custom AI Roadmap in 30 Minutes
+            </p>
           <a 
             href="https://mangools.com"
             target="_blank"

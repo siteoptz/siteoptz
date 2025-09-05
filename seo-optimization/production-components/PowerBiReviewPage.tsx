@@ -497,13 +497,15 @@ export default function PowerBiReviewPage({ tool }: PowerBiReviewPageProps) {
         {/* Final CTA Section */}
         <section className="relative z-10 py-20">
           <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
-            <div className="bg-gradient-to-r from-blue-900/20 to-purple-900/20 border border-gray-800 rounded-2xl p-12">
-              <h2 className="text-4xl font-bold text-white mb-6">
-                Ready to Get Started with Power BI?
-              </h2>
-              <p className="text-xl text-gray-300 mb-8">
-                Join thousands of professionals using Power BI to streamline their data analysis workflows.
-              </p>
+            <div className="bg-gradient-to-r from-blue-900/20 to-purple-900/20 border border-gray-800 rounded-2xl p-12">            <h2 className="text-4xl font-bold text-white mb-6">
+              Work Directly With Experts Who've Helped Businesses Scale With AI
+            </h2>
+            <p className="text-xl text-gray-300 mb-4">
+              Not Another Demo. A Real Strategy Session For Your Business.
+            </p>
+            <p className="text-lg text-gray-400 mb-8">
+              Get Your Custom AI Roadmap in 30 Minutes
+            </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <a
                   href="https://powerbi.microsoft.com/"

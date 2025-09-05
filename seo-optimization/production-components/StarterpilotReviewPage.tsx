@@ -277,12 +277,15 @@ const StarterpilotReviewPage: React.FC<StarterpilotReviewPageProps> = () => {
 
         {/* Call to Action */}
         <div className="text-center py-16">
-          <h2 className="text-3xl font-bold text-white mb-6">
-            Ready to Try StarterPilot?
-          </h2>
-          <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
-            StarterPilot - AI-powered tool for enhanced productivity.
-          </p>
+          <h2 className="text-4xl font-bold text-white mb-6">
+              Work Directly With Experts Who've Helped Businesses Scale With AI
+            </h2>
+            <p className="text-xl text-gray-300 mb-4">
+              Not Another Demo. A Real Strategy Session For Your Business.
+            </p>
+            <p className="text-lg text-gray-400 mb-8">
+              Get Your Custom AI Roadmap in 30 Minutes
+            </p>
           <a 
             href="#"
             target="_blank"

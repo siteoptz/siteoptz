@@ -285,13 +285,15 @@ export default function SeamlessAiReviewPage() {
         {/* Final CTA Section */}
         <section className="relative z-10 py-20">
           <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
-            <div className="bg-gradient-to-r from-blue-900/20 to-purple-900/20 border border-gray-800 rounded-2xl p-12">
-              <h2 className="text-4xl font-bold text-white mb-6">
-                Ready to Get Started with Seamless AI?
-              </h2>
-              <p className="text-xl text-gray-300 mb-8">
-                Join thousands of professionals using Seamless AI to enhance their ai tools workflows.
-              </p>
+            <div className="bg-gradient-to-r from-blue-900/20 to-purple-900/20 border border-gray-800 rounded-2xl p-12">            <h2 className="text-4xl font-bold text-white mb-6">
+              Work Directly With Experts Who've Helped Businesses Scale With AI
+            </h2>
+            <p className="text-xl text-gray-300 mb-4">
+              Not Another Demo. A Real Strategy Session For Your Business.
+            </p>
+            <p className="text-lg text-gray-400 mb-8">
+              Get Your Custom AI Roadmap in 30 Minutes
+            </p>
               <div className="flex justify-center">
 <Link href="https://api.leadconnectorhq.com/widget/booking/yPjkVmsauPst8XlrOQUl" target="_blank" rel="noopener noreferrer"
                   className="bg-gradient-to-r from-blue-600 to-purple-600 text-white hover:from-blue-700 hover:to-purple-700 font-bold py-4 px-8 rounded-lg transform hover:scale-105 transition-all duration-200 shadow-lg hover:shadow-xl"

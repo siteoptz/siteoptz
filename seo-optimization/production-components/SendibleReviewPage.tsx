@@ -325,12 +325,15 @@ const SendibleReviewPage: React.FC<SendibleReviewPageProps> = () => {
 
         {/* Call to Action */}
         <div className="text-center py-16">
-          <h2 className="text-3xl font-bold text-white mb-6">
-            Ready to Try Sendible?
-          </h2>
-          <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
-            Sendible is an agency-focused social media tool with white-label options and comprehensive publishing capabilities.
-          </p>
+          <h2 className="text-4xl font-bold text-white mb-6">
+              Work Directly With Experts Who've Helped Businesses Scale With AI
+            </h2>
+            <p className="text-xl text-gray-300 mb-4">
+              Not Another Demo. A Real Strategy Session For Your Business.
+            </p>
+            <p className="text-lg text-gray-400 mb-8">
+              Get Your Custom AI Roadmap in 30 Minutes
+            </p>
           <a 
             href="https://www.sendible.com"
             target="_blank"

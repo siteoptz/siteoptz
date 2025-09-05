@@ -373,12 +373,15 @@ const ColossyanCreatorReviewPage: React.FC<ColossyanCreatorReviewPageProps> = ()
 
         {/* Call to Action */}
         <div className="text-center py-16">
-          <h2 className="text-3xl font-bold text-white mb-6">
-            Ready to Try Colossyan Creator?
-          </h2>
-          <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
-            Colossyan Creator is an AI video platform for creating professional training and educational videos with AI avatars.
-          </p>
+          <h2 className="text-4xl font-bold text-white mb-6">
+              Work Directly With Experts Who've Helped Businesses Scale With AI
+            </h2>
+            <p className="text-xl text-gray-300 mb-4">
+              Not Another Demo. A Real Strategy Session For Your Business.
+            </p>
+            <p className="text-lg text-gray-400 mb-8">
+              Get Your Custom AI Roadmap in 30 Minutes
+            </p>
           <a 
             href="https://colossyan.com"
             target="_blank"
