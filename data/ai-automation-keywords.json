@@ -1,0 +1,6581 @@
+{
+  "contentKeywords": {
+    "primary": [
+      {
+        "keyword": "robotic process automation",
+        "spell": null,
+        "location_code": 2840,
+        "language_code": "en",
+        "search_partners": false,
+        "competition": "LOW",
+        "competition_index": 20,
+        "search_volume": 8100,
+        "low_top_of_page_bid": 8.72,
+        "high_top_of_page_bid": 23.65,
+        "cpc": 32.05,
+        "monthly_searches": [
+          {
+            "year": 2025,
+            "month": 7,
+            "search_volume": 9900
+          },
+          {
+            "year": 2025,
+            "month": 6,
+            "search_volume": 9900
+          },
+          {
+            "year": 2025,
+            "month": 5,
+            "search_volume": 9900
+          },
+          {
+            "year": 2025,
+            "month": 4,
+            "search_volume": 8100
+          },
+          {
+            "year": 2025,
+            "month": 3,
+            "search_volume": 9900
+          },
+          {
+            "year": 2025,
+            "month": 2,
+            "search_volume": 6600
+          },
+          {
+            "year": 2025,
+            "month": 1,
+            "search_volume": 8100
+          },
+          {
+            "year": 2024,
+            "month": 12,
+            "search_volume": 9900
+          },
+          {
+            "year": 2024,
+            "month": 11,
+            "search_volume": 9900
+          },
+          {
+            "year": 2024,
+            "month": 10,
+            "search_volume": 9900
+          },
+          {
+            "year": 2024,
+            "month": 9,
+            "search_volume": 6600
+          },
+          {
+            "year": 2024,
+            "month": 8,
+            "search_volume": 6600
+          }
+        ]
+      },
+      {
+        "keyword": "artificial intelligence automation",
+        "spell": null,
+        "location_code": 2840,
+        "language_code": "en",
+        "search_partners": false,
+        "competition": "MEDIUM",
+        "competition_index": 58,
+        "search_volume": 5400,
+        "low_top_of_page_bid": 5.48,
+        "high_top_of_page_bid": 15.99,
+        "cpc": 18.72,
+        "monthly_searches": [
+          {
+            "year": 2025,
+            "month": 7,
+            "search_volume": 8100
+          },
+          {
+            "year": 2025,
+            "month": 6,
+            "search_volume": 6600
+          },
+          {
+            "year": 2025,
+            "month": 5,
+            "search_volume": 6600
+          },
+          {
+            "year": 2025,
+            "month": 4,
+            "search_volume": 8100
+          },
+          {
+            "year": 2025,
+            "month": 3,
+            "search_volume": 6600
+          },
+          {
+            "year": 2025,
+            "month": 2,
+            "search_volume": 5400
+          },
+          {
+            "year": 2025,
+            "month": 1,
+            "search_volume": 5400
+          },
+          {
+            "year": 2024,
+            "month": 12,
+            "search_volume": 4400
+          },
+          {
+            "year": 2024,
+            "month": 11,
+            "search_volume": 3600
+          },
+          {
+            "year": 2024,
+            "month": 10,
+            "search_volume": 3600
+          },
+          {
+            "year": 2024,
+            "month": 9,
+            "search_volume": 2900
+          },
+          {
+            "year": 2024,
+            "month": 8,
+            "search_volume": 2900
+          }
+        ]
+      },
+      {
+        "keyword": "business process automation",
+        "spell": null,
+        "location_code": 2840,
+        "language_code": "en",
+        "search_partners": false,
+        "competition": "LOW",
+        "competition_index": 21,
+        "search_volume": 1900,
+        "low_top_of_page_bid": 9.22,
+        "high_top_of_page_bid": 26.81,
+        "cpc": 31.9,
+        "monthly_searches": [
+          {
+            "year": 2025,
+            "month": 7,
+            "search_volume": 1000
+          },
+          {
+            "year": 2025,
+            "month": 6,
+            "search_volume": 1000
+          },
+          {
+            "year": 2025,
+            "month": 5,
+            "search_volume": 1900
+          },
+          {
+            "year": 2025,
+            "month": 4,
+            "search_volume": 2900
+          },
+          {
+            "year": 2025,
+            "month": 3,
+            "search_volume": 1900
+          },
+          {
+            "year": 2025,
+            "month": 2,
+            "search_volume": 1600
+          },
+          {
+            "year": 2025,
+            "month": 1,
+            "search_volume": 2900
+          },
+          {
+            "year": 2024,
+            "month": 12,
+            "search_volume": 1600
+          },
+          {
+            "year": 2024,
+            "month": 11,
+            "search_volume": 3600
+          },
+          {
+            "year": 2024,
+            "month": 10,
+            "search_volume": 4400
+          },
+          {
+            "year": 2024,
+            "month": 9,
+            "search_volume": 1000
+          },
+          {
+            "year": 2024,
+            "month": 8,
+            "search_volume": 1300
+          }
+        ]
+      },
+      {
+        "keyword": "AI automation tools",
+        "spell": "ai automation tools",
+        "location_code": 2840,
+        "language_code": "en",
+        "search_partners": false,
+        "competition": "LOW",
+        "competition_index": 21,
+        "search_volume": 1000,
+        "low_top_of_page_bid": 7.65,
+        "high_top_of_page_bid": 23.33,
+        "cpc": 25.71,
+        "monthly_searches": [
+          {
+            "year": 2025,
+            "month": 7,
+            "search_volume": 1900
+          },
+          {
+            "year": 2025,
+            "month": 6,
+            "search_volume": 1600
+          },
+          {
+            "year": 2025,
+            "month": 5,
+            "search_volume": 1300
+          },
+          {
+            "year": 2025,
+            "month": 4,
+            "search_volume": 1000
+          },
+          {
+            "year": 2025,
+            "month": 3,
+            "search_volume": 1000
+          },
+          {
+            "year": 2025,
+            "month": 2,
+            "search_volume": 720
+          },
+          {
+            "year": 2025,
+            "month": 1,
+            "search_volume": 880
+          },
+          {
+            "year": 2024,
+            "month": 12,
+            "search_volume": 590
+          },
+          {
+            "year": 2024,
+            "month": 11,
+            "search_volume": 590
+          },
+          {
+            "year": 2024,
+            "month": 10,
+            "search_volume": 590
+          },
+          {
+            "year": 2024,
+            "month": 9,
+            "search_volume": 880
+          },
+          {
+            "year": 2024,
+            "month": 8,
+            "search_volume": 480
+          }
+        ]
+      },
+      {
+        "keyword": "intelligent automation",
+        "spell": null,
+        "location_code": 2840,
+        "language_code": "en",
+        "search_partners": false,
+        "competition": "MEDIUM",
+        "competition_index": 37,
+        "search_volume": 1000,
+        "low_top_of_page_bid": 6,
+        "high_top_of_page_bid": 18.67,
+        "cpc": 20.51,
+        "monthly_searches": [
+          {
+            "year": 2025,
+            "month": 7,
+            "search_volume": 720
+          },
+          {
+            "year": 2025,
+            "month": 6,
+            "search_volume": 1300
+          },
+          {
+            "year": 2025,
+            "month": 5,
+            "search_volume": 1300
+          },
+          {
+            "year": 2025,
+            "month": 4,
+            "search_volume": 1600
+          },
+          {
+            "year": 2025,
+            "month": 3,
+            "search_volume": 1300
+          },
+          {
+            "year": 2025,
+            "month": 2,
+            "search_volume": 1000
+          },
+          {
+            "year": 2025,
+            "month": 1,
+            "search_volume": 1600
+          },
+          {
+            "year": 2024,
+            "month": 12,
+            "search_volume": 1000
+          },
+          {
+            "year": 2024,
+            "month": 11,
+            "search_volume": 1000
+          },
+          {
+            "year": 2024,
+            "month": 10,
+            "search_volume": 1000
+          },
+          {
+            "year": 2024,
+            "month": 9,
+            "search_volume": 880
+          },
+          {
+            "year": 2024,
+            "month": 8,
+            "search_volume": 880
+          }
+        ]
+      },
+      {
+        "keyword": "AI workflow automation",
+        "spell": "ai workflow automation",
+        "location_code": 2840,
+        "language_code": "en",
+        "search_partners": false,
+        "competition": "MEDIUM",
+        "competition_index": 55,
+        "search_volume": 880,
+        "low_top_of_page_bid": 8.59,
+        "high_top_of_page_bid": 26.69,
+        "cpc": 25.48,
+        "monthly_searches": [
+          {
+            "year": 2025,
+            "month": 7,
+            "search_volume": 880
+          },
+          {
+            "year": 2025,
+            "month": 6,
+            "search_volume": 1000
+          },
+          {
+            "year": 2025,
+            "month": 5,
+            "search_volume": 1300
+          },
+          {
+            "year": 2025,
+            "month": 4,
+            "search_volume": 1000
+          },
+          {
+            "year": 2025,
+            "month": 3,
+            "search_volume": 1000
+          },
+          {
+            "year": 2025,
+            "month": 2,
+            "search_volume": 880
+          },
+          {
+            "year": 2025,
+            "month": 1,
+            "search_volume": 590
+          },
+          {
+            "year": 2024,
+            "month": 12,
+            "search_volume": 390
+          },
+          {
+            "year": 2024,
+            "month": 11,
+            "search_volume": 480
+          },
+          {
+            "year": 2024,
+            "month": 10,
+            "search_volume": 1600
+          },
+          {
+            "year": 2024,
+            "month": 9,
+            "search_volume": 260
+          },
+          {
+            "year": 2024,
+            "month": 8,
+            "search_volume": 260
+          }
+        ]
+      },
+      {
+        "keyword": "AI automation software",
+        "spell": "ai automation software",
+        "location_code": 2840,
+        "language_code": "en",
+        "search_partners": false,
+        "competition": "LOW",
+        "competition_index": 7,
+        "search_volume": 390,
+        "low_top_of_page_bid": 10.19,
+        "high_top_of_page_bid": 31.22,
+        "cpc": 29.05,
+        "monthly_searches": [
+          {
+            "year": 2025,
+            "month": 7,
+            "search_volume": 720
+          },
+          {
+            "year": 2025,
+            "month": 6,
+            "search_volume": 720
+          },
+          {
+            "year": 2025,
+            "month": 5,
+            "search_volume": 720
+          },
+          {
+            "year": 2025,
+            "month": 4,
+            "search_volume": 390
+          },
+          {
+            "year": 2025,
+            "month": 3,
+            "search_volume": 590
+          },
+          {
+            "year": 2025,
+            "month": 2,
+            "search_volume": 320
+          },
+          {
+            "year": 2025,
+            "month": 1,
+            "search_volume": 170
+          },
+          {
+            "year": 2024,
+            "month": 12,
+            "search_volume": 170
+          },
+          {
+            "year": 2024,
+            "month": 11,
+            "search_volume": 170
+          },
+          {
+            "year": 2024,
+            "month": 10,
+            "search_volume": 90
+          },
+          {
+            "year": 2024,
+            "month": 9,
+            "search_volume": 720
+          },
+          {
+            "year": 2024,
+            "month": 8,
+            "search_volume": 40
+          }
+        ]
+      },
+      {
+        "keyword": "AI automation platform",
+        "spell": "ai automation platform",
+        "location_code": 2840,
+        "language_code": "en",
+        "search_partners": false,
+        "competition": "LOW",
+        "competition_index": 24,
+        "search_volume": 210,
+        "low_top_of_page_bid": 9.35,
+        "high_top_of_page_bid": 26.79,
+        "cpc": 33.97,
+        "monthly_searches": [
+          {
+            "year": 2025,
+            "month": 7,
+            "search_volume": 260
+          },
+          {
+            "year": 2025,
+            "month": 6,
+            "search_volume": 590
+          },
+          {
+            "year": 2025,
+            "month": 5,
+            "search_volume": 260
+          },
+          {
+            "year": 2025,
+            "month": 4,
+            "search_volume": 210
+          },
+          {
+            "year": 2025,
+            "month": 3,
+            "search_volume": 260
+          },
+          {
+            "year": 2025,
+            "month": 2,
+            "search_volume": 110
+          },
+          {
+            "year": 2025,
+            "month": 1,
+            "search_volume": 110
+          },
+          {
+            "year": 2024,
+            "month": 12,
+            "search_volume": 50
+          },
+          {
+            "year": 2024,
+            "month": 11,
+            "search_volume": 170
+          },
+          {
+            "year": 2024,
+            "month": 10,
+            "search_volume": 260
+          },
+          {
+            "year": 2024,
+            "month": 9,
+            "search_volume": 70
+          },
+          {
+            "year": 2024,
+            "month": 8,
+            "search_volume": 30
+          }
+        ]
+      },
+      {
+        "keyword": "AI process automation",
+        "spell": "ai process automation",
+        "location_code": 2840,
+        "language_code": "en",
+        "search_partners": false,
+        "competition": "LOW",
+        "competition_index": 25,
+        "search_volume": 170,
+        "low_top_of_page_bid": 9.84,
+        "high_top_of_page_bid": 32.56,
+        "cpc": 45.45,
+        "monthly_searches": [
+          {
+            "year": 2025,
+            "month": 7,
+            "search_volume": 90
+          },
+          {
+            "year": 2025,
+            "month": 6,
+            "search_volume": 170
+          },
+          {
+            "year": 2025,
+            "month": 5,
+            "search_volume": 320
+          },
+          {
+            "year": 2025,
+            "month": 4,
+            "search_volume": 320
+          },
+          {
+            "year": 2025,
+            "month": 3,
+            "search_volume": 260
+          },
+          {
+            "year": 2025,
+            "month": 2,
+            "search_volume": 210
+          },
+          {
+            "year": 2025,
+            "month": 1,
+            "search_volume": 170
+          },
+          {
+            "year": 2024,
+            "month": 12,
+            "search_volume": 140
+          },
+          {
+            "year": 2024,
+            "month": 11,
+            "search_volume": 110
+          },
+          {
+            "year": 2024,
+            "month": 10,
+            "search_volume": 90
+          },
+          {
+            "year": 2024,
+            "month": 9,
+            "search_volume": 90
+          },
+          {
+            "year": 2024,
+            "month": 8,
+            "search_volume": 70
+          }
+        ]
+      },
+      {
+        "keyword": "automated AI solutions",
+        "spell": null,
+        "location_code": 2840,
+        "language_code": "en",
+        "search_partners": false,
+        "competition": null,
+        "competition_index": null,
+        "search_volume": null,
+        "low_top_of_page_bid": null,
+        "high_top_of_page_bid": null,
+        "cpc": null,
+        "monthly_searches": null
+      }
+    ],
+    "business": [
+      {
+        "keyword": "marketing automation AI",
+        "spell": "marketing automation ai",
+        "location_code": 2840,
+        "language_code": "en",
+        "search_partners": false,
+        "competition": "LOW",
+        "competition_index": 14,
+        "search_volume": 1000,
+        "low_top_of_page_bid": 11.4,
+        "high_top_of_page_bid": 29.32,
+        "cpc": 41.72,
+        "monthly_searches": [
+          {
+            "year": 2025,
+            "month": 7,
+            "search_volume": 880
+          },
+          {
+            "year": 2025,
+            "month": 6,
+            "search_volume": 1300
+          },
+          {
+            "year": 2025,
+            "month": 5,
+            "search_volume": 1900
+          },
+          {
+            "year": 2025,
+            "month": 4,
+            "search_volume": 1600
+          },
+          {
+            "year": 2025,
+            "month": 3,
+            "search_volume": 1300
+          },
+          {
+            "year": 2025,
+            "month": 2,
+            "search_volume": 720
+          },
+          {
+            "year": 2025,
+            "month": 1,
+            "search_volume": 720
+          },
+          {
+            "year": 2024,
+            "month": 12,
+            "search_volume": 1900
+          },
+          {
+            "year": 2024,
+            "month": 11,
+            "search_volume": 1300
+          },
+          {
+            "year": 2024,
+            "month": 10,
+            "search_volume": 260
+          },
+          {
+            "year": 2024,
+            "month": 9,
+            "search_volume": 170
+          },
+          {
+            "year": 2024,
+            "month": 8,
+            "search_volume": 260
+          }
+        ]
+      },
+      {
+        "keyword": "automated customer support",
+        "spell": null,
+        "location_code": 2840,
+        "language_code": "en",
+        "search_partners": false,
+        "competition": "LOW",
+        "competition_index": 13,
+        "search_volume": 720,
+        "low_top_of_page_bid": 13.34,
+        "high_top_of_page_bid": 36.99,
+        "cpc": 51.74,
+        "monthly_searches": [
+          {
+            "year": 2025,
+            "month": 7,
+            "search_volume": 480
+          },
+          {
+            "year": 2025,
+            "month": 6,
+            "search_volume": 390
+          },
+          {
+            "year": 2025,
+            "month": 5,
+            "search_volume": 720
+          },
+          {
+            "year": 2025,
+            "month": 4,
+            "search_volume": 880
+          },
+          {
+            "year": 2025,
+            "month": 3,
+            "search_volume": 1000
+          },
+          {
+            "year": 2025,
+            "month": 2,
+            "search_volume": 590
+          },
+          {
+            "year": 2025,
+            "month": 1,
+            "search_volume": 1000
+          },
+          {
+            "year": 2024,
+            "month": 12,
+            "search_volume": 1000
+          },
+          {
+            "year": 2024,
+            "month": 11,
+            "search_volume": 720
+          },
+          {
+            "year": 2024,
+            "month": 10,
+            "search_volume": 720
+          },
+          {
+            "year": 2024,
+            "month": 9,
+            "search_volume": 720
+          },
+          {
+            "year": 2024,
+            "month": 8,
+            "search_volume": 260
+          }
+        ]
+      },
+      {
+        "keyword": "AI sales automation",
+        "spell": "ai sales automation",
+        "location_code": 2840,
+        "language_code": "en",
+        "search_partners": false,
+        "competition": "LOW",
+        "competition_index": 28,
+        "search_volume": 320,
+        "low_top_of_page_bid": 11.97,
+        "high_top_of_page_bid": 37.5,
+        "cpc": 37.3,
+        "monthly_searches": [
+          {
+            "year": 2025,
+            "month": 7,
+            "search_volume": 170
+          },
+          {
+            "year": 2025,
+            "month": 6,
+            "search_volume": 320
+          },
+          {
+            "year": 2025,
+            "month": 5,
+            "search_volume": 390
+          },
+          {
+            "year": 2025,
+            "month": 4,
+            "search_volume": 390
+          },
+          {
+            "year": 2025,
+            "month": 3,
+            "search_volume": 480
+          },
+          {
+            "year": 2025,
+            "month": 2,
+            "search_volume": 390
+          },
+          {
+            "year": 2025,
+            "month": 1,
+            "search_volume": 480
+          },
+          {
+            "year": 2024,
+            "month": 12,
+            "search_volume": 320
+          },
+          {
+            "year": 2024,
+            "month": 11,
+            "search_volume": 170
+          },
+          {
+            "year": 2024,
+            "month": 10,
+            "search_volume": 210
+          },
+          {
+            "year": 2024,
+            "month": 9,
+            "search_volume": 140
+          },
+          {
+            "year": 2024,
+            "month": 8,
+            "search_volume": 140
+          }
+        ]
+      },
+      {
+        "keyword": "HR automation tools",
+        "spell": "hr automation tools",
+        "location_code": 2840,
+        "language_code": "en",
+        "search_partners": false,
+        "competition": "LOW",
+        "competition_index": 3,
+        "search_volume": 210,
+        "low_top_of_page_bid": 22.83,
+        "high_top_of_page_bid": 67.61,
+        "cpc": 53.32,
+        "monthly_searches": [
+          {
+            "year": 2025,
+            "month": 7,
+            "search_volume": 320
+          },
+          {
+            "year": 2025,
+            "month": 6,
+            "search_volume": 590
+          },
+          {
+            "year": 2025,
+            "month": 5,
+            "search_volume": 320
+          },
+          {
+            "year": 2025,
+            "month": 4,
+            "search_volume": 320
+          },
+          {
+            "year": 2025,
+            "month": 3,
+            "search_volume": 260
+          },
+          {
+            "year": 2025,
+            "month": 2,
+            "search_volume": 110
+          },
+          {
+            "year": 2025,
+            "month": 1,
+            "search_volume": 210
+          },
+          {
+            "year": 2024,
+            "month": 12,
+            "search_volume": 170
+          },
+          {
+            "year": 2024,
+            "month": 11,
+            "search_volume": 110
+          },
+          {
+            "year": 2024,
+            "month": 10,
+            "search_volume": 110
+          },
+          {
+            "year": 2024,
+            "month": 9,
+            "search_volume": 90
+          },
+          {
+            "year": 2024,
+            "month": 8,
+            "search_volume": 90
+          }
+        ]
+      },
+      {
+        "keyword": "lead generation automation",
+        "spell": null,
+        "location_code": 2840,
+        "language_code": "en",
+        "search_partners": false,
+        "competition": "LOW",
+        "competition_index": 28,
+        "search_volume": 210,
+        "low_top_of_page_bid": 13.03,
+        "high_top_of_page_bid": 53.03,
+        "cpc": 53.16,
+        "monthly_searches": [
+          {
+            "year": 2025,
+            "month": 7,
+            "search_volume": 90
+          },
+          {
+            "year": 2025,
+            "month": 6,
+            "search_volume": 260
+          },
+          {
+            "year": 2025,
+            "month": 5,
+            "search_volume": 260
+          },
+          {
+            "year": 2025,
+            "month": 4,
+            "search_volume": 320
+          },
+          {
+            "year": 2025,
+            "month": 3,
+            "search_volume": 320
+          },
+          {
+            "year": 2025,
+            "month": 2,
+            "search_volume": 210
+          },
+          {
+            "year": 2025,
+            "month": 1,
+            "search_volume": 210
+          },
+          {
+            "year": 2024,
+            "month": 12,
+            "search_volume": 110
+          },
+          {
+            "year": 2024,
+            "month": 11,
+            "search_volume": 110
+          },
+          {
+            "year": 2024,
+            "month": 10,
+            "search_volume": 170
+          },
+          {
+            "year": 2024,
+            "month": 9,
+            "search_volume": 170
+          },
+          {
+            "year": 2024,
+            "month": 8,
+            "search_volume": 110
+          }
+        ]
+      },
+      {
+        "keyword": "AI email automation",
+        "spell": "ai email automation",
+        "location_code": 2840,
+        "language_code": "en",
+        "search_partners": false,
+        "competition": "MEDIUM",
+        "competition_index": 39,
+        "search_volume": 170,
+        "low_top_of_page_bid": 12.46,
+        "high_top_of_page_bid": 45.59,
+        "cpc": 80.16,
+        "monthly_searches": [
+          {
+            "year": 2025,
+            "month": 7,
+            "search_volume": 140
+          },
+          {
+            "year": 2025,
+            "month": 6,
+            "search_volume": 210
+          },
+          {
+            "year": 2025,
+            "month": 5,
+            "search_volume": 260
+          },
+          {
+            "year": 2025,
+            "month": 4,
+            "search_volume": 170
+          },
+          {
+            "year": 2025,
+            "month": 3,
+            "search_volume": 170
+          },
+          {
+            "year": 2025,
+            "month": 2,
+            "search_volume": 170
+          },
+          {
+            "year": 2025,
+            "month": 1,
+            "search_volume": 210
+          },
+          {
+            "year": 2024,
+            "month": 12,
+            "search_volume": 140
+          },
+          {
+            "year": 2024,
+            "month": 11,
+            "search_volume": 110
+          },
+          {
+            "year": 2024,
+            "month": 10,
+            "search_volume": 110
+          },
+          {
+            "year": 2024,
+            "month": 9,
+            "search_volume": 90
+          },
+          {
+            "year": 2024,
+            "month": 8,
+            "search_volume": 90
+          }
+        ]
+      },
+      {
+        "keyword": "AI customer service automation",
+        "spell": "ai customer service automation",
+        "location_code": 2840,
+        "language_code": "en",
+        "search_partners": false,
+        "competition": "LOW",
+        "competition_index": 5,
+        "search_volume": 90,
+        "low_top_of_page_bid": 25.92,
+        "high_top_of_page_bid": 53.52,
+        "cpc": null,
+        "monthly_searches": [
+          {
+            "year": 2025,
+            "month": 7,
+            "search_volume": 170
+          },
+          {
+            "year": 2025,
+            "month": 6,
+            "search_volume": 140
+          },
+          {
+            "year": 2025,
+            "month": 5,
+            "search_volume": 480
+          },
+          {
+            "year": 2025,
+            "month": 4,
+            "search_volume": 210
+          },
+          {
+            "year": 2025,
+            "month": 3,
+            "search_volume": 50
+          },
+          {
+            "year": 2025,
+            "month": 2,
+            "search_volume": 40
+          },
+          {
+            "year": 2025,
+            "month": 1,
+            "search_volume": 50
+          },
+          {
+            "year": 2024,
+            "month": 12,
+            "search_volume": null
+          },
+          {
+            "year": 2024,
+            "month": 11,
+            "search_volume": null
+          },
+          {
+            "year": 2024,
+            "month": 10,
+            "search_volume": null
+          },
+          {
+            "year": 2024,
+            "month": 9,
+            "search_volume": null
+          },
+          {
+            "year": 2024,
+            "month": 8,
+            "search_volume": null
+          }
+        ]
+      },
+      {
+        "keyword": "AI content automation",
+        "spell": "ai content automation",
+        "location_code": 2840,
+        "language_code": "en",
+        "search_partners": false,
+        "competition": "LOW",
+        "competition_index": 23,
+        "search_volume": 70,
+        "low_top_of_page_bid": 5.19,
+        "high_top_of_page_bid": 19.53,
+        "cpc": 13.84,
+        "monthly_searches": [
+          {
+            "year": 2025,
+            "month": 7,
+            "search_volume": 50
+          },
+          {
+            "year": 2025,
+            "month": 6,
+            "search_volume": 110
+          },
+          {
+            "year": 2025,
+            "month": 5,
+            "search_volume": 110
+          },
+          {
+            "year": 2025,
+            "month": 4,
+            "search_volume": 110
+          },
+          {
+            "year": 2025,
+            "month": 3,
+            "search_volume": 90
+          },
+          {
+            "year": 2025,
+            "month": 2,
+            "search_volume": 70
+          },
+          {
+            "year": 2025,
+            "month": 1,
+            "search_volume": 90
+          },
+          {
+            "year": 2024,
+            "month": 12,
+            "search_volume": 50
+          },
+          {
+            "year": 2024,
+            "month": 11,
+            "search_volume": 20
+          },
+          {
+            "year": 2024,
+            "month": 10,
+            "search_volume": 30
+          },
+          {
+            "year": 2024,
+            "month": 9,
+            "search_volume": 50
+          },
+          {
+            "year": 2024,
+            "month": 8,
+            "search_volume": 10
+          }
+        ]
+      },
+      {
+        "keyword": "AI chatbot automation",
+        "spell": "ai chatbot automation",
+        "location_code": 2840,
+        "language_code": "en",
+        "search_partners": false,
+        "competition": "LOW",
+        "competition_index": 21,
+        "search_volume": 30,
+        "low_top_of_page_bid": null,
+        "high_top_of_page_bid": null,
+        "cpc": null,
+        "monthly_searches": [
+          {
+            "year": 2025,
+            "month": 7,
+            "search_volume": 10
+          },
+          {
+            "year": 2025,
+            "month": 6,
+            "search_volume": 50
+          },
+          {
+            "year": 2025,
+            "month": 5,
+            "search_volume": 50
+          },
+          {
+            "year": 2025,
+            "month": 4,
+            "search_volume": 50
+          },
+          {
+            "year": 2025,
+            "month": 3,
+            "search_volume": 40
+          },
+          {
+            "year": 2025,
+            "month": 2,
+            "search_volume": 30
+          },
+          {
+            "year": 2025,
+            "month": 1,
+            "search_volume": 40
+          },
+          {
+            "year": 2024,
+            "month": 12,
+            "search_volume": 20
+          },
+          {
+            "year": 2024,
+            "month": 11,
+            "search_volume": 20
+          },
+          {
+            "year": 2024,
+            "month": 10,
+            "search_volume": 20
+          },
+          {
+            "year": 2024,
+            "month": 9,
+            "search_volume": 10
+          },
+          {
+            "year": 2024,
+            "month": 8,
+            "search_volume": 10
+          }
+        ]
+      },
+      {
+        "keyword": "social media automation AI",
+        "spell": "social media automation ai",
+        "location_code": 2840,
+        "language_code": "en",
+        "search_partners": false,
+        "competition": "MEDIUM",
+        "competition_index": 35,
+        "search_volume": 30,
+        "low_top_of_page_bid": 5.04,
+        "high_top_of_page_bid": 19.49,
+        "cpc": 14.99,
+        "monthly_searches": [
+          {
+            "year": 2025,
+            "month": 7,
+            "search_volume": 40
+          },
+          {
+            "year": 2025,
+            "month": 6,
+            "search_volume": 30
+          },
+          {
+            "year": 2025,
+            "month": 5,
+            "search_volume": 20
+          },
+          {
+            "year": 2025,
+            "month": 4,
+            "search_volume": 20
+          },
+          {
+            "year": 2025,
+            "month": 3,
+            "search_volume": 20
+          },
+          {
+            "year": 2025,
+            "month": 2,
+            "search_volume": 30
+          },
+          {
+            "year": 2025,
+            "month": 1,
+            "search_volume": 40
+          },
+          {
+            "year": 2024,
+            "month": 12,
+            "search_volume": 20
+          },
+          {
+            "year": 2024,
+            "month": 11,
+            "search_volume": 10
+          },
+          {
+            "year": 2024,
+            "month": 10,
+            "search_volume": 20
+          },
+          {
+            "year": 2024,
+            "month": 9,
+            "search_volume": 20
+          },
+          {
+            "year": 2024,
+            "month": 8,
+            "search_volume": 20
+          }
+        ]
+      }
+    ],
+    "technical": [
+      {
+        "keyword": "automated data processing",
+        "spell": null,
+        "location_code": 2840,
+        "language_code": "en",
+        "search_partners": false,
+        "competition": "LOW",
+        "competition_index": 5,
+        "search_volume": 2740000,
+        "low_top_of_page_bid": 2.98,
+        "high_top_of_page_bid": 12.27,
+        "cpc": 11.01,
+        "monthly_searches": [
+          {
+            "year": 2025,
+            "month": 7,
+            "search_volume": 2740000
+          },
+          {
+            "year": 2025,
+            "month": 6,
+            "search_volume": 2740000
+          },
+          {
+            "year": 2025,
+            "month": 5,
+            "search_volume": 2740000
+          },
+          {
+            "year": 2025,
+            "month": 4,
+            "search_volume": 3350000
+          },
+          {
+            "year": 2025,
+            "month": 3,
+            "search_volume": 3350000
+          },
+          {
+            "year": 2025,
+            "month": 2,
+            "search_volume": 3350000
+          },
+          {
+            "year": 2025,
+            "month": 1,
+            "search_volume": 4090000
+          },
+          {
+            "year": 2024,
+            "month": 12,
+            "search_volume": 2740000
+          },
+          {
+            "year": 2024,
+            "month": 11,
+            "search_volume": 2740000
+          },
+          {
+            "year": 2024,
+            "month": 10,
+            "search_volume": 2740000
+          },
+          {
+            "year": 2024,
+            "month": 9,
+            "search_volume": 2240000
+          },
+          {
+            "year": 2024,
+            "month": 8,
+            "search_volume": 2740000
+          }
+        ]
+      },
+      {
+        "keyword": "intelligent document processing",
+        "spell": null,
+        "location_code": 2840,
+        "language_code": "en",
+        "search_partners": false,
+        "competition": "MEDIUM",
+        "competition_index": 56,
+        "search_volume": 1000,
+        "low_top_of_page_bid": 10.83,
+        "high_top_of_page_bid": 35.12,
+        "cpc": 38.06,
+        "monthly_searches": [
+          {
+            "year": 2025,
+            "month": 7,
+            "search_volume": 880
+          },
+          {
+            "year": 2025,
+            "month": 6,
+            "search_volume": 880
+          },
+          {
+            "year": 2025,
+            "month": 5,
+            "search_volume": 1300
+          },
+          {
+            "year": 2025,
+            "month": 4,
+            "search_volume": 1300
+          },
+          {
+            "year": 2025,
+            "month": 3,
+            "search_volume": 1300
+          },
+          {
+            "year": 2025,
+            "month": 2,
+            "search_volume": 1000
+          },
+          {
+            "year": 2025,
+            "month": 1,
+            "search_volume": 1000
+          },
+          {
+            "year": 2024,
+            "month": 12,
+            "search_volume": 880
+          },
+          {
+            "year": 2024,
+            "month": 11,
+            "search_volume": 1000
+          },
+          {
+            "year": 2024,
+            "month": 10,
+            "search_volume": 1000
+          },
+          {
+            "year": 2024,
+            "month": 9,
+            "search_volume": 880
+          },
+          {
+            "year": 2024,
+            "month": 8,
+            "search_volume": 1000
+          }
+        ]
+      },
+      {
+        "keyword": "API automation tools",
+        "spell": "api automation tools",
+        "location_code": 2840,
+        "language_code": "en",
+        "search_partners": false,
+        "competition": "LOW",
+        "competition_index": 27,
+        "search_volume": 110,
+        "low_top_of_page_bid": 4.36,
+        "high_top_of_page_bid": 16.81,
+        "cpc": 10.28,
+        "monthly_searches": [
+          {
+            "year": 2025,
+            "month": 7,
+            "search_volume": 140
+          },
+          {
+            "year": 2025,
+            "month": 6,
+            "search_volume": 170
+          },
+          {
+            "year": 2025,
+            "month": 5,
+            "search_volume": 170
+          },
+          {
+            "year": 2025,
+            "month": 4,
+            "search_volume": 140
+          },
+          {
+            "year": 2025,
+            "month": 3,
+            "search_volume": 140
+          },
+          {
+            "year": 2025,
+            "month": 2,
+            "search_volume": 140
+          },
+          {
+            "year": 2025,
+            "month": 1,
+            "search_volume": 140
+          },
+          {
+            "year": 2024,
+            "month": 12,
+            "search_volume": 110
+          },
+          {
+            "year": 2024,
+            "month": 11,
+            "search_volume": 90
+          },
+          {
+            "year": 2024,
+            "month": 10,
+            "search_volume": 90
+          },
+          {
+            "year": 2024,
+            "month": 9,
+            "search_volume": 90
+          },
+          {
+            "year": 2024,
+            "month": 8,
+            "search_volume": 90
+          }
+        ]
+      },
+      {
+        "keyword": "AI workflow management",
+        "spell": "ai workflow management",
+        "location_code": 2840,
+        "language_code": "en",
+        "search_partners": false,
+        "competition": "LOW",
+        "competition_index": 9,
+        "search_volume": 110,
+        "low_top_of_page_bid": 7.81,
+        "high_top_of_page_bid": 33.26,
+        "cpc": 44.7,
+        "monthly_searches": [
+          {
+            "year": 2025,
+            "month": 7,
+            "search_volume": 90
+          },
+          {
+            "year": 2025,
+            "month": 6,
+            "search_volume": 90
+          },
+          {
+            "year": 2025,
+            "month": 5,
+            "search_volume": 170
+          },
+          {
+            "year": 2025,
+            "month": 4,
+            "search_volume": 170
+          },
+          {
+            "year": 2025,
+            "month": 3,
+            "search_volume": 210
+          },
+          {
+            "year": 2025,
+            "month": 2,
+            "search_volume": 110
+          },
+          {
+            "year": 2025,
+            "month": 1,
+            "search_volume": 110
+          },
+          {
+            "year": 2024,
+            "month": 12,
+            "search_volume": 70
+          },
+          {
+            "year": 2024,
+            "month": 11,
+            "search_volume": 50
+          },
+          {
+            "year": 2024,
+            "month": 10,
+            "search_volume": 70
+          },
+          {
+            "year": 2024,
+            "month": 9,
+            "search_volume": 50
+          },
+          {
+            "year": 2024,
+            "month": 8,
+            "search_volume": 40
+          }
+        ]
+      },
+      {
+        "keyword": "AI task automation",
+        "spell": "ai task automation",
+        "location_code": 2840,
+        "language_code": "en",
+        "search_partners": false,
+        "competition": "MEDIUM",
+        "competition_index": 38,
+        "search_volume": 110,
+        "low_top_of_page_bid": 7.25,
+        "high_top_of_page_bid": 20.69,
+        "cpc": 14.89,
+        "monthly_searches": [
+          {
+            "year": 2025,
+            "month": 7,
+            "search_volume": 50
+          },
+          {
+            "year": 2025,
+            "month": 6,
+            "search_volume": 110
+          },
+          {
+            "year": 2025,
+            "month": 5,
+            "search_volume": 210
+          },
+          {
+            "year": 2025,
+            "month": 4,
+            "search_volume": 260
+          },
+          {
+            "year": 2025,
+            "month": 3,
+            "search_volume": 320
+          },
+          {
+            "year": 2025,
+            "month": 2,
+            "search_volume": 140
+          },
+          {
+            "year": 2025,
+            "month": 1,
+            "search_volume": 90
+          },
+          {
+            "year": 2024,
+            "month": 12,
+            "search_volume": 30
+          },
+          {
+            "year": 2024,
+            "month": 11,
+            "search_volume": 110
+          },
+          {
+            "year": 2024,
+            "month": 10,
+            "search_volume": 40
+          },
+          {
+            "year": 2024,
+            "month": 9,
+            "search_volume": 20
+          },
+          {
+            "year": 2024,
+            "month": 8,
+            "search_volume": 30
+          }
+        ]
+      },
+      {
+        "keyword": "automated testing AI",
+        "spell": "automated testing ai",
+        "location_code": 2840,
+        "language_code": "en",
+        "search_partners": false,
+        "competition": "MEDIUM",
+        "competition_index": 50,
+        "search_volume": 20,
+        "low_top_of_page_bid": 6.29,
+        "high_top_of_page_bid": 26.76,
+        "cpc": 15.6,
+        "monthly_searches": [
+          {
+            "year": 2025,
+            "month": 7,
+            "search_volume": 20
+          },
+          {
+            "year": 2025,
+            "month": 6,
+            "search_volume": 50
+          },
+          {
+            "year": 2025,
+            "month": 5,
+            "search_volume": 30
+          },
+          {
+            "year": 2025,
+            "month": 4,
+            "search_volume": 30
+          },
+          {
+            "year": 2025,
+            "month": 3,
+            "search_volume": 30
+          },
+          {
+            "year": 2025,
+            "month": 2,
+            "search_volume": 20
+          },
+          {
+            "year": 2025,
+            "month": 1,
+            "search_volume": 30
+          },
+          {
+            "year": 2024,
+            "month": 12,
+            "search_volume": 10
+          },
+          {
+            "year": 2024,
+            "month": 11,
+            "search_volume": 10
+          },
+          {
+            "year": 2024,
+            "month": 10,
+            "search_volume": 10
+          },
+          {
+            "year": 2024,
+            "month": 9,
+            "search_volume": 10
+          },
+          {
+            "year": 2024,
+            "month": 8,
+            "search_volume": 10
+          }
+        ]
+      },
+      {
+        "keyword": "AI machine learning automation",
+        "spell": "ai machine learning automation",
+        "location_code": 2840,
+        "language_code": "en",
+        "search_partners": false,
+        "competition": "LOW",
+        "competition_index": 0,
+        "search_volume": 10,
+        "low_top_of_page_bid": null,
+        "high_top_of_page_bid": null,
+        "cpc": null,
+        "monthly_searches": [
+          {
+            "year": 2025,
+            "month": 7,
+            "search_volume": 10
+          },
+          {
+            "year": 2025,
+            "month": 6,
+            "search_volume": 10
+          },
+          {
+            "year": 2025,
+            "month": 5,
+            "search_volume": 10
+          },
+          {
+            "year": 2025,
+            "month": 4,
+            "search_volume": 10
+          },
+          {
+            "year": 2025,
+            "month": 3,
+            "search_volume": 20
+          },
+          {
+            "year": 2025,
+            "month": 2,
+            "search_volume": 10
+          },
+          {
+            "year": 2025,
+            "month": 1,
+            "search_volume": 20
+          },
+          {
+            "year": 2024,
+            "month": 12,
+            "search_volume": 10
+          },
+          {
+            "year": 2024,
+            "month": 11,
+            "search_volume": 10
+          },
+          {
+            "year": 2024,
+            "month": 10,
+            "search_volume": 20
+          },
+          {
+            "year": 2024,
+            "month": 9,
+            "search_volume": 10
+          },
+          {
+            "year": 2024,
+            "month": 8,
+            "search_volume": 10
+          }
+        ]
+      },
+      {
+        "keyword": "AI integration platforms",
+        "spell": null,
+        "location_code": 2840,
+        "language_code": "en",
+        "search_partners": false,
+        "competition": null,
+        "competition_index": null,
+        "search_volume": null,
+        "low_top_of_page_bid": null,
+        "high_top_of_page_bid": null,
+        "cpc": null,
+        "monthly_searches": null
+      },
+      {
+        "keyword": "no-code automation AI",
+        "spell": null,
+        "location_code": 2840,
+        "language_code": "en",
+        "search_partners": false,
+        "competition": null,
+        "competition_index": null,
+        "search_volume": null,
+        "low_top_of_page_bid": null,
+        "high_top_of_page_bid": null,
+        "cpc": null,
+        "monthly_searches": null
+      },
+      {
+        "keyword": "AI automation frameworks",
+        "spell": null,
+        "location_code": 2840,
+        "language_code": "en",
+        "search_partners": false,
+        "competition": null,
+        "competition_index": null,
+        "search_volume": null,
+        "low_top_of_page_bid": null,
+        "high_top_of_page_bid": null,
+        "cpc": null,
+        "monthly_searches": null
+      }
+    ],
+    "industry": [
+      {
+        "keyword": "AI automation services",
+        "spell": "ai automation services",
+        "location_code": 2840,
+        "language_code": "en",
+        "search_partners": false,
+        "competition": "LOW",
+        "competition_index": 31,
+        "search_volume": 320,
+        "low_top_of_page_bid": 8.95,
+        "high_top_of_page_bid": 20,
+        "cpc": 20.82,
+        "monthly_searches": [
+          {
+            "year": 2025,
+            "month": 7,
+            "search_volume": 390
+          },
+          {
+            "year": 2025,
+            "month": 6,
+            "search_volume": 480
+          },
+          {
+            "year": 2025,
+            "month": 5,
+            "search_volume": 480
+          },
+          {
+            "year": 2025,
+            "month": 4,
+            "search_volume": 480
+          },
+          {
+            "year": 2025,
+            "month": 3,
+            "search_volume": 390
+          },
+          {
+            "year": 2025,
+            "month": 2,
+            "search_volume": 260
+          },
+          {
+            "year": 2025,
+            "month": 1,
+            "search_volume": 260
+          },
+          {
+            "year": 2024,
+            "month": 12,
+            "search_volume": 140
+          },
+          {
+            "year": 2024,
+            "month": 11,
+            "search_volume": 140
+          },
+          {
+            "year": 2024,
+            "month": 10,
+            "search_volume": 320
+          },
+          {
+            "year": 2024,
+            "month": 9,
+            "search_volume": 170
+          },
+          {
+            "year": 2024,
+            "month": 8,
+            "search_volume": 70
+          }
+        ]
+      },
+      {
+        "keyword": "AI powered automation",
+        "spell": "ai powered automation",
+        "location_code": 2840,
+        "language_code": "en",
+        "search_partners": false,
+        "competition": "LOW",
+        "competition_index": 26,
+        "search_volume": 260,
+        "low_top_of_page_bid": 7.68,
+        "high_top_of_page_bid": 26.32,
+        "cpc": 23.02,
+        "monthly_searches": [
+          {
+            "year": 2025,
+            "month": 7,
+            "search_volume": 480
+          },
+          {
+            "year": 2025,
+            "month": 6,
+            "search_volume": 390
+          },
+          {
+            "year": 2025,
+            "month": 5,
+            "search_volume": 590
+          },
+          {
+            "year": 2025,
+            "month": 4,
+            "search_volume": 480
+          },
+          {
+            "year": 2025,
+            "month": 3,
+            "search_volume": 390
+          },
+          {
+            "year": 2025,
+            "month": 2,
+            "search_volume": 260
+          },
+          {
+            "year": 2025,
+            "month": 1,
+            "search_volume": 210
+          },
+          {
+            "year": 2024,
+            "month": 12,
+            "search_volume": 170
+          },
+          {
+            "year": 2024,
+            "month": 11,
+            "search_volume": 110
+          },
+          {
+            "year": 2024,
+            "month": 10,
+            "search_volume": 90
+          },
+          {
+            "year": 2024,
+            "month": 9,
+            "search_volume": 70
+          },
+          {
+            "year": 2024,
+            "month": 8,
+            "search_volume": 70
+          }
+        ]
+      },
+      {
+        "keyword": "best AI automation tools",
+        "spell": "best ai automation tools",
+        "location_code": 2840,
+        "language_code": "en",
+        "search_partners": false,
+        "competition": "MEDIUM",
+        "competition_index": 37,
+        "search_volume": 140,
+        "low_top_of_page_bid": 7.26,
+        "high_top_of_page_bid": 23.99,
+        "cpc": 13.87,
+        "monthly_searches": [
+          {
+            "year": 2025,
+            "month": 7,
+            "search_volume": 260
+          },
+          {
+            "year": 2025,
+            "month": 6,
+            "search_volume": 170
+          },
+          {
+            "year": 2025,
+            "month": 5,
+            "search_volume": 210
+          },
+          {
+            "year": 2025,
+            "month": 4,
+            "search_volume": 170
+          },
+          {
+            "year": 2025,
+            "month": 3,
+            "search_volume": 170
+          },
+          {
+            "year": 2025,
+            "month": 2,
+            "search_volume": 90
+          },
+          {
+            "year": 2025,
+            "month": 1,
+            "search_volume": 90
+          },
+          {
+            "year": 2024,
+            "month": 12,
+            "search_volume": 70
+          },
+          {
+            "year": 2024,
+            "month": 11,
+            "search_volume": 50
+          },
+          {
+            "year": 2024,
+            "month": 10,
+            "search_volume": 40
+          },
+          {
+            "year": 2024,
+            "month": 9,
+            "search_volume": 140
+          },
+          {
+            "year": 2024,
+            "month": 8,
+            "search_volume": 70
+          }
+        ]
+      },
+      {
+        "keyword": "AI automation companies",
+        "spell": "ai automation companies",
+        "location_code": 2840,
+        "language_code": "en",
+        "search_partners": false,
+        "competition": "MEDIUM",
+        "competition_index": 50,
+        "search_volume": 140,
+        "low_top_of_page_bid": 8,
+        "high_top_of_page_bid": 18.81,
+        "cpc": 25.1,
+        "monthly_searches": [
+          {
+            "year": 2025,
+            "month": 7,
+            "search_volume": 210
+          },
+          {
+            "year": 2025,
+            "month": 6,
+            "search_volume": 210
+          },
+          {
+            "year": 2025,
+            "month": 5,
+            "search_volume": 170
+          },
+          {
+            "year": 2025,
+            "month": 4,
+            "search_volume": 170
+          },
+          {
+            "year": 2025,
+            "month": 3,
+            "search_volume": 210
+          },
+          {
+            "year": 2025,
+            "month": 2,
+            "search_volume": 210
+          },
+          {
+            "year": 2025,
+            "month": 1,
+            "search_volume": 140
+          },
+          {
+            "year": 2024,
+            "month": 12,
+            "search_volume": 70
+          },
+          {
+            "year": 2024,
+            "month": 11,
+            "search_volume": 70
+          },
+          {
+            "year": 2024,
+            "month": 10,
+            "search_volume": 50
+          },
+          {
+            "year": 2024,
+            "month": 9,
+            "search_volume": 40
+          },
+          {
+            "year": 2024,
+            "month": 8,
+            "search_volume": 50
+          }
+        ]
+      },
+      {
+        "keyword": "intelligent automation software",
+        "spell": null,
+        "location_code": 2840,
+        "language_code": "en",
+        "search_partners": false,
+        "competition": "LOW",
+        "competition_index": 6,
+        "search_volume": 140,
+        "low_top_of_page_bid": null,
+        "high_top_of_page_bid": null,
+        "cpc": null,
+        "monthly_searches": [
+          {
+            "year": 2025,
+            "month": 7,
+            "search_volume": 320
+          },
+          {
+            "year": 2025,
+            "month": 6,
+            "search_volume": 260
+          },
+          {
+            "year": 2025,
+            "month": 5,
+            "search_volume": 210
+          },
+          {
+            "year": 2025,
+            "month": 4,
+            "search_volume": 210
+          },
+          {
+            "year": 2025,
+            "month": 3,
+            "search_volume": 170
+          },
+          {
+            "year": 2025,
+            "month": 2,
+            "search_volume": 90
+          },
+          {
+            "year": 2025,
+            "month": 1,
+            "search_volume": 110
+          },
+          {
+            "year": 2024,
+            "month": 12,
+            "search_volume": 40
+          },
+          {
+            "year": 2024,
+            "month": 11,
+            "search_volume": 50
+          },
+          {
+            "year": 2024,
+            "month": 10,
+            "search_volume": 30
+          },
+          {
+            "year": 2024,
+            "month": 9,
+            "search_volume": 20
+          },
+          {
+            "year": 2024,
+            "month": 8,
+            "search_volume": 40
+          }
+        ]
+      },
+      {
+        "keyword": "business intelligence automation",
+        "spell": null,
+        "location_code": 2840,
+        "language_code": "en",
+        "search_partners": false,
+        "competition": "LOW",
+        "competition_index": 11,
+        "search_volume": 140,
+        "low_top_of_page_bid": 18.64,
+        "high_top_of_page_bid": 69.45,
+        "cpc": null,
+        "monthly_searches": [
+          {
+            "year": 2025,
+            "month": 7,
+            "search_volume": 50
+          },
+          {
+            "year": 2025,
+            "month": 6,
+            "search_volume": 140
+          },
+          {
+            "year": 2025,
+            "month": 5,
+            "search_volume": 140
+          },
+          {
+            "year": 2025,
+            "month": 4,
+            "search_volume": 210
+          },
+          {
+            "year": 2025,
+            "month": 3,
+            "search_volume": 260
+          },
+          {
+            "year": 2025,
+            "month": 2,
+            "search_volume": 140
+          },
+          {
+            "year": 2025,
+            "month": 1,
+            "search_volume": 140
+          },
+          {
+            "year": 2024,
+            "month": 12,
+            "search_volume": 110
+          },
+          {
+            "year": 2024,
+            "month": 11,
+            "search_volume": 110
+          },
+          {
+            "year": 2024,
+            "month": 10,
+            "search_volume": 90
+          },
+          {
+            "year": 2024,
+            "month": 9,
+            "search_volume": 70
+          },
+          {
+            "year": 2024,
+            "month": 8,
+            "search_volume": 90
+          }
+        ]
+      },
+      {
+        "keyword": "AI automation for small business",
+        "spell": null,
+        "location_code": 2840,
+        "language_code": "en",
+        "search_partners": false,
+        "competition": null,
+        "competition_index": null,
+        "search_volume": null,
+        "low_top_of_page_bid": null,
+        "high_top_of_page_bid": null,
+        "cpc": null,
+        "monthly_searches": null
+      },
+      {
+        "keyword": "enterprise AI automation",
+        "spell": null,
+        "location_code": 2840,
+        "language_code": "en",
+        "search_partners": false,
+        "competition": null,
+        "competition_index": null,
+        "search_volume": null,
+        "low_top_of_page_bid": null,
+        "high_top_of_page_bid": null,
+        "cpc": null,
+        "monthly_searches": null
+      },
+      {
+        "keyword": "AI automation solutions",
+        "spell": null,
+        "location_code": 2840,
+        "language_code": "en",
+        "search_partners": false,
+        "competition": null,
+        "competition_index": null,
+        "search_volume": null,
+        "low_top_of_page_bid": null,
+        "high_top_of_page_bid": null,
+        "cpc": null,
+        "monthly_searches": null
+      },
+      {
+        "keyword": "automated AI workflows",
+        "spell": null,
+        "location_code": 2840,
+        "language_code": "en",
+        "search_partners": false,
+        "competition": null,
+        "competition_index": null,
+        "search_volume": null,
+        "low_top_of_page_bid": null,
+        "high_top_of_page_bid": null,
+        "cpc": null,
+        "monthly_searches": null
+      }
+    ]
+  },
+  "topKeywordsForContent": [
+    {
+      "keyword": "automated data processing",
+      "spell": null,
+      "location_code": 2840,
+      "language_code": "en",
+      "search_partners": false,
+      "competition": "LOW",
+      "competition_index": 5,
+      "search_volume": 2740000,
+      "low_top_of_page_bid": 2.98,
+      "high_top_of_page_bid": 12.27,
+      "cpc": 11.01,
+      "monthly_searches": [
+        {
+          "year": 2025,
+          "month": 7,
+          "search_volume": 2740000
+        },
+        {
+          "year": 2025,
+          "month": 6,
+          "search_volume": 2740000
+        },
+        {
+          "year": 2025,
+          "month": 5,
+          "search_volume": 2740000
+        },
+        {
+          "year": 2025,
+          "month": 4,
+          "search_volume": 3350000
+        },
+        {
+          "year": 2025,
+          "month": 3,
+          "search_volume": 3350000
+        },
+        {
+          "year": 2025,
+          "month": 2,
+          "search_volume": 3350000
+        },
+        {
+          "year": 2025,
+          "month": 1,
+          "search_volume": 4090000
+        },
+        {
+          "year": 2024,
+          "month": 12,
+          "search_volume": 2740000
+        },
+        {
+          "year": 2024,
+          "month": 11,
+          "search_volume": 2740000
+        },
+        {
+          "year": 2024,
+          "month": 10,
+          "search_volume": 2740000
+        },
+        {
+          "year": 2024,
+          "month": 9,
+          "search_volume": 2240000
+        },
+        {
+          "year": 2024,
+          "month": 8,
+          "search_volume": 2740000
+        }
+      ],
+      "category": "technical"
+    },
+    {
+      "keyword": "robotic process automation",
+      "spell": null,
+      "location_code": 2840,
+      "language_code": "en",
+      "search_partners": false,
+      "competition": "LOW",
+      "competition_index": 20,
+      "search_volume": 8100,
+      "low_top_of_page_bid": 8.72,
+      "high_top_of_page_bid": 23.65,
+      "cpc": 32.05,
+      "monthly_searches": [
+        {
+          "year": 2025,
+          "month": 7,
+          "search_volume": 9900
+        },
+        {
+          "year": 2025,
+          "month": 6,
+          "search_volume": 9900
+        },
+        {
+          "year": 2025,
+          "month": 5,
+          "search_volume": 9900
+        },
+        {
+          "year": 2025,
+          "month": 4,
+          "search_volume": 8100
+        },
+        {
+          "year": 2025,
+          "month": 3,
+          "search_volume": 9900
+        },
+        {
+          "year": 2025,
+          "month": 2,
+          "search_volume": 6600
+        },
+        {
+          "year": 2025,
+          "month": 1,
+          "search_volume": 8100
+        },
+        {
+          "year": 2024,
+          "month": 12,
+          "search_volume": 9900
+        },
+        {
+          "year": 2024,
+          "month": 11,
+          "search_volume": 9900
+        },
+        {
+          "year": 2024,
+          "month": 10,
+          "search_volume": 9900
+        },
+        {
+          "year": 2024,
+          "month": 9,
+          "search_volume": 6600
+        },
+        {
+          "year": 2024,
+          "month": 8,
+          "search_volume": 6600
+        }
+      ],
+      "category": "primary"
+    },
+    {
+      "keyword": "artificial intelligence automation",
+      "spell": null,
+      "location_code": 2840,
+      "language_code": "en",
+      "search_partners": false,
+      "competition": "MEDIUM",
+      "competition_index": 58,
+      "search_volume": 5400,
+      "low_top_of_page_bid": 5.48,
+      "high_top_of_page_bid": 15.99,
+      "cpc": 18.72,
+      "monthly_searches": [
+        {
+          "year": 2025,
+          "month": 7,
+          "search_volume": 8100
+        },
+        {
+          "year": 2025,
+          "month": 6,
+          "search_volume": 6600
+        },
+        {
+          "year": 2025,
+          "month": 5,
+          "search_volume": 6600
+        },
+        {
+          "year": 2025,
+          "month": 4,
+          "search_volume": 8100
+        },
+        {
+          "year": 2025,
+          "month": 3,
+          "search_volume": 6600
+        },
+        {
+          "year": 2025,
+          "month": 2,
+          "search_volume": 5400
+        },
+        {
+          "year": 2025,
+          "month": 1,
+          "search_volume": 5400
+        },
+        {
+          "year": 2024,
+          "month": 12,
+          "search_volume": 4400
+        },
+        {
+          "year": 2024,
+          "month": 11,
+          "search_volume": 3600
+        },
+        {
+          "year": 2024,
+          "month": 10,
+          "search_volume": 3600
+        },
+        {
+          "year": 2024,
+          "month": 9,
+          "search_volume": 2900
+        },
+        {
+          "year": 2024,
+          "month": 8,
+          "search_volume": 2900
+        }
+      ],
+      "category": "primary"
+    },
+    {
+      "keyword": "business process automation",
+      "spell": null,
+      "location_code": 2840,
+      "language_code": "en",
+      "search_partners": false,
+      "competition": "LOW",
+      "competition_index": 21,
+      "search_volume": 1900,
+      "low_top_of_page_bid": 9.22,
+      "high_top_of_page_bid": 26.81,
+      "cpc": 31.9,
+      "monthly_searches": [
+        {
+          "year": 2025,
+          "month": 7,
+          "search_volume": 1000
+        },
+        {
+          "year": 2025,
+          "month": 6,
+          "search_volume": 1000
+        },
+        {
+          "year": 2025,
+          "month": 5,
+          "search_volume": 1900
+        },
+        {
+          "year": 2025,
+          "month": 4,
+          "search_volume": 2900
+        },
+        {
+          "year": 2025,
+          "month": 3,
+          "search_volume": 1900
+        },
+        {
+          "year": 2025,
+          "month": 2,
+          "search_volume": 1600
+        },
+        {
+          "year": 2025,
+          "month": 1,
+          "search_volume": 2900
+        },
+        {
+          "year": 2024,
+          "month": 12,
+          "search_volume": 1600
+        },
+        {
+          "year": 2024,
+          "month": 11,
+          "search_volume": 3600
+        },
+        {
+          "year": 2024,
+          "month": 10,
+          "search_volume": 4400
+        },
+        {
+          "year": 2024,
+          "month": 9,
+          "search_volume": 1000
+        },
+        {
+          "year": 2024,
+          "month": 8,
+          "search_volume": 1300
+        }
+      ],
+      "category": "primary"
+    },
+    {
+      "keyword": "AI automation tools",
+      "spell": "ai automation tools",
+      "location_code": 2840,
+      "language_code": "en",
+      "search_partners": false,
+      "competition": "LOW",
+      "competition_index": 21,
+      "search_volume": 1000,
+      "low_top_of_page_bid": 7.65,
+      "high_top_of_page_bid": 23.33,
+      "cpc": 25.71,
+      "monthly_searches": [
+        {
+          "year": 2025,
+          "month": 7,
+          "search_volume": 1900
+        },
+        {
+          "year": 2025,
+          "month": 6,
+          "search_volume": 1600
+        },
+        {
+          "year": 2025,
+          "month": 5,
+          "search_volume": 1300
+        },
+        {
+          "year": 2025,
+          "month": 4,
+          "search_volume": 1000
+        },
+        {
+          "year": 2025,
+          "month": 3,
+          "search_volume": 1000
+        },
+        {
+          "year": 2025,
+          "month": 2,
+          "search_volume": 720
+        },
+        {
+          "year": 2025,
+          "month": 1,
+          "search_volume": 880
+        },
+        {
+          "year": 2024,
+          "month": 12,
+          "search_volume": 590
+        },
+        {
+          "year": 2024,
+          "month": 11,
+          "search_volume": 590
+        },
+        {
+          "year": 2024,
+          "month": 10,
+          "search_volume": 590
+        },
+        {
+          "year": 2024,
+          "month": 9,
+          "search_volume": 880
+        },
+        {
+          "year": 2024,
+          "month": 8,
+          "search_volume": 480
+        }
+      ],
+      "category": "primary"
+    },
+    {
+      "keyword": "intelligent automation",
+      "spell": null,
+      "location_code": 2840,
+      "language_code": "en",
+      "search_partners": false,
+      "competition": "MEDIUM",
+      "competition_index": 37,
+      "search_volume": 1000,
+      "low_top_of_page_bid": 6,
+      "high_top_of_page_bid": 18.67,
+      "cpc": 20.51,
+      "monthly_searches": [
+        {
+          "year": 2025,
+          "month": 7,
+          "search_volume": 720
+        },
+        {
+          "year": 2025,
+          "month": 6,
+          "search_volume": 1300
+        },
+        {
+          "year": 2025,
+          "month": 5,
+          "search_volume": 1300
+        },
+        {
+          "year": 2025,
+          "month": 4,
+          "search_volume": 1600
+        },
+        {
+          "year": 2025,
+          "month": 3,
+          "search_volume": 1300
+        },
+        {
+          "year": 2025,
+          "month": 2,
+          "search_volume": 1000
+        },
+        {
+          "year": 2025,
+          "month": 1,
+          "search_volume": 1600
+        },
+        {
+          "year": 2024,
+          "month": 12,
+          "search_volume": 1000
+        },
+        {
+          "year": 2024,
+          "month": 11,
+          "search_volume": 1000
+        },
+        {
+          "year": 2024,
+          "month": 10,
+          "search_volume": 1000
+        },
+        {
+          "year": 2024,
+          "month": 9,
+          "search_volume": 880
+        },
+        {
+          "year": 2024,
+          "month": 8,
+          "search_volume": 880
+        }
+      ],
+      "category": "primary"
+    },
+    {
+      "keyword": "marketing automation AI",
+      "spell": "marketing automation ai",
+      "location_code": 2840,
+      "language_code": "en",
+      "search_partners": false,
+      "competition": "LOW",
+      "competition_index": 14,
+      "search_volume": 1000,
+      "low_top_of_page_bid": 11.4,
+      "high_top_of_page_bid": 29.32,
+      "cpc": 41.72,
+      "monthly_searches": [
+        {
+          "year": 2025,
+          "month": 7,
+          "search_volume": 880
+        },
+        {
+          "year": 2025,
+          "month": 6,
+          "search_volume": 1300
+        },
+        {
+          "year": 2025,
+          "month": 5,
+          "search_volume": 1900
+        },
+        {
+          "year": 2025,
+          "month": 4,
+          "search_volume": 1600
+        },
+        {
+          "year": 2025,
+          "month": 3,
+          "search_volume": 1300
+        },
+        {
+          "year": 2025,
+          "month": 2,
+          "search_volume": 720
+        },
+        {
+          "year": 2025,
+          "month": 1,
+          "search_volume": 720
+        },
+        {
+          "year": 2024,
+          "month": 12,
+          "search_volume": 1900
+        },
+        {
+          "year": 2024,
+          "month": 11,
+          "search_volume": 1300
+        },
+        {
+          "year": 2024,
+          "month": 10,
+          "search_volume": 260
+        },
+        {
+          "year": 2024,
+          "month": 9,
+          "search_volume": 170
+        },
+        {
+          "year": 2024,
+          "month": 8,
+          "search_volume": 260
+        }
+      ],
+      "category": "business"
+    },
+    {
+      "keyword": "intelligent document processing",
+      "spell": null,
+      "location_code": 2840,
+      "language_code": "en",
+      "search_partners": false,
+      "competition": "MEDIUM",
+      "competition_index": 56,
+      "search_volume": 1000,
+      "low_top_of_page_bid": 10.83,
+      "high_top_of_page_bid": 35.12,
+      "cpc": 38.06,
+      "monthly_searches": [
+        {
+          "year": 2025,
+          "month": 7,
+          "search_volume": 880
+        },
+        {
+          "year": 2025,
+          "month": 6,
+          "search_volume": 880
+        },
+        {
+          "year": 2025,
+          "month": 5,
+          "search_volume": 1300
+        },
+        {
+          "year": 2025,
+          "month": 4,
+          "search_volume": 1300
+        },
+        {
+          "year": 2025,
+          "month": 3,
+          "search_volume": 1300
+        },
+        {
+          "year": 2025,
+          "month": 2,
+          "search_volume": 1000
+        },
+        {
+          "year": 2025,
+          "month": 1,
+          "search_volume": 1000
+        },
+        {
+          "year": 2024,
+          "month": 12,
+          "search_volume": 880
+        },
+        {
+          "year": 2024,
+          "month": 11,
+          "search_volume": 1000
+        },
+        {
+          "year": 2024,
+          "month": 10,
+          "search_volume": 1000
+        },
+        {
+          "year": 2024,
+          "month": 9,
+          "search_volume": 880
+        },
+        {
+          "year": 2024,
+          "month": 8,
+          "search_volume": 1000
+        }
+      ],
+      "category": "technical"
+    },
+    {
+      "keyword": "AI workflow automation",
+      "spell": "ai workflow automation",
+      "location_code": 2840,
+      "language_code": "en",
+      "search_partners": false,
+      "competition": "MEDIUM",
+      "competition_index": 55,
+      "search_volume": 880,
+      "low_top_of_page_bid": 8.59,
+      "high_top_of_page_bid": 26.69,
+      "cpc": 25.48,
+      "monthly_searches": [
+        {
+          "year": 2025,
+          "month": 7,
+          "search_volume": 880
+        },
+        {
+          "year": 2025,
+          "month": 6,
+          "search_volume": 1000
+        },
+        {
+          "year": 2025,
+          "month": 5,
+          "search_volume": 1300
+        },
+        {
+          "year": 2025,
+          "month": 4,
+          "search_volume": 1000
+        },
+        {
+          "year": 2025,
+          "month": 3,
+          "search_volume": 1000
+        },
+        {
+          "year": 2025,
+          "month": 2,
+          "search_volume": 880
+        },
+        {
+          "year": 2025,
+          "month": 1,
+          "search_volume": 590
+        },
+        {
+          "year": 2024,
+          "month": 12,
+          "search_volume": 390
+        },
+        {
+          "year": 2024,
+          "month": 11,
+          "search_volume": 480
+        },
+        {
+          "year": 2024,
+          "month": 10,
+          "search_volume": 1600
+        },
+        {
+          "year": 2024,
+          "month": 9,
+          "search_volume": 260
+        },
+        {
+          "year": 2024,
+          "month": 8,
+          "search_volume": 260
+        }
+      ],
+      "category": "primary"
+    },
+    {
+      "keyword": "automated customer support",
+      "spell": null,
+      "location_code": 2840,
+      "language_code": "en",
+      "search_partners": false,
+      "competition": "LOW",
+      "competition_index": 13,
+      "search_volume": 720,
+      "low_top_of_page_bid": 13.34,
+      "high_top_of_page_bid": 36.99,
+      "cpc": 51.74,
+      "monthly_searches": [
+        {
+          "year": 2025,
+          "month": 7,
+          "search_volume": 480
+        },
+        {
+          "year": 2025,
+          "month": 6,
+          "search_volume": 390
+        },
+        {
+          "year": 2025,
+          "month": 5,
+          "search_volume": 720
+        },
+        {
+          "year": 2025,
+          "month": 4,
+          "search_volume": 880
+        },
+        {
+          "year": 2025,
+          "month": 3,
+          "search_volume": 1000
+        },
+        {
+          "year": 2025,
+          "month": 2,
+          "search_volume": 590
+        },
+        {
+          "year": 2025,
+          "month": 1,
+          "search_volume": 1000
+        },
+        {
+          "year": 2024,
+          "month": 12,
+          "search_volume": 1000
+        },
+        {
+          "year": 2024,
+          "month": 11,
+          "search_volume": 720
+        },
+        {
+          "year": 2024,
+          "month": 10,
+          "search_volume": 720
+        },
+        {
+          "year": 2024,
+          "month": 9,
+          "search_volume": 720
+        },
+        {
+          "year": 2024,
+          "month": 8,
+          "search_volume": 260
+        }
+      ],
+      "category": "business"
+    },
+    {
+      "keyword": "AI automation software",
+      "spell": "ai automation software",
+      "location_code": 2840,
+      "language_code": "en",
+      "search_partners": false,
+      "competition": "LOW",
+      "competition_index": 7,
+      "search_volume": 390,
+      "low_top_of_page_bid": 10.19,
+      "high_top_of_page_bid": 31.22,
+      "cpc": 29.05,
+      "monthly_searches": [
+        {
+          "year": 2025,
+          "month": 7,
+          "search_volume": 720
+        },
+        {
+          "year": 2025,
+          "month": 6,
+          "search_volume": 720
+        },
+        {
+          "year": 2025,
+          "month": 5,
+          "search_volume": 720
+        },
+        {
+          "year": 2025,
+          "month": 4,
+          "search_volume": 390
+        },
+        {
+          "year": 2025,
+          "month": 3,
+          "search_volume": 590
+        },
+        {
+          "year": 2025,
+          "month": 2,
+          "search_volume": 320
+        },
+        {
+          "year": 2025,
+          "month": 1,
+          "search_volume": 170
+        },
+        {
+          "year": 2024,
+          "month": 12,
+          "search_volume": 170
+        },
+        {
+          "year": 2024,
+          "month": 11,
+          "search_volume": 170
+        },
+        {
+          "year": 2024,
+          "month": 10,
+          "search_volume": 90
+        },
+        {
+          "year": 2024,
+          "month": 9,
+          "search_volume": 720
+        },
+        {
+          "year": 2024,
+          "month": 8,
+          "search_volume": 40
+        }
+      ],
+      "category": "primary"
+    },
+    {
+      "keyword": "AI sales automation",
+      "spell": "ai sales automation",
+      "location_code": 2840,
+      "language_code": "en",
+      "search_partners": false,
+      "competition": "LOW",
+      "competition_index": 28,
+      "search_volume": 320,
+      "low_top_of_page_bid": 11.97,
+      "high_top_of_page_bid": 37.5,
+      "cpc": 37.3,
+      "monthly_searches": [
+        {
+          "year": 2025,
+          "month": 7,
+          "search_volume": 170
+        },
+        {
+          "year": 2025,
+          "month": 6,
+          "search_volume": 320
+        },
+        {
+          "year": 2025,
+          "month": 5,
+          "search_volume": 390
+        },
+        {
+          "year": 2025,
+          "month": 4,
+          "search_volume": 390
+        },
+        {
+          "year": 2025,
+          "month": 3,
+          "search_volume": 480
+        },
+        {
+          "year": 2025,
+          "month": 2,
+          "search_volume": 390
+        },
+        {
+          "year": 2025,
+          "month": 1,
+          "search_volume": 480
+        },
+        {
+          "year": 2024,
+          "month": 12,
+          "search_volume": 320
+        },
+        {
+          "year": 2024,
+          "month": 11,
+          "search_volume": 170
+        },
+        {
+          "year": 2024,
+          "month": 10,
+          "search_volume": 210
+        },
+        {
+          "year": 2024,
+          "month": 9,
+          "search_volume": 140
+        },
+        {
+          "year": 2024,
+          "month": 8,
+          "search_volume": 140
+        }
+      ],
+      "category": "business"
+    },
+    {
+      "keyword": "AI automation services",
+      "spell": "ai automation services",
+      "location_code": 2840,
+      "language_code": "en",
+      "search_partners": false,
+      "competition": "LOW",
+      "competition_index": 31,
+      "search_volume": 320,
+      "low_top_of_page_bid": 8.95,
+      "high_top_of_page_bid": 20,
+      "cpc": 20.82,
+      "monthly_searches": [
+        {
+          "year": 2025,
+          "month": 7,
+          "search_volume": 390
+        },
+        {
+          "year": 2025,
+          "month": 6,
+          "search_volume": 480
+        },
+        {
+          "year": 2025,
+          "month": 5,
+          "search_volume": 480
+        },
+        {
+          "year": 2025,
+          "month": 4,
+          "search_volume": 480
+        },
+        {
+          "year": 2025,
+          "month": 3,
+          "search_volume": 390
+        },
+        {
+          "year": 2025,
+          "month": 2,
+          "search_volume": 260
+        },
+        {
+          "year": 2025,
+          "month": 1,
+          "search_volume": 260
+        },
+        {
+          "year": 2024,
+          "month": 12,
+          "search_volume": 140
+        },
+        {
+          "year": 2024,
+          "month": 11,
+          "search_volume": 140
+        },
+        {
+          "year": 2024,
+          "month": 10,
+          "search_volume": 320
+        },
+        {
+          "year": 2024,
+          "month": 9,
+          "search_volume": 170
+        },
+        {
+          "year": 2024,
+          "month": 8,
+          "search_volume": 70
+        }
+      ],
+      "category": "industry"
+    },
+    {
+      "keyword": "AI powered automation",
+      "spell": "ai powered automation",
+      "location_code": 2840,
+      "language_code": "en",
+      "search_partners": false,
+      "competition": "LOW",
+      "competition_index": 26,
+      "search_volume": 260,
+      "low_top_of_page_bid": 7.68,
+      "high_top_of_page_bid": 26.32,
+      "cpc": 23.02,
+      "monthly_searches": [
+        {
+          "year": 2025,
+          "month": 7,
+          "search_volume": 480
+        },
+        {
+          "year": 2025,
+          "month": 6,
+          "search_volume": 390
+        },
+        {
+          "year": 2025,
+          "month": 5,
+          "search_volume": 590
+        },
+        {
+          "year": 2025,
+          "month": 4,
+          "search_volume": 480
+        },
+        {
+          "year": 2025,
+          "month": 3,
+          "search_volume": 390
+        },
+        {
+          "year": 2025,
+          "month": 2,
+          "search_volume": 260
+        },
+        {
+          "year": 2025,
+          "month": 1,
+          "search_volume": 210
+        },
+        {
+          "year": 2024,
+          "month": 12,
+          "search_volume": 170
+        },
+        {
+          "year": 2024,
+          "month": 11,
+          "search_volume": 110
+        },
+        {
+          "year": 2024,
+          "month": 10,
+          "search_volume": 90
+        },
+        {
+          "year": 2024,
+          "month": 9,
+          "search_volume": 70
+        },
+        {
+          "year": 2024,
+          "month": 8,
+          "search_volume": 70
+        }
+      ],
+      "category": "industry"
+    },
+    {
+      "keyword": "AI automation platform",
+      "spell": "ai automation platform",
+      "location_code": 2840,
+      "language_code": "en",
+      "search_partners": false,
+      "competition": "LOW",
+      "competition_index": 24,
+      "search_volume": 210,
+      "low_top_of_page_bid": 9.35,
+      "high_top_of_page_bid": 26.79,
+      "cpc": 33.97,
+      "monthly_searches": [
+        {
+          "year": 2025,
+          "month": 7,
+          "search_volume": 260
+        },
+        {
+          "year": 2025,
+          "month": 6,
+          "search_volume": 590
+        },
+        {
+          "year": 2025,
+          "month": 5,
+          "search_volume": 260
+        },
+        {
+          "year": 2025,
+          "month": 4,
+          "search_volume": 210
+        },
+        {
+          "year": 2025,
+          "month": 3,
+          "search_volume": 260
+        },
+        {
+          "year": 2025,
+          "month": 2,
+          "search_volume": 110
+        },
+        {
+          "year": 2025,
+          "month": 1,
+          "search_volume": 110
+        },
+        {
+          "year": 2024,
+          "month": 12,
+          "search_volume": 50
+        },
+        {
+          "year": 2024,
+          "month": 11,
+          "search_volume": 170
+        },
+        {
+          "year": 2024,
+          "month": 10,
+          "search_volume": 260
+        },
+        {
+          "year": 2024,
+          "month": 9,
+          "search_volume": 70
+        },
+        {
+          "year": 2024,
+          "month": 8,
+          "search_volume": 30
+        }
+      ],
+      "category": "primary"
+    },
+    {
+      "keyword": "HR automation tools",
+      "spell": "hr automation tools",
+      "location_code": 2840,
+      "language_code": "en",
+      "search_partners": false,
+      "competition": "LOW",
+      "competition_index": 3,
+      "search_volume": 210,
+      "low_top_of_page_bid": 22.83,
+      "high_top_of_page_bid": 67.61,
+      "cpc": 53.32,
+      "monthly_searches": [
+        {
+          "year": 2025,
+          "month": 7,
+          "search_volume": 320
+        },
+        {
+          "year": 2025,
+          "month": 6,
+          "search_volume": 590
+        },
+        {
+          "year": 2025,
+          "month": 5,
+          "search_volume": 320
+        },
+        {
+          "year": 2025,
+          "month": 4,
+          "search_volume": 320
+        },
+        {
+          "year": 2025,
+          "month": 3,
+          "search_volume": 260
+        },
+        {
+          "year": 2025,
+          "month": 2,
+          "search_volume": 110
+        },
+        {
+          "year": 2025,
+          "month": 1,
+          "search_volume": 210
+        },
+        {
+          "year": 2024,
+          "month": 12,
+          "search_volume": 170
+        },
+        {
+          "year": 2024,
+          "month": 11,
+          "search_volume": 110
+        },
+        {
+          "year": 2024,
+          "month": 10,
+          "search_volume": 110
+        },
+        {
+          "year": 2024,
+          "month": 9,
+          "search_volume": 90
+        },
+        {
+          "year": 2024,
+          "month": 8,
+          "search_volume": 90
+        }
+      ],
+      "category": "business"
+    },
+    {
+      "keyword": "lead generation automation",
+      "spell": null,
+      "location_code": 2840,
+      "language_code": "en",
+      "search_partners": false,
+      "competition": "LOW",
+      "competition_index": 28,
+      "search_volume": 210,
+      "low_top_of_page_bid": 13.03,
+      "high_top_of_page_bid": 53.03,
+      "cpc": 53.16,
+      "monthly_searches": [
+        {
+          "year": 2025,
+          "month": 7,
+          "search_volume": 90
+        },
+        {
+          "year": 2025,
+          "month": 6,
+          "search_volume": 260
+        },
+        {
+          "year": 2025,
+          "month": 5,
+          "search_volume": 260
+        },
+        {
+          "year": 2025,
+          "month": 4,
+          "search_volume": 320
+        },
+        {
+          "year": 2025,
+          "month": 3,
+          "search_volume": 320
+        },
+        {
+          "year": 2025,
+          "month": 2,
+          "search_volume": 210
+        },
+        {
+          "year": 2025,
+          "month": 1,
+          "search_volume": 210
+        },
+        {
+          "year": 2024,
+          "month": 12,
+          "search_volume": 110
+        },
+        {
+          "year": 2024,
+          "month": 11,
+          "search_volume": 110
+        },
+        {
+          "year": 2024,
+          "month": 10,
+          "search_volume": 170
+        },
+        {
+          "year": 2024,
+          "month": 9,
+          "search_volume": 170
+        },
+        {
+          "year": 2024,
+          "month": 8,
+          "search_volume": 110
+        }
+      ],
+      "category": "business"
+    },
+    {
+      "keyword": "AI process automation",
+      "spell": "ai process automation",
+      "location_code": 2840,
+      "language_code": "en",
+      "search_partners": false,
+      "competition": "LOW",
+      "competition_index": 25,
+      "search_volume": 170,
+      "low_top_of_page_bid": 9.84,
+      "high_top_of_page_bid": 32.56,
+      "cpc": 45.45,
+      "monthly_searches": [
+        {
+          "year": 2025,
+          "month": 7,
+          "search_volume": 90
+        },
+        {
+          "year": 2025,
+          "month": 6,
+          "search_volume": 170
+        },
+        {
+          "year": 2025,
+          "month": 5,
+          "search_volume": 320
+        },
+        {
+          "year": 2025,
+          "month": 4,
+          "search_volume": 320
+        },
+        {
+          "year": 2025,
+          "month": 3,
+          "search_volume": 260
+        },
+        {
+          "year": 2025,
+          "month": 2,
+          "search_volume": 210
+        },
+        {
+          "year": 2025,
+          "month": 1,
+          "search_volume": 170
+        },
+        {
+          "year": 2024,
+          "month": 12,
+          "search_volume": 140
+        },
+        {
+          "year": 2024,
+          "month": 11,
+          "search_volume": 110
+        },
+        {
+          "year": 2024,
+          "month": 10,
+          "search_volume": 90
+        },
+        {
+          "year": 2024,
+          "month": 9,
+          "search_volume": 90
+        },
+        {
+          "year": 2024,
+          "month": 8,
+          "search_volume": 70
+        }
+      ],
+      "category": "primary"
+    },
+    {
+      "keyword": "AI email automation",
+      "spell": "ai email automation",
+      "location_code": 2840,
+      "language_code": "en",
+      "search_partners": false,
+      "competition": "MEDIUM",
+      "competition_index": 39,
+      "search_volume": 170,
+      "low_top_of_page_bid": 12.46,
+      "high_top_of_page_bid": 45.59,
+      "cpc": 80.16,
+      "monthly_searches": [
+        {
+          "year": 2025,
+          "month": 7,
+          "search_volume": 140
+        },
+        {
+          "year": 2025,
+          "month": 6,
+          "search_volume": 210
+        },
+        {
+          "year": 2025,
+          "month": 5,
+          "search_volume": 260
+        },
+        {
+          "year": 2025,
+          "month": 4,
+          "search_volume": 170
+        },
+        {
+          "year": 2025,
+          "month": 3,
+          "search_volume": 170
+        },
+        {
+          "year": 2025,
+          "month": 2,
+          "search_volume": 170
+        },
+        {
+          "year": 2025,
+          "month": 1,
+          "search_volume": 210
+        },
+        {
+          "year": 2024,
+          "month": 12,
+          "search_volume": 140
+        },
+        {
+          "year": 2024,
+          "month": 11,
+          "search_volume": 110
+        },
+        {
+          "year": 2024,
+          "month": 10,
+          "search_volume": 110
+        },
+        {
+          "year": 2024,
+          "month": 9,
+          "search_volume": 90
+        },
+        {
+          "year": 2024,
+          "month": 8,
+          "search_volume": 90
+        }
+      ],
+      "category": "business"
+    },
+    {
+      "keyword": "best AI automation tools",
+      "spell": "best ai automation tools",
+      "location_code": 2840,
+      "language_code": "en",
+      "search_partners": false,
+      "competition": "MEDIUM",
+      "competition_index": 37,
+      "search_volume": 140,
+      "low_top_of_page_bid": 7.26,
+      "high_top_of_page_bid": 23.99,
+      "cpc": 13.87,
+      "monthly_searches": [
+        {
+          "year": 2025,
+          "month": 7,
+          "search_volume": 260
+        },
+        {
+          "year": 2025,
+          "month": 6,
+          "search_volume": 170
+        },
+        {
+          "year": 2025,
+          "month": 5,
+          "search_volume": 210
+        },
+        {
+          "year": 2025,
+          "month": 4,
+          "search_volume": 170
+        },
+        {
+          "year": 2025,
+          "month": 3,
+          "search_volume": 170
+        },
+        {
+          "year": 2025,
+          "month": 2,
+          "search_volume": 90
+        },
+        {
+          "year": 2025,
+          "month": 1,
+          "search_volume": 90
+        },
+        {
+          "year": 2024,
+          "month": 12,
+          "search_volume": 70
+        },
+        {
+          "year": 2024,
+          "month": 11,
+          "search_volume": 50
+        },
+        {
+          "year": 2024,
+          "month": 10,
+          "search_volume": 40
+        },
+        {
+          "year": 2024,
+          "month": 9,
+          "search_volume": 140
+        },
+        {
+          "year": 2024,
+          "month": 8,
+          "search_volume": 70
+        }
+      ],
+      "category": "industry"
+    }
+  ],
+  "categories": {
+    "highVolume": [
+      {
+        "keyword": "automated data processing",
+        "spell": null,
+        "location_code": 2840,
+        "language_code": "en",
+        "search_partners": false,
+        "competition": "LOW",
+        "competition_index": 5,
+        "search_volume": 2740000,
+        "low_top_of_page_bid": 2.98,
+        "high_top_of_page_bid": 12.27,
+        "cpc": 11.01,
+        "monthly_searches": [
+          {
+            "year": 2025,
+            "month": 7,
+            "search_volume": 2740000
+          },
+          {
+            "year": 2025,
+            "month": 6,
+            "search_volume": 2740000
+          },
+          {
+            "year": 2025,
+            "month": 5,
+            "search_volume": 2740000
+          },
+          {
+            "year": 2025,
+            "month": 4,
+            "search_volume": 3350000
+          },
+          {
+            "year": 2025,
+            "month": 3,
+            "search_volume": 3350000
+          },
+          {
+            "year": 2025,
+            "month": 2,
+            "search_volume": 3350000
+          },
+          {
+            "year": 2025,
+            "month": 1,
+            "search_volume": 4090000
+          },
+          {
+            "year": 2024,
+            "month": 12,
+            "search_volume": 2740000
+          },
+          {
+            "year": 2024,
+            "month": 11,
+            "search_volume": 2740000
+          },
+          {
+            "year": 2024,
+            "month": 10,
+            "search_volume": 2740000
+          },
+          {
+            "year": 2024,
+            "month": 9,
+            "search_volume": 2240000
+          },
+          {
+            "year": 2024,
+            "month": 8,
+            "search_volume": 2740000
+          }
+        ],
+        "category": "technical"
+      },
+      {
+        "keyword": "robotic process automation",
+        "spell": null,
+        "location_code": 2840,
+        "language_code": "en",
+        "search_partners": false,
+        "competition": "LOW",
+        "competition_index": 20,
+        "search_volume": 8100,
+        "low_top_of_page_bid": 8.72,
+        "high_top_of_page_bid": 23.65,
+        "cpc": 32.05,
+        "monthly_searches": [
+          {
+            "year": 2025,
+            "month": 7,
+            "search_volume": 9900
+          },
+          {
+            "year": 2025,
+            "month": 6,
+            "search_volume": 9900
+          },
+          {
+            "year": 2025,
+            "month": 5,
+            "search_volume": 9900
+          },
+          {
+            "year": 2025,
+            "month": 4,
+            "search_volume": 8100
+          },
+          {
+            "year": 2025,
+            "month": 3,
+            "search_volume": 9900
+          },
+          {
+            "year": 2025,
+            "month": 2,
+            "search_volume": 6600
+          },
+          {
+            "year": 2025,
+            "month": 1,
+            "search_volume": 8100
+          },
+          {
+            "year": 2024,
+            "month": 12,
+            "search_volume": 9900
+          },
+          {
+            "year": 2024,
+            "month": 11,
+            "search_volume": 9900
+          },
+          {
+            "year": 2024,
+            "month": 10,
+            "search_volume": 9900
+          },
+          {
+            "year": 2024,
+            "month": 9,
+            "search_volume": 6600
+          },
+          {
+            "year": 2024,
+            "month": 8,
+            "search_volume": 6600
+          }
+        ],
+        "category": "primary"
+      },
+      {
+        "keyword": "artificial intelligence automation",
+        "spell": null,
+        "location_code": 2840,
+        "language_code": "en",
+        "search_partners": false,
+        "competition": "MEDIUM",
+        "competition_index": 58,
+        "search_volume": 5400,
+        "low_top_of_page_bid": 5.48,
+        "high_top_of_page_bid": 15.99,
+        "cpc": 18.72,
+        "monthly_searches": [
+          {
+            "year": 2025,
+            "month": 7,
+            "search_volume": 8100
+          },
+          {
+            "year": 2025,
+            "month": 6,
+            "search_volume": 6600
+          },
+          {
+            "year": 2025,
+            "month": 5,
+            "search_volume": 6600
+          },
+          {
+            "year": 2025,
+            "month": 4,
+            "search_volume": 8100
+          },
+          {
+            "year": 2025,
+            "month": 3,
+            "search_volume": 6600
+          },
+          {
+            "year": 2025,
+            "month": 2,
+            "search_volume": 5400
+          },
+          {
+            "year": 2025,
+            "month": 1,
+            "search_volume": 5400
+          },
+          {
+            "year": 2024,
+            "month": 12,
+            "search_volume": 4400
+          },
+          {
+            "year": 2024,
+            "month": 11,
+            "search_volume": 3600
+          },
+          {
+            "year": 2024,
+            "month": 10,
+            "search_volume": 3600
+          },
+          {
+            "year": 2024,
+            "month": 9,
+            "search_volume": 2900
+          },
+          {
+            "year": 2024,
+            "month": 8,
+            "search_volume": 2900
+          }
+        ],
+        "category": "primary"
+      },
+      {
+        "keyword": "business process automation",
+        "spell": null,
+        "location_code": 2840,
+        "language_code": "en",
+        "search_partners": false,
+        "competition": "LOW",
+        "competition_index": 21,
+        "search_volume": 1900,
+        "low_top_of_page_bid": 9.22,
+        "high_top_of_page_bid": 26.81,
+        "cpc": 31.9,
+        "monthly_searches": [
+          {
+            "year": 2025,
+            "month": 7,
+            "search_volume": 1000
+          },
+          {
+            "year": 2025,
+            "month": 6,
+            "search_volume": 1000
+          },
+          {
+            "year": 2025,
+            "month": 5,
+            "search_volume": 1900
+          },
+          {
+            "year": 2025,
+            "month": 4,
+            "search_volume": 2900
+          },
+          {
+            "year": 2025,
+            "month": 3,
+            "search_volume": 1900
+          },
+          {
+            "year": 2025,
+            "month": 2,
+            "search_volume": 1600
+          },
+          {
+            "year": 2025,
+            "month": 1,
+            "search_volume": 2900
+          },
+          {
+            "year": 2024,
+            "month": 12,
+            "search_volume": 1600
+          },
+          {
+            "year": 2024,
+            "month": 11,
+            "search_volume": 3600
+          },
+          {
+            "year": 2024,
+            "month": 10,
+            "search_volume": 4400
+          },
+          {
+            "year": 2024,
+            "month": 9,
+            "search_volume": 1000
+          },
+          {
+            "year": 2024,
+            "month": 8,
+            "search_volume": 1300
+          }
+        ],
+        "category": "primary"
+      },
+      {
+        "keyword": "AI automation tools",
+        "spell": "ai automation tools",
+        "location_code": 2840,
+        "language_code": "en",
+        "search_partners": false,
+        "competition": "LOW",
+        "competition_index": 21,
+        "search_volume": 1000,
+        "low_top_of_page_bid": 7.65,
+        "high_top_of_page_bid": 23.33,
+        "cpc": 25.71,
+        "monthly_searches": [
+          {
+            "year": 2025,
+            "month": 7,
+            "search_volume": 1900
+          },
+          {
+            "year": 2025,
+            "month": 6,
+            "search_volume": 1600
+          },
+          {
+            "year": 2025,
+            "month": 5,
+            "search_volume": 1300
+          },
+          {
+            "year": 2025,
+            "month": 4,
+            "search_volume": 1000
+          },
+          {
+            "year": 2025,
+            "month": 3,
+            "search_volume": 1000
+          },
+          {
+            "year": 2025,
+            "month": 2,
+            "search_volume": 720
+          },
+          {
+            "year": 2025,
+            "month": 1,
+            "search_volume": 880
+          },
+          {
+            "year": 2024,
+            "month": 12,
+            "search_volume": 590
+          },
+          {
+            "year": 2024,
+            "month": 11,
+            "search_volume": 590
+          },
+          {
+            "year": 2024,
+            "month": 10,
+            "search_volume": 590
+          },
+          {
+            "year": 2024,
+            "month": 9,
+            "search_volume": 880
+          },
+          {
+            "year": 2024,
+            "month": 8,
+            "search_volume": 480
+          }
+        ],
+        "category": "primary"
+      },
+      {
+        "keyword": "intelligent automation",
+        "spell": null,
+        "location_code": 2840,
+        "language_code": "en",
+        "search_partners": false,
+        "competition": "MEDIUM",
+        "competition_index": 37,
+        "search_volume": 1000,
+        "low_top_of_page_bid": 6,
+        "high_top_of_page_bid": 18.67,
+        "cpc": 20.51,
+        "monthly_searches": [
+          {
+            "year": 2025,
+            "month": 7,
+            "search_volume": 720
+          },
+          {
+            "year": 2025,
+            "month": 6,
+            "search_volume": 1300
+          },
+          {
+            "year": 2025,
+            "month": 5,
+            "search_volume": 1300
+          },
+          {
+            "year": 2025,
+            "month": 4,
+            "search_volume": 1600
+          },
+          {
+            "year": 2025,
+            "month": 3,
+            "search_volume": 1300
+          },
+          {
+            "year": 2025,
+            "month": 2,
+            "search_volume": 1000
+          },
+          {
+            "year": 2025,
+            "month": 1,
+            "search_volume": 1600
+          },
+          {
+            "year": 2024,
+            "month": 12,
+            "search_volume": 1000
+          },
+          {
+            "year": 2024,
+            "month": 11,
+            "search_volume": 1000
+          },
+          {
+            "year": 2024,
+            "month": 10,
+            "search_volume": 1000
+          },
+          {
+            "year": 2024,
+            "month": 9,
+            "search_volume": 880
+          },
+          {
+            "year": 2024,
+            "month": 8,
+            "search_volume": 880
+          }
+        ],
+        "category": "primary"
+      },
+      {
+        "keyword": "marketing automation AI",
+        "spell": "marketing automation ai",
+        "location_code": 2840,
+        "language_code": "en",
+        "search_partners": false,
+        "competition": "LOW",
+        "competition_index": 14,
+        "search_volume": 1000,
+        "low_top_of_page_bid": 11.4,
+        "high_top_of_page_bid": 29.32,
+        "cpc": 41.72,
+        "monthly_searches": [
+          {
+            "year": 2025,
+            "month": 7,
+            "search_volume": 880
+          },
+          {
+            "year": 2025,
+            "month": 6,
+            "search_volume": 1300
+          },
+          {
+            "year": 2025,
+            "month": 5,
+            "search_volume": 1900
+          },
+          {
+            "year": 2025,
+            "month": 4,
+            "search_volume": 1600
+          },
+          {
+            "year": 2025,
+            "month": 3,
+            "search_volume": 1300
+          },
+          {
+            "year": 2025,
+            "month": 2,
+            "search_volume": 720
+          },
+          {
+            "year": 2025,
+            "month": 1,
+            "search_volume": 720
+          },
+          {
+            "year": 2024,
+            "month": 12,
+            "search_volume": 1900
+          },
+          {
+            "year": 2024,
+            "month": 11,
+            "search_volume": 1300
+          },
+          {
+            "year": 2024,
+            "month": 10,
+            "search_volume": 260
+          },
+          {
+            "year": 2024,
+            "month": 9,
+            "search_volume": 170
+          },
+          {
+            "year": 2024,
+            "month": 8,
+            "search_volume": 260
+          }
+        ],
+        "category": "business"
+      },
+      {
+        "keyword": "intelligent document processing",
+        "spell": null,
+        "location_code": 2840,
+        "language_code": "en",
+        "search_partners": false,
+        "competition": "MEDIUM",
+        "competition_index": 56,
+        "search_volume": 1000,
+        "low_top_of_page_bid": 10.83,
+        "high_top_of_page_bid": 35.12,
+        "cpc": 38.06,
+        "monthly_searches": [
+          {
+            "year": 2025,
+            "month": 7,
+            "search_volume": 880
+          },
+          {
+            "year": 2025,
+            "month": 6,
+            "search_volume": 880
+          },
+          {
+            "year": 2025,
+            "month": 5,
+            "search_volume": 1300
+          },
+          {
+            "year": 2025,
+            "month": 4,
+            "search_volume": 1300
+          },
+          {
+            "year": 2025,
+            "month": 3,
+            "search_volume": 1300
+          },
+          {
+            "year": 2025,
+            "month": 2,
+            "search_volume": 1000
+          },
+          {
+            "year": 2025,
+            "month": 1,
+            "search_volume": 1000
+          },
+          {
+            "year": 2024,
+            "month": 12,
+            "search_volume": 880
+          },
+          {
+            "year": 2024,
+            "month": 11,
+            "search_volume": 1000
+          },
+          {
+            "year": 2024,
+            "month": 10,
+            "search_volume": 1000
+          },
+          {
+            "year": 2024,
+            "month": 9,
+            "search_volume": 880
+          },
+          {
+            "year": 2024,
+            "month": 8,
+            "search_volume": 1000
+          }
+        ],
+        "category": "technical"
+      }
+    ],
+    "mediumVolume": [
+      {
+        "keyword": "AI workflow automation",
+        "spell": "ai workflow automation",
+        "location_code": 2840,
+        "language_code": "en",
+        "search_partners": false,
+        "competition": "MEDIUM",
+        "competition_index": 55,
+        "search_volume": 880,
+        "low_top_of_page_bid": 8.59,
+        "high_top_of_page_bid": 26.69,
+        "cpc": 25.48,
+        "monthly_searches": [
+          {
+            "year": 2025,
+            "month": 7,
+            "search_volume": 880
+          },
+          {
+            "year": 2025,
+            "month": 6,
+            "search_volume": 1000
+          },
+          {
+            "year": 2025,
+            "month": 5,
+            "search_volume": 1300
+          },
+          {
+            "year": 2025,
+            "month": 4,
+            "search_volume": 1000
+          },
+          {
+            "year": 2025,
+            "month": 3,
+            "search_volume": 1000
+          },
+          {
+            "year": 2025,
+            "month": 2,
+            "search_volume": 880
+          },
+          {
+            "year": 2025,
+            "month": 1,
+            "search_volume": 590
+          },
+          {
+            "year": 2024,
+            "month": 12,
+            "search_volume": 390
+          },
+          {
+            "year": 2024,
+            "month": 11,
+            "search_volume": 480
+          },
+          {
+            "year": 2024,
+            "month": 10,
+            "search_volume": 1600
+          },
+          {
+            "year": 2024,
+            "month": 9,
+            "search_volume": 260
+          },
+          {
+            "year": 2024,
+            "month": 8,
+            "search_volume": 260
+          }
+        ],
+        "category": "primary"
+      },
+      {
+        "keyword": "automated customer support",
+        "spell": null,
+        "location_code": 2840,
+        "language_code": "en",
+        "search_partners": false,
+        "competition": "LOW",
+        "competition_index": 13,
+        "search_volume": 720,
+        "low_top_of_page_bid": 13.34,
+        "high_top_of_page_bid": 36.99,
+        "cpc": 51.74,
+        "monthly_searches": [
+          {
+            "year": 2025,
+            "month": 7,
+            "search_volume": 480
+          },
+          {
+            "year": 2025,
+            "month": 6,
+            "search_volume": 390
+          },
+          {
+            "year": 2025,
+            "month": 5,
+            "search_volume": 720
+          },
+          {
+            "year": 2025,
+            "month": 4,
+            "search_volume": 880
+          },
+          {
+            "year": 2025,
+            "month": 3,
+            "search_volume": 1000
+          },
+          {
+            "year": 2025,
+            "month": 2,
+            "search_volume": 590
+          },
+          {
+            "year": 2025,
+            "month": 1,
+            "search_volume": 1000
+          },
+          {
+            "year": 2024,
+            "month": 12,
+            "search_volume": 1000
+          },
+          {
+            "year": 2024,
+            "month": 11,
+            "search_volume": 720
+          },
+          {
+            "year": 2024,
+            "month": 10,
+            "search_volume": 720
+          },
+          {
+            "year": 2024,
+            "month": 9,
+            "search_volume": 720
+          },
+          {
+            "year": 2024,
+            "month": 8,
+            "search_volume": 260
+          }
+        ],
+        "category": "business"
+      },
+      {
+        "keyword": "AI automation software",
+        "spell": "ai automation software",
+        "location_code": 2840,
+        "language_code": "en",
+        "search_partners": false,
+        "competition": "LOW",
+        "competition_index": 7,
+        "search_volume": 390,
+        "low_top_of_page_bid": 10.19,
+        "high_top_of_page_bid": 31.22,
+        "cpc": 29.05,
+        "monthly_searches": [
+          {
+            "year": 2025,
+            "month": 7,
+            "search_volume": 720
+          },
+          {
+            "year": 2025,
+            "month": 6,
+            "search_volume": 720
+          },
+          {
+            "year": 2025,
+            "month": 5,
+            "search_volume": 720
+          },
+          {
+            "year": 2025,
+            "month": 4,
+            "search_volume": 390
+          },
+          {
+            "year": 2025,
+            "month": 3,
+            "search_volume": 590
+          },
+          {
+            "year": 2025,
+            "month": 2,
+            "search_volume": 320
+          },
+          {
+            "year": 2025,
+            "month": 1,
+            "search_volume": 170
+          },
+          {
+            "year": 2024,
+            "month": 12,
+            "search_volume": 170
+          },
+          {
+            "year": 2024,
+            "month": 11,
+            "search_volume": 170
+          },
+          {
+            "year": 2024,
+            "month": 10,
+            "search_volume": 90
+          },
+          {
+            "year": 2024,
+            "month": 9,
+            "search_volume": 720
+          },
+          {
+            "year": 2024,
+            "month": 8,
+            "search_volume": 40
+          }
+        ],
+        "category": "primary"
+      },
+      {
+        "keyword": "AI sales automation",
+        "spell": "ai sales automation",
+        "location_code": 2840,
+        "language_code": "en",
+        "search_partners": false,
+        "competition": "LOW",
+        "competition_index": 28,
+        "search_volume": 320,
+        "low_top_of_page_bid": 11.97,
+        "high_top_of_page_bid": 37.5,
+        "cpc": 37.3,
+        "monthly_searches": [
+          {
+            "year": 2025,
+            "month": 7,
+            "search_volume": 170
+          },
+          {
+            "year": 2025,
+            "month": 6,
+            "search_volume": 320
+          },
+          {
+            "year": 2025,
+            "month": 5,
+            "search_volume": 390
+          },
+          {
+            "year": 2025,
+            "month": 4,
+            "search_volume": 390
+          },
+          {
+            "year": 2025,
+            "month": 3,
+            "search_volume": 480
+          },
+          {
+            "year": 2025,
+            "month": 2,
+            "search_volume": 390
+          },
+          {
+            "year": 2025,
+            "month": 1,
+            "search_volume": 480
+          },
+          {
+            "year": 2024,
+            "month": 12,
+            "search_volume": 320
+          },
+          {
+            "year": 2024,
+            "month": 11,
+            "search_volume": 170
+          },
+          {
+            "year": 2024,
+            "month": 10,
+            "search_volume": 210
+          },
+          {
+            "year": 2024,
+            "month": 9,
+            "search_volume": 140
+          },
+          {
+            "year": 2024,
+            "month": 8,
+            "search_volume": 140
+          }
+        ],
+        "category": "business"
+      },
+      {
+        "keyword": "AI automation services",
+        "spell": "ai automation services",
+        "location_code": 2840,
+        "language_code": "en",
+        "search_partners": false,
+        "competition": "LOW",
+        "competition_index": 31,
+        "search_volume": 320,
+        "low_top_of_page_bid": 8.95,
+        "high_top_of_page_bid": 20,
+        "cpc": 20.82,
+        "monthly_searches": [
+          {
+            "year": 2025,
+            "month": 7,
+            "search_volume": 390
+          },
+          {
+            "year": 2025,
+            "month": 6,
+            "search_volume": 480
+          },
+          {
+            "year": 2025,
+            "month": 5,
+            "search_volume": 480
+          },
+          {
+            "year": 2025,
+            "month": 4,
+            "search_volume": 480
+          },
+          {
+            "year": 2025,
+            "month": 3,
+            "search_volume": 390
+          },
+          {
+            "year": 2025,
+            "month": 2,
+            "search_volume": 260
+          },
+          {
+            "year": 2025,
+            "month": 1,
+            "search_volume": 260
+          },
+          {
+            "year": 2024,
+            "month": 12,
+            "search_volume": 140
+          },
+          {
+            "year": 2024,
+            "month": 11,
+            "search_volume": 140
+          },
+          {
+            "year": 2024,
+            "month": 10,
+            "search_volume": 320
+          },
+          {
+            "year": 2024,
+            "month": 9,
+            "search_volume": 170
+          },
+          {
+            "year": 2024,
+            "month": 8,
+            "search_volume": 70
+          }
+        ],
+        "category": "industry"
+      },
+      {
+        "keyword": "AI powered automation",
+        "spell": "ai powered automation",
+        "location_code": 2840,
+        "language_code": "en",
+        "search_partners": false,
+        "competition": "LOW",
+        "competition_index": 26,
+        "search_volume": 260,
+        "low_top_of_page_bid": 7.68,
+        "high_top_of_page_bid": 26.32,
+        "cpc": 23.02,
+        "monthly_searches": [
+          {
+            "year": 2025,
+            "month": 7,
+            "search_volume": 480
+          },
+          {
+            "year": 2025,
+            "month": 6,
+            "search_volume": 390
+          },
+          {
+            "year": 2025,
+            "month": 5,
+            "search_volume": 590
+          },
+          {
+            "year": 2025,
+            "month": 4,
+            "search_volume": 480
+          },
+          {
+            "year": 2025,
+            "month": 3,
+            "search_volume": 390
+          },
+          {
+            "year": 2025,
+            "month": 2,
+            "search_volume": 260
+          },
+          {
+            "year": 2025,
+            "month": 1,
+            "search_volume": 210
+          },
+          {
+            "year": 2024,
+            "month": 12,
+            "search_volume": 170
+          },
+          {
+            "year": 2024,
+            "month": 11,
+            "search_volume": 110
+          },
+          {
+            "year": 2024,
+            "month": 10,
+            "search_volume": 90
+          },
+          {
+            "year": 2024,
+            "month": 9,
+            "search_volume": 70
+          },
+          {
+            "year": 2024,
+            "month": 8,
+            "search_volume": 70
+          }
+        ],
+        "category": "industry"
+      },
+      {
+        "keyword": "AI automation platform",
+        "spell": "ai automation platform",
+        "location_code": 2840,
+        "language_code": "en",
+        "search_partners": false,
+        "competition": "LOW",
+        "competition_index": 24,
+        "search_volume": 210,
+        "low_top_of_page_bid": 9.35,
+        "high_top_of_page_bid": 26.79,
+        "cpc": 33.97,
+        "monthly_searches": [
+          {
+            "year": 2025,
+            "month": 7,
+            "search_volume": 260
+          },
+          {
+            "year": 2025,
+            "month": 6,
+            "search_volume": 590
+          },
+          {
+            "year": 2025,
+            "month": 5,
+            "search_volume": 260
+          },
+          {
+            "year": 2025,
+            "month": 4,
+            "search_volume": 210
+          },
+          {
+            "year": 2025,
+            "month": 3,
+            "search_volume": 260
+          },
+          {
+            "year": 2025,
+            "month": 2,
+            "search_volume": 110
+          },
+          {
+            "year": 2025,
+            "month": 1,
+            "search_volume": 110
+          },
+          {
+            "year": 2024,
+            "month": 12,
+            "search_volume": 50
+          },
+          {
+            "year": 2024,
+            "month": 11,
+            "search_volume": 170
+          },
+          {
+            "year": 2024,
+            "month": 10,
+            "search_volume": 260
+          },
+          {
+            "year": 2024,
+            "month": 9,
+            "search_volume": 70
+          },
+          {
+            "year": 2024,
+            "month": 8,
+            "search_volume": 30
+          }
+        ],
+        "category": "primary"
+      },
+      {
+        "keyword": "HR automation tools",
+        "spell": "hr automation tools",
+        "location_code": 2840,
+        "language_code": "en",
+        "search_partners": false,
+        "competition": "LOW",
+        "competition_index": 3,
+        "search_volume": 210,
+        "low_top_of_page_bid": 22.83,
+        "high_top_of_page_bid": 67.61,
+        "cpc": 53.32,
+        "monthly_searches": [
+          {
+            "year": 2025,
+            "month": 7,
+            "search_volume": 320
+          },
+          {
+            "year": 2025,
+            "month": 6,
+            "search_volume": 590
+          },
+          {
+            "year": 2025,
+            "month": 5,
+            "search_volume": 320
+          },
+          {
+            "year": 2025,
+            "month": 4,
+            "search_volume": 320
+          },
+          {
+            "year": 2025,
+            "month": 3,
+            "search_volume": 260
+          },
+          {
+            "year": 2025,
+            "month": 2,
+            "search_volume": 110
+          },
+          {
+            "year": 2025,
+            "month": 1,
+            "search_volume": 210
+          },
+          {
+            "year": 2024,
+            "month": 12,
+            "search_volume": 170
+          },
+          {
+            "year": 2024,
+            "month": 11,
+            "search_volume": 110
+          },
+          {
+            "year": 2024,
+            "month": 10,
+            "search_volume": 110
+          },
+          {
+            "year": 2024,
+            "month": 9,
+            "search_volume": 90
+          },
+          {
+            "year": 2024,
+            "month": 8,
+            "search_volume": 90
+          }
+        ],
+        "category": "business"
+      },
+      {
+        "keyword": "lead generation automation",
+        "spell": null,
+        "location_code": 2840,
+        "language_code": "en",
+        "search_partners": false,
+        "competition": "LOW",
+        "competition_index": 28,
+        "search_volume": 210,
+        "low_top_of_page_bid": 13.03,
+        "high_top_of_page_bid": 53.03,
+        "cpc": 53.16,
+        "monthly_searches": [
+          {
+            "year": 2025,
+            "month": 7,
+            "search_volume": 90
+          },
+          {
+            "year": 2025,
+            "month": 6,
+            "search_volume": 260
+          },
+          {
+            "year": 2025,
+            "month": 5,
+            "search_volume": 260
+          },
+          {
+            "year": 2025,
+            "month": 4,
+            "search_volume": 320
+          },
+          {
+            "year": 2025,
+            "month": 3,
+            "search_volume": 320
+          },
+          {
+            "year": 2025,
+            "month": 2,
+            "search_volume": 210
+          },
+          {
+            "year": 2025,
+            "month": 1,
+            "search_volume": 210
+          },
+          {
+            "year": 2024,
+            "month": 12,
+            "search_volume": 110
+          },
+          {
+            "year": 2024,
+            "month": 11,
+            "search_volume": 110
+          },
+          {
+            "year": 2024,
+            "month": 10,
+            "search_volume": 170
+          },
+          {
+            "year": 2024,
+            "month": 9,
+            "search_volume": 170
+          },
+          {
+            "year": 2024,
+            "month": 8,
+            "search_volume": 110
+          }
+        ],
+        "category": "business"
+      },
+      {
+        "keyword": "AI process automation",
+        "spell": "ai process automation",
+        "location_code": 2840,
+        "language_code": "en",
+        "search_partners": false,
+        "competition": "LOW",
+        "competition_index": 25,
+        "search_volume": 170,
+        "low_top_of_page_bid": 9.84,
+        "high_top_of_page_bid": 32.56,
+        "cpc": 45.45,
+        "monthly_searches": [
+          {
+            "year": 2025,
+            "month": 7,
+            "search_volume": 90
+          },
+          {
+            "year": 2025,
+            "month": 6,
+            "search_volume": 170
+          },
+          {
+            "year": 2025,
+            "month": 5,
+            "search_volume": 320
+          },
+          {
+            "year": 2025,
+            "month": 4,
+            "search_volume": 320
+          },
+          {
+            "year": 2025,
+            "month": 3,
+            "search_volume": 260
+          },
+          {
+            "year": 2025,
+            "month": 2,
+            "search_volume": 210
+          },
+          {
+            "year": 2025,
+            "month": 1,
+            "search_volume": 170
+          },
+          {
+            "year": 2024,
+            "month": 12,
+            "search_volume": 140
+          },
+          {
+            "year": 2024,
+            "month": 11,
+            "search_volume": 110
+          },
+          {
+            "year": 2024,
+            "month": 10,
+            "search_volume": 90
+          },
+          {
+            "year": 2024,
+            "month": 9,
+            "search_volume": 90
+          },
+          {
+            "year": 2024,
+            "month": 8,
+            "search_volume": 70
+          }
+        ],
+        "category": "primary"
+      },
+      {
+        "keyword": "AI email automation",
+        "spell": "ai email automation",
+        "location_code": 2840,
+        "language_code": "en",
+        "search_partners": false,
+        "competition": "MEDIUM",
+        "competition_index": 39,
+        "search_volume": 170,
+        "low_top_of_page_bid": 12.46,
+        "high_top_of_page_bid": 45.59,
+        "cpc": 80.16,
+        "monthly_searches": [
+          {
+            "year": 2025,
+            "month": 7,
+            "search_volume": 140
+          },
+          {
+            "year": 2025,
+            "month": 6,
+            "search_volume": 210
+          },
+          {
+            "year": 2025,
+            "month": 5,
+            "search_volume": 260
+          },
+          {
+            "year": 2025,
+            "month": 4,
+            "search_volume": 170
+          },
+          {
+            "year": 2025,
+            "month": 3,
+            "search_volume": 170
+          },
+          {
+            "year": 2025,
+            "month": 2,
+            "search_volume": 170
+          },
+          {
+            "year": 2025,
+            "month": 1,
+            "search_volume": 210
+          },
+          {
+            "year": 2024,
+            "month": 12,
+            "search_volume": 140
+          },
+          {
+            "year": 2024,
+            "month": 11,
+            "search_volume": 110
+          },
+          {
+            "year": 2024,
+            "month": 10,
+            "search_volume": 110
+          },
+          {
+            "year": 2024,
+            "month": 9,
+            "search_volume": 90
+          },
+          {
+            "year": 2024,
+            "month": 8,
+            "search_volume": 90
+          }
+        ],
+        "category": "business"
+      },
+      {
+        "keyword": "best AI automation tools",
+        "spell": "best ai automation tools",
+        "location_code": 2840,
+        "language_code": "en",
+        "search_partners": false,
+        "competition": "MEDIUM",
+        "competition_index": 37,
+        "search_volume": 140,
+        "low_top_of_page_bid": 7.26,
+        "high_top_of_page_bid": 23.99,
+        "cpc": 13.87,
+        "monthly_searches": [
+          {
+            "year": 2025,
+            "month": 7,
+            "search_volume": 260
+          },
+          {
+            "year": 2025,
+            "month": 6,
+            "search_volume": 170
+          },
+          {
+            "year": 2025,
+            "month": 5,
+            "search_volume": 210
+          },
+          {
+            "year": 2025,
+            "month": 4,
+            "search_volume": 170
+          },
+          {
+            "year": 2025,
+            "month": 3,
+            "search_volume": 170
+          },
+          {
+            "year": 2025,
+            "month": 2,
+            "search_volume": 90
+          },
+          {
+            "year": 2025,
+            "month": 1,
+            "search_volume": 90
+          },
+          {
+            "year": 2024,
+            "month": 12,
+            "search_volume": 70
+          },
+          {
+            "year": 2024,
+            "month": 11,
+            "search_volume": 50
+          },
+          {
+            "year": 2024,
+            "month": 10,
+            "search_volume": 40
+          },
+          {
+            "year": 2024,
+            "month": 9,
+            "search_volume": 140
+          },
+          {
+            "year": 2024,
+            "month": 8,
+            "search_volume": 70
+          }
+        ],
+        "category": "industry"
+      },
+      {
+        "keyword": "AI automation companies",
+        "spell": "ai automation companies",
+        "location_code": 2840,
+        "language_code": "en",
+        "search_partners": false,
+        "competition": "MEDIUM",
+        "competition_index": 50,
+        "search_volume": 140,
+        "low_top_of_page_bid": 8,
+        "high_top_of_page_bid": 18.81,
+        "cpc": 25.1,
+        "monthly_searches": [
+          {
+            "year": 2025,
+            "month": 7,
+            "search_volume": 210
+          },
+          {
+            "year": 2025,
+            "month": 6,
+            "search_volume": 210
+          },
+          {
+            "year": 2025,
+            "month": 5,
+            "search_volume": 170
+          },
+          {
+            "year": 2025,
+            "month": 4,
+            "search_volume": 170
+          },
+          {
+            "year": 2025,
+            "month": 3,
+            "search_volume": 210
+          },
+          {
+            "year": 2025,
+            "month": 2,
+            "search_volume": 210
+          },
+          {
+            "year": 2025,
+            "month": 1,
+            "search_volume": 140
+          },
+          {
+            "year": 2024,
+            "month": 12,
+            "search_volume": 70
+          },
+          {
+            "year": 2024,
+            "month": 11,
+            "search_volume": 70
+          },
+          {
+            "year": 2024,
+            "month": 10,
+            "search_volume": 50
+          },
+          {
+            "year": 2024,
+            "month": 9,
+            "search_volume": 40
+          },
+          {
+            "year": 2024,
+            "month": 8,
+            "search_volume": 50
+          }
+        ],
+        "category": "industry"
+      },
+      {
+        "keyword": "intelligent automation software",
+        "spell": null,
+        "location_code": 2840,
+        "language_code": "en",
+        "search_partners": false,
+        "competition": "LOW",
+        "competition_index": 6,
+        "search_volume": 140,
+        "low_top_of_page_bid": null,
+        "high_top_of_page_bid": null,
+        "cpc": null,
+        "monthly_searches": [
+          {
+            "year": 2025,
+            "month": 7,
+            "search_volume": 320
+          },
+          {
+            "year": 2025,
+            "month": 6,
+            "search_volume": 260
+          },
+          {
+            "year": 2025,
+            "month": 5,
+            "search_volume": 210
+          },
+          {
+            "year": 2025,
+            "month": 4,
+            "search_volume": 210
+          },
+          {
+            "year": 2025,
+            "month": 3,
+            "search_volume": 170
+          },
+          {
+            "year": 2025,
+            "month": 2,
+            "search_volume": 90
+          },
+          {
+            "year": 2025,
+            "month": 1,
+            "search_volume": 110
+          },
+          {
+            "year": 2024,
+            "month": 12,
+            "search_volume": 40
+          },
+          {
+            "year": 2024,
+            "month": 11,
+            "search_volume": 50
+          },
+          {
+            "year": 2024,
+            "month": 10,
+            "search_volume": 30
+          },
+          {
+            "year": 2024,
+            "month": 9,
+            "search_volume": 20
+          },
+          {
+            "year": 2024,
+            "month": 8,
+            "search_volume": 40
+          }
+        ],
+        "category": "industry"
+      },
+      {
+        "keyword": "business intelligence automation",
+        "spell": null,
+        "location_code": 2840,
+        "language_code": "en",
+        "search_partners": false,
+        "competition": "LOW",
+        "competition_index": 11,
+        "search_volume": 140,
+        "low_top_of_page_bid": 18.64,
+        "high_top_of_page_bid": 69.45,
+        "cpc": null,
+        "monthly_searches": [
+          {
+            "year": 2025,
+            "month": 7,
+            "search_volume": 50
+          },
+          {
+            "year": 2025,
+            "month": 6,
+            "search_volume": 140
+          },
+          {
+            "year": 2025,
+            "month": 5,
+            "search_volume": 140
+          },
+          {
+            "year": 2025,
+            "month": 4,
+            "search_volume": 210
+          },
+          {
+            "year": 2025,
+            "month": 3,
+            "search_volume": 260
+          },
+          {
+            "year": 2025,
+            "month": 2,
+            "search_volume": 140
+          },
+          {
+            "year": 2025,
+            "month": 1,
+            "search_volume": 140
+          },
+          {
+            "year": 2024,
+            "month": 12,
+            "search_volume": 110
+          },
+          {
+            "year": 2024,
+            "month": 11,
+            "search_volume": 110
+          },
+          {
+            "year": 2024,
+            "month": 10,
+            "search_volume": 90
+          },
+          {
+            "year": 2024,
+            "month": 9,
+            "search_volume": 70
+          },
+          {
+            "year": 2024,
+            "month": 8,
+            "search_volume": 90
+          }
+        ],
+        "category": "industry"
+      },
+      {
+        "keyword": "API automation tools",
+        "spell": "api automation tools",
+        "location_code": 2840,
+        "language_code": "en",
+        "search_partners": false,
+        "competition": "LOW",
+        "competition_index": 27,
+        "search_volume": 110,
+        "low_top_of_page_bid": 4.36,
+        "high_top_of_page_bid": 16.81,
+        "cpc": 10.28,
+        "monthly_searches": [
+          {
+            "year": 2025,
+            "month": 7,
+            "search_volume": 140
+          },
+          {
+            "year": 2025,
+            "month": 6,
+            "search_volume": 170
+          },
+          {
+            "year": 2025,
+            "month": 5,
+            "search_volume": 170
+          },
+          {
+            "year": 2025,
+            "month": 4,
+            "search_volume": 140
+          },
+          {
+            "year": 2025,
+            "month": 3,
+            "search_volume": 140
+          },
+          {
+            "year": 2025,
+            "month": 2,
+            "search_volume": 140
+          },
+          {
+            "year": 2025,
+            "month": 1,
+            "search_volume": 140
+          },
+          {
+            "year": 2024,
+            "month": 12,
+            "search_volume": 110
+          },
+          {
+            "year": 2024,
+            "month": 11,
+            "search_volume": 90
+          },
+          {
+            "year": 2024,
+            "month": 10,
+            "search_volume": 90
+          },
+          {
+            "year": 2024,
+            "month": 9,
+            "search_volume": 90
+          },
+          {
+            "year": 2024,
+            "month": 8,
+            "search_volume": 90
+          }
+        ],
+        "category": "technical"
+      },
+      {
+        "keyword": "AI workflow management",
+        "spell": "ai workflow management",
+        "location_code": 2840,
+        "language_code": "en",
+        "search_partners": false,
+        "competition": "LOW",
+        "competition_index": 9,
+        "search_volume": 110,
+        "low_top_of_page_bid": 7.81,
+        "high_top_of_page_bid": 33.26,
+        "cpc": 44.7,
+        "monthly_searches": [
+          {
+            "year": 2025,
+            "month": 7,
+            "search_volume": 90
+          },
+          {
+            "year": 2025,
+            "month": 6,
+            "search_volume": 90
+          },
+          {
+            "year": 2025,
+            "month": 5,
+            "search_volume": 170
+          },
+          {
+            "year": 2025,
+            "month": 4,
+            "search_volume": 170
+          },
+          {
+            "year": 2025,
+            "month": 3,
+            "search_volume": 210
+          },
+          {
+            "year": 2025,
+            "month": 2,
+            "search_volume": 110
+          },
+          {
+            "year": 2025,
+            "month": 1,
+            "search_volume": 110
+          },
+          {
+            "year": 2024,
+            "month": 12,
+            "search_volume": 70
+          },
+          {
+            "year": 2024,
+            "month": 11,
+            "search_volume": 50
+          },
+          {
+            "year": 2024,
+            "month": 10,
+            "search_volume": 70
+          },
+          {
+            "year": 2024,
+            "month": 9,
+            "search_volume": 50
+          },
+          {
+            "year": 2024,
+            "month": 8,
+            "search_volume": 40
+          }
+        ],
+        "category": "technical"
+      },
+      {
+        "keyword": "AI task automation",
+        "spell": "ai task automation",
+        "location_code": 2840,
+        "language_code": "en",
+        "search_partners": false,
+        "competition": "MEDIUM",
+        "competition_index": 38,
+        "search_volume": 110,
+        "low_top_of_page_bid": 7.25,
+        "high_top_of_page_bid": 20.69,
+        "cpc": 14.89,
+        "monthly_searches": [
+          {
+            "year": 2025,
+            "month": 7,
+            "search_volume": 50
+          },
+          {
+            "year": 2025,
+            "month": 6,
+            "search_volume": 110
+          },
+          {
+            "year": 2025,
+            "month": 5,
+            "search_volume": 210
+          },
+          {
+            "year": 2025,
+            "month": 4,
+            "search_volume": 260
+          },
+          {
+            "year": 2025,
+            "month": 3,
+            "search_volume": 320
+          },
+          {
+            "year": 2025,
+            "month": 2,
+            "search_volume": 140
+          },
+          {
+            "year": 2025,
+            "month": 1,
+            "search_volume": 90
+          },
+          {
+            "year": 2024,
+            "month": 12,
+            "search_volume": 30
+          },
+          {
+            "year": 2024,
+            "month": 11,
+            "search_volume": 110
+          },
+          {
+            "year": 2024,
+            "month": 10,
+            "search_volume": 40
+          },
+          {
+            "year": 2024,
+            "month": 9,
+            "search_volume": 20
+          },
+          {
+            "year": 2024,
+            "month": 8,
+            "search_volume": 30
+          }
+        ],
+        "category": "technical"
+      }
+    ],
+    "commercial": [
+      {
+        "keyword": "AI automation tools",
+        "spell": "ai automation tools",
+        "location_code": 2840,
+        "language_code": "en",
+        "search_partners": false,
+        "competition": "LOW",
+        "competition_index": 21,
+        "search_volume": 1000,
+        "low_top_of_page_bid": 7.65,
+        "high_top_of_page_bid": 23.33,
+        "cpc": 25.71,
+        "monthly_searches": [
+          {
+            "year": 2025,
+            "month": 7,
+            "search_volume": 1900
+          },
+          {
+            "year": 2025,
+            "month": 6,
+            "search_volume": 1600
+          },
+          {
+            "year": 2025,
+            "month": 5,
+            "search_volume": 1300
+          },
+          {
+            "year": 2025,
+            "month": 4,
+            "search_volume": 1000
+          },
+          {
+            "year": 2025,
+            "month": 3,
+            "search_volume": 1000
+          },
+          {
+            "year": 2025,
+            "month": 2,
+            "search_volume": 720
+          },
+          {
+            "year": 2025,
+            "month": 1,
+            "search_volume": 880
+          },
+          {
+            "year": 2024,
+            "month": 12,
+            "search_volume": 590
+          },
+          {
+            "year": 2024,
+            "month": 11,
+            "search_volume": 590
+          },
+          {
+            "year": 2024,
+            "month": 10,
+            "search_volume": 590
+          },
+          {
+            "year": 2024,
+            "month": 9,
+            "search_volume": 880
+          },
+          {
+            "year": 2024,
+            "month": 8,
+            "search_volume": 480
+          }
+        ],
+        "category": "primary"
+      },
+      {
+        "keyword": "AI automation software",
+        "spell": "ai automation software",
+        "location_code": 2840,
+        "language_code": "en",
+        "search_partners": false,
+        "competition": "LOW",
+        "competition_index": 7,
+        "search_volume": 390,
+        "low_top_of_page_bid": 10.19,
+        "high_top_of_page_bid": 31.22,
+        "cpc": 29.05,
+        "monthly_searches": [
+          {
+            "year": 2025,
+            "month": 7,
+            "search_volume": 720
+          },
+          {
+            "year": 2025,
+            "month": 6,
+            "search_volume": 720
+          },
+          {
+            "year": 2025,
+            "month": 5,
+            "search_volume": 720
+          },
+          {
+            "year": 2025,
+            "month": 4,
+            "search_volume": 390
+          },
+          {
+            "year": 2025,
+            "month": 3,
+            "search_volume": 590
+          },
+          {
+            "year": 2025,
+            "month": 2,
+            "search_volume": 320
+          },
+          {
+            "year": 2025,
+            "month": 1,
+            "search_volume": 170
+          },
+          {
+            "year": 2024,
+            "month": 12,
+            "search_volume": 170
+          },
+          {
+            "year": 2024,
+            "month": 11,
+            "search_volume": 170
+          },
+          {
+            "year": 2024,
+            "month": 10,
+            "search_volume": 90
+          },
+          {
+            "year": 2024,
+            "month": 9,
+            "search_volume": 720
+          },
+          {
+            "year": 2024,
+            "month": 8,
+            "search_volume": 40
+          }
+        ],
+        "category": "primary"
+      },
+      {
+        "keyword": "AI automation services",
+        "spell": "ai automation services",
+        "location_code": 2840,
+        "language_code": "en",
+        "search_partners": false,
+        "competition": "LOW",
+        "competition_index": 31,
+        "search_volume": 320,
+        "low_top_of_page_bid": 8.95,
+        "high_top_of_page_bid": 20,
+        "cpc": 20.82,
+        "monthly_searches": [
+          {
+            "year": 2025,
+            "month": 7,
+            "search_volume": 390
+          },
+          {
+            "year": 2025,
+            "month": 6,
+            "search_volume": 480
+          },
+          {
+            "year": 2025,
+            "month": 5,
+            "search_volume": 480
+          },
+          {
+            "year": 2025,
+            "month": 4,
+            "search_volume": 480
+          },
+          {
+            "year": 2025,
+            "month": 3,
+            "search_volume": 390
+          },
+          {
+            "year": 2025,
+            "month": 2,
+            "search_volume": 260
+          },
+          {
+            "year": 2025,
+            "month": 1,
+            "search_volume": 260
+          },
+          {
+            "year": 2024,
+            "month": 12,
+            "search_volume": 140
+          },
+          {
+            "year": 2024,
+            "month": 11,
+            "search_volume": 140
+          },
+          {
+            "year": 2024,
+            "month": 10,
+            "search_volume": 320
+          },
+          {
+            "year": 2024,
+            "month": 9,
+            "search_volume": 170
+          },
+          {
+            "year": 2024,
+            "month": 8,
+            "search_volume": 70
+          }
+        ],
+        "category": "industry"
+      },
+      {
+        "keyword": "HR automation tools",
+        "spell": "hr automation tools",
+        "location_code": 2840,
+        "language_code": "en",
+        "search_partners": false,
+        "competition": "LOW",
+        "competition_index": 3,
+        "search_volume": 210,
+        "low_top_of_page_bid": 22.83,
+        "high_top_of_page_bid": 67.61,
+        "cpc": 53.32,
+        "monthly_searches": [
+          {
+            "year": 2025,
+            "month": 7,
+            "search_volume": 320
+          },
+          {
+            "year": 2025,
+            "month": 6,
+            "search_volume": 590
+          },
+          {
+            "year": 2025,
+            "month": 5,
+            "search_volume": 320
+          },
+          {
+            "year": 2025,
+            "month": 4,
+            "search_volume": 320
+          },
+          {
+            "year": 2025,
+            "month": 3,
+            "search_volume": 260
+          },
+          {
+            "year": 2025,
+            "month": 2,
+            "search_volume": 110
+          },
+          {
+            "year": 2025,
+            "month": 1,
+            "search_volume": 210
+          },
+          {
+            "year": 2024,
+            "month": 12,
+            "search_volume": 170
+          },
+          {
+            "year": 2024,
+            "month": 11,
+            "search_volume": 110
+          },
+          {
+            "year": 2024,
+            "month": 10,
+            "search_volume": 110
+          },
+          {
+            "year": 2024,
+            "month": 9,
+            "search_volume": 90
+          },
+          {
+            "year": 2024,
+            "month": 8,
+            "search_volume": 90
+          }
+        ],
+        "category": "business"
+      },
+      {
+        "keyword": "best AI automation tools",
+        "spell": "best ai automation tools",
+        "location_code": 2840,
+        "language_code": "en",
+        "search_partners": false,
+        "competition": "MEDIUM",
+        "competition_index": 37,
+        "search_volume": 140,
+        "low_top_of_page_bid": 7.26,
+        "high_top_of_page_bid": 23.99,
+        "cpc": 13.87,
+        "monthly_searches": [
+          {
+            "year": 2025,
+            "month": 7,
+            "search_volume": 260
+          },
+          {
+            "year": 2025,
+            "month": 6,
+            "search_volume": 170
+          },
+          {
+            "year": 2025,
+            "month": 5,
+            "search_volume": 210
+          },
+          {
+            "year": 2025,
+            "month": 4,
+            "search_volume": 170
+          },
+          {
+            "year": 2025,
+            "month": 3,
+            "search_volume": 170
+          },
+          {
+            "year": 2025,
+            "month": 2,
+            "search_volume": 90
+          },
+          {
+            "year": 2025,
+            "month": 1,
+            "search_volume": 90
+          },
+          {
+            "year": 2024,
+            "month": 12,
+            "search_volume": 70
+          },
+          {
+            "year": 2024,
+            "month": 11,
+            "search_volume": 50
+          },
+          {
+            "year": 2024,
+            "month": 10,
+            "search_volume": 40
+          },
+          {
+            "year": 2024,
+            "month": 9,
+            "search_volume": 140
+          },
+          {
+            "year": 2024,
+            "month": 8,
+            "search_volume": 70
+          }
+        ],
+        "category": "industry"
+      },
+      {
+        "keyword": "intelligent automation software",
+        "spell": null,
+        "location_code": 2840,
+        "language_code": "en",
+        "search_partners": false,
+        "competition": "LOW",
+        "competition_index": 6,
+        "search_volume": 140,
+        "low_top_of_page_bid": null,
+        "high_top_of_page_bid": null,
+        "cpc": null,
+        "monthly_searches": [
+          {
+            "year": 2025,
+            "month": 7,
+            "search_volume": 320
+          },
+          {
+            "year": 2025,
+            "month": 6,
+            "search_volume": 260
+          },
+          {
+            "year": 2025,
+            "month": 5,
+            "search_volume": 210
+          },
+          {
+            "year": 2025,
+            "month": 4,
+            "search_volume": 210
+          },
+          {
+            "year": 2025,
+            "month": 3,
+            "search_volume": 170
+          },
+          {
+            "year": 2025,
+            "month": 2,
+            "search_volume": 90
+          },
+          {
+            "year": 2025,
+            "month": 1,
+            "search_volume": 110
+          },
+          {
+            "year": 2024,
+            "month": 12,
+            "search_volume": 40
+          },
+          {
+            "year": 2024,
+            "month": 11,
+            "search_volume": 50
+          },
+          {
+            "year": 2024,
+            "month": 10,
+            "search_volume": 30
+          },
+          {
+            "year": 2024,
+            "month": 9,
+            "search_volume": 20
+          },
+          {
+            "year": 2024,
+            "month": 8,
+            "search_volume": 40
+          }
+        ],
+        "category": "industry"
+      },
+      {
+        "keyword": "API automation tools",
+        "spell": "api automation tools",
+        "location_code": 2840,
+        "language_code": "en",
+        "search_partners": false,
+        "competition": "LOW",
+        "competition_index": 27,
+        "search_volume": 110,
+        "low_top_of_page_bid": 4.36,
+        "high_top_of_page_bid": 16.81,
+        "cpc": 10.28,
+        "monthly_searches": [
+          {
+            "year": 2025,
+            "month": 7,
+            "search_volume": 140
+          },
+          {
+            "year": 2025,
+            "month": 6,
+            "search_volume": 170
+          },
+          {
+            "year": 2025,
+            "month": 5,
+            "search_volume": 170
+          },
+          {
+            "year": 2025,
+            "month": 4,
+            "search_volume": 140
+          },
+          {
+            "year": 2025,
+            "month": 3,
+            "search_volume": 140
+          },
+          {
+            "year": 2025,
+            "month": 2,
+            "search_volume": 140
+          },
+          {
+            "year": 2025,
+            "month": 1,
+            "search_volume": 140
+          },
+          {
+            "year": 2024,
+            "month": 12,
+            "search_volume": 110
+          },
+          {
+            "year": 2024,
+            "month": 11,
+            "search_volume": 90
+          },
+          {
+            "year": 2024,
+            "month": 10,
+            "search_volume": 90
+          },
+          {
+            "year": 2024,
+            "month": 9,
+            "search_volume": 90
+          },
+          {
+            "year": 2024,
+            "month": 8,
+            "search_volume": 90
+          }
+        ],
+        "category": "technical"
+      }
+    ]
+  },
+  "contentRecommendations": {
+    "primaryFocus": "AI automation tools",
+    "secondaryTargets": [
+      "business process automation",
+      "AI workflow automation",
+      "intelligent automation software",
+      "AI automation platform",
+      "automated AI solutions"
+    ],
+    "contentClusters": [
+      "Business process automation with AI",
+      "Customer service automation solutions",
+      "Marketing and sales automation",
+      "Technical workflow automation",
+      "Enterprise vs SMB automation tools"
+    ]
+  },
+  "totalKeywordsAnalyzed": 40,
+  "timestamp": "2025-09-05T21:45:29.352Z"
+}
