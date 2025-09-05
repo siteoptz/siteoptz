@@ -287,63 +287,111 @@ const Header: React.FC = () => {
               overflow: 'auto',
               paddingBottom: '40px'
             }}>
-              <div style={{ marginBottom: '16px' }}>
-                <div style={{ 
-                  color: '#06b6d4', 
-                  fontSize: '16px', 
-                  fontWeight: '600', 
-                  marginBottom: '12px',
-                  textTransform: 'uppercase',
-                  letterSpacing: '0.5px'
-                }}>AI Categories</div>
-                {toolCategories.map((category) => (
-                  <Link 
-                    key={category}
-                    href={`/categories/${category.toLowerCase().replace(/[^a-z0-9]+/g, '-')}`} 
-                    onClick={closeMenu} 
+              <div style={{ marginBottom: '16px', borderBottom: '1px solid rgba(255,255,255,0.1)' }}>
+                <button
+                  onClick={() => toggleMobileAccordion('categories')}
+                  style={{
+                    width: '100%',
+                    display: 'flex',
+                    alignItems: 'center',
+                    justifyContent: 'space-between',
+                    background: 'none',
+                    border: 'none',
+                    color: '#06b6d4',
+                    fontSize: '16px',
+                    fontWeight: '600',
+                    padding: '12px 0',
+                    textTransform: 'uppercase',
+                    letterSpacing: '0.5px',
+                    cursor: 'pointer'
+                  }}
+                >
+                  AI Categories
+                  <ChevronDown 
                     style={{ 
-                      color: 'white', 
-                      textDecoration: 'none', 
-                      fontSize: '16px', 
-                      padding: '12px 16px', 
-                      borderBottom: '1px solid rgba(255,255,255,0.05)',
-                      transition: 'all 0.2s ease',
-                      display: 'block',
-                      marginLeft: '8px'
-                    }}
-                  >
-                    {getCategoryDisplayName(category)}
-                  </Link>
-                ))}
+                      width: '16px', 
+                      height: '16px',
+                      transform: mobileAccordions.categories ? 'rotate(180deg)' : 'rotate(0deg)',
+                      transition: 'transform 0.2s ease'
+                    }} 
+                  />
+                </button>
+                {mobileAccordions.categories && (
+                  <div style={{ paddingBottom: '12px' }}>
+                    {toolCategories.map((category) => (
+                      <Link 
+                        key={category}
+                        href={`/categories/${category.toLowerCase().replace(/[^a-z0-9]+/g, '-')}`} 
+                        onClick={closeMenu} 
+                        style={{ 
+                          color: 'white', 
+                          textDecoration: 'none', 
+                          fontSize: '16px', 
+                          padding: '12px 16px', 
+                          borderBottom: '1px solid rgba(255,255,255,0.05)',
+                          transition: 'all 0.2s ease',
+                          display: 'block',
+                          marginLeft: '8px'
+                        }}
+                      >
+                        {getCategoryDisplayName(category)}
+                      </Link>
+                    ))}
+                  </div>
+                )}
               </div>
-              <div style={{ marginBottom: '16px' }}>
-                <div style={{ 
-                  color: '#06b6d4', 
-                  fontSize: '16px', 
-                  fontWeight: '600', 
-                  marginBottom: '12px',
-                  textTransform: 'uppercase',
-                  letterSpacing: '0.5px'
-                }}>Industries We Help</div>
-                {industryMenuItems.map((item) => (
-                  <Link 
-                    key={item.industry}
-                    href={`/industries/${industrySlugMap[item.industry]}`}
-                    onClick={closeMenu} 
+              <div style={{ marginBottom: '16px', borderBottom: '1px solid rgba(255,255,255,0.1)' }}>
+                <button
+                  onClick={() => toggleMobileAccordion('industries')}
+                  style={{
+                    width: '100%',
+                    display: 'flex',
+                    alignItems: 'center',
+                    justifyContent: 'space-between',
+                    background: 'none',
+                    border: 'none',
+                    color: '#06b6d4',
+                    fontSize: '16px',
+                    fontWeight: '600',
+                    padding: '12px 0',
+                    textTransform: 'uppercase',
+                    letterSpacing: '0.5px',
+                    cursor: 'pointer'
+                  }}
+                >
+                  Industries We Help
+                  <ChevronDown 
                     style={{ 
-                      color: 'white', 
-                      textDecoration: 'none', 
-                      fontSize: '16px', 
-                      padding: '12px 16px', 
-                      borderBottom: '1px solid rgba(255,255,255,0.05)',
-                      transition: 'all 0.2s ease',
-                      display: 'block',
-                      marginLeft: '8px'
-                    }}
-                  >
-                    {item.name}
-                  </Link>
-                ))}
+                      width: '16px', 
+                      height: '16px',
+                      transform: mobileAccordions.industries ? 'rotate(180deg)' : 'rotate(0deg)',
+                      transition: 'transform 0.2s ease'
+                    }} 
+                  />
+                </button>
+                {mobileAccordions.industries && (
+                  <div style={{ paddingBottom: '12px' }}>
+                    {industryMenuItems.map((item) => (
+                      <Link 
+                        key={item.industry}
+                        href={`/industries/${industrySlugMap[item.industry]}`}
+                        onClick={closeMenu} 
+                        style={{ 
+                          color: 'white', 
+                          textDecoration: 'none', 
+                          fontSize: '16px', 
+                          padding: '12px 16px', 
+                          borderBottom: '1px solid rgba(255,255,255,0.05)',
+                          transition: 'all 0.2s ease',
+                          display: 'block',
+                          marginLeft: '8px'
+                        }}
+                      >
+                        {item.name}
+                      </Link>
+                    ))}
+                  </div>
+                )}
               </div>
               <Link href="/tools" onClick={closeMenu} style={{ 
                 color: 'white', 
