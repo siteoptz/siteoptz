@@ -5,6 +5,7 @@ import { loadUnifiedToolsData } from '../../utils/unifiedDataAdapter';
 
 interface Tool {
   tool_name: string;
+  slug?: string;
   category: string;
   description: string;
   logo_url: string;
