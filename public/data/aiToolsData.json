@@ -12,7 +12,7 @@
       "developer": "10web",
       "release_year": 2022,
       "description": "AI-Powered WordPress Platform. Automated Website Builder, Hosting, and PageSpeed Booster, to say the least.",
-      "category": "AI Website Builder",
+      "category": "Website Builder",
       "website": "https://10web.io"
     },
     "features": [
@@ -10841,7 +10841,7 @@
     "logo": "/images/tools/kleap-ai-logo.svg",
     "description": "AI website builder that creates professional websites in minutes with intelligent design and content generation.",
     "website": "https://kleap.co",
-    "category": "AI Website Builder",
+    "category": "Website Builder",
     "features": [
       "AI website generation",
       "Mobile-first design",
@@ -19609,7 +19609,7 @@
       "developer": "Sitekick",
       "release_year": 2022,
       "description": "Create a beautiful landing page or website with AI in seconds. Simplifies the process of crafting visually stunning landing pages and websites that convert.",
-      "category": "AI Website Builder",
+      "category": "Website Builder",
       "website": "https://sitekick.ai"
     },
     "features": [
