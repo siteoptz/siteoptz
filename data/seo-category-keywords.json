@@ -1,0 +1,88 @@
+{
+  "primary": {
+    "keyword": "AI SEO tools",
+    "spell": "ai seo tools",
+    "location_code": 2840,
+    "language_code": "en",
+    "search_partners": false,
+    "competition": "LOW",
+    "competition_index": 15,
+    "search_volume": 2900,
+    "low_top_of_page_bid": 7.92,
+    "high_top_of_page_bid": 24.59,
+    "cpc": 27.33,
+    "monthly_searches": [
+      {
+        "year": 2025,
+        "month": 7,
+        "search_volume": 2400
+      },
+      {
+        "year": 2025,
+        "month": 6,
+        "search_volume": 2400
+      },
+      {
+        "year": 2025,
+        "month": 5,
+        "search_volume": 2900
+      },
+      {
+        "year": 2025,
+        "month": 4,
+        "search_volume": 2400
+      },
+      {
+        "year": 2025,
+        "month": 3,
+        "search_volume": 1600
+      },
+      {
+        "year": 2025,
+        "month": 2,
+        "search_volume": 1300
+      },
+      {
+        "year": 2025,
+        "month": 1,
+        "search_volume": 1300
+      },
+      {
+        "year": 2024,
+        "month": 12,
+        "search_volume": 6600
+      },
+      {
+        "year": 2024,
+        "month": 11,
+        "search_volume": 1000
+      },
+      {
+        "year": 2024,
+        "month": 10,
+        "search_volume": 1300
+      },
+      {
+        "year": 2024,
+        "month": 9,
+        "search_volume": 1900
+      },
+      {
+        "year": 2024,
+        "month": 8,
+        "search_volume": 14800
+      }
+    ]
+  },
+  "secondary": [],
+  "longTail": [],
+  "clusters": {
+    "comparison": [],
+    "tools": [],
+    "howTo": [],
+    "best": [],
+    "free": [],
+    "enterprise": []
+  },
+  "timestamp": "2025-09-05T18:43:16.441Z"
+}
