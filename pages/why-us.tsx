@@ -311,24 +311,24 @@ export default function WhyUs() {
         <section className="relative pt-24 pb-16 overflow-hidden">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
             <div className="text-center mb-16">
-              <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+              <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight">
                 AI Tools Roadmap & Implementation Consulting for Growing Businesses
               </h1>
-              <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
+              <p className="text-lg sm:text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed px-2">
                 Stop guessing which AI tools will drive ROI. Get your 90-day roadmap, hands-on implementation, and optimization for SaaS, e-commerce, and services leaders.
               </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <div className="flex flex-col sm:flex-row gap-4 justify-center px-4">
                 <a
                   href="https://api.leadconnectorhq.com/widget/booking/yPjkVmsauPst8XlrOQUl"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-4 rounded-lg font-bold text-lg hover:from-blue-700 hover:to-purple-700 transform hover:scale-105 transition-all duration-200 shadow-lg hover:shadow-xl"
+                  className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-6 sm:px-8 py-4 rounded-lg font-bold text-base sm:text-lg hover:from-blue-700 hover:to-purple-700 transform hover:scale-105 transition-all duration-200 shadow-lg hover:shadow-xl text-center"
                 >
                   Get Free AI Strategy Consultation
                 </a>
                 <Link
                   href="/tools"
-                  className="bg-transparent border-2 border-white text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-white/10 transition-colors"
+                  className="bg-transparent border-2 border-white text-white px-6 sm:px-8 py-4 rounded-lg font-bold text-base sm:text-lg hover:bg-white/10 transition-colors text-center"
                 >
                   Browse Our AI Tools Database
                 </Link>
@@ -336,13 +336,13 @@ export default function WhyUs() {
             </div>
 
             {/* Stats */}
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-16">
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-8 mb-16">
               {stats.map((stat, index) => (
-                <div key={index} className="text-center">
-                  <div className="text-3xl md:text-4xl font-bold text-cyan-400 mb-2">
+                <div key={index} className="text-center px-2">
+                  <div className="text-2xl sm:text-3xl md:text-4xl font-bold text-cyan-400 mb-2">
                     {stat.number}
                   </div>
-                  <div className="text-gray-300 text-sm md:text-base">
+                  <div className="text-gray-300 text-xs sm:text-sm md:text-base">
                     {stat.label}
                   </div>
                 </div>
@@ -355,10 +355,10 @@ export default function WhyUs() {
         <section className="py-16 bg-gray-900/50">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-12">
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+              <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-6 px-2">
                 Stop Guessing Which AI Tools Will Drive ROI
               </h2>
-              <p className="text-xl text-gray-300 max-w-4xl mx-auto">
+              <p className="text-lg sm:text-xl text-gray-300 max-w-4xl mx-auto px-4">
                 Most businesses struggle with AI tool sprawl, unclear ROI, and slow implementation. 
                 You need a proven roadmap that connects AI tools to revenue growth, not another strategy deck.
               </p>
@@ -405,22 +405,22 @@ export default function WhyUs() {
         <section className="py-20">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-16">
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+              <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-6 px-2">
                 Why SaaS & E-commerce Leaders Choose SiteOptz
               </h2>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              <p className="text-lg sm:text-xl text-gray-300 max-w-3xl mx-auto px-4">
                 We&apos;re not your typical AI consultants. We combine strategic thinking with hands-on technical implementation to deliver real results.
               </p>
             </div>
 
-            <div className="grid md:grid-cols-3 gap-8">
+            <div className="grid sm:grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8">
               {valueProps.map((prop, index) => (
-                <div key={index} className="bg-black border border-gray-800 rounded-2xl p-8 hover:border-gray-600 transition-all">
-                  <div className="flex items-center mb-4">
-                    <div className="w-12 h-12 bg-gradient-to-br from-blue-500 to-purple-600 rounded-lg flex items-center justify-center mr-4">
-                      <prop.icon className="w-6 h-6 text-white" />
+                <div key={index} className="bg-black border border-gray-800 rounded-2xl p-6 lg:p-8 hover:border-gray-600 transition-all">
+                  <div className="flex items-start sm:items-center mb-4">
+                    <div className="w-10 h-10 sm:w-12 sm:h-12 bg-gradient-to-br from-blue-500 to-purple-600 rounded-lg flex items-center justify-center mr-3 sm:mr-4 flex-shrink-0">
+                      <prop.icon className="w-5 h-5 sm:w-6 sm:h-6 text-white" />
                     </div>
-                    <h3 className="text-xl font-bold text-white">{prop.title}</h3>
+                    <h3 className="text-lg sm:text-xl font-bold text-white leading-tight">{prop.title}</h3>
                   </div>
                   <p className="text-gray-300 mb-4">{prop.description}</p>
                   <div className="text-sm font-semibold text-cyan-400">{prop.stats}</div>
@@ -533,24 +533,24 @@ export default function WhyUs() {
         <section className="py-20 bg-black">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-16">
-              <h2 className="text-4xl font-bold text-white mb-4">
+              <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-4 px-2">
                 AI Implementation Services
               </h2>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              <p className="text-lg sm:text-xl text-gray-300 max-w-3xl mx-auto px-4">
                 From strategy to deployment, we handle the complete AI transformation journey for your business.
               </p>
             </div>
 
-            <div className="grid md:grid-cols-3 gap-8">
+            <div className="grid sm:grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8">
               {/* Starter Package */}
-              <div className="bg-gradient-to-b from-gray-900 to-black border border-gray-700 p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 hover:border-cyan-500/50 group">
+              <div className="bg-gradient-to-b from-gray-900 to-black border border-gray-700 p-6 lg:p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 hover:border-cyan-500/50 group">
                 <div className="text-center mb-6">
-                  <div className="text-lg font-semibold text-gray-400 mb-2">STARTER</div>
-                  <div className="text-4xl font-bold text-white mb-2">$2,500</div>
-                  <div className="text-gray-400">One-time fee</div>
+                  <div className="text-sm lg:text-lg font-semibold text-gray-400 mb-2">STARTER</div>
+                  <div className="text-3xl lg:text-4xl font-bold text-white mb-2">$2,500</div>
+                  <div className="text-sm text-gray-400">One-time fee</div>
                 </div>
                 
-                <h3 className="text-2xl font-bold mb-4 text-white text-center">Custom AI Roadmap</h3>
+                <h3 className="text-xl lg:text-2xl font-bold mb-4 text-white text-center">Custom AI Roadmap</h3>
                 <ul className="space-y-3 mb-8">
                   <li className="flex items-center text-gray-300">
                     <CheckCircle className="w-5 h-5 text-cyan-400 mr-3 flex-shrink-0" />
@@ -581,18 +581,18 @@ export default function WhyUs() {
               </div>
 
               {/* Professional Package */}
-              <div className="bg-gradient-to-b from-gray-900 to-black border-2 border-cyan-500 p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 hover:shadow-cyan-500/25 group relative">
-                <div className="absolute -top-4 left-1/2 transform -translate-x-1/2 px-6 py-2 bg-gradient-to-r from-cyan-500 to-blue-600 text-white text-sm font-bold rounded-full">
+              <div className="bg-gradient-to-b from-gray-900 to-black border-2 border-cyan-500 p-6 lg:p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 hover:shadow-cyan-500/25 group relative">
+                <div className="absolute -top-4 left-1/2 transform -translate-x-1/2 px-4 lg:px-6 py-2 bg-gradient-to-r from-cyan-500 to-blue-600 text-white text-xs lg:text-sm font-bold rounded-full">
                   MOST POPULAR
                 </div>
                 
                 <div className="text-center mb-6">
-                  <div className="text-lg font-semibold text-cyan-400 mb-2">PROFESSIONAL</div>
-                  <div className="text-4xl font-bold text-white mb-2">$7,500</div>
-                  <div className="text-gray-400">One-time fee</div>
+                  <div className="text-sm lg:text-lg font-semibold text-cyan-400 mb-2">PROFESSIONAL</div>
+                  <div className="text-3xl lg:text-4xl font-bold text-white mb-2">$7,500</div>
+                  <div className="text-sm text-gray-400">One-time fee</div>
                 </div>
                 
-                <h3 className="text-2xl font-bold mb-4 text-white text-center">Full Implementation</h3>
+                <h3 className="text-xl lg:text-2xl font-bold mb-4 text-white text-center">Full Implementation</h3>
                 <ul className="space-y-3 mb-8">
                   <li className="flex items-center text-gray-300">
                     <CheckCircle className="w-5 h-5 text-cyan-400 mr-3 flex-shrink-0" />
@@ -623,14 +623,14 @@ export default function WhyUs() {
               </div>
 
               {/* Enterprise Package */}
-              <div className="bg-gradient-to-b from-gray-900 to-black border border-gray-700 p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 hover:border-purple-500/50 group">
+              <div className="bg-gradient-to-b from-gray-900 to-black border border-gray-700 p-6 lg:p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 hover:border-purple-500/50 group">
                 <div className="text-center mb-6">
-                  <div className="text-lg font-semibold text-gray-400 mb-2">ENTERPRISE</div>
-                  <div className="text-4xl font-bold text-white mb-2">$15,000+</div>
-                  <div className="text-gray-400">Custom pricing</div>
+                  <div className="text-sm lg:text-lg font-semibold text-gray-400 mb-2">ENTERPRISE</div>
+                  <div className="text-3xl lg:text-4xl font-bold text-white mb-2">$15,000+</div>
+                  <div className="text-sm text-gray-400">Custom pricing</div>
                 </div>
                 
-                <h3 className="text-2xl font-bold mb-4 text-white text-center">Custom Deployment</h3>
+                <h3 className="text-xl lg:text-2xl font-bold mb-4 text-white text-center">Custom Deployment</h3>
                 <ul className="space-y-3 mb-8">
                   <li className="flex items-center text-gray-300">
                     <CheckCircle className="w-5 h-5 text-purple-400 mr-3 flex-shrink-0" />
@@ -667,54 +667,54 @@ export default function WhyUs() {
         <section className="py-20 bg-gray-900/50">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-16">
-              <h2 className="text-4xl font-bold text-white mb-4">
+              <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-4 px-2">
                 Our Proven 4-Step AI Implementation Process
               </h2>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              <p className="text-lg sm:text-xl text-gray-300 max-w-3xl mx-auto px-4">
                 A systematic approach that eliminates guesswork and delivers measurable results in 90 days.
               </p>
             </div>
 
-            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8">
               {/* Step 1 */}
-              <div className="text-center">
-                <div className="w-16 h-16 bg-gradient-to-br from-cyan-500 to-blue-500 rounded-full flex items-center justify-center mx-auto mb-6 text-white font-bold text-xl">
+              <div className="text-center px-4">
+                <div className="w-14 h-14 lg:w-16 lg:h-16 bg-gradient-to-br from-cyan-500 to-blue-500 rounded-full flex items-center justify-center mx-auto mb-4 lg:mb-6 text-white font-bold text-lg lg:text-xl">
                   1
                 </div>
-                <h3 className="text-xl font-bold text-white mb-3">Discovery & Audit</h3>
+                <h3 className="text-lg lg:text-xl font-bold text-white mb-3">Discovery & Audit</h3>
                 <p className="text-gray-400 text-sm leading-relaxed">
                   Analyze your current processes, identify inefficiencies, and map AI opportunities to your business goals.
                 </p>
               </div>
 
               {/* Step 2 */}
-              <div className="text-center">
-                <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-purple-500 rounded-full flex items-center justify-center mx-auto mb-6 text-white font-bold text-xl">
+              <div className="text-center px-4">
+                <div className="w-14 h-14 lg:w-16 lg:h-16 bg-gradient-to-br from-blue-500 to-purple-500 rounded-full flex items-center justify-center mx-auto mb-4 lg:mb-6 text-white font-bold text-lg lg:text-xl">
                   2
                 </div>
-                <h3 className="text-xl font-bold text-white mb-3">Custom Strategy</h3>
+                <h3 className="text-lg lg:text-xl font-bold text-white mb-3">Custom Strategy</h3>
                 <p className="text-gray-400 text-sm leading-relaxed">
                   Create your personalized 90-day AI roadmap with specific tools, timelines, and success metrics.
                 </p>
               </div>
 
               {/* Step 3 */}
-              <div className="text-center">
-                <div className="w-16 h-16 bg-gradient-to-br from-purple-500 to-pink-500 rounded-full flex items-center justify-center mx-auto mb-6 text-white font-bold text-xl">
+              <div className="text-center px-4">
+                <div className="w-14 h-14 lg:w-16 lg:h-16 bg-gradient-to-br from-purple-500 to-pink-500 rounded-full flex items-center justify-center mx-auto mb-4 lg:mb-6 text-white font-bold text-lg lg:text-xl">
                   3
                 </div>
-                <h3 className="text-xl font-bold text-white mb-3">Implementation</h3>
+                <h3 className="text-lg lg:text-xl font-bold text-white mb-3">Implementation</h3>
                 <p className="text-gray-400 text-sm leading-relaxed">
                   Deploy and integrate AI tools with your existing systems, including team training and workflow optimization.
                 </p>
               </div>
 
               {/* Step 4 */}
-              <div className="text-center">
-                <div className="w-16 h-16 bg-gradient-to-br from-pink-500 to-cyan-500 rounded-full flex items-center justify-center mx-auto mb-6 text-white font-bold text-xl">
+              <div className="text-center px-4">
+                <div className="w-14 h-14 lg:w-16 lg:h-16 bg-gradient-to-br from-pink-500 to-cyan-500 rounded-full flex items-center justify-center mx-auto mb-4 lg:mb-6 text-white font-bold text-lg lg:text-xl">
                   4
                 </div>
-                <h3 className="text-xl font-bold text-white mb-3">Optimize & Scale</h3>
+                <h3 className="text-lg lg:text-xl font-bold text-white mb-3">Optimize & Scale</h3>
                 <p className="text-gray-400 text-sm leading-relaxed">
                   Monitor performance, iterate on strategies, and scale successful implementations across your organization.
                 </p>
