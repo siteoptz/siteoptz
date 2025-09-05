@@ -186,9 +186,9 @@ class SitemapGenerator {
       let toolPagesAdded = 0;
       for (const tool of toolData) {
         if (tool.slug) {
-          this.addUrl(`/tools/${tool.slug}`, 0.8, 'weekly', tool.last_updated || tool.updated_at, 'tools');
+          // Only add reviews URLs since /tools/ URLs redirect to /reviews/
           this.addUrl(`/reviews/${tool.slug}`, 0.8, 'weekly', tool.last_updated || tool.updated_at, 'tools');
-          toolPagesAdded += 2;
+          toolPagesAdded += 1;
         }
       }
 
