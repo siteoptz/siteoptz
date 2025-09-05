@@ -540,10 +540,13 @@ export default function ContentStudioReviewPage() {
           <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
             <div className="bg-gradient-to-r from-blue-900/20 to-purple-900/20 border border-gray-800 rounded-2xl p-12">
               <h2 className="text-4xl font-bold text-white mb-6">
-                Ready to Get Started with ContentStudio?
+                Work Directly With Experts Who've Helped Businesses Scale With AI
               </h2>
-              <p className="text-xl text-gray-300 mb-8">
-                Join thousands of content marketers using ContentStudio to automate content curation and streamline social publishing.
+              <p className="text-xl text-gray-300 mb-4">
+                Not Another Demo. A Real Strategy Session For Your Business.
+              </p>
+              <p className="text-lg text-gray-400 mb-8">
+                Get Your Custom AI Roadmap in 30 Minutes
               </p>
               <div className="flex justify-center">
                 <a

@@ -472,12 +472,14 @@ export default function DivedeckAipoweredDeckBuilderReviewPage() {
 
         {/* Ready to Get Started CTA */}
         <section className="py-20 relative z-10">
-          <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8 bg-black border border-gray-800 rounded-2xl p-12">
-            <h2 className="text-4xl font-bold text-white mb-6">
-              Ready to Get Started with DiveDeck - AI-Powered Deck Builder?
+          <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8 bg-black border border-gray-800 rounded-2xl p-12">            <h2 className="text-4xl font-bold text-white mb-6">
+              Work Directly With Experts Who've Helped Businesses Scale With AI
             </h2>
-            <p className="text-xl text-gray-300 mb-8">
-              Join users leveraging DiveDeck - AI-Powered Deck Builder to enhance their productivity workflows.
+            <p className="text-xl text-gray-300 mb-4">
+              Not Another Demo. A Real Strategy Session For Your Business.
+            </p>
+            <p className="text-lg text-gray-400 mb-8">
+              Get Your Custom AI Roadmap in 30 Minutes
             </p>
             <div className="flex justify-center">
               <a
