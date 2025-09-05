@@ -106,8 +106,6 @@ const Header: React.FC = () => {
     },
     { name: 'Pricing Calculator', href: '/pricing', current: router.pathname === '/pricing', hasDropdown: false },
     { name: 'Why Us', href: '/why-us', current: router.pathname === '/why-us', hasDropdown: false },
-    { name: 'Blog', href: '/blog', current: router.pathname.startsWith('/blog'), hasDropdown: false },
-    { name: 'Data Room', href: '/data-room', current: router.pathname === '/data-room', hasDropdown: false },
     { name: 'Contact', href: '/contact', current: router.pathname === '/contact', hasDropdown: false },
   ];
 
@@ -365,24 +363,6 @@ const Header: React.FC = () => {
                 transition: 'all 0.2s ease',
                 display: 'block'
               }}>Pricing</Link>
-              <Link href="/blog" onClick={closeMenu} style={{ 
-                color: 'white', 
-                textDecoration: 'none', 
-                fontSize: '18px', 
-                padding: '16px 0', 
-                borderBottom: '1px solid rgba(255,255,255,0.1)',
-                transition: 'all 0.2s ease',
-                display: 'block'
-              }}>Blog</Link>
-              <Link href="/data-room" onClick={closeMenu} style={{ 
-                color: 'white', 
-                textDecoration: 'none', 
-                fontSize: '18px', 
-                padding: '16px 0', 
-                borderBottom: '1px solid rgba(255,255,255,0.1)',
-                transition: 'all 0.2s ease',
-                display: 'block'
-              }}>Data Room</Link>
               <Link href="/contact" onClick={closeMenu} style={{ 
                 color: 'white', 
                 textDecoration: 'none', 
