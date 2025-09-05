@@ -481,7 +481,7 @@ export default function CategoryPage({ category, tools, content }: CategoryPageP
 
 export const getStaticPaths: GetStaticPaths = async () => {
   const paths = toolCategories
-    .filter(category => category !== 'SEO & Optimization') // Exclude SEO & Optimization as it has its own page
+    .filter(category => category !== 'SEO & Optimization' && category !== 'Paid Search & PPC') // Exclude categories with custom pages
     .map(category => ({
       params: { 
         category: category.toLowerCase().replace(/[^a-z0-9]+/g, '-')
