@@ -9,6 +9,7 @@ import { ArrowLeft, ExternalLink, Star, Check, X } from 'lucide-react';
 import fs from 'fs';
 import path from 'path';
 import Link from 'next/link';
+import ToolLogo from '../../components/ToolLogo';
 
 interface Tool {
   id: string;
@@ -126,9 +127,12 @@ export default function ToolPage({ tool, relatedTools, faqs, allTools }: ToolPag
             <div className="grid md:grid-cols-2 gap-8 items-center">
               <div>
                 <div className="flex items-center gap-4 mb-6">
-                  {tool.logo && (
-                    <img src={tool.logo} alt={tool.name} className="w-20 h-20 bg-white rounded-xl p-2" />
-                  )}
+                  <ToolLogo 
+                    toolName={tool.name}
+                    logoUrl={tool.logo}
+                    size="xl"
+                    className="bg-white rounded-xl p-2"
+                  />
                   <div>
                     <h1 className="text-4xl font-bold">{tool.name}</h1>
                     <p className="text-blue-100">by {tool.overview.developer}</p>

@@ -1,5 +1,6 @@
 import React, { useState, useMemo } from 'react';
 import { ChevronUp, ChevronDown, Check, X, Star, Filter, Search } from 'lucide-react';
+import ToolLogo from './ToolLogo';
 
 const ComparisonTable = ({ tools = [], maxSelection = 3, onToolSelect }) => {
   const [selectedTools, setSelectedTools] = useState([]);
@@ -185,13 +186,11 @@ const ComparisonTable = ({ tools = [], maxSelection = 3, onToolSelect }) => {
                 <td className="px-6 py-4 whitespace-nowrap">
                   <div className="flex items-center">
                     <div className="flex-shrink-0 h-10 w-10">
-                      <img 
-                        className="h-10 w-10 rounded-lg object-cover" 
-                        src={tool.logo_url} 
-                        alt={`${tool.tool_name} logo`}
-                        onError={(e) => {
-                          e.target.src = '/images/placeholder-logo.png';
-                        }}
+                      <ToolLogo 
+                        toolName={tool.tool_name}
+                        logoUrl={tool.logo_url}
+                        size="sm"
+                        className="rounded-lg"
                       />
                     </div>
                     <div className="ml-4">
