@@ -324,47 +324,7 @@ const redirects404Fix = [
     permanent: true,
   },
   
-  // Webinar/Resource URLs that don't exist
-  {
-    source: '/webinars/download/ai-analytics-toolkit',
-    destination: '/resources',
-    permanent: true,
-  },
-  {
-    source: '/webinars/download/ai-analytics-toolkit/',
-    destination: '/resources',
-    permanent: true,
-  },
-  {
-    source: '/webinars/download/no-code-ai-resources',
-    destination: '/resources',
-    permanent: true,
-  },
-  {
-    source: '/webinars/download/no-code-ai-resources/',
-    destination: '/resources',
-    permanent: true,
-  },
-  {
-    source: '/webinars/download/ai-compliance-framework',
-    destination: '/resources',
-    permanent: true,
-  },
-  {
-    source: '/webinars/download/ai-compliance-framework/',
-    destination: '/resources',
-    permanent: true,
-  },
-  {
-    source: '/webinars/download/ai-content-marketing-resources',
-    destination: '/resources',
-    permanent: true,
-  },
-  {
-    source: '/webinars/download/ai-content-marketing-resources/',
-    destination: '/resources',
-    permanent: true,
-  },
+  // Webinar download pages - removed redirects as pages now exist
   {
     source: '/webinars/register/:path*',
     destination: '/webinars',
@@ -392,28 +352,8 @@ const redirects404Fix = [
     destination: '/case-studies',
     permanent: true,
   },
-  {
-    source: '/case-studies/hr-ai-success',
-    destination: '/case-studies',
-    permanent: true,
-  },
-  {
-    source: '/case-studies/hr-ai-success/',
-    destination: '/case-studies',
-    permanent: true,
-  },
-  {
-    source: '/case-studies/:path*',
-    destination: '/case-studies',
-    permanent: true,
-  },
   
-  // Resources redirects
-  {
-    source: '/resources/:path*',
-    destination: '/resources',
-    permanent: true,
-  },
+  // Resources redirects - removed wildcards to allow specific resource pages
   
   // Tools with www subdomain
   {
@@ -549,12 +489,7 @@ const redirects404Fix = [
     permanent: true,
   },
   
-  // Reports redirect
-  {
-    source: '/reports/:path*',
-    destination: '/resources',
-    permanent: true,
-  },
+  // Reports redirect - removed wildcards to allow specific report pages
   
   // Cookies page
   {
