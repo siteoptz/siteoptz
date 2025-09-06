@@ -143,7 +143,7 @@ export default function AiComplianceFrameworkDownload() {
               </div>
 
               <div className="bg-black border border-gray-800 rounded-xl p-6">
-                <h3 className="text-xl font-bold text-white mb-4">What You'll Gain</h3>
+                <h3 className="text-xl font-bold text-white mb-4">What You&apos;ll Gain</h3>
                 <ul className="space-y-3">
                   <li className="flex items-start">
                     <CheckCircle className="w-4 h-4 text-green-400 mr-3 mt-0.5 flex-shrink-0" />

@@ -1,49 +1,37 @@
 const fs = require('fs');
 const path = require('path');
-const glob = require('glob');
 
-const componentsDir = 'seo-optimization/production-components';
+// Files that need apostrophe fixes
+const filesToFix = [
+  'pages/resources/ai-compliance-checklist.tsx',
+  'pages/resources/ai-customer-service-guide.tsx', 
+  'pages/resources/bias-free-hiring.tsx',
+  'pages/resources/data-driven-marketing.tsx',
+  'pages/resources/saas-optimization-guide.tsx',
+  'pages/webinars/download/ai-analytics-toolkit.tsx',
+  'pages/webinars/download/ai-compliance-framework.tsx',
+  'pages/webinars/download/ai-content-marketing-resources.tsx',
+  'pages/webinars/download/no-code-ai-resources.tsx'
+];
 
-function fixApostrophesInFile(filePath) {
-  try {
+console.log('Fixing unescaped apostrophes in React files...');
+
+filesToFix.forEach(filePath => {
+  if (fs.existsSync(filePath)) {
     let content = fs.readFileSync(filePath, 'utf8');
-    let updated = false;
     
-    // Fix apostrophes in the CTA headline
-    if (content.includes("Work Directly With Experts Who've Helped Businesses Scale With AI")) {
-      content = content.replace(/Work Directly With Experts Who've Helped Businesses Scale With AI/g, "Work Directly With Experts Who&apos;ve Helped Businesses Scale With AI");
-      updated = true;
-    }
+    // Fix specific patterns with apostrophes
+    content = content.replace(/What You'll Learn/g, "What You&apos;ll Learn");
+    content = content.replace(/What's Inside/g, "What&apos;s Inside");
+    content = content.replace(/You'll Gain/g, "You&apos;ll Gain");
+    content = content.replace(/What You'll Get/g, "What You&apos;ll Get");
     
-    if (updated) {
-      fs.writeFileSync(filePath, content, 'utf8');
-      console.log(`✅ Fixed apostrophes in ${path.basename(filePath)}`);
-      return true;
-    }
-    
-    return false;
-  } catch (error) {
-    console.error(`❌ Error fixing ${filePath}:`, error.message);
-    return false;
-  }
-}
-
-// Find all review page files
-const pattern = path.join(componentsDir, '*ReviewPage.tsx');
-const files = glob.sync(pattern);
-
-console.log(`Found ${files.length} review page components to check for apostrophe fixes...`);
-
-let fixedCount = 0;
-
-files.forEach(filePath => {
-  if (fixApostrophesInFile(filePath)) {
-    fixedCount++;
+    fs.writeFileSync(filePath, content);
+    console.log(`Fixed: ${filePath}`);
+  } else {
+    console.log(`File not found: ${filePath}`);
   }
 });
 
-console.log(`\n🎉 Fixed apostrophes in ${fixedCount} files`);
-
-if (fixedCount > 0) {
-  console.log('\n🔧 Next step: Run npm run build to verify fixes');
-}
+console.log('Finished fixing apostrophes\!');
+EOF < /dev/null
