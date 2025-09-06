@@ -36,6 +36,9 @@ class SitemapGenerator {
       // Add dynamic tool pages to tools sitemap
       await this.addToolPages();
       
+      // Add ROI calculator pages to tools sitemap
+      this.addROICalculatorPages();
+      
       // Add comparison pages to comparisons sitemap
       await this.addComparisonPages();
       
@@ -183,16 +186,34 @@ class SitemapGenerator {
 
       const toolData = JSON.parse(fs.readFileSync(toolDataPath, 'utf8'));
       
+      // Load slug redirects to avoid adding 404 URLs
+      let slugRedirects = {};
+      try {
+        const redirectPath = path.join(process.cwd(), 'scripts', 'slug-redirects.json');
+        if (fs.existsSync(redirectPath)) {
+          slugRedirects = JSON.parse(fs.readFileSync(redirectPath, 'utf8'));
+        }
+      } catch (error) {
+        console.warn('⚠️  Could not load slug redirects');
+      }
+      
       let toolPagesAdded = 0;
+      const validSlugs = new Set();
+      
       for (const tool of toolData) {
         if (tool.slug) {
           // Only add reviews URLs since /tools/ URLs redirect to /reviews/
           this.addUrl(`/reviews/${tool.slug}`, 0.8, 'weekly', tool.last_updated || tool.updated_at, 'tools');
+          validSlugs.add(tool.slug);
           toolPagesAdded += 1;
         }
       }
 
+      // Don't add URLs for redirected slugs that don't exist
       console.log(`✅ Added ${toolPagesAdded} tool and review pages`);
+      if (Object.keys(slugRedirects).length > 0) {
+        console.log(`📝 Note: ${Object.keys(slugRedirects).length} slug redirects identified for cleanup`);
+      }
       
     } catch (error) {
       console.warn('⚠️  Error reading tool data:', error.message);
@@ -274,6 +295,30 @@ class SitemapGenerator {
       default:
         this.mainUrls.push(url);
     }
+  }
+
+  addROICalculatorPages() {
+    const roiCalculators = [
+      'ai-roi-calculator',
+      'marketing-roi-calculator', 
+      'chatbot-roi-calculator',
+      'content-roi-calculator',
+      'sales-ai-roi',
+      'healthcare-ai-roi',
+      'manufacturing-roi-calculator',
+      'recruitment-roi-calculator',
+      'security-roi-calculator',
+      'no-code-ai-roi',
+      'enterprise-ai-calculator',
+      'conversion-roi-calculator',
+      'ai-cost-calculator'
+    ];
+
+    roiCalculators.forEach(calculator => {
+      this.addUrl(`/tools/${calculator}`, 0.7, 'monthly', null, 'tools');
+    });
+
+    console.log(`✅ Added ${roiCalculators.length} ROI calculator pages`);
   }
 
   generateXML(urls) {

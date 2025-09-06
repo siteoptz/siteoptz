@@ -1,0 +1,298 @@
+{
+  "missingTools": [
+    {
+      "url": "https://www.siteoptz.ai/tools/meet-geek",
+      "slug": "meet-geek"
+    }
+  ],
+  "missingCategories": [
+    {
+      "url": "https://www.siteoptz.ai/categories/ai-website-builder",
+      "category": "ai website builder",
+      "categoryTitleCase": "Ai Website Builder"
+    },
+    {
+      "url": "https://www.siteoptz.ai/categories/ai-translator",
+      "category": "ai translator",
+      "categoryTitleCase": "Ai Translator"
+    },
+    {
+      "url": "https://www.siteoptz.ai/categories/writing",
+      "category": "writing",
+      "categoryTitleCase": "Writing"
+    },
+    {
+      "url": "https://www.siteoptz.ai/categories/ai-for-business",
+      "category": "ai for business",
+      "categoryTitleCase": "Ai For Business"
+    },
+    {
+      "url": "https://www.siteoptz.ai/categories/health-ai",
+      "category": "health ai",
+      "categoryTitleCase": "Health Ai"
+    },
+    {
+      "url": "https://www.siteoptz.ai/categories/ai-education",
+      "category": "ai education",
+      "categoryTitleCase": "Ai Education"
+    },
+    {
+      "url": "https://www.siteoptz.ai/categories/voice-ai",
+      "category": "voice ai",
+      "categoryTitleCase": "Voice Ai"
+    },
+    {
+      "url": "https://www.siteoptz.ai/categories/finance-ai",
+      "category": "finance ai",
+      "categoryTitleCase": "Finance Ai"
+    },
+    {
+      "url": "https://www.siteoptz.ai/categories/e-commerce",
+      "category": "e commerce",
+      "categoryTitleCase": "E Commerce"
+    }
+  ],
+  "missingROICalculators": [
+    {
+      "url": "https://www.siteoptz.ai/tools/content-roi-calculator",
+      "path": "/tools/content-roi-calculator"
+    },
+    {
+      "url": "https://www.siteoptz.ai/tools/manufacturing-roi-calculator",
+      "path": "/tools/manufacturing-roi-calculator"
+    },
+    {
+      "url": "https://www.siteoptz.ai/tools/healthcare-ai-roi",
+      "path": "/tools/healthcare-ai-roi"
+    },
+    {
+      "url": "https://www.siteoptz.ai/tools/sales-ai-roi",
+      "path": "/tools/sales-ai-roi"
+    },
+    {
+      "url": "https://www.siteoptz.ai/tools/chatbot-roi-calculator",
+      "path": "/tools/chatbot-roi-calculator"
+    },
+    {
+      "url": "https://www.siteoptz.ai/tools/no-code-ai-roi",
+      "path": "/tools/no-code-ai-roi"
+    },
+    {
+      "url": "https://www.siteoptz.ai/tools/recruitment-roi-calculator",
+      "path": "/tools/recruitment-roi-calculator"
+    },
+    {
+      "url": "https://www.siteoptz.ai/tools/enterprise-ai-calculator",
+      "path": "/tools/enterprise-ai-calculator"
+    },
+    {
+      "url": "https://www.siteoptz.ai/tools/ai-roi-calculator",
+      "path": "/tools/ai-roi-calculator"
+    },
+    {
+      "url": "https://www.siteoptz.ai/tools/marketing-roi-calculator",
+      "path": "/tools/marketing-roi-calculator"
+    },
+    {
+      "url": "https://www.siteoptz.ai/tools/conversion-roi-calculator",
+      "path": "/tools/conversion-roi-calculator"
+    },
+    {
+      "url": "https://www.siteoptz.ai/tools/ai-cost-calculator",
+      "path": "/tools/ai-cost-calculator"
+    },
+    {
+      "url": "https://www.siteoptz.ai/tools/security-roi-calculator",
+      "path": "/tools/security-roi-calculator"
+    }
+  ],
+  "wrongSlugs": [
+    {
+      "url": "https://www.siteoptz.ai/reviews/planable",
+      "slug": "planable",
+      "similar": []
+    },
+    {
+      "url": "https://www.siteoptz.ai/reviews/gpt-4",
+      "slug": "gpt-4",
+      "similar": [
+        "anthropic-chatgpt-alternative",
+        "chatgpt",
+        "chatgpt-enterprise",
+        "openai-gpt4",
+        "taxgpt",
+        "topical-authority-for-seo-gpt-generator",
+        "translate-gpt-for-convenient-translation",
+        "video-gpt-ai-video-maker",
+        "ai-actions-by-zapier-gpt"
+      ]
+    },
+    {
+      "url": "https://www.siteoptz.ai/reviews/meet-geek",
+      "slug": "meet-geek",
+      "similar": []
+    },
+    {
+      "url": "https://www.siteoptz.ai/reviews/text-to-video-stunning-video-creation",
+      "slug": "text-to-video-stunning-video-creation",
+      "similar": [
+        "speechki-texttospeech-ai",
+        "tellersai-automatic-texttovideo-tool",
+        "texttovideo-stunning-video-creation",
+        "unreal-speech-costeffective-texttospeech-api",
+        "video-gpt-ai-video-maker",
+        "video-generator-meta-ai"
+      ]
+    },
+    {
+      "url": "https://www.siteoptz.ai/reviews/convertfiles-ai-free-image-file-converter",
+      "slug": "convertfiles-ai-free-image-file-converter",
+      "similar": [
+        "ai-actions-by-zapier-gpt",
+        "convertfilesai-free-image-file-converter"
+      ]
+    },
+    {
+      "url": "https://www.siteoptz.ai/reviews/speechki-text-to-speech-ai",
+      "slug": "speechki-text-to-speech-ai",
+      "similar": [
+        "speechki-texttospeech-ai",
+        "ai-actions-by-zapier-gpt"
+      ]
+    },
+    {
+      "url": "https://www.siteoptz.ai/reviews/webbotify-ai-powered-chatbot-platform",
+      "slug": "webbotify-ai-powered-chatbot-platform",
+      "similar": [
+        "power-bi",
+        "webbotify-aipowered-chatbot-platform",
+        "ai-actions-by-zapier-gpt"
+      ]
+    },
+    {
+      "url": "https://www.siteoptz.ai/reviews/replicate",
+      "slug": "replicate",
+      "similar": [
+        "replica-studios",
+        "replicate-ai"
+      ]
+    },
+    {
+      "url": "https://www.siteoptz.ai/reviews/divedeck-ai-powered-deck-builder",
+      "slug": "divedeck-ai-powered-deck-builder",
+      "similar": [
+        "power-bi",
+        "ai-actions-by-zapier-gpt",
+        "divedeck-aipowered-deck-builder"
+      ]
+    },
+    {
+      "url": "https://www.siteoptz.ai/reviews/explee",
+      "slug": "explee",
+      "similar": [
+        "explee-ai"
+      ]
+    },
+    {
+      "url": "https://www.siteoptz.ai/reviews/gemini-2-5",
+      "slug": "gemini-2-5",
+      "similar": [
+        "gemini",
+        "gemini-25",
+        "google-gemini"
+      ]
+    },
+    {
+      "url": "https://www.siteoptz.ai/reviews/tellers-ai-automatic-text-to-video-tool",
+      "slug": "tellers-ai-automatic-text-to-video-tool",
+      "similar": [
+        "tellersai-automatic-texttovideo-tool",
+        "video-gpt-ai-video-maker",
+        "video-generator-meta-ai",
+        "ai-actions-by-zapier-gpt"
+      ]
+    },
+    {
+      "url": "https://www.siteoptz.ai/reviews/otter-ai",
+      "slug": "otter-ai",
+      "similar": [
+        "otterai",
+        "ai-actions-by-zapier-gpt"
+      ]
+    },
+    {
+      "url": "https://www.siteoptz.ai/reviews/videotube",
+      "slug": "videotube",
+      "similar": [
+        "videotube-ai",
+        "video-gpt-ai-video-maker",
+        "video-generator-meta-ai"
+      ]
+    },
+    {
+      "url": "https://www.siteoptz.ai/reviews/midjourney-v6",
+      "slug": "midjourney-v6",
+      "similar": [
+        "midjourney"
+      ]
+    },
+    {
+      "url": "https://www.siteoptz.ai/reviews/universe-no-code-custom-website-builder",
+      "slug": "universe-no-code-custom-website-builder",
+      "similar": [
+        "se-ranking",
+        "universe-nocode-custom-website-builder",
+        "website-generator-meta-ai"
+      ]
+    },
+    {
+      "url": "https://www.siteoptz.ai/reviews/stable-diffusion-web",
+      "slug": "stable-diffusion-web",
+      "similar": [
+        "stable-diffusion",
+        "stability-ai-stable-diffusion"
+      ]
+    },
+    {
+      "url": "https://www.siteoptz.ai/reviews/unreal-speech-cost-effective-text-to-speech-api",
+      "slug": "unreal-speech-cost-effective-text-to-speech-api",
+      "similar": [
+        "unreal-speech-costeffective-texttospeech-api"
+      ]
+    },
+    {
+      "url": "https://www.siteoptz.ai/reviews/character-ai",
+      "slug": "character-ai",
+      "similar": [
+        "ai-actions-by-zapier-gpt"
+      ]
+    },
+    {
+      "url": "https://www.siteoptz.ai/reviews/kleap",
+      "slug": "kleap",
+      "similar": [
+        "kleap-ai"
+      ]
+    },
+    {
+      "url": "https://www.siteoptz.ai/reviews/cohere",
+      "slug": "cohere",
+      "similar": [
+        "cohere-ai"
+      ]
+    },
+    {
+      "url": "https://www.siteoptz.ai/reviews/hugging-face",
+      "slug": "hugging-face",
+      "similar": [
+        "huggingface-transformers"
+      ]
+    }
+  ],
+  "missingComparisons": [
+    {
+      "url": "https://www.siteoptz.ai/compare/contentstudio/vs/coschedule",
+      "path": "/compare/contentstudio/vs/coschedule"
+    }
+  ]
+}
