@@ -128,7 +128,7 @@ export default function AdespressoReviewPage({ tool }: AdespressoReviewPageProps
     <>
       <Head>
         {/* Primary SEO Tags */}
-        <title>AdEspresso Review:  | SiteOptz</title>
+        <title>AdEspresso Review: AI PPC Management Tool | SiteOptz</title>
         <meta name="description" content="adespresso review. Compare AdEspresso  features, pricing & alternatives. Expert analysis & user guide for 2025. Get started today!" />
         <meta name="keywords" content="adespresso review, adespresso pricing, adespresso features, adespresso vs competitors, adespresso alternatives" />
         <meta name="author" content="SiteOptz" />
@@ -139,7 +139,7 @@ export default function AdespressoReviewPage({ tool }: AdespressoReviewPageProps
         
         {/* Open Graph Meta Tags */}
         <meta property="og:type" content="article" />
-        <meta property="og:title" content="AdEspresso Review:  | SiteOptz" />
+        <meta property="og:title" content="AdEspresso Review: AI PPC Management Tool | SiteOptz" />
         <meta property="og:description" content="adespresso review. Compare AdEspresso  features, pricing & alternatives. Expert analysis & user guide for 2025. Get started today!" />
         <meta property="og:url" content="https://siteoptz.ai/reviews/adespresso" />
         <meta property="og:site_name" content="SiteOptz" />
@@ -150,7 +150,7 @@ export default function AdespressoReviewPage({ tool }: AdespressoReviewPageProps
         
         {/* Twitter Card Tags */}
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="AdEspresso Review:  | SiteOptz" />
+        <meta name="twitter:title" content="AdEspresso Review: AI PPC Management Tool | SiteOptz" />
         <meta name="twitter:description" content="adespresso review. Compare AdEspresso  features, pricing & alternatives. Expert analysis & user guide for 2025. Get started today!" />
         <meta name="twitter:image" content="https://siteoptz.ai/og-image.png" />
         <meta name="twitter:creator" content="@siteoptz" />

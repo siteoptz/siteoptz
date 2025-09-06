@@ -128,7 +128,7 @@ export default function PlayHtReviewPage({ tool }: PlayHtReviewPageProps) {
     <>
       <Head>
         {/* Primary SEO Tags */}
-        <title>Play.ht Review:  | SiteOptz</title>
+        <title>Play.ht Review: AI Voice Technology | SiteOptz</title>
         <meta name="description" content="play.ht review. Compare Play.ht  features, pricing & alternatives. Expert analysis & user guide for 2025. Get started today!" />
         <meta name="keywords" content="play.ht review, play.ht pricing, play.ht features, play.ht vs competitors, play.ht alternatives" />
         <meta name="author" content="SiteOptz" />
@@ -139,7 +139,7 @@ export default function PlayHtReviewPage({ tool }: PlayHtReviewPageProps) {
         
         {/* Open Graph Meta Tags */}
         <meta property="og:type" content="article" />
-        <meta property="og:title" content="Play.ht Review:  | SiteOptz" />
+        <meta property="og:title" content="Play.ht Review: AI Voice Technology | SiteOptz" />
         <meta property="og:description" content="play.ht review. Compare Play.ht  features, pricing & alternatives. Expert analysis & user guide for 2025. Get started today!" />
         <meta property="og:url" content="https://siteoptz.ai/reviews/play-ht" />
         <meta property="og:site_name" content="SiteOptz" />
@@ -150,7 +150,7 @@ export default function PlayHtReviewPage({ tool }: PlayHtReviewPageProps) {
         
         {/* Twitter Card Tags */}
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Play.ht Review:  | SiteOptz" />
+        <meta name="twitter:title" content="Play.ht Review: AI Voice Technology | SiteOptz" />
         <meta name="twitter:description" content="play.ht review. Compare Play.ht  features, pricing & alternatives. Expert analysis & user guide for 2025. Get started today!" />
         <meta name="twitter:image" content="https://siteoptz.ai/og-image.png" />
         <meta name="twitter:creator" content="@siteoptz" />

@@ -128,7 +128,7 @@ export default function Gemini25ReviewPage({ tool }: Gemini25ReviewPageProps) {
     <>
       <Head>
         {/* Primary SEO Tags */}
-        <title>Gemini 2.5 Review:  | SiteOptz</title>
+        <title>Gemini 2.5 Review: AI-Powered Solution | SiteOptz</title>
         <meta name="description" content="gemini 2.5 review. Compare Gemini 2.5  features, pricing & alternatives. Expert analysis & user guide for 2025. Get started today!" />
         <meta name="keywords" content="gemini 2.5 review, gemini 2.5 pricing, gemini 2.5 features, gemini 2.5 vs competitors, gemini 2.5 alternatives" />
         <meta name="author" content="SiteOptz" />
@@ -139,7 +139,7 @@ export default function Gemini25ReviewPage({ tool }: Gemini25ReviewPageProps) {
         
         {/* Open Graph Meta Tags */}
         <meta property="og:type" content="article" />
-        <meta property="og:title" content="Gemini 2.5 Review:  | SiteOptz" />
+        <meta property="og:title" content="Gemini 2.5 Review: AI-Powered Solution | SiteOptz" />
         <meta property="og:description" content="gemini 2.5 review. Compare Gemini 2.5  features, pricing & alternatives. Expert analysis & user guide for 2025. Get started today!" />
         <meta property="og:url" content="https://siteoptz.ai/reviews/gemini-25" />
         <meta property="og:site_name" content="SiteOptz" />
@@ -150,7 +150,7 @@ export default function Gemini25ReviewPage({ tool }: Gemini25ReviewPageProps) {
         
         {/* Twitter Card Tags */}
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Gemini 2.5 Review:  | SiteOptz" />
+        <meta name="twitter:title" content="Gemini 2.5 Review: AI-Powered Solution | SiteOptz" />
         <meta name="twitter:description" content="gemini 2.5 review. Compare Gemini 2.5  features, pricing & alternatives. Expert analysis & user guide for 2025. Get started today!" />
         <meta name="twitter:image" content="https://siteoptz.ai/og-image.png" />
         <meta name="twitter:creator" content="@siteoptz" />

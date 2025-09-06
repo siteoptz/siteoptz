@@ -128,7 +128,7 @@ export default function NyotaReviewPage({ tool }: NyotaReviewPageProps) {
     <>
       <Head>
         {/* Primary SEO Tags */}
-        <title>Nyota Review:  | SiteOptz</title>
+        <title>Nyota Review: AI Productivity Assistant | SiteOptz</title>
         <meta name="description" content="nyota review. Compare Nyota  features, pricing & alternatives. Expert analysis & user guide for 2025. Get started today!" />
         <meta name="keywords" content="nyota review, nyota pricing, nyota features, nyota vs competitors, nyota alternatives" />
         <meta name="author" content="SiteOptz" />
@@ -139,7 +139,7 @@ export default function NyotaReviewPage({ tool }: NyotaReviewPageProps) {
         
         {/* Open Graph Meta Tags */}
         <meta property="og:type" content="article" />
-        <meta property="og:title" content="Nyota Review:  | SiteOptz" />
+        <meta property="og:title" content="Nyota Review: AI Productivity Assistant | SiteOptz" />
         <meta property="og:description" content="nyota review. Compare Nyota  features, pricing & alternatives. Expert analysis & user guide for 2025. Get started today!" />
         <meta property="og:url" content="https://siteoptz.ai/reviews/nyota" />
         <meta property="og:site_name" content="SiteOptz" />
@@ -150,7 +150,7 @@ export default function NyotaReviewPage({ tool }: NyotaReviewPageProps) {
         
         {/* Twitter Card Tags */}
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Nyota Review:  | SiteOptz" />
+        <meta name="twitter:title" content="Nyota Review: AI Productivity Assistant | SiteOptz" />
         <meta name="twitter:description" content="nyota review. Compare Nyota  features, pricing & alternatives. Expert analysis & user guide for 2025. Get started today!" />
         <meta name="twitter:image" content="https://siteoptz.ai/og-image.png" />
         <meta name="twitter:creator" content="@siteoptz" />

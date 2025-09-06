@@ -128,7 +128,7 @@ export default function ChatgptReviewPage({ tool }: ChatgptReviewPageProps) {
     <>
       <Head>
         {/* Primary SEO Tags */}
-        <title>ChatGPT Review:  | SiteOptz</title>
+        <title>ChatGPT Review: AI Content Creation Platform | SiteOptz</title>
         <meta name="description" content="chatgpt review. Compare ChatGPT  features, pricing & alternatives. Expert analysis & user guide for 2025. Get started today!" />
         <meta name="keywords" content="chatgpt review, chatgpt pricing, chatgpt features, chatgpt vs competitors, chatgpt alternatives" />
         <meta name="author" content="SiteOptz" />
@@ -139,7 +139,7 @@ export default function ChatgptReviewPage({ tool }: ChatgptReviewPageProps) {
         
         {/* Open Graph Meta Tags */}
         <meta property="og:type" content="article" />
-        <meta property="og:title" content="ChatGPT Review:  | SiteOptz" />
+        <meta property="og:title" content="ChatGPT Review: AI Content Creation Platform | SiteOptz" />
         <meta property="og:description" content="chatgpt review. Compare ChatGPT  features, pricing & alternatives. Expert analysis & user guide for 2025. Get started today!" />
         <meta property="og:url" content="https://siteoptz.ai/reviews/chatgpt" />
         <meta property="og:site_name" content="SiteOptz" />
@@ -150,7 +150,7 @@ export default function ChatgptReviewPage({ tool }: ChatgptReviewPageProps) {
         
         {/* Twitter Card Tags */}
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="ChatGPT Review:  | SiteOptz" />
+        <meta name="twitter:title" content="ChatGPT Review: AI Content Creation Platform | SiteOptz" />
         <meta name="twitter:description" content="chatgpt review. Compare ChatGPT  features, pricing & alternatives. Expert analysis & user guide for 2025. Get started today!" />
         <meta name="twitter:image" content="https://siteoptz.ai/og-image.png" />
         <meta name="twitter:creator" content="@siteoptz" />

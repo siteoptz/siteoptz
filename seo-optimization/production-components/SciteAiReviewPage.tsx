@@ -128,7 +128,7 @@ export default function SciteAiReviewPage({ tool }: SciteAiReviewPageProps) {
     <>
       <Head>
         {/* Primary SEO Tags */}
-        <title>scite.ai Review:  | SiteOptz</title>
+        <title>scite.ai Review: AI Research Assistant | SiteOptz</title>
         <meta name="description" content="scite.ai review. Compare scite.ai  features, pricing & alternatives. Expert analysis & user guide for 2025. Get started today!" />
         <meta name="keywords" content="scite.ai review, scite.ai pricing, scite.ai features, scite.ai vs competitors, scite.ai alternatives" />
         <meta name="author" content="SiteOptz" />
@@ -139,7 +139,7 @@ export default function SciteAiReviewPage({ tool }: SciteAiReviewPageProps) {
         
         {/* Open Graph Meta Tags */}
         <meta property="og:type" content="article" />
-        <meta property="og:title" content="scite.ai Review:  | SiteOptz" />
+        <meta property="og:title" content="scite.ai Review: AI Research Assistant | SiteOptz" />
         <meta property="og:description" content="scite.ai review. Compare scite.ai  features, pricing & alternatives. Expert analysis & user guide for 2025. Get started today!" />
         <meta property="og:url" content="https://siteoptz.ai/reviews/scite-ai" />
         <meta property="og:site_name" content="SiteOptz" />
@@ -150,7 +150,7 @@ export default function SciteAiReviewPage({ tool }: SciteAiReviewPageProps) {
         
         {/* Twitter Card Tags */}
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="scite.ai Review:  | SiteOptz" />
+        <meta name="twitter:title" content="scite.ai Review: AI Research Assistant | SiteOptz" />
         <meta name="twitter:description" content="scite.ai review. Compare scite.ai  features, pricing & alternatives. Expert analysis & user guide for 2025. Get started today!" />
         <meta name="twitter:image" content="https://siteoptz.ai/og-image.png" />
         <meta name="twitter:creator" content="@siteoptz" />

@@ -128,7 +128,7 @@ export default function LeonardoAiReviewPage({ tool }: LeonardoAiReviewPageProps
     <>
       <Head>
         {/* Primary SEO Tags */}
-        <title>Leonardo.ai Review:  | SiteOptz</title>
+        <title>Leonardo.ai Review: AI Productivity Assistant | SiteOptz</title>
         <meta name="description" content="leonardo.ai review. Compare Leonardo.ai  features, pricing & alternatives. Expert analysis & user guide for 2025. Get started today!" />
         <meta name="keywords" content="leonardo.ai review, leonardo.ai pricing, leonardo.ai features, leonardo.ai vs competitors, leonardo.ai alternatives" />
         <meta name="author" content="SiteOptz" />
@@ -139,7 +139,7 @@ export default function LeonardoAiReviewPage({ tool }: LeonardoAiReviewPageProps
         
         {/* Open Graph Meta Tags */}
         <meta property="og:type" content="article" />
-        <meta property="og:title" content="Leonardo.ai Review:  | SiteOptz" />
+        <meta property="og:title" content="Leonardo.ai Review: AI Productivity Assistant | SiteOptz" />
         <meta property="og:description" content="leonardo.ai review. Compare Leonardo.ai  features, pricing & alternatives. Expert analysis & user guide for 2025. Get started today!" />
         <meta property="og:url" content="https://siteoptz.ai/reviews/leonardo-ai" />
         <meta property="og:site_name" content="SiteOptz" />
@@ -150,7 +150,7 @@ export default function LeonardoAiReviewPage({ tool }: LeonardoAiReviewPageProps
         
         {/* Twitter Card Tags */}
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Leonardo.ai Review:  | SiteOptz" />
+        <meta name="twitter:title" content="Leonardo.ai Review: AI Productivity Assistant | SiteOptz" />
         <meta name="twitter:description" content="leonardo.ai review. Compare Leonardo.ai  features, pricing & alternatives. Expert analysis & user guide for 2025. Get started today!" />
         <meta name="twitter:image" content="https://siteoptz.ai/og-image.png" />
         <meta name="twitter:creator" content="@siteoptz" />

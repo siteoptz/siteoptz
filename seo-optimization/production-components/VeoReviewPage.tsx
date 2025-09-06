@@ -128,7 +128,7 @@ export default function VeoReviewPage({ tool }: VeoReviewPageProps) {
     <>
       <Head>
         {/* Primary SEO Tags */}
-        <title>Veo Review:  | SiteOptz</title>
+        <title>Veo Review: AI Video Creation Tool | SiteOptz</title>
         <meta name="description" content="veo review. Compare Veo  features, pricing & alternatives. Expert analysis & user guide for 2025. Get started today!" />
         <meta name="keywords" content="veo review, veo pricing, veo features, veo vs competitors, veo alternatives" />
         <meta name="author" content="SiteOptz" />
@@ -139,7 +139,7 @@ export default function VeoReviewPage({ tool }: VeoReviewPageProps) {
         
         {/* Open Graph Meta Tags */}
         <meta property="og:type" content="article" />
-        <meta property="og:title" content="Veo Review:  | SiteOptz" />
+        <meta property="og:title" content="Veo Review: AI Video Creation Tool | SiteOptz" />
         <meta property="og:description" content="veo review. Compare Veo  features, pricing & alternatives. Expert analysis & user guide for 2025. Get started today!" />
         <meta property="og:url" content="https://siteoptz.ai/reviews/veo" />
         <meta property="og:site_name" content="SiteOptz" />
@@ -150,7 +150,7 @@ export default function VeoReviewPage({ tool }: VeoReviewPageProps) {
         
         {/* Twitter Card Tags */}
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Veo Review:  | SiteOptz" />
+        <meta name="twitter:title" content="Veo Review: AI Video Creation Tool | SiteOptz" />
         <meta name="twitter:description" content="veo review. Compare Veo  features, pricing & alternatives. Expert analysis & user guide for 2025. Get started today!" />
         <meta name="twitter:image" content="https://siteoptz.ai/og-image.png" />
         <meta name="twitter:creator" content="@siteoptz" />

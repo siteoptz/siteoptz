@@ -128,7 +128,7 @@ export default function MozProReviewPage({ tool }: MozProReviewPageProps) {
     <>
       <Head>
         {/* Primary SEO Tags */}
-        <title>Moz Pro Review:  | SiteOptz</title>
+        <title>Moz Pro Review: AI SEO Optimization Tool | SiteOptz</title>
         <meta name="description" content="moz pro review. Compare Moz Pro  features, pricing & alternatives. Expert analysis & user guide for 2025. Get started today!" />
         <meta name="keywords" content="moz pro review, moz pro pricing, moz pro features, moz pro vs competitors, moz pro alternatives" />
         <meta name="author" content="SiteOptz" />
@@ -139,7 +139,7 @@ export default function MozProReviewPage({ tool }: MozProReviewPageProps) {
         
         {/* Open Graph Meta Tags */}
         <meta property="og:type" content="article" />
-        <meta property="og:title" content="Moz Pro Review:  | SiteOptz" />
+        <meta property="og:title" content="Moz Pro Review: AI SEO Optimization Tool | SiteOptz" />
         <meta property="og:description" content="moz pro review. Compare Moz Pro  features, pricing & alternatives. Expert analysis & user guide for 2025. Get started today!" />
         <meta property="og:url" content="https://siteoptz.ai/reviews/moz-pro" />
         <meta property="og:site_name" content="SiteOptz" />
@@ -150,7 +150,7 @@ export default function MozProReviewPage({ tool }: MozProReviewPageProps) {
         
         {/* Twitter Card Tags */}
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Moz Pro Review:  | SiteOptz" />
+        <meta name="twitter:title" content="Moz Pro Review: AI SEO Optimization Tool | SiteOptz" />
         <meta name="twitter:description" content="moz pro review. Compare Moz Pro  features, pricing & alternatives. Expert analysis & user guide for 2025. Get started today!" />
         <meta name="twitter:image" content="https://siteoptz.ai/og-image.png" />
         <meta name="twitter:creator" content="@siteoptz" />

@@ -128,7 +128,7 @@ export default function ElevenlabsReviewPage({ tool }: ElevenlabsReviewPageProps
     <>
       <Head>
         {/* Primary SEO Tags */}
-        <title>ElevenLabs Review:  | SiteOptz</title>
+        <title>ElevenLabs Review: AI Voice Technology | SiteOptz</title>
         <meta name="description" content="elevenlabs review. Compare ElevenLabs  features, pricing & alternatives. Expert analysis & user guide for 2025. Get started today!" />
         <meta name="keywords" content="elevenlabs review, elevenlabs pricing, elevenlabs features, elevenlabs vs competitors, elevenlabs alternatives" />
         <meta name="author" content="SiteOptz" />
@@ -139,7 +139,7 @@ export default function ElevenlabsReviewPage({ tool }: ElevenlabsReviewPageProps
         
         {/* Open Graph Meta Tags */}
         <meta property="og:type" content="article" />
-        <meta property="og:title" content="ElevenLabs Review:  | SiteOptz" />
+        <meta property="og:title" content="ElevenLabs Review: AI Voice Technology | SiteOptz" />
         <meta property="og:description" content="elevenlabs review. Compare ElevenLabs  features, pricing & alternatives. Expert analysis & user guide for 2025. Get started today!" />
         <meta property="og:url" content="https://siteoptz.ai/reviews/elevenlabs" />
         <meta property="og:site_name" content="SiteOptz" />
@@ -150,7 +150,7 @@ export default function ElevenlabsReviewPage({ tool }: ElevenlabsReviewPageProps
         
         {/* Twitter Card Tags */}
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="ElevenLabs Review:  | SiteOptz" />
+        <meta name="twitter:title" content="ElevenLabs Review: AI Voice Technology | SiteOptz" />
         <meta name="twitter:description" content="elevenlabs review. Compare ElevenLabs  features, pricing & alternatives. Expert analysis & user guide for 2025. Get started today!" />
         <meta name="twitter:image" content="https://siteoptz.ai/og-image.png" />
         <meta name="twitter:creator" content="@siteoptz" />

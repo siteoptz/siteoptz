@@ -128,7 +128,7 @@ export default function BufferAiReviewPage({ tool }: BufferAiReviewPageProps) {
     <>
       <Head>
         {/* Primary SEO Tags */}
-        <title>Buffer AI Review:  | SiteOptz</title>
+        <title>Buffer AI Review: AI Social Media Management Tool | SiteOptz</title>
         <meta name="description" content="buffer ai review. Compare Buffer AI  features, pricing & alternatives. Expert analysis & user guide for 2025. Get started today!" />
         <meta name="keywords" content="buffer ai review, buffer ai pricing, buffer ai features, buffer ai vs competitors, buffer ai alternatives" />
         <meta name="author" content="SiteOptz" />
@@ -139,7 +139,7 @@ export default function BufferAiReviewPage({ tool }: BufferAiReviewPageProps) {
         
         {/* Open Graph Meta Tags */}
         <meta property="og:type" content="article" />
-        <meta property="og:title" content="Buffer AI Review:  | SiteOptz" />
+        <meta property="og:title" content="Buffer AI Review: AI Social Media Management Tool | SiteOptz" />
         <meta property="og:description" content="buffer ai review. Compare Buffer AI  features, pricing & alternatives. Expert analysis & user guide for 2025. Get started today!" />
         <meta property="og:url" content="https://siteoptz.ai/reviews/buffer-ai" />
         <meta property="og:site_name" content="SiteOptz" />
@@ -150,7 +150,7 @@ export default function BufferAiReviewPage({ tool }: BufferAiReviewPageProps) {
         
         {/* Twitter Card Tags */}
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Buffer AI Review:  | SiteOptz" />
+        <meta name="twitter:title" content="Buffer AI Review: AI Social Media Management Tool | SiteOptz" />
         <meta name="twitter:description" content="buffer ai review. Compare Buffer AI  features, pricing & alternatives. Expert analysis & user guide for 2025. Get started today!" />
         <meta name="twitter:image" content="https://siteoptz.ai/og-image.png" />
         <meta name="twitter:creator" content="@siteoptz" />

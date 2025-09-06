@@ -128,7 +128,7 @@ export default function ResearchPalReviewPage({ tool }: ResearchPalReviewPagePro
     <>
       <Head>
         {/* Primary SEO Tags */}
-        <title>Research Pal Review:  | SiteOptz</title>
+        <title>Research Pal Review: AI Research Assistant | SiteOptz</title>
         <meta name="description" content="research pal review. Compare Research Pal  features, pricing & alternatives. Expert analysis & user guide for 2025. Get started today!" />
         <meta name="keywords" content="research pal review, research pal pricing, research pal features, research pal vs competitors, research pal alternatives" />
         <meta name="author" content="SiteOptz" />
@@ -139,7 +139,7 @@ export default function ResearchPalReviewPage({ tool }: ResearchPalReviewPagePro
         
         {/* Open Graph Meta Tags */}
         <meta property="og:type" content="article" />
-        <meta property="og:title" content="Research Pal Review:  | SiteOptz" />
+        <meta property="og:title" content="Research Pal Review: AI Research Assistant | SiteOptz" />
         <meta property="og:description" content="research pal review. Compare Research Pal  features, pricing & alternatives. Expert analysis & user guide for 2025. Get started today!" />
         <meta property="og:url" content="https://siteoptz.ai/reviews/research-pal" />
         <meta property="og:site_name" content="SiteOptz" />
@@ -150,7 +150,7 @@ export default function ResearchPalReviewPage({ tool }: ResearchPalReviewPagePro
         
         {/* Twitter Card Tags */}
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Research Pal Review:  | SiteOptz" />
+        <meta name="twitter:title" content="Research Pal Review: AI Research Assistant | SiteOptz" />
         <meta name="twitter:description" content="research pal review. Compare Research Pal  features, pricing & alternatives. Expert analysis & user guide for 2025. Get started today!" />
         <meta name="twitter:image" content="https://siteoptz.ai/og-image.png" />
         <meta name="twitter:creator" content="@siteoptz" />

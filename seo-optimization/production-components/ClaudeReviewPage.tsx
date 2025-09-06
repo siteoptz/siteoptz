@@ -128,7 +128,7 @@ export default function ClaudeReviewPage({ tool }: ClaudeReviewPageProps) {
     <>
       <Head>
         {/* Primary SEO Tags */}
-        <title>Claude Review:  | SiteOptz</title>
+        <title>Claude Review: AI Content Creation Platform | SiteOptz</title>
         <meta name="description" content="claude review. Compare Claude  features, pricing & alternatives. Expert analysis & user guide for 2025. Get started today!" />
         <meta name="keywords" content="claude review, claude pricing, claude features, claude vs competitors, claude alternatives" />
         <meta name="author" content="SiteOptz" />
@@ -139,7 +139,7 @@ export default function ClaudeReviewPage({ tool }: ClaudeReviewPageProps) {
         
         {/* Open Graph Meta Tags */}
         <meta property="og:type" content="article" />
-        <meta property="og:title" content="Claude Review:  | SiteOptz" />
+        <meta property="og:title" content="Claude Review: AI Content Creation Platform | SiteOptz" />
         <meta property="og:description" content="claude review. Compare Claude  features, pricing & alternatives. Expert analysis & user guide for 2025. Get started today!" />
         <meta property="og:url" content="https://siteoptz.ai/reviews/claude" />
         <meta property="og:site_name" content="SiteOptz" />
@@ -150,7 +150,7 @@ export default function ClaudeReviewPage({ tool }: ClaudeReviewPageProps) {
         
         {/* Twitter Card Tags */}
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Claude Review:  | SiteOptz" />
+        <meta name="twitter:title" content="Claude Review: AI Content Creation Platform | SiteOptz" />
         <meta name="twitter:description" content="claude review. Compare Claude  features, pricing & alternatives. Expert analysis & user guide for 2025. Get started today!" />
         <meta name="twitter:image" content="https://siteoptz.ai/og-image.png" />
         <meta name="twitter:creator" content="@siteoptz" />

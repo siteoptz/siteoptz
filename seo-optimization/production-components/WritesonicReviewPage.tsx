@@ -128,7 +128,7 @@ export default function WritesonicReviewPage({ tool }: WritesonicReviewPageProps
     <>
       <Head>
         {/* Primary SEO Tags */}
-        <title>Writesonic Review:  | SiteOptz</title>
+        <title>Writesonic Review: AI SEO Optimization Tool | SiteOptz</title>
         <meta name="description" content="writesonic review. Compare Writesonic  features, pricing & alternatives. Expert analysis & user guide for 2025. Get started today!" />
         <meta name="keywords" content="writesonic review, writesonic pricing, writesonic features, writesonic vs competitors, writesonic alternatives" />
         <meta name="author" content="SiteOptz" />
@@ -139,7 +139,7 @@ export default function WritesonicReviewPage({ tool }: WritesonicReviewPageProps
         
         {/* Open Graph Meta Tags */}
         <meta property="og:type" content="article" />
-        <meta property="og:title" content="Writesonic Review:  | SiteOptz" />
+        <meta property="og:title" content="Writesonic Review: AI SEO Optimization Tool | SiteOptz" />
         <meta property="og:description" content="writesonic review. Compare Writesonic  features, pricing & alternatives. Expert analysis & user guide for 2025. Get started today!" />
         <meta property="og:url" content="https://siteoptz.ai/reviews/writesonic" />
         <meta property="og:site_name" content="SiteOptz" />
@@ -150,7 +150,7 @@ export default function WritesonicReviewPage({ tool }: WritesonicReviewPageProps
         
         {/* Twitter Card Tags */}
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Writesonic Review:  | SiteOptz" />
+        <meta name="twitter:title" content="Writesonic Review: AI SEO Optimization Tool | SiteOptz" />
         <meta name="twitter:description" content="writesonic review. Compare Writesonic  features, pricing & alternatives. Expert analysis & user guide for 2025. Get started today!" />
         <meta name="twitter:image" content="https://siteoptz.ai/og-image.png" />
         <meta name="twitter:creator" content="@siteoptz" />

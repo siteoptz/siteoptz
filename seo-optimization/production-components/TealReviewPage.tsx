@@ -128,7 +128,7 @@ export default function TealReviewPage({ tool }: TealReviewPageProps) {
     <>
       <Head>
         {/* Primary SEO Tags */}
-        <title>Teal Review:  | SiteOptz</title>
+        <title>Teal Review: AI Productivity Assistant | SiteOptz</title>
         <meta name="description" content="teal review. Compare Teal  features, pricing & alternatives. Expert analysis & user guide for 2025. Get started today!" />
         <meta name="keywords" content="teal review, teal pricing, teal features, teal vs competitors, teal alternatives" />
         <meta name="author" content="SiteOptz" />
@@ -139,7 +139,7 @@ export default function TealReviewPage({ tool }: TealReviewPageProps) {
         
         {/* Open Graph Meta Tags */}
         <meta property="og:type" content="article" />
-        <meta property="og:title" content="Teal Review:  | SiteOptz" />
+        <meta property="og:title" content="Teal Review: AI Productivity Assistant | SiteOptz" />
         <meta property="og:description" content="teal review. Compare Teal  features, pricing & alternatives. Expert analysis & user guide for 2025. Get started today!" />
         <meta property="og:url" content="https://siteoptz.ai/reviews/teal" />
         <meta property="og:site_name" content="SiteOptz" />
@@ -150,7 +150,7 @@ export default function TealReviewPage({ tool }: TealReviewPageProps) {
         
         {/* Twitter Card Tags */}
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Teal Review:  | SiteOptz" />
+        <meta name="twitter:title" content="Teal Review: AI Productivity Assistant | SiteOptz" />
         <meta name="twitter:description" content="teal review. Compare Teal  features, pricing & alternatives. Expert analysis & user guide for 2025. Get started today!" />
         <meta name="twitter:image" content="https://siteoptz.ai/og-image.png" />
         <meta name="twitter:creator" content="@siteoptz" />

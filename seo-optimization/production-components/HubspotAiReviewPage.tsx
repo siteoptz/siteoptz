@@ -128,7 +128,7 @@ export default function HubspotAiReviewPage({ tool }: HubspotAiReviewPageProps) 
     <>
       <Head>
         {/* Primary SEO Tags */}
-        <title>HubSpot AI Review:  | SiteOptz</title>
+        <title>HubSpot AI Review: AI Email Marketing Tool | SiteOptz</title>
         <meta name="description" content="hubspot ai review. Compare HubSpot AI  features, pricing & alternatives. Expert analysis & user guide for 2025. Get started today!" />
         <meta name="keywords" content="hubspot ai review, hubspot ai pricing, hubspot ai features, hubspot ai vs competitors, hubspot ai alternatives" />
         <meta name="author" content="SiteOptz" />
@@ -139,7 +139,7 @@ export default function HubspotAiReviewPage({ tool }: HubspotAiReviewPageProps) 
         
         {/* Open Graph Meta Tags */}
         <meta property="og:type" content="article" />
-        <meta property="og:title" content="HubSpot AI Review:  | SiteOptz" />
+        <meta property="og:title" content="HubSpot AI Review: AI Email Marketing Tool | SiteOptz" />
         <meta property="og:description" content="hubspot ai review. Compare HubSpot AI  features, pricing & alternatives. Expert analysis & user guide for 2025. Get started today!" />
         <meta property="og:url" content="https://siteoptz.ai/reviews/hubspot-ai" />
         <meta property="og:site_name" content="SiteOptz" />
@@ -150,7 +150,7 @@ export default function HubspotAiReviewPage({ tool }: HubspotAiReviewPageProps) 
         
         {/* Twitter Card Tags */}
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="HubSpot AI Review:  | SiteOptz" />
+        <meta name="twitter:title" content="HubSpot AI Review: AI Email Marketing Tool | SiteOptz" />
         <meta name="twitter:description" content="hubspot ai review. Compare HubSpot AI  features, pricing & alternatives. Expert analysis & user guide for 2025. Get started today!" />
         <meta name="twitter:image" content="https://siteoptz.ai/og-image.png" />
         <meta name="twitter:creator" content="@siteoptz" />

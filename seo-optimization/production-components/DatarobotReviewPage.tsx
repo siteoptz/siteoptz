@@ -128,7 +128,7 @@ export default function DatarobotReviewPage({ tool }: DatarobotReviewPageProps) 
     <>
       <Head>
         {/* Primary SEO Tags */}
-        <title>DataRobot Review:  | SiteOptz</title>
+        <title>DataRobot Review: AI Data Analytics Platform | SiteOptz</title>
         <meta name="description" content="datarobot review. Compare DataRobot  features, pricing & alternatives. Expert analysis & user guide for 2025. Get started today!" />
         <meta name="keywords" content="datarobot review, datarobot pricing, datarobot features, datarobot vs competitors, datarobot alternatives" />
         <meta name="author" content="SiteOptz" />
@@ -139,7 +139,7 @@ export default function DatarobotReviewPage({ tool }: DatarobotReviewPageProps) 
         
         {/* Open Graph Meta Tags */}
         <meta property="og:type" content="article" />
-        <meta property="og:title" content="DataRobot Review:  | SiteOptz" />
+        <meta property="og:title" content="DataRobot Review: AI Data Analytics Platform | SiteOptz" />
         <meta property="og:description" content="datarobot review. Compare DataRobot  features, pricing & alternatives. Expert analysis & user guide for 2025. Get started today!" />
         <meta property="og:url" content="https://siteoptz.ai/reviews/datarobot" />
         <meta property="og:site_name" content="SiteOptz" />
@@ -150,7 +150,7 @@ export default function DatarobotReviewPage({ tool }: DatarobotReviewPageProps) 
         
         {/* Twitter Card Tags */}
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="DataRobot Review:  | SiteOptz" />
+        <meta name="twitter:title" content="DataRobot Review: AI Data Analytics Platform | SiteOptz" />
         <meta name="twitter:description" content="datarobot review. Compare DataRobot  features, pricing & alternatives. Expert analysis & user guide for 2025. Get started today!" />
         <meta name="twitter:image" content="https://siteoptz.ai/og-image.png" />
         <meta name="twitter:creator" content="@siteoptz" />

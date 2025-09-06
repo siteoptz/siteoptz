@@ -128,7 +128,7 @@ export default function MurphAiReviewPage({ tool }: MurphAiReviewPageProps) {
     <>
       <Head>
         {/* Primary SEO Tags */}
-        <title>Murph AI Review:  | SiteOptz</title>
+        <title>Murph AI Review: AI Voice Technology | SiteOptz</title>
         <meta name="description" content="murph ai review. Compare Murph AI  features, pricing & alternatives. Expert analysis & user guide for 2025. Get started today!" />
         <meta name="keywords" content="murph ai review, murph ai pricing, murph ai features, murph ai vs competitors, murph ai alternatives" />
         <meta name="author" content="SiteOptz" />
@@ -139,7 +139,7 @@ export default function MurphAiReviewPage({ tool }: MurphAiReviewPageProps) {
         
         {/* Open Graph Meta Tags */}
         <meta property="og:type" content="article" />
-        <meta property="og:title" content="Murph AI Review:  | SiteOptz" />
+        <meta property="og:title" content="Murph AI Review: AI Voice Technology | SiteOptz" />
         <meta property="og:description" content="murph ai review. Compare Murph AI  features, pricing & alternatives. Expert analysis & user guide for 2025. Get started today!" />
         <meta property="og:url" content="https://siteoptz.ai/reviews/murph-ai" />
         <meta property="og:site_name" content="SiteOptz" />
@@ -150,7 +150,7 @@ export default function MurphAiReviewPage({ tool }: MurphAiReviewPageProps) {
         
         {/* Twitter Card Tags */}
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Murph AI Review:  | SiteOptz" />
+        <meta name="twitter:title" content="Murph AI Review: AI Voice Technology | SiteOptz" />
         <meta name="twitter:description" content="murph ai review. Compare Murph AI  features, pricing & alternatives. Expert analysis & user guide for 2025. Get started today!" />
         <meta name="twitter:image" content="https://siteoptz.ai/og-image.png" />
         <meta name="twitter:creator" content="@siteoptz" />

@@ -128,7 +128,7 @@ export default function AcquisioReviewPage({ tool }: AcquisioReviewPageProps) {
     <>
       <Head>
         {/* Primary SEO Tags */}
-        <title>Acquisio Review:  | SiteOptz</title>
+        <title>Acquisio Review: AI PPC Management Tool | SiteOptz</title>
         <meta name="description" content="acquisio review. Compare Acquisio  features, pricing & alternatives. Expert analysis & user guide for 2025. Get started today!" />
         <meta name="keywords" content="acquisio review, acquisio pricing, acquisio features, acquisio vs competitors, acquisio alternatives" />
         <meta name="author" content="SiteOptz" />
@@ -139,7 +139,7 @@ export default function AcquisioReviewPage({ tool }: AcquisioReviewPageProps) {
         
         {/* Open Graph Meta Tags */}
         <meta property="og:type" content="article" />
-        <meta property="og:title" content="Acquisio Review:  | SiteOptz" />
+        <meta property="og:title" content="Acquisio Review: AI PPC Management Tool | SiteOptz" />
         <meta property="og:description" content="acquisio review. Compare Acquisio  features, pricing & alternatives. Expert analysis & user guide for 2025. Get started today!" />
         <meta property="og:url" content="https://siteoptz.ai/reviews/acquisio" />
         <meta property="og:site_name" content="SiteOptz" />
@@ -150,7 +150,7 @@ export default function AcquisioReviewPage({ tool }: AcquisioReviewPageProps) {
         
         {/* Twitter Card Tags */}
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Acquisio Review:  | SiteOptz" />
+        <meta name="twitter:title" content="Acquisio Review: AI PPC Management Tool | SiteOptz" />
         <meta name="twitter:description" content="acquisio review. Compare Acquisio  features, pricing & alternatives. Expert analysis & user guide for 2025. Get started today!" />
         <meta name="twitter:image" content="https://siteoptz.ai/og-image.png" />
         <meta name="twitter:creator" content="@siteoptz" />

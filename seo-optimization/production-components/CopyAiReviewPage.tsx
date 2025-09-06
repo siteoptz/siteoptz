@@ -128,7 +128,7 @@ export default function CopyAiReviewPage({ tool }: CopyAiReviewPageProps) {
     <>
       <Head>
         {/* Primary SEO Tags */}
-        <title>Copy.ai Review:  | SiteOptz</title>
+        <title>Copy.ai Review: AI Content Creation Platform | SiteOptz</title>
         <meta name="description" content="copy.ai review. Compare Copy.ai  features, pricing & alternatives. Expert analysis & user guide for 2025. Get started today!" />
         <meta name="keywords" content="copy.ai review, copy.ai pricing, copy.ai features, copy.ai vs competitors, copy.ai alternatives" />
         <meta name="author" content="SiteOptz" />
@@ -139,7 +139,7 @@ export default function CopyAiReviewPage({ tool }: CopyAiReviewPageProps) {
         
         {/* Open Graph Meta Tags */}
         <meta property="og:type" content="article" />
-        <meta property="og:title" content="Copy.ai Review:  | SiteOptz" />
+        <meta property="og:title" content="Copy.ai Review: AI Content Creation Platform | SiteOptz" />
         <meta property="og:description" content="copy.ai review. Compare Copy.ai  features, pricing & alternatives. Expert analysis & user guide for 2025. Get started today!" />
         <meta property="og:url" content="https://siteoptz.ai/reviews/copy-ai" />
         <meta property="og:site_name" content="SiteOptz" />
@@ -150,7 +150,7 @@ export default function CopyAiReviewPage({ tool }: CopyAiReviewPageProps) {
         
         {/* Twitter Card Tags */}
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Copy.ai Review:  | SiteOptz" />
+        <meta name="twitter:title" content="Copy.ai Review: AI Content Creation Platform | SiteOptz" />
         <meta name="twitter:description" content="copy.ai review. Compare Copy.ai  features, pricing & alternatives. Expert analysis & user guide for 2025. Get started today!" />
         <meta name="twitter:image" content="https://siteoptz.ai/og-image.png" />
         <meta name="twitter:creator" content="@siteoptz" />

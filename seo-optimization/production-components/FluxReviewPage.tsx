@@ -128,7 +128,7 @@ export default function FluxReviewPage({ tool }: FluxReviewPageProps) {
     <>
       <Head>
         {/* Primary SEO Tags */}
-        <title>Flux Review:  | SiteOptz</title>
+        <title>Flux Review: AI Image Generator | SiteOptz</title>
         <meta name="description" content="flux review. Compare Flux  features, pricing & alternatives. Expert analysis & user guide for 2025. Get started today!" />
         <meta name="keywords" content="flux review, flux pricing, flux features, flux vs competitors, flux alternatives" />
         <meta name="author" content="SiteOptz" />
@@ -139,7 +139,7 @@ export default function FluxReviewPage({ tool }: FluxReviewPageProps) {
         
         {/* Open Graph Meta Tags */}
         <meta property="og:type" content="article" />
-        <meta property="og:title" content="Flux Review:  | SiteOptz" />
+        <meta property="og:title" content="Flux Review: AI Image Generator | SiteOptz" />
         <meta property="og:description" content="flux review. Compare Flux  features, pricing & alternatives. Expert analysis & user guide for 2025. Get started today!" />
         <meta property="og:url" content="https://siteoptz.ai/reviews/flux" />
         <meta property="og:site_name" content="SiteOptz" />
@@ -150,7 +150,7 @@ export default function FluxReviewPage({ tool }: FluxReviewPageProps) {
         
         {/* Twitter Card Tags */}
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Flux Review:  | SiteOptz" />
+        <meta name="twitter:title" content="Flux Review: AI Image Generator | SiteOptz" />
         <meta name="twitter:description" content="flux review. Compare Flux  features, pricing & alternatives. Expert analysis & user guide for 2025. Get started today!" />
         <meta name="twitter:image" content="https://siteoptz.ai/og-image.png" />
         <meta name="twitter:creator" content="@siteoptz" />

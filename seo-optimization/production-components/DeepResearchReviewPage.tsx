@@ -128,7 +128,7 @@ export default function DeepResearchReviewPage({ tool }: DeepResearchReviewPageP
     <>
       <Head>
         {/* Primary SEO Tags */}
-        <title>Deep Research Review:  | SiteOptz</title>
+        <title>Deep Research Review: AI Research Assistant | SiteOptz</title>
         <meta name="description" content="deep research review. Compare Deep Research  features, pricing & alternatives. Expert analysis & user guide for 2025. Get started today!" />
         <meta name="keywords" content="deep research review, deep research pricing, deep research features, deep research vs competitors, deep research alternatives" />
         <meta name="author" content="SiteOptz" />
@@ -139,7 +139,7 @@ export default function DeepResearchReviewPage({ tool }: DeepResearchReviewPageP
         
         {/* Open Graph Meta Tags */}
         <meta property="og:type" content="article" />
-        <meta property="og:title" content="Deep Research Review:  | SiteOptz" />
+        <meta property="og:title" content="Deep Research Review: AI Research Assistant | SiteOptz" />
         <meta property="og:description" content="deep research review. Compare Deep Research  features, pricing & alternatives. Expert analysis & user guide for 2025. Get started today!" />
         <meta property="og:url" content="https://siteoptz.ai/reviews/deep-research" />
         <meta property="og:site_name" content="SiteOptz" />
@@ -150,7 +150,7 @@ export default function DeepResearchReviewPage({ tool }: DeepResearchReviewPageP
         
         {/* Twitter Card Tags */}
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Deep Research Review:  | SiteOptz" />
+        <meta name="twitter:title" content="Deep Research Review: AI Research Assistant | SiteOptz" />
         <meta name="twitter:description" content="deep research review. Compare Deep Research  features, pricing & alternatives. Expert analysis & user guide for 2025. Get started today!" />
         <meta name="twitter:image" content="https://siteoptz.ai/og-image.png" />
         <meta name="twitter:creator" content="@siteoptz" />

@@ -128,7 +128,7 @@ export default function MarinSoftwareReviewPage({ tool }: MarinSoftwareReviewPag
     <>
       <Head>
         {/* Primary SEO Tags */}
-        <title>Marin Software Review:  | SiteOptz</title>
+        <title>Marin Software Review: AI PPC Management Tool | SiteOptz</title>
         <meta name="description" content="marin software review. Compare Marin Software  features, pricing & alternatives. Expert analysis & user guide for 2025. Get started today!" />
         <meta name="keywords" content="marin software review, marin software pricing, marin software features, marin software vs competitors, marin software alternatives" />
         <meta name="author" content="SiteOptz" />
@@ -139,7 +139,7 @@ export default function MarinSoftwareReviewPage({ tool }: MarinSoftwareReviewPag
         
         {/* Open Graph Meta Tags */}
         <meta property="og:type" content="article" />
-        <meta property="og:title" content="Marin Software Review:  | SiteOptz" />
+        <meta property="og:title" content="Marin Software Review: AI PPC Management Tool | SiteOptz" />
         <meta property="og:description" content="marin software review. Compare Marin Software  features, pricing & alternatives. Expert analysis & user guide for 2025. Get started today!" />
         <meta property="og:url" content="https://siteoptz.ai/reviews/marin-software" />
         <meta property="og:site_name" content="SiteOptz" />
@@ -150,7 +150,7 @@ export default function MarinSoftwareReviewPage({ tool }: MarinSoftwareReviewPag
         
         {/* Twitter Card Tags */}
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Marin Software Review:  | SiteOptz" />
+        <meta name="twitter:title" content="Marin Software Review: AI PPC Management Tool | SiteOptz" />
         <meta name="twitter:description" content="marin software review. Compare Marin Software  features, pricing & alternatives. Expert analysis & user guide for 2025. Get started today!" />
         <meta name="twitter:image" content="https://siteoptz.ai/og-image.png" />
         <meta name="twitter:creator" content="@siteoptz" />

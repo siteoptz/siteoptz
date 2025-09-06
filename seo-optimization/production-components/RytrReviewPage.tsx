@@ -128,7 +128,7 @@ export default function RytrReviewPage({ tool }: RytrReviewPageProps) {
     <>
       <Head>
         {/* Primary SEO Tags */}
-        <title>Rytr Review:  | SiteOptz</title>
+        <title>Rytr Review: AI Content Creation Platform | SiteOptz</title>
         <meta name="description" content="rytr review. Compare Rytr  features, pricing & alternatives. Expert analysis & user guide for 2025. Get started today!" />
         <meta name="keywords" content="rytr review, rytr pricing, rytr features, rytr vs competitors, rytr alternatives" />
         <meta name="author" content="SiteOptz" />
@@ -139,7 +139,7 @@ export default function RytrReviewPage({ tool }: RytrReviewPageProps) {
         
         {/* Open Graph Meta Tags */}
         <meta property="og:type" content="article" />
-        <meta property="og:title" content="Rytr Review:  | SiteOptz" />
+        <meta property="og:title" content="Rytr Review: AI Content Creation Platform | SiteOptz" />
         <meta property="og:description" content="rytr review. Compare Rytr  features, pricing & alternatives. Expert analysis & user guide for 2025. Get started today!" />
         <meta property="og:url" content="https://siteoptz.ai/reviews/rytr" />
         <meta property="og:site_name" content="SiteOptz" />
@@ -150,7 +150,7 @@ export default function RytrReviewPage({ tool }: RytrReviewPageProps) {
         
         {/* Twitter Card Tags */}
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Rytr Review:  | SiteOptz" />
+        <meta name="twitter:title" content="Rytr Review: AI Content Creation Platform | SiteOptz" />
         <meta name="twitter:description" content="rytr review. Compare Rytr  features, pricing & alternatives. Expert analysis & user guide for 2025. Get started today!" />
         <meta name="twitter:image" content="https://siteoptz.ai/og-image.png" />
         <meta name="twitter:creator" content="@siteoptz" />

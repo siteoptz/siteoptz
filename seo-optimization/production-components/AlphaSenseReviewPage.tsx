@@ -128,7 +128,7 @@ export default function AlphaSenseReviewPage({ tool }: AlphaSenseReviewPageProps
     <>
       <Head>
         {/* Primary SEO Tags */}
-        <title>Alpha Sense Review:  | SiteOptz</title>
+        <title>Alpha Sense Review: AI Research Assistant | SiteOptz</title>
         <meta name="description" content="alpha sense review. Compare Alpha Sense  features, pricing & alternatives. Expert analysis & user guide for 2025. Get started today!" />
         <meta name="keywords" content="alpha sense review, alpha sense pricing, alpha sense features, alpha sense vs competitors, alpha sense alternatives" />
         <meta name="author" content="SiteOptz" />
@@ -139,7 +139,7 @@ export default function AlphaSenseReviewPage({ tool }: AlphaSenseReviewPageProps
         
         {/* Open Graph Meta Tags */}
         <meta property="og:type" content="article" />
-        <meta property="og:title" content="Alpha Sense Review:  | SiteOptz" />
+        <meta property="og:title" content="Alpha Sense Review: AI Research Assistant | SiteOptz" />
         <meta property="og:description" content="alpha sense review. Compare Alpha Sense  features, pricing & alternatives. Expert analysis & user guide for 2025. Get started today!" />
         <meta property="og:url" content="https://siteoptz.ai/reviews/alpha-sense" />
         <meta property="og:site_name" content="SiteOptz" />
@@ -150,7 +150,7 @@ export default function AlphaSenseReviewPage({ tool }: AlphaSenseReviewPageProps
         
         {/* Twitter Card Tags */}
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Alpha Sense Review:  | SiteOptz" />
+        <meta name="twitter:title" content="Alpha Sense Review: AI Research Assistant | SiteOptz" />
         <meta name="twitter:description" content="alpha sense review. Compare Alpha Sense  features, pricing & alternatives. Expert analysis & user guide for 2025. Get started today!" />
         <meta name="twitter:image" content="https://siteoptz.ai/og-image.png" />
         <meta name="twitter:creator" content="@siteoptz" />

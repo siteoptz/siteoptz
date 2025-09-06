@@ -128,7 +128,7 @@ export default function N8nReviewPage({ tool }: N8nReviewPageProps) {
     <>
       <Head>
         {/* Primary SEO Tags */}
-        <title>n8n Review:  | SiteOptz</title>
+        <title>n8n Review: AI Workflow Automation Tool | SiteOptz</title>
         <meta name="description" content="n8n review. Compare n8n  features, pricing & alternatives. Expert analysis & user guide for 2025. Get started today!" />
         <meta name="keywords" content="n8n review, n8n pricing, n8n features, n8n vs competitors, n8n alternatives" />
         <meta name="author" content="SiteOptz" />
@@ -139,7 +139,7 @@ export default function N8nReviewPage({ tool }: N8nReviewPageProps) {
         
         {/* Open Graph Meta Tags */}
         <meta property="og:type" content="article" />
-        <meta property="og:title" content="n8n Review:  | SiteOptz" />
+        <meta property="og:title" content="n8n Review: AI Workflow Automation Tool | SiteOptz" />
         <meta property="og:description" content="n8n review. Compare n8n  features, pricing & alternatives. Expert analysis & user guide for 2025. Get started today!" />
         <meta property="og:url" content="https://siteoptz.ai/reviews/n8n" />
         <meta property="og:site_name" content="SiteOptz" />
@@ -150,7 +150,7 @@ export default function N8nReviewPage({ tool }: N8nReviewPageProps) {
         
         {/* Twitter Card Tags */}
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="n8n Review:  | SiteOptz" />
+        <meta name="twitter:title" content="n8n Review: AI Workflow Automation Tool | SiteOptz" />
         <meta name="twitter:description" content="n8n review. Compare n8n  features, pricing & alternatives. Expert analysis & user guide for 2025. Get started today!" />
         <meta name="twitter:image" content="https://siteoptz.ai/og-image.png" />
         <meta name="twitter:creator" content="@siteoptz" />

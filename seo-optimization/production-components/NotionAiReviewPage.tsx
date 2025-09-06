@@ -128,7 +128,7 @@ export default function NotionAiReviewPage({ tool }: NotionAiReviewPageProps) {
     <>
       <Head>
         {/* Primary SEO Tags */}
-        <title>Notion AI Review:  | SiteOptz</title>
+        <title>Notion AI Review: AI Productivity Assistant | SiteOptz</title>
         <meta name="description" content="notion ai review. Compare Notion AI  features, pricing & alternatives. Expert analysis & user guide for 2025. Get started today!" />
         <meta name="keywords" content="notion ai review, notion ai pricing, notion ai features, notion ai vs competitors, notion ai alternatives" />
         <meta name="author" content="SiteOptz" />
@@ -139,7 +139,7 @@ export default function NotionAiReviewPage({ tool }: NotionAiReviewPageProps) {
         
         {/* Open Graph Meta Tags */}
         <meta property="og:type" content="article" />
-        <meta property="og:title" content="Notion AI Review:  | SiteOptz" />
+        <meta property="og:title" content="Notion AI Review: AI Productivity Assistant | SiteOptz" />
         <meta property="og:description" content="notion ai review. Compare Notion AI  features, pricing & alternatives. Expert analysis & user guide for 2025. Get started today!" />
         <meta property="og:url" content="https://siteoptz.ai/reviews/notion-ai" />
         <meta property="og:site_name" content="SiteOptz" />
@@ -150,7 +150,7 @@ export default function NotionAiReviewPage({ tool }: NotionAiReviewPageProps) {
         
         {/* Twitter Card Tags */}
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Notion AI Review:  | SiteOptz" />
+        <meta name="twitter:title" content="Notion AI Review: AI Productivity Assistant | SiteOptz" />
         <meta name="twitter:description" content="notion ai review. Compare Notion AI  features, pricing & alternatives. Expert analysis & user guide for 2025. Get started today!" />
         <meta name="twitter:image" content="https://siteoptz.ai/og-image.png" />
         <meta name="twitter:creator" content="@siteoptz" />

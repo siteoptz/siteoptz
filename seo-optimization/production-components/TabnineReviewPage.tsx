@@ -128,7 +128,7 @@ export default function TabnineReviewPage({ tool }: TabnineReviewPageProps) {
     <>
       <Head>
         {/* Primary SEO Tags */}
-        <title>Tabnine Review:  | SiteOptz</title>
+        <title>Tabnine Review: AI Code Assistant | SiteOptz</title>
         <meta name="description" content="tabnine review. Compare Tabnine  features, pricing & alternatives. Expert analysis & user guide for 2025. Get started today!" />
         <meta name="keywords" content="tabnine review, tabnine pricing, tabnine features, tabnine vs competitors, tabnine alternatives" />
         <meta name="author" content="SiteOptz" />
@@ -139,7 +139,7 @@ export default function TabnineReviewPage({ tool }: TabnineReviewPageProps) {
         
         {/* Open Graph Meta Tags */}
         <meta property="og:type" content="article" />
-        <meta property="og:title" content="Tabnine Review:  | SiteOptz" />
+        <meta property="og:title" content="Tabnine Review: AI Code Assistant | SiteOptz" />
         <meta property="og:description" content="tabnine review. Compare Tabnine  features, pricing & alternatives. Expert analysis & user guide for 2025. Get started today!" />
         <meta property="og:url" content="https://siteoptz.ai/reviews/tabnine" />
         <meta property="og:site_name" content="SiteOptz" />
@@ -150,7 +150,7 @@ export default function TabnineReviewPage({ tool }: TabnineReviewPageProps) {
         
         {/* Twitter Card Tags */}
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Tabnine Review:  | SiteOptz" />
+        <meta name="twitter:title" content="Tabnine Review: AI Code Assistant | SiteOptz" />
         <meta name="twitter:description" content="tabnine review. Compare Tabnine  features, pricing & alternatives. Expert analysis & user guide for 2025. Get started today!" />
         <meta name="twitter:image" content="https://siteoptz.ai/og-image.png" />
         <meta name="twitter:creator" content="@siteoptz" />

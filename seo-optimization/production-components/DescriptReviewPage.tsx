@@ -128,7 +128,7 @@ export default function DescriptReviewPage({ tool }: DescriptReviewPageProps) {
     <>
       <Head>
         {/* Primary SEO Tags */}
-        <title>Descript Review:  | SiteOptz</title>
+        <title>Descript Review: AI Voice Technology | SiteOptz</title>
         <meta name="description" content="descript review. Compare Descript  features, pricing & alternatives. Expert analysis & user guide for 2025. Get started today!" />
         <meta name="keywords" content="descript review, descript pricing, descript features, descript vs competitors, descript alternatives" />
         <meta name="author" content="SiteOptz" />
@@ -139,7 +139,7 @@ export default function DescriptReviewPage({ tool }: DescriptReviewPageProps) {
         
         {/* Open Graph Meta Tags */}
         <meta property="og:type" content="article" />
-        <meta property="og:title" content="Descript Review:  | SiteOptz" />
+        <meta property="og:title" content="Descript Review: AI Voice Technology | SiteOptz" />
         <meta property="og:description" content="descript review. Compare Descript  features, pricing & alternatives. Expert analysis & user guide for 2025. Get started today!" />
         <meta property="og:url" content="https://siteoptz.ai/reviews/descript" />
         <meta property="og:site_name" content="SiteOptz" />
@@ -150,7 +150,7 @@ export default function DescriptReviewPage({ tool }: DescriptReviewPageProps) {
         
         {/* Twitter Card Tags */}
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Descript Review:  | SiteOptz" />
+        <meta name="twitter:title" content="Descript Review: AI Voice Technology | SiteOptz" />
         <meta name="twitter:description" content="descript review. Compare Descript  features, pricing & alternatives. Expert analysis & user guide for 2025. Get started today!" />
         <meta name="twitter:image" content="https://siteoptz.ai/og-image.png" />
         <meta name="twitter:creator" content="@siteoptz" />

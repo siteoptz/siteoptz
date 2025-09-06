@@ -128,7 +128,7 @@ export default function DeepgramReviewPage({ tool }: DeepgramReviewPageProps) {
     <>
       <Head>
         {/* Primary SEO Tags */}
-        <title>Deepgram Review:  | SiteOptz</title>
+        <title>Deepgram Review: AI Voice Technology | SiteOptz</title>
         <meta name="description" content="deepgram review. Compare Deepgram  features, pricing & alternatives. Expert analysis & user guide for 2025. Get started today!" />
         <meta name="keywords" content="deepgram review, deepgram pricing, deepgram features, deepgram vs competitors, deepgram alternatives" />
         <meta name="author" content="SiteOptz" />
@@ -139,7 +139,7 @@ export default function DeepgramReviewPage({ tool }: DeepgramReviewPageProps) {
         
         {/* Open Graph Meta Tags */}
         <meta property="og:type" content="article" />
-        <meta property="og:title" content="Deepgram Review:  | SiteOptz" />
+        <meta property="og:title" content="Deepgram Review: AI Voice Technology | SiteOptz" />
         <meta property="og:description" content="deepgram review. Compare Deepgram  features, pricing & alternatives. Expert analysis & user guide for 2025. Get started today!" />
         <meta property="og:url" content="https://siteoptz.ai/reviews/deepgram" />
         <meta property="og:site_name" content="SiteOptz" />
@@ -150,7 +150,7 @@ export default function DeepgramReviewPage({ tool }: DeepgramReviewPageProps) {
         
         {/* Twitter Card Tags */}
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Deepgram Review:  | SiteOptz" />
+        <meta name="twitter:title" content="Deepgram Review: AI Voice Technology | SiteOptz" />
         <meta name="twitter:description" content="deepgram review. Compare Deepgram  features, pricing & alternatives. Expert analysis & user guide for 2025. Get started today!" />
         <meta name="twitter:image" content="https://siteoptz.ai/og-image.png" />
         <meta name="twitter:creator" content="@siteoptz" />

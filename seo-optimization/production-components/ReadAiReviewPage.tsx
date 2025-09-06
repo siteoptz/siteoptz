@@ -128,7 +128,7 @@ export default function ReadAiReviewPage({ tool }: ReadAiReviewPageProps) {
     <>
       <Head>
         {/* Primary SEO Tags */}
-        <title>Read AI Review:  | SiteOptz</title>
+        <title>Read AI Review: AI Productivity Assistant | SiteOptz</title>
         <meta name="description" content="read ai review. Compare Read AI  features, pricing & alternatives. Expert analysis & user guide for 2025. Get started today!" />
         <meta name="keywords" content="read ai review, read ai pricing, read ai features, read ai vs competitors, read ai alternatives" />
         <meta name="author" content="SiteOptz" />
@@ -139,7 +139,7 @@ export default function ReadAiReviewPage({ tool }: ReadAiReviewPageProps) {
         
         {/* Open Graph Meta Tags */}
         <meta property="og:type" content="article" />
-        <meta property="og:title" content="Read AI Review:  | SiteOptz" />
+        <meta property="og:title" content="Read AI Review: AI Productivity Assistant | SiteOptz" />
         <meta property="og:description" content="read ai review. Compare Read AI  features, pricing & alternatives. Expert analysis & user guide for 2025. Get started today!" />
         <meta property="og:url" content="https://siteoptz.ai/reviews/read-ai" />
         <meta property="og:site_name" content="SiteOptz" />
@@ -150,7 +150,7 @@ export default function ReadAiReviewPage({ tool }: ReadAiReviewPageProps) {
         
         {/* Twitter Card Tags */}
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Read AI Review:  | SiteOptz" />
+        <meta name="twitter:title" content="Read AI Review: AI Productivity Assistant | SiteOptz" />
         <meta name="twitter:description" content="read ai review. Compare Read AI  features, pricing & alternatives. Expert analysis & user guide for 2025. Get started today!" />
         <meta name="twitter:image" content="https://siteoptz.ai/og-image.png" />
         <meta name="twitter:creator" content="@siteoptz" />

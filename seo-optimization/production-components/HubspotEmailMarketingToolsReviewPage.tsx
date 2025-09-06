@@ -128,7 +128,7 @@ export default function HubspotEmailMarketingToolsReviewPage({ tool }: HubspotEm
     <>
       <Head>
         {/* Primary SEO Tags */}
-        <title>HubSpot Email Marketing Tools Review:  | SiteOptz</title>
+        <title>HubSpot Email Marketing Tools Review: AI Email Marketing Tool | SiteOptz</title>
         <meta name="description" content="HubSpot Email Marketing Tools review: features, pricing, pros & cons. Expert analysis & comparison guide. Start free today!" />
         <meta name="keywords" content="hubspot email marketing tools review, hubspot email marketing tools pricing, hubspot email marketing tools features, hubspot email marketing tools vs competitors, hubspot email marketing tools alternatives" />
         <meta name="author" content="SiteOptz" />
@@ -139,7 +139,7 @@ export default function HubspotEmailMarketingToolsReviewPage({ tool }: HubspotEm
         
         {/* Open Graph Meta Tags */}
         <meta property="og:type" content="article" />
-        <meta property="og:title" content="HubSpot Email Marketing Tools Review:  | SiteOptz" />
+        <meta property="og:title" content="HubSpot Email Marketing Tools Review: AI Email Marketing Tool | SiteOptz" />
         <meta property="og:description" content="HubSpot Email Marketing Tools review: features, pricing, pros & cons. Expert analysis & comparison guide. Start free today!" />
         <meta property="og:url" content="https://siteoptz.ai/reviews/hubspot-email-marketing-tools" />
         <meta property="og:site_name" content="SiteOptz" />
@@ -150,7 +150,7 @@ export default function HubspotEmailMarketingToolsReviewPage({ tool }: HubspotEm
         
         {/* Twitter Card Tags */}
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="HubSpot Email Marketing Tools Review:  | SiteOptz" />
+        <meta name="twitter:title" content="HubSpot Email Marketing Tools Review: AI Email Marketing Tool | SiteOptz" />
         <meta name="twitter:description" content="HubSpot Email Marketing Tools review: features, pricing, pros & cons. Expert analysis & comparison guide. Start free today!" />
         <meta name="twitter:image" content="https://siteoptz.ai/og-image.png" />
         <meta name="twitter:creator" content="@siteoptz" />

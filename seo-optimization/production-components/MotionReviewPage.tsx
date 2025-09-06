@@ -128,7 +128,7 @@ export default function MotionReviewPage({ tool }: MotionReviewPageProps) {
     <>
       <Head>
         {/* Primary SEO Tags */}
-        <title>Motion Review:  | SiteOptz</title>
+        <title>Motion Review: AI Workflow Automation Tool | SiteOptz</title>
         <meta name="description" content="motion review. Compare Motion  features, pricing & alternatives. Expert analysis & user guide for 2025. Get started today!" />
         <meta name="keywords" content="motion review, motion pricing, motion features, motion vs competitors, motion alternatives" />
         <meta name="author" content="SiteOptz" />
@@ -139,7 +139,7 @@ export default function MotionReviewPage({ tool }: MotionReviewPageProps) {
         
         {/* Open Graph Meta Tags */}
         <meta property="og:type" content="article" />
-        <meta property="og:title" content="Motion Review:  | SiteOptz" />
+        <meta property="og:title" content="Motion Review: AI Workflow Automation Tool | SiteOptz" />
         <meta property="og:description" content="motion review. Compare Motion  features, pricing & alternatives. Expert analysis & user guide for 2025. Get started today!" />
         <meta property="og:url" content="https://siteoptz.ai/reviews/motion" />
         <meta property="og:site_name" content="SiteOptz" />
@@ -150,7 +150,7 @@ export default function MotionReviewPage({ tool }: MotionReviewPageProps) {
         
         {/* Twitter Card Tags */}
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Motion Review:  | SiteOptz" />
+        <meta name="twitter:title" content="Motion Review: AI Workflow Automation Tool | SiteOptz" />
         <meta name="twitter:description" content="motion review. Compare Motion  features, pricing & alternatives. Expert analysis & user guide for 2025. Get started today!" />
         <meta name="twitter:image" content="https://siteoptz.ai/og-image.png" />
         <meta name="twitter:creator" content="@siteoptz" />

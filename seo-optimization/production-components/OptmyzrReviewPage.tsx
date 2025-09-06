@@ -128,7 +128,7 @@ export default function OptmyzrReviewPage({ tool }: OptmyzrReviewPageProps) {
     <>
       <Head>
         {/* Primary SEO Tags */}
-        <title>Optmyzr Review:  | SiteOptz</title>
+        <title>Optmyzr Review: AI PPC Management Tool | SiteOptz</title>
         <meta name="description" content="optmyzr review. Compare Optmyzr  features, pricing & alternatives. Expert analysis & user guide for 2025. Get started today!" />
         <meta name="keywords" content="optmyzr review, optmyzr pricing, optmyzr features, optmyzr vs competitors, optmyzr alternatives" />
         <meta name="author" content="SiteOptz" />
@@ -139,7 +139,7 @@ export default function OptmyzrReviewPage({ tool }: OptmyzrReviewPageProps) {
         
         {/* Open Graph Meta Tags */}
         <meta property="og:type" content="article" />
-        <meta property="og:title" content="Optmyzr Review:  | SiteOptz" />
+        <meta property="og:title" content="Optmyzr Review: AI PPC Management Tool | SiteOptz" />
         <meta property="og:description" content="optmyzr review. Compare Optmyzr  features, pricing & alternatives. Expert analysis & user guide for 2025. Get started today!" />
         <meta property="og:url" content="https://siteoptz.ai/reviews/optmyzr" />
         <meta property="og:site_name" content="SiteOptz" />
@@ -150,7 +150,7 @@ export default function OptmyzrReviewPage({ tool }: OptmyzrReviewPageProps) {
         
         {/* Twitter Card Tags */}
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Optmyzr Review:  | SiteOptz" />
+        <meta name="twitter:title" content="Optmyzr Review: AI PPC Management Tool | SiteOptz" />
         <meta name="twitter:description" content="optmyzr review. Compare Optmyzr  features, pricing & alternatives. Expert analysis & user guide for 2025. Get started today!" />
         <meta name="twitter:image" content="https://siteoptz.ai/og-image.png" />
         <meta name="twitter:creator" content="@siteoptz" />

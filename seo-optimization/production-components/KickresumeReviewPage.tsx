@@ -128,7 +128,7 @@ export default function KickresumeReviewPage({ tool }: KickresumeReviewPageProps
     <>
       <Head>
         {/* Primary SEO Tags */}
-        <title>Kickresume Review:  | SiteOptz</title>
+        <title>Kickresume Review: AI Productivity Assistant | SiteOptz</title>
         <meta name="description" content="kickresume review. Compare Kickresume  features, pricing & alternatives. Expert analysis & user guide for 2025. Get started today!" />
         <meta name="keywords" content="kickresume review, kickresume pricing, kickresume features, kickresume vs competitors, kickresume alternatives" />
         <meta name="author" content="SiteOptz" />
@@ -139,7 +139,7 @@ export default function KickresumeReviewPage({ tool }: KickresumeReviewPageProps
         
         {/* Open Graph Meta Tags */}
         <meta property="og:type" content="article" />
-        <meta property="og:title" content="Kickresume Review:  | SiteOptz" />
+        <meta property="og:title" content="Kickresume Review: AI Productivity Assistant | SiteOptz" />
         <meta property="og:description" content="kickresume review. Compare Kickresume  features, pricing & alternatives. Expert analysis & user guide for 2025. Get started today!" />
         <meta property="og:url" content="https://siteoptz.ai/reviews/kickresume" />
         <meta property="og:site_name" content="SiteOptz" />
@@ -150,7 +150,7 @@ export default function KickresumeReviewPage({ tool }: KickresumeReviewPageProps
         
         {/* Twitter Card Tags */}
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Kickresume Review:  | SiteOptz" />
+        <meta name="twitter:title" content="Kickresume Review: AI Productivity Assistant | SiteOptz" />
         <meta name="twitter:description" content="kickresume review. Compare Kickresume  features, pricing & alternatives. Expert analysis & user guide for 2025. Get started today!" />
         <meta name="twitter:image" content="https://siteoptz.ai/og-image.png" />
         <meta name="twitter:creator" content="@siteoptz" />

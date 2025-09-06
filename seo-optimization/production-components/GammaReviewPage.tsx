@@ -128,7 +128,7 @@ export default function GammaReviewPage({ tool }: GammaReviewPageProps) {
     <>
       <Head>
         {/* Primary SEO Tags */}
-        <title>Gamma Review:  | SiteOptz</title>
+        <title>Gamma Review: AI Social Media Management Tool | SiteOptz</title>
         <meta name="description" content="gamma review. Compare Gamma  features, pricing & alternatives. Expert analysis & user guide for 2025. Get started today!" />
         <meta name="keywords" content="gamma review, gamma pricing, gamma features, gamma vs competitors, gamma alternatives" />
         <meta name="author" content="SiteOptz" />
@@ -139,7 +139,7 @@ export default function GammaReviewPage({ tool }: GammaReviewPageProps) {
         
         {/* Open Graph Meta Tags */}
         <meta property="og:type" content="article" />
-        <meta property="og:title" content="Gamma Review:  | SiteOptz" />
+        <meta property="og:title" content="Gamma Review: AI Social Media Management Tool | SiteOptz" />
         <meta property="og:description" content="gamma review. Compare Gamma  features, pricing & alternatives. Expert analysis & user guide for 2025. Get started today!" />
         <meta property="og:url" content="https://siteoptz.ai/reviews/gamma" />
         <meta property="og:site_name" content="SiteOptz" />
@@ -150,7 +150,7 @@ export default function GammaReviewPage({ tool }: GammaReviewPageProps) {
         
         {/* Twitter Card Tags */}
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Gamma Review:  | SiteOptz" />
+        <meta name="twitter:title" content="Gamma Review: AI Social Media Management Tool | SiteOptz" />
         <meta name="twitter:description" content="gamma review. Compare Gamma  features, pricing & alternatives. Expert analysis & user guide for 2025. Get started today!" />
         <meta name="twitter:image" content="https://siteoptz.ai/og-image.png" />
         <meta name="twitter:creator" content="@siteoptz" />

@@ -128,7 +128,7 @@ export default function AhrefsReviewPage({ tool }: AhrefsReviewPageProps) {
     <>
       <Head>
         {/* Primary SEO Tags */}
-        <title>Ahrefs Review:  | SiteOptz</title>
+        <title>Ahrefs Review: AI SEO Optimization Tool | SiteOptz</title>
         <meta name="description" content="ahrefs review. Compare Ahrefs  features, pricing & alternatives. Expert analysis & user guide for 2025. Get started today!" />
         <meta name="keywords" content="ahrefs review, ahrefs pricing, ahrefs features, ahrefs vs competitors, ahrefs alternatives" />
         <meta name="author" content="SiteOptz" />
@@ -139,7 +139,7 @@ export default function AhrefsReviewPage({ tool }: AhrefsReviewPageProps) {
         
         {/* Open Graph Meta Tags */}
         <meta property="og:type" content="article" />
-        <meta property="og:title" content="Ahrefs Review:  | SiteOptz" />
+        <meta property="og:title" content="Ahrefs Review: AI SEO Optimization Tool | SiteOptz" />
         <meta property="og:description" content="ahrefs review. Compare Ahrefs  features, pricing & alternatives. Expert analysis & user guide for 2025. Get started today!" />
         <meta property="og:url" content="https://siteoptz.ai/reviews/ahrefs" />
         <meta property="og:site_name" content="SiteOptz" />
@@ -150,7 +150,7 @@ export default function AhrefsReviewPage({ tool }: AhrefsReviewPageProps) {
         
         {/* Twitter Card Tags */}
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Ahrefs Review:  | SiteOptz" />
+        <meta name="twitter:title" content="Ahrefs Review: AI SEO Optimization Tool | SiteOptz" />
         <meta name="twitter:description" content="ahrefs review. Compare Ahrefs  features, pricing & alternatives. Expert analysis & user guide for 2025. Get started today!" />
         <meta name="twitter:image" content="https://siteoptz.ai/og-image.png" />
         <meta name="twitter:creator" content="@siteoptz" />

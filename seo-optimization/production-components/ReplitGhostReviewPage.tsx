@@ -128,7 +128,7 @@ export default function ReplitGhostReviewPage({ tool }: ReplitGhostReviewPagePro
     <>
       <Head>
         {/* Primary SEO Tags */}
-        <title>Replit Ghost Review:  | SiteOptz</title>
+        <title>Replit Ghost Review: AI Code Assistant | SiteOptz</title>
         <meta name="description" content="replit ghost review. Compare Replit Ghost  features, pricing & alternatives. Expert analysis & user guide for 2025. Get started today!" />
         <meta name="keywords" content="replit ghost review, replit ghost pricing, replit ghost features, replit ghost vs competitors, replit ghost alternatives" />
         <meta name="author" content="SiteOptz" />
@@ -139,7 +139,7 @@ export default function ReplitGhostReviewPage({ tool }: ReplitGhostReviewPagePro
         
         {/* Open Graph Meta Tags */}
         <meta property="og:type" content="article" />
-        <meta property="og:title" content="Replit Ghost Review:  | SiteOptz" />
+        <meta property="og:title" content="Replit Ghost Review: AI Code Assistant | SiteOptz" />
         <meta property="og:description" content="replit ghost review. Compare Replit Ghost  features, pricing & alternatives. Expert analysis & user guide for 2025. Get started today!" />
         <meta property="og:url" content="https://siteoptz.ai/reviews/replit-ghost" />
         <meta property="og:site_name" content="SiteOptz" />
@@ -150,7 +150,7 @@ export default function ReplitGhostReviewPage({ tool }: ReplitGhostReviewPagePro
         
         {/* Twitter Card Tags */}
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Replit Ghost Review:  | SiteOptz" />
+        <meta name="twitter:title" content="Replit Ghost Review: AI Code Assistant | SiteOptz" />
         <meta name="twitter:description" content="replit ghost review. Compare Replit Ghost  features, pricing & alternatives. Expert analysis & user guide for 2025. Get started today!" />
         <meta name="twitter:image" content="https://siteoptz.ai/og-image.png" />
         <meta name="twitter:creator" content="@siteoptz" />

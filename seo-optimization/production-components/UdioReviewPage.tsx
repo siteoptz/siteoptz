@@ -128,7 +128,7 @@ export default function UdioReviewPage({ tool }: UdioReviewPageProps) {
     <>
       <Head>
         {/* Primary SEO Tags */}
-        <title>Udio Review:  | SiteOptz</title>
+        <title>Udio Review: AI Content Creation Platform | SiteOptz</title>
         <meta name="description" content="udio review. Compare Udio  features, pricing & alternatives. Expert analysis & user guide for 2025. Get started today!" />
         <meta name="keywords" content="udio review, udio pricing, udio features, udio vs competitors, udio alternatives" />
         <meta name="author" content="SiteOptz" />
@@ -139,7 +139,7 @@ export default function UdioReviewPage({ tool }: UdioReviewPageProps) {
         
         {/* Open Graph Meta Tags */}
         <meta property="og:type" content="article" />
-        <meta property="og:title" content="Udio Review:  | SiteOptz" />
+        <meta property="og:title" content="Udio Review: AI Content Creation Platform | SiteOptz" />
         <meta property="og:description" content="udio review. Compare Udio  features, pricing & alternatives. Expert analysis & user guide for 2025. Get started today!" />
         <meta property="og:url" content="https://siteoptz.ai/reviews/udio" />
         <meta property="og:site_name" content="SiteOptz" />
@@ -150,7 +150,7 @@ export default function UdioReviewPage({ tool }: UdioReviewPageProps) {
         
         {/* Twitter Card Tags */}
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Udio Review:  | SiteOptz" />
+        <meta name="twitter:title" content="Udio Review: AI Content Creation Platform | SiteOptz" />
         <meta name="twitter:description" content="udio review. Compare Udio  features, pricing & alternatives. Expert analysis & user guide for 2025. Get started today!" />
         <meta name="twitter:image" content="https://siteoptz.ai/og-image.png" />
         <meta name="twitter:creator" content="@siteoptz" />

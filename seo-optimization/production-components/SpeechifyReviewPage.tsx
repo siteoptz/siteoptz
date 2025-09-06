@@ -128,7 +128,7 @@ export default function SpeechifyReviewPage({ tool }: SpeechifyReviewPageProps) 
     <>
       <Head>
         {/* Primary SEO Tags */}
-        <title>Speechify Review:  | SiteOptz</title>
+        <title>Speechify Review: AI Voice Technology | SiteOptz</title>
         <meta name="description" content="speechify review. Compare Speechify  features, pricing & alternatives. Expert analysis & user guide for 2025. Get started today!" />
         <meta name="keywords" content="speechify review, speechify pricing, speechify features, speechify vs competitors, speechify alternatives" />
         <meta name="author" content="SiteOptz" />
@@ -139,7 +139,7 @@ export default function SpeechifyReviewPage({ tool }: SpeechifyReviewPageProps) 
         
         {/* Open Graph Meta Tags */}
         <meta property="og:type" content="article" />
-        <meta property="og:title" content="Speechify Review:  | SiteOptz" />
+        <meta property="og:title" content="Speechify Review: AI Voice Technology | SiteOptz" />
         <meta property="og:description" content="speechify review. Compare Speechify  features, pricing & alternatives. Expert analysis & user guide for 2025. Get started today!" />
         <meta property="og:url" content="https://siteoptz.ai/reviews/speechify" />
         <meta property="og:site_name" content="SiteOptz" />
@@ -150,7 +150,7 @@ export default function SpeechifyReviewPage({ tool }: SpeechifyReviewPageProps) 
         
         {/* Twitter Card Tags */}
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Speechify Review:  | SiteOptz" />
+        <meta name="twitter:title" content="Speechify Review: AI Voice Technology | SiteOptz" />
         <meta name="twitter:description" content="speechify review. Compare Speechify  features, pricing & alternatives. Expert analysis & user guide for 2025. Get started today!" />
         <meta name="twitter:image" content="https://siteoptz.ai/og-image.png" />
         <meta name="twitter:creator" content="@siteoptz" />
