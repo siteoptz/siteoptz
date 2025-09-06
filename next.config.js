@@ -127,7 +127,20 @@ const nextConfig = {
         ],
       },
       {
-        source: '/sitemap*.xml',
+        source: '/sitemap.xml',
+        headers: [
+          {
+            key: 'Content-Type',
+            value: 'application/xml',
+          },
+          {
+            key: 'Cache-Control',
+            value: 'public, max-age=3600', // 1 hour
+          },
+        ],
+      },
+      {
+        source: '/sitemap-:type.xml',
         headers: [
           {
             key: 'Content-Type',
