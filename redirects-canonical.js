@@ -4,16 +4,16 @@
  */
 
 module.exports = [
-  // Redirect www to non-www (using regex to exclude specific files)
+  // Redirect www to non-www for main content (exclude static files)
   {
-    source: '/((?!robots\\.txt|sitemap.*\\.xml).*)',
+    source: '/:path*',
     has: [
       {
         type: 'host',
         value: 'www.siteoptz.ai',
       },
     ],
-    destination: 'https://siteoptz.ai/:match*',
+    destination: 'https://siteoptz.ai/:path*',
     permanent: true,
   },
   
