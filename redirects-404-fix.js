@@ -1,5 +1,156 @@
 // Comprehensive redirects for all 404 URLs
 const redirects404Fix = [
+  // Category query parameter redirects (HIGH PRIORITY)
+  {
+    source: '/tools',
+    has: [{ type: 'query', key: 'category', value: 'Finance AI' }],
+    destination: '/categories/finance-ai',
+    permanent: true,
+  },
+  {
+    source: '/tools',
+    has: [{ type: 'query', key: 'category', value: 'Lead Generation' }],
+    destination: '/categories/lead-generation',
+    permanent: true,
+  },
+  {
+    source: '/tools',
+    has: [{ type: 'query', key: 'category', value: 'UX' }],
+    destination: '/categories/ux',
+    permanent: true,
+  },
+  {
+    source: '/tools',
+    has: [{ type: 'query', key: 'category', value: 'Image Generation' }],
+    destination: '/categories/image-generation',
+    permanent: true,
+  },
+  {
+    source: '/tools',
+    has: [{ type: 'query', key: 'category', value: 'AI Automation' }],
+    destination: '/categories/ai-automation',
+    permanent: true,
+  },
+  {
+    source: '/tools',
+    has: [{ type: 'query', key: 'category', value: 'Paid Search & PPC' }],
+    destination: '/categories/paid-search-ppc',
+    permanent: true,
+  },
+  {
+    source: '/tools',
+    has: [{ type: 'query', key: 'category', value: 'Video Generation' }],
+    destination: '/categories/video-generation',
+    permanent: true,
+  },
+  {
+    source: '/tools',
+    has: [{ type: 'query', key: 'category', value: 'E-commerce' }],
+    destination: '/categories/e-commerce',
+    permanent: true,
+  },
+  {
+    source: '/tools',
+    has: [{ type: 'query', key: 'category', value: 'Email Marketing' }],
+    destination: '/categories/email-marketing',
+    permanent: true,
+  },
+  {
+    source: '/tools',
+    has: [{ type: 'query', key: 'category', value: 'Productivity' }],
+    destination: '/categories/productivity',
+    permanent: true,
+  },
+  {
+    source: '/tools',
+    has: [{ type: 'query', key: 'category', value: 'SEO & Optimization' }],
+    destination: '/categories/seo-optimization',
+    permanent: true,
+  },
+  {
+    source: '/tools',
+    has: [{ type: 'query', key: 'category', value: 'Code Generation' }],
+    destination: '/categories/code-generation',
+    permanent: true,
+  },
+  {
+    source: '/tools',
+    has: [{ type: 'query', key: 'category', value: 'Content Creation' }],
+    destination: '/categories/content-creation',
+    permanent: true,
+  },
+  {
+    source: '/tools',
+    has: [{ type: 'query', key: 'category', value: 'Best Voice AI Tools' }],
+    destination: '/categories/voice-ai',
+    permanent: true,
+  },
+  {
+    source: '/tools',
+    has: [{ type: 'query', key: 'category', value: 'Research & Education' }],
+    destination: '/categories/research-education',
+    permanent: true,
+  },
+  {
+    source: '/tools',
+    has: [{ type: 'query', key: 'category', value: 'Social Media' }],
+    destination: '/categories/social-media',
+    permanent: true,
+  },
+  {
+    source: '/tools',
+    has: [{ type: 'query', key: 'category', value: 'Website Builder' }],
+    destination: '/categories/website-builder',
+    permanent: true,
+  },
+  {
+    source: '/tools',
+    has: [{ type: 'query', key: 'category', value: 'Data Analysis' }],
+    destination: '/categories/data-analysis',
+    permanent: true,
+  },
+  {
+    source: '/tools',
+    has: [{ type: 'query', key: 'category', value: 'AI Education' }],
+    destination: '/categories/ai-education',
+    permanent: true,
+  },
+  {
+    source: '/tools',
+    has: [{ type: 'query', key: 'category', value: 'AI For Business' }],
+    destination: '/categories/ai-for-business',
+    permanent: true,
+  },
+  {
+    source: '/tools',
+    has: [{ type: 'query', key: 'category', value: 'AI Translator' }],
+    destination: '/categories/ai-translator',
+    permanent: true,
+  },
+  {
+    source: '/tools',
+    has: [{ type: 'query', key: 'category', value: 'AI Website Builder' }],
+    destination: '/categories/ai-website-builder',
+    permanent: true,
+  },
+  {
+    source: '/tools',
+    has: [{ type: 'query', key: 'category', value: 'Health AI' }],
+    destination: '/categories/health-ai',
+    permanent: true,
+  },
+  {
+    source: '/tools',
+    has: [{ type: 'query', key: 'category', value: 'Voice AI' }],
+    destination: '/categories/voice-ai',
+    permanent: true,
+  },
+  {
+    source: '/tools',
+    has: [{ type: 'query', key: 'category', value: 'Writing' }],
+    destination: '/categories/writing',
+    permanent: true,
+  },
   // HIGH PRIORITY: Specific non-existent tool redirects (must be first)
   {
     source: '/compare/google-ads/vs/microsoft-ads',
