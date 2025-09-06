@@ -97,7 +97,7 @@ export default function ToolPage({ tool, relatedTools, faqs, allTools }: ToolPag
       <SEOHead
         title={toolMeta?.title || tool.meta?.title}
         description={toolMeta?.description || tool.meta?.description}
-        canonicalUrl={buildCanonicalUrl(`/tools/${tool.slug}`)}
+        canonicalUrl={buildCanonicalUrl(`/reviews/${tool.slug}`)}
         ogImage={tool.logo}
         schemaData={structuredData}
         keywords={toolMeta?.keywords || [`${tool.name}`, `${tool.name} review`, `${tool.name} pricing`, `${tool.name} features`, `${tool.name} alternatives`]}

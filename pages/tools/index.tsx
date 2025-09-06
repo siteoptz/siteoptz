@@ -139,7 +139,7 @@ export default function ToolsPage({ tools, categories, faqs }: { tools: any[], c
             "price": tool.pricing?.monthly === 'Free' ? 0 : tool.pricing?.monthly || 0,
             "priceCurrency": "USD"
           },
-          "url": `${buildCanonicalUrl('/tools')}/${toolName.toLowerCase().replace(/\s+/g, '-')}`
+          "url": buildCanonicalUrl(`/reviews/${tool.slug || toolName.toLowerCase().replace(/\s+/g, '-')}`)
         };
       })
     }

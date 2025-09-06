@@ -263,7 +263,7 @@ San Francisco, CA`
         <meta name="twitter:description" content="Privacy Policy for SiteOptz.ai AI tool review platform." />
         
         {/* Canonical URL */}
-        <link rel="canonical" href="https://www.siteoptz.ai/privacy" />
+        <link rel="canonical" href="https://siteoptz.ai/privacy" />
         
         {/* Robots - Allow indexing for transparency */}
         <meta name="robots" content="index, follow" />

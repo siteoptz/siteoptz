@@ -16,6 +16,10 @@ interface CategoryPageProps {
 }
 
 export default function CategoryPage({ category, tools, content }: CategoryPageProps) {
+  if (!content || !content.seo || !content.seo.title) {
+    return <div>Error: Invalid category content structure</div>;
+  }
+  
   const topTools = tools.slice(0, 6);
   const categorySlug = category.toLowerCase().replace(/[^a-z0-9]+/g, '-');
 
@@ -110,7 +114,7 @@ export default function CategoryPage({ category, tools, content }: CategoryPageP
             __html: JSON.stringify({
               "@context": "https://schema.org",
               "@type": "Article",
-              "headline": content.hero.title,
+              "headline": content.hero?.title || content.seo.title,
               "description": content.seo.description,
               "author": {
                 "@type": "Organization",
@@ -131,7 +135,7 @@ export default function CategoryPage({ category, tools, content }: CategoryPageP
                 "@type": "WebPage",
                 "@id": `https://siteoptz.ai/categories/${categorySlug}`
               },
-              "articleBody": content.introduction.content.join(' ')
+              "articleBody": Array.isArray(content.introduction?.content) ? content.introduction.content.join(' ') : (content.introduction?.content || content.seo.description)
             })
           }}
         />
@@ -212,14 +216,14 @@ export default function CategoryPage({ category, tools, content }: CategoryPageP
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-16">
               <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-                {content.hero.title}
+                {content.hero?.title || content.seo.title}
               </h1>
               <h2 className="text-2xl md:text-3xl font-semibold text-cyan-400 mb-6">
-                {content.hero.subheading}
+                {content.hero?.subheading || `Best ${category} Tools 2025`}
               </h2>
               <div 
                 className="text-xl text-gray-300 max-w-4xl mx-auto mb-8 leading-relaxed"
-                dangerouslySetInnerHTML={{ __html: content.hero.introText }}
+                dangerouslySetInnerHTML={{ __html: content.hero?.introText || content.seo.description }}
               />
               
               {/* Key Stats */}
@@ -251,14 +255,20 @@ export default function CategoryPage({ category, tools, content }: CategoryPageP
             <div className="max-w-4xl mx-auto">
               <div className="bg-black border border-gray-800 rounded-2xl p-8 mb-12">
                 <h3 className="text-3xl font-bold text-white mb-6">
-                  {content.introduction.title}
+                  {content.introduction?.title || `About ${category} Tools`}
                 </h3>
                 <div className="prose prose-lg prose-gray-300 max-w-none">
-                  {content.introduction.content.map((paragraph: string, index: number) => (
-                    <p key={index} className="text-gray-300 leading-relaxed mb-4">
-                      {paragraph}
-                    </p>
-                  ))}
+                  {Array.isArray(content.introduction?.content) ? 
+                    content.introduction.content.map((paragraph: string, index: number) => (
+                      <p key={index} className="text-gray-300 leading-relaxed mb-4">
+                        {paragraph}
+                      </p>
+                    )) : (
+                      <p className="text-gray-300 leading-relaxed mb-4">
+                        {content.introduction?.content || content.seo.description}
+                      </p>
+                    )
+                  }
                 </div>
               </div>
             </div>
@@ -376,47 +386,51 @@ export default function CategoryPage({ category, tools, content }: CategoryPageP
         </section>
 
         {/* Implementation Examples Section */}
-        <section className="py-16">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="max-w-4xl mx-auto">
-              <h2 className="text-3xl font-bold text-white mb-8 text-center">
-                Implementation Guide
-              </h2>
-              
-              <div className="bg-black border border-gray-800 rounded-2xl p-8">
-                <h3 className="text-2xl font-bold text-white mb-6">
-                  {content.implementation.title}
-                </h3>
+        {content.implementation && (
+          <section className="py-16">
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+              <div className="max-w-4xl mx-auto">
+                <h2 className="text-3xl font-bold text-white mb-8 text-center">
+                  Implementation Guide
+                </h2>
                 
-                <div className="space-y-8">
-                  {(content.implementation?.steps || []).map((step: any, index: number) => (
-                    <div key={index} className="flex">
-                      <div className="flex-shrink-0 w-8 h-8 bg-cyan-600 rounded-full flex items-center justify-center mr-4">
-                        <span className="text-white font-bold text-sm">{index + 1}</span>
+                <div className="bg-black border border-gray-800 rounded-2xl p-8">
+                  <h3 className="text-2xl font-bold text-white mb-6">
+                    {content.implementation.title || `How to Implement ${category} Solutions`}
+                  </h3>
+                  
+                  <div className="space-y-8">
+                    {(content.implementation?.steps || []).map((step: any, index: number) => (
+                      <div key={index} className="flex">
+                        <div className="flex-shrink-0 w-8 h-8 bg-cyan-600 rounded-full flex items-center justify-center mr-4">
+                          <span className="text-white font-bold text-sm">{index + 1}</span>
+                        </div>
+                        <div>
+                          <h4 className="text-lg font-semibold text-white mb-2">{step.title}</h4>
+                          <p className="text-gray-300 mb-3">{step.description}</p>
+                          {step.details && (
+                            <ul className="list-disc list-inside text-gray-400 text-sm space-y-1">
+                              {(step.details || []).map((detail: string, detailIndex: number) => (
+                                <li key={detailIndex}>{detail}</li>
+                              ))}
+                            </ul>
+                          )}
+                        </div>
                       </div>
-                      <div>
-                        <h4 className="text-lg font-semibold text-white mb-2">{step.title}</h4>
-                        <p className="text-gray-300 mb-3">{step.description}</p>
-                        {step.details && (
-                          <ul className="list-disc list-inside text-gray-400 text-sm space-y-1">
-                            {(step.details || []).map((detail: string, detailIndex: number) => (
-                              <li key={detailIndex}>{detail}</li>
-                            ))}
-                          </ul>
-                        )}
-                      </div>
+                    ))}
+                  </div>
+                  
+                  {content.implementation.expectedResults && (
+                    <div className="mt-8 p-6 bg-gradient-to-r from-green-900/20 to-blue-900/20 border border-green-800/30 rounded-lg">
+                      <h4 className="text-lg font-semibold text-white mb-2">Expected Results</h4>
+                      <p className="text-gray-300">{content.implementation.expectedResults}</p>
                     </div>
-                  ))}
-                </div>
-                
-                <div className="mt-8 p-6 bg-gradient-to-r from-green-900/20 to-blue-900/20 border border-green-800/30 rounded-lg">
-                  <h4 className="text-lg font-semibold text-white mb-2">Expected Results</h4>
-                  <p className="text-gray-300">{content.implementation.expectedResults}</p>
+                  )}
                 </div>
               </div>
             </div>
-          </div>
-        </section>
+          </section>
+        )}
 
         {/* FAQ Section */}
         <section className="py-16">
@@ -516,11 +530,28 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
   const allTools = loadUnifiedToolsData(fs, path);
   const tools = allTools.filter(tool => tool.category === category);
 
-  // Load category content
-  const content = categoryContent[category];
+  // Load category content with proper mapping from slug to content key
+  const contentKeyMapping: Record<string, string> = {
+    'ai-education': 'AI Education',
+    'ai-for-business': 'AI For Business', 
+    'ai-translator': 'AI Translator',
+    'ai-website-builder': 'AI Website Builder',
+    'finance-ai': 'Finance AI',
+    'health-ai': 'Health AI',
+    'lead-generation': 'Lead Generation',
+    'voice-ai': 'Voice AI',
+    'writing': 'Writing'
+  };
+  
+  // First try direct category name, then try the mapping
+  let content = categoryContent[category];
+  if (!content && contentKeyMapping[categorySlug]) {
+    content = categoryContent[contentKeyMapping[categorySlug]];
+  }
   
   if (!content) {
-    console.error(`Category content not found for: ${category}`);
+    console.error(`Category content not found for: ${category} (slug: ${categorySlug})`);
+    console.error(`Available keys: ${Object.keys(categoryContent)}`);
     return { notFound: true };
   }
 

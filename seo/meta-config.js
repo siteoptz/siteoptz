@@ -322,7 +322,45 @@ export const getPageConfig = (pageKey) => {
 };
 
 export const buildCanonicalUrl = (path) => {
-  return `${siteConfig.baseUrl}${path}`;
+  // Ensure we're using the correct base URL without www
+  const canonicalBase = siteConfig.baseUrl.replace('www.', '');
+  
+  // Remove any leading slash from the path
+  const cleanPath = path.startsWith('/') ? path : `/${path}`;
+  
+  // Handle special cases for query parameters
+  if (cleanPath.includes('?')) {
+    const [basePath, queryString] = cleanPath.split('?');
+    
+    // Handle tool category URLs - redirect to proper category pages
+    if (basePath === '/tools' && queryString.includes('category=')) {
+      const categoryMatch = queryString.match(/category=([^&]*)/);
+      if (categoryMatch) {
+        const category = decodeURIComponent(categoryMatch[1])
+          .toLowerCase()
+          .replace(/&/g, '-and-')
+          .replace(/%20/g, '-')
+          .replace(/\s+/g, '-')
+          .replace(/[^a-z0-9-]+/g, '')
+          .replace(/-+/g, '-')
+          .replace(/^-+|-+$/g, '');
+        return `${canonicalBase}/categories/${category}`;
+      }
+    }
+    
+    // For other query parameters, use the base path without params
+    return `${canonicalBase}${basePath}`;
+  }
+  
+  // Handle /tools/* URLs that should redirect to /reviews/*
+  if (cleanPath.startsWith('/tools/') && !cleanPath.includes('compare') && !cleanPath.includes('roi')) {
+    const toolSlug = cleanPath.replace('/tools/', '');
+    if (toolSlug && !toolSlug.includes('/')) {
+      return `${canonicalBase}/reviews/${toolSlug}`;
+    }
+  }
+  
+  return `${canonicalBase}${cleanPath}`;
 };
 
 export const buildOgImageUrl = (path, title) => {

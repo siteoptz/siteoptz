@@ -1,5 +1,6 @@
 /** @type {import('next').NextConfig} */
 const redirects404Fix = require('./redirects-404-fix');
+const canonicalRedirects = require('./redirects-canonical');
 
 const nextConfig = {
   reactStrictMode: true,
@@ -117,10 +118,11 @@ const nextConfig = {
 
   // Redirects for SEO
   async redirects() {
-    // Combine existing redirects with comprehensive 404 fixes
+    // Combine canonical redirects, 404 fixes, and existing redirects
     return [
+      ...canonicalRedirects,
       ...redirects404Fix,
-      // Keep any unique existing redirects that aren't in the 404 fix file
+      // Keep any unique existing redirects that aren't in the other files
       {
         source: '/ai-tools',
         destination: '/tools',

@@ -24,7 +24,7 @@ const ComparisonPage: React.FC<ComparisonPageProps> = ({ tool1, tool2, faqs1, fa
     { name: 'Home', url: buildCanonicalUrl('/') },
     { name: 'AI Tools', url: buildCanonicalUrl('/tools') },
     { name: 'Compare', url: buildCanonicalUrl('/compare') },
-    { name: `${tool1.name} vs ${tool2.name}`, url: buildCanonicalUrl(`/compare/${tool1.slug}/vs/${tool2.slug}`) }
+    { name: `${tool1.name} vs ${tool2.name}`, url: buildCanonicalUrl(`/compare/${tool1.slug}-vs-${tool2.slug}`) }
   ]);
   
   // Combine all schemas
@@ -37,7 +37,7 @@ const ComparisonPage: React.FC<ComparisonPageProps> = ({ tool1, tool2, faqs1, fa
         "@type": "WebPage",
         "name": comparisonMeta?.title,
         "description": comparisonMeta?.description,
-        "url": buildCanonicalUrl(`/compare/${tool1.slug}/vs/${tool2.slug}`)
+        "url": buildCanonicalUrl(`/compare/${tool1.slug}-vs-${tool2.slug}`)
       }
     ].filter(Boolean)
   };
@@ -47,7 +47,7 @@ const ComparisonPage: React.FC<ComparisonPageProps> = ({ tool1, tool2, faqs1, fa
       <SEOHead
         title={comparisonMeta?.title || `${tool1.name} vs ${tool2.name}: Complete Comparison [2025] | SiteOptz`}
         description={comparisonMeta?.description || `Compare ${tool1.name} and ${tool2.name} features, pricing, pros and cons. Expert analysis with benchmarks to help you choose the right AI tool for your needs.`}
-        canonicalUrl={buildCanonicalUrl(`/compare/${tool1.slug}/vs/${tool2.slug}`)}
+        canonicalUrl={buildCanonicalUrl(`/compare/${tool1.slug}-vs-${tool2.slug}`)}
         ogImage={`/images/comparisons/${tool1.slug}-vs-${tool2.slug}.png`}
         schemaData={combinedSchema}
         keywords={comparisonMeta?.keywords || [`${tool1.name} vs ${tool2.name}`, `${tool1.name} comparison`, `${tool2.name} comparison`, 'AI tool comparison']}
