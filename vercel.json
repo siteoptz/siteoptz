@@ -1,49 +1,44 @@
 {
-  "functions": {
-    "pages/api/**/*.js": {
-      "maxDuration": 30
-    },
-    "pages/api/**/*.ts": {
-      "maxDuration": 30
-    }
-  },
-  "rewrites": [
+  "routes": [
     {
-      "source": "/sitemap.xml",
-      "destination": "/api/sitemap"
-    }
-  ],
-  "headers": [
-    {
-      "source": "/api/(.*)",
-      "headers": [
-        {
-          "key": "Cache-Control",
-          "value": "s-maxage=60, stale-while-revalidate"
-        }
-      ]
-    }
-  ],
-  "redirects": [
-    {
-      "source": "/tools/copy.ai",
-      "destination": "/tools/copy-ai",
-      "permanent": true
+      "src": "/robots.txt",
+      "dest": "/robots.txt",
+      "headers": {
+        "Content-Type": "text/plain",
+        "Cache-Control": "public, max-age=86400"
+      }
     },
     {
-      "source": "/categories/:category/",
-      "destination": "/categories/:category",
-      "permanent": true
+      "src": "/sitemap.xml",
+      "dest": "/sitemap.xml", 
+      "headers": {
+        "Content-Type": "application/xml",
+        "Cache-Control": "public, max-age=3600"
+      }
     },
     {
-      "source": "/tools/:tool/",
-      "destination": "/tools/:tool",
-      "permanent": true
+      "src": "/sitemap-main.xml",
+      "dest": "/sitemap-main.xml",
+      "headers": {
+        "Content-Type": "application/xml", 
+        "Cache-Control": "public, max-age=3600"
+      }
     },
     {
-      "source": "/compare/:comparison/",
-      "destination": "/compare/:comparison",
-      "permanent": true
+      "src": "/sitemap-tools.xml", 
+      "dest": "/sitemap-tools.xml",
+      "headers": {
+        "Content-Type": "application/xml",
+        "Cache-Control": "public, max-age=3600"
+      }
+    },
+    {
+      "src": "/sitemap-comparisons.xml",
+      "dest": "/sitemap-comparisons.xml", 
+      "headers": {
+        "Content-Type": "application/xml",
+        "Cache-Control": "public, max-age=3600"
+      }
     }
   ]
 }
