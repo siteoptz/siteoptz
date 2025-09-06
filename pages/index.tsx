@@ -12,6 +12,7 @@ import ExternalLink from '../components/ExternalLink';
 import { authoritativeLinks } from '../utils/externalLinks';
 import FAQSection from '../components/FAQ/FAQSection';
 import HeroSection from '../components/HeroSection';
+import ToolLogo from '../components/ToolLogo';
 
 interface Tool {
   id: string;
@@ -122,21 +123,12 @@ export default function HomePage({ featuredTools, popularComparisons, faqs }: Ho
                     {tools.slice(0, 4).map((tool: Tool) => (
                       <div key={tool.id} className="bg-black border border-gray-800 rounded-2xl shadow-lg hover:shadow-xl transition-all hover:border-gray-600 p-6">
                         <div className="flex items-center gap-3 mb-4">
-                          <div className="w-12 h-12 bg-gray-900 rounded-lg flex items-center justify-center border border-gray-700">
-                            <img 
-                              src={tool.logo} 
-                              alt={`${tool.name} AI tool logo - ${tool.category || 'artificial intelligence software'} for professional use`}
-                              className="w-8 h-8 object-contain"
-                              onError={(e) => {
-                                e.currentTarget.style.display = 'none';
-                                const sibling = e.currentTarget.nextElementSibling as HTMLElement;
-                                if (sibling) sibling.style.display = 'flex';
-                              }}
-                            />
-                            <div className="w-8 h-8 bg-gradient-to-br from-blue-500 to-purple-600 rounded-lg flex items-center justify-center text-white text-sm font-bold" style={{display: 'none'}}>
-                              {tool.name.charAt(0)}
-                            </div>
-                          </div>
+                          <ToolLogo 
+                            toolName={tool.name}
+                            logoUrl={tool.logo}
+                            size="md"
+                            className="border border-gray-700"
+                          />
                           <div className="min-w-0 flex-1">
                             <h4 className="text-lg font-semibold text-white truncate">{tool.name}</h4>
                             <div className="flex items-center gap-1">
@@ -224,41 +216,23 @@ export default function HomePage({ featuredTools, popularComparisons, faqs }: Ho
                 <div key={index} className="bg-black border border-gray-800 rounded-2xl shadow-lg hover:shadow-xl transition-all hover:border-gray-600 p-6">
                   <div className="flex items-center justify-between mb-4">
                     <div className="flex items-center gap-3">
-                      <div className="w-10 h-10 bg-gray-900 rounded-lg flex items-center justify-center border border-gray-700">
-                        <img 
-                          src={comparison.tool1.logo} 
-                          alt={`${comparison.tool1.name} AI tool comparison logo`}
-                          className="w-8 h-8 object-contain"
-                          onError={(e) => {
-                            e.currentTarget.style.display = 'none';
-                            const sibling = e.currentTarget.nextElementSibling as HTMLElement;
-                            if (sibling) sibling.style.display = 'flex';
-                          }}
-                        />
-                        <div className="w-8 h-8 bg-gradient-to-br from-blue-500 to-purple-600 rounded-md flex items-center justify-center text-white text-xs font-bold" style={{display: 'none'}}>
-                          {comparison.tool1.name.charAt(0)}
-                        </div>
-                      </div>
+                      <ToolLogo 
+                        toolName={comparison.tool1.name}
+                        logoUrl={comparison.tool1.logo}
+                        size="sm"
+                        className="border border-gray-700"
+                      />
                       <span className="font-semibold text-sm text-white">{comparison.tool1.name}</span>
                     </div>
                     <div className="text-gray-400 font-bold text-sm">VS</div>
                     <div className="flex items-center gap-3">
                       <span className="font-semibold text-sm text-white">{comparison.tool2.name}</span>
-                      <div className="w-10 h-10 bg-gray-900 rounded-lg flex items-center justify-center border border-gray-700">
-                        <img 
-                          src={comparison.tool2.logo} 
-                          alt={`${comparison.tool2.name} AI tool comparison logo`}
-                          className="w-8 h-8 object-contain"
-                          onError={(e) => {
-                            e.currentTarget.style.display = 'none';
-                            const sibling = e.currentTarget.nextElementSibling as HTMLElement;
-                            if (sibling) sibling.style.display = 'flex';
-                          }}
-                        />
-                        <div className="w-8 h-8 bg-gradient-to-br from-green-500 to-blue-600 rounded-md flex items-center justify-center text-white text-xs font-bold" style={{display: 'none'}}>
-                          {comparison.tool2.name.charAt(0)}
-                        </div>
-                      </div>
+                      <ToolLogo 
+                        toolName={comparison.tool2.name}
+                        logoUrl={comparison.tool2.logo}
+                        size="sm"
+                        className="border border-gray-700"
+                      />
                     </div>
                   </div>
 

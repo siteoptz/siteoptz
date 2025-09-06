@@ -1,5 +1,6 @@
 import React, { useState, useMemo } from 'react';
 import { Calculator, Users, Zap, DollarSign, Calendar } from 'lucide-react';
+import ToolLogo from '../ToolLogo';
 
 export default function PricingCalculator({ selectedTools = [] }) {
   const [inputs, setInputs] = useState({
@@ -178,16 +179,12 @@ export default function PricingCalculator({ selectedTools = [] }) {
               return (
                 <div key={tool.id} className="bg-white rounded-lg shadow-lg p-6">
                   <div className="flex items-center gap-3 mb-6">
-                    <div className="w-10 h-10 bg-gray-100 rounded-lg flex items-center justify-center">
-                      <img 
-                        src={tool.logo} 
-                        alt={`${tool.name} logo`}
-                        className="w-8 h-8 object-contain"
-                        onError={(e) => {
-                          e.currentTarget.src = '/images/placeholder-logo.png';
-                        }}
-                      />
-                    </div>
+                    <ToolLogo 
+                      toolName={tool.name}
+                      logoUrl={tool.logo}
+                      size="sm"
+                      className="bg-gray-100"
+                    />
                     <div>
                       <h3 className="text-lg font-bold text-gray-900">{tool.name}</h3>
                       <p className="text-gray-600">by {tool.vendor}</p>

@@ -6,6 +6,7 @@ import ComparisonTable from './ComparisonTable';
 import PricingCalculator from './PricingCalculator';
 import FAQSection from './FAQSection';
 import EmailCapture from './EmailCapture';
+import ToolLogo from './ToolLogo';
 
 const AIToolsComparisonPage = () => {
   const { tool1, tool2 } = useParams();
@@ -286,14 +287,13 @@ const AIToolsComparisonPage = () => {
                       className="block p-4 border border-gray-200 rounded-lg hover:border-blue-300 hover:shadow-md transition-all"
                     >
                       <div className="flex items-center mb-2">
-                        <img 
-                          src={tool.logo_url} 
-                          alt={`${tool.tool_name} logo`}
-                          className="w-8 h-8 rounded mr-3"
-                          onError={(e) => {
-                            e.target.src = '/images/placeholder-logo.png';
-                          }}
-                        />
+                        <div className="mr-3">
+                          <ToolLogo 
+                            toolName={tool.tool_name}
+                            logoUrl={tool.logo_url}
+                            size="sm"
+                          />
+                        </div>
                         <span className="font-medium text-gray-900">{tool.tool_name}</span>
                       </div>
                       <div className="text-sm text-gray-600">

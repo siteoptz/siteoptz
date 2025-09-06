@@ -1,5 +1,6 @@
 import React, { useState, useMemo } from 'react';
 import { loadUnifiedToolsData } from '../../utils/unifiedDataAdapter';
+import ToolLogo from '../ToolLogo';
 
 const ComparisonTable = ({ tools = [], selectedTools = [], onToolSelect, showAllFeatures = false }) => {
   const [sortBy, setSortBy] = useState('name');
@@ -171,13 +172,10 @@ const ComparisonTable = ({ tools = [], selectedTools = [], onToolSelect, showAll
                   </td>
                   <td className="px-6 py-4 whitespace-nowrap">
                     <div className="flex items-center">
-                      <img 
-                        className="h-10 w-10 rounded-lg object-contain" 
-                        src={tool.logo || '/images/tools/placeholder-logo.svg'} 
-                        alt={`${tool.name} logo`}
-                        onError={(e) => {
-                          e.target.src = '/images/tools/placeholder-logo.svg';
-                        }}
+                      <ToolLogo 
+                        toolName={tool.name}
+                        logoUrl={tool.logo}
+                        size="sm"
                       />
                       <div className="ml-4">
                         <div className="text-sm font-medium text-gray-900">{tool.name}</div>

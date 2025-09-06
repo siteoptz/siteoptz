@@ -1,5 +1,6 @@
 import React from 'react';
 import aiToolsData from '../aiToolsData.json';
+import ToolLogo from './ToolLogo';
 
 const HeroSection = ({ 
   toolName = null, 
@@ -148,13 +149,11 @@ const HeroSection = ({
                 {content.logos.map((logo, index) => (
                   <div key={index} className="flex items-center gap-4">
                     <div className="relative">
-                      <img 
-                        src={logo.src} 
-                        alt={logo.alt}
-                        className="w-16 h-16 rounded-lg object-cover shadow-md"
-                        onError={(e) => {
-                          e.target.src = '/images/placeholder-logo.png';
-                        }}
+                      <ToolLogo 
+                        toolName={logo.name}
+                        logoUrl={logo.src}
+                        size="lg"
+                        className="shadow-md"
                       />
                       {content.logos.length === 2 && index === 0 && (
                         <div className="absolute -right-4 top-1/2 transform -translate-y-1/2 bg-gray-300 text-gray-600 px-2 py-1 rounded-full text-sm font-medium">

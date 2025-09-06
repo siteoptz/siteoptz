@@ -5,6 +5,7 @@ import ToolComparisonTable from '../components/ToolComparisonTable';
 import PricingCalculator from '../components/PricingCalculator';
 import PricingCalculatorSimple from '../components/PricingCalculatorSimple';
 import FAQSection from '../components/FAQSection';
+import ToolLogo from '../components/ToolLogo';
 import { 
   convertToSimplePricingFormat, 
   calculateOverallRating,
@@ -266,9 +267,11 @@ export default function DemoPage({ tools, faqs }: DemoPageProps) {
             {processedTools.slice(0, 6).map(tool => (
               <div key={tool.id} className="bg-white rounded-lg shadow-sm p-6 hover:shadow-lg transition-shadow">
                 <div className="flex items-start justify-between mb-4">
-                  {tool.logo && (
-                    <img src={tool.logo} alt={tool.name} className="w-12 h-12 object-contain" />
-                  )}
+                  <ToolLogo 
+                    toolName={tool.name}
+                    logoUrl={tool.logo}
+                    size="md"
+                  />
                   <div className="text-2xl font-bold text-yellow-500">
                     {calculateOverallRating(tool.benchmarks)}
                   </div>

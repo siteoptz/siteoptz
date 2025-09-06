@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import aiToolsData from '../aiToolsData.json';
+import ToolLogo from './ToolLogo';
 
 const PricingCalculator = ({ selectedTools = [] }) => {
   const [inputs, setInputs] = useState({
@@ -166,14 +167,13 @@ const PricingCalculator = ({ selectedTools = [] }) => {
               }`}
             >
               <div className="flex items-center mb-2">
-                <img 
-                  src={tool.logo_url} 
-                  alt={`${tool.tool_name} logo`}
-                  className="w-6 h-6 rounded mr-2"
-                  onError={(e) => {
-                    e.target.src = '/images/placeholder-logo.png';
-                  }}
-                />
+                <div className="mr-2">
+                  <ToolLogo 
+                    toolName={tool.tool_name}
+                    logoUrl={tool.logo_url}
+                    size="sm"
+                  />
+                </div>
                 <span className="text-sm font-medium">{tool.tool_name}</span>
               </div>
               <div className="text-xs text-gray-500">
@@ -197,14 +197,13 @@ const PricingCalculator = ({ selectedTools = [] }) => {
               return (
                 <div key={tool.tool_name} className="border border-gray-200 rounded-lg p-6">
                   <div className="flex items-center mb-4">
-                    <img 
-                      src={tool.logo_url} 
-                      alt={`${tool.tool_name} logo`}
-                      className="w-8 h-8 rounded mr-3"
-                      onError={(e) => {
-                        e.target.src = '/images/placeholder-logo.png';
-                      }}
-                    />
+                    <div className="mr-3">
+                      <ToolLogo 
+                        toolName={tool.tool_name}
+                        logoUrl={tool.logo_url}
+                        size="sm"
+                      />
+                    </div>
                     <div>
                       <h4 className="font-semibold text-gray-900">{tool.tool_name}</h4>
                       <p className="text-sm text-gray-500">{tool.vendor}</p>

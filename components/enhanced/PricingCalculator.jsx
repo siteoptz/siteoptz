@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useMemo } from 'react';
+import ToolLogo from '../ToolLogo';
 
 const PricingCalculator = ({ tools = [], selectedTools = [], onCalculationUpdate }) => {
   const [teamSize, setTeamSize] = useState(5);
@@ -206,14 +207,13 @@ const PricingCalculator = ({ tools = [], selectedTools = [], onCalculationUpdate
                     <tr key={calc.tool.id}>
                       <td className="px-4 py-3">
                         <div className="flex items-center">
-                          <img
-                            className="h-8 w-8 rounded object-contain mr-3"
-                            src={calc.tool.logo || '/images/tools/placeholder-logo.svg'}
-                            alt={`${calc.tool.name} logo`}
-                            onError={(e) => {
-                              e.target.src = '/images/tools/placeholder-logo.svg';
-                            }}
-                          />
+                          <div className="mr-3">
+                            <ToolLogo 
+                              toolName={calc.tool.name}
+                              logoUrl={calc.tool.logo}
+                              size="sm"
+                            />
+                          </div>
                           <span className="text-sm font-medium text-gray-900">{calc.tool.name}</span>
                         </div>
                       </td>

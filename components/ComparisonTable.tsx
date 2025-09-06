@@ -1,5 +1,6 @@
 import React, { useState, useMemo } from 'react';
 import { ChevronUp, ChevronDown, Check, X, Star, Filter, Search } from 'lucide-react';
+import ToolLogo from './ToolLogo';
 
 interface Tool {
   id: string;
@@ -322,16 +323,13 @@ const ComparisonTable: React.FC<ComparisonTableProps> = ({
                 )}
                 <td className="px-6 py-4">
                   <div className="flex items-center">
-                    {tool.logo && (
-                      <img 
-                        src={tool.logo} 
-                        alt={`${tool.name} logo`}
-                        className="w-10 h-10 rounded-lg mr-3 object-contain"
-                        onError={(e: any) => {
-                          e.target.style.display = 'none';
-                        }}
+                    <div className="mr-3">
+                      <ToolLogo 
+                        toolName={tool.name}
+                        logoUrl={tool.logo}
+                        size="sm"
                       />
-                    )}
+                    </div>
                     <div>
                       <div className="text-sm font-medium text-gray-900">{tool.name}</div>
                       <div className="text-sm text-gray-500">

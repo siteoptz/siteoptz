@@ -1,5 +1,6 @@
 import React from 'react';
 import { ArrowRight, Star, Download } from 'lucide-react';
+import ToolLogo from '../ToolLogo';
 
 export default function HeroSection({ tool }) {
   const startingPrice = tool.pricingPlans.find(plan => plan.monthlyPrice > 0)?.monthlyPrice || 0;
@@ -97,16 +98,12 @@ export default function HeroSection({ tool }) {
             <div className="bg-white rounded-2xl shadow-xl p-8 border">
               {/* Tool Logo */}
               <div className="flex items-center gap-4 mb-6">
-                <div className="w-16 h-16 bg-gray-100 rounded-xl flex items-center justify-center">
-                  <img 
-                    src={tool.logo} 
-                    alt={`${tool.name} logo`}
-                    className="w-12 h-12 object-contain"
-                    onError={(e) => {
-                      e.currentTarget.src = '/images/placeholder-logo.png';
-                    }}
-                  />
-                </div>
+                <ToolLogo 
+                  toolName={tool.name}
+                  logoUrl={tool.logo}
+                  size="lg"
+                  className="bg-gray-100"
+                />
                 <div>
                   <h2 className="text-2xl font-bold text-gray-900">{tool.name}</h2>
                   <p className="text-gray-600">{tool.description.substring(0, 50)}...</p>
