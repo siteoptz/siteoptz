@@ -4,18 +4,9 @@
  */
 
 module.exports = [
-  // Redirect www to non-www for main content (exclude static files)
-  {
-    source: '/:path*',
-    has: [
-      {
-        type: 'host',
-        value: 'www.siteoptz.ai',
-      },
-    ],
-    destination: 'https://siteoptz.ai/:path*',
-    permanent: true,
-  },
+  // Note: Vercel is redirecting siteoptz.ai → www.siteoptz.ai at DNS level
+  // So we align with that and use www.siteoptz.ai as canonical domain
+  // No redirect needed here since Vercel handles non-www → www
   
   // Redirect tool category query parameters to category pages
   {
