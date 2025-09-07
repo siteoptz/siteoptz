@@ -5,7 +5,18 @@ import Link from 'next/link';
 import ToolLogo from '../../components/ToolLogo';
 import FAQSection from '../../components/comparison/FAQSection';
 
-export default function DivedeckAipoweredDeckBuilderReviewPage() {
+interface DivedeckAipoweredDeckBuilderReviewPageProps {
+  tool?: {
+    name: string;
+    category: string;
+    description: string;
+    website: string;
+    rating: number;
+    slug: string;
+  };
+}
+
+export default function DivedeckAipoweredDeckBuilderReviewPage({ tool }: DivedeckAipoweredDeckBuilderReviewPageProps = {}) {
   // Schema markup for SEO
   const reviewSchema = {
     "@context": "https://schema.org",
@@ -106,7 +117,7 @@ export default function DivedeckAipoweredDeckBuilderReviewPage() {
     <>
       <Head>
         {/* Primary SEO Tags */}
-        <title>DiveDeck - AI-Powered Deck Builder Review: Complete Productivity Tool Analysis | SiteOptz</title>
+        <title>{tool?.name || 'Divedeck Aipowered Deck Builder'} Review: Complete Analysis | SiteOptz</title>
         <meta name="description" content="Comprehensive DiveDeck - AI-Powered Deck Builder review. Compare DiveDeck - AI-Powered Deck Builder features, pricing & alternatives. Expert analysis & user guide for 2025. Get started today!" />
         <meta name="keywords" content="divedeck - ai-powered deck builder review, divedeck - ai-powered deck builder pricing, divedeck - ai-powered deck builder features, divedeck - ai-powered deck builder alternatives, productivity" />
         <meta name="author" content="SiteOptz" />

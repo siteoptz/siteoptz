@@ -5,7 +5,18 @@ import Link from 'next/link';
 import ToolLogo from '../../components/ToolLogo';
 import FAQSection from '../../components/comparison/FAQSection';
 
-export default function TopicalAuthorityForSeoGptGeneratorReviewPage() {
+interface TopicalAuthorityForSeoGptGeneratorReviewPageProps {
+  tool?: {
+    name: string;
+    category: string;
+    description: string;
+    website: string;
+    rating: number;
+    slug: string;
+  };
+}
+
+export default function TopicalAuthorityForSeoGptGeneratorReviewPage({ tool }: TopicalAuthorityForSeoGptGeneratorReviewPageProps = {}) {
   // Schema markup for SEO
   const reviewSchema = {
     "@context": "https://schema.org",
@@ -106,7 +117,7 @@ export default function TopicalAuthorityForSeoGptGeneratorReviewPage() {
     <>
       <Head>
         {/* Primary SEO Tags */}
-        <title>Topical Authority For SEO GPT Generator Review: Complete SEO & Optimization Tool Analysis | SiteOptz</title>
+        <title>{tool?.name || 'Topical Authority For SEO Gpt Generator'} Review: Complete Analysis | SiteOptz</title>
         <meta name="description" content="Comprehensive Topical Authority For SEO GPT Generator review. Compare Topical Authority For SEO GPT Generator features, pricing & alternatives. Expert analysis & user guide for 2025. Get started today!" />
         <meta name="keywords" content="topical authority for seo gpt generator review, topical authority for seo gpt generator pricing, topical authority for seo gpt generator features, topical authority for seo gpt generator alternatives, seo & optimization" />
         <meta name="author" content="SiteOptz" />

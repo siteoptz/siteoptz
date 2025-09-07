@@ -7,7 +7,7 @@ const TrueclicksReviewPage: React.FC<TrueclicksReviewPageProps> = () => {
   return (
     <>
       <Head>
-        <title>TrueClicks Review [2025] | SiteOptz</title>
+        <title>{tool?.name || 'Trueclicks'} Review: Complete Analysis | SiteOptz</title>
         <meta 
           name="description" 
           content="TrueClicks review. TrueClicks is a click fraud protection platform that uses machine learning algorithms to detect and prevent invalid traffic in PPC campaigns... Features, pricing & alternatives." 

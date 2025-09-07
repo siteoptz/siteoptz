@@ -5,7 +5,18 @@ import Link from 'next/link';
 import ToolLogo from '../../components/ToolLogo';
 import FAQSection from '../../components/comparison/FAQSection';
 
-export default function WebsiteGeneratorMetaAiReviewPage() {
+interface WebsiteGeneratorMetaAiReviewPageProps {
+  tool?: {
+    name: string;
+    category: string;
+    description: string;
+    website: string;
+    rating: number;
+    slug: string;
+  };
+}
+
+export default function WebsiteGeneratorMetaAiReviewPage({ tool }: WebsiteGeneratorMetaAiReviewPageProps = {}) {
   // Schema markup for SEO
   const reviewSchema = {
     "@context": "https://schema.org",
@@ -106,7 +117,7 @@ export default function WebsiteGeneratorMetaAiReviewPage() {
     <>
       <Head>
         {/* Primary SEO Tags */}
-        <title>Website Generator Meta AI Review: Complete Code Generation Tool Analysis | SiteOptz</title>
+        <title>{tool?.name || 'Website Generator Meta AI'} Review: Complete Analysis | SiteOptz</title>
         <meta name="description" content="Comprehensive Website Generator Meta AI review. Compare Website Generator Meta AI features, pricing & alternatives. Expert analysis & user guide for 2025. Get started today!" />
         <meta name="keywords" content="website generator meta ai review, website generator meta ai pricing, website generator meta ai features, website generator meta ai alternatives, code generation" />
         <meta name="author" content="SiteOptz" />

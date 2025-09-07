@@ -1,13 +1,22 @@
 import React from 'react';
 import Head from 'next/head';
 
-interface RunwaymlReviewPageProps {}
+interface RunwayMlReviewPageProps {
+  tool?: {
+    name: string;
+    category: string;
+    description: string;
+    website: string;
+    rating: number;
+    slug: string;
+  };
+}
 
-const RunwaymlReviewPage: React.FC<RunwaymlReviewPageProps> = () => {
+const RunwaymlReviewPage: React.FC<RunwayMlReviewPageProps> = ({ tool } = {}) => {
   return (
     <>
       <Head>
-        <title>RunwayML Review, Pricing, Features & Alternatives [2025]</title>
+        <title>{tool?.name || 'Runway Ml'} Review: Complete Analysis | SiteOptz</title>
         <meta 
           name="description" 
           content="Comprehensive review of RunwayML. AI-powered video generation and editing platform with Gen-3 Alpha model" 

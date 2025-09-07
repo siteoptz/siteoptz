@@ -5,14 +5,25 @@ import Link from 'next/link';
 import ToolLogo from '../../components/ToolLogo';
 import FAQSection from '../../components/comparison/FAQSection';
 
-export default function NichesssReviewPage() {
+interface NichesssReviewPageProps {
+  tool?: {
+    name: string;
+    category: string;
+    description: string;
+    website: string;
+    rating: number;
+    slug: string;
+  };
+}
+
+export default function NichesssReviewPage({ tool }: NichesssReviewPageProps = {}) {
   // Schema markup for SEO
   const reviewSchema = {
     "@context": "https://schema.org",
     "@type": "Review",
     "itemReviewed": {
       "@type": "SoftwareApplication",
-      "name": "Nichesss",
+      "name": tool?.name || "Nichesss",
       "description": "Nichesss is an innovative AI solution designed to enhance productivity and streamline workflows.",
       "applicationCategory": "AI Tools",
       "url": "https://nichesss.com",
@@ -106,7 +117,7 @@ export default function NichesssReviewPage() {
     <>
       <Head>
         {/* Primary SEO Tags */}
-        <title>Nichesss Review: Complete AI Tools Analysis | SiteOptz</title>
+        <title>{tool?.name || 'Nichesss'} Review: Complete Analysis | SiteOptz</title>
         <meta name="description" content="Comprehensive Nichesss review. Nichesss features, pricing & alternatives compared. Expert analysis & user guide for 2025." />
         <meta name="keywords" content="nichesss review, nichesss pricing, nichesss features, nichesss alternatives, ai tools" />
         <meta name="author" content="SiteOptz" />

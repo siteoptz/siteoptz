@@ -5,7 +5,18 @@ import Link from 'next/link';
 import ToolLogo from '../../components/ToolLogo';
 import FAQSection from '../../components/comparison/FAQSection';
 
-export default function BrowseAiReviewPage() {
+interface BrowseAiReviewPageProps {
+  tool?: {
+    name: string;
+    category: string;
+    description: string;
+    website: string;
+    rating: number;
+    slug: string;
+  };
+}
+
+export default function BrowseAiReviewPage({ tool }: BrowseAiReviewPageProps = {}) {
   // Schema markup for SEO
   const reviewSchema = {
     "@context": "https://schema.org",
@@ -106,7 +117,7 @@ export default function BrowseAiReviewPage() {
     <>
       <Head>
         {/* Primary SEO Tags */}
-        <title>Browse AI Review: Complete AI Tools Analysis | SiteOptz</title>
+        <title>{tool?.name || 'Browse AI'} Review: Complete Analysis | SiteOptz</title>
         <meta name="description" content="Comprehensive Browse AI review. Browse AI features, pricing & alternatives compared. Expert analysis & user guide for 2025." />
         <meta name="keywords" content="browse-ai review, browse-ai pricing, browse-ai features, browse-ai alternatives, ai tools" />
         <meta name="author" content="SiteOptz" />

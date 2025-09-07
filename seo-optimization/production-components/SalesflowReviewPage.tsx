@@ -5,14 +5,25 @@ import Link from 'next/link';
 import ToolLogo from '../../components/ToolLogo';
 import FAQSection from '../../components/comparison/FAQSection';
 
-export default function SalesflowReviewPage() {
+interface SalesflowReviewPageProps {
+  tool?: {
+    name: string;
+    category: string;
+    description: string;
+    website: string;
+    rating: number;
+    slug: string;
+  };
+}
+
+export default function SalesflowReviewPage({ tool }: SalesflowReviewPageProps = {}) {
   // Schema markup for SEO
   const reviewSchema = {
     "@context": "https://schema.org",
     "@type": "Review",
     "itemReviewed": {
       "@type": "SoftwareApplication",
-      "name": "Salesflow",
+      "name": tool?.name || "Salesflow",
       "description": "Salesflow is an innovative AI solution designed to enhance productivity and streamline workflows.",
       "applicationCategory": "AI Tools",
       "url": "https://salesflow.com",
@@ -106,7 +117,7 @@ export default function SalesflowReviewPage() {
     <>
       <Head>
         {/* Primary SEO Tags */}
-        <title>Salesflow Review: Complete AI Tools Analysis | SiteOptz</title>
+        <title>{tool?.name || 'Salesflow'} Review: Complete Analysis | SiteOptz</title>
         <meta name="description" content="Comprehensive Salesflow review. Salesflow features, pricing & alternatives compared. Expert analysis & user guide for 2025." />
         <meta name="keywords" content="salesflow review, salesflow pricing, salesflow features, salesflow alternatives, ai tools" />
         <meta name="author" content="SiteOptz" />

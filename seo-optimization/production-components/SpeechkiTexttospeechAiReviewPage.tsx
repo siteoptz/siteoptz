@@ -5,7 +5,18 @@ import Link from 'next/link';
 import ToolLogo from '../../components/ToolLogo';
 import FAQSection from '../../components/comparison/FAQSection';
 
-export default function SpeechkiTexttospeechAiReviewPage() {
+interface SpeechkiTexttospeechAiReviewPageProps {
+  tool?: {
+    name: string;
+    category: string;
+    description: string;
+    website: string;
+    rating: number;
+    slug: string;
+  };
+}
+
+export default function SpeechkiTexttospeechAiReviewPage({ tool }: SpeechkiTexttospeechAiReviewPageProps = {}) {
   // Schema markup for SEO
   const reviewSchema = {
     "@context": "https://schema.org",
@@ -106,7 +117,7 @@ export default function SpeechkiTexttospeechAiReviewPage() {
     <>
       <Head>
         {/* Primary SEO Tags */}
-        <title>Speechki - Text-to-Speech AI Review: Complete Best Voice AI Tools Tool Analysis | SiteOptz</title>
+        <title>{tool?.name || 'Speechki Texttospeech AI'} Review: Complete Analysis | SiteOptz</title>
         <meta name="description" content="Comprehensive Speechki - Text-to-Speech AI review. Compare Speechki - Text-to-Speech AI features, pricing & alternatives. Expert analysis & user guide for 2025. Get started today!" />
         <meta name="keywords" content="speechki - text-to-speech ai review, speechki - text-to-speech ai pricing, speechki - text-to-speech ai features, speechki - text-to-speech ai alternatives, best voice ai tools" />
         <meta name="author" content="SiteOptz" />

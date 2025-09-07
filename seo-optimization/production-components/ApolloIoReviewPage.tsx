@@ -5,7 +5,18 @@ import Link from 'next/link';
 import ToolLogo from '../../components/ToolLogo';
 import FAQSection from '../../components/comparison/FAQSection';
 
-export default function ApolloIoReviewPage() {
+interface ApolloIoReviewPageProps {
+  tool?: {
+    name: string;
+    category: string;
+    description: string;
+    website: string;
+    rating: number;
+    slug: string;
+  };
+}
+
+export default function ApolloIoReviewPage({ tool }: ApolloIoReviewPageProps = {}) {
   // Schema markup for SEO
   const reviewSchema = {
     "@context": "https://schema.org",
@@ -106,7 +117,7 @@ export default function ApolloIoReviewPage() {
     <>
       <Head>
         {/* Primary SEO Tags */}
-        <title>Apollo.io Review: Complete AI Tools Analysis | SiteOptz</title>
+        <title>{tool?.name || 'Apollo IO'} Review: Complete Analysis | SiteOptz</title>
         <meta name="description" content="Comprehensive Apollo.io review. Apollo.io features, pricing & alternatives compared. Expert analysis & user guide for 2025." />
         <meta name="keywords" content="apollo-io review, apollo-io pricing, apollo-io features, apollo-io alternatives, ai tools" />
         <meta name="author" content="SiteOptz" />

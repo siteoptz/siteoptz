@@ -5,7 +5,18 @@ import Link from 'next/link';
 import ToolLogo from '../../components/ToolLogo';
 import FAQSection from '../../components/comparison/FAQSection';
 
-export default function WellmerightReviewPage() {
+interface WellmerightReviewPageProps {
+  tool?: {
+    name: string;
+    category: string;
+    description: string;
+    website: string;
+    rating: number;
+    slug: string;
+  };
+}
+
+export default function WellmerightReviewPage({ tool }: WellmerightReviewPageProps = {}) {
   // Schema markup for SEO
   const reviewSchema = {
     "@context": "https://schema.org",
@@ -106,7 +117,7 @@ export default function WellmerightReviewPage() {
     <>
       <Head>
         {/* Primary SEO Tags */}
-        <title>WellMeRight Review: Complete AI Tools Analysis | SiteOptz</title>
+        <title>{tool?.name || 'Wellmeright'} Review: Complete Analysis | SiteOptz</title>
         <meta name="description" content="Comprehensive WellMeRight review. WellMeRight features, pricing & alternatives compared. Expert analysis & user guide for 2025." />
         <meta name="keywords" content="wellmeright review, wellmeright pricing, wellmeright features, wellmeright alternatives, ai tools" />
         <meta name="author" content="SiteOptz" />

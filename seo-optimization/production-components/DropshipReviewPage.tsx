@@ -5,14 +5,25 @@ import Link from 'next/link';
 import ToolLogo from '../../components/ToolLogo';
 import FAQSection from '../../components/comparison/FAQSection';
 
-export default function DropshipReviewPage() {
+interface DropshipReviewPageProps {
+  tool?: {
+    name: string;
+    category: string;
+    description: string;
+    website: string;
+    rating: number;
+    slug: string;
+  };
+}
+
+export default function DropshipReviewPage({ tool }: DropshipReviewPageProps = {}) {
   // Schema markup for SEO
   const reviewSchema = {
     "@context": "https://schema.org",
     "@type": "Review",
     "itemReviewed": {
       "@type": "SoftwareApplication",
-      "name": "Dropship",
+      "name": tool?.name || "Dropship",
       "description": "Dropship is an innovative AI solution designed to enhance productivity and streamline workflows.",
       "applicationCategory": "AI Tools",
       "url": "https://dropship.com",
@@ -106,7 +117,7 @@ export default function DropshipReviewPage() {
     <>
       <Head>
         {/* Primary SEO Tags */}
-        <title>Dropship Review: Complete AI Tools Analysis | SiteOptz</title>
+        <title>{tool?.name || 'Dropship'} Review: Complete Analysis | SiteOptz</title>
         <meta name="description" content="Comprehensive Dropship review. Dropship features, pricing & alternatives compared. Expert analysis & user guide for 2025." />
         <meta name="keywords" content="dropship review, dropship pricing, dropship features, dropship alternatives, ai tools" />
         <meta name="author" content="SiteOptz" />

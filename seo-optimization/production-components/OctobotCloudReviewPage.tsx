@@ -5,7 +5,18 @@ import Link from 'next/link';
 import ToolLogo from '../../components/ToolLogo';
 import FAQSection from '../../components/comparison/FAQSection';
 
-export default function OctobotCloudReviewPage() {
+interface OctobotCloudReviewPageProps {
+  tool?: {
+    name: string;
+    category: string;
+    description: string;
+    website: string;
+    rating: number;
+    slug: string;
+  };
+}
+
+export default function OctobotCloudReviewPage({ tool }: OctobotCloudReviewPageProps = {}) {
   // Schema markup for SEO
   const reviewSchema = {
     "@context": "https://schema.org",
@@ -106,7 +117,7 @@ export default function OctobotCloudReviewPage() {
     <>
       <Head>
         {/* Primary SEO Tags */}
-        <title>Octobot Cloud Review: Complete AI Tools Analysis | SiteOptz</title>
+        <title>{tool?.name || 'Octobot Cloud'} Review: Complete Analysis | SiteOptz</title>
         <meta name="description" content="Comprehensive Octobot Cloud review. Octobot Cloud features, pricing & alternatives compared. Expert analysis & user guide for 2025." />
         <meta name="keywords" content="octobot-cloud review, octobot-cloud pricing, octobot-cloud features, octobot-cloud alternatives, ai tools" />
         <meta name="author" content="SiteOptz" />

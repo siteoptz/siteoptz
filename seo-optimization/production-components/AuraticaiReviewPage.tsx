@@ -5,7 +5,18 @@ import Link from 'next/link';
 import ToolLogo from '../../components/ToolLogo';
 import FAQSection from '../../components/comparison/FAQSection';
 
-export default function AuraticaiReviewPage() {
+interface AuraticaiReviewPageProps {
+  tool?: {
+    name: string;
+    category: string;
+    description: string;
+    website: string;
+    rating: number;
+    slug: string;
+  };
+}
+
+export default function AuraticaiReviewPage({ tool }: AuraticaiReviewPageProps = {}) {
   // Schema markup for SEO
   const reviewSchema = {
     "@context": "https://schema.org",
@@ -106,7 +117,7 @@ export default function AuraticaiReviewPage() {
     <>
       <Head>
         {/* Primary SEO Tags */}
-        <title>AuraticAI Review: Complete AI Tools Analysis | SiteOptz</title>
+        <title>{tool?.name || 'Auraticai'} Review: Complete Analysis | SiteOptz</title>
         <meta name="description" content="Comprehensive AuraticAI review. AuraticAI features, pricing & alternatives compared. Expert analysis & user guide for 2025." />
         <meta name="keywords" content="auraticai review, auraticai pricing, auraticai features, auraticai alternatives, ai tools" />
         <meta name="author" content="SiteOptz" />

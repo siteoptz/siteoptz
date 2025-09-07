@@ -5,7 +5,18 @@ import Link from 'next/link';
 import ToolLogo from '../../components/ToolLogo';
 import FAQSection from '../../components/comparison/FAQSection';
 
-export default function ZaptPowerfulAiAppBuilderReviewPage() {
+interface ZaptPowerfulAiAppBuilderReviewPageProps {
+  tool?: {
+    name: string;
+    category: string;
+    description: string;
+    website: string;
+    rating: number;
+    slug: string;
+  };
+}
+
+export default function ZaptPowerfulAiAppBuilderReviewPage({ tool }: ZaptPowerfulAiAppBuilderReviewPageProps = {}) {
   // Schema markup for SEO
   const reviewSchema = {
     "@context": "https://schema.org",
@@ -106,7 +117,7 @@ export default function ZaptPowerfulAiAppBuilderReviewPage() {
     <>
       <Head>
         {/* Primary SEO Tags */}
-        <title>Zapt - Powerful AI App Builder Review: Complete Code Generation Tool Analysis | SiteOptz</title>
+        <title>{tool?.name || 'Zapt Powerful Ai App Builder'} Review: Complete Analysis | SiteOptz</title>
         <meta name="description" content="Comprehensive Zapt - Powerful AI App Builder review. Compare Zapt - Powerful AI App Builder features, pricing & alternatives. Expert analysis & user guide for 2025. Get started today!" />
         <meta name="keywords" content="zapt - powerful ai app builder review, zapt - powerful ai app builder pricing, zapt - powerful ai app builder features, zapt - powerful ai app builder alternatives, code generation" />
         <meta name="author" content="SiteOptz" />

@@ -5,14 +5,25 @@ import Link from 'next/link';
 import ToolLogo from '../../components/ToolLogo';
 import FAQSection from '../../components/comparison/FAQSection';
 
-export default function ArcwiseReviewPage() {
+interface ArcwiseReviewPageProps {
+  tool?: {
+    name: string;
+    category: string;
+    description: string;
+    website: string;
+    rating: number;
+    slug: string;
+  };
+}
+
+export default function ArcwiseReviewPage({ tool }: ArcwiseReviewPageProps = {}) {
   // Schema markup for SEO
   const reviewSchema = {
     "@context": "https://schema.org",
     "@type": "Review",
     "itemReviewed": {
       "@type": "SoftwareApplication",
-      "name": "Arcwise",
+      "name": tool?.name || "Arcwise",
       "description": "Arcwise is an innovative AI solution designed to enhance productivity and streamline workflows.",
       "applicationCategory": "AI Tools",
       "url": "https://arcwise.com",
@@ -106,7 +117,7 @@ export default function ArcwiseReviewPage() {
     <>
       <Head>
         {/* Primary SEO Tags */}
-        <title>Arcwise Review: Complete AI Tools Analysis | SiteOptz</title>
+        <title>{tool?.name || 'Arcwise'} Review: Complete Analysis | SiteOptz</title>
         <meta name="description" content="Comprehensive Arcwise review. Arcwise features, pricing & alternatives compared. Expert analysis & user guide for 2025." />
         <meta name="keywords" content="arcwise review, arcwise pricing, arcwise features, arcwise alternatives, ai tools" />
         <meta name="author" content="SiteOptz" />

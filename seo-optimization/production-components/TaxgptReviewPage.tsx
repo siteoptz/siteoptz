@@ -5,7 +5,18 @@ import Link from 'next/link';
 import ToolLogo from '../../components/ToolLogo';
 import FAQSection from '../../components/comparison/FAQSection';
 
-export default function TaxgptReviewPage() {
+interface TaxgptReviewPageProps {
+  tool?: {
+    name: string;
+    category: string;
+    description: string;
+    website: string;
+    rating: number;
+    slug: string;
+  };
+}
+
+export default function TaxgptReviewPage({ tool }: TaxgptReviewPageProps = {}) {
   // Schema markup for SEO
   const reviewSchema = {
     "@context": "https://schema.org",
@@ -106,7 +117,7 @@ export default function TaxgptReviewPage() {
     <>
       <Head>
         {/* Primary SEO Tags */}
-        <title>TaxGPT Review: Complete AI Tools Analysis | SiteOptz</title>
+        <title>{tool?.name || 'Taxgpt'} Review: Complete Analysis | SiteOptz</title>
         <meta name="description" content="Comprehensive TaxGPT review. TaxGPT features, pricing & alternatives compared. Expert analysis & user guide for 2025." />
         <meta name="keywords" content="taxgpt review, taxgpt pricing, taxgpt features, taxgpt alternatives, ai tools" />
         <meta name="author" content="SiteOptz" />

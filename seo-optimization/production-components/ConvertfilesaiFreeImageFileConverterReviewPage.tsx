@@ -5,7 +5,18 @@ import Link from 'next/link';
 import ToolLogo from '../../components/ToolLogo';
 import FAQSection from '../../components/comparison/FAQSection';
 
-export default function ConvertfilesaiFreeImageFileConverterReviewPage() {
+interface ConvertfilesaiFreeImageFileConverterReviewPageProps {
+  tool?: {
+    name: string;
+    category: string;
+    description: string;
+    website: string;
+    rating: number;
+    slug: string;
+  };
+}
+
+export default function ConvertfilesaiFreeImageFileConverterReviewPage({ tool }: ConvertfilesaiFreeImageFileConverterReviewPageProps = {}) {
   // Schema markup for SEO
   const reviewSchema = {
     "@context": "https://schema.org",
@@ -106,7 +117,7 @@ export default function ConvertfilesaiFreeImageFileConverterReviewPage() {
     <>
       <Head>
         {/* Primary SEO Tags */}
-        <title>Convertfiles.ai - Free Image File Converter Review: Complete Image Generation Tool Analysis | SiteOptz</title>
+        <title>{tool?.name || 'Convertfilesai Free Image File Converter'} Review: Complete Analysis | SiteOptz</title>
         <meta name="description" content="Comprehensive Convertfiles.ai - Free Image File Converter review. Compare Convertfiles.ai - Free Image File Converter features, pricing & alternatives. Expert analysis & user guide for 2025. Get started today!" />
         <meta name="keywords" content="convertfiles.ai - free image file converter review, convertfiles.ai - free image file converter pricing, convertfiles.ai - free image file converter features, convertfiles.ai - free image file converter alternatives, image generation" />
         <meta name="author" content="SiteOptz" />

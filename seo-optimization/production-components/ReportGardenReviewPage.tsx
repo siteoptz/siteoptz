@@ -1,13 +1,22 @@
 import React from 'react';
 import Head from 'next/head';
 
-interface ReportgardenReviewPageProps {}
+interface ReportgardenReviewPageProps {
+  tool?: {
+    name: string;
+    category: string;
+    description: string;
+    website: string;
+    rating: number;
+    slug: string;
+  };
+}
 
-const ReportgardenReviewPage: React.FC<ReportgardenReviewPageProps> = () => {
+const ReportgardenReviewPage: React.FC<ReportgardenReviewPageProps> = ({ tool } = {}) => {
   return (
     <>
       <Head>
-        <title>ReportGarden Review [2025] | SiteOptz</title>
+        <title>{tool?.name || 'Reportgarden'} Review: Complete Analysis | SiteOptz</title>
         <meta 
           name="description" 
           content="ReportGarden review. ReportGarden is an automated marketing reporting platform that helps agencies create professional client reports and manage PPC campaigns ac... Features, pricing & alternatives." 

@@ -5,14 +5,25 @@ import Link from 'next/link';
 import ToolLogo from '../../components/ToolLogo';
 import FAQSection from '../../components/comparison/FAQSection';
 
-export default function FlikiReviewPage() {
+interface FlikiReviewPageProps {
+  tool?: {
+    name: string;
+    category: string;
+    description: string;
+    website: string;
+    rating: number;
+    slug: string;
+  };
+}
+
+export default function FlikiReviewPage({ tool }: FlikiReviewPageProps = {}) {
   // Schema markup for SEO
   const reviewSchema = {
     "@context": "https://schema.org",
     "@type": "Review",
     "itemReviewed": {
       "@type": "SoftwareApplication",
-      "name": "Fliki",
+      "name": tool?.name || "Fliki",
       "description": "Fliki is an innovative AI solution designed to enhance productivity and streamline workflows.",
       "applicationCategory": "AI Tools",
       "url": "https://fliki.com",
@@ -106,7 +117,7 @@ export default function FlikiReviewPage() {
     <>
       <Head>
         {/* Primary SEO Tags */}
-        <title>Fliki Review: Complete AI Tools Analysis | SiteOptz</title>
+        <title>{tool?.name || 'Fliki'} Review: Complete Analysis | SiteOptz</title>
         <meta name="description" content="Comprehensive Fliki review. Fliki features, pricing & alternatives compared. Expert analysis & user guide for 2025." />
         <meta name="keywords" content="fliki review, fliki pricing, fliki features, fliki alternatives, ai tools" />
         <meta name="author" content="SiteOptz" />

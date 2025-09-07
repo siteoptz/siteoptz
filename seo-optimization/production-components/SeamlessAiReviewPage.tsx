@@ -5,7 +5,18 @@ import Link from 'next/link';
 import ToolLogo from '../../components/ToolLogo';
 import FAQSection from '../../components/comparison/FAQSection';
 
-export default function SeamlessAiReviewPage() {
+interface SeamlessAiReviewPageProps {
+  tool?: {
+    name: string;
+    category: string;
+    description: string;
+    website: string;
+    rating: number;
+    slug: string;
+  };
+}
+
+export default function SeamlessAiReviewPage({ tool }: SeamlessAiReviewPageProps = {}) {
   // Schema markup for SEO
   const reviewSchema = {
     "@context": "https://schema.org",
@@ -106,7 +117,7 @@ export default function SeamlessAiReviewPage() {
     <>
       <Head>
         {/* Primary SEO Tags */}
-        <title>Seamless AI Review: Complete AI Tools Analysis | SiteOptz</title>
+        <title>{tool?.name || 'Seamless AI'} Review: Complete Analysis | SiteOptz</title>
         <meta name="description" content="Comprehensive Seamless AI review. Seamless AI features, pricing & alternatives compared. Expert analysis & user guide for 2025." />
         <meta name="keywords" content="seamless-ai review, seamless-ai pricing, seamless-ai features, seamless-ai alternatives, ai tools" />
         <meta name="author" content="SiteOptz" />

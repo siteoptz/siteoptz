@@ -5,7 +5,18 @@ import Link from 'next/link';
 import ToolLogo from '../../components/ToolLogo';
 import FAQSection from '../../components/comparison/FAQSection';
 
-export default function SalesblinkReviewPage() {
+interface SalesblinkReviewPageProps {
+  tool?: {
+    name: string;
+    category: string;
+    description: string;
+    website: string;
+    rating: number;
+    slug: string;
+  };
+}
+
+export default function SalesblinkReviewPage({ tool }: SalesblinkReviewPageProps = {}) {
   // Schema markup for SEO
   const reviewSchema = {
     "@context": "https://schema.org",
@@ -106,7 +117,7 @@ export default function SalesblinkReviewPage() {
     <>
       <Head>
         {/* Primary SEO Tags */}
-        <title>SalesBlink Review: Complete AI Tools Analysis | SiteOptz</title>
+        <title>{tool?.name || 'Salesblink'} Review: Complete Analysis | SiteOptz</title>
         <meta name="description" content="Comprehensive SalesBlink review. SalesBlink features, pricing & alternatives compared. Expert analysis & user guide for 2025." />
         <meta name="keywords" content="salesblink review, salesblink pricing, salesblink features, salesblink alternatives, ai tools" />
         <meta name="author" content="SiteOptz" />

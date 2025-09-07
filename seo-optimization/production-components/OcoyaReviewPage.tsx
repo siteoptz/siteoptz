@@ -5,14 +5,25 @@ import Link from 'next/link';
 import ToolLogo from '../../components/ToolLogo';
 import FAQSection from '../../components/comparison/FAQSection';
 
-export default function OcoyaReviewPage() {
+interface OcoyaReviewPageProps {
+  tool?: {
+    name: string;
+    category: string;
+    description: string;
+    website: string;
+    rating: number;
+    slug: string;
+  };
+}
+
+export default function OcoyaReviewPage({ tool }: OcoyaReviewPageProps = {}) {
   // Schema markup for SEO
   const reviewSchema = {
     "@context": "https://schema.org",
     "@type": "Review",
     "itemReviewed": {
       "@type": "SoftwareApplication",
-      "name": "Ocoya",
+      "name": tool?.name || "Ocoya",
       "description": "Ocoya is an innovative AI solution designed to enhance productivity and streamline workflows.",
       "applicationCategory": "AI Tools",
       "url": "https://ocoya.com",
@@ -106,7 +117,7 @@ export default function OcoyaReviewPage() {
     <>
       <Head>
         {/* Primary SEO Tags */}
-        <title>Ocoya Review: Complete AI Tools Analysis | SiteOptz</title>
+        <title>{tool?.name || 'Ocoya'} Review: Complete Analysis | SiteOptz</title>
         <meta name="description" content="Comprehensive Ocoya review. Ocoya features, pricing & alternatives compared. Expert analysis & user guide for 2025." />
         <meta name="keywords" content="ocoya review, ocoya pricing, ocoya features, ocoya alternatives, ai tools" />
         <meta name="author" content="SiteOptz" />

@@ -5,14 +5,25 @@ import Link from 'next/link';
 import ToolLogo from '../../components/ToolLogo';
 import FAQSection from '../../components/comparison/FAQSection';
 
-export default function ClayReviewPage() {
+interface ClayReviewPageProps {
+  tool?: {
+    name: string;
+    category: string;
+    description: string;
+    website: string;
+    rating: number;
+    slug: string;
+  };
+}
+
+export default function ClayReviewPage({ tool }: ClayReviewPageProps = {}) {
   // Schema markup for SEO
   const reviewSchema = {
     "@context": "https://schema.org",
     "@type": "Review",
     "itemReviewed": {
       "@type": "SoftwareApplication",
-      "name": "Clay",
+      "name": tool?.name || "Clay",
       "description": "Clay is an innovative AI solution designed to enhance productivity and streamline workflows.",
       "applicationCategory": "AI Tools",
       "url": "https://clay.com",
@@ -106,7 +117,7 @@ export default function ClayReviewPage() {
     <>
       <Head>
         {/* Primary SEO Tags */}
-        <title>Clay Review: Complete AI Tools Analysis | SiteOptz</title>
+        <title>{tool?.name || 'Clay'} Review: Complete Analysis | SiteOptz</title>
         <meta name="description" content="Comprehensive Clay review. Clay features, pricing & alternatives compared. Expert analysis & user guide for 2025." />
         <meta name="keywords" content="clay review, clay pricing, clay features, clay alternatives, ai tools" />
         <meta name="author" content="SiteOptz" />

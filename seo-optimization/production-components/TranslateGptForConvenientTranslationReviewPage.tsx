@@ -5,7 +5,18 @@ import Link from 'next/link';
 import ToolLogo from '../../components/ToolLogo';
 import FAQSection from '../../components/comparison/FAQSection';
 
-export default function TranslateGptForConvenientTranslationReviewPage() {
+interface TranslateGptForConvenientTranslationReviewPageProps {
+  tool?: {
+    name: string;
+    category: string;
+    description: string;
+    website: string;
+    rating: number;
+    slug: string;
+  };
+}
+
+export default function TranslateGptForConvenientTranslationReviewPage({ tool }: TranslateGptForConvenientTranslationReviewPageProps = {}) {
   // Schema markup for SEO
   const reviewSchema = {
     "@context": "https://schema.org",
@@ -106,7 +117,7 @@ export default function TranslateGptForConvenientTranslationReviewPage() {
     <>
       <Head>
         {/* Primary SEO Tags */}
-        <title>Translate GPT - for Convenient Translation Review: Complete Productivity Tool Analysis | SiteOptz</title>
+        <title>{tool?.name || 'Translate Gpt For Convenient Translation'} Review: Complete Analysis | SiteOptz</title>
         <meta name="description" content="Comprehensive Translate GPT - for Convenient Translation review. Compare Translate GPT - for Convenient Translation features, pricing & alternatives. Expert analysis & user guide for 2025. Get started today!" />
         <meta name="keywords" content="translate gpt - for convenient translation review, translate gpt - for convenient translation pricing, translate gpt - for convenient translation features, translate gpt - for convenient translation alternatives, productivity" />
         <meta name="author" content="SiteOptz" />

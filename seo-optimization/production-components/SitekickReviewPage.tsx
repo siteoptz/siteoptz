@@ -5,14 +5,25 @@ import Link from 'next/link';
 import ToolLogo from '../../components/ToolLogo';
 import FAQSection from '../../components/comparison/FAQSection';
 
-export default function SitekickReviewPage() {
+interface SitekickReviewPageProps {
+  tool?: {
+    name: string;
+    category: string;
+    description: string;
+    website: string;
+    rating: number;
+    slug: string;
+  };
+}
+
+export default function SitekickReviewPage({ tool }: SitekickReviewPageProps = {}) {
   // Schema markup for SEO
   const reviewSchema = {
     "@context": "https://schema.org",
     "@type": "Review",
     "itemReviewed": {
       "@type": "SoftwareApplication",
-      "name": "Sitekick",
+      "name": tool?.name || "Sitekick",
       "description": "Sitekick is an innovative AI solution designed to enhance productivity and streamline workflows.",
       "applicationCategory": "AI Tools",
       "url": "https://sitekick.com",
@@ -106,7 +117,7 @@ export default function SitekickReviewPage() {
     <>
       <Head>
         {/* Primary SEO Tags */}
-        <title>Sitekick Review: Complete AI Tools Analysis | SiteOptz</title>
+        <title>{tool?.name || 'Sitekick'} Review: Complete Analysis | SiteOptz</title>
         <meta name="description" content="Comprehensive Sitekick review. Sitekick features, pricing & alternatives compared. Expert analysis & user guide for 2025." />
         <meta name="keywords" content="sitekick review, sitekick pricing, sitekick features, sitekick alternatives, ai tools" />
         <meta name="author" content="SiteOptz" />

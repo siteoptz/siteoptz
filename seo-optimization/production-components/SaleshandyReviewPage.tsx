@@ -5,14 +5,25 @@ import Link from 'next/link';
 import ToolLogo from '../../components/ToolLogo';
 import FAQSection from '../../components/comparison/FAQSection';
 
-export default function SaleshandyReviewPage() {
+interface SaleshandyReviewPageProps {
+  tool?: {
+    name: string;
+    category: string;
+    description: string;
+    website: string;
+    rating: number;
+    slug: string;
+  };
+}
+
+export default function SaleshandyReviewPage({ tool }: SaleshandyReviewPageProps = {}) {
   // Schema markup for SEO
   const reviewSchema = {
     "@context": "https://schema.org",
     "@type": "Review",
     "itemReviewed": {
       "@type": "SoftwareApplication",
-      "name": "Saleshandy",
+      "name": tool?.name || "Saleshandy",
       "description": "Saleshandy is an innovative AI solution designed to enhance productivity and streamline workflows.",
       "applicationCategory": "AI Tools",
       "url": "https://saleshandy.com",
@@ -106,7 +117,7 @@ export default function SaleshandyReviewPage() {
     <>
       <Head>
         {/* Primary SEO Tags */}
-        <title>Saleshandy Review: Complete AI Tools Analysis | SiteOptz</title>
+        <title>{tool?.name || 'Saleshandy'} Review: Complete Analysis | SiteOptz</title>
         <meta name="description" content="Comprehensive Saleshandy review. Saleshandy features, pricing & alternatives compared. Expert analysis & user guide for 2025." />
         <meta name="keywords" content="saleshandy review, saleshandy pricing, saleshandy features, saleshandy alternatives, ai tools" />
         <meta name="author" content="SiteOptz" />

@@ -5,14 +5,25 @@ import Link from 'next/link';
 import ToolLogo from '../../components/ToolLogo';
 import FAQSection from '../../components/comparison/FAQSection';
 
-export default function EchofoxReviewPage() {
+interface EchofoxReviewPageProps {
+  tool?: {
+    name: string;
+    category: string;
+    description: string;
+    website: string;
+    rating: number;
+    slug: string;
+  };
+}
+
+export default function EchofoxReviewPage({ tool }: EchofoxReviewPageProps = {}) {
   // Schema markup for SEO
   const reviewSchema = {
     "@context": "https://schema.org",
     "@type": "Review",
     "itemReviewed": {
       "@type": "SoftwareApplication",
-      "name": "Echofox",
+      "name": tool?.name || "Echofox",
       "description": "Echofox is an innovative AI solution designed to enhance productivity and streamline workflows.",
       "applicationCategory": "AI Tools",
       "url": "https://echofox.com",
@@ -106,7 +117,7 @@ export default function EchofoxReviewPage() {
     <>
       <Head>
         {/* Primary SEO Tags */}
-        <title>Echofox Review: Complete AI Tools Analysis | SiteOptz</title>
+        <title>{tool?.name || 'Echofox'} Review: Complete Analysis | SiteOptz</title>
         <meta name="description" content="Comprehensive Echofox review. Echofox features, pricing & alternatives compared. Expert analysis & user guide for 2025." />
         <meta name="keywords" content="echofox review, echofox pricing, echofox features, echofox alternatives, ai tools" />
         <meta name="author" content="SiteOptz" />

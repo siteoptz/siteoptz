@@ -5,14 +5,25 @@ import Link from 'next/link';
 import ToolLogo from '../../components/ToolLogo';
 import FAQSection from '../../components/comparison/FAQSection';
 
-export default function SubmagicReviewPage() {
+interface SubmagicReviewPageProps {
+  tool?: {
+    name: string;
+    category: string;
+    description: string;
+    website: string;
+    rating: number;
+    slug: string;
+  };
+}
+
+export default function SubmagicReviewPage({ tool }: SubmagicReviewPageProps = {}) {
   // Schema markup for SEO
   const reviewSchema = {
     "@context": "https://schema.org",
     "@type": "Review",
     "itemReviewed": {
       "@type": "SoftwareApplication",
-      "name": "Submagic",
+      "name": tool?.name || "Submagic",
       "description": "Submagic is an innovative AI solution designed to enhance productivity and streamline workflows.",
       "applicationCategory": "AI Tools",
       "url": "https://submagic.com",
@@ -106,7 +117,7 @@ export default function SubmagicReviewPage() {
     <>
       <Head>
         {/* Primary SEO Tags */}
-        <title>Submagic Review: Complete AI Tools Analysis | SiteOptz</title>
+        <title>{tool?.name || 'Submagic'} Review: Complete Analysis | SiteOptz</title>
         <meta name="description" content="Comprehensive Submagic review. Submagic features, pricing & alternatives compared. Expert analysis & user guide for 2025." />
         <meta name="keywords" content="submagic review, submagic pricing, submagic features, submagic alternatives, ai tools" />
         <meta name="author" content="SiteOptz" />

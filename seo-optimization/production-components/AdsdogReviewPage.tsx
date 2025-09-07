@@ -5,7 +5,18 @@ import Link from 'next/link';
 import ToolLogo from '../../components/ToolLogo';
 import FAQSection from '../../components/comparison/FAQSection';
 
-export default function AdsdogReviewPage() {
+interface AdsdogReviewPageProps {
+  tool?: {
+    name: string;
+    category: string;
+    description: string;
+    website: string;
+    rating: number;
+    slug: string;
+  };
+}
+
+export default function AdsdogReviewPage({ tool }: AdsdogReviewPageProps = {}) {
   // Schema markup for SEO
   const reviewSchema = {
     "@context": "https://schema.org",
@@ -106,7 +117,7 @@ export default function AdsdogReviewPage() {
     <>
       <Head>
         {/* Primary SEO Tags */}
-        <title>AdsDog Review: Complete AI Tools Analysis | SiteOptz</title>
+        <title>{tool?.name || 'Adsdog'} Review: Complete Analysis | SiteOptz</title>
         <meta name="description" content="Comprehensive AdsDog review. AdsDog features, pricing & alternatives compared. Expert analysis & user guide for 2025." />
         <meta name="keywords" content="adsdog review, adsdog pricing, adsdog features, adsdog alternatives, ai tools" />
         <meta name="author" content="SiteOptz" />

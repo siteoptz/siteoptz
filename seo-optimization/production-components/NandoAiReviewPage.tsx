@@ -5,7 +5,18 @@ import Link from 'next/link';
 import ToolLogo from '../../components/ToolLogo';
 import FAQSection from '../../components/comparison/FAQSection';
 
-export default function NandoAiReviewPage() {
+interface NandoAiReviewPageProps {
+  tool?: {
+    name: string;
+    category: string;
+    description: string;
+    website: string;
+    rating: number;
+    slug: string;
+  };
+}
+
+export default function NandoAiReviewPage({ tool }: NandoAiReviewPageProps = {}) {
   // Schema markup for SEO
   const reviewSchema = {
     "@context": "https://schema.org",
@@ -106,7 +117,7 @@ export default function NandoAiReviewPage() {
     <>
       <Head>
         {/* Primary SEO Tags */}
-        <title>Nando AI Review: Complete AI Tools Analysis | SiteOptz</title>
+        <title>{tool?.name || 'Nando AI'} Review: Complete Analysis | SiteOptz</title>
         <meta name="description" content="Comprehensive Nando AI review. Nando AI features, pricing & alternatives compared. Expert analysis & user guide for 2025." />
         <meta name="keywords" content="nando-ai review, nando-ai pricing, nando-ai features, nando-ai alternatives, ai tools" />
         <meta name="author" content="SiteOptz" />

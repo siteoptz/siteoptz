@@ -5,14 +5,25 @@ import Link from 'next/link';
 import ToolLogo from '../../components/ToolLogo';
 import FAQSection from '../../components/comparison/FAQSection';
 
-export default function SuperluminalReviewPage() {
+interface SuperluminalReviewPageProps {
+  tool?: {
+    name: string;
+    category: string;
+    description: string;
+    website: string;
+    rating: number;
+    slug: string;
+  };
+}
+
+export default function SuperluminalReviewPage({ tool }: SuperluminalReviewPageProps = {}) {
   // Schema markup for SEO
   const reviewSchema = {
     "@context": "https://schema.org",
     "@type": "Review",
     "itemReviewed": {
       "@type": "SoftwareApplication",
-      "name": "Superluminal",
+      "name": tool?.name || "Superluminal",
       "description": "Superluminal is an innovative AI solution designed to enhance productivity and streamline workflows.",
       "applicationCategory": "AI Tools",
       "url": "https://superluminal.com",
@@ -106,7 +117,7 @@ export default function SuperluminalReviewPage() {
     <>
       <Head>
         {/* Primary SEO Tags */}
-        <title>Superluminal Review: Complete AI Tools Analysis | SiteOptz</title>
+        <title>{tool?.name || 'Superluminal'} Review: Complete Analysis | SiteOptz</title>
         <meta name="description" content="Comprehensive Superluminal review. Superluminal features, pricing & alternatives compared. Expert analysis & user guide for 2025." />
         <meta name="keywords" content="superluminal review, superluminal pricing, superluminal features, superluminal alternatives, ai tools" />
         <meta name="author" content="SiteOptz" />

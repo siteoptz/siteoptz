@@ -5,7 +5,18 @@ import Link from 'next/link';
 import ToolLogo from '../../components/ToolLogo';
 import FAQSection from '../../components/comparison/FAQSection';
 
-export default function BottrYourPersonalAiAssistantReviewPage() {
+interface BottrYourPersonalAiAssistantReviewPageProps {
+  tool?: {
+    name: string;
+    category: string;
+    description: string;
+    website: string;
+    rating: number;
+    slug: string;
+  };
+}
+
+export default function BottrYourPersonalAiAssistantReviewPage({ tool }: BottrYourPersonalAiAssistantReviewPageProps = {}) {
   // Schema markup for SEO
   const reviewSchema = {
     "@context": "https://schema.org",
@@ -106,7 +117,7 @@ export default function BottrYourPersonalAiAssistantReviewPage() {
     <>
       <Head>
         {/* Primary SEO Tags */}
-        <title>Bottr - Your Personal AI Assistant Review: Complete AI Automation Tool Analysis | SiteOptz</title>
+        <title>{tool?.name || 'Bottr Your Personal Ai Assistant'} Review: Complete Analysis | SiteOptz</title>
         <meta name="description" content="Comprehensive Bottr - Your Personal AI Assistant review. Compare Bottr - Your Personal AI Assistant features, pricing & alternatives. Expert analysis & user guide for 2025. Get started today!" />
         <meta name="keywords" content="bottr - your personal ai assistant review, bottr - your personal ai assistant pricing, bottr - your personal ai assistant features, bottr - your personal ai assistant alternatives, ai automation" />
         <meta name="author" content="SiteOptz" />

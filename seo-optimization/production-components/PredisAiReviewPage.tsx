@@ -5,7 +5,18 @@ import Link from 'next/link';
 import ToolLogo from '../../components/ToolLogo';
 import FAQSection from '../../components/comparison/FAQSection';
 
-export default function PredisAiReviewPage() {
+interface PredisAiReviewPageProps {
+  tool?: {
+    name: string;
+    category: string;
+    description: string;
+    website: string;
+    rating: number;
+    slug: string;
+  };
+}
+
+export default function PredisAiReviewPage({ tool }: PredisAiReviewPageProps = {}) {
   // Schema markup for SEO
   const reviewSchema = {
     "@context": "https://schema.org",
@@ -106,7 +117,7 @@ export default function PredisAiReviewPage() {
     <>
       <Head>
         {/* Primary SEO Tags */}
-        <title>Predis AI Review: Complete AI Tools Analysis | SiteOptz</title>
+        <title>{tool?.name || 'Predis AI'} Review: Complete Analysis | SiteOptz</title>
         <meta name="description" content="Comprehensive Predis AI review. Predis AI features, pricing & alternatives compared. Expert analysis & user guide for 2025." />
         <meta name="keywords" content="predis-ai review, predis-ai pricing, predis-ai features, predis-ai alternatives, ai tools" />
         <meta name="author" content="SiteOptz" />

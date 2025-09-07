@@ -5,14 +5,25 @@ import Link from 'next/link';
 import ToolLogo from '../../components/ToolLogo';
 import FAQSection from '../../components/comparison/FAQSection';
 
-export default function TaplioReviewPage() {
+interface TaplioReviewPageProps {
+  tool?: {
+    name: string;
+    category: string;
+    description: string;
+    website: string;
+    rating: number;
+    slug: string;
+  };
+}
+
+export default function TaplioReviewPage({ tool }: TaplioReviewPageProps = {}) {
   // Schema markup for SEO
   const reviewSchema = {
     "@context": "https://schema.org",
     "@type": "Review",
     "itemReviewed": {
       "@type": "SoftwareApplication",
-      "name": "Taplio",
+      "name": tool?.name || "Taplio",
       "description": "Taplio is an innovative AI solution designed to enhance productivity and streamline workflows.",
       "applicationCategory": "AI Tools",
       "url": "https://taplio.com",
@@ -106,7 +117,7 @@ export default function TaplioReviewPage() {
     <>
       <Head>
         {/* Primary SEO Tags */}
-        <title>Taplio Review: Complete AI Tools Analysis | SiteOptz</title>
+        <title>{tool?.name || 'Taplio'} Review: Complete Analysis | SiteOptz</title>
         <meta name="description" content="Comprehensive Taplio review. Taplio features, pricing & alternatives compared. Expert analysis & user guide for 2025." />
         <meta name="keywords" content="taplio review, taplio pricing, taplio features, taplio alternatives, ai tools" />
         <meta name="author" content="SiteOptz" />

@@ -5,7 +5,18 @@ import Link from 'next/link';
 import ToolLogo from '../../components/ToolLogo';
 import FAQSection from '../../components/comparison/FAQSection';
 
-export default function TexttovideoStunningVideoCreationReviewPage() {
+interface TexttovideoStunningVideoCreationReviewPageProps {
+  tool?: {
+    name: string;
+    category: string;
+    description: string;
+    website: string;
+    rating: number;
+    slug: string;
+  };
+}
+
+export default function TexttovideoStunningVideoCreationReviewPage({ tool }: TexttovideoStunningVideoCreationReviewPageProps = {}) {
   // Schema markup for SEO
   const reviewSchema = {
     "@context": "https://schema.org",
@@ -106,7 +117,7 @@ export default function TexttovideoStunningVideoCreationReviewPage() {
     <>
       <Head>
         {/* Primary SEO Tags */}
-        <title>Text-to-Video - Stunning Video Creation Review: Complete Video Generation Tool Analysis | SiteOptz</title>
+        <title>{tool?.name || 'Texttovideo Stunning Video Creation'} Review: Complete Analysis | SiteOptz</title>
         <meta name="description" content="Comprehensive Text-to-Video - Stunning Video Creation review. Compare Text-to-Video - Stunning Video Creation features, pricing & alternatives. Expert analysis & user guide for 2025. Get started today!" />
         <meta name="keywords" content="text-to-video - stunning video creation review, text-to-video - stunning video creation pricing, text-to-video - stunning video creation features, text-to-video - stunning video creation alternatives, video generation" />
         <meta name="author" content="SiteOptz" />

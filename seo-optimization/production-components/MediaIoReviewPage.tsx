@@ -5,7 +5,18 @@ import Link from 'next/link';
 import ToolLogo from '../../components/ToolLogo';
 import FAQSection from '../../components/comparison/FAQSection';
 
-export default function MediaIoReviewPage() {
+interface MediaIoReviewPageProps {
+  tool?: {
+    name: string;
+    category: string;
+    description: string;
+    website: string;
+    rating: number;
+    slug: string;
+  };
+}
+
+export default function MediaIoReviewPage({ tool }: MediaIoReviewPageProps = {}) {
   // Schema markup for SEO
   const reviewSchema = {
     "@context": "https://schema.org",
@@ -106,7 +117,7 @@ export default function MediaIoReviewPage() {
     <>
       <Head>
         {/* Primary SEO Tags */}
-        <title>Media.io Review: Complete AI Tools Analysis | SiteOptz</title>
+        <title>{tool?.name || 'Media IO'} Review: Complete Analysis | SiteOptz</title>
         <meta name="description" content="Comprehensive Media.io review. Media.io features, pricing & alternatives compared. Expert analysis & user guide for 2025." />
         <meta name="keywords" content="media-io review, media-io pricing, media-io features, media-io alternatives, ai tools" />
         <meta name="author" content="SiteOptz" />

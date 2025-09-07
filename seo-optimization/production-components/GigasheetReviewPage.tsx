@@ -5,14 +5,25 @@ import Link from 'next/link';
 import ToolLogo from '../../components/ToolLogo';
 import FAQSection from '../../components/comparison/FAQSection';
 
-export default function GigasheetReviewPage() {
+interface GigasheetReviewPageProps {
+  tool?: {
+    name: string;
+    category: string;
+    description: string;
+    website: string;
+    rating: number;
+    slug: string;
+  };
+}
+
+export default function GigasheetReviewPage({ tool }: GigasheetReviewPageProps = {}) {
   // Schema markup for SEO
   const reviewSchema = {
     "@context": "https://schema.org",
     "@type": "Review",
     "itemReviewed": {
       "@type": "SoftwareApplication",
-      "name": "Gigasheet",
+      "name": tool?.name || "Gigasheet",
       "description": "Gigasheet is an innovative AI solution designed to enhance productivity and streamline workflows.",
       "applicationCategory": "AI Tools",
       "url": "https://gigasheet.com",
@@ -106,7 +117,7 @@ export default function GigasheetReviewPage() {
     <>
       <Head>
         {/* Primary SEO Tags */}
-        <title>Gigasheet Review: Complete AI Tools Analysis | SiteOptz</title>
+        <title>{tool?.name || 'Gigasheet'} Review: Complete Analysis | SiteOptz</title>
         <meta name="description" content="Comprehensive Gigasheet review. Gigasheet features, pricing & alternatives compared. Expert analysis & user guide for 2025." />
         <meta name="keywords" content="gigasheet review, gigasheet pricing, gigasheet features, gigasheet alternatives, ai tools" />
         <meta name="author" content="SiteOptz" />

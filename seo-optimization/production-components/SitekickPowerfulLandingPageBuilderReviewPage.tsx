@@ -5,7 +5,18 @@ import Link from 'next/link';
 import ToolLogo from '../../components/ToolLogo';
 import FAQSection from '../../components/comparison/FAQSection';
 
-export default function SitekickPowerfulLandingPageBuilderReviewPage() {
+interface SitekickPowerfulLandingPageBuilderReviewPageProps {
+  tool?: {
+    name: string;
+    category: string;
+    description: string;
+    website: string;
+    rating: number;
+    slug: string;
+  };
+}
+
+export default function SitekickPowerfulLandingPageBuilderReviewPage({ tool }: SitekickPowerfulLandingPageBuilderReviewPageProps = {}) {
   // Schema markup for SEO
   const reviewSchema = {
     "@context": "https://schema.org",
@@ -106,7 +117,7 @@ export default function SitekickPowerfulLandingPageBuilderReviewPage() {
     <>
       <Head>
         {/* Primary SEO Tags */}
-        <title>Sitekick - Powerful Landing Page Builder Review: Complete Productivity Tool Analysis | SiteOptz</title>
+        <title>{tool?.name || 'Sitekick Powerful Landing Page Builder'} Review: Complete Analysis | SiteOptz</title>
         <meta name="description" content="Comprehensive Sitekick - Powerful Landing Page Builder review. Compare Sitekick - Powerful Landing Page Builder features, pricing & alternatives. Expert analysis & user guide for 2025. Get started today!" />
         <meta name="keywords" content="sitekick - powerful landing page builder review, sitekick - powerful landing page builder pricing, sitekick - powerful landing page builder features, sitekick - powerful landing page builder alternatives, productivity" />
         <meta name="author" content="SiteOptz" />

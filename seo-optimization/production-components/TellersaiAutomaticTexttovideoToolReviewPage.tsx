@@ -5,7 +5,18 @@ import Link from 'next/link';
 import ToolLogo from '../../components/ToolLogo';
 import FAQSection from '../../components/comparison/FAQSection';
 
-export default function TellersaiAutomaticTexttovideoToolReviewPage() {
+interface TellersaiAutomaticTexttovideoToolReviewPageProps {
+  tool?: {
+    name: string;
+    category: string;
+    description: string;
+    website: string;
+    rating: number;
+    slug: string;
+  };
+}
+
+export default function TellersaiAutomaticTexttovideoToolReviewPage({ tool }: TellersaiAutomaticTexttovideoToolReviewPageProps = {}) {
   // Schema markup for SEO
   const reviewSchema = {
     "@context": "https://schema.org",
@@ -106,7 +117,7 @@ export default function TellersaiAutomaticTexttovideoToolReviewPage() {
     <>
       <Head>
         {/* Primary SEO Tags */}
-        <title>Tellers.ai - Automatic Text-to-Video Tool Review: Complete Video Generation Tool Analysis | SiteOptz</title>
+        <title>{tool?.name || 'Tellersai Automatic Texttovideo Tool'} Review: Complete Analysis | SiteOptz</title>
         <meta name="description" content="Comprehensive Tellers.ai - Automatic Text-to-Video Tool review. Compare Tellers.ai - Automatic Text-to-Video Tool features, pricing & alternatives. Expert analysis & user guide for 2025. Get started today!" />
         <meta name="keywords" content="tellers.ai - automatic text-to-video tool review, tellers.ai - automatic text-to-video tool pricing, tellers.ai - automatic text-to-video tool features, tellers.ai - automatic text-to-video tool alternatives, video generation" />
         <meta name="author" content="SiteOptz" />

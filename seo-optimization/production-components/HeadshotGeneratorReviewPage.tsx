@@ -5,7 +5,18 @@ import Link from 'next/link';
 import ToolLogo from '../../components/ToolLogo';
 import FAQSection from '../../components/comparison/FAQSection';
 
-export default function HeadshotGeneratorReviewPage() {
+interface HeadshotGeneratorReviewPageProps {
+  tool?: {
+    name: string;
+    category: string;
+    description: string;
+    website: string;
+    rating: number;
+    slug: string;
+  };
+}
+
+export default function HeadshotGeneratorReviewPage({ tool }: HeadshotGeneratorReviewPageProps = {}) {
   // Schema markup for SEO
   const reviewSchema = {
     "@context": "https://schema.org",
@@ -106,7 +117,7 @@ export default function HeadshotGeneratorReviewPage() {
     <>
       <Head>
         {/* Primary SEO Tags */}
-        <title>Headshot Generator Review: Complete AI Tools Analysis | SiteOptz</title>
+        <title>{tool?.name || 'Headshot Generator'} Review: Complete Analysis | SiteOptz</title>
         <meta name="description" content="Comprehensive Headshot Generator review. Headshot Generator features, pricing & alternatives compared. Expert analysis & user guide for 2025." />
         <meta name="keywords" content="headshot-generator review, headshot-generator pricing, headshot-generator features, headshot-generator alternatives, ai tools" />
         <meta name="author" content="SiteOptz" />

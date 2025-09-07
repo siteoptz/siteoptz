@@ -5,14 +5,25 @@ import Link from 'next/link';
 import ToolLogo from '../../components/ToolLogo';
 import FAQSection from '../../components/comparison/FAQSection';
 
-export default function TradesantaReviewPage() {
+interface TradesantaReviewPageProps {
+  tool?: {
+    name: string;
+    category: string;
+    description: string;
+    website: string;
+    rating: number;
+    slug: string;
+  };
+}
+
+export default function TradesantaReviewPage({ tool }: TradesantaReviewPageProps = {}) {
   // Schema markup for SEO
   const reviewSchema = {
     "@context": "https://schema.org",
     "@type": "Review",
     "itemReviewed": {
       "@type": "SoftwareApplication",
-      "name": "Tradesanta",
+      "name": tool?.name || "Tradesanta",
       "description": "Tradesanta is an innovative AI solution designed to enhance productivity and streamline workflows.",
       "applicationCategory": "AI Tools",
       "url": "https://tradesanta.com",
@@ -106,7 +117,7 @@ export default function TradesantaReviewPage() {
     <>
       <Head>
         {/* Primary SEO Tags */}
-        <title>Tradesanta Review: Complete AI Tools Analysis | SiteOptz</title>
+        <title>{tool?.name || 'Tradesanta'} Review: Complete Analysis | SiteOptz</title>
         <meta name="description" content="Comprehensive Tradesanta review. Tradesanta features, pricing & alternatives compared. Expert analysis & user guide for 2025." />
         <meta name="keywords" content="tradesanta review, tradesanta pricing, tradesanta features, tradesanta alternatives, ai tools" />
         <meta name="author" content="SiteOptz" />

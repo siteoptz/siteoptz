@@ -5,7 +5,18 @@ import Link from 'next/link';
 import ToolLogo from '../../components/ToolLogo';
 import FAQSection from '../../components/comparison/FAQSection';
 
-export default function WebliumConvenientAiWebsiteBuilderReviewPage() {
+interface WebliumConvenientAiWebsiteBuilderReviewPageProps {
+  tool?: {
+    name: string;
+    category: string;
+    description: string;
+    website: string;
+    rating: number;
+    slug: string;
+  };
+}
+
+export default function WebliumConvenientAiWebsiteBuilderReviewPage({ tool }: WebliumConvenientAiWebsiteBuilderReviewPageProps = {}) {
   // Schema markup for SEO
   const reviewSchema = {
     "@context": "https://schema.org",
@@ -106,7 +117,7 @@ export default function WebliumConvenientAiWebsiteBuilderReviewPage() {
     <>
       <Head>
         {/* Primary SEO Tags */}
-        <title>Weblium - Convenient AI Website Builder Review: Complete Code Generation Tool Analysis | SiteOptz</title>
+        <title>{tool?.name || 'Weblium Convenient Ai Website Builder'} Review: Complete Analysis | SiteOptz</title>
         <meta name="description" content="Comprehensive Weblium - Convenient AI Website Builder review. Compare Weblium - Convenient AI Website Builder features, pricing & alternatives. Expert analysis & user guide for 2025. Get started today!" />
         <meta name="keywords" content="weblium - convenient ai website builder review, weblium - convenient ai website builder pricing, weblium - convenient ai website builder features, weblium - convenient ai website builder alternatives, code generation" />
         <meta name="author" content="SiteOptz" />

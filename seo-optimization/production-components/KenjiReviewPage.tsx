@@ -5,14 +5,25 @@ import Link from 'next/link';
 import ToolLogo from '../../components/ToolLogo';
 import FAQSection from '../../components/comparison/FAQSection';
 
-export default function KenjiReviewPage() {
+interface KenjiReviewPageProps {
+  tool?: {
+    name: string;
+    category: string;
+    description: string;
+    website: string;
+    rating: number;
+    slug: string;
+  };
+}
+
+export default function KenjiReviewPage({ tool }: KenjiReviewPageProps = {}) {
   // Schema markup for SEO
   const reviewSchema = {
     "@context": "https://schema.org",
     "@type": "Review",
     "itemReviewed": {
       "@type": "SoftwareApplication",
-      "name": "Kenji",
+      "name": tool?.name || "Kenji",
       "description": "Kenji is an innovative AI solution designed to enhance productivity and streamline workflows.",
       "applicationCategory": "AI Tools",
       "url": "https://kenji.com",
@@ -106,7 +117,7 @@ export default function KenjiReviewPage() {
     <>
       <Head>
         {/* Primary SEO Tags */}
-        <title>Kenji Review: Complete AI Tools Analysis | SiteOptz</title>
+        <title>{tool?.name || 'Kenji'} Review: Complete Analysis | SiteOptz</title>
         <meta name="description" content="Comprehensive Kenji review. Kenji features, pricing & alternatives compared. Expert analysis & user guide for 2025." />
         <meta name="keywords" content="kenji review, kenji pricing, kenji features, kenji alternatives, ai tools" />
         <meta name="author" content="SiteOptz" />

@@ -5,14 +5,25 @@ import Link from 'next/link';
 import ToolLogo from '../../components/ToolLogo';
 import FAQSection from '../../components/comparison/FAQSection';
 
-export default function ManychatReviewPage() {
+interface ManychatReviewPageProps {
+  tool?: {
+    name: string;
+    category: string;
+    description: string;
+    website: string;
+    rating: number;
+    slug: string;
+  };
+}
+
+export default function ManychatReviewPage({ tool }: ManychatReviewPageProps = {}) {
   // Schema markup for SEO
   const reviewSchema = {
     "@context": "https://schema.org",
     "@type": "Review",
     "itemReviewed": {
       "@type": "SoftwareApplication",
-      "name": "Manychat",
+      "name": tool?.name || "Manychat",
       "description": "Manychat is an innovative AI solution designed to enhance productivity and streamline workflows.",
       "applicationCategory": "AI Tools",
       "url": "https://manychat.com",
@@ -106,7 +117,7 @@ export default function ManychatReviewPage() {
     <>
       <Head>
         {/* Primary SEO Tags */}
-        <title>Manychat Review: Complete AI Tools Analysis | SiteOptz</title>
+        <title>{tool?.name || 'Manychat'} Review: Complete Analysis | SiteOptz</title>
         <meta name="description" content="Comprehensive Manychat review. Manychat features, pricing & alternatives compared. Expert analysis & user guide for 2025." />
         <meta name="keywords" content="manychat review, manychat pricing, manychat features, manychat alternatives, ai tools" />
         <meta name="author" content="SiteOptz" />

@@ -5,14 +5,25 @@ import Link from 'next/link';
 import ToolLogo from '../../components/ToolLogo';
 import FAQSection from '../../components/comparison/FAQSection';
 
-export default function ChatbitReviewPage() {
+interface ChatbitReviewPageProps {
+  tool?: {
+    name: string;
+    category: string;
+    description: string;
+    website: string;
+    rating: number;
+    slug: string;
+  };
+}
+
+export default function ChatbitReviewPage({ tool }: ChatbitReviewPageProps = {}) {
   // Schema markup for SEO
   const reviewSchema = {
     "@context": "https://schema.org",
     "@type": "Review",
     "itemReviewed": {
       "@type": "SoftwareApplication",
-      "name": "Chatbit",
+      "name": tool?.name || "Chatbit",
       "description": "Chatbit is an innovative AI solution designed to enhance productivity and streamline workflows.",
       "applicationCategory": "AI Tools",
       "url": "https://chatbit.com",
@@ -106,7 +117,7 @@ export default function ChatbitReviewPage() {
     <>
       <Head>
         {/* Primary SEO Tags */}
-        <title>Chatbit Review: Complete AI Tools Analysis | SiteOptz</title>
+        <title>{tool?.name || 'Chatbit'} Review: Complete Analysis | SiteOptz</title>
         <meta name="description" content="Comprehensive Chatbit review. Chatbit features, pricing & alternatives compared. Expert analysis & user guide for 2025." />
         <meta name="keywords" content="chatbit review, chatbit pricing, chatbit features, chatbit alternatives, ai tools" />
         <meta name="author" content="SiteOptz" />

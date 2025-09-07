@@ -5,7 +5,18 @@ import Link from 'next/link';
 import ToolLogo from '../../components/ToolLogo';
 import FAQSection from '../../components/comparison/FAQSection';
 
-export default function EnterprisednaReviewPage() {
+interface EnterprisednaReviewPageProps {
+  tool?: {
+    name: string;
+    category: string;
+    description: string;
+    website: string;
+    rating: number;
+    slug: string;
+  };
+}
+
+export default function EnterprisednaReviewPage({ tool }: EnterprisednaReviewPageProps = {}) {
   // Schema markup for SEO
   const reviewSchema = {
     "@context": "https://schema.org",
@@ -106,7 +117,7 @@ export default function EnterprisednaReviewPage() {
     <>
       <Head>
         {/* Primary SEO Tags */}
-        <title>EnterpriseDNA Review: Complete AI Tools Analysis | SiteOptz</title>
+        <title>{tool?.name || 'Enterprisedna'} Review: Complete Analysis | SiteOptz</title>
         <meta name="description" content="Comprehensive EnterpriseDNA review. EnterpriseDNA features, pricing & alternatives compared. Expert analysis & user guide for 2025." />
         <meta name="keywords" content="enterprisedna review, enterprisedna pricing, enterprisedna features, enterprisedna alternatives, ai tools" />
         <meta name="author" content="SiteOptz" />

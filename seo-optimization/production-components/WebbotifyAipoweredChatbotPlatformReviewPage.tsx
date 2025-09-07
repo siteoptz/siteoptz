@@ -5,7 +5,18 @@ import Link from 'next/link';
 import ToolLogo from '../../components/ToolLogo';
 import FAQSection from '../../components/comparison/FAQSection';
 
-export default function WebbotifyAipoweredChatbotPlatformReviewPage() {
+interface WebbotifyAipoweredChatbotPlatformReviewPageProps {
+  tool?: {
+    name: string;
+    category: string;
+    description: string;
+    website: string;
+    rating: number;
+    slug: string;
+  };
+}
+
+export default function WebbotifyAipoweredChatbotPlatformReviewPage({ tool }: WebbotifyAipoweredChatbotPlatformReviewPageProps = {}) {
   // Schema markup for SEO
   const reviewSchema = {
     "@context": "https://schema.org",
@@ -106,7 +117,7 @@ export default function WebbotifyAipoweredChatbotPlatformReviewPage() {
     <>
       <Head>
         {/* Primary SEO Tags */}
-        <title>Webbotify - AI-Powered Chatbot Platform Review: Complete AI Automation Tool Analysis | SiteOptz</title>
+        <title>{tool?.name || 'Webbotify Aipowered Chatbot Platform'} Review: Complete Analysis | SiteOptz</title>
         <meta name="description" content="Comprehensive Webbotify - AI-Powered Chatbot Platform review. Compare Webbotify - AI-Powered Chatbot Platform features, pricing & alternatives. Expert analysis & user guide for 2025. Get started today!" />
         <meta name="keywords" content="webbotify - ai-powered chatbot platform review, webbotify - ai-powered chatbot platform pricing, webbotify - ai-powered chatbot platform features, webbotify - ai-powered chatbot platform alternatives, ai automation" />
         <meta name="author" content="SiteOptz" />

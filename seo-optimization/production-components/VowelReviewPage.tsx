@@ -5,14 +5,25 @@ import Link from 'next/link';
 import ToolLogo from '../../components/ToolLogo';
 import FAQSection from '../../components/comparison/FAQSection';
 
-export default function VowelReviewPage() {
+interface VowelReviewPageProps {
+  tool?: {
+    name: string;
+    category: string;
+    description: string;
+    website: string;
+    rating: number;
+    slug: string;
+  };
+}
+
+export default function VowelReviewPage({ tool }: VowelReviewPageProps = {}) {
   // Schema markup for SEO
   const reviewSchema = {
     "@context": "https://schema.org",
     "@type": "Review",
     "itemReviewed": {
       "@type": "SoftwareApplication",
-      "name": "Vowel",
+      "name": tool?.name || "Vowel",
       "description": "Vowel is an innovative AI solution designed to enhance productivity and streamline workflows.",
       "applicationCategory": "AI Tools",
       "url": "https://vowel.com",
@@ -106,7 +117,7 @@ export default function VowelReviewPage() {
     <>
       <Head>
         {/* Primary SEO Tags */}
-        <title>Vowel Review: Complete AI Tools Analysis | SiteOptz</title>
+        <title>{tool?.name || 'Vowel'} Review: Complete Analysis | SiteOptz</title>
         <meta name="description" content="Comprehensive Vowel review. Vowel features, pricing & alternatives compared. Expert analysis & user guide for 2025." />
         <meta name="keywords" content="vowel review, vowel pricing, vowel features, vowel alternatives, ai tools" />
         <meta name="author" content="SiteOptz" />

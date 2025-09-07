@@ -5,7 +5,18 @@ import Link from 'next/link';
 import ToolLogo from '../../components/ToolLogo';
 import FAQSection from '../../components/comparison/FAQSection';
 
-export default function AlliaiReviewPage() {
+interface AlliaiReviewPageProps {
+  tool?: {
+    name: string;
+    category: string;
+    description: string;
+    website: string;
+    rating: number;
+    slug: string;
+  };
+}
+
+export default function AlliaiReviewPage({ tool }: AlliaiReviewPageProps = {}) {
   // Schema markup for SEO
   const reviewSchema = {
     "@context": "https://schema.org",
@@ -106,7 +117,7 @@ export default function AlliaiReviewPage() {
     <>
       <Head>
         {/* Primary SEO Tags */}
-        <title>AlliAI Review: Complete AI Tools Analysis | SiteOptz</title>
+        <title>{tool?.name || 'Alliai'} Review: Complete Analysis | SiteOptz</title>
         <meta name="description" content="Comprehensive AlliAI review. AlliAI features, pricing & alternatives compared. Expert analysis & user guide for 2025." />
         <meta name="keywords" content="alliai review, alliai pricing, alliai features, alliai alternatives, ai tools" />
         <meta name="author" content="SiteOptz" />

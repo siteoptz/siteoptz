@@ -5,7 +5,18 @@ import Link from 'next/link';
 import ToolLogo from '../../components/ToolLogo';
 import FAQSection from '../../components/comparison/FAQSection';
 
-export default function BrainybearEasilyBuildAiChatbotsReviewPage() {
+interface BrainybearEasilyBuildAiChatbotsReviewPageProps {
+  tool?: {
+    name: string;
+    category: string;
+    description: string;
+    website: string;
+    rating: number;
+    slug: string;
+  };
+}
+
+export default function BrainybearEasilyBuildAiChatbotsReviewPage({ tool }: BrainybearEasilyBuildAiChatbotsReviewPageProps = {}) {
   // Schema markup for SEO
   const reviewSchema = {
     "@context": "https://schema.org",
@@ -106,7 +117,7 @@ export default function BrainybearEasilyBuildAiChatbotsReviewPage() {
     <>
       <Head>
         {/* Primary SEO Tags */}
-        <title>Brainybear - Easily Build AI Chatbots Review: Complete AI Automation Tool Analysis | SiteOptz</title>
+        <title>{tool?.name || 'Brainybear Easily Build Ai Chatbots'} Review: Complete Analysis | SiteOptz</title>
         <meta name="description" content="Comprehensive Brainybear - Easily Build AI Chatbots review. Compare Brainybear - Easily Build AI Chatbots features, pricing & alternatives. Expert analysis & user guide for 2025. Get started today!" />
         <meta name="keywords" content="brainybear - easily build ai chatbots review, brainybear - easily build ai chatbots pricing, brainybear - easily build ai chatbots features, brainybear - easily build ai chatbots alternatives, ai automation" />
         <meta name="author" content="SiteOptz" />

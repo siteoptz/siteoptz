@@ -5,7 +5,18 @@ import Link from 'next/link';
 import ToolLogo from '../../components/ToolLogo';
 import FAQSection from '../../components/comparison/FAQSection';
 
-export default function InterviewStudyReviewPage() {
+interface InterviewStudyReviewPageProps {
+  tool?: {
+    name: string;
+    category: string;
+    description: string;
+    website: string;
+    rating: number;
+    slug: string;
+  };
+}
+
+export default function InterviewStudyReviewPage({ tool }: InterviewStudyReviewPageProps = {}) {
   // Schema markup for SEO
   const reviewSchema = {
     "@context": "https://schema.org",
@@ -106,7 +117,7 @@ export default function InterviewStudyReviewPage() {
     <>
       <Head>
         {/* Primary SEO Tags */}
-        <title>Interview Study Review: Complete AI Tools Analysis | SiteOptz</title>
+        <title>{tool?.name || 'Interview Study'} Review: Complete Analysis | SiteOptz</title>
         <meta name="description" content="Comprehensive Interview Study review. Interview Study features, pricing & alternatives compared. Expert analysis & user guide for 2025." />
         <meta name="keywords" content="interview-study review, interview-study pricing, interview-study features, interview-study alternatives, ai tools" />
         <meta name="author" content="SiteOptz" />

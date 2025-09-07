@@ -5,7 +5,18 @@ import Link from 'next/link';
 import ToolLogo from '../../components/ToolLogo';
 import FAQSection from '../../components/comparison/FAQSection';
 
-export default function RegieAiReviewPage() {
+interface RegieAiReviewPageProps {
+  tool?: {
+    name: string;
+    category: string;
+    description: string;
+    website: string;
+    rating: number;
+    slug: string;
+  };
+}
+
+export default function RegieAiReviewPage({ tool }: RegieAiReviewPageProps = {}) {
   // Schema markup for SEO
   const reviewSchema = {
     "@context": "https://schema.org",
@@ -106,7 +117,7 @@ export default function RegieAiReviewPage() {
     <>
       <Head>
         {/* Primary SEO Tags */}
-        <title>Regie AI Review: Complete AI Tools Analysis | SiteOptz</title>
+        <title>{tool?.name || 'Regie AI'} Review: Complete Analysis | SiteOptz</title>
         <meta name="description" content="Comprehensive Regie AI review. Regie AI features, pricing & alternatives compared. Expert analysis & user guide for 2025." />
         <meta name="keywords" content="regie-ai review, regie-ai pricing, regie-ai features, regie-ai alternatives, ai tools" />
         <meta name="author" content="SiteOptz" />

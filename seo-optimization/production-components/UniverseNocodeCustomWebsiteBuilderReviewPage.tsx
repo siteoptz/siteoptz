@@ -5,7 +5,18 @@ import Link from 'next/link';
 import ToolLogo from '../../components/ToolLogo';
 import FAQSection from '../../components/comparison/FAQSection';
 
-export default function UniverseNocodeCustomWebsiteBuilderReviewPage() {
+interface UniverseNocodeCustomWebsiteBuilderReviewPageProps {
+  tool?: {
+    name: string;
+    category: string;
+    description: string;
+    website: string;
+    rating: number;
+    slug: string;
+  };
+}
+
+export default function UniverseNocodeCustomWebsiteBuilderReviewPage({ tool }: UniverseNocodeCustomWebsiteBuilderReviewPageProps = {}) {
   // Schema markup for SEO
   const reviewSchema = {
     "@context": "https://schema.org",
@@ -106,7 +117,7 @@ export default function UniverseNocodeCustomWebsiteBuilderReviewPage() {
     <>
       <Head>
         {/* Primary SEO Tags */}
-        <title>Universe - No-Code Custom Website Builder Review: Complete Code Generation Tool Analysis | SiteOptz</title>
+        <title>{tool?.name || 'Universe Nocode Custom Website Builder'} Review: Complete Analysis | SiteOptz</title>
         <meta name="description" content="Comprehensive Universe - No-Code Custom Website Builder review. Compare Universe - No-Code Custom Website Builder features, pricing & alternatives. Expert analysis & user guide for 2025. Get started today!" />
         <meta name="keywords" content="universe - no-code custom website builder review, universe - no-code custom website builder pricing, universe - no-code custom website builder features, universe - no-code custom website builder alternatives, code generation" />
         <meta name="author" content="SiteOptz" />

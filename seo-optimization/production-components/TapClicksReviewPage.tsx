@@ -7,7 +7,7 @@ const TapclicksReviewPage: React.FC<TapclicksReviewPageProps> = () => {
   return (
     <>
       <Head>
-        <title>TapClicks Review [2025] | SiteOptz</title>
+        <title>{tool?.name || 'Tapclicks'} Review: Complete Analysis | SiteOptz</title>
         <meta 
           name="description" 
           content="TapClicks review. TapClicks is a comprehensive marketing operations platform that streamlines campaign management, performance reporting, and workflow automat... Features, pricing & alternatives." 

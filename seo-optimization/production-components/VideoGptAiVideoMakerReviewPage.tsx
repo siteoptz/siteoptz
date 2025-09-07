@@ -5,7 +5,18 @@ import Link from 'next/link';
 import ToolLogo from '../../components/ToolLogo';
 import FAQSection from '../../components/comparison/FAQSection';
 
-export default function VideoGptAiVideoMakerReviewPage() {
+interface VideoGptAiVideoMakerReviewPageProps {
+  tool?: {
+    name: string;
+    category: string;
+    description: string;
+    website: string;
+    rating: number;
+    slug: string;
+  };
+}
+
+export default function VideoGptAiVideoMakerReviewPage({ tool }: VideoGptAiVideoMakerReviewPageProps = {}) {
   // Schema markup for SEO
   const reviewSchema = {
     "@context": "https://schema.org",
@@ -106,7 +117,7 @@ export default function VideoGptAiVideoMakerReviewPage() {
     <>
       <Head>
         {/* Primary SEO Tags */}
-        <title>Video GPT - AI Video Maker Review: Complete Video Generation Tool Analysis | SiteOptz</title>
+        <title>{tool?.name || 'Video Gpt Ai Video Maker'} Review: Complete Analysis | SiteOptz</title>
         <meta name="description" content="Comprehensive Video GPT - AI Video Maker review. Compare Video GPT - AI Video Maker features, pricing & alternatives. Expert analysis & user guide for 2025. Get started today!" />
         <meta name="keywords" content="video gpt - ai video maker review, video gpt - ai video maker pricing, video gpt - ai video maker features, video gpt - ai video maker alternatives, video generation" />
         <meta name="author" content="SiteOptz" />

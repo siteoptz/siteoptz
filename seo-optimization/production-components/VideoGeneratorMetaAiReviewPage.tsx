@@ -5,7 +5,18 @@ import Link from 'next/link';
 import ToolLogo from '../../components/ToolLogo';
 import FAQSection from '../../components/comparison/FAQSection';
 
-export default function VideoGeneratorMetaAiReviewPage() {
+interface VideoGeneratorMetaAiReviewPageProps {
+  tool?: {
+    name: string;
+    category: string;
+    description: string;
+    website: string;
+    rating: number;
+    slug: string;
+  };
+}
+
+export default function VideoGeneratorMetaAiReviewPage({ tool }: VideoGeneratorMetaAiReviewPageProps = {}) {
   // Schema markup for SEO
   const reviewSchema = {
     "@context": "https://schema.org",
@@ -106,7 +117,7 @@ export default function VideoGeneratorMetaAiReviewPage() {
     <>
       <Head>
         {/* Primary SEO Tags */}
-        <title>Video Generator Meta AI Review: Complete Video Generation Tool Analysis | SiteOptz</title>
+        <title>{tool?.name || 'Video Generator Meta AI'} Review: Complete Analysis | SiteOptz</title>
         <meta name="description" content="Comprehensive Video Generator Meta AI review. Compare Video Generator Meta AI features, pricing & alternatives. Expert analysis & user guide for 2025. Get started today!" />
         <meta name="keywords" content="video generator meta ai review, video generator meta ai pricing, video generator meta ai features, video generator meta ai alternatives, video generation" />
         <meta name="author" content="SiteOptz" />

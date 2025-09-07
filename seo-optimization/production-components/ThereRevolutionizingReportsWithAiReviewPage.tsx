@@ -5,7 +5,18 @@ import Link from 'next/link';
 import ToolLogo from '../../components/ToolLogo';
 import FAQSection from '../../components/comparison/FAQSection';
 
-export default function ThereRevolutionizingReportsWithAiReviewPage() {
+interface ThereRevolutionizingReportsWithAiReviewPageProps {
+  tool?: {
+    name: string;
+    category: string;
+    description: string;
+    website: string;
+    rating: number;
+    slug: string;
+  };
+}
+
+export default function ThereRevolutionizingReportsWithAiReviewPage({ tool }: ThereRevolutionizingReportsWithAiReviewPageProps = {}) {
   // Schema markup for SEO
   const reviewSchema = {
     "@context": "https://schema.org",
@@ -106,7 +117,7 @@ export default function ThereRevolutionizingReportsWithAiReviewPage() {
     <>
       <Head>
         {/* Primary SEO Tags */}
-        <title>There - Revolutionizing Reports with AI Review: Complete Data Analysis Tool Analysis | SiteOptz</title>
+        <title>{tool?.name || 'There Revolutionizing Reports With AI'} Review: Complete Analysis | SiteOptz</title>
         <meta name="description" content="Comprehensive There - Revolutionizing Reports with AI review. Compare There - Revolutionizing Reports with AI features, pricing & alternatives. Expert analysis & user guide for 2025. Get started today!" />
         <meta name="keywords" content="there - revolutionizing reports with ai review, there - revolutionizing reports with ai pricing, there - revolutionizing reports with ai features, there - revolutionizing reports with ai alternatives, data analysis" />
         <meta name="author" content="SiteOptz" />

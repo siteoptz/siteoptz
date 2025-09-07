@@ -5,14 +5,25 @@ import Link from 'next/link';
 import ToolLogo from '../../components/ToolLogo';
 import FAQSection from '../../components/comparison/FAQSection';
 
-export default function BranchbobReviewPage() {
+interface BranchbobReviewPageProps {
+  tool?: {
+    name: string;
+    category: string;
+    description: string;
+    website: string;
+    rating: number;
+    slug: string;
+  };
+}
+
+export default function BranchbobReviewPage({ tool }: BranchbobReviewPageProps = {}) {
   // Schema markup for SEO
   const reviewSchema = {
     "@context": "https://schema.org",
     "@type": "Review",
     "itemReviewed": {
       "@type": "SoftwareApplication",
-      "name": "Branchbob",
+      "name": tool?.name || "Branchbob",
       "description": "Branchbob is an innovative AI solution designed to enhance productivity and streamline workflows.",
       "applicationCategory": "AI Tools",
       "url": "https://branchbob.com",
@@ -106,7 +117,7 @@ export default function BranchbobReviewPage() {
     <>
       <Head>
         {/* Primary SEO Tags */}
-        <title>Branchbob Review: Complete AI Tools Analysis | SiteOptz</title>
+        <title>{tool?.name || 'Branchbob'} Review: Complete Analysis | SiteOptz</title>
         <meta name="description" content="Comprehensive Branchbob review. Branchbob features, pricing & alternatives compared. Expert analysis & user guide for 2025." />
         <meta name="keywords" content="branchbob review, branchbob pricing, branchbob features, branchbob alternatives, ai tools" />
         <meta name="author" content="SiteOptz" />

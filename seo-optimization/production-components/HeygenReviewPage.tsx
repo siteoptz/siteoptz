@@ -5,7 +5,18 @@ import Link from 'next/link';
 import ToolLogo from '../../components/ToolLogo';
 import FAQSection from '../../components/comparison/FAQSection';
 
-export default function HeygenReviewPage() {
+interface HeygenReviewPageProps {
+  tool?: {
+    name: string;
+    category: string;
+    description: string;
+    website: string;
+    rating: number;
+    slug: string;
+  };
+}
+
+export default function HeygenReviewPage({ tool }: HeygenReviewPageProps = {}) {
   // Schema markup for SEO
   const reviewSchema = {
     "@context": "https://schema.org",
@@ -106,7 +117,7 @@ export default function HeygenReviewPage() {
     <>
       <Head>
         {/* Primary SEO Tags */}
-        <title>HeyGen Review: Complete AI Tools Analysis | SiteOptz</title>
+        <title>{tool?.name || 'Heygen'} Review: Complete Analysis | SiteOptz</title>
         <meta name="description" content="Comprehensive HeyGen review. HeyGen features, pricing & alternatives compared. Expert analysis & user guide for 2025." />
         <meta name="keywords" content="heygen review, heygen pricing, heygen features, heygen alternatives, ai tools" />
         <meta name="author" content="SiteOptz" />

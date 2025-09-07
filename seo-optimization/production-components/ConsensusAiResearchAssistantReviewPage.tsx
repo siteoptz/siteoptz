@@ -5,7 +5,18 @@ import Link from 'next/link';
 import ToolLogo from '../../components/ToolLogo';
 import FAQSection from '../../components/comparison/FAQSection';
 
-export default function ConsensusAiResearchAssistantReviewPage() {
+interface ConsensusAiResearchAssistantReviewPageProps {
+  tool?: {
+    name: string;
+    category: string;
+    description: string;
+    website: string;
+    rating: number;
+    slug: string;
+  };
+}
+
+export default function ConsensusAiResearchAssistantReviewPage({ tool }: ConsensusAiResearchAssistantReviewPageProps = {}) {
   // Schema markup for SEO
   const reviewSchema = {
     "@context": "https://schema.org",
@@ -106,7 +117,7 @@ export default function ConsensusAiResearchAssistantReviewPage() {
     <>
       <Head>
         {/* Primary SEO Tags */}
-        <title>Consensus - AI Research Assistant Review: Complete AI Automation Tool Analysis | SiteOptz</title>
+        <title>{tool?.name || 'Consensus Ai Research Assistant'} Review: Complete Analysis | SiteOptz</title>
         <meta name="description" content="Comprehensive Consensus - AI Research Assistant review. Compare Consensus - AI Research Assistant features, pricing & alternatives. Expert analysis & user guide for 2025. Get started today!" />
         <meta name="keywords" content="consensus - ai research assistant review, consensus - ai research assistant pricing, consensus - ai research assistant features, consensus - ai research assistant alternatives, ai automation" />
         <meta name="author" content="SiteOptz" />

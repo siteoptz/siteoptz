@@ -5,7 +5,18 @@ import Link from 'next/link';
 import ToolLogo from '../../components/ToolLogo';
 import FAQSection from '../../components/comparison/FAQSection';
 
-export default function CozeBuildAiChatbotsEffortlesslyReviewPage() {
+interface CozeBuildAiChatbotsEffortlesslyReviewPageProps {
+  tool?: {
+    name: string;
+    category: string;
+    description: string;
+    website: string;
+    rating: number;
+    slug: string;
+  };
+}
+
+export default function CozeBuildAiChatbotsEffortlesslyReviewPage({ tool }: CozeBuildAiChatbotsEffortlesslyReviewPageProps = {}) {
   // Schema markup for SEO
   const reviewSchema = {
     "@context": "https://schema.org",
@@ -106,7 +117,7 @@ export default function CozeBuildAiChatbotsEffortlesslyReviewPage() {
     <>
       <Head>
         {/* Primary SEO Tags */}
-        <title>Coze - Build AI Chatbots Effortlessly Review: Complete AI Automation Tool Analysis | SiteOptz</title>
+        <title>{tool?.name || 'Coze Build Ai Chatbots Effortlessly'} Review: Complete Analysis | SiteOptz</title>
         <meta name="description" content="Comprehensive Coze - Build AI Chatbots Effortlessly review. Compare Coze - Build AI Chatbots Effortlessly features, pricing & alternatives. Expert analysis & user guide for 2025. Get started today!" />
         <meta name="keywords" content="coze - build ai chatbots effortlessly review, coze - build ai chatbots effortlessly pricing, coze - build ai chatbots effortlessly features, coze - build ai chatbots effortlessly alternatives, ai automation" />
         <meta name="author" content="SiteOptz" />

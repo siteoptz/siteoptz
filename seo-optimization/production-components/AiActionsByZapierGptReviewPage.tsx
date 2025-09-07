@@ -5,7 +5,18 @@ import Link from 'next/link';
 import ToolLogo from '../../components/ToolLogo';
 import FAQSection from '../../components/comparison/FAQSection';
 
-export default function AiActionsByZapierGptReviewPage() {
+interface AiActionsByZapierGptReviewPageProps {
+  tool?: {
+    name: string;
+    category: string;
+    description: string;
+    website: string;
+    rating: number;
+    slug: string;
+  };
+}
+
+export default function AiActionsByZapierGptReviewPage({ tool }: AiActionsByZapierGptReviewPageProps = {}) {
   // Schema markup for SEO
   const reviewSchema = {
     "@context": "https://schema.org",
@@ -106,7 +117,7 @@ export default function AiActionsByZapierGptReviewPage() {
     <>
       <Head>
         {/* Primary SEO Tags */}
-        <title>AI Actions by Zapier GPT Review: Complete AI Automation Tool Analysis | SiteOptz</title>
+        <title>{tool?.name || 'Ai Actions By Zapier Gpt'} Review: Complete Analysis | SiteOptz</title>
         <meta name="description" content="Comprehensive AI Actions by Zapier GPT review. Compare AI Actions by Zapier GPT features, pricing & alternatives. Expert analysis & user guide for 2025. Get started today!" />
         <meta name="keywords" content="ai actions by zapier gpt review, ai actions by zapier gpt pricing, ai actions by zapier gpt features, ai actions by zapier gpt alternatives, ai automation" />
         <meta name="author" content="SiteOptz" />

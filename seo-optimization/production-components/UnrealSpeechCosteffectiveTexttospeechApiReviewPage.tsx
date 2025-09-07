@@ -5,7 +5,18 @@ import Link from 'next/link';
 import ToolLogo from '../../components/ToolLogo';
 import FAQSection from '../../components/comparison/FAQSection';
 
-export default function UnrealSpeechCosteffectiveTexttospeechApiReviewPage() {
+interface UnrealSpeechCosteffectiveTexttospeechApiReviewPageProps {
+  tool?: {
+    name: string;
+    category: string;
+    description: string;
+    website: string;
+    rating: number;
+    slug: string;
+  };
+}
+
+export default function UnrealSpeechCosteffectiveTexttospeechApiReviewPage({ tool }: UnrealSpeechCosteffectiveTexttospeechApiReviewPageProps = {}) {
   // Schema markup for SEO
   const reviewSchema = {
     "@context": "https://schema.org",
@@ -106,7 +117,7 @@ export default function UnrealSpeechCosteffectiveTexttospeechApiReviewPage() {
     <>
       <Head>
         {/* Primary SEO Tags */}
-        <title>Unreal Speech - Cost-Effective Text-to-Speech API Review: Complete Best Voice AI Tools Tool Analysis | SiteOptz</title>
+        <title>{tool?.name || 'Unreal Speech Costeffective Texttospeech API'} Review: Complete Analysis | SiteOptz</title>
         <meta name="description" content="Comprehensive Unreal Speech - Cost-Effective Text-to-Speech API review. Compare Unreal Speech - Cost-Effective Text-to-Speech API features, pricing & alternatives. Expert analysis & user guide for 2025. Get started today!" />
         <meta name="keywords" content="unreal speech - cost-effective text-to-speech api review, unreal speech - cost-effective text-to-speech api pricing, unreal speech - cost-effective text-to-speech api features, unreal speech - cost-effective text-to-speech api alternatives, best voice ai tools" />
         <meta name="author" content="SiteOptz" />

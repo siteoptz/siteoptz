@@ -5,7 +5,18 @@ import Link from 'next/link';
 import ToolLogo from '../../components/ToolLogo';
 import FAQSection from '../../components/comparison/FAQSection';
 
-export default function OctopusCrmReviewPage() {
+interface OctopusCrmReviewPageProps {
+  tool?: {
+    name: string;
+    category: string;
+    description: string;
+    website: string;
+    rating: number;
+    slug: string;
+  };
+}
+
+export default function OctopusCrmReviewPage({ tool }: OctopusCrmReviewPageProps = {}) {
   // Schema markup for SEO
   const reviewSchema = {
     "@context": "https://schema.org",
@@ -106,7 +117,7 @@ export default function OctopusCrmReviewPage() {
     <>
       <Head>
         {/* Primary SEO Tags */}
-        <title>Octopus CRM Review: Complete AI Tools Analysis | SiteOptz</title>
+        <title>{tool?.name || 'Octopus Crm'} Review: Complete Analysis | SiteOptz</title>
         <meta name="description" content="Comprehensive Octopus CRM review. Octopus CRM features, pricing & alternatives compared. Expert analysis & user guide for 2025." />
         <meta name="keywords" content="octopus-crm review, octopus-crm pricing, octopus-crm features, octopus-crm alternatives, ai tools" />
         <meta name="author" content="SiteOptz" />

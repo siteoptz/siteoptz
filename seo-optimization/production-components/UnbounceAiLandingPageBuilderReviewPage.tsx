@@ -5,7 +5,18 @@ import Link from 'next/link';
 import ToolLogo from '../../components/ToolLogo';
 import FAQSection from '../../components/comparison/FAQSection';
 
-export default function UnbounceAiLandingPageBuilderReviewPage() {
+interface UnbounceAiLandingPageBuilderReviewPageProps {
+  tool?: {
+    name: string;
+    category: string;
+    description: string;
+    website: string;
+    rating: number;
+    slug: string;
+  };
+}
+
+export default function UnbounceAiLandingPageBuilderReviewPage({ tool }: UnbounceAiLandingPageBuilderReviewPageProps = {}) {
   // Schema markup for SEO
   const reviewSchema = {
     "@context": "https://schema.org",
@@ -106,7 +117,7 @@ export default function UnbounceAiLandingPageBuilderReviewPage() {
     <>
       <Head>
         {/* Primary SEO Tags */}
-        <title>Unbounce - AI Landing Page Builder Review: Complete Productivity Tool Analysis | SiteOptz</title>
+        <title>{tool?.name || 'Unbounce Ai Landing Page Builder'} Review: Complete Analysis | SiteOptz</title>
         <meta name="description" content="Comprehensive Unbounce - AI Landing Page Builder review. Compare Unbounce - AI Landing Page Builder features, pricing & alternatives. Expert analysis & user guide for 2025. Get started today!" />
         <meta name="keywords" content="unbounce - ai landing page builder review, unbounce - ai landing page builder pricing, unbounce - ai landing page builder features, unbounce - ai landing page builder alternatives, productivity" />
         <meta name="author" content="SiteOptz" />
