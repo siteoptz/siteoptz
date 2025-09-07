@@ -1,16 +1,17 @@
 /** @type {import('next').NextConfig} */
-// Disabled: Using comprehensive Vercel redirects instead to avoid conflicts
-// const redirects404Fix = require('./redirects-404-fix');
-// const canonicalRedirects = require('./redirects-canonical');
-
 const nextConfig = {
   reactStrictMode: true,
   swcMinify: true,
   compress: true,
   
-  // Enable static site generation for better SEO and performance
-  trailingSlash: false,
-  // Force rebuild to clear cached redirects
+  // Pick one style and link to it everywhere to avoid slash-normalization redirects
+  trailingSlash: false,           // be consistent
+  
+  // Remove if not using locales to avoid auto locale redirects
+  i18n: undefined,                // no automatic locale detection
+  
+  // Avoid root → basePath redirects unless needed
+  basePath: undefined,
   
   // Image optimization settings
   images: {
@@ -157,36 +158,9 @@ const nextConfig = {
     ];
   },
 
-  // Minimal Next.js redirects - main redirects handled by vercel.json
+  // Remove any app-defined redirects
   async redirects() {
-    return [
-      // Only keep essential redirects that aren't covered by Vercel config
-      {
-        source: '/ai-tools',
-        destination: '/tools',
-        permanent: true,
-      },
-      {
-        source: '/ai-tools/:slug',
-        destination: '/tools/:slug',
-        permanent: true,
-      },
-      {
-        source: '/comparison/:tool1-vs-:tool2',
-        destination: '/compare/:tool1-vs-:tool2',
-        permanent: true,
-      },
-      {
-        source: '/tools-comparison',
-        destination: '/compare',
-        permanent: true,
-      },
-      {
-        source: '/ai-tools-comparison',
-        destination: '/compare',
-        permanent: true,
-      },
-    ];
+    return []; // ensure no temporary redirects are returned
   },
   
   // Experimental features for better performance

@@ -48,6 +48,31 @@
       "permanent": true
     },
     {
+      "source": "/ai-tools",
+      "destination": "/tools",
+      "permanent": true
+    },
+    {
+      "source": "/ai-tools/:slug",
+      "destination": "/tools/:slug",
+      "permanent": true
+    },
+    {
+      "source": "/comparison/:tool1-vs-:tool2",
+      "destination": "/compare/:tool1-vs-:tool2",
+      "permanent": true
+    },
+    {
+      "source": "/tools-comparison",
+      "destination": "/compare",
+      "permanent": true
+    },
+    {
+      "source": "/ai-tools-comparison",
+      "destination": "/compare",
+      "permanent": true
+    },
+    {
       "source": "/tools",
       "has": [
         {
