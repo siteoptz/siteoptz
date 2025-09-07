@@ -10,6 +10,7 @@ const nextConfig = {
   
   // Enable static site generation for better SEO and performance
   trailingSlash: false,
+  // Force rebuild to clear cached redirects
   
   // Image optimization settings
   images: {
