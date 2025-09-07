@@ -1,4 +1,9 @@
 {
+  "functions": {
+    "app/api/health.js": {
+      "maxDuration": 10
+    }
+  },
   "headers": [
     {
       "source": "/robots.txt",
