@@ -6,7 +6,7 @@ import ToolLogo from '../../components/ToolLogo';
 import FAQSection from '../../components/comparison/FAQSection';
 
 interface BranchbobReviewPageProps {
-  tool?: {
+  tool: {
     name: string;
     category: string;
     description: string;
@@ -16,7 +16,7 @@ interface BranchbobReviewPageProps {
   };
 }
 
-export default function BranchbobReviewPage({ tool }: BranchbobReviewPageProps = {}) {
+export default function BranchbobReviewPage({ tool }: BranchbobReviewPageProps) {
   // Schema markup for SEO
   const reviewSchema = {
     "@context": "https://schema.org",

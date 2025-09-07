@@ -6,7 +6,7 @@ import ToolLogo from '../../components/ToolLogo';
 import FAQSection from '../../components/comparison/FAQSection';
 
 interface TaxgptReviewPageProps {
-  tool?: {
+  tool: {
     name: string;
     category: string;
     description: string;
@@ -16,7 +16,7 @@ interface TaxgptReviewPageProps {
   };
 }
 
-export default function TaxgptReviewPage({ tool }: TaxgptReviewPageProps = {}) {
+export default function TaxgptReviewPage({ tool }: TaxgptReviewPageProps) {
   // Schema markup for SEO
   const reviewSchema = {
     "@context": "https://schema.org",

@@ -6,7 +6,7 @@ import ToolLogo from '../../components/ToolLogo';
 import FAQSection from '../../components/comparison/FAQSection';
 
 interface TellersaiAutomaticTexttovideoToolReviewPageProps {
-  tool?: {
+  tool: {
     name: string;
     category: string;
     description: string;
@@ -16,7 +16,7 @@ interface TellersaiAutomaticTexttovideoToolReviewPageProps {
   };
 }
 
-export default function TellersaiAutomaticTexttovideoToolReviewPage({ tool }: TellersaiAutomaticTexttovideoToolReviewPageProps = {}) {
+export default function TellersaiAutomaticTexttovideoToolReviewPage({ tool }: TellersaiAutomaticTexttovideoToolReviewPageProps) {
   // Schema markup for SEO
   const reviewSchema = {
     "@context": "https://schema.org",

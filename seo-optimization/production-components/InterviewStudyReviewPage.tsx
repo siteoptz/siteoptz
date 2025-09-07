@@ -6,7 +6,7 @@ import ToolLogo from '../../components/ToolLogo';
 import FAQSection from '../../components/comparison/FAQSection';
 
 interface InterviewStudyReviewPageProps {
-  tool?: {
+  tool: {
     name: string;
     category: string;
     description: string;
@@ -16,7 +16,7 @@ interface InterviewStudyReviewPageProps {
   };
 }
 
-export default function InterviewStudyReviewPage({ tool }: InterviewStudyReviewPageProps = {}) {
+export default function InterviewStudyReviewPage({ tool }: InterviewStudyReviewPageProps) {
   // Schema markup for SEO
   const reviewSchema = {
     "@context": "https://schema.org",

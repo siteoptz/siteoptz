@@ -6,7 +6,7 @@ import ToolLogo from '../../components/ToolLogo';
 import FAQSection from '../../components/comparison/FAQSection';
 
 interface TopicalAuthorityForSeoGptGeneratorReviewPageProps {
-  tool?: {
+  tool: {
     name: string;
     category: string;
     description: string;
@@ -16,7 +16,7 @@ interface TopicalAuthorityForSeoGptGeneratorReviewPageProps {
   };
 }
 
-export default function TopicalAuthorityForSeoGptGeneratorReviewPage({ tool }: TopicalAuthorityForSeoGptGeneratorReviewPageProps = {}) {
+export default function TopicalAuthorityForSeoGptGeneratorReviewPage({ tool }: TopicalAuthorityForSeoGptGeneratorReviewPageProps) {
   // Schema markup for SEO
   const reviewSchema = {
     "@context": "https://schema.org",

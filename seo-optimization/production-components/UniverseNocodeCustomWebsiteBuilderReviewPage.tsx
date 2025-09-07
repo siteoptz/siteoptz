@@ -6,7 +6,7 @@ import ToolLogo from '../../components/ToolLogo';
 import FAQSection from '../../components/comparison/FAQSection';
 
 interface UniverseNocodeCustomWebsiteBuilderReviewPageProps {
-  tool?: {
+  tool: {
     name: string;
     category: string;
     description: string;
@@ -16,7 +16,7 @@ interface UniverseNocodeCustomWebsiteBuilderReviewPageProps {
   };
 }
 
-export default function UniverseNocodeCustomWebsiteBuilderReviewPage({ tool }: UniverseNocodeCustomWebsiteBuilderReviewPageProps = {}) {
+export default function UniverseNocodeCustomWebsiteBuilderReviewPage({ tool }: UniverseNocodeCustomWebsiteBuilderReviewPageProps) {
   // Schema markup for SEO
   const reviewSchema = {
     "@context": "https://schema.org",

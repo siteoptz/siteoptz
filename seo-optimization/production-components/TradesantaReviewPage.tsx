@@ -6,7 +6,7 @@ import ToolLogo from '../../components/ToolLogo';
 import FAQSection from '../../components/comparison/FAQSection';
 
 interface TradesantaReviewPageProps {
-  tool?: {
+  tool: {
     name: string;
     category: string;
     description: string;
@@ -16,7 +16,7 @@ interface TradesantaReviewPageProps {
   };
 }
 
-export default function TradesantaReviewPage({ tool }: TradesantaReviewPageProps = {}) {
+export default function TradesantaReviewPage({ tool }: TradesantaReviewPageProps) {
   // Schema markup for SEO
   const reviewSchema = {
     "@context": "https://schema.org",

@@ -6,7 +6,7 @@ import ToolLogo from '../../components/ToolLogo';
 import FAQSection from '../../components/comparison/FAQSection';
 
 interface UnbounceAiLandingPageBuilderReviewPageProps {
-  tool?: {
+  tool: {
     name: string;
     category: string;
     description: string;
@@ -16,7 +16,7 @@ interface UnbounceAiLandingPageBuilderReviewPageProps {
   };
 }
 
-export default function UnbounceAiLandingPageBuilderReviewPage({ tool }: UnbounceAiLandingPageBuilderReviewPageProps = {}) {
+export default function UnbounceAiLandingPageBuilderReviewPage({ tool }: UnbounceAiLandingPageBuilderReviewPageProps) {
   // Schema markup for SEO
   const reviewSchema = {
     "@context": "https://schema.org",

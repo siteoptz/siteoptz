@@ -6,7 +6,7 @@ import ToolLogo from '../../components/ToolLogo';
 import FAQSection from '../../components/comparison/FAQSection';
 
 interface ManychatReviewPageProps {
-  tool?: {
+  tool: {
     name: string;
     category: string;
     description: string;
@@ -16,7 +16,7 @@ interface ManychatReviewPageProps {
   };
 }
 
-export default function ManychatReviewPage({ tool }: ManychatReviewPageProps = {}) {
+export default function ManychatReviewPage({ tool }: ManychatReviewPageProps) {
   // Schema markup for SEO
   const reviewSchema = {
     "@context": "https://schema.org",

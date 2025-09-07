@@ -6,7 +6,7 @@ import ToolLogo from '../../components/ToolLogo';
 import FAQSection from '../../components/comparison/FAQSection';
 
 interface ContentforgeReviewPageProps {
-  tool?: {
+  tool: {
     name: string;
     category: string;
     description: string;
@@ -16,7 +16,7 @@ interface ContentforgeReviewPageProps {
   };
 }
 
-export default function ContentforgeReviewPage({ tool }: ContentforgeReviewPageProps = {}) {
+export default function ContentforgeReviewPage({ tool }: ContentforgeReviewPageProps) {
   // Schema markup for SEO
   const reviewSchema = {
     "@context": "https://schema.org",

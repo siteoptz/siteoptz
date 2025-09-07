@@ -6,7 +6,7 @@ import ToolLogo from '../../components/ToolLogo';
 import FAQSection from '../../components/comparison/FAQSection';
 
 interface VowelReviewPageProps {
-  tool?: {
+  tool: {
     name: string;
     category: string;
     description: string;
@@ -16,7 +16,7 @@ interface VowelReviewPageProps {
   };
 }
 
-export default function VowelReviewPage({ tool }: VowelReviewPageProps = {}) {
+export default function VowelReviewPage({ tool }: VowelReviewPageProps) {
   // Schema markup for SEO
   const reviewSchema = {
     "@context": "https://schema.org",

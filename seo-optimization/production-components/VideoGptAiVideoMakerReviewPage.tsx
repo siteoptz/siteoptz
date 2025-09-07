@@ -6,7 +6,7 @@ import ToolLogo from '../../components/ToolLogo';
 import FAQSection from '../../components/comparison/FAQSection';
 
 interface VideoGptAiVideoMakerReviewPageProps {
-  tool?: {
+  tool: {
     name: string;
     category: string;
     description: string;
@@ -16,7 +16,7 @@ interface VideoGptAiVideoMakerReviewPageProps {
   };
 }
 
-export default function VideoGptAiVideoMakerReviewPage({ tool }: VideoGptAiVideoMakerReviewPageProps = {}) {
+export default function VideoGptAiVideoMakerReviewPage({ tool }: VideoGptAiVideoMakerReviewPageProps) {
   // Schema markup for SEO
   const reviewSchema = {
     "@context": "https://schema.org",

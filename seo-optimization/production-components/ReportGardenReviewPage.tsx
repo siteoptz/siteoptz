@@ -2,7 +2,7 @@ import React from 'react';
 import Head from 'next/head';
 
 interface ReportgardenReviewPageProps {
-  tool?: {
+  tool: {
     name: string;
     category: string;
     description: string;
@@ -12,7 +12,7 @@ interface ReportgardenReviewPageProps {
   };
 }
 
-const ReportgardenReviewPage: React.FC<ReportgardenReviewPageProps> = ({ tool } = {}) => {
+const ReportgardenReviewPage: React.FC<ReportgardenReviewPageProps> = ({ tool }) => {
   return (
     <>
       <Head>

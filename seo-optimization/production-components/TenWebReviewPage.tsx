@@ -6,7 +6,7 @@ import ToolLogo from '../../components/ToolLogo';
 import FAQSection from '../../components/comparison/FAQSection';
 
 interface TenWebReviewPageProps {
-  tool?: {
+  tool: {
     name: string;
     category: string;
     description: string;
@@ -16,7 +16,7 @@ interface TenWebReviewPageProps {
   };
 }
 
-export default function TenWebReviewPage({ tool }: TenWebReviewPageProps = {}) {
+export default function TenWebReviewPage({ tool }: TenWebReviewPageProps) {
   // Schema markup for SEO
   const reviewSchema = {
     "@context": "https://schema.org",

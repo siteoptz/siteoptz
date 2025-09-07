@@ -6,7 +6,7 @@ import ToolLogo from '../../components/ToolLogo';
 import FAQSection from '../../components/comparison/FAQSection';
 
 interface CozeBuildAiChatbotsEffortlesslyReviewPageProps {
-  tool?: {
+  tool: {
     name: string;
     category: string;
     description: string;
@@ -16,7 +16,7 @@ interface CozeBuildAiChatbotsEffortlesslyReviewPageProps {
   };
 }
 
-export default function CozeBuildAiChatbotsEffortlesslyReviewPage({ tool }: CozeBuildAiChatbotsEffortlesslyReviewPageProps = {}) {
+export default function CozeBuildAiChatbotsEffortlesslyReviewPage({ tool }: CozeBuildAiChatbotsEffortlesslyReviewPageProps) {
   // Schema markup for SEO
   const reviewSchema = {
     "@context": "https://schema.org",

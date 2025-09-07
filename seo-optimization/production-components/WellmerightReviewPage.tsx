@@ -6,7 +6,7 @@ import ToolLogo from '../../components/ToolLogo';
 import FAQSection from '../../components/comparison/FAQSection';
 
 interface WellmerightReviewPageProps {
-  tool?: {
+  tool: {
     name: string;
     category: string;
     description: string;
@@ -16,7 +16,7 @@ interface WellmerightReviewPageProps {
   };
 }
 
-export default function WellmerightReviewPage({ tool }: WellmerightReviewPageProps = {}) {
+export default function WellmerightReviewPage({ tool }: WellmerightReviewPageProps) {
   // Schema markup for SEO
   const reviewSchema = {
     "@context": "https://schema.org",

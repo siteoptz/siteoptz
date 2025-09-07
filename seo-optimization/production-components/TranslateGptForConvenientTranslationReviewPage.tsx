@@ -6,7 +6,7 @@ import ToolLogo from '../../components/ToolLogo';
 import FAQSection from '../../components/comparison/FAQSection';
 
 interface TranslateGptForConvenientTranslationReviewPageProps {
-  tool?: {
+  tool: {
     name: string;
     category: string;
     description: string;
@@ -16,7 +16,7 @@ interface TranslateGptForConvenientTranslationReviewPageProps {
   };
 }
 
-export default function TranslateGptForConvenientTranslationReviewPage({ tool }: TranslateGptForConvenientTranslationReviewPageProps = {}) {
+export default function TranslateGptForConvenientTranslationReviewPage({ tool }: TranslateGptForConvenientTranslationReviewPageProps) {
   // Schema markup for SEO
   const reviewSchema = {
     "@context": "https://schema.org",

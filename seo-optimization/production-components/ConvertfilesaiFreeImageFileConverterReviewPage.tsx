@@ -6,7 +6,7 @@ import ToolLogo from '../../components/ToolLogo';
 import FAQSection from '../../components/comparison/FAQSection';
 
 interface ConvertfilesaiFreeImageFileConverterReviewPageProps {
-  tool?: {
+  tool: {
     name: string;
     category: string;
     description: string;
@@ -16,7 +16,7 @@ interface ConvertfilesaiFreeImageFileConverterReviewPageProps {
   };
 }
 
-export default function ConvertfilesaiFreeImageFileConverterReviewPage({ tool }: ConvertfilesaiFreeImageFileConverterReviewPageProps = {}) {
+export default function ConvertfilesaiFreeImageFileConverterReviewPage({ tool }: ConvertfilesaiFreeImageFileConverterReviewPageProps) {
   // Schema markup for SEO
   const reviewSchema = {
     "@context": "https://schema.org",

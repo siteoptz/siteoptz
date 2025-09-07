@@ -6,7 +6,7 @@ import ToolLogo from '../../components/ToolLogo';
 import FAQSection from '../../components/comparison/FAQSection';
 
 interface WebliumConvenientAiWebsiteBuilderReviewPageProps {
-  tool?: {
+  tool: {
     name: string;
     category: string;
     description: string;
@@ -16,7 +16,7 @@ interface WebliumConvenientAiWebsiteBuilderReviewPageProps {
   };
 }
 
-export default function WebliumConvenientAiWebsiteBuilderReviewPage({ tool }: WebliumConvenientAiWebsiteBuilderReviewPageProps = {}) {
+export default function WebliumConvenientAiWebsiteBuilderReviewPage({ tool }: WebliumConvenientAiWebsiteBuilderReviewPageProps) {
   // Schema markup for SEO
   const reviewSchema = {
     "@context": "https://schema.org",

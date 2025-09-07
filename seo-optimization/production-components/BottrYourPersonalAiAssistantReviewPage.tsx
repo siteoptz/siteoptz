@@ -6,7 +6,7 @@ import ToolLogo from '../../components/ToolLogo';
 import FAQSection from '../../components/comparison/FAQSection';
 
 interface BottrYourPersonalAiAssistantReviewPageProps {
-  tool?: {
+  tool: {
     name: string;
     category: string;
     description: string;
@@ -16,7 +16,7 @@ interface BottrYourPersonalAiAssistantReviewPageProps {
   };
 }
 
-export default function BottrYourPersonalAiAssistantReviewPage({ tool }: BottrYourPersonalAiAssistantReviewPageProps = {}) {
+export default function BottrYourPersonalAiAssistantReviewPage({ tool }: BottrYourPersonalAiAssistantReviewPageProps) {
   // Schema markup for SEO
   const reviewSchema = {
     "@context": "https://schema.org",

@@ -6,7 +6,7 @@ import ToolLogo from '../../components/ToolLogo';
 import FAQSection from '../../components/comparison/FAQSection';
 
 interface BerthaAiReviewPageProps {
-  tool?: {
+  tool: {
     name: string;
     category: string;
     description: string;
@@ -16,7 +16,7 @@ interface BerthaAiReviewPageProps {
   };
 }
 
-export default function BerthaAiReviewPage({ tool }: BerthaAiReviewPageProps = {}) {
+export default function BerthaAiReviewPage({ tool }: BerthaAiReviewPageProps) {
   // Schema markup for SEO
   const reviewSchema = {
     "@context": "https://schema.org",

@@ -6,7 +6,7 @@ import ToolLogo from '../../components/ToolLogo';
 import FAQSection from '../../components/comparison/FAQSection';
 
 interface GunbotReviewPageProps {
-  tool?: {
+  tool: {
     name: string;
     category: string;
     description: string;
@@ -16,7 +16,7 @@ interface GunbotReviewPageProps {
   };
 }
 
-export default function GunbotReviewPage({ tool }: GunbotReviewPageProps = {}) {
+export default function GunbotReviewPage({ tool }: GunbotReviewPageProps) {
   // Schema markup for SEO
   const reviewSchema = {
     "@context": "https://schema.org",

@@ -6,7 +6,7 @@ import ToolLogo from '../../components/ToolLogo';
 import FAQSection from '../../components/comparison/FAQSection';
 
 interface CarboncopyReviewPageProps {
-  tool?: {
+  tool: {
     name: string;
     category: string;
     description: string;
@@ -16,7 +16,7 @@ interface CarboncopyReviewPageProps {
   };
 }
 
-export default function CarboncopyReviewPage({ tool }: CarboncopyReviewPageProps = {}) {
+export default function CarboncopyReviewPage({ tool }: CarboncopyReviewPageProps) {
   // Schema markup for SEO
   const reviewSchema = {
     "@context": "https://schema.org",

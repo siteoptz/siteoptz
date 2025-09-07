@@ -6,7 +6,7 @@ import ToolLogo from '../../components/ToolLogo';
 import FAQSection from '../../components/comparison/FAQSection';
 
 interface VeerollReviewPageProps {
-  tool?: {
+  tool: {
     name: string;
     category: string;
     description: string;
@@ -16,7 +16,7 @@ interface VeerollReviewPageProps {
   };
 }
 
-export default function VeerollReviewPage({ tool }: VeerollReviewPageProps = {}) {
+export default function VeerollReviewPage({ tool }: VeerollReviewPageProps) {
   // Schema markup for SEO
   const reviewSchema = {
     "@context": "https://schema.org",

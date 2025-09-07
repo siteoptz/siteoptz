@@ -6,7 +6,7 @@ import ToolLogo from '../../components/ToolLogo';
 import FAQSection from '../../components/comparison/FAQSection';
 
 interface RegieAiReviewPageProps {
-  tool?: {
+  tool: {
     name: string;
     category: string;
     description: string;
@@ -16,7 +16,7 @@ interface RegieAiReviewPageProps {
   };
 }
 
-export default function RegieAiReviewPage({ tool }: RegieAiReviewPageProps = {}) {
+export default function RegieAiReviewPage({ tool }: RegieAiReviewPageProps) {
   // Schema markup for SEO
   const reviewSchema = {
     "@context": "https://schema.org",

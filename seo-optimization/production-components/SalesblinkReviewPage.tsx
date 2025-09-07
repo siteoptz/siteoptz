@@ -6,7 +6,7 @@ import ToolLogo from '../../components/ToolLogo';
 import FAQSection from '../../components/comparison/FAQSection';
 
 interface SalesblinkReviewPageProps {
-  tool?: {
+  tool: {
     name: string;
     category: string;
     description: string;
@@ -16,7 +16,7 @@ interface SalesblinkReviewPageProps {
   };
 }
 
-export default function SalesblinkReviewPage({ tool }: SalesblinkReviewPageProps = {}) {
+export default function SalesblinkReviewPage({ tool }: SalesblinkReviewPageProps) {
   // Schema markup for SEO
   const reviewSchema = {
     "@context": "https://schema.org",

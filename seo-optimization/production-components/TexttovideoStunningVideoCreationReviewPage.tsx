@@ -6,7 +6,7 @@ import ToolLogo from '../../components/ToolLogo';
 import FAQSection from '../../components/comparison/FAQSection';
 
 interface TexttovideoStunningVideoCreationReviewPageProps {
-  tool?: {
+  tool: {
     name: string;
     category: string;
     description: string;
@@ -16,7 +16,7 @@ interface TexttovideoStunningVideoCreationReviewPageProps {
   };
 }
 
-export default function TexttovideoStunningVideoCreationReviewPage({ tool }: TexttovideoStunningVideoCreationReviewPageProps = {}) {
+export default function TexttovideoStunningVideoCreationReviewPage({ tool }: TexttovideoStunningVideoCreationReviewPageProps) {
   // Schema markup for SEO
   const reviewSchema = {
     "@context": "https://schema.org",

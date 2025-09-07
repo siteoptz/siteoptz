@@ -6,7 +6,7 @@ import ToolLogo from '../../components/ToolLogo';
 import FAQSection from '../../components/comparison/FAQSection';
 
 interface DivedeckAipoweredDeckBuilderReviewPageProps {
-  tool?: {
+  tool: {
     name: string;
     category: string;
     description: string;
@@ -16,7 +16,7 @@ interface DivedeckAipoweredDeckBuilderReviewPageProps {
   };
 }
 
-export default function DivedeckAipoweredDeckBuilderReviewPage({ tool }: DivedeckAipoweredDeckBuilderReviewPageProps = {}) {
+export default function DivedeckAipoweredDeckBuilderReviewPage({ tool }: DivedeckAipoweredDeckBuilderReviewPageProps) {
   // Schema markup for SEO
   const reviewSchema = {
     "@context": "https://schema.org",

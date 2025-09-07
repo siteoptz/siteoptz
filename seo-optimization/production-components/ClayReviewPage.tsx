@@ -6,7 +6,7 @@ import ToolLogo from '../../components/ToolLogo';
 import FAQSection from '../../components/comparison/FAQSection';
 
 interface ClayReviewPageProps {
-  tool?: {
+  tool: {
     name: string;
     category: string;
     description: string;
@@ -16,7 +16,7 @@ interface ClayReviewPageProps {
   };
 }
 
-export default function ClayReviewPage({ tool }: ClayReviewPageProps = {}) {
+export default function ClayReviewPage({ tool }: ClayReviewPageProps) {
   // Schema markup for SEO
   const reviewSchema = {
     "@context": "https://schema.org",

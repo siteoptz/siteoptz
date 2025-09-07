@@ -6,7 +6,7 @@ import ToolLogo from '../../components/ToolLogo';
 import FAQSection from '../../components/comparison/FAQSection';
 
 interface SeamlessAiReviewPageProps {
-  tool?: {
+  tool: {
     name: string;
     category: string;
     description: string;
@@ -16,7 +16,7 @@ interface SeamlessAiReviewPageProps {
   };
 }
 
-export default function SeamlessAiReviewPage({ tool }: SeamlessAiReviewPageProps = {}) {
+export default function SeamlessAiReviewPage({ tool }: SeamlessAiReviewPageProps) {
   // Schema markup for SEO
   const reviewSchema = {
     "@context": "https://schema.org",

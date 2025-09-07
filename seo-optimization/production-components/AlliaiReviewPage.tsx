@@ -6,7 +6,7 @@ import ToolLogo from '../../components/ToolLogo';
 import FAQSection from '../../components/comparison/FAQSection';
 
 interface AlliaiReviewPageProps {
-  tool?: {
+  tool: {
     name: string;
     category: string;
     description: string;
@@ -16,7 +16,7 @@ interface AlliaiReviewPageProps {
   };
 }
 
-export default function AlliaiReviewPage({ tool }: AlliaiReviewPageProps = {}) {
+export default function AlliaiReviewPage({ tool }: AlliaiReviewPageProps) {
   // Schema markup for SEO
   const reviewSchema = {
     "@context": "https://schema.org",

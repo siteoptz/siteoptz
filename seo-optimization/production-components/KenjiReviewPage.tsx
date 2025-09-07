@@ -6,7 +6,7 @@ import ToolLogo from '../../components/ToolLogo';
 import FAQSection from '../../components/comparison/FAQSection';
 
 interface KenjiReviewPageProps {
-  tool?: {
+  tool: {
     name: string;
     category: string;
     description: string;
@@ -16,7 +16,7 @@ interface KenjiReviewPageProps {
   };
 }
 
-export default function KenjiReviewPage({ tool }: KenjiReviewPageProps = {}) {
+export default function KenjiReviewPage({ tool }: KenjiReviewPageProps) {
   // Schema markup for SEO
   const reviewSchema = {
     "@context": "https://schema.org",

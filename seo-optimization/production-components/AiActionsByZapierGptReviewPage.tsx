@@ -6,7 +6,7 @@ import ToolLogo from '../../components/ToolLogo';
 import FAQSection from '../../components/comparison/FAQSection';
 
 interface AiActionsByZapierGptReviewPageProps {
-  tool?: {
+  tool: {
     name: string;
     category: string;
     description: string;
@@ -16,7 +16,7 @@ interface AiActionsByZapierGptReviewPageProps {
   };
 }
 
-export default function AiActionsByZapierGptReviewPage({ tool }: AiActionsByZapierGptReviewPageProps = {}) {
+export default function AiActionsByZapierGptReviewPage({ tool }: AiActionsByZapierGptReviewPageProps) {
   // Schema markup for SEO
   const reviewSchema = {
     "@context": "https://schema.org",

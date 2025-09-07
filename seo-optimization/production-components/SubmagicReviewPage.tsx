@@ -6,7 +6,7 @@ import ToolLogo from '../../components/ToolLogo';
 import FAQSection from '../../components/comparison/FAQSection';
 
 interface SubmagicReviewPageProps {
-  tool?: {
+  tool: {
     name: string;
     category: string;
     description: string;
@@ -16,7 +16,7 @@ interface SubmagicReviewPageProps {
   };
 }
 
-export default function SubmagicReviewPage({ tool }: SubmagicReviewPageProps = {}) {
+export default function SubmagicReviewPage({ tool }: SubmagicReviewPageProps) {
   // Schema markup for SEO
   const reviewSchema = {
     "@context": "https://schema.org",

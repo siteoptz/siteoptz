@@ -6,7 +6,7 @@ import ToolLogo from '../../components/ToolLogo';
 import FAQSection from '../../components/comparison/FAQSection';
 
 interface QuickadsReviewPageProps {
-  tool?: {
+  tool: {
     name: string;
     category: string;
     description: string;
@@ -16,7 +16,7 @@ interface QuickadsReviewPageProps {
   };
 }
 
-export default function QuickadsReviewPage({ tool }: QuickadsReviewPageProps = {}) {
+export default function QuickadsReviewPage({ tool }: QuickadsReviewPageProps) {
   // Schema markup for SEO
   const reviewSchema = {
     "@context": "https://schema.org",

@@ -6,7 +6,7 @@ import ToolLogo from '../../components/ToolLogo';
 import FAQSection from '../../components/comparison/FAQSection';
 
 interface TaplioReviewPageProps {
-  tool?: {
+  tool: {
     name: string;
     category: string;
     description: string;
@@ -16,7 +16,7 @@ interface TaplioReviewPageProps {
   };
 }
 
-export default function TaplioReviewPage({ tool }: TaplioReviewPageProps = {}) {
+export default function TaplioReviewPage({ tool }: TaplioReviewPageProps) {
   // Schema markup for SEO
   const reviewSchema = {
     "@context": "https://schema.org",

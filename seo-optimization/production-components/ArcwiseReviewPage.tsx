@@ -6,7 +6,7 @@ import ToolLogo from '../../components/ToolLogo';
 import FAQSection from '../../components/comparison/FAQSection';
 
 interface ArcwiseReviewPageProps {
-  tool?: {
+  tool: {
     name: string;
     category: string;
     description: string;
@@ -16,7 +16,7 @@ interface ArcwiseReviewPageProps {
   };
 }
 
-export default function ArcwiseReviewPage({ tool }: ArcwiseReviewPageProps = {}) {
+export default function ArcwiseReviewPage({ tool }: ArcwiseReviewPageProps) {
   // Schema markup for SEO
   const reviewSchema = {
     "@context": "https://schema.org",

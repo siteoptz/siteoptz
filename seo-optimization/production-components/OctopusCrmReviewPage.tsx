@@ -6,7 +6,7 @@ import ToolLogo from '../../components/ToolLogo';
 import FAQSection from '../../components/comparison/FAQSection';
 
 interface OctopusCrmReviewPageProps {
-  tool?: {
+  tool: {
     name: string;
     category: string;
     description: string;
@@ -16,7 +16,7 @@ interface OctopusCrmReviewPageProps {
   };
 }
 
-export default function OctopusCrmReviewPage({ tool }: OctopusCrmReviewPageProps = {}) {
+export default function OctopusCrmReviewPage({ tool }: OctopusCrmReviewPageProps) {
   // Schema markup for SEO
   const reviewSchema = {
     "@context": "https://schema.org",

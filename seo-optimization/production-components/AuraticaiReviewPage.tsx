@@ -6,7 +6,7 @@ import ToolLogo from '../../components/ToolLogo';
 import FAQSection from '../../components/comparison/FAQSection';
 
 interface AuraticaiReviewPageProps {
-  tool?: {
+  tool: {
     name: string;
     category: string;
     description: string;
@@ -16,7 +16,7 @@ interface AuraticaiReviewPageProps {
   };
 }
 
-export default function AuraticaiReviewPage({ tool }: AuraticaiReviewPageProps = {}) {
+export default function AuraticaiReviewPage({ tool }: AuraticaiReviewPageProps) {
   // Schema markup for SEO
   const reviewSchema = {
     "@context": "https://schema.org",

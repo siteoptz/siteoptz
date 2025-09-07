@@ -6,7 +6,7 @@ import ToolLogo from '../../components/ToolLogo';
 import FAQSection from '../../components/comparison/FAQSection';
 
 interface BrainybearEasilyBuildAiChatbotsReviewPageProps {
-  tool?: {
+  tool: {
     name: string;
     category: string;
     description: string;
@@ -16,7 +16,7 @@ interface BrainybearEasilyBuildAiChatbotsReviewPageProps {
   };
 }
 
-export default function BrainybearEasilyBuildAiChatbotsReviewPage({ tool }: BrainybearEasilyBuildAiChatbotsReviewPageProps = {}) {
+export default function BrainybearEasilyBuildAiChatbotsReviewPage({ tool }: BrainybearEasilyBuildAiChatbotsReviewPageProps) {
   // Schema markup for SEO
   const reviewSchema = {
     "@context": "https://schema.org",

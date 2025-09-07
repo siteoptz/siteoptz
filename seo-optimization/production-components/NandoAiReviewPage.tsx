@@ -6,7 +6,7 @@ import ToolLogo from '../../components/ToolLogo';
 import FAQSection from '../../components/comparison/FAQSection';
 
 interface NandoAiReviewPageProps {
-  tool?: {
+  tool: {
     name: string;
     category: string;
     description: string;
@@ -16,7 +16,7 @@ interface NandoAiReviewPageProps {
   };
 }
 
-export default function NandoAiReviewPage({ tool }: NandoAiReviewPageProps = {}) {
+export default function NandoAiReviewPage({ tool }: NandoAiReviewPageProps) {
   // Schema markup for SEO
   const reviewSchema = {
     "@context": "https://schema.org",

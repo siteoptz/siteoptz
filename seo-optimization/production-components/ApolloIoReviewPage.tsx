@@ -6,7 +6,7 @@ import ToolLogo from '../../components/ToolLogo';
 import FAQSection from '../../components/comparison/FAQSection';
 
 interface ApolloIoReviewPageProps {
-  tool?: {
+  tool: {
     name: string;
     category: string;
     description: string;
@@ -16,7 +16,7 @@ interface ApolloIoReviewPageProps {
   };
 }
 
-export default function ApolloIoReviewPage({ tool }: ApolloIoReviewPageProps = {}) {
+export default function ApolloIoReviewPage({ tool }: ApolloIoReviewPageProps) {
   // Schema markup for SEO
   const reviewSchema = {
     "@context": "https://schema.org",

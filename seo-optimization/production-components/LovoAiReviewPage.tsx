@@ -6,7 +6,7 @@ import ToolLogo from '../../components/ToolLogo';
 import FAQSection from '../../components/comparison/FAQSection';
 
 interface LovoAiReviewPageProps {
-  tool?: {
+  tool: {
     name: string;
     category: string;
     description: string;
@@ -16,7 +16,7 @@ interface LovoAiReviewPageProps {
   };
 }
 
-export default function LovoAiReviewPage({ tool }: LovoAiReviewPageProps = {}) {
+export default function LovoAiReviewPage({ tool }: LovoAiReviewPageProps) {
   // Schema markup for SEO
   const reviewSchema = {
     "@context": "https://schema.org",

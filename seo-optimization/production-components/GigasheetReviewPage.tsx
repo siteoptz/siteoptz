@@ -6,7 +6,7 @@ import ToolLogo from '../../components/ToolLogo';
 import FAQSection from '../../components/comparison/FAQSection';
 
 interface GigasheetReviewPageProps {
-  tool?: {
+  tool: {
     name: string;
     category: string;
     description: string;
@@ -16,7 +16,7 @@ interface GigasheetReviewPageProps {
   };
 }
 
-export default function GigasheetReviewPage({ tool }: GigasheetReviewPageProps = {}) {
+export default function GigasheetReviewPage({ tool }: GigasheetReviewPageProps) {
   // Schema markup for SEO
   const reviewSchema = {
     "@context": "https://schema.org",

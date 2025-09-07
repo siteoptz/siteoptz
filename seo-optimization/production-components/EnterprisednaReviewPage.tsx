@@ -6,7 +6,7 @@ import ToolLogo from '../../components/ToolLogo';
 import FAQSection from '../../components/comparison/FAQSection';
 
 interface EnterprisednaReviewPageProps {
-  tool?: {
+  tool: {
     name: string;
     category: string;
     description: string;
@@ -16,7 +16,7 @@ interface EnterprisednaReviewPageProps {
   };
 }
 
-export default function EnterprisednaReviewPage({ tool }: EnterprisednaReviewPageProps = {}) {
+export default function EnterprisednaReviewPage({ tool }: EnterprisednaReviewPageProps) {
   // Schema markup for SEO
   const reviewSchema = {
     "@context": "https://schema.org",

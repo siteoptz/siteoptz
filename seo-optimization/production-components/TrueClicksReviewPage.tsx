@@ -1,9 +1,18 @@
 import React from 'react';
 import Head from 'next/head';
 
-interface TrueclicksReviewPageProps {}
+interface TrueclicksReviewPageProps {
+  tool: {
+    name: string;
+    category: string;
+    description: string;
+    website: string;
+    rating: number;
+    slug: string;
+  };
+}
 
-const TrueclicksReviewPage: React.FC<TrueclicksReviewPageProps> = () => {
+const TrueclicksReviewPage: React.FC<TrueclicksReviewPageProps> = ({ tool }) => {
   return (
     <>
       <Head>

@@ -6,7 +6,7 @@ import ToolLogo from '../../components/ToolLogo';
 import FAQSection from '../../components/comparison/FAQSection';
 
 interface SpeechkiTexttospeechAiReviewPageProps {
-  tool?: {
+  tool: {
     name: string;
     category: string;
     description: string;
@@ -16,7 +16,7 @@ interface SpeechkiTexttospeechAiReviewPageProps {
   };
 }
 
-export default function SpeechkiTexttospeechAiReviewPage({ tool }: SpeechkiTexttospeechAiReviewPageProps = {}) {
+export default function SpeechkiTexttospeechAiReviewPage({ tool }: SpeechkiTexttospeechAiReviewPageProps) {
   // Schema markup for SEO
   const reviewSchema = {
     "@context": "https://schema.org",

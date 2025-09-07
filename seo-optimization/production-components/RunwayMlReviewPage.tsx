@@ -2,7 +2,7 @@ import React from 'react';
 import Head from 'next/head';
 
 interface RunwayMlReviewPageProps {
-  tool?: {
+  tool: {
     name: string;
     category: string;
     description: string;
@@ -12,7 +12,7 @@ interface RunwayMlReviewPageProps {
   };
 }
 
-const RunwaymlReviewPage: React.FC<RunwayMlReviewPageProps> = ({ tool } = {}) => {
+const RunwaymlReviewPage: React.FC<RunwayMlReviewPageProps> = ({ tool }) => {
   return (
     <>
       <Head>

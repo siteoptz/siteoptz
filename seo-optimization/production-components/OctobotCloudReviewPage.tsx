@@ -6,7 +6,7 @@ import ToolLogo from '../../components/ToolLogo';
 import FAQSection from '../../components/comparison/FAQSection';
 
 interface OctobotCloudReviewPageProps {
-  tool?: {
+  tool: {
     name: string;
     category: string;
     description: string;
@@ -16,7 +16,7 @@ interface OctobotCloudReviewPageProps {
   };
 }
 
-export default function OctobotCloudReviewPage({ tool }: OctobotCloudReviewPageProps = {}) {
+export default function OctobotCloudReviewPage({ tool }: OctobotCloudReviewPageProps) {
   // Schema markup for SEO
   const reviewSchema = {
     "@context": "https://schema.org",

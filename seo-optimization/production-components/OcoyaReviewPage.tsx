@@ -6,7 +6,7 @@ import ToolLogo from '../../components/ToolLogo';
 import FAQSection from '../../components/comparison/FAQSection';
 
 interface OcoyaReviewPageProps {
-  tool?: {
+  tool: {
     name: string;
     category: string;
     description: string;
@@ -16,7 +16,7 @@ interface OcoyaReviewPageProps {
   };
 }
 
-export default function OcoyaReviewPage({ tool }: OcoyaReviewPageProps = {}) {
+export default function OcoyaReviewPage({ tool }: OcoyaReviewPageProps) {
   // Schema markup for SEO
   const reviewSchema = {
     "@context": "https://schema.org",

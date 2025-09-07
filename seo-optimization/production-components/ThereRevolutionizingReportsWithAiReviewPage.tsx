@@ -6,7 +6,7 @@ import ToolLogo from '../../components/ToolLogo';
 import FAQSection from '../../components/comparison/FAQSection';
 
 interface ThereRevolutionizingReportsWithAiReviewPageProps {
-  tool?: {
+  tool: {
     name: string;
     category: string;
     description: string;
@@ -16,7 +16,7 @@ interface ThereRevolutionizingReportsWithAiReviewPageProps {
   };
 }
 
-export default function ThereRevolutionizingReportsWithAiReviewPage({ tool }: ThereRevolutionizingReportsWithAiReviewPageProps = {}) {
+export default function ThereRevolutionizingReportsWithAiReviewPage({ tool }: ThereRevolutionizingReportsWithAiReviewPageProps) {
   // Schema markup for SEO
   const reviewSchema = {
     "@context": "https://schema.org",

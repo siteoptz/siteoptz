@@ -6,7 +6,7 @@ import ToolLogo from '../../components/ToolLogo';
 import FAQSection from '../../components/comparison/FAQSection';
 
 interface BrowseAiReviewPageProps {
-  tool?: {
+  tool: {
     name: string;
     category: string;
     description: string;
@@ -16,7 +16,7 @@ interface BrowseAiReviewPageProps {
   };
 }
 
-export default function BrowseAiReviewPage({ tool }: BrowseAiReviewPageProps = {}) {
+export default function BrowseAiReviewPage({ tool }: BrowseAiReviewPageProps) {
   // Schema markup for SEO
   const reviewSchema = {
     "@context": "https://schema.org",

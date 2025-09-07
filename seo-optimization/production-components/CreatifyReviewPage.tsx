@@ -6,7 +6,7 @@ import ToolLogo from '../../components/ToolLogo';
 import FAQSection from '../../components/comparison/FAQSection';
 
 interface CreatifyReviewPageProps {
-  tool?: {
+  tool: {
     name: string;
     category: string;
     description: string;
@@ -16,7 +16,7 @@ interface CreatifyReviewPageProps {
   };
 }
 
-export default function CreatifyReviewPage({ tool }: CreatifyReviewPageProps = {}) {
+export default function CreatifyReviewPage({ tool }: CreatifyReviewPageProps) {
   // Schema markup for SEO
   const reviewSchema = {
     "@context": "https://schema.org",
