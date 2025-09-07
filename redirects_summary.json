@@ -1,0 +1,12 @@
+{
+  "total_redirects": 182,
+  "actions": {
+    "301": 179,
+    "410": 3
+  },
+  "priorities": {
+    "high": 18,
+    "low": 164
+  },
+  "timestamp": "2025-09-07T12:43:22.031202"
+}

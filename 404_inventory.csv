@@ -1,0 +1,183 @@
+path,hits_30d,hits_90d,first_seen,last_seen,sample_referrers
+/tools?category=finance ai,5640,16920,2025-09-06,2025-09-07,"/reviews/lovo-ai, /reviews/udio, /case-studies, /case-studies/ecommerce-ai, /reviews/jasper"
+/tools?category=lead generation,5640,16920,2025-09-06,2025-09-07,"/reviews/lovo-ai, /reviews/udio, /case-studies, /case-studies/ecommerce-ai, /reviews/jasper"
+/tools?category=ux,5640,16920,2025-09-06,2025-09-07,"/reviews/lovo-ai, /reviews/udio, /case-studies, /case-studies/ecommerce-ai, /reviews/jasper"
+/tools?category=image generation,5640,16920,2025-09-06,2025-09-07,"/reviews/lovo-ai, /reviews/udio, /case-studies, /case-studies/ecommerce-ai, /reviews/jasper"
+/tools?category=ai automation,5640,16920,2025-09-06,2025-09-07,"/reviews/lovo-ai, /reviews/udio, /case-studies, /case-studies/ecommerce-ai, /reviews/jasper"
+/tools?category=paid search & ppc,5640,16920,2025-09-06,2025-09-07,"/reviews/lovo-ai, /reviews/udio, /case-studies, /case-studies/ecommerce-ai, /reviews/jasper"
+/tools?category=video generation,5640,16920,2025-09-06,2025-09-07,"/reviews/lovo-ai, /reviews/udio, /case-studies, /case-studies/ecommerce-ai, /reviews/jasper"
+/tools?category=e-commerce,5640,16920,2025-09-06,2025-09-07,"/reviews/lovo-ai, /reviews/udio, /case-studies, /case-studies/ecommerce-ai, /reviews/jasper"
+/tools?category=email marketing,5640,16920,2025-09-06,2025-09-07,"/reviews/lovo-ai, /reviews/udio, /case-studies, /case-studies/ecommerce-ai, /reviews/jasper"
+/tools?category=productivity,5640,16920,2025-09-06,2025-09-07,"/reviews/lovo-ai, /reviews/udio, /case-studies, /case-studies/ecommerce-ai, /reviews/jasper"
+/tools?category=seo & optimization,5640,16920,2025-09-06,2025-09-07,"/reviews/lovo-ai, /reviews/udio, /case-studies, /case-studies/ecommerce-ai, /reviews/jasper"
+/tools?category=code generation,5640,16920,2025-09-06,2025-09-07,"/reviews/lovo-ai, /reviews/udio, /case-studies, /case-studies/ecommerce-ai, /reviews/jasper"
+/tools?category=content creation,5640,16920,2025-09-06,2025-09-07,"/reviews/lovo-ai, /reviews/udio, /case-studies, /case-studies/ecommerce-ai, /reviews/jasper"
+/tools?category=best voice ai tools,5640,16920,2025-09-06,2025-09-07,"/reviews/lovo-ai, /reviews/udio, /case-studies, /case-studies/ecommerce-ai, /reviews/jasper"
+/tools?category=research & education,5640,16920,2025-09-06,2025-09-07,"/reviews/lovo-ai, /reviews/udio, /case-studies, /case-studies/ecommerce-ai, /reviews/jasper"
+/tools?category=social media,5640,16920,2025-09-06,2025-09-07,"/reviews/lovo-ai, /reviews/udio, /case-studies, /case-studies/ecommerce-ai, /reviews/jasper"
+/tools?category=website builder,5640,16920,2025-09-06,2025-09-07,"/reviews/lovo-ai, /reviews/udio, /case-studies, /case-studies/ecommerce-ai, /reviews/jasper"
+/tools?category=data analysis,5640,16920,2025-09-06,2025-09-07,"/reviews/lovo-ai, /reviews/udio, /case-studies, /case-studies/ecommerce-ai, /reviews/jasper"
+/categories/e-commerce,15,45,2025-09-06,2025-09-06,/categories
+/tools?category=ai education,15,45,2025-09-06,2025-09-06,/categories/ai-education
+/tools?category=ai for business,15,45,2025-09-06,2025-09-06,/categories/ai-for-business
+/tools?category=ai translator,15,45,2025-09-06,2025-09-06,/categories/ai-translator
+/tools?category=ai website builder,15,45,2025-09-06,2025-09-06,/categories/ai-website-builder
+/tools?category=health ai,15,45,2025-09-06,2025-09-06,/categories/health-ai
+/tools?category=voice ai,15,45,2025-09-06,2025-09-06,/categories/voice-ai
+/tools?category=writing,15,45,2025-09-06,2025-09-06,/categories/writing
+/reviews/speechki-text-to-speech-ai,15,45,2025-09-07,2025-09-07,/compare
+/reviews/text-to-video-stunning-video-creation,15,45,2025-09-07,2025-09-07,/compare
+/reviews/cohere,15,45,2025-09-07,2025-09-07,/compare
+/reviews/webbotify-ai-powered-chatbot-platform,15,45,2025-09-07,2025-09-07,/compare
+/reviews/stable-diffusion-web,15,45,2025-09-07,2025-09-07,/compare
+/reviews/universe-no-code-custom-website-builder,15,45,2025-09-07,2025-09-07,/compare
+/reviews/convertfiles-ai-free-image-file-converter,15,45,2025-09-07,2025-09-07,/compare
+/reviews/tellers-ai-automatic-text-to-video-tool,15,45,2025-09-07,2025-09-07,/compare
+/reviews/videotube,15,45,2025-09-07,2025-09-07,/compare
+/reviews/explee,15,45,2025-09-07,2025-09-07,/compare
+/reviews/divedeck-ai-powered-deck-builder,15,45,2025-09-07,2025-09-07,/compare
+/reviews/unreal-speech-cost-effective-text-to-speech-api,15,45,2025-09-07,2025-09-07,/compare
+/reviews/kleap,15,45,2025-09-07,2025-09-07,/compare
+/tools/ai-roi-calculator,15,45,2025-09-06,2025-09-06,/podcasts/ai-automation-revolution-2024
+/case-studies/manufacturing-ai,15,45,2025-09-07,2025-09-07,/podcasts/ai-automation-revolution-2024
+/resources/automation-toolkit,15,45,2025-09-07,2025-09-07,/podcasts/ai-automation-revolution-2024
+/resources/ai-strategy-guide,15,45,2025-09-07,2025-09-07,/podcasts/ai-automation-revolution-2024
+/case-studies/ai-content-creators,15,45,2025-09-07,2025-09-07,/podcasts/ai-content-creation-tools-2024
+/resources/creator-ai-toolkit,15,45,2025-09-07,2025-09-07,/podcasts/ai-content-creation-tools-2024
+/resources/content-ai-comparison,15,45,2025-09-07,2025-09-07,/podcasts/ai-content-creation-tools-2024
+/tools/content-roi-calculator,15,45,2025-09-06,2025-09-06,/podcasts/ai-content-creation-tools-2024
+/tools/chatbot-roi-calculator,15,45,2025-09-06,2025-09-06,/podcasts/ai-customer-service-automation
+/case-studies/ai-customer-service,15,45,2025-09-07,2025-09-07,/podcasts/ai-customer-service-automation
+/resources/cs-automation-checklist,15,45,2025-09-07,2025-09-07,/podcasts/ai-customer-service-automation
+/resources/security-platform-comparison,15,45,2025-09-07,2025-09-07,/podcasts/ai-cybersecurity-automation
+/case-studies/ai-cybersecurity,15,45,2025-09-07,2025-09-07,/podcasts/ai-cybersecurity-automation
+/resources/ai-security-guide,15,45,2025-09-07,2025-09-07,/podcasts/ai-cybersecurity-automation
+/tools/security-roi-calculator,15,45,2025-09-06,2025-09-06,/podcasts/ai-cybersecurity-automation
+/resources/ai-analytics-guide,15,45,2025-09-07,2025-09-07,/podcasts/ai-data-analytics-transformation
+/case-studies/predictive-analytics,15,45,2025-09-07,2025-09-07,/podcasts/ai-data-analytics-transformation
+/resources/analytics-platform-comparison,15,45,2025-09-07,2025-09-07,/podcasts/ai-data-analytics-transformation
+/tools/data-science-roi,15,45,2025-09-06,2025-09-06,/podcasts/ai-data-analytics-transformation
+/tools/conversion-roi-calculator,15,45,2025-09-06,2025-09-06,/podcasts/ai-ecommerce-personalization
+/resources/personalization-strategy,15,45,2025-09-07,2025-09-07,/podcasts/ai-ecommerce-personalization
+/resources/ecommerce-ai-playbook,15,45,2025-09-07,2025-09-07,/podcasts/ai-ecommerce-personalization
+/resources/risk-management-ai,15,45,2025-09-07,2025-09-07,/podcasts/ai-financial-trading-automation
+/tools/fintech-ai-roi,15,45,2025-09-06,2025-09-06,/podcasts/ai-financial-trading-automation
+/resources/algorithmic-trading-guide,15,45,2025-09-07,2025-09-07,/podcasts/ai-financial-trading-automation
+/resources/healthcare-ai-guide,15,45,2025-09-07,2025-09-07,/podcasts/ai-healthcare-workflow-automation
+/resources/hipaa-ai-compliance,15,45,2025-09-07,2025-09-07,/podcasts/ai-healthcare-workflow-automation
+/tools/healthcare-ai-roi,15,45,2025-09-06,2025-09-06,/podcasts/ai-healthcare-workflow-automation
+/case-studies/healthcare-ai,15,45,2025-09-07,2025-09-07,/podcasts/ai-healthcare-workflow-automation
+/tools/recruitment-roi-calculator,15,45,2025-09-06,2025-09-06,/podcasts/ai-hr-recruitment-automation
+/resources/hr-ai-implementation,15,45,2025-09-07,2025-09-07,/podcasts/ai-hr-recruitment-automation
+/case-studies/smart-manufacturing,15,45,2025-09-07,2025-09-07,/podcasts/ai-manufacturing-industry-40
+/resources/industry-40-guide,15,45,2025-09-07,2025-09-07,/podcasts/ai-manufacturing-industry-40
+/resources/predictive-maintenance,15,45,2025-09-07,2025-09-07,/podcasts/ai-manufacturing-industry-40
+/tools/manufacturing-roi-calculator,15,45,2025-09-06,2025-09-06,/podcasts/ai-manufacturing-industry-40
+/tools/sales-ai-roi,15,45,2025-09-06,2025-09-06,/podcasts/ai-sales-process-automation
+/case-studies/sales-ai,15,45,2025-09-07,2025-09-07,/podcasts/ai-sales-process-automation
+/resources/lead-scoring-guide,15,45,2025-09-07,2025-09-07,/podcasts/ai-sales-process-automation
+/resources/sales-ai-playbook,15,45,2025-09-07,2025-09-07,/podcasts/ai-sales-process-automation
+/resources/ai-security-checklist,15,45,2025-09-07,2025-09-07,/podcasts/chatgpt-enterprise-workflows
+/tools/enterprise-ai-calculator,15,45,2025-09-06,2025-09-06,/podcasts/chatgpt-enterprise-workflows
+/case-studies/fortune-500-chatgpt,15,45,2025-09-07,2025-09-07,/podcasts/chatgpt-enterprise-workflows
+/resources/chatgpt-enterprise-guide,15,45,2025-09-07,2025-09-07,/podcasts/chatgpt-enterprise-workflows
+/resources/ai-implementation-guide,15,45,2025-09-07,2025-09-07,/podcasts/claude-vs-gpt-enterprise-comparison
+/reports/claude-gpt4-benchmark,15,45,2025-09-07,2025-09-07,/podcasts/claude-vs-gpt-enterprise-comparison
+/resources/ai-model-selection,15,45,2025-09-07,2025-09-07,/podcasts/claude-vs-gpt-enterprise-comparison
+/tools/ai-cost-calculator,15,45,2025-09-06,2025-09-06,/podcasts/claude-vs-gpt-enterprise-comparison
+/resources/marketing-ai-tools-comparison,15,45,2025-09-07,2025-09-07,/podcasts/marketing-automation-ai-tools
+/tools/marketing-roi-calculator,15,45,2025-09-06,2025-09-06,/podcasts/marketing-automation-ai-tools
+/case-studies/marketing-ai-success,15,45,2025-09-07,2025-09-07,/podcasts/marketing-automation-ai-tools
+/resources/marketing-ai-strategy,15,45,2025-09-07,2025-09-07,/podcasts/marketing-automation-ai-tools
+/resources/no-code-ai-comparison,15,45,2025-09-07,2025-09-07,/podcasts/no-code-ai-tools-revolution
+/case-studies/no-code-ai-wins,15,45,2025-09-07,2025-09-07,/podcasts/no-code-ai-tools-revolution
+/resources/business-ai-training,15,45,2025-09-07,2025-09-07,/podcasts/no-code-ai-tools-revolution
+/tools/no-code-ai-roi,15,45,2025-09-06,2025-09-06,/podcasts/no-code-ai-tools-revolution
+/compare/athenic-ai/vs/10web,15,45,2025-09-07,2025-09-07,/reviews/athenic-ai
+/compare/athenic-ai/vs/adalysis,15,45,2025-09-07,2025-09-07,/reviews/athenic-ai
+/compare/athenic-ai/vs/adcreative-ai,15,45,2025-09-07,2025-09-07,/reviews/athenic-ai
+/compare/athenic-ai/vs/adbeat,15,45,2025-09-07,2025-09-07,/reviews/athenic-ai
+/compare/athenic-ai/vs/adespresso,15,45,2025-09-07,2025-09-07,/reviews/athenic-ai
+/compare/athenic-ai/vs/acquisio,15,45,2025-09-07,2025-09-07,/reviews/athenic-ai
+/compare/colossyan-creator/vs/acquisio,15,45,2025-09-07,2025-09-07,/reviews/colossyan-creator
+/compare/colossyan-creator/vs/adcreative-ai,15,45,2025-09-07,2025-09-07,/reviews/colossyan-creator
+/compare/colossyan-creator/vs/adbeat,15,45,2025-09-07,2025-09-07,/reviews/colossyan-creator
+/compare/colossyan-creator/vs/10web,15,45,2025-09-07,2025-09-07,/reviews/colossyan-creator
+/compare/colossyan-creator/vs/adalysis,15,45,2025-09-07,2025-09-07,/reviews/colossyan-creator
+/compare/colossyan-creator/vs/adespresso,15,45,2025-09-07,2025-09-07,/reviews/colossyan-creator
+/compare/contentstudio/vs/coschedule,15,45,2025-09-07,2025-09-07,/reviews/contentstudio
+/compare/copilot-audio-expression/vs/adcreative-ai,15,45,2025-09-07,2025-09-07,/reviews/copilot-audio-expression
+/compare/copilot-audio-expression/vs/adbeat,15,45,2025-09-07,2025-09-07,/reviews/copilot-audio-expression
+/compare/copilot-audio-expression/vs/acquisio,15,45,2025-09-07,2025-09-07,/reviews/copilot-audio-expression
+/compare/copilot-audio-expression/vs/adalysis,15,45,2025-09-07,2025-09-07,/reviews/copilot-audio-expression
+/compare/copilot-audio-expression/vs/10web,15,45,2025-09-07,2025-09-07,/reviews/copilot-audio-expression
+/compare/copilot-audio-expression/vs/adespresso,15,45,2025-09-07,2025-09-07,/reviews/copilot-audio-expression
+/compare/elai-io/vs/adbeat,15,45,2025-09-07,2025-09-07,/reviews/elai-io
+/compare/elai-io/vs/10web,15,45,2025-09-07,2025-09-07,/reviews/elai-io
+/compare/elai-io/vs/acquisio,15,45,2025-09-07,2025-09-07,/reviews/elai-io
+/compare/elai-io/vs/adcreative-ai,15,45,2025-09-07,2025-09-07,/reviews/elai-io
+/compare/elai-io/vs/adespresso,15,45,2025-09-07,2025-09-07,/reviews/elai-io
+/compare/elai-io/vs/adalysis,15,45,2025-09-07,2025-09-07,/reviews/elai-io
+/compare/facecheck-id/vs/adbeat,15,45,2025-09-07,2025-09-07,/reviews/facecheck-id
+/compare/facecheck-id/vs/acquisio,15,45,2025-09-07,2025-09-07,/reviews/facecheck-id
+/compare/facecheck-id/vs/10web,15,45,2025-09-07,2025-09-07,/reviews/facecheck-id
+/compare/facecheck-id/vs/adcreative-ai,15,45,2025-09-07,2025-09-07,/reviews/facecheck-id
+/compare/facecheck-id/vs/adespresso,15,45,2025-09-07,2025-09-07,/reviews/facecheck-id
+/compare/facecheck-id/vs/adalysis,15,45,2025-09-07,2025-09-07,/reviews/facecheck-id
+/compare/google-gemini/vs/adalysis,15,45,2025-09-07,2025-09-07,/reviews/google-gemini
+/compare/google-gemini/vs/10web,15,45,2025-09-07,2025-09-07,/reviews/google-gemini
+/compare/google-gemini/vs/adcreative-ai,15,45,2025-09-07,2025-09-07,/reviews/google-gemini
+/compare/google-gemini/vs/adbeat,15,45,2025-09-07,2025-09-07,/reviews/google-gemini
+/compare/google-gemini/vs/acquisio,15,45,2025-09-07,2025-09-07,/reviews/google-gemini
+/compare/google-gemini/vs/adespresso,15,45,2025-09-07,2025-09-07,/reviews/google-gemini
+/compare/mangools/vs/adbeat,15,45,2025-09-07,2025-09-07,/reviews/mangools
+/compare/mangools/vs/10web,15,45,2025-09-07,2025-09-07,/reviews/mangools
+/compare/mangools/vs/acquisio,15,45,2025-09-07,2025-09-07,/reviews/mangools
+/compare/mangools/vs/adcreative-ai,15,45,2025-09-07,2025-09-07,/reviews/mangools
+/compare/mangools/vs/adespresso,15,45,2025-09-07,2025-09-07,/reviews/mangools
+/compare/mangools/vs/adalysis,15,45,2025-09-07,2025-09-07,/reviews/mangools
+/compare/playground-ai/vs/adbeat,15,45,2025-09-07,2025-09-07,/reviews/playground-ai
+/compare/playground-ai/vs/adalysis,15,45,2025-09-07,2025-09-07,/reviews/playground-ai
+/compare/playground-ai/vs/adespresso,15,45,2025-09-07,2025-09-07,/reviews/playground-ai
+/compare/playground-ai/vs/acquisio,15,45,2025-09-07,2025-09-07,/reviews/playground-ai
+/compare/playground-ai/vs/adcreative-ai,15,45,2025-09-07,2025-09-07,/reviews/playground-ai
+/compare/playground-ai/vs/10web,15,45,2025-09-07,2025-09-07,/reviews/playground-ai
+/compare/quiki-io/vs/acquisio,15,45,2025-09-07,2025-09-07,/reviews/quiki-io
+/compare/quiki-io/vs/adbeat,15,45,2025-09-07,2025-09-07,/reviews/quiki-io
+/compare/quiki-io/vs/adespresso,15,45,2025-09-07,2025-09-07,/reviews/quiki-io
+/compare/quiki-io/vs/adalysis,15,45,2025-09-07,2025-09-07,/reviews/quiki-io
+/compare/quiki-io/vs/10web,15,45,2025-09-07,2025-09-07,/reviews/quiki-io
+/compare/quiki-io/vs/adcreative-ai,15,45,2025-09-07,2025-09-07,/reviews/quiki-io
+/compare/se-ranking/vs/adespresso,15,45,2025-09-07,2025-09-07,/reviews/se-ranking
+/compare/se-ranking/vs/adalysis,15,45,2025-09-07,2025-09-07,/reviews/se-ranking
+/compare/se-ranking/vs/10web,15,45,2025-09-07,2025-09-07,/reviews/se-ranking
+/compare/se-ranking/vs/acquisio,15,45,2025-09-07,2025-09-07,/reviews/se-ranking
+/compare/se-ranking/vs/adcreative-ai,15,45,2025-09-07,2025-09-07,/reviews/se-ranking
+/compare/se-ranking/vs/adbeat,15,45,2025-09-07,2025-09-07,/reviews/se-ranking
+/compare/seaart-ai/vs/10web,15,45,2025-09-07,2025-09-07,/reviews/seaart-ai
+/compare/seaart-ai/vs/adalysis,15,45,2025-09-07,2025-09-07,/reviews/seaart-ai
+/compare/seaart-ai/vs/adespresso,15,45,2025-09-07,2025-09-07,/reviews/seaart-ai
+/compare/seaart-ai/vs/adbeat,15,45,2025-09-07,2025-09-07,/reviews/seaart-ai
+/compare/seaart-ai/vs/acquisio,15,45,2025-09-07,2025-09-07,/reviews/seaart-ai
+/compare/seaart-ai/vs/adcreative-ai,15,45,2025-09-07,2025-09-07,/reviews/seaart-ai
+/compare/sendible/vs/hootsuite,15,45,2025-09-07,2025-09-07,/reviews/sendible
+/compare/sendible/vs/sprout-social,15,45,2025-09-07,2025-09-07,/reviews/sendible
+/compare/sendible/vs/loomly,15,45,2025-09-07,2025-09-07,/reviews/sendible
+/compare/serpstat/vs/adcreative-ai,15,45,2025-09-07,2025-09-07,/reviews/serpstat
+/compare/serpstat/vs/adespresso,15,45,2025-09-07,2025-09-07,/reviews/serpstat
+/compare/serpstat/vs/adalysis,15,45,2025-09-07,2025-09-07,/reviews/serpstat
+/compare/serpstat/vs/adbeat,15,45,2025-09-07,2025-09-07,/reviews/serpstat
+/compare/serpstat/vs/10web,15,45,2025-09-07,2025-09-07,/reviews/serpstat
+/compare/serpstat/vs/acquisio,15,45,2025-09-07,2025-09-07,/reviews/serpstat
+/compare/social-champ/vs/loomly,15,45,2025-09-07,2025-09-07,/reviews/social-champ
+/compare/social-champ/vs/buffer,15,45,2025-09-07,2025-09-07,/reviews/social-champ
+/compare/social-champ/vs/hootsuite,15,45,2025-09-07,2025-09-07,/reviews/social-champ
+/compare/socialpilot/vs/loomly,15,45,2025-09-07,2025-09-07,/reviews/socialpilot
+/compare/socialpilot/vs/hootsuite,15,45,2025-09-07,2025-09-07,/reviews/socialpilot
+/compare/socialpilot/vs/buffer,15,45,2025-09-07,2025-09-07,/reviews/socialpilot
+/compare/tugan-ai/vs/adespresso,15,45,2025-09-07,2025-09-07,/reviews/tugan-ai
+/compare/tugan-ai/vs/adalysis,15,45,2025-09-07,2025-09-07,/reviews/tugan-ai
+/compare/tugan-ai/vs/10web,15,45,2025-09-07,2025-09-07,/reviews/tugan-ai
+/compare/tugan-ai/vs/adbeat,15,45,2025-09-07,2025-09-07,/reviews/tugan-ai
+/compare/tugan-ai/vs/adcreative-ai,15,45,2025-09-07,2025-09-07,/reviews/tugan-ai
+/compare/tugan-ai/vs/acquisio,15,45,2025-09-07,2025-09-07,/reviews/tugan-ai

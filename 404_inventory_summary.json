@@ -1,0 +1,65 @@
+{
+  "total_404s": 182,
+  "patterns": {
+    "tools_querystring": 25,
+    "reviews": 13,
+    "compare": 88,
+    "case_studies": 11,
+    "resources": 28,
+    "tools_calculators": 15,
+    "categories": 1,
+    "reports": 1
+  },
+  "top_10": [
+    {
+      "path": "/tools?category=finance ai",
+      "hits_90d": 16920,
+      "referrers": "/reviews/lovo-ai, /reviews/udio, /case-studies, /case-studies/ecommerce-ai, /reviews/jasper"
+    },
+    {
+      "path": "/tools?category=lead generation",
+      "hits_90d": 16920,
+      "referrers": "/reviews/lovo-ai, /reviews/udio, /case-studies, /case-studies/ecommerce-ai, /reviews/jasper"
+    },
+    {
+      "path": "/tools?category=ux",
+      "hits_90d": 16920,
+      "referrers": "/reviews/lovo-ai, /reviews/udio, /case-studies, /case-studies/ecommerce-ai, /reviews/jasper"
+    },
+    {
+      "path": "/tools?category=image generation",
+      "hits_90d": 16920,
+      "referrers": "/reviews/lovo-ai, /reviews/udio, /case-studies, /case-studies/ecommerce-ai, /reviews/jasper"
+    },
+    {
+      "path": "/tools?category=ai automation",
+      "hits_90d": 16920,
+      "referrers": "/reviews/lovo-ai, /reviews/udio, /case-studies, /case-studies/ecommerce-ai, /reviews/jasper"
+    },
+    {
+      "path": "/tools?category=paid search & ppc",
+      "hits_90d": 16920,
+      "referrers": "/reviews/lovo-ai, /reviews/udio, /case-studies, /case-studies/ecommerce-ai, /reviews/jasper"
+    },
+    {
+      "path": "/tools?category=video generation",
+      "hits_90d": 16920,
+      "referrers": "/reviews/lovo-ai, /reviews/udio, /case-studies, /case-studies/ecommerce-ai, /reviews/jasper"
+    },
+    {
+      "path": "/tools?category=e-commerce",
+      "hits_90d": 16920,
+      "referrers": "/reviews/lovo-ai, /reviews/udio, /case-studies, /case-studies/ecommerce-ai, /reviews/jasper"
+    },
+    {
+      "path": "/tools?category=email marketing",
+      "hits_90d": 16920,
+      "referrers": "/reviews/lovo-ai, /reviews/udio, /case-studies, /case-studies/ecommerce-ai, /reviews/jasper"
+    },
+    {
+      "path": "/tools?category=productivity",
+      "hits_90d": 16920,
+      "referrers": "/reviews/lovo-ai, /reviews/udio, /case-studies, /case-studies/ecommerce-ai, /reviews/jasper"
+    }
+  ]
+}

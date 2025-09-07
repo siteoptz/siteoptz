@@ -1,0 +1,185 @@
+# Netlify redirect rules for SiteOptz.ai
+# Generated from 404 inventory analysis
+
+/tools?category=finance ai  /tools  301!
+/tools?category=lead generation  /tools  301!
+/tools?category=ux  /categories/ux  301!
+/tools?category=image generation  /categories/image-generation  301!
+/tools?category=ai automation  /categories/ai-automation  301!
+/tools?category=paid search & ppc  /tools  301!
+/tools?category=video generation  /categories/video-generation  301!
+/tools?category=e-commerce  /tools  301!
+/tools?category=email marketing  /categories/email-marketing  301!
+/tools?category=productivity  /categories/productivity  301!
+/tools?category=seo & optimization  /tools  301!
+/tools?category=code generation  /categories/code-generation  301!
+/tools?category=content creation  /categories/content-creation  301!
+/tools?category=best voice ai tools  /categories/best-voice-ai-tools  301!
+/tools?category=research & education  /tools  301!
+/tools?category=social media  /categories/social-media  301!
+/tools?category=website builder  /categories/website-builder  301!
+/tools?category=data analysis  /categories/data-analysis  301!
+/categories/e-commerce  /410.html  410!
+/tools?category=ai education  /tools  301!
+/tools?category=ai for business  /tools  301!
+/tools?category=ai translator  /tools  301!
+/tools?category=ai website builder  /categories/website-builder  301!
+/tools?category=health ai  /tools  301!
+/tools?category=voice ai  /categories/best-voice-ai-tools  301!
+/tools?category=writing  /categories/content-creation  301!
+/reviews/speechki-text-to-speech-ai  /reviews/speechmatics  301!
+/reviews/text-to-video-stunning-video-creation  /410.html  410!
+/reviews/cohere  /reviews/cohere-ai  301!
+/reviews/webbotify-ai-powered-chatbot-platform  /reviews/manychat  301!
+/reviews/stable-diffusion-web  /410.html  410!
+/reviews/universe-no-code-custom-website-builder  /reviews/universe-nocode-custom-website-builder  301!
+/reviews/convertfiles-ai-free-image-file-converter  /reviews/convertfilesai-free-image-file-converter  301!
+/reviews/tellers-ai-automatic-text-to-video-tool  /reviews/tellersai-automatic-texttovideo-tool  301!
+/reviews/videotube  /reviews/videotube-ai  301!
+/reviews/explee  /reviews/explee-ai  301!
+/reviews/divedeck-ai-powered-deck-builder  /reviews/divedeck-aipowered-deck-builder  301!
+/reviews/unreal-speech-cost-effective-text-to-speech-api  /reviews/unreal-speech-costeffective-texttospeech-api  301!
+/reviews/kleap  /reviews/kleap-ai  301!
+/tools/ai-roi-calculator  /tools/ai-cost-calculator  301!
+/case-studies/manufacturing-ai  /case-studies  301!
+/resources/automation-toolkit  /resources  301!
+/resources/ai-strategy-guide  /resources  301!
+/case-studies/ai-content-creators  /case-studies  301!
+/resources/creator-ai-toolkit  /resources  301!
+/resources/content-ai-comparison  /resources  301!
+/tools/content-roi-calculator  /tools/content-roi-calculator  301!
+/tools/chatbot-roi-calculator  /tools/chatbot-roi-calculator  301!
+/case-studies/ai-customer-service  /case-studies  301!
+/resources/cs-automation-checklist  /resources  301!
+/resources/security-platform-comparison  /resources  301!
+/case-studies/ai-cybersecurity  /case-studies  301!
+/resources/ai-security-guide  /resources  301!
+/tools/security-roi-calculator  /tools/security-roi-calculator  301!
+/resources/ai-analytics-guide  /resources  301!
+/case-studies/predictive-analytics  /case-studies  301!
+/resources/analytics-platform-comparison  /resources  301!
+/tools/data-science-roi  /tools  301!
+/tools/conversion-roi-calculator  /tools/conversion-roi-calculator  301!
+/resources/personalization-strategy  /resources  301!
+/resources/ecommerce-ai-playbook  /resources  301!
+/resources/risk-management-ai  /resources  301!
+/tools/fintech-ai-roi  /tools  301!
+/resources/algorithmic-trading-guide  /resources  301!
+/resources/healthcare-ai-guide  /resources  301!
+/resources/hipaa-ai-compliance  /resources  301!
+/tools/healthcare-ai-roi  /tools/healthcare-ai-roi  301!
+/case-studies/healthcare-ai  /case-studies  301!
+/tools/recruitment-roi-calculator  /tools/recruitment-roi-calculator  301!
+/resources/hr-ai-implementation  /resources  301!
+/case-studies/smart-manufacturing  /case-studies  301!
+/resources/industry-40-guide  /resources  301!
+/resources/predictive-maintenance  /resources  301!
+/tools/manufacturing-roi-calculator  /tools/manufacturing-roi-calculator  301!
+/tools/sales-ai-roi  /tools/sales-ai-roi  301!
+/case-studies/sales-ai  /case-studies  301!
+/resources/lead-scoring-guide  /resources  301!
+/resources/sales-ai-playbook  /resources  301!
+/resources/ai-security-checklist  /resources  301!
+/tools/enterprise-ai-calculator  /tools/enterprise-ai-calculator  301!
+/case-studies/fortune-500-chatgpt  /case-studies  301!
+/resources/chatgpt-enterprise-guide  /resources  301!
+/resources/ai-implementation-guide  /resources  301!
+/reports/claude-gpt4-benchmark  /analysis/claude3-vs-gpt4  301!
+/resources/ai-model-selection  /resources  301!
+/tools/ai-cost-calculator  /tools/ai-cost-calculator  301!
+/resources/marketing-ai-tools-comparison  /resources  301!
+/tools/marketing-roi-calculator  /tools/marketing-roi-calculator  301!
+/case-studies/marketing-ai-success  /case-studies  301!
+/resources/marketing-ai-strategy  /resources  301!
+/resources/no-code-ai-comparison  /resources  301!
+/case-studies/no-code-ai-wins  /case-studies  301!
+/resources/business-ai-training  /resources  301!
+/tools/no-code-ai-roi  /tools/no-code-ai-roi  301!
+/compare/athenic-ai/vs/10web  /compare  301!
+/compare/athenic-ai/vs/adalysis  /compare  301!
+/compare/athenic-ai/vs/adcreative-ai  /compare  301!
+/compare/athenic-ai/vs/adbeat  /compare  301!
+/compare/athenic-ai/vs/adespresso  /compare  301!
+/compare/athenic-ai/vs/acquisio  /compare  301!
+/compare/colossyan-creator/vs/acquisio  /compare  301!
+/compare/colossyan-creator/vs/adcreative-ai  /compare  301!
+/compare/colossyan-creator/vs/adbeat  /compare  301!
+/compare/colossyan-creator/vs/10web  /compare  301!
+/compare/colossyan-creator/vs/adalysis  /compare  301!
+/compare/colossyan-creator/vs/adespresso  /compare  301!
+/compare/contentstudio/vs/coschedule  /compare  301!
+/compare/copilot-audio-expression/vs/adcreative-ai  /compare  301!
+/compare/copilot-audio-expression/vs/adbeat  /compare  301!
+/compare/copilot-audio-expression/vs/acquisio  /compare  301!
+/compare/copilot-audio-expression/vs/adalysis  /compare  301!
+/compare/copilot-audio-expression/vs/10web  /compare  301!
+/compare/copilot-audio-expression/vs/adespresso  /compare  301!
+/compare/elai-io/vs/adbeat  /compare  301!
+/compare/elai-io/vs/10web  /compare  301!
+/compare/elai-io/vs/acquisio  /compare  301!
+/compare/elai-io/vs/adcreative-ai  /compare  301!
+/compare/elai-io/vs/adespresso  /compare  301!
+/compare/elai-io/vs/adalysis  /compare  301!
+/compare/facecheck-id/vs/adbeat  /compare  301!
+/compare/facecheck-id/vs/acquisio  /compare  301!
+/compare/facecheck-id/vs/10web  /compare  301!
+/compare/facecheck-id/vs/adcreative-ai  /compare  301!
+/compare/facecheck-id/vs/adespresso  /compare  301!
+/compare/facecheck-id/vs/adalysis  /compare  301!
+/compare/google-gemini/vs/adalysis  /compare  301!
+/compare/google-gemini/vs/10web  /compare  301!
+/compare/google-gemini/vs/adcreative-ai  /compare  301!
+/compare/google-gemini/vs/adbeat  /compare  301!
+/compare/google-gemini/vs/acquisio  /compare  301!
+/compare/google-gemini/vs/adespresso  /compare  301!
+/compare/mangools/vs/adbeat  /compare  301!
+/compare/mangools/vs/10web  /compare  301!
+/compare/mangools/vs/acquisio  /compare  301!
+/compare/mangools/vs/adcreative-ai  /compare  301!
+/compare/mangools/vs/adespresso  /compare  301!
+/compare/mangools/vs/adalysis  /compare  301!
+/compare/playground-ai/vs/adbeat  /compare  301!
+/compare/playground-ai/vs/adalysis  /compare  301!
+/compare/playground-ai/vs/adespresso  /compare  301!
+/compare/playground-ai/vs/acquisio  /compare  301!
+/compare/playground-ai/vs/adcreative-ai  /compare  301!
+/compare/playground-ai/vs/10web  /compare  301!
+/compare/quiki-io/vs/acquisio  /compare  301!
+/compare/quiki-io/vs/adbeat  /compare  301!
+/compare/quiki-io/vs/adespresso  /compare  301!
+/compare/quiki-io/vs/adalysis  /compare  301!
+/compare/quiki-io/vs/10web  /compare  301!
+/compare/quiki-io/vs/adcreative-ai  /compare  301!
+/compare/se-ranking/vs/adespresso  /compare  301!
+/compare/se-ranking/vs/adalysis  /compare  301!
+/compare/se-ranking/vs/10web  /compare  301!
+/compare/se-ranking/vs/acquisio  /compare  301!
+/compare/se-ranking/vs/adcreative-ai  /compare  301!
+/compare/se-ranking/vs/adbeat  /compare  301!
+/compare/seaart-ai/vs/10web  /compare  301!
+/compare/seaart-ai/vs/adalysis  /compare  301!
+/compare/seaart-ai/vs/adespresso  /compare  301!
+/compare/seaart-ai/vs/adbeat  /compare  301!
+/compare/seaart-ai/vs/acquisio  /compare  301!
+/compare/seaart-ai/vs/adcreative-ai  /compare  301!
+/compare/sendible/vs/hootsuite  /compare  301!
+/compare/sendible/vs/sprout-social  /compare  301!
+/compare/sendible/vs/loomly  /compare  301!
+/compare/serpstat/vs/adcreative-ai  /compare  301!
+/compare/serpstat/vs/adespresso  /compare  301!
+/compare/serpstat/vs/adalysis  /compare  301!
+/compare/serpstat/vs/adbeat  /compare  301!
+/compare/serpstat/vs/10web  /compare  301!
+/compare/serpstat/vs/acquisio  /compare  301!
+/compare/social-champ/vs/loomly  /compare  301!
+/compare/social-champ/vs/buffer  /compare  301!
+/compare/social-champ/vs/hootsuite  /compare  301!
+/compare/socialpilot/vs/loomly  /compare  301!
+/compare/socialpilot/vs/hootsuite  /compare  301!
+/compare/socialpilot/vs/buffer  /compare  301!
+/compare/tugan-ai/vs/adespresso  /compare  301!
+/compare/tugan-ai/vs/adalysis  /compare  301!
+/compare/tugan-ai/vs/10web  /compare  301!
+/compare/tugan-ai/vs/adbeat  /compare  301!
+/compare/tugan-ai/vs/adcreative-ai  /compare  301!
+/compare/tugan-ai/vs/acquisio  /compare  301!

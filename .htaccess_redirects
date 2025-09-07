@@ -1,0 +1,236 @@
+# Apache redirect rules for SiteOptz.ai
+# Add these to your .htaccess file
+
+RewriteEngine On
+RewriteCond %{REQUEST_URI} ^/tools$
+RewriteCond %{QUERY_STRING} ^category=finance ai$
+RewriteRule .* /tools? [R=301,L]
+RewriteCond %{REQUEST_URI} ^/tools$
+RewriteCond %{QUERY_STRING} ^category=lead generation$
+RewriteRule .* /tools? [R=301,L]
+RewriteCond %{REQUEST_URI} ^/tools$
+RewriteCond %{QUERY_STRING} ^category=ux$
+RewriteRule .* /categories/ux? [R=301,L]
+RewriteCond %{REQUEST_URI} ^/tools$
+RewriteCond %{QUERY_STRING} ^category=image generation$
+RewriteRule .* /categories/image-generation? [R=301,L]
+RewriteCond %{REQUEST_URI} ^/tools$
+RewriteCond %{QUERY_STRING} ^category=ai automation$
+RewriteRule .* /categories/ai-automation? [R=301,L]
+RewriteCond %{REQUEST_URI} ^/tools$
+RewriteCond %{QUERY_STRING} ^category=paid search & ppc$
+RewriteRule .* /tools? [R=301,L]
+RewriteCond %{REQUEST_URI} ^/tools$
+RewriteCond %{QUERY_STRING} ^category=video generation$
+RewriteRule .* /categories/video-generation? [R=301,L]
+RewriteCond %{REQUEST_URI} ^/tools$
+RewriteCond %{QUERY_STRING} ^category=e-commerce$
+RewriteRule .* /tools? [R=301,L]
+RewriteCond %{REQUEST_URI} ^/tools$
+RewriteCond %{QUERY_STRING} ^category=email marketing$
+RewriteRule .* /categories/email-marketing? [R=301,L]
+RewriteCond %{REQUEST_URI} ^/tools$
+RewriteCond %{QUERY_STRING} ^category=productivity$
+RewriteRule .* /categories/productivity? [R=301,L]
+RewriteCond %{REQUEST_URI} ^/tools$
+RewriteCond %{QUERY_STRING} ^category=seo & optimization$
+RewriteRule .* /tools? [R=301,L]
+RewriteCond %{REQUEST_URI} ^/tools$
+RewriteCond %{QUERY_STRING} ^category=code generation$
+RewriteRule .* /categories/code-generation? [R=301,L]
+RewriteCond %{REQUEST_URI} ^/tools$
+RewriteCond %{QUERY_STRING} ^category=content creation$
+RewriteRule .* /categories/content-creation? [R=301,L]
+RewriteCond %{REQUEST_URI} ^/tools$
+RewriteCond %{QUERY_STRING} ^category=best voice ai tools$
+RewriteRule .* /categories/best-voice-ai-tools? [R=301,L]
+RewriteCond %{REQUEST_URI} ^/tools$
+RewriteCond %{QUERY_STRING} ^category=research & education$
+RewriteRule .* /tools? [R=301,L]
+RewriteCond %{REQUEST_URI} ^/tools$
+RewriteCond %{QUERY_STRING} ^category=social media$
+RewriteRule .* /categories/social-media? [R=301,L]
+RewriteCond %{REQUEST_URI} ^/tools$
+RewriteCond %{QUERY_STRING} ^category=website builder$
+RewriteRule .* /categories/website-builder? [R=301,L]
+RewriteCond %{REQUEST_URI} ^/tools$
+RewriteCond %{QUERY_STRING} ^category=data analysis$
+RewriteRule .* /categories/data-analysis? [R=301,L]
+Redirect 410 /categories/e-commerce
+RewriteCond %{REQUEST_URI} ^/tools$
+RewriteCond %{QUERY_STRING} ^category=ai education$
+RewriteRule .* /tools? [R=301,L]
+RewriteCond %{REQUEST_URI} ^/tools$
+RewriteCond %{QUERY_STRING} ^category=ai for business$
+RewriteRule .* /tools? [R=301,L]
+RewriteCond %{REQUEST_URI} ^/tools$
+RewriteCond %{QUERY_STRING} ^category=ai translator$
+RewriteRule .* /tools? [R=301,L]
+RewriteCond %{REQUEST_URI} ^/tools$
+RewriteCond %{QUERY_STRING} ^category=ai website builder$
+RewriteRule .* /categories/website-builder? [R=301,L]
+RewriteCond %{REQUEST_URI} ^/tools$
+RewriteCond %{QUERY_STRING} ^category=health ai$
+RewriteRule .* /tools? [R=301,L]
+RewriteCond %{REQUEST_URI} ^/tools$
+RewriteCond %{QUERY_STRING} ^category=voice ai$
+RewriteRule .* /categories/best-voice-ai-tools? [R=301,L]
+RewriteCond %{REQUEST_URI} ^/tools$
+RewriteCond %{QUERY_STRING} ^category=writing$
+RewriteRule .* /categories/content-creation? [R=301,L]
+Redirect 301 /reviews/speechki-text-to-speech-ai /reviews/speechmatics
+Redirect 410 /reviews/text-to-video-stunning-video-creation
+Redirect 301 /reviews/cohere /reviews/cohere-ai
+Redirect 301 /reviews/webbotify-ai-powered-chatbot-platform /reviews/manychat
+Redirect 410 /reviews/stable-diffusion-web
+Redirect 301 /reviews/universe-no-code-custom-website-builder /reviews/universe-nocode-custom-website-builder
+Redirect 301 /reviews/convertfiles-ai-free-image-file-converter /reviews/convertfilesai-free-image-file-converter
+Redirect 301 /reviews/tellers-ai-automatic-text-to-video-tool /reviews/tellersai-automatic-texttovideo-tool
+Redirect 301 /reviews/videotube /reviews/videotube-ai
+Redirect 301 /reviews/explee /reviews/explee-ai
+Redirect 301 /reviews/divedeck-ai-powered-deck-builder /reviews/divedeck-aipowered-deck-builder
+Redirect 301 /reviews/unreal-speech-cost-effective-text-to-speech-api /reviews/unreal-speech-costeffective-texttospeech-api
+Redirect 301 /reviews/kleap /reviews/kleap-ai
+Redirect 301 /tools/ai-roi-calculator /tools/ai-cost-calculator
+Redirect 301 /case-studies/manufacturing-ai /case-studies
+Redirect 301 /resources/automation-toolkit /resources
+Redirect 301 /resources/ai-strategy-guide /resources
+Redirect 301 /case-studies/ai-content-creators /case-studies
+Redirect 301 /resources/creator-ai-toolkit /resources
+Redirect 301 /resources/content-ai-comparison /resources
+Redirect 301 /tools/content-roi-calculator /tools/content-roi-calculator
+Redirect 301 /tools/chatbot-roi-calculator /tools/chatbot-roi-calculator
+Redirect 301 /case-studies/ai-customer-service /case-studies
+Redirect 301 /resources/cs-automation-checklist /resources
+Redirect 301 /resources/security-platform-comparison /resources
+Redirect 301 /case-studies/ai-cybersecurity /case-studies
+Redirect 301 /resources/ai-security-guide /resources
+Redirect 301 /tools/security-roi-calculator /tools/security-roi-calculator
+Redirect 301 /resources/ai-analytics-guide /resources
+Redirect 301 /case-studies/predictive-analytics /case-studies
+Redirect 301 /resources/analytics-platform-comparison /resources
+Redirect 301 /tools/data-science-roi /tools
+Redirect 301 /tools/conversion-roi-calculator /tools/conversion-roi-calculator
+Redirect 301 /resources/personalization-strategy /resources
+Redirect 301 /resources/ecommerce-ai-playbook /resources
+Redirect 301 /resources/risk-management-ai /resources
+Redirect 301 /tools/fintech-ai-roi /tools
+Redirect 301 /resources/algorithmic-trading-guide /resources
+Redirect 301 /resources/healthcare-ai-guide /resources
+Redirect 301 /resources/hipaa-ai-compliance /resources
+Redirect 301 /tools/healthcare-ai-roi /tools/healthcare-ai-roi
+Redirect 301 /case-studies/healthcare-ai /case-studies
+Redirect 301 /tools/recruitment-roi-calculator /tools/recruitment-roi-calculator
+Redirect 301 /resources/hr-ai-implementation /resources
+Redirect 301 /case-studies/smart-manufacturing /case-studies
+Redirect 301 /resources/industry-40-guide /resources
+Redirect 301 /resources/predictive-maintenance /resources
+Redirect 301 /tools/manufacturing-roi-calculator /tools/manufacturing-roi-calculator
+Redirect 301 /tools/sales-ai-roi /tools/sales-ai-roi
+Redirect 301 /case-studies/sales-ai /case-studies
+Redirect 301 /resources/lead-scoring-guide /resources
+Redirect 301 /resources/sales-ai-playbook /resources
+Redirect 301 /resources/ai-security-checklist /resources
+Redirect 301 /tools/enterprise-ai-calculator /tools/enterprise-ai-calculator
+Redirect 301 /case-studies/fortune-500-chatgpt /case-studies
+Redirect 301 /resources/chatgpt-enterprise-guide /resources
+Redirect 301 /resources/ai-implementation-guide /resources
+Redirect 301 /reports/claude-gpt4-benchmark /analysis/claude3-vs-gpt4
+Redirect 301 /resources/ai-model-selection /resources
+Redirect 301 /tools/ai-cost-calculator /tools/ai-cost-calculator
+Redirect 301 /resources/marketing-ai-tools-comparison /resources
+Redirect 301 /tools/marketing-roi-calculator /tools/marketing-roi-calculator
+Redirect 301 /case-studies/marketing-ai-success /case-studies
+Redirect 301 /resources/marketing-ai-strategy /resources
+Redirect 301 /resources/no-code-ai-comparison /resources
+Redirect 301 /case-studies/no-code-ai-wins /case-studies
+Redirect 301 /resources/business-ai-training /resources
+Redirect 301 /tools/no-code-ai-roi /tools/no-code-ai-roi
+Redirect 301 /compare/athenic-ai/vs/10web /compare
+Redirect 301 /compare/athenic-ai/vs/adalysis /compare
+Redirect 301 /compare/athenic-ai/vs/adcreative-ai /compare
+Redirect 301 /compare/athenic-ai/vs/adbeat /compare
+Redirect 301 /compare/athenic-ai/vs/adespresso /compare
+Redirect 301 /compare/athenic-ai/vs/acquisio /compare
+Redirect 301 /compare/colossyan-creator/vs/acquisio /compare
+Redirect 301 /compare/colossyan-creator/vs/adcreative-ai /compare
+Redirect 301 /compare/colossyan-creator/vs/adbeat /compare
+Redirect 301 /compare/colossyan-creator/vs/10web /compare
+Redirect 301 /compare/colossyan-creator/vs/adalysis /compare
+Redirect 301 /compare/colossyan-creator/vs/adespresso /compare
+Redirect 301 /compare/contentstudio/vs/coschedule /compare
+Redirect 301 /compare/copilot-audio-expression/vs/adcreative-ai /compare
+Redirect 301 /compare/copilot-audio-expression/vs/adbeat /compare
+Redirect 301 /compare/copilot-audio-expression/vs/acquisio /compare
+Redirect 301 /compare/copilot-audio-expression/vs/adalysis /compare
+Redirect 301 /compare/copilot-audio-expression/vs/10web /compare
+Redirect 301 /compare/copilot-audio-expression/vs/adespresso /compare
+Redirect 301 /compare/elai-io/vs/adbeat /compare
+Redirect 301 /compare/elai-io/vs/10web /compare
+Redirect 301 /compare/elai-io/vs/acquisio /compare
+Redirect 301 /compare/elai-io/vs/adcreative-ai /compare
+Redirect 301 /compare/elai-io/vs/adespresso /compare
+Redirect 301 /compare/elai-io/vs/adalysis /compare
+Redirect 301 /compare/facecheck-id/vs/adbeat /compare
+Redirect 301 /compare/facecheck-id/vs/acquisio /compare
+Redirect 301 /compare/facecheck-id/vs/10web /compare
+Redirect 301 /compare/facecheck-id/vs/adcreative-ai /compare
+Redirect 301 /compare/facecheck-id/vs/adespresso /compare
+Redirect 301 /compare/facecheck-id/vs/adalysis /compare
+Redirect 301 /compare/google-gemini/vs/adalysis /compare
+Redirect 301 /compare/google-gemini/vs/10web /compare
+Redirect 301 /compare/google-gemini/vs/adcreative-ai /compare
+Redirect 301 /compare/google-gemini/vs/adbeat /compare
+Redirect 301 /compare/google-gemini/vs/acquisio /compare
+Redirect 301 /compare/google-gemini/vs/adespresso /compare
+Redirect 301 /compare/mangools/vs/adbeat /compare
+Redirect 301 /compare/mangools/vs/10web /compare
+Redirect 301 /compare/mangools/vs/acquisio /compare
+Redirect 301 /compare/mangools/vs/adcreative-ai /compare
+Redirect 301 /compare/mangools/vs/adespresso /compare
+Redirect 301 /compare/mangools/vs/adalysis /compare
+Redirect 301 /compare/playground-ai/vs/adbeat /compare
+Redirect 301 /compare/playground-ai/vs/adalysis /compare
+Redirect 301 /compare/playground-ai/vs/adespresso /compare
+Redirect 301 /compare/playground-ai/vs/acquisio /compare
+Redirect 301 /compare/playground-ai/vs/adcreative-ai /compare
+Redirect 301 /compare/playground-ai/vs/10web /compare
+Redirect 301 /compare/quiki-io/vs/acquisio /compare
+Redirect 301 /compare/quiki-io/vs/adbeat /compare
+Redirect 301 /compare/quiki-io/vs/adespresso /compare
+Redirect 301 /compare/quiki-io/vs/adalysis /compare
+Redirect 301 /compare/quiki-io/vs/10web /compare
+Redirect 301 /compare/quiki-io/vs/adcreative-ai /compare
+Redirect 301 /compare/se-ranking/vs/adespresso /compare
+Redirect 301 /compare/se-ranking/vs/adalysis /compare
+Redirect 301 /compare/se-ranking/vs/10web /compare
+Redirect 301 /compare/se-ranking/vs/acquisio /compare
+Redirect 301 /compare/se-ranking/vs/adcreative-ai /compare
+Redirect 301 /compare/se-ranking/vs/adbeat /compare
+Redirect 301 /compare/seaart-ai/vs/10web /compare
+Redirect 301 /compare/seaart-ai/vs/adalysis /compare
+Redirect 301 /compare/seaart-ai/vs/adespresso /compare
+Redirect 301 /compare/seaart-ai/vs/adbeat /compare
+Redirect 301 /compare/seaart-ai/vs/acquisio /compare
+Redirect 301 /compare/seaart-ai/vs/adcreative-ai /compare
+Redirect 301 /compare/sendible/vs/hootsuite /compare
+Redirect 301 /compare/sendible/vs/sprout-social /compare
+Redirect 301 /compare/sendible/vs/loomly /compare
+Redirect 301 /compare/serpstat/vs/adcreative-ai /compare
+Redirect 301 /compare/serpstat/vs/adespresso /compare
+Redirect 301 /compare/serpstat/vs/adalysis /compare
+Redirect 301 /compare/serpstat/vs/adbeat /compare
+Redirect 301 /compare/serpstat/vs/10web /compare
+Redirect 301 /compare/serpstat/vs/acquisio /compare
+Redirect 301 /compare/social-champ/vs/loomly /compare
+Redirect 301 /compare/social-champ/vs/buffer /compare
+Redirect 301 /compare/social-champ/vs/hootsuite /compare
+Redirect 301 /compare/socialpilot/vs/loomly /compare
+Redirect 301 /compare/socialpilot/vs/hootsuite /compare
+Redirect 301 /compare/socialpilot/vs/buffer /compare
+Redirect 301 /compare/tugan-ai/vs/adespresso /compare
+Redirect 301 /compare/tugan-ai/vs/adalysis /compare
+Redirect 301 /compare/tugan-ai/vs/10web /compare
+Redirect 301 /compare/tugan-ai/vs/adbeat /compare
+Redirect 301 /compare/tugan-ai/vs/adcreative-ai /compare
+Redirect 301 /compare/tugan-ai/vs/acquisio /compare
