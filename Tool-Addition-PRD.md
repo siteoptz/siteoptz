@@ -270,6 +270,24 @@ grep -r "tool?.name" seo-optimization/production-components/ | grep -v "tool.nam
 npm run build
 ```
 
+### Issue: Missing Tool Logos (404 Errors)
+```bash
+# CAUSE: New tools added without corresponding logo files
+# SOLUTION: Run automatic logo generator
+
+# 1. Generate all missing logos automatically
+node scripts/automatic-logo-generator.js
+
+# 2. Verify logos were created
+ls public/images/tools/ | wc -l
+
+# 3. Test specific logo URLs
+curl -I https://siteoptz.ai/images/tools/tool-name-logo.svg
+
+# 4. Add to automated workflow (prevent future occurrences)
+# Always run logo generator after adding tools
+```
+
 ## Best Practices
 
 ### Before Adding Tools
@@ -283,9 +301,10 @@ npm run build
 3. **Review staging**: Check staging files before final publish
 
 ### After Addition
-1. **Test build**: `npm run build`
-2. **Verify locally**: `npm run dev` and check /reviews/[tool-slug]
-3. **Commit descriptively**: Include tool names in commit message
+1. **Generate missing logos**: `node scripts/automatic-logo-generator.js`
+2. **Test build**: `npm run build`
+3. **Verify locally**: `npm run dev` and check /reviews/[tool-slug]
+4. **Commit descriptively**: Include tool names in commit message
 
 ### Component Generation Rules
 1. **Always validate TypeScript signatures**: Check generated components for correct function signatures
