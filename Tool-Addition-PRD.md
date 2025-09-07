@@ -176,6 +176,35 @@ node automation/workflow-orchestrator.js complete --source discover
 # - Product Hunt
 ```
 
+### Workflow 4: Fixing 404 Errors (Monthly Maintenance)
+```bash
+# 1. Obtain 404 error audit CSV from site crawl
+# Place in siteoptz-scraping directory with format: Page URL,HTTP Code,Discovered
+
+# 2. Run the comprehensive 404 fix script
+cd /Users/siteoptz/siteoptz
+node scripts/fix-404-errors.js
+
+# 3. Review the generated report
+# Script will show:
+# - Total 404 errors found
+# - Critical allowlisted URLs affected
+# - Pages created (comparisons, case studies, categories)
+# - Summary of all fixes
+
+# 4. Test the build to ensure no conflicts
+npm run build
+
+# 5. Deploy the fixes
+git add .
+git commit -m "Fix 404 errors: Create missing pages while protecting allowlist"
+git push
+
+# 6. Verify critical pages are working
+# Check key comparison pages: chatgpt-vs-claude, chatgpt-vs-gemini, claude-vs-gemini
+curl -I https://siteoptz.ai/compare/chatgpt-vs-claude
+```
+
 ## File Outputs
 
 ### Generated Files Location
@@ -326,6 +355,55 @@ npm run build
 # Always run duplicate content fixer after adding new tools
 ```
 
+### Issue: 404 Errors on Production Site
+```bash
+# CAUSE: Missing pages for URLs that are linked or indexed
+# SOLUTION: Run comprehensive 404 fix script that creates missing pages
+
+# 1. Identify all 404 errors from CSV audit file
+# Place CSV file in siteoptz-scraping directory
+# Format: Page URL,HTTP Code,Discovered
+
+# 2. Run the 404 fix script
+node scripts/fix-404-errors.js
+
+# 3. Script automatically:
+# - Loads CSV and allowlist files
+# - Identifies conflicts with allowlisted URLs
+# - Creates missing comparison pages (e.g., chatgpt-vs-claude)
+# - Creates missing case study pages
+# - Creates missing category pages
+# - Generates report of all fixes
+
+# 4. Test the build
+npm run build
+
+# 5. Verify critical pages exist
+ls -la pages/compare/chatgpt-vs-*.tsx
+ls -la pages/case-studies/*.tsx
+
+# 6. Deploy changes
+git add . && git commit -m "Fix 404 errors" && git push
+```
+
+### Issue: Path Conflicts Between Static and Dynamic Routes
+```bash
+# CAUSE: Both static pages (e.g., /categories/e-commerce.tsx) and dynamic routes ([category].tsx)
+# SOLUTION: Remove static pages that conflict with dynamic routes
+
+# 1. Check for conflicting paths
+ls -la pages/categories/
+
+# 2. Remove static pages if dynamic route exists
+rm -f pages/categories/e-commerce.tsx pages/categories/voice-ai-tools.tsx
+
+# 3. Ensure dynamic route handles all cases
+# Check pages/categories/[category].tsx exists
+
+# 4. Test build to confirm no conflicts
+npm run build
+```
+
 ## Best Practices
 
 ### Before Adding Tools
@@ -361,6 +439,14 @@ npm run build
 6. **Build testing**: Always test build after content generation to ensure no TypeScript errors
 7. **Content quality check**: Review generated content to ensure it provides real value to users
 
+### 404 Error Fix Process
+1. **Automated 404 detection**: Run `node scripts/fix-404-errors.js` to identify and fix broken URLs
+2. **Allowlist protection**: Script automatically checks against allowlist to prevent breaking approved URLs
+3. **Critical page creation**: Automatically creates missing comparison pages (chatgpt-vs-claude, etc.)
+4. **Content page generation**: Creates case study and category pages with proper SEO structure
+5. **Build validation**: Always test `npm run build` after running 404 fixes
+6. **Deployment safety**: Ensures no allowlisted URLs are affected during the fix process
+
 ## PRD Objectives Met
 
 ✅ **Scalability**: Process hundreds of tools in batches
@@ -386,20 +472,23 @@ npm run build
 
 ### Regular Tasks
 - Weekly: Review staging directory for unprocessed tools
-- Monthly: Audit for duplicate tools
-- Quarterly: Update categorization keywords
+- Monthly: Audit for duplicate tools and run 404 error fixes (`node scripts/fix-404-errors.js`)
+- Quarterly: Update categorization keywords and review allowlist integrity
 
 ### File Locations Reference
 - **Main database**: `/public/data/aiToolsData.json`
 - **Automation scripts**: `/automation/`
+- **404 fix script**: `/scripts/fix-404-errors.js`
 - **Generated components**: `/seo-optimization/production-components/`
 - **Test data**: `/automation/test-data/`
 - **Workflow outputs**: `/data/workflows/`
 - **Staging area**: `/data/staging/`
+- **Allowlist file**: `/siteoptz-scraping/siteoptz_allowlist.txt`
+- **404 audit CSVs**: `/siteoptz-scraping/siteoptz.ai_http_4xx_client_errors_*.csv`
 
 ---
 
-**Last Updated**: September 2, 2025
+**Last Updated**: September 7, 2025
 **System Status**: ✅ Production Ready
 **Total Tools**: 165+
 **Categories**: 15+
