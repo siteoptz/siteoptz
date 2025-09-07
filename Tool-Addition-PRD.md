@@ -109,6 +109,13 @@ The system automatically assigns categories based on keywords:
 - Minimum 3 features required
 - Pricing information required
 
+### 5. TypeScript Component Standards
+- **Critical**: SEO components must use correct function signatures
+- **Required Pattern**: `function ComponentName({ tool }: ComponentNameProps)` 
+- **Forbidden Pattern**: `function ComponentName({ tool }: ComponentNameProps = {})`
+- **Reason**: Components receive `tool` prop from `getStaticProps` at build time
+- **Impact**: Incorrect signatures cause TypeScript build failures and prevent title tag deployment
+
 ## Step-by-Step Workflows
 
 ### Workflow 1: Adding Tools from CSV
@@ -231,6 +238,38 @@ rm -rf .next
 npm run dev
 ```
 
+### Issue: TypeScript Errors in Generated Components
+```bash
+# ERROR: Property 'tool' is missing in type '{}' but required
+# CAUSE: Generated component has incorrect function signature with default parameter
+
+# 1. Check for problematic pattern in generated files
+grep -r "= {})" seo-optimization/production-components/
+
+# 2. Fix automatically using sed (bulk fix)
+find seo-optimization/production-components/ -name "*.tsx" -exec sed -i '' 's/: [A-Za-z]*Props = {})/: &Props)/g' {} \;
+
+# 3. Verify fix and test build
+npm run build
+
+# 4. If build still fails, manually check specific files mentioned in error
+```
+
+### Issue: Missing Title Tags After Deployment
+```bash
+# CAUSE: TypeScript build errors prevented proper deployment
+# SOLUTION: Fix component signatures and rebuild
+
+# 1. Identify files with missing title tag functionality
+grep -r "tool?.name" seo-optimization/production-components/ | grep -v "tool.name"
+
+# 2. Fix component interfaces and signatures
+# Components using getStaticProps need required tool prop, not optional
+
+# 3. Test build after fixes
+npm run build
+```
+
 ## Best Practices
 
 ### Before Adding Tools
@@ -247,6 +286,13 @@ npm run dev
 1. **Test build**: `npm run build`
 2. **Verify locally**: `npm run dev` and check /reviews/[tool-slug]
 3. **Commit descriptively**: Include tool names in commit message
+
+### Component Generation Rules
+1. **Always validate TypeScript signatures**: Check generated components for correct function signatures
+2. **Required pattern for getStaticProps components**: `({ tool }: Props)` NOT `({ tool }: Props = {})`
+3. **Interface consistency**: Ensure all SEO components have proper TypeScript interfaces with required tool prop
+4. **Build validation**: Always run `npm run build` after generating new components to catch TypeScript errors early
+5. **Title tag verification**: Test that `tool.name` appears in page titles, not `tool?.name` patterns that indicate missing props
 
 ## PRD Objectives Met
 
