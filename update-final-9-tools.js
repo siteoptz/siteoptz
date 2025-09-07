@@ -86,7 +86,7 @@ export default function ${componentName}() {
         "@type": "ListItem", 
         "position": 2,
         "name": "${category}",
-        "item": "https://siteoptz.ai/tools/?category=${encodeURIComponent(category)}"
+        "item": "https://siteoptz.ai/categories/${category.toLowerCase().replace(/\s+/g, '-').replace(/[^\w-]/g, '').replace(/--+/g, '-')}"
       },
       {
         "@type": "ListItem",
@@ -204,7 +204,7 @@ export default function ${componentName}() {
             <ol className="flex items-center space-x-2 text-gray-400 text-sm">
               <li><Link href="/" className="hover:text-cyan-400 transition-colors">Home</Link></li>
               <li><span className="mx-2">/</span></li>
-              <li><Link href="/tools/?category=${encodeURIComponent(category)}" className="hover:text-cyan-400 transition-colors">${category}</Link></li>
+              <li><Link href="/categories/${category.toLowerCase().replace(/\s+/g, '-').replace(/[^\w-]/g, '').replace(/--+/g, '-')}" className="hover:text-cyan-400 transition-colors">${category}</Link></li>
               <li><span className="mx-2">/</span></li>
               <li><Link href="/reviews" className="hover:text-cyan-400 transition-colors">Reviews</Link></li>
               <li><span className="mx-2">/</span></li>
@@ -275,7 +275,7 @@ export default function ${componentName}() {
                   <div className="space-y-4">
                     <div className="flex justify-between items-center">
                       <span className="text-gray-400">Category:</span>
-                      <Link href="/tools/?category=${encodeURIComponent(category)}" className="text-cyan-400 hover:underline text-sm">
+                      <Link href="/categories/${category.toLowerCase().replace(/\s+/g, '-').replace(/[^\w-]/g, '').replace(/--+/g, '-')}" className="text-cyan-400 hover:underline text-sm">
                         ${category}
                       </Link>
                     </div>
@@ -483,7 +483,7 @@ export default function ${componentName}() {
             </div>
             
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-              <Link href="/tools/?category=${encodeURIComponent(category)}" className="group">
+              <Link href="/categories/${category.toLowerCase().replace(/\s+/g, '-').replace(/[^\w-]/g, '').replace(/--+/g, '-')}" className="group">
                 <div className="bg-black border border-gray-800 rounded-xl p-6 hover:border-gray-600 transition-all">
                   <h3 className="text-xl font-semibold text-white mb-3 group-hover:text-cyan-400">
                     Browse ${category} Tools

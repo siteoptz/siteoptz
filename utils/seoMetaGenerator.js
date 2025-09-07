@@ -90,13 +90,13 @@ const generateCategorySEO = (category, year = '2025') => {
       'artificial intelligence tools',
       year
     ].join(', '),
-    canonical: `/tools?category=${encodeURIComponent(category)}`,
+    canonical: `/categories/${category.toLowerCase().replace(/\s+/g, '-').replace(/[^\w-]/g, '').replace(/--+/g, '-')}`,
     openGraph: {
       title: `${toolCount}+ Best ${category} AI Tools for ${year}`,
       description: `Compare the top ${category.toLowerCase()} AI tools. Pricing, features, and expert reviews to help you choose the right tool.`,
       type: 'website',
       image: `/images/categories/${category.toLowerCase().replace(/\s+/g, '-')}-og.jpg`,
-      url: `https://siteoptz.ai/tools?category=${encodeURIComponent(category)}`
+      url: `https://siteoptz.ai/categories/${category.toLowerCase().replace(/\s+/g, '-').replace(/[^\w-]/g, '').replace(/--+/g, '-')}`
     },
     twitter: {
       card: 'summary_large_image',

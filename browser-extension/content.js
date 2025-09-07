@@ -217,7 +217,14 @@ class SiteOptzContentScript {
     toast.addEventListener('click', (e) => {
       if (e.target.classList.contains('siteoptz-toast-explore')) {
         const category = e.target.dataset.category;
-        window.open(`https://siteoptz.ai/tools?category=${category}&utm_source=extension&utm_medium=content_suggestion`, '_blank');
+        // Map category to URL slug
+        const categorySlugMap = {
+          'writing': 'writing',
+          'content-creation': 'content-creation',
+          'developer-tools': 'code-generation'
+        };
+        const categorySlug = categorySlugMap[category] || category.toLowerCase().replace(/[^a-z0-9]+/g, '-');
+        window.open(`https://siteoptz.ai/categories/${categorySlug}?utm_source=extension&utm_medium=content_suggestion`, '_blank');
         toast.remove();
       } else if (e.target.classList.contains('siteoptz-toast-close')) {
         toast.remove();

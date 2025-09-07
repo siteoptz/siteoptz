@@ -31,8 +31,22 @@ export const toolCategories = [
 
 export type ToolCategory = typeof toolCategories[number];
 
-// Helper function to format category for URL
+// Helper function to format category name to URL slug
+export function getCategorySlug(category: string): string {
+  return category
+    .toLowerCase()
+    .replace(/\s+/g, '-')
+    .replace(/[^\w-]/g, '')
+    .replace(/--+/g, '-'); // Replace multiple dashes with single dash
+}
+
+// Helper function to format category for URL - now points directly to category pages
 export function getCategoryUrl(category: string): string {
+  return `/categories/${getCategorySlug(category)}`;
+}
+
+// Legacy function for backward compatibility (deprecated)
+export function getLegacyCategoryUrl(category: string): string {
   return `/tools?category=${encodeURIComponent(category)}`;
 }
 

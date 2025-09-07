@@ -4,7 +4,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { GetStaticProps, GetStaticPaths } from 'next';
 import { Star, TrendingUp, Users, Zap, CheckCircle, ArrowRight } from 'lucide-react';
-import { toolCategories } from '../../config/categories';
+import { toolCategories, getCategorySlug } from '../../config/categories';
 import { loadUnifiedToolsData } from '../../utils/unifiedDataAdapter';
 import { categoryContent } from '../../content/categoryContent';
 import ToolLogo from '../../components/ToolLogo';
@@ -330,7 +330,7 @@ export default function CategoryPage({ category, tools, content }: CategoryPageP
             
             <div className="text-center mt-12">
               <Link 
-                href={`/tools?category=${encodeURIComponent(category)}`}
+                href={`/categories/${getCategorySlug(category)}`}
                 className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-lg font-medium transition-colors inline-flex items-center"
               >
                 View All {category} Tools
@@ -471,7 +471,7 @@ export default function CategoryPage({ category, tools, content }: CategoryPageP
               
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Link 
-                  href={`/tools?category=${encodeURIComponent(category)}`}
+                  href={`/categories/${getCategorySlug(category)}`}
                   className="bg-white text-blue-600 hover:bg-gray-100 px-8 py-3 rounded-lg font-semibold transition-colors"
                 >
                   Explore {category} Tools
