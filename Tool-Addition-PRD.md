@@ -16,7 +16,11 @@ node automation/automated-tool-addition.js --source json --file new-tool.json --
 # 3. Add tool if dry-run successful
 node automation/automated-tool-addition.js --source json --file new-tool.json
 
-# 4. Build and deploy
+# 4. Generate missing logos and fix duplicate content
+node scripts/automatic-logo-generator.js
+node scripts/fix-duplicate-content-reviews.js
+
+# 5. Build and deploy
 npm run build
 git add . && git commit -m "Add new AI tool: Tool Name" && git push
 ```
@@ -115,6 +119,18 @@ The system automatically assigns categories based on keywords:
 - **Forbidden Pattern**: `function ComponentName({ tool }: ComponentNameProps = {})`
 - **Reason**: Components receive `tool` prop from `getStaticProps` at build time
 - **Impact**: Incorrect signatures cause TypeScript build failures and prevent title tag deployment
+
+### 6. Duplicate Content Prevention
+- **Critical**: All review pages must have unique content to avoid SEO penalties
+- **Automatic**: Run `node scripts/fix-duplicate-content-reviews.js` after adding tools
+- **Purpose**: Creates unique content variations for each tool's review page
+- **System Features**:
+  - 5 different intro paragraph templates
+  - Category-specific user targeting (agencies, enterprises, developers)
+  - Tool-specific feature highlighting from database
+  - Rating-based value propositions
+  - Industry context integration (14 categories supported)
+- **Impact**: Prevents Google duplicate content penalties and improves search rankings
 
 ## Step-by-Step Workflows
 
@@ -288,6 +304,28 @@ curl -I https://siteoptz.ai/images/tools/tool-name-logo.svg
 # Always run logo generator after adding tools
 ```
 
+### Issue: Duplicate Content on Review Pages
+```bash
+# CAUSE: Review pages using identical template content causing SEO penalties
+# SOLUTION: Run duplicate content fixer to create unique variations
+
+# 1. Generate unique content for all review pages
+node scripts/fix-duplicate-content-reviews.js
+
+# 2. Verify content variations were created
+# Check that intro paragraphs differ between tools
+grep -A 5 "Looking for a comprehensive" seo-optimization/production-components/*ReviewPage.tsx
+
+# 3. Test build after content generation
+npm run build
+
+# 4. Verify uniqueness of generated content
+# Each tool should have different intro text, features, and value propositions
+
+# 5. Add to automated workflow (prevent future occurrences)
+# Always run duplicate content fixer after adding new tools
+```
+
 ## Best Practices
 
 ### Before Adding Tools
@@ -302,9 +340,10 @@ curl -I https://siteoptz.ai/images/tools/tool-name-logo.svg
 
 ### After Addition
 1. **Generate missing logos**: `node scripts/automatic-logo-generator.js`
-2. **Test build**: `npm run build`
-3. **Verify locally**: `npm run dev` and check /reviews/[tool-slug]
-4. **Commit descriptively**: Include tool names in commit message
+2. **Fix duplicate content**: `node scripts/fix-duplicate-content-reviews.js`
+3. **Test build**: `npm run build`
+4. **Verify locally**: `npm run dev` and check /reviews/[tool-slug]
+5. **Commit descriptively**: Include tool names in commit message
 
 ### Component Generation Rules
 1. **Always validate TypeScript signatures**: Check generated components for correct function signatures
@@ -312,6 +351,15 @@ curl -I https://siteoptz.ai/images/tools/tool-name-logo.svg
 3. **Interface consistency**: Ensure all SEO components have proper TypeScript interfaces with required tool prop
 4. **Build validation**: Always run `npm run build` after generating new components to catch TypeScript errors early
 5. **Title tag verification**: Test that `tool.name` appears in page titles, not `tool?.name` patterns that indicate missing props
+
+### Duplicate Content Prevention Rules
+1. **Mandatory content generation**: Always run `node scripts/fix-duplicate-content-reviews.js` after adding new tools
+2. **Content uniqueness verification**: Check that new review pages have unique intro paragraphs and descriptions
+3. **Category-appropriate language**: Ensure generated content matches the tool's category context
+4. **Feature integration**: Verify that actual tool features are incorporated into generated content
+5. **SEO validation**: Confirm that schema markup includes tool-specific descriptions, not generic templates
+6. **Build testing**: Always test build after content generation to ensure no TypeScript errors
+7. **Content quality check**: Review generated content to ensure it provides real value to users
 
 ## PRD Objectives Met
 
