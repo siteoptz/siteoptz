@@ -40,7 +40,7 @@ export default function SaleshandyReviewPage({ tool }: SaleshandyReviewPageProps
       "bestRating": 5,
       "worstRating": 1
     },
-    "reviewBody": "Comprehensive saleshandy review covering features, pricing, and alternatives."
+    "reviewBody": "Expert review of Saleshandy covering Email Marketing features, pricing analysis, user experience, and competitive alternatives. Rated 3.Highly rated by experts, Saleshandy combines powerful email marketing features with user-friendly design."
   };
 
   const breadcrumbSchema = {

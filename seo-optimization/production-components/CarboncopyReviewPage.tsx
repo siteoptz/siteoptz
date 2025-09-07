@@ -40,7 +40,7 @@ export default function CarboncopyReviewPage({ tool }: CarboncopyReviewPageProps
       "bestRating": 5,
       "worstRating": 1
     },
-    "reviewBody": "Comprehensive carboncopy review covering features, pricing, and alternatives."
+    "reviewBody": "Expert review of Carboncopy covering Content Creation features, pricing analysis, user experience, and competitive alternatives. Rated 4.Highly rated by experts, Carboncopy combines powerful content creation features with user-friendly design."
   };
 
   const breadcrumbSchema = {

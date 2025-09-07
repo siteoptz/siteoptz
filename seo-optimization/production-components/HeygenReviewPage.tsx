@@ -40,7 +40,7 @@ export default function HeygenReviewPage({ tool }: HeygenReviewPageProps) {
       "bestRating": 5,
       "worstRating": 1
     },
-    "reviewBody": "Comprehensive heygen review covering features, pricing, and alternatives."
+    "reviewBody": "Expert review of HeyGen covering Video Generation features, pricing analysis, user experience, and competitive alternatives. With a 4.Highly rated expert rating, HeyGen delivers exceptional value in the video generation space."
   };
 
   const breadcrumbSchema = {

@@ -40,7 +40,7 @@ export default function SubmagicReviewPage({ tool }: SubmagicReviewPageProps) {
       "bestRating": 5,
       "worstRating": 1
     },
-    "reviewBody": "Comprehensive submagic review covering features, pricing, and alternatives."
+    "reviewBody": "Expert review of Submagic covering Video Generation features, pricing analysis, user experience, and competitive alternatives. Our 3.Highly rated rating reflects Submagic's strong performance and reliability in video generation applications."
   };
 
   const breadcrumbSchema = {

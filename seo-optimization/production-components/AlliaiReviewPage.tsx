@@ -40,7 +40,7 @@ export default function AlliaiReviewPage({ tool }: AlliaiReviewPageProps) {
       "bestRating": 5,
       "worstRating": 1
     },
-    "reviewBody": "Comprehensive alliai review covering features, pricing, and alternatives."
+    "reviewBody": "Expert review of AlliAI covering SEO & Optimization features, pricing analysis, user experience, and competitive alternatives. With a 3.Highly rated expert rating, AlliAI delivers exceptional value in the seo & optimization space."
   };
 
   const breadcrumbSchema = {

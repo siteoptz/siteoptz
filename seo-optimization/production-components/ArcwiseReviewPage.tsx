@@ -40,7 +40,7 @@ export default function ArcwiseReviewPage({ tool }: ArcwiseReviewPageProps) {
       "bestRating": 5,
       "worstRating": 1
     },
-    "reviewBody": "Comprehensive arcwise review covering features, pricing, and alternatives."
+    "reviewBody": "Expert review of Arcwise covering Data Analysis features, pricing analysis, user experience, and competitive alternatives. Rated 3.Highly rated by experts, Arcwise combines powerful data analysis features with user-friendly design."
   };
 
   const breadcrumbSchema = {

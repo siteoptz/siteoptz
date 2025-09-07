@@ -40,7 +40,7 @@ export default function CreatifyReviewPage({ tool }: CreatifyReviewPageProps) {
       "bestRating": 5,
       "worstRating": 1
     },
-    "reviewBody": "Comprehensive creatify review covering features, pricing, and alternatives."
+    "reviewBody": "Expert review of Creatify covering Video Generation features, pricing analysis, user experience, and competitive alternatives. Our 4.Highly rated rating reflects Creatify's strong performance and reliability in video generation applications."
   };
 
   const breadcrumbSchema = {

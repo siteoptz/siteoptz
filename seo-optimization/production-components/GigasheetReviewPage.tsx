@@ -40,7 +40,7 @@ export default function GigasheetReviewPage({ tool }: GigasheetReviewPageProps) 
       "bestRating": 5,
       "worstRating": 1
     },
-    "reviewBody": "Comprehensive gigasheet review covering features, pricing, and alternatives."
+    "reviewBody": "Expert review of Gigasheet covering Data Analysis features, pricing analysis, user experience, and competitive alternatives. Gigasheet stands out with its 3.Highly rated rating, offering robust data analysis capabilities that scale with your business."
   };
 
   const breadcrumbSchema = {

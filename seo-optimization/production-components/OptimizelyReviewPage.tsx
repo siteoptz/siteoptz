@@ -43,7 +43,7 @@ export default function OptimizelyReviewPage({ tool }: OptimizelyReviewPageProps
       "bestRating": 5,
       "worstRating": 1
     },
-    "reviewBody": "Comprehensive Optimizely review covering features, pricing, and alternatives."
+    "reviewBody": "Expert review of Optimizely covering Paid Search & PPC features, pricing analysis, user experience, and competitive alternatives. Rated 4.Highly rated by experts, Optimizely combines powerful paid search & ppc features with user-friendly design."
   };
 
   const breadcrumbSchema = {

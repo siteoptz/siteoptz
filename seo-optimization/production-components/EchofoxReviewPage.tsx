@@ -40,7 +40,7 @@ export default function EchofoxReviewPage({ tool }: EchofoxReviewPageProps) {
       "bestRating": 5,
       "worstRating": 1
     },
-    "reviewBody": "Comprehensive echofox review covering features, pricing, and alternatives."
+    "reviewBody": "Expert review of Echofox covering Lead Generation features, pricing analysis, user experience, and competitive alternatives. Rated 3.Highly rated by experts, Echofox combines powerful lead generation features with user-friendly design."
   };
 
   const breadcrumbSchema = {

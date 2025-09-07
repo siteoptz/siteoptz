@@ -43,7 +43,7 @@ export default function SpyfuReviewPage({ tool }: SpyfuReviewPageProps) {
       "bestRating": 5,
       "worstRating": 1
     },
-    "reviewBody": "Comprehensive SpyFu review covering features, pricing, and alternatives."
+    "reviewBody": "Expert review of SpyFu covering Paid Search & PPC features, pricing analysis, user experience, and competitive alternatives. Our 4.Highly rated rating reflects SpyFu's strong performance and reliability in paid search & ppc applications."
   };
 
   const breadcrumbSchema = {

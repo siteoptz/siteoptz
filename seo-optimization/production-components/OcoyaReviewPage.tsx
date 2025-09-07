@@ -40,7 +40,7 @@ export default function OcoyaReviewPage({ tool }: OcoyaReviewPageProps) {
       "bestRating": 5,
       "worstRating": 1
     },
-    "reviewBody": "Comprehensive ocoya review covering features, pricing, and alternatives."
+    "reviewBody": "Expert review of Ocoya covering Social Media features, pricing analysis, user experience, and competitive alternatives. Our 4.Highly rated rating reflects Ocoya's strong performance and reliability in social media applications."
   };
 
   const breadcrumbSchema = {

@@ -40,7 +40,7 @@ export default function SitekickReviewPage({ tool }: SitekickReviewPageProps) {
       "bestRating": 5,
       "worstRating": 1
     },
-    "reviewBody": "Comprehensive sitekick review covering features, pricing, and alternatives."
+    "reviewBody": "Expert review of Sitekick covering Website Builder features, pricing analysis, user experience, and competitive alternatives. Sitekick stands out with its 3.Highly rated rating, offering robust website builder capabilities that scale with your business."
   };
 
   const breadcrumbSchema = {

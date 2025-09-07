@@ -40,7 +40,7 @@ export default function ClayReviewPage({ tool }: ClayReviewPageProps) {
       "bestRating": 5,
       "worstRating": 1
     },
-    "reviewBody": "Comprehensive clay review covering features, pricing, and alternatives."
+    "reviewBody": "Expert review of Clay covering Lead Generation features, pricing analysis, user experience, and competitive alternatives. Clay stands out with its 4.Highly rated rating, offering robust lead generation capabilities that scale with your business."
   };
 
   const breadcrumbSchema = {

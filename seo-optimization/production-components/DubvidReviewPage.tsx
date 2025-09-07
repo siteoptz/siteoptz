@@ -40,7 +40,7 @@ export default function DubvidReviewPage({ tool }: DubvidReviewPageProps) {
       "bestRating": 5,
       "worstRating": 1
     },
-    "reviewBody": "Comprehensive dubvid review covering features, pricing, and alternatives."
+    "reviewBody": "Expert review of DubVid covering Best Voice AI Tools features, pricing analysis, user experience, and competitive alternatives. With a 4.Highly rated expert rating, DubVid delivers exceptional value in the best voice ai tools space."
   };
 
   const breadcrumbSchema = {

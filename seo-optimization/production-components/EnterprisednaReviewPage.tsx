@@ -40,7 +40,7 @@ export default function EnterprisednaReviewPage({ tool }: EnterprisednaReviewPag
       "bestRating": 5,
       "worstRating": 1
     },
-    "reviewBody": "Comprehensive enterprisedna review covering features, pricing, and alternatives."
+    "reviewBody": "Expert review of EnterpriseDNA covering Research & Education features, pricing analysis, user experience, and competitive alternatives. Rated 4.Highly rated by experts, EnterpriseDNA combines powerful research & education features with user-friendly design."
   };
 
   const breadcrumbSchema = {

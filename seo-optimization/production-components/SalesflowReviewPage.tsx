@@ -40,7 +40,7 @@ export default function SalesflowReviewPage({ tool }: SalesflowReviewPageProps) 
       "bestRating": 5,
       "worstRating": 1
     },
-    "reviewBody": "Comprehensive salesflow review covering features, pricing, and alternatives."
+    "reviewBody": "Expert review of Salesflow covering Lead Generation features, pricing analysis, user experience, and competitive alternatives. Rated 4.Highly rated by experts, Salesflow combines powerful lead generation features with user-friendly design."
   };
 
   const breadcrumbSchema = {

@@ -40,7 +40,7 @@ export default function KenjiReviewPage({ tool }: KenjiReviewPageProps) {
       "bestRating": 5,
       "worstRating": 1
     },
-    "reviewBody": "Comprehensive kenji review covering features, pricing, and alternatives."
+    "reviewBody": "Expert review of Kenji covering Social Media features, pricing analysis, user experience, and competitive alternatives. Our 4.Highly rated rating reflects Kenji's strong performance and reliability in social media applications."
   };
 
   const breadcrumbSchema = {

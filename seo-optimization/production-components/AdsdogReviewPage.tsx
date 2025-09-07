@@ -40,7 +40,7 @@ export default function AdsdogReviewPage({ tool }: AdsdogReviewPageProps) {
       "bestRating": 5,
       "worstRating": 1
     },
-    "reviewBody": "Comprehensive adsdog review covering features, pricing, and alternatives."
+    "reviewBody": "Expert review of AdsDog covering Video Generation features, pricing analysis, user experience, and competitive alternatives. With a 4.Highly rated expert rating, AdsDog delivers exceptional value in the video generation space."
   };
 
   const breadcrumbSchema = {

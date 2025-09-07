@@ -40,7 +40,7 @@ export default function ContentforgeReviewPage({ tool }: ContentforgeReviewPageP
       "bestRating": 5,
       "worstRating": 1
     },
-    "reviewBody": "Comprehensive contentforge review covering features, pricing, and alternatives."
+    "reviewBody": "Expert review of ContentForge covering Content Creation features, pricing analysis, user experience, and competitive alternatives. Rated 3.Highly rated by experts, ContentForge combines powerful content creation features with user-friendly design."
   };
 
   const breadcrumbSchema = {

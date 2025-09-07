@@ -40,7 +40,7 @@ export default function WellmerightReviewPage({ tool }: WellmerightReviewPagePro
       "bestRating": 5,
       "worstRating": 1
     },
-    "reviewBody": "Comprehensive wellmeright review covering features, pricing, and alternatives."
+    "reviewBody": "Expert review of WellMeRight covering Productivity features, pricing analysis, user experience, and competitive alternatives. Rated 5.Highly rated by experts, WellMeRight combines powerful productivity features with user-friendly design."
   };
 
   const breadcrumbSchema = {
