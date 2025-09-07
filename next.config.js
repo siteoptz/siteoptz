@@ -1,6 +1,7 @@
 /** @type {import('next').NextConfig} */
-const redirects404Fix = require('./redirects-404-fix');
-const canonicalRedirects = require('./redirects-canonical');
+// Disabled: Using comprehensive Vercel redirects instead to avoid conflicts
+// const redirects404Fix = require('./redirects-404-fix');
+// const canonicalRedirects = require('./redirects-canonical');
 
 const nextConfig = {
   reactStrictMode: true,
@@ -155,13 +156,10 @@ const nextConfig = {
     ];
   },
 
-  // Redirects for SEO
+  // Minimal Next.js redirects - main redirects handled by vercel.json
   async redirects() {
-    // Combine canonical redirects, 404 fixes, and existing redirects
     return [
-      ...canonicalRedirects,
-      ...redirects404Fix,
-      // Keep any unique existing redirects that aren't in the other files
+      // Only keep essential redirects that aren't covered by Vercel config
       {
         source: '/ai-tools',
         destination: '/tools',

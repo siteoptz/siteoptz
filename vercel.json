@@ -43,6 +43,11 @@
   ],
   "redirects": [
     {
+      "source": "https://siteoptz.ai/:path*",
+      "destination": "https://www.siteoptz.ai/:path*", 
+      "permanent": true
+    },
+    {
       "source": "/tools",
       "has": [
         {
