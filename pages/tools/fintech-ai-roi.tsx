@@ -38,9 +38,9 @@ export default function FintechAiRoiTool() {
           </header>
 
           <div className="bg-black/50 border border-gray-800 rounded-2xl p-8 mb-8">
-            <h2 className="text-2xl font-bold text-white mb-6">Analysis Coming Soon</h2>
+            <h2 className="text-2xl font-bold text-white mb-6">Analysis Comprehensive Guide</h2>
             <p className="text-gray-300 mb-6">
-              We&apos;re preparing a comprehensive analysis of fintech ai roi, including ROI calculations, 
+              Access our comprehensive a comprehensive analysis of fintech ai roi, including ROI calculations, 
               implementation strategies, and integration guidance tailored to your business needs.
             </p>
             <p className="text-gray-300">

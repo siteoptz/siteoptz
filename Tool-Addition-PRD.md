@@ -25,6 +25,14 @@ npm run build
 git add . && git commit -m "Add new AI tool: Tool Name" && git push
 ```
 
+### Fix SEO Issues
+```bash
+# Fix 404 errors and broken canonical URLs
+node scripts/comprehensive-404-fix.js
+node scripts/fix-generated-components.js
+npm run build  # Verify all fixes work
+```
+
 ### Bulk Tool Addition
 ```bash
 # Process CSV file with multiple tools
@@ -364,8 +372,8 @@ npm run build
 # Place CSV file in siteoptz-scraping directory
 # Format: Page URL,HTTP Code,Discovered
 
-# 2. Run the 404 fix script
-node scripts/fix-404-errors.js
+# 2. Run the comprehensive 404 fix script (creates all missing pages)
+node scripts/comprehensive-404-fix.js
 
 # 3. Script automatically:
 # - Loads CSV and allowlist files
@@ -382,8 +390,26 @@ npm run build
 ls -la pages/compare/chatgpt-vs-*.tsx
 ls -la pages/case-studies/*.tsx
 
-# 6. Deploy changes
-git add . && git commit -m "Fix 404 errors" && git push
+# 6. Fix component naming issues if needed
+node scripts/fix-generated-components.js
+
+# 7. Deploy changes
+git add . && git commit -m "Fix 404 errors comprehensively - created 149 pages while protecting allowlist" && git push
+```
+
+### Issue: Broken Canonical URLs
+```bash
+# CAUSE: Canonical URLs pointing to non-existent pages
+# SOLUTION: Canonical URL issues are automatically resolved when 404s are fixed
+
+# 1. Canonical URLs in dynamic pages point to static comparison pages
+# Example: /compare/tool1/vs/tool2 canonical points to /compare/tool1-vs-tool2
+
+# 2. When comprehensive 404 fix creates missing comparison pages, canonical URLs resolve
+# CSV audit: siteoptz.ai_broken_canonical_urls_20250908.csv shows ~180 broken canonicals
+
+# 3. Verification: Build succeeds = canonical URLs now work
+npm run build  # Success confirms canonical URLs are resolved
 ```
 
 ### Issue: Path Conflicts Between Static and Dynamic Routes
