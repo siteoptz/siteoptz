@@ -9,6 +9,8 @@ interface DebugResponse {
   timestamp: string;
   environment: 'development' | 'production';
   ghlConfig: {
+    enabled: boolean;
+    enabledRaw: string | undefined;
     hasApiKey: boolean;
     apiKeyLength: number;
     hasLocationId: boolean;
@@ -39,6 +41,8 @@ export default async function handler(
       timestamp: new Date().toISOString(),
       environment: process.env.NODE_ENV as any,
       ghlConfig: {
+        enabled: process.env.ENABLE_GHL === 'true',
+        enabledRaw: process.env.ENABLE_GHL,
         hasApiKey: false,
         apiKeyLength: 0,
         hasLocationId: false,
@@ -52,6 +56,8 @@ export default async function handler(
     timestamp: new Date().toISOString(),
     environment: process.env.NODE_ENV as any,
     ghlConfig: {
+      enabled: process.env.ENABLE_GHL === 'true',
+      enabledRaw: process.env.ENABLE_GHL,
       hasApiKey: !!GHL_API_KEY,
       apiKeyLength: GHL_API_KEY.length,
       hasLocationId: !!GHL_LOCATION_ID,
