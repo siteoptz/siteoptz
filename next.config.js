@@ -158,9 +158,57 @@ const nextConfig = {
     ];
   },
 
-  // Remove any app-defined redirects
+  // Redirects for fixing 404 errors
   async redirects() {
-    return []; // ensure no temporary redirects are returned
+    return [
+      // Category URL fix - typo/variant
+      {
+        source: '/categories/voice-ai-tools',
+        destination: '/categories/best-voice-ai-tools',
+        permanent: true,
+      },
+      // Podcast transcript redirects - asset fix (redirect .txt to .tsx pages)
+      {
+        source: '/podcasts/transcripts/ai-automation-revolution-2024.txt',
+        destination: '/podcasts/transcripts/ai-automation-revolution-2024',
+        permanent: true,
+      },
+      {
+        source: '/podcasts/transcripts/ai-ecommerce-personalization.txt',
+        destination: '/podcasts/transcripts/ai-ecommerce-personalization',
+        permanent: true,
+      },
+      {
+        source: '/podcasts/transcripts/ai-healthcare-workflow-automation.txt',
+        destination: '/podcasts/transcripts/ai-healthcare-workflow-automation',
+        permanent: true,
+      },
+      {
+        source: '/podcasts/transcripts/ai-hr-recruitment-automation.txt',
+        destination: '/podcasts/transcripts/ai-hr-recruitment-automation',
+        permanent: true,
+      },
+      {
+        source: '/podcasts/transcripts/ai-sales-process-automation.txt',
+        destination: '/podcasts/transcripts/ai-sales-process-automation',
+        permanent: true,
+      },
+      {
+        source: '/podcasts/transcripts/chatgpt-enterprise-workflows.txt',
+        destination: '/podcasts/transcripts/chatgpt-enterprise-workflows',
+        permanent: true,
+      },
+      {
+        source: '/podcasts/transcripts/claude-vs-gpt-enterprise-comparison.txt',
+        destination: '/podcasts/transcripts/claude-vs-gpt-enterprise-comparison',
+        permanent: true,
+      },
+      {
+        source: '/podcasts/transcripts/marketing-automation-ai-tools.txt',
+        destination: '/podcasts/transcripts/marketing-automation-ai-tools',
+        permanent: true,
+      }
+    ];
   },
   
   // Experimental features for better performance
