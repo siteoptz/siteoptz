@@ -83,6 +83,9 @@ export default function ReviewPage({ tool, pageTitle, slug, relatedTools, relate
     return `${tool.tool_name} review: Features, pricing (from ${basePrice}), pros, cons, and alternatives. Expert analysis and user guide for 2025.`;
   };
   
+
+  // Generate optimized meta description (155-160 characters)
+
   const metaDescription = generateMetaDescription(tool);
 
   // Generate comprehensive JSON-LD schemas
@@ -839,7 +842,26 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
     };
   }
 
-  const pageTitle = `${tool.tool_name} Review — Features, Pricing, Pros & Cons [2025]`;
+  
+  // Generate safe title with fallback
+  const generateSafeTitle = (tool: Tool, slug: string): string => {
+    if (tool.tool_name && tool.tool_name.trim()) {
+      return `${tool.tool_name} Review — Features, Pricing, Pros & Cons [2025]`;
+    }
+    
+    // Fallback: generate title from slug
+    const fallbackName = slug
+      .split('-')
+      .map(word => word.charAt(0).toUpperCase() + word.slice(1))
+      .join(' ')
+      .replace(/\bAi\b/g, 'AI')
+      .replace(/\bApi\b/g, 'API')
+      .replace(/\bSeo\b/g, 'SEO');
+    
+    return `${fallbackName} Review — Features, Pricing, Pros & Cons [2025]`;
+  };
+
+  const pageTitle = generateSafeTitle(tool, toolSlug);
   const slug = toolSlug;
 
   // Get related tools (exclude current tool)
