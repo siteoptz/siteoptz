@@ -523,19 +523,3 @@ export default function OpenaiGpt4ReviewPage({ tool }: OpenaiGpt4ReviewPageProps
     </>
   );
 }
-
-export const getStaticProps: GetStaticProps = async () => {
-  return {
-    props: {
-      tool: {
-        name: "GPT-4",
-        category: "Content Creation",
-        description: "OpenAI's most advanced language model for complex reasoning, creative tasks, and professional applications",
-        website: "https://openai.com/gpt-4",
-        rating: 4.5,
-        slug: "openai-gpt4"
-      }
-    },
-    revalidate: 86400 // 24 hours
-  };
-};

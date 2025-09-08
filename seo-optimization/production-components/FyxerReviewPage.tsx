@@ -523,19 +523,3 @@ export default function FyxerReviewPage({ tool }: FyxerReviewPageProps) {
     </>
   );
 }
-
-export const getStaticProps: GetStaticProps = async () => {
-  return {
-    props: {
-      tool: {
-        name: "Fyxer",
-        category: "Productivity",
-        description: "Fyxer is an AI-powered assistant designed to help users manage their inboxes, draft email responses, and take meeting notes. It aims to reduce the time spent on administrative tasks, allowing users to focus on more important work.",
-        website: "https://www.fyxer.ai/",
-        rating: 4.5,
-        slug: "fyxer"
-      }
-    },
-    revalidate: 86400 // 24 hours
-  };
-};

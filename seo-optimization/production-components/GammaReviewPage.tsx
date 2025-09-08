@@ -523,19 +523,3 @@ export default function GammaReviewPage({ tool }: GammaReviewPageProps) {
     </>
   );
 }
-
-export const getStaticProps: GetStaticProps = async () => {
-  return {
-    props: {
-      tool: {
-        name: "Gamma",
-        category: "Social Media",
-        description: "Gamma is an AI design partner that helps users effortlessly create presentations, websites, social media posts, and more. It aims to streamline the design process, allowing users to focus on their ideas rather than the design execution. Gamma supports various content formats and offers AI-powered features for generation, editing, and sharing.",
-        website: "https://gamma.app/",
-        rating: 4.5,
-        slug: "gamma"
-      }
-    },
-    revalidate: 86400 // 24 hours
-  };
-};

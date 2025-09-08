@@ -523,19 +523,3 @@ export default function BufferAiReviewPage({ tool }: BufferAiReviewPageProps) {
     </>
   );
 }
-
-export const getStaticProps: GetStaticProps = async () => {
-  return {
-    props: {
-      tool: {
-        name: "Buffer AI",
-        category: "Social Media",
-        description: "Buffer AI is a social media management platform with AI-enhanced scheduling, content suggestions, and analytics to streamline social media posting and engagement across multiple platforms.",
-        website: "https://buffer.com/",
-        rating: 4.5,
-        slug: "buffer-ai"
-      }
-    },
-    revalidate: 86400 // 24 hours
-  };
-};

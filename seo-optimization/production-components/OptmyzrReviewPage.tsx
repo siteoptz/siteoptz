@@ -523,19 +523,3 @@ export default function OptmyzrReviewPage({ tool }: OptmyzrReviewPageProps) {
     </>
   );
 }
-
-export const getStaticProps: GetStaticProps = async () => {
-  return {
-    props: {
-      tool: {
-        name: "Optmyzr",
-        category: "Paid Search & PPC",
-        description: "AI-powered PPC management platform that automates Google Ads, Microsoft Ads, and Amazon Ads optimization with advanced bidding strategies and performance insights.",
-        website: "https://www.optmyzr.com/",
-        rating: 4.5,
-        slug: "optmyzr"
-      }
-    },
-    revalidate: 86400 // 24 hours
-  };
-};

@@ -523,19 +523,3 @@ export default function HootsuiteReviewPage({ tool }: HootsuiteReviewPageProps) 
     </>
   );
 }
-
-export const getStaticProps: GetStaticProps = async () => {
-  return {
-    props: {
-      tool: {
-        name: "Hootsuite",
-        category: "Social Media",
-        description: "Comprehensive social media management platform with AI content creation and advanced scheduling capabilities.",
-        website: "https://hootsuite.com",
-        rating: 4.5,
-        slug: "hootsuite"
-      }
-    },
-    revalidate: 86400 // 24 hours
-  };
-};

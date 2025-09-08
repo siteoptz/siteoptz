@@ -523,19 +523,3 @@ export default function PlayHtReviewPage({ tool }: PlayHtReviewPageProps) {
     </>
   );
 }
-
-export const getStaticProps: GetStaticProps = async () => {
-  return {
-    props: {
-      tool: {
-        name: "Play.ht",
-        category: "Best Voice AI Tools",
-        description: "Play.ht is an AI text-to-speech platform that converts text into natural-sounding audio with multilingual support and API integration, making content more accessible and engaging across multiple platforms.",
-        website: "https://play.ht/",
-        rating: 4.5,
-        slug: "play-ht"
-      }
-    },
-    revalidate: 86400 // 24 hours
-  };
-};

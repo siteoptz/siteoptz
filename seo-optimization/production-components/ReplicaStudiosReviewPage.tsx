@@ -523,19 +523,3 @@ export default function ReplicaStudiosReviewPage({ tool }: ReplicaStudiosReviewP
     </>
   );
 }
-
-export const getStaticProps: GetStaticProps = async () => {
-  return {
-    props: {
-      tool: {
-        name: "Replica Studios",
-        category: "Best Voice AI Tools",
-        description: "AI voice actor platform providing natural-sounding digital voices for games, films, and other media.",
-        website: "https://replicastudios.com/",
-        rating: 4.5,
-        slug: "replica-studios"
-      }
-    },
-    revalidate: 86400 // 24 hours
-  };
-};

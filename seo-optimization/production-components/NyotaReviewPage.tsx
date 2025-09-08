@@ -523,19 +523,3 @@ export default function NyotaReviewPage({ tool }: NyotaReviewPageProps) {
     </>
   );
 }
-
-export const getStaticProps: GetStaticProps = async () => {
-  return {
-    props: {
-      tool: {
-        name: "Nyota",
-        category: "Productivity",
-        description: "Nyota is an AI-powered notetaker designed to align sales, support, and project teams by automating data entry and call workflows. It integrates with meeting platforms to capture notes, action items, and key details, automatically updating CRMs and project management tools. Nyota aims to keep teams focused, organized, and stress-free by handling the administrative tasks associated with meetings.",
-        website: "https://www.nyota.ai/",
-        rating: 4.5,
-        slug: "nyota"
-      }
-    },
-    revalidate: 86400 // 24 hours
-  };
-};

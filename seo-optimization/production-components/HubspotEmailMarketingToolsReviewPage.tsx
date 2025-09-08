@@ -523,19 +523,3 @@ export default function HubspotEmailMarketingToolsReviewPage({ tool }: HubspotEm
     </>
   );
 }
-
-export const getStaticProps: GetStaticProps = async () => {
-  return {
-    props: {
-      tool: {
-        name: "HubSpot Email Marketing Tools",
-        category: "Email Marketing",
-        description: "HubSpot's free email marketing tools allow users to create, personalize, and optimize marketing emails without needing to rely on designers or IT. It offers features like AI-generated subject lines and copy, customizable templates, and automation for post-send actions.",
-        website: "https://www.hubspot.com/products/marketing/email",
-        rating: 4.5,
-        slug: "hubspot-email-marketing-tools"
-      }
-    },
-    revalidate: 86400 // 24 hours
-  };
-};

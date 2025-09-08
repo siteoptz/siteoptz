@@ -523,19 +523,3 @@ export default function AmazonAlexaReviewPage({ tool }: AmazonAlexaReviewPagePro
     </>
   );
 }
-
-export const getStaticProps: GetStaticProps = async () => {
-  return {
-    props: {
-      tool: {
-        name: "Amazon Alexa",
-        category: "AI Automation",
-        description: "After Early Access, Alexa+ will be a free Prime benefit(https://www.amazon.com/dp/B0DCCNHWV5?ref_=xaa_spp_d_bb_li_2faqdisclaimer) or available to non-Prime customers for $19.99/month.",
-        website: "",
-        rating: 4.5,
-        slug: "amazon-alexa"
-      }
-    },
-    revalidate: 86400 // 24 hours
-  };
-};

@@ -523,19 +523,3 @@ export default function AhrefsAiReviewPage({ tool }: AhrefsAiReviewPageProps) {
     </>
   );
 }
-
-export const getStaticProps: GetStaticProps = async () => {
-  return {
-    props: {
-      tool: {
-        name: "Ahrefs AI",
-        category: "SEO & Optimization",
-        description: "Ahrefs AI is a comprehensive SEO toolkit with AI-powered features for keyword research, competitive analysis, backlink tracking, and content optimization to improve search engine rankings.",
-        website: "https://ahrefs.com/",
-        rating: 4.5,
-        slug: "ahrefs-ai"
-      }
-    },
-    revalidate: 86400 // 24 hours
-  };
-};

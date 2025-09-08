@@ -609,19 +609,3 @@ export default function UnbounceReviewPage({ tool }: UnbounceReviewPageProps) {
     </>
   );
 }
-
-export const getStaticProps: GetStaticProps = async () => {
-  return {
-    props: {
-      tool: {
-        name: "Unbounce",
-        category: "Landing Page Builder",
-        description: "Landing page builder and conversion optimization platform designed for high-converting PPC campaigns",
-        website: "https://unbounce.com",
-        rating: 4.4,
-        slug: "unbounce"
-      }
-    },
-    revalidate: 86400 // 24 hours
-  };
-};

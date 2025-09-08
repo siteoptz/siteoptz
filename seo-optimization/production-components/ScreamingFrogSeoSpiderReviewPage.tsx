@@ -523,19 +523,3 @@ export default function ScreamingFrogSeoSpiderReviewPage({ tool }: ScreamingFrog
     </>
   );
 }
-
-export const getStaticProps: GetStaticProps = async () => {
-  return {
-    props: {
-      tool: {
-        name: "Screaming Frog SEO Spider",
-        category: "SEO & Optimization",
-        description: "Desktop-based website crawler for comprehensive technical SEO analysis and site auditing.",
-        website: "https://www.screamingfrog.co.uk",
-        rating: 4.5,
-        slug: "screaming-frog-seo-spider"
-      }
-    },
-    revalidate: 86400 // 24 hours
-  };
-};

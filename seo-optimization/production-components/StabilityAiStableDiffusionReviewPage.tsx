@@ -523,19 +523,3 @@ export default function StabilityAiStableDiffusionReviewPage({ tool }: Stability
     </>
   );
 }
-
-export const getStaticProps: GetStaticProps = async () => {
-  return {
-    props: {
-      tool: {
-        name: "Stable Diffusion Web",
-        category: "Image Generation",
-        description: "Web interface for Stability AI's Stable Diffusion model for generating high-quality images from text",
-        website: "https://beta.dreamstudio.ai",
-        rating: 4.5,
-        slug: "stability-ai-stable-diffusion"
-      }
-    },
-    revalidate: 86400 // 24 hours
-  };
-};

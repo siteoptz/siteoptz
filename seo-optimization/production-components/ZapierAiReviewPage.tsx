@@ -523,19 +523,3 @@ export default function ZapierAiReviewPage({ tool }: ZapierAiReviewPageProps) {
     </>
   );
 }
-
-export const getStaticProps: GetStaticProps = async () => {
-  return {
-    props: {
-      tool: {
-        name: "Zapier AI",
-        category: "AI Automation",
-        description: "Zapier AI is a comprehensive automation platform that connects thousands of apps with AI-powered workflows, enabling businesses to automate repetitive tasks and streamline operations without coding.",
-        website: "https://zapier.com/",
-        rating: 4.5,
-        slug: "zapier-ai"
-      }
-    },
-    revalidate: 86400 // 24 hours
-  };
-};

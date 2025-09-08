@@ -523,19 +523,3 @@ export default function MozProReviewPage({ tool }: MozProReviewPageProps) {
     </>
   );
 }
-
-export const getStaticProps: GetStaticProps = async () => {
-  return {
-    props: {
-      tool: {
-        name: "Moz Pro",
-        category: "SEO & Optimization",
-        description: "Beginner-friendly SEO platform with comprehensive keyword research, site auditing, and local SEO capabilities.",
-        website: "https://moz.com",
-        rating: 4.5,
-        slug: "moz-pro"
-      }
-    },
-    revalidate: 86400 // 24 hours
-  };
-};

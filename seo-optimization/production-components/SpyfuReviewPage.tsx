@@ -609,19 +609,3 @@ export default function SpyfuReviewPage({ tool }: SpyfuReviewPageProps) {
     </>
   );
 }
-
-export const getStaticProps: GetStaticProps = async () => {
-  return {
-    props: {
-      tool: {
-        name: "SpyFu",
-        category: "Competitor Intelligence",
-        description: "Competitor research and PPC intelligence platform that reveals competitors' most profitable keywords and ads",
-        website: "https://spyfu.com",
-        rating: 4.2,
-        slug: "spyfu"
-      }
-    },
-    revalidate: 86400 // 24 hours
-  };
-};

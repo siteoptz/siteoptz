@@ -523,19 +523,3 @@ export default function CopyAiReviewPage({ tool }: CopyAiReviewPageProps) {
     </>
   );
 }
-
-export const getStaticProps: GetStaticProps = async () => {
-  return {
-    props: {
-      tool: {
-        name: "Copy.ai",
-        category: "Content Creation",
-        description: "Copy.ai is an AI-powered marketing copy generator that helps businesses create compelling ad copy, social media posts, product descriptions, and marketing content at scale.",
-        website: "https://www.copy.ai/",
-        rating: 4.5,
-        slug: "copy-ai"
-      }
-    },
-    revalidate: 86400 // 24 hours
-  };
-};

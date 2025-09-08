@@ -523,19 +523,3 @@ export default function MailchimpReviewPage({ tool }: MailchimpReviewPageProps) 
     </>
   );
 }
-
-export const getStaticProps: GetStaticProps = async () => {
-  return {
-    props: {
-      tool: {
-        name: "Mailchimp",
-        category: "Email Marketing",
-        description: "AI-powered email marketing platform with automation, segmentation, and analytics",
-        website: "https://mailchimp.com",
-        rating: 4.5,
-        slug: "mailchimp"
-      }
-    },
-    revalidate: 86400 // 24 hours
-  };
-};

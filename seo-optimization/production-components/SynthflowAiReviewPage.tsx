@@ -590,19 +590,3 @@ export default function SynthflowAiReviewPage({ tool }: SynthflowAiReviewPagePro
     </>
   );
 }
-
-export const getStaticProps: GetStaticProps = async () => {
-  return {
-    props: {
-      tool: {
-        name: "Synthflow AI",
-        category: "Voice AI Tools",
-        description: "No-code platform for building intelligent voice assistants and phone automation systems with natural conversation flows and CRM integrations.",
-        website: "https://synthflow.ai",
-        rating: 4.3,
-        slug: "synthflow-ai"
-      }
-    },
-    revalidate: 86400 // 24 hours
-  };
-};

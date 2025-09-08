@@ -523,19 +523,3 @@ export default function MeetGeekReviewPage({ tool }: MeetGeekReviewPageProps) {
     </>
   );
 }
-
-export const getStaticProps: GetStaticProps = async () => {
-  return {
-    props: {
-      tool: {
-        name: "Meet Geek",
-        category: "Productivity",
-        description: "Preferences(https://meetgeek.ai/) Deny(https://meetgeek.ai/) Accept(https://meetgeek.ai/)",
-        website: "",
-        rating: 4.5,
-        slug: "meet-geek"
-      }
-    },
-    revalidate: 86400 // 24 hours
-  };
-};

@@ -523,19 +523,3 @@ export default function UxPilotReviewPage({ tool }: UxPilotReviewPageProps) {
     </>
   );
 }
-
-export const getStaticProps: GetStaticProps = async () => {
-  return {
-    props: {
-      tool: {
-        name: "UX Pilot",
-        category: "Design",
-        description: "AI-powered UX design assistant for better user experiences",
-        website: "",
-        rating: 4.5,
-        slug: "ux-pilot"
-      }
-    },
-    revalidate: 86400 // 24 hours
-  };
-};

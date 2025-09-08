@@ -523,19 +523,3 @@ export default function ReadAiReviewPage({ tool }: ReadAiReviewPageProps) {
     </>
   );
 }
-
-export const getStaticProps: GetStaticProps = async () => {
-  return {
-    props: {
-      tool: {
-        name: "Read AI",
-        category: "Productivity",
-        description: "Zoom selects Read as an Essential App, Premium Features Enabled for Zoom Customers. Talk 1:1 With an AI Implementation Expert.(https://www.read.ai/)",
-        website: "",
-        rating: 4.5,
-        slug: "read-ai"
-      }
-    },
-    revalidate: 86400 // 24 hours
-  };
-};

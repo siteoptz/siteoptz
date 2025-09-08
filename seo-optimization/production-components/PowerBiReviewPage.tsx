@@ -523,19 +523,3 @@ export default function PowerBiReviewPage({ tool }: PowerBiReviewPageProps) {
     </>
   );
 }
-
-export const getStaticProps: GetStaticProps = async () => {
-  return {
-    props: {
-      tool: {
-        name: "Power BI",
-        category: "Data Analysis",
-        description: "Microsoft Power BI is a comprehensive business intelligence platform that transforms data into actionable insights. With AI-powered analytics and seamless Microsoft 365 integration, it's ideal for organizations already using Microsoft tools.",
-        website: "https://powerbi.microsoft.com/",
-        rating: 4.5,
-        slug: "power-bi"
-      }
-    },
-    revalidate: 86400 // 24 hours
-  };
-};

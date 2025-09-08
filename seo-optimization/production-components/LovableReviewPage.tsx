@@ -523,19 +523,3 @@ export default function LovableReviewPage({ tool }: LovableReviewPageProps) {
     </>
   );
 }
-
-export const getStaticProps: GetStaticProps = async () => {
-  return {
-    props: {
-      tool: {
-        name: "Lovable",
-        category: "Code Generation",
-        description: "Create apps and websites by chatting with AI.",
-        website: "https://lovable.dev/",
-        rating: 4.5,
-        slug: "lovable"
-      }
-    },
-    revalidate: 86400 // 24 hours
-  };
-};

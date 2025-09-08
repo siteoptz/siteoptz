@@ -523,19 +523,3 @@ export default function ReplicateAiReviewPage({ tool }: ReplicateAiReviewPagePro
     </>
   );
 }
-
-export const getStaticProps: GetStaticProps = async () => {
-  return {
-    props: {
-      tool: {
-        name: "Replicate",
-        category: "Code Generation",
-        description: "Platform for running machine learning models in the cloud with simple API access to popular AI models",
-        website: "https://replicate.com",
-        rating: 4.5,
-        slug: "replicate-ai"
-      }
-    },
-    revalidate: 86400 // 24 hours
-  };
-};

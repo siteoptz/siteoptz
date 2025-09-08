@@ -523,19 +523,3 @@ export default function MicrosoftCopilotReviewPage({ tool }: MicrosoftCopilotRev
     </>
   );
 }
-
-export const getStaticProps: GetStaticProps = async () => {
-  return {
-    props: {
-      tool: {
-        name: "Microsoft Copilot",
-        category: "Productivity",
-        description: "Microsoft Copilot is an AI assistant integrated across Microsoft 365 applications, designed to enhance productivity through intelligent automation, content generation, and data analysis within familiar Office tools.",
-        website: "https://microsoft.com/copilot",
-        rating: 4.5,
-        slug: "microsoft-copilot"
-      }
-    },
-    revalidate: 86400 // 24 hours
-  };
-};

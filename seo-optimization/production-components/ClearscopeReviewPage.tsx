@@ -588,19 +588,3 @@ export default function ClearscopeReviewPage({ tool }: ClearscopeReviewPageProps
     </>
   );
 }
-
-export const getStaticProps: GetStaticProps = async () => {
-  return {
-    props: {
-      tool: {
-        name: "Clearscope",
-        category: "SEO & Optimization",
-        description: "AI-powered content optimization platform for SEO and organic search performance",
-        website: "https://www.clearscope.io",
-        rating: 4.4,
-        slug: "clearscope"
-      }
-    },
-    revalidate: 86400 // 24 hours
-  };
-};

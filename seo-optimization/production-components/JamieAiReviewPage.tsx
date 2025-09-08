@@ -523,19 +523,3 @@ export default function JamieAiReviewPage({ tool }: JamieAiReviewPageProps) {
     </>
   );
 }
-
-export const getStaticProps: GetStaticProps = async () => {
-  return {
-    props: {
-      tool: {
-        name: "Jamie AI",
-        category: "Productivity",
-        description: "Summarize your meetings in any software, even in-person meetings. Jamie automatically takes detailed meeting notes, giving you peace of mind by never missing an important detail.",
-        website: "",
-        rating: 4.5,
-        slug: "jamie-ai"
-      }
-    },
-    revalidate: 86400 // 24 hours
-  };
-};

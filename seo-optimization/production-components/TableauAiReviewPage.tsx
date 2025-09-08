@@ -523,19 +523,3 @@ export default function TableauAiReviewPage({ tool }: TableauAiReviewPageProps) 
     </>
   );
 }
-
-export const getStaticProps: GetStaticProps = async () => {
-  return {
-    props: {
-      tool: {
-        name: "Tableau AI",
-        category: "Data Analysis",
-        description: "Tableau AI is a leading data visualization and business intelligence platform that helps organizations analyze and understand their data through interactive dashboards and AI-powered insights. It enables users to create compelling visualizations and discover data-driven insights.",
-        website: "https://tableau.com/",
-        rating: 4.5,
-        slug: "tableau-ai"
-      }
-    },
-    revalidate: 86400 // 24 hours
-  };
-};

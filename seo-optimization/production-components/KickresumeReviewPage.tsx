@@ -523,19 +523,3 @@ export default function KickresumeReviewPage({ tool }: KickresumeReviewPageProps
     </>
   );
 }
-
-export const getStaticProps: GetStaticProps = async () => {
-  return {
-    props: {
-      tool: {
-        name: "Kickresume",
-        category: "Productivity",
-        description: "Kickresume is an AI-powered resume builder and cover letter generator designed to help job seekers create professional and impressive application documents quickly and easily. It offers a wide range of customizable templates, AI writing assistance, and examples from successful job seekers to help users land their dream jobs.",
-        website: "https://www.kickresume.com/",
-        rating: 4.5,
-        slug: "kickresume"
-      }
-    },
-    revalidate: 86400 // 24 hours
-  };
-};

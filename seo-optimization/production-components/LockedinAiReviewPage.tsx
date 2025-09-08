@@ -523,19 +523,3 @@ export default function LockedinAiReviewPage({ tool }: LockedinAiReviewPageProps
     </>
   );
 }
-
-export const getStaticProps: GetStaticProps = async () => {
-  return {
-    props: {
-      tool: {
-        name: "LockedIn AI",
-        category: "Productivity",
-        description: "Go into your job interviews with absolute confidence thanks to an AI co-pilot",
-        website: "https://lockedinai.com",
-        rating: 4.5,
-        slug: "lockedin-ai"
-      }
-    },
-    revalidate: 86400 // 24 hours
-  };
-};

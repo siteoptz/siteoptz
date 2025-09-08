@@ -523,19 +523,3 @@ export default function LookaReviewPage({ tool }: LookaReviewPageProps) {
     </>
   );
 }
-
-export const getStaticProps: GetStaticProps = async () => {
-  return {
-    props: {
-      tool: {
-        name: "Looka",
-        category: "Social Media",
-        description: "Looka is an AI-powered platform that helps individuals and businesses create professional logos, build brand identities, and design marketing materials. It simplifies the design process, making it accessible to users without prior design experience. Looka offers a comprehensive suite of tools, from logo generation to a full brand kit with templates for various marketing assets.",
-        website: "https://looka.com/",
-        rating: 4.5,
-        slug: "looka"
-      }
-    },
-    revalidate: 86400 // 24 hours
-  };
-};

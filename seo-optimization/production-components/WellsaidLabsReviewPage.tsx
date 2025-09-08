@@ -523,19 +523,3 @@ export default function WellsaidLabsReviewPage({ tool }: WellsaidLabsReviewPageP
     </>
   );
 }
-
-export const getStaticProps: GetStaticProps = async () => {
-  return {
-    props: {
-      tool: {
-        name: "Wellsaid Labs",
-        category: "Best Voice AI Tools",
-        description: "Wellsaid Labs provides enterprise-grade AI voice generation with exceptionally natural and expressive speech, designed for professional and corporate use cases requiring premium audio quality.",
-        website: "https://wellsaidlabs.com/",
-        rating: 4.5,
-        slug: "wellsaid-labs"
-      }
-    },
-    revalidate: 86400 // 24 hours
-  };
-};

@@ -523,19 +523,3 @@ export default function Flux1ReviewPage({ tool }: Flux1ReviewPageProps) {
     </>
   );
 }
-
-export const getStaticProps: GetStaticProps = async () => {
-  return {
-    props: {
-      tool: {
-        name: "Flux 1",
-        category: "Image Generation",
-        description: "Application error: a client-side exception has occurred while loading bfl.ai (see the browser console for more information).",
-        website: "",
-        rating: 4.5,
-        slug: "flux-1"
-      }
-    },
-    revalidate: 86400 // 24 hours
-  };
-};

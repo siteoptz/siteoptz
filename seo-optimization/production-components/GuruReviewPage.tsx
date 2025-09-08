@@ -523,19 +523,3 @@ export default function GuruReviewPage({ tool }: GuruReviewPageProps) {
     </>
   );
 }
-
-export const getStaticProps: GetStaticProps = async () => {
-  return {
-    props: {
-      tool: {
-        name: "Guru",
-        category: "Productivity",
-        description: "Guru is a knowledge management solution that uses AI to help teams find, verify, and share information across their workflows. It integrates with various tools to provide contextual answers and support features like AI search bots, custom pages, and an AI training center.",
-        website: "https://www.getguru.com/",
-        rating: 4.5,
-        slug: "guru"
-      }
-    },
-    revalidate: 86400 // 24 hours
-  };
-};

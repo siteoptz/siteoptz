@@ -523,19 +523,3 @@ export default function AdcreativeAiReviewPage({ tool }: AdcreativeAiReviewPageP
     </>
   );
 }
-
-export const getStaticProps: GetStaticProps = async () => {
-  return {
-    props: {
-      tool: {
-        name: "AdCreative.ai",
-        category: "Social Media",
-        description: "AdCreative.ai is an AI-powered platform designed to help businesses create high-converting ad creatives, ad copy, and product photoshoots quickly and efficiently. It aims to boost sales and ROI by leveraging AI to generate professional-quality marketing assets without the need for designers.",
-        website: "https://www.adcreative.ai/",
-        rating: 4.5,
-        slug: "adcreative-ai"
-      }
-    },
-    revalidate: 86400 // 24 hours
-  };
-};

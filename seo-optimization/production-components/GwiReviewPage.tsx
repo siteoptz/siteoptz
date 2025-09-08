@@ -523,19 +523,3 @@ export default function GwiReviewPage({ tool }: GwiReviewPageProps) {
     </>
   );
 }
-
-export const getStaticProps: GetStaticProps = async () => {
-  return {
-    props: {
-      tool: {
-        name: "GWI",
-        category: "Content Creation",
-        description: "Ready to elevate your strategy? Dive into our platform today with a personalized demo(https://www.gwi.com/book-demo)",
-        website: "",
-        rating: 4.5,
-        slug: "gwi"
-      }
-    },
-    revalidate: 86400 // 24 hours
-  };
-};

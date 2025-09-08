@@ -515,19 +515,3 @@ export default function GeminiReviewPage({ tool }: GeminiReviewPageProps) {
     </>
   );
 }
-
-export const getStaticProps: GetStaticProps = async () => {
-  return {
-    props: {
-      tool: {
-        name: "Gemini",
-        category: "Data Analysis",
-        description: "Gemini is Google's AI assistant that excels at creative tasks and integrates deeply with Google services. Features multimodal AI capabilities.",
-        website: "https://gemini.google.com",
-        rating: 4.5,
-        slug: "gemini"
-      }
-    },
-    revalidate: 86400 // 24 hours
-  };
-};

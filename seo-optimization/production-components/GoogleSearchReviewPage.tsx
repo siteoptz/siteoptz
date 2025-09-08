@@ -523,19 +523,3 @@ export default function GoogleSearchReviewPage({ tool }: GoogleSearchReviewPageP
     </>
   );
 }
-
-export const getStaticProps: GetStaticProps = async () => {
-  return {
-    props: {
-      tool: {
-        name: "Google Search",
-        category: "Productivity",
-        description: "Google Search offers an 'AI Mode' that provides personalized suggestions and insights based on user interests and trending topics. It also includes features like 'I'm Feeling Curious' and other playful prompts to encourage exploration. The page also highlights Google devices and AI applications in science and the environment.",
-        website: "https://www.google.com/",
-        rating: 4.5,
-        slug: "google-search"
-      }
-    },
-    revalidate: 86400 // 24 hours
-  };
-};

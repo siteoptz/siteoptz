@@ -523,19 +523,3 @@ export default function DeepResearchReviewPage({ tool }: DeepResearchReviewPageP
     </>
   );
 }
-
-export const getStaticProps: GetStaticProps = async () => {
-  return {
-    props: {
-      tool: {
-        name: "Deep Research",
-        category: "Research & Education",
-        description: "AI-powered research assistant for academic and professional research",
-        website: "https://deepresearch.com",
-        rating: 4.5,
-        slug: "deep-research"
-      }
-    },
-    revalidate: 86400 // 24 hours
-  };
-};

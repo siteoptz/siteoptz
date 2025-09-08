@@ -523,19 +523,3 @@ export default function SunoReviewPage({ tool }: SunoReviewPageProps) {
     </>
   );
 }
-
-export const getStaticProps: GetStaticProps = async () => {
-  return {
-    props: {
-      tool: {
-        name: "Suno",
-        category: "Content Creation",
-        description: "Suno is an AI-powered music creation tool that allows users to generate songs from text prompts. It offers features for both beginners and experienced musicians, enabling the creation of high-quality music with various styles and instruments. Users can start with simple prompts or use advanced editing tools, upload audio, rewrite lyrics, and export stems for use in DAWs.",
-        website: "https://suno.com/",
-        rating: 4.5,
-        slug: "suno"
-      }
-    },
-    revalidate: 86400 // 24 hours
-  };
-};

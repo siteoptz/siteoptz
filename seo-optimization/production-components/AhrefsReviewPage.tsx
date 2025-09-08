@@ -523,19 +523,3 @@ export default function AhrefsReviewPage({ tool }: AhrefsReviewPageProps) {
     </>
   );
 }
-
-export const getStaticProps: GetStaticProps = async () => {
-  return {
-    props: {
-      tool: {
-        name: "Ahrefs",
-        category: "SEO & Optimization",
-        description: "Premium SEO tool suite with the world's largest backlink database and comprehensive keyword research capabilities.",
-        website: "https://ahrefs.com",
-        rating: 4.5,
-        slug: "ahrefs"
-      }
-    },
-    revalidate: 86400 // 24 hours
-  };
-};

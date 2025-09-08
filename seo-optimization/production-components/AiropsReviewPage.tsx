@@ -523,19 +523,3 @@ export default function AiropsReviewPage({ tool }: AiropsReviewPageProps) {
     </>
   );
 }
-
-export const getStaticProps: GetStaticProps = async () => {
-  return {
-    props: {
-      tool: {
-        name: "AirOps",
-        category: "SEO & Optimization",
-        description: "AirOps is an AI-powered platform designed to help brands increase their visibility in AI search. It provides a comprehensive solution that takes users from insights to action, enabling them to fill content gaps, optimize for agent readability, and engage in relevant conversations. The platform aims to transform content teams into revenue drivers by offering expert-led training, strategic frameworks, and proven templates.",
-        website: "https://www.airops.com/",
-        rating: 4.5,
-        slug: "airops"
-      }
-    },
-    revalidate: 86400 // 24 hours
-  };
-};

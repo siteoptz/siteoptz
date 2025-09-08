@@ -523,19 +523,3 @@ export default function ReplitGhostReviewPage({ tool }: ReplitGhostReviewPagePro
     </>
   );
 }
-
-export const getStaticProps: GetStaticProps = async () => {
-  return {
-    props: {
-      tool: {
-        name: "Replit Ghost",
-        category: "Code Generation",
-        description: "Replit Ghost is an AI-powered online IDE that enables collaborative coding in the browser. With instant deployment, real-time collaboration, and cloud-based development, it's perfect for teams and educational environments.",
-        website: "https://replit.com/",
-        rating: 4.5,
-        slug: "replit-ghost"
-      }
-    },
-    revalidate: 86400 // 24 hours
-  };
-};

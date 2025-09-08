@@ -523,19 +523,3 @@ export default function PaperpalReviewPage({ tool }: PaperpalReviewPageProps) {
     </>
   );
 }
-
-export const getStaticProps: GetStaticProps = async () => {
-  return {
-    props: {
-      tool: {
-        name: "Paperpal",
-        category: "Content Creation",
-        description: "AI academic writing assistant for better research papers",
-        website: "",
-        rating: 4.5,
-        slug: "paperpal"
-      }
-    },
-    revalidate: 86400 // 24 hours
-  };
-};

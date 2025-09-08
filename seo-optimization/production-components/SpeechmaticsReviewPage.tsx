@@ -523,19 +523,3 @@ export default function SpeechmaticsReviewPage({ tool }: SpeechmaticsReviewPageP
     </>
   );
 }
-
-export const getStaticProps: GetStaticProps = async () => {
-  return {
-    props: {
-      tool: {
-        name: "Speechmatics",
-        category: "Best Voice AI Tools",
-        description: "Enterprise voice AI platform with high-accuracy transcription in 50+ languages, trusted by global brands and governments.",
-        website: "https://www.speechmatics.com",
-        rating: 4.5,
-        slug: "speechmatics"
-      }
-    },
-    revalidate: 86400 // 24 hours
-  };
-};

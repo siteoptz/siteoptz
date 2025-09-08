@@ -523,19 +523,3 @@ export default function QlikSenseReviewPage({ tool }: QlikSenseReviewPageProps) 
     </>
   );
 }
-
-export const getStaticProps: GetStaticProps = async () => {
-  return {
-    props: {
-      tool: {
-        name: "Qlik Sense",
-        category: "Data Analysis",
-        description: "Qlik Sense is an AI-powered analytics platform featuring a unique associative engine that enables users to explore data freely. With strong self-service BI capabilities and augmented analytics, it helps organizations discover hidden insights.",
-        website: "https://www.qlik.com/",
-        rating: 4.5,
-        slug: "qlik-sense"
-      }
-    },
-    revalidate: 86400 // 24 hours
-  };
-};

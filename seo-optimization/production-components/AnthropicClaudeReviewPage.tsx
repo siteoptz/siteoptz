@@ -523,19 +523,3 @@ export default function AnthropicClaudeReviewPage({ tool }: AnthropicClaudeRevie
     </>
   );
 }
-
-export const getStaticProps: GetStaticProps = async () => {
-  return {
-    props: {
-      tool: {
-        name: "Anthropic Claude",
-        category: "Content Creation",
-        description: "Advanced AI assistant by Anthropic focused on safety, helpfulness, and accuracy for complex reasoning tasks",
-        website: "https://claude.ai",
-        rating: 4.5,
-        slug: "anthropic-claude"
-      }
-    },
-    revalidate: 86400 // 24 hours
-  };
-};

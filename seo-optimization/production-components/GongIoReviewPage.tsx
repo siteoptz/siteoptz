@@ -523,19 +523,3 @@ export default function GongIoReviewPage({ tool }: GongIoReviewPageProps) {
     </>
   );
 }
-
-export const getStaticProps: GetStaticProps = async () => {
-  return {
-    props: {
-      tool: {
-        name: "GONG IO",
-        category: "Paid Search & PPC",
-        description: "The #1 AI Platform for Revenue Teams",
-        website: "",
-        rating: 4.5,
-        slug: "gong-io"
-      }
-    },
-    revalidate: 86400 // 24 hours
-  };
-};

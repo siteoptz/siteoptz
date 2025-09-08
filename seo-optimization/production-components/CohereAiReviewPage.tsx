@@ -523,19 +523,3 @@ export default function CohereAiReviewPage({ tool }: CohereAiReviewPageProps) {
     </>
   );
 }
-
-export const getStaticProps: GetStaticProps = async () => {
-  return {
-    props: {
-      tool: {
-        name: "Cohere",
-        category: "Content Creation",
-        description: "Enterprise AI platform providing large language models for text generation, classification, and semantic search",
-        website: "https://cohere.ai",
-        rating: 4.5,
-        slug: "cohere-ai"
-      }
-    },
-    revalidate: 86400 // 24 hours
-  };
-};

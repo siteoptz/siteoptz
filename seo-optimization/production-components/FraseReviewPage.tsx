@@ -523,19 +523,3 @@ export default function FraseReviewPage({ tool }: FraseReviewPageProps) {
     </>
   );
 }
-
-export const getStaticProps: GetStaticProps = async () => {
-  return {
-    props: {
-      tool: {
-        name: "Frase",
-        category: "SEO & Optimization",
-        description: "Frase is an AI-powered SEO content optimization platform that helps writers create search-optimized articles by analyzing top-ranking content and providing research-backed content briefs.",
-        website: "https://www.frase.io/",
-        rating: 4.5,
-        slug: "frase"
-      }
-    },
-    revalidate: 86400 // 24 hours
-  };
-};

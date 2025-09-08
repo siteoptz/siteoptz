@@ -523,19 +523,3 @@ export default function ResearchPalReviewPage({ tool }: ResearchPalReviewPagePro
     </>
   );
 }
-
-export const getStaticProps: GetStaticProps = async () => {
-  return {
-    props: {
-      tool: {
-        name: "Research Pal",
-        category: "Research & Education",
-        description: "Use ResearchPal to find authentic citations from credible journals for your claims within seconds.",
-        website: "",
-        rating: 4.5,
-        slug: "research-pal"
-      }
-    },
-    revalidate: 86400 // 24 hours
-  };
-};

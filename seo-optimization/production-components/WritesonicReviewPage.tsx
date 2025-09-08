@@ -523,19 +523,3 @@ export default function WritesonicReviewPage({ tool }: WritesonicReviewPageProps
     </>
   );
 }
-
-export const getStaticProps: GetStaticProps = async () => {
-  return {
-    props: {
-      tool: {
-        name: "Writesonic",
-        category: "SEO & Optimization",
-        description: "Writesonic is a comprehensive AI writing platform that combines content generation, SEO optimization, and chatbot capabilities to help businesses create articles, ads, and marketing materials.",
-        website: "https://writesonic.com/",
-        rating: 4.5,
-        slug: "writesonic"
-      }
-    },
-    revalidate: 86400 // 24 hours
-  };
-};

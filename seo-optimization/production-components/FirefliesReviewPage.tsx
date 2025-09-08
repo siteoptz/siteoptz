@@ -523,19 +523,3 @@ export default function FirefliesReviewPage({ tool }: FirefliesReviewPageProps) 
     </>
   );
 }
-
-export const getStaticProps: GetStaticProps = async () => {
-  return {
-    props: {
-      tool: {
-        name: "Fireflies",
-        category: "AI Automation",
-        description: "!(https://fireflies.ai/website/assets/_next/image?url=%2Fwebsite%2Fassets%2F_next%2Fstatic%2Fmedia%2Fbg-elements.4ec1df64.svg&w=3840&q=75)",
-        website: "",
-        rating: 4.5,
-        slug: "fireflies"
-      }
-    },
-    revalidate: 86400 // 24 hours
-  };
-};

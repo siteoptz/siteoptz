@@ -523,19 +523,3 @@ export default function NotionAiReviewPage({ tool }: NotionAiReviewPageProps) {
     </>
   );
 }
-
-export const getStaticProps: GetStaticProps = async () => {
-  return {
-    props: {
-      tool: {
-        name: "Notion AI",
-        category: "Productivity",
-        description: "Notion AI is an intelligent writing assistant built into the popular Notion workspace platform. It helps users write, edit, summarize, and organize content more efficiently while maintaining the collaborative and organizational features that make Notion powerful.",
-        website: "https://notion.so/",
-        rating: 4.5,
-        slug: "notion-ai"
-      }
-    },
-    revalidate: 86400 // 24 hours
-  };
-};

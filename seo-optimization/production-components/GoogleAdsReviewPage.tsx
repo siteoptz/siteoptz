@@ -623,19 +623,3 @@ export default function GoogleAdsReviewPage({ tool }: GoogleAdsReviewPageProps) 
     </>
   );
 }
-
-export const getStaticProps: GetStaticProps = async () => {
-  return {
-    props: {
-      tool: {
-        name: "Google Ads",
-        category: "Advertising Platform",
-        description: "Google's official advertising platform for creating and managing PPC campaigns across Search, Display, YouTube, and more",
-        website: "https://ads.google.com",
-        rating: 4.5,
-        slug: "google-ads"
-      }
-    },
-    revalidate: 86400 // 24 hours
-  };
-};

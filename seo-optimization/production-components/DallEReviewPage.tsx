@@ -523,19 +523,3 @@ export default function DallEReviewPage({ tool }: DallEReviewPageProps) {
     </>
   );
 }
-
-export const getStaticProps: GetStaticProps = async () => {
-  return {
-    props: {
-      tool: {
-        name: "DALL-E",
-        category: "Image Generation",
-        description: "DALL-E is OpenAI's groundbreaking AI image generator that creates stunning, realistic images and artwork from simple text descriptions, perfect for creative projects and marketing visuals.",
-        website: "https://openai.com/dall-e-2",
-        rating: 4.5,
-        slug: "dall-e"
-      }
-    },
-    revalidate: 86400 // 24 hours
-  };
-};

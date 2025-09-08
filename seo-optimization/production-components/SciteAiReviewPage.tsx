@@ -523,19 +523,3 @@ export default function SciteAiReviewPage({ tool }: SciteAiReviewPageProps) {
     </>
   );
 }
-
-export const getStaticProps: GetStaticProps = async () => {
-  return {
-    props: {
-      tool: {
-        name: "scite.ai",
-        category: "Research & Education",
-        description: "scite.ai is an AI-powered platform that analyzes how research papers are cited, helping researchers understand the context and impact of citations to validate and discover quality research.",
-        website: "https://scite.ai/",
-        rating: 4.5,
-        slug: "scite-ai"
-      }
-    },
-    revalidate: 86400 // 24 hours
-  };
-};

@@ -523,19 +523,3 @@ export default function MicrosoftPowerpointReviewPage({ tool }: MicrosoftPowerpo
     </>
   );
 }
-
-export const getStaticProps: GetStaticProps = async () => {
-  return {
-    props: {
-      tool: {
-        name: "Microsoft PowerPoint",
-        category: "Productivity",
-        description: "Microsoft PowerPoint is a presentation software that allows users to create captivating presentations, collaborate in real-time, and design presentations from any device. It offers features for idea generation, confident creation, engagement, and sharing.",
-        website: "https://www.microsoft.com/en-us/microsoft-365/powerpoint",
-        rating: 4.5,
-        slug: "microsoft-powerpoint"
-      }
-    },
-    revalidate: 86400 // 24 hours
-  };
-};

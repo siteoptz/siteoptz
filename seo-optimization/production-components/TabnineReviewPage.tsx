@@ -523,19 +523,3 @@ export default function TabnineReviewPage({ tool }: TabnineReviewPageProps) {
     </>
   );
 }
-
-export const getStaticProps: GetStaticProps = async () => {
-  return {
-    props: {
-      tool: {
-        name: "Tabnine",
-        category: "Code Generation",
-        description: "Tabnine is an AI code completion tool that prioritizes privacy and team learning. It offers local processing, custom model training, and extensive IDE support, making it ideal for teams that need privacy-focused AI assistance.",
-        website: "https://tabnine.com/",
-        rating: 4.5,
-        slug: "tabnine"
-      }
-    },
-    revalidate: 86400 // 24 hours
-  };
-};

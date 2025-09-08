@@ -609,19 +609,3 @@ export default function SimilarwebReviewPage({ tool }: SimilarwebReviewPageProps
     </>
   );
 }
-
-export const getStaticProps: GetStaticProps = async () => {
-  return {
-    props: {
-      tool: {
-        name: "Similarweb",
-        category: "Market Intelligence",
-        description: "Digital market intelligence and website analytics platform for competitive analysis and market research",
-        website: "https://similarweb.com",
-        rating: 4.2,
-        slug: "similarweb"
-      }
-    },
-    revalidate: 86400 // 24 hours
-  };
-};

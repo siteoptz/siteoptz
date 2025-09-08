@@ -523,19 +523,3 @@ export default function DeepgramReviewPage({ tool }: DeepgramReviewPageProps) {
     </>
   );
 }
-
-export const getStaticProps: GetStaticProps = async () => {
-  return {
-    props: {
-      tool: {
-        name: "Deepgram",
-        category: "Best Voice AI Tools",
-        description: "Enterprise-grade speech-to-text API with Nova-3 model delivering industry-leading accuracy and speed for voice AI applications.",
-        website: "https://deepgram.com",
-        rating: 4.5,
-        slug: "deepgram"
-      }
-    },
-    revalidate: 86400 // 24 hours
-  };
-};

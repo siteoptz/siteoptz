@@ -523,19 +523,3 @@ export default function ClickupReviewPage({ tool }: ClickupReviewPageProps) {
     </>
   );
 }
-
-export const getStaticProps: GetStaticProps = async () => {
-  return {
-    props: {
-      tool: {
-        name: "ClickUp",
-        category: "AI Automation",
-        description: "All your apps, projects, and knowledge. One converged AI workspace. A single place for humans, AI, and agents to work—together.",
-        website: "",
-        rating: 4.5,
-        slug: "clickup"
-      }
-    },
-    revalidate: 86400 // 24 hours
-  };
-};

@@ -523,19 +523,3 @@ export default function Gemini25ReviewPage({ tool }: Gemini25ReviewPageProps) {
     </>
   );
 }
-
-export const getStaticProps: GetStaticProps = async () => {
-  return {
-    props: {
-      tool: {
-        name: "Gemini 2.5",
-        category: "Image Generation",
-        description: "Gemini 2.5 - AI tool",
-        website: "",
-        rating: 4.5,
-        slug: "gemini-25"
-      }
-    },
-    revalidate: 86400 // 24 hours
-  };
-};

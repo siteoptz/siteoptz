@@ -523,19 +523,3 @@ export default function ConsensusReviewPage({ tool }: ConsensusReviewPageProps) 
     </>
   );
 }
-
-export const getStaticProps: GetStaticProps = async () => {
-  return {
-    props: {
-      tool: {
-        name: "Consensus",
-        category: "Research & Education",
-        description: "Consensus is an AI-powered research tool that helps users find and analyze scientific papers, providing evidence-based insights from peer-reviewed sources for academic and professional research.",
-        website: "https://consensus.app/",
-        rating: 4.5,
-        slug: "consensus"
-      }
-    },
-    revalidate: 86400 // 24 hours
-  };
-};

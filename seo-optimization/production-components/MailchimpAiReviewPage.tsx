@@ -523,19 +523,3 @@ export default function MailchimpAiReviewPage({ tool }: MailchimpAiReviewPagePro
     </>
   );
 }
-
-export const getStaticProps: GetStaticProps = async () => {
-  return {
-    props: {
-      tool: {
-        name: "Mailchimp AI",
-        category: "Email Marketing",
-        description: "Mailchimp AI is an email marketing platform with intelligent automation, predictive analytics, and AI-powered content suggestions to optimize email campaigns and audience engagement.",
-        website: "https://mailchimp.com/",
-        rating: 4.5,
-        slug: "mailchimp-ai"
-      }
-    },
-    revalidate: 86400 // 24 hours
-  };
-};

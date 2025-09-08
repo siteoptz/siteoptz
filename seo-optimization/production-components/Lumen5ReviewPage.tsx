@@ -523,19 +523,3 @@ export default function Lumen5ReviewPage({ tool }: Lumen5ReviewPageProps) {
     </>
   );
 }
-
-export const getStaticProps: GetStaticProps = async () => {
-  return {
-    props: {
-      tool: {
-        name: "Lumen5",
-        category: "Video Generation",
-        description: "Lumen5 is an AI video maker that transforms text content into engaging videos with templates and automated scene creation, perfect for social media marketing and content promotion.",
-        website: "https://lumen5.com/",
-        rating: 4.5,
-        slug: "lumen5"
-      }
-    },
-    revalidate: 86400 // 24 hours
-  };
-};

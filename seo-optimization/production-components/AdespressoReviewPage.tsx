@@ -523,19 +523,3 @@ export default function AdespressoReviewPage({ tool }: AdespressoReviewPageProps
     </>
   );
 }
-
-export const getStaticProps: GetStaticProps = async () => {
-  return {
-    props: {
-      tool: {
-        name: "AdEspresso",
-        category: "Paid Search & PPC",
-        description: "Facebook and Instagram advertising platform with AI-powered ad creation, A/B testing, and optimization tools for social media campaigns.",
-        website: "https://adespresso.com/",
-        rating: 4.5,
-        slug: "adespresso"
-      }
-    },
-    revalidate: 86400 // 24 hours
-  };
-};

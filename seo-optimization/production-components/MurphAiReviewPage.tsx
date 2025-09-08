@@ -523,19 +523,3 @@ export default function MurphAiReviewPage({ tool }: MurphAiReviewPageProps) {
     </>
   );
 }
-
-export const getStaticProps: GetStaticProps = async () => {
-  return {
-    props: {
-      tool: {
-        name: "Murph AI",
-        category: "Best Voice AI Tools",
-        description: "Murph AI is a professional AI voice generation platform that creates studio-quality voiceovers with multilingual support and voice cloning capabilities, ideal for commercial content creation and professional audio production.",
-        website: "https://murph.ai/",
-        rating: 4.5,
-        slug: "murph-ai"
-      }
-    },
-    revalidate: 86400 // 24 hours
-  };
-};

@@ -523,19 +523,3 @@ export default function FluxReviewPage({ tool }: FluxReviewPageProps) {
     </>
   );
 }
-
-export const getStaticProps: GetStaticProps = async () => {
-  return {
-    props: {
-      tool: {
-        name: "Flux",
-        category: "Image Generation",
-        description: "Flux is an advanced AI image generation model by Black Forest Labs that reportedly outperforms well-known competitors like DALL-E 3 and Midjourney v6.1 in benchmarks for visual quality, prompt accuracy, and output diversity.",
-        website: "https://flux.ai",
-        rating: 4.5,
-        slug: "flux"
-      }
-    },
-    revalidate: 86400 // 24 hours
-  };
-};

@@ -523,19 +523,3 @@ export default function BufferReviewPage({ tool }: BufferReviewPageProps) {
     </>
   );
 }
-
-export const getStaticProps: GetStaticProps = async () => {
-  return {
-    props: {
-      tool: {
-        name: "Buffer",
-        category: "Social Media",
-        description: "Simple social media scheduling and publishing platform with analytics and team collaboration features.",
-        website: "https://buffer.com",
-        rating: 4.5,
-        slug: "buffer"
-      }
-    },
-    revalidate: 86400 // 24 hours
-  };
-};

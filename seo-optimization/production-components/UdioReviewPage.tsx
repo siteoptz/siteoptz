@@ -523,19 +523,3 @@ export default function UdioReviewPage({ tool }: UdioReviewPageProps) {
     </>
   );
 }
-
-export const getStaticProps: GetStaticProps = async () => {
-  return {
-    props: {
-      tool: {
-        name: "Udio",
-        category: "Content Creation",
-        description: "Udio is an AI-powered music creation tool that allows users to generate any song imaginable simply by describing it in text. It caters to both professional musicians and amateurs, offering features for ideation, generation of stems, and AI-powered audio editing. Users can export creations to a DAW or upload their own audio.",
-        website: "https://www.udio.com/",
-        rating: 4.5,
-        slug: "udio"
-      }
-    },
-    revalidate: 86400 // 24 hours
-  };
-};

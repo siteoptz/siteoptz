@@ -523,19 +523,3 @@ export default function ElicitReviewPage({ tool }: ElicitReviewPageProps) {
     </>
   );
 }
-
-export const getStaticProps: GetStaticProps = async () => {
-  return {
-    props: {
-      tool: {
-        name: "Elicit",
-        category: "Research & Education",
-        description: "Elicit is an AI research assistant that helps academics and researchers analyze and summarize academic papers, streamline literature reviews, and answer research questions using peer-reviewed sources.",
-        website: "https://elicit.org/",
-        rating: 4.5,
-        slug: "elicit"
-      }
-    },
-    revalidate: 86400 // 24 hours
-  };
-};

@@ -523,19 +523,3 @@ export default function AnthropicChatgptAlternativeReviewPage({ tool }: Anthropi
     </>
   );
 }
-
-export const getStaticProps: GetStaticProps = async () => {
-  return {
-    props: {
-      tool: {
-        name: "Character.AI",
-        category: "Image Generation",
-        description: "AI platform for creating and chatting with AI characters for entertainment, education, and creative purposes",
-        website: "https://character.ai",
-        rating: 4.5,
-        slug: "anthropic-chatgpt-alternative"
-      }
-    },
-    revalidate: 86400 // 24 hours
-  };
-};

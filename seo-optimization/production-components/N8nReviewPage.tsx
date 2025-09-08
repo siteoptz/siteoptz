@@ -523,19 +523,3 @@ export default function N8nReviewPage({ tool }: N8nReviewPageProps) {
     </>
   );
 }
-
-export const getStaticProps: GetStaticProps = async () => {
-  return {
-    props: {
-      tool: {
-        name: "n8n",
-        category: "AI Automation",
-        description: "n8n is a highly extensible workflow automation tool designed for technical teams. It allows users to connect and automate tasks between various applications and services. It offers flexibility with both code-based (JavaScript, Python) and visual drag-and-drop interfaces, catering to different user preferences and needs. n8n supports self-hosting for on-premise control or offers a cloud-hosted convenience, making it adaptable to various deployment strategies. It's particularly useful for building multi-step AI agents and integrating complex application stacks.",
-        website: "https://n8n.io/",
-        rating: 4.5,
-        slug: "n8n"
-      }
-    },
-    revalidate: 86400 // 24 hours
-  };
-};

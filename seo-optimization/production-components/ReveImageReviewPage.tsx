@@ -523,19 +523,3 @@ export default function ReveImageReviewPage({ tool }: ReveImageReviewPageProps) 
     </>
   );
 }
-
-export const getStaticProps: GetStaticProps = async () => {
-  return {
-    props: {
-      tool: {
-        name: "Reve Image",
-        category: "Image Generation",
-        description: "A new AI model trained from the ground up to excel at",
-        website: "",
-        rating: 4.5,
-        slug: "reve-image"
-      }
-    },
-    revalidate: 86400 // 24 hours
-  };
-};

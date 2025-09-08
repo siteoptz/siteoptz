@@ -523,19 +523,3 @@ export default function OtteraiReviewPage({ tool }: OtteraiReviewPageProps) {
     </>
   );
 }
-
-export const getStaticProps: GetStaticProps = async () => {
-  return {
-    props: {
-      tool: {
-        name: "Otter.ai",
-        category: "Best Voice AI Tools",
-        description: "AI-powered meeting assistant with real-time transcription, note-taking, and collaboration features for business productivity.",
-        website: "https://otter.ai",
-        rating: 4.5,
-        slug: "otterai"
-      }
-    },
-    revalidate: 86400 // 24 hours
-  };
-};

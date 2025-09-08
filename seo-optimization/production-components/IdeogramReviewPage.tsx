@@ -523,19 +523,3 @@ export default function IdeogramReviewPage({ tool }: IdeogramReviewPageProps) {
     </>
   );
 }
-
-export const getStaticProps: GetStaticProps = async () => {
-  return {
-    props: {
-      tool: {
-        name: "Ideogram",
-        category: "Image Generation",
-        description: "!(https://ideogram.ai/assets/progressive-image/balanced/response/Q_Zp4aFyRs6GvntRVsL8CA)(https://ideogram.ai/g/BKNcLtX6TGmk2P4eJdCgfg/0)",
-        website: "",
-        rating: 4.5,
-        slug: "ideogram"
-      }
-    },
-    revalidate: 86400 // 24 hours
-  };
-};

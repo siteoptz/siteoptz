@@ -268,13 +268,20 @@ export default function ReviewPage({ tool, pageTitle, slug, relatedTools, relate
 
   // If we have a SEO-optimized version, use it instead
   if (hasSEOVersion && seoData && hasSEOComponent(slug)) {
-    const SEOComponent = dynamic(getSEOComponent(slug), {
-      loading: () => <div className="min-h-screen bg-black flex items-center justify-center">
-        <div className="text-white">Loading...</div>
-      </div>
-    });
-    
-    return <SEOComponent tool={seoData} />;
+    try {
+      const SEOComponent = dynamic(getSEOComponent(slug), {
+        loading: () => <div className="min-h-screen bg-black flex items-center justify-center">
+          <div className="text-white">Loading...</div>
+        </div>,
+        ssr: false, // Disable SSR for dynamic components
+        // Add timeout for failed imports
+      });
+      
+      return <SEOComponent tool={seoData} />;
+    } catch (error) {
+      console.error('Failed to load SEO component for:', slug, error);
+      // Fall through to default template if SEO component fails
+    }
   }
 
   

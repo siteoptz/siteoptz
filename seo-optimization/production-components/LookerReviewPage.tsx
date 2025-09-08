@@ -523,19 +523,3 @@ export default function LookerReviewPage({ tool }: LookerReviewPageProps) {
     </>
   );
 }
-
-export const getStaticProps: GetStaticProps = async () => {
-  return {
-    props: {
-      tool: {
-        name: "Looker",
-        category: "Data Analysis",
-        description: "Looker is Google's enterprise data platform that provides AI-powered analytics and business intelligence. With advanced data modeling and Google Cloud integration, it's designed for organizations requiring sophisticated data analysis capabilities.",
-        website: "https://looker.com/",
-        rating: 4.5,
-        slug: "looker"
-      }
-    },
-    revalidate: 86400 // 24 hours
-  };
-};

@@ -523,19 +523,3 @@ export default function StableDiffusionReviewPage({ tool }: StableDiffusionRevie
     </>
   );
 }
-
-export const getStaticProps: GetStaticProps = async () => {
-  return {
-    props: {
-      tool: {
-        name: "Stable Diffusion",
-        category: "Image Generation",
-        description: "Stable Diffusion is a revolutionary open-source AI image generation model that creates high-quality images from text descriptions. It can be run locally, customized extensively, and used commercially without restrictions, making it popular among artists, developers, and researchers.",
-        website: "https://stability.ai/",
-        rating: 4.5,
-        slug: "stable-diffusion"
-      }
-    },
-    revalidate: 86400 // 24 hours
-  };
-};

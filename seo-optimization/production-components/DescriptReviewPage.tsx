@@ -523,19 +523,3 @@ export default function DescriptReviewPage({ tool }: DescriptReviewPageProps) {
     </>
   );
 }
-
-export const getStaticProps: GetStaticProps = async () => {
-  return {
-    props: {
-      tool: {
-        name: "Descript",
-        category: "Best Voice AI Tools",
-        description: "All-in-one audio and video editing platform with AI-powered transcription and voice generation.",
-        website: "https://www.descript.com/",
-        rating: 4.5,
-        slug: "descript"
-      }
-    },
-    revalidate: 86400 // 24 hours
-  };
-};

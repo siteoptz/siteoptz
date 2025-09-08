@@ -523,19 +523,3 @@ export default function LaterReviewPage({ tool }: LaterReviewPageProps) {
     </>
   );
 }
-
-export const getStaticProps: GetStaticProps = async () => {
-  return {
-    props: {
-      tool: {
-        name: "Later",
-        category: "Social Media",
-        description: "Visual-first social media scheduler with AI-powered content creation and comprehensive Instagram marketing tools.",
-        website: "https://later.com",
-        rating: 4.5,
-        slug: "later"
-      }
-    },
-    revalidate: 86400 // 24 hours
-  };
-};

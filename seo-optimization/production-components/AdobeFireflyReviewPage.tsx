@@ -523,19 +523,3 @@ export default function AdobeFireflyReviewPage({ tool }: AdobeFireflyReviewPageP
     </>
   );
 }
-
-export const getStaticProps: GetStaticProps = async () => {
-  return {
-    props: {
-      tool: {
-        name: "Adobe Firefly",
-        category: "Image Generation",
-        description: "Adobe's creative generative AI for producing images, text effects, and creative elements with commercial safety",
-        website: "https://firefly.adobe.com",
-        rating: 4.5,
-        slug: "adobe-firefly"
-      }
-    },
-    revalidate: 86400 // 24 hours
-  };
-};

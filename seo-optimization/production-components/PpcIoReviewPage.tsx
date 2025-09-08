@@ -523,19 +523,3 @@ export default function PpcIoReviewPage({ tool }: PpcIoReviewPageProps) {
     </>
   );
 }
-
-export const getStaticProps: GetStaticProps = async () => {
-  return {
-    props: {
-      tool: {
-        name: "PPC IO",
-        category: "Paid Search & PPC",
-        description: "AI-powered PPC optimization platform that helps marketers improve their paid search campaigns with automated bidding, keyword optimization, and performance insights.",
-        website: "",
-        rating: 4.5,
-        slug: "ppc-io"
-      }
-    },
-    revalidate: 86400 // 24 hours
-  };
-};

@@ -523,19 +523,3 @@ export default function CanvaAiReviewPage({ tool }: CanvaAiReviewPageProps) {
     </>
   );
 }
-
-export const getStaticProps: GetStaticProps = async () => {
-  return {
-    props: {
-      tool: {
-        name: "Canva AI",
-        category: "Social Media",
-        description: "Canva AI is an all-in-one design platform that combines powerful AI features with an intuitive drag-and-drop interface. It enables users to create professional-quality designs, from social media graphics to presentations, with AI-powered assistance and extensive template libraries.",
-        website: "https://canva.com/",
-        rating: 4.5,
-        slug: "canva-ai"
-      }
-    },
-    revalidate: 86400 // 24 hours
-  };
-};

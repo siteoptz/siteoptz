@@ -523,19 +523,3 @@ export default function AlphaSenseReviewPage({ tool }: AlphaSenseReviewPageProps
     </>
   );
 }
-
-export const getStaticProps: GetStaticProps = async () => {
-  return {
-    props: {
-      tool: {
-        name: "Alpha Sense",
-        category: "Research & Education",
-        description: "Accelerate your workflow with     AI insights you can trust",
-        website: "",
-        rating: 4.5,
-        slug: "alpha-sense"
-      }
-    },
-    revalidate: 86400 // 24 hours
-  };
-};

@@ -523,19 +523,3 @@ export default function SpeechifyReviewPage({ tool }: SpeechifyReviewPageProps) 
     </>
   );
 }
-
-export const getStaticProps: GetStaticProps = async () => {
-  return {
-    props: {
-      tool: {
-        name: "Speechify",
-        category: "Best Voice AI Tools",
-        description: "AI-powered text-to-speech app that converts written content into natural-sounding audio.",
-        website: "https://speechify.com/",
-        rating: 4.5,
-        slug: "speechify"
-      }
-    },
-    revalidate: 86400 // 24 hours
-  };
-};

@@ -523,19 +523,3 @@ export default function KleapAiReviewPage({ tool }: KleapAiReviewPageProps) {
     </>
   );
 }
-
-export const getStaticProps: GetStaticProps = async () => {
-  return {
-    props: {
-      tool: {
-        name: "Kleap",
-        category: "Website Builder",
-        description: "AI website builder for creating professional websites in minutes",
-        website: "",
-        rating: 4.5,
-        slug: "kleap-ai"
-      }
-    },
-    revalidate: 86400 // 24 hours
-  };
-};

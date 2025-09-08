@@ -523,19 +523,3 @@ export default function BlazeAiReviewPage({ tool }: BlazeAiReviewPageProps) {
     </>
   );
 }
-
-export const getStaticProps: GetStaticProps = async () => {
-  return {
-    props: {
-      tool: {
-        name: "Blaze AI",
-        category: "Content Creation",
-        description: "Get started for free(https://app.blaze.ai/signup?referral_page=home&referrer=)",
-        website: "",
-        rating: 4.5,
-        slug: "blaze-ai"
-      }
-    },
-    revalidate: 86400 // 24 hours
-  };
-};

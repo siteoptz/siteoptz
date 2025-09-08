@@ -523,19 +523,3 @@ export default function VideotubeAiReviewPage({ tool }: VideotubeAiReviewPagePro
     </>
   );
 }
-
-export const getStaticProps: GetStaticProps = async () => {
-  return {
-    props: {
-      tool: {
-        name: "VideoTube",
-        category: "Video Generation",
-        description: "Turn text, images, or product pages into professional viral videos in no time",
-        website: "https://videotube.ai",
-        rating: 4.5,
-        slug: "videotube-ai"
-      }
-    },
-    revalidate: 86400 // 24 hours
-  };
-};

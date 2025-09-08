@@ -523,19 +523,3 @@ export default function MotionReviewPage({ tool }: MotionReviewPageProps) {
     </>
   );
 }
-
-export const getStaticProps: GetStaticProps = async () => {
-  return {
-    props: {
-      tool: {
-        name: "Motion",
-        category: "AI Automation",
-        description: "Over 1 million top performers and teams trust Motion",
-        website: "",
-        rating: 4.5,
-        slug: "motion"
-      }
-    },
-    revalidate: 86400 // 24 hours
-  };
-};

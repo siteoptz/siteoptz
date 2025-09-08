@@ -523,19 +523,3 @@ export default function SemrushReviewPage({ tool }: SemrushReviewPageProps) {
     </>
   );
 }
-
-export const getStaticProps: GetStaticProps = async () => {
-  return {
-    props: {
-      tool: {
-        name: "Semrush",
-        category: "SEO & Optimization",
-        description: "All-in-one digital marketing suite combining SEO, PPC, content marketing, and competitive research tools.",
-        website: "https://semrush.com",
-        rating: 4.5,
-        slug: "semrush"
-      }
-    },
-    revalidate: 86400 // 24 hours
-  };
-};

@@ -523,19 +523,3 @@ export default function ResembleAiReviewPage({ tool }: ResembleAiReviewPageProps
     </>
   );
 }
-
-export const getStaticProps: GetStaticProps = async () => {
-  return {
-    props: {
-      tool: {
-        name: "Resemble AI",
-        category: "Best Voice AI Tools",
-        description: "AI voice cloning platform that creates realistic synthetic voices from just a few minutes of audio data.",
-        website: "https://www.resemble.ai/",
-        rating: 4.5,
-        slug: "resemble-ai"
-      }
-    },
-    revalidate: 86400 // 24 hours
-  };
-};

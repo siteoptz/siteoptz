@@ -523,19 +523,3 @@ export default function JasperAiReviewPage({ tool }: JasperAiReviewPageProps) {
     </>
   );
 }
-
-export const getStaticProps: GetStaticProps = async () => {
-  return {
-    props: {
-      tool: {
-        name: "Jasper AI",
-        category: "Content Creation",
-        description: "Jasper AI is an enterprise-focused AI writing platform that helps marketing teams create high-quality blog posts, social media content, ads, and marketing copy with brand voice consistency.",
-        website: "https://jasper.ai/",
-        rating: 4.5,
-        slug: "jasper-ai"
-      }
-    },
-    revalidate: 86400 // 24 hours
-  };
-};

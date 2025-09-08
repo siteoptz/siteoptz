@@ -523,19 +523,3 @@ export default function RytrReviewPage({ tool }: RytrReviewPageProps) {
     </>
   );
 }
-
-export const getStaticProps: GetStaticProps = async () => {
-  return {
-    props: {
-      tool: {
-        name: "Rytr",
-        category: "Content Creation",
-        description: "Rytr is an AI writing assistant designed for short-form content creation, accessible across various platforms. It helps users generate original and compelling content quickly, offering over 40 use cases and templates, including blog posts, social media ads, email responses, and more. Rytr aims to sound like the user, not a robot, by analyzing writing samples and mirroring tone, with options for custom tones. It also emphasizes plagiarism-free content and offers a Chrome Extension for seamless integration into writing workflows.",
-        website: "https://rytr.me/",
-        rating: 4.5,
-        slug: "rytr"
-      }
-    },
-    revalidate: 86400 // 24 hours
-  };
-};

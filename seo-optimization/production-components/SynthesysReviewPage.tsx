@@ -523,19 +523,3 @@ export default function SynthesysReviewPage({ tool }: SynthesysReviewPageProps) 
     </>
   );
 }
-
-export const getStaticProps: GetStaticProps = async () => {
-  return {
-    props: {
-      tool: {
-        name: "Synthesys",
-        category: "Best Voice AI Tools",
-        description: "Synthesys is a professional AI platform for voice and video synthesis, offering commercial-grade content creation tools for businesses requiring high-quality multimedia content with commercial licensing.",
-        website: "https://synthesys.io/",
-        rating: 4.5,
-        slug: "synthesys"
-      }
-    },
-    revalidate: 86400 // 24 hours
-  };
-};

@@ -523,19 +523,3 @@ export default function ChatpdfReviewPage({ tool }: ChatpdfReviewPageProps) {
     </>
   );
 }
-
-export const getStaticProps: GetStaticProps = async () => {
-  return {
-    props: {
-      tool: {
-        name: "ChatPDF",
-        category: "Research & Education",
-        description: "ChatPDF is an AI tool that enables users to chat with and analyze PDF documents, making it easy to extract insights, ask questions, and summarize content from uploaded files.",
-        website: "https://chatpdf.com/",
-        rating: 4.5,
-        slug: "chatpdf"
-      }
-    },
-    revalidate: 86400 // 24 hours
-  };
-};

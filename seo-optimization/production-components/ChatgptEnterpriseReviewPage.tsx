@@ -523,19 +523,3 @@ export default function ChatgptEnterpriseReviewPage({ tool }: ChatgptEnterpriseR
     </>
   );
 }
-
-export const getStaticProps: GetStaticProps = async () => {
-  return {
-    props: {
-      tool: {
-        name: "ChatGPT Enterprise",
-        category: "Data Analysis",
-        description: "ChatGPT Enterprise is OpenAI's enterprise-grade AI solution offering advanced data analysis, custom model training, and enterprise security. Designed for large organizations requiring secure, scalable AI capabilities.",
-        website: "https://openai.com/enterprise",
-        rating: 4.5,
-        slug: "chatgpt-enterprise"
-      }
-    },
-    revalidate: 86400 // 24 hours
-  };
-};

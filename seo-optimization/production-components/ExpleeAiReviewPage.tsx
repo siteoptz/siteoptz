@@ -523,19 +523,3 @@ export default function ExpleeAiReviewPage({ tool }: ExpleeAiReviewPageProps) {
     </>
   );
 }
-
-export const getStaticProps: GetStaticProps = async () => {
-  return {
-    props: {
-      tool: {
-        name: "Explee",
-        category: "Productivity",
-        description: "Find thousands of potential customers in seconds with AI-powered lead generation",
-        website: "https://explee.com",
-        rating: 4.5,
-        slug: "explee-ai"
-      }
-    },
-    revalidate: 86400 // 24 hours
-  };
-};

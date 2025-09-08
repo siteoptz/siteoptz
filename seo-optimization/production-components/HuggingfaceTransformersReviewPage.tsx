@@ -523,19 +523,3 @@ export default function HuggingfaceTransformersReviewPage({ tool }: HuggingfaceT
     </>
   );
 }
-
-export const getStaticProps: GetStaticProps = async () => {
-  return {
-    props: {
-      tool: {
-        name: "Hugging Face",
-        category: "Code Generation",
-        description: "Open-source platform for machine learning models with transformers library and model hub",
-        website: "https://huggingface.co",
-        rating: 4.5,
-        slug: "huggingface-transformers"
-      }
-    },
-    revalidate: 86400 // 24 hours
-  };
-};

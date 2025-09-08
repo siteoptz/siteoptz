@@ -523,19 +523,3 @@ export default function LeonardoAiReviewPage({ tool }: LeonardoAiReviewPageProps
     </>
   );
 }
-
-export const getStaticProps: GetStaticProps = async () => {
-  return {
-    props: {
-      tool: {
-        name: "Leonardo.ai",
-        category: "Image Generation",
-        description: "Leonardo.ai is a powerful AI image generation platform that offers advanced control and customization options for creating high-quality digital art. It features custom model training, commercial licensing, and professional-grade tools for artists and designers.",
-        website: "https://leonardo.ai/",
-        rating: 4.5,
-        slug: "leonardo-ai"
-      }
-    },
-    revalidate: 86400 // 24 hours
-  };
-};

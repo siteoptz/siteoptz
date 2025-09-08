@@ -523,19 +523,3 @@ export default function ShortwaveReviewPage({ tool }: ShortwaveReviewPageProps) 
     </>
   );
 }
-
-export const getStaticProps: GetStaticProps = async () => {
-  return {
-    props: {
-      tool: {
-        name: "Shortwave",
-        category: "Email Marketing",
-        description: "Shortwave is an AI-powered email client designed to automate and enhance your email management. It offers features like AI-driven organization, scheduling, writing assistance, and advanced search capabilities to save users time and improve productivity. It aims to provide an ultimate inbox experience with features like split inboxes, email bundling, and turning emails into todos.",
-        website: "https://www.shortwave.com/",
-        rating: 4.5,
-        slug: "shortwave"
-      }
-    },
-    revalidate: 86400 // 24 hours
-  };
-};

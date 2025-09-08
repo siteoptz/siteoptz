@@ -523,19 +523,3 @@ export default function SudowriteReviewPage({ tool }: SudowriteReviewPageProps) 
     </>
   );
 }
-
-export const getStaticProps: GetStaticProps = async () => {
-  return {
-    props: {
-      tool: {
-        name: "Sudowrite",
-        category: "Content Creation",
-        description: "Sudowrite is an AI writing partner designed for fiction writers, offering tools to assist with various stages of the writing process, from brainstorming and outlining to drafting and editing. It aims to help writers overcome writer's block, enhance descriptions, develop characters, and refine their prose.",
-        website: "https://sudowrite.com/",
-        rating: 4.5,
-        slug: "sudowrite"
-      }
-    },
-    revalidate: 86400 // 24 hours
-  };
-};

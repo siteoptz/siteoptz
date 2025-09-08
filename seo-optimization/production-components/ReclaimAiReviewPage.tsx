@@ -523,19 +523,3 @@ export default function ReclaimAiReviewPage({ tool }: ReclaimAiReviewPageProps) 
     </>
   );
 }
-
-export const getStaticProps: GetStaticProps = async () => {
-  return {
-    props: {
-      tool: {
-        name: "Reclaim.ai",
-        category: "Productivity",
-        description: "Reclaim.ai is an AI-powered productivity tool that helps individuals and teams manage their time effectively by automating scheduling, defending focus time, and optimizing workflows. It integrates with calendars and task management tools to provide a seamless experience.",
-        website: "https://reclaim.ai/",
-        rating: 4.5,
-        slug: "reclaim-ai"
-      }
-    },
-    revalidate: 86400 // 24 hours
-  };
-};

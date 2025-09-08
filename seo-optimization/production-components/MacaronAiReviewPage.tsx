@@ -523,19 +523,3 @@ export default function MacaronAiReviewPage({ tool }: MacaronAiReviewPageProps) 
     </>
   );
 }
-
-export const getStaticProps: GetStaticProps = async () => {
-  return {
-    props: {
-      tool: {
-        name: "Macaron AI",
-        category: "AI Automation",
-        description: "The world's first personal AI agent for comprehensive task management and assistance",
-        website: "https://macaron.ai",
-        rating: 4.5,
-        slug: "macaron-ai"
-      }
-    },
-    revalidate: 86400 // 24 hours
-  };
-};

@@ -523,19 +523,3 @@ export default function GithubCopilotReviewPage({ tool }: GithubCopilotReviewPag
     </>
   );
 }
-
-export const getStaticProps: GetStaticProps = async () => {
-  return {
-    props: {
-      tool: {
-        name: "GitHub Copilot",
-        category: "Code Generation",
-        description: "GitHub Copilot is an AI-powered code completion tool that helps developers write code faster and more efficiently. Trained on billions of lines of public code, it provides intelligent suggestions, generates entire functions, and assists with debugging and documentation.",
-        website: "https://github.com/features/copilot",
-        rating: 4.5,
-        slug: "github-copilot"
-      }
-    },
-    revalidate: 86400 // 24 hours
-  };
-};

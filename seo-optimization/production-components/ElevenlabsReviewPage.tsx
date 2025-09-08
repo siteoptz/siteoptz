@@ -523,19 +523,3 @@ export default function ElevenlabsReviewPage({ tool }: ElevenlabsReviewPageProps
     </>
   );
 }
-
-export const getStaticProps: GetStaticProps = async () => {
-  return {
-    props: {
-      tool: {
-        name: "ElevenLabs",
-        category: "Best Voice AI Tools",
-        description: "ElevenLabs is a cutting-edge AI voice generation platform that creates incredibly realistic synthetic voices. Using advanced machine learning, it can clone voices from just a few minutes of audio and generate speech in multiple languages with natural intonation and emotion.",
-        website: "https://elevenlabs.io/",
-        rating: 4.5,
-        slug: "elevenlabs"
-      }
-    },
-    revalidate: 86400 // 24 hours
-  };
-};

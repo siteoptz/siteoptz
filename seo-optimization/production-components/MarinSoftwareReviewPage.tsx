@@ -523,19 +523,3 @@ export default function MarinSoftwareReviewPage({ tool }: MarinSoftwareReviewPag
     </>
   );
 }
-
-export const getStaticProps: GetStaticProps = async () => {
-  return {
-    props: {
-      tool: {
-        name: "Marin Software",
-        category: "Paid Search & PPC",
-        description: "Enterprise-grade digital advertising platform with AI-powered bidding, cross-channel campaign management, and advanced analytics for large-scale advertisers.",
-        website: "https://www.marinsoftware.com/",
-        rating: 4.5,
-        slug: "marin-software"
-      }
-    },
-    revalidate: 86400 // 24 hours
-  };
-};

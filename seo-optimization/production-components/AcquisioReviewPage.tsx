@@ -523,19 +523,3 @@ export default function AcquisioReviewPage({ tool }: AcquisioReviewPageProps) {
     </>
   );
 }
-
-export const getStaticProps: GetStaticProps = async () => {
-  return {
-    props: {
-      tool: {
-        name: "Acquisio",
-        category: "Paid Search & PPC",
-        description: "AI-powered advertising platform for scaling PPC campaigns across Google, Meta, and Microsoft with machine learning optimization.",
-        website: "https://www.acquisio.com",
-        rating: 4.5,
-        slug: "acquisio"
-      }
-    },
-    revalidate: 86400 // 24 hours
-  };
-};

@@ -523,19 +523,3 @@ export default function AdzoomaReviewPage({ tool }: AdzoomaReviewPageProps) {
     </>
   );
 }
-
-export const getStaticProps: GetStaticProps = async () => {
-  return {
-    props: {
-      tool: {
-        name: "Adzooma",
-        category: "Paid Search & PPC",
-        description: "AI-driven advertising platform that manages Google Ads, Microsoft Ads, and Facebook Ads with automated optimization and performance monitoring.",
-        website: "https://www.adzooma.com/",
-        rating: 4.5,
-        slug: "adzooma"
-      }
-    },
-    revalidate: 86400 // 24 hours
-  };
-};

@@ -523,19 +523,3 @@ export default function ChatgptReviewPage({ tool }: ChatgptReviewPageProps) {
     </>
   );
 }
-
-export const getStaticProps: GetStaticProps = async () => {
-  return {
-    props: {
-      tool: {
-        name: "ChatGPT",
-        category: "Content Creation",
-        description: "ChatGPT is OpenAI's revolutionary conversational AI assistant that can help with writing, coding, analysis, math, research, and creative tasks through natural language conversations.",
-        website: "https://chat.openai.com/",
-        rating: 4.5,
-        slug: "chatgpt"
-      }
-    },
-    revalidate: 86400 // 24 hours
-  };
-};

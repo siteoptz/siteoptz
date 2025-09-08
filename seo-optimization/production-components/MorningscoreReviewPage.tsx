@@ -590,19 +590,3 @@ export default function MorningscoreReviewPage({ tool }: MorningscoreReviewPageP
     </>
   );
 }
-
-export const getStaticProps: GetStaticProps = async () => {
-  return {
-    props: {
-      tool: {
-        name: "Morningscore",
-        category: "SEO & Optimization",
-        description: "Gamified SEO tool that measures organic traffic value in dollars and makes SEO engaging through XP-based missions and achievements.",
-        website: "https://morningscore.io",
-        rating: 4.2,
-        slug: "morningscore"
-      }
-    },
-    revalidate: 86400 // 24 hours
-  };
-};

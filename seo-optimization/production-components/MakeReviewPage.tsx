@@ -523,19 +523,3 @@ export default function MakeReviewPage({ tool }: MakeReviewPageProps) {
     </>
   );
 }
-
-export const getStaticProps: GetStaticProps = async () => {
-  return {
-    props: {
-      tool: {
-        name: "Make",
-        category: "AI Automation",
-        description: "Make is an intuitive no-code development platform that allows users to realize their business's full potential through automation and AI. It enables users to visualize, build, and scale automations for various business processes, fostering collaboration and accelerating innovation.",
-        website: "https://www.make.com/",
-        rating: 4.5,
-        slug: "make"
-      }
-    },
-    revalidate: 86400 // 24 hours
-  };
-};

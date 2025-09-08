@@ -523,19 +523,3 @@ export default function LantaAiReviewPage({ tool }: LantaAiReviewPageProps) {
     </>
   );
 }
-
-export const getStaticProps: GetStaticProps = async () => {
-  return {
-    props: {
-      tool: {
-        name: "Lanta AI",
-        category: "Video Generation",
-        description: "Create professional AI videos from text, images, and even videos",
-        website: "https://lantaai.com",
-        rating: 4.5,
-        slug: "lanta-ai"
-      }
-    },
-    revalidate: 86400 // 24 hours
-  };
-};

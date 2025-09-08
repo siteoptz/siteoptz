@@ -523,19 +523,3 @@ export default function PerplexityAiReviewPage({ tool }: PerplexityAiReviewPageP
     </>
   );
 }
-
-export const getStaticProps: GetStaticProps = async () => {
-  return {
-    props: {
-      tool: {
-        name: "Perplexity AI",
-        category: "Research & Education",
-        description: "Perplexity AI is an AI-powered search engine that provides accurate, cited answers to your questions. It combines the power of large language models with real-time web search to deliver comprehensive, fact-checked responses with proper source attribution.",
-        website: "https://perplexity.ai/",
-        rating: 4.5,
-        slug: "perplexity-ai"
-      }
-    },
-    revalidate: 86400 // 24 hours
-  };
-};

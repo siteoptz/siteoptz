@@ -523,19 +523,3 @@ export default function SurferSeoReviewPage({ tool }: SurferSeoReviewPageProps) 
     </>
   );
 }
-
-export const getStaticProps: GetStaticProps = async () => {
-  return {
-    props: {
-      tool: {
-        name: "Surfer SEO",
-        category: "SEO & Optimization",
-        description: "Surfer SEO is an AI-driven content optimization tool that analyzes top-ranking pages to provide data-driven recommendations for creating SEO-optimized content that ranks higher.",
-        website: "https://surferseo.com/",
-        rating: 4.5,
-        slug: "surfer-seo"
-      }
-    },
-    revalidate: 86400 // 24 hours
-  };
-};

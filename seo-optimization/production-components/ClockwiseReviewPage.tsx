@@ -523,19 +523,3 @@ export default function ClockwiseReviewPage({ tool }: ClockwiseReviewPageProps) 
     </>
   );
 }
-
-export const getStaticProps: GetStaticProps = async () => {
-  return {
-    props: {
-      tool: {
-        name: "Clockwise",
-        category: "Productivity",
-        description: "Clockwise is an AI-powered scheduling assistant that optimizes your calendar to create more time for deep work and efficient meetings. It intelligently rearranges events based on user preferences and team schedules, acting like a personal AI scheduling assistant for your entire team.",
-        website: "https://www.getclockwise.com/",
-        rating: 4.5,
-        slug: "clockwise"
-      }
-    },
-    revalidate: 86400 // 24 hours
-  };
-};

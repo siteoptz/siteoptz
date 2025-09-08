@@ -523,19 +523,3 @@ export default function GumloopReviewPage({ tool }: GumloopReviewPageProps) {
     </>
   );
 }
-
-export const getStaticProps: GetStaticProps = async () => {
-  return {
-    props: {
-      tool: {
-        name: "Gumloop",
-        category: "AI Automation",
-        description: "!Gumloop Logo(https://www.gumloop.com/images/gumloop_logo.svg)(https://www.gumloop.com/home)",
-        website: "",
-        rating: 4.5,
-        slug: "gumloop"
-      }
-    },
-    revalidate: 86400 // 24 hours
-  };
-};

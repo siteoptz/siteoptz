@@ -631,19 +631,3 @@ export default function AdbeatReviewPage({ tool }: AdbeatReviewPageProps) {
     </>
   );
 }
-
-export const getStaticProps: GetStaticProps = async () => {
-  return {
-    props: {
-      tool: {
-        name: "Adbeat",
-        category: "Paid Search & PPC",
-        description: "Display advertising intelligence platform that tracks competitor ad creatives and media buying strategies",
-        website: "https://adbeat.com",
-        rating: 4.0,
-        slug: "adbeat"
-      }
-    },
-    revalidate: 86400 // 24 hours
-  };
-};

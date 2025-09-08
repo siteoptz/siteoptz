@@ -571,19 +571,3 @@ export default function OptimizelyReviewPage({ tool }: OptimizelyReviewPageProps
     </>
   );
 }
-
-export const getStaticProps: GetStaticProps = async () => {
-  return {
-    props: {
-      tool: {
-        name: "Optimizely",
-        category: "Paid Search & PPC",
-        description: "Digital experience optimization platform for A/B testing and personalization",
-        website: "https://www.optimizely.com",
-        rating: 4.3,
-        slug: "optimizely"
-      }
-    },
-    revalidate: 86400 // 24 hours
-  };
-};

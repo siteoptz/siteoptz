@@ -523,19 +523,3 @@ export default function FathomReviewPage({ tool }: FathomReviewPageProps) {
     </>
   );
 }
-
-export const getStaticProps: GetStaticProps = async () => {
-  return {
-    props: {
-      tool: {
-        name: "Fathom",
-        category: "Productivity",
-        description: "Fathom is an AI-powered meeting notetaker that automatically transcribes and summarizes meetings from platforms like Zoom, Google Meet, and Microsoft Teams. It aims to free up users to focus on conversations rather than note-taking, providing quick summaries, action items, and searchable transcripts.",
-        website: "https://fathom.video/",
-        rating: 4.5,
-        slug: "fathom"
-      }
-    },
-    revalidate: 86400 // 24 hours
-  };
-};

@@ -523,19 +523,3 @@ export default function CursorReviewPage({ tool }: CursorReviewPageProps) {
     </>
   );
 }
-
-export const getStaticProps: GetStaticProps = async () => {
-  return {
-    props: {
-      tool: {
-        name: "Cursor",
-        category: "Code Generation",
-        description: "Cursor is an AI-first code editor that combines the familiar feel of VS Code with powerful AI capabilities. It features a chat interface for code assistance, advanced generation capabilities, and seamless integration of AI throughout the development workflow.",
-        website: "https://cursor.sh/",
-        rating: 4.5,
-        slug: "cursor"
-      }
-    },
-    revalidate: 86400 // 24 hours
-  };
-};

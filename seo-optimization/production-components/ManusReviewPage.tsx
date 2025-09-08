@@ -523,19 +523,3 @@ export default function ManusReviewPage({ tool }: ManusReviewPageProps) {
     </>
   );
 }
-
-export const getStaticProps: GetStaticProps = async () => {
-  return {
-    props: {
-      tool: {
-        name: "Manus",
-        category: "AI Automation",
-        description: "View replay(https://manus.im/share/iLQpYZuEWvzDPIixGEqMC0?replay=1) Charmm-GUI Protein-Membrane Doc\\",
-        website: "",
-        rating: 4.5,
-        slug: "manus"
-      }
-    },
-    revalidate: 86400 // 24 hours
-  };
-};

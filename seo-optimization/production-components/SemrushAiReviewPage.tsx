@@ -523,19 +523,3 @@ export default function SemrushAiReviewPage({ tool }: SemrushAiReviewPageProps) 
     </>
   );
 }
-
-export const getStaticProps: GetStaticProps = async () => {
-  return {
-    props: {
-      tool: {
-        name: "Semrush AI",
-        category: "SEO & Optimization",
-        description: "Semrush AI is a comprehensive digital marketing platform with AI-enhanced tools for SEO, PPC, content marketing, competitor analysis, and social media management.",
-        website: "https://www.semrush.com/",
-        rating: 4.5,
-        slug: "semrush-ai"
-      }
-    },
-    revalidate: 86400 // 24 hours
-  };
-};

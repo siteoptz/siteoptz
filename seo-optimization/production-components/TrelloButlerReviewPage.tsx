@@ -523,19 +523,3 @@ export default function TrelloButlerReviewPage({ tool }: TrelloButlerReviewPageP
     </>
   );
 }
-
-export const getStaticProps: GetStaticProps = async () => {
-  return {
-    props: {
-      tool: {
-        name: "Trello Butler",
-        category: "Productivity",
-        description: "Trello Butler is an AI-powered automation tool integrated into Trello that streamlines project management through intelligent workflow automation, rule-based actions, and smart suggestions for better board organization.",
-        website: "https://trello.com/power-ups/butler",
-        rating: 4.5,
-        slug: "trello-butler"
-      }
-    },
-    revalidate: 86400 // 24 hours
-  };
-};

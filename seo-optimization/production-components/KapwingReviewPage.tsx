@@ -523,19 +523,3 @@ export default function KapwingReviewPage({ tool }: KapwingReviewPageProps) {
     </>
   );
 }
-
-export const getStaticProps: GetStaticProps = async () => {
-  return {
-    props: {
-      tool: {
-        name: "Kapwing",
-        category: "Video Generation",
-        description: "Kapwing is an online video editor with AI-powered features and collaboration tools, perfect for teams creating social media content and quick video projects in the browser.",
-        website: "https://kapwing.com/",
-        rating: 4.5,
-        slug: "kapwing"
-      }
-    },
-    revalidate: 86400 // 24 hours
-  };
-};

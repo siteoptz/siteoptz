@@ -523,19 +523,3 @@ export default function AdalysisReviewPage({ tool }: AdalysisReviewPageProps) {
     </>
   );
 }
-
-export const getStaticProps: GetStaticProps = async () => {
-  return {
-    props: {
-      tool: {
-        name: "Adalysis",
-        category: "Paid Search & PPC",
-        description: "PPC optimization software focused on Google and Bing Ads with smart bidding automation and comprehensive reporting.",
-        website: "https://adalysis.com",
-        rating: 4.5,
-        slug: "adalysis"
-      }
-    },
-    revalidate: 86400 // 24 hours
-  };
-};

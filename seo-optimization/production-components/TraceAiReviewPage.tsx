@@ -523,19 +523,3 @@ export default function TraceAiReviewPage({ tool }: TraceAiReviewPageProps) {
     </>
   );
 }
-
-export const getStaticProps: GetStaticProps = async () => {
-  return {
-    props: {
-      tool: {
-        name: "Trace AI",
-        category: "Productivity",
-        description: "AI-powered productivity tool that helps automate workflows and boost efficiency",
-        website: "",
-        rating: 4.5,
-        slug: "trace-ai"
-      }
-    },
-    revalidate: 86400 // 24 hours
-  };
-};

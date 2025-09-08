@@ -523,19 +523,3 @@ export default function SynthesiaReviewPage({ tool }: SynthesiaReviewPageProps) 
     </>
   );
 }
-
-export const getStaticProps: GetStaticProps = async () => {
-  return {
-    props: {
-      tool: {
-        name: "Synthesia",
-        category: "Video Generation",
-        description: "Synthesia is an AI video generation platform that creates professional videos with AI avatars. It allows users to generate videos from text in multiple languages, making it ideal for training, marketing, and educational content creation without traditional video production.",
-        website: "https://synthesia.io/",
-        rating: 4.5,
-        slug: "synthesia"
-      }
-    },
-    revalidate: 86400 // 24 hours
-  };
-};

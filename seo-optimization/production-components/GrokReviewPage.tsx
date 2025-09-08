@@ -523,19 +523,3 @@ export default function GrokReviewPage({ tool }: GrokReviewPageProps) {
     </>
   );
 }
-
-export const getStaticProps: GetStaticProps = async () => {
-  return {
-    props: {
-      tool: {
-        name: "Grok",
-        category: "AI Automation",
-        description: "AI assistant by xAI with real-time knowledge and witty personality",
-        website: "https://grok.x.ai",
-        rating: 4.5,
-        slug: "grok"
-      }
-    },
-    revalidate: 86400 // 24 hours
-  };
-};

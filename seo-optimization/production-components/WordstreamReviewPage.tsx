@@ -523,19 +523,3 @@ export default function WordstreamReviewPage({ tool }: WordstreamReviewPageProps
     </>
   );
 }
-
-export const getStaticProps: GetStaticProps = async () => {
-  return {
-    props: {
-      tool: {
-        name: "Wordstream",
-        category: "Paid Search & PPC",
-        description: "AI-powered online advertising platform that helps businesses manage Google Ads, Microsoft Ads, and Facebook Ads with smart automation and optimization.",
-        website: "https://www.wordstream.com/",
-        rating: 4.5,
-        slug: "wordstream"
-      }
-    },
-    revalidate: 86400 // 24 hours
-  };
-};

@@ -523,19 +523,3 @@ export default function CastmagicReviewPage({ tool }: CastmagicReviewPageProps) 
     </>
   );
 }
-
-export const getStaticProps: GetStaticProps = async () => {
-  return {
-    props: {
-      tool: {
-        name: "Castmagic",
-        category: "Content Creation",
-        description: "AI-powered content repurposing for podcasters and video creators",
-        website: "",
-        rating: 4.5,
-        slug: "castmagic"
-      }
-    },
-    revalidate: 86400 // 24 hours
-  };
-};

@@ -523,19 +523,3 @@ export default function SproutSocialReviewPage({ tool }: SproutSocialReviewPageP
     </>
   );
 }
-
-export const getStaticProps: GetStaticProps = async () => {
-  return {
-    props: {
-      tool: {
-        name: "Sprout Social",
-        category: "Social Media",
-        description: "Enterprise-grade social media management platform with AI-powered analytics and comprehensive publishing tools.",
-        website: "https://sproutsocial.com",
-        rating: 4.5,
-        slug: "sprout-social"
-      }
-    },
-    revalidate: 86400 // 24 hours
-  };
-};

@@ -523,19 +523,3 @@ export default function HootsuiteAiReviewPage({ tool }: HootsuiteAiReviewPagePro
     </>
   );
 }
-
-export const getStaticProps: GetStaticProps = async () => {
-  return {
-    props: {
-      tool: {
-        name: "Hootsuite AI",
-        category: "Social Media",
-        description: "Hootsuite AI is a comprehensive social media management platform with AI-powered content creation, automated scheduling, and advanced analytics for managing multiple social accounts.",
-        website: "https://hootsuite.com/",
-        rating: 4.5,
-        slug: "hootsuite-ai"
-      }
-    },
-    revalidate: 86400 // 24 hours
-  };
-};

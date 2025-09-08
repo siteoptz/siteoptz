@@ -523,19 +523,3 @@ export default function ApifyReviewPage({ tool }: ApifyReviewPageProps) {
     </>
   );
 }
-
-export const getStaticProps: GetStaticProps = async () => {
-  return {
-    props: {
-      tool: {
-        name: "Apify",
-        category: "Paid Search & PPC",
-        description: "Apify is the largest ecosystem where developers build, deploy, and publish web scrapers, AI agents, and automation tools. We call them Actors.",
-        website: "",
-        rating: 4.5,
-        slug: "apify"
-      }
-    },
-    revalidate: 86400 // 24 hours
-  };
-};

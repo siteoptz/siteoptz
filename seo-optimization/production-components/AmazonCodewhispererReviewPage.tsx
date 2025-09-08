@@ -523,19 +523,3 @@ export default function AmazonCodewhispererReviewPage({ tool }: AmazonCodewhispe
     </>
   );
 }
-
-export const getStaticProps: GetStaticProps = async () => {
-  return {
-    props: {
-      tool: {
-        name: "Amazon CodeWhisperer",
-        category: "Code Generation",
-        description: "Amazon CodeWhisperer is a free AI-powered code generator that provides real-time code suggestions and security scanning. Built by AWS, it focuses on security-first development with vulnerability detection and offers seamless integration with AWS services.",
-        website: "https://aws.amazon.com/codewhisperer/",
-        rating: 4.5,
-        slug: "amazon-codewhisperer"
-      }
-    },
-    revalidate: 86400 // 24 hours
-  };
-};

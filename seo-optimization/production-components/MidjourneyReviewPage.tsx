@@ -523,19 +523,3 @@ export default function MidjourneyReviewPage({ tool }: MidjourneyReviewPageProps
     </>
   );
 }
-
-export const getStaticProps: GetStaticProps = async () => {
-  return {
-    props: {
-      tool: {
-        name: "Midjourney v6",
-        category: "Image Generation",
-        description: "Midjourney is widely regarded as the benchmark for AI artistic quality, producing richly detailed, cinematic images that look like professional concept art with exceptional realism and precision.",
-        website: "https://midjourney.com",
-        rating: 4.5,
-        slug: "midjourney"
-      }
-    },
-    revalidate: 86400 // 24 hours
-  };
-};

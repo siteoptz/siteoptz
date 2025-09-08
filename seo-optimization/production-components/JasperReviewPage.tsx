@@ -523,19 +523,3 @@ export default function JasperReviewPage({ tool }: JasperReviewPageProps) {
     </>
   );
 }
-
-export const getStaticProps: GetStaticProps = async () => {
-  return {
-    props: {
-      tool: {
-        name: "Jasper",
-        category: "Content Creation",
-        description: "AI writing assistant for marketing, content, and business writing",
-        website: "https://jasper.ai",
-        rating: 4.5,
-        slug: "jasper"
-      }
-    },
-    revalidate: 86400 // 24 hours
-  };
-};

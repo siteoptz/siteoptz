@@ -523,19 +523,3 @@ export default function DatarobotReviewPage({ tool }: DatarobotReviewPageProps) 
     </>
   );
 }
-
-export const getStaticProps: GetStaticProps = async () => {
-  return {
-    props: {
-      tool: {
-        name: "DataRobot",
-        category: "Data Analysis",
-        description: "Automated machine learning platform for predictive model building and deployment",
-        website: "https://datarobot.com",
-        rating: 4.5,
-        slug: "datarobot"
-      }
-    },
-    revalidate: 86400 // 24 hours
-  };
-};

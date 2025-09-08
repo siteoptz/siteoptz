@@ -523,19 +523,3 @@ export default function RevReviewPage({ tool }: RevReviewPageProps) {
     </>
   );
 }
-
-export const getStaticProps: GetStaticProps = async () => {
-  return {
-    props: {
-      tool: {
-        name: "Rev",
-        category: "Best Voice AI Tools",
-        description: "Professional transcription service combining AI technology with human accuracy for high-quality speech-to-text conversion.",
-        website: "https://www.rev.com",
-        rating: 4.5,
-        slug: "rev"
-      }
-    },
-    revalidate: 86400 // 24 hours
-  };
-};

@@ -523,19 +523,3 @@ export default function VeoReviewPage({ tool }: VeoReviewPageProps) {
     </>
   );
 }
-
-export const getStaticProps: GetStaticProps = async () => {
-  return {
-    props: {
-      tool: {
-        name: "Veo",
-        category: "Video Generation",
-        description: "Veo is a state-of-the-art video generation model developed by Google DeepMind, designed to empower filmmakers and storytellers with advanced creative capabilities. It offers enhanced realism, improved prompt adherence, and greater creative control, allowing users to generate high-quality videos with sound effects, ambient noise, and dialogue.",
-        website: "https://deepmind.google/models/veo/",
-        rating: 4.5,
-        slug: "veo"
-      }
-    },
-    revalidate: 86400 // 24 hours
-  };
-};

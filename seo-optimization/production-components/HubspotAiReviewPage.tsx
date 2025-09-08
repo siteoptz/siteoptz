@@ -523,19 +523,3 @@ export default function HubspotAiReviewPage({ tool }: HubspotAiReviewPageProps) 
     </>
   );
 }
-
-export const getStaticProps: GetStaticProps = async () => {
-  return {
-    props: {
-      tool: {
-        name: "HubSpot AI",
-        category: "Email Marketing",
-        description: "HubSpot AI is an integrated CRM and marketing automation platform with AI-powered features for lead scoring, content creation, email marketing, and customer relationship management.",
-        website: "https://www.hubspot.com/",
-        rating: 4.5,
-        slug: "hubspot-ai"
-      }
-    },
-    revalidate: 86400 // 24 hours
-  };
-};

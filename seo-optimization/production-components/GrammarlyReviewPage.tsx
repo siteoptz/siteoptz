@@ -523,19 +523,3 @@ export default function GrammarlyReviewPage({ tool }: GrammarlyReviewPageProps) 
     </>
   );
 }
-
-export const getStaticProps: GetStaticProps = async () => {
-  return {
-    props: {
-      tool: {
-        name: "Grammarly",
-        category: "Productivity",
-        description: "Grammarly is an AI-powered writing assistant that helps improve writing quality through grammar checking, style suggestions, and tone analysis. It integrates seamlessly across platforms and provides comprehensive writing support for individuals and teams.",
-        website: "https://grammarly.com/",
-        rating: 4.5,
-        slug: "grammarly"
-      }
-    },
-    revalidate: 86400 // 24 hours
-  };
-};

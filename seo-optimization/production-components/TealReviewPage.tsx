@@ -523,19 +523,3 @@ export default function TealReviewPage({ tool }: TealReviewPageProps) {
     </>
   );
 }
-
-export const getStaticProps: GetStaticProps = async () => {
-  return {
-    props: {
-      tool: {
-        name: "Teal",
-        category: "Productivity",
-        description: "Teal is an all-in-one suite of tools designed to simplify and accelerate the job search process. It offers features like an AI resume builder, job tracker, matching mode, and resume checker to help users land their next position faster.",
-        website: "https://www.tealhq.com/",
-        rating: 4.5,
-        slug: "teal"
-      }
-    },
-    revalidate: 86400 // 24 hours
-  };
-};

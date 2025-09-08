@@ -523,19 +523,3 @@ export default function WindsurfReviewPage({ tool }: WindsurfReviewPageProps) {
     </>
   );
 }
-
-export const getStaticProps: GetStaticProps = async () => {
-  return {
-    props: {
-      tool: {
-        name: "Windsurf",
-        category: "Code Generation",
-        description: "Windsurf is the first agentic IDE that combines deep contextual awareness through Cascade technology with chat-based AI interaction, making AI feel like a true coding partner.",
-        website: "https://codeium.com/windsurf",
-        rating: 4.5,
-        slug: "windsurf"
-      }
-    },
-    revalidate: 86400 // 24 hours
-  };
-};

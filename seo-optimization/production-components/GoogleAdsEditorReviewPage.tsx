@@ -612,19 +612,3 @@ export default function GoogleAdsEditorReviewPage({ tool }: GoogleAdsEditorRevie
     </>
   );
 }
-
-export const getStaticProps: GetStaticProps = async () => {
-  return {
-    props: {
-      tool: {
-        name: "Google Ads Editor",
-        category: "PPC Management Tool",
-        description: "Free desktop application for managing Google Ads campaigns offline with bulk editing capabilities",
-        website: "https://ads.google.com/home/tools/ads-editor/",
-        rating: 4.3,
-        slug: "google-ads-editor"
-      }
-    },
-    revalidate: 86400 // 24 hours
-  };
-};

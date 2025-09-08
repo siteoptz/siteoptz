@@ -523,19 +523,3 @@ export default function DreamMachineReviewPage({ tool }: DreamMachineReviewPageP
     </>
   );
 }
-
-export const getStaticProps: GetStaticProps = async () => {
-  return {
-    props: {
-      tool: {
-        name: "Dream Machine",
-        category: "Video Generation",
-        description: "Dream Machine - AI tool",
-        website: "",
-        rating: 4.5,
-        slug: "dream-machine"
-      }
-    },
-    revalidate: 86400 // 24 hours
-  };
-};

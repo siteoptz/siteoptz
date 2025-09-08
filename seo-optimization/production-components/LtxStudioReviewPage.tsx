@@ -523,19 +523,3 @@ export default function LtxStudioReviewPage({ tool }: LtxStudioReviewPageProps) 
     </>
   );
 }
-
-export const getStaticProps: GetStaticProps = async () => {
-  return {
-    props: {
-      tool: {
-        name: "LTX Studio",
-        category: "Video Generation",
-        description: "!LTX Studio logo(https://cdn.prod.website-files.com/65bb6b901cb133d784d16166/68496acf1f21ddfdceab8506_LTX-Studio-main-logo1.svg)(https://ltx.studio/homepage-2)",
-        website: "",
-        rating: 4.5,
-        slug: "ltx-studio"
-      }
-    },
-    revalidate: 86400 // 24 hours
-  };
-};

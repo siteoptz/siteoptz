@@ -523,19 +523,3 @@ export default function PictoryReviewPage({ tool }: PictoryReviewPageProps) {
     </>
   );
 }
-
-export const getStaticProps: GetStaticProps = async () => {
-  return {
-    props: {
-      tool: {
-        name: "Pictory",
-        category: "Video Generation",
-        description: "Pictory is an AI video creation tool that transforms text content into engaging videos with automated editing, stock footage, and social media optimization for content creators and marketers.",
-        website: "https://pictory.ai/",
-        rating: 4.5,
-        slug: "pictory"
-      }
-    },
-    revalidate: 86400 // 24 hours
-  };
-};
