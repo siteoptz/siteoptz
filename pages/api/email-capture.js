@@ -663,17 +663,25 @@ export default async function handler(req, res) {
       timestamp: new Date().toISOString()
     };
 
-    // Save to database, send email, and add to GoHighLevel (all in parallel)
-    const [dbResult, emailResult, ghlResult] = await Promise.allSettled([
+    // Save to database, send email, and conditionally add to GoHighLevel (all in parallel)
+    const promises = [
       saveToDatabase(emailData),
-      prepareAndSendEmail(emailData),
-      addToGoHighLevel(emailData)
-    ]);
+      prepareAndSendEmail(emailData)
+    ];
+    
+    // Only add to GoHighLevel if enabled
+    const isGHLEnabled = process.env.ENABLE_GHL === 'true';
+    if (isGHLEnabled) {
+      promises.push(addToGoHighLevel(emailData));
+    }
+    
+    const results = await Promise.allSettled(promises);
+    const [dbResult, emailResult, ghlResult] = results;
 
     // Check results
     const dbSuccess = dbResult.status === 'fulfilled' && dbResult.value.success;
     const emailSuccess = emailResult.status === 'fulfilled' && emailResult.value.success;
-    const ghlSuccess = ghlResult.status === 'fulfilled' && !!ghlResult.value;
+    const ghlSuccess = isGHLEnabled && ghlResult ? (ghlResult.status === 'fulfilled' && !!ghlResult.value) : true;
 
     console.log('=== Contact Form Processing Results ===');
     console.log('Timestamp:', new Date().toISOString());
@@ -681,10 +689,13 @@ export default async function handler(req, res) {
     console.log('Email Data:', JSON.stringify(emailData, null, 2));
     console.log('Database:', dbSuccess ? 'success' : 'failed');
     console.log('Email:', emailSuccess ? 'success' : 'failed');
-    console.log('GoHighLevel:', ghlSuccess ? 'success' : 'failed');
-    console.log('GHL Contact ID:', ghlResult.value?.contact?.id || 'N/A');
-    console.log('GHL Full Result:', JSON.stringify(ghlResult.value, null, 2));
-    console.log('GHL Error:', ghlResult.reason || 'None');
+    console.log('GoHighLevel Enabled:', isGHLEnabled);
+    console.log('GoHighLevel:', isGHLEnabled ? (ghlSuccess ? 'success' : 'failed') : 'disabled');
+    if (isGHLEnabled && ghlResult) {
+      console.log('GHL Contact ID:', ghlResult.value?.contact?.id || 'N/A');
+      console.log('GHL Full Result:', JSON.stringify(ghlResult.value, null, 2));
+      console.log('GHL Error:', ghlResult.reason || 'None');
+    }
     console.log('========================================');
 
     if (!dbSuccess && !emailSuccess && !ghlSuccess) {
@@ -694,7 +705,7 @@ export default async function handler(req, res) {
         details: {
           database: dbResult.reason || dbResult.value?.error,
           email: emailResult.reason || emailResult.value?.error,
-          gohighlevel: ghlResult.reason || 'Failed to create contact'
+          gohighlevel: isGHLEnabled ? (ghlResult?.reason || 'Failed to create contact') : 'disabled'
         }
       });
     }
@@ -706,9 +717,9 @@ export default async function handler(req, res) {
       details: {
         email: emailSuccess ? 'sent' : 'failed',
         database: dbSuccess ? 'saved' : 'failed',
-        gohighlevel: ghlSuccess ? 'created' : 'failed',
-        ghlContactId: ghlResult.value?.contact?.id || null,
-      ghlOpportunityId: ghlResult.value?.opportunity?.id || null,
+        gohighlevel: isGHLEnabled ? (ghlSuccess ? 'created' : 'failed') : 'disabled',
+        ghlContactId: isGHLEnabled && ghlResult?.value?.contact?.id || null,
+        ghlOpportunityId: isGHLEnabled && ghlResult?.value?.opportunity?.id || null,
         tool,
         timestamp: new Date().toISOString()
       }
