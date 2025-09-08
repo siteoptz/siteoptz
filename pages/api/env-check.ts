@@ -7,6 +7,10 @@ interface EnvCheckResponse {
     NODE_ENV: string;
     VERCEL_ENV?: string;
     VERCEL_URL?: string;
+    ENABLE_GHL?: string;
+    ENABLE_EMAIL?: string;
+    ghlEnabled: boolean;
+    emailEnabled: boolean;
     hasGhlApiKey: boolean;
     ghlApiKeyLength: number;
     hasGhlLocationId: boolean;
@@ -30,6 +34,8 @@ export default async function handler(
       environment: 'ACCESS_DENIED',
       envVars: {
         NODE_ENV: 'hidden',
+        ghlEnabled: false,
+        emailEnabled: false,
         hasGhlApiKey: false,
         ghlApiKeyLength: 0,
         hasGhlLocationId: false,
@@ -47,6 +53,10 @@ export default async function handler(
       NODE_ENV: process.env.NODE_ENV || 'undefined',
       VERCEL_ENV: process.env.VERCEL_ENV,
       VERCEL_URL: process.env.VERCEL_URL,
+      ENABLE_GHL: process.env.ENABLE_GHL,
+      ENABLE_EMAIL: process.env.ENABLE_EMAIL,
+      ghlEnabled: process.env.ENABLE_GHL === 'true',
+      emailEnabled: process.env.ENABLE_EMAIL === 'true',
       hasGhlApiKey: !!process.env.GHL_API_KEY,
       ghlApiKeyLength: (process.env.GHL_API_KEY || '').length,
       hasGhlLocationId: !!process.env.GHL_LOCATION_ID,
