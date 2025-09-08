@@ -3,7 +3,7 @@ import Head from 'next/head';
 import Link from 'next/link';
 import ToolLogo from '../../components/ToolLogo';
 
-export default function CopyAiVsWritesonicComparison() {
+export default function CopyAiVsWritesonic() {
   return (
     <>
       <Head>

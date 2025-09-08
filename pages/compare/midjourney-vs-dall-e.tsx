@@ -3,7 +3,7 @@ import Head from 'next/head';
 import Link from 'next/link';
 import ToolLogo from '../../components/ToolLogo';
 
-export default function MidjourneyVsDallEComparison() {
+export default function MidjourneyVsDallE() {
   return (
     <>
       <Head>
