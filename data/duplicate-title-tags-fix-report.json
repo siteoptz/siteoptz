@@ -1,0 +1,21 @@
+{
+  "issue": "Duplicate title tags from www vs non-www domains",
+  "duplicateUrls": 28,
+  "uniquePaths": 14,
+  "pagesFixed": 1,
+  "pagesNotFound": 0,
+  "solutions": [
+    "Added www to non-www redirect in Next.js configuration",
+    "Created canonical URL utility for consistent URL handling",
+    "Fixed canonical URLs in existing tool pages",
+    "Updated robots.txt to specify preferred domain",
+    "Created canonical URL checker script"
+  ],
+  "recommendations": [
+    "Test that www.siteoptz.ai properly redirects to siteoptz.ai",
+    "Verify all pages have canonical URLs pointing to siteoptz.ai",
+    "Run canonical URL checker script regularly",
+    "Monitor search console for duplicate content issues",
+    "Update any external links to use siteoptz.ai (non-www)"
+  ]
+}

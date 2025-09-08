@@ -143,6 +143,7 @@ export default function AIROICalculator() {
       title="AI ROI Calculator"
       description="Calculate the return on investment for implementing AI solutions in your business. Get precise estimates of cost savings, productivity gains, and payback periods."
       category="AI Business Solutions"
+      canonicalPath="/tools/ai-roi-calculator"
       fields={fields}
       calculations={calculations}
       benefits={benefits}

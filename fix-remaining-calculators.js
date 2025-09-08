@@ -1,6 +1,9 @@
-import ROICalculatorTemplate from '../../components/ROICalculatorTemplate';
+const fs = require('fs');
 
-export default function SecurityROICalculator() {
+const fixFile = (fileName, functionName, title, description, category) => {
+  const content = `import ROICalculatorTemplate from '../../components/ROICalculatorTemplate';
+
+export default function ${functionName}() {
   const fields = [
     {
       id: 'employees',
@@ -79,13 +82,13 @@ export default function SecurityROICalculator() {
   const caseStudies = [
     {
       company: 'Example Corp',
-      industry: 'Cybersecurity',
+      industry: '${category}',
       savings: '$200K annual savings',
       timeframe: '6 months'
     },
     {
       company: 'Innovation Inc',
-      industry: 'Cybersecurity',
+      industry: '${category}',
       savings: '30% efficiency improvement',
       timeframe: '4 months'
     }
@@ -93,14 +96,27 @@ export default function SecurityROICalculator() {
 
   return (
     <ROICalculatorTemplate
-      title="Security AI ROI Calculator"
-      description="Calculate the return on investment for AI security solutions. Estimate threat detection improvements, cost savings, and risk reduction."
-      category="Cybersecurity"
-      canonicalPath="/tools/security-roi-calculator"
+      title="${title}"
+      description="${description}"
+      category="${category}"
+      canonicalPath="/tools/${fileName.replace('.tsx', '')}"
       fields={fields}
       calculations={calculations}
       benefits={benefits}
       caseStudies={caseStudies}
     />
   );
-}
+}`;
+
+  fs.writeFileSync(`pages/tools/${fileName}`, content);
+  console.log(`Fixed ${fileName}`);
+};
+
+// Fix the remaining broken files
+fixFile('recruitment-roi-calculator.tsx', 'RecruitmentROICalculator', 'Recruitment AI ROI Calculator', 'Calculate the return on investment for AI recruitment tools. Estimate time savings, cost reductions, and hiring efficiency improvements.', 'HR & Recruitment');
+
+fixFile('security-roi-calculator.tsx', 'SecurityROICalculator', 'Security AI ROI Calculator', 'Calculate the return on investment for AI security solutions. Estimate threat detection improvements, cost savings, and risk reduction.', 'Cybersecurity');
+
+fixFile('sales-ai-roi.tsx', 'SalesAIROI', 'Sales AI ROI Calculator', 'Calculate the return on investment for AI sales tools. Estimate lead generation improvements, conversion rate increases, and revenue growth.', 'Sales AI');
+
+console.log('All files fixed!');

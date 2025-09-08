@@ -1,128 +1,154 @@
 import ROICalculatorTemplate from '../../components/ROICalculatorTemplate';
 
-export default function AiCostCalculator() {
+export default function AICostCalculator() {
   const fields = [
     {
       id: 'employees',
-      label: 'Number of Employees Affected',
+      label: 'Number of Employees',
       type: 'number' as const,
-      placeholder: '50',
-      defaultValue: 50
+      placeholder: '100',
+      defaultValue: 100
     },
     {
       id: 'avgSalary',
       label: 'Average Employee Salary',
       type: 'number' as const,
-      placeholder: '65000',
+      placeholder: '75000',
       prefix: '$',
-      defaultValue: 65000
+      defaultValue: 75000
     },
     {
-      id: 'hoursPerWeek',
-      label: 'Hours Per Week on Relevant Tasks',
+      id: 'aiToolsNeeded',
+      label: 'Number of AI Tools/Services',
       type: 'number' as const,
-      placeholder: '8',
+      placeholder: '3',
+      defaultValue: 3
+    },
+    {
+      id: 'avgToolCost',
+      label: 'Average Monthly Cost per Tool',
+      type: 'number' as const,
+      placeholder: '500',
+      prefix: '$',
+      defaultValue: 500
+    },
+    {
+      id: 'implementationHours',
+      label: 'Implementation Hours Required',
+      type: 'number' as const,
+      placeholder: '200',
       suffix: 'hrs',
-      defaultValue: 8
+      defaultValue: 200
     },
     {
-      id: 'improvementRate',
-      label: 'Expected Efficiency Improvement',
-      type: 'select' as const,
-      options: [
-        { value: '0.2', label: '20% - Conservative' },
-        { value: '0.35', label: '35% - Moderate' },
-        { value: '0.5', label: '50% - Aggressive' },
-        { value: '0.7', label: '70% - Best Case' }
-      ],
-      defaultValue: 0.35
-    },
-    {
-      id: 'aiImplementationCost',
-      label: 'Annual AI Implementation Cost',
+      id: 'trainingHours',
+      label: 'Training Hours per Employee',
       type: 'number' as const,
-      placeholder: '25000',
-      prefix: '$',
-      defaultValue: 25000
+      placeholder: '10',
+      suffix: 'hrs',
+      defaultValue: 10
     }
   ];
 
   const calculations = [
     {
-      id: 'annualLaborCost',
-      label: 'Annual Labor Cost',
+      id: 'monthlyToolCosts',
+      label: 'Monthly AI Tool Costs',
       formula: (values: Record<string, number>) => {
-        const { employees, avgSalary, hoursPerWeek } = values;
-        return (employees * avgSalary * (hoursPerWeek / 40)) || 0;
+        const { aiToolsNeeded, avgToolCost } = values;
+        return (aiToolsNeeded * avgToolCost) || 0;
       },
       format: 'currency' as const,
-      description: 'Current annual cost for relevant employee activities'
+      description: 'Total monthly subscription costs for AI tools'
     },
     {
-      id: 'potentialSavings',
-      label: 'Potential Annual Savings',
+      id: 'annualToolCosts',
+      label: 'Annual AI Tool Costs',
       formula: (values: Record<string, number>) => {
-        const { employees, avgSalary, hoursPerWeek, improvementRate } = values;
-        const laborCost = employees * avgSalary * (hoursPerWeek / 40);
-        return (laborCost * improvementRate) || 0;
+        const { aiToolsNeeded, avgToolCost } = values;
+        return (aiToolsNeeded * avgToolCost * 12) || 0;
       },
       format: 'currency' as const,
-      description: 'Estimated annual savings from AI implementation'
+      description: 'Total yearly subscription costs for AI tools'
     },
     {
-      id: 'netROI',
-      label: 'Net Annual ROI',
+      id: 'implementationCost',
+      label: 'One-time Implementation Cost',
       formula: (values: Record<string, number>) => {
-        const { employees, avgSalary, hoursPerWeek, improvementRate, aiImplementationCost } = values;
-        const laborCost = employees * avgSalary * (hoursPerWeek / 40);
-        const savings = laborCost * improvementRate;
-        return (savings - aiImplementationCost) || 0;
+        const { implementationHours, avgSalary } = values;
+        const hourlyRate = avgSalary / 2080; // Annual salary to hourly
+        return (implementationHours * hourlyRate) || 0;
       },
       format: 'currency' as const,
-      description: 'Net return on investment after implementation costs'
+      description: 'Cost of time spent on implementation and setup'
     },
     {
-      id: 'roiPercentage',
-      label: 'ROI Percentage',
+      id: 'trainingCost',
+      label: 'Employee Training Cost',
       formula: (values: Record<string, number>) => {
-        const { employees, avgSalary, hoursPerWeek, improvementRate, aiImplementationCost } = values;
-        const laborCost = employees * avgSalary * (hoursPerWeek / 40);
-        const savings = laborCost * improvementRate;
-        const netROI = savings - aiImplementationCost;
-        return aiImplementationCost > 0 ? (netROI / aiImplementationCost) * 100 : 0;
+        const { employees, trainingHours, avgSalary } = values;
+        const hourlyRate = avgSalary / 2080;
+        return (employees * trainingHours * hourlyRate) || 0;
       },
-      format: 'percentage' as const,
-      description: 'Return on investment as a percentage'
+      format: 'currency' as const,
+      description: 'Cost of training all employees on AI tools'
+    },
+    {
+      id: 'firstYearTotal',
+      label: 'First Year Total Cost',
+      formula: (values: Record<string, number>) => {
+        const { aiToolsNeeded, avgToolCost, implementationHours, avgSalary, employees, trainingHours } = values;
+        const annualTools = aiToolsNeeded * avgToolCost * 12;
+        const implementation = implementationHours * (avgSalary / 2080);
+        const training = employees * trainingHours * (avgSalary / 2080);
+        return (annualTools + implementation + training) || 0;
+      },
+      format: 'currency' as const,
+      description: 'Total cost including tools, implementation, and training'
+    },
+    {
+      id: 'costPerEmployee',
+      label: 'Cost Per Employee (First Year)',
+      formula: (values: Record<string, number>) => {
+        const { aiToolsNeeded, avgToolCost, implementationHours, avgSalary, employees, trainingHours } = values;
+        const annualTools = aiToolsNeeded * avgToolCost * 12;
+        const implementation = implementationHours * (avgSalary / 2080);
+        const training = employees * trainingHours * (avgSalary / 2080);
+        const total = annualTools + implementation + training;
+        return employees > 0 ? total / employees : 0;
+      },
+      format: 'currency' as const,
+      description: 'AI implementation cost per employee'
     }
   ];
 
   const benefits = [
-    'Increase operational efficiency',
-    'Reduce manual processing time',
-    'Improve accuracy and consistency',
-    'Scale operations effectively',
-    'Enable strategic focus areas',
-    'Enhance competitive advantage'
+    'Comprehensive cost breakdown for budgeting',
+    'Include all hidden implementation costs',
+    'Plan for training and onboarding expenses',
+    'Compare different AI solution scenarios',
+    'ROI planning with accurate cost projections',
+    'Stakeholder presentation ready numbers'
   ];
 
   const caseStudies = [
     {
-      company: 'Innovation Corp',
-      industry: 'Technology',
-      savings: '$300K annually',
+      company: 'FinanceFirst',
+      industry: 'Financial Services',
+      savings: 'Reduced costs by 40% after implementation',
       timeframe: '12 months'
     },
     {
-      company: 'Growth Enterprises',
-      industry: 'Services',
-      savings: '$450K annually',
-      timeframe: '9 months'
+      company: 'TechScale',
+      industry: 'Technology',
+      savings: 'ROI achieved within 8 months',
+      timeframe: '8 months'
     },
     {
-      company: 'Scale Solutions',
+      company: 'ManufacturingPlus',
       industry: 'Manufacturing',
-      savings: '$600K annually',
-      timeframe: '15 months'
+      savings: 'Cut operational expenses by $2M annually',
+      timeframe: '18 months'
     }
   ];
 
@@ -131,6 +157,7 @@ export default function AiCostCalculator() {
       title="AI Cost Calculator"
       description="Calculate the total cost of AI implementation across your organization. Compare different AI solutions and estimate budget requirements."
       category="AI Business Solutions"
+      canonicalPath="/tools/ai-cost-calculator"
       fields={fields}
       calculations={calculations}
       benefits={benefits}

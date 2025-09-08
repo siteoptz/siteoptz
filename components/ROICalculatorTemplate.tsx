@@ -6,6 +6,7 @@ interface ROICalculatorProps {
   title: string;
   description: string;
   category: string;
+  canonicalPath?: string;
   fields: {
     id: string;
     label: string;
@@ -36,6 +37,7 @@ export default function ROICalculatorTemplate({
   title,
   description,
   category,
+  canonicalPath,
   fields,
   calculations,
   benefits,
@@ -94,6 +96,22 @@ export default function ROICalculatorTemplate({
         <title>{title} | AI ROI Calculator | SiteOptz</title>
         <meta name="description" content={description} />
         <meta name="keywords" content={`${category} ROI calculator, AI ROI, return on investment, ${category} cost savings`} />
+        {canonicalPath && (
+          <link rel="canonical" href={`https://siteoptz.ai${canonicalPath}`} />
+        )}
+        
+        {/* Open Graph */}
+        <meta property="og:title" content={`${title} | AI ROI Calculator`} />
+        <meta property="og:description" content={description} />
+        <meta property="og:type" content="website" />
+        {canonicalPath && (
+          <meta property="og:url" content={`https://siteoptz.ai${canonicalPath}`} />
+        )}
+        
+        {/* Twitter Card */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content={`${title} | AI ROI Calculator`} />
+        <meta name="twitter:description" content={description} />
       </Head>
 
       <div className="min-h-screen bg-gradient-to-b from-gray-50 to-white">

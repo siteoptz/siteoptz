@@ -1,128 +1,187 @@
 import ROICalculatorTemplate from '../../components/ROICalculatorTemplate';
 
-export default function ManufacturingRoiCalculator() {
+export default function ManufacturingROICalculator() {
   const fields = [
     {
-      id: 'employees',
-      label: 'Number of Employees Affected',
+      id: 'monthlyProduction',
+      label: 'Monthly Production Units',
       type: 'number' as const,
-      placeholder: '50',
-      defaultValue: 50
+      placeholder: '10000',
+      defaultValue: 10000
     },
     {
-      id: 'avgSalary',
-      label: 'Average Employee Salary',
+      id: 'productionCostPerUnit',
+      label: 'Production Cost per Unit',
       type: 'number' as const,
-      placeholder: '65000',
+      placeholder: '25',
       prefix: '$',
-      defaultValue: 65000
+      defaultValue: 25
     },
     {
-      id: 'hoursPerWeek',
-      label: 'Hours Per Week on Relevant Tasks',
+      id: 'defectRate',
+      label: 'Current Defect Rate (%)',
       type: 'number' as const,
-      placeholder: '8',
-      suffix: 'hrs',
-      defaultValue: 8
+      placeholder: '3',
+      suffix: '%',
+      defaultValue: 3
     },
     {
-      id: 'improvementRate',
+      id: 'aiEfficiencyGain',
       label: 'Expected Efficiency Improvement',
       type: 'select' as const,
       options: [
-        { value: '0.2', label: '20% - Conservative' },
-        { value: '0.35', label: '35% - Moderate' },
-        { value: '0.5', label: '50% - Aggressive' },
-        { value: '0.7', label: '70% - Best Case' }
+        { value: '0.15', label: '15% - Basic AI Monitoring' },
+        { value: '0.25', label: '25% - Advanced Predictive Analytics' },
+        { value: '0.35', label: '35% - Comprehensive AI Integration' }
       ],
-      defaultValue: 0.35
+      defaultValue: 0.25
     },
     {
-      id: 'aiImplementationCost',
-      label: 'Annual AI Implementation Cost',
+      id: 'aiSystemCost',
+      label: 'Monthly AI System Cost',
       type: 'number' as const,
-      placeholder: '25000',
+      placeholder: '15000',
       prefix: '$',
-      defaultValue: 25000
+      defaultValue: 15000
     }
   ];
 
   const calculations = [
     {
-      id: 'annualLaborCost',
-      label: 'Annual Labor Cost',
+      id: 'monthlyProductionCost',
+      label: 'Current Monthly Production Cost',
       formula: (values: Record<string, number>) => {
-        const { employees, avgSalary, hoursPerWeek } = values;
-        return (employees * avgSalary * (hoursPerWeek / 40)) || 0;
+        const { monthlyProduction, productionCostPerUnit } = values;
+        return (monthlyProduction * productionCostPerUnit) || 0;
       },
       format: 'currency' as const,
-      description: 'Current annual cost for relevant employee activities'
+      description: 'Total monthly cost of production'
     },
     {
-      id: 'potentialSavings',
-      label: 'Potential Annual Savings',
+      id: 'defectCost',
+      label: 'Monthly Defect Cost',
       formula: (values: Record<string, number>) => {
-        const { employees, avgSalary, hoursPerWeek, improvementRate } = values;
-        const laborCost = employees * avgSalary * (hoursPerWeek / 40);
-        return (laborCost * improvementRate) || 0;
+        const { monthlyProduction, productionCostPerUnit, defectRate } = values;
+        const defectUnits = monthlyProduction * (defectRate / 100);
+        return (defectUnits * productionCostPerUnit * 2) || 0; // Defect cost is 2x production cost
       },
       format: 'currency' as const,
-      description: 'Estimated annual savings from AI implementation'
+      description: 'Monthly cost from defective products'
     },
     {
-      id: 'netROI',
-      label: 'Net Annual ROI',
+      id: 'efficiencySavings',
+      label: 'Monthly Efficiency Savings',
       formula: (values: Record<string, number>) => {
-        const { employees, avgSalary, hoursPerWeek, improvementRate, aiImplementationCost } = values;
-        const laborCost = employees * avgSalary * (hoursPerWeek / 40);
-        const savings = laborCost * improvementRate;
-        return (savings - aiImplementationCost) || 0;
+        const { monthlyProduction, productionCostPerUnit, aiEfficiencyGain } = values;
+        const totalCost = monthlyProduction * productionCostPerUnit;
+        return (totalCost * aiEfficiencyGain) || 0;
       },
       format: 'currency' as const,
-      description: 'Net return on investment after implementation costs'
+      description: 'Savings from improved production efficiency'
     },
     {
-      id: 'roiPercentage',
-      label: 'ROI Percentage',
+      id: 'qualityImprovement',
+      label: 'Monthly Quality Savings',
       formula: (values: Record<string, number>) => {
-        const { employees, avgSalary, hoursPerWeek, improvementRate, aiImplementationCost } = values;
-        const laborCost = employees * avgSalary * (hoursPerWeek / 40);
-        const savings = laborCost * improvementRate;
-        const netROI = savings - aiImplementationCost;
-        return aiImplementationCost > 0 ? (netROI / aiImplementationCost) * 100 : 0;
+        const { monthlyProduction, productionCostPerUnit, defectRate } = values;
+        const defectUnits = monthlyProduction * (defectRate / 100);
+        const improvedDefectRate = defectRate * 0.4; // 60% reduction in defects
+        const newDefectUnits = monthlyProduction * (improvedDefectRate / 100);
+        const defectReduction = defectUnits - newDefectUnits;
+        return (defectReduction * productionCostPerUnit * 2) || 0;
       },
-      format: 'percentage' as const,
-      description: 'Return on investment as a percentage'
+      format: 'currency' as const,
+      description: 'Savings from reduced defect rates'
+    },
+    {
+      id: 'totalMonthlySavings',
+      label: 'Total Monthly Savings',
+      formula: (values: Record<string, number>) => {
+        const { monthlyProduction, productionCostPerUnit, defectRate, aiEfficiencyGain } = values;
+        const totalCost = monthlyProduction * productionCostPerUnit;
+        const efficiencySavings = totalCost * aiEfficiencyGain;
+        
+        const defectUnits = monthlyProduction * (defectRate / 100);
+        const improvedDefectRate = defectRate * 0.4;
+        const newDefectUnits = monthlyProduction * (improvedDefectRate / 100);
+        const defectReduction = defectUnits - newDefectUnits;
+        const qualitySavings = defectReduction * productionCostPerUnit * 2;
+        
+        return (efficiencySavings + qualitySavings) || 0;
+      },
+      format: 'currency' as const,
+      description: 'Combined savings from efficiency and quality improvements'
+    },
+    {
+      id: 'netMonthlySavings',
+      label: 'Net Monthly Savings',
+      formula: (values: Record<string, number>) => {
+        const { monthlyProduction, productionCostPerUnit, defectRate, aiEfficiencyGain, aiSystemCost } = values;
+        const totalCost = monthlyProduction * productionCostPerUnit;
+        const efficiencySavings = totalCost * aiEfficiencyGain;
+        
+        const defectUnits = monthlyProduction * (defectRate / 100);
+        const improvedDefectRate = defectRate * 0.4;
+        const newDefectUnits = monthlyProduction * (improvedDefectRate / 100);
+        const defectReduction = defectUnits - newDefectUnits;
+        const qualitySavings = defectReduction * productionCostPerUnit * 2;
+        
+        const totalSavings = efficiencySavings + qualitySavings;
+        return (totalSavings - aiSystemCost) || 0;
+      },
+      format: 'currency' as const,
+      description: 'Monthly profit after AI system costs'
+    },
+    {
+      id: 'annualROI',
+      label: 'Annual Net ROI',
+      formula: (values: Record<string, number>) => {
+        const { monthlyProduction, productionCostPerUnit, defectRate, aiEfficiencyGain, aiSystemCost } = values;
+        const totalCost = monthlyProduction * productionCostPerUnit;
+        const efficiencySavings = totalCost * aiEfficiencyGain;
+        
+        const defectUnits = monthlyProduction * (defectRate / 100);
+        const improvedDefectRate = defectRate * 0.4;
+        const newDefectUnits = monthlyProduction * (improvedDefectRate / 100);
+        const defectReduction = defectUnits - newDefectUnits;
+        const qualitySavings = defectReduction * productionCostPerUnit * 2;
+        
+        const totalSavings = efficiencySavings + qualitySavings;
+        const netMonthlySavings = totalSavings - aiSystemCost;
+        return (netMonthlySavings * 12) || 0;
+      },
+      format: 'currency' as const,
+      description: 'Total annual return on investment'
     }
   ];
 
   const benefits = [
-    'Increase operational efficiency',
-    'Reduce manual processing time',
-    'Improve accuracy and consistency',
-    'Scale operations effectively',
-    'Enable strategic focus areas',
-    'Enhance competitive advantage'
+    'Reduce production costs by 25%+',
+    'Improve product quality and consistency',
+    'Predictive maintenance to prevent downtime',
+    'Real-time production optimization',
+    'Reduce defect rates by up to 60%',
+    'Increase overall equipment effectiveness (OEE)'
   ];
 
   const caseStudies = [
     {
-      company: 'Innovation Corp',
-      industry: 'Technology',
-      savings: '$300K annually',
-      timeframe: '12 months'
-    },
-    {
-      company: 'Growth Enterprises',
-      industry: 'Services',
-      savings: '$450K annually',
-      timeframe: '9 months'
-    },
-    {
-      company: 'Scale Solutions',
+      company: 'Automotive Manufacturer',
       industry: 'Manufacturing',
-      savings: '$600K annually',
-      timeframe: '15 months'
+      savings: '$2.5M annual savings, 40% defect reduction',
+      timeframe: '8 months'
+    },
+    {
+      company: 'Electronics Producer',
+      industry: 'Electronics',
+      savings: '30% increase in production efficiency',
+      timeframe: '6 months'
+    },
+    {
+      company: 'Food Processing Plant',
+      industry: 'Food & Beverage',
+      savings: '$1.8M saved through quality improvements',
+      timeframe: '12 months'
     }
   ];
 
@@ -131,6 +190,7 @@ export default function ManufacturingRoiCalculator() {
       title="Manufacturing AI ROI Calculator"
       description="Calculate the return on investment for AI manufacturing solutions. Estimate production efficiency gains, quality improvements, and cost reductions."
       category="AI Business Solutions"
+      canonicalPath="/tools/manufacturing-roi-calculator"
       fields={fields}
       calculations={calculations}
       benefits={benefits}

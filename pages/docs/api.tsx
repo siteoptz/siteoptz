@@ -8,7 +8,8 @@ const APIDocsPage = () => {
       <Head>
         <title>AI Tools API Documentation | SiteOptz.ai</title>
         <meta name="description" content="Complete API documentation for SiteOptz AI tools data. Build amazing integrations with our comprehensive REST API." />
-      </Head>
+      
+        <link rel="canonical" href="https://siteoptz.ai/docs/api" /></Head>
 
       <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-black py-8 relative overflow-hidden">
         {/* Animated Background Elements */}

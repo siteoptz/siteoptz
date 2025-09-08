@@ -3,169 +3,137 @@ import ROICalculatorTemplate from '../../components/ROICalculatorTemplate';
 export default function ChatbotROICalculator() {
   const fields = [
     {
-      id: 'monthlyCustomerInquiries',
-      label: 'Monthly Customer Inquiries',
+      id: 'monthlyTickets',
+      label: 'Monthly Customer Support Tickets',
       type: 'number' as const,
       placeholder: '1000',
       defaultValue: 1000
     },
     {
-      id: 'avgResponseTime',
-      label: 'Average Response Time (minutes)',
-      type: 'select' as const,
-      options: [
-        { value: '5', label: '5 minutes - Excellent' },
-        { value: '15', label: '15 minutes - Good' },
-        { value: '30', label: '30 minutes - Average' },
-        { value: '60', label: '1 hour - Poor' },
-        { value: '120', label: '2+ hours - Very Poor' }
-      ],
-      defaultValue: 30
-    },
-    {
-      id: 'supportStaffCount',
-      label: 'Customer Support Staff',
+      id: 'avgResolutionTime',
+      label: 'Average Resolution Time (minutes)',
       type: 'number' as const,
-      placeholder: '3',
-      defaultValue: 3
+      placeholder: '20',
+      suffix: 'min',
+      defaultValue: 20
     },
     {
-      id: 'avgSupportSalary',
+      id: 'supportStaffSalary',
       label: 'Average Support Staff Salary',
       type: 'number' as const,
-      placeholder: '45000',
+      placeholder: '50000',
       prefix: '$',
-      defaultValue: 45000
+      defaultValue: 50000
     },
     {
-      id: 'chatbotResolutionRate',
-      label: 'Chatbot Resolution Rate',
+      id: 'automationRate',
+      label: 'Percentage of Tickets AI Can Handle',
       type: 'select' as const,
       options: [
-        { value: '0.4', label: '40% - Basic Chatbot' },
-        { value: '0.6', label: '60% - Good Chatbot' },
-        { value: '0.75', label: '75% - Advanced Chatbot' },
-        { value: '0.85', label: '85% - AI-Powered Chatbot' }
+        { value: '0.4', label: '40% - Basic Queries' },
+        { value: '0.6', label: '60% - Standard Support' },
+        { value: '0.8', label: '80% - Advanced AI' }
       ],
       defaultValue: 0.6
     },
     {
-      id: 'chatbotMonthlyCost',
-      label: 'Monthly Chatbot Cost',
+      id: 'chatbotCost',
+      label: 'Monthly Chatbot Platform Cost',
       type: 'number' as const,
-      placeholder: '500',
+      placeholder: '200',
       prefix: '$',
-      defaultValue: 500
+      defaultValue: 200
     }
   ];
 
   const calculations = [
     {
-      id: 'currentSupportCost',
-      label: 'Current Monthly Support Cost',
+      id: 'monthlyLaborCost',
+      label: 'Monthly Support Labor Cost',
       formula: (values: Record<string, number>) => {
-        const { supportStaffCount, avgSupportSalary } = values;
-        return (supportStaffCount * avgSupportSalary) / 12 || 0;
+        const { monthlyTickets, avgResolutionTime, supportStaffSalary } = values;
+        const hourlyRate = supportStaffSalary / 2080;
+        const totalMinutes = monthlyTickets * avgResolutionTime;
+        const totalHours = totalMinutes / 60;
+        return (totalHours * hourlyRate) || 0;
       },
       format: 'currency' as const,
-      description: 'Monthly cost of your current customer support staff'
+      description: 'Current monthly cost of human support staff'
     },
     {
-      id: 'inquiriesHandledByChatbot',
-      label: 'Inquiries Handled by Chatbot',
+      id: 'potentialSavings',
+      label: 'Monthly Savings with AI',
       formula: (values: Record<string, number>) => {
-        const { monthlyCustomerInquiries, chatbotResolutionRate } = values;
-        return monthlyCustomerInquiries * chatbotResolutionRate || 0;
-      },
-      format: 'number' as const,
-      description: 'Number of customer inquiries resolved by chatbot monthly'
-    },
-    {
-      id: 'staffTimeFreed',
-      label: 'Staff Hours Freed Per Month',
-      formula: (values: Record<string, number>) => {
-        const { monthlyCustomerInquiries, chatbotResolutionRate, avgResponseTime } = values;
-        const inquiriesHandled = monthlyCustomerInquiries * chatbotResolutionRate;
-        return (inquiriesHandled * avgResponseTime) / 60 || 0; // Convert to hours
-      },
-      format: 'number' as const,
-      description: 'Support staff hours freed up monthly by chatbot automation'
-    },
-    {
-      id: 'monthlySavings',
-      label: 'Monthly Cost Savings',
-      formula: (values: Record<string, number>) => {
-        const { monthlyCustomerInquiries, chatbotResolutionRate, avgResponseTime, avgSupportSalary, chatbotMonthlyCost } = values;
-        const inquiriesHandled = monthlyCustomerInquiries * chatbotResolutionRate;
-        const hoursFreed = (inquiriesHandled * avgResponseTime) / 60;
-        const hourlyCost = avgSupportSalary / (12 * 160); // Assuming 160 work hours per month
-        const laborSavings = hoursFreed * hourlyCost;
-        return laborSavings - chatbotMonthlyCost || 0;
+        const { monthlyTickets, avgResolutionTime, supportStaffSalary, automationRate } = values;
+        const hourlyRate = supportStaffSalary / 2080;
+        const totalMinutes = monthlyTickets * avgResolutionTime;
+        const totalHours = totalMinutes / 60;
+        const currentCost = totalHours * hourlyRate;
+        return (currentCost * automationRate) || 0;
       },
       format: 'currency' as const,
-      description: 'Net monthly savings after chatbot implementation'
+      description: 'Monthly savings from automating support tickets'
     },
     {
-      id: 'annualROI',
-      label: 'Annual ROI',
+      id: 'netMonthlySavings',
+      label: 'Net Monthly Savings',
       formula: (values: Record<string, number>) => {
-        const { monthlyCustomerInquiries, chatbotResolutionRate, avgResponseTime, avgSupportSalary, chatbotMonthlyCost } = values;
-        const inquiriesHandled = monthlyCustomerInquiries * chatbotResolutionRate;
-        const hoursFreed = (inquiriesHandled * avgResponseTime) / 60;
-        const hourlyCost = avgSupportSalary / (12 * 160);
-        const monthlyLaborSavings = hoursFreed * hourlyCost;
-        const monthlySavings = monthlyLaborSavings - chatbotMonthlyCost;
-        return monthlySavings * 12 || 0;
+        const { monthlyTickets, avgResolutionTime, supportStaffSalary, automationRate, chatbotCost } = values;
+        const hourlyRate = supportStaffSalary / 2080;
+        const totalMinutes = monthlyTickets * avgResolutionTime;
+        const totalHours = totalMinutes / 60;
+        const currentCost = totalHours * hourlyRate;
+        const savings = currentCost * automationRate;
+        return (savings - chatbotCost) || 0;
       },
       format: 'currency' as const,
-      description: 'Total annual return on investment'
+      description: 'Monthly savings after chatbot platform costs'
     },
     {
-      id: 'paybackMonths',
-      label: 'Payback Period',
+      id: 'annualSavings',
+      label: 'Annual Net Savings',
       formula: (values: Record<string, number>) => {
-        const { monthlyCustomerInquiries, chatbotResolutionRate, avgResponseTime, avgSupportSalary, chatbotMonthlyCost } = values;
-        const setupCost = chatbotMonthlyCost * 3; // Assume 3 months setup equivalent
-        const inquiriesHandled = monthlyCustomerInquiries * chatbotResolutionRate;
-        const hoursFreed = (inquiriesHandled * avgResponseTime) / 60;
-        const hourlyCost = avgSupportSalary / (12 * 160);
-        const monthlyLaborSavings = hoursFreed * hourlyCost;
-        const monthlySavings = monthlyLaborSavings - chatbotMonthlyCost;
-        return monthlySavings > 0 ? setupCost / monthlySavings : 0;
+        const { monthlyTickets, avgResolutionTime, supportStaffSalary, automationRate, chatbotCost } = values;
+        const hourlyRate = supportStaffSalary / 2080;
+        const totalMinutes = monthlyTickets * avgResolutionTime;
+        const totalHours = totalMinutes / 60;
+        const currentCost = totalHours * hourlyRate;
+        const savings = currentCost * automationRate;
+        const netMonthlySavings = savings - chatbotCost;
+        return (netMonthlySavings * 12) || 0;
       },
-      format: 'months' as const,
-      description: 'Time to recover initial chatbot investment'
+      format: 'currency' as const,
+      description: 'Total annual savings from chatbot implementation'
     }
   ];
 
   const benefits = [
     '24/7 customer support availability',
-    'Instant response to customer inquiries',
-    'Reduce support team workload by 40-85%',
-    'Consistent service quality',
-    'Handle multiple customers simultaneously',
-    'Capture leads outside business hours',
-    'Reduce customer wait times significantly'
+    'Instant response to customer queries',
+    'Reduce support staff workload by 60%+',
+    'Improve customer satisfaction scores',
+    'Scale support without hiring',
+    'Free up staff for complex issues'
   ];
 
   const caseStudies = [
     {
-      company: 'TechSupport Pro',
-      industry: 'Software',
-      savings: '$120K annually',
-      timeframe: '8 months'
-    },
-    {
-      company: 'Retail Solutions',
-      industry: 'E-commerce',
-      savings: '$200K annually',
+      company: 'E-commerce Plus',
+      industry: 'Retail',
+      savings: '$120K annually in support costs',
       timeframe: '6 months'
     },
     {
-      company: 'Healthcare Plus',
-      industry: 'Healthcare',
-      savings: '$150K annually',
-      timeframe: '10 months'
+      company: 'FinTech Solutions',
+      industry: 'Financial Services',
+      savings: '70% reduction in response time',
+      timeframe: '4 months'
+    },
+    {
+      company: 'SaaS Startup',
+      industry: 'Technology',
+      savings: '$80K saved, 2 staff reassigned',
+      timeframe: '8 months'
     }
   ];
 
@@ -174,6 +142,7 @@ export default function ChatbotROICalculator() {
       title="Chatbot ROI Calculator"
       description="Calculate the return on investment for implementing AI chatbots. Estimate cost savings from automated customer support and improved response times."
       category="Customer Support AI"
+      canonicalPath="/tools/chatbot-roi-calculator"
       fields={fields}
       calculations={calculations}
       benefits={benefits}

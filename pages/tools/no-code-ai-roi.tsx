@@ -1,128 +1,170 @@
 import ROICalculatorTemplate from '../../components/ROICalculatorTemplate';
 
-export default function NoCodeAiRoi() {
+export default function NoCodeAIROI() {
   const fields = [
     {
-      id: 'employees',
-      label: 'Number of Employees Affected',
+      id: 'projects',
+      label: 'Number of AI Projects per Year',
       type: 'number' as const,
-      placeholder: '50',
-      defaultValue: 50
+      placeholder: '12',
+      defaultValue: 12
     },
     {
-      id: 'avgSalary',
-      label: 'Average Employee Salary',
+      id: 'developmentTimeTraditional',
+      label: 'Traditional Development Time (weeks)',
       type: 'number' as const,
-      placeholder: '65000',
+      placeholder: '16',
+      suffix: 'weeks',
+      defaultValue: 16
+    },
+    {
+      id: 'developerSalary',
+      label: 'Average Developer Salary',
+      type: 'number' as const,
+      placeholder: '100000',
       prefix: '$',
-      defaultValue: 65000
+      defaultValue: 100000
     },
     {
-      id: 'hoursPerWeek',
-      label: 'Hours Per Week on Relevant Tasks',
-      type: 'number' as const,
-      placeholder: '8',
-      suffix: 'hrs',
-      defaultValue: 8
-    },
-    {
-      id: 'improvementRate',
-      label: 'Expected Efficiency Improvement',
+      id: 'noCodeSpeedup',
+      label: 'No-Code Development Speedup',
       type: 'select' as const,
       options: [
-        { value: '0.2', label: '20% - Conservative' },
-        { value: '0.35', label: '35% - Moderate' },
-        { value: '0.5', label: '50% - Aggressive' },
-        { value: '0.7', label: '70% - Best Case' }
+        { value: '3', label: '3x - Basic No-Code Tools' },
+        { value: '5', label: '5x - Advanced Platforms' },
+        { value: '8', label: '8x - Comprehensive Suites' }
       ],
-      defaultValue: 0.35
+      defaultValue: 5
     },
     {
-      id: 'aiImplementationCost',
-      label: 'Annual AI Implementation Cost',
+      id: 'noCodePlatformCost',
+      label: 'Annual No-Code Platform Cost',
       type: 'number' as const,
-      placeholder: '25000',
+      placeholder: '10000',
       prefix: '$',
-      defaultValue: 25000
+      defaultValue: 10000
     }
   ];
 
   const calculations = [
     {
-      id: 'annualLaborCost',
-      label: 'Annual Labor Cost',
+      id: 'traditionalDevelopmentCost',
+      label: 'Annual Traditional Development Cost',
       formula: (values: Record<string, number>) => {
-        const { employees, avgSalary, hoursPerWeek } = values;
-        return (employees * avgSalary * (hoursPerWeek / 40)) || 0;
+        const { projects, developmentTimeTraditional, developerSalary } = values;
+        const weeksPerYear = 52;
+        const weeklyRate = developerSalary / weeksPerYear;
+        const totalWeeks = projects * developmentTimeTraditional;
+        return (totalWeeks * weeklyRate) || 0;
       },
       format: 'currency' as const,
-      description: 'Current annual cost for relevant employee activities'
+      description: 'Annual cost of traditional AI development'
     },
     {
-      id: 'potentialSavings',
-      label: 'Potential Annual Savings',
+      id: 'noCodeDevelopmentTime',
+      label: 'No-Code Development Time (weeks)',
       formula: (values: Record<string, number>) => {
-        const { employees, avgSalary, hoursPerWeek, improvementRate } = values;
-        const laborCost = employees * avgSalary * (hoursPerWeek / 40);
-        return (laborCost * improvementRate) || 0;
+        const { developmentTimeTraditional, noCodeSpeedup } = values;
+        return (developmentTimeTraditional / noCodeSpeedup) || 0;
+      },
+      format: 'number' as const,
+      description: 'Time required with no-code platforms'
+    },
+    {
+      id: 'noCodeDevelopmentCost',
+      label: 'Annual No-Code Development Cost',
+      formula: (values: Record<string, number>) => {
+        const { projects, developmentTimeTraditional, developerSalary, noCodeSpeedup } = values;
+        const weeksPerYear = 52;
+        const weeklyRate = developerSalary / weeksPerYear;
+        const noCodeWeeks = (developmentTimeTraditional / noCodeSpeedup);
+        const totalWeeks = projects * noCodeWeeks;
+        return (totalWeeks * weeklyRate) || 0;
       },
       format: 'currency' as const,
-      description: 'Estimated annual savings from AI implementation'
+      description: 'Annual development cost with no-code tools'
     },
     {
-      id: 'netROI',
-      label: 'Net Annual ROI',
+      id: 'developmentSavings',
+      label: 'Annual Development Savings',
       formula: (values: Record<string, number>) => {
-        const { employees, avgSalary, hoursPerWeek, improvementRate, aiImplementationCost } = values;
-        const laborCost = employees * avgSalary * (hoursPerWeek / 40);
-        const savings = laborCost * improvementRate;
-        return (savings - aiImplementationCost) || 0;
+        const { projects, developmentTimeTraditional, developerSalary, noCodeSpeedup } = values;
+        const weeksPerYear = 52;
+        const weeklyRate = developerSalary / weeksPerYear;
+        const traditionalCost = projects * developmentTimeTraditional * weeklyRate;
+        const noCodeWeeks = (developmentTimeTraditional / noCodeSpeedup);
+        const noCodeCost = projects * noCodeWeeks * weeklyRate;
+        return (traditionalCost - noCodeCost) || 0;
       },
       format: 'currency' as const,
-      description: 'Net return on investment after implementation costs'
+      description: 'Savings from faster development cycles'
     },
     {
-      id: 'roiPercentage',
-      label: 'ROI Percentage',
+      id: 'netAnnualSavings',
+      label: 'Net Annual Savings',
       formula: (values: Record<string, number>) => {
-        const { employees, avgSalary, hoursPerWeek, improvementRate, aiImplementationCost } = values;
-        const laborCost = employees * avgSalary * (hoursPerWeek / 40);
-        const savings = laborCost * improvementRate;
-        const netROI = savings - aiImplementationCost;
-        return aiImplementationCost > 0 ? (netROI / aiImplementationCost) * 100 : 0;
+        const { projects, developmentTimeTraditional, developerSalary, noCodeSpeedup, noCodePlatformCost } = values;
+        const weeksPerYear = 52;
+        const weeklyRate = developerSalary / weeksPerYear;
+        const traditionalCost = projects * developmentTimeTraditional * weeklyRate;
+        const noCodeWeeks = (developmentTimeTraditional / noCodeSpeedup);
+        const noCodeCost = projects * noCodeWeeks * weeklyRate;
+        const developmentSavings = traditionalCost - noCodeCost;
+        return (developmentSavings - noCodePlatformCost) || 0;
       },
-      format: 'percentage' as const,
-      description: 'Return on investment as a percentage'
+      format: 'currency' as const,
+      description: 'Net savings after platform costs'
+    },
+    {
+      id: 'timeToMarketImprovement',
+      label: 'Time-to-Market Improvement',
+      formula: (values: Record<string, number>) => {
+        const { developmentTimeTraditional, noCodeSpeedup } = values;
+        const timeReduction = developmentTimeTraditional - (developmentTimeTraditional / noCodeSpeedup);
+        return timeReduction || 0;
+      },
+      format: 'number' as const,
+      description: 'Weeks saved per project'
+    },
+    {
+      id: 'projectsPerYear',
+      label: 'Potential Projects per Year',
+      formula: (values: Record<string, number>) => {
+        const { projects, noCodeSpeedup } = values;
+        return (projects * noCodeSpeedup) || 0;
+      },
+      format: 'number' as const,
+      description: 'Maximum projects possible with same resources'
     }
   ];
 
   const benefits = [
-    'Increase operational efficiency',
-    'Reduce manual processing time',
-    'Improve accuracy and consistency',
-    'Scale operations effectively',
-    'Enable strategic focus areas',
-    'Enhance competitive advantage'
+    'Accelerate AI development by 5x',
+    'Reduce technical complexity and barriers',
+    'Enable non-technical teams to build AI solutions',
+    'Faster time-to-market for AI products',
+    'Lower development and maintenance costs',
+    'Rapid prototyping and iteration'
   ];
 
   const caseStudies = [
     {
-      company: 'Innovation Corp',
+      company: 'Startup Accelerator',
       industry: 'Technology',
-      savings: '$300K annually',
+      savings: 'Built 10 AI apps in 6 months vs 2 years',
+      timeframe: '6 months'
+    },
+    {
+      company: 'Marketing Agency',
+      industry: 'Marketing',
+      savings: '$150K saved in development costs',
       timeframe: '12 months'
     },
     {
-      company: 'Growth Enterprises',
-      industry: 'Services',
-      savings: '$450K annually',
+      company: 'E-commerce Platform',
+      industry: 'Retail',
+      savings: '8x faster deployment of AI features',
       timeframe: '9 months'
-    },
-    {
-      company: 'Scale Solutions',
-      industry: 'Manufacturing',
-      savings: '$600K annually',
-      timeframe: '15 months'
     }
   ];
 
@@ -131,6 +173,7 @@ export default function NoCodeAiRoi() {
       title="No-Code AI ROI Calculator"
       description="Calculate the return on investment for no-code AI platforms. Estimate development time savings, reduced technical debt, and faster time-to-market."
       category="AI Business Solutions"
+      canonicalPath="/tools/no-code-ai-roi"
       fields={fields}
       calculations={calculations}
       benefits={benefits}

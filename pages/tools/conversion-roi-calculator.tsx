@@ -1,128 +1,156 @@
 import ROICalculatorTemplate from '../../components/ROICalculatorTemplate';
 
-export default function ConversionRoiCalculator() {
+export default function ConversionROICalculator() {
   const fields = [
     {
-      id: 'employees',
-      label: 'Number of Employees Affected',
+      id: 'monthlyTraffic',
+      label: 'Monthly Website Traffic',
       type: 'number' as const,
-      placeholder: '50',
-      defaultValue: 50
+      placeholder: '10000',
+      defaultValue: 10000
     },
     {
-      id: 'avgSalary',
-      label: 'Average Employee Salary',
+      id: 'currentConversionRate',
+      label: 'Current Conversion Rate (%)',
       type: 'number' as const,
-      placeholder: '65000',
+      placeholder: '2.5',
+      suffix: '%',
+      defaultValue: 2.5
+    },
+    {
+      id: 'averageOrderValue',
+      label: 'Average Order Value',
+      type: 'number' as const,
+      placeholder: '100',
       prefix: '$',
-      defaultValue: 65000
+      defaultValue: 100
     },
     {
-      id: 'hoursPerWeek',
-      label: 'Hours Per Week on Relevant Tasks',
-      type: 'number' as const,
-      placeholder: '8',
-      suffix: 'hrs',
-      defaultValue: 8
-    },
-    {
-      id: 'improvementRate',
-      label: 'Expected Efficiency Improvement',
+      id: 'conversionImprovement',
+      label: 'Expected Conversion Improvement',
       type: 'select' as const,
       options: [
-        { value: '0.2', label: '20% - Conservative' },
-        { value: '0.35', label: '35% - Moderate' },
-        { value: '0.5', label: '50% - Aggressive' },
-        { value: '0.7', label: '70% - Best Case' }
+        { value: '0.15', label: '15% - Basic AI Optimization' },
+        { value: '0.25', label: '25% - Advanced AI Tools' },
+        { value: '0.35', label: '35% - Comprehensive AI Suite' }
       ],
-      defaultValue: 0.35
+      defaultValue: 0.25
     },
     {
-      id: 'aiImplementationCost',
-      label: 'Annual AI Implementation Cost',
+      id: 'aiToolCost',
+      label: 'Monthly AI Tool Cost',
       type: 'number' as const,
-      placeholder: '25000',
+      placeholder: '500',
       prefix: '$',
-      defaultValue: 25000
+      defaultValue: 500
     }
   ];
 
   const calculations = [
     {
-      id: 'annualLaborCost',
-      label: 'Annual Labor Cost',
+      id: 'currentMonthlyRevenue',
+      label: 'Current Monthly Revenue',
       formula: (values: Record<string, number>) => {
-        const { employees, avgSalary, hoursPerWeek } = values;
-        return (employees * avgSalary * (hoursPerWeek / 40)) || 0;
+        const { monthlyTraffic, currentConversionRate, averageOrderValue } = values;
+        const conversions = monthlyTraffic * (currentConversionRate / 100);
+        return (conversions * averageOrderValue) || 0;
       },
       format: 'currency' as const,
-      description: 'Current annual cost for relevant employee activities'
+      description: 'Current monthly revenue from website conversions'
     },
     {
-      id: 'potentialSavings',
-      label: 'Potential Annual Savings',
+      id: 'improvedConversionRate',
+      label: 'Improved Conversion Rate',
       formula: (values: Record<string, number>) => {
-        const { employees, avgSalary, hoursPerWeek, improvementRate } = values;
-        const laborCost = employees * avgSalary * (hoursPerWeek / 40);
-        return (laborCost * improvementRate) || 0;
-      },
-      format: 'currency' as const,
-      description: 'Estimated annual savings from AI implementation'
-    },
-    {
-      id: 'netROI',
-      label: 'Net Annual ROI',
-      formula: (values: Record<string, number>) => {
-        const { employees, avgSalary, hoursPerWeek, improvementRate, aiImplementationCost } = values;
-        const laborCost = employees * avgSalary * (hoursPerWeek / 40);
-        const savings = laborCost * improvementRate;
-        return (savings - aiImplementationCost) || 0;
-      },
-      format: 'currency' as const,
-      description: 'Net return on investment after implementation costs'
-    },
-    {
-      id: 'roiPercentage',
-      label: 'ROI Percentage',
-      formula: (values: Record<string, number>) => {
-        const { employees, avgSalary, hoursPerWeek, improvementRate, aiImplementationCost } = values;
-        const laborCost = employees * avgSalary * (hoursPerWeek / 40);
-        const savings = laborCost * improvementRate;
-        const netROI = savings - aiImplementationCost;
-        return aiImplementationCost > 0 ? (netROI / aiImplementationCost) * 100 : 0;
+        const { currentConversionRate, conversionImprovement } = values;
+        return (currentConversionRate * (1 + conversionImprovement)) || 0;
       },
       format: 'percentage' as const,
-      description: 'Return on investment as a percentage'
+      description: 'New conversion rate with AI optimization'
+    },
+    {
+      id: 'newMonthlyRevenue',
+      label: 'New Monthly Revenue',
+      formula: (values: Record<string, number>) => {
+        const { monthlyTraffic, currentConversionRate, averageOrderValue, conversionImprovement } = values;
+        const newConversionRate = currentConversionRate * (1 + conversionImprovement);
+        const conversions = monthlyTraffic * (newConversionRate / 100);
+        return (conversions * averageOrderValue) || 0;
+      },
+      format: 'currency' as const,
+      description: 'Monthly revenue after AI conversion optimization'
+    },
+    {
+      id: 'monthlyRevenueIncrease',
+      label: 'Monthly Revenue Increase',
+      formula: (values: Record<string, number>) => {
+        const { monthlyTraffic, currentConversionRate, averageOrderValue, conversionImprovement } = values;
+        const currentRevenue = monthlyTraffic * (currentConversionRate / 100) * averageOrderValue;
+        const newConversionRate = currentConversionRate * (1 + conversionImprovement);
+        const newRevenue = monthlyTraffic * (newConversionRate / 100) * averageOrderValue;
+        return (newRevenue - currentRevenue) || 0;
+      },
+      format: 'currency' as const,
+      description: 'Additional monthly revenue from improved conversions'
+    },
+    {
+      id: 'netMonthlyGain',
+      label: 'Net Monthly Gain',
+      formula: (values: Record<string, number>) => {
+        const { monthlyTraffic, currentConversionRate, averageOrderValue, conversionImprovement, aiToolCost } = values;
+        const currentRevenue = monthlyTraffic * (currentConversionRate / 100) * averageOrderValue;
+        const newConversionRate = currentConversionRate * (1 + conversionImprovement);
+        const newRevenue = monthlyTraffic * (newConversionRate / 100) * averageOrderValue;
+        const revenueIncrease = newRevenue - currentRevenue;
+        return (revenueIncrease - aiToolCost) || 0;
+      },
+      format: 'currency' as const,
+      description: 'Monthly profit after AI tool costs'
+    },
+    {
+      id: 'annualROI',
+      label: 'Annual Net Gain',
+      formula: (values: Record<string, number>) => {
+        const { monthlyTraffic, currentConversionRate, averageOrderValue, conversionImprovement, aiToolCost } = values;
+        const currentRevenue = monthlyTraffic * (currentConversionRate / 100) * averageOrderValue;
+        const newConversionRate = currentConversionRate * (1 + conversionImprovement);
+        const newRevenue = monthlyTraffic * (newConversionRate / 100) * averageOrderValue;
+        const revenueIncrease = newRevenue - currentRevenue;
+        const netMonthlyGain = revenueIncrease - aiToolCost;
+        return (netMonthlyGain * 12) || 0;
+      },
+      format: 'currency' as const,
+      description: 'Total annual return on investment'
     }
   ];
 
   const benefits = [
-    'Increase operational efficiency',
-    'Reduce manual processing time',
-    'Improve accuracy and consistency',
-    'Scale operations effectively',
-    'Enable strategic focus areas',
-    'Enhance competitive advantage'
+    'Increase conversion rates by 25%+',
+    'Personalized user experiences',
+    'A/B testing automation',
+    'Smart recommendation engines',
+    'Optimize checkout processes',
+    'Reduce cart abandonment rates'
   ];
 
   const caseStudies = [
     {
-      company: 'Innovation Corp',
+      company: 'Fashion Retailer',
+      industry: 'E-commerce',
+      savings: '40% increase in conversion rate',
+      timeframe: '3 months'
+    },
+    {
+      company: 'SaaS Platform',
       industry: 'Technology',
-      savings: '$300K annually',
-      timeframe: '12 months'
+      savings: '$500K additional annual revenue',
+      timeframe: '6 months'
     },
     {
-      company: 'Growth Enterprises',
-      industry: 'Services',
-      savings: '$450K annually',
-      timeframe: '9 months'
-    },
-    {
-      company: 'Scale Solutions',
-      industry: 'Manufacturing',
-      savings: '$600K annually',
-      timeframe: '15 months'
+      company: 'Travel Booking',
+      industry: 'Travel',
+      savings: '30% reduction in cart abandonment',
+      timeframe: '4 months'
     }
   ];
 
@@ -131,6 +159,7 @@ export default function ConversionRoiCalculator() {
       title="Conversion AI ROI Calculator"
       description="Calculate the return on investment for AI conversion optimization tools. Estimate conversion rate improvements, revenue increases, and marketing efficiency gains."
       category="AI Business Solutions"
+      canonicalPath="/tools/conversion-roi-calculator"
       fields={fields}
       calculations={calculations}
       benefits={benefits}

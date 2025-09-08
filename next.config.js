@@ -161,6 +161,18 @@ const nextConfig = {
   // Redirects for fixing 404 errors
   async redirects() {
     return [
+      // WWW to non-WWW redirects to prevent duplicate content
+      {
+        source: '/:path*',
+        has: [
+          {
+            type: 'host',
+            value: 'www.siteoptz.ai',
+          },
+        ],
+        destination: 'https://siteoptz.ai/:path*',
+        permanent: true,
+      },
       // Category URL fix - typo/variant
       {
         source: '/categories/voice-ai-tools',

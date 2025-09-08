@@ -1,136 +1,102 @@
 import ROICalculatorTemplate from '../../components/ROICalculatorTemplate';
 
-export default function RecruitmentRoiCalculator() {
+export default function RecruitmentROICalculator() {
   const fields = [
     {
       id: 'employees',
-      label: 'Number of Employees Affected',
+      label: 'Number of Employees',
       type: 'number' as const,
-      placeholder: '50',
-      defaultValue: 50
+      placeholder: '100',
+      defaultValue: 100
     },
     {
       id: 'avgSalary',
       label: 'Average Employee Salary',
       type: 'number' as const,
-      placeholder: '65000',
+      placeholder: '75000',
       prefix: '$',
-      defaultValue: 65000
+      defaultValue: 75000
     },
     {
-      id: 'hoursPerWeek',
-      label: 'Hours Per Week on Relevant Tasks',
+      id: 'aiToolCost',
+      label: 'Monthly AI Tool Cost',
       type: 'number' as const,
-      placeholder: '8',
-      suffix: 'hrs',
-      defaultValue: 8
-    },
-    {
-      id: 'improvementRate',
-      label: 'Expected Efficiency Improvement',
-      type: 'select' as const,
-      options: [
-        { value: '0.2', label: '20% - Conservative' },
-        { value: '0.35', label: '35% - Moderate' },
-        { value: '0.5', label: '50% - Aggressive' },
-        { value: '0.7', label: '70% - Best Case' }
-      ],
-      defaultValue: 0.35
-    },
-    {
-      id: 'aiImplementationCost',
-      label: 'Annual AI Implementation Cost',
-      type: 'number' as const,
-      placeholder: '25000',
+      placeholder: '500',
       prefix: '$',
-      defaultValue: 25000
+      defaultValue: 500
     }
   ];
 
   const calculations = [
     {
-      id: 'annualLaborCost',
-      label: 'Annual Labor Cost',
+      id: 'monthlySavings',
+      label: 'Monthly Cost Savings',
       formula: (values: Record<string, number>) => {
-        const { employees, avgSalary, hoursPerWeek } = values;
-        return (employees * avgSalary * (hoursPerWeek / 40)) || 0;
+        const { employees, avgSalary } = values;
+        const monthlySalary = avgSalary / 12;
+        const savings = employees * monthlySalary * 0.2; // 20% efficiency gain
+        return savings || 0;
       },
       format: 'currency' as const,
-      description: 'Current annual cost for relevant employee activities'
+      description: 'Monthly savings from AI automation'
     },
     {
-      id: 'potentialSavings',
-      label: 'Potential Annual Savings',
+      id: 'netMonthlySavings',
+      label: 'Net Monthly Savings',
       formula: (values: Record<string, number>) => {
-        const { employees, avgSalary, hoursPerWeek, improvementRate } = values;
-        const laborCost = employees * avgSalary * (hoursPerWeek / 40);
-        return (laborCost * improvementRate) || 0;
+        const { employees, avgSalary, aiToolCost } = values;
+        const monthlySalary = avgSalary / 12;
+        const savings = employees * monthlySalary * 0.2;
+        return (savings - aiToolCost) || 0;
       },
       format: 'currency' as const,
-      description: 'Estimated annual savings from AI implementation'
+      description: 'Monthly savings after AI tool costs'
     },
     {
-      id: 'netROI',
-      label: 'Net Annual ROI',
+      id: 'annualROI',
+      label: 'Annual Net ROI',
       formula: (values: Record<string, number>) => {
-        const { employees, avgSalary, hoursPerWeek, improvementRate, aiImplementationCost } = values;
-        const laborCost = employees * avgSalary * (hoursPerWeek / 40);
-        const savings = laborCost * improvementRate;
-        return (savings - aiImplementationCost) || 0;
+        const { employees, avgSalary, aiToolCost } = values;
+        const monthlySalary = avgSalary / 12;
+        const savings = employees * monthlySalary * 0.2;
+        const netMonthlySavings = savings - aiToolCost;
+        return (netMonthlySavings * 12) || 0;
       },
       format: 'currency' as const,
-      description: 'Net return on investment after implementation costs'
-    },
-    {
-      id: 'roiPercentage',
-      label: 'ROI Percentage',
-      formula: (values: Record<string, number>) => {
-        const { employees, avgSalary, hoursPerWeek, improvementRate, aiImplementationCost } = values;
-        const laborCost = employees * avgSalary * (hoursPerWeek / 40);
-        const savings = laborCost * improvementRate;
-        const netROI = savings - aiImplementationCost;
-        return aiImplementationCost > 0 ? (netROI / aiImplementationCost) * 100 : 0;
-      },
-      format: 'percentage' as const,
-      description: 'Return on investment as a percentage'
+      description: 'Total annual return on investment'
     }
   ];
 
   const benefits = [
-    'Increase operational efficiency',
-    'Reduce manual processing time',
-    'Improve accuracy and consistency',
+    'Automate repetitive tasks',
+    'Improve operational efficiency',
+    'Reduce manual errors',
     'Scale operations effectively',
-    'Enable strategic focus areas',
-    'Enhance competitive advantage'
+    'Increase employee productivity',
+    'Generate actionable insights'
   ];
 
   const caseStudies = [
     {
-      company: 'Innovation Corp',
-      industry: 'Technology',
-      savings: '$300K annually',
-      timeframe: '12 months'
+      company: 'Example Corp',
+      industry: 'HR & Recruitment',
+      savings: '$200K annual savings',
+      timeframe: '6 months'
     },
     {
-      company: 'Growth Enterprises',
-      industry: 'Services',
-      savings: '$450K annually',
-      timeframe: '9 months'
-    },
-    {
-      company: 'Scale Solutions',
-      industry: 'Manufacturing',
-      savings: '$600K annually',
-      timeframe: '15 months'
+      company: 'Innovation Inc',
+      industry: 'HR & Recruitment',
+      savings: '30% efficiency improvement',
+      timeframe: '4 months'
     }
   ];
 
   return (
     <ROICalculatorTemplate
       title="Recruitment AI ROI Calculator"
-      description="Calculate the return on investment for AI recruitment tools. Estimate time-to-hire reductions, candidate quality improvements, and HR cost savings."
-      category="AI Business Solutions"
+      description="Calculate the return on investment for AI recruitment tools. Estimate time savings, cost reductions, and hiring efficiency improvements."
+      category="HR & Recruitment"
+      canonicalPath="/tools/recruitment-roi-calculator"
       fields={fields}
       calculations={calculations}
       benefits={benefits}

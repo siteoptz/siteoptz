@@ -11,30 +11,11 @@ export default function MarketingROICalculator() {
       defaultValue: 10000
     },
     {
-      id: 'marketingTeamSize',
-      label: 'Marketing Team Size',
-      type: 'number' as const,
-      placeholder: '5',
-      defaultValue: 5
-    },
-    {
-      id: 'avgMarketingSalary',
-      label: 'Average Marketing Employee Salary',
-      type: 'number' as const,
-      placeholder: '70000',
-      prefix: '$',
-      defaultValue: 70000
-    },
-    {
       id: 'currentConversionRate',
-      label: 'Current Conversion Rate',
-      type: 'select' as const,
-      options: [
-        { value: '1', label: '1% - Below Average' },
-        { value: '2.5', label: '2.5% - Industry Average' },
-        { value: '5', label: '5% - Above Average' },
-        { value: '8', label: '8% - Excellent' }
-      ],
+      label: 'Current Conversion Rate (%)',
+      type: 'number' as const,
+      placeholder: '2.5',
+      suffix: '%',
       defaultValue: 2.5
     },
     {
@@ -47,128 +28,125 @@ export default function MarketingROICalculator() {
     },
     {
       id: 'aiImprovementRate',
-      label: 'AI-Driven Improvement Rate',
+      label: 'Expected AI Marketing Improvement',
       type: 'select' as const,
       options: [
-        { value: '0.25', label: '25% - Conservative' },
-        { value: '0.40', label: '40% - Moderate' },
-        { value: '0.60', label: '60% - Aggressive' },
-        { value: '0.80', label: '80% - Best Case' }
+        { value: '0.20', label: '20% - Basic AI Optimization' },
+        { value: '0.35', label: '35% - Advanced AI Tools' },
+        { value: '0.50', label: '50% - Comprehensive AI Suite' }
       ],
-      defaultValue: 0.40
+      defaultValue: 0.35
     },
     {
-      id: 'aiToolsCost',
-      label: 'Monthly AI Marketing Tools Cost',
+      id: 'aiToolCost',
+      label: 'Monthly AI Marketing Tool Cost',
       type: 'number' as const,
-      placeholder: '2000',
+      placeholder: '800',
       prefix: '$',
-      defaultValue: 2000
+      defaultValue: 800
     }
   ];
 
   const calculations = [
     {
-      id: 'currentRevenue',
-      label: 'Current Monthly Revenue',
+      id: 'currentMonthlyRevenue',
+      label: 'Current Monthly Revenue from Ads',
       formula: (values: Record<string, number>) => {
         const { monthlyAdSpend, currentConversionRate, averageOrderValue } = values;
-        const clicks = monthlyAdSpend / 2; // Assume $2 CPC
-        const conversions = clicks * (currentConversionRate / 100);
-        return conversions * averageOrderValue || 0;
+        const estimatedClicks = (monthlyAdSpend / 100) * 1000;
+        const conversions = estimatedClicks * (currentConversionRate / 100);
+        return (conversions * averageOrderValue) || 0;
       },
       format: 'currency' as const,
-      description: 'Estimated monthly revenue from current marketing efforts'
+      description: 'Current monthly revenue generated from ad spend'
     },
     {
       id: 'improvedRevenue',
-      label: 'Projected Revenue with AI',
+      label: 'Improved Monthly Revenue with AI',
       formula: (values: Record<string, number>) => {
         const { monthlyAdSpend, currentConversionRate, averageOrderValue, aiImprovementRate } = values;
-        const clicks = monthlyAdSpend / 2;
-        const improvedConversionRate = currentConversionRate * (1 + aiImprovementRate);
-        const conversions = clicks * (improvedConversionRate / 100);
-        return conversions * averageOrderValue || 0;
+        const estimatedClicks = (monthlyAdSpend / 100) * 1000;
+        const baseConversions = estimatedClicks * (currentConversionRate / 100);
+        const baseRevenue = baseConversions * averageOrderValue;
+        return (baseRevenue * (1 + aiImprovementRate)) || 0;
       },
       format: 'currency' as const,
-      description: 'Projected monthly revenue with AI-optimized marketing'
+      description: 'Monthly revenue after AI optimization'
     },
     {
-      id: 'monthlyIncrease',
+      id: 'revenueIncrease',
       label: 'Monthly Revenue Increase',
       formula: (values: Record<string, number>) => {
         const { monthlyAdSpend, currentConversionRate, averageOrderValue, aiImprovementRate } = values;
-        const clicks = monthlyAdSpend / 2;
-        const currentConversions = clicks * (currentConversionRate / 100);
-        const improvedConversions = clicks * ((currentConversionRate * (1 + aiImprovementRate)) / 100);
-        const currentRevenue = currentConversions * averageOrderValue;
-        const improvedRevenue = improvedConversions * averageOrderValue;
-        return improvedRevenue - currentRevenue || 0;
+        const estimatedClicks = (monthlyAdSpend / 100) * 1000;
+        const baseConversions = estimatedClicks * (currentConversionRate / 100);
+        const baseRevenue = baseConversions * averageOrderValue;
+        const improvedRevenue = baseRevenue * (1 + aiImprovementRate);
+        return (improvedRevenue - baseRevenue) || 0;
       },
       format: 'currency' as const,
-      description: 'Additional monthly revenue generated by AI optimization'
+      description: 'Additional monthly revenue from AI improvements'
+    },
+    {
+      id: 'netMonthlyGain',
+      label: 'Net Monthly Gain',
+      formula: (values: Record<string, number>) => {
+        const { monthlyAdSpend, currentConversionRate, averageOrderValue, aiImprovementRate, aiToolCost } = values;
+        const estimatedClicks = (monthlyAdSpend / 100) * 1000;
+        const baseConversions = estimatedClicks * (currentConversionRate / 100);
+        const baseRevenue = baseConversions * averageOrderValue;
+        const improvedRevenue = baseRevenue * (1 + aiImprovementRate);
+        const revenueIncrease = improvedRevenue - baseRevenue;
+        return (revenueIncrease - aiToolCost) || 0;
+      },
+      format: 'currency' as const,
+      description: 'Monthly profit increase after AI tool costs'
     },
     {
       id: 'annualROI',
       label: 'Annual Net ROI',
       formula: (values: Record<string, number>) => {
-        const { monthlyAdSpend, currentConversionRate, averageOrderValue, aiImprovementRate, aiToolsCost } = values;
-        const clicks = monthlyAdSpend / 2;
-        const currentConversions = clicks * (currentConversionRate / 100);
-        const improvedConversions = clicks * ((currentConversionRate * (1 + aiImprovementRate)) / 100);
-        const monthlyIncrease = (improvedConversions - currentConversions) * averageOrderValue;
-        const annualIncrease = monthlyIncrease * 12;
-        const annualAICost = aiToolsCost * 12;
-        return annualIncrease - annualAICost || 0;
+        const { monthlyAdSpend, currentConversionRate, averageOrderValue, aiImprovementRate, aiToolCost } = values;
+        const estimatedClicks = (monthlyAdSpend / 100) * 1000;
+        const baseConversions = estimatedClicks * (currentConversionRate / 100);
+        const baseRevenue = baseConversions * averageOrderValue;
+        const improvedRevenue = baseRevenue * (1 + aiImprovementRate);
+        const revenueIncrease = improvedRevenue - baseRevenue;
+        const netMonthlyGain = revenueIncrease - aiToolCost;
+        return (netMonthlyGain * 12) || 0;
       },
       format: 'currency' as const,
-      description: 'Annual return after deducting AI tool costs'
-    },
-    {
-      id: 'roiMultiplier',
-      label: 'ROI Multiplier',
-      formula: (values: Record<string, number>) => {
-        const { monthlyAdSpend, currentConversionRate, averageOrderValue, aiImprovementRate, aiToolsCost } = values;
-        const clicks = monthlyAdSpend / 2;
-        const currentConversions = clicks * (currentConversionRate / 100);
-        const improvedConversions = clicks * ((currentConversionRate * (1 + aiImprovementRate)) / 100);
-        const monthlyIncrease = (improvedConversions - currentConversions) * averageOrderValue;
-        const annualIncrease = monthlyIncrease * 12;
-        const annualAICost = aiToolsCost * 12;
-        return annualAICost > 0 ? annualIncrease / annualAICost : 0;
-      },
-      format: 'number' as const,
-      description: 'How many times your investment you get back annually'
+      description: 'Total annual return on investment'
     }
   ];
 
   const benefits = [
-    'Increase conversion rates by 25-60%',
-    'Improve ad targeting and reduce waste',
-    'Automate A/B testing and optimization',
-    'Personalize customer experiences at scale',
-    'Reduce manual campaign management time',
-    'Get real-time insights and recommendations'
+    'Increase ad campaign performance by 35%+',
+    'Automated bid optimization',
+    'Advanced audience targeting and segmentation',
+    'Real-time campaign adjustments',
+    'Predictive customer lifetime value',
+    'Cross-channel marketing optimization'
   ];
 
   const caseStudies = [
     {
-      company: 'E-commerce Plus',
-      industry: 'E-commerce',
-      savings: '300% ROI',
-      timeframe: '6 months'
-    },
-    {
-      company: 'SaaS Growth Co',
-      industry: 'SaaS',
-      savings: '450% ROI',
-      timeframe: '9 months'
-    },
-    {
-      company: 'Retail Chain',
+      company: 'E-commerce Retailer',
       industry: 'Retail',
-      savings: '220% ROI',
-      timeframe: '12 months'
+      savings: '45% improvement in ROAS',
+      timeframe: '3 months'
+    },
+    {
+      company: 'SaaS Company',
+      industry: 'Technology',
+      savings: '$300K additional revenue annually',
+      timeframe: '4 months'
+    },
+    {
+      company: 'Fashion Brand',
+      industry: 'Fashion',
+      savings: '60% reduction in cost per acquisition',
+      timeframe: '6 months'
     }
   ];
 
@@ -177,6 +155,7 @@ export default function MarketingROICalculator() {
       title="Marketing AI ROI Calculator"
       description="Calculate the return on investment for AI-powered marketing tools. Estimate increased conversions, revenue growth, and cost savings from marketing automation."
       category="Marketing AI"
+      canonicalPath="/tools/marketing-roi-calculator"
       fields={fields}
       calculations={calculations}
       benefits={benefits}
