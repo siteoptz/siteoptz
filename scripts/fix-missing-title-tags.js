@@ -4,7 +4,7 @@ const fs = require('fs');
 const path = require('path');
 const { loadUnifiedToolsData } = require('../utils/unifiedDataAdapter');
 
-console.log('🔍 Analyzing missing title tags for review pages...');
+console.log('🔍 Analyzing missing SEO elements (title tags, meta descriptions, H1) for review pages...');
 
 // Read the CSV file with missing title tag URLs
 const csvPath = path.join(process.cwd(), '../siteoptz-scraping/siteoptz.ai_title_tag_is_missing_or_empty_20250908.csv');
@@ -257,73 +257,95 @@ if (addedTools > 0 || updatedTools > 0) {
     console.log('\n💾 No changes needed to aiToolsData.json');
 }
 
-// Fix strategy 3: Add better error handling to the review template
-console.log('\n🔧 Adding better error handling to review template...');
+// Fix strategy 3: Add comprehensive error handling to the review template
+console.log('\n🔧 Adding comprehensive meta description and H1 error handling...');
 
 const reviewTemplatePath = path.join(process.cwd(), 'pages/reviews/[toolName].tsx');
 let templateContent = fs.readFileSync(reviewTemplatePath, 'utf-8');
 
-// Check if we already have the fallback logic
-if (!templateContent.includes('generateSafeTitle')) {
-    // Add a safe title generation function
-    const safeTitleFunction = `
-  // Generate safe title with fallback
-  const generateSafeTitle = (tool: Tool, slug: string): string => {
-    if (tool.tool_name && tool.tool_name.trim()) {
-      return \`\${tool.tool_name} Review — Features, Pricing, Pros & Cons [2025]\`;
-    }
-    
-    // Fallback: generate title from slug
-    const fallbackName = slug
-      .split('-')
-      .map(word => word.charAt(0).toUpperCase() + word.slice(1))
-      .join(' ')
-      .replace(/\\bAi\\b/g, 'AI')
-      .replace(/\\bApi\\b/g, 'API')
-      .replace(/\\bSeo\\b/g, 'SEO');
-    
-    return \`\${fallbackName} Review — Features, Pricing, Pros & Cons [2025]\`;
-  };`;
-
-    // Replace the pageTitle generation
-    templateContent = templateContent.replace(
-        'const pageTitle = `${tool.tool_name} Review — Features, Pricing, Pros & Cons [2025]`;',
-        safeTitleFunction + '\n\n  const pageTitle = generateSafeTitle(tool, slug);'
-    );
-
-    // Also add safe description generation
-    const safeDescFunction = `
-  // Generate safe description with fallback
-  const generateSafeDescription = (tool: Tool, slug: string): string => {
+// Fix meta description generation to include fallbacks
+if (!templateContent.includes('generateSafeMetaDescription')) {
+    // Replace the existing generateMetaDescription function
+    const safeMetaDescriptionFunction = `
+  // Generate safe meta description with fallback (155-160 characters)
+  const generateSafeMetaDescription = (tool: Tool, toolSlug: string): string => {
     const toolName = tool.tool_name && tool.tool_name.trim() ? tool.tool_name : 
-      slug.split('-').map(word => word.charAt(0).toUpperCase() + word.slice(1)).join(' ')
-        .replace(/\\bAi\\b/g, 'AI').replace(/\\bApi\\b/g, 'API').replace(/\\bSeo\\b/g, 'SEO');
+      toolSlug.split('-').map(word => word.charAt(0).toUpperCase() + word.slice(1)).join(' ')
+        .replace(/\\bAi\\b/g, 'AI').replace(/\\bApi\\b/g, 'API').replace(/\\bSeo\\b/g, 'SEO').replace(/\\bUx\\b/g, 'UX');
     
-    const basePrice = typeof tool.pricing.monthly === 'number' && tool.pricing.monthly > 0 ? 
+    const basePrice = typeof tool.pricing?.monthly === 'number' && tool.pricing.monthly > 0 ? 
                       \`$\${tool.pricing.monthly}/month\` : 
-                      tool.pricing.monthly === 0 || 
-                      (typeof tool.pricing.monthly === 'string' && tool.pricing.monthly.toLowerCase() === 'free') ? 
+                      tool.pricing?.monthly === 0 || 
+                      (typeof tool.pricing?.monthly === 'string' && tool.pricing.monthly.toLowerCase() === 'free') ? 
                       'Free plan available' : 'Custom pricing';
     
     return \`\${toolName} review: Features, pricing (from \${basePrice}), pros, cons, and alternatives. Expert analysis and user guide for 2025.\`;
   };`;
 
+    // Replace the old function
     templateContent = templateContent.replace(
-        '  const metaDescription = generateMetaDescription(tool);',
-        safeDescFunction + '\n\n  const metaDescription = generateSafeDescription(tool, slug);'
+        /\/\/ Generate optimized meta description.*?\n.*?const generateMetaDescription = \(tool: Tool\): string => \{[\s\S]*?\};/,
+        safeMetaDescriptionFunction
     );
 
-    // Write the updated template
-    fs.writeFileSync(reviewTemplatePath, templateContent);
-    console.log('✅ Updated review template with better error handling');
-} else {
-    console.log('✅ Review template already has error handling');
+    // Update the meta description call
+    templateContent = templateContent.replace(
+        'const metaDescription = generateMetaDescription(tool);',
+        'const metaDescription = generateSafeMetaDescription(tool, toolSlug);'
+    );
+
+    console.log('✅ Updated meta description generation with fallbacks');
 }
 
-console.log('\n🎉 Missing title tags fix completed!');
+// Fix H1 tag to use safe tool name
+if (!templateContent.includes('const safeToolName =')) {
+    // Add safe tool name generation in the component
+    const safeToolNameCode = `
+  // Generate safe tool name for H1 and other elements
+  const safeToolName = tool.tool_name && tool.tool_name.trim() ? tool.tool_name : 
+    slug.split('-').map(word => word.charAt(0).toUpperCase() + word.slice(1)).join(' ')
+      .replace(/\\bAi\\b/g, 'AI').replace(/\\bApi\\b/g, 'API').replace(/\\bSeo\\b/g, 'SEO').replace(/\\bUx\\b/g, 'UX');`;
+
+    // Insert after the component definition
+    templateContent = templateContent.replace(
+        'export default function ReviewPage({ tool, pageTitle, slug, relatedTools, relatedComparisons, hasSEOVersion, seoData }: ReviewPageProps) {',
+        'export default function ReviewPage({ tool, pageTitle, slug, relatedTools, relatedComparisons, hasSEOVersion, seoData }: ReviewPageProps) {' + safeToolNameCode
+    );
+
+    // Update H1 tag to use safeToolName
+    templateContent = templateContent.replace(
+        '{tool.tool_name} Review',
+        '{safeToolName} Review'
+    );
+
+    // Update other instances where tool.tool_name is used in the template
+    templateContent = templateContent.replace(
+        /\{tool\.tool_name\}/g,
+        '{safeToolName}'
+    );
+
+    // Update keywords meta tag
+    templateContent = templateContent.replace(
+        'content={`${tool.tool_name} review, ${tool.tool_name} features, ${tool.tool_name} pricing, ${tool.tool_name} pros and cons, ${tool.tool_name} alternatives, AI tools 2025`}',
+        'content={`${safeToolName} review, ${safeToolName} features, ${safeToolName} pricing, ${safeToolName} pros and cons, ${safeToolName} alternatives, AI tools 2025`}'
+    );
+
+    console.log('✅ Updated H1 and other elements to use safe tool name');
+}
+
+// Write the updated template
+fs.writeFileSync(reviewTemplatePath, templateContent);
+console.log('✅ Review template updated with comprehensive meta description and H1 fixes');
+
+console.log('\n🎉 Missing SEO elements fix completed!');
+console.log('\nFixed elements:');
+console.log('✅ Title tags with intelligent fallbacks');
+console.log('✅ Meta descriptions with pricing and feature info');
+console.log('✅ H1 tags with proper tool name generation');
+console.log('✅ Keywords meta tags with safe tool names');
 console.log('\nNext steps:');
 console.log('1. Run: npm run build');
-console.log('2. Test a few review pages to ensure titles are working');
+console.log('2. Test review pages to ensure all SEO elements are working');
 console.log('3. Deploy changes to production');
 
 process.exit(0);

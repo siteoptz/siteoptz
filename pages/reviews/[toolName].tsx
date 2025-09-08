@@ -60,6 +60,10 @@ interface ReviewPageProps {
 }
 
 export default function ReviewPage({ tool, pageTitle, slug, relatedTools, relatedComparisons, hasSEOVersion, seoData }: ReviewPageProps) {
+  // Generate safe tool name for H1 and other elements
+  const safeToolName = tool.tool_name && tool.tool_name.trim() ? tool.tool_name : 
+    slug.split('-').map(word => word.charAt(0).toUpperCase() + word.slice(1)).join(' ')
+      .replace(/\bAi\b/g, 'AI').replace(/\bApi\b/g, 'API').replace(/\bSeo\b/g, 'SEO').replace(/\bUx\b/g, 'UX');
   const [activeTab, setActiveTab] = useState<'overview' | 'features' | 'pricing' | 'use-cases' | 'pros-cons' | 'faq'>('overview');
 
   // If we have a SEO-optimized version, use it instead
@@ -73,20 +77,26 @@ export default function ReviewPage({ tool, pageTitle, slug, relatedTools, relate
     return <SEOComponent tool={seoData} />;
   }
 
-  // Generate optimized meta description (155-160 characters)
-  const generateMetaDescription = (tool: Tool): string => {
-    const basePrice = typeof tool.pricing.monthly === 'number' && tool.pricing.monthly > 0 ? 
-                      `$${tool.pricing.monthly}/month` : 
-                      tool.pricing.monthly === 0 || 
-                      (typeof tool.pricing.monthly === 'string' && tool.pricing.monthly.toLowerCase() === 'free') ? 
+  
+  // Generate safe meta description with fallback (155-160 characters)
+  const generateSafeMetaDescription = (tool: Tool, toolSlug: string): string => {
+    const toolName = tool.tool_name && tool.tool_name.trim() ? tool.tool_name : 
+      toolSlug.split('-').map(word => word.charAt(0).toUpperCase() + word.slice(1)).join(' ')
+        .replace(/\bAi\b/g, 'AI').replace(/\bApi\b/g, 'API').replace(/\bSeo\b/g, 'SEO').replace(/\bUx\b/g, 'UX');
+    
+    const basePrice = typeof tool.pricing?.monthly === 'number' && tool.pricing.monthly > 0 ? 
+                      `${tool.pricing.monthly}/month` : 
+                      tool.pricing?.monthly === 0 || 
+                      (typeof tool.pricing?.monthly === 'string' && tool.pricing.monthly.toLowerCase() === 'free') ? 
                       'Free plan available' : 'Custom pricing';
-    return `${tool.tool_name} review: Features, pricing (from ${basePrice}), pros, cons, and alternatives. Expert analysis and user guide for 2025.`;
+    
+    return `${toolName} review: Features, pricing (from ${basePrice}), pros, cons, and alternatives. Expert analysis and user guide for 2025.`;
   };
   
 
   // Generate optimized meta description (155-160 characters)
 
-  const metaDescription = generateMetaDescription(tool);
+  const metaDescription = generateSafeMetaDescription(tool, slug);
 
   // Generate comprehensive JSON-LD schemas
   
@@ -141,30 +151,30 @@ export default function ReviewPage({ tool, pageTitle, slug, relatedTools, relate
       "bestRating": 5,
       "worstRating": 1
     },
-    "reviewBody": `Comprehensive review of ${tool.tool_name} covering features, pricing, pros, cons, and use cases.`
+    "reviewBody": `Comprehensive review of ${safeToolName} covering features, pricing, pros, cons, and use cases.`
   };
 
   // FAQ Schema - Create sample FAQs since not in data
   const sampleFaqs = [
     {
-      question: `What is ${tool.tool_name}?`,
+      question: `What is ${safeToolName}?`,
       answer: tool.description
     },
     {
-      question: `How much does ${tool.tool_name} cost?`,
+      question: `How much does ${safeToolName} cost?`,
       answer: (typeof tool.pricing.monthly === 'string' && tool.pricing.monthly.toLowerCase() === 'custom') || 
               tool.pricing.monthly === null || tool.pricing.monthly === undefined ?
-              `${tool.tool_name} has various pricing tiers available.` :
+              `${safeToolName} has various pricing tiers available.` :
               tool.pricing.monthly === 0 || 
               (typeof tool.pricing.monthly === 'string' && tool.pricing.monthly.toLowerCase() === 'free') ?
-              `${tool.tool_name} offers a free plan with various pricing tiers available.` :
+              `${safeToolName} offers a free plan with various pricing tiers available.` :
               typeof tool.pricing.monthly === 'number' && tool.pricing.monthly > 0 ? 
-              `${tool.tool_name} starts at $${tool.pricing.monthly}/month with various pricing tiers available.` :
-              `${tool.tool_name} has various pricing tiers available.`
+              `${safeToolName} starts at $${tool.pricing.monthly}/month with various pricing tiers available.` :
+              `${safeToolName} has various pricing tiers available.`
     },
     {
-      question: `Does ${tool.tool_name} offer a free trial?`,
-      answer: tool.free_trial ? `Yes, ${tool.tool_name} offers a free trial.` : `${tool.tool_name} pricing information is available on their website.`
+      question: `Does ${safeToolName} offer a free trial?`,
+      answer: tool.free_trial ? `Yes, ${safeToolName} offers a free trial.` : `${safeToolName} pricing information is available on their website.`
     }
   ];
 
@@ -207,7 +217,7 @@ export default function ReviewPage({ tool, pageTitle, slug, relatedTools, relate
       {
         "@type": "ListItem",
         "position": 4,
-        "name": `${tool.tool_name} Review`,
+        "name": `${safeToolName} Review`,
         "item": `https://siteoptz.com/reviews/${slug}`
       }
     ]
@@ -218,7 +228,7 @@ export default function ReviewPage({ tool, pageTitle, slug, relatedTools, relate
       <Head>
         <title>{pageTitle}</title>
         <meta name="description" content={metaDescription} />
-        <meta name="keywords" content={`${tool.tool_name} review, ${tool.tool_name} features, ${tool.tool_name} pricing, ${tool.tool_name} pros and cons, ${tool.tool_name} alternatives, AI tools 2025`} />
+        <meta name="keywords" content={`${safeToolName} review, ${safeToolName} features, ${safeToolName} pricing, ${safeToolName} pros and cons, ${safeToolName} alternatives, AI tools 2025`} />
         <meta name="author" content="SiteOptz" />
         <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
         
@@ -233,7 +243,7 @@ export default function ReviewPage({ tool, pageTitle, slug, relatedTools, relate
         <meta property="article:published_time" content="2025-01-15T00:00:00Z" />
         <meta property="article:modified_time" content={new Date().toISOString()} />
         <meta property="article:section" content="Technology" />
-        <meta property="article:tag" content={`${tool.tool_name}, AI Tools, Review`} />
+        <meta property="article:tag" content={`${safeToolName}, AI Tools, Review`} />
         
         {/* Twitter Card */}
         <meta name="twitter:card" content="summary_large_image" />
@@ -285,7 +295,7 @@ export default function ReviewPage({ tool, pageTitle, slug, relatedTools, relate
                 <li><span className="mx-2">/</span></li>
                 <li><Link href="/reviews" className="hover:text-cyan-400 transition-colors">Reviews</Link></li>
                 <li><span className="mx-2">/</span></li>
-                <li className="text-cyan-400">{tool.tool_name} Review</li>
+                <li className="text-cyan-400">{safeToolName} Review</li>
               </ol>
             </nav>
 
@@ -295,14 +305,14 @@ export default function ReviewPage({ tool, pageTitle, slug, relatedTools, relate
                 <div className="flex items-center mb-6">
                   <div className="mr-6">
                     <ToolLogo 
-                      toolName={tool.tool_name}
+                      toolName={safeToolName}
                       logoUrl={tool.logo_url}
                       size="xl"
                     />
                   </div>
                   <div>
                     <h1 className="text-4xl md:text-5xl font-bold text-white mb-2">
-                      {tool.tool_name} Review
+                      {safeToolName} Review
                     </h1>
                     {tool.rating && (
                       <div className="flex items-center">
@@ -402,7 +412,7 @@ export default function ReviewPage({ tool, pageTitle, slug, relatedTools, relate
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             {activeTab === 'overview' && (
               <div className="prose prose-lg max-w-none">
-                <h2 className="text-3xl font-bold text-white mb-6">What is {tool.tool_name}?</h2>
+                <h2 className="text-3xl font-bold text-white mb-6">What is {safeToolName}?</h2>
                 <p className="text-gray-300 mb-8">{tool.description}</p>
                 
                 <div className="grid md:grid-cols-2 gap-8 not-prose">
@@ -439,7 +449,7 @@ export default function ReviewPage({ tool, pageTitle, slug, relatedTools, relate
 
             {activeTab === 'features' && (
               <div>
-                <h2 className="text-3xl font-bold text-white mb-8">{tool.tool_name} Features</h2>
+                <h2 className="text-3xl font-bold text-white mb-8">{safeToolName} Features</h2>
                 
                 {/* Core Features */}
                 <div className="mb-8">
@@ -463,7 +473,7 @@ export default function ReviewPage({ tool, pageTitle, slug, relatedTools, relate
 
             {activeTab === 'pricing' && (
               <div>
-                <h2 className="text-3xl font-bold text-white mb-8">{tool.tool_name} Pricing Plans</h2>
+                <h2 className="text-3xl font-bold text-white mb-8">{safeToolName} Pricing Plans</h2>
                 <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
                   <div className="bg-black border border-gray-800 rounded-xl shadow-lg p-8">
                     <h3 className="text-xl font-bold text-white mb-2">Monthly Plan</h3>
@@ -568,7 +578,7 @@ export default function ReviewPage({ tool, pageTitle, slug, relatedTools, relate
 
             {activeTab === 'use-cases' && (
               <div>
-                <h2 className="text-3xl font-bold text-white mb-8">{tool.tool_name} Use Cases</h2>
+                <h2 className="text-3xl font-bold text-white mb-8">{safeToolName} Use Cases</h2>
                 <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
                   {((tool as any).overview?.use_cases || (tool as any).use_cases || []).map((useCase: string, index: number) => (
                     <div key={index} className="bg-black border border-gray-800 p-6 rounded-xl">
@@ -578,7 +588,7 @@ export default function ReviewPage({ tool, pageTitle, slug, relatedTools, relate
                         </svg>
                         <div>
                           <h3 className="text-lg font-semibold text-white mb-2">{useCase}</h3>
-                          <p className="text-gray-400 text-sm">Perfect for businesses looking to implement {useCase.toLowerCase()} with {tool.tool_name}.</p>
+                          <p className="text-gray-400 text-sm">Perfect for businesses looking to implement {useCase.toLowerCase()} with {safeToolName}.</p>
                         </div>
                       </div>
                     </div>
@@ -587,7 +597,7 @@ export default function ReviewPage({ tool, pageTitle, slug, relatedTools, relate
                 
                 {/* Additional use case information */}
                 <div className="mt-12 bg-black border border-gray-800 p-8 rounded-xl">
-                  <h3 className="text-2xl font-bold text-cyan-400 mb-6">Who Should Use {tool.tool_name}?</h3>
+                  <h3 className="text-2xl font-bold text-cyan-400 mb-6">Who Should Use {safeToolName}?</h3>
                   <div className="grid md:grid-cols-2 gap-6">
                     <div>
                       <h4 className="text-lg font-semibold text-white mb-3">Ideal For:</h4>
@@ -638,7 +648,7 @@ export default function ReviewPage({ tool, pageTitle, slug, relatedTools, relate
 
             {activeTab === 'pros-cons' && (
               <div>
-                <h2 className="text-3xl font-bold text-white mb-8">{tool.tool_name} Pros and Cons</h2>
+                <h2 className="text-3xl font-bold text-white mb-8">{safeToolName} Pros and Cons</h2>
                 <div className="grid md:grid-cols-2 gap-8">
                   <div className="bg-black border border-gray-800 p-8 rounded-xl">
                     <h3 className="text-2xl font-bold text-green-400 mb-6">Pros</h3>
@@ -673,7 +683,7 @@ export default function ReviewPage({ tool, pageTitle, slug, relatedTools, relate
 
             {activeTab === 'faq' && (
               <div>
-                <h2 className="text-3xl font-bold text-white mb-8">Frequently Asked Questions about {tool.tool_name}</h2>
+                <h2 className="text-3xl font-bold text-white mb-8">Frequently Asked Questions about {safeToolName}</h2>
                 <div className="space-y-6">
                   {sampleFaqs.map((faq, index) => (
                     <div key={index} className="bg-black border border-gray-800 p-6 rounded-xl">
@@ -692,8 +702,8 @@ export default function ReviewPage({ tool, pageTitle, slug, relatedTools, relate
         <section className="py-16 relative z-10">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-12">
-              <h2 className="text-3xl font-bold text-white mb-4">{tool.tool_name} Comparisons</h2>
-              <p className="text-lg text-gray-300">See how {tool.tool_name} compares to other AI tools</p>
+              <h2 className="text-3xl font-bold text-white mb-4">{safeToolName} Comparisons</h2>
+              <p className="text-lg text-gray-300">See how {safeToolName} compares to other AI tools</p>
             </div>
             
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -726,7 +736,7 @@ export default function ReviewPage({ tool, pageTitle, slug, relatedTools, relate
         <section className="py-16 relative z-10">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-12">
-              <h2 className="text-3xl font-bold text-white mb-4">{tool.tool_name} Alternatives</h2>
+              <h2 className="text-3xl font-bold text-white mb-4">{safeToolName} Alternatives</h2>
               <p className="text-lg text-gray-300">Explore other AI tools in this category</p>
             </div>
             
@@ -768,7 +778,7 @@ export default function ReviewPage({ tool, pageTitle, slug, relatedTools, relate
         </section>
 
         {/* Expert CTA Section */}
-        <ExpertCTASection toolName={tool.tool_name} />
+        <ExpertCTASection toolName={safeToolName} />
 
       </div>
     </>
@@ -845,24 +855,20 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
   
   // Generate safe title with fallback
   const generateSafeTitle = (tool: Tool, slug: string): string => {
-    if (tool.tool_name && tool.tool_name.trim()) {
-      return `${tool.tool_name} Review — Features, Pricing, Pros & Cons [2025]`;
-    }
+    const toolName = tool.tool_name && tool.tool_name.trim() ? tool.tool_name : 
+      slug.split('-').map(word => word.charAt(0).toUpperCase() + word.slice(1)).join(' ')
+        .replace(/\bAi\b/g, 'AI').replace(/\bApi\b/g, 'API').replace(/\bSeo\b/g, 'SEO').replace(/\bUx\b/g, 'UX');
     
-    // Fallback: generate title from slug
-    const fallbackName = slug
-      .split('-')
-      .map(word => word.charAt(0).toUpperCase() + word.slice(1))
-      .join(' ')
-      .replace(/\bAi\b/g, 'AI')
-      .replace(/\bApi\b/g, 'API')
-      .replace(/\bSeo\b/g, 'SEO');
-    
-    return `${fallbackName} Review — Features, Pricing, Pros & Cons [2025]`;
+    return `${toolName} Review — Features, Pricing, Pros & Cons [2025]`;
   };
 
   const pageTitle = generateSafeTitle(tool, toolSlug);
   const slug = toolSlug;
+  
+  // Generate safe tool name for use in getStaticProps
+  const safeToolName = tool.tool_name && tool.tool_name.trim() ? tool.tool_name : 
+    toolSlug.split('-').map(word => word.charAt(0).toUpperCase() + word.slice(1)).join(' ')
+      .replace(/\bAi\b/g, 'AI').replace(/\bApi\b/g, 'API').replace(/\bSeo\b/g, 'SEO').replace(/\bUx\b/g, 'UX');
 
   // Get related tools (exclude current tool)
   const relatedTools = tools.filter((t: any) => t.tool_name !== tool.tool_name);
@@ -888,7 +894,7 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
     
     if (otherTool) {
       relatedComparisons.push({
-        title: `${tool.tool_name} vs ${otherTool.tool_name}`,
+        title: `${safeToolName} vs ${otherTool.tool_name}`,
         slug: `${currentSlug}/vs/${otherPublicTool.slug}`,
         toolAName: tool.tool_name,
         toolBName: otherTool.tool_name,
