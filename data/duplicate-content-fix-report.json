@@ -1,0 +1,16 @@
+{
+  "totalPages": 234,
+  "toolsInDatabase": 264,
+  "toolsWithContent": 233,
+  "toolsMissing": [
+    "6sense-ai-driven-revenue-growth-optimization"
+  ],
+  "contentVariationsGenerated": 5,
+  "fixesApplied": [
+    "Dynamic intro paragraph generation",
+    "Category-specific audience targeting",
+    "Unique content templates with tool-specific data",
+    "Consistent template selection based on tool slug",
+    "Rating and pricing integration"
+  ]
+}

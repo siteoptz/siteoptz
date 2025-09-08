@@ -60,6 +60,46 @@ interface ReviewPageProps {
 }
 
 export default function ReviewPage({ tool, pageTitle, slug, relatedTools, relatedComparisons, hasSEOVersion, seoData }: ReviewPageProps) {
+  // Generate unique intro content based on tool and category
+  const generateUniqueIntro = (tool: Tool, slug: string): string => {
+    const toolName = tool.tool_name || slug.split('-').map(w => w.charAt(0).toUpperCase() + w.slice(1)).join(' ');
+    // Try to get category from seoData or default to AI Tools
+    const category = seoData?.category || 'AI Tools';
+    const targetAudience = targetAudienceMap[category] || 'professionals and businesses';
+    
+    const templates = [
+      `Looking for a comprehensive ${toolName} review? This detailed analysis covers everything you need to know about ${toolName}, including features, pricing, pros and cons, and alternatives. Whether you're ${targetAudience}, this review will help you make an informed decision.`,
+      
+      `Considering ${toolName} for your ${category.toLowerCase()} needs? This in-depth review examines the platform's capabilities, pricing structure, and real-world performance. We'll explore how ${toolName} compares to alternatives and whether it's the right fit for your requirements.`,
+      
+      `${toolName} has been gaining attention in the ${category.toLowerCase()} space. This comprehensive review breaks down ${toolName}'s features, pricing plans, and user experience to help you determine if this tool meets your specific requirements.`,
+      
+      `Is ${toolName} worth the investment? This detailed review analyzes ${toolName}'s features, pricing, performance, and user feedback. Perfect for ${targetAudience} evaluating solutions, we cover everything from basic functionality to advanced capabilities.`,
+      
+      `Searching for an honest ${toolName} review? We've tested ${toolName} extensively to bring you an unbiased analysis of its features, pricing, and performance. This review is designed for those who need reliable solutions.`
+    ];
+    
+    // Use slug hash to consistently select template variation
+    const slugHash = slug.split('').reduce((a, b) => a + b.charCodeAt(0), 0);
+    return templates[slugHash % templates.length];
+  };
+
+  const targetAudienceMap: Record<string, string> = {
+    'Content Creation': 'content creators, marketing teams, and businesses looking to scale their content production',
+    'SEO & Optimization': 'SEO professionals, digital marketers, and website owners',
+    'Social Media': 'social media managers, marketing agencies, and businesses managing multiple social platforms',
+    'Productivity': 'teams, project managers, and professionals seeking to streamline their workflows',
+    'AI Automation': 'businesses, developers, and operations teams looking to automate processes',
+    'Data Analysis': 'data analysts, researchers, and businesses needing insights from their data',
+    'Email Marketing': 'marketers, e-commerce businesses, and teams managing email campaigns',
+    'Best Voice AI Tools': 'content creators, podcasters, and businesses needing voice solutions',
+    'Video Generation': 'video creators, marketers, and businesses creating video content',
+    'Image Generation': 'designers, marketers, and content creators needing visual assets',
+    'Design': 'designers, creative teams, and businesses needing design solutions',
+    'Development': 'developers, software teams, and technical organizations',
+    'Research': 'researchers, analysts, and professionals conducting market research',
+    'Other': 'professionals, businesses, and teams'
+  };
   // Generate safe tool name for H1 and other elements
   const safeToolName = tool.tool_name && tool.tool_name.trim() ? tool.tool_name : 
     slug.split('-').map(word => word.charAt(0).toUpperCase() + word.slice(1)).join(' ')
@@ -412,6 +452,13 @@ export default function ReviewPage({ tool, pageTitle, slug, relatedTools, relate
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             {activeTab === 'overview' && (
               <div className="prose prose-lg max-w-none">
+                {/* Unique intro paragraph to prevent duplicate content */}
+                <div className="mb-8 p-6 bg-black border border-gray-800 rounded-xl">
+                  <p className="text-gray-300 leading-relaxed">
+                    {generateUniqueIntro(tool, slug)}
+                  </p>
+                </div>
+                
                 <h2 className="text-3xl font-bold text-white mb-6">What is {safeToolName}?</h2>
                 <p className="text-gray-300 mb-8">{tool.description}</p>
                 
