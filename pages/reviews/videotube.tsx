@@ -64,7 +64,7 @@ export default function VideotubeReview() {
               <h2 className="text-3xl font-bold text-white mb-6">Platform Overview & Positioning</h2>
               <div className="prose prose-invert max-w-none">
                 <p className="text-gray-300 mb-4">Videotube represents a significant solution in the AI technology landscape, designed to address specific business challenges and use cases.</p>
-                <p className="text-gray-300 mb-4">This comprehensive review examines the platform's capabilities, performance characteristics, and suitability for different organizational needs and requirements.</p>
+                <p className="text-gray-300 mb-4">This comprehensive review examines the platform&apos;s capabilities, performance characteristics, and suitability for different organizational needs and requirements.</p>
                 <p className="text-gray-300 mb-4">Our analysis covers technical features, pricing models, user experience, integration capabilities, and overall value proposition based on extensive evaluation and user feedback.</p>
               </div>
             </section>

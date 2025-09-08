@@ -128,7 +128,7 @@ The platform provides access to large language models through simple APIs, enabl
 - Dedicated customer success manager
 
 **Value Analysis:**
-Cohere's pricing is competitive with other enterprise NLP providers, offering excellent value for organizations requiring high-volume processing with enterprise-grade security and support.</p>
+Cohere&apos;s pricing is competitive with other enterprise NLP providers, offering excellent value for organizations requiring high-volume processing with enterprise-grade security and support.</p>
               </div>
             </section>
             <section className="bg-black/50 border border-gray-800 rounded-2xl p-8">
