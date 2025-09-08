@@ -248,28 +248,33 @@ export default function EmailCaptureForm({
       setIsSubmitted(true);
       onSuccess?.();
 
-      // Send copy to info@siteoptz.com
-      await fetch('/api/email-capture', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({
-          email: 'info@siteoptz.com',
-          tool: 'New Newsletter Subscription',
-          calculatedCost: null,
-          users: 1,
-          planType: 'notification',
-          source: `${source} - New subscriber: ${formData.email}`,
-          additionalData: {
-            subscriberEmail: formData.email,
-            subscriberName: formData.name,
-            subscriberCompany: formData.company,
-            useCase: formData.useCase,
-            interests: formData.interests,
-            tool,
-            category
-          }
-        }),
-      });
+      // Send copy to info@siteoptz.com (don't fail if this fails)
+      try {
+        await fetch('/api/email-capture', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({
+            email: 'info@siteoptz.com',
+            tool: 'New Newsletter Subscription',
+            calculatedCost: null,
+            users: 1,
+            planType: 'notification',
+            source: `${source} - New subscriber: ${formData.email}`,
+            additionalData: {
+              subscriberEmail: formData.email,
+              subscriberName: formData.name,
+              subscriberCompany: formData.company,
+              useCase: formData.useCase,
+              interests: formData.interests,
+              tool,
+              category
+            }
+          }),
+        });
+      } catch (notificationError) {
+        // Don't fail the form submission if notification fails
+        console.warn('Failed to send notification email, but subscription succeeded:', notificationError);
+      }
 
     } catch (err) {
       const errorMessage = err instanceof Error ? err.message : 'Something went wrong. Please try again.';

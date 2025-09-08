@@ -92,10 +92,19 @@ export default function ContactPage() {
     setError('');
 
     try {
+      console.log('🚀 Submitting contact form with data:', {
+        formData,
+        url: '/api/email-capture',
+        timestamp: new Date().toISOString()
+      });
+
       // Send contact form email
       const response = await fetch('/api/email-capture', {
         method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
+        headers: { 
+          'Content-Type': 'application/json',
+          'Accept': 'application/json'
+        },
         body: JSON.stringify({
           email: 'info@siteoptz.com',
           tool: `Contact Form: ${formData.subject}`,
@@ -116,29 +125,47 @@ export default function ContactPage() {
         }),
       });
 
+      console.log('📡 API Response:', {
+        status: response.status,
+        statusText: response.statusText,
+        ok: response.ok,
+        headers: Object.fromEntries(response.headers.entries())
+      });
+
       if (!response.ok) {
-        throw new Error('Failed to send message');
+        const errorText = await response.text().catch(() => 'Unknown error');
+        console.error('❌ API Error Response:', {
+          status: response.status,
+          statusText: response.statusText,
+          body: errorText
+        });
+        throw new Error(`Failed to send message (${response.status}): ${errorText}`);
       }
 
-      // Send confirmation email to sender
-      await fetch('/api/email-capture', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({
-          email: formData.email,
-          tool: 'Contact Form Confirmation',
-          calculatedCost: null,
-          users: 1,
-          planType: 'confirmation',
-          source: 'Contact form auto-reply',
-          additionalData: {
-            isConfirmation: true,
-            originalSubject: formData.subject,
-            originalMessage: formData.message,
-            name: formData.name
-          }
-        }),
-      });
+      // Send confirmation email to sender (don't fail if this fails)
+      try {
+        await fetch('/api/email-capture', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({
+            email: formData.email,
+            tool: 'Contact Form Confirmation',
+            calculatedCost: null,
+            users: 1,
+            planType: 'confirmation',
+            source: 'Contact form auto-reply',
+            additionalData: {
+              isConfirmation: true,
+              originalSubject: formData.subject,
+              originalMessage: formData.message,
+              name: formData.name
+            }
+          }),
+        });
+        console.log('✅ Confirmation email queued successfully');
+      } catch (confirmError) {
+        console.warn('⚠️ Failed to send confirmation email, but main contact submission succeeded:', confirmError);
+      }
 
       // Track contact form submission
       if (typeof window !== 'undefined' && window.gtag) {
@@ -152,14 +179,25 @@ export default function ContactPage() {
       setIsSubmitted(true);
 
     } catch (err) {
-      const errorMessage = err instanceof Error ? err.message : 'Something went wrong. Please try again.';
+      console.error('💥 Contact form submission error:', err);
+      
+      let errorMessage = 'Something went wrong. Please try again.';
+      
+      if (err instanceof TypeError && err.message.includes('fetch')) {
+        errorMessage = 'Network error. Please check your connection and try again.';
+      } else if (err instanceof Error) {
+        errorMessage = err.message;
+      }
+      
       setError(errorMessage);
       
-      // Track error
+      // Track error with more details
       if (typeof window !== 'undefined' && window.gtag) {
         window.gtag('event', 'contact_form_error', {
           event_category: 'engagement',
           event_label: errorMessage,
+          custom_parameter_1: err instanceof Error ? err.name : 'Unknown',
+          custom_parameter_2: window.location.href,
           value: 0
         });
       }
