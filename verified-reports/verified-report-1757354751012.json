@@ -1,0 +1,27 @@
+{
+  "timestamp": "2025-09-08T18:05:51.011Z",
+  "summary": {
+    "totalCrawled": 10,
+    "verified": 2,
+    "rejected": 7,
+    "verificationRate": "20.0%",
+    "errors": 0
+  },
+  "verifiedTools": [
+    {
+      "name": "AI Code Reviews",
+      "description": "Supercharge your team to ship faster with the most advanced AI code reviews....",
+      "website": "https://coderabbit.ai/?ref=taaft_feat&utm_source=taaft_feat&utm_medium=referral",
+      "verificationScore": 86,
+      "source": "https://theresanaiforthat.com/"
+    },
+    {
+      "name": "AI Image Editor",
+      "description": "Experience the most advanced AI image editor available today....",
+      "website": "https://imagable.ai/tools/image-editor?ref=taaft&utm_source=taaft&utm_medium=referral \"Open website\"",
+      "verificationScore": 71,
+      "source": "https://theresanaiforthat.com/"
+    }
+  ],
+  "rejectionReasons": {}
+}

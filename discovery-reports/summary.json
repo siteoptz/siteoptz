@@ -1,0 +1,16 @@
+{
+  "reports": [
+    {
+      "timestamp": "2025-09-08T17:35:29.315Z",
+      "file": "report-1757352929316.json",
+      "stats": {
+        "discovered": 4,
+        "crawled": 44,
+        "validated": 43,
+        "added": 0,
+        "duplicates": 1,
+        "errors": 0
+      }
+    }
+  ]
+}

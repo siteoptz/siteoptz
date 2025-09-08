@@ -17,6 +17,8 @@ export interface SEOComponentProps {
 
 // Lazy load components to improve performance
 const seoComponents: Record<string, () => Promise<{ default: ComponentType<SEOComponentProps> }>> = {
+  // Temporarily disabled due to missing production-components directory
+  /*
   'acquisio': () => import('../seo-optimization/production-components/AcquisioReviewPage'),
   'adalysis': () => import('../seo-optimization/production-components/AdalysisReviewPage'),
   'adbeat': () => import('../seo-optimization/production-components/AdbeatReviewPage'),
@@ -263,6 +265,7 @@ const seoComponents: Record<string, () => Promise<{ default: ComponentType<SEOCo
   'convertfilesai-free-image-file-converter': () => import('../seo-optimization/production-components/ConvertfilesaiFreeImageFileConverterReviewPage'),
   'coze-build-ai-chatbots-effortlessly': () => import('../seo-optimization/production-components/CozeBuildAiChatbotsEffortlesslyReviewPage'),
   'divedeck-aipowered-deck-builder': () => import('../seo-optimization/production-components/DivedeckAipoweredDeckBuilderReviewPage'),
+  */
 };
 
 // Check if a SEO-optimized component exists for a given slug

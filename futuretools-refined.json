@@ -1,0 +1,67 @@
+[
+  {
+    "name": "Replit AI",
+    "description": "AI-powered coding assistant that helps developers write, debug, and deploy code faster with intelligent suggestions and automated workflows.",
+    "website": "https://replit.com",
+    "developer": "Replit",
+    "features": ["AI code completion", "Real-time collaboration", "Automated deployment", "Multi-language support", "Code debugging assistance"],
+    "category": "AI Automation",
+    "verification": {
+      "isVerified": true,
+      "score": 92,
+      "source": "futuretools_manual"
+    }
+  },
+  {
+    "name": "Synthesia",
+    "description": "Professional AI video generation platform that creates high-quality videos from text with realistic AI avatars and voices for business and marketing.",
+    "website": "https://synthesia.io",
+    "developer": "Synthesia",
+    "features": ["AI avatar generation", "Text-to-video conversion", "Multi-language voices", "Custom branding", "Professional templates"],
+    "category": "Video Generation",
+    "verification": {
+      "isVerified": true,
+      "score": 95,
+      "source": "futuretools_manual"
+    }
+  },
+  {
+    "name": "Luma Dream Machine",
+    "description": "Advanced AI video generator that creates stunning, high-quality videos from text prompts and images with realistic motion and cinematic quality.",
+    "website": "https://lumalabs.ai",
+    "developer": "Luma Labs",
+    "features": ["Text-to-video generation", "Image-to-video conversion", "Cinematic quality output", "Realistic motion physics", "High-resolution rendering"],
+    "category": "Video Generation",
+    "verification": {
+      "isVerified": true,
+      "score": 90,
+      "source": "futuretools_manual"
+    }
+  },
+  {
+    "name": "ElevenLabs Voice AI",
+    "description": "State-of-the-art voice synthesis platform that generates realistic speech from text with emotion, custom voice cloning, and multilingual support.",
+    "website": "https://elevenlabs.io",
+    "developer": "ElevenLabs",
+    "features": ["Voice cloning technology", "Emotional speech synthesis", "Multilingual support", "Real-time voice generation", "API integration"],
+    "category": "Voice AI",
+    "verification": {
+      "isVerified": true,
+      "score": 93,
+      "source": "futuretools_manual"
+    }
+  },
+  {
+    "name": "Jasper AI",
+    "description": "Comprehensive AI writing platform that creates high-quality content, marketing copy, and business communications with brand voice consistency.",
+    "website": "https://jasper.ai",
+    "developer": "Jasper",
+    "features": ["Brand voice training", "Long-form content creation", "Marketing copy generation", "Multi-language support", "Template library"],
+    "category": "Content Creation",
+    "verification": {
+      "isVerified": true,
+      "score": 88,
+      "source": "futuretools_manual"
+    }
+  }
+]

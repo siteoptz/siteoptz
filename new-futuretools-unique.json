@@ -1,0 +1,42 @@
+[
+  {
+    "name": "ReceiptBot Pro",
+    "description": "Advanced AI-powered receipt processing platform that automatically extracts, categorizes, and integrates financial data from receipts into accounting systems with real-time expense tracking and fraud detection capabilities.",
+    "website": "https://receiptbotpro.ai",
+    "developer": "ReceiptBot Technologies",
+    "features": ["OCR receipt scanning", "Expense categorization", "Accounting integration", "Fraud detection", "Multi-currency support"],
+    "category": "Finance"
+  },
+  {
+    "name": "CodeBlock Generator",
+    "description": "No-code platform that transforms natural language descriptions into functional WordPress blocks, plugins, and custom code components with automated testing and deployment capabilities.",
+    "website": "https://codeblockgen.com",
+    "developer": "CodeBlock Inc",
+    "features": ["Natural language to code", "WordPress plugin generation", "Automated testing", "One-click deployment", "Version control"],
+    "category": "AI Automation"
+  },
+  {
+    "name": "SecureCode AI",
+    "description": "Intelligent code security platform that detects vulnerabilities, security flaws, and potential exploits in AI-generated code with automated fixes and compliance reporting.",
+    "website": "https://securecodeai.dev",
+    "developer": "SecureCode Labs",
+    "features": ["Vulnerability detection", "Automated security fixes", "Compliance reporting", "Real-time monitoring", "Code quality analysis"],
+    "category": "AI Automation"
+  },
+  {
+    "name": "ArticleToVideo Pro",
+    "description": "Advanced content transformation platform that converts written articles, blog posts, and documents into engaging video content with AI narration, animations, and customizable templates.",
+    "website": "https://articletovideo.pro",
+    "developer": "VideoTransform Ltd",
+    "features": ["Text-to-video conversion", "AI narration", "Custom animations", "Template library", "Social media optimization"],
+    "category": "Video Generation"
+  },
+  {
+    "name": "SocialVid Analytics",
+    "description": "Comprehensive social video intelligence platform that searches, analyzes, and summarizes video content across social media platforms with sentiment analysis and trend tracking.",
+    "website": "https://socialvidanalytics.ai",
+    "developer": "SocialVid Corp",
+    "features": ["Video content analysis", "Sentiment tracking", "Trend identification", "Cross-platform search", "Performance analytics"],
+    "category": "Social Media"
+  }
+]

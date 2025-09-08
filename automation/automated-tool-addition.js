@@ -75,8 +75,10 @@ class AutomatedToolAddition {
         duplicates.push({ type: 'slug', existing: existingTool });
       }
       
-      // Check for URL match
-      if (existingTool.overview?.website === newTool.website) {
+      // Check for URL match (handle both nested and top-level website fields)
+      const existingWebsite = existingTool.overview?.website || existingTool.website;
+      const newWebsite = newTool.overview?.website || newTool.website;
+      if (existingWebsite && newWebsite && existingWebsite === newWebsite) {
         duplicates.push({ type: 'website', existing: existingTool });
       }
       

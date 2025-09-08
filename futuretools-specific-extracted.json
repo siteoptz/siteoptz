@@ -1,0 +1,549 @@
+[
+  {
+    "name": "Receiptor AI",
+    "description": "A platform that extracts, organizes, and categorizes financial data from receipts across multiple sources for accounting integration.",
+    "website": "https://receiptor.com",
+    "developer": "emails",
+    "features": [
+      "Real-time processing",
+      "API integration",
+      "Automated workflows",
+      "AI-powered analysis"
+    ],
+    "category": "Finance",
+    "pricing": [
+      {
+        "plan": "Free",
+        "price_per_month": 0,
+        "features": [
+          "Basic features",
+          "Limited usage"
+        ]
+      },
+      {
+        "plan": "Pro",
+        "price_per_month": 29,
+        "features": [
+          "Full features",
+          "Priority support"
+        ]
+      }
+    ],
+    "verification": {
+      "isVerified": true,
+      "score": 85,
+      "source": "futuretools_specific_extraction"
+    }
+  },
+  {
+    "name": "Telex",
+    "description": "Thank you! Your submission has been received!\n\nOops! Something went wrong while submitting the form.",
+    "website": "https://telex.com",
+    "developer": "Automattic that transforms natural language descriptions into functional WordPress Gutenberg blocks and plugins without requiring any coding knowledge",
+    "features": [
+      "API integration",
+      "Automated workflows",
+      "AI-powered analysis",
+      "Custom templates",
+      "Export capabilities"
+    ],
+    "category": "AI Automation",
+    "pricing": [
+      {
+        "plan": "Free",
+        "price_per_month": 0,
+        "features": [
+          "Basic features",
+          "Limited usage"
+        ]
+      },
+      {
+        "plan": "Pro",
+        "price_per_month": 29,
+        "features": [
+          "Full features",
+          "Priority support"
+        ]
+      }
+    ],
+    "verification": {
+      "isVerified": true,
+      "score": 85,
+      "source": "futuretools_specific_extraction"
+    }
+  },
+  {
+    "name": "Rafter",
+    "description": "Thank you! Your submission has been received!\n\nOops! Something went wrong while submitting the form.",
+    "website": "https://rafter.com",
+    "developer": "removing barriers and automating scanning",
+    "features": [
+      "Real-time processing",
+      "Automated workflows",
+      "AI-powered analysis",
+      "Collaboration tools"
+    ],
+    "category": "AI Automation",
+    "pricing": [
+      {
+        "plan": "Free",
+        "price_per_month": 0,
+        "features": [
+          "Basic features",
+          "Limited usage"
+        ]
+      },
+      {
+        "plan": "Pro",
+        "price_per_month": 29,
+        "features": [
+          "Full features",
+          "Priority support"
+        ]
+      }
+    ],
+    "verification": {
+      "isVerified": true,
+      "score": 85,
+      "source": "futuretools_specific_extraction"
+    }
+  },
+  {
+    "name": "Symvol",
+    "description": "Thank you! Your submission has been received!\n\nOops! Something went wrong while submitting the form.",
+    "website": "https://symvol.com",
+    "developer": "presenting information visually rather than textually",
+    "features": [
+      "Real-time processing",
+      "Automated workflows",
+      "AI-powered analysis"
+    ],
+    "category": "Video Generation",
+    "pricing": [
+      {
+        "plan": "Free",
+        "price_per_month": 0,
+        "features": [
+          "Basic features",
+          "Limited usage"
+        ]
+      },
+      {
+        "plan": "Pro",
+        "price_per_month": 29,
+        "features": [
+          "Full features",
+          "Priority support"
+        ]
+      }
+    ],
+    "verification": {
+      "isVerified": true,
+      "score": 85,
+      "source": "futuretools_specific_extraction"
+    }
+  },
+  {
+    "name": "Quiki.io",
+    "description": "Thank you! Your submission has been received!\n\nOops! Something went wrong while submitting the form.",
+    "website": "https://quikiio.com",
+    "developer": "marketing intelligence to campaign planning",
+    "features": [
+      "Real-time processing",
+      "Automated workflows",
+      "AI-powered analysis",
+      "Custom templates",
+      "Export capabilities"
+    ],
+    "category": "Social Media",
+    "pricing": [
+      {
+        "plan": "Free",
+        "price_per_month": 0,
+        "features": [
+          "Basic features",
+          "Limited usage"
+        ]
+      },
+      {
+        "plan": "Pro",
+        "price_per_month": 29,
+        "features": [
+          "Full features",
+          "Priority support"
+        ]
+      }
+    ],
+    "verification": {
+      "isVerified": true,
+      "score": 85,
+      "source": "futuretools_specific_extraction"
+    }
+  },
+  {
+    "name": "HumanLayer",
+    "description": "Thank you! Your submission has been received!\n\nOops! Something went wrong while submitting the form.",
+    "website": "https://humanlayer.com",
+    "developer": "your purchase",
+    "features": [
+      "API integration",
+      "Automated workflows",
+      "User-friendly interface",
+      "Professional results",
+      "Scalable solution"
+    ],
+    "category": "Productivity",
+    "pricing": [
+      {
+        "plan": "Free",
+        "price_per_month": 0,
+        "features": [
+          "Basic features",
+          "Limited usage"
+        ]
+      },
+      {
+        "plan": "Pro",
+        "price_per_month": 29,
+        "features": [
+          "Full features",
+          "Priority support"
+        ]
+      }
+    ],
+    "verification": {
+      "isVerified": true,
+      "score": 85,
+      "source": "futuretools_specific_extraction"
+    }
+  },
+  {
+    "name": "SparkToro",
+    "description": "Thank you! Your submission has been received!\n\nOops! Something went wrong while submitting the form.",
+    "website": "https://sparktoro.com",
+    "developer": "documents",
+    "features": [
+      "AI-powered analysis",
+      "Custom templates",
+      "User-friendly interface",
+      "Professional results",
+      "Scalable solution"
+    ],
+    "category": "Research",
+    "pricing": [
+      {
+        "plan": "Free",
+        "price_per_month": 0,
+        "features": [
+          "Basic features",
+          "Limited usage"
+        ]
+      },
+      {
+        "plan": "Pro",
+        "price_per_month": 29,
+        "features": [
+          "Full features",
+          "Priority support"
+        ]
+      }
+    ],
+    "verification": {
+      "isVerified": true,
+      "score": 85,
+      "source": "futuretools_specific_extraction"
+    }
+  },
+  {
+    "name": "Cubic",
+    "description": "Thank you! Your submission has been received!\n\nOops! Something went wrong while submitting the form.",
+    "website": "https://cubic.com",
+    "developer": "reviewer patterns over time",
+    "features": [
+      "Real-time processing",
+      "Automated workflows",
+      "AI-powered analysis",
+      "Collaboration tools"
+    ],
+    "category": "AI Automation",
+    "pricing": [
+      {
+        "plan": "Free",
+        "price_per_month": 0,
+        "features": [
+          "Basic features",
+          "Limited usage"
+        ]
+      },
+      {
+        "plan": "Pro",
+        "price_per_month": 29,
+        "features": [
+          "Full features",
+          "Priority support"
+        ]
+      }
+    ],
+    "verification": {
+      "isVerified": true,
+      "score": 85,
+      "source": "futuretools_specific_extraction"
+    }
+  },
+  {
+    "name": "VibeFlow",
+    "description": "Thank you! Your submission has been received!\n\nOops! Something went wrong while submitting the form.",
+    "website": "https://vibeflow.com",
+    "developer": "prompts",
+    "features": [
+      "API integration",
+      "Automated workflows",
+      "AI-powered analysis",
+      "Custom templates",
+      "Collaboration tools"
+    ],
+    "category": "AI Automation",
+    "pricing": [
+      {
+        "plan": "Free",
+        "price_per_month": 0,
+        "features": [
+          "Basic features",
+          "Limited usage"
+        ]
+      },
+      {
+        "plan": "Pro",
+        "price_per_month": 29,
+        "features": [
+          "Full features",
+          "Priority support"
+        ]
+      }
+    ],
+    "verification": {
+      "isVerified": true,
+      "score": 85,
+      "source": "futuretools_specific_extraction"
+    }
+  },
+  {
+    "name": "Athenic AI",
+    "description": "Thank you! Your submission has been received!\n\nOops! Something went wrong while submitting the form.",
+    "website": "https://athenic.com",
+    "developer": "integrating seamlessly with various data sources and democratizing access to analytics",
+    "features": [
+      "Real-time processing",
+      "Automated workflows",
+      "AI-powered analysis",
+      "Collaboration tools"
+    ],
+    "category": "Productivity",
+    "pricing": [
+      {
+        "plan": "Free",
+        "price_per_month": 0,
+        "features": [
+          "Basic features",
+          "Limited usage"
+        ]
+      },
+      {
+        "plan": "Pro",
+        "price_per_month": 29,
+        "features": [
+          "Full features",
+          "Priority support"
+        ]
+      }
+    ],
+    "verification": {
+      "isVerified": true,
+      "score": 85,
+      "source": "futuretools_specific_extraction"
+    }
+  },
+  {
+    "name": "Syllaby",
+    "description": "Thank you! Your submission has been received!\n\nOops! Something went wrong while submitting the form.",
+    "website": "https://syllaby.com",
+    "developer": "shows you how to create a content strategy for social media in minutes",
+    "features": [
+      "Custom templates",
+      "Collaboration tools",
+      "User-friendly interface",
+      "Professional results",
+      "Scalable solution"
+    ],
+    "category": "Social Media",
+    "pricing": [
+      {
+        "plan": "Free",
+        "price_per_month": 0,
+        "features": [
+          "Basic features",
+          "Limited usage"
+        ]
+      },
+      {
+        "plan": "Pro",
+        "price_per_month": 29,
+        "features": [
+          "Full features",
+          "Priority support"
+        ]
+      }
+    ],
+    "verification": {
+      "isVerified": true,
+      "score": 85,
+      "source": "futuretools_specific_extraction"
+    }
+  },
+  {
+    "name": "SmythOS",
+    "description": "Thank you! Your submission has been received!\n\nOops! Something went wrong while submitting the form.",
+    "website": "https://smythos.com",
+    "developer": "your purchase",
+    "features": [
+      "API integration",
+      "Automated workflows",
+      "AI-powered analysis",
+      "Custom templates"
+    ],
+    "category": "Productivity",
+    "pricing": [
+      {
+        "plan": "Free",
+        "price_per_month": 0,
+        "features": [
+          "Basic features",
+          "Limited usage"
+        ]
+      },
+      {
+        "plan": "Pro",
+        "price_per_month": 29,
+        "features": [
+          "Full features",
+          "Priority support"
+        ]
+      }
+    ],
+    "verification": {
+      "isVerified": true,
+      "score": 85,
+      "source": "futuretools_specific_extraction"
+    }
+  },
+  {
+    "name": "Plotaverse",
+    "description": "Thank you! Your submission has been received!\n\nOops! Something went wrong while submitting the form.",
+    "website": "https://plotaverse.com",
+    "developer": "text prompts",
+    "features": [
+      "Real-time processing",
+      "AI-powered analysis",
+      "Custom templates",
+      "Collaboration tools"
+    ],
+    "category": "Video Generation",
+    "pricing": [
+      {
+        "plan": "Free",
+        "price_per_month": 0,
+        "features": [
+          "Basic features",
+          "Limited usage"
+        ]
+      },
+      {
+        "plan": "Pro",
+        "price_per_month": 29,
+        "features": [
+          "Full features",
+          "Priority support"
+        ]
+      }
+    ],
+    "verification": {
+      "isVerified": true,
+      "score": 85,
+      "source": "futuretools_specific_extraction"
+    }
+  },
+  {
+    "name": "WaveSpeed AI",
+    "description": "Thank you! Your submission has been received!\n\nOops! Something went wrong while submitting the form.",
+    "website": "https://wavespeed.com",
+    "developer": "text",
+    "features": [
+      "Real-time processing",
+      "API integration",
+      "Automated workflows",
+      "AI-powered analysis",
+      "Custom templates"
+    ],
+    "category": "Image Generation",
+    "pricing": [
+      {
+        "plan": "Free",
+        "price_per_month": 0,
+        "features": [
+          "Basic features",
+          "Limited usage"
+        ]
+      },
+      {
+        "plan": "Pro",
+        "price_per_month": 29,
+        "features": [
+          "Full features",
+          "Priority support"
+        ]
+      }
+    ],
+    "verification": {
+      "isVerified": true,
+      "score": 85,
+      "source": "futuretools_specific_extraction"
+    }
+  },
+  {
+    "name": "Copilot 3D",
+    "description": "Thank you! Your submission has been received!\n\nOops! Something went wrong while submitting the form.",
+    "website": "https://copilot3d.com",
+    "developer": "eliminating technical barriers",
+    "features": [
+      "Real-time processing",
+      "API integration",
+      "AI-powered analysis",
+      "Custom templates",
+      "Export capabilities"
+    ],
+    "category": "Image Generation",
+    "pricing": [
+      {
+        "plan": "Free",
+        "price_per_month": 0,
+        "features": [
+          "Basic features",
+          "Limited usage"
+        ]
+      },
+      {
+        "plan": "Pro",
+        "price_per_month": 29,
+        "features": [
+          "Full features",
+          "Priority support"
+        ]
+      }
+    ],
+    "verification": {
+      "isVerified": true,
+      "score": 85,
+      "source": "futuretools_specific_extraction"
+    }
+  }
+]

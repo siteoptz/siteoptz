@@ -1,0 +1,228 @@
+{
+  "timestamp": "2025-09-08T17:35:29.315Z",
+  "stats": {
+    "discovered": 4,
+    "crawled": 44,
+    "validated": 43,
+    "added": 0,
+    "duplicates": 1,
+    "errors": 0
+  },
+  "summary": {
+    "successRate": "1075.0%",
+    "duplicateRate": "25.0%",
+    "errorRate": "0.0%"
+  },
+  "tools": [
+    {
+      "name": "Free AI",
+      "website": "https://cookiedatabase.org",
+      "source": "https://aixploria.com/en/"
+    },
+    {
+      "name": "Freemium",
+      "website": "https://cookiedatabase.org",
+      "source": "https://aixploria.com/en/"
+    },
+    {
+      "name": "Paid",
+      "website": "https://cookiedatabase.org",
+      "source": "https://aixploria.com/en/"
+    },
+    {
+      "name": "Free Trial",
+      "website": "https://cookiedatabase.org",
+      "source": "https://aixploria.com/en/"
+    },
+    {
+      "name": "« Manage your projects faster with a platform that brings teams, tasks, and documents together in one place. Its built-in AI summarizes your notes, writes for you, and automatically organizes your priorities »",
+      "website": "https://try.web.clickup.com/gslcwsp7r8e2 \"ClickUp\"",
+      "source": "https://aixploria.com/en/"
+    },
+    {
+      "name": "Create branded short links with your own dom",
+      "website": "https://app.dub.co",
+      "source": "https://aixploria.com/en/"
+    },
+    {
+      "name": "Create branded short links with your own dom",
+      "website": "https://app.dub.co",
+      "source": "https://aixploria.com/en/"
+    },
+    {
+      "name": "ThumbnailCreator.com",
+      "website": "https://www.thumbnailcreator.com/ \"ThumbnailCreator.com\"",
+      "source": "https://aixploria.com/en/"
+    },
+    {
+      "name": "« Quickly create eye-catching thumbnails for your videos on YouTube, Twitch and Facebook with AI. Attract more views and easily improve the click-through rate on your video clips »",
+      "website": "https://www.thumbnailcreator.com/ \"ThumbnailCreator.com\"",
+      "source": "https://aixploria.com/en/"
+    },
+    {
+      "name": "Chat with",
+      "website": "https://i10x.ai",
+      "source": "https://aixploria.com/en/"
+    },
+    {
+      "name": "Chat with",
+      "website": "https://i10x.ai",
+      "source": "https://aixploria.com/en/"
+    },
+    {
+      "name": "TikTok For Business",
+      "website": "https://getstartedtiktok.pxf.io/qzDW3O \"TikTok For Business\"",
+      "source": "https://aixploria.com/en/"
+    },
+    {
+      "name": "« Grow your brand by reaching millions of customers on TikTok with precise targeting in over 20 global markets. Launch your advertising campaigns in minutes with budgets tailored to all businesses »",
+      "website": "https://getstartedtiktok.pxf.io/qzDW3O \"TikTok For Business\"",
+      "source": "https://aixploria.com/en/"
+    },
+    {
+      "name": "Create faster with new intuitive image editing",
+      "website": "https://www.adobe.com",
+      "source": "https://aixploria.com/en/"
+    },
+    {
+      "name": "Create faster with new intuitive image editing",
+      "website": "https://www.adobe.com",
+      "source": "https://aixploria.com/en/"
+    },
+    {
+      "name": "Kling 2.1",
+      "website": "https://klingaiaffiliate.pxf.io/XmZjza \"Kling 2.1\"",
+      "source": "https://aixploria.com/en/"
+    },
+    {
+      "name": "« Generate 2-minute HD videos from text with its high-definition video generator: realistic movements, natural rendering, overflowing imagination. Sora's rival? »",
+      "website": "https://klingaiaffiliate.pxf.io/XmZjza \"Kling 2.1\"",
+      "source": "https://aixploria.com/en/"
+    },
+    {
+      "name": "HubSpot CRM",
+      "website": "https://hubspot.sjv.io/c/5293708/1722021/12893 \"HubSpot CRM\"",
+      "source": "https://aixploria.com/en/"
+    },
+    {
+      "name": "« Optimize your sales and marketing with a particularly intuitive, AI-driven professional CRM. Track your performance in real time and automate tasks more efficiently »",
+      "website": "https://hubspot.sjv.io/c/5293708/1722021/12893 \"HubSpot CRM\"",
+      "source": "https://aixploria.com/en/"
+    },
+    {
+      "name": "Speechify - AI Text To Speech Logo",
+      "website": "https://cdn.prod.website-files.com/63daf1fa1abcbc5e7969d7c9/64d7de3c3e53d03e5fc4d60c_speechify-fav%20(1",
+      "source": "https://dang.ai/"
+    },
+    {
+      "name": "Or\n\nEm",
+      "website": "https://d1wqzb5bdbcre6.cloudfront.net",
+      "source": "https://dang.ai/"
+    },
+    {
+      "name": "Or\n\nEm",
+      "website": "https://d1wqzb5bdbcre6.cloudfront.net",
+      "source": "https://dang.ai/"
+    },
+    {
+      "name": "The power of building websites in a Website Experience",
+      "website": "https://webflow.com",
+      "source": "https://dang.ai/"
+    },
+    {
+      "name": "NameEm",
+      "website": "https://cdn.prod.website-files.com",
+      "source": "https://futuretools.io/"
+    },
+    {
+      "name": "Free\n\nFreemium\n\nGitHub\n\nGoogle Colab\n\nOpen Source\n\nP",
+      "website": "https://cdn.prod.website-files.com",
+      "source": "https://futuretools.io/"
+    },
+    {
+      "name": "NameEm",
+      "website": "https://cdn.prod.website-files.com",
+      "source": "https://futuretools.io/"
+    },
+    {
+      "name": "Free\n\nFreemium\n\nGitHub\n\nGoogle Colab\n\nOpen Source\n\nP",
+      "website": "https://cdn.prod.website-files.com",
+      "source": "https://futuretools.io/"
+    },
+    {
+      "name": "NameEm",
+      "website": "https://cdn.prod.website-files.com",
+      "source": "https://futuretools.io/"
+    },
+    {
+      "name": "Free\n\nFreemium\n\nGitHub\n\nGoogle Colab\n\nOpen Source\n\nP",
+      "website": "https://cdn.prod.website-files.com",
+      "source": "https://futuretools.io/"
+    },
+    {
+      "name": "NameEm",
+      "website": "https://cdn.prod.website-files.com",
+      "source": "https://futuretools.io/"
+    },
+    {
+      "name": "Free\n\nFreemium\n\nGitHub\n\nGoogle Colab\n\nOpen Source\n\nP",
+      "website": "https://cdn.prod.website-files.com",
+      "source": "https://futuretools.io/"
+    },
+    {
+      "name": "NameEm",
+      "website": "https://cdn.prod.website-files.com",
+      "source": "https://futuretools.io/"
+    },
+    {
+      "name": "Free\n\nFreemium\n\nGitHub\n\nGoogle Colab\n\nOpen Source\n\nP",
+      "website": "https://cdn.prod.website-files.com",
+      "source": "https://futuretools.io/"
+    },
+    {
+      "name": "NameEm",
+      "website": "https://cdn.prod.website-files.com",
+      "source": "https://futuretools.io/"
+    },
+    {
+      "name": "Free\n\nFreemium\n\nGitHub\n\nGoogle Colab\n\nOpen Source\n\nP",
+      "website": "https://cdn.prod.website-files.com",
+      "source": "https://futuretools.io/"
+    },
+    {
+      "name": "NameEm",
+      "website": "https://cdn.prod.website-files.com",
+      "source": "https://futuretools.io/"
+    },
+    {
+      "name": "Free\n\nFreemium\n\nGitHub\n\nGoogle Colab\n\nOpen Source\n\nP",
+      "website": "https://cdn.prod.website-files.com",
+      "source": "https://futuretools.io/"
+    },
+    {
+      "name": "NameEm",
+      "website": "https://cdn.prod.website-files.com",
+      "source": "https://futuretools.io/"
+    },
+    {
+      "name": "NameEm",
+      "website": "https://cdn.prod.website-files.com",
+      "source": "https://futuretools.io/"
+    },
+    {
+      "name": "Free\n\nFreemium\n\nGitHub\n\nGoogle Colab\n\nOpen Source\n\nP",
+      "website": "https://cdn.prod.website-files.com",
+      "source": "https://futuretools.io/"
+    },
+    {
+      "name": "NameEm",
+      "website": "https://cdn.prod.website-files.com",
+      "source": "https://futuretools.io/"
+    },
+    {
+      "name": "Free\n\nFreemium\n\nGitHub\n\nGoogle Colab\n\nOpen Source\n\nP",
+      "website": "https://cdn.prod.website-files.com",
+      "source": "https://futuretools.io/"
+    }
+  ]
+}

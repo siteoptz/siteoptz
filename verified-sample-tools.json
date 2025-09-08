@@ -1,0 +1,38 @@
+[
+  {
+    "name": "Claude 3.5 Sonnet",
+    "description": "Anthropic's most intelligent AI model, capable of complex reasoning, analysis, and creative tasks with improved performance over previous versions.",
+    "website": "https://claude.ai",
+    "developer": "Anthropic",
+    "category": "AI Assistants",
+    "features": ["Advanced reasoning", "Code generation", "Creative writing", "Data analysis", "Multi-language support"],
+    "verified": true,
+    "verification_score": 95,
+    "source": "manual_verification",
+    "discovered_at": "2025-09-08T18:05:00.000Z"
+  },
+  {
+    "name": "Runway ML",
+    "description": "AI-powered video generation and editing platform that creates professional-quality videos from text prompts and images.",
+    "website": "https://runwayml.com",
+    "developer": "Runway",
+    "category": "Video Generation",
+    "features": ["Text-to-video generation", "Image-to-video conversion", "AI video editing", "Motion graphics", "Green screen removal"],
+    "verified": true,
+    "verification_score": 90,
+    "source": "manual_verification",
+    "discovered_at": "2025-09-08T18:05:00.000Z"
+  },
+  {
+    "name": "Perplexity AI",
+    "description": "AI-powered search engine that provides accurate, real-time answers with citations and sources for research and information discovery.",
+    "website": "https://perplexity.ai",
+    "developer": "Perplexity",
+    "category": "AI Search",
+    "features": ["Real-time search", "Source citations", "Academic research", "Multi-modal search", "API access"],
+    "verified": true,
+    "verification_score": 92,
+    "source": "manual_verification",
+    "discovered_at": "2025-09-08T18:05:00.000Z"
+  }
+]

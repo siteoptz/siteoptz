@@ -1,0 +1,38 @@
+[
+  {
+    "name": "Elham AI",
+    "description": "AI-powered creative design platform that helps users generate professional visual content, including logos, graphics, and marketing materials with intelligent automation.",
+    "website": "https://elham.ai",
+    "developer": "Elham",
+    "features": ["AI logo generation", "Graphic design automation", "Brand kit creation", "Template customization", "Export in multiple formats"],
+    "verification": {
+      "isVerified": true,
+      "score": 86,
+      "source": "verified_discovery"
+    }
+  },
+  {
+    "name": "VoiceClone Pro",
+    "description": "Advanced voice cloning technology that creates realistic AI-generated speech from text input using cutting-edge neural network models for professional audio production.",
+    "website": "https://voiceclone.pro",
+    "developer": "VoiceClone Technologies",
+    "features": ["Voice synthesis", "Custom voice training", "Multi-language support", "Real-time generation", "Audio quality optimization"],
+    "verification": {
+      "isVerified": true,
+      "score": 88,
+      "source": "manual_verification"
+    }
+  },
+  {
+    "name": "DataMind Analytics",
+    "description": "AI-powered business intelligence platform that transforms raw data into actionable insights through automated analysis, predictive modeling, and intuitive dashboards.",
+    "website": "https://datamind.ai",
+    "developer": "DataMind",
+    "features": ["Predictive analytics", "Automated reporting", "Data visualization", "Machine learning models", "Real-time monitoring"],
+    "verification": {
+      "isVerified": true,
+      "score": 90,
+      "source": "manual_verification"
+    }
+  }
+]

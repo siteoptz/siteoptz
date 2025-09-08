@@ -1,0 +1,48 @@
+[
+  {
+    "name": "AI Code Reviews",
+    "description": "Supercharge your team to ship faster with the most advanced AI code reviews.",
+    "website": "https://coderabbit.ai/?ref=taaft_feat&utm_source=taaft_feat&utm_medium=referral",
+    "features": [],
+    "pricing": [],
+    "source": "https://theresanaiforthat.com/",
+    "discovered_at": "2025-09-08T18:30:50.284Z",
+    "verification": {
+      "isVerified": true,
+      "score": 86,
+      "checks": {
+        "hasValidName": true,
+        "hasValidDescription": true,
+        "hasValidWebsite": true,
+        "hasLegitimateFeatures": false,
+        "isNotFakePattern": true,
+        "hasAIIndicators": true,
+        "hasProductContent": true
+      },
+      "reason": "No legitimate features detected"
+    }
+  },
+  {
+    "name": "AI Image Editor",
+    "description": "Experience the most advanced AI image editor available today.",
+    "website": "https://imagable.ai/tools/image-editor?ref=taaft&utm_source=taaft&utm_medium=referral \"Open website\"",
+    "features": [],
+    "pricing": [],
+    "source": "https://theresanaiforthat.com/",
+    "discovered_at": "2025-09-08T18:30:57.010Z",
+    "verification": {
+      "isVerified": true,
+      "score": 71,
+      "checks": {
+        "hasValidName": true,
+        "hasValidDescription": true,
+        "hasValidWebsite": true,
+        "hasLegitimateFeatures": false,
+        "isNotFakePattern": true,
+        "hasAIIndicators": true,
+        "hasProductContent": false
+      },
+      "reason": "No legitimate features detected; No product indicators found"
+    }
+  }
+]
