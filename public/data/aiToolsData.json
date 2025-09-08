@@ -2339,7 +2339,7 @@
     "logo_url": "/images/tools/apollo-io-logo.svg"
   },
   {
-    "id": "NaN",
+    "id": "apolloio",
     "name": "Apollo.io",
     "slug": "apollo-io",
     "description": "Sales intelligence and engagement platform helping users find and engage potential leads using B2B data, with tools for automated outreach and pipeline management.",
@@ -2412,7 +2412,10 @@
     "featured": false,
     "popularity_score": 50,
     "logo": null,
-    "logo_url": null
+    "logo_url": null,
+    "overview": {
+      "category": "Sales"
+    }
   },
   {
     "id": "arcwise",
@@ -5637,7 +5640,7 @@
     "logo_url": "/images/tools/cosmos-ai-logo.svg"
   },
   {
-    "id": "NaN",
+    "id": "cosmos-ai",
     "name": "Cosmos AI",
     "slug": "cosmos-ai",
     "description": "Cosmos AI is your all-in-one AI content generator. Create the content that matters the most; whether it's blog posts, social media captions, AI images, speech to text, coding assistant, or anything else.",
@@ -5719,7 +5722,10 @@
     "featured": false,
     "popularity_score": 50,
     "logo": null,
-    "logo_url": null
+    "logo_url": null,
+    "overview": {
+      "category": "AI Automation"
+    }
   },
   {
     "id": "creatify",
@@ -10006,7 +10012,7 @@
     "logo_url": "/images/tools/headshot-generator-logo.svg"
   },
   {
-    "id": "NaN",
+    "id": "headshot-generator",
     "name": "Headshot Generator",
     "slug": "headshot-generator",
     "description": "Your Selfies to Professional Headshots. Top quality AI Headshot Generator Used by Pros & Amateurs.",
@@ -10088,7 +10094,10 @@
     "featured": false,
     "popularity_score": 50,
     "logo": null,
-    "logo_url": null
+    "logo_url": null,
+    "overview": {
+      "category": "Image Generation"
+    }
   },
   {
     "id": "heygen",
@@ -11020,7 +11029,7 @@
     "logo_url": "/images/tools/interview-study-logo.svg"
   },
   {
-    "id": "NaN",
+    "id": "interview-study",
     "name": "Interview Study",
     "slug": "interview-study",
     "description": "Turn your job interview into a job offer using AI. Offers over 1700 real-world interview questions with AI feedback and insights.",
@@ -11101,7 +11110,10 @@
     "featured": false,
     "popularity_score": 50,
     "logo": null,
-    "logo_url": null
+    "logo_url": null,
+    "overview": {
+      "category": "Education & Research"
+    }
   },
   {
     "id": "jamie-ai",
@@ -14097,7 +14109,7 @@
     "logo_url": "/images/tools/media-io-logo.svg"
   },
   {
-    "id": "NaN",
+    "id": "mediaio",
     "name": "Media.io",
     "slug": "media-io",
     "description": "Easy Edits, Engaging Videos. Drag-and-drop interface, flexible editing, a vast template library, powerful AI tools, all in your browser.",
@@ -14179,7 +14191,10 @@
     "featured": false,
     "popularity_score": 50,
     "logo": null,
-    "logo_url": null
+    "logo_url": null,
+    "overview": {
+      "category": "Video Generation"
+    }
   },
   {
     "id": "microsoft-copilot",
@@ -15841,7 +15856,7 @@
     "logo_url": "/images/tools/nando-ai-logo.svg"
   },
   {
-    "id": "NaN",
+    "id": "nando-ai",
     "name": "Nando AI",
     "slug": "nando-ai",
     "description": "Create High-Converting Copy For Your Online Business In Seconds. Explore Over 60 Powerful Tools to Craft Compelling Product Descriptions, Video Scripts, Ad Concepts, Copy, Blog Posts, Social Media Content, and Much More.",
@@ -15912,7 +15927,10 @@
     "featured": false,
     "popularity_score": 50,
     "logo": null,
-    "logo_url": null
+    "logo_url": null,
+    "overview": {
+      "category": "Content Creation"
+    }
   },
   {
     "id": "nichesss",
@@ -16550,7 +16568,7 @@
     "logo_url": "/images/tools/octopus-crm-logo.svg"
   },
   {
-    "id": "NaN",
+    "id": "octopus-crm",
     "name": "Octopus CRM",
     "slug": "octopus-crm",
     "description": "LinkedIn automation made simple and effective. This all-in-one automation tool will help you simplify prospecting, grow your business and increase sales meetings.",
@@ -16623,7 +16641,10 @@
     "featured": false,
     "popularity_score": 50,
     "logo": null,
-    "logo_url": null
+    "logo_url": null,
+    "overview": {
+      "category": "Sales"
+    }
   },
   {
     "id": "optimizely",
@@ -17839,7 +17860,7 @@
     "logo_url": "/images/tools/predis-ai-logo.svg"
   },
   {
-    "id": "NaN",
+    "id": "predis-ai",
     "name": "Predis AI",
     "slug": "predis-ai",
     "description": "Helps create social media creatives in seconds. Creates images, video, carousels, and captions in one place. Integrates with platforms, helps stay active on social media, available in 18 languages.",
@@ -17910,7 +17931,10 @@
     "featured": false,
     "popularity_score": 50,
     "logo": null,
-    "logo_url": null
+    "logo_url": null,
+    "overview": {
+      "category": "Social Media"
+    }
   },
   {
     "id": "qlik-sense",
@@ -20499,7 +20523,7 @@
     "logo_url": "/images/tools/seamless-ai-logo.svg"
   },
   {
-    "id": "NaN",
+    "id": "seamless-ai",
     "name": "Seamless AI",
     "slug": "seamless-ai",
     "description": "Real-time sales leads search engine that finds and verifies contact information for potential customers, enabling B2B companies to enhance sales prospecting.",
@@ -20572,7 +20596,10 @@
     "featured": false,
     "popularity_score": 50,
     "logo": null,
-    "logo_url": null
+    "logo_url": null,
+    "overview": {
+      "category": "Sales"
+    }
   },
   {
     "id": "semrush",
