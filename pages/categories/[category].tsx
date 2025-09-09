@@ -334,8 +334,17 @@ export default function CategoryPage({ category, tools, content }: CategoryPageP
             {tools.length > 6 && (
               <div className="text-center mt-12">
                 <button 
-                  onClick={() => setShowAllTools(!showAllTools)}
-                  className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-lg font-medium transition-colors inline-flex items-center"
+                  onClick={(e) => {
+                    e.preventDefault();
+                    e.stopPropagation();
+                    setShowAllTools(!showAllTools);
+                  }}
+                  onTouchEnd={(e) => {
+                    e.preventDefault();
+                    e.stopPropagation();
+                  }}
+                  className="bg-blue-600 hover:bg-blue-700 active:bg-blue-800 text-white px-8 py-3 rounded-lg font-medium transition-colors inline-flex items-center touch-manipulation cursor-pointer"
+                  style={{ WebkitTapHighlightColor: 'transparent' }}
                 >
                   {showAllTools ? 'Show Less' : `View All ${tools.length} ${category} Tools`}
                   {showAllTools ? <ChevronUp className="w-5 h-5 ml-2" /> : <ChevronDown className="w-5 h-5 ml-2" />}
@@ -476,11 +485,20 @@ export default function CategoryPage({ category, tools, content }: CategoryPageP
               
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <button 
-                  onClick={() => {
+                  onClick={(e) => {
+                    e.preventDefault();
+                    e.stopPropagation();
                     setShowAllTools(true);
-                    document.getElementById('tools-section')?.scrollIntoView({ behavior: 'smooth' });
+                    setTimeout(() => {
+                      document.getElementById('tools-section')?.scrollIntoView({ behavior: 'smooth' });
+                    }, 100);
                   }}
-                  className="bg-white text-blue-600 hover:bg-gray-100 px-8 py-3 rounded-lg font-semibold transition-colors"
+                  onTouchEnd={(e) => {
+                    e.preventDefault();
+                    e.stopPropagation();
+                  }}
+                  className="bg-white text-blue-600 hover:bg-gray-100 active:bg-gray-200 px-8 py-3 rounded-lg font-semibold transition-colors touch-manipulation cursor-pointer"
+                  style={{ WebkitTapHighlightColor: 'transparent' }}
                 >
                   Explore {category} Tools
                 </button>
