@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
 import Image from 'next/image';
@@ -17,6 +17,7 @@ interface CategoryPageProps {
 
 export default function CategoryPage({ category, tools, content }: CategoryPageProps) {
   const [showAllTools, setShowAllTools] = useState(false);
+  
   
   if (!content || !content.seo || !content.seo.title) {
     return <div>Error: Invalid category content structure</div>;
@@ -283,7 +284,7 @@ export default function CategoryPage({ category, tools, content }: CategoryPageP
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-12">
               <h2 className="text-3xl font-bold text-white mb-4">
-                Top {category} Tools
+                {showAllTools ? `All ${tools.length} ${category} Tools` : `Top ${category} Tools`}
               </h2>
               <p className="text-xl text-gray-300">
                 Hand-picked and tested by our experts
@@ -334,17 +335,13 @@ export default function CategoryPage({ category, tools, content }: CategoryPageP
             {tools.length > 6 && (
               <div className="text-center mt-12">
                 <button 
+                  type="button"
                   onClick={(e) => {
                     e.preventDefault();
-                    e.stopPropagation();
                     setShowAllTools(!showAllTools);
                   }}
-                  onTouchEnd={(e) => {
-                    e.preventDefault();
-                    e.stopPropagation();
-                  }}
                   className="bg-blue-600 hover:bg-blue-700 active:bg-blue-800 text-white px-8 py-3 rounded-lg font-medium transition-colors inline-flex items-center touch-manipulation cursor-pointer"
-                  style={{ WebkitTapHighlightColor: 'transparent' }}
+                  style={{ WebkitTapHighlightColor: 'transparent', userSelect: 'none' }}
                 >
                   {showAllTools ? 'Show Less' : `View All ${tools.length} ${category} Tools`}
                   {showAllTools ? <ChevronUp className="w-5 h-5 ml-2" /> : <ChevronDown className="w-5 h-5 ml-2" />}
@@ -485,20 +482,16 @@ export default function CategoryPage({ category, tools, content }: CategoryPageP
               
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <button 
+                  type="button"
                   onClick={(e) => {
                     e.preventDefault();
-                    e.stopPropagation();
                     setShowAllTools(true);
                     setTimeout(() => {
                       document.getElementById('tools-section')?.scrollIntoView({ behavior: 'smooth' });
                     }, 100);
                   }}
-                  onTouchEnd={(e) => {
-                    e.preventDefault();
-                    e.stopPropagation();
-                  }}
                   className="bg-white text-blue-600 hover:bg-gray-100 active:bg-gray-200 px-8 py-3 rounded-lg font-semibold transition-colors touch-manipulation cursor-pointer"
-                  style={{ WebkitTapHighlightColor: 'transparent' }}
+                  style={{ WebkitTapHighlightColor: 'transparent', userSelect: 'none' }}
                 >
                   Explore {category} Tools
                 </button>
