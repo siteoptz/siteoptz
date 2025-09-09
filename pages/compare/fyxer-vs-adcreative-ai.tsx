@@ -595,8 +595,8 @@ const ComparisonPage: React.FC = () => {
         title={title}
         description={description}
         keywords={keywords}
-        url={`https://siteoptz.ai/compare/${tool1.slug}-vs-${tool2.slug}`}
-        schema={combinedSchema}
+        canonicalUrl={`https://siteoptz.ai/compare/${tool1.slug}-vs-${tool2.slug}`}
+        schemaData={combinedSchema}
       />
 
       <div className="min-h-screen bg-gray-50 py-8">
@@ -616,29 +616,29 @@ const ComparisonPage: React.FC = () => {
             <div className="grid lg:grid-cols-2 gap-8">
               <div className="text-center">
                 <img
-                  src={tool1.logo || '/images/tools/default-logo.svg'}
+                  src={tool1.logo || '/images/tools/placeholder-logo.svg'}
                   alt={`${tool1.name} logo`}
                   className="w-24 h-24 mx-auto mb-4"
-                  onError={(e) => { e.currentTarget.src = '/images/tools/default-logo.svg'; }}
+                  onError={(e) => { e.currentTarget.src = '/images/tools/placeholder-logo.svg'; }}
                 />
                 <h2 className="text-2xl font-bold text-blue-600 mb-2">{tool1.name}</h2>
-                <p className="text-gray-600 mb-4">{tool1.overview?.description || tool1.description || 'Advanced AI tool for enhanced productivity.'}</p>
+                <p className="text-gray-600 mb-4">{(tool1.overview as any)?.description || tool1.overview?.long_description || 'Advanced AI tool for enhanced productivity.'}</p>
                 <div className="flex justify-center items-center space-x-4">
-                  <span className="text-lg font-semibold">Rating: {tool1.rating || 4.5}/5</span>
+                  <span className="text-lg font-semibold">Rating: {(tool1 as any).rating || 4.5}/5</span>
                   <span className="text-sm text-gray-500">({tool1.overview?.category || 'AI Tool'})</span>
                 </div>
               </div>
               <div className="text-center">
                 <img
-                  src={tool2.logo || '/images/tools/default-logo.svg'}
+                  src={tool2.logo || '/images/tools/placeholder-logo.svg'}
                   alt={`${tool2.name} logo`}
                   className="w-24 h-24 mx-auto mb-4"
-                  onError={(e) => { e.currentTarget.src = '/images/tools/default-logo.svg'; }}
+                  onError={(e) => { e.currentTarget.src = '/images/tools/placeholder-logo.svg'; }}
                 />
                 <h2 className="text-2xl font-bold text-green-600 mb-2">{tool2.name}</h2>
-                <p className="text-gray-600 mb-4">{tool2.overview?.description || tool2.description || 'Advanced AI tool for enhanced productivity.'}</p>
+                <p className="text-gray-600 mb-4">{(tool2.overview as any)?.description || tool2.overview?.long_description || 'Advanced AI tool for enhanced productivity.'}</p>
                 <div className="flex justify-center items-center space-x-4">
-                  <span className="text-lg font-semibold">Rating: {tool2.rating || 4.5}/5</span>
+                  <span className="text-lg font-semibold">Rating: {(tool2 as any).rating || 4.5}/5</span>
                   <span className="text-sm text-gray-500">({tool2.overview?.category || 'AI Tool'})</span>
                 </div>
               </div>
