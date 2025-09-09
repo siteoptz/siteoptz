@@ -1,0 +1,886 @@
+=== ANALYSIS OF 200 PRODUCTIVITY TOOLS ===
+
+
+AI AUTOMATION: 3 TOOLS
+============================================================
+• Read AI
+  Zoom selects Read as an Essential App, Premium Features Enabled for Zoom Custome...
+  Rationale: Contains automation/workflow functionality: ['automate', 'automation', 'workflow', 'business', 'team', 'platform']
+
+• Figflow
+  A tool for conversion of Figma designs into development-ready project elements a...
+  Rationale: Contains automation/workflow functionality: ['automate', 'automation', 'workflow', 'business', 'team', 'platform']
+
+• ProdPad
+  A tool to manage product roadmaps, ideas, and customer feedback...
+  Rationale: Contains automation/workflow functionality: ['automate', 'automation', 'workflow', 'business', 'team', 'collaboration', 'platform']
+
+
+AI WEBSITE BUILDER: 5 TOOLS
+============================================================
+• Kickresume
+  Kickresume is an AI-powered resume builder and cover letter generator designed t...
+  Rationale: AI-powered website building: ['website builder', 'site builder']
+
+• Sitekick - Powerful Landing Page Builder
+  Sitekick - Powerful Landing Page Builder...
+  Rationale: AI-powered website building: ['landing page']
+
+• Unbounce - AI Landing Page Builder
+  Unbounce - AI Landing Page Builder...
+  Rationale: AI-powered website building: ['landing page']
+
+• Webflow's AI Site Builder
+  A tool to generate complete website designs from user input...
+  Rationale: AI-powered website building: ['site builder']
+
+• Modulify AI
+  A tool for website creation using AI-assisted design and pre-built components...
+  Rationale: AI-powered website building: ['website creation']
+
+
+CHAT: 1 TOOLS
+============================================================
+• Fast Q&A
+  A tool to answer visitor questions directly on websites...
+  Rationale: Contains chat/conversational functionality: ['live chat']
+
+
+CODE GENERATION: 7 TOOLS
+============================================================
+• Lindra AI
+  An virtual employee that automates routine business tasks without coding...
+  Rationale: Contains programming/development functionality: ['coding']
+
+• FlyTest
+  A tool to automate software testing using natural language inputs without requir...
+  Rationale: Contains programming/development functionality: ['coding']
+
+• DevPlan
+  A tool to optimize and centralize software development planning with task manage...
+  Rationale: Contains programming/development functionality: ['software development']
+
+• DeepDocs
+  A tool to update project documentation based on code changes in GitHub pull requ...
+  Rationale: Contains programming/development functionality: ['github']
+
+• Replit iOS App
+  An app as online coding platform for creating, collaborating on, and deploying s...
+  Rationale: Contains programming/development functionality: ['coding']
+
+• Venice AI
+  A decentralized platform for text, image, and code generation without data stora...
+  Rationale: Contains programming/development functionality: ['code generation']
+
+• CICube
+  A tool to monitor and optimize GitHub Actions CI pipelines through metric tracki...
+  Rationale: Contains programming/development functionality: ['github']
+
+
+CONTENT CREATION: 4 TOOLS
+============================================================
+• Grammarly
+  Grammarly is an AI-powered writing assistant that helps improve writing quality ...
+  Rationale: Contains content creation functionality: ['writing assistant']
+
+• Guru
+  Guru is a knowledge management solution that uses AI to help teams find, verify,...
+  Rationale: Contains content creation functionality: ['content creation']
+
+• Microsoft Copilot
+  Microsoft Copilot is an AI assistant integrated across Microsoft 365 application...
+  Rationale: Contains content creation functionality: ['content generation']
+
+• Notion AI
+  Notion AI is an intelligent writing assistant built into the popular Notion work...
+  Rationale: Contains content creation functionality: ['content generation', 'writing assistant']
+
+
+DATA ANALYSIS: 24 TOOLS
+============================================================
+• LockedIn AI
+  Go into your job interviews with absolute confidence thanks to an AI co-pilot...
+  Rationale: Contains data analysis functionality: ['analytics']
+
+• Trace AI
+  AI-powered productivity tool that helps automate workflows and boost efficiency...
+  Rationale: Contains data analysis functionality: ['insights']
+
+• Athenic AI
+  A tool to query business data and get instant insights....
+  Rationale: Contains data analysis functionality: ['data visualization', 'dashboard', 'insights']
+
+• FlowMetr
+  A tool that monitors open-source AI models in production with real-time analytic...
+  Rationale: Contains data analysis functionality: ['analytics']
+
+• AutonomOps AI
+  A platform that autonomously monitors, analyzes, and optimizes cloud application...
+  Rationale: Contains data analysis functionality: ['data analysis']
+
+• Poppy AI
+  A visual workspace to organize, transcribe, summarize, and analyze multimedia co...
+  Rationale: Contains data analysis functionality: ['data analysis']
+
+• BeeSift
+  A Google Chrome extension to categorize and analyze data to extract insights fro...
+  Rationale: Contains data analysis functionality: ['data analysis', 'insights']
+
+• Ponder
+  A workspace that researchers organize, connect, and analyze information across m...
+  Rationale: Contains data analysis functionality: ['data analysis']
+
+• AI inTime
+  A tool to track and analyze time spent across applications...
+  Rationale: Contains data analysis functionality: ['data analysis']
+
+• Littlebird
+  An AI assistant to capture insights from digital activities to provide personali...
+  Rationale: Contains data analysis functionality: ['insights']
+
+• Klarops
+  A workforce management platform that provides productivity insights while respec...
+  Rationale: Contains data analysis functionality: ['insights']
+
+• Altavize
+  A tool to analyze and categorize text directly in Excel...
+  Rationale: Contains data analysis functionality: ['data analysis']
+
+• Pally
+  A tool to manage and analyze relationships across communication platforms...
+  Rationale: Contains data analysis functionality: ['data analysis']
+
+• Macro
+  A tool to edit documents, analyze files, and collaborate...
+  Rationale: Contains data analysis functionality: ['data analysis']
+
+• JustCall
+  A phone system to manage calls, texts, and communication analytics...
+  Rationale: Contains data analysis functionality: ['analytics']
+
+• Inabit.ai
+  A tool for creation of professional presentations and data visualizations...
+  Rationale: Contains data analysis functionality: ['data visualization']
+
+• Legion AI
+  A nocode analytics platform to convert natural language into SQL queries to anal...
+  Rationale: Contains data analysis functionality: ['data analysis', 'analytics']
+
+• Mochii AI
+  A tool to summarize pages, analyze documents, and assist research...
+  Rationale: Contains data analysis functionality: ['data analysis']
+
+• Twin AI
+  A tool to automate workflows, analyze data, and generate content...
+  Rationale: Contains data analysis functionality: ['data analysis']
+
+• ClickBoss AI
+  A tool to analyze data, track performance, and send alerts...
+  Rationale: Contains data analysis functionality: ['data analysis']
+
+• Feeedback
+  A tool to collect, organize, and analyze user feedback for development...
+  Rationale: Contains data analysis functionality: ['data analysis']
+
+• Proxed.AI
+  A platform to optimize operations and decision-making through data analysis and ...
+  Rationale: Contains data analysis functionality: ['data analysis']
+
+• ReviewNicely
+  A tool to collect and analyze customer feedback...
+  Rationale: Contains data analysis functionality: ['data analysis']
+
+• Sourcetable
+  A spreadsheet platform that integrates and analyzes data from multiple business ...
+  Rationale: Contains data analysis functionality: ['data analysis']
+
+
+EDUCATION & RESEARCH: 12 TOOLS
+============================================================
+• Enjo.ai
+  A tool that handles support requests by integrating with workplace tools and kno...
+  Rationale: Contains education/research functionality: ['knowledge']
+
+• ResearchCollab.ai
+  A platform for research collaboration through document synchronization, literatu...
+  Rationale: Contains education/research functionality: ['research']
+
+• Mexty AI
+  A tool to create personalized interactive learning and training content...
+  Rationale: Contains education/research functionality: ['learning', 'training']
+
+• UnSoloMind
+  A tool to answer questions using uploaded knowledge and AI Assistant...
+  Rationale: Contains education/research functionality: ['knowledge']
+
+• Constella
+  A visual knowledge management app to capture, connect, and retrieve information ...
+  Rationale: Contains education/research functionality: ['knowledge']
+
+• Tapflow
+  A platform to monetize expertise by creating and selling digital knowledge produ...
+  Rationale: Contains education/research functionality: ['knowledge']
+
+• Vetis
+  A tool to organize, search, and retrieve personal knowledge to build second brai...
+  Rationale: Contains education/research functionality: ['knowledge']
+
+• Curiso.ai
+  A platform with an infinite canvas workspace for organizing ideas, researching, ...
+  Rationale: Contains education/research functionality: ['research']
+
+• Kolena
+  A platform for testing, evaluation, and improvement of machine learning models...
+  Rationale: Contains education/research functionality: ['learning']
+
+• Locus Extension
+  A Chrome extension for web content search, summarization, and research...
+  Rationale: Contains education/research functionality: ['research']
+
+• Supametas.AI
+  A tool to transform unstructured data into structured formats for AI models and ...
+  Rationale: Contains education/research functionality: ['knowledge']
+
+• Tana
+  A tool for knowledge management and to integrate note-taking, task management, a...
+  Rationale: Contains education/research functionality: ['knowledge']
+
+
+EMAIL MARKETING: 2 TOOLS
+============================================================
+• Pikr
+  A tool for newsletter management by organizing emails, summaries, and integratin...
+  Rationale: Contains email marketing functionality: ['newsletter']
+
+• Folk CRM
+  A tool to manage contacts, sales, and automate email campaigns...
+  Rationale: Contains email marketing functionality: ['email campaign']
+
+
+IMAGE GENERATION: 1 TOOLS
+============================================================
+• Microsoft PowerPoint
+  Microsoft PowerPoint is a presentation software that allows users to create capt...
+  Rationale: Contains image creation/editing functionality: ['image creation']
+
+
+LEAD GENERATION: 2 TOOLS
+============================================================
+• Explee
+  Find thousands of potential customers in seconds with AI-powered lead generation...
+  Rationale: Contains lead generation functionality: ['lead generation', 'lead gen', 'prospect']
+
+• Appointwise
+  A tool to automate appointment setting, lead qualification, and follow-ups...
+  Rationale: Contains lead generation functionality: ['lead qualification']
+
+
+MARKETING: 1 TOOLS
+============================================================
+• Google Search
+  Google Search offers an 'AI Mode' that provides personalized suggestions and ins...
+  Rationale: Contains general marketing functionality: ['advertising']
+
+
+MUSIC & AUDIO: 1 TOOLS
+============================================================
+• Highlight AI
+  A tool to control apps, transcribe audio, and analyze content...
+  Rationale: Contains music/audio functionality: ['audio']
+
+
+PRODUCTIVITY: 120 TOOLS
+============================================================
+• Clockwise
+  Clockwise is an AI-powered scheduling assistant that optimizes your calendar to ...
+  Rationale: True productivity tool: ['meeting', 'calendar', 'scheduling', 'productivity', 'workflow', 'efficiency']
+
+• Jamie AI
+  Summarize your meetings in any software, even in-person meetings. Jamie automati...
+  Rationale: True productivity tool: ['meeting', 'productivity', 'workflow', 'efficiency']
+
+• Teal
+  Teal is an all-in-one suite of tools designed to simplify and accelerate the job...
+  Rationale: True productivity tool: ['productivity', 'workflow', 'efficiency']
+
+• Trello Butler
+  Trello Butler is an AI-powered automation tool integrated into Trello that strea...
+  Rationale: True productivity tool: ['productivity', 'project management', 'workflow', 'efficiency']
+
+• Google Gemini
+  Intelligent process automation solution...
+  Rationale: True productivity tool: ['scheduling', 'productivity', 'workflow', 'efficiency']
+
+• Leonardo AI
+  Workflow automation platform for business processes...
+  Rationale: True productivity tool: ['scheduling', 'productivity', 'workflow', 'efficiency']
+
+• FaceCheck ID
+  Facial recognition tool for verifying identities and enhancing safety....
+  Rationale: True productivity tool: ['productivity', 'workflow', 'efficiency']
+
+• DiveDeck - AI-Powered Deck Builder
+  DiveDeck - AI-Powered Deck Builder...
+  Rationale: True productivity tool: ['scheduling', 'productivity', 'workflow', 'efficiency']
+
+• HumanLayer
+  Thank you! Your submission has been received!
+
+Oops! Something went wrong while ...
+  Rationale: True productivity tool: ['scheduling', 'productivity', 'workflow', 'efficiency']
+
+• SmythOS
+  Thank you! Your submission has been received!
+
+Oops! Something went wrong while ...
+  Rationale: True productivity tool: ['productivity', 'workflow', 'efficiency']
+
+• Memara
+  A tool that gives AI agents persistent memory across multiple conversations...
+  Rationale: True productivity tool: ['productivity', 'workflow', 'efficiency']
+
+• StatPecker
+  A tool that transforms raw data into charts and infographics from raw data...
+  Rationale: True productivity tool: ['scheduling', 'productivity', 'workflow', 'efficiency']
+
+• Macaron
+  An mobile app that creates personalized mini-apps within conversations...
+  Rationale: True productivity tool: ['scheduling', 'productivity', 'workflow', 'efficiency']
+
+• Tasker AI
+  A tool to execute tasks with digital workflows across applications using natural...
+  Rationale: True productivity tool: ['scheduling', 'productivity', 'workflow', 'efficiency']
+
+• Simular Pro
+  An desktop agent that automates workflows across computer...
+  Rationale: True productivity tool: ['productivity', 'workflow', 'efficiency']
+
+• TicketMine.ai
+  A tool that extracts Configuration Item data from IT tickets to maintain CMDB ac...
+  Rationale: True productivity tool: ['productivity', 'workflow', 'efficiency']
+
+• Yoink
+  A tool to generate context-aware content across Mac applications...
+  Rationale: True productivity tool: ['scheduling', 'productivity', 'workflow', 'efficiency']
+
+• Mapify
+  A Google Chrome Extension to transform content from various sources into mind ma...
+  Rationale: True productivity tool: ['scheduling', 'productivity', 'workflow', 'efficiency']
+
+• Dume.ai
+  A platform that centralizes digital workspaces by connecting various productivit...
+  Rationale: True productivity tool: ['productivity', 'workflow', 'efficiency']
+
+• Messync
+  A tool that unifies fragmented digital content across platforms into one AI-sear...
+  Rationale: True productivity tool: ['productivity', 'workflow', 'efficiency']
+
+• GetDot.ai
+  A tool to answer data questions through natural language queries...
+  Rationale: True productivity tool: ['scheduling', 'productivity', 'workflow', 'efficiency']
+
+• Mirai
+  An Apple SDK to optimize AI models to run locally on iOS and Mac devices...
+  Rationale: True productivity tool: ['productivity', 'workflow', 'efficiency']
+
+• Blok
+  A simulator to predict user responses to product changes before implementation...
+  Rationale: True productivity tool: ['scheduling', 'productivity', 'workflow', 'efficiency']
+
+• Comet by Perplexity
+  An AI-integrated web browser to summarize content, answers questions, and automa...
+  Rationale: True productivity tool: ['productivity', 'workflow', 'efficiency']
+
+• BrowserAct
+  A nocode tool for web scraping and browser tasks...
+  Rationale: True productivity tool: ['productivity', 'workflow', 'efficiency']
+
+• Unrav.io
+  A tool to convert web content into summaries and mind maps...
+  Rationale: True productivity tool: ['scheduling', 'productivity', 'workflow', 'efficiency']
+
+• Lazy.so
+  A tool to capture, organize, and summarize cross-app content...
+  Rationale: True productivity tool: ['scheduling', 'productivity', 'organize', 'workflow', 'efficiency']
+
+• ExtractAny
+  A tool to extract structured data from websites, documents and images...
+  Rationale: True productivity tool: ['scheduling', 'productivity', 'workflow', 'efficiency']
+
+• Bit Flows
+  A tool automate WordPress processes by connecting with third-party platforms...
+  Rationale: True productivity tool: ['productivity', 'workflow', 'efficiency']
+
+• Keepmind
+  A personal memory assistant to capture, organize, and retrieves thoughts...
+  Rationale: True productivity tool: ['scheduling', 'productivity', 'organize', 'workflow', 'efficiency']
+
+• Chronicle
+  A tool to generate presentations without requiring design skills...
+  Rationale: True productivity tool: ['scheduling', 'productivity', 'workflow', 'efficiency']
+
+• ActionFlows
+  A no-code platform to create AI workflows through drag-and-drop interfaces...
+  Rationale: True productivity tool: ['productivity', 'workflow', 'efficiency']
+
+• Shiplo
+  A tool to automate tasks using browser-based AI operators...
+  Rationale: True productivity tool: ['productivity', 'workflow', 'efficiency']
+
+• Broadn
+  A productivity platform to automate business tasks across multiple channels...
+  Rationale: True productivity tool: ['productivity', 'workflow', 'efficiency']
+
+• Smart Calendars AI
+  A tool that transforms to-do lists into optimized calendar schedules...
+  Rationale: True productivity tool: ['calendar', 'scheduling', 'productivity', 'workflow', 'efficiency']
+
+• AgentDock
+  A tool to build and deploy AI agents and workflows...
+  Rationale: True productivity tool: ['productivity', 'workflow', 'efficiency']
+
+• Dialbox
+  A tool to answer calls, book appointments, and take messages...
+  Rationale: True productivity tool: ['scheduling', 'productivity', 'workflow', 'efficiency']
+
+• Drawer AI
+  A tool for electrical takeoffs by extracting and quantifying elements from PDF d...
+  Rationale: True productivity tool: ['scheduling', 'productivity', 'workflow', 'efficiency']
+
+• New.website
+  A platform to create websites through drag-and-drop and AI assistance...
+  Rationale: True productivity tool: ['productivity', 'workflow', 'efficiency']
+
+• AgentPass.ai
+  A tool to manage credentials and access for AI agents in workflows...
+  Rationale: True productivity tool: ['productivity', 'workflow', 'efficiency']
+
+• Aerogram
+  A visual workflow platform with 30+ AI models for text, image, and video process...
+  Rationale: True productivity tool: ['productivity', 'workflow', 'efficiency']
+
+• Kuberns
+  A platform for cloud-native application deployment...
+  Rationale: True productivity tool: ['scheduling', 'productivity', 'workflow', 'efficiency']
+
+• CloudEagle.ai
+  A platform for managing SaaS applications to optimize costs, procurement, and se...
+  Rationale: True productivity tool: ['scheduling', 'productivity', 'workflow', 'efficiency']
+
+• Kosmik
+  An infinite canvas workspace to integrate web browsing, reading, and visually or...
+  Rationale: True productivity tool: ['productivity', 'organize', 'workflow', 'efficiency']
+
+• Nimblr.ai
+  A tool for healthcare practice scheduling and patient communications...
+  Rationale: True productivity tool: ['scheduling', 'productivity', 'workflow', 'efficiency']
+
+• Rierino
+  A low-code platform to build and deploy digital applications...
+  Rationale: True productivity tool: ['scheduling', 'productivity', 'workflow', 'efficiency']
+
+• Mindly
+  Mindly  A tool to automatically organize and connect digital information into a ...
+  Rationale: True productivity tool: ['productivity', 'organize', 'workflow', 'efficiency']
+
+• Wellpin
+  A tool to schedule meetings and manage calendar availability...
+  Rationale: True productivity tool: ['meeting', 'calendar', 'productivity', 'workflow', 'efficiency']
+
+• Sky
+  A natural language assistant for macOS to control computer through contextual co...
+  Rationale: True productivity tool: ['scheduling', 'productivity', 'workflow', 'efficiency']
+
+• Plansom
+  A project management tool for planning and team collaboration...
+  Rationale: True productivity tool: ['scheduling', 'productivity', 'project management', 'planning', 'workflow', 'efficiency']
+
+• Urbiverse
+  A tool to simulate urban mobility scenarios and optimize logistics decisions...
+  Rationale: True productivity tool: ['scheduling', 'productivity', 'workflow', 'efficiency']
+
+• Miniflow
+  A nocode visual platform for creating workflows by connecting multiple AI tools...
+  Rationale: True productivity tool: ['productivity', 'workflow', 'efficiency']
+
+• The Librarian
+  A WhatsApp-based AI assistant to manage information across platforms and get per...
+  Rationale: True productivity tool: ['productivity', 'workflow', 'efficiency']
+
+• Vercept
+  A tool to control Mac apps using natural language commands...
+  Rationale: True productivity tool: ['scheduling', 'productivity', 'workflow', 'efficiency']
+
+• Foundor.ai
+  A tool to create business plans through interactive collaboration...
+  Rationale: True productivity tool: ['scheduling', 'productivity', 'workflow', 'efficiency']
+
+• ExcelMatic
+  An Excel assistant to interact with spreadsheets using plain English commands...
+  Rationale: True productivity tool: ['productivity', 'workflow', 'efficiency']
+
+• Victoria
+  A tool to build workflows, manage projects, and schedule meetings...
+  Rationale: True productivity tool: ['meeting', 'scheduling', 'productivity', 'workflow', 'efficiency']
+
+• Karax.ai
+  An AI meeting assistant to transcribe conversations and extracts key information...
+  Rationale: True productivity tool: ['meeting', 'productivity', 'workflow', 'efficiency']
+
+• WebCrawler API
+  A tool and API to extract data from websites at scale...
+  Rationale: True productivity tool: ['productivity', 'workflow', 'efficiency']
+
+• Noteey
+  A tool to organize, annotate, and connect visual notes offline...
+  Rationale: True productivity tool: ['scheduling', 'productivity', 'organize', 'workflow', 'efficiency']
+
+• RetroTeam
+  A tool to automate feedback grouping and generate retrospective summaries...
+  Rationale: True productivity tool: ['productivity', 'workflow', 'efficiency']
+
+• Kaiboard
+  A tool to perform text tasks using customizable keyboard shortcuts...
+  Rationale: True productivity tool: ['productivity', 'workflow', 'efficiency']
+
+• WorkFlawless
+  A tool to manage workflows, SOPs, and team collaboration...
+  Rationale: True productivity tool: ['scheduling', 'productivity', 'workflow', 'efficiency']
+
+• Cloudairy
+  A platform with collaborative workspace for visual project management and diagra...
+  Rationale: True productivity tool: ['productivity', 'project management', 'workflow', 'efficiency']
+
+• JobQuest.ai
+  A tool to create resumes and match job applications...
+  Rationale: True productivity tool: ['scheduling', 'productivity', 'workflow', 'efficiency']
+
+• Vectal
+  A tool to organize tasks, track goals, and manage workflows...
+  Rationale: True productivity tool: ['scheduling', 'productivity', 'organize', 'workflow', 'efficiency']
+
+• AI Renamer
+  A tool to generate descriptive file names using AI analysis of content...
+  Rationale: True productivity tool: ['productivity', 'workflow', 'efficiency']
+
+• Vaiz
+  A platform that centralizes project management, collaboration, and productivity ...
+  Rationale: True productivity tool: ['scheduling', 'productivity', 'project management', 'workflow', 'efficiency']
+
+• Eraser IO
+  A platform for technical documentation and diagramming for engineering teams thr...
+  Rationale: True productivity tool: ['scheduling', 'productivity', 'workflow', 'efficiency']
+
+• Enso
+  A platform to access AI agents for automating various business tasks...
+  Rationale: True productivity tool: ['productivity', 'workflow', 'efficiency']
+
+• Fellow.app
+  A tool for meeting management with to improve efficiency and productivity...
+  Rationale: True productivity tool: ['meeting', 'scheduling', 'productivity', 'workflow', 'efficiency']
+
+• ReconXi
+  A tool to reconcile bank statements with company ledgers...
+  Rationale: True productivity tool: ['scheduling', 'productivity', 'workflow', 'efficiency']
+
+• Excel Whisper
+  An Excel mentor for personalized assistance and solutions...
+  Rationale: True productivity tool: ['scheduling', 'productivity', 'workflow', 'efficiency']
+
+• Worxmate
+  An OKR and performance management tool for goal alignment and productivity...
+  Rationale: True productivity tool: ['scheduling', 'productivity', 'workflow', 'efficiency']
+
+• Manus AI
+  An autonomous AI agent to plan and execute complex tasks across multiple domains...
+  Rationale: True productivity tool: ['productivity', 'workflow', 'efficiency']
+
+• TypeThinkAI
+  A platform with various AI models and tools for diverse tasks...
+  Rationale: True productivity tool: ['productivity', 'workflow', 'efficiency']
+
+• Fenn
+  A tool to search files locally on macOS without cloud...
+  Rationale: True productivity tool: ['scheduling', 'productivity', 'workflow', 'efficiency']
+
+• Pig
+  An API for AI agents to remotely control and automate Windows applications and w...
+  Rationale: True productivity tool: ['productivity', 'workflow', 'efficiency']
+
+• Kudra
+  A tool to extract and process OCR or NER data from various documents...
+  Rationale: True productivity tool: ['scheduling', 'productivity', 'workflow', 'efficiency']
+
+• AISOAP
+  A tool to convert patient conversations into structured medical notes...
+  Rationale: True productivity tool: ['scheduling', 'productivity', 'workflow', 'efficiency']
+
+• Zuzia
+  A tool to monitor servers and websites with real-time tracking and alerts...
+  Rationale: True productivity tool: ['productivity', 'time tracking', 'workflow', 'efficiency']
+
+• Cradl AI
+  A nocode platform to extract data and process documents...
+  Rationale: True productivity tool: ['scheduling', 'productivity', 'workflow', 'efficiency']
+
+• Needle AI
+  A tool to automate workflows, connect data, and assist decisions...
+  Rationale: True productivity tool: ['productivity', 'workflow', 'efficiency']
+
+• Octopus.do
+  A tool to create visual website plans with sitemaps and wireframes...
+  Rationale: True productivity tool: ['scheduling', 'productivity', 'workflow', 'efficiency']
+
+• Presentations.ai
+  A tool to create presentations from user ideas...
+  Rationale: True productivity tool: ['scheduling', 'productivity', 'workflow', 'efficiency']
+
+• Right Click Prompt
+  A Chrome extension for managing and reusing AI prompts through a right-click men...
+  Rationale: True productivity tool: ['productivity', 'workflow', 'efficiency']
+
+• Clueso
+  A tool to convert screen recordings into instructional content...
+  Rationale: True productivity tool: ['scheduling', 'productivity', 'workflow', 'efficiency']
+
+• GenPPT
+  A tool to create customizable PowerPoint presentations from user input...
+  Rationale: True productivity tool: ['productivity', 'workflow', 'efficiency']
+
+• Platus
+  A tool to automate legal processes for businesses...
+  Rationale: True productivity tool: ['productivity', 'workflow', 'efficiency']
+
+• Folder Pilot
+  A tool to search, tag, and chat with legal documents...
+  Rationale: True productivity tool: ['scheduling', 'productivity', 'workflow', 'efficiency']
+
+• RPLY
+  An assistant for iMessage to suggest and automate responses...
+  Rationale: True productivity tool: ['productivity', 'workflow', 'efficiency']
+
+• Sitehunt
+  A platform for property management and site selection...
+  Rationale: True productivity tool: ['scheduling', 'productivity', 'workflow', 'efficiency']
+
+• HideMyData
+  A privacy tool to mask personal information online...
+  Rationale: True productivity tool: ['scheduling', 'productivity', 'workflow', 'efficiency']
+
+• ChatGPT Exporter
+  A Free Google Chrome Extension to export ChatGPT conversations to various file f...
+  Rationale: True productivity tool: ['productivity', 'workflow', 'efficiency']
+
+• Storyblocker
+  A previsualization app to plan, visualize, and collaborate on scenes using smart...
+  Rationale: True productivity tool: ['scheduling', 'productivity', 'workflow', 'efficiency']
+
+• Serif.ai
+  A tool for email management and response drafting...
+  Rationale: True productivity tool: ['productivity', 'workflow', 'efficiency']
+
+• CubeOne AI
+  A tool for presentation creation and delivery through chat interactions...
+  Rationale: True productivity tool: ['scheduling', 'productivity', 'workflow', 'efficiency']
+
+• Wand AI
+  A platform to build advance AI for non-technical users through natural language ...
+  Rationale: True productivity tool: ['productivity', 'workflow', 'efficiency']
+
+• Bravo Studio
+  A nocode tool to convert Figma designs into functional mobile apps...
+  Rationale: True productivity tool: ['scheduling', 'productivity', 'workflow', 'efficiency']
+
+• Cliprun
+  A tool to run Python code instantly in a browser...
+  Rationale: True productivity tool: ['scheduling', 'productivity', 'workflow', 'efficiency']
+
+• Rootly
+  A tool to automate and streamline incident management within Slack...
+  Rationale: True productivity tool: ['productivity', 'workflow', 'efficiency']
+
+• CTRL Sheet
+  A tool that enhances spreadsheet functionality and automates data tasks...
+  Rationale: True productivity tool: ['productivity', 'workflow', 'efficiency']
+
+• Toolhouse
+  A platform for management and optimization of LLM tools...
+  Rationale: True productivity tool: ['scheduling', 'productivity', 'workflow', 'efficiency']
+
+• IdeaBuddy
+  A business planning tool that guides entrepreneurs from idea to execution...
+  Rationale: True productivity tool: ['scheduling', 'productivity', 'planning', 'workflow', 'efficiency']
+
+• THEO
+  A tool to transform business content into AI-ready formats for improved AI assis...
+  Rationale: True productivity tool: ['productivity', 'workflow', 'efficiency']
+
+• Ping AI Tasklist
+  A tool to create, organize, and track tasks...
+  Rationale: True productivity tool: ['scheduling', 'productivity', 'organize', 'workflow', 'efficiency']
+
+• Teammately
+  A tool for product development using scientific self-iteration to meet business ...
+  Rationale: True productivity tool: ['scheduling', 'productivity', 'workflow', 'efficiency']
+
+• Aphra
+  A personal assistant that integrates multiple productivity tools for efficient t...
+  Rationale: True productivity tool: ['productivity', 'workflow', 'efficiency']
+
+• Anchor Browser
+  A privacy-focused web browser with enhanced link management...
+  Rationale: True productivity tool: ['scheduling', 'productivity', 'workflow', 'efficiency']
+
+• Qodex.ai
+  A tool for software testing to generate cases, scripts, and detect bugs...
+  Rationale: True productivity tool: ['scheduling', 'productivity', 'workflow', 'efficiency']
+
+• Open Interface
+  A tool to automate computer tasks using LLMs simulated inputs...
+  Rationale: True productivity tool: ['productivity', 'workflow', 'efficiency']
+
+• there
+  A tool for task management and productivity...
+  Rationale: True productivity tool: ['task management', 'productivity', 'workflow', 'efficiency']
+
+• SenseTask
+  A tool for OCR document processing and workflow management...
+  Rationale: True productivity tool: ['scheduling', 'productivity', 'workflow', 'efficiency']
+
+• CopyCat
+  A tool to automate repetitive computer tasks by recording and replicating user a...
+  Rationale: True productivity tool: ['productivity', 'workflow', 'efficiency']
+
+• Bluebarry AI
+  A tool to organize and collaborate on 3D models and design files for industrial ...
+  Rationale: True productivity tool: ['scheduling', 'productivity', 'organize', 'workflow', 'efficiency']
+
+• Hoop
+  A tool to organize and prioritize tasks from multiple sources...
+  Rationale: True productivity tool: ['scheduling', 'productivity', 'organize', 'workflow', 'efficiency']
+
+• AI Drive
+  A platform to PDF storage and analysis for document management and information e...
+  Rationale: True productivity tool: ['scheduling', 'productivity', 'workflow', 'efficiency']
+
+• HeyBoss
+  A no-code platform for building apps and websites...
+  Rationale: True productivity tool: ['scheduling', 'productivity', 'workflow', 'efficiency']
+
+• Witsy
+  A tool to interact with AI, create content, and automate tasks...
+  Rationale: True productivity tool: ['productivity', 'workflow', 'efficiency']
+
+• Cotypist
+  A tool to suggest words and sentences to improve writing speed...
+  Rationale: True productivity tool: ['scheduling', 'productivity', 'workflow', 'efficiency']
+
+
+SALES: 5 TOOLS
+============================================================
+• Fathom
+  Fathom is an AI-powered meeting notetaker that automatically transcribes and sum...
+  Rationale: Contains sales/CRM functionality: ['sales', 'crm']
+
+• Fyxer
+  Fyxer is an AI-powered assistant designed to help users manage their inboxes, dr...
+  Rationale: Contains sales/CRM functionality: ['crm']
+
+• Motion
+  Over 1 million top performers and teams trust Motion...
+  Rationale: Contains sales/CRM functionality: ['crm']
+
+• Reclaim.ai
+  Reclaim.ai is an AI-powered productivity tool that helps individuals and teams m...
+  Rationale: Contains sales/CRM functionality: ['sales']
+
+• TestZeus
+  A tool to automate UI testing for Salesforce applications...
+  Rationale: Contains sales/CRM functionality: ['sales']
+
+
+SOCIAL MEDIA: 1 TOOLS
+============================================================
+• ChatSlide AI
+  A tool to create presentations, videos, and social media posts...
+  Rationale: Contains social media functionality: ['social media']
+
+
+TRANSLATION: 2 TOOLS
+============================================================
+• Translate GPT - for Convenient Translation
+  Translate GPT - for Convenient Translation...
+  Rationale: Contains translation functionality: ['translation', 'translate']
+
+• Votars
+  A multilingual AI meeting assistant to transcribe conversations and generate sum...
+  Rationale: Contains translation functionality: ['multilingual']
+
+
+VIDEO GENERATION: 2 TOOLS
+============================================================
+• Kwizie
+  A tool to create interactive quizzes from video content...
+  Rationale: Contains video creation/editing functionality: ['video content']
+
+• UniScribe
+  A tool to transcribe and summarize audio and video content...
+  Rationale: Contains video creation/editing functionality: ['video content']
+
+
+VOICE AI: 7 TOOLS
+============================================================
+• Nyota
+  Nyota is an AI-powered notetaker designed to align sales, support, and project t...
+  Rationale: Contains voice/speech functionality: ['voice']
+
+• Vowel
+  AI-powered meetings for fast-moving teams. Vowel is the AI tool for teams to hos...
+  Rationale: Contains voice/speech functionality: ['voice']
+
+• WellMeRight
+  Platform for health and wellness resources, connecting users with holistic pract...
+  Rationale: Contains voice/speech functionality: ['voice']
+
+• Voiset
+  A task manager that converts voice commands into scheduled tasks while adapting ...
+  Rationale: Contains voice/speech functionality: ['voice']
+
+• Docci.ai
+  A tool to extract structured data from invoices and documents...
+  Rationale: Contains voice/speech functionality: ['voice']
+
+• AgentVoice
+  A tool to automate phone-based customer interactions...
+  Rationale: Contains voice/speech functionality: ['voice']
+
+• Inbox AI
+  A tool to automate tasks through voice commands, process emails, and build voice...
+  Rationale: Contains voice/speech functionality: ['voice', 'voice assistant']
+
+
+================================================================================
+FINAL DISTRIBUTION SUMMARY
+================================================================================
+AI Automation: 3 tools
+AI Website Builder: 5 tools
+Chat: 1 tools
+Code Generation: 7 tools
+Content Creation: 4 tools
+Data Analysis: 24 tools
+Education & Research: 12 tools
+Email Marketing: 2 tools
+Image Generation: 1 tools
+Lead Generation: 2 tools
+Marketing: 1 tools
+Music & Audio: 1 tools
+Productivity: 120 tools
+Sales: 5 tools
+Social Media: 1 tools
+Translation: 2 tools
+Video Generation: 2 tools
+Voice AI: 7 tools
+
+Tools moved from Productivity: 80
+Tools remaining in Productivity: 120
+Total tools analyzed: 200

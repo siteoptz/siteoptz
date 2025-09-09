@@ -1,0 +1,882 @@
+Analyzing 200 tools currently categorized as 'Productivity'
+================================================================================
+
+AI AUTOMATION (123 tools)
+--------------------------------------------------
+• Clockwise
+  Description: Clockwise is an AI-powered scheduling assistant that optimizes your calendar to create more time for...
+  Website: https://www.getclockwise.com/
+
+• Jamie AI
+  Description: Summarize your meetings in any software, even in-person meetings. Jamie automatically takes detailed...
+  Website: No website
+
+• Read AI
+  Description: Zoom selects Read as an Essential App, Premium Features Enabled for Zoom Customers. Learn More....
+  Website: No website
+
+• Teal
+  Description: Teal is an all-in-one suite of tools designed to simplify and accelerate the job search process. It ...
+  Website: https://www.tealhq.com/
+
+• Trello Butler
+  Description: Trello Butler is an AI-powered automation tool integrated into Trello that streamlines project manag...
+  Website: https://trello.com/power-ups/butler
+
+• Google Gemini
+  Description: Intelligent process automation solution...
+  Website: https://cdn2.futurepedia.io/2025-03-25T23-28-06.507Z-6xrSc_MgwlF_Cw5niiayDEGdL9ypt62sI.png?w=128
+
+• Leonardo AI
+  Description: Workflow automation platform for business processes...
+  Website: https://cdn2.futurepedia.io/8c928e9ebca99cab412fbb34dcaf7f830ba5b534-192x192.svg?w=128
+
+• FaceCheck ID
+  Description: Facial recognition tool for verifying identities and enhancing safety....
+  Website: https://www.futurepedia.io/tool/facecheck-id
+
+• DiveDeck - AI-Powered Deck Builder
+  Description: DiveDeck - AI-Powered Deck Builder...
+  Website: https://www.b12.io/static/b786e933ffcec6d91f3f4ac8badca816/922af/divedec.png
+
+• HumanLayer
+  Description: Thank you! Your submission has been received!
+
+Oops! Something went wrong while submitting the form...
+  Website: https://humanlayer.com
+
+• SmythOS
+  Description: Thank you! Your submission has been received!
+
+Oops! Something went wrong while submitting the form...
+  Website: https://smythos.com
+
+• Memara
+  Description: A tool that gives AI agents persistent memory across multiple conversations...
+  Website: https://memara.com
+
+• StatPecker
+  Description: A tool that transforms raw data into charts and infographics from raw data...
+  Website: https://statpecker.com
+
+• Macaron
+  Description: An mobile app that creates personalized mini-apps within conversations...
+  Website: https://macaron.com
+
+• Tasker AI
+  Description: A tool to execute tasks with digital workflows across applications using natural language commands...
+  Website: https://tasker.com
+
+• Simular Pro
+  Description: An desktop agent that automates workflows across computer...
+  Website: https://simularpro.com
+
+• TicketMine.ai
+  Description: A tool that extracts Configuration Item data from IT tickets to maintain CMDB accuracy...
+  Website: https://ticketmine.ai
+
+• Yoink
+  Description: A tool to generate context-aware content across Mac applications...
+  Website: https://yoink.com
+
+• Mapify
+  Description: A Google Chrome Extension to transform content from various sources into mind maps...
+  Website: https://mapify.com
+
+• Dume.ai
+  Description: A platform that centralizes digital workspaces by connecting various productivity tools into a singl...
+  Website: https://dume.ai
+
+• Messync
+  Description: A tool that unifies fragmented digital content across platforms into one AI-searchable workspace...
+  Website: https://messync.com
+
+• GetDot.ai
+  Description: A tool to answer data questions through natural language queries...
+  Website: https://getdot.ai
+
+• Mirai
+  Description: An Apple SDK to optimize AI models to run locally on iOS and Mac devices...
+  Website: https://mir.com
+
+• Blok
+  Description: A simulator to predict user responses to product changes before implementation...
+  Website: https://blok.com
+
+• Comet by Perplexity
+  Description: An AI-integrated web browser to summarize content, answers questions, and automates tasks...
+  Website: https://cometbyperplexity.com
+
+• BrowserAct
+  Description: A nocode tool for web scraping and browser tasks...
+  Website: https://browseract.com
+
+• Unrav.io
+  Description: A tool to convert web content into summaries and mind maps...
+  Website: https://unravio.com
+
+• Lazy.so
+  Description: A tool to capture, organize, and summarize cross-app content...
+  Website: https://lazyso.com
+
+• ExtractAny
+  Description: A tool to extract structured data from websites, documents and images...
+  Website: https://extractany.com
+
+• Bit Flows
+  Description: A tool automate WordPress processes by connecting with third-party platforms...
+  Website: https://bitflows.com
+
+• Keepmind
+  Description: A personal memory assistant to capture, organize, and retrieves thoughts...
+  Website: https://keepmind.com
+
+• Chronicle
+  Description: A tool to generate presentations without requiring design skills...
+  Website: https://chronicle.com
+
+• ActionFlows
+  Description: A no-code platform to create AI workflows through drag-and-drop interfaces...
+  Website: https://actionflows.com
+
+• Shiplo
+  Description: A tool to automate tasks using browser-based AI operators...
+  Website: https://shiplo.com
+
+• Broadn
+  Description: A productivity platform to automate business tasks across multiple channels...
+  Website: https://broadn.com
+
+• Smart Calendars AI
+  Description: A tool that transforms to-do lists into optimized calendar schedules...
+  Website: https://smartcalendars.com
+
+• AgentDock
+  Description: A tool to build and deploy AI agents and workflows...
+  Website: https://agentdock.com
+
+• Dialbox
+  Description: A tool to answer calls, book appointments, and take messages...
+  Website: https://dialbox.com
+
+• Drawer AI
+  Description: A tool for electrical takeoffs by extracting and quantifying elements from PDF drawings for estimati...
+  Website: https://drawer.com
+
+• New.website
+  Description: A platform to create websites through drag-and-drop and AI assistance...
+  Website: https://newwebsite.com
+
+• AgentPass.ai
+  Description: A tool to manage credentials and access for AI agents in workflows...
+  Website: https://agentpass.ai
+
+• Aerogram
+  Description: A visual workflow platform with 30+ AI models for text, image, and video processing...
+  Website: https://aerogram.com
+
+• Kuberns
+  Description: A platform for cloud-native application deployment...
+  Website: https://kuberns.com
+
+• CloudEagle.ai
+  Description: A platform for managing SaaS applications to optimize costs, procurement, and security compliance...
+  Website: https://cloudeagle.ai
+
+• Kosmik
+  Description: An infinite canvas workspace to integrate web browsing, reading, and visually organize content...
+  Website: https://kosmik.com
+
+• Nimblr.ai
+  Description: A tool for healthcare practice scheduling and patient communications...
+  Website: https://nimblr.ai
+
+• Rierino
+  Description: A low-code platform to build and deploy digital applications...
+  Website: https://rierino.com
+
+• Mindly
+  Description: Mindly  A tool to automatically organize and connect digital information into a visual "second brain...
+  Website: https://mindly.com
+
+• Wellpin
+  Description: A tool to schedule meetings and manage calendar availability...
+  Website: https://wellpin.com
+
+• Sky
+  Description: A natural language assistant for macOS to control computer through contextual commands across applic...
+  Website: https://sky.com
+
+• Plansom
+  Description: A project management tool for planning and team collaboration...
+  Website: https://plansom.com
+
+• Urbiverse
+  Description: A tool to simulate urban mobility scenarios and optimize logistics decisions...
+  Website: https://urbiverse.com
+
+• Miniflow
+  Description: A nocode visual platform for creating workflows by connecting multiple AI tools...
+  Website: https://miniflow.com
+
+• The Librarian
+  Description: A WhatsApp-based AI assistant to manage information across platforms and get personalized briefings...
+  Website: https://thelibrarian.com
+
+• Vercept
+  Description: A tool to control Mac apps using natural language commands...
+  Website: https://vercept.com
+
+• Foundor.ai
+  Description: A tool to create business plans through interactive collaboration...
+  Website: https://foundor.ai
+
+• ExcelMatic
+  Description: An Excel assistant to interact with spreadsheets using plain English commands...
+  Website: https://excelmatic.com
+
+• Victoria
+  Description: A tool to build workflows, manage projects, and schedule meetings...
+  Website: https://victoria.com
+
+• Karax.ai
+  Description: An AI meeting assistant to transcribe conversations and extracts key information from virtual meetin...
+  Website: https://karax.ai
+
+• WebCrawler API
+  Description: A tool and API to extract data from websites at scale...
+  Website: https://webcrawlerapi.com
+
+• Noteey
+  Description: A tool to organize, annotate, and connect visual notes offline...
+  Website: https://noteey.com
+
+• RetroTeam
+  Description: A tool to automate feedback grouping and generate retrospective summaries...
+  Website: https://retroteam.com
+
+• Kaiboard
+  Description: A tool to perform text tasks using customizable keyboard shortcuts...
+  Website: https://kaiboard.com
+
+• WorkFlawless
+  Description: A tool to manage workflows, SOPs, and team collaboration...
+  Website: https://workflawless.com
+
+• Cloudairy
+  Description: A platform with collaborative workspace for visual project management and diagramming...
+  Website: https://cloudairy.com
+
+• JobQuest.ai
+  Description: A tool to create resumes and match job applications...
+  Website: https://jobquest.ai
+
+• Vectal
+  Description: A tool to organize tasks, track goals, and manage workflows...
+  Website: https://vectal.com
+
+• AI Renamer
+  Description: A tool to generate descriptive file names using AI analysis of content...
+  Website: https://airenamer.com
+
+• Vaiz
+  Description: A platform that centralizes project management, collaboration, and productivity tools for teams...
+  Website: https://vaiz.com
+
+• Eraser IO
+  Description: A platform for technical documentation and diagramming for engineering teams through collaborative t...
+  Website: https://eraserio.com
+
+• Enso
+  Description: A platform to access AI agents for automating various business tasks...
+  Website: https://enso.com
+
+• Fellow.app
+  Description: A tool for meeting management with to improve efficiency and productivity...
+  Website: https://fellow.com
+
+• ReconXi
+  Description: A tool to reconcile bank statements with company ledgers...
+  Website: https://reconxi.com
+
+• Excel Whisper
+  Description: An Excel mentor for personalized assistance and solutions...
+  Website: https://excelwhisper.com
+
+• Worxmate
+  Description: An OKR and performance management tool for goal alignment and productivity...
+  Website: https://worxmate.com
+
+• Manus AI
+  Description: An autonomous AI agent to plan and execute complex tasks across multiple domains...
+  Website: https://manus.com
+
+• TypeThinkAI
+  Description: A platform with various AI models and tools for diverse tasks...
+  Website: https://typethink.com
+
+• Fenn
+  Description: A tool to search files locally on macOS without cloud...
+  Website: https://fenn.com
+
+• Pig
+  Description: An API for AI agents to remotely control and automate Windows applications and workflows...
+  Website: https://pig.com
+
+• Kudra
+  Description: A tool to extract and process OCR or NER data from various documents...
+  Website: https://kudra.com
+
+• AISOAP
+  Description: A tool to convert patient conversations into structured medical notes...
+  Website: https://aisoap.com
+
+• Zuzia
+  Description: A tool to monitor servers and websites with real-time tracking and alerts...
+  Website: https://zuzia.com
+
+• Cradl AI
+  Description: A nocode platform to extract data and process documents...
+  Website: https://cradl.com
+
+• Needle AI
+  Description: A tool to automate workflows, connect data, and assist decisions...
+  Website: https://needle.com
+
+• Octopus.do
+  Description: A tool to create visual website plans with sitemaps and wireframes...
+  Website: https://octopusdo.com
+
+• Presentations.ai
+  Description: A tool to create presentations from user ideas...
+  Website: https://presentations.com
+
+• Right Click Prompt
+  Description: A Chrome extension for managing and reusing AI prompts through a right-click menu...
+  Website: https://rightclickprompt.com
+
+• Clueso
+  Description: A tool to convert screen recordings into instructional content...
+  Website: https://clueso.com
+
+• GenPPT
+  Description: A tool to create customizable PowerPoint presentations from user input...
+  Website: https://genppt.com
+
+• Platus
+  Description: A tool to automate legal processes for businesses...
+  Website: https://platus.com
+
+• Folder Pilot
+  Description: A tool to search, tag, and chat with legal documents...
+  Website: https://folderpilot.com
+
+• RPLY
+  Description: An assistant for iMessage to suggest and automate responses...
+  Website: https://rply.com
+
+• Sitehunt
+  Description: A platform for property management and site selection...
+  Website: https://sitehunt.com
+
+• HideMyData
+  Description: A privacy tool to mask personal information online...
+  Website: https://hidemydata.com
+
+• ChatGPT Exporter
+  Description: A Free Google Chrome Extension to export ChatGPT conversations to various file formats...
+  Website: https://chatgptexporter.com
+
+• Storyblocker
+  Description: A previsualization app to plan, visualize, and collaborate on scenes using smartphones...
+  Website: https://storyblocker.com
+
+• Serif.ai
+  Description: A tool for email management and response drafting...
+  Website: https://serif.com
+
+• CubeOne AI
+  Description: A tool for presentation creation and delivery through chat interactions...
+  Website: https://cubeone.com
+
+• Wand AI
+  Description: A platform to build advance AI for non-technical users through natural language processing...
+  Website: https://wand.com
+
+• Bravo Studio
+  Description: A nocode tool to convert Figma designs into functional mobile apps...
+  Website: https://bravostudio.com
+
+• Cliprun
+  Description: A tool to run Python code instantly in a browser...
+  Website: https://cliprun.com
+
+• Rootly
+  Description: A tool to automate and streamline incident management within Slack...
+  Website: https://rootly.com
+
+• CTRL Sheet
+  Description: A tool that enhances spreadsheet functionality and automates data tasks...
+  Website: https://ctrlsheet.com
+
+• Toolhouse
+  Description: A platform for management and optimization of LLM tools...
+  Website: https://toolhouse.com
+
+• IdeaBuddy
+  Description: A business planning tool that guides entrepreneurs from idea to execution...
+  Website: https://ideabuddy.com
+
+• THEO
+  Description: A tool to transform business content into AI-ready formats for improved AI assistant responses...
+  Website: https://theo.com
+
+• Ping AI Tasklist
+  Description: A tool to create, organize, and track tasks...
+  Website: https://pingaitasklist.com
+
+• Teammately
+  Description: A tool for product development using scientific self-iteration to meet business goals...
+  Website: https://teammately.com
+
+• Figflow
+  Description: A tool for conversion of Figma designs into development-ready project elements and product workflows...
+  Website: https://figflow.com
+
+• Aphra
+  Description: A personal assistant that integrates multiple productivity tools for efficient task and schedule man...
+  Website: https://aphra.com
+
+• Anchor Browser
+  Description: A privacy-focused web browser with enhanced link management...
+  Website: https://anchorbrowser.com
+
+• Qodex.ai
+  Description: A tool for software testing to generate cases, scripts, and detect bugs...
+  Website: https://qodex.com
+
+• Open Interface
+  Description: A tool to automate computer tasks using LLMs simulated inputs...
+  Website: https://openinterface.com
+
+• there
+  Description: A tool for task management and productivity...
+  Website: https://there.com
+
+• SenseTask
+  Description: A tool for OCR document processing and workflow management...
+  Website: https://sensetask.com
+
+• CopyCat
+  Description: A tool to automate repetitive computer tasks by recording and replicating user actions...
+  Website: https://copycat.com
+
+• Bluebarry AI
+  Description: A tool to organize and collaborate on 3D models and design files for industrial design teams...
+  Website: https://bluebarry.com
+
+• ProdPad
+  Description: A tool to manage product roadmaps, ideas, and customer feedback...
+  Website: https://prodpad.com
+
+• Hoop
+  Description: A tool to organize and prioritize tasks from multiple sources...
+  Website: https://hoop.com
+
+• AI Drive
+  Description: A platform to PDF storage and analysis for document management and information extraction...
+  Website: https://aidrive.com
+
+• HeyBoss
+  Description: A no-code platform for building apps and websites...
+  Website: https://heyboss.com
+
+• Witsy
+  Description: A tool to interact with AI, create content, and automate tasks...
+  Website: https://witsy.com
+
+• Cotypist
+  Description: A tool to suggest words and sentences to improve writing speed...
+  Website: https://cotypist.com
+
+
+AI WEBSITE BUILDER (5 tools)
+--------------------------------------------------
+• Kickresume
+  Description: Kickresume is an AI-powered resume builder and cover letter generator designed to help job seekers c...
+  Website: https://www.kickresume.com/
+
+• Sitekick - Powerful Landing Page Builder
+  Description: Sitekick - Powerful Landing Page Builder...
+  Website: https://www.b12.io/static/daa59408e5e3eebc459f5eab18b2474a/922af/sitekick.png
+
+• Unbounce - AI Landing Page Builder
+  Description: Unbounce - AI Landing Page Builder...
+  Website: https://www.b12.io/static/dd316cc7101da6a2c1685cd60165366b/922af/unbounce.png
+
+• Webflow's AI Site Builder
+  Description: A tool to generate complete website designs from user input...
+  Website: https://webflowsaisitebuilder.com
+
+• Modulify AI
+  Description: A tool for website creation using AI-assisted design and pre-built components...
+  Website: https://modulify.com
+
+
+CHAT (1 tools)
+--------------------------------------------------
+• Fast Q&A
+  Description: A tool to answer visitor questions directly on websites...
+  Website: https://fastqa.com
+
+
+CODE GENERATION (7 tools)
+--------------------------------------------------
+• Lindra AI
+  Description: An virtual employee that automates routine business tasks without coding...
+  Website: https://lindra.com
+
+• FlyTest
+  Description: A tool to automate software testing using natural language inputs without requiring coding knowledge...
+  Website: https://flytest.com
+
+• DevPlan
+  Description: A tool to optimize and centralize software development planning with task management...
+  Website: https://devplan.com
+
+• DeepDocs
+  Description: A tool to update project documentation based on code changes in GitHub pull requests...
+  Website: https://deepdocs.com
+
+• Replit iOS App
+  Description: An app as online coding platform for creating, collaborating on, and deploying software projects...
+  Website: https://replitios.com
+
+• Venice AI
+  Description: A decentralized platform for text, image, and code generation without data storage or content restri...
+  Website: https://venice.com
+
+• CICube
+  Description: A tool to monitor and optimize GitHub Actions CI pipelines through metric tracking, recommendations,...
+  Website: https://cicube.com
+
+
+CONTENT CREATION (4 tools)
+--------------------------------------------------
+• Grammarly
+  Description: Grammarly is an AI-powered writing assistant that helps improve writing quality through grammar chec...
+  Website: https://grammarly.com/
+
+• Guru
+  Description: Guru is a knowledge management solution that uses AI to help teams find, verify, and share informati...
+  Website: https://www.getguru.com/
+
+• Microsoft Copilot
+  Description: Microsoft Copilot is an AI assistant integrated across Microsoft 365 applications, designed to enhan...
+  Website: https://microsoft.com/copilot
+
+• Notion AI
+  Description: Notion AI is an intelligent writing assistant built into the popular Notion workspace platform. It h...
+  Website: https://notion.so/
+
+
+DATA ANALYSIS (24 tools)
+--------------------------------------------------
+• LockedIn AI
+  Description: Go into your job interviews with absolute confidence thanks to an AI co-pilot...
+  Website: https://lockedinai.com
+
+• Trace AI
+  Description: AI-powered productivity tool that helps automate workflows and boost efficiency...
+  Website: No website
+
+• Athenic AI
+  Description: A tool to query business data and get instant insights....
+  Website: https://www.futuretools.io/tools/athenic-ai
+
+• FlowMetr
+  Description: A tool that monitors open-source AI models in production with real-time analytics, logging and alert...
+  Website: https://flowmetr.com
+
+• AutonomOps AI
+  Description: A platform that autonomously monitors, analyzes, and optimizes cloud applications using collaborativ...
+  Website: https://autonomops.com
+
+• Poppy AI
+  Description: A visual workspace to organize, transcribe, summarize, and analyze multimedia content on an infinite...
+  Website: https://poppy.com
+
+• BeeSift
+  Description: A Google Chrome extension to categorize and analyze data to extract insights from unstructured infor...
+  Website: https://beesift.com
+
+• Ponder
+  Description: A workspace that researchers organize, connect, and analyze information across multiple sources...
+  Website: https://ponder.com
+
+• AI inTime
+  Description: A tool to track and analyze time spent across applications...
+  Website: https://aiintime.com
+
+• Littlebird
+  Description: An AI assistant to capture insights from digital activities to provide personalized organization, su...
+  Website: https://littlebird.com
+
+• Klarops
+  Description: A workforce management platform that provides productivity insights while respecting employee privac...
+  Website: https://klarops.com
+
+• Altavize
+  Description: A tool to analyze and categorize text directly in Excel...
+  Website: https://altavize.com
+
+• Pally
+  Description: A tool to manage and analyze relationships across communication platforms...
+  Website: https://pally.com
+
+• Macro
+  Description: A tool to edit documents, analyze files, and collaborate...
+  Website: https://macro.com
+
+• JustCall
+  Description: A phone system to manage calls, texts, and communication analytics...
+  Website: https://justcall.com
+
+• Inabit.ai
+  Description: A tool for creation of professional presentations and data visualizations...
+  Website: https://inabit.ai
+
+• Legion AI
+  Description: A nocode analytics platform to convert natural language into SQL queries to analyze and visualize da...
+  Website: https://legion.com
+
+• Mochii AI
+  Description: A tool to summarize pages, analyze documents, and assist research...
+  Website: https://mochii.com
+
+• Twin AI
+  Description: A tool to automate workflows, analyze data, and generate content...
+  Website: https://twin.com
+
+• ClickBoss AI
+  Description: A tool to analyze data, track performance, and send alerts...
+  Website: https://clickboss.com
+
+• Feeedback
+  Description: A tool to collect, organize, and analyze user feedback for development...
+  Website: https://feeedback.com
+
+• Proxed.AI
+  Description: A platform to optimize operations and decision-making through data analysis and automation...
+  Website: https://proxed.com
+
+• ReviewNicely
+  Description: A tool to collect and analyze customer feedback...
+  Website: https://reviewnicely.com
+
+• Sourcetable
+  Description: A spreadsheet platform that integrates and analyzes data from multiple business applications...
+  Website: https://sourcetable.com
+
+
+EDUCATION & RESEARCH (12 tools)
+--------------------------------------------------
+• Enjo.ai
+  Description: A tool that handles support requests by integrating with workplace tools and knowledge bases for con...
+  Website: https://enjo.ai
+
+• ResearchCollab.ai
+  Description: A platform for research collaboration through document synchronization, literature analysis, and tas...
+  Website: https://researchcollab.ai
+
+• Mexty AI
+  Description: A tool to create personalized interactive learning and training content...
+  Website: https://mexty.com
+
+• UnSoloMind
+  Description: A tool to answer questions using uploaded knowledge and AI Assistant...
+  Website: https://unsolomind.com
+
+• Constella
+  Description: A visual knowledge management app to capture, connect, and retrieve information through an infinite ...
+  Website: https://constella.com
+
+• Tapflow
+  Description: A platform to monetize expertise by creating and selling digital knowledge products...
+  Website: https://tapflow.com
+
+• Vetis
+  Description: A tool to organize, search, and retrieve personal knowledge to build second brain...
+  Website: https://vetis.com
+
+• Curiso.ai
+  Description: A platform with an infinite canvas workspace for organizing ideas, researching, and developing conce...
+  Website: https://curiso.ai
+
+• Kolena
+  Description: A platform for testing, evaluation, and improvement of machine learning models...
+  Website: https://kolena.com
+
+• Locus Extension
+  Description: A Chrome extension for web content search, summarization, and research...
+  Website: https://locusextension.com
+
+• Supametas.AI
+  Description: A tool to transform unstructured data into structured formats for AI models and knowledge bases...
+  Website: https://supametas.ai
+
+• Tana
+  Description: A tool for knowledge management and to integrate note-taking, task management, and information organ...
+  Website: https://tana.com
+
+
+EMAIL MARKETING (2 tools)
+--------------------------------------------------
+• Pikr
+  Description: A tool for newsletter management by organizing emails, summaries, and integrating content into Notio...
+  Website: https://pikr.com
+
+• Folk CRM
+  Description: A tool to manage contacts, sales, and automate email campaigns...
+  Website: https://folkcrm.com
+
+
+IMAGE GENERATION (1 tools)
+--------------------------------------------------
+• Microsoft PowerPoint
+  Description: Microsoft PowerPoint is a presentation software that allows users to create captivating presentation...
+  Website: https://www.microsoft.com/en-us/microsoft-365/powerpoint
+
+
+LEAD GENERATION (2 tools)
+--------------------------------------------------
+• Explee
+  Description: Find thousands of potential customers in seconds with AI-powered lead generation...
+  Website: https://explee.com
+
+• Appointwise
+  Description: A tool to automate appointment setting, lead qualification, and follow-ups...
+  Website: https://appointwise.com
+
+
+MARKETING (1 tools)
+--------------------------------------------------
+• Google Search
+  Description: Google Search offers an 'AI Mode' that provides personalized suggestions and insights based on user ...
+  Website: https://www.google.com/
+
+
+MUSIC & AUDIO (1 tools)
+--------------------------------------------------
+• Highlight AI
+  Description: A tool to control apps, transcribe audio, and analyze content...
+  Website: https://highlight.com
+
+
+SALES (5 tools)
+--------------------------------------------------
+• Fathom
+  Description: Fathom is an AI-powered meeting notetaker that automatically transcribes and summarizes meetings fro...
+  Website: https://fathom.video/
+
+• Fyxer
+  Description: Fyxer is an AI-powered assistant designed to help users manage their inboxes, draft email responses,...
+  Website: https://www.fyxer.ai/
+
+• Motion
+  Description: Over 1 million top performers and teams trust Motion...
+  Website: No website
+
+• Reclaim.ai
+  Description: Reclaim.ai is an AI-powered productivity tool that helps individuals and teams manage their time eff...
+  Website: https://reclaim.ai/
+
+• TestZeus
+  Description: A tool to automate UI testing for Salesforce applications...
+  Website: https://testzeus.com
+
+
+SOCIAL MEDIA (1 tools)
+--------------------------------------------------
+• ChatSlide AI
+  Description: A tool to create presentations, videos, and social media posts...
+  Website: https://chatslide.com
+
+
+TRANSLATION (2 tools)
+--------------------------------------------------
+• Translate GPT - for Convenient Translation
+  Description: Translate GPT - for Convenient Translation...
+  Website: https://www.b12.io/static/d39b8db9c3224bb8b6e4e97af073a5dd/922af/translate-gpt.png
+
+• Votars
+  Description: A multilingual AI meeting assistant to transcribe conversations and generate summaries...
+  Website: https://votars.com
+
+
+VIDEO GENERATION (2 tools)
+--------------------------------------------------
+• Kwizie
+  Description: A tool to create interactive quizzes from video content...
+  Website: https://kwizie.com
+
+• UniScribe
+  Description: A tool to transcribe and summarize audio and video content...
+  Website: https://uniscribe.com
+
+
+VOICE AI (7 tools)
+--------------------------------------------------
+• Nyota
+  Description: Nyota is an AI-powered notetaker designed to align sales, support, and project teams by automating d...
+  Website: https://www.nyota.ai/
+
+• Vowel
+  Description: AI-powered meetings for fast-moving teams. Vowel is the AI tool for teams to host, summarize, search...
+  Website: https://vowel.com
+
+• WellMeRight
+  Description: Platform for health and wellness resources, connecting users with holistic practitioners, nutrition ...
+  Website: https://wellmeright.com
+
+• Voiset
+  Description: A task manager that converts voice commands into scheduled tasks while adapting to your work pattern...
+  Website: https://voiset.com
+
+• Docci.ai
+  Description: A tool to extract structured data from invoices and documents...
+  Website: https://docci.ai
+
+• AgentVoice
+  Description: A tool to automate phone-based customer interactions...
+  Website: https://agentvoice.com
+
+• Inbox AI
+  Description: A tool to automate tasks through voice commands, process emails, and build voice assistants...
+  Website: https://inbox.com
+
+
+================================================================================
+DISTRIBUTION SUMMARY
+================================================================================
+AI Automation: 123 tools
+AI Website Builder: 5 tools
+Chat: 1 tools
+Code Generation: 7 tools
+Content Creation: 4 tools
+Data Analysis: 24 tools
+Education & Research: 12 tools
+Email Marketing: 2 tools
+Image Generation: 1 tools
+Lead Generation: 2 tools
+Marketing: 1 tools
+Music & Audio: 1 tools
+Sales: 5 tools
+Social Media: 1 tools
+Translation: 2 tools
+Video Generation: 2 tools
+Voice AI: 7 tools
+
+Total tools moved from Productivity: 200
+Tools remaining in Productivity: 0
+Total tools analyzed: 200
