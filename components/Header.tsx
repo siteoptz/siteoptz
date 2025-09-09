@@ -6,44 +6,61 @@ import { Menu, X, ChevronDown, ChevronUp } from 'lucide-react';
 import { toolCategories, getCategoryUrl, getCategoryDisplayName } from '../config/categories';
 import { industries, industrySlugMap } from '../content/industryContent';
 
-// Hierarchical category structure for AI Categories dropdown
-const hierarchicalCategories = [
+// Accordion category structure for AI Categories dropdown
+const accordionCategories = [
   {
-    name: 'Content',
+    name: 'Content & Creativity',
     subcategories: [
       { name: 'Content Creation', value: 'Content Creation' },
       { name: 'Image Generation', value: 'Image Generation' },
       { name: 'Video Generation', value: 'Video Generation' },
-      { name: 'Best Voice AI Tools', value: 'Best Voice AI Tools' }
+      { name: 'Writing', value: 'Writing' }
     ]
   },
   {
-    name: 'Marketing & Digital',
+    name: 'Voice & Communication',
     subcategories: [
-      { name: 'Paid Search', value: 'Paid Search & PPC' },
-      { name: 'Social Media', value: 'Social Media' },
-      { name: 'SEO & Optimization', value: 'SEO & Optimization' },
-      { name: 'Email Marketing', value: 'Email Marketing' },
-      { name: 'E-Commerce', value: 'E-commerce' }
+      { name: 'Voice AI', value: 'Voice AI' },
+      { name: 'Best Voice AI Tools', value: 'Best Voice AI Tools' },
+      { name: 'AI Translator', value: 'AI Translator' }
     ]
   },
   {
-    name: 'Development & Technology',
+    name: 'Marketing & Growth',
+    subcategories: [
+      { name: 'SEO & Optimization', value: 'SEO & Optimization' },
+      { name: 'Paid Search & PPC', value: 'Paid Search & PPC' },
+      { name: 'Social Media', value: 'Social Media' },
+      { name: 'Email Marketing', value: 'Email Marketing' },
+      { name: 'Lead Generation', value: 'Lead Generation' }
+    ]
+  },
+  {
+    name: 'Business & Analytics',
+    subcategories: [
+      { name: 'Data Analysis', value: 'Data Analysis' },
+      { name: 'Finance AI', value: 'Finance AI' },
+      { name: 'AI For Business', value: 'AI For Business' },
+      { name: 'E-commerce', value: 'E-commerce' }
+    ]
+  },
+  {
+    name: 'Development & Automation',
     subcategories: [
       { name: 'Code Generation', value: 'Code Generation' },
       { name: 'AI Automation', value: 'AI Automation' },
+      { name: 'AI Website Builder', value: 'AI Website Builder' },
       { name: 'Website Builder', value: 'Website Builder' },
       { name: 'UX', value: 'UX' }
     ]
   },
   {
-    name: 'Business & Productivity',
+    name: 'Education & Personal',
     subcategories: [
-      { name: 'Productivity', value: 'Productivity' },
+      { name: 'AI Education', value: 'AI Education' },
       { name: 'Research & Education', value: 'Research & Education' },
-      { name: 'Data Analysis', value: 'Data Analysis' },
-      { name: 'Lead Generation', value: 'Lead Generation' },
-      { name: 'Finance AI', value: 'Finance AI' }
+      { name: 'Health AI', value: 'Health AI' },
+      { name: 'Productivity', value: 'Productivity' }
     ]
   }
 ];
@@ -53,6 +70,9 @@ const Header: React.FC = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const router = useRouter();
   
+  // Desktop category accordion states
+  const [desktopCategoryAccordions, setDesktopCategoryAccordions] = useState<Record<string, boolean>>({});
+  
   // Mobile accordion states
   const [mobileAccordions, setMobileAccordions] = useState({
     categories: false,
@@ -60,6 +80,9 @@ const Header: React.FC = () => {
     industries: false,
     resources: false,
   });
+  
+  // Desktop category accordion states
+  const [mobileCategoryAccordions, setMobileCategoryAccordions] = useState<Record<string, boolean>>({});
   
   const toggleMobileAccordion = (section: keyof typeof mobileAccordions) => {
     console.log(`Toggling ${section} accordion. Current state:`, mobileAccordions[section]);
@@ -71,6 +94,20 @@ const Header: React.FC = () => {
       console.log('New accordion states:', newState);
       return newState;
     });
+  };
+  
+  const toggleDesktopCategoryAccordion = (categoryName: string) => {
+    setDesktopCategoryAccordions(prev => ({
+      ...prev,
+      [categoryName]: !prev[categoryName]
+    }));
+  };
+  
+  const toggleMobileCategoryAccordion = (categoryName: string) => {
+    setMobileCategoryAccordions(prev => ({
+      ...prev,
+      [categoryName]: !prev[categoryName]
+    }));
   };
 
   // Industry dropdown menu items with shortened names
@@ -127,6 +164,8 @@ const Header: React.FC = () => {
       industries: false,
       resources: false,
     });
+    // Reset mobile category accordions
+    setMobileCategoryAccordions({});
   };
 
   // Body scroll prevention disabled to fix button clicking issues
@@ -184,7 +223,7 @@ const Header: React.FC = () => {
                   )}
                 </Link>
                 
-                {/* Dropdown Menu - AI Categories */}
+                {/* Accordion Dropdown Menu - AI Categories */}
                 {item.hasDropdown && item.isCategory && (
                   <div 
                     className="absolute top-full left-0 mt-2 w-80 bg-black rounded-xl shadow-xl border border-gray-800/50 py-3 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 transform translate-y-2 group-hover:translate-y-0"
@@ -193,25 +232,39 @@ const Header: React.FC = () => {
                       Browse by Category
                     </div>
                     <div className="max-h-96 overflow-y-auto">
-                      {hierarchicalCategories.map((mainCategory, index) => (
-                        <div key={mainCategory.name} className={index > 0 ? 'mt-4' : ''}>
-                          <div className="px-4 py-2 text-xs font-bold text-cyan-400 uppercase tracking-wider">
+                      {accordionCategories.map((mainCategory, index) => (
+                        <div key={mainCategory.name} className={index > 0 ? 'border-t border-gray-800/30 mt-2 pt-2' : ''}>
+                          <button
+                            onClick={(e) => {
+                              e.preventDefault();
+                              e.stopPropagation();
+                              toggleDesktopCategoryAccordion(mainCategory.name);
+                            }}
+                            className="w-full px-4 py-2 text-left text-xs font-bold text-cyan-400 uppercase tracking-wider hover:text-cyan-300 transition-colors flex items-center justify-between"
+                          >
                             {mainCategory.name}
-                          </div>
-                          <div className="space-y-1 px-2">
-                            {mainCategory.subcategories.map((subcategory) => (
-                              <Link
-                                key={subcategory.value}
-                                href={getCategoryUrl(subcategory.value)}
-                                className="block px-4 py-2 text-sm text-gray-300 hover:bg-gray-800 hover:text-white transition-all duration-200 rounded-lg border-l-2 border-transparent hover:border-cyan-400"
-                              >
-                                <div className="flex items-center justify-between">
-                                  <span>{subcategory.name}</span>
-                                  <span className="text-xs text-gray-500">→</span>
-                                </div>
-                              </Link>
-                            ))}
-                          </div>
+                            <ChevronDown 
+                              className={`w-4 h-4 transition-transform duration-200 ${
+                                desktopCategoryAccordions[mainCategory.name] ? 'rotate-180' : ''
+                              }`}
+                            />
+                          </button>
+                          {desktopCategoryAccordions[mainCategory.name] && (
+                            <div className="space-y-1 px-2 pb-2">
+                              {mainCategory.subcategories.map((subcategory) => (
+                                <Link
+                                  key={subcategory.value}
+                                  href={getCategoryUrl(subcategory.value)}
+                                  className="block px-4 py-2 text-sm text-gray-300 hover:bg-gray-800 hover:text-white transition-all duration-200 rounded-lg border-l-2 border-transparent hover:border-cyan-400"
+                                >
+                                  <div className="flex items-center justify-between">
+                                    <span>{subcategory.name}</span>
+                                    <span className="text-xs text-gray-500">→</span>
+                                  </div>
+                                </Link>
+                              ))}
+                            </div>
+                          )}
                         </div>
                       ))}
                     </div>
@@ -334,24 +387,63 @@ const Header: React.FC = () => {
                 </button>
                 {mobileAccordions.categories && (
                   <div style={{ paddingBottom: '12px' }}>
-                    {toolCategories.map((category) => (
-                      <Link 
-                        key={category}
-                        href={`/categories/${category.toLowerCase().replace(/[^a-z0-9]+/g, '-')}`} 
-                        onClick={closeMenu} 
-                        style={{ 
-                          color: 'white', 
-                          textDecoration: 'none', 
-                          fontSize: '16px', 
-                          padding: '12px 16px', 
-                          borderBottom: '1px solid rgba(255,255,255,0.05)',
-                          transition: 'all 0.2s ease',
-                          display: 'block',
-                          marginLeft: '8px'
-                        }}
-                      >
-                        {getCategoryDisplayName(category)}
-                      </Link>
+                    {accordionCategories.map((mainCategory) => (
+                      <div key={mainCategory.name} style={{ marginBottom: '8px' }}>
+                        <button
+                          onClick={() => toggleMobileCategoryAccordion(mainCategory.name)}
+                          style={{
+                            width: '100%',
+                            display: 'flex',
+                            alignItems: 'center',
+                            justifyContent: 'space-between',
+                            background: 'none',
+                            border: 'none',
+                            color: '#22d3ee',
+                            fontSize: '14px',
+                            fontWeight: '600',
+                            padding: '8px 16px',
+                            textTransform: 'uppercase',
+                            letterSpacing: '0.5px',
+                            cursor: 'pointer',
+                            WebkitTapHighlightColor: 'transparent',
+                            marginLeft: '8px'
+                          }}
+                        >
+                          {mainCategory.name}
+                          <ChevronDown 
+                            style={{ 
+                              width: '14px', 
+                              height: '14px',
+                              transform: mobileCategoryAccordions[mainCategory.name] ? 'rotate(180deg)' : 'rotate(0deg)',
+                              transition: 'transform 0.2s ease'
+                            }} 
+                          />
+                        </button>
+                        {mobileCategoryAccordions[mainCategory.name] && (
+                          <div style={{ marginLeft: '16px' }}>
+                            {mainCategory.subcategories.map((subcategory) => (
+                              <Link 
+                                key={subcategory.value}
+                                href={getCategoryUrl(subcategory.value)} 
+                                onClick={closeMenu} 
+                                style={{ 
+                                  color: '#d1d5db', 
+                                  textDecoration: 'none', 
+                                  fontSize: '15px', 
+                                  padding: '8px 16px', 
+                                  borderBottom: '1px solid rgba(255,255,255,0.05)',
+                                  transition: 'all 0.2s ease',
+                                  display: 'block',
+                                  marginLeft: '8px',
+                                  borderLeft: '2px solid transparent'
+                                }}
+                              >
+                                {subcategory.name}
+                              </Link>
+                            ))}
+                          </div>
+                        )}
+                      </div>
                     ))}
                   </div>
                 )}
