@@ -1,9 +1,9 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
 import Image from 'next/image';
 import { GetStaticProps, GetStaticPaths } from 'next';
-import { Star, TrendingUp, Users, Zap, CheckCircle, ArrowRight } from 'lucide-react';
+import { Star, TrendingUp, Users, Zap, CheckCircle, ArrowRight, ChevronUp, ChevronDown } from 'lucide-react';
 import { toolCategories, getCategorySlug } from '../../config/categories';
 import { loadUnifiedToolsData } from '../../utils/unifiedDataAdapter';
 import { categoryContent } from '../../content/categoryContent';
@@ -16,11 +16,14 @@ interface CategoryPageProps {
 }
 
 export default function CategoryPage({ category, tools, content }: CategoryPageProps) {
+  const [showAllTools, setShowAllTools] = useState(false);
+  
   if (!content || !content.seo || !content.seo.title) {
     return <div>Error: Invalid category content structure</div>;
   }
   
   const topTools = tools.slice(0, 6);
+  const displayedTools = showAllTools ? tools : topTools;
   const categorySlug = category.toLowerCase().replace(/[^a-z0-9]+/g, '-');
 
   return (
@@ -276,7 +279,7 @@ export default function CategoryPage({ category, tools, content }: CategoryPageP
         </section>
 
         {/* Top Tools Section */}
-        <section className="py-16">
+        <section id="tools-section" className="py-16">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-12">
               <h2 className="text-3xl font-bold text-white mb-4">
@@ -288,7 +291,7 @@ export default function CategoryPage({ category, tools, content }: CategoryPageP
             </div>
             
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {topTools.map((tool: any, index: number) => (
+              {displayedTools.map((tool: any, index: number) => (
                 <div key={tool.id || index} className="bg-gray-900 border border-gray-800 rounded-lg p-6 hover:border-cyan-400 transition-colors">
                   <div className="flex items-center mb-4">
                     <div className="mr-4">
@@ -328,15 +331,17 @@ export default function CategoryPage({ category, tools, content }: CategoryPageP
               ))}
             </div>
             
-            <div className="text-center mt-12">
-              <Link 
-                href={`/categories/${getCategorySlug(category)}`}
-                className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-lg font-medium transition-colors inline-flex items-center"
-              >
-                View All {category} Tools
-                <ArrowRight className="w-5 h-5 ml-2" />
-              </Link>
-            </div>
+            {tools.length > 6 && (
+              <div className="text-center mt-12">
+                <button 
+                  onClick={() => setShowAllTools(!showAllTools)}
+                  className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-lg font-medium transition-colors inline-flex items-center"
+                >
+                  {showAllTools ? 'Show Less' : `View All ${tools.length} ${category} Tools`}
+                  {showAllTools ? <ChevronUp className="w-5 h-5 ml-2" /> : <ChevronDown className="w-5 h-5 ml-2" />}
+                </button>
+              </div>
+            )}
           </div>
         </section>
 
@@ -470,12 +475,15 @@ export default function CategoryPage({ category, tools, content }: CategoryPageP
               </p>
               
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Link 
-                  href={`/categories/${getCategorySlug(category)}`}
+                <button 
+                  onClick={() => {
+                    setShowAllTools(true);
+                    document.getElementById('tools-section')?.scrollIntoView({ behavior: 'smooth' });
+                  }}
                   className="bg-white text-blue-600 hover:bg-gray-100 px-8 py-3 rounded-lg font-semibold transition-colors"
                 >
                   Explore {category} Tools
-                </Link>
+                </button>
                 <a 
                   href="https://api.leadconnectorhq.com/widget/booking/yPjkVmsauPst8XlrOQUl"
                   target="_blank"
@@ -526,9 +534,12 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
     return { notFound: true };
   }
 
-  // Load tools for this category
+  // Load tools for this category - check both category fields
   const allTools = loadUnifiedToolsData(fs, path);
-  const tools = allTools.filter(tool => tool.category === category);
+  const tools = allTools.filter(tool => 
+    tool.category === category || 
+    tool.overview?.category === category
+  );
 
   // Load category content with proper mapping from slug to content key
   const contentKeyMapping: Record<string, string> = {
