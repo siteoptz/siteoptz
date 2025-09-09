@@ -83,8 +83,9 @@ export default function CaseStudyPage({ caseStudy, relatedStudies }: CaseStudyPa
       "name": `AI Implementation in ${caseStudy.industry}`
     },
     "mentions": caseStudy.tools.map(tool => ({
-      "@type": "SoftwareApplication",
-      "name": tool
+      "@type": "Thing",
+      "name": tool,
+      "description": `AI tool used in this implementation: ${tool}`
     }))
   };
 

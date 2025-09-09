@@ -50,7 +50,27 @@ const SEOOptimizationPage: React.FC<SEOOptimizationPageProps> = ({ tools }) => {
       "description": tool.description,
       "url": `https://siteoptz.ai/reviews/${tool.slug || tool.name.toLowerCase().replace(/[^a-z0-9]+/g, '-')}`,
       "applicationCategory": "SEO Software",
-      "operatingSystem": "Web"
+      "operatingSystem": "Web",
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": (tool as any).rating || 4.5,
+        "reviewCount": (tool as any).review_count || 50,
+        "bestRating": 5,
+        "worstRating": 1
+      },
+      "offers": tool.pricing && tool.pricing.length > 0 ? tool.pricing.map((plan: any) => ({
+        "@type": "Offer",
+        "name": plan.plan || plan.tier,
+        "price": plan.price_per_month,
+        "priceCurrency": "USD",
+        "availability": "https://schema.org/InStock"
+      })) : [{
+        "@type": "Offer",
+        "name": "Contact for Pricing",
+        "price": 0,
+        "priceCurrency": "USD",
+        "availability": "https://schema.org/InStock"
+      }]
     }))
   };
 

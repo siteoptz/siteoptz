@@ -75,7 +75,7 @@ export default function About() {
     "logo": "https://siteoptz.ai/images/siteoptz-logo.png",
     "description": "SiteOptz helps businesses implement and optimize AI tools to drive measurable growth and ROI. We provide expert AI consulting, implementation, and ongoing optimization services.",
     "foundingDate": "2020",
-    "industry": "Artificial Intelligence Consulting",
+    "knowsAbout": ["Artificial Intelligence", "AI Consulting", "Business Optimization", "Software Implementation"],
     "numberOfEmployees": "50-100",
     "address": {
       "@type": "PostalAddress",
