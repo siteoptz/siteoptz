@@ -85,7 +85,7 @@ const ComparisonPage: React.FC<ComparisonPageProps> = ({ tool1, tool2, faqs1, fa
           <div className="grid md:grid-cols-2 gap-8 mb-8">
             <div className="text-center p-6 bg-gray-900 border border-gray-800 rounded-lg">
               <div className="flex justify-center mb-4">
-                <ToolLogo toolName={tool1.name} logoUrl={tool1.logo} size="lg" />
+                <ToolLogo toolName={tool1.name} logoUrl={tool1.logo || undefined} size="lg" />
               </div>
               <h2 className="text-2xl font-bold text-white mb-2">{tool1.name}</h2>
               <p className="text-gray-300">{tool1.overview?.description || ''}</p>
@@ -99,7 +99,7 @@ const ComparisonPage: React.FC<ComparisonPageProps> = ({ tool1, tool2, faqs1, fa
             </div>
             <div className="text-center p-6 bg-gray-900 border border-gray-800 rounded-lg">
               <div className="flex justify-center mb-4">
-                <ToolLogo toolName={tool2.name} logoUrl={tool2.logo} size="lg" />
+                <ToolLogo toolName={tool2.name} logoUrl={tool2.logo || undefined} size="lg" />
               </div>
               <h2 className="text-2xl font-bold text-white mb-2">{tool2.name}</h2>
               <p className="text-gray-300">{tool2.overview?.description || ''}</p>

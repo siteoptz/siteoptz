@@ -436,7 +436,7 @@ const ComparisonPage: React.FC = () => {
           <div className="bg-white rounded-lg shadow-lg p-8 mb-8">
             <div className="grid lg:grid-cols-2 gap-8">
               <div className="text-center">
-                <ToolLogo toolName={tool1.name} logoUrl={tool1.logo} size="xl" className="mx-auto mb-4" />
+                <ToolLogo toolName={tool1.name} logoUrl={tool1.logo || undefined} size="xl" className="mx-auto mb-4" />
                 <h2 className="text-2xl font-bold text-blue-600 mb-2">{tool1.name}</h2>
                 <p className="text-gray-600 mb-4">{(tool1.overview as any)?.description || tool1.overview?.long_description || 'Advanced AI tool for enhanced productivity.'}</p>
                 <div className="flex justify-center items-center space-x-4">
@@ -445,7 +445,7 @@ const ComparisonPage: React.FC = () => {
                 </div>
               </div>
               <div className="text-center">
-                <ToolLogo toolName={tool2.name} logoUrl={tool2.logo} size="xl" className="mx-auto mb-4" />
+                <ToolLogo toolName={tool2.name} logoUrl={tool2.logo || undefined} size="xl" className="mx-auto mb-4" />
                 <h2 className="text-2xl font-bold text-green-600 mb-2">{tool2.name}</h2>
                 <p className="text-gray-600 mb-4">{(tool2.overview as any)?.description || tool2.overview?.long_description || 'Advanced AI tool for enhanced productivity.'}</p>
                 <div className="flex justify-center items-center space-x-4">
