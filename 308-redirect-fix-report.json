@@ -1,11 +1,11 @@
 {
-  "timestamp": "2025-09-10T12:31:21.794Z",
+  "timestamp": "2025-09-10T16:03:42.663Z",
   "summary": {
     "filesUpdated": 1,
-    "canonicalUrlsFixed": 0,
-    "wwwReferencesRemoved": 0,
+    "canonicalUrlsFixed": 906,
+    "wwwReferencesRemoved": 906,
     "compareUrlsFixed": 0,
-    "filesProcessed": 0,
+    "filesProcessed": 906,
     "errors": 0
   },
   "changes": {
