@@ -75,3182 +75,3182 @@
     {
       "source": "/compare/10web-vs-acquisio",
       "destination": "/compare/10web/vs/acquisio",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/compare/10web-vs-adalysis",
       "destination": "/compare/10web/vs/adalysis",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/compare/10web-vs-adbeat",
       "destination": "/compare/10web/vs/adbeat",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/compare/10web-vs-adcreative-ai",
       "destination": "/compare/10web/vs/adcreative-ai",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/compare/10web-vs-adespresso",
       "destination": "/compare/10web/vs/adespresso",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/compare/10web-vs-adobe-firefly",
       "destination": "/compare/10web/vs/adobe-firefly",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/compare/37x-vs-10web",
       "destination": "/compare/37x/vs/10web",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/compare/37x-vs-acquisio",
       "destination": "/compare/37x/vs/acquisio",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/compare/37x-vs-adalysis",
       "destination": "/compare/37x/vs/adalysis",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/compare/37x-vs-adbeat",
       "destination": "/compare/37x/vs/adbeat",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/compare/37x-vs-adcreative-ai",
       "destination": "/compare/37x/vs/adcreative-ai",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/compare/37x-vs-adespresso",
       "destination": "/compare/37x/vs/adespresso",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/compare/adcreative-ai-vs-10web",
       "destination": "/compare/adcreative-ai/vs/10web",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/compare/adcreative-ai-vs-acquisio",
       "destination": "/compare/adcreative-ai/vs/acquisio",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/compare/adcreative-ai-vs-adalysis",
       "destination": "/compare/adcreative-ai/vs/adalysis",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/compare/adcreative-ai-vs-adbeat",
       "destination": "/compare/adcreative-ai/vs/adbeat",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/compare/adcreative-ai-vs-adespresso",
       "destination": "/compare/adcreative-ai/vs/adespresso",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/compare/adcreative-ai-vs-adobe-firefly",
       "destination": "/compare/adcreative-ai/vs/adobe-firefly",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/compare/aerogram-vs-10web",
       "destination": "/compare/aerogram/vs/10web",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/compare/aerogram-vs-acquisio",
       "destination": "/compare/aerogram/vs/acquisio",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/compare/aerogram-vs-adalysis",
       "destination": "/compare/aerogram/vs/adalysis",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/compare/aerogram-vs-adbeat",
       "destination": "/compare/aerogram/vs/adbeat",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/compare/aerogram-vs-adcreative-ai",
       "destination": "/compare/aerogram/vs/adcreative-ai",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/compare/aerogram-vs-adespresso",
       "destination": "/compare/aerogram/vs/adespresso",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/compare/aftercare-vs-10web",
       "destination": "/compare/aftercare/vs/10web",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/compare/aftercare-vs-acquisio",
       "destination": "/compare/aftercare/vs/acquisio",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/compare/aftercare-vs-adalysis",
       "destination": "/compare/aftercare/vs/adalysis",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/compare/aftercare-vs-adbeat",
       "destination": "/compare/aftercare/vs/adbeat",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/compare/aftercare-vs-adcreative-ai",
       "destination": "/compare/aftercare/vs/adcreative-ai",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/compare/aftercare-vs-adespresso",
       "destination": "/compare/aftercare/vs/adespresso",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/compare/ahrefs-ai-vs-10web",
       "destination": "/compare/ahrefs-ai/vs/10web",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/compare/ahrefs-ai-vs-acquisio",
       "destination": "/compare/ahrefs-ai/vs/acquisio",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/compare/ahrefs-ai-vs-adalysis",
       "destination": "/compare/ahrefs-ai/vs/adalysis",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/compare/ahrefs-ai-vs-adbeat",
       "destination": "/compare/ahrefs-ai/vs/adbeat",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/compare/ahrefs-ai-vs-adcreative-ai",
       "destination": "/compare/ahrefs-ai/vs/adcreative-ai",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/compare/ahrefs-ai-vs-adespresso",
       "destination": "/compare/ahrefs-ai/vs/adespresso",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/compare/ai-homedesign-vs-10web",
       "destination": "/compare/ai-homedesign/vs/10web",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/compare/ai-homedesign-vs-acquisio",
       "destination": "/compare/ai-homedesign/vs/acquisio",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/compare/ai-homedesign-vs-adalysis",
       "destination": "/compare/ai-homedesign/vs/adalysis",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/compare/ai-homedesign-vs-adbeat",
       "destination": "/compare/ai-homedesign/vs/adbeat",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/compare/ai-homedesign-vs-adcreative-ai",
       "destination": "/compare/ai-homedesign/vs/adcreative-ai",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/compare/ai-homedesign-vs-adespresso",
       "destination": "/compare/ai-homedesign/vs/adespresso",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/compare/ai-video-translator-vs-10web",
       "destination": "/compare/ai-video-translator/vs/10web",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/compare/ai-video-translator-vs-acquisio",
       "destination": "/compare/ai-video-translator/vs/acquisio",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/compare/ai-video-translator-vs-adalysis",
       "destination": "/compare/ai-video-translator/vs/adalysis",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/compare/ai-video-translator-vs-adbeat",
       "destination": "/compare/ai-video-translator/vs/adbeat",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/compare/ai-video-translator-vs-adcreative-ai",
       "destination": "/compare/ai-video-translator/vs/adcreative-ai",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/compare/ai-video-translator-vs-adespresso",
       "destination": "/compare/ai-video-translator/vs/adespresso",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/compare/aicosts-ai-vs-10web",
       "destination": "/compare/aicosts-ai/vs/10web",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/compare/aicosts-ai-vs-acquisio",
       "destination": "/compare/aicosts-ai/vs/acquisio",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/compare/aicosts-ai-vs-adalysis",
       "destination": "/compare/aicosts-ai/vs/adalysis",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/compare/aicosts-ai-vs-adbeat",
       "destination": "/compare/aicosts-ai/vs/adbeat",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/compare/aicosts-ai-vs-adcreative-ai",
       "destination": "/compare/aicosts-ai/vs/adcreative-ai",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/compare/aicosts-ai-vs-adespresso",
       "destination": "/compare/aicosts-ai/vs/adespresso",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/compare/aimdoc-vs-10web",
       "destination": "/compare/aimdoc/vs/10web",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/compare/aimdoc-vs-acquisio",
       "destination": "/compare/aimdoc/vs/acquisio",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/compare/aimdoc-vs-adalysis",
       "destination": "/compare/aimdoc/vs/adalysis",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/compare/aimdoc-vs-adbeat",
       "destination": "/compare/aimdoc/vs/adbeat",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/compare/aimdoc-vs-adcreative-ai",
       "destination": "/compare/aimdoc/vs/adcreative-ai",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/compare/aimdoc-vs-adespresso",
       "destination": "/compare/aimdoc/vs/adespresso",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/compare/amazon-codewhisperer-vs-10web",
       "destination": "/compare/amazon-codewhisperer/vs/10web",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/compare/amazon-codewhisperer-vs-acquisio",
       "destination": "/compare/amazon-codewhisperer/vs/acquisio",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/compare/amazon-codewhisperer-vs-adalysis",
       "destination": "/compare/amazon-codewhisperer/vs/adalysis",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/compare/amazon-codewhisperer-vs-adbeat",
       "destination": "/compare/amazon-codewhisperer/vs/adbeat",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/compare/amazon-codewhisperer-vs-adcreative-ai",
       "destination": "/compare/amazon-codewhisperer/vs/adcreative-ai",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/compare/amazon-codewhisperer-vs-adespresso",
       "destination": "/compare/amazon-codewhisperer/vs/adespresso",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/compare/amplifa-vs-10web",
       "destination": "/compare/amplifa/vs/10web",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/compare/amplifa-vs-acquisio",
       "destination": "/compare/amplifa/vs/acquisio",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/compare/amplifa-vs-adalysis",
       "destination": "/compare/amplifa/vs/adalysis",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/compare/amplifa-vs-adbeat",
       "destination": "/compare/amplifa/vs/adbeat",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/compare/amplifa-vs-adcreative-ai",
       "destination": "/compare/amplifa/vs/adcreative-ai",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/compare/amplifa-vs-adespresso",
       "destination": "/compare/amplifa/vs/adespresso",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/compare/answerly-vs-10web",
       "destination": "/compare/answerly/vs/10web",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/compare/answerly-vs-acquisio",
       "destination": "/compare/answerly/vs/acquisio",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/compare/answerly-vs-adalysis",
       "destination": "/compare/answerly/vs/adalysis",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/compare/answerly-vs-adbeat",
       "destination": "/compare/answerly/vs/adbeat",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/compare/answerly-vs-adcreative-ai",
       "destination": "/compare/answerly/vs/adcreative-ai",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/compare/answerly-vs-adespresso",
       "destination": "/compare/answerly/vs/adespresso",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/compare/appointwise-vs-10web",
       "destination": "/compare/appointwise/vs/10web",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/compare/appointwise-vs-acquisio",
       "destination": "/compare/appointwise/vs/acquisio",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/compare/appointwise-vs-adalysis",
       "destination": "/compare/appointwise/vs/adalysis",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/compare/appointwise-vs-adbeat",
       "destination": "/compare/appointwise/vs/adbeat",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/compare/appointwise-vs-adcreative-ai",
       "destination": "/compare/appointwise/vs/adcreative-ai",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/compare/appointwise-vs-adespresso",
       "destination": "/compare/appointwise/vs/adespresso",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/compare/aptlystar-ai-vs-10web",
       "destination": "/compare/aptlystar-ai/vs/10web",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/compare/aptlystar-ai-vs-acquisio",
       "destination": "/compare/aptlystar-ai/vs/acquisio",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/compare/aptlystar-ai-vs-adalysis",
       "destination": "/compare/aptlystar-ai/vs/adalysis",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/compare/aptlystar-ai-vs-adbeat",
       "destination": "/compare/aptlystar-ai/vs/adbeat",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/compare/aptlystar-ai-vs-adcreative-ai",
       "destination": "/compare/aptlystar-ai/vs/adcreative-ai",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/compare/aptlystar-ai-vs-adespresso",
       "destination": "/compare/aptlystar-ai/vs/adespresso",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/compare/audiox-vs-10web",
       "destination": "/compare/audiox/vs/10web",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/compare/audiox-vs-acquisio",
       "destination": "/compare/audiox/vs/acquisio",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/compare/audiox-vs-adalysis",
       "destination": "/compare/audiox/vs/adalysis",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/compare/audiox-vs-adbeat",
       "destination": "/compare/audiox/vs/adbeat",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/compare/audiox-vs-adcreative-ai",
       "destination": "/compare/audiox/vs/adcreative-ai",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/compare/audiox-vs-adespresso",
       "destination": "/compare/audiox/vs/adespresso",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/compare/auralis-ai-vs-10web",
       "destination": "/compare/auralis-ai/vs/10web",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/compare/auralis-ai-vs-acquisio",
       "destination": "/compare/auralis-ai/vs/acquisio",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/compare/auralis-ai-vs-adalysis",
       "destination": "/compare/auralis-ai/vs/adalysis",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/compare/auralis-ai-vs-adbeat",
       "destination": "/compare/auralis-ai/vs/adbeat",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/compare/auralis-ai-vs-adcreative-ai",
       "destination": "/compare/auralis-ai/vs/adcreative-ai",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/compare/auralis-ai-vs-adespresso",
       "destination": "/compare/auralis-ai/vs/adespresso",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/compare/autolocalise-vs-10web",
       "destination": "/compare/autolocalise/vs/10web",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/compare/autolocalise-vs-acquisio",
       "destination": "/compare/autolocalise/vs/acquisio",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/compare/autolocalise-vs-adalysis",
       "destination": "/compare/autolocalise/vs/adalysis",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/compare/autolocalise-vs-adbeat",
       "destination": "/compare/autolocalise/vs/adbeat",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/compare/autolocalise-vs-adcreative-ai",
       "destination": "/compare/autolocalise/vs/adcreative-ai",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/compare/autolocalise-vs-adespresso",
       "destination": "/compare/autolocalise/vs/adespresso",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/compare/awaz-ai-vs-10web",
       "destination": "/compare/awaz-ai/vs/10web",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/compare/awaz-ai-vs-acquisio",
       "destination": "/compare/awaz-ai/vs/acquisio",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/compare/awaz-ai-vs-adalysis",
       "destination": "/compare/awaz-ai/vs/adalysis",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/compare/awaz-ai-vs-adbeat",
       "destination": "/compare/awaz-ai/vs/adbeat",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/compare/awaz-ai-vs-adcreative-ai",
       "destination": "/compare/awaz-ai/vs/adcreative-ai",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/compare/awaz-ai-vs-adespresso",
       "destination": "/compare/awaz-ai/vs/adespresso",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/compare/bertha-ai-vs-10web",
       "destination": "/compare/bertha-ai/vs/10web",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/compare/bertha-ai-vs-acquisio",
       "destination": "/compare/bertha-ai/vs/acquisio",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/compare/bertha-ai-vs-adalysis",
       "destination": "/compare/bertha-ai/vs/adalysis",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/compare/bertha-ai-vs-adbeat",
       "destination": "/compare/bertha-ai/vs/adbeat",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/compare/bertha-ai-vs-adcreative-ai",
       "destination": "/compare/bertha-ai/vs/adcreative-ai",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/compare/bertha-ai-vs-adespresso",
       "destination": "/compare/bertha-ai/vs/adespresso",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/compare/bizora-vs-10web",
       "destination": "/compare/bizora/vs/10web",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/compare/bizora-vs-acquisio",
       "destination": "/compare/bizora/vs/acquisio",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/compare/bizora-vs-adalysis",
       "destination": "/compare/bizora/vs/adalysis",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/compare/bizora-vs-adbeat",
       "destination": "/compare/bizora/vs/adbeat",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/compare/bizora-vs-adcreative-ai",
       "destination": "/compare/bizora/vs/adcreative-ai",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/compare/bizora-vs-adespresso",
       "destination": "/compare/bizora/vs/adespresso",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/compare/bookread-vs-10web",
       "destination": "/compare/bookread/vs/10web",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/compare/bookread-vs-acquisio",
       "destination": "/compare/bookread/vs/acquisio",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/compare/bookread-vs-adalysis",
       "destination": "/compare/bookread/vs/adalysis",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/compare/bookread-vs-adbeat",
       "destination": "/compare/bookread/vs/adbeat",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/compare/bookread-vs-adcreative-ai",
       "destination": "/compare/bookread/vs/adcreative-ai",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/compare/bookread-vs-adespresso",
       "destination": "/compare/bookread/vs/adespresso",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/compare/botric-ai-vs-10web",
       "destination": "/compare/botric-ai/vs/10web",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/compare/botric-ai-vs-acquisio",
       "destination": "/compare/botric-ai/vs/acquisio",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/compare/botric-ai-vs-adalysis",
       "destination": "/compare/botric-ai/vs/adalysis",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/compare/botric-ai-vs-adbeat",
       "destination": "/compare/botric-ai/vs/adbeat",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/compare/botric-ai-vs-adcreative-ai",
       "destination": "/compare/botric-ai/vs/adcreative-ai",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/compare/botric-ai-vs-adespresso",
       "destination": "/compare/botric-ai/vs/adespresso",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/compare/brainybear-easily-build-ai-chatbots-vs-10web",
       "destination": "/compare/brainybear-easily-build-ai-chatbots/vs/10web",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/compare/brainybear-easily-build-ai-chatbots-vs-acquisio",
       "destination": "/compare/brainybear-easily-build-ai-chatbots/vs/acquisio",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/compare/brainybear-easily-build-ai-chatbots-vs-adalysis",
       "destination": "/compare/brainybear-easily-build-ai-chatbots/vs/adalysis",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/compare/brainybear-easily-build-ai-chatbots-vs-adbeat",
       "destination": "/compare/brainybear-easily-build-ai-chatbots/vs/adbeat",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/compare/brainybear-easily-build-ai-chatbots-vs-adcreative-ai",
       "destination": "/compare/brainybear-easily-build-ai-chatbots/vs/adcreative-ai",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/compare/brainybear-easily-build-ai-chatbots-vs-adespresso",
       "destination": "/compare/brainybear-easily-build-ai-chatbots/vs/adespresso",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/compare/branchbob-vs-10web",
       "destination": "/compare/branchbob/vs/10web",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/compare/branchbob-vs-acquisio",
       "destination": "/compare/branchbob/vs/acquisio",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/compare/branchbob-vs-adalysis",
       "destination": "/compare/branchbob/vs/adalysis",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/compare/branchbob-vs-adbeat",
       "destination": "/compare/branchbob/vs/adbeat",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/compare/branchbob-vs-adcreative-ai",
       "destination": "/compare/branchbob/vs/adcreative-ai",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/compare/branchbob-vs-adespresso",
       "destination": "/compare/branchbob/vs/adespresso",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/compare/bravo-studio-vs-10web",
       "destination": "/compare/bravo-studio/vs/10web",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/compare/bravo-studio-vs-acquisio",
       "destination": "/compare/bravo-studio/vs/acquisio",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/compare/bravo-studio-vs-adalysis",
       "destination": "/compare/bravo-studio/vs/adalysis",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/compare/bravo-studio-vs-adbeat",
       "destination": "/compare/bravo-studio/vs/adbeat",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/compare/bravo-studio-vs-adcreative-ai",
       "destination": "/compare/bravo-studio/vs/adcreative-ai",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/compare/bravo-studio-vs-adespresso",
       "destination": "/compare/bravo-studio/vs/adespresso",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/compare/cavya-ai-vs-10web",
       "destination": "/compare/cavya-ai/vs/10web",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/compare/cavya-ai-vs-acquisio",
       "destination": "/compare/cavya-ai/vs/acquisio",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/compare/cavya-ai-vs-adalysis",
       "destination": "/compare/cavya-ai/vs/adalysis",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/compare/cavya-ai-vs-adbeat",
       "destination": "/compare/cavya-ai/vs/adbeat",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/compare/cavya-ai-vs-adcreative-ai",
       "destination": "/compare/cavya-ai/vs/adcreative-ai",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/compare/cavya-ai-vs-adespresso",
       "destination": "/compare/cavya-ai/vs/adespresso",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/compare/chatbit-vs-10web",
       "destination": "/compare/chatbit/vs/10web",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/compare/chatbit-vs-acquisio",
       "destination": "/compare/chatbit/vs/acquisio",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/compare/chatbit-vs-adalysis",
       "destination": "/compare/chatbit/vs/adalysis",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/compare/chatbit-vs-adbeat",
       "destination": "/compare/chatbit/vs/adbeat",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/compare/chatbit-vs-adcreative-ai",
       "destination": "/compare/chatbit/vs/adcreative-ai",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/compare/chatbit-vs-adespresso",
       "destination": "/compare/chatbit/vs/adespresso",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/compare/chatgpt-enterprise-vs-10web",
       "destination": "/compare/chatgpt-enterprise/vs/10web",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/compare/chatgpt-enterprise-vs-acquisio",
       "destination": "/compare/chatgpt-enterprise/vs/acquisio",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/compare/chatgpt-enterprise-vs-adalysis",
       "destination": "/compare/chatgpt-enterprise/vs/adalysis",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/compare/chatgpt-enterprise-vs-adbeat",
       "destination": "/compare/chatgpt-enterprise/vs/adbeat",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/compare/chatgpt-enterprise-vs-adcreative-ai",
       "destination": "/compare/chatgpt-enterprise/vs/adcreative-ai",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/compare/chatgpt-enterprise-vs-adespresso",
       "destination": "/compare/chatgpt-enterprise/vs/adespresso",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/compare/chatpdf-vs-10web",
       "destination": "/compare/chatpdf/vs/10web",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/compare/chatpdf-vs-acquisio",
       "destination": "/compare/chatpdf/vs/acquisio",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/compare/chatpdf-vs-adalysis",
       "destination": "/compare/chatpdf/vs/adalysis",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/compare/chatpdf-vs-adbeat",
       "destination": "/compare/chatpdf/vs/adbeat",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/compare/chatpdf-vs-adcreative-ai",
       "destination": "/compare/chatpdf/vs/adcreative-ai",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/compare/chatpdf-vs-adespresso",
       "destination": "/compare/chatpdf/vs/adespresso",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/compare/clay-vs-10web",
       "destination": "/compare/clay/vs/10web",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/compare/clay-vs-acquisio",
       "destination": "/compare/clay/vs/acquisio",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/compare/clay-vs-adalysis",
       "destination": "/compare/clay/vs/adalysis",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/compare/clay-vs-adbeat",
       "destination": "/compare/clay/vs/adbeat",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/compare/clay-vs-adcreative-ai",
       "destination": "/compare/clay/vs/adcreative-ai",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/compare/clay-vs-adespresso",
       "destination": "/compare/clay/vs/adespresso",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/compare/clockwise-vs-10web",
       "destination": "/compare/clockwise/vs/10web",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/compare/clockwise-vs-acquisio",
       "destination": "/compare/clockwise/vs/acquisio",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/compare/clockwise-vs-adalysis",
       "destination": "/compare/clockwise/vs/adalysis",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/compare/clockwise-vs-adbeat",
       "destination": "/compare/clockwise/vs/adbeat",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/compare/clockwise-vs-adcreative-ai",
       "destination": "/compare/clockwise/vs/adcreative-ai",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/compare/clockwise-vs-adespresso",
       "destination": "/compare/clockwise/vs/adespresso",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/compare/consensus-vs-10web",
       "destination": "/compare/consensus/vs/10web",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/compare/consensus-vs-acquisio",
       "destination": "/compare/consensus/vs/acquisio",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/compare/consensus-vs-adalysis",
       "destination": "/compare/consensus/vs/adalysis",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/compare/consensus-vs-adbeat",
       "destination": "/compare/consensus/vs/adbeat",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/compare/consensus-vs-adcreative-ai",
       "destination": "/compare/consensus/vs/adcreative-ai",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/compare/consensus-vs-adespresso",
       "destination": "/compare/consensus/vs/adespresso",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/compare/convertfilesai-free-image-file-converter-vs-10web",
       "destination": "/compare/convertfilesai-free-image-file-converter/vs/10web",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/compare/convertfilesai-free-image-file-converter-vs-acquisio",
       "destination": "/compare/convertfilesai-free-image-file-converter/vs/acquisio",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/compare/convertfilesai-free-image-file-converter-vs-adalysis",
       "destination": "/compare/convertfilesai-free-image-file-converter/vs/adalysis",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/compare/convertfilesai-free-image-file-converter-vs-adbeat",
       "destination": "/compare/convertfilesai-free-image-file-converter/vs/adbeat",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/compare/convertfilesai-free-image-file-converter-vs-adcreative-ai",
       "destination": "/compare/convertfilesai-free-image-file-converter/vs/adcreative-ai",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/compare/convertfilesai-free-image-file-converter-vs-adespresso",
       "destination": "/compare/convertfilesai-free-image-file-converter/vs/adespresso",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/compare/copymatic-vs-10web",
       "destination": "/compare/copymatic/vs/10web",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/compare/copymatic-vs-acquisio",
       "destination": "/compare/copymatic/vs/acquisio",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/compare/copymatic-vs-adalysis",
       "destination": "/compare/copymatic/vs/adalysis",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/compare/copymatic-vs-adbeat",
       "destination": "/compare/copymatic/vs/adbeat",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/compare/copymatic-vs-adcreative-ai",
       "destination": "/compare/copymatic/vs/adcreative-ai",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/compare/copymatic-vs-adespresso",
       "destination": "/compare/copymatic/vs/adespresso",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/compare/coze-build-ai-chatbots-effortlessly-vs-10web",
       "destination": "/compare/coze-build-ai-chatbots-effortlessly/vs/10web",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/compare/coze-build-ai-chatbots-effortlessly-vs-acquisio",
       "destination": "/compare/coze-build-ai-chatbots-effortlessly/vs/acquisio",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/compare/coze-build-ai-chatbots-effortlessly-vs-adalysis",
       "destination": "/compare/coze-build-ai-chatbots-effortlessly/vs/adalysis",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/compare/coze-build-ai-chatbots-effortlessly-vs-adbeat",
       "destination": "/compare/coze-build-ai-chatbots-effortlessly/vs/adbeat",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/compare/coze-build-ai-chatbots-effortlessly-vs-adcreative-ai",
       "destination": "/compare/coze-build-ai-chatbots-effortlessly/vs/adcreative-ai",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/compare/coze-build-ai-chatbots-effortlessly-vs-adespresso",
       "destination": "/compare/coze-build-ai-chatbots-effortlessly/vs/adespresso",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/compare/decofy-vs-10web",
       "destination": "/compare/decofy/vs/10web",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/compare/decofy-vs-acquisio",
       "destination": "/compare/decofy/vs/acquisio",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/compare/decofy-vs-adalysis",
       "destination": "/compare/decofy/vs/adalysis",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/compare/decofy-vs-adbeat",
       "destination": "/compare/decofy/vs/adbeat",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/compare/decofy-vs-adcreative-ai",
       "destination": "/compare/decofy/vs/adcreative-ai",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/compare/decofy-vs-adespresso",
       "destination": "/compare/decofy/vs/adespresso",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/compare/deptho-vs-10web",
       "destination": "/compare/deptho/vs/10web",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/compare/deptho-vs-acquisio",
       "destination": "/compare/deptho/vs/acquisio",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/compare/deptho-vs-adalysis",
       "destination": "/compare/deptho/vs/adalysis",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/compare/deptho-vs-adbeat",
       "destination": "/compare/deptho/vs/adbeat",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/compare/deptho-vs-adcreative-ai",
       "destination": "/compare/deptho/vs/adcreative-ai",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/compare/deptho-vs-adespresso",
       "destination": "/compare/deptho/vs/adespresso",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/compare/drawer-ai-vs-10web",
       "destination": "/compare/drawer-ai/vs/10web",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/compare/drawer-ai-vs-acquisio",
       "destination": "/compare/drawer-ai/vs/acquisio",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/compare/drawer-ai-vs-adalysis",
       "destination": "/compare/drawer-ai/vs/adalysis",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/compare/drawer-ai-vs-adbeat",
       "destination": "/compare/drawer-ai/vs/adbeat",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/compare/drawer-ai-vs-adcreative-ai",
       "destination": "/compare/drawer-ai/vs/adcreative-ai",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/compare/drawer-ai-vs-adespresso",
       "destination": "/compare/drawer-ai/vs/adespresso",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/compare/dropship-vs-10web",
       "destination": "/compare/dropship/vs/10web",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/compare/dropship-vs-acquisio",
       "destination": "/compare/dropship/vs/acquisio",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/compare/dropship-vs-adalysis",
       "destination": "/compare/dropship/vs/adalysis",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/compare/dropship-vs-adbeat",
       "destination": "/compare/dropship/vs/adbeat",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/compare/dropship-vs-adcreative-ai",
       "destination": "/compare/dropship/vs/adcreative-ai",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/compare/dropship-vs-adespresso",
       "destination": "/compare/dropship/vs/adespresso",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/compare/elicit-vs-10web",
       "destination": "/compare/elicit/vs/10web",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/compare/elicit-vs-acquisio",
       "destination": "/compare/elicit/vs/acquisio",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/compare/elicit-vs-adalysis",
       "destination": "/compare/elicit/vs/adalysis",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/compare/elicit-vs-adbeat",
       "destination": "/compare/elicit/vs/adbeat",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/compare/elicit-vs-adcreative-ai",
       "destination": "/compare/elicit/vs/adcreative-ai",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/compare/elicit-vs-adespresso",
       "destination": "/compare/elicit/vs/adespresso",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/compare/fathom-vs-10web",
       "destination": "/compare/fathom/vs/10web",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/compare/fathom-vs-acquisio",
       "destination": "/compare/fathom/vs/acquisio",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/compare/fathom-vs-adalysis",
       "destination": "/compare/fathom/vs/adalysis",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/compare/fathom-vs-adbeat",
       "destination": "/compare/fathom/vs/adbeat",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/compare/fathom-vs-adcreative-ai",
       "destination": "/compare/fathom/vs/adcreative-ai",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/compare/fathom-vs-adespresso",
       "destination": "/compare/fathom/vs/adespresso",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/compare/flux-1-vs-10web",
       "destination": "/compare/flux-1/vs/10web",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/compare/flux-1-vs-acquisio",
       "destination": "/compare/flux-1/vs/acquisio",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/compare/flux-1-vs-adalysis",
       "destination": "/compare/flux-1/vs/adalysis",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/compare/flux-1-vs-adbeat",
       "destination": "/compare/flux-1/vs/adbeat",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/compare/flux-1-vs-adcreative-ai",
       "destination": "/compare/flux-1/vs/adcreative-ai",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/compare/flux-1-vs-adespresso",
       "destination": "/compare/flux-1/vs/adespresso",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/compare/flux-vs-10web",
       "destination": "/compare/flux/vs/10web",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/compare/flux-vs-acquisio",
       "destination": "/compare/flux/vs/acquisio",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/compare/flux-vs-adalysis",
       "destination": "/compare/flux/vs/adalysis",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/compare/flux-vs-adbeat",
       "destination": "/compare/flux/vs/adbeat",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/compare/flux-vs-adcreative-ai",
       "destination": "/compare/flux/vs/adcreative-ai",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/compare/flux-vs-adespresso",
       "destination": "/compare/flux/vs/adespresso",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/compare/folk-crm-vs-10web",
       "destination": "/compare/folk-crm/vs/10web",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/compare/folk-crm-vs-acquisio",
       "destination": "/compare/folk-crm/vs/acquisio",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/compare/folk-crm-vs-adalysis",
       "destination": "/compare/folk-crm/vs/adalysis",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/compare/folk-crm-vs-adbeat",
       "destination": "/compare/folk-crm/vs/adbeat",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/compare/folk-crm-vs-adcreative-ai",
       "destination": "/compare/folk-crm/vs/adcreative-ai",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/compare/folk-crm-vs-adespresso",
       "destination": "/compare/folk-crm/vs/adespresso",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/compare/fyxer-vs-10web",
       "destination": "/compare/fyxer/vs/10web",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/compare/fyxer-vs-acquisio",
       "destination": "/compare/fyxer/vs/acquisio",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/compare/fyxer-vs-adalysis",
       "destination": "/compare/fyxer/vs/adalysis",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/compare/fyxer-vs-adbeat",
       "destination": "/compare/fyxer/vs/adbeat",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/compare/fyxer-vs-adcreative-ai",
       "destination": "/compare/fyxer/vs/adcreative-ai",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/compare/fyxer-vs-adespresso",
       "destination": "/compare/fyxer/vs/adespresso",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/compare/gemini-vs-10web",
       "destination": "/compare/gemini/vs/10web",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/compare/gemini-vs-acquisio",
       "destination": "/compare/gemini/vs/acquisio",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/compare/gemini-vs-adalysis",
       "destination": "/compare/gemini/vs/adalysis",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/compare/gemini-vs-adbeat",
       "destination": "/compare/gemini/vs/adbeat",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/compare/gemini-vs-adcreative-ai",
       "destination": "/compare/gemini/vs/adcreative-ai",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/compare/gemini-vs-adespresso",
       "destination": "/compare/gemini/vs/adespresso",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/compare/google-ads-editor-vs-10web",
       "destination": "/compare/google-ads-editor/vs/10web",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/compare/google-ads-editor-vs-acquisio",
       "destination": "/compare/google-ads-editor/vs/acquisio",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/compare/google-ads-editor-vs-adalysis",
       "destination": "/compare/google-ads-editor/vs/adalysis",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/compare/google-ads-editor-vs-adbeat",
       "destination": "/compare/google-ads-editor/vs/adbeat",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/compare/google-ads-editor-vs-adcreative-ai",
       "destination": "/compare/google-ads-editor/vs/adcreative-ai",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/compare/google-ads-editor-vs-adespresso",
       "destination": "/compare/google-ads-editor/vs/adespresso",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/compare/google-ads-vs-10web",
       "destination": "/compare/google-ads/vs/10web",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/compare/google-ads-vs-acquisio",
       "destination": "/compare/google-ads/vs/acquisio",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/compare/google-ads-vs-adalysis",
       "destination": "/compare/google-ads/vs/adalysis",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/compare/google-ads-vs-adbeat",
       "destination": "/compare/google-ads/vs/adbeat",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/compare/google-ads-vs-adcreative-ai",
       "destination": "/compare/google-ads/vs/adcreative-ai",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/compare/google-ads-vs-adespresso",
       "destination": "/compare/google-ads/vs/adespresso",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/compare/google-search-vs-10web",
       "destination": "/compare/google-search/vs/10web",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/compare/google-search-vs-acquisio",
       "destination": "/compare/google-search/vs/acquisio",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/compare/google-search-vs-adalysis",
       "destination": "/compare/google-search/vs/adalysis",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/compare/google-search-vs-adbeat",
       "destination": "/compare/google-search/vs/adbeat",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/compare/google-search-vs-adcreative-ai",
       "destination": "/compare/google-search/vs/adcreative-ai",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/compare/google-search-vs-adespresso",
       "destination": "/compare/google-search/vs/adespresso",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/compare/guru-vs-10web",
       "destination": "/compare/guru/vs/10web",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/compare/guru-vs-acquisio",
       "destination": "/compare/guru/vs/acquisio",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/compare/guru-vs-adalysis",
       "destination": "/compare/guru/vs/adalysis",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/compare/guru-vs-adbeat",
       "destination": "/compare/guru/vs/adbeat",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/compare/guru-vs-adcreative-ai",
       "destination": "/compare/guru/vs/adcreative-ai",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/compare/guru-vs-adespresso",
       "destination": "/compare/guru/vs/adespresso",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/compare/hubspot-email-marketing-tools-vs-10web",
       "destination": "/compare/hubspot-email-marketing-tools/vs/10web",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/compare/hubspot-email-marketing-tools-vs-acquisio",
       "destination": "/compare/hubspot-email-marketing-tools/vs/acquisio",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/compare/hubspot-email-marketing-tools-vs-adalysis",
       "destination": "/compare/hubspot-email-marketing-tools/vs/adalysis",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/compare/hubspot-email-marketing-tools-vs-adbeat",
       "destination": "/compare/hubspot-email-marketing-tools/vs/adbeat",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/compare/hubspot-email-marketing-tools-vs-adcreative-ai",
       "destination": "/compare/hubspot-email-marketing-tools/vs/adcreative-ai",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/compare/hubspot-email-marketing-tools-vs-adespresso",
       "destination": "/compare/hubspot-email-marketing-tools/vs/adespresso",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/compare/interview-study-vs-10web",
       "destination": "/compare/interview-study/vs/10web",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/compare/interview-study-vs-acquisio",
       "destination": "/compare/interview-study/vs/acquisio",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/compare/interview-study-vs-adalysis",
       "destination": "/compare/interview-study/vs/adalysis",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/compare/interview-study-vs-adbeat",
       "destination": "/compare/interview-study/vs/adbeat",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/compare/interview-study-vs-adcreative-ai",
       "destination": "/compare/interview-study/vs/adcreative-ai",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/compare/interview-study-vs-adespresso",
       "destination": "/compare/interview-study/vs/adespresso",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/compare/jamie-ai-vs-10web",
       "destination": "/compare/jamie-ai/vs/10web",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/compare/jamie-ai-vs-acquisio",
       "destination": "/compare/jamie-ai/vs/acquisio",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/compare/jamie-ai-vs-adalysis",
       "destination": "/compare/jamie-ai/vs/adalysis",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/compare/jamie-ai-vs-adbeat",
       "destination": "/compare/jamie-ai/vs/adbeat",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/compare/jamie-ai-vs-adcreative-ai",
       "destination": "/compare/jamie-ai/vs/adcreative-ai",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/compare/jamie-ai-vs-adespresso",
       "destination": "/compare/jamie-ai/vs/adespresso",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/compare/justcall-vs-10web",
       "destination": "/compare/justcall/vs/10web",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/compare/justcall-vs-acquisio",
       "destination": "/compare/justcall/vs/acquisio",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/compare/justcall-vs-adalysis",
       "destination": "/compare/justcall/vs/adalysis",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/compare/justcall-vs-adbeat",
       "destination": "/compare/justcall/vs/adbeat",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/compare/justcall-vs-adcreative-ai",
       "destination": "/compare/justcall/vs/adcreative-ai",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/compare/justcall-vs-adespresso",
       "destination": "/compare/justcall/vs/adespresso",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/compare/kickresume-vs-10web",
       "destination": "/compare/kickresume/vs/10web",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/compare/kickresume-vs-acquisio",
       "destination": "/compare/kickresume/vs/acquisio",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/compare/kickresume-vs-adalysis",
       "destination": "/compare/kickresume/vs/adalysis",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/compare/kickresume-vs-adbeat",
       "destination": "/compare/kickresume/vs/adbeat",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/compare/kickresume-vs-adcreative-ai",
       "destination": "/compare/kickresume/vs/adcreative-ai",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/compare/kickresume-vs-adespresso",
       "destination": "/compare/kickresume/vs/adespresso",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/compare/leonardo-ai-vs-10web",
       "destination": "/compare/leonardo-ai/vs/10web",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/compare/leonardo-ai-vs-acquisio",
       "destination": "/compare/leonardo-ai/vs/acquisio",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/compare/leonardo-ai-vs-adalysis",
       "destination": "/compare/leonardo-ai/vs/adalysis",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/compare/leonardo-ai-vs-adbeat",
       "destination": "/compare/leonardo-ai/vs/adbeat",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/compare/leonardo-ai-vs-adcreative-ai",
       "destination": "/compare/leonardo-ai/vs/adcreative-ai",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/compare/leonardo-ai-vs-adespresso",
       "destination": "/compare/leonardo-ai/vs/adespresso",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/compare/lockedin-ai-vs-10web",
       "destination": "/compare/lockedin-ai/vs/10web",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/compare/lockedin-ai-vs-acquisio",
       "destination": "/compare/lockedin-ai/vs/acquisio",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/compare/lockedin-ai-vs-adalysis",
       "destination": "/compare/lockedin-ai/vs/adalysis",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/compare/lockedin-ai-vs-adbeat",
       "destination": "/compare/lockedin-ai/vs/adbeat",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/compare/lockedin-ai-vs-adcreative-ai",
       "destination": "/compare/lockedin-ai/vs/adcreative-ai",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/compare/lockedin-ai-vs-adespresso",
       "destination": "/compare/lockedin-ai/vs/adespresso",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/compare/looka-vs-10web",
       "destination": "/compare/looka/vs/10web",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/compare/looka-vs-acquisio",
       "destination": "/compare/looka/vs/acquisio",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/compare/looka-vs-adalysis",
       "destination": "/compare/looka/vs/adalysis",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/compare/looka-vs-adbeat",
       "destination": "/compare/looka/vs/adbeat",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/compare/looka-vs-adcreative-ai",
       "destination": "/compare/looka/vs/adcreative-ai",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/compare/looka-vs-adespresso",
       "destination": "/compare/looka/vs/adespresso",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/compare/looker-vs-10web",
       "destination": "/compare/looker/vs/10web",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/compare/looker-vs-acquisio",
       "destination": "/compare/looker/vs/acquisio",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/compare/looker-vs-adalysis",
       "destination": "/compare/looker/vs/adalysis",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/compare/looker-vs-adbeat",
       "destination": "/compare/looker/vs/adbeat",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/compare/looker-vs-adcreative-ai",
       "destination": "/compare/looker/vs/adcreative-ai",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/compare/looker-vs-adespresso",
       "destination": "/compare/looker/vs/adespresso",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/compare/lovable-vs-10web",
       "destination": "/compare/lovable/vs/10web",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/compare/lovable-vs-acquisio",
       "destination": "/compare/lovable/vs/acquisio",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/compare/lovable-vs-adalysis",
       "destination": "/compare/lovable/vs/adalysis",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/compare/lovable-vs-adbeat",
       "destination": "/compare/lovable/vs/adbeat",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/compare/lovable-vs-adcreative-ai",
       "destination": "/compare/lovable/vs/adcreative-ai",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/compare/lovable-vs-adespresso",
       "destination": "/compare/lovable/vs/adespresso",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/compare/lovo-ai-vs-10web",
       "destination": "/compare/lovo-ai/vs/10web",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/compare/lovo-ai-vs-acquisio",
       "destination": "/compare/lovo-ai/vs/acquisio",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/compare/lovo-ai-vs-adalysis",
       "destination": "/compare/lovo-ai/vs/adalysis",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/compare/lovo-ai-vs-adbeat",
       "destination": "/compare/lovo-ai/vs/adbeat",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/compare/lovo-ai-vs-adcreative-ai",
       "destination": "/compare/lovo-ai/vs/adcreative-ai",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/compare/lovo-ai-vs-adespresso",
       "destination": "/compare/lovo-ai/vs/adespresso",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/compare/manychat-vs-10web",
       "destination": "/compare/manychat/vs/10web",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/compare/manychat-vs-acquisio",
       "destination": "/compare/manychat/vs/acquisio",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/compare/manychat-vs-adalysis",
       "destination": "/compare/manychat/vs/adalysis",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/compare/manychat-vs-adbeat",
       "destination": "/compare/manychat/vs/adbeat",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/compare/manychat-vs-adcreative-ai",
       "destination": "/compare/manychat/vs/adcreative-ai",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/compare/manychat-vs-adespresso",
       "destination": "/compare/manychat/vs/adespresso",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/compare/midi-agent-vs-10web",
       "destination": "/compare/midi-agent/vs/10web",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/compare/midi-agent-vs-acquisio",
       "destination": "/compare/midi-agent/vs/acquisio",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/compare/midi-agent-vs-adalysis",
       "destination": "/compare/midi-agent/vs/adalysis",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/compare/midi-agent-vs-adbeat",
       "destination": "/compare/midi-agent/vs/adbeat",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/compare/midi-agent-vs-adcreative-ai",
       "destination": "/compare/midi-agent/vs/adcreative-ai",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/compare/midi-agent-vs-adespresso",
       "destination": "/compare/midi-agent/vs/adespresso",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/compare/midjourney-vs-10web",
       "destination": "/compare/midjourney/vs/10web",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/compare/midjourney-vs-acquisio",
       "destination": "/compare/midjourney/vs/acquisio",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/compare/midjourney-vs-adalysis",
       "destination": "/compare/midjourney/vs/adalysis",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/compare/midjourney-vs-adbeat",
       "destination": "/compare/midjourney/vs/adbeat",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/compare/midjourney-vs-adcreative-ai",
       "destination": "/compare/midjourney/vs/adcreative-ai",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/compare/midjourney-vs-adespresso",
       "destination": "/compare/midjourney/vs/adespresso",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/compare/morningscore-vs-10web",
       "destination": "/compare/morningscore/vs/10web",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/compare/morningscore-vs-acquisio",
       "destination": "/compare/morningscore/vs/acquisio",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/compare/morningscore-vs-adalysis",
       "destination": "/compare/morningscore/vs/adalysis",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/compare/morningscore-vs-adbeat",
       "destination": "/compare/morningscore/vs/adbeat",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/compare/morningscore-vs-adcreative-ai",
       "destination": "/compare/morningscore/vs/adcreative-ai",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/compare/morningscore-vs-adespresso",
       "destination": "/compare/morningscore/vs/adespresso",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/compare/n8n-vs-10web",
       "destination": "/compare/n8n/vs/10web",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/compare/n8n-vs-acquisio",
       "destination": "/compare/n8n/vs/acquisio",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/compare/n8n-vs-adalysis",
       "destination": "/compare/n8n/vs/adalysis",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/compare/n8n-vs-adbeat",
       "destination": "/compare/n8n/vs/adbeat",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/compare/n8n-vs-adcreative-ai",
       "destination": "/compare/n8n/vs/adcreative-ai",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/compare/n8n-vs-adespresso",
       "destination": "/compare/n8n/vs/adespresso",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/compare/new-website-vs-10web",
       "destination": "/compare/new-website/vs/10web",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/compare/new-website-vs-acquisio",
       "destination": "/compare/new-website/vs/acquisio",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/compare/new-website-vs-adalysis",
       "destination": "/compare/new-website/vs/adalysis",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/compare/new-website-vs-adbeat",
       "destination": "/compare/new-website/vs/adbeat",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/compare/new-website-vs-adcreative-ai",
       "destination": "/compare/new-website/vs/adcreative-ai",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/compare/new-website-vs-adespresso",
       "destination": "/compare/new-website/vs/adespresso",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/compare/nimagna-vs-10web",
       "destination": "/compare/nimagna/vs/10web",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/compare/nimagna-vs-acquisio",
       "destination": "/compare/nimagna/vs/acquisio",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/compare/nimagna-vs-adalysis",
       "destination": "/compare/nimagna/vs/adalysis",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/compare/nimagna-vs-adbeat",
       "destination": "/compare/nimagna/vs/adbeat",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/compare/nimagna-vs-adcreative-ai",
       "destination": "/compare/nimagna/vs/adcreative-ai",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/compare/nimagna-vs-adespresso",
       "destination": "/compare/nimagna/vs/adespresso",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/compare/nyota-vs-10web",
       "destination": "/compare/nyota/vs/10web",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/compare/nyota-vs-acquisio",
       "destination": "/compare/nyota/vs/acquisio",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/compare/nyota-vs-adalysis",
       "destination": "/compare/nyota/vs/adalysis",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/compare/nyota-vs-adbeat",
       "destination": "/compare/nyota/vs/adbeat",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/compare/nyota-vs-adcreative-ai",
       "destination": "/compare/nyota/vs/adcreative-ai",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/compare/nyota-vs-adespresso",
       "destination": "/compare/nyota/vs/adespresso",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/compare/octobot-cloud-vs-10web",
       "destination": "/compare/octobot-cloud/vs/10web",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/compare/octobot-cloud-vs-acquisio",
       "destination": "/compare/octobot-cloud/vs/acquisio",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/compare/octobot-cloud-vs-adalysis",
       "destination": "/compare/octobot-cloud/vs/adalysis",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/compare/octobot-cloud-vs-adbeat",
       "destination": "/compare/octobot-cloud/vs/adbeat",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/compare/octobot-cloud-vs-adcreative-ai",
       "destination": "/compare/octobot-cloud/vs/adcreative-ai",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/compare/octobot-cloud-vs-adespresso",
       "destination": "/compare/octobot-cloud/vs/adespresso",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/compare/playmix-ai-vs-10web",
       "destination": "/compare/playmix-ai/vs/10web",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/compare/playmix-ai-vs-acquisio",
       "destination": "/compare/playmix-ai/vs/acquisio",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/compare/playmix-ai-vs-adalysis",
       "destination": "/compare/playmix-ai/vs/adalysis",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/compare/playmix-ai-vs-adbeat",
       "destination": "/compare/playmix-ai/vs/adbeat",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/compare/playmix-ai-vs-adcreative-ai",
       "destination": "/compare/playmix-ai/vs/adcreative-ai",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/compare/playmix-ai-vs-adespresso",
       "destination": "/compare/playmix-ai/vs/adespresso",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/compare/quickads-vs-10web",
       "destination": "/compare/quickads/vs/10web",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/compare/quickads-vs-acquisio",
       "destination": "/compare/quickads/vs/acquisio",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/compare/quickads-vs-adalysis",
       "destination": "/compare/quickads/vs/adalysis",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/compare/quickads-vs-adbeat",
       "destination": "/compare/quickads/vs/adbeat",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/compare/quickads-vs-adcreative-ai",
       "destination": "/compare/quickads/vs/adcreative-ai",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/compare/quickads-vs-adespresso",
       "destination": "/compare/quickads/vs/adespresso",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/compare/reclaim-ai-vs-10web",
       "destination": "/compare/reclaim-ai/vs/10web",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/compare/reclaim-ai-vs-acquisio",
       "destination": "/compare/reclaim-ai/vs/acquisio",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/compare/reclaim-ai-vs-adalysis",
       "destination": "/compare/reclaim-ai/vs/adalysis",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/compare/reclaim-ai-vs-adbeat",
       "destination": "/compare/reclaim-ai/vs/adbeat",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/compare/reclaim-ai-vs-adcreative-ai",
       "destination": "/compare/reclaim-ai/vs/adcreative-ai",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/compare/reclaim-ai-vs-adespresso",
       "destination": "/compare/reclaim-ai/vs/adespresso",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/compare/regie-ai-vs-10web",
       "destination": "/compare/regie-ai/vs/10web",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/compare/regie-ai-vs-acquisio",
       "destination": "/compare/regie-ai/vs/acquisio",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/compare/regie-ai-vs-adalysis",
       "destination": "/compare/regie-ai/vs/adalysis",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/compare/regie-ai-vs-adbeat",
       "destination": "/compare/regie-ai/vs/adbeat",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/compare/regie-ai-vs-adcreative-ai",
       "destination": "/compare/regie-ai/vs/adcreative-ai",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/compare/regie-ai-vs-adespresso",
       "destination": "/compare/regie-ai/vs/adespresso",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/compare/replit-ghost-vs-10web",
       "destination": "/compare/replit-ghost/vs/10web",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/compare/replit-ghost-vs-acquisio",
       "destination": "/compare/replit-ghost/vs/acquisio",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/compare/replit-ghost-vs-adalysis",
       "destination": "/compare/replit-ghost/vs/adalysis",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/compare/replit-ghost-vs-adbeat",
       "destination": "/compare/replit-ghost/vs/adbeat",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/compare/replit-ghost-vs-adcreative-ai",
       "destination": "/compare/replit-ghost/vs/adcreative-ai",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/compare/replit-ghost-vs-adespresso",
       "destination": "/compare/replit-ghost/vs/adespresso",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/compare/riffusion-fuzz-vs-10web",
       "destination": "/compare/riffusion-fuzz/vs/10web",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/compare/riffusion-fuzz-vs-acquisio",
       "destination": "/compare/riffusion-fuzz/vs/acquisio",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/compare/riffusion-fuzz-vs-adalysis",
       "destination": "/compare/riffusion-fuzz/vs/adalysis",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/compare/riffusion-fuzz-vs-adbeat",
       "destination": "/compare/riffusion-fuzz/vs/adbeat",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/compare/riffusion-fuzz-vs-adcreative-ai",
       "destination": "/compare/riffusion-fuzz/vs/adcreative-ai",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/compare/riffusion-fuzz-vs-adespresso",
       "destination": "/compare/riffusion-fuzz/vs/adespresso",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/compare/rytr-vs-10web",
       "destination": "/compare/rytr/vs/10web",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/compare/rytr-vs-acquisio",
       "destination": "/compare/rytr/vs/acquisio",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/compare/rytr-vs-adalysis",
       "destination": "/compare/rytr/vs/adalysis",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/compare/rytr-vs-adbeat",
       "destination": "/compare/rytr/vs/adbeat",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/compare/rytr-vs-adcreative-ai",
       "destination": "/compare/rytr/vs/adcreative-ai",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/compare/rytr-vs-adespresso",
       "destination": "/compare/rytr/vs/adespresso",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/compare/salesblink-vs-10web",
       "destination": "/compare/salesblink/vs/10web",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/compare/salesblink-vs-acquisio",
       "destination": "/compare/salesblink/vs/acquisio",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/compare/salesblink-vs-adalysis",
       "destination": "/compare/salesblink/vs/adalysis",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/compare/salesblink-vs-adbeat",
       "destination": "/compare/salesblink/vs/adbeat",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/compare/salesblink-vs-adcreative-ai",
       "destination": "/compare/salesblink/vs/adcreative-ai",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/compare/salesblink-vs-adespresso",
       "destination": "/compare/salesblink/vs/adespresso",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/compare/salesflow-vs-10web",
       "destination": "/compare/salesflow/vs/10web",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/compare/salesflow-vs-acquisio",
       "destination": "/compare/salesflow/vs/acquisio",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/compare/salesflow-vs-adalysis",
       "destination": "/compare/salesflow/vs/adalysis",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/compare/salesflow-vs-adbeat",
       "destination": "/compare/salesflow/vs/adbeat",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/compare/salesflow-vs-adcreative-ai",
       "destination": "/compare/salesflow/vs/adcreative-ai",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/compare/salesflow-vs-adespresso",
       "destination": "/compare/salesflow/vs/adespresso",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/compare/shortwave-vs-10web",
       "destination": "/compare/shortwave/vs/10web",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/compare/shortwave-vs-acquisio",
       "destination": "/compare/shortwave/vs/acquisio",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/compare/shortwave-vs-adalysis",
       "destination": "/compare/shortwave/vs/adalysis",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/compare/shortwave-vs-adbeat",
       "destination": "/compare/shortwave/vs/adbeat",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/compare/shortwave-vs-adcreative-ai",
       "destination": "/compare/shortwave/vs/adcreative-ai",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/compare/shortwave-vs-adespresso",
       "destination": "/compare/shortwave/vs/adespresso",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/compare/sitekick-powerful-landing-page-builder-vs-10web",
       "destination": "/compare/sitekick-powerful-landing-page-builder/vs/10web",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/compare/sitekick-powerful-landing-page-builder-vs-acquisio",
       "destination": "/compare/sitekick-powerful-landing-page-builder/vs/acquisio",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/compare/sitekick-powerful-landing-page-builder-vs-adalysis",
       "destination": "/compare/sitekick-powerful-landing-page-builder/vs/adalysis",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/compare/sitekick-powerful-landing-page-builder-vs-adbeat",
       "destination": "/compare/sitekick-powerful-landing-page-builder/vs/adbeat",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/compare/sitekick-powerful-landing-page-builder-vs-adcreative-ai",
       "destination": "/compare/sitekick-powerful-landing-page-builder/vs/adcreative-ai",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/compare/sitekick-powerful-landing-page-builder-vs-adespresso",
       "destination": "/compare/sitekick-powerful-landing-page-builder/vs/adespresso",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/compare/speechki-texttospeech-ai-vs-10web",
       "destination": "/compare/speechki-texttospeech-ai/vs/10web",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/compare/speechki-texttospeech-ai-vs-acquisio",
       "destination": "/compare/speechki-texttospeech-ai/vs/acquisio",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/compare/speechki-texttospeech-ai-vs-adalysis",
       "destination": "/compare/speechki-texttospeech-ai/vs/adalysis",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/compare/speechki-texttospeech-ai-vs-adbeat",
       "destination": "/compare/speechki-texttospeech-ai/vs/adbeat",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/compare/speechki-texttospeech-ai-vs-adcreative-ai",
       "destination": "/compare/speechki-texttospeech-ai/vs/adcreative-ai",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/compare/speechki-texttospeech-ai-vs-adespresso",
       "destination": "/compare/speechki-texttospeech-ai/vs/adespresso",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/compare/suno-vs-10web",
       "destination": "/compare/suno/vs/10web",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/compare/suno-vs-acquisio",
       "destination": "/compare/suno/vs/acquisio",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/compare/suno-vs-adalysis",
       "destination": "/compare/suno/vs/adalysis",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/compare/suno-vs-adbeat",
       "destination": "/compare/suno/vs/adbeat",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/compare/suno-vs-adcreative-ai",
       "destination": "/compare/suno/vs/adcreative-ai",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/compare/suno-vs-adespresso",
       "destination": "/compare/suno/vs/adespresso",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/compare/surf-new-vs-10web",
       "destination": "/compare/surf-new/vs/10web",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/compare/surf-new-vs-acquisio",
       "destination": "/compare/surf-new/vs/acquisio",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/compare/surf-new-vs-adalysis",
       "destination": "/compare/surf-new/vs/adalysis",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/compare/surf-new-vs-adbeat",
       "destination": "/compare/surf-new/vs/adbeat",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/compare/surf-new-vs-adcreative-ai",
       "destination": "/compare/surf-new/vs/adcreative-ai",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/compare/surf-new-vs-adespresso",
       "destination": "/compare/surf-new/vs/adespresso",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/compare/synthflow-ai-vs-10web",
       "destination": "/compare/synthflow-ai/vs/10web",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/compare/synthflow-ai-vs-acquisio",
       "destination": "/compare/synthflow-ai/vs/acquisio",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/compare/synthflow-ai-vs-adalysis",
       "destination": "/compare/synthflow-ai/vs/adalysis",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/compare/synthflow-ai-vs-adbeat",
       "destination": "/compare/synthflow-ai/vs/adbeat",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/compare/synthflow-ai-vs-adcreative-ai",
       "destination": "/compare/synthflow-ai/vs/adcreative-ai",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/compare/synthflow-ai-vs-adespresso",
       "destination": "/compare/synthflow-ai/vs/adespresso",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/compare/teal-vs-10web",
       "destination": "/compare/teal/vs/10web",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/compare/teal-vs-acquisio",
       "destination": "/compare/teal/vs/acquisio",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/compare/teal-vs-adalysis",
       "destination": "/compare/teal/vs/adalysis",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/compare/teal-vs-adbeat",
       "destination": "/compare/teal/vs/adbeat",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/compare/teal-vs-adcreative-ai",
       "destination": "/compare/teal/vs/adcreative-ai",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/compare/teal-vs-adespresso",
       "destination": "/compare/teal/vs/adespresso",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/compare/texttovideo-stunning-video-creation-vs-10web",
       "destination": "/compare/texttovideo-stunning-video-creation/vs/10web",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/compare/texttovideo-stunning-video-creation-vs-acquisio",
       "destination": "/compare/texttovideo-stunning-video-creation/vs/acquisio",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/compare/texttovideo-stunning-video-creation-vs-adalysis",
       "destination": "/compare/texttovideo-stunning-video-creation/vs/adalysis",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/compare/texttovideo-stunning-video-creation-vs-adbeat",
       "destination": "/compare/texttovideo-stunning-video-creation/vs/adbeat",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/compare/texttovideo-stunning-video-creation-vs-adcreative-ai",
       "destination": "/compare/texttovideo-stunning-video-creation/vs/adcreative-ai",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/compare/texttovideo-stunning-video-creation-vs-adespresso",
       "destination": "/compare/texttovideo-stunning-video-creation/vs/adespresso",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/compare/there-revolutionizing-reports-with-ai-vs-10web",
       "destination": "/compare/there-revolutionizing-reports-with-ai/vs/10web",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/compare/there-revolutionizing-reports-with-ai-vs-acquisio",
       "destination": "/compare/there-revolutionizing-reports-with-ai/vs/acquisio",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/compare/there-revolutionizing-reports-with-ai-vs-adalysis",
       "destination": "/compare/there-revolutionizing-reports-with-ai/vs/adalysis",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/compare/there-revolutionizing-reports-with-ai-vs-adbeat",
       "destination": "/compare/there-revolutionizing-reports-with-ai/vs/adbeat",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/compare/there-revolutionizing-reports-with-ai-vs-adcreative-ai",
       "destination": "/compare/there-revolutionizing-reports-with-ai/vs/adcreative-ai",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/compare/there-revolutionizing-reports-with-ai-vs-adespresso",
       "destination": "/compare/there-revolutionizing-reports-with-ai/vs/adespresso",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/compare/topical-authority-for-seo-gpt-generator-vs-10web",
       "destination": "/compare/topical-authority-for-seo-gpt-generator/vs/10web",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/compare/topical-authority-for-seo-gpt-generator-vs-acquisio",
       "destination": "/compare/topical-authority-for-seo-gpt-generator/vs/acquisio",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/compare/topical-authority-for-seo-gpt-generator-vs-adalysis",
       "destination": "/compare/topical-authority-for-seo-gpt-generator/vs/adalysis",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/compare/topical-authority-for-seo-gpt-generator-vs-adbeat",
       "destination": "/compare/topical-authority-for-seo-gpt-generator/vs/adbeat",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/compare/topical-authority-for-seo-gpt-generator-vs-adcreative-ai",
       "destination": "/compare/topical-authority-for-seo-gpt-generator/vs/adcreative-ai",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/compare/topical-authority-for-seo-gpt-generator-vs-adespresso",
       "destination": "/compare/topical-authority-for-seo-gpt-generator/vs/adespresso",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/compare/tradesanta-vs-10web",
       "destination": "/compare/tradesanta/vs/10web",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/compare/tradesanta-vs-acquisio",
       "destination": "/compare/tradesanta/vs/acquisio",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/compare/tradesanta-vs-adalysis",
       "destination": "/compare/tradesanta/vs/adalysis",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/compare/tradesanta-vs-adbeat",
       "destination": "/compare/tradesanta/vs/adbeat",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/compare/tradesanta-vs-adcreative-ai",
       "destination": "/compare/tradesanta/vs/adcreative-ai",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/compare/tradesanta-vs-adespresso",
       "destination": "/compare/tradesanta/vs/adespresso",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/compare/translate-gpt-for-convenient-translation-vs-10web",
       "destination": "/compare/translate-gpt-for-convenient-translation/vs/10web",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/compare/translate-gpt-for-convenient-translation-vs-acquisio",
       "destination": "/compare/translate-gpt-for-convenient-translation/vs/acquisio",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/compare/translate-gpt-for-convenient-translation-vs-adalysis",
       "destination": "/compare/translate-gpt-for-convenient-translation/vs/adalysis",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/compare/translate-gpt-for-convenient-translation-vs-adbeat",
       "destination": "/compare/translate-gpt-for-convenient-translation/vs/adbeat",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/compare/translate-gpt-for-convenient-translation-vs-adcreative-ai",
       "destination": "/compare/translate-gpt-for-convenient-translation/vs/adcreative-ai",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/compare/translate-gpt-for-convenient-translation-vs-adespresso",
       "destination": "/compare/translate-gpt-for-convenient-translation/vs/adespresso",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/compare/trueclicks-vs-10web",
       "destination": "/compare/trueclicks/vs/10web",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/compare/trueclicks-vs-acquisio",
       "destination": "/compare/trueclicks/vs/acquisio",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/compare/trueclicks-vs-adalysis",
       "destination": "/compare/trueclicks/vs/adalysis",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/compare/trueclicks-vs-adbeat",
       "destination": "/compare/trueclicks/vs/adbeat",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/compare/trueclicks-vs-adcreative-ai",
       "destination": "/compare/trueclicks/vs/adcreative-ai",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/compare/trueclicks-vs-adespresso",
       "destination": "/compare/trueclicks/vs/adespresso",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/compare/unbounce-ai-landing-page-builder-vs-10web",
       "destination": "/compare/unbounce-ai-landing-page-builder/vs/10web",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/compare/unbounce-ai-landing-page-builder-vs-acquisio",
       "destination": "/compare/unbounce-ai-landing-page-builder/vs/acquisio",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/compare/unbounce-ai-landing-page-builder-vs-adalysis",
       "destination": "/compare/unbounce-ai-landing-page-builder/vs/adalysis",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/compare/unbounce-ai-landing-page-builder-vs-adbeat",
       "destination": "/compare/unbounce-ai-landing-page-builder/vs/adbeat",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/compare/unbounce-ai-landing-page-builder-vs-adcreative-ai",
       "destination": "/compare/unbounce-ai-landing-page-builder/vs/adcreative-ai",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/compare/unbounce-ai-landing-page-builder-vs-adespresso",
       "destination": "/compare/unbounce-ai-landing-page-builder/vs/adespresso",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/compare/unbounce-vs-10web",
       "destination": "/compare/unbounce/vs/10web",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/compare/unbounce-vs-acquisio",
       "destination": "/compare/unbounce/vs/acquisio",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/compare/unbounce-vs-adalysis",
       "destination": "/compare/unbounce/vs/adalysis",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/compare/unbounce-vs-adbeat",
       "destination": "/compare/unbounce/vs/adbeat",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/compare/unbounce-vs-adcreative-ai",
       "destination": "/compare/unbounce/vs/adcreative-ai",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/compare/unbounce-vs-adespresso",
       "destination": "/compare/unbounce/vs/adespresso",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/compare/universe-nocode-custom-website-builder-vs-10web",
       "destination": "/compare/universe-nocode-custom-website-builder/vs/10web",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/compare/universe-nocode-custom-website-builder-vs-acquisio",
       "destination": "/compare/universe-nocode-custom-website-builder/vs/acquisio",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/compare/universe-nocode-custom-website-builder-vs-adalysis",
       "destination": "/compare/universe-nocode-custom-website-builder/vs/adalysis",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/compare/universe-nocode-custom-website-builder-vs-adbeat",
       "destination": "/compare/universe-nocode-custom-website-builder/vs/adbeat",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/compare/universe-nocode-custom-website-builder-vs-adcreative-ai",
       "destination": "/compare/universe-nocode-custom-website-builder/vs/adcreative-ai",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/compare/universe-nocode-custom-website-builder-vs-adespresso",
       "destination": "/compare/universe-nocode-custom-website-builder/vs/adespresso",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/compare/unreal-speech-costeffective-texttospeech-api-vs-10web",
       "destination": "/compare/unreal-speech-costeffective-texttospeech-api/vs/10web",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/compare/unreal-speech-costeffective-texttospeech-api-vs-acquisio",
       "destination": "/compare/unreal-speech-costeffective-texttospeech-api/vs/acquisio",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/compare/unreal-speech-costeffective-texttospeech-api-vs-adalysis",
       "destination": "/compare/unreal-speech-costeffective-texttospeech-api/vs/adalysis",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/compare/unreal-speech-costeffective-texttospeech-api-vs-adbeat",
       "destination": "/compare/unreal-speech-costeffective-texttospeech-api/vs/adbeat",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/compare/unreal-speech-costeffective-texttospeech-api-vs-adcreative-ai",
       "destination": "/compare/unreal-speech-costeffective-texttospeech-api/vs/adcreative-ai",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/compare/unreal-speech-costeffective-texttospeech-api-vs-adespresso",
       "destination": "/compare/unreal-speech-costeffective-texttospeech-api/vs/adespresso",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/compare/veeroll-vs-10web",
       "destination": "/compare/veeroll/vs/10web",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/compare/veeroll-vs-acquisio",
       "destination": "/compare/veeroll/vs/acquisio",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/compare/veeroll-vs-adalysis",
       "destination": "/compare/veeroll/vs/adalysis",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/compare/veeroll-vs-adbeat",
       "destination": "/compare/veeroll/vs/adbeat",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/compare/veeroll-vs-adcreative-ai",
       "destination": "/compare/veeroll/vs/adcreative-ai",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/compare/veeroll-vs-adespresso",
       "destination": "/compare/veeroll/vs/adespresso",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/compare/veo-vs-10web",
       "destination": "/compare/veo/vs/10web",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/compare/veo-vs-acquisio",
       "destination": "/compare/veo/vs/acquisio",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/compare/veo-vs-adalysis",
       "destination": "/compare/veo/vs/adalysis",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/compare/veo-vs-adbeat",
       "destination": "/compare/veo/vs/adbeat",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/compare/veo-vs-adcreative-ai",
       "destination": "/compare/veo/vs/adcreative-ai",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/compare/veo-vs-adespresso",
       "destination": "/compare/veo/vs/adespresso",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/compare/video-gpt-ai-video-maker-vs-10web",
       "destination": "/compare/video-gpt-ai-video-maker/vs/10web",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/compare/video-gpt-ai-video-maker-vs-acquisio",
       "destination": "/compare/video-gpt-ai-video-maker/vs/acquisio",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/compare/video-gpt-ai-video-maker-vs-adalysis",
       "destination": "/compare/video-gpt-ai-video-maker/vs/adalysis",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/compare/video-gpt-ai-video-maker-vs-adbeat",
       "destination": "/compare/video-gpt-ai-video-maker/vs/adbeat",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/compare/video-gpt-ai-video-maker-vs-adcreative-ai",
       "destination": "/compare/video-gpt-ai-video-maker/vs/adcreative-ai",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/compare/video-gpt-ai-video-maker-vs-adespresso",
       "destination": "/compare/video-gpt-ai-video-maker/vs/adespresso",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/compare/vowel-vs-10web",
       "destination": "/compare/vowel/vs/10web",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/compare/vowel-vs-acquisio",
       "destination": "/compare/vowel/vs/acquisio",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/compare/vowel-vs-adalysis",
       "destination": "/compare/vowel/vs/adalysis",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/compare/vowel-vs-adbeat",
       "destination": "/compare/vowel/vs/adbeat",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/compare/vowel-vs-adcreative-ai",
       "destination": "/compare/vowel/vs/adcreative-ai",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/compare/vowel-vs-adespresso",
       "destination": "/compare/vowel/vs/adespresso",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/compare/weblium-convenient-ai-website-builder-vs-10web",
       "destination": "/compare/weblium-convenient-ai-website-builder/vs/10web",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/compare/weblium-convenient-ai-website-builder-vs-acquisio",
       "destination": "/compare/weblium-convenient-ai-website-builder/vs/acquisio",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/compare/weblium-convenient-ai-website-builder-vs-adalysis",
       "destination": "/compare/weblium-convenient-ai-website-builder/vs/adalysis",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/compare/weblium-convenient-ai-website-builder-vs-adbeat",
       "destination": "/compare/weblium-convenient-ai-website-builder/vs/adbeat",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/compare/weblium-convenient-ai-website-builder-vs-adcreative-ai",
       "destination": "/compare/weblium-convenient-ai-website-builder/vs/adcreative-ai",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/compare/weblium-convenient-ai-website-builder-vs-adespresso",
       "destination": "/compare/weblium-convenient-ai-website-builder/vs/adespresso",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/compare/website-generator-meta-ai-vs-10web",
       "destination": "/compare/website-generator-meta-ai/vs/10web",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/compare/website-generator-meta-ai-vs-acquisio",
       "destination": "/compare/website-generator-meta-ai/vs/acquisio",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/compare/website-generator-meta-ai-vs-adalysis",
       "destination": "/compare/website-generator-meta-ai/vs/adalysis",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/compare/website-generator-meta-ai-vs-adbeat",
       "destination": "/compare/website-generator-meta-ai/vs/adbeat",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/compare/website-generator-meta-ai-vs-adcreative-ai",
       "destination": "/compare/website-generator-meta-ai/vs/adcreative-ai",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/compare/website-generator-meta-ai-vs-adespresso",
       "destination": "/compare/website-generator-meta-ai/vs/adespresso",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/compare/wellmeright-vs-10web",
       "destination": "/compare/wellmeright/vs/10web",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/compare/wellmeright-vs-acquisio",
       "destination": "/compare/wellmeright/vs/acquisio",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/compare/wellmeright-vs-adalysis",
       "destination": "/compare/wellmeright/vs/adalysis",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/compare/wellmeright-vs-adbeat",
       "destination": "/compare/wellmeright/vs/adbeat",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/compare/wellmeright-vs-adcreative-ai",
       "destination": "/compare/wellmeright/vs/adcreative-ai",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/compare/wellmeright-vs-adespresso",
       "destination": "/compare/wellmeright/vs/adespresso",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/compare/zapt-powerful-ai-app-builder-vs-10web",
       "destination": "/compare/zapt-powerful-ai-app-builder/vs/10web",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/compare/zapt-powerful-ai-app-builder-vs-acquisio",
       "destination": "/compare/zapt-powerful-ai-app-builder/vs/acquisio",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/compare/zapt-powerful-ai-app-builder-vs-adalysis",
       "destination": "/compare/zapt-powerful-ai-app-builder/vs/adalysis",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/compare/zapt-powerful-ai-app-builder-vs-adbeat",
       "destination": "/compare/zapt-powerful-ai-app-builder/vs/adbeat",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/compare/zapt-powerful-ai-app-builder-vs-adcreative-ai",
       "destination": "/compare/zapt-powerful-ai-app-builder/vs/adcreative-ai",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/compare/zapt-powerful-ai-app-builder-vs-adespresso",
       "destination": "/compare/zapt-powerful-ai-app-builder/vs/adespresso",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/compare/zenor-ai-vs-10web",
       "destination": "/compare/zenor-ai/vs/10web",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/compare/zenor-ai-vs-acquisio",
       "destination": "/compare/zenor-ai/vs/acquisio",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/compare/zenor-ai-vs-adalysis",
       "destination": "/compare/zenor-ai/vs/adalysis",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/compare/zenor-ai-vs-adbeat",
       "destination": "/compare/zenor-ai/vs/adbeat",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/compare/zenor-ai-vs-adcreative-ai",
       "destination": "/compare/zenor-ai/vs/adcreative-ai",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/compare/zenor-ai-vs-adespresso",
       "destination": "/compare/zenor-ai/vs/adespresso",
-      "permanent": true
+      "statusCode": 301
     }
   ]
 }
