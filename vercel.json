@@ -10221,66 +10221,6 @@
       "source": "/compare/website-generator-meta-ai-vs-adespresso",
       "destination": "/compare/website-generator-meta-ai/vs/adespresso",
       "statusCode": 301
-    },
-    {
-      "source": "/compare/wellmeright-vs-10web",
-      "destination": "/compare/wellmeright/vs/10web",
-      "statusCode": 301
-    },
-    {
-      "source": "/compare/wellmeright-vs-acquisio",
-      "destination": "/compare/wellmeright/vs/acquisio",
-      "statusCode": 301
-    },
-    {
-      "source": "/compare/wellmeright-vs-adalysis",
-      "destination": "/compare/wellmeright/vs/adalysis",
-      "statusCode": 301
-    },
-    {
-      "source": "/compare/wellmeright-vs-adbeat",
-      "destination": "/compare/wellmeright/vs/adbeat",
-      "statusCode": 301
-    },
-    {
-      "source": "/compare/wellmeright-vs-adcreative-ai",
-      "destination": "/compare/wellmeright/vs/adcreative-ai",
-      "statusCode": 301
-    },
-    {
-      "source": "/compare/wellmeright-vs-adespresso",
-      "destination": "/compare/wellmeright/vs/adespresso",
-      "statusCode": 301
-    },
-    {
-      "source": "/compare/zapt-powerful-ai-app-builder-vs-10web",
-      "destination": "/compare/zapt-powerful-ai-app-builder/vs/10web",
-      "statusCode": 301
-    },
-    {
-      "source": "/compare/zapt-powerful-ai-app-builder-vs-acquisio",
-      "destination": "/compare/zapt-powerful-ai-app-builder/vs/acquisio",
-      "statusCode": 301
-    },
-    {
-      "source": "/compare/zapt-powerful-ai-app-builder-vs-adalysis",
-      "destination": "/compare/zapt-powerful-ai-app-builder/vs/adalysis",
-      "statusCode": 301
-    },
-    {
-      "source": "/compare/zapt-powerful-ai-app-builder-vs-adbeat",
-      "destination": "/compare/zapt-powerful-ai-app-builder/vs/adbeat",
-      "statusCode": 301
-    },
-    {
-      "source": "/compare/zapt-powerful-ai-app-builder-vs-adcreative-ai",
-      "destination": "/compare/zapt-powerful-ai-app-builder/vs/adcreative-ai",
-      "statusCode": 301
-    },
-    {
-      "source": "/compare/zapt-powerful-ai-app-builder-vs-adespresso",
-      "destination": "/compare/zapt-powerful-ai-app-builder/vs/adespresso",
-      "statusCode": 301
     }
   ]
 }
