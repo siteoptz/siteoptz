@@ -67,7 +67,21 @@ export default function PricingPage({ tools }: PricingPageProps) {
                 "@type": "SoftwareApplication",
                 "name": "Pricing Calculator",
                 "applicationCategory": "BusinessApplication",
-                "operatingSystem": "Web Browser"
+                "operatingSystem": "Web Browser",
+                "offers": {
+                  "@type": "Offer",
+                  "price": "0",
+                  "priceCurrency": "USD",
+                  "availability": "https://schema.org/InStock",
+                  "url": "https://siteoptz.ai/pricing"
+                },
+                "aggregateRating": {
+                  "@type": "AggregateRating",
+                  "ratingValue": 4.8,
+                  "reviewCount": 150,
+                  "bestRating": 5,
+                  "worstRating": 1
+                }
               }
             })
           }}

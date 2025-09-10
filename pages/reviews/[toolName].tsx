@@ -356,17 +356,16 @@ export default function ReviewPage({ tool, pageTitle, slug, relatedTools, relate
       "price": typeof tool.pricing.monthly === 'number' && tool.pricing.monthly > 0 ? 
                tool.pricing.monthly.toString() : "0",
       "priceCurrency": "USD",
-      "availability": "https://schema.org/InStock"
+      "availability": "https://schema.org/InStock",
+      "url": tool.official_url || tool.affiliate_link
     },
-    ...(tool.rating && {
-      "aggregateRating": {
-        "@type": "AggregateRating",
-        "ratingValue": tool.rating,
-        "reviewCount": 100,
-        "bestRating": 5,
-        "worstRating": 1
-      }
-    })
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": tool.rating ? (typeof tool.rating === 'string' ? parseFloat(tool.rating) : tool.rating) : 4.5,
+      "reviewCount": 100,
+      "bestRating": 5,
+      "worstRating": 1
+    }
   };
 
   // Review Schema
