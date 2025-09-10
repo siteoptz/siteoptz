@@ -255,7 +255,7 @@ location ~ ^/compare/([^/]+)-vs-([^/]+)$ {
 }
 
 # WWW to non-WWW redirect (301, not 308)
-if ($host = www.siteoptz.ai) {
+if ($host = siteoptz.ai) {
     return 301 https://siteoptz.ai$request_uri;
 }
 
@@ -294,7 +294,7 @@ location ~ ^/compare/([^/]+)-vs-([^/]+)$ {
 }
 
 # WWW to non-WWW redirect (301, not 308)
-if ($host = www.siteoptz.ai) {
+if ($host = siteoptz.ai) {
     return 301 https://siteoptz.ai$request_uri;
 }
 
@@ -359,13 +359,13 @@ if ($request_uri ~* "^/tools\\?category=ai automation$") { return 301 https://si
 
         // Add WWW to non-WWW redirect
         const wwwRedirect = {
-            source: 'https://www.siteoptz.ai/:path*',
+            source: 'https://siteoptz.ai/:path*',
             destination: 'https://siteoptz.ai/:path*',
             permanent: true
         };
 
         const hasWwwRedirect = config.redirects.some(redirect => 
-            redirect.source === 'https://www.siteoptz.ai/:path*'
+            redirect.source === 'https://siteoptz.ai/:path*'
         );
 
         if (!hasWwwRedirect) {
@@ -410,7 +410,7 @@ if ($request_uri ~* "^/tools\\?category=ai automation$") { return 301 https://si
                     "permanent": true
                 },
                 {
-                    "source": "https://www.siteoptz.ai/:path*",
+                    "source": "https://siteoptz.ai/:path*",
                     "destination": "https://siteoptz.ai/:path*",
                     "permanent": true
                 }
@@ -437,7 +437,7 @@ if ($request_uri ~* "^/tools\\?category=ai automation$") { return 301 https://si
 
         let content = fs.readFileSync(nextConfigFile, 'utf8');
         
-        // Remove www.siteoptz.ai from domains array
+        // Remove siteoptz.ai from domains array
         content = content.replace(/['"]www\.siteoptz\.ai['"],?\s*/g, '');
         
         // Update any www references in headers
@@ -492,14 +492,14 @@ if ($request_uri ~* "^/tools\\?category=ai automation$") { return 301 https://si
             let updated = false;
             
             // Fix canonical URLs
-            if (content.includes('www.siteoptz.ai')) {
+            if (content.includes('siteoptz.ai')) {
                 content = content.replace(/https:\/\/www\.siteoptz\.ai/g, 'https://siteoptz.ai');
                 this.stats.canonicalUrlsFixed++;
                 updated = true;
             }
             
             // Fix any other www references
-            if (content.includes('www.siteoptz.ai')) {
+            if (content.includes('siteoptz.ai')) {
                 content = content.replace(/www\.siteoptz\.ai/g, 'siteoptz.ai');
                 this.stats.wwwReferencesRemoved++;
                 updated = true;
@@ -535,7 +535,7 @@ if ($request_uri ~* "^/tools\\?category=ai automation$") { return 301 https://si
             if (fs.existsSync(filePath)) {
                 let content = fs.readFileSync(filePath, 'utf8');
                 
-                if (content.includes('www.siteoptz.ai')) {
+                if (content.includes('siteoptz.ai')) {
                     content = content.replace(/https:\/\/www\.siteoptz\.ai/g, 'https://siteoptz.ai');
                     fs.writeFileSync(filePath, content);
                     this.filesUpdated++;

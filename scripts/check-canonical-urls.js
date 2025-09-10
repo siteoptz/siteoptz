@@ -17,7 +17,7 @@ async function checkCanonicalUrls() {
         
         // Check for canonical URL
         const hasCanonical = content.includes('rel="canonical"');
-        const hasWwwInCanonical = content.includes('www.siteoptz.ai');
+        const hasWwwInCanonical = content.includes('siteoptz.ai');
         
         if (!hasCanonical) {
             console.log(`❌ Missing canonical URL: ${file}`);

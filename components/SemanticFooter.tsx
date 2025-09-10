@@ -77,7 +77,7 @@ const SemanticFooter: React.FC = () => {
   const resourcesLinks = [
     { name: 'Resources', href: '/resources' },
     { name: 'Case Studies', href: '/case-studies' },
-    { name: 'AI Library', href: 'https://www.siteoptz.ai/tools/' },
+    { name: 'AI Library', href: 'https://siteoptz.ai/tools/' },
     { name: 'Webinars', href: '/webinars' },
   ];
 

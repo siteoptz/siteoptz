@@ -15,7 +15,7 @@ export default function Midjourneyv6Review() {
         <meta property="og:title" content="Midjourney v6 Review | SiteOptz" />
         <meta property="og:description" content="Expert review of Midjourney v6 - features, pricing, pros & cons" />
         <meta property="og:type" content="article" />
-        <link rel="canonical" href="https://www.siteoptz.ai/reviews/midjourney-v6" />
+        <link rel="canonical" href="https://siteoptz.ai/reviews/midjourney-v6" />
       </Head>
 
       <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-black">

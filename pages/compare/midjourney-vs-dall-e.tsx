@@ -15,7 +15,7 @@ export default function MidjourneyVsDallE() {
         <meta property="og:title" content="Midjourney vs Dall E Comparison | SiteOptz" />
         <meta property="og:description" content="Detailed comparison of Midjourney and Dall E features, pricing, and capabilities" />
         <meta property="og:type" content="article" />
-        <link rel="canonical" href="https://www.siteoptz.ai/compare/midjourney-vs-dall-e" />
+        <link rel="canonical" href="https://siteoptz.ai/compare/midjourney-vs-dall-e" />
       </Head>
 
       <div className="min-h-screen bg-gray-50">

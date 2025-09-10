@@ -38,7 +38,7 @@ export default function CookiePolicy() {
               <section>
                 <h2 className="text-2xl font-semibold text-white mb-4">1. Introduction</h2>
                 <p className="text-gray-300 leading-relaxed">
-                  This Cookie Policy explains how SiteOptz AI (&ldquo;we&rdquo;, &ldquo;us&rdquo;, or &ldquo;our&rdquo;) uses cookies and similar technologies to recognize you when you visit our website at <a href="https://www.siteoptz.ai" className="text-cyan-400 hover:text-cyan-300">www.siteoptz.ai</a> (&ldquo;Website&rdquo;). It explains what these technologies are and why we use them, as well as your rights to control our use of them.
+                  This Cookie Policy explains how SiteOptz AI (&ldquo;we&rdquo;, &ldquo;us&rdquo;, or &ldquo;our&rdquo;) uses cookies and similar technologies to recognize you when you visit our website at <a href="https://siteoptz.ai" className="text-cyan-400 hover:text-cyan-300">siteoptz.ai</a> (&ldquo;Website&rdquo;). It explains what these technologies are and why we use them, as well as your rights to control our use of them.
                 </p>
               </section>
 
@@ -195,7 +195,7 @@ export default function CookiePolicy() {
                   <p className="text-gray-300">
                     <strong className="text-white">SiteOptz AI</strong><br />
                     Email: <a href="mailto:privacy@siteoptz.ai" className="text-cyan-400 hover:text-cyan-300">privacy@siteoptz.ai</a><br />
-                    Website: <a href="https://www.siteoptz.ai" className="text-cyan-400 hover:text-cyan-300">www.siteoptz.ai</a><br />
+                    Website: <a href="https://siteoptz.ai" className="text-cyan-400 hover:text-cyan-300">siteoptz.ai</a><br />
                     Contact Form: <Link href="/contact" className="text-cyan-400 hover:text-cyan-300">Contact Us</Link>
                   </p>
                 </div>

@@ -15,7 +15,7 @@ export default function HuggingFaceReview() {
         <meta property="og:title" content="Hugging Face Review | SiteOptz" />
         <meta property="og:description" content="Expert review of Hugging Face - features, pricing, pros & cons" />
         <meta property="og:type" content="article" />
-        <link rel="canonical" href="https://www.siteoptz.ai/reviews/hugging-face" />
+        <link rel="canonical" href="https://siteoptz.ai/reviews/hugging-face" />
       </Head>
 
       <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-black">

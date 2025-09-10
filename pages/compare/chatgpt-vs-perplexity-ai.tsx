@@ -15,7 +15,7 @@ export default function ChatgptVsPerplexityAi() {
         <meta property="og:title" content="Chatgpt vs Perplexity Ai Comparison | SiteOptz" />
         <meta property="og:description" content="Detailed comparison of Chatgpt and Perplexity Ai features, pricing, and capabilities" />
         <meta property="og:type" content="article" />
-        <link rel="canonical" href="https://www.siteoptz.ai/compare/chatgpt-vs-perplexity-ai" />
+        <link rel="canonical" href="https://siteoptz.ai/compare/chatgpt-vs-perplexity-ai" />
       </Head>
 
       <div className="min-h-screen bg-gray-50">

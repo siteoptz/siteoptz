@@ -4,8 +4,8 @@
  */
 
 module.exports = [
-  // Note: Vercel is redirecting siteoptz.ai → www.siteoptz.ai at DNS level
-  // So we align with that and use www.siteoptz.ai as canonical domain
+  // Note: Vercel is redirecting siteoptz.ai → siteoptz.ai at DNS level
+  // So we align with that and use siteoptz.ai as canonical domain
   // No redirect needed here since Vercel handles non-www → www
   
   // Redirect tool category query parameters to category pages

@@ -7,34 +7,34 @@ console.log('🔧 Fixing duplicate title tags caused by www vs non-www domain va
 
 // List of URLs with duplicate title tags from user input
 const duplicateUrls = [
-    'https://www.siteoptz.ai/tools/sales-ai-roi',
+    'https://siteoptz.ai/tools/sales-ai-roi',
     'https://siteoptz.ai/tools/sales-ai-roi',
     'https://siteoptz.ai/tools/conversion-roi-calculator',
-    'https://www.siteoptz.ai/tools/conversion-roi-calculator',
-    'https://www.siteoptz.ai/tools/security-roi-calculator',
+    'https://siteoptz.ai/tools/conversion-roi-calculator',
+    'https://siteoptz.ai/tools/security-roi-calculator',
     'https://siteoptz.ai/tools/security-roi-calculator',
     'https://siteoptz.ai/tools/no-code-ai-roi',
-    'https://www.siteoptz.ai/tools/no-code-ai-roi',
-    'https://www.siteoptz.ai/tools/chatbot-roi-calculator',
+    'https://siteoptz.ai/tools/no-code-ai-roi',
     'https://siteoptz.ai/tools/chatbot-roi-calculator',
-    'https://www.siteoptz.ai/tools/marketing-roi-calculator',
+    'https://siteoptz.ai/tools/chatbot-roi-calculator',
+    'https://siteoptz.ai/tools/marketing-roi-calculator',
     'https://siteoptz.ai/tools/marketing-roi-calculator',
     'https://siteoptz.ai/tools/ai-cost-calculator',
-    'https://www.siteoptz.ai/tools/ai-cost-calculator',
-    'https://www.siteoptz.ai/tools/content-roi-calculator',
+    'https://siteoptz.ai/tools/ai-cost-calculator',
+    'https://siteoptz.ai/tools/content-roi-calculator',
     'https://siteoptz.ai/tools/content-roi-calculator',
     'https://siteoptz.ai/tools/healthcare-ai-roi',
-    'https://www.siteoptz.ai/tools/healthcare-ai-roi',
-    'https://www.siteoptz.ai/tools/recruitment-roi-calculator',
+    'https://siteoptz.ai/tools/healthcare-ai-roi',
+    'https://siteoptz.ai/tools/recruitment-roi-calculator',
     'https://siteoptz.ai/tools/recruitment-roi-calculator',
     'https://siteoptz.ai/docs/api',
-    'https://www.siteoptz.ai/docs/api',
+    'https://siteoptz.ai/docs/api',
     'https://siteoptz.ai/tools/ai-roi-calculator',
-    'https://www.siteoptz.ai/tools/ai-roi-calculator',
+    'https://siteoptz.ai/tools/ai-roi-calculator',
     'https://siteoptz.ai/tools/enterprise-ai-calculator',
-    'https://www.siteoptz.ai/tools/enterprise-ai-calculator',
+    'https://siteoptz.ai/tools/enterprise-ai-calculator',
     'https://siteoptz.ai/tools/manufacturing-roi-calculator',
-    'https://www.siteoptz.ai/tools/manufacturing-roi-calculator'
+    'https://siteoptz.ai/tools/manufacturing-roi-calculator'
 ];
 
 // Extract unique paths
@@ -49,7 +49,7 @@ const nextConfigPath = path.join(__dirname, '../next.config.js');
 let nextConfig = fs.readFileSync(nextConfigPath, 'utf-8');
 
 // Check if www redirects already exist
-if (!nextConfig.includes('www.siteoptz.ai')) {
+if (!nextConfig.includes('siteoptz.ai')) {
     console.log('🔧 Adding www to non-www redirects to Next.js configuration...');
     
     // Find the redirects section and add www redirects
@@ -67,7 +67,7 @@ if (!nextConfig.includes('www.siteoptz.ai')) {
         has: [
           {
             type: 'host',
-            value: 'www.siteoptz.ai',
+            value: 'siteoptz.ai',
           },
         ],
         destination: 'https://siteoptz.ai/:path*',
@@ -116,7 +116,7 @@ export function getCurrentUrl(req?: any): string {
 }
 
 export function isWwwVersion(url: string): boolean {
-  return url.includes('www.siteoptz.ai');
+  return url.includes('siteoptz.ai');
 }
 
 export default {
@@ -172,7 +172,7 @@ toolPages.forEach(filePath => {
             }
         } else {
             // Check if canonical URL uses the wrong domain
-            if (content.includes('www.siteoptz.ai')) {
+            if (content.includes('siteoptz.ai')) {
                 content = content.replace(/https:\/\/www\.siteoptz\.ai/g, 'https://siteoptz.ai');
                 modified = true;
             }
@@ -210,7 +210,7 @@ async function checkCanonicalUrls() {
         
         // Check for canonical URL
         const hasCanonical = content.includes('rel="canonical"');
-        const hasWwwInCanonical = content.includes('www.siteoptz.ai');
+        const hasWwwInCanonical = content.includes('siteoptz.ai');
         
         if (!hasCanonical) {
             console.log(\`❌ Missing canonical URL: \${file}\`);
@@ -240,7 +240,7 @@ if (fs.existsSync(robotsTxtPath)) {
     
     // Add preferred domain if not already present
     if (!robotsContent.includes('sitemap: https://siteoptz.ai/sitemap.xml')) {
-        // Replace any www.siteoptz.ai references with siteoptz.ai
+        // Replace any siteoptz.ai references with siteoptz.ai
         robotsContent = robotsContent.replace(/https:\/\/www\.siteoptz\.ai/g, 'https://siteoptz.ai');
         
         // Ensure sitemap points to non-www version
@@ -268,7 +268,7 @@ const report = {
         'Created canonical URL checker script'
     ],
     recommendations: [
-        'Test that www.siteoptz.ai properly redirects to siteoptz.ai',
+        'Test that siteoptz.ai properly redirects to siteoptz.ai',
         'Verify all pages have canonical URLs pointing to siteoptz.ai',
         'Run canonical URL checker script regularly',
         'Monitor search console for duplicate content issues',
@@ -302,7 +302,7 @@ console.log('\n🎉 Duplicate title tags fix completed!');
 
 console.log('\nTo test the fixes:');
 console.log('1. Run: npm run build');
-console.log('2. Test redirect: curl -I https://www.siteoptz.ai/tools/ai-roi-calculator');
+console.log('2. Test redirect: curl -I https://siteoptz.ai/tools/ai-roi-calculator');
 console.log('3. Check canonical URLs in page source');
 console.log('4. Deploy and monitor search console');
 

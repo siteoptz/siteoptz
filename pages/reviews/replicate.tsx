@@ -15,7 +15,7 @@ export default function ReplicateReview() {
         <meta property="og:title" content="Replicate Review | SiteOptz" />
         <meta property="og:description" content="Expert review of Replicate - features, pricing, pros & cons" />
         <meta property="og:type" content="article" />
-        <link rel="canonical" href="https://www.siteoptz.ai/reviews/replicate" />
+        <link rel="canonical" href="https://siteoptz.ai/reviews/replicate" />
       </Head>
 
       <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-black">

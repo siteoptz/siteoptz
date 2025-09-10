@@ -12,7 +12,7 @@
     "Created canonical URL checker script"
   ],
   "recommendations": [
-    "Test that www.siteoptz.ai properly redirects to siteoptz.ai",
+    "Test that siteoptz.ai properly redirects to siteoptz.ai",
     "Verify all pages have canonical URLs pointing to siteoptz.ai",
     "Run canonical URL checker script regularly",
     "Monitor search console for duplicate content issues",

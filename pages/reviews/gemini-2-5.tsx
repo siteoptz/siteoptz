@@ -15,7 +15,7 @@ export default function GoogleGemini25Review() {
         <meta property="og:title" content="Google Gemini 2.5 Review | SiteOptz" />
         <meta property="og:description" content="Expert review of Google Gemini 2.5 - features, pricing, pros & cons" />
         <meta property="og:type" content="article" />
-        <link rel="canonical" href="https://www.siteoptz.ai/reviews/gemini-2-5" />
+        <link rel="canonical" href="https://siteoptz.ai/reviews/gemini-2-5" />
       </Head>
 
       <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-black">

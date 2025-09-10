@@ -444,7 +444,7 @@ function main() {
     .filter(line => line.trim())
     .map(line => {
       const [url] = line.split(',');
-      return url.replace('https://siteoptz.ai/', '').replace('https://www.siteoptz.ai/', '');
+      return url.replace('https://siteoptz.ai/', '').replace('https://siteoptz.ai/', '');
     })
     .filter((page, index, array) => array.indexOf(page) === index);
 

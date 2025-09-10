@@ -15,7 +15,7 @@ export default function GPT4Review() {
         <meta property="og:title" content="GPT-4 Review | SiteOptz" />
         <meta property="og:description" content="Expert review of GPT-4 - features, pricing, pros & cons" />
         <meta property="og:type" content="article" />
-        <link rel="canonical" href="https://www.siteoptz.ai/reviews/gpt-4" />
+        <link rel="canonical" href="https://siteoptz.ai/reviews/gpt-4" />
       </Head>
 
       <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-black">

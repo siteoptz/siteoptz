@@ -15,7 +15,7 @@ export default function LoomlyVsSocialpilot() {
         <meta property="og:title" content="Loomly vs Socialpilot Comparison | SiteOptz" />
         <meta property="og:description" content="Detailed comparison of Loomly and Socialpilot features, pricing, and capabilities" />
         <meta property="og:type" content="article" />
-        <link rel="canonical" href="https://www.siteoptz.ai/compare/loomly-vs-socialpilot" />
+        <link rel="canonical" href="https://siteoptz.ai/compare/loomly-vs-socialpilot" />
       </Head>
 
       <div className="min-h-screen bg-gray-50">

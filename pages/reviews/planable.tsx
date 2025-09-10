@@ -15,7 +15,7 @@ export default function PlanableReview() {
         <meta property="og:title" content="Planable Review | SiteOptz" />
         <meta property="og:description" content="Expert review of Planable - features, pricing, pros & cons" />
         <meta property="og:type" content="article" />
-        <link rel="canonical" href="https://www.siteoptz.ai/reviews/planable" />
+        <link rel="canonical" href="https://siteoptz.ai/reviews/planable" />
       </Head>
 
       <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-black">

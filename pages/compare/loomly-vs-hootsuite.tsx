@@ -15,7 +15,7 @@ export default function LoomlyVsHootsuite() {
         <meta property="og:title" content="Loomly vs Hootsuite Comparison | SiteOptz" />
         <meta property="og:description" content="Detailed comparison of Loomly and Hootsuite features, pricing, and capabilities" />
         <meta property="og:type" content="article" />
-        <link rel="canonical" href="https://www.siteoptz.ai/compare/loomly-vs-hootsuite" />
+        <link rel="canonical" href="https://siteoptz.ai/compare/loomly-vs-hootsuite" />
       </Head>
 
       <div className="min-h-screen bg-gray-50">

@@ -255,7 +255,7 @@ San Francisco, CA`
         <meta property="og:title" content="Privacy Policy | SiteOptz.ai" />
         <meta property="og:description" content="Privacy Policy for SiteOptz.ai AI tool review platform." />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://www.siteoptz.ai/privacy" />
+        <meta property="og:url" content="https://siteoptz.ai/privacy" />
         
         {/* Twitter Card */}
         <meta name="twitter:card" content="summary" />

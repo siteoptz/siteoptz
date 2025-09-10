@@ -15,7 +15,7 @@ export default function CharacterAIReview() {
         <meta property="og:title" content="Character.AI Review | SiteOptz" />
         <meta property="og:description" content="Expert review of Character.AI - features, pricing, pros & cons" />
         <meta property="og:type" content="article" />
-        <link rel="canonical" href="https://www.siteoptz.ai/reviews/character-ai" />
+        <link rel="canonical" href="https://siteoptz.ai/reviews/character-ai" />
       </Head>
 
       <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-black">

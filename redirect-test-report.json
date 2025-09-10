@@ -1,0 +1,114 @@
+{
+  "timestamp": "2025-09-10T12:57:34.039Z",
+  "summary": {
+    "totalTests": 14,
+    "successfulTests": 4,
+    "failedTests": 10,
+    "errors": 0
+  },
+  "results": [
+    {
+      "source": "/compare/0cody-vs-adbeat",
+      "expected": "/compare/0cody/vs/adbeat",
+      "actual": "/compare/0cody/vs/adbeat",
+      "status": 308,
+      "success": false
+    },
+    {
+      "source": "/compare/chatgpt-vs-claude",
+      "expected": "/compare/chatgpt/vs/claude",
+      "actual": "/compare/chatgpt/vs/claude",
+      "status": 308,
+      "success": false
+    },
+    {
+      "source": "/compare/midjourney-vs-dalle",
+      "expected": "/compare/midjourney/vs/dalle",
+      "actual": "/compare/midjourney/vs/dalle",
+      "status": 308,
+      "success": false
+    },
+    {
+      "source": "/compare/10web-vs-acquisio",
+      "expected": "/compare/10web/vs/acquisio",
+      "actual": "/compare/10web/vs/acquisio",
+      "status": 308,
+      "success": false
+    },
+    {
+      "source": "https://siteoptz.ai/",
+      "expected": "https://siteoptz.ai/",
+      "actual": "No redirect",
+      "status": 200,
+      "success": false
+    },
+    {
+      "source": "https://siteoptz.ai/tools",
+      "expected": "https://siteoptz.ai/tools",
+      "actual": "No redirect",
+      "status": 200,
+      "success": false
+    },
+    {
+      "source": "https://siteoptz.ai/compare",
+      "expected": "https://siteoptz.ai/compare",
+      "actual": "No redirect",
+      "status": 200,
+      "success": false
+    },
+    {
+      "source": "https://siteoptz.ai/reviews/chatgpt",
+      "expected": "https://siteoptz.ai/reviews/chatgpt",
+      "actual": "/tools",
+      "status": 308,
+      "success": false
+    },
+    {
+      "source": "https://siteoptz.ai/categories/ai-writing",
+      "expected": "https://siteoptz.ai/categories/ai-writing",
+      "actual": "No redirect",
+      "status": 404,
+      "success": false
+    },
+    {
+      "url": "/",
+      "hasCanonical": true,
+      "canonicalUrl": "https://siteoptz.ai/",
+      "hasWww": false,
+      "success": true
+    },
+    {
+      "url": "/tools",
+      "hasCanonical": true,
+      "canonicalUrl": "https://siteoptz.ai/tools",
+      "hasWww": false,
+      "success": true
+    },
+    {
+      "url": "/compare/chatgpt/vs/claude",
+      "hasCanonical": true,
+      "canonicalUrl": "https://siteoptz.ai/compare/chatgpt-vs-claude",
+      "hasWww": false,
+      "success": true
+    },
+    {
+      "url": "/reviews/chatgpt",
+      "hasCanonical": false,
+      "canonicalUrl": null,
+      "hasWww": false,
+      "success": false
+    },
+    {
+      "url": "/categories/ai-writing",
+      "hasCanonical": true,
+      "canonicalUrl": "https://siteoptz.ai/404",
+      "hasWww": false,
+      "success": true
+    }
+  ],
+  "errors": [],
+  "recommendations": [
+    "Fix failed redirects in nginx/Vercel configuration",
+    "Update canonical URLs to remove www references"
+  ]
+}

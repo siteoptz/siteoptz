@@ -50,8 +50,8 @@ export default function DataRoom() {
     "@context": "https://schema.org",
     "@type": "Organization",
     "name": "SiteOptz.ai",
-    "url": "https://www.siteoptz.ai",
-    "logo": "https://www.siteoptz.ai/images/logo.png",
+    "url": "https://siteoptz.ai",
+    "logo": "https://siteoptz.ai/images/logo.png",
     "description": "AI-powered platform for business growth and automation",
     "aggregateRating": {
       "@type": "AggregateRating",
@@ -81,8 +81,8 @@ export default function DataRoom() {
           content="Explore real growth, revenue charts, and testimonials from companies scaling with SiteOptz.ai."
         />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://www.siteoptz.ai/data-room" />
-        <meta property="og:image" content="https://www.siteoptz.ai/images/data-room-og.png" />
+        <meta property="og:url" content="https://siteoptz.ai/data-room" />
+        <meta property="og:image" content="https://siteoptz.ai/images/data-room-og.png" />
         
         {/* Twitter Card */}
         <meta name="twitter:card" content="summary_large_image" />
@@ -91,10 +91,10 @@ export default function DataRoom() {
           name="twitter:description"
           content="Explore real growth, revenue charts, and testimonials from companies scaling with SiteOptz.ai."
         />
-        <meta name="twitter:image" content="https://www.siteoptz.ai/images/data-room-og.png" />
+        <meta name="twitter:image" content="https://siteoptz.ai/images/data-room-og.png" />
         
         {/* Canonical URL */}
-        <link rel="canonical" href="https://www.siteoptz.ai/data-room" />
+        <link rel="canonical" href="https://siteoptz.ai/data-room" />
         
         {/* Schema.org markup */}
         <script

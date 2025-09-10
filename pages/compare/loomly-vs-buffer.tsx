@@ -15,7 +15,7 @@ export default function LoomlyVsBuffer() {
         <meta property="og:title" content="Loomly vs Buffer Comparison | SiteOptz" />
         <meta property="og:description" content="Detailed comparison of Loomly and Buffer features, pricing, and capabilities" />
         <meta property="og:type" content="article" />
-        <link rel="canonical" href="https://www.siteoptz.ai/compare/loomly-vs-buffer" />
+        <link rel="canonical" href="https://siteoptz.ai/compare/loomly-vs-buffer" />
       </Head>
 
       <div className="min-h-screen bg-gray-50">

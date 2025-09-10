@@ -15,7 +15,7 @@ export default function JasperAiVsWritesonic() {
         <meta property="og:title" content="Jasper Ai vs Writesonic Comparison | SiteOptz" />
         <meta property="og:description" content="Detailed comparison of Jasper Ai and Writesonic features, pricing, and capabilities" />
         <meta property="og:type" content="article" />
-        <link rel="canonical" href="https://www.siteoptz.ai/compare/jasper-ai-vs-writesonic" />
+        <link rel="canonical" href="https://siteoptz.ai/compare/jasper-ai-vs-writesonic" />
       </Head>
 
       <div className="min-h-screen bg-gray-50">

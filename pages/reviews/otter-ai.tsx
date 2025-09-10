@@ -15,7 +15,7 @@ export default function OtteraiReview() {
         <meta property="og:title" content="Otter.ai Review | SiteOptz" />
         <meta property="og:description" content="Expert review of Otter.ai - features, pricing, pros & cons" />
         <meta property="og:type" content="article" />
-        <link rel="canonical" href="https://www.siteoptz.ai/reviews/otter-ai" />
+        <link rel="canonical" href="https://siteoptz.ai/reviews/otter-ai" />
       </Head>
 
       <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-black">

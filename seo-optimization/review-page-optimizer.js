@@ -77,7 +77,7 @@ class ReviewPageOptimizer {
         category: tool.overview?.category || 'Other',
         description: tool.overview?.description || tool.meta?.description || '',
         website: tool.overview?.website || '',
-        review_url: `https://www.siteoptz.ai/reviews/${tool.slug}`
+        review_url: `https://siteoptz.ai/reviews/${tool.slug}`
       }));
       
       console.log(`📊 Loaded ${this.tools.length} tools for SEO optimization`);

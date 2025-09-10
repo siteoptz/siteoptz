@@ -15,7 +15,7 @@ export default function ContentstudioVsHootsuite() {
         <meta property="og:title" content="Contentstudio vs Hootsuite Comparison | SiteOptz" />
         <meta property="og:description" content="Detailed comparison of Contentstudio and Hootsuite features, pricing, and capabilities" />
         <meta property="og:type" content="article" />
-        <link rel="canonical" href="https://www.siteoptz.ai/compare/contentstudio-vs-hootsuite" />
+        <link rel="canonical" href="https://siteoptz.ai/compare/contentstudio-vs-hootsuite" />
       </Head>
 
       <div className="min-h-screen bg-gray-50">

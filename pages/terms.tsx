@@ -148,7 +148,7 @@ We typically respond to legal inquiries within 5 business days.`
         <meta property="og:title" content="Terms of Service | SiteOptz.ai" />
         <meta property="og:description" content="Terms of Service for SiteOptz.ai AI tool review platform." />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://www.siteoptz.ai/terms" />
+        <meta property="og:url" content="https://siteoptz.ai/terms" />
         
         {/* Twitter Card */}
         <meta name="twitter:card" content="summary" />
@@ -156,7 +156,7 @@ We typically respond to legal inquiries within 5 business days.`
         <meta name="twitter:description" content="Terms of Service for SiteOptz.ai AI tool review platform." />
         
         {/* Canonical URL */}
-        <link rel="canonical" href="https://www.siteoptz.ai/terms" />
+        <link rel="canonical" href="https://siteoptz.ai/terms" />
         
         {/* Robots - Allow indexing for transparency */}
         <meta name="robots" content="index, follow" />

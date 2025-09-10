@@ -1,0 +1,17 @@
+{
+  "timestamp": "2025-09-10T13:08:25.803Z",
+  "stats": {
+    "wwwReferencesRemoved": 784,
+    "filesProcessed": 1728,
+    "totalReplacements": 784
+  },
+  "filesUpdated": 21,
+  "errors": [],
+  "recommendations": [
+    "Remove www.siteoptz.ai from Vercel domain settings",
+    "Remove www CNAME record from DNS",
+    "Test all URLs to ensure no 308 redirects",
+    "Update Google Search Console if needed",
+    "Monitor for any remaining www references"
+  ]
+}

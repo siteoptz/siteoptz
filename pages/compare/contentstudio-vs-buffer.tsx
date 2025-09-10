@@ -15,7 +15,7 @@ export default function ContentstudioVsBuffer() {
         <meta property="og:title" content="Contentstudio vs Buffer Comparison | SiteOptz" />
         <meta property="og:description" content="Detailed comparison of Contentstudio and Buffer features, pricing, and capabilities" />
         <meta property="og:type" content="article" />
-        <link rel="canonical" href="https://www.siteoptz.ai/compare/contentstudio-vs-buffer" />
+        <link rel="canonical" href="https://siteoptz.ai/compare/contentstudio-vs-buffer" />
       </Head>
 
       <div className="min-h-screen bg-gray-50">

@@ -617,7 +617,7 @@ export default function AIToolSelectionFrameworkPDF() {
               <div className="tagline">Turning AI Into ROI</div>
             </div>
             <div>
-              <div style={{ fontWeight: '600' }}>www.siteoptz.ai</div>
+              <div style={{ fontWeight: '600' }}>siteoptz.ai</div>
               <div>For selection support: contact@siteoptz.ai</div>
             </div>
           </div>

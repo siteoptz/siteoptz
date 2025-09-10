@@ -15,7 +15,7 @@ export default function MidjourneyVsChatgpt() {
         <meta property="og:title" content="Midjourney vs Chatgpt Comparison | SiteOptz" />
         <meta property="og:description" content="Detailed comparison of Midjourney and Chatgpt features, pricing, and capabilities" />
         <meta property="og:type" content="article" />
-        <link rel="canonical" href="https://www.siteoptz.ai/compare/midjourney-vs-chatgpt" />
+        <link rel="canonical" href="https://siteoptz.ai/compare/midjourney-vs-chatgpt" />
       </Head>
 
       <div className="min-h-screen bg-gray-50">

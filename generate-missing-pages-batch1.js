@@ -46,7 +46,7 @@ export default function ${tool.name.replace(/[^a-zA-Z0-9]/g, '')}Review() {
         <meta property="og:title" content="${tool.name} Review | SiteOptz" />
         <meta property="og:description" content="Expert review of ${tool.name} - features, pricing, pros & cons" />
         <meta property="og:type" content="article" />
-        <link rel="canonical" href="https://www.siteoptz.ai/reviews/${tool.slug}" />
+        <link rel="canonical" href="https://siteoptz.ai/reviews/${tool.slug}" />
       </Head>
 
       <div className="min-h-screen bg-gray-50">
@@ -188,7 +188,7 @@ export default function ${title1.replace(/[^a-zA-Z0-9]/g, '')}Vs${title2.replace
         <meta property="og:title" content="${title1} vs ${title2} Comparison | SiteOptz" />
         <meta property="og:description" content="Detailed comparison of ${title1} and ${title2} features, pricing, and capabilities" />
         <meta property="og:type" content="article" />
-        <link rel="canonical" href="https://www.siteoptz.ai/compare/${tool1}-vs-${tool2}" />
+        <link rel="canonical" href="https://siteoptz.ai/compare/${tool1}-vs-${tool2}" />
       </Head>
 
       <div className="min-h-screen bg-gray-50">
