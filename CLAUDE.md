@@ -64,9 +64,25 @@ npm run type-check
 npm run lint
 ```
 
+## Design System Requirements
+
+### Dark Theme Styling (MANDATORY)
+**ALL new pages MUST use the dark theme styling:**
+- **Background**: `bg-gradient-to-br from-black via-gray-900 to-black`
+- **Cards/Containers**: `bg-black border border-gray-800`
+- **Text Colors**: 
+  - Primary text: `text-white`
+  - Secondary text: `text-gray-300` or `text-gray-400`
+  - Accent/Links: `text-cyan-400`
+- **Buttons**: `bg-gradient-to-r from-blue-600 to-purple-600 text-white`
+- **Hover States**: `hover:from-blue-700 hover:to-purple-700`
+
+This dark theme is mandatory for visual consistency across the entire site.
+
 ## Important Notes
 
 - **Single data source**: Only edit `public/data/aiToolsData.json`
 - **No complex normalization**: Data should be consistent in the file
 - **Required fields**: id, name, slug, features (array), pricing (array)
 - **Arrays only**: features and pricing must always be arrays, never objects
+- **Dark theme required**: All pages must use the dark theme styling specified above
