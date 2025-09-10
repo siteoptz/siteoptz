@@ -174,15 +174,25 @@ export default function IndustryPage({ industry, content, slug }: IndustryPagePr
                     AI Solutions We Recommend
                   </h3>
                   <div className="flex flex-wrap justify-center gap-4">
-                    {content.toolCategories.map((category) => (
-                      <Link
-                        key={category}
-                        href={`/categories/${category.toLowerCase().replace(/[^a-z0-9]+/g, '-')}`}
-                        className="px-6 py-3 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-lg font-semibold hover:from-blue-700 hover:to-purple-700 transform hover:scale-105 transition-all duration-200 shadow-lg hover:shadow-xl"
-                      >
-                        {category}
-                      </Link>
-                    ))}
+                    {content.toolCategories.map((category) => {
+                      // Map category names to their correct URLs
+                      const getCategoryUrl = (categoryName: string) => {
+                        if (categoryName === 'Voice AI Tools') {
+                          return '/categories/best-voice-ai-tools';
+                        }
+                        return `/categories/${categoryName.toLowerCase().replace(/[^a-z0-9]+/g, '-')}`;
+                      };
+                      
+                      return (
+                        <Link
+                          key={category}
+                          href={getCategoryUrl(category)}
+                          className="px-6 py-3 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-lg font-semibold hover:from-blue-700 hover:to-purple-700 transform hover:scale-105 transition-all duration-200 shadow-lg hover:shadow-xl"
+                        >
+                          {category}
+                        </Link>
+                      );
+                    })}
                   </div>
                 </div>
               </div>
