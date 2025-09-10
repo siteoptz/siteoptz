@@ -10281,36 +10281,6 @@
       "source": "/compare/zapt-powerful-ai-app-builder-vs-adespresso",
       "destination": "/compare/zapt-powerful-ai-app-builder/vs/adespresso",
       "statusCode": 301
-    },
-    {
-      "source": "/compare/zenor-ai-vs-10web",
-      "destination": "/compare/zenor-ai/vs/10web",
-      "statusCode": 301
-    },
-    {
-      "source": "/compare/zenor-ai-vs-acquisio",
-      "destination": "/compare/zenor-ai/vs/acquisio",
-      "statusCode": 301
-    },
-    {
-      "source": "/compare/zenor-ai-vs-adalysis",
-      "destination": "/compare/zenor-ai/vs/adalysis",
-      "statusCode": 301
-    },
-    {
-      "source": "/compare/zenor-ai-vs-adbeat",
-      "destination": "/compare/zenor-ai/vs/adbeat",
-      "statusCode": 301
-    },
-    {
-      "source": "/compare/zenor-ai-vs-adcreative-ai",
-      "destination": "/compare/zenor-ai/vs/adcreative-ai",
-      "statusCode": 301
-    },
-    {
-      "source": "/compare/zenor-ai-vs-adespresso",
-      "destination": "/compare/zenor-ai/vs/adespresso",
-      "statusCode": 301
     }
   ]
 }
