@@ -18,33 +18,33 @@ export default function HuggingFaceReview() {
         <link rel="canonical" href="https://www.siteoptz.ai/reviews/hugging-face" />
       </Head>
 
-      <div className="min-h-screen bg-gray-50">
+      <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-black">
         <div className="max-w-4xl mx-auto px-4 py-8">
           {/* Header */}
-          <div className="bg-white rounded-lg shadow-sm p-8 mb-8">
+          <div className="bg-black border border-gray-800 rounded-lg p-8 mb-8">
             <div className="flex items-center mb-6">
               <ToolLogo toolName="Hugging Face" size="lg" className="mr-4" />
               <div>
-                <h1 className="text-3xl font-bold text-gray-900 mb-2">
+                <h1 className="text-3xl font-bold text-white mb-2">
                   Hugging Face Review
                 </h1>
-                <p className="text-gray-600">AI Automation Tool</p>
+                <p className="text-gray-400">AI Automation Tool</p>
               </div>
             </div>
           </div>
 
           {/* Review Content */}
-          <div className="bg-white rounded-lg shadow-sm p-8 mb-8">
-            <h2 className="text-2xl font-bold text-gray-900 mb-6">Overview</h2>
-            <p className="text-gray-700 mb-6">
+          <div className="bg-black border border-gray-800 rounded-lg p-8 mb-8">
+            <h2 className="text-2xl font-bold text-white mb-6">Overview</h2>
+            <p className="text-gray-300 mb-6">
               Hugging Face is a powerful ai automation tool that helps businesses optimize their workflows 
               and improve productivity. This comprehensive review covers all the key features, pricing, and alternatives.
             </p>
 
             <div className="grid md:grid-cols-2 gap-8 mb-8">
               <div>
-                <h3 className="text-xl font-semibold text-gray-900 mb-4">Key Features</h3>
-                <ul className="space-y-2 text-gray-700">
+                <h3 className="text-xl font-semibold text-white mb-4">Key Features</h3>
+                <ul className="space-y-2 text-gray-300">
                   <li className="flex items-start">
                     <span className="text-green-500 mr-2">✓</span>
                     Intuitive user interface
@@ -65,15 +65,15 @@ export default function HuggingFaceReview() {
               </div>
 
               <div>
-                <h3 className="text-xl font-semibold text-gray-900 mb-4">Pricing</h3>
+                <h3 className="text-xl font-semibold text-white mb-4">Pricing</h3>
                 <div className="space-y-3">
-                  <div className="p-3 bg-gray-50 rounded-lg">
-                    <div className="font-medium text-gray-900">Free Plan</div>
-                    <div className="text-sm text-gray-600">Basic features included</div>
+                  <div className="p-3 bg-gradient-to-br from-black via-gray-900 to-black rounded-lg">
+                    <div className="font-medium text-white">Free Plan</div>
+                    <div className="text-sm text-gray-400">Basic features included</div>
                   </div>
-                  <div className="p-3 bg-blue-50 rounded-lg">
-                    <div className="font-medium text-gray-900">Pro Plan</div>
-                    <div className="text-sm text-gray-600">Advanced features and priority support</div>
+                  <div className="p-3 bg-gray-900 rounded-lg">
+                    <div className="font-medium text-white">Pro Plan</div>
+                    <div className="text-sm text-gray-400">Advanced features and priority support</div>
                   </div>
                 </div>
               </div>
@@ -83,7 +83,7 @@ export default function HuggingFaceReview() {
             <div className="grid md:grid-cols-2 gap-8 mb-8">
               <div>
                 <h3 className="text-xl font-semibold text-green-600 mb-4">Pros</h3>
-                <ul className="space-y-2 text-gray-700">
+                <ul className="space-y-2 text-gray-300">
                   <li className="flex items-start">
                     <span className="text-green-500 mr-2">+</span>
                     Easy to use and set up
@@ -101,7 +101,7 @@ export default function HuggingFaceReview() {
 
               <div>
                 <h3 className="text-xl font-semibold text-red-600 mb-4">Cons</h3>
-                <ul className="space-y-2 text-gray-700">
+                <ul className="space-y-2 text-gray-300">
                   <li className="flex items-start">
                     <span className="text-red-500 mr-2">-</span>
                     Limited customization options
@@ -123,7 +123,7 @@ export default function HuggingFaceReview() {
             </p>
             <Link 
               href="/contact" 
-              className="inline-block bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-blue-50 transition-colors"
+              className="inline-block bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-blue-700 hover:to-purple-700 transition-colors"
             >
               Get Your Free AI Assessment
             </Link>

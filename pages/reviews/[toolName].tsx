@@ -856,7 +856,7 @@ export default function ReviewPage({ tool, pageTitle, slug, relatedTools, relate
                       <span className="text-gray-300">Advanced Capabilities</span>
                       <div className="flex items-center">
                         <div className="w-32 h-2 bg-gray-700 rounded mr-3">
-                          <div className="h-2 bg-blue-500 rounded" style={{ width: `${Math.min(90, (tool.features?.advanced?.length || 0) * 25)}%` }}></div>
+                          <div className="h-2 bg-gray-900 rounded" style={{ width: `${Math.min(90, (tool.features?.advanced?.length || 0) * 25)}%` }}></div>
                         </div>
                         <span className="text-white text-sm">{Math.min(90, (tool.features?.advanced?.length || 0) * 25)}%</span>
                       </div>
