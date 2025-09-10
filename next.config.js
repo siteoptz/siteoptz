@@ -219,6 +219,12 @@ const nextConfig = {
         source: '/podcasts/transcripts/marketing-automation-ai-tools.txt',
         destination: '/podcasts/transcripts/marketing-automation-ai-tools',
         permanent: true,
+      },
+      // Comparison URL format redirect - old format to new format
+      {
+        source: '/compare/:tool1-vs-:tool2',
+        destination: '/compare/:tool1/vs/:tool2',
+        permanent: true,
       }
     ];
   },
