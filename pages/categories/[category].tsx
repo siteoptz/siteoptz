@@ -562,6 +562,7 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
     'health-ai': 'Health AI',
     'lead-generation': 'Lead Generation',
     'voice-ai': 'Voice AI',
+    'voice-ai-tools': 'Best Voice AI Tools',
     'writing': 'Writing'
   };
   
