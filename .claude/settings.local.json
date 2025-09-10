@@ -2,6 +2,7 @@
   "permissions": {
     "allow": [
       "Bash(claude)",
+<<<<<<< HEAD
       "Bash(node:*)",
       "Bash(grep:*)",
       "Bash(git add:*)",
@@ -11,6 +12,9 @@
       "Bash(cat:*)",
       "Bash(sed:*)",
       "Bash(python3:*)"
+=======
+      "Bash(npm run build:*)"
+>>>>>>> 7214bf76 (Fix categories and industries page application errors)
     ],
     "deny": []
   }
