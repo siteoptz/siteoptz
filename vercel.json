@@ -9943,14 +9943,6 @@
       "statusCode": 301
     },
     {
-      "source": "/compare/unbounce-ai-landing-page-builder-vs-adcreative-ai",
-      "destination": "/compare/unbounce-ai-landing-page-builder/vs/adcreative-ai",
-      "statusCode": 301
-    },
-    {
-      "source": "/compare/unbounce-ai-landing-page-builder-vs-adespresso",
-      "destination": "/compare/unbounce-ai-landing-page-builder/vs/adespresso",
-      "statusCode": 301
     }
   ]
 }
