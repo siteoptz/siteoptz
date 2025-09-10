@@ -197,20 +197,42 @@ class SitemapGenerator {
         console.warn('⚠️  Could not load slug redirects');
       }
       
+      // Get list of existing review page files
+      const reviewsDir = path.join(process.cwd(), 'pages', 'reviews');
+      let existingReviewFiles = new Set();
+      
+      if (fs.existsSync(reviewsDir)) {
+        const reviewFiles = fs.readdirSync(reviewsDir);
+        reviewFiles.forEach(file => {
+          if (file.endsWith('.tsx') && file !== 'index.tsx' && file !== '[toolName].tsx') {
+            // Remove .tsx extension to get slug
+            const slug = file.replace('.tsx', '');
+            existingReviewFiles.add(slug);
+          }
+        });
+      }
+      
       let toolPagesAdded = 0;
+      let skippedPages = 0;
       const validSlugs = new Set();
       
       for (const tool of toolData) {
         if (tool.slug) {
-          // Only add reviews URLs since /tools/ URLs redirect to /reviews/
-          this.addUrl(`/reviews/${tool.slug}`, 0.8, 'weekly', tool.last_updated || tool.updated_at, 'tools');
-          validSlugs.add(tool.slug);
-          toolPagesAdded += 1;
+          // Only add review URLs if the corresponding page file exists
+          if (existingReviewFiles.has(tool.slug)) {
+            this.addUrl(`/reviews/${tool.slug}`, 0.8, 'weekly', tool.last_updated || tool.updated_at, 'tools');
+            validSlugs.add(tool.slug);
+            toolPagesAdded += 1;
+          } else {
+            skippedPages += 1;
+          }
         }
       }
 
-      // Don't add URLs for redirected slugs that don't exist
-      console.log(`✅ Added ${toolPagesAdded} tool and review pages`);
+      console.log(`✅ Added ${toolPagesAdded} review pages with existing files`);
+      if (skippedPages > 0) {
+        console.log(`📝 Skipped ${skippedPages} tools without review page files`);
+      }
       if (Object.keys(slugRedirects).length > 0) {
         console.log(`📝 Note: ${Object.keys(slugRedirects).length} slug redirects identified for cleanup`);
       }

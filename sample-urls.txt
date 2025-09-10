@@ -1,0 +1,10 @@
+/categories
+/tools/ai-cost-calculator
+/tools/ai-roi-calculator
+/tools/chatbot-roi-calculator
+/tools/content-roi-calculator
+/tools/conversion-roi-calculator
+/tools/data-science-roi
+/tools/enterprise-ai-calculator
+/tools/fintech-ai-roi
+/tools/healthcare-ai-roi

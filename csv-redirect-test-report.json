@@ -1,0 +1,135 @@
+{
+  "timestamp": "2025-09-10T16:15:17.982Z",
+  "totalTested": 20,
+  "totalInCSV": 9609,
+  "results": {
+    "correct301": 0,
+    "needs308Fix": 19,
+    "errors": 1
+  },
+  "successRate": "0.00",
+  "urlsTested": [
+    "https://siteoptz.ai/",
+    "https://siteoptz.ai/about",
+    "https://siteoptz.ai/analysis/claude3-vs-gpt4",
+    "https://siteoptz.ai/blog",
+    "https://siteoptz.ai/careers",
+    "https://siteoptz.ai/case-studies",
+    "https://siteoptz.ai/case-studies/ai-content-creators",
+    "https://siteoptz.ai/case-studies/ai-customer-service",
+    "https://siteoptz.ai/case-studies/ai-cybersecurity",
+    "https://siteoptz.ai/case-studies/datavision-analytics-ai",
+    "https://siteoptz.ai/case-studies/ecommerce-ai",
+    "https://siteoptz.ai/case-studies/edutech-personalized-learning",
+    "https://siteoptz.ai/case-studies/fintech-ai",
+    "https://siteoptz.ai/case-studies/fintech-fraud-detection",
+    "https://siteoptz.ai/case-studies/fortune-500-chatgpt",
+    "https://siteoptz.ai/case-studies/growthlabs-content-ai",
+    "https://siteoptz.ai/case-studies/healthcare-ai",
+    "https://siteoptz.ai/case-studies/healthplus-diagnostic-ai",
+    "https://siteoptz.ai/case-studies/hr-ai-success",
+    "https://siteoptz.ai/case-studies/legaltech-contract-analysis"
+  ],
+  "detailedResults": [
+    {
+      "url": "https://siteoptz.ai/",
+      "statusCode": 200,
+      "location": null
+    },
+    {
+      "url": "https://siteoptz.ai/about",
+      "statusCode": 308,
+      "location": "/tools"
+    },
+    {
+      "url": "https://siteoptz.ai/analysis/claude3-vs-gpt4",
+      "statusCode": 308,
+      "location": "/tools"
+    },
+    {
+      "url": "https://siteoptz.ai/blog",
+      "statusCode": 308,
+      "location": "/tools"
+    },
+    {
+      "url": "https://siteoptz.ai/careers",
+      "statusCode": 308,
+      "location": "/tools"
+    },
+    {
+      "url": "https://siteoptz.ai/case-studies",
+      "statusCode": 308,
+      "location": "/tools"
+    },
+    {
+      "url": "https://siteoptz.ai/case-studies/ai-content-creators",
+      "statusCode": 308,
+      "location": "/tools"
+    },
+    {
+      "url": "https://siteoptz.ai/case-studies/ai-customer-service",
+      "statusCode": 308,
+      "location": "/tools"
+    },
+    {
+      "url": "https://siteoptz.ai/case-studies/ai-cybersecurity",
+      "statusCode": 308,
+      "location": "/tools"
+    },
+    {
+      "url": "https://siteoptz.ai/case-studies/datavision-analytics-ai",
+      "statusCode": 308,
+      "location": "/tools"
+    },
+    {
+      "url": "https://siteoptz.ai/case-studies/ecommerce-ai",
+      "statusCode": 308,
+      "location": "/tools"
+    },
+    {
+      "url": "https://siteoptz.ai/case-studies/edutech-personalized-learning",
+      "statusCode": 308,
+      "location": "/tools"
+    },
+    {
+      "url": "https://siteoptz.ai/case-studies/fintech-ai",
+      "statusCode": 308,
+      "location": "/tools"
+    },
+    {
+      "url": "https://siteoptz.ai/case-studies/fintech-fraud-detection",
+      "statusCode": 308,
+      "location": "/tools"
+    },
+    {
+      "url": "https://siteoptz.ai/case-studies/fortune-500-chatgpt",
+      "statusCode": 308,
+      "location": "/tools"
+    },
+    {
+      "url": "https://siteoptz.ai/case-studies/growthlabs-content-ai",
+      "statusCode": 308,
+      "location": "/tools"
+    },
+    {
+      "url": "https://siteoptz.ai/case-studies/healthcare-ai",
+      "statusCode": 308,
+      "location": "/tools"
+    },
+    {
+      "url": "https://siteoptz.ai/case-studies/healthplus-diagnostic-ai",
+      "statusCode": 308,
+      "location": "/tools"
+    },
+    {
+      "url": "https://siteoptz.ai/case-studies/hr-ai-success",
+      "statusCode": 308,
+      "location": "/tools"
+    },
+    {
+      "url": "https://siteoptz.ai/case-studies/legaltech-contract-analysis",
+      "statusCode": 308,
+      "location": "/tools"
+    }
+  ]
+}

@@ -1,7 +1,15 @@
 {
   "permissions": {
     "allow": [
-      "Bash(claude)"
+      "Bash(claude)",
+      "Bash(node:*)",
+      "Bash(grep:*)",
+      "Bash(git add:*)",
+      "Bash(git commit:*)",
+      "Bash(git push:*)",
+      "Bash(cp:*)",
+      "Bash(cat:*)",
+      "Bash(sed:*)"
     ],
     "deny": []
   }

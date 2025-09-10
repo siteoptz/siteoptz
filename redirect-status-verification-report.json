@@ -1,0 +1,510 @@
+{
+  "timestamp": "2025-09-10T17:02:31.246Z",
+  "totalUrls": 5248,
+  "urlsTested": 50,
+  "summary": {
+    "status301": 0,
+    "status308": 49,
+    "other": 1,
+    "errors": 0
+  },
+  "urls308": [
+    {
+      "url": "https://siteoptz.ai/about",
+      "status": 308,
+      "location": "/tools"
+    },
+    {
+      "url": "https://siteoptz.ai/analysis/claude3-vs-gpt4",
+      "status": 308,
+      "location": "/tools"
+    },
+    {
+      "url": "https://siteoptz.ai/blog",
+      "status": 308,
+      "location": "/tools"
+    },
+    {
+      "url": "https://siteoptz.ai/careers",
+      "status": 308,
+      "location": "/tools"
+    },
+    {
+      "url": "https://siteoptz.ai/case-studies",
+      "status": 308,
+      "location": "/tools"
+    },
+    {
+      "url": "https://siteoptz.ai/case-studies/ai-content-creators",
+      "status": 308,
+      "location": "/tools"
+    },
+    {
+      "url": "https://siteoptz.ai/case-studies/ai-customer-service",
+      "status": 308,
+      "location": "/tools"
+    },
+    {
+      "url": "https://siteoptz.ai/case-studies/ai-cybersecurity",
+      "status": 308,
+      "location": "/tools"
+    },
+    {
+      "url": "https://siteoptz.ai/case-studies/datavision-analytics-ai",
+      "status": 308,
+      "location": "/tools"
+    },
+    {
+      "url": "https://siteoptz.ai/case-studies/ecommerce-ai",
+      "status": 308,
+      "location": "/tools"
+    },
+    {
+      "url": "https://siteoptz.ai/case-studies/edutech-personalized-learning",
+      "status": 308,
+      "location": "/tools"
+    },
+    {
+      "url": "https://siteoptz.ai/case-studies/fintech-ai",
+      "status": 308,
+      "location": "/tools"
+    },
+    {
+      "url": "https://siteoptz.ai/case-studies/fintech-fraud-detection",
+      "status": 308,
+      "location": "/tools"
+    },
+    {
+      "url": "https://siteoptz.ai/case-studies/fortune-500-chatgpt",
+      "status": 308,
+      "location": "/tools"
+    },
+    {
+      "url": "https://siteoptz.ai/case-studies/growthlabs-content-ai",
+      "status": 308,
+      "location": "/tools"
+    },
+    {
+      "url": "https://siteoptz.ai/case-studies/healthcare-ai",
+      "status": 308,
+      "location": "/tools"
+    },
+    {
+      "url": "https://siteoptz.ai/case-studies/healthplus-diagnostic-ai",
+      "status": 308,
+      "location": "/tools"
+    },
+    {
+      "url": "https://siteoptz.ai/case-studies/hr-ai-success",
+      "status": 308,
+      "location": "/tools"
+    },
+    {
+      "url": "https://siteoptz.ai/case-studies/legaltech-contract-analysis",
+      "status": 308,
+      "location": "/tools"
+    },
+    {
+      "url": "https://siteoptz.ai/case-studies/logicorp-route-optimization",
+      "status": 308,
+      "location": "/tools"
+    },
+    {
+      "url": "https://siteoptz.ai/case-studies/manufacturex-predictive-maintenance",
+      "status": 308,
+      "location": "/tools"
+    },
+    {
+      "url": "https://siteoptz.ai/case-studies/manufacturing-ai",
+      "status": 308,
+      "location": "/tools"
+    },
+    {
+      "url": "https://siteoptz.ai/case-studies/marketing-ai-success",
+      "status": 308,
+      "location": "/tools"
+    },
+    {
+      "url": "https://siteoptz.ai/case-studies/no-code-ai-wins",
+      "status": 308,
+      "location": "/tools"
+    },
+    {
+      "url": "https://siteoptz.ai/case-studies/predictive-analytics",
+      "status": 308,
+      "location": "/tools"
+    },
+    {
+      "url": "https://siteoptz.ai/case-studies/retailmax-inventory-ai",
+      "status": 308,
+      "location": "/tools"
+    },
+    {
+      "url": "https://siteoptz.ai/case-studies/sales-ai",
+      "status": 308,
+      "location": "/tools"
+    },
+    {
+      "url": "https://siteoptz.ai/case-studies/smart-manufacturing",
+      "status": 308,
+      "location": "/tools"
+    },
+    {
+      "url": "https://siteoptz.ai/case-studies/techflow-ai-chatbot",
+      "status": 308,
+      "location": "/tools"
+    },
+    {
+      "url": "https://siteoptz.ai/case-studies?industry=E-commerce & Retail",
+      "status": 308,
+      "location": "/tools?industry=E-commerce%20&%20Retail"
+    },
+    {
+      "url": "https://siteoptz.ai/case-studies?industry=Education",
+      "status": 308,
+      "location": "/tools?industry=Education"
+    },
+    {
+      "url": "https://siteoptz.ai/case-studies?industry=Finance & Banking",
+      "status": 308,
+      "location": "/tools?industry=Finance%20&%20Banking"
+    },
+    {
+      "url": "https://siteoptz.ai/case-studies?industry=Healthcare",
+      "status": 308,
+      "location": "/tools?industry=Healthcare"
+    },
+    {
+      "url": "https://siteoptz.ai/case-studies?industry=Logistics",
+      "status": 308,
+      "location": "/tools?industry=Logistics"
+    },
+    {
+      "url": "https://siteoptz.ai/case-studies?industry=Manufacturing",
+      "status": 308,
+      "location": "/tools?industry=Manufacturing"
+    },
+    {
+      "url": "https://siteoptz.ai/case-studies?industry=Marketing & Media",
+      "status": 308,
+      "location": "/tools?industry=Marketing%20&%20Media"
+    },
+    {
+      "url": "https://siteoptz.ai/case-studies?industry=SaaS & Technology",
+      "status": 308,
+      "location": "/tools?industry=SaaS%20&%20Technology"
+    },
+    {
+      "url": "https://siteoptz.ai/categories",
+      "status": 308,
+      "location": "/tools"
+    },
+    {
+      "url": "https://siteoptz.ai/categories/ai-automation",
+      "status": 308,
+      "location": "/tools"
+    },
+    {
+      "url": "https://siteoptz.ai/categories/ai-education",
+      "status": 308,
+      "location": "/tools"
+    },
+    {
+      "url": "https://siteoptz.ai/categories/ai-for-business",
+      "status": 308,
+      "location": "/tools"
+    },
+    {
+      "url": "https://siteoptz.ai/categories/ai-translator",
+      "status": 308,
+      "location": "/tools"
+    },
+    {
+      "url": "https://siteoptz.ai/categories/ai-website-builder",
+      "status": 308,
+      "location": "/tools"
+    },
+    {
+      "url": "https://siteoptz.ai/categories/best-voice-ai-tools",
+      "status": 308,
+      "location": "/tools"
+    },
+    {
+      "url": "https://siteoptz.ai/categories/code-generation",
+      "status": 308,
+      "location": "/tools"
+    },
+    {
+      "url": "https://siteoptz.ai/categories/content-creation",
+      "status": 308,
+      "location": "/tools"
+    },
+    {
+      "url": "https://siteoptz.ai/categories/data-analysis",
+      "status": 308,
+      "location": "/tools"
+    },
+    {
+      "url": "https://siteoptz.ai/categories/e-commerce",
+      "status": 308,
+      "location": "/tools"
+    },
+    {
+      "url": "https://siteoptz.ai/categories/email-marketing",
+      "status": 308,
+      "location": "/tools"
+    }
+  ],
+  "allResults": [
+    {
+      "url": "https://siteoptz.ai/",
+      "status": 200,
+      "location": "none"
+    },
+    {
+      "url": "https://siteoptz.ai/about",
+      "status": 308,
+      "location": "/tools"
+    },
+    {
+      "url": "https://siteoptz.ai/analysis/claude3-vs-gpt4",
+      "status": 308,
+      "location": "/tools"
+    },
+    {
+      "url": "https://siteoptz.ai/blog",
+      "status": 308,
+      "location": "/tools"
+    },
+    {
+      "url": "https://siteoptz.ai/careers",
+      "status": 308,
+      "location": "/tools"
+    },
+    {
+      "url": "https://siteoptz.ai/case-studies",
+      "status": 308,
+      "location": "/tools"
+    },
+    {
+      "url": "https://siteoptz.ai/case-studies/ai-content-creators",
+      "status": 308,
+      "location": "/tools"
+    },
+    {
+      "url": "https://siteoptz.ai/case-studies/ai-customer-service",
+      "status": 308,
+      "location": "/tools"
+    },
+    {
+      "url": "https://siteoptz.ai/case-studies/ai-cybersecurity",
+      "status": 308,
+      "location": "/tools"
+    },
+    {
+      "url": "https://siteoptz.ai/case-studies/datavision-analytics-ai",
+      "status": 308,
+      "location": "/tools"
+    },
+    {
+      "url": "https://siteoptz.ai/case-studies/ecommerce-ai",
+      "status": 308,
+      "location": "/tools"
+    },
+    {
+      "url": "https://siteoptz.ai/case-studies/edutech-personalized-learning",
+      "status": 308,
+      "location": "/tools"
+    },
+    {
+      "url": "https://siteoptz.ai/case-studies/fintech-ai",
+      "status": 308,
+      "location": "/tools"
+    },
+    {
+      "url": "https://siteoptz.ai/case-studies/fintech-fraud-detection",
+      "status": 308,
+      "location": "/tools"
+    },
+    {
+      "url": "https://siteoptz.ai/case-studies/fortune-500-chatgpt",
+      "status": 308,
+      "location": "/tools"
+    },
+    {
+      "url": "https://siteoptz.ai/case-studies/growthlabs-content-ai",
+      "status": 308,
+      "location": "/tools"
+    },
+    {
+      "url": "https://siteoptz.ai/case-studies/healthcare-ai",
+      "status": 308,
+      "location": "/tools"
+    },
+    {
+      "url": "https://siteoptz.ai/case-studies/healthplus-diagnostic-ai",
+      "status": 308,
+      "location": "/tools"
+    },
+    {
+      "url": "https://siteoptz.ai/case-studies/hr-ai-success",
+      "status": 308,
+      "location": "/tools"
+    },
+    {
+      "url": "https://siteoptz.ai/case-studies/legaltech-contract-analysis",
+      "status": 308,
+      "location": "/tools"
+    },
+    {
+      "url": "https://siteoptz.ai/case-studies/logicorp-route-optimization",
+      "status": 308,
+      "location": "/tools"
+    },
+    {
+      "url": "https://siteoptz.ai/case-studies/manufacturex-predictive-maintenance",
+      "status": 308,
+      "location": "/tools"
+    },
+    {
+      "url": "https://siteoptz.ai/case-studies/manufacturing-ai",
+      "status": 308,
+      "location": "/tools"
+    },
+    {
+      "url": "https://siteoptz.ai/case-studies/marketing-ai-success",
+      "status": 308,
+      "location": "/tools"
+    },
+    {
+      "url": "https://siteoptz.ai/case-studies/no-code-ai-wins",
+      "status": 308,
+      "location": "/tools"
+    },
+    {
+      "url": "https://siteoptz.ai/case-studies/predictive-analytics",
+      "status": 308,
+      "location": "/tools"
+    },
+    {
+      "url": "https://siteoptz.ai/case-studies/retailmax-inventory-ai",
+      "status": 308,
+      "location": "/tools"
+    },
+    {
+      "url": "https://siteoptz.ai/case-studies/sales-ai",
+      "status": 308,
+      "location": "/tools"
+    },
+    {
+      "url": "https://siteoptz.ai/case-studies/smart-manufacturing",
+      "status": 308,
+      "location": "/tools"
+    },
+    {
+      "url": "https://siteoptz.ai/case-studies/techflow-ai-chatbot",
+      "status": 308,
+      "location": "/tools"
+    },
+    {
+      "url": "https://siteoptz.ai/case-studies?industry=E-commerce & Retail",
+      "status": 308,
+      "location": "/tools?industry=E-commerce%20&%20Retail"
+    },
+    {
+      "url": "https://siteoptz.ai/case-studies?industry=Education",
+      "status": 308,
+      "location": "/tools?industry=Education"
+    },
+    {
+      "url": "https://siteoptz.ai/case-studies?industry=Finance & Banking",
+      "status": 308,
+      "location": "/tools?industry=Finance%20&%20Banking"
+    },
+    {
+      "url": "https://siteoptz.ai/case-studies?industry=Healthcare",
+      "status": 308,
+      "location": "/tools?industry=Healthcare"
+    },
+    {
+      "url": "https://siteoptz.ai/case-studies?industry=Logistics",
+      "status": 308,
+      "location": "/tools?industry=Logistics"
+    },
+    {
+      "url": "https://siteoptz.ai/case-studies?industry=Manufacturing",
+      "status": 308,
+      "location": "/tools?industry=Manufacturing"
+    },
+    {
+      "url": "https://siteoptz.ai/case-studies?industry=Marketing & Media",
+      "status": 308,
+      "location": "/tools?industry=Marketing%20&%20Media"
+    },
+    {
+      "url": "https://siteoptz.ai/case-studies?industry=SaaS & Technology",
+      "status": 308,
+      "location": "/tools?industry=SaaS%20&%20Technology"
+    },
+    {
+      "url": "https://siteoptz.ai/categories",
+      "status": 308,
+      "location": "/tools"
+    },
+    {
+      "url": "https://siteoptz.ai/categories/ai-automation",
+      "status": 308,
+      "location": "/tools"
+    },
+    {
+      "url": "https://siteoptz.ai/categories/ai-education",
+      "status": 308,
+      "location": "/tools"
+    },
+    {
+      "url": "https://siteoptz.ai/categories/ai-for-business",
+      "status": 308,
+      "location": "/tools"
+    },
+    {
+      "url": "https://siteoptz.ai/categories/ai-translator",
+      "status": 308,
+      "location": "/tools"
+    },
+    {
+      "url": "https://siteoptz.ai/categories/ai-website-builder",
+      "status": 308,
+      "location": "/tools"
+    },
+    {
+      "url": "https://siteoptz.ai/categories/best-voice-ai-tools",
+      "status": 308,
+      "location": "/tools"
+    },
+    {
+      "url": "https://siteoptz.ai/categories/code-generation",
+      "status": 308,
+      "location": "/tools"
+    },
+    {
+      "url": "https://siteoptz.ai/categories/content-creation",
+      "status": 308,
+      "location": "/tools"
+    },
+    {
+      "url": "https://siteoptz.ai/categories/data-analysis",
+      "status": 308,
+      "location": "/tools"
+    },
+    {
+      "url": "https://siteoptz.ai/categories/e-commerce",
+      "status": 308,
+      "location": "/tools"
+    },
+    {
+      "url": "https://siteoptz.ai/categories/email-marketing",
+      "status": 308,
+      "location": "/tools"
+    }
+  ]
+}

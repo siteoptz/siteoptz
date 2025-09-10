@@ -1,0 +1,117 @@
+{
+  "timestamp": "2025-09-10T17:24:00.493Z",
+  "batchNumber": 2,
+  "previousCount": 696,
+  "addedInThisBatch": 1352,
+  "newTotal": 2048,
+  "vercelLimit": 2048,
+  "remainingCapacity": 0,
+  "sampleAdded": [
+    {
+      "source": "/categories",
+      "destination": "/tools",
+      "statusCode": 301
+    },
+    {
+      "source": "/tools/ai-cost-calculator",
+      "destination": "/tools",
+      "statusCode": 301
+    },
+    {
+      "source": "/tools/ai-roi-calculator",
+      "destination": "/tools",
+      "statusCode": 301
+    },
+    {
+      "source": "/tools/chatbot-roi-calculator",
+      "destination": "/tools",
+      "statusCode": 301
+    },
+    {
+      "source": "/tools/content-roi-calculator",
+      "destination": "/tools",
+      "statusCode": 301
+    },
+    {
+      "source": "/tools/conversion-roi-calculator",
+      "destination": "/tools",
+      "statusCode": 301
+    },
+    {
+      "source": "/tools/data-science-roi",
+      "destination": "/tools",
+      "statusCode": 301
+    },
+    {
+      "source": "/tools/enterprise-ai-calculator",
+      "destination": "/tools",
+      "statusCode": 301
+    },
+    {
+      "source": "/tools/fintech-ai-roi",
+      "destination": "/tools",
+      "statusCode": 301
+    },
+    {
+      "source": "/tools/healthcare-ai-roi",
+      "destination": "/tools",
+      "statusCode": 301
+    },
+    {
+      "source": "/tools/manufacturing-roi-calculator",
+      "destination": "/tools",
+      "statusCode": 301
+    },
+    {
+      "source": "/tools/marketing-roi-calculator",
+      "destination": "/tools",
+      "statusCode": 301
+    },
+    {
+      "source": "/tools/no-code-ai-roi",
+      "destination": "/tools",
+      "statusCode": 301
+    },
+    {
+      "source": "/tools/recruitment-roi-calculator",
+      "destination": "/tools",
+      "statusCode": 301
+    },
+    {
+      "source": "/tools/sales-ai-roi",
+      "destination": "/tools",
+      "statusCode": 301
+    },
+    {
+      "source": "/tools/security-roi-calculator",
+      "destination": "/tools",
+      "statusCode": 301
+    },
+    {
+      "source": "/compare/ahrefs-ai/vs/10web",
+      "destination": "/tools",
+      "statusCode": 301
+    },
+    {
+      "source": "/compare/ahrefs-ai/vs/acquisio",
+      "destination": "/tools",
+      "statusCode": 301
+    },
+    {
+      "source": "/compare/ahrefs-ai/vs/adalysis",
+      "destination": "/tools",
+      "statusCode": 301
+    },
+    {
+      "source": "/compare/ahrefs-ai/vs/adbeat",
+      "destination": "/tools",
+      "statusCode": 301
+    }
+  ],
+  "breakdown": {
+    "highPriority": 16,
+    "importantCompares": 124,
+    "otherCompares": 4216,
+    "otherRedirects": 824
+  }
+}

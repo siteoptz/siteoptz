@@ -1,0 +1,15 @@
+{
+  "timestamp": "2025-09-10T17:12:24.051Z",
+  "vercelLimit": 2048,
+  "existingRedirects": 636,
+  "attemptedToAdd": 5240,
+  "actuallyAdded": 60,
+  "handledByMiddleware": 5180,
+  "totalInVercelJson": 696,
+  "breakdown": {
+    "rootPages": 9,
+    "categoryPages": 25,
+    "caseStudies": 25,
+    "analysisPages": 1
+  }
+}

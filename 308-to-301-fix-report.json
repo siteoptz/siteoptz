@@ -1,0 +1,61 @@
+{
+  "timestamp": "2025-09-10T17:08:40.043Z",
+  "summary": {
+    "newRedirectsRequested": 5240,
+    "alreadyExisting": 0,
+    "actuallyAdded": 5240,
+    "totalRedirectsNow": 5876
+  },
+  "sampleRedirects": [
+    {
+      "source": "/",
+      "destination": "/tools",
+      "statusCode": 301
+    },
+    {
+      "source": "/about",
+      "destination": "/tools",
+      "statusCode": 301
+    },
+    {
+      "source": "/blog",
+      "destination": "/tools",
+      "statusCode": 301
+    },
+    {
+      "source": "/careers",
+      "destination": "/tools",
+      "statusCode": 301
+    },
+    {
+      "source": "/contact",
+      "destination": "/tools",
+      "statusCode": 301
+    },
+    {
+      "source": "/pricing",
+      "destination": "/tools",
+      "statusCode": 301
+    },
+    {
+      "source": "/resources",
+      "destination": "/tools",
+      "statusCode": 301
+    },
+    {
+      "source": "/testimonials",
+      "destination": "/tools",
+      "statusCode": 301
+    },
+    {
+      "source": "/why-us",
+      "destination": "/tools",
+      "statusCode": 301
+    },
+    {
+      "source": "/case-studies",
+      "destination": "/tools",
+      "statusCode": 301
+    }
+  ]
+}

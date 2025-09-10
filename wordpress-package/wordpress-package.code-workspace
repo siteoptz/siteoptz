@@ -1,0 +1,13 @@
+{
+	"folders": [
+		{
+			"name": "wordpress-package",
+			"path": "."
+		},
+		{
+			"name": "Agents",
+			"path": "../Agents"
+		}
+	],
+	"settings": {}
+}

@@ -1,0 +1,141 @@
+{
+  "timestamp": "2025-09-10T16:00:06.442Z",
+  "stats": {
+    "totalTests": 15,
+    "status301": 10,
+    "status308": 5,
+    "otherStatus": 0,
+    "errors": 0
+  },
+  "testResults": [
+    {
+      "type": "compare-redirect",
+      "path": "/compare/10web-vs-acquisio",
+      "url": "https://siteoptz.ai/compare/10web-vs-acquisio",
+      "status": 301,
+      "location": "/compare/10web/vs/acquisio",
+      "success": true
+    },
+    {
+      "type": "compare-redirect",
+      "path": "/compare/10web-vs-adalysis",
+      "url": "https://siteoptz.ai/compare/10web-vs-adalysis",
+      "status": 301,
+      "location": "/compare/10web/vs/adalysis",
+      "success": true
+    },
+    {
+      "type": "compare-redirect",
+      "path": "/compare/10web-vs-adbeat",
+      "url": "https://siteoptz.ai/compare/10web-vs-adbeat",
+      "status": 301,
+      "location": "/compare/10web/vs/adbeat",
+      "success": true
+    },
+    {
+      "type": "compare-redirect",
+      "path": "/compare/37x-vs-10web",
+      "url": "https://siteoptz.ai/compare/37x-vs-10web",
+      "status": 301,
+      "location": "/compare/37x/vs/10web",
+      "success": true
+    },
+    {
+      "type": "compare-redirect",
+      "path": "/compare/37x-vs-acquisio",
+      "url": "https://siteoptz.ai/compare/37x-vs-acquisio",
+      "status": 301,
+      "location": "/compare/37x/vs/acquisio",
+      "success": true
+    },
+    {
+      "type": "compare-redirect",
+      "path": "/compare/adcreative-ai-vs-10web",
+      "url": "https://siteoptz.ai/compare/adcreative-ai-vs-10web",
+      "status": 301,
+      "location": "/compare/adcreative-ai/vs/10web",
+      "success": true
+    },
+    {
+      "type": "compare-redirect",
+      "path": "/compare/adcreative-ai-vs-adbeat",
+      "url": "https://siteoptz.ai/compare/adcreative-ai-vs-adbeat",
+      "status": 301,
+      "location": "/compare/adcreative-ai/vs/adbeat",
+      "success": true
+    },
+    {
+      "type": "compare-redirect",
+      "path": "/compare/aerogram-vs-10web",
+      "url": "https://siteoptz.ai/compare/aerogram-vs-10web",
+      "status": 301,
+      "location": "/compare/aerogram/vs/10web",
+      "success": true
+    },
+    {
+      "type": "compare-redirect",
+      "path": "/compare/aftercare-vs-10web",
+      "url": "https://siteoptz.ai/compare/aftercare-vs-10web",
+      "status": 301,
+      "location": "/compare/aftercare/vs/10web",
+      "success": true
+    },
+    {
+      "type": "compare-redirect",
+      "path": "/compare/ahrefs-ai-vs-10web",
+      "url": "https://siteoptz.ai/compare/ahrefs-ai-vs-10web",
+      "status": 301,
+      "location": "/compare/ahrefs-ai/vs/10web",
+      "success": true
+    },
+    {
+      "type": "other-redirect",
+      "path": "/compare/chatgpt-vs-claude",
+      "url": "https://siteoptz.ai/compare/chatgpt-vs-claude",
+      "status": 308,
+      "location": "/compare/chatgpt/vs/claude",
+      "success": false
+    },
+    {
+      "type": "other-redirect",
+      "path": "/compare/midjourney-vs-dalle",
+      "url": "https://siteoptz.ai/compare/midjourney-vs-dalle",
+      "status": 308,
+      "location": "/compare/midjourney/vs/dalle",
+      "success": false
+    },
+    {
+      "type": "other-redirect",
+      "path": "/compare/notion-vs-obsidian",
+      "url": "https://siteoptz.ai/compare/notion-vs-obsidian",
+      "status": 308,
+      "location": "/compare/notion/vs/obsidian",
+      "success": false
+    },
+    {
+      "type": "other-redirect",
+      "path": "/compare/slack-vs-discord",
+      "url": "https://siteoptz.ai/compare/slack-vs-discord",
+      "status": 308,
+      "location": "/compare/slack/vs/discord",
+      "success": false
+    },
+    {
+      "type": "other-redirect",
+      "path": "/compare/zoom-vs-teams",
+      "url": "https://siteoptz.ai/compare/zoom-vs-teams",
+      "status": 308,
+      "location": "/compare/zoom/vs/teams",
+      "success": false
+    }
+  ],
+  "errors": [],
+  "summary": {
+    "totalTests": 15,
+    "correct301Redirects": 10,
+    "incorrect308Redirects": 5,
+    "otherStatusCodes": 0,
+    "errors": 0,
+    "successRate": "66.67%"
+  }
+}

@@ -1,0 +1,79 @@
+{
+  "timestamp": "2025-09-10T17:25:23.636Z",
+  "batchNumber": 2,
+  "totalTested": 10,
+  "successful": 0,
+  "failed": 10,
+  "results": [
+    {
+      "url": "https://siteoptz.ai/categories",
+      "status": 308,
+      "location": "/tools",
+      "success": false,
+      "type": "Category (batch 2)"
+    },
+    {
+      "url": "https://siteoptz.ai/tools/ai-cost-calculator",
+      "status": 308,
+      "location": "/tools",
+      "success": false,
+      "type": "Tool Calculator (batch 2)"
+    },
+    {
+      "url": "https://siteoptz.ai/compare/chatgpt/vs/jasper-ai",
+      "status": 200,
+      "location": "none",
+      "success": false,
+      "type": "Important Compare (batch 2)"
+    },
+    {
+      "url": "https://siteoptz.ai/compare/claude/vs/gemini",
+      "status": 200,
+      "location": "none",
+      "success": false,
+      "type": "Important Compare (batch 2)"
+    },
+    {
+      "url": "https://siteoptz.ai/compare/copy-ai/vs/writesonic",
+      "status": 200,
+      "location": "none",
+      "success": false,
+      "type": "Important Compare (batch 2)"
+    },
+    {
+      "url": "https://siteoptz.ai/compare/jasper-ai/vs/copy-ai",
+      "status": 200,
+      "location": "none",
+      "success": false,
+      "type": "Important Compare (batch 2)"
+    },
+    {
+      "url": "https://siteoptz.ai/compare/10web/vs/acquisio",
+      "status": 200,
+      "location": "none",
+      "success": false,
+      "type": "Compare (batch 2)"
+    },
+    {
+      "url": "https://siteoptz.ai/compare/adalysis/vs/adbeat",
+      "status": 200,
+      "location": "none",
+      "success": false,
+      "type": "Compare (batch 2)"
+    },
+    {
+      "url": "https://siteoptz.ai/compare/adcreative-ai/vs/adespresso",
+      "status": 200,
+      "location": "none",
+      "success": false,
+      "type": "Compare (batch 2)"
+    },
+    {
+      "url": "https://siteoptz.ai/compare/aerogram/vs/aftercare",
+      "status": 200,
+      "location": "none",
+      "success": false,
+      "type": "Compare (batch 2)"
+    }
+  ]
+}
