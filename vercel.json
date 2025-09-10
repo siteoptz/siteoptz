@@ -9946,11 +9946,6 @@
       "source": "/compare/unbounce-ai-landing-page-builder-vs-adalysis",
       "destination": "/compare/unbounce-ai-landing-page-builder/vs/adalysis",
       "statusCode": 301
-    },
-    {
-      "source": "/compare/unbounce-ai-landing-page-builder-vs-adbeat",
-      "destination": "/compare/unbounce-ai-landing-page-builder/vs/adbeat",
-      "statusCode": 301
     }
   ]
 }
