@@ -1,0 +1,26 @@
+{
+  "timestamp": "2025-09-10T12:31:21.794Z",
+  "summary": {
+    "filesUpdated": 1,
+    "canonicalUrlsFixed": 0,
+    "wwwReferencesRemoved": 0,
+    "compareUrlsFixed": 0,
+    "filesProcessed": 0,
+    "errors": 0
+  },
+  "changes": {
+    "nginx": "Updated redirect rules to use 301 instead of 308",
+    "vercel": "Added proper redirect configuration",
+    "nextjs": "Removed www references from configuration",
+    "canonical": "Standardized all canonical URLs to non-www",
+    "sitemaps": "Updated sitemap URLs to non-www"
+  },
+  "nextSteps": [
+    "Test all redirect patterns",
+    "Validate canonical URLs",
+    "Check sitemap consistency",
+    "Monitor for 404 errors",
+    "Submit updated sitemaps to Google Search Console"
+  ],
+  "errors": []
+}
