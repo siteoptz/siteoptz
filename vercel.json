@@ -6843,46 +6843,6 @@
       "statusCode": 301
     },
     {
-      "source": "/about",
-      "destination": "/tools",
-      "statusCode": 301
-    },
-    {
-      "source": "/blog",
-      "destination": "/tools",
-      "statusCode": 301
-    },
-    {
-      "source": "/careers",
-      "destination": "/tools",
-      "statusCode": 301
-    },
-    {
-      "source": "/contact",
-      "destination": "/tools",
-      "statusCode": 301
-    },
-    {
-      "source": "/pricing",
-      "destination": "/tools",
-      "statusCode": 301
-    },
-    {
-      "source": "/resources",
-      "destination": "/tools",
-      "statusCode": 301
-    },
-    {
-      "source": "/testimonials",
-      "destination": "/tools",
-      "statusCode": 301
-    },
-    {
-      "source": "/why-us",
-      "destination": "/tools",
-      "statusCode": 301
-    },
-    {
       "source": "/categories/ai-automation",
       "destination": "/tools",
       "statusCode": 301
@@ -7004,11 +6964,6 @@
     },
     {
       "source": "/categories/writing",
-      "destination": "/tools",
-      "statusCode": 301
-    },
-    {
-      "source": "/case-studies",
       "destination": "/tools",
       "statusCode": 301
     },
