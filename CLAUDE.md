@@ -65,6 +65,12 @@ npm run lint
 
 # URL format validation (run before deploying)
 npm run validate-urls
+
+# Image validation (REQUIRED before deploying)
+npm run validate-images
+
+# Generate missing logos (fixes broken images)
+npm run generate-logos
 ```
 
 ## Design System Requirements
@@ -98,10 +104,24 @@ This dark theme is mandatory for visual consistency across the entire site.
 
 **Files to check:** `pages/compare/`, `utils/seoMetaGenerator.js`, `utils/canonicalUrl.ts`, `utils/dataHelpers.js`, `utils/seoUtils.js`, `utils/dataAdapters.ts`
 
+## Image Requirements (CRITICAL)
+
+**ALL tools MUST have working logo images:**
+- **Format**: `/images/tools/[tool-slug]-logo.svg`
+- **Required validation**: Run `npm run validate-images` before deploying
+- **Auto-fix**: Run `npm run generate-logos` for missing images
+- See IMAGE_MANAGEMENT_GUIDE.md for complete details
+
+**When adding new tools:**
+1. Add logo property: `"logo": "/images/tools/tool-name-logo.svg"`
+2. Place actual logo file OR run `npm run generate-logos`
+3. Always run `npm run validate-images` before committing
+
 ## Important Notes
 
 - **Single data source**: Only edit `public/data/aiToolsData.json`
 - **No complex normalization**: Data should be consistent in the file
-- **Required fields**: id, name, slug, features (array), pricing (array)
+- **Required fields**: id, name, slug, features (array), pricing (array), **logo**
 - **Arrays only**: features and pricing must always be arrays, never objects
 - **Dark theme required**: All pages must use the dark theme styling specified above
+- **Logo validation**: MUST run `npm run validate-images` before every deployment

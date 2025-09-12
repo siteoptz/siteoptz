@@ -1,0 +1,78 @@
+{
+  "timestamp": "2025-09-12T13:42:27.365Z",
+  "summary": {
+    "totalTools": 737,
+    "validImages": 728,
+    "missingImages": 0,
+    "brokenReferences": 9,
+    "totalIssues": 9,
+    "errorCount": 0,
+    "warningCount": 9,
+    "successRate": 99
+  },
+  "issues": [
+    {
+      "tool": "Apollo.io",
+      "slug": "apollo-io",
+      "type": "missing_property",
+      "issue": "No logo property defined",
+      "severity": "warning"
+    },
+    {
+      "tool": "Cosmos AI",
+      "slug": "cosmos-ai",
+      "type": "missing_property",
+      "issue": "No logo property defined",
+      "severity": "warning"
+    },
+    {
+      "tool": "Headshot Generator",
+      "slug": "headshot-generator",
+      "type": "missing_property",
+      "issue": "No logo property defined",
+      "severity": "warning"
+    },
+    {
+      "tool": "Interview Study",
+      "slug": "interview-study",
+      "type": "missing_property",
+      "issue": "No logo property defined",
+      "severity": "warning"
+    },
+    {
+      "tool": "Media.io",
+      "slug": "media-io",
+      "type": "missing_property",
+      "issue": "No logo property defined",
+      "severity": "warning"
+    },
+    {
+      "tool": "Nando AI",
+      "slug": "nando-ai",
+      "type": "missing_property",
+      "issue": "No logo property defined",
+      "severity": "warning"
+    },
+    {
+      "tool": "Octopus CRM",
+      "slug": "octopus-crm",
+      "type": "missing_property",
+      "issue": "No logo property defined",
+      "severity": "warning"
+    },
+    {
+      "tool": "Predis AI",
+      "slug": "predis-ai",
+      "type": "missing_property",
+      "issue": "No logo property defined",
+      "severity": "warning"
+    },
+    {
+      "tool": "Seamless AI",
+      "slug": "seamless-ai",
+      "type": "missing_property",
+      "issue": "No logo property defined",
+      "severity": "warning"
+    }
+  ]
+}

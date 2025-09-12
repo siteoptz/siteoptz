@@ -1,0 +1,2374 @@
+{
+  "timestamp": "2025-09-12T13:42:09.760Z",
+  "totalTools": 737,
+  "missingLogos": 473,
+  "generatedLogos": 473,
+  "failedLogos": 0,
+  "generatedFiles": [
+    {
+      "name": "Receiptor AI",
+      "slug": "receiptor-ai",
+      "logoPath": "/images/tools/receiptor-ai-logo.svg"
+    },
+    {
+      "name": "Telex",
+      "slug": "telex",
+      "logoPath": "/images/tools/telex-logo.svg"
+    },
+    {
+      "name": "Rafter",
+      "slug": "rafter",
+      "logoPath": "/images/tools/rafter-logo.svg"
+    },
+    {
+      "name": "Symvol",
+      "slug": "symvol",
+      "logoPath": "/images/tools/symvol-logo.svg"
+    },
+    {
+      "name": "HumanLayer",
+      "slug": "humanlayer",
+      "logoPath": "/images/tools/humanlayer-logo.svg"
+    },
+    {
+      "name": "SparkToro",
+      "slug": "sparktoro",
+      "logoPath": "/images/tools/sparktoro-logo.svg"
+    },
+    {
+      "name": "Cubic",
+      "slug": "cubic",
+      "logoPath": "/images/tools/cubic-logo.svg"
+    },
+    {
+      "name": "VibeFlow",
+      "slug": "vibeflow",
+      "logoPath": "/images/tools/vibeflow-logo.svg"
+    },
+    {
+      "name": "Syllaby",
+      "slug": "syllaby",
+      "logoPath": "/images/tools/syllaby-logo.svg"
+    },
+    {
+      "name": "SmythOS",
+      "slug": "smythos",
+      "logoPath": "/images/tools/smythos-logo.svg"
+    },
+    {
+      "name": "Plotaverse",
+      "slug": "plotaverse",
+      "logoPath": "/images/tools/plotaverse-logo.svg"
+    },
+    {
+      "name": "WaveSpeed AI",
+      "slug": "wavespeed-ai",
+      "logoPath": "/images/tools/wavespeed-ai-logo.svg"
+    },
+    {
+      "name": "Copilot 3D",
+      "slug": "copilot-3d",
+      "logoPath": "/images/tools/copilot-3d-logo.svg"
+    },
+    {
+      "name": "Zenor.ai",
+      "slug": "zenor-ai",
+      "logoPath": "/images/tools/zenor-ai-logo.svg"
+    },
+    {
+      "name": "ReportCraft",
+      "slug": "reportcraft",
+      "logoPath": "/images/tools/reportcraft-logo.svg"
+    },
+    {
+      "name": "Archive",
+      "slug": "archive",
+      "logoPath": "/images/tools/archive-logo.svg"
+    },
+    {
+      "name": "Stormy AI",
+      "slug": "stormy-ai",
+      "logoPath": "/images/tools/stormy-ai-logo.svg"
+    },
+    {
+      "name": "Fast Q&A",
+      "slug": "fast-q-a",
+      "logoPath": "/images/tools/fast-q-a-logo.svg"
+    },
+    {
+      "name": "Movable Type",
+      "slug": "movable-type",
+      "logoPath": "/images/tools/movable-type-logo.svg"
+    },
+    {
+      "name": "Enjo.ai",
+      "slug": "enjo-ai",
+      "logoPath": "/images/tools/enjo-ai-logo.svg"
+    },
+    {
+      "name": "Memara",
+      "slug": "memara",
+      "logoPath": "/images/tools/memara-logo.svg"
+    },
+    {
+      "name": "StatPecker",
+      "slug": "statpecker",
+      "logoPath": "/images/tools/statpecker-logo.svg"
+    },
+    {
+      "name": "WisePPC",
+      "slug": "wiseppc",
+      "logoPath": "/images/tools/wiseppc-logo.svg"
+    },
+    {
+      "name": "Macaron",
+      "slug": "macaron",
+      "logoPath": "/images/tools/macaron-logo.svg"
+    },
+    {
+      "name": "Open Lovable",
+      "slug": "open-lovable",
+      "logoPath": "/images/tools/open-lovable-logo.svg"
+    },
+    {
+      "name": "Profound",
+      "slug": "profound",
+      "logoPath": "/images/tools/profound-logo.svg"
+    },
+    {
+      "name": "Maskara AI",
+      "slug": "maskara-ai",
+      "logoPath": "/images/tools/maskara-ai-logo.svg"
+    },
+    {
+      "name": "IdeaBoard",
+      "slug": "ideaboard",
+      "logoPath": "/images/tools/ideaboard-logo.svg"
+    },
+    {
+      "name": "Tasker AI",
+      "slug": "tasker-ai",
+      "logoPath": "/images/tools/tasker-ai-logo.svg"
+    },
+    {
+      "name": "Simular Pro",
+      "slug": "simular-pro",
+      "logoPath": "/images/tools/simular-pro-logo.svg"
+    },
+    {
+      "name": "Release0",
+      "slug": "release0",
+      "logoPath": "/images/tools/release0-logo.svg"
+    },
+    {
+      "name": "VibeScan",
+      "slug": "vibescan",
+      "logoPath": "/images/tools/vibescan-logo.svg"
+    },
+    {
+      "name": "Ten",
+      "slug": "ten",
+      "logoPath": "/images/tools/ten-logo.svg"
+    },
+    {
+      "name": "ReadyScriptPro",
+      "slug": "readyscriptpro",
+      "logoPath": "/images/tools/readyscriptpro-logo.svg"
+    },
+    {
+      "name": "TicketMine.ai",
+      "slug": "ticketmine-ai",
+      "logoPath": "/images/tools/ticketmine-ai-logo.svg"
+    },
+    {
+      "name": "KittenTTS",
+      "slug": "kittentts",
+      "logoPath": "/images/tools/kittentts-logo.svg"
+    },
+    {
+      "name": "Anything",
+      "slug": "anything",
+      "logoPath": "/images/tools/anything-logo.svg"
+    },
+    {
+      "name": "Rork",
+      "slug": "rork",
+      "logoPath": "/images/tools/rork-logo.svg"
+    },
+    {
+      "name": "Endex",
+      "slug": "endex",
+      "logoPath": "/images/tools/endex-logo.svg"
+    },
+    {
+      "name": "FlowMetr",
+      "slug": "flowmetr",
+      "logoPath": "/images/tools/flowmetr-logo.svg"
+    },
+    {
+      "name": "Lindra AI",
+      "slug": "lindra-ai",
+      "logoPath": "/images/tools/lindra-ai-logo.svg"
+    },
+    {
+      "name": "Content Maxima",
+      "slug": "content-maxima",
+      "logoPath": "/images/tools/content-maxima-logo.svg"
+    },
+    {
+      "name": "Tenali",
+      "slug": "tenali",
+      "logoPath": "/images/tools/tenali-logo.svg"
+    },
+    {
+      "name": "CodeFlash AI",
+      "slug": "codeflash-ai",
+      "logoPath": "/images/tools/codeflash-ai-logo.svg"
+    },
+    {
+      "name": "Botric AI",
+      "slug": "botric-ai",
+      "logoPath": "/images/tools/botric-ai-logo.svg"
+    },
+    {
+      "name": "Recurse ML",
+      "slug": "recurse-ml",
+      "logoPath": "/images/tools/recurse-ml-logo.svg"
+    },
+    {
+      "name": "Amplifa",
+      "slug": "amplifa",
+      "logoPath": "/images/tools/amplifa-logo.svg"
+    },
+    {
+      "name": "Aview",
+      "slug": "aview",
+      "logoPath": "/images/tools/aview-logo.svg"
+    },
+    {
+      "name": "Opal",
+      "slug": "opal",
+      "logoPath": "/images/tools/opal-logo.svg"
+    },
+    {
+      "name": "Coze Studio",
+      "slug": "coze-studio",
+      "logoPath": "/images/tools/coze-studio-logo.svg"
+    },
+    {
+      "name": "Deptho",
+      "slug": "deptho",
+      "logoPath": "/images/tools/deptho-logo.svg"
+    },
+    {
+      "name": "Layerpath",
+      "slug": "layerpath",
+      "logoPath": "/images/tools/layerpath-logo.svg"
+    },
+    {
+      "name": "ResearchCollab.ai",
+      "slug": "researchcollab-ai",
+      "logoPath": "/images/tools/researchcollab-ai-logo.svg"
+    },
+    {
+      "name": "FlyTest",
+      "slug": "flytest",
+      "logoPath": "/images/tools/flytest-logo.svg"
+    },
+    {
+      "name": "PlexiGen AI",
+      "slug": "plexigen-ai",
+      "logoPath": "/images/tools/plexigen-ai-logo.svg"
+    },
+    {
+      "name": "Brandolia",
+      "slug": "brandolia",
+      "logoPath": "/images/tools/brandolia-logo.svg"
+    },
+    {
+      "name": "Munch Studio",
+      "slug": "munch-studio",
+      "logoPath": "/images/tools/munch-studio-logo.svg"
+    },
+    {
+      "name": "SchedPilot",
+      "slug": "schedpilot",
+      "logoPath": "/images/tools/schedpilot-logo.svg"
+    },
+    {
+      "name": "Scop AI",
+      "slug": "scop-ai",
+      "logoPath": "/images/tools/scop-ai-logo.svg"
+    },
+    {
+      "name": "Memories AI",
+      "slug": "memories-ai",
+      "logoPath": "/images/tools/memories-ai-logo.svg"
+    },
+    {
+      "name": "Yoink",
+      "slug": "yoink",
+      "logoPath": "/images/tools/yoink-logo.svg"
+    },
+    {
+      "name": "Redesignr.ai",
+      "slug": "redesignr-ai",
+      "logoPath": "/images/tools/redesignr-ai-logo.svg"
+    },
+    {
+      "name": "Mapify",
+      "slug": "mapify",
+      "logoPath": "/images/tools/mapify-logo.svg"
+    },
+    {
+      "name": "LetzAI",
+      "slug": "letzai",
+      "logoPath": "/images/tools/letzai-logo.svg"
+    },
+    {
+      "name": "BrandLife",
+      "slug": "brandlife",
+      "logoPath": "/images/tools/brandlife-logo.svg"
+    },
+    {
+      "name": "AutonomOps AI",
+      "slug": "autonomops-ai",
+      "logoPath": "/images/tools/autonomops-ai-logo.svg"
+    },
+    {
+      "name": "DailyMe Journal",
+      "slug": "dailyme-journal",
+      "logoPath": "/images/tools/dailyme-journal-logo.svg"
+    },
+    {
+      "name": "Gstory.ai",
+      "slug": "gstory-ai",
+      "logoPath": "/images/tools/gstory-ai-logo.svg"
+    },
+    {
+      "name": "Engagico",
+      "slug": "engagico",
+      "logoPath": "/images/tools/engagico-logo.svg"
+    },
+    {
+      "name": "PostingCat",
+      "slug": "postingcat",
+      "logoPath": "/images/tools/postingcat-logo.svg"
+    },
+    {
+      "name": "CometAPI",
+      "slug": "cometapi",
+      "logoPath": "/images/tools/cometapi-logo.svg"
+    },
+    {
+      "name": "Omnisearch",
+      "slug": "omnisearch",
+      "logoPath": "/images/tools/omnisearch-logo.svg"
+    },
+    {
+      "name": "Intervo.ai",
+      "slug": "intervo-ai",
+      "logoPath": "/images/tools/intervo-ai-logo.svg"
+    },
+    {
+      "name": "Poppy AI",
+      "slug": "poppy-ai",
+      "logoPath": "/images/tools/poppy-ai-logo.svg"
+    },
+    {
+      "name": "Dume.ai",
+      "slug": "dume-ai",
+      "logoPath": "/images/tools/dume-ai-logo.svg"
+    },
+    {
+      "name": "Messync",
+      "slug": "messync",
+      "logoPath": "/images/tools/messync-logo.svg"
+    },
+    {
+      "name": "Voiset",
+      "slug": "voiset",
+      "logoPath": "/images/tools/voiset-logo.svg"
+    },
+    {
+      "name": "Mexty AI",
+      "slug": "mexty-ai",
+      "logoPath": "/images/tools/mexty-ai-logo.svg"
+    },
+    {
+      "name": "InitRepo",
+      "slug": "initrepo",
+      "logoPath": "/images/tools/initrepo-logo.svg"
+    },
+    {
+      "name": "GAIO DataOS",
+      "slug": "gaio-dataos",
+      "logoPath": "/images/tools/gaio-dataos-logo.svg"
+    },
+    {
+      "name": "Kawara AI",
+      "slug": "kawara-ai",
+      "logoPath": "/images/tools/kawara-ai-logo.svg"
+    },
+    {
+      "name": "Blink",
+      "slug": "blink",
+      "logoPath": "/images/tools/blink-logo.svg"
+    },
+    {
+      "name": "GetDot.ai",
+      "slug": "getdot-ai",
+      "logoPath": "/images/tools/getdot-ai-logo.svg"
+    },
+    {
+      "name": "Thunder Code",
+      "slug": "thunder-code",
+      "logoPath": "/images/tools/thunder-code-logo.svg"
+    },
+    {
+      "name": "Listening4",
+      "slug": "listening4",
+      "logoPath": "/images/tools/listening4-logo.svg"
+    },
+    {
+      "name": "CCX.AI",
+      "slug": "ccx-ai",
+      "logoPath": "/images/tools/ccx-ai-logo.svg"
+    },
+    {
+      "name": "DevPlan",
+      "slug": "devplan",
+      "logoPath": "/images/tools/devplan-logo.svg"
+    },
+    {
+      "name": "Questdash",
+      "slug": "questdash",
+      "logoPath": "/images/tools/questdash-logo.svg"
+    },
+    {
+      "name": "Graficai",
+      "slug": "graficai",
+      "logoPath": "/images/tools/graficai-logo.svg"
+    },
+    {
+      "name": "Mumble Note",
+      "slug": "mumble-note",
+      "logoPath": "/images/tools/mumble-note-logo.svg"
+    },
+    {
+      "name": "Gizmo Party",
+      "slug": "gizmo-party",
+      "logoPath": "/images/tools/gizmo-party-logo.svg"
+    },
+    {
+      "name": "Kiro",
+      "slug": "kiro",
+      "logoPath": "/images/tools/kiro-logo.svg"
+    },
+    {
+      "name": "PrompTessor",
+      "slug": "promptessor",
+      "logoPath": "/images/tools/promptessor-logo.svg"
+    },
+    {
+      "name": "Mirai",
+      "slug": "mirai",
+      "logoPath": "/images/tools/mirai-logo.svg"
+    },
+    {
+      "name": "Ludus AI",
+      "slug": "ludus-ai",
+      "logoPath": "/images/tools/ludus-ai-logo.svg"
+    },
+    {
+      "name": "BeeSift",
+      "slug": "beesift",
+      "logoPath": "/images/tools/beesift-logo.svg"
+    },
+    {
+      "name": "DeepDocs",
+      "slug": "deepdocs",
+      "logoPath": "/images/tools/deepdocs-logo.svg"
+    },
+    {
+      "name": "InventAIQ",
+      "slug": "inventaiq",
+      "logoPath": "/images/tools/inventaiq-logo.svg"
+    },
+    {
+      "name": "PromptDC",
+      "slug": "promptdc",
+      "logoPath": "/images/tools/promptdc-logo.svg"
+    },
+    {
+      "name": "UnSoloMind",
+      "slug": "unsolomind",
+      "logoPath": "/images/tools/unsolomind-logo.svg"
+    },
+    {
+      "name": "Forge Code",
+      "slug": "forge-code",
+      "logoPath": "/images/tools/forge-code-logo.svg"
+    },
+    {
+      "name": "Tryonora",
+      "slug": "tryonora",
+      "logoPath": "/images/tools/tryonora-logo.svg"
+    },
+    {
+      "name": "Perso.ai",
+      "slug": "perso-ai",
+      "logoPath": "/images/tools/perso-ai-logo.svg"
+    },
+    {
+      "name": "Style3D AI",
+      "slug": "style3d-ai",
+      "logoPath": "/images/tools/style3d-ai-logo.svg"
+    },
+    {
+      "name": "GetGenAI",
+      "slug": "getgenai",
+      "logoPath": "/images/tools/getgenai-logo.svg"
+    },
+    {
+      "name": "Blok",
+      "slug": "blok",
+      "logoPath": "/images/tools/blok-logo.svg"
+    },
+    {
+      "name": "Rendable 3D",
+      "slug": "rendable-3d",
+      "logoPath": "/images/tools/rendable-3d-logo.svg"
+    },
+    {
+      "name": "Ponder",
+      "slug": "ponder",
+      "logoPath": "/images/tools/ponder-logo.svg"
+    },
+    {
+      "name": "Runcell.dev",
+      "slug": "runcell-dev",
+      "logoPath": "/images/tools/runcell-dev-logo.svg"
+    },
+    {
+      "name": "Mythic Text",
+      "slug": "mythic-text",
+      "logoPath": "/images/tools/mythic-text-logo.svg"
+    },
+    {
+      "name": "Comet by Perplexity",
+      "slug": "comet-by-perplexity",
+      "logoPath": "/images/tools/comet-by-perplexity-logo.svg"
+    },
+    {
+      "name": "BrowserAct",
+      "slug": "browseract",
+      "logoPath": "/images/tools/browseract-logo.svg"
+    },
+    {
+      "name": "Unrav.io",
+      "slug": "unrav-io",
+      "logoPath": "/images/tools/unrav-io-logo.svg"
+    },
+    {
+      "name": "Lazy.so",
+      "slug": "lazy-so",
+      "logoPath": "/images/tools/lazy-so-logo.svg"
+    },
+    {
+      "name": "MagicArena",
+      "slug": "magicarena",
+      "logoPath": "/images/tools/magicarena-logo.svg"
+    },
+    {
+      "name": "AI HomeDesign",
+      "slug": "ai-homedesign",
+      "logoPath": "/images/tools/ai-homedesign-logo.svg"
+    },
+    {
+      "name": "ExtractAny",
+      "slug": "extractany",
+      "logoPath": "/images/tools/extractany-logo.svg"
+    },
+    {
+      "name": "AI inTime",
+      "slug": "ai-intime",
+      "logoPath": "/images/tools/ai-intime-logo.svg"
+    },
+    {
+      "name": "Awaz.ai",
+      "slug": "awaz-ai",
+      "logoPath": "/images/tools/awaz-ai-logo.svg"
+    },
+    {
+      "name": "Bit Flows",
+      "slug": "bit-flows",
+      "logoPath": "/images/tools/bit-flows-logo.svg"
+    },
+    {
+      "name": "Keepmind",
+      "slug": "keepmind",
+      "logoPath": "/images/tools/keepmind-logo.svg"
+    },
+    {
+      "name": "Constella",
+      "slug": "constella",
+      "logoPath": "/images/tools/constella-logo.svg"
+    },
+    {
+      "name": "EchoStash",
+      "slug": "echostash",
+      "logoPath": "/images/tools/echostash-logo.svg"
+    },
+    {
+      "name": "Mintly",
+      "slug": "mintly",
+      "logoPath": "/images/tools/mintly-logo.svg"
+    },
+    {
+      "name": "Gadget",
+      "slug": "gadget",
+      "logoPath": "/images/tools/gadget-logo.svg"
+    },
+    {
+      "name": "Chronicle",
+      "slug": "chronicle",
+      "logoPath": "/images/tools/chronicle-logo.svg"
+    },
+    {
+      "name": "Distribution AI",
+      "slug": "distribution-ai",
+      "logoPath": "/images/tools/distribution-ai-logo.svg"
+    },
+    {
+      "name": "Vidau.ai",
+      "slug": "vidau-ai",
+      "logoPath": "/images/tools/vidau-ai-logo.svg"
+    },
+    {
+      "name": "Rocket.new",
+      "slug": "rocket-new",
+      "logoPath": "/images/tools/rocket-new-logo.svg"
+    },
+    {
+      "name": "ActionFlows",
+      "slug": "actionflows",
+      "logoPath": "/images/tools/actionflows-logo.svg"
+    },
+    {
+      "name": "Littlebird",
+      "slug": "littlebird",
+      "logoPath": "/images/tools/littlebird-logo.svg"
+    },
+    {
+      "name": "Klarops",
+      "slug": "klarops",
+      "logoPath": "/images/tools/klarops-logo.svg"
+    },
+    {
+      "name": "Shiplo",
+      "slug": "shiplo",
+      "logoPath": "/images/tools/shiplo-logo.svg"
+    },
+    {
+      "name": "Broadn",
+      "slug": "broadn",
+      "logoPath": "/images/tools/broadn-logo.svg"
+    },
+    {
+      "name": "Altavize",
+      "slug": "altavize",
+      "logoPath": "/images/tools/altavize-logo.svg"
+    },
+    {
+      "name": "Groas",
+      "slug": "groas",
+      "logoPath": "/images/tools/groas-logo.svg"
+    },
+    {
+      "name": "Ordemio",
+      "slug": "ordemio",
+      "logoPath": "/images/tools/ordemio-logo.svg"
+    },
+    {
+      "name": "Motorcut",
+      "slug": "motorcut",
+      "logoPath": "/images/tools/motorcut-logo.svg"
+    },
+    {
+      "name": "AutoLocalise",
+      "slug": "autolocalise",
+      "logoPath": "/images/tools/autolocalise-logo.svg"
+    },
+    {
+      "name": "AI Video Translator",
+      "slug": "ai-video-translator",
+      "logoPath": "/images/tools/ai-video-translator-logo.svg"
+    },
+    {
+      "name": "Magic Animator",
+      "slug": "magic-animator",
+      "logoPath": "/images/tools/magic-animator-logo.svg"
+    },
+    {
+      "name": "Pally",
+      "slug": "pally",
+      "logoPath": "/images/tools/pally-logo.svg"
+    },
+    {
+      "name": "Notabl",
+      "slug": "notabl",
+      "logoPath": "/images/tools/notabl-logo.svg"
+    },
+    {
+      "name": "Verbacall",
+      "slug": "verbacall",
+      "logoPath": "/images/tools/verbacall-logo.svg"
+    },
+    {
+      "name": "The Way of Code",
+      "slug": "the-way-of-code",
+      "logoPath": "/images/tools/the-way-of-code-logo.svg"
+    },
+    {
+      "name": "Viewstats",
+      "slug": "viewstats",
+      "logoPath": "/images/tools/viewstats-logo.svg"
+    },
+    {
+      "name": "Sophiana",
+      "slug": "sophiana",
+      "logoPath": "/images/tools/sophiana-logo.svg"
+    },
+    {
+      "name": "Decofy",
+      "slug": "decofy",
+      "logoPath": "/images/tools/decofy-logo.svg"
+    },
+    {
+      "name": "Pheromind",
+      "slug": "pheromind",
+      "logoPath": "/images/tools/pheromind-logo.svg"
+    },
+    {
+      "name": "Smart Calendars AI",
+      "slug": "smart-calendars-ai",
+      "logoPath": "/images/tools/smart-calendars-ai-logo.svg"
+    },
+    {
+      "name": "11.ai",
+      "slug": "11-ai",
+      "logoPath": "/images/tools/11-ai-logo.svg"
+    },
+    {
+      "name": "Phoenix.new",
+      "slug": "phoenix-new",
+      "logoPath": "/images/tools/phoenix-new-logo.svg"
+    },
+    {
+      "name": "SuperU AI",
+      "slug": "superu-ai",
+      "logoPath": "/images/tools/superu-ai-logo.svg"
+    },
+    {
+      "name": "AgentDock",
+      "slug": "agentdock",
+      "logoPath": "/images/tools/agentdock-logo.svg"
+    },
+    {
+      "name": "Macro",
+      "slug": "macro",
+      "logoPath": "/images/tools/macro-logo.svg"
+    },
+    {
+      "name": "Xavier AI",
+      "slug": "xavier-ai",
+      "logoPath": "/images/tools/xavier-ai-logo.svg"
+    },
+    {
+      "name": "Zola Analytics",
+      "slug": "zola-analytics",
+      "logoPath": "/images/tools/zola-analytics-logo.svg"
+    },
+    {
+      "name": "Dialbox",
+      "slug": "dialbox",
+      "logoPath": "/images/tools/dialbox-logo.svg"
+    },
+    {
+      "name": "Drawer AI",
+      "slug": "drawer-ai",
+      "logoPath": "/images/tools/drawer-ai-logo.svg"
+    },
+    {
+      "name": "FuturMotion",
+      "slug": "futurmotion",
+      "logoPath": "/images/tools/futurmotion-logo.svg"
+    },
+    {
+      "name": "TruPeer.ai",
+      "slug": "trupeer-ai",
+      "logoPath": "/images/tools/trupeer-ai-logo.svg"
+    },
+    {
+      "name": "Vozart AI",
+      "slug": "vozart-ai",
+      "logoPath": "/images/tools/vozart-ai-logo.svg"
+    },
+    {
+      "name": "Talk Journal",
+      "slug": "talk-journal",
+      "logoPath": "/images/tools/talk-journal-logo.svg"
+    },
+    {
+      "name": "LLM Browser",
+      "slug": "llm-browser",
+      "logoPath": "/images/tools/llm-browser-logo.svg"
+    },
+    {
+      "name": "New.website",
+      "slug": "new-website",
+      "logoPath": "/images/tools/new-website-logo.svg"
+    },
+    {
+      "name": "PostPlanify",
+      "slug": "postplanify",
+      "logoPath": "/images/tools/postplanify-logo.svg"
+    },
+    {
+      "name": "Renude",
+      "slug": "renude",
+      "logoPath": "/images/tools/renude-logo.svg"
+    },
+    {
+      "name": "PropStyle",
+      "slug": "propstyle",
+      "logoPath": "/images/tools/propstyle-logo.svg"
+    },
+    {
+      "name": "Promptve",
+      "slug": "promptve",
+      "logoPath": "/images/tools/promptve-logo.svg"
+    },
+    {
+      "name": "AgentPass.ai",
+      "slug": "agentpass-ai",
+      "logoPath": "/images/tools/agentpass-ai-logo.svg"
+    },
+    {
+      "name": "Conforma",
+      "slug": "conforma",
+      "logoPath": "/images/tools/conforma-logo.svg"
+    },
+    {
+      "name": "IndiPen",
+      "slug": "indipen",
+      "logoPath": "/images/tools/indipen-logo.svg"
+    },
+    {
+      "name": "Zepic",
+      "slug": "zepic",
+      "logoPath": "/images/tools/zepic-logo.svg"
+    },
+    {
+      "name": "Myriade",
+      "slug": "myriade",
+      "logoPath": "/images/tools/myriade-logo.svg"
+    },
+    {
+      "name": "BuyerTwin",
+      "slug": "buyertwin",
+      "logoPath": "/images/tools/buyertwin-logo.svg"
+    },
+    {
+      "name": "EasySite",
+      "slug": "easysite",
+      "logoPath": "/images/tools/easysite-logo.svg"
+    },
+    {
+      "name": "ModelsLab",
+      "slug": "modelslab",
+      "logoPath": "/images/tools/modelslab-logo.svg"
+    },
+    {
+      "name": "Votars",
+      "slug": "votars",
+      "logoPath": "/images/tools/votars-logo.svg"
+    },
+    {
+      "name": "Bizora",
+      "slug": "bizora",
+      "logoPath": "/images/tools/bizora-logo.svg"
+    },
+    {
+      "name": "Cavya.ai",
+      "slug": "cavya-ai",
+      "logoPath": "/images/tools/cavya-ai-logo.svg"
+    },
+    {
+      "name": "Supermaker AI",
+      "slug": "supermaker-ai",
+      "logoPath": "/images/tools/supermaker-ai-logo.svg"
+    },
+    {
+      "name": "Aerogram",
+      "slug": "aerogram",
+      "logoPath": "/images/tools/aerogram-logo.svg"
+    },
+    {
+      "name": "UnifyLabs",
+      "slug": "unifylabs",
+      "logoPath": "/images/tools/unifylabs-logo.svg"
+    },
+    {
+      "name": "Kuberns",
+      "slug": "kuberns",
+      "logoPath": "/images/tools/kuberns-logo.svg"
+    },
+    {
+      "name": "0Cody",
+      "slug": "0cody",
+      "logoPath": "/images/tools/0cody-logo.svg"
+    },
+    {
+      "name": "Magic Potion",
+      "slug": "magic-potion",
+      "logoPath": "/images/tools/magic-potion-logo.svg"
+    },
+    {
+      "name": "CloudEagle.ai",
+      "slug": "cloudeagle-ai",
+      "logoPath": "/images/tools/cloudeagle-ai-logo.svg"
+    },
+    {
+      "name": "VOAgents.ai",
+      "slug": "voagents-ai",
+      "logoPath": "/images/tools/voagents-ai-logo.svg"
+    },
+    {
+      "name": "Thiings",
+      "slug": "thiings",
+      "logoPath": "/images/tools/thiings-logo.svg"
+    },
+    {
+      "name": "SchedX",
+      "slug": "schedx",
+      "logoPath": "/images/tools/schedx-logo.svg"
+    },
+    {
+      "name": "Hatch",
+      "slug": "hatch",
+      "logoPath": "/images/tools/hatch-logo.svg"
+    },
+    {
+      "name": "HandText.ai",
+      "slug": "handtext-ai",
+      "logoPath": "/images/tools/handtext-ai-logo.svg"
+    },
+    {
+      "name": "Weavy",
+      "slug": "weavy",
+      "logoPath": "/images/tools/weavy-logo.svg"
+    },
+    {
+      "name": "SocialAF",
+      "slug": "socialaf",
+      "logoPath": "/images/tools/socialaf-logo.svg"
+    },
+    {
+      "name": "Kosmik",
+      "slug": "kosmik",
+      "logoPath": "/images/tools/kosmik-logo.svg"
+    },
+    {
+      "name": "PageAI",
+      "slug": "pageai",
+      "logoPath": "/images/tools/pageai-logo.svg"
+    },
+    {
+      "name": "Coopa AI",
+      "slug": "coopa-ai",
+      "logoPath": "/images/tools/coopa-ai-logo.svg"
+    },
+    {
+      "name": "Nimblr.ai",
+      "slug": "nimblr-ai",
+      "logoPath": "/images/tools/nimblr-ai-logo.svg"
+    },
+    {
+      "name": "Vomyra",
+      "slug": "vomyra",
+      "logoPath": "/images/tools/vomyra-logo.svg"
+    },
+    {
+      "name": "Wuko AI",
+      "slug": "wuko-ai",
+      "logoPath": "/images/tools/wuko-ai-logo.svg"
+    },
+    {
+      "name": "PureCode.ai",
+      "slug": "purecode-ai",
+      "logoPath": "/images/tools/purecode-ai-logo.svg"
+    },
+    {
+      "name": "Skywork",
+      "slug": "skywork",
+      "logoPath": "/images/tools/skywork-logo.svg"
+    },
+    {
+      "name": "Rierino",
+      "slug": "rierino",
+      "logoPath": "/images/tools/rierino-logo.svg"
+    },
+    {
+      "name": "Heynds",
+      "slug": "heynds",
+      "logoPath": "/images/tools/heynds-logo.svg"
+    },
+    {
+      "name": "Transmonkey",
+      "slug": "transmonkey",
+      "logoPath": "/images/tools/transmonkey-logo.svg"
+    },
+    {
+      "name": "Phonely AI",
+      "slug": "phonely-ai",
+      "logoPath": "/images/tools/phonely-ai-logo.svg"
+    },
+    {
+      "name": "Chat4Data",
+      "slug": "chat4data",
+      "logoPath": "/images/tools/chat4data-logo.svg"
+    },
+    {
+      "name": "BondMCP",
+      "slug": "bondmcp",
+      "logoPath": "/images/tools/bondmcp-logo.svg"
+    },
+    {
+      "name": "Mindly",
+      "slug": "mindly",
+      "logoPath": "/images/tools/mindly-logo.svg"
+    },
+    {
+      "name": "Google AI Edge",
+      "slug": "google-ai-edge",
+      "logoPath": "/images/tools/google-ai-edge-logo.svg"
+    },
+    {
+      "name": "Wondercraft",
+      "slug": "wondercraft",
+      "logoPath": "/images/tools/wondercraft-logo.svg"
+    },
+    {
+      "name": "Triviat",
+      "slug": "triviat",
+      "logoPath": "/images/tools/triviat-logo.svg"
+    },
+    {
+      "name": "GitAuto",
+      "slug": "gitauto",
+      "logoPath": "/images/tools/gitauto-logo.svg"
+    },
+    {
+      "name": "Open Paper",
+      "slug": "open-paper",
+      "logoPath": "/images/tools/open-paper-logo.svg"
+    },
+    {
+      "name": "Tapflow",
+      "slug": "tapflow",
+      "logoPath": "/images/tools/tapflow-logo.svg"
+    },
+    {
+      "name": "Flux Playground",
+      "slug": "flux-playground",
+      "logoPath": "/images/tools/flux-playground-logo.svg"
+    },
+    {
+      "name": "Wellpin",
+      "slug": "wellpin",
+      "logoPath": "/images/tools/wellpin-logo.svg"
+    },
+    {
+      "name": "Bismuth",
+      "slug": "bismuth",
+      "logoPath": "/images/tools/bismuth-logo.svg"
+    },
+    {
+      "name": "AICosts.ai",
+      "slug": "aicosts-ai",
+      "logoPath": "/images/tools/aicosts-ai-logo.svg"
+    },
+    {
+      "name": "NLevel.ai",
+      "slug": "nlevel-ai",
+      "logoPath": "/images/tools/nlevel-ai-logo.svg"
+    },
+    {
+      "name": "Rekla.ai",
+      "slug": "rekla-ai",
+      "logoPath": "/images/tools/rekla-ai-logo.svg"
+    },
+    {
+      "name": "Macaly",
+      "slug": "macaly",
+      "logoPath": "/images/tools/macaly-logo.svg"
+    },
+    {
+      "name": "PreCallAI",
+      "slug": "precallai",
+      "logoPath": "/images/tools/precallai-logo.svg"
+    },
+    {
+      "name": "Kvitly",
+      "slug": "kvitly",
+      "logoPath": "/images/tools/kvitly-logo.svg"
+    },
+    {
+      "name": "Caimera AI",
+      "slug": "caimera-ai",
+      "logoPath": "/images/tools/caimera-ai-logo.svg"
+    },
+    {
+      "name": "Sky",
+      "slug": "sky",
+      "logoPath": "/images/tools/sky-logo.svg"
+    },
+    {
+      "name": "Monobot CX",
+      "slug": "monobot-cx",
+      "logoPath": "/images/tools/monobot-cx-logo.svg"
+    },
+    {
+      "name": "PubMed AI",
+      "slug": "pubmed-ai",
+      "logoPath": "/images/tools/pubmed-ai-logo.svg"
+    },
+    {
+      "name": "Prompt Shuttle",
+      "slug": "prompt-shuttle",
+      "logoPath": "/images/tools/prompt-shuttle-logo.svg"
+    },
+    {
+      "name": "Plansom",
+      "slug": "plansom",
+      "logoPath": "/images/tools/plansom-logo.svg"
+    },
+    {
+      "name": "Buildship.tools",
+      "slug": "buildship-tools",
+      "logoPath": "/images/tools/buildship-tools-logo.svg"
+    },
+    {
+      "name": "JustCall",
+      "slug": "justcall",
+      "logoPath": "/images/tools/justcall-logo.svg"
+    },
+    {
+      "name": "Nimagna",
+      "slug": "nimagna",
+      "logoPath": "/images/tools/nimagna-logo.svg"
+    },
+    {
+      "name": "Urbiverse",
+      "slug": "urbiverse",
+      "logoPath": "/images/tools/urbiverse-logo.svg"
+    },
+    {
+      "name": "Reelio",
+      "slug": "reelio",
+      "logoPath": "/images/tools/reelio-logo.svg"
+    },
+    {
+      "name": "CodeRide",
+      "slug": "coderide",
+      "logoPath": "/images/tools/coderide-logo.svg"
+    },
+    {
+      "name": "Lovart",
+      "slug": "lovart",
+      "logoPath": "/images/tools/lovart-logo.svg"
+    },
+    {
+      "name": "TranslateVideos.io",
+      "slug": "translatevideos-io",
+      "logoPath": "/images/tools/translatevideos-io-logo.svg"
+    },
+    {
+      "name": "Illustrae",
+      "slug": "illustrae",
+      "logoPath": "/images/tools/illustrae-logo.svg"
+    },
+    {
+      "name": "AI Studios",
+      "slug": "ai-studios",
+      "logoPath": "/images/tools/ai-studios-logo.svg"
+    },
+    {
+      "name": "Retool",
+      "slug": "retool",
+      "logoPath": "/images/tools/retool-logo.svg"
+    },
+    {
+      "name": "URL to Any",
+      "slug": "url-to-any",
+      "logoPath": "/images/tools/url-to-any-logo.svg"
+    },
+    {
+      "name": "Xyla AI",
+      "slug": "xyla-ai",
+      "logoPath": "/images/tools/xyla-ai-logo.svg"
+    },
+    {
+      "name": "Find My Papers",
+      "slug": "find-my-papers",
+      "logoPath": "/images/tools/find-my-papers-logo.svg"
+    },
+    {
+      "name": "Miniflow",
+      "slug": "miniflow",
+      "logoPath": "/images/tools/miniflow-logo.svg"
+    },
+    {
+      "name": "BrewPrompts",
+      "slug": "brewprompts",
+      "logoPath": "/images/tools/brewprompts-logo.svg"
+    },
+    {
+      "name": "The Librarian",
+      "slug": "the-librarian",
+      "logoPath": "/images/tools/the-librarian-logo.svg"
+    },
+    {
+      "name": "Vercept",
+      "slug": "vercept",
+      "logoPath": "/images/tools/vercept-logo.svg"
+    },
+    {
+      "name": "PlayMix AI",
+      "slug": "playmix-ai",
+      "logoPath": "/images/tools/playmix-ai-logo.svg"
+    },
+    {
+      "name": "Panto AI",
+      "slug": "panto-ai",
+      "logoPath": "/images/tools/panto-ai-logo.svg"
+    },
+    {
+      "name": "Payroll Robot",
+      "slug": "payroll-robot",
+      "logoPath": "/images/tools/payroll-robot-logo.svg"
+    },
+    {
+      "name": "Papira",
+      "slug": "papira",
+      "logoPath": "/images/tools/papira-logo.svg"
+    },
+    {
+      "name": "GenSpark AI",
+      "slug": "genspark-ai",
+      "logoPath": "/images/tools/genspark-ai-logo.svg"
+    },
+    {
+      "name": "37x",
+      "slug": "37x",
+      "logoPath": "/images/tools/37x-logo.svg"
+    },
+    {
+      "name": "Emergent.sh",
+      "slug": "emergent-sh",
+      "logoPath": "/images/tools/emergent-sh-logo.svg"
+    },
+    {
+      "name": "Inabit.ai",
+      "slug": "inabit-ai",
+      "logoPath": "/images/tools/inabit-ai-logo.svg"
+    },
+    {
+      "name": "Foundor.ai",
+      "slug": "foundor-ai",
+      "logoPath": "/images/tools/foundor-ai-logo.svg"
+    },
+    {
+      "name": "ExcelMatic",
+      "slug": "excelmatic",
+      "logoPath": "/images/tools/excelmatic-logo.svg"
+    },
+    {
+      "name": "Victoria",
+      "slug": "victoria",
+      "logoPath": "/images/tools/victoria-logo.svg"
+    },
+    {
+      "name": "Hera",
+      "slug": "hera",
+      "logoPath": "/images/tools/hera-logo.svg"
+    },
+    {
+      "name": "BetterStudio",
+      "slug": "betterstudio",
+      "logoPath": "/images/tools/betterstudio-logo.svg"
+    },
+    {
+      "name": "Metatable.ai",
+      "slug": "metatable-ai",
+      "logoPath": "/images/tools/metatable-ai-logo.svg"
+    },
+    {
+      "name": "Docci.ai",
+      "slug": "docci-ai",
+      "logoPath": "/images/tools/docci-ai-logo.svg"
+    },
+    {
+      "name": "Vetis",
+      "slug": "vetis",
+      "logoPath": "/images/tools/vetis-logo.svg"
+    },
+    {
+      "name": "Karax.ai",
+      "slug": "karax-ai",
+      "logoPath": "/images/tools/karax-ai-logo.svg"
+    },
+    {
+      "name": "Databar.ai",
+      "slug": "databar-ai",
+      "logoPath": "/images/tools/databar-ai-logo.svg"
+    },
+    {
+      "name": "Higgsfield",
+      "slug": "higgsfield",
+      "logoPath": "/images/tools/higgsfield-logo.svg"
+    },
+    {
+      "name": "ChatSlide AI",
+      "slug": "chatslide-ai",
+      "logoPath": "/images/tools/chatslide-ai-logo.svg"
+    },
+    {
+      "name": "Legion AI",
+      "slug": "legion-ai",
+      "logoPath": "/images/tools/legion-ai-logo.svg"
+    },
+    {
+      "name": "WebCrawler API",
+      "slug": "webcrawler-api",
+      "logoPath": "/images/tools/webcrawler-api-logo.svg"
+    },
+    {
+      "name": "Noteey",
+      "slug": "noteey",
+      "logoPath": "/images/tools/noteey-logo.svg"
+    },
+    {
+      "name": "RetroTeam",
+      "slug": "retroteam",
+      "logoPath": "/images/tools/retroteam-logo.svg"
+    },
+    {
+      "name": "Webflow's AI Site Builder",
+      "slug": "webflow-s-ai-site-builder",
+      "logoPath": "/images/tools/webflow-s-ai-site-builder-logo.svg"
+    },
+    {
+      "name": "CrawlChat",
+      "slug": "crawlchat",
+      "logoPath": "/images/tools/crawlchat-logo.svg"
+    },
+    {
+      "name": "Kaiboard",
+      "slug": "kaiboard",
+      "logoPath": "/images/tools/kaiboard-logo.svg"
+    },
+    {
+      "name": "MIDI Agent",
+      "slug": "midi-agent",
+      "logoPath": "/images/tools/midi-agent-logo.svg"
+    },
+    {
+      "name": "OpenAI.fm",
+      "slug": "openai-fm",
+      "logoPath": "/images/tools/openai-fm-logo.svg"
+    },
+    {
+      "name": "WorkFlawless",
+      "slug": "workflawless",
+      "logoPath": "/images/tools/workflawless-logo.svg"
+    },
+    {
+      "name": "AudioX",
+      "slug": "audiox",
+      "logoPath": "/images/tools/audiox-logo.svg"
+    },
+    {
+      "name": "Cloudairy",
+      "slug": "cloudairy",
+      "logoPath": "/images/tools/cloudairy-logo.svg"
+    },
+    {
+      "name": "NeuraVid",
+      "slug": "neuravid",
+      "logoPath": "/images/tools/neuravid-logo.svg"
+    },
+    {
+      "name": "Dante AI",
+      "slug": "dante-ai",
+      "logoPath": "/images/tools/dante-ai-logo.svg"
+    },
+    {
+      "name": "CRO Benchmark",
+      "slug": "cro-benchmark",
+      "logoPath": "/images/tools/cro-benchmark-logo.svg"
+    },
+    {
+      "name": "JobQuest.ai",
+      "slug": "jobquest-ai",
+      "logoPath": "/images/tools/jobquest-ai-logo.svg"
+    },
+    {
+      "name": "Typito",
+      "slug": "typito",
+      "logoPath": "/images/tools/typito-logo.svg"
+    },
+    {
+      "name": "Vectal",
+      "slug": "vectal",
+      "logoPath": "/images/tools/vectal-logo.svg"
+    },
+    {
+      "name": "AI Color Match",
+      "slug": "ai-color-match",
+      "logoPath": "/images/tools/ai-color-match-logo.svg"
+    },
+    {
+      "name": "AI Renamer",
+      "slug": "ai-renamer",
+      "logoPath": "/images/tools/ai-renamer-logo.svg"
+    },
+    {
+      "name": "BrandLift",
+      "slug": "brandlift",
+      "logoPath": "/images/tools/brandlift-logo.svg"
+    },
+    {
+      "name": "Vaiz",
+      "slug": "vaiz",
+      "logoPath": "/images/tools/vaiz-logo.svg"
+    },
+    {
+      "name": "Prose Fusion",
+      "slug": "prose-fusion",
+      "logoPath": "/images/tools/prose-fusion-logo.svg"
+    },
+    {
+      "name": "Me.bot",
+      "slug": "me-bot",
+      "logoPath": "/images/tools/me-bot-logo.svg"
+    },
+    {
+      "name": "Eraser IO",
+      "slug": "eraser-io",
+      "logoPath": "/images/tools/eraser-io-logo.svg"
+    },
+    {
+      "name": "Mochii AI",
+      "slug": "mochii-ai",
+      "logoPath": "/images/tools/mochii-ai-logo.svg"
+    },
+    {
+      "name": "Hostinger Horizons",
+      "slug": "hostinger-horizons",
+      "logoPath": "/images/tools/hostinger-horizons-logo.svg"
+    },
+    {
+      "name": "Currents AI",
+      "slug": "currents-ai",
+      "logoPath": "/images/tools/currents-ai-logo.svg"
+    },
+    {
+      "name": "TheySaid",
+      "slug": "theysaid",
+      "logoPath": "/images/tools/theysaid-logo.svg"
+    },
+    {
+      "name": "Enso",
+      "slug": "enso",
+      "logoPath": "/images/tools/enso-logo.svg"
+    },
+    {
+      "name": "TableSprint",
+      "slug": "tablesprint",
+      "logoPath": "/images/tools/tablesprint-logo.svg"
+    },
+    {
+      "name": "VideoPlus.ai",
+      "slug": "videoplus-ai",
+      "logoPath": "/images/tools/videoplus-ai-logo.svg"
+    },
+    {
+      "name": "LyRuno",
+      "slug": "lyruno",
+      "logoPath": "/images/tools/lyruno-logo.svg"
+    },
+    {
+      "name": "Fellow.app",
+      "slug": "fellow-app",
+      "logoPath": "/images/tools/fellow-app-logo.svg"
+    },
+    {
+      "name": "ReconXi",
+      "slug": "reconxi",
+      "logoPath": "/images/tools/reconxi-logo.svg"
+    },
+    {
+      "name": "Excel Whisper",
+      "slug": "excel-whisper",
+      "logoPath": "/images/tools/excel-whisper-logo.svg"
+    },
+    {
+      "name": "Auralis AI",
+      "slug": "auralis-ai",
+      "logoPath": "/images/tools/auralis-ai-logo.svg"
+    },
+    {
+      "name": "Worxmate",
+      "slug": "worxmate",
+      "logoPath": "/images/tools/worxmate-logo.svg"
+    },
+    {
+      "name": "Letterly",
+      "slug": "letterly",
+      "logoPath": "/images/tools/letterly-logo.svg"
+    },
+    {
+      "name": "Manus AI",
+      "slug": "manus-ai",
+      "logoPath": "/images/tools/manus-ai-logo.svg"
+    },
+    {
+      "name": "Dzine AI",
+      "slug": "dzine-ai",
+      "logoPath": "/images/tools/dzine-ai-logo.svg"
+    },
+    {
+      "name": "Curiso.ai",
+      "slug": "curiso-ai",
+      "logoPath": "/images/tools/curiso-ai-logo.svg"
+    },
+    {
+      "name": "Tavus",
+      "slug": "tavus",
+      "logoPath": "/images/tools/tavus-logo.svg"
+    },
+    {
+      "name": "Highlight AI",
+      "slug": "highlight-ai",
+      "logoPath": "/images/tools/highlight-ai-logo.svg"
+    },
+    {
+      "name": "ChatterKB",
+      "slug": "chatterkb",
+      "logoPath": "/images/tools/chatterkb-logo.svg"
+    },
+    {
+      "name": "TypeThinkAI",
+      "slug": "typethinkai",
+      "logoPath": "/images/tools/typethinkai-logo.svg"
+    },
+    {
+      "name": "Fenn",
+      "slug": "fenn",
+      "logoPath": "/images/tools/fenn-logo.svg"
+    },
+    {
+      "name": "Sesame",
+      "slug": "sesame",
+      "logoPath": "/images/tools/sesame-logo.svg"
+    },
+    {
+      "name": "Docsumo",
+      "slug": "docsumo",
+      "logoPath": "/images/tools/docsumo-logo.svg"
+    },
+    {
+      "name": "Pikr",
+      "slug": "pikr",
+      "logoPath": "/images/tools/pikr-logo.svg"
+    },
+    {
+      "name": "Pig",
+      "slug": "pig",
+      "logoPath": "/images/tools/pig-logo.svg"
+    },
+    {
+      "name": "Octave",
+      "slug": "octave",
+      "logoPath": "/images/tools/octave-logo.svg"
+    },
+    {
+      "name": "NaturalReader",
+      "slug": "naturalreader",
+      "logoPath": "/images/tools/naturalreader-logo.svg"
+    },
+    {
+      "name": "Dialoft AI",
+      "slug": "dialoft-ai",
+      "logoPath": "/images/tools/dialoft-ai-logo.svg"
+    },
+    {
+      "name": "Kudra",
+      "slug": "kudra",
+      "logoPath": "/images/tools/kudra-logo.svg"
+    },
+    {
+      "name": "Brandwiz",
+      "slug": "brandwiz",
+      "logoPath": "/images/tools/brandwiz-logo.svg"
+    },
+    {
+      "name": "Screvi",
+      "slug": "screvi",
+      "logoPath": "/images/tools/screvi-logo.svg"
+    },
+    {
+      "name": "AISOAP",
+      "slug": "aisoap",
+      "logoPath": "/images/tools/aisoap-logo.svg"
+    },
+    {
+      "name": "Reddibee",
+      "slug": "reddibee",
+      "logoPath": "/images/tools/reddibee-logo.svg"
+    },
+    {
+      "name": "Postwhale",
+      "slug": "postwhale",
+      "logoPath": "/images/tools/postwhale-logo.svg"
+    },
+    {
+      "name": "Surf.new",
+      "slug": "surf-new",
+      "logoPath": "/images/tools/surf-new-logo.svg"
+    },
+    {
+      "name": "ScrapeGraphAI",
+      "slug": "scrapegraphai",
+      "logoPath": "/images/tools/scrapegraphai-logo.svg"
+    },
+    {
+      "name": "Testmyprompt",
+      "slug": "testmyprompt",
+      "logoPath": "/images/tools/testmyprompt-logo.svg"
+    },
+    {
+      "name": "GoCodeo",
+      "slug": "gocodeo",
+      "logoPath": "/images/tools/gocodeo-logo.svg"
+    },
+    {
+      "name": "Twin AI",
+      "slug": "twin-ai",
+      "logoPath": "/images/tools/twin-ai-logo.svg"
+    },
+    {
+      "name": "Hoox",
+      "slug": "hoox",
+      "logoPath": "/images/tools/hoox-logo.svg"
+    },
+    {
+      "name": "ClickBoss AI",
+      "slug": "clickboss-ai",
+      "logoPath": "/images/tools/clickboss-ai-logo.svg"
+    },
+    {
+      "name": "Synexa AI",
+      "slug": "synexa-ai",
+      "logoPath": "/images/tools/synexa-ai-logo.svg"
+    },
+    {
+      "name": "Diagnosis Pad",
+      "slug": "diagnosis-pad",
+      "logoPath": "/images/tools/diagnosis-pad-logo.svg"
+    },
+    {
+      "name": "VoicV",
+      "slug": "voicv",
+      "logoPath": "/images/tools/voicv-logo.svg"
+    },
+    {
+      "name": "Zuzia",
+      "slug": "zuzia",
+      "logoPath": "/images/tools/zuzia-logo.svg"
+    },
+    {
+      "name": "Cradl AI",
+      "slug": "cradl-ai",
+      "logoPath": "/images/tools/cradl-ai-logo.svg"
+    },
+    {
+      "name": "Thumbnails Labs",
+      "slug": "thumbnails-labs",
+      "logoPath": "/images/tools/thumbnails-labs-logo.svg"
+    },
+    {
+      "name": "Feeedback",
+      "slug": "feeedback",
+      "logoPath": "/images/tools/feeedback-logo.svg"
+    },
+    {
+      "name": "Potpie AI",
+      "slug": "potpie-ai",
+      "logoPath": "/images/tools/potpie-ai-logo.svg"
+    },
+    {
+      "name": "Kolena",
+      "slug": "kolena",
+      "logoPath": "/images/tools/kolena-logo.svg"
+    },
+    {
+      "name": "Causaly",
+      "slug": "causaly",
+      "logoPath": "/images/tools/causaly-logo.svg"
+    },
+    {
+      "name": "Extruct AI",
+      "slug": "extruct-ai",
+      "logoPath": "/images/tools/extruct-ai-logo.svg"
+    },
+    {
+      "name": "TestZeus",
+      "slug": "testzeus",
+      "logoPath": "/images/tools/testzeus-logo.svg"
+    },
+    {
+      "name": "Locus Extension",
+      "slug": "locus-extension",
+      "logoPath": "/images/tools/locus-extension-logo.svg"
+    },
+    {
+      "name": "Needle AI",
+      "slug": "needle-ai",
+      "logoPath": "/images/tools/needle-ai-logo.svg"
+    },
+    {
+      "name": "Cineocean AI",
+      "slug": "cineocean-ai",
+      "logoPath": "/images/tools/cineocean-ai-logo.svg"
+    },
+    {
+      "name": "Didocs.ai",
+      "slug": "didocs-ai",
+      "logoPath": "/images/tools/didocs-ai-logo.svg"
+    },
+    {
+      "name": "Proxed.AI",
+      "slug": "proxed-ai",
+      "logoPath": "/images/tools/proxed-ai-logo.svg"
+    },
+    {
+      "name": "Co.dev",
+      "slug": "co-dev",
+      "logoPath": "/images/tools/co-dev-logo.svg"
+    },
+    {
+      "name": "Fiddler AI",
+      "slug": "fiddler-ai",
+      "logoPath": "/images/tools/fiddler-ai-logo.svg"
+    },
+    {
+      "name": "BuzzClip",
+      "slug": "buzzclip",
+      "logoPath": "/images/tools/buzzclip-logo.svg"
+    },
+    {
+      "name": "ArchiGen",
+      "slug": "archigen",
+      "logoPath": "/images/tools/archigen-logo.svg"
+    },
+    {
+      "name": "Octopus.do",
+      "slug": "octopus-do",
+      "logoPath": "/images/tools/octopus-do-logo.svg"
+    },
+    {
+      "name": "Signs",
+      "slug": "signs",
+      "logoPath": "/images/tools/signs-logo.svg"
+    },
+    {
+      "name": "TypeSmith",
+      "slug": "typesmith",
+      "logoPath": "/images/tools/typesmith-logo.svg"
+    },
+    {
+      "name": "Presentations.ai",
+      "slug": "presentations-ai",
+      "logoPath": "/images/tools/presentations-ai-logo.svg"
+    },
+    {
+      "name": "Kwizie",
+      "slug": "kwizie",
+      "logoPath": "/images/tools/kwizie-logo.svg"
+    },
+    {
+      "name": "ImageTranslate.AI",
+      "slug": "imagetranslate-ai",
+      "logoPath": "/images/tools/imagetranslate-ai-logo.svg"
+    },
+    {
+      "name": "TopK",
+      "slug": "topk",
+      "logoPath": "/images/tools/topk-logo.svg"
+    },
+    {
+      "name": "Right Click Prompt",
+      "slug": "right-click-prompt",
+      "logoPath": "/images/tools/right-click-prompt-logo.svg"
+    },
+    {
+      "name": "Touchbase",
+      "slug": "touchbase",
+      "logoPath": "/images/tools/touchbase-logo.svg"
+    },
+    {
+      "name": "Clueso",
+      "slug": "clueso",
+      "logoPath": "/images/tools/clueso-logo.svg"
+    },
+    {
+      "name": "GenPPT",
+      "slug": "genppt",
+      "logoPath": "/images/tools/genppt-logo.svg"
+    },
+    {
+      "name": "OneSky",
+      "slug": "onesky",
+      "logoPath": "/images/tools/onesky-logo.svg"
+    },
+    {
+      "name": "invideo",
+      "slug": "invideo",
+      "logoPath": "/images/tools/invideo-logo.svg"
+    },
+    {
+      "name": "ReTell.media",
+      "slug": "retell-media",
+      "logoPath": "/images/tools/retell-media-logo.svg"
+    },
+    {
+      "name": "ReviewNicely",
+      "slug": "reviewnicely",
+      "logoPath": "/images/tools/reviewnicely-logo.svg"
+    },
+    {
+      "name": "Platus",
+      "slug": "platus",
+      "logoPath": "/images/tools/platus-logo.svg"
+    },
+    {
+      "name": "Grok 3",
+      "slug": "grok-3",
+      "logoPath": "/images/tools/grok-3-logo.svg"
+    },
+    {
+      "name": "Folder Pilot",
+      "slug": "folder-pilot",
+      "logoPath": "/images/tools/folder-pilot-logo.svg"
+    },
+    {
+      "name": "Seede AI",
+      "slug": "seede-ai",
+      "logoPath": "/images/tools/seede-ai-logo.svg"
+    },
+    {
+      "name": "Bounti.ai",
+      "slug": "bounti-ai",
+      "logoPath": "/images/tools/bounti-ai-logo.svg"
+    },
+    {
+      "name": "Chorus",
+      "slug": "chorus",
+      "logoPath": "/images/tools/chorus-logo.svg"
+    },
+    {
+      "name": "RPLY",
+      "slug": "rply",
+      "logoPath": "/images/tools/rply-logo.svg"
+    },
+    {
+      "name": "Supametas.AI",
+      "slug": "supametas-ai",
+      "logoPath": "/images/tools/supametas-ai-logo.svg"
+    },
+    {
+      "name": "Sitehunt",
+      "slug": "sitehunt",
+      "logoPath": "/images/tools/sitehunt-logo.svg"
+    },
+    {
+      "name": "VIDUR",
+      "slug": "vidur",
+      "logoPath": "/images/tools/vidur-logo.svg"
+    },
+    {
+      "name": "HideMyData",
+      "slug": "hidemydata",
+      "logoPath": "/images/tools/hidemydata-logo.svg"
+    },
+    {
+      "name": "Forvio",
+      "slug": "forvio",
+      "logoPath": "/images/tools/forvio-logo.svg"
+    },
+    {
+      "name": "ChatGPT Exporter",
+      "slug": "chatgpt-exporter",
+      "logoPath": "/images/tools/chatgpt-exporter-logo.svg"
+    },
+    {
+      "name": "CodeBeaver",
+      "slug": "codebeaver",
+      "logoPath": "/images/tools/codebeaver-logo.svg"
+    },
+    {
+      "name": "FinDaily",
+      "slug": "findaily",
+      "logoPath": "/images/tools/findaily-logo.svg"
+    },
+    {
+      "name": "Phedra AI",
+      "slug": "phedra-ai",
+      "logoPath": "/images/tools/phedra-ai-logo.svg"
+    },
+    {
+      "name": "WhisperTranscribe",
+      "slug": "whispertranscribe",
+      "logoPath": "/images/tools/whispertranscribe-logo.svg"
+    },
+    {
+      "name": "AgentVoice",
+      "slug": "agentvoice",
+      "logoPath": "/images/tools/agentvoice-logo.svg"
+    },
+    {
+      "name": "Storyblocker",
+      "slug": "storyblocker",
+      "logoPath": "/images/tools/storyblocker-logo.svg"
+    },
+    {
+      "name": "Pressdeck",
+      "slug": "pressdeck",
+      "logoPath": "/images/tools/pressdeck-logo.svg"
+    },
+    {
+      "name": "A0.dev",
+      "slug": "a0-dev",
+      "logoPath": "/images/tools/a0-dev-logo.svg"
+    },
+    {
+      "name": "Replit iOS App",
+      "slug": "replit-ios-app",
+      "logoPath": "/images/tools/replit-ios-app-logo.svg"
+    },
+    {
+      "name": "Serif.ai",
+      "slug": "serif-ai",
+      "logoPath": "/images/tools/serif-ai-logo.svg"
+    },
+    {
+      "name": "Icon.me",
+      "slug": "icon-me",
+      "logoPath": "/images/tools/icon-me-logo.svg"
+    },
+    {
+      "name": "Draftly",
+      "slug": "draftly",
+      "logoPath": "/images/tools/draftly-logo.svg"
+    },
+    {
+      "name": "CubeOne AI",
+      "slug": "cubeone-ai",
+      "logoPath": "/images/tools/cubeone-ai-logo.svg"
+    },
+    {
+      "name": "Chat Thing",
+      "slug": "chat-thing",
+      "logoPath": "/images/tools/chat-thing-logo.svg"
+    },
+    {
+      "name": "Sonofa",
+      "slug": "sonofa",
+      "logoPath": "/images/tools/sonofa-logo.svg"
+    },
+    {
+      "name": "Tana",
+      "slug": "tana",
+      "logoPath": "/images/tools/tana-logo.svg"
+    },
+    {
+      "name": "Venice AI",
+      "slug": "venice-ai",
+      "logoPath": "/images/tools/venice-ai-logo.svg"
+    },
+    {
+      "name": "Wand AI",
+      "slug": "wand-ai",
+      "logoPath": "/images/tools/wand-ai-logo.svg"
+    },
+    {
+      "name": "Bravo Studio",
+      "slug": "bravo-studio",
+      "logoPath": "/images/tools/bravo-studio-logo.svg"
+    },
+    {
+      "name": "Modulify AI",
+      "slug": "modulify-ai",
+      "logoPath": "/images/tools/modulify-ai-logo.svg"
+    },
+    {
+      "name": "Cliprun",
+      "slug": "cliprun",
+      "logoPath": "/images/tools/cliprun-logo.svg"
+    },
+    {
+      "name": "Rootly",
+      "slug": "rootly",
+      "logoPath": "/images/tools/rootly-logo.svg"
+    },
+    {
+      "name": "AptlyStar.AI",
+      "slug": "aptlystar-ai",
+      "logoPath": "/images/tools/aptlystar-ai-logo.svg"
+    },
+    {
+      "name": "PromptKit",
+      "slug": "promptkit",
+      "logoPath": "/images/tools/promptkit-logo.svg"
+    },
+    {
+      "name": "CTRL Sheet",
+      "slug": "ctrl-sheet",
+      "logoPath": "/images/tools/ctrl-sheet-logo.svg"
+    },
+    {
+      "name": "Reap.video",
+      "slug": "reap-video",
+      "logoPath": "/images/tools/reap-video-logo.svg"
+    },
+    {
+      "name": "Toolhouse",
+      "slug": "toolhouse",
+      "logoPath": "/images/tools/toolhouse-logo.svg"
+    },
+    {
+      "name": "Baz",
+      "slug": "baz",
+      "logoPath": "/images/tools/baz-logo.svg"
+    },
+    {
+      "name": "Vogent",
+      "slug": "vogent",
+      "logoPath": "/images/tools/vogent-logo.svg"
+    },
+    {
+      "name": "Aftercare",
+      "slug": "aftercare",
+      "logoPath": "/images/tools/aftercare-logo.svg"
+    },
+    {
+      "name": "IdeaBuddy",
+      "slug": "ideabuddy",
+      "logoPath": "/images/tools/ideabuddy-logo.svg"
+    },
+    {
+      "name": "Picjam",
+      "slug": "picjam",
+      "logoPath": "/images/tools/picjam-logo.svg"
+    },
+    {
+      "name": "Kodus",
+      "slug": "kodus",
+      "logoPath": "/images/tools/kodus-logo.svg"
+    },
+    {
+      "name": "THEO",
+      "slug": "theo",
+      "logoPath": "/images/tools/theo-logo.svg"
+    },
+    {
+      "name": "YuE",
+      "slug": "yue",
+      "logoPath": "/images/tools/yue-logo.svg"
+    },
+    {
+      "name": "CodeGate",
+      "slug": "codegate",
+      "logoPath": "/images/tools/codegate-logo.svg"
+    },
+    {
+      "name": "Unbaited",
+      "slug": "unbaited",
+      "logoPath": "/images/tools/unbaited-logo.svg"
+    },
+    {
+      "name": "UnDatasIO",
+      "slug": "undatasio",
+      "logoPath": "/images/tools/undatasio-logo.svg"
+    },
+    {
+      "name": "CICube",
+      "slug": "cicube",
+      "logoPath": "/images/tools/cicube-logo.svg"
+    },
+    {
+      "name": "Licode",
+      "slug": "licode",
+      "logoPath": "/images/tools/licode-logo.svg"
+    },
+    {
+      "name": "Ping AI Tasklist",
+      "slug": "ping-ai-tasklist",
+      "logoPath": "/images/tools/ping-ai-tasklist-logo.svg"
+    },
+    {
+      "name": "Teammately",
+      "slug": "teammately",
+      "logoPath": "/images/tools/teammately-logo.svg"
+    },
+    {
+      "name": "GetInvoice",
+      "slug": "getinvoice",
+      "logoPath": "/images/tools/getinvoice-logo.svg"
+    },
+    {
+      "name": "Kokoro TTS",
+      "slug": "kokoro-tts",
+      "logoPath": "/images/tools/kokoro-tts-logo.svg"
+    },
+    {
+      "name": "Figflow",
+      "slug": "figflow",
+      "logoPath": "/images/tools/figflow-logo.svg"
+    },
+    {
+      "name": "Aphra",
+      "slug": "aphra",
+      "logoPath": "/images/tools/aphra-logo.svg"
+    },
+    {
+      "name": "Saufter AI",
+      "slug": "saufter-ai",
+      "logoPath": "/images/tools/saufter-ai-logo.svg"
+    },
+    {
+      "name": "Anchor Browser",
+      "slug": "anchor-browser",
+      "logoPath": "/images/tools/anchor-browser-logo.svg"
+    },
+    {
+      "name": "Sourcetable",
+      "slug": "sourcetable",
+      "logoPath": "/images/tools/sourcetable-logo.svg"
+    },
+    {
+      "name": "Pencil Sketch Generator",
+      "slug": "pencil-sketch-generator",
+      "logoPath": "/images/tools/pencil-sketch-generator-logo.svg"
+    },
+    {
+      "name": "Two Minute Reports",
+      "slug": "two-minute-reports",
+      "logoPath": "/images/tools/two-minute-reports-logo.svg"
+    },
+    {
+      "name": "My AskAI",
+      "slug": "my-askai",
+      "logoPath": "/images/tools/my-askai-logo.svg"
+    },
+    {
+      "name": "Covric",
+      "slug": "covric",
+      "logoPath": "/images/tools/covric-logo.svg"
+    },
+    {
+      "name": "Qodex.ai",
+      "slug": "qodex-ai",
+      "logoPath": "/images/tools/qodex-ai-logo.svg"
+    },
+    {
+      "name": "Open Interface",
+      "slug": "open-interface",
+      "logoPath": "/images/tools/open-interface-logo.svg"
+    },
+    {
+      "name": "there",
+      "slug": "there",
+      "logoPath": "/images/tools/there-logo.svg"
+    },
+    {
+      "name": "Retellio",
+      "slug": "retellio",
+      "logoPath": "/images/tools/retellio-logo.svg"
+    },
+    {
+      "name": "Photes.io",
+      "slug": "photes-io",
+      "logoPath": "/images/tools/photes-io-logo.svg"
+    },
+    {
+      "name": "UniScribe",
+      "slug": "uniscribe",
+      "logoPath": "/images/tools/uniscribe-logo.svg"
+    },
+    {
+      "name": "SenseTask",
+      "slug": "sensetask",
+      "logoPath": "/images/tools/sensetask-logo.svg"
+    },
+    {
+      "name": "Salesforge",
+      "slug": "salesforge",
+      "logoPath": "/images/tools/salesforge-logo.svg"
+    },
+    {
+      "name": "Vinteo AI",
+      "slug": "vinteo-ai",
+      "logoPath": "/images/tools/vinteo-ai-logo.svg"
+    },
+    {
+      "name": "CopyCat",
+      "slug": "copycat",
+      "logoPath": "/images/tools/copycat-logo.svg"
+    },
+    {
+      "name": "BookRead",
+      "slug": "bookread",
+      "logoPath": "/images/tools/bookread-logo.svg"
+    },
+    {
+      "name": "Bluebarry AI",
+      "slug": "bluebarry-ai",
+      "logoPath": "/images/tools/bluebarry-ai-logo.svg"
+    },
+    {
+      "name": "Aimdoc",
+      "slug": "aimdoc",
+      "logoPath": "/images/tools/aimdoc-logo.svg"
+    },
+    {
+      "name": "ProdPad",
+      "slug": "prodpad",
+      "logoPath": "/images/tools/prodpad-logo.svg"
+    },
+    {
+      "name": "Hoop",
+      "slug": "hoop",
+      "logoPath": "/images/tools/hoop-logo.svg"
+    },
+    {
+      "name": "Riffusion Fuzz",
+      "slug": "riffusion-fuzz",
+      "logoPath": "/images/tools/riffusion-fuzz-logo.svg"
+    },
+    {
+      "name": "Freepik",
+      "slug": "freepik",
+      "logoPath": "/images/tools/freepik-logo.svg"
+    },
+    {
+      "name": "SciFocus",
+      "slug": "scifocus",
+      "logoPath": "/images/tools/scifocus-logo.svg"
+    },
+    {
+      "name": "Answerly",
+      "slug": "answerly",
+      "logoPath": "/images/tools/answerly-logo.svg"
+    },
+    {
+      "name": "AI Drive",
+      "slug": "ai-drive",
+      "logoPath": "/images/tools/ai-drive-logo.svg"
+    },
+    {
+      "name": "TurboDoc",
+      "slug": "turbodoc",
+      "logoPath": "/images/tools/turbodoc-logo.svg"
+    },
+    {
+      "name": "Appointwise",
+      "slug": "appointwise",
+      "logoPath": "/images/tools/appointwise-logo.svg"
+    },
+    {
+      "name": "Pika 2.1",
+      "slug": "pika-2-1",
+      "logoPath": "/images/tools/pika-2-1-logo.svg"
+    },
+    {
+      "name": "AutoReel",
+      "slug": "autoreel",
+      "logoPath": "/images/tools/autoreel-logo.svg"
+    },
+    {
+      "name": "WUI.AI",
+      "slug": "wui-ai",
+      "logoPath": "/images/tools/wui-ai-logo.svg"
+    },
+    {
+      "name": "HeyBoss",
+      "slug": "heyboss",
+      "logoPath": "/images/tools/heyboss-logo.svg"
+    },
+    {
+      "name": "TalkStack AI",
+      "slug": "talkstack-ai",
+      "logoPath": "/images/tools/talkstack-ai-logo.svg"
+    },
+    {
+      "name": "Strella",
+      "slug": "strella",
+      "logoPath": "/images/tools/strella-logo.svg"
+    },
+    {
+      "name": "Code2.AI",
+      "slug": "code2-ai",
+      "logoPath": "/images/tools/code2-ai-logo.svg"
+    },
+    {
+      "name": "Folk CRM",
+      "slug": "folk-crm",
+      "logoPath": "/images/tools/folk-crm-logo.svg"
+    },
+    {
+      "name": "Witsy",
+      "slug": "witsy",
+      "logoPath": "/images/tools/witsy-logo.svg"
+    },
+    {
+      "name": "Podpally",
+      "slug": "podpally",
+      "logoPath": "/images/tools/podpally-logo.svg"
+    },
+    {
+      "name": "Cotypist",
+      "slug": "cotypist",
+      "logoPath": "/images/tools/cotypist-logo.svg"
+    },
+    {
+      "name": "Inbox AI",
+      "slug": "inbox-ai",
+      "logoPath": "/images/tools/inbox-ai-logo.svg"
+    },
+    {
+      "name": "Olypsys",
+      "slug": "olypsys",
+      "logoPath": "/images/tools/olypsys-logo.svg"
+    },
+    {
+      "name": "Beeble AI",
+      "slug": "beeble-ai",
+      "logoPath": "/images/tools/beeble-ai-logo.svg"
+    }
+  ]
+}

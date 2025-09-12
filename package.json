@@ -12,6 +12,8 @@
     "lint:fix": "next lint --fix",
     "type-check": "tsc --noEmit",
     "validate-urls": "node scripts/validate-url-formats.js",
+    "validate-images": "node scripts/validate-images.js",
+    "generate-logos": "node scripts/generate-missing-logos.js",
     "keywords": "node scripts/dataforseo-batch.mjs",
     "keywords:research": "node scripts/dataforseo-batch.mjs",
     "test": "npm run test:integration && npm run test:schema",
