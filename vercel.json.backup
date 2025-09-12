@@ -78,6 +78,16 @@
       "statusCode": 301
     },
     {
+      "source": "/categories/voice-ai-tools",
+      "destination": "/categories/best-voice-ai-tools",
+      "statusCode": 301
+    },
+    {
+      "source": "/categories/voice-ai-tools/",
+      "destination": "/categories/best-voice-ai-tools",
+      "statusCode": 301
+    },
+    {
       "source": "/tools/ai-cost-calculator",
       "destination": "/tools",
       "statusCode": 301
@@ -9935,21 +9945,6 @@
     {
       "source": "/compare/unbounce-ai-landing-page-builder-vs-adalysis",
       "destination": "/compare/unbounce-ai-landing-page-builder/vs/adalysis",
-      "statusCode": 301
-    },
-    {
-      "source": "/compare/unbounce-ai-landing-page-builder-vs-adbeat",
-      "destination": "/compare/unbounce-ai-landing-page-builder/vs/adbeat",
-      "statusCode": 301
-    },
-    {
-      "source": "/compare/unbounce-ai-landing-page-builder-vs-adcreative-ai",
-      "destination": "/compare/unbounce-ai-landing-page-builder/vs/adcreative-ai",
-      "statusCode": 301
-    },
-    {
-      "source": "/compare/unbounce-ai-landing-page-builder-vs-adespresso",
-      "destination": "/compare/unbounce-ai-landing-page-builder/vs/adespresso",
       "statusCode": 301
     }
   ]

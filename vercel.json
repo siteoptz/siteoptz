@@ -6843,11 +6843,6 @@
       "statusCode": 301
     },
     {
-      "source": "/",
-      "destination": "/tools",
-      "statusCode": 301
-    },
-    {
       "source": "/about",
       "destination": "/tools",
       "statusCode": 301
