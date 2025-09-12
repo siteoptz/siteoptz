@@ -4,18 +4,13 @@ Allow: /
 # Sitemap
 Sitemap: https://siteoptz.ai/sitemap.xml
 
-# Disallow admin areas and sensitive paths
+# Disallow admin areas (if any)
 Disallow: /admin/
 Disallow: /api/
+Disallow: /_next/
 Disallow: /scripts/
-
-# Allow essential Next.js static resources
-Allow: /_next/static/
-Allow: /_next/image
 
 # Allow important pages
 Allow: /tools/
 Allow: /compare/
 Allow: /comparisons/
-
-Sitemap: https://siteoptz.ai/sitemap.xml

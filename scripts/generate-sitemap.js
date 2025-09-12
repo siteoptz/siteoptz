@@ -84,7 +84,7 @@ class SitemapGenerator {
       { url: '/resources', priority: 0.8, changefreq: 'weekly' },
       { url: '/podcasts', priority: 0.8, changefreq: 'weekly' },
       { url: '/webinars', priority: 0.8, changefreq: 'weekly' },
-      { url: '/blog', priority: 0.7, changefreq: 'weekly' },
+      { url: '/blog/', priority: 0.7, changefreq: 'weekly' },
       { url: '/case-studies', priority: 0.7, changefreq: 'monthly' },
       { url: '/ai-library', priority: 0.6, changefreq: 'monthly' },
       
@@ -106,10 +106,10 @@ class SitemapGenerator {
       { url: '/terms', priority: 0.3, changefreq: 'yearly' }
     ];
 
-    // Add category pages
+    // Add category pages - using canonical URLs that don't redirect
     const categories = [
       'ai-automation',
-      'best-voice-ai-tools',
+      'best-voice-ai-tools', 
       'code-generation',
       'content-creation',
       'data-analysis',
@@ -126,8 +126,9 @@ class SitemapGenerator {
     ];
 
     categories.forEach(category => {
+      // Use the canonical URL format that returns 200, not redirects
       staticPages.push({
-        url: `/categories/${category}`,
+        url: `/tools?category=${category}`,
         priority: 0.9,
         changefreq: 'weekly'
       });
@@ -283,7 +284,7 @@ class SitemapGenerator {
         const tool2Exists = toolData.some(t => t.slug === tool2);
         
         if (tool1Exists && tool2Exists) {
-          this.addUrl(`/compare/${tool1}-vs-${tool2}`, 0.7, 'weekly', null, 'comparisons');
+          this.addUrl(`/compare/${tool1}/vs/${tool2}`, 0.7, 'weekly', null, 'comparisons');
           addedComparisons++;
         }
       }
@@ -320,20 +321,20 @@ class SitemapGenerator {
   }
 
   addROICalculatorPages() {
+    // Use canonical URLs that return 200 status, not redirects
     const roiCalculators = [
-      'ai-roi-calculator',
-      'marketing-roi-calculator', 
-      'chatbot-roi-calculator',
-      'content-roi-calculator',
-      'sales-ai-roi',
-      'healthcare-ai-roi',
-      'manufacturing-roi-calculator',
-      'recruitment-roi-calculator',
-      'security-roi-calculator',
-      'no-code-ai-roi',
-      'enterprise-ai-calculator',
-      'conversion-roi-calculator',
-      'ai-cost-calculator'
+      'ai-roi',                    // was: ai-roi-calculator (redirected)
+      'marketing-roi',             // was: marketing-roi-calculator (redirected)
+      'chatbot-roi',               // was: chatbot-roi-calculator (redirected)
+      'content-roi',               // was: content-roi-calculator (redirected)
+      'sales-ai-roi',              // already correct
+      'healthcare-ai-roi',         // already correct
+      'manufacturing-roi',         // was: manufacturing-roi-calculator (redirected)
+      'recruitment-roi',           // was: recruitment-roi-calculator (redirected)
+      'security-roi',              // was: security-roi-calculator (redirected)
+      'no-code-ai-roi',            // already correct
+      'conversion-roi'             // was: conversion-roi-calculator (redirected)
+      // Removed: 'enterprise-ai-calculator' and 'ai-cost-calculator' - need investigation
     ];
 
     roiCalculators.forEach(calculator => {
@@ -414,13 +415,13 @@ class SitemapGenerator {
       this.addUrl(`/reports/${report}`, 0.7, 'monthly', null, 'main');
     });
 
-    // Add analysis pages
+    // Add analysis pages - using canonical compare format
     const analyses = [
-      'claude3-vs-gpt4'
+      ['claude3', 'gpt4']
     ];
 
-    analyses.forEach(analysis => {
-      this.addUrl(`/analysis/${analysis}`, 0.7, 'monthly', null, 'main');
+    analyses.forEach(([tool1, tool2]) => {
+      this.addUrl(`/compare/${tool1}/vs/${tool2}`, 0.7, 'monthly', null, 'comparisons');
     });
 
     // Add video pages

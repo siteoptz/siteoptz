@@ -1,0 +1,256 @@
+{
+  "timestamp": "2025-09-12T13:59:22.053Z",
+  "summary": {
+    "totalIssues": 27,
+    "byIssueType": {
+      "Redirect": 26,
+      "Non-canonical URL": 1
+    },
+    "correctedUrls": 25
+  },
+  "corrections": [
+    {
+      "original": "https://siteoptz.ai/categories/code-generation",
+      "originalPath": "/categories/code-generation",
+      "issue": "Redirect",
+      "suggested": "https://siteoptz.ai/tools?category=code-generation",
+      "suggestedPath": "/tools?category=code-generation",
+      "explanation": "Category pages redirect to tools page with category filter"
+    },
+    {
+      "original": "https://siteoptz.ai/categories/data-analysis",
+      "originalPath": "/categories/data-analysis",
+      "issue": "Redirect",
+      "suggested": "https://siteoptz.ai/tools?category=data-analysis",
+      "suggestedPath": "/tools?category=data-analysis",
+      "explanation": "Category pages redirect to tools page with category filter"
+    },
+    {
+      "original": "https://siteoptz.ai/categories/seo-optimization",
+      "originalPath": "/categories/seo-optimization",
+      "issue": "Redirect",
+      "suggested": "https://siteoptz.ai/tools?category=seo-optimization",
+      "suggestedPath": "/tools?category=seo-optimization",
+      "explanation": "Category pages redirect to tools page with category filter"
+    },
+    {
+      "original": "https://siteoptz.ai/categories/video-generation",
+      "originalPath": "/categories/video-generation",
+      "issue": "Redirect",
+      "suggested": "https://siteoptz.ai/tools?category=video-generation",
+      "suggestedPath": "/tools?category=video-generation",
+      "explanation": "Category pages redirect to tools page with category filter"
+    },
+    {
+      "original": "https://siteoptz.ai/blog",
+      "originalPath": "/blog",
+      "issue": "Non-canonical URL",
+      "suggested": "https://siteoptz.ai/blog/",
+      "suggestedPath": "/blog/",
+      "explanation": "Blog URL may need trailing slash or redirect to different URL"
+    },
+    {
+      "original": "https://siteoptz.ai/categories/content-creation",
+      "originalPath": "/categories/content-creation",
+      "issue": "Redirect",
+      "suggested": "https://siteoptz.ai/tools?category=content-creation",
+      "suggestedPath": "/tools?category=content-creation",
+      "explanation": "Category pages redirect to tools page with category filter"
+    },
+    {
+      "original": "https://siteoptz.ai/categories/social-media",
+      "originalPath": "/categories/social-media",
+      "issue": "Redirect",
+      "suggested": "https://siteoptz.ai/tools?category=social-media",
+      "suggestedPath": "/tools?category=social-media",
+      "explanation": "Category pages redirect to tools page with category filter"
+    },
+    {
+      "original": "https://siteoptz.ai/categories/best-voice-ai-tools",
+      "originalPath": "/categories/best-voice-ai-tools",
+      "issue": "Redirect",
+      "suggested": "https://siteoptz.ai/tools?category=best-voice-ai-tools",
+      "suggestedPath": "/tools?category=best-voice-ai-tools",
+      "explanation": "Category pages redirect to tools page with category filter"
+    },
+    {
+      "original": "https://siteoptz.ai/categories/productivity",
+      "originalPath": "/categories/productivity",
+      "issue": "Redirect",
+      "suggested": "https://siteoptz.ai/tools?category=productivity",
+      "suggestedPath": "/tools?category=productivity",
+      "explanation": "Category pages redirect to tools page with category filter"
+    },
+    {
+      "original": "https://siteoptz.ai/categories/paid-search-ppc",
+      "originalPath": "/categories/paid-search-ppc",
+      "issue": "Redirect",
+      "suggested": "https://siteoptz.ai/tools?category=paid-search-ppc",
+      "suggestedPath": "/tools?category=paid-search-ppc",
+      "explanation": "Category pages redirect to tools page with category filter"
+    },
+    {
+      "original": "https://siteoptz.ai/analysis/claude3-vs-gpt4",
+      "originalPath": "/analysis/claude3-vs-gpt4",
+      "issue": "Redirect",
+      "suggested": "https://siteoptz.ai/compare/claude3/vs/gpt4",
+      "suggestedPath": "/compare/claude3/vs/gpt4",
+      "explanation": "Analysis comparison redirects to compare page format"
+    },
+    {
+      "original": "https://siteoptz.ai/categories/research-education",
+      "originalPath": "/categories/research-education",
+      "issue": "Redirect",
+      "suggested": "https://siteoptz.ai/tools?category=research-education",
+      "suggestedPath": "/tools?category=research-education",
+      "explanation": "Category pages redirect to tools page with category filter"
+    },
+    {
+      "original": "https://siteoptz.ai/categories/email-marketing",
+      "originalPath": "/categories/email-marketing",
+      "issue": "Redirect",
+      "suggested": "https://siteoptz.ai/tools?category=email-marketing",
+      "suggestedPath": "/tools?category=email-marketing",
+      "explanation": "Category pages redirect to tools page with category filter"
+    },
+    {
+      "original": "https://siteoptz.ai/categories/image-generation",
+      "originalPath": "/categories/image-generation",
+      "issue": "Redirect",
+      "suggested": "https://siteoptz.ai/tools?category=image-generation",
+      "suggestedPath": "/tools?category=image-generation",
+      "explanation": "Category pages redirect to tools page with category filter"
+    },
+    {
+      "original": "https://siteoptz.ai/tools/marketing-roi-calculator",
+      "originalPath": "/tools/marketing-roi-calculator",
+      "issue": "Redirect",
+      "suggested": "https://siteoptz.ai/tools/marketing-roi",
+      "suggestedPath": "/tools/marketing-roi",
+      "explanation": "ROI calculator URLs redirect to remove '-calculator' suffix"
+    },
+    {
+      "original": "https://siteoptz.ai/tools/sales-ai-roi",
+      "originalPath": "/tools/sales-ai-roi",
+      "issue": "Redirect",
+      "suggested": "https://siteoptz.ai/tools/sales-ai-roi",
+      "suggestedPath": "/tools/sales-ai-roi",
+      "explanation": "ROI tool URL (likely correct already)"
+    },
+    {
+      "original": "https://siteoptz.ai/tools/conversion-roi-calculator",
+      "originalPath": "/tools/conversion-roi-calculator",
+      "issue": "Redirect",
+      "suggested": "https://siteoptz.ai/tools/conversion-roi",
+      "suggestedPath": "/tools/conversion-roi",
+      "explanation": "ROI calculator URLs redirect to remove '-calculator' suffix"
+    },
+    {
+      "original": "https://siteoptz.ai/tools/recruitment-roi-calculator",
+      "originalPath": "/tools/recruitment-roi-calculator",
+      "issue": "Redirect",
+      "suggested": "https://siteoptz.ai/tools/recruitment-roi",
+      "suggestedPath": "/tools/recruitment-roi",
+      "explanation": "ROI calculator URLs redirect to remove '-calculator' suffix"
+    },
+    {
+      "original": "https://siteoptz.ai/tools/ai-roi-calculator",
+      "originalPath": "/tools/ai-roi-calculator",
+      "issue": "Redirect",
+      "suggested": "https://siteoptz.ai/tools/ai-roi",
+      "suggestedPath": "/tools/ai-roi",
+      "explanation": "ROI calculator URLs redirect to remove '-calculator' suffix"
+    },
+    {
+      "original": "https://siteoptz.ai/tools/ai-cost-calculator",
+      "originalPath": "/tools/ai-cost-calculator",
+      "issue": "Redirect",
+      "suggested": "NEEDS_INVESTIGATION",
+      "suggestedPath": null,
+      "explanation": "Manual investigation needed"
+    },
+    {
+      "original": "https://siteoptz.ai/tools/enterprise-ai-calculator",
+      "originalPath": "/tools/enterprise-ai-calculator",
+      "issue": "Redirect",
+      "suggested": "NEEDS_INVESTIGATION",
+      "suggestedPath": null,
+      "explanation": "Manual investigation needed"
+    },
+    {
+      "original": "https://siteoptz.ai/tools/chatbot-roi-calculator",
+      "originalPath": "/tools/chatbot-roi-calculator",
+      "issue": "Redirect",
+      "suggested": "https://siteoptz.ai/tools/chatbot-roi",
+      "suggestedPath": "/tools/chatbot-roi",
+      "explanation": "ROI calculator URLs redirect to remove '-calculator' suffix"
+    },
+    {
+      "original": "https://siteoptz.ai/tools/content-roi-calculator",
+      "originalPath": "/tools/content-roi-calculator",
+      "issue": "Redirect",
+      "suggested": "https://siteoptz.ai/tools/content-roi",
+      "suggestedPath": "/tools/content-roi",
+      "explanation": "ROI calculator URLs redirect to remove '-calculator' suffix"
+    },
+    {
+      "original": "https://siteoptz.ai/tools/healthcare-ai-roi",
+      "originalPath": "/tools/healthcare-ai-roi",
+      "issue": "Redirect",
+      "suggested": "https://siteoptz.ai/tools/healthcare-ai-roi",
+      "suggestedPath": "/tools/healthcare-ai-roi",
+      "explanation": "ROI tool URL (likely correct already)"
+    },
+    {
+      "original": "https://siteoptz.ai/tools/manufacturing-roi-calculator",
+      "originalPath": "/tools/manufacturing-roi-calculator",
+      "issue": "Redirect",
+      "suggested": "https://siteoptz.ai/tools/manufacturing-roi",
+      "suggestedPath": "/tools/manufacturing-roi",
+      "explanation": "ROI calculator URLs redirect to remove '-calculator' suffix"
+    },
+    {
+      "original": "https://siteoptz.ai/tools/no-code-ai-roi",
+      "originalPath": "/tools/no-code-ai-roi",
+      "issue": "Redirect",
+      "suggested": "https://siteoptz.ai/tools/no-code-ai-roi",
+      "suggestedPath": "/tools/no-code-ai-roi",
+      "explanation": "ROI tool URL (likely correct already)"
+    },
+    {
+      "original": "https://siteoptz.ai/tools/security-roi-calculator",
+      "originalPath": "/tools/security-roi-calculator",
+      "issue": "Redirect",
+      "suggested": "https://siteoptz.ai/tools/security-roi",
+      "suggestedPath": "/tools/security-roi",
+      "explanation": "ROI calculator URLs redirect to remove '-calculator' suffix"
+    }
+  ],
+  "finalCanonicalUrls": [
+    "/blog/",
+    "/compare/claude3/vs/gpt4",
+    "/tools/ai-roi",
+    "/tools/chatbot-roi",
+    "/tools/content-roi",
+    "/tools/conversion-roi",
+    "/tools/healthcare-ai-roi",
+    "/tools/manufacturing-roi",
+    "/tools/marketing-roi",
+    "/tools/no-code-ai-roi",
+    "/tools/recruitment-roi",
+    "/tools/sales-ai-roi",
+    "/tools/security-roi",
+    "/tools?category=best-voice-ai-tools",
+    "/tools?category=code-generation",
+    "/tools?category=content-creation",
+    "/tools?category=data-analysis",
+    "/tools?category=email-marketing",
+    "/tools?category=image-generation",
+    "/tools?category=paid-search-ppc",
+    "/tools?category=productivity",
+    "/tools?category=research-education",
+    "/tools?category=seo-optimization",
+    "/tools?category=social-media",
+    "/tools?category=video-generation"
+  ]
+}
