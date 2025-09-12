@@ -93,7 +93,7 @@ export function calculateOverallRating(benchmarks: {
 
 // Generate comparison URL
 export function generateComparisonUrl(tool1: string, tool2: string): string {
-  return `/compare/${tool1}-vs-${tool2}`;
+  return `/compare/${tool1}/vs/${tool2}`;
 }
 
 // Format price for display

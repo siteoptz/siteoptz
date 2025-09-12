@@ -162,7 +162,7 @@ export const generateBreadcrumbSchema = (tool1, tool2 = null) => {
       "@type": "ListItem",
       "position": 4,
       "name": `${tool1} vs ${tool2}`,
-      "item": `https://siteoptz.com/compare/${tool1.toLowerCase().replace(/\s+/g, '-')}-vs-${tool2.toLowerCase().replace(/\s+/g, '-')}`
+      "item": `https://siteoptz.com/compare/${tool1.toLowerCase().replace(/\s+/g, '-')}/vs/${tool2.toLowerCase().replace(/\s+/g, '-')}`
     });
   }
 
@@ -291,7 +291,7 @@ export const generateCanonicalUrl = (tool1, tool2 = null) => {
   const baseUrl = 'https://siteoptz.com';
   
   if (tool1 && tool2) {
-    return `${baseUrl}/compare/${tool1.toLowerCase().replace(/\s+/g, '-')}-vs-${tool2.toLowerCase().replace(/\s+/g, '-')}`;
+    return `${baseUrl}/compare/${tool1.toLowerCase().replace(/\s+/g, '-')}/vs/${tool2.toLowerCase().replace(/\s+/g, '-')}`;
   } else if (tool1) {
     return `${baseUrl}/compare/${tool1.toLowerCase().replace(/\s+/g, '-')}`;
   } else {

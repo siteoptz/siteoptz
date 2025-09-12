@@ -20,13 +20,13 @@ const generateComparisonSEO = (tool1, tool2, year = '2025') => {
       'ai software comparison',
       year
     ].join(', '),
-    canonical: `/compare/${tool1.slug}-vs-${tool2.slug}`,
+    canonical: `/compare/${tool1.slug}/vs/${tool2.slug}`,
     openGraph: {
       title: `${combinedName}: Which AI Tool is Better?`,
       description: `Detailed comparison of ${tool1.name} and ${tool2.name}. Compare pricing, features, pros & cons to make the best choice for your team.`,
       type: 'article',
       image: `/images/comparisons/${tool1.slug}-vs-${tool2.slug}-og.jpg`,
-      url: `https://siteoptz.ai/compare/${tool1.slug}-vs-${tool2.slug}`
+      url: `https://siteoptz.ai/compare/${tool1.slug}/vs/${tool2.slug}`
     },
     twitter: {
       card: 'summary_large_image',
@@ -35,7 +35,7 @@ const generateComparisonSEO = (tool1, tool2, year = '2025') => {
       image: `/images/comparisons/${tool1.slug}-vs-${tool2.slug}-twitter.jpg`
     },
     alternates: {
-      canonical: `https://siteoptz.ai/compare/${tool1.slug}-vs-${tool2.slug}`
+      canonical: `https://siteoptz.ai/compare/${tool1.slug}/vs/${tool2.slug}`
     }
   };
 };
@@ -133,7 +133,7 @@ const generateComparisonSchema = (tool1, tool2, verdict = null) => {
     '@type': 'ComparisonPage',
     'name': `${tool1.name} vs ${tool2.name} Comparison`,
     'description': `Detailed comparison between ${tool1.name} and ${tool2.name} AI tools`,
-    'url': `https://siteoptz.ai/compare/${tool1.slug}-vs-${tool2.slug}`,
+    'url': `https://siteoptz.ai/compare/${tool1.slug}/vs/${tool2.slug}`,
     'mainEntity': [
       {
         '@type': 'SoftwareApplication',
@@ -301,7 +301,7 @@ const generateInternalLinks = (currentTool, allTools, maxLinks = 10) => {
     
     suggestions.push({
       anchor: `${currentTool.name} vs ${otherToolName}`,
-      url: `/compare/${comp.tool1}-vs-${comp.tool2}`,
+      url: `/compare/${comp.tool1}/vs/${comp.tool2}`,
       context: 'Popular comparison'
     });
   });

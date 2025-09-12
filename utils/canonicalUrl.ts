@@ -76,5 +76,5 @@ export function getIndustryCanonicalUrl(industry: string): string {
  * Get canonical URL for a comparison page
  */
 export function getComparisonCanonicalUrl(tool1: string, tool2: string): string {
-  return buildCanonicalUrl(`/compare/${tool1}-vs-${tool2}`);
+  return buildCanonicalUrl(`/compare/${tool1}/vs/${tool2}`);
 }

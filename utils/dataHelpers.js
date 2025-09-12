@@ -61,7 +61,7 @@ export const generateSitemap = (tools) => {
   for (let i = 0; i < tools.length; i++) {
     for (let j = i + 1; j < tools.length; j++) {
       urls.push({
-        url: `${baseUrl}/compare/${tools[i].slug}-vs-${tools[j].slug}`,
+        url: `${baseUrl}/compare/${tools[i].slug}/vs/${tools[j].slug}`,
         priority: 0.7,
         lastmod: new Date().toISOString().split('T')[0]
       });
