@@ -4,20 +4,21 @@ import type { NextRequest } from 'next/server';
 export function middleware(request: NextRequest) {
   const { pathname } = request.nextUrl;
   
-  // ONLY redirect compare pages with /vs/ to /tools
-  // Be very specific to avoid catching other routes
+  // Handle compare page redirects (too many for vercel.json)
   if (pathname.startsWith('/compare/') && pathname.includes('/vs/')) {
-    // Log for debugging
-    console.log('Redirecting compare page:', pathname);
     return NextResponse.redirect(new URL('/tools', request.url), 301);
   }
   
-  // Let ALL other requests pass through without any modification
+  // Let other requests pass through
   return NextResponse.next();
 }
 
-// Configure the middleware to ONLY run on compare routes
-// This prevents it from interfering with other pages
 export const config = {
-  matcher: '/compare/:path*'
+  matcher: [
+    /*
+     * Only match compare pages with /vs/ in the path
+     * This prevents the middleware from running on other pages
+     */
+    '/compare/:path*/vs/:path*',
+  ],
 };
