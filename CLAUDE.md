@@ -71,6 +71,9 @@ npm run validate-images
 
 # Generate missing logos (fixes broken images)
 npm run generate-logos
+
+# Schema validation (REQUIRED before deploying)
+npm run validate-schema
 ```
 
 ## Design System Requirements
