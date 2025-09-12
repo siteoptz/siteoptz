@@ -333,8 +333,8 @@ Received: ${new Date().toLocaleString()}
       <body>
         <div class="container">
           <div class="header">
-            <h1>Thank You, ${additionalData.name}! 🎉</h1>
-            <p>We've received your message and appreciate you reaching out.</p>
+            <h1 style="color: black;">Thank You, ${additionalData.name}! 🎉</h1>
+            <p style="color: black;">We've received your message and appreciate you reaching out.</p>
           </div>
           
           <div class="content">
