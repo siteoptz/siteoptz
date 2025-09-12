@@ -62,6 +62,9 @@ npm run type-check
 
 # Linting
 npm run lint
+
+# URL format validation (run before deploying)
+npm run validate-urls
 ```
 
 ## Design System Requirements
@@ -78,6 +81,22 @@ npm run lint
 - **Hover States**: `hover:from-blue-700 hover:to-purple-700`
 
 This dark theme is mandatory for visual consistency across the entire site.
+
+## URL Format Requirements (CRITICAL)
+
+**Compare Page URLs MUST follow this format:**
+```
+✅ CORRECT: /compare/tool1/vs/tool2
+❌ WRONG:   /compare/tool1-vs-tool2
+```
+
+**When working with compare pages:**
+- Canonical URLs: `/compare/${tool1.slug}/vs/${tool2.slug}`
+- OpenGraph URLs: `https://siteoptz.ai/compare/${tool1.slug}/vs/${tool2.slug}`
+- Internal links: Same format
+- See URL_FORMAT_GUIDE.md for complete details
+
+**Files to check:** `pages/compare/`, `utils/seoMetaGenerator.js`, `utils/canonicalUrl.ts`, `utils/dataHelpers.js`, `utils/seoUtils.js`, `utils/dataAdapters.ts`
 
 ## Important Notes
 
