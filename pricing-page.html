@@ -1,0 +1,610 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Tool Implementation & Consulting - SiteOptz.ai</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: #f8fafc;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        .header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 60px 0;
+            text-align: center;
+        }
+        
+        .header h1 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            font-weight: 700;
+        }
+        
+        .header p {
+            font-size: 1.2rem;
+            opacity: 0.9;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        
+        .pricing-section {
+            padding: 80px 0;
+        }
+        
+        .pricing-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 50px;
+        }
+        
+        .pricing-card {
+            background: white;
+            border-radius: 15px;
+            padding: 40px 30px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            position: relative;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .pricing-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+        }
+        
+        .pricing-card.featured {
+            border: 3px solid #667eea;
+            transform: scale(1.05);
+        }
+        
+        .pricing-card.featured::before {
+            content: "Most Popular";
+            position: absolute;
+            top: -15px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: #667eea;
+            color: white;
+            padding: 8px 20px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-weight: 600;
+        }
+        
+        .plan-name {
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-bottom: 10px;
+            color: #2d3748;
+        }
+        
+        .plan-description {
+            color: #718096;
+            margin-bottom: 20px;
+            font-size: 0.95rem;
+        }
+        
+        .price {
+            font-size: 3rem;
+            font-weight: 700;
+            color: #667eea;
+            margin-bottom: 10px;
+        }
+        
+        .price-period {
+            color: #718096;
+            font-size: 1rem;
+            margin-bottom: 30px;
+        }
+        
+        .price-note {
+            font-size: 0.9rem;
+            color: #e53e3e;
+            font-weight: 600;
+            margin-bottom: 30px;
+        }
+        
+        .cta-button {
+            width: 100%;
+            padding: 15px 30px;
+            border: none;
+            border-radius: 8px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            margin-bottom: 30px;
+        }
+        
+        .cta-button.primary {
+            background: #667eea;
+            color: white;
+        }
+        
+        .cta-button.primary:hover {
+            background: #5a67d8;
+            transform: translateY(-2px);
+        }
+        
+        .cta-button.secondary {
+            background: #e2e8f0;
+            color: #4a5568;
+        }
+        
+        .cta-button.secondary:hover {
+            background: #cbd5e0;
+        }
+        
+        .features-list {
+            list-style: none;
+        }
+        
+        .features-list li {
+            padding: 8px 0;
+            display: flex;
+            align-items: center;
+        }
+        
+        .features-list li::before {
+            content: "✓";
+            color: #48bb78;
+            font-weight: bold;
+            margin-right: 10px;
+            font-size: 1.2rem;
+        }
+        
+        .features-list li.unavailable {
+            color: #a0aec0;
+        }
+        
+        .features-list li.unavailable::before {
+            content: "✗";
+            color: #e53e3e;
+        }
+        
+        .comparison-section {
+            padding: 80px 0;
+            background: white;
+        }
+        
+        .comparison-table {
+            overflow-x: auto;
+            margin-top: 40px;
+        }
+        
+        .comparison-table table {
+            width: 100%;
+            border-collapse: collapse;
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+        
+        .comparison-table th,
+        .comparison-table td {
+            padding: 15px;
+            text-align: left;
+            border-bottom: 1px solid #e2e8f0;
+        }
+        
+        .comparison-table th {
+            background: #f7fafc;
+            font-weight: 600;
+            color: #2d3748;
+        }
+        
+        .comparison-table .plan-header {
+            background: #667eea;
+            color: white;
+            text-align: center;
+            font-weight: 700;
+        }
+        
+        .comparison-table .feature-name {
+            font-weight: 600;
+            color: #2d3748;
+        }
+        
+        .checkmark {
+            color: #48bb78;
+            font-weight: bold;
+            text-align: center;
+        }
+        
+        .cross {
+            color: #e53e3e;
+            text-align: center;
+        }
+        
+        .faq-section {
+            padding: 80px 0;
+            background: #f8fafc;
+        }
+        
+        .faq-item {
+            background: white;
+            margin-bottom: 20px;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+        }
+        
+        .faq-question {
+            padding: 20px;
+            background: #f7fafc;
+            cursor: pointer;
+            font-weight: 600;
+            color: #2d3748;
+            border: none;
+            width: 100%;
+            text-align: left;
+            font-size: 1rem;
+        }
+        
+        .faq-answer {
+            padding: 20px;
+            color: #4a5568;
+            line-height: 1.6;
+        }
+        
+        .footer {
+            background: #2d3748;
+            color: white;
+            padding: 40px 0;
+            text-align: center;
+        }
+        
+        .footer p {
+            opacity: 0.8;
+        }
+        
+        @media (max-width: 768px) {
+            .header h1 {
+                font-size: 2rem;
+            }
+            
+            .pricing-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .pricing-card.featured {
+                transform: none;
+            }
+            
+            .comparison-table {
+                font-size: 0.9rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="container">
+            <h1>Transform Your Business with AI</h1>
+            <p>Stop wasting months on AI tool research and implementation. Get expert guidance, proven frameworks, and dedicated support to implement AI tools that actually work for your business.</p>
+        </div>
+    </div>
+
+    <section class="pricing-section">
+        <div class="container">
+            <div class="pricing-grid">
+                <!-- Free Plan -->
+                <div class="pricing-card">
+                    <h3 class="plan-name">Free - AI Discovery</h3>
+                    <p class="plan-description">Perfect for businesses just starting their AI journey</p>
+                    <div class="price">$0</div>
+                    <div class="price-period">forever</div>
+                    <button class="cta-button secondary">Get Started Free</button>
+                    
+                    <ul class="features-list">
+                        <li>Daily AI Tool Spotlight</li>
+                        <li>Basic Tool Comparison</li>
+                        <li>Implementation Readiness Score</li>
+                        <li>100+ AI Tools Database</li>
+                        <li>Weekly AI Trends Report</li>
+                        <li>Basic ROI Calculator</li>
+                        <li>Email Support</li>
+                    </ul>
+                </div>
+
+                <!-- Starter Plan -->
+                <div class="pricing-card featured">
+                    <h3 class="plan-name">Starter - Implementation Guide</h3>
+                    <p class="plan-description">For growing businesses ready to implement AI tools strategically</p>
+                    <div class="price">$497</div>
+                    <div class="price-period">per year</div>
+                    <div class="price-note">Regularly $997 - Launch Price</div>
+                    <button class="cta-button primary">Start Implementation</button>
+                    
+                    <ul class="features-list">
+                        <li>Everything in Free Plan</li>
+                        <li>500+ AI Tools Database</li>
+                        <li>AI Implementation Roadmap</li>
+                        <li>Tool Selection Framework</li>
+                        <li>Implementation Templates</li>
+                        <li>ROI Tracking Dashboard</li>
+                        <li>Priority Support</li>
+                        <li>Monthly Implementation Webinars</li>
+                        <li>Tool Integration Guides</li>
+                        <li>3 Team Members</li>
+                    </ul>
+                </div>
+
+                <!-- Pro Plan -->
+                <div class="pricing-card">
+                    <h3 class="plan-name">Pro - Strategy Command Center</h3>
+                    <p class="plan-description">For enterprise teams and AI consultants</p>
+                    <div class="price">$1,997</div>
+                    <div class="price-period">per year</div>
+                    <div class="price-note">Regularly $2,997 - Launch Price</div>
+                    <button class="cta-button primary">Go Pro</button>
+                    
+                    <ul class="features-list">
+                        <li>Everything in Starter Plan</li>
+                        <li>4 Hours Consulting/Quarter</li>
+                        <li>Custom AI Tool Recommendations</li>
+                        <li>Implementation Project Management</li>
+                        <li>Advanced Analytics & Reporting</li>
+                        <li>White-label AI Tool Reports</li>
+                        <li>API Access</li>
+                        <li>Priority Feature Requests</li>
+                        <li>Exclusive Pro Tools</li>
+                        <li>Quarterly Strategy Reviews</li>
+                        <li>Custom Implementation Playbooks</li>
+                        <li>10 Team Members</li>
+                    </ul>
+                </div>
+
+                <!-- Enterprise Plan -->
+                <div class="pricing-card">
+                    <h3 class="plan-name">Enterprise - Transformation Partner</h3>
+                    <p class="plan-description">For large enterprises undergoing AI transformation</p>
+                    <div class="price">$4,997</div>
+                    <div class="price-period">per year</div>
+                    <div class="price-note">Custom pricing available</div>
+                    <button class="cta-button primary">Contact Sales</button>
+                    
+                    <ul class="features-list">
+                        <li>Everything in Pro Plan</li>
+                        <li>Unlimited Consulting Hours</li>
+                        <li>Dedicated AI Strategy Consultant</li>
+                        <li>Custom AI Tool Development</li>
+                        <li>Enterprise Integration Support</li>
+                        <li>Training & Workshops</li>
+                        <li>24/7 SLA Guarantee</li>
+                        <li>Custom Reporting</li>
+                        <li>Unlimited Team Members</li>
+                        <li>On-site Implementation Support</li>
+                        <li>Compliance & Security Guidance</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="comparison-section">
+        <div class="container">
+            <h2 style="text-align: center; margin-bottom: 20px; font-size: 2.5rem; color: #2d3748;">Compare All Features</h2>
+            <p style="text-align: center; color: #718096; margin-bottom: 40px;">See exactly what's included in each plan</p>
+            
+            <div class="comparison-table">
+                <table>
+                    <thead>
+                        <tr>
+                            <th class="feature-name">Features</th>
+                            <th class="plan-header">Free</th>
+                            <th class="plan-header">Starter</th>
+                            <th class="plan-header">Pro</th>
+                            <th class="plan-header">Enterprise</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="feature-name">AI Tool Database</td>
+                            <td class="checkmark">100 tools</td>
+                            <td class="checkmark">500+ tools</td>
+                            <td class="checkmark">500+ tools</td>
+                            <td class="checkmark">500+ tools</td>
+                        </tr>
+                        <tr>
+                            <td class="feature-name">Implementation Roadmap</td>
+                            <td class="cross">❌</td>
+                            <td class="checkmark">✅</td>
+                            <td class="checkmark">✅</td>
+                            <td class="checkmark">✅</td>
+                        </tr>
+                        <tr>
+                            <td class="feature-name">Consulting Hours</td>
+                            <td class="cross">0</td>
+                            <td class="cross">0</td>
+                            <td class="checkmark">4/quarter</td>
+                            <td class="checkmark">Unlimited</td>
+                        </tr>
+                        <tr>
+                            <td class="feature-name">Project Management</td>
+                            <td class="cross">❌</td>
+                            <td class="cross">❌</td>
+                            <td class="checkmark">✅</td>
+                            <td class="checkmark">✅</td>
+                        </tr>
+                        <tr>
+                            <td class="feature-name">API Access</td>
+                            <td class="cross">❌</td>
+                            <td class="cross">❌</td>
+                            <td class="checkmark">✅</td>
+                            <td class="checkmark">✅</td>
+                        </tr>
+                        <tr>
+                            <td class="feature-name">White-label Reports</td>
+                            <td class="cross">❌</td>
+                            <td class="cross">❌</td>
+                            <td class="checkmark">✅</td>
+                            <td class="checkmark">✅</td>
+                        </tr>
+                        <tr>
+                            <td class="feature-name">Custom Development</td>
+                            <td class="cross">❌</td>
+                            <td class="cross">❌</td>
+                            <td class="cross">❌</td>
+                            <td class="checkmark">✅</td>
+                        </tr>
+                        <tr>
+                            <td class="feature-name">Team Members</td>
+                            <td class="checkmark">1</td>
+                            <td class="checkmark">3</td>
+                            <td class="checkmark">10</td>
+                            <td class="checkmark">Unlimited</td>
+                        </tr>
+                        <tr>
+                            <td class="feature-name">Support Level</td>
+                            <td class="checkmark">Email</td>
+                            <td class="checkmark">Priority</td>
+                            <td class="checkmark">Priority</td>
+                            <td class="checkmark">24/7</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <section class="faq-section">
+        <div class="container">
+            <h2 style="text-align: center; margin-bottom: 20px; font-size: 2.5rem; color: #2d3748;">Frequently Asked Questions</h2>
+            
+            <div class="faq-item">
+                <button class="faq-question">How much time will this actually save me?</button>
+                <div class="faq-answer">
+                    Each AI tool implementation represents 20-40 hours of research, testing, and setup condensed into a ready-to-use roadmap. Instead of spending months validating tools through trial-and-error, you get proven implementation strategies instantly. Our consulting services can save you 100+ hours of implementation work.
+                </div>
+            </div>
+            
+            <div class="faq-item">
+                <button class="faq-question">What's included in the free plan?</button>
+                <div class="faq-answer">
+                    The free plan includes daily AI tool spotlights with full analysis, basic tool comparisons, implementation readiness scores, access to 100+ tools, weekly trends reports, and basic ROI calculations. It's perfect for getting started with AI tools.
+                </div>
+            </div>
+            
+            <div class="faq-item">
+                <button class="faq-question">How many AI tools are in the database?</button>
+                <div class="faq-answer">
+                    We currently have 500+ validated AI tools in our database, with 20+ new tools added monthly. Each tool includes comprehensive analysis, implementation guides, ROI calculations, and integration instructions.
+                </div>
+            </div>
+            
+            <div class="faq-item">
+                <button class="faq-question">What makes your recommendations different?</button>
+                <div class="faq-answer">
+                    Our recommendations are based on actual implementation experience, not just reviews. We test tools in real business scenarios, provide detailed implementation roadmaps, and offer ongoing support to ensure successful deployment.
+                </div>
+            </div>
+            
+            <div class="faq-item">
+                <button class="faq-question">Can I cancel anytime?</button>
+                <div class="faq-answer">
+                    Yes, you can cancel your subscription anytime. Your access will continue until the end of your current billing period. No questions asked, no cancellation fees.
+                </div>
+            </div>
+            
+            <div class="faq-item">
+                <button class="faq-question">What's the difference between Starter and Pro?</button>
+                <div class="faq-answer">
+                    Starter gives you access to the full tool database, implementation roadmaps, and basic support. Pro adds 1-on-1 consulting, project management, advanced analytics, white-label reports, and API access. Pro is for serious implementers who want expert guidance.
+                </div>
+            </div>
+            
+            <div class="faq-item">
+                <button class="faq-question">How do I know which tools match my business?</button>
+                <div class="faq-answer">
+                    Our implementation readiness assessment analyzes your business size, industry, technical capabilities, and goals to recommend the perfect AI tools. Pro and Enterprise plans include custom recommendations based on your specific needs.
+                </div>
+            </div>
+            
+            <div class="faq-item">
+                <button class="faq-question">Do you offer custom implementation services?</button>
+                <div class="faq-answer">
+                    Yes! Pro plans include 4 hours of consulting per quarter, and Enterprise plans include unlimited consulting hours. We can help with custom implementations, integrations, training, and ongoing optimization.
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="footer">
+        <div class="container">
+            <p>&copy; 2025 SiteOptz.ai. All rights reserved.</p>
+            <p>Transform your business with AI tools that actually work.</p>
+        </div>
+    </div>
+
+    <script>
+        // FAQ Toggle Functionality
+        document.querySelectorAll('.faq-question').forEach(question => {
+            question.addEventListener('click', () => {
+                const answer = question.nextElementSibling;
+                const isOpen = answer.style.display === 'block';
+                
+                // Close all other answers
+                document.querySelectorAll('.faq-answer').forEach(ans => {
+                    ans.style.display = 'none';
+                });
+                
+                // Toggle current answer
+                answer.style.display = isOpen ? 'none' : 'block';
+            });
+        });
+
+        // CTA Button Analytics
+        document.querySelectorAll('.cta-button').forEach(button => {
+            button.addEventListener('click', (e) => {
+                const plan = e.target.closest('.pricing-card').querySelector('.plan-name').textContent;
+                console.log(`CTA clicked for plan: ${plan}`);
+                
+                // Track event (replace with your analytics)
+                if (typeof gtag !== 'undefined') {
+                    gtag('event', 'pricing_cta_click', {
+                        event_category: 'pricing',
+                        event_label: plan,
+                        value: 1
+                    });
+                }
+            });
+        });
+
+        // Pricing Card Hover Analytics
+        document.querySelectorAll('.pricing-card').forEach(card => {
+            card.addEventListener('mouseenter', () => {
+                const plan = card.querySelector('.plan-name').textContent;
+                console.log(`Hovered on plan: ${plan}`);
+                
+                // Track event (replace with your analytics)
+                if (typeof gtag !== 'undefined') {
+                    gtag('event', 'pricing_card_hover', {
+                        event_category: 'pricing',
+                        event_label: plan,
+                        value: 1
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>

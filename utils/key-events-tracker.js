@@ -3,16 +3,73 @@
 
 import { trackKeyEventWithConfig, validateEventData } from '../config/key-events-config.js';
 
+// GA4 Configuration
+const GA4_MEASUREMENT_ID = 'G-06WK4MZERF';
+
+// Initialize GA4 tracking with debug support
+export const initKeyEventsTracking = (config = {}) => {
+  if (typeof window === 'undefined') return;
+  
+  // Check for debug mode
+  const isDebugMode = config.debug_mode || 
+                     window.location.search.includes('debug_mode=true') ||
+                     localStorage.getItem('ga_debug_mode') === 'true';
+  
+  if (isDebugMode) {
+    console.log('🔍 GA4 Debug Mode Enabled');
+    
+    // Enable GA4 debug mode
+    if (window.gtag) {
+      window.gtag('config', GA4_MEASUREMENT_ID, {
+        debug_mode: true,
+        send_page_view: true
+      });
+    }
+  }
+  
+  // Send any offline events
+  sendOfflineEvents();
+  
+  // Set up periodic offline event sending
+  setInterval(sendOfflineEvents, 30000);
+  
+  // Track initial page view
+  trackKeyEvent('page_view', {
+    page_title: document.title,
+    page_location: window.location.href,
+    referrer: document.referrer,
+    debug_mode: isDebugMode
+  });
+  
+  // Set up error tracking
+  window.addEventListener('error', (event) => {
+    trackError('javascript_error', event.message, {
+      filename: event.filename,
+      lineno: event.lineno,
+      colno: event.colno
+    });
+  });
+  
+  console.log('🎯 Key Events Tracking Initialized', { 
+    debug_mode: isDebugMode,
+    measurement_id: GA4_MEASUREMENT_ID 
+  });
+};
+
 // Enhanced event tracking with validation and error handling
 export const trackKeyEvent = (eventType, eventData = {}) => {
   try {
+    // Check if debug mode is enabled
+    const isDebugMode = window.location.search.includes('debug_mode=true') ||
+                       localStorage.getItem('ga_debug_mode') === 'true';
+    
     // Validate event data
     if (!validateEventData(eventType, eventData)) {
-      console.error(`Invalid event data for ${eventType}:`, eventData);
+      console.error(`❌ Invalid event data for ${eventType}:`, eventData);
       return false;
     }
     
-    // Add default metadata
+    // Add default metadata and debug info
     const enhancedEventData = {
       page_url: typeof window !== 'undefined' ? window.location.href : '',
       page_title: typeof window !== 'undefined' ? document.title : '',
@@ -20,18 +77,30 @@ export const trackKeyEvent = (eventType, eventData = {}) => {
       referrer: typeof window !== 'undefined' ? document.referrer : '',
       timestamp: Date.now(),
       session_id: getSessionId(),
+      debug_mode: isDebugMode,
       ...eventData
     };
     
     // Track the event
     const result = trackKeyEventWithConfig(eventType, enhancedEventData);
     
+    // Enhanced debug logging
+    if (isDebugMode) {
+      console.log(`🔍 DEBUG: Event tracked - ${eventType}`, {
+        event_type: eventType,
+        event_data: enhancedEventData,
+        timestamp: new Date().toISOString(),
+        session_id: getSessionId(),
+        measurement_id: GA4_MEASUREMENT_ID
+      });
+    }
+    
     // Store in local storage for offline tracking
     storeEventLocally(eventType, enhancedEventData);
     
     return result;
   } catch (error) {
-    console.error(`Error tracking event ${eventType}:`, error);
+    console.error(`❌ Error tracking event ${eventType}:`, error);
     return false;
   }
 };

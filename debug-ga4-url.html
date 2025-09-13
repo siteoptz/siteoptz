@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>GA4 Debug Mode URL Test</title>
+</head>
+<body>
+    <h1>🔍 GA4 Debug Mode URL Test</h1>
+    <p>This page will automatically redirect with debug_mode=true parameter</p>
+    
+    <script>
+        // Redirect to enable debug mode if not already present
+        if (!window.location.search.includes('debug_mode=true')) {
+            const currentUrl = window.location.href.split('?')[0];
+            window.location.href = currentUrl + '?debug_mode=true';
+        } else {
+            document.write('<p style="color: green;">✅ Debug mode is enabled via URL parameter!</p>');
+            document.write('<button onclick="window.open(\\'test-ga4-events.html?debug_mode=true\\', \\'_blank\\')">Open Test Page with Debug Mode</button>');
+        }
+    </script>
+</body>
+</html>

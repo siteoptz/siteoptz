@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple GA4 Test - SiteOptz.ai</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 50px auto;
+            padding: 40px;
+            background: #f5f5f5;
+        }
+        .container {
+            background: white;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+        }
+        h1 {
+            color: #333;
+            text-align: center;
+        }
+        button {
+            background: #4CAF50;
+            color: white;
+            border: none;
+            padding: 15px 30px;
+            margin: 10px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            display: block;
+            width: 100%;
+        }
+        button:hover {
+            background: #45a049;
+        }
+        .status {
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 5px;
+            font-weight: bold;
+        }
+        .success { background: #d4edda; color: #155724; }
+        .error { background: #f8d7da; color: #721c24; }
+        .info { background: #d1ecf1; color: #0c5460; }
+        .console-output {
+            background: #2d2d2d;
+            color: #fff;
+            padding: 15px;
+            border-radius: 5px;
+            font-family: monospace;
+            white-space: pre-wrap;
+            max-height: 300px;
+            overflow-y: auto;
+            margin: 20px 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🔍 Simple GA4 Connection Test</h1>
+        
+        <div id="status" class="status info">
+            Initializing... Please wait 3 seconds for GA4 to load.
+        </div>
+        
+        <button onclick="testBasicEvent()">Test Basic Event</button>
+        <button onclick="testEmailCaptureEvent()">Test Email Capture Event</button>
+        <button onclick="testCTAClickEvent()">Test CTA Click Event</button>
+        <button onclick="checkGtagStatus()">Check gtag Status</button>
+        <button onclick="clearConsole()">Clear Console</button>
+        
+        <div class="console-output" id="console-output">
+            Console output will appear here...
+        </div>
+    </div>
+
+    <!-- Google Analytics 4 -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-06WK4MZERF"></script>
+    <script>
+        let consoleOutput = [];
+        
+        // Override console.log to capture output
+        const originalConsoleLog = console.log;
+        console.log = function(...args) {
+            originalConsoleLog.apply(console, args);
+            const message = args.map(arg => typeof arg === 'object' ? JSON.stringify(arg, null, 2) : arg).join(' ');
+            consoleOutput.push(`${new Date().toLocaleTimeString()}: ${message}`);
+            updateConsoleDisplay();
+        };
+        
+        function updateConsoleDisplay() {
+            const outputEl = document.getElementById('console-output');
+            outputEl.textContent = consoleOutput.slice(-20).join('\n'); // Show last 20 messages
+            outputEl.scrollTop = outputEl.scrollHeight;
+        }
+        
+        function clearConsole() {
+            consoleOutput = [];
+            updateConsoleDisplay();
+        }
+        
+        function updateStatus(message, type = 'info') {
+            const statusEl = document.getElementById('status');
+            statusEl.textContent = message;
+            statusEl.className = `status ${type}`;
+        }
+        
+        // Initialize GA4
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        
+        console.log('🎯 Initializing GA4...');
+        
+        gtag('config', 'G-06WK4MZERF', {
+            debug_mode: true,
+            send_page_view: false
+        });
+        
+        console.log('✅ GA4 config sent');
+        
+        // Test functions
+        function testBasicEvent() {
+            console.log('📤 Sending basic test event...');
+            
+            if (typeof gtag === 'undefined') {
+                updateStatus('❌ ERROR: gtag is not defined!', 'error');
+                console.log('❌ gtag is not available');
+                return;
+            }
+            
+            gtag('event', 'test_basic_event', {
+                event_category: 'test',
+                event_label: 'basic_test',
+                debug_mode: true,
+                timestamp: Date.now()
+            });
+            
+            updateStatus('✅ Basic event sent! Check GA4 DebugView', 'success');
+            console.log('✅ Basic test event sent to GA4');
+        }
+        
+        function testEmailCaptureEvent() {
+            console.log('📧 Sending email capture event...');
+            
+            gtag('event', 'email_capture', {
+                event_category: 'lead_generation',
+                event_label: 'test_email_capture',
+                source: 'simple_test',
+                tool_context: 'chatgpt',
+                value: 10,
+                debug_mode: true
+            });
+            
+            updateStatus('✅ Email capture event sent!', 'success');
+            console.log('✅ Email capture event sent to GA4');
+        }
+        
+        function testCTAClickEvent() {
+            console.log('🖱️ Sending CTA click event...');
+            
+            gtag('event', 'cta_click', {
+                event_category: 'engagement',
+                event_label: 'test_cta_click',
+                cta_type: 'pricing_button',
+                tool_name: 'chatgpt',
+                cta_position: 'test_area',
+                value: 1,
+                debug_mode: true
+            });
+            
+            updateStatus('✅ CTA click event sent!', 'success');
+            console.log('✅ CTA click event sent to GA4');
+        }
+        
+        function checkGtagStatus() {
+            console.log('🔍 Checking gtag status...');
+            
+            const status = {
+                gtag_available: typeof gtag !== 'undefined',
+                dataLayer_available: typeof dataLayer !== 'undefined',
+                dataLayer_length: dataLayer ? dataLayer.length : 0,
+                debug_mode: window.location.search.includes('debug_mode=true'),
+                measurement_id: 'G-06WK4MZERF'
+            };
+            
+            console.log('📊 GA4 Status:', status);
+            
+            if (status.gtag_available) {
+                updateStatus('✅ gtag is available and ready', 'success');
+            } else {
+                updateStatus('❌ gtag is not available', 'error');
+            }
+        }
+        
+        // Wait for GA4 to load, then check status
+        setTimeout(() => {
+            console.log('⏰ 3 seconds elapsed, checking status...');
+            checkGtagStatus();
+            
+            // Send initial page view
+            if (typeof gtag !== 'undefined') {
+                gtag('event', 'page_view', {
+                    page_title: document.title,
+                    page_location: window.location.href,
+                    event_category: 'engagement',
+                    debug_mode: true
+                });
+                console.log('📄 Initial page_view sent');
+                updateStatus('🎯 GA4 loaded successfully! Ready to test events.', 'success');
+            } else {
+                updateStatus('❌ GA4 failed to load. Check your internet connection.', 'error');
+            }
+        }, 3000);
+        
+        // Log dataLayer pushes
+        const originalPush = dataLayer.push;
+        dataLayer.push = function(...args) {
+            console.log('📊 dataLayer.push:', args);
+            return originalPush.apply(this, args);
+        };
+        
+        console.log('🚀 Simple GA4 test page loaded');
+    </script>
+</body>
+</html>

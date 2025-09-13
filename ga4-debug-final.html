@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GA4 Debug Test - Final</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background: #f0f2f5;
+        }
+        .container {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 2px 20px rgba(0,0,0,0.1);
+        }
+        h1 { color: #1976d2; text-align: center; }
+        .status {
+            padding: 15px;
+            border-radius: 8px;
+            margin: 20px 0;
+            font-weight: bold;
+        }
+        .success { background: #d4edda; color: #155724; }
+        .error { background: #f8d7da; color: #721c24; }
+        .warning { background: #fff3cd; color: #856404; }
+        button {
+            background: #1976d2;
+            color: white;
+            border: none;
+            padding: 12px 24px;
+            border-radius: 6px;
+            cursor: pointer;
+            margin: 8px;
+            font-size: 14px;
+        }
+        button:hover { background: #1565c0; }
+        .info-box {
+            background: #e3f2fd;
+            border-left: 4px solid #1976d2;
+            padding: 15px;
+            margin: 20px 0;
+        }
+        .console {
+            background: #263238;
+            color: #fff;
+            padding: 15px;
+            border-radius: 5px;
+            font-family: monospace;
+            white-space: pre-wrap;
+            max-height: 300px;
+            overflow-y: auto;
+            margin: 15px 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🔍 GA4 Debug Mode - Final Test</h1>
+        
+        <div id="status" class="status warning">
+            Initializing GA4 Debug Mode...
+        </div>
+        
+        <div class="info-box">
+            <h3>📋 Instructions:</h3>
+            <ol>
+                <li>Open GA4 DebugView in another tab: <a href="https://analytics.google.com/analytics/web/#/a/p/debugview" target="_blank">GA4 DebugView</a></li>
+                <li>Wait for the status to show "Ready"</li>
+                <li>Click the test buttons below</li>
+                <li>Watch for events in GA4 DebugView (may take 10-30 seconds)</li>
+            </ol>
+        </div>
+        
+        <div>
+            <button onclick="sendTestEvent1()">🧪 Test Event 1 (Basic)</button>
+            <button onclick="sendTestEvent2()">📧 Test Event 2 (Email Capture)</button>
+            <button onclick="sendTestEvent3()">🖱️ Test Event 3 (CTA Click)</button>
+            <button onclick="sendTestEvent4()">📄 Test Event 4 (Page View)</button>
+            <button onclick="checkStatus()">🔍 Check Status</button>
+        </div>
+        
+        <div class="console" id="console-log">
+            Console log will appear here...
+        </div>
+    </div>
+
+    <!-- Google Analytics 4 with Debug Mode -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-06WK4MZERF"></script>
+    <script>
+        let logMessages = [];
+        
+        function log(message) {
+            const timestamp = new Date().toLocaleTimeString();
+            const logMessage = `[${timestamp}] ${message}`;
+            logMessages.push(logMessage);
+            console.log(message);
+            updateConsoleDisplay();
+        }
+        
+        function updateConsoleDisplay() {
+            document.getElementById('console-log').textContent = logMessages.slice(-20).join('\n');
+        }
+        
+        function updateStatus(message, type = 'warning') {
+            const statusEl = document.getElementById('status');
+            statusEl.textContent = message;
+            statusEl.className = `status ${type}`;
+        }
+        
+        // Initialize GA4
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        
+        log('🎯 Starting GA4 initialization...');
+        
+        // METHOD 1: Enable debug mode through gtag config
+        gtag('config', 'G-06WK4MZERF', {
+            debug_mode: true,
+            send_page_view: false
+        });
+        
+        log('✅ GA4 config with debug_mode: true sent');
+        
+        // METHOD 2: Set debug mode via dataLayer
+        gtag('set', { debug_mode: true });
+        log('✅ Debug mode set via gtag set');
+        
+        // METHOD 3: Add URL parameter check
+        function enableDebugMode() {
+            if (!window.location.search.includes('debug_mode=true')) {
+                log('⚠️ Adding debug_mode=true to URL...');
+                const newUrl = window.location.href + (window.location.href.includes('?') ? '&' : '?') + 'debug_mode=true';
+                window.location.href = newUrl;
+                return;
+            }
+            log('✅ debug_mode=true found in URL');
+        }
+        
+        // Enable debug mode
+        enableDebugMode();
+        
+        // Test functions
+        function sendTestEvent1() {
+            log('📤 Sending Test Event 1...');
+            gtag('event', 'test_basic_event', {
+                event_category: 'debug_test',
+                event_label: 'basic_test_1',
+                custom_parameter: 'test_value_1',
+                debug_mode: true,
+                timestamp: Date.now()
+            });
+            updateStatus('✅ Test Event 1 sent! Check GA4 DebugView', 'success');
+            log('✅ Test Event 1 sent to GA4');
+        }
+        
+        function sendTestEvent2() {
+            log('📧 Sending Email Capture Event...');
+            gtag('event', 'email_capture', {
+                event_category: 'lead_generation',
+                event_label: 'test_email_capture',
+                source: 'debug_test_page',
+                tool_context: 'chatgpt',
+                email_domain: 'test.com',
+                debug_mode: true,
+                value: 10
+            });
+            updateStatus('✅ Email Capture Event sent!', 'success');
+            log('✅ Email Capture Event sent to GA4');
+        }
+        
+        function sendTestEvent3() {
+            log('🖱️ Sending CTA Click Event...');
+            gtag('event', 'cta_click', {
+                event_category: 'engagement',
+                event_label: 'test_cta_button_click',
+                cta_type: 'pricing_button',
+                tool_name: 'chatgpt',
+                cta_position: 'debug_test_section',
+                debug_mode: true,
+                value: 1
+            });
+            updateStatus('✅ CTA Click Event sent!', 'success');
+            log('✅ CTA Click Event sent to GA4');
+        }
+        
+        function sendTestEvent4() {
+            log('📄 Sending Page View Event...');
+            gtag('event', 'page_view', {
+                page_title: document.title,
+                page_location: window.location.href,
+                event_category: 'engagement',
+                debug_mode: true
+            });
+            updateStatus('✅ Page View Event sent!', 'success');
+            log('✅ Page View Event sent to GA4');
+        }
+        
+        function checkStatus() {
+            log('🔍 Checking GA4 status...');
+            
+            const status = {
+                gtag_available: typeof gtag !== 'undefined',
+                dataLayer_exists: typeof dataLayer !== 'undefined',
+                dataLayer_length: dataLayer ? dataLayer.length : 0,
+                debug_mode_url: window.location.search.includes('debug_mode=true'),
+                measurement_id: 'G-06WK4MZERF',
+                page_url: window.location.href
+            };
+            
+            log(`📊 Status: ${JSON.stringify(status, null, 2)}`);
+            
+            if (status.gtag_available && status.dataLayer_exists) {
+                updateStatus('✅ GA4 is ready for testing', 'success');
+            } else {
+                updateStatus('❌ GA4 setup issue detected', 'error');
+            }
+        }
+        
+        // Wait for GA4 to fully load
+        setTimeout(() => {
+            log('⏰ GA4 initialization complete');
+            checkStatus();
+            
+            // Send initial page view
+            sendTestEvent4();
+            
+            updateStatus('🎯 Ready for testing! Click buttons and check GA4 DebugView', 'success');
+        }, 3000);
+        
+        log('🚀 Debug test page loaded');
+    </script>
+</body>
+</html>

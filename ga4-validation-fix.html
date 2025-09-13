@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>GA4 Validation Fix</title>
+    <style>
+        body { font-family: Arial, sans-serif; padding: 20px; max-width: 800px; margin: 0 auto; }
+        .test-box { background: #f0f8ff; padding: 20px; margin: 20px 0; border-radius: 8px; border-left: 4px solid #1976d2; }
+        button { background: #4CAF50; color: white; padding: 15px 25px; border: none; border-radius: 5px; cursor: pointer; margin: 10px; font-size: 16px; }
+        .success { background: #d4edda; color: #155724; padding: 15px; border-radius: 5px; margin: 10px 0; }
+        .log { background: #2d2d2d; color: #fff; padding: 15px; font-family: monospace; white-space: pre-wrap; max-height: 300px; overflow-y: auto; border-radius: 5px; }
+    </style>
+</head>
+<body>
+    <h1>🔧 GA4 Validation Fix</h1>
+    
+    <div class="success">
+        ✅ <strong>Problem Identified:</strong> Event validation errors<br>
+        🎯 <strong>Solution:</strong> Use proper GA4 event format
+    </div>
+
+    <div class="test-box">
+        <h3>✅ Test 1: Standard GA4 Events</h3>
+        <p>These use Google's recommended event names and parameters:</p>
+        <button onclick="sendPageView()">📄 Send page_view</button>
+        <button onclick="sendPurchase()">💰 Send purchase</button>
+        <button onclick="sendLogin()">🔐 Send login</button>
+        <button onclick="sendSignUp()">📝 Send sign_up</button>
+    </div>
+
+    <div class="test-box">
+        <h3>✅ Test 2: Custom Events (Properly Formatted)</h3>
+        <p>Custom events with GA4-compliant parameter names:</p>
+        <button onclick="sendEmailCapture()">📧 Send email_capture</button>
+        <button onclick="sendCTAClick()">🖱️ Send cta_click</button>
+        <button onclick="sendToolComparison()">⚖️ Send tool_comparison</button>
+    </div>
+
+    <div class="test-box">
+        <h3>📊 Event Log</h3>
+        <div id="event-log" class="log">Events will be logged here...</div>
+    </div>
+
+    <script>
+        let eventCount = 0;
+        
+        function logEvent(eventName, parameters) {
+            eventCount++;
+            const timestamp = new Date().toLocaleTimeString();
+            const logDiv = document.getElementById('event-log');
+            
+            const logEntry = `[${timestamp}] Event ${eventCount}: ${eventName}\n${JSON.stringify(parameters, null, 2)}\n\n`;
+            logDiv.textContent += logEntry;
+            logDiv.scrollTop = logDiv.scrollHeight;
+            
+            console.log(`Event sent: ${eventName}`, parameters);
+        }
+
+        // Standard GA4 Events (These should always work)
+        function sendPageView() {
+            const parameters = {
+                page_title: document.title,
+                page_location: window.location.href
+            };
+            
+            gtag('event', 'page_view', parameters);
+            logEvent('page_view', parameters);
+        }
+
+        function sendPurchase() {
+            const parameters = {
+                transaction_id: 'test_' + Date.now(),
+                value: 25.99,
+                currency: 'USD',
+                items: [{
+                    item_id: 'chatgpt_pro',
+                    item_name: 'ChatGPT Pro',
+                    category: 'AI Tools',
+                    quantity: 1,
+                    price: 25.99
+                }]
+            };
+            
+            gtag('event', 'purchase', parameters);
+            logEvent('purchase', parameters);
+        }
+
+        function sendLogin() {
+            const parameters = {
+                method: 'google'
+            };
+            
+            gtag('event', 'login', parameters);
+            logEvent('login', parameters);
+        }
+
+        function sendSignUp() {
+            const parameters = {
+                method: 'email'
+            };
+            
+            gtag('event', 'sign_up', parameters);
+            logEvent('sign_up', parameters);
+        }
+
+        // Custom Events (Properly Formatted)
+        function sendEmailCapture() {
+            // Remove problematic parameters, use only GA4-compliant ones
+            const parameters = {
+                method: 'newsletter',
+                content: 'ai_tools_guide',
+                value: 1
+            };
+            
+            gtag('event', 'generate_lead', parameters);
+            logEvent('generate_lead', parameters);
+        }
+
+        function sendCTAClick() {
+            // Use standard GA4 event with proper parameters
+            const parameters = {
+                link_domain: 'siteoptz.ai',
+                link_url: '/pricing',
+                outbound: false
+            };
+            
+            gtag('event', 'click', parameters);
+            logEvent('click', parameters);
+        }
+
+        function sendToolComparison() {
+            // Custom event with simple, valid parameters
+            const parameters = {
+                content_type: 'comparison',
+                item_id: 'chatgpt_vs_jasper',
+                value: 1
+            };
+            
+            gtag('event', 'view_item', parameters);
+            logEvent('view_item', parameters);
+        }
+
+        console.log('GA4 Validation Fix page loaded');
+    </script>
+
+    <!-- GA4 Script with Enhanced Error Handling -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-06WK4MZERF"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        // Configure GA4 with minimal, valid configuration
+        gtag('config', 'G-06WK4MZERF', {
+            debug_mode: true,
+            send_page_view: false  // We'll send manually
+        });
+
+        // Override gtag to catch errors
+        const originalGtag = gtag;
+        gtag = function(command, eventName, parameters) {
+            try {
+                console.log(`🔄 Sending ${command}: ${eventName}`, parameters);
+                return originalGtag.apply(this, arguments);
+            } catch (error) {
+                console.error(`❌ GA4 Error: ${error.message}`);
+                return false;
+            }
+        };
+
+        // Send a clean page view after load
+        setTimeout(() => {
+            sendPageView();
+        }, 2000);
+
+        console.log('GA4 configured with debug mode and error handling');
+    </script>
+</body>
+</html>

@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enable GA4 Debug Mode - SiteOptz.ai</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 40px 20px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+        }
+        .container {
+            background: white;
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+        }
+        h1 {
+            color: #333;
+            text-align: center;
+            margin-bottom: 10px;
+        }
+        .subtitle {
+            text-align: center;
+            color: #666;
+            margin-bottom: 30px;
+        }
+        .measurement-id {
+            background: #f0f0f0;
+            padding: 10px 15px;
+            border-radius: 5px;
+            font-family: monospace;
+            display: inline-block;
+            margin: 10px 0;
+        }
+        .section {
+            margin: 30px 0;
+            padding: 20px;
+            border: 1px solid #e0e0e0;
+            border-radius: 8px;
+            background: #fafafa;
+        }
+        h2 {
+            color: #555;
+            margin-top: 0;
+            font-size: 18px;
+        }
+        button {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border: none;
+            padding: 12px 24px;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 16px;
+            margin: 5px;
+            transition: transform 0.2s;
+        }
+        button:hover {
+            transform: translateY(-2px);
+        }
+        button:disabled {
+            background: #ccc;
+            cursor: not-allowed;
+            transform: none;
+        }
+        .status {
+            padding: 15px;
+            border-radius: 8px;
+            margin: 20px 0;
+            font-weight: 500;
+        }
+        .status.enabled {
+            background: #d4edda;
+            color: #155724;
+            border: 1px solid #c3e6cb;
+        }
+        .status.disabled {
+            background: #f8d7da;
+            color: #721c24;
+            border: 1px solid #f5c6cb;
+        }
+        .code-block {
+            background: #2d2d2d;
+            color: #f8f8f2;
+            padding: 15px;
+            border-radius: 5px;
+            overflow-x: auto;
+            font-family: 'Courier New', monospace;
+            font-size: 14px;
+            margin: 10px 0;
+        }
+        .instructions {
+            background: #e3f2fd;
+            border-left: 4px solid #2196F3;
+            padding: 15px;
+            margin: 20px 0;
+        }
+        .instructions h3 {
+            margin-top: 0;
+            color: #1976D2;
+        }
+        ul {
+            line-height: 1.8;
+        }
+        .success-message {
+            display: none;
+            background: #4CAF50;
+            color: white;
+            padding: 15px;
+            border-radius: 8px;
+            margin: 20px 0;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🔍 GA4 Debug Mode Controller</h1>
+        <p class="subtitle">Manage Google Analytics 4 Debug Mode for SiteOptz.ai</p>
+        
+        <div class="section">
+            <h2>📊 Current Configuration</h2>
+            <p>GA4 Measurement ID: <span class="measurement-id">G-06WK4MZERF</span></p>
+            <div id="debug-status" class="status disabled">
+                Debug Mode: <strong>CHECKING...</strong>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>🎛️ Debug Mode Controls</h2>
+            <button onclick="enableDebugMode()">Enable Debug Mode</button>
+            <button onclick="disableDebugMode()">Disable Debug Mode</button>
+            <button onclick="testWithUrlParam()">Test with URL Parameter</button>
+            <button onclick="checkDebugStatus()">Check Status</button>
+        </div>
+
+        <div class="section">
+            <h2>🧪 Test Debug Mode</h2>
+            <button onclick="sendTestEvent()">Send Test Event</button>
+            <button onclick="openDebugView()">Open GA4 DebugView</button>
+            <button onclick="openTestPage()">Open Full Test Page</button>
+        </div>
+
+        <div class="instructions">
+            <h3>📖 How to Use Debug Mode</h3>
+            <ul>
+                <li><strong>Method 1:</strong> Click "Enable Debug Mode" to activate it for this browser</li>
+                <li><strong>Method 2:</strong> Add <code>?debug_mode=true</code> to any page URL</li>
+                <li><strong>Method 3:</strong> Use the Google Analytics Debugger Chrome extension</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2>💻 Implementation Code</h2>
+            <p>Add this to your site's analytics initialization:</p>
+            <div class="code-block">// Google Analytics 4 Configuration
+gtag('config', 'G-06WK4MZERF', {
+    debug_mode: true,  // Enable for testing
+    send_page_view: true
+});</div>
+            <p>Or use the enhanced tracker initialization:</p>
+            <div class="code-block">import { initKeyEventsTracking } from './utils/key-events-tracker.js';
+
+// Initialize with debug mode
+initKeyEventsTracking({
+    debug_mode: true,
+    GA4_ID: 'G-06WK4MZERF'
+});</div>
+        </div>
+
+        <div id="success-message" class="success-message">
+            ✅ Debug mode has been updated successfully!
+        </div>
+    </div>
+
+    <!-- Google Analytics 4 -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-06WK4MZERF"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        
+        // Check initial debug mode status
+        const urlHasDebug = window.location.search.includes('debug_mode=true');
+        const localStorageDebug = localStorage.getItem('ga_debug_mode') === 'true';
+        const isDebugMode = urlHasDebug || localStorageDebug;
+        
+        gtag('config', 'G-06WK4MZERF', {
+            debug_mode: isDebugMode,
+            send_page_view: true
+        });
+        
+        // Functions
+        function checkDebugStatus() {
+            const urlHasDebug = window.location.search.includes('debug_mode=true');
+            const localStorageDebug = localStorage.getItem('ga_debug_mode') === 'true';
+            const isEnabled = urlHasDebug || localStorageDebug;
+            
+            const statusEl = document.getElementById('debug-status');
+            if (isEnabled) {
+                statusEl.className = 'status enabled';
+                statusEl.innerHTML = 'Debug Mode: <strong>ENABLED</strong> ✅';
+            } else {
+                statusEl.className = 'status disabled';
+                statusEl.innerHTML = 'Debug Mode: <strong>DISABLED</strong> ❌';
+            }
+            
+            console.log('🔍 Debug Mode Status:', {
+                url_parameter: urlHasDebug,
+                local_storage: localStorageDebug,
+                overall: isEnabled
+            });
+            
+            return isEnabled;
+        }
+        
+        function enableDebugMode() {
+            localStorage.setItem('ga_debug_mode', 'true');
+            
+            // Reinitialize gtag with debug mode
+            gtag('config', 'G-06WK4MZERF', {
+                debug_mode: true
+            });
+            
+            checkDebugStatus();
+            showSuccessMessage();
+            
+            console.log('✅ Debug mode enabled');
+            
+            // Send a test event
+            gtag('event', 'debug_mode_enabled', {
+                method: 'button_click',
+                timestamp: new Date().toISOString()
+            });
+        }
+        
+        function disableDebugMode() {
+            localStorage.removeItem('ga_debug_mode');
+            
+            // Reinitialize gtag without debug mode
+            gtag('config', 'G-06WK4MZERF', {
+                debug_mode: false
+            });
+            
+            checkDebugStatus();
+            showSuccessMessage();
+            
+            console.log('❌ Debug mode disabled');
+        }
+        
+        function testWithUrlParam() {
+            const currentUrl = window.location.href.split('?')[0];
+            window.location.href = currentUrl + '?debug_mode=true';
+        }
+        
+        function sendTestEvent() {
+            const eventData = {
+                event_category: 'test',
+                event_label: 'debug_test',
+                value: Math.floor(Math.random() * 100),
+                timestamp: new Date().toISOString(),
+                debug_mode: checkDebugStatus()
+            };
+            
+            gtag('event', 'test_event', eventData);
+            
+            console.log('📤 Test event sent:', eventData);
+            alert('Test event sent! Check GA4 DebugView to see it.');
+        }
+        
+        function openDebugView() {
+            // This is a placeholder URL - update with your actual GA4 property
+            window.open('https://analytics.google.com/analytics/web/#/a/p/debugview/', '_blank');
+        }
+        
+        function openTestPage() {
+            window.open('test-ga4-events.html', '_blank');
+        }
+        
+        function showSuccessMessage() {
+            const msg = document.getElementById('success-message');
+            msg.style.display = 'block';
+            setTimeout(() => {
+                msg.style.display = 'none';
+            }, 3000);
+        }
+        
+        // Check status on load
+        window.addEventListener('DOMContentLoaded', () => {
+            checkDebugStatus();
+            
+            // Log initial state
+            console.log('🎯 GA4 Debug Mode Controller Loaded', {
+                measurement_id: 'G-06WK4MZERF',
+                debug_mode: checkDebugStatus(),
+                page: window.location.href
+            });
+        });
+    </script>
+</body>
+</html>

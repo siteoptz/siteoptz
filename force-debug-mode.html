@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Force GA4 Debug Mode</title>
+    <style>
+        body { font-family: Arial, sans-serif; max-width: 800px; margin: 50px auto; padding: 20px; }
+        .step { background: #f0f8ff; padding: 15px; margin: 15px 0; border-left: 4px solid #1976d2; }
+        button { background: #1976d2; color: white; padding: 15px 30px; border: none; border-radius: 5px; cursor: pointer; margin: 10px; font-size: 16px; }
+        button:hover { background: #1565c0; }
+        .success { background: #d4edda; color: #155724; padding: 15px; border-radius: 5px; }
+        .code { background: #2d2d2d; color: #fff; padding: 15px; border-radius: 5px; font-family: monospace; }
+    </style>
+</head>
+<body>
+    <h1>🔧 Force GA4 Debug Mode</h1>
+    
+    <div class="step">
+        <h3>Step 1: Enable Debug Mode Multiple Ways</h3>
+        <button onclick="enableAllDebugMethods()">🚀 Enable All Debug Methods</button>
+        <p>This will enable debug mode using URL parameter, localStorage, and gtag configuration.</p>
+    </div>
+    
+    <div class="step">
+        <h3>Step 2: Send Test Event with Enhanced Parameters</h3>
+        <button onclick="sendEnhancedTestEvent()">📤 Send Enhanced Test Event</button>
+        <p>This sends an event with all possible debug parameters.</p>
+    </div>
+    
+    <div class="step">
+        <h3>Step 3: Check Debug Status</h3>
+        <button onclick="checkDebugStatus()">🔍 Check All Debug Settings</button>
+        <div id="debug-status"></div>
+    </div>
+    
+    <div class="step">
+        <h3>Step 4: Alternative - Use URL Parameter Method</h3>
+        <button onclick="redirectWithDebugMode()">🔄 Reload with ?debug_mode=true</button>
+        <p>This will reload the page with the debug_mode URL parameter.</p>
+    </div>
+    
+    <div id="log" style="background: #f5f5f5; padding: 15px; margin: 20px 0; border-radius: 5px; font-family: monospace; white-space: pre-wrap; max-height: 300px; overflow-y: auto;"></div>
+
+    <!-- GA4 with Debug Mode -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-06WK4MZERF"></script>
+    <script>
+        const log = (message) => {
+            const logEl = document.getElementById('log');
+            const timestamp = new Date().toLocaleTimeString();
+            logEl.textContent += `[${timestamp}] ${message}\n`;
+            logEl.scrollTop = logEl.scrollHeight;
+            console.log(message);
+        };
+
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        // Initialize with debug mode
+        gtag('config', 'G-06WK4MZERF', {
+            debug_mode: true,
+            send_page_view: false
+        });
+
+        log('GA4 initialized with debug_mode: true');
+
+        function enableAllDebugMethods() {
+            // Method 1: Set in localStorage
+            localStorage.setItem('ga_debug_mode', 'true');
+            log('✅ localStorage ga_debug_mode set to true');
+
+            // Method 2: Set via gtag
+            gtag('set', { debug_mode: true });
+            log('✅ gtag set debug_mode: true');
+
+            // Method 3: Configure again with debug mode
+            gtag('config', 'G-06WK4MZERF', {
+                debug_mode: true,
+                send_page_view: false
+            });
+            log('✅ gtag config with debug_mode: true');
+
+            // Method 4: Set on window object (some implementations check this)
+            window.ga_debug = true;
+            log('✅ window.ga_debug set to true');
+
+            // Method 5: Add to dataLayer directly
+            dataLayer.push({'debug_mode': true});
+            log('✅ debug_mode pushed to dataLayer');
+
+            document.getElementById('debug-status').innerHTML = '<div class="success">✅ All debug methods enabled!</div>';
+        }
+
+        function sendEnhancedTestEvent() {
+            const eventData = {
+                // Standard GA4 parameters
+                event_category: 'debug_test',
+                event_label: 'force_debug_test',
+                value: 1,
+                
+                // Debug-specific parameters
+                debug_mode: true,
+                send_to: 'G-06WK4MZERF',
+                
+                // Enhanced parameters
+                custom_map: {'custom_parameter_1': 'test_value'},
+                user_id: 'debug_user_' + Date.now(),
+                session_id: 'debug_session_' + Date.now(),
+                
+                // Page parameters
+                page_title: document.title,
+                page_location: window.location.href,
+                page_referrer: document.referrer,
+                
+                // Technical parameters
+                timestamp: Date.now(),
+                debug_target: 'G-06WK4MZERF',
+                development_device: true
+            };
+
+            log('📤 Sending enhanced test event...');
+            log(`Event data: ${JSON.stringify(eventData, null, 2)}`);
+
+            gtag('event', 'force_debug_test', eventData);
+
+            log('✅ Enhanced test event sent with all debug parameters');
+            log('🔍 Check GA4 DebugView now - event should appear within 30 seconds');
+
+            // Also try sending as custom event
+            setTimeout(() => {
+                gtag('event', 'custom_debug_event', {
+                    event_category: 'custom',
+                    event_label: 'manual_debug',
+                    debug_mode: true,
+                    force_debug: true,
+                    timestamp: Date.now()
+                });
+                log('📤 Additional custom debug event sent');
+            }, 2000);
+        }
+
+        function checkDebugStatus() {
+            const status = {
+                gtag_available: typeof gtag !== 'undefined',
+                dataLayer_length: dataLayer ? dataLayer.length : 0,
+                localStorage_debug: localStorage.getItem('ga_debug_mode'),
+                url_debug_param: window.location.search.includes('debug_mode=true'),
+                window_ga_debug: window.ga_debug,
+                user_agent: navigator.userAgent.substring(0, 50) + '...',
+                current_url: window.location.href,
+                measurement_id: 'G-06WK4MZERF'
+            };
+
+            const statusHtml = Object.entries(status)
+                .map(([key, value]) => `<strong>${key}:</strong> ${value}`)
+                .join('<br>');
+
+            document.getElementById('debug-status').innerHTML = `
+                <div style="background: #e3f2fd; padding: 15px; border-radius: 5px; margin: 10px 0;">
+                    <h4>🔍 Debug Status:</h4>
+                    ${statusHtml}
+                </div>
+            `;
+
+            log(`🔍 Debug Status Check: ${JSON.stringify(status, null, 2)}`);
+        }
+
+        function redirectWithDebugMode() {
+            const currentUrl = window.location.href.split('?')[0];
+            const newUrl = currentUrl + '?debug_mode=true&timestamp=' + Date.now();
+            log(`🔄 Redirecting to: ${newUrl}`);
+            window.location.href = newUrl;
+        }
+
+        // Auto-enable debug mode when page loads
+        setTimeout(() => {
+            enableAllDebugMethods();
+            
+            // Send initial test event
+            setTimeout(() => {
+                sendEnhancedTestEvent();
+            }, 2000);
+        }, 1000);
+
+        log('🚀 Force Debug Mode page loaded');
+        log('📋 Instructions:');
+        log('1. Click "Enable All Debug Methods"');
+        log('2. Click "Send Enhanced Test Event"');
+        log('3. Check GA4 DebugView in 30-60 seconds');
+        log('4. If still not working, try the Chrome extension method');
+    </script>
+</body>
+</html>

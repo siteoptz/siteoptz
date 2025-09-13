@@ -207,15 +207,27 @@
     </div>
 
     <!-- Google Analytics 4 -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-06WK4MZERF"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
         function gtag(){dataLayer.push(arguments);}
         gtag('js', new Date());
-        gtag('config', 'G-XXXXXXXXXX', {
+        // Configure GA4 with enhanced debugging
+        gtag('config', 'G-06WK4MZERF', {
             debug_mode: true,
-            send_page_view: true
+            send_page_view: false // We'll send this manually
         });
+        
+        // Send initial page view after a short delay
+        setTimeout(() => {
+            gtag('event', 'page_view', {
+                page_title: document.title,
+                page_location: window.location.href,
+                event_category: 'engagement',
+                debug_mode: true
+            });
+            console.log('📄 Manual page_view sent to GA4');
+        }, 1000);
     </script>
 
     <!-- Key Events Tracker -->
@@ -235,27 +247,41 @@
             }
 
             trackKeyEvent(eventType, eventData = {}) {
+                // Clean event data for GA4 (remove undefined values)
+                const cleanEventData = {};
+                Object.keys(eventData).forEach(key => {
+                    if (eventData[key] !== undefined && eventData[key] !== null) {
+                        cleanEventData[key] = eventData[key];
+                    }
+                });
+
+                // Add required GA4 parameters
+                const ga4EventData = {
+                    ...cleanEventData,
+                    session_id: this.sessionId,
+                    debug_mode: true,
+                    page_location: window.location.href,
+                    page_title: document.title,
+                    timestamp: Date.now()
+                };
+
                 const event = {
                     event_type: eventType,
-                    event_data: {
-                        ...eventData,
-                        timestamp: Date.now(),
-                        session_id: this.sessionId,
-                        debug_mode: true,
-                        page_url: window.location.href,
-                        page_title: document.title
-                    },
+                    event_data: ga4EventData,
                     tracked_at: Date.now()
                 };
 
                 this.events.push(event);
                 
-                // Send to GA4
+                // Send to GA4 with proper formatting
                 if (typeof gtag !== 'undefined') {
-                    gtag('event', eventType, event.event_data);
+                    console.log(`📤 Sending to GA4: ${eventType}`, ga4EventData);
+                    gtag('event', eventType, ga4EventData);
+                } else {
+                    console.error('❌ gtag is not defined!');
                 }
 
-                console.log(`🔍 Event tracked: ${eventType}`, event.event_data);
+                console.log(`🔍 Event tracked: ${eventType}`, ga4EventData);
                 this.updateDebugDashboard();
                 
                 return event;
@@ -287,21 +313,23 @@
         // Test functions
         window.testEmailCapture = () => {
             const result = tracker.trackKeyEvent('email_capture', {
+                event_category: 'lead_generation',
+                event_label: 'test_page_email_capture',
                 source: 'test_page',
-                tool: 'chatgpt',
-                category: 'ai_tools',
+                tool_context: 'chatgpt',
                 email_domain: 'test.com',
-                label: 'email_capture_test_page'
+                value: 10
             });
             logTestResult('Email Capture', result, 'success');
         };
 
         window.testWebinarRegistration = () => {
             const result = tracker.trackKeyEvent('webinar_registration', {
+                event_category: 'lead_generation',
+                event_label: 'ai_tools_masterclass_2025',
                 webinar_title: 'AI Tools Masterclass 2025',
-                email: 'test@example.com',
                 source: 'test_page',
-                label: 'webinar_registration_test'
+                value: 25
             });
             logTestResult('Webinar Registration', result, 'success');
         };
@@ -400,10 +428,12 @@
 
         window.testCTAClick = () => {
             const result = tracker.trackKeyEvent('cta_click', {
+                event_category: 'engagement',
+                event_label: 'test_pricing_button_click',
                 cta_type: 'pricing_button',
                 tool_name: 'chatgpt',
-                position: 'test_section',
-                label: 'cta_click_test'
+                cta_position: 'test_section',
+                value: 1
             });
             logTestResult('CTA Click', result, 'success');
         };
@@ -561,15 +591,41 @@
             `;
         };
 
+        // Add a simple test to verify gtag is working
+        window.testGtagConnection = () => {
+            if (typeof gtag !== 'undefined') {
+                console.log('✅ gtag is available');
+                gtag('event', 'test_connection', {
+                    event_category: 'debug',
+                    event_label: 'connection_test',
+                    debug_mode: true,
+                    timestamp: Date.now()
+                });
+                alert('Test event sent! Check browser console and GA4 DebugView.');
+            } else {
+                console.error('❌ gtag is not available');
+                alert('❌ gtag is not loaded! Check your internet connection.');
+            }
+        };
+
+        // Add test button for gtag connection
+        window.addEventListener('DOMContentLoaded', () => {
+            const firstSection = document.querySelector('.test-section');
+            const testButton = document.createElement('button');
+            testButton.textContent = 'Test gtag Connection';
+            testButton.onclick = window.testGtagConnection;
+            testButton.style.backgroundColor = '#ff5722';
+            firstSection.appendChild(testButton);
+        });
+
         // Initialize page view
         setTimeout(() => {
             tracker.trackKeyEvent('page_view', {
-                page_title: document.title,
-                page_location: window.location.href,
-                referrer: document.referrer,
-                label: 'test_page_loaded'
+                event_category: 'engagement',
+                event_label: 'test_page_loaded',
+                page_type: 'test_page'
             });
-        }, 1000);
+        }, 2000);
     </script>
 </body>
 </html>

@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Manual Debug Mode</title>
+    <style>
+        body { font-family: Arial, sans-serif; padding: 20px; max-width: 800px; margin: 0 auto; }
+        .step { background: #e3f2fd; padding: 20px; margin: 20px 0; border-radius: 8px; border-left: 4px solid #1976d2; }
+        button { background: #4CAF50; color: white; padding: 15px 25px; border: none; border-radius: 5px; cursor: pointer; margin: 10px; font-size: 16px; }
+        .warning { background: #fff3e0; border-left: 4px solid #ff9800; padding: 15px; margin: 15px 0; }
+    </style>
+</head>
+<body>
+    <h1>🔧 Manual Debug Mode Setup</h1>
+    
+    <div class="step">
+        <h3>Method 1: Browser Console Command</h3>
+        <p>1. Open Developer Tools (F12)</p>
+        <p>2. Go to Console tab</p>
+        <p>3. Paste this command and press Enter:</p>
+        <code style="background: #f5f5f5; padding: 10px; display: block; margin: 10px 0;">
+gtag('config', 'G-06WK4MZERF', { debug_mode: true });<br>
+gtag('set', { debug_mode: true });<br>
+console.log('Debug mode forcefully enabled');
+        </code>
+        <button onclick="enableConsoleDebug()">Run Debug Commands</button>
+    </div>
+
+    <div class="step">
+        <h3>Method 2: Local Storage Override</h3>
+        <button onclick="setLocalStorageDebug()">Set localStorage Debug</button>
+        <p>This sets debug mode in browser storage</p>
+    </div>
+
+    <div class="step">
+        <h3>Method 3: URL Parameter Method</h3>
+        <button onclick="addDebugParameter()">Add ?debug_mode=true to URL</button>
+        <p>This reloads the page with debug parameter</p>
+    </div>
+
+    <div class="warning">
+        <h4>⚠️ If None of These Work:</h4>
+        <p>The issue might be that GA4 DebugView requires events to be sent from a recognized "development device". Some factors:</p>
+        <ul>
+            <li>GA4 might not recognize localhost/file:// URLs as development devices</li>
+            <li>Your IP address might not be recognized as a development environment</li>
+            <li>There might be a delay of up to 24 hours for new debug devices to be recognized</li>
+        </ul>
+        <p><strong>Solution:</strong> Use the Chrome extension - it's the most reliable method.</p>
+    </div>
+
+    <div class="step">
+        <h3>Test Events</h3>
+        <button onclick="sendTestEvent()">Send Test Event</button>
+        <div id="test-result"></div>
+    </div>
+
+    <script>
+        function enableConsoleDebug() {
+            if (typeof gtag !== 'undefined') {
+                gtag('config', 'G-06WK4MZERF', { debug_mode: true });
+                gtag('set', { debug_mode: true });
+                console.log('Debug mode forcefully enabled via console');
+                alert('Debug commands executed. Check console for confirmation.');
+            } else {
+                alert('gtag is not available. Make sure GA4 script loaded.');
+            }
+        }
+
+        function setLocalStorageDebug() {
+            localStorage.setItem('ga_debug_mode', 'true');
+            localStorage.setItem('gtag_debug', 'true');
+            localStorage.setItem('google_analytics_debug', 'true');
+            alert('Debug mode set in localStorage. Refresh the page.');
+        }
+
+        function addDebugParameter() {
+            const url = new URL(window.location.href);
+            url.searchParams.set('debug_mode', 'true');
+            url.searchParams.set('gtag_debug', '1');
+            window.location.href = url.toString();
+        }
+
+        function sendTestEvent() {
+            const resultDiv = document.getElementById('test-result');
+            
+            if (typeof gtag === 'undefined') {
+                resultDiv.innerHTML = '<p style="color: red;">❌ gtag not available</p>';
+                return;
+            }
+
+            const timestamp = Date.now();
+            gtag('event', 'manual_debug_test', {
+                debug_mode: true,
+                timestamp: timestamp,
+                test_method: 'manual_debug',
+                page_location: window.location.href
+            });
+
+            resultDiv.innerHTML = `<p style="color: green;">✅ Test event sent at ${new Date().toLocaleTimeString()}</p>`;
+            console.log('Manual debug test event sent');
+        }
+
+        // Auto-enable all debug methods
+        setTimeout(() => {
+            enableConsoleDebug();
+            setLocalStorageDebug();
+        }, 1000);
+    </script>
+
+    <!-- GA4 Script -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-06WK4MZERF"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        
+        // Check for debug parameters
+        const urlParams = new URLSearchParams(window.location.search);
+        const hasDebugParam = urlParams.has('debug_mode') || urlParams.has('gtag_debug');
+        const hasLocalStorage = localStorage.getItem('ga_debug_mode') === 'true';
+        
+        gtag('config', 'G-06WK4MZERF', {
+            debug_mode: true,
+            send_page_view: false
+        });
+
+        console.log('Manual debug mode page loaded with debug_mode enabled');
+        console.log('URL debug param:', hasDebugParam);
+        console.log('LocalStorage debug:', hasLocalStorage);
+    </script>
+</body>
+</html>

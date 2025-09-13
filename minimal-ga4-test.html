@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Minimal GA4 Test</title>
+</head>
+<body>
+    <h1>Minimal GA4 Test</h1>
+    <button onclick="sendEvent()">Send Test Event</button>
+    <p id="status">Click button to send event</p>
+
+    <!-- GA4 -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-06WK4MZERF"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-06WK4MZERF', {
+            debug_mode: true
+        });
+
+        function sendEvent() {
+            console.log('Sending event...');
+            gtag('event', 'test_button_click', {
+                event_category: 'test',
+                event_label: 'minimal_test',
+                debug_mode: true
+            });
+            document.getElementById('status').innerHTML = '✅ Event sent! Check GA4 DebugView in 30 seconds';
+            console.log('Event sent to GA4');
+        }
+        
+        console.log('Minimal GA4 test loaded');
+    </script>
+</body>
+</html>

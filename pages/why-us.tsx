@@ -220,7 +220,42 @@ export default function WhyUs() {
     }
   ];
 
-  const faqs = [
+  const pricingFaqs = [
+    {
+      question: "What's included in the Free AI Tool Discovery plan?",
+      answer: "The Free plan includes daily AI tool spotlights delivered via email, basic tool comparison features, access to our AI tool database with 100+ tools, weekly AI trends reports, and a basic ROI calculator. It's perfect for businesses just starting their AI journey and wanting to explore options without commitment."
+    },
+    {
+      question: "How is the Starter plan different from just browsing AI tools online?",
+      answer: "The Starter plan ($497/year) provides structured implementation guidance with a complete database of 500+ validated AI tools, custom 90-day implementation roadmaps, proven tool selection frameworks, ready-to-use deployment templates, ROI tracking dashboards, and monthly expert-led webinars. You save 10-15 hours per week compared to DIY research."
+    },
+    {
+      question: "What kind of consulting do I get with the Pro plan?",
+      answer: "The Pro plan ($1,997/year) includes 4 hours of 1-on-1 AI strategy consulting per quarter with our experts. This covers custom AI tool recommendations, implementation project management, advanced analytics review, white-label report creation, and quarterly strategy optimization sessions. Perfect for agencies and enterprise teams."
+    },
+    {
+      question: "Is the Enterprise plan worth the investment for larger organizations?",
+      answer: "The Enterprise plan ($4,997/year) provides unlimited consulting hours, a dedicated AI strategy consultant, custom AI tool development support, enterprise integration assistance, team training workshops, 24-hour SLA, and on-site implementation support. Large organizations typically save $50,000+ in transformation mistakes and see 50-100% increase in AI ROI."
+    },
+    {
+      question: "Can I upgrade or downgrade my plan at any time?",
+      answer: "Yes, you can upgrade your plan at any time and receive prorated pricing. Downgrades take effect at your next billing cycle. We also offer a 30-day money-back guarantee if you're not satisfied with the value provided by any paid plan."
+    },
+    {
+      question: "Do you offer custom pricing for specific needs?",
+      answer: "Yes, especially for Enterprise clients or organizations with unique requirements. We can create custom packages that include specific consulting hours, specialized training, custom tool development, or industry-specific implementation support. Contact us to discuss your specific needs."
+    },
+    {
+      question: "What's the difference between this and hiring an AI consultant?",
+      answer: "Traditional AI consultants charge $200-500/hour and focus on broad strategy. Our platform combines the best of both worlds: self-service tools and resources for efficiency, plus expert consulting when you need it. You get proven frameworks, implementation templates, and ongoing support at a fraction of traditional consulting costs."
+    },
+    {
+      question: "How quickly can I expect to see ROI from these plans?",
+      answer: "Free users typically save 2-3 hours per week on research. Starter users see 15-25% productivity increases within 90 days. Pro users achieve 30-50% efficiency improvements within 6 months. Enterprise clients often see 50-100% increases in AI ROI within the first year through avoided mistakes and optimized implementations."
+    }
+  ];
+
+  const generalFaqs = [
     {
       question: "What makes AI tools consulting different from general AI strategy consulting?",
       answer: "AI tools consulting focuses specifically on selecting, implementing, and optimizing software tools that use artificial intelligence, rather than broad AI transformation. We help you choose the right AI-powered tools for marketing, sales, customer service, and operations, then ensure they're properly integrated and delivering ROI."
@@ -554,32 +589,68 @@ export default function WhyUs() {
               </p>
             </div>
 
-            <div className="grid sm:grid-cols-1 md:grid-cols-3 gap-4 sm:gap-6 lg:gap-8">
+            <div className="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 lg:gap-8">
+              {/* Free Package */}
+              <div className="bg-gradient-to-b from-gray-900 to-black border border-gray-700 p-6 lg:p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 hover:border-green-500/50 group">
+                <div className="text-center mb-6">
+                  <div className="text-sm lg:text-lg font-semibold text-gray-400 mb-2">FREE</div>
+                  <div className="text-3xl lg:text-4xl font-bold text-white mb-2">$0</div>
+                  <div className="text-sm text-gray-400">Forever</div>
+                </div>
+                
+                <h3 className="text-xl lg:text-2xl font-bold mb-4 text-white text-center">AI Tool Discovery</h3>
+                <ul className="space-y-3 mb-8">
+                  <li className="flex items-center text-gray-300">
+                    <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />
+                    Daily AI Tool Spotlight
+                  </li>
+                  <li className="flex items-center text-gray-300">
+                    <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />
+                    Basic Tool Comparison
+                  </li>
+                  <li className="flex items-center text-gray-300">
+                    <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />
+                    Free AI Tool Database
+                  </li>
+                  <li className="flex items-center text-gray-300">
+                    <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />
+                    Weekly AI Trends Report
+                  </li>
+                </ul>
+                
+                <a 
+                  href="/tools"
+                  className="block w-full text-center px-6 py-3 bg-gradient-to-r from-green-600 to-emerald-600 text-white font-semibold rounded-xl hover:from-green-700 hover:to-emerald-700 transition-all duration-200 group-hover:scale-105"
+                >
+                  Get Started
+                </a>
+              </div>
+
               {/* Starter Package */}
               <div className="bg-gradient-to-b from-gray-900 to-black border border-gray-700 p-6 lg:p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 hover:border-cyan-500/50 group">
                 <div className="text-center mb-6">
                   <div className="text-sm lg:text-lg font-semibold text-gray-400 mb-2">STARTER</div>
-                  <div className="text-3xl lg:text-4xl font-bold text-white mb-2">$2,500</div>
-                  <div className="text-sm text-gray-400">One-time fee</div>
+                  <div className="text-3xl lg:text-4xl font-bold text-white mb-2">$497</div>
+                  <div className="text-sm text-gray-400">/year</div>
                 </div>
                 
-                <h3 className="text-xl lg:text-2xl font-bold mb-4 text-white text-center">Custom AI Roadmap</h3>
+                <h3 className="text-xl lg:text-2xl font-bold mb-4 text-white text-center">AI Implementation Guide</h3>
                 <ul className="space-y-3 mb-8">
                   <li className="flex items-center text-gray-300">
                     <CheckCircle className="w-5 h-5 text-cyan-400 mr-3 flex-shrink-0" />
-                    90-day implementation timeline
+                    Complete AI Tool Database
                   </li>
                   <li className="flex items-center text-gray-300">
                     <CheckCircle className="w-5 h-5 text-cyan-400 mr-3 flex-shrink-0" />
-                    Tool selection & prioritization
+                    90-day Implementation Roadmap
                   </li>
                   <li className="flex items-center text-gray-300">
                     <CheckCircle className="w-5 h-5 text-cyan-400 mr-3 flex-shrink-0" />
-                    ROI projections & benchmarks
+                    ROI Tracking Dashboard
                   </li>
                   <li className="flex items-center text-gray-300">
                     <CheckCircle className="w-5 h-5 text-cyan-400 mr-3 flex-shrink-0" />
-                    Basic implementation support
+                    Monthly Implementation Webinars
                   </li>
                 </ul>
                 
@@ -593,35 +664,35 @@ export default function WhyUs() {
                 </a>
               </div>
 
-              {/* Professional Package */}
+              {/* Pro Package */}
               <div className="bg-gradient-to-b from-gray-900 to-black border-2 border-cyan-500 p-6 lg:p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 hover:shadow-cyan-500/25 group relative overflow-visible">
                 <div className="absolute -top-4 left-1/2 transform -translate-x-1/2 px-3 sm:px-4 lg:px-6 py-2 bg-gradient-to-r from-cyan-500 to-blue-600 text-white text-xs lg:text-sm font-bold rounded-full whitespace-nowrap">
                   MOST POPULAR
                 </div>
                 
                 <div className="text-center mb-6">
-                  <div className="text-sm lg:text-lg font-semibold text-cyan-400 mb-2">PROFESSIONAL</div>
-                  <div className="text-3xl lg:text-4xl font-bold text-white mb-2">$7,500</div>
-                  <div className="text-sm text-gray-400">One-time fee</div>
+                  <div className="text-sm lg:text-lg font-semibold text-cyan-400 mb-2">PRO</div>
+                  <div className="text-3xl lg:text-4xl font-bold text-white mb-2">$1,997</div>
+                  <div className="text-sm text-gray-400">/year</div>
                 </div>
                 
-                <h3 className="text-xl lg:text-2xl font-bold mb-4 text-white text-center">Full Implementation</h3>
+                <h3 className="text-xl lg:text-2xl font-bold mb-4 text-white text-center">AI Strategy Command Center</h3>
                 <ul className="space-y-3 mb-8">
                   <li className="flex items-center text-gray-300">
                     <CheckCircle className="w-5 h-5 text-cyan-400 mr-3 flex-shrink-0" />
-                    Everything in Starter
+                    AI Strategy Consulting (4h/quarter)
                   </li>
                   <li className="flex items-center text-gray-300">
                     <CheckCircle className="w-5 h-5 text-cyan-400 mr-3 flex-shrink-0" />
-                    Complete technical setup
+                    Custom AI Tool Recommendations
                   </li>
                   <li className="flex items-center text-gray-300">
                     <CheckCircle className="w-5 h-5 text-cyan-400 mr-3 flex-shrink-0" />
-                    Team training & onboarding
+                    White-label AI Tool Reports
                   </li>
                   <li className="flex items-center text-gray-300">
                     <CheckCircle className="w-5 h-5 text-cyan-400 mr-3 flex-shrink-0" />
-                    60-day support & optimization
+                    API Access & Advanced Tools
                   </li>
                 </ul>
                 
@@ -639,27 +710,27 @@ export default function WhyUs() {
               <div className="bg-gradient-to-b from-gray-900 to-black border border-gray-700 p-6 lg:p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 hover:border-purple-500/50 group">
                 <div className="text-center mb-6">
                   <div className="text-sm lg:text-lg font-semibold text-gray-400 mb-2">ENTERPRISE</div>
-                  <div className="text-3xl lg:text-4xl font-bold text-white mb-2">$15,000+</div>
-                  <div className="text-sm text-gray-400">Custom pricing</div>
+                  <div className="text-3xl lg:text-4xl font-bold text-white mb-2">$4,997</div>
+                  <div className="text-sm text-gray-400">/year</div>
                 </div>
                 
-                <h3 className="text-xl lg:text-2xl font-bold mb-4 text-white text-center">Custom Deployment</h3>
+                <h3 className="text-xl lg:text-2xl font-bold mb-4 text-white text-center">AI Transformation Partner</h3>
                 <ul className="space-y-3 mb-8">
                   <li className="flex items-center text-gray-300">
                     <CheckCircle className="w-5 h-5 text-purple-400 mr-3 flex-shrink-0" />
-                    Everything in Professional
+                    Unlimited Consulting Hours
                   </li>
                   <li className="flex items-center text-gray-300">
                     <CheckCircle className="w-5 h-5 text-purple-400 mr-3 flex-shrink-0" />
-                    Custom AI tool development
+                    Dedicated AI Strategy Consultant
                   </li>
                   <li className="flex items-center text-gray-300">
                     <CheckCircle className="w-5 h-5 text-purple-400 mr-3 flex-shrink-0" />
-                    Ongoing optimization retainer
+                    Custom AI Tool Development
                   </li>
                   <li className="flex items-center text-gray-300">
                     <CheckCircle className="w-5 h-5 text-purple-400 mr-3 flex-shrink-0" />
-                    Dedicated success manager
+                    24-hour SLA Guarantee
                   </li>
                 </ul>
                 
@@ -795,12 +866,40 @@ export default function WhyUs() {
           </div>
         </section>
 
-        {/* FAQ Section */}
+        {/* FAQ Section - Pricing FAQs */}
         <section className="py-20">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-                Frequently Asked Questions About AI Tools Consulting
+                Pricing & Plans FAQ
+              </h2>
+              <p className="text-xl text-gray-300">
+                Common questions about our pricing tiers and what's included
+              </p>
+            </div>
+
+            <div className="space-y-6">
+              {pricingFaqs.map((faq, index) => (
+                <details key={index} className="bg-black border border-gray-800 rounded-2xl p-6 group">
+                  <summary className="text-lg font-semibold text-white cursor-pointer list-none flex items-center justify-between">
+                    <span>{faq.question}</span>
+                    <ChevronDown className="w-5 h-5 text-gray-400 group-open:rotate-180 transition-transform" />
+                  </summary>
+                  <div className="mt-4 pt-4 border-t border-gray-800">
+                    <p className="text-gray-300 leading-relaxed">{faq.answer}</p>
+                  </div>
+                </details>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* FAQ Section - General Consulting FAQs */}
+        <section className="py-20 bg-gray-900/50">
+          <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+                AI Tools Consulting FAQ
               </h2>
               <p className="text-xl text-gray-300">
                 Get answers to common questions about our AI consulting approach
@@ -808,7 +907,7 @@ export default function WhyUs() {
             </div>
 
             <div className="space-y-6">
-              {faqs.map((faq, index) => (
+              {generalFaqs.map((faq, index) => (
                 <details key={index} className="bg-black border border-gray-800 rounded-2xl p-6 group">
                   <summary className="text-lg font-semibold text-white cursor-pointer list-none flex items-center justify-between">
                     <span>{faq.question}</span>
