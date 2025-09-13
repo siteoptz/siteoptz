@@ -102,6 +102,40 @@ export const trackEmailCapture = (source, tool, category, additionalData = {}) =
     tool,
     category,
     label: `email_capture_${source}`,
+    priority: 'high',
+    ...additionalData
+  });
+};
+
+// Enhanced email capture with lead scoring
+export const trackEmailCaptureWithLeadScore = (email, source, tool, category, leadData = {}) => {
+  const leadScore = calculateLeadScore(leadData);
+  return trackKeyEvent('email_capture', {
+    email: hashEmail(email), // Hash for privacy
+    source,
+    tool,
+    category,
+    lead_score: leadScore,
+    lead_quality: leadScore > 70 ? 'high' : leadScore > 40 ? 'medium' : 'low',
+    company: leadData.company,
+    job_title: leadData.jobTitle,
+    team_size: leadData.teamSize,
+    use_case: leadData.useCase,
+    label: `email_capture_${source}_${leadScore}`,
+    priority: 'high',
+    ...leadData
+  });
+};
+
+// Newsletter signup tracking
+export const trackNewsletterSignup = (email, source, preferences = [], additionalData = {}) => {
+  return trackKeyEvent('newsletter_signup', {
+    email: hashEmail(email),
+    source,
+    preferences,
+    preferences_count: preferences.length,
+    label: `newsletter_${source}`,
+    priority: 'medium',
     ...additionalData
   });
 };
@@ -133,8 +167,33 @@ export const trackAffiliateClick = (toolName, linkType, destination, position = 
     link_type: linkType,
     destination,
     position,
+    commission_potential: additionalData.commission || 0,
+    conversion_probability: additionalData.conversionProb || 0,
+    user_journey_stage: additionalData.journeyStage || 'research',
+    comparison_context: additionalData.comparisonContext,
     label: `affiliate_${toolName}_${linkType}`,
+    priority: 'medium',
     ...additionalData
+  });
+};
+
+// Enhanced tool signup tracking
+export const trackToolSignup = (toolName, signupData, additionalData = {}) => {
+  return trackKeyEvent('tool_signup', {
+    tool_name: toolName,
+    signup_source: signupData.source || 'direct',
+    referral_code: signupData.referralCode,
+    plan_selected: signupData.plan,
+    plan_price: signupData.price,
+    trial_duration: signupData.trialDuration,
+    conversion_time: signupData.conversionTime, // time from first visit to signup
+    touchpoints: signupData.touchpoints || 1,
+    comparison_influenced: signupData.comparisonInfluenced || false,
+    calculator_used: signupData.calculatorUsed || false,
+    email: hashEmail(signupData.email),
+    label: `signup_${toolName}_${signupData.plan || 'unknown'}`,
+    priority: 'high',
+    value: 25
   });
 };
 
@@ -147,22 +206,94 @@ export const trackFAQInteraction = (question, toolName, additionalData = {}) => 
   });
 };
 
-export const trackWebinarRegistration = (webinarTitle, email, additionalData = {}) => {
+export const trackWebinarRegistration = (webinarTitle, email, registrationData = {}, additionalData = {}) => {
   return trackKeyEvent('webinar_registration', {
     webinar_title: webinarTitle,
-    email,
+    webinar_date: registrationData.date,
+    webinar_time: registrationData.time,
+    webinar_type: registrationData.type || 'live', // live, recorded, series
+    email: hashEmail(email),
+    attendee_name: registrationData.name,
+    attendee_company: registrationData.company,
+    attendee_role: registrationData.role,
+    registration_source: registrationData.source || 'website',
+    utm_source: registrationData.utm_source,
+    utm_campaign: registrationData.utm_campaign,
     label: `webinar_${webinarTitle.replace(/\s+/g, '_').toLowerCase()}`,
+    priority: 'high',
     ...additionalData
   });
 };
 
-export const trackGuideDownload = (fileName, source, toolContext, additionalData = {}) => {
+// Webinar attendance tracking
+export const trackWebinarAttendance = (webinarTitle, email, attendanceData = {}) => {
+  return trackKeyEvent('webinar_attendance', {
+    webinar_title: webinarTitle,
+    email: hashEmail(email),
+    attendance_duration: attendanceData.duration,
+    attendance_percentage: attendanceData.percentage,
+    joined_late: attendanceData.joinedLate || false,
+    left_early: attendanceData.leftEarly || false,
+    engagement_score: attendanceData.engagementScore,
+    questions_asked: attendanceData.questionsAsked || 0,
+    polls_participated: attendanceData.pollsParticipated || 0,
+    label: `webinar_attend_${webinarTitle.replace(/\s+/g, '_').toLowerCase()}`,
+    priority: 'high',
+    value: 30,
+    category: 'engagement'
+  });
+};
+
+export const trackGuideDownload = (fileName, source, toolContext, downloadData = {}, additionalData = {}) => {
   return trackKeyEvent('guide_download', {
     file_name: fileName,
+    file_type: downloadData.fileType || getFileExtension(fileName),
+    file_size: downloadData.fileSize,
+    download_method: downloadData.method || 'direct', // direct, email_gate, form_fill
     source,
     tool_context: toolContext,
+    content_category: downloadData.category || 'guide',
+    content_topic: downloadData.topic,
+    gated_content: downloadData.gated || false,
+    email_required: downloadData.emailRequired || false,
+    user_email: downloadData.email ? hashEmail(downloadData.email) : null,
+    page_path: typeof window !== 'undefined' ? window.location.pathname : '',
+    referrer_page: downloadData.referrer,
     label: `download_${fileName.replace(/\s+/g, '_').toLowerCase()}`,
+    priority: 'medium',
     ...additionalData
+  });
+};
+
+// Lead magnet download tracking
+export const trackLeadMagnetDownload = (magnetTitle, email, magnetData = {}) => {
+  return trackKeyEvent('lead_magnet_download', {
+    magnet_title: magnetTitle,
+    magnet_type: magnetData.type || 'ebook', // ebook, template, checklist, toolkit
+    email: hashEmail(email),
+    download_trigger: magnetData.trigger || 'form_submit',
+    content_value: magnetData.value || 12,
+    funnel_stage: magnetData.stage || 'awareness',
+    user_name: magnetData.name,
+    user_company: magnetData.company,
+    lead_source: magnetData.source,
+    label: `lead_magnet_${magnetTitle.replace(/\s+/g, '_').toLowerCase()}`,
+    priority: 'high'
+  });
+};
+
+// Resource access tracking
+export const trackResourceAccess = (resourceType, resourceTitle, accessData = {}) => {
+  return trackKeyEvent('resource_view', {
+    resource_type: resourceType, // blog, case_study, whitepaper, video, podcast
+    resource_title: resourceTitle,
+    access_method: accessData.method || 'direct',
+    reading_time: accessData.readingTime,
+    engagement_depth: accessData.engagementDepth, // low, medium, high
+    shared: accessData.shared || false,
+    bookmarked: accessData.bookmarked || false,
+    label: `resource_${resourceType}_${resourceTitle.replace(/\s+/g, '_').toLowerCase()}`,
+    priority: 'low'
   });
 };
 
@@ -292,6 +423,71 @@ export const trackError = (errorType, errorMessage, context = {}) => {
   });
 };
 
+// Pricing quote request tracking
+export const trackPricingQuoteRequest = (quoteData, additionalData = {}) => {
+  return trackKeyEvent('pricing_quote_request', {
+    email: hashEmail(quoteData.email),
+    company: quoteData.company,
+    team_size: quoteData.teamSize,
+    tools_interested: quoteData.toolsInterested || [],
+    budget_range: quoteData.budgetRange,
+    timeline: quoteData.timeline,
+    use_case: quoteData.useCase,
+    contact_method: quoteData.contactMethod || 'email',
+    urgency: quoteData.urgency || 'standard',
+    current_solution: quoteData.currentSolution,
+    pain_points: quoteData.painPoints || [],
+    quote_source: quoteData.source || 'website',
+    label: `quote_request_${quoteData.company || 'unknown'}`,
+    priority: 'high',
+    ...additionalData
+  });
+};
+
+// Consultation request tracking
+export const trackConsultationRequest = (consultationData, additionalData = {}) => {
+  return trackKeyEvent('consultation_request', {
+    email: hashEmail(consultationData.email),
+    name: consultationData.name,
+    company: consultationData.company,
+    role: consultationData.role,
+    consultation_type: consultationData.type || 'general', // general, technical, strategic
+    preferred_date: consultationData.preferredDate,
+    preferred_time: consultationData.preferredTime,
+    topics: consultationData.topics || [],
+    current_challenges: consultationData.challenges,
+    goals: consultationData.goals,
+    label: `consultation_${consultationData.type || 'general'}`,
+    priority: 'high',
+    value: 25
+  });
+};
+
+// CTA click tracking with enhanced data
+export const trackCTAClick = (ctaData, additionalData = {}) => {
+  const eventType = getCTAEventType(ctaData.type, ctaData.position);
+  
+  return trackKeyEvent(eventType, {
+    cta_text: ctaData.text,
+    cta_type: ctaData.type, // primary, secondary, text_link, button
+    cta_position: ctaData.position, // hero, header, sidebar, footer, inline, popup
+    cta_color: ctaData.color,
+    cta_size: ctaData.size,
+    page_section: ctaData.section,
+    page_path: typeof window !== 'undefined' ? window.location.pathname : '',
+    destination_url: ctaData.destinationUrl,
+    external_link: ctaData.external || false,
+    tool_context: ctaData.toolContext,
+    comparison_context: ctaData.comparisonContext,
+    ab_test_variant: ctaData.abVariant,
+    user_intent: ctaData.userIntent, // research, purchase, learn_more
+    funnel_stage: ctaData.funnelStage,
+    label: `cta_${ctaData.type}_${ctaData.position}`,
+    priority: getCTAPriority(ctaData.position),
+    ...additionalData
+  });
+};
+
 // A/B testing tracking
 export const trackABTest = (testName, variant, conversion = false, additionalData = {}) => {
   return trackKeyEvent('ab_test', {
@@ -301,6 +497,53 @@ export const trackABTest = (testName, variant, conversion = false, additionalDat
     label: `ab_test_${testName}_${variant}`,
     ...additionalData
   });
+};
+
+// Helper functions
+const hashEmail = (email) => {
+  if (!email) return null;
+  // Simple hash for privacy - in production use a proper hashing function
+  return btoa(email).substring(0, 8) + '...';
+};
+
+const calculateLeadScore = (leadData) => {
+  let score = 0;
+  if (leadData.company) score += 20;
+  if (leadData.jobTitle && leadData.jobTitle.toLowerCase().includes('manager')) score += 15;
+  if (leadData.jobTitle && leadData.jobTitle.toLowerCase().includes('director')) score += 25;
+  if (leadData.jobTitle && leadData.jobTitle.toLowerCase().includes('ceo')) score += 30;
+  if (leadData.teamSize && leadData.teamSize > 10) score += 20;
+  if (leadData.budget && leadData.budget > 1000) score += 15;
+  if (leadData.timeline && leadData.timeline === 'immediate') score += 10;
+  return Math.min(score, 100);
+};
+
+const getFileExtension = (fileName) => {
+  return fileName.split('.').pop()?.toLowerCase() || 'unknown';
+};
+
+const getCTAEventType = (type, position) => {
+  if (position === 'hero') return 'hero_cta_click';
+  if (position === 'footer') return 'footer_cta_click';
+  if (position === 'pricing') return 'pricing_cta_click';
+  if (position === 'comparison') return 'comparison_cta_click';
+  if (type === 'primary') return 'primary_cta_click';
+  if (type === 'secondary') return 'secondary_cta_click';
+  return 'cta_click';
+};
+
+const getCTAPriority = (position) => {
+  const priorities = {
+    hero: 'high',
+    header: 'high',
+    pricing: 'high',
+    comparison: 'high',
+    sidebar: 'medium',
+    inline: 'medium',
+    footer: 'low',
+    popup: 'medium'
+  };
+  return priorities[position] || 'medium';
 };
 
 // Initialize key events tracking
@@ -343,12 +586,21 @@ export const initKeyEventsTracking = (config = {}) => {
 export default {
   trackKeyEvent,
   trackEmailCapture,
+  trackEmailCaptureWithLeadScore,
+  trackNewsletterSignup,
   trackComparisonView,
   trackCalculatorUsage,
   trackAffiliateClick,
+  trackToolSignup,
   trackFAQInteraction,
   trackWebinarRegistration,
+  trackWebinarAttendance,
   trackGuideDownload,
+  trackLeadMagnetDownload,
+  trackResourceAccess,
+  trackPricingQuoteRequest,
+  trackConsultationRequest,
+  trackCTAClick,
   trackFunnelStep,
   trackPerformance,
   trackError,

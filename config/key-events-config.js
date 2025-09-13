@@ -8,25 +8,50 @@ export const KEY_EVENTS_CONFIG = {
       value: 10,
       category: 'lead_generation',
       conversion: true,
-      description: 'User submits email for lead magnet or newsletter'
+      description: 'User submits email for lead magnet or newsletter',
+      priority: 'high'
     },
     webinar_registration: {
       value: 15,
       category: 'lead_generation', 
       conversion: true,
-      description: 'User registers for a webinar'
+      description: 'User registers for a webinar',
+      priority: 'high'
     },
     guide_download: {
       value: 5,
       category: 'lead_generation',
       conversion: true,
-      description: 'User downloads a guide or resource'
+      description: 'User downloads a guide or resource',
+      priority: 'medium'
     },
     pricing_quote_request: {
       value: 20,
       category: 'lead_generation',
       conversion: true,
-      description: 'User requests a custom pricing quote'
+      description: 'User requests a custom pricing quote',
+      priority: 'high'
+    },
+    newsletter_signup: {
+      value: 8,
+      category: 'lead_generation',
+      conversion: true,
+      description: 'User subscribes to newsletter',
+      priority: 'medium'
+    },
+    lead_magnet_download: {
+      value: 12,
+      category: 'lead_generation',
+      conversion: true,
+      description: 'User downloads lead magnet (ebook, template, etc)',
+      priority: 'high'
+    },
+    consultation_request: {
+      value: 25,
+      category: 'lead_generation',
+      conversion: true,
+      description: 'User requests consultation or demo',
+      priority: 'high'
     }
   },
 
@@ -36,31 +61,64 @@ export const KEY_EVENTS_CONFIG = {
       value: 1,
       category: 'engagement',
       conversion: false,
-      description: 'User views a tool comparison page'
+      description: 'User views a tool comparison page',
+      priority: 'medium'
     },
     calculator_usage: {
       value: 3,
       category: 'engagement',
       conversion: false,
-      description: 'User uses the pricing calculator'
+      description: 'User uses the pricing calculator',
+      priority: 'high'
     },
     faq_interaction: {
       value: 1,
       category: 'engagement',
       conversion: false,
-      description: 'User interacts with FAQ section'
+      description: 'User interacts with FAQ section',
+      priority: 'medium'
     },
     tool_selection: {
       value: 2,
       category: 'engagement',
       conversion: false,
-      description: 'User selects tools in calculator'
+      description: 'User selects tools in calculator',
+      priority: 'high'
     },
     feature_comparison: {
       value: 1,
       category: 'engagement',
       conversion: false,
-      description: 'User compares specific features'
+      description: 'User compares specific features',
+      priority: 'medium'
+    },
+    search_interaction: {
+      value: 2,
+      category: 'engagement',
+      conversion: false,
+      description: 'User performs search on the site',
+      priority: 'medium'
+    },
+    filter_usage: {
+      value: 1,
+      category: 'engagement',
+      conversion: false,
+      description: 'User applies filters to tool listings',
+      priority: 'medium'
+    },
+    video_engagement: {
+      value: 2,
+      category: 'engagement',
+      conversion: false,
+      description: 'User watches video content',
+      priority: 'medium'
+    },
+    resource_view: {
+      value: 1,
+      category: 'engagement',
+      conversion: false,
+      description: 'User views resource or blog content',
+      priority: 'low'
     }
   },
 
@@ -70,19 +128,64 @@ export const KEY_EVENTS_CONFIG = {
       value: 2,
       category: 'affiliate',
       conversion: false,
-      description: 'User clicks on affiliate link'
+      description: 'User clicks on affiliate link',
+      priority: 'medium'
     },
     tool_signup: {
       value: 25,
       category: 'conversion',
       conversion: true,
-      description: 'User signs up for a tool (tracked via affiliate)'
+      description: 'User signs up for a tool (tracked via affiliate)',
+      priority: 'high'
     },
     cta_click: {
       value: 1,
-      category: 'conversion',
+      category: 'cta_interaction',
       conversion: false,
-      description: 'User clicks on call-to-action button'
+      description: 'User clicks on call-to-action button',
+      priority: 'medium'
+    },
+    primary_cta_click: {
+      value: 3,
+      category: 'cta_interaction',
+      conversion: false,
+      description: 'User clicks on primary CTA button',
+      priority: 'high'
+    },
+    secondary_cta_click: {
+      value: 1,
+      category: 'cta_interaction',
+      conversion: false,
+      description: 'User clicks on secondary CTA button',
+      priority: 'medium'
+    },
+    hero_cta_click: {
+      value: 4,
+      category: 'cta_interaction',
+      conversion: false,
+      description: 'User clicks on hero section CTA',
+      priority: 'high'
+    },
+    footer_cta_click: {
+      value: 1,
+      category: 'cta_interaction',
+      conversion: false,
+      description: 'User clicks on footer CTA',
+      priority: 'low'
+    },
+    comparison_cta_click: {
+      value: 3,
+      category: 'cta_interaction',
+      conversion: false,
+      description: 'User clicks CTA on comparison page',
+      priority: 'high'
+    },
+    pricing_cta_click: {
+      value: 5,
+      category: 'cta_interaction',
+      conversion: false,
+      description: 'User clicks CTA on pricing page',
+      priority: 'high'
     }
   },
 
