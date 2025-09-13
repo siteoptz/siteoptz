@@ -17,7 +17,21 @@ export default function SocialPilotReviewPage() {
       "description": "SocialPilot is a comprehensive social media management tool supporting 10+ platforms with team collaboration and white-label solutions.",
       "applicationCategory": "Social Media",
       "url": "https://www.socialpilot.co",
-      "operatingSystem": "Web, iOS, Android"
+      "operatingSystem": "Web, iOS, Android",
+      "offers": {
+        "@type": "Offer",
+        "price": "25.50",
+        "priceCurrency": "USD",
+        "availability": "https://schema.org/InStock",
+        "priceValidUntil": new Date(Date.now() + 365 * 24 * 60 * 60 * 1000).toISOString().split('T')[0]
+      },
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": 4.5,
+        "reviewCount": 1200,
+        "bestRating": 5,
+        "worstRating": 1
+      }
     },
     "author": {
       "@type": "Organization",

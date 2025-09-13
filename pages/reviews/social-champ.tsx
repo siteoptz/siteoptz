@@ -17,7 +17,21 @@ export default function SocialChampReviewPage() {
       "description": "Social Champ is a feature-rich social media tool with support for 11 platforms including BlueSky, Threads, and Mastodon with competitive pricing.",
       "applicationCategory": "Social Media",
       "url": "https://www.socialchamp.com",
-      "operatingSystem": "Web, iOS, Android"
+      "operatingSystem": "Web, iOS, Android",
+      "offers": {
+        "@type": "Offer",
+        "price": "26",
+        "priceCurrency": "USD",
+        "availability": "https://schema.org/InStock",
+        "priceValidUntil": new Date(Date.now() + 365 * 24 * 60 * 60 * 1000).toISOString().split('T')[0]
+      },
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": 4.4,
+        "reviewCount": 980,
+        "bestRating": 5,
+        "worstRating": 1
+      }
     },
     "author": {
       "@type": "Organization",

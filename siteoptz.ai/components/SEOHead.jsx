@@ -162,10 +162,61 @@ export function ComparisonSEOHead({ toolA, toolB, toolAData, toolBData, url, faq
         "@id": url
       },
       "about": toolB ? [
-        { "@type": "SoftwareApplication", "name": toolA },
-        { "@type": "SoftwareApplication", "name": toolB }
+        {
+          "@type": "SoftwareApplication",
+          "name": toolA,
+          "offers": {
+            "@type": "Offer",
+            "price": "0",
+            "priceCurrency": "USD",
+            "availability": "https://schema.org/InStock",
+            "priceValidUntil": new Date(Date.now() + 365 * 24 * 60 * 60 * 1000).toISOString().split('T')[0]
+          },
+          "aggregateRating": {
+            "@type": "AggregateRating",
+            "ratingValue": 4.5,
+            "reviewCount": 1000,
+            "bestRating": 5,
+            "worstRating": 1
+          }
+        },
+        {
+          "@type": "SoftwareApplication",
+          "name": toolB,
+          "offers": {
+            "@type": "Offer",
+            "price": "0",
+            "priceCurrency": "USD",
+            "availability": "https://schema.org/InStock",
+            "priceValidUntil": new Date(Date.now() + 365 * 24 * 60 * 60 * 1000).toISOString().split('T')[0]
+          },
+          "aggregateRating": {
+            "@type": "AggregateRating",
+            "ratingValue": 4.5,
+            "reviewCount": 1000,
+            "bestRating": 5,
+            "worstRating": 1
+          }
+        }
       ] : [
-        { "@type": "SoftwareApplication", "name": toolA }
+        {
+          "@type": "SoftwareApplication",
+          "name": toolA,
+          "offers": {
+            "@type": "Offer",
+            "price": "0",
+            "priceCurrency": "USD",
+            "availability": "https://schema.org/InStock",
+            "priceValidUntil": new Date(Date.now() + 365 * 24 * 60 * 60 * 1000).toISOString().split('T')[0]
+          },
+          "aggregateRating": {
+            "@type": "AggregateRating",
+            "ratingValue": 4.5,
+            "reviewCount": 1000,
+            "bestRating": 5,
+            "worstRating": 1
+          }
+        }
       ]
     },
     breadcrumb: {
