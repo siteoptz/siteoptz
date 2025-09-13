@@ -248,11 +248,11 @@ const GuideDownloadForm: React.FC<GuideDownloadFormProps> = ({
           Download Started! 📥
         </h3>
         <p className="text-green-800 mb-4">
-          Your download of "{guide.title}" should begin automatically.
+          Your download of &quot;{guide.title}&quot; should begin automatically.
         </p>
         <div className="bg-white rounded-lg p-4 mb-4">
           <p className="text-sm text-gray-600 mb-2">
-            <strong>What's next?</strong>
+            <strong>What&apos;s next?</strong>
           </p>
           <div className="space-y-1 text-sm text-gray-700">
             <p>• Check your downloads folder for the file</p>
@@ -464,7 +464,7 @@ const GuideDownloadForm: React.FC<GuideDownloadFormProps> = ({
         </button>
 
         <p className="text-xs text-gray-500 text-center">
-          By downloading, you'll also receive our weekly AI insights newsletter. Unsubscribe anytime.
+          By downloading, you&apos;ll also receive our weekly AI insights newsletter. Unsubscribe anytime.
         </p>
       </form>
     </div>

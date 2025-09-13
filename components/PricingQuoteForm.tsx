@@ -254,7 +254,7 @@ const PricingQuoteForm: React.FC<PricingQuoteFormProps> = ({
             </div>
             <div className="flex items-center">
               <span className="w-2 h-2 bg-blue-500 rounded-full mr-3"></span>
-              <span>We'll prepare a customized proposal for your team</span>
+              <span>We&apos;ll prepare a customized proposal for your team</span>
             </div>
             <div className="flex items-center">
               <span className="w-2 h-2 bg-blue-500 rounded-full mr-3"></span>
@@ -280,7 +280,7 @@ const PricingQuoteForm: React.FC<PricingQuoteFormProps> = ({
           Get Custom Pricing Quote
         </h3>
         <p className="text-gray-600">
-          Tell us about your needs and we'll provide a personalized quote with recommended tools and pricing.
+          Tell us about your needs and we&apos;ll provide a personalized quote with recommended tools and pricing.
         </p>
       </div>
 

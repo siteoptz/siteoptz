@@ -57,7 +57,6 @@ const KeyEventsExamples: React.FC = () => {
             source: 'pricing_page'
           });
         }}
-        userIntent="purchase"
         type="primary"
       />
       

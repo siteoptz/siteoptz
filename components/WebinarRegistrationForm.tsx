@@ -207,10 +207,10 @@ const WebinarRegistrationForm: React.FC<WebinarRegistrationFormProps> = ({
           </svg>
         </div>
         <h3 className="text-2xl font-bold text-green-900 mb-2">
-          You're Registered! 🎉
+          You&apos;re Registered! 🎉
         </h3>
         <p className="text-green-800 mb-4">
-          Thank you for registering for "{webinar.title}"
+          Thank you for registering for &quot;{webinar.title}&quot;
         </p>
         <div className="bg-white rounded-lg p-4 mb-4">
           <p className="text-sm text-gray-600 mb-2">
