@@ -615,8 +615,8 @@ const getCTAPriority = (position) => {
   return priorities[position] || 'medium';
 };
 
-// Initialize key events tracking
-export const initKeyEventsTracking = (config = {}) => {
+// Additional helper function for enhanced initialization
+const setupAdvancedTracking = () => {
   if (typeof window === 'undefined') return;
   
   // Send any offline events
@@ -624,13 +624,6 @@ export const initKeyEventsTracking = (config = {}) => {
   
   // Set up periodic offline event sending
   setInterval(sendOfflineEvents, 30000); // Every 30 seconds
-  
-  // Track page view
-  trackKeyEvent('page_view', {
-    page_title: document.title,
-    page_location: window.location.href,
-    referrer: document.referrer
-  });
   
   // Set up error tracking
   window.addEventListener('error', (event) => {
@@ -647,8 +640,6 @@ export const initKeyEventsTracking = (config = {}) => {
       promise: event.promise
     });
   });
-  
-  console.log('🎯 Key Events Tracking Initialized');
 };
 
 // Export all tracking functions

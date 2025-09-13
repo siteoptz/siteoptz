@@ -618,12 +618,12 @@ export default function WhyUs() {
                   </li>
                 </ul>
                 
-                <a 
+                <Link 
                   href="/tools"
                   className="block w-full text-center px-6 py-3 bg-gradient-to-r from-green-600 to-emerald-600 text-white font-semibold rounded-xl hover:from-green-700 hover:to-emerald-700 transition-all duration-200 group-hover:scale-105"
                 >
                   Get Started
-                </a>
+                </Link>
               </div>
 
               {/* Starter Package */}
@@ -874,7 +874,7 @@ export default function WhyUs() {
                 Pricing & Plans FAQ
               </h2>
               <p className="text-xl text-gray-300">
-                Common questions about our pricing tiers and what's included
+                Common questions about our pricing tiers and what&apos;s included
               </p>
             </div>
 
