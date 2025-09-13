@@ -2,6 +2,7 @@ import React, { useState, useEffect, useMemo, useCallback } from 'react';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
 import { CheckCircle, Mail, ArrowRight, User, Building, Sparkles, X } from 'lucide-react';
+import { trackEmailCapture, trackFunnelStep, trackKeyEvent, EnhancedUserJourney } from '../utils/key-events-tracker';
 
 interface EmailCaptureFormProps {
   tool?: string;
@@ -93,9 +94,28 @@ export default function EmailCaptureForm({
   const [isSubmitted, setIsSubmitted] = useState(false);
   const [error, setError] = useState('');
   const [validationErrors, setValidationErrors] = useState<Record<string, string>>({});
+  const [userJourney] = useState(() => new EnhancedUserJourney());
 
-  // Track form analytics
+  // Track form analytics with enhanced tracking
   useEffect(() => {
+    // Track form view with enhanced tracking
+    trackKeyEvent('form_view', {
+      source,
+      tool_context: tool || null,
+      category: category || 'general',
+      form_type: compact ? 'compact' : 'multi_step',
+      modal: showModal
+    });
+
+    // Add to user journey
+    userJourney.addStep('email_form_viewed', {
+      source,
+      tool,
+      category,
+      form_variant: compact ? 'compact' : 'multi_step'
+    });
+
+    // Legacy tracking for compatibility
     if (typeof window !== 'undefined' && window.gtag) {
       window.gtag('event', 'form_view', {
         event_category: 'email_capture',
@@ -103,7 +123,7 @@ export default function EmailCaptureForm({
         custom_parameter_1: tool || category || 'general'
       });
     }
-  }, [source, tool, category]);
+  }, [source, tool, category, compact, showModal, userJourney]);
 
   // Debug current step changes
   useEffect(() => {
@@ -172,7 +192,21 @@ export default function EmailCaptureForm({
         console.log('Moving to next step', currentStep + 1);
         setCurrentStep(prev => prev + 1);
         
-        // Track step progression
+        // Track step progression with enhanced tracking
+        trackKeyEvent('form_step_complete', {
+          step_number: currentStep,
+          step_name: currentStepData.title,
+          source,
+          tool,
+          category
+        });
+
+        // Update user journey
+        userJourney.addStep(`form_step_${currentStep}_complete`, {
+          step_title: currentStepData.title
+        });
+
+        // Legacy tracking for compatibility
         if (typeof window !== 'undefined' && window.gtag) {
           window.gtag('event', 'form_step_complete', {
             event_category: 'email_capture',
@@ -235,7 +269,38 @@ export default function EmailCaptureForm({
         throw new Error(errorData.error || 'Subscription failed');
       }
 
-      // Track successful conversion
+      // Track successful conversion with enhanced tracking
+      trackEmailCapture(source, tool || undefined, category || 'general', {
+        email: formData.email,
+        name: formData.name,
+        company: formData.company,
+        use_case: formData.useCase,
+        interests: formData.interests,
+        form_variant: compact ? 'compact' : 'multi_step',
+        steps_completed: currentStep
+      });
+
+      // Track funnel completion
+      trackFunnelStep('email_captured', tool || undefined, undefined, {
+        source,
+        category,
+        form_type: compact ? 'compact' : 'multi_step'
+      });
+
+      // Track lead generation
+      trackKeyEvent('generate_lead', {
+        source,
+        tool,
+        category,
+        email: formData.email,
+        lead_quality: formData.name && formData.company ? 'high' : 'standard',
+        interests_count: formData.interests.length
+      });
+
+      // Complete user journey
+      userJourney.complete(true, 15 as any);
+
+      // Legacy tracking for compatibility
       if (typeof window !== 'undefined' && window.gtag) {
         window.gtag('event', 'generate_lead', {
           event_category: 'email_capture',

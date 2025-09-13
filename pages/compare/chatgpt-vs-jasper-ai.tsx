@@ -1,10 +1,11 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { GetStaticProps } from 'next';
 import Link from 'next/link';
 import SEOHead from '../../components/SEOHead';
 import FAQSection from '../../components/comparison/FAQSection';
 import { generateComparisonSEO, generateComparisonSchema } from '../../utils/seoMetaGenerator';
 import comparisonData from '../../data/comparison-schema.json';
+import { trackComparisonView, trackFAQInteraction, trackEmailCapture, trackAffiliateClick, EnhancedUserJourney } from '../../utils/key-events-tracker';
 
 interface ChatGPTvsJasperProps {
   chatgpt: any;
@@ -13,6 +14,49 @@ interface ChatGPTvsJasperProps {
 
 const ChatGPTvsJasperPage: React.FC<ChatGPTvsJasperProps> = ({ chatgpt, jasper }) => {
   const [emailCaptured, setEmailCaptured] = useState(false);
+  const [userJourney, setUserJourney] = useState<any>(null);
+
+  useEffect(() => {
+    // Initialize user journey tracking
+    const journey = new EnhancedUserJourney();
+    journey.addStep('comparison_viewed', {
+      tool1: 'chatgpt',
+      tool2: 'jasper-ai',
+      page_section: 'hero'
+    });
+    setUserJourney(journey);
+
+    // Track comparison view
+    trackComparisonView('chatgpt', 'jasper-ai', 'organic', {
+      page_title: 'ChatGPT vs Jasper AI Comparison',
+      comparison_type: 'ai_writing_tools'
+    });
+
+    // Track scroll depth
+    let scrollDepth = 0;
+    const handleScroll = () => {
+      const winScroll = document.documentElement.scrollTop;
+      const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+      const scrolled = (winScroll / height) * 100;
+      
+      if (scrolled > 25 && scrollDepth < 25) {
+        scrollDepth = 25;
+        journey.addStep('scroll_milestone', { depth: '25%' });
+      } else if (scrolled > 50 && scrollDepth < 50) {
+        scrollDepth = 50;
+        journey.addStep('scroll_milestone', { depth: '50%' });
+      } else if (scrolled > 75 && scrollDepth < 75) {
+        scrollDepth = 75;
+        journey.addStep('scroll_milestone', { depth: '75%' });
+      } else if (scrolled > 90 && scrollDepth < 90) {
+        scrollDepth = 90;
+        journey.addStep('scroll_milestone', { depth: '90%' });
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
 
   // SEO Configuration
   const seoData = generateComparisonSEO(chatgpt, jasper);
@@ -59,12 +103,60 @@ const ChatGPTvsJasperPage: React.FC<ChatGPTvsJasperProps> = ({ chatgpt, jasper }
     console.log('Email captured:', email);
     setEmailCaptured(true);
     
-    // Track conversion event
+    // Track email capture with enhanced tracking
+    trackEmailCapture('comparison_page', 'chatgpt_vs_jasper' as any, 'ai_writing_tools', {
+      email,
+      comparison_context: 'chatgpt_vs_jasper',
+      capture_location: 'comparison_cta'
+    });
+
+    // Update user journey
+    if (userJourney) {
+      userJourney.addStep('email_captured', {
+        source: 'comparison_page',
+        tool_context: 'chatgpt_vs_jasper'
+      });
+    }
+    
+    // Legacy tracking for compatibility
     if (typeof window !== 'undefined' && (window as any).gtag) {
       (window as any).gtag('event', 'email_capture', {
         event_category: 'lead_generation',
         event_label: 'chatgpt_vs_jasper_comparison'
       });
+    }
+  };
+
+  // FAQ interaction handler
+  const handleFAQClick = (question: string) => {
+    trackFAQInteraction(question, 'chatgpt_vs_jasper' as any, {
+      comparison_context: true,
+      faq_position: faqs.findIndex(f => f.question === question) + 1
+    });
+
+    if (userJourney) {
+      userJourney.addStep('faq_interaction', {
+        question: question.substring(0, 50),
+        context: 'comparison_page'
+      });
+    }
+  };
+
+  // Affiliate link handler
+  const handleAffiliateLinkClick = (toolName: string, linkType: string, position: string) => {
+    trackAffiliateClick(toolName, linkType, `https://partner.${toolName}.com`, position, {
+      comparison_context: 'chatgpt_vs_jasper',
+      page_section: position
+    });
+
+    if (userJourney) {
+      userJourney.addStep('cta_clicked', {
+        tool: toolName,
+        link_type: linkType,
+        position
+      });
+      // Mark journey as potentially converted
+      userJourney.complete(true, 25);
     }
   };
 

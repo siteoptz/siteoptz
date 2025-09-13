@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useRef } from "react";
+import { trackCalculatorUsage, trackEmailCapture, trackFunnelStep } from '../utils/key-events-tracker';
 
 interface PricingPlan {
   name: string;
@@ -68,6 +69,9 @@ export default function PricingCalculator({
 
   const [selectedPlan, setSelectedPlan] = useState(convertedPlans[0] || null);
   const [email, setEmail] = useState("");
+  const [teamSize, setTeamSize] = useState(1);
+  const [usageLevel, setUsageLevel] = useState('standard');
+  const [hasTrackedUsage, setHasTrackedUsage] = useState(false);
   const [quoteSaved, setQuoteSaved] = useState(false);
   const [discount, setDiscount] = useState<string | null>(null);
   const [discountExpired, setDiscountExpired] = useState(false);
@@ -99,6 +103,43 @@ export default function PricingCalculator({
       });
   }, [convertedPlans]);
 
+  // Calculate total cost function
+  const calculateTotalCost = () => {
+    if (!selectedPlan) return 0;
+    const priceStr = selectedPlan.price;
+    if (priceStr === 'Free' || priceStr === 'Custom') return 0;
+    const basePrice = parseFloat(priceStr.replace('$', ''));
+    return basePrice * teamSize;
+  };
+
+  // Track calculator usage when selections change
+  useEffect(() => {
+    if (!hasTrackedUsage && selectedPlan && teamSize > 0) {
+      const totalCost = calculateTotalCost();
+      const toolNames = tools ? tools.map(t => t.name) : [];
+      
+      trackCalculatorUsage(
+        toolNames, 
+        teamSize, 
+        usageLevel, 
+        totalCost,
+        {
+          selected_plan: selectedPlan?.name,
+          page_context: toolName || 'general',
+          session_id: typeof sessionStorage !== 'undefined' ? sessionStorage.getItem('siteoptz_session_id') : null
+        }
+      );
+      
+      trackFunnelStep('calculator_used', undefined, undefined, {
+        tools_count: toolNames.length,
+        team_size: teamSize,
+        total_cost: totalCost
+      });
+      
+      setHasTrackedUsage(true);
+    }
+  }, [selectedPlan, teamSize, usageLevel, tools, toolName, hasTrackedUsage]);
+
   // Apply discount logic
   const applyDiscount = (code: string) => {
     if (code === "SUMMER2025") {
@@ -120,6 +161,20 @@ export default function PricingCalculator({
   };
 
   const handleSaveQuote = async (e: React.FormEvent) => {
+    // Track email capture
+    if (email) {
+      trackEmailCapture('pricing_calculator', toolName || undefined, 'pricing', {
+        email,
+        selected_plan: selectedPlan?.name,
+        team_size: teamSize,
+        total_cost: calculateTotalCost()
+      });
+      
+      trackFunnelStep('email_captured', undefined, undefined, {
+        source: 'pricing_calculator',
+        plan: selectedPlan?.name
+      });
+    }
     e.preventDefault();
     
     if (toolName) {
