@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 import Link from 'next/link';
+import { signIn, getSession } from 'next-auth/react';
+import { useRouter } from 'next/router';
 import { X, Mail, Lock, Eye, EyeOff, User } from 'lucide-react';
 
 interface RegisterModalProps {
@@ -13,6 +15,7 @@ const RegisterModal: React.FC<RegisterModalProps> = ({
   onClose, 
   planName = 'Free Plan' 
 }) => {
+  const router = useRouter();
   const [isLogin, setIsLogin] = useState(false);
   const [showPassword, setShowPassword] = useState(false);
   const [formData, setFormData] = useState({
@@ -22,6 +25,7 @@ const RegisterModal: React.FC<RegisterModalProps> = ({
     confirmPassword: ''
   });
   const [isLoading, setIsLoading] = useState(false);
+  const [error, setError] = useState('');
 
   if (!isOpen) return null;
 
@@ -35,28 +39,71 @@ const RegisterModal: React.FC<RegisterModalProps> = ({
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsLoading(true);
+    setError('');
     
-    // Simulate API call
-    await new Promise(resolve => setTimeout(resolve, 1500));
-    
-    // Here you would integrate with your authentication system
-    console.log('Form submitted:', { ...formData, planName, action: isLogin ? 'login' : 'register' });
-    
-    setIsLoading(false);
-    // onClose(); // Uncomment when ready to close modal after submission
+    try {
+      if (!isLogin) {
+        // Registration - validate passwords match
+        if (formData.password !== formData.confirmPassword) {
+          setError('Passwords do not match');
+          setIsLoading(false);
+          return;
+        }
+        
+        // TODO: Implement user registration API call
+        // For now, we'll just sign them in after "registration"
+        console.log('User registered:', { email: formData.email, name: formData.name });
+      }
+      
+      // Sign in with credentials
+      const result = await signIn('credentials', {
+        email: formData.email,
+        password: formData.password,
+        redirect: false,
+      });
+
+      if (result?.error) {
+        setError('Invalid credentials. Please try again.');
+      } else {
+        // Success - redirect to dashboard
+        onClose();
+        router.push('/dashboard');
+      }
+    } catch (error) {
+      console.error('Authentication error:', error);
+      setError('An error occurred. Please try again.');
+    } finally {
+      setIsLoading(false);
+    }
   };
 
   const handleGoogleAuth = async () => {
     setIsLoading(true);
+    setError('');
     
-    // Simulate Google OAuth
-    await new Promise(resolve => setTimeout(resolve, 1000));
-    
-    // Here you would integrate with Google OAuth
-    console.log('Google auth initiated for plan:', planName);
-    
-    setIsLoading(false);
-    // onClose(); // Uncomment when ready to close modal after authentication
+    try {
+      const result = await signIn('google', {
+        callbackUrl: '/dashboard',
+        redirect: false,
+      });
+      
+      if (result?.error) {
+        setError('Google authentication failed. Please try again.');
+        setIsLoading(false);
+      } else {
+        // Success - the redirect will happen automatically
+        onClose();
+        // For some reason, NextAuth might not redirect automatically in modal context
+        // So we'll handle it manually
+        setTimeout(() => {
+          router.push('/dashboard');
+        }, 1000);
+      }
+    } catch (error) {
+      console.error('Google auth error:', error);
+      setError('Google authentication failed. Please try again.');
+      setIsLoading(false);
+    }
   };
 
   return (
@@ -96,6 +143,13 @@ const RegisterModal: React.FC<RegisterModalProps> = ({
               {isLogin ? 'Sign in to your account' : `Start your journey with the ${planName}`}
             </p>
           </div>
+
+          {/* Error Message */}
+          {error && (
+            <div className="mb-4 p-3 bg-red-500/10 border border-red-500/20 rounded-xl">
+              <p className="text-red-400 text-sm text-center">{error}</p>
+            </div>
+          )}
 
           {/* Google Auth Button */}
           <button

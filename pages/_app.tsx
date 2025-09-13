@@ -1,6 +1,7 @@
 import { useEffect } from 'react'
 import type { AppProps } from 'next/app'
 import { useRouter } from 'next/router'
+import { SessionProvider } from 'next-auth/react'
 import { Analytics } from '@vercel/analytics/react'
 import Layout from '../components/Layout'
 import initAnalytics, { trackPageView } from '../utils/analytics-init'
@@ -28,11 +29,11 @@ export default function App({ Component, pageProps }: AppProps) {
   }, [router.events])
 
   return (
-    <>
+    <SessionProvider session={pageProps.session}>
       <Layout>
         <Component {...pageProps} />
       </Layout>
       <Analytics />
-    </>
+    </SessionProvider>
   )
 }
