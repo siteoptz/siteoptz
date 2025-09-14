@@ -203,15 +203,9 @@ const Header: React.FC = () => {
 
 
   return (
-    <header 
-      className={`fixed top-0 left-0 right-0 z-40 transition-all duration-300 ${
-        isScrolled 
-          ? 'bg-black/95 backdrop-blur-md shadow-lg border-b border-gray-800/50' 
-          : 'bg-black/90 backdrop-blur-md border-b border-gray-800/20'
-      }`}
-    >
-      <nav className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div className="flex h-16 lg:h-20 items-center justify-between">
+    <header style={{ position: 'fixed', top: 0, left: 0, right: 0, zIndex: 40, backgroundColor: 'black', borderBottom: '1px solid #374151' }}>
+      <nav style={{ maxWidth: '1280px', margin: '0 auto', padding: '0 16px' }}>
+        <div style={{ display: 'flex', height: '80px', alignItems: 'center', justifyContent: 'space-between' }}>
           {/* Logo */}
           <div className="flex items-center">
             <Link href="/" className="flex items-center space-x-3 group">
@@ -238,149 +232,60 @@ const Header: React.FC = () => {
           {/* Desktop Navigation */}
           <div className="hidden lg:flex items-center space-x-1">
             {navigation.map((item) => (
-              <div key={item.name} className="relative group">
+              <div key={item.name}>
                 <Link
                   href={item.href}
-                  className={`px-4 py-2 rounded-lg text-sm font-medium transition-all duration-200 flex items-center space-x-1 ${
+                  className={`px-4 py-2 rounded-lg text-sm font-medium flex items-center space-x-1 ${
                     item.current
                       ? 'bg-gray-800 text-white shadow-sm'
                       : 'text-gray-300 hover:text-white hover:bg-gray-800'
                   }`}
                 >
                   <span>{item.name}</span>
-                  {item.hasDropdown && (
-                    <ChevronDown className="w-4 h-4 transition-transform group-hover:rotate-180" />
-                  )}
                 </Link>
-                
-                {/* Accordion Dropdown Menu - AI Categories */}
-                {item.hasDropdown && item.isCategory && (
-                  <div 
-                    className="absolute top-full left-0 mt-2 w-80 bg-black rounded-xl shadow-xl border border-gray-800/50 py-3 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 transform translate-y-2 group-hover:translate-y-0"
-                  >
-                    <div className="px-4 py-2 text-xs font-semibold text-gray-500 uppercase tracking-wider border-b border-gray-800/50 mb-3">
-                      Browse by Category
-                    </div>
-                    <div className="max-h-96 overflow-y-auto">
-                      {accordionCategories.map((mainCategory, index) => (
-                        <div key={mainCategory.name} className={index > 0 ? 'border-t border-gray-800/30 mt-2 pt-2' : ''}>
-                          <button
-                            onClick={(e) => {
-                              e.preventDefault();
-                              e.stopPropagation();
-                              toggleDesktopCategoryAccordion(mainCategory.name);
-                            }}
-                            className="w-full px-4 py-2 text-left text-xs font-bold text-cyan-400 uppercase tracking-wider hover:text-cyan-300 transition-colors flex items-center justify-between"
-                          >
-                            {mainCategory.name}
-                            <ChevronDown 
-                              className={`w-4 h-4 transition-transform duration-200 ${
-                                desktopCategoryAccordions[mainCategory.name] ? 'rotate-180' : ''
-                              }`}
-                            />
-                          </button>
-                          {desktopCategoryAccordions[mainCategory.name] && (
-                            <div className="space-y-1 px-2 pb-2">
-                              {mainCategory.subcategories.map((subcategory) => (
-                                <Link
-                                  key={subcategory.value}
-                                  href={getCategoryUrl(subcategory.value)}
-                                  className="block px-4 py-2 text-sm text-gray-300 hover:bg-gray-800 hover:text-white transition-all duration-200 rounded-lg border-l-2 border-transparent hover:border-cyan-400"
-                                >
-                                  <div className="flex items-center justify-between">
-                                    <span>{subcategory.name}</span>
-                                    <span className="text-xs text-gray-500">→</span>
-                                  </div>
-                                </Link>
-                              ))}
-                            </div>
-                          )}
-                        </div>
-                      ))}
-                    </div>
-                  </div>
-                )}
-                
-                
-                {/* Dropdown Menu - Industries */}
-                {item.hasDropdown && item.isIndustry && (
-                  <div 
-                    className="absolute top-full left-0 mt-2 w-72 bg-black rounded-xl shadow-xl border border-gray-800/50 py-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 transform translate-y-2 group-hover:translate-y-0"
-                  >
-                    <div className="px-4 py-2 text-xs font-semibold text-gray-500 uppercase tracking-wider border-b border-gray-800/50 mb-2">
-                      Browse by Industry
-                    </div>
-                    {industryMenuItems.map((item) => (
-                      <Link
-                        key={item.industry}
-                        href={`/industries/${industrySlugMap[item.industry]}`}
-                        className="block px-4 py-3 text-sm text-gray-300 hover:bg-gray-800 hover:text-white transition-colors border-l-2 border-transparent hover:border-cyan-400"
-                      >
-                        <div className="flex items-center justify-between">
-                          <span>{item.name}</span>
-                          <span className="text-xs text-gray-500">→</span>
-                        </div>
-                      </Link>
-                    ))}
-                  </div>
-                )}
+                {/* Dropdowns temporarily disabled for debugging */}
               </div>
             ))}
           </div>
 
-          {/* Authentication CTA */}
-          <div className="hidden lg:flex items-center space-x-3">
-            {session ? (
-              <div className="relative">
-                <button
-                  onClick={() => setShowUserDropdown(!showUserDropdown)}
-                  className="flex items-center space-x-2 px-4 py-2 bg-gray-800 text-white rounded-lg font-medium text-sm hover:bg-gray-700 transition-all duration-200"
-                >
-                  {session.user?.image ? (
-                    <img
-                      src={session.user.image}
-                      alt={session.user.name || 'User'}
-                      className="w-6 h-6 rounded-full"
-                    />
-                  ) : (
-                    <User className="w-4 h-4" />
-                  )}
-                  <span className="max-w-24 truncate">{session.user?.name || session.user?.email}</span>
-                  <ChevronDown className="w-4 h-4" />
-                </button>
-                
-                {showUserDropdown && (
-                  <div className="absolute right-0 mt-2 w-48 bg-white rounded-lg shadow-lg border border-gray-200 py-1 z-50">
-                    <Link href="/dashboard" className="flex items-center px-4 py-2 text-gray-700 hover:bg-gray-100">
-                      <User className="w-4 h-4 mr-2" />
-                      Dashboard
-                    </Link>
-                    <button
-                      onClick={() => signOut({ callbackUrl: '/' })}
-                      className="flex items-center w-full px-4 py-2 text-gray-700 hover:bg-gray-100"
-                    >
-                      <LogOut className="w-4 h-4 mr-2" />
-                      Sign Out
-                    </button>
-                  </div>
-                )}
-              </div>
-            ) : (
-              <>
-                <button
-                  onClick={() => setIsLoginModalOpen(true)}
-                  className="px-4 py-2 text-gray-300 hover:text-white font-medium text-sm transition-colors cursor-pointer"
-                >
-                  Log In
-                </button>
-                <button
-                  onClick={() => setIsRegisterModalOpen(true)}
-                  className="px-6 py-2.5 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-lg font-semibold text-sm hover:from-blue-700 hover:to-purple-700 transform hover:scale-105 transition-all duration-200 shadow-lg hover:shadow-xl"
-                >
-                  Get Started
-                </button>
-              </>
-            )}
+          {/* Authentication CTA - TESTING DIFFERENT ROUTES */}
+          <div style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
+            <a
+              href="/about"
+              style={{ 
+                color: 'white', 
+                textDecoration: 'none', 
+                padding: '8px 16px',
+                backgroundColor: '#1f2937',
+                borderRadius: '8px'
+              }}
+            >
+              Test Link 1
+            </a>
+            <a
+              href="/contact"
+              style={{ 
+                color: 'white', 
+                textDecoration: 'none', 
+                padding: '8px 16px',
+                backgroundColor: '#3b82f6',
+                borderRadius: '8px'
+              }}
+            >
+              Test Link 2
+            </a>
+            <a
+              href="/dashboard"
+              style={{ 
+                color: 'white', 
+                textDecoration: 'none', 
+                padding: '8px 16px',
+                backgroundColor: '#dc2626',
+                borderRadius: '8px'
+              }}
+            >
+              Dashboard
+            </a>
           </div>
 
           {/* Mobile menu button */}
@@ -698,26 +603,8 @@ const Header: React.FC = () => {
         )}
       </nav>
 
-      {/* Login Modal */}
-      <LoginModal
-        isOpen={isLoginModalOpen}
-        onClose={() => setIsLoginModalOpen(false)}
-        onOpenRegister={() => {
-          setIsLoginModalOpen(false);
-          setIsRegisterModalOpen(true);
-        }}
-      />
-
-      {/* Register Modal */}
-      <RegisterModal
-        isOpen={isRegisterModalOpen}
-        onClose={() => setIsRegisterModalOpen(false)}
-        planName="Free Plan - AI Tool Discovery"
-        onOpenLogin={() => {
-          setIsRegisterModalOpen(false);
-          setIsLoginModalOpen(true);
-        }}
-      />
+      {/* Modals temporarily disabled for debugging */}
+      {/* {isLoginModalOpen && <div style={{position: 'fixed', top: 0, left: 0, right: 0, bottom: 0, backgroundColor: 'red', zIndex: 9999}}>MODAL TEST</div>} */}
     </header>
   );
 };

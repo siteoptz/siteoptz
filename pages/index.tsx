@@ -76,6 +76,13 @@ export default function HomePage({ featuredTools, popularComparisons, faqs }: Ho
       />
 
       <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-black relative overflow-hidden">
+        {/* DEBUG TEST - Simple test link */}
+        <div style={{ position: 'fixed', top: '100px', left: '50px', zIndex: 10000, backgroundColor: 'red', padding: '20px' }}>
+          <a href="/dashboard" style={{ color: 'white', textDecoration: 'none', fontSize: '20px' }}>
+            DIRECT TEST LINK
+          </a>
+        </div>
+
         {/* Animated Background Elements */}
         <div className="absolute inset-0 pointer-events-none">
           <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-64 h-64 bg-cyan-500/10 rounded-full blur-3xl animate-pulse delay-500"></div>
