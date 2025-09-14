@@ -223,6 +223,57 @@ const RegisterModal: React.FC<RegisterModalProps> = ({
             </div>
           )}
 
+          {/* AI Tools Interest and Business Size fields for registration (shown before auth options) */}
+          {!isLogin && (
+            <div className="space-y-4 mb-6">
+              <div>
+                <label className="block text-sm font-medium text-gray-300 mb-2">
+                  What AI tools interest you most?
+                </label>
+                <select
+                  name="aiToolsInterest"
+                  value={formData.aiToolsInterest}
+                  onChange={handleInputChange}
+                  required={!isLogin}
+                  className="w-full bg-gray-800 border border-gray-600 rounded-xl py-3 px-4 text-white focus:border-green-500 focus:ring-1 focus:ring-green-500 focus:outline-none transition-all"
+                >
+                  <option value="chatgpt">ChatGPT & Language Models</option>
+                  <option value="image-generation">AI Image Generation</option>
+                  <option value="video-creation">AI Video Creation</option>
+                  <option value="writing-tools">AI Writing Tools</option>
+                  <option value="automation">AI Automation</option>
+                  <option value="voice-ai">Voice AI Tools</option>
+                  <option value="design-tools">AI Design Tools</option>
+                  <option value="research">AI Research Tools</option>
+                  <option value="general">General AI Tools</option>
+                  <option value="other">Other</option>
+                </select>
+              </div>
+
+              <div>
+                <label className="block text-sm font-medium text-gray-300 mb-2">
+                  What's your business size?
+                </label>
+                <select
+                  name="businessSize"
+                  value={formData.businessSize}
+                  onChange={handleInputChange}
+                  required={!isLogin}
+                  className="w-full bg-gray-800 border border-gray-600 rounded-xl py-3 px-4 text-white focus:border-green-500 focus:ring-1 focus:ring-green-500 focus:outline-none transition-all"
+                >
+                  <option value="small">Small Business (1-10 employees)</option>
+                  <option value="medium">Medium Business (11-50 employees)</option>
+                  <option value="large">Large Business (51-200 employees)</option>
+                  <option value="enterprise">Enterprise (200+ employees)</option>
+                  <option value="solo">Solo/Freelancer</option>
+                  <option value="startup">Startup</option>
+                  <option value="agency">Agency/Consultancy</option>
+                  <option value="other">Other</option>
+                </select>
+              </div>
+            </div>
+          )}
+
           {/* Google Auth Button */}
           <button
             onClick={handleGoogleAuth}
@@ -325,51 +376,6 @@ const RegisterModal: React.FC<RegisterModalProps> = ({
               </div>
             )}
 
-            {/* AI Tools Interest field (only for registration) */}
-            {!isLogin && (
-              <div>
-                <select
-                  name="aiToolsInterest"
-                  value={formData.aiToolsInterest}
-                  onChange={handleInputChange}
-                  required={!isLogin}
-                  className="w-full bg-gray-800 border border-gray-600 rounded-xl py-3 px-4 text-white focus:border-green-500 focus:ring-1 focus:ring-green-500 focus:outline-none transition-all"
-                >
-                  <option value="chatgpt">ChatGPT & Language Models</option>
-                  <option value="image-generation">AI Image Generation</option>
-                  <option value="video-creation">AI Video Creation</option>
-                  <option value="writing-tools">AI Writing Tools</option>
-                  <option value="automation">AI Automation</option>
-                  <option value="voice-ai">Voice AI Tools</option>
-                  <option value="design-tools">AI Design Tools</option>
-                  <option value="research">AI Research Tools</option>
-                  <option value="general">General AI Tools</option>
-                  <option value="other">Other</option>
-                </select>
-              </div>
-            )}
-
-            {/* Business Size field (only for registration) */}
-            {!isLogin && (
-              <div>
-                <select
-                  name="businessSize"
-                  value={formData.businessSize}
-                  onChange={handleInputChange}
-                  required={!isLogin}
-                  className="w-full bg-gray-800 border border-gray-600 rounded-xl py-3 px-4 text-white focus:border-green-500 focus:ring-1 focus:ring-green-500 focus:outline-none transition-all"
-                >
-                  <option value="small">Small Business (1-10 employees)</option>
-                  <option value="medium">Medium Business (11-50 employees)</option>
-                  <option value="large">Large Business (51-200 employees)</option>
-                  <option value="enterprise">Enterprise (200+ employees)</option>
-                  <option value="solo">Solo/Freelancer</option>
-                  <option value="startup">Startup</option>
-                  <option value="agency">Agency/Consultancy</option>
-                  <option value="other">Other</option>
-                </select>
-              </div>
-            )}
 
             {/* Submit Button */}
             <button
