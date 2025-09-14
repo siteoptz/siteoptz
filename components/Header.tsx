@@ -203,9 +203,15 @@ const Header: React.FC = () => {
 
 
   return (
-    <header style={{ position: 'fixed', top: 0, left: 0, right: 0, zIndex: 40, backgroundColor: 'black', borderBottom: '1px solid #374151' }}>
-      <nav style={{ maxWidth: '1280px', margin: '0 auto', padding: '0 16px' }}>
-        <div style={{ display: 'flex', height: '80px', alignItems: 'center', justifyContent: 'space-between' }}>
+    <header 
+      className={`fixed top-0 left-0 right-0 z-40 transition-all duration-300 ${
+        isScrolled 
+          ? 'bg-black/95 backdrop-blur-md shadow-lg border-b border-gray-800/50' 
+          : 'bg-black/90 backdrop-blur-md border-b border-gray-800/20'
+      }`}
+    >
+      <nav className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div className="flex h-16 lg:h-20 items-center justify-between">
           {/* Logo */}
           <div className="flex items-center">
             <Link href="/" className="flex items-center space-x-3 group">
@@ -248,44 +254,59 @@ const Header: React.FC = () => {
             ))}
           </div>
 
-          {/* Authentication CTA - TESTING DIFFERENT ROUTES */}
-          <div style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
-            <Link
-              href="/about"
-              style={{ 
-                color: 'white', 
-                textDecoration: 'none', 
-                padding: '8px 16px',
-                backgroundColor: '#1f2937',
-                borderRadius: '8px'
-              }}
-            >
-              Test Link 1
-            </Link>
-            <Link
-              href="/contact"
-              style={{ 
-                color: 'white', 
-                textDecoration: 'none', 
-                padding: '8px 16px',
-                backgroundColor: '#3b82f6',
-                borderRadius: '8px'
-              }}
-            >
-              Test Link 2
-            </Link>
-            <Link
-              href="/dashboard"
-              style={{ 
-                color: 'white', 
-                textDecoration: 'none', 
-                padding: '8px 16px',
-                backgroundColor: '#dc2626',
-                borderRadius: '8px'
-              }}
-            >
-              Dashboard
-            </Link>
+          {/* Authentication CTA */}
+          <div className="hidden lg:flex items-center space-x-3">
+            {session ? (
+              <div className="relative">
+                <button
+                  onClick={() => setShowUserDropdown(!showUserDropdown)}
+                  className="flex items-center space-x-2 px-4 py-2 bg-gray-800 text-white rounded-lg font-medium text-sm hover:bg-gray-700 transition-all duration-200"
+                >
+                  {session.user?.image ? (
+                    <img
+                      src={session.user.image}
+                      alt={session.user.name || 'User'}
+                      className="w-6 h-6 rounded-full"
+                    />
+                  ) : (
+                    <User className="w-4 h-4" />
+                  )}
+                  <span className="max-w-24 truncate">{session.user?.name || session.user?.email}</span>
+                  <ChevronDown className="w-4 h-4" />
+                </button>
+                
+                {showUserDropdown && (
+                  <div className="absolute right-0 mt-2 w-48 bg-white rounded-lg shadow-lg border border-gray-200 py-1 z-50">
+                    <Link href="/dashboard" className="flex items-center px-4 py-2 text-gray-700 hover:bg-gray-100">
+                      <User className="w-4 h-4 mr-2" />
+                      Dashboard
+                    </Link>
+                    <button
+                      onClick={() => signOut({ callbackUrl: '/' })}
+                      className="flex items-center w-full px-4 py-2 text-gray-700 hover:bg-gray-100"
+                    >
+                      <LogOut className="w-4 h-4 mr-2" />
+                      Sign Out
+                    </button>
+                  </div>
+                )}
+              </div>
+            ) : (
+              <>
+                <button
+                  onClick={() => setIsLoginModalOpen(true)}
+                  className="px-4 py-2 text-gray-300 hover:text-white font-medium text-sm transition-colors"
+                >
+                  Log In
+                </button>
+                <button
+                  onClick={() => setIsRegisterModalOpen(true)}
+                  className="px-6 py-2.5 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-lg font-semibold text-sm hover:from-blue-700 hover:to-purple-700 transform hover:scale-105 transition-all duration-200 shadow-lg hover:shadow-xl"
+                >
+                  Get Started
+                </button>
+              </>
+            )}
           </div>
 
           {/* Mobile menu button */}
@@ -603,8 +624,26 @@ const Header: React.FC = () => {
         )}
       </nav>
 
-      {/* Modals temporarily disabled for debugging */}
-      {/* {isLoginModalOpen && <div style={{position: 'fixed', top: 0, left: 0, right: 0, bottom: 0, backgroundColor: 'red', zIndex: 9999}}>MODAL TEST</div>} */}
+      {/* Login Modal */}
+      <LoginModal
+        isOpen={isLoginModalOpen}
+        onClose={() => setIsLoginModalOpen(false)}
+        onOpenRegister={() => {
+          setIsLoginModalOpen(false);
+          setIsRegisterModalOpen(true);
+        }}
+      />
+
+      {/* Register Modal */}
+      <RegisterModal
+        isOpen={isRegisterModalOpen}
+        onClose={() => setIsRegisterModalOpen(false)}
+        planName="Free Plan - AI Tool Discovery"
+        onOpenLogin={() => {
+          setIsRegisterModalOpen(false);
+          setIsLoginModalOpen(true);
+        }}
+      />
     </header>
   );
 };

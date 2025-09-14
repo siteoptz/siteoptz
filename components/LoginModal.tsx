@@ -123,12 +123,21 @@ const LoginModal: React.FC<LoginModalProps> = ({ isOpen, onClose, onOpenRegister
   };
 
   return (
-    <div className="fixed inset-0 z-[9999] overflow-y-auto" style={{ backgroundColor: 'rgba(255,0,0,0.5)' }}>
+    <div className="fixed inset-0 z-[9999] overflow-y-auto">
+      <div 
+        className="fixed inset-0 bg-black/75 backdrop-blur-sm transition-opacity"
+        onClick={onClose}
+        onKeyDown={(e) => {
+          if (e.key === 'Escape') onClose();
+        }}
+        role="button"
+        tabIndex={0}
+        aria-label="Close modal"
+      />
+      
       <div className="flex min-h-screen items-start justify-center p-4 pt-16 sm:pt-24">
         {/* Modal */}
-        <div className="relative w-full max-w-md transform rounded-2xl bg-white border border-gray-700 p-6 shadow-2xl transition-all z-10 max-h-[90vh] overflow-y-auto">
-          <h1 style={{ color: 'black' }}>MODAL IS WORKING!</h1>
-          <button onClick={onClose} style={{ color: 'black', border: '1px solid black', padding: '10px' }}>Close</button>
+        <div className="relative w-full max-w-md transform rounded-2xl bg-gradient-to-br from-black via-gray-900 to-black border border-gray-700 p-6 shadow-2xl transition-all z-10 max-h-[90vh] overflow-y-auto">
           {/* Close Button */}
           <button
             onClick={onClose}
