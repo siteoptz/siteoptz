@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
 import RegisterModal from '../components/RegisterModal';
+import LoginModal from '../components/LoginModal';
 import { 
   Target, 
   Users, 
@@ -24,6 +25,7 @@ import {
 
 export default function WhyUs() {
   const [isRegisterModalOpen, setIsRegisterModalOpen] = useState(false);
+  const [isLoginModalOpen, setIsLoginModalOpen] = useState(false);
 
   const structuredData = {
     "@context": "https://schema.org",
@@ -955,6 +957,14 @@ export default function WhyUs() {
         isOpen={isRegisterModalOpen}
         onClose={() => setIsRegisterModalOpen(false)}
         planName="Free Plan - AI Tool Discovery"
+        onOpenLogin={() => setIsLoginModalOpen(true)}
+      />
+
+      {/* Login Modal */}
+      <LoginModal
+        isOpen={isLoginModalOpen}
+        onClose={() => setIsLoginModalOpen(false)}
+        onOpenRegister={() => setIsRegisterModalOpen(true)}
       />
     </>
   );

@@ -8,13 +8,25 @@ import { User, LogOut, Mail, Calendar, Gift, ArrowLeft } from 'lucide-react';
 export default function Dashboard() {
   const { data: session, status } = useSession();
   const router = useRouter();
+  const [isFirstTime, setIsFirstTime] = React.useState(false);
 
-  // Redirect to home if not authenticated
+  // Check if this is a first-time user and redirect to home if not authenticated
   React.useEffect(() => {
     if (status === 'loading') return; // Still loading
     if (!session) {
       router.push('/');
       return;
+    }
+    
+    // Check for first-time user indicators
+    const isNewUser = router.query.new === 'true' || 
+                     localStorage.getItem('isFirstTimeUser') === 'true' ||
+                     !localStorage.getItem('hasVisitedDashboard');
+    
+    if (isNewUser) {
+      setIsFirstTime(true);
+      localStorage.setItem('hasVisitedDashboard', 'true');
+      localStorage.removeItem('isFirstTimeUser');
     }
   }, [session, status, router]);
 
@@ -93,7 +105,10 @@ export default function Dashboard() {
                 </div>
                 <div className="flex-grow">
                   <h2 className="text-3xl font-bold text-white mb-2">
-                    Welcome back, {session.user?.name || 'there'}!
+                    {isFirstTime 
+                      ? `Welcome, ${session.user?.name || 'there'}!`
+                      : `Welcome back, ${session.user?.name || 'there'}!`
+                    }
                   </h2>
                   <p className="text-gray-300 mb-4">
                     You&apos;re now part of the SiteOptz.ai community with access to our Free Plan - AI Tool Discovery.

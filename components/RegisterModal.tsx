@@ -8,12 +8,14 @@ interface RegisterModalProps {
   isOpen: boolean;
   onClose: () => void;
   planName?: string;
+  onOpenLogin?: () => void;
 }
 
 const RegisterModal: React.FC<RegisterModalProps> = ({ 
   isOpen, 
   onClose, 
-  planName = 'Free Plan' 
+  planName = 'Free Plan',
+  onOpenLogin
 }) => {
   const router = useRouter();
   const [isLogin, setIsLogin] = useState(false);
@@ -111,7 +113,10 @@ const RegisterModal: React.FC<RegisterModalProps> = ({
       if (result?.error) {
         setError('Invalid credentials. Please try again.');
       } else {
-        // Success - redirect to dashboard
+        // Success - mark as first time user and redirect to dashboard
+        if (!isLogin) {
+          localStorage.setItem('isFirstTimeUser', 'true');
+        }
         onClose();
         router.push('/dashboard');
       }
@@ -191,7 +196,10 @@ const RegisterModal: React.FC<RegisterModalProps> = ({
           // Don't fail the process if CRM integration fails
         }
         
-        // Success - the redirect will happen automatically
+        // Success - mark as first time user if registering and redirect
+        if (!isLogin) {
+          localStorage.setItem('isFirstTimeUser', 'true');
+        }
         onClose();
         // For some reason, NextAuth might not redirect automatically in modal context
         // So we'll handle it manually
@@ -429,7 +437,16 @@ const RegisterModal: React.FC<RegisterModalProps> = ({
             <p className="text-gray-400">
               {isLogin ? "Don't have an account? " : "Already have an account? "}
               <button
-                onClick={() => setIsLogin(!isLogin)}
+                onClick={() => {
+                  if (isLogin) {
+                    setIsLogin(false);
+                  } else if (onOpenLogin) {
+                    onClose();
+                    onOpenLogin();
+                  } else {
+                    setIsLogin(true);
+                  }
+                }}
                 className="text-green-400 hover:text-green-300 font-semibold transition-colors"
               >
                 {isLogin ? 'Sign up' : 'Sign in'}
