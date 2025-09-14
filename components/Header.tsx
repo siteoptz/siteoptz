@@ -250,7 +250,7 @@ const Header: React.FC = () => {
 
           {/* Authentication CTA - TESTING DIFFERENT ROUTES */}
           <div style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
-            <a
+            <Link
               href="/about"
               style={{ 
                 color: 'white', 
@@ -261,8 +261,8 @@ const Header: React.FC = () => {
               }}
             >
               Test Link 1
-            </a>
-            <a
+            </Link>
+            <Link
               href="/contact"
               style={{ 
                 color: 'white', 
@@ -273,8 +273,8 @@ const Header: React.FC = () => {
               }}
             >
               Test Link 2
-            </a>
-            <a
+            </Link>
+            <Link
               href="/dashboard"
               style={{ 
                 color: 'white', 
@@ -285,7 +285,7 @@ const Header: React.FC = () => {
               }}
             >
               Dashboard
-            </a>
+            </Link>
           </div>
 
           {/* Mobile menu button */}
