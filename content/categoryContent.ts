@@ -2544,7 +2544,208 @@ export const categoryContent: Record<string, any> = {
         answer: "AI e-commerce tools require customer browsing and purchase history, product catalog data, inventory levels, pricing information, and customer demographics. Most tools can start providing value with basic data and improve as more information becomes available over time."
       }
     ]
-  }
+  },
+
+  "Chat": {
+    "seo": {
+        "title": "Best AI Chatbot Tools 2024 | Conversational AI Platforms & Solutions",
+        "description": "Discover top AI chatbot platforms including ChatGPT, Claude, and custom chatbot builders. Compare features, pricing, and capabilities for customer service, support, and business automation.",
+        "keywords": [
+            "AI chatbot",
+            "conversational AI",
+            "chatbot platform",
+            "AI customer service",
+            "virtual assistant",
+            "automated chat",
+            "AI conversation",
+            "chatbot builder",
+            "intelligent chatbot",
+            "AI chat software",
+            "conversational interface",
+            "AI messaging"
+        ]
+    },
+    "hero": {
+        "title": "Best AI Chatbot Tools for Business Automation",
+        "subheading": "Enhance Customer Experience with Intelligent Conversations",
+        "introText": "AI chatbots are transforming customer interactions by providing 24/7 automated support, lead qualification, and personalized assistance. From customer service automation to sales optimization, these conversational AI platforms help businesses scale their communication while reducing response times and operational costs."
+    }
+},
+  "Education & Research": {
+    "seo": {
+        "title": "Best AI Tools for Education & Research 2024 | Academic AI Solutions",
+        "description": "Explore top AI tools for education and research including research assistants, academic writing aids, and study platforms. Enhance learning outcomes and research efficiency with AI technology.",
+        "keywords": [
+            "AI education tools",
+            "AI research assistant",
+            "academic AI",
+            "educational technology",
+            "AI learning platform",
+            "research automation",
+            "AI study tools",
+            "academic writing AI",
+            "educational AI software",
+            "AI tutoring",
+            "research AI tools",
+            "learning management AI"
+        ]
+    },
+    "hero": {
+        "title": "AI Tools Revolutionizing Education & Research",
+        "subheading": "Accelerate Learning and Discovery with AI Technology",
+        "introText": "AI is transforming education and research by providing personalized learning experiences, automating research tasks, and enhancing academic productivity. These tools help educators create engaging content, assist researchers in data analysis, and support students in their learning journey."
+    }
+},
+  "Marketing": {
+    "seo": {
+        "title": "Best AI Marketing Tools 2024 | AI-Powered Marketing Automation",
+        "description": "Discover top AI marketing tools for campaign optimization, content personalization, and customer analytics. Transform your marketing strategy with artificial intelligence solutions.",
+        "keywords": [
+            "AI marketing tools",
+            "marketing automation AI",
+            "AI campaign optimization",
+            "marketing AI software",
+            "AI personalization",
+            "predictive marketing",
+            "AI analytics",
+            "marketing intelligence",
+            "AI customer insights",
+            "automated marketing",
+            "AI-driven marketing",
+            "marketing AI platform"
+        ]
+    },
+    "hero": {
+        "title": "AI Marketing Tools for Modern Businesses",
+        "subheading": "Optimize Campaigns and Personalize Customer Experiences",
+        "introText": "AI marketing tools are revolutionizing how businesses connect with customers, optimize campaigns, and drive growth. From predictive analytics to automated personalization, these platforms help marketers deliver more effective, targeted campaigns while maximizing ROI and customer engagement."
+    }
+},
+  "Music & Audio": {
+    "seo": {
+        "title": "Best AI Music & Audio Tools 2024 | AI Sound Generation & Editing",
+        "description": "Explore top AI music and audio tools for music generation, audio editing, and sound design. Create professional audio content with artificial intelligence technology.",
+        "keywords": [
+            "AI music generator",
+            "AI audio tools",
+            "artificial intelligence music",
+            "AI sound design",
+            "AI music composition",
+            "audio AI software",
+            "AI music creation",
+            "automated music",
+            "AI audio editing",
+            "music AI platform",
+            "AI sound generation",
+            "artificial intelligence audio"
+        ]
+    },
+    "hero": {
+        "title": "AI Music & Audio Tools for Creative Professionals",
+        "subheading": "Compose, Edit, and Design Audio with AI Technology",
+        "introText": "AI music and audio tools are transforming the creative industry by enabling musicians, podcasters, and content creators to generate original compositions, enhance audio quality, and design professional soundscapes. These platforms democratize music production and audio editing for creators of all skill levels."
+    }
+},
+  "Sales": {
+    "seo": {
+        "title": "Best AI Sales Tools 2024 | AI-Powered Sales Automation & CRM",
+        "description": "Discover top AI sales tools for lead scoring, pipeline management, and sales forecasting. Boost your sales performance with intelligent automation and analytics.",
+        "keywords": [
+            "AI sales tools",
+            "sales automation AI",
+            "AI CRM",
+            "AI lead scoring",
+            "sales AI software",
+            "AI sales assistant",
+            "predictive sales",
+            "AI sales analytics",
+            "automated sales",
+            "AI prospecting",
+            "sales intelligence AI",
+            "AI sales platform"
+        ]
+    },
+    "hero": {
+        "title": "AI Sales Tools for Revenue Growth",
+        "subheading": "Automate Processes and Accelerate Sales Performance",
+        "introText": "AI sales tools are revolutionizing the sales process by automating lead qualification, optimizing pricing strategies, and providing predictive insights. These platforms help sales teams increase conversion rates, reduce cycle times, and scale their operations more effectively."
+    }
+},
+  "Self-Improvement": {
+    "seo": {
+        "title": "Best AI Self-Improvement Tools 2024 | Personal Development AI",
+        "description": "Explore top AI tools for personal development, habit tracking, and self-improvement. Enhance your productivity and personal growth with artificial intelligence coaching.",
+        "keywords": [
+            "AI self improvement",
+            "personal development AI",
+            "AI life coach",
+            "AI productivity tools",
+            "AI habit tracker",
+            "self help AI",
+            "AI wellness tools",
+            "personal growth AI",
+            "AI goal setting",
+            "self development AI",
+            "AI coaching",
+            "mindfulness AI"
+        ]
+    },
+    "hero": {
+        "title": "AI Tools for Personal Growth & Self-Improvement",
+        "subheading": "Accelerate Your Personal Development Journey",
+        "introText": "AI self-improvement tools are empowering individuals to achieve their personal goals through personalized coaching, habit tracking, and performance optimization. These platforms provide data-driven insights and customized recommendations to support continuous personal growth and development."
+    }
+},
+  "Translation": {
+    "seo": {
+        "title": "Best AI Translation Tools 2024 | AI Language Translation Software",
+        "description": "Discover top AI translation tools for real-time language translation, document conversion, and multilingual communication. Break language barriers with AI technology.",
+        "keywords": [
+            "AI translation",
+            "AI translator",
+            "language translation AI",
+            "AI language tools",
+            "automatic translation",
+            "AI multilingual",
+            "translation AI software",
+            "AI language converter",
+            "real-time translation AI",
+            "AI language processing",
+            "translation automation",
+            "AI localization"
+        ]
+    },
+    "hero": {
+        "title": "AI Translation Tools for Global Communication",
+        "subheading": "Break Language Barriers with Intelligent Translation",
+        "introText": "AI translation tools are enabling seamless global communication by providing accurate, real-time language translation across hundreds of languages. These platforms support businesses in expanding internationally while helping individuals communicate across language barriers with unprecedented accuracy and speed."
+    }
+},
+  "UX & Design": {
+    "seo": {
+        "title": "Best AI UX & Design Tools 2024 | AI-Powered Design & User Experience",
+        "description": "Explore top AI UX and design tools for interface design, user research, and design optimization. Enhance user experiences with artificial intelligence design solutions.",
+        "keywords": [
+            "AI UX tools",
+            "AI design software",
+            "UX AI platform",
+            "AI user experience",
+            "AI design automation",
+            "design AI tools",
+            "AI interface design",
+            "UX optimization AI",
+            "AI design assistant",
+            "user research AI",
+            "AI prototyping",
+            "design intelligence"
+        ]
+    },
+    "hero": {
+        "title": "AI UX & Design Tools for Better User Experiences",
+        "subheading": "Create Intuitive Designs with AI-Powered Insights",
+        "introText": "AI UX and design tools are revolutionizing the design process by automating user research, generating design variations, and optimizing user experiences based on data-driven insights. These platforms help designers create more effective, user-centered designs while accelerating the design workflow."
+    }
+},
 };
 
 // Helper function to get category content

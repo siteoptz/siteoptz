@@ -25,69 +25,68 @@ interface CategoriesPageProps {
 // Icon mapping for categories
 const categoryIcons: { [key: string]: any } = {
   'AI Automation': Zap,
-  'AI Education': Brain,
-  'AI For Business': TrendingUp,
-  'Lead Generation': Users,
-  'AI Translator': Search,
   'AI Website Builder': Code,
-  'Best Voice AI Tools': Mic,
+  'Chat': Users,
   'Code Generation': Code,
   'Content Creation': Brain,
   'Data Analysis': BarChart,
   'E-commerce': TrendingUp,
+  'Education & Research': Search,
   'Email Marketing': Users,
   'Finance AI': BarChart,
-  'Health AI': Brain,
   'Image Generation': Image,
+  'Lead Generation': Users,
+  'Marketing': TrendingUp,
+  'Music & Audio': Mic,
   'Paid Search & PPC': TrendingUp,
   'Productivity': Zap,
   'Research & Education': Search,
+  'Sales': TrendingUp,
   'SEO & Optimization': TrendingUp,
+  'Self-Improvement': Brain,
   'Social Media': Users,
-  'UX': Grid,
+  'Translation': Search,
+  'UX & Design': Grid,
   'Video Generation': Image,
   'Voice AI': Mic,
-  'Website Builder': Code,
-  'Writing': Brain,
 };
 
 // Category descriptions - matching the actual category names from config
 const categoryDescriptions: { [key: string]: string } = {
   'AI Automation': 'Streamline workflows and automate repetitive tasks with AI',
-  'AI Education': 'Learn and develop AI skills with educational platforms and courses',
-  'AI For Business': 'Enterprise-focused AI solutions for business transformation',
-  'Lead Generation': 'AI-powered tools for identifying and nurturing prospects',
-  'AI Translator': 'Translate content across languages with advanced AI models',
   'AI Website Builder': 'Create professional websites using AI-driven design tools',
-  'Best Voice AI Tools': 'Text-to-speech, voice cloning, and audio generation solutions',
+  'Chat': 'AI chatbots and conversational AI platforms',
   'Code Generation': 'AI coding assistants and automated code generation tools',
   'Content Creation': 'AI-powered tools for generating articles, blog posts, and creative content',
   'Data Analysis': 'Analyze data patterns and generate insights with AI',
   'E-commerce': 'AI solutions for online stores and digital commerce platforms',
+  'Education & Research': 'AI tools for academic research, learning, and knowledge discovery',
   'Email Marketing': 'Automate and optimize email campaigns with AI',
   'Finance AI': 'AI tools for financial analysis, trading, and accounting',
-  'Health AI': 'AI applications for healthcare, wellness, and medical research',
   'Image Generation': 'Create stunning visuals with AI-powered image generators',
+  'Lead Generation': 'AI-powered tools for identifying and nurturing prospects',
+  'Marketing': 'AI-driven marketing tools and campaign optimization',
+  'Music & Audio': 'AI tools for music generation, audio editing, and sound design',
   'Paid Search & PPC': 'Optimize your paid advertising campaigns with AI',
   'Productivity': 'Boost efficiency with AI-powered productivity tools',
-  'Research & Education': 'AI tools for research, learning, and knowledge discovery',
+  'Research & Education': 'AI tools for research, learning, and educational content',
+  'Sales': 'AI-powered sales tools and customer relationship management',
   'SEO & Optimization': 'Tools to improve search rankings and optimize website performance',
+  'Self-Improvement': 'AI tools for personal development and skill enhancement',
   'Social Media': 'Automate and optimize your social media presence',
-  'UX': 'AI-powered user experience design and optimization tools',
+  'Translation': 'Translate content across languages with advanced AI models',
+  'UX & Design': 'AI-powered user experience design and optimization tools',
   'Video Generation': 'Create and edit videos using AI technology',
-  'Voice AI': 'Advanced voice recognition and generation technologies',
-  'Website Builder': 'Build and design websites with AI assistance',
-  'Writing': 'AI writing assistants and content generation tools',
+  'Voice AI': 'Advanced voice recognition, text-to-speech, and audio generation'
 };
 
 export const getStaticProps: GetStaticProps = async () => {
-  // Load all tools to get counts per category
-  const allTools = loadUnifiedToolsData(fs, path);
+  // Load tools directly from aiToolsData.json
+  const allTools = JSON.parse(fs.readFileSync(path.join(process.cwd(), 'public/data/aiToolsData.json'), 'utf8'));
   
   // Create category data with tool counts
   const categoriesWithData = toolCategories.map(categoryName => {
     const toolsInCategory = allTools.filter(tool => 
-      tool.category === categoryName || 
       tool.overview?.category === categoryName
     );
     
