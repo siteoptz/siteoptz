@@ -8,16 +8,25 @@ console.log('🔄 Updating tool categories as requested...\n');
 const data = JSON.parse(fs.readFileSync('public/data/aiToolsData.json', 'utf8'));
 console.log(`📊 Total tools in dataset: ${data.length}`);
 
-// Category mapping updates
+// Category mapping updates as requested
 const categoryUpdates = {
-  // Website Builder tools -> AI Website Builder
+  // Aggregators -> AI Automation
+  'Aggregators': 'AI Automation',
+  
+  // Content Generation -> Content Creation
+  'Content Generation': 'Content Creation',
+  
+  // Gaming -> Research & Education
+  'Gaming': 'Research & Education',
+  
+  // Website Builder -> AI Website Builder
   'Website Builder': 'AI Website Builder',
   
-  // Voice AI tools -> Best Voice AI Tools  
-  'Voice AI': 'Best Voice AI Tools',
+  // Motion Capture -> Video Generation
+  'Motion Capture': 'Video Generation',
   
-  // UX tools -> AI Website Builder
-  'UX': 'AI Website Builder'
+  // Best Voice AI Tools -> Voice AI
+  'Best Voice AI Tools': 'Voice AI'
 };
 
 let updatedCount = 0;
@@ -78,11 +87,19 @@ if (updatedCount > 0) {
   console.log('\n📊 Updated category distribution:');
   Object.entries(categoryDistribution)
     .filter(([category]) => 
-      category === 'AI Website Builder' || 
-      category === 'Best Voice AI Tools' ||
-      category === 'Website Builder' ||
+      category === 'AI Automation' || 
+      category === 'Content Creation' ||
+      category === 'Research & Education' ||
+      category === 'AI Website Builder' ||
+      category === 'Video Generation' ||
       category === 'Voice AI' ||
-      category === 'UX'
+      // Show old categories too if they still exist
+      category === 'Aggregators' ||
+      category === 'Content Generation' ||
+      category === 'Gaming' ||
+      category === 'Website Builder' ||
+      category === 'Motion Capture' ||
+      category === 'Best Voice AI Tools'
     )
     .sort(([,a], [,b]) => b - a)
     .forEach(([category, count]) => {
