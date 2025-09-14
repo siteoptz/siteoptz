@@ -50,8 +50,37 @@ const RegisterModal: React.FC<RegisterModalProps> = ({
           return;
         }
         
-        // TODO: Implement user registration API call
-        // For now, we'll just sign them in after "registration"
+        // Add new subscriber to GoHighLevel for free plan registration
+        try {
+          const registrationResponse = await fetch('/api/register-free-plan', {
+            method: 'POST',
+            headers: {
+              'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({
+              email: formData.email,
+              name: formData.name,
+              source: 'Free Plan Registration - Modal',
+              planName: planName,
+              userAgent: navigator.userAgent,
+              referrer: document.referrer,
+              registrationMethod: 'email'
+            }),
+          });
+
+          const registrationResult = await registrationResponse.json();
+          
+          if (registrationResult.success) {
+            console.log('User registered in GoHighLevel:', registrationResult.data);
+          } else {
+            console.warn('GoHighLevel registration failed:', registrationResult.error);
+            // Don't fail the registration process if CRM integration fails
+          }
+        } catch (crmError) {
+          console.error('CRM integration error:', crmError);
+          // Don't fail the registration process if CRM integration fails
+        }
+        
         console.log('User registered:', { email: formData.email, name: formData.name });
       }
       
@@ -91,6 +120,43 @@ const RegisterModal: React.FC<RegisterModalProps> = ({
         setError('Google authentication failed. Please try again.');
         setIsLoading(false);
       } else {
+        // For Google OAuth registration, we need to get the user data from the session
+        // and then add them to GoHighLevel
+        try {
+          // Wait a moment for the session to be established
+          setTimeout(async () => {
+            const session = await getSession();
+            if (session?.user?.email) {
+              const registrationResponse = await fetch('/api/register-free-plan', {
+                method: 'POST',
+                headers: {
+                  'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({
+                  email: session.user.email,
+                  name: session.user.name || '',
+                  source: 'Free Plan Registration - Google OAuth',
+                  planName: planName,
+                  userAgent: navigator.userAgent,
+                  referrer: document.referrer,
+                  registrationMethod: 'google'
+                }),
+              });
+
+              const registrationResult = await registrationResponse.json();
+              
+              if (registrationResult.success) {
+                console.log('Google user registered in GoHighLevel:', registrationResult.data);
+              } else {
+                console.warn('GoHighLevel Google registration failed:', registrationResult.error);
+              }
+            }
+          }, 2000); // Wait 2 seconds for session to be established
+        } catch (crmError) {
+          console.error('Google CRM integration error:', crmError);
+          // Don't fail the process if CRM integration fails
+        }
+        
         // Success - the redirect will happen automatically
         onClose();
         // For some reason, NextAuth might not redirect automatically in modal context

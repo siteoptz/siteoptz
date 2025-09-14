@@ -1,0 +1,34 @@
+# GoHighLevel API Configuration for SiteOptz.ai
+# Copy this file to .env.gohighlevel and fill in your actual values
+
+# GoHighLevel API Key (get from Settings > API Keys in your GoHighLevel dashboard)
+GOHIGHLEVEL_API_KEY=your_api_key_here
+
+# GoHighLevel Location ID (found in your GoHighLevel dashboard URL or settings)
+GOHIGHLEVEL_LOCATION_ID=your_location_id_here
+
+# Pipeline IDs (replace with your actual pipeline IDs from GoHighLevel)
+GHL_FREE_TRIAL_PIPELINE_ID=your_free_trial_pipeline_id
+GHL_STARTER_PIPELINE_ID=your_starter_pipeline_id
+GHL_PRO_PIPELINE_ID=your_pro_pipeline_id
+GHL_ENTERPRISE_PIPELINE_ID=your_enterprise_pipeline_id
+GHL_EMAIL_CAPTURE_PIPELINE_ID=your_email_capture_pipeline_id
+GHL_WEBINAR_PIPELINE_ID=your_webinar_pipeline_id
+
+# Workflow IDs (replace with your actual workflow IDs from GoHighLevel)
+GHL_EMAIL_CAPTURE_WORKFLOW_ID=your_email_capture_workflow_id
+GHL_IMPLEMENTATION_WORKFLOW_ID=your_implementation_workflow_id
+GHL_CONSULTING_WORKFLOW_ID=your_consulting_workflow_id
+GHL_WEBINAR_FOLLOWUP_WORKFLOW_ID=your_webinar_followup_workflow_id
+GHL_ONBOARDING_WORKFLOW_ID=your_onboarding_workflow_id
+
+# Optional: Custom field mappings
+GHL_CUSTOM_FIELD_PLAN_TYPE=plan_type
+GHL_CUSTOM_FIELD_AI_TOOLS_INTEREST=ai_tools_interest
+GHL_CUSTOM_FIELD_BUSINESS_SIZE=business_size
+GHL_CUSTOM_FIELD_IMPLEMENTATION_PRIORITY=implementation_priority
+GHL_CUSTOM_FIELD_TEAM_SIZE=team_size
+GHL_CUSTOM_FIELD_CURRENT_TOOLS=current_ai_tools
+GHL_CUSTOM_FIELD_BUDGET_RANGE=budget_range
+GHL_CUSTOM_FIELD_IMPLEMENTATION_TIMELINE=implementation_timeline
+GHL_CUSTOM_FIELD_LEAD_SCORE=lead_score
