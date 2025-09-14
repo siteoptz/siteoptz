@@ -11,7 +11,7 @@ const registerSchema = z.object({
   userAgent: z.string().optional(),
   referrer: z.string().optional(),
   registrationMethod: z.enum(['google', 'email']).optional().default('email'),
-  aiToolsInterest: z.string().optional().default('chatgpt'),
+  aiToolsInterest: z.string().optional().default('general'),
   businessSize: z.string().optional().default('small')
 });
 
@@ -84,7 +84,7 @@ async function addFreeSubscriberToGoHighLevel(data: RegistrationData): Promise<{
         `Registration Method: ${data.registrationMethod}`,
         `Plan: ${data.planName}`,
         `Source: ${data.source}`,
-        `AI Interest: ${data.aiToolsInterest || 'chatgpt'}`,
+        `AI Interest: ${data.aiToolsInterest || 'general'}`,
         `Business Size: ${data.businessSize || 'small'}`,
         `Registered: ${new Date().toLocaleDateString('en-US', { month: 'short', year: 'numeric' })}`
       ],
@@ -111,7 +111,7 @@ async function addFreeSubscriberToGoHighLevel(data: RegistrationData): Promise<{
         },
         {
           key: 'ai_tools_interest',
-          value: data.aiToolsInterest || 'chatgpt'
+          value: data.aiToolsInterest || 'general'
         },
         {
           key: 'business_size',

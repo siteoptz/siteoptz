@@ -23,7 +23,7 @@ const RegisterModal: React.FC<RegisterModalProps> = ({
     email: '',
     password: '',
     confirmPassword: '',
-    aiToolsInterest: 'chatgpt',
+    aiToolsInterest: '',
     businessSize: 'small'
   });
   const [isLoading, setIsLoading] = useState(false);
@@ -237,6 +237,7 @@ const RegisterModal: React.FC<RegisterModalProps> = ({
                   required={!isLogin}
                   className="w-full bg-gray-800 border border-gray-600 rounded-xl py-3 px-4 text-white focus:border-green-500 focus:ring-1 focus:ring-green-500 focus:outline-none transition-all"
                 >
+                  <option value="">Select Interest</option>
                   <option value="chatgpt">ChatGPT & Language Models</option>
                   <option value="image-generation">AI Image Generation</option>
                   <option value="video-creation">AI Video Creation</option>
