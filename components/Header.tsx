@@ -2,9 +2,12 @@ import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import { useRouter } from 'next/router';
-import { Menu, X, ChevronDown, ChevronUp } from 'lucide-react';
+import { useSession, signOut } from 'next-auth/react';
+import { Menu, X, ChevronDown, ChevronUp, User, LogOut } from 'lucide-react';
 import { toolCategories, getCategoryUrl, getCategoryDisplayName } from '../config/categories';
 import { industries, industrySlugMap } from '../content/industryContent';
+import LoginModal from './LoginModal';
+import RegisterModal from './RegisterModal';
 
 // Accordion category structure for AI Categories dropdown
 const accordionCategories = [
@@ -68,7 +71,11 @@ const accordionCategories = [
 const Header: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
+  const [isLoginModalOpen, setIsLoginModalOpen] = useState(false);
+  const [isRegisterModalOpen, setIsRegisterModalOpen] = useState(false);
+  const [showUserDropdown, setShowUserDropdown] = useState(false);
   const router = useRouter();
+  const { data: session, status } = useSession();
   
   // Desktop category accordion states
   const [desktopCategoryAccordions, setDesktopCategoryAccordions] = useState<Record<string, boolean>>({});
@@ -298,16 +305,59 @@ const Header: React.FC = () => {
             ))}
           </div>
 
-          {/* CTA */}
-          <div className="hidden lg:flex items-center">
-            <a
-              href="https://api.leadconnectorhq.com/widget/booking/yPjkVmsauPst8XlrOQUl"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="px-6 py-2.5 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-lg font-semibold text-sm hover:from-blue-700 hover:to-purple-700 transform hover:scale-105 transition-all duration-200 shadow-lg hover:shadow-xl"
-            >
-              Get Started
-            </a>
+          {/* Authentication CTA */}
+          <div className="hidden lg:flex items-center space-x-3">
+            {session ? (
+              <div className="relative">
+                <button
+                  onClick={() => setShowUserDropdown(!showUserDropdown)}
+                  className="flex items-center space-x-2 px-4 py-2 bg-gray-800 text-white rounded-lg font-medium text-sm hover:bg-gray-700 transition-all duration-200"
+                >
+                  {session.user?.image ? (
+                    <img
+                      src={session.user.image}
+                      alt={session.user.name || 'User'}
+                      className="w-6 h-6 rounded-full"
+                    />
+                  ) : (
+                    <User className="w-4 h-4" />
+                  )}
+                  <span className="max-w-24 truncate">{session.user?.name || session.user?.email}</span>
+                  <ChevronDown className="w-4 h-4" />
+                </button>
+                
+                {showUserDropdown && (
+                  <div className="absolute right-0 mt-2 w-48 bg-white rounded-lg shadow-lg border border-gray-200 py-1 z-50">
+                    <Link href="/dashboard" className="flex items-center px-4 py-2 text-gray-700 hover:bg-gray-100">
+                      <User className="w-4 h-4 mr-2" />
+                      Dashboard
+                    </Link>
+                    <button
+                      onClick={() => signOut({ callbackUrl: '/' })}
+                      className="flex items-center w-full px-4 py-2 text-gray-700 hover:bg-gray-100"
+                    >
+                      <LogOut className="w-4 h-4 mr-2" />
+                      Sign Out
+                    </button>
+                  </div>
+                )}
+              </div>
+            ) : (
+              <>
+                <button
+                  onClick={() => setIsLoginModalOpen(true)}
+                  className="px-4 py-2 text-gray-300 hover:text-white font-medium text-sm transition-colors"
+                >
+                  Log In
+                </button>
+                <button
+                  onClick={() => setIsRegisterModalOpen(true)}
+                  className="px-6 py-2.5 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-lg font-semibold text-sm hover:from-blue-700 hover:to-purple-700 transform hover:scale-105 transition-all duration-200 shadow-lg hover:shadow-xl"
+                >
+                  Get Started
+                </button>
+              </>
+            )}
           </div>
 
           {/* Mobile menu button */}
@@ -543,23 +593,108 @@ const Header: React.FC = () => {
               }}>Contact</Link>
               
               <div style={{ marginTop: '24px', paddingTop: '24px', borderTop: '1px solid rgba(255,255,255,0.2)' }}>
-                <a href="https://api.leadconnectorhq.com/widget/booking/yPjkVmsauPst8XlrOQUl" target="_blank" rel="noopener noreferrer" onClick={closeMenu} style={{ 
-                  display: 'block', 
-                  width: '100%', 
-                  padding: '16px', 
-                  background: 'linear-gradient(to right, #06b6d4, #2563eb)', 
-                  color: 'white', 
-                  textDecoration: 'none', 
-                  borderRadius: '8px', 
-                  textAlign: 'center', 
-                  fontWeight: '600',
-                  fontSize: '16px'
-                }}>Get Started</a>
+                {session ? (
+                  <div style={{ display: 'flex', flexDirection: 'column', gap: '12px' }}>
+                    <Link href="/dashboard" onClick={closeMenu} style={{ 
+                      display: 'block', 
+                      width: '100%', 
+                      padding: '16px', 
+                      background: 'rgba(255,255,255,0.1)', 
+                      color: 'white',
+                      textAlign: 'center',
+                      borderRadius: '8px',
+                      fontWeight: '600',
+                      fontSize: '16px',
+                      textDecoration: 'none'
+                    }}>Dashboard</Link>
+                    <button
+                      onClick={() => {
+                        closeMenu();
+                        signOut({ callbackUrl: '/' });
+                      }}
+                      style={{ 
+                        display: 'block', 
+                        width: '100%', 
+                        padding: '16px', 
+                        background: 'rgba(239, 68, 68, 0.8)', 
+                        color: 'white',
+                        textAlign: 'center',
+                        borderRadius: '8px',
+                        fontWeight: '600',
+                        fontSize: '16px',
+                        border: 'none',
+                        cursor: 'pointer'
+                      }}
+                    >Sign Out</button>
+                  </div>
+                ) : (
+                  <div style={{ display: 'flex', flexDirection: 'column', gap: '12px' }}>
+                    <button
+                      onClick={() => {
+                        closeMenu();
+                        setIsLoginModalOpen(true);
+                      }}
+                      style={{ 
+                        display: 'block', 
+                        width: '100%', 
+                        padding: '16px', 
+                        background: 'rgba(255,255,255,0.1)', 
+                        color: 'white',
+                        textAlign: 'center',
+                        borderRadius: '8px',
+                        fontWeight: '600',
+                        fontSize: '16px',
+                        border: 'none',
+                        cursor: 'pointer'
+                      }}
+                    >Log In</button>
+                    <button
+                      onClick={() => {
+                        closeMenu();
+                        setIsRegisterModalOpen(true);
+                      }}
+                      style={{ 
+                        display: 'block', 
+                        width: '100%', 
+                        padding: '16px', 
+                        background: 'linear-gradient(to right, #06b6d4, #2563eb)', 
+                        color: 'white',
+                        textAlign: 'center',
+                        borderRadius: '8px',
+                        fontWeight: '600',
+                        fontSize: '16px',
+                        border: 'none',
+                        cursor: 'pointer'
+                      }}
+                    >Get Started</button>
+                  </div>
+                )}
               </div>
             </div>
           </div>
         )}
       </nav>
+
+      {/* Login Modal */}
+      <LoginModal
+        isOpen={isLoginModalOpen}
+        onClose={() => setIsLoginModalOpen(false)}
+        onOpenRegister={() => {
+          setIsLoginModalOpen(false);
+          setIsRegisterModalOpen(true);
+        }}
+      />
+
+      {/* Register Modal */}
+      <RegisterModal
+        isOpen={isRegisterModalOpen}
+        onClose={() => setIsRegisterModalOpen(false)}
+        planName="Free Plan - AI Tool Discovery"
+        onOpenLogin={() => {
+          setIsRegisterModalOpen(false);
+          setIsLoginModalOpen(true);
+        }}
+      />
     </header>
   );
 };

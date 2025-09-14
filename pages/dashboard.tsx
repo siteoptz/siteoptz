@@ -106,8 +106,8 @@ export default function Dashboard() {
                 <div className="flex-grow">
                   <h2 className="text-3xl font-bold text-white mb-2">
                     {isFirstTime 
-                      ? `Welcome, ${session.user?.name || 'there'}!`
-                      : `Welcome back, ${session.user?.name || 'there'}!`
+                      ? `Welcome, ${session.user?.name || session.user?.email?.split('@')[0] || 'there'}!`
+                      : `Welcome back, ${session.user?.name || session.user?.email?.split('@')[0] || 'there'}!`
                     }
                   </h2>
                   <p className="text-gray-300 mb-4">
