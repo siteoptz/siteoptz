@@ -86,7 +86,7 @@ export const getStaticProps: GetStaticProps = async () => {
   
   // Create category data with tool counts
   const categoriesWithData = toolCategories.map(categoryName => {
-    const toolsInCategory = allTools.filter(tool => 
+    const toolsInCategory = allTools.filter((tool: any) => 
       tool.overview?.category === categoryName
     );
     
