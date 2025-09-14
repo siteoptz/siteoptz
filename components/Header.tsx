@@ -294,20 +294,22 @@ const Header: React.FC = () => {
             ) : (
               <>
                 <button
-                  onClick={() => {
+                  onClick={(e) => {
+                    e.preventDefault();
+                    e.stopPropagation();
                     console.log('Login button clicked');
-                    alert('Login button works!');
-                    // setIsLoginModalOpen(true);
+                    setIsLoginModalOpen(true);
                   }}
                   className="px-4 py-2 text-gray-300 hover:text-white font-medium text-sm transition-colors"
                 >
                   Log In
                 </button>
                 <button
-                  onClick={() => {
+                  onClick={(e) => {
+                    e.preventDefault();
+                    e.stopPropagation();
                     console.log('Get Started button clicked');
-                    alert('Get Started button works!');
-                    // setIsRegisterModalOpen(true);
+                    setIsRegisterModalOpen(true);
                   }}
                   className="px-6 py-2.5 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-lg font-semibold text-sm hover:from-blue-700 hover:to-purple-700 transform hover:scale-105 transition-all duration-200 shadow-lg hover:shadow-xl"
                 >
@@ -632,25 +634,134 @@ const Header: React.FC = () => {
         )}
       </nav>
 
-      {/* Modals temporarily disabled for debugging */}
-      {/* <LoginModal
-        isOpen={isLoginModalOpen}
-        onClose={() => setIsLoginModalOpen(false)}
-        onOpenRegister={() => {
-          setIsLoginModalOpen(false);
-          setIsRegisterModalOpen(true);
-        }}
-      />
+      {/* Simple Modal Implementation */}
+      {isLoginModalOpen && (
+        <div 
+          style={{
+            position: 'fixed',
+            top: 0,
+            left: 0,
+            right: 0,
+            bottom: 0,
+            backgroundColor: 'rgba(0,0,0,0.75)',
+            zIndex: 9999,
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'center',
+            padding: '20px'
+          }}
+          onClick={() => setIsLoginModalOpen(false)}
+        >
+          <div 
+            style={{
+              backgroundColor: 'white',
+              borderRadius: '12px',
+              padding: '30px',
+              maxWidth: '400px',
+              width: '100%',
+              position: 'relative'
+            }}
+            onClick={(e) => e.stopPropagation()}
+          >
+            <button
+              onClick={() => setIsLoginModalOpen(false)}
+              style={{
+                position: 'absolute',
+                top: '15px',
+                right: '15px',
+                background: 'none',
+                border: 'none',
+                fontSize: '24px',
+                cursor: 'pointer'
+              }}
+            >
+              ×
+            </button>
+            <h2 style={{ color: 'black', marginBottom: '20px' }}>Login</h2>
+            <p style={{ color: 'black', marginBottom: '20px' }}>Login functionality coming soon!</p>
+            <button
+              onClick={() => {
+                setIsLoginModalOpen(false);
+                setIsRegisterModalOpen(true);
+              }}
+              style={{
+                backgroundColor: '#3b82f6',
+                color: 'white',
+                border: 'none',
+                padding: '10px 20px',
+                borderRadius: '6px',
+                cursor: 'pointer'
+              }}
+            >
+              Switch to Register
+            </button>
+          </div>
+        </div>
+      )}
 
-      <RegisterModal
-        isOpen={isRegisterModalOpen}
-        onClose={() => setIsRegisterModalOpen(false)}
-        planName="Free Plan - AI Tool Discovery"
-        onOpenLogin={() => {
-          setIsRegisterModalOpen(false);
-          setIsLoginModalOpen(true);
-        }}
-      /> */}
+      {isRegisterModalOpen && (
+        <div 
+          style={{
+            position: 'fixed',
+            top: 0,
+            left: 0,
+            right: 0,
+            bottom: 0,
+            backgroundColor: 'rgba(0,0,0,0.75)',
+            zIndex: 9999,
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'center',
+            padding: '20px'
+          }}
+          onClick={() => setIsRegisterModalOpen(false)}
+        >
+          <div 
+            style={{
+              backgroundColor: 'white',
+              borderRadius: '12px',
+              padding: '30px',
+              maxWidth: '400px',
+              width: '100%',
+              position: 'relative'
+            }}
+            onClick={(e) => e.stopPropagation()}
+          >
+            <button
+              onClick={() => setIsRegisterModalOpen(false)}
+              style={{
+                position: 'absolute',
+                top: '15px',
+                right: '15px',
+                background: 'none',
+                border: 'none',
+                fontSize: '24px',
+                cursor: 'pointer'
+              }}
+            >
+              ×
+            </button>
+            <h2 style={{ color: 'black', marginBottom: '20px' }}>Get Started</h2>
+            <p style={{ color: 'black', marginBottom: '20px' }}>Registration functionality coming soon!</p>
+            <button
+              onClick={() => {
+                setIsRegisterModalOpen(false);
+                setIsLoginModalOpen(true);
+              }}
+              style={{
+                backgroundColor: '#3b82f6',
+                color: 'white',
+                border: 'none',
+                padding: '10px 20px',
+                borderRadius: '6px',
+                cursor: 'pointer'
+              }}
+            >
+              Switch to Login
+            </button>
+          </div>
+        </div>
+      )}
     </header>
   );
 };
