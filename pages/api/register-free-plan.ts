@@ -10,7 +10,9 @@ const registerSchema = z.object({
   planName: z.string().optional().default('Free Plan'),
   userAgent: z.string().optional(),
   referrer: z.string().optional(),
-  registrationMethod: z.enum(['google', 'email']).optional().default('email')
+  registrationMethod: z.enum(['google', 'email']).optional().default('email'),
+  aiToolsInterest: z.string().optional().default('chatgpt'),
+  businessSize: z.string().optional().default('small')
 });
 
 interface RegistrationData {
@@ -21,6 +23,8 @@ interface RegistrationData {
   userAgent?: string;
   referrer?: string;
   registrationMethod: string;
+  aiToolsInterest?: string;
+  businessSize?: string;
   timestamp: string;
   ip_address?: string;
 }
@@ -80,6 +84,8 @@ async function addFreeSubscriberToGoHighLevel(data: RegistrationData): Promise<{
         `Registration Method: ${data.registrationMethod}`,
         `Plan: ${data.planName}`,
         `Source: ${data.source}`,
+        `AI Interest: ${data.aiToolsInterest || 'chatgpt'}`,
+        `Business Size: ${data.businessSize || 'small'}`,
         `Registered: ${new Date().toLocaleDateString('en-US', { month: 'short', year: 'numeric' })}`
       ],
       customFields: [
@@ -102,6 +108,14 @@ async function addFreeSubscriberToGoHighLevel(data: RegistrationData): Promise<{
         {
           key: 'referrer',
           value: data.referrer || ''
+        },
+        {
+          key: 'ai_tools_interest',
+          value: data.aiToolsInterest || 'chatgpt'
+        },
+        {
+          key: 'business_size',
+          value: data.businessSize || 'small'
         }
       ],
       source: `Free Plan Registration - ${data.registrationMethod === 'google' ? 'Google OAuth' : 'Email/Password'}`,
@@ -226,7 +240,7 @@ export default async function handler(
       });
     }
 
-    const { email, name, source, planName, userAgent, referrer, registrationMethod } = validation.data;
+    const { email, name, source, planName, userAgent, referrer, registrationMethod, aiToolsInterest, businessSize } = validation.data;
 
     // Check if GoHighLevel integration is enabled
     const isGHLEnabled = process.env.ENABLE_GHL === 'true';
@@ -261,6 +275,8 @@ export default async function handler(
       userAgent,
       referrer,
       registrationMethod,
+      aiToolsInterest,
+      businessSize,
       timestamp: new Date().toISOString(),
       ip_address: clientIP
     };
