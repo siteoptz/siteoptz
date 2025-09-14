@@ -252,7 +252,7 @@ const RegisterModal: React.FC<RegisterModalProps> = ({
 
               <div>
                 <label className="block text-sm font-medium text-gray-300 mb-2">
-                  What's your business size?
+                  What&apos;s your business size?
                 </label>
                 <select
                   name="businessSize"
