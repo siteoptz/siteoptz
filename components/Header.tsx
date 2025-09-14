@@ -294,13 +294,21 @@ const Header: React.FC = () => {
             ) : (
               <>
                 <button
-                  onClick={() => setIsLoginModalOpen(true)}
+                  onClick={() => {
+                    console.log('Login button clicked');
+                    alert('Login button works!');
+                    // setIsLoginModalOpen(true);
+                  }}
                   className="px-4 py-2 text-gray-300 hover:text-white font-medium text-sm transition-colors"
                 >
                   Log In
                 </button>
                 <button
-                  onClick={() => setIsRegisterModalOpen(true)}
+                  onClick={() => {
+                    console.log('Get Started button clicked');
+                    alert('Get Started button works!');
+                    // setIsRegisterModalOpen(true);
+                  }}
                   className="px-6 py-2.5 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-lg font-semibold text-sm hover:from-blue-700 hover:to-purple-700 transform hover:scale-105 transition-all duration-200 shadow-lg hover:shadow-xl"
                 >
                   Get Started
@@ -624,8 +632,8 @@ const Header: React.FC = () => {
         )}
       </nav>
 
-      {/* Login Modal */}
-      <LoginModal
+      {/* Modals temporarily disabled for debugging */}
+      {/* <LoginModal
         isOpen={isLoginModalOpen}
         onClose={() => setIsLoginModalOpen(false)}
         onOpenRegister={() => {
@@ -634,7 +642,6 @@ const Header: React.FC = () => {
         }}
       />
 
-      {/* Register Modal */}
       <RegisterModal
         isOpen={isRegisterModalOpen}
         onClose={() => setIsRegisterModalOpen(false)}
@@ -643,7 +650,7 @@ const Header: React.FC = () => {
           setIsRegisterModalOpen(false);
           setIsLoginModalOpen(true);
         }}
-      />
+      /> */}
     </header>
   );
 };
