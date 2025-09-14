@@ -651,6 +651,12 @@ const Header: React.FC = () => {
             padding: '20px'
           }}
           onClick={() => setIsLoginModalOpen(false)}
+          onKeyDown={(e) => {
+            if (e.key === 'Escape') setIsLoginModalOpen(false);
+          }}
+          role="button"
+          tabIndex={0}
+          aria-label="Close modal"
         >
           <div 
             style={{
@@ -662,6 +668,9 @@ const Header: React.FC = () => {
               position: 'relative'
             }}
             onClick={(e) => e.stopPropagation()}
+            onKeyDown={(e) => e.stopPropagation()}
+            role="dialog"
+            aria-modal="true"
           >
             <button
               onClick={() => setIsLoginModalOpen(false)}
@@ -715,6 +724,12 @@ const Header: React.FC = () => {
             padding: '20px'
           }}
           onClick={() => setIsRegisterModalOpen(false)}
+          onKeyDown={(e) => {
+            if (e.key === 'Escape') setIsRegisterModalOpen(false);
+          }}
+          role="button"
+          tabIndex={0}
+          aria-label="Close modal"
         >
           <div 
             style={{
@@ -726,6 +741,9 @@ const Header: React.FC = () => {
               position: 'relative'
             }}
             onClick={(e) => e.stopPropagation()}
+            onKeyDown={(e) => e.stopPropagation()}
+            role="dialog"
+            aria-modal="true"
           >
             <button
               onClick={() => setIsRegisterModalOpen(false)}
