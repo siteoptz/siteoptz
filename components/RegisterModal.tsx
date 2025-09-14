@@ -24,7 +24,7 @@ const RegisterModal: React.FC<RegisterModalProps> = ({
     password: '',
     confirmPassword: '',
     aiToolsInterest: '',
-    businessSize: 'small'
+    businessSize: ''
   });
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState('');
@@ -45,7 +45,20 @@ const RegisterModal: React.FC<RegisterModalProps> = ({
     
     try {
       if (!isLogin) {
-        // Registration - validate passwords match
+        // Registration - validate required fields
+        if (!formData.aiToolsInterest) {
+          setError('Please select your AI tools interest');
+          setIsLoading(false);
+          return;
+        }
+        
+        if (!formData.businessSize) {
+          setError('Please select your business size');
+          setIsLoading(false);
+          return;
+        }
+        
+        // Validate passwords match
         if (formData.password !== formData.confirmPassword) {
           setError('Passwords do not match');
           setIsLoading(false);
@@ -113,6 +126,21 @@ const RegisterModal: React.FC<RegisterModalProps> = ({
   const handleGoogleAuth = async () => {
     setIsLoading(true);
     setError('');
+    
+    // Validate required fields for registration (only if not in login mode)
+    if (!isLogin) {
+      if (!formData.aiToolsInterest) {
+        setError('Please select your AI tools interest');
+        setIsLoading(false);
+        return;
+      }
+      
+      if (!formData.businessSize) {
+        setError('Please select your business size');
+        setIsLoading(false);
+        return;
+      }
+    }
     
     try {
       const result = await signIn('google', {
@@ -262,6 +290,7 @@ const RegisterModal: React.FC<RegisterModalProps> = ({
                   required={!isLogin}
                   className="w-full bg-gray-800 border border-gray-600 rounded-xl py-3 px-4 text-white focus:border-green-500 focus:ring-1 focus:ring-green-500 focus:outline-none transition-all"
                 >
+                  <option value="">Select Business Size</option>
                   <option value="small">Small Business (1-10 employees)</option>
                   <option value="medium">Medium Business (11-50 employees)</option>
                   <option value="large">Large Business (51-200 employees)</option>

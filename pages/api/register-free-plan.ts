@@ -11,8 +11,8 @@ const registerSchema = z.object({
   userAgent: z.string().optional(),
   referrer: z.string().optional(),
   registrationMethod: z.enum(['google', 'email']).optional().default('email'),
-  aiToolsInterest: z.string().optional().default('general'),
-  businessSize: z.string().optional().default('small')
+  aiToolsInterest: z.string().min(1, 'AI tools interest is required'),
+  businessSize: z.string().min(1, 'Business size is required')
 });
 
 interface RegistrationData {
@@ -23,8 +23,8 @@ interface RegistrationData {
   userAgent?: string;
   referrer?: string;
   registrationMethod: string;
-  aiToolsInterest?: string;
-  businessSize?: string;
+  aiToolsInterest: string;
+  businessSize: string;
   timestamp: string;
   ip_address?: string;
 }
@@ -84,8 +84,8 @@ async function addFreeSubscriberToGoHighLevel(data: RegistrationData): Promise<{
         `Registration Method: ${data.registrationMethod}`,
         `Plan: ${data.planName}`,
         `Source: ${data.source}`,
-        `AI Interest: ${data.aiToolsInterest || 'general'}`,
-        `Business Size: ${data.businessSize || 'small'}`,
+        `AI Interest: ${data.aiToolsInterest}`,
+        `Business Size: ${data.businessSize}`,
         `Registered: ${new Date().toLocaleDateString('en-US', { month: 'short', year: 'numeric' })}`
       ],
       customFields: [
@@ -111,11 +111,11 @@ async function addFreeSubscriberToGoHighLevel(data: RegistrationData): Promise<{
         },
         {
           key: 'ai_tools_interest',
-          value: data.aiToolsInterest || 'general'
+          value: data.aiToolsInterest
         },
         {
           key: 'business_size',
-          value: data.businessSize || 'small'
+          value: data.businessSize
         }
       ],
       source: `Free Plan Registration - ${data.registrationMethod === 'google' ? 'Google OAuth' : 'Email/Password'}`,
