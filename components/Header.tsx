@@ -73,6 +73,8 @@ const Header: React.FC = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isLoginModalOpen, setIsLoginModalOpen] = useState(false);
   const [isRegisterModalOpen, setIsRegisterModalOpen] = useState(false);
+  
+  // Modal state management
   const [showUserDropdown, setShowUserDropdown] = useState(false);
   const router = useRouter();
   const { data: session, status } = useSession();
@@ -175,13 +177,34 @@ const Header: React.FC = () => {
     setMobileCategoryAccordions({});
   };
 
-  // Body scroll prevention disabled to fix button clicking issues
-  // The mobile menu now allows page scrolling when open
+  // Handle scroll effect for header
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 10);
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
+  // Close user dropdown when clicking outside
+  useEffect(() => {
+    const handleClickOutside = (event: MouseEvent) => {
+      if (showUserDropdown) {
+        setShowUserDropdown(false);
+      }
+    };
+
+    if (showUserDropdown) {
+      document.addEventListener('click', handleClickOutside);
+      return () => document.removeEventListener('click', handleClickOutside);
+    }
+  }, [showUserDropdown]);
 
 
   return (
     <header 
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+      className={`fixed top-0 left-0 right-0 z-40 transition-all duration-300 ${
         isScrolled 
           ? 'bg-black/95 backdrop-blur-md shadow-lg border-b border-gray-800/50' 
           : 'bg-black/90 backdrop-blur-md border-b border-gray-800/20'
@@ -346,7 +369,7 @@ const Header: React.FC = () => {
               <>
                 <button
                   onClick={() => setIsLoginModalOpen(true)}
-                  className="px-4 py-2 text-gray-300 hover:text-white font-medium text-sm transition-colors"
+                  className="px-4 py-2 text-gray-300 hover:text-white font-medium text-sm transition-colors cursor-pointer"
                 >
                   Log In
                 </button>
