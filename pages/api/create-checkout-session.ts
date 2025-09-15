@@ -32,45 +32,38 @@ export default async function handler(
 
     const { plan, billingCycle, successUrl, cancelUrl }: CheckoutRequest = req.body;
 
-    // Define pricing based on plan and billing cycle
-    const pricingMap = {
+    // Map plans to Stripe price IDs
+    const priceIdMap = {
       starter: {
-        monthly: { amount: 5900, priceId: process.env.STRIPE_STARTER_MONTHLY_PRICE_ID },
-        yearly: { amount: 49700, priceId: process.env.STRIPE_STARTER_YEARLY_PRICE_ID }
+        monthly: process.env.STRIPE_STARTER_MONTHLY_PRICE_ID,
+        yearly: process.env.STRIPE_STARTER_YEARLY_PRICE_ID
       },
       pro: {
-        monthly: { amount: 19900, priceId: process.env.STRIPE_PRO_MONTHLY_PRICE_ID },
-        yearly: { amount: 199700, priceId: process.env.STRIPE_PRO_YEARLY_PRICE_ID }
+        monthly: process.env.STRIPE_PRO_MONTHLY_PRICE_ID,
+        yearly: process.env.STRIPE_PRO_YEARLY_PRICE_ID
       },
       enterprise: {
-        monthly: { amount: 49900, priceId: process.env.STRIPE_ENTERPRISE_MONTHLY_PRICE_ID },
-        yearly: { amount: 499700, priceId: process.env.STRIPE_ENTERPRISE_YEARLY_PRICE_ID }
+        monthly: process.env.STRIPE_ENTERPRISE_MONTHLY_PRICE_ID,
+        yearly: process.env.STRIPE_ENTERPRISE_YEARLY_PRICE_ID
       }
     };
 
-    const planPricing = pricingMap[plan as keyof typeof pricingMap];
-    if (!planPricing) {
+    const planPriceIds = priceIdMap[plan as keyof typeof priceIdMap];
+    if (!planPriceIds) {
       return res.status(400).json({ message: 'Invalid plan selected' });
     }
 
-    const selectedPricing = planPricing[billingCycle];
+    const selectedPriceId = planPriceIds[billingCycle];
+    if (!selectedPriceId) {
+      return res.status(400).json({ message: 'Price ID not configured for this plan' });
+    }
     
-    // Create Stripe checkout session
+    // Create Stripe checkout session with price ID
     const checkoutSession = await stripe.checkout.sessions.create({
       customer_email: session.user.email,
       line_items: [
         {
-          price_data: {
-            currency: 'usd',
-            product_data: {
-              name: `SiteOptz ${plan.charAt(0).toUpperCase() + plan.slice(1)} Plan`,
-              description: `AI Implementation ${plan.charAt(0).toUpperCase() + plan.slice(1)} Plan - ${billingCycle} billing`,
-            },
-            unit_amount: selectedPricing.amount,
-            recurring: {
-              interval: billingCycle === 'yearly' ? 'year' : 'month',
-            },
-          },
+          price: selectedPriceId,
           quantity: 1,
         },
       ],
@@ -103,7 +96,7 @@ export default async function handler(
       sessionId: checkoutSession.id,
       plan,
       billingCycle,
-      amount: selectedPricing.amount,
+      priceId: selectedPriceId,
       email: session.user.email,
     });
 

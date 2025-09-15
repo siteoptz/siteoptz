@@ -58,7 +58,9 @@ export default function HomePage({}: HomePageProps) {
         'Monthly Implementation Webinars'
       ],
       ctaText: 'Upgrade Now',
-      ctaAction: async () => {
+      ctaAction: async (e?: React.MouseEvent) => {
+        e?.preventDefault();
+        e?.stopPropagation();
         clearError();
         await redirectToCheckout({
           plan: 'starter',
@@ -83,7 +85,9 @@ export default function HomePage({}: HomePageProps) {
         'API Access & Advanced Tools'
       ],
       ctaText: 'Upgrade Now',
-      ctaAction: async () => {
+      ctaAction: async (e?: React.MouseEvent) => {
+        e?.preventDefault();
+        e?.stopPropagation();
         clearError();
         await redirectToCheckout({
           plan: 'pro',
@@ -541,6 +545,13 @@ export default function HomePage({}: HomePageProps) {
               </div>
             </div>
 
+            {/* Error Display */}
+            {error && (
+              <div className="mb-6 p-4 bg-red-500/10 border border-red-500/30 rounded-lg text-red-400 text-center">
+                {error}
+              </div>
+            )}
+
             <div className="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 lg:gap-8">
               {pricingPlans.map((plan, index) => {
                 const currentPricing = billingCycle === 'yearly' ? plan.yearly : plan.monthly;
@@ -609,7 +620,7 @@ export default function HomePage({}: HomePageProps) {
                     </ul>
                     
                     <button
-                      onClick={plan.ctaAction}
+                      onClick={(e) => plan.ctaAction && plan.ctaAction(e)}
                       disabled={loading && (plan.name === 'STARTER' || plan.name === 'PRO')}
                       className={`block w-full text-center px-6 py-3 font-semibold rounded-xl transition-all duration-200 group-hover:scale-105 ${
                         loading && (plan.name === 'STARTER' || plan.name === 'PRO')

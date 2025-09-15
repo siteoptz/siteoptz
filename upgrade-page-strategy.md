@@ -43,7 +43,7 @@ Based on the successful [Ideabrowser pricing model](https://www.ideabrowser.com/
 6. **FAQ Section**: Addresses common upgrade concerns
 
 ### Color Psychology:
-- **Primary Blue (#667eea)**: Trust, professionalism, technology
+- **Primary  - have the dark theme styling (bg-gradient-to-br from-black via-gray-900 to-black)
 - **Purple Gradient**: Innovation, premium feel, transformation
 - **Green Accents**: Success, growth, positive outcomes
 - **Red Highlights**: Urgency, limited-time offers
