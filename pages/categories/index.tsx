@@ -1,9 +1,7 @@
 import { GetStaticProps } from 'next';
-import { useState } from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
-import { useRouter } from 'next/router';
-import { Search, Grid, TrendingUp, Zap, Brain, Image, Code, Mic, BarChart, Users, Star, ArrowRight } from 'lucide-react';
+import { Star, ArrowRight } from 'lucide-react';
 import { toolCategories } from '../../config/categories';
 import { loadUnifiedToolsData } from '../../utils/unifiedDataAdapter';
 import fs from 'fs';
@@ -40,63 +38,6 @@ interface CategoriesPageProps {
   featuredTools: Tool[];
 }
 
-// Icon mapping for categories
-const categoryIcons: { [key: string]: any } = {
-  'AI Automation': Zap,
-  'AI Website Builder': Code,
-  'Chat': Users,
-  'Code Generation': Code,
-  'Content Creation': Brain,
-  'Data Analysis': BarChart,
-  'E-commerce': TrendingUp,
-  'Education & Research': Search,
-  'Email Marketing': Users,
-  'Finance AI': BarChart,
-  'Image Generation': Image,
-  'Lead Generation': Users,
-  'Marketing': TrendingUp,
-  'Music & Audio': Mic,
-  'Paid Search & PPC': TrendingUp,
-  'Productivity': Zap,
-  'Research & Education': Search,
-  'Sales': TrendingUp,
-  'SEO & Optimization': TrendingUp,
-  'Self-Improvement': Brain,
-  'Social Media': Users,
-  'Translation': Search,
-  'UX & Design': Grid,
-  'Video Generation': Image,
-  'Voice AI': Mic,
-};
-
-// Category descriptions - matching the actual category names from config
-const categoryDescriptions: { [key: string]: string } = {
-  'AI Automation': 'Streamline workflows and automate repetitive tasks with AI',
-  'AI Website Builder': 'Create professional websites using AI-driven design tools',
-  'Chat': 'AI chatbots and conversational AI platforms',
-  'Code Generation': 'AI coding assistants and automated code generation tools',
-  'Content Creation': 'AI-powered tools for generating articles, blog posts, and creative content',
-  'Data Analysis': 'Analyze data patterns and generate insights with AI',
-  'E-commerce': 'AI solutions for online stores and digital commerce platforms',
-  'Education & Research': 'AI tools for academic research, learning, and knowledge discovery',
-  'Email Marketing': 'Automate and optimize email campaigns with AI',
-  'Finance AI': 'AI tools for financial analysis, trading, and accounting',
-  'Image Generation': 'Create stunning visuals with AI-powered image generators',
-  'Lead Generation': 'AI-powered tools for identifying and nurturing prospects',
-  'Marketing': 'AI-driven marketing tools and campaign optimization',
-  'Music & Audio': 'AI tools for music generation, audio editing, and sound design',
-  'Paid Search & PPC': 'Optimize your paid advertising campaigns with AI',
-  'Productivity': 'Boost efficiency with AI-powered productivity tools',
-  'Research & Education': 'AI tools for research, learning, and educational content',
-  'Sales': 'AI-powered sales tools and customer relationship management',
-  'SEO & Optimization': 'Tools to improve search rankings and optimize website performance',
-  'Self-Improvement': 'AI tools for personal development and skill enhancement',
-  'Social Media': 'Automate and optimize your social media presence',
-  'Translation': 'Translate content across languages with advanced AI models',
-  'UX & Design': 'AI-powered user experience design and optimization tools',
-  'Video Generation': 'Create and edit videos using AI technology',
-  'Voice AI': 'Advanced voice recognition, text-to-speech, and audio generation'
-};
 
 export const getStaticProps: GetStaticProps = async () => {
   // Load tools directly from aiToolsData.json
@@ -112,7 +53,7 @@ export const getStaticProps: GetStaticProps = async () => {
       name: categoryName,
       slug: categoryName.toLowerCase().replace(/[^a-z0-9]+/g, '-'),
       toolCount: toolsInCategory.length,
-      description: categoryDescriptions[categoryName] || `Explore ${categoryName} AI tools`,
+      description: `Explore ${categoryName} AI tools`,
       icon: categoryName
     };
   });
@@ -146,14 +87,6 @@ export const getStaticProps: GetStaticProps = async () => {
 };
 
 export default function CategoriesPage({ categories, totalTools, featuredTools }: CategoriesPageProps) {
-  const [searchQuery, setSearchQuery] = useState('');
-  const router = useRouter();
-
-  // Filter categories based on search
-  const filteredCategories = categories.filter(category =>
-    category.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
-    category.description.toLowerCase().includes(searchQuery.toLowerCase())
-  );
 
   return (
     <>
@@ -212,19 +145,6 @@ export default function CategoriesPage({ categories, totalTools, featuredTools }
               </p>
             </div>
 
-            {/* Search Bar */}
-            <div className="max-w-2xl mx-auto mb-12">
-              <div className="relative">
-                <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
-                <input
-                  type="text"
-                  placeholder="Search categories..."
-                  value={searchQuery}
-                  onChange={(e) => setSearchQuery(e.target.value)}
-                  className="w-full pl-12 pr-4 py-3 bg-gray-900 border border-gray-700 text-white rounded-lg focus:ring-2 focus:ring-cyan-400 focus:border-cyan-400 placeholder-gray-400"
-                />
-              </div>
-            </div>
 
             {/* Stats */}
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 mb-12">
@@ -373,71 +293,6 @@ export default function CategoriesPage({ categories, totalTools, featuredTools }
                 </div>
               );
             })()}
-
-            {/* Categories Grid */}
-            {filteredCategories.length === 0 ? (
-              <div className="text-center py-12 bg-black rounded-lg border border-gray-800">
-                <div className="text-gray-500 text-6xl mb-4">🔍</div>
-                <h3 className="text-xl font-semibold text-white mb-2">No categories found</h3>
-                <p className="text-gray-400">
-                  No categories match your search for &ldquo;{searchQuery}&rdquo;
-                </p>
-                <button
-                  onClick={() => setSearchQuery('')}
-                  className="mt-4 px-6 py-2 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-lg hover:from-blue-700 hover:to-purple-700 transform hover:scale-105 transition-all duration-200 shadow-lg hover:shadow-xl"
-                >
-                  Clear Search
-                </button>
-              </div>
-            ) : (
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                {filteredCategories.map((category) => {
-                  const IconComponent = categoryIcons[category.name] || Grid;
-                  
-                  return (
-                    <Link
-                      key={category.slug}
-                      href={`/categories/${category.slug}`}
-                      className="group bg-black border border-gray-800 rounded-lg p-6 hover:border-cyan-400 transition-all duration-200 hover:shadow-lg hover:shadow-cyan-400/20"
-                    >
-                      <div className="flex items-start justify-between mb-4">
-                        <div className="p-3 bg-gradient-to-br from-gray-800 to-gray-900 rounded-lg group-hover:from-cyan-900 group-hover:to-blue-900 transition-colors">
-                          <IconComponent className="w-6 h-6 text-cyan-400" />
-                        </div>
-                        <span className="px-3 py-1 bg-gray-800 text-cyan-400 text-sm rounded-full">
-                          {category.toolCount} tools
-                        </span>
-                      </div>
-                      
-                      <h3 className="text-xl font-semibold text-white mb-2 group-hover:text-cyan-400 transition-colors">
-                        {category.name}
-                      </h3>
-                      
-                      <p className="text-gray-400 text-sm line-clamp-2">
-                        {category.description}
-                      </p>
-                      
-                      <div className="mt-4 flex items-center text-cyan-400 text-sm font-medium">
-                        Browse tools
-                        <svg
-                          className="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform"
-                          fill="none"
-                          stroke="currentColor"
-                          viewBox="0 0 24 24"
-                        >
-                          <path
-                            strokeLinecap="round"
-                            strokeLinejoin="round"
-                            strokeWidth={2}
-                            d="M9 5l7 7-7 7"
-                          />
-                        </svg>
-                      </div>
-                    </Link>
-                  );
-                })}
-              </div>
-            )}
 
             {/* CTA Section */}
             <div className="mt-16 text-center">
