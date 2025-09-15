@@ -3,7 +3,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { useRouter } from 'next/router';
 import { useSession, signOut } from 'next-auth/react';
-import { Menu, X, ChevronDown, ChevronUp, User, LogOut } from 'lucide-react';
+import { Menu, X, ChevronDown, ChevronUp, User, LogOut, Bell, Settings, CreditCard, Zap } from 'lucide-react';
 import { toolCategories, getCategoryUrl, getCategoryDisplayName } from '../config/categories';
 import { industries, industrySlugMap } from '../content/industryContent';
 // Modals removed from Header to prevent navigation stalling
@@ -276,18 +276,56 @@ const Header: React.FC = () => {
                 </button>
                 
                 {showUserDropdown && (
-                  <div className="absolute right-0 mt-2 w-48 bg-white rounded-lg shadow-lg border border-gray-200 py-1 z-50">
-                    <Link href="/dashboard" className="flex items-center px-4 py-2 text-gray-700 hover:bg-gray-100">
-                      <User className="w-4 h-4 mr-2" />
-                      Dashboard
-                    </Link>
-                    <button
-                      onClick={() => signOut({ callbackUrl: '/' })}
-                      className="flex items-center w-full px-4 py-2 text-gray-700 hover:bg-gray-100"
-                    >
-                      <LogOut className="w-4 h-4 mr-2" />
-                      Sign Out
-                    </button>
+                  <div className="absolute right-0 mt-2 w-64 bg-white rounded-lg shadow-lg border border-gray-200 py-2 z-50">
+                    {/* User Info Header */}
+                    <div className="px-4 py-3 border-b border-gray-100">
+                      <div className="text-xs text-gray-500 mb-1">Signed in as</div>
+                      <div className="font-medium text-gray-900 truncate">
+                        {session.user?.name || session.user?.email}
+                      </div>
+                      <div className="text-xs text-blue-600 font-medium mt-1">
+                        Free Plan
+                      </div>
+                    </div>
+
+                    {/* Menu Items */}
+                    <div className="py-1">
+                      <Link href="/dashboard" className="flex items-center px-4 py-2 text-gray-700 hover:bg-gray-50 transition-colors">
+                        <User className="w-4 h-4 mr-3" />
+                        Dashboard
+                      </Link>
+                      
+                      <Link href="/notifications" className="flex items-center px-4 py-2 text-gray-700 hover:bg-gray-50 transition-colors">
+                        <Bell className="w-4 h-4 mr-3" />
+                        Notifications
+                      </Link>
+                      
+                      <Link href="/upgrade" className="flex items-center px-4 py-2 text-gray-700 hover:bg-gray-50 transition-colors">
+                        <Zap className="w-4 h-4 mr-3" />
+                        Upgrade
+                      </Link>
+                      
+                      <Link href="/settings" className="flex items-center px-4 py-2 text-gray-700 hover:bg-gray-50 transition-colors">
+                        <Settings className="w-4 h-4 mr-3" />
+                        Account Settings
+                      </Link>
+                      
+                      <Link href="/billing" className="flex items-center px-4 py-2 text-gray-700 hover:bg-gray-50 transition-colors">
+                        <CreditCard className="w-4 h-4 mr-3" />
+                        Billing & Subscription
+                      </Link>
+                      
+                      {/* Separator */}
+                      <div className="border-t border-gray-100 my-1"></div>
+                      
+                      <button
+                        onClick={() => signOut({ callbackUrl: '/' })}
+                        className="flex items-center w-full px-4 py-2 text-gray-700 hover:bg-gray-50 transition-colors"
+                      >
+                        <LogOut className="w-4 h-4 mr-3" />
+                        Sign Out
+                      </button>
+                    </div>
                   </div>
                 )}
               </div>
@@ -567,38 +605,132 @@ const Header: React.FC = () => {
                     <div style={{ height: '48px', background: 'rgba(255,255,255,0.1)', borderRadius: '8px', animation: 'pulse 2s infinite' }}></div>
                   </div>
                 ) : session && status === 'authenticated' ? (
-                  <div style={{ display: 'flex', flexDirection: 'column', gap: '12px' }}>
-                    <Link href="/dashboard" onClick={closeMenu} style={{ 
-                      display: 'block', 
-                      width: '100%', 
+                  <div style={{ display: 'flex', flexDirection: 'column', gap: '8px' }}>
+                    {/* User Info Header */}
+                    <div style={{ 
                       padding: '16px', 
-                      background: 'rgba(255,255,255,0.1)', 
-                      color: 'white',
-                      textAlign: 'center',
+                      background: 'rgba(255,255,255,0.05)', 
                       borderRadius: '8px',
-                      fontWeight: '600',
+                      marginBottom: '8px'
+                    }}>
+                      <div style={{ color: 'rgba(255,255,255,0.7)', fontSize: '12px', marginBottom: '4px' }}>
+                        Signed in as
+                      </div>
+                      <div style={{ color: 'white', fontWeight: '600', fontSize: '16px', marginBottom: '4px' }}>
+                        {session.user?.name || session.user?.email}
+                      </div>
+                      <div style={{ color: '#60a5fa', fontSize: '12px', fontWeight: '500' }}>
+                        Free Plan
+                      </div>
+                    </div>
+
+                    {/* Menu Items */}
+                    <Link href="/dashboard" onClick={closeMenu} style={{ 
+                      display: 'flex',
+                      alignItems: 'center',
+                      gap: '12px',
+                      padding: '12px 16px', 
+                      color: 'white',
+                      textDecoration: 'none',
                       fontSize: '16px',
-                      textDecoration: 'none'
-                    }}>Dashboard</Link>
+                      borderRadius: '6px',
+                      transition: 'background-color 0.2s',
+                      background: 'rgba(255,255,255,0.05)'
+                    }}>
+                      <User style={{ width: '16px', height: '16px' }} />
+                      Dashboard
+                    </Link>
+                    
+                    <Link href="/notifications" onClick={closeMenu} style={{ 
+                      display: 'flex',
+                      alignItems: 'center',
+                      gap: '12px',
+                      padding: '12px 16px', 
+                      color: 'white',
+                      textDecoration: 'none',
+                      fontSize: '16px',
+                      borderRadius: '6px',
+                      transition: 'background-color 0.2s',
+                      background: 'rgba(255,255,255,0.05)'
+                    }}>
+                      <Bell style={{ width: '16px', height: '16px' }} />
+                      Notifications
+                    </Link>
+                    
+                    <Link href="/upgrade" onClick={closeMenu} style={{ 
+                      display: 'flex',
+                      alignItems: 'center',
+                      gap: '12px',
+                      padding: '12px 16px', 
+                      color: 'white',
+                      textDecoration: 'none',
+                      fontSize: '16px',
+                      borderRadius: '6px',
+                      transition: 'background-color 0.2s',
+                      background: 'rgba(255,255,255,0.05)'
+                    }}>
+                      <Zap style={{ width: '16px', height: '16px' }} />
+                      Upgrade
+                    </Link>
+                    
+                    <Link href="/settings" onClick={closeMenu} style={{ 
+                      display: 'flex',
+                      alignItems: 'center',
+                      gap: '12px',
+                      padding: '12px 16px', 
+                      color: 'white',
+                      textDecoration: 'none',
+                      fontSize: '16px',
+                      borderRadius: '6px',
+                      transition: 'background-color 0.2s',
+                      background: 'rgba(255,255,255,0.05)'
+                    }}>
+                      <Settings style={{ width: '16px', height: '16px' }} />
+                      Account Settings
+                    </Link>
+                    
+                    <Link href="/billing" onClick={closeMenu} style={{ 
+                      display: 'flex',
+                      alignItems: 'center',
+                      gap: '12px',
+                      padding: '12px 16px', 
+                      color: 'white',
+                      textDecoration: 'none',
+                      fontSize: '16px',
+                      borderRadius: '6px',
+                      transition: 'background-color 0.2s',
+                      background: 'rgba(255,255,255,0.05)'
+                    }}>
+                      <CreditCard style={{ width: '16px', height: '16px' }} />
+                      Billing & Subscription
+                    </Link>
+                    
+                    {/* Separator */}
+                    <div style={{ height: '1px', background: 'rgba(255,255,255,0.1)', margin: '8px 0' }}></div>
+                    
                     <button
                       onClick={() => {
                         closeMenu();
                         signOut({ callbackUrl: '/' });
                       }}
                       style={{ 
-                        display: 'block', 
+                        display: 'flex',
+                        alignItems: 'center',
+                        gap: '12px',
                         width: '100%', 
-                        padding: '16px', 
+                        padding: '12px 16px', 
                         background: 'rgba(239, 68, 68, 0.8)', 
                         color: 'white',
-                        textAlign: 'center',
-                        borderRadius: '8px',
+                        borderRadius: '6px',
                         fontWeight: '600',
                         fontSize: '16px',
                         border: 'none',
                         cursor: 'pointer'
                       }}
-                    >Sign Out</button>
+                    >
+                      <LogOut style={{ width: '16px', height: '16px' }} />
+                      Sign Out
+                    </button>
                   </div>
                 ) : (
                   <div style={{ display: 'flex', flexDirection: 'column', gap: '12px' }}>
