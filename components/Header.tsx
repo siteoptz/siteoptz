@@ -607,6 +607,12 @@ const Header: React.FC = () => {
             justifyContent: 'center' 
           }}
           onClick={() => setIsLoginModalOpen(false)}
+          onKeyDown={(e) => {
+            if (e.key === 'Escape') setIsLoginModalOpen(false);
+          }}
+          role="button"
+          tabIndex={0}
+          aria-label="Close modal overlay"
         >
           <div 
             style={{ 
@@ -617,6 +623,9 @@ const Header: React.FC = () => {
               width: '90%' 
             }}
             onClick={(e) => e.stopPropagation()}
+            onKeyDown={(e) => e.stopPropagation()}
+            role="dialog"
+            aria-modal="true"
           >
             <h2 style={{ color: 'black', margin: '0 0 20px 0' }}>Login</h2>
             <p style={{ color: 'black', margin: '0 0 20px 0' }}>Login functionality temporarily simplified for testing.</p>
