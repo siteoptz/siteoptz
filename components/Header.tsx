@@ -6,7 +6,7 @@ import { useSession, signOut } from 'next-auth/react';
 import { Menu, X, ChevronDown, ChevronUp, User, LogOut } from 'lucide-react';
 import { toolCategories, getCategoryUrl, getCategoryDisplayName } from '../config/categories';
 import { industries, industrySlugMap } from '../content/industryContent';
-// import LoginModal from './LoginModal'; // Temporarily disabled for testing
+import LoginModal from './auth/LoginModal';
 
 // Accordion category structure for AI Categories dropdown
 const accordionCategories = [
@@ -70,7 +70,7 @@ const accordionCategories = [
 const Header: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
-  const [isLoginModalOpen, setIsLoginModalOpen] = useState(false);
+  const [showLogin, setShowLogin] = useState(false);
   const [showUserDropdown, setShowUserDropdown] = useState(false);
   const router = useRouter();
   const { data: session, status } = useSession();
@@ -289,7 +289,7 @@ const Header: React.FC = () => {
               </div>
             ) : (
               <button
-                onClick={() => setIsLoginModalOpen(true)}
+                onClick={() => setShowLogin(true)}
                 className="px-6 py-2.5 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-lg font-semibold text-sm hover:from-blue-700 hover:to-purple-700 transform hover:scale-105 transition-all duration-200 shadow-lg hover:shadow-xl"
               >
                 Log In
@@ -568,7 +568,7 @@ const Header: React.FC = () => {
                   <button
                     onClick={() => {
                       closeMenu();
-                      setIsLoginModalOpen(true);
+                      setShowLogin(true);
                     }}
                     style={{ 
                       display: 'block', 
@@ -591,60 +591,16 @@ const Header: React.FC = () => {
         )}
       </nav>
 
-      {/* Simple Modal for Testing */}
-      {isLoginModalOpen && (
-        <div 
-          style={{ 
-            position: 'fixed', 
-            top: 0, 
-            left: 0, 
-            right: 0, 
-            bottom: 0, 
-            backgroundColor: 'rgba(0,0,0,0.8)', 
-            zIndex: 9999, 
-            display: 'flex', 
-            alignItems: 'center', 
-            justifyContent: 'center' 
-          }}
-          onClick={() => setIsLoginModalOpen(false)}
-          onKeyDown={(e) => {
-            if (e.key === 'Escape') setIsLoginModalOpen(false);
-          }}
-          role="button"
-          tabIndex={0}
-          aria-label="Close modal overlay"
-        >
-          <div 
-            style={{ 
-              backgroundColor: 'white', 
-              padding: '40px', 
-              borderRadius: '8px', 
-              maxWidth: '400px', 
-              width: '90%' 
-            }}
-            onClick={(e) => e.stopPropagation()}
-            onKeyDown={(e) => e.stopPropagation()}
-            role="dialog"
-            aria-modal="true"
-          >
-            <h2 style={{ color: 'black', margin: '0 0 20px 0' }}>Login</h2>
-            <p style={{ color: 'black', margin: '0 0 20px 0' }}>Login functionality temporarily simplified for testing.</p>
-            <button 
-              onClick={() => setIsLoginModalOpen(false)}
-              style={{ 
-                padding: '10px 20px', 
-                backgroundColor: '#007cba', 
-                color: 'white', 
-                border: 'none', 
-                borderRadius: '4px', 
-                cursor: 'pointer' 
-              }}
-            >
-              Close
-            </button>
-          </div>
-        </div>
-      )}
+      {/* Login Modal */}
+      <LoginModal
+        isOpen={showLogin}
+        onClose={() => setShowLogin(false)}
+        onSuccess={(user) => {
+          console.log('User logged in:', user);
+          // The modal will handle redirect to dashboard
+        }}
+        redirectTo="/dashboard"
+      />
     </header>
   );
 };

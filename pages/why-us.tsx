@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
-import LoginModal from '../components/LoginModal';
+import LoginModal from '../components/auth/LoginModal';
 import { 
   Target, 
   Users, 
@@ -23,7 +23,7 @@ import {
 } from 'lucide-react';
 
 export default function WhyUs() {
-  const [isLoginModalOpen, setIsLoginModalOpen] = useState(false);
+  const [showLogin, setShowLogin] = useState(false);
 
   const structuredData = {
     "@context": "https://schema.org",
@@ -622,7 +622,7 @@ export default function WhyUs() {
                 </ul>
                 
                 <button
-                  onClick={() => setIsLoginModalOpen(true)}
+                  onClick={() => setShowLogin(true)}
                   className="block w-full text-center px-6 py-3 bg-gradient-to-r from-green-600 to-emerald-600 text-white font-semibold rounded-xl hover:from-green-700 hover:to-emerald-700 transition-all duration-200 group-hover:scale-105"
                 >
                   Get Started
@@ -952,8 +952,12 @@ export default function WhyUs() {
       
       {/* Login Modal */}
       <LoginModal
-        isOpen={isLoginModalOpen}
-        onClose={() => setIsLoginModalOpen(false)}
+        isOpen={showLogin}
+        onClose={() => setShowLogin(false)}
+        onSuccess={(user) => {
+          console.log('User logged in:', user);
+        }}
+        redirectTo="/dashboard"
       />
     </>
   );
