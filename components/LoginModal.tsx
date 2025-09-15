@@ -7,10 +7,9 @@ import { X, Mail, Lock, Eye, EyeOff } from 'lucide-react';
 interface LoginModalProps {
   isOpen: boolean;
   onClose: () => void;
-  onOpenRegister?: () => void;
 }
 
-const LoginModal: React.FC<LoginModalProps> = ({ isOpen, onClose, onOpenRegister }) => {
+const LoginModal: React.FC<LoginModalProps> = ({ isOpen, onClose }) => {
   const router = useRouter();
   const [loginMethod, setLoginMethod] = useState<'magic' | 'password' | 'code'>('magic');
   const [email, setEmail] = useState('');
@@ -292,20 +291,7 @@ const LoginModal: React.FC<LoginModalProps> = ({ isOpen, onClose, onOpenRegister
           {/* Footer */}
           <div className="text-center mt-6">
             <p className="text-gray-400">
-              Don&apos;t have an account?{' '}
-              <button
-                onClick={() => {
-                  if (onOpenRegister) {
-                    onClose();
-                    onOpenRegister();
-                  } else {
-                    onClose();
-                  }
-                }}
-                className="text-green-400 hover:text-green-300 font-semibold transition-colors"
-              >
-                Sign up
-              </button>
+              New users can sign up with Google or create an account using the forms above.
             </p>
           </div>
         </div>

@@ -7,7 +7,6 @@ import { Menu, X, ChevronDown, ChevronUp, User, LogOut } from 'lucide-react';
 import { toolCategories, getCategoryUrl, getCategoryDisplayName } from '../config/categories';
 import { industries, industrySlugMap } from '../content/industryContent';
 import LoginModal from './LoginModal';
-import RegisterModal from './RegisterModal';
 
 // Accordion category structure for AI Categories dropdown
 const accordionCategories = [
@@ -71,7 +70,7 @@ const accordionCategories = [
 const Header: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
-  const [modalState, setModalState] = useState<'none' | 'login' | 'register'>('none');
+  const [isLoginModalOpen, setIsLoginModalOpen] = useState(false);
   const [showUserDropdown, setShowUserDropdown] = useState(false);
   const router = useRouter();
   const { data: session, status } = useSession();
@@ -289,20 +288,12 @@ const Header: React.FC = () => {
                 )}
               </div>
             ) : (
-              <>
-                <button
-                  onClick={() => setModalState('login')}
-                  className="px-4 py-2 text-gray-300 hover:text-white font-medium text-sm transition-colors"
-                >
-                  Log In
-                </button>
-                <button
-                  onClick={() => setModalState('register')}
-                  className="px-6 py-2.5 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-lg font-semibold text-sm hover:from-blue-700 hover:to-purple-700 transform hover:scale-105 transition-all duration-200 shadow-lg hover:shadow-xl"
-                >
-                  Get Started
-                </button>
-              </>
+              <button
+                onClick={() => setIsLoginModalOpen(true)}
+                className="px-6 py-2.5 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-lg font-semibold text-sm hover:from-blue-700 hover:to-purple-700 transform hover:scale-105 transition-all duration-200 shadow-lg hover:shadow-xl"
+              >
+                Log In
+              </button>
             )}
           </div>
 
@@ -574,46 +565,25 @@ const Header: React.FC = () => {
                     >Sign Out</button>
                   </div>
                 ) : (
-                  <div style={{ display: 'flex', flexDirection: 'column', gap: '12px' }}>
-                    <button
-                      onClick={() => {
-                        closeMenu();
-                        setModalState('login');
-                      }}
-                      style={{ 
-                        display: 'block', 
-                        width: '100%', 
-                        padding: '16px', 
-                        background: 'rgba(255,255,255,0.1)', 
-                        color: 'white',
-                        textAlign: 'center',
-                        borderRadius: '8px',
-                        fontWeight: '600',
-                        fontSize: '16px',
-                        border: 'none',
-                        cursor: 'pointer'
-                      }}
-                    >Log In</button>
-                    <button
-                      onClick={() => {
-                        closeMenu();
-                        setModalState('register');
-                      }}
-                      style={{ 
-                        display: 'block', 
-                        width: '100%', 
-                        padding: '16px', 
-                        background: 'linear-gradient(to right, #06b6d4, #2563eb)', 
-                        color: 'white',
-                        textAlign: 'center',
-                        borderRadius: '8px',
-                        fontWeight: '600',
-                        fontSize: '16px',
-                        border: 'none',
-                        cursor: 'pointer'
-                      }}
-                    >Get Started</button>
-                  </div>
+                  <button
+                    onClick={() => {
+                      closeMenu();
+                      setIsLoginModalOpen(true);
+                    }}
+                    style={{ 
+                      display: 'block', 
+                      width: '100%', 
+                      padding: '16px', 
+                      background: 'linear-gradient(to right, #06b6d4, #2563eb)', 
+                      color: 'white',
+                      textAlign: 'center',
+                      borderRadius: '8px',
+                      fontWeight: '600',
+                      fontSize: '16px',
+                      border: 'none',
+                      cursor: 'pointer'
+                    }}
+                  >Log In</button>
                 )}
               </div>
             </div>
@@ -621,108 +591,11 @@ const Header: React.FC = () => {
         )}
       </nav>
 
-      {/* Modal System */}
-      {modalState !== 'none' && (
-        <div 
-          style={{ 
-            position: 'fixed', 
-            top: 0, 
-            left: 0, 
-            right: 0, 
-            bottom: 0, 
-            backgroundColor: 'rgba(0,0,0,0.8)', 
-            zIndex: 9999, 
-            display: 'flex', 
-            alignItems: 'center', 
-            justifyContent: 'center' 
-          }}
-          onClick={() => setModalState('none')}
-          onKeyDown={(e) => {
-            if (e.key === 'Escape') setModalState('none');
-          }}
-          role="button"
-          tabIndex={0}
-          aria-label="Close modal overlay"
-        >
-          <div 
-            style={{ 
-              backgroundColor: 'white', 
-              padding: '40px', 
-              borderRadius: '8px', 
-              maxWidth: '400px', 
-              width: '90%' 
-            }}
-            onClick={(e) => e.stopPropagation()}
-            onKeyDown={(e) => e.stopPropagation()}
-            role="dialog"
-            aria-modal="true"
-          >
-            {modalState === 'login' ? (
-              <>
-                <h2 style={{ color: 'black', margin: '0 0 20px 0' }}>Login Modal</h2>
-                <p style={{ color: 'black', margin: '0 0 20px 0' }}>This is the login modal.</p>
-                <button 
-                  onClick={() => setModalState('none')}
-                  style={{ 
-                    marginRight: '10px', 
-                    padding: '10px 20px', 
-                    backgroundColor: '#ccc', 
-                    border: 'none', 
-                    borderRadius: '4px', 
-                    cursor: 'pointer' 
-                  }}
-                >
-                  Close
-                </button>
-                <button 
-                  onClick={() => setModalState('register')}
-                  style={{ 
-                    padding: '10px 20px', 
-                    backgroundColor: '#007cba', 
-                    color: 'white', 
-                    border: 'none', 
-                    borderRadius: '4px', 
-                    cursor: 'pointer' 
-                  }}
-                >
-                  Switch to Register
-                </button>
-              </>
-            ) : (
-              <>
-                <h2 style={{ color: 'black', margin: '0 0 20px 0' }}>Register Modal</h2>
-                <p style={{ color: 'black', margin: '0 0 20px 0' }}>Registration functionality coming soon!</p>
-                <button 
-                  onClick={() => setModalState('none')}
-                  style={{ 
-                    marginRight: '10px', 
-                    padding: '10px 20px', 
-                    backgroundColor: '#ccc', 
-                    border: 'none', 
-                    borderRadius: '4px', 
-                    cursor: 'pointer' 
-                  }}
-                >
-                  Close
-                </button>
-                <button 
-                  onClick={() => setModalState('login')}
-                  style={{ 
-                    padding: '10px 20px', 
-                    backgroundColor: '#007cba', 
-                    color: 'white', 
-                    border: 'none', 
-                    borderRadius: '4px', 
-                    cursor: 'pointer' 
-                  }}
-                >
-                  Switch to Login
-                </button>
-              </>
-            )}
-          </div>
-        </div>
-      )}
+      {/* Login Modal */}
+      <LoginModal 
+        isOpen={isLoginModalOpen} 
+        onClose={() => setIsLoginModalOpen(false)}
+      />
     </header>
   );
 };
