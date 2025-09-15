@@ -286,7 +286,8 @@ export default function CategoriesPage({ categories, totalTools, featuredTools }
                                     className="w-8 h-8 object-contain"
                                     onError={(e) => {
                                       e.currentTarget.style.display = 'none';
-                                      e.currentTarget.nextElementSibling!.style.display = 'block';
+                                      const fallback = e.currentTarget.nextElementSibling as HTMLElement;
+                                      if (fallback) fallback.style.display = 'block';
                                     }}
                                   />
                                 ) : null}
