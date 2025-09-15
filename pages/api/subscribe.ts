@@ -3,12 +3,6 @@ import { z } from 'zod';
 const { sendEmail } = require('../../lib/email-service');
 const SiteOptzGoHighLevel = require('../../utils/siteoptz-gohighlevel');
 
-// Initialize GoHighLevel integration
-const gohighlevel = new SiteOptzGoHighLevel(
-  process.env.GOHIGHLEVEL_API_KEY,
-  process.env.GOHIGHLEVEL_LOCATION_ID
-);
-
 // Input validation schema
 const subscribeSchema = z.object({
   email: z.string().email('Invalid email address'),
@@ -81,9 +75,29 @@ async function addToGoHighLevel(data: SubscriptionData): Promise<{ success: bool
     console.log('=== SiteOptz GoHighLevel Integration ===');
     console.log('🔍 Environment Check:');
     console.log('- API Key present:', !!process.env.GOHIGHLEVEL_API_KEY);
+    console.log('- API Key length:', process.env.GOHIGHLEVEL_API_KEY ? process.env.GOHIGHLEVEL_API_KEY.length : 0);
     console.log('- Location ID present:', !!process.env.GOHIGHLEVEL_LOCATION_ID);
+    console.log('- Location ID:', process.env.GOHIGHLEVEL_LOCATION_ID);
     console.log('- Environment:', process.env.NODE_ENV);
+    console.log('- Timestamp:', new Date().toISOString());
     console.log('Adding email subscriber:', data.email);
+    
+    // Check for missing credentials
+    if (!process.env.GOHIGHLEVEL_API_KEY) {
+      console.error('❌ GOHIGHLEVEL_API_KEY is missing from environment variables');
+      throw new Error('GoHighLevel API key not configured');
+    }
+    
+    if (!process.env.GOHIGHLEVEL_LOCATION_ID) {
+      console.error('❌ GOHIGHLEVEL_LOCATION_ID is missing from environment variables');
+      throw new Error('GoHighLevel Location ID not configured');
+    }
+    
+    // Initialize GoHighLevel class inside function to avoid serverless issues
+    const gohighlevel = new SiteOptzGoHighLevel(
+      process.env.GOHIGHLEVEL_API_KEY,
+      process.env.GOHIGHLEVEL_LOCATION_ID
+    );
     
     // Prepare data for SiteOptz GoHighLevel integration
     const subscriberData = {

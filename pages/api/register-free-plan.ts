@@ -2,11 +2,7 @@ import { NextApiRequest, NextApiResponse } from 'next';
 import { z } from 'zod';
 const SiteOptzGoHighLevel = require('../../utils/siteoptz-gohighlevel');
 
-// Initialize GoHighLevel integration
-const gohighlevel = new SiteOptzGoHighLevel(
-  process.env.GOHIGHLEVEL_API_KEY,
-  process.env.GOHIGHLEVEL_LOCATION_ID
-);
+// SiteOptzGoHighLevel class will be initialized inside functions to avoid serverless issues
 
 // Input validation schema
 const registerSchema = z.object({
@@ -74,6 +70,12 @@ async function addFreeSubscriberToGoHighLevel(data: RegistrationData): Promise<{
   try {
     console.log('=== SiteOptz GoHighLevel Free Plan Registration ===');
     console.log('Registration Data:', JSON.stringify(data, null, 2));
+    
+    // Initialize GoHighLevel class inside function to avoid serverless issues
+    const gohighlevel = new SiteOptzGoHighLevel(
+      process.env.GOHIGHLEVEL_API_KEY,
+      process.env.GOHIGHLEVEL_LOCATION_ID
+    );
     
     // Prepare data for SiteOptz GoHighLevel integration
     const subscriberData = {
