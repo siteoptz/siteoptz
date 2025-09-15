@@ -6,7 +6,7 @@ import { useSession, signOut } from 'next-auth/react';
 import { Menu, X, ChevronDown, ChevronUp, User, LogOut } from 'lucide-react';
 import { toolCategories, getCategoryUrl, getCategoryDisplayName } from '../config/categories';
 import { industries, industrySlugMap } from '../content/industryContent';
-import LoginModal from './LoginModal';
+// import LoginModal from './LoginModal'; // Temporarily disabled for testing
 
 // Accordion category structure for AI Categories dropdown
 const accordionCategories = [
@@ -591,11 +591,51 @@ const Header: React.FC = () => {
         )}
       </nav>
 
-      {/* Login Modal */}
-      <LoginModal 
-        isOpen={isLoginModalOpen} 
-        onClose={() => setIsLoginModalOpen(false)}
-      />
+      {/* Simple Modal for Testing */}
+      {isLoginModalOpen && (
+        <div 
+          style={{ 
+            position: 'fixed', 
+            top: 0, 
+            left: 0, 
+            right: 0, 
+            bottom: 0, 
+            backgroundColor: 'rgba(0,0,0,0.8)', 
+            zIndex: 9999, 
+            display: 'flex', 
+            alignItems: 'center', 
+            justifyContent: 'center' 
+          }}
+          onClick={() => setIsLoginModalOpen(false)}
+        >
+          <div 
+            style={{ 
+              backgroundColor: 'white', 
+              padding: '40px', 
+              borderRadius: '8px', 
+              maxWidth: '400px', 
+              width: '90%' 
+            }}
+            onClick={(e) => e.stopPropagation()}
+          >
+            <h2 style={{ color: 'black', margin: '0 0 20px 0' }}>Login</h2>
+            <p style={{ color: 'black', margin: '0 0 20px 0' }}>Login functionality temporarily simplified for testing.</p>
+            <button 
+              onClick={() => setIsLoginModalOpen(false)}
+              style={{ 
+                padding: '10px 20px', 
+                backgroundColor: '#007cba', 
+                color: 'white', 
+                border: 'none', 
+                borderRadius: '4px', 
+                cursor: 'pointer' 
+              }}
+            >
+              Close
+            </button>
+          </div>
+        </div>
+      )}
     </header>
   );
 };
