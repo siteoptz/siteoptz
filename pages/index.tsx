@@ -21,7 +21,85 @@ export default function HomePage({}: HomePageProps) {
   const [searchTerm, setSearchTerm] = useState('');
   const [showRegister, setShowRegister] = useState(false);
   const [showLogin, setShowLogin] = useState(false);
+  const [billingCycle, setBillingCycle] = useState<'monthly' | 'yearly'>('yearly');
   const pageConfig = getPageConfig('home');
+
+  // Pricing plans data
+  const pricingPlans = [
+    {
+      name: 'FREE',
+      title: 'AI Tool Discovery',
+      monthly: { price: 0, originalPrice: null },
+      yearly: { price: 0, originalPrice: null },
+      period: billingCycle === 'yearly' ? 'Forever' : 'Forever',
+      color: 'green',
+      features: [
+        'Daily AI Tool Spotlight',
+        'Basic Tool Comparison',
+        'Free AI Tool Database',
+        'Weekly AI Trends Report'
+      ],
+      ctaText: 'Get Started',
+      ctaAction: () => setShowRegister(true)
+    },
+    {
+      name: 'STARTER',
+      title: 'AI Implementation Guide', 
+      monthly: { price: 59, originalPrice: 99 },
+      yearly: { price: 497, originalPrice: 997 },
+      period: billingCycle === 'yearly' ? '/year' : '/month',
+      color: 'cyan',
+      features: [
+        'Complete AI Tool Database',
+        '90-day Implementation Roadmap',
+        'ROI Tracking Dashboard',
+        'Monthly Implementation Webinars'
+      ],
+      ctaText: 'Get Started',
+      ctaAction: () => window.open('https://api.leadconnectorhq.com/widget/booking/yPjkVmsauPst8XlrOQUl', '_blank')
+    },
+    {
+      name: 'PRO',
+      title: 'AI Strategy Command Center',
+      monthly: { price: 199, originalPrice: 299 },
+      yearly: { price: 1997, originalPrice: 2997 },
+      period: billingCycle === 'yearly' ? '/year' : '/month',
+      color: 'cyan',
+      popular: true,
+      features: [
+        'AI Strategy Consulting (4h/quarter)',
+        'Custom AI Tool Recommendations',
+        'White-label AI Tool Reports',
+        'API Access & Advanced Tools'
+      ],
+      ctaText: 'Get Started',
+      ctaAction: () => window.open('https://api.leadconnectorhq.com/widget/booking/yPjkVmsauPst8XlrOQUl', '_blank')
+    },
+    {
+      name: 'ENTERPRISE',
+      title: 'AI Transformation Partner',
+      monthly: { price: 499, originalPrice: null },
+      yearly: { price: 4997, originalPrice: null },
+      period: billingCycle === 'yearly' ? '/year' : '/month',
+      color: 'purple',
+      features: [
+        'Unlimited Consulting Hours',
+        'Dedicated AI Strategy Consultant',
+        'Custom AI Tool Development',
+        '24-hour SLA Guarantee'
+      ],
+      ctaText: 'Contact Sales',
+      ctaAction: () => window.open('https://api.leadconnectorhq.com/widget/booking/yPjkVmsauPst8XlrOQUl', '_blank')
+    }
+  ];
+
+  // Calculate savings for yearly billing
+  const calculateSavings = (monthly: number, yearly: number) => {
+    if (monthly === 0) return { amount: 0, percent: 0 };
+    const yearlySavings = (monthly * 12) - yearly;
+    const percentSavings = Math.round((yearlySavings / (monthly * 12)) * 100);
+    return { amount: yearlySavings, percent: percentSavings };
+  };
 
   // Data from why-us page
   const valueProps = [
@@ -423,165 +501,112 @@ export default function HomePage({}: HomePageProps) {
               <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-4 px-2">
                 AI Implementation Services
               </h2>
-              <p className="text-lg sm:text-xl text-gray-300 max-w-3xl mx-auto px-4">
+              <p className="text-lg sm:text-xl text-gray-300 max-w-3xl mx-auto px-4 mb-8">
                 From strategy to deployment, we handle the complete AI transformation journey for your business.
               </p>
+
+              {/* Billing Toggle */}
+              <div className="flex items-center justify-center gap-4 mb-8">
+                <span className={`text-lg ${billingCycle === 'monthly' ? 'text-white' : 'text-gray-400'}`}>Monthly</span>
+                <button
+                  onClick={() => setBillingCycle(billingCycle === 'monthly' ? 'yearly' : 'monthly')}
+                  className="relative w-16 h-8 bg-gray-700 rounded-full transition-colors"
+                >
+                  <div className={`absolute top-1 ${billingCycle === 'yearly' ? 'right-1' : 'left-1'} w-6 h-6 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full transition-all`} />
+                </button>
+                <span className={`text-lg ${billingCycle === 'yearly' ? 'text-white' : 'text-gray-400'}`}>
+                  Yearly
+                  {billingCycle === 'yearly' && (
+                    <span className="ml-2 px-2 py-1 bg-green-500/20 text-green-400 text-xs rounded">Save up to 50%</span>
+                  )}
+                </span>
+              </div>
             </div>
 
             <div className="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 lg:gap-8">
-              {/* Free Package */}
-              <div className="bg-gradient-to-b from-gray-900 to-black border border-gray-700 p-6 lg:p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 hover:border-green-500/50 group">
-                <div className="text-center mb-6">
-                  <div className="text-sm lg:text-lg font-semibold text-gray-400 mb-2">FREE</div>
-                  <div className="text-3xl lg:text-4xl font-bold text-white mb-2">$0</div>
-                  <div className="text-sm text-gray-400">Forever</div>
-                </div>
+              {pricingPlans.map((plan, index) => {
+                const currentPricing = billingCycle === 'yearly' ? plan.yearly : plan.monthly;
+                const savings = billingCycle === 'yearly' ? calculateSavings(plan.monthly.price, plan.yearly.price) : null;
                 
-                <h3 className="text-xl lg:text-2xl font-bold mb-4 text-white text-center">AI Tool Discovery</h3>
-                <ul className="space-y-3 mb-8">
-                  <li className="flex items-center text-gray-300">
-                    <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />
-                    Daily AI Tool Spotlight
-                  </li>
-                  <li className="flex items-center text-gray-300">
-                    <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />
-                    Basic Tool Comparison
-                  </li>
-                  <li className="flex items-center text-gray-300">
-                    <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />
-                    Free AI Tool Database
-                  </li>
-                  <li className="flex items-center text-gray-300">
-                    <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />
-                    Weekly AI Trends Report
-                  </li>
-                </ul>
-                
-                <button
-                  onClick={() => setShowRegister(true)}
-                  className="block w-full text-center px-6 py-3 bg-gradient-to-r from-green-600 to-emerald-600 text-white font-semibold rounded-xl hover:from-green-700 hover:to-emerald-700 transition-all duration-200 group-hover:scale-105"
-                >
-                  Get Started
-                </button>
-              </div>
-
-              {/* Starter Package */}
-              <div className="bg-gradient-to-b from-gray-900 to-black border border-gray-700 p-6 lg:p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 hover:border-cyan-500/50 group">
-                <div className="text-center mb-6">
-                  <div className="text-sm lg:text-lg font-semibold text-gray-400 mb-2">STARTER</div>
-                  <div className="text-3xl lg:text-4xl font-bold text-white mb-2">$497</div>
-                  <div className="text-sm text-gray-400">/year</div>
-                </div>
-                
-                <h3 className="text-xl lg:text-2xl font-bold mb-4 text-white text-center">AI Implementation Guide</h3>
-                <ul className="space-y-3 mb-8">
-                  <li className="flex items-center text-gray-300">
-                    <CheckCircle className="w-5 h-5 text-cyan-400 mr-3 flex-shrink-0" />
-                    Complete AI Tool Database
-                  </li>
-                  <li className="flex items-center text-gray-300">
-                    <CheckCircle className="w-5 h-5 text-cyan-400 mr-3 flex-shrink-0" />
-                    90-day Implementation Roadmap
-                  </li>
-                  <li className="flex items-center text-gray-300">
-                    <CheckCircle className="w-5 h-5 text-cyan-400 mr-3 flex-shrink-0" />
-                    ROI Tracking Dashboard
-                  </li>
-                  <li className="flex items-center text-gray-300">
-                    <CheckCircle className="w-5 h-5 text-cyan-400 mr-3 flex-shrink-0" />
-                    Monthly Implementation Webinars
-                  </li>
-                </ul>
-                
-                <a 
-                  href="https://api.leadconnectorhq.com/widget/booking/yPjkVmsauPst8XlrOQUl"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="block w-full text-center px-6 py-3 bg-gradient-to-r from-cyan-600 to-blue-600 text-white font-semibold rounded-xl hover:from-cyan-700 hover:to-blue-700 transition-all duration-200 group-hover:scale-105"
-                >
-                  Get Started
-                </a>
-              </div>
-
-              {/* Pro Package */}
-              <div className="bg-gradient-to-b from-gray-900 to-black border-2 border-cyan-500 p-6 lg:p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 hover:shadow-cyan-500/25 group relative overflow-visible">
-                <div className="absolute -top-4 left-1/2 transform -translate-x-1/2 px-3 sm:px-4 lg:px-6 py-2 bg-gradient-to-r from-cyan-500 to-blue-600 text-white text-xs lg:text-sm font-bold rounded-full whitespace-nowrap">
-                  MOST POPULAR
-                </div>
-                
-                <div className="text-center mb-6">
-                  <div className="text-sm lg:text-lg font-semibold text-cyan-400 mb-2">PRO</div>
-                  <div className="text-3xl lg:text-4xl font-bold text-white mb-2">$1,997</div>
-                  <div className="text-sm text-gray-400">/year</div>
-                </div>
-                
-                <h3 className="text-xl lg:text-2xl font-bold mb-4 text-white text-center">AI Strategy Command Center</h3>
-                <ul className="space-y-3 mb-8">
-                  <li className="flex items-center text-gray-300">
-                    <CheckCircle className="w-5 h-5 text-cyan-400 mr-3 flex-shrink-0" />
-                    AI Strategy Consulting (4h/quarter)
-                  </li>
-                  <li className="flex items-center text-gray-300">
-                    <CheckCircle className="w-5 h-5 text-cyan-400 mr-3 flex-shrink-0" />
-                    Custom AI Tool Recommendations
-                  </li>
-                  <li className="flex items-center text-gray-300">
-                    <CheckCircle className="w-5 h-5 text-cyan-400 mr-3 flex-shrink-0" />
-                    White-label AI Tool Reports
-                  </li>
-                  <li className="flex items-center text-gray-300">
-                    <CheckCircle className="w-5 h-5 text-cyan-400 mr-3 flex-shrink-0" />
-                    API Access & Advanced Tools
-                  </li>
-                </ul>
-                
-                <a 
-                  href="https://api.leadconnectorhq.com/widget/booking/yPjkVmsauPst8XlrOQUl"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="block w-full text-center px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-bold rounded-xl hover:from-cyan-400 hover:to-blue-500 transition-all duration-200 group-hover:scale-105 shadow-lg"
-                >
-                  Get Started
-                </a>
-              </div>
-
-              {/* Enterprise Package */}
-              <div className="bg-gradient-to-b from-gray-900 to-black border border-gray-700 p-6 lg:p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 hover:border-purple-500/50 group">
-                <div className="text-center mb-6">
-                  <div className="text-sm lg:text-lg font-semibold text-gray-400 mb-2">ENTERPRISE</div>
-                  <div className="text-3xl lg:text-4xl font-bold text-white mb-2">$4,997</div>
-                  <div className="text-sm text-gray-400">/year</div>
-                </div>
-                
-                <h3 className="text-xl lg:text-2xl font-bold mb-4 text-white text-center">AI Transformation Partner</h3>
-                <ul className="space-y-3 mb-8">
-                  <li className="flex items-center text-gray-300">
-                    <CheckCircle className="w-5 h-5 text-purple-400 mr-3 flex-shrink-0" />
-                    Unlimited Consulting Hours
-                  </li>
-                  <li className="flex items-center text-gray-300">
-                    <CheckCircle className="w-5 h-5 text-purple-400 mr-3 flex-shrink-0" />
-                    Dedicated AI Strategy Consultant
-                  </li>
-                  <li className="flex items-center text-gray-300">
-                    <CheckCircle className="w-5 h-5 text-purple-400 mr-3 flex-shrink-0" />
-                    Custom AI Tool Development
-                  </li>
-                  <li className="flex items-center text-gray-300">
-                    <CheckCircle className="w-5 h-5 text-purple-400 mr-3 flex-shrink-0" />
-                    24-hour SLA Guarantee
-                  </li>
-                </ul>
-                
-                <a 
-                  href="https://api.leadconnectorhq.com/widget/booking/yPjkVmsauPst8XlrOQUl"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="block w-full text-center px-6 py-3 bg-gradient-to-r from-purple-600 to-violet-600 text-white font-semibold rounded-xl hover:from-purple-700 hover:to-violet-700 transition-all duration-200 group-hover:scale-105"
-                >
-                  Contact Sales
-                </a>
-              </div>
+                return (
+                  <div
+                    key={plan.name}
+                    className={`bg-gradient-to-b from-gray-900 to-black ${
+                      plan.popular ? 'border-2 border-cyan-500' : 'border border-gray-700'
+                    } p-6 lg:p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 ${
+                      plan.color === 'green' ? 'hover:border-green-500/50' :
+                      plan.color === 'cyan' ? 'hover:border-cyan-500/50' :
+                      plan.color === 'purple' ? 'hover:border-purple-500/50' : ''
+                    } group ${plan.popular ? 'relative overflow-visible' : ''}`}
+                  >
+                    {plan.popular && (
+                      <div className="absolute -top-4 left-1/2 transform -translate-x-1/2 px-3 sm:px-4 lg:px-6 py-2 bg-gradient-to-r from-cyan-500 to-blue-600 text-white text-xs lg:text-sm font-bold rounded-full whitespace-nowrap">
+                        MOST POPULAR
+                      </div>
+                    )}
+                    
+                    <div className="text-center mb-6">
+                      <div className={`text-sm lg:text-lg font-semibold mb-2 ${
+                        plan.color === 'green' ? 'text-gray-400' :
+                        plan.color === 'cyan' ? (plan.popular ? 'text-cyan-400' : 'text-gray-400') :
+                        plan.color === 'purple' ? 'text-gray-400' : 'text-gray-400'
+                      }`}>
+                        {plan.name}
+                      </div>
+                      
+                      {/* Show original price if there's a discount */}
+                      {currentPricing.originalPrice && (
+                        <div className="text-gray-500 line-through text-lg">
+                          ${currentPricing.originalPrice}{plan.period}
+                        </div>
+                      )}
+                      
+                      <div className="text-3xl lg:text-4xl font-bold text-white mb-2">
+                        ${currentPricing.price}
+                      </div>
+                      <div className="text-sm text-gray-400">{plan.period}</div>
+                      
+                      {/* Show savings for yearly billing */}
+                      {savings && savings.percent > 0 && billingCycle === 'yearly' && (
+                        <div className="mt-2">
+                          <span className="px-2 py-1 bg-green-500/20 text-green-400 text-xs rounded">
+                            Save {savings.percent}% (${savings.amount})
+                          </span>
+                        </div>
+                      )}
+                    </div>
+                    
+                    <h3 className="text-xl lg:text-2xl font-bold mb-4 text-white text-center">{plan.title}</h3>
+                    <ul className="space-y-3 mb-8">
+                      {plan.features.map((feature, featureIndex) => (
+                        <li key={featureIndex} className="flex items-center text-gray-300">
+                          <CheckCircle className={`w-5 h-5 mr-3 flex-shrink-0 ${
+                            plan.color === 'green' ? 'text-green-400' :
+                            plan.color === 'cyan' ? 'text-cyan-400' :
+                            plan.color === 'purple' ? 'text-purple-400' : 'text-gray-400'
+                          }`} />
+                          {feature}
+                        </li>
+                      ))}
+                    </ul>
+                    
+                    <button
+                      onClick={plan.ctaAction}
+                      className={`block w-full text-center px-6 py-3 font-semibold rounded-xl transition-all duration-200 group-hover:scale-105 ${
+                        plan.name === 'FREE' 
+                          ? 'bg-gradient-to-r from-green-600 to-emerald-600 text-white hover:from-green-700 hover:to-emerald-700'
+                          : plan.popular
+                          ? 'bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-bold hover:from-cyan-400 hover:to-blue-500 shadow-lg'
+                          : plan.color === 'purple'
+                          ? 'bg-gradient-to-r from-purple-600 to-violet-600 text-white hover:from-purple-700 hover:to-violet-700'
+                          : 'bg-gradient-to-r from-cyan-600 to-blue-600 text-white hover:from-cyan-700 hover:to-blue-700'
+                      }`}
+                    >
+                      {plan.ctaText}
+                    </button>
+                  </div>
+                );
+              })}
             </div>
           </div>
         </section>
