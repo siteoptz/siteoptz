@@ -4,6 +4,7 @@ import Link from 'next/link';
 import { Star, ArrowRight } from 'lucide-react';
 import { toolCategories } from '../../config/categories';
 import { loadUnifiedToolsData } from '../../utils/unifiedDataAdapter';
+import FAQSection from '../../components/FAQ/FAQSection';
 import fs from 'fs';
 import path from 'path';
 
@@ -42,6 +43,7 @@ interface CategoriesPageProps {
   totalTools: number;
   featuredTools: Tool[];
   popularComparisons: Comparison[];
+  faqs: any[];
 }
 
 
@@ -113,18 +115,35 @@ export const getStaticProps: GetStaticProps = async () => {
     { tool1: featuredTools.find((t: any) => t.slug === 'notion-ai'), tool2: featuredTools.find((t: any) => t.slug === 'claude') }
   ].filter(comparison => comparison.tool1 && comparison.tool2);
 
+  // Load enhanced FAQ data
+  let faqData: any[] = [];
+  try {
+    const faqPath = path.join(process.cwd(), 'data/enhanced-faq.json');
+    if (fs.existsSync(faqPath)) {
+      const rawFaqData = JSON.parse(fs.readFileSync(faqPath, 'utf8'));
+      faqData = [
+        ...rawFaqData.general_ai_tools,
+        ...rawFaqData.pricing_faqs.slice(0, 2),
+        ...rawFaqData.technical_faqs.slice(0, 1)
+      ];
+    }
+  } catch (error) {
+    console.error('Error loading FAQ data:', error);
+  }
+
   return {
     props: {
       categories: categoriesWithData,
       totalTools: allTools.length,
       featuredTools,
-      popularComparisons
+      popularComparisons,
+      faqs: faqData
     },
     revalidate: 3600 // Revalidate every hour
   };
 };
 
-export default function CategoriesPage({ categories, totalTools, featuredTools, popularComparisons }: CategoriesPageProps) {
+export default function CategoriesPage({ categories, totalTools, featuredTools, popularComparisons, faqs }: CategoriesPageProps) {
 
   return (
     <>
@@ -410,6 +429,19 @@ export default function CategoriesPage({ categories, totalTools, featuredTools, 
                     </div>
                   ))}
                 </div>
+              </div>
+            </section>
+
+            {/* FAQ Section */}
+            <section className="py-20 bg-black rounded-2xl mb-16">
+              <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <FAQSection 
+                  faqs={faqs}
+                  title="Frequently Asked Questions About AI Tools"
+                  description="Get answers to common questions about AI tools, pricing, safety, and implementation to help you make informed decisions."
+                  maxVisible={undefined}
+                  showStructuredData={true}
+                />
               </div>
             </section>
 

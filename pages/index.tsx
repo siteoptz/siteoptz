@@ -10,15 +10,12 @@ import {
 import { Search, TrendingUp, Zap, CheckCircle, Sparkles, Brain, BarChart3, Target, Users, Rocket, Calendar, ArrowRight } from 'lucide-react';
 import ExternalLink from '../components/ExternalLink';
 import { authoritativeLinks } from '../utils/externalLinks';
-import FAQSection from '../components/FAQ/FAQSection';
 import HeroSection from '../components/HeroSection';
 
 
-interface HomePageProps {
-  faqs: any[];
-}
+interface HomePageProps {}
 
-export default function HomePage({ faqs }: HomePageProps) {
+export default function HomePage({}: HomePageProps) {
   const [searchTerm, setSearchTerm] = useState('');
   const pageConfig = getPageConfig('home');
 
@@ -146,18 +143,6 @@ export default function HomePage({ faqs }: HomePageProps) {
           </div>
         </section>
 
-        {/* FAQ Section - Enhanced with comprehensive AI tool questions */}
-        <section className="py-20 bg-black">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <FAQSection 
-              faqs={faqs}
-              title="Frequently Asked Questions About AI Tools"
-              description="Get answers to common questions about AI tools, pricing, safety, and implementation to help you make informed decisions."
-              maxVisible={undefined}
-              showStructuredData={true}
-            />
-          </div>
-        </section>
 
         {/* Final CTA Section */}
         <section className="bg-gray-950 text-white py-24 relative overflow-hidden">
@@ -215,37 +200,7 @@ export default function HomePage({ faqs }: HomePageProps) {
 }
 
 export const getStaticProps: GetStaticProps = async () => {
-  try {
-    const fs = require('fs');
-    const path = require('path');
-    
-    // Load enhanced FAQ data
-    let faqData: any[] = [];
-    try {
-      const faqPath = path.join(process.cwd(), 'data/enhanced-faq.json');
-      if (fs.existsSync(faqPath)) {
-        const rawFaqData = JSON.parse(fs.readFileSync(faqPath, 'utf8'));
-        faqData = [
-          ...rawFaqData.general_ai_tools,
-          ...rawFaqData.pricing_faqs.slice(0, 2),
-          ...rawFaqData.technical_faqs.slice(0, 1)
-        ];
-      }
-    } catch (error) {
-      console.error('Error loading FAQ data:', error);
-    }
-
-    return {
-      props: {
-        faqs: faqData
-      }
-    };
-  } catch (error) {
-    console.error('Error loading homepage data:', error);
-    return {
-      props: {
-        faqs: []
-      }
-    };
-  }
+  return {
+    props: {}
+  };
 };
