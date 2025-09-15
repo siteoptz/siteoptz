@@ -60,7 +60,10 @@ export default async function handler(
     console.log('📊 Environment Info:', environment);
 
     // Try to initialize the GoHighLevel class
-    let integration = {
+    let integration: {
+      classInitialized: boolean;
+      testResult?: any;
+    } = {
       classInitialized: false
     };
 
