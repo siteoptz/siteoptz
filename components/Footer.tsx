@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
+import { useRouter } from 'next/router';
 import { 
   Zap, 
   Mail, 
@@ -20,6 +21,7 @@ import { getCategoryUrl } from '../config/categories';
 import { industries, industrySlugMap } from '../content/industryContent';
 
 const Footer: React.FC = () => {
+  const router = useRouter();
   const currentYear = new Date().getFullYear();
   const [showEmailForm, setShowEmailForm] = useState(false);
   
@@ -120,13 +122,23 @@ const Footer: React.FC = () => {
               </div>
             </Link>
 
-            <Link
-              href="/#register"
-              className="w-full px-6 py-3 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-lg font-semibold hover:from-blue-700 hover:to-purple-700 transform hover:scale-105 transition-all duration-200 shadow-lg hover:shadow-xl flex items-center justify-center space-x-2"
-            >
-              <Zap className="w-4 h-4" />
-              <span>Get Started</span>
-            </Link>
+            {router.pathname === '/' ? (
+              <button
+                onClick={() => window.location.hash = 'register'}
+                className="w-full px-6 py-3 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-lg font-semibold hover:from-blue-700 hover:to-purple-700 transform hover:scale-105 transition-all duration-200 shadow-lg hover:shadow-xl flex items-center justify-center space-x-2"
+              >
+                <Zap className="w-4 h-4" />
+                <span>Get Started</span>
+              </button>
+            ) : (
+              <Link
+                href="/#register"
+                className="w-full px-6 py-3 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-lg font-semibold hover:from-blue-700 hover:to-purple-700 transform hover:scale-105 transition-all duration-200 shadow-lg hover:shadow-xl flex items-center justify-center space-x-2"
+              >
+                <Zap className="w-4 h-4" />
+                <span>Get Started</span>
+              </Link>
+            )}
 
             <div className="flex space-x-3 justify-center">
               {socialLinks.map((social) => {
@@ -297,13 +309,23 @@ const Footer: React.FC = () => {
             </Link>
 
             {/* Get Started CTA Button */}
-            <Link
-              href="/#register"
-              className="w-full px-6 py-3 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-lg font-semibold hover:from-blue-700 hover:to-purple-700 transform hover:scale-105 transition-all duration-200 shadow-lg hover:shadow-xl flex items-center justify-center space-x-2"
-            >
-              <Zap className="w-4 h-4" />
-              <span>Get Started</span>
-            </Link>
+            {router.pathname === '/' ? (
+              <button
+                onClick={() => window.location.hash = 'register'}
+                className="w-full px-6 py-3 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-lg font-semibold hover:from-blue-700 hover:to-purple-700 transform hover:scale-105 transition-all duration-200 shadow-lg hover:shadow-xl flex items-center justify-center space-x-2"
+              >
+                <Zap className="w-4 h-4" />
+                <span>Get Started</span>
+              </button>
+            ) : (
+              <Link
+                href="/#register"
+                className="w-full px-6 py-3 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-lg font-semibold hover:from-blue-700 hover:to-purple-700 transform hover:scale-105 transition-all duration-200 shadow-lg hover:shadow-xl flex items-center justify-center space-x-2"
+              >
+                <Zap className="w-4 h-4" />
+                <span>Get Started</span>
+              </Link>
+            )}
 
             {/* Social Icons */}
             <div>
