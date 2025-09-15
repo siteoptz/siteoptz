@@ -121,7 +121,7 @@ const Footer: React.FC = () => {
             </Link>
 
             <Link
-              href="/why-us#register"
+              href="/#register"
               className="w-full px-6 py-3 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-lg font-semibold hover:from-blue-700 hover:to-purple-700 transform hover:scale-105 transition-all duration-200 shadow-lg hover:shadow-xl flex items-center justify-center space-x-2"
             >
               <Zap className="w-4 h-4" />
@@ -298,7 +298,7 @@ const Footer: React.FC = () => {
 
             {/* Get Started CTA Button */}
             <Link
-              href="/why-us#register"
+              href="/#register"
               className="w-full px-6 py-3 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-lg font-semibold hover:from-blue-700 hover:to-purple-700 transform hover:scale-105 transition-all duration-200 shadow-lg hover:shadow-xl flex items-center justify-center space-x-2"
             >
               <Zap className="w-4 h-4" />

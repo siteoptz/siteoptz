@@ -1,7 +1,9 @@
 import { GetStaticProps } from 'next';
 import Link from 'next/link';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import SEOHead from '../components/SEOHead';
+import LoginModal from '../components/LoginModal';
+import RegisterModal from '../components/RegisterModal';
 import { 
   getPageConfig, 
   generateSoftwareApplicationSchema,
@@ -18,6 +20,7 @@ interface HomePageProps {}
 export default function HomePage({}: HomePageProps) {
   const [searchTerm, setSearchTerm] = useState('');
   const [showRegister, setShowRegister] = useState(false);
+  const [showLogin, setShowLogin] = useState(false);
   const pageConfig = getPageConfig('home');
 
   // Data from why-us page
@@ -169,6 +172,33 @@ export default function HomePage({}: HomePageProps) {
       answer: "We're tool-agnostic and select based on your specific needs, but commonly implement tools like HubSpot AI, Intercom's AI features, Copy.ai, Jasper, Zapier with AI actions, and various SEO AI tools. We focus on tools that integrate well with your existing stack."
     }
   ];
+
+  // Handle hash-based routing for modals
+  useEffect(() => {
+    const handleHashChange = () => {
+      const hash = window.location.hash;
+      if (hash === '#register') {
+        setShowRegister(true);
+        setShowLogin(false);
+      } else if (hash === '#login') {
+        setShowLogin(true);
+        setShowRegister(false);
+      } else {
+        setShowRegister(false);
+        setShowLogin(false);
+      }
+    };
+
+    // Check hash on mount
+    handleHashChange();
+
+    // Listen for hash changes
+    window.addEventListener('hashchange', handleHashChange);
+
+    return () => {
+      window.removeEventListener('hashchange', handleHashChange);
+    };
+  }, []);
 
   const handleSearch = (e: React.FormEvent) => {
     e.preventDefault();
@@ -887,6 +917,37 @@ export default function HomePage({}: HomePageProps) {
           </div>
         </section>
       </div>
+      
+      {/* Login Modal - For Returning Users */}
+      <LoginModal
+        isOpen={showLogin}
+        onClose={() => {
+          setShowLogin(false);
+          // Clear hash when modal is closed
+          if (window.location.hash === '#login') {
+            window.history.pushState('', document.title, window.location.pathname + window.location.search);
+          }
+        }}
+      />
+
+      {/* Register Modal - For New Users signing up for Free Plan */}
+      <RegisterModal
+        isOpen={showRegister}
+        onClose={() => {
+          setShowRegister(false);
+          // Clear hash when modal is closed
+          if (window.location.hash === '#register') {
+            window.history.pushState('', document.title, window.location.pathname + window.location.search);
+          }
+        }}
+        planName="Free Plan - AI Tool Discovery"
+        onOpenLogin={() => {
+          setShowRegister(false);
+          setShowLogin(true);
+          // Update hash to login
+          window.history.pushState('', document.title, '/#login');
+        }}
+      />
     </>
   );
 }

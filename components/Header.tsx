@@ -290,13 +290,13 @@ const Header: React.FC = () => {
             ) : (
               <>
                 <Link
-                  href="/why-us#login"
+                  href="/#login"
                   className="px-4 py-2 text-gray-300 hover:text-white font-medium text-sm transition-colors"
                 >
                   Log In
                 </Link>
                 <Link
-                  href="/why-us#register"
+                  href="/#register"
                   className="px-6 py-2.5 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-lg font-semibold text-sm hover:from-blue-700 hover:to-purple-700 transform hover:scale-105 transition-all duration-200 shadow-lg hover:shadow-xl"
                 >
                   Get Started
@@ -575,7 +575,7 @@ const Header: React.FC = () => {
                 ) : (
                   <div style={{ display: 'flex', flexDirection: 'column', gap: '12px' }}>
                     <Link
-                      href="/why-us#login"
+                      href="/#login"
                       onClick={closeMenu}
                       style={{ 
                         display: 'block', 
@@ -591,7 +591,7 @@ const Header: React.FC = () => {
                       }}
                     >Log In</Link>
                     <Link
-                      href="/why-us#register"
+                      href="/#register"
                       onClick={closeMenu}
                       style={{ 
                         display: 'block', 
