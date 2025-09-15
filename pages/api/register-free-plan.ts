@@ -1,6 +1,12 @@
 import { NextApiRequest, NextApiResponse } from 'next';
 import { z } from 'zod';
-const GoHighLevelAPI = require('../../utils/gohighlevel-api');
+const SiteOptzGoHighLevel = require('../../utils/siteoptz-gohighlevel');
+
+// Initialize GoHighLevel integration
+const gohighlevel = new SiteOptzGoHighLevel(
+  process.env.GOHIGHLEVEL_API_KEY,
+  process.env.GOHIGHLEVEL_LOCATION_ID
+);
 
 // Input validation schema
 const registerSchema = z.object({
@@ -63,139 +69,43 @@ function checkRateLimit(ip: string): boolean {
   return true;
 }
 
-// Add free plan subscriber to GoHighLevel as contact
+// Add free plan subscriber to GoHighLevel using SiteOptzGoHighLevel class
 async function addFreeSubscriberToGoHighLevel(data: RegistrationData): Promise<{ success: boolean; contactId?: string; opportunityId?: string }> {
   try {
-    console.log('=== GoHighLevel Free Plan Registration Debug ===');
+    console.log('=== SiteOptz GoHighLevel Free Plan Registration ===');
     console.log('Registration Data:', JSON.stringify(data, null, 2));
     
-    // Initialize GoHighLevel API
-    const ghl = new GoHighLevelAPI();
-    
-    // Prepare contact data
-    const contactData = {
+    // Prepare data for SiteOptz GoHighLevel integration
+    const subscriberData = {
+      email: data.email,
       firstName: data.name?.split(' ')[0] || '',
       lastName: data.name?.split(' ').slice(1).join(' ') || '',
-      email: data.email,
-      phone: '',
-      tags: [
-        'New Lead',  // This tag triggers the 'New Lead Workflow'
-        'Free Plan Subscriber',
-        `Registration Method: ${data.registrationMethod}`,
-        `Plan: ${data.planName}`,
-        `Source: ${data.source}`,
-        `AI Interest: ${data.aiToolsInterest}`,
-        `Business Size: ${data.businessSize}`,
-        `Registered: ${new Date().toLocaleDateString('en-US', { month: 'short', year: 'numeric' })}`
-      ],
-      customFields: [
-        {
-          key: 'registration_method',
-          value: data.registrationMethod
-        },
-        {
-          key: 'plan_type',
-          value: 'free'
-        },
-        {
-          key: 'registration_date',
-          value: data.timestamp
-        },
-        {
-          key: 'user_agent',
-          value: data.userAgent || ''
-        },
-        {
-          key: 'referrer',
-          value: data.referrer || ''
-        },
-        {
-          key: 'ai_tools_interest',
-          value: data.aiToolsInterest
-        },
-        {
-          key: 'business_size',
-          value: data.businessSize
-        }
-      ],
-      source: `Free Plan Registration - ${data.registrationMethod === 'google' ? 'Google OAuth' : 'Email/Password'}`,
+      source: `${data.source} - ${data.registrationMethod}`,
+      aiToolsInterest: data.aiToolsInterest,
+      businessSize: data.businessSize,
+      registrationMethod: data.registrationMethod,
+      planType: 'free'
     };
 
-    console.log('Creating/updating contact in GoHighLevel:', JSON.stringify(contactData, null, 2));
-
-    // Create or update contact
-    const contactResult = await ghl.createOrUpdateContact(contactData);
-    const contactId = contactResult.contact?.id;
-
-    if (!contactId) {
-      throw new Error('Failed to create contact in GoHighLevel');
-    }
-
-    console.log('Contact created/updated successfully:', contactId);
-
-    // Add tags specifically for free plan subscribers
-    try {
-      await ghl.addTagsToContact(contactId, [
-        'SiteOptz Free User',
-        'AI Tool Discovery',
-        'Lead Magnet - Free Plan'
-      ]);
-    } catch (tagError) {
-      console.error('Failed to add additional tags:', tagError);
-      // Don't fail the whole process for tag errors
-    }
-
-    // Create an opportunity for the free plan registration
-    let opportunityId = null;
-    try {
-      const opportunityData = {
-        name: `${data.name || data.email} - Free Plan Registration`,
-        contactId: contactId,
-        status: 'open',
-        monetaryValue: 0, // Free plan has no immediate monetary value
-        source: `Free Plan Registration - SiteOptz Website`,
-        customFields: [
-          {
-            key: 'plan_type',
-            value: 'free'
-          },
-          {
-            key: 'registration_method',
-            value: data.registrationMethod
-          }
-        ]
-      };
-      
-      console.log('Creating opportunity for free plan registration:', JSON.stringify(opportunityData, null, 2));
-      
-      // Use the pipeline and stage from environment variables if available
-      const pipelineId = process.env.GHL_FREE_PLAN_PIPELINE_ID || process.env.GHL_PIPELINE_ID;
-      const stageId = process.env.GHL_FREE_PLAN_STAGE_ID || process.env.GHL_PIPELINE_STAGE_ID;
-      
-      if (pipelineId && stageId) {
-        await ghl.addContactToPipeline(contactId, pipelineId, stageId);
-        console.log('Contact added to free plan pipeline');
-      }
-      
-      // Note: Opportunity creation might need to be done through a different endpoint
-      // depending on your GoHighLevel setup
-    } catch (oppError) {
-      console.error('Error creating opportunity for free plan:', oppError);
-      // Don't fail the registration for opportunity errors
-    }
-
-    console.log('=== Free Plan GoHighLevel Integration Success ===');
-    console.log('Contact ID:', contactId);
-    console.log('Opportunity ID:', opportunityId);
-    console.log('====================================================');
+    // Use addFreeTrialSubscriber method from our comprehensive class
+    const result = await gohighlevel.addFreeTrialSubscriber(subscriberData);
     
-    return { 
-      success: true, 
-      contactId: contactId,
-      opportunityId: opportunityId || undefined 
-    };
+    if (result.success) {
+      console.log('✅ Successfully added free plan subscriber to GoHighLevel');
+      console.log('Contact ID:', result.contact?.id);
+      console.log('Pipeline:', result.pipeline);
+      
+      return { 
+        success: true, 
+        contactId: result.contact?.id,
+        opportunityId: result.pipeline?.id
+      };
+    } else {
+      console.error('❌ Failed to add free plan subscriber to GoHighLevel');
+      return { success: false };
+    }
   } catch (error) {
-    console.error('Error adding free plan subscriber to GoHighLevel:', error);
+    console.error('Error in SiteOptz GoHighLevel free plan registration:', error);
     return { success: false };
   }
 }

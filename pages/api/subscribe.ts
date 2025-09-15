@@ -1,11 +1,13 @@
 import { NextApiRequest, NextApiResponse } from 'next';
 import { z } from 'zod';
 const { sendEmail } = require('../../lib/email-service');
+const SiteOptzGoHighLevel = require('../../utils/siteoptz-gohighlevel');
 
-// GoHighLevel API configuration
-const GHL_API_KEY = process.env.GHL_API_KEY || '';
-const GHL_LOCATION_ID = process.env.GHL_LOCATION_ID || '';
-const GHL_API_BASE = 'https://services.leadconnectorhq.com';
+// Initialize GoHighLevel integration
+const gohighlevel = new SiteOptzGoHighLevel(
+  process.env.GOHIGHLEVEL_API_KEY,
+  process.env.GOHIGHLEVEL_LOCATION_ID
+);
 
 // Input validation schema
 const subscribeSchema = z.object({
@@ -73,103 +75,37 @@ function checkRateLimit(ip: string): boolean {
   return true;
 }
 
-// GoHighLevel CRM Integration
+// GoHighLevel CRM Integration using SiteOptzGoHighLevel class
 async function addToGoHighLevel(data: SubscriptionData): Promise<{ success: boolean; id?: string }> {
   try {
-    console.log('=== GoHighLevel Newsletter Integration Debug ===');
-    console.log('API Key exists:', !!GHL_API_KEY);
-    console.log('API Key length:', GHL_API_KEY.length);
-    console.log('Location ID:', GHL_LOCATION_ID);
-    console.log('Environment:', process.env.NODE_ENV);
-    const ghlData = {
+    console.log('=== SiteOptz GoHighLevel Integration ===');
+    console.log('Adding email subscriber:', data.email);
+    
+    // Prepare data for SiteOptz GoHighLevel integration
+    const subscriberData = {
+      email: data.email,
       firstName: data.name?.split(' ')[0] || '',
       lastName: data.name?.split(' ').slice(1).join(' ') || '',
-      email: data.email,
-      phone: '',
-      tags: [
-        'New Lead',  // This tag triggers the 'New Lead Workflow'
-        'Newsletter Subscription',
-        `Source: ${data.source}`,
-        ...(data.tool ? [`Tool Interest: ${data.tool}`] : []),
-        ...(data.category ? [`Category: ${data.category}`] : []),
-        ...(data.useCase ? [`Use Case: ${data.useCase}`] : []),
-        ...data.interests.map(interest => `Interest: ${interest}`),
-        `Company: ${data.company || 'Not provided'}`,
-        `Subscribed: ${new Date().toLocaleDateString('en-US', { month: 'short', year: 'numeric' })}`
-      ],
-      customFields: [],
-      source: 'Newsletter Subscription - SiteOptz Website',
-      locationId: GHL_LOCATION_ID,
+      source: data.source,
+      aiToolsInterest: data.tool || data.interests[0] || 'general',
+      businessSize: data.company ? 'small' : 'individual',
+      useCase: data.useCase,
+      company: data.company,
+      interests: data.interests
     };
 
-    console.log('Sending newsletter data to GoHighLevel:', JSON.stringify(ghlData, null, 2));
-
-    const response = await fetch(`${GHL_API_BASE}/contacts/`, {
-      method: 'POST',
-      headers: {
-        'Authorization': `Bearer ${GHL_API_KEY}`,
-        'Content-Type': 'application/json',
-        'Version': '2021-04-15',
-      },
-      body: JSON.stringify(ghlData),
-    });
-
-    console.log('GoHighLevel Newsletter API Response Status:', response.status);
+    // Use addFreeTrialSubscriber for email captures
+    const result = await gohighlevel.addFreeTrialSubscriber(subscriberData);
     
-    if (!response.ok) {
-      const errorText = await response.text();
-      console.error('GoHighLevel Newsletter API error:', errorText);
-      throw new Error(`GoHighLevel API error: ${response.status} - ${errorText}`);
+    if (result.success) {
+      console.log('✅ Successfully added to GoHighLevel:', result.contact?.id);
+      return { success: true, id: result.contact?.id };
+    } else {
+      console.error('❌ Failed to add to GoHighLevel');
+      return { success: false };
     }
-
-    const result = await response.json();
-    console.log('GoHighLevel Newsletter Success:', result);
-    console.log('Contact ID:', result.contact?.id);
-    
-    // Create an Opportunity for newsletter subscription
-    if (result.contact?.id) {
-      try {
-        const opportunityData = {
-          name: `${data.name || data.email} - Newsletter Subscription`,
-          contactId: result.contact.id,
-          locationId: GHL_LOCATION_ID,
-          status: 'open',
-          monetaryValue: 0,
-          pipelineId: process.env.GHL_PIPELINE_ID || '',
-          pipelineStageId: process.env.GHL_PIPELINE_STAGE_ID || '',
-          source: 'Newsletter Subscription - SiteOptz Website',
-          customFields: []
-        };
-        
-        console.log('Creating Newsletter Opportunity:', JSON.stringify(opportunityData, null, 2));
-        
-        const oppResponse = await fetch(`${GHL_API_BASE}/opportunities/`, {
-          method: 'POST',
-          headers: {
-            'Authorization': `Bearer ${GHL_API_KEY}`,
-            'Content-Type': 'application/json',
-            'Version': '2021-04-15',
-          },
-          body: JSON.stringify(opportunityData),
-        });
-        
-        if (oppResponse.ok) {
-          const oppResult = await oppResponse.json();
-          console.log('Newsletter Opportunity Created:', oppResult);
-          result.opportunity = oppResult.opportunity;
-        } else {
-          const errorText = await oppResponse.text();
-          console.error('Failed to create Newsletter Opportunity:', errorText);
-        }
-      } catch (oppError) {
-        console.error('Error creating Newsletter Opportunity:', oppError);
-      }
-    }
-    
-    console.log('================================================');
-    return { success: true, id: result.contact?.id };
   } catch (error) {
-    console.error('Error adding lead to GoHighLevel:', error);
+    console.error('Error in GoHighLevel integration:', error);
     return { success: false };
   }
 }
