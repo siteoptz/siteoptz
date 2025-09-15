@@ -72,9 +72,7 @@ export function middleware(request: NextRequest) {
 // Configure which paths the middleware should run on
 export const config = {
   matcher: [
-    // Match all compare routes
+    // Only match compare routes - remove the broad matcher that was affecting other pages
     '/compare/:path*',
-    // Exclude API routes, static files, and Next.js internals
-    '/((?!api|_next/static|_next/image|favicon.ico).*)',
   ]
 }
