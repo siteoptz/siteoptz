@@ -95,11 +95,11 @@ export default async function handler(
             error: result.success ? null : 'Integration failed'
           };
           console.log('🧪 Test result:', integration.testResult);
-        } catch (testError) {
+        } catch (testError: any) {
           console.error('❌ Integration test failed:', testError);
           integration.testResult = {
             success: false,
-            error: testError.message
+            error: testError?.message || 'Integration test failed'
           };
         }
       } else {
@@ -109,11 +109,11 @@ export default async function handler(
           error: 'Missing API credentials'
         };
       }
-    } catch (initError) {
+    } catch (initError: any) {
       console.error('❌ GoHighLevel class initialization failed:', initError);
       integration.testResult = {
         success: false,
-        error: initError.message
+        error: initError?.message || 'Initialization failed'
       };
     }
 
@@ -124,7 +124,7 @@ export default async function handler(
       integration
     });
 
-  } catch (error) {
+  } catch (error: any) {
     console.error('❌ Test API error:', error);
     
     res.status(500).json({
@@ -139,7 +139,7 @@ export default async function handler(
         enableGhlPresent: !!process.env.ENABLE_GHL,
         enableGhlValue: process.env.ENABLE_GHL || null
       },
-      error: error.message
+      error: error?.message || 'Test API error'
     });
   }
 }
