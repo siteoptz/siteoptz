@@ -251,7 +251,12 @@ const Header: React.FC = () => {
 
           {/* Authentication CTA */}
           <div className="hidden lg:flex items-center space-x-3">
-            {session ? (
+            {status === 'loading' ? (
+              <div className="flex items-center space-x-3">
+                <div className="animate-pulse bg-gray-300 h-8 w-16 rounded"></div>
+                <div className="animate-pulse bg-gray-300 h-8 w-24 rounded"></div>
+              </div>
+            ) : session && status === 'authenticated' ? (
               <div className="relative">
                 <button
                   onClick={() => setShowUserDropdown(!showUserDropdown)}
@@ -556,7 +561,12 @@ const Header: React.FC = () => {
               }}>Contact</Link>
               
               <div style={{ marginTop: '24px', paddingTop: '24px', borderTop: '1px solid rgba(255,255,255,0.2)' }}>
-                {session ? (
+                {status === 'loading' ? (
+                  <div style={{ display: 'flex', flexDirection: 'column', gap: '12px' }}>
+                    <div style={{ height: '48px', background: 'rgba(255,255,255,0.1)', borderRadius: '8px', animation: 'pulse 2s infinite' }}></div>
+                    <div style={{ height: '48px', background: 'rgba(255,255,255,0.1)', borderRadius: '8px', animation: 'pulse 2s infinite' }}></div>
+                  </div>
+                ) : session && status === 'authenticated' ? (
                   <div style={{ display: 'flex', flexDirection: 'column', gap: '12px' }}>
                     <Link href="/dashboard" onClick={closeMenu} style={{ 
                       display: 'block', 
