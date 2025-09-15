@@ -7,7 +7,7 @@ import {
   generateSoftwareApplicationSchema,
   buildCanonicalUrl 
 } from '../seo/meta-config.js';
-import { Search, TrendingUp, Zap, CheckCircle, Sparkles, Brain, BarChart3, Target, Users, Rocket, Calendar } from 'lucide-react';
+import { Search, TrendingUp, Zap, CheckCircle, Sparkles, Brain, BarChart3, Target, Users, Rocket, Calendar, ArrowRight } from 'lucide-react';
 import ExternalLink from '../components/ExternalLink';
 import { authoritativeLinks } from '../utils/externalLinks';
 import FAQSection from '../components/FAQ/FAQSection';
