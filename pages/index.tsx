@@ -2,6 +2,7 @@ import { GetStaticProps } from 'next';
 import Link from 'next/link';
 import { useState, useEffect } from 'react';
 import SEOHead from '../components/SEOHead';
+import { useStripeCheckout } from '../hooks/useStripeCheckout';
 import LoginModal from '../components/LoginModal';
 import RegisterModal from '../components/RegisterModal';
 import { 
@@ -22,6 +23,7 @@ export default function HomePage({}: HomePageProps) {
   const [showRegister, setShowRegister] = useState(false);
   const [showLogin, setShowLogin] = useState(false);
   const [billingCycle, setBillingCycle] = useState<'monthly' | 'yearly'>('yearly');
+  const { redirectToCheckout, loading, error, clearError } = useStripeCheckout();
   const pageConfig = getPageConfig('home');
 
   // Pricing plans data
@@ -55,8 +57,16 @@ export default function HomePage({}: HomePageProps) {
         'ROI Tracking Dashboard',
         'Monthly Implementation Webinars'
       ],
-      ctaText: 'Get Started',
-      ctaAction: () => window.open('https://api.leadconnectorhq.com/widget/booking/yPjkVmsauPst8XlrOQUl', '_blank')
+      ctaText: 'Upgrade Now',
+      ctaAction: async () => {
+        clearError();
+        await redirectToCheckout({
+          plan: 'starter',
+          billingCycle,
+          successUrl: `${window.location.origin}/dashboard?upgraded=true&plan=starter`,
+          cancelUrl: `${window.location.origin}/?canceled=true`,
+        });
+      }
     },
     {
       name: 'PRO',
@@ -72,8 +82,16 @@ export default function HomePage({}: HomePageProps) {
         'White-label AI Tool Reports',
         'API Access & Advanced Tools'
       ],
-      ctaText: 'Get Started',
-      ctaAction: () => window.open('https://api.leadconnectorhq.com/widget/booking/yPjkVmsauPst8XlrOQUl', '_blank')
+      ctaText: 'Upgrade Now',
+      ctaAction: async () => {
+        clearError();
+        await redirectToCheckout({
+          plan: 'pro',
+          billingCycle,
+          successUrl: `${window.location.origin}/dashboard?upgraded=true&plan=pro`,
+          cancelUrl: `${window.location.origin}/?canceled=true`,
+        });
+      }
     },
     {
       name: 'ENTERPRISE',
@@ -592,8 +610,11 @@ export default function HomePage({}: HomePageProps) {
                     
                     <button
                       onClick={plan.ctaAction}
+                      disabled={loading && (plan.name === 'STARTER' || plan.name === 'PRO')}
                       className={`block w-full text-center px-6 py-3 font-semibold rounded-xl transition-all duration-200 group-hover:scale-105 ${
-                        plan.name === 'FREE' 
+                        loading && (plan.name === 'STARTER' || plan.name === 'PRO')
+                          ? 'bg-gray-600 text-gray-400 cursor-not-allowed'
+                          : plan.name === 'FREE' 
                           ? 'bg-gradient-to-r from-green-600 to-emerald-600 text-white hover:from-green-700 hover:to-emerald-700'
                           : plan.popular
                           ? 'bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-bold hover:from-cyan-400 hover:to-blue-500 shadow-lg'
@@ -602,7 +623,7 @@ export default function HomePage({}: HomePageProps) {
                           : 'bg-gradient-to-r from-cyan-600 to-blue-600 text-white hover:from-cyan-700 hover:to-blue-700'
                       }`}
                     >
-                      {plan.ctaText}
+                      {loading && (plan.name === 'STARTER' || plan.name === 'PRO') ? 'Processing...' : plan.ctaText}
                     </button>
                   </div>
                 );

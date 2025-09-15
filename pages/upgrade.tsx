@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { useSession } from 'next-auth/react';
 import { useRouter } from 'next/router';
 import Head from 'next/head';
+import { useStripeCheckout } from '../hooks/useStripeCheckout';
 import Link from 'next/link';
 import { 
   Check, 
@@ -44,6 +45,7 @@ const UpgradePage: React.FC = () => {
   const [selectedPlan, setSelectedPlan] = useState<string>('starter');
   const [showFAQ, setShowFAQ] = useState<number | null>(null);
   const [billingCycle, setBillingCycle] = useState<'monthly' | 'yearly'>('yearly');
+  const { redirectToCheckout, loading, error, clearError } = useStripeCheckout();
 
   // Pricing tiers based on strategy document
   const pricingTiers: PricingTier[] = [
@@ -85,7 +87,7 @@ const UpgradePage: React.FC = () => {
         'Export comparison reports',
         'Custom tool recommendations'
       ],
-      ctaText: 'Start Free Trial',
+      ctaText: 'Upgrade Now',
       color: 'blue',
       icon: <Rocket className="w-6 h-6" />,
       recommended: true
@@ -107,7 +109,7 @@ const UpgradePage: React.FC = () => {
         'Priority phone support',
         'Quarterly business reviews'
       ],
-      ctaText: 'Start Pro Trial',
+      ctaText: 'Upgrade Now',
       color: 'purple',
       icon: <Trophy className="w-6 h-6" />
     },
@@ -190,7 +192,7 @@ const UpgradePage: React.FC = () => {
     }
   }, []);
 
-  const handleUpgrade = (planName: string, price: number) => {
+  const handleUpgrade = async (planName: string, price: number) => {
     if (typeof window !== 'undefined' && window.gtag) {
       window.gtag('event', 'upgrade_cta_click', {
         event_category: 'upgrade',
@@ -199,11 +201,36 @@ const UpgradePage: React.FC = () => {
       });
     }
     
-    // Handle upgrade logic here
+    // Clear any previous errors
+    clearError();
+    
+    // Handle Enterprise plan differently (contact sales)
     if (planName === 'Enterprise') {
       router.push('/contact?subject=enterprise');
-    } else {
-      router.push(`/checkout?plan=${planName.toLowerCase()}&billing=${billingCycle}`);
+      return;
+    }
+
+    // Handle Free plan (redirect to register)
+    if (planName === 'Free') {
+      router.push('/#register');
+      return;
+    }
+    
+    // For paid plans, redirect to Stripe checkout
+    if (!session?.user) {
+      router.push('/#login');
+      return;
+    }
+
+    try {
+      await redirectToCheckout({
+        plan: planName.toLowerCase(),
+        billingCycle,
+        successUrl: `${window.location.origin}/dashboard?upgraded=true&plan=${planName.toLowerCase()}`,
+        cancelUrl: `${window.location.origin}/upgrade?canceled=true`,
+      });
+    } catch (err) {
+      console.error('Upgrade error:', err);
     }
   };
 
@@ -325,16 +352,16 @@ const UpgradePage: React.FC = () => {
 
                     <button
                       onClick={() => handleUpgrade(tier.name, tier.price)}
-                      disabled={tier.name === 'Free'}
+                      disabled={tier.name === 'Free' || loading}
                       className={`w-full py-3 rounded-lg font-semibold transition-all ${
-                        tier.name === 'Free'
+                        tier.name === 'Free' || loading
                           ? 'bg-gray-700 text-gray-500 cursor-not-allowed'
                           : tier.recommended
                           ? 'bg-gradient-to-r from-blue-600 to-purple-600 text-white hover:from-blue-700 hover:to-purple-700'
                           : 'bg-gray-700 text-white hover:bg-gray-600'
                       }`}
                     >
-                      {tier.ctaText}
+                      {loading ? 'Processing...' : tier.ctaText}
                     </button>
                   </div>
 
@@ -489,10 +516,13 @@ const UpgradePage: React.FC = () => {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button
                 onClick={() => handleUpgrade('Starter', 497)}
-                className="px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-lg font-semibold hover:from-blue-700 hover:to-purple-700 transform hover:scale-105 transition-all duration-200 shadow-lg hover:shadow-xl"
+                disabled={loading}
+                className={`px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-lg font-semibold hover:from-blue-700 hover:to-purple-700 transform hover:scale-105 transition-all duration-200 shadow-lg hover:shadow-xl ${
+                  loading ? 'opacity-50 cursor-not-allowed' : ''
+                }`}
               >
-                Start Free Trial
-                <ArrowRight className="inline-block ml-2 w-5 h-5" />
+                {loading ? 'Processing...' : 'Upgrade Now'}
+                {!loading && <ArrowRight className="inline-block ml-2 w-5 h-5" />}
               </button>
               <Link
                 href="/contact"
