@@ -7,6 +7,7 @@ import { Menu, X, ChevronDown, ChevronUp, User, LogOut } from 'lucide-react';
 import { toolCategories, getCategoryUrl, getCategoryDisplayName } from '../config/categories';
 import { industries, industrySlugMap } from '../content/industryContent';
 import LoginModal from './auth/LoginModal';
+import RegisterModal from './RegisterModal';
 
 // Accordion category structure for AI Categories dropdown
 const accordionCategories = [
@@ -71,6 +72,7 @@ const Header: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   const [showLogin, setShowLogin] = useState(false);
+  const [showRegister, setShowRegister] = useState(false);
   const [showUserDropdown, setShowUserDropdown] = useState(false);
   const router = useRouter();
   const { data: session, status } = useSession();
@@ -288,12 +290,20 @@ const Header: React.FC = () => {
                 )}
               </div>
             ) : (
-              <button
-                onClick={() => setShowLogin(true)}
-                className="px-6 py-2.5 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-lg font-semibold text-sm hover:from-blue-700 hover:to-purple-700 transform hover:scale-105 transition-all duration-200 shadow-lg hover:shadow-xl"
-              >
-                Log In
-              </button>
+              <>
+                <button
+                  onClick={() => setShowLogin(true)}
+                  className="px-4 py-2 text-gray-300 hover:text-white font-medium text-sm transition-colors"
+                >
+                  Log In
+                </button>
+                <button
+                  onClick={() => setShowRegister(true)}
+                  className="px-6 py-2.5 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-lg font-semibold text-sm hover:from-blue-700 hover:to-purple-700 transform hover:scale-105 transition-all duration-200 shadow-lg hover:shadow-xl"
+                >
+                  Get Started
+                </button>
+              </>
             )}
           </div>
 
@@ -565,25 +575,46 @@ const Header: React.FC = () => {
                     >Sign Out</button>
                   </div>
                 ) : (
-                  <button
-                    onClick={() => {
-                      closeMenu();
-                      setShowLogin(true);
-                    }}
-                    style={{ 
-                      display: 'block', 
-                      width: '100%', 
-                      padding: '16px', 
-                      background: 'linear-gradient(to right, #06b6d4, #2563eb)', 
-                      color: 'white',
-                      textAlign: 'center',
-                      borderRadius: '8px',
-                      fontWeight: '600',
-                      fontSize: '16px',
-                      border: 'none',
-                      cursor: 'pointer'
-                    }}
-                  >Log In</button>
+                  <div style={{ display: 'flex', flexDirection: 'column', gap: '12px' }}>
+                    <button
+                      onClick={() => {
+                        closeMenu();
+                        setShowLogin(true);
+                      }}
+                      style={{ 
+                        display: 'block', 
+                        width: '100%', 
+                        padding: '16px', 
+                        background: 'rgba(255,255,255,0.1)', 
+                        color: 'white',
+                        textAlign: 'center',
+                        borderRadius: '8px',
+                        fontWeight: '600',
+                        fontSize: '16px',
+                        border: 'none',
+                        cursor: 'pointer'
+                      }}
+                    >Log In</button>
+                    <button
+                      onClick={() => {
+                        closeMenu();
+                        setShowRegister(true);
+                      }}
+                      style={{ 
+                        display: 'block', 
+                        width: '100%', 
+                        padding: '16px', 
+                        background: 'linear-gradient(to right, #06b6d4, #2563eb)', 
+                        color: 'white',
+                        textAlign: 'center',
+                        borderRadius: '8px',
+                        fontWeight: '600',
+                        fontSize: '16px',
+                        border: 'none',
+                        cursor: 'pointer'
+                      }}
+                    >Get Started</button>
+                  </div>
                 )}
               </div>
             </div>
@@ -591,7 +622,7 @@ const Header: React.FC = () => {
         )}
       </nav>
 
-      {/* Login Modal */}
+      {/* Login Modal - For Returning Users */}
       <LoginModal
         isOpen={showLogin}
         onClose={() => setShowLogin(false)}
@@ -600,6 +631,17 @@ const Header: React.FC = () => {
           // The modal will handle redirect to dashboard
         }}
         redirectTo="/dashboard"
+      />
+
+      {/* Register Modal - For New Users */}
+      <RegisterModal
+        isOpen={showRegister}
+        onClose={() => setShowRegister(false)}
+        planName="Free Plan - AI Tool Discovery"
+        onOpenLogin={() => {
+          setShowRegister(false);
+          setShowLogin(true);
+        }}
       />
     </header>
   );

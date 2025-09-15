@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
 import LoginModal from '../components/auth/LoginModal';
+import RegisterModal from '../components/RegisterModal';
 import { 
   Target, 
   Users, 
@@ -24,6 +25,7 @@ import {
 
 export default function WhyUs() {
   const [showLogin, setShowLogin] = useState(false);
+  const [showRegister, setShowRegister] = useState(false);
 
   const structuredData = {
     "@context": "https://schema.org",
@@ -622,7 +624,7 @@ export default function WhyUs() {
                 </ul>
                 
                 <button
-                  onClick={() => setShowLogin(true)}
+                  onClick={() => setShowRegister(true)}
                   className="block w-full text-center px-6 py-3 bg-gradient-to-r from-green-600 to-emerald-600 text-white font-semibold rounded-xl hover:from-green-700 hover:to-emerald-700 transition-all duration-200 group-hover:scale-105"
                 >
                   Get Started
@@ -950,7 +952,7 @@ export default function WhyUs() {
         </section>
       </div>
       
-      {/* Login Modal */}
+      {/* Login Modal - For Returning Users */}
       <LoginModal
         isOpen={showLogin}
         onClose={() => setShowLogin(false)}
@@ -958,6 +960,17 @@ export default function WhyUs() {
           console.log('User logged in:', user);
         }}
         redirectTo="/dashboard"
+      />
+
+      {/* Register Modal - For New Users signing up for Free Plan */}
+      <RegisterModal
+        isOpen={showRegister}
+        onClose={() => setShowRegister(false)}
+        planName="Free Plan - AI Tool Discovery"
+        onOpenLogin={() => {
+          setShowRegister(false);
+          setShowLogin(true);
+        }}
       />
     </>
   );
