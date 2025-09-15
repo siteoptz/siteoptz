@@ -264,7 +264,7 @@ const UpgradePage: React.FC = () => {
               <div className="bg-gray-800/50 backdrop-blur-sm rounded-lg p-6 border border-gray-700">
                 <DollarSign className="w-10 h-10 text-yellow-400 mb-4 mx-auto" />
                 <h3 className="text-lg font-semibold text-white mb-2">10x ROI Guaranteed</h3>
-                <p className="text-gray-400 text-sm">Or your money back. We're that confident.</p>
+                <p className="text-gray-400 text-sm">Or your money back. We&apos;re that confident.</p>
               </div>
             </div>
 
