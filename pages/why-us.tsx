@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
-import RegisterModal from '../components/RegisterModal';
 import LoginModal from '../components/LoginModal';
 import { 
   Target, 
@@ -24,7 +23,6 @@ import {
 } from 'lucide-react';
 
 export default function WhyUs() {
-  const [isRegisterModalOpen, setIsRegisterModalOpen] = useState(false);
   const [isLoginModalOpen, setIsLoginModalOpen] = useState(false);
 
   const structuredData = {
@@ -624,7 +622,7 @@ export default function WhyUs() {
                 </ul>
                 
                 <button
-                  onClick={() => setIsRegisterModalOpen(true)}
+                  onClick={() => setIsLoginModalOpen(true)}
                   className="block w-full text-center px-6 py-3 bg-gradient-to-r from-green-600 to-emerald-600 text-white font-semibold rounded-xl hover:from-green-700 hover:to-emerald-700 transition-all duration-200 group-hover:scale-105"
                 >
                   Get Started
@@ -952,19 +950,10 @@ export default function WhyUs() {
         </section>
       </div>
       
-      {/* Register Modal */}
-      <RegisterModal
-        isOpen={isRegisterModalOpen}
-        onClose={() => setIsRegisterModalOpen(false)}
-        planName="Free Plan - AI Tool Discovery"
-        onOpenLogin={() => setIsLoginModalOpen(true)}
-      />
-
       {/* Login Modal */}
       <LoginModal
         isOpen={isLoginModalOpen}
         onClose={() => setIsLoginModalOpen(false)}
-        onOpenRegister={() => setIsRegisterModalOpen(true)}
       />
     </>
   );
