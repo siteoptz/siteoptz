@@ -185,13 +185,18 @@ const Header: React.FC = () => {
   // Close user dropdown when clicking outside
   useEffect(() => {
     const handleClickOutside = (event: MouseEvent) => {
-      if (showUserDropdown) {
+      const target = event.target as HTMLElement;
+      // Check if click is outside the dropdown area
+      if (showUserDropdown && !target.closest('.user-dropdown-container')) {
         setShowUserDropdown(false);
       }
     };
 
     if (showUserDropdown) {
-      document.addEventListener('click', handleClickOutside);
+      // Add a small delay to prevent immediate closure
+      setTimeout(() => {
+        document.addEventListener('click', handleClickOutside);
+      }, 0);
       return () => document.removeEventListener('click', handleClickOutside);
     }
   }, [showUserDropdown]);
@@ -257,7 +262,7 @@ const Header: React.FC = () => {
                 <div className="animate-pulse bg-gray-300 h-8 w-24 rounded"></div>
               </div>
             ) : session && status === 'authenticated' ? (
-              <div className="relative">
+              <div className="relative user-dropdown-container">
                 <button
                   onClick={() => setShowUserDropdown(!showUserDropdown)}
                   className="flex items-center space-x-2 px-4 py-2 bg-gray-800 text-white rounded-lg font-medium text-sm hover:bg-gray-700 transition-all duration-200"
