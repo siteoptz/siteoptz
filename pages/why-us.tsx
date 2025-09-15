@@ -27,6 +27,20 @@ export default function WhyUs() {
   const [showLogin, setShowLogin] = useState(false);
   const [showRegister, setShowRegister] = useState(false);
 
+  // Handle URL fragments to auto-open modals
+  React.useEffect(() => {
+    const hash = window.location.hash;
+    if (hash === '#login') {
+      setShowLogin(true);
+      // Remove hash from URL
+      window.history.replaceState(null, '', window.location.pathname);
+    } else if (hash === '#register') {
+      setShowRegister(true);
+      // Remove hash from URL
+      window.history.replaceState(null, '', window.location.pathname);
+    }
+  }, []);
+
   const structuredData = {
     "@context": "https://schema.org",
     "@graph": [

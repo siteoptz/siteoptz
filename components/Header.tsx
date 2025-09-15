@@ -6,8 +6,7 @@ import { useSession, signOut } from 'next-auth/react';
 import { Menu, X, ChevronDown, ChevronUp, User, LogOut } from 'lucide-react';
 import { toolCategories, getCategoryUrl, getCategoryDisplayName } from '../config/categories';
 import { industries, industrySlugMap } from '../content/industryContent';
-import LoginModal from './LoginModal';
-import RegisterModal from './RegisterModal';
+// Modals removed from Header to prevent navigation stalling
 
 // Accordion category structure for AI Categories dropdown
 const accordionCategories = [
@@ -71,8 +70,7 @@ const accordionCategories = [
 const Header: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
-  const [showLogin, setShowLogin] = useState(false);
-  const [showRegister, setShowRegister] = useState(false);
+  // Modal states removed to prevent navigation stalling
   const [showUserDropdown, setShowUserDropdown] = useState(false);
   const router = useRouter();
   const { data: session, status } = useSession();
@@ -291,18 +289,18 @@ const Header: React.FC = () => {
               </div>
             ) : (
               <>
-                <button
-                  onClick={() => setShowLogin(true)}
+                <Link
+                  href="/why-us#login"
                   className="px-4 py-2 text-gray-300 hover:text-white font-medium text-sm transition-colors"
                 >
                   Log In
-                </button>
-                <button
-                  onClick={() => setShowRegister(true)}
+                </Link>
+                <Link
+                  href="/why-us#register"
                   className="px-6 py-2.5 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-lg font-semibold text-sm hover:from-blue-700 hover:to-purple-700 transform hover:scale-105 transition-all duration-200 shadow-lg hover:shadow-xl"
                 >
                   Get Started
-                </button>
+                </Link>
               </>
             )}
           </div>
@@ -576,11 +574,9 @@ const Header: React.FC = () => {
                   </div>
                 ) : (
                   <div style={{ display: 'flex', flexDirection: 'column', gap: '12px' }}>
-                    <button
-                      onClick={() => {
-                        closeMenu();
-                        setShowLogin(true);
-                      }}
+                    <Link
+                      href="/why-us#login"
+                      onClick={closeMenu}
                       style={{ 
                         display: 'block', 
                         width: '100%', 
@@ -591,15 +587,12 @@ const Header: React.FC = () => {
                         borderRadius: '8px',
                         fontWeight: '600',
                         fontSize: '16px',
-                        border: 'none',
-                        cursor: 'pointer'
+                        textDecoration: 'none'
                       }}
-                    >Log In</button>
-                    <button
-                      onClick={() => {
-                        closeMenu();
-                        setShowRegister(true);
-                      }}
+                    >Log In</Link>
+                    <Link
+                      href="/why-us#register"
+                      onClick={closeMenu}
                       style={{ 
                         display: 'block', 
                         width: '100%', 
@@ -610,10 +603,9 @@ const Header: React.FC = () => {
                         borderRadius: '8px',
                         fontWeight: '600',
                         fontSize: '16px',
-                        border: 'none',
-                        cursor: 'pointer'
+                        textDecoration: 'none'
                       }}
-                    >Get Started</button>
+                    >Get Started</Link>
                   </div>
                 )}
               </div>
@@ -622,22 +614,7 @@ const Header: React.FC = () => {
         )}
       </nav>
 
-      {/* Login Modal - For Returning Users */}
-      <LoginModal
-        isOpen={showLogin}
-        onClose={() => setShowLogin(false)}
-      />
-
-      {/* Register Modal - For New Users */}
-      <RegisterModal
-        isOpen={showRegister}
-        onClose={() => setShowRegister(false)}
-        planName="Free Plan - AI Tool Discovery"
-        onOpenLogin={() => {
-          setShowRegister(false);
-          setShowLogin(true);
-        }}
-      />
+      {/* Modals removed from Header - they are now on the why-us page */}
     </header>
   );
 };
