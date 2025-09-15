@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
-import LoginModal from '../components/auth/LoginModal';
+import LoginModal from '../components/LoginModal';
 import RegisterModal from '../components/RegisterModal';
 import { 
   Target, 
@@ -956,10 +956,6 @@ export default function WhyUs() {
       <LoginModal
         isOpen={showLogin}
         onClose={() => setShowLogin(false)}
-        onSuccess={(user) => {
-          console.log('User logged in:', user);
-        }}
-        redirectTo="/dashboard"
       />
 
       {/* Register Modal - For New Users signing up for Free Plan */}

@@ -6,7 +6,7 @@ import { useSession, signOut } from 'next-auth/react';
 import { Menu, X, ChevronDown, ChevronUp, User, LogOut } from 'lucide-react';
 import { toolCategories, getCategoryUrl, getCategoryDisplayName } from '../config/categories';
 import { industries, industrySlugMap } from '../content/industryContent';
-import LoginModal from './auth/LoginModal';
+import LoginModal from './LoginModal';
 import RegisterModal from './RegisterModal';
 
 // Accordion category structure for AI Categories dropdown
@@ -626,11 +626,6 @@ const Header: React.FC = () => {
       <LoginModal
         isOpen={showLogin}
         onClose={() => setShowLogin(false)}
-        onSuccess={(user) => {
-          console.log('User logged in:', user);
-          // The modal will handle redirect to dashboard
-        }}
-        redirectTo="/dashboard"
       />
 
       {/* Register Modal - For New Users */}
