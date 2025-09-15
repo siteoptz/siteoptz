@@ -637,6 +637,12 @@ const Header: React.FC = () => {
             justifyContent: 'center' 
           }}
           onClick={() => setModalState('none')}
+          onKeyDown={(e) => {
+            if (e.key === 'Escape') setModalState('none');
+          }}
+          role="button"
+          tabIndex={0}
+          aria-label="Close modal overlay"
         >
           <div 
             style={{ 
@@ -647,6 +653,9 @@ const Header: React.FC = () => {
               width: '90%' 
             }}
             onClick={(e) => e.stopPropagation()}
+            onKeyDown={(e) => e.stopPropagation()}
+            role="dialog"
+            aria-modal="true"
           >
             {modalState === 'login' ? (
               <>
