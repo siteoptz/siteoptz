@@ -137,11 +137,11 @@ const UpgradePage: React.FC = () => {
   const faqItems = [
     {
       question: "Can I cancel anytime?",
-      answer: "Yes! You can cancel your subscription at any time. If you cancel, you'll continue to have access until the end of your billing period."
+      answer: "Yes! You can cancel your subscription at any time. If you cancel, you&apos;ll continue to have access until the end of your billing period."
     },
     {
       question: "Is there a money-back guarantee?",
-      answer: "Absolutely! We offer a 30-day money-back guarantee. If you're not satisfied, we'll refund your payment, no questions asked."
+      answer: "Absolutely! We offer a 30-day money-back guarantee. If you&apos;re not satisfied, we&apos;ll refund your payment, no questions asked."
     },
     {
       question: "Can I change plans later?",
@@ -374,7 +374,7 @@ const UpgradePage: React.FC = () => {
                       <Star key={i} className="w-5 h-5 text-yellow-400 fill-yellow-400" />
                     ))}
                   </div>
-                  <p className="text-gray-300 mb-4">"{testimonial.content}"</p>
+                  <p className="text-gray-300 mb-4">&ldquo;{testimonial.content}&rdquo;</p>
                   <div>
                     <div className="font-semibold text-white">{testimonial.name}</div>
                     <div className="text-sm text-gray-400">{testimonial.role}</div>
