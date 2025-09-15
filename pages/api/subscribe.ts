@@ -79,6 +79,10 @@ function checkRateLimit(ip: string): boolean {
 async function addToGoHighLevel(data: SubscriptionData): Promise<{ success: boolean; id?: string }> {
   try {
     console.log('=== SiteOptz GoHighLevel Integration ===');
+    console.log('🔍 Environment Check:');
+    console.log('- API Key present:', !!process.env.GOHIGHLEVEL_API_KEY);
+    console.log('- Location ID present:', !!process.env.GOHIGHLEVEL_LOCATION_ID);
+    console.log('- Environment:', process.env.NODE_ENV);
     console.log('Adding email subscriber:', data.email);
     
     // Prepare data for SiteOptz GoHighLevel integration

@@ -155,11 +155,19 @@ export default async function handler(
     // Check if GoHighLevel integration is enabled
     const isGHLEnabled = process.env.ENABLE_GHL === 'true';
     
+    console.log('🔍 GoHighLevel Environment Check:');
+    console.log('- ENABLE_GHL:', process.env.ENABLE_GHL);
+    console.log('- API Key present:', !!process.env.GOHIGHLEVEL_API_KEY);
+    console.log('- Location ID present:', !!process.env.GOHIGHLEVEL_LOCATION_ID);
+    console.log('- Environment:', process.env.NODE_ENV);
+    console.log('- Is Enabled:', isGHLEnabled);
+    
     if (!isGHLEnabled) {
-      console.log('GoHighLevel integration disabled, skipping CRM integration');
+      console.log('⚠️ GoHighLevel integration disabled, skipping CRM integration');
+      console.log('💡 To enable: Set ENABLE_GHL=true in environment variables');
       return res.status(200).json({
         success: true,
-        message: 'Registration successful!',
+        message: 'Registration successful! (CRM integration disabled)',
         data: {
           email: email.toLowerCase().trim()
         }
