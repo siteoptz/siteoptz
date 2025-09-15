@@ -24,8 +24,13 @@ class GoHighLevelAPI {
         'Content-Type': 'application/json',
         'Version': '2021-07-28'
       },
-      timeout: 10000 // 10 second timeout
+      timeout: 15000 // 15 second timeout for better reliability
     });
+    
+    console.log('🔧 GoHighLevel API initialized:');
+    console.log('- Base URL:', this.baseURL);
+    console.log('- Location ID:', this.locationId);
+    console.log('- API Key present:', !!this.apiKey);
   }
 
   // Add subscriber to pipeline
@@ -75,20 +80,84 @@ class GoHighLevelAPI {
   // Create or update contact
   async createOrUpdateContact(contactData) {
     try {
-      console.log('Creating/updating contact:', contactData);
+      console.log('🔍 Creating/updating contact for Location ID:', this.locationId);
+      console.log('📋 Contact data:', JSON.stringify(contactData, null, 2));
       
-      const response = await this.client.post('/contacts/', {
+      // Format the data according to GoHighLevel v2 API requirements
+      const payload = {
         locationId: this.locationId,
-        ...contactData
-      });
+        firstName: contactData.firstName || contactData.first_name || '',
+        lastName: contactData.lastName || contactData.last_name || '',
+        email: contactData.email,
+        phone: contactData.phone || '',
+        source: contactData.source || 'API',
+        tags: contactData.tags || []
+      };
       
-      console.log('✅ Contact created/updated successfully:', response.data);
+      // Convert customFields object to array format required by GoHighLevel API
+      if (contactData.customFields && typeof contactData.customFields === 'object') {
+        payload.customFields = [];
+        for (const [key, value] of Object.entries(contactData.customFields)) {
+          payload.customFields.push({
+            key: key,
+            field_value: String(value)
+          });
+        }
+      } else if (Array.isArray(contactData.customFields)) {
+        payload.customFields = contactData.customFields;
+      } else {
+        payload.customFields = [];
+      }
+      
+      console.log('🚀 Sending to GoHighLevel API:', JSON.stringify(payload, null, 2));
+      
+      const response = await this.client.post('/contacts/', payload);
+      
+      console.log('✅ Contact created/updated successfully!');
+      console.log('📄 Response:', JSON.stringify(response.data, null, 2));
       return response.data;
     } catch (error) {
-      console.error('❌ Error creating/updating contact:', {
-        error: error.response?.data || error.message,
-        status: error.response?.status
-      });
+      // Handle duplicate contact error gracefully
+      if (error.response?.status === 400 && 
+          error.response?.data?.message?.includes('duplicated contacts') &&
+          error.response?.data?.meta?.contactId) {
+        
+        const existingContactId = error.response.data.meta.contactId;
+        console.log('📧 Contact already exists, updating existing contact ID:', existingContactId);
+        
+        try {
+          // Update the existing contact instead
+          const updateResponse = await this.client.put(`/contacts/${existingContactId}`, {
+            locationId: this.locationId,
+            firstName: payload.firstName,
+            lastName: payload.lastName,
+            phone: payload.phone,
+            source: payload.source,
+            customFields: payload.customFields
+          });
+          
+          console.log('✅ Existing contact updated successfully!');
+          console.log('📄 Update Response:', JSON.stringify(updateResponse.data, null, 2));
+          return updateResponse.data;
+        } catch (updateError) {
+          console.error('❌ Failed to update existing contact:', updateError.message);
+          // Return a mock response with the existing contact ID so the process continues
+          return {
+            contact: {
+              id: existingContactId,
+              email: contactData.email,
+              firstName: contactData.firstName || contactData.first_name || '',
+              lastName: contactData.lastName || contactData.last_name || ''
+            }
+          };
+        }
+      }
+      
+      console.error('❌ Error creating/updating contact:');
+      console.error('Status:', error.response?.status);
+      console.error('Status Text:', error.response?.statusText);
+      console.error('Data:', error.response?.data);
+      console.error('Message:', error.message);
       throw error;
     }
   }
@@ -193,7 +262,6 @@ class GoHighLevelAPI {
       console.log(`Adding tags to contact ${contactId}:`, tags);
       
       const response = await this.client.post(`/contacts/${contactId}/tags`, {
-        locationId: this.locationId,
         tags: tags
       });
       

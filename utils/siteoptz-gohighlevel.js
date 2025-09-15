@@ -50,26 +50,54 @@ class SiteOptzGoHighLevel {
 
     try {
       // First create or update the contact
-      const contact = await this.api.createOrUpdateContact(enhancedData);
+      const contactResponse = await this.api.createOrUpdateContact(enhancedData);
+      const contactId = contactResponse.contact?.id;
+      
+      if (!contactId) {
+        throw new Error('Failed to get contact ID from response');
+      }
+      
+      console.log('✅ Contact created with ID:', contactId);
       
       // Add tags to contact
-      await this.api.addTagsToContact(contact.id, tags);
+      try {
+        await this.api.addTagsToContact(contactId, tags);
+        console.log('✅ Tags added successfully');
+      } catch (tagError) {
+        console.error('⚠️ Failed to add tags (non-critical):', tagError.message);
+        // Don't fail the entire process for tag errors
+      }
       
-      // Add to free trial pipeline
-      const pipelineResult = await this.api.addContactToPipeline(
-        contact.id, 
-        this.pipelines.freeTrial
-      );
+      // Add to free trial pipeline (if configured)
+      let pipelineResult = null;
+      if (this.pipelines.freeTrial && this.pipelines.freeTrial !== 'your_free_trial_pipeline_id') {
+        try {
+          pipelineResult = await this.api.addContactToPipeline(
+            contactId, 
+            this.pipelines.freeTrial
+          );
+          console.log('✅ Contact added to pipeline');
+        } catch (pipelineError) {
+          console.error('⚠️ Failed to add to pipeline (non-critical):', pipelineError.message);
+        }
+      }
       
-      // Add to email capture workflow
-      await this.api.addContactToWorkflow(
-        contact.id, 
-        this.workflows.emailCapture
-      );
+      // Add to email capture workflow (if configured)
+      if (this.workflows.emailCapture && this.workflows.emailCapture !== 'your_email_capture_workflow_id') {
+        try {
+          await this.api.addContactToWorkflow(
+            contactId, 
+            this.workflows.emailCapture
+          );
+          console.log('✅ Contact added to workflow');
+        } catch (workflowError) {
+          console.error('⚠️ Failed to add to workflow (non-critical):', workflowError.message);
+        }
+      }
 
       return {
         success: true,
-        contact: contact,
+        contact: contactResponse.contact,
         pipeline: pipelineResult,
         tags: tags
       };
