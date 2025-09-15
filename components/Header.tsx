@@ -132,7 +132,7 @@ const Header: React.FC = () => {
 
   const navigation = [
     { 
-      name: 'AI Categories', 
+      name: 'Top AI Tools', 
       href: '/categories', 
       current: router.pathname.startsWith('/categories'),
       hasDropdown: true,
@@ -152,7 +152,6 @@ const Header: React.FC = () => {
       isIndustry: true
     },
     { name: 'Pricing Calculator', href: '/pricing', current: router.pathname === '/pricing', hasDropdown: false },
-    { name: 'Why Us', href: '/why-us', current: router.pathname === '/why-us', hasDropdown: false },
     { name: 'Contact', href: '/contact', current: router.pathname === '/contact', hasDropdown: false },
   ];
 

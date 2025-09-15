@@ -71,6 +71,7 @@ const Footer: React.FC = () => {
 
   const companyLinks = [
     { name: 'About Us', href: '/about' },
+    { name: 'Why Us', href: '/why-us' },
     { name: 'Testimonials', href: '/testimonials' },
     { name: 'Careers', href: '/careers' },
     { name: 'Contact', href: '/contact' },
