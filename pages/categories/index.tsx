@@ -3,7 +3,7 @@ import { useState } from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
-import { Search, Grid, TrendingUp, Zap, Brain, Image, Code, Mic, BarChart, Users } from 'lucide-react';
+import { Search, Grid, TrendingUp, Zap, Brain, Image, Code, Mic, BarChart, Users, Star, ArrowRight } from 'lucide-react';
 import { toolCategories } from '../../config/categories';
 import { loadUnifiedToolsData } from '../../utils/unifiedDataAdapter';
 import fs from 'fs';
@@ -17,9 +17,27 @@ interface CategoryData {
   icon: string;
 }
 
+interface Tool {
+  id: string;
+  slug: string;
+  name: string;
+  logo: string;
+  category: string;
+  overview: {
+    description: string;
+  };
+  rating: number;
+  features: string[];
+  pricing: Array<{
+    plan: string;
+    price_per_month: number;
+  }>;
+}
+
 interface CategoriesPageProps {
   categories: CategoryData[];
   totalTools: number;
+  featuredTools: Tool[];
 }
 
 // Icon mapping for categories
@@ -102,16 +120,32 @@ export const getStaticProps: GetStaticProps = async () => {
   // Sort by tool count (descending)
   categoriesWithData.sort((a, b) => b.toolCount - a.toolCount);
 
+  // Transform tools for the top-rated section
+  const featuredTools = allTools.map((tool: any) => ({
+    id: tool.id,
+    slug: tool.slug,
+    name: tool.name,
+    logo: tool.logo,
+    category: tool.overview?.category || 'AI Tool',
+    overview: {
+      description: tool.overview?.description || ''
+    },
+    rating: tool.rating || 4.5,
+    features: tool.features || [],
+    pricing: tool.pricing || []
+  }));
+
   return {
     props: {
       categories: categoriesWithData,
-      totalTools: allTools.length
+      totalTools: allTools.length,
+      featuredTools
     },
     revalidate: 3600 // Revalidate every hour
   };
 };
 
-export default function CategoriesPage({ categories, totalTools }: CategoriesPageProps) {
+export default function CategoriesPage({ categories, totalTools, featuredTools }: CategoriesPageProps) {
   const [searchQuery, setSearchQuery] = useState('');
   const router = useRouter();
 
@@ -209,6 +243,135 @@ export default function CategoriesPage({ categories, totalTools }: CategoriesPag
                 <div className="text-gray-300">Avg Tools/Category</div>
               </div>
             </div>
+
+            {/* Top-Rated AI Tools Section */}
+            {(() => {
+              // Group tools by category
+              const toolsByCategory = featuredTools.reduce((acc: any, tool: Tool) => {
+                const category = tool.category || 'Other';
+                if (!acc[category]) acc[category] = [];
+                acc[category].push(tool);
+                return acc;
+              }, {});
+
+              return (
+                <div className="mb-16">
+                  <div className="text-center mb-16">
+                    <h2 className="text-4xl font-bold text-white mb-4">
+                      Top-Rated AI Tools
+                    </h2>
+                    <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                      Discover all {featuredTools.length} AI tools across 13+ categories, used by millions of professionals worldwide.
+                    </p>
+                  </div>
+
+                  {Object.entries(toolsByCategory).map(([category, tools]: [string, any]) => (
+                    <div key={category} className="mb-16">
+                      <div className="flex items-center mb-8">
+                        <h3 className="text-2xl font-bold text-white">{category.startsWith('Best') ? category : `Best ${category} AI Tools`}</h3>
+                        <span className="ml-3 px-3 py-1 bg-blue-600 text-white text-sm rounded-full">
+                          {tools.length} tools
+                        </span>
+                      </div>
+                      
+                      <div className="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+                        {tools.slice(0, 4).map((tool: any) => (
+                          <div key={tool.id} className="bg-black border border-gray-800 rounded-2xl shadow-lg hover:shadow-xl transition-all hover:border-gray-600 p-6">
+                            <div className="flex items-center gap-3 mb-4">
+                              <div className="w-12 h-12 rounded-lg border border-gray-700 flex items-center justify-center bg-gray-900">
+                                {tool.logo ? (
+                                  <img 
+                                    src={tool.logo} 
+                                    alt={`${tool.name} logo`}
+                                    className="w-8 h-8 object-contain"
+                                    onError={(e) => {
+                                      e.currentTarget.style.display = 'none';
+                                      e.currentTarget.nextElementSibling!.style.display = 'block';
+                                    }}
+                                  />
+                                ) : null}
+                                <span 
+                                  className="text-xs font-bold text-gray-400"
+                                  style={{ display: tool.logo ? 'none' : 'block' }}
+                                >
+                                  {tool.name.charAt(0)}
+                                </span>
+                              </div>
+                              <div className="min-w-0 flex-1">
+                                <h4 className="text-lg font-semibold text-white truncate">{tool.name}</h4>
+                                <div className="flex items-center gap-1">
+                                  <svg className="w-3 h-3 text-yellow-400 fill-current" viewBox="0 0 24 24">
+                                    <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                                  </svg>
+                                  <span className="text-xs font-medium text-gray-400">
+                                    {tool.rating}/5
+                                  </span>
+                                </div>
+                              </div>
+                            </div>
+
+                            <p className="text-gray-300 text-sm mb-4 line-clamp-2">
+                              {tool.overview?.description}
+                            </p>
+
+                            <div className="flex items-center justify-between mb-4">
+                              <div className="text-sm font-bold text-white">
+                                {(() => {
+                                  const plan = tool.pricing?.[0];
+                                  if (!plan) return 'Free';
+                                  
+                                  if (plan.price_per_month === 0) {
+                                    return 'Free';
+                                  } else {
+                                    return `$${plan.price_per_month}/mo`;
+                                  }
+                                })()}
+                              </div>
+                              <span className="px-2 py-1 bg-gray-900 text-gray-300 text-xs rounded-full border border-gray-700">
+                                {tool.features?.length || 0} features
+                              </span>
+                            </div>
+
+                            <Link 
+                              href={`/reviews/${tool.slug}`}
+                              className="block w-full text-center px-4 py-2 bg-gradient-to-r from-blue-600 to-purple-600 text-white text-sm rounded-lg hover:from-blue-700 hover:to-purple-700 transform hover:scale-105 transition-all duration-200 shadow-lg hover:shadow-xl"
+                            >
+                              View Details
+                            </Link>
+                          </div>
+                        ))}
+                      </div>
+                      
+                      {tools.length > 4 && (
+                        <div className="text-center mt-8">
+                          <Link 
+                            href={`/tools/?category=${encodeURIComponent(category)}`}
+                            className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-cyan-600 to-blue-600 text-white font-semibold rounded-xl hover:from-cyan-700 hover:to-blue-700 transform hover:scale-105 transition-all duration-200 shadow-lg hover:shadow-xl"
+                          >
+                            See All {tools.length} {category.endsWith('Tools') || category.endsWith('tools') ? category : `${category} Tools`}
+                            <svg className="ml-2 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                            </svg>
+                          </Link>
+                        </div>
+                      )}
+                    </div>
+                  ))}
+
+                  <div className="text-center mt-12">
+                    <Link 
+                      href="/tools"
+                      className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold rounded-xl hover:from-blue-700 hover:to-purple-700 transform hover:scale-105 transition-all duration-200 shadow-lg hover:shadow-xl"
+                    >
+                      Explore All {featuredTools.length} Tools
+                      <svg className="ml-2 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                      </svg>
+                    </Link>
+                  </div>
+                </div>
+              );
+            })()}
 
             {/* Categories Grid */}
             {filteredCategories.length === 0 ? (
