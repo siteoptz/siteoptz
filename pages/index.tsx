@@ -1,6 +1,7 @@
 import { GetStaticProps } from 'next';
 import Link from 'next/link';
 import { useState, useEffect } from 'react';
+import { useSession } from 'next-auth/react';
 import SEOHead from '../components/SEOHead';
 import { useStripeCheckout } from '../hooks/useStripeCheckout';
 import LoginModal from '../components/LoginModal';
@@ -22,8 +23,10 @@ export default function HomePage({}: HomePageProps) {
   const [searchTerm, setSearchTerm] = useState('');
   const [showRegister, setShowRegister] = useState(false);
   const [showLogin, setShowLogin] = useState(false);
+  const [selectedPlan, setSelectedPlan] = useState<string>('Free Plan');
   const [billingCycle, setBillingCycle] = useState<'monthly' | 'yearly'>('yearly');
   const { redirectToCheckout, loading, error, clearError } = useStripeCheckout();
+  const { data: session } = useSession();
   const pageConfig = getPageConfig('home');
 
   // Pricing plans data
@@ -42,7 +45,10 @@ export default function HomePage({}: HomePageProps) {
         'Weekly AI Trends Report'
       ],
       ctaText: 'Get Started',
-      ctaAction: () => setShowRegister(true)
+      ctaAction: () => {
+        setSelectedPlan('Free Plan');
+        setShowRegister(true);
+      }
     },
     {
       name: 'STARTER',
@@ -57,10 +63,15 @@ export default function HomePage({}: HomePageProps) {
         'ROI Tracking Dashboard',
         'Monthly Implementation Webinars'
       ],
-      ctaText: 'Upgrade Now',
+      ctaText: session?.user ? 'Upgrade Now' : 'Subscribe',
       ctaAction: async (e?: React.MouseEvent) => {
         e?.preventDefault();
         e?.stopPropagation();
+        if (!session?.user) {
+          setSelectedPlan('Starter Plan');
+          setShowRegister(true);
+          return;
+        }
         clearError();
         await redirectToCheckout({
           plan: 'starter',
@@ -84,10 +95,15 @@ export default function HomePage({}: HomePageProps) {
         'White-label AI Tool Reports',
         'API Access & Advanced Tools'
       ],
-      ctaText: 'Upgrade Now',
+      ctaText: session?.user ? 'Upgrade Now' : 'Subscribe',
       ctaAction: async (e?: React.MouseEvent) => {
         e?.preventDefault();
         e?.stopPropagation();
+        if (!session?.user) {
+          setSelectedPlan('Pro Plan');
+          setShowRegister(true);
+          return;
+        }
         clearError();
         await redirectToCheckout({
           plan: 'pro',
@@ -111,7 +127,14 @@ export default function HomePage({}: HomePageProps) {
         '24-hour SLA Guarantee'
       ],
       ctaText: 'Contact Sales',
-      ctaAction: () => window.open('https://api.leadconnectorhq.com/widget/booking/yPjkVmsauPst8XlrOQUl', '_blank')
+      ctaAction: () => {
+        if (!session?.user) {
+          setSelectedPlan('Enterprise Plan');
+          setShowRegister(true);
+        } else {
+          window.open('https://api.leadconnectorhq.com/widget/booking/yPjkVmsauPst8XlrOQUl', '_blank');
+        }
+      }
     }
   ];
 
@@ -964,9 +987,10 @@ export default function HomePage({}: HomePageProps) {
         }}
       />
 
-      {/* Register Modal - For New Users signing up for Free Plan */}
+      {/* Register Modal - For New Users signing up for selected plan */}
       <RegisterModal
         isOpen={showRegister}
+        planName={selectedPlan}
         onClose={() => {
           setShowRegister(false);
           // Clear hash when modal is closed
@@ -974,7 +998,25 @@ export default function HomePage({}: HomePageProps) {
             window.history.pushState('', document.title, window.location.pathname + window.location.search);
           }
         }}
-        planName="Free Plan - AI Tool Discovery"
+        onSuccess={async (planName: string) => {
+          setShowRegister(false);
+          // Auto-redirect to checkout for paid plans after registration
+          if (planName.includes('Starter')) {
+            await redirectToCheckout({
+              plan: 'starter',
+              billingCycle,
+              successUrl: `${window.location.origin}/dashboard?upgraded=true&plan=starter`,
+              cancelUrl: `${window.location.origin}/dashboard?canceled=true`,
+            });
+          } else if (planName.includes('Pro')) {
+            await redirectToCheckout({
+              plan: 'pro',
+              billingCycle,
+              successUrl: `${window.location.origin}/dashboard?upgraded=true&plan=pro`,
+              cancelUrl: `${window.location.origin}/dashboard?canceled=true`,
+            });
+          }
+        }}
         onOpenLogin={() => {
           setShowRegister(false);
           setShowLogin(true);

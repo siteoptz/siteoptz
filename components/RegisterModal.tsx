@@ -9,13 +9,15 @@ interface RegisterModalProps {
   onClose: () => void;
   planName?: string;
   onOpenLogin?: () => void;
+  onSuccess?: (planName: string) => void;
 }
 
 const RegisterModal: React.FC<RegisterModalProps> = ({ 
   isOpen, 
   onClose, 
   planName = 'Free Plan',
-  onOpenLogin
+  onOpenLogin,
+  onSuccess
 }) => {
   const router = useRouter();
   const [isLogin, setIsLogin] = useState(false);
@@ -113,9 +115,14 @@ const RegisterModal: React.FC<RegisterModalProps> = ({
       if (result?.error) {
         setError('Invalid credentials. Please try again.');
       } else {
-        // Success - mark as first time user and redirect to dashboard
+        // Success - mark as first time user
         if (!isLogin) {
           localStorage.setItem('isFirstTimeUser', 'true');
+          // Call onSuccess with plan name for potential checkout redirect
+          if (onSuccess && planName && !planName.includes('Free')) {
+            onSuccess(planName);
+            return;
+          }
         }
         onClose();
         router.push('/dashboard');
