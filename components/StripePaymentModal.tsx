@@ -154,7 +154,7 @@ export default function StripePaymentModal({
       }
       
       // Proceed with Stripe checkout for logged in users
-      const result = await redirectToCheckout({
+      await redirectToCheckout({
         plan,
         billingCycle,
         successUrl: `${window.location.origin}/dashboard?upgraded=true&plan=${plan}`,
