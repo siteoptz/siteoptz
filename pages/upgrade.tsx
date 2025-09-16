@@ -50,7 +50,10 @@ const UpgradePage: React.FC = () => {
   const [showPaymentModal, setShowPaymentModal] = useState(false);
   const [paymentModalPlan, setPaymentModalPlan] = useState<'starter' | 'pro'>('starter');
   const { redirectToCheckout, loading, error, clearError } = useStripeCheckout();
-  const { isLoggedIn, intendedUpgrade, initiateUpgrade, completeUpgrade } = useUpgradeFlow();
+  const { isLoggedIn, isLoading, intendedUpgrade, initiateUpgrade, completeUpgrade } = useUpgradeFlow();
+  
+  // Debug logging
+  console.log('Upgrade page state:', { isLoggedIn, loading, isLoading, intendedUpgrade });
 
   // Handle intended upgrade when user logs in
   useEffect(() => {
@@ -207,6 +210,8 @@ const UpgradePage: React.FC = () => {
   }, []);
 
   const handleUpgrade = async (planName: string, price: number) => {
+    console.log('handleUpgrade called:', { planName, price, isLoggedIn });
+    
     if (typeof window !== 'undefined' && window.gtag) {
       window.gtag('event', 'upgrade_cta_click', {
         event_category: 'upgrade',
@@ -220,12 +225,14 @@ const UpgradePage: React.FC = () => {
     
     // Handle Enterprise plan differently (contact sales)
     if (planName === 'Enterprise') {
+      console.log('Redirecting to Enterprise contact');
       router.push('/contact?subject=enterprise');
       return;
     }
 
     // Handle Free plan (redirect to register)
     if (planName === 'Free') {
+      console.log('Redirecting to register');
       router.push('/#register');
       return;
     }
@@ -233,10 +240,12 @@ const UpgradePage: React.FC = () => {
     // For paid plans, check if user is logged in
     if (isLoggedIn) {
       // Show payment modal for logged-in users
+      console.log('Logged in user - showing payment modal');
       setPaymentModalPlan(planName.toLowerCase() as 'starter' | 'pro');
       setShowPaymentModal(true);
     } else {
       // Use the upgrade flow for non-logged-in users (will redirect to login)
+      console.log('Non-logged in user - initiating upgrade flow');
       try {
         await initiateUpgrade(planName.toLowerCase() as 'starter' | 'pro', billingCycle);
       } catch (err) {
@@ -362,17 +371,20 @@ const UpgradePage: React.FC = () => {
                     </div>
 
                     <button
-                      onClick={() => handleUpgrade(tier.name, tier.price)}
-                      disabled={tier.name === 'Free' || loading}
+                      onClick={() => {
+                        console.log('Button clicked for:', tier.name);
+                        handleUpgrade(tier.name, tier.price);
+                      }}
+                      disabled={tier.name === 'Free' || loading || isLoading}
                       className={`w-full py-3 rounded-lg font-semibold transition-all ${
-                        tier.name === 'Free' || loading
+                        tier.name === 'Free' || loading || isLoading
                           ? 'bg-gray-700 text-gray-500 cursor-not-allowed'
                           : tier.recommended
                           ? 'bg-gradient-to-r from-blue-600 to-purple-600 text-white hover:from-blue-700 hover:to-purple-700'
                           : 'bg-gray-700 text-white hover:bg-gray-600'
                       }`}
                     >
-                      {loading ? 'Processing...' : (tier.name === 'Free' ? tier.ctaText : isLoggedIn ? 'Upgrade Now' : 'Select')}
+                      {loading || isLoading ? 'Processing...' : (tier.name === 'Free' ? tier.ctaText : isLoggedIn ? 'Upgrade Now' : 'Select')}
                     </button>
                   </div>
 
@@ -526,14 +538,17 @@ const UpgradePage: React.FC = () => {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button
-                onClick={() => handleUpgrade('Starter', 497)}
-                disabled={loading}
+                onClick={() => {
+                  console.log('Final CTA button clicked');
+                  handleUpgrade('Starter', 497);
+                }}
+                disabled={loading || isLoading}
                 className={`px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-lg font-semibold hover:from-blue-700 hover:to-purple-700 transform hover:scale-105 transition-all duration-200 shadow-lg hover:shadow-xl ${
-                  loading ? 'opacity-50 cursor-not-allowed' : ''
+                  loading || isLoading ? 'opacity-50 cursor-not-allowed' : ''
                 }`}
               >
-                {loading ? 'Processing...' : 'Upgrade Now'}
-                {!loading && <ArrowRight className="inline-block ml-2 w-5 h-5" />}
+                {loading || isLoading ? 'Processing...' : (isLoggedIn ? 'Upgrade Now' : 'Select')}
+                {!loading && !isLoading && <ArrowRight className="inline-block ml-2 w-5 h-5" />}
               </button>
               <Link
                 href="/contact"
