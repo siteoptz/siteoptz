@@ -273,7 +273,7 @@ export default function StripePaymentModal({
                     <div>
                       <h4 className="text-blue-400 font-medium">Account Required</h4>
                       <p className="text-gray-300 text-sm">
-                        You'll be redirected to create an account before subscribing.
+                        You&apos;ll be redirected to create an account before subscribing.
                       </p>
                     </div>
                   </div>
@@ -340,7 +340,7 @@ export default function StripePaymentModal({
               </div>
               <h3 className="text-xl font-semibold text-white mb-2">Payment Successful!</h3>
               <p className="text-gray-400 mb-6">
-                You've been redirected to Stripe to complete your {isLoggedIn ? 'upgrade' : 'subscription'}.
+                You&apos;ve been redirected to Stripe to complete your {isLoggedIn ? 'upgrade' : 'subscription'}.
               </p>
               <button
                 onClick={onClose}
