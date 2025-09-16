@@ -46,6 +46,7 @@ export default function StripePaymentModal({
   const { redirectToCheckout, loading, error, clearError } = useStripeCheckout();
   const [isProcessing, setIsProcessing] = useState(false);
   const [step, setStep] = useState<'confirm' | 'processing' | 'success' | 'error'>('confirm');
+  const [modalError, setModalError] = useState<string | null>(null);
 
   // Plan configuration
   const planConfig: Record<string, PlanDetails> = {
@@ -131,27 +132,29 @@ export default function StripePaymentModal({
       }
       
       // Proceed with Stripe checkout
-      await redirectToCheckout({
+      const result = await redirectToCheckout({
         plan,
         billingCycle,
         successUrl: `${window.location.origin}/dashboard?upgraded=true&plan=${plan}`,
         cancelUrl: `${window.location.origin}/upgrade?canceled=true`,
       });
 
-      // If we reach here, the redirect should have happened
-      // Set a timeout to reset the processing state if user stays on page (e.g., popup blocked)
+      // If we reach here without error, the redirect should be happening
+      // Set a timeout to handle cases where redirect doesn't complete
       setTimeout(() => {
         if (isProcessing) {
-          setStep('confirm');
+          setStep('error');
           setIsProcessing(false);
-          console.warn('Stripe checkout redirect may have been blocked. Please check popup blocker.');
+          setModalError('The checkout page failed to load. Please try again or check if popups are blocked.');
+          console.warn('Stripe checkout redirect may have been blocked or failed.');
         }
-      }, 3000);
+      }, 5000);
 
     } catch (err: any) {
-      console.error('Payment error:', err);
+      console.error('Payment processing error:', err);
       setStep('error');
       setIsProcessing(false);
+      setModalError(err.message || 'An error occurred during payment processing');
       
       // Track payment error
       if (typeof window !== 'undefined' && window.gtag) {
@@ -173,6 +176,7 @@ export default function StripePaymentModal({
   useEffect(() => {
     if (isOpen) {
       setStep('confirm');
+      setModalError(null);
       clearError();
     }
   }, [isOpen, clearError]);
@@ -343,11 +347,15 @@ export default function StripePaymentModal({
               </div>
               <h3 className="text-xl font-semibold text-white mb-2">Payment Error</h3>
               <p className="text-gray-400 mb-6">
-                {error || 'An error occurred while processing your payment. Please try again.'}
+                {modalError || error || 'An error occurred while processing your payment. Please try again.'}
               </p>
               <div className="flex flex-col sm:flex-row gap-3">
                 <button
-                  onClick={() => setStep('confirm')}
+                  onClick={() => {
+                    setStep('confirm');
+                    setModalError(null);
+                    clearError();
+                  }}
                   className="flex-1 bg-gradient-to-r from-blue-600 to-purple-600 text-white py-3 px-6 rounded-lg font-semibold hover:from-blue-700 hover:to-purple-700 transition-all duration-200"
                 >
                   Try Again

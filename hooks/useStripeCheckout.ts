@@ -36,12 +36,19 @@ export const useStripeCheckout = () => {
       console.log('Checkout session response:', data);
 
       if (!response.ok) {
-        throw new Error(data.message || 'Failed to create checkout session');
+        console.error('API Error:', data);
+        throw new Error(data.error || data.message || 'Failed to create checkout session');
+      }
+
+      if (!data.sessionId) {
+        console.error('No session ID in response:', data);
+        throw new Error('No checkout session ID received from server');
       }
 
       // Check if Stripe is loaded
       if (!stripePromise) {
-        throw new Error('Stripe publishable key not configured. Please check your environment variables.');
+        console.error('Stripe not initialized. NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY:', process.env.NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY);
+        throw new Error('Stripe is not configured. Please check your payment settings.');
       }
 
       // Redirect to Stripe Checkout
@@ -51,7 +58,6 @@ export const useStripeCheckout = () => {
       }
       
       console.log('Redirecting to Stripe checkout with sessionId:', data.sessionId);
-      console.log('Stripe instance:', stripe);
 
       const { error: stripeError } = await stripe.redirectToCheckout({
         sessionId: data.sessionId,
@@ -59,20 +65,22 @@ export const useStripeCheckout = () => {
 
       if (stripeError) {
         console.error('Stripe redirect error:', stripeError);
-        throw new Error(stripeError.message);
+        setLoading(false);
+        throw new Error(stripeError.message || 'Failed to redirect to checkout');
       }
 
       // If we reach this point, the redirect should have happened
-      console.log('Stripe redirect completed without error');
+      console.log('Stripe redirect initiated successfully');
       
       // Note: We don't setLoading(false) here because the page will navigate away
       // The loading state will be reset when the component unmounts
 
     } catch (err: any) {
-      console.error('Checkout error:', err);
+      console.error('Checkout error details:', err);
       setError(err.message || 'An error occurred during checkout');
       // Only set loading to false in error cases where we stay on the same page
       setLoading(false);
+      throw err; // Re-throw to let the modal handle it
     }
   };
 
