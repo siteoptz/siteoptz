@@ -15,6 +15,7 @@ import { Search, TrendingUp, Zap, CheckCircle, Sparkles, Brain, BarChart3, Targe
 import ExternalLink from '../components/ExternalLink';
 import { authoritativeLinks } from '../utils/externalLinks';
 import HeroSection from '../components/HeroSection';
+import UpgradeButton from '../components/UpgradeButton';
 
 
 interface HomePageProps {}
@@ -650,23 +651,42 @@ export default function HomePage({}: HomePageProps) {
                       ))}
                     </ul>
                     
-                    <button
-                      onClick={(e) => plan.ctaAction && plan.ctaAction(e)}
-                      disabled={(loading && (plan.name === 'STARTER' || plan.name === 'PRO')) || status === 'loading'}
-                      className={`block w-full text-center px-6 py-3 font-semibold rounded-xl transition-all duration-200 group-hover:scale-105 ${
-                        ((loading && (plan.name === 'STARTER' || plan.name === 'PRO')) || status === 'loading')
-                          ? 'bg-gray-600 text-gray-400 cursor-not-allowed'
-                          : plan.name === 'FREE' 
-                          ? 'bg-gradient-to-r from-green-600 to-emerald-600 text-white hover:from-green-700 hover:to-emerald-700'
-                          : plan.popular
-                          ? 'bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-bold hover:from-cyan-400 hover:to-blue-500 shadow-lg'
-                          : plan.color === 'purple'
-                          ? 'bg-gradient-to-r from-purple-600 to-violet-600 text-white hover:from-purple-700 hover:to-violet-700'
-                          : 'bg-gradient-to-r from-cyan-600 to-blue-600 text-white hover:from-cyan-700 hover:to-blue-700'
-                      }`}
-                    >
-                      {loading && (plan.name === 'STARTER' || plan.name === 'PRO') ? 'Processing...' : plan.ctaText}
-                    </button>
+                    {plan.name === 'STARTER' || plan.name === 'PRO' ? (
+                      <UpgradeButton
+                        plan={plan.name.toLowerCase() as 'starter' | 'pro'}
+                        price={currentPricing.price}
+                        billingCycle={billingCycle}
+                        className="block w-full"
+                        variant={plan.popular ? 'primary' : 'secondary'}
+                        onUpgradeStart={() => {
+                          setSelectedPlan(`${plan.name} Plan`);
+                        }}
+                        onShowRegister={(planName) => {
+                          setSelectedPlan(planName);
+                          setShowRegister(true);
+                        }}
+                        onUpgradeSuccess={(planName) => {
+                          console.log(`Successfully started ${planName} upgrade process`);
+                        }}
+                        onUpgradeError={(error) => {
+                          console.error(`Upgrade error: ${error}`);
+                        }}
+                      />
+                    ) : (
+                      <button
+                        onClick={(e) => plan.ctaAction && plan.ctaAction(e)}
+                        disabled={status === 'loading'}
+                        className={`block w-full text-center px-6 py-3 font-semibold rounded-xl transition-all duration-200 group-hover:scale-105 ${
+                          status === 'loading'
+                            ? 'bg-gray-600 text-gray-400 cursor-not-allowed'
+                            : plan.name === 'FREE' 
+                            ? 'bg-gradient-to-r from-green-600 to-emerald-600 text-white hover:from-green-700 hover:to-emerald-700'
+                            : 'bg-gradient-to-r from-purple-600 to-violet-600 text-white hover:from-purple-700 hover:to-violet-700'
+                        }`}
+                      >
+                        {plan.ctaText}
+                      </button>
+                    )}
                   </div>
                 );
               })}
