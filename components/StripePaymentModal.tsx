@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { useSession } from 'next-auth/react';
 import { useStripeCheckout } from '../hooks/useStripeCheckout';
+import { useUpgradeFlow } from '../hooks/useUpgradeFlow';
 import { 
   X, 
   CreditCard, 
@@ -44,6 +45,7 @@ export default function StripePaymentModal({
 }: StripePaymentModalProps) {
   const { data: session, status } = useSession();
   const { redirectToCheckout, loading, error, clearError } = useStripeCheckout();
+  const { isLoggedIn, isLoading, initiateUpgrade } = useUpgradeFlow();
   const [isProcessing, setIsProcessing] = useState(false);
   const [step, setStep] = useState<'confirm' | 'processing' | 'success' | 'error'>('confirm');
   const [modalError, setModalError] = useState<string | null>(null);
@@ -92,7 +94,6 @@ export default function StripePaymentModal({
   };
 
   const planDetails = planConfig[plan];
-  const isLoggedIn = !!session?.user;
 
   // Calculate savings
   const calculateSavings = () => {
@@ -110,6 +111,7 @@ export default function StripePaymentModal({
       setIsProcessing(true);
       setStep('processing');
       clearError();
+      setModalError(null);
 
       // Track payment initiation
       if (typeof window !== 'undefined' && window.gtag) {
@@ -121,56 +123,21 @@ export default function StripePaymentModal({
         });
       }
 
-      // If user is not logged in, redirect to register page first
-      if (!isLoggedIn) {
-        // Store intended upgrade in localStorage
-        if (typeof window !== 'undefined') {
-          localStorage.setItem('intendedUpgrade', JSON.stringify({
-            plan,
-            price: planDetails.price,
-            billingCycle,
-            timestamp: Date.now()
-          }));
-        }
-        
-        // Reset processing state before redirecting
-        setIsProcessing(false);
-        setStep('confirm');
-        
-        // Close modal and redirect to register
-        onClose();
-        window.location.href = '/#register';
-        return;
-      }
+      // Use the initiateUpgrade function from useUpgradeFlow hook
+      // This handles both logged-in and non-logged-in users properly
+      await initiateUpgrade(plan as 'starter' | 'pro', billingCycle);
 
-      // Store intended upgrade in localStorage for logged in users
-      if (typeof window !== 'undefined') {
-        localStorage.setItem('intendedUpgrade', JSON.stringify({
-          plan,
-          price: planDetails.price,
-          billingCycle,
-          timestamp: Date.now()
-        }));
-      }
+      // If we reach here, the upgrade was initiated successfully
+      // For non-logged-in users, they will be redirected to login
+      // For logged-in users, they will be redirected to Stripe
       
-      // Proceed with Stripe checkout for logged in users
-      await redirectToCheckout({
-        plan,
-        billingCycle,
-        successUrl: `${window.location.origin}/dashboard?upgraded=true&plan=${plan}`,
-        cancelUrl: `${window.location.origin}/upgrade?canceled=true`,
-      });
+      // Call success callback if provided
+      if (onSuccess) {
+        onSuccess(plan);
+      }
 
-      // If we reach here without error, the redirect should be happening
-      // Set a timeout to handle cases where redirect doesn't complete
-      setTimeout(() => {
-        if (isProcessing) {
-          setStep('error');
-          setIsProcessing(false);
-          setModalError('The checkout page failed to load. Please try again or check if popups are blocked.');
-          console.warn('Stripe checkout redirect may have been blocked or failed.');
-        }
-      }, 5000);
+      // Close the modal as the user is now being redirected
+      onClose();
 
     } catch (err: any) {
       console.error('Payment processing error:', err);
@@ -311,10 +278,10 @@ export default function StripePaymentModal({
               <div className="flex flex-col sm:flex-row gap-3">
                 <button
                   onClick={handlePayment}
-                  disabled={loading || isProcessing}
+                  disabled={loading || isProcessing || isLoading}
                   className="flex-1 bg-gradient-to-r from-blue-600 to-purple-600 text-white py-3 px-6 rounded-lg font-semibold hover:from-blue-700 hover:to-purple-700 transition-all duration-200 flex items-center justify-center gap-2 disabled:opacity-50 disabled:cursor-not-allowed"
                 >
-                  {loading || isProcessing ? (
+                  {loading || isProcessing || isLoading ? (
                     <Loader2 className="w-5 h-5 animate-spin" />
                   ) : (
                     <>
@@ -322,7 +289,7 @@ export default function StripePaymentModal({
                       {isLoggedIn ? 'Upgrade Now' : 'Subscribe Now'}
                     </>
                   )}
-                  {!loading && !isProcessing && <ArrowRight className="w-5 h-5" />}
+                  {!loading && !isProcessing && !isLoading && <ArrowRight className="w-5 h-5" />}
                 </button>
                 <button
                   onClick={onClose}
