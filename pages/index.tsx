@@ -16,6 +16,7 @@ import ExternalLink from '../components/ExternalLink';
 import { authoritativeLinks } from '../utils/externalLinks';
 import HeroSection from '../components/HeroSection';
 import UpgradeButton from '../components/UpgradeButton';
+import StripePaymentModal from '../components/StripePaymentModal';
 
 
 interface HomePageProps {}
@@ -26,6 +27,8 @@ export default function HomePage({}: HomePageProps) {
   const [showLogin, setShowLogin] = useState(false);
   const [selectedPlan, setSelectedPlan] = useState<string>('Free Plan');
   const [billingCycle, setBillingCycle] = useState<'monthly' | 'yearly'>('yearly');
+  const [showPaymentModal, setShowPaymentModal] = useState(false);
+  const [paymentModalPlan, setPaymentModalPlan] = useState<'starter' | 'pro'>('starter');
   const { redirectToCheckout, loading, error, clearError } = useStripeCheckout();
   const { data: session, status } = useSession();
   const pageConfig = getPageConfig('home');
@@ -660,6 +663,8 @@ export default function HomePage({}: HomePageProps) {
                         variant={plan.popular ? 'primary' : 'secondary'}
                         onUpgradeStart={() => {
                           setSelectedPlan(`${plan.name} Plan`);
+                          setPaymentModalPlan(plan.name.toLowerCase() as 'starter' | 'pro');
+                          setShowPaymentModal(true);
                         }}
                         onShowRegister={(planName) => {
                           setSelectedPlan(planName);
@@ -1050,6 +1055,21 @@ export default function HomePage({}: HomePageProps) {
           setShowLogin(true);
           // Update hash to login
           window.history.pushState('', document.title, '/#login');
+        }}
+      />
+
+      {/* Stripe Payment Modal - For subscription upgrades */}
+      <StripePaymentModal
+        isOpen={showPaymentModal}
+        onClose={() => setShowPaymentModal(false)}
+        plan={paymentModalPlan}
+        billingCycle={billingCycle}
+        onSuccess={(plan) => {
+          setShowPaymentModal(false);
+          console.log(`Successfully upgraded to ${plan}`);
+        }}
+        onError={(error) => {
+          console.error(`Payment error: ${error}`);
         }}
       />
     </>

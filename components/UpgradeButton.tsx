@@ -82,6 +82,9 @@ export default function UpgradeButton({
       // Call the onUpgradeStart callback
       if (onUpgradeStart) {
         onUpgradeStart();
+        // If onUpgradeStart is provided, let the parent handle the flow
+        setIsProcessing(false);
+        return;
       }
 
       // Track the upgrade attempt

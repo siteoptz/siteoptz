@@ -75,6 +75,11 @@ const Header: React.FC = () => {
   const router = useRouter();
   const { data: session, status } = useSession();
   
+  // Simple session state management
+  const isAuthenticated = status === 'authenticated' && !!session?.user;
+  const isLoading = status === 'loading';
+  const isUnauthenticated = status === 'unauthenticated';
+  
   // Desktop category accordion states
   const [desktopCategoryAccordions, setDesktopCategoryAccordions] = useState<Record<string, boolean>>({});
   
@@ -256,18 +261,18 @@ const Header: React.FC = () => {
 
           {/* Authentication CTA */}
           <div className="hidden lg:flex items-center space-x-3">
-            {status === 'loading' ? (
+            {isLoading ? (
               <div className="flex items-center space-x-3">
                 <div className="animate-pulse bg-gray-300 h-8 w-16 rounded"></div>
                 <div className="animate-pulse bg-gray-300 h-8 w-24 rounded"></div>
               </div>
-            ) : session && status === 'authenticated' ? (
+            ) : isAuthenticated ? (
               <div className="relative user-dropdown-container">
                 <button
                   onClick={() => setShowUserDropdown(!showUserDropdown)}
                   className="flex items-center space-x-2 px-4 py-2 bg-gray-800 text-white rounded-lg font-medium text-sm hover:bg-gray-700 transition-all duration-200"
                 >
-                  {session.user?.image ? (
+                  {session?.user?.image ? (
                     <img
                       src={session.user.image}
                       alt={session.user.name || 'User'}
@@ -276,7 +281,7 @@ const Header: React.FC = () => {
                   ) : (
                     <User className="w-4 h-4" />
                   )}
-                  <span className="max-w-24 truncate">{session.user?.name || session.user?.email}</span>
+                  <span className="max-w-24 truncate">{session?.user?.name || session?.user?.email}</span>
                   <ChevronDown className="w-4 h-4" />
                 </button>
                 
@@ -286,7 +291,7 @@ const Header: React.FC = () => {
                     <div className="px-4 py-3 border-b border-gray-100">
                       <div className="text-xs text-gray-500 mb-1">Signed in as</div>
                       <div className="font-medium text-gray-900 truncate">
-                        {session.user?.name || session.user?.email}
+                        {session?.user?.name || session?.user?.email}
                       </div>
                       <div className="text-xs text-blue-600 font-medium mt-1">
                         Free Plan
@@ -604,12 +609,12 @@ const Header: React.FC = () => {
               }}>Contact</Link>
               
               <div style={{ marginTop: '24px', paddingTop: '24px', borderTop: '1px solid rgba(255,255,255,0.2)' }}>
-                {status === 'loading' ? (
+                {isLoading ? (
                   <div style={{ display: 'flex', flexDirection: 'column', gap: '12px' }}>
                     <div style={{ height: '48px', background: 'rgba(255,255,255,0.1)', borderRadius: '8px', animation: 'pulse 2s infinite' }}></div>
                     <div style={{ height: '48px', background: 'rgba(255,255,255,0.1)', borderRadius: '8px', animation: 'pulse 2s infinite' }}></div>
                   </div>
-                ) : session && status === 'authenticated' ? (
+                ) : isAuthenticated ? (
                   <div style={{ display: 'flex', flexDirection: 'column', gap: '8px' }}>
                     {/* User Info Header */}
                     <div style={{ 
@@ -622,7 +627,7 @@ const Header: React.FC = () => {
                         Signed in as
                       </div>
                       <div style={{ color: 'white', fontWeight: '600', fontSize: '16px', marginBottom: '4px' }}>
-                        {session.user?.name || session.user?.email}
+                        {session?.user?.name || session?.user?.email}
                       </div>
                       <div style={{ color: '#60a5fa', fontSize: '12px', fontWeight: '500' }}>
                         Free Plan
