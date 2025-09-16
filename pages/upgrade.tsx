@@ -4,6 +4,7 @@ import { useRouter } from 'next/router';
 import Head from 'next/head';
 import { useStripeCheckout } from '../hooks/useStripeCheckout';
 import { useUpgradeFlow } from '../hooks/useUpgradeFlow';
+import StripePaymentModal from '../components/StripePaymentModal';
 import Link from 'next/link';
 import { 
   Check, 
@@ -46,16 +47,19 @@ const UpgradePage: React.FC = () => {
   const [selectedPlan, setSelectedPlan] = useState<string>('starter');
   const [showFAQ, setShowFAQ] = useState<number | null>(null);
   const [billingCycle, setBillingCycle] = useState<'monthly' | 'yearly'>('yearly');
+  const [showPaymentModal, setShowPaymentModal] = useState(false);
+  const [paymentModalPlan, setPaymentModalPlan] = useState<'starter' | 'pro'>('starter');
   const { redirectToCheckout, loading, error, clearError } = useStripeCheckout();
   const { isLoggedIn, intendedUpgrade, initiateUpgrade, completeUpgrade } = useUpgradeFlow();
 
   // Handle intended upgrade when user logs in
   useEffect(() => {
     if (isLoggedIn && intendedUpgrade) {
-      // User has logged in with a pending upgrade, redirect to Stripe checkout
-      router.push(`/upgrade?plan=${intendedUpgrade.plan}&billing=${intendedUpgrade.billingCycle}`);
+      // User has logged in with a pending upgrade, show payment modal
+      setPaymentModalPlan(intendedUpgrade.plan as 'starter' | 'pro');
+      setShowPaymentModal(true);
     }
-  }, [isLoggedIn, intendedUpgrade, router]);
+  }, [isLoggedIn, intendedUpgrade]);
 
   // Pricing tiers based on strategy document
   const pricingTiers: PricingTier[] = [
@@ -226,11 +230,18 @@ const UpgradePage: React.FC = () => {
       return;
     }
     
-    // For paid plans, use the upgrade flow
-    try {
-      await initiateUpgrade(planName.toLowerCase() as 'starter' | 'pro', billingCycle);
-    } catch (err) {
-      console.error('Upgrade error:', err);
+    // For paid plans, check if user is logged in
+    if (isLoggedIn) {
+      // Show payment modal for logged-in users
+      setPaymentModalPlan(planName.toLowerCase() as 'starter' | 'pro');
+      setShowPaymentModal(true);
+    } else {
+      // Use the upgrade flow for non-logged-in users (will redirect to login)
+      try {
+        await initiateUpgrade(planName.toLowerCase() as 'starter' | 'pro', billingCycle);
+      } catch (err) {
+        console.error('Upgrade error:', err);
+      }
     }
   };
 
@@ -361,7 +372,7 @@ const UpgradePage: React.FC = () => {
                           : 'bg-gray-700 text-white hover:bg-gray-600'
                       }`}
                     >
-                      {loading ? 'Processing...' : tier.ctaText}
+                      {loading ? 'Processing...' : (tier.name === 'Free' ? tier.ctaText : isLoggedIn ? 'Upgrade Now' : 'Select')}
                     </button>
                   </div>
 
@@ -549,6 +560,31 @@ const UpgradePage: React.FC = () => {
             </div>
           </div>
         </section>
+
+        {/* Stripe Payment Modal */}
+        <StripePaymentModal
+          isOpen={showPaymentModal}
+          onClose={() => {
+            setShowPaymentModal(false);
+            // Clear intended upgrade if user closes modal
+            if (intendedUpgrade) {
+              completeUpgrade('cancelled');
+            }
+          }}
+          plan={paymentModalPlan}
+          billingCycle={billingCycle}
+          onSuccess={(plan) => {
+            setShowPaymentModal(false);
+            completeUpgrade(plan);
+            console.log(`Successfully upgraded to ${plan}`);
+            // Redirect to dashboard or show success message
+            router.push('/dashboard?upgraded=true');
+          }}
+          onError={(error) => {
+            console.error(`Payment error: ${error}`);
+            // Could show a toast notification here
+          }}
+        />
       </div>
     </>
   );
