@@ -4,6 +4,7 @@ import { useState, useEffect } from 'react';
 import { useSession } from 'next-auth/react';
 import SEOHead from '../components/SEOHead';
 import { useStripeCheckout } from '../hooks/useStripeCheckout';
+import { useUpgradeFlow } from '../hooks/useUpgradeFlow';
 import LoginModal from '../components/LoginModal';
 import RegisterModal from '../components/RegisterModal';
 import { 
@@ -31,7 +32,17 @@ export default function HomePage({}: HomePageProps) {
   const [paymentModalPlan, setPaymentModalPlan] = useState<'starter' | 'pro'>('starter');
   const { redirectToCheckout, loading, error, clearError } = useStripeCheckout();
   const { data: session, status } = useSession();
+  const { isLoggedIn, intendedUpgrade, initiateUpgrade, completeUpgrade } = useUpgradeFlow();
   const pageConfig = getPageConfig('home');
+
+  // Handle intended upgrade when user logs in
+  useEffect(() => {
+    if (isLoggedIn && intendedUpgrade) {
+      // User has logged in with a pending upgrade, show payment modal
+      setPaymentModalPlan(intendedUpgrade.plan as 'starter' | 'pro');
+      setShowPaymentModal(true);
+    }
+  }, [isLoggedIn, intendedUpgrade]);
 
   // Pricing plans data
   const pricingPlans = [
@@ -655,28 +666,26 @@ export default function HomePage({}: HomePageProps) {
                     </ul>
                     
                     {plan.name === 'STARTER' || plan.name === 'PRO' ? (
-                      <UpgradeButton
-                        plan={plan.name.toLowerCase() as 'starter' | 'pro'}
-                        price={currentPricing.price}
-                        billingCycle={billingCycle}
-                        className="block w-full"
-                        variant={plan.popular ? 'primary' : 'secondary'}
-                        onUpgradeStart={() => {
-                          setSelectedPlan(`${plan.name} Plan`);
-                          setPaymentModalPlan(plan.name.toLowerCase() as 'starter' | 'pro');
-                          setShowPaymentModal(true);
+                      <button
+                        onClick={async () => {
+                          try {
+                            setSelectedPlan(`${plan.name} Plan`);
+                            await initiateUpgrade(plan.name.toLowerCase() as 'starter' | 'pro', billingCycle);
+                          } catch (error) {
+                            console.error(`Upgrade error: ${error}`);
+                          }
                         }}
-                        onShowRegister={(planName) => {
-                          setSelectedPlan(planName);
-                          setShowRegister(true);
-                        }}
-                        onUpgradeSuccess={(planName) => {
-                          console.log(`Successfully started ${planName} upgrade process`);
-                        }}
-                        onUpgradeError={(error) => {
-                          console.error(`Upgrade error: ${error}`);
-                        }}
-                      />
+                        disabled={loading}
+                        className={`block w-full text-center px-6 py-3 font-semibold rounded-xl transition-all duration-200 group-hover:scale-105 ${
+                          loading
+                            ? 'bg-gray-600 text-gray-400 cursor-not-allowed'
+                            : plan.popular
+                            ? 'bg-gradient-to-r from-cyan-500 to-blue-600 text-white hover:from-cyan-400 hover:to-blue-500'
+                            : 'bg-gradient-to-r from-gray-700 to-gray-600 text-white hover:from-gray-600 hover:to-gray-500'
+                        }`}
+                      >
+                        {loading ? 'Processing...' : (isLoggedIn ? 'Upgrade Now' : 'Select')}
+                      </button>
                     ) : (
                       <button
                         onClick={(e) => plan.ctaAction && plan.ctaAction(e)}
@@ -1061,11 +1070,18 @@ export default function HomePage({}: HomePageProps) {
       {/* Stripe Payment Modal - For subscription upgrades */}
       <StripePaymentModal
         isOpen={showPaymentModal}
-        onClose={() => setShowPaymentModal(false)}
+        onClose={() => {
+          setShowPaymentModal(false);
+          // Clear intended upgrade if user closes modal
+          if (intendedUpgrade) {
+            completeUpgrade('cancelled');
+          }
+        }}
         plan={paymentModalPlan}
         billingCycle={billingCycle}
         onSuccess={(plan) => {
           setShowPaymentModal(false);
+          completeUpgrade(plan);
           console.log(`Successfully upgraded to ${plan}`);
         }}
         onError={(error) => {

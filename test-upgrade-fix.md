@@ -1,113 +1,88 @@
-# 🧪 Test Upgrade Fix
+# Upgrade Flow Fix - Testing Guide
 
-## Issue Fixed
-The "Subscribe" button was not opening Stripe checkout and was stalling for non-logged-in users.
+## Issues Fixed
 
-## Changes Made
+### 1. Non-logged in users clicking "Select" button
+**Problem**: When non-logged in users clicked "Select" on Pro or Starter plans, the modal would show but the "Subscribe Now" button did nothing.
 
-### 1. Updated `useStripeCheckout` Hook
-- **File**: `hooks/useStripeCheckout.ts`
-- **Change**: Removed the authentication check that was blocking non-logged-in users
-- **Before**: `if (!session?.user) { setError('Please log in to upgrade your plan'); return; }`
-- **After**: Removed this check to allow non-logged-in users to proceed
+**Solution**: 
+- Updated `UpgradeButton` component to properly handle non-logged in users
+- When user clicks "Select", it now stores the intended upgrade in localStorage and redirects to register page
+- After registration, the system automatically shows the Stripe payment modal
+- Uses the existing `useUpgradeFlow` hook for consistent behavior
 
-### 2. Updated `create-checkout-session` API
-- **File**: `pages/api/create-checkout-session.ts`
-- **Changes**:
-  - Made user authentication optional
-  - Added support for `customerEmail` in request body
-  - Updated Stripe checkout session creation to handle missing email
-  - Added `isLoggedIn` flag to metadata
+### 2. Logged in users clicking "Upgrade Now" button  
+**Problem**: When logged in users clicked "Upgrade Now", the modal would show but the "Upgrade Now" button did nothing.
 
-### 3. Updated `UpgradeButton` Component
-- **File**: `components/UpgradeButton.tsx`
-- **Change**: Non-logged-in users now proceed directly to Stripe checkout instead of being redirected to login
-
-### 4. Updated `StripePaymentModal` Component
-- **File**: `components/StripePaymentModal.tsx`
-- **Change**: Non-logged-in users now proceed directly to Stripe checkout
-
-## How It Works Now
-
-### For Non-Logged-In Users:
-1. User clicks "Select" button
-2. Button calls `redirectToCheckout()` directly
-3. API creates Stripe checkout session without requiring authentication
-4. Stripe checkout opens and collects user's email and payment info
-5. User completes payment and is redirected to success page
-
-### For Logged-In Users:
-1. User clicks "Upgrade Now" button
-2. Button calls `redirectToCheckout()` with user's email from session
-3. API creates Stripe checkout session with user's email pre-filled
-4. Stripe checkout opens with user's email already filled
-5. User completes payment and is redirected to success page
+**Solution**:
+- Updated the upgrade flow to use the `useUpgradeFlow` hook consistently
+- For logged in users, clicking "Upgrade Now" now directly opens the Stripe payment modal
+- The modal properly handles the Stripe checkout flow
 
 ## Testing Steps
 
-### Test 1: Non-Logged-In User
-1. Open browser in incognito mode (or log out)
-2. Navigate to `/test-upgrade`
-3. Click "Select" button on either plan
-4. **Expected**: Stripe checkout should open immediately
-5. **Expected**: Email field should be empty (user needs to enter it)
-6. **Expected**: Payment form should be functional
+### Test 1: Non-logged in user flow
+1. Open the site in an incognito window (to ensure no login state)
+2. Navigate to the homepage or upgrade page
+3. Click "Select" on either the Starter or Pro plan
+4. **Expected**: Should redirect to `/#register` page
+5. Complete the registration process
+6. **Expected**: After successful registration, should automatically show the Stripe payment modal for the selected plan
 
-### Test 2: Logged-In User
-1. Log in to the application
-2. Navigate to `/test-upgrade`
-3. Click "Upgrade Now" button on either plan
-4. **Expected**: Stripe checkout should open immediately
-5. **Expected**: Email field should be pre-filled with user's email
-6. **Expected**: Payment form should be functional
+### Test 2: Logged in user flow
+1. Log in to the site
+2. Navigate to the homepage or upgrade page  
+3. Click "Upgrade Now" on either the Starter or Pro plan
+4. **Expected**: Should immediately show the Stripe payment modal
+5. Click "Upgrade Now" in the modal
+6. **Expected**: Should redirect to Stripe checkout page
 
-### Test 3: API Endpoint
-1. Test the API endpoint directly:
-```bash
-curl -X POST http://localhost:3000/api/create-checkout-session \
-  -H "Content-Type: application/json" \
-  -d '{
-    "plan": "starter",
-    "billingCycle": "yearly"
-  }'
-```
-2. **Expected**: Should return a Stripe checkout session URL
-3. **Expected**: Should not require authentication
+### Test 3: Intended upgrade persistence
+1. As a non-logged in user, click "Select" on a plan
+2. Close the browser or navigate away
+3. Come back and log in
+4. **Expected**: Should automatically show the payment modal for the previously selected plan
 
-## Environment Variables Required
+## Files Modified
 
-Make sure these are set in your `.env.local`:
+1. **`components/UpgradeButton.tsx`**
+   - Updated `handleUpgrade` function to properly handle non-logged in users
+   - Now calls `onShowRegister` callback for non-logged in users
+   - Uses `onUpgradeStart` callback for logged in users
 
-```bash
-# Stripe Configuration
-STRIPE_SECRET_KEY=sk_test_...
-NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY=pk_test_...
+2. **`components/StripePaymentModal.tsx`**
+   - Updated `handlePayment` function to redirect non-logged in users to register page
+   - Properly stores intended upgrade in localStorage
 
-# Stripe Price IDs
-STRIPE_STARTER_MONTHLY_PRICE_ID=price_...
-STRIPE_STARTER_YEARLY_PRICE_ID=price_...
-STRIPE_PRO_MONTHLY_PRICE_ID=price_...
-STRIPE_PRO_YEARLY_PRICE_ID=price_...
+3. **`pages/index.tsx`**
+   - Added `useUpgradeFlow` hook integration
+   - Updated plan selection buttons to use `initiateUpgrade` function
+   - Added effect to handle intended upgrade when user logs in
+   - Updated StripePaymentModal to handle success/cancel callbacks
 
-# NextAuth (for logged-in users)
-NEXTAUTH_SECRET=your-secret-key
-NEXTAUTH_URL=http://localhost:3000
-```
+4. **`pages/upgrade.tsx`**
+   - Added `useUpgradeFlow` hook integration
+   - Updated `handleUpgrade` function to use `initiateUpgrade`
+   - Added effect to handle intended upgrade when user logs in
 
-## Debugging
+## Key Features
 
-If the issue persists:
+- **Consistent Flow**: Both homepage and upgrade page now use the same upgrade flow
+- **Persistence**: Intended upgrades are stored in localStorage and persist across sessions
+- **Automatic Recovery**: When users log in with a pending upgrade, the system automatically shows the payment modal
+- **Error Handling**: Proper error handling and user feedback throughout the flow
+- **Analytics**: All upgrade actions are tracked with Google Analytics events
 
-1. **Check Browser Console**: Look for JavaScript errors
-2. **Check Network Tab**: Verify API calls are being made
-3. **Check Server Logs**: Look for API endpoint errors
-4. **Verify Stripe Keys**: Ensure Stripe keys are correct and active
-5. **Check Price IDs**: Verify Stripe price IDs exist and are correct
+## Browser Compatibility
 
-## Success Indicators
+The fix uses standard web APIs that are supported in all modern browsers:
+- `localStorage` for storing intended upgrades
+- `window.location.href` for navigation
+- Standard React hooks and patterns
 
-- ✅ Non-logged-in users can click "Select" and see Stripe checkout
-- ✅ Logged-in users can click "Upgrade Now" and see Stripe checkout
-- ✅ No authentication errors in console
-- ✅ API returns successful checkout session
-- ✅ Stripe checkout loads without errors
+## Security Considerations
+
+- Intended upgrades are stored client-side only (no sensitive data)
+- Stripe handles all payment processing securely
+- User authentication is handled by NextAuth.js
+- All API calls use proper error handling

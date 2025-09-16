@@ -121,7 +121,29 @@ export default function StripePaymentModal({
         });
       }
 
-      // Store intended upgrade in localStorage (for both logged in and non-logged in users)
+      // If user is not logged in, redirect to register page first
+      if (!isLoggedIn) {
+        // Store intended upgrade in localStorage
+        if (typeof window !== 'undefined') {
+          localStorage.setItem('intendedUpgrade', JSON.stringify({
+            plan,
+            price: planDetails.price,
+            billingCycle,
+            timestamp: Date.now()
+          }));
+        }
+        
+        // Reset processing state before redirecting
+        setIsProcessing(false);
+        setStep('confirm');
+        
+        // Close modal and redirect to register
+        onClose();
+        window.location.href = '/#register';
+        return;
+      }
+
+      // Store intended upgrade in localStorage for logged in users
       if (typeof window !== 'undefined') {
         localStorage.setItem('intendedUpgrade', JSON.stringify({
           plan,
@@ -131,7 +153,7 @@ export default function StripePaymentModal({
         }));
       }
       
-      // Proceed with Stripe checkout
+      // Proceed with Stripe checkout for logged in users
       const result = await redirectToCheckout({
         plan,
         billingCycle,

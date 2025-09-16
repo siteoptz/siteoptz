@@ -3,6 +3,7 @@ import { useSession } from 'next-auth/react';
 import { useRouter } from 'next/router';
 import Head from 'next/head';
 import { useStripeCheckout } from '../hooks/useStripeCheckout';
+import { useUpgradeFlow } from '../hooks/useUpgradeFlow';
 import Link from 'next/link';
 import { 
   Check, 
@@ -46,6 +47,15 @@ const UpgradePage: React.FC = () => {
   const [showFAQ, setShowFAQ] = useState<number | null>(null);
   const [billingCycle, setBillingCycle] = useState<'monthly' | 'yearly'>('yearly');
   const { redirectToCheckout, loading, error, clearError } = useStripeCheckout();
+  const { isLoggedIn, intendedUpgrade, initiateUpgrade, completeUpgrade } = useUpgradeFlow();
+
+  // Handle intended upgrade when user logs in
+  useEffect(() => {
+    if (isLoggedIn && intendedUpgrade) {
+      // User has logged in with a pending upgrade, redirect to Stripe checkout
+      router.push(`/upgrade?plan=${intendedUpgrade.plan}&billing=${intendedUpgrade.billingCycle}`);
+    }
+  }, [isLoggedIn, intendedUpgrade, router]);
 
   // Pricing tiers based on strategy document
   const pricingTiers: PricingTier[] = [
@@ -216,19 +226,9 @@ const UpgradePage: React.FC = () => {
       return;
     }
     
-    // For paid plans, redirect to Stripe checkout
-    if (!session?.user) {
-      router.push('/#login');
-      return;
-    }
-
+    // For paid plans, use the upgrade flow
     try {
-      await redirectToCheckout({
-        plan: planName.toLowerCase(),
-        billingCycle,
-        successUrl: `${window.location.origin}/dashboard?upgraded=true&plan=${planName.toLowerCase()}`,
-        cancelUrl: `${window.location.origin}/upgrade?canceled=true`,
-      });
+      await initiateUpgrade(planName.toLowerCase() as 'starter' | 'pro', billingCycle);
     } catch (err) {
       console.error('Upgrade error:', err);
     }

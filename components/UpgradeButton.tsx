@@ -79,14 +79,6 @@ export default function UpgradeButton({
       setIsProcessing(true);
       clearError();
       
-      // Call the onUpgradeStart callback
-      if (onUpgradeStart) {
-        onUpgradeStart();
-        // If onUpgradeStart is provided, let the parent handle the flow
-        setIsProcessing(false);
-        return;
-      }
-
       // Track the upgrade attempt
       if (typeof window !== 'undefined' && window.gtag) {
         window.gtag('event', 'upgrade_button_click', {
@@ -97,9 +89,9 @@ export default function UpgradeButton({
         });
       }
 
-      // If user is not logged in, collect email and proceed with Stripe checkout
+      // If user is not logged in, show register modal first
       if (!session?.user) {
-        // Store the intended plan in localStorage for after login
+        // Store the intended plan in localStorage for after registration
         if (typeof window !== 'undefined') {
           localStorage.setItem('intendedUpgrade', JSON.stringify({
             plan,
@@ -109,23 +101,26 @@ export default function UpgradeButton({
           }));
         }
         
-        // For non-logged-in users, we'll let Stripe collect the email
-        // The API will handle this case by not requiring authentication
-        await redirectToCheckout({
-          plan,
-          billingCycle,
-          successUrl: `${window.location.origin}/dashboard?upgraded=true&plan=${plan}`,
-          cancelUrl: `${window.location.origin}/upgrade?canceled=true`,
-        });
-
-        // Call success callback
-        if (onUpgradeSuccess) {
-          onUpgradeSuccess(plan);
+        // Call the onShowRegister callback to show register modal
+        if (onShowRegister) {
+          onShowRegister(plan);
+        } else {
+          // Fallback: redirect to register page
+          router.push('/#register');
         }
+        
+        setIsProcessing(false);
         return;
       }
 
-      // User is logged in, proceed with Stripe checkout
+      // User is logged in, call onUpgradeStart to show payment modal
+      if (onUpgradeStart) {
+        onUpgradeStart();
+        setIsProcessing(false);
+        return;
+      }
+
+      // Fallback: proceed directly with Stripe checkout for logged in users
       await redirectToCheckout({
         plan,
         billingCycle,
