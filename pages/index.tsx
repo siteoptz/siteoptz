@@ -26,7 +26,7 @@ export default function HomePage({}: HomePageProps) {
   const [selectedPlan, setSelectedPlan] = useState<string>('Free Plan');
   const [billingCycle, setBillingCycle] = useState<'monthly' | 'yearly'>('yearly');
   const { redirectToCheckout, loading, error, clearError } = useStripeCheckout();
-  const { data: session } = useSession();
+  const { data: session, status } = useSession();
   const pageConfig = getPageConfig('home');
 
   // Pricing plans data
@@ -63,10 +63,14 @@ export default function HomePage({}: HomePageProps) {
         'ROI Tracking Dashboard',
         'Monthly Implementation Webinars'
       ],
-      ctaText: session?.user ? 'Upgrade Now' : 'Subscribe',
+      ctaText: (status === 'loading') ? 'Loading...' : (session?.user ? 'Upgrade Now' : 'Select'),
       ctaAction: async (e?: React.MouseEvent) => {
         e?.preventDefault();
         e?.stopPropagation();
+        
+        // Don't do anything if session is still loading
+        if (status === 'loading') return;
+        
         if (!session?.user) {
           setSelectedPlan('Starter Plan');
           setShowRegister(true);
@@ -95,10 +99,14 @@ export default function HomePage({}: HomePageProps) {
         'White-label AI Tool Reports',
         'API Access & Advanced Tools'
       ],
-      ctaText: session?.user ? 'Upgrade Now' : 'Subscribe',
+      ctaText: (status === 'loading') ? 'Loading...' : (session?.user ? 'Upgrade Now' : 'Select'),
       ctaAction: async (e?: React.MouseEvent) => {
         e?.preventDefault();
         e?.stopPropagation();
+        
+        // Don't do anything if session is still loading
+        if (status === 'loading') return;
+        
         if (!session?.user) {
           setSelectedPlan('Pro Plan');
           setShowRegister(true);
@@ -644,9 +652,9 @@ export default function HomePage({}: HomePageProps) {
                     
                     <button
                       onClick={(e) => plan.ctaAction && plan.ctaAction(e)}
-                      disabled={loading && (plan.name === 'STARTER' || plan.name === 'PRO')}
+                      disabled={(loading && (plan.name === 'STARTER' || plan.name === 'PRO')) || status === 'loading'}
                       className={`block w-full text-center px-6 py-3 font-semibold rounded-xl transition-all duration-200 group-hover:scale-105 ${
-                        loading && (plan.name === 'STARTER' || plan.name === 'PRO')
+                        ((loading && (plan.name === 'STARTER' || plan.name === 'PRO')) || status === 'loading')
                           ? 'bg-gray-600 text-gray-400 cursor-not-allowed'
                           : plan.name === 'FREE' 
                           ? 'bg-gradient-to-r from-green-600 to-emerald-600 text-white hover:from-green-700 hover:to-emerald-700'
