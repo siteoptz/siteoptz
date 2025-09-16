@@ -120,44 +120,16 @@ export default function StripePaymentModal({
         });
       }
 
-      // If user is not logged in, proceed with Stripe checkout
-      if (!isLoggedIn) {
-        // Store intended upgrade in localStorage
-        if (typeof window !== 'undefined') {
-          localStorage.setItem('intendedUpgrade', JSON.stringify({
-            plan,
-            price: planDetails.price,
-            billingCycle,
-            timestamp: Date.now()
-          }));
-        }
-        
-        // Proceed with Stripe checkout - Stripe will collect email
-        await redirectToCheckout({
+      // Store intended upgrade in localStorage (for both logged in and non-logged in users)
+      if (typeof window !== 'undefined') {
+        localStorage.setItem('intendedUpgrade', JSON.stringify({
           plan,
+          price: planDetails.price,
           billingCycle,
-          successUrl: `${window.location.origin}/dashboard?upgraded=true&plan=${plan}`,
-          cancelUrl: `${window.location.origin}/upgrade?canceled=true`,
-        });
-
-        // Track successful payment initiation
-        if (typeof window !== 'undefined' && window.gtag) {
-          window.gtag('event', 'payment_success', {
-            event_category: 'upgrade',
-            event_label: plan,
-            value: planDetails.price
-          });
-        }
-
-        setStep('success');
-        
-        // Call success callback
-        if (onSuccess) {
-          onSuccess(plan);
-        }
-        return;
+          timestamp: Date.now()
+        }));
       }
-
+      
       // Proceed with Stripe checkout
       await redirectToCheckout({
         plan,
@@ -166,25 +138,13 @@ export default function StripePaymentModal({
         cancelUrl: `${window.location.origin}/upgrade?canceled=true`,
       });
 
-      // Track successful payment initiation
-      if (typeof window !== 'undefined' && window.gtag) {
-        window.gtag('event', 'payment_success', {
-          event_category: 'upgrade',
-          event_label: plan,
-          value: planDetails.price
-        });
-      }
-
-      setStep('success');
-      
-      // Call success callback
-      if (onSuccess) {
-        onSuccess(plan);
-      }
+      // If we reach here, the redirect failed (successful redirects navigate away from page)
+      console.warn('Stripe checkout redirect did not complete - user may have stayed on page');
 
     } catch (err: any) {
       console.error('Payment error:', err);
       setStep('error');
+      setIsProcessing(false);
       
       // Track payment error
       if (typeof window !== 'undefined' && window.gtag) {
@@ -199,9 +159,8 @@ export default function StripePaymentModal({
       if (onError) {
         onError(err.message || 'An error occurred during payment');
       }
-    } finally {
-      setIsProcessing(false);
     }
+    // Note: No finally block - let the processing state persist during redirect
   };
 
   // Reset modal state when opened/closed

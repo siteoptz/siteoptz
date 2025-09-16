@@ -56,14 +56,19 @@ export const useStripeCheckout = () => {
       }
       
       console.log('Redirecting to Stripe checkout with sessionId:', data.sessionId);
+      console.log('Stripe instance:', stripe);
 
       const { error: stripeError } = await stripe.redirectToCheckout({
         sessionId: data.sessionId,
       });
 
       if (stripeError) {
+        console.error('Stripe redirect error:', stripeError);
         throw new Error(stripeError.message);
       }
+
+      // If we reach this point, the redirect should have happened
+      console.log('Stripe redirect completed without error');
 
     } catch (err: any) {
       console.error('Checkout error:', err);
