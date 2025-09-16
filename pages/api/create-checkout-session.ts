@@ -1,5 +1,6 @@
 import { NextApiRequest, NextApiResponse } from 'next';
-import { getSession } from 'next-auth/react';
+import { getServerSession } from 'next-auth';
+import { authOptions } from './auth/[...nextauth]';
 import Stripe from 'stripe';
 
 const stripe = new Stripe(process.env.STRIPE_SECRET_KEY!, {
@@ -12,6 +13,7 @@ interface CheckoutRequest {
   billingCycle: 'monthly' | 'yearly';
   successUrl?: string;
   cancelUrl?: string;
+  customerEmail?: string;
 }
 
 export default async function handler(
@@ -23,14 +25,16 @@ export default async function handler(
   }
 
   try {
-    // Get user session
-    const session = await getSession({ req });
+    // Get user session (optional for new subscriptions)
+    const session = await getServerSession(req, res, authOptions);
     
-    if (!session?.user?.email) {
-      return res.status(401).json({ message: 'User not authenticated' });
-    }
-
-    const { plan, billingCycle, successUrl, cancelUrl }: CheckoutRequest = req.body;
+    console.log('Session in create-checkout-session:', session);
+    
+    const { plan, billingCycle, successUrl, cancelUrl, customerEmail }: CheckoutRequest = req.body;
+    
+    // For logged-in users, we'll use the session email
+    // For non-logged-in users, Stripe will collect the email during checkout
+    const userEmail = session?.user?.email || customerEmail;
 
     // Map plans to Stripe price IDs
     const priceIdMap = {
@@ -59,8 +63,7 @@ export default async function handler(
     }
     
     // Create Stripe checkout session with price ID
-    const checkoutSession = await stripe.checkout.sessions.create({
-      customer_email: session.user.email,
+    const checkoutSessionParams: any = {
       line_items: [
         {
           price: selectedPriceId,
@@ -73,13 +76,15 @@ export default async function handler(
       metadata: {
         plan,
         billingCycle,
-        userId: session.user.email,
+        ...(userEmail && { userId: userEmail }),
+        isLoggedIn: !!session?.user,
       },
       subscription_data: {
         metadata: {
           plan,
           billingCycle,
-          userId: session.user.email,
+          ...(userEmail && { userId: userEmail }),
+          isLoggedIn: !!session?.user,
         },
       },
       automatic_tax: {
@@ -89,7 +94,13 @@ export default async function handler(
         enabled: true,
       },
       allow_promotion_codes: true,
-    });
+    };
+
+    if (userEmail) {
+      checkoutSessionParams.customer_email = userEmail;
+    }
+
+    const checkoutSession = await stripe.checkout.sessions.create(checkoutSessionParams);
 
     // Track checkout initiation
     console.log('Stripe checkout session created:', {
@@ -97,7 +108,8 @@ export default async function handler(
       plan,
       billingCycle,
       priceId: selectedPriceId,
-      email: session.user.email,
+      ...(userEmail && { email: userEmail }),
+      isLoggedIn: !!session?.user,
     });
 
     res.status(200).json({

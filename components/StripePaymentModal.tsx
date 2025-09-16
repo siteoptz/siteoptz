@@ -120,7 +120,7 @@ export default function StripePaymentModal({
         });
       }
 
-      // If user is not logged in, redirect to login first
+      // If user is not logged in, proceed with Stripe checkout
       if (!isLoggedIn) {
         // Store intended upgrade in localStorage
         if (typeof window !== 'undefined') {
@@ -132,9 +132,29 @@ export default function StripePaymentModal({
           }));
         }
         
-        // Close modal and redirect to login
-        onClose();
-        window.location.href = '/#login';
+        // Proceed with Stripe checkout - Stripe will collect email
+        await redirectToCheckout({
+          plan,
+          billingCycle,
+          successUrl: `${window.location.origin}/dashboard?upgraded=true&plan=${plan}`,
+          cancelUrl: `${window.location.origin}/upgrade?canceled=true`,
+        });
+
+        // Track successful payment initiation
+        if (typeof window !== 'undefined' && window.gtag) {
+          window.gtag('event', 'payment_success', {
+            event_category: 'upgrade',
+            event_label: plan,
+            value: planDetails.price
+          });
+        }
+
+        setStep('success');
+        
+        // Call success callback
+        if (onSuccess) {
+          onSuccess(plan);
+        }
         return;
       }
 

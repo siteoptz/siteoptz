@@ -22,11 +22,6 @@ export const useStripeCheckout = () => {
   const { data: session } = useSession();
 
   const redirectToCheckout = async (options: CheckoutOptions) => {
-    if (!session?.user) {
-      setError('Please log in to upgrade your plan');
-      return;
-    }
-
     setLoading(true);
     setError(null);
 

@@ -1,7 +1,9 @@
 import { useEffect, useState } from 'react';
 import { loadStripe } from '@stripe/stripe-js';
+import { useSession, signIn } from 'next-auth/react';
 
 export default function TestStripe() {
+  const { data: session, status } = useSession();
   const [stripeKey, setStripeKey] = useState<string | undefined>();
   const [stripeLoaded, setStripeLoaded] = useState(false);
   const [error, setError] = useState<string | null>(null);
@@ -59,6 +61,19 @@ export default function TestStripe() {
       
       <div className="space-y-4 max-w-2xl">
         <div className="p-4 bg-gray-900 rounded-lg">
+          <h2 className="font-semibold mb-2">Authentication Status:</h2>
+          <p>Status: {status}</p>
+          <p>User: {session?.user?.email || 'Not logged in'}</p>
+          {!session && (
+            <button
+              onClick={() => signIn()}
+              className="mt-2 px-4 py-2 bg-green-600 hover:bg-green-700 rounded text-sm"
+            >
+              Sign In to Test Checkout
+            </button>
+          )}
+        </div>
+        <div className="p-4 bg-gray-900 rounded-lg">
           <h2 className="font-semibold mb-2">Environment Variables:</h2>
           <p>NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY: {stripeKey ? `${stripeKey.substring(0, 20)}...` : 'NOT SET'}</p>
           <p className="text-xs text-gray-400 mt-2">
@@ -80,12 +95,16 @@ export default function TestStripe() {
 
         <div className="p-4 bg-gray-900 rounded-lg">
           <h2 className="font-semibold mb-4">Test Checkout API:</h2>
-          <button
-            onClick={testCheckout}
-            className="px-6 py-2 bg-blue-600 hover:bg-blue-700 rounded-lg"
-          >
-            Test Create Checkout Session
-          </button>
+          {session ? (
+            <button
+              onClick={testCheckout}
+              className="px-6 py-2 bg-blue-600 hover:bg-blue-700 rounded-lg"
+            >
+              Test Create Checkout Session
+            </button>
+          ) : (
+            <p className="text-yellow-400">Please sign in first to test checkout</p>
+          )}
         </div>
 
         <div className="p-4 bg-gray-900 rounded-lg">

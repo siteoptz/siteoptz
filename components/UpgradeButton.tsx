@@ -94,7 +94,7 @@ export default function UpgradeButton({
         });
       }
 
-      // If user is not logged in, show register modal
+      // If user is not logged in, collect email and proceed with Stripe checkout
       if (!session?.user) {
         // Store the intended plan in localStorage for after login
         if (typeof window !== 'undefined') {
@@ -106,11 +106,18 @@ export default function UpgradeButton({
           }));
         }
         
-        // Call the register callback if provided, otherwise fallback to navigation
-        if (onShowRegister) {
-          onShowRegister(`${plan.charAt(0).toUpperCase() + plan.slice(1)} Plan`);
-        } else {
-          router.push('/#register');
+        // For non-logged-in users, we'll let Stripe collect the email
+        // The API will handle this case by not requiring authentication
+        await redirectToCheckout({
+          plan,
+          billingCycle,
+          successUrl: `${window.location.origin}/dashboard?upgraded=true&plan=${plan}`,
+          cancelUrl: `${window.location.origin}/upgrade?canceled=true`,
+        });
+
+        // Call success callback
+        if (onUpgradeSuccess) {
+          onUpgradeSuccess(plan);
         }
         return;
       }
