@@ -90,6 +90,8 @@ export function useUpgradeFlow(): UpgradeFlowState & UpgradeFlowActions {
   }, [session]);
 
   const initiateUpgrade = useCallback(async (plan: 'starter' | 'pro', billingCycle: 'monthly' | 'yearly' = 'yearly') => {
+    console.log('DEBUG - initiateUpgrade called:', { plan, billingCycle, isLoggedIn });
+    
     try {
       // Track upgrade initiation
       if (typeof window !== 'undefined' && window.gtag) {
@@ -102,6 +104,7 @@ export function useUpgradeFlow(): UpgradeFlowState & UpgradeFlowActions {
       }
 
       if (!isLoggedIn) {
+        console.log('DEBUG - User not logged in, redirecting to login');
         // Store intended upgrade and redirect to login
         const upgradeData = {
           plan,
@@ -122,6 +125,7 @@ export function useUpgradeFlow(): UpgradeFlowState & UpgradeFlowActions {
       }
 
       // User is logged in, proceed with Stripe checkout
+      console.log('DEBUG - User logged in, calling redirectToCheckout');
       await redirectToCheckout({
         plan,
         billingCycle,
