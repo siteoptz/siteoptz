@@ -1,9 +1,5 @@
 import { useState } from 'react';
-import { useSession } from 'next-auth/react';
 import { loadStripe } from '@stripe/stripe-js';
-
-// Debug: Log the publishable key (remove in production)
-console.log('Stripe Publishable Key:', process.env.NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY?.substring(0, 20) + '...');
 
 const stripePromise = process.env.NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY 
   ? loadStripe(process.env.NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY)
@@ -19,7 +15,6 @@ interface CheckoutOptions {
 export const useStripeCheckout = () => {
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
-  const { data: session } = useSession();
 
   const redirectToCheckout = async (options: CheckoutOptions) => {
     setLoading(true);
@@ -69,11 +64,14 @@ export const useStripeCheckout = () => {
 
       // If we reach this point, the redirect should have happened
       console.log('Stripe redirect completed without error');
+      
+      // Note: We don't setLoading(false) here because the page will navigate away
+      // The loading state will be reset when the component unmounts
 
     } catch (err: any) {
       console.error('Checkout error:', err);
       setError(err.message || 'An error occurred during checkout');
-    } finally {
+      // Only set loading to false in error cases where we stay on the same page
       setLoading(false);
     }
   };

@@ -138,8 +138,15 @@ export default function StripePaymentModal({
         cancelUrl: `${window.location.origin}/upgrade?canceled=true`,
       });
 
-      // If we reach here, the redirect failed (successful redirects navigate away from page)
-      console.warn('Stripe checkout redirect did not complete - user may have stayed on page');
+      // If we reach here, the redirect should have happened
+      // Set a timeout to reset the processing state if user stays on page (e.g., popup blocked)
+      setTimeout(() => {
+        if (isProcessing) {
+          setStep('confirm');
+          setIsProcessing(false);
+          console.warn('Stripe checkout redirect may have been blocked. Please check popup blocker.');
+        }
+      }, 3000);
 
     } catch (err: any) {
       console.error('Payment error:', err);
@@ -160,7 +167,6 @@ export default function StripePaymentModal({
         onError(err.message || 'An error occurred during payment');
       }
     }
-    // Note: No finally block - let the processing state persist during redirect
   };
 
   // Reset modal state when opened/closed
