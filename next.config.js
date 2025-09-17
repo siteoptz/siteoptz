@@ -170,11 +170,6 @@ const nextConfig = {
   async redirects() {
     return [
       {
-        source: '/categories/:path*',
-        destination: '/tools',
-        permanent: true,
-      },
-      {
         source: '/compare/:tool1/vs/:tool2',
         destination: '/tools',
         permanent: true,
