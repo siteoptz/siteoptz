@@ -53,8 +53,8 @@ const LoginModal: React.FC<LoginModalProps> = ({ isOpen, onClose, isNewUser = fa
     setIsLoading(true);
     setError('');
     
-    // Validate required fields for new users
-    if (effectiveIsNewUser) {
+    // Validate required fields for new users with intended upgrade (questions are shown)
+    if (effectiveIsNewUser && isNewUser) {
       if (!aiToolsInterest) {
         setError('Please select your AI tools interest');
         setIsLoading(false);
@@ -100,8 +100,8 @@ const LoginModal: React.FC<LoginModalProps> = ({ isOpen, onClose, isNewUser = fa
       return;
     }
     
-    // Validate required fields for new users
-    if (effectiveIsNewUser) {
+    // Validate required fields for new users with intended upgrade (questions are shown)
+    if (effectiveIsNewUser && isNewUser) {
       if (!aiToolsInterest) {
         setError('Please select your AI tools interest');
         return;
@@ -134,8 +134,8 @@ const LoginModal: React.FC<LoginModalProps> = ({ isOpen, onClose, isNewUser = fa
       return;
     }
     
-    // Validate required fields for new users
-    if (effectiveIsNewUser) {
+    // Validate required fields for new users with intended upgrade (questions are shown)
+    if (effectiveIsNewUser && isNewUser) {
       if (!aiToolsInterest) {
         setError('Please select your AI tools interest');
         return;
@@ -281,8 +281,8 @@ const LoginModal: React.FC<LoginModalProps> = ({ isOpen, onClose, isNewUser = fa
             </div>
           )}
 
-          {/* New User Questions */}
-          {effectiveIsNewUser && (
+          {/* New User Questions - Only show for users with intended upgrade (from "Select" button) */}
+          {effectiveIsNewUser && isNewUser && (
             <div className="space-y-4 mb-6">
               <div>
                 <label className="block text-sm font-medium text-gray-300 mb-2">

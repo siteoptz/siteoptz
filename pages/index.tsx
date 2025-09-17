@@ -1029,7 +1029,7 @@ export default function HomePage({}: HomePageProps) {
       <LoginModal
         isOpen={showLogin}
         isNewUser={!!intendedUpgrade} // Show "Welcome to SiteOptz!" if user has intended upgrade
-        allowUserTypeToggle={!intendedUpgrade} // Allow toggle only if no intended upgrade (direct login)
+        allowUserTypeToggle={false} // Direct login should not have toggle - keep it simple
         onClose={() => {
           setShowLogin(false);
           // Clear hash when modal is closed
