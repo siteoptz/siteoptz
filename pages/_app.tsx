@@ -4,6 +4,7 @@ import { useRouter } from 'next/router'
 import { SessionProvider } from 'next-auth/react'
 import { Analytics } from '@vercel/analytics/react'
 import Layout from '../components/Layout'
+import OAuthBusinessInfoHandler from '../components/OAuthBusinessInfoHandler'
 import initAnalytics, { trackPageView } from '../utils/analytics-init'
 import '../styles/globals.css'
 import '../styles/comparisons.css'
@@ -33,6 +34,7 @@ export default function App({ Component, pageProps }: AppProps) {
       <Layout>
         <Component {...pageProps} />
       </Layout>
+      <OAuthBusinessInfoHandler />
       <Analytics />
     </SessionProvider>
   )

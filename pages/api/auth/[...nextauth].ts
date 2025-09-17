@@ -2,7 +2,8 @@ import NextAuth, { NextAuthOptions } from 'next-auth'
 import GoogleProvider from 'next-auth/providers/google'
 import CredentialsProvider from 'next-auth/providers/credentials'
 import EmailProvider from 'next-auth/providers/email'
-import { createGoHighLevelContact, sendWelcomeEmail, sendAdminNotificationEmail } from '../../../lib/gohighlevel-service'
+import { sendWelcomeEmail, sendAdminNotificationEmail } from '../../../lib/gohighlevel-service'
+const SiteOptzGoHighLevel = require('../../../utils/siteoptz-gohighlevel')
 
 export const authOptions: NextAuthOptions = {
   providers: [
@@ -82,18 +83,92 @@ export const authOptions: NextAuthOptions = {
         if (user?.email) {
           console.log('Processing user registration/signin for:', user.email);
           
+          // Try to get business information if available
+          let businessInfo = null;
+          try {
+            const response = await fetch(`${process.env.NEXTAUTH_URL}/api/get-oauth-business-info?email=${encodeURIComponent(user.email)}`);
+            if (response.ok) {
+              const result = await response.json();
+              if (result.success) {
+                businessInfo = result.data;
+                console.log('✅ Retrieved business info for OAuth user:', businessInfo);
+              }
+            }
+          } catch (error) {
+            console.log('No business info found for OAuth user (this is normal for login)');
+          }
+
           const userData = {
             email: user.email,
             name: user.name || undefined,
             provider: account?.provider || 'credentials',
             plan: 'free', // Default to free plan for new registrations
+            // Use business information if available, otherwise use descriptive defaults
+            company: businessInfo ? `Business Size: ${businessInfo.businessSize}` : `OAuth sign-in (${account?.provider || 'credentials'})`,
+            companySize: businessInfo ? businessInfo.businessSize : `OAuth sign-in (${account?.provider || 'credentials'})`,
+            interests: businessInfo ? businessInfo.aiToolsInterest : `OAuth sign-in (${account?.provider || 'credentials'})`,
           };
 
           console.log('User data to process:', JSON.stringify(userData, null, 2));
 
-          // Create GoHighLevel contact (it will handle duplicates)
-          console.log('Attempting to create GoHighLevel contact...');
-          const ghlResult = await createGoHighLevelContact(userData);
+          // Create GoHighLevel contact using SiteOptzGoHighLevel class (same as form registration)
+          console.log('Attempting to create GoHighLevel contact with SiteOptzGoHighLevel...');
+          
+          let ghlResult: { success: boolean; contactId?: string; opportunityId?: string; error?: string } = { success: false };
+          
+          // Check if GoHighLevel integration is enabled
+          const isGHLEnabled = process.env.ENABLE_GHL === 'true';
+          console.log('🔍 GoHighLevel Environment Check:');
+          console.log('- ENABLE_GHL:', process.env.ENABLE_GHL);
+          console.log('- API Key present:', !!process.env.GOHIGHLEVEL_API_KEY);
+          console.log('- Location ID present:', !!process.env.GOHIGHLEVEL_LOCATION_ID);
+          console.log('- Is Enabled:', isGHLEnabled);
+          
+          if (isGHLEnabled && process.env.GOHIGHLEVEL_API_KEY && process.env.GOHIGHLEVEL_LOCATION_ID) {
+            try {
+              // Initialize SiteOptzGoHighLevel class (same as form registration)
+              const gohighlevel = new SiteOptzGoHighLevel(
+                process.env.GOHIGHLEVEL_API_KEY,
+                process.env.GOHIGHLEVEL_LOCATION_ID
+              );
+              
+              // Prepare data for SiteOptz GoHighLevel integration (same format as form registration)
+              const subscriberData = {
+                email: userData.email,
+                firstName: userData.name?.split(' ')[0] || '',
+                lastName: userData.name?.split(' ').slice(1).join(' ') || '',
+                source: businessInfo ? `OAuth Registration - ${userData.provider} (with business info)` : `OAuth Registration - ${userData.provider}`,
+                aiToolsInterest: businessInfo ? businessInfo.aiToolsInterest : 'OAuth sign-in - not collected',
+                businessSize: businessInfo ? businessInfo.businessSize : 'OAuth sign-in - not collected',
+                registrationMethod: userData.provider,
+                planType: 'free'
+              };
+
+              // Use addFreeTrialSubscriber method from comprehensive class
+              const result = await gohighlevel.addFreeTrialSubscriber(subscriberData);
+              
+              if (result.success) {
+                console.log('✅ Successfully added OAuth user to GoHighLevel using SiteOptzGoHighLevel');
+                console.log('Contact ID:', result.contact?.id);
+                console.log('Pipeline:', result.pipeline);
+                ghlResult = { 
+                  success: true, 
+                  contactId: result.contact?.id,
+                  opportunityId: result.pipeline?.id
+                };
+              } else {
+                console.error('❌ Failed to add OAuth user to GoHighLevel');
+                ghlResult = { success: false };
+              }
+            } catch (error) {
+              console.error('Error in SiteOptz GoHighLevel OAuth registration:', error);
+              ghlResult = { success: false, error: error instanceof Error ? error.message : 'Unknown error' };
+            }
+          } else {
+            console.log('⚠️ GoHighLevel integration disabled or credentials missing for OAuth user');
+            ghlResult = { success: false, error: 'Integration disabled or credentials missing' };
+          }
+          
           console.log('GoHighLevel result:', JSON.stringify(ghlResult, null, 2));
           
           if (ghlResult.success) {

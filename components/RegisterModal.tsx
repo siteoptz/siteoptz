@@ -155,6 +155,17 @@ const RegisterModal: React.FC<RegisterModalProps> = ({
     }
     
     try {
+      // Store business information temporarily for OAuth callback to access
+      if (!isLogin) {
+        sessionStorage.setItem('pendingOAuthBusinessInfo', JSON.stringify({
+          aiToolsInterest: formData.aiToolsInterest,
+          businessSize: formData.businessSize,
+          planName: planName,
+          timestamp: Date.now()
+        }));
+        console.log('Stored business info in sessionStorage for OAuth');
+      }
+      
       const result = await signIn('google', {
         callbackUrl: '/dashboard',
         redirect: false,
