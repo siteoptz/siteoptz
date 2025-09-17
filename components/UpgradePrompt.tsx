@@ -87,11 +87,11 @@ export const UpgradePrompt: React.FC<UpgradePromptProps> = ({
 
   if (variant === 'inline') {
     return (
-      <div className="text-center p-6 border-2 border-dashed border-gray-300 rounded-lg">
-        <div className="text-gray-500 mb-4">
-          {config.icon}
-          <h3 className="font-semibold mt-2">This feature requires {config.name} plan</h3>
-          <p className="text-sm">Upgrade to unlock {feature || 'this feature'}</p>
+      <div className="text-center p-6 border-2 border-dashed border-gray-600 rounded-lg bg-gray-800/30">
+        <div className="text-gray-300 mb-4">
+          <div className="flex justify-center mb-2">{config.icon}</div>
+          <h3 className="font-semibold mt-2 text-white">This feature requires {config.name} plan</h3>
+          <p className="text-sm text-gray-300">Upgrade to unlock {feature || 'this feature'}</p>
         </div>
         <button
           onClick={handleUpgrade}
@@ -105,28 +105,30 @@ export const UpgradePrompt: React.FC<UpgradePromptProps> = ({
 
   // Default card variant
   return (
-    <div className="bg-white border border-gray-200 rounded-xl p-6 shadow-lg">
+    <div className="bg-black border border-gray-800 rounded-xl p-6 shadow-lg">
       <div className="text-center">
-        <div className={`w-16 h-16 bg-${config.color}-100 rounded-full flex items-center justify-center mx-auto mb-4`}>
-          {config.icon}
+        <div className={`w-16 h-16 bg-${config.color}-500/20 border border-${config.color}-500/30 rounded-full flex items-center justify-center mx-auto mb-4`}>
+          <div className={`text-${config.color}-400`}>
+            {config.icon}
+          </div>
         </div>
-        <h3 className="text-xl font-bold text-gray-900 mb-2">
+        <h3 className="text-xl font-bold text-white mb-2">
           Unlock {feature || `${config.name} Features`}
         </h3>
-        <p className="text-gray-600 mb-4">
+        <p className="text-gray-300 mb-4">
           Upgrade to {config.name} plan to access this feature and many more
         </p>
         <div className="space-y-2 mb-6">
           {config.benefits.slice(0, 3).map((benefit, index) => (
-            <div key={index} className="flex items-center text-sm text-gray-600">
-              <div className="w-2 h-2 bg-green-500 rounded-full mr-2"></div>
+            <div key={index} className="flex items-center text-sm text-gray-300">
+              <div className="w-2 h-2 bg-green-400 rounded-full mr-2"></div>
               {benefit}
             </div>
           ))}
         </div>
         <div className="flex items-center justify-center space-x-4 mb-4">
-          <span className="text-3xl font-bold text-gray-900">${config.price}</span>
-          <span className="text-gray-600">/year</span>
+          <span className="text-3xl font-bold text-white">${config.price}</span>
+          <span className="text-gray-400">/year</span>
         </div>
         <button
           onClick={handleUpgrade}

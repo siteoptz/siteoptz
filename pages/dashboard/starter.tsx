@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { GetServerSideProps } from 'next';
 import { getServerSession } from 'next-auth/next';
 import { authOptions } from '../api/auth/[...nextauth]';
+import { useSession } from 'next-auth/react';
 import { useUserPlan } from '../../hooks/useUserPlan';
 import { DashboardHeader } from '../../components/dashboard/DashboardHeader';
 import { FeatureGate } from '../../components/FeatureGate';
@@ -30,7 +31,11 @@ import Link from 'next/link';
 
 export default function StarterDashboard() {
   const { userPlan, loading } = useUserPlan();
+  const { data: session } = useSession();
   const [activeTab, setActiveTab] = useState('overview');
+  
+  // Extract user name from session
+  const userName = session?.user?.name || 'User';
 
   if (loading) {
     return (
@@ -59,14 +64,14 @@ export default function StarterDashboard() {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-black">
-      <DashboardHeader userPlan={userPlan} userName="Starter User" />
+      <DashboardHeader userPlan={userPlan} userName={userName} />
 
       <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
         {/* Welcome Section */}
         <div className="mb-8">
           <h1 className="text-3xl font-bold text-white mb-2 flex items-center">
             <Zap className="w-8 h-8 text-blue-400 mr-3" />
-            Welcome to SiteOptz Starter
+            Welcome {userName} to SiteOptz {userPlan.plan.charAt(0).toUpperCase() + userPlan.plan.slice(1)}
           </h1>
           <p className="text-gray-300">
             Unlock unlimited comparisons, advanced analytics, and expert resources. Next billing: {new Date(Date.now() + 30 * 24 * 60 * 60 * 1000).toLocaleDateString()}
@@ -469,7 +474,7 @@ export default function StarterDashboard() {
           </div>
         </div>
 
-        {/* Upgrade to Pro Prompts */}
+        {/* Upgrade Prompts */}
         <div className="grid md:grid-cols-2 gap-6">
           <UpgradePrompt
             currentPlan="starter"
@@ -478,8 +483,8 @@ export default function StarterDashboard() {
           />
           <UpgradePrompt
             currentPlan="starter"
-            requiredPlan="pro"
-            feature="team collaboration tools and advanced analytics"
+            requiredPlan="enterprise"
+            feature="unlimited consultations, dedicated success manager, and on-site workshops"
           />
         </div>
       </main>
