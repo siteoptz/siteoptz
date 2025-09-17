@@ -93,8 +93,11 @@ export async function createGoHighLevelContact(userData: {
       return { success: false, error: `HTTP ${response.status}: ${error}`, contactData: contactData };
     }
   } catch (error) {
-    console.error('Error creating GoHighLevel contact:', error);
-    return { success: false, error: error instanceof Error ? error.message : 'Unknown error' };
+    console.error('💥 Network error creating GoHighLevel contact:', error);
+    console.log('🔄 GoHighLevel API network error, logging contact data for manual review:');
+    console.log('Contact data that would have been created:', JSON.stringify(contactData, null, 2));
+    console.log('📋 Manual action required: Add this contact to GoHighLevel manually');
+    return { success: false, error: error instanceof Error ? error.message : 'Unknown error', contactData: contactData };
   }
 }
 
