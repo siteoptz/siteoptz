@@ -1,6 +1,13 @@
 import { NextApiRequest, NextApiResponse } from 'next';
 import { sendEmail } from '../../lib/email-service';
 
+interface EmailResult {
+  success: boolean;
+  messageId?: string;
+  provider?: string;
+  error?: string;
+}
+
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method !== 'POST') {
     return res.status(405).json({ error: 'Method not allowed' });
@@ -15,18 +22,18 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       });
     }
 
-    const result = await sendEmail({ to, subject, html, text, from, bcc });
+    const result = await sendEmail({ to, subject, html, text, from, bcc }) as EmailResult;
 
     if (result.success) {
       res.status(200).json({
         success: true,
-        messageId: result.messageId,
-        provider: result.provider
+        messageId: result.messageId || null,
+        provider: result.provider || 'unknown'
       });
     } else {
       res.status(500).json({
         success: false,
-        error: result.error
+        error: result.error || 'Unknown error'
       });
     }
   } catch (error: any) {
