@@ -424,62 +424,424 @@ const UpgradePage: React.FC = () => {
           </div>
         </section>
 
-        {/* Feature Comparison Table */}
-        <section className="py-20 px-6">
+        {/* Comprehensive Compare Plans Section */}
+        <section className="py-20 px-6 bg-gray-900/50">
           <div className="max-w-7xl mx-auto">
-            <h2 className="text-3xl font-bold text-white text-center mb-12">
-              Compare Plans
-            </h2>
-            
-            <div className="overflow-x-auto">
-              <table className="w-full">
-                <thead>
-                  <tr className="border-b border-gray-700">
-                    <th className="text-left py-4 px-6 text-gray-400">Features</th>
-                    <th className="text-center py-4 px-6 text-gray-400">Free</th>
-                    <th className="text-center py-4 px-6 text-white bg-gray-800/50">Starter</th>
-                    <th className="text-center py-4 px-6 text-white">Pro</th>
-                    <th className="text-center py-4 px-6 text-white">Enterprise</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr className="border-b border-gray-800">
-                    <td className="py-4 px-6 text-gray-300">AI Tool Comparisons</td>
-                    <td className="text-center py-4 px-6 text-gray-500">3/day</td>
-                    <td className="text-center py-4 px-6 text-white bg-gray-800/50">Unlimited</td>
-                    <td className="text-center py-4 px-6 text-white">Unlimited</td>
-                    <td className="text-center py-4 px-6 text-white">Unlimited</td>
-                  </tr>
-                  <tr className="border-b border-gray-800">
-                    <td className="py-4 px-6 text-gray-300">Expert Consultations</td>
-                    <td className="text-center py-4 px-6"><X className="w-5 h-5 text-gray-500 mx-auto" /></td>
-                    <td className="text-center py-4 px-6 bg-gray-800/50"><X className="w-5 h-5 text-gray-500 mx-auto" /></td>
-                    <td className="text-center py-4 px-6 text-white">4/month</td>
-                    <td className="text-center py-4 px-6 text-white">Unlimited</td>
-                  </tr>
-                  <tr className="border-b border-gray-800">
-                    <td className="py-4 px-6 text-gray-300">Implementation Roadmaps</td>
-                    <td className="text-center py-4 px-6 text-gray-500">Basic</td>
-                    <td className="text-center py-4 px-6 text-white bg-gray-800/50">Advanced</td>
-                    <td className="text-center py-4 px-6 text-white">Custom</td>
-                    <td className="text-center py-4 px-6 text-white">Custom</td>
-                  </tr>
-                  <tr className="border-b border-gray-800">
-                    <td className="py-4 px-6 text-gray-300">Team Collaboration</td>
-                    <td className="text-center py-4 px-6"><X className="w-5 h-5 text-gray-500 mx-auto" /></td>
-                    <td className="text-center py-4 px-6 bg-gray-800/50"><X className="w-5 h-5 text-gray-500 mx-auto" /></td>
-                    <td className="text-center py-4 px-6"><Check className="w-5 h-5 text-green-400 mx-auto" /></td>
-                    <td className="text-center py-4 px-6"><Check className="w-5 h-5 text-green-400 mx-auto" /></td>
-                  </tr>
-                  <tr className="border-b border-gray-800">
-                    <td className="py-4 px-6 text-gray-300">Priority Support</td>
-                    <td className="text-center py-4 px-6"><X className="w-5 h-5 text-gray-500 mx-auto" /></td>
-                    <td className="text-center py-4 px-6 bg-gray-800/50 text-white">Email</td>
-                    <td className="text-center py-4 px-6 text-white">Phone + Email</td>
-                    <td className="text-center py-4 px-6 text-white">Dedicated Manager</td>
-                  </tr>
-                </tbody>
-              </table>
+            <div className="text-center mb-16">
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+                Compare Plans
+              </h2>
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                Choose the plan that matches your AI implementation needs. All plans include our core AI tool database and expert analysis.
+              </p>
+            </div>
+
+            {/* Feature Comparison Tables */}
+            <div className="space-y-16">
+              
+              {/* AI Tool Discovery & Analysis */}
+              <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-gray-700">
+                <h3 className="text-2xl font-bold text-white mb-8 text-center">
+                  🚀 AI Tool Discovery & Analysis
+                </h3>
+                <p className="text-gray-400 text-center mb-8 max-w-2xl mx-auto">
+                  Stop wasting months researching AI tools. Get instant access to pre-validated tools with 50+ hours of analysis already done for you.
+                </p>
+                
+                <div className="overflow-x-auto">
+                  <table className="w-full">
+                    <thead>
+                      <tr className="border-b border-gray-700">
+                        <th className="text-left py-4 px-6 text-gray-400 font-medium">Feature</th>
+                        <th className="text-center py-4 px-6 text-gray-400 font-medium">Free</th>
+                        <th className="text-center py-4 px-6 text-white font-medium bg-blue-500/20">Starter</th>
+                        <th className="text-center py-4 px-6 text-white font-medium">Pro</th>
+                        <th className="text-center py-4 px-6 text-white font-medium">Enterprise</th>
+                      </tr>
+                    </thead>
+                    <tbody className="text-sm">
+                      <tr className="border-b border-gray-800">
+                        <td className="py-4 px-6 text-gray-300">Daily AI Tool Spotlight</td>
+                        <td className="text-center py-4 px-6 text-green-400">✓</td>
+                        <td className="text-center py-4 px-6 text-green-400 bg-blue-500/10">✓</td>
+                        <td className="text-center py-4 px-6 text-green-400">✓</td>
+                        <td className="text-center py-4 px-6 text-green-400">✓</td>
+                      </tr>
+                      <tr className="border-b border-gray-800">
+                        <td className="py-4 px-6 text-gray-300">AI Tool Database Access</td>
+                        <td className="text-center py-4 px-6 text-gray-500">Limited (3/day)</td>
+                        <td className="text-center py-4 px-6 text-green-400 bg-blue-500/10">Unlimited</td>
+                        <td className="text-center py-4 px-6 text-green-400">Unlimited</td>
+                        <td className="text-center py-4 px-6 text-green-400">Unlimited</td>
+                      </tr>
+                      <tr className="border-b border-gray-800">
+                        <td className="py-4 px-6 text-gray-300">Advanced Filtering & Search</td>
+                        <td className="text-center py-4 px-6 text-gray-500">Basic</td>
+                        <td className="text-center py-4 px-6 text-green-400 bg-blue-500/10">✓</td>
+                        <td className="text-center py-4 px-6 text-green-400">✓</td>
+                        <td className="text-center py-4 px-6 text-green-400">✓</td>
+                      </tr>
+                      <tr className="border-b border-gray-800">
+                        <td className="py-4 px-6 text-gray-300">Trend Analysis & Market Signals</td>
+                        <td className="text-center py-4 px-6 text-gray-500">Daily Only</td>
+                        <td className="text-center py-4 px-6 text-green-400 bg-blue-500/10">✓</td>
+                        <td className="text-center py-4 px-6 text-green-400">✓</td>
+                        <td className="text-center py-4 px-6 text-green-400">✓</td>
+                      </tr>
+                      <tr className="border-b border-gray-800">
+                        <td className="py-4 px-6 text-gray-300">Custom Tool Recommendations</td>
+                        <td className="text-center py-4 px-6 text-gray-500">-</td>
+                        <td className="text-center py-4 px-6 text-green-400 bg-blue-500/10">✓</td>
+                        <td className="text-center py-4 px-6 text-green-400">✓</td>
+                        <td className="text-center py-4 px-6 text-green-400">✓</td>
+                      </tr>
+                      <tr className="border-b border-gray-800">
+                        <td className="py-4 px-6 text-gray-300">Pro Tool Picks (Top 5%)</td>
+                        <td className="text-center py-4 px-6 text-gray-500">-</td>
+                        <td className="text-center py-4 px-6 text-gray-500">-</td>
+                        <td className="text-center py-4 px-6 text-green-400">✓</td>
+                        <td className="text-center py-4 px-6 text-green-400">✓</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+
+              {/* Implementation & Strategy */}
+              <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-gray-700">
+                <h3 className="text-2xl font-bold text-white mb-8 text-center">
+                  🎯 Implementation & Strategy
+                </h3>
+                <p className="text-gray-400 text-center mb-8 max-w-2xl mx-auto">
+                  50+ hours of implementation research done for you on every AI tool. Get expert guidance to implement faster and avoid costly mistakes.
+                </p>
+                
+                <div className="overflow-x-auto">
+                  <table className="w-full">
+                    <thead>
+                      <tr className="border-b border-gray-700">
+                        <th className="text-left py-4 px-6 text-gray-400 font-medium">Feature</th>
+                        <th className="text-center py-4 px-6 text-gray-400 font-medium">Free</th>
+                        <th className="text-center py-4 px-6 text-white font-medium bg-blue-500/20">Starter</th>
+                        <th className="text-center py-4 px-6 text-white font-medium">Pro</th>
+                        <th className="text-center py-4 px-6 text-white font-medium">Enterprise</th>
+                      </tr>
+                    </thead>
+                    <tbody className="text-sm">
+                      <tr className="border-b border-gray-800">
+                        <td className="py-4 px-6 text-gray-300">Implementation Roadmaps</td>
+                        <td className="text-center py-4 px-6 text-gray-500">Basic (3 guides)</td>
+                        <td className="text-center py-4 px-6 text-green-400 bg-blue-500/10">50+ Guides</td>
+                        <td className="text-center py-4 px-6 text-green-400">50+ Guides</td>
+                        <td className="text-center py-4 px-6 text-green-400">50+ Guides</td>
+                      </tr>
+                      <tr className="border-b border-gray-800">
+                        <td className="py-4 px-6 text-gray-300">ROI Analysis & Calculations</td>
+                        <td className="text-center py-4 px-6 text-gray-500">Daily Only</td>
+                        <td className="text-center py-4 px-6 text-green-400 bg-blue-500/10">✓</td>
+                        <td className="text-center py-4 px-6 text-green-400">✓</td>
+                        <td className="text-center py-4 px-6 text-green-400">✓</td>
+                      </tr>
+                      <tr className="border-b border-gray-800">
+                        <td className="py-4 px-6 text-gray-300">Integration Planning</td>
+                        <td className="text-center py-4 px-6 text-gray-500">Daily Only</td>
+                        <td className="text-center py-4 px-6 text-green-400 bg-blue-500/10">✓</td>
+                        <td className="text-center py-4 px-6 text-green-400">✓</td>
+                        <td className="text-center py-4 px-6 text-green-400">✓</td>
+                      </tr>
+                      <tr className="border-b border-gray-800">
+                        <td className="py-4 px-6 text-gray-300">Risk Assessment</td>
+                        <td className="text-center py-4 px-6 text-gray-500">Daily Only</td>
+                        <td className="text-center py-4 px-6 text-green-400 bg-blue-500/10">✓</td>
+                        <td className="text-center py-4 px-6 text-green-400">✓</td>
+                        <td className="text-center py-4 px-6 text-green-400">✓</td>
+                      </tr>
+                      <tr className="border-b border-gray-800">
+                        <td className="py-4 px-6 text-gray-300">Custom Implementation Plans</td>
+                        <td className="text-center py-4 px-6 text-gray-500">-</td>
+                        <td className="text-center py-4 px-6 text-gray-500">-</td>
+                        <td className="text-center py-4 px-6 text-green-400">✓</td>
+                        <td className="text-center py-4 px-6 text-green-400">✓</td>
+                      </tr>
+                      <tr className="border-b border-gray-800">
+                        <td className="py-4 px-6 text-gray-300">Strategic Planning Sessions</td>
+                        <td className="text-center py-4 px-6 text-gray-500">-</td>
+                        <td className="text-center py-4 px-6 text-gray-500">-</td>
+                        <td className="text-center py-4 px-6 text-gray-500">-</td>
+                        <td className="text-center py-4 px-6 text-green-400">✓</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+
+              {/* Expert Support & Consulting */}
+              <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-gray-700">
+                <h3 className="text-2xl font-bold text-white mb-8 text-center">
+                  👨‍💼 Expert Support & Consulting
+                </h3>
+                <p className="text-gray-400 text-center mb-8 max-w-2xl mx-auto">
+                  Get expert guidance to implement AI tools faster and avoid costly mistakes. Our AI implementation experts are here to help.
+                </p>
+                
+                <div className="overflow-x-auto">
+                  <table className="w-full">
+                    <thead>
+                      <tr className="border-b border-gray-700">
+                        <th className="text-left py-4 px-6 text-gray-400 font-medium">Feature</th>
+                        <th className="text-center py-4 px-6 text-gray-400 font-medium">Free</th>
+                        <th className="text-center py-4 px-6 text-white font-medium bg-blue-500/20">Starter</th>
+                        <th className="text-center py-4 px-6 text-white font-medium">Pro</th>
+                        <th className="text-center py-4 px-6 text-white font-medium">Enterprise</th>
+                      </tr>
+                    </thead>
+                    <tbody className="text-sm">
+                      <tr className="border-b border-gray-800">
+                        <td className="py-4 px-6 text-gray-300">Community Support</td>
+                        <td className="text-center py-4 px-6 text-green-400">✓</td>
+                        <td className="text-center py-4 px-6 text-green-400 bg-blue-500/10">✓</td>
+                        <td className="text-center py-4 px-6 text-green-400">✓</td>
+                        <td className="text-center py-4 px-6 text-green-400">✓</td>
+                      </tr>
+                      <tr className="border-b border-gray-800">
+                        <td className="py-4 px-6 text-gray-300">Priority Email Support</td>
+                        <td className="text-center py-4 px-6 text-gray-500">-</td>
+                        <td className="text-center py-4 px-6 text-green-400 bg-blue-500/10">✓</td>
+                        <td className="text-center py-4 px-6 text-green-400">✓</td>
+                        <td className="text-center py-4 px-6 text-green-400">✓</td>
+                      </tr>
+                      <tr className="border-b border-gray-800">
+                        <td className="py-4 px-6 text-gray-300">Weekly Expert Webinars</td>
+                        <td className="text-center py-4 px-6 text-gray-500">-</td>
+                        <td className="text-center py-4 px-6 text-green-400 bg-blue-500/10">✓</td>
+                        <td className="text-center py-4 px-6 text-green-400">✓</td>
+                        <td className="text-center py-4 px-6 text-green-400">✓</td>
+                      </tr>
+                      <tr className="border-b border-gray-800">
+                        <td className="py-4 px-6 text-gray-300">1-on-1 Expert Consultations</td>
+                        <td className="text-center py-4 px-6 text-gray-500">-</td>
+                        <td className="text-center py-4 px-6 text-gray-500">-</td>
+                        <td className="text-center py-4 px-6 text-green-400">4/month</td>
+                        <td className="text-center py-4 px-6 text-green-400">Unlimited</td>
+                      </tr>
+                      <tr className="border-b border-gray-800">
+                        <td className="py-4 px-6 text-gray-300">Priority Phone Support</td>
+                        <td className="text-center py-4 px-6 text-gray-500">-</td>
+                        <td className="text-center py-4 px-6 text-gray-500">-</td>
+                        <td className="text-center py-4 px-6 text-green-400">✓</td>
+                        <td className="text-center py-4 px-6 text-green-400">✓</td>
+                      </tr>
+                      <tr className="border-b border-gray-800">
+                        <td className="py-4 px-6 text-gray-300">Dedicated Success Manager</td>
+                        <td className="text-center py-4 px-6 text-gray-500">-</td>
+                        <td className="text-center py-4 px-6 text-gray-500">-</td>
+                        <td className="text-center py-4 px-6 text-gray-500">-</td>
+                        <td className="text-center py-4 px-6 text-green-400">✓</td>
+                      </tr>
+                      <tr className="border-b border-gray-800">
+                        <td className="py-4 px-6 text-gray-300">Quarterly Business Reviews</td>
+                        <td className="text-center py-4 px-6 text-gray-500">-</td>
+                        <td className="text-center py-4 px-6 text-gray-500">-</td>
+                        <td className="text-center py-4 px-6 text-green-400">✓</td>
+                        <td className="text-center py-4 px-6 text-green-400">✓</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+
+              {/* Team & Collaboration */}
+              <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-gray-700">
+                <h3 className="text-2xl font-bold text-white mb-8 text-center">
+                  👥 Team & Collaboration
+                </h3>
+                <p className="text-gray-400 text-center mb-8 max-w-2xl mx-auto">
+                  Scale AI implementation across your team with collaboration tools and management features.
+                </p>
+                
+                <div className="overflow-x-auto">
+                  <table className="w-full">
+                    <thead>
+                      <tr className="border-b border-gray-700">
+                        <th className="text-left py-4 px-6 text-gray-400 font-medium">Feature</th>
+                        <th className="text-center py-4 px-6 text-gray-400 font-medium">Free</th>
+                        <th className="text-center py-4 px-6 text-white font-medium bg-blue-500/20">Starter</th>
+                        <th className="text-center py-4 px-6 text-white font-medium">Pro</th>
+                        <th className="text-center py-4 px-6 text-white font-medium">Enterprise</th>
+                      </tr>
+                    </thead>
+                    <tbody className="text-sm">
+                      <tr className="border-b border-gray-800">
+                        <td className="py-4 px-6 text-gray-300">Team Members</td>
+                        <td className="text-center py-4 px-6 text-gray-500">1</td>
+                        <td className="text-center py-4 px-6 text-gray-500 bg-blue-500/10">1</td>
+                        <td className="text-center py-4 px-6 text-green-400">Up to 10</td>
+                        <td className="text-center py-4 px-6 text-green-400">Unlimited</td>
+                      </tr>
+                      <tr className="border-b border-gray-800">
+                        <td className="py-4 px-6 text-gray-300">Team Collaboration Tools</td>
+                        <td className="text-center py-4 px-6 text-gray-500">-</td>
+                        <td className="text-center py-4 px-6 text-gray-500">-</td>
+                        <td className="text-center py-4 px-6 text-green-400">✓</td>
+                        <td className="text-center py-4 px-6 text-green-400">✓</td>
+                      </tr>
+                      <tr className="border-b border-gray-800">
+                        <td className="py-4 px-6 text-gray-300">Shared Workspaces</td>
+                        <td className="text-center py-4 px-6 text-gray-500">-</td>
+                        <td className="text-center py-4 px-6 text-gray-500">-</td>
+                        <td className="text-center py-4 px-6 text-green-400">✓</td>
+                        <td className="text-center py-4 px-6 text-green-400">✓</td>
+                      </tr>
+                      <tr className="border-b border-gray-800">
+                        <td className="py-4 px-6 text-gray-300">Role-Based Access Control</td>
+                        <td className="text-center py-4 px-6 text-gray-500">-</td>
+                        <td className="text-center py-4 px-6 text-gray-500">-</td>
+                        <td className="text-center py-4 px-6 text-green-400">✓</td>
+                        <td className="text-center py-4 px-6 text-green-400">✓</td>
+                      </tr>
+                      <tr className="border-b border-gray-800">
+                        <td className="py-4 px-6 text-gray-300">Team Progress Tracking</td>
+                        <td className="text-center py-4 px-6 text-gray-500">-</td>
+                        <td className="text-center py-4 px-6 text-gray-500">-</td>
+                        <td className="text-center py-4 px-6 text-green-400">✓</td>
+                        <td className="text-center py-4 px-6 text-green-400">✓</td>
+                      </tr>
+                      <tr className="border-b border-gray-800">
+                        <td className="py-4 px-6 text-gray-300">Custom Training Programs</td>
+                        <td className="text-center py-4 px-6 text-gray-500">-</td>
+                        <td className="text-center py-4 px-6 text-gray-500">-</td>
+                        <td className="text-center py-4 px-6 text-gray-500">-</td>
+                        <td className="text-center py-4 px-6 text-green-400">✓</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+
+              {/* Advanced Features & Integrations */}
+              <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-gray-700">
+                <h3 className="text-2xl font-bold text-white mb-8 text-center">
+                  ⚡ Advanced Features & Integrations
+                </h3>
+                <p className="text-gray-400 text-center mb-8 max-w-2xl mx-auto">
+                  Get custom research in minutes, not weeks. AI agents work 24/7 for you with advanced integrations and automation.
+                </p>
+                
+                <div className="overflow-x-auto">
+                  <table className="w-full">
+                    <thead>
+                      <tr className="border-b border-gray-700">
+                        <th className="text-left py-4 px-6 text-gray-400 font-medium">Feature</th>
+                        <th className="text-center py-4 px-6 text-gray-400 font-medium">Free</th>
+                        <th className="text-center py-4 px-6 text-white font-medium bg-blue-500/20">Starter</th>
+                        <th className="text-center py-4 px-6 text-white font-medium">Pro</th>
+                        <th className="text-center py-4 px-6 text-white font-medium">Enterprise</th>
+                      </tr>
+                    </thead>
+                    <tbody className="text-sm">
+                      <tr className="border-b border-gray-800">
+                        <td className="py-4 px-6 text-gray-300">Export Comparison Reports</td>
+                        <td className="text-center py-4 px-6 text-gray-500">-</td>
+                        <td className="text-center py-4 px-6 text-green-400 bg-blue-500/10">✓</td>
+                        <td className="text-center py-4 px-6 text-green-400">✓</td>
+                        <td className="text-center py-4 px-6 text-green-400">✓</td>
+                      </tr>
+                      <tr className="border-b border-gray-800">
+                        <td className="py-4 px-6 text-gray-300">ROI Tracking Dashboard</td>
+                        <td className="text-center py-4 px-6 text-gray-500">-</td>
+                        <td className="text-center py-4 px-6 text-green-400 bg-blue-500/10">✓</td>
+                        <td className="text-center py-4 px-6 text-green-400">✓</td>
+                        <td className="text-center py-4 px-6 text-green-400">✓</td>
+                      </tr>
+                      <tr className="border-b border-gray-800">
+                        <td className="py-4 px-6 text-gray-300">API Access</td>
+                        <td className="text-center py-4 px-6 text-gray-500">-</td>
+                        <td className="text-center py-4 px-6 text-gray-500">-</td>
+                        <td className="text-center py-4 px-6 text-green-400">✓</td>
+                        <td className="text-center py-4 px-6 text-green-400">✓</td>
+                      </tr>
+                      <tr className="border-b border-gray-800">
+                        <td className="py-4 px-6 text-gray-300">White-label Reports</td>
+                        <td className="text-center py-4 px-6 text-gray-500">-</td>
+                        <td className="text-center py-4 px-6 text-gray-500">-</td>
+                        <td className="text-center py-4 px-6 text-green-400">✓</td>
+                        <td className="text-center py-4 px-6 text-green-400">✓</td>
+                      </tr>
+                      <tr className="border-b border-gray-800">
+                        <td className="py-4 px-6 text-gray-300">Advanced Analytics</td>
+                        <td className="text-center py-4 px-6 text-gray-500">-</td>
+                        <td className="text-center py-4 px-6 text-gray-500">-</td>
+                        <td className="text-center py-4 px-6 text-green-400">✓</td>
+                        <td className="text-center py-4 px-6 text-green-400">✓</td>
+                      </tr>
+                      <tr className="border-b border-gray-800">
+                        <td className="py-4 px-6 text-gray-300">Custom Integrations</td>
+                        <td className="text-center py-4 px-6 text-gray-500">-</td>
+                        <td className="text-center py-4 px-6 text-gray-500">-</td>
+                        <td className="text-center py-4 px-6 text-gray-500">-</td>
+                        <td className="text-center py-4 px-6 text-green-400">✓</td>
+                      </tr>
+                      <tr className="border-b border-gray-800">
+                        <td className="py-4 px-6 text-gray-300">SLA Guarantees</td>
+                        <td className="text-center py-4 px-6 text-gray-500">-</td>
+                        <td className="text-center py-4 px-6 text-gray-500">-</td>
+                        <td className="text-center py-4 px-6 text-gray-500">-</td>
+                        <td className="text-center py-4 px-6 text-green-400">✓</td>
+                      </tr>
+                      <tr className="border-b border-gray-800">
+                        <td className="py-4 px-6 text-gray-300">On-site Workshops</td>
+                        <td className="text-center py-4 px-6 text-gray-500">-</td>
+                        <td className="text-center py-4 px-6 text-gray-500">-</td>
+                        <td className="text-center py-4 px-6 text-gray-500">-</td>
+                        <td className="text-center py-4 px-6 text-green-400">✓</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+
+            {/* Call to Action */}
+            <div className="text-center mt-16">
+              <div className="bg-gradient-to-r from-blue-600/20 to-purple-600/20 border border-blue-500/30 rounded-2xl p-8 max-w-4xl mx-auto">
+                <h3 className="text-2xl font-bold text-white mb-4">
+                  Ready to Transform Your Business with AI?
+                </h3>
+                <p className="text-gray-300 mb-6">
+                  Join thousands of companies already seeing results. Start with our free plan or dive right in with Starter.
+                </p>
+                <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                  <button 
+                    onClick={() => handleUpgrade('Starter', 497)}
+                    disabled={loading || isLoading}
+                    className={`bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-blue-700 hover:to-purple-700 transition-all transform hover:scale-105 ${
+                      loading || isLoading ? 'opacity-50 cursor-not-allowed' : ''
+                    }`}
+                  >
+                    {loading || isLoading ? 'Processing...' : (isLoggedIn ? 'Upgrade Now' : 'Start Free Trial')}
+                  </button>
+                  <Link
+                    href="/contact"
+                    className="bg-white/10 backdrop-blur-md border border-white/20 text-white px-8 py-4 rounded-lg font-semibold hover:bg-white/15 transition-all"
+                  >
+                    Talk to Sales
+                  </Link>
+                </div>
+                <div className="mt-6 flex items-center justify-center gap-6 text-sm text-gray-400">
+                  <span className="flex items-center gap-1">
+                    <Shield className="w-4 h-4" />
+                    30-day money-back guarantee
+                  </span>
+                  <span className="flex items-center gap-1">
+                    <Check className="w-4 h-4" />
+                    No credit card required
+                  </span>
+                  <span className="flex items-center gap-1">
+                    <Users className="w-4 h-4" />
+                    10,000+ happy customers
+                  </span>
+                </div>
+              </div>
             </div>
           </div>
         </section>
