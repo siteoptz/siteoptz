@@ -53,7 +53,7 @@ export async function createGoHighLevelContact(userData: {
     console.log('Contact data:', JSON.stringify(contactData, null, 2));
     
     // GoHighLevel API call - include location ID if available
-    const headers = {
+    const headers: Record<string, string> = {
       'Authorization': `Bearer ${process.env.GOHIGHLEVEL_API_KEY}`,
       'Content-Type': 'application/json',
       'Version': '2021-07-28'

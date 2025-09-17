@@ -68,12 +68,11 @@ export const authOptions: NextAuthOptions = {
       }
       return session
     },
-    async signIn({ user, account, profile, isNewUser }) {
+    async signIn({ user, account, profile }) {
       try {
         console.log('=== SIGNIN CALLBACK TRIGGERED ===');
         console.log('User:', JSON.stringify(user, null, 2));
         console.log('Account:', JSON.stringify(account, null, 2));
-        console.log('IsNewUser:', isNewUser);
         console.log('Environment check:');
         console.log('- GOHIGHLEVEL_API_KEY:', process.env.GOHIGHLEVEL_API_KEY ? 'Set' : 'Missing');
         console.log('- EMAIL_FROM:', process.env.EMAIL_FROM);
