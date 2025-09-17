@@ -4,6 +4,8 @@ import { signIn } from 'next-auth/react';
 import { useRouter } from 'next/router';
 import { X, Mail, Lock, Eye, EyeOff } from 'lucide-react';
 
+// Force deployment trigger - useEffect import fix
+
 interface LoginModalProps {
   isOpen: boolean;
   onClose: () => void;
