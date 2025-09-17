@@ -418,194 +418,70 @@ const Header: React.FC = () => {
               overflow: 'auto',
               paddingBottom: '40px'
             }}>
-              <div style={{ marginBottom: '16px', borderBottom: '1px solid rgba(255,255,255,0.1)' }}>
-                <button
-                  onClick={() => {
-                    console.log('Categories accordion clicked');
-                    toggleMobileAccordion('categories');
-                  }}
-                  style={{
-                    width: '100%',
-                    display: 'flex',
-                    alignItems: 'center',
-                    justifyContent: 'space-between',
-                    background: 'none',
-                    border: 'none',
-                    color: '#06b6d4',
-                    fontSize: '16px',
-                    fontWeight: '600',
-                    padding: '12px 0',
-                    textTransform: 'uppercase',
-                    letterSpacing: '0.5px',
-                    cursor: 'pointer',
-                    WebkitTapHighlightColor: 'transparent'
-                  }}
-                >
-                  AI Categories
-                  <ChevronDown 
-                    style={{ 
-                      width: '16px', 
-                      height: '16px',
-                      transform: mobileAccordions.categories ? 'rotate(180deg)' : 'rotate(0deg)',
-                      transition: 'transform 0.2s ease'
-                    }} 
-                  />
-                </button>
-                {mobileAccordions.categories && (
-                  <div style={{ paddingBottom: '12px' }}>
-                    {accordionCategories.map((mainCategory) => (
-                      <div key={mainCategory.name} style={{ marginBottom: '8px' }}>
-                        <button
-                          onClick={() => toggleMobileCategoryAccordion(mainCategory.name)}
-                          style={{
-                            width: '100%',
-                            display: 'flex',
-                            alignItems: 'center',
-                            justifyContent: 'space-between',
-                            background: 'none',
-                            border: 'none',
-                            color: '#22d3ee',
-                            fontSize: '14px',
-                            fontWeight: '600',
-                            padding: '8px 16px',
-                            textTransform: 'uppercase',
-                            letterSpacing: '0.5px',
-                            cursor: 'pointer',
-                            WebkitTapHighlightColor: 'transparent',
-                            marginLeft: '8px'
-                          }}
-                        >
-                          {mainCategory.name}
-                          <ChevronDown 
-                            style={{ 
-                              width: '14px', 
-                              height: '14px',
-                              transform: mobileCategoryAccordions[mainCategory.name] ? 'rotate(180deg)' : 'rotate(0deg)',
-                              transition: 'transform 0.2s ease'
-                            }} 
-                          />
-                        </button>
-                        {mobileCategoryAccordions[mainCategory.name] && (
-                          <div style={{ marginLeft: '16px' }}>
-                            {mainCategory.subcategories.map((subcategory) => (
-                              <Link 
-                                key={subcategory.value}
-                                href={getCategoryUrl(subcategory.value)} 
-                                onClick={closeMenu} 
-                                style={{ 
-                                  color: '#d1d5db', 
-                                  textDecoration: 'none', 
-                                  fontSize: '15px', 
-                                  padding: '8px 16px', 
-                                  borderBottom: '1px solid rgba(255,255,255,0.05)',
-                                  transition: 'all 0.2s ease',
-                                  display: 'block',
-                                  marginLeft: '8px',
-                                  borderLeft: '2px solid transparent'
-                                }}
-                              >
-                                {subcategory.name}
-                              </Link>
-                            ))}
-                          </div>
-                        )}
-                      </div>
-                    ))}
-                  </div>
-                )}
-              </div>
-              <div style={{ marginBottom: '16px', borderBottom: '1px solid rgba(255,255,255,0.1)' }}>
-                <button
-                  onClick={() => {
-                    console.log('Industries accordion clicked');
-                    toggleMobileAccordion('industries');
-                  }}
-                  style={{
-                    width: '100%',
-                    display: 'flex',
-                    alignItems: 'center',
-                    justifyContent: 'space-between',
-                    background: 'none',
-                    border: 'none',
-                    color: '#06b6d4',
-                    fontSize: '16px',
-                    fontWeight: '600',
-                    padding: '12px 0',
-                    textTransform: 'uppercase',
-                    letterSpacing: '0.5px',
-                    cursor: 'pointer',
-                    WebkitTapHighlightColor: 'transparent'
-                  }}
-                >
-                  Industries We Help
-                  <ChevronDown 
-                    style={{ 
-                      width: '16px', 
-                      height: '16px',
-                      transform: mobileAccordions.industries ? 'rotate(180deg)' : 'rotate(0deg)',
-                      transition: 'transform 0.2s ease'
-                    }} 
-                  />
-                </button>
-                {mobileAccordions.industries && (
-                  <div style={{ paddingBottom: '12px' }}>
-                    {industryMenuItems.map((item) => (
-                      <Link 
-                        key={item.industry}
-                        href={`/industries/${industrySlugMap[item.industry]}`}
-                        onClick={closeMenu} 
-                        style={{ 
-                          color: 'white', 
-                          textDecoration: 'none', 
-                          fontSize: '16px', 
-                          padding: '12px 16px', 
-                          borderBottom: '1px solid rgba(255,255,255,0.05)',
-                          transition: 'all 0.2s ease',
-                          display: 'block',
-                          marginLeft: '8px'
-                        }}
-                      >
-                        {item.name}
-                      </Link>
-                    ))}
-                  </div>
-                )}
-              </div>
+              {/* Main Navigation Items - Matching Desktop */}
+              <Link href="/categories" onClick={closeMenu} style={{ 
+                color: router.pathname.startsWith('/categories') ? '#06b6d4' : 'white',
+                backgroundColor: router.pathname.startsWith('/categories') ? 'rgba(6, 182, 212, 0.1)' : 'transparent',
+                textDecoration: 'none', 
+                fontSize: '18px', 
+                padding: '16px', 
+                borderRadius: '8px',
+                borderBottom: '1px solid rgba(255,255,255,0.1)',
+                transition: 'all 0.2s ease',
+                display: 'block',
+                fontWeight: '600'
+              }}>Top AI Tools</Link>
+              
               <Link href="/tools" onClick={closeMenu} style={{ 
-                color: 'white', 
+                color: router.pathname.startsWith('/tools') ? '#06b6d4' : 'white',
+                backgroundColor: router.pathname.startsWith('/tools') ? 'rgba(6, 182, 212, 0.1)' : 'transparent',
                 textDecoration: 'none', 
                 fontSize: '18px', 
-                padding: '16px 0', 
+                padding: '16px', 
+                borderRadius: '8px',
                 borderBottom: '1px solid rgba(255,255,255,0.1)',
                 transition: 'all 0.2s ease',
-                display: 'block'
+                display: 'block',
+                fontWeight: '600'
               }}>All Tools</Link>
+              
+              <Link href="/industries" onClick={closeMenu} style={{ 
+                color: router.pathname.startsWith('/industries') ? '#06b6d4' : 'white',
+                backgroundColor: router.pathname.startsWith('/industries') ? 'rgba(6, 182, 212, 0.1)' : 'transparent',
+                textDecoration: 'none', 
+                fontSize: '18px', 
+                padding: '16px', 
+                borderRadius: '8px',
+                borderBottom: '1px solid rgba(255,255,255,0.1)',
+                transition: 'all 0.2s ease',
+                display: 'block',
+                fontWeight: '600'
+              }}>Industries We Help</Link>
+              
               <Link href="/pricing" onClick={closeMenu} style={{ 
-                color: 'white', 
+                color: router.pathname === '/pricing' ? '#06b6d4' : 'white',
+                backgroundColor: router.pathname === '/pricing' ? 'rgba(6, 182, 212, 0.1)' : 'transparent',
                 textDecoration: 'none', 
                 fontSize: '18px', 
-                padding: '16px 0', 
+                padding: '16px', 
+                borderRadius: '8px',
                 borderBottom: '1px solid rgba(255,255,255,0.1)',
                 transition: 'all 0.2s ease',
-                display: 'block'
-              }}>Pricing</Link>
-              <Link href="/why-us" onClick={closeMenu} style={{ 
-                color: 'white', 
-                textDecoration: 'none', 
-                fontSize: '18px', 
-                padding: '16px 0', 
-                borderBottom: '1px solid rgba(255,255,255,0.1)',
-                transition: 'all 0.2s ease',
-                display: 'block'
-              }}>Why Us</Link>
+                display: 'block',
+                fontWeight: '600'
+              }}>Pricing Calculator</Link>
+              
               <Link href="/contact" onClick={closeMenu} style={{ 
-                color: 'white', 
+                color: router.pathname === '/contact' ? '#06b6d4' : 'white',
+                backgroundColor: router.pathname === '/contact' ? 'rgba(6, 182, 212, 0.1)' : 'transparent',
                 textDecoration: 'none', 
                 fontSize: '18px', 
-                padding: '16px 0', 
+                padding: '16px', 
+                borderRadius: '8px',
                 borderBottom: '1px solid rgba(255,255,255,0.1)',
                 transition: 'all 0.2s ease',
-                display: 'block'
+                display: 'block',
+                fontWeight: '600'
               }}>Contact</Link>
               
               <div style={{ marginTop: '24px', paddingTop: '24px', borderTop: '1px solid rgba(255,255,255,0.2)' }}>
