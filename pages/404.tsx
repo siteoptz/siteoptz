@@ -64,12 +64,12 @@ const Custom404: React.FC = () => {
             
             <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
               {[
-                { name: 'Content Creation', href: '/categories/content-creation' },
-                { name: 'Voice AI Tools', href: '/categories/best-voice-ai-tools' },
-                { name: 'Image Generation', href: '/categories/image-generation' },
-                { name: 'Data Analysis', href: '/categories/data-analysis' },
-                { name: 'SEO & Optimization', href: '/categories/seo-optimization' },
-                { name: 'Social Media', href: '/categories/social-media' }
+                { name: 'Content Creation', href: '/tools' },
+                { name: 'Voice AI Tools', href: '/tools' },
+                { name: 'Image Generation', href: '/tools' },
+                { name: 'Data Analysis', href: '/tools' },
+                { name: 'SEO & Optimization', href: '/tools' },
+                { name: 'Social Media', href: '/tools' }
               ].map((category) => (
                 <Link
                   key={category.name}

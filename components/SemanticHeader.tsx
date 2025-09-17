@@ -44,7 +44,7 @@ const SemanticHeader: React.FC = () => {
   const navigation = [
     { 
       name: 'AI Category', 
-      href: '/categories', 
+      href: '/tools', 
       current: router.pathname.startsWith('/categories'),
       hasDropdown: true,
       isCategory: true

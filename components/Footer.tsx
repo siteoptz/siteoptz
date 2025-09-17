@@ -81,8 +81,8 @@ const Footer: React.FC = () => {
     { name: 'Blog', href: '/blog' },
     { name: 'Data Room', href: '/data-room' },
     { name: 'Resources', href: '/resources' },
-    { name: 'Case Studies', href: '/case-studies' },
-    { name: 'AI Library', href: 'https://siteoptz.ai/tools/' },
+    { name: 'Case Studies', href: '/tools' },
+    { name: 'AI Library', href: '/tools' },
     { name: 'Webinars', href: '/webinars' },
     { name: 'Developers', href: '/docs/api' },
   ];
