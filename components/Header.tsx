@@ -149,6 +149,12 @@ const Header: React.FC = () => {
       current: router.pathname.startsWith('/tools'),
       hasDropdown: false
     },
+    { 
+      name: 'Pricing', 
+      href: '/pricing', 
+      current: router.pathname === '/pricing', 
+      hasDropdown: false 
+    },
     {
       name: 'Industries We Help',
       href: '/industries',
@@ -156,7 +162,6 @@ const Header: React.FC = () => {
       hasDropdown: true,
       isIndustry: true
     },
-    { name: 'Pricing Calculator', href: '/pricing', current: router.pathname === '/pricing', hasDropdown: false },
     { name: 'Contact', href: '/contact', current: router.pathname === '/contact', hasDropdown: false },
   ];
 
