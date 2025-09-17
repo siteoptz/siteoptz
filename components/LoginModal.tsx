@@ -20,12 +20,31 @@ const LoginModal: React.FC<LoginModalProps> = ({ isOpen, onClose, isNewUser = fa
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState('');
   const [magicLinkSent, setMagicLinkSent] = useState(false);
+  
+  // New user profile fields
+  const [aiToolsInterest, setAiToolsInterest] = useState('');
+  const [businessSize, setBusinessSize] = useState('');
 
   if (!isOpen) return null;
 
   const handleGoogleAuth = async () => {
     setIsLoading(true);
     setError('');
+    
+    // Validate required fields for new users
+    if (isNewUser) {
+      if (!aiToolsInterest) {
+        setError('Please select your AI tools interest');
+        setIsLoading(false);
+        return;
+      }
+      
+      if (!businessSize) {
+        setError('Please select your business size');
+        setIsLoading(false);
+        return;
+      }
+    }
     
     try {
       const result = await signIn('google', {
@@ -54,6 +73,19 @@ const LoginModal: React.FC<LoginModalProps> = ({ isOpen, onClose, isNewUser = fa
       return;
     }
     
+    // Validate required fields for new users
+    if (isNewUser) {
+      if (!aiToolsInterest) {
+        setError('Please select your AI tools interest');
+        return;
+      }
+      
+      if (!businessSize) {
+        setError('Please select your business size');
+        return;
+      }
+    }
+    
     setIsLoading(true);
     setError('');
     
@@ -75,6 +107,19 @@ const LoginModal: React.FC<LoginModalProps> = ({ isOpen, onClose, isNewUser = fa
     if (!email || !password) {
       setError('Please enter both email and password');
       return;
+    }
+    
+    // Validate required fields for new users
+    if (isNewUser) {
+      if (!aiToolsInterest) {
+        setError('Please select your AI tools interest');
+        return;
+      }
+      
+      if (!businessSize) {
+        setError('Please select your business size');
+        return;
+      }
     }
     
     setIsLoading(true);
@@ -175,6 +220,57 @@ const LoginModal: React.FC<LoginModalProps> = ({ isOpen, onClose, isNewUser = fa
               <p className="text-green-400 text-sm text-center">
                 Magic link sent! Check your email and click the link to sign in.
               </p>
+            </div>
+          )}
+
+          {/* New User Questions */}
+          {isNewUser && (
+            <div className="space-y-4 mb-6">
+              <div>
+                <label className="block text-sm font-medium text-gray-300 mb-2">
+                  What AI tools interest you most?
+                </label>
+                <select
+                  value={aiToolsInterest}
+                  onChange={(e) => setAiToolsInterest(e.target.value)}
+                  required={isNewUser}
+                  className="w-full bg-gray-800 border border-gray-600 rounded-xl py-3 px-4 text-white focus:border-green-500 focus:ring-1 focus:ring-green-500 focus:outline-none transition-all"
+                >
+                  <option value="">Select Interest</option>
+                  <option value="chatgpt">ChatGPT & Language Models</option>
+                  <option value="image-generation">AI Image Generation</option>
+                  <option value="video-creation">AI Video Creation</option>
+                  <option value="writing-tools">AI Writing Tools</option>
+                  <option value="automation">AI Automation</option>
+                  <option value="voice-ai">Voice AI Tools</option>
+                  <option value="design-tools">AI Design Tools</option>
+                  <option value="research">AI Research Tools</option>
+                  <option value="general">General AI Tools</option>
+                  <option value="other">Other</option>
+                </select>
+              </div>
+
+              <div>
+                <label className="block text-sm font-medium text-gray-300 mb-2">
+                  What&apos;s your business size?
+                </label>
+                <select
+                  value={businessSize}
+                  onChange={(e) => setBusinessSize(e.target.value)}
+                  required={isNewUser}
+                  className="w-full bg-gray-800 border border-gray-600 rounded-xl py-3 px-4 text-white focus:border-green-500 focus:ring-1 focus:ring-green-500 focus:outline-none transition-all"
+                >
+                  <option value="">Select Business Size</option>
+                  <option value="small">Small Business (1-10 employees)</option>
+                  <option value="medium">Medium Business (11-50 employees)</option>
+                  <option value="large">Large Business (51-200 employees)</option>
+                  <option value="enterprise">Enterprise (200+ employees)</option>
+                  <option value="solo">Solo/Freelancer</option>
+                  <option value="startup">Startup</option>
+                  <option value="agency">Agency/Consultancy</option>
+                  <option value="other">Other</option>
+                </select>
+              </div>
             </div>
           )}
 
