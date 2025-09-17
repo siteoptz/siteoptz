@@ -8,9 +8,10 @@ interface LoginModalProps {
   isOpen: boolean;
   onClose: () => void;
   isNewUser?: boolean; // true for new users, false/undefined for returning users
+  allowUserTypeToggle?: boolean; // allow user to toggle between new/returning user
 }
 
-const LoginModal: React.FC<LoginModalProps> = ({ isOpen, onClose, isNewUser = false }) => {
+const LoginModal: React.FC<LoginModalProps> = ({ isOpen, onClose, isNewUser = false, allowUserTypeToggle = false }) => {
   const router = useRouter();
   const [loginMethod, setLoginMethod] = useState<'magic' | 'password' | 'code'>('magic');
   const [email, setEmail] = useState('');
@@ -21,9 +22,30 @@ const LoginModal: React.FC<LoginModalProps> = ({ isOpen, onClose, isNewUser = fa
   const [error, setError] = useState('');
   const [magicLinkSent, setMagicLinkSent] = useState(false);
   
+  // User type detection and override
+  const [detectedUserType, setDetectedUserType] = useState<'new' | 'returning'>('new');
+  const [userTypeOverride, setUserTypeOverride] = useState<'new' | 'returning' | null>(null);
+  
   // New user profile fields
   const [aiToolsInterest, setAiToolsInterest] = useState('');
   const [businessSize, setBusinessSize] = useState('');
+
+  // Determine if this should be treated as a new user
+  const effectiveIsNewUser = userTypeOverride ? userTypeOverride === 'new' : isNewUser;
+
+  // Check if user has visited before
+  useEffect(() => {
+    if (typeof window !== 'undefined') {
+      const hasVisitedBefore = localStorage.getItem('hasVisitedBefore');
+      const lastLoginEmail = localStorage.getItem('lastLoginEmail');
+      
+      if (hasVisitedBefore || lastLoginEmail) {
+        setDetectedUserType('returning');
+      } else {
+        setDetectedUserType('new');
+      }
+    }
+  }, [isOpen]);
 
   if (!isOpen) return null;
 
@@ -32,7 +54,7 @@ const LoginModal: React.FC<LoginModalProps> = ({ isOpen, onClose, isNewUser = fa
     setError('');
     
     // Validate required fields for new users
-    if (isNewUser) {
+    if (effectiveIsNewUser) {
       if (!aiToolsInterest) {
         setError('Please select your AI tools interest');
         setIsLoading(false);
@@ -56,6 +78,11 @@ const LoginModal: React.FC<LoginModalProps> = ({ isOpen, onClose, isNewUser = fa
         setError('Google authentication failed. Please try again.');
         setIsLoading(false);
       } else {
+        // Store visit information
+        if (typeof window !== 'undefined') {
+          localStorage.setItem('hasVisitedBefore', 'true');
+          localStorage.setItem('lastLoginEmail', email || 'google-user');
+        }
         onClose();
         router.push('/dashboard');
       }
@@ -74,7 +101,7 @@ const LoginModal: React.FC<LoginModalProps> = ({ isOpen, onClose, isNewUser = fa
     }
     
     // Validate required fields for new users
-    if (isNewUser) {
+    if (effectiveIsNewUser) {
       if (!aiToolsInterest) {
         setError('Please select your AI tools interest');
         return;
@@ -90,20 +117,9 @@ const LoginModal: React.FC<LoginModalProps> = ({ isOpen, onClose, isNewUser = fa
     setError('');
     
     try {
-      // Use NextAuth's email provider for magic links
-      const result = await signIn('email', {
-        email,
-        redirect: false,
-        callbackUrl: '/dashboard',
-      });
-      
-      if (result?.error) {
-        setError('Failed to send magic link. Please check your email address and try again.');
-        setIsLoading(false);
-      } else {
-        setMagicLinkSent(true);
-        setIsLoading(false);
-      }
+      // For now, magic links are not fully configured - redirect to Google or password authentication
+      setError('Magic links are currently not available. Please use Google sign-in or create a password instead.');
+      setIsLoading(false);
     } catch (error) {
       console.error('Magic link error:', error);
       setError('Failed to send magic link. Please try again.');
@@ -119,7 +135,7 @@ const LoginModal: React.FC<LoginModalProps> = ({ isOpen, onClose, isNewUser = fa
     }
     
     // Validate required fields for new users
-    if (isNewUser) {
+    if (effectiveIsNewUser) {
       if (!aiToolsInterest) {
         setError('Please select your AI tools interest');
         return;
@@ -144,6 +160,11 @@ const LoginModal: React.FC<LoginModalProps> = ({ isOpen, onClose, isNewUser = fa
       if (result?.error) {
         setError('Invalid email or password. Please try again.');
       } else {
+        // Store visit information
+        if (typeof window !== 'undefined') {
+          localStorage.setItem('hasVisitedBefore', 'true');
+          localStorage.setItem('lastLoginEmail', email);
+        }
         onClose();
         router.push('/dashboard');
       }
@@ -206,12 +227,12 @@ const LoginModal: React.FC<LoginModalProps> = ({ isOpen, onClose, isNewUser = fa
               <Mail className="w-6 h-6 text-white" />
             </div>
             <h2 className="text-2xl font-bold text-white mb-2">
-              {isNewUser ? 'Welcome to SiteOptz!' : 'Welcome back!'}
+              {effectiveIsNewUser ? 'Welcome to SiteOptz!' : 'Welcome back!'}
             </h2>
             <p className="text-gray-300">
-              {isNewUser 
-                ? 'Sign in with your email - we\'ll create your account and send you a magic link to get started.'
-                : 'Sign in with your email - we\'ll send you a magic link, or use your password if you\'ve set one up.'
+              {effectiveIsNewUser 
+                ? 'Sign in with your email - we\'ll create your account and get you started.'
+                : 'Sign in with your email or use your password if you\'ve set one up.'
               }
             </p>
           </div>
@@ -232,8 +253,36 @@ const LoginModal: React.FC<LoginModalProps> = ({ isOpen, onClose, isNewUser = fa
             </div>
           )}
 
+          {/* User Type Toggle (if allowed) */}
+          {allowUserTypeToggle && (
+            <div className="mb-6">
+              <div className="flex bg-gray-800 rounded-xl p-1">
+                <button
+                  onClick={() => setUserTypeOverride('new')}
+                  className={`flex-1 py-2 px-3 rounded-lg text-sm font-medium transition-all ${
+                    effectiveIsNewUser
+                      ? 'bg-green-600 text-white'
+                      : 'text-gray-400 hover:text-white'
+                  }`}
+                >
+                  New to SiteOptz
+                </button>
+                <button
+                  onClick={() => setUserTypeOverride('returning')}
+                  className={`flex-1 py-2 px-3 rounded-lg text-sm font-medium transition-all ${
+                    !effectiveIsNewUser
+                      ? 'bg-green-600 text-white'
+                      : 'text-gray-400 hover:text-white'
+                  }`}
+                >
+                  Returning User
+                </button>
+              </div>
+            </div>
+          )}
+
           {/* New User Questions */}
-          {isNewUser && (
+          {effectiveIsNewUser && (
             <div className="space-y-4 mb-6">
               <div>
                 <label className="block text-sm font-medium text-gray-300 mb-2">
@@ -400,7 +449,7 @@ const LoginModal: React.FC<LoginModalProps> = ({ isOpen, onClose, isNewUser = fa
           {/* Footer */}
           <div className="text-center mt-6">
             <p className="text-gray-400">
-              {isNewUser 
+              {effectiveIsNewUser 
                 ? 'Your account will be created automatically when you sign in for the first time.'
                 : 'New users can sign up with Google or create an account using the forms above.'
               }

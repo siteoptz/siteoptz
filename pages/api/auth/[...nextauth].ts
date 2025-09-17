@@ -9,17 +9,18 @@ export const authOptions: NextAuthOptions = {
       clientId: process.env.GOOGLE_CLIENT_ID || '',
       clientSecret: process.env.GOOGLE_CLIENT_SECRET || '',
     }),
-    EmailProvider({
-      server: {
-        host: process.env.EMAIL_SMTP_HOST,
-        port: parseInt(process.env.EMAIL_SMTP_PORT || '587'),
-        auth: {
-          user: process.env.EMAIL_SMTP_USER,
-          pass: process.env.EMAIL_SMTP_PASS,
-        },
-      },
-      from: process.env.EMAIL_FROM,
-    }),
+    // EmailProvider temporarily disabled until proper SMTP and database are configured
+    // EmailProvider({
+    //   server: {
+    //     host: process.env.EMAIL_SMTP_HOST,
+    //     port: parseInt(process.env.EMAIL_SMTP_PORT || '587'),
+    //     auth: {
+    //       user: process.env.EMAIL_SMTP_USER,
+    //       pass: process.env.EMAIL_SMTP_PASS,
+    //     },
+    //   },
+    //   from: process.env.EMAIL_FROM,
+    // }),
     CredentialsProvider({
       name: 'credentials',
       credentials: {
