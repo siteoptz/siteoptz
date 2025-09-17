@@ -52,14 +52,6 @@ const UpgradePage: React.FC = () => {
   const { redirectToCheckout, loading, error, clearError } = useStripeCheckout();
   const { isLoggedIn, isLoading, intendedUpgrade, initiateUpgrade, completeUpgrade } = useUpgradeFlow();
   
-  // Debug logging
-  console.log('DEBUG - Upgrade page state:', { 
-    isLoggedIn, 
-    loading, 
-    isLoading, 
-    intendedUpgrade,
-    session: !!session 
-  });
 
   // Handle intended upgrade when user logs in
   useEffect(() => {
@@ -216,14 +208,6 @@ const UpgradePage: React.FC = () => {
   }, []);
 
   const handleUpgrade = async (planName: string, price: number) => {
-    console.log('DEBUG - handleUpgrade called:', { 
-      planName, 
-      price, 
-      isLoggedIn, 
-      loading, 
-      isLoading 
-    });
-    
     if (typeof window !== 'undefined' && window.gtag) {
       window.gtag('event', 'upgrade_cta_click', {
         event_category: 'upgrade',
@@ -379,16 +363,7 @@ const UpgradePage: React.FC = () => {
                     </div>
 
                     <button
-                      onClick={(e) => {
-                        console.log('DEBUG - Button clicked:', { 
-                          tierName: tier.name, 
-                          disabled: tier.name === 'Free' || loading || isLoading,
-                          loading,
-                          isLoading
-                        });
-                        e.preventDefault();
-                        handleUpgrade(tier.name, tier.price);
-                      }}
+                      onClick={() => handleUpgrade(tier.name, tier.price)}
                       disabled={tier.name === 'Free' || loading || isLoading}
                       className={`w-full py-3 rounded-lg font-semibold transition-all ${
                         tier.name === 'Free' || loading || isLoading
