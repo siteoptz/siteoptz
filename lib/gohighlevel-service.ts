@@ -14,8 +14,10 @@ export async function createGoHighLevelContact(userData: {
   console.log('Input userData:', JSON.stringify(userData, null, 2));
   console.log('API Key available:', process.env.GOHIGHLEVEL_API_KEY ? 'Yes' : 'No');
   
+  let contactData;
+  
   try {
-    const contactData = {
+    contactData = {
       email: userData.email,
       firstName: userData.name?.split(' ')[0] || '',
       lastName: userData.name?.split(' ').slice(1).join(' ') || '',
@@ -94,10 +96,15 @@ export async function createGoHighLevelContact(userData: {
     }
   } catch (error) {
     console.error('💥 Network error creating GoHighLevel contact:', error);
-    console.log('🔄 GoHighLevel API network error, logging contact data for manual review:');
-    console.log('Contact data that would have been created:', JSON.stringify(contactData, null, 2));
-    console.log('📋 Manual action required: Add this contact to GoHighLevel manually');
-    return { success: false, error: error instanceof Error ? error.message : 'Unknown error', contactData: contactData };
+    if (contactData) {
+      console.log('🔄 GoHighLevel API network error, logging contact data for manual review:');
+      console.log('Contact data that would have been created:', JSON.stringify(contactData, null, 2));
+      console.log('📋 Manual action required: Add this contact to GoHighLevel manually');
+      return { success: false, error: error instanceof Error ? error.message : 'Unknown error', contactData: contactData };
+    } else {
+      console.log('💥 Error occurred before contact data was prepared');
+      return { success: false, error: error instanceof Error ? error.message : 'Unknown error' };
+    }
   }
 }
 
