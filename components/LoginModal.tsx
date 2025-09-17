@@ -90,13 +90,22 @@ const LoginModal: React.FC<LoginModalProps> = ({ isOpen, onClose, isNewUser = fa
     setError('');
     
     try {
-      // For now, we'll simulate sending a magic link
-      // In a real implementation, you'd integrate with a service like Supabase, Auth0, or similar
-      setTimeout(() => {
+      // Use NextAuth's email provider for magic links
+      const result = await signIn('email', {
+        email,
+        redirect: false,
+        callbackUrl: '/dashboard',
+      });
+      
+      if (result?.error) {
+        setError('Failed to send magic link. Please check your email address and try again.');
+        setIsLoading(false);
+      } else {
         setMagicLinkSent(true);
         setIsLoading(false);
-      }, 1000);
+      }
     } catch (error) {
+      console.error('Magic link error:', error);
       setError('Failed to send magic link. Please try again.');
       setIsLoading(false);
     }
@@ -180,9 +189,9 @@ const LoginModal: React.FC<LoginModalProps> = ({ isOpen, onClose, isNewUser = fa
         aria-label="Close modal"
       />
       
-      <div className="flex min-h-screen items-start justify-center p-4 pt-16 sm:pt-24">
+      <div className="flex min-h-screen items-start justify-center p-2 sm:p-4 pt-8 sm:pt-16 md:pt-24">
         {/* Modal */}
-        <div className="relative w-full max-w-md transform rounded-2xl bg-gradient-to-br from-black via-gray-900 to-black border border-gray-700 p-6 shadow-2xl transition-all z-10 max-h-[90vh] overflow-y-auto">
+        <div className="relative w-full max-w-md transform rounded-2xl bg-gradient-to-br from-black via-gray-900 to-black border border-gray-700 p-4 sm:p-6 shadow-2xl transition-all z-10 max-h-[95vh] sm:max-h-[90vh] overflow-y-auto">
           {/* Close Button */}
           <button
             onClick={onClose}
@@ -234,7 +243,7 @@ const LoginModal: React.FC<LoginModalProps> = ({ isOpen, onClose, isNewUser = fa
                   value={aiToolsInterest}
                   onChange={(e) => setAiToolsInterest(e.target.value)}
                   required={isNewUser}
-                  className="w-full bg-gray-800 border border-gray-600 rounded-xl py-3 px-4 text-white focus:border-green-500 focus:ring-1 focus:ring-green-500 focus:outline-none transition-all"
+                  className="w-full bg-gray-800 border border-gray-600 rounded-xl py-3 px-4 text-white focus:border-green-500 focus:ring-1 focus:ring-green-500 focus:outline-none transition-all text-sm sm:text-base"
                 >
                   <option value="">Select Interest</option>
                   <option value="chatgpt">ChatGPT & Language Models</option>
@@ -258,7 +267,7 @@ const LoginModal: React.FC<LoginModalProps> = ({ isOpen, onClose, isNewUser = fa
                   value={businessSize}
                   onChange={(e) => setBusinessSize(e.target.value)}
                   required={isNewUser}
-                  className="w-full bg-gray-800 border border-gray-600 rounded-xl py-3 px-4 text-white focus:border-green-500 focus:ring-1 focus:ring-green-500 focus:outline-none transition-all"
+                  className="w-full bg-gray-800 border border-gray-600 rounded-xl py-3 px-4 text-white focus:border-green-500 focus:ring-1 focus:ring-green-500 focus:outline-none transition-all text-sm sm:text-base"
                 >
                   <option value="">Select Business Size</option>
                   <option value="small">Small Business (1-10 employees)</option>
