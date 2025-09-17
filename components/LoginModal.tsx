@@ -7,9 +7,10 @@ import { X, Mail, Lock, Eye, EyeOff } from 'lucide-react';
 interface LoginModalProps {
   isOpen: boolean;
   onClose: () => void;
+  isNewUser?: boolean; // true for new users, false/undefined for returning users
 }
 
-const LoginModal: React.FC<LoginModalProps> = ({ isOpen, onClose }) => {
+const LoginModal: React.FC<LoginModalProps> = ({ isOpen, onClose, isNewUser = false }) => {
   const router = useRouter();
   const [loginMethod, setLoginMethod] = useState<'magic' | 'password' | 'code'>('magic');
   const [email, setEmail] = useState('');
@@ -151,10 +152,13 @@ const LoginModal: React.FC<LoginModalProps> = ({ isOpen, onClose }) => {
               <Mail className="w-6 h-6 text-white" />
             </div>
             <h2 className="text-2xl font-bold text-white mb-2">
-              Welcome back!
+              {isNewUser ? 'Welcome to SiteOptz!' : 'Welcome back!'}
             </h2>
             <p className="text-gray-300">
-              Sign in with your email - we&apos;ll send you a magic link, or use your password if you&apos;ve set one up.
+              {isNewUser 
+                ? 'Sign in with your email - we\'ll create your account and send you a magic link to get started.'
+                : 'Sign in with your email - we\'ll send you a magic link, or use your password if you\'ve set one up.'
+              }
             </p>
           </div>
 
@@ -291,7 +295,10 @@ const LoginModal: React.FC<LoginModalProps> = ({ isOpen, onClose }) => {
           {/* Footer */}
           <div className="text-center mt-6">
             <p className="text-gray-400">
-              New users can sign up with Google or create an account using the forms above.
+              {isNewUser 
+                ? 'Your account will be created automatically when you sign in for the first time.'
+                : 'New users can sign up with Google or create an account using the forms above.'
+              }
             </p>
           </div>
         </div>

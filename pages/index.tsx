@@ -1025,9 +1025,10 @@ export default function HomePage({}: HomePageProps) {
         </section>
       </div>
       
-      {/* Login Modal - For Returning Users */}
+      {/* Login Modal - For Returning Users or New Users with Intended Upgrade */}
       <LoginModal
         isOpen={showLogin}
+        isNewUser={!!intendedUpgrade} // Show "Welcome to SiteOptz!" if user has intended upgrade
         onClose={() => {
           setShowLogin(false);
           // Clear hash when modal is closed
