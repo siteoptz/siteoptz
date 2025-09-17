@@ -276,6 +276,7 @@ export async function sendAdminNotificationEmail(userData: {
   companySize?: string;
   interests?: string;
   provider?: string;
+  isUpgrade?: boolean;
 }) {
   console.log('📧 Starting admin notification email...');
   console.log('Admin notification userData:', JSON.stringify(userData, null, 2));
@@ -295,7 +296,7 @@ export async function sendAdminNotificationEmail(userData: {
     <body>
       <div class="container">
         <div class="header">
-          <h2>🎉 New User Registration</h2>
+          <h2>${userData.isUpgrade ? '💳 Customer Upgrade' : '🎉 New User Registration'}</h2>
         </div>
         
         <div class="content">
@@ -334,9 +335,13 @@ export async function sendAdminNotificationEmail(userData: {
   try {
     const adminEmailPayload = {
       to: 'info@siteoptz.ai',
-      subject: `🎉 New ${(userData.plan || 'Free').toUpperCase()} User: ${userData.email}`,
+      subject: userData.isUpgrade ? 
+        `💳 CUSTOMER UPGRADE: ${userData.email} → ${(userData.plan || 'Free').toUpperCase()} Plan` :
+        `🎉 New ${(userData.plan || 'Free').toUpperCase()} User: ${userData.email}`,
       html: emailHtml,
-      text: `New user registered: ${userData.email} - Plan: ${userData.plan || 'free'}`
+      text: userData.isUpgrade ? 
+        `Customer upgrade: ${userData.email} - New Plan: ${userData.plan || 'free'}` :
+        `New user registered: ${userData.email} - Plan: ${userData.plan || 'free'}`
     };
     
     console.log('📤 Sending admin notification payload:', JSON.stringify(adminEmailPayload, null, 2));

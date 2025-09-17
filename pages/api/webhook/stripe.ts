@@ -139,28 +139,72 @@ async function sendAlertEmail(customer: Stripe.Customer, plan: string, billingCy
   try {
     const emailData = {
       to: 'info@siteoptz.ai',
-      subject: `🎉 New ${plan.charAt(0).toUpperCase() + plan.slice(1)} Subscription - ${customer.email}`,
+      subject: `💳 PAID UPGRADE: ${customer.email} → ${plan.charAt(0).toUpperCase() + plan.slice(1)} Plan`,
       html: `
-        <h2>New Subscription Alert</h2>
-        
-        <h3>Customer Details:</h3>
-        <ul>
-          <li><strong>Name:</strong> ${customer.name || 'Not provided'}</li>
-          <li><strong>Email:</strong> ${customer.email}</li>
-          <li><strong>Phone:</strong> ${customer.phone || 'Not provided'}</li>
-          <li><strong>Plan:</strong> ${plan.charAt(0).toUpperCase() + plan.slice(1)}</li>
-          <li><strong>Billing:</strong> ${billingCycle}</li>
-          <li><strong>Stripe Customer ID:</strong> ${customer.id}</li>
-        </ul>
-        
-        <h3>Customer Interests & Company Info:</h3>
-        <ul>
-          <li><strong>Company:</strong> ${customer.metadata?.company || 'Not provided'}</li>
-          <li><strong>Company Size:</strong> ${customer.metadata?.company_size || 'Not provided'}</li>
-          <li><strong>Interests:</strong> ${customer.metadata?.interests || 'Not provided'}</li>
-        </ul>
-        
-        <p>Customer has been automatically added to GoHighLevel CRM.</p>
+        <!DOCTYPE html>
+        <html>
+        <head>
+          <style>
+            body { font-family: Arial, sans-serif; line-height: 1.6; color: #333; }
+            .container { max-width: 600px; margin: 0 auto; padding: 20px; }
+            .header { background: linear-gradient(135deg, #28a745 0%, #20c997 100%); color: white; padding: 20px; border-radius: 10px 10px 0 0; text-align: center; }
+            .content { background: #f8f9fa; padding: 30px; border-radius: 0 0 10px 10px; }
+            .upgrade-highlight { background: #28a745; color: white; padding: 15px; border-radius: 8px; text-align: center; margin: 20px 0; }
+            .info-box { background: white; padding: 15px; border-left: 4px solid #28a745; margin: 15px 0; }
+            .label { font-weight: bold; color: #666; }
+            .plan-badge { display: inline-block; background: #007bff; color: white; padding: 5px 12px; border-radius: 20px; font-size: 14px; font-weight: bold; }
+          </style>
+        </head>
+        <body>
+          <div class="container">
+            <div class="header">
+              <h1>🎉 CUSTOMER UPGRADE! 💳</h1>
+              <p style="font-size: 18px; margin: 0;">New Paid Subscription</p>
+            </div>
+            
+            <div class="content">
+              <div class="upgrade-highlight">
+                <h2 style="margin: 0;">💰 ${customer.email}</h2>
+                <p style="margin: 5px 0; font-size: 18px;">Upgraded to <span class="plan-badge">${plan.toUpperCase()} PLAN</span></p>
+                <p style="margin: 0; font-size: 16px;">${billingCycle} billing</p>
+              </div>
+              
+              <h3>📋 Customer Details:</h3>
+              <div class="info-box">
+                <p><span class="label">Name:</span> ${customer.name || 'Not provided'}</p>
+                <p><span class="label">Email:</span> ${customer.email}</p>
+                <p><span class="label">Phone:</span> ${customer.phone || 'Not provided'}</p>
+                <p><span class="label">Stripe Customer ID:</span> ${customer.id}</p>
+              </div>
+              
+              <h3>🏢 Business Information:</h3>
+              <div class="info-box">
+                <p><span class="label">Company:</span> ${customer.metadata?.company || 'Not provided'}</p>
+                <p><span class="label">Company Size:</span> ${customer.metadata?.company_size || 'Not provided'}</p>
+                <p><span class="label">AI Tool Interests:</span> ${customer.metadata?.interests || 'Not provided'}</p>
+              </div>
+              
+              <h3>✅ Actions Completed:</h3>
+              <ul>
+                <li>✅ Payment processed successfully</li>
+                <li>✅ Customer upgraded to ${plan.charAt(0).toUpperCase() + plan.slice(1)} plan</li>
+                <li>✅ Added to GoHighLevel CRM with plan tags</li>
+                <li>✅ Welcome email sent to customer</li>
+              </ul>
+              
+              <div style="background: #e7f3ff; padding: 15px; border-radius: 8px; margin: 20px 0;">
+                <h4 style="margin-top: 0; color: #0066cc;">💡 Recommended Next Steps:</h4>
+                <ul style="margin-bottom: 0;">
+                  <li>📞 <strong>Follow up personally</strong> within 24 hours to welcome them</li>
+                  <li>📧 <strong>Send onboarding sequence</strong> to maximize feature adoption</li>
+                  <li>📊 <strong>Add to ${plan} customer segment</strong> in your CRM</li>
+                  <li>🎯 <strong>Schedule check-in</strong> at 7, 30, and 90 days</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </body>
+        </html>
       `
     };
 
