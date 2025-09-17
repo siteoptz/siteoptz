@@ -151,8 +151,8 @@ const Header: React.FC = () => {
     },
     { 
       name: 'Pricing', 
-      href: '/pricing', 
-      current: router.pathname === '/pricing', 
+      href: '/upgrade', 
+      current: router.pathname === '/upgrade', 
       hasDropdown: false 
     },
     {
