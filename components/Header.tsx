@@ -138,7 +138,7 @@ const Header: React.FC = () => {
   const navigation = [
     { 
       name: 'Top AI Tools', 
-      href: '/tools', 
+      href: '/categories', 
       current: router.pathname.startsWith('/categories'),
       hasDropdown: true,
       isCategory: true
