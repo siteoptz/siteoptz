@@ -8,10 +8,13 @@ const stripe = new Stripe(process.env.STRIPE_SECRET_KEY!, {
 });
 
 interface UpgradeRequest {
-  plan: 'starter' | 'pro';
+  plan: 'starter' | 'pro' | 'enterprise';
   billingCycle: 'monthly' | 'yearly';
   successUrl?: string;
   cancelUrl?: string;
+  companyName?: string;
+  companySize?: string;
+  interests?: string;
 }
 
 interface UpgradeResponse {
@@ -46,10 +49,10 @@ export default async function handler(
       });
     }
 
-    const { plan, billingCycle, successUrl, cancelUrl }: UpgradeRequest = req.body;
+    const { plan, billingCycle, successUrl, cancelUrl, companyName, companySize, interests }: UpgradeRequest = req.body;
 
     // Validate plan
-    if (!plan || !['starter', 'pro'].includes(plan)) {
+    if (!plan || !['starter', 'pro', 'enterprise'].includes(plan)) {
       return res.status(400).json({ 
         success: false, 
         error: 'Invalid plan selected' 
@@ -73,6 +76,10 @@ export default async function handler(
       pro: {
         monthly: process.env.STRIPE_PRO_MONTHLY_PRICE_ID,
         yearly: process.env.STRIPE_PRO_YEARLY_PRICE_ID
+      },
+      enterprise: {
+        monthly: process.env.STRIPE_ENTERPRISE_MONTHLY_PRICE_ID,
+        yearly: process.env.STRIPE_ENTERPRISE_YEARLY_PRICE_ID
       }
     };
 
@@ -183,13 +190,19 @@ export default async function handler(
         plan,
         billingCycle,
         userId: session.user.email,
-        upgradeType: 'new_subscription'
+        upgradeType: 'new_subscription',
+        company: companyName || '',
+        company_size: companySize || '',
+        interests: interests || ''
       },
       subscription_data: {
         metadata: {
           plan,
           billingCycle,
           userId: session.user.email,
+          company: companyName || '',
+          company_size: companySize || '',
+          interests: interests || ''
         },
       },
       automatic_tax: {
@@ -199,6 +212,7 @@ export default async function handler(
         enabled: true,
       },
       allow_promotion_codes: true,
+      customer_creation: 'always',
     });
 
     // Track upgrade initiation
