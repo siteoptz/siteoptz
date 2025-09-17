@@ -90,6 +90,8 @@ export function useUpgradeFlow(): UpgradeFlowState & UpgradeFlowActions {
   }, [session]);
 
   const initiateUpgrade = useCallback(async (plan: 'starter' | 'pro', billingCycle: 'monthly' | 'yearly' = 'yearly') => {
+    console.log('initiateUpgrade called', { plan, billingCycle, isLoggedIn });
+    
     try {
       // Track upgrade initiation
       if (typeof window !== 'undefined' && window.gtag) {
@@ -102,6 +104,7 @@ export function useUpgradeFlow(): UpgradeFlowState & UpgradeFlowActions {
       }
 
       if (!isLoggedIn) {
+        console.log('User not logged in, redirecting to login');
         // Store intended upgrade and redirect to login
         const upgradeData = {
           plan,
@@ -116,8 +119,13 @@ export function useUpgradeFlow(): UpgradeFlowState & UpgradeFlowActions {
 
         setIntendedUpgrade(upgradeData);
 
-        // Redirect to login
-        router.push('/#login');
+        // Redirect to homepage with login modal
+        console.log('Redirecting to /#login');
+        if (typeof window !== 'undefined') {
+          window.location.href = '/#login';
+        } else {
+          router.push('/#login');
+        }
         return;
       }
 
