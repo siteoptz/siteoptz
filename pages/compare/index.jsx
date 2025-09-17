@@ -99,7 +99,7 @@ export default function CompareIndex({ aiToolsData }) {
       <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-black">
         {/* Hero Section */}
         <section className="bg-black border-b border-gray-800">
-          <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-16">
+          <div className="mx-auto max-w-none sm:max-w-7xl px-4 sm:px-6 lg:px-8 py-16">
             <div className="text-center">
               <h1 className="text-4xl lg:text-6xl font-bold text-white mb-6">
                 AI Tools Comparison
@@ -128,7 +128,7 @@ export default function CompareIndex({ aiToolsData }) {
 
         {/* Filters and Controls */}
         <section className="bg-gray-900 border-b border-gray-800 sticky top-0 z-10">
-          <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-4">
+          <div className="mx-auto max-w-none sm:max-w-7xl px-4 sm:px-6 lg:px-8 py-4">
             <div className="flex flex-col gap-4">
               {/* Filter Controls */}
               <div className="flex flex-col sm:flex-row items-start sm:items-center gap-4">
@@ -197,7 +197,7 @@ export default function CompareIndex({ aiToolsData }) {
         </section>
 
         {/* Tools Grid/List */}
-        <section className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-12">
+        <section className="mx-auto max-w-none sm:max-w-7xl px-4 sm:px-6 lg:px-8 py-12">
           {filteredTools.length === 0 ? (
             <div className="text-center py-12">
               <Search className="w-16 h-16 text-gray-500 mx-auto mb-4" />
@@ -206,8 +206,8 @@ export default function CompareIndex({ aiToolsData }) {
             </div>
           ) : (
             <div className={viewMode === 'grid' 
-              ? 'grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 justify-items-center sm:justify-items-stretch' 
-              : 'space-y-4 max-w-none'
+              ? 'grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 w-full' 
+              : 'space-y-4 w-full'
             }>
               {filteredTools.map((tool) => (
                 <ToolCard key={tool.id} tool={tool} viewMode={viewMode} />
@@ -218,7 +218,7 @@ export default function CompareIndex({ aiToolsData }) {
 
         {/* CTA Section */}
         <section className="bg-gradient-to-br from-cyan-600 to-purple-700 text-white py-16">
-          <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 text-center">
+          <div className="mx-auto max-w-none sm:max-w-7xl px-4 sm:px-6 lg:px-8 text-center">
             <h2 className="text-3xl font-bold mb-4">
               Need Help Choosing the Right AI Tool?
             </h2>
@@ -336,7 +336,7 @@ function ToolCard({ tool, viewMode }) {
   }
 
   return (
-    <div className="bg-gray-900 rounded-lg shadow-sm border border-gray-800 hover:shadow-lg transition-shadow h-full w-full max-w-sm mx-auto sm:max-w-none sm:mx-0">
+    <div className="bg-gray-900 rounded-lg shadow-sm border border-gray-800 hover:shadow-lg transition-shadow h-full w-full">
       <div className="pb-4 p-6">
         <div className="flex items-center gap-4 mb-4">
           <div className="w-12 h-12 bg-gray-800 rounded-lg flex items-center justify-center">
