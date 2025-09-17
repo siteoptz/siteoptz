@@ -83,12 +83,14 @@ export async function createGoHighLevelContact(userData: {
       console.error('❌ Failed to create GoHighLevel contact. Status:', response.status);
       console.error('❌ Error response:', error);
       
-      // For now, return success with mock data to prevent blocking email flows
-      // In production, this should be configured properly
+      // For now, return failure and log the contact data for manual review
+      // This will be more transparent about the issue
       console.log('🔄 GoHighLevel API failed, logging contact data for manual review:');
       console.log('Contact data that would have been created:', JSON.stringify(contactData, null, 2));
+      console.log('📋 Manual action required: Add this contact to GoHighLevel manually');
+      console.log('📋 API Error details:', error);
       
-      return { success: true, contactId: 'mock-contact-' + Date.now(), note: 'API failed, logged for manual review' };
+      return { success: false, error: `HTTP ${response.status}: ${error}`, contactData: contactData };
     }
   } catch (error) {
     console.error('Error creating GoHighLevel contact:', error);

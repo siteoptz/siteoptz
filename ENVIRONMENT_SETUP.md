@@ -155,16 +155,41 @@ The integration is currently running in development/testing mode with:
 #### 1. GoHighLevel API Setup
 Current issue: `"The token does not have access to this location"`
 
-**To fix:**
-```bash
-# Verify these in your GoHighLevel account:
-GOHIGHLEVEL_API_KEY=your_correct_api_key
-GOHIGHLEVEL_LOCATION_ID=your_correct_location_id
+**Step-by-step fix:**
 
-# Ensure the API key has permissions for:
-# - Contacts: Create, Read, Update
-# - Location access for the specified location ID
-```
+1. **Check API Key Type:**
+   ```bash
+   # In GoHighLevel, go to Settings > Integrations > API Keys
+   # Ensure you're using a "Location API Key" not an "Agency API Key"
+   ```
+
+2. **Verify Location ID:**
+   ```bash
+   # In GoHighLevel, go to Settings > Company
+   # Copy the Location ID from the URL: /v2/location/{LOCATION_ID}/settings
+   # Or find it in Settings > Integrations
+   ```
+
+3. **Set Correct Environment Variables:**
+   ```bash
+   GOHIGHLEVEL_API_KEY=eyJ...your_location_api_key
+   GOHIGHLEVEL_LOCATION_ID=your_location_id_here
+   ```
+
+4. **API Key Permissions Required:**
+   - Contacts: Create, Read, Update
+   - Location access for the specified location
+   - Ensure the API key is not expired
+
+5. **Test API Access:**
+   ```bash
+   # You can test the API key with this curl command:
+   curl -X GET \
+     "https://services.leadconnectorhq.com/contacts/" \
+     -H "Authorization: Bearer YOUR_API_KEY" \
+     -H "Version: 2021-07-28" \
+     -H "Location-Id: YOUR_LOCATION_ID"
+   ```
 
 #### 2. Email Configuration
 **Option A: SendGrid (Recommended)**
@@ -201,6 +226,12 @@ EMAIL_FROM=info@siteoptz.ai
    - Current status: Emails are being logged to console in development mode
    - For production: Configure SendGrid API key or valid SMTP credentials
    - Check spam folders for test emails once configured
+
+4. **Dashboard link shows tracking URL instead of direct link**:
+   - **Issue**: Email contains tracking URLs like `url9928.siteoptz.ai/ls/click?upn=...`
+   - **Cause**: Email service provider (SendGrid/SMTP) automatically adds tracking
+   - **Solution**: Ensure `NEXTAUTH_URL` is set to `https://siteoptz.ai` (not localhost)
+   - **Current status**: Fixed in environment configuration
 
 ## Testing the Integration
 

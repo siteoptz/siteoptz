@@ -100,6 +100,8 @@ export const authOptions: NextAuthOptions = {
             console.log('✅ GoHighLevel contact created/updated for:', user.email);
           } else {
             console.error('❌ Failed to create GoHighLevel contact:', ghlResult.error);
+            console.error('❌ Contact data logged for manual review - check server logs');
+            // Continue with email flow even if GoHighLevel fails
           }
 
           // Send welcome email (you might want to check if user is new in production)
