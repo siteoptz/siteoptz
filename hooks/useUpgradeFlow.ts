@@ -42,15 +42,19 @@ export function useUpgradeFlow(): UpgradeFlowState & UpgradeFlowActions {
   useEffect(() => {
     if (typeof window !== 'undefined') {
       const stored = localStorage.getItem('intendedUpgrade');
+      console.log('useUpgradeFlow: Checking localStorage intendedUpgrade:', stored);
       if (stored) {
         try {
           const upgradeData = JSON.parse(stored);
+          console.log('useUpgradeFlow: Parsed upgrade data:', upgradeData);
           // Check if the upgrade is still valid (within 1 hour)
           const oneHour = 60 * 60 * 1000;
           if (Date.now() - upgradeData.timestamp < oneHour) {
+            console.log('useUpgradeFlow: Setting intended upgrade');
             setIntendedUpgrade(upgradeData);
           } else {
             // Remove expired intended upgrade
+            console.log('useUpgradeFlow: Intended upgrade expired, removing');
             localStorage.removeItem('intendedUpgrade');
           }
         } catch (error) {
@@ -60,6 +64,29 @@ export function useUpgradeFlow(): UpgradeFlowState & UpgradeFlowActions {
       }
     }
   }, []);
+
+  // Re-check localStorage when user logs in (in case intendedUpgrade wasn't set yet)
+  useEffect(() => {
+    if (isLoggedIn && !intendedUpgrade && typeof window !== 'undefined') {
+      console.log('User logged in, re-checking localStorage for intendedUpgrade');
+      const stored = localStorage.getItem('intendedUpgrade');
+      if (stored) {
+        try {
+          const upgradeData = JSON.parse(stored);
+          const oneHour = 60 * 60 * 1000;
+          if (Date.now() - upgradeData.timestamp < oneHour) {
+            console.log('Found intended upgrade after login:', upgradeData);
+            setIntendedUpgrade(upgradeData);
+          } else {
+            localStorage.removeItem('intendedUpgrade');
+          }
+        } catch (error) {
+          console.error('Error parsing intended upgrade after login:', error);
+          localStorage.removeItem('intendedUpgrade');
+        }
+      }
+    }
+  }, [isLoggedIn, intendedUpgrade]);
 
   // Check for intended upgrade when user logs in
   useEffect(() => {

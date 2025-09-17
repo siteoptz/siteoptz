@@ -37,10 +37,18 @@ export default function HomePage({}: HomePageProps) {
 
   // Handle intended upgrade when user logs in
   useEffect(() => {
+    console.log('Homepage: Checking intended upgrade', { isLoggedIn, intendedUpgrade });
     if (isLoggedIn && intendedUpgrade) {
       // User has logged in with a pending upgrade, show payment modal
+      console.log('Homepage: Setting payment modal for plan:', intendedUpgrade.plan);
       setPaymentModalPlan(intendedUpgrade.plan as 'starter' | 'pro');
+      setBillingCycle(intendedUpgrade.billingCycle as 'monthly' | 'yearly');
       setShowPaymentModal(true);
+      
+      // Clear any hash from URL that might interfere
+      if (window.location.hash === '#login') {
+        window.history.pushState('', document.title, window.location.pathname + window.location.search);
+      }
     }
   }, [isLoggedIn, intendedUpgrade]);
 
