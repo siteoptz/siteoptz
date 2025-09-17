@@ -1273,9 +1273,21 @@ export const getStaticPaths: GetStaticPaths = async () => {
       }
     });
 
+  // Only pre-generate paths for the most popular tools to stay under route limits
+  const popularToolSlugs = [
+    'chatgpt', 'claude', 'gemini', 'jasper-ai', 'copy-ai', 'writesonic', 
+    'grammarly', 'midjourney', 'dall-e', 'stable-diffusion', 'perplexity-ai',
+    'notion-ai', 'canva', 'figma', 'adobe-firefly', 'leonardo-ai'
+  ];
+  
+  const popularPaths = paths.filter((path: any) => {
+    const toolName = path.params.toolName;
+    return popularToolSlugs.some(slug => toolName.includes(slug));
+  });
+
   return {
-    paths,
-    fallback: false // Changed to false to pre-generate all pages for GA tagging
+    paths: popularPaths, // Only pre-generate popular tools
+    fallback: 'blocking' // Generate other pages on-demand to stay under route limits
   };
 };
 
