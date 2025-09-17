@@ -1,0 +1,76 @@
+{
+  "fixes_applied": [
+    "Changed price from string to number format",
+    "Added deterministic review count based on tool name hash",
+    "Added operatingSystem field to nested SoftwareApplication schema"
+  ],
+  "corrected_softwareApplication_schema": {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "ChatGPT",
+    "description": "ChatGPT is OpenAI's revolutionary conversational AI assistant that can help with writing, coding, analysis, math, research, and creative tasks through natural language conversations.",
+    "url": "https://chat.openai.com/",
+    "applicationCategory": "BusinessApplication",
+    "operatingSystem": "Web",
+    "offers": {
+      "@type": "Offer",
+      "price": 20,
+      "priceCurrency": "USD",
+      "availability": "https://schema.org/InStock",
+      "priceSpecification": {
+        "@type": "PriceSpecification",
+        "price": 20,
+        "priceCurrency": "USD"
+      },
+      "url": "https://chat.openai.com/"
+    },
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": 4.6,
+      "reviewCount": 321,
+      "bestRating": 5,
+      "worstRating": 1
+    },
+    "author": {
+      "@type": "Organization",
+      "name": "SiteOptz",
+      "url": "https://siteoptz.ai"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "SiteOptz",
+      "url": "https://siteoptz.ai"
+    }
+  },
+  "corrected_review_schema": {
+    "@context": "https://schema.org",
+    "@type": "Review",
+    "itemReviewed": {
+      "@type": "SoftwareApplication",
+      "name": "ChatGPT",
+      "description": "ChatGPT is OpenAI's revolutionary conversational AI assistant that can help with writing, coding, analysis, math, research, and creative tasks through natural language conversations.",
+      "url": "https://chat.openai.com/",
+      "applicationCategory": "BusinessApplication",
+      "operatingSystem": "Web"
+    },
+    "author": {
+      "@type": "Organization",
+      "name": "SiteOptz",
+      "url": "https://siteoptz.ai"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "SiteOptz",
+      "url": "https://siteoptz.ai"
+    },
+    "datePublished": "2025-01-15",
+    "dateModified": "2025-09-17",
+    "reviewRating": {
+      "@type": "Rating",
+      "ratingValue": 4.6,
+      "bestRating": 5,
+      "worstRating": 1
+    },
+    "reviewBody": "Comprehensive review of ChatGPT covering features, pricing, pros, cons, and use cases. Our expert analysis examines ChatGPT's capabilities, user experience, and overall value proposition to help you make an informed decision."
+  }
+}

@@ -1,0 +1,42 @@
+{
+  "extracted_structured_data": {
+    "softwareApplication": {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "ChatGPT",
+      "description": "ChatGPT is OpenAI's revolutionary conversational AI assistant that can help with writing, coding, analysis, math, research, and creative tasks through natural language conversations.",
+      "url": "https://chat.openai.com/",
+      "applicationCategory": "BusinessApplication",
+      "operatingSystem": "Web",
+      "offers": {
+        "@type": "Offer",
+        "price": "20",
+        "priceCurrency": "USD",
+        "availability": "https://schema.org/InStock",
+        "priceSpecification": {
+          "@type": "PriceSpecification",
+          "price": "20",
+          "priceCurrency": "USD"
+        },
+        "url": "https://chat.openai.com/"
+      },
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": 4.6,
+        "reviewCount": 125,
+        "bestRating": 5,
+        "worstRating": 1
+      },
+      "author": {
+        "@type": "Organization",
+        "name": "SiteOptz",
+        "url": "https://siteoptz.ai"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "SiteOptz",
+        "url": "https://siteoptz.ai"
+      }
+    }
+  }
+}
