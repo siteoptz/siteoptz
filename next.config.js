@@ -166,29 +166,46 @@ const nextConfig = {
 
 
   // Optimized redirects using pattern matching
-  // Reduces thousands of individual redirects to just 6 patterns
+  // Reduces thousands of individual redirects to just a few patterns
   async redirects() {
     return [
+      // Specific category redirects
+      {
+        source: '/categories/best-voice-ai-tools',
+        destination: '/categories/voice-ai',
+        permanent: true,
+      },
+      // Categories - redirect all other category pages to tools
+      {
+        source: '/categories/:path*',
+        destination: '/tools',
+        permanent: true,
+      },
+      // Compare pages - redirect all tool comparisons to tools
       {
         source: '/compare/:tool1/vs/:tool2',
         destination: '/tools',
         permanent: true,
       },
+      // Case studies - redirect all case study pages to tools
       {
         source: '/case-studies/:path*',
         destination: '/tools',
         permanent: true,
       },
+      // Analysis pages - redirect analysis pages to tools
+      {
+        source: '/analysis/:path*',
+        destination: '/tools',
+        permanent: true,
+      },
+      // Tools subdirectories - redirect to main tools page
       {
         source: '/tools/:path+',
         destination: '/tools',
         permanent: true,
       },
-      {
-        source: '/analysis/claude3-vs-gpt4',
-        destination: '/tools',
-        permanent: true,
-      },
+      // Tools with trailing slash
       {
         source: '/tools/',
         destination: '/tools',
