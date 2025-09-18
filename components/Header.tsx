@@ -83,16 +83,13 @@ const Header: React.FC = () => {
   // Desktop category accordion states
   const [desktopCategoryAccordions, setDesktopCategoryAccordions] = useState<Record<string, boolean>>({});
   
-  // Mobile accordion states
+  // Mobile accordion states (simplified)
   const [mobileAccordions, setMobileAccordions] = useState({
     categories: false,
     tools: false,
     industries: false,
     resources: false,
   });
-  
-  // Desktop category accordion states
-  const [mobileCategoryAccordions, setMobileCategoryAccordions] = useState<Record<string, boolean>>({});
   
   const toggleMobileAccordion = (section: keyof typeof mobileAccordions) => {
     console.log(`Toggling ${section} accordion. Current state:`, mobileAccordions[section]);
@@ -113,12 +110,6 @@ const Header: React.FC = () => {
     }));
   };
   
-  const toggleMobileCategoryAccordion = (categoryName: string) => {
-    setMobileCategoryAccordions(prev => ({
-      ...prev,
-      [categoryName]: !prev[categoryName]
-    }));
-  };
 
   // Industry dropdown menu items with shortened names
   const industryMenuItems = [
@@ -171,15 +162,13 @@ const Header: React.FC = () => {
   
   const closeMenu = () => {
     setIsMenuOpen(false);
-    // Reset accordion states when menu closes
+    // Reset accordion states when menu closes (simplified)
     setMobileAccordions({
       categories: false,
       tools: false,
       industries: false,
       resources: false,
     });
-    // Reset mobile category accordions
-    setMobileCategoryAccordions({});
   };
 
   // Handle scroll effect for header
@@ -423,7 +412,7 @@ const Header: React.FC = () => {
               overflow: 'auto',
               paddingBottom: '40px'
             }}>
-              {/* Main Navigation Items - Matching Desktop */}
+              {/* Main Navigation Items - Matching Desktop Simple Links */}
               <Link href="/categories" onClick={closeMenu} style={{ 
                 color: router.pathname.startsWith('/categories') ? '#06b6d4' : 'white',
                 backgroundColor: router.pathname.startsWith('/categories') ? 'rgba(6, 182, 212, 0.1)' : 'transparent',
@@ -463,9 +452,9 @@ const Header: React.FC = () => {
                 fontWeight: '600'
               }}>Industries We Help</Link>
               
-              <Link href="/pricing" onClick={closeMenu} style={{ 
-                color: router.pathname === '/pricing' ? '#06b6d4' : 'white',
-                backgroundColor: router.pathname === '/pricing' ? 'rgba(6, 182, 212, 0.1)' : 'transparent',
+              <Link href="/upgrade" onClick={closeMenu} style={{ 
+                color: router.pathname === '/upgrade' ? '#06b6d4' : 'white',
+                backgroundColor: router.pathname === '/upgrade' ? 'rgba(6, 182, 212, 0.1)' : 'transparent',
                 textDecoration: 'none', 
                 fontSize: '18px', 
                 padding: '16px', 
@@ -474,7 +463,7 @@ const Header: React.FC = () => {
                 transition: 'all 0.2s ease',
                 display: 'block',
                 fontWeight: '600'
-              }}>Pricing Calculator</Link>
+              }}>Pricing</Link>
               
               <Link href="/contact" onClick={closeMenu} style={{ 
                 color: router.pathname === '/contact' ? '#06b6d4' : 'white',

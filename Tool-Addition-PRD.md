@@ -617,7 +617,56 @@ npm run build
 
 ---
 
-**Last Updated**: September 7, 2025
+## **Cross-Device Compatibility Requirements**
+
+### **CRITICAL: Mobile-First Development Standard**
+
+**ALL changes to the live site MUST be applied to ALL devices:**
+
+#### **Required Device Testing:**
+- [ ] **Desktop** (1920x1080 and above)
+- [ ] **Tablet** (768px - 1024px)
+- [ ] **Mobile** (320px - 767px)
+- [ ] **Large Mobile** (375px - 414px)
+
+#### **Mandatory Responsive Checks:**
+1. **Layout Testing**: All components must render correctly on all screen sizes
+2. **Interactive Elements**: Buttons, modals, forms must be functional on touch devices
+3. **Typography**: Text must be readable without horizontal scrolling
+4. **Navigation**: Menu and navigation elements must work on mobile
+5. **Images**: All images must scale appropriately
+6. **Forms**: Input fields and modals must be usable on mobile devices
+
+#### **Development Workflow:**
+```bash
+# ALWAYS test responsive design during development
+npm run dev
+# Test in browser dev tools:
+# - Chrome DevTools > Device Toolbar
+# - Test iPhone, iPad, and Android viewports
+# - Verify all functionality works on each device size
+```
+
+#### **Pre-Deployment Checklist:**
+- [ ] Tested on Chrome DevTools mobile simulation
+- [ ] Verified all modals open and close properly on mobile
+- [ ] Confirmed all buttons are touchable (minimum 44px target size)
+- [ ] Ensured text is legible without zooming
+- [ ] Validated forms work on mobile keyboards
+- [ ] Checked that navigation doesn't break on small screens
+
+#### **Responsive Design Standards:**
+- Use **mobile-first CSS** approach (`min-width` media queries)
+- Implement **touch-friendly** interactive elements (44px+ tap targets)
+- Ensure **readable text** without horizontal scrolling
+- Maintain **consistent functionality** across all devices
+- Apply **appropriate spacing** for touch interfaces
+
+**⚠️ DEPLOYMENT BLOCKER:** Changes that break mobile functionality will be rejected and must be fixed before deployment.
+
+---
+
+**Last Updated**: September 17, 2025
 **System Status**: ✅ Production Ready
 **Total Tools**: 165+
 **Categories**: 15+
