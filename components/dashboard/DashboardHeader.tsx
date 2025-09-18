@@ -1,7 +1,8 @@
 import React from 'react';
 import Link from 'next/link';
 import { UserPlan } from '../../types/userPlan';
-import { User, Bell, Zap } from 'lucide-react';
+import { User, Bell, Zap, Settings, CreditCard, MessageSquare } from 'lucide-react';
+import { useRouter } from 'next/router';
 
 interface DashboardHeaderProps {
   userPlan: UserPlan;
@@ -12,6 +13,8 @@ export const DashboardHeader: React.FC<DashboardHeaderProps> = ({
   userPlan,
   userName = "Dashboard User"
 }) => {
+  const router = useRouter();
+  
   const getPlanColor = (plan: string) => {
     switch (plan) {
       case 'free': return 'bg-gray-100 text-gray-800';
@@ -22,15 +25,64 @@ export const DashboardHeader: React.FC<DashboardHeaderProps> = ({
     }
   };
 
+  const isActive = (path: string) => {
+    return router.pathname === path;
+  };
+
+  const navigationItems = [
+    {
+      name: 'Overview',
+      href: `/dashboard/${userPlan.plan}`,
+      icon: Zap
+    },
+    {
+      name: 'Billing',
+      href: `/dashboard/${userPlan.plan}/billing`,
+      icon: CreditCard
+    },
+    {
+      name: 'Notifications',
+      href: `/dashboard/${userPlan.plan}/notifications`,
+      icon: MessageSquare
+    },
+    {
+      name: 'Settings',
+      href: `/dashboard/${userPlan.plan}/settings`,
+      icon: Settings
+    }
+  ];
+
   return (
     <header className="bg-black/50 border-b border-gray-800">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
-          <div className="flex items-center">
+          <div className="flex items-center space-x-8">
             <Link href="/" className="text-2xl font-bold text-white">
               SiteOptz
             </Link>
+            
+            {/* Navigation */}
+            <nav className="hidden md:flex space-x-6">
+              {navigationItems.map((item) => {
+                const IconComponent = item.icon;
+                return (
+                  <Link
+                    key={item.name}
+                    href={item.href}
+                    className={`flex items-center space-x-2 px-3 py-2 rounded-lg text-sm font-medium transition-colors ${
+                      isActive(item.href)
+                        ? 'bg-cyan-600 text-white'
+                        : 'text-gray-300 hover:text-white hover:bg-gray-800'
+                    }`}
+                  >
+                    <IconComponent className="w-4 h-4" />
+                    <span>{item.name}</span>
+                  </Link>
+                );
+              })}
+            </nav>
           </div>
+          
           <div className="flex items-center space-x-4">
             <div className="flex items-center space-x-2">
               <Zap className="w-4 h-4 text-cyan-400" />
