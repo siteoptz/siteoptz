@@ -174,89 +174,105 @@ const nextConfig = {
         source: '/podcasts/transcripts/marketing-automation-ai-tools.txt',
         destination: '/podcasts/transcripts/marketing-automation-ai-tools',
         permanent: true,
+        statusCode: 301,
       },
       {
         source: '/podcasts/transcripts/chatgpt-enterprise-workflows.txt',
         destination: '/podcasts/transcripts/chatgpt-enterprise-workflows',
         permanent: true,
+        statusCode: 301,
       },
       {
         source: '/podcasts/transcripts/ai-sales-process-automation.txt',
         destination: '/podcasts/transcripts/ai-sales-process-automation',
         permanent: true,
+        statusCode: 301,
       },
       {
         source: '/podcasts/transcripts/ai-healthcare-workflow-automation.txt',
         destination: '/podcasts/transcripts/ai-healthcare-workflow-automation',
         permanent: true,
+        statusCode: 301,
       },
       {
         source: '/podcasts/transcripts/claude-vs-gpt-enterprise-comparison.txt',
         destination: '/podcasts/transcripts/claude-vs-gpt-enterprise-comparison',
         permanent: true,
+        statusCode: 301,
       },
       {
         source: '/podcasts/transcripts/ai-automation-revolution-2024.txt',
         destination: '/podcasts/transcripts/ai-automation-revolution-2024',
         permanent: true,
+        statusCode: 301,
       },
       {
         source: '/podcasts/transcripts/ai-hr-recruitment-automation.txt',
         destination: '/podcasts/transcripts/ai-hr-recruitment-automation',
         permanent: true,
+        statusCode: 301,
       },
       {
         source: '/podcasts/transcripts/ai-ecommerce-personalization.txt',
         destination: '/podcasts/transcripts/ai-ecommerce-personalization',
         permanent: true,
+        statusCode: 301,
       },
       // Pricing page redirect to upgrade page
       {
         source: '/pricing',
         destination: '/upgrade',
         permanent: true,
+        statusCode: 301,
       },
       // Specific category redirects
       {
         source: '/categories/best-voice-ai-tools',
         destination: '/categories/voice-ai',
         permanent: true,
+        statusCode: 301,
       },
-      // Categories - redirect all other category pages to tools
+      // Categories - redirect category subpages to tools (but not main /categories page)
       {
-        source: '/categories/:path*',
+        source: '/categories/:path+',
         destination: '/tools',
         permanent: true,
+        statusCode: 301,
       },
       // Compare pages - redirect all tool comparisons to tools
       {
         source: '/compare/:tool1/vs/:tool2',
         destination: '/tools',
         permanent: true,
+        statusCode: 301,
       },
       // Case studies - redirect all case study pages to tools
       {
         source: '/case-studies/:path*',
         destination: '/tools',
         permanent: true,
+        statusCode: 301,
       },
       // Analysis pages - redirect analysis pages to tools
       {
         source: '/analysis/:path*',
         destination: '/tools',
         permanent: true,
+        statusCode: 301,
       },
       // Tools subdirectories - redirect to main tools page
       {
         source: '/tools/:path+',
         destination: '/tools',
         permanent: true,
+        statusCode: 301,
       },
       // Tools with trailing slash
       {
         source: '/tools/',
         destination: '/tools',
         permanent: true,
+        statusCode: 301,
       }
     ];
   },
