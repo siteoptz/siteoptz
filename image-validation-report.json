@@ -1,13 +1,13 @@
 {
-  "timestamp": "2025-09-12T13:42:27.365Z",
+  "timestamp": "2025-09-18T13:19:32.419Z",
   "summary": {
-    "totalTools": 737,
+    "totalTools": 736,
     "validImages": 728,
     "missingImages": 0,
-    "brokenReferences": 9,
-    "totalIssues": 9,
+    "brokenReferences": 8,
+    "totalIssues": 8,
     "errorCount": 0,
-    "warningCount": 9,
+    "warningCount": 8,
     "successRate": 99
   },
   "issues": [
@@ -21,13 +21,6 @@
     {
       "tool": "Cosmos AI",
       "slug": "cosmos-ai",
-      "type": "missing_property",
-      "issue": "No logo property defined",
-      "severity": "warning"
-    },
-    {
-      "tool": "Headshot Generator",
-      "slug": "headshot-generator",
       "type": "missing_property",
       "issue": "No logo property defined",
       "severity": "warning"
