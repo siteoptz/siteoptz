@@ -165,6 +165,7 @@ const RegisterModal: React.FC<RegisterModalProps> = ({
         setIsLoading(false);
         return;
       }
+      
     }
     
     try {

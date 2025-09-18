@@ -126,44 +126,97 @@ export const authOptions: NextAuthOptions = {
         console.log('- EMAIL_FROM:', process.env.EMAIL_FROM);
         console.log('- NEXTAUTH_URL:', process.env.NEXTAUTH_URL);
         
-        // Handle OAuth user registration only
+        // Handle OAuth user registration/login with enhanced validation
         if (user?.email) {
-          console.log('Processing OAuth user registration/signin for:', user.email);
+          console.log('🔍 Processing OAuth user for:', user.email);
           
-          // Check if this is a registration attempt by looking for token in URL or pending business info
+          // **ENHANCED: Step 1 - Check if this is a registration attempt**
           let businessInfo = null;
           let isRegistrationAttempt = false;
           
-          // Always try to get business info for OAuth users (for registration emails)
           try {
+            // Check for pending business info (indicates registration attempt)
             const response = await fetch(`${process.env.NEXTAUTH_URL}/api/get-oauth-business-info?email=${encodeURIComponent(user.email)}`);
             if (response.ok) {
               const result = await response.json();
-              if (result.success) {
+              if (result.success && result.data) {
                 businessInfo = result.data;
-                console.log('✅ Retrieved business info for OAuth user:', businessInfo);
+                isRegistrationAttempt = true;
+                console.log('✅ Registration attempt detected - business info found:', businessInfo);
               }
             }
           } catch (error) {
-            console.log('No business info found for OAuth user (this is normal for login)');
+            console.log('No business info found - treating as login attempt');
           }
+          
+          // **ENHANCED: Step 2 - Check if user already exists in GoHighLevel**
+          let existingUserCheck = { exists: false, contactId: null, userDetails: null };
+          try {
+            console.log('🔍 Checking if user exists in GoHighLevel for OAuth validation...');
+            
+            const isGHLEnabled = process.env.ENABLE_GHL === 'true';
+            if (isGHLEnabled && process.env.GOHIGHLEVEL_API_KEY && process.env.GOHIGHLEVEL_LOCATION_ID) {
+              const headers: Record<string, string> = {
+                'Authorization': `Bearer ${process.env.GOHIGHLEVEL_API_KEY}`,
+                'Content-Type': 'application/json',
+                'Version': '2021-07-28'
+              };
+              
+              if (process.env.GOHIGHLEVEL_LOCATION_ID) {
+                headers['Location-Id'] = process.env.GOHIGHLEVEL_LOCATION_ID;
+              }
+              
+              const searchResponse = await fetch(
+                `https://services.leadconnectorhq.com/contacts/search/duplicate?email=${encodeURIComponent(user.email)}`,
+                { method: 'GET', headers }
+              );
 
-          // Create user data for conditional processing
+              if (searchResponse.ok) {
+                const searchResult = await searchResponse.json();
+                if (searchResult.contact && searchResult.contact.id) {
+                  existingUserCheck = {
+                    exists: true,
+                    contactId: searchResult.contact.id,
+                    userDetails: searchResult.contact
+                  };
+                  console.log('✅ Existing user found in GoHighLevel:', existingUserCheck.contactId);
+                }
+              }
+            }
+          } catch (error) {
+            console.error('Error checking existing user in OAuth callback:', error);
+          }
+          
+          // **ENHANCED: Step 3 - Apply conditional logic**
+          if (isRegistrationAttempt && existingUserCheck.exists) {
+            // Existing user trying to register - block and redirect to error page
+            console.log('❌ BLOCKING: Existing user attempting OAuth registration');
+            console.log('- User Email:', user.email);
+            console.log('- Existing Contact ID:', existingUserCheck.contactId);
+            console.log('- Registration Data:', businessInfo);
+            
+            // Throw error to trigger redirect to error page
+            throw new Error('EXISTING_USER_REGISTRATION_ATTEMPT');
+          }
+          
+          // **ENHANCED: Step 4 - Process user action based on registration vs login**
           const userData = createUserDataFromOAuth(user, businessInfo);
           userData.provider = account?.provider || 'oauth';
+          userData.isRegistrationAttempt = isRegistrationAttempt;
           
           console.log('OAuth user data to process:', JSON.stringify(userData, null, 2));
+          console.log('- Is Registration Attempt:', isRegistrationAttempt);
+          console.log('- User Exists:', existingUserCheck.exists);
 
-          // Use conditional logic to handle OAuth user registration/login
           const userActionResult = await handleUserAction(userData);
           
           console.log('OAuth user action result:', JSON.stringify(userActionResult, null, 2));
           
           if (userActionResult.success) {
             if (userActionResult.isNewUser) {
-              console.log('🆕 New OAuth user registered - welcome email sent');
+              console.log('🆕 New OAuth user registered successfully - welcome email sent');
             } else {
-              console.log('👤 Existing OAuth user signed in - no welcome email');
+              console.log('👤 Existing OAuth user signed in successfully - no welcome email');
             }
           } else {
             console.error('❌ Failed to process OAuth user:', userActionResult.error);
@@ -176,7 +229,16 @@ export const authOptions: NextAuthOptions = {
         return true;
       } catch (error) {
         console.error('💥 Error in signIn callback:', error);
-        // Still allow sign-in even if notifications fail
+        
+        // Handle specific error types
+        if (error instanceof Error && error.message === 'EXISTING_USER_REGISTRATION_ATTEMPT') {
+          console.log('🚫 Blocking OAuth registration for existing user');
+          // Return false to prevent sign-in and trigger error page via NextAuth error handling
+          return false;
+        }
+        
+        // For other errors, still allow sign-in
+        console.log('⚠️ Non-blocking error in signIn callback, allowing authentication to continue');
         return true;
       }
     },

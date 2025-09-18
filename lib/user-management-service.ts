@@ -16,6 +16,7 @@ export interface UserData {
   provider?: string;
   stripeCustomerId?: string;
   isUpgrade?: boolean;
+  isRegistrationAttempt?: boolean;
 }
 
 export interface UserActionResult {
