@@ -109,6 +109,7 @@ const RegisterModal: React.FC<RegisterModalProps> = ({
       const result = await signIn('credentials', {
         email: formData.email,
         password: formData.password,
+        name: formData.name,
         redirect: false,
       });
 

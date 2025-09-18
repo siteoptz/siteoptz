@@ -27,7 +27,8 @@ export const authOptions: NextAuthOptions = {
       name: 'credentials',
       credentials: {
         email: { label: 'Email', type: 'email' },
-        password: { label: 'Password', type: 'password' }
+        password: { label: 'Password', type: 'password' },
+        name: { label: 'Name', type: 'text' }
       },
       async authorize(credentials) {
         if (!credentials?.email || !credentials?.password) {
@@ -44,7 +45,7 @@ export const authOptions: NextAuthOptions = {
           // In production, this should fetch from your database
           const user = {
             id: '1',
-            name: 'User',
+            name: credentials.name || 'User',
             email: credentials.email,
           }
 
