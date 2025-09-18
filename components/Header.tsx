@@ -6,6 +6,7 @@ import { useSession, signOut } from 'next-auth/react';
 import { Menu, X, ChevronDown, ChevronUp, User, LogOut, Bell, Settings, CreditCard, Zap } from 'lucide-react';
 import { toolCategories, getCategoryUrl, getCategoryDisplayName } from '../config/categories';
 import { industries, industrySlugMap } from '../content/industryContent';
+import { useUserPlan } from '../hooks/useUserPlan';
 // Modals removed from Header to prevent navigation stalling
 
 // Accordion category structure for AI Categories dropdown
@@ -74,10 +75,14 @@ const Header: React.FC = () => {
   const [showUserDropdown, setShowUserDropdown] = useState(false);
   const router = useRouter();
   const { data: session, status } = useSession();
+  const { userPlan } = useUserPlan();
   
   // Simple session state management
   const isAuthenticated = status === 'authenticated' && !!session?.user;
   const isLoading = status === 'loading';
+  
+  // Get the user's plan for navigation URLs, default to 'free' if not available
+  const plan = userPlan?.plan || 'free';
   const isUnauthenticated = status === 'unauthenticated';
   
   // Desktop category accordion states
@@ -299,7 +304,7 @@ const Header: React.FC = () => {
                         Dashboard
                       </Link>
                       
-                      <Link href="/notifications" className="flex items-center px-4 py-2 text-gray-700 hover:bg-gray-50 transition-colors">
+                      <Link href={`/dashboard/${plan}/notifications`} className="flex items-center px-4 py-2 text-gray-700 hover:bg-gray-50 transition-colors">
                         <Bell className="w-4 h-4 mr-3" />
                         Notifications
                       </Link>
@@ -309,12 +314,12 @@ const Header: React.FC = () => {
                         Upgrade
                       </Link>
                       
-                      <Link href="/settings" className="flex items-center px-4 py-2 text-gray-700 hover:bg-gray-50 transition-colors">
+                      <Link href={`/dashboard/${plan}/settings`} className="flex items-center px-4 py-2 text-gray-700 hover:bg-gray-50 transition-colors">
                         <Settings className="w-4 h-4 mr-3" />
                         Account Settings
                       </Link>
                       
-                      <Link href="/billing" className="flex items-center px-4 py-2 text-gray-700 hover:bg-gray-50 transition-colors">
+                      <Link href={`/dashboard/${plan}/billing`} className="flex items-center px-4 py-2 text-gray-700 hover:bg-gray-50 transition-colors">
                         <CreditCard className="w-4 h-4 mr-3" />
                         Billing & Subscription
                       </Link>
@@ -521,7 +526,7 @@ const Header: React.FC = () => {
                       Dashboard
                     </Link>
                     
-                    <Link href="/notifications" onClick={closeMenu} style={{ 
+                    <Link href={`/dashboard/${plan}/notifications`} onClick={closeMenu} style={{ 
                       display: 'flex',
                       alignItems: 'center',
                       gap: '12px',
@@ -553,7 +558,7 @@ const Header: React.FC = () => {
                       Upgrade
                     </Link>
                     
-                    <Link href="/settings" onClick={closeMenu} style={{ 
+                    <Link href={`/dashboard/${plan}/settings`} onClick={closeMenu} style={{ 
                       display: 'flex',
                       alignItems: 'center',
                       gap: '12px',
@@ -569,7 +574,7 @@ const Header: React.FC = () => {
                       Account Settings
                     </Link>
                     
-                    <Link href="/billing" onClick={closeMenu} style={{ 
+                    <Link href={`/dashboard/${plan}/billing`} onClick={closeMenu} style={{ 
                       display: 'flex',
                       alignItems: 'center',
                       gap: '12px',
