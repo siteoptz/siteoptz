@@ -46,7 +46,7 @@ import Link from 'next/link';
 export default function EnterpriseDashboard() {
   const { userPlan, loading } = useUserPlan();
   const [activeTab, setActiveTab] = useState('overview');
-  const enterpriseContent = getDashboardContent('enterprise');
+  const enterpriseContent = getDashboardContent('enterprise') as any;
 
   if (loading) {
     return (

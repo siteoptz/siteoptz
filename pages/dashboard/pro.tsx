@@ -41,8 +41,8 @@ import Link from 'next/link';
 export default function ProDashboard() {
   const { userPlan, loading } = useUserPlan();
   const [activeTab, setActiveTab] = useState('overview');
-  const proContent = getDashboardContent('pro');
-  const enterpriseUpgrade = getUpgradePrompt('pro', 'enterprise');
+  const proContent = getDashboardContent('pro') as any;
+  const enterpriseUpgrade = getUpgradePrompt('pro', 'enterprise') as any;
 
   if (loading) {
     return (
