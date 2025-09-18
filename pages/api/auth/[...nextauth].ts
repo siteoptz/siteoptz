@@ -107,12 +107,13 @@ export const authOptions: NextAuthOptions = {
     },
     async signIn({ user, account, profile }) {
       try {
-        console.log('=== SIGNIN CALLBACK TRIGGERED ===');
-        console.log('User:', JSON.stringify(user, null, 2));
-        console.log('Account:', JSON.stringify(account, null, 2));
-        console.log('Profile:', JSON.stringify(profile, null, 2));
-        console.log('Provider:', account?.provider);
-        console.log('Account state:', account?.state);
+        console.log('🔥🔥🔥 === SIGNIN CALLBACK TRIGGERED === 🔥🔥🔥');
+        console.log('🔥 User:', JSON.stringify(user, null, 2));
+        console.log('🔥 Account:', JSON.stringify(account, null, 2));
+        console.log('🔥 Profile:', JSON.stringify(profile, null, 2));
+        console.log('🔥 Provider:', account?.provider);
+        console.log('🔥 Account state:', account?.state);
+        console.log('🔥 Timestamp:', new Date().toISOString());
         
         // Skip GoHighLevel integration for credentials provider
         // Email/password registrations are handled by /api/register-free-plan

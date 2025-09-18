@@ -152,8 +152,14 @@ const RegisterModal: React.FC<RegisterModalProps> = ({
     setIsLoading(true);
     setError('');
     
+    console.log('🚀 DEBUGGING: handleGoogleAuth triggered');
+    console.log('🚀 isLogin mode:', isLogin);
+    console.log('🚀 formData:', formData);
+    
     // Validate required fields for registration (only if not in login mode)
     if (!isLogin) {
+      console.log('🚀 REGISTRATION MODE: Validating fields');
+      
       if (!formData.aiToolsInterest) {
         setError('Please select your AI tools interest');
         setIsLoading(false);
@@ -166,11 +172,16 @@ const RegisterModal: React.FC<RegisterModalProps> = ({
         return;
       }
       
+      console.log('🚀 REGISTRATION MODE: All fields validated ✅');
+    } else {
+      console.log('🚀 LOGIN MODE: Skipping field validation');
     }
     
     try {
       // For registration attempts, store a registration flag temporarily
       if (!isLogin) {
+        console.log('🚀 REGISTRATION MODE: Storing business info in sessionStorage');
+        
         // Set a flag in sessionStorage to indicate this is a registration attempt
         const registrationData = {
           isRegistrationAttempt: true,
@@ -181,10 +192,29 @@ const RegisterModal: React.FC<RegisterModalProps> = ({
         };
         
         sessionStorage.setItem('pendingOAuthRegistration', JSON.stringify(registrationData));
-        console.log('✅ Stored registration data in sessionStorage for OAuth');
+        console.log('✅ STORED registration data in sessionStorage for OAuth:', registrationData);
+        
+        // Also store in API for backend access
+        try {
+          const storeResponse = await fetch('/api/check-oauth-registration', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({
+              action: 'store',
+              email: 'temp-oauth-registration', // Temporary key since we don't have email yet
+              registrationData: registrationData
+            })
+          });
+          console.log('✅ STORED registration data in API backend:', await storeResponse.json());
+        } catch (apiError) {
+          console.warn('⚠️ Failed to store in API backend:', apiError);
+        }
+      } else {
+        console.log('🚀 LOGIN MODE: Skipping business info storage');
       }
       
       console.log('🔵 Initiating Google OAuth, isLogin:', isLogin);
+      console.log('🔵 Callback URL will be:', isLogin ? '/dashboard' : '/dashboard?registration=true');
       
       const result = await signIn('google', {
         callbackUrl: isLogin ? '/dashboard' : '/dashboard?registration=true',
