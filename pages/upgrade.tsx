@@ -4,6 +4,7 @@ import { useRouter } from 'next/router';
 import Head from 'next/head';
 import { useStripeCheckout } from '../hooks/useStripeCheckout';
 import { useUpgradeFlow } from '../hooks/useUpgradeFlow';
+import { useUserPlan } from '../hooks/useUserPlan';
 import StripePaymentModal from '../components/StripePaymentModal';
 import Link from 'next/link';
 import { 
@@ -51,6 +52,33 @@ const UpgradePage: React.FC = () => {
   const [paymentModalPlan, setPaymentModalPlan] = useState<'starter' | 'pro'>('starter');
   const { redirectToCheckout, loading, error, clearError } = useStripeCheckout();
   const { isLoggedIn, isLoading, intendedUpgrade, initiateUpgrade, completeUpgrade } = useUpgradeFlow();
+  const { userPlan, loading: userPlanLoading } = useUserPlan();
+
+  // Plan hierarchy for conditional logic
+  const planHierarchy = {
+    'Free': 0,
+    'Starter': 1,
+    'Pro': 2,
+    'Enterprise': 3
+  };
+
+  // Function to check if user can upgrade to a specific plan
+  const canUpgradeTo = (targetPlan: string): boolean => {
+    if (!isLoggedIn || !userPlan) return true; // Non-logged users can select any plan
+    
+    const currentPlanLevel = planHierarchy[userPlan.plan.charAt(0).toUpperCase() + userPlan.plan.slice(1) as keyof typeof planHierarchy] || 0;
+    const targetPlanLevel = planHierarchy[targetPlan as keyof typeof planHierarchy] || 0;
+    
+    return targetPlanLevel > currentPlanLevel;
+  };
+
+  // Function to check if this is the user's current plan
+  const isCurrentPlan = (planName: string): boolean => {
+    if (!isLoggedIn || !userPlan) return false;
+    
+    const userPlanName = userPlan.plan.charAt(0).toUpperCase() + userPlan.plan.slice(1);
+    return userPlanName === planName;
+  };
   
 
   // Handle intended upgrade when user logs in
@@ -280,11 +308,15 @@ const UpgradePage: React.FC = () => {
             </p>
 
             {/* Current Plan Status */}
-            {session && (
+            {session && userPlan && (
               <div className="inline-flex items-center gap-2 px-6 py-3 bg-gray-800 rounded-lg border border-gray-700 mb-12">
                 <span className="text-gray-400">Current Plan:</span>
-                <span className="text-white font-semibold">Free Plan</span>
-                <span className="px-2 py-1 bg-green-500/20 text-green-400 text-xs rounded">Active</span>
+                <span className="text-white font-semibold">
+                  {userPlan.plan.charAt(0).toUpperCase() + userPlan.plan.slice(1)} Plan
+                </span>
+                <span className="px-2 py-1 bg-green-500/20 text-green-400 text-xs rounded">
+                  {userPlan.status.charAt(0).toUpperCase() + userPlan.status.slice(1)}
+                </span>
               </div>
             )}
 
@@ -364,12 +396,28 @@ const UpgradePage: React.FC = () => {
 
                     <button
                       onClick={() => handleUpgrade(tier.name, tier.price)}
-                      disabled={tier.name === 'Free' || loading || isLoading}
+                      disabled={
+                        loading || 
+                        isLoading || 
+                        userPlanLoading ||
+                        isCurrentPlan(tier.name) || 
+                        (isLoggedIn && !canUpgradeTo(tier.name))
+                      }
                       className={`w-full py-3 rounded-lg font-semibold transition-all ${
-                        tier.name === 'Free' || loading || isLoading
-                          ? tier.name === 'Free' 
+                        loading || isLoading || userPlanLoading
+                          ? 'bg-gray-700 text-gray-500 cursor-not-allowed opacity-50'
+                          : isCurrentPlan(tier.name)
+                          ? tier.name === 'Free'
                             ? 'bg-gradient-to-r from-green-600 to-emerald-600 text-white cursor-not-allowed opacity-75'
-                            : 'bg-gray-700 text-gray-500 cursor-not-allowed'
+                            : tier.name === 'Starter'
+                            ? 'bg-gradient-to-r from-cyan-600 to-blue-600 text-white cursor-not-allowed opacity-75'
+                            : tier.name === 'Pro'
+                            ? 'bg-gradient-to-r from-cyan-500 to-blue-600 text-white cursor-not-allowed opacity-75'
+                            : 'bg-gradient-to-r from-purple-600 to-violet-600 text-white cursor-not-allowed opacity-75'
+                          : (isLoggedIn && !canUpgradeTo(tier.name))
+                          ? 'bg-gray-700 text-gray-500 cursor-not-allowed opacity-50'
+                          : tier.name === 'Free'
+                          ? 'bg-gradient-to-r from-green-600 to-emerald-600 text-white hover:from-green-700 hover:to-emerald-700'
                           : tier.name === 'Starter'
                           ? 'bg-gradient-to-r from-cyan-600 to-blue-600 text-white hover:from-cyan-700 hover:to-blue-700'
                           : tier.name === 'Pro'
@@ -379,7 +427,16 @@ const UpgradePage: React.FC = () => {
                           : 'bg-gray-700 text-white hover:bg-gray-600'
                       }`}
                     >
-                      {loading || isLoading ? 'Processing...' : (tier.name === 'Free' ? tier.ctaText : isLoggedIn ? 'Upgrade Now' : 'Select')}
+                      {loading || isLoading || userPlanLoading 
+                        ? 'Loading...' 
+                        : isCurrentPlan(tier.name) 
+                        ? 'Current Plan'
+                        : (isLoggedIn && !canUpgradeTo(tier.name))
+                        ? 'Not Available'
+                        : isLoggedIn 
+                        ? 'Upgrade Now' 
+                        : 'Select'
+                      }
                     </button>
                   </div>
 
@@ -819,12 +876,33 @@ const UpgradePage: React.FC = () => {
                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
                   <button 
                     onClick={() => handleUpgrade('Starter', 497)}
-                    disabled={loading || isLoading}
-                    className={`bg-gradient-to-r from-cyan-600 to-blue-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-700 hover:to-blue-700 transition-all transform hover:scale-105 ${
-                      loading || isLoading ? 'opacity-50 cursor-not-allowed' : ''
+                    disabled={
+                      loading || 
+                      isLoading || 
+                      userPlanLoading ||
+                      isCurrentPlan('Starter') || 
+                      (isLoggedIn && !canUpgradeTo('Starter'))
+                    }
+                    className={`px-8 py-4 rounded-lg font-semibold transition-all transform hover:scale-105 ${
+                      loading || isLoading || userPlanLoading
+                        ? 'bg-gray-700 text-gray-500 cursor-not-allowed opacity-50'
+                        : isCurrentPlan('Starter')
+                        ? 'bg-gradient-to-r from-cyan-600 to-blue-600 text-white cursor-not-allowed opacity-75'
+                        : (isLoggedIn && !canUpgradeTo('Starter'))
+                        ? 'bg-gray-700 text-gray-500 cursor-not-allowed opacity-50'
+                        : 'bg-gradient-to-r from-cyan-600 to-blue-600 text-white hover:from-cyan-700 hover:to-blue-700'
                     }`}
                   >
-                    {loading || isLoading ? 'Processing...' : (isLoggedIn ? 'Upgrade Now' : 'Start Free Trial')}
+                    {loading || isLoading || userPlanLoading 
+                      ? 'Loading...' 
+                      : isCurrentPlan('Starter') 
+                      ? 'Current Plan'
+                      : (isLoggedIn && !canUpgradeTo('Starter'))
+                      ? 'Not Available'
+                      : isLoggedIn 
+                      ? 'Upgrade Now' 
+                      : 'Start Free Trial'
+                    }
                   </button>
                   <Link
                     href="/contact"
@@ -896,13 +974,34 @@ const UpgradePage: React.FC = () => {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button
                 onClick={() => handleUpgrade('Starter', 497)}
-                disabled={loading || isLoading}
-                className={`px-8 py-4 bg-gradient-to-r from-cyan-600 to-blue-600 text-white rounded-lg font-semibold hover:from-cyan-700 hover:to-blue-700 transform hover:scale-105 transition-all duration-200 shadow-lg hover:shadow-xl ${
-                  loading || isLoading ? 'opacity-50 cursor-not-allowed' : ''
+                disabled={
+                  loading || 
+                  isLoading || 
+                  userPlanLoading ||
+                  isCurrentPlan('Starter') || 
+                  (isLoggedIn && !canUpgradeTo('Starter'))
+                }
+                className={`px-8 py-4 rounded-lg font-semibold transform hover:scale-105 transition-all duration-200 shadow-lg hover:shadow-xl ${
+                  loading || isLoading || userPlanLoading
+                    ? 'bg-gray-700 text-gray-500 cursor-not-allowed opacity-50'
+                    : isCurrentPlan('Starter')
+                    ? 'bg-gradient-to-r from-cyan-600 to-blue-600 text-white cursor-not-allowed opacity-75'
+                    : (isLoggedIn && !canUpgradeTo('Starter'))
+                    ? 'bg-gray-700 text-gray-500 cursor-not-allowed opacity-50'
+                    : 'bg-gradient-to-r from-cyan-600 to-blue-600 text-white hover:from-cyan-700 hover:to-blue-700'
                 }`}
               >
-                {loading || isLoading ? 'Processing...' : (isLoggedIn ? 'Upgrade Now' : 'Select')}
-                {!loading && !isLoading && <ArrowRight className="inline-block ml-2 w-5 h-5" />}
+                {loading || isLoading || userPlanLoading 
+                  ? 'Loading...' 
+                  : isCurrentPlan('Starter') 
+                  ? 'Current Plan'
+                  : (isLoggedIn && !canUpgradeTo('Starter'))
+                  ? 'Not Available'
+                  : isLoggedIn 
+                  ? 'Upgrade Now' 
+                  : 'Select'
+                }
+                {!loading && !isLoading && !userPlanLoading && !isCurrentPlan('Starter') && (isLoggedIn ? canUpgradeTo('Starter') : true) && <ArrowRight className="inline-block ml-2 w-5 h-5" />}
               </button>
               <Link
                 href="/contact"
