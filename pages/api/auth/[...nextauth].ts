@@ -56,11 +56,20 @@ export const authOptions: NextAuthOptions = {
                 email: credentials.email,
               }
 
-              console.log('✅ Credentials authentication successful:', user);
+              console.log('✅ Credentials authentication successful with GoHighLevel data:', user);
               return user
             } else {
-              console.log('❌ User not found in GoHighLevel:', credentials.email);
-              return null; // User doesn't exist in GoHighLevel
+              console.log('⚠️ User not found in GoHighLevel, allowing fallback authentication:', credentials.email);
+              
+              // Allow authentication even if not in GoHighLevel (fallback for existing users)
+              const user = {
+                id: credentials.email,
+                name: credentials.name || 'User',
+                email: credentials.email,
+              }
+
+              console.log('✅ Credentials authentication successful with fallback:', user);
+              return user
             }
           } else {
             console.log('⚠️ GoHighLevel integration disabled - allowing basic authentication');
