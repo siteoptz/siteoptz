@@ -169,6 +169,53 @@ const nextConfig = {
   // Reduces thousands of individual redirects to just a few patterns
   async redirects() {
     return [
+      // Podcast transcript .txt redirects - redirect to actual pages without .txt extension
+      {
+        source: '/podcasts/transcripts/marketing-automation-ai-tools.txt',
+        destination: '/podcasts/transcripts/marketing-automation-ai-tools',
+        permanent: true,
+      },
+      {
+        source: '/podcasts/transcripts/chatgpt-enterprise-workflows.txt',
+        destination: '/podcasts/transcripts/chatgpt-enterprise-workflows',
+        permanent: true,
+      },
+      {
+        source: '/podcasts/transcripts/ai-sales-process-automation.txt',
+        destination: '/podcasts/transcripts/ai-sales-process-automation',
+        permanent: true,
+      },
+      {
+        source: '/podcasts/transcripts/ai-healthcare-workflow-automation.txt',
+        destination: '/podcasts/transcripts/ai-healthcare-workflow-automation',
+        permanent: true,
+      },
+      {
+        source: '/podcasts/transcripts/claude-vs-gpt-enterprise-comparison.txt',
+        destination: '/podcasts/transcripts/claude-vs-gpt-enterprise-comparison',
+        permanent: true,
+      },
+      {
+        source: '/podcasts/transcripts/ai-automation-revolution-2024.txt',
+        destination: '/podcasts/transcripts/ai-automation-revolution-2024',
+        permanent: true,
+      },
+      {
+        source: '/podcasts/transcripts/ai-hr-recruitment-automation.txt',
+        destination: '/podcasts/transcripts/ai-hr-recruitment-automation',
+        permanent: true,
+      },
+      {
+        source: '/podcasts/transcripts/ai-ecommerce-personalization.txt',
+        destination: '/podcasts/transcripts/ai-ecommerce-personalization',
+        permanent: true,
+      },
+      // Pricing page redirect to upgrade page
+      {
+        source: '/pricing',
+        destination: '/upgrade',
+        permanent: true,
+      },
       // Specific category redirects
       {
         source: '/categories/best-voice-ai-tools',
