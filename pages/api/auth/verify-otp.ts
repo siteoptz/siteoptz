@@ -1,5 +1,5 @@
 import { NextApiRequest, NextApiResponse } from 'next';
-import { otpStore } from './send-otp';
+import { verifyOTP } from '../../../lib/otp-service';
 
 interface VerifyOTPResponse {
   success: boolean;
@@ -27,46 +27,15 @@ export default async function handler(
   }
 
   try {
-    const storedOTP = otpStore.get(email);
+    // Verify the OTP using the shared service
+    const verificationResult = verifyOTP(email, code);
     
-    if (!storedOTP) {
-      return res.status(400).json({ 
-        success: false, 
-        message: 'No code found for this email. Please request a new one.' 
+    if (!verificationResult.success) {
+      return res.status(400).json({
+        success: false,
+        message: verificationResult.message
       });
     }
-
-    // Check if code has expired
-    if (Date.now() > storedOTP.expires) {
-      otpStore.delete(email);
-      return res.status(400).json({ 
-        success: false, 
-        message: 'Code has expired. Please request a new one.' 
-      });
-    }
-
-    // Check if too many attempts
-    if (storedOTP.attempts >= 3) {
-      otpStore.delete(email);
-      return res.status(400).json({ 
-        success: false, 
-        message: 'Too many failed attempts. Please request a new code.' 
-      });
-    }
-
-    // Verify the code
-    if (storedOTP.code !== code.toString()) {
-      storedOTP.attempts++;
-      return res.status(400).json({ 
-        success: false, 
-        message: `Invalid code. ${3 - storedOTP.attempts} attempts remaining.` 
-      });
-    }
-
-    // Code is valid - clean up and create user session
-    otpStore.delete(email);
-    
-    console.log(`✅ OTP verified successfully for ${email}`);
     
     // Extract name from email for fallback
     const emailLocal = email.split('@')[0];
