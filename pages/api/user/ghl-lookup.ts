@@ -44,9 +44,9 @@ export async function getContactByEmail(email: string): Promise<ContactLookupRes
       headersKeys: Object.keys(headers)
     });
     
-    // Search for existing contact by email
+    // Search for existing contact by email with locationId in URL
     const searchResponse = await fetch(
-      `https://services.leadconnectorhq.com/contacts/search/duplicate?email=${encodeURIComponent(email)}`,
+      `https://services.leadconnectorhq.com/contacts/search/duplicate?email=${encodeURIComponent(email)}&locationId=${locationId}`,
       {
         method: 'GET',
         headers
@@ -104,19 +104,11 @@ export async function getContactByEmail(email: string): Promise<ContactLookupRes
       const errorText = await searchResponse.text();
       console.log('❌ GoHighLevel search failed:', searchResponse.status, errorText);
       
-      // If it's a location ID error, but we know the user exists, return a basic response
+      // If it's a location ID error, return exists: false so email parsing is used
       if (searchResponse.status === 422 && errorText.includes('locationId')) {
-        console.log('⚠️ Location ID error - GoHighLevel integration partially working but search failing');
-        console.log('⚠️ For email/password auth, we\'ll assume user exists but can\'t get details');
-        
-        // Return a basic user structure for fallback
-        return { 
-          exists: true, 
-          contactId: email, 
-          name: 'User', // Will use this as fallback
-          plan: 'free',
-          email: email
-        };
+        console.log('⚠️ Location ID error - GoHighLevel integration failing');
+        console.log('⚠️ Falling back to email-based name extraction');
+        return { exists: false };
       }
     }
     

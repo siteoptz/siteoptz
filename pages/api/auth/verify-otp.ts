@@ -50,7 +50,7 @@ export default async function handler(
     try {
       const ghlUser = await getContactByEmail(trimmedEmail);
       
-      if (ghlUser.exists && ghlUser.name && ghlUser.name !== 'User') {
+      if (ghlUser.exists && ghlUser.name && ghlUser.name !== 'User' && ghlUser.name.trim() !== '') {
         // Use GHL data if available and has real name
         console.log('✅ Found user in GoHighLevel:', {
           name: ghlUser.name,
