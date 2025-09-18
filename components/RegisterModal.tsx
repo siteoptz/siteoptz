@@ -183,92 +183,22 @@ const RegisterModal: React.FC<RegisterModalProps> = ({
         console.log('✅ Stored registration data in sessionStorage for OAuth');
       }
       
+      console.log('🔵 Initiating Google OAuth, isLogin:', isLogin);
+      
       const result = await signIn('google', {
         callbackUrl: isLogin ? '/dashboard' : '/dashboard?registration=true',
-        redirect: false,
+        redirect: true, // Allow NextAuth to handle redirect
       });
       
+      console.log('🔵 Google OAuth result:', result);
+      
       if (result?.error) {
+        console.error('❌ Google OAuth error:', result.error);
         setError('Google authentication failed. Please try again.');
         setIsLoading(false);
       } else {
-        // Handle registration logic after OAuth completes
-        if (!isLogin) {
-          try {
-            // Wait for session to be established
-            setTimeout(async () => {
-              const session = await getSession();
-              if (session?.user?.email) {
-                // First, check if user already exists (for registration attempts)
-                const lookupResponse = await fetch('/api/user/ghl-lookup', {
-                  method: 'POST',
-                  headers: {
-                    'Content-Type': 'application/json',
-                  },
-                  body: JSON.stringify({
-                    email: session.user.email
-                  }),
-                });
-
-                const lookupResult = await lookupResponse.json();
-                
-                if (lookupResult.exists) {
-                  // User already exists - this is a registration attempt by existing user
-                  console.log('❌ Existing user attempted registration via OAuth');
-                  window.location.href = '/auth/error?error=UserExists&message=User already exists. Please sign in instead.';
-                  return;
-                }
-
-                // Store business info on server for this user's email  
-                await fetch('/api/get-oauth-business-info', {
-                  method: 'POST',
-                  headers: {
-                    'Content-Type': 'application/json',
-                  },
-                  body: JSON.stringify({
-                    action: 'store',
-                    email: session.user.email,
-                    businessInfo: {
-                      aiToolsInterest: formData.aiToolsInterest,
-                      businessSize: formData.businessSize,
-                      planName: planName,
-                      timestamp: Date.now()
-                    }
-                  }),
-                });
-
-                // Now trigger registration
-                const registrationResponse = await fetch('/api/register-free-plan', {
-                  method: 'POST',
-                  headers: {
-                    'Content-Type': 'application/json',
-                  },
-                  body: JSON.stringify({
-                    email: session.user.email,
-                    name: session.user.name || '',
-                    source: 'Free Plan Registration - Google OAuth',
-                    planName: planName,
-                    userAgent: navigator.userAgent,
-                    referrer: document.referrer,
-                    registrationMethod: 'google',
-                    aiToolsInterest: formData.aiToolsInterest,
-                    businessSize: formData.businessSize
-                  }),
-                });
-
-                const registrationResult = await registrationResponse.json();
-                
-                if (registrationResult.success) {
-                  console.log('✅ Google user registered in GoHighLevel:', registrationResult.data);
-                } else {
-                  console.warn('GoHighLevel Google registration failed:', registrationResult.error);
-                }
-              }
-            }, 2000); // Wait 2 seconds for session to be established
-          } catch (error) {
-            console.error('OAuth registration error:', error);
-          }
-        }
+        console.log('✅ Google OAuth successful, redirecting...');
+        // The dashboard will handle the registration validation
         
         // Success - mark as first time user if registering and redirect
         if (!isLogin) {

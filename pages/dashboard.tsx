@@ -4,6 +4,7 @@ import { getServerSession } from 'next-auth/next';
 import { authOptions } from './api/auth/[...nextauth]';
 import { useUserPlan } from '../hooks/useUserPlan';
 import { useRouter } from 'next/router';
+import { useSession } from 'next-auth/react';
 import { DashboardHeader } from '../components/dashboard/DashboardHeader';
 import { FreePlanDashboard } from '../components/dashboard/FreePlanDashboard';
 import { CheckCircle } from 'lucide-react';
@@ -11,8 +12,95 @@ import Link from 'next/link';
 
 export default function Dashboard() {
   const { userPlan, loading } = useUserPlan();
+  const { data: session } = useSession();
   const router = useRouter();
-  const { upgraded } = router.query;
+  const { upgraded, registration } = router.query;
+
+  // Check for OAuth registration attempts by existing users
+  React.useEffect(() => {
+    const checkOAuthRegistration = async () => {
+      if (registration === 'true' && session?.user?.email) {
+        console.log('🔍 Dashboard detected OAuth registration attempt for:', session.user.email);
+        
+        try {
+          // Check if user already exists in GoHighLevel
+          const lookupResponse = await fetch('/api/user/ghl-lookup', {
+            method: 'POST',
+            headers: {
+              'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({
+              email: session.user.email
+            }),
+          });
+
+          const lookupResult = await lookupResponse.json();
+          console.log('📥 Dashboard lookup result:', lookupResult);
+          
+          if (lookupResult.exists) {
+            // User already exists - this is a registration attempt by existing user
+            console.log('❌ Existing user attempted OAuth registration - redirecting to error page');
+            window.location.href = '/auth/error?error=UserExists&message=User already exists. Please sign in instead.';
+            return;
+          } else {
+            console.log('✅ New user confirmed via dashboard validation');
+            
+            // Get business info from sessionStorage and process registration
+            const storedData = sessionStorage.getItem('pendingOAuthRegistration');
+            if (storedData) {
+              const registrationData = JSON.parse(storedData);
+              console.log('📋 Found stored registration data:', registrationData);
+              
+              // Clean up sessionStorage
+              sessionStorage.removeItem('pendingOAuthRegistration');
+              
+              // Process the registration
+              try {
+                const registrationResponse = await fetch('/api/register-free-plan', {
+                  method: 'POST',
+                  headers: {
+                    'Content-Type': 'application/json',
+                  },
+                  body: JSON.stringify({
+                    email: session.user.email,
+                    name: session.user.name || '',
+                    source: 'Free Plan Registration - Google OAuth',
+                    planName: registrationData.planName || 'Free Plan',
+                    userAgent: navigator.userAgent,
+                    referrer: document.referrer,
+                    registrationMethod: 'google',
+                    aiToolsInterest: registrationData.aiToolsInterest,
+                    businessSize: registrationData.businessSize
+                  }),
+                });
+
+                const registrationResult = await registrationResponse.json();
+                
+                if (registrationResult.success) {
+                  console.log('✅ OAuth user registered in GoHighLevel from dashboard:', registrationResult.data);
+                } else {
+                  console.warn('GoHighLevel OAuth registration failed from dashboard:', registrationResult.error);
+                }
+              } catch (regError) {
+                console.error('Registration processing error:', regError);
+              }
+            }
+          }
+        } catch (error) {
+          console.error('OAuth registration validation error:', error);
+        }
+        
+        // Remove registration parameter from URL
+        const newQuery = { ...router.query };
+        delete newQuery.registration;
+        router.replace({ pathname: router.pathname, query: newQuery }, undefined, { shallow: true });
+      }
+    };
+
+    if (session) {
+      checkOAuthRegistration();
+    }
+  }, [session, registration, router]);
 
   // Redirect to plan-specific dashboard
   React.useEffect(() => {
