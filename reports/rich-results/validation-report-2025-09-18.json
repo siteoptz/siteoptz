@@ -1,0 +1,560 @@
+{
+  "timestamp": "2025-09-18T12:17:24.831Z",
+  "summary": {
+    "total_tested": 10,
+    "passed": 9,
+    "failed": 1,
+    "success_rate": 90
+  },
+  "issues_found": {
+    "missing_aggregateRating": 0,
+    "missing_offers": 0,
+    "missing_required_fields": 1,
+    "no_structured_data": 0,
+    "http_errors": 0
+  },
+  "detailed_results": [
+    {
+      "url": "https://siteoptz.ai/reviews/0cody",
+      "status": "passed",
+      "validation": {
+        "valid": true,
+        "errors": [],
+        "warnings": [],
+        "hasRequiredFields": {
+          "aggregateRating": true,
+          "offers": true,
+          "name": true,
+          "description": true
+        }
+      },
+      "schema": {
+        "@context": "https://schema.org",
+        "@type": "SoftwareApplication",
+        "name": "0Cody",
+        "description": "A coding assistant to integrate with IDEs for code completion, generation, editing, debugging and explanation",
+        "url": "https://cody.ai",
+        "applicationCategory": "BusinessApplication",
+        "operatingSystem": "Web",
+        "offers": {
+          "@type": "Offer",
+          "price": 14,
+          "priceCurrency": "USD",
+          "availability": "https://schema.org/InStock",
+          "priceSpecification": {
+            "@type": "PriceSpecification",
+            "price": 14,
+            "priceCurrency": "USD"
+          },
+          "url": "https://cody.ai"
+        },
+        "aggregateRating": {
+          "@type": "AggregateRating",
+          "ratingValue": 4,
+          "reviewCount": 197,
+          "bestRating": 5,
+          "worstRating": 1
+        },
+        "author": {
+          "@type": "Organization",
+          "name": "SiteOptz",
+          "url": "https://siteoptz.ai"
+        },
+        "publisher": {
+          "@type": "Organization",
+          "name": "SiteOptz",
+          "url": "https://siteoptz.ai"
+        }
+      },
+      "allSchemas": 4
+    },
+    {
+      "url": "https://siteoptz.ai/reviews/10web",
+      "status": "passed",
+      "validation": {
+        "valid": true,
+        "errors": [],
+        "warnings": [],
+        "hasRequiredFields": {
+          "aggregateRating": true,
+          "offers": true,
+          "name": true,
+          "description": true
+        }
+      },
+      "schema": {
+        "@context": "https://schema.org",
+        "@type": "SoftwareApplication",
+        "name": "10web",
+        "description": "AI-Powered WordPress Platform. Automated Website Builder, Hosting, and PageSpeed Booster, to say the least.",
+        "url": "https://10web.io",
+        "applicationCategory": "BusinessApplication",
+        "operatingSystem": "Web",
+        "offers": {
+          "@type": "Offer",
+          "price": 28,
+          "priceCurrency": "USD",
+          "availability": "https://schema.org/InStock",
+          "priceSpecification": {
+            "@type": "PriceSpecification",
+            "price": 28,
+            "priceCurrency": "USD"
+          },
+          "url": "https://10web.io"
+        },
+        "aggregateRating": {
+          "@type": "AggregateRating",
+          "ratingValue": 4.7,
+          "reviewCount": 185,
+          "bestRating": 5,
+          "worstRating": 1
+        },
+        "author": {
+          "@type": "Organization",
+          "name": "SiteOptz",
+          "url": "https://siteoptz.ai"
+        },
+        "publisher": {
+          "@type": "Organization",
+          "name": "SiteOptz",
+          "url": "https://siteoptz.ai"
+        }
+      },
+      "allSchemas": 4
+    },
+    {
+      "url": "https://siteoptz.ai/reviews/11-ai",
+      "status": "passed",
+      "validation": {
+        "valid": true,
+        "errors": [],
+        "warnings": [],
+        "hasRequiredFields": {
+          "aggregateRating": true,
+          "offers": true,
+          "name": true,
+          "description": true
+        }
+      },
+      "schema": {
+        "@context": "https://schema.org",
+        "@type": "SoftwareApplication",
+        "name": "11.ai",
+        "description": "A tool to create voices through voice cloning and text-to-speech",
+        "url": "https://11.ai",
+        "applicationCategory": "BusinessApplication",
+        "operatingSystem": "Web",
+        "offers": {
+          "@type": "Offer",
+          "price": 26,
+          "priceCurrency": "USD",
+          "availability": "https://schema.org/InStock",
+          "priceSpecification": {
+            "@type": "PriceSpecification",
+            "price": 26,
+            "priceCurrency": "USD"
+          },
+          "url": "https://11.ai"
+        },
+        "aggregateRating": {
+          "@type": "AggregateRating",
+          "ratingValue": 4,
+          "reviewCount": 106,
+          "bestRating": 5,
+          "worstRating": 1
+        },
+        "author": {
+          "@type": "Organization",
+          "name": "SiteOptz",
+          "url": "https://siteoptz.ai"
+        },
+        "publisher": {
+          "@type": "Organization",
+          "name": "SiteOptz",
+          "url": "https://siteoptz.ai"
+        }
+      },
+      "allSchemas": 4
+    },
+    {
+      "url": "https://siteoptz.ai/reviews/37x",
+      "status": "passed",
+      "validation": {
+        "valid": true,
+        "errors": [],
+        "warnings": [],
+        "hasRequiredFields": {
+          "aggregateRating": true,
+          "offers": true,
+          "name": true,
+          "description": true
+        }
+      },
+      "schema": {
+        "@context": "https://schema.org",
+        "@type": "SoftwareApplication",
+        "name": "37x",
+        "description": "A tool to build and manage affiliate marketplaces and products",
+        "url": "https://37x.com",
+        "applicationCategory": "BusinessApplication",
+        "operatingSystem": "Web",
+        "offers": {
+          "@type": "Offer",
+          "price": 21,
+          "priceCurrency": "USD",
+          "availability": "https://schema.org/InStock",
+          "priceSpecification": {
+            "@type": "PriceSpecification",
+            "price": 21,
+            "priceCurrency": "USD"
+          },
+          "url": "https://37x.com"
+        },
+        "aggregateRating": {
+          "@type": "AggregateRating",
+          "ratingValue": 4,
+          "reviewCount": 136,
+          "bestRating": 5,
+          "worstRating": 1
+        },
+        "author": {
+          "@type": "Organization",
+          "name": "SiteOptz",
+          "url": "https://siteoptz.ai"
+        },
+        "publisher": {
+          "@type": "Organization",
+          "name": "SiteOptz",
+          "url": "https://siteoptz.ai"
+        }
+      },
+      "allSchemas": 4
+    },
+    {
+      "url": "https://siteoptz.ai/reviews/6sense-aidriven-revenue-growth-optimization",
+      "status": "passed",
+      "validation": {
+        "valid": true,
+        "errors": [],
+        "warnings": [],
+        "hasRequiredFields": {
+          "aggregateRating": true,
+          "offers": true,
+          "name": true,
+          "description": true
+        }
+      },
+      "schema": {
+        "@context": "https://schema.org",
+        "@type": "SoftwareApplication",
+        "name": "6Sense - AI-driven Revenue Growth Optimization",
+        "description": "6Sense - AI-driven Revenue Growth Optimization",
+        "url": "https://www.b12.io/static/6c0eef015ef80105a23be1e53e6e54bc/922af/6sense.png",
+        "applicationCategory": "BusinessApplication",
+        "operatingSystem": "Web",
+        "offers": {
+          "@type": "Offer",
+          "price": 36,
+          "priceCurrency": "USD",
+          "availability": "https://schema.org/InStock",
+          "priceSpecification": {
+            "@type": "PriceSpecification",
+            "price": 36,
+            "priceCurrency": "USD"
+          },
+          "url": "https://www.b12.io/static/6c0eef015ef80105a23be1e53e6e54bc/922af/6sense.png"
+        },
+        "aggregateRating": {
+          "@type": "AggregateRating",
+          "ratingValue": 4.2,
+          "reviewCount": 468,
+          "bestRating": 5,
+          "worstRating": 1
+        },
+        "author": {
+          "@type": "Organization",
+          "name": "SiteOptz",
+          "url": "https://siteoptz.ai"
+        },
+        "publisher": {
+          "@type": "Organization",
+          "name": "SiteOptz",
+          "url": "https://siteoptz.ai"
+        }
+      },
+      "allSchemas": 4
+    },
+    {
+      "url": "https://siteoptz.ai/reviews/a0-dev",
+      "status": "passed",
+      "validation": {
+        "valid": true,
+        "errors": [],
+        "warnings": [],
+        "hasRequiredFields": {
+          "aggregateRating": true,
+          "offers": true,
+          "name": true,
+          "description": true
+        }
+      },
+      "schema": {
+        "@context": "https://schema.org",
+        "@type": "SoftwareApplication",
+        "name": "A0.dev",
+        "description": "A tool to generate UI code from prompts or designs and React component creation",
+        "url": "https://a0dev.com",
+        "applicationCategory": "BusinessApplication",
+        "operatingSystem": "Web",
+        "offers": {
+          "@type": "Offer",
+          "price": 31,
+          "priceCurrency": "USD",
+          "availability": "https://schema.org/InStock",
+          "priceSpecification": {
+            "@type": "PriceSpecification",
+            "price": 31,
+            "priceCurrency": "USD"
+          },
+          "url": "https://a0dev.com"
+        },
+        "aggregateRating": {
+          "@type": "AggregateRating",
+          "ratingValue": 4,
+          "reviewCount": 458,
+          "bestRating": 5,
+          "worstRating": 1
+        },
+        "author": {
+          "@type": "Organization",
+          "name": "SiteOptz",
+          "url": "https://siteoptz.ai"
+        },
+        "publisher": {
+          "@type": "Organization",
+          "name": "SiteOptz",
+          "url": "https://siteoptz.ai"
+        }
+      },
+      "allSchemas": 4
+    },
+    {
+      "url": "https://siteoptz.ai/reviews/acquisio",
+      "status": "failed",
+      "validation": {
+        "valid": false,
+        "errors": [
+          "offers missing price"
+        ],
+        "warnings": [],
+        "hasRequiredFields": {
+          "aggregateRating": true,
+          "offers": true,
+          "name": true,
+          "description": true
+        }
+      },
+      "schema": {
+        "@context": "https://schema.org",
+        "@type": "SoftwareApplication",
+        "name": "Acquisio",
+        "description": "AI-powered advertising platform for scaling PPC campaigns across Google, Meta, and Microsoft with machine learning optimization.",
+        "url": "https://www.acquisio.com",
+        "applicationCategory": "BusinessApplication",
+        "operatingSystem": "Web",
+        "offers": {
+          "@type": "Offer",
+          "price": 0,
+          "priceCurrency": "USD",
+          "availability": "https://schema.org/InStock",
+          "priceSpecification": {
+            "@type": "PriceSpecification",
+            "price": 0,
+            "priceCurrency": "USD"
+          },
+          "url": "https://www.acquisio.com"
+        },
+        "aggregateRating": {
+          "@type": "AggregateRating",
+          "ratingValue": 3.8,
+          "reviewCount": 158,
+          "bestRating": 5,
+          "worstRating": 1
+        },
+        "author": {
+          "@type": "Organization",
+          "name": "SiteOptz",
+          "url": "https://siteoptz.ai"
+        },
+        "publisher": {
+          "@type": "Organization",
+          "name": "SiteOptz",
+          "url": "https://siteoptz.ai"
+        }
+      },
+      "allSchemas": 4
+    },
+    {
+      "url": "https://siteoptz.ai/reviews/actionflows",
+      "status": "passed",
+      "validation": {
+        "valid": true,
+        "errors": [],
+        "warnings": [],
+        "hasRequiredFields": {
+          "aggregateRating": true,
+          "offers": true,
+          "name": true,
+          "description": true
+        }
+      },
+      "schema": {
+        "@context": "https://schema.org",
+        "@type": "SoftwareApplication",
+        "name": "ActionFlows",
+        "description": "A no-code platform to create AI workflows through drag-and-drop interfaces",
+        "url": "https://actionflows.com",
+        "applicationCategory": "BusinessApplication",
+        "operatingSystem": "Web",
+        "offers": {
+          "@type": "Offer",
+          "price": 42,
+          "priceCurrency": "USD",
+          "availability": "https://schema.org/InStock",
+          "priceSpecification": {
+            "@type": "PriceSpecification",
+            "price": 42,
+            "priceCurrency": "USD"
+          },
+          "url": "https://actionflows.com"
+        },
+        "aggregateRating": {
+          "@type": "AggregateRating",
+          "ratingValue": 4,
+          "reviewCount": 245,
+          "bestRating": 5,
+          "worstRating": 1
+        },
+        "author": {
+          "@type": "Organization",
+          "name": "SiteOptz",
+          "url": "https://siteoptz.ai"
+        },
+        "publisher": {
+          "@type": "Organization",
+          "name": "SiteOptz",
+          "url": "https://siteoptz.ai"
+        }
+      },
+      "allSchemas": 4
+    },
+    {
+      "url": "https://siteoptz.ai/reviews/adalysis",
+      "status": "passed",
+      "validation": {
+        "valid": true,
+        "errors": [],
+        "warnings": [],
+        "hasRequiredFields": {
+          "aggregateRating": true,
+          "offers": true,
+          "name": true,
+          "description": true
+        }
+      },
+      "schema": {
+        "@context": "https://schema.org",
+        "@type": "SoftwareApplication",
+        "name": "Adalysis",
+        "description": "PPC optimization software focused on Google and Bing Ads with smart bidding automation and comprehensive reporting.",
+        "url": "https://adalysis.com",
+        "applicationCategory": "BusinessApplication",
+        "operatingSystem": "Web",
+        "offers": {
+          "@type": "Offer",
+          "price": 106,
+          "priceCurrency": "USD",
+          "availability": "https://schema.org/InStock",
+          "priceSpecification": {
+            "@type": "PriceSpecification",
+            "price": 106,
+            "priceCurrency": "USD"
+          },
+          "url": "https://adalysis.com"
+        },
+        "aggregateRating": {
+          "@type": "AggregateRating",
+          "ratingValue": 3.8,
+          "reviewCount": 322,
+          "bestRating": 5,
+          "worstRating": 1
+        },
+        "author": {
+          "@type": "Organization",
+          "name": "SiteOptz",
+          "url": "https://siteoptz.ai"
+        },
+        "publisher": {
+          "@type": "Organization",
+          "name": "SiteOptz",
+          "url": "https://siteoptz.ai"
+        }
+      },
+      "allSchemas": 4
+    },
+    {
+      "url": "https://siteoptz.ai/reviews/adbeat",
+      "status": "passed",
+      "validation": {
+        "valid": true,
+        "errors": [],
+        "warnings": [],
+        "hasRequiredFields": {
+          "aggregateRating": true,
+          "offers": true,
+          "name": true,
+          "description": true
+        }
+      },
+      "schema": {
+        "@context": "https://schema.org",
+        "@type": "SoftwareApplication",
+        "name": "Adbeat",
+        "description": "Adbeat is a display advertising intelligence platform that provides competitive insights and market analysis for digital advertising campaigns across multiple networks.",
+        "url": "#",
+        "applicationCategory": "BusinessApplication",
+        "operatingSystem": "Web",
+        "offers": {
+          "@type": "Offer",
+          "price": 249,
+          "priceCurrency": "USD",
+          "availability": "https://schema.org/InStock",
+          "priceSpecification": {
+            "@type": "PriceSpecification",
+            "price": 249,
+            "priceCurrency": "USD"
+          },
+          "url": "#"
+        },
+        "aggregateRating": {
+          "@type": "AggregateRating",
+          "ratingValue": 4,
+          "reviewCount": 317,
+          "bestRating": 5,
+          "worstRating": 1
+        },
+        "author": {
+          "@type": "Organization",
+          "name": "SiteOptz",
+          "url": "https://siteoptz.ai"
+        },
+        "publisher": {
+          "@type": "Organization",
+          "name": "SiteOptz",
+          "url": "https://siteoptz.ai"
+        }
+      },
+      "allSchemas": 4
+    }
+  ]
+}

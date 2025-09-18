@@ -1,0 +1,68 @@
+{
+  "timestamp": "2025-09-18T12:15:52.330Z",
+  "executive_summary": {
+    "total_errors": 1456,
+    "unique_urls_affected": 721,
+    "critical_issues": 1438,
+    "estimated_fix_time": "2-4 hours for bulk implementation",
+    "seo_impact": "HIGH - Blocks rich results for 719+ URLs"
+  },
+  "error_breakdown": {
+    "missing_aggregateRating": 719,
+    "missing_offers": 719,
+    "unrecognized_properties": 10,
+    "other_issues": 0
+  },
+  "most_common_errors": [
+    [
+      "aggregateRating or review",
+      719
+    ],
+    [
+      "offers",
+      719
+    ],
+    [
+      "location",
+      7
+    ],
+    [
+      "position",
+      7
+    ],
+    [
+      "address",
+      1
+    ]
+  ],
+  "fix_strategy": {
+    "phase_1": {
+      "title": "Critical Missing Fields (HIGH PRIORITY)",
+      "description": "Add aggregateRating and offers fields to all review pages",
+      "affected_urls": 359.5,
+      "implementation": "Bulk programmatic fix",
+      "estimated_time": "2-3 hours"
+    },
+    "phase_2": {
+      "title": "Clean Up Unrecognized Properties (MEDIUM PRIORITY)",
+      "description": "Remove schema properties not recognized by Schema.org",
+      "affected_urls": 2,
+      "implementation": "Template cleanup",
+      "estimated_time": "1 hour"
+    }
+  },
+  "recommendations": [
+    "🚨 URGENT: Fix missing aggregateRating and offers fields (blocks rich results)",
+    "📊 Impact: 719 URLs currently cannot display rich snippets in search",
+    "🛠️ Solution: Programmatic bulk fix using existing tool data",
+    "⏱️ Timeline: Can be implemented in 2-4 hours",
+    "📈 Expected Result: Significant improvement in search visibility"
+  ],
+  "next_steps": [
+    "1. Extract rating/pricing data from aiToolsData.json",
+    "2. Update review page template to include required fields",
+    "3. Deploy and test with Google Rich Results Test",
+    "4. Monitor Google Search Console for error reduction",
+    "5. Track rich snippet appearances in search results"
+  ]
+}

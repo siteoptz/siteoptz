@@ -120,6 +120,87 @@ This dark theme is mandatory for visual consistency across the entire site.
 2. Place actual logo file OR run `npm run generate-logos`
 3. Always run `npm run validate-images` before committing
 
+## Rich Results & Structured Data Requirements (CRITICAL)
+
+**ALL pages MUST implement proper structured data for SEO rich results:**
+
+### Required Schema Types for Tool Pages
+1. **SoftwareApplication Schema** (PRIMARY)
+2. **Review Schema** 
+3. **FAQPage Schema**
+4. **BreadcrumbList Schema**
+
+### Mandatory SoftwareApplication Fields
+```json
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "Tool Name",
+  "description": "Tool description",
+  "url": "https://tool-website.com",
+  "applicationCategory": "BusinessApplication",
+  "operatingSystem": "Web",
+  "offers": {
+    "@type": "Offer",
+    "price": 29,
+    "priceCurrency": "USD",
+    "availability": "https://schema.org/InStock",
+    "priceSpecification": {
+      "@type": "PriceSpecification",
+      "price": 29,
+      "priceCurrency": "USD"
+    }
+  },
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": 4.5,
+    "reviewCount": 100,
+    "bestRating": 5,
+    "worstRating": 1
+  },
+  "author": {
+    "@type": "Organization",
+    "name": "SiteOptz",
+    "url": "https://siteoptz.ai"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "SiteOptz",
+    "url": "https://siteoptz.ai"
+  }
+}
+```
+
+### Critical Implementation Rules
+- **NEVER omit** `aggregateRating` or `offers` fields (causes GSC errors)
+- **Use actual data** from `aiToolsData.json` for pricing and ratings
+- **Handle free tools**: Use appropriate pricing structure for $0 tools
+- **Include all 4 schema types** on review pages for maximum SEO benefit
+- **Validate implementation** before deployment
+
+### Rich Results Validation Commands
+```bash
+# Test structured data implementation
+node scripts/test-rich-results.js test-url https://siteoptz.ai/reviews/[tool-name]
+
+# Analyze rich results compliance
+node scripts/rich-results-analyzer-simple.js
+
+# Test sample of URLs
+node scripts/test-rich-results.js test-csv [path-to-csv] [sample-size]
+```
+
+### Tools for Ongoing Monitoring
+- **Rich Results Analyzer**: `scripts/rich-results-analyzer-simple.js`
+- **Rich Results Tester**: `scripts/test-rich-results.js` 
+- **Reports Directory**: `reports/rich-results/`
+
+### SEO Impact
+- **Rich snippets** in search results (ratings, pricing)
+- **Enhanced CTR** from improved search listings
+- **Competitive advantage** over tools without structured data
+- **700+ pages** currently benefit from rich results
+
 ## Important Notes
 
 - **Single data source**: Only edit `public/data/aiToolsData.json`
@@ -128,3 +209,4 @@ This dark theme is mandatory for visual consistency across the entire site.
 - **Arrays only**: features and pricing must always be arrays, never objects
 - **Dark theme required**: All pages must use the dark theme styling specified above
 - **Logo validation**: MUST run `npm run validate-images` before every deployment
+- **Rich results validation**: MUST test structured data on new pages before deployment
