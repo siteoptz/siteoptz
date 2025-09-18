@@ -75,14 +75,23 @@ export const authOptions: NextAuthOptions = {
         console.log('=== SIGNIN CALLBACK TRIGGERED ===');
         console.log('User:', JSON.stringify(user, null, 2));
         console.log('Account:', JSON.stringify(account, null, 2));
+        console.log('Provider:', account?.provider);
+        
+        // Skip GoHighLevel integration for credentials provider
+        // Email/password registrations are handled by /api/register-free-plan
+        if (account?.provider === 'credentials') {
+          console.log('✅ Credentials sign-in detected - skipping GoHighLevel integration (handled by register-free-plan API)');
+          return true;
+        }
+        
         console.log('Environment check:');
         console.log('- GOHIGHLEVEL_API_KEY:', process.env.GOHIGHLEVEL_API_KEY ? 'Set' : 'Missing');
         console.log('- EMAIL_FROM:', process.env.EMAIL_FROM);
         console.log('- NEXTAUTH_URL:', process.env.NEXTAUTH_URL);
         
-        // Handle new user registration
+        // Handle OAuth user registration only
         if (user?.email) {
-          console.log('Processing user registration/signin for:', user.email);
+          console.log('Processing OAuth user registration/signin for:', user.email);
           
           // Try to get business information if available
           let businessInfo = null;
