@@ -40,6 +40,10 @@ interface ApiResponse {
     email: string;
     contactId?: string;
     opportunityId?: string;
+    isNewUser?: boolean;
+    action?: string;
+    emailSent?: boolean;
+    adminNotificationSent?: boolean;
   };
   error?: string;
 }
