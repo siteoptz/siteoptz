@@ -440,7 +440,7 @@ export default function EnterpriseDashboard() {
         <div className="bg-gradient-to-r from-amber-600 to-orange-600 rounded-xl p-8 text-center">
           <h3 className="text-3xl font-bold text-white mb-4">AI Leadership Circle Excellence</h3>
           <p className="text-xl text-amber-100 mb-6">
-            You're not just using AI—you're defining the future of your industry.
+            You&apos;re not just using AI—you&apos;re defining the future of your industry.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <button className="bg-white text-amber-600 px-8 py-3 rounded-lg text-lg font-bold hover:bg-gray-100 transition-colors">

@@ -339,7 +339,7 @@ export default function ProDashboard() {
             
             <div className="bg-black/40 p-6 rounded-lg border border-purple-300/20">
               <blockquote className="text-purple-100 italic mb-4">
-                "{enterpriseUpgrade?.testimonial.quote}"
+                &ldquo;{enterpriseUpgrade?.testimonial.quote}&rdquo;
               </blockquote>
               <cite className="text-sm text-purple-200">
                 — {enterpriseUpgrade?.testimonial.author}, {enterpriseUpgrade?.testimonial.title}
