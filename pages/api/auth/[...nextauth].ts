@@ -180,7 +180,14 @@ export const authOptions: NextAuthOptions = {
                     userDetails: searchResult.contact
                   };
                   console.log('✅ Existing user found in GoHighLevel:', existingUserCheck.contactId);
+                } else {
+                  console.log('ℹ️ No existing user found in GoHighLevel for:', user.email);
                 }
+              } else {
+                const errorText = await searchResponse.text();
+                console.error('❌ GoHighLevel API error in signIn callback:', searchResponse.status, errorText);
+                console.log('⚠️ Continuing with OAuth flow despite GoHighLevel error');
+                // Continue with existingUserCheck.exists = false (default)
               }
             }
           } catch (error) {
@@ -188,15 +195,35 @@ export const authOptions: NextAuthOptions = {
           }
           
           // **ENHANCED: Step 3 - Apply conditional logic**
-          if (isRegistrationAttempt && existingUserCheck.exists) {
-            // Existing user trying to register - block and redirect to error page
-            console.log('❌ BLOCKING: Existing user attempting OAuth registration');
-            console.log('- User Email:', user.email);
-            console.log('- Existing Contact ID:', existingUserCheck.contactId);
-            console.log('- Registration Data:', businessInfo);
-            
-            // Throw error to trigger redirect to error page
-            throw new Error('EXISTING_USER_REGISTRATION_ATTEMPT');
+          
+          // Check if GoHighLevel integration is working
+          const isGHLEnabled = process.env.ENABLE_GHL === 'true';
+          const hasGHLConfig = process.env.GOHIGHLEVEL_API_KEY && process.env.GOHIGHLEVEL_LOCATION_ID;
+          
+          if (isRegistrationAttempt) {
+            if (!isGHLEnabled || !hasGHLConfig) {
+              // GoHighLevel is disabled - block ALL OAuth registration attempts for safety
+              console.log('🚫 BLOCKING: OAuth registration attempt while GoHighLevel is disabled');
+              console.log('- User Email:', user.email);
+              console.log('- GoHighLevel Enabled:', isGHLEnabled);
+              console.log('- Has GHL Config:', hasGHLConfig);
+              console.log('- Registration Data:', businessInfo);
+              console.log('⚠️ Redirecting to email/password registration for security');
+              
+              throw new Error('OAUTH_REGISTRATION_DISABLED');
+            } else if (existingUserCheck.exists) {
+              // GoHighLevel is enabled and existing user detected - block registration
+              console.log('❌ BLOCKING: Existing user attempting OAuth registration');
+              console.log('- User Email:', user.email);
+              console.log('- Existing Contact ID:', existingUserCheck.contactId);
+              console.log('- Registration Data:', businessInfo);
+              
+              throw new Error('EXISTING_USER_REGISTRATION_ATTEMPT');
+            } else {
+              console.log('✅ New user OAuth registration allowed - proceeding');
+            }
+          } else {
+            console.log('ℹ️ OAuth login attempt (not registration) - proceeding normally');
           }
           
           // **ENHANCED: Step 4 - Process user action based on registration vs login**
@@ -231,10 +258,14 @@ export const authOptions: NextAuthOptions = {
         console.error('💥 Error in signIn callback:', error);
         
         // Handle specific error types
-        if (error instanceof Error && error.message === 'EXISTING_USER_REGISTRATION_ATTEMPT') {
-          console.log('🚫 Blocking OAuth registration for existing user');
-          // Return false to prevent sign-in and trigger error page via NextAuth error handling
-          return false;
+        if (error instanceof Error) {
+          if (error.message === 'EXISTING_USER_REGISTRATION_ATTEMPT') {
+            console.log('🚫 Blocking OAuth registration for existing user');
+            return false;
+          } else if (error.message === 'OAUTH_REGISTRATION_DISABLED') {
+            console.log('🚫 Blocking OAuth registration - GoHighLevel integration disabled');
+            return false;
+          }
         }
         
         // For other errors, still allow sign-in

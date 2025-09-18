@@ -11,6 +11,8 @@ const AuthError: React.FC = () => {
     switch (error) {
       case 'UserExists':
         return message || 'User already exists. Please sign in instead.';
+      case 'OAuthRegistrationDisabled':
+        return 'OAuth registration is temporarily disabled. Please use email/password registration instead.';
       case 'Configuration':
         return 'There is a problem with the server configuration.';
       case 'AccessDenied':

@@ -95,10 +95,14 @@ export default async function handler(
       const error = await searchResponse.text();
       console.error('❌ Failed to search for existing user. Status:', searchResponse.status);
       console.error('❌ Error response:', error);
-      return res.status(500).json({
-        success: false,
+      
+      // If GoHighLevel API fails, fallback to "no existing user" to prevent blocking legitimate users
+      // This is safer than blocking all users when the service is down
+      console.log('⚠️ GoHighLevel API failed - falling back to "no existing user" for safety');
+      return res.status(200).json({
+        success: true,
         exists: false,
-        error: 'Failed to check existing user'
+        error: `GoHighLevel API error (${searchResponse.status}): Service temporarily unavailable`
       });
     }
   } catch (error) {
