@@ -167,12 +167,20 @@ async function sendUpgradeAdminNotification(customer: Stripe.Customer, plan: str
 }
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
+  console.log('=== STRIPE WEBHOOK RECEIVED ===');
+  console.log('Method:', req.method);
+  console.log('Headers:', JSON.stringify(req.headers, null, 2));
+  
   if (req.method !== 'POST') {
+    console.log('❌ Invalid method:', req.method);
     return res.status(405).json({ error: 'Method not allowed' });
   }
 
   const buf = await buffer(req);
   const sig = req.headers['stripe-signature']!;
+  
+  console.log('Webhook signature present:', !!sig);
+  console.log('Buffer size:', buf.length);
   
   let event: Stripe.Event;
 
@@ -192,6 +200,11 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   }
 
   try {
+    console.log('=== PROCESSING STRIPE EVENT ===');
+    console.log('Event Type:', event.type);
+    console.log('Event ID:', event.id);
+    console.log('Event Data:', JSON.stringify(event.data, null, 2));
+    
     switch (event.type) {
       case 'checkout.session.completed': {
         const session = event.data.object as Stripe.Checkout.Session;
@@ -294,9 +307,11 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       }
 
       default:
-        console.log(`Unhandled event type: ${event.type}`);
+        console.log(`⚠️ Unhandled webhook event type: ${event.type}`);
+        console.log('Event details:', JSON.stringify(event.data.object, null, 2));
     }
 
+    console.log('=== WEBHOOK PROCESSING COMPLETE ===');
     res.status(200).json({ received: true });
   } catch (error) {
     console.error('Webhook processing error:', error);
