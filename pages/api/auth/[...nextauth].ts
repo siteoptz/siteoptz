@@ -101,7 +101,9 @@ export const authOptions: NextAuthOptions = {
         console.log('=== SIGNIN CALLBACK TRIGGERED ===');
         console.log('User:', JSON.stringify(user, null, 2));
         console.log('Account:', JSON.stringify(account, null, 2));
+        console.log('Profile:', JSON.stringify(profile, null, 2));
         console.log('Provider:', account?.provider);
+        console.log('Account state:', account?.state);
         
         // Skip GoHighLevel integration for credentials provider
         // Email/password registrations are handled by /api/register-free-plan
@@ -123,58 +125,18 @@ export const authOptions: NextAuthOptions = {
           let businessInfo = null;
           let isRegistrationAttempt = false;
           
-          // Check if there's a state parameter from OAuth that contains registration info
+          // Always try to get business info for OAuth users (for registration emails)
           try {
-            // The state might contain a token for registration attempts
-            if (account?.state && typeof account.state === 'string' && account.state.startsWith('oauth_')) {
-              console.log('🔍 Found registration token in OAuth state:', account.state);
-              const response = await fetch(`${process.env.NEXTAUTH_URL}/api/get-oauth-business-info?email=${encodeURIComponent(account.state)}`);
-              if (response.ok) {
-                const result = await response.json();
-                if (result.success) {
-                  businessInfo = result.data;
-                  isRegistrationAttempt = true;
-                  console.log('✅ Retrieved business info using state token:', businessInfo);
-                }
+            const response = await fetch(`${process.env.NEXTAUTH_URL}/api/get-oauth-business-info?email=${encodeURIComponent(user.email)}`);
+            if (response.ok) {
+              const result = await response.json();
+              if (result.success) {
+                businessInfo = result.data;
+                console.log('✅ Retrieved business info for OAuth user:', businessInfo);
               }
             }
           } catch (error) {
-            console.log('No registration token found in OAuth state or failed to retrieve business info');
-          }
-          
-          // Fallback: try to get business info using email (for compatibility)
-          if (!isRegistrationAttempt) {
-            try {
-              const response = await fetch(`${process.env.NEXTAUTH_URL}/api/get-oauth-business-info?email=${encodeURIComponent(user.email)}`);
-              if (response.ok) {
-                const result = await response.json();
-                if (result.success) {
-                  businessInfo = result.data;
-                  isRegistrationAttempt = true;
-                  console.log('✅ Retrieved business info for OAuth user using email:', businessInfo);
-                }
-              }
-            } catch (error) {
-              console.log('No business info found for OAuth user (this is normal for login)');
-            }
-          }
-          
-          // If this is a registration attempt, check if user already exists
-          if (isRegistrationAttempt) {
-            console.log('🔍 Registration attempt detected, checking if user already exists');
-            
-            try {
-              const { getContactByEmail } = await import('../user/ghl-lookup');
-              const existingContact = await getContactByEmail(user.email);
-              
-              if (existingContact.exists) {
-                console.log('❌ User already exists in GoHighLevel, blocking OAuth registration');
-                // Return false to prevent sign-in and redirect to an error page
-                return '/auth/error?error=UserExists&message=User already exists. Please sign in instead.';
-              }
-            } catch (lookupError) {
-              console.error('Error checking existing user during OAuth:', lookupError);
-            }
+            console.log('No business info found for OAuth user (this is normal for login)');
           }
 
           // Create user data for conditional processing

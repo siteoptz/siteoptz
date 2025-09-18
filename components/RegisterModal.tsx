@@ -168,97 +168,106 @@ const RegisterModal: React.FC<RegisterModalProps> = ({
     }
     
     try {
-      // For registration attempts, we need to generate a temporary token
-      // and store business info on server for the NextAuth callback to access
-      let tempToken = null;
+      // For registration attempts, store a registration flag temporarily
       if (!isLogin) {
-        tempToken = `oauth_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;
-        
-        // Store business info on server with temporary token
-        try {
-          const storeResponse = await fetch('/api/get-oauth-business-info', {
-            method: 'POST',
-            headers: {
-              'Content-Type': 'application/json',
-            },
-            body: JSON.stringify({
-              action: 'store',
-              email: tempToken, // Use token as temporary key
-              businessInfo: {
-                aiToolsInterest: formData.aiToolsInterest,
-                businessSize: formData.businessSize,
-                planName: planName,
-                timestamp: Date.now()
-              }
-            }),
-          });
-          
-          if (!storeResponse.ok) {
-            console.warn('Failed to store business info on server');
-          } else {
-            console.log('✅ Stored business info on server with token:', tempToken);
-          }
-        } catch (storeError) {
-          console.error('Error storing business info:', storeError);
-        }
-        
-        // Also store in sessionStorage as backup
-        sessionStorage.setItem('pendingOAuthBusinessInfo', JSON.stringify({
-          tempToken,
+        // Set a flag in sessionStorage to indicate this is a registration attempt
+        const registrationData = {
+          isRegistrationAttempt: true,
           aiToolsInterest: formData.aiToolsInterest,
           businessSize: formData.businessSize,
           planName: planName,
           timestamp: Date.now()
-        }));
+        };
+        
+        sessionStorage.setItem('pendingOAuthRegistration', JSON.stringify(registrationData));
+        console.log('✅ Stored registration data in sessionStorage for OAuth');
       }
       
       const result = await signIn('google', {
-        callbackUrl: '/dashboard',
+        callbackUrl: isLogin ? '/dashboard' : '/dashboard?registration=true',
         redirect: false,
-        state: tempToken || undefined, // Pass token through state for registration detection
       });
       
       if (result?.error) {
         setError('Google authentication failed. Please try again.');
         setIsLoading(false);
       } else {
-        // For Google OAuth registration, we need to get the user data from the session
-        // and then add them to GoHighLevel
-        try {
-          // Wait a moment for the session to be established
-          setTimeout(async () => {
-            const session = await getSession();
-            if (session?.user?.email) {
-              const registrationResponse = await fetch('/api/register-free-plan', {
-                method: 'POST',
-                headers: {
-                  'Content-Type': 'application/json',
-                },
-                body: JSON.stringify({
-                  email: session.user.email,
-                  name: session.user.name || '',
-                  source: 'Free Plan Registration - Google OAuth',
-                  planName: planName,
-                  userAgent: navigator.userAgent,
-                  referrer: document.referrer,
-                  registrationMethod: 'google',
-                  aiToolsInterest: formData.aiToolsInterest,
-                  businessSize: formData.businessSize
-                }),
-              });
+        // Handle registration logic after OAuth completes
+        if (!isLogin) {
+          try {
+            // Wait for session to be established
+            setTimeout(async () => {
+              const session = await getSession();
+              if (session?.user?.email) {
+                // First, check if user already exists (for registration attempts)
+                const lookupResponse = await fetch('/api/user/ghl-lookup', {
+                  method: 'POST',
+                  headers: {
+                    'Content-Type': 'application/json',
+                  },
+                  body: JSON.stringify({
+                    email: session.user.email
+                  }),
+                });
 
-              const registrationResult = await registrationResponse.json();
-              
-              if (registrationResult.success) {
-                console.log('Google user registered in GoHighLevel:', registrationResult.data);
-              } else {
-                console.warn('GoHighLevel Google registration failed:', registrationResult.error);
+                const lookupResult = await lookupResponse.json();
+                
+                if (lookupResult.exists) {
+                  // User already exists - this is a registration attempt by existing user
+                  console.log('❌ Existing user attempted registration via OAuth');
+                  window.location.href = '/auth/error?error=UserExists&message=User already exists. Please sign in instead.';
+                  return;
+                }
+
+                // Store business info on server for this user's email  
+                await fetch('/api/get-oauth-business-info', {
+                  method: 'POST',
+                  headers: {
+                    'Content-Type': 'application/json',
+                  },
+                  body: JSON.stringify({
+                    action: 'store',
+                    email: session.user.email,
+                    businessInfo: {
+                      aiToolsInterest: formData.aiToolsInterest,
+                      businessSize: formData.businessSize,
+                      planName: planName,
+                      timestamp: Date.now()
+                    }
+                  }),
+                });
+
+                // Now trigger registration
+                const registrationResponse = await fetch('/api/register-free-plan', {
+                  method: 'POST',
+                  headers: {
+                    'Content-Type': 'application/json',
+                  },
+                  body: JSON.stringify({
+                    email: session.user.email,
+                    name: session.user.name || '',
+                    source: 'Free Plan Registration - Google OAuth',
+                    planName: planName,
+                    userAgent: navigator.userAgent,
+                    referrer: document.referrer,
+                    registrationMethod: 'google',
+                    aiToolsInterest: formData.aiToolsInterest,
+                    businessSize: formData.businessSize
+                  }),
+                });
+
+                const registrationResult = await registrationResponse.json();
+                
+                if (registrationResult.success) {
+                  console.log('✅ Google user registered in GoHighLevel:', registrationResult.data);
+                } else {
+                  console.warn('GoHighLevel Google registration failed:', registrationResult.error);
+                }
               }
-            }
-          }, 2000); // Wait 2 seconds for session to be established
-        } catch (crmError) {
-          console.error('Google CRM integration error:', crmError);
-          // Don't fail the process if CRM integration fails
+            }, 2000); // Wait 2 seconds for session to be established
+          } catch (error) {
+            console.error('OAuth registration error:', error);
+          }
         }
         
         // Success - mark as first time user if registering and redirect
