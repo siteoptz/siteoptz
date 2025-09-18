@@ -45,7 +45,7 @@ export default function ProNotifications() {
     { id: 3, name: "Budget Threshold", condition: "Spend > $500", action: "Slack Webhook", active: false }
   ]);
 
-  if (loading) {
+  if (loading || !userPlan) {
     return (
       <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-black flex items-center justify-center">
         <div className="text-white text-center">
@@ -111,7 +111,7 @@ export default function ProNotifications() {
                     webhooks: { icon: Zap, color: 'orange', label: 'Webhook Integrations' }
                   };
                   
-                  const config = configs[key];
+                  const config = configs[key as keyof typeof configs];
                   const IconComponent = config.icon;
                   
                   return (
@@ -245,14 +245,8 @@ export default function ProNotifications() {
           <div className="space-y-6">
             <UpgradePrompt 
               currentPlan="pro"
-              title="Enterprise Features"
-              description="Scale notifications for your entire team"
-              features={[
-                "Team notification management",
-                "White-label notifications",
-                "Advanced webhook endpoints",
-                "Custom integrations"
-              ]}
+              requiredPlan="enterprise"
+              feature="Enterprise notifications"
             />
 
             {/* Notification Stats */}

@@ -44,7 +44,7 @@ export default function StarterSettings() {
     language: 'English'
   });
 
-  if (loading) {
+  if (loading || !userPlan) {
     return (
       <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-black flex items-center justify-center">
         <div className="text-white text-center">
@@ -475,14 +475,8 @@ export default function StarterSettings() {
           <div className="lg:col-span-1 space-y-6">
             <UpgradePrompt 
               currentPlan="starter"
-              title="Pro Settings Features"
-              description="Advanced security and team management tools"
-              features={[
-                "Team member management",
-                "Advanced security policies",
-                "Custom API rate limits",
-                "Single Sign-On (SSO)"
-              ]}
+              requiredPlan="pro"
+              feature="Pro settings"
             />
 
             {/* Account Health */}

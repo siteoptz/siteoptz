@@ -37,7 +37,7 @@ export default function StarterDashboard() {
   // Extract user name from session
   const userName = session?.user?.name || 'User';
 
-  if (loading) {
+  if (loading || !userPlan) {
     return (
       <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-black flex items-center justify-center">
         <div className="text-white text-center">

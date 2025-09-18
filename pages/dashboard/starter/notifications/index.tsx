@@ -31,7 +31,7 @@ export default function StarterNotifications() {
     security: true
   });
 
-  if (loading) {
+  if (loading || !userPlan) {
     return (
       <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-black flex items-center justify-center">
         <div className="text-white text-center">
@@ -280,14 +280,8 @@ export default function StarterNotifications() {
           <div className="space-y-6">
             <UpgradePrompt 
               currentPlan="starter"
-              title="Unlock Pro Notifications"
-              description="Get advanced analytics alerts and custom automation rules"
-              features={[
-                "Performance analytics alerts",
-                "Custom notification rules",
-                "Integration webhooks",
-                "Team notification management"
-              ]}
+              requiredPlan="pro"
+              feature="Pro notifications"
             />
 
             {/* Recent Notifications */}

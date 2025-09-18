@@ -22,7 +22,7 @@ export default function FreeNotifications() {
   const { userPlan, loading } = useUserPlan();
   const [emailNotifications, setEmailNotifications] = useState(true);
 
-  if (loading) {
+  if (loading || !userPlan) {
     return (
       <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-black flex items-center justify-center">
         <div className="text-white text-center">
@@ -147,14 +147,8 @@ export default function FreeNotifications() {
           <div className="space-y-6">
             <UpgradePrompt 
               currentPlan="free"
-              title="Unlock Advanced Notifications"
-              description="Get real-time alerts, custom rules, and advanced analytics with Pro"
-              features={[
-                "Push notifications",
-                "Custom notification rules",
-                "Email scheduling",
-                "Priority support alerts"
-              ]}
+              requiredPlan="starter"
+              feature="Advanced notifications"
             />
 
             {/* Recent Activity */}

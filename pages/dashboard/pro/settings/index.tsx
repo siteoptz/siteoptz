@@ -57,7 +57,7 @@ export default function ProSettings() {
     { id: 3, name: 'Mike Wilson', email: 'mike@techcorp.com', role: 'Manager', status: 'pending' }
   ]);
 
-  if (loading) {
+  if (loading || !userPlan) {
     return (
       <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-black flex items-center justify-center">
         <div className="text-white text-center">
@@ -710,14 +710,8 @@ export default function ProSettings() {
           <div className="lg:col-span-1 space-y-6">
             <UpgradePrompt 
               currentPlan="pro"
-              title="Enterprise Features"
-              description="Advanced team management and white-label solutions"
-              features={[
-                "Unlimited team members",
-                "White-label customization",
-                "Dedicated account manager",
-                "Custom SLA agreements"
-              ]}
+              requiredPlan="enterprise"
+              feature="Enterprise settings"
             />
 
             {/* Security Score */}

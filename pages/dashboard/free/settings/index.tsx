@@ -31,7 +31,7 @@ export default function FreeSettings() {
     language: 'en'
   });
 
-  if (loading) {
+  if (loading || !userPlan) {
     return (
       <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-black flex items-center justify-center">
         <div className="text-white text-center">
@@ -220,14 +220,8 @@ export default function FreeSettings() {
           <div className="space-y-6">
             <UpgradePrompt 
               currentPlan="free"
-              title="Unlock Advanced Settings"
-              description="Get full control over security, API access, and integrations"
-              features={[
-                "Two-factor authentication",
-                "API key management",
-                "Custom webhooks",
-                "Team collaboration settings"
-              ]}
+              requiredPlan="starter"
+              feature="Advanced settings"
             />
 
             {/* Plan Details */}

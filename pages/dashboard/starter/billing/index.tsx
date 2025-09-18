@@ -30,7 +30,7 @@ export default function StarterBilling() {
   const { userPlan, loading } = useUserPlan();
   const [billingCycle, setBillingCycle] = useState('monthly');
 
-  if (loading) {
+  if (loading || !userPlan) {
     return (
       <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-black flex items-center justify-center">
         <div className="text-white text-center">
@@ -323,14 +323,8 @@ export default function StarterBilling() {
           <div className="space-y-6">
             <UpgradePrompt 
               currentPlan="starter"
-              title="Unlock Pro Features"
-              description="Remove limits and access advanced tools"
-              features={[
-                "Unlimited API calls",
-                "Advanced analytics dashboard",
-                "Custom integrations",
-                "Priority phone support"
-              ]}
+              requiredPlan="pro"
+              feature="Pro billing features"
             />
 
             {/* Quick Actions */}

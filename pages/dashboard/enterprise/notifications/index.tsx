@@ -58,7 +58,7 @@ export default function EnterpriseNotifications() {
     { id: 4, name: 'Analytics Pipeline', url: 'https://analytics.company.com/...', status: 'paused', events: 0 }
   ];
 
-  if (loading) {
+  if (loading || !userPlan) {
     return (
       <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-black flex items-center justify-center">
         <div className="text-white text-center">
@@ -157,7 +157,7 @@ export default function EnterpriseNotifications() {
                     whiteLabel: { icon: Crown, color: 'pink', label: 'White-label Notifications', description: 'Branded communications' }
                   };
                   
-                  const config = configs[key];
+                  const config = configs[key as keyof typeof configs];
                   const IconComponent = config.icon;
                   
                   return (

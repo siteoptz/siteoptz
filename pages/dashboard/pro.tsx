@@ -44,7 +44,7 @@ export default function ProDashboard() {
   const proContent = getDashboardContent('pro') as any;
   const enterpriseUpgrade = getUpgradePrompt('pro', 'enterprise') as any;
 
-  if (loading) {
+  if (loading || !userPlan) {
     return (
       <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-black flex items-center justify-center">
         <div className="text-white text-center">

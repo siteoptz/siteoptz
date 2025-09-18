@@ -68,7 +68,7 @@ export default function EnterpriseSettings() {
     { id: 5, name: 'Lisa Thompson', email: 'lisa@techcorp.com', role: 'Member', department: 'Support', status: 'inactive', lastActive: '2 weeks ago' }
   ]);
 
-  if (loading) {
+  if (loading || !userPlan) {
     return (
       <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-black flex items-center justify-center">
         <div className="text-white text-center">

@@ -29,7 +29,7 @@ export default function ProBilling() {
   const { userPlan, loading } = useUserPlan();
   const [billingCycle, setBillingCycle] = useState('monthly');
 
-  if (loading) {
+  if (loading || !userPlan) {
     return (
       <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-black flex items-center justify-center">
         <div className="text-white text-center">
@@ -285,14 +285,8 @@ export default function ProBilling() {
           <div className="space-y-6">
             <UpgradePrompt 
               currentPlan="pro"
-              title="Enterprise Features"
-              description="Scale your operations with team management and advanced controls"
-              features={[
-                "Unlimited team members",
-                "Advanced role management",
-                "Custom billing cycles",
-                "Dedicated account manager"
-              ]}
+              requiredPlan="enterprise"
+              feature="Enterprise features"
             />
 
             {/* Quick Actions */}
