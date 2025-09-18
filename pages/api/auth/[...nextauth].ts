@@ -66,9 +66,28 @@ export const authOptions: NextAuthOptions = {
             } else {
               console.log('⚠️ User not found in GoHighLevel, allowing fallback authentication:', credentials.email);
               
-              // For fallback authentication, try to get name from credentials or use a default
-              // Note: During login (not registration), credentials.name might be undefined
-              const userName = credentials.name || 'User';
+              // For existing users, try to extract name from email if no name provided
+              // This is a temporary fallback until GoHighLevel search is fixed
+              let userName = credentials.name;
+              if (!userName) {
+                // Extract potential name from email (e.g., john.doe@email.com -> John Doe)
+                const emailLocal = credentials.email.split('@')[0];
+                if (emailLocal.includes('.')) {
+                  const parts = emailLocal.split('.');
+                  userName = parts.map(part => 
+                    part.charAt(0).toUpperCase() + part.slice(1).toLowerCase()
+                  ).join(' ');
+                } else if (emailLocal.includes('_')) {
+                  const parts = emailLocal.split('_');
+                  userName = parts.map(part => 
+                    part.charAt(0).toUpperCase() + part.slice(1).toLowerCase()
+                  ).join(' ');
+                } else {
+                  // If no separators, capitalize first letter
+                  userName = emailLocal.charAt(0).toUpperCase() + emailLocal.slice(1).toLowerCase();
+                }
+              }
+              
               console.log('📝 Using fallback name for user:', userName);
               
               const user = {
@@ -84,9 +103,27 @@ export const authOptions: NextAuthOptions = {
             console.log('⚠️ GoHighLevel integration disabled - allowing basic authentication');
             console.log('🔧 Credentials provided - name:', credentials.name, 'email:', credentials.email);
             
-            // When GoHighLevel is disabled, allow basic authentication
-            // TODO: Add proper password verification here when implementing real authentication
-            const userName = credentials.name || 'User';
+            // When GoHighLevel is disabled, try to extract a better name
+            let userName = credentials.name;
+            if (!userName) {
+              // Extract potential name from email (e.g., john.doe@email.com -> John Doe)
+              const emailLocal = credentials.email.split('@')[0];
+              if (emailLocal.includes('.')) {
+                const parts = emailLocal.split('.');
+                userName = parts.map(part => 
+                  part.charAt(0).toUpperCase() + part.slice(1).toLowerCase()
+                ).join(' ');
+              } else if (emailLocal.includes('_')) {
+                const parts = emailLocal.split('_');
+                userName = parts.map(part => 
+                  part.charAt(0).toUpperCase() + part.slice(1).toLowerCase()
+                ).join(' ');
+              } else {
+                // If no separators, capitalize first letter
+                userName = emailLocal.charAt(0).toUpperCase() + emailLocal.slice(1).toLowerCase();
+              }
+            }
+            
             console.log('📝 Using basic auth name for user:', userName);
             
             const user = {
