@@ -325,7 +325,7 @@ const LoginModal: React.FC<LoginModalProps> = ({ isOpen, onClose, isNewUser = fa
           {otpSent && (
             <div className="mb-4 p-3 bg-green-500/10 border border-green-500/20 rounded-xl">
               <p className="text-green-400 text-sm text-center">
-                ✅ One-time code sent! In development mode, check your terminal where you&apos;re running &apos;npm run dev&apos; to see the 6-digit code.
+                ✅ One-time code sent! Please check your email inbox (and spam folder if needed).
               </p>
             </div>
           )}

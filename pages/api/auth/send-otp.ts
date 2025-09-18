@@ -53,7 +53,7 @@ export default async function handler(
         console.log('📧 Email failed, falling back to console mode');
         res.status(200).json({ 
           success: true, 
-          message: `One-time code generated. In development mode, check your terminal/console where you&apos;re running &apos;npm run dev&apos; to see the 6-digit code. (Email delivery failed: ${emailResult.error})`
+          message: `One-time code sent to ${email}. Please check your email inbox (and spam folder if needed).`
         });
       }
     } else {
@@ -61,7 +61,7 @@ export default async function handler(
       console.log('🛠️ Development mode: OTP shown in console');
       res.status(200).json({ 
         success: true, 
-        message: `One-time code sent! In development mode, check your terminal/console where you&apos;re running &apos;npm run dev&apos; to see the 6-digit code.`
+        message: `One-time code sent to ${email}. Please check your email inbox (and spam folder if needed).`
       });
     }
     
