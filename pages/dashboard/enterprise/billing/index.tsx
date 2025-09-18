@@ -159,7 +159,7 @@ export default function EnterpriseBilling() {
                     <CheckCircle className="w-4 h-4 text-green-400" />
                     <span className="text-green-400 font-medium text-sm">Optimization Opportunity</span>
                   </div>
-                  <p className="text-gray-300 text-sm">Your Engineering team's API usage efficiency is 15% above average. Consider migrating similar patterns to other departments.</p>
+                  <p className="text-gray-300 text-sm">Your Engineering team&apos;s API usage efficiency is 15% above average. Consider migrating similar patterns to other departments.</p>
                 </div>
                 <div className="p-3 bg-blue-900/20 border border-blue-500/30 rounded-lg">
                   <div className="flex items-center gap-2 mb-1">

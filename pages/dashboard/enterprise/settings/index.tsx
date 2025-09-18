@@ -909,7 +909,7 @@ export default function EnterpriseSettings() {
         {/* Header */}
         <div className="mb-8">
           <h1 className="text-3xl font-bold text-white mb-2">Enterprise Settings</h1>
-          <p className="text-gray-400">Complete control over your organization's platform configuration</p>
+          <p className="text-gray-400">Complete control over your organization&apos;s platform configuration</p>
         </div>
 
         {/* Enterprise Plan Features */}
