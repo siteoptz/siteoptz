@@ -40,28 +40,42 @@ export const authOptions: NextAuthOptions = {
         try {
           console.log('🔐 Attempting credentials authentication for:', credentials.email);
           
-          // Check if user exists in GoHighLevel
-          const ghlContact = await getContactByEmail(credentials.email);
+          // Check if GoHighLevel integration is enabled
+          const isGHLEnabled = process.env.ENABLE_GHL === 'true';
           
-          if (!ghlContact.exists) {
-            console.log('❌ User not found in GoHighLevel:', credentials.email);
-            return null; // User doesn't exist
-          }
-          
-          console.log('✅ User found in GoHighLevel:', ghlContact.name);
-          
-          // TODO: Add password verification here when you implement proper authentication
-          // For now, we'll accept any password for existing users in GoHighLevel
-          // In production, you should verify the password against a secure hash
-          
-          const user = {
-            id: ghlContact.contactId || credentials.email,
-            name: ghlContact.name || credentials.name || 'User',
-            email: credentials.email,
-          }
+          if (isGHLEnabled && process.env.GOHIGHLEVEL_API_KEY && process.env.GOHIGHLEVEL_LOCATION_ID) {
+            // Check if user exists in GoHighLevel
+            const ghlContact = await getContactByEmail(credentials.email);
+            
+            if (ghlContact.exists) {
+              console.log('✅ User found in GoHighLevel:', ghlContact.name);
+              
+              const user = {
+                id: ghlContact.contactId || credentials.email,
+                name: ghlContact.name || credentials.name || 'User',
+                email: credentials.email,
+              }
 
-          console.log('✅ Credentials authentication successful:', user);
-          return user
+              console.log('✅ Credentials authentication successful:', user);
+              return user
+            } else {
+              console.log('❌ User not found in GoHighLevel:', credentials.email);
+              return null; // User doesn't exist in GoHighLevel
+            }
+          } else {
+            console.log('⚠️ GoHighLevel integration disabled - allowing basic authentication');
+            
+            // When GoHighLevel is disabled, allow basic authentication
+            // TODO: Add proper password verification here when implementing real authentication
+            const user = {
+              id: credentials.email,
+              name: credentials.name || 'User',
+              email: credentials.email,
+            }
+
+            console.log('✅ Basic credentials authentication successful:', user);
+            return user
+          }
         } catch (error) {
           console.error('❌ Credentials authentication error:', error)
           return null

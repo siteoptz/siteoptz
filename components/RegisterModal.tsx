@@ -95,7 +95,16 @@ const RegisterModal: React.FC<RegisterModalProps> = ({
             console.log('User registered in GoHighLevel:', registrationResult.data);
           } else {
             console.warn('GoHighLevel registration failed:', registrationResult.error);
-            // Don't fail the registration process if CRM integration fails
+            
+            // Handle existing user case
+            if (registrationResult.error === 'USER_EXISTS') {
+              setError('User already exists. Please sign in instead.');
+              setIsLogin(true); // Switch to login mode
+              setIsLoading(false);
+              return;
+            }
+            
+            // Don't fail the registration process if other CRM integration fails
           }
         } catch (crmError) {
           console.error('CRM integration error:', crmError);
@@ -103,6 +112,9 @@ const RegisterModal: React.FC<RegisterModalProps> = ({
         }
         
         console.log('User registered:', { email: formData.email, name: formData.name });
+        
+        // Wait a moment for GoHighLevel to process the new user
+        await new Promise(resolve => setTimeout(resolve, 1000));
       }
       
       // Sign in with credentials
