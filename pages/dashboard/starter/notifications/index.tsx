@@ -138,7 +138,7 @@ export default function StarterNotifications() {
                         Weekly Digest
                         <CheckCircle className="w-4 h-4 ml-2 text-green-400" />
                       </h3>
-                      <p className="text-gray-400 text-sm">Summary of your week's activity</p>
+                      <p className="text-gray-400 text-sm">Summary of your week&apos;s activity</p>
                     </div>
                   </div>
                   <label className="relative inline-flex items-center cursor-pointer">

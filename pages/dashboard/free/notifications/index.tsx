@@ -51,7 +51,7 @@ export default function FreeNotifications() {
             <div className="flex-1">
               <h3 className="text-lg font-semibold text-amber-400 mb-2">Free Plan Limitations</h3>
               <p className="text-gray-300 mb-4">
-                You're currently on the Free plan with basic notification features. Upgrade to unlock advanced notification management.
+                You&apos;re currently on the Free plan with basic notification features. Upgrade to unlock advanced notification management.
               </p>
               <Link 
                 href="/upgrade" 

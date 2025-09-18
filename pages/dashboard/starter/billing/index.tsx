@@ -85,7 +85,7 @@ export default function StarterBilling() {
             <div className="flex-1">
               <h3 className="text-lg font-semibold text-blue-400 mb-2">Starter Plan Active</h3>
               <p className="text-gray-300 mb-4">
-                You're getting enhanced features with increased limits and priority support. 
+                You&apos;re getting enhanced features with increased limits and priority support. 
                 Next billing date: January 15, 2025. Ready to unlock even more power?
               </p>
               <div className="flex gap-4">

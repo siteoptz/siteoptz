@@ -72,7 +72,7 @@ export default function ProBilling() {
             <div className="flex-1">
               <h3 className="text-lg font-semibold text-purple-400 mb-2">Pro Plan Active</h3>
               <p className="text-gray-300 mb-4">
-                You're getting the most out of our platform with unlimited tool comparisons, advanced analytics, 
+                You&apos;re getting the most out of our platform with unlimited tool comparisons, advanced analytics, 
                 and priority support. Next billing date: January 15, 2025.
               </p>
               <div className="flex gap-4">
