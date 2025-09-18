@@ -89,7 +89,7 @@ export default function ProDashboard() {
           
           {/* Elite Stats */}
           <div className="grid grid-cols-1 md:grid-cols-4 gap-6 mb-8">
-            {proContent.hero.stats.map((stat, index) => {
+            {proContent.hero.stats.map((stat: any, index: number) => {
               const colors = ['text-cyan-400', 'text-green-400', 'text-purple-400', 'text-yellow-400'];
               return (
                 <div key={index} className="bg-black border border-gray-800 rounded-xl p-6 text-center">
@@ -105,7 +105,7 @@ export default function ProDashboard() {
         <div className="mb-8">
           <div className="border-b border-gray-800">
             <nav className="-mb-px flex space-x-8">
-              {['overview', 'consulting', 'reports', 'team', 'support'].map((tab) => (
+              {['overview', 'consulting', 'reports', 'team', 'support'].map((tab: string) => (
                 <button
                   key={tab}
                   onClick={() => setActiveTab(tab)}
@@ -140,7 +140,7 @@ export default function ProDashboard() {
               
               {/* Session Types */}
               <div className="grid md:grid-cols-3 gap-4 mb-6">
-                {proContent.features.consulting.sessions.map((session, index) => (
+                {proContent.features.consulting.sessions.map((session: any, index: number) => (
                   <div key={index} className="bg-purple-500/10 border border-purple-500/20 rounded-lg p-4">
                     <h4 className="font-semibold text-purple-400 mb-2">{session.type}</h4>
                     <p className="text-sm text-gray-300 mb-1">{session.duration}</p>
@@ -179,7 +179,7 @@ export default function ProDashboard() {
               </p>
 
               <div className="grid md:grid-cols-3 gap-4 mb-6">
-                {proContent.features.customReports.reports.map((report, index) => (
+                {proContent.features.customReports.reports.map((report: any, index: number) => (
                   <div key={index} className="bg-blue-500/10 border border-blue-500/20 rounded-lg p-4">
                     <h4 className="font-semibold text-blue-400 mb-2">{report.name}</h4>
                     <p className="text-sm text-gray-300 mb-1">{report.frequency}</p>
@@ -212,7 +212,7 @@ export default function ProDashboard() {
 
               {/* Success Team */}
               <div className="grid md:grid-cols-3 gap-4 mb-6">
-                {proContent.features.prioritySupport.team.map((member, index) => (
+                {proContent.features.prioritySupport.team.map((member: any, index: number) => (
                   <div key={index} className="bg-gray-800/50 border border-gray-700 rounded-lg p-4">
                     <div className="flex items-center mb-3">
                       <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-blue-500 rounded-full flex items-center justify-center text-white font-bold">
@@ -277,7 +277,7 @@ export default function ProDashboard() {
                 <div>
                   <h4 className="font-semibold text-white mb-3">Command Center Capabilities</h4>
                   <ul className="space-y-2 text-sm text-gray-300">
-                    {proContent.features.teamCollaboration.capabilities.map((capability, index) => (
+                    {proContent.features.teamCollaboration.capabilities.map((capability: any, index: number) => (
                       <li key={index} className="flex items-start">
                         <CheckCircle className="w-4 h-4 text-green-400 mr-2 mt-0.5 flex-shrink-0" />
                         {capability}
@@ -328,7 +328,7 @@ export default function ProDashboard() {
             <div className="text-left">
               <h4 className="font-semibold text-white mb-4">Enterprise Unlocks:</h4>
               <ul className="space-y-3 text-purple-100">
-                {enterpriseUpgrade?.benefits.map((benefit, index) => (
+                {enterpriseUpgrade?.benefits.map((benefit: any, index: number) => (
                   <li key={index} className="flex items-center">
                     <Crown className="w-5 h-5 text-yellow-400 mr-3" />
                     {benefit}

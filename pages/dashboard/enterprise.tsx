@@ -93,7 +93,7 @@ export default function EnterpriseDashboard() {
           
           {/* Elite Stats */}
           <div className="grid grid-cols-1 md:grid-cols-4 gap-6 mb-8">
-            {enterpriseContent.hero.stats.map((stat, index) => {
+            {enterpriseContent.hero.stats.map((stat: any, index: number) => {
               const colors = ['text-cyan-400', 'text-green-400', 'text-purple-400', 'text-yellow-400'];
               return (
                 <div key={index} className="bg-black border border-gray-800 rounded-xl p-6 text-center">
@@ -109,7 +109,7 @@ export default function EnterpriseDashboard() {
         <div className="mb-8">
           <div className="border-b border-gray-800">
             <nav className="-mb-px flex space-x-8 overflow-x-auto">
-              {['overview', 'consulting', 'development', 'briefings', 'white-label', 'team'].map((tab) => (
+              {['overview', 'consulting', 'development', 'briefings', 'white-label', 'team'].map((tab: string) => (
                 <button
                   key={tab}
                   onClick={() => setActiveTab(tab)}
@@ -144,7 +144,7 @@ export default function EnterpriseDashboard() {
               
               {/* Advisory Board */}
               <div className="grid md:grid-cols-3 gap-4 mb-6">
-                {enterpriseContent.features.unlimitedConsulting.advisors.map((advisor, index) => (
+                {enterpriseContent.features.unlimitedConsulting.advisors.map((advisor: any, index: number) => (
                   <div key={index} className="bg-purple-500/10 border border-purple-500/20 rounded-lg p-4">
                     <div className="flex items-center mb-3">
                       <div className="w-12 h-12 bg-gradient-to-r from-purple-600 to-blue-600 rounded-full flex items-center justify-center text-white font-bold">
@@ -206,7 +206,7 @@ export default function EnterpriseDashboard() {
 
               {/* Dedicated Team */}
               <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4 mb-6">
-                {enterpriseContent.features.dedicatedTeam.team.map((member, index) => (
+                {enterpriseContent.features.dedicatedTeam.team.map((member: any, index: number) => (
                   <div key={index} className="bg-blue-500/10 border border-blue-500/20 rounded-lg p-4">
                     <h4 className="font-semibold text-blue-400">{member.role}</h4>
                     <p className="text-white font-medium">{member.name}</p>
@@ -242,7 +242,7 @@ export default function EnterpriseDashboard() {
                 Active Development Projects
               </h2>
               
-              {enterpriseContent.features.customDevelopment.currentProjects.map((project, index) => (
+              {enterpriseContent.features.customDevelopment.currentProjects.map((project: any, index: number) => (
                 <div key={index} className="bg-orange-500/10 border border-orange-500/20 rounded-lg p-6">
                   <div className="flex items-center justify-between mb-4">
                     <h3 className="text-xl font-bold text-white">{project.name}</h3>
@@ -286,7 +286,7 @@ export default function EnterpriseDashboard() {
 
               {/* Development Capabilities */}
               <div className="grid md:grid-cols-3 gap-4 mb-6">
-                {enterpriseContent.features.customDevelopment.capabilities.map((capability, index) => (
+                {enterpriseContent.features.customDevelopment.capabilities.map((capability: any, index: number) => (
                   <div key={index} className="bg-green-500/10 border border-green-500/20 rounded-lg p-4">
                     <h4 className="font-semibold text-green-400 mb-2">{capability.service}</h4>
                     <p className="text-sm text-gray-300 mb-1">Market Value: {capability.value}</p>
@@ -331,7 +331,7 @@ export default function EnterpriseDashboard() {
                   <div>
                     <h4 className="font-semibold text-amber-400 mb-2">Key Topics</h4>
                     <ul className="space-y-1 text-gray-300 text-sm">
-                      {enterpriseContent.features.executiveBriefings.upcoming.topics.map((topic, index) => (
+                      {enterpriseContent.features.executiveBriefings.upcoming.topics.map((topic: any, index: number) => (
                         <li key={index} className="flex items-center">
                           <Target className="w-3 h-3 text-amber-400 mr-2" />
                           {topic}
@@ -358,7 +358,7 @@ export default function EnterpriseDashboard() {
               <p className="text-gray-300 text-sm mb-6">{enterpriseContent.exclusiveAccess.subtitle}</p>
 
               <div className="grid md:grid-cols-3 gap-4 mb-6">
-                {enterpriseContent.exclusiveAccess.sections.map((section, index) => (
+                {enterpriseContent.exclusiveAccess.sections.map((section: any, index: number) => (
                   <div key={index} className="bg-cyan-500/10 border border-cyan-500/20 rounded-lg p-4">
                     <h4 className="font-semibold text-cyan-400 mb-2">{section.name}</h4>
                     <p className="text-gray-300 text-sm mb-2">{section.description}</p>
@@ -394,7 +394,7 @@ export default function EnterpriseDashboard() {
 
               {/* Platform Options */}
               <div className="grid md:grid-cols-3 gap-4 mb-6">
-                {enterpriseContent.features.whiteLabel.options.map((option, index) => (
+                {enterpriseContent.features.whiteLabel.options.map((option: any, index: number) => (
                   <div key={index} className="bg-yellow-500/10 border border-yellow-500/20 rounded-lg p-4">
                     <h4 className="font-semibold text-yellow-400 mb-2">{option.model}</h4>
                     <p className="text-sm text-gray-300 mb-1">Setup: {option.setup}</p>
