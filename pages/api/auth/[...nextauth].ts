@@ -42,13 +42,18 @@ export const authOptions: NextAuthOptions = {
           
           // Check if GoHighLevel integration is enabled
           const isGHLEnabled = process.env.ENABLE_GHL === 'true';
+          console.log('🔧 GHL Debug - isGHLEnabled:', isGHLEnabled);
+          console.log('🔧 GHL Debug - Has API key:', !!process.env.GOHIGHLEVEL_API_KEY);
+          console.log('🔧 GHL Debug - Has location ID:', !!process.env.GOHIGHLEVEL_LOCATION_ID);
           
           if (isGHLEnabled && process.env.GOHIGHLEVEL_API_KEY && process.env.GOHIGHLEVEL_LOCATION_ID) {
+            console.log('🔍 Checking user in GoHighLevel for credentials auth:', credentials.email);
             // Check if user exists in GoHighLevel
             const ghlContact = await getContactByEmail(credentials.email);
+            console.log('📋 GHL Contact result:', JSON.stringify(ghlContact, null, 2));
             
             if (ghlContact.exists) {
-              console.log('✅ User found in GoHighLevel:', ghlContact.name);
+              console.log('✅ User found in GoHighLevel with name:', ghlContact.name);
               
               const user = {
                 id: ghlContact.contactId || credentials.email,
@@ -61,10 +66,14 @@ export const authOptions: NextAuthOptions = {
             } else {
               console.log('⚠️ User not found in GoHighLevel, allowing fallback authentication:', credentials.email);
               
-              // Allow authentication even if not in GoHighLevel (fallback for existing users)
+              // For fallback authentication, try to get name from credentials or use a default
+              // Note: During login (not registration), credentials.name might be undefined
+              const userName = credentials.name || 'User';
+              console.log('📝 Using fallback name for user:', userName);
+              
               const user = {
                 id: credentials.email,
-                name: credentials.name || 'User',
+                name: userName,
                 email: credentials.email,
               }
 
@@ -73,16 +82,20 @@ export const authOptions: NextAuthOptions = {
             }
           } else {
             console.log('⚠️ GoHighLevel integration disabled - allowing basic authentication');
+            console.log('🔧 Credentials provided - name:', credentials.name, 'email:', credentials.email);
             
             // When GoHighLevel is disabled, allow basic authentication
             // TODO: Add proper password verification here when implementing real authentication
+            const userName = credentials.name || 'User';
+            console.log('📝 Using basic auth name for user:', userName);
+            
             const user = {
               id: credentials.email,
-              name: credentials.name || 'User',
+              name: userName,
               email: credentials.email,
             }
 
-            console.log('✅ Basic credentials authentication successful:', user);
+            console.log('✅ Basic credentials authentication successful:', JSON.stringify(user, null, 2));
             return user
           }
         } catch (error) {

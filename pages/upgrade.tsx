@@ -47,7 +47,7 @@ const UpgradePage: React.FC = () => {
   const router = useRouter();
   const [selectedPlan, setSelectedPlan] = useState<string>('starter');
   const [showFAQ, setShowFAQ] = useState<number | null>(null);
-  const [billingCycle, setBillingCycle] = useState<'monthly' | 'yearly'>('yearly');
+  const [billingCycle, setBillingCycle] = useState<'monthly' | 'yearly'>('monthly');
   const [showPaymentModal, setShowPaymentModal] = useState(false);
   const [paymentModalPlan, setPaymentModalPlan] = useState<'starter' | 'pro'>('starter');
   const { redirectToCheckout, loading, error, clearError } = useStripeCheckout();
