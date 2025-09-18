@@ -168,20 +168,54 @@ const RegisterModal: React.FC<RegisterModalProps> = ({
     }
     
     try {
-      // Store business information temporarily for OAuth callback to access
+      // For registration attempts, we need to generate a temporary token
+      // and store business info on server for the NextAuth callback to access
+      let tempToken = null;
       if (!isLogin) {
+        tempToken = `oauth_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;
+        
+        // Store business info on server with temporary token
+        try {
+          const storeResponse = await fetch('/api/get-oauth-business-info', {
+            method: 'POST',
+            headers: {
+              'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({
+              action: 'store',
+              email: tempToken, // Use token as temporary key
+              businessInfo: {
+                aiToolsInterest: formData.aiToolsInterest,
+                businessSize: formData.businessSize,
+                planName: planName,
+                timestamp: Date.now()
+              }
+            }),
+          });
+          
+          if (!storeResponse.ok) {
+            console.warn('Failed to store business info on server');
+          } else {
+            console.log('✅ Stored business info on server with token:', tempToken);
+          }
+        } catch (storeError) {
+          console.error('Error storing business info:', storeError);
+        }
+        
+        // Also store in sessionStorage as backup
         sessionStorage.setItem('pendingOAuthBusinessInfo', JSON.stringify({
+          tempToken,
           aiToolsInterest: formData.aiToolsInterest,
           businessSize: formData.businessSize,
           planName: planName,
           timestamp: Date.now()
         }));
-        console.log('Stored business info in sessionStorage for OAuth');
       }
       
       const result = await signIn('google', {
         callbackUrl: '/dashboard',
         redirect: false,
+        state: tempToken || undefined, // Pass token through state for registration detection
       });
       
       if (result?.error) {
