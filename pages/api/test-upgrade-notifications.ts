@@ -21,9 +21,9 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     console.log('Billing cycle:', billingCycle);
 
     const results = {
-      gohighlevel: { success: false },
-      welcomeEmail: { success: false },
-      adminNotification: { success: false }
+      gohighlevel: { success: false } as any,
+      welcomeEmail: { success: false } as any,
+      adminNotification: { success: false } as any
     };
 
     // 1. Test GoHighLevel integration
