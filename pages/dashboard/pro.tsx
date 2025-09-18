@@ -216,7 +216,7 @@ export default function ProDashboard() {
                   <div key={index} className="bg-gray-800/50 border border-gray-700 rounded-lg p-4">
                     <div className="flex items-center mb-3">
                       <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-blue-500 rounded-full flex items-center justify-center text-white font-bold">
-                        {member.name.split(' ').map(n => n[0]).join('')}
+                        {member.name.split(' ').map((n: string) => n[0]).join('')}
                       </div>
                       <div className="ml-3">
                         <h4 className="text-white font-medium">{member.name}</h4>

@@ -148,7 +148,7 @@ export default function EnterpriseDashboard() {
                   <div key={index} className="bg-purple-500/10 border border-purple-500/20 rounded-lg p-4">
                     <div className="flex items-center mb-3">
                       <div className="w-12 h-12 bg-gradient-to-r from-purple-600 to-blue-600 rounded-full flex items-center justify-center text-white font-bold">
-                        {advisor.name.split(' ').map(n => n[0]).join('')}
+                        {advisor.name.split(' ').map((n: string) => n[0]).join('')}
                       </div>
                       <div className="ml-3">
                         <h4 className="font-semibold text-purple-400">{advisor.name}</h4>
