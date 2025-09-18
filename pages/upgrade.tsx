@@ -48,6 +48,13 @@ const UpgradePage: React.FC = () => {
   const [selectedPlan, setSelectedPlan] = useState<string>('starter');
   const [showFAQ, setShowFAQ] = useState<number | null>(null);
   const [billingCycle, setBillingCycle] = useState<'monthly' | 'yearly'>('monthly');
+  
+  // Force monthly billing on first load to ensure it's always monthly by default
+  // This prevents any browser caching issues that might show yearly pricing
+  useEffect(() => {
+    setBillingCycle('monthly');
+    console.log('Upgrade page: Forced billing cycle to monthly to prevent cache issues');
+  }, []);
   const [showPaymentModal, setShowPaymentModal] = useState(false);
   const [paymentModalPlan, setPaymentModalPlan] = useState<'starter' | 'pro'>('starter');
   const { redirectToCheckout, loading, error, clearError } = useStripeCheckout();

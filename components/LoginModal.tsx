@@ -23,6 +23,9 @@ const LoginModal: React.FC<LoginModalProps> = ({ isOpen, onClose, isNewUser = fa
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState('');
   const [magicLinkSent, setMagicLinkSent] = useState(false);
+  const [otpSent, setOtpSent] = useState(false);
+  const [showOtpInput, setShowOtpInput] = useState(false);
+  const [otp, setOtp] = useState('');
   
   // User type detection and override
   const [detectedUserType, setDetectedUserType] = useState<'new' | 'returning'>('new');
@@ -119,12 +122,84 @@ const LoginModal: React.FC<LoginModalProps> = ({ isOpen, onClose, isNewUser = fa
     setError('');
     
     try {
-      // For now, magic links are not fully configured - redirect to Google or password authentication
-      setError('Magic links are currently not available. Please use Google sign-in or create a password instead.');
-      setIsLoading(false);
+      const response = await fetch('/api/auth/send-otp', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ email }),
+      });
+
+      const result = await response.json();
+
+      if (result.success) {
+        setOtpSent(true);
+        setShowOtpInput(true);
+        setError(''); // Clear any previous errors
+        console.log('✅ OTP sent successfully');
+      } else {
+        setError(result.message || 'Failed to send one-time code');
+      }
     } catch (error) {
-      console.error('Magic link error:', error);
-      setError('Failed to send magic link. Please try again.');
+      console.error('OTP error:', error);
+      setError('Failed to send one-time code. Please try again.');
+    } finally {
+      setIsLoading(false);
+    }
+  };
+
+  const handleOtpVerification = async (e: React.FormEvent) => {
+    e.preventDefault();
+    if (!email || !otp) {
+      setError('Please enter the verification code');
+      return;
+    }
+
+    setIsLoading(true);
+    setError('');
+
+    try {
+      const response = await fetch('/api/auth/verify-otp', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ email, code: otp }),
+      });
+
+      const result = await response.json();
+
+      if (result.success && result.user) {
+        console.log('✅ OTP verified successfully, user:', result.user);
+        
+        // Store visit information
+        if (typeof window !== 'undefined') {
+          localStorage.setItem('hasVisitedBefore', 'true');
+          localStorage.setItem('lastLoginEmail', email);
+        }
+        
+        // Create a session using NextAuth signIn callback
+        // For now, we'll use credentials provider with the verified user data
+        const authResult = await signIn('credentials', {
+          email: result.user.email,
+          password: 'otp-verified', // Special flag to indicate OTP verification
+          name: result.user.name,
+          redirect: false,
+        });
+
+        if (authResult?.error) {
+          setError('Authentication failed after verification. Please try again.');
+        } else {
+          onClose();
+          router.push('/dashboard');
+        }
+      } else {
+        setError(result.message || 'Invalid verification code');
+      }
+    } catch (error) {
+      console.error('OTP verification error:', error);
+      setError('Failed to verify code. Please try again.');
+    } finally {
       setIsLoading(false);
     }
   };
@@ -246,11 +321,11 @@ const LoginModal: React.FC<LoginModalProps> = ({ isOpen, onClose, isNewUser = fa
             </div>
           )}
 
-          {/* Magic Link Sent Message */}
-          {magicLinkSent && (
+          {/* OTP Sent Message */}
+          {otpSent && (
             <div className="mb-4 p-3 bg-green-500/10 border border-green-500/20 rounded-xl">
               <p className="text-green-400 text-sm text-center">
-                Magic link sent! Check your email and click the link to sign in.
+                One-time code sent! Check the server console in development mode for the 6-digit code.
               </p>
             </div>
           )}
@@ -385,26 +460,63 @@ const LoginModal: React.FC<LoginModalProps> = ({ isOpen, onClose, isNewUser = fa
 
           {/* Login Forms */}
           {loginMethod === 'magic' && (
-            <form onSubmit={handleMagicLink} className="space-y-4">
-              <div className="relative">
-                <Mail className="absolute left-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-gray-400" />
-                <input
-                  type="email"
-                  value={email}
-                  onChange={(e) => setEmail(e.target.value)}
-                  placeholder="Email address"
-                  required
-                  className="w-full bg-gray-800 border border-gray-600 rounded-xl py-3 pl-10 pr-4 text-white placeholder-gray-400 focus:border-green-500 focus:ring-1 focus:ring-green-500 focus:outline-none transition-all"
-                />
-              </div>
-              <button
-                type="submit"
-                disabled={isLoading || magicLinkSent}
-                className="w-full bg-gradient-to-r from-green-600 to-emerald-600 text-white py-3 px-4 rounded-xl font-semibold hover:from-green-700 hover:to-emerald-700 transition-all duration-200 disabled:opacity-50 disabled:cursor-not-allowed"
-              >
-                {isLoading ? 'Sending...' : magicLinkSent ? 'Magic Link Sent!' : 'Send Magic Link'}
-              </button>
-            </form>
+            <div className="space-y-4">
+              {!showOtpInput ? (
+                <form onSubmit={handleMagicLink} className="space-y-4">
+                  <div className="relative">
+                    <Mail className="absolute left-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-gray-400" />
+                    <input
+                      type="email"
+                      value={email}
+                      onChange={(e) => setEmail(e.target.value)}
+                      placeholder="Email address"
+                      required
+                      className="w-full bg-gray-800 border border-gray-600 rounded-xl py-3 pl-10 pr-4 text-white placeholder-gray-400 focus:border-green-500 focus:ring-1 focus:ring-green-500 focus:outline-none transition-all"
+                    />
+                  </div>
+                  <button
+                    type="submit"
+                    disabled={isLoading || otpSent}
+                    className="w-full bg-gradient-to-r from-green-600 to-emerald-600 text-white py-3 px-4 rounded-xl font-semibold hover:from-green-700 hover:to-emerald-700 transition-all duration-200 disabled:opacity-50 disabled:cursor-not-allowed"
+                  >
+                    {isLoading ? 'Sending...' : otpSent ? 'Code Sent!' : 'Send One-Time Code'}
+                  </button>
+                </form>
+              ) : (
+                <form onSubmit={handleOtpVerification} className="space-y-4">
+                  <div className="relative">
+                    <input
+                      type="text"
+                      value={otp}
+                      onChange={(e) => setOtp(e.target.value)}
+                      placeholder="Enter 6-digit code"
+                      required
+                      maxLength={6}
+                      className="w-full bg-gray-800 border border-gray-600 rounded-xl py-3 px-4 text-white placeholder-gray-400 focus:border-green-500 focus:ring-1 focus:ring-green-500 focus:outline-none transition-all text-center text-lg tracking-widest"
+                    />
+                  </div>
+                  <button
+                    type="submit"
+                    disabled={isLoading || otp.length !== 6}
+                    className="w-full bg-gradient-to-r from-green-600 to-emerald-600 text-white py-3 px-4 rounded-xl font-semibold hover:from-green-700 hover:to-emerald-700 transition-all duration-200 disabled:opacity-50 disabled:cursor-not-allowed"
+                  >
+                    {isLoading ? 'Verifying...' : 'Verify Code'}
+                  </button>
+                  <button
+                    type="button"
+                    onClick={() => {
+                      setShowOtpInput(false);
+                      setOtpSent(false);
+                      setOtp('');
+                      setError('');
+                    }}
+                    className="w-full text-gray-400 hover:text-white transition-colors text-sm"
+                  >
+                    Back to email entry
+                  </button>
+                </form>
+              )}
+            </div>
           )}
 
           {loginMethod === 'password' && (

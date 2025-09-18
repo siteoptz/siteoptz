@@ -39,6 +39,21 @@ export const authOptions: NextAuthOptions = {
 
         try {
           console.log('🔐 Attempting credentials authentication for:', credentials.email);
+          console.log('🔐 Password type:', credentials.password === 'otp-verified' ? 'OTP-verified' : 'Regular password');
+          
+          // Handle OTP-verified authentication (bypass GoHighLevel lookup)
+          if (credentials.password === 'otp-verified') {
+            console.log('✅ OTP-verified authentication - creating user session');
+            
+            const user = {
+              id: credentials.email,
+              name: credentials.name || 'User',
+              email: credentials.email,
+            }
+
+            console.log('✅ OTP authentication successful:', user);
+            return user;
+          }
           
           // Check if GoHighLevel integration is enabled
           const isGHLEnabled = process.env.ENABLE_GHL === 'true';
