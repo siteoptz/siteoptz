@@ -1,5 +1,6 @@
 import { NextApiRequest, NextApiResponse } from 'next';
 import { verifyOTP } from '../../../lib/otp-service';
+import { getContactByEmail } from '../user/ghl-lookup';
 
 interface VerifyOTPResponse {
   success: boolean;
@@ -8,6 +9,7 @@ interface VerifyOTPResponse {
     id: string;
     email: string;
     name: string;
+    plan?: string;
   };
   error?: string;
 }
@@ -41,28 +43,78 @@ export default async function handler(
       });
     }
     
-    // Extract name from email for fallback
-    const emailLocal = trimmedEmail.split('@')[0];
-    let userName = 'User';
-    if (emailLocal.includes('.')) {
-      const parts = emailLocal.split('.');
-      userName = parts.map((part: string) => 
-        part.charAt(0).toUpperCase() + part.slice(1).toLowerCase()
-      ).join(' ');
-    } else if (emailLocal.includes('_')) {
-      const parts = emailLocal.split('_');
-      userName = parts.map((part: string) => 
-        part.charAt(0).toUpperCase() + part.slice(1).toLowerCase()
-      ).join(' ');
-    } else {
-      userName = emailLocal.charAt(0).toUpperCase() + emailLocal.slice(1).toLowerCase();
-    }
+    // Try to get user information from GoHighLevel first
+    console.log('🔍 Looking up user in GoHighLevel CRM...');
+    let user;
+    
+    try {
+      const ghlUser = await getContactByEmail(trimmedEmail);
+      
+      if (ghlUser.exists && ghlUser.name && ghlUser.name !== 'User') {
+        // Use GHL data if available and has real name
+        console.log('✅ Found user in GoHighLevel:', {
+          name: ghlUser.name,
+          plan: ghlUser.plan,
+          contactId: ghlUser.contactId
+        });
+        
+        user = {
+          id: ghlUser.contactId || trimmedEmail,
+          email: trimmedEmail,
+          name: ghlUser.name,
+          plan: ghlUser.plan
+        };
+      } else {
+        // Fallback to email-based name extraction
+        console.log('⚠️ User not found in GoHighLevel or incomplete data, using email-based name');
+        const emailLocal = trimmedEmail.split('@')[0];
+        let userName = 'User';
+        if (emailLocal.includes('.')) {
+          const parts = emailLocal.split('.');
+          userName = parts.map((part: string) => 
+            part.charAt(0).toUpperCase() + part.slice(1).toLowerCase()
+          ).join(' ');
+        } else if (emailLocal.includes('_')) {
+          const parts = emailLocal.split('_');
+          userName = parts.map((part: string) => 
+            part.charAt(0).toUpperCase() + part.slice(1).toLowerCase()
+          ).join(' ');
+        } else {
+          userName = emailLocal.charAt(0).toUpperCase() + emailLocal.slice(1).toLowerCase();
+        }
 
-    const user = {
-      id: trimmedEmail,
-      email: trimmedEmail,
-      name: userName
-    };
+        user = {
+          id: trimmedEmail,
+          email: trimmedEmail,
+          name: userName
+        };
+      }
+    } catch (error) {
+      console.error('❌ Error looking up user in GoHighLevel:', error);
+      
+      // Fallback to email-based name extraction
+      const emailLocal = trimmedEmail.split('@')[0];
+      let userName = 'User';
+      if (emailLocal.includes('.')) {
+        const parts = emailLocal.split('.');
+        userName = parts.map((part: string) => 
+          part.charAt(0).toUpperCase() + part.slice(1).toLowerCase()
+        ).join(' ');
+      } else if (emailLocal.includes('_')) {
+        const parts = emailLocal.split('_');
+        userName = parts.map((part: string) => 
+          part.charAt(0).toUpperCase() + part.slice(1).toLowerCase()
+        ).join(' ');
+      } else {
+        userName = emailLocal.charAt(0).toUpperCase() + emailLocal.slice(1).toLowerCase();
+      }
+
+      user = {
+        id: trimmedEmail,
+        email: trimmedEmail,
+        name: userName
+      };
+    }
     
     res.status(200).json({ 
       success: true, 
