@@ -293,7 +293,7 @@ const Header: React.FC = () => {
                         {session?.user?.name || session?.user?.email}
                       </div>
                       <div className="text-xs text-blue-600 font-medium mt-1">
-                        Free Plan
+                        {userPlan?.plan ? userPlan.plan.charAt(0).toUpperCase() + userPlan.plan.slice(1) + ' Plan' : 'Free Plan'}
                       </div>
                     </div>
 
@@ -505,7 +505,7 @@ const Header: React.FC = () => {
                         {session?.user?.name || session?.user?.email}
                       </div>
                       <div style={{ color: '#60a5fa', fontSize: '12px', fontWeight: '500' }}>
-                        Free Plan
+                        {userPlan?.plan ? userPlan.plan.charAt(0).toUpperCase() + userPlan.plan.slice(1) + ' Plan' : 'Free Plan'}
                       </div>
                     </div>
 
