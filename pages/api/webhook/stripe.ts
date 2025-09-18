@@ -2,6 +2,7 @@ import { NextApiRequest, NextApiResponse } from 'next';
 import Stripe from 'stripe';
 import { buffer } from 'micro';
 import { sendWelcomeEmail, sendAdminNotificationEmail } from '../../../lib/gohighlevel-service';
+import { handleUserAction, createUserDataFromStripeCustomer } from '../../../lib/user-management-service';
 const SiteOptzGoHighLevel = require('../../../utils/siteoptz-gohighlevel');
 
 const stripe = new Stripe(process.env.STRIPE_SECRET_KEY!, {
@@ -14,157 +15,50 @@ export const config = {
   },
 };
 
-// GoHighLevel integration using SiteOptzGoHighLevel class
-async function updateGoHighLevelContactForUpgrade(customer: Stripe.Customer, plan: string, billingCycle: string) {
+// Handle Stripe customer upgrade using conditional logic
+async function handleStripeUpgrade(customer: Stripe.Customer, plan: string, billingCycle: string) {
   try {
-    console.log('=== UPGRADE: GoHighLevel Integration ===');
+    console.log('=== STRIPE UPGRADE: Using Conditional Logic ===');
     console.log('Customer:', customer.email);
     console.log('Plan:', plan);
     console.log('Billing cycle:', billingCycle);
 
-    // Check if GoHighLevel integration is enabled
-    const isGHLEnabled = process.env.ENABLE_GHL === 'true';
-    console.log('🔍 GoHighLevel Environment Check:');
-    console.log('- ENABLE_GHL:', process.env.ENABLE_GHL);
-    console.log('- API Key present:', !!process.env.GOHIGHLEVEL_API_KEY);
-    console.log('- Location ID present:', !!process.env.GOHIGHLEVEL_LOCATION_ID);
-    console.log('- Is Enabled:', isGHLEnabled);
+    // Create user data from Stripe customer
+    const userData = createUserDataFromStripeCustomer(customer, plan, billingCycle);
     
-    if (!isGHLEnabled || !process.env.GOHIGHLEVEL_API_KEY || !process.env.GOHIGHLEVEL_LOCATION_ID) {
-      console.log('⚠️ GoHighLevel integration disabled or credentials missing for upgrade');
-      return { success: false, error: 'Integration disabled or credentials missing' };
-    }
-
-    // Initialize SiteOptzGoHighLevel class
-    const gohighlevel = new SiteOptzGoHighLevel(
-      process.env.GOHIGHLEVEL_API_KEY,
-      process.env.GOHIGHLEVEL_LOCATION_ID
-    );
+    // Use conditional logic - this will check if user exists and handle accordingly
+    const userActionResult = await handleUserAction(userData);
     
-    // Prepare subscriber data for the specific plan
-    const subscriberData = {
-      email: customer.email,
-      firstName: customer.name?.split(' ')[0] || '',
-      lastName: customer.name?.split(' ').slice(1).join(' ') || '',
-      phone: customer.phone || '',
-      source: `Stripe ${plan} Plan Upgrade`,
-      company: customer.metadata?.company || '',
-      companySize: customer.metadata?.company_size || '',
-      aiToolsInterest: customer.metadata?.interests || '',
-      billingCycle: billingCycle,
-      stripeCustomerId: customer.id
-    };
-
-    console.log('Subscriber data:', JSON.stringify(subscriberData, null, 2));
-
-    // Use the appropriate method based on the plan
-    let result;
-    switch (plan) {
-      case 'starter':
-        result = await gohighlevel.addStarterPlanSubscriber(subscriberData);
-        break;
-      case 'pro':
-        result = await gohighlevel.addProPlanSubscriber(subscriberData);
-        break;
-      case 'enterprise':
-        result = await gohighlevel.addEnterpriseSubscriber(subscriberData);
-        break;
-      default:
-        console.log(`Unknown plan: ${plan}, using free trial method`);
-        result = await gohighlevel.addFreeTrialSubscriber(subscriberData);
-    }
+    console.log('Stripe upgrade processing result:', JSON.stringify(userActionResult, null, 2));
     
-    if (result.success) {
-      console.log('✅ Successfully updated GoHighLevel contact for upgrade');
-      console.log('Contact ID:', result.contact?.id);
-      console.log('Pipeline:', result.pipeline);
-      return { 
-        success: true, 
-        contactId: result.contact?.id,
-        opportunityId: result.pipeline?.id
+    if (userActionResult.success) {
+      console.log(`✅ Stripe upgrade processed successfully - ${userActionResult.action} contact`);
+      if (userActionResult.isNewUser) {
+        console.log('🆕 New customer - welcome email sent');
+      } else {
+        console.log('👤 Existing customer - contact updated, no welcome email');
+      }
+      
+      return {
+        success: true,
+        contactId: userActionResult.contactId,
+        isNewUser: userActionResult.isNewUser,
+        action: userActionResult.action,
+        emailSent: userActionResult.emailSent,
+        adminNotificationSent: userActionResult.adminNotificationSent
       };
     } else {
-      console.error('❌ Failed to update GoHighLevel contact for upgrade');
-      return { success: false };
+      console.error('❌ Failed to process Stripe upgrade:', userActionResult.error);
+      return { success: false, error: userActionResult.error };
     }
   } catch (error) {
-    console.error('Error in GoHighLevel upgrade integration:', error);
+    console.error('Error in handleStripeUpgrade:', error);
     return { success: false, error: error instanceof Error ? error.message : 'Unknown error' };
   }
 }
 
-// Send upgrade welcome email using GoHighLevel service
-async function sendUpgradeWelcomeEmail(customer: Stripe.Customer, plan: string, billingCycle: string) {
-  try {
-    console.log('=== UPGRADE: Sending Welcome Email ===');
-    console.log('Customer:', customer.email);
-    console.log('Plan:', plan);
-
-    const userData = {
-      email: customer.email!,
-      name: customer.name || 'Customer',
-      provider: 'stripe',
-      plan: plan,
-      company: customer.metadata?.company || `${plan} Plan Customer`,
-      companySize: customer.metadata?.company_size || 'Stripe upgrade - not collected',
-      interests: customer.metadata?.interests || 'Stripe upgrade - not collected',
-      billingCycle: billingCycle,
-      isUpgrade: true
-    };
-
-    console.log('Attempting to send upgrade welcome email...');
-    const welcomeResult = await sendWelcomeEmail(userData);
-    console.log('Upgrade welcome email result:', JSON.stringify(welcomeResult, null, 2));
-    
-    if (welcomeResult.success) {
-      console.log('✅ Upgrade welcome email sent to:', customer.email);
-      return { success: true };
-    } else {
-      console.error('❌ Failed to send upgrade welcome email:', welcomeResult.error);
-      return { success: false, error: welcomeResult.error };
-    }
-  } catch (error) {
-    console.error('Error sending upgrade welcome email:', error);
-    return { success: false, error: error instanceof Error ? error.message : 'Unknown error' };
-  }
-}
-
-// Send upgrade admin notification using GoHighLevel service
-async function sendUpgradeAdminNotification(customer: Stripe.Customer, plan: string, billingCycle: string) {
-  try {
-    console.log('=== UPGRADE: Sending Admin Notification ===');
-    console.log('Customer:', customer.email);
-    console.log('Plan:', plan);
-
-    const userData = {
-      email: customer.email!,
-      name: customer.name || 'Customer',
-      provider: 'stripe',
-      plan: plan,
-      company: customer.metadata?.company || `${plan} Plan Customer`,
-      companySize: customer.metadata?.company_size || 'Stripe upgrade - not collected',
-      interests: customer.metadata?.interests || 'Stripe upgrade - not collected',
-      billingCycle: billingCycle,
-      stripeCustomerId: customer.id,
-      isUpgrade: true
-    };
-
-    console.log('Attempting to send upgrade admin notification...');
-    const adminResult = await sendAdminNotificationEmail(userData);
-    console.log('Upgrade admin notification result:', JSON.stringify(adminResult, null, 2));
-    
-    if (adminResult.success) {
-      console.log('✅ Upgrade admin notification sent to info@siteoptz.ai');
-      return { success: true };
-    } else {
-      console.error('❌ Failed to send upgrade admin notification:', adminResult.error);
-      return { success: false, error: adminResult.error };
-    }
-  } catch (error) {
-    console.error('Error sending upgrade admin notification:', error);
-    return { success: false, error: error instanceof Error ? error.message : 'Unknown error' };
-  }
-}
+// Legacy functions kept for backward compatibility but no longer used
+// New conditional logic handles all email sending in handleStripeUpgrade()
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   console.log('=== STRIPE WEBHOOK RECEIVED ===');
@@ -237,19 +131,20 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
             console.log('Plan:', planInfo.plan);
             console.log('Billing Cycle:', planInfo.cycle);
             
-            // Update GoHighLevel contact with new plan tags
-            const ghlResult = await updateGoHighLevelContactForUpgrade(customer, planInfo.plan, planInfo.cycle);
-            console.log('GoHighLevel result:', ghlResult);
-            
-            // Send welcome email to customer for their new plan
-            const welcomeResult = await sendUpgradeWelcomeEmail(customer, planInfo.plan, planInfo.cycle);
-            console.log('Welcome email result:', welcomeResult);
-            
-            // Send admin notification about the upgrade
-            const adminResult = await sendUpgradeAdminNotification(customer, planInfo.plan, planInfo.cycle);
-            console.log('Admin notification result:', adminResult);
+            // Use conditional logic for upgrade processing
+            const upgradeResult = await handleStripeUpgrade(customer, planInfo.plan, planInfo.cycle);
+            console.log('Stripe upgrade result:', upgradeResult);
             
             console.log('=== STRIPE UPGRADE PROCESSING COMPLETED ===');
+            if (upgradeResult.success) {
+              if (upgradeResult.isNewUser) {
+                console.log('🆕 New customer processed - welcome email sent');
+              } else {
+                console.log('🔄 Existing customer upgraded - contact updated, no welcome email');
+              }
+            } else {
+              console.error('❌ Stripe upgrade processing failed:', upgradeResult.error);
+            }
           }
         }
         break;
@@ -281,19 +176,20 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
           console.log('New Plan:', planInfo.plan);
           console.log('New Billing Cycle:', planInfo.cycle);
           
-          // Update GoHighLevel contact with new plan tags
-          const ghlResult = await updateGoHighLevelContactForUpgrade(customer, planInfo.plan, planInfo.cycle);
-          console.log('GoHighLevel update result:', ghlResult);
-          
-          // Send welcome email for the new plan
-          const welcomeResult = await sendUpgradeWelcomeEmail(customer, planInfo.plan, planInfo.cycle);
-          console.log('Plan update welcome email result:', welcomeResult);
-          
-          // Send admin notification about the plan change
-          const adminResult = await sendUpgradeAdminNotification(customer, planInfo.plan, planInfo.cycle);
-          console.log('Plan update admin notification result:', adminResult);
+          // Use conditional logic for plan update processing
+          const updateResult = await handleStripeUpgrade(customer, planInfo.plan, planInfo.cycle);
+          console.log('Stripe plan update result:', updateResult);
           
           console.log('=== STRIPE PLAN UPDATE PROCESSING COMPLETED ===');
+          if (updateResult.success) {
+            if (updateResult.isNewUser) {
+              console.log('🆕 New customer from plan update - welcome email sent');
+            } else {
+              console.log('🔄 Existing customer plan updated - contact updated, no welcome email');
+            }
+          } else {
+            console.error('❌ Stripe plan update processing failed:', updateResult.error);
+          }
         }
         break;
       }

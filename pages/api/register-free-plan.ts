@@ -2,6 +2,7 @@ import { NextApiRequest, NextApiResponse } from 'next';
 import { z } from 'zod';
 const SiteOptzGoHighLevel = require('../../utils/siteoptz-gohighlevel');
 import { sendWelcomeEmail, sendAdminNotificationEmail } from '../../lib/gohighlevel-service';
+import { handleUserAction, createUserDataFromRegistration } from '../../lib/user-management-service';
 
 // SiteOptzGoHighLevel class will be initialized inside functions to avoid serverless issues
 
@@ -202,49 +203,15 @@ export default async function handler(
       ip_address: clientIP
     };
 
-    // Add to GoHighLevel CRM
-    const ghlResult = await addFreeSubscriberToGoHighLevel(registrationData);
+    // Use new conditional user management service
+    const userData = createUserDataFromRegistration(registrationData);
+    const userActionResult = await handleUserAction(userData);
+    
+    console.log('User action completed:', JSON.stringify(userActionResult, null, 2));
 
-    // Prepare user data for notifications
-    const userData = {
-      email: registrationData.email,
-      name: registrationData.name,
-      provider: 'direct',
-      plan: 'free',
-      company: `Business Size: ${registrationData.businessSize}`,
-      companySize: registrationData.businessSize,
-      interests: registrationData.aiToolsInterest,
-    };
-
-    // Send welcome email
-    console.log('Attempting to send welcome email...');
-    try {
-      const welcomeResult = await sendWelcomeEmail(userData);
-      if (welcomeResult.success) {
-        console.log('✅ Welcome email sent to:', registrationData.email);
-      } else {
-        console.error('❌ Failed to send welcome email:', welcomeResult.error);
-      }
-    } catch (error) {
-      console.error('Error sending welcome email:', error);
-    }
-
-    // Send admin notification with business information
-    console.log('Attempting to send admin notification...');
-    try {
-      const adminResult = await sendAdminNotificationEmail(userData);
-      if (adminResult.success) {
-        console.log('✅ Admin notification sent with business info for:', registrationData.email);
-      } else {
-        console.error('❌ Failed to send admin notification:', adminResult.error);
-      }
-    } catch (error) {
-      console.error('Error sending admin notification:', error);
-    }
-
-    if (!ghlResult.success) {
-      console.error('Failed to add subscriber to GoHighLevel');
-      // Still return success to user, but log the error
+    if (!userActionResult.success) {
+      console.error('Failed to process user registration:', userActionResult.error);
+      // Still return success to user to avoid blocking registration
       return res.status(200).json({
         success: true,
         message: 'Registration successful! Welcome to SiteOptz Free Plan.',
@@ -254,14 +221,19 @@ export default async function handler(
       });
     }
 
-    // Success response
+    // Success response with user action details
     res.status(200).json({
       success: true,
-      message: 'Registration successful! Welcome to SiteOptz Free Plan.',
+      message: userActionResult.isNewUser 
+        ? 'Registration successful! Welcome to SiteOptz Free Plan.' 
+        : 'Welcome back! Your account has been updated.',
       data: {
         email: registrationData.email,
-        contactId: ghlResult.contactId,
-        opportunityId: ghlResult.opportunityId
+        contactId: userActionResult.contactId,
+        isNewUser: userActionResult.isNewUser,
+        action: userActionResult.action,
+        emailSent: userActionResult.emailSent,
+        adminNotificationSent: userActionResult.adminNotificationSent
       }
     });
 

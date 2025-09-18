@@ -3,6 +3,7 @@ import GoogleProvider from 'next-auth/providers/google'
 import CredentialsProvider from 'next-auth/providers/credentials'
 import EmailProvider from 'next-auth/providers/email'
 import { sendWelcomeEmail, sendAdminNotificationEmail } from '../../../lib/gohighlevel-service'
+import { handleUserAction, createUserDataFromOAuth } from '../../../lib/user-management-service'
 const SiteOptzGoHighLevel = require('../../../utils/siteoptz-gohighlevel')
 
 export const authOptions: NextAuthOptions = {
@@ -108,107 +109,25 @@ export const authOptions: NextAuthOptions = {
             console.log('No business info found for OAuth user (this is normal for login)');
           }
 
-          const userData = {
-            email: user.email,
-            name: user.name || undefined,
-            provider: account?.provider || 'credentials',
-            plan: 'free', // Default to free plan for new registrations
-            // Use business information if available, otherwise use descriptive defaults
-            company: businessInfo ? `Business Size: ${businessInfo.businessSize}` : `OAuth sign-in (${account?.provider || 'credentials'})`,
-            companySize: businessInfo ? businessInfo.businessSize : `OAuth sign-in (${account?.provider || 'credentials'})`,
-            interests: businessInfo ? businessInfo.aiToolsInterest : `OAuth sign-in (${account?.provider || 'credentials'})`,
-          };
-
-          console.log('User data to process:', JSON.stringify(userData, null, 2));
-
-          // Create GoHighLevel contact using SiteOptzGoHighLevel class (same as form registration)
-          console.log('Attempting to create GoHighLevel contact with SiteOptzGoHighLevel...');
+          // Create user data for conditional processing
+          const userData = createUserDataFromOAuth(user, businessInfo);
+          userData.provider = account?.provider || 'oauth';
           
-          let ghlResult: { success: boolean; contactId?: string; opportunityId?: string; error?: string } = { success: false };
-          
-          // Check if GoHighLevel integration is enabled
-          const isGHLEnabled = process.env.ENABLE_GHL === 'true';
-          console.log('🔍 GoHighLevel Environment Check:');
-          console.log('- ENABLE_GHL:', process.env.ENABLE_GHL);
-          console.log('- API Key present:', !!process.env.GOHIGHLEVEL_API_KEY);
-          console.log('- Location ID present:', !!process.env.GOHIGHLEVEL_LOCATION_ID);
-          console.log('- Is Enabled:', isGHLEnabled);
-          
-          if (isGHLEnabled && process.env.GOHIGHLEVEL_API_KEY && process.env.GOHIGHLEVEL_LOCATION_ID) {
-            try {
-              // Initialize SiteOptzGoHighLevel class (same as form registration)
-              const gohighlevel = new SiteOptzGoHighLevel(
-                process.env.GOHIGHLEVEL_API_KEY,
-                process.env.GOHIGHLEVEL_LOCATION_ID
-              );
-              
-              // Prepare data for SiteOptz GoHighLevel integration (same format as form registration)
-              const subscriberData = {
-                email: userData.email,
-                firstName: userData.name?.split(' ')[0] || '',
-                lastName: userData.name?.split(' ').slice(1).join(' ') || '',
-                source: businessInfo ? `OAuth Registration - ${userData.provider} (with business info)` : `OAuth Registration - ${userData.provider}`,
-                aiToolsInterest: businessInfo ? businessInfo.aiToolsInterest : 'OAuth sign-in - not collected',
-                businessSize: businessInfo ? businessInfo.businessSize : 'OAuth sign-in - not collected',
-                registrationMethod: userData.provider,
-                planType: 'free'
-              };
+          console.log('OAuth user data to process:', JSON.stringify(userData, null, 2));
 
-              // Use addFreeTrialSubscriber method from comprehensive class
-              const result = await gohighlevel.addFreeTrialSubscriber(subscriberData);
-              
-              if (result.success) {
-                console.log('✅ Successfully added OAuth user to GoHighLevel using SiteOptzGoHighLevel');
-                console.log('Contact ID:', result.contact?.id);
-                console.log('Pipeline:', result.pipeline);
-                ghlResult = { 
-                  success: true, 
-                  contactId: result.contact?.id,
-                  opportunityId: result.pipeline?.id
-                };
-              } else {
-                console.error('❌ Failed to add OAuth user to GoHighLevel');
-                ghlResult = { success: false };
-              }
-            } catch (error) {
-              console.error('Error in SiteOptz GoHighLevel OAuth registration:', error);
-              ghlResult = { success: false, error: error instanceof Error ? error.message : 'Unknown error' };
+          // Use conditional logic to handle OAuth user registration/login
+          const userActionResult = await handleUserAction(userData);
+          
+          console.log('OAuth user action result:', JSON.stringify(userActionResult, null, 2));
+          
+          if (userActionResult.success) {
+            if (userActionResult.isNewUser) {
+              console.log('🆕 New OAuth user registered - welcome email sent');
+            } else {
+              console.log('👤 Existing OAuth user signed in - no welcome email');
             }
           } else {
-            console.log('⚠️ GoHighLevel integration disabled or credentials missing for OAuth user');
-            ghlResult = { success: false, error: 'Integration disabled or credentials missing' };
-          }
-          
-          console.log('GoHighLevel result:', JSON.stringify(ghlResult, null, 2));
-          
-          if (ghlResult.success) {
-            console.log('✅ GoHighLevel contact created/updated for:', user.email);
-          } else {
-            console.error('❌ Failed to create GoHighLevel contact:', ghlResult.error);
-            console.error('❌ Contact data logged for manual review - check server logs');
-            // Continue with email flow even if GoHighLevel fails
-          }
-
-          // Send welcome email (you might want to check if user is new in production)
-          console.log('Attempting to send welcome email...');
-          const welcomeResult = await sendWelcomeEmail(userData);
-          console.log('Welcome email result:', JSON.stringify(welcomeResult, null, 2));
-          
-          if (welcomeResult.success) {
-            console.log('✅ Welcome email sent to:', user.email);
-          } else {
-            console.error('❌ Failed to send welcome email:', welcomeResult.error);
-          }
-
-          // Send admin notification
-          console.log('Attempting to send admin notification...');
-          const adminResult = await sendAdminNotificationEmail(userData);
-          console.log('Admin notification result:', JSON.stringify(adminResult, null, 2));
-          
-          if (adminResult.success) {
-            console.log('✅ Admin notification sent for new user:', user.email);
-          } else {
-            console.error('❌ Failed to send admin notification:', adminResult.error);
+            console.error('❌ Failed to process OAuth user:', userActionResult.error);
           }
         } else {
           console.log('No user email provided, skipping integrations');
