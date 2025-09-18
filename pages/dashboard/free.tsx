@@ -18,7 +18,9 @@ import {
   AlertCircle,
   MessageCircle,
   Star,
-  ArrowRight
+  ArrowRight,
+  CreditCard,
+  Settings
 } from 'lucide-react';
 import Link from 'next/link';
 
@@ -336,6 +338,54 @@ export default function FreeDashboard() {
                 {limitation}
               </div>
             ))}
+          </div>
+        </div>
+
+        {/* Quick Access Cards */}
+        <div className="mb-8">
+          <h2 className="text-xl font-bold text-white mb-4">Quick Access</h2>
+          <div className="grid md:grid-cols-3 gap-4">
+            <Link
+              href="/dashboard/free/billing"
+              className="bg-black border border-gray-800 rounded-xl p-6 hover:border-cyan-500/50 transition-all group"
+            >
+              <div className="flex items-center justify-between mb-3">
+                <CreditCard className="w-8 h-8 text-cyan-400" />
+                <ArrowRight className="w-5 h-5 text-gray-400 group-hover:text-cyan-400 transition-colors" />
+              </div>
+              <h3 className="text-lg font-semibold text-white mb-2">Billing & Plans</h3>
+              <p className="text-sm text-gray-400">
+                View your current plan, usage stats, and upgrade options
+              </p>
+            </Link>
+
+            <Link
+              href="/dashboard/free/notifications"
+              className="bg-black border border-gray-800 rounded-xl p-6 hover:border-purple-500/50 transition-all group"
+            >
+              <div className="flex items-center justify-between mb-3">
+                <MessageCircle className="w-8 h-8 text-purple-400" />
+                <ArrowRight className="w-5 h-5 text-gray-400 group-hover:text-purple-400 transition-colors" />
+              </div>
+              <h3 className="text-lg font-semibold text-white mb-2">Notifications</h3>
+              <p className="text-sm text-gray-400">
+                Manage your notification preferences and alerts
+              </p>
+            </Link>
+
+            <Link
+              href="/dashboard/free/settings"
+              className="bg-black border border-gray-800 rounded-xl p-6 hover:border-green-500/50 transition-all group"
+            >
+              <div className="flex items-center justify-between mb-3">
+                <Settings className="w-8 h-8 text-green-400" />
+                <ArrowRight className="w-5 h-5 text-gray-400 group-hover:text-green-400 transition-colors" />
+              </div>
+              <h3 className="text-lg font-semibold text-white mb-2">Settings</h3>
+              <p className="text-sm text-gray-400">
+                Configure your account and profile settings
+              </p>
+            </Link>
           </div>
         </div>
 

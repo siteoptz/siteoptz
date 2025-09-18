@@ -25,7 +25,10 @@ import {
   Star,
   ArrowRight,
   Filter,
-  Crown
+  Crown,
+  CreditCard,
+  Bell,
+  Settings
 } from 'lucide-react';
 import Link from 'next/link';
 
@@ -146,6 +149,54 @@ export default function StarterDashboard() {
                   </div>
                   <Play className="w-8 h-8 text-purple-400" />
                 </div>
+              </div>
+            </div>
+
+            {/* Quick Access Cards */}
+            <div>
+              <h2 className="text-xl font-bold text-white mb-4">Quick Access</h2>
+              <div className="grid md:grid-cols-3 gap-4">
+                <Link
+                  href="/dashboard/starter/billing"
+                  className="bg-black border border-gray-800 rounded-xl p-6 hover:border-cyan-500/50 transition-all group"
+                >
+                  <div className="flex items-center justify-between mb-3">
+                    <CreditCard className="w-8 h-8 text-cyan-400" />
+                    <ArrowRight className="w-5 h-5 text-gray-400 group-hover:text-cyan-400 transition-colors" />
+                  </div>
+                  <h3 className="text-lg font-semibold text-white mb-2">Billing & Payments</h3>
+                  <p className="text-sm text-gray-400">
+                    Manage subscription, view invoices, and track usage
+                  </p>
+                </Link>
+
+                <Link
+                  href="/dashboard/starter/notifications"
+                  className="bg-black border border-gray-800 rounded-xl p-6 hover:border-purple-500/50 transition-all group"
+                >
+                  <div className="flex items-center justify-between mb-3">
+                    <Bell className="w-8 h-8 text-purple-400" />
+                    <ArrowRight className="w-5 h-5 text-gray-400 group-hover:text-purple-400 transition-colors" />
+                  </div>
+                  <h3 className="text-lg font-semibold text-white mb-2">Notifications</h3>
+                  <p className="text-sm text-gray-400">
+                    Configure alerts, email preferences, and updates
+                  </p>
+                </Link>
+
+                <Link
+                  href="/dashboard/starter/settings"
+                  className="bg-black border border-gray-800 rounded-xl p-6 hover:border-green-500/50 transition-all group"
+                >
+                  <div className="flex items-center justify-between mb-3">
+                    <Settings className="w-8 h-8 text-green-400" />
+                    <ArrowRight className="w-5 h-5 text-gray-400 group-hover:text-green-400 transition-colors" />
+                  </div>
+                  <h3 className="text-lg font-semibold text-white mb-2">Account Settings</h3>
+                  <p className="text-sm text-gray-400">
+                    Update profile, security, and preferences
+                  </p>
+                </Link>
               </div>
             </div>
 

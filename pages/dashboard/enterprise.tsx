@@ -39,7 +39,9 @@ import {
   Database,
   Building2,
   Rocket,
-  Sparkles
+  Sparkles,
+  CreditCard,
+  Bell
 } from 'lucide-react';
 import Link from 'next/link';
 
@@ -102,6 +104,54 @@ export default function EnterpriseDashboard() {
                 </div>
               );
             })}
+          </div>
+        </div>
+
+        {/* Quick Access Cards */}
+        <div className="mb-8">
+          <h2 className="text-xl font-bold text-white mb-4">Quick Access</h2>
+          <div className="grid md:grid-cols-3 gap-4">
+            <Link
+              href="/dashboard/enterprise/billing"
+              className="bg-black border border-gray-800 rounded-xl p-6 hover:border-cyan-500/50 transition-all group"
+            >
+              <div className="flex items-center justify-between mb-3">
+                <CreditCard className="w-8 h-8 text-cyan-400" />
+                <ArrowRight className="w-5 h-5 text-gray-400 group-hover:text-cyan-400 transition-colors" />
+              </div>
+              <h3 className="text-lg font-semibold text-white mb-2">Enterprise Billing</h3>
+              <p className="text-sm text-gray-400">
+                Department billing, usage analytics, and custom invoicing
+              </p>
+            </Link>
+
+            <Link
+              href="/dashboard/enterprise/notifications"
+              className="bg-black border border-gray-800 rounded-xl p-6 hover:border-purple-500/50 transition-all group"
+            >
+              <div className="flex items-center justify-between mb-3">
+                <Bell className="w-8 h-8 text-purple-400" />
+                <ArrowRight className="w-5 h-5 text-gray-400 group-hover:text-purple-400 transition-colors" />
+              </div>
+              <h3 className="text-lg font-semibold text-white mb-2">Enterprise Alerts</h3>
+              <p className="text-sm text-gray-400">
+                System-wide notifications, compliance alerts, and executive briefings
+              </p>
+            </Link>
+
+            <Link
+              href="/dashboard/enterprise/settings"
+              className="bg-black border border-gray-800 rounded-xl p-6 hover:border-green-500/50 transition-all group"
+            >
+              <div className="flex items-center justify-between mb-3">
+                <Settings className="w-8 h-8 text-green-400" />
+                <ArrowRight className="w-5 h-5 text-gray-400 group-hover:text-green-400 transition-colors" />
+              </div>
+              <h3 className="text-lg font-semibold text-white mb-2">Enterprise Configuration</h3>
+              <p className="text-sm text-gray-400">
+                Organization settings, security controls, and system administration
+              </p>
+            </Link>
           </div>
         </div>
 
