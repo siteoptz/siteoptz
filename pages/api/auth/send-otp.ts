@@ -29,7 +29,7 @@ export default async function handler(
     // Determine if we should send via email or show in console
     const isDevelopment = process.env.NODE_ENV === 'development';
     const emailProvider = process.env.EMAIL_PROVIDER;
-    const shouldSendEmail = !isDevelopment || emailProvider === 'sendgrid' || emailProvider === 'smtp';
+    const shouldSendEmail = !isDevelopment || emailProvider === 'sendgrid' || emailProvider === 'smtp' || emailProvider === 'console';
     
     console.log('🔧 OTP Delivery Mode:', {
       isDevelopment,
