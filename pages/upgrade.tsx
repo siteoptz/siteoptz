@@ -367,9 +367,15 @@ const UpgradePage: React.FC = () => {
                       disabled={tier.name === 'Free' || loading || isLoading}
                       className={`w-full py-3 rounded-lg font-semibold transition-all ${
                         tier.name === 'Free' || loading || isLoading
-                          ? 'bg-gray-700 text-gray-500 cursor-not-allowed'
-                          : tier.recommended
-                          ? 'bg-gradient-to-r from-blue-600 to-purple-600 text-white hover:from-blue-700 hover:to-purple-700'
+                          ? tier.name === 'Free' 
+                            ? 'bg-gradient-to-r from-green-600 to-emerald-600 text-white cursor-not-allowed opacity-75'
+                            : 'bg-gray-700 text-gray-500 cursor-not-allowed'
+                          : tier.name === 'Starter'
+                          ? 'bg-gradient-to-r from-cyan-600 to-blue-600 text-white hover:from-cyan-700 hover:to-blue-700'
+                          : tier.name === 'Pro'
+                          ? 'bg-gradient-to-r from-cyan-500 to-blue-600 text-white hover:from-cyan-400 hover:to-blue-500'
+                          : tier.name === 'Enterprise'
+                          ? 'bg-gradient-to-r from-purple-600 to-violet-600 text-white hover:from-purple-700 hover:to-violet-700'
                           : 'bg-gray-700 text-white hover:bg-gray-600'
                       }`}
                     >
@@ -814,7 +820,7 @@ const UpgradePage: React.FC = () => {
                   <button 
                     onClick={() => handleUpgrade('Starter', 497)}
                     disabled={loading || isLoading}
-                    className={`bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-blue-700 hover:to-purple-700 transition-all transform hover:scale-105 ${
+                    className={`bg-gradient-to-r from-cyan-600 to-blue-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-700 hover:to-blue-700 transition-all transform hover:scale-105 ${
                       loading || isLoading ? 'opacity-50 cursor-not-allowed' : ''
                     }`}
                   >
@@ -891,7 +897,7 @@ const UpgradePage: React.FC = () => {
               <button
                 onClick={() => handleUpgrade('Starter', 497)}
                 disabled={loading || isLoading}
-                className={`px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-lg font-semibold hover:from-blue-700 hover:to-purple-700 transform hover:scale-105 transition-all duration-200 shadow-lg hover:shadow-xl ${
+                className={`px-8 py-4 bg-gradient-to-r from-cyan-600 to-blue-600 text-white rounded-lg font-semibold hover:from-cyan-700 hover:to-blue-700 transform hover:scale-105 transition-all duration-200 shadow-lg hover:shadow-xl ${
                   loading || isLoading ? 'opacity-50 cursor-not-allowed' : ''
                 }`}
               >
