@@ -26,9 +26,13 @@ export default async function handler(
     return res.status(400).json({ success: false, message: 'Email and code are required' });
   }
 
+  // Trim whitespace and normalize input to prevent common user errors
+  const trimmedEmail = email.trim().toLowerCase();
+  const trimmedCode = code.toString().trim();
+
   try {
     // Verify the OTP using the shared service
-    const verificationResult = verifyOTP(email, code);
+    const verificationResult = verifyOTP(trimmedEmail, trimmedCode);
     
     if (!verificationResult.success) {
       return res.status(400).json({
@@ -38,7 +42,7 @@ export default async function handler(
     }
     
     // Extract name from email for fallback
-    const emailLocal = email.split('@')[0];
+    const emailLocal = trimmedEmail.split('@')[0];
     let userName = 'User';
     if (emailLocal.includes('.')) {
       const parts = emailLocal.split('.');
@@ -55,8 +59,8 @@ export default async function handler(
     }
 
     const user = {
-      id: email,
-      email: email,
+      id: trimmedEmail,
+      email: trimmedEmail,
       name: userName
     };
     
