@@ -31,6 +31,51 @@ export function storeOTP(email: string, code: string): void {
   console.log(`🔑 In development, the OTP code is: ${code}`);
 }
 
+// Send OTP via email (production mode)
+export async function sendOTPEmail(email: string, code: string): Promise<{ success: boolean; message: string; error?: string }> {
+  try {
+    // Dynamic import to avoid module loading issues
+    const { sendEmail } = require('./email-service');
+    const { generateOTPEmailHTML, generateOTPEmailText } = require('./email-templates/otp-email');
+    
+    const subject = 'Your SiteOptz AI Access Code';
+    const html = generateOTPEmailHTML(code, 10);
+    const text = generateOTPEmailText(code, 10);
+    
+    console.log(`📧 Sending OTP email to ${email}`);
+    
+    const result = await sendEmail({
+      to: email,
+      subject,
+      html,
+      text,
+      from: `"SiteOptz AI" <${process.env.EMAIL_FROM || 'info@siteoptz.ai'}>`
+    });
+    
+    if (result.success) {
+      console.log(`✅ OTP email sent successfully to ${email} via ${result.provider}`);
+      return {
+        success: true,
+        message: `One-time code sent to ${email}. Please check your email inbox (and spam folder if needed).`
+      };
+    } else {
+      console.error(`❌ Failed to send OTP email to ${email}:`, result.error);
+      return {
+        success: false,
+        message: 'Failed to send verification email. Please try again.',
+        error: result.error
+      };
+    }
+  } catch (error) {
+    console.error('❌ Error in sendOTPEmail:', error);
+    return {
+      success: false,
+      message: 'Failed to send verification email. Please try again.',
+      error: error instanceof Error ? error.message : 'Unknown error'
+    };
+  }
+}
+
 // Verify OTP code
 export function verifyOTP(email: string, inputCode: string): { 
   success: boolean; 
