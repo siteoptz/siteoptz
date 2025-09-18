@@ -4,6 +4,7 @@ import CredentialsProvider from 'next-auth/providers/credentials'
 import EmailProvider from 'next-auth/providers/email'
 import { sendWelcomeEmail, sendAdminNotificationEmail } from '../../../lib/gohighlevel-service'
 import { handleUserAction, createUserDataFromOAuth } from '../../../lib/user-management-service'
+import { getContactByEmail } from '../user/ghl-lookup'
 const SiteOptzGoHighLevel = require('../../../utils/siteoptz-gohighlevel')
 
 export const authOptions: NextAuthOptions = {
@@ -36,23 +37,33 @@ export const authOptions: NextAuthOptions = {
           return null
         }
 
-        // TODO: Replace with your actual user authentication logic
-        // This is a placeholder - in production, you'd verify against your database
         try {
-          // Example: verify user credentials against your database
-          // const user = await verifyUserCredentials(credentials.email, credentials.password)
+          console.log('🔐 Attempting credentials authentication for:', credentials.email);
           
-          // For now, we'll create a mock user
-          // In production, this should fetch from your database
+          // Check if user exists in GoHighLevel
+          const ghlContact = await getContactByEmail(credentials.email);
+          
+          if (!ghlContact.exists) {
+            console.log('❌ User not found in GoHighLevel:', credentials.email);
+            return null; // User doesn't exist
+          }
+          
+          console.log('✅ User found in GoHighLevel:', ghlContact.name);
+          
+          // TODO: Add password verification here when you implement proper authentication
+          // For now, we'll accept any password for existing users in GoHighLevel
+          // In production, you should verify the password against a secure hash
+          
           const user = {
-            id: '1',
-            name: credentials.name || 'User',
+            id: ghlContact.contactId || credentials.email,
+            name: ghlContact.name || credentials.name || 'User',
             email: credentials.email,
           }
 
+          console.log('✅ Credentials authentication successful:', user);
           return user
         } catch (error) {
-          console.error('Authentication error:', error)
+          console.error('❌ Credentials authentication error:', error)
           return null
         }
       }

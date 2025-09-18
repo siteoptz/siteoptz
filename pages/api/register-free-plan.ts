@@ -3,6 +3,7 @@ import { z } from 'zod';
 const SiteOptzGoHighLevel = require('../../utils/siteoptz-gohighlevel');
 import { sendWelcomeEmail, sendAdminNotificationEmail } from '../../lib/gohighlevel-service';
 import { handleUserAction, createUserDataFromRegistration } from '../../lib/user-management-service';
+import { getContactByEmail } from './user/ghl-lookup';
 
 // SiteOptzGoHighLevel class will be initialized inside functions to avoid serverless issues
 
@@ -44,6 +45,8 @@ interface ApiResponse {
     action?: string;
     emailSent?: boolean;
     adminNotificationSent?: boolean;
+    existingUser?: boolean;
+    suggestion?: string;
   };
   error?: string;
 }
@@ -159,6 +162,29 @@ export default async function handler(
     }
 
     const { email, name, source, planName, userAgent, referrer, registrationMethod, aiToolsInterest, businessSize } = validation.data;
+
+    // Check if user already exists before registration
+    try {
+      console.log('🔍 Checking if user already exists:', email);
+      const existingContact = await getContactByEmail(email);
+      
+      if (existingContact.exists) {
+        console.log('❌ User already exists:', email);
+        return res.status(409).json({
+          success: false,
+          message: 'User already exists. Please sign in instead.',
+          error: 'USER_EXISTS',
+          data: {
+            email: email.toLowerCase().trim(),
+            existingUser: true,
+            suggestion: 'Please use the sign-in option to access your existing account.'
+          }
+        });
+      }
+    } catch (existingUserError) {
+      console.error('Error checking existing user:', existingUserError);
+      // Continue with registration if check fails
+    }
 
     // Check if GoHighLevel integration is enabled
     const isGHLEnabled = process.env.ENABLE_GHL === 'true';

@@ -2,6 +2,7 @@ import { NextApiRequest, NextApiResponse } from 'next';
 import { getServerSession } from 'next-auth/next';
 import { authOptions } from '../auth/[...nextauth]';
 import Stripe from 'stripe';
+import { getContactByEmail } from './ghl-lookup';
 
 const stripe = new Stripe(process.env.STRIPE_SECRET_KEY!, {
   apiVersion: '2025-08-27.basil',
@@ -19,11 +20,23 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       return res.status(401).json({ error: 'Unauthorized' });
     }
 
-    // Check Stripe for user's actual subscription status
+    // Check GoHighLevel first for user's plan information
     let actualPlan = 'free';
     let billingCycle = 'monthly';
     let subscriptionStatus = 'active';
 
+    // First, check GoHighLevel for plan information
+    try {
+      const ghlContact = await getContactByEmail(session.user.email!);
+      if (ghlContact.exists && ghlContact.plan) {
+        actualPlan = ghlContact.plan;
+        console.log('✅ Plan found in GoHighLevel:', actualPlan);
+      }
+    } catch (ghlError) {
+      console.error('Error checking GoHighLevel for plan:', ghlError);
+    }
+
+    // Then, check Stripe for subscription status (overrides GHL if active subscription exists)
     try {
       // Search for existing customer by email
       const customers = await stripe.customers.list({
@@ -59,6 +72,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
           if (planInfo) {
             actualPlan = planInfo.plan;
             billingCycle = planInfo.cycle;
+            console.log('✅ Plan overridden by active Stripe subscription:', actualPlan);
           }
 
           subscriptionStatus = subscription.status;
