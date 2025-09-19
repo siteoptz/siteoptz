@@ -29,9 +29,9 @@ const HeroSection: React.FC = () => {
           </a>
 
           {/* Main Heading */}
-          <h1 className="text-5xl lg:text-7xl xl:text-8xl font-bold mb-8 leading-tight">
+          <h1 className="text-5xl lg:text-7xl xl:text-8xl font-bold mb-8 leading-[1.1] lg:leading-[1.05]">
             <span className="block text-white mb-4">Stop Wasting Money on</span>
-            <span className="block text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-blue-400 to-purple-400 animate-gradient">
+            <span className="block text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-blue-400 to-purple-400 animate-gradient pb-2">
               Wrong AI Tools
             </span>
             <span className="block text-white mt-4">Get Expert Implementation</span>
