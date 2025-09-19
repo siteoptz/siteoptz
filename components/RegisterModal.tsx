@@ -98,7 +98,7 @@ const RegisterModal: React.FC<RegisterModalProps> = ({
               userAgent: navigator.userAgent,
               referrer: document.referrer,
               registrationMethod: 'email',
-              aiToolsInterest: formData.aiToolsInterest,
+              aiToolsInterest: formData.aiToolsInterest.join(', '),
               businessSize: formData.businessSize
             }),
           });
