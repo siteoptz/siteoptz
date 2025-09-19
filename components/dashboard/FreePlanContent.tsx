@@ -51,12 +51,12 @@ const FreePlanContent: React.FC = () => {
             <h1 className="text-4xl md:text-5xl font-bold text-white mb-6">
               {currentContent.heroSection.headline}
             </h1>
-            <p className="text-xl text-gray-300 mb-8 max-w-4xl mx-auto">
+            <p className="text-xl text-white mb-8 max-w-4xl mx-auto">
               {currentContent.heroSection.subheadline}
             </p>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 max-w-4xl mx-auto">
               {currentContent.heroSection.keyPoints.map((point, index) => (
-                <div key={index} className="flex items-center text-left text-gray-300">
+                <div key={index} className="flex items-center text-left text-white">
                   <CheckCircleIcon className="w-5 h-5 text-green-400 mr-2 flex-shrink-0" />
                   <span className="text-sm">{point}</span>
                 </div>
@@ -137,7 +137,7 @@ const FreePlanContent: React.FC = () => {
             <h2 className="text-3xl font-bold text-white mb-4">
               {freeplanDashboardContent.ctaSections.upgradePrompt.title}
             </h2>
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+            <p className="text-xl text-white mb-8 max-w-3xl mx-auto">
               {freeplanDashboardContent.ctaSections.upgradePrompt.description}
             </p>
             
@@ -145,7 +145,7 @@ const FreePlanContent: React.FC = () => {
               {freeplanDashboardContent.ctaSections.upgradePrompt.benefits.map((benefit, index) => (
                 <div key={index} className="flex items-start text-left">
                   <StarIcon className="w-5 h-5 text-yellow-400 mr-3 flex-shrink-0 mt-0.5" />
-                  <span className="text-gray-300">{benefit}</span>
+                  <span className="text-white">{benefit}</span>
                 </div>
               ))}
             </div>
@@ -179,7 +179,7 @@ const FreePlanContent: React.FC = () => {
               <h3 className="text-xl font-semibold text-white mb-3 group-hover:text-cyan-400 transition-colors">
                 {resource.title}
               </h3>
-              <p className="text-gray-400 mb-4">{resource.description}</p>
+              <p className="text-white mb-4">{resource.description}</p>
               <div className="flex items-center text-cyan-400 font-medium">
                 Learn More
                 <ChevronRightIcon className="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform" />
