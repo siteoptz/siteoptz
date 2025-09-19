@@ -312,7 +312,7 @@ const RegisterModal: React.FC<RegisterModalProps> = ({
             <div className="space-y-4 mb-6">
               <div>
                 <label className="block text-sm font-medium text-gray-300 mb-3">
-                  What's your main reason for wanting to use AI to optimize your business? (Check all that apply)
+                  What&apos;s your main reason for wanting to use AI to optimize your business? (Check all that apply)
                 </label>
                 <div className="space-y-3">
                   {[
