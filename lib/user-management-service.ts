@@ -5,18 +5,49 @@
 import { createGoHighLevelContact, sendWelcomeEmail, sendAdminNotificationEmail } from './gohighlevel-service';
 
 export interface UserData {
+  // Personal Information
   email: string;
   name?: string;
+  firstName?: string;
+  lastName?: string;
   phone?: string;
+  
+  // Business Information
   company?: string;
   companySize?: string;
+  industry?: string;
+  jobTitle?: string;
+  
+  // AI/Technology Interests
   interests?: string;
+  aiToolsInterest?: string[];
+  primaryUseCase?: string;
+  experienceLevel?: string;
+  budget?: string;
+  timeline?: string;
+  
+  // Plan Information
   plan?: string;
   billingCycle?: string;
   provider?: string;
   stripeCustomerId?: string;
+  
+  // Marketing & Analytics
+  utmSource?: string;
+  utmMedium?: string;
+  utmCampaign?: string;
+  utmTerm?: string;
+  utmContent?: string;
+  referrer?: string;
+  marketingConsent?: boolean;
+  newsletterSubscription?: boolean;
+  preferredContactMethod?: string;
+  
+  // System Fields
   isUpgrade?: boolean;
   isRegistrationAttempt?: boolean;
+  source?: string;
+  registrationDate?: string;
 }
 
 export interface UserActionResult {
@@ -47,11 +78,7 @@ async function checkExistingContact(email: string): Promise<{ exists: boolean; c
       'Version': '2021-07-28'
     };
     
-    if (process.env.GOHIGHLEVEL_LOCATION_ID) {
-      headers['Location-Id'] = process.env.GOHIGHLEVEL_LOCATION_ID;
-    }
-    
-    // Search for existing contact by email
+    // Search for existing contact by email - locationId is already in the URL
     const searchResponse = await fetch(
       `https://services.leadconnectorhq.com/contacts/search/duplicate?email=${encodeURIComponent(email)}&locationId=${process.env.GOHIGHLEVEL_LOCATION_ID}`,
       {
@@ -98,24 +125,53 @@ async function updateExistingContact(contactId: string, userData: UserData): Pro
       'Content-Type': 'application/json',
       'Version': '2021-07-28'
     };
-    
-    if (process.env.GOHIGHLEVEL_LOCATION_ID) {
-      headers['Location-Id'] = process.env.GOHIGHLEVEL_LOCATION_ID;
-    }
 
-    // Prepare update data - only update plan-related fields
-    const updateData = {
+    // Prepare update data - comprehensive fields for existing contacts
+    const updateData: any = {
       tags: [
-        `plan-${userData.plan || 'free'}`,
+        // Core Tags
+        'SiteOptz User',
+        'upgraded-user',
+        
+        // Plan & Billing Tags
+        `plan-${userData.plan || 'Free User'}`,
         userData.billingCycle ? `billing-${userData.billingCycle}` : 'billing-none',
-        'siteoptz-user',
         userData.provider ? `provider-${userData.provider}` : 'provider-direct',
-        'upgraded-user'
-      ],
+        
+        // Business Information Tags
+        userData.company ? `Company: ${userData.company}` : 'No Company',
+        userData.companySize ? `Company Size: ${userData.companySize}` : 'Company Size Unknown',
+        userData.industry ? `Industry: ${userData.industry}` : 'Industry Unknown',
+        userData.jobTitle ? `Job Title: ${userData.jobTitle}` : 'Job Title Unknown',
+        
+        // AI/Technology Interest Tags
+        userData.experienceLevel ? `Experience: ${userData.experienceLevel}` : 'Experience Unknown',
+        userData.budget ? `Budget: ${userData.budget}` : 'Budget Unknown',
+        userData.primaryUseCase ? `Use Case: ${userData.primaryUseCase}` : 'Use Case Unknown',
+        userData.timeline ? `Timeline: ${userData.timeline}` : 'Timeline Unknown',
+        
+        // Marketing & Consent Tags
+        `Marketing Consent: ${userData.marketingConsent ? 'Yes' : 'No'}`,
+        `Newsletter: ${userData.newsletterSubscription ? 'Yes' : 'No'}`,
+        userData.preferredContactMethod ? `Contact Method: ${userData.preferredContactMethod}` : 'Contact Method Unknown',
+        
+        // UTM & Source Tags
+        userData.utmSource ? `UTM Source: ${userData.utmSource}` : 'No UTM Source',
+        userData.utmMedium ? `UTM Medium: ${userData.utmMedium}` : 'No UTM Medium',
+        userData.utmCampaign ? `UTM Campaign: ${userData.utmCampaign}` : 'No UTM Campaign',
+        userData.referrer ? `Referrer: ${userData.referrer}` : 'No Referrer',
+        
+        // Dynamic AI Tools Interest Tags
+        ...(userData.aiToolsInterest?.map(tool => `Interest: ${tool}`) || []),
+        
+        // Upgrade Date Tag
+        `Last Upgrade: ${new Date().toISOString().split('T')[0]}`
+      ].filter(Boolean),
       customFields: [
+        // Plan and Billing Information
         {
           key: 'subscription_plan',
-          field_value: userData.plan || 'free'
+          field_value: userData.plan || 'Free User'
         },
         {
           key: 'billing_cycle',
@@ -128,19 +184,106 @@ async function updateExistingContact(contactId: string, userData: UserData): Pro
         {
           key: 'stripe_customer_id',
           field_value: userData.stripeCustomerId || ''
+        },
+        
+        // Business Information
+        {
+          key: 'company_name',
+          field_value: userData.company || ''
+        },
+        {
+          key: 'company_size',
+          field_value: userData.companySize || ''
+        },
+        {
+          key: 'industry',
+          field_value: userData.industry || ''
+        },
+        {
+          key: 'job_title',
+          field_value: userData.jobTitle || ''
+        },
+        
+        // AI/Technology Interests
+        {
+          key: 'ai_tools_interest',
+          field_value: userData.aiToolsInterest?.join(', ') || userData.interests || ''
+        },
+        {
+          key: 'primary_use_case',
+          field_value: userData.primaryUseCase || ''
+        },
+        {
+          key: 'experience_level',
+          field_value: userData.experienceLevel || ''
+        },
+        {
+          key: 'budget',
+          field_value: userData.budget || ''
+        },
+        {
+          key: 'timeline',
+          field_value: userData.timeline || ''
+        },
+        
+        // Marketing & Analytics
+        {
+          key: 'utm_source',
+          field_value: userData.utmSource || ''
+        },
+        {
+          key: 'utm_medium',
+          field_value: userData.utmMedium || ''
+        },
+        {
+          key: 'utm_campaign',
+          field_value: userData.utmCampaign || ''
+        },
+        {
+          key: 'utm_term',
+          field_value: userData.utmTerm || ''
+        },
+        {
+          key: 'utm_content',
+          field_value: userData.utmContent || ''
+        },
+        {
+          key: 'referrer',
+          field_value: userData.referrer || ''
+        },
+        {
+          key: 'marketing_consent',
+          field_value: userData.marketingConsent ? 'Yes' : 'No'
+        },
+        {
+          key: 'newsletter_subscription',
+          field_value: userData.newsletterSubscription ? 'Yes' : 'No'
+        },
+        {
+          key: 'preferred_contact_method',
+          field_value: userData.preferredContactMethod || ''
+        },
+        
+        // System Fields
+        {
+          key: 'source',
+          field_value: userData.source || 'SiteOptz Registration'
+        },
+        {
+          key: 'registration_date',
+          field_value: userData.registrationDate || new Date().toISOString()
+        },
+        {
+          key: 'provider',
+          field_value: userData.provider || 'direct'
         }
       ]
     };
 
-    // Add company info if available
-    if (userData.company) {
-      updateData.customFields.push({
-        key: 'company_name',
-        field_value: userData.company
-      });
-    }
+    // Note: Update operations don't need locationId in body (causes 422 error)
+    // The contactId already contains the location context
 
-    console.log('📤 Updating GoHighLevel contact with:', JSON.stringify(updateData, null, 2));
+    console.log('📤 Updating GoHighLevel contact:', JSON.stringify(updateData, null, 2));
     
     const response = await fetch(`https://services.leadconnectorhq.com/contacts/${contactId}`, {
       method: 'PUT',
@@ -331,7 +474,7 @@ export function createUserDataFromRegistration(registrationData: any): UserData 
     company: registrationData.company || `Business Size: ${registrationData.businessSize || ''}`,
     companySize: registrationData.businessSize,
     interests: registrationData.aiToolsInterest,
-    plan: 'free',
+    plan: 'Free User',
     provider: registrationData.registrationMethod || 'direct',
     isUpgrade: false
   };
@@ -360,7 +503,7 @@ export function createUserDataFromOAuth(user: any, businessInfo: any = null): Us
     company: businessInfo?.company || 'OAuth Registration',
     companySize: businessInfo?.companySize || 'Not collected',
     interests: businessInfo?.interests || 'Not collected',
-    plan: 'free',
+    plan: 'Free User',
     provider: 'oauth',
     isUpgrade: false
   };

@@ -32,15 +32,10 @@ export async function getContactByEmail(email: string): Promise<ContactLookupRes
       'Version': '2021-07-28'
     };
     
-    // Add Location-Id header - try different variations in case of case sensitivity
-    headers['Location-Id'] = locationId;
-    headers['location-id'] = locationId;
-    headers['locationId'] = locationId;
-    
+    // No longer adding locationId to headers - it's passed in the URL query parameter
     console.log('🔧 GHL Headers debug:', {
       hasAuth: !!process.env.GOHIGHLEVEL_API_KEY,
-      locationId: 'Set',
-      locationIdValue: locationId,
+      locationIdInUrl: locationId,
       headersKeys: Object.keys(headers)
     });
     

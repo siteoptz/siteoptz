@@ -2,13 +2,45 @@
 export async function createGoHighLevelContact(userData: {
   email: string;
   name?: string;
+  firstName?: string;
+  lastName?: string;
   phone?: string;
+  
+  // Business Information
   company?: string;
   companySize?: string;
+  industry?: string;
+  jobTitle?: string;
+  
+  // AI/Technology Interests
   interests?: string;
+  aiToolsInterest?: string[];
+  primaryUseCase?: string;
+  experienceLevel?: string;
+  budget?: string;
+  timeline?: string;
+  
+  // Plan Information
   plan?: string;
   billingCycle?: string;
   provider?: string;
+  stripeCustomerId?: string;
+  
+  // Marketing & Analytics
+  utmSource?: string;
+  utmMedium?: string;
+  utmCampaign?: string;
+  utmTerm?: string;
+  utmContent?: string;
+  referrer?: string;
+  marketingConsent?: boolean;
+  newsletterSubscription?: boolean;
+  preferredContactMethod?: string;
+  
+  // System Fields
+  isUpgrade?: boolean;
+  source?: string;
+  registrationDate?: string;
 }) {
   console.log('🔄 Starting GoHighLevel contact creation...');
   console.log('Input userData:', JSON.stringify(userData, null, 2));
@@ -19,52 +51,175 @@ export async function createGoHighLevelContact(userData: {
   try {
     contactData = {
       email: userData.email,
-      firstName: userData.name?.split(' ')[0] || '',
-      lastName: userData.name?.split(' ').slice(1).join(' ') || '',
+      firstName: userData.firstName || userData.name?.split(' ')[0] || '',
+      lastName: userData.lastName || userData.name?.split(' ').slice(1).join(' ') || '',
       name: userData.name || userData.email,
       phone: userData.phone || '',
       companyName: userData.company || '',
-      source: userData.provider || 'Website Registration',
+      source: userData.source || userData.provider || 'Website Registration',
       tags: [
+        // Core Tags
+        'New User Registration',
+        'SiteOptz User',
+        'new-user',
+        
+        // Plan & Billing Tags
         `plan-${userData.plan || 'free'}`,
         userData.billingCycle ? `billing-${userData.billingCycle}` : 'billing-none',
-        'siteoptz-user',
-        userData.provider ? `provider-${userData.provider}` : 'provider-direct'
-      ],
+        userData.provider ? `provider-${userData.provider}` : 'provider-direct',
+        
+        // Business Information Tags
+        userData.company ? `Company: ${userData.company}` : 'No Company',
+        userData.companySize ? `Company Size: ${userData.companySize}` : 'Company Size Unknown',
+        userData.industry ? `Industry: ${userData.industry}` : 'Industry Unknown',
+        userData.jobTitle ? `Job Title: ${userData.jobTitle}` : 'Job Title Unknown',
+        
+        // AI/Technology Interest Tags
+        userData.experienceLevel ? `Experience: ${userData.experienceLevel}` : 'Experience Unknown',
+        userData.budget ? `Budget: ${userData.budget}` : 'Budget Unknown',
+        userData.primaryUseCase ? `Use Case: ${userData.primaryUseCase}` : 'Use Case Unknown',
+        userData.timeline ? `Timeline: ${userData.timeline}` : 'Timeline Unknown',
+        
+        // Marketing & Consent Tags
+        `Marketing Consent: ${userData.marketingConsent ? 'Yes' : 'No'}`,
+        `Newsletter: ${userData.newsletterSubscription ? 'Yes' : 'No'}`,
+        userData.preferredContactMethod ? `Contact Method: ${userData.preferredContactMethod}` : 'Contact Method Unknown',
+        
+        // UTM & Source Tags
+        userData.utmSource ? `UTM Source: ${userData.utmSource}` : 'No UTM Source',
+        userData.utmMedium ? `UTM Medium: ${userData.utmMedium}` : 'No UTM Medium',
+        userData.utmCampaign ? `UTM Campaign: ${userData.utmCampaign}` : 'No UTM Campaign',
+        userData.referrer ? `Referrer: ${userData.referrer}` : 'No Referrer',
+        
+        // Dynamic AI Tools Interest Tags
+        ...(userData.aiToolsInterest?.map(tool => `Interest: ${tool}`) || []),
+        
+        // Registration Date Tag
+        `Registered: ${new Date().toISOString().split('T')[0]}`
+      ].filter(Boolean),
       customFields: [
+        // Plan and Billing Information
         {
           key: 'subscription_plan',
           field_value: userData.plan || 'free'
+        },
+        {
+          key: 'billing_cycle',
+          field_value: userData.billingCycle || ''
+        },
+        {
+          key: 'stripe_customer_id',
+          field_value: userData.stripeCustomerId || ''
+        },
+        
+        // Business Information
+        {
+          key: 'company_name',
+          field_value: userData.company || ''
         },
         {
           key: 'company_size',
           field_value: userData.companySize || ''
         },
         {
-          key: 'interests',
-          field_value: userData.interests || ''
+          key: 'industry',
+          field_value: userData.industry || ''
         },
         {
+          key: 'job_title',
+          field_value: userData.jobTitle || ''
+        },
+        
+        // AI/Technology Interests
+        {
+          key: 'ai_tools_interest',
+          field_value: userData.aiToolsInterest?.join(', ') || userData.interests || ''
+        },
+        {
+          key: 'primary_use_case',
+          field_value: userData.primaryUseCase || ''
+        },
+        {
+          key: 'experience_level',
+          field_value: userData.experienceLevel || ''
+        },
+        {
+          key: 'budget',
+          field_value: userData.budget || ''
+        },
+        {
+          key: 'timeline',
+          field_value: userData.timeline || ''
+        },
+        
+        // Marketing & Analytics
+        {
+          key: 'utm_source',
+          field_value: userData.utmSource || ''
+        },
+        {
+          key: 'utm_medium',
+          field_value: userData.utmMedium || ''
+        },
+        {
+          key: 'utm_campaign',
+          field_value: userData.utmCampaign || ''
+        },
+        {
+          key: 'utm_term',
+          field_value: userData.utmTerm || ''
+        },
+        {
+          key: 'utm_content',
+          field_value: userData.utmContent || ''
+        },
+        {
+          key: 'referrer',
+          field_value: userData.referrer || ''
+        },
+        {
+          key: 'marketing_consent',
+          field_value: userData.marketingConsent ? 'Yes' : 'No'
+        },
+        {
+          key: 'newsletter_subscription',
+          field_value: userData.newsletterSubscription ? 'Yes' : 'No'
+        },
+        {
+          key: 'preferred_contact_method',
+          field_value: userData.preferredContactMethod || ''
+        },
+        
+        // System Fields
+        {
           key: 'registration_date',
-          field_value: new Date().toISOString()
+          field_value: userData.registrationDate || new Date().toISOString()
+        },
+        {
+          key: 'provider',
+          field_value: userData.provider || 'direct'
+        },
+        {
+          key: 'is_upgrade',
+          field_value: userData.isUpgrade ? 'Yes' : 'No'
         }
       ]
     };
 
-    console.log('📤 Sending to GoHighLevel API...');
-    console.log('Contact data:', JSON.stringify(contactData, null, 2));
+    // Add locationId to the contact data if available
+    if (process.env.GOHIGHLEVEL_LOCATION_ID) {
+      (contactData as any).locationId = process.env.GOHIGHLEVEL_LOCATION_ID;
+    }
     
-    // GoHighLevel API call - include location ID if available
+    console.log('📤 Sending to GoHighLevel API...');
+    console.log('Contact data (with locationId in body):', JSON.stringify(contactData, null, 2));
+    
+    // GoHighLevel API call - locationId now in request body
     const headers: Record<string, string> = {
       'Authorization': `Bearer ${process.env.GOHIGHLEVEL_API_KEY}`,
       'Content-Type': 'application/json',
       'Version': '2021-07-28'
     };
-    
-    // Add location ID if available (some GoHighLevel APIs require this)
-    if (process.env.GOHIGHLEVEL_LOCATION_ID) {
-      headers['Location-Id'] = process.env.GOHIGHLEVEL_LOCATION_ID;
-    }
     
     const response = await fetch('https://services.leadconnectorhq.com/contacts/', {
       method: 'POST',
