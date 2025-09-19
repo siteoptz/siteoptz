@@ -11,7 +11,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     return res.status(403).json({ error: 'Unauthorized - add ?secret=debug123' });
   }
 
-  const diagnostic = {
+  const diagnostic: any = {
     timestamp: new Date().toISOString(),
     environment: process.env.NODE_ENV,
     
