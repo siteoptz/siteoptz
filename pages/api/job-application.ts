@@ -150,7 +150,6 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       email: applicationData.email,
       name: `${applicationData.firstName} ${applicationData.lastName}`,
       phone: applicationData.phone,
-      locationId: process.env.GHL_LOCATION_ID,
       source: 'job_application',
       customFields: {
         position_title: applicationData.positionTitle,

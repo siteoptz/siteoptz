@@ -53,7 +53,6 @@ async function addToGoHighLevel(data: ExpertConsultationData) {
       ],
       customFields: [],
       source: 'Expert Consultation Request - SiteOptz Website',
-      locationId: GHL_LOCATION_ID,
     };
 
     console.log('Sending consultation data to GoHighLevel:', JSON.stringify(ghlData, null, 2));
@@ -64,6 +63,7 @@ async function addToGoHighLevel(data: ExpertConsultationData) {
         'Authorization': `Bearer ${GHL_API_KEY}`,
         'Content-Type': 'application/json',
         'Version': '2021-04-15',
+        'Location-Id': GHL_LOCATION_ID,
       },
       body: JSON.stringify(ghlData),
     });
@@ -86,7 +86,6 @@ async function addToGoHighLevel(data: ExpertConsultationData) {
         const opportunityData = {
           name: `${data.firstName} ${data.lastName} - Expert Consultation - ${data.company}`,
           contactId: result.contact.id,
-          locationId: GHL_LOCATION_ID,
           status: 'open',
           monetaryValue: data.totalCost || 0,
           pipelineId: process.env.GHL_PIPELINE_ID || '',

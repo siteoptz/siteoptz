@@ -114,7 +114,6 @@ export default async function handler(
         tags: ['New Lead', 'Debug Test', 'API Validation', `Timestamp: ${new Date().toISOString()}`],
         customFields: [], // Updated to v2.0 API structure
         source: 'Debug Test - SiteOptz API',
-        locationId: GHL_LOCATION_ID,
       };
 
       const contactResponse = await fetch(`${GHL_API_BASE}/contacts/`, {
@@ -123,6 +122,7 @@ export default async function handler(
           'Authorization': `Bearer ${GHL_API_KEY}`,
           'Content-Type': 'application/json',
           'Version': '2021-04-15',
+          'Location-Id': GHL_LOCATION_ID,
         },
         body: JSON.stringify(testContactData),
       });

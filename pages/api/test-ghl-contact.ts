@@ -44,7 +44,6 @@ export default async function handler(
       ],
       customFields: [], // v2.0 API structure
       source: 'API Verification Test - SiteOptz',
-      locationId: GHL_LOCATION_ID
     };
 
     console.log('Sending test contact to GoHighLevel:', JSON.stringify(testContactData, null, 2));
@@ -55,6 +54,7 @@ export default async function handler(
         'Authorization': `Bearer ${GHL_API_KEY}`,
         'Content-Type': 'application/json',
         'Version': '2021-04-15',
+        'Location-Id': GHL_LOCATION_ID,
       },
       body: JSON.stringify(testContactData),
     });

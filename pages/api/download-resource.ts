@@ -468,11 +468,9 @@ async function addToGoHighLevel(leadData: LeadData) {
         'Authorization': `Bearer ${GHL_API_KEY}`,
         'Content-Type': 'application/json',
         'Version': '2021-04-15',
+        'Location-Id': GHL_LOCATION_ID,
       },
-      body: JSON.stringify({
-        ...ghlData,
-        locationId: GHL_LOCATION_ID,
-      }),
+      body: JSON.stringify(ghlData),
     });
 
     console.log('GoHighLevel API Response Status:', response.status);
@@ -495,7 +493,6 @@ async function addToGoHighLevel(leadData: LeadData) {
         const opportunityData = {
           name: `${leadData.firstName} ${leadData.lastName} - ${config?.title || leadData.resourceType}`,
           contactId: result.contact.id,
-          locationId: GHL_LOCATION_ID,
           status: 'open',
           monetaryValue: 0,
           pipelineId: process.env.GHL_PIPELINE_ID || '', // You may need to set this

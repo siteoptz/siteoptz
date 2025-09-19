@@ -55,9 +55,7 @@ const addToGoHighLevel = async (data) => {
     console.log('Environment:', process.env.NODE_ENV);
     
     // Handle different submission types
-    let ghlData = {
-      locationId: GHL_LOCATION_ID,
-    };
+    let ghlData = {};
     
     if (data.additionalData?.contactForm) {
       // Contact form submission
@@ -131,6 +129,7 @@ const addToGoHighLevel = async (data) => {
         'Authorization': `Bearer ${GHL_API_KEY}`,
         'Content-Type': 'application/json',
         'Version': '2021-04-15',
+        'Location-Id': GHL_LOCATION_ID,
       },
       body: JSON.stringify(ghlData),
     });
@@ -157,7 +156,6 @@ const addToGoHighLevel = async (data) => {
         const opportunityData = {
           name: opportunityName,
           contactId: result.contact.id,
-          locationId: GHL_LOCATION_ID,
           status: 'open',
           monetaryValue: 0,
           source: data.additionalData?.contactForm ? 'Contact Form - SiteOptz Website' : 'SiteOptz Website',

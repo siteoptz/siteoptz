@@ -53,7 +53,7 @@ async function checkExistingContact(email: string): Promise<{ exists: boolean; c
     
     // Search for existing contact by email
     const searchResponse = await fetch(
-      `https://services.leadconnectorhq.com/contacts/search/duplicate?email=${encodeURIComponent(email)}`,
+      `https://services.leadconnectorhq.com/contacts/search/duplicate?email=${encodeURIComponent(email)}&locationId=${process.env.GOHIGHLEVEL_LOCATION_ID}`,
       {
         method: 'GET',
         headers
@@ -265,9 +265,47 @@ export async function handleUserAction(userData: UserData): Promise<UserActionRe
         }
         
       } else {
-        result.success = false;
-        result.error = createResult.error;
-        console.error('❌ Failed to create new user contact');
+        // GoHighLevel creation failed, but we'll still process emails and mark as success
+        console.error('❌ Failed to create new user contact in GoHighLevel:', createResult.error);
+        console.log('📋 Contact will need to be created manually in GoHighLevel');
+        console.log('📋 Contact data for manual entry:', JSON.stringify(createResult.contactData, null, 2));
+        
+        // Still send welcome email for new users even if GoHighLevel fails
+        console.log('📧 Sending welcome email to new user (GoHighLevel failed but proceeding)...');
+        try {
+          const welcomeResult = await sendWelcomeEmail(userData);
+          result.emailSent = welcomeResult.success;
+          if (welcomeResult.success) {
+            console.log('✅ Welcome email sent to new user');
+          } else {
+            console.error('❌ Failed to send welcome email:', welcomeResult.error);
+          }
+        } catch (error) {
+          console.error('Error sending welcome email:', error);
+          result.emailSent = false;
+        }
+        
+        // Send admin notification for new user (with GoHighLevel failure note)
+        console.log('📧 Sending admin notification for new user (with GoHighLevel failure note)...');
+        try {
+          const adminNotificationResult = await sendAdminNotificationEmail({
+            ...userData,
+            isUpgrade: false // This is a new user, not an upgrade
+          });
+          result.adminNotificationSent = adminNotificationResult.success;
+          if (adminNotificationResult.success) {
+            console.log('✅ Admin new user notification sent');
+          } else {
+            console.error('❌ Failed to send admin new user notification:', adminNotificationResult.error);
+          }
+        } catch (error) {
+          console.error('Error sending admin new user notification:', error);
+          result.adminNotificationSent = false;
+        }
+        
+        // Mark as success since user registration is complete, even if GoHighLevel failed
+        result.success = true;
+        result.error = `GoHighLevel creation failed (${createResult.error}) but user registration completed successfully. Manual GoHighLevel entry required.`;
       }
     }
 
