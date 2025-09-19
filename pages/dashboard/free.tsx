@@ -6,6 +6,7 @@ import { useUserPlan } from '../../hooks/useUserPlan';
 import { DashboardHeader } from '../../components/dashboard/DashboardHeader';
 import { FeatureGate } from '../../components/FeatureGate';
 import { UpgradePrompt } from '../../components/UpgradePrompt';
+import FreePlanContent from '../../components/dashboard/FreePlanContent';
 import { 
   Search, 
   Calendar, 
@@ -232,58 +233,9 @@ export default function FreeDashboard() {
           </FeatureGate>
         </div>
 
-        {/* Basic Implementation Guides */}
-        <div className="mb-8 bg-black border border-gray-800 rounded-xl p-6">
-          <h2 className="text-xl font-bold text-white mb-4 flex items-center">
-            <BookOpen className="w-6 h-6 text-blue-400 mr-2" />
-            Implementation Guides
-          </h2>
-          <div className="grid md:grid-cols-3 gap-4 mb-4">
-            <div className="border border-gray-700 rounded-lg p-4 hover:border-gray-600 transition-colors">
-              <h3 className="font-semibold text-white mb-2">Getting Started with AI</h3>
-              <p className="text-sm text-gray-300 mb-3">
-                A beginner&apos;s guide to implementing AI in your business workflow.
-              </p>
-              <button className="text-blue-400 text-sm font-medium hover:text-blue-300 flex items-center">
-                Read Guide <ArrowRight className="w-4 h-4 ml-1" />
-              </button>
-            </div>
-            <div className="border border-gray-700 rounded-lg p-4 hover:border-gray-600 transition-colors">
-              <h3 className="font-semibold text-white mb-2">AI Tool Selection</h3>
-              <p className="text-sm text-gray-300 mb-3">
-                How to choose the right AI tools for your specific business needs.
-              </p>
-              <button className="text-blue-400 text-sm font-medium hover:text-blue-300 flex items-center">
-                Read Guide <ArrowRight className="w-4 h-4 ml-1" />
-              </button>
-            </div>
-            <div className="border border-gray-700 rounded-lg p-4 hover:border-gray-600 transition-colors">
-              <h3 className="font-semibold text-white mb-2">ROI Measurement</h3>
-              <p className="text-sm text-gray-300 mb-3">
-                Track and measure the return on your AI tool investments effectively.
-              </p>
-              <button className="text-blue-400 text-sm font-medium hover:text-blue-300 flex items-center">
-                Read Guide <ArrowRight className="w-4 h-4 ml-1" />
-              </button>
-            </div>
-          </div>
-          
-          <div className="bg-blue-500/10 border border-blue-500/20 rounded-lg p-4">
-            <div className="flex items-center justify-between">
-              <div>
-                <h4 className="font-semibold text-blue-400">Want 50+ More Guides?</h4>
-                <p className="text-sm text-blue-300">
-                  Get access to detailed implementation guides, industry templates, and expert strategies.
-                </p>
-              </div>
-              <UpgradePrompt
-                currentPlan="free"
-                requiredPlan="starter"
-                feature="50+ implementation guides"
-                variant="banner"
-              />
-            </div>
-          </div>
+        {/* Comprehensive AI Learning Content */}
+        <div className="mb-8">
+          <FreePlanContent />
         </div>
 
         {/* Community Support */}

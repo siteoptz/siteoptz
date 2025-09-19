@@ -1,8 +1,8 @@
 import { NextApiRequest, NextApiResponse } from 'next';
 
 // GoHighLevel API configuration
-const GHL_API_KEY = process.env.GHL_API_KEY || '';
-const GHL_LOCATION_ID = process.env.GHL_LOCATION_ID || '';
+const GHL_API_KEY = process.env.GOHIGHLEVEL_API_KEY || '';
+const GHL_LOCATION_ID = process.env.GOHIGHLEVEL_LOCATION_ID || '';
 const GHL_API_BASE = 'https://services.leadconnectorhq.com';
 
 export default async function handler(

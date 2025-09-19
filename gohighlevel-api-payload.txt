@@ -1,0 +1,174 @@
+==================================================
+GOHIGHLEVEL API REQUEST PAYLOAD - 403 ERROR
+==================================================
+
+API ENDPOINT URL:
+https://services.leadconnectorhq.com/contacts/
+
+HTTP METHOD: POST
+
+REQUEST HEADERS:
+Authorization: Bearer pit-8954f181-e668-4613-80d6-c7b4aa8594b8
+Content-Type: application/json
+Version: 2021-07-28
+Location-Id: ECu5ScdYFmB0WnhvYoBU
+
+REQUEST BODY (JSON PAYLOAD):
+{
+  "email": "verification-1734456789123@siteoptz.ai",
+  "firstName": "Verification",
+  "lastName": "Test",
+  "name": "Verification Test",
+  "phone": "",
+  "companyName": "Tech Corp",
+  "source": "Website Registration",
+  "tags": [
+    "New User Registration",
+    "SiteOptz User",
+    "new-user",
+    "plan-free",
+    "billing-none",
+    "provider-email",
+    "Company: Tech Corp",
+    "Company Size: 51-200",
+    "Industry Unknown",
+    "Job Title Unknown",
+    "Experience Unknown",
+    "Budget: 5k-10k",
+    "Use Case Unknown",
+    "Timeline Unknown",
+    "Marketing Consent: No",
+    "Newsletter: No",
+    "Contact Method Unknown",
+    "No UTM Source",
+    "No UTM Medium",
+    "No UTM Campaign",
+    "No Referrer",
+    "Interest: ChatGPT",
+    "Interest: Claude",
+    "Interest: Midjourney",
+    "Registered: 2024-12-17"
+  ],
+  "customFields": [
+    {
+      "key": "subscription_plan",
+      "field_value": "free"
+    },
+    {
+      "key": "billing_cycle",
+      "field_value": ""
+    },
+    {
+      "key": "stripe_customer_id",
+      "field_value": ""
+    },
+    {
+      "key": "company_name",
+      "field_value": "Tech Corp"
+    },
+    {
+      "key": "company_size",
+      "field_value": "51-200"
+    },
+    {
+      "key": "industry",
+      "field_value": ""
+    },
+    {
+      "key": "job_title",
+      "field_value": ""
+    },
+    {
+      "key": "ai_tools_interest",
+      "field_value": "ChatGPT, Claude, Midjourney"
+    },
+    {
+      "key": "primary_use_case",
+      "field_value": ""
+    },
+    {
+      "key": "experience_level",
+      "field_value": ""
+    },
+    {
+      "key": "budget",
+      "field_value": "5k-10k"
+    },
+    {
+      "key": "timeline",
+      "field_value": ""
+    },
+    {
+      "key": "utm_source",
+      "field_value": ""
+    },
+    {
+      "key": "utm_medium",
+      "field_value": ""
+    },
+    {
+      "key": "utm_campaign",
+      "field_value": ""
+    },
+    {
+      "key": "utm_term",
+      "field_value": ""
+    },
+    {
+      "key": "utm_content",
+      "field_value": ""
+    },
+    {
+      "key": "referrer",
+      "field_value": ""
+    },
+    {
+      "key": "marketing_consent",
+      "field_value": "No"
+    },
+    {
+      "key": "newsletter_subscription",
+      "field_value": "No"
+    },
+    {
+      "key": "preferred_contact_method",
+      "field_value": ""
+    },
+    {
+      "key": "registration_date",
+      "field_value": "2024-12-17T10:15:30.000Z"
+    },
+    {
+      "key": "provider",
+      "field_value": "email"
+    },
+    {
+      "key": "is_upgrade",
+      "field_value": "No"
+    }
+  ]
+}
+
+ERROR RESPONSE:
+HTTP Status Code: 403
+Error Message: {
+  "statusCode": 403,
+  "message": "The token does not have access to this location."
+}
+
+ADDITIONAL INFORMATION:
+- API Key: pit-8954f181-e668-4613-80d6-c7b4aa8594b8
+- Location ID: ECu5ScdYFmB0WnhvYoBU
+- API Version: 2021-07-28
+- Integration Type: SiteOptz.ai to GoHighLevel CRM
+- Purpose: Create contact in GoHighLevel when new user registers on SiteOptz.ai
+
+OTHER FAILING ENDPOINTS (SAME ERROR):
+1. GET https://services.leadconnectorhq.com/contacts/search/duplicate?email={email}&locationId=ECu5ScdYFmB0WnhvYoBU
+2. PUT https://services.leadconnectorhq.com/contacts/{contactId}
+
+All endpoints return the same 403 error: "The token does not have access to this location"
+
+==================================================
+END OF PAYLOAD
+==================================================
