@@ -27,7 +27,7 @@ const RegisterModal: React.FC<RegisterModalProps> = ({
     email: '',
     password: '',
     confirmPassword: '',
-    aiToolsInterest: '',
+    aiToolsInterest: [] as string[],
     businessSize: ''
   });
   const [isLoading, setIsLoading] = useState(false);
@@ -42,6 +42,20 @@ const RegisterModal: React.FC<RegisterModalProps> = ({
     });
   };
 
+  const handleCheckboxChange = (value: string, checked: boolean) => {
+    if (checked) {
+      setFormData({
+        ...formData,
+        aiToolsInterest: [...formData.aiToolsInterest, value]
+      });
+    } else {
+      setFormData({
+        ...formData,
+        aiToolsInterest: formData.aiToolsInterest.filter(item => item !== value)
+      });
+    }
+  };
+
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsLoading(true);
@@ -50,8 +64,8 @@ const RegisterModal: React.FC<RegisterModalProps> = ({
     try {
       if (!isLogin) {
         // Registration - validate required fields
-        if (!formData.aiToolsInterest) {
-          setError('Please select your AI tools interest');
+        if (formData.aiToolsInterest.length === 0) {
+          setError('Please select at least one business reason for using AI');
           setIsLoading(false);
           return;
         }
@@ -160,8 +174,8 @@ const RegisterModal: React.FC<RegisterModalProps> = ({
     if (!isLogin) {
       console.log('🚀 REGISTRATION MODE: Validating fields');
       
-      if (!formData.aiToolsInterest) {
-        setError('Please select your AI tools interest');
+      if (formData.aiToolsInterest.length === 0) {
+        setError('Please select at least one business reason for using AI');
         setIsLoading(false);
         return;
       }
@@ -297,28 +311,28 @@ const RegisterModal: React.FC<RegisterModalProps> = ({
           {!isLogin && (
             <div className="space-y-4 mb-6">
               <div>
-                <label className="block text-sm font-medium text-gray-300 mb-2">
-                  What AI tools interest you most?
+                <label className="block text-sm font-medium text-gray-300 mb-3">
+                  What's your main reason for wanting to use AI to optimize your business? (Check all that apply)
                 </label>
-                <select
-                  name="aiToolsInterest"
-                  value={formData.aiToolsInterest}
-                  onChange={handleInputChange}
-                  required={!isLogin}
-                  className="w-full bg-gray-800 border border-gray-600 rounded-xl py-3 px-4 text-white focus:border-green-500 focus:ring-1 focus:ring-green-500 focus:outline-none transition-all"
-                >
-                  <option value="">Select Interest</option>
-                  <option value="chatgpt">ChatGPT & Language Models</option>
-                  <option value="image-generation">AI Image Generation</option>
-                  <option value="video-creation">AI Video Creation</option>
-                  <option value="writing-tools">AI Writing Tools</option>
-                  <option value="automation">AI Automation</option>
-                  <option value="voice-ai">Voice AI Tools</option>
-                  <option value="design-tools">AI Design Tools</option>
-                  <option value="research">AI Research Tools</option>
-                  <option value="general">General AI Tools</option>
-                  <option value="other">Other</option>
-                </select>
+                <div className="space-y-3">
+                  {[
+                    'Boost conversion rates or grow revenue',
+                    'Cut costs or save time',
+                    'Make your customer experience better',
+                    'Scale up without extra overhead',
+                    'Automate tasks you do repeatedly'
+                  ].map((reason) => (
+                    <label key={reason} className="flex items-start gap-3 cursor-pointer">
+                      <input
+                        type="checkbox"
+                        checked={formData.aiToolsInterest.includes(reason)}
+                        onChange={(e) => handleCheckboxChange(reason, e.target.checked)}
+                        className="mt-1 h-4 w-4 rounded border-gray-600 bg-gray-800 text-green-500 focus:ring-green-500 focus:ring-offset-0"
+                      />
+                      <span className="text-gray-300 text-sm leading-relaxed">{reason}</span>
+                    </label>
+                  ))}
+                </div>
               </div>
 
               <div>
