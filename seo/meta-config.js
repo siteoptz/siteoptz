@@ -7,17 +7,17 @@
 export const siteConfig = {
   siteName: 'SiteOptz',
   baseUrl: 'https://siteoptz.ai',
-  defaultTitle: 'SiteOptz.ai - AI Tools That Drive ROI | Expert Implementation & Optimization',
-  defaultDescription: 'SiteOptz.ai helps companies unlock measurable growth by selecting, implementing, and optimizing the right AI tools. From strategy to execution, we turn AI into a revenue engine.',
+  defaultTitle: 'SiteOptz - Fortune 500 AI Implementation Experts | $50M+ in Productivity Gains',
+  defaultDescription: 'Fortune 500 AI implementation experts. We\'ve deployed 500+ AI solutions generating $50M+ in productivity gains. Get your custom AI transformation roadmap that delivers measurable ROI in 90 days.',
   defaultKeywords: [
-    'AI tools',
-    'artificial intelligence software',
-    'AI tool reviews',
-    'AI software comparison',
-    'best AI tools 2025',
-    'ChatGPT alternatives',
-    'AI tool pricing',
-    'machine learning tools'
+    'AI implementation consulting',
+    'Fortune 500 AI experts',
+    'AI transformation strategy',
+    'enterprise AI deployment',
+    'AI consulting services',
+    'AI ROI optimization',
+    'custom AI solutions',
+    'AI productivity gains'
   ],
   twitterHandle: '@siteoptz',
   author: 'SiteOptz Team'
@@ -27,19 +27,19 @@ export const siteConfig = {
 export const pageConfigs = {
   // Homepage
   home: {
-    title: 'SiteOptz.ai - AI Tools That Drive ROI | Expert Implementation & Optimization',
-    description: 'SiteOptz.ai helps companies unlock measurable growth by selecting, implementing, and optimizing the right AI tools. From strategy to execution, we turn AI into a revenue engine.',
+    title: 'SiteOptz - Fortune 500 AI Implementation Experts | $50M+ in Productivity Gains',
+    description: 'Fortune 500 AI implementation experts. We\'ve deployed 500+ AI solutions generating $50M+ in productivity gains. Get your custom AI transformation roadmap that delivers measurable ROI in 90 days.',
     keywords: [
-      'best AI tools 2025',
-      'AI software reviews',
-      'AI tool comparison',
-      'ChatGPT vs Claude',
-      'artificial intelligence tools',
-      'AI productivity software',
-      'machine learning platforms',
-      'AI writing tools',
-      'AI image generators',
-      'conversational AI'
+      'Fortune 500 AI consulting',
+      'AI implementation experts',
+      'enterprise AI transformation',
+      'AI strategy consulting',
+      'custom AI solutions',
+      'AI ROI guarantee',
+      'AI productivity gains',
+      'AI consulting services',
+      'AI deployment strategy',
+      'business AI optimization'
     ],
     ogType: 'website'
   },

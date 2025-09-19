@@ -30,17 +30,17 @@ const HeroSection: React.FC = () => {
 
           {/* Main Heading */}
           <h1 className="text-5xl lg:text-7xl xl:text-8xl font-bold mb-8 leading-tight">
-            <span className="block text-white mb-4">Stop Drowning in</span>
+            <span className="block text-white mb-4">Stop Wasting Money on</span>
             <span className="block text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-blue-400 to-purple-400 animate-gradient">
-              AI Tool Options
+              Wrong AI Tools
             </span>
-            <span className="block text-white mt-4">Get Your Custom Roadmap</span>
+            <span className="block text-white mt-4">Get Expert Implementation</span>
           </h1>
 
           {/* Subtitle */}
           <p className="text-xl lg:text-2xl text-gray-300 max-w-4xl mx-auto mb-12 leading-relaxed font-light">
-            Your AI Tools Roadmap & Implementation Partner. We&apos;ve deployed 500+ AI tools for Fortune 500 companies. 
-            Get a custom 90-day AI strategy that actually works for your business.
+            Fortune 500 AI Implementation Experts. We&apos;ve deployed 500+ AI solutions generating $50M+ in productivity gains. 
+            Get your custom AI transformation roadmap that delivers measurable ROI in 90 days.
           </p>
 
           {/* Primary CTA */}
@@ -79,19 +79,19 @@ const HeroSection: React.FC = () => {
           {/* Value Props */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12 max-w-4xl mx-auto">
             <div className="bg-white/5 backdrop-blur-md border border-white/10 rounded-xl p-6">
-              <div className="text-2xl font-bold text-cyan-400 mb-2">Custom Roadmap</div>
-              <div className="text-sm text-gray-300">90-day implementation plan</div>
-              <div className="text-xs text-cyan-400 font-semibold mt-1">Worth $2,500</div>
+              <div className="text-2xl font-bold text-cyan-400 mb-2">AI Strategy Audit</div>
+              <div className="text-sm text-gray-300">Complete current-state analysis & gaps identification</div>
+              <div className="text-xs text-cyan-400 font-semibold mt-1">$5,000 Value</div>
             </div>
             <div className="bg-white/5 backdrop-blur-md border border-white/10 rounded-xl p-6">
-              <div className="text-2xl font-bold text-blue-400 mb-2">Implementation Strategy</div>
-              <div className="text-sm text-gray-300">Technical setup & training</div>
-              <div className="text-xs text-blue-400 font-semibold mt-1">Worth $1,800</div>
+              <div className="text-2xl font-bold text-blue-400 mb-2">Custom Roadmap</div>
+              <div className="text-sm text-gray-300">90-day implementation plan with ROI projections</div>
+              <div className="text-xs text-blue-400 font-semibold mt-1">$3,500 Value</div>
             </div>
             <div className="bg-white/5 backdrop-blur-md border border-white/10 rounded-xl p-6">
-              <div className="text-2xl font-bold text-purple-400 mb-2">Performance Benchmarking</div>
-              <div className="text-sm text-gray-300">KPIs & success tracking</div>
-              <div className="text-xs text-purple-400 font-semibold mt-1">Worth $1,200</div>
+              <div className="text-2xl font-bold text-purple-400 mb-2">Executive Briefing</div>
+              <div className="text-sm text-gray-300">C-suite presentation & budget justification</div>
+              <div className="text-xs text-purple-400 font-semibold mt-1">$2,000 Value</div>
             </div>
           </div>
 
@@ -99,35 +99,35 @@ const HeroSection: React.FC = () => {
           <div className="flex flex-wrap justify-center items-center gap-8 mb-12 text-sm text-gray-400">
             <div className="flex items-center gap-2">
               <Shield className="w-4 h-4 text-cyan-400" />
-              <span>No Sales Pitch Guaranteed</span>
+              <span>Fortune 500 Methodology</span>
             </div>
             <div className="flex items-center gap-2">
               <CheckCircle className="w-4 h-4 text-cyan-400" />
-              <span>Custom Roadmap Included</span>
+              <span>ROI Guarantee or Refund</span>
             </div>
             <div className="flex items-center gap-2">
               <CheckCircle className="w-4 h-4 text-cyan-400" />
-              <span>98% Success Rate</span>
+              <span>Expert Implementation Team</span>
             </div>
           </div>
 
           {/* Stats Row - Consulting Focused */}
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mt-16 max-w-4xl mx-auto">
             <div className="text-center">
-              <div className="text-3xl lg:text-4xl font-bold text-white mb-2">500+</div>
-              <div className="text-gray-400 text-sm">AI Tools Deployed</div>
+              <div className="text-3xl lg:text-4xl font-bold text-white mb-2">$50M+</div>
+              <div className="text-gray-400 text-sm">Productivity Gains Generated</div>
             </div>
             <div className="text-center">
-              <div className="text-3xl lg:text-4xl font-bold text-cyan-400 mb-2">98%</div>
-              <div className="text-gray-400 text-sm">Client Success Rate</div>
+              <div className="text-3xl lg:text-4xl font-bold text-cyan-400 mb-2">Fortune 500</div>
+              <div className="text-gray-400 text-sm">Companies Served</div>
             </div>
             <div className="text-center">
-              <div className="text-3xl lg:text-4xl font-bold text-blue-400 mb-2">10x</div>
-              <div className="text-gray-400 text-sm">Average ROI</div>
+              <div className="text-3xl lg:text-4xl font-bold text-blue-400 mb-2">15x</div>
+              <div className="text-gray-400 text-sm">Average ROI Delivered</div>
             </div>
             <div className="text-center">
               <div className="text-3xl lg:text-4xl font-bold text-purple-400 mb-2">90</div>
-              <div className="text-gray-400 text-sm">Days to Success</div>
+              <div className="text-gray-400 text-sm">Days to Measurable Results</div>
             </div>
           </div>
         </div>
