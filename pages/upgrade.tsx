@@ -881,36 +881,24 @@ const UpgradePage: React.FC = () => {
                   Join thousands of companies already seeing results. Start with our free plan or dive right in with Starter.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                  <button 
-                    onClick={() => handleUpgrade('Starter', 497)}
-                    disabled={
-                      loading || 
-                      isLoading || 
-                      userPlanLoading ||
-                      isCurrentPlan('Starter') || 
-                      (isLoggedIn && !canUpgradeTo('Starter'))
-                    }
-                    className={`px-8 py-4 rounded-lg font-semibold transition-all transform hover:scale-105 ${
-                      loading || isLoading || userPlanLoading
-                        ? 'bg-gray-700 text-gray-500 cursor-not-allowed opacity-50'
-                        : isCurrentPlan('Starter')
-                        ? 'bg-gradient-to-r from-cyan-600 to-blue-600 text-white cursor-not-allowed opacity-75'
-                        : (isLoggedIn && !canUpgradeTo('Starter'))
-                        ? 'bg-gray-700 text-gray-500 cursor-not-allowed opacity-50'
-                        : 'bg-gradient-to-r from-cyan-600 to-blue-600 text-white hover:from-cyan-700 hover:to-blue-700'
-                    }`}
-                  >
-                    {loading || isLoading || userPlanLoading 
-                      ? 'Loading...' 
-                      : isCurrentPlan('Starter') 
-                      ? 'Current Plan'
-                      : (isLoggedIn && !canUpgradeTo('Starter'))
-                      ? 'Not Available'
-                      : isLoggedIn 
-                      ? 'Upgrade Now' 
-                      : 'Start Free Trial'
-                    }
-                  </button>
+                  {!(isLoggedIn && !canUpgradeTo('Starter')) && !isCurrentPlan('Starter') && (
+                    <button 
+                      onClick={() => handleUpgrade('Starter', 497)}
+                      disabled={loading || isLoading || userPlanLoading}
+                      className={`px-8 py-4 rounded-lg font-semibold transition-all transform hover:scale-105 ${
+                        loading || isLoading || userPlanLoading
+                          ? 'bg-gray-700 text-gray-500 cursor-not-allowed opacity-50'
+                          : 'bg-gradient-to-r from-cyan-600 to-blue-600 text-white hover:from-cyan-700 hover:to-blue-700'
+                      }`}
+                    >
+                      {loading || isLoading || userPlanLoading 
+                        ? 'Loading...' 
+                        : isLoggedIn 
+                        ? 'Upgrade Now' 
+                        : 'Start Free Trial'
+                      }
+                    </button>
+                  )}
                   <Link
                     href="/contact"
                     className="bg-white/10 backdrop-blur-md border border-white/20 text-white px-8 py-4 rounded-lg font-semibold hover:bg-white/15 transition-all"
@@ -979,37 +967,25 @@ const UpgradePage: React.FC = () => {
               Join thousands of companies already seeing results. Start your free trial today.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button
-                onClick={() => handleUpgrade('Starter', 497)}
-                disabled={
-                  loading || 
-                  isLoading || 
-                  userPlanLoading ||
-                  isCurrentPlan('Starter') || 
-                  (isLoggedIn && !canUpgradeTo('Starter'))
-                }
-                className={`px-8 py-4 rounded-lg font-semibold transform hover:scale-105 transition-all duration-200 shadow-lg hover:shadow-xl ${
-                  loading || isLoading || userPlanLoading
-                    ? 'bg-gray-700 text-gray-500 cursor-not-allowed opacity-50'
-                    : isCurrentPlan('Starter')
-                    ? 'bg-gradient-to-r from-cyan-600 to-blue-600 text-white cursor-not-allowed opacity-75'
-                    : (isLoggedIn && !canUpgradeTo('Starter'))
-                    ? 'bg-gray-700 text-gray-500 cursor-not-allowed opacity-50'
-                    : 'bg-gradient-to-r from-cyan-600 to-blue-600 text-white hover:from-cyan-700 hover:to-blue-700'
-                }`}
-              >
-                {loading || isLoading || userPlanLoading 
-                  ? 'Loading...' 
-                  : isCurrentPlan('Starter') 
-                  ? 'Current Plan'
-                  : (isLoggedIn && !canUpgradeTo('Starter'))
-                  ? 'Not Available'
-                  : isLoggedIn 
-                  ? 'Upgrade Now' 
-                  : 'Select'
-                }
-                {!loading && !isLoading && !userPlanLoading && !isCurrentPlan('Starter') && (isLoggedIn ? canUpgradeTo('Starter') : true) && <ArrowRight className="inline-block ml-2 w-5 h-5" />}
-              </button>
+              {!(isLoggedIn && !canUpgradeTo('Starter')) && !isCurrentPlan('Starter') && (
+                <button
+                  onClick={() => handleUpgrade('Starter', 497)}
+                  disabled={loading || isLoading || userPlanLoading}
+                  className={`px-8 py-4 rounded-lg font-semibold transform hover:scale-105 transition-all duration-200 shadow-lg hover:shadow-xl ${
+                    loading || isLoading || userPlanLoading
+                      ? 'bg-gray-700 text-gray-500 cursor-not-allowed opacity-50'
+                      : 'bg-gradient-to-r from-cyan-600 to-blue-600 text-white hover:from-cyan-700 hover:to-blue-700'
+                  }`}
+                >
+                  {loading || isLoading || userPlanLoading 
+                    ? 'Loading...' 
+                    : isLoggedIn 
+                    ? 'Upgrade Now' 
+                    : 'Select'
+                  }
+                  {!loading && !isLoading && !userPlanLoading && <ArrowRight className="inline-block ml-2 w-5 h-5" />}
+                </button>
+              )}
               <Link
                 href="/contact"
                 className="px-8 py-4 bg-gray-800 text-white rounded-lg font-semibold hover:bg-gray-700 transition-all duration-200 border border-gray-700"
