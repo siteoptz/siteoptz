@@ -185,18 +185,18 @@ export default function CategoriesPage({ categories, totalTools, featuredTools, 
         />
       </Head>
 
-      <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-black">
+      <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-black overflow-x-hidden">
         {/* Hero Section */}
         <section className="pt-20 pb-16">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto px-2 sm:px-4 lg:px-8">
             <div className="text-center mb-12">
-              <h1 className="text-4xl md:text-5xl font-bold text-white mb-4">
+              <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-4 px-2 sm:px-0">
                 AI Tool Categories
               </h1>
-              <p className="text-2xl font-semibold text-cyan-400 mb-6">
+              <p className="text-xl sm:text-2xl font-semibold text-cyan-400 mb-6 px-2 sm:px-0">
                 Turning AI Into ROI
               </p>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              <p className="text-lg sm:text-xl text-gray-300 max-w-3xl mx-auto px-2 sm:px-0">
                 Browse {totalTools} AI tools across {categories.length} categories. 
                 Find the perfect AI solution for your specific needs.
               </p>
@@ -204,7 +204,7 @@ export default function CategoriesPage({ categories, totalTools, featuredTools, 
 
 
             {/* Stats */}
-            <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 mb-12">
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 mb-12 px-2 sm:px-0">
               <div className="bg-gray-900 border border-gray-800 rounded-lg p-6 text-center">
                 <div className="text-3xl font-bold text-cyan-400 mb-2">{categories.length}</div>
                 <div className="text-gray-300">Categories</div>
@@ -251,7 +251,7 @@ export default function CategoriesPage({ categories, totalTools, featuredTools, 
                         </span>
                       </div>
                       
-                      <div className="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+                      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 px-2 sm:px-0">
                         {tools.slice(0, 4).map((tool: any) => (
                           <div key={tool.id} className="bg-black border border-gray-800 rounded-2xl shadow-lg hover:shadow-xl transition-all hover:border-gray-600 p-6">
                             <div className="flex items-center gap-3 mb-4">
@@ -353,7 +353,7 @@ export default function CategoriesPage({ categories, totalTools, featuredTools, 
 
             {/* Popular Comparisons Section */}
             <section className="bg-gray-950 py-20 rounded-2xl mb-16">
-              <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+              <div className="max-w-7xl mx-auto px-2 sm:px-4 lg:px-8">
                 <div className="text-center mb-16">
                   <h2 className="text-4xl font-bold text-white mb-4">
                     Popular AI Tool Comparisons
@@ -363,7 +363,7 @@ export default function CategoriesPage({ categories, totalTools, featuredTools, 
                   </p>
                 </div>
 
-                <div className="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 px-2 sm:px-0">
                   {popularComparisons.slice(0, 12).map((comparison, index) => (
                     <div key={index} className="bg-black border border-gray-800 rounded-2xl shadow-lg hover:shadow-xl transition-all hover:border-gray-600 p-6">
                       <div className="flex items-center justify-between mb-4">
@@ -434,7 +434,7 @@ export default function CategoriesPage({ categories, totalTools, featuredTools, 
 
             {/* FAQ Section */}
             <section className="py-20 bg-black rounded-2xl mb-16">
-              <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+              <div className="max-w-7xl mx-auto px-2 sm:px-4 lg:px-8">
                 <FAQSection 
                   faqs={faqs}
                   title="Frequently Asked Questions About AI Tools"
