@@ -1,0 +1,710 @@
+[
+  {
+    "id": "ai-writer-20",
+    "name": "AI Writer 2.0",
+    "slug": "ai-writer-20",
+    "logo": "/images/tools/ai-writer-20-logo.svg",
+    "meta": {
+      "description": "AI Writer 2.0 - AI tool review covering features, pricing, and alternatives.",
+      "keywords": "AI Writer 2.0 review, AI Writer 2.0 features, AI Writer 2.0 pricing, AI Writer 2.0 alternatives, AI Writer 2.0 vs"
+    },
+    "overview": {
+      "developer": "AI",
+      "release_year": 2023,
+      "description": "AI Writer 2.0 is an AI-powered tool that helps streamline workflows and enhance productivity.",
+      "category": "AI Tools",
+      "website": "https://aiwriter20.com",
+      "long_description": "AI Writer 2.0 is a comprehensive AI solution designed to help businesses optimize their operations and maintain competitive advantages in their respective markets."
+    },
+    "features": [
+      "AI-powered assistance",
+      "User-friendly interface",
+      "Productivity enhancement"
+    ],
+    "pros": [
+      "User-friendly interface",
+      "Comprehensive feature set",
+      "Good integration options",
+      "Competitive pricing"
+    ],
+    "cons": [
+      "Learning curve for advanced features",
+      "Limited free tier",
+      "Subscription required for full access"
+    ],
+    "pricing": [
+      {
+        "plan": "Starter",
+        "price_per_month": 29,
+        "billing_period": "monthly",
+        "features": [
+          "Basic features",
+          "Email support",
+          "Monthly usage limits"
+        ]
+      }
+    ],
+    "rating": 4.2,
+    "benchmarks": {
+      "speed": 8,
+      "accuracy": 8,
+      "integration": 7,
+      "ease_of_use": 8,
+      "value": 8
+    },
+    "scraping_metadata": {
+      "source_url": "https://aitools.neilpatel.com",
+      "scraped_at": "2025-09-20T18:03:44.690Z",
+      "scraper": "neil-patel-scraper"
+    }
+  },
+  {
+    "id": "reddibee-grow-your-reddit-presence",
+    "name": "Reddibee: Grow Your Reddit Presence",
+    "slug": "reddibee-grow-your-reddit-presence",
+    "logo": "/images/tools/reddibee-grow-your-reddit-presence-logo.svg",
+    "meta": {
+      "description": "Reddibee: Grow Your Reddit Presence - AI tool review covering features, pricing, and alternatives.",
+      "keywords": "Reddibee: Grow Your Reddit Presence review, Reddibee: Grow Your Reddit Presence features, Reddibee: Grow Your Reddit Presence pricing, Reddibee: Grow Your Reddit Presence alternatives, Reddibee: Grow Your Reddit Presence vs"
+    },
+    "overview": {
+      "developer": "Reddibee:",
+      "release_year": 2023,
+      "description": "Reddibee: Grow Your Reddit Presence is an AI-powered tool that helps streamline workflows and enhance productivity.",
+      "category": "AI Tools",
+      "website": "https://reddibeegrowyou.com",
+      "long_description": "Reddibee: Grow Your Reddit Presence is a comprehensive AI solution designed to help businesses optimize their operations and maintain competitive advantages in their respective markets."
+    },
+    "features": [
+      "AI-powered assistance",
+      "User-friendly interface",
+      "Productivity enhancement"
+    ],
+    "pros": [
+      "User-friendly interface",
+      "Comprehensive feature set",
+      "Good integration options",
+      "Competitive pricing"
+    ],
+    "cons": [
+      "Learning curve for advanced features",
+      "Limited free tier",
+      "Subscription required for full access"
+    ],
+    "pricing": [
+      {
+        "plan": "Starter",
+        "price_per_month": 29,
+        "billing_period": "monthly",
+        "features": [
+          "Basic features",
+          "Email support",
+          "Monthly usage limits"
+        ]
+      }
+    ],
+    "rating": 4.2,
+    "benchmarks": {
+      "speed": 8,
+      "accuracy": 8,
+      "integration": 7,
+      "ease_of_use": 8,
+      "value": 8
+    },
+    "scraping_metadata": {
+      "source_url": "https://aitools.neilpatel.com",
+      "scraped_at": "2025-09-20T18:03:44.692Z",
+      "scraper": "neil-patel-scraper"
+    }
+  },
+  {
+    "id": "screvi-have-all-your-reading-notes-in-one-place",
+    "name": "Screvi: Have all Your Reading Notes in One Place",
+    "slug": "screvi-have-all-your-reading-notes-in-one-place",
+    "logo": "/images/tools/screvi-have-all-your-reading-notes-in-one-place-logo.svg",
+    "meta": {
+      "description": "Screvi: Have all Your Reading Notes in One Place - AI tool review covering features, pricing, and alternatives.",
+      "keywords": "Screvi: Have all Your Reading Notes in One Place review, Screvi: Have all Your Reading Notes in One Place features, Screvi: Have all Your Reading Notes in One Place pricing, Screvi: Have all Your Reading Notes in One Place alternatives, Screvi: Have all Your Reading Notes in One Place vs"
+    },
+    "overview": {
+      "developer": "Screvi:",
+      "release_year": 2023,
+      "description": "Screvi: Have all Your Reading Notes in One Place is an AI-powered tool that helps streamline workflows and enhance productivity.",
+      "category": "AI Tools",
+      "website": "https://screvihaveallyo.com",
+      "long_description": "Screvi: Have all Your Reading Notes in One Place is a comprehensive AI solution designed to help businesses optimize their operations and maintain competitive advantages in their respective markets."
+    },
+    "features": [
+      "AI-powered assistance",
+      "User-friendly interface",
+      "Productivity enhancement"
+    ],
+    "pros": [
+      "User-friendly interface",
+      "Comprehensive feature set",
+      "Good integration options",
+      "Competitive pricing"
+    ],
+    "cons": [
+      "Learning curve for advanced features",
+      "Limited free tier",
+      "Subscription required for full access"
+    ],
+    "pricing": [
+      {
+        "plan": "Starter",
+        "price_per_month": 29,
+        "billing_period": "monthly",
+        "features": [
+          "Basic features",
+          "Email support",
+          "Monthly usage limits"
+        ]
+      }
+    ],
+    "rating": 4.2,
+    "benchmarks": {
+      "speed": 8,
+      "accuracy": 8,
+      "integration": 7,
+      "ease_of_use": 8,
+      "value": 8
+    },
+    "scraping_metadata": {
+      "source_url": "https://aitools.neilpatel.com",
+      "scraped_at": "2025-09-20T18:03:44.692Z",
+      "scraper": "neil-patel-scraper"
+    }
+  },
+  {
+    "id": "aisoap-turn-your-patients-live-conversations-into-notes",
+    "name": "AISOAP: Turn Your Patient’s Live Conversations into Notes",
+    "slug": "aisoap-turn-your-patients-live-conversations-into-notes",
+    "logo": "/images/tools/aisoap-turn-your-patients-live-conversations-into-notes-logo.svg",
+    "meta": {
+      "description": "AISOAP: Turn Your Patient’s Live Conversations into Notes - AI tool review covering features, pricing, and alternatives.",
+      "keywords": "AISOAP: Turn Your Patient’s Live Conversations into Notes review, AISOAP: Turn Your Patient’s Live Conversations into Notes features, AISOAP: Turn Your Patient’s Live Conversations into Notes pricing, AISOAP: Turn Your Patient’s Live Conversations into Notes alternatives, AISOAP: Turn Your Patient’s Live Conversations into Notes vs"
+    },
+    "overview": {
+      "developer": "AISOAP:",
+      "release_year": 2023,
+      "description": "AISOAP: Turn Your Patient’s Live Conversations into Notes is an AI-powered tool that helps streamline workflows and enhance productivity.",
+      "category": "AI Tools",
+      "website": "https://aisoapturnyourp.com",
+      "long_description": "AISOAP: Turn Your Patient’s Live Conversations into Notes is a comprehensive AI solution designed to help businesses optimize their operations and maintain competitive advantages in their respective markets."
+    },
+    "features": [
+      "Real-time processing",
+      "AI-powered assistance",
+      "User-friendly interface"
+    ],
+    "pros": [
+      "User-friendly interface",
+      "Comprehensive feature set",
+      "Good integration options",
+      "Competitive pricing"
+    ],
+    "cons": [
+      "Learning curve for advanced features",
+      "Limited free tier",
+      "Subscription required for full access"
+    ],
+    "pricing": [
+      {
+        "plan": "Starter",
+        "price_per_month": 29,
+        "billing_period": "monthly",
+        "features": [
+          "Basic features",
+          "Email support",
+          "Monthly usage limits"
+        ]
+      }
+    ],
+    "rating": 4.2,
+    "benchmarks": {
+      "speed": 8,
+      "accuracy": 8,
+      "integration": 7,
+      "ease_of_use": 8,
+      "value": 8
+    },
+    "scraping_metadata": {
+      "source_url": "https://aitools.neilpatel.com",
+      "scraped_at": "2025-09-20T18:03:44.692Z",
+      "scraper": "neil-patel-scraper"
+    }
+  },
+  {
+    "id": "brandwiz-remove-negative-comments-on-social-media-instantly",
+    "name": "Brandwiz: Remove Negative Comments on Social Media Instantly",
+    "slug": "brandwiz-remove-negative-comments-on-social-media-instantly",
+    "logo": "/images/tools/brandwiz-remove-negative-comments-on-social-media-instantly-logo.svg",
+    "meta": {
+      "description": "Brandwiz: Remove Negative Comments on Social Media Instantly - AI tool review covering features, pricing, and alternatives.",
+      "keywords": "Brandwiz: Remove Negative Comments on Social Media Instantly review, Brandwiz: Remove Negative Comments on Social Media Instantly features, Brandwiz: Remove Negative Comments on Social Media Instantly pricing, Brandwiz: Remove Negative Comments on Social Media Instantly alternatives, Brandwiz: Remove Negative Comments on Social Media Instantly vs"
+    },
+    "overview": {
+      "developer": "Brandwiz:",
+      "release_year": 2023,
+      "description": "Brandwiz: Remove Negative Comments on Social Media Instantly is an AI-powered tool that helps streamline workflows and enhance productivity.",
+      "category": "AI Marketing",
+      "website": "https://brandwizremoven.com",
+      "long_description": "Brandwiz: Remove Negative Comments on Social Media Instantly is a comprehensive AI solution designed to help businesses optimize their operations and maintain competitive advantages in their respective markets."
+    },
+    "features": [
+      "Brand voice training",
+      "Real-time processing",
+      "AI-powered assistance"
+    ],
+    "pros": [
+      "User-friendly interface",
+      "Comprehensive feature set",
+      "Good integration options",
+      "Competitive pricing"
+    ],
+    "cons": [
+      "Learning curve for advanced features",
+      "Limited free tier",
+      "Subscription required for full access"
+    ],
+    "pricing": [
+      {
+        "plan": "Starter",
+        "price_per_month": 29,
+        "billing_period": "monthly",
+        "features": [
+          "Basic features",
+          "Email support",
+          "Monthly usage limits"
+        ]
+      }
+    ],
+    "rating": 4.2,
+    "benchmarks": {
+      "speed": 8,
+      "accuracy": 8,
+      "integration": 7,
+      "ease_of_use": 8,
+      "value": 8
+    },
+    "scraping_metadata": {
+      "source_url": "https://aitools.neilpatel.com",
+      "scraped_at": "2025-09-20T18:03:44.692Z",
+      "scraper": "neil-patel-scraper"
+    }
+  },
+  {
+    "id": "naturalreader-listen-your-documents-or-emails",
+    "name": "NaturalReader: Listen Your Documents or Emails",
+    "slug": "naturalreader-listen-your-documents-or-emails",
+    "logo": "/images/tools/naturalreader-listen-your-documents-or-emails-logo.svg",
+    "meta": {
+      "description": "NaturalReader: Listen Your Documents or Emails - AI tool review covering features, pricing, and alternatives.",
+      "keywords": "NaturalReader: Listen Your Documents or Emails review, NaturalReader: Listen Your Documents or Emails features, NaturalReader: Listen Your Documents or Emails pricing, NaturalReader: Listen Your Documents or Emails alternatives, NaturalReader: Listen Your Documents or Emails vs"
+    },
+    "overview": {
+      "developer": "NaturalReader:",
+      "release_year": 2023,
+      "description": "NaturalReader: Listen Your Documents or Emails is an AI-powered tool that helps streamline workflows and enhance productivity.",
+      "category": "AI Tools",
+      "website": "https://naturalreaderli.com",
+      "long_description": "NaturalReader: Listen Your Documents or Emails is a comprehensive AI solution designed to help businesses optimize their operations and maintain competitive advantages in their respective markets."
+    },
+    "features": [
+      "AI-powered assistance",
+      "User-friendly interface",
+      "Productivity enhancement"
+    ],
+    "pros": [
+      "User-friendly interface",
+      "Comprehensive feature set",
+      "Good integration options",
+      "Competitive pricing"
+    ],
+    "cons": [
+      "Learning curve for advanced features",
+      "Limited free tier",
+      "Subscription required for full access"
+    ],
+    "pricing": [
+      {
+        "plan": "Starter",
+        "price_per_month": 29,
+        "billing_period": "monthly",
+        "features": [
+          "Basic features",
+          "Email support",
+          "Monthly usage limits"
+        ]
+      }
+    ],
+    "rating": 4.2,
+    "benchmarks": {
+      "speed": 8,
+      "accuracy": 8,
+      "integration": 7,
+      "ease_of_use": 8,
+      "value": 8
+    },
+    "scraping_metadata": {
+      "source_url": "https://aitools.neilpatel.com",
+      "scraped_at": "2025-09-20T18:03:44.692Z",
+      "scraper": "neil-patel-scraper"
+    }
+  },
+  {
+    "id": "pikzels-generate-ai-thumbnails-in-seconds",
+    "name": "Pikzels: Generate AI Thumbnails in Seconds",
+    "slug": "pikzels-generate-ai-thumbnails-in-seconds",
+    "logo": "/images/tools/pikzels-generate-ai-thumbnails-in-seconds-logo.svg",
+    "meta": {
+      "description": "Pikzels: Generate AI Thumbnails in Seconds - AI tool review covering features, pricing, and alternatives.",
+      "keywords": "Pikzels: Generate AI Thumbnails in Seconds review, Pikzels: Generate AI Thumbnails in Seconds features, Pikzels: Generate AI Thumbnails in Seconds pricing, Pikzels: Generate AI Thumbnails in Seconds alternatives, Pikzels: Generate AI Thumbnails in Seconds vs"
+    },
+    "overview": {
+      "developer": "Pikzels:",
+      "release_year": 2023,
+      "description": "Pikzels: Generate AI Thumbnails in Seconds is an AI-powered tool that helps streamline workflows and enhance productivity.",
+      "category": "AI Tools",
+      "website": "https://pikzelsgenerate.com",
+      "long_description": "Pikzels: Generate AI Thumbnails in Seconds is a comprehensive AI solution designed to help businesses optimize their operations and maintain competitive advantages in their respective markets."
+    },
+    "features": [
+      "AI content generation",
+      "AI-powered assistance",
+      "User-friendly interface"
+    ],
+    "pros": [
+      "User-friendly interface",
+      "Comprehensive feature set",
+      "Good integration options",
+      "Competitive pricing"
+    ],
+    "cons": [
+      "Learning curve for advanced features",
+      "Limited free tier",
+      "Subscription required for full access"
+    ],
+    "pricing": [
+      {
+        "plan": "Starter",
+        "price_per_month": 29,
+        "billing_period": "monthly",
+        "features": [
+          "Basic features",
+          "Email support",
+          "Monthly usage limits"
+        ]
+      }
+    ],
+    "rating": 4.2,
+    "benchmarks": {
+      "speed": 8,
+      "accuracy": 8,
+      "integration": 7,
+      "ease_of_use": 8,
+      "value": 8
+    },
+    "scraping_metadata": {
+      "source_url": "https://aitools.neilpatel.com",
+      "scraped_at": "2025-09-20T18:03:44.692Z",
+      "scraper": "neil-patel-scraper"
+    }
+  },
+  {
+    "id": "pig-automate-windows-desktop-workflow",
+    "name": "Pig: Automate Windows Desktop Workflow",
+    "slug": "pig-automate-windows-desktop-workflow",
+    "logo": "/images/tools/pig-automate-windows-desktop-workflow-logo.svg",
+    "meta": {
+      "description": "Pig: Automate Windows Desktop Workflow - AI tool review covering features, pricing, and alternatives.",
+      "keywords": "Pig: Automate Windows Desktop Workflow review, Pig: Automate Windows Desktop Workflow features, Pig: Automate Windows Desktop Workflow pricing, Pig: Automate Windows Desktop Workflow alternatives, Pig: Automate Windows Desktop Workflow vs"
+    },
+    "overview": {
+      "developer": "Pig:",
+      "release_year": 2023,
+      "description": "Pig: Automate Windows Desktop Workflow is an AI-powered tool that helps streamline workflows and enhance productivity.",
+      "category": "AI Productivity",
+      "website": "https://pigautomatewind.com",
+      "long_description": "Pig: Automate Windows Desktop Workflow is a comprehensive AI solution designed to help businesses optimize their operations and maintain competitive advantages in their respective markets."
+    },
+    "features": [
+      "Custom workflows",
+      "AI-powered assistance",
+      "User-friendly interface"
+    ],
+    "pros": [
+      "User-friendly interface",
+      "Comprehensive feature set",
+      "Good integration options",
+      "Competitive pricing"
+    ],
+    "cons": [
+      "Learning curve for advanced features",
+      "Limited free tier",
+      "Subscription required for full access"
+    ],
+    "pricing": [
+      {
+        "plan": "Starter",
+        "price_per_month": 29,
+        "billing_period": "monthly",
+        "features": [
+          "Basic features",
+          "Email support",
+          "Monthly usage limits"
+        ]
+      }
+    ],
+    "rating": 4.2,
+    "benchmarks": {
+      "speed": 8,
+      "accuracy": 8,
+      "integration": 7,
+      "ease_of_use": 8,
+      "value": 8
+    },
+    "scraping_metadata": {
+      "source_url": "https://aitools.neilpatel.com",
+      "scraped_at": "2025-09-20T18:03:44.692Z",
+      "scraper": "neil-patel-scraper"
+    }
+  },
+  {
+    "id": "jobquestai-create-resumes-with-ai",
+    "name": "JobQuest.ai: Create Resumes with AI",
+    "slug": "jobquestai-create-resumes-with-ai",
+    "logo": "/images/tools/jobquestai-create-resumes-with-ai-logo.svg",
+    "meta": {
+      "description": "JobQuest.ai: Create Resumes with AI - AI tool review covering features, pricing, and alternatives.",
+      "keywords": "JobQuest.ai: Create Resumes with AI review, JobQuest.ai: Create Resumes with AI features, JobQuest.ai: Create Resumes with AI pricing, JobQuest.ai: Create Resumes with AI alternatives, JobQuest.ai: Create Resumes with AI vs"
+    },
+    "overview": {
+      "developer": "JobQuest.ai:",
+      "release_year": 2023,
+      "description": "JobQuest.ai: Create Resumes with AI is an AI-powered tool that helps streamline workflows and enhance productivity.",
+      "category": "AI Tools",
+      "website": "https://jobquestaicreat.com",
+      "long_description": "JobQuest.ai: Create Resumes with AI is a comprehensive AI solution designed to help businesses optimize their operations and maintain competitive advantages in their respective markets."
+    },
+    "features": [
+      "AI-powered assistance",
+      "User-friendly interface",
+      "Productivity enhancement"
+    ],
+    "pros": [
+      "User-friendly interface",
+      "Comprehensive feature set",
+      "Good integration options",
+      "Competitive pricing"
+    ],
+    "cons": [
+      "Learning curve for advanced features",
+      "Limited free tier",
+      "Subscription required for full access"
+    ],
+    "pricing": [
+      {
+        "plan": "Starter",
+        "price_per_month": 29,
+        "billing_period": "monthly",
+        "features": [
+          "Basic features",
+          "Email support",
+          "Monthly usage limits"
+        ]
+      }
+    ],
+    "rating": 4.2,
+    "benchmarks": {
+      "speed": 8,
+      "accuracy": 8,
+      "integration": 7,
+      "ease_of_use": 8,
+      "value": 8
+    },
+    "scraping_metadata": {
+      "source_url": "https://aitools.neilpatel.com",
+      "scraped_at": "2025-09-20T18:03:44.692Z",
+      "scraper": "neil-patel-scraper"
+    }
+  },
+  {
+    "id": "typito-easily-edit-videos-with-ai",
+    "name": "Typito: Easily Edit Videos with AI",
+    "slug": "typito-easily-edit-videos-with-ai",
+    "logo": "/images/tools/typito-easily-edit-videos-with-ai-logo.svg",
+    "meta": {
+      "description": "Typito: Easily Edit Videos with AI - AI tool review covering features, pricing, and alternatives.",
+      "keywords": "Typito: Easily Edit Videos with AI review, Typito: Easily Edit Videos with AI features, Typito: Easily Edit Videos with AI pricing, Typito: Easily Edit Videos with AI alternatives, Typito: Easily Edit Videos with AI vs"
+    },
+    "overview": {
+      "developer": "Typito:",
+      "release_year": 2023,
+      "description": "Typito: Easily Edit Videos with AI is an AI-powered tool that helps streamline workflows and enhance productivity.",
+      "category": "AI Video",
+      "website": "https://typitoeasilyedi.com",
+      "long_description": "Typito: Easily Edit Videos with AI is a comprehensive AI solution designed to help businesses optimize their operations and maintain competitive advantages in their respective markets."
+    },
+    "features": [
+      "AI-powered assistance",
+      "User-friendly interface",
+      "Productivity enhancement"
+    ],
+    "pros": [
+      "User-friendly interface",
+      "Comprehensive feature set",
+      "Good integration options",
+      "Competitive pricing"
+    ],
+    "cons": [
+      "Learning curve for advanced features",
+      "Limited free tier",
+      "Subscription required for full access"
+    ],
+    "pricing": [
+      {
+        "plan": "Starter",
+        "price_per_month": 29,
+        "billing_period": "monthly",
+        "features": [
+          "Basic features",
+          "Email support",
+          "Monthly usage limits"
+        ]
+      }
+    ],
+    "rating": 4.2,
+    "benchmarks": {
+      "speed": 8,
+      "accuracy": 8,
+      "integration": 7,
+      "ease_of_use": 8,
+      "value": 8
+    },
+    "scraping_metadata": {
+      "source_url": "https://aitools.neilpatel.com",
+      "scraped_at": "2025-09-20T18:03:44.692Z",
+      "scraper": "neil-patel-scraper"
+    }
+  },
+  {
+    "id": "vectal-keep-all-your-tasks-organized",
+    "name": "Vectal: Keep All Your Tasks Organized",
+    "slug": "vectal-keep-all-your-tasks-organized",
+    "logo": "/images/tools/vectal-keep-all-your-tasks-organized-logo.svg",
+    "meta": {
+      "description": "Vectal: Keep All Your Tasks Organized - AI tool review covering features, pricing, and alternatives.",
+      "keywords": "Vectal: Keep All Your Tasks Organized review, Vectal: Keep All Your Tasks Organized features, Vectal: Keep All Your Tasks Organized pricing, Vectal: Keep All Your Tasks Organized alternatives, Vectal: Keep All Your Tasks Organized vs"
+    },
+    "overview": {
+      "developer": "Vectal:",
+      "release_year": 2023,
+      "description": "Vectal: Keep All Your Tasks Organized is an AI-powered tool that helps streamline workflows and enhance productivity.",
+      "category": "AI Productivity",
+      "website": "https://vectalkeepallyo.com",
+      "long_description": "Vectal: Keep All Your Tasks Organized is a comprehensive AI solution designed to help businesses optimize their operations and maintain competitive advantages in their respective markets."
+    },
+    "features": [
+      "AI-powered assistance",
+      "User-friendly interface",
+      "Productivity enhancement"
+    ],
+    "pros": [
+      "User-friendly interface",
+      "Comprehensive feature set",
+      "Good integration options",
+      "Competitive pricing"
+    ],
+    "cons": [
+      "Learning curve for advanced features",
+      "Limited free tier",
+      "Subscription required for full access"
+    ],
+    "pricing": [
+      {
+        "plan": "Starter",
+        "price_per_month": 29,
+        "billing_period": "monthly",
+        "features": [
+          "Basic features",
+          "Email support",
+          "Monthly usage limits"
+        ]
+      }
+    ],
+    "rating": 4.2,
+    "benchmarks": {
+      "speed": 8,
+      "accuracy": 8,
+      "integration": 7,
+      "ease_of_use": 8,
+      "value": 8
+    },
+    "scraping_metadata": {
+      "source_url": "https://aitools.neilpatel.com",
+      "scraped_at": "2025-09-20T18:03:44.692Z",
+      "scraper": "neil-patel-scraper"
+    }
+  },
+  {
+    "id": "promptimize-ai-browser-extension-for-prompt-engineering",
+    "name": "Promptimize AI: Browser Extension for Prompt Engineering",
+    "slug": "promptimize-ai-browser-extension-for-prompt-engineering",
+    "logo": "/images/tools/promptimize-ai-browser-extension-for-prompt-engineering-logo.svg",
+    "meta": {
+      "description": "Promptimize AI: Browser Extension for Prompt Engineering - AI tool review covering features, pricing, and alternatives.",
+      "keywords": "Promptimize AI: Browser Extension for Prompt Engineering review, Promptimize AI: Browser Extension for Prompt Engineering features, Promptimize AI: Browser Extension for Prompt Engineering pricing, Promptimize AI: Browser Extension for Prompt Engineering alternatives, Promptimize AI: Browser Extension for Prompt Engineering vs"
+    },
+    "overview": {
+      "developer": "Promptimize",
+      "release_year": 2023,
+      "description": "Promptimize AI: Browser Extension for Prompt Engineering is an AI-powered tool that helps streamline workflows and enhance productivity.",
+      "category": "AI Tools",
+      "website": "https://promptimizeaibr.com",
+      "long_description": "Promptimize AI: Browser Extension for Prompt Engineering is a comprehensive AI solution designed to help businesses optimize their operations and maintain competitive advantages in their respective markets."
+    },
+    "features": [
+      "AI-powered assistance",
+      "User-friendly interface",
+      "Productivity enhancement"
+    ],
+    "pros": [
+      "User-friendly interface",
+      "Comprehensive feature set",
+      "Good integration options",
+      "Competitive pricing"
+    ],
+    "cons": [
+      "Learning curve for advanced features",
+      "Limited free tier",
+      "Subscription required for full access"
+    ],
+    "pricing": [
+      {
+        "plan": "Starter",
+        "price_per_month": 29,
+        "billing_period": "monthly",
+        "features": [
+          "Basic features",
+          "Email support",
+          "Monthly usage limits"
+        ]
+      }
+    ],
+    "rating": 4.2,
+    "benchmarks": {
+      "speed": 8,
+      "accuracy": 8,
+      "integration": 7,
+      "ease_of_use": 8,
+      "value": 8
+    },
+    "scraping_metadata": {
+      "source_url": "https://aitools.neilpatel.com",
+      "scraped_at": "2025-09-20T18:03:44.692Z",
+      "scraper": "neil-patel-scraper"
+    }
+  }
+]

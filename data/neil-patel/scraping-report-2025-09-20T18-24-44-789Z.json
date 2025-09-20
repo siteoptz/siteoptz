@@ -1,0 +1,313 @@
+{
+  "timestamp": "2025-09-20T18:24:44.790Z",
+  "sourceUrl": "https://www.insidr.ai/ai-tools/",
+  "statistics": {
+    "totalScraped": 10,
+    "newTools": 8,
+    "duplicates": 2,
+    "fakeTools": 0,
+    "existingToolsCount": 736
+  },
+  "duplicateNames": [
+    "Jasper.ai",
+    "Dante AI"
+  ],
+  "fakeToolsDetected": [],
+  "categories": [
+    "Misc. AI Tools",
+    "Fun AI tools",
+    "AI Gaming",
+    "Student AI",
+    "AI Teachers",
+    "Fashion AI",
+    "AI Gift Ideas",
+    "Health AI",
+    "Travel AI",
+    "Fitness AI",
+    "AI Detector",
+    "AI Chatbot",
+    "Free AI Tools",
+    "AI Art Generators",
+    "AI Cartoon Generators",
+    "AI 3D",
+    "AI Logo Generators",
+    "AI Photoshop",
+    "AI Avatars",
+    "AI drawing",
+    "AI Image to Image",
+    "AI Portrait Generator",
+    "AI Text generators",
+    "AI Content Generators",
+    "AI Writing Tools",
+    "AI Summarizer",
+    "AI Story Teller",
+    "AI Paraphraser",
+    "AI Writer",
+    "AI Prompt Generator",
+    "AI Copywriting",
+    "AI Resources",
+    "Government AI",
+    "AI Courses",
+    "AI Newsletter",
+    "AI Prompts",
+    "AI Image Generators",
+    "AI Image Editing",
+    "AI Text to image",
+    "Design AI",
+    "AI For Business",
+    "AI Startup Tools",
+    "Legal AI",
+    "AI Sales",
+    "AI Education",
+    "AI Project Management",
+    "AI HR Tools",
+    "AI Analytics",
+    "Real Estate AI",
+    "Finance AI",
+    "AI Social Media",
+    "AI Marketing",
+    "AI SEO",
+    "AI Crypto Trading Bots",
+    "AI Stock Trading Bots",
+    "AI Customer Service",
+    "AI Ecommerce",
+    "AI Website Builder",
+    "AI Audio Generators",
+    "AI Music",
+    "AI Transcriber",
+    "AI Voice Generator",
+    "AI Audio Enhancer",
+    "AI Audio Editing",
+    "Text-to-speech",
+    "AI Automation Tools",
+    "AI Agents",
+    "AI Workflows",
+    "GPTs",
+    "AI Developer Tools",
+    "Low Code No Code",
+    "SQL",
+    "Github",
+    "AI Code Assistant",
+    "AI Code Generator",
+    "AI Video Tools",
+    "AI Video Editing",
+    "AI Video Generator",
+    "Text to Video AI",
+    "AI Video Enhancer",
+    "AI Productivity Tools",
+    "AI Search Engine",
+    "AI Translator",
+    "AI Research",
+    "AI Spreadsheets",
+    "AI Presentations",
+    "AI Assistant",
+    "ChatGPT Plugins",
+    "AI Content Generator",
+    "AI Email Assistant"
+  ],
+  "newToolsSample": [
+    {
+      "id": "adcreative",
+      "name": "AdCreative",
+      "slug": "adcreative",
+      "description": "The #1 AI tool for advertising. AdCreative.ai is an AI-powered tool that generates high-conversion ad creatives, texts, and headlines. It optimizes digital marketing campaigns, providing data-driven insights and competitor analysis to improve conversion rates by up to 14 times. Suitable for startups, e-commerce, agencies, and enterprises.",
+      "category": "Advertising",
+      "logo": "/images/tools/adcreative-logo.svg",
+      "features": [
+        "Generates high-conversion ad creatives, texts, and headlines",
+        "Optimizes digital marketing campaigns",
+        "Provides data-driven insights and competitor analysis",
+        "Improves conversion rates by up to 14 times"
+      ],
+      "pricing": [
+        {
+          "plan": "Free Trial",
+          "price_per_month": 0,
+          "features": [
+            "Limited access"
+          ]
+        }
+      ],
+      "pros": [
+        "The #1 AI tool for advertising. AdCreative.ai is an AI-powered tool that generates high-conversion a..."
+      ],
+      "cons": [
+        "Pricing details may vary"
+      ],
+      "rating": 4,
+      "benchmarks": {
+        "speed": 7,
+        "accuracy": 7,
+        "integration": 6,
+        "ease_of_use": 7,
+        "value": 7
+      },
+      "website": "https://www.insidr.ai/aff/adcreative",
+      "lastUpdated": "2025-09-20T18:24:44.786Z",
+      "source": "neil-patel-aitools"
+    },
+    {
+      "id": "surfer",
+      "name": "Surfer",
+      "slug": "surfer",
+      "description": "Surfer is one of the absolute best SEO tools that will help write amazing SEO-optimized content. It will show you what you need to include in your articles, best keywords, current SEO score and how to improve, and basically makes sure every content piece is SEO-optimized and top notch. Comes with a free-trial.",
+      "category": "SEO",
+      "logo": "/images/tools/surfer-logo.svg",
+      "features": [
+        "Helps write amazing SEO-optimized content",
+        "Shows what to include in articles",
+        "Provides best keywords and current SEO score",
+        "Improves SEO"
+      ],
+      "pricing": [
+        {
+          "plan": "Free Trial",
+          "price_per_month": 0,
+          "features": [
+            "Limited access"
+          ]
+        }
+      ],
+      "pros": [
+        "Surfer is one of the absolute best SEO tools that will help write amazing SEO-optimized content. It ..."
+      ],
+      "cons": [
+        "Pricing details may vary"
+      ],
+      "rating": 4,
+      "benchmarks": {
+        "speed": 7,
+        "accuracy": 7,
+        "integration": 6,
+        "ease_of_use": 7,
+        "value": 7
+      },
+      "website": "https://www.insidr.ai/aff/surfer",
+      "lastUpdated": "2025-09-20T18:24:44.788Z",
+      "source": "neil-patel-aitools"
+    },
+    {
+      "id": "taskade",
+      "name": "Taskade",
+      "slug": "taskade",
+      "description": "Taskade is an AI-powered productivity tool that enhances collaboration and efficiency. It allows users to build and deploy custom AI agents to automate tasks, manage projects, and create dynamic workflows. The platform supports mind maps, to-do lists, and real-time team collaboration with integrated video chat. Taskade streamlines work by integrating various tools and providing advanced task management features.",
+      "category": "Productivity",
+      "logo": "/images/tools/taskade-logo.svg",
+      "features": [
+        "Enhances collaboration and efficiency",
+        "Build and deploy custom AI agents",
+        "Automate tasks",
+        "Manage projects",
+        "Create dynamic workflows",
+        "Supports mind maps, to-do lists, and real-time team collaboration with integrated video chat"
+      ],
+      "pricing": [
+        {
+          "plan": "Free Trial",
+          "price_per_month": 0,
+          "features": [
+            "Limited access"
+          ]
+        }
+      ],
+      "pros": [
+        "Taskade is an AI-powered productivity tool that enhances collaboration and efficiency. It allows use..."
+      ],
+      "cons": [
+        "Pricing details may vary"
+      ],
+      "rating": 4,
+      "benchmarks": {
+        "speed": 7,
+        "accuracy": 7,
+        "integration": 6,
+        "ease_of_use": 7,
+        "value": 7
+      },
+      "website": "https://www.insidr.ai/aff/taskade",
+      "lastUpdated": "2025-09-20T18:24:44.788Z",
+      "source": "neil-patel-aitools"
+    },
+    {
+      "id": "crayo",
+      "name": "Crayo",
+      "slug": "crayo",
+      "description": "Generate viral-ready clips in seconds. Your all-in-one tool for creating AI voiceovers, engaging subtitles, optimized gameplay, and more.",
+      "category": "Video Editing",
+      "logo": "/images/tools/crayo-logo.svg",
+      "features": [
+        "Generate viral-ready clips in seconds",
+        "Create AI voiceovers",
+        "Engaging subtitles",
+        "Optimized gameplay"
+      ],
+      "pricing": [
+        {
+          "plan": "Free Trial",
+          "price_per_month": 0,
+          "features": [
+            "Limited access"
+          ]
+        }
+      ],
+      "pros": [
+        "Generate viral-ready clips in seconds. Your all-in-one tool for creating AI voiceovers, engaging sub..."
+      ],
+      "cons": [
+        "Pricing details may vary"
+      ],
+      "rating": 4,
+      "benchmarks": {
+        "speed": 7,
+        "accuracy": 7,
+        "integration": 6,
+        "ease_of_use": 7,
+        "value": 7
+      },
+      "website": "https://www.insidr.ai/aff/crayo",
+      "lastUpdated": "2025-09-20T18:24:44.788Z",
+      "source": "neil-patel-aitools"
+    },
+    {
+      "id": "veed",
+      "name": "VEED",
+      "slug": "veed",
+      "description": "All-in-one AI video generator and editor. Convert your ideas into videos with VEED’s text-to-video AI tool, text-to-voice, stock footage, background music, and a lot more!",
+      "category": "Video Editing",
+      "logo": "/images/tools/veed-logo.svg",
+      "features": [
+        "All-in-one AI video generator and editor",
+        "Convert ideas into videos with text-to-video AI",
+        "Text-to-voice",
+        "Stock footage",
+        "Background music"
+      ],
+      "pricing": [
+        {
+          "plan": "Free Trial",
+          "price_per_month": 0,
+          "features": [
+            "Limited access"
+          ]
+        }
+      ],
+      "pros": [
+        "All-in-one AI video generator and editor. Convert your ideas into videos with VEED’s text-to-video A..."
+      ],
+      "cons": [
+        "Pricing details may vary"
+      ],
+      "rating": 4,
+      "benchmarks": {
+        "speed": 7,
+        "accuracy": 7,
+        "integration": 6,
+        "ease_of_use": 7,
+        "value": 7
+      },
+      "website": "https://www.insidr.ai/aff/veed",
+      "lastUpdated": "2025-09-20T18:24:44.789Z",
+      "source": "neil-patel-aitools"
+    }
+  ]
+}

@@ -1,0 +1,324 @@
+[
+  {
+    "id": "adcreative",
+    "name": "AdCreative",
+    "slug": "adcreative",
+    "description": "The #1 AI tool for advertising. AdCreative.ai is an AI-powered tool that generates high-conversion ad creatives, texts, and headlines. It optimizes digital marketing campaigns, providing data-driven insights and competitor analysis to improve conversion rates by up to 14 times. Suitable for startups, e-commerce, agencies, and enterprises.",
+    "category": "Advertising",
+    "logo": "/images/tools/adcreative-logo.svg",
+    "features": [
+      "Generates high-conversion ad creatives, texts, and headlines",
+      "Optimizes digital marketing campaigns",
+      "Provides data-driven insights and competitor analysis",
+      "Improves conversion rates by up to 14 times"
+    ],
+    "pricing": [
+      {
+        "plan": "Free Trial",
+        "price_per_month": 0,
+        "features": [
+          "Limited access"
+        ]
+      }
+    ],
+    "pros": [
+      "The #1 AI tool for advertising. AdCreative.ai is an AI-powered tool that generates high-conversion a..."
+    ],
+    "cons": [
+      "Pricing details may vary"
+    ],
+    "rating": 4,
+    "benchmarks": {
+      "speed": 7,
+      "accuracy": 7,
+      "integration": 6,
+      "ease_of_use": 7,
+      "value": 7
+    },
+    "website": "https://www.insidr.ai/aff/adcreative",
+    "lastUpdated": "2025-09-20T18:24:44.786Z",
+    "source": "neil-patel-aitools"
+  },
+  {
+    "id": "surfer",
+    "name": "Surfer",
+    "slug": "surfer",
+    "description": "Surfer is one of the absolute best SEO tools that will help write amazing SEO-optimized content. It will show you what you need to include in your articles, best keywords, current SEO score and how to improve, and basically makes sure every content piece is SEO-optimized and top notch. Comes with a free-trial.",
+    "category": "SEO",
+    "logo": "/images/tools/surfer-logo.svg",
+    "features": [
+      "Helps write amazing SEO-optimized content",
+      "Shows what to include in articles",
+      "Provides best keywords and current SEO score",
+      "Improves SEO"
+    ],
+    "pricing": [
+      {
+        "plan": "Free Trial",
+        "price_per_month": 0,
+        "features": [
+          "Limited access"
+        ]
+      }
+    ],
+    "pros": [
+      "Surfer is one of the absolute best SEO tools that will help write amazing SEO-optimized content. It ..."
+    ],
+    "cons": [
+      "Pricing details may vary"
+    ],
+    "rating": 4,
+    "benchmarks": {
+      "speed": 7,
+      "accuracy": 7,
+      "integration": 6,
+      "ease_of_use": 7,
+      "value": 7
+    },
+    "website": "https://www.insidr.ai/aff/surfer",
+    "lastUpdated": "2025-09-20T18:24:44.788Z",
+    "source": "neil-patel-aitools"
+  },
+  {
+    "id": "taskade",
+    "name": "Taskade",
+    "slug": "taskade",
+    "description": "Taskade is an AI-powered productivity tool that enhances collaboration and efficiency. It allows users to build and deploy custom AI agents to automate tasks, manage projects, and create dynamic workflows. The platform supports mind maps, to-do lists, and real-time team collaboration with integrated video chat. Taskade streamlines work by integrating various tools and providing advanced task management features.",
+    "category": "Productivity",
+    "logo": "/images/tools/taskade-logo.svg",
+    "features": [
+      "Enhances collaboration and efficiency",
+      "Build and deploy custom AI agents",
+      "Automate tasks",
+      "Manage projects",
+      "Create dynamic workflows",
+      "Supports mind maps, to-do lists, and real-time team collaboration with integrated video chat"
+    ],
+    "pricing": [
+      {
+        "plan": "Free Trial",
+        "price_per_month": 0,
+        "features": [
+          "Limited access"
+        ]
+      }
+    ],
+    "pros": [
+      "Taskade is an AI-powered productivity tool that enhances collaboration and efficiency. It allows use..."
+    ],
+    "cons": [
+      "Pricing details may vary"
+    ],
+    "rating": 4,
+    "benchmarks": {
+      "speed": 7,
+      "accuracy": 7,
+      "integration": 6,
+      "ease_of_use": 7,
+      "value": 7
+    },
+    "website": "https://www.insidr.ai/aff/taskade",
+    "lastUpdated": "2025-09-20T18:24:44.788Z",
+    "source": "neil-patel-aitools"
+  },
+  {
+    "id": "crayo",
+    "name": "Crayo",
+    "slug": "crayo",
+    "description": "Generate viral-ready clips in seconds. Your all-in-one tool for creating AI voiceovers, engaging subtitles, optimized gameplay, and more.",
+    "category": "Video Editing",
+    "logo": "/images/tools/crayo-logo.svg",
+    "features": [
+      "Generate viral-ready clips in seconds",
+      "Create AI voiceovers",
+      "Engaging subtitles",
+      "Optimized gameplay"
+    ],
+    "pricing": [
+      {
+        "plan": "Free Trial",
+        "price_per_month": 0,
+        "features": [
+          "Limited access"
+        ]
+      }
+    ],
+    "pros": [
+      "Generate viral-ready clips in seconds. Your all-in-one tool for creating AI voiceovers, engaging sub..."
+    ],
+    "cons": [
+      "Pricing details may vary"
+    ],
+    "rating": 4,
+    "benchmarks": {
+      "speed": 7,
+      "accuracy": 7,
+      "integration": 6,
+      "ease_of_use": 7,
+      "value": 7
+    },
+    "website": "https://www.insidr.ai/aff/crayo",
+    "lastUpdated": "2025-09-20T18:24:44.788Z",
+    "source": "neil-patel-aitools"
+  },
+  {
+    "id": "veed",
+    "name": "VEED",
+    "slug": "veed",
+    "description": "All-in-one AI video generator and editor. Convert your ideas into videos with VEED’s text-to-video AI tool, text-to-voice, stock footage, background music, and a lot more!",
+    "category": "Video Editing",
+    "logo": "/images/tools/veed-logo.svg",
+    "features": [
+      "All-in-one AI video generator and editor",
+      "Convert ideas into videos with text-to-video AI",
+      "Text-to-voice",
+      "Stock footage",
+      "Background music"
+    ],
+    "pricing": [
+      {
+        "plan": "Free Trial",
+        "price_per_month": 0,
+        "features": [
+          "Limited access"
+        ]
+      }
+    ],
+    "pros": [
+      "All-in-one AI video generator and editor. Convert your ideas into videos with VEED’s text-to-video A..."
+    ],
+    "cons": [
+      "Pricing details may vary"
+    ],
+    "rating": 4,
+    "benchmarks": {
+      "speed": 7,
+      "accuracy": 7,
+      "integration": 6,
+      "ease_of_use": 7,
+      "value": 7
+    },
+    "website": "https://www.insidr.ai/aff/veed",
+    "lastUpdated": "2025-09-20T18:24:44.789Z",
+    "source": "neil-patel-aitools"
+  },
+  {
+    "id": "tugan",
+    "name": "Tugan",
+    "slug": "tugan",
+    "description": "Tugan.ai is an AI tool that transforms any content, like YouTube videos or articles, into original, high-quality marketing material. It helps entrepreneurs and marketers create standout content effortlessly, eliminating the need for extensive manual writing and editing.",
+    "category": "Marketing",
+    "logo": "/images/tools/tugan-logo.svg",
+    "features": [
+      "Transforms content into marketing material",
+      "Creates standout content effortlessly",
+      "Eliminates need for extensive manual writing and editing"
+    ],
+    "pricing": [
+      {
+        "plan": "Free Trial",
+        "price_per_month": 0,
+        "features": [
+          "Limited access"
+        ]
+      }
+    ],
+    "pros": [
+      "Tugan.ai is an AI tool that transforms any content, like YouTube videos or articles, into original, ..."
+    ],
+    "cons": [
+      "Pricing details may vary"
+    ],
+    "rating": 4,
+    "benchmarks": {
+      "speed": 7,
+      "accuracy": 7,
+      "integration": 6,
+      "ease_of_use": 7,
+      "value": 7
+    },
+    "website": "https://www.insidr.ai/aff/tugan",
+    "lastUpdated": "2025-09-20T18:24:44.789Z",
+    "source": "neil-patel-aitools"
+  },
+  {
+    "id": "wellsaid",
+    "name": "WellSaid",
+    "slug": "wellsaid",
+    "description": "WellSaid Labs offers an AI voice generation platform that creates high-quality, natural-sounding voiceovers for various applications, including training, marketing, and video production. It ensures secure, scalable audio production with customizable voices, enhancing engagement and efficiency.",
+    "category": "Audio Generation",
+    "logo": "/images/tools/wellsaid-logo.svg",
+    "features": [
+      "Creates high-quality, natural-sounding voiceovers",
+      "Suitable for training, marketing, and video production",
+      "Ensures secure, scalable audio production",
+      "Customizable voices"
+    ],
+    "pricing": [
+      {
+        "plan": "Free Trial",
+        "price_per_month": 0,
+        "features": [
+          "Limited access"
+        ]
+      }
+    ],
+    "pros": [
+      "WellSaid Labs offers an AI voice generation platform that creates high-quality, natural-sounding voi..."
+    ],
+    "cons": [
+      "Pricing details may vary"
+    ],
+    "rating": 4,
+    "benchmarks": {
+      "speed": 7,
+      "accuracy": 7,
+      "integration": 6,
+      "ease_of_use": 7,
+      "value": 7
+    },
+    "website": "https://www.insidr.ai/aff/wellsaidlabs",
+    "lastUpdated": "2025-09-20T18:24:44.789Z",
+    "source": "neil-patel-aitools"
+  },
+  {
+    "id": "chatbase",
+    "name": "Chatbase",
+    "slug": "chatbase",
+    "description": "Tailored ChatGPT for your content and data. Easily link your data sources to create a chatbot akin to ChatGPT, designed for your specific data. Afterwards, integrate it as a widget on your website or engage with it via our integrations or API.",
+    "category": "Chatbot",
+    "logo": "/images/tools/chatbase-logo.svg",
+    "features": [
+      "Tailored ChatGPT for your content and data",
+      "Link data sources to create a chatbot",
+      "Integrate as a widget on your website",
+      "Engage via integrations or API"
+    ],
+    "pricing": [
+      {
+        "plan": "Free Trial",
+        "price_per_month": 0,
+        "features": [
+          "Limited access"
+        ]
+      }
+    ],
+    "pros": [
+      "Tailored ChatGPT for your content and data. Easily link your data sources to create a chatbot akin t..."
+    ],
+    "cons": [
+      "Pricing details may vary"
+    ],
+    "rating": 4,
+    "benchmarks": {
+      "speed": 7,
+      "accuracy": 7,
+      "integration": 6,
+      "ease_of_use": 7,
+      "value": 7
+    },
+    "website": "https://www.insidr.ai/aff/chatbase",
+    "lastUpdated": "2025-09-20T18:24:44.789Z",
+    "source": "neil-patel-aitools"
+  }
+]

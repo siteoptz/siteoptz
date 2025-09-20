@@ -1,8 +1,49 @@
 {
-  "timestamp": "2025-09-18T13:20:35.545Z",
-  "totalTools": 736,
-  "missingLogos": 0,
-  "generatedLogos": 0,
+  "timestamp": "2025-09-20T18:26:06.311Z",
+  "totalTools": 744,
+  "missingLogos": 8,
+  "generatedLogos": 8,
   "failedLogos": 0,
-  "generatedFiles": []
+  "generatedFiles": [
+    {
+      "name": "AdCreative",
+      "slug": "adcreative",
+      "logoPath": "/images/tools/adcreative-logo.svg"
+    },
+    {
+      "name": "Chatbase",
+      "slug": "chatbase",
+      "logoPath": "/images/tools/chatbase-logo.svg"
+    },
+    {
+      "name": "Crayo",
+      "slug": "crayo",
+      "logoPath": "/images/tools/crayo-logo.svg"
+    },
+    {
+      "name": "Surfer",
+      "slug": "surfer",
+      "logoPath": "/images/tools/surfer-logo.svg"
+    },
+    {
+      "name": "Taskade",
+      "slug": "taskade",
+      "logoPath": "/images/tools/taskade-logo.svg"
+    },
+    {
+      "name": "Tugan",
+      "slug": "tugan",
+      "logoPath": "/images/tools/tugan-logo.svg"
+    },
+    {
+      "name": "VEED",
+      "slug": "veed",
+      "logoPath": "/images/tools/veed-logo.svg"
+    },
+    {
+      "name": "WellSaid",
+      "slug": "wellsaid",
+      "logoPath": "/images/tools/wellsaid-logo.svg"
+    }
+  ]
 }

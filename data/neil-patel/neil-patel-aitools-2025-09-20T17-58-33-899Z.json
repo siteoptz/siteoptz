@@ -1,0 +1,191 @@
+{
+  "success": true,
+  "metadata": {
+    "viewport": "width=device-width, initial-scale=1",
+    "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+    "article:publisher": "https://www.facebook.com/UbersuggestSEO/",
+    "twitter:card": "summary_large_image",
+    "ogTitle": "Home - AI Tools",
+    "og:site_name": "AI Tools",
+    "ogUrl": "https://aitools.neilpatel.com/",
+    "og:locale": "en_US",
+    "og:url": "https://aitools.neilpatel.com/",
+    "generator": [
+      "Site Kit by Google 1.106.0",
+      "Elementor 3.15.2; features: e_dom_optimization, e_optimized_assets_loading, e_optimized_css_loading, additional_custom_breakpoints; settings: css_print_method-external, google_font-enabled, font_display-swap"
+    ],
+    "language": "en-US",
+    "og:title": "Home - AI Tools",
+    "title": "AI Tools | The tools of the future to automate workflows, marketing and content creation",
+    "ogSiteName": "AI Tools",
+    "msapplication-TileImage": "https://aitools.neilpatel.com/wp-content/uploads/2023/05/favicon.png",
+    "twitter:site": "@ubersuggest_seo",
+    "og:type": "website",
+    "favicon": "https://aitools.neilpatel.com/wp-content/uploads/2023/05/favicon.png",
+    "ogLocale": "en_US",
+    "scrapeId": "0f02aa4e-c449-4d74-9104-9b8b0f29ac50",
+    "sourceURL": "https://aitools.neilpatel.com/",
+    "url": "https://aitools.neilpatel.com/",
+    "statusCode": 200,
+    "contentType": "text/html; charset=UTF-8",
+    "proxyUsed": "basic",
+    "creditsUsed": 5
+  },
+  "extract": {
+    "tools": [
+      {
+        "url": "https://aitools.neilpatel.com/ai_tools/ai-writer-2-0-2/",
+        "name": "AI Writer 2.0",
+        "pricing": "Free",
+        "category": "Writing",
+        "features": [
+          "AI Writer 2.0, a cutting-edge tool that will transform the way you create..."
+        ],
+        "description": "We are excited to introduce you to Ubersuggest's AI Writer 2, a cutting-edge tool that will transform the way you create..."
+      },
+      {
+        "url": "https://aitools.neilpatel.com/ai_tools/reddibee-grow-your-reddit-presence/",
+        "name": "Reddibee: Grow Your Reddit Presence",
+        "pricing": "Freemium",
+        "category": "Social",
+        "features": [
+          "Reddibee is your best friend for digging deeper into the subreddits that matter to you. If you're a marketer looking for..."
+        ],
+        "description": "Reddibee is your best friend for digging deeper into the subreddits that matter to you. If you're a marketer looking for..."
+      },
+      {
+        "url": "https://aitools.neilpatel.com/ai_tools/screvi/",
+        "name": "Screvi: Have all Your Reading Notes in One Place",
+        "pricing": "Paid",
+        "category": "Research",
+        "features": [
+          "What if your Kindle highlights did stick around? Screvi helps you turn stray notes and missing Kindle highlights into a..."
+        ],
+        "description": "What if your Kindle highlights did stick around? Screvi helps you turn stray notes and missing Kindle highlights into a..."
+      },
+      {
+        "url": "https://aitools.neilpatel.com/ai_tools/aisoap-turn-your-patients-live-conversations-into-notes/",
+        "name": "AISOAP: Turn Your Patient’s Live Conversations into Notes",
+        "pricing": "Freemium",
+        "category": "Health & Fitness",
+        "features": [
+          "Picture being able to leave your notes concerns behind and focus entirely on your patients. AISOAP is your AI medical scribe..."
+        ],
+        "description": "Picture being able to leave your notes concerns behind and focus entirely on your patients. AISOAP is your AI medical scribe..."
+      },
+      {
+        "url": "https://aitools.neilpatel.com/ai_tools/brandwiz-remove-negative-comments-on-social-media-instantly/",
+        "name": "Brandwiz: Remove Negative Comments on Social Media Instantly",
+        "pricing": "Freemium",
+        "category": "Social",
+        "features": [
+          "Tired of spam, hate or negativity on your brand's social media? BrandWiz AI has your back. It's an AI-powered content..."
+        ],
+        "description": "Tired of spam, hate or negativity on your brand's social media? BrandWiz AI has your back. It's an AI-powered content..."
+      },
+      {
+        "url": "https://aitools.neilpatel.com/ai_tools/naturalreader-listen-your-documents/",
+        "name": "NaturalReader: Listen Your Documents or Emails",
+        "pricing": "Paid",
+        "category": "Text",
+        "features": [
+          "Ever wish to listen your documents instead of read them? NaturalReader makes it possible! It's a text-to-speech program that..."
+        ],
+        "description": "Ever wish to listen your documents instead of read them? NaturalReader makes it possible! It's a text-to-speech program that..."
+      },
+      {
+        "url": "https://aitools.neilpatel.com/ai_tools/pikzels-generate-ai-thumbnails-in-seconds/",
+        "name": "Pikzels: Generate AI Thumbnails in Seconds",
+        "pricing": "Paid",
+        "category": "Design",
+        "features": [
+          "Pikzels is your partner in creating scroll-stopping titles and thumbnails fast. You're a YouTube personality or just..."
+        ],
+        "description": "Pikzels is your partner in creating scroll-stopping titles and thumbnails fast. You're a YouTube personality or just..."
+      },
+      {
+        "url": "https://aitools.neilpatel.com/ai_tools/pig-automate-windows-desktop-workflow/",
+        "name": "Pig: Automate Windows Desktop Workflow",
+        "pricing": "Free",
+        "category": "Development",
+        "features": [
+          "Tired of performing the same boring tasks over and over again in cumbersome Windows applications? Pig can help. It is an API..."
+        ],
+        "description": "Tired of performing the same boring tasks over and over again in cumbersome Windows applications? Pig can help. It is an API..."
+      },
+      {
+        "url": "https://aitools.neilpatel.com/ai_tools/jobquest-ai-create-resumes-with-ai/",
+        "name": "JobQuest.ai: Create Resumes with AI",
+        "pricing": "Paid",
+        "category": "Hiring",
+        "features": [
+          "Job hunting is daunting but JobQuest.ai makes it easy. This AI platform helps you design professional, ATS-friendly resumes..."
+        ],
+        "description": "Job hunting is daunting but JobQuest.ai makes it easy. This AI platform helps you design professional, ATS-friendly resumes..."
+      },
+      {
+        "url": "https://aitools.neilpatel.com/ai_tools/typito-easily-edit-videos-with-ai/",
+        "name": "Typito: Easily Edit Videos with AI",
+        "pricing": "Freemium",
+        "category": "Design",
+        "features": [
+          "Ever wish video editing was easier? Try Typito tool. It offers easy drag-and-drop interface, ready-made templates and..."
+        ],
+        "description": "Ever wish video editing was easier? Try Typito tool. It offers easy drag-and-drop interface, ready-made templates and..."
+      },
+      {
+        "url": "https://aitools.neilpatel.com/ai_tools/vectal-keep-all-your-tasks-organized/",
+        "name": "Vectal: Keep All Your Tasks Organized",
+        "pricing": "Freemium",
+        "category": "Tasks",
+        "features": [
+          "Feel bombarded by disorganized tasks and ideas? Vectal keeps you organized and focused by sorting, prioritizing, and adding..."
+        ],
+        "description": "Feel bombarded by disorganized tasks and ideas? Vectal keeps you organized and focused by sorting, prioritizing, and adding..."
+      },
+      {
+        "url": "https://aitools.neilpatel.com/ai_tools/promptimize-ai-browser-extension-for-prompt-engineering/",
+        "name": "Promptimize AI: Browser Extension for Prompt Engineering",
+        "pricing": "Freemium",
+        "category": "Browser Extensions",
+        "features": [
+          "Promptimize AI makes prompt engineering straightforward and AI development simple and efficient. It's ideal if you're an AI..."
+        ],
+        "description": "Promptimize AI makes prompt engineering straightforward and AI development simple and efficient. It's ideal if you're an AI..."
+      }
+    ],
+    "categories": [
+      "Art",
+      "Browser Extensions",
+      "Data",
+      "Design",
+      "Development",
+      "Education",
+      "Entertainment",
+      "Finance",
+      "Games",
+      "Generative art",
+      "GPT plugins",
+      "Health & Fitness",
+      "Hiring",
+      "Home",
+      "Internet of Things",
+      "Marketing",
+      "Messaging",
+      "Music",
+      "News",
+      "Other",
+      "Research",
+      "SEO",
+      "Shopping",
+      "Social",
+      "Software Development",
+      "Tasks",
+      "Text",
+      "Travel",
+      "User Experience",
+      "Wireframing",
+      "Writing"
+    ]
+  }
+}

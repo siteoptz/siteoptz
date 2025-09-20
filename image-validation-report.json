@@ -1,16 +1,23 @@
 {
-  "timestamp": "2025-09-18T13:19:32.419Z",
+  "timestamp": "2025-09-20T18:25:58.302Z",
   "summary": {
-    "totalTools": 736,
+    "totalTools": 744,
     "validImages": 728,
-    "missingImages": 0,
+    "missingImages": 8,
     "brokenReferences": 8,
-    "totalIssues": 8,
-    "errorCount": 0,
+    "totalIssues": 16,
+    "errorCount": 8,
     "warningCount": 8,
-    "successRate": 99
+    "successRate": 98
   },
   "issues": [
+    {
+      "tool": "AdCreative",
+      "slug": "adcreative",
+      "type": "missing_file",
+      "issue": "Logo file not found: /images/tools/adcreative-logo.svg",
+      "severity": "error"
+    },
     {
       "tool": "Apollo.io",
       "slug": "apollo-io",
@@ -19,11 +26,25 @@
       "severity": "warning"
     },
     {
+      "tool": "Chatbase",
+      "slug": "chatbase",
+      "type": "missing_file",
+      "issue": "Logo file not found: /images/tools/chatbase-logo.svg",
+      "severity": "error"
+    },
+    {
       "tool": "Cosmos AI",
       "slug": "cosmos-ai",
       "type": "missing_property",
       "issue": "No logo property defined",
       "severity": "warning"
+    },
+    {
+      "tool": "Crayo",
+      "slug": "crayo",
+      "type": "missing_file",
+      "issue": "Logo file not found: /images/tools/crayo-logo.svg",
+      "severity": "error"
     },
     {
       "tool": "Interview Study",
@@ -66,6 +87,41 @@
       "type": "missing_property",
       "issue": "No logo property defined",
       "severity": "warning"
+    },
+    {
+      "tool": "Surfer",
+      "slug": "surfer",
+      "type": "missing_file",
+      "issue": "Logo file not found: /images/tools/surfer-logo.svg",
+      "severity": "error"
+    },
+    {
+      "tool": "Taskade",
+      "slug": "taskade",
+      "type": "missing_file",
+      "issue": "Logo file not found: /images/tools/taskade-logo.svg",
+      "severity": "error"
+    },
+    {
+      "tool": "Tugan",
+      "slug": "tugan",
+      "type": "missing_file",
+      "issue": "Logo file not found: /images/tools/tugan-logo.svg",
+      "severity": "error"
+    },
+    {
+      "tool": "VEED",
+      "slug": "veed",
+      "type": "missing_file",
+      "issue": "Logo file not found: /images/tools/veed-logo.svg",
+      "severity": "error"
+    },
+    {
+      "tool": "WellSaid",
+      "slug": "wellsaid",
+      "type": "missing_file",
+      "issue": "Logo file not found: /images/tools/wellsaid-logo.svg",
+      "severity": "error"
     }
   ]
 }

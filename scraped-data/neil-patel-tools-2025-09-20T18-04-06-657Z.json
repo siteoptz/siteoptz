@@ -1,0 +1,1732 @@
+{
+  "scraping_metadata": {
+    "scraper": "neil-patel-scraper",
+    "scraped_at": "2025-09-20T18:04:06.658Z",
+    "total_tools": 29,
+    "source": "https://aitools.neilpatel.com",
+    "api_key_used": "fc-6e7e631..."
+  },
+  "tools": [
+    {
+      "id": "ai-writer-20",
+      "name": "AI Writer 2.0",
+      "slug": "ai-writer-20",
+      "logo": "/images/tools/ai-writer-20-logo.svg",
+      "meta": {
+        "description": "\\\\",
+        "keywords": "AI Writer 2.0 review, AI Writer 2.0 features, AI Writer 2.0 pricing, AI Writer 2.0 alternatives, AI Writer 2.0 vs"
+      },
+      "overview": {
+        "developer": "AI",
+        "release_year": 2023,
+        "description": "\\\\",
+        "category": "AI Tools",
+        "website": "https://aiwriter20.com",
+        "long_description": "\\\\"
+      },
+      "features": [
+        "AI-powered assistance",
+        "User-friendly interface",
+        "Productivity enhancement"
+      ],
+      "pros": [
+        "User-friendly interface",
+        "Comprehensive feature set",
+        "Good integration options",
+        "Competitive pricing"
+      ],
+      "cons": [
+        "Learning curve for advanced features",
+        "Limited free tier",
+        "Subscription required for full access"
+      ],
+      "pricing": [
+        {
+          "plan": "Starter",
+          "price_per_month": 29,
+          "billing_period": "monthly",
+          "features": [
+            "Basic features",
+            "Email support",
+            "Monthly usage limits"
+          ]
+        }
+      ],
+      "rating": 4.2,
+      "benchmarks": {
+        "speed": 8,
+        "accuracy": 8,
+        "integration": 7,
+        "ease_of_use": 8,
+        "value": 8
+      },
+      "scraping_metadata": {
+        "source_url": "https://aitools.neilpatel.com",
+        "scraped_at": "2025-09-20T18:03:44.690Z",
+        "scraper": "neil-patel-scraper"
+      }
+    },
+    {
+      "id": "reddibee-grow-your-reddit-presence",
+      "name": "Reddibee: Grow Your Reddit Presence",
+      "slug": "reddibee-grow-your-reddit-presence",
+      "logo": "/images/tools/reddibee-grow-your-reddit-presence-logo.svg",
+      "meta": {
+        "description": "\\\\",
+        "keywords": "Reddibee: Grow Your Reddit Presence review, Reddibee: Grow Your Reddit Presence features, Reddibee: Grow Your Reddit Presence pricing, Reddibee: Grow Your Reddit Presence alternatives, Reddibee: Grow Your Reddit Presence vs"
+      },
+      "overview": {
+        "developer": "Reddibee:",
+        "release_year": 2023,
+        "description": "\\\\",
+        "category": "AI Tools",
+        "website": "https://reddibeegrowyou.com",
+        "long_description": "\\\\"
+      },
+      "features": [
+        "AI-powered assistance",
+        "User-friendly interface",
+        "Productivity enhancement"
+      ],
+      "pros": [
+        "User-friendly interface",
+        "Comprehensive feature set",
+        "Good integration options",
+        "Competitive pricing"
+      ],
+      "cons": [
+        "Learning curve for advanced features",
+        "Limited free tier",
+        "Subscription required for full access"
+      ],
+      "pricing": [
+        {
+          "plan": "Starter",
+          "price_per_month": 29,
+          "billing_period": "monthly",
+          "features": [
+            "Basic features",
+            "Email support",
+            "Monthly usage limits"
+          ]
+        }
+      ],
+      "rating": 4.2,
+      "benchmarks": {
+        "speed": 8,
+        "accuracy": 8,
+        "integration": 7,
+        "ease_of_use": 8,
+        "value": 8
+      },
+      "scraping_metadata": {
+        "source_url": "https://aitools.neilpatel.com",
+        "scraped_at": "2025-09-20T18:03:44.692Z",
+        "scraper": "neil-patel-scraper"
+      }
+    },
+    {
+      "id": "screvi-have-all-your-reading-notes-in-one-place",
+      "name": "Screvi: Have all Your Reading Notes in One Place",
+      "slug": "screvi-have-all-your-reading-notes-in-one-place",
+      "logo": "/images/tools/screvi-have-all-your-reading-notes-in-one-place-logo.svg",
+      "meta": {
+        "description": "\\\\",
+        "keywords": "Screvi: Have all Your Reading Notes in One Place review, Screvi: Have all Your Reading Notes in One Place features, Screvi: Have all Your Reading Notes in One Place pricing, Screvi: Have all Your Reading Notes in One Place alternatives, Screvi: Have all Your Reading Notes in One Place vs"
+      },
+      "overview": {
+        "developer": "Screvi:",
+        "release_year": 2023,
+        "description": "\\\\",
+        "category": "AI Tools",
+        "website": "https://screvihaveallyo.com",
+        "long_description": "\\\\"
+      },
+      "features": [
+        "AI-powered assistance",
+        "User-friendly interface",
+        "Productivity enhancement"
+      ],
+      "pros": [
+        "User-friendly interface",
+        "Comprehensive feature set",
+        "Good integration options",
+        "Competitive pricing"
+      ],
+      "cons": [
+        "Learning curve for advanced features",
+        "Limited free tier",
+        "Subscription required for full access"
+      ],
+      "pricing": [
+        {
+          "plan": "Starter",
+          "price_per_month": 29,
+          "billing_period": "monthly",
+          "features": [
+            "Basic features",
+            "Email support",
+            "Monthly usage limits"
+          ]
+        }
+      ],
+      "rating": 4.2,
+      "benchmarks": {
+        "speed": 8,
+        "accuracy": 8,
+        "integration": 7,
+        "ease_of_use": 8,
+        "value": 8
+      },
+      "scraping_metadata": {
+        "source_url": "https://aitools.neilpatel.com",
+        "scraped_at": "2025-09-20T18:03:44.692Z",
+        "scraper": "neil-patel-scraper"
+      }
+    },
+    {
+      "id": "aisoap-turn-your-patients-live-conversations-into-notes",
+      "name": "AISOAP: Turn Your Patient’s Live Conversations into Notes",
+      "slug": "aisoap-turn-your-patients-live-conversations-into-notes",
+      "logo": "/images/tools/aisoap-turn-your-patients-live-conversations-into-notes-logo.svg",
+      "meta": {
+        "description": "\\\\",
+        "keywords": "AISOAP: Turn Your Patient’s Live Conversations into Notes review, AISOAP: Turn Your Patient’s Live Conversations into Notes features, AISOAP: Turn Your Patient’s Live Conversations into Notes pricing, AISOAP: Turn Your Patient’s Live Conversations into Notes alternatives, AISOAP: Turn Your Patient’s Live Conversations into Notes vs"
+      },
+      "overview": {
+        "developer": "AISOAP:",
+        "release_year": 2023,
+        "description": "\\\\",
+        "category": "AI Tools",
+        "website": "https://aisoapturnyourp.com",
+        "long_description": "\\\\"
+      },
+      "features": [
+        "Real-time processing",
+        "AI-powered assistance",
+        "User-friendly interface"
+      ],
+      "pros": [
+        "User-friendly interface",
+        "Comprehensive feature set",
+        "Good integration options",
+        "Competitive pricing"
+      ],
+      "cons": [
+        "Learning curve for advanced features",
+        "Limited free tier",
+        "Subscription required for full access"
+      ],
+      "pricing": [
+        {
+          "plan": "Starter",
+          "price_per_month": 29,
+          "billing_period": "monthly",
+          "features": [
+            "Basic features",
+            "Email support",
+            "Monthly usage limits"
+          ]
+        }
+      ],
+      "rating": 4.2,
+      "benchmarks": {
+        "speed": 8,
+        "accuracy": 8,
+        "integration": 7,
+        "ease_of_use": 8,
+        "value": 8
+      },
+      "scraping_metadata": {
+        "source_url": "https://aitools.neilpatel.com",
+        "scraped_at": "2025-09-20T18:03:44.692Z",
+        "scraper": "neil-patel-scraper"
+      }
+    },
+    {
+      "id": "brandwiz-remove-negative-comments-on-social-media-instantly",
+      "name": "Brandwiz: Remove Negative Comments on Social Media Instantly",
+      "slug": "brandwiz-remove-negative-comments-on-social-media-instantly",
+      "logo": "/images/tools/brandwiz-remove-negative-comments-on-social-media-instantly-logo.svg",
+      "meta": {
+        "description": "\\\\",
+        "keywords": "Brandwiz: Remove Negative Comments on Social Media Instantly review, Brandwiz: Remove Negative Comments on Social Media Instantly features, Brandwiz: Remove Negative Comments on Social Media Instantly pricing, Brandwiz: Remove Negative Comments on Social Media Instantly alternatives, Brandwiz: Remove Negative Comments on Social Media Instantly vs"
+      },
+      "overview": {
+        "developer": "Brandwiz:",
+        "release_year": 2023,
+        "description": "\\\\",
+        "category": "AI Marketing",
+        "website": "https://brandwizremoven.com",
+        "long_description": "\\\\"
+      },
+      "features": [
+        "Brand voice training",
+        "Real-time processing",
+        "AI-powered assistance"
+      ],
+      "pros": [
+        "User-friendly interface",
+        "Comprehensive feature set",
+        "Good integration options",
+        "Competitive pricing"
+      ],
+      "cons": [
+        "Learning curve for advanced features",
+        "Limited free tier",
+        "Subscription required for full access"
+      ],
+      "pricing": [
+        {
+          "plan": "Starter",
+          "price_per_month": 29,
+          "billing_period": "monthly",
+          "features": [
+            "Basic features",
+            "Email support",
+            "Monthly usage limits"
+          ]
+        }
+      ],
+      "rating": 4.2,
+      "benchmarks": {
+        "speed": 8,
+        "accuracy": 8,
+        "integration": 7,
+        "ease_of_use": 8,
+        "value": 8
+      },
+      "scraping_metadata": {
+        "source_url": "https://aitools.neilpatel.com",
+        "scraped_at": "2025-09-20T18:03:44.692Z",
+        "scraper": "neil-patel-scraper"
+      }
+    },
+    {
+      "id": "naturalreader-listen-your-documents-or-emails",
+      "name": "NaturalReader: Listen Your Documents or Emails",
+      "slug": "naturalreader-listen-your-documents-or-emails",
+      "logo": "/images/tools/naturalreader-listen-your-documents-or-emails-logo.svg",
+      "meta": {
+        "description": "\\\\",
+        "keywords": "NaturalReader: Listen Your Documents or Emails review, NaturalReader: Listen Your Documents or Emails features, NaturalReader: Listen Your Documents or Emails pricing, NaturalReader: Listen Your Documents or Emails alternatives, NaturalReader: Listen Your Documents or Emails vs"
+      },
+      "overview": {
+        "developer": "NaturalReader:",
+        "release_year": 2023,
+        "description": "\\\\",
+        "category": "AI Tools",
+        "website": "https://naturalreaderli.com",
+        "long_description": "\\\\"
+      },
+      "features": [
+        "AI-powered assistance",
+        "User-friendly interface",
+        "Productivity enhancement"
+      ],
+      "pros": [
+        "User-friendly interface",
+        "Comprehensive feature set",
+        "Good integration options",
+        "Competitive pricing"
+      ],
+      "cons": [
+        "Learning curve for advanced features",
+        "Limited free tier",
+        "Subscription required for full access"
+      ],
+      "pricing": [
+        {
+          "plan": "Starter",
+          "price_per_month": 29,
+          "billing_period": "monthly",
+          "features": [
+            "Basic features",
+            "Email support",
+            "Monthly usage limits"
+          ]
+        }
+      ],
+      "rating": 4.2,
+      "benchmarks": {
+        "speed": 8,
+        "accuracy": 8,
+        "integration": 7,
+        "ease_of_use": 8,
+        "value": 8
+      },
+      "scraping_metadata": {
+        "source_url": "https://aitools.neilpatel.com",
+        "scraped_at": "2025-09-20T18:03:44.692Z",
+        "scraper": "neil-patel-scraper"
+      }
+    },
+    {
+      "id": "pikzels-generate-ai-thumbnails-in-seconds",
+      "name": "Pikzels: Generate AI Thumbnails in Seconds",
+      "slug": "pikzels-generate-ai-thumbnails-in-seconds",
+      "logo": "/images/tools/pikzels-generate-ai-thumbnails-in-seconds-logo.svg",
+      "meta": {
+        "description": "\\\\",
+        "keywords": "Pikzels: Generate AI Thumbnails in Seconds review, Pikzels: Generate AI Thumbnails in Seconds features, Pikzels: Generate AI Thumbnails in Seconds pricing, Pikzels: Generate AI Thumbnails in Seconds alternatives, Pikzels: Generate AI Thumbnails in Seconds vs"
+      },
+      "overview": {
+        "developer": "Pikzels:",
+        "release_year": 2023,
+        "description": "\\\\",
+        "category": "AI Tools",
+        "website": "https://pikzelsgenerate.com",
+        "long_description": "\\\\"
+      },
+      "features": [
+        "AI content generation",
+        "AI-powered assistance",
+        "User-friendly interface"
+      ],
+      "pros": [
+        "User-friendly interface",
+        "Comprehensive feature set",
+        "Good integration options",
+        "Competitive pricing"
+      ],
+      "cons": [
+        "Learning curve for advanced features",
+        "Limited free tier",
+        "Subscription required for full access"
+      ],
+      "pricing": [
+        {
+          "plan": "Starter",
+          "price_per_month": 29,
+          "billing_period": "monthly",
+          "features": [
+            "Basic features",
+            "Email support",
+            "Monthly usage limits"
+          ]
+        }
+      ],
+      "rating": 4.2,
+      "benchmarks": {
+        "speed": 8,
+        "accuracy": 8,
+        "integration": 7,
+        "ease_of_use": 8,
+        "value": 8
+      },
+      "scraping_metadata": {
+        "source_url": "https://aitools.neilpatel.com",
+        "scraped_at": "2025-09-20T18:03:44.692Z",
+        "scraper": "neil-patel-scraper"
+      }
+    },
+    {
+      "id": "pig-automate-windows-desktop-workflow",
+      "name": "Pig: Automate Windows Desktop Workflow",
+      "slug": "pig-automate-windows-desktop-workflow",
+      "logo": "/images/tools/pig-automate-windows-desktop-workflow-logo.svg",
+      "meta": {
+        "description": "\\\\",
+        "keywords": "Pig: Automate Windows Desktop Workflow review, Pig: Automate Windows Desktop Workflow features, Pig: Automate Windows Desktop Workflow pricing, Pig: Automate Windows Desktop Workflow alternatives, Pig: Automate Windows Desktop Workflow vs"
+      },
+      "overview": {
+        "developer": "Pig:",
+        "release_year": 2023,
+        "description": "\\\\",
+        "category": "AI Productivity",
+        "website": "https://pigautomatewind.com",
+        "long_description": "\\\\"
+      },
+      "features": [
+        "Custom workflows",
+        "AI-powered assistance",
+        "User-friendly interface"
+      ],
+      "pros": [
+        "User-friendly interface",
+        "Comprehensive feature set",
+        "Good integration options",
+        "Competitive pricing"
+      ],
+      "cons": [
+        "Learning curve for advanced features",
+        "Limited free tier",
+        "Subscription required for full access"
+      ],
+      "pricing": [
+        {
+          "plan": "Starter",
+          "price_per_month": 29,
+          "billing_period": "monthly",
+          "features": [
+            "Basic features",
+            "Email support",
+            "Monthly usage limits"
+          ]
+        }
+      ],
+      "rating": 4.2,
+      "benchmarks": {
+        "speed": 8,
+        "accuracy": 8,
+        "integration": 7,
+        "ease_of_use": 8,
+        "value": 8
+      },
+      "scraping_metadata": {
+        "source_url": "https://aitools.neilpatel.com",
+        "scraped_at": "2025-09-20T18:03:44.692Z",
+        "scraper": "neil-patel-scraper"
+      }
+    },
+    {
+      "id": "jobquestai-create-resumes-with-ai",
+      "name": "JobQuest.ai: Create Resumes with AI",
+      "slug": "jobquestai-create-resumes-with-ai",
+      "logo": "/images/tools/jobquestai-create-resumes-with-ai-logo.svg",
+      "meta": {
+        "description": "\\\\",
+        "keywords": "JobQuest.ai: Create Resumes with AI review, JobQuest.ai: Create Resumes with AI features, JobQuest.ai: Create Resumes with AI pricing, JobQuest.ai: Create Resumes with AI alternatives, JobQuest.ai: Create Resumes with AI vs"
+      },
+      "overview": {
+        "developer": "JobQuest.ai:",
+        "release_year": 2023,
+        "description": "\\\\",
+        "category": "AI Tools",
+        "website": "https://jobquestaicreat.com",
+        "long_description": "\\\\"
+      },
+      "features": [
+        "AI-powered assistance",
+        "User-friendly interface",
+        "Productivity enhancement"
+      ],
+      "pros": [
+        "User-friendly interface",
+        "Comprehensive feature set",
+        "Good integration options",
+        "Competitive pricing"
+      ],
+      "cons": [
+        "Learning curve for advanced features",
+        "Limited free tier",
+        "Subscription required for full access"
+      ],
+      "pricing": [
+        {
+          "plan": "Starter",
+          "price_per_month": 29,
+          "billing_period": "monthly",
+          "features": [
+            "Basic features",
+            "Email support",
+            "Monthly usage limits"
+          ]
+        }
+      ],
+      "rating": 4.2,
+      "benchmarks": {
+        "speed": 8,
+        "accuracy": 8,
+        "integration": 7,
+        "ease_of_use": 8,
+        "value": 8
+      },
+      "scraping_metadata": {
+        "source_url": "https://aitools.neilpatel.com",
+        "scraped_at": "2025-09-20T18:03:44.692Z",
+        "scraper": "neil-patel-scraper"
+      }
+    },
+    {
+      "id": "typito-easily-edit-videos-with-ai",
+      "name": "Typito: Easily Edit Videos with AI",
+      "slug": "typito-easily-edit-videos-with-ai",
+      "logo": "/images/tools/typito-easily-edit-videos-with-ai-logo.svg",
+      "meta": {
+        "description": "\\\\",
+        "keywords": "Typito: Easily Edit Videos with AI review, Typito: Easily Edit Videos with AI features, Typito: Easily Edit Videos with AI pricing, Typito: Easily Edit Videos with AI alternatives, Typito: Easily Edit Videos with AI vs"
+      },
+      "overview": {
+        "developer": "Typito:",
+        "release_year": 2023,
+        "description": "\\\\",
+        "category": "AI Video",
+        "website": "https://typitoeasilyedi.com",
+        "long_description": "\\\\"
+      },
+      "features": [
+        "AI-powered assistance",
+        "User-friendly interface",
+        "Productivity enhancement"
+      ],
+      "pros": [
+        "User-friendly interface",
+        "Comprehensive feature set",
+        "Good integration options",
+        "Competitive pricing"
+      ],
+      "cons": [
+        "Learning curve for advanced features",
+        "Limited free tier",
+        "Subscription required for full access"
+      ],
+      "pricing": [
+        {
+          "plan": "Starter",
+          "price_per_month": 29,
+          "billing_period": "monthly",
+          "features": [
+            "Basic features",
+            "Email support",
+            "Monthly usage limits"
+          ]
+        }
+      ],
+      "rating": 4.2,
+      "benchmarks": {
+        "speed": 8,
+        "accuracy": 8,
+        "integration": 7,
+        "ease_of_use": 8,
+        "value": 8
+      },
+      "scraping_metadata": {
+        "source_url": "https://aitools.neilpatel.com",
+        "scraped_at": "2025-09-20T18:03:44.692Z",
+        "scraper": "neil-patel-scraper"
+      }
+    },
+    {
+      "id": "vectal-keep-all-your-tasks-organized",
+      "name": "Vectal: Keep All Your Tasks Organized",
+      "slug": "vectal-keep-all-your-tasks-organized",
+      "logo": "/images/tools/vectal-keep-all-your-tasks-organized-logo.svg",
+      "meta": {
+        "description": "\\\\",
+        "keywords": "Vectal: Keep All Your Tasks Organized review, Vectal: Keep All Your Tasks Organized features, Vectal: Keep All Your Tasks Organized pricing, Vectal: Keep All Your Tasks Organized alternatives, Vectal: Keep All Your Tasks Organized vs"
+      },
+      "overview": {
+        "developer": "Vectal:",
+        "release_year": 2023,
+        "description": "\\\\",
+        "category": "AI Productivity",
+        "website": "https://vectalkeepallyo.com",
+        "long_description": "\\\\"
+      },
+      "features": [
+        "AI-powered assistance",
+        "User-friendly interface",
+        "Productivity enhancement"
+      ],
+      "pros": [
+        "User-friendly interface",
+        "Comprehensive feature set",
+        "Good integration options",
+        "Competitive pricing"
+      ],
+      "cons": [
+        "Learning curve for advanced features",
+        "Limited free tier",
+        "Subscription required for full access"
+      ],
+      "pricing": [
+        {
+          "plan": "Starter",
+          "price_per_month": 29,
+          "billing_period": "monthly",
+          "features": [
+            "Basic features",
+            "Email support",
+            "Monthly usage limits"
+          ]
+        }
+      ],
+      "rating": 4.2,
+      "benchmarks": {
+        "speed": 8,
+        "accuracy": 8,
+        "integration": 7,
+        "ease_of_use": 8,
+        "value": 8
+      },
+      "scraping_metadata": {
+        "source_url": "https://aitools.neilpatel.com",
+        "scraped_at": "2025-09-20T18:03:44.692Z",
+        "scraper": "neil-patel-scraper"
+      }
+    },
+    {
+      "id": "promptimize-ai-browser-extension-for-prompt-engineering",
+      "name": "Promptimize AI: Browser Extension for Prompt Engineering",
+      "slug": "promptimize-ai-browser-extension-for-prompt-engineering",
+      "logo": "/images/tools/promptimize-ai-browser-extension-for-prompt-engineering-logo.svg",
+      "meta": {
+        "description": "\\\\",
+        "keywords": "Promptimize AI: Browser Extension for Prompt Engineering review, Promptimize AI: Browser Extension for Prompt Engineering features, Promptimize AI: Browser Extension for Prompt Engineering pricing, Promptimize AI: Browser Extension for Prompt Engineering alternatives, Promptimize AI: Browser Extension for Prompt Engineering vs"
+      },
+      "overview": {
+        "developer": "Promptimize",
+        "release_year": 2023,
+        "description": "\\\\",
+        "category": "AI Tools",
+        "website": "https://promptimizeaibr.com",
+        "long_description": "\\\\"
+      },
+      "features": [
+        "AI-powered assistance",
+        "User-friendly interface",
+        "Productivity enhancement"
+      ],
+      "pros": [
+        "User-friendly interface",
+        "Comprehensive feature set",
+        "Good integration options",
+        "Competitive pricing"
+      ],
+      "cons": [
+        "Learning curve for advanced features",
+        "Limited free tier",
+        "Subscription required for full access"
+      ],
+      "pricing": [
+        {
+          "plan": "Starter",
+          "price_per_month": 29,
+          "billing_period": "monthly",
+          "features": [
+            "Basic features",
+            "Email support",
+            "Monthly usage limits"
+          ]
+        }
+      ],
+      "rating": 4.2,
+      "benchmarks": {
+        "speed": 8,
+        "accuracy": 8,
+        "integration": 7,
+        "ease_of_use": 8,
+        "value": 8
+      },
+      "scraping_metadata": {
+        "source_url": "https://aitools.neilpatel.com",
+        "scraped_at": "2025-09-20T18:03:44.692Z",
+        "scraper": "neil-patel-scraper"
+      }
+    },
+    {
+      "id": "aiwriter",
+      "name": "![AIwriter",
+      "slug": "aiwriter",
+      "logo": "/images/tools/aiwriter-logo.svg",
+      "meta": {
+        "description": "\\\\",
+        "keywords": "![AIwriter review, ![AIwriter features, ![AIwriter pricing, ![AIwriter alternatives, ![AIwriter vs"
+      },
+      "overview": {
+        "developer": "![AIwriter",
+        "release_year": 2023,
+        "description": "\\\\",
+        "category": "AI Tools",
+        "website": "https://aitools.neilpatel.com/wp-content/uploads/2023/06/AIwriter.jpg",
+        "long_description": "\\\\"
+      },
+      "features": [
+        "AI-powered assistance",
+        "User-friendly interface",
+        "Productivity enhancement"
+      ],
+      "pros": [
+        "User-friendly interface",
+        "Comprehensive feature set",
+        "Good integration options",
+        "Competitive pricing"
+      ],
+      "cons": [
+        "Learning curve for advanced features",
+        "Limited free tier",
+        "Subscription required for full access"
+      ],
+      "pricing": [
+        {
+          "plan": "Starter",
+          "price_per_month": 29,
+          "billing_period": "monthly",
+          "features": [
+            "Basic features",
+            "Email support",
+            "Monthly usage limits"
+          ]
+        }
+      ],
+      "rating": 4.2,
+      "benchmarks": {
+        "speed": 8,
+        "accuracy": 8,
+        "integration": 7,
+        "ease_of_use": 8,
+        "value": 8
+      },
+      "scraping_metadata": {
+        "source_url": "https://aitools.neilpatel.com",
+        "scraped_at": "2025-09-20T18:03:44.693Z",
+        "scraper": "neil-patel-scraper"
+      }
+    },
+    {
+      "id": "reddibee",
+      "name": "![Reddibee",
+      "slug": "reddibee",
+      "logo": "/images/tools/reddibee-logo.svg",
+      "meta": {
+        "description": "\\\\",
+        "keywords": "![Reddibee review, ![Reddibee features, ![Reddibee pricing, ![Reddibee alternatives, ![Reddibee vs"
+      },
+      "overview": {
+        "developer": "![Reddibee",
+        "release_year": 2023,
+        "description": "\\\\",
+        "category": "AI Tools",
+        "website": "https://aitools.neilpatel.com/wp-content/uploads/2025/03/Reddibee.jpg",
+        "long_description": "\\\\"
+      },
+      "features": [
+        "AI-powered assistance",
+        "User-friendly interface",
+        "Productivity enhancement"
+      ],
+      "pros": [
+        "User-friendly interface",
+        "Comprehensive feature set",
+        "Good integration options",
+        "Competitive pricing"
+      ],
+      "cons": [
+        "Learning curve for advanced features",
+        "Limited free tier",
+        "Subscription required for full access"
+      ],
+      "pricing": [
+        {
+          "plan": "Starter",
+          "price_per_month": 29,
+          "billing_period": "monthly",
+          "features": [
+            "Basic features",
+            "Email support",
+            "Monthly usage limits"
+          ]
+        }
+      ],
+      "rating": 4.2,
+      "benchmarks": {
+        "speed": 8,
+        "accuracy": 8,
+        "integration": 7,
+        "ease_of_use": 8,
+        "value": 8
+      },
+      "scraping_metadata": {
+        "source_url": "https://aitools.neilpatel.com",
+        "scraped_at": "2025-09-20T18:03:44.693Z",
+        "scraper": "neil-patel-scraper"
+      }
+    },
+    {
+      "id": "aisoap",
+      "name": "![AISOAP",
+      "slug": "aisoap",
+      "logo": "/images/tools/aisoap-logo.svg",
+      "meta": {
+        "description": "\\\\",
+        "keywords": "![AISOAP review, ![AISOAP features, ![AISOAP pricing, ![AISOAP alternatives, ![AISOAP vs"
+      },
+      "overview": {
+        "developer": "![AISOAP",
+        "release_year": 2023,
+        "description": "\\\\",
+        "category": "AI Tools",
+        "website": "https://aitools.neilpatel.com/wp-content/uploads/2025/03/AISOAP.jpg",
+        "long_description": "\\\\"
+      },
+      "features": [
+        "AI-powered assistance",
+        "User-friendly interface",
+        "Productivity enhancement"
+      ],
+      "pros": [
+        "User-friendly interface",
+        "Comprehensive feature set",
+        "Good integration options",
+        "Competitive pricing"
+      ],
+      "cons": [
+        "Learning curve for advanced features",
+        "Limited free tier",
+        "Subscription required for full access"
+      ],
+      "pricing": [
+        {
+          "plan": "Starter",
+          "price_per_month": 29,
+          "billing_period": "monthly",
+          "features": [
+            "Basic features",
+            "Email support",
+            "Monthly usage limits"
+          ]
+        }
+      ],
+      "rating": 4.2,
+      "benchmarks": {
+        "speed": 8,
+        "accuracy": 8,
+        "integration": 7,
+        "ease_of_use": 8,
+        "value": 8
+      },
+      "scraping_metadata": {
+        "source_url": "https://aitools.neilpatel.com",
+        "scraped_at": "2025-09-20T18:03:44.693Z",
+        "scraper": "neil-patel-scraper"
+      }
+    },
+    {
+      "id": "brandwiz",
+      "name": "![BrandWiz",
+      "slug": "brandwiz",
+      "logo": "/images/tools/brandwiz-logo.svg",
+      "meta": {
+        "description": "\\\\",
+        "keywords": "![BrandWiz review, ![BrandWiz features, ![BrandWiz pricing, ![BrandWiz alternatives, ![BrandWiz vs"
+      },
+      "overview": {
+        "developer": "![BrandWiz",
+        "release_year": 2023,
+        "description": "\\\\",
+        "category": "AI Tools",
+        "website": "https://aitools.neilpatel.com/wp-content/uploads/2025/03/BrandWiz.jpg",
+        "long_description": "\\\\"
+      },
+      "features": [
+        "Brand voice training",
+        "AI-powered assistance",
+        "User-friendly interface"
+      ],
+      "pros": [
+        "User-friendly interface",
+        "Comprehensive feature set",
+        "Good integration options",
+        "Competitive pricing"
+      ],
+      "cons": [
+        "Learning curve for advanced features",
+        "Limited free tier",
+        "Subscription required for full access"
+      ],
+      "pricing": [
+        {
+          "plan": "Starter",
+          "price_per_month": 29,
+          "billing_period": "monthly",
+          "features": [
+            "Basic features",
+            "Email support",
+            "Monthly usage limits"
+          ]
+        }
+      ],
+      "rating": 4.2,
+      "benchmarks": {
+        "speed": 8,
+        "accuracy": 8,
+        "integration": 7,
+        "ease_of_use": 8,
+        "value": 8
+      },
+      "scraping_metadata": {
+        "source_url": "https://aitools.neilpatel.com",
+        "scraped_at": "2025-09-20T18:03:44.693Z",
+        "scraper": "neil-patel-scraper"
+      }
+    },
+    {
+      "id": "naturalreader",
+      "name": "![NaturalReader",
+      "slug": "naturalreader",
+      "logo": "/images/tools/naturalreader-logo.svg",
+      "meta": {
+        "description": "\\\\",
+        "keywords": "![NaturalReader review, ![NaturalReader features, ![NaturalReader pricing, ![NaturalReader alternatives, ![NaturalReader vs"
+      },
+      "overview": {
+        "developer": "![NaturalReader",
+        "release_year": 2023,
+        "description": "\\\\",
+        "category": "AI Tools",
+        "website": "https://aitools.neilpatel.com/wp-content/uploads/2025/03/NaturalReader.jpg",
+        "long_description": "\\\\"
+      },
+      "features": [
+        "AI-powered assistance",
+        "User-friendly interface",
+        "Productivity enhancement"
+      ],
+      "pros": [
+        "User-friendly interface",
+        "Comprehensive feature set",
+        "Good integration options",
+        "Competitive pricing"
+      ],
+      "cons": [
+        "Learning curve for advanced features",
+        "Limited free tier",
+        "Subscription required for full access"
+      ],
+      "pricing": [
+        {
+          "plan": "Starter",
+          "price_per_month": 29,
+          "billing_period": "monthly",
+          "features": [
+            "Basic features",
+            "Email support",
+            "Monthly usage limits"
+          ]
+        }
+      ],
+      "rating": 4.2,
+      "benchmarks": {
+        "speed": 8,
+        "accuracy": 8,
+        "integration": 7,
+        "ease_of_use": 8,
+        "value": 8
+      },
+      "scraping_metadata": {
+        "source_url": "https://aitools.neilpatel.com",
+        "scraped_at": "2025-09-20T18:03:44.693Z",
+        "scraper": "neil-patel-scraper"
+      }
+    },
+    {
+      "id": "pikzels",
+      "name": "![Pikzels",
+      "slug": "pikzels",
+      "logo": "/images/tools/pikzels-logo.svg",
+      "meta": {
+        "description": "\\\\",
+        "keywords": "![Pikzels review, ![Pikzels features, ![Pikzels pricing, ![Pikzels alternatives, ![Pikzels vs"
+      },
+      "overview": {
+        "developer": "![Pikzels",
+        "release_year": 2023,
+        "description": "\\\\",
+        "category": "AI Tools",
+        "website": "https://aitools.neilpatel.com/wp-content/uploads/2025/03/Pikzels.jpg",
+        "long_description": "\\\\"
+      },
+      "features": [
+        "AI-powered assistance",
+        "User-friendly interface",
+        "Productivity enhancement"
+      ],
+      "pros": [
+        "User-friendly interface",
+        "Comprehensive feature set",
+        "Good integration options",
+        "Competitive pricing"
+      ],
+      "cons": [
+        "Learning curve for advanced features",
+        "Limited free tier",
+        "Subscription required for full access"
+      ],
+      "pricing": [
+        {
+          "plan": "Starter",
+          "price_per_month": 29,
+          "billing_period": "monthly",
+          "features": [
+            "Basic features",
+            "Email support",
+            "Monthly usage limits"
+          ]
+        }
+      ],
+      "rating": 4.2,
+      "benchmarks": {
+        "speed": 8,
+        "accuracy": 8,
+        "integration": 7,
+        "ease_of_use": 8,
+        "value": 8
+      },
+      "scraping_metadata": {
+        "source_url": "https://aitools.neilpatel.com",
+        "scraped_at": "2025-09-20T18:03:44.693Z",
+        "scraper": "neil-patel-scraper"
+      }
+    },
+    {
+      "id": "pig",
+      "name": "![Pig",
+      "slug": "pig",
+      "logo": "/images/tools/pig-logo.svg",
+      "meta": {
+        "description": "\\\\",
+        "keywords": "![Pig review, ![Pig features, ![Pig pricing, ![Pig alternatives, ![Pig vs"
+      },
+      "overview": {
+        "developer": "![Pig",
+        "release_year": 2023,
+        "description": "\\\\",
+        "category": "AI Tools",
+        "website": "https://aitools.neilpatel.com/wp-content/uploads/2025/03/Pig.jpg",
+        "long_description": "\\\\"
+      },
+      "features": [
+        "AI-powered assistance",
+        "User-friendly interface",
+        "Productivity enhancement"
+      ],
+      "pros": [
+        "User-friendly interface",
+        "Comprehensive feature set",
+        "Good integration options",
+        "Competitive pricing"
+      ],
+      "cons": [
+        "Learning curve for advanced features",
+        "Limited free tier",
+        "Subscription required for full access"
+      ],
+      "pricing": [
+        {
+          "plan": "Starter",
+          "price_per_month": 29,
+          "billing_period": "monthly",
+          "features": [
+            "Basic features",
+            "Email support",
+            "Monthly usage limits"
+          ]
+        }
+      ],
+      "rating": 4.2,
+      "benchmarks": {
+        "speed": 8,
+        "accuracy": 8,
+        "integration": 7,
+        "ease_of_use": 8,
+        "value": 8
+      },
+      "scraping_metadata": {
+        "source_url": "https://aitools.neilpatel.com",
+        "scraped_at": "2025-09-20T18:03:44.693Z",
+        "scraper": "neil-patel-scraper"
+      }
+    },
+    {
+      "id": "jobquest",
+      "name": "![JobQuest",
+      "slug": "jobquest",
+      "logo": "/images/tools/jobquest-logo.svg",
+      "meta": {
+        "description": "\\\\",
+        "keywords": "![JobQuest review, ![JobQuest features, ![JobQuest pricing, ![JobQuest alternatives, ![JobQuest vs"
+      },
+      "overview": {
+        "developer": "![JobQuest",
+        "release_year": 2023,
+        "description": "\\\\",
+        "category": "AI Tools",
+        "website": "https://aitools.neilpatel.com/wp-content/uploads/2025/03/JobQuest.jpg",
+        "long_description": "\\\\"
+      },
+      "features": [
+        "AI-powered assistance",
+        "User-friendly interface",
+        "Productivity enhancement"
+      ],
+      "pros": [
+        "User-friendly interface",
+        "Comprehensive feature set",
+        "Good integration options",
+        "Competitive pricing"
+      ],
+      "cons": [
+        "Learning curve for advanced features",
+        "Limited free tier",
+        "Subscription required for full access"
+      ],
+      "pricing": [
+        {
+          "plan": "Starter",
+          "price_per_month": 29,
+          "billing_period": "monthly",
+          "features": [
+            "Basic features",
+            "Email support",
+            "Monthly usage limits"
+          ]
+        }
+      ],
+      "rating": 4.2,
+      "benchmarks": {
+        "speed": 8,
+        "accuracy": 8,
+        "integration": 7,
+        "ease_of_use": 8,
+        "value": 8
+      },
+      "scraping_metadata": {
+        "source_url": "https://aitools.neilpatel.com",
+        "scraped_at": "2025-09-20T18:03:44.693Z",
+        "scraper": "neil-patel-scraper"
+      }
+    },
+    {
+      "id": "typito",
+      "name": "![Typito",
+      "slug": "typito",
+      "logo": "/images/tools/typito-logo.svg",
+      "meta": {
+        "description": "\\\\",
+        "keywords": "![Typito review, ![Typito features, ![Typito pricing, ![Typito alternatives, ![Typito vs"
+      },
+      "overview": {
+        "developer": "![Typito",
+        "release_year": 2023,
+        "description": "\\\\",
+        "category": "AI Tools",
+        "website": "https://aitools.neilpatel.com/wp-content/uploads/2025/03/Typito.jpg",
+        "long_description": "\\\\"
+      },
+      "features": [
+        "AI-powered assistance",
+        "User-friendly interface",
+        "Productivity enhancement"
+      ],
+      "pros": [
+        "User-friendly interface",
+        "Comprehensive feature set",
+        "Good integration options",
+        "Competitive pricing"
+      ],
+      "cons": [
+        "Learning curve for advanced features",
+        "Limited free tier",
+        "Subscription required for full access"
+      ],
+      "pricing": [
+        {
+          "plan": "Starter",
+          "price_per_month": 29,
+          "billing_period": "monthly",
+          "features": [
+            "Basic features",
+            "Email support",
+            "Monthly usage limits"
+          ]
+        }
+      ],
+      "rating": 4.2,
+      "benchmarks": {
+        "speed": 8,
+        "accuracy": 8,
+        "integration": 7,
+        "ease_of_use": 8,
+        "value": 8
+      },
+      "scraping_metadata": {
+        "source_url": "https://aitools.neilpatel.com",
+        "scraped_at": "2025-09-20T18:03:44.693Z",
+        "scraper": "neil-patel-scraper"
+      }
+    },
+    {
+      "id": "vectal",
+      "name": "![Vectal",
+      "slug": "vectal",
+      "logo": "/images/tools/vectal-logo.svg",
+      "meta": {
+        "description": "\\\\",
+        "keywords": "![Vectal review, ![Vectal features, ![Vectal pricing, ![Vectal alternatives, ![Vectal vs"
+      },
+      "overview": {
+        "developer": "![Vectal",
+        "release_year": 2023,
+        "description": "\\\\",
+        "category": "AI Tools",
+        "website": "https://aitools.neilpatel.com/wp-content/uploads/2025/03/Vectal.jpg",
+        "long_description": "\\\\"
+      },
+      "features": [
+        "AI-powered assistance",
+        "User-friendly interface",
+        "Productivity enhancement"
+      ],
+      "pros": [
+        "User-friendly interface",
+        "Comprehensive feature set",
+        "Good integration options",
+        "Competitive pricing"
+      ],
+      "cons": [
+        "Learning curve for advanced features",
+        "Limited free tier",
+        "Subscription required for full access"
+      ],
+      "pricing": [
+        {
+          "plan": "Starter",
+          "price_per_month": 29,
+          "billing_period": "monthly",
+          "features": [
+            "Basic features",
+            "Email support",
+            "Monthly usage limits"
+          ]
+        }
+      ],
+      "rating": 4.2,
+      "benchmarks": {
+        "speed": 8,
+        "accuracy": 8,
+        "integration": 7,
+        "ease_of_use": 8,
+        "value": 8
+      },
+      "scraping_metadata": {
+        "source_url": "https://aitools.neilpatel.com",
+        "scraped_at": "2025-09-20T18:03:44.693Z",
+        "scraper": "neil-patel-scraper"
+      }
+    },
+    {
+      "id": "promptimize",
+      "name": "![Promptimize",
+      "slug": "promptimize",
+      "logo": "/images/tools/promptimize-logo.svg",
+      "meta": {
+        "description": "\\\\",
+        "keywords": "![Promptimize review, ![Promptimize features, ![Promptimize pricing, ![Promptimize alternatives, ![Promptimize vs"
+      },
+      "overview": {
+        "developer": "![Promptimize",
+        "release_year": 2023,
+        "description": "\\\\",
+        "category": "AI Tools",
+        "website": "https://aitools.neilpatel.com/wp-content/uploads/2025/03/Promptimize.jpg",
+        "long_description": "\\\\"
+      },
+      "features": [
+        "AI-powered assistance",
+        "User-friendly interface",
+        "Productivity enhancement"
+      ],
+      "pros": [
+        "User-friendly interface",
+        "Comprehensive feature set",
+        "Good integration options",
+        "Competitive pricing"
+      ],
+      "cons": [
+        "Learning curve for advanced features",
+        "Limited free tier",
+        "Subscription required for full access"
+      ],
+      "pricing": [
+        {
+          "plan": "Starter",
+          "price_per_month": 29,
+          "billing_period": "monthly",
+          "features": [
+            "Basic features",
+            "Email support",
+            "Monthly usage limits"
+          ]
+        }
+      ],
+      "rating": 4.2,
+      "benchmarks": {
+        "speed": 8,
+        "accuracy": 8,
+        "integration": 7,
+        "ease_of_use": 8,
+        "value": 8
+      },
+      "scraping_metadata": {
+        "source_url": "https://aitools.neilpatel.com",
+        "scraped_at": "2025-09-20T18:03:44.693Z",
+        "scraper": "neil-patel-scraper"
+      }
+    },
+    {
+      "id": "submit-a-tool",
+      "name": "Submit a tool",
+      "slug": "submit-a-tool",
+      "logo": "/images/tools/submit-a-tool-logo.svg",
+      "meta": {
+        "description": "Is there a tool missing from this site that we should know about? Share it below! Name Email address Tool name Tool URL Tool Tags Tool pricing model —Please choose an option—FreeFreemiumSource OpenPaid Tool featured image Tool description",
+        "keywords": "Submit a tool review, Submit a tool features, Submit a tool pricing, Submit a tool alternatives, Submit a tool vs"
+      },
+      "overview": {
+        "developer": "Submit",
+        "release_year": 2023,
+        "description": "Is there a tool missing from this site that we should know about? Share it below! Name Email address Tool name Tool URL Tool Tags Tool pricing model —Please choose an option—FreeFreemiumSource OpenPaid Tool featured image Tool description",
+        "category": "AI Design",
+        "website": "https://submitatool.com",
+        "long_description": "Is there a tool missing from this site that we should know about? Share it below! Name Email address Tool name Tool URL Tool Tags Tool pricing model —Please choose an option—FreeFreemiumSource OpenPaid Tool featured image Tool description"
+      },
+      "features": [
+        "Collaboration tools",
+        "AI-powered assistance",
+        "User-friendly interface"
+      ],
+      "pros": [
+        "User-friendly interface",
+        "Comprehensive feature set",
+        "Good integration options",
+        "Competitive pricing"
+      ],
+      "cons": [
+        "Learning curve for advanced features",
+        "Limited free tier",
+        "Subscription required for full access"
+      ],
+      "pricing": [
+        {
+          "plan": "Free",
+          "price_per_month": 0,
+          "billing_period": "monthly",
+          "features": [
+            "Basic features",
+            "Limited usage",
+            "Community support"
+          ]
+        },
+        {
+          "plan": "Starter",
+          "price_per_month": 29,
+          "billing_period": "monthly",
+          "features": [
+            "Basic features",
+            "Email support",
+            "Monthly usage limits"
+          ]
+        }
+      ],
+      "rating": 4.2,
+      "benchmarks": {
+        "speed": 8,
+        "accuracy": 8,
+        "integration": 7,
+        "ease_of_use": 8,
+        "value": 8
+      },
+      "scraping_metadata": {
+        "source_url": "https://aitools.neilpatel.com/submit/",
+        "scraped_at": "2025-09-20T18:03:51.322Z",
+        "scraper": "neil-patel-scraper"
+      }
+    },
+    {
+      "id": "lets-get-in-touch-with-us",
+      "name": "Let’s get     in touch with US!",
+      "slug": "lets-get-in-touch-with-us",
+      "logo": "/images/tools/lets-get-in-touch-with-us-logo.svg",
+      "meta": {
+        "description": "Do you have a question or are you interested in working with my team and me? Just fill out the form fields below.",
+        "keywords": "Let’s get     in touch with US! review, Let’s get     in touch with US! features, Let’s get     in touch with US! pricing, Let’s get     in touch with US! alternatives, Let’s get     in touch with US! vs"
+      },
+      "overview": {
+        "developer": "Let’s",
+        "release_year": 2023,
+        "description": "Do you have a question or are you interested in working with my team and me? Just fill out the form fields below.",
+        "category": "AI Tools",
+        "website": "https://letsgetintouchw.com",
+        "long_description": "Do you have a question or are you interested in working with my team and me? Just fill out the form fields below."
+      },
+      "features": [
+        "Collaboration tools",
+        "AI-powered assistance",
+        "User-friendly interface"
+      ],
+      "pros": [
+        "User-friendly interface",
+        "Comprehensive feature set",
+        "Good integration options",
+        "Competitive pricing"
+      ],
+      "cons": [
+        "Learning curve for advanced features",
+        "Limited free tier",
+        "Subscription required for full access"
+      ],
+      "pricing": [
+        {
+          "plan": "Starter",
+          "price_per_month": 29,
+          "billing_period": "monthly",
+          "features": [
+            "Basic features",
+            "Email support",
+            "Monthly usage limits"
+          ]
+        }
+      ],
+      "rating": 4.2,
+      "benchmarks": {
+        "speed": 8,
+        "accuracy": 8,
+        "integration": 7,
+        "ease_of_use": 8,
+        "value": 8
+      },
+      "scraping_metadata": {
+        "source_url": "https://aitools.neilpatel.com/contact/",
+        "scraped_at": "2025-09-20T18:04:04.043Z",
+        "scraper": "neil-patel-scraper"
+      }
+    },
+    {
+      "id": "email",
+      "name": "Email",
+      "slug": "email",
+      "logo": "/images/tools/email-logo.svg",
+      "meta": {
+        "description": "[support@ubersuggest.com](mailto:support@ubersuggest.com)",
+        "keywords": "Email review, Email features, Email pricing, Email alternatives, Email vs"
+      },
+      "overview": {
+        "developer": "Email",
+        "release_year": 2023,
+        "description": "[support@ubersuggest.com](mailto:support@ubersuggest.com)",
+        "category": "AI Tools",
+        "website": "https://email.com",
+        "long_description": "[support@ubersuggest.com](mailto:support@ubersuggest.com)"
+      },
+      "features": [
+        "AI-powered assistance",
+        "User-friendly interface",
+        "Productivity enhancement"
+      ],
+      "pros": [
+        "User-friendly interface",
+        "Comprehensive feature set",
+        "Good integration options",
+        "Competitive pricing"
+      ],
+      "cons": [
+        "Learning curve for advanced features",
+        "Limited free tier",
+        "Subscription required for full access"
+      ],
+      "pricing": [
+        {
+          "plan": "Starter",
+          "price_per_month": 29,
+          "billing_period": "monthly",
+          "features": [
+            "Basic features",
+            "Email support",
+            "Monthly usage limits"
+          ]
+        }
+      ],
+      "rating": 4.2,
+      "benchmarks": {
+        "speed": 8,
+        "accuracy": 8,
+        "integration": 7,
+        "ease_of_use": 8,
+        "value": 8
+      },
+      "scraping_metadata": {
+        "source_url": "https://aitools.neilpatel.com/contact/",
+        "scraped_at": "2025-09-20T18:04:04.043Z",
+        "scraper": "neil-patel-scraper"
+      }
+    },
+    {
+      "id": "phone",
+      "name": "Phone",
+      "slug": "phone",
+      "logo": "/images/tools/phone-logo.svg",
+      "meta": {
+        "description": "[+(3) 442-255-123](tel:+(3) 442-255-123)",
+        "keywords": "Phone review, Phone features, Phone pricing, Phone alternatives, Phone vs"
+      },
+      "overview": {
+        "developer": "Phone",
+        "release_year": 2023,
+        "description": "[+(3) 442-255-123](tel:+(3) 442-255-123)",
+        "category": "AI Tools",
+        "website": "https://phone.com",
+        "long_description": "[+(3) 442-255-123](tel:+(3) 442-255-123)"
+      },
+      "features": [
+        "AI-powered assistance",
+        "User-friendly interface",
+        "Productivity enhancement"
+      ],
+      "pros": [
+        "User-friendly interface",
+        "Comprehensive feature set",
+        "Good integration options",
+        "Competitive pricing"
+      ],
+      "cons": [
+        "Learning curve for advanced features",
+        "Limited free tier",
+        "Subscription required for full access"
+      ],
+      "pricing": [
+        {
+          "plan": "Starter",
+          "price_per_month": 29,
+          "billing_period": "monthly",
+          "features": [
+            "Basic features",
+            "Email support",
+            "Monthly usage limits"
+          ]
+        }
+      ],
+      "rating": 4.2,
+      "benchmarks": {
+        "speed": 8,
+        "accuracy": 8,
+        "integration": 7,
+        "ease_of_use": 8,
+        "value": 8
+      },
+      "scraping_metadata": {
+        "source_url": "https://aitools.neilpatel.com/contact/",
+        "scraped_at": "2025-09-20T18:04:04.043Z",
+        "scraper": "neil-patel-scraper"
+      }
+    },
+    {
+      "id": "supportubersuggestcom",
+      "name": "support@ubersuggest.com",
+      "slug": "supportubersuggestcom",
+      "logo": "/images/tools/supportubersuggestcom-logo.svg",
+      "meta": {
+        "description": "### Phone",
+        "keywords": "support@ubersuggest.com review, support@ubersuggest.com features, support@ubersuggest.com pricing, support@ubersuggest.com alternatives, support@ubersuggest.com vs"
+      },
+      "overview": {
+        "developer": "support@ubersuggest.com",
+        "release_year": 2023,
+        "description": "### Phone",
+        "category": "AI Tools",
+        "website": "mailto:support@ubersuggest.com",
+        "long_description": "### Phone"
+      },
+      "features": [
+        "AI-powered assistance",
+        "User-friendly interface",
+        "Productivity enhancement"
+      ],
+      "pros": [
+        "User-friendly interface",
+        "Comprehensive feature set",
+        "Good integration options",
+        "Competitive pricing"
+      ],
+      "cons": [
+        "Learning curve for advanced features",
+        "Limited free tier",
+        "Subscription required for full access"
+      ],
+      "pricing": [
+        {
+          "plan": "Starter",
+          "price_per_month": 29,
+          "billing_period": "monthly",
+          "features": [
+            "Basic features",
+            "Email support",
+            "Monthly usage limits"
+          ]
+        }
+      ],
+      "rating": 4.2,
+      "benchmarks": {
+        "speed": 8,
+        "accuracy": 8,
+        "integration": 7,
+        "ease_of_use": 8,
+        "value": 8
+      },
+      "scraping_metadata": {
+        "source_url": "https://aitools.neilpatel.com/contact/",
+        "scraped_at": "2025-09-20T18:04:04.043Z",
+        "scraper": "neil-patel-scraper"
+      }
+    },
+    {
+      "id": "twitter",
+      "name": "Twitter",
+      "slug": "twitter",
+      "logo": "/images/tools/twitter-logo.svg",
+      "meta": {
+        "description": "[Facebook-square](https://www.facebook.com/neilkpatel)[Youtube](https://www.youtube.com/neilpatel)[Linkedin](https://www.linkedin.com/in/neilkpatel)[Instagram](https://www.instagram.com/neilpatel/)",
+        "keywords": "Twitter review, Twitter features, Twitter pricing, Twitter alternatives, Twitter vs"
+      },
+      "overview": {
+        "developer": "Twitter",
+        "release_year": 2023,
+        "description": "[Facebook-square](https://www.facebook.com/neilkpatel)[Youtube](https://www.youtube.com/neilpatel)[Linkedin](https://www.linkedin.com/in/neilkpatel)[Instagram](https://www.instagram.com/neilpatel/)",
+        "category": "AI Tools",
+        "website": "https://twitter.com/neilpatel",
+        "long_description": "[Facebook-square](https://www.facebook.com/neilkpatel)[Youtube](https://www.youtube.com/neilpatel)[Linkedin](https://www.linkedin.com/in/neilkpatel)[Instagram](https://www.instagram.com/neilpatel/)"
+      },
+      "features": [
+        "AI-powered assistance",
+        "User-friendly interface",
+        "Productivity enhancement"
+      ],
+      "pros": [
+        "User-friendly interface",
+        "Comprehensive feature set",
+        "Good integration options",
+        "Competitive pricing"
+      ],
+      "cons": [
+        "Learning curve for advanced features",
+        "Limited free tier",
+        "Subscription required for full access"
+      ],
+      "pricing": [
+        {
+          "plan": "Starter",
+          "price_per_month": 29,
+          "billing_period": "monthly",
+          "features": [
+            "Basic features",
+            "Email support",
+            "Monthly usage limits"
+          ]
+        }
+      ],
+      "rating": 4.2,
+      "benchmarks": {
+        "speed": 8,
+        "accuracy": 8,
+        "integration": 7,
+        "ease_of_use": 8,
+        "value": 8
+      },
+      "scraping_metadata": {
+        "source_url": "https://aitools.neilpatel.com/contact/",
+        "scraped_at": "2025-09-20T18:04:04.043Z",
+        "scraper": "neil-patel-scraper"
+      }
+    }
+  ]
+}
