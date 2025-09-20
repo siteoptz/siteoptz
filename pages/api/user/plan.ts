@@ -28,7 +28,10 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 
     // First, check GoHighLevel for plan information
     try {
+      console.log('🔍 Fetching user plan for:', session.user.email);
+      console.log('🔍 Session user name:', session.user.name);
       const ghlContact = await getContactByEmail(session.user.email!);
+      console.log('📋 GHL Contact lookup result:', JSON.stringify(ghlContact, null, 2));
       if (ghlContact.exists) {
         if (ghlContact.plan) {
           actualPlan = ghlContact.plan;
@@ -37,7 +40,11 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
         if (ghlContact.name) {
           userName = ghlContact.name;
           console.log('✅ User name found in GoHighLevel:', userName);
+        } else {
+          console.log('⚠️ No name found in GoHighLevel contact, using session name:', session.user.name);
         }
+      } else {
+        console.log('⚠️ User not found in GoHighLevel, using session name:', session.user.name);
       }
     } catch (ghlError) {
       console.error('Error checking GoHighLevel for plan:', ghlError);

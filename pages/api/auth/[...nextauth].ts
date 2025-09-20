@@ -168,6 +168,23 @@ export const authOptions: NextAuthOptions = {
       if (token.accessToken) {
         session.accessToken = token.accessToken as string
       }
+      
+      // Refresh user name from GoHighLevel if available
+      if (session?.user?.email) {
+        try {
+          const isGHLEnabled = process.env.ENABLE_GHL === 'true';
+          if (isGHLEnabled && process.env.GOHIGHLEVEL_API_KEY && process.env.GOHIGHLEVEL_LOCATION_ID) {
+            const ghlContact = await getContactByEmail(session.user.email);
+            if (ghlContact.exists && ghlContact.name) {
+              session.user.name = ghlContact.name;
+              console.log('🔄 Session refreshed with GHL name:', ghlContact.name);
+            }
+          }
+        } catch (error) {
+          console.error('Error refreshing user name from GHL in session:', error);
+        }
+      }
+      
       return session
     },
     async signIn({ user, account, profile }) {
