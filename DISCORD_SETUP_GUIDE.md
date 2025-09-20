@@ -90,6 +90,16 @@ Use the SiteOptz logo: `/images/siteoptz-logo.png`
 - Integrate with SiteOptz database for tool stats
 - Community voting on tool ratings
 
+### 📖 Detailed Bot Setup Guide
+For comprehensive instructions on setting up Discord bots, see: **[DISCORD_BOTS_SETUP.md](./DISCORD_BOTS_SETUP.md)**
+
+This guide includes:
+- Step-by-step bot installation
+- Custom commands for AI tools
+- Permission configurations
+- Integration with SiteOptz platform
+- Troubleshooting and maintenance
+
 ## Server Settings
 
 ### Verification Level
