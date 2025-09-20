@@ -139,7 +139,7 @@ export default function CommunityPage({}: CommunityPageProps) {
           "url": "https://siteoptz.ai/community",
           "description": pageConfig.description,
           "sameAs": [
-            "https://discord.gg/siteoptz"
+            "https://discord.gg/WZqvUF39"
           ]
         }}
       />
@@ -172,7 +172,7 @@ export default function CommunityPage({}: CommunityPageProps) {
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">
               <a
-                href="https://discord.gg/siteoptz"
+                href="https://discord.gg/WZqvUF39"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="group inline-flex items-center gap-3 px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-bold text-lg rounded-xl hover:from-blue-700 hover:to-purple-700 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105"
@@ -400,7 +400,7 @@ export default function CommunityPage({}: CommunityPageProps) {
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
               <a
-                href="https://discord.gg/siteoptz"
+                href="https://discord.gg/WZqvUF39"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="group inline-flex items-center gap-3 px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-bold text-lg rounded-xl hover:from-blue-700 hover:to-purple-700 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105"

@@ -41,7 +41,7 @@ const DiscordDiscussionButton: React.FC<DiscordDiscussionButtonProps> = ({
   };
 
   const channel = getDiscordChannel(toolCategory);
-  const discordUrl = `https://discord.gg/siteoptz`;
+  const discordUrl = `https://discord.gg/WZqvUF39`;
   
   const handleClick = () => {
     // Track Discord discussion click

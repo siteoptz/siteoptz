@@ -41,7 +41,7 @@ const DiscordWidget: React.FC<DiscordWidgetProps> = ({
         </div>
         
         <a
-          href="https://discord.gg/siteoptz"
+          href="https://discord.gg/WZqvUF39"
           target="_blank"
           rel="noopener noreferrer"
           className="w-full bg-gradient-to-r from-blue-600 to-purple-600 text-white py-2 px-3 rounded-lg font-medium text-sm text-center block hover:from-blue-700 hover:to-purple-700 transition-all duration-200"
