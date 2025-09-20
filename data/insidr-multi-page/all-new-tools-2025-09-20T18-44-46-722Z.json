@@ -1,0 +1,1051 @@
+[
+  {
+    "id": "customgpt-ai",
+    "name": "CustomGPT.ai",
+    "slug": "customgpt-ai",
+    "description": "At CustomGPT.ai, we turn data into dialogue. Our platform uses your specific business content to create accurate and secure conversations. It's designed for anyone to use effectively, helping your teams respond faster and improving how you engage with customers. Think of CustomGPT.ai as a tool that not only enhances team productivity but also boosts customer satisfaction and drives revenue, all through a user-friendly, no-code interface.",
+    "category": "AI Chatbot",
+    "logo": "/images/tools/customgpt-ai-logo.svg",
+    "features": [
+      "At CustomGPT.ai, we turn data into dialogue.",
+      "Our platform uses your specific business content to create accurate and secure conversations.",
+      "It's designed for anyone to use effectively, helping your teams respond faster and improving how you engage with customers.",
+      "Think of CustomGPT.ai as a tool that not only enhances team productivity but also boosts customer satisfaction and drives revenue, all through a user-friendly, no-code interface."
+    ],
+    "pricing": [
+      {
+        "plan": "Free Trial",
+        "price_per_month": 0,
+        "features": [
+          "Limited access"
+        ]
+      }
+    ],
+    "pros": [
+      "At CustomGPT.ai, we turn data into dialogue. Our platform uses your specific business content to cre..."
+    ],
+    "cons": [
+      "Pricing details may vary"
+    ],
+    "rating": 4,
+    "benchmarks": {
+      "speed": 7,
+      "accuracy": 7,
+      "integration": 6,
+      "ease_of_use": 7,
+      "value": 7
+    },
+    "website": "https://www.insidr.ai/aff/customgpt",
+    "lastUpdated": "2025-09-20T18:44:36.144Z",
+    "source": "insidr-ai-multi-page"
+  },
+  {
+    "id": "leap",
+    "name": "Leap",
+    "slug": "leap",
+    "description": "Automate Sales & Marketing workflows with AI. Augment your team with AI automation for content generation, lead enrichment, email outreach, and more.",
+    "category": "AI Workflows",
+    "logo": "/images/tools/leap-logo.svg",
+    "features": [
+      "Automate Sales & Marketing workflows with AI.",
+      "Augment your team with AI automation for content generation, lead enrichment, email outreach, and more."
+    ],
+    "pricing": [
+      {
+        "plan": "Free Trial",
+        "price_per_month": 0,
+        "features": [
+          "Limited access"
+        ]
+      }
+    ],
+    "pros": [
+      "Automate Sales & Marketing workflows with AI. Augment your team with AI automation for content gener..."
+    ],
+    "cons": [
+      "Pricing details may vary"
+    ],
+    "rating": 4,
+    "benchmarks": {
+      "speed": 7,
+      "accuracy": 7,
+      "integration": 6,
+      "ease_of_use": 7,
+      "value": 7
+    },
+    "website": "https://www.insidr.ai/aff/leap",
+    "lastUpdated": "2025-09-20T18:44:36.144Z",
+    "source": "insidr-ai-multi-page"
+  },
+  {
+    "id": "beforesunsetai",
+    "name": "BeforesunsetAI",
+    "slug": "beforesunsetai",
+    "description": "An AI daily planner that helps busy professionals and teams save time while maximizing their focus.",
+    "category": "AI Assistant",
+    "logo": "/images/tools/beforesunsetai-logo.svg",
+    "features": [
+      "An AI daily planner that helps busy professionals and teams save time while maximizing their focus."
+    ],
+    "pricing": [
+      {
+        "plan": "Free Trial",
+        "price_per_month": 0,
+        "features": [
+          "Limited access"
+        ]
+      }
+    ],
+    "pros": [
+      "An AI daily planner that helps busy professionals and teams save time while maximizing their focus...."
+    ],
+    "cons": [
+      "Pricing details may vary"
+    ],
+    "rating": 4,
+    "benchmarks": {
+      "speed": 7,
+      "accuracy": 7,
+      "integration": 6,
+      "ease_of_use": 7,
+      "value": 7
+    },
+    "website": "https://www.insidr.ai/aff/beforesunsetai",
+    "lastUpdated": "2025-09-20T18:44:36.144Z",
+    "source": "insidr-ai-multi-page"
+  },
+  {
+    "id": "thoughtly",
+    "name": "thoughtly",
+    "slug": "thoughtly",
+    "description": "Your phone calls, handled beautifully. Thoughtly helps businesses build and deploy human-like AI voice agents in just 17 minutes. Welcome to the future of calling.",
+    "category": "AI Agents",
+    "logo": "/images/tools/thoughtly-logo.svg",
+    "features": [
+      "Your phone calls, handled beautifully.",
+      "Thoughtly helps businesses build and deploy human-like AI voice agents in just 17 minutes.",
+      "Welcome to the future of calling."
+    ],
+    "pricing": [
+      {
+        "plan": "Free Trial",
+        "price_per_month": 0,
+        "features": [
+          "Limited access"
+        ]
+      }
+    ],
+    "pros": [
+      "Your phone calls, handled beautifully. Thoughtly helps businesses build and deploy human-like AI voi..."
+    ],
+    "cons": [
+      "Pricing details may vary"
+    ],
+    "rating": 4,
+    "benchmarks": {
+      "speed": 7,
+      "accuracy": 7,
+      "integration": 6,
+      "ease_of_use": 7,
+      "value": 7
+    },
+    "website": "https://www.insidr.ai/aff/thoughtly",
+    "lastUpdated": "2025-09-20T18:44:36.144Z",
+    "source": "insidr-ai-multi-page"
+  },
+  {
+    "id": "appy-pie-ai-image-generator",
+    "name": "Appy Pie AI Image Generator",
+    "slug": "appy-pie-ai-image-generator",
+    "description": "This no-code platform allows users to create stunning visuals from text prompts effortlessly. Appy Pie’s AI Image Generator produces high-quality digital art, AI-generated photos, illustrations, and graphics in various styles. With its easy-to-use interface and access to an extensive library of design resources, it's perfect for users of any skill level to bring their creative visions to life without the need for advanced design skills. Start creating beautiful images in minutes with Appy Pie's AI Image Generator.",
+    "category": "AI Image Generators",
+    "logo": "/images/tools/appy-pie-ai-image-generator-logo.svg",
+    "features": [
+      "This no-code platform allows users to create stunning visuals from text prompts effortlessly.",
+      "Appy Pie’s AI Image Generator produces high-quality digital art, AI-generated photos, illustrations, and graphics in various styles.",
+      "With its easy-to-use interface and access to an extensive library of design resources, it's perfect for users of any skill level to bring their creative visions to life without the need for advanced design skills.",
+      "Start creating beautiful images in minutes with Appy Pie's AI Image Generator."
+    ],
+    "pricing": [
+      {
+        "plan": "Free",
+        "price_per_month": 0,
+        "features": [
+          "Limited features"
+        ]
+      },
+      {
+        "plan": "Pro",
+        "price_per_month": 29,
+        "features": [
+          "This no-code platform allows users to create stunning visuals from text prompts effortlessly.",
+          "Appy Pie’s AI Image Generator produces high-quality digital art, AI-generated photos, illustrations, and graphics in various styles.",
+          "With its easy-to-use interface and access to an extensive library of design resources, it's perfect for users of any skill level to bring their creative visions to life without the need for advanced design skills.",
+          "Start creating beautiful images in minutes with Appy Pie's AI Image Generator."
+        ]
+      }
+    ],
+    "pros": [
+      "This no-code platform allows users to create stunning visuals from text prompts effortlessly. Appy P..."
+    ],
+    "cons": [
+      "Pricing details may vary"
+    ],
+    "rating": 4,
+    "benchmarks": {
+      "speed": 7,
+      "accuracy": 7,
+      "integration": 6,
+      "ease_of_use": 7,
+      "value": 7
+    },
+    "website": "https://www.appypie.com/design/ai-image-generator",
+    "lastUpdated": "2025-09-20T18:44:45.760Z",
+    "source": "insidr-ai-multi-page"
+  },
+  {
+    "id": "chatwithpdf",
+    "name": "ChatWithPDF",
+    "slug": "chatwithpdf",
+    "description": "Summarize and Chat with any PDF or Youtube Video Simplify research - Chat with PDFs, summarize PDFs and summarize Youtube videos.",
+    "category": "AI Chatbot",
+    "logo": "/images/tools/chatwithpdf-logo.svg",
+    "features": [
+      "Summarize and Chat with any PDF or Youtube Video",
+      "Simplify research - Chat with PDFs, summarize PDFs and summarize Youtube videos."
+    ],
+    "pricing": [
+      {
+        "plan": "Free",
+        "price_per_month": 0,
+        "features": [
+          "Limited features"
+        ]
+      },
+      {
+        "plan": "Pro",
+        "price_per_month": 29,
+        "features": [
+          "Summarize and Chat with any PDF or Youtube Video",
+          "Simplify research - Chat with PDFs, summarize PDFs and summarize Youtube videos."
+        ]
+      }
+    ],
+    "pros": [
+      "Summarize and Chat with any PDF or Youtube Video Simplify research - Chat with PDFs, summarize PDFs ..."
+    ],
+    "cons": [
+      "Pricing details may vary"
+    ],
+    "rating": 4,
+    "benchmarks": {
+      "speed": 7,
+      "accuracy": 7,
+      "integration": 6,
+      "ease_of_use": 7,
+      "value": 7
+    },
+    "website": "https://www.insidr.ai/aff/chatwithpdf",
+    "lastUpdated": "2025-09-20T18:44:45.760Z",
+    "source": "insidr-ai-multi-page"
+  },
+  {
+    "id": "highperformr",
+    "name": "Highperformr",
+    "slug": "highperformr",
+    "description": "Get Better ROI from Social Media. Highperformr AI's modern social media management platform amplifies online presence, fuels lead generation, and accelerates pipeline growth for B2B businesses.",
+    "category": "AI Social Media",
+    "logo": "/images/tools/highperformr-logo.svg",
+    "features": [
+      "Get Better ROI from Social Media.",
+      "Highperformr AI's modern social media management platform amplifies online presence, fuels lead generation, and accelerates pipeline growth for B2B businesses."
+    ],
+    "pricing": [
+      {
+        "plan": "Free",
+        "price_per_month": 0,
+        "features": [
+          "Limited features"
+        ]
+      },
+      {
+        "plan": "Pro",
+        "price_per_month": 29,
+        "features": [
+          "Get Better ROI from Social Media.",
+          "Highperformr AI's modern social media management platform amplifies online presence, fuels lead generation, and accelerates pipeline growth for B2B businesses."
+        ]
+      }
+    ],
+    "pros": [
+      "Get Better ROI from Social Media. Highperformr AI's modern social media management platform amplifie..."
+    ],
+    "cons": [
+      "Pricing details may vary"
+    ],
+    "rating": 4,
+    "benchmarks": {
+      "speed": 7,
+      "accuracy": 7,
+      "integration": 6,
+      "ease_of_use": 7,
+      "value": 7
+    },
+    "website": "https://www.insidr.ai/aff/highperformr",
+    "lastUpdated": "2025-09-20T18:44:45.760Z",
+    "source": "insidr-ai-multi-page"
+  },
+  {
+    "id": "formula-bot",
+    "name": "Formula Bot",
+    "slug": "formula-bot",
+    "description": "Formula Bot is an AI tool that simplifies Excel tasks by converting instructions in English or Spanish into Excel formulas. It also offers spreadsheet analysis, SQL and VBA creation, making complex tasks more manageable. Ideal for both work and educational purposes, it's user-friendly and effective for those struggling with Excel formulas",
+    "category": "AI Spreadsheets",
+    "logo": "/images/tools/formula-bot-logo.svg",
+    "features": [
+      "Formula Bot is an AI tool that simplifies Excel tasks by converting instructions in English or Spanish into Excel formulas.",
+      "It also offers spreadsheet analysis, SQL and VBA creation, making complex tasks more manageable.",
+      "Ideal for both work and educational purposes, it's user-friendly and effective for those struggling with Excel formulas"
+    ],
+    "pricing": [
+      {
+        "plan": "Free Trial",
+        "price_per_month": 0,
+        "features": [
+          "Limited access"
+        ]
+      }
+    ],
+    "pros": [
+      "Formula Bot is an AI tool that simplifies Excel tasks by converting instructions in English or Spani..."
+    ],
+    "cons": [
+      "Pricing details may vary"
+    ],
+    "rating": 4,
+    "benchmarks": {
+      "speed": 7,
+      "accuracy": 7,
+      "integration": 6,
+      "ease_of_use": 7,
+      "value": 7
+    },
+    "website": "https://www.insidr.ai/aff/formulabot",
+    "lastUpdated": "2025-09-20T18:44:45.760Z",
+    "source": "insidr-ai-multi-page"
+  },
+  {
+    "id": "formulashq",
+    "name": "FormulasHQ",
+    "slug": "formulashq",
+    "description": "FormulasHQ is an AI-powered formula generator for Excel and Google Sheets, designed to automate the creation of complex formulas, enhancing productivity in data analysis and spreadsheet management.",
+    "category": "AI Spreadsheets",
+    "logo": "/images/tools/formulashq-logo.svg",
+    "features": [
+      "FormulasHQ is an AI-powered formula generator for Excel and Google Sheets, designed to automate the creation of complex formulas, enhancing productivity in data analysis and spreadsheet management."
+    ],
+    "pricing": [
+      {
+        "plan": "Free",
+        "price_per_month": 0,
+        "features": [
+          "Limited features"
+        ]
+      },
+      {
+        "plan": "Pro",
+        "price_per_month": 29,
+        "features": [
+          "FormulasHQ is an AI-powered formula generator for Excel and Google Sheets, designed to automate the creation of complex formulas, enhancing productivity in data analysis and spreadsheet management."
+        ]
+      }
+    ],
+    "pros": [
+      "FormulasHQ is an AI-powered formula generator for Excel and Google Sheets, designed to automate the ..."
+    ],
+    "cons": [
+      "Pricing details may vary"
+    ],
+    "rating": 4,
+    "benchmarks": {
+      "speed": 7,
+      "accuracy": 7,
+      "integration": 6,
+      "ease_of_use": 7,
+      "value": 7
+    },
+    "website": "https://www.insidr.ai/aff/formulashq",
+    "lastUpdated": "2025-09-20T18:44:45.760Z",
+    "source": "insidr-ai-multi-page"
+  },
+  {
+    "id": "numerous-ai",
+    "name": "Numerous.ai",
+    "slug": "numerous-ai",
+    "description": "Numerous.ai is an AI-enhanced add-on for Google Sheets and Excel that simplifies the use of ChatGPT in spreadsheets for data analysis, content creation, and more, without requiring API keys.",
+    "category": "AI Spreadsheets",
+    "logo": "/images/tools/numerous-ai-logo.svg",
+    "features": [
+      "Numerous.ai is an AI-enhanced add-on for Google Sheets and Excel that simplifies the use of ChatGPT in spreadsheets for data analysis, content creation, and more, without requiring API keys."
+    ],
+    "pricing": [
+      {
+        "plan": "Free Trial",
+        "price_per_month": 0,
+        "features": [
+          "Limited access"
+        ]
+      }
+    ],
+    "pros": [
+      "Numerous.ai is an AI-enhanced add-on for Google Sheets and Excel that simplifies the use of ChatGPT ..."
+    ],
+    "cons": [
+      "Pricing details may vary"
+    ],
+    "rating": 4,
+    "benchmarks": {
+      "speed": 7,
+      "accuracy": 7,
+      "integration": 6,
+      "ease_of_use": 7,
+      "value": 7
+    },
+    "website": "https://www.insidr.ai/aff/numerousai",
+    "lastUpdated": "2025-09-20T18:44:45.760Z",
+    "source": "insidr-ai-multi-page"
+  },
+  {
+    "id": "getimg-ai",
+    "name": "Getimg.ai",
+    "slug": "getimg-ai",
+    "description": "Everything you need to create images with AI. Magical AI art tool. Generate original images, modify existing ones, expand pictures beyond its original borders, and more.",
+    "category": "AI Image and Art Generators and Editors",
+    "logo": "/images/tools/getimg-ai-logo.svg",
+    "features": [
+      "Everything you need to create images with AI.",
+      "Magical AI art tool.",
+      "Generate original images, modify existing ones, expand pictures beyond its original borders, and more."
+    ],
+    "pricing": [
+      {
+        "plan": "Free Trial",
+        "price_per_month": 0,
+        "features": [
+          "Limited access"
+        ]
+      }
+    ],
+    "pros": [
+      "Everything you need to create images with AI. Magical AI art tool. Generate original images, modify ..."
+    ],
+    "cons": [
+      "Pricing details may vary"
+    ],
+    "rating": 4,
+    "benchmarks": {
+      "speed": 7,
+      "accuracy": 7,
+      "integration": 6,
+      "ease_of_use": 7,
+      "value": 7
+    },
+    "website": "https://www.insidr.ai/aff/getimg",
+    "lastUpdated": "2025-09-20T18:44:45.760Z",
+    "source": "insidr-ai-multi-page"
+  },
+  {
+    "id": "gocharlie",
+    "name": "GoCharlie",
+    "slug": "gocharlie",
+    "description": "Create widescreen, vertical, and 4K pictures from text. You can also use the image to get a text that fits.",
+    "category": "AI Image and Art Generators and Editors",
+    "logo": "/images/tools/gocharlie-logo.svg",
+    "features": [
+      "Create widescreen, vertical, and 4K pictures from text.",
+      "You can also use the image to get a text that fits."
+    ],
+    "pricing": [
+      {
+        "plan": "Free Trial",
+        "price_per_month": 0,
+        "features": [
+          "Limited access"
+        ]
+      }
+    ],
+    "pros": [
+      "Create widescreen, vertical, and 4K pictures from text. You can also use the image to get a text tha..."
+    ],
+    "cons": [
+      "Pricing details may vary"
+    ],
+    "rating": 4,
+    "benchmarks": {
+      "speed": 7,
+      "accuracy": 7,
+      "integration": 6,
+      "ease_of_use": 7,
+      "value": 7
+    },
+    "website": "https://www.insidr.ai/aff/gocharlie",
+    "lastUpdated": "2025-09-20T18:44:45.760Z",
+    "source": "insidr-ai-multi-page"
+  },
+  {
+    "id": "adcreative",
+    "name": "AdCreative",
+    "slug": "adcreative",
+    "description": "With AI-powered creatives created in only a few seconds, AdCreative.ai enhances your marketing potential. Be one step ahead of the competition with the help of the AI-text generator and real-time information about the success of your marketing. The AI tool will keep learning and become better every day. You can create endless amounts of posts in no time, and increase conversions by 14 times.",
+    "category": "AI Tools for marketing & social media",
+    "logo": "/images/tools/adcreative-logo.svg",
+    "features": [
+      "With AI-powered creatives created in only a few seconds, AdCreative.ai enhances your marketing potential.",
+      "Be one step ahead of the competition with the help of the AI-text generator and real-time information about the success of your marketing.",
+      "The AI tool will keep learning and become better every day.",
+      "You can create endless amounts of posts in no time, and increase conversions by 14 times."
+    ],
+    "pricing": [
+      {
+        "plan": "Free Trial",
+        "price_per_month": 0,
+        "features": [
+          "Limited access"
+        ]
+      }
+    ],
+    "pros": [
+      "With AI-powered creatives created in only a few seconds, AdCreative.ai enhances your marketing poten..."
+    ],
+    "cons": [
+      "Pricing details may vary"
+    ],
+    "rating": 4,
+    "benchmarks": {
+      "speed": 7,
+      "accuracy": 7,
+      "integration": 6,
+      "ease_of_use": 7,
+      "value": 7
+    },
+    "website": "https://www.insidr.ai/aff/AdCreative",
+    "lastUpdated": "2025-09-20T18:44:45.760Z",
+    "source": "insidr-ai-multi-page"
+  },
+  {
+    "id": "repurpose",
+    "name": "Repurpose",
+    "slug": "repurpose",
+    "description": "This web app helps you repurpose all of your content and republish to other channels. This means you can post on instagram and use the ai powered platform to upload your content automatically to another platform. This enables you to upload and stay consistent on every platform.",
+    "category": "AI Tools for marketing & social media",
+    "logo": "/images/tools/repurpose-logo.svg",
+    "features": [
+      "This web app helps you repurpose all of your content and republish to other channels.",
+      "This means you can post on instagram and use the ai powered platform to upload your content automatically to another platform.",
+      "This enables you to upload and stay consistent on every platform."
+    ],
+    "pricing": [
+      {
+        "plan": "Free Trial",
+        "price_per_month": 0,
+        "features": [
+          "Limited access"
+        ]
+      }
+    ],
+    "pros": [
+      "This web app helps you repurpose all of your content and republish to other channels. This means you..."
+    ],
+    "cons": [
+      "Pricing details may vary"
+    ],
+    "rating": 4,
+    "benchmarks": {
+      "speed": 7,
+      "accuracy": 7,
+      "integration": 6,
+      "ease_of_use": 7,
+      "value": 7
+    },
+    "website": "https://www.insidr.ai/aff/Repurpose",
+    "lastUpdated": "2025-09-20T18:44:45.760Z",
+    "source": "insidr-ai-multi-page"
+  },
+  {
+    "id": "mubert",
+    "name": "Mubert",
+    "slug": "mubert",
+    "description": "Mubert is a new royalty-free music ecosystem for content creators, brands and developers. High-Quality Music Can Elevate Your Content.",
+    "category": "Artificial intelligence tools for Audio Generators & Music",
+    "logo": "/images/tools/mubert-logo.svg",
+    "features": [
+      "Mubert is a new royalty-free music ecosystem for content creators, brands and developers.",
+      "High-Quality Music Can Elevate Your Content."
+    ],
+    "pricing": [
+      {
+        "plan": "Free",
+        "price_per_month": 0,
+        "features": [
+          "Mubert is a new royalty-free music ecosystem for content creators, brands and developers.",
+          "High-Quality Music Can Elevate Your Content."
+        ]
+      }
+    ],
+    "pros": [
+      "Mubert is a new royalty-free music ecosystem for content creators, brands and developers. High-Quali..."
+    ],
+    "cons": [
+      "Pricing details may vary"
+    ],
+    "rating": 4,
+    "benchmarks": {
+      "speed": 7,
+      "accuracy": 7,
+      "integration": 6,
+      "ease_of_use": 7,
+      "value": 7
+    },
+    "website": "https://www.insidr.ai/aff/Mubert",
+    "lastUpdated": "2025-09-20T18:44:45.760Z",
+    "source": "insidr-ai-multi-page"
+  },
+  {
+    "id": "podcastle",
+    "name": "Podcastle",
+    "slug": "podcastle",
+    "description": "The One-Stop Shop for Broadcast Storytelling. Great tool for podcasters or anyone who deals with long-form video creation. Studio-quality recording, professional editing, and seamless exporting – all in a single web-based platform.",
+    "category": "Artificial intelligence tools for Audio Generators & Music",
+    "logo": "/images/tools/podcastle-logo.svg",
+    "features": [
+      "The One-Stop Shop for Broadcast Storytelling.",
+      "Great tool for podcasters or anyone who deals with long-form video creation.",
+      "Studio-quality recording, professional editing, and seamless exporting – all in a single web-based platform."
+    ],
+    "pricing": [
+      {
+        "plan": "Free Trial",
+        "price_per_month": 0,
+        "features": [
+          "Limited access"
+        ]
+      }
+    ],
+    "pros": [
+      "The One-Stop Shop for Broadcast Storytelling. Great tool for podcasters or anyone who deals with lon..."
+    ],
+    "cons": [
+      "Pricing details may vary"
+    ],
+    "rating": 4,
+    "benchmarks": {
+      "speed": 7,
+      "accuracy": 7,
+      "integration": 6,
+      "ease_of_use": 7,
+      "value": 7
+    },
+    "website": "https://www.insidr.ai/aff/Podcastle",
+    "lastUpdated": "2025-09-20T18:44:45.760Z",
+    "source": "insidr-ai-multi-page"
+  },
+  {
+    "id": "regie",
+    "name": "Regie",
+    "slug": "regie",
+    "description": "Regie helps sales, marketing, and success teams write engaging content faster using AI",
+    "category": "AI Sales",
+    "logo": "/images/tools/regie-logo.svg",
+    "features": [
+      "Helps sales, marketing, and success teams write engaging content faster using AI"
+    ],
+    "pricing": [
+      {
+        "plan": "Free",
+        "price_per_month": 0,
+        "features": [
+          "Limited features"
+        ]
+      },
+      {
+        "plan": "Pro",
+        "price_per_month": 29,
+        "features": [
+          "Helps sales, marketing, and success teams write engaging content faster using AI"
+        ]
+      }
+    ],
+    "pros": [
+      "Regie helps sales, marketing, and success teams write engaging content faster using AI..."
+    ],
+    "cons": [
+      "Pricing details may vary"
+    ],
+    "rating": 4,
+    "benchmarks": {
+      "speed": 7,
+      "accuracy": 7,
+      "integration": 6,
+      "ease_of_use": 7,
+      "value": 7
+    },
+    "website": "https://www.insidr.ai/aff/regie",
+    "lastUpdated": "2025-09-20T18:44:46.721Z",
+    "source": "insidr-ai-multi-page"
+  },
+  {
+    "id": "outplayhq",
+    "name": "Outplayhq",
+    "slug": "outplayhq",
+    "description": "Outplay is an all-in-one multichannel sales engagement platform that helps sales teams close more deals and significantly increase revenue.",
+    "category": "AI Sales",
+    "logo": "/images/tools/outplayhq-logo.svg",
+    "features": [
+      "All-in-one multichannel sales engagement platform",
+      "Helps sales teams close more deals",
+      "Increase revenue"
+    ],
+    "pricing": [
+      {
+        "plan": "Free",
+        "price_per_month": 0,
+        "features": [
+          "Limited features"
+        ]
+      },
+      {
+        "plan": "Pro",
+        "price_per_month": 29,
+        "features": [
+          "All-in-one multichannel sales engagement platform",
+          "Helps sales teams close more deals",
+          "Increase revenue"
+        ]
+      }
+    ],
+    "pros": [
+      "Outplay is an all-in-one multichannel sales engagement platform that helps sales teams close more de..."
+    ],
+    "cons": [
+      "Pricing details may vary"
+    ],
+    "rating": 4,
+    "benchmarks": {
+      "speed": 7,
+      "accuracy": 7,
+      "integration": 6,
+      "ease_of_use": 7,
+      "value": 7
+    },
+    "website": "https://www.insidr.ai/aff/outplayhq",
+    "lastUpdated": "2025-09-20T18:44:46.721Z",
+    "source": "insidr-ai-multi-page"
+  },
+  {
+    "id": "drift",
+    "name": "Drift",
+    "slug": "drift",
+    "description": "Drift is an AI-powered buyer engagement platform that automates conversations with website visitors to personalize experiences, qualify leads, and increase sales efficiency using conversational marketing and sales tools.",
+    "category": "AI Sales",
+    "logo": "/images/tools/drift-logo.svg",
+    "features": [
+      "AI-powered buyer engagement platform",
+      "Automates conversations with website visitors",
+      "Personalize experiences",
+      "Qualify leads",
+      "Increase sales efficiency"
+    ],
+    "pricing": [
+      {
+        "plan": "Free Trial",
+        "price_per_month": 0,
+        "features": [
+          "Limited access"
+        ]
+      }
+    ],
+    "pros": [
+      "Drift is an AI-powered buyer engagement platform that automates conversations with website visitors ..."
+    ],
+    "cons": [
+      "Pricing details may vary"
+    ],
+    "rating": 4,
+    "benchmarks": {
+      "speed": 7,
+      "accuracy": 7,
+      "integration": 6,
+      "ease_of_use": 7,
+      "value": 7
+    },
+    "website": "https://www.insidr.ai/aff/drift",
+    "lastUpdated": "2025-09-20T18:44:46.721Z",
+    "source": "insidr-ai-multi-page"
+  },
+  {
+    "id": "hubspot",
+    "name": "HubSpot",
+    "slug": "hubspot",
+    "description": "HubSpot is an integrated AI-powered platform that consolidates marketing, sales, and customer service tools to help businesses grow by managing their operations efficiently and focusing on customer relationships.",
+    "category": "AI Sales",
+    "logo": "/images/tools/hubspot-logo.svg",
+    "features": [
+      "Integrated AI-powered platform",
+      "Consolidates marketing, sales, and customer service tools",
+      "Helps businesses grow by managing operations efficiently",
+      "Focus on customer relationships"
+    ],
+    "pricing": [
+      {
+        "plan": "Free Trial",
+        "price_per_month": 0,
+        "features": [
+          "Limited access"
+        ]
+      }
+    ],
+    "pros": [
+      "HubSpot is an integrated AI-powered platform that consolidates marketing, sales, and customer servic..."
+    ],
+    "cons": [
+      "Pricing details may vary"
+    ],
+    "rating": 4,
+    "benchmarks": {
+      "speed": 7,
+      "accuracy": 7,
+      "integration": 6,
+      "ease_of_use": 7,
+      "value": 7
+    },
+    "website": "https://www.insidr.ai/aff/hubspot",
+    "lastUpdated": "2025-09-20T18:44:46.721Z",
+    "source": "insidr-ai-multi-page"
+  },
+  {
+    "id": "dashly-io",
+    "name": "Dashly.io",
+    "slug": "dashly-io",
+    "description": "Dashly is a conversational marketing platform that enhances sales on websites by automating personalized outreach and lead qualification, integrating seamlessly with CRM systems without the need for coding.",
+    "category": "AI Sales",
+    "logo": "/images/tools/dashly-io-logo.svg",
+    "features": [
+      "Conversational marketing platform",
+      "Enhances sales on websites",
+      "Automates personalized outreach",
+      "Lead qualification",
+      "Integrates seamlessly with CRM systems without coding"
+    ],
+    "pricing": [
+      {
+        "plan": "Free Trial",
+        "price_per_month": 0,
+        "features": [
+          "Limited access"
+        ]
+      }
+    ],
+    "pros": [
+      "Dashly is a conversational marketing platform that enhances sales on websites by automating personal..."
+    ],
+    "cons": [
+      "Pricing details may vary"
+    ],
+    "rating": 4,
+    "benchmarks": {
+      "speed": 7,
+      "accuracy": 7,
+      "integration": 6,
+      "ease_of_use": 7,
+      "value": 7
+    },
+    "website": "https://www.insidr.ai/aff/dashly",
+    "lastUpdated": "2025-09-20T18:44:46.721Z",
+    "source": "insidr-ai-multi-page"
+  },
+  {
+    "id": "deepgram-s-transcription-tool",
+    "name": "Deepgram’s Transcription Tool",
+    "slug": "deepgram-s-transcription-tool",
+    "description": "Convert your conversations, audio files, or YouTube videos into text easily using our advanced transcription tool, which supports over 30 languages and dialects.",
+    "category": "AI Transcriber",
+    "logo": "/images/tools/deepgram-s-transcription-tool-logo.svg",
+    "features": [
+      "Convert conversations, audio files, or YouTube videos into text",
+      "Supports over 30 languages and dialects"
+    ],
+    "pricing": [
+      {
+        "plan": "Free",
+        "price_per_month": 0,
+        "features": [
+          "Limited features"
+        ]
+      },
+      {
+        "plan": "Pro",
+        "price_per_month": 29,
+        "features": [
+          "Convert conversations, audio files, or YouTube videos into text",
+          "Supports over 30 languages and dialects"
+        ]
+      }
+    ],
+    "pros": [
+      "Convert your conversations, audio files, or YouTube videos into text easily using our advanced trans..."
+    ],
+    "cons": [
+      "Pricing details may vary"
+    ],
+    "rating": 4,
+    "benchmarks": {
+      "speed": 7,
+      "accuracy": 7,
+      "integration": 6,
+      "ease_of_use": 7,
+      "value": 7
+    },
+    "website": "https://deepgram.com/free-transcription",
+    "lastUpdated": "2025-09-20T18:44:46.722Z",
+    "source": "insidr-ai-multi-page"
+  },
+  {
+    "id": "notion",
+    "name": "Notion",
+    "slug": "notion",
+    "description": "Leverage the limitless power of AI in any Notion page. Write faster, think bigger, good for note taking, and augments creativity. The tool has various tools you can use. All you wiki’s, docs and projects in one place. Notion is the connected workspace where better, faster work happens. It enables your business to increase efficiency and optimize workflows. Notion is the best artificial intelligence tool for workspaces, productivity, and also for writing texts for all purposes. All you data in one place for your business.",
+    "category": "Top 7 free AI tools",
+    "logo": "/images/tools/notion-logo.svg",
+    "features": [
+      "Leverage AI in any Notion page",
+      "Write faster",
+      "Think bigger",
+      "Augments creativity",
+      "All wikis, docs and projects in one place",
+      "Connected workspace for better, faster work",
+      "Increase efficiency",
+      "Optimize workflows"
+    ],
+    "pricing": [
+      {
+        "plan": "Free",
+        "price_per_month": 0,
+        "features": [
+          "Leverage AI in any Notion page",
+          "Write faster",
+          "Think bigger",
+          "Augments creativity",
+          "All wikis, docs and projects in one place",
+          "Connected workspace for better, faster work",
+          "Increase efficiency",
+          "Optimize workflows"
+        ]
+      }
+    ],
+    "pros": [
+      "Leverage the limitless power of AI in any Notion page. Write faster, think bigger, good for note tak..."
+    ],
+    "cons": [
+      "Pricing details may vary"
+    ],
+    "rating": 4,
+    "benchmarks": {
+      "speed": 7,
+      "accuracy": 7,
+      "integration": 6,
+      "ease_of_use": 7,
+      "value": 7
+    },
+    "website": "https://www.notion.so/",
+    "lastUpdated": "2025-09-20T18:44:46.722Z",
+    "source": "insidr-ai-multi-page"
+  },
+  {
+    "id": "dall-e-2",
+    "name": "Dall-E 2",
+    "slug": "dall-e-2",
+    "description": "A free, open-source picture generator that makes use of artificial intelligence is called Dall-E 2. You just put your request into the box provided, and Dall-E 2 takes care of the rest to produce a photo you may download. Dall-E 2 still creates beautiful images even after you add specifications and broaden your instructions as you choose. You use prompts to get the outcome. You can always add comments to get better responses.",
+    "category": "Top 7 free AI tools",
+    "logo": "/images/tools/dall-e-2-logo.svg",
+    "features": [
+      "Free, open-source picture generator",
+      "Uses artificial intelligence",
+      "Produce a photo you may download",
+      "Creates beautiful images",
+      "Add specifications and broaden instructions"
+    ],
+    "pricing": [
+      {
+        "plan": "Free",
+        "price_per_month": 0,
+        "features": [
+          "Free, open-source picture generator",
+          "Uses artificial intelligence",
+          "Produce a photo you may download",
+          "Creates beautiful images",
+          "Add specifications and broaden instructions"
+        ]
+      }
+    ],
+    "pros": [
+      "A free, open-source picture generator that makes use of artificial intelligence is called Dall-E 2. ..."
+    ],
+    "cons": [
+      "Pricing details may vary"
+    ],
+    "rating": 4,
+    "benchmarks": {
+      "speed": 7,
+      "accuracy": 7,
+      "integration": 6,
+      "ease_of_use": 7,
+      "value": 7
+    },
+    "website": "https://openai.com/dall-e-2",
+    "lastUpdated": "2025-09-20T18:44:46.722Z",
+    "source": "insidr-ai-multi-page"
+  },
+  {
+    "id": "point-e",
+    "name": "Point-E",
+    "slug": "point-e",
+    "description": "This instrument is also a product of OpenAI. Point-E uses prompts to assist users in creating 3D models. To provide results, it combines the “text to images” and “images to 3D model” algorithms. A 3D model with coordinates that you may rotate and reorient in the 3D coordinate system is included in the final results. There are no registration or login requirements to utilize Point-E.",
+    "category": "Top 7 free AI tools",
+    "logo": "/images/tools/point-e-logo.svg",
+    "features": [
+      "Product of OpenAI",
+      "Uses prompts to assist users in creating 3D models",
+      "Combines \"text to images\" and \"images to 3D model\" algorithms",
+      "3D model with coordinates that you may rotate and reorient"
+    ],
+    "pricing": [
+      {
+        "plan": "Free",
+        "price_per_month": 0,
+        "features": [
+          "Product of OpenAI",
+          "Uses prompts to assist users in creating 3D models",
+          "Combines \"text to images\" and \"images to 3D model\" algorithms",
+          "3D model with coordinates that you may rotate and reorient"
+        ]
+      }
+    ],
+    "pros": [
+      "This instrument is also a product of OpenAI. Point-E uses prompts to assist users in creating 3D mod..."
+    ],
+    "cons": [
+      "Pricing details may vary"
+    ],
+    "rating": 4,
+    "benchmarks": {
+      "speed": 7,
+      "accuracy": 7,
+      "integration": 6,
+      "ease_of_use": 7,
+      "value": 7
+    },
+    "website": "https://openai.com/point-e",
+    "lastUpdated": "2025-09-20T18:44:46.722Z",
+    "source": "insidr-ai-multi-page"
+  }
+]

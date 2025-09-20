@@ -1,8 +1,8 @@
 {
-  "timestamp": "2025-09-20T18:26:10.264Z",
+  "timestamp": "2025-09-20T18:54:13.628Z",
   "summary": {
-    "totalTools": 744,
-    "validSchemas": 744,
+    "totalTools": 1040,
+    "validSchemas": 1040,
     "invalidSchemas": 0,
     "totalIssues": 0,
     "successRate": 100

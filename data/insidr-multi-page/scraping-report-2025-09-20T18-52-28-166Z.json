@@ -1,0 +1,478 @@
+{
+  "timestamp": "2025-09-20T18:52:28.172Z",
+  "scrapeRange": "pages 2-42",
+  "testMode": false,
+  "statistics": {
+    "totalPages": 41,
+    "successfulPages": 37,
+    "failedPages": 4,
+    "totalToolsScraped": 1136,
+    "totalNewTools": 299,
+    "totalDuplicates": 808,
+    "totalFakeTools": 29
+  },
+  "pageResults": [
+    {
+      "pageNum": 2,
+      "url": "https://www.insidr.ai/ai-tools/page/2/",
+      "success": true,
+      "toolsFound": 33,
+      "newTools": 4,
+      "duplicates": 28,
+      "fakeTools": 1,
+      "error": null
+    },
+    {
+      "pageNum": 3,
+      "url": "https://www.insidr.ai/ai-tools/page/3/",
+      "success": false,
+      "toolsFound": 0,
+      "newTools": 0,
+      "duplicates": 0,
+      "fakeTools": 0,
+      "error": "No response received while trying to scrape URL. This may be a network error or the server is unreachable."
+    },
+    {
+      "pageNum": 4,
+      "url": "https://www.insidr.ai/ai-tools/page/4/",
+      "success": true,
+      "toolsFound": 33,
+      "newTools": 15,
+      "duplicates": 17,
+      "fakeTools": 1,
+      "error": null
+    },
+    {
+      "pageNum": 5,
+      "url": "https://www.insidr.ai/ai-tools/page/5/",
+      "success": false,
+      "toolsFound": 0,
+      "newTools": 0,
+      "duplicates": 0,
+      "fakeTools": 0,
+      "error": "No response received while trying to scrape URL. This may be a network error or the server is unreachable."
+    },
+    {
+      "pageNum": 6,
+      "url": "https://www.insidr.ai/ai-tools/page/6/",
+      "success": true,
+      "toolsFound": 35,
+      "newTools": 10,
+      "duplicates": 25,
+      "fakeTools": 0,
+      "error": null
+    },
+    {
+      "pageNum": 7,
+      "url": "https://www.insidr.ai/ai-tools/page/7/",
+      "success": true,
+      "toolsFound": 35,
+      "newTools": 9,
+      "duplicates": 26,
+      "fakeTools": 0,
+      "error": null
+    },
+    {
+      "pageNum": 8,
+      "url": "https://www.insidr.ai/ai-tools/page/8/",
+      "success": true,
+      "toolsFound": 33,
+      "newTools": 10,
+      "duplicates": 22,
+      "fakeTools": 1,
+      "error": null
+    },
+    {
+      "pageNum": 9,
+      "url": "https://www.insidr.ai/ai-tools/page/9/",
+      "success": true,
+      "toolsFound": 33,
+      "newTools": 8,
+      "duplicates": 24,
+      "fakeTools": 1,
+      "error": null
+    },
+    {
+      "pageNum": 10,
+      "url": "https://www.insidr.ai/ai-tools/page/10/",
+      "success": true,
+      "toolsFound": 35,
+      "newTools": 3,
+      "duplicates": 31,
+      "fakeTools": 1,
+      "error": null
+    },
+    {
+      "pageNum": 11,
+      "url": "https://www.insidr.ai/ai-tools/page/11/",
+      "success": true,
+      "toolsFound": 30,
+      "newTools": 10,
+      "duplicates": 18,
+      "fakeTools": 2,
+      "error": null
+    },
+    {
+      "pageNum": 12,
+      "url": "https://www.insidr.ai/ai-tools/page/12/",
+      "success": true,
+      "toolsFound": 33,
+      "newTools": 10,
+      "duplicates": 23,
+      "fakeTools": 0,
+      "error": null
+    },
+    {
+      "pageNum": 13,
+      "url": "https://www.insidr.ai/ai-tools/page/13/",
+      "success": true,
+      "toolsFound": 30,
+      "newTools": 9,
+      "duplicates": 21,
+      "fakeTools": 0,
+      "error": null
+    },
+    {
+      "pageNum": 14,
+      "url": "https://www.insidr.ai/ai-tools/page/14/",
+      "success": true,
+      "toolsFound": 35,
+      "newTools": 13,
+      "duplicates": 20,
+      "fakeTools": 2,
+      "error": null
+    },
+    {
+      "pageNum": 15,
+      "url": "https://www.insidr.ai/ai-tools/page/15/",
+      "success": true,
+      "toolsFound": 33,
+      "newTools": 4,
+      "duplicates": 28,
+      "fakeTools": 1,
+      "error": null
+    },
+    {
+      "pageNum": 16,
+      "url": "https://www.insidr.ai/ai-tools/page/16/",
+      "success": true,
+      "toolsFound": 33,
+      "newTools": 8,
+      "duplicates": 23,
+      "fakeTools": 2,
+      "error": null
+    },
+    {
+      "pageNum": 17,
+      "url": "https://www.insidr.ai/ai-tools/page/17/",
+      "success": true,
+      "toolsFound": 29,
+      "newTools": 10,
+      "duplicates": 19,
+      "fakeTools": 0,
+      "error": null
+    },
+    {
+      "pageNum": 18,
+      "url": "https://www.insidr.ai/ai-tools/page/18/",
+      "success": true,
+      "toolsFound": 33,
+      "newTools": 8,
+      "duplicates": 24,
+      "fakeTools": 1,
+      "error": null
+    },
+    {
+      "pageNum": 19,
+      "url": "https://www.insidr.ai/ai-tools/page/19/",
+      "success": true,
+      "toolsFound": 33,
+      "newTools": 8,
+      "duplicates": 24,
+      "fakeTools": 1,
+      "error": null
+    },
+    {
+      "pageNum": 20,
+      "url": "https://www.insidr.ai/ai-tools/page/20/",
+      "success": true,
+      "toolsFound": 10,
+      "newTools": 6,
+      "duplicates": 4,
+      "fakeTools": 0,
+      "error": null
+    },
+    {
+      "pageNum": 21,
+      "url": "https://www.insidr.ai/ai-tools/page/21/",
+      "success": false,
+      "toolsFound": 0,
+      "newTools": 0,
+      "duplicates": 0,
+      "fakeTools": 0,
+      "error": "Unexpected error occurred while trying to scrape URL. Status code: 502"
+    },
+    {
+      "pageNum": 22,
+      "url": "https://www.insidr.ai/ai-tools/page/22/",
+      "success": true,
+      "toolsFound": 10,
+      "newTools": 6,
+      "duplicates": 3,
+      "fakeTools": 1,
+      "error": null
+    },
+    {
+      "pageNum": 23,
+      "url": "https://www.insidr.ai/ai-tools/page/23/",
+      "success": true,
+      "toolsFound": 28,
+      "newTools": 3,
+      "duplicates": 25,
+      "fakeTools": 0,
+      "error": null
+    },
+    {
+      "pageNum": 24,
+      "url": "https://www.insidr.ai/ai-tools/page/24/",
+      "success": true,
+      "toolsFound": 48,
+      "newTools": 22,
+      "duplicates": 25,
+      "fakeTools": 1,
+      "error": null
+    },
+    {
+      "pageNum": 25,
+      "url": "https://www.insidr.ai/ai-tools/page/25/",
+      "success": false,
+      "toolsFound": 0,
+      "newTools": 0,
+      "duplicates": 0,
+      "fakeTools": 0,
+      "error": "No response received while trying to scrape URL. This may be a network error or the server is unreachable."
+    },
+    {
+      "pageNum": 26,
+      "url": "https://www.insidr.ai/ai-tools/page/26/",
+      "success": true,
+      "toolsFound": 33,
+      "newTools": 7,
+      "duplicates": 25,
+      "fakeTools": 1,
+      "error": null
+    },
+    {
+      "pageNum": 27,
+      "url": "https://www.insidr.ai/ai-tools/page/27/",
+      "success": true,
+      "toolsFound": 35,
+      "newTools": 8,
+      "duplicates": 26,
+      "fakeTools": 1,
+      "error": null
+    },
+    {
+      "pageNum": 28,
+      "url": "https://www.insidr.ai/ai-tools/page/28/",
+      "success": true,
+      "toolsFound": 30,
+      "newTools": 7,
+      "duplicates": 22,
+      "fakeTools": 1,
+      "error": null
+    },
+    {
+      "pageNum": 29,
+      "url": "https://www.insidr.ai/ai-tools/page/29/",
+      "success": true,
+      "toolsFound": 35,
+      "newTools": 8,
+      "duplicates": 26,
+      "fakeTools": 1,
+      "error": null
+    },
+    {
+      "pageNum": 30,
+      "url": "https://www.insidr.ai/ai-tools/page/30/",
+      "success": true,
+      "toolsFound": 10,
+      "newTools": 6,
+      "duplicates": 4,
+      "fakeTools": 0,
+      "error": null
+    },
+    {
+      "pageNum": 31,
+      "url": "https://www.insidr.ai/ai-tools/page/31/",
+      "success": true,
+      "toolsFound": 26,
+      "newTools": 9,
+      "duplicates": 17,
+      "fakeTools": 0,
+      "error": null
+    },
+    {
+      "pageNum": 32,
+      "url": "https://www.insidr.ai/ai-tools/page/32/",
+      "success": true,
+      "toolsFound": 27,
+      "newTools": 8,
+      "duplicates": 19,
+      "fakeTools": 0,
+      "error": null
+    },
+    {
+      "pageNum": 33,
+      "url": "https://www.insidr.ai/ai-tools/page/33/",
+      "success": true,
+      "toolsFound": 24,
+      "newTools": 6,
+      "duplicates": 18,
+      "fakeTools": 0,
+      "error": null
+    },
+    {
+      "pageNum": 34,
+      "url": "https://www.insidr.ai/ai-tools/page/34/",
+      "success": true,
+      "toolsFound": 26,
+      "newTools": 9,
+      "duplicates": 17,
+      "fakeTools": 0,
+      "error": null
+    },
+    {
+      "pageNum": 35,
+      "url": "https://www.insidr.ai/ai-tools/page/35/",
+      "success": true,
+      "toolsFound": 37,
+      "newTools": 6,
+      "duplicates": 28,
+      "fakeTools": 3,
+      "error": null
+    },
+    {
+      "pageNum": 36,
+      "url": "https://www.insidr.ai/ai-tools/page/36/",
+      "success": true,
+      "toolsFound": 25,
+      "newTools": 7,
+      "duplicates": 17,
+      "fakeTools": 1,
+      "error": null
+    },
+    {
+      "pageNum": 37,
+      "url": "https://www.insidr.ai/ai-tools/page/37/",
+      "success": true,
+      "toolsFound": 33,
+      "newTools": 10,
+      "duplicates": 22,
+      "fakeTools": 1,
+      "error": null
+    },
+    {
+      "pageNum": 38,
+      "url": "https://www.insidr.ai/ai-tools/page/38/",
+      "success": true,
+      "toolsFound": 29,
+      "newTools": 10,
+      "duplicates": 19,
+      "fakeTools": 0,
+      "error": null
+    },
+    {
+      "pageNum": 39,
+      "url": "https://www.insidr.ai/ai-tools/page/39/",
+      "success": true,
+      "toolsFound": 56,
+      "newTools": 9,
+      "duplicates": 47,
+      "fakeTools": 0,
+      "error": null
+    },
+    {
+      "pageNum": 40,
+      "url": "https://www.insidr.ai/ai-tools/page/40/",
+      "success": true,
+      "toolsFound": 26,
+      "newTools": 6,
+      "duplicates": 20,
+      "fakeTools": 0,
+      "error": null
+    },
+    {
+      "pageNum": 41,
+      "url": "https://www.insidr.ai/ai-tools/page/41/",
+      "success": true,
+      "toolsFound": 33,
+      "newTools": 7,
+      "duplicates": 25,
+      "fakeTools": 1,
+      "error": null
+    },
+    {
+      "pageNum": 42,
+      "url": "https://www.insidr.ai/ai-tools/page/42/",
+      "success": true,
+      "toolsFound": 29,
+      "newTools": 0,
+      "duplicates": 26,
+      "fakeTools": 3,
+      "error": null
+    }
+  ],
+  "sampleNewTools": [
+    {
+      "name": "CustomGPT.ai",
+      "category": "Trial",
+      "id": "customgpt-ai"
+    },
+    {
+      "name": "Leap",
+      "category": "Trial",
+      "id": "leap"
+    },
+    {
+      "name": "BeforesunsetAI",
+      "category": "Freemium",
+      "id": "beforesunsetai"
+    },
+    {
+      "name": "thoughtly",
+      "category": "N/A",
+      "id": "thoughtly"
+    },
+    {
+      "name": "Regie",
+      "category": "AI Sales",
+      "id": "regie"
+    },
+    {
+      "name": "Outplayhq",
+      "category": "AI Sales",
+      "id": "outplayhq"
+    },
+    {
+      "name": "Drift",
+      "category": "AI Sales",
+      "id": "drift"
+    },
+    {
+      "name": "HubSpot",
+      "category": "AI Sales",
+      "id": "hubspot"
+    },
+    {
+      "name": "Dashly.io",
+      "category": "AI Sales",
+      "id": "dashly-io"
+    },
+    {
+      "name": "Deepgram’s Transcription Tool",
+      "category": "AI Transcriber",
+      "id": "deepgram-s-transcription-tool"
+    }
+  ]
+}

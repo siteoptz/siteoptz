@@ -1,49 +1,1494 @@
 {
-  "timestamp": "2025-09-20T18:26:06.311Z",
-  "totalTools": 744,
-  "missingLogos": 8,
-  "generatedLogos": 8,
+  "timestamp": "2025-09-20T18:53:23.787Z",
+  "totalTools": 1040,
+  "missingLogos": 297,
+  "generatedLogos": 297,
   "failedLogos": 0,
   "generatedFiles": [
+    {
+      "name": "3commas",
+      "slug": "3commas",
+      "logoPath": "/images/tools/3commas-logo.svg"
+    },
+    {
+      "name": "Academic Assistant Pro",
+      "slug": "academic-assistant-pro",
+      "logoPath": "/images/tools/academic-assistant-pro-logo.svg"
+    },
+    {
+      "name": "AdCopy",
+      "slug": "adcopy",
+      "logoPath": "/images/tools/adcopy-logo.svg"
+    },
     {
       "name": "AdCreative",
       "slug": "adcreative",
       "logoPath": "/images/tools/adcreative-logo.svg"
     },
     {
-      "name": "Chatbase",
-      "slug": "chatbase",
-      "logoPath": "/images/tools/chatbase-logo.svg"
+      "name": "Adobe Premiere Pro",
+      "slug": "adobe-premiere-pro",
+      "logoPath": "/images/tools/adobe-premiere-pro-logo.svg"
     },
     {
-      "name": "Crayo",
-      "slug": "crayo",
-      "logoPath": "/images/tools/crayo-logo.svg"
+      "name": "AI Lawyer",
+      "slug": "ai-lawyer",
+      "logoPath": "/images/tools/ai-lawyer-logo.svg"
     },
     {
-      "name": "Surfer",
-      "slug": "surfer",
-      "logoPath": "/images/tools/surfer-logo.svg"
+      "name": "AI STUDIOS by DEEPBRAIN AI",
+      "slug": "ai-studios-by-deepbrain-ai",
+      "logoPath": "/images/tools/ai-studios-by-deepbrain-ai-logo.svg"
     },
     {
-      "name": "Taskade",
-      "slug": "taskade",
-      "logoPath": "/images/tools/taskade-logo.svg"
+      "name": "AI-Writer",
+      "slug": "ai-writer",
+      "logoPath": "/images/tools/ai-writer-logo.svg"
     },
     {
-      "name": "Tugan",
-      "slug": "tugan",
-      "logoPath": "/images/tools/tugan-logo.svg"
+      "name": "AImReply",
+      "slug": "aimreply",
+      "logoPath": "/images/tools/aimreply-logo.svg"
     },
     {
-      "name": "VEED",
-      "slug": "veed",
-      "logoPath": "/images/tools/veed-logo.svg"
+      "name": "Alfred",
+      "slug": "alfred",
+      "logoPath": "/images/tools/alfred-logo.svg"
     },
     {
-      "name": "WellSaid",
-      "slug": "wellsaid",
-      "logoPath": "/images/tools/wellsaid-logo.svg"
+      "name": "Altered",
+      "slug": "altered",
+      "logoPath": "/images/tools/altered-logo.svg"
+    },
+    {
+      "name": "Anyword",
+      "slug": "anyword",
+      "logoPath": "/images/tools/anyword-logo.svg"
+    },
+    {
+      "name": "Art Style Explorer",
+      "slug": "art-style-explorer",
+      "logoPath": "/images/tools/art-style-explorer-logo.svg"
+    },
+    {
+      "name": "Artsmart",
+      "slug": "artsmart",
+      "logoPath": "/images/tools/artsmart-logo.svg"
+    },
+    {
+      "name": "AudioNotes.ai",
+      "slug": "audionotes-ai",
+      "logoPath": "/images/tools/audionotes-ai-logo.svg"
+    },
+    {
+      "name": "Automateed",
+      "slug": "automateed",
+      "logoPath": "/images/tools/automateed-logo.svg"
+    },
+    {
+      "name": "AVClabs",
+      "slug": "avclabs",
+      "logoPath": "/images/tools/avclabs-logo.svg"
+    },
+    {
+      "name": "beehiiv",
+      "slug": "beehiiv",
+      "logoPath": "/images/tools/beehiiv-logo.svg"
+    },
+    {
+      "name": "BeforesunsetAI",
+      "slug": "beforesunsetai",
+      "logoPath": "/images/tools/beforesunsetai-logo.svg"
+    },
+    {
+      "name": "Bertha",
+      "slug": "bertha",
+      "logoPath": "/images/tools/bertha-logo.svg"
+    },
+    {
+      "name": "BHuman",
+      "slug": "bhuman",
+      "logoPath": "/images/tools/bhuman-logo.svg"
+    },
+    {
+      "name": "Bitsgap",
+      "slug": "bitsgap",
+      "logoPath": "/images/tools/bitsgap-logo.svg"
+    },
+    {
+      "name": "Boomy",
+      "slug": "boomy",
+      "logoPath": "/images/tools/boomy-logo.svg"
+    },
+    {
+      "name": "BotNation",
+      "slug": "botnation",
+      "logoPath": "/images/tools/botnation-logo.svg"
+    },
+    {
+      "name": "Botowski",
+      "slug": "botowski",
+      "logoPath": "/images/tools/botowski-logo.svg"
+    },
+    {
+      "name": "Botrush.ai",
+      "slug": "botrush-ai",
+      "logoPath": "/images/tools/botrush-ai-logo.svg"
+    },
+    {
+      "name": "Bubble",
+      "slug": "bubble",
+      "logoPath": "/images/tools/bubble-logo.svg"
+    },
+    {
+      "name": "Camp",
+      "slug": "camp",
+      "logoPath": "/images/tools/camp-logo.svg"
+    },
+    {
+      "name": "Canva",
+      "slug": "canva",
+      "logoPath": "/images/tools/canva-logo.svg"
+    },
+    {
+      "name": "ChopShop",
+      "slug": "chopshop",
+      "logoPath": "/images/tools/chopshop-logo.svg"
+    },
+    {
+      "name": "Clara",
+      "slug": "clara",
+      "logoPath": "/images/tools/clara-logo.svg"
+    },
+    {
+      "name": "ClickFunnels",
+      "slug": "clickfunnels",
+      "logoPath": "/images/tools/clickfunnels-logo.svg"
+    },
+    {
+      "name": "Closers Copy",
+      "slug": "closers-copy",
+      "logoPath": "/images/tools/closers-copy-logo.svg"
+    },
+    {
+      "name": "Coachvox",
+      "slug": "coachvox",
+      "logoPath": "/images/tools/coachvox-logo.svg"
+    },
+    {
+      "name": "Coconaut",
+      "slug": "coconaut",
+      "logoPath": "/images/tools/coconaut-logo.svg"
+    },
+    {
+      "name": "CodeDesign",
+      "slug": "codedesign",
+      "logoPath": "/images/tools/codedesign-logo.svg"
+    },
+    {
+      "name": "Codeium",
+      "slug": "codeium",
+      "logoPath": "/images/tools/codeium-logo.svg"
+    },
+    {
+      "name": "Cody",
+      "slug": "cody",
+      "logoPath": "/images/tools/cody-logo.svg"
+    },
+    {
+      "name": "Cohesive",
+      "slug": "cohesive",
+      "logoPath": "/images/tools/cohesive-logo.svg"
+    },
+    {
+      "name": "Colorful Laser Lights Stage Effects Free Background Videos, No Copyright",
+      "slug": "colorful-laser-lights-stage-effects-free-background-videos-no-copyright",
+      "logoPath": "/images/tools/colorful-laser-lights-stage-effects-free-background-videos-no-copyright-logo.svg"
+    },
+    {
+      "name": "Colorful Rays Free Background Videos, No Copyright Background",
+      "slug": "colorful-rays-free-background-videos-no-copyright-background",
+      "logoPath": "/images/tools/colorful-rays-free-background-videos-no-copyright-background-logo.svg"
+    },
+    {
+      "name": "Colossyan",
+      "slug": "colossyan",
+      "logoPath": "/images/tools/colossyan-logo.svg"
+    },
+    {
+      "name": "Compose AI",
+      "slug": "compose-ai",
+      "logoPath": "/images/tools/compose-ai-logo.svg"
+    },
+    {
+      "name": "ContentBot.ai",
+      "slug": "contentbot-ai",
+      "logoPath": "/images/tools/contentbot-ai-logo.svg"
+    },
+    {
+      "name": "Convertri",
+      "slug": "convertri",
+      "logoPath": "/images/tools/convertri-logo.svg"
+    },
+    {
+      "name": "Convolo",
+      "slug": "convolo",
+      "logoPath": "/images/tools/convolo-logo.svg"
+    },
+    {
+      "name": "Copygenius",
+      "slug": "copygenius",
+      "logoPath": "/images/tools/copygenius-logo.svg"
+    },
+    {
+      "name": "CopyMonkey",
+      "slug": "copymonkey",
+      "logoPath": "/images/tools/copymonkey-logo.svg"
+    },
+    {
+      "name": "Cortana",
+      "slug": "cortana",
+      "logoPath": "/images/tools/cortana-logo.svg"
+    },
+    {
+      "name": "Coursebox",
+      "slug": "coursebox",
+      "logoPath": "/images/tools/coursebox-logo.svg"
+    },
+    {
+      "name": "Coverdoc.ai",
+      "slug": "coverdoc-ai",
+      "logoPath": "/images/tools/coverdoc-ai-logo.svg"
+    },
+    {
+      "name": "Cramly.ai",
+      "slug": "cramly-ai",
+      "logoPath": "/images/tools/cramly-ai-logo.svg"
+    },
+    {
+      "name": "CrawlQ",
+      "slug": "crawlq",
+      "logoPath": "/images/tools/crawlq-logo.svg"
+    },
+    {
+      "name": "Creaitor",
+      "slug": "creaitor",
+      "logoPath": "/images/tools/creaitor-logo.svg"
+    },
+    {
+      "name": "Creative Writing Coach",
+      "slug": "creative-writing-coach",
+      "logoPath": "/images/tools/creative-writing-coach-logo.svg"
+    },
+    {
+      "name": "CryptoHero",
+      "slug": "cryptohero",
+      "logoPath": "/images/tools/cryptohero-logo.svg"
+    },
+    {
+      "name": "CryptoHopper",
+      "slug": "cryptohopper",
+      "logoPath": "/images/tools/cryptohopper-logo.svg"
+    },
+    {
+      "name": "CSVIBES",
+      "slug": "csvibes",
+      "logoPath": "/images/tools/csvibes-logo.svg"
+    },
+    {
+      "name": "CTRify",
+      "slug": "ctrify",
+      "logoPath": "/images/tools/ctrify-logo.svg"
+    },
+    {
+      "name": "CustomGPT.ai",
+      "slug": "customgpt-ai",
+      "logoPath": "/images/tools/customgpt-ai-logo.svg"
+    },
+    {
+      "name": "Cutout.pro",
+      "slug": "cutout-pro",
+      "logoPath": "/images/tools/cutout-pro-logo.svg"
+    },
+    {
+      "name": "Dall-E 2",
+      "slug": "dall-e-2",
+      "logoPath": "/images/tools/dall-e-2-logo.svg"
+    },
+    {
+      "name": "Dall-E 2: AI tool for image generation",
+      "slug": "dall-e-2-ai-tool-for-image-generation",
+      "logoPath": "/images/tools/dall-e-2-ai-tool-for-image-generation-logo.svg"
+    },
+    {
+      "name": "Dashly.io",
+      "slug": "dashly-io",
+      "logoPath": "/images/tools/dashly-io-logo.svg"
+    },
+    {
+      "name": "Decktopus",
+      "slug": "decktopus",
+      "logoPath": "/images/tools/decktopus-logo.svg"
+    },
+    {
+      "name": "Deepgram’s Transcription Tool",
+      "slug": "deepgram-s-transcription-tool",
+      "logoPath": "/images/tools/deepgram-s-transcription-tool-logo.svg"
+    },
+    {
+      "name": "Devi",
+      "slug": "devi",
+      "logoPath": "/images/tools/devi-logo.svg"
+    },
+    {
+      "name": "Digitalfirst.ai",
+      "slug": "digitalfirst-ai",
+      "logoPath": "/images/tools/digitalfirst-ai-logo.svg"
+    },
+    {
+      "name": "DimeADozen.AI",
+      "slug": "dimeadozen-ai",
+      "logoPath": "/images/tools/dimeadozen-ai-logo.svg"
+    },
+    {
+      "name": "DISCO Ediscovery",
+      "slug": "disco-ediscovery",
+      "logoPath": "/images/tools/disco-ediscovery-logo.svg"
+    },
+    {
+      "name": "DoNotPay",
+      "slug": "donotpay",
+      "logoPath": "/images/tools/donotpay-logo.svg"
+    },
+    {
+      "name": "Doodle",
+      "slug": "doodle",
+      "logoPath": "/images/tools/doodle-logo.svg"
+    },
+    {
+      "name": "Drift",
+      "slug": "drift",
+      "logoPath": "/images/tools/drift-logo.svg"
+    },
+    {
+      "name": "Duda",
+      "slug": "duda",
+      "logoPath": "/images/tools/duda-logo.svg"
+    },
+    {
+      "name": "Durable",
+      "slug": "durable",
+      "logoPath": "/images/tools/durable-logo.svg"
+    },
+    {
+      "name": "Dux-Soup",
+      "slug": "dux-soup",
+      "logoPath": "/images/tools/dux-soup-logo.svg"
+    },
+    {
+      "name": "DVDFab (UniFab) Video Enhancer",
+      "slug": "dvdfab-unifab-video-enhancer",
+      "logoPath": "/images/tools/dvdfab-unifab-video-enhancer-logo.svg"
+    },
+    {
+      "name": "EasyPeasy",
+      "slug": "easypeasy",
+      "logoPath": "/images/tools/easypeasy-logo.svg"
+    },
+    {
+      "name": "Elastic Email",
+      "slug": "elastic-email",
+      "logoPath": "/images/tools/elastic-email-logo.svg"
+    },
+    {
+      "name": "Elementor AI",
+      "slug": "elementor-ai",
+      "logoPath": "/images/tools/elementor-ai-logo.svg"
+    },
+    {
+      "name": "Epagestore",
+      "slug": "epagestore",
+      "logoPath": "/images/tools/epagestore-logo.svg"
+    },
+    {
+      "name": "Filmora",
+      "slug": "filmora",
+      "logoPath": "/images/tools/filmora-logo.svg"
+    },
+    {
+      "name": "FinalScout",
+      "slug": "finalscout",
+      "logoPath": "/images/tools/finalscout-logo.svg"
+    },
+    {
+      "name": "Flatlogic",
+      "slug": "flatlogic",
+      "logoPath": "/images/tools/flatlogic-logo.svg"
+    },
+    {
+      "name": "FlexClip",
+      "slug": "flexclip",
+      "logoPath": "/images/tools/flexclip-logo.svg"
+    },
+    {
+      "name": "Flick social",
+      "slug": "flick-social",
+      "logoPath": "/images/tools/flick-social-logo.svg"
+    },
+    {
+      "name": "Floating Round Side Particles Free Yellow Background Videos, No Copyright",
+      "slug": "floating-round-side-particles-free-yellow-background-videos-no-copyright",
+      "logoPath": "/images/tools/floating-round-side-particles-free-yellow-background-videos-no-copyright-logo.svg"
+    },
+    {
+      "name": "Flock Social",
+      "slug": "flock-social",
+      "logoPath": "/images/tools/flock-social-logo.svg"
+    },
+    {
+      "name": "Flowpoint",
+      "slug": "flowpoint",
+      "logoPath": "/images/tools/flowpoint-logo.svg"
+    },
+    {
+      "name": "Followr",
+      "slug": "followr",
+      "logoPath": "/images/tools/followr-logo.svg"
+    },
+    {
+      "name": "Frase.io",
+      "slug": "frase-io",
+      "logoPath": "/images/tools/frase-io-logo.svg"
+    },
+    {
+      "name": "Gajix",
+      "slug": "gajix",
+      "logoPath": "/images/tools/gajix-logo.svg"
+    },
+    {
+      "name": "Get Follower",
+      "slug": "get-follower",
+      "logoPath": "/images/tools/get-follower-logo.svg"
+    },
+    {
+      "name": "GETgenie",
+      "slug": "getgenie",
+      "logoPath": "/images/tools/getgenie-logo.svg"
+    },
+    {
+      "name": "Getimg.ai",
+      "slug": "getimg-ai",
+      "logoPath": "/images/tools/getimg-ai-logo.svg"
+    },
+    {
+      "name": "Glean",
+      "slug": "glean",
+      "logoPath": "/images/tools/glean-logo.svg"
+    },
+    {
+      "name": "Glider AI",
+      "slug": "glider-ai",
+      "logoPath": "/images/tools/glider-ai-logo.svg"
+    },
+    {
+      "name": "Go Charlie",
+      "slug": "go-charlie",
+      "logoPath": "/images/tools/go-charlie-logo.svg"
+    },
+    {
+      "name": "GoCharlie",
+      "slug": "gocharlie",
+      "logoPath": "/images/tools/gocharlie-logo.svg"
+    },
+    {
+      "name": "GoHighLevel",
+      "slug": "gohighlevel",
+      "logoPath": "/images/tools/gohighlevel-logo.svg"
+    },
+    {
+      "name": "Google Assistant",
+      "slug": "google-assistant",
+      "logoPath": "/images/tools/google-assistant-logo.svg"
+    },
+    {
+      "name": "GoZen",
+      "slug": "gozen",
+      "logoPath": "/images/tools/gozen-logo.svg"
+    },
+    {
+      "name": "Growthbar",
+      "slug": "growthbar",
+      "logoPath": "/images/tools/growthbar-logo.svg"
+    },
+    {
+      "name": "Guidde",
+      "slug": "guidde",
+      "logoPath": "/images/tools/guidde-logo.svg"
+    },
+    {
+      "name": "Haasonline",
+      "slug": "haasonline",
+      "logoPath": "/images/tools/haasonline-logo.svg"
+    },
+    {
+      "name": "HairstyleAI",
+      "slug": "hairstyleai",
+      "logoPath": "/images/tools/hairstyleai-logo.svg"
+    },
+    {
+      "name": "Healthy Chef",
+      "slug": "healthy-chef",
+      "logoPath": "/images/tools/healthy-chef-logo.svg"
+    },
+    {
+      "name": "Hellobar",
+      "slug": "hellobar",
+      "logoPath": "/images/tools/hellobar-logo.svg"
+    },
+    {
+      "name": "HitPaw Video Enhancer",
+      "slug": "hitpaw-video-enhancer",
+      "logoPath": "/images/tools/hitpaw-video-enhancer-logo.svg"
+    },
+    {
+      "name": "Hiver",
+      "slug": "hiver",
+      "logoPath": "/images/tools/hiver-logo.svg"
+    },
+    {
+      "name": "HIX.AI",
+      "slug": "hix-ai",
+      "logoPath": "/images/tools/hix-ai-logo.svg"
+    },
+    {
+      "name": "Hoppy Copy",
+      "slug": "hoppy-copy",
+      "logoPath": "/images/tools/hoppy-copy-logo.svg"
+    },
+    {
+      "name": "HubSpot",
+      "slug": "hubspot",
+      "logoPath": "/images/tools/hubspot-logo.svg"
+    },
+    {
+      "name": "Humata",
+      "slug": "humata",
+      "logoPath": "/images/tools/humata-logo.svg"
+    },
+    {
+      "name": "Hypotenuse AI",
+      "slug": "hypotenuse-ai",
+      "logoPath": "/images/tools/hypotenuse-ai-logo.svg"
+    },
+    {
+      "name": "Ikiblast",
+      "slug": "ikiblast",
+      "logoPath": "/images/tools/ikiblast-logo.svg"
+    },
+    {
+      "name": "Image Copy Machine GPT",
+      "slug": "image-copy-machine-gpt",
+      "logoPath": "/images/tools/image-copy-machine-gpt-logo.svg"
+    },
+    {
+      "name": "Image-Gen",
+      "slug": "image-gen",
+      "logoPath": "/images/tools/image-gen-logo.svg"
+    },
+    {
+      "name": "Imagine AI",
+      "slug": "imagine-ai",
+      "logoPath": "/images/tools/imagine-ai-logo.svg"
+    },
+    {
+      "name": "Indy",
+      "slug": "indy",
+      "logoPath": "/images/tools/indy-logo.svg"
+    },
+    {
+      "name": "INK",
+      "slug": "ink",
+      "logoPath": "/images/tools/ink-logo.svg"
+    },
+    {
+      "name": "InstaChamp",
+      "slug": "instachamp",
+      "logoPath": "/images/tools/instachamp-logo.svg"
+    },
+    {
+      "name": "Interstellar Dream Free Background Videos, Motion Graphics, No Copyright",
+      "slug": "interstellar-dream-free-background-videos-motion-graphics-no-copyright",
+      "logoPath": "/images/tools/interstellar-dream-free-background-videos-motion-graphics-no-copyright-logo.svg"
+    },
+    {
+      "name": "iSavantAI",
+      "slug": "isavantai",
+      "logoPath": "/images/tools/isavantai-logo.svg"
+    },
+    {
+      "name": "JOBSEARCH.COACH",
+      "slug": "jobsearch-coach",
+      "logoPath": "/images/tools/jobsearch-coach-logo.svg"
+    },
+    {
+      "name": "Juicebox",
+      "slug": "juicebox",
+      "logoPath": "/images/tools/juicebox-logo.svg"
+    },
+    {
+      "name": "Julius AI",
+      "slug": "julius-ai",
+      "logoPath": "/images/tools/julius-ai-logo.svg"
+    },
+    {
+      "name": "Junia",
+      "slug": "junia",
+      "logoPath": "/images/tools/junia-logo.svg"
+    },
+    {
+      "name": "Kafkai",
+      "slug": "kafkai",
+      "logoPath": "/images/tools/kafkai-logo.svg"
+    },
+    {
+      "name": "Klenty",
+      "slug": "klenty",
+      "logoPath": "/images/tools/klenty-logo.svg"
+    },
+    {
+      "name": "Kreateable",
+      "slug": "kreateable",
+      "logoPath": "/images/tools/kreateable-logo.svg"
+    },
+    {
+      "name": "Kua",
+      "slug": "kua",
+      "logoPath": "/images/tools/kua-logo.svg"
+    },
+    {
+      "name": "Leap",
+      "slug": "leap",
+      "logoPath": "/images/tools/leap-logo.svg"
+    },
+    {
+      "name": "Leapsome AI",
+      "slug": "leapsome-ai",
+      "logoPath": "/images/tools/leapsome-ai-logo.svg"
+    },
+    {
+      "name": "Leena AI",
+      "slug": "leena-ai",
+      "logoPath": "/images/tools/leena-ai-logo.svg"
+    },
+    {
+      "name": "LetsAsk.AI",
+      "slug": "letsask-ai",
+      "logoPath": "/images/tools/letsask-ai-logo.svg"
+    },
+    {
+      "name": "Linguix",
+      "slug": "linguix",
+      "logoPath": "/images/tools/linguix-logo.svg"
+    },
+    {
+      "name": "LinkWhisper",
+      "slug": "linkwhisper",
+      "logoPath": "/images/tools/linkwhisper-logo.svg"
+    },
+    {
+      "name": "Listnr",
+      "slug": "listnr",
+      "logoPath": "/images/tools/listnr-logo.svg"
+    },
+    {
+      "name": "Logoai",
+      "slug": "logoai",
+      "logoPath": "/images/tools/logoai-logo.svg"
+    },
+    {
+      "name": "LongShot",
+      "slug": "longshot",
+      "logoPath": "/images/tools/longshot-logo.svg"
+    },
+    {
+      "name": "Lumen5: AI tool for video generation",
+      "slug": "lumen5-ai-tool-for-video-generation",
+      "logoPath": "/images/tools/lumen5-ai-tool-for-video-generation-logo.svg"
+    },
+    {
+      "name": "Luna",
+      "slug": "luna",
+      "logoPath": "/images/tools/luna-logo.svg"
+    },
+    {
+      "name": "Magic Studio",
+      "slug": "magic-studio",
+      "logoPath": "/images/tools/magic-studio-logo.svg"
+    },
+    {
+      "name": "MailRush.io",
+      "slug": "mailrush-io",
+      "logoPath": "/images/tools/mailrush-io-logo.svg"
+    },
+    {
+      "name": "Marketing Blocks",
+      "slug": "marketing-blocks",
+      "logoPath": "/images/tools/marketing-blocks-logo.svg"
+    },
+    {
+      "name": "Media Mister",
+      "slug": "media-mister",
+      "logoPath": "/images/tools/media-mister-logo.svg"
+    },
+    {
+      "name": "Midjourney Prompt Helper",
+      "slug": "midjourney-prompt-helper",
+      "logoPath": "/images/tools/midjourney-prompt-helper-logo.svg"
+    },
+    {
+      "name": "Midjourney: Artificial intelligence tool for art images",
+      "slug": "midjourney-artificial-intelligence-tool-for-art-images",
+      "logoPath": "/images/tools/midjourney-artificial-intelligence-tool-for-art-images-logo.svg"
+    },
+    {
+      "name": "Mokker AI",
+      "slug": "mokker-ai",
+      "logoPath": "/images/tools/mokker-ai-logo.svg"
+    },
+    {
+      "name": "Moonbeam",
+      "slug": "moonbeam",
+      "logoPath": "/images/tools/moonbeam-logo.svg"
+    },
+    {
+      "name": "Morise.ai",
+      "slug": "morise-ai",
+      "logoPath": "/images/tools/morise-ai-logo.svg"
+    },
+    {
+      "name": "Mubert",
+      "slug": "mubert",
+      "logoPath": "/images/tools/mubert-logo.svg"
+    },
+    {
+      "name": "Munch",
+      "slug": "munch",
+      "logoPath": "/images/tools/munch-logo.svg"
+    },
+    {
+      "name": "Must AI",
+      "slug": "must-ai",
+      "logoPath": "/images/tools/must-ai-logo.svg"
+    },
+    {
+      "name": "Namelix",
+      "slug": "namelix",
+      "logoPath": "/images/tools/namelix-logo.svg"
+    },
+    {
+      "name": "Neon Cyber Landscape Aesthetic Free Background Videos, No Copyright",
+      "slug": "neon-cyber-landscape-aesthetic-free-background-videos-no-copyright",
+      "logoPath": "/images/tools/neon-cyber-landscape-aesthetic-free-background-videos-no-copyright-logo.svg"
+    },
+    {
+      "name": "NeuralFrames",
+      "slug": "neuralframes",
+      "logoPath": "/images/tools/neuralframes-logo.svg"
+    },
+    {
+      "name": "NightCafe Creator",
+      "slug": "nightcafe-creator",
+      "logoPath": "/images/tools/nightcafe-creator-logo.svg"
+    },
+    {
+      "name": "Notion",
+      "slug": "notion",
+      "logoPath": "/images/tools/notion-logo.svg"
+    },
+    {
+      "name": "Notion: Business and productivity with machine learning",
+      "slug": "notion-business-and-productivity-with-machine-learning",
+      "logoPath": "/images/tools/notion-business-and-productivity-with-machine-learning-logo.svg"
+    },
+    {
+      "name": "Notta",
+      "slug": "notta",
+      "logoPath": "/images/tools/notta-logo.svg"
+    },
+    {
+      "name": "Nureply",
+      "slug": "nureply",
+      "logoPath": "/images/tools/nureply-logo.svg"
+    },
+    {
+      "name": "Octopus",
+      "slug": "octopus",
+      "logoPath": "/images/tools/octopus-logo.svg"
+    },
+    {
+      "name": "Open Art",
+      "slug": "open-art",
+      "logoPath": "/images/tools/open-art-logo.svg"
+    },
+    {
+      "name": "Openbox.ai",
+      "slug": "openbox-ai",
+      "logoPath": "/images/tools/openbox-ai-logo.svg"
+    },
+    {
+      "name": "Opus Clip",
+      "slug": "opus-clip",
+      "logoPath": "/images/tools/opus-clip-logo.svg"
+    },
+    {
+      "name": "Originality.ai",
+      "slug": "originality-ai",
+      "logoPath": "/images/tools/originality-ai-logo.svg"
+    },
+    {
+      "name": "Orimon",
+      "slug": "orimon",
+      "logoPath": "/images/tools/orimon-logo.svg"
+    },
+    {
+      "name": "Otta AI",
+      "slug": "otta-ai",
+      "logoPath": "/images/tools/otta-ai-logo.svg"
+    },
+    {
+      "name": "Outplayhq",
+      "slug": "outplayhq",
+      "logoPath": "/images/tools/outplayhq-logo.svg"
+    },
+    {
+      "name": "PaceAI",
+      "slug": "paceai",
+      "logoPath": "/images/tools/paceai-logo.svg"
+    },
+    {
+      "name": "PageGenie",
+      "slug": "pagegenie",
+      "logoPath": "/images/tools/pagegenie-logo.svg"
+    },
+    {
+      "name": "Palette",
+      "slug": "palette",
+      "logoPath": "/images/tools/palette-logo.svg"
+    },
+    {
+      "name": "ParagraphAI",
+      "slug": "paragraphai",
+      "logoPath": "/images/tools/paragraphai-logo.svg"
+    },
+    {
+      "name": "Paraphrase Tool",
+      "slug": "paraphrase-tool",
+      "logoPath": "/images/tools/paraphrase-tool-logo.svg"
+    },
+    {
+      "name": "Paraphraser.io",
+      "slug": "paraphraser-io",
+      "logoPath": "/images/tools/paraphraser-io-logo.svg"
+    },
+    {
+      "name": "Parsio",
+      "slug": "parsio",
+      "logoPath": "/images/tools/parsio-logo.svg"
+    },
+    {
+      "name": "PDF Ai PDF",
+      "slug": "pdf-ai-pdf",
+      "logoPath": "/images/tools/pdf-ai-pdf-logo.svg"
+    },
+    {
+      "name": "PhantomBuster",
+      "slug": "phantombuster",
+      "logoPath": "/images/tools/phantombuster-logo.svg"
+    },
+    {
+      "name": "Phonesites",
+      "slug": "phonesites",
+      "logoPath": "/images/tools/phonesites-logo.svg"
+    },
+    {
+      "name": "PhotoAI",
+      "slug": "photoai",
+      "logoPath": "/images/tools/photoai-logo.svg"
+    },
+    {
+      "name": "Pineapple",
+      "slug": "pineapple",
+      "logoPath": "/images/tools/pineapple-logo.svg"
+    },
+    {
+      "name": "Pink Flare Particles Free Background Videos, No Copyright Background",
+      "slug": "pink-flare-particles-free-background-videos-no-copyright-background",
+      "logoPath": "/images/tools/pink-flare-particles-free-background-videos-no-copyright-background-logo.svg"
+    },
+    {
+      "name": "Pink Smoke Free Background Videos, Motion Graphics, No Copyright",
+      "slug": "pink-smoke-free-background-videos-motion-graphics-no-copyright",
+      "logoPath": "/images/tools/pink-smoke-free-background-videos-motion-graphics-no-copyright-logo.svg"
+    },
+    {
+      "name": "Pionex",
+      "slug": "pionex",
+      "logoPath": "/images/tools/pionex-logo.svg"
+    },
+    {
+      "name": "PIXLR",
+      "slug": "pixlr",
+      "logoPath": "/images/tools/pixlr-logo.svg"
+    },
+    {
+      "name": "Pixop",
+      "slug": "pixop",
+      "logoPath": "/images/tools/pixop-logo.svg"
+    },
+    {
+      "name": "PlayHT",
+      "slug": "playht",
+      "logoPath": "/images/tools/playht-logo.svg"
+    },
+    {
+      "name": "Plus AI",
+      "slug": "plus-ai",
+      "logoPath": "/images/tools/plus-ai-logo.svg"
+    },
+    {
+      "name": "Podcastle",
+      "slug": "podcastle",
+      "logoPath": "/images/tools/podcastle-logo.svg"
+    },
+    {
+      "name": "Point-E",
+      "slug": "point-e",
+      "logoPath": "/images/tools/point-e-logo.svg"
+    },
+    {
+      "name": "Point-E: Create 3D models",
+      "slug": "point-e-create-3d-models",
+      "logoPath": "/images/tools/point-e-create-3d-models-logo.svg"
+    },
+    {
+      "name": "Postaga",
+      "slug": "postaga",
+      "logoPath": "/images/tools/postaga-logo.svg"
+    },
+    {
+      "name": "Prepostseo",
+      "slug": "prepostseo",
+      "logoPath": "/images/tools/prepostseo-logo.svg"
+    },
+    {
+      "name": "Profile Picture",
+      "slug": "profile-picture",
+      "logoPath": "/images/tools/profile-picture-logo.svg"
+    },
+    {
+      "name": "Purple Flux Free Background Videos, Motion Graphics, No Copyright",
+      "slug": "purple-flux-free-background-videos-motion-graphics-no-copyright",
+      "logoPath": "/images/tools/purple-flux-free-background-videos-motion-graphics-no-copyright-logo.svg"
+    },
+    {
+      "name": "Purple Sky Free Background Videos, Motion Graphics, No Copyright",
+      "slug": "purple-sky-free-background-videos-motion-graphics-no-copyright",
+      "logoPath": "/images/tools/purple-sky-free-background-videos-motion-graphics-no-copyright-logo.svg"
+    },
+    {
+      "name": "Quality Raters SEO Guide",
+      "slug": "quality-raters-seo-guide",
+      "logoPath": "/images/tools/quality-raters-seo-guide-logo.svg"
+    },
+    {
+      "name": "Quillbot",
+      "slug": "quillbot",
+      "logoPath": "/images/tools/quillbot-logo.svg"
+    },
+    {
+      "name": "Quinyx",
+      "slug": "quinyx",
+      "logoPath": "/images/tools/quinyx-logo.svg"
+    },
+    {
+      "name": "Rankmath",
+      "slug": "rankmath",
+      "logoPath": "/images/tools/rankmath-logo.svg"
+    },
+    {
+      "name": "RankRanger",
+      "slug": "rankranger",
+      "logoPath": "/images/tools/rankranger-logo.svg"
+    },
+    {
+      "name": "Rationale",
+      "slug": "rationale",
+      "logoPath": "/images/tools/rationale-logo.svg"
+    },
+    {
+      "name": "Red Ink Water Free Background Videos, Motion Graphics, No Copyright",
+      "slug": "red-ink-water-free-background-videos-motion-graphics-no-copyright",
+      "logoPath": "/images/tools/red-ink-water-free-background-videos-motion-graphics-no-copyright-logo.svg"
+    },
+    {
+      "name": "Refrens",
+      "slug": "refrens",
+      "logoPath": "/images/tools/refrens-logo.svg"
+    },
+    {
+      "name": "Regie",
+      "slug": "regie",
+      "logoPath": "/images/tools/regie-logo.svg"
+    },
+    {
+      "name": "RepliQ",
+      "slug": "repliq",
+      "logoPath": "/images/tools/repliq-logo.svg"
+    },
+    {
+      "name": "Repurpose",
+      "slug": "repurpose",
+      "logoPath": "/images/tools/repurpose-logo.svg"
+    },
+    {
+      "name": "Runway",
+      "slug": "runway",
+      "logoPath": "/images/tools/runway-logo.svg"
+    },
+    {
+      "name": "Rythmex",
+      "slug": "rythmex",
+      "logoPath": "/images/tools/rythmex-logo.svg"
+    },
+    {
+      "name": "Samcart",
+      "slug": "samcart",
+      "logoPath": "/images/tools/samcart-logo.svg"
+    },
+    {
+      "name": "Sapling",
+      "slug": "sapling",
+      "logoPath": "/images/tools/sapling-logo.svg"
+    },
+    {
+      "name": "SceneXplain",
+      "slug": "scenexplain",
+      "logoPath": "/images/tools/scenexplain-logo.svg"
+    },
+    {
+      "name": "Scribbr",
+      "slug": "scribbr",
+      "logoPath": "/images/tools/scribbr-logo.svg"
+    },
+    {
+      "name": "Semrush’s Summarizing Tool",
+      "slug": "semrush-s-summarizing-tool",
+      "logoPath": "/images/tools/semrush-s-summarizing-tool-logo.svg"
+    },
+    {
+      "name": "SERanking",
+      "slug": "seranking",
+      "logoPath": "/images/tools/seranking-logo.svg"
+    },
+    {
+      "name": "Shakespeare AI",
+      "slug": "shakespeare-ai",
+      "logoPath": "/images/tools/shakespeare-ai-logo.svg"
+    },
+    {
+      "name": "Shopify",
+      "slug": "shopify",
+      "logoPath": "/images/tools/shopify-logo.svg"
+    },
+    {
+      "name": "ShortlyAI",
+      "slug": "shortlyai",
+      "logoPath": "/images/tools/shortlyai-logo.svg"
+    },
+    {
+      "name": "ShortPixel",
+      "slug": "shortpixel",
+      "logoPath": "/images/tools/shortpixel-logo.svg"
+    },
+    {
+      "name": "Shuffl",
+      "slug": "shuffl",
+      "logoPath": "/images/tools/shuffl-logo.svg"
+    },
+    {
+      "name": "Shutterstock AI Image Generator",
+      "slug": "shutterstock-ai-image-generator",
+      "logoPath": "/images/tools/shutterstock-ai-image-generator-logo.svg"
+    },
+    {
+      "name": "Signm",
+      "slug": "signm",
+      "logoPath": "/images/tools/signm-logo.svg"
+    },
+    {
+      "name": "Simple Phones",
+      "slug": "simple-phones",
+      "logoPath": "/images/tools/simple-phones-logo.svg"
+    },
+    {
+      "name": "Simplified",
+      "slug": "simplified",
+      "logoPath": "/images/tools/simplified-logo.svg"
+    },
+    {
+      "name": "SinCode",
+      "slug": "sincode",
+      "logoPath": "/images/tools/sincode-logo.svg"
+    },
+    {
+      "name": "SIRI",
+      "slug": "siri",
+      "logoPath": "/images/tools/siri-logo.svg"
+    },
+    {
+      "name": "SiteGround",
+      "slug": "siteground",
+      "logoPath": "/images/tools/siteground-logo.svg"
+    },
+    {
+      "name": "Slides AI",
+      "slug": "slides-ai",
+      "logoPath": "/images/tools/slides-ai-logo.svg"
+    },
+    {
+      "name": "Slidesgo",
+      "slug": "slidesgo",
+      "logoPath": "/images/tools/slidesgo-logo.svg"
+    },
+    {
+      "name": "Slidespilot",
+      "slug": "slidespilot",
+      "logoPath": "/images/tools/slidespilot-logo.svg"
+    },
+    {
+      "name": "Smartwriter",
+      "slug": "smartwriter",
+      "logoPath": "/images/tools/smartwriter-logo.svg"
+    },
+    {
+      "name": "Smili Media",
+      "slug": "smili-media",
+      "logoPath": "/images/tools/smili-media-logo.svg"
+    },
+    {
+      "name": "Smudge.ai",
+      "slug": "smudge-ai",
+      "logoPath": "/images/tools/smudge-ai-logo.svg"
+    },
+    {
+      "name": "Snov.io",
+      "slug": "snov-io",
+      "logoPath": "/images/tools/snov-io-logo.svg"
+    },
+    {
+      "name": "Socialcoffee",
+      "slug": "socialcoffee",
+      "logoPath": "/images/tools/socialcoffee-logo.svg"
+    },
+    {
+      "name": "Sofabrain",
+      "slug": "sofabrain",
+      "logoPath": "/images/tools/sofabrain-logo.svg"
+    },
+    {
+      "name": "Sous Chef",
+      "slug": "sous-chef",
+      "logoPath": "/images/tools/sous-chef-logo.svg"
+    },
+    {
+      "name": "Spellbook",
+      "slug": "spellbook",
+      "logoPath": "/images/tools/spellbook-logo.svg"
+    },
+    {
+      "name": "Spikes",
+      "slug": "spikes",
+      "logoPath": "/images/tools/spikes-logo.svg"
+    },
+    {
+      "name": "SpinBot",
+      "slug": "spinbot",
+      "logoPath": "/images/tools/spinbot-logo.svg"
+    },
+    {
+      "name": "SpinRewriter",
+      "slug": "spinrewriter",
+      "logoPath": "/images/tools/spinrewriter-logo.svg"
+    },
+    {
+      "name": "Ssemble",
+      "slug": "ssemble",
+      "logoPath": "/images/tools/ssemble-logo.svg"
+    },
+    {
+      "name": "Stable diffusion: Text to images",
+      "slug": "stable-diffusion-text-to-images",
+      "logoPath": "/images/tools/stable-diffusion-text-to-images-logo.svg"
+    },
+    {
+      "name": "Stack AI",
+      "slug": "stack-ai",
+      "logoPath": "/images/tools/stack-ai-logo.svg"
+    },
+    {
+      "name": "Stars and Music Notes Pink Free Background Videos, No Copyright",
+      "slug": "stars-and-music-notes-pink-free-background-videos-no-copyright",
+      "logoPath": "/images/tools/stars-and-music-notes-pink-free-background-videos-no-copyright-logo.svg"
+    },
+    {
+      "name": "Storyboard Hero",
+      "slug": "storyboard-hero",
+      "logoPath": "/images/tools/storyboard-hero-logo.svg"
+    },
+    {
+      "name": "Streetbeat",
+      "slug": "streetbeat",
+      "logoPath": "/images/tools/streetbeat-logo.svg"
+    },
+    {
+      "name": "SummarizeBot",
+      "slug": "summarizebot",
+      "logoPath": "/images/tools/summarizebot-logo.svg"
+    },
+    {
+      "name": "Super Meme",
+      "slug": "super-meme",
+      "logoPath": "/images/tools/super-meme-logo.svg"
+    },
+    {
+      "name": "Systeme.io",
+      "slug": "systeme-io",
+      "logoPath": "/images/tools/systeme-io-logo.svg"
+    },
+    {
+      "name": "Text Cortex",
+      "slug": "text-cortex",
+      "logoPath": "/images/tools/text-cortex-logo.svg"
+    },
+    {
+      "name": "Texta",
+      "slug": "texta",
+      "logoPath": "/images/tools/texta-logo.svg"
+    },
+    {
+      "name": "Thanos",
+      "slug": "thanos",
+      "logoPath": "/images/tools/thanos-logo.svg"
+    },
+    {
+      "name": "ThemAIGuys",
+      "slug": "themaiguys",
+      "logoPath": "/images/tools/themaiguys-logo.svg"
+    },
+    {
+      "name": "thoughtly",
+      "slug": "thoughtly",
+      "logoPath": "/images/tools/thoughtly-logo.svg"
+    },
+    {
+      "name": "TickerOn",
+      "slug": "tickeron",
+      "logoPath": "/images/tools/tickeron-logo.svg"
+    },
+    {
+      "name": "Tiledesk",
+      "slug": "tiledesk",
+      "logoPath": "/images/tools/tiledesk-logo.svg"
+    },
+    {
+      "name": "Tinq.ai",
+      "slug": "tinq-ai",
+      "logoPath": "/images/tools/tinq-ai-logo.svg"
+    },
+    {
+      "name": "TinyEinstein",
+      "slug": "tinyeinstein",
+      "logoPath": "/images/tools/tinyeinstein-logo.svg"
+    },
+    {
+      "name": "TLDR This",
+      "slug": "tldr-this",
+      "logoPath": "/images/tools/tldr-this-logo.svg"
+    },
+    {
+      "name": "Tome",
+      "slug": "tome",
+      "logoPath": "/images/tools/tome-logo.svg"
+    },
+    {
+      "name": "Topaz Video AI",
+      "slug": "topaz-video-ai",
+      "logoPath": "/images/tools/topaz-video-ai-logo.svg"
+    },
+    {
+      "name": "TrendSpider",
+      "slug": "trendspider",
+      "logoPath": "/images/tools/trendspider-logo.svg"
+    },
+    {
+      "name": "Tutor AI",
+      "slug": "tutor-ai",
+      "logoPath": "/images/tools/tutor-ai-logo.svg"
+    },
+    {
+      "name": "Typli.ai",
+      "slug": "typli-ai",
+      "logoPath": "/images/tools/typli-ai-logo.svg"
+    },
+    {
+      "name": "Validator AI",
+      "slug": "validator-ai",
+      "logoPath": "/images/tools/validator-ai-logo.svg"
+    },
+    {
+      "name": "VedVaani",
+      "slug": "vedvaani",
+      "logoPath": "/images/tools/vedvaani-logo.svg"
+    },
+    {
+      "name": "Veg3",
+      "slug": "veg3",
+      "logoPath": "/images/tools/veg3-logo.svg"
+    },
+    {
+      "name": "Vestinda",
+      "slug": "vestinda",
+      "logoPath": "/images/tools/vestinda-logo.svg"
+    },
+    {
+      "name": "Video Maker by invideo AI",
+      "slug": "video-maker-by-invideo-ai",
+      "logoPath": "/images/tools/video-maker-by-invideo-ai-logo.svg"
+    },
+    {
+      "name": "VideoProc Converter AI",
+      "slug": "videoproc-converter-ai",
+      "logoPath": "/images/tools/videoproc-converter-ai-logo.svg"
+    },
+    {
+      "name": "VidlQ",
+      "slug": "vidlq",
+      "logoPath": "/images/tools/vidlq-logo.svg"
+    },
+    {
+      "name": "ViralKit",
+      "slug": "viralkit",
+      "logoPath": "/images/tools/viralkit-logo.svg"
+    },
+    {
+      "name": "VirtuLook",
+      "slug": "virtulook",
+      "logoPath": "/images/tools/virtulook-logo.svg"
+    },
+    {
+      "name": "Vmake’s AI Video Enhancer",
+      "slug": "vmake-s-ai-video-enhancer",
+      "logoPath": "/images/tools/vmake-s-ai-video-enhancer-logo.svg"
+    },
+    {
+      "name": "Voice/Style/Tone AI Prompt Snippet Generator",
+      "slug": "voice-style-tone-ai-prompt-snippet-generator",
+      "logoPath": "/images/tools/voice-style-tone-ai-prompt-snippet-generator-logo.svg"
+    },
+    {
+      "name": "Voicestars",
+      "slug": "voicestars",
+      "logoPath": "/images/tools/voicestars-logo.svg"
+    },
+    {
+      "name": "Vondy",
+      "slug": "vondy",
+      "logoPath": "/images/tools/vondy-logo.svg"
+    },
+    {
+      "name": "Vwo",
+      "slug": "vwo",
+      "logoPath": "/images/tools/vwo-logo.svg"
+    },
+    {
+      "name": "Wallpea",
+      "slug": "wallpea",
+      "logoPath": "/images/tools/wallpea-logo.svg"
+    },
+    {
+      "name": "What to Watch",
+      "slug": "what-to-watch",
+      "logoPath": "/images/tools/what-to-watch-logo.svg"
+    },
+    {
+      "name": "White Fabric Wind Free Background Videos, Motion Graphics, No Copyright",
+      "slug": "white-fabric-wind-free-background-videos-motion-graphics-no-copyright",
+      "logoPath": "/images/tools/white-fabric-wind-free-background-videos-motion-graphics-no-copyright-logo.svg"
+    },
+    {
+      "name": "Winston AI",
+      "slug": "winston-ai",
+      "logoPath": "/images/tools/winston-ai-logo.svg"
+    },
+    {
+      "name": "WiziShop",
+      "slug": "wizishop",
+      "logoPath": "/images/tools/wizishop-logo.svg"
+    },
+    {
+      "name": "Wonderchat",
+      "slug": "wonderchat",
+      "logoPath": "/images/tools/wonderchat-logo.svg"
+    },
+    {
+      "name": "WordAI",
+      "slug": "wordai",
+      "logoPath": "/images/tools/wordai-logo.svg"
+    },
+    {
+      "name": "Wordhero",
+      "slug": "wordhero",
+      "logoPath": "/images/tools/wordhero-logo.svg"
+    },
+    {
+      "name": "WordTune",
+      "slug": "wordtune",
+      "logoPath": "/images/tools/wordtune-logo.svg"
+    },
+    {
+      "name": "Workable",
+      "slug": "workable",
+      "logoPath": "/images/tools/workable-logo.svg"
+    },
+    {
+      "name": "Writelytic",
+      "slug": "writelytic",
+      "logoPath": "/images/tools/writelytic-logo.svg"
+    },
+    {
+      "name": "Writing Hero",
+      "slug": "writing-hero",
+      "logoPath": "/images/tools/writing-hero-logo.svg"
+    },
+    {
+      "name": "Yellow Flickering Particles Free Background Videos, No Copyright Background",
+      "slug": "yellow-flickering-particles-free-background-videos-no-copyright-background",
+      "logoPath": "/images/tools/yellow-flickering-particles-free-background-videos-no-copyright-background-logo.svg"
+    },
+    {
+      "name": "Zapier",
+      "slug": "zapier",
+      "logoPath": "/images/tools/zapier-logo.svg"
+    },
+    {
+      "name": "Zoho Recruit",
+      "slug": "zoho-recruit",
+      "logoPath": "/images/tools/zoho-recruit-logo.svg"
+    },
+    {
+      "name": "Zopto",
+      "slug": "zopto",
+      "logoPath": "/images/tools/zopto-logo.svg"
     }
   ]
 }

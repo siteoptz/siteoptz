@@ -135,11 +135,11 @@ export default function ToolPage({ tool, relatedTools, faqs, allTools }: ToolPag
                   />
                   <div>
                     <h1 className="text-4xl font-bold">{tool.name}</h1>
-                    <p className="text-blue-100">by {tool.overview.developer}</p>
+                    <p className="text-blue-100">by {tool.overview?.developer || 'Unknown Developer'}</p>
                   </div>
                 </div>
                 <p className="text-xl text-blue-100 mb-6">
-                  {tool.overview.description}
+                  {tool.overview?.description || tool.meta?.description || 'No description available'}
                 </p>
                 <div className="flex flex-wrap gap-4">
                   <button className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-6 py-3 rounded-lg font-semibold hover:from-blue-700 hover:to-purple-700 transform hover:scale-105 transition-all duration-200 shadow-lg hover:shadow-xl">

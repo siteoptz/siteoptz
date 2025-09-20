@@ -1,0 +1,1504 @@
+{
+  "timestamp": "2025-09-20T18:53:04.258Z",
+  "previousCount": 741,
+  "newToolsAdded": 299,
+  "totalCount": 1040,
+  "skippedDuplicates": 0,
+  "addedTools": [
+    {
+      "name": "CustomGPT.ai",
+      "category": "Trial",
+      "id": "customgpt-ai"
+    },
+    {
+      "name": "Leap",
+      "category": "Trial",
+      "id": "leap"
+    },
+    {
+      "name": "BeforesunsetAI",
+      "category": "Freemium",
+      "id": "beforesunsetai"
+    },
+    {
+      "name": "thoughtly",
+      "category": "N/A",
+      "id": "thoughtly"
+    },
+    {
+      "name": "Regie",
+      "category": "AI Sales",
+      "id": "regie"
+    },
+    {
+      "name": "Outplayhq",
+      "category": "AI Sales",
+      "id": "outplayhq"
+    },
+    {
+      "name": "Drift",
+      "category": "AI Sales",
+      "id": "drift"
+    },
+    {
+      "name": "HubSpot",
+      "category": "AI Sales",
+      "id": "hubspot"
+    },
+    {
+      "name": "Dashly.io",
+      "category": "AI Sales",
+      "id": "dashly-io"
+    },
+    {
+      "name": "Deepgram’s Transcription Tool",
+      "category": "AI Transcriber",
+      "id": "deepgram-s-transcription-tool"
+    },
+    {
+      "name": "Getimg.ai",
+      "category": "AI Image and Art Generators and Editors",
+      "id": "getimg-ai"
+    },
+    {
+      "name": "GoCharlie",
+      "category": "AI Image and Art Generators and Editors",
+      "id": "gocharlie"
+    },
+    {
+      "name": "AdCreative",
+      "category": "AI Tools for marketing & social media",
+      "id": "adcreative"
+    },
+    {
+      "name": "Repurpose",
+      "category": "AI Tools for marketing & social media",
+      "id": "repurpose"
+    },
+    {
+      "name": "Mubert",
+      "category": "Artificial intelligence tools for Audio Generators & Music",
+      "id": "mubert"
+    },
+    {
+      "name": "Podcastle",
+      "category": "Artificial intelligence tools for Audio Generators & Music",
+      "id": "podcastle"
+    },
+    {
+      "name": "Notion",
+      "category": "Productivity Tools",
+      "id": "notion"
+    },
+    {
+      "name": "Dall-E 2",
+      "category": "AI Image Generators",
+      "id": "dall-e-2"
+    },
+    {
+      "name": "Point-E",
+      "category": "AI 3D Model Generators",
+      "id": "point-e"
+    },
+    {
+      "name": "Spellbook",
+      "category": "Legal AI",
+      "id": "spellbook"
+    },
+    {
+      "name": "DoNotPay",
+      "category": "Legal AI",
+      "id": "donotpay"
+    },
+    {
+      "name": "DISCO Ediscovery",
+      "category": "Legal AI",
+      "id": "disco-ediscovery"
+    },
+    {
+      "name": "AI Lawyer",
+      "category": "Legal AI",
+      "id": "ai-lawyer"
+    },
+    {
+      "name": "Rationale",
+      "category": "AI Startup Tools",
+      "id": "rationale"
+    },
+    {
+      "name": "Indy",
+      "category": "AI Startup Tools",
+      "id": "indy"
+    },
+    {
+      "name": "Doodle",
+      "category": "AI Startup Tools",
+      "id": "doodle"
+    },
+    {
+      "name": "Image-Gen",
+      "category": "AI Text to image",
+      "id": "image-gen"
+    },
+    {
+      "name": "GETgenie",
+      "category": "AI Tools for businesses",
+      "id": "getgenie"
+    },
+    {
+      "name": "GoHighLevel",
+      "category": "AI Tools for businesses",
+      "id": "gohighlevel"
+    },
+    {
+      "name": "Wallpea",
+      "category": "AI Art Generators",
+      "id": "wallpea"
+    },
+    {
+      "name": "Signm",
+      "category": "AI Stock Trading Bots",
+      "id": "signm"
+    },
+    {
+      "name": "Bubble",
+      "category": "AI Developer Tools",
+      "id": "bubble"
+    },
+    {
+      "name": "JOBSEARCH.COACH",
+      "category": "AI Writing Tools",
+      "id": "jobsearch-coach"
+    },
+    {
+      "name": "WordTune",
+      "category": "AI Text generators",
+      "id": "wordtune"
+    },
+    {
+      "name": "SpinBot",
+      "category": "AI Text generators",
+      "id": "spinbot"
+    },
+    {
+      "name": "Prepostseo",
+      "category": "AI Text generators",
+      "id": "prepostseo"
+    },
+    {
+      "name": "Cramly.ai",
+      "category": "AI Text generators",
+      "id": "cramly-ai"
+    },
+    {
+      "name": "Paraphraser.io",
+      "category": "AI Text generators",
+      "id": "paraphraser-io"
+    },
+    {
+      "name": "HIX.AI",
+      "category": "AI Text generators",
+      "id": "hix-ai"
+    },
+    {
+      "name": "Semrush’s Summarizing Tool",
+      "category": "AI Text generators",
+      "id": "semrush-s-summarizing-tool"
+    },
+    {
+      "name": "Scribbr",
+      "category": "AI Text generators",
+      "id": "scribbr"
+    },
+    {
+      "name": "ShortlyAI",
+      "category": "AI Text generators",
+      "id": "shortlyai"
+    },
+    {
+      "name": "SummarizeBot",
+      "category": "AI Text generators",
+      "id": "summarizebot"
+    },
+    {
+      "name": "Notta",
+      "category": "AI Text generators",
+      "id": "notta"
+    },
+    {
+      "name": "TLDR This",
+      "category": "AI Text generators",
+      "id": "tldr-this"
+    },
+    {
+      "name": "Closers Copy",
+      "category": "AI Text generators",
+      "id": "closers-copy"
+    },
+    {
+      "name": "Clara",
+      "category": "AI Assistant",
+      "id": "clara"
+    },
+    {
+      "name": "SIRI",
+      "category": "AI Assistant",
+      "id": "siri"
+    },
+    {
+      "name": "Google Assistant",
+      "category": "AI Assistant",
+      "id": "google-assistant"
+    },
+    {
+      "name": "Cortana",
+      "category": "AI Assistant",
+      "id": "cortana"
+    },
+    {
+      "name": "VedVaani",
+      "category": "Fun AI tools",
+      "id": "vedvaani"
+    },
+    {
+      "name": "PIXLR",
+      "category": "AI Text to image",
+      "id": "pixlr"
+    },
+    {
+      "name": "Runway",
+      "category": "AI Text to image",
+      "id": "runway"
+    },
+    {
+      "name": "Shutterstock AI Image Generator",
+      "category": "AI Text to image",
+      "id": "shutterstock-ai-image-generator"
+    },
+    {
+      "name": "NightCafe Creator",
+      "category": "AI Text to image",
+      "id": "nightcafe-creator"
+    },
+    {
+      "name": "beehiiv",
+      "category": "AI Writing Tools",
+      "id": "beehiiv"
+    },
+    {
+      "name": "Compose AI",
+      "category": "AI Content Generator",
+      "id": "compose-ai"
+    },
+    {
+      "name": "Frase.io",
+      "category": "AI Writing Tools",
+      "id": "frase-io"
+    },
+    {
+      "name": "ContentBot.ai",
+      "category": "AI Writing Tools",
+      "id": "contentbot-ai"
+    },
+    {
+      "name": "VideoProc Converter AI",
+      "category": "AI Video Tools",
+      "id": "videoproc-converter-ai"
+    },
+    {
+      "name": "Cutout.pro",
+      "category": "AI Video Tools",
+      "id": "cutout-pro"
+    },
+    {
+      "name": "DVDFab (UniFab) Video Enhancer",
+      "category": "AI Video Tools",
+      "id": "dvdfab-unifab-video-enhancer"
+    },
+    {
+      "name": "Topaz Video AI",
+      "category": "AI Video Tools",
+      "id": "topaz-video-ai"
+    },
+    {
+      "name": "HitPaw Video Enhancer",
+      "category": "AI Video Tools",
+      "id": "hitpaw-video-enhancer"
+    },
+    {
+      "name": "Vmake’s AI Video Enhancer",
+      "category": "AI Video Tools",
+      "id": "vmake-s-ai-video-enhancer"
+    },
+    {
+      "name": "Filmora",
+      "category": "AI Video Tools",
+      "id": "filmora"
+    },
+    {
+      "name": "Adobe Premiere Pro",
+      "category": "AI Video Tools",
+      "id": "adobe-premiere-pro"
+    },
+    {
+      "name": "Pixop",
+      "category": "AI Video Tools",
+      "id": "pixop"
+    },
+    {
+      "name": "Leena AI",
+      "category": "AI HR Tools",
+      "id": "leena-ai"
+    },
+    {
+      "name": "Zoho Recruit",
+      "category": "AI HR Tools",
+      "id": "zoho-recruit"
+    },
+    {
+      "name": "Leapsome AI",
+      "category": "AI HR Tools",
+      "id": "leapsome-ai"
+    },
+    {
+      "name": "Workable",
+      "category": "AI HR Tools",
+      "id": "workable"
+    },
+    {
+      "name": "Quinyx",
+      "category": "AI HR Tools",
+      "id": "quinyx"
+    },
+    {
+      "name": "Juicebox",
+      "category": "AI HR Tools",
+      "id": "juicebox"
+    },
+    {
+      "name": "Glean",
+      "category": "AI HR Tools",
+      "id": "glean"
+    },
+    {
+      "name": "Glider AI",
+      "category": "AI HR Tools",
+      "id": "glider-ai"
+    },
+    {
+      "name": "Streetbeat",
+      "category": "AI Stock Trading Bots",
+      "id": "streetbeat"
+    },
+    {
+      "name": "Camp",
+      "category": "AI SEO",
+      "id": "camp"
+    },
+    {
+      "name": "Video Maker by invideo AI",
+      "category": "GPTs",
+      "id": "video-maker-by-invideo-ai"
+    },
+    {
+      "name": "Canva",
+      "category": "AI Art Generators",
+      "id": "canva"
+    },
+    {
+      "name": "PDF Ai PDF",
+      "category": "AI Art Generators",
+      "id": "pdf-ai-pdf"
+    },
+    {
+      "name": "Healthy Chef",
+      "category": "AI Art Generators",
+      "id": "healthy-chef"
+    },
+    {
+      "name": "Sous Chef",
+      "category": "AI Art Generators",
+      "id": "sous-chef"
+    },
+    {
+      "name": "Quality Raters SEO Guide",
+      "category": "AI Art Generators",
+      "id": "quality-raters-seo-guide"
+    },
+    {
+      "name": "Art Style Explorer",
+      "category": "AI Art Generators",
+      "id": "art-style-explorer"
+    },
+    {
+      "name": "Image Copy Machine GPT",
+      "category": "AI Art Generators",
+      "id": "image-copy-machine-gpt"
+    },
+    {
+      "name": "Academic Assistant Pro",
+      "category": "AI Art Generators",
+      "id": "academic-assistant-pro"
+    },
+    {
+      "name": "Voice/Style/Tone AI Prompt Snippet Generator",
+      "category": "AI Art Generators",
+      "id": "voice-style-tone-ai-prompt-snippet-generator"
+    },
+    {
+      "name": "Creative Writing Coach",
+      "category": "GPTs",
+      "id": "creative-writing-coach"
+    },
+    {
+      "name": "AImReply",
+      "category": "AI Email Assistant",
+      "id": "aimreply"
+    },
+    {
+      "name": "Julius AI",
+      "category": "AI Analytics",
+      "id": "julius-ai"
+    },
+    {
+      "name": "Spikes",
+      "category": "AI Social Media",
+      "id": "spikes"
+    },
+    {
+      "name": "Slidesgo",
+      "category": "AI Presentations",
+      "id": "slidesgo"
+    },
+    {
+      "name": "Storyboard Hero",
+      "category": "AI Video Tools",
+      "id": "storyboard-hero"
+    },
+    {
+      "name": "Slidespilot",
+      "category": "AI Presentations",
+      "id": "slidespilot"
+    },
+    {
+      "name": "Notion: Business and productivity with machine learning",
+      "category": "Top 7 free AI tools that anyone can use in 2025",
+      "id": "notion-business-and-productivity-with-machine-learning"
+    },
+    {
+      "name": "Stable diffusion: Text to images",
+      "category": "Top 7 free AI tools that anyone can use in 2025",
+      "id": "stable-diffusion-text-to-images"
+    },
+    {
+      "name": "Lumen5: AI tool for video generation",
+      "category": "Top 7 free AI tools that anyone can use in 2025",
+      "id": "lumen5-ai-tool-for-video-generation"
+    },
+    {
+      "name": "Midjourney: Artificial intelligence tool for art images",
+      "category": "Top 7 free AI tools that anyone can use in 2025",
+      "id": "midjourney-artificial-intelligence-tool-for-art-images"
+    },
+    {
+      "name": "Dall-E 2: AI tool for image generation",
+      "category": "Top 7 free AI tools that anyone can use in 2025",
+      "id": "dall-e-2-ai-tool-for-image-generation"
+    },
+    {
+      "name": "Point-E: Create 3D models",
+      "category": "Top 7 free AI tools that anyone can use in 2025",
+      "id": "point-e-create-3d-models"
+    },
+    {
+      "name": "Automateed",
+      "category": "AI Marketing",
+      "id": "automateed"
+    },
+    {
+      "name": "AdCopy",
+      "category": "AI Marketing",
+      "id": "adcopy"
+    },
+    {
+      "name": "Thanos",
+      "category": "AI Content Generator",
+      "id": "thanos"
+    },
+    {
+      "name": "Coconaut",
+      "category": "AI Chatbot",
+      "id": "coconaut"
+    },
+    {
+      "name": "Sofabrain",
+      "category": "Design AI",
+      "id": "sofabrain"
+    },
+    {
+      "name": "PaceAI",
+      "category": "AI Productivity Tools",
+      "id": "paceai"
+    },
+    {
+      "name": "Sapling",
+      "category": "AI Detector",
+      "id": "sapling"
+    },
+    {
+      "name": "Originality.ai",
+      "category": "AI Detector",
+      "id": "originality-ai"
+    },
+    {
+      "name": "Winston AI",
+      "category": "AI Detector",
+      "id": "winston-ai"
+    },
+    {
+      "name": "Otter AI",
+      "category": "AI Assistant",
+      "id": "otter-ai"
+    },
+    {
+      "name": "Imagine AI",
+      "category": "AI Art Generators",
+      "id": "imagine-ai"
+    },
+    {
+      "name": "Kua",
+      "category": "AI Ecommerce",
+      "id": "kua"
+    },
+    {
+      "name": "Must AI",
+      "category": "Trial",
+      "id": "must-ai"
+    },
+    {
+      "name": "ViralKit",
+      "category": "Trial",
+      "id": "viralkit"
+    },
+    {
+      "name": "AVClabs",
+      "category": "Freemium",
+      "id": "avclabs"
+    },
+    {
+      "name": "Junia",
+      "category": "Freemium",
+      "id": "junia"
+    },
+    {
+      "name": "Artsmart",
+      "category": "Trial",
+      "id": "artsmart"
+    },
+    {
+      "name": "Socialcoffee",
+      "category": "Freemium",
+      "id": "socialcoffee"
+    },
+    {
+      "name": "CSVIBES",
+      "category": "Trial",
+      "id": "csvibes"
+    },
+    {
+      "name": "Smudge.ai",
+      "category": "Trial",
+      "id": "smudge-ai"
+    },
+    {
+      "name": "Ssemble",
+      "category": "Freemium",
+      "id": "ssemble"
+    },
+    {
+      "name": "3commas",
+      "category": "Trial",
+      "id": "3commas"
+    },
+    {
+      "name": "Coachvox",
+      "category": "AI Chatbot",
+      "id": "coachvox"
+    },
+    {
+      "name": "Vondy",
+      "category": "AI Writing Tools",
+      "id": "vondy"
+    },
+    {
+      "name": "Voicestars",
+      "category": "AI Audio Generators",
+      "id": "voicestars"
+    },
+    {
+      "name": "Open Art",
+      "category": "AI Image Generators",
+      "id": "open-art"
+    },
+    {
+      "name": "Pineapple",
+      "category": "AI Website Builder",
+      "id": "pineapple"
+    },
+    {
+      "name": "Smili Media",
+      "category": "AI Social Media",
+      "id": "smili-media"
+    },
+    {
+      "name": "Gajix",
+      "category": "AI Assistant",
+      "id": "gajix"
+    },
+    {
+      "name": "Plus AI",
+      "category": "AI Presentations",
+      "id": "plus-ai"
+    },
+    {
+      "name": "Coursebox",
+      "category": "AI Content Generator",
+      "id": "coursebox"
+    },
+    {
+      "name": "Slides AI",
+      "category": "AI Presentations",
+      "id": "slides-ai"
+    },
+    {
+      "name": "Decktopus",
+      "category": "AI Presentations",
+      "id": "decktopus"
+    },
+    {
+      "name": "Refrens",
+      "category": "Finance AI",
+      "id": "refrens"
+    },
+    {
+      "name": "ChopShop",
+      "category": "AI Video Tools",
+      "id": "chopshop"
+    },
+    {
+      "name": "Altered",
+      "category": "AI Audio Generators",
+      "id": "altered"
+    },
+    {
+      "name": "Flick social",
+      "category": "AI Social Media",
+      "id": "flick-social"
+    },
+    {
+      "name": "Ikiblast",
+      "category": "AI Assistant",
+      "id": "ikiblast"
+    },
+    {
+      "name": "Murf",
+      "category": "AI Audio Generators",
+      "id": "murf"
+    },
+    {
+      "name": "GoZen",
+      "category": "AI Marketing",
+      "id": "gozen"
+    },
+    {
+      "name": "AudioNotes.ai",
+      "category": "AI Audio Generators",
+      "id": "audionotes-ai"
+    },
+    {
+      "name": "Writing Hero",
+      "category": "AI Copywriting",
+      "id": "writing-hero"
+    },
+    {
+      "name": "ThemAIGuys",
+      "category": "AI Ecommerce",
+      "id": "themaiguys"
+    },
+    {
+      "name": "Stack AI",
+      "category": "AI Automation Tools",
+      "id": "stack-ai"
+    },
+    {
+      "name": "Tutor AI",
+      "category": "AI Assistant",
+      "id": "tutor-ai"
+    },
+    {
+      "name": "Boomy",
+      "category": "AI Audio Generators",
+      "id": "boomy"
+    },
+    {
+      "name": "Validator AI",
+      "category": "AI For Business",
+      "id": "validator-ai"
+    },
+    {
+      "name": "Midjourney Prompt Helper",
+      "category": "AI Prompts",
+      "id": "midjourney-prompt-helper"
+    },
+    {
+      "name": "Codeium",
+      "category": "AI Developer Tools",
+      "id": "codeium"
+    },
+    {
+      "name": "Tome",
+      "category": "AI Presentations",
+      "id": "tome"
+    },
+    {
+      "name": "Namelix",
+      "category": "AI Business Name Generator",
+      "id": "namelix"
+    },
+    {
+      "name": "Botrush.ai",
+      "category": "AI Social Media Growth Tool",
+      "id": "botrush-ai"
+    },
+    {
+      "name": "Purple Flux Free Background Videos, Motion Graphics, No Copyright",
+      "category": "YouTube Channel",
+      "id": "purple-flux-free-background-videos-motion-graphics-no-copyright"
+    },
+    {
+      "name": "Interstellar Dream Free Background Videos, Motion Graphics, No Copyright",
+      "category": "Background Videos",
+      "id": "interstellar-dream-free-background-videos-motion-graphics-no-copyright"
+    },
+    {
+      "name": "Colorful Rays Free Background Videos, No Copyright Background",
+      "category": "Background Videos",
+      "id": "colorful-rays-free-background-videos-no-copyright-background"
+    },
+    {
+      "name": "Floating Round Side Particles Free Yellow Background Videos, No Copyright",
+      "category": "Background Videos",
+      "id": "floating-round-side-particles-free-yellow-background-videos-no-copyright"
+    },
+    {
+      "name": "Neon Cyber Landscape Aesthetic Free Background Videos, No Copyright",
+      "category": "Background Videos",
+      "id": "neon-cyber-landscape-aesthetic-free-background-videos-no-copyright"
+    },
+    {
+      "name": "Purple Sky Free Background Videos, Motion Graphics, No Copyright",
+      "category": "Background Videos",
+      "id": "purple-sky-free-background-videos-motion-graphics-no-copyright"
+    },
+    {
+      "name": "Red Ink Water Free Background Videos, Motion Graphics, No Copyright",
+      "category": "Background Videos",
+      "id": "red-ink-water-free-background-videos-motion-graphics-no-copyright"
+    },
+    {
+      "name": "Pink Flare Particles Free Background Videos, No Copyright Background",
+      "category": "Background Videos",
+      "id": "pink-flare-particles-free-background-videos-no-copyright-background"
+    },
+    {
+      "name": "White Fabric Wind Free Background Videos, Motion Graphics, No Copyright",
+      "category": "Background Videos",
+      "id": "white-fabric-wind-free-background-videos-motion-graphics-no-copyright"
+    },
+    {
+      "name": "Colorful Laser Lights Stage Effects Free Background Videos, No Copyright",
+      "category": "Background Videos",
+      "id": "colorful-laser-lights-stage-effects-free-background-videos-no-copyright"
+    },
+    {
+      "name": "Stars and Music Notes Pink Free Background Videos, No Copyright",
+      "category": "Background Videos",
+      "id": "stars-and-music-notes-pink-free-background-videos-no-copyright"
+    },
+    {
+      "name": "Pink Smoke Free Background Videos, Motion Graphics, No Copyright",
+      "category": "Background Videos",
+      "id": "pink-smoke-free-background-videos-motion-graphics-no-copyright"
+    },
+    {
+      "name": "Yellow Flickering Particles Free Background Videos, No Copyright Background",
+      "category": "Background Videos",
+      "id": "yellow-flickering-particles-free-background-videos-no-copyright-background"
+    },
+    {
+      "name": "TickerOn",
+      "category": "AI Stock Trading Bots",
+      "id": "tickeron"
+    },
+    {
+      "name": "TrendSpider",
+      "category": "AI Stock Trading Bots",
+      "id": "trendspider"
+    },
+    {
+      "name": "Vestinda",
+      "category": "AI Crypto Trading Bots",
+      "id": "vestinda"
+    },
+    {
+      "name": "Pionex",
+      "category": "AI Crypto Trading Bots",
+      "id": "pionex"
+    },
+    {
+      "name": "CryptoHopper",
+      "category": "AI Crypto Trading Bots",
+      "id": "cryptohopper"
+    },
+    {
+      "name": "CryptoHero",
+      "category": "AI Crypto Trading Bots",
+      "id": "cryptohero"
+    },
+    {
+      "name": "Bitsgap",
+      "category": "AI Crypto Trading Bots",
+      "id": "bitsgap"
+    },
+    {
+      "name": "Haasonline",
+      "category": "AI Crypto Trading Bots",
+      "id": "haasonline"
+    },
+    {
+      "name": "SceneXplain",
+      "category": "ChatGPT Plugins",
+      "id": "scenexplain"
+    },
+    {
+      "name": "What to Watch",
+      "category": "ChatGPT Plugins",
+      "id": "what-to-watch"
+    },
+    {
+      "name": "Flowpoint",
+      "category": "Analytics",
+      "id": "flowpoint"
+    },
+    {
+      "name": "Luna",
+      "category": "Email Marketing",
+      "id": "luna"
+    },
+    {
+      "name": "Tiledesk",
+      "category": "Customer Support",
+      "id": "tiledesk"
+    },
+    {
+      "name": "Nureply",
+      "category": "Email Marketing",
+      "id": "nureply"
+    },
+    {
+      "name": "Openbox.ai",
+      "category": "Email Marketing",
+      "id": "openbox-ai"
+    },
+    {
+      "name": "FinalScout",
+      "category": "Email Marketing",
+      "id": "finalscout"
+    },
+    {
+      "name": "Smartwriter",
+      "category": "Email Marketing",
+      "id": "smartwriter"
+    },
+    {
+      "name": "PlayHT",
+      "category": "AI Audio Generators",
+      "id": "playht"
+    },
+    {
+      "name": "AI STUDIOS by DEEPBRAIN AI",
+      "category": "AI Video Tools",
+      "id": "ai-studios-by-deepbrain-ai"
+    },
+    {
+      "name": "LetsAsk.AI",
+      "category": "AI Customer Service",
+      "id": "letsask-ai"
+    },
+    {
+      "name": "Wonderchat",
+      "category": "AI Customer Service",
+      "id": "wonderchat"
+    },
+    {
+      "name": "Hiver",
+      "category": "AI Customer Service",
+      "id": "hiver"
+    },
+    {
+      "name": "Flatlogic",
+      "category": "AI Developer Tools",
+      "id": "flatlogic"
+    },
+    {
+      "name": "Tinq.ai",
+      "category": "AI Developer Tools",
+      "id": "tinq-ai"
+    },
+    {
+      "name": "Vwo",
+      "category": "AI Developer Tools",
+      "id": "vwo"
+    },
+    {
+      "name": "Parsio",
+      "category": "Document Parser",
+      "id": "parsio"
+    },
+    {
+      "name": "INK",
+      "category": "AI Content Marketing",
+      "id": "ink"
+    },
+    {
+      "name": "SinCode",
+      "category": "AI Content Humanizer",
+      "id": "sincode"
+    },
+    {
+      "name": "TinyEinstein",
+      "category": "AI Marketing Manager",
+      "id": "tinyeinstein"
+    },
+    {
+      "name": "Zapier",
+      "category": "AI Chatbot Tool",
+      "id": "zapier"
+    },
+    {
+      "name": "Growthbar",
+      "category": "SEO Content Writer",
+      "id": "growthbar"
+    },
+    {
+      "name": "CTRify",
+      "category": "AI-Powered SEO Action Platform",
+      "id": "ctrify"
+    },
+    {
+      "name": "Kafkai",
+      "category": "AI SEO",
+      "id": "kafkai"
+    },
+    {
+      "name": "SpinRewriter",
+      "category": "AI SEO",
+      "id": "spinrewriter"
+    },
+    {
+      "name": "LongShot",
+      "category": "AI SEO",
+      "id": "longshot"
+    },
+    {
+      "name": "Typli.ai",
+      "category": "AI SEO",
+      "id": "typli-ai"
+    },
+    {
+      "name": "RankRanger",
+      "category": "AI SEO",
+      "id": "rankranger"
+    },
+    {
+      "name": "Cohesive",
+      "category": "AI Copywriting",
+      "id": "cohesive"
+    },
+    {
+      "name": "WordAI",
+      "category": "AI Copywriting",
+      "id": "wordai"
+    },
+    {
+      "name": "AI-Writer",
+      "category": "AI Copywriting",
+      "id": "ai-writer"
+    },
+    {
+      "name": "Bertha",
+      "category": "AI Copywriting",
+      "id": "bertha"
+    },
+    {
+      "name": "Moonbeam",
+      "category": "AI Copywriting",
+      "id": "moonbeam"
+    },
+    {
+      "name": "Hypotenuse AI",
+      "category": "AI Copywriting",
+      "id": "hypotenuse-ai"
+    },
+    {
+      "name": "Epagestore",
+      "category": "AI Copywriting",
+      "id": "epagestore"
+    },
+    {
+      "name": "Digitalfirst.ai",
+      "category": "AI Copywriting",
+      "id": "digitalfirst-ai"
+    },
+    {
+      "name": "iSavantAI",
+      "category": "AI Copywriting",
+      "id": "isavantai"
+    },
+    {
+      "name": "Wordhero",
+      "category": "AI Copywriting",
+      "id": "wordhero"
+    },
+    {
+      "name": "Linguix",
+      "category": "AI Copywriting",
+      "id": "linguix"
+    },
+    {
+      "name": "Botowski",
+      "category": "AI Copywriting",
+      "id": "botowski"
+    },
+    {
+      "name": "Veg3",
+      "category": "AI Copywriting",
+      "id": "veg3"
+    },
+    {
+      "name": "EasyPeasy",
+      "category": "AI Copywriting",
+      "id": "easypeasy"
+    },
+    {
+      "name": "SERanking",
+      "category": "AI SEO",
+      "id": "seranking"
+    },
+    {
+      "name": "VirtuLook",
+      "category": "AI Image Generators",
+      "id": "virtulook"
+    },
+    {
+      "name": "LinkWhisper",
+      "category": "AI SEO",
+      "id": "linkwhisper"
+    },
+    {
+      "name": "Rankmath",
+      "category": "AI SEO",
+      "id": "rankmath"
+    },
+    {
+      "name": "Simplified",
+      "category": "AI Copywriting",
+      "id": "simplified"
+    },
+    {
+      "name": "CopyMonkey",
+      "category": "AI Copywriting",
+      "id": "copymonkey"
+    },
+    {
+      "name": "Creaitor",
+      "category": "AI Copywriting",
+      "id": "creaitor"
+    },
+    {
+      "name": "WiziShop",
+      "category": "AI Copywriting",
+      "id": "wizishop"
+    },
+    {
+      "name": "ParagraphAI",
+      "category": "AI Copywriting",
+      "id": "paragraphai"
+    },
+    {
+      "name": "Quillbot",
+      "category": "AI Copywriting",
+      "id": "quillbot"
+    },
+    {
+      "name": "Paraphrase Tool",
+      "category": "AI Copywriting",
+      "id": "paraphrase-tool"
+    },
+    {
+      "name": "Rythmex",
+      "category": "AI Audio Generators",
+      "id": "rythmex"
+    },
+    {
+      "name": "Opus Clip",
+      "category": "AI Video Tools",
+      "id": "opus-clip"
+    },
+    {
+      "name": "Munch",
+      "category": "AI Video Tools",
+      "id": "munch"
+    },
+    {
+      "name": "VidlQ",
+      "category": "AI Video Tools",
+      "id": "vidlq"
+    },
+    {
+      "name": "Listnr",
+      "category": "AI Audio Generators",
+      "id": "listnr"
+    },
+    {
+      "name": "Colossyan",
+      "category": "AI Video Tools",
+      "id": "colossyan"
+    },
+    {
+      "name": "Texta",
+      "category": "AI Text generators",
+      "id": "texta"
+    },
+    {
+      "name": "Go Charlie",
+      "category": "AI Image Generators",
+      "id": "go-charlie"
+    },
+    {
+      "name": "Magic Studio",
+      "category": "AI Image Generators",
+      "id": "magic-studio"
+    },
+    {
+      "name": "PhotoAI",
+      "category": "AI Image Generators",
+      "id": "photoai"
+    },
+    {
+      "name": "Kreateable",
+      "category": "AI Image Generators",
+      "id": "kreateable"
+    },
+    {
+      "name": "Logoai",
+      "category": "AI Image Generators",
+      "id": "logoai"
+    },
+    {
+      "name": "Profile Picture",
+      "category": "AI Image Generators",
+      "id": "profile-picture"
+    },
+    {
+      "name": "HairstyleAI",
+      "category": "AI Image Generators",
+      "id": "hairstyleai"
+    },
+    {
+      "name": "Super Meme",
+      "category": "AI Image Generators",
+      "id": "super-meme"
+    },
+    {
+      "name": "Hoppy Copy",
+      "category": "AI Email Assistant",
+      "id": "hoppy-copy"
+    },
+    {
+      "name": "Octopus",
+      "category": "AI Automation Tools",
+      "id": "octopus"
+    },
+    {
+      "name": "Zopto",
+      "category": "AI Social Media",
+      "id": "zopto"
+    },
+    {
+      "name": "Postaga",
+      "category": "AI For Business",
+      "id": "postaga"
+    },
+    {
+      "name": "MailRush.io",
+      "category": "AI Automation Tools",
+      "id": "mailrush-io"
+    },
+    {
+      "name": "Klenty",
+      "category": "AI Automation Tools",
+      "id": "klenty"
+    },
+    {
+      "name": "BotNation",
+      "category": "AI For Business",
+      "id": "botnation"
+    },
+    {
+      "name": "Cody",
+      "category": "AI Assistant",
+      "id": "cody"
+    },
+    {
+      "name": "Alfred",
+      "category": "AI Chatbot",
+      "id": "alfred"
+    },
+    {
+      "name": "DimeADozen.AI",
+      "category": "AI For Business",
+      "id": "dimeadozen-ai"
+    },
+    {
+      "name": "Dux-Soup",
+      "category": "AI Automation Tools",
+      "id": "dux-soup"
+    },
+    {
+      "name": "Orimon",
+      "category": "AI Chatbot",
+      "id": "orimon"
+    },
+    {
+      "name": "Convolo",
+      "category": "AI For Business",
+      "id": "convolo"
+    },
+    {
+      "name": "RepliQ",
+      "category": "AI For Business",
+      "id": "repliq"
+    },
+    {
+      "name": "Humata",
+      "category": "AI HR Tools",
+      "id": "humata"
+    },
+    {
+      "name": "Otta AI",
+      "category": "AI For Business",
+      "id": "otta-ai"
+    },
+    {
+      "name": "Guidde",
+      "category": "AI For Business",
+      "id": "guidde"
+    },
+    {
+      "name": "Writelytic",
+      "category": "AI Copywriting",
+      "id": "writelytic"
+    },
+    {
+      "name": "Elastic Email",
+      "category": "AI Email Assistant",
+      "id": "elastic-email"
+    },
+    {
+      "name": "Durable",
+      "category": "AI Website Builder",
+      "id": "durable"
+    },
+    {
+      "name": "Mokker AI",
+      "category": "AI Image Generators",
+      "id": "mokker-ai"
+    },
+    {
+      "name": "Elementor AI",
+      "category": "AI Website Builder",
+      "id": "elementor-ai"
+    },
+    {
+      "name": "Coverdoc.ai",
+      "category": "AI Copywriting",
+      "id": "coverdoc-ai"
+    },
+    {
+      "name": "CodeDesign",
+      "category": "AI Website Builder",
+      "id": "codedesign"
+    },
+    {
+      "name": "PageGenie",
+      "category": "AI Website Builder",
+      "id": "pagegenie"
+    },
+    {
+      "name": "Systeme.io",
+      "category": "AI Website Builder",
+      "id": "systeme-io"
+    },
+    {
+      "name": "Duda",
+      "category": "AI Website Builder",
+      "id": "duda"
+    },
+    {
+      "name": "SiteGround",
+      "category": "AI Website Builder",
+      "id": "siteground"
+    },
+    {
+      "name": "Phonesites",
+      "category": "AI Website Builder",
+      "id": "phonesites"
+    },
+    {
+      "name": "Convertri",
+      "category": "AI Website Builder",
+      "id": "convertri"
+    },
+    {
+      "name": "ClickFunnels",
+      "category": "AI Website Builder",
+      "id": "clickfunnels"
+    },
+    {
+      "name": "Samcart",
+      "category": "AI Website Builder",
+      "id": "samcart"
+    },
+    {
+      "name": "Shopify",
+      "category": "AI Website Builder",
+      "id": "shopify"
+    },
+    {
+      "name": "Hellobar",
+      "category": "AI Website Builder",
+      "id": "hellobar"
+    },
+    {
+      "name": "Palette",
+      "category": "AI Image Generators",
+      "id": "palette"
+    },
+    {
+      "name": "FlexClip",
+      "category": "AI Video Tools",
+      "id": "flexclip"
+    },
+    {
+      "name": "Morise.ai",
+      "category": "AI Social Media",
+      "id": "morise-ai"
+    },
+    {
+      "name": "ShortPixel",
+      "category": "AI Image Generators",
+      "id": "shortpixel"
+    },
+    {
+      "name": "BHuman",
+      "category": "AI Video Tools",
+      "id": "bhuman"
+    },
+    {
+      "name": "Followr",
+      "category": "AI Social Media",
+      "id": "followr"
+    },
+    {
+      "name": "Devi",
+      "category": "AI Social Media",
+      "id": "devi"
+    },
+    {
+      "name": "Get Follower",
+      "category": "AI Social Media",
+      "id": "get-follower"
+    },
+    {
+      "name": "InstaChamp",
+      "category": "AI Social Media",
+      "id": "instachamp"
+    },
+    {
+      "name": "Copygenius",
+      "category": "AI Copywriting",
+      "id": "copygenius"
+    },
+    {
+      "name": "Simple Phones",
+      "category": "AI Customer Service",
+      "id": "simple-phones"
+    },
+    {
+      "name": "CrawlQ",
+      "category": "AI Social Media",
+      "id": "crawlq"
+    },
+    {
+      "name": "Shakespeare AI",
+      "category": "AI Copywriting",
+      "id": "shakespeare-ai"
+    },
+    {
+      "name": "Text Cortex",
+      "category": "AI Copywriting",
+      "id": "text-cortex"
+    },
+    {
+      "name": "PhantomBuster",
+      "category": "AI Automation Tools",
+      "id": "phantombuster"
+    },
+    {
+      "name": "Anyword",
+      "category": "AI Writing Tools",
+      "id": "anyword"
+    },
+    {
+      "name": "Media Mister",
+      "category": "AI Social Media",
+      "id": "media-mister"
+    },
+    {
+      "name": "Shuffl",
+      "category": "AI Video Tools",
+      "id": "shuffl"
+    },
+    {
+      "name": "NeuralFrames",
+      "category": "AI Video Tools",
+      "id": "neuralframes"
+    },
+    {
+      "name": "Flock Social",
+      "category": "AI Social Media",
+      "id": "flock-social"
+    },
+    {
+      "name": "Snov.io",
+      "category": "AI For Business",
+      "id": "snov-io"
+    },
+    {
+      "name": "Marketing Blocks",
+      "category": "AI Copywriting",
+      "id": "marketing-blocks"
+    }
+  ]
+}

@@ -1,0 +1,98 @@
+{
+  "timestamp": "2025-09-20T18:44:46.723Z",
+  "scrapeRange": "pages 2-4",
+  "testMode": true,
+  "statistics": {
+    "totalPages": 3,
+    "successfulPages": 3,
+    "failedPages": 0,
+    "totalToolsScraped": 71,
+    "totalNewTools": 25,
+    "totalDuplicates": 44,
+    "totalFakeTools": 2
+  },
+  "pageResults": [
+    {
+      "pageNum": 2,
+      "url": "https://www.insidr.ai/ai-tools/page/2/",
+      "success": true,
+      "toolsFound": 10,
+      "newTools": 4,
+      "duplicates": 6,
+      "fakeTools": 0,
+      "error": null
+    },
+    {
+      "pageNum": 3,
+      "url": "https://www.insidr.ai/ai-tools/page/3/",
+      "success": true,
+      "toolsFound": 28,
+      "newTools": 12,
+      "duplicates": 15,
+      "fakeTools": 1,
+      "error": null
+    },
+    {
+      "pageNum": 4,
+      "url": "https://www.insidr.ai/ai-tools/page/4/",
+      "success": true,
+      "toolsFound": 33,
+      "newTools": 9,
+      "duplicates": 23,
+      "fakeTools": 1,
+      "error": null
+    }
+  ],
+  "sampleNewTools": [
+    {
+      "name": "CustomGPT.ai",
+      "category": "AI Chatbot",
+      "id": "customgpt-ai"
+    },
+    {
+      "name": "Leap",
+      "category": "AI Workflows",
+      "id": "leap"
+    },
+    {
+      "name": "BeforesunsetAI",
+      "category": "AI Assistant",
+      "id": "beforesunsetai"
+    },
+    {
+      "name": "thoughtly",
+      "category": "AI Agents",
+      "id": "thoughtly"
+    },
+    {
+      "name": "Appy Pie AI Image Generator",
+      "category": "AI Image Generators",
+      "id": "appy-pie-ai-image-generator"
+    },
+    {
+      "name": "ChatWithPDF",
+      "category": "AI Chatbot",
+      "id": "chatwithpdf"
+    },
+    {
+      "name": "Highperformr",
+      "category": "AI Social Media",
+      "id": "highperformr"
+    },
+    {
+      "name": "Formula Bot",
+      "category": "AI Spreadsheets",
+      "id": "formula-bot"
+    },
+    {
+      "name": "FormulasHQ",
+      "category": "AI Spreadsheets",
+      "id": "formulashq"
+    },
+    {
+      "name": "Numerous.ai",
+      "category": "AI Spreadsheets",
+      "id": "numerous-ai"
+    }
+  ]
+}
