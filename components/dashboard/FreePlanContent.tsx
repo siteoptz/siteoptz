@@ -105,7 +105,7 @@ const FreePlanContent: React.FC = () => {
               
               {/* Content HTML */}
               <div 
-                className="prose prose-invert prose-lg max-w-none mb-8 prose-p:text-white prose-li:text-white prose-strong:text-white"
+                className="prose prose-invert prose-lg max-w-none mb-8 prose-p:text-white prose-li:text-white prose-strong:text-white prose-h2:!text-white prose-h3:!text-white prose-h4:!text-white"
                 dangerouslySetInnerHTML={{ __html: section.content }}
               />
 
