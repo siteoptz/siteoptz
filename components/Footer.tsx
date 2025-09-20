@@ -11,6 +11,7 @@ import {
   Instagram, 
   Linkedin, 
   Youtube,
+  MessageCircle,
   ArrowRight,
   TrendingUp,
   ChevronDown,
@@ -89,6 +90,7 @@ const Footer: React.FC = () => {
 
 
   const socialLinks = [
+    { name: 'Discord', icon: MessageCircle, href: 'https://discord.gg/siteoptz', color: 'hover:text-indigo-400' },
     { name: 'X', icon: Twitter, href: 'https://x.com/siteoptz', color: 'hover:text-gray-900' },
     { name: 'Instagram', icon: Instagram, href: 'https://www.instagram.com/siteoptz', color: 'hover:text-pink-500' },
     { name: 'LinkedIn', icon: Linkedin, href: 'https://www.linkedin.com/company/siteoptz', color: 'hover:text-blue-600' },

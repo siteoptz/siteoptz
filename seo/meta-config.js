@@ -129,6 +129,25 @@ export const pageConfigs = {
       'AI tools inquiry'
     ],
     ogType: 'website'
+  },
+
+  // Community page
+  community: {
+    title: 'SiteOptz AI Tools Community - Join 500+ AI Professionals on Discord',
+    description: 'Join our Discord community of AI enthusiasts, business leaders, and implementation experts. Share discoveries, get help, and turn AI into ROI together.',
+    keywords: [
+      'AI tools community',
+      'Discord AI community',
+      'AI professionals network',
+      'AI implementation help',
+      'AI tool discussions',
+      'AI community Discord',
+      'AI experts community',
+      'AI business community',
+      'AI tool reviews community',
+      'AI workflow sharing'
+    ],
+    ogType: 'website'
   }
 };
 

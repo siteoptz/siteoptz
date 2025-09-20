@@ -912,10 +912,6 @@ const UpgradePage: React.FC = () => {
                     30-day money-back guarantee
                   </span>
                   <span className="flex items-center gap-1">
-                    <Check className="w-4 h-4" />
-                    No credit card required
-                  </span>
-                  <span className="flex items-center gap-1">
                     <Users className="w-4 h-4" />
                     10,000+ happy customers
                   </span>
@@ -999,10 +995,6 @@ const UpgradePage: React.FC = () => {
               <span className="flex items-center gap-1">
                 <Shield className="w-4 h-4" />
                 30-day money-back guarantee
-              </span>
-              <span className="flex items-center gap-1">
-                <Check className="w-4 h-4" />
-                No credit card required
               </span>
               <span className="flex items-center gap-1">
                 <Users className="w-4 h-4" />

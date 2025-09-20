@@ -105,7 +105,7 @@ export default function CTASection({ toolA, toolB }: CTASectionProps) {
               </div>
 
               <div className="mt-6 text-xs text-blue-200">
-                ✓ No credit card required ✓ Free trial available
+                ✓ Free trial available
               </div>
             </div>
           </div>
@@ -156,7 +156,7 @@ export default function CTASection({ toolA, toolB }: CTASectionProps) {
               </div>
 
               <div className="mt-6 text-xs text-purple-200">
-                ✓ No credit card required ✓ Free trial available
+                ✓ Free trial available
               </div>
             </div>
           </div>

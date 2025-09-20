@@ -18,6 +18,7 @@ import { authoritativeLinks } from '../utils/externalLinks';
 import HeroSection from '../components/HeroSection';
 import UpgradeButton from '../components/UpgradeButton';
 import StripePaymentModal from '../components/StripePaymentModal';
+import CommunitySection from '../components/CommunitySection';
 
 
 interface HomePageProps {}
@@ -895,6 +896,9 @@ export default function HomePage({}: HomePageProps) {
 
 
 
+
+        {/* Community Section */}
+        <CommunitySection />
 
         {/* Industry Insights Section */}
         <section className="py-16 bg-gray-950">

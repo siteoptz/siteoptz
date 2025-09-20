@@ -146,6 +146,13 @@ const Header: React.FC = () => {
       hasDropdown: false
     },
     { 
+      name: 'Community', 
+      href: '/community', 
+      current: router.pathname === '/community', 
+      hasDropdown: false,
+      external: false
+    },
+    { 
       name: 'Pricing', 
       href: '/upgrade', 
       current: router.pathname === '/upgrade', 
@@ -243,16 +250,31 @@ const Header: React.FC = () => {
           <div className="hidden lg:flex items-center space-x-1">
             {navigation.map((item) => (
               <div key={item.name}>
-                <Link
-                  href={item.href}
-                  className={`px-4 py-2 rounded-lg text-sm font-medium flex items-center space-x-1 ${
-                    item.current
-                      ? 'bg-gray-800 text-white shadow-sm'
-                      : 'text-gray-300 hover:text-white hover:bg-gray-800'
-                  }`}
-                >
-                  <span>{item.name}</span>
-                </Link>
+                {item.external ? (
+                  <a
+                    href={item.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className={`px-4 py-2 rounded-lg text-sm font-medium flex items-center space-x-1 ${
+                      item.current
+                        ? 'bg-gray-800 text-white shadow-sm'
+                        : 'text-gray-300 hover:text-white hover:bg-gray-800'
+                    }`}
+                  >
+                    <span>{item.name}</span>
+                  </a>
+                ) : (
+                  <Link
+                    href={item.href}
+                    className={`px-4 py-2 rounded-lg text-sm font-medium flex items-center space-x-1 ${
+                      item.current
+                        ? 'bg-gray-800 text-white shadow-sm'
+                        : 'text-gray-300 hover:text-white hover:bg-gray-800'
+                    }`}
+                  >
+                    <span>{item.name}</span>
+                  </Link>
+                )}
                 {/* Dropdowns temporarily disabled for debugging */}
               </div>
             ))}
@@ -444,9 +466,9 @@ const Header: React.FC = () => {
                 fontWeight: '600'
               }}>All Tools</Link>
               
-              <Link href="/industries" onClick={closeMenu} style={{ 
-                color: router.pathname.startsWith('/industries') ? '#06b6d4' : 'white',
-                backgroundColor: router.pathname.startsWith('/industries') ? 'rgba(6, 182, 212, 0.1)' : 'transparent',
+              <Link href="/community" onClick={closeMenu} style={{ 
+                color: router.pathname === '/community' ? '#06b6d4' : 'white',
+                backgroundColor: router.pathname === '/community' ? 'rgba(6, 182, 212, 0.1)' : 'transparent',
                 textDecoration: 'none', 
                 fontSize: '18px', 
                 padding: '16px', 
@@ -455,7 +477,7 @@ const Header: React.FC = () => {
                 transition: 'all 0.2s ease',
                 display: 'block',
                 fontWeight: '600'
-              }}>Industries We Help</Link>
+              }}>Community</Link>
               
               <Link href="/upgrade" onClick={closeMenu} style={{ 
                 color: router.pathname === '/upgrade' ? '#06b6d4' : 'white',
@@ -469,6 +491,19 @@ const Header: React.FC = () => {
                 display: 'block',
                 fontWeight: '600'
               }}>Pricing</Link>
+              
+              <Link href="/industries" onClick={closeMenu} style={{ 
+                color: router.pathname.startsWith('/industries') ? '#06b6d4' : 'white',
+                backgroundColor: router.pathname.startsWith('/industries') ? 'rgba(6, 182, 212, 0.1)' : 'transparent',
+                textDecoration: 'none', 
+                fontSize: '18px', 
+                padding: '16px', 
+                borderRadius: '8px',
+                borderBottom: '1px solid rgba(255,255,255,0.1)',
+                transition: 'all 0.2s ease',
+                display: 'block',
+                fontWeight: '600'
+              }}>Industries We Help</Link>
               
               <Link href="/contact" onClick={closeMenu} style={{ 
                 color: router.pathname === '/contact' ? '#06b6d4' : 'white',
