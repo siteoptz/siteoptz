@@ -124,9 +124,8 @@ case $REPLY in
         ;;
     2)
         print_status "Building static export..."
-        npm run export
-        print_success "Static export completed! Files are in the 'out' directory."
-        print_status "You can now upload the 'out' directory to any static hosting service."
+        print_error "Static export is not supported with ISR. Use Vercel deployment instead."
+        exit 1
         ;;
     3)
         print_status "Exiting without deployment."
