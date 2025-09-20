@@ -87,7 +87,7 @@ export default function CommunityPage({}: CommunityPageProps) {
     },
     {
       name: "Workflow Showcase",
-      description: "Share your AI-powered workflows and learn from others' success stories",
+      description: "Share your AI-powered workflows and learn from others&apos; success stories",
       icon: Target,
       members: "150+",
       activity: "Growing"
@@ -212,7 +212,7 @@ export default function CommunityPage({}: CommunityPageProps) {
                 Why Join Our Community?
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Our Discord community is more than just a chat room - it's a hub for AI innovation, 
+                Our Discord community is more than just a chat room - it&apos;s a hub for AI innovation, 
                 knowledge sharing, and professional growth.
               </p>
             </div>
@@ -317,7 +317,7 @@ export default function CommunityPage({}: CommunityPageProps) {
                 Join the Conversation
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                See what's happening in our community right now and join the discussion.
+                See what&apos;s happening in our community right now and join the discussion.
               </p>
             </div>
 

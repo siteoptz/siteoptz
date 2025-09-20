@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { MessageCircle, Users, Online, ArrowRight } from 'lucide-react';
+import { MessageCircle, Users, Wifi, ArrowRight } from 'lucide-react';
 
 interface DiscordWidgetProps {
   className?: string;
@@ -83,7 +83,7 @@ const DiscordWidget: React.FC<DiscordWidgetProps> = ({
         </div>
         <div className="bg-black/50 rounded-lg p-4 text-center">
           <div className="flex items-center justify-center mb-2">
-            <Online className="w-5 h-5 text-green-400 mr-2" />
+            <Wifi className="w-5 h-5 text-green-400 mr-2" />
             <span className="text-2xl font-bold text-white">{onlineCount}</span>
           </div>
           <div className="text-sm text-gray-400">Online Now</div>
