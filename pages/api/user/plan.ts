@@ -24,13 +24,20 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     let actualPlan = 'free';
     let billingCycle = 'monthly';
     let subscriptionStatus = 'active';
+    let userName = session.user.name || 'User';
 
     // First, check GoHighLevel for plan information
     try {
       const ghlContact = await getContactByEmail(session.user.email!);
-      if (ghlContact.exists && ghlContact.plan) {
-        actualPlan = ghlContact.plan;
-        console.log('✅ Plan found in GoHighLevel:', actualPlan);
+      if (ghlContact.exists) {
+        if (ghlContact.plan) {
+          actualPlan = ghlContact.plan;
+          console.log('✅ Plan found in GoHighLevel:', actualPlan);
+        }
+        if (ghlContact.name) {
+          userName = ghlContact.name;
+          console.log('✅ User name found in GoHighLevel:', userName);
+        }
       }
     } catch (ghlError) {
       console.error('Error checking GoHighLevel for plan:', ghlError);
@@ -168,6 +175,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       status: subscriptionStatus,
       billingCycle,
       startDate: new Date().toISOString(),
+      userName: userName,
       features: config.features,
       limitations: config.limitations,
       usage: {

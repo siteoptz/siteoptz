@@ -5,6 +5,7 @@ export interface UserPlan {
   billingCycle: 'monthly' | 'yearly';
   startDate: Date;
   nextBilling?: Date;
+  userName?: string;
   features: string[];
   limitations: string[];
   usage: {

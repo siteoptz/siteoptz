@@ -39,6 +39,7 @@ const getDefaultFreePlan = (): UserPlan => ({
   status: 'active',
   billingCycle: 'monthly',
   startDate: new Date(),
+  userName: 'User',
   features: [
     'Daily AI tool spotlight',
     'Basic tool comparisons',
