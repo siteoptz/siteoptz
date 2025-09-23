@@ -140,6 +140,34 @@ export default function PricingPage({ tools }: PricingPageProps) {
               </div>
             </div>
 
+            {/* Implementation Services CTA */}
+            <div className="bg-gradient-to-r from-cyan-500/10 to-purple-500/10 border border-cyan-500/30 rounded-2xl p-8 mb-16">
+              <div className="text-center">
+                <h2 className="text-2xl font-bold text-white mb-4">
+                  Need Help Implementing AI Tools?
+                </h2>
+                <p className="text-lg text-gray-300 mb-6">
+                  Get expert AI implementation services with guaranteed ROI. Join 500+ companies that achieved $50M+ in productivity gains.
+                </p>
+                <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                  <a
+                    href="/services"
+                    className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-cyan-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-cyan-700 transform hover:scale-105 transition-all duration-200"
+                  >
+                    View Implementation Packages
+                    <TrendingUp className="ml-2 w-5 h-5" />
+                  </a>
+                  <a
+                    href="/assessment"
+                    className="inline-flex items-center px-8 py-4 bg-gray-800 border border-gray-700 text-white font-semibold rounded-lg hover:bg-gray-700 transition-all"
+                  >
+                    Get Free AI Assessment
+                    <Calculator className="ml-2 w-5 h-5" />
+                  </a>
+                </div>
+              </div>
+            </div>
+
             {/* Main Calculator */}
             <div className="max-w-6xl mx-auto">
               <EnhancedPricingCalculator tools={tools} onEmailSubmit={handleEmailSubmit} />

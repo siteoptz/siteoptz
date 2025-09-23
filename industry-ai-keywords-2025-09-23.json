@@ -1,0 +1,215 @@
+{
+  "healthcare": {
+    "totalKeywords": 20,
+    "validKeywords": 13,
+    "topKeywords": [
+      {
+        "keyword": "AI in healthcare",
+        "searchVolume": 18100,
+        "competition": 13,
+        "cpc": 11.6
+      },
+      {
+        "keyword": "medical artificial intelligence",
+        "searchVolume": 6600,
+        "competition": 66,
+        "cpc": 7.08
+      },
+      {
+        "keyword": "AI medical diagnosis",
+        "searchVolume": 4400,
+        "competition": 64,
+        "cpc": 4.74
+      },
+      {
+        "keyword": "healthcare artificial intelligence",
+        "searchVolume": 2400,
+        "competition": 53,
+        "cpc": 9.73
+      },
+      {
+        "keyword": "AI drug discovery",
+        "searchVolume": 1900,
+        "competition": 36,
+        "cpc": 20.71
+      },
+      {
+        "keyword": "healthcare machine learning",
+        "searchVolume": 1000,
+        "competition": 31,
+        "cpc": 11.5
+      },
+      {
+        "keyword": "AI medical imaging",
+        "searchVolume": 1000,
+        "competition": 26,
+        "cpc": 9.02
+      },
+      {
+        "keyword": "AI radiology",
+        "searchVolume": 880,
+        "competition": 35,
+        "cpc": 7.7
+      },
+      {
+        "keyword": "healthcare automation",
+        "searchVolume": 390,
+        "competition": 13,
+        "cpc": 23.71
+      },
+      {
+        "keyword": "healthcare AI solutions",
+        "searchVolume": 170,
+        "competition": 22,
+        "cpc": 11.64
+      },
+      {
+        "keyword": "medical AI tools",
+        "searchVolume": 140,
+        "competition": 67,
+        "cpc": 10.47
+      },
+      {
+        "keyword": "AI electronic health records",
+        "searchVolume": 140,
+        "competition": 64,
+        "cpc": 29.2
+      },
+      {
+        "keyword": "AI clinical decision support",
+        "searchVolume": 110,
+        "competition": 51,
+        "cpc": 62.42
+      }
+    ],
+    "relatedKeywords": []
+  },
+  "manufacturing": {
+    "totalKeywords": 20,
+    "validKeywords": 7,
+    "topKeywords": [
+      {
+        "keyword": "AI in manufacturing",
+        "searchVolume": 2900,
+        "competition": 42,
+        "cpc": 22.22
+      },
+      {
+        "keyword": "manufacturing artificial intelligence",
+        "searchVolume": 2900,
+        "competition": 42,
+        "cpc": 22.22
+      },
+      {
+        "keyword": "AI inventory management",
+        "searchVolume": 880,
+        "competition": 58,
+        "cpc": 37.77
+      },
+      {
+        "keyword": "AI supply chain management",
+        "searchVolume": 590,
+        "competition": 32,
+        "cpc": 38.46
+      },
+      {
+        "keyword": "manufacturing machine learning",
+        "searchVolume": 480,
+        "competition": 9,
+        "cpc": 8.57
+      },
+      {
+        "keyword": "AI predictive maintenance",
+        "searchVolume": 320,
+        "competition": 27,
+        "cpc": 49.6
+      },
+      {
+        "keyword": "AI process automation",
+        "searchVolume": 170,
+        "competition": 28,
+        "cpc": 29.18
+      }
+    ],
+    "relatedKeywords": []
+  },
+  "finance": {
+    "totalKeywords": 20,
+    "validKeywords": 12,
+    "topKeywords": [
+      {
+        "keyword": "AI in finance",
+        "searchVolume": 8100,
+        "competition": 57,
+        "cpc": 15.77
+      },
+      {
+        "keyword": "financial artificial intelligence",
+        "searchVolume": 8100,
+        "competition": 57,
+        "cpc": 15.77
+      },
+      {
+        "keyword": "AI financial services",
+        "searchVolume": 1600,
+        "competition": 32,
+        "cpc": 20.8
+      },
+      {
+        "keyword": "financial machine learning",
+        "searchVolume": 1300,
+        "competition": 9,
+        "cpc": 9.43
+      },
+      {
+        "keyword": "AI fraud detection",
+        "searchVolume": 1000,
+        "competition": 26,
+        "cpc": 17.99
+      },
+      {
+        "keyword": "AI risk management",
+        "searchVolume": 1000,
+        "competition": 16,
+        "cpc": 21.98
+      },
+      {
+        "keyword": "AI wealth management",
+        "searchVolume": 880,
+        "competition": 47,
+        "cpc": 17.78
+      },
+      {
+        "keyword": "AI financial planning",
+        "searchVolume": 480,
+        "competition": 79,
+        "cpc": 15.9
+      },
+      {
+        "keyword": "AI algorithmic trading",
+        "searchVolume": 320,
+        "competition": 54,
+        "cpc": 8.42
+      },
+      {
+        "keyword": "financial AI tools",
+        "searchVolume": 320,
+        "competition": 71,
+        "cpc": 23.16
+      },
+      {
+        "keyword": "AI investment management",
+        "searchVolume": 210,
+        "competition": 32,
+        "cpc": 11.59
+      },
+      {
+        "keyword": "AI credit scoring",
+        "searchVolume": 170,
+        "competition": 61,
+        "cpc": 13.79
+      }
+    ],
+    "relatedKeywords": []
+  }
+}
