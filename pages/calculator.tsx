@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import Head from 'next/head';
+import Link from 'next/link';
 import { Calculator, Zap, Users, TrendingUp, CheckCircle } from 'lucide-react';
 import EnhancedPricingCalculator from '../components/EnhancedPricingCalculator';
 import { GetStaticProps } from 'next';
@@ -150,20 +151,20 @@ export default function PricingPage({ tools }: PricingPageProps) {
                   Get expert AI implementation services with guaranteed ROI. Join 500+ companies that achieved $50M+ in productivity gains.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                  <a
+                  <Link
                     href="/services"
                     className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-cyan-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-cyan-700 transform hover:scale-105 transition-all duration-200"
                   >
                     View Implementation Packages
                     <TrendingUp className="ml-2 w-5 h-5" />
-                  </a>
-                  <a
+                  </Link>
+                  <Link
                     href="/assessment"
                     className="inline-flex items-center px-8 py-4 bg-gray-800 border border-gray-700 text-white font-semibold rounded-lg hover:bg-gray-700 transition-all"
                   >
                     Get Free AI Assessment
                     <Calculator className="ml-2 w-5 h-5" />
-                  </a>
+                  </Link>
                 </div>
               </div>
             </div>
