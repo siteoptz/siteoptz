@@ -32,7 +32,7 @@ const assessmentQuestions: AssessmentQuestion[] = [
     category: 'Current State',
     question: 'What is your current level of AI adoption?',
     options: [
-      { value: 0, label: 'No AI tools', description: 'We haven\'t started using AI yet' },
+      { value: 0, label: 'No AI tools', description: 'We haven&apos;t started using AI yet' },
       { value: 1, label: 'Basic tools', description: 'Using ChatGPT or similar for basic tasks' },
       { value: 2, label: 'Some integration', description: 'AI tools in 1-2 departments' },
       { value: 3, label: 'Advanced usage', description: 'Multiple AI tools across departments' }
@@ -112,7 +112,7 @@ const assessmentQuestions: AssessmentQuestion[] = [
       { value: 3, label: 'Yes, I have full authority' },
       { value: 2, label: 'I influence decisions' },
       { value: 1, label: 'I research and recommend' },
-      { value: 0, label: 'I\'m gathering information' }
+      { value: 0, label: 'I&apos;m gathering information' }
     ]
   }
 ];
@@ -184,7 +184,7 @@ export default function AssessmentPage() {
                   AI Readiness Assessment
                 </h1>
                 <p className="text-xl text-gray-300">
-                  Discover your organization's AI maturity in 2 minutes
+                  Discover your organization&apos;s AI maturity in 2 minutes
                 </p>
               </div>
 
@@ -258,7 +258,7 @@ export default function AssessmentPage() {
                   Your AI Readiness Results
                 </h1>
                 <p className="text-xl text-gray-300">
-                  Based on your responses, here's your personalized AI roadmap
+                  Based on your responses, here&apos;s your personalized AI roadmap
                 </p>
               </div>
 
@@ -396,7 +396,7 @@ export default function AssessmentPage() {
                   </button>
                   
                   <p className="text-sm text-gray-400 text-center">
-                    We'll also schedule a free 30-minute consultation to discuss your results
+                    We&apos;ll also schedule a free 30-minute consultation to discuss your results
                   </p>
                 </form>
               </div>
@@ -417,7 +417,7 @@ export default function AssessmentPage() {
                 </p>
                 
                 <div className="bg-gray-900 border border-gray-800 rounded-2xl p-8 max-w-2xl mx-auto mb-8">
-                  <h2 className="text-2xl font-semibold text-white mb-4">What's Next?</h2>
+                  <h2 className="text-2xl font-semibold text-white mb-4">What&apos;s Next?</h2>
                   <div className="space-y-4 text-left">
                     <div className="flex items-start gap-3">
                       <div className="text-cyan-400 font-semibold">1.</div>

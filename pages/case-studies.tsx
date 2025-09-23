@@ -67,7 +67,7 @@ const caseStudies: CaseStudy[] = [
       { label: 'Patient Satisfaction', value: '94%', improvement: '↑ 23%' }
     ],
     testimonial: {
-      quote: "The AI implementation transformed our operations. We're now focusing on patient care instead of paperwork.",
+      quote: "The AI implementation transformed our operations. We&apos;re now focusing on patient care instead of paperwork.",
       author: "Dr. Sarah Chen",
       position: "Chief Medical Officer"
     },
@@ -329,7 +329,7 @@ export default function CaseStudiesPage() {
                   </div>
 
                   <blockquote className="border-l-4 border-cyan-500 pl-4 mb-6">
-                    <p className="text-gray-300 italic mb-2">"{study.testimonial.quote}"</p>
+                    <p className="text-gray-300 italic mb-2">&quot;{study.testimonial.quote}&quot;</p>
                     <footer className="text-sm">
                       <cite className="text-white font-medium">{study.testimonial.author}</cite>
                       <span className="text-gray-400">, {study.testimonial.position}</span>
@@ -438,7 +438,7 @@ export default function CaseStudiesPage() {
               Ready to Join Our Success Stories?
             </h2>
             <p className="text-xl text-gray-300 mb-8">
-              Let's discuss how we can achieve similar results for your organization
+              Let&apos;s discuss how we can achieve similar results for your organization
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
