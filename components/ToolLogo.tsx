@@ -95,17 +95,21 @@ const ToolLogo: React.FC<ToolLogoProps> = ({
         />
       )}
       
-      {/* Actual image */}
-      <img 
-        src={currentSrc}
-        alt={`${toolName} logo`}
-        className={`${sizeClasses[size]} ${className} object-contain rounded-lg transition-opacity duration-200 ${
+      {/* Image container with consistent sizing */}
+      <div 
+        className={`${sizeClasses[size]} ${className} bg-white rounded-lg flex items-center justify-center p-1 border border-gray-100 transition-opacity duration-200 ${
           imageLoaded ? 'opacity-100' : 'opacity-0 absolute top-0 left-0'
         }`}
-        onLoad={handleImageLoad}
-        onError={handleImageError}
-        title={toolName}
-      />
+      >
+        <img 
+          src={currentSrc}
+          alt={`${toolName} logo`}
+          className="max-w-full max-h-full object-contain"
+          onLoad={handleImageLoad}
+          onError={handleImageError}
+          title={toolName}
+        />
+      </div>
     </div>
   );
 };
