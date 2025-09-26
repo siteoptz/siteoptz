@@ -178,9 +178,9 @@ export default function IndustryPage({ industry, content, slug }: IndustryPagePr
                       // Map category names to their correct URLs
                       const getCategoryUrl = (categoryName: string) => {
                         if (categoryName === 'Voice AI Tools') {
-                          return '/categories/best-voice-ai-tools';
+                          return '/tools?category=best-voice-ai-tools';
                         }
-                        return `/categories/${categoryName.toLowerCase().replace(/[^a-z0-9]+/g, '-')}`;
+                        return `/tools?category=${categoryName.toLowerCase().replace(/[^a-z0-9]+/g, '-')}`;
                       };
                       
                       return (

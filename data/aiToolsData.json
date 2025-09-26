@@ -1,3 +1,122 @@
+[12:17:02.407] Running build in Washington, D.C., USA (East) – iad1
+[12:17:02.408] Build machine configuration: 4 cores, 8 GB
+[12:17:02.426] Cloning github.com/siteoptz/siteoptz (Branch: main, Commit: 518b168)
+[12:17:02.530] Previous build caches not available
+[12:17:02.797] Cloning completed: 371.000ms
+[12:17:04.785] Running "vercel build"
+[12:17:05.253] Vercel CLI 44.7.3
+[12:17:05.581] Warning: Detected "engines": { "node": ">=18.0.0" } in your `package.json` that will automatically upgrade when a new major Node.js Version is released. Learn More: http://vercel.link/node-version
+[12:17:05.596] Installing dependencies...
+[12:17:21.726] npm warn deprecated formidable@1.2.6: Please upgrade to latest, formidable@v2 or formidable@v3! Check these notes: https://bit.ly/2ZEqIau
+[12:17:21.812] npm warn deprecated lodash.get@4.4.2: This package is deprecated. Use the optional chaining (?.) operator instead.
+[12:17:22.460] npm warn deprecated rimraf@3.0.2: Rimraf versions prior to v4 are no longer supported
+[12:17:22.659] npm warn deprecated node-domexception@1.0.0: Use your platform's native DOMException instead
+[12:17:23.012] npm warn deprecated inflight@1.0.6: This module is not supported, and leaks memory. Do not use it. Check out lru-cache if you want a good and tested way to coalesce async requests by a key value, which is much more comprehensive and powerful.
+[12:17:23.589] npm warn deprecated superagent@3.8.1: Please upgrade to superagent v10.2.2+, see release notes at https://github.com/forwardemail/superagent/releases/tag/v10.2.2 - maintenance is supported by Forward Email @ https://forwardemail.net
+[12:17:23.916] npm warn deprecated @humanwhocodes/object-schema@2.0.3: Use @eslint/object-schema instead
+[12:17:24.088] npm warn deprecated @humanwhocodes/config-array@0.13.0: Use @eslint/config-array instead
+[12:17:24.089] npm warn deprecated glob@7.2.3: Glob versions prior to v9 are no longer supported
+[12:17:26.552] npm warn deprecated eslint@8.57.1: This version is no longer supported. Please see https://eslint.org/version-support for other options.
+[12:17:43.918] 
+[12:17:43.918] > siteoptz-ai@1.0.1 prepare
+[12:17:43.918] > husky install
+[12:17:43.918] 
+[12:17:43.968] husky - Git hooks installed
+[12:17:43.979] 
+[12:17:43.980] added 591 packages in 38s
+[12:17:43.980] 
+[12:17:43.980] 198 packages are looking for funding
+[12:17:43.980]   run `npm fund` for details
+[12:17:44.042] Detected Next.js version: 14.2.31
+[12:17:44.050] Running "npm run build"
+[12:17:44.172] 
+[12:17:44.172] > siteoptz-ai@1.0.1 build
+[12:17:44.172] > next build
+[12:17:44.172] 
+[12:17:44.775] Attention: Next.js now collects completely anonymous telemetry regarding usage.
+[12:17:44.775] This information is used to shape Next.js' roadmap and prioritize features.
+[12:17:44.776] You can learn more, including how to opt-out if you'd not like to participate in this anonymous program, by visiting the following URL:
+[12:17:44.776] https://nextjs.org/telemetry
+[12:17:44.776] 
+[12:17:44.842]   ▲ Next.js 14.2.31
+[12:17:44.843]   - Experiments (use with caution):
+[12:17:44.843]     · optimizeCss
+[12:17:44.843]     · scrollRestoration
+[12:17:44.843] 
+[12:17:44.843]    Linting and checking validity of types ...
+[12:17:49.628] 
+[12:17:49.628] ./pages/compare/[tool1]-vs-[tool2].tsx
+[12:17:49.628] 90:15  Warning: Using `<img>` could result in slower LCP and higher bandwidth. Consider using `<Image />` from `next/image` to automatically optimize images. This may incur additional usage or cost from your provider. See: https://nextjs.org/docs/messages/no-img-element  @next/next/no-img-element
+[12:17:49.629] 100:15  Warning: Using `<img>` could result in slower LCP and higher bandwidth. Consider using `<Image />` from `next/image` to automatically optimize images. This may incur additional usage or cost from your provider. See: https://nextjs.org/docs/messages/no-img-element  @next/next/no-img-element
+[12:17:49.629] 
+[12:17:49.629] ./pages/compare/index.jsx
+[12:17:49.629] 222:15  Warning: Using `<img>` could result in slower LCP and higher bandwidth. Consider using `<Image />` from `next/image` to automatically optimize images. This may incur additional usage or cost from your provider. See: https://nextjs.org/docs/messages/no-img-element  @next/next/no-img-element
+[12:17:49.629] 296:13  Warning: Using `<img>` could result in slower LCP and higher bandwidth. Consider using `<Image />` from `next/image` to automatically optimize images. This may incur additional usage or cost from your provider. See: https://nextjs.org/docs/messages/no-img-element  @next/next/no-img-element
+[12:17:49.629] 
+[12:17:49.629] ./pages/compare-tools.tsx
+[12:17:49.629] 218:29  Warning: Using `<img>` could result in slower LCP and higher bandwidth. Consider using `<Image />` from `next/image` to automatically optimize images. This may incur additional usage or cost from your provider. See: https://nextjs.org/docs/messages/no-img-element  @next/next/no-img-element
+[12:17:49.629] 
+[12:17:49.629] ./pages/demo.tsx
+[12:17:49.630] 258:21  Warning: Using `<img>` could result in slower LCP and higher bandwidth. Consider using `<Image />` from `next/image` to automatically optimize images. This may incur additional usage or cost from your provider. See: https://nextjs.org/docs/messages/no-img-element  @next/next/no-img-element
+[12:17:49.630] 
+[12:17:49.630] ./pages/reviews/[toolName].tsx
+[12:17:49.630] 589:21  Warning: Using `<img>` could result in slower LCP and higher bandwidth. Consider using `<Image />` from `next/image` to automatically optimize images. This may incur additional usage or cost from your provider. See: https://nextjs.org/docs/messages/no-img-element  @next/next/no-img-element
+[12:17:49.630] 
+[12:17:49.630] ./pages/tools/[slug].tsx
+[12:17:49.630] 125:21  Warning: Using `<img>` could result in slower LCP and higher bandwidth. Consider using `<Image />` from `next/image` to automatically optimize images. This may incur additional usage or cost from your provider. See: https://nextjs.org/docs/messages/no-img-element  @next/next/no-img-element
+[12:17:49.630] 
+[12:17:49.630] ./pages/tools/[tool].tsx
+[12:17:49.630] 211:19  Warning: Using `<img>` could result in slower LCP and higher bandwidth. Consider using `<Image />` from `next/image` to automatically optimize images. This may incur additional usage or cost from your provider. See: https://nextjs.org/docs/messages/no-img-element  @next/next/no-img-element
+[12:17:49.630] 
+[12:17:49.630] ./components/AIToolsComparisonPage.jsx
+[12:17:49.630] 289:25  Warning: Using `<img>` could result in slower LCP and higher bandwidth. Consider using `<Image />` from `next/image` to automatically optimize images. This may incur additional usage or cost from your provider. See: https://nextjs.org/docs/messages/no-img-element  @next/next/no-img-element
+[12:17:49.630] 
+[12:17:49.631] ./components/ComparisonTable.jsx
+[12:17:49.631] 186:23  Warning: Using `<img>` could result in slower LCP and higher bandwidth. Consider using `<Image />` from `next/image` to automatically optimize images. This may incur additional usage or cost from your provider. See: https://nextjs.org/docs/messages/no-img-element  @next/next/no-img-element
+[12:17:49.633] 
+[12:17:49.633] ./components/HeroSection.jsx
+[12:17:49.633] 151:23  Warning: Using `<img>` could result in slower LCP and higher bandwidth. Consider using `<Image />` from `next/image` to automatically optimize images. This may incur additional usage or cost from your provider. See: https://nextjs.org/docs/messages/no-img-element  @next/next/no-img-element
+[12:17:49.633] 
+[12:17:49.634] ./components/PricingCalculator.jsx
+[12:17:49.634] 58:6  Warning: React Hook useEffect has a missing dependency: 'usageMultipliers'. Either include it or remove the dependency array.  react-hooks/exhaustive-deps
+[12:17:49.634] 169:17  Warning: Using `<img>` could result in slower LCP and higher bandwidth. Consider using `<Image />` from `next/image` to automatically optimize images. This may incur additional usage or cost from your provider. See: https://nextjs.org/docs/messages/no-img-element  @next/next/no-img-element
+[12:17:49.634] 200:21  Warning: Using `<img>` could result in slower LCP and higher bandwidth. Consider using `<Image />` from `next/image` to automatically optimize images. This may incur additional usage or cost from your provider. See: https://nextjs.org/docs/messages/no-img-element  @next/next/no-img-element
+[12:17:49.634] 
+[12:17:49.634] ./components/PricingCalculator.tsx
+[12:17:49.634] 38:9  Warning: The 'convertedPlans' conditional could make the dependencies of useEffect Hook (at line 77) change on every render. To fix this, wrap the initialization of 'convertedPlans' in its own useMemo() Hook.  react-hooks/exhaustive-deps
+[12:17:49.634] 
+[12:17:49.634] ./components/comparison/ComparisonTable.jsx
+[12:17:49.634] 28:17  Warning: Using `<img>` could result in slower LCP and higher bandwidth. Consider using `<Image />` from `next/image` to automatically optimize images. This may incur additional usage or cost from your provider. See: https://nextjs.org/docs/messages/no-img-element  @next/next/no-img-element
+[12:17:49.634] 
+[12:17:49.634] ./components/comparison/EnhancedComparisonTable.tsx
+[12:17:49.634] 155:6  Warning: React Hook useMemo has a missing dependency: 'categorizeByUseCase'. Either include it or remove the dependency array.  react-hooks/exhaustive-deps
+[12:17:49.634] 
+[12:17:49.634] ./components/comparison/HeroSection.jsx
+[12:17:49.634] 101:19  Warning: Using `<img>` could result in slower LCP and higher bandwidth. Consider using `<Image />` from `next/image` to automatically optimize images. This may incur additional usage or cost from your provider. See: https://nextjs.org/docs/messages/no-img-element  @next/next/no-img-element
+[12:17:49.634] 
+[12:17:49.634] ./components/comparison/PricingCalculator.jsx
+[12:17:49.634] 12:9  Warning: The 'usageMultipliers' object makes the dependencies of useMemo Hook (at line 60) change on every render. Move it inside the useMemo callback. Alternatively, wrap the initialization of 'usageMultipliers' in its own useMemo() Hook.  react-hooks/exhaustive-deps
+[12:17:49.634] 182:23  Warning: Using `<img>` could result in slower LCP and higher bandwidth. Consider using `<Image />` from `next/image` to automatically optimize images. This may incur additional usage or cost from your provider. See: https://nextjs.org/docs/messages/no-img-element  @next/next/no-img-element
+[12:17:49.634] 
+[12:17:49.634] ./components/comparison/PricingCalculator.tsx
+[12:17:49.634] 138:6  Warning: React Hook useMemo has a missing dependency: 'calculateToolPricing'. Either include it or remove the dependency array.  react-hooks/exhaustive-deps
+[12:17:49.634] 
+[12:17:49.634] info  - Need to disable some ESLint rules? Learn more here: https://nextjs.org/docs/basic-features/eslint#disabling-rules
+[12:17:52.351] Failed to compile.
+[12:17:52.352] 
+[12:17:52.352] ./pages/compare/[tool1]-vs-[tool2].tsx:57:9
+[12:17:52.352] Type error: Type 'string[]' is not assignable to type 'never[]'.
+[12:17:52.352]   Type 'string' is not assignable to type 'never'.
+[12:17:52.352] 
+[12:17:52.352] [0m [90m 55 |[39m         ogImage[33m=[39m{[32m`/images/comparisons/${tool1.slug}-vs-${tool2.slug}.png`[39m}[0m
+[12:17:52.352] [0m [90m 56 |[39m         schemaData[33m=[39m{combinedSchema}[0m
+[12:17:52.352] [0m[31m[1m>[22m[39m[90m 57 |[39m         keywords[33m=[39m{keywords}[0m
+[12:17:52.352] [0m [90m    |[39m         [31m[1m^[22m[39m[0m
+[12:17:52.352] [0m [90m 58 |[39m       [33m/[39m[33m>[39m[0m
+[12:17:52.352] [0m [90m 59 |[39m       [0m
+[12:17:52.352] [0m [90m 60 |[39m       [33m<[39m[33mdiv[39m className[33m=[39m[32m"max-w-7xl mx-auto px-4 py-8"[39m[33m>[39m[0m
+[12:17:52.374] Next.js build worker exited with code: 1 and signal: null
+[12:17:52.395] Error: Command "npm run build" exited with 1
 [
   {
     "id": "chatgpt",

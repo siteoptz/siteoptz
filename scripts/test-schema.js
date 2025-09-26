@@ -592,3 +592,4 @@ if (require.main === module) {
 }
 
 module.exports = SchemaValidator;
+

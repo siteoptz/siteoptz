@@ -67,7 +67,7 @@ export default function SemanticToolPage({ tool, relatedTools }: ToolPageProps) 
             <span className="mx-2 text-gray-400">/</span>
           </li>
           <li>
-            <Link href={`/categories/${tool.overview.category?.toLowerCase().replace(/ /g, '-')}`} className="text-gray-500 hover:text-gray-700">
+            <Link href={`/tools?category=${tool.overview.category?.toLowerCase().replace(/ /g, '-')}`} className="text-gray-500 hover:text-gray-700">
               {tool.overview.category}
             </Link>
           </li>
@@ -386,7 +386,7 @@ export default function SemanticToolPage({ tool, relatedTools }: ToolPageProps) 
                 </nav>
                 
                 <Link
-                  href={`/categories/${tool.overview.category?.toLowerCase().replace(/ /g, '-')}`}
+                  href={`/tools?category=${tool.overview.category?.toLowerCase().replace(/ /g, '-')}`}
                   className="block mt-4 text-center text-sm text-blue-600 hover:text-blue-800 font-medium"
                 >
                   View All {tool.overview.category} Tools

@@ -258,3 +258,4 @@ const ComparisonTable = ({ tools = [], maxSelection = 3, onToolSelect }) => {
 export default ComparisonTable;
 
 
+

@@ -395,15 +395,15 @@ const AIAutomationCategoryPage = ({ tools = [] }) => {
               <div className="bg-white p-6 rounded-xl border border-gray-200 mb-8">
                 <h3 className="text-xl font-semibold text-gray-900 mb-4">Related Categories</h3>
                 <div className="space-y-3">
-                  <Link href="/categories/productivity" className="block p-3 rounded-lg bg-gray-50 hover:bg-gray-100 transition-colors">
+                  <Link href="/tools?category=productivity" className="block p-3 rounded-lg bg-gray-50 hover:bg-gray-100 transition-colors">
                     <div className="font-medium text-gray-900">Productivity Tools</div>
                     <div className="text-sm text-gray-600">10 tools</div>
                   </Link>
-                  <Link href="/categories/code-generation" className="block p-3 rounded-lg bg-gray-50 hover:bg-gray-100 transition-colors">
+                  <Link href="/tools?category=code-generation" className="block p-3 rounded-lg bg-gray-50 hover:bg-gray-100 transition-colors">
                     <div className="font-medium text-gray-900">Code Generation</div>
                     <div className="text-sm text-gray-600">1 tools</div>
                   </Link>
-                  <Link href="/categories/email-marketing" className="block p-3 rounded-lg bg-gray-50 hover:bg-gray-100 transition-colors">
+                  <Link href="/tools?category=email-marketing" className="block p-3 rounded-lg bg-gray-50 hover:bg-gray-100 transition-colors">
                     <div className="font-medium text-gray-900">Email Marketing</div>
                     <div className="text-sm text-gray-600">2 tools</div>
                   </Link>
