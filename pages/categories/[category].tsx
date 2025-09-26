@@ -563,11 +563,23 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
     'lead-generation': 'Lead Generation',
     'voice-ai': 'Voice AI',
     'voice-ai-tools': 'Best Voice AI Tools',
+    'best-voice-ai-tools': 'Best Voice AI Tools',
     'writing': 'Writing',
     'education-research': 'Research & Education',
     'research-education': 'Research & Education',
     'ux-design': 'UX',
-    'ux': 'UX'
+    'ux': 'UX',
+    // Footer link mappings
+    'seo-optimization': 'SEO & Optimization',
+    'social-media': 'Social Media',
+    'paid-search-ppc': 'Paid Search & PPC',
+    'code-generation': 'Code Generation',
+    'content-creation': 'Content Creation',
+    'data-analysis': 'Data Analysis',
+    'image-generation': 'Image Generation',
+    'productivity': 'Productivity',
+    'email-marketing': 'Email Marketing',
+    'video-generation': 'Video Generation'
   };
   
   // First try direct category name, then try the mapping
