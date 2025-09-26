@@ -563,7 +563,11 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
     'lead-generation': 'Lead Generation',
     'voice-ai': 'Voice AI',
     'voice-ai-tools': 'Best Voice AI Tools',
-    'writing': 'Writing'
+    'writing': 'Writing',
+    'education-research': 'Research & Education',
+    'research-education': 'Research & Education',
+    'ux-design': 'UX',
+    'ux': 'UX'
   };
   
   // First try direct category name, then try the mapping
@@ -572,10 +576,79 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
     content = categoryContent[contentKeyMapping[categorySlug]];
   }
   
+  // Create default content structure for missing categories
   if (!content) {
-    console.error(`Category content not found for: ${category} (slug: ${categorySlug})`);
-    console.error(`Available keys: ${Object.keys(categoryContent)}`);
-    return { notFound: true };
+    console.log(`Creating default content for category: ${category} (slug: ${categorySlug})`);
+    content = {
+      seo: {
+        title: `Best ${category} AI Tools 2024 | Compare Top ${category} Solutions`,
+        description: `Discover and compare the best ${category} AI tools. Find the perfect ${category.toLowerCase()} solution for your business with detailed reviews, pricing, and features comparison.`,
+        keywords: [
+          `${category} AI tools`,
+          `${category} software`,
+          `best ${category.toLowerCase()} tools`,
+          `${category.toLowerCase()} AI`,
+          'AI tools comparison',
+          `${category.toLowerCase()} solutions`,
+          `${category.toLowerCase()} platforms`,
+          'artificial intelligence'
+        ]
+      },
+      hero: {
+        title: `Best ${category} AI Tools`,
+        subheading: `Transform Your Business with Leading ${category} Solutions`,
+        introText: `Explore our comprehensive collection of ${category} AI tools designed to enhance productivity and drive innovation. Compare features, pricing, and capabilities to find the perfect solution for your needs.`
+      },
+      introduction: {
+        title: `${category} AI Tools Overview`,
+        content: [
+          `${category} AI tools are revolutionizing how businesses operate by leveraging artificial intelligence to automate tasks, enhance decision-making, and improve efficiency. These cutting-edge solutions help organizations stay competitive in an increasingly digital landscape.`,
+          `Our curated selection of ${category} tools includes industry-leading platforms trusted by thousands of businesses worldwide. Each tool has been carefully evaluated based on features, performance, pricing, and user satisfaction to help you make informed decisions.`,
+          `Whether you're a startup looking for cost-effective solutions or an enterprise seeking robust ${category.toLowerCase()} capabilities, our comprehensive comparison guide helps you identify the perfect AI tools that align with your specific requirements and budget.`
+        ]
+      },
+      businessCases: [],
+      implementation: {
+        title: `${category} Implementation Guide`,
+        steps: []
+      },
+      benefits: {
+        title: `Benefits of ${category} AI Tools`,
+        items: [
+          'Increased productivity and efficiency',
+          'Cost reduction through automation',
+          'Enhanced accuracy and reduced errors',
+          'Scalable solutions for growing businesses',
+          'Real-time insights and analytics',
+          'Improved decision-making capabilities'
+        ]
+      },
+      features: {
+        title: `Key Features to Consider`,
+        items: [
+          'Ease of use and user interface',
+          'Integration capabilities',
+          'Pricing and value for money',
+          'Customer support and documentation',
+          'Security and compliance features',
+          'Scalability and performance'
+        ]
+      },
+      faqs: [
+        {
+          question: `What are ${category} AI tools?`,
+          answer: `${category} AI tools are software solutions that leverage artificial intelligence and machine learning to automate, enhance, or transform ${category.toLowerCase()} processes. These tools help businesses improve efficiency, reduce costs, and gain competitive advantages.`
+        },
+        {
+          question: `How do I choose the right ${category} tool?`,
+          answer: `Consider your specific needs, budget, technical requirements, and integration capabilities. Compare features, read user reviews, and take advantage of free trials to test different solutions before making a decision.`
+        },
+        {
+          question: `What's the typical cost of ${category} AI tools?`,
+          answer: `Pricing varies widely depending on features and scale. Many tools offer free tiers or trials, with paid plans typically ranging from $10-500+ per month. Enterprise solutions may require custom pricing based on specific requirements.`
+        }
+      ]
+    };
   }
 
   return {
