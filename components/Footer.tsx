@@ -42,18 +42,18 @@ const Footer: React.FC = () => {
   };
 
   const solutionsLinks = [
-    { name: 'SEO & Optimization', href: getCategoryUrl('SEO & Optimization') },
-    { name: 'Social Media', href: getCategoryUrl('Social Media') },
-    { name: 'Paid Search', href: getCategoryUrl('Paid Search & PPC') },
-    { name: 'Voice AI', href: getCategoryUrl('Best Voice AI Tools') },
-    { name: 'Code Generation', href: getCategoryUrl('Code Generation') },
-    { name: 'Content Creation', href: getCategoryUrl('Content Creation') },
-    { name: 'Data Analysis', href: getCategoryUrl('Data Analysis') },
-    { name: 'Image Generation', href: getCategoryUrl('Image Generation') },
-    { name: 'Research', href: getCategoryUrl('Research & Education') },
-    { name: 'Productivity', href: getCategoryUrl('Productivity') },
-    { name: 'Email Marketing', href: getCategoryUrl('Email Marketing') },
-    { name: 'Video Generation', href: getCategoryUrl('Video Generation') },
+    { name: 'SEO & Optimization', href: '/tools?category=SEO%20%26%20Optimization' },
+    { name: 'Social Media', href: '/tools?category=Social%20Media' },
+    { name: 'Paid Search', href: '/tools?category=Paid%20Search%20%26%20PPC' },
+    { name: 'Voice AI', href: '/tools?category=Voice%20AI' },
+    { name: 'Code Generation', href: '/tools?category=Code%20Generation' },
+    { name: 'Content Creation', href: '/tools?category=Content%20Creation' },
+    { name: 'Data Analysis', href: '/tools?category=Data%20Analysis' },
+    { name: 'Image Generation', href: '/tools?category=Image%20Generation' },
+    { name: 'Research', href: '/tools?category=Research%20%26%20Education' },
+    { name: 'Productivity', href: '/tools?category=Productivity' },
+    { name: 'Email Marketing', href: '/tools?category=Email%20Marketing' },
+    { name: 'Video Generation', href: '/tools?category=Video%20Generation' },
   ];
 
   const industriesLinks = [

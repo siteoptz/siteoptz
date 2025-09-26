@@ -177,10 +177,8 @@ export default function IndustryPage({ industry, content, slug }: IndustryPagePr
                     {content.toolCategories.map((category) => {
                       // Map category names to their correct URLs
                       const getCategoryUrl = (categoryName: string) => {
-                        if (categoryName === 'Voice AI Tools') {
-                          return '/tools?category=best-voice-ai-tools';
-                        }
-                        return `/tools?category=${categoryName.toLowerCase().replace(/[^a-z0-9]+/g, '-')}`;
+                        // Use the actual category name, URL-encoded
+                        return `/tools?category=${encodeURIComponent(categoryName)}`;
                       };
                       
                       return (
