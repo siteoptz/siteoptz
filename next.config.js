@@ -166,21 +166,8 @@ const nextConfig = {
 
 
   // Subdomain routing configuration
-  async rewrites() {
-    return [
-      // Handle optz subdomain routing
-      {
-        source: '/:path*',
-        destination: '/optz/:path*',
-        has: [
-          {
-            type: 'host',
-            value: 'optz.siteoptz.ai',
-          },
-        ],
-      },
-    ];
-  },
+  // REMOVED: optz.siteoptz.ai rewrite - this subdomain is handled by a separate Vercel project (optz-bi)
+  // The optz subdomain points to the Marketing ROI Tracker application, not a path in this app
 
   // Optimized redirects using pattern matching
   // Reduces thousands of individual redirects to just a few patterns
