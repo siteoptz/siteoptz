@@ -176,7 +176,7 @@ export default function OptzBI() {
             <ul className="list-disc list-inside text-gray-400 space-y-1 mb-4">
               <li>The application server is starting up</li>
               <li>The application is temporarily unavailable</li>
-              <li>There's a network connectivity issue</li>
+              <li>There&apos;s a network connectivity issue</li>
             </ul>
             <div className="flex gap-3">
               <button
