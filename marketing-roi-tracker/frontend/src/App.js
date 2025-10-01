@@ -24,6 +24,24 @@ function App() {
   const [showWizard, setShowWizard] = useState(false);
 
   useEffect(() => {
+    // Check for URL parameters first (for Pro dashboard integration)
+    const urlParams = new URLSearchParams(window.location.search);
+    const proUser = urlParams.get('proUser');
+    const proToken = urlParams.get('proToken');
+    
+    if (proUser && proToken) {
+      // Auto-authenticate from Pro dashboard
+      try {
+        const userData = JSON.parse(decodeURIComponent(proUser));
+        handleLogin(userData, proToken);
+        // Clean URL
+        window.history.replaceState({}, document.title, window.location.pathname);
+        return;
+      } catch (error) {
+        console.error('Error parsing Pro user data:', error);
+      }
+    }
+    
     // Check for stored authentication
     const storedToken = localStorage.getItem('token');
     const storedUser = localStorage.getItem('user');

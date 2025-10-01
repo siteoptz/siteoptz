@@ -22,12 +22,17 @@ export default function OptzBI() {
   const { userPlan, loading } = useUserPlan();
   const [iframeLoading, setIframeLoading] = useState(true);
   const [connectionStatus, setConnectionStatus] = useState('connecting');
+  
+  // Use subdomain for production, localhost for development
+  const OPTZ_BI_URL = process.env.NODE_ENV === 'production' 
+    ? 'https://optz-bi.siteoptz.ai' 
+    : 'http://localhost:3001';
 
   useEffect(() => {
     // Check if Optz BI is running
     const checkOptzBI = async () => {
       try {
-        const response = await fetch('http://localhost:3001', { 
+        const response = await fetch(OPTZ_BI_URL, { 
           method: 'HEAD',
           mode: 'no-cors'
         });
@@ -117,7 +122,7 @@ export default function OptzBI() {
                  connectionStatus === 'error' ? 'Connection Error' : 'Connecting...'}
               </div>
               <a
-                href="http://localhost:3001"
+                href={OPTZ_BI_URL}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center px-3 py-2 bg-gray-800 text-gray-300 rounded-lg hover:bg-gray-700 hover:text-white transition-all text-sm"
@@ -214,7 +219,7 @@ export default function OptzBI() {
           {/* Iframe */}
           {connectionStatus === 'connected' && (
             <iframe
-              src="http://localhost:3001"
+              src={`${OPTZ_BI_URL}?proUser=${encodeURIComponent(JSON.stringify(userPlan))}&proToken=pro-dashboard-token`}
               className="w-full h-screen border-0"
               style={{ minHeight: '800px' }}
               onLoad={handleIframeLoad}

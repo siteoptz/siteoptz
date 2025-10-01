@@ -148,7 +148,7 @@ export default function ProDashboard() {
                   <ArrowRight className="w-5 h-5 ml-3" />
                 </Link>
                 <a
-                  href="http://localhost:3001"
+                  href={process.env.NODE_ENV === 'production' ? 'https://optz-bi.siteoptz.ai' : 'http://localhost:3001'}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex items-center justify-center border border-purple-500/50 text-purple-300 px-6 py-2 rounded-lg hover:bg-purple-500/10 transition-all text-sm"

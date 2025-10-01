@@ -1,0 +1,77 @@
+version: '3.8'
+
+services:
+  optz-bi-backend:
+    build: 
+      context: ./backend
+      dockerfile: Dockerfile
+    container_name: optz-bi-backend
+    restart: unless-stopped
+    ports:
+      - "5001:5001"
+    environment:
+      - NODE_ENV=production
+      - PORT=5001
+      - JWT_SECRET=${JWT_SECRET:-your-super-secret-jwt-key}
+      - DATABASE_PATH=/app/data/optz_bi.db
+    volumes:
+      - backend-data:/app/data
+      - backend-uploads:/app/uploads
+    networks:
+      - optz-bi-network
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:5001/api/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+
+  optz-bi-frontend:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+    container_name: optz-bi-frontend
+    restart: unless-stopped
+    ports:
+      - "3001:3000"
+    environment:
+      - NODE_ENV=production
+      - REACT_APP_API_URL=https://optz-bi-api.siteoptz.ai
+    depends_on:
+      - optz-bi-backend
+    networks:
+      - optz-bi-network
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:3000"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+
+  # Nginx reverse proxy for SSL termination and routing
+  nginx:
+    image: nginx:alpine
+    container_name: optz-bi-nginx
+    restart: unless-stopped
+    ports:
+      - "80:80"
+      - "443:443"
+    volumes:
+      - ./nginx/nginx.conf:/etc/nginx/nginx.conf:ro
+      - ./nginx/ssl:/etc/nginx/ssl:ro
+      - nginx-logs:/var/log/nginx
+    depends_on:
+      - optz-bi-frontend
+      - optz-bi-backend
+    networks:
+      - optz-bi-network
+
+volumes:
+  backend-data:
+    driver: local
+  backend-uploads:
+    driver: local
+  nginx-logs:
+    driver: local
+
+networks:
+  optz-bi-network:
+    driver: bridge

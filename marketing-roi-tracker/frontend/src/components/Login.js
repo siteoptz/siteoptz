@@ -1,8 +1,8 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { User, Lock, Mail, Building2, Eye, EyeOff } from 'lucide-react';
 import './Auth.css';
 
-const Login = ({ onLogin, onToggleMode }) => {
+const Login = ({ onLogin, onToggleMode, autoAuthUser = null }) => {
   const [isLogin, setIsLogin] = useState(true);
   const [showPassword, setShowPassword] = useState(false);
   const [formData, setFormData] = useState({
@@ -13,6 +13,13 @@ const Login = ({ onLogin, onToggleMode }) => {
   });
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState('');
+
+  // Auto-authenticate if user data is provided (from Pro dashboard)
+  useEffect(() => {
+    if (autoAuthUser) {
+      onLogin(autoAuthUser, 'pro-dashboard-token');
+    }
+  }, [autoAuthUser, onLogin]);
 
   const handleChange = (e) => {
     setFormData({
