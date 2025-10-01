@@ -180,8 +180,10 @@
 
 .type-card.selected,
 .goal-card.selected {
-  border-color: #3b82f6;
-  background: rgba(59, 130, 246, 0.1);
+  border-color: #00bcd4;
+  background: rgba(0, 188, 212, 0.2);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(0, 188, 212, 0.3);
 }
 
 .type-card h4,

@@ -75,8 +75,12 @@ const CampaignWizard = ({ onComplete, onCancel, connections, token }) => {
   };
 
   const nextStep = () => {
-    if (validateStep(currentStep) && currentStep < 5) {
+    const isValid = validateStep(currentStep);
+    console.log('Next step validation:', { currentStep, isValid, formData });
+    if (isValid && currentStep < 5) {
       setCurrentStep(currentStep + 1);
+    } else {
+      console.log('Validation failed - missing required fields');
     }
   };
 
@@ -168,9 +172,13 @@ const CampaignWizard = ({ onComplete, onCancel, connections, token }) => {
               key={type.value}
               className={`type-card ${formData.type === type.value ? 'selected' : ''}`}
               onClick={() => handleInputChange('type', type.value)}
+              style={{ userSelect: 'none' }}
             >
               <h4>{type.label}</h4>
               <p>{type.description}</p>
+              {formData.type === type.value && (
+                <CheckCircle className="goal-check" size={20} />
+              )}
             </div>
           ))}
         </div>
