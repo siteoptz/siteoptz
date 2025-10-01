@@ -39,7 +39,13 @@ import {
   Building2,
   Rocket,
   CreditCard,
-  Bell
+  Bell,
+  DollarSign,
+  Lock,
+  Database,
+  Brain,
+  AlertCircle,
+  Lightbulb
 } from 'lucide-react';
 import Link from 'next/link';
 

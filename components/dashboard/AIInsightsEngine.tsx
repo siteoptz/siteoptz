@@ -21,7 +21,8 @@ import {
   Share2,
   Play,
   Pause,
-  Settings
+  Settings,
+  Shield
 } from 'lucide-react';
 
 interface AIInsight {
