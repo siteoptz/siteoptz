@@ -1,4 +1,4 @@
-# Marketing ROI Tracker
+# Optz BI
 
 A comprehensive web application for business owners to track and analyze the return on investment (ROI) of their marketing campaigns.
 
