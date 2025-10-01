@@ -103,10 +103,85 @@ export default function ProDashboard() {
           </div>
         </div>
 
+        {/* Featured: Optz BI Access */}
+        <div className="mb-8">
+          <div className="bg-gradient-to-r from-purple-900/30 via-blue-900/30 to-purple-900/30 border border-purple-500/50 rounded-2xl p-8">
+            <div className="flex items-center justify-between">
+              <div className="flex items-center gap-6">
+                <div className="w-16 h-16 bg-gradient-to-br from-purple-500 to-blue-500 rounded-xl flex items-center justify-center">
+                  <BarChart3 className="w-8 h-8 text-white" />
+                </div>
+                <div>
+                  <h2 className="text-2xl font-bold text-white mb-2 flex items-center gap-3">
+                    Optz BI - Marketing ROI Tracker
+                    <span className="text-xs bg-gradient-to-r from-green-500 to-emerald-500 text-white px-3 py-1 rounded-full font-medium">
+                      LIVE NOW
+                    </span>
+                  </h2>
+                  <p className="text-gray-300 mb-3">
+                    Access your complete marketing analytics platform with real-time ROI tracking, 
+                    platform integrations, and AI-powered insights.
+                  </p>
+                  <div className="flex items-center gap-4 text-sm text-gray-400">
+                    <span className="flex items-center gap-1">
+                      <Zap className="w-4 h-4 text-blue-400" />
+                      Platform Sync
+                    </span>
+                    <span className="flex items-center gap-1">
+                      <Target className="w-4 h-4 text-purple-400" />
+                      AI Insights
+                    </span>
+                    <span className="flex items-center gap-1">
+                      <TrendingUp className="w-4 h-4 text-green-400" />
+                      Real-time ROI
+                    </span>
+                  </div>
+                </div>
+              </div>
+              <div className="flex flex-col gap-3">
+                <Link
+                  href="/dashboard/pro/optz-bi"
+                  className="inline-flex items-center bg-gradient-to-r from-purple-600 to-blue-600 text-white px-8 py-4 rounded-xl hover:from-purple-700 hover:to-blue-700 transition-all font-semibold text-lg shadow-lg hover:shadow-xl transform hover:scale-105"
+                >
+                  <BarChart3 className="w-6 h-6 mr-3" />
+                  Launch Optz BI
+                  <ArrowRight className="w-5 h-5 ml-3" />
+                </Link>
+                <a
+                  href="http://localhost:3001"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center justify-center border border-purple-500/50 text-purple-300 px-6 py-2 rounded-lg hover:bg-purple-500/10 transition-all text-sm"
+                >
+                  <Globe className="w-4 h-4 mr-2" />
+                  Open in New Window
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
         {/* Quick Access Cards */}
         <div className="mb-8">
           <h2 className="text-xl font-bold text-white mb-4">Quick Access</h2>
-          <div className="grid md:grid-cols-3 gap-4">
+          <div className="grid md:grid-cols-4 gap-4">
+            <Link
+              href="/dashboard/pro/optz-bi"
+              className="bg-gradient-to-br from-purple-900/20 to-blue-900/20 border border-purple-500/50 rounded-xl p-6 hover:border-purple-400 transition-all group"
+            >
+              <div className="flex items-center justify-between mb-3">
+                <BarChart3 className="w-8 h-8 text-purple-400" />
+                <ArrowRight className="w-5 h-5 text-gray-400 group-hover:text-purple-400 transition-colors" />
+              </div>
+              <h3 className="text-lg font-semibold text-white mb-2">Optz BI</h3>
+              <p className="text-sm text-gray-400">
+                Live marketing ROI tracker with platform integrations
+              </p>
+              <div className="mt-2">
+                <span className="text-xs bg-purple-500 text-white px-2 py-1 rounded-full">LIVE APP</span>
+              </div>
+            </Link>
+
             <Link
               href="/dashboard/pro/billing"
               className="bg-black border border-gray-800 rounded-xl p-6 hover:border-cyan-500/50 transition-all group"
