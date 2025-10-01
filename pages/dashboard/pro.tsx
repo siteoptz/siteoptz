@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { GetServerSideProps } from 'next';
 import { getServerSession } from 'next-auth/next';
 import { authOptions } from '../api/auth/[...nextauth]';
@@ -6,6 +6,9 @@ import { useUserPlan } from '../../hooks/useUserPlan';
 import { DashboardHeader } from '../../components/dashboard/DashboardHeader';
 import { getDashboardContent, getUpgradePrompt } from '../../content/dashboard-marketing-content';
 import { UpgradePrompt } from '../../components/UpgradePrompt';
+// import MarketingROIDashboard from '../../components/dashboard/MarketingROIDashboard';
+// import PlatformIntegrations from '../../components/dashboard/PlatformIntegrations';
+// import AIInsightsEngine from '../../components/dashboard/AIInsightsEngine';
 import { 
   Calendar, 
   Users, 
@@ -43,6 +46,7 @@ import Link from 'next/link';
 export default function ProDashboard() {
   const { userPlan, loading } = useUserPlan();
   const [activeTab, setActiveTab] = useState('overview');
+  
   const proContent = getDashboardContent('pro') as any;
   const enterpriseUpgrade = getUpgradePrompt('pro', 'enterprise') as any;
 
@@ -230,22 +234,472 @@ export default function ProDashboard() {
         <div className="mb-8">
           <div className="border-b border-gray-800">
             <nav className="-mb-px flex space-x-8">
-              {['overview', 'consulting', 'reports', 'team', 'support'].map((tab: string) => (
+              {['overview', 'roi-dashboard', 'platforms', 'ai-insights', 'consulting', 'reports', 'team', 'support'].map((tab: string) => (
                 <button
                   key={tab}
                   onClick={() => setActiveTab(tab)}
-                  className={`py-2 px-1 border-b-2 font-medium text-sm ${
+                  className={`py-2 px-1 border-b-2 font-medium text-sm transition-colors ${
                     activeTab === tab
                       ? 'border-purple-400 text-purple-400'
                       : 'border-transparent text-gray-400 hover:text-gray-300 hover:border-gray-700'
                   }`}
                 >
-                  {tab.charAt(0).toUpperCase() + tab.slice(1)}
+                  {tab.charAt(0).toUpperCase() + tab.slice(1).replace(/-/g, ' ')}
+                  {activeTab === tab && <span className="ml-2 text-xs">●</span>}
                 </button>
               ))}
             </nav>
           </div>
         </div>
+
+        {/* ROI Dashboard Tab */}
+        {activeTab === 'roi-dashboard' && (
+          <div className="space-y-6">
+            <div className="bg-gradient-to-r from-purple-900/20 to-blue-900/20 border border-purple-500/30 rounded-xl p-6">
+              <h3 className="text-xl font-bold text-white mb-2">Marketing ROI Dashboard</h3>
+              <p className="text-gray-300">Real-time marketing performance tracking and analytics</p>
+            </div>
+            
+            {/* Key Metrics */}
+            <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
+              <div className="bg-black border border-gray-800 rounded-xl p-6">
+                <div className="flex items-center justify-between mb-4">
+                  <div className="p-3 bg-green-900/20 rounded-lg">
+                    <DollarSign className="w-6 h-6 text-green-400" />
+                  </div>
+                  <span className="text-green-400 text-sm font-medium">+12.5%</span>
+                </div>
+                <h3 className="text-2xl font-bold text-white mb-1">$45,231</h3>
+                <p className="text-gray-400 text-sm">Total Revenue</p>
+              </div>
+
+              <div className="bg-black border border-gray-800 rounded-xl p-6">
+                <div className="flex items-center justify-between mb-4">
+                  <div className="p-3 bg-blue-900/20 rounded-lg">
+                    <TrendingUp className="w-6 h-6 text-blue-400" />
+                  </div>
+                  <span className="text-blue-400 text-sm font-medium">+8.2%</span>
+                </div>
+                <h3 className="text-2xl font-bold text-white mb-1">2.47x</h3>
+                <p className="text-gray-400 text-sm">Overall ROI</p>
+              </div>
+
+              <div className="bg-black border border-gray-800 rounded-xl p-6">
+                <div className="flex items-center justify-between mb-4">
+                  <div className="p-3 bg-purple-900/20 rounded-lg">
+                    <Target className="w-6 h-6 text-purple-400" />
+                  </div>
+                  <span className="text-purple-400 text-sm font-medium">+15.3%</span>
+                </div>
+                <h3 className="text-2xl font-bold text-white mb-1">287</h3>
+                <p className="text-gray-400 text-sm">Total Conversions</p>
+              </div>
+
+              <div className="bg-black border border-gray-800 rounded-xl p-6">
+                <div className="flex items-center justify-between mb-4">
+                  <div className="p-3 bg-yellow-900/20 rounded-lg">
+                    <Users className="w-6 h-6 text-yellow-400" />
+                  </div>
+                  <span className="text-yellow-400 text-sm font-medium">+5.7%</span>
+                </div>
+                <h3 className="text-2xl font-bold text-white mb-1">$1,247</h3>
+                <p className="text-gray-400 text-sm">Avg. Spend per Campaign</p>
+              </div>
+            </div>
+
+            <div className="bg-black border border-gray-800 rounded-xl p-6">
+              <div className="flex items-center justify-center h-64">
+                <div className="text-center">
+                  <div className="w-16 h-16 bg-purple-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <BarChart3 className="w-8 h-8 text-white" />
+                  </div>
+                  <h4 className="text-white text-lg font-semibold mb-2">Marketing ROI Dashboard</h4>
+                  <p className="text-gray-400 mb-4">Connect your marketing platforms to see detailed analytics</p>
+                  <button 
+                    onClick={() => setActiveTab('platforms')}
+                    className="bg-purple-600 text-white px-4 py-2 rounded-lg hover:bg-purple-700 transition-colors"
+                  >
+                    Connect Platforms First
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        )}
+
+        {/* Platform Integrations Tab */}
+        {activeTab === 'platforms' && (
+          <div className="space-y-6">
+            <div className="bg-gradient-to-r from-blue-900/20 to-green-900/20 border border-blue-500/30 rounded-xl p-6">
+              <h3 className="text-xl font-bold text-white mb-2">Platform Integrations</h3>
+              <p className="text-gray-300">Connect your marketing platforms for unified analytics and ROI tracking</p>
+            </div>
+
+            {/* Platform Connection Cards */}
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+              {/* Google Ads */}
+              <div className="bg-black border border-gray-800 rounded-xl p-6 hover:border-blue-500/50 transition-all">
+                <div className="flex items-center justify-between mb-4">
+                  <div className="flex items-center gap-3">
+                    <div className="w-10 h-10 bg-blue-600 rounded-lg flex items-center justify-center">
+                      <span className="text-white font-bold text-sm">G</span>
+                    </div>
+                    <div>
+                      <h4 className="text-white font-semibold">Google Ads</h4>
+                      <p className="text-gray-400 text-sm">Campaign performance</p>
+                    </div>
+                  </div>
+                  <span className="px-2 py-1 bg-gray-800 text-gray-400 rounded-full text-xs">
+                    Disconnected
+                  </span>
+                </div>
+                <p className="text-gray-300 text-sm mb-4">
+                  Connect your Google Ads account to track campaigns, keywords, and performance metrics.
+                </p>
+                <button 
+                  onClick={() => window.open('https://accounts.google.com/oauth/authorize?client_id=your-client-id&redirect_uri=your-redirect-uri&scope=https://www.googleapis.com/auth/adwords&response_type=code', '_blank')}
+                  className="w-full bg-blue-600 text-white py-2 px-4 rounded-lg hover:bg-blue-700 transition-colors"
+                >
+                  Connect Google Ads
+                </button>
+              </div>
+
+              {/* Meta Ads */}
+              <div className="bg-black border border-gray-800 rounded-xl p-6 hover:border-blue-500/50 transition-all">
+                <div className="flex items-center justify-between mb-4">
+                  <div className="flex items-center gap-3">
+                    <div className="w-10 h-10 bg-blue-500 rounded-lg flex items-center justify-center">
+                      <span className="text-white font-bold text-sm">f</span>
+                    </div>
+                    <div>
+                      <h4 className="text-white font-semibold">Meta Ads</h4>
+                      <p className="text-gray-400 text-sm">Facebook & Instagram</p>
+                    </div>
+                  </div>
+                  <span className="px-2 py-1 bg-gray-800 text-gray-400 rounded-full text-xs">
+                    Disconnected
+                  </span>
+                </div>
+                <p className="text-gray-300 text-sm mb-4">
+                  Connect Meta Ads Manager to monitor Facebook and Instagram campaign performance.
+                </p>
+                <button 
+                  onClick={() => window.open('https://www.facebook.com/v18.0/dialog/oauth?client_id=your-client-id&redirect_uri=your-redirect-uri&scope=ads_read&response_type=code', '_blank')}
+                  className="w-full bg-blue-500 text-white py-2 px-4 rounded-lg hover:bg-blue-600 transition-colors"
+                >
+                  Connect Meta Ads
+                </button>
+              </div>
+
+              {/* TikTok Ads */}
+              <div className="bg-black border border-gray-800 rounded-xl p-6 hover:border-pink-500/50 transition-all">
+                <div className="flex items-center justify-between mb-4">
+                  <div className="flex items-center gap-3">
+                    <div className="w-10 h-10 bg-black rounded-lg flex items-center justify-center">
+                      <span className="text-white font-bold text-sm">T</span>
+                    </div>
+                    <div>
+                      <h4 className="text-white font-semibold">TikTok Ads</h4>
+                      <p className="text-gray-400 text-sm">Video advertising</p>
+                    </div>
+                  </div>
+                  <span className="px-2 py-1 bg-gray-800 text-gray-400 rounded-full text-xs">
+                    Disconnected
+                  </span>
+                </div>
+                <p className="text-gray-300 text-sm mb-4">
+                  Connect TikTok Ads Manager to track video ad performance and engagement metrics.
+                </p>
+                <button 
+                  onClick={() => window.open('https://ads.tiktok.com/marketing_api/auth?app_id=your-app-id&state=your-state', '_blank')}
+                  className="w-full bg-black text-white py-2 px-4 rounded-lg hover:bg-gray-900 transition-colors"
+                >
+                  Connect TikTok Ads
+                </button>
+              </div>
+
+              {/* Google Analytics */}
+              <div className="bg-black border border-gray-800 rounded-xl p-6 hover:border-orange-500/50 transition-all">
+                <div className="flex items-center justify-between mb-4">
+                  <div className="flex items-center gap-3">
+                    <div className="w-10 h-10 bg-orange-500 rounded-lg flex items-center justify-center">
+                      <span className="text-white font-bold text-sm">GA</span>
+                    </div>
+                    <div>
+                      <h4 className="text-white font-semibold">Google Analytics</h4>
+                      <p className="text-gray-400 text-sm">Website traffic</p>
+                    </div>
+                  </div>
+                  <span className="px-2 py-1 bg-gray-800 text-gray-400 rounded-full text-xs">
+                    Disconnected
+                  </span>
+                </div>
+                <p className="text-gray-300 text-sm mb-4">
+                  Link Google Analytics to track website traffic, conversions, and user behavior.
+                </p>
+                <button 
+                  onClick={() => window.open('https://accounts.google.com/oauth/authorize?client_id=your-client-id&redirect_uri=your-redirect-uri&scope=https://www.googleapis.com/auth/analytics.readonly&response_type=code', '_blank')}
+                  className="w-full bg-orange-500 text-white py-2 px-4 rounded-lg hover:bg-orange-600 transition-colors"
+                >
+                  Connect Google Analytics
+                </button>
+              </div>
+
+              {/* LinkedIn Ads */}
+              <div className="bg-black border border-gray-800 rounded-xl p-6 hover:border-blue-600/50 transition-all">
+                <div className="flex items-center justify-between mb-4">
+                  <div className="flex items-center gap-3">
+                    <div className="w-10 h-10 bg-blue-700 rounded-lg flex items-center justify-center">
+                      <span className="text-white font-bold text-sm">in</span>
+                    </div>
+                    <div>
+                      <h4 className="text-white font-semibold">LinkedIn Ads</h4>
+                      <p className="text-gray-400 text-sm">B2B advertising</p>
+                    </div>
+                  </div>
+                  <span className="px-2 py-1 bg-gray-800 text-gray-400 rounded-full text-xs">
+                    Coming Soon
+                  </span>
+                </div>
+                <p className="text-gray-300 text-sm mb-4">
+                  Connect LinkedIn Campaign Manager for B2B advertising performance tracking.
+                </p>
+                <button 
+                  disabled
+                  className="w-full bg-gray-700 text-gray-400 py-2 px-4 rounded-lg cursor-not-allowed"
+                >
+                  Coming Soon
+                </button>
+              </div>
+
+              {/* Twitter Ads */}
+              <div className="bg-black border border-gray-800 rounded-xl p-6 hover:border-blue-400/50 transition-all">
+                <div className="flex items-center justify-between mb-4">
+                  <div className="flex items-center gap-3">
+                    <div className="w-10 h-10 bg-blue-400 rounded-lg flex items-center justify-center">
+                      <span className="text-white font-bold text-sm">X</span>
+                    </div>
+                    <div>
+                      <h4 className="text-white font-semibold">Twitter Ads</h4>
+                      <p className="text-gray-400 text-sm">Social media ads</p>
+                    </div>
+                  </div>
+                  <span className="px-2 py-1 bg-gray-800 text-gray-400 rounded-full text-xs">
+                    Coming Soon
+                  </span>
+                </div>
+                <p className="text-gray-300 text-sm mb-4">
+                  Connect Twitter Ads Manager for social media campaign analytics.
+                </p>
+                <button 
+                  disabled
+                  className="w-full bg-gray-700 text-gray-400 py-2 px-4 rounded-lg cursor-not-allowed"
+                >
+                  Coming Soon
+                </button>
+              </div>
+            </div>
+
+            {/* Connection Status */}
+            <div className="bg-gradient-to-r from-purple-900/20 to-blue-900/20 border border-purple-500/30 rounded-xl p-6">
+              <div className="flex items-start gap-4">
+                <Shield className="w-6 h-6 text-purple-400 mt-0.5 flex-shrink-0" />
+                <div>
+                  <h4 className="text-purple-400 font-semibold mb-2">Secure Platform Integration</h4>
+                  <p className="text-gray-300 text-sm mb-3">
+                    All platform connections use OAuth 2.0 for secure authentication. We only request read-only permissions 
+                    to analyze your marketing data and never store your passwords. Your data is encrypted and handled 
+                    according to industry security standards.
+                  </p>
+                  <div className="flex items-center gap-4 text-xs text-gray-400">
+                    <span className="flex items-center gap-1">
+                      <Shield className="w-3 h-3" />
+                      OAuth 2.0 secure
+                    </span>
+                    <span className="flex items-center gap-1">
+                      <Lock className="w-3 h-3" />
+                      Read-only access
+                    </span>
+                    <span className="flex items-center gap-1">
+                      <Database className="w-3 h-3" />
+                      Encrypted storage
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        )}
+
+        {/* AI Insights Tab */}
+        {activeTab === 'ai-insights' && (
+          <div className="space-y-6">
+            <div className="bg-gradient-to-r from-green-900/20 to-purple-900/20 border border-green-500/30 rounded-xl p-6">
+              <h3 className="text-xl font-bold text-white mb-2">AI Insights Engine</h3>
+              <p className="text-gray-300">Claude AI-powered recommendations and optimization insights</p>
+            </div>
+
+            {/* AI Insights Demo */}
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+              {/* Sample Insights */}
+              <div className="bg-black border border-gray-800 rounded-xl p-6">
+                <div className="flex items-center gap-3 mb-4">
+                  <Brain className="w-6 h-6 text-purple-400" />
+                  <h4 className="text-white font-semibold">AI-Generated Insights</h4>
+                </div>
+                
+                <div className="space-y-4">
+                  <div className="bg-green-900/20 border border-green-500/30 rounded-lg p-4">
+                    <div className="flex items-start gap-3">
+                      <Target className="w-5 h-5 text-green-400 mt-0.5" />
+                      <div>
+                        <h5 className="text-green-400 font-medium mb-1">Increase TikTok Budget by 40%</h5>
+                        <p className="text-gray-300 text-sm mb-2">
+                          TikTok campaigns are showing exceptional ROI (3.2x vs 2.1x average). Current budget constraints are limiting growth potential.
+                        </p>
+                        <div className="flex items-center justify-between">
+                          <span className="text-green-400 text-sm font-medium">+$1,200 monthly revenue</span>
+                          <span className="text-gray-400 text-xs">94% confidence</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div className="bg-yellow-900/20 border border-yellow-500/30 rounded-lg p-4">
+                    <div className="flex items-start gap-3">
+                      <AlertCircle className="w-5 h-5 text-yellow-400 mt-0.5" />
+                      <div>
+                        <h5 className="text-yellow-400 font-medium mb-1">High CPA Alert: Brand Campaign</h5>
+                        <p className="text-gray-300 text-sm mb-2">
+                          Brand Awareness campaign CPA ($42.86) is 35% above target ($32). This is impacting overall profitability.
+                        </p>
+                        <div className="flex items-center justify-between">
+                          <span className="text-yellow-400 text-sm font-medium">Reduce CPA by 25%</span>
+                          <span className="text-gray-400 text-xs">87% confidence</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div className="bg-blue-900/20 border border-blue-500/30 rounded-lg p-4">
+                    <div className="flex items-start gap-3">
+                      <Lightbulb className="w-5 h-5 text-blue-400 mt-0.5" />
+                      <div>
+                        <h5 className="text-blue-400 font-medium mb-1">New Keyword Opportunities</h5>
+                        <p className="text-gray-300 text-sm mb-2">
+                          Discovered 15 high-value keywords with low competition that could improve Google Ads performance.
+                        </p>
+                        <div className="flex items-center justify-between">
+                          <span className="text-blue-400 text-sm font-medium">+$800 monthly revenue</span>
+                          <span className="text-gray-400 text-xs">76% confidence</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <button 
+                  onClick={() => {
+                    alert('AI Insights generation would start here. In production, this would trigger Claude AI analysis of your marketing data.');
+                  }}
+                  className="w-full mt-4 bg-purple-600 text-white py-2 px-4 rounded-lg hover:bg-purple-700 transition-colors"
+                >
+                  Generate New Insights
+                </button>
+              </div>
+
+              {/* AI Analysis Status */}
+              <div className="bg-black border border-gray-800 rounded-xl p-6">
+                <div className="flex items-center gap-3 mb-4">
+                  <Brain className="w-6 h-6 text-purple-400" />
+                  <h4 className="text-white font-semibold">Claude AI Analysis</h4>
+                </div>
+
+                <div className="space-y-4">
+                  <div className="bg-gray-800/50 rounded-lg p-4">
+                    <div className="flex items-center justify-between mb-2">
+                      <span className="text-gray-300 text-sm">Last Analysis</span>
+                      <span className="text-green-400 text-sm">2 hours ago</span>
+                    </div>
+                    <div className="flex items-center justify-between mb-2">
+                      <span className="text-gray-300 text-sm">Insights Generated</span>
+                      <span className="text-blue-400 text-sm">12 recommendations</span>
+                    </div>
+                    <div className="flex items-center justify-between mb-2">
+                      <span className="text-gray-300 text-sm">Confidence Score</span>
+                      <span className="text-purple-400 text-sm">89% average</span>
+                    </div>
+                    <div className="flex items-center justify-between">
+                      <span className="text-gray-300 text-sm">Next Analysis</span>
+                      <span className="text-yellow-400 text-sm">In 22 hours</span>
+                    </div>
+                  </div>
+
+                  <div className="bg-purple-900/20 border border-purple-500/30 rounded-lg p-4">
+                    <h5 className="text-purple-400 font-medium mb-2">AI Analysis Capabilities</h5>
+                    <ul className="space-y-1 text-sm text-gray-300">
+                      <li>• Performance trend analysis</li>
+                      <li>• Budget optimization recommendations</li>
+                      <li>• Campaign scaling opportunities</li>
+                      <li>• Cost efficiency improvements</li>
+                      <li>• Predictive performance forecasting</li>
+                      <li>• Competitive analysis insights</li>
+                    </ul>
+                  </div>
+
+                  <div className="bg-green-900/20 border border-green-500/30 rounded-lg p-4">
+                    <h5 className="text-green-400 font-medium mb-2">Implementation Tracking</h5>
+                    <div className="space-y-2 text-sm">
+                      <div className="flex items-center justify-between">
+                        <span className="text-gray-300">Implemented This Month</span>
+                        <span className="text-green-400">8 insights</span>
+                      </div>
+                      <div className="flex items-center justify-between">
+                        <span className="text-gray-300">Pending Review</span>
+                        <span className="text-yellow-400">3 insights</span>
+                      </div>
+                      <div className="flex items-center justify-between">
+                        <span className="text-gray-300">Average Impact</span>
+                        <span className="text-blue-400">+15% ROI</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Quick Actions */}
+            <div className="bg-gradient-to-r from-purple-900/20 to-blue-900/20 border border-purple-500/30 rounded-xl p-6">
+              <div className="flex items-start gap-4">
+                <Brain className="w-6 h-6 text-purple-400 mt-0.5 flex-shrink-0" />
+                <div className="flex-1">
+                  <h4 className="text-purple-400 font-semibold mb-2">Claude AI Analysis Engine</h4>
+                  <p className="text-gray-300 text-sm mb-4">
+                    Our AI continuously analyzes your marketing data to identify optimization opportunities, 
+                    predict trends, and provide actionable recommendations. Insights are generated based on 
+                    real-time performance data and industry benchmarks.
+                  </p>
+                  <div className="flex items-center gap-3">
+                    <button 
+                      onClick={() => {
+                        alert('This would trigger real-time AI analysis of your connected marketing platforms.');
+                      }}
+                      className="bg-purple-600 text-white px-4 py-2 rounded-lg hover:bg-purple-700 transition-colors"
+                    >
+                      Analyze Now
+                    </button>
+                    <button 
+                      onClick={() => setActiveTab('platforms')}
+                      className="bg-gray-800 text-gray-300 px-4 py-2 rounded-lg hover:bg-gray-700 transition-colors"
+                    >
+                      Connect More Platforms
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        )}
 
         {/* Overview Tab */}
         {activeTab === 'overview' && (
