@@ -22,7 +22,7 @@ const nextConfig = {
     imageSizes: [16, 32, 48, 64, 96, 128, 256, 384],
     domains: [
       'siteoptz.ai',
-      'siteoptz.ai',
+      'optz.siteoptz.ai',
       'upload.wikimedia.org',
       'cdn.openai.com',
       'assets.claude.ai',
@@ -164,6 +164,23 @@ const nextConfig = {
     scrollRestoration: true,
   },
 
+
+  // Subdomain routing configuration
+  async rewrites() {
+    return [
+      // Handle optz subdomain routing
+      {
+        source: '/:path*',
+        destination: '/optz/:path*',
+        has: [
+          {
+            type: 'host',
+            value: 'optz.siteoptz.ai',
+          },
+        ],
+      },
+    ];
+  },
 
   // Optimized redirects using pattern matching
   // Reduces thousands of individual redirects to just a few patterns

@@ -25,7 +25,7 @@ export default function OptzBI() {
   
   // Use subdomain for production, localhost for development
   const OPTZ_BI_URL = process.env.NODE_ENV === 'production' 
-    ? 'https://optz-bi.siteoptz.ai' 
+    ? 'https://optz.siteoptz.ai' 
     : 'http://localhost:3001';
 
   useEffect(() => {

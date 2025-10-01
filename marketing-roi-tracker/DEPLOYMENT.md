@@ -12,27 +12,28 @@ This guide covers deploying Optz BI to the `optz-bi.siteoptz.ai` subdomain.
 
 ### 1. DNS Configuration
 
-Add these DNS records to your domain provider:
+Add this DNS record to your domain provider:
 
 ```
-optz-bi.siteoptz.ai     A     YOUR_SERVER_IP
-optz-bi-api.siteoptz.ai A     YOUR_SERVER_IP
+optz.siteoptz.ai        A     YOUR_SERVER_IP
+```
+
+Or using CNAME:
+```
+optz                    CNAME siteoptz.ai
 ```
 
 ### 2. SSL Certificates
 
-Generate SSL certificates for both subdomains:
+Generate SSL certificate for the subdomain:
 
 ```bash
 # Using Let's Encrypt (recommended)
-certbot certonly --standalone -d optz-bi.siteoptz.ai
-certbot certonly --standalone -d optz-bi-api.siteoptz.ai
+certbot certonly --standalone -d optz.siteoptz.ai
 
 # Copy certificates to nginx directory
-cp /etc/letsencrypt/live/optz-bi.siteoptz.ai/fullchain.pem ./nginx/ssl/optz-bi.siteoptz.ai.crt
-cp /etc/letsencrypt/live/optz-bi.siteoptz.ai/privkey.pem ./nginx/ssl/optz-bi.siteoptz.ai.key
-cp /etc/letsencrypt/live/optz-bi-api.siteoptz.ai/fullchain.pem ./nginx/ssl/optz-bi-api.siteoptz.ai.crt
-cp /etc/letsencrypt/live/optz-bi-api.siteoptz.ai/privkey.pem ./nginx/ssl/optz-bi-api.siteoptz.ai.key
+cp /etc/letsencrypt/live/optz.siteoptz.ai/fullchain.pem ./nginx/ssl/optz.siteoptz.ai.crt
+cp /etc/letsencrypt/live/optz.siteoptz.ai/privkey.pem ./nginx/ssl/optz.siteoptz.ai.key
 ```
 
 ### 3. Environment Configuration
