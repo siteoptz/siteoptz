@@ -84,7 +84,7 @@ class GoogleAdsService {
       }
       
       this.accessToken = accessToken;
-      this.refreshToken = refreshToken;
+      this.refreshToken = refreshToken || null;
       
       this.client = new GoogleAdsApi({
         client_id: process.env.GOOGLE_CLIENT_ID,
