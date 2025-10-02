@@ -41,7 +41,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     const tokens = await exchangeGoogleCodeForToken(code as string, redirectUri);
     console.log('Token exchange successful');
 
-    // Store the credentials
+    // Store the OAuth credentials
     await storePlatformCredentials(session.user.email, 'google-ads', {
       access_token: tokens.access_token,
       refresh_token: tokens.refresh_token,
@@ -56,21 +56,18 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       
       console.log(`Found ${accounts.length} accessible accounts`);
       
-      // If multiple accounts found, redirect to account selection
+      // If multiple accounts found, store them for account selection
       if (accounts.length > 1) {
-        // Store accounts temporarily for selection
-        const accountData = {
-          accounts: accounts,
+        // Store accounts temporarily in platform credentials for selection
+        await storePlatformCredentials(session.user.email, 'google-ads-accounts', {
           access_token: tokens.access_token,
           refresh_token: tokens.refresh_token,
           expires_at: Date.now() + (tokens.expires_in * 1000),
-          scope: tokens.scope
-        };
+          scope: tokens.scope,
+          accounts: accounts // Store available accounts
+        });
         
-        // Store in session or temporary storage
-        // For now, we'll pass the account data via URL parameters (in production, use secure session storage)
-        const accountParam = encodeURIComponent(JSON.stringify(accounts));
-        return res.redirect(`/dashboard/pro?tab=platforms&success=google_ads_connected&accounts=${accountParam}`);
+        return res.redirect('/dashboard/pro?tab=platforms&success=google_ads_connected&show_account_selection=true');
       } else if (accounts.length === 1) {
         // Single account, auto-select it
         const account = accounts[0];
@@ -84,7 +81,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
           refreshToken: tokens.refresh_token,
           connectedAt: new Date().toISOString(),
           userId: session.user.email,
-          expiresAt: Date.now() + (3600 * 1000)
+          expiresAt: Date.now() + (tokens.expires_in * 1000)
         };
         
         storeGoogleAdsAccount(session.user.email, connectionData);

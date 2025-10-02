@@ -71,6 +71,9 @@ export default function ProDashboard({ session }: ProDashboardProps) {
     accountId?: string;
     loading: boolean;
   }>({ connected: false, loading: true });
+  const [showAccountSelection, setShowAccountSelection] = useState(false);
+  const [availableAccounts, setAvailableAccounts] = useState<any[]>([]);
+  const [isSelectingAccount, setIsSelectingAccount] = useState(false);
 
   // Handle URL tab parameter and OAuth callbacks
   useEffect(() => {
@@ -80,20 +83,35 @@ export default function ProDashboard({ session }: ProDashboardProps) {
       }
       
       // Handle OAuth callback parameters
-      if (router.query.success === 'true' && router.query.platform === 'google-ads') {
-        setConnectionStatus({
-          message: 'Google Ads connected successfully!',
-          type: 'success'
-        });
+      if (router.query.success === 'google_ads_connected') {
+        if (router.query.show_account_selection === 'true') {
+          // Show account selection modal
+          setShowAccountSelection(true);
+          fetchAvailableAccounts();
+        } else {
+          setConnectionStatus({
+            message: 'Google Ads connected successfully!',
+            type: 'success'
+          });
+        }
         // Clear the query params after showing message
         setTimeout(() => {
           router.replace('/dashboard/pro', undefined, { shallow: true });
         }, 100);
         // Clear the message after 5 seconds
         setTimeout(() => setConnectionStatus({}), 5000);
-      } else if (router.query.error && router.query.platform === 'google-ads') {
+      } else if (router.query.error) {
+        const errorMessages: { [key: string]: string } = {
+          'unauthorized': 'Please log in to connect Google Ads',
+          'auth_failed': 'Google Ads authorization failed',
+          'no_code': 'No authorization code received from Google',
+          'token_exchange_failed': 'Failed to exchange authorization code for tokens',
+          'no_accounts_found': 'No Google Ads accounts found for your account',
+          'api_init_failed': 'Google Ads API initialization failed'
+        };
+        
         setConnectionStatus({
-          message: `Failed to connect Google Ads: ${router.query.error}`,
+          message: errorMessages[router.query.error as string] || `Failed to connect Google Ads: ${router.query.error}`,
           type: 'error'
         });
         // Clear the query params after showing message
@@ -137,6 +155,67 @@ export default function ProDashboard({ session }: ProDashboardProps) {
       checkGoogleAdsConnection();
     }
   }, [session]);
+
+  // Fetch available Google Ads accounts
+  const fetchAvailableAccounts = async () => {
+    try {
+      const response = await fetch('/api/marketing-platforms/google-ads/accounts');
+      if (response.ok) {
+        const data = await response.json();
+        setAvailableAccounts(data.accounts || data || []);
+      } else {
+        console.error('Failed to fetch Google Ads accounts');
+        setShowAccountSelection(false);
+      }
+    } catch (error) {
+      console.error('Error fetching Google Ads accounts:', error);
+      setShowAccountSelection(false);
+    }
+  };
+
+  // Handle account selection
+  const handleAccountSelection = async (accountId: string, accountName: string, isMcc: boolean) => {
+    setIsSelectingAccount(true);
+    try {
+      const response = await fetch('/api/marketing-platforms/google-ads/select-account', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          accountId,
+          accountName,
+          isMcc
+        }),
+      });
+
+      if (response.ok) {
+        setShowAccountSelection(false);
+        setConnectionStatus({
+          message: 'Google Ads account selected successfully!',
+          type: 'success'
+        });
+        // Refresh connection status
+        const connection = getGoogleAdsAccountInfo(session?.user?.email || '');
+        setGoogleAdsConnection(connection);
+        // Switch to ROI dashboard
+        setActiveTab('roi-dashboard');
+      } else {
+        const errorData = await response.json();
+        setConnectionStatus({
+          message: errorData.error || 'Failed to select Google Ads account',
+          type: 'error'
+        });
+      }
+    } catch (error) {
+      console.error('Error selecting Google Ads account:', error);
+      setConnectionStatus({
+        message: 'Failed to select Google Ads account',
+        type: 'error'
+      });
+    }
+    setIsSelectingAccount(false);
+  };
   
   const proContent = getDashboardContent('pro') as any;
   const enterpriseUpgrade = getUpgradePrompt('pro', 'enterprise') as any;
@@ -1117,6 +1196,51 @@ export default function ProDashboard({ session }: ProDashboardProps) {
           </Link>
         </div>
       </main>
+
+      {/* Google Ads Account Selection Modal */}
+      {showAccountSelection && (
+        <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
+          <div className="bg-gradient-to-br from-black via-gray-900 to-black border border-gray-800 rounded-xl p-8 max-w-2xl w-full mx-4 max-h-96 overflow-y-auto">
+            <h3 className="text-2xl font-bold text-white mb-4">Select Google Ads Account</h3>
+            <p className="text-gray-300 mb-6">
+              Multiple Google Ads accounts were found. Please select the account you want to connect:
+            </p>
+            
+            <div className="space-y-3">
+              {availableAccounts.map((account) => (
+                <div key={account.customer_id} className="bg-black border border-gray-700 rounded-lg p-4 hover:border-blue-500/50 transition-all">
+                  <div className="flex items-center justify-between">
+                    <div className="flex-1">
+                      <h4 className="text-white font-semibold">{account.descriptive_name}</h4>
+                      <p className="text-gray-400 text-sm">
+                        ID: {account.customer_id} • {account.currency_code}
+                        {account.manager && <span className=" • Manager Account (MCC)" style={{color: '#10B981'}}>• Manager Account (MCC)</span>}
+                        {account.test_account && <span className=" • Test Account" style={{color: '#F59E0B'}}>• Test Account</span>}
+                      </p>
+                    </div>
+                    <button
+                      onClick={() => handleAccountSelection(account.customer_id, account.descriptive_name, account.manager)}
+                      disabled={isSelectingAccount}
+                      className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-4 py-2 rounded-lg hover:from-blue-700 hover:to-purple-700 disabled:opacity-50 disabled:cursor-not-allowed transition-all"
+                    >
+                      {isSelectingAccount ? 'Selecting...' : 'Select'}
+                    </button>
+                  </div>
+                </div>
+              ))}
+            </div>
+            
+            <div className="mt-6 flex justify-end">
+              <button
+                onClick={() => setShowAccountSelection(false)}
+                className="bg-gray-700 text-white px-4 py-2 rounded-lg hover:bg-gray-600 transition-all"
+              >
+                Cancel
+              </button>
+            </div>
+          </div>
+        </div>
+      )}
     </div>
   );
 }

@@ -693,6 +693,7 @@ export interface PlatformCredentials {
   scope: string;
   platform: string;
   user_id: string;
+  accounts?: any[]; // For storing Google Ads accounts during selection process
 }
 
 // Platform connection status check
