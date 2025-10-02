@@ -2,12 +2,14 @@ import React, { useState, useEffect } from 'react';
 import { useRouter } from 'next/router';
 import { GetServerSideProps } from 'next';
 import { getServerSession } from 'next-auth/next';
+import { Session } from 'next-auth';
 import { authOptions } from '../api/auth/[...nextauth]';
 import { useUserPlan } from '../../hooks/useUserPlan';
 import { DashboardHeader } from '../../components/dashboard/DashboardHeader';
 import { getDashboardContent, getUpgradePrompt } from '../../content/dashboard-marketing-content';
 import { UpgradePrompt } from '../../components/UpgradePrompt';
 import { generateGoogleAdsAuthUrl } from '../../lib/oauth-utils';
+import { getStoredGoogleAdsAccount } from '../../lib/google-ads-api';
 // import MarketingROIDashboard from '../../components/dashboard/MarketingROIDashboard';
 // import PlatformIntegrations from '../../components/dashboard/PlatformIntegrations';
 // import AIInsightsEngine from '../../components/dashboard/AIInsightsEngine';
@@ -51,7 +53,11 @@ import {
 } from 'lucide-react';
 import Link from 'next/link';
 
-export default function ProDashboard() {
+interface ProDashboardProps {
+  session: Session | null;
+}
+
+export default function ProDashboard({ session }: ProDashboardProps) {
   const { userPlan, loading } = useUserPlan();
   const router = useRouter();
   const [activeTab, setActiveTab] = useState('overview');
@@ -59,6 +65,12 @@ export default function ProDashboard() {
     message?: string; 
     type?: 'success' | 'error' 
   }>({});
+  const [googleAdsConnection, setGoogleAdsConnection] = useState<{
+    connected: boolean;
+    accountInfo?: any;
+    accountId?: string;
+    loading: boolean;
+  }>({ connected: false, loading: true });
 
   // Handle URL tab parameter and OAuth callbacks
   useEffect(() => {
@@ -93,6 +105,43 @@ export default function ProDashboard() {
       }
     }
   }, [router.isReady, router.query]);
+
+  // Check for Google Ads connection status
+  useEffect(() => {
+    const checkGoogleAdsConnection = async () => {
+      try {
+        if (!session?.user?.email) {
+          console.log('No user session found, skipping Google Ads connection check');
+          setGoogleAdsConnection({ connected: false, loading: false });
+          return;
+        }
+
+        console.log('Checking Google Ads connection for user:', session.user.email);
+        const connection = await getStoredGoogleAdsAccount(session.user.email);
+        
+        setGoogleAdsConnection({
+          connected: connection?.connected || false,
+          accountInfo: connection?.accountInfo,
+          accountId: connection?.accountId,
+          loading: false
+        });
+
+        if (connection?.connected) {
+          console.log('✅ Google Ads account connected:', connection.accountInfo?.name);
+        } else {
+          console.log('❌ No Google Ads account connected');
+        }
+      } catch (error) {
+        console.error('Error checking Google Ads connection:', error);
+        setGoogleAdsConnection({ connected: false, loading: false });
+      }
+    };
+
+    // Only check when session is loaded
+    if (session) {
+      checkGoogleAdsConnection();
+    }
+  }, [session]);
   
   const proContent = getDashboardContent('pro') as any;
   const enterpriseUpgrade = getUpgradePrompt('pro', 'enterprise') as any;
@@ -411,47 +460,85 @@ export default function ProDashboard() {
                     </div>
                     <div>
                       <h4 className="text-white font-semibold">Google Ads</h4>
-                      <p className="text-gray-400 text-sm">Campaign performance</p>
+                      <p className="text-gray-400 text-sm">
+                        {googleAdsConnection.connected && googleAdsConnection.accountInfo 
+                          ? `${googleAdsConnection.accountInfo.name} (${googleAdsConnection.accountId})`
+                          : 'Campaign performance'
+                        }
+                      </p>
                     </div>
                   </div>
-                  <span className="px-2 py-1 bg-gray-800 text-gray-400 rounded-full text-xs">
-                    Disconnected
+                  <span className={`px-2 py-1 rounded-full text-xs ${
+                    googleAdsConnection.connected 
+                      ? 'bg-green-900 text-green-400' 
+                      : 'bg-gray-800 text-gray-400'
+                  }`}>
+                    {googleAdsConnection.loading ? 'Checking...' : 
+                     googleAdsConnection.connected ? 'Connected' : 'Disconnected'}
                   </span>
                 </div>
                 <p className="text-gray-300 text-sm mb-4">
-                  Connect your Google Ads account to track campaigns, keywords, and performance metrics.
+                  {googleAdsConnection.connected 
+                    ? `Connected to ${googleAdsConnection.accountInfo?.name || 'Google Ads'}. View campaign data and performance metrics.`
+                    : 'Connect your Google Ads account to track campaigns, keywords, and performance metrics.'
+                  }
                 </p>
-                <button 
-                  onClick={(e) => {
-                    e.preventDefault();
-                    alert('Button clicked! Check console...');
-                    console.log('🔵 Connect Google Ads button clicked');
-                    console.log('Environment check:', {
-                      NODE_ENV: process.env.NODE_ENV,
-                      window_location: window.location.href,
-                      client_id_env: process.env.NEXT_PUBLIC_GOOGLE_CLIENT_ID
-                    });
-                    
-                    try {
-                      const authUrl = generateGoogleAdsAuthUrl();
-                      console.log('Generated OAuth URL:', authUrl);
+                {googleAdsConnection.connected ? (
+                  <div className="space-y-2">
+                    <button 
+                      onClick={() => {
+                        alert('View Google Ads data would open analytics dashboard here.');
+                      }}
+                      className="w-full bg-green-600 text-white py-2 px-4 rounded-lg hover:bg-green-700 transition-colors"
+                    >
+                      View Campaign Data
+                    </button>
+                    <button 
+                      onClick={() => {
+                        if (confirm('Are you sure you want to disconnect your Google Ads account?')) {
+                          if (!session?.user?.email) {
+                            alert('Session not found. Please refresh the page.');
+                            return;
+                          }
+                          // Clear stored connection
+                          localStorage.removeItem(`google_ads_connection_${session.user.email}`);
+                          setGoogleAdsConnection({ connected: false, loading: false });
+                          console.log('Google Ads account disconnected for user:', session.user.email);
+                          alert('Google Ads account disconnected.');
+                        }
+                      }}
+                      className="w-full bg-gray-700 text-gray-300 py-2 px-4 rounded-lg hover:bg-gray-600 transition-colors text-sm"
+                    >
+                      Disconnect Account
+                    </button>
+                  </div>
+                ) : (
+                  <button 
+                    onClick={(e) => {
+                      e.preventDefault();
+                      console.log('🔵 Connect Google Ads button clicked');
                       
-                      if (authUrl && authUrl !== '#') {
-                        console.log('✅ Redirecting to Google OAuth...');
-                        window.location.href = authUrl;
-                      } else {
-                        console.error('❌ Failed to generate OAuth URL');
-                        alert('Unable to generate OAuth URL. Please check your configuration.');
+                      try {
+                        const authUrl = generateGoogleAdsAuthUrl();
+                        console.log('Generated OAuth URL:', authUrl);
+                        
+                        if (authUrl && authUrl !== '#') {
+                          console.log('✅ Redirecting to Google OAuth...');
+                          window.location.href = authUrl;
+                        } else {
+                          console.error('❌ Failed to generate OAuth URL');
+                          alert('Unable to generate OAuth URL. Please check your configuration.');
+                        }
+                      } catch (error) {
+                        console.error('Error in click handler:', error);
+                        alert('Error: ' + (error instanceof Error ? error.message : String(error)));
                       }
-                    } catch (error) {
-                      console.error('Error in click handler:', error);
-                      alert('Error: ' + (error instanceof Error ? error.message : String(error)));
-                    }
-                  }}
-                  className="w-full bg-blue-600 text-white py-2 px-4 rounded-lg hover:bg-blue-700 transition-colors"
-                >
-                  Connect Google Ads
-                </button>
+                    }}
+                    className="w-full bg-blue-600 text-white py-2 px-4 rounded-lg hover:bg-blue-700 transition-colors"
+                  >
+                    Connect Google Ads
+                  </button>
+                )}
               </div>
 
               {/* Meta Ads */}

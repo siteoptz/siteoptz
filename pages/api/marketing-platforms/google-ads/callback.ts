@@ -90,8 +90,21 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       }
     }
 
-    // Redirect back to dashboard with success
-    return res.redirect('/dashboard/pro?success=true&platform=google-ads&connected=true');
+    // Store tokens temporarily and redirect to account selection
+    // In production, you would store this in a database with proper encryption
+    const tokenKey = `google_ads_temp_tokens_${Date.now()}`;
+    
+    // For now, we'll pass the tokens in the URL (NOT RECOMMENDED FOR PRODUCTION)
+    // In production, store in database and use a session ID
+    const tokenParams = new URLSearchParams({
+      access_token: tokenData.access_token,
+      refresh_token: tokenData.refresh_token || '',
+      expires_in: tokenData.expires_in?.toString() || '3600',
+      token_type: tokenData.token_type || 'Bearer'
+    });
+    
+    // Redirect to account selection page
+    return res.redirect(`/dashboard/pro/google-ads-setup?${tokenParams.toString()}`);
     
   } catch (error) {
     console.error('Token exchange error:', error);
