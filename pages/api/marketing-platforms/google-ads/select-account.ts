@@ -1,7 +1,7 @@
 import { NextApiRequest, NextApiResponse } from 'next';
 import { getServerSession } from 'next-auth/next';
 import { authOptions } from '@/pages/api/auth/[...nextauth]';
-import { storePlatformCredentials } from '@/lib/oauth-utils';
+import { getPlatformCredentials } from '@/lib/oauth-utils';
 import { switchGoogleAdsAccount } from '@/lib/google-ads-api';
 import { storeGoogleAdsAccount } from '@/lib/google-ads-client';
 
@@ -22,6 +22,13 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   }
 
   try {
+    // Get existing OAuth credentials to include in the connection
+    const credentials = await getPlatformCredentials(session.user.email, 'google-ads');
+    
+    if (!credentials) {
+      return res.status(400).json({ error: 'Google Ads OAuth credentials not found. Please reconnect your Google Ads account.' });
+    }
+
     // Store the selected account information using Google Ads client
     const connectionData = {
       platform: 'google-ads',
@@ -29,11 +36,16 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       accountInfo: {
         customer_id: accountId,
         descriptive_name: accountName,
-        manager: isMcc || false
+        currency_code: '', // Will be populated by API calls
+        time_zone: '', // Will be populated by API calls
+        manager: isMcc || false,
+        test_account: false // Will be populated by API calls
       },
+      accessToken: credentials.access_token,
+      refreshToken: credentials.refresh_token,
       connectedAt: new Date().toISOString(),
       userId: session.user.email,
-      expiresAt: Date.now() + (3600 * 1000)
+      expiresAt: credentials.expires_at || (Date.now() + (3600 * 1000))
     };
     
     storeGoogleAdsAccount(session.user.email, connectionData);
