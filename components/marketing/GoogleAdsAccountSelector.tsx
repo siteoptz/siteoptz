@@ -1,13 +1,12 @@
 // components/marketing/GoogleAdsAccountSelector.tsx
 import { useState, useEffect } from 'react';
-import { GoogleAdsAccount, GoogleAdsManagerAccount } from '@/lib/google-ads-api';
+import { GoogleAdsAccount } from '@/lib/google-ads-api';
 
 interface GoogleAdsAccountSelectorProps {
   isOpen: boolean;
   onClose: () => void;
   onAccountSelect: (account: GoogleAdsAccount) => void;
   accounts: GoogleAdsAccount[];
-  hierarchy?: GoogleAdsManagerAccount[];
   loading?: boolean;
   error?: string;
 }
@@ -17,7 +16,6 @@ export default function GoogleAdsAccountSelector({
   onClose,
   onAccountSelect,
   accounts,
-  hierarchy,
   loading = false,
   error
 }: GoogleAdsAccountSelectorProps) {
