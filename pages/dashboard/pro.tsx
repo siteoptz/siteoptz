@@ -422,7 +422,9 @@ export default function ProDashboard() {
                   Connect your Google Ads account to track campaigns, keywords, and performance metrics.
                 </p>
                 <button 
-                  onClick={() => {
+                  onClick={(e) => {
+                    e.preventDefault();
+                    alert('Button clicked! Check console...');
                     console.log('🔵 Connect Google Ads button clicked');
                     console.log('Environment check:', {
                       NODE_ENV: process.env.NODE_ENV,
@@ -430,15 +432,20 @@ export default function ProDashboard() {
                       client_id_env: process.env.NEXT_PUBLIC_GOOGLE_CLIENT_ID
                     });
                     
-                    const authUrl = generateGoogleAdsAuthUrl();
-                    console.log('Generated OAuth URL:', authUrl);
-                    
-                    if (authUrl && authUrl !== '#') {
-                      console.log('✅ Redirecting to Google OAuth...');
-                      window.location.href = authUrl;
-                    } else {
-                      console.error('❌ Failed to generate OAuth URL');
-                      alert('Unable to generate OAuth URL. Please check your configuration.');
+                    try {
+                      const authUrl = generateGoogleAdsAuthUrl();
+                      console.log('Generated OAuth URL:', authUrl);
+                      
+                      if (authUrl && authUrl !== '#') {
+                        console.log('✅ Redirecting to Google OAuth...');
+                        window.location.href = authUrl;
+                      } else {
+                        console.error('❌ Failed to generate OAuth URL');
+                        alert('Unable to generate OAuth URL. Please check your configuration.');
+                      }
+                    } catch (error) {
+                      console.error('Error in click handler:', error);
+                      alert('Error: ' + (error instanceof Error ? error.message : String(error)));
                     }
                   }}
                   className="w-full bg-blue-600 text-white py-2 px-4 rounded-lg hover:bg-blue-700 transition-colors"
