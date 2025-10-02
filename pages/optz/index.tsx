@@ -264,6 +264,16 @@ export const getServerSideProps: GetServerSideProps = async (context) => {
   const host = req.headers.host || 'optz.siteoptz.ai';
   const session = await getServerSession(context.req, context.res, authOptions);
 
+  // If user is authenticated and accessing optz.siteoptz.ai, redirect to white label dashboard
+  if (session && host === 'optz.siteoptz.ai') {
+    return {
+      redirect: {
+        destination: '/dashboard/white-label',
+        permanent: false,
+      },
+    };
+  }
+
   return {
     props: {
       isAuthenticated: !!session,

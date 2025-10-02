@@ -197,9 +197,44 @@ const nextConfig = {
   },
 
 
-  // Subdomain routing configuration
-  // REMOVED: optz.siteoptz.ai rewrite - this subdomain is handled by a separate Vercel project (optz-bi)
-  // The optz subdomain points to the Marketing ROI Tracker application, not a path in this app
+  // Subdomain routing configuration for white label solution
+  async rewrites() {
+    return {
+      beforeFiles: [
+        // Handle optz.siteoptz.ai subdomain - redirect to white label solution
+        {
+          source: '/',
+          destination: '/optz',
+          has: [
+            {
+              type: 'host',
+              value: 'optz.siteoptz.ai',
+            },
+          ],
+        },
+        {
+          source: '/dashboard/:path*',
+          destination: '/dashboard/:path*',
+          has: [
+            {
+              type: 'host',
+              value: 'optz.siteoptz.ai',
+            },
+          ],
+        },
+        {
+          source: '/api/:path*',
+          destination: '/api/:path*',
+          has: [
+            {
+              type: 'host',
+              value: 'optz.siteoptz.ai',
+            },
+          ],
+        },
+      ],
+    };
+  },
 
   // Optimized redirects using pattern matching
   // Reduces thousands of individual redirects to just a few patterns
