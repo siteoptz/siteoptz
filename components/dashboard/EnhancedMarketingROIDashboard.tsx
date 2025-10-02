@@ -294,7 +294,16 @@ export default function EnhancedMarketingROIDashboard() {
               <div
                 key={account.customer_id}
                 onClick={() => handleAccountChange(account)}
-                className={`p-4 rounded-lg border cursor-pointer transition-all ${
+                onKeyDown={(e) => {
+                  if (e.key === 'Enter' || e.key === ' ') {
+                    e.preventDefault();
+                    handleAccountChange(account);
+                  }
+                }}
+                tabIndex={0}
+                role="button"
+                aria-label={`Select Google Ads account: ${account.descriptive_name}`}
+                className={`p-4 rounded-lg border cursor-pointer transition-all focus:outline-none focus:ring-2 focus:ring-blue-500 ${
                   selectedAccount?.customer_id === account.customer_id
                     ? 'border-blue-500 bg-blue-900/20'
                     : 'border-gray-700 hover:border-gray-600'
