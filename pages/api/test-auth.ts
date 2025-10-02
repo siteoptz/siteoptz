@@ -19,7 +19,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       apiKey: process.env.GOHIGHLEVEL_API_KEY ? 'Set' : 'Not set',
       locationId: process.env.GOHIGHLEVEL_LOCATION_ID ? 'Set' : 'Not set',
     },
-    potentialIssues: []
+    potentialIssues: [] as string[]
   };
 
   // Check for common issues
