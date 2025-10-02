@@ -1,48 +1,126 @@
 // lib/oauth-utils.ts
 // OAuth utility functions for Marketing ROI tool
-// Updated to work with existing Google OAuth setup
+// Enhanced with comprehensive error handling and debugging
 
-// Get the Google Client ID from environment variables
+// Enhanced environment variable detection with debugging
 const getGoogleClientId = () => {
-  // Use environment variable - must be configured in .env.local
-  // The client ID should be: 809428295933-mj14of35mgnfaq8un84u3487eac075ee.apps.googleusercontent.com
-  return process.env.NEXT_PUBLIC_GOOGLE_CLIENT_ID || process.env.GOOGLE_CLIENT_ID || '';
+  const clientId = process.env.NEXT_PUBLIC_GOOGLE_CLIENT_ID || process.env.GOOGLE_CLIENT_ID || '';
+  
+  if (typeof window === 'undefined') {
+    // Server-side: log available environment variables for debugging
+    console.log('🔑 OAuth Debug - Environment variables check:', {
+      hasNextPublicClientId: !!process.env.NEXT_PUBLIC_GOOGLE_CLIENT_ID,
+      hasServerClientId: !!process.env.GOOGLE_CLIENT_ID,
+      nodeEnv: process.env.NODE_ENV,
+      clientIdPrefix: clientId ? clientId.substring(0, 20) + '...' : 'not found'
+    });
+  }
+  
+  if (!clientId) {
+    console.error('❌ Google Client ID not found in environment variables');
+    console.error('Please ensure NEXT_PUBLIC_GOOGLE_CLIENT_ID or GOOGLE_CLIENT_ID is set');
+  }
+  
+  return clientId;
 };
 
-// Get the base URL for redirects
+// Enhanced URL construction with validation
 const getBaseUrl = () => {
-  // Check if we're in development mode
+  let baseUrl: string;
+  
   if (typeof window !== 'undefined') {
     // Client-side: use window.location.origin
-    return window.location.origin;
+    baseUrl = window.location.origin;
+    console.log('🌐 Client-side base URL detected:', baseUrl);
+  } else {
+    // Server-side: check environment
+    if (process.env.NODE_ENV === 'development') {
+      // Use port 3001 for development
+      const port = process.env.PORT || '3001';
+      baseUrl = `http://localhost:${port}`;
+    } else {
+      baseUrl = process.env.NEXT_PUBLIC_BASE_URL || 'https://siteoptz.ai';
+    }
+    console.log('🌐 Server-side base URL determined:', baseUrl, {
+      nodeEnv: process.env.NODE_ENV,
+      port: process.env.PORT,
+      hasNextPublicBaseUrl: !!process.env.NEXT_PUBLIC_BASE_URL
+    });
   }
-  // Server-side: check NODE_ENV
-  if (process.env.NODE_ENV === 'development') {
-    return 'http://localhost:3001';
+  
+  // Validate URL format
+  try {
+    new URL(baseUrl);
+  } catch (error) {
+    console.error('❌ Invalid base URL format:', baseUrl);
+    throw new Error(`Invalid base URL: ${baseUrl}`);
   }
-  return process.env.NEXT_PUBLIC_BASE_URL || 'https://siteoptz.ai';
+  
+  return baseUrl;
+};
+
+// Enhanced error logging for OAuth debugging
+const logOAuthDebugInfo = (context: string, data: any) => {
+  console.log(`🔐 OAuth Debug [${context}]:`, {
+    timestamp: new Date().toISOString(),
+    ...data
+  });
 };
 
 export const generateGoogleAdsAuthUrl = () => {
-  const clientId = getGoogleClientId();
-  const baseUrl = getBaseUrl();
-  
-  if (!clientId) {
-    console.error('Google Client ID not found in environment variables');
-    return '#';
-  }
+  try {
+    const clientId = getGoogleClientId();
+    const baseUrl = getBaseUrl();
+    
+    logOAuthDebugInfo('generateGoogleAdsAuthUrl', {
+      clientId: clientId ? `${clientId.substring(0, 20)}...` : 'not set',
+      baseUrl,
+      environment: process.env.NODE_ENV,
+      hasClientId: !!clientId
+    });
+    
+    if (!clientId) {
+      const errorMsg = 'Google Client ID not found in environment variables';
+      console.error('❌', errorMsg);
+      throw new Error(errorMsg);
+    }
 
-  const params = new URLSearchParams({
-    client_id: clientId,
-    redirect_uri: `${baseUrl}/api/marketing-platforms/google-ads/callback`,
-    scope: 'https://www.googleapis.com/auth/adwords https://www.googleapis.com/auth/analytics.readonly',
-    response_type: 'code',
-    access_type: 'offline',
-    prompt: 'consent',
-    state: 'google_ads_auth_state'
-  });
-  
-  return `https://accounts.google.com/o/oauth2/v2/auth?${params.toString()}`;
+    const redirectUri = `${baseUrl}/api/marketing-platforms/google-ads/callback`;
+    
+    // Validate redirect URI
+    try {
+      new URL(redirectUri);
+    } catch (error) {
+      throw new Error(`Invalid redirect URI: ${redirectUri}`);
+    }
+
+    const params = new URLSearchParams({
+      client_id: clientId,
+      redirect_uri: redirectUri,
+      scope: 'https://www.googleapis.com/auth/adwords https://www.googleapis.com/auth/analytics.readonly',
+      response_type: 'code',
+      access_type: 'offline',
+      prompt: 'consent',
+      state: 'google_ads_auth_state',
+      include_granted_scopes: 'true'
+    });
+    
+    const authUrl = `https://accounts.google.com/o/oauth2/v2/auth?${params.toString()}`;
+    
+    logOAuthDebugInfo('generateGoogleAdsAuthUrl - Success', {
+      authUrlLength: authUrl.length,
+      redirectUri,
+      hasRequiredParams: !!(clientId && redirectUri)
+    });
+    
+    return authUrl;
+  } catch (error) {
+    console.error('❌ Error generating Google Ads Auth URL:', error);
+    logOAuthDebugInfo('generateGoogleAdsAuthUrl - Error', {
+      error: error instanceof Error ? error.message : 'Unknown error'
+    });
+    return '#'; // Safe fallback
+  }
 };
 
 export const generateGoogleAnalyticsAuthUrl = () => {
@@ -140,124 +218,400 @@ export const generateTwitterAuthUrl = () => {
   return `https://twitter.com/i/oauth2/authorize?${params.toString()}`;
 };
 
-// Token exchange functions
+// Enhanced token exchange with comprehensive error handling
 export const exchangeGoogleCodeForToken = async (code: string, redirectUri: string) => {
-  const clientId = getGoogleClientId();
-  const clientSecret = process.env.GOOGLE_CLIENT_SECRET || process.env.NEXT_PUBLIC_GOOGLE_CLIENT_SECRET || '';
-  
-  // Log for debugging (remove in production)
-  console.log('OAuth Token Exchange:', {
-    clientId: clientId ? `${clientId.substring(0, 20)}...` : 'not set',
-    hasSecret: !!clientSecret,
-    redirectUri
-  });
-  
-  if (!clientId) {
-    throw new Error('Google OAuth Client ID not configured. Please check environment variables or oauth-utils.ts');
-  }
-  
-  if (!clientSecret) {
-    throw new Error('Google OAuth Client Secret not found in environment variables (GOOGLE_CLIENT_SECRET)');
-  }
+  try {
+    const clientId = getGoogleClientId();
+    const clientSecret = process.env.GOOGLE_CLIENT_SECRET || process.env.NEXT_PUBLIC_GOOGLE_CLIENT_SECRET || '';
+    
+    logOAuthDebugInfo('exchangeGoogleCodeForToken - Start', {
+      clientId: clientId ? `${clientId.substring(0, 20)}...` : 'not set',
+      hasSecret: !!clientSecret,
+      redirectUri,
+      codeLength: code?.length || 0,
+      environment: process.env.NODE_ENV
+    });
+    
+    // Validate inputs
+    if (!code) {
+      throw new Error('Authorization code is required');
+    }
+    
+    if (!clientId) {
+      throw new Error('Google OAuth Client ID not configured. Please check environment variables');
+    }
+    
+    if (!clientSecret) {
+      throw new Error('Google OAuth Client Secret not found in environment variables (GOOGLE_CLIENT_SECRET)');
+    }
 
-  const response = await fetch('https://oauth2.googleapis.com/token', {
-    method: 'POST',
-    headers: {
-      'Content-Type': 'application/x-www-form-urlencoded',
-    },
-    body: new URLSearchParams({
+    // Validate redirect URI format
+    try {
+      new URL(redirectUri);
+    } catch (error) {
+      throw new Error(`Invalid redirect URI format: ${redirectUri}`);
+    }
+
+    const tokenEndpoint = 'https://oauth2.googleapis.com/token';
+    const requestBody = new URLSearchParams({
       client_id: clientId,
       client_secret: clientSecret,
       code,
       grant_type: 'authorization_code',
       redirect_uri: redirectUri,
-    }),
-  });
+    });
 
-  if (!response.ok) {
-    const errorText = await response.text();
-    console.error('Token exchange failed:');
-    console.error('- Status:', response.status);
-    console.error('- Response:', errorText);
-    console.error('- Client ID used:', clientId);
-    console.error('- Redirect URI used:', redirectUri);
-    
-    let errorMessage = 'Token exchange failed';
-    try {
-      const errorData = JSON.parse(errorText);
-      if (errorData.error === 'invalid_client') {
-        errorMessage = 'Invalid OAuth credentials. Please check Google Cloud Console.';
-      } else if (errorData.error === 'invalid_grant') {
-        errorMessage = 'Invalid or expired authorization code.';
-      } else if (errorData.error === 'redirect_uri_mismatch') {
-        errorMessage = 'Redirect URI mismatch. Check Google Cloud Console settings.';
-      } else {
-        errorMessage = errorData.error_description || errorData.error || errorText;
+    logOAuthDebugInfo('exchangeGoogleCodeForToken - Making Request', {
+      endpoint: tokenEndpoint,
+      bodyParams: Object.fromEntries(requestBody.entries()),
+      requestSize: requestBody.toString().length
+    });
+
+    const response = await fetch(tokenEndpoint, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/x-www-form-urlencoded',
+        'User-Agent': 'SiteOptz-OAuth/1.0'
+      },
+      body: requestBody,
+    });
+
+    logOAuthDebugInfo('exchangeGoogleCodeForToken - Response', {
+      status: response.status,
+      statusText: response.statusText,
+      ok: response.ok,
+      headers: Object.fromEntries(response.headers.entries())
+    });
+
+    if (!response.ok) {
+      const errorText = await response.text();
+      
+      logOAuthDebugInfo('exchangeGoogleCodeForToken - Error Response', {
+        status: response.status,
+        errorText,
+        clientIdUsed: clientId.substring(0, 20) + '...',
+        redirectUriUsed: redirectUri
+      });
+      
+      let errorMessage = 'Token exchange failed';
+      let errorDetails = '';
+      
+      try {
+        const errorData = JSON.parse(errorText);
+        const errorCode = errorData.error;
+        
+        switch (errorCode) {
+          case 'invalid_client':
+            errorMessage = 'Invalid OAuth credentials. Please check Google Cloud Console configuration.';
+            errorDetails = 'The client ID or secret is incorrect or not properly configured.';
+            break;
+          case 'invalid_grant':
+            errorMessage = 'Invalid or expired authorization code.';
+            errorDetails = 'The authorization code has expired or is invalid. Please restart the OAuth flow.';
+            break;
+          case 'redirect_uri_mismatch':
+            errorMessage = 'Redirect URI mismatch. Please check Google Cloud Console settings.';
+            errorDetails = `Expected URI: ${redirectUri}. Verify this URL is configured in Google Cloud Console.`;
+            break;
+          case 'unauthorized_client':
+            errorMessage = 'OAuth client not authorized for this grant type.';
+            errorDetails = 'Check that the OAuth client is configured for web applications.';
+            break;
+          default:
+            errorMessage = errorData.error_description || errorData.error || 'Unknown OAuth error';
+            errorDetails = errorText;
+        }
+      } catch (parseError) {
+        errorMessage = `HTTP ${response.status}: ${errorText}`;
+        errorDetails = errorText;
       }
-    } catch (e) {
-      errorMessage = errorText;
+      
+      const fullError = new Error(errorMessage);
+      (fullError as any).details = errorDetails;
+      (fullError as any).status = response.status;
+      throw fullError;
+    }
+
+    const tokenData = await response.json();
+    
+    logOAuthDebugInfo('exchangeGoogleCodeForToken - Success', {
+      hasAccessToken: !!tokenData.access_token,
+      hasRefreshToken: !!tokenData.refresh_token,
+      expiresIn: tokenData.expires_in,
+      tokenType: tokenData.token_type,
+      scope: tokenData.scope
+    });
+    
+    // Validate token response
+    if (!tokenData.access_token) {
+      throw new Error('No access token received from Google OAuth');
     }
     
-    throw new Error(errorMessage);
+    return tokenData;
+  } catch (error) {
+    logOAuthDebugInfo('exchangeGoogleCodeForToken - Fatal Error', {
+      error: error instanceof Error ? error.message : 'Unknown error',
+      stack: error instanceof Error ? error.stack : undefined
+    });
+    throw error;
   }
-
-  const tokenData = await response.json();
-  console.log('Token exchange successful, received tokens');
-  return tokenData;
 };
 
-// Refresh Google access token
+// Enhanced refresh token function with comprehensive error handling
 export const refreshGoogleToken = async (refreshToken: string) => {
-  const clientId = getGoogleClientId();
-  const clientSecret = process.env.GOOGLE_CLIENT_SECRET || process.env.NEXT_PUBLIC_GOOGLE_CLIENT_SECRET || '';
-  
-  console.log('OAuth Token Refresh:', {
-    clientId: clientId ? `${clientId.substring(0, 20)}...` : 'not set',
-    hasSecret: !!clientSecret
-  });
-  
-  if (!clientId) {
-    throw new Error('Google OAuth Client ID not configured. Please check environment variables or oauth-utils.ts');
-  }
-  
-  if (!clientSecret) {
-    throw new Error('Google OAuth Client Secret not found in environment variables (GOOGLE_CLIENT_SECRET)');
-  }
+  try {
+    const clientId = getGoogleClientId();
+    const clientSecret = process.env.GOOGLE_CLIENT_SECRET || process.env.NEXT_PUBLIC_GOOGLE_CLIENT_SECRET || '';
+    
+    logOAuthDebugInfo('refreshGoogleToken - Start', {
+      clientId: clientId ? `${clientId.substring(0, 20)}...` : 'not set',
+      hasSecret: !!clientSecret,
+      hasRefreshToken: !!refreshToken,
+      refreshTokenLength: refreshToken?.length || 0
+    });
+    
+    // Validate inputs
+    if (!refreshToken) {
+      throw new Error('Refresh token is required');
+    }
+    
+    if (!clientId) {
+      throw new Error('Google OAuth Client ID not configured. Please check environment variables');
+    }
+    
+    if (!clientSecret) {
+      throw new Error('Google OAuth Client Secret not found in environment variables (GOOGLE_CLIENT_SECRET)');
+    }
 
-  const response = await fetch('https://oauth2.googleapis.com/token', {
-    method: 'POST',
-    headers: {
-      'Content-Type': 'application/x-www-form-urlencoded',
-    },
-    body: new URLSearchParams({
-      client_id: clientId,
-      client_secret: clientSecret,
-      refresh_token: refreshToken,
-      grant_type: 'refresh_token',
-    }),
-  });
+    const response = await fetch('https://oauth2.googleapis.com/token', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/x-www-form-urlencoded',
+        'User-Agent': 'SiteOptz-OAuth/1.0'
+      },
+      body: new URLSearchParams({
+        client_id: clientId,
+        client_secret: clientSecret,
+        refresh_token: refreshToken,
+        grant_type: 'refresh_token',
+      }),
+    });
 
-  if (!response.ok) {
-    const error = await response.text();
-    console.error('Token refresh failed:', error);
-    throw new Error(`Token refresh failed: ${error}`);
+    logOAuthDebugInfo('refreshGoogleToken - Response', {
+      status: response.status,
+      statusText: response.statusText,
+      ok: response.ok
+    });
+
+    if (!response.ok) {
+      const errorText = await response.text();
+      
+      logOAuthDebugInfo('refreshGoogleToken - Error', {
+        status: response.status,
+        errorText
+      });
+      
+      let errorMessage = 'Token refresh failed';
+      try {
+        const errorData = JSON.parse(errorText);
+        if (errorData.error === 'invalid_grant') {
+          errorMessage = 'Refresh token is invalid or expired. Please re-authenticate.';
+        } else if (errorData.error === 'invalid_client') {
+          errorMessage = 'Invalid OAuth client credentials.';
+        } else {
+          errorMessage = errorData.error_description || errorData.error || errorText;
+        }
+      } catch (parseError) {
+        errorMessage = `HTTP ${response.status}: ${errorText}`;
+      }
+      
+      throw new Error(errorMessage);
+    }
+
+    const tokenData = await response.json();
+    
+    logOAuthDebugInfo('refreshGoogleToken - Success', {
+      hasAccessToken: !!tokenData.access_token,
+      hasNewRefreshToken: !!tokenData.refresh_token,
+      expiresIn: tokenData.expires_in
+    });
+    
+    if (!tokenData.access_token) {
+      throw new Error('No access token received from refresh');
+    }
+    
+    return tokenData;
+  } catch (error) {
+    logOAuthDebugInfo('refreshGoogleToken - Fatal Error', {
+      error: error instanceof Error ? error.message : 'Unknown error'
+    });
+    throw error;
   }
-
-  const tokenData = await response.json();
-  console.log('Token refresh successful');
-  return tokenData;
 };
 
-// Validate Google access token
+// Enhanced token validation with detailed error handling
 export const validateGoogleToken = async (accessToken: string) => {
-  const response = await fetch(`https://www.googleapis.com/oauth2/v1/tokeninfo?access_token=${accessToken}`);
-  
-  if (!response.ok) {
+  try {
+    logOAuthDebugInfo('validateGoogleToken - Start', {
+      hasAccessToken: !!accessToken,
+      tokenLength: accessToken?.length || 0
+    });
+    
+    if (!accessToken) {
+      throw new Error('Access token is required for validation');
+    }
+    
+    const response = await fetch(`https://www.googleapis.com/oauth2/v1/tokeninfo?access_token=${accessToken}`, {
+      headers: {
+        'User-Agent': 'SiteOptz-OAuth/1.0'
+      }
+    });
+    
+    logOAuthDebugInfo('validateGoogleToken - Response', {
+      status: response.status,
+      statusText: response.statusText,
+      ok: response.ok
+    });
+    
+    if (!response.ok) {
+      logOAuthDebugInfo('validateGoogleToken - Invalid', {
+        status: response.status,
+        reason: 'HTTP response not ok'
+      });
+      return false;
+    }
+    
+    const tokenInfo = await response.json();
+    const isValid = tokenInfo.expires_in > 0;
+    
+    logOAuthDebugInfo('validateGoogleToken - Result', {
+      isValid,
+      expiresIn: tokenInfo.expires_in,
+      audience: tokenInfo.aud,
+      scope: tokenInfo.scope
+    });
+    
+    return isValid;
+  } catch (error) {
+    logOAuthDebugInfo('validateGoogleToken - Error', {
+      error: error instanceof Error ? error.message : 'Unknown error'
+    });
     return false;
   }
+};
+
+// Utility function to make authenticated API requests with proper error handling
+export const makeAuthenticatedRequest = async (
+  url: string, 
+  options: RequestInit = {}, 
+  accessToken?: string
+): Promise<Response> => {
+  try {
+    logOAuthDebugInfo('makeAuthenticatedRequest - Start', {
+      url,
+      method: options.method || 'GET',
+      hasAccessToken: !!accessToken,
+      hasBody: !!options.body
+    });
+    
+    const headers = {
+      'Content-Type': 'application/json',
+      'User-Agent': 'SiteOptz-OAuth/1.0',
+      ...(options.headers || {}),
+      ...(accessToken && { 'Authorization': `Bearer ${accessToken}` })
+    };
+    
+    const response = await fetch(url, {
+      ...options,
+      headers
+    });
+    
+    logOAuthDebugInfo('makeAuthenticatedRequest - Response', {
+      url,
+      status: response.status,
+      statusText: response.statusText,
+      ok: response.ok,
+      contentType: response.headers.get('content-type')
+    });
+    
+    return response;
+  } catch (error) {
+    logOAuthDebugInfo('makeAuthenticatedRequest - Error', {
+      url,
+      error: error instanceof Error ? error.message : 'Unknown error'
+    });
+    throw error;
+  }
+};
+
+// Helper function to check if URL endpoints exist (for debugging 404s)
+export const checkEndpointAvailability = async (baseUrl: string): Promise<{
+  available: boolean;
+  checkedEndpoints: { [key: string]: boolean };
+  errors: string[];
+}> => {
+  const endpoints = [
+    '/api/google-ads/validate',
+    '/api/google-ads/accounts',
+    '/api/google-ads/store-account',
+    '/api/marketing-platforms/google-ads/callback',
+    '/api/marketing-platforms/google-ads/accounts'
+  ];
   
-  const tokenInfo = await response.json();
-  return tokenInfo.expires_in > 0;
+  const result = {
+    available: true,
+    checkedEndpoints: {} as { [key: string]: boolean },
+    errors: [] as string[]
+  };
+  
+  logOAuthDebugInfo('checkEndpointAvailability - Start', {
+    baseUrl,
+    endpointsToCheck: endpoints.length
+  });
+  
+  for (const endpoint of endpoints) {
+    try {
+      const url = `${baseUrl}${endpoint}`;
+      const response = await fetch(url, { 
+        method: 'HEAD',
+        headers: { 'User-Agent': 'SiteOptz-OAuth/1.0' }
+      });
+      
+      // For API routes, 405 (Method Not Allowed) means the endpoint exists
+      const exists = response.status !== 404;
+      result.checkedEndpoints[endpoint] = exists;
+      
+      if (!exists) {
+        result.available = false;
+        result.errors.push(`Endpoint not found: ${endpoint}`);
+      }
+      
+      logOAuthDebugInfo('checkEndpointAvailability - Endpoint Check', {
+        endpoint,
+        status: response.status,
+        exists
+      });
+      
+    } catch (error) {
+      result.checkedEndpoints[endpoint] = false;
+      result.available = false;
+      const errorMsg = `Error checking ${endpoint}: ${error instanceof Error ? error.message : 'Unknown error'}`;
+      result.errors.push(errorMsg);
+      
+      logOAuthDebugInfo('checkEndpointAvailability - Endpoint Error', {
+        endpoint,
+        error: errorMsg
+      });
+    }
+  }
+  
+  logOAuthDebugInfo('checkEndpointAvailability - Complete', {
+    overallAvailable: result.available,
+    errorCount: result.errors.length,
+    availableEndpoints: Object.entries(result.checkedEndpoints).filter(([_, available]) => available).length
+  });
+  
+  return result;
 };
 
 export const exchangeMetaCodeForToken = async (code: string) => {
