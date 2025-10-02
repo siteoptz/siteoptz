@@ -2,7 +2,8 @@
 import { NextApiRequest, NextApiResponse } from 'next';
 import { getServerSession } from 'next-auth/next';
 import { authOptions } from '../../auth/[...nextauth]';
-import { storeSelectedGoogleAdsAccount, GoogleAdsAccount } from '@/lib/google-ads-api';
+import { GoogleAdsAccount } from '@/lib/google-ads-api';
+import { storeGoogleAdsAccount } from '@/lib/google-ads-client';
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method !== 'POST') {
@@ -27,20 +28,21 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   try {
     console.log('🔗 API: Connecting Google Ads account for user:', session.user.email);
     console.log('- Account ID:', accountId);
-    console.log('- Account Name:', accountInfo.name);
+    console.log('- Account Name:', accountInfo.descriptive_name);
     
     // Store the account connection
-    const success = await storeSelectedGoogleAdsAccount(
-      session.user.email,
-      accountId,
-      accountInfo as GoogleAdsAccount,
+    const connectionData = {
+      platform: 'google-ads',
+      accountId: accountId,
+      accountInfo: accountInfo as GoogleAdsAccount,
       accessToken,
-      refreshToken
-    );
-
-    if (!success) {
-      throw new Error('Failed to store account connection');
-    }
+      refreshToken,
+      connectedAt: new Date().toISOString(),
+      userId: session.user.email,
+      expiresAt: Date.now() + (3600 * 1000)
+    };
+    
+    storeGoogleAdsAccount(session.user.email, connectionData);
 
     console.log('✅ API: Successfully connected Google Ads account');
 
@@ -48,7 +50,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       success: true,
       message: 'Google Ads account connected successfully',
       accountId,
-      accountName: accountInfo.name
+      accountName: accountInfo.descriptive_name
     });
 
   } catch (error) {
