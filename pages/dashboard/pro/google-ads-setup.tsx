@@ -4,7 +4,7 @@ import { useRouter } from 'next/router';
 import { useSession } from 'next-auth/react';
 import { DashboardHeader } from '@/components/dashboard/DashboardHeader';
 import GoogleAdsAccountSelector from '@/components/marketing/GoogleAdsAccountSelector';
-import { GoogleAdsAccount } from '@/lib/google-ads-client';
+import { GoogleAdsAccount } from '@/lib/google-ads-api';
 import { UserPlan } from '@/types/userPlan';
 
 export default function GoogleAdsSetupPage() {
