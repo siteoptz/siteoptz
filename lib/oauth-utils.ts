@@ -5,7 +5,7 @@
 // Get the Google Client ID from environment variables
 const getGoogleClientId = () => {
   // Use environment variable - must be configured in .env.local
-  // The client ID should be: 809428295933-hgpoif5v674qqegqo6pggoeuvt7p3rdo.apps.googleusercontent.com
+  // The client ID should be: 809428295933-mj14of35mgnfaq8un84u3487eac075ee.apps.googleusercontent.com
   return process.env.NEXT_PUBLIC_GOOGLE_CLIENT_ID || process.env.GOOGLE_CLIENT_ID || '';
 };
 
