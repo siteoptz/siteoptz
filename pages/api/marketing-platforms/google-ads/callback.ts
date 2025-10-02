@@ -26,9 +26,20 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   }
 
   try {
+    // Log configuration for debugging
+    console.log('OAuth Callback Debug Info:');
+    console.log('- Authorization code received:', code ? 'Yes' : 'No');
+    console.log('- Code length:', (code as string)?.length);
+    
     // Exchange authorization code for tokens
-    const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || 'https://siteoptz.ai';
+    // Use the appropriate base URL based on environment
+    const isDevelopment = process.env.NODE_ENV === 'development';
+    const baseUrl = isDevelopment ? 'http://localhost:3000' : (process.env.NEXT_PUBLIC_BASE_URL || 'https://siteoptz.ai');
     const redirectUri = `${baseUrl}/api/marketing-platforms/google-ads/callback`;
+    
+    console.log('- Redirect URI being used:', redirectUri);
+    console.log('- Client ID configured:', process.env.GOOGLE_CLIENT_ID ? 'Yes' : 'No');
+    console.log('- Client Secret configured:', process.env.GOOGLE_CLIENT_SECRET ? 'Yes' : 'No');
     
     const tokenData = await exchangeGoogleCodeForToken(code as string, redirectUri);
 

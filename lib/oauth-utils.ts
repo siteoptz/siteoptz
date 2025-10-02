@@ -11,6 +11,15 @@ const getGoogleClientId = () => {
 
 // Get the base URL for redirects
 const getBaseUrl = () => {
+  // Check if we're in development mode
+  if (typeof window !== 'undefined') {
+    // Client-side: use window.location.origin
+    return window.location.origin;
+  }
+  // Server-side: check NODE_ENV
+  if (process.env.NODE_ENV === 'development') {
+    return 'http://localhost:3000';
+  }
   return process.env.NEXT_PUBLIC_BASE_URL || 'https://siteoptz.ai';
 };
 
