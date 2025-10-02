@@ -112,6 +112,14 @@ export default function GoogleAdsAccountSelector({
                     <div
                       key={account.id}
                       onClick={() => handleAccountSelect(account)}
+                      onKeyDown={(e) => {
+                        if (e.key === 'Enter' || e.key === ' ') {
+                          e.preventDefault();
+                          handleAccountSelect(account);
+                        }
+                      }}
+                      role="button"
+                      tabIndex={0}
                       className={`p-4 border rounded-lg cursor-pointer transition-all ${
                         selectedAccount?.id === account.id
                           ? 'border-cyan-400 bg-cyan-400 bg-opacity-10'
