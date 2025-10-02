@@ -7,6 +7,7 @@ import { useUserPlan } from '../../hooks/useUserPlan';
 import { DashboardHeader } from '../../components/dashboard/DashboardHeader';
 import { getDashboardContent, getUpgradePrompt } from '../../content/dashboard-marketing-content';
 import { UpgradePrompt } from '../../components/UpgradePrompt';
+import { generateGoogleAdsAuthUrl } from '../../lib/oauth-utils';
 // import MarketingROIDashboard from '../../components/dashboard/MarketingROIDashboard';
 // import PlatformIntegrations from '../../components/dashboard/PlatformIntegrations';
 // import AIInsightsEngine from '../../components/dashboard/AIInsightsEngine';
@@ -54,13 +55,44 @@ export default function ProDashboard() {
   const { userPlan, loading } = useUserPlan();
   const router = useRouter();
   const [activeTab, setActiveTab] = useState('overview');
+  const [connectionStatus, setConnectionStatus] = useState<{ 
+    message?: string; 
+    type?: 'success' | 'error' 
+  }>({});
 
-  // Handle URL tab parameter
+  // Handle URL tab parameter and OAuth callbacks
   useEffect(() => {
-    if (router.isReady && router.query.tab) {
-      setActiveTab(router.query.tab as string);
+    if (router.isReady) {
+      if (router.query.tab) {
+        setActiveTab(router.query.tab as string);
+      }
+      
+      // Handle OAuth callback parameters
+      if (router.query.success === 'true' && router.query.platform === 'google-ads') {
+        setConnectionStatus({
+          message: 'Google Ads connected successfully!',
+          type: 'success'
+        });
+        // Clear the query params after showing message
+        setTimeout(() => {
+          router.replace('/dashboard/pro', undefined, { shallow: true });
+        }, 100);
+        // Clear the message after 5 seconds
+        setTimeout(() => setConnectionStatus({}), 5000);
+      } else if (router.query.error && router.query.platform === 'google-ads') {
+        setConnectionStatus({
+          message: `Failed to connect Google Ads: ${router.query.error}`,
+          type: 'error'
+        });
+        // Clear the query params after showing message
+        setTimeout(() => {
+          router.replace('/dashboard/pro', undefined, { shallow: true });
+        }, 100);
+        // Clear the message after 5 seconds
+        setTimeout(() => setConnectionStatus({}), 5000);
+      }
     }
-  }, [router.isReady, router.query.tab]);
+  }, [router.isReady, router.query]);
   
   const proContent = getDashboardContent('pro') as any;
   const enterpriseUpgrade = getUpgradePrompt('pro', 'enterprise') as any;
@@ -95,6 +127,24 @@ export default function ProDashboard() {
       <DashboardHeader userPlan={userPlan} />
 
       <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+        {/* Connection Status Notification */}
+        {connectionStatus.message && (
+          <div className={`mb-6 p-4 rounded-lg border ${
+            connectionStatus.type === 'success' 
+              ? 'bg-green-900/20 border-green-500/50 text-green-400' 
+              : 'bg-red-900/20 border-red-500/50 text-red-400'
+          }`}>
+            <div className="flex items-center">
+              {connectionStatus.type === 'success' ? (
+                <CheckCircle className="w-5 h-5 mr-2" />
+              ) : (
+                <span className="w-5 h-5 mr-2">⚠️</span>
+              )}
+              {connectionStatus.message}
+            </div>
+          </div>
+        )}
+
         {/* Hero Section */}
         <div className="mb-12">
           <h1 className="text-4xl font-bold text-white mb-4 flex items-center">
@@ -373,7 +423,12 @@ export default function ProDashboard() {
                 </p>
                 <button 
                   onClick={() => {
-                    alert('Google Ads connection would open OAuth flow here. In production, this would connect to Google Ads API for campaign tracking and analytics.');
+                    const authUrl = generateGoogleAdsAuthUrl();
+                    if (authUrl && authUrl !== '#') {
+                      window.location.href = authUrl;
+                    } else {
+                      alert('Unable to generate OAuth URL. Please check your configuration.');
+                    }
                   }}
                   className="w-full bg-blue-600 text-white py-2 px-4 rounded-lg hover:bg-blue-700 transition-colors"
                 >

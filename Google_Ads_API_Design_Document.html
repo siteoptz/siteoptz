@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Google Ads API Design Document</title>
+    <style>
+        body { font-family: Arial, sans-serif; max-width: 800px; margin: 0 auto; padding: 20px; line-height: 1.6; }
+        h1 { color: #1a73e8; border-bottom: 2px solid #1a73e8; padding-bottom: 10px; }
+        h2 { color: #34a853; margin-top: 30px; }
+        h3 { color: #ea4335; }
+        code { background-color: #f8f9fa; padding: 2px 4px; border-radius: 3px; }
+        pre { background-color: #f8f9fa; padding: 15px; border-radius: 5px; overflow-x: auto; }
+        table { border-collapse: collapse; width: 100%; }
+        th, td { border: 1px solid #ddd; padding: 8px; text-align: left; }
+        th { background-color: #f2f2f2; }
+    </style>
+</head>
+<body>
+    <h1 id="marketing-roi-tool-google-ads-api-integration-design-document">Marketing ROI Tool - Google Ads API Integration Design Document</h1>
+<p><strong>Document Version:</strong> 1.0<br />
+<strong>Date:</strong> January 2025<br />
+<strong>Company:</strong> SiteOptz.ai<br />
+<strong>Contact:</strong> [Your Contact Information]  </p>
+<hr />
+<h2 id="executive-summary">Executive Summary</h2>
+<p>SiteOptz.ai is developing a comprehensive Marketing ROI Tool designed to help businesses optimize their advertising spend across multiple platforms. This document outlines our integration with Google Ads API to provide unified analytics, performance tracking, and ROI optimization recommendations for our Pro and Enterprise subscribers.</p>
+<h3 id="key-objectives">Key Objectives</h3>
+<ul>
+<li>Provide unified marketing analytics across multiple advertising platforms</li>
+<li>Enable real-time ROI tracking and performance monitoring</li>
+<li>Deliver AI-powered optimization recommendations</li>
+<li>Ensure compliance with Google Ads API policies and data privacy regulations</li>
+</ul>
+<hr />
+<h2 id="1-company-overview">1. Company Overview</h2>
+<h3 id="11-business-information">1.1 Business Information</h3>
+<ul>
+<li><strong>Company Name:</strong> SiteOptz.ai</li>
+<li><strong>Website:</strong> https://siteoptz.ai</li>
+<li><strong>Business Type:</strong> SaaS Marketing Technology Platform</li>
+<li><strong>Founded:</strong> [Year]</li>
+<li><strong>Headquarters:</strong> [Location]</li>
+<li><strong>Business Registration:</strong> [Registration Details]</li>
+</ul>
+<h3 id="12-mission-statement">1.2 Mission Statement</h3>
+<p>SiteOptz.ai empowers businesses to maximize their marketing ROI through AI-driven insights, unified analytics, and actionable optimization recommendations across all major advertising platforms.</p>
+<h3 id="13-target-market">1.3 Target Market</h3>
+<ul>
+<li><strong>Primary:</strong> Small to medium-sized businesses (SMBs) with monthly ad spend of $1,000-$50,000</li>
+<li><strong>Secondary:</strong> Marketing agencies managing multiple client accounts</li>
+<li><strong>Tertiary:</strong> Enterprise companies seeking unified marketing analytics</li>
+</ul>
+<hr />
+<h2 id="2-product-overview">2. Product Overview</h2>
+<h3 id="21-marketing-roi-tool-description">2.1 Marketing ROI Tool Description</h3>
+<p>Our Marketing ROI Tool is a comprehensive dashboard that integrates with multiple advertising platforms to provide:</p>
+<h4 id="core-features">Core Features</h4>
+<ol>
+<li><strong>Unified Analytics Dashboard</strong></li>
+<li>Real-time performance metrics across all connected platforms</li>
+<li>Cross-platform ROI comparison and analysis</li>
+<li>
+<p>Customizable reporting and visualization</p>
+</li>
+<li>
+<p><strong>Platform Integrations</strong></p>
+</li>
+<li>Google Ads (Primary focus)</li>
+<li>Meta (Facebook/Instagram) Ads</li>
+<li>TikTok Ads</li>
+<li>LinkedIn Ads</li>
+<li>Twitter Ads</li>
+<li>
+<p>Google Analytics</p>
+</li>
+<li>
+<p><strong>AI-Powered Insights</strong></p>
+</li>
+<li>Claude AI integration for optimization recommendations</li>
+<li>Predictive performance forecasting</li>
+<li>Automated budget allocation suggestions</li>
+<li>
+<p>Competitive analysis and benchmarking</p>
+</li>
+<li>
+<p><strong>ROI Optimization</strong></p>
+</li>
+<li>Cost-per-acquisition (CPA) tracking</li>
+<li>Return on ad spend (ROAS) analysis</li>
+<li>Budget optimization recommendations</li>
+<li>Performance trend analysis</li>
+</ol>
+<h3 id="22-user-interface-design">2.2 User Interface Design</h3>
+<ul>
+<li><strong>Dashboard:</strong> Clean, intuitive interface with real-time metrics</li>
+<li><strong>Platform Connection:</strong> Secure OAuth 2.0 integration flow</li>
+<li><strong>Reporting:</strong> Customizable charts and exportable reports</li>
+<li><strong>Mobile Responsive:</strong> Optimized for desktop and mobile devices</li>
+</ul>
+<hr />
+<h2 id="3-google-ads-api-integration-details">3. Google Ads API Integration Details</h2>
+<h3 id="31-api-usage-scope">3.1 API Usage Scope</h3>
+<p>We will use the Google Ads API to access the following data and perform these operations:</p>
+<h4 id="data-access-read-only-operations">Data Access (Read-Only Operations)</h4>
+<ol>
+<li><strong>Campaign Management</strong></li>
+<li>Campaign performance metrics (impressions, clicks, conversions)</li>
+<li>Campaign structure and settings</li>
+<li>Budget and bid information</li>
+<li>
+<p>Geographic and demographic performance data</p>
+</li>
+<li>
+<p><strong>Account Information</strong></p>
+</li>
+<li>Account structure and hierarchy</li>
+<li>Billing information (for ROI calculations)</li>
+<li>
+<p>Account-level performance metrics</p>
+</li>
+<li>
+<p><strong>Ad Group and Keyword Data</strong></p>
+</li>
+<li>Ad group performance metrics</li>
+<li>Keyword performance and search terms</li>
+<li>Quality score information</li>
+<li>
+<p>Bid adjustments and targeting</p>
+</li>
+<li>
+<p><strong>Conversion Tracking</strong></p>
+</li>
+<li>Conversion actions and values</li>
+<li>Conversion attribution data</li>
+<li>Goal completion tracking</li>
+</ol>
+<h4 id="operations-read-only">Operations (Read-Only)</h4>
+<ul>
+<li>Retrieve campaign performance reports</li>
+<li>Access account structure and settings</li>
+<li>Download historical performance data</li>
+<li>Monitor real-time campaign metrics</li>
+</ul>
+<h3 id="32-data-processing-and-storage">3.2 Data Processing and Storage</h3>
+<ul>
+<li><strong>Data Retention:</strong> 24 months maximum</li>
+<li><strong>Storage Location:</strong> Secure cloud infrastructure with encryption</li>
+<li><strong>Data Access:</strong> Limited to authorized personnel only</li>
+<li><strong>Backup:</strong> Regular encrypted backups with 99.9% uptime SLA</li>
+</ul>
+<h3 id="33-security-measures">3.3 Security Measures</h3>
+<ul>
+<li><strong>Authentication:</strong> OAuth 2.0 with secure token management</li>
+<li><strong>Encryption:</strong> AES-256 encryption for data at rest and in transit</li>
+<li><strong>Access Control:</strong> Role-based access control (RBAC)</li>
+<li><strong>Audit Logging:</strong> Comprehensive logging of all API access</li>
+<li><strong>Compliance:</strong> SOC 2 Type II compliance planned</li>
+</ul>
+<hr />
+<h2 id="4-user-authentication-and-authorization">4. User Authentication and Authorization</h2>
+<h3 id="41-oauth-20-implementation">4.1 OAuth 2.0 Implementation</h3>
+<p>We implement Google's OAuth 2.0 flow for secure authentication:</p>
+<ol>
+<li><strong>Authorization Request</strong></li>
+<li>Redirect users to Google OAuth consent screen</li>
+<li>Request minimal required permissions</li>
+<li>
+<p>Use PKCE (Proof Key for Code Exchange) for enhanced security</p>
+</li>
+<li>
+<p><strong>Token Management</strong></p>
+</li>
+<li>Secure storage of access and refresh tokens</li>
+<li>Automatic token refresh before expiration</li>
+<li>
+<p>Token revocation upon user disconnection</p>
+</li>
+<li>
+<p><strong>Permission Scoping</strong></p>
+</li>
+<li>Request only necessary Google Ads API scopes</li>
+<li>Read-only access to advertising data</li>
+<li>No modification of campaign settings or bids</li>
+</ol>
+<h3 id="42-user-consent-and-privacy">4.2 User Consent and Privacy</h3>
+<ul>
+<li><strong>Clear Consent:</strong> Transparent explanation of data usage</li>
+<li><strong>Granular Permissions:</strong> Users can connect/disconnect individual platforms</li>
+<li><strong>Data Control:</strong> Users can export or delete their data at any time</li>
+<li><strong>Privacy Policy:</strong> Comprehensive privacy policy available at https://siteoptz.ai/privacy</li>
+</ul>
+<hr />
+<h2 id="5-data-usage-and-analytics">5. Data Usage and Analytics</h2>
+<h3 id="51-primary-use-cases">5.1 Primary Use Cases</h3>
+<ol>
+<li><strong>Performance Monitoring</strong></li>
+<li>Real-time campaign performance tracking</li>
+<li>Cross-platform performance comparison</li>
+<li>
+<p>ROI and ROAS calculations</p>
+</li>
+<li>
+<p><strong>Optimization Insights</strong></p>
+</li>
+<li>AI-powered recommendations for budget allocation</li>
+<li>Performance trend analysis and forecasting</li>
+<li>
+<p>Competitive benchmarking</p>
+</li>
+<li>
+<p><strong>Reporting and Analytics</strong></p>
+</li>
+<li>Customizable performance reports</li>
+<li>Automated report generation and delivery</li>
+<li>Data visualization and dashboard creation</li>
+</ol>
+<h3 id="52-data-aggregation-and-analysis">5.2 Data Aggregation and Analysis</h3>
+<ul>
+<li><strong>Aggregation:</strong> Combine data from multiple advertising platforms</li>
+<li><strong>Benchmarking:</strong> Compare performance against industry standards</li>
+<li><strong>Trend Analysis:</strong> Identify performance patterns and trends</li>
+<li><strong>Predictive Modeling:</strong> Forecast future performance based on historical data</li>
+</ul>
+<h3 id="53-no-direct-campaign-modification">5.3 No Direct Campaign Modification</h3>
+<p>We explicitly do NOT:
+- Modify campaign settings, bids, or budgets
+- Create, edit, or delete campaigns, ad groups, or ads
+- Change targeting or audience settings
+- Access or modify account billing information beyond what's necessary for ROI calculations</p>
+<hr />
+<h2 id="6-technical-architecture">6. Technical Architecture</h2>
+<h3 id="61-system-architecture">6.1 System Architecture</h3>
+<p><code>┌─────────────────┐    ┌─────────────────┐    ┌─────────────────┐
+│   User Browser  │    │   SiteOptz.ai   │    │  Google Ads API │
+│                 │    │   Application   │    │                 │
+├─────────────────┤    ├─────────────────┤    ├─────────────────┤
+│ OAuth Flow UI   │◄──►│ OAuth Handler   │◄──►│ Authorization   │
+│ Dashboard       │    │ API Integration │    │ Data Access     │
+│ Reports         │    │ Data Processing │    │ Rate Limiting   │
+└─────────────────┘    └─────────────────┘    └─────────────────┘
+                              │
+                       ┌─────────────────┐
+                       │   Database      │
+                       │ (Encrypted)     │
+                       └─────────────────┘</code></p>
+<h3 id="62-api-integration-flow">6.2 API Integration Flow</h3>
+<ol>
+<li><strong>User Authentication</strong></li>
+<li>User initiates platform connection</li>
+<li>Redirected to Google OAuth consent screen</li>
+<li>
+<p>Authorization code exchanged for tokens</p>
+</li>
+<li>
+<p><strong>Data Synchronization</strong></p>
+</li>
+<li>Scheduled API calls for data retrieval</li>
+<li>Real-time updates for critical metrics</li>
+<li>
+<p>Rate limiting compliance</p>
+</li>
+<li>
+<p><strong>Data Processing</strong></p>
+</li>
+<li>Data validation and cleaning</li>
+<li>Aggregation and calculation</li>
+<li>
+<p>Storage in encrypted database</p>
+</li>
+<li>
+<p><strong>User Interface</strong></p>
+</li>
+<li>Real-time dashboard updates</li>
+<li>Interactive charts and reports</li>
+<li>Export functionality</li>
+</ol>
+<h3 id="63-rate-limiting-and-quotas">6.3 Rate Limiting and Quotas</h3>
+<ul>
+<li><strong>Request Frequency:</strong> Maximum 1 request per second per account</li>
+<li><strong>Daily Quotas:</strong> Monitor and respect Google Ads API daily limits</li>
+<li><strong>Error Handling:</strong> Implement exponential backoff for rate limit errors</li>
+<li><strong>Monitoring:</strong> Real-time monitoring of API usage and quotas</li>
+</ul>
+<hr />
+<h2 id="7-compliance-and-privacy">7. Compliance and Privacy</h2>
+<h3 id="71-data-privacy-compliance">7.1 Data Privacy Compliance</h3>
+<ul>
+<li><strong>GDPR Compliance:</strong> Full compliance with EU General Data Protection Regulation</li>
+<li><strong>CCPA Compliance:</strong> California Consumer Privacy Act compliance</li>
+<li><strong>Data Minimization:</strong> Collect only necessary data for stated purposes</li>
+<li><strong>Purpose Limitation:</strong> Use data only for stated business purposes</li>
+</ul>
+<h3 id="72-google-ads-api-policy-compliance">7.2 Google Ads API Policy Compliance</h3>
+<ul>
+<li><strong>Terms of Service:</strong> Full compliance with Google Ads API Terms of Service</li>
+<li><strong>Acceptable Use Policy:</strong> Adherence to Google's Acceptable Use Policy</li>
+<li><strong>Data Usage Policy:</strong> Compliance with Google's Data Usage Policy</li>
+<li><strong>Developer Policy:</strong> Following Google's Developer Policy guidelines</li>
+</ul>
+<h3 id="73-security-standards">7.3 Security Standards</h3>
+<ul>
+<li><strong>Encryption:</strong> All data encrypted in transit and at rest</li>
+<li><strong>Access Control:</strong> Multi-factor authentication for administrative access</li>
+<li><strong>Audit Logging:</strong> Comprehensive logging of all system activities</li>
+<li><strong>Incident Response:</strong> Documented incident response procedures</li>
+</ul>
+<hr />
+<h2 id="8-business-model-and-monetization">8. Business Model and Monetization</h2>
+<h3 id="81-subscription-model">8.1 Subscription Model</h3>
+<ul>
+<li><strong>Pro Plan:</strong> $1997/year - Includes Marketing ROI Tool access</li>
+<li><strong>Enterprise Plan:</strong> $4997/year - Advanced features and dedicated support</li>
+<li><strong>Free Trial:</strong> 30-day free trial with limited functionality</li>
+</ul>
+<h3 id="82-value-proposition">8.2 Value Proposition</h3>
+<ul>
+<li><strong>ROI Improvement:</strong> Average 15-25% improvement in marketing ROI</li>
+<li><strong>Time Savings:</strong> 10-15 hours per week saved on manual reporting</li>
+<li><strong>Cost Reduction:</strong> Reduce wasted ad spend through optimization insights</li>
+<li><strong>Competitive Advantage:</strong> Data-driven marketing decisions</li>
+</ul>
+<h3 id="83-revenue-projections">8.3 Revenue Projections</h3>
+<ul>
+<li><strong>Year 1:</strong> 500 Pro subscribers, 50 Enterprise clients</li>
+<li><strong>Year 2:</strong> 1,500 Pro subscribers, 150 Enterprise clients</li>
+<li><strong>Year 3:</strong> 3,000 Pro subscribers, 300 Enterprise clients</li>
+</ul>
+<hr />
+<h2 id="9-development-timeline">9. Development Timeline</h2>
+<h3 id="91-phase-1-core-integration-months-1-2">9.1 Phase 1: Core Integration (Months 1-2)</h3>
+<ul>
+<li>Google Ads API integration</li>
+<li>Basic dashboard functionality</li>
+<li>OAuth authentication flow</li>
+<li>Initial data visualization</li>
+</ul>
+<h3 id="92-phase-2-enhanced-features-months-3-4">9.2 Phase 2: Enhanced Features (Months 3-4)</h3>
+<ul>
+<li>AI-powered insights integration</li>
+<li>Advanced reporting capabilities</li>
+<li>Multi-platform data aggregation</li>
+<li>Mobile optimization</li>
+</ul>
+<h3 id="93-phase-3-scale-and-optimization-months-5-6">9.3 Phase 3: Scale and Optimization (Months 5-6)</h3>
+<ul>
+<li>Performance optimization</li>
+<li>Advanced analytics features</li>
+<li>Enterprise features</li>
+<li>Full compliance certification</li>
+</ul>
+<hr />
+<h2 id="10-risk-assessment-and-mitigation">10. Risk Assessment and Mitigation</h2>
+<h3 id="101-technical-risks">10.1 Technical Risks</h3>
+<ul>
+<li><strong>API Rate Limits:</strong> Implement robust rate limiting and monitoring</li>
+<li><strong>Data Accuracy:</strong> Validate data integrity through multiple checks</li>
+<li><strong>System Downtime:</strong> 99.9% uptime SLA with redundant systems</li>
+</ul>
+<h3 id="102-compliance-risks">10.2 Compliance Risks</h3>
+<ul>
+<li><strong>Policy Changes:</strong> Regular monitoring of Google policy updates</li>
+<li><strong>Data Breach:</strong> Comprehensive security measures and incident response</li>
+<li><strong>Regulatory Changes:</strong> Legal compliance monitoring and updates</li>
+</ul>
+<h3 id="103-business-risks">10.3 Business Risks</h3>
+<ul>
+<li><strong>Market Competition:</strong> Continuous innovation and feature development</li>
+<li><strong>Customer Acquisition:</strong> Proven marketing strategies and partnerships</li>
+<li><strong>Technology Evolution:</strong> Regular platform updates and improvements</li>
+</ul>
+<hr />
+<h2 id="11-support-and-maintenance">11. Support and Maintenance</h2>
+<h3 id="111-customer-support">11.1 Customer Support</h3>
+<ul>
+<li><strong>Response Time:</strong> 24-hour response for Pro, 4-hour for Enterprise</li>
+<li><strong>Support Channels:</strong> Email, chat, and phone support</li>
+<li><strong>Documentation:</strong> Comprehensive user guides and API documentation</li>
+<li><strong>Training:</strong> Onboarding and training sessions for Enterprise clients</li>
+</ul>
+<h3 id="112-system-maintenance">11.2 System Maintenance</h3>
+<ul>
+<li><strong>Regular Updates:</strong> Monthly feature updates and improvements</li>
+<li><strong>Security Patches:</strong> Immediate security patch deployment</li>
+<li><strong>Performance Monitoring:</strong> 24/7 system monitoring and alerting</li>
+<li><strong>Backup and Recovery:</strong> Daily backups with 4-hour recovery time</li>
+</ul>
+<hr />
+<h2 id="12-conclusion">12. Conclusion</h2>
+<p>SiteOptz.ai's Marketing ROI Tool represents a significant value-add for businesses seeking to optimize their advertising spend. Our integration with Google Ads API will provide users with powerful insights while maintaining strict compliance with Google's policies and industry best practices.</p>
+<p>We are committed to:
+- <strong>Transparency:</strong> Clear communication about data usage and privacy
+- <strong>Security:</strong> Industry-leading security measures and compliance
+- <strong>Innovation:</strong> Continuous improvement and feature development
+- <strong>Compliance:</strong> Full adherence to all applicable policies and regulations</p>
+<p>We respectfully request approval for Google Ads API access to enable these valuable features for our customers.</p>
+<hr />
+<h2 id="appendices">Appendices</h2>
+<h3 id="appendix-a-technical-specifications">Appendix A: Technical Specifications</h3>
+<ul>
+<li>API endpoints and data schemas</li>
+<li>Database schema and relationships</li>
+<li>Security architecture details</li>
+<li>Performance benchmarks</li>
+</ul>
+<h3 id="appendix-b-legal-documentation">Appendix B: Legal Documentation</h3>
+<ul>
+<li>Privacy Policy</li>
+<li>Terms of Service</li>
+<li>Data Processing Agreements</li>
+<li>Compliance Certifications</li>
+</ul>
+<h3 id="appendix-c-contact-information">Appendix C: Contact Information</h3>
+<ul>
+<li><strong>Technical Contact:</strong> [Technical Lead Name and Email]</li>
+<li><strong>Business Contact:</strong> [Business Lead Name and Email]</li>
+<li><strong>Legal Contact:</strong> [Legal Counsel Name and Email]</li>
+<li><strong>Support Contact:</strong> [Support Team Email]</li>
+</ul>
+<hr />
+<p><strong>Document Prepared By:</strong> [Your Name]<br />
+<strong>Date:</strong> January 2025<br />
+<strong>Version:</strong> 1.0<br />
+<strong>Status:</strong> For Google Ads API Approval Review</p>
+</body>
+</html>
