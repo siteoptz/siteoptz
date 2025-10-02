@@ -68,7 +68,7 @@ export default function OptzBI() {
   // Show redirect message while redirecting
   return (
     <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-black">
-      <DashboardHeader />
+      <DashboardHeader userPlan={userPlan} />
       
       <div className="container mx-auto px-4 py-8">
         <div className="max-w-4xl mx-auto">
