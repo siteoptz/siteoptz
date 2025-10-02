@@ -95,7 +95,7 @@ export default function OptzBI() {
             
             <p className="text-gray-300 mb-6">
               The Marketing ROI tool is now fully integrated into your Pro dashboard. 
-              You'll be redirected to the ROI Dashboard tab where you can access all features.
+              You&apos;ll be redirected to the ROI Dashboard tab where you can access all features.
             </p>
 
             {/* Manual Redirect Button */}
