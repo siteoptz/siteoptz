@@ -142,7 +142,7 @@ export default function ProDashboard({ session }: ProDashboardProps) {
       // Clear the message after 5 seconds
       setTimeout(() => setConnectionStatus({}), 5000);
     }
-  }, [router.isReady, fetchAvailableAccounts]); // Include fetchAvailableAccounts dependency
+  }, [router.isReady]); // Only depend on router.isReady, fetchAvailableAccounts is stable with useCallback
 
   // Check for Google Ads connection status
   useEffect(() => {
