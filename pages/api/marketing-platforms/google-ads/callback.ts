@@ -3,6 +3,7 @@ import { getServerSession } from 'next-auth/next';
 import { authOptions } from '@/pages/api/auth/[...nextauth]';
 import { exchangeGoogleCodeForToken, storePlatformCredentials } from '@/lib/oauth-utils';
 import { initializeGoogleAds, getGoogleAdsAccounts } from '@/lib/google-ads-api';
+import { storeGoogleAdsAccount } from '@/lib/google-ads-client';
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method !== 'GET') {
@@ -73,11 +74,20 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       } else if (accounts.length === 1) {
         // Single account, auto-select it
         const account = accounts[0];
-        await storePlatformCredentials(session.user.email, 'google-ads-account', {
-          selected_account_id: account.customer_id,
-          selected_account_name: account.descriptive_name,
-          is_mcc: account.manager
-        });
+        
+        // Store the selected Google Ads account
+        const connectionData = {
+          platform: 'google-ads',
+          accountId: account.customer_id,
+          accountInfo: account,
+          accessToken: tokenData.access_token,
+          refreshToken: tokenData.refresh_token,
+          connectedAt: new Date().toISOString(),
+          userId: session.user.email,
+          expiresAt: Date.now() + (3600 * 1000)
+        };
+        
+        storeGoogleAdsAccount(session.user.email, connectionData);
         
         return res.redirect('/dashboard/pro?tab=roi-dashboard&success=google_ads_connected&account_selected=true');
       } else {
