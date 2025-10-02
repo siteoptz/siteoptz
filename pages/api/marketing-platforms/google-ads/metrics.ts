@@ -2,7 +2,7 @@ import { NextApiRequest, NextApiResponse } from 'next';
 import { getServerSession } from 'next-auth/next';
 import { authOptions } from '@/pages/api/auth/[...nextauth]';
 import { getPlatformCredentials } from '@/lib/oauth-utils';
-import { initializeGoogleAds, getGoogleAdsCampaigns } from '@/lib/google-ads-api';
+import { initializeGoogleAds, getGoogleAdsMetrics } from '@/lib/google-ads-api';
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method !== 'GET') {
@@ -38,17 +38,17 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       accountCredentials.selected_account_id
     );
 
-    // Get campaign data
-    const campaigns = await getGoogleAdsCampaigns(dateRange as string);
+    // Get account metrics
+    const metrics = await getGoogleAdsMetrics(dateRange as string);
 
-    console.log(`Retrieved ${campaigns.length} campaigns for user ${session.user.email}`);
+    console.log(`Retrieved metrics for user ${session.user.email}`);
 
-    return res.status(200).json(campaigns);
+    return res.status(200).json(metrics);
 
   } catch (error) {
-    console.error('Error fetching Google Ads campaigns:', error);
+    console.error('Error fetching Google Ads metrics:', error);
     return res.status(500).json({ 
-      error: 'Failed to fetch campaigns',
+      error: 'Failed to fetch metrics',
       details: error instanceof Error ? error.message : 'Unknown error'
     });
   }

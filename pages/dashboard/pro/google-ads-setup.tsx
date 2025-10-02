@@ -4,12 +4,7 @@ import { useRouter } from 'next/router';
 import { useSession } from 'next-auth/react';
 import { DashboardHeader } from '@/components/dashboard/DashboardHeader';
 import GoogleAdsAccountSelector from '@/components/marketing/GoogleAdsAccountSelector';
-import { 
-  fetchGoogleAdsAccounts, 
-  GoogleAdsAccount, 
-  storeSelectedGoogleAdsAccount,
-  validateGoogleAdsAccess
-} from '@/lib/google-ads-api';
+import { GoogleAdsAccount } from '@/lib/google-ads-client';
 import { UserPlan } from '@/types/userPlan';
 
 export default function GoogleAdsSetupPage() {
@@ -58,8 +53,23 @@ export default function GoogleAdsSetupPage() {
     try {
       console.log('🔍 Fetching Google Ads accounts with access token...');
       
-      // First validate access
-      const validation = await validateGoogleAdsAccess(tokenData.access_token);
+      // First validate access using API route
+      const validationResponse = await fetch('/api/google-ads/validate', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          accessToken: tokenData.access_token,
+          refreshToken: tokenData.refresh_token
+        })
+      });
+      
+      if (!validationResponse.ok) {
+        throw new Error('Failed to validate Google Ads access');
+      }
+      
+      const validation = await validationResponse.json();
       
       if (!validation.valid) {
         throw new Error(validation.error || 'Invalid Google Ads access');
@@ -67,15 +77,31 @@ export default function GoogleAdsSetupPage() {
       
       console.log(`✅ Access validated. Found ${validation.accountCount} accounts. Manager access: ${validation.hasManagerAccess}`);
       
-      // Fetch all accounts
-      const fetchedAccounts = await fetchGoogleAdsAccounts(tokenData.access_token);
+      // Fetch all accounts using API route
+      const accountsResponse = await fetch('/api/google-ads/accounts', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          accessToken: tokenData.access_token,
+          refreshToken: tokenData.refresh_token
+        })
+      });
       
-      if (fetchedAccounts.length === 0) {
+      if (!accountsResponse.ok) {
+        const errorData = await accountsResponse.json();
+        throw new Error(errorData.error || 'Failed to fetch Google Ads accounts');
+      }
+      
+      const accountsData = await accountsResponse.json();
+      
+      if (!accountsData.accounts || accountsData.accounts.length === 0) {
         throw new Error('No Google Ads accounts found. Please ensure you have access to Google Ads accounts.');
       }
       
-      setAccounts(fetchedAccounts);
-      console.log(`📊 Successfully loaded ${fetchedAccounts.length} Google Ads accounts`);
+      setAccounts(accountsData.accounts);
+      console.log(`📊 Successfully loaded ${accountsData.accounts.length} Google Ads accounts`);
       
     } catch (err) {
       console.error('Error fetching Google Ads accounts:', err);
@@ -98,23 +124,39 @@ export default function GoogleAdsSetupPage() {
       console.log('🔗 Connecting Google Ads account for user:', session.user.email);
       console.log('🔗 Selected account:', selectedAccount.id, selectedAccount.name);
       
-      // Store the selected account
-      const success = await storeSelectedGoogleAdsAccount(
-        session.user.email,
-        selectedAccount.id,
-        selectedAccount,
-        tokenData.access_token,
-        tokenData.refresh_token
-      );
+      // Store the selected account using API route
+      const storeResponse = await fetch('/api/google-ads/store-account', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          userId: session.user.email,
+          accountId: selectedAccount.customer_id,
+          accountInfo: selectedAccount,
+          accessToken: tokenData.access_token,
+          refreshToken: tokenData.refresh_token
+        })
+      });
       
-      if (!success) {
-        throw new Error('Failed to store account connection');
+      if (!storeResponse.ok) {
+        const errorData = await storeResponse.json();
+        throw new Error(errorData.error || 'Failed to store account connection');
+      }
+      
+      const storeData = await storeResponse.json();
+      
+      // Store connection data in localStorage on client side
+      if (typeof window !== 'undefined' && storeData.connectionData) {
+        const key = `google_ads_connection_${session.user.email}`;
+        localStorage.setItem(key, JSON.stringify(storeData.connectionData));
+        console.log(`✅ Stored Google Ads account ${selectedAccount.customer_id} for user ${session.user.email}`);
       }
       
       console.log('✅ Successfully connected Google Ads account');
       
       // Redirect back to dashboard with success
-      router.push('/dashboard/pro?success=true&platform=google-ads&connected=true&account=' + selectedAccount.id);
+      router.push('/dashboard/pro?success=true&platform=google-ads&connected=true&account=' + selectedAccount.customer_id);
       
     } catch (err) {
       console.error('Error connecting Google Ads account:', err);

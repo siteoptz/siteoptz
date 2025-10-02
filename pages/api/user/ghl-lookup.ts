@@ -8,15 +8,28 @@ interface ContactLookupResult {
   email?: string;
 }
 
+// Simple in-memory cache with TTL
+const cache = new Map<string, { data: ContactLookupResult; timestamp: number }>();
+const CACHE_TTL = 30 * 1000; // 30 seconds
+
 // Function to get contact details from GoHighLevel
 export async function getContactByEmail(email: string): Promise<ContactLookupResult> {
   console.log('🔍 Looking up contact in GoHighLevel:', email);
+  
+  // Check cache first
+  const cached = cache.get(email);
+  if (cached && (Date.now() - cached.timestamp) < CACHE_TTL) {
+    console.log('⚡ Using cached result for:', email);
+    return cached.data;
+  }
   
   // Check if GoHighLevel integration is enabled
   const isGHLEnabled = process.env.ENABLE_GHL === 'true';
   if (!isGHLEnabled || !process.env.GOHIGHLEVEL_API_KEY || !process.env.GOHIGHLEVEL_LOCATION_ID) {
     console.log('⚠️ GoHighLevel integration disabled, cannot lookup contact');
-    return { exists: false };
+    const result = { exists: false };
+    cache.set(email, { data: result, timestamp: Date.now() });
+    return result;
   }
 
   try {
@@ -87,13 +100,17 @@ export async function getContactByEmail(email: string): Promise<ContactLookupRes
           plan 
         });
         
-        return { 
+        const result = { 
           exists: true, 
           contactId: contact.id,
           name: contact.name || `${contact.firstName || ''} ${contact.lastName || ''}`.trim(),
           plan: plan,
           email: contact.email
         };
+        
+        // Cache the result
+        cache.set(email, { data: result, timestamp: Date.now() });
+        return result;
       }
     } else {
       const errorText = await searchResponse.text();
@@ -103,14 +120,20 @@ export async function getContactByEmail(email: string): Promise<ContactLookupRes
       if (searchResponse.status === 422 && errorText.includes('locationId')) {
         console.log('⚠️ Location ID error - GoHighLevel integration failing');
         console.log('⚠️ Falling back to email-based name extraction');
-        return { exists: false };
+        const result = { exists: false };
+        cache.set(email, { data: result, timestamp: Date.now() });
+        return result;
       }
     }
     
-    return { exists: false };
+    const result = { exists: false };
+    cache.set(email, { data: result, timestamp: Date.now() });
+    return result;
   } catch (error) {
     console.error('❌ Error searching for contact in GoHighLevel:', error);
-    return { exists: false };
+    const result = { exists: false };
+    cache.set(email, { data: result, timestamp: Date.now() });
+    return result;
   }
 }
 

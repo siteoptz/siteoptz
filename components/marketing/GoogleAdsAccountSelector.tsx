@@ -1,6 +1,6 @@
 // components/marketing/GoogleAdsAccountSelector.tsx
 import { useState, useEffect } from 'react';
-import { GoogleAdsAccount, GoogleAdsManagerAccount } from '@/lib/google-ads-api';
+import { GoogleAdsAccount, GoogleAdsManagerAccount } from '@/lib/google-ads-client';
 
 interface GoogleAdsAccountSelectorProps {
   isOpen: boolean;
@@ -26,9 +26,8 @@ export default function GoogleAdsAccountSelector({
 
   // Filter accounts based on search term
   const filteredAccounts = accounts.filter(account =>
-    account.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
-    account.id.includes(searchTerm) ||
-    account.descriptiveName.toLowerCase().includes(searchTerm.toLowerCase())
+    (account.descriptive_name || '').toLowerCase().includes(searchTerm.toLowerCase()) ||
+    account.customer_id.includes(searchTerm)
   );
 
   const handleAccountSelect = (account: GoogleAdsAccount) => {
@@ -110,7 +109,7 @@ export default function GoogleAdsAccountSelector({
                 <div className="space-y-3">
                   {filteredAccounts.map((account) => (
                     <div
-                      key={account.id}
+                      key={account.customer_id}
                       onClick={() => handleAccountSelect(account)}
                       onKeyDown={(e) => {
                         if (e.key === 'Enter' || e.key === ' ') {
@@ -121,7 +120,7 @@ export default function GoogleAdsAccountSelector({
                       role="button"
                       tabIndex={0}
                       className={`p-4 border rounded-lg cursor-pointer transition-all ${
-                        selectedAccount?.id === account.id
+                        selectedAccount?.customer_id === account.customer_id
                           ? 'border-cyan-400 bg-cyan-400 bg-opacity-10'
                           : 'border-gray-700 hover:border-gray-600 bg-gray-900 hover:bg-gray-800'
                       }`}
@@ -130,7 +129,7 @@ export default function GoogleAdsAccountSelector({
                         <div className="flex-1">
                           <div className="flex items-center space-x-3">
                             <h3 className="text-white font-medium">
-                              {account.name || account.descriptiveName || `Account ${account.id}`}
+                              {account.descriptive_name || `Account ${account.customer_id}`}
                             </h3>
                             
                             {/* Account Type Badges */}
@@ -140,34 +139,26 @@ export default function GoogleAdsAccountSelector({
                                   Manager
                                 </span>
                               )}
-                              {account.testAccount && (
+                              {account.test_account && (
                                 <span className="px-2 py-1 bg-yellow-600 text-yellow-100 text-xs rounded-full">
                                   Test
                                 </span>
                               )}
-                              {account.canManageClients && (
-                                <span className="px-2 py-1 bg-blue-600 text-blue-100 text-xs rounded-full">
-                                  MCC
-                                </span>
-                              )}
+                              {/* Removed canManageClients badge as it's not in the new interface */}
                             </div>
                           </div>
 
                           <div className="mt-2 space-y-1">
                             <p className="text-gray-400 text-sm">
-                              <span className="font-medium">ID:</span> {account.id}
+                              <span className="font-medium">ID:</span> {account.customer_id}
                             </p>
-                            {account.descriptiveName && account.descriptiveName !== account.name && (
-                              <p className="text-gray-400 text-sm">
-                                <span className="font-medium">Description:</span> {account.descriptiveName}
-                              </p>
-                            )}
+                            {/* Remove description field as it's redundant with the new interface */}
                             <div className="flex space-x-4 text-gray-400 text-sm">
                               <span>
-                                <span className="font-medium">Currency:</span> {account.currencyCode}
+                                <span className="font-medium">Currency:</span> {account.currency_code}
                               </span>
                               <span>
-                                <span className="font-medium">Timezone:</span> {account.timeZone}
+                                <span className="font-medium">Timezone:</span> {account.time_zone}
                               </span>
                             </div>
                           </div>
@@ -176,7 +167,7 @@ export default function GoogleAdsAccountSelector({
                         {/* Selection Radio */}
                         <div className="ml-4">
                           <div className={`w-4 h-4 rounded-full border-2 ${
-                            selectedAccount?.id === account.id
+                            selectedAccount?.customer_id === account.customer_id
                               ? 'border-cyan-400 bg-cyan-400'
                               : 'border-gray-500'
                           }`}>
@@ -218,12 +209,12 @@ export default function GoogleAdsAccountSelector({
               <div className="mt-4 p-4 bg-cyan-400 bg-opacity-10 border border-cyan-400 rounded-lg">
                 <h4 className="text-cyan-400 font-medium mb-2">Selected Account:</h4>
                 <p className="text-white">
-                  {selectedAccount.name || selectedAccount.descriptiveName} (ID: {selectedAccount.id})
+                  {selectedAccount.descriptive_name} (ID: {selectedAccount.customer_id})
                 </p>
                 <p className="text-gray-300 text-sm">
-                  {selectedAccount.currencyCode} • {selectedAccount.timeZone}
+                  {selectedAccount.currency_code} • {selectedAccount.time_zone}
                   {selectedAccount.manager && ' • Manager Account'}
-                  {selectedAccount.testAccount && ' • Test Account'}
+                  {selectedAccount.test_account && ' • Test Account'}
                 </p>
               </div>
             )}

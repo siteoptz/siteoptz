@@ -2,7 +2,8 @@ import { NextApiRequest, NextApiResponse } from 'next';
 import { getServerSession } from 'next-auth/next';
 import { authOptions } from '@/pages/api/auth/[...nextauth]';
 import { getPlatformCredentials } from '@/lib/oauth-utils';
-import { initializeGoogleAds, getGoogleAdsCampaigns } from '@/lib/google-ads-api';
+import { initializeGoogleAds, getGoogleAdsCampaigns, getGoogleAdsMetrics } from '@/lib/google-ads-api';
+import { analyzeAccount, generateSmartRecommendations } from '@/lib/ai-recommendations';
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method !== 'GET') {
@@ -38,17 +39,33 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       accountCredentials.selected_account_id
     );
 
-    // Get campaign data
-    const campaigns = await getGoogleAdsCampaigns(dateRange as string);
+    // Get campaign data and metrics
+    const [campaigns, metrics] = await Promise.all([
+      getGoogleAdsCampaigns(dateRange as string),
+      getGoogleAdsMetrics(dateRange as string)
+    ]);
 
-    console.log(`Retrieved ${campaigns.length} campaigns for user ${session.user.email}`);
+    // Generate AI recommendations
+    const accountAnalysis = analyzeAccount(campaigns, metrics);
+    const smartRecommendations = generateSmartRecommendations(campaigns, metrics);
 
-    return res.status(200).json(campaigns);
+    const recommendations = {
+      account_analysis: accountAnalysis,
+      smart_recommendations: smartRecommendations,
+      generated_at: new Date().toISOString(),
+      data_period: dateRange,
+      total_campaigns: campaigns.length,
+      total_recommendations: smartRecommendations.length
+    };
+
+    console.log(`Generated ${smartRecommendations.length} recommendations for user ${session.user.email}`);
+
+    return res.status(200).json(recommendations);
 
   } catch (error) {
-    console.error('Error fetching Google Ads campaigns:', error);
+    console.error('Error generating AI recommendations:', error);
     return res.status(500).json({ 
-      error: 'Failed to fetch campaigns',
+      error: 'Failed to generate recommendations',
       details: error instanceof Error ? error.message : 'Unknown error'
     });
   }

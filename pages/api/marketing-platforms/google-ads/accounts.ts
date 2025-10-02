@@ -1,51 +1,42 @@
-// pages/api/marketing-platforms/google-ads/accounts.ts
 import { NextApiRequest, NextApiResponse } from 'next';
-import { fetchGoogleAdsAccounts, validateGoogleAdsAccess } from '@/lib/google-ads-api';
+import { getServerSession } from 'next-auth/next';
+import { authOptions } from '@/pages/api/auth/[...nextauth]';
+import { getPlatformCredentials } from '@/lib/oauth-utils';
+import { initializeGoogleAds, getGoogleAdsAccounts } from '@/lib/google-ads-api';
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method !== 'GET') {
     return res.status(405).json({ error: 'Method not allowed' });
   }
 
-  const { access_token } = req.query;
-
-  if (!access_token) {
-    return res.status(400).json({ error: 'Access token is required' });
+  const session = await getServerSession(req, res, authOptions);
+  if (!session || !session.user || !session.user.email) {
+    return res.status(401).json({ error: 'Unauthorized' });
   }
 
   try {
-    console.log('🔍 API: Fetching Google Ads accounts...');
+    // Get stored Google Ads credentials
+    const credentials = await getPlatformCredentials(session.user.email, 'google-ads');
     
-    // First validate the access token
-    const validation = await validateGoogleAdsAccess(access_token as string);
-    
-    if (!validation.valid) {
-      return res.status(401).json({ 
-        error: 'Invalid access token or insufficient permissions',
-        details: validation.error 
-      });
+    if (!credentials) {
+      return res.status(400).json({ error: 'Google Ads not connected' });
     }
 
-    // Fetch accounts
-    const accounts = await fetchGoogleAdsAccounts(access_token as string);
-    
-    console.log(`✅ API: Successfully fetched ${accounts.length} accounts`);
-    
-    return res.status(200).json({
-      success: true,
-      accounts,
-      accountCount: accounts.length,
-      hasManagerAccess: validation.hasManagerAccess
-    });
+    // Initialize Google Ads API
+    await initializeGoogleAds(credentials.access_token, credentials.refresh_token);
+
+    // Get accessible accounts
+    const accounts = await getGoogleAdsAccounts();
+
+    console.log(`Retrieved ${accounts.length} accounts for user ${session.user.email}`);
+
+    return res.status(200).json(accounts);
 
   } catch (error) {
-    console.error('API Error fetching Google Ads accounts:', error);
-    
-    const errorMessage = error instanceof Error ? error.message : 'Failed to fetch accounts';
-    
-    return res.status(500).json({
-      error: 'Failed to fetch Google Ads accounts',
-      details: errorMessage
+    console.error('Error fetching Google Ads accounts:', error);
+    return res.status(500).json({ 
+      error: 'Failed to fetch accounts',
+      details: error instanceof Error ? error.message : 'Unknown error'
     });
   }
 }

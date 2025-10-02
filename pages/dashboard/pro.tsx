@@ -9,7 +9,7 @@ import { DashboardHeader } from '../../components/dashboard/DashboardHeader';
 import { getDashboardContent, getUpgradePrompt } from '../../content/dashboard-marketing-content';
 import { UpgradePrompt } from '../../components/UpgradePrompt';
 import { generateGoogleAdsAuthUrl } from '../../lib/oauth-utils';
-import { getStoredGoogleAdsAccount } from '../../lib/google-ads-api';
+import { getGoogleAdsAccountInfo } from '../../lib/google-ads-client';
 // import MarketingROIDashboard from '../../components/dashboard/MarketingROIDashboard';
 // import PlatformIntegrations from '../../components/dashboard/PlatformIntegrations';
 // import AIInsightsEngine from '../../components/dashboard/AIInsightsEngine';
@@ -104,7 +104,7 @@ export default function ProDashboard({ session }: ProDashboardProps) {
         setTimeout(() => setConnectionStatus({}), 5000);
       }
     }
-  }, [router.isReady, router.query]);
+  }, [router.isReady, router.query.tab, router.query.success, router.query.platform, router.query.error]);
 
   // Check for Google Ads connection status
   useEffect(() => {
@@ -117,17 +117,12 @@ export default function ProDashboard({ session }: ProDashboardProps) {
         }
 
         console.log('Checking Google Ads connection for user:', session.user.email);
-        const connection = await getStoredGoogleAdsAccount(session.user.email);
+        const connection = getGoogleAdsAccountInfo(session.user.email);
         
-        setGoogleAdsConnection({
-          connected: connection?.connected || false,
-          accountInfo: connection?.accountInfo,
-          accountId: connection?.accountId,
-          loading: false
-        });
+        setGoogleAdsConnection(connection);
 
         if (connection?.connected) {
-          console.log('✅ Google Ads account connected:', connection.accountInfo?.name);
+          console.log('✅ Google Ads account connected:', connection.accountInfo?.descriptive_name);
         } else {
           console.log('❌ No Google Ads account connected');
         }
