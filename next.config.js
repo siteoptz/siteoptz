@@ -1,6 +1,6 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  reactStrictMode: false,
+  reactStrictMode: true,
   swcMinify: true,
   compress: true,
   
@@ -164,19 +164,16 @@ const nextConfig = {
     scrollRestoration: true,
   },
 
-  // Development server optimizations to prevent infinite reload loops
-  ...(process.env.NODE_ENV === 'development' && {
-    // Reduce aggressive Hot Module Replacement
-    onDemandEntries: {
-      maxInactiveAge: 60 * 1000, // 60 seconds
-      pagesBufferLength: 5,
-    },
-    // Disable Fast Refresh for specific pages that cause issues
-    reactStrictMode: false,
-  }),
+  // Development server optimizations to prevent infinite reload loops  
+  onDemandEntries: {
+    // Period (in ms) where the server will keep pages in the buffer
+    maxInactiveAge: 60 * 1000, // 60 seconds (increased from default 15s)
+    // Number of pages that should be kept simultaneously without being disposed  
+    pagesBufferLength: 5, // increased from default 2
+  },
 
   // Webpack configuration to handle server-side modules
-  webpack: (config, { isServer, dev }) => {
+  webpack: (config, { isServer }) => {
     if (!isServer) {
       // Fallback for Node.js modules in client-side code
       config.resolve.fallback = {
@@ -194,20 +191,6 @@ const nextConfig = {
         os: false,
         path: false,
       };
-      
-      // Disable Fast Refresh in development to prevent infinite reload loops
-      if (dev) {
-        // Remove Fast Refresh related plugins that might cause issues
-        config.plugins = config.plugins.filter(plugin => {
-          return !plugin.constructor.name.includes('ReactRefreshWebpackPlugin');
-        });
-        
-        // Disable hot module replacement for pages that cause issues
-        config.optimization = {
-          ...config.optimization,
-          runtimeChunk: false,
-        };
-      }
     }
     
     return config;
