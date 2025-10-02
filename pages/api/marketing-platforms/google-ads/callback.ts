@@ -27,9 +27,22 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 
   try {
     // Log configuration for debugging
-    console.log('OAuth Callback Debug Info:');
-    console.log('- Authorization code received:', code ? 'Yes' : 'No');
-    console.log('- Code length:', (code as string)?.length);
+    console.log('\n========== OAuth Callback Debug Info ==========');
+    console.log('Timestamp:', new Date().toISOString());
+    console.log('Authorization code received:', code ? 'Yes' : 'No');
+    console.log('Code length:', (code as string)?.length);
+    console.log('State param:', state);
+    
+    // Log request details
+    const host = req.headers.host;
+    const protocol = req.headers['x-forwarded-proto'] || (host?.includes('localhost') ? 'http' : 'https');
+    const actualRequestUrl = `${protocol}://${host}`;
+    
+    console.log('\nRequest Details:');
+    console.log('- Host header:', host);
+    console.log('- Protocol:', protocol);
+    console.log('- Actual request URL:', actualRequestUrl);
+    console.log('- NODE_ENV:', process.env.NODE_ENV);
     
     // Exchange authorization code for tokens
     // Use the appropriate base URL based on environment
@@ -37,9 +50,13 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     const baseUrl = isDevelopment ? 'http://localhost:3000' : (process.env.NEXT_PUBLIC_BASE_URL || 'https://siteoptz.ai');
     const redirectUri = `${baseUrl}/api/marketing-platforms/google-ads/callback`;
     
-    console.log('- Redirect URI being used:', redirectUri);
-    console.log('- Client ID configured:', process.env.GOOGLE_CLIENT_ID ? 'Yes' : 'No');
-    console.log('- Client Secret configured:', process.env.GOOGLE_CLIENT_SECRET ? 'Yes' : 'No');
+    console.log('\nToken Exchange Configuration:');
+    console.log('- Is Development:', isDevelopment);
+    console.log('- Base URL used:', baseUrl);
+    console.log('- Redirect URI for token exchange:', redirectUri);
+    console.log('- Client ID:', process.env.GOOGLE_CLIENT_ID);
+    console.log('- Client Secret present:', !!process.env.GOOGLE_CLIENT_SECRET);
+    console.log('================================================\n');
     
     const tokenData = await exchangeGoogleCodeForToken(code as string, redirectUri);
 

@@ -175,9 +175,30 @@ export const exchangeGoogleCodeForToken = async (code: string, redirectUri: stri
   });
 
   if (!response.ok) {
-    const error = await response.text();
-    console.error('Token exchange failed:', error);
-    throw new Error(`Token exchange failed: ${error}`);
+    const errorText = await response.text();
+    console.error('Token exchange failed:');
+    console.error('- Status:', response.status);
+    console.error('- Response:', errorText);
+    console.error('- Client ID used:', clientId);
+    console.error('- Redirect URI used:', redirectUri);
+    
+    let errorMessage = 'Token exchange failed';
+    try {
+      const errorData = JSON.parse(errorText);
+      if (errorData.error === 'invalid_client') {
+        errorMessage = 'Invalid OAuth credentials. Please check Google Cloud Console.';
+      } else if (errorData.error === 'invalid_grant') {
+        errorMessage = 'Invalid or expired authorization code.';
+      } else if (errorData.error === 'redirect_uri_mismatch') {
+        errorMessage = 'Redirect URI mismatch. Check Google Cloud Console settings.';
+      } else {
+        errorMessage = errorData.error_description || errorData.error || errorText;
+      }
+    } catch (e) {
+      errorMessage = errorText;
+    }
+    
+    throw new Error(errorMessage);
   }
 
   const tokenData = await response.json();
