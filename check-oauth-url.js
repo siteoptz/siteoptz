@@ -14,7 +14,7 @@ console.log('Client ID being used:', clientId);
 
 // Test different scenarios
 const scenarios = [
-  { name: 'Local Development', baseUrl: 'http://localhost:3000' },
+  { name: 'Local Development', baseUrl: 'http://localhost:3001' },
   { name: 'Production', baseUrl: 'https://siteoptz.ai' },
 ];
 
@@ -44,12 +44,12 @@ console.log('==============================');
 console.log('⚠️  IMPORTANT: The redirect URI in the OAuth URL MUST exactly match');
 console.log('   one of the authorized redirect URIs in Google Cloud Console.\n');
 console.log('🔗 Add these exact URIs to your OAuth client:');
-console.log('   • http://localhost:3000/api/marketing-platforms/google-ads/callback');
+console.log('   • http://localhost:3001/api/marketing-platforms/google-ads/callback');
 console.log('   • https://siteoptz.ai/api/marketing-platforms/google-ads/callback\n');
 
 // Now let's check what happens when we make the request from browser
 console.log('📍 When you click "Connect Google Ads" in the browser:');
-console.log('   - If on localhost:3000, redirect URI should be: http://localhost:3000/...');
+console.log('   - If on localhost:3001, redirect URI should be: http://localhost:3001/...');
 console.log('   - If on siteoptz.ai, redirect URI should be: https://siteoptz.ai/...');
 console.log('\n❌ Common issues:');
 console.log('   - Using https://siteoptz.ai redirect when testing on localhost');

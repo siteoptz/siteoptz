@@ -47,7 +47,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     // Exchange authorization code for tokens
     // Use the appropriate base URL based on environment
     const isDevelopment = process.env.NODE_ENV === 'development';
-    const baseUrl = isDevelopment ? 'http://localhost:3000' : (process.env.NEXT_PUBLIC_BASE_URL || 'https://siteoptz.ai');
+    const baseUrl = isDevelopment ? 'http://localhost:3001' : (process.env.NEXT_PUBLIC_BASE_URL || 'https://siteoptz.ai');
     const redirectUri = `${baseUrl}/api/marketing-platforms/google-ads/callback`;
     
     console.log('\nToken Exchange Configuration:');
