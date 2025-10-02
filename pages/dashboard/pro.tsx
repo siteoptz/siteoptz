@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useCallback } from 'react';
+import React, { useState, useEffect, useCallback, useRef } from 'react';
 import { useRouter } from 'next/router';
 import { GetServerSideProps } from 'next';
 import { getServerSession } from 'next-auth/next';
@@ -74,6 +74,7 @@ export default function ProDashboard({ session }: ProDashboardProps) {
   const [showAccountSelection, setShowAccountSelection] = useState(false);
   const [availableAccounts, setAvailableAccounts] = useState<any[]>([]);
   const [isSelectingAccount, setIsSelectingAccount] = useState(false);
+  const hasProcessedRef = useRef('');
 
   // Fetch available Google Ads accounts (memoized to prevent infinite loops)
   const fetchAvailableAccounts = useCallback(async () => {
@@ -98,13 +99,20 @@ export default function ProDashboard({ session }: ProDashboardProps) {
     
     const { tab, success, error, show_account_selection } = router.query;
     
-    // Handle tab parameter (only once when router is ready)
+    // Store if we've already processed these query params
+    const processedKey = `${success}-${error}-${show_account_selection}`;
+    
+    // Only process once for the same set of query params
+    if (hasProcessedRef.current === processedKey) return;
+    hasProcessedRef.current = processedKey;
+    
+    // Handle tab parameter
     if (tab && typeof tab === 'string') {
       setActiveTab(tab);
     }
     
-    // Handle OAuth callback parameters (only once when router is ready)
-    if (success === 'google_ads_connected') {
+    // Handle OAuth callback parameters only once
+    if (success === 'google_ads_connected' && !window.location.search.includes('processed=true')) {
       if (show_account_selection === 'true') {
         // Show account selection modal
         setShowAccountSelection(true);
@@ -117,11 +125,15 @@ export default function ProDashboard({ session }: ProDashboardProps) {
       }
       // Clear the query params after showing message
       setTimeout(() => {
-        router.replace('/dashboard/pro', undefined, { shallow: true });
+        router.replace('/dashboard/pro?processed=true', undefined, { shallow: true });
+        // Clear processed flag after a delay
+        setTimeout(() => {
+          router.replace('/dashboard/pro', undefined, { shallow: true });
+        }, 1000);
       }, 100);
       // Clear the message after 5 seconds
       setTimeout(() => setConnectionStatus({}), 5000);
-    } else if (error && typeof error === 'string') {
+    } else if (error && typeof error === 'string' && !window.location.search.includes('processed=true')) {
       const errorMessages: { [key: string]: string } = {
         'unauthorized': 'Please log in to connect Google Ads',
         'auth_failed': 'Google Ads authorization failed',
@@ -137,12 +149,16 @@ export default function ProDashboard({ session }: ProDashboardProps) {
       });
       // Clear the query params after showing message
       setTimeout(() => {
-        router.replace('/dashboard/pro', undefined, { shallow: true });
+        router.replace('/dashboard/pro?processed=true', undefined, { shallow: true });
+        // Clear processed flag after a delay
+        setTimeout(() => {
+          router.replace('/dashboard/pro', undefined, { shallow: true });
+        }, 1000);
       }, 100);
       // Clear the message after 5 seconds
       setTimeout(() => setConnectionStatus({}), 5000);
     }
-  }, [router.isReady]); // Only depend on router.isReady, fetchAvailableAccounts is stable with useCallback
+  }, [router, fetchAvailableAccounts]); // Limited dependencies to prevent loops
 
   // Check for Google Ads connection status
   useEffect(() => {
