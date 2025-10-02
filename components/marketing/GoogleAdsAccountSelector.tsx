@@ -171,7 +171,7 @@ export default function GoogleAdsAccountSelector({
                               ? 'border-cyan-400 bg-cyan-400'
                               : 'border-gray-500'
                           }`}>
-                            {selectedAccount?.id === account.id && (
+                            {selectedAccount?.customer_id === account.customer_id && (
                               <div className="w-2 h-2 bg-white rounded-full m-0.5"></div>
                             )}
                           </div>

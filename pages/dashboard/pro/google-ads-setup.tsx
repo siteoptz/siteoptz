@@ -122,7 +122,7 @@ export default function GoogleAdsSetupPage() {
     
     try {
       console.log('🔗 Connecting Google Ads account for user:', session.user.email);
-      console.log('🔗 Selected account:', selectedAccount.id, selectedAccount.name);
+      console.log('🔗 Selected account:', selectedAccount.customer_id, selectedAccount.descriptive_name);
       
       // Store the selected account using API route
       const storeResponse = await fetch('/api/google-ads/store-account', {
