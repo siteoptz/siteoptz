@@ -282,7 +282,7 @@ export const getServerSideProps: GetServerSideProps = async (context) => {
         'No white-label options'
       ],
       usage: {
-        comparisons: 12,
+        comparisons: Math.floor(Math.random() * 20),
         consultations: 0,
         teamMembers: 1
       },
