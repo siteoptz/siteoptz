@@ -80,8 +80,8 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
           platform: 'google-ads',
           accountId: account.customer_id,
           accountInfo: account,
-          accessToken: tokenData.access_token,
-          refreshToken: tokenData.refresh_token,
+          accessToken: tokens.access_token,
+          refreshToken: tokens.refresh_token,
           connectedAt: new Date().toISOString(),
           userId: session.user.email,
           expiresAt: Date.now() + (3600 * 1000)
