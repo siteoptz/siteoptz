@@ -76,13 +76,13 @@ export default function StaticMarketingROIDashboard({
                 <tr key={index} className="border-b border-gray-600">
                   <td className="py-3 px-4 text-white">{campaign.name}</td>
                   <td className="py-3 px-4 text-right text-white">
-                    ${campaign.metrics.cost.toLocaleString()}
+                    ${campaign.spent.toLocaleString()}
                   </td>
                   <td className="py-3 px-4 text-right text-white">
-                    ${campaign.metrics.conversions_value.toLocaleString()}
+                    ${(campaign.conversions * campaign.cost_per_conversion).toLocaleString()}
                   </td>
                   <td className="py-3 px-4 text-right text-green-400 font-semibold">
-                    {(campaign.metrics.conversions_value / campaign.metrics.cost).toFixed(2)}x
+                    {campaign.roas.toFixed(2)}x
                   </td>
                 </tr>
               ))}
