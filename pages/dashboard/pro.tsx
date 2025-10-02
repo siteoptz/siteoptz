@@ -372,7 +372,9 @@ export default function ProDashboard() {
                   Connect your Google Ads account to track campaigns, keywords, and performance metrics.
                 </p>
                 <button 
-                  onClick={() => window.open('https://accounts.google.com/oauth/authorize?client_id=your-client-id&redirect_uri=your-redirect-uri&scope=https://www.googleapis.com/auth/adwords&response_type=code', '_blank')}
+                  onClick={() => {
+                    alert('Google Ads connection would open OAuth flow here. In production, this would connect to Google Ads API for campaign tracking and analytics.');
+                  }}
                   className="w-full bg-blue-600 text-white py-2 px-4 rounded-lg hover:bg-blue-700 transition-colors"
                 >
                   Connect Google Ads
@@ -399,7 +401,9 @@ export default function ProDashboard() {
                   Connect Meta Ads Manager to monitor Facebook and Instagram campaign performance.
                 </p>
                 <button 
-                  onClick={() => window.open('https://www.facebook.com/v18.0/dialog/oauth?client_id=your-client-id&redirect_uri=your-redirect-uri&scope=ads_read&response_type=code', '_blank')}
+                  onClick={() => {
+                    alert('Meta Ads connection would open OAuth flow here. In production, this would connect to Facebook Marketing API for campaign tracking and analytics.');
+                  }}
                   className="w-full bg-blue-500 text-white py-2 px-4 rounded-lg hover:bg-blue-600 transition-colors"
                 >
                   Connect Meta Ads
@@ -426,7 +430,9 @@ export default function ProDashboard() {
                   Connect TikTok Ads Manager to track video ad performance and engagement metrics.
                 </p>
                 <button 
-                  onClick={() => window.open('https://ads.tiktok.com/marketing_api/auth?app_id=your-app-id&state=your-state', '_blank')}
+                  onClick={() => {
+                    alert('TikTok Ads connection would open OAuth flow here. In production, this would connect to TikTok Marketing API for campaign tracking and analytics.');
+                  }}
                   className="w-full bg-black text-white py-2 px-4 rounded-lg hover:bg-gray-900 transition-colors"
                 >
                   Connect TikTok Ads
@@ -453,7 +459,9 @@ export default function ProDashboard() {
                   Link Google Analytics to track website traffic, conversions, and user behavior.
                 </p>
                 <button 
-                  onClick={() => window.open('https://accounts.google.com/oauth/authorize?client_id=your-client-id&redirect_uri=your-redirect-uri&scope=https://www.googleapis.com/auth/analytics.readonly&response_type=code', '_blank')}
+                  onClick={() => {
+                    alert('Google Analytics connection would open OAuth flow here. In production, this would connect to Google Analytics API for website traffic and conversion tracking.');
+                  }}
                   className="w-full bg-orange-500 text-white py-2 px-4 rounded-lg hover:bg-orange-600 transition-colors"
                 >
                   Connect Google Analytics
