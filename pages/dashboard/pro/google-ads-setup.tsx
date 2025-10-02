@@ -234,7 +234,7 @@ export default function GoogleAdsSetupPage() {
                 <h3 className="text-lg font-bold text-white mb-3">What happens next?</h3>
                 <div className="space-y-2 text-gray-300">
                   <p>• Your selected Google Ads account will be connected to SiteOptz</p>
-                  <p>• We'll be able to fetch your campaign performance data</p>
+                  <p>• We&apos;ll be able to fetch your campaign performance data</p>
                   <p>• You can view comprehensive ROI analytics in your dashboard</p>
                   <p>• Your data is stored securely and never shared with third parties</p>
                 </div>
