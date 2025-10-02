@@ -22,7 +22,6 @@ import {
   Bell,
   CreditCard
 } from 'lucide-react';
-import Link from 'next/link';
 
 interface ProDashboardProps extends CleanDashboardProps {
   googleAdsData: any;
