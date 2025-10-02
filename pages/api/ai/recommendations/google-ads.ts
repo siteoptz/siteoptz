@@ -3,6 +3,7 @@ import { getServerSession } from 'next-auth/next';
 import { authOptions } from '@/pages/api/auth/[...nextauth]';
 import { getPlatformCredentials } from '@/lib/oauth-utils';
 import { initializeGoogleAds, getGoogleAdsCampaigns, getGoogleAdsMetrics } from '@/lib/google-ads-api';
+import { getStoredGoogleAdsAccount } from '@/lib/google-ads-client';
 import { analyzeAccount, generateSmartRecommendations } from '@/lib/ai-recommendations';
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
@@ -25,10 +26,10 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       return res.status(400).json({ error: 'Google Ads not connected' });
     }
 
-    // Get selected account
-    const accountCredentials = await getPlatformCredentials(session.user.email, 'google-ads-account');
+    // Get selected Google Ads account
+    const accountConnection = getStoredGoogleAdsAccount(session.user.email);
     
-    if (!accountCredentials?.selected_account_id) {
+    if (!accountConnection || !accountConnection.accountInfo) {
       return res.status(400).json({ error: 'No Google Ads account selected' });
     }
 
@@ -36,7 +37,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     await initializeGoogleAds(
       credentials.access_token, 
       credentials.refresh_token, 
-      accountCredentials.selected_account_id
+      accountConnection.accountInfo.customer_id
     );
 
     // Get campaign data and metrics
