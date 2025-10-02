@@ -164,8 +164,19 @@ const nextConfig = {
     scrollRestoration: true,
   },
 
+  // Development server optimizations to prevent infinite reload loops
+  ...(process.env.NODE_ENV === 'development' && {
+    // Reduce aggressive Hot Module Replacement
+    onDemandEntries: {
+      maxInactiveAge: 60 * 1000, // 60 seconds
+      pagesBufferLength: 5,
+    },
+    // Disable Fast Refresh for specific pages that cause issues
+    reactStrictMode: false,
+  }),
+
   // Webpack configuration to handle server-side modules
-  webpack: (config, { isServer }) => {
+  webpack: (config, { isServer, dev }) => {
     if (!isServer) {
       // Fallback for Node.js modules in client-side code
       config.resolve.fallback = {
@@ -183,6 +194,20 @@ const nextConfig = {
         os: false,
         path: false,
       };
+      
+      // Disable Fast Refresh in development to prevent infinite reload loops
+      if (dev) {
+        // Remove Fast Refresh related plugins that might cause issues
+        config.plugins = config.plugins.filter(plugin => {
+          return !plugin.constructor.name.includes('ReactRefreshWebpackPlugin');
+        });
+        
+        // Disable hot module replacement for pages that cause issues
+        config.optimization = {
+          ...config.optimization,
+          runtimeChunk: false,
+        };
+      }
     }
     
     return config;
