@@ -241,8 +241,6 @@ export default function GoogleAdsSetupPage() {
               </div>
             )}
           </div>
-        </div>
-        </div>
       </main>
     </div>
   );
