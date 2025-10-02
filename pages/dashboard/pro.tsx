@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { useRouter } from 'next/router';
 import { GetServerSideProps } from 'next';
 import { getServerSession } from 'next-auth/next';
 import { authOptions } from '../api/auth/[...nextauth]';
@@ -51,7 +52,15 @@ import Link from 'next/link';
 
 export default function ProDashboard() {
   const { userPlan, loading } = useUserPlan();
+  const router = useRouter();
   const [activeTab, setActiveTab] = useState('overview');
+
+  // Handle URL tab parameter
+  useEffect(() => {
+    if (router.isReady && router.query.tab) {
+      setActiveTab(router.query.tab as string);
+    }
+  }, [router.isReady, router.query.tab]);
   
   const proContent = getDashboardContent('pro') as any;
   const enterpriseUpgrade = getUpgradePrompt('pro', 'enterprise') as any;
