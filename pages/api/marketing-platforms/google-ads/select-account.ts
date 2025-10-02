@@ -39,7 +39,8 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
         currency_code: '', // Will be populated by API calls
         time_zone: '', // Will be populated by API calls
         manager: isMcc || false,
-        test_account: false // Will be populated by API calls
+        test_account: false, // Will be populated by API calls
+        pay_per_conversion_eligibility_failure_reasons: [] // Will be populated by API calls
       },
       accessToken: credentials.access_token,
       refreshToken: credentials.refresh_token,
