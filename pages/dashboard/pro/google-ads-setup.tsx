@@ -10,6 +10,7 @@ import {
   storeSelectedGoogleAdsAccount,
   validateGoogleAdsAccess
 } from '@/lib/google-ads-api';
+import { UserPlan } from '@/types/userPlan';
 
 export default function GoogleAdsSetupPage() {
   const router = useRouter();
@@ -137,9 +138,30 @@ export default function GoogleAdsSetupPage() {
     router.push('/dashboard/pro');
   };
 
+  // Mock userPlan for DashboardHeader (since this is a Pro-only page)
+  const mockUserPlan: UserPlan = {
+    id: 'pro-user',
+    plan: 'pro' as const,
+    status: 'active' as const,
+    billingCycle: 'monthly' as const,
+    startDate: new Date(),
+    features: [],
+    limitations: [],
+    usage: {
+      comparisons: 0,
+      consultations: 0,
+      teamMembers: 0
+    },
+    limits: {
+      dailyComparisons: 1000,
+      monthlyConsultations: 10,
+      maxTeamMembers: 5
+    }
+  };
+
   return (
     <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-black">
-      <DashboardHeader userPlan={{ plan: 'pro' }} />
+      <DashboardHeader userPlan={mockUserPlan} />
       
       <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
         <div className="max-w-6xl mx-auto">
