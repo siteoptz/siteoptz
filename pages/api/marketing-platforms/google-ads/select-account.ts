@@ -3,6 +3,7 @@ import { getServerSession } from 'next-auth/next';
 import { authOptions } from '@/pages/api/auth/[...nextauth]';
 import { storePlatformCredentials } from '@/lib/oauth-utils';
 import { switchGoogleAdsAccount } from '@/lib/google-ads-api';
+import { storeGoogleAdsAccount } from '@/lib/google-ads-client';
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method !== 'POST') {
@@ -21,13 +22,21 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   }
 
   try {
-    // Store the selected account information
-    await storePlatformCredentials(session.user.email, 'google-ads-account', {
-      selected_account_id: accountId,
-      selected_account_name: accountName,
-      is_mcc: isMcc || false,
-      selected_at: Date.now()
-    });
+    // Store the selected account information using Google Ads client
+    const connectionData = {
+      platform: 'google-ads',
+      accountId: accountId,
+      accountInfo: {
+        customer_id: accountId,
+        descriptive_name: accountName,
+        manager: isMcc || false
+      },
+      connectedAt: new Date().toISOString(),
+      userId: session.user.email,
+      expiresAt: Date.now() + (3600 * 1000)
+    };
+    
+    storeGoogleAdsAccount(session.user.email, connectionData);
 
     // Switch to the selected account in the Google Ads API
     await switchGoogleAdsAccount(accountId);
