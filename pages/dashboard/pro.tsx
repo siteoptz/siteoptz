@@ -75,6 +75,23 @@ export default function ProDashboard({ session }: ProDashboardProps) {
   const [availableAccounts, setAvailableAccounts] = useState<any[]>([]);
   const [isSelectingAccount, setIsSelectingAccount] = useState(false);
 
+  // Fetch available Google Ads accounts (memoized to prevent infinite loops)
+  const fetchAvailableAccounts = useCallback(async () => {
+    try {
+      const response = await fetch('/api/marketing-platforms/google-ads/accounts');
+      if (response.ok) {
+        const data = await response.json();
+        setAvailableAccounts(data.accounts || data || []);
+      } else {
+        console.error('Failed to fetch Google Ads accounts');
+        setShowAccountSelection(false);
+      }
+    } catch (error) {
+      console.error('Error fetching Google Ads accounts:', error);
+      setShowAccountSelection(false);
+    }
+  }, []);
+
   // Handle URL tab parameter and OAuth callbacks
   useEffect(() => {
     if (!router.isReady) return;
@@ -158,23 +175,6 @@ export default function ProDashboard({ session }: ProDashboardProps) {
       checkGoogleAdsConnection();
     }
   }, [session]);
-
-  // Fetch available Google Ads accounts (memoized to prevent infinite loops)
-  const fetchAvailableAccounts = useCallback(async () => {
-    try {
-      const response = await fetch('/api/marketing-platforms/google-ads/accounts');
-      if (response.ok) {
-        const data = await response.json();
-        setAvailableAccounts(data.accounts || data || []);
-      } else {
-        console.error('Failed to fetch Google Ads accounts');
-        setShowAccountSelection(false);
-      }
-    } catch (error) {
-      console.error('Error fetching Google Ads accounts:', error);
-      setShowAccountSelection(false);
-    }
-  }, []);
 
   // Handle account selection
   const handleAccountSelection = async (accountId: string, accountName: string, isMcc: boolean) => {
