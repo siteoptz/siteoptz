@@ -8,12 +8,17 @@ export const useUserPlan = () => {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    if (session?.user) {
-      fetchUserPlan();
-    } else {
-      setUserPlan(null);
-      setLoading(false);
-    }
+    // Debounce the API call to prevent rapid successive requests
+    const timeoutId = setTimeout(() => {
+      if (session?.user) {
+        fetchUserPlan();
+      } else {
+        setUserPlan(null);
+        setLoading(false);
+      }
+    }, 100); // 100ms debounce
+    
+    return () => clearTimeout(timeoutId);
   }, [session]);
 
   const fetchUserPlan = async () => {

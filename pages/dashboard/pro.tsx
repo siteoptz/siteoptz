@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useCallback } from 'react';
 import { useRouter } from 'next/router';
 import { GetServerSideProps } from 'next';
 import { getServerSession } from 'next-auth/next';
@@ -77,52 +77,55 @@ export default function ProDashboard({ session }: ProDashboardProps) {
 
   // Handle URL tab parameter and OAuth callbacks
   useEffect(() => {
-    if (router.isReady) {
-      if (router.query.tab) {
-        setActiveTab(router.query.tab as string);
-      }
-      
-      // Handle OAuth callback parameters
-      if (router.query.success === 'google_ads_connected') {
-        if (router.query.show_account_selection === 'true') {
-          // Show account selection modal
-          setShowAccountSelection(true);
-          fetchAvailableAccounts();
-        } else {
-          setConnectionStatus({
-            message: 'Google Ads connected successfully!',
-            type: 'success'
-          });
-        }
-        // Clear the query params after showing message
-        setTimeout(() => {
-          router.replace('/dashboard/pro', undefined, { shallow: true });
-        }, 100);
-        // Clear the message after 5 seconds
-        setTimeout(() => setConnectionStatus({}), 5000);
-      } else if (router.query.error) {
-        const errorMessages: { [key: string]: string } = {
-          'unauthorized': 'Please log in to connect Google Ads',
-          'auth_failed': 'Google Ads authorization failed',
-          'no_code': 'No authorization code received from Google',
-          'token_exchange_failed': 'Failed to exchange authorization code for tokens',
-          'no_accounts_found': 'No Google Ads accounts found for your account',
-          'api_init_failed': 'Google Ads API initialization failed'
-        };
-        
-        setConnectionStatus({
-          message: errorMessages[router.query.error as string] || `Failed to connect Google Ads: ${router.query.error}`,
-          type: 'error'
-        });
-        // Clear the query params after showing message
-        setTimeout(() => {
-          router.replace('/dashboard/pro', undefined, { shallow: true });
-        }, 100);
-        // Clear the message after 5 seconds
-        setTimeout(() => setConnectionStatus({}), 5000);
-      }
+    if (!router.isReady) return;
+    
+    const { tab, success, error, show_account_selection } = router.query;
+    
+    // Handle tab parameter (only once when router is ready)
+    if (tab && typeof tab === 'string') {
+      setActiveTab(tab);
     }
-  }, [router.isReady, router.query.tab, router.query.success, router.query.platform, router.query.error]);
+    
+    // Handle OAuth callback parameters (only once when router is ready)
+    if (success === 'google_ads_connected') {
+      if (show_account_selection === 'true') {
+        // Show account selection modal
+        setShowAccountSelection(true);
+        fetchAvailableAccounts();
+      } else {
+        setConnectionStatus({
+          message: 'Google Ads connected successfully!',
+          type: 'success'
+        });
+      }
+      // Clear the query params after showing message
+      setTimeout(() => {
+        router.replace('/dashboard/pro', undefined, { shallow: true });
+      }, 100);
+      // Clear the message after 5 seconds
+      setTimeout(() => setConnectionStatus({}), 5000);
+    } else if (error && typeof error === 'string') {
+      const errorMessages: { [key: string]: string } = {
+        'unauthorized': 'Please log in to connect Google Ads',
+        'auth_failed': 'Google Ads authorization failed',
+        'no_code': 'No authorization code received from Google',
+        'token_exchange_failed': 'Failed to exchange authorization code for tokens',
+        'no_accounts_found': 'No Google Ads accounts found for your account',
+        'api_init_failed': 'Google Ads API initialization failed'
+      };
+      
+      setConnectionStatus({
+        message: errorMessages[error] || `Failed to connect Google Ads: ${error}`,
+        type: 'error'
+      });
+      // Clear the query params after showing message
+      setTimeout(() => {
+        router.replace('/dashboard/pro', undefined, { shallow: true });
+      }, 100);
+      // Clear the message after 5 seconds
+      setTimeout(() => setConnectionStatus({}), 5000);
+    }
+  }, [router.isReady, fetchAvailableAccounts]); // Include fetchAvailableAccounts dependency
 
   // Check for Google Ads connection status
   useEffect(() => {
@@ -156,8 +159,8 @@ export default function ProDashboard({ session }: ProDashboardProps) {
     }
   }, [session]);
 
-  // Fetch available Google Ads accounts
-  const fetchAvailableAccounts = async () => {
+  // Fetch available Google Ads accounts (memoized to prevent infinite loops)
+  const fetchAvailableAccounts = useCallback(async () => {
     try {
       const response = await fetch('/api/marketing-platforms/google-ads/accounts');
       if (response.ok) {
@@ -171,7 +174,7 @@ export default function ProDashboard({ session }: ProDashboardProps) {
       console.error('Error fetching Google Ads accounts:', error);
       setShowAccountSelection(false);
     }
-  };
+  }, []);
 
   // Handle account selection
   const handleAccountSelection = async (accountId: string, accountName: string, isMcc: boolean) => {
