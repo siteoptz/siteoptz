@@ -1,6 +1,6 @@
 // components/marketing/GoogleAdsAccountSelector.tsx
 import { useState, useEffect } from 'react';
-import { GoogleAdsAccount, GoogleAdsManagerAccount } from '@/lib/google-ads-client';
+import { GoogleAdsAccount, GoogleAdsManagerAccount } from '@/lib/google-ads-api';
 
 interface GoogleAdsAccountSelectorProps {
   isOpen: boolean;
