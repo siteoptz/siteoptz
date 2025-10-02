@@ -423,10 +423,21 @@ export default function ProDashboard() {
                 </p>
                 <button 
                   onClick={() => {
+                    console.log('🔵 Connect Google Ads button clicked');
+                    console.log('Environment check:', {
+                      NODE_ENV: process.env.NODE_ENV,
+                      window_location: window.location.href,
+                      client_id_env: process.env.NEXT_PUBLIC_GOOGLE_CLIENT_ID
+                    });
+                    
                     const authUrl = generateGoogleAdsAuthUrl();
+                    console.log('Generated OAuth URL:', authUrl);
+                    
                     if (authUrl && authUrl !== '#') {
+                      console.log('✅ Redirecting to Google OAuth...');
                       window.location.href = authUrl;
                     } else {
+                      console.error('❌ Failed to generate OAuth URL');
                       alert('Unable to generate OAuth URL. Please check your configuration.');
                     }
                   }}
