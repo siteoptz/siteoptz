@@ -121,7 +121,7 @@ export const getGoogleAdsAccountInfo = (userId: string): {
   };
   accountId?: string;
   expiresAt?: number;
-  loading?: boolean;
+  loading: boolean; // Required to match state type
 } => {
   const connection = getStoredGoogleAdsAccount(userId);
   
