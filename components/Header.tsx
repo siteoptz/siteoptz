@@ -6,7 +6,6 @@ import { useSession, signOut } from 'next-auth/react';
 import { Menu, X, ChevronDown, ChevronUp, User, LogOut, Bell, Settings, CreditCard, Zap } from 'lucide-react';
 import { toolCategories, getCategoryUrl, getCategoryDisplayName } from '../config/categories';
 import { industries, industrySlugMap } from '../content/industryContent';
-import { useUserPlan } from '../hooks/useUserPlan';
 // Modals removed from Header to prevent navigation stalling
 
 // Accordion category structure for AI Categories dropdown
@@ -75,14 +74,12 @@ const Header: React.FC = () => {
   const [showUserDropdown, setShowUserDropdown] = useState(false);
   const router = useRouter();
   const { data: session, status } = useSession();
-  const { userPlan } = useUserPlan();
-  
   // Simple session state management
   const isAuthenticated = status === 'authenticated' && !!session?.user;
   const isLoading = status === 'loading';
   
-  // Get the user's plan for navigation URLs, default to 'free' if not available
-  const plan = userPlan?.plan || 'free';
+  // Default to 'free' plan for header navigation - specific plan logic handled server-side
+  const plan = 'free';
   const isUnauthenticated = status === 'unauthenticated';
   
   // Desktop category accordion states
@@ -315,7 +312,7 @@ const Header: React.FC = () => {
                         {session?.user?.name || session?.user?.email}
                       </div>
                       <div className="text-xs text-blue-600 font-medium mt-1">
-                        {userPlan?.plan ? userPlan.plan.charAt(0).toUpperCase() + userPlan.plan.slice(1) + ' Plan' : 'Free Plan'}
+                        Free Plan
                       </div>
                     </div>
 
@@ -540,7 +537,7 @@ const Header: React.FC = () => {
                         {session?.user?.name || session?.user?.email}
                       </div>
                       <div style={{ color: '#60a5fa', fontSize: '12px', fontWeight: '500' }}>
-                        {userPlan?.plan ? userPlan.plan.charAt(0).toUpperCase() + userPlan.plan.slice(1) + ' Plan' : 'Free Plan'}
+                        Free Plan
                       </div>
                     </div>
 
