@@ -195,6 +195,17 @@ export const getServerSideProps: GetServerSideProps = async (context) => {
     };
   }
 
+  // Check if user is accessing from optz.siteoptz.ai subdomain
+  const host = context.req.headers.host || '';
+  if (host === 'optz.siteoptz.ai') {
+    return {
+      redirect: {
+        destination: '/dashboard/white-label',
+        permanent: false,
+      },
+    };
+  }
+
   return {
     props: {
       session,

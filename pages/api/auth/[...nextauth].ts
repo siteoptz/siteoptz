@@ -357,12 +357,21 @@ export const authOptions: NextAuthOptions = {
       }
     },
     async redirect({ url, baseUrl }) {
+      // Check if request is from optz.siteoptz.ai subdomain
+      const isWhiteLabelSubdomain = baseUrl.includes('optz.siteoptz.ai');
+      
       // Redirect to dashboard or desired page after sign-in
       if (url.startsWith('/')) {
         return `${baseUrl}${url}`
       } else if (new URL(url).origin === baseUrl) {
         return url
       }
+      
+      // Redirect to white-label dashboard for subdomain users
+      if (isWhiteLabelSubdomain) {
+        return `${baseUrl}/dashboard/white-label`
+      }
+      
       return `${baseUrl}/dashboard`
     },
   },
