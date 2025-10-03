@@ -3,10 +3,20 @@
  * Centralized keyword research and meta tag management
  */
 
-// Base configuration
+// Base configuration - environment-aware base URL
+const getBaseUrl = () => {
+  // In development, use localhost
+  if (process.env.NODE_ENV === 'development') {
+    return process.env.NEXTAUTH_URL || 'http://localhost:3000';
+  }
+  
+  // In production, use the production domain
+  return 'https://siteoptz.ai';
+};
+
 export const siteConfig = {
   siteName: 'SiteOptz',
-  baseUrl: 'https://siteoptz.ai',
+  baseUrl: getBaseUrl(),
   defaultTitle: 'SiteOptz - Fortune 500 AI Implementation Experts | $50M+ in Productivity Gains',
   defaultDescription: 'Fortune 500 AI implementation experts. We\'ve deployed 500+ AI solutions generating $50M+ in productivity gains. Get your custom AI transformation roadmap that delivers measurable ROI in 90 days.',
   defaultKeywords: [

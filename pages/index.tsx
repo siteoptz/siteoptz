@@ -367,13 +367,13 @@ export default function HomePage({}: HomePageProps) {
           "@context": "https://schema.org",
           "@type": "WebSite",
           "name": "SiteOptz",
-          "url": "https://siteoptz.ai",
+          "url": buildCanonicalUrl('/'),
           "description": pageConfig.description,
           "potentialAction": {
             "@type": "SearchAction",
             "target": {
               "@type": "EntryPoint",
-              "urlTemplate": "https://siteoptz.ai/tools?search={search_term_string}"
+              "urlTemplate": `${buildCanonicalUrl('/tools')}?search={search_term_string}`
             },
             "query-input": "required name=search_term_string"
           }
