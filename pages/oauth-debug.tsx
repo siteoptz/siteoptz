@@ -1,6 +1,7 @@
 import { useSession, signIn, signOut, getProviders } from 'next-auth/react'
 import { GetServerSideProps } from 'next'
 import { useState, useEffect } from 'react'
+import Link from 'next/link'
 
 export default function OAuthDebug({ providers }: any) {
   const { data: session } = useSession()
@@ -54,12 +55,12 @@ export default function OAuthDebug({ providers }: any) {
             Test Google Sign In
           </button>
           
-          <a
+          <Link
             href="/api/auth/signin/google"
             className="block bg-green-600 text-white px-4 py-2 rounded hover:bg-green-700 text-center"
           >
             Direct NextAuth Google URL
-          </a>
+          </Link>
 
           {session && (
             <button
