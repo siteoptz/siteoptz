@@ -1,0 +1,84 @@
+version: '3.8'
+
+services:
+  grafana:
+    image: grafana/grafana:latest
+    container_name: siteoptz-grafana
+    restart: unless-stopped
+    ports:
+      - "3000:3000"
+    environment:
+      - GF_SECURITY_ADMIN_USER=admin
+      - GF_SECURITY_ADMIN_PASSWORD=siteoptz2024
+      - GF_INSTALL_PLUGINS=grafana-clock-panel,grafana-piechart-panel,grafana-worldmap-panel,marcusolsson-dynamictext-panel,volkovlabs-echarts-panel
+      - GF_SERVER_ROOT_URL=http://localhost:3000
+      - GF_SERVER_SERVE_FROM_SUB_PATH=false
+      - GF_AUTH_ANONYMOUS_ENABLED=false
+      - GF_AUTH_BASIC_ENABLED=true
+      - GF_FEATURE_TOGGLES_ENABLE=publicDashboards
+    volumes:
+      - grafana-storage:/var/lib/grafana
+      - ./provisioning:/etc/grafana/provisioning
+      - ./dashboards:/var/lib/grafana/dashboards
+    networks:
+      - monitoring
+
+  prometheus:
+    image: prom/prometheus:latest
+    container_name: siteoptz-prometheus
+    restart: unless-stopped
+    ports:
+      - "9090:9090"
+    command:
+      - '--config.file=/etc/prometheus/prometheus.yml'
+      - '--storage.tsdb.path=/prometheus'
+      - '--web.console.libraries=/etc/prometheus/console_libraries'
+      - '--web.console.templates=/etc/prometheus/consoles'
+      - '--storage.tsdb.retention.time=90d'
+    volumes:
+      - ./prometheus/prometheus.yml:/etc/prometheus/prometheus.yml
+      - prometheus-storage:/prometheus
+    networks:
+      - monitoring
+
+  postgres:
+    image: postgres:15-alpine
+    container_name: siteoptz-postgres
+    restart: unless-stopped
+    ports:
+      - "5432:5432"
+    environment:
+      - POSTGRES_USER=siteoptz
+      - POSTGRES_PASSWORD=siteoptz2024
+      - POSTGRES_DB=marketing_analytics
+    volumes:
+      - postgres-data:/var/lib/postgresql/data
+      - ./postgres/init.sql:/docker-entrypoint-initdb.d/init.sql
+    networks:
+      - monitoring
+
+  redis:
+    image: redis:7-alpine
+    container_name: siteoptz-redis
+    restart: unless-stopped
+    ports:
+      - "6379:6379"
+    command: redis-server --appendonly yes
+    volumes:
+      - redis-data:/data
+    networks:
+      - monitoring
+
+volumes:
+  grafana-storage:
+    driver: local
+  prometheus-storage:
+    driver: local
+  postgres-data:
+    driver: local
+  redis-data:
+    driver: local
+
+networks:
+  monitoring:
+    driver: bridge

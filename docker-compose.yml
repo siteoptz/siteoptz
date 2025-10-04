@@ -1,0 +1,65 @@
+# Docker Compose for siteoptz.ai development environment
+
+services:
+  # Main Next.js application (run locally for development)
+  # siteoptz-app:
+  #   build: .
+  #   ports:
+  #     - "3000:3000"
+  #   environment:
+  #     - NODE_ENV=development
+  #   volumes:
+  #     - .:/app
+  #     - /app/node_modules
+  #   depends_on:
+  #     - grafana
+  #     - redis
+  #   networks:
+  #     - siteoptz-network
+
+  # Grafana for dashboard analytics
+  grafana:
+    image: grafana/grafana:latest
+    ports:
+      - "3001:3000"
+    environment:
+      - GF_SECURITY_ADMIN_PASSWORD=admin
+      - GF_USERS_ALLOW_SIGN_UP=false
+    volumes:
+      - grafana-storage:/var/lib/grafana
+      - ./grafana/provisioning:/etc/grafana/provisioning
+    networks:
+      - siteoptz-network
+
+  # Redis for caching
+  redis:
+    image: redis:7-alpine
+    ports:
+      - "6379:6379"
+    volumes:
+      - redis-storage:/data
+    networks:
+      - siteoptz-network
+
+  # PostgreSQL for data storage
+  postgres:
+    image: postgres:15-alpine
+    ports:
+      - "5432:5432"
+    environment:
+      - POSTGRES_DB=siteoptz
+      - POSTGRES_USER=siteoptz
+      - POSTGRES_PASSWORD=siteoptz123
+    volumes:
+      - postgres-storage:/var/lib/postgresql/data
+    networks:
+      - siteoptz-network
+
+volumes:
+  grafana-storage:
+  redis-storage:
+  postgres-storage:
+
+networks:
+  siteoptz-network:
+    driver: bridge

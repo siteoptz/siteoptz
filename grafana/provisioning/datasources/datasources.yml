@@ -1,0 +1,65 @@
+apiVersion: 1
+
+datasources:
+  # PostgreSQL for marketing analytics data
+  - name: PostgreSQL
+    type: postgres
+    access: proxy
+    url: postgres:5432
+    database: marketing_analytics
+    user: siteoptz
+    secureJsonData:
+      password: siteoptz2024
+    jsonData:
+      sslmode: disable
+      postgresVersion: 1500
+      timescaledb: false
+    editable: true
+    isDefault: true
+
+  # Prometheus for metrics
+  - name: Prometheus
+    type: prometheus
+    access: proxy
+    url: http://prometheus:9090
+    jsonData:
+      httpMethod: POST
+      manageAlerts: true
+      prometheusType: Prometheus
+      prometheusVersion: 2.44.0
+    editable: true
+
+  # Redis for real-time data
+  - name: Redis
+    type: redis-datasource
+    access: proxy
+    url: redis://redis:6379
+    jsonData:
+      client: standalone
+    editable: true
+
+  # JSON API for external marketing data
+  - name: Marketing API
+    type: simpod-json-datasource
+    access: proxy
+    url: http://localhost:3001/api/metrics
+    jsonData:
+      defaultQuery: ''
+      queryParams: ''
+    editable: true
+
+  # Google Sheets for manual data import
+  - name: Google Sheets
+    type: grafana-googlesheets-datasource
+    access: proxy
+    jsonData:
+      authType: jwt
+      defaultProject: siteoptz-analytics
+      jwtPath: /etc/grafana/google-sheets-key.json
+    editable: true
+
+  # TestData for demo dashboards
+  - name: TestData
+    type: testdata
+    access: proxy
+    editable: true

@@ -1,0 +1,20 @@
+# Grafana Data Source Provisioning Configuration
+apiVersion: 1
+
+datasources:
+  - name: PostgreSQL
+    type: postgres
+    access: proxy
+    url: postgres:5432
+    database: siteoptz
+    user: siteoptz
+    secureJsonData:
+      password: siteoptz123
+    jsonData:
+      sslmode: disable
+
+  - name: Redis
+    type: redis
+    access: proxy
+    url: redis:6379
+    database: 0

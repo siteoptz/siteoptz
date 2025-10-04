@@ -1,0 +1,46 @@
+apiVersion: 1
+
+providers:
+  - name: 'SiteOptz Marketing Dashboards'
+    orgId: 1
+    folder: 'Marketing Analytics'
+    folderUid: marketing
+    type: file
+    disableDeletion: false
+    updateIntervalSeconds: 10
+    allowUiUpdates: true
+    options:
+      path: /var/lib/grafana/dashboards/marketing
+      
+  - name: 'Campaign Performance'
+    orgId: 1
+    folder: 'Campaigns'
+    folderUid: campaigns
+    type: file
+    disableDeletion: false
+    updateIntervalSeconds: 10
+    allowUiUpdates: true
+    options:
+      path: /var/lib/grafana/dashboards/campaigns
+
+  - name: 'ROI Analytics'
+    orgId: 1
+    folder: 'ROI'
+    folderUid: roi
+    type: file
+    disableDeletion: false
+    updateIntervalSeconds: 10
+    allowUiUpdates: true
+    options:
+      path: /var/lib/grafana/dashboards/roi
+
+  - name: 'Real-time Monitoring'
+    orgId: 1
+    folder: 'Monitoring'
+    folderUid: monitoring
+    type: file
+    disableDeletion: false
+    updateIntervalSeconds: 10
+    allowUiUpdates: true
+    options:
+      path: /var/lib/grafana/dashboards/monitoring
