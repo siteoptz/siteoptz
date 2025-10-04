@@ -23,7 +23,7 @@ const OptzPremiumDashboard = () => {
       return;
     }
 
-    const userPlan = session.user?.plan || 'free';
+    const userPlan = (session.user as any)?.plan || 'free';
     if (!['pro', 'premium', 'enterprise'].includes(userPlan)) {
       router.push('/upgrade');
       return;
