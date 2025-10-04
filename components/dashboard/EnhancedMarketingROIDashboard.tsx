@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useCallback } from 'react';
 import { useSession } from 'next-auth/react';
 import {
   BarChart3,
@@ -129,9 +129,9 @@ export default function EnhancedMarketingROIDashboard() {
     if (session?.user?.email) {
       loadGoogleAdsData();
     }
-  }, [session, dateRange, selectedAccount]);
+  }, [session, dateRange, selectedAccount, loadGoogleAdsData]);
 
-  const loadGoogleAdsData = async () => {
+  const loadGoogleAdsData = useCallback(async () => {
     if (!session?.user?.email) return;
 
     setLoading(true);
@@ -171,7 +171,7 @@ export default function EnhancedMarketingROIDashboard() {
     } finally {
       setLoading(false);
     }
-  };
+  }, [dateRange, selectedAccount, session?.user?.email]);
 
   const handleAccountChange = async (account: GoogleAdsAccount) => {
     setSelectedAccount(account);

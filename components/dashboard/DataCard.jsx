@@ -21,6 +21,14 @@ export default function DataCard({
     <div 
       className={`bg-black border border-gray-800 rounded-lg p-6 hover:border-gray-700 transition-all duration-200 cursor-pointer ${className}`}
       onClick={onClick}
+      onKeyDown={(e) => {
+        if (e.key === 'Enter' || e.key === ' ') {
+          e.preventDefault();
+          onClick?.(e);
+        }
+      }}
+      tabIndex={onClick ? 0 : undefined}
+      role={onClick ? 'button' : undefined}
     >
       <div className="flex items-center justify-between mb-4">
         <div className="flex items-center space-x-3">

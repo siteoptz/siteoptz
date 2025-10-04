@@ -1,5 +1,6 @@
 // components/dashboard/Header.jsx
 import React, { useState } from 'react';
+import Image from 'next/image';
 import { BellIcon, UserCircleIcon, Cog6ToothIcon } from '@heroicons/react/24/outline';
 import { useSession, signOut } from 'next-auth/react';
 
@@ -85,9 +86,11 @@ export default function Header({ user }) {
               className="flex items-center space-x-3 p-2 rounded-lg hover:bg-gray-800 transition-colors"
             >
               {session?.user?.image ? (
-                <img 
+                <Image 
                   src={session.user.image} 
                   alt="Profile" 
+                  width={32}
+                  height={32}
                   className="w-8 h-8 rounded-full"
                 />
               ) : (

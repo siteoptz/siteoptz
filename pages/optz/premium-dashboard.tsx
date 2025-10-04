@@ -190,7 +190,7 @@ const OptzPremiumDashboard = () => {
                 {/* White-label Notice */}
                 <div className="mt-6 p-3 bg-blue-900/20 border border-blue-800 rounded-lg">
                   <p className="text-xs text-blue-300">
-                    <strong>Optz Analytics</strong> is powered by SiteOptz's advanced marketing intelligence platform.
+                    <strong>Optz Analytics</strong> is powered by SiteOptz&apos;s advanced marketing intelligence platform.
                   </p>
                 </div>
               </div>

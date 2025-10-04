@@ -1,5 +1,6 @@
 // Power BI Embedded Dashboard Component for Premium Pro Plans
 import React, { useEffect, useRef, useState } from 'react';
+import Link from 'next/link';
 import * as pbi from 'powerbi-client';
 import { useSession } from 'next-auth/react';
 import { Loader2, AlertCircle, Maximize2, Download, RefreshCw } from 'lucide-react';
@@ -204,12 +205,12 @@ const PowerBIDashboard = ({
           <h3 className="text-red-400 font-semibold mb-2">Dashboard Error</h3>
           <p className="text-gray-400 text-sm mb-4">{error}</p>
           {error.includes('Pro plan') && (
-            <a 
+            <Link 
               href="/upgrade" 
               className="inline-block px-6 py-2 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-lg hover:from-blue-700 hover:to-purple-700 transition-colors"
             >
               Upgrade to Pro
-            </a>
+            </Link>
           )}
         </div>
       </div>
