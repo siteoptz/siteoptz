@@ -4,7 +4,7 @@ import { useSession } from 'next-auth/react';
 import { useRouter } from 'next/router';
 import Head from 'next/head';
 import PowerBIDashboard from '@/components/dashboard/PowerBIDashboard';
-import { BarChart3, TrendingUp, Users, DollarSign, Lock, Upgrade, ExternalLink } from 'lucide-react';
+import { BarChart3, TrendingUp, Users, DollarSign, Lock, ArrowUp, ExternalLink } from 'lucide-react';
 
 const OptzPremiumDashboard = () => {
   const { data: session, status } = useSession();
@@ -111,7 +111,7 @@ const OptzPremiumDashboard = () => {
                   rel="noopener noreferrer"
                   className="px-4 py-2 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-lg hover:from-blue-700 hover:to-purple-700 transition-colors flex items-center"
                 >
-                  <Upgrade className="w-4 h-4 mr-2" />
+                  <ArrowUp className="w-4 h-4 mr-2" />
                   Upgrade Plan
                   <ExternalLink className="w-3 h-3 ml-1" />
                 </a>
