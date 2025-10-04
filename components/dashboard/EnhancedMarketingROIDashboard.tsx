@@ -125,12 +125,6 @@ export default function EnhancedMarketingROIDashboard() {
     { value: 'LAST_90_DAYS', label: 'Last 90 days' }
   ];
 
-  useEffect(() => {
-    if (session?.user?.email) {
-      loadGoogleAdsData();
-    }
-  }, [session, dateRange, selectedAccount, loadGoogleAdsData]);
-
   const loadGoogleAdsData = useCallback(async () => {
     if (!session?.user?.email) return;
 
@@ -172,6 +166,12 @@ export default function EnhancedMarketingROIDashboard() {
       setLoading(false);
     }
   }, [dateRange, selectedAccount, session?.user?.email]);
+
+  useEffect(() => {
+    if (session?.user?.email) {
+      loadGoogleAdsData();
+    }
+  }, [session, dateRange, selectedAccount, loadGoogleAdsData]);
 
   const handleAccountChange = async (account: GoogleAdsAccount) => {
     setSelectedAccount(account);
