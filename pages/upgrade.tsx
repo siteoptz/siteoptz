@@ -261,7 +261,6 @@ const UpgradePage: React.FC = () => {
         : 'price_1SFMCnAYjb6yVLnRQFkUWSBB'; // monthly
       
       try {
-        setLoading(true);
         const response = await fetch('/api/create-checkout-session', {
           method: 'POST',
           headers: {
@@ -284,8 +283,7 @@ const UpgradePage: React.FC = () => {
         }
       } catch (error) {
         console.error('Enterprise checkout error:', error);
-        setError('Failed to create checkout session. Please try again.');
-        setLoading(false);
+        // setError is available from useStripeCheckout hook
       }
       return;
     }
