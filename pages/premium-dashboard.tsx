@@ -3,16 +3,21 @@ import React, { useState, useEffect } from 'react';
 import { useSession } from 'next-auth/react';
 import { useRouter } from 'next/router';
 import Head from 'next/head';
-import PowerBIDashboard from '@/components/dashboard/PowerBIDashboard';
-import { BarChart3, TrendingUp, Users, DollarSign, Lock, Upgrade } from 'lucide-react';
+import dynamic from 'next/dynamic';
+
+const PowerBIDashboard = dynamic(
+  () => import('@/components/dashboard/PowerBIDashboard'),
+  { ssr: false }
+);
+import { BarChart3, TrendingUp, Users, DollarSign, Lock, ArrowUp } from 'lucide-react';
 
 const PremiumDashboard = () => {
   const { data: session, status } = useSession();
   const router = useRouter();
-  const [reports, setReports] = useState([]);
-  const [selectedReport, setSelectedReport] = useState(null);
+  const [reports, setReports] = useState<any[]>([]);
+  const [selectedReport, setSelectedReport] = useState<any>(null);
   const [loading, setLoading] = useState(true);
-  const [error, setError] = useState(null);
+  const [error, setError] = useState<string | null>(null);
 
   useEffect(() => {
     if (status === 'loading') return;
@@ -22,7 +27,7 @@ const PremiumDashboard = () => {
       return;
     }
 
-    const userPlan = session.user?.plan || 'free';
+    const userPlan = (session.user as any)?.plan || 'free';
     if (!['pro', 'premium', 'enterprise'].includes(userPlan)) {
       router.push('/upgrade');
       return;
@@ -48,14 +53,14 @@ const PremiumDashboard = () => {
         setSelectedReport(data.reports[0]);
       }
     } catch (err) {
-      setError(err.message);
+      setError(err instanceof Error ? err.message : 'An error occurred');
     } finally {
       setLoading(false);
     }
   };
 
-  const getUserPlanBadge = (plan) => {
-    const planConfig = {
+  const getUserPlanBadge = (plan: string) => {
+    const planConfig: Record<string, { color: string; text: string }> = {
       pro: { color: 'bg-blue-500', text: 'Pro' },
       premium: { color: 'bg-purple-500', text: 'Premium' },
       enterprise: { color: 'bg-emerald-500', text: 'Enterprise' }
@@ -96,7 +101,7 @@ const PremiumDashboard = () => {
               <div className="flex items-center space-x-4">
                 <img src="/images/siteoptz-logo.png" alt="SiteOptz" className="h-8" />
                 <h1 className="text-xl font-bold text-white">Premium Analytics</h1>
-                {session?.user?.plan && getUserPlanBadge(session.user.plan)}
+                {(session?.user as any)?.plan && getUserPlanBadge((session?.user as any).plan)}
               </div>
               <div className="flex items-center space-x-4">
                 <span className="text-gray-400">Welcome, {session?.user?.name}</span>
@@ -104,7 +109,7 @@ const PremiumDashboard = () => {
                   onClick={() => router.push('/upgrade')}
                   className="px-4 py-2 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-lg hover:from-blue-700 hover:to-purple-700 transition-colors"
                 >
-                  <Upgrade className="w-4 h-4 inline mr-2" />
+                  <ArrowUp className="w-4 h-4 inline mr-2" />
                   Upgrade
                 </button>
               </div>
@@ -127,19 +132,19 @@ const PremiumDashboard = () => {
                   <div className="space-y-2">
                     {reports.map((report) => (
                       <button
-                        key={report.id}
+                        key={(report as any).id}
                         onClick={() => setSelectedReport(report)}
                         className={`w-full text-left p-3 rounded-lg transition-colors ${
-                          selectedReport?.id === report.id
+                          (selectedReport as any)?.id === (report as any).id
                             ? 'bg-blue-600 text-white'
                             : 'bg-gray-800 text-gray-300 hover:bg-gray-700 hover:text-white'
                         }`}
                       >
                         <div className="flex items-center justify-between">
-                          <span className="font-medium">{report.name}</span>
-                          {getUserPlanBadge(report.planTier)}
+                          <span className="font-medium">{(report as any).name}</span>
+                          {getUserPlanBadge((report as any).planTier)}
                         </div>
-                        <p className="text-sm opacity-75 mt-1">{report.description}</p>
+                        <p className="text-sm opacity-75 mt-1">{(report as any).description}</p>
                       </button>
                     ))}
                   </div>
@@ -178,13 +183,13 @@ const PremiumDashboard = () => {
                   <div className="bg-black border border-gray-800 rounded-lg p-6">
                     <div className="flex items-center justify-between">
                       <div>
-                        <h2 className="text-2xl font-bold text-white">{selectedReport.name}</h2>
-                        <p className="text-gray-400 mt-1">{selectedReport.description}</p>
+                        <h2 className="text-2xl font-bold text-white">{(selectedReport as any).name}</h2>
+                        <p className="text-gray-400 mt-1">{(selectedReport as any).description}</p>
                       </div>
                       <div className="flex items-center space-x-3">
-                        {getUserPlanBadge(selectedReport.planTier)}
+                        {getUserPlanBadge((selectedReport as any).planTier)}
                         <span className="text-xs text-gray-500">
-                          Last updated: {new Date(selectedReport.modifiedDateTime).toLocaleDateString()}
+                          Last updated: {new Date((selectedReport as any).modifiedDateTime).toLocaleDateString()}
                         </span>
                       </div>
                     </div>
@@ -192,10 +197,10 @@ const PremiumDashboard = () => {
 
                   {/* Power BI Dashboard */}
                   <PowerBIDashboard
-                    reportId={selectedReport.id}
+                    reportId={(selectedReport as any).id}
                     height="800px"
                     showToolbar={true}
-                    allowExport={session?.user?.plan !== 'pro'}
+                    allowExport={(session?.user as any)?.plan !== 'pro'}
                     theme="dark"
                     className="shadow-2xl"
                   />
