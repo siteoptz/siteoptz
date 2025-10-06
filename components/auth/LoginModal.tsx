@@ -14,7 +14,7 @@ const LoginModal: React.FC<LoginModalProps> = ({
   isOpen, 
   onClose, 
   onSuccess,
-  redirectTo = '/dashboard' 
+  redirectTo = '/dashboard/pro' 
 }) => {
   const router = useRouter();
   const [email, setEmail] = useState('');

@@ -318,7 +318,7 @@ const Header: React.FC = () => {
 
                     {/* Menu Items */}
                     <div className="py-1">
-                      <Link href="/dashboard" className="flex items-center px-4 py-2 text-gray-700 hover:bg-gray-50 transition-colors">
+                      <Link href="/dashboard/pro" className="flex items-center px-4 py-2 text-gray-700 hover:bg-gray-50 transition-colors">
                         <User className="w-4 h-4 mr-3" />
                         Dashboard
                       </Link>
@@ -542,7 +542,7 @@ const Header: React.FC = () => {
                     </div>
 
                     {/* Menu Items */}
-                    <Link href="/dashboard" onClick={closeMenu} style={{ 
+                    <Link href="/dashboard/pro" onClick={closeMenu} style={{ 
                       display: 'flex',
                       alignItems: 'center',
                       gap: '12px',
