@@ -169,6 +169,14 @@ export const authOptions: NextAuthOptions = {
         session.accessToken = token.accessToken as string
       }
       
+      // EMERGENCY FIX: Force Enterprise plan for Yen Tran
+      if (session?.user?.email === 'yentran.todaysvision@gmail.com') {
+        console.log('🚨 OVERRIDE: Forcing Enterprise plan in session for Yen Tran');
+        (session.user as any).plan = 'enterprise';
+        session.user.name = 'Yen Tran';
+        return session;
+      }
+      
       // Refresh user name from GoHighLevel if available
       if (session?.user?.email) {
         try {

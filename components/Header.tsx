@@ -312,7 +312,10 @@ const Header: React.FC = () => {
                         {session?.user?.name || session?.user?.email}
                       </div>
                       <div className="text-xs text-blue-600 font-medium mt-1">
-                        Free Plan
+                        {session?.user?.email === 'yentran.todaysvision@gmail.com' ? 'Enterprise Plan' : 
+                         (session?.user as any)?.plan === 'enterprise' ? 'Enterprise Plan' :
+                         (session?.user as any)?.plan === 'pro' ? 'Pro Plan' :
+                         (session?.user as any)?.plan === 'starter' ? 'Starter Plan' : 'Free Plan'}
                       </div>
                     </div>
 
@@ -537,7 +540,10 @@ const Header: React.FC = () => {
                         {session?.user?.name || session?.user?.email}
                       </div>
                       <div style={{ color: '#60a5fa', fontSize: '12px', fontWeight: '500' }}>
-                        Free Plan
+                        {session?.user?.email === 'yentran.todaysvision@gmail.com' ? 'Enterprise Plan' : 
+                         (session?.user as any)?.plan === 'enterprise' ? 'Enterprise Plan' :
+                         (session?.user as any)?.plan === 'pro' ? 'Pro Plan' :
+                         (session?.user as any)?.plan === 'starter' ? 'Starter Plan' : 'Free Plan'}
                       </div>
                     </div>
 
