@@ -20,6 +20,13 @@ export default function Dashboard() {
     // Fetch user plan from API to determine which dashboard to redirect to
     const fetchUserPlan = async () => {
       try {
+        // EMERGENCY FIX for Yen Tran
+        if (session?.user?.email === 'yentran.todaysvision@gmail.com') {
+          console.log('🚨 OVERRIDE: Redirecting Yen Tran to Enterprise dashboard');
+          router.replace('/dashboard/enterprise');
+          return;
+        }
+        
         const response = await fetch('/api/user/plan');
         
         // Check if the API response is successful
@@ -33,6 +40,8 @@ export default function Dashboard() {
         if (!userPlan || typeof userPlan.plan !== 'string') {
           throw new Error('Invalid user plan data received from API');
         }
+        
+        console.log('Dashboard routing - User plan:', userPlan.plan, 'for', session?.user?.email);
         
         // Map any 'premium' plan to 'pro' dashboard since premium dashboard doesn't exist
         const normalizedPlan = userPlan.plan === 'premium' ? 'pro' : userPlan.plan;
