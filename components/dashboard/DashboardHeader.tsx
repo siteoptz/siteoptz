@@ -1,7 +1,7 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Link from 'next/link';
 import { UserPlan } from '../../types/userPlan';
-import { User, Bell, Zap, Settings, CreditCard, MessageSquare } from 'lucide-react';
+import { User, Bell, Zap, Settings, CreditCard, MessageSquare, RefreshCw } from 'lucide-react';
 import { useRouter } from 'next/router';
 
 interface DashboardHeaderProps {
@@ -14,6 +14,27 @@ export const DashboardHeader: React.FC<DashboardHeaderProps> = ({
   userName = "Dashboard User"
 }) => {
   const router = useRouter();
+  const [isRefreshing, setIsRefreshing] = useState(false);
+  
+  const handleRefreshPlan = async () => {
+    setIsRefreshing(true);
+    try {
+      const response = await fetch('/api/user/refresh-plan', {
+        method: 'POST',
+      });
+      
+      if (response.ok) {
+        const data = await response.json();
+        console.log('Plan refreshed:', data);
+        // Reload the page to get fresh data
+        window.location.reload();
+      }
+    } catch (error) {
+      console.error('Error refreshing plan:', error);
+    } finally {
+      setIsRefreshing(false);
+    }
+  };
   
   const getPlanColor = (plan: string) => {
     switch (plan) {
@@ -89,6 +110,14 @@ export const DashboardHeader: React.FC<DashboardHeaderProps> = ({
               <span className={`px-3 py-1 rounded-full text-sm font-medium ${getPlanColor(userPlan.plan)}`}>
                 {userPlan.plan.charAt(0).toUpperCase() + userPlan.plan.slice(1)} Plan
               </span>
+              <button
+                onClick={handleRefreshPlan}
+                disabled={isRefreshing}
+                className="ml-2 text-gray-400 hover:text-cyan-400 transition-colors"
+                title="Refresh plan status"
+              >
+                <RefreshCw className={`w-4 h-4 ${isRefreshing ? 'animate-spin' : ''}`} />
+              </button>
             </div>
             <button className="text-gray-300 hover:text-white transition-colors">
               <Bell className="w-6 h-6" />

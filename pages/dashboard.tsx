@@ -34,12 +34,16 @@ export default function Dashboard() {
           throw new Error('Invalid user plan data received from API');
         }
         
-        if (['pro', 'premium', 'enterprise'].includes(userPlan.plan)) {
-          // Premium users go to plan-specific dashboard
-          router.replace(`/dashboard/${userPlan.plan}`);
+        // Map any 'premium' plan to 'pro' dashboard since premium dashboard doesn't exist
+        const normalizedPlan = userPlan.plan === 'premium' ? 'pro' : userPlan.plan;
+        
+        // Validate the plan is one we support
+        const validPlans = ['free', 'starter', 'pro', 'enterprise'];
+        if (validPlans.includes(normalizedPlan)) {
+          router.replace(`/dashboard/${normalizedPlan}`);
         } else {
-          // Free/basic users go to plan-specific dashboard  
-          router.replace(`/dashboard/${userPlan.plan}`);
+          console.warn('Unknown plan:', userPlan.plan, '- redirecting to free');
+          router.replace('/dashboard/free');
         }
       } catch (error) {
         console.error('Error fetching user plan:', error);
