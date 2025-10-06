@@ -20,11 +20,31 @@ export const useUserPlan = () => {
     
     return () => clearTimeout(timeoutId);
   }, [session]);
+  
+  // Also refetch when window regains focus to ensure fresh data
+  useEffect(() => {
+    const handleFocus = () => {
+      if (session?.user) {
+        console.log('Window focused - refreshing user plan');
+        fetchUserPlan();
+      }
+    };
+    
+    window.addEventListener('focus', handleFocus);
+    return () => window.removeEventListener('focus', handleFocus);
+  }, [session]);
 
   const fetchUserPlan = async () => {
     try {
-      const response = await fetch('/api/user/plan');
+      // Add cache busting to ensure fresh data
+      const response = await fetch(`/api/user/plan?t=${Date.now()}`);
+      
+      if (!response.ok) {
+        throw new Error(`Failed to fetch plan: ${response.status}`);
+      }
+      
       const plan = await response.json();
+      console.log('📋 Fetched user plan:', plan.plan);
       setUserPlan(plan);
     } catch (error) {
       console.error('Failed to fetch user plan:', error);

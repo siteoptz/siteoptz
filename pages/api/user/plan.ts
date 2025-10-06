@@ -47,13 +47,15 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       return res.status(200).json(cached.data);
     }
 
-    // Check GoHighLevel first for user's plan information
+    // Initialize defaults
     let actualPlan = 'free';
     let billingCycle = 'monthly';
     let subscriptionStatus = 'active';
     let userName = session.user.name || 'User';
+    let ghlPlan = null;
+    let stripePlan = null;
 
-    // First, check GoHighLevel for plan information
+    // First, check GoHighLevel for plan information (but don't set actualPlan yet)
     try {
       console.log('🔍 Fetching user plan for:', session.user.email);
       console.log('🔍 Session user name:', session.user.name);
@@ -61,8 +63,8 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       console.log('📋 GHL Contact lookup result:', JSON.stringify(ghlContact, null, 2));
       if (ghlContact.exists) {
         if (ghlContact.plan) {
-          actualPlan = ghlContact.plan;
-          console.log('✅ Plan found in GoHighLevel:', actualPlan);
+          ghlPlan = ghlContact.plan;
+          console.log('📋 Plan found in GoHighLevel:', ghlPlan);
         }
         if (ghlContact.name) {
           userName = ghlContact.name;
@@ -131,9 +133,9 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
           
           const planInfo = priceIdToPlan[priceId];
           if (planInfo) {
-            actualPlan = planInfo.plan;
+            stripePlan = planInfo.plan;
             billingCycle = planInfo.cycle;
-            console.log('✅ Plan overridden by active Stripe subscription:', actualPlan);
+            console.log('✅ Found active Stripe subscription:', stripePlan);
           } else {
             console.log('⚠️ Price ID not found in mapping:', priceId);
             console.log('⚠️ Enterprise price IDs:', {
@@ -152,6 +154,25 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     } else {
       console.log('⚠️ Stripe not available - missing STRIPE_SECRET_KEY environment variable');
     }
+
+    // Determine the final plan - Stripe ALWAYS wins if present
+    if (stripePlan) {
+      actualPlan = stripePlan;
+      console.log('🎯 Using Stripe plan as final plan:', actualPlan);
+    } else if (ghlPlan) {
+      actualPlan = ghlPlan;
+      console.log('🎯 Using GoHighLevel plan as final plan:', actualPlan);
+    } else {
+      actualPlan = 'free';
+      console.log('🎯 No plan found, defaulting to free');
+    }
+
+    console.log('📊 Plan decision summary:', {
+      ghlPlan,
+      stripePlan,
+      finalPlan: actualPlan,
+      source: stripePlan ? 'Stripe' : ghlPlan ? 'GoHighLevel' : 'Default'
+    });
 
     // Get plan-specific configuration
     const planConfigs = {
