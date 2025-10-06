@@ -7,15 +7,25 @@ export default function Dashboard() {
   const { data: session, status } = useSession();
   const router = useRouter();
   const [planLoading, setPlanLoading] = useState(true);
+  const [error, setError] = useState<string | null>(null);
 
   useEffect(() => {
-    if (status === 'loading') return; // Still loading
+    console.log('🚀 Dashboard component - Session status:', status);
+    console.log('🚀 Dashboard component - Session data:', session);
+    
+    if (status === 'loading') {
+      console.log('⏳ Session still loading...');
+      return; // Still loading
+    }
 
     if (!session) {
+      console.log('❌ No session found, redirecting to signin');
       // Not authenticated, redirect to sign in
       router.replace('/auth/signin');
       return;
     }
+
+    console.log('✅ Session found, proceeding to fetch plan');
 
     // Fetch user plan from API to determine which dashboard to redirect to
     const fetchUserPlan = async () => {
