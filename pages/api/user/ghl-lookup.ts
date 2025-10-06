@@ -76,11 +76,27 @@ export async function getContactByEmail(email: string): Promise<ContactLookupRes
         
         // Check tags for plan information
         if (contact.tags && Array.isArray(contact.tags)) {
-          const planTags = contact.tags.filter((tag: string) => 
-            ['free', 'starter', 'pro', 'enterprise'].includes(tag.toLowerCase())
-          );
+          // Look for tags in format "plan-X" or just the plan name
+          const planTags = contact.tags.filter((tag: string) => {
+            const lowerTag = tag.toLowerCase();
+            // Check if tag starts with "plan-" and extract the plan name
+            if (lowerTag.startsWith('plan-')) {
+              const extractedPlan = lowerTag.substring(5); // Remove "plan-" prefix
+              return ['free', 'starter', 'pro', 'enterprise', 'free user'].includes(extractedPlan);
+            }
+            // Also check for direct plan tags
+            return ['free', 'starter', 'pro', 'enterprise'].includes(lowerTag);
+          });
+          
           if (planTags.length > 0) {
-            plan = planTags[0].toLowerCase();
+            const tag = planTags[0].toLowerCase();
+            if (tag.startsWith('plan-')) {
+              const extractedPlan = tag.substring(5); // Remove "plan-" prefix
+              // Handle "free user" -> "free"
+              plan = extractedPlan === 'free user' ? 'free' : extractedPlan;
+            } else {
+              plan = tag;
+            }
           }
         }
         
