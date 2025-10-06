@@ -10,7 +10,12 @@ interface ContactLookupResult {
 
 // Simple in-memory cache with TTL
 const cache = new Map<string, { data: ContactLookupResult; timestamp: number }>();
-const CACHE_TTL = 5 * 60 * 1000; // 5 minutes cache to reduce API calls
+const CACHE_TTL = 10 * 1000; // 10 seconds cache - reduced to prevent stale data
+
+// Make cache accessible globally for clearing
+if (typeof (global as any).ghlCache === 'undefined') {
+  (global as any).ghlCache = cache;
+}
 
 // Function to get contact details from GoHighLevel
 export async function getContactByEmail(email: string): Promise<ContactLookupResult> {

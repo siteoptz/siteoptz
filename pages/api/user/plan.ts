@@ -18,8 +18,13 @@ if (process.env.STRIPE_SECRET_KEY) {
 }
 
 // Simple in-memory cache with TTL
-const planCache = new Map<string, { data: any; timestamp: number }>();
-const CACHE_TTL = 30000; // 30 seconds cache
+export const planCache = new Map<string, { data: any; timestamp: number }>();
+const CACHE_TTL = 5000; // 5 seconds cache - reduced to prevent stale data
+
+// Make cache accessible globally for clearing
+if (typeof (global as any).planCache === 'undefined') {
+  (global as any).planCache = planCache;
+}
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method !== 'GET') {
@@ -38,6 +43,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     const cached = planCache.get(cacheKey);
     if (cached && (Date.now() - cached.timestamp) < CACHE_TTL) {
       console.log('📋 Using cached plan data for:', session.user.email);
+      console.log('📋 Cached plan:', cached.data.plan);
       return res.status(200).json(cached.data);
     }
 
@@ -117,11 +123,20 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
             priceIdToPlan[process.env.STRIPE_ENTERPRISE_YEARLY_PRICE_ID] = { plan: 'enterprise', cycle: 'yearly' };
           }
 
+          console.log('🔍 Stripe Price ID:', priceId);
+          console.log('🔍 Available price mappings:', Object.keys(priceIdToPlan));
+          
           const planInfo = priceIdToPlan[priceId];
           if (planInfo) {
             actualPlan = planInfo.plan;
             billingCycle = planInfo.cycle;
             console.log('✅ Plan overridden by active Stripe subscription:', actualPlan);
+          } else {
+            console.log('⚠️ Price ID not found in mapping:', priceId);
+            console.log('⚠️ Enterprise price IDs:', {
+              monthly: process.env.STRIPE_ENTERPRISE_MONTHLY_PRICE_ID,
+              yearly: process.env.STRIPE_ENTERPRISE_YEARLY_PRICE_ID
+            });
           }
 
           subscriptionStatus = subscription.status;
