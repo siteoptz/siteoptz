@@ -276,7 +276,7 @@ export const dashboardMarketingContent = {
           title: "CEO, $5.7B Global Corporation"
         },
         exclusivity: "By invitation only - 3 spots available",
-        cta: "Apply for Enterprise Access"
+        cta: "Upgrade to Enterprise"
       }
     }
   },

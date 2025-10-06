@@ -179,7 +179,7 @@ const UpgradePage: React.FC = () => {
         'Executive reporting',
         'Strategic planning sessions'
       ],
-      ctaText: 'Contact Sales',
+      ctaText: 'Upgrade Now',
       color: 'gradient',
       icon: <Shield className="w-6 h-6" />
     }
@@ -254,9 +254,39 @@ const UpgradePage: React.FC = () => {
     // Clear any previous errors
     clearError();
     
-    // Handle Enterprise plan differently (contact sales)
+    // Handle Enterprise plan with Stripe checkout
     if (planName === 'Enterprise') {
-      router.push('/contact?subject=enterprise');
+      const priceId = billingCycle === 'yearly' 
+        ? 'price_1SFMDVAYjb6yVLnRL69ncRfm' // yearly
+        : 'price_1SFMCnAYjb6yVLnRQFkUWSBB'; // monthly
+      
+      try {
+        setLoading(true);
+        const response = await fetch('/api/create-checkout-session', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify({
+            plan: 'enterprise',
+            billingCycle: billingCycle,
+            successUrl: `${window.location.origin}/dashboard/enterprise?upgrade=success`,
+            cancelUrl: `${window.location.origin}/upgrade?canceled=true`,
+          }),
+        });
+
+        const data = await response.json();
+        
+        if (data.url) {
+          window.location.href = data.url;
+        } else {
+          throw new Error('No checkout URL received');
+        }
+      } catch (error) {
+        console.error('Enterprise checkout error:', error);
+        setError('Failed to create checkout session. Please try again.');
+        setLoading(false);
+      }
       return;
     }
 
