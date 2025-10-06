@@ -256,7 +256,6 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     });
     
     console.log('📋 Final plan being returned for', session.user.email, ':', actualPlan);
-    console.log('📋 Stripe overrode GHL:', actualPlan !== (ghlContact?.plan || 'free'));
 
     res.status(200).json(userPlan);
   } catch (error) {
