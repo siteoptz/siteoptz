@@ -32,30 +32,30 @@ export interface CleanDashboardProps {
   isAuthenticated: boolean;
 }
 
-// Get user plan from server-side (no external API calls to avoid infinite loops)
+// Get user plan from server-side with proper Stripe/GHL detection
 export async function getUserPlanServerSide(userEmail: string): Promise<UserPlan> {
   try {
-    // REMOVED: GoHighLevel API call that was causing infinite loops
-    // The GoHighLevel integration should be moved to client-side or a separate API route
-    // to avoid blocking server-side rendering and causing redirect loops
+    // Import the proper plan detection utility
+    const { getUserPlan } = await import('../utils/planAccessControl');
+    const actualPlan = await getUserPlan(userEmail);
     
-    // Simple server-side logic without external API calls
-    let plan: UserPlan['plan'] = 'pro'; // Default to pro for this dashboard
     let userName = userEmail.split('@')[0] || 'User';
     
-    // Simple email-based plan detection (can be enhanced later)
-    if (userEmail.includes('enterprise')) {
-      plan = 'enterprise';
-    } else if (userEmail.includes('starter')) {
-      plan = 'starter';
-    } else if (userEmail.includes('free')) {
-      plan = 'free';
-    } else {
-      plan = 'pro'; // Default for dashboard access
+    // Try to get name from GoHighLevel if available
+    if (process.env.ENABLE_GHL === 'true') {
+      try {
+        const { getContactByEmail } = await import('../pages/api/user/ghl-lookup');
+        const ghlContact = await getContactByEmail(userEmail);
+        if (ghlContact.exists && ghlContact.name) {
+          userName = ghlContact.name;
+        }
+      } catch (error) {
+        console.error('Error getting name from GoHighLevel:', error);
+      }
     }
 
-    // Return appropriate plan based on email analysis
-    switch (plan) {
+    // Return appropriate plan based on actual detection
+    switch (actualPlan) {
       case 'enterprise':
         return getEnterprisePlan(userEmail, userName);
       case 'pro':
@@ -67,8 +67,8 @@ export async function getUserPlanServerSide(userEmail: string): Promise<UserPlan
     }
   } catch (error) {
     console.error('Error fetching user plan server-side:', error);
-    // Fallback to pro plan to ensure dashboard access
-    return getProPlan(userEmail, userEmail.split('@')[0] || 'User');
+    // Fallback to free plan (safest default)
+    return getFreePlan(userEmail, userEmail.split('@')[0] || 'User');
   }
 }
 
@@ -90,11 +90,12 @@ export async function getCleanDashboardProps(
 
   const userPlan = await getUserPlanServerSide(session.user.email);
 
-  // Check plan requirements
-  if (requiredPlan && !hasRequiredPlan(userPlan, requiredPlan)) {
+  // Check plan requirements - redirect to correct dashboard if wrong plan
+  if (requiredPlan && userPlan.plan !== requiredPlan) {
+    console.log(`Access denied: User has ${userPlan.plan} plan but tried to access ${requiredPlan} dashboard`);
     return {
       redirect: {
-        destination: '/upgrade',
+        destination: `/dashboard/${userPlan.plan}`,
         permanent: false,
       },
     };

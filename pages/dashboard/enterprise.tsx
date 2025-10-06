@@ -61,18 +61,13 @@ export default function EnterpriseDashboard() {
     );
   }
 
-  if (!userPlan || userPlan.plan !== 'enterprise') {
-    return (
-      <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-black flex items-center justify-center">
-        <div className="text-center text-white">
-          <h1 className="text-2xl font-bold mb-4">Access Denied</h1>
-          <p className="text-gray-300">This page is for Enterprise plan users only.</p>
-          <Link href="/dashboard" className="inline-block mt-4 bg-gradient-to-r from-blue-600 to-purple-600 text-white px-6 py-2 rounded-lg">
-            Go to Dashboard
-          </Link>
-        </div>
-      </div>
-    );
+  // Server-side already verified access, but double-check on client
+  if (userPlan.plan !== 'enterprise') {
+    // This should never happen due to server-side redirect, but just in case
+    if (typeof window !== 'undefined') {
+      window.location.href = `/dashboard/${userPlan.plan}`;
+    }
+    return null;
   }
 
   return (
@@ -506,21 +501,7 @@ export default function EnterpriseDashboard() {
   );
 }
 
-export const getServerSideProps: GetServerSideProps = async (context) => {
-  const session = await getServerSession(context.req, context.res, authOptions);
+// Use the plan protection HOF
+import { withPlanProtection } from '../../utils/planAccessControl';
 
-  if (!session) {
-    return {
-      redirect: {
-        destination: '/#login',
-        permanent: false,
-      },
-    };
-  }
-
-  return {
-    props: {
-      session,
-    },
-  };
-};
+export const getServerSideProps: GetServerSideProps = withPlanProtection('enterprise');
