@@ -20,21 +20,47 @@ export default function Dashboard() {
     // Fetch user plan from API to determine which dashboard to redirect to
     const fetchUserPlan = async () => {
       try {
+        console.log('🔄 Dashboard: Checking user plan for', session?.user?.email);
+        console.log('🔄 Session data:', {
+          email: session?.user?.email,
+          name: session?.user?.name,
+          plan: (session?.user as any)?.plan
+        });
+        
+        // If plan is already in session (from NextAuth), use it directly
+        if ((session?.user as any)?.plan) {
+          const sessionPlan = (session.user as any).plan;
+          console.log('✅ Using plan from session:', sessionPlan);
+          
+          const normalizedPlan = sessionPlan === 'premium' ? 'pro' : sessionPlan;
+          const validPlans = ['free', 'starter', 'pro', 'enterprise'];
+          
+          if (validPlans.includes(normalizedPlan)) {
+            router.replace(`/dashboard/${normalizedPlan}`);
+            return;
+          }
+        }
+        
+        // Otherwise, fetch from API
+        console.log('📋 Plan not in session, fetching from API...');
         const response = await fetch('/api/user/plan');
         
         // Check if the API response is successful
         if (!response.ok) {
+          console.error('❌ Plan API error:', response.status, response.statusText);
           throw new Error(`API error: ${response.status} ${response.statusText}`);
         }
         
         const userPlan = await response.json();
+        console.log('📋 Plan API response:', userPlan);
         
         // Validate that userPlan has the expected structure
         if (!userPlan || typeof userPlan.plan !== 'string') {
+          console.error('❌ Invalid plan data:', userPlan);
           throw new Error('Invalid user plan data received from API');
         }
         
-        console.log('Dashboard routing - User plan:', userPlan.plan, 'for', session?.user?.email);
+        console.log('✅ Dashboard routing - User plan:', userPlan.plan, 'for', session?.user?.email);
         
         // Map any 'premium' plan to 'pro' dashboard since premium dashboard doesn't exist
         const normalizedPlan = userPlan.plan === 'premium' ? 'pro' : userPlan.plan;
