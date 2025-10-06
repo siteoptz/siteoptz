@@ -169,27 +169,83 @@ export const authOptions: NextAuthOptions = {
         session.accessToken = token.accessToken as string
       }
       
-      // EMERGENCY FIX: Force Enterprise plan for Yen Tran
-      if (session?.user?.email === 'yentran.todaysvision@gmail.com') {
-        console.log('🚨 OVERRIDE: Forcing Enterprise plan in session for Yen Tran');
-        (session.user as any).plan = 'enterprise';
-        session.user.name = 'Yen Tran';
-        return session;
-      }
-      
-      // Refresh user name from GoHighLevel if available
+      // Get user plan for ALL users
       if (session?.user?.email) {
         try {
-          const isGHLEnabled = process.env.ENABLE_GHL === 'true';
-          if (isGHLEnabled && process.env.GOHIGHLEVEL_API_KEY && process.env.GOHIGHLEVEL_LOCATION_ID) {
-            const ghlContact = await getContactByEmail(session.user.email);
-            if (ghlContact.exists && ghlContact.name) {
-              session.user.name = ghlContact.name;
-              console.log('🔄 Session refreshed with GHL name:', ghlContact.name);
+          // First, check Stripe for active subscription (highest priority)
+          let userPlan = 'free';
+          let planSource = 'default';
+          
+          // Check Stripe if available
+          if (process.env.STRIPE_SECRET_KEY) {
+            try {
+              const stripe = require('stripe')(process.env.STRIPE_SECRET_KEY);
+              const customers = await stripe.customers.list({
+                email: session.user.email,
+                limit: 1
+              });
+              
+              if (customers.data.length > 0) {
+                const subscriptions = await stripe.subscriptions.list({
+                  customer: customers.data[0].id,
+                  status: 'active',
+                  limit: 1
+                });
+                
+                if (subscriptions.data.length > 0) {
+                  const priceId = subscriptions.data[0].items.data[0].price.id;
+                  
+                  // Map price IDs to plans
+                  if (priceId === process.env.STRIPE_ENTERPRISE_MONTHLY_PRICE_ID || 
+                      priceId === process.env.STRIPE_ENTERPRISE_YEARLY_PRICE_ID) {
+                    userPlan = 'enterprise';
+                    planSource = 'stripe';
+                  } else if (priceId === process.env.STRIPE_PRO_MONTHLY_PRICE_ID || 
+                             priceId === process.env.STRIPE_PRO_YEARLY_PRICE_ID) {
+                    userPlan = 'pro';
+                    planSource = 'stripe';
+                  } else if (priceId === process.env.STRIPE_STARTER_MONTHLY_PRICE_ID || 
+                             priceId === process.env.STRIPE_STARTER_YEARLY_PRICE_ID) {
+                    userPlan = 'starter';
+                    planSource = 'stripe';
+                  }
+                  
+                  console.log(`✅ Stripe plan detected for ${session.user.email}: ${userPlan}`);
+                }
+              }
+            } catch (stripeError) {
+              console.error('Error checking Stripe in session:', stripeError);
             }
           }
+          
+          // If no Stripe plan, check GoHighLevel
+          if (userPlan === 'free' && process.env.ENABLE_GHL === 'true') {
+            try {
+              const ghlContact = await getContactByEmail(session.user.email);
+              if (ghlContact.exists) {
+                if (ghlContact.plan && ghlContact.plan !== 'free') {
+                  userPlan = ghlContact.plan;
+                  planSource = 'ghl';
+                  console.log(`📋 GoHighLevel plan detected for ${session.user.email}: ${userPlan}`);
+                }
+                
+                // Also update name if available
+                if (ghlContact.name) {
+                  session.user.name = ghlContact.name;
+                }
+              }
+            } catch (ghlError) {
+              console.error('Error checking GoHighLevel in session:', ghlError);
+            }
+          }
+          
+          // Add plan to session
+          (session.user as any).plan = userPlan;
+          console.log(`🎯 Final plan for ${session.user.email}: ${userPlan} (source: ${planSource})`);
+          
         } catch (error) {
-          console.error('Error refreshing user name from GHL in session:', error);
+          console.error('Error determining user plan in session:', error);
+          (session.user as any).plan = 'free';
         }
       }
       

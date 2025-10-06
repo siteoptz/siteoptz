@@ -312,8 +312,7 @@ const Header: React.FC = () => {
                         {session?.user?.name || session?.user?.email}
                       </div>
                       <div className="text-xs text-blue-600 font-medium mt-1">
-                        {session?.user?.email === 'yentran.todaysvision@gmail.com' ? 'Enterprise Plan' : 
-                         (session?.user as any)?.plan === 'enterprise' ? 'Enterprise Plan' :
+                        {(session?.user as any)?.plan === 'enterprise' ? 'Enterprise Plan' :
                          (session?.user as any)?.plan === 'pro' ? 'Pro Plan' :
                          (session?.user as any)?.plan === 'starter' ? 'Starter Plan' : 'Free Plan'}
                       </div>
@@ -321,7 +320,7 @@ const Header: React.FC = () => {
 
                     {/* Menu Items */}
                     <div className="py-1">
-                      <Link href="/dashboard/pro" className="flex items-center px-4 py-2 text-gray-700 hover:bg-gray-50 transition-colors">
+                      <Link href={`/dashboard/${(session?.user as any)?.plan || 'free'}`} className="flex items-center px-4 py-2 text-gray-700 hover:bg-gray-50 transition-colors">
                         <User className="w-4 h-4 mr-3" />
                         Dashboard
                       </Link>
@@ -540,15 +539,14 @@ const Header: React.FC = () => {
                         {session?.user?.name || session?.user?.email}
                       </div>
                       <div style={{ color: '#60a5fa', fontSize: '12px', fontWeight: '500' }}>
-                        {session?.user?.email === 'yentran.todaysvision@gmail.com' ? 'Enterprise Plan' : 
-                         (session?.user as any)?.plan === 'enterprise' ? 'Enterprise Plan' :
+                        {(session?.user as any)?.plan === 'enterprise' ? 'Enterprise Plan' :
                          (session?.user as any)?.plan === 'pro' ? 'Pro Plan' :
                          (session?.user as any)?.plan === 'starter' ? 'Starter Plan' : 'Free Plan'}
                       </div>
                     </div>
 
                     {/* Menu Items */}
-                    <Link href="/dashboard/pro" onClick={closeMenu} style={{ 
+                    <Link href={`/dashboard/${(session?.user as any)?.plan || 'free'}`} onClick={closeMenu} style={{ 
                       display: 'flex',
                       alignItems: 'center',
                       gap: '12px',
