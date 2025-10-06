@@ -21,13 +21,24 @@ export default function Dashboard() {
     const fetchUserPlan = async () => {
       try {
         const response = await fetch('/api/user/plan');
+        
+        // Check if the API response is successful
+        if (!response.ok) {
+          throw new Error(`API error: ${response.status} ${response.statusText}`);
+        }
+        
         const userPlan = await response.json();
+        
+        // Validate that userPlan has the expected structure
+        if (!userPlan || typeof userPlan.plan !== 'string') {
+          throw new Error('Invalid user plan data received from API');
+        }
         
         if (['pro', 'premium', 'enterprise'].includes(userPlan.plan)) {
           // Premium users go to plan-specific dashboard
           router.replace(`/dashboard/${userPlan.plan}`);
         } else {
-          // Free/basic users go to plan-specific dashboard
+          // Free/basic users go to plan-specific dashboard  
           router.replace(`/dashboard/${userPlan.plan}`);
         }
       } catch (error) {

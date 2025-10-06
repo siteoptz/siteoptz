@@ -4,9 +4,18 @@ import { authOptions } from '../auth/[...nextauth]';
 import Stripe from 'stripe';
 import { getContactByEmail } from './ghl-lookup';
 
-const stripe = new Stripe(process.env.STRIPE_SECRET_KEY!, {
-  apiVersion: '2025-08-27.basil',
-});
+// Initialize Stripe only if the secret key is available
+let stripe: Stripe | null = null;
+if (process.env.STRIPE_SECRET_KEY) {
+  try {
+    stripe = new Stripe(process.env.STRIPE_SECRET_KEY, {
+      apiVersion: '2025-08-27.basil',
+    });
+  } catch (error) {
+    console.error('Failed to initialize Stripe:', error);
+    stripe = null;
+  }
+}
 
 // Simple in-memory cache with TTL
 const planCache = new Map<string, { data: any; timestamp: number }>();
@@ -63,12 +72,13 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     }
 
     // Then, check Stripe for subscription status (overrides GHL if active subscription exists)
-    try {
-      // Search for existing customer by email
-      const customers = await stripe.customers.list({
-        email: session.user.email!,
-        limit: 1
-      });
+    if (stripe) {
+      try {
+        // Search for existing customer by email
+        const customers = await stripe.customers.list({
+          email: session.user.email!,
+          limit: 1
+        });
 
       if (customers.data.length > 0) {
         const customerId = customers.data[0].id;
@@ -85,14 +95,27 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
           const priceId = subscription.items.data[0].price.id;
           
           // Map price IDs to plan names
-          const priceIdToPlan: { [key: string]: { plan: string; cycle: string } } = {
-            [process.env.STRIPE_STARTER_MONTHLY_PRICE_ID!]: { plan: 'starter', cycle: 'monthly' },
-            [process.env.STRIPE_STARTER_YEARLY_PRICE_ID!]: { plan: 'starter', cycle: 'yearly' },
-            [process.env.STRIPE_PRO_MONTHLY_PRICE_ID!]: { plan: 'pro', cycle: 'monthly' },
-            [process.env.STRIPE_PRO_YEARLY_PRICE_ID!]: { plan: 'pro', cycle: 'yearly' },
-            [process.env.STRIPE_ENTERPRISE_MONTHLY_PRICE_ID!]: { plan: 'enterprise', cycle: 'monthly' },
-            [process.env.STRIPE_ENTERPRISE_YEARLY_PRICE_ID!]: { plan: 'enterprise', cycle: 'yearly' },
-          };
+          const priceIdToPlan: { [key: string]: { plan: string; cycle: string } } = {};
+          
+          // Safely add price IDs only if environment variables exist
+          if (process.env.STRIPE_STARTER_MONTHLY_PRICE_ID) {
+            priceIdToPlan[process.env.STRIPE_STARTER_MONTHLY_PRICE_ID] = { plan: 'starter', cycle: 'monthly' };
+          }
+          if (process.env.STRIPE_STARTER_YEARLY_PRICE_ID) {
+            priceIdToPlan[process.env.STRIPE_STARTER_YEARLY_PRICE_ID] = { plan: 'starter', cycle: 'yearly' };
+          }
+          if (process.env.STRIPE_PRO_MONTHLY_PRICE_ID) {
+            priceIdToPlan[process.env.STRIPE_PRO_MONTHLY_PRICE_ID] = { plan: 'pro', cycle: 'monthly' };
+          }
+          if (process.env.STRIPE_PRO_YEARLY_PRICE_ID) {
+            priceIdToPlan[process.env.STRIPE_PRO_YEARLY_PRICE_ID] = { plan: 'pro', cycle: 'yearly' };
+          }
+          if (process.env.STRIPE_ENTERPRISE_MONTHLY_PRICE_ID) {
+            priceIdToPlan[process.env.STRIPE_ENTERPRISE_MONTHLY_PRICE_ID] = { plan: 'enterprise', cycle: 'monthly' };
+          }
+          if (process.env.STRIPE_ENTERPRISE_YEARLY_PRICE_ID) {
+            priceIdToPlan[process.env.STRIPE_ENTERPRISE_YEARLY_PRICE_ID] = { plan: 'enterprise', cycle: 'yearly' };
+          }
 
           const planInfo = priceIdToPlan[priceId];
           if (planInfo) {
@@ -104,9 +127,12 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
           subscriptionStatus = subscription.status;
         }
       }
-    } catch (stripeError) {
-      console.error('Error checking Stripe subscription:', stripeError);
-      // Fall back to free plan if Stripe check fails
+      } catch (stripeError) {
+        console.error('Error checking Stripe subscription:', stripeError);
+        // Fall back to free plan if Stripe check fails
+      }
+    } else {
+      console.log('⚠️ Stripe not available - missing STRIPE_SECRET_KEY environment variable');
     }
 
     // Get plan-specific configuration
