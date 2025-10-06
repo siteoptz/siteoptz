@@ -75,7 +75,7 @@ const LoginModal: React.FC<LoginModalProps> = ({ isOpen, onClose, isNewUser = fa
     
     try {
       const result = await signIn('google', {
-        callbackUrl: '/dashboard/pro',
+        callbackUrl: '/dashboard',
         redirect: false,
       });
       

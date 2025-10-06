@@ -228,10 +228,10 @@ const RegisterModal: React.FC<RegisterModalProps> = ({
       }
       
       console.log('🔵 Initiating Google OAuth, isLogin:', isLogin);
-      console.log('🔵 Callback URL will be:', isLogin ? '/dashboard/pro' : '/dashboard/pro?registration=true');
+      console.log('🔵 Callback URL will be:', isLogin ? '/dashboard' : '/dashboard?registration=true');
       
       const result = await signIn('google', {
-        callbackUrl: isLogin ? '/dashboard/pro' : '/dashboard/pro?registration=true',
+        callbackUrl: isLogin ? '/dashboard' : '/dashboard?registration=true',
         redirect: true, // Allow NextAuth to handle redirect
       });
       

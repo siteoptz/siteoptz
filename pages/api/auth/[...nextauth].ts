@@ -372,8 +372,8 @@ export const authOptions: NextAuthOptions = {
         return `${baseUrl}/dashboard/white-label`
       }
       
-      // For PRO users, redirect to PRO dashboard
-      return `${baseUrl}/dashboard/pro`
+      // Use smart dashboard that checks user plan and redirects accordingly
+      return `${baseUrl}/dashboard`
     },
   },
   pages: {
