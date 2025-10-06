@@ -77,9 +77,10 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       console.error('Error checking GoHighLevel for plan:', ghlError);
     }
 
-    // Then, check Stripe for subscription status (overrides GHL if active subscription exists)
+    // Then, check Stripe for subscription status (ALWAYS overrides GHL if active subscription exists)
     if (stripe) {
       try {
+        console.log('🔍 Checking Stripe for subscription:', session.user.email);
         // Search for existing customer by email
         const customers = await stripe.customers.list({
           email: session.user.email!,
@@ -88,6 +89,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 
       if (customers.data.length > 0) {
         const customerId = customers.data[0].id;
+        console.log('✅ Found Stripe customer:', customerId);
         
         // Get active subscriptions
         const subscriptions = await stripe.subscriptions.list({
@@ -99,6 +101,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
         if (subscriptions.data.length > 0) {
           const subscription = subscriptions.data[0];
           const priceId = subscription.items.data[0].price.id;
+          console.log('✅ Found active subscription with price ID:', priceId);
           
           // Map price IDs to plan names
           const priceIdToPlan: { [key: string]: { plan: string; cycle: string } } = {};
@@ -251,6 +254,9 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       data: userPlan,
       timestamp: Date.now()
     });
+    
+    console.log('📋 Final plan being returned for', session.user.email, ':', actualPlan);
+    console.log('📋 Stripe overrode GHL:', actualPlan !== (ghlContact?.plan || 'free'));
 
     res.status(200).json(userPlan);
   } catch (error) {
