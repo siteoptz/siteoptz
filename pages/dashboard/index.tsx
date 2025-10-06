@@ -1,7 +1,7 @@
 import { GetServerSideProps } from 'next';
 import { getServerSession } from 'next-auth/next';
 import { authOptions } from '../api/auth/[...nextauth]';
-import { getUserPlan } from '../../utils/planAccessControl';
+import { getUserPlan, UserPlan } from '../../utils/planAccessControl';
 
 // This is a server-side router that redirects to the correct dashboard
 // It runs on the server, so no client-side errors can occur
@@ -33,12 +33,12 @@ export const getServerSideProps: GetServerSideProps = async (context) => {
     const userPlan = await getUserPlan(session.user.email);
     console.log(`✅ User plan detected: ${userPlan} for ${session.user.email}`);
     
-    // Handle premium as pro (legacy support)
-    const normalizedPlan = userPlan === 'premium' ? 'pro' : userPlan;
+    // UserPlan type is 'free' | 'starter' | 'pro' | 'enterprise'
+    // No normalization needed since 'premium' isn't a valid plan anymore
     
-    // Validate plan
-    const validPlans = ['free', 'starter', 'pro', 'enterprise'];
-    const finalPlan = validPlans.includes(normalizedPlan) ? normalizedPlan : 'free';
+    // Validate plan (should always be valid from getUserPlan)
+    const validPlans: UserPlan[] = ['free', 'starter', 'pro', 'enterprise'];
+    const finalPlan = validPlans.includes(userPlan) ? userPlan : 'free';
     
     console.log(`🎯 Redirecting to /dashboard/${finalPlan}`);
     
