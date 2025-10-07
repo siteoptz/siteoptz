@@ -481,8 +481,29 @@ export default function ProDashboard({
 }
 
 export const getServerSideProps: GetServerSideProps = async (context) => {
-  const { tab } = context.query;
+  const { tab, sso_token } = context.query;
   const activeTab = (tab as string) || 'overview';
+
+  // Handle SSO token if present
+  if (sso_token && typeof sso_token === 'string') {
+    try {
+      // Validate the SSO token
+      const { validateSSOToken } = await import('../../../pages/api/optz/generate-sso-token');
+      const tokenData = validateSSOToken(sso_token);
+      
+      if (tokenData) {
+        console.log('Valid SSO token for user:', tokenData.email);
+        // Token is valid, continue with normal dashboard loading
+        // The user will be logged in automatically via their existing session
+      } else {
+        console.log('Invalid or expired SSO token');
+        // Invalid token, but continue with normal auth flow
+      }
+    } catch (error) {
+      console.error('SSO token validation error:', error);
+      // Continue with normal auth flow
+    }
+  }
 
   // Get dashboard props with Pro plan requirement
   const dashboardProps = await getCleanDashboardProps(context, 'pro');

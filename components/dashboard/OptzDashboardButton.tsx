@@ -55,7 +55,7 @@ export const OptzDashboardButton: React.FC<OptzDashboardButtonProps> = ({
       const ssoResult = await ssoResponse.json();
       
       if (ssoResult.success && ssoResult.loginUrl) {
-        // Redirect to white-label dashboard with SSO token
+        // Direct redirect to the generated login URL (now pointing to main domain)
         window.open(ssoResult.loginUrl, '_blank');
       } else {
         // If SSO fails, redirect to main dashboard as fallback
