@@ -26,8 +26,15 @@ export const OptzDashboardButton: React.FC<OptzDashboardButtonProps> = ({
     
     if (!session?.user?.email) {
       setError('Please log in to access your dashboard');
+      // For now, just redirect to the dashboard directly
+      window.location.href = `/dashboard/${userPlan}`;
       return;
     }
+
+    // TEMPORARY: Direct redirect to dashboard while we debug
+    console.log('Direct redirect to dashboard for:', session.user.email);
+    window.location.href = `/dashboard/${userPlan}?email=${encodeURIComponent(session.user.email)}&direct=true`;
+    return;
 
     setIsLoading(true);
     setError(null);
