@@ -107,7 +107,7 @@ export default function SSOAuth({ token, error }: SSOAuthProps) {
                 <XCircle className="w-12 h-12 text-red-400" />
                 <p className="text-red-400 text-center">{message}</p>
                 <p className="text-gray-400 text-sm text-center">
-                  Don't worry! You can still access your dashboard using the options below.
+                  Don&apos;t worry! You can still access your dashboard using the options below.
                 </p>
                 <div className="flex flex-col space-y-3 w-full">
                   <button
