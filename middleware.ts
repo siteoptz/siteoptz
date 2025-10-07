@@ -3,6 +3,43 @@ import type { NextRequest } from 'next/server'
 
 export function middleware(request: NextRequest) {
   const pathname = request.nextUrl.pathname
+  const hostname = request.headers.get('host') || ''
+  
+  // Handle optz subdomain routing
+  if (hostname === 'optz.siteoptz.ai') {
+    console.log('Optz subdomain detected:', pathname);
+    
+    // Handle root path
+    if (pathname === '/') {
+      const url = request.nextUrl.clone();
+      url.pathname = '/optz';
+      return NextResponse.rewrite(url);
+    }
+    
+    // Handle auth routes
+    if (pathname.startsWith('/auth/')) {
+      const url = request.nextUrl.clone();
+      url.pathname = pathname.replace('/auth/', '/optz/auth/');
+      console.log('Rewriting auth route:', pathname, '→', url.pathname);
+      return NextResponse.rewrite(url);
+    }
+    
+    // Handle dashboard routes
+    if (pathname.startsWith('/dashboard')) {
+      const url = request.nextUrl.clone();
+      url.pathname = pathname.replace('/dashboard', '/optz/dashboard');
+      console.log('Rewriting dashboard route:', pathname, '→', url.pathname);
+      return NextResponse.rewrite(url);
+    }
+    
+    // Handle any other routes (except API and Next.js internal routes)
+    if (!pathname.startsWith('/optz/') && !pathname.startsWith('/api/') && !pathname.startsWith('/_next/')) {
+      const url = request.nextUrl.clone();
+      url.pathname = '/optz' + pathname;
+      console.log('Rewriting general route:', pathname, '→', url.pathname);
+      return NextResponse.rewrite(url);
+    }
+  }
   
   // Handle incorrect compare URL formats
   if (pathname.startsWith('/compare/')) {
@@ -72,7 +109,7 @@ export function middleware(request: NextRequest) {
 // Configure which paths the middleware should run on
 export const config = {
   matcher: [
-    // Only match compare routes - remove the broad matcher that was affecting other pages
-    '/compare/:path*',
+    // Match all routes for subdomain handling, but exclude static files and API routes
+    '/((?!api|_next/static|_next/image|favicon.ico).*)',
   ]
 }

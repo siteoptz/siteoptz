@@ -197,65 +197,7 @@ const nextConfig = {
   },
 
 
-  // Subdomain routing configuration for white label solution
-  async rewrites() {
-    return {
-      beforeFiles: [
-        // Handle optz.siteoptz.ai subdomain - map all routes to optz directory
-        {
-          source: '/',
-          destination: '/optz',
-          has: [
-            {
-              type: 'host',
-              value: 'optz.siteoptz.ai',
-            },
-          ],
-        },
-        {
-          source: '/dashboard/:path*',
-          destination: '/optz/dashboard/:path*',
-          has: [
-            {
-              type: 'host',
-              value: 'optz.siteoptz.ai',
-            },
-          ],
-        },
-        {
-          source: '/auth/:path*',
-          destination: '/optz/auth/:path*',
-          has: [
-            {
-              type: 'host',
-              value: 'optz.siteoptz.ai',
-            },
-          ],
-        },
-        {
-          source: '/api/:path*',
-          destination: '/api/:path*',
-          has: [
-            {
-              type: 'host',
-              value: 'optz.siteoptz.ai',
-            },
-          ],
-        },
-        // Catch-all for any other routes on optz subdomain
-        {
-          source: '/:path*',
-          destination: '/optz/:path*',
-          has: [
-            {
-              type: 'host',
-              value: 'optz.siteoptz.ai',
-            },
-          ],
-        },
-      ],
-    };
-  },
+  // Subdomain routing now handled in middleware.ts
 
   // Optimized redirects using pattern matching
   // Reduces thousands of individual redirects to just a few patterns
