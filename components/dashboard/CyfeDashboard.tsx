@@ -120,6 +120,9 @@ export const CyfeDashboard: React.FC<CyfeDashboardProps> = ({
               <div
                 key={key}
                 onClick={() => isAccessible && setSelectedDashboard(key)}
+                onKeyDown={(e) => e.key === 'Enter' && isAccessible && setSelectedDashboard(key)}
+                role="button"
+                tabIndex={0}
                 className={`
                   relative bg-black border rounded-lg p-4 transition-all cursor-pointer
                   ${isSelected ? 'border-cyan-500 shadow-lg shadow-cyan-500/20' : 'border-gray-800'}
@@ -330,7 +333,7 @@ export const CyfeDashboard: React.FC<CyfeDashboardProps> = ({
               </p>
               
               <div className="mb-8">
-                <h4 className="text-sm font-semibold text-gray-400 mb-4 uppercase">What you'll get:</h4>
+                <h4 className="text-sm font-semibold text-gray-400 mb-4 uppercase">What you&apos;ll get:</h4>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-3 max-w-2xl mx-auto text-left">
                   {dashboard.features.slice(0, 6).map((feature, index) => (
                     <div key={index} className="flex items-center text-gray-300">
