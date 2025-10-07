@@ -189,6 +189,7 @@ export default function StarterDashboard() {
                 </div>
                 <button
                   onClick={() => setActiveTab('cyfe-dashboards')}
+                  onKeyDown={(e) => e.key === 'Enter' && setActiveTab('cyfe-dashboards')}
                   className="bg-gradient-to-r from-cyan-600 to-blue-600 text-white px-6 py-2 rounded-lg hover:from-cyan-700 hover:to-blue-700 transition-all duration-200 font-medium flex items-center"
                 >
                   Open Dashboards
