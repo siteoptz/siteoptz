@@ -201,7 +201,7 @@ const nextConfig = {
   async rewrites() {
     return {
       beforeFiles: [
-        // Handle optz.siteoptz.ai subdomain - redirect to white label solution
+        // Handle optz.siteoptz.ai subdomain - map all routes to optz directory
         {
           source: '/',
           destination: '/optz',
@@ -214,7 +214,17 @@ const nextConfig = {
         },
         {
           source: '/dashboard/:path*',
-          destination: '/dashboard/:path*',
+          destination: '/optz/dashboard/:path*',
+          has: [
+            {
+              type: 'host',
+              value: 'optz.siteoptz.ai',
+            },
+          ],
+        },
+        {
+          source: '/auth/:path*',
+          destination: '/optz/auth/:path*',
           has: [
             {
               type: 'host',
@@ -225,6 +235,17 @@ const nextConfig = {
         {
           source: '/api/:path*',
           destination: '/api/:path*',
+          has: [
+            {
+              type: 'host',
+              value: 'optz.siteoptz.ai',
+            },
+          ],
+        },
+        // Catch-all for any other routes on optz subdomain
+        {
+          source: '/:path*',
+          destination: '/optz/:path*',
           has: [
             {
               type: 'host',
