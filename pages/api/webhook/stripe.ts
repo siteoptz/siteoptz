@@ -57,6 +57,13 @@ async function handleStripeUpgrade(customer: Stripe.Customer, plan: string, bill
   }
 }
 
+// Helper function to extract company name from email
+function extractCompanyFromEmail(email: string): string {
+  const domain = email.split('@')[1];
+  const company = domain.split('.')[0];
+  return company.charAt(0).toUpperCase() + company.slice(1);
+}
+
 // Legacy functions kept for backward compatibility but no longer used
 // New conditional logic handles all email sending in handleStripeUpgrade()
 
@@ -135,6 +142,26 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
             const upgradeResult = await handleStripeUpgrade(customer, planInfo.plan, planInfo.cycle);
             console.log('Stripe upgrade result:', upgradeResult);
             
+            // Auto-provision white-label client account
+            if (upgradeResult.success && customer.email) {
+              try {
+                const provisionResponse = await fetch(`${process.env.NEXTAUTH_URL}/api/optz/provision-client`, {
+                  method: 'POST',
+                  headers: { 'Content-Type': 'application/json' },
+                  body: JSON.stringify({
+                    email: customer.email,
+                    plan: planInfo.plan,
+                    companyName: customer.name || extractCompanyFromEmail(customer.email)
+                  })
+                });
+                
+                const provisionResult = await provisionResponse.json();
+                console.log('White-label client provision result:', provisionResult);
+              } catch (provisionError) {
+                console.error('Failed to provision white-label client:', provisionError);
+              }
+            }
+            
             console.log('=== STRIPE UPGRADE PROCESSING COMPLETED ===');
             if (upgradeResult.success) {
               if (upgradeResult.isNewUser) {
@@ -179,6 +206,26 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
           // Use conditional logic for plan update processing
           const updateResult = await handleStripeUpgrade(customer, planInfo.plan, planInfo.cycle);
           console.log('Stripe plan update result:', updateResult);
+          
+          // Auto-provision/update white-label client account for plan changes
+          if (updateResult.success && customer.email) {
+            try {
+              const provisionResponse = await fetch(`${process.env.NEXTAUTH_URL}/api/optz/provision-client`, {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({
+                  email: customer.email,
+                  plan: planInfo.plan,
+                  companyName: customer.name || extractCompanyFromEmail(customer.email)
+                })
+              });
+              
+              const provisionResult = await provisionResponse.json();
+              console.log('White-label client provision result (plan update):', provisionResult);
+            } catch (provisionError) {
+              console.error('Failed to provision white-label client on plan update:', provisionError);
+            }
+          }
           
           console.log('=== STRIPE PLAN UPDATE PROCESSING COMPLETED ===');
           if (updateResult.success) {

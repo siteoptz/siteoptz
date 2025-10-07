@@ -7,6 +7,7 @@ import { DashboardHeader } from '../../components/dashboard/DashboardHeader';
 import { FeatureGate } from '../../components/FeatureGate';
 import { UpgradePrompt } from '../../components/UpgradePrompt';
 import FreePlanContent from '../../components/dashboard/FreePlanContent';
+import { OptzDashboardButton } from '../../components/dashboard/OptzDashboardButton';
 import { 
   Search, 
   Calendar, 
@@ -66,6 +67,11 @@ export default function FreeDashboard() {
           <p className="text-gray-300">
             Discover AI tools and unlock your potential. Upgrade to get unlimited access!
           </p>
+        </div>
+
+        {/* Dashboard Access */}
+        <div className="mb-8">
+          <OptzDashboardButton userPlan="free" />
         </div>
 
         {/* Daily Usage Overview */}

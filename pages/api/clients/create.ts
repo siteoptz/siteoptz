@@ -30,6 +30,19 @@ interface CyfeClient {
 // In production, this would be stored in a database
 const clientsDB: CyfeClient[] = [];
 
+// Export functions for use by other APIs
+export const createOptzClient = async (clientData: any) => {
+  try {
+    return await createClientInternal(clientData);
+  } catch (error) {
+    return { success: false, error: error instanceof Error ? error.message : 'Unknown error' };
+  }
+};
+
+export const getClientByEmail = async (email: string): Promise<CyfeClient | null> => {
+  return clientsDB.find(client => client.email === email) || null;
+};
+
 // Email transporter configuration
 const createEmailTransporter = () => {
   return nodemailer.createTransport({
@@ -115,6 +128,90 @@ const sendWelcomeEmail = async (client: {
   }
 };
 
+// Internal client creation function (reusable)
+const createClientInternal = async (clientData: any, createdBy?: string) => {
+  const { 
+    email, 
+    companyName, 
+    plan = 'trial',
+    sendCredentials = true,
+    customUsername,
+    dashboardAccess = ['basic'],
+    isAutoProvisioned = false
+  } = clientData;
+
+  // Validate input
+  if (!email || !companyName) {
+    throw new Error('Email and company name are required');
+  }
+
+  // Check if client already exists
+  const existingClient = clientsDB.find(c => c.email === email);
+  if (existingClient) {
+    throw new Error('Client with this email already exists');
+  }
+
+  // Generate credentials
+  const username = customUsername || email.split('@')[0] + '_' + nanoid(4);
+  const plainPassword = generatePassword();
+  const hashedPassword = await bcrypt.hash(plainPassword, 10);
+  const apiKey = 'cyfe_' + nanoid(32);
+
+  // Create new client
+  const newClient: CyfeClient = {
+    id: nanoid(),
+    email,
+    username,
+    password: hashedPassword,
+    companyName,
+    plan,
+    dashboardAccess,
+    createdAt: new Date(),
+    createdBy: createdBy || 'system',
+    isActive: true,
+    apiKey,
+    whitelabelSettings: {
+      companyBranding: plan === 'enterprise',
+      primaryColor: '#667eea',
+    }
+  };
+
+  // Save to database (in production, use actual database)
+  clientsDB.push(newClient);
+
+  // Send welcome email if requested
+  if (sendCredentials && !isAutoProvisioned) {
+    try {
+      await sendWelcomeEmail({
+        email,
+        username,
+        password: plainPassword,
+        companyName
+      });
+    } catch (emailError) {
+      console.error('Failed to send welcome email:', emailError);
+      // Continue even if email fails
+    }
+  }
+
+  // Log the activity
+  console.log(`New Cyfe client created: ${email} by ${createdBy || 'system'}`);
+
+  return {
+    success: true,
+    client: {
+      id: newClient.id,
+      email: newClient.email,
+      username: newClient.username,
+      companyName: newClient.companyName,
+      plan: newClient.plan,
+      dashboardAccess: newClient.dashboardAccess,
+      apiKey: newClient.apiKey,
+      credentials: isAutoProvisioned ? null : { username, password: plainPassword }
+    }
+  };
+};
+
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method !== 'POST') {
     return res.status(405).json({ error: 'Method not allowed' });
@@ -126,104 +223,19 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     return res.status(401).json({ error: 'Unauthorized' });
   }
 
-  // Check if user has admin privileges (you might want to add role checking)
-  // For now, we'll allow any authenticated user to create clients
-
   try {
-    const { 
-      email, 
-      companyName, 
-      plan = 'trial',
-      sendCredentials = true,
-      customUsername,
-      dashboardAccess = ['basic']
-    } = req.body;
-
-    // Validate input
-    if (!email || !companyName) {
-      return res.status(400).json({ error: 'Email and company name are required' });
-    }
-
-    // Check if client already exists
-    const existingClient = clientsDB.find(c => c.email === email);
-    if (existingClient) {
-      return res.status(409).json({ error: 'Client with this email already exists' });
-    }
-
-    // Generate credentials
-    const username = customUsername || email.split('@')[0] + '_' + nanoid(4);
-    const plainPassword = generatePassword();
-    const hashedPassword = await bcrypt.hash(plainPassword, 10);
-    const apiKey = 'cyfe_' + nanoid(32);
-
-    // Create new client
-    const newClient: CyfeClient = {
-      id: nanoid(),
-      email,
-      username,
-      password: hashedPassword,
-      companyName,
-      plan,
-      dashboardAccess,
-      createdAt: new Date(),
-      createdBy: session.user.email,
-      isActive: true,
-      apiKey,
-      whitelabelSettings: {
-        companyBranding: plan === 'enterprise',
-        primaryColor: '#667eea',
-      }
-    };
-
-    // Save to database (in production, use actual database)
-    clientsDB.push(newClient);
-
-    // Send welcome email if requested
-    if (sendCredentials) {
-      try {
-        await sendWelcomeEmail({
-          email,
-          username,
-          password: plainPassword,
-          companyName
-        });
-      } catch (emailError) {
-        console.error('Failed to send welcome email:', emailError);
-        // Continue even if email fails
-      }
-    }
-
-    // Log the activity
-    console.log(`New Cyfe client created: ${email} by ${session.user.email}`);
-
-    // Return success response
-    return res.status(201).json({
-      success: true,
-      client: {
-        id: newClient.id,
-        email: newClient.email,
-        username: newClient.username,
-        companyName: newClient.companyName,
-        plan: newClient.plan,
-        dashboardAccess: newClient.dashboardAccess,
-        apiKey: newClient.apiKey,
-        createdAt: newClient.createdAt,
-        temporaryPassword: sendCredentials ? plainPassword : undefined,
-        dashboardUrl: 'https://optz.siteoptz.ai'
-      },
-      message: sendCredentials 
-        ? 'Client created successfully. Credentials have been sent via email.'
-        : 'Client created successfully.'
-    });
+    const result = await createClientInternal(req.body, session.user.email);
+    return res.status(201).json(result);
 
   } catch (error) {
     console.error('Error creating client:', error);
     return res.status(500).json({ 
+      success: false,
       error: 'Failed to create client',
       details: error instanceof Error ? error.message : 'Unknown error'
     });
   }
-}
+};
 
 // Helper function to get all clients (for admin dashboard)
 export async function getAllClients(createdBy?: string): Promise<CyfeClient[]> {

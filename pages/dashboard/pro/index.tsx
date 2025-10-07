@@ -6,6 +6,7 @@ import { CleanDashboardHeader } from '@/components/dashboard/CleanDashboardHeade
 import CleanMarketingROIDashboard from '@/components/dashboard/CleanMarketingROIDashboard';
 import { getGoogleAdsDataServerSide, getGoogleAdsConnectionServerSide } from '@/lib/clean-google-ads';
 import CyfeDashboard from '@/components/dashboard/CyfeDashboard';
+import { OptzDashboardButton } from '@/components/dashboard/OptzDashboardButton';
 import {
   BarChart3,
   BarChart2,
@@ -271,6 +272,9 @@ export default function ProDashboard({
         return (
           <div className="space-y-6">
             <h2 className="text-2xl font-bold text-white">Pro Dashboard Overview</h2>
+            
+            {/* Dashboard Access */}
+            <OptzDashboardButton userPlan="pro" />
             
             {/* Welcome Section */}
             <div className="bg-gradient-to-r from-purple-900/20 to-blue-900/20 border border-purple-500/30 rounded-xl p-6">

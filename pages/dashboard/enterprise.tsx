@@ -5,6 +5,7 @@ import { authOptions } from '../api/auth/[...nextauth]';
 import { useUserPlan } from '../../hooks/useUserPlan';
 import { DashboardHeader } from '../../components/dashboard/DashboardHeader';
 import { getDashboardContent } from '../../content/dashboard-marketing-content';
+import { OptzDashboardButton } from '../../components/dashboard/OptzDashboardButton';
 import { 
   Calendar, 
   Users, 
@@ -174,6 +175,8 @@ export default function EnterpriseDashboard() {
         {/* Overview Tab */}
         {activeTab === 'overview' && (
           <div className="space-y-8">
+            {/* Dashboard Access */}
+            <OptzDashboardButton userPlan="enterprise" />
             {/* Unlimited Executive Advisory */}
             <div className="bg-black border border-gray-800 rounded-xl p-8">
               <div className="flex items-center mb-6">

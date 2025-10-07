@@ -8,6 +8,7 @@ import { DashboardHeader } from '../../components/dashboard/DashboardHeader';
 import { FeatureGate } from '../../components/FeatureGate';
 import { UpgradePrompt } from '../../components/UpgradePrompt';
 import CyfeDashboard from '../../components/dashboard/CyfeDashboard';
+import { OptzDashboardButton } from '../../components/dashboard/OptzDashboardButton';
 import { 
   Search, 
   Calendar, 
@@ -164,6 +165,8 @@ export default function StarterDashboard() {
         {/* Overview Tab */}
         {activeTab === 'overview' && (
           <div className="space-y-8">
+            {/* Dashboard Access */}
+            <OptzDashboardButton userPlan="starter" />
             {/* Featured Dashboard Access Card */}
             <div className="bg-gradient-to-r from-cyan-500/10 via-blue-500/10 to-purple-500/10 border border-cyan-500/30 rounded-xl p-6">
               <div className="flex items-center justify-between">

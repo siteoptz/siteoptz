@@ -1,8 +1,15 @@
-# Cyfe White-Label Client Management System
+# Cyfe White-Label Client Management System (Integrated with SiteOptz Plans)
 
 ## Overview
 
-This system provides a complete solution for creating and managing client accounts for the Cyfe white-label dashboard at `https://optz.siteoptz.ai/`. Administrators can create client accounts, generate credentials, and manage access to different dashboard tiers.
+This system provides a **fully integrated solution** connecting SiteOptz subscription plans with white-label Cyfe dashboard access. When users subscribe to plans on siteoptz.ai, they automatically get provisioned with dashboard accounts on optz.siteoptz.ai based on their plan tier.
+
+### 🔄 **Automated Integration Flow**
+1. **User subscribes** to a plan on siteoptz.ai (free/starter/pro/enterprise)
+2. **Stripe webhook** automatically provisions white-label client account
+3. **User clicks "Dashboard" button** on their plan dashboard
+4. **SSO authentication** logs them directly into optz.siteoptz.ai
+5. **Tier-based access** shows dashboards based on their subscription level
 
 ## System Components
 
