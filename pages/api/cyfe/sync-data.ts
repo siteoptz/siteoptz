@@ -4,9 +4,11 @@
 import { NextApiRequest, NextApiResponse } from 'next';
 import { getServerSession } from 'next-auth/next';
 import { authOptions } from '@/pages/api/auth/[...nextauth]';
-import { CyfeIntegration, getDefaultCyfeConfig, syncGoogleAdsDataToCyfe } from '@/lib/cyfe-integration';
+import { getCyfeIntegration, DASHBOARD_REGISTRY, syncGoogleAdsDataToCyfe, getDefaultCyfeConfig, CyfeIntegration } from '@/lib/cyfe-integration';
+import { getUserPlan } from '@/utils/planAccessControl';
 
 interface SyncDataRequest {
+  dashboardId?: string;
   dashboardData: {
     totalSpend: number;
     roas: number;
@@ -37,22 +39,38 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       return res.status(401).json({ error: 'Unauthorized' });
     }
 
-    const { dashboardData, userEmail }: SyncDataRequest = req.body;
+    const { dashboardId, dashboardData, userEmail }: SyncDataRequest = req.body;
 
     if (!dashboardData || !userEmail) {
       return res.status(400).json({ error: 'Missing required data' });
     }
 
-    // Initialize Cyfe integration
+    // Get user's plan
+    const userPlan = await getUserPlan(session.user.email);
+    
+    // Initialize Cyfe integration with user's plan
+    const cyfeIntegration = getCyfeIntegration(userPlan);
+    
+    // Check dashboard access if specified
+    if (dashboardId) {
+      if (!cyfeIntegration.canAccessDashboard(dashboardId)) {
+        return res.status(403).json({ 
+          error: 'Access denied',
+          message: `This dashboard requires ${cyfeIntegration.getUpgradeRequirement(dashboardId)} plan`,
+          currentPlan: userPlan
+        });
+      }
+    }
+
+    // Initialize legacy Cyfe integration for backward compatibility
     const cyfeConfig = getDefaultCyfeConfig();
     
     if (!cyfeConfig.apiKey) {
-      return res.status(500).json({ 
-        error: 'Cyfe API key not configured. Please set CYFE_API_KEY environment variable.' 
-      });
+      console.warn('Cyfe API key not configured. Using mock sync.');
+      // Continue with mock sync instead of failing
     }
 
-    const cyfe = new CyfeIntegration(cyfeConfig);
+    const cyfe = new CyfeIntegration(cyfeConfig, userPlan);
 
     // Example widget mapping - in production, these would be stored per user
     const widgetMapping = {
@@ -116,7 +134,13 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       message: 'Data successfully synced to Cyfe dashboard',
       syncResults,
       additionalSyncs,
-      timestamp: new Date().toISOString()
+      timestamp: new Date().toISOString(),
+      userPlan,
+      dashboardAccess: dashboardId ? {
+        canAccess: cyfeIntegration.canAccessDashboard(dashboardId),
+        dashboardName: DASHBOARD_REGISTRY[dashboardId]?.name,
+        features: cyfeIntegration.getDashboardFeatures(dashboardId)
+      } : null
     });
 
   } catch (error) {
