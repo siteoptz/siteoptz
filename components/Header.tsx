@@ -74,9 +74,11 @@ const Header: React.FC = () => {
   const [showUserDropdown, setShowUserDropdown] = useState(false);
   const router = useRouter();
   const { data: session, status } = useSession();
-  // Simple session state management
+  // Simple session state management with timeout
+  const [hasSessionTimeout, setHasSessionTimeout] = useState(false);
+  const [isMounted, setIsMounted] = useState(false);
   const isAuthenticated = status === 'authenticated' && !!session?.user;
-  const isLoading = status === 'loading';
+  const isLoading = isMounted && status === 'loading' && !hasSessionTimeout;
   
   // Default to 'free' plan for header navigation - specific plan logic handled server-side
   const plan = 'free';
@@ -180,6 +182,11 @@ const Header: React.FC = () => {
     });
   };
 
+  // Handle component mount to avoid SSR hydration issues
+  useEffect(() => {
+    setIsMounted(true);
+  }, []);
+
   // Handle scroll effect for header
   useEffect(() => {
     const handleScroll = () => {
@@ -189,6 +196,19 @@ const Header: React.FC = () => {
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
+
+  // Session timeout to prevent infinite loading
+  useEffect(() => {
+    if (status === 'loading') {
+      const timer = setTimeout(() => {
+        setHasSessionTimeout(true);
+      }, 1000); // 1 second timeout
+
+      return () => clearTimeout(timer);
+    } else {
+      setHasSessionTimeout(false);
+    }
+  }, [status]);
 
   // Close user dropdown when clicking outside
   useEffect(() => {
