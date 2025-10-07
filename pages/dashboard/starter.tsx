@@ -90,6 +90,7 @@ export default function StarterDashboard() {
             <nav className="-mb-px flex space-x-6">
               <button
                 onClick={() => setActiveTab('overview')}
+                onKeyDown={(e) => e.key === 'Enter' && setActiveTab('overview')}
                 className={`py-2 px-1 border-b-2 font-medium text-sm ${
                   activeTab === 'overview'
                     ? 'border-blue-400 text-blue-400'
@@ -101,6 +102,7 @@ export default function StarterDashboard() {
               
               <button
                 onClick={() => setActiveTab('cyfe-dashboards')}
+                onKeyDown={(e) => e.key === 'Enter' && setActiveTab('cyfe-dashboards')}
                 className={`relative py-2 px-3 border-b-2 font-medium text-sm flex items-center space-x-2 ${
                   activeTab === 'cyfe-dashboards'
                     ? 'border-cyan-400 text-cyan-400 bg-cyan-400/10'
@@ -116,6 +118,7 @@ export default function StarterDashboard() {
               
               <button
                 onClick={() => setActiveTab('comparisons')}
+                onKeyDown={(e) => e.key === 'Enter' && setActiveTab('comparisons')}
                 className={`py-2 px-1 border-b-2 font-medium text-sm ${
                   activeTab === 'comparisons'
                     ? 'border-blue-400 text-blue-400'
@@ -127,6 +130,7 @@ export default function StarterDashboard() {
               
               <button
                 onClick={() => setActiveTab('analytics')}
+                onKeyDown={(e) => e.key === 'Enter' && setActiveTab('analytics')}
                 className={`py-2 px-1 border-b-2 font-medium text-sm ${
                   activeTab === 'analytics'
                     ? 'border-blue-400 text-blue-400'
@@ -138,6 +142,7 @@ export default function StarterDashboard() {
               
               <button
                 onClick={() => setActiveTab('guides')}
+                onKeyDown={(e) => e.key === 'Enter' && setActiveTab('guides')}
                 className={`py-2 px-1 border-b-2 font-medium text-sm ${
                   activeTab === 'guides'
                     ? 'border-blue-400 text-blue-400'
@@ -149,6 +154,7 @@ export default function StarterDashboard() {
               
               <button
                 onClick={() => setActiveTab('webinars')}
+                onKeyDown={(e) => e.key === 'Enter' && setActiveTab('webinars')}
                 className={`py-2 px-1 border-b-2 font-medium text-sm ${
                   activeTab === 'webinars'
                     ? 'border-blue-400 text-blue-400'
