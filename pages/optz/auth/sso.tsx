@@ -66,6 +66,13 @@ export default function SSOAuth({ token, error }: SSOAuthProps) {
     router.push('/optz');
   };
 
+  const handleFallbackDashboard = () => {
+    // Get user plan from session or URL params
+    const plan = router.query.plan || 'starter';
+    const fallbackUrl = `https://siteoptz.ai/dashboard/${plan}?utm_source=optz_fallback&utm_medium=sso_error`;
+    window.location.href = fallbackUrl;
+  };
+
   return (
     <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-black flex items-center justify-center p-4">
       <div className="max-w-md w-full">
@@ -98,14 +105,26 @@ export default function SSOAuth({ token, error }: SSOAuthProps) {
             {status === 'error' && (
               <div className="flex flex-col items-center space-y-4">
                 <XCircle className="w-12 h-12 text-red-400" />
-                <p className="text-red-400">{message}</p>
-                <button
-                  onClick={handleManualLogin}
-                  className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 
-                           text-white font-medium py-2 px-6 rounded-lg transition-all duration-200"
-                >
-                  Go to Login Page
-                </button>
+                <p className="text-red-400 text-center">{message}</p>
+                <p className="text-gray-400 text-sm text-center">
+                  Don't worry! You can still access your dashboard using the options below.
+                </p>
+                <div className="flex flex-col space-y-3 w-full">
+                  <button
+                    onClick={handleFallbackDashboard}
+                    className="w-full bg-gradient-to-r from-cyan-600 to-blue-600 hover:from-cyan-700 hover:to-blue-700 
+                             text-white font-medium py-3 px-6 rounded-lg transition-all duration-200"
+                  >
+                    Access Dashboard (Alternative)
+                  </button>
+                  <button
+                    onClick={handleManualLogin}
+                    className="w-full bg-gray-700 hover:bg-gray-600 
+                             text-white font-medium py-2 px-6 rounded-lg transition-all duration-200"
+                  >
+                    Go to Login Page
+                  </button>
+                </div>
               </div>
             )}
           </div>

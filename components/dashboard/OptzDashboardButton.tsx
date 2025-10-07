@@ -58,14 +58,24 @@ export const OptzDashboardButton: React.FC<OptzDashboardButtonProps> = ({
         // Redirect to white-label dashboard with SSO token
         window.open(ssoResult.loginUrl, '_blank');
       } else {
-        // Fallback: redirect to login page
-        const dashboardUrl = 'https://optz.siteoptz.ai/';
-        window.open(dashboardUrl, '_blank');
+        // If SSO fails, redirect to main dashboard as fallback
+        const fallbackUrl = `/dashboard/${userPlan}?utm_source=optz_access&utm_medium=dashboard_button&fallback=true`;
+        window.open(fallbackUrl, '_blank');
       }
 
     } catch (error) {
       console.error('Dashboard access error:', error);
       setError(error instanceof Error ? error.message : 'Failed to access dashboard');
+      
+      // Provide fallback option even when there's an error
+      setTimeout(() => {
+        setError('Opening alternative dashboard in a moment...');
+        setTimeout(() => {
+          const fallbackUrl = `/dashboard/${userPlan}?utm_source=optz_error&utm_medium=dashboard_button&error=true`;
+          console.log('Opening fallback dashboard:', fallbackUrl);
+          window.open(fallbackUrl, '_blank');
+        }, 1000);
+      }, 2000); // Show error for 2 seconds, then notify and redirect
     } finally {
       setIsLoading(false);
     }
@@ -121,6 +131,17 @@ export const OptzDashboardButton: React.FC<OptzDashboardButtonProps> = ({
       {error && (
         <div className="mb-4 p-3 bg-red-500/10 border border-red-500/20 rounded-lg">
           <p className="text-red-400 text-sm">{error}</p>
+          {error.includes('Failed to access dashboard') && (
+            <button
+              onClick={() => {
+                const fallbackUrl = `/dashboard/${userPlan}?utm_source=optz_manual&utm_medium=dashboard_button&manual=true`;
+                window.open(fallbackUrl, '_blank');
+              }}
+              className="mt-2 text-xs text-cyan-400 hover:text-cyan-300 underline"
+            >
+              Click here to access alternative dashboard
+            </button>
+          )}
         </div>
       )}
 

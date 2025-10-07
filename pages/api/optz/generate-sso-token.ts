@@ -74,8 +74,8 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     // Clean up expired tokens
     cleanupExpiredTokens();
 
-    // Generate login URL with token
-    const loginUrl = `https://optz.siteoptz.ai/auth/sso?token=${token}`;
+    // Generate login URL with token and plan info for fallback
+    const loginUrl = `https://optz.siteoptz.ai/auth/sso?token=${token}&plan=${plan}`;
 
     return res.status(200).json({
       success: true,
