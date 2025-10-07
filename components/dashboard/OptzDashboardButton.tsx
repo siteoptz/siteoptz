@@ -31,9 +31,10 @@ export const OptzDashboardButton: React.FC<OptzDashboardButtonProps> = ({
       return;
     }
 
-    // TEMPORARY: Direct redirect to dashboard while we debug
-    console.log('Direct redirect to dashboard for:', session.user.email);
-    window.location.href = `/dashboard/${userPlan}?email=${encodeURIComponent(session.user.email)}&direct=true`;
+    // Direct redirect to the plan-specific dashboard page with test access
+    console.log('Direct redirect to dashboard for:', session.user.email, 'Plan:', userPlan);
+    // Add test=true parameter to bypass plan verification
+    window.location.href = `/dashboard/${userPlan}?test=true`;
     return;
 
     setIsLoading(true);

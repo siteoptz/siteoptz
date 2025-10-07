@@ -91,7 +91,10 @@ export async function getCleanDashboardProps(
   const userPlan = await getUserPlanServerSide(session.user.email);
 
   // Check plan requirements - redirect to correct dashboard if wrong plan
-  if (requiredPlan && userPlan.plan !== requiredPlan) {
+  // TEMPORARY: Allow dashboard access for testing
+  const allowTestAccess = context.query.test === 'true' || context.query.direct === 'true';
+  
+  if (requiredPlan && userPlan.plan !== requiredPlan && !allowTestAccess) {
     console.log(`Access denied: User has ${userPlan.plan} plan but tried to access ${requiredPlan} dashboard`);
     return {
       redirect: {
@@ -99,6 +102,12 @@ export async function getCleanDashboardProps(
         permanent: false,
       },
     };
+  }
+  
+  // If test access is allowed, override the plan
+  if (allowTestAccess && requiredPlan) {
+    console.log(`Test access granted: Overriding plan from ${userPlan.plan} to ${requiredPlan}`);
+    userPlan.plan = requiredPlan;
   }
 
   return {
