@@ -15,7 +15,15 @@ export const OptzDashboardButton: React.FC<OptzDashboardButtonProps> = ({
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
 
-  const handleDashboardAccess = async () => {
+  const handleDashboardAccess = async (e?: React.MouseEvent) => {
+    // Prevent any default form submission behavior
+    if (e) {
+      e.preventDefault();
+      e.stopPropagation();
+    }
+    
+    console.log('Dashboard access initiated for:', userPlan);
+    
     if (!session?.user?.email) {
       setError('Please log in to access your dashboard');
       return;
@@ -26,9 +34,11 @@ export const OptzDashboardButton: React.FC<OptzDashboardButtonProps> = ({
 
     try {
       // First, ensure the user has a white-label client account
+      console.log('Provisioning client for:', session.user.email);
       const provisionResponse = await fetch('/api/optz/provision-client', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
+        credentials: 'include', // Include cookies for session
         body: JSON.stringify({
           email: session.user.email,
           plan: userPlan,
@@ -36,29 +46,46 @@ export const OptzDashboardButton: React.FC<OptzDashboardButtonProps> = ({
         })
       });
 
+      if (!provisionResponse.ok) {
+        console.error('Provision failed with status:', provisionResponse.status);
+        throw new Error(`Provision failed: ${provisionResponse.statusText}`);
+      }
+
       const provisionResult = await provisionResponse.json();
+      console.log('Provision result:', provisionResult);
       
       if (!provisionResult.success) {
         throw new Error(provisionResult.error || 'Failed to provision dashboard access');
       }
 
       // Generate secure login token for SSO
+      console.log('Generating SSO token for plan:', userPlan);
       const ssoResponse = await fetch('/api/optz/generate-sso-token', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
+        credentials: 'include', // Include cookies for session
         body: JSON.stringify({
           email: session.user.email,
           plan: userPlan
         })
       });
 
+      if (!ssoResponse.ok) {
+        console.error('SSO generation failed with status:', ssoResponse.status);
+        const errorData = await ssoResponse.json();
+        throw new Error(errorData.error || `SSO failed: ${ssoResponse.statusText}`);
+      }
+
       const ssoResult = await ssoResponse.json();
+      console.log('SSO result:', ssoResult);
       
       if (ssoResult.success && ssoResult.loginUrl) {
         // Direct redirect to the generated login URL (now pointing to main domain)
+        console.log('Redirecting to:', ssoResult.loginUrl);
         window.open(ssoResult.loginUrl, '_blank');
       } else {
         // If SSO fails, redirect to main dashboard as fallback
+        console.log('SSO failed, using fallback');
         const fallbackUrl = `/dashboard/${userPlan}?utm_source=optz_access&utm_medium=dashboard_button&fallback=true`;
         window.open(fallbackUrl, '_blank');
       }
@@ -146,8 +173,9 @@ export const OptzDashboardButton: React.FC<OptzDashboardButtonProps> = ({
       )}
 
       <button
-        onClick={handleDashboardAccess}
+        onClick={(e) => handleDashboardAccess(e)}
         disabled={isLoading}
+        type="button"
         className="w-full bg-gradient-to-r from-cyan-600 to-blue-600 hover:from-cyan-700 hover:to-blue-700 
                    disabled:from-gray-600 disabled:to-gray-700 disabled:cursor-not-allowed
                    text-white font-medium py-3 px-4 rounded-lg transition-all duration-200 
