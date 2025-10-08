@@ -115,7 +115,7 @@ export default function AutoLoginPage({ success, message, redirectUrl, error }: 
   );
 }
 
-export const getServerSideProps: GetServerSideProps = async (context) => {
+export const getServerSideProps: GetServerSideProps<AutoLoginPageProps> = async (context) => {
   const { sso_token, signature, redirect, auto_login, plan } = context.query;
   
   // Check if we're on the optz subdomain
@@ -163,8 +163,9 @@ export const getServerSideProps: GetServerSideProps = async (context) => {
   
   context.res.setHeader('Set-Cookie', cookies);
   
-  // Determine redirect URL
-  let redirectUrl = redirect || `/dashboard/${plan || tokenData.plan}`;
+  // Determine redirect URL (ensure it's a string, not an array)
+  const redirectParam = Array.isArray(redirect) ? redirect[0] : redirect;
+  let redirectUrl = redirectParam || `/dashboard/${plan || tokenData.plan}`;
   
   // If on optz subdomain, use full URL
   if (isOptzDomain) {
