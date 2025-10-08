@@ -37,9 +37,9 @@ export class CyfeSSOMiddleware {
     
     // Sign the token with JWT
     const token = jwt.sign(tokenData, this.SECRET, {
-      expiresIn,
+      expiresIn: expiresIn as string | number,
       algorithm: 'HS256'
-    });
+    } as jwt.SignOptions);
     
     return token;
   }

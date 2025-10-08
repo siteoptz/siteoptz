@@ -1,6 +1,6 @@
 // Email Service for Auto-Login Links
 import nodemailer from 'nodemailer';
-import { CyfeDashboard } from './cyfe-provisioning';
+import type { CyfeDashboard } from './cyfe-provisioning';
 
 interface EmailResult {
   success: boolean;
@@ -34,7 +34,7 @@ const createTransporter = () => {
   }
   
   // Fallback to SMTP configuration
-  return nodemailer.createTransporter({
+  return nodemailer.createTransport({
     host: process.env.SMTP_HOST || 'smtp.gmail.com',
     port: parseInt(process.env.SMTP_PORT || '587'),
     secure: process.env.SMTP_SECURE === 'true',
@@ -309,4 +309,5 @@ export async function sendPasswordResetEmail(
   }
 }
 
-export default { sendAutoLoginEmail, sendPasswordResetEmail };
+const emailService = { sendAutoLoginEmail, sendPasswordResetEmail };
+export default emailService;

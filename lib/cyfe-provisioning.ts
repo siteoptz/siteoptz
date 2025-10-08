@@ -263,4 +263,5 @@ export async function provisionCyfeDashboards(params: {
 }
 
 // Export dashboard templates for reference
-export { DASHBOARD_TEMPLATES, CyfeDashboard };
+export { DASHBOARD_TEMPLATES };
+export type { CyfeDashboard };

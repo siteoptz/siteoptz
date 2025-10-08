@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, useCallback } from 'react';
 import { BarChart3, Loader2, AlertCircle, ExternalLink } from 'lucide-react';
 import CyfeSSOMiddleware from '@/lib/cyfe-sso-middleware';
 
@@ -31,7 +31,7 @@ export const AutoLoginDashboard: React.FC<AutoLoginDashboardProps> = ({
   const [lastRefresh, setLastRefresh] = useState<Date>(new Date());
 
   // Generate authenticated iframe URL
-  const generateIframeUrl = async () => {
+  const generateIframeUrl = useCallback(async () => {
     try {
       setLoading(true);
       setError(null);
@@ -84,7 +84,7 @@ export const AutoLoginDashboard: React.FC<AutoLoginDashboardProps> = ({
     } finally {
       setLoading(false);
     }
-  };
+  }, [dashboardId, userEmail, plan, height, width]);
 
   // Initial load
   useEffect(() => {
