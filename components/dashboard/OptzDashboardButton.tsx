@@ -42,15 +42,15 @@ export const OptzDashboardButton: React.FC<OptzDashboardButtonProps> = ({
 
     try {
       // First, ensure the user has a white-label client account
-      console.log('Provisioning client for:', session.user.email);
+      console.log('Provisioning client for:', session?.user?.email);
       const provisionResponse = await fetch('/api/optz/provision-client', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         credentials: 'include', // Include cookies for session
         body: JSON.stringify({
-          email: session.user.email,
+          email: session?.user?.email || '',
           plan: userPlan,
-          companyName: session.user.name || extractCompanyFromEmail(session.user.email)
+          companyName: session?.user?.name || extractCompanyFromEmail(session?.user?.email || '')
         })
       });
 
@@ -73,7 +73,7 @@ export const OptzDashboardButton: React.FC<OptzDashboardButtonProps> = ({
         headers: { 'Content-Type': 'application/json' },
         credentials: 'include', // Include cookies for session
         body: JSON.stringify({
-          email: session.user.email,
+          email: session?.user?.email || '',
           plan: userPlan
         })
       });
@@ -98,9 +98,9 @@ export const OptzDashboardButton: React.FC<OptzDashboardButtonProps> = ({
         window.open(fallbackUrl, '_blank');
       }
 
-    } catch (error) {
+    } catch (error: any) {
       console.error('Dashboard access error:', error);
-      setError(error instanceof Error ? error.message : 'Failed to access dashboard');
+      setError(error?.message || 'Failed to access dashboard');
       
       // Provide fallback option even when there's an error
       setTimeout(() => {
