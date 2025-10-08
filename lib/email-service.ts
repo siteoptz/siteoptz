@@ -309,5 +309,45 @@ export async function sendPasswordResetEmail(
   }
 }
 
-const emailService = { sendAutoLoginEmail, sendPasswordResetEmail };
+// Generic email sending function
+export async function sendEmail(options: {
+  to: string;
+  subject: string;
+  html: string;
+  text?: string;
+  from?: string;
+}): Promise<EmailResult> {
+  try {
+    const transporter = createTransporter();
+    
+    // Test transporter connection
+    await transporter.verify();
+    
+    const mailOptions = {
+      from: options.from || process.env.EMAIL_FROM || '"SiteOptz" <noreply@siteoptz.ai>',
+      to: options.to,
+      subject: options.subject,
+      html: options.html,
+      text: options.text || options.html.replace(/<[^>]*>/g, '') // Strip HTML for text fallback
+    };
+    
+    const info = await transporter.sendMail(mailOptions);
+    
+    console.log('Email sent:', info.messageId);
+    
+    return {
+      success: true,
+      messageId: info.messageId
+    };
+    
+  } catch (error: any) {
+    console.error('Email send error:', error);
+    return {
+      success: false,
+      error: error.message
+    };
+  }
+}
+
+const emailService = { sendAutoLoginEmail, sendPasswordResetEmail, sendEmail };
 export default emailService;
