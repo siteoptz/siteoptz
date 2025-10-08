@@ -70,11 +70,13 @@ export default function ProDashboard({
           <div className="space-y-6">
             <div className="bg-gradient-to-r from-purple-500/10 to-blue-500/10 border border-purple-500/20 rounded-xl p-6">
               <h2 className="text-2xl font-bold text-white mb-2">Advanced Analytics Suite</h2>
-              <p className="text-gray-300">
+              <p className="text-gray-300 mb-4">
                 Access comprehensive business intelligence dashboards with real-time data streaming, 
                 predictive analytics, and custom metrics. Pro plan users get access to advanced analytics 
                 including cohort analysis, revenue attribution, and customer lifetime value tracking.
               </p>
+              {/* Add Optz Dashboard Access Button */}
+              <OptzDashboardButton userPlan="pro" />
             </div>
             
             <CyfeDashboard 
