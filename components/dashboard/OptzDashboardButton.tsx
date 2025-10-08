@@ -7,18 +7,20 @@ interface OptzDashboardButtonProps {
   className?: string;
 }
 
-// Get the appropriate Cyfe dashboard URL based on plan
-const getCyfeDashboardUrl = (plan: string): string => {
-  // These are the actual Cyfe dashboard URLs for each plan tier
-  // You can replace these with your actual Cyfe dashboard URLs
-  const dashboardUrls = {
-    free: 'https://app.cyfe.com/dashboards/677228d9d614a289674206827648/6772306263bcf084952597378497',
-    starter: 'https://app.cyfe.com/dashboards/677228d9d614a289674206827648/677234b9c8709901362838648552',
-    pro: 'https://app.cyfe.com/dashboards/677228d9d614a289674206827648/677234cf8fb32085326476949809',
-    enterprise: 'https://app.cyfe.com/dashboards/677228d9d614a289674206827648/677234e6cf18a612654773861061'
+// Get the appropriate optz subdomain dashboard URL based on plan
+const getOptzDashboardUrl = (plan: string): string => {
+  // Direct to optz.siteoptz.ai with plan-specific routing
+  const baseUrl = 'https://optz.siteoptz.ai';
+  
+  // Route to different dashboards based on plan
+  const dashboardPaths = {
+    free: '/dashboard/free',
+    starter: '/dashboard/starter', 
+    pro: '/dashboard/pro',
+    enterprise: '/dashboard/enterprise'
   };
   
-  return dashboardUrls[plan as keyof typeof dashboardUrls] || dashboardUrls.free;
+  return baseUrl + (dashboardPaths[plan as keyof typeof dashboardPaths] || dashboardPaths.free);
 };
 
 export const OptzDashboardButton: React.FC<OptzDashboardButtonProps> = ({ 
@@ -45,15 +47,14 @@ export const OptzDashboardButton: React.FC<OptzDashboardButtonProps> = ({
       return;
     }
 
-    // For production: Use the Cyfe embed directly
-    console.log('Opening Cyfe dashboard for:', session.user.email, 'Plan:', userPlan);
+    // Direct to optz.siteoptz.ai subdomain
+    console.log('Opening optz dashboard for:', session.user.email, 'Plan:', userPlan);
     
-    // Open the Cyfe white-label dashboard directly
-    // Using the actual Cyfe dashboard URL with the appropriate parameters
-    const cyfeDashboardUrl = getCyfeDashboardUrl(userPlan);
+    // Open the optz.siteoptz.ai dashboard with the appropriate plan
+    const optzDashboardUrl = getOptzDashboardUrl(userPlan);
     
     // Open in new window/tab
-    window.open(cyfeDashboardUrl, '_blank');
+    window.open(optzDashboardUrl, '_blank');
     return;
 
     setIsLoading(true);
