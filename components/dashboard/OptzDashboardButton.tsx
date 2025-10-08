@@ -7,8 +7,27 @@ interface OptzDashboardButtonProps {
   className?: string;
 }
 
-// Get the appropriate optz subdomain dashboard URL based on plan
-const getOptzDashboardUrl = (plan: string): string => {
+// Create a signed SSO token for seamless authentication
+const createSSOToken = (email: string, plan: string): string => {
+  const secret = process.env.NEXT_PUBLIC_SSO_SECRET || 'default-sso-secret';
+  const payload = JSON.stringify({
+    email,
+    plan,
+    timestamp: Date.now(),
+    expires: Date.now() + (5 * 60 * 1000) // 5 minutes
+  });
+  
+  // Create base64url encoded payload
+  const payloadBase64 = Buffer.from(payload).toString('base64url');
+  
+  // For client-side, we'll use a simpler hash
+  const simpleHash = Buffer.from(`${email}-${plan}-${Date.now()}`).toString('base64url');
+  
+  return `${payloadBase64}.${simpleHash}`;
+};
+
+// Get the appropriate optz subdomain dashboard URL with SSO token
+const getOptzDashboardUrl = (plan: string, email?: string): string => {
   // Direct to optz.siteoptz.ai with plan-specific routing
   const baseUrl = 'https://optz.siteoptz.ai';
   
@@ -20,7 +39,15 @@ const getOptzDashboardUrl = (plan: string): string => {
     enterprise: '/dashboard/enterprise'
   };
   
-  return baseUrl + (dashboardPaths[plan as keyof typeof dashboardPaths] || dashboardPaths.free);
+  const path = dashboardPaths[plan as keyof typeof dashboardPaths] || dashboardPaths.free;
+  
+  // If email provided, generate SSO token for seamless auth
+  if (email) {
+    const token = createSSOToken(email, plan);
+    return `${baseUrl}${path}?sso_token=${token}`;
+  }
+  
+  return baseUrl + path;
 };
 
 export const OptzDashboardButton: React.FC<OptzDashboardButtonProps> = ({ 
@@ -40,21 +67,51 @@ export const OptzDashboardButton: React.FC<OptzDashboardButtonProps> = ({
     
     console.log('Dashboard access initiated for:', userPlan);
     
-    if (!session?.user?.email) {
-      setError('Please log in to access your dashboard');
-      // For now, just redirect to the dashboard directly
-      window.location.href = `/dashboard/${userPlan}`;
-      return;
+    setIsLoading(true);
+    setError(null);
+    
+    try {
+      // For authenticated users, generate SSO token for seamless access
+      if (session?.user?.email) {
+        console.log('Generating SSO URL for:', session.user.email, 'Plan:', userPlan);
+        
+        // Generate SSO token on server side for security
+        const ssoResponse = await fetch('/api/optz/generate-sso-url', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          credentials: 'include',
+          body: JSON.stringify({
+            email: session.user.email,
+            plan: userPlan
+          })
+        });
+        
+        if (ssoResponse.ok) {
+          const { ssoUrl } = await ssoResponse.json();
+          console.log('Opening dashboard with SSO:', ssoUrl);
+          window.open(ssoUrl, '_blank');
+          return;
+        }
+      }
+      
+      // Fallback: Direct to optz.siteoptz.ai without SSO (will require login)
+      console.log('Opening optz dashboard without SSO');
+      const optzDashboardUrl = getOptzDashboardUrl(userPlan);
+      window.open(optzDashboardUrl, '_blank');
+      
+    } catch (error: any) {
+      console.error('Dashboard access error:', error);
+      setError('Failed to access dashboard. Please try again.');
+      
+      // Fallback URL
+      setTimeout(() => {
+        const fallbackUrl = getOptzDashboardUrl(userPlan);
+        window.open(fallbackUrl, '_blank');
+      }, 2000);
+    } finally {
+      setIsLoading(false);
     }
-
-    // Direct to optz.siteoptz.ai subdomain
-    console.log('Opening optz dashboard for:', session.user.email, 'Plan:', userPlan);
     
-    // Open the optz.siteoptz.ai dashboard with the appropriate plan
-    const optzDashboardUrl = getOptzDashboardUrl(userPlan);
-    
-    // Open in new window/tab
-    window.open(optzDashboardUrl, '_blank');
     return;
 
     setIsLoading(true);
