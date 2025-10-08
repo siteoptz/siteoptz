@@ -697,8 +697,8 @@ Additional Details:
       subject: `New Download: ${leadData.firstName} ${leadData.lastName} (${leadData.company})`,
       html: notificationHtml,
       text: notificationText,
-      from: `"SiteOptz System" <${EMAIL_FROM}>`,
-      bcc: null // No BCC needed for internal notification
+      from: `"SiteOptz System" <${EMAIL_FROM}>`
+      // No BCC needed for internal notification
     });
 
     console.log('New download notification sent:', result.success);

@@ -345,8 +345,8 @@ ${data.message ? `Message: ${data.message}` : ''}
 
 Received: ${new Date().toLocaleString()}
 Action Required: Contact within 24 hours`,
-      from: process.env.EMAIL_FROM || 'info@siteoptz.ai',
-      bcc: null // No BCC needed for team notification
+      from: process.env.EMAIL_FROM || 'info@siteoptz.ai'
+      // No BCC needed for team notification
     });
 
     console.log('Expert consultation processing completed:', {

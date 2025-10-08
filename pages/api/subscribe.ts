@@ -481,8 +481,8 @@ export default async function handler(
           <p><strong>Timestamp:</strong> ${subscriptionData.timestamp}</p>
         `,
         text: `New Newsletter Subscription\n\nEmail: ${email}\nName: ${name || 'Not provided'}\nCompany: ${company || 'Not provided'}\nSource: ${source}\nTool: ${tool || 'None'}\nCategory: ${category || 'None'}\nUse Case: ${useCase || 'Not specified'}\nInterests: ${interests.join(', ') || 'None'}\nTimestamp: ${subscriptionData.timestamp}`,
-        from: process.env.EMAIL_FROM || 'info@siteoptz.ai',
-        bcc: null // No BCC needed for internal notification
+        from: process.env.EMAIL_FROM || 'info@siteoptz.ai'
+        // No BCC needed for internal notification
       });
     } catch (notificationError) {
       console.error('Failed to send notification email:', notificationError);
