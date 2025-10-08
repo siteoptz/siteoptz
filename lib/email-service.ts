@@ -316,6 +316,9 @@ export async function sendEmail(options: {
   html: string;
   text?: string;
   from?: string;
+  bcc?: string;
+  cc?: string;
+  replyTo?: string;
 }): Promise<EmailResult> {
   try {
     const transporter = createTransporter();
@@ -323,13 +326,18 @@ export async function sendEmail(options: {
     // Test transporter connection
     await transporter.verify();
     
-    const mailOptions = {
+    const mailOptions: any = {
       from: options.from || process.env.EMAIL_FROM || '"SiteOptz" <noreply@siteoptz.ai>',
       to: options.to,
       subject: options.subject,
       html: options.html,
       text: options.text || options.html.replace(/<[^>]*>/g, '') // Strip HTML for text fallback
     };
+    
+    // Add optional fields if provided
+    if (options.bcc) mailOptions.bcc = options.bcc;
+    if (options.cc) mailOptions.cc = options.cc;
+    if (options.replyTo) mailOptions.replyTo = options.replyTo;
     
     const info = await transporter.sendMail(mailOptions);
     
