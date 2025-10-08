@@ -7,6 +7,20 @@ interface OptzDashboardButtonProps {
   className?: string;
 }
 
+// Get the appropriate Cyfe dashboard URL based on plan
+const getCyfeDashboardUrl = (plan: string): string => {
+  // These are the actual Cyfe dashboard URLs for each plan tier
+  // You can replace these with your actual Cyfe dashboard URLs
+  const dashboardUrls = {
+    free: 'https://app.cyfe.com/dashboards/677228d9d614a289674206827648/6772306263bcf084952597378497',
+    starter: 'https://app.cyfe.com/dashboards/677228d9d614a289674206827648/677234b9c8709901362838648552',
+    pro: 'https://app.cyfe.com/dashboards/677228d9d614a289674206827648/677234cf8fb32085326476949809',
+    enterprise: 'https://app.cyfe.com/dashboards/677228d9d614a289674206827648/677234e6cf18a612654773861061'
+  };
+  
+  return dashboardUrls[plan as keyof typeof dashboardUrls] || dashboardUrls.free;
+};
+
 export const OptzDashboardButton: React.FC<OptzDashboardButtonProps> = ({ 
   userPlan, 
   className = '' 
@@ -31,10 +45,15 @@ export const OptzDashboardButton: React.FC<OptzDashboardButtonProps> = ({
       return;
     }
 
-    // Direct redirect to the plan-specific dashboard page with test access
-    console.log('Direct redirect to dashboard for:', session.user.email, 'Plan:', userPlan);
-    // Add test=true parameter to bypass plan verification
-    window.location.href = `/dashboard/${userPlan}?test=true`;
+    // For production: Use the Cyfe embed directly
+    console.log('Opening Cyfe dashboard for:', session.user.email, 'Plan:', userPlan);
+    
+    // Open the Cyfe white-label dashboard directly
+    // Using the actual Cyfe dashboard URL with the appropriate parameters
+    const cyfeDashboardUrl = getCyfeDashboardUrl(userPlan);
+    
+    // Open in new window/tab
+    window.open(cyfeDashboardUrl, '_blank');
     return;
 
     setIsLoading(true);
