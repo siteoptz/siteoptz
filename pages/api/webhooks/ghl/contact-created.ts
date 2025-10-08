@@ -144,8 +144,8 @@ export default async function handler(
       }
     });
 
-    if (!dbUser.success) {
-      throw new Error(`Failed to create user: ${dbUser.error}`);
+    if (!dbUser.success || !dbUser.data) {
+      throw new Error(`Failed to create user: ${dbUser.error || 'Unknown error'}`);
     }
 
     console.log('User created:', dbUser.data.id);
