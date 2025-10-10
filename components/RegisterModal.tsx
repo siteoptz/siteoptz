@@ -186,11 +186,12 @@ const RegisterModal: React.FC<RegisterModalProps> = ({
         await new Promise(resolve => setTimeout(resolve, 1000));
       }
       
-      // Sign in with credentials
+      // Sign in with credentials - add mode indicator to help NextAuth distinguish login vs registration
       const result = await signIn('credentials', {
         email: formData.email,
         password: formData.password,
         name: formData.name,
+        authMode: isLogin ? 'login' : 'registration', // Add mode to help backend validation
         redirect: false,
       });
 

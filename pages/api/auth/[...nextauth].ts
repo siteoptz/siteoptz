@@ -30,7 +30,8 @@ export const authOptions: NextAuthOptions = {
       credentials: {
         email: { label: 'Email', type: 'email' },
         password: { label: 'Password', type: 'password' },
-        name: { label: 'Name', type: 'text' }
+        name: { label: 'Name', type: 'text' },
+        authMode: { label: 'Auth Mode', type: 'text' }
       },
       async authorize(credentials) {
         if (!credentials?.email || !credentials?.password) {
@@ -79,9 +80,20 @@ export const authOptions: NextAuthOptions = {
               console.log('✅ Credentials authentication successful with GoHighLevel data:', user);
               return user
             } else {
-              console.log('⚠️ User not found in GoHighLevel, allowing fallback authentication:', credentials.email);
+              console.log('⚠️ User not found in GoHighLevel:', credentials.email);
+              console.log('🔍 Auth mode:', credentials.authMode);
               
-              // For existing users, try to extract name from email if no name provided
+              // Check if this is a login attempt for a non-existent user
+              if (credentials.authMode === 'login') {
+                console.log('❌ BLOCKING: Login attempt for non-existent user in GoHighLevel');
+                console.log('- User Email:', credentials.email);
+                console.log('- User should create account first');
+                return null; // Block the authentication
+              }
+              
+              console.log('⚠️ Registration attempt or fallback - allowing authentication:', credentials.email);
+              
+              // For registration or existing users, try to extract name from email if no name provided
               // This is a temporary fallback until GoHighLevel search is fixed
               let userName = credentials.name;
               if (!userName) {
@@ -115,8 +127,21 @@ export const authOptions: NextAuthOptions = {
               return user
             }
           } else {
-            console.log('⚠️ GoHighLevel integration disabled - allowing basic authentication');
+            console.log('⚠️ GoHighLevel integration disabled');
             console.log('🔧 Credentials provided - name:', credentials.name, 'email:', credentials.email);
+            console.log('🔍 Auth mode:', credentials.authMode);
+            
+            // When GoHighLevel is disabled, we can't verify user existence
+            // But if user explicitly chose "login" mode, we should be cautious
+            if (credentials.authMode === 'login') {
+              console.log('⚠️ Login attempt with GoHighLevel disabled - cannot verify user existence');
+              console.log('❌ BLOCKING: Login attempt when user verification is unavailable');
+              console.log('- User Email:', credentials.email);
+              console.log('- Recommend using registration or enabling GoHighLevel');
+              return null; // Block login attempts when we can't verify users
+            }
+            
+            console.log('⚠️ Registration attempt with GoHighLevel disabled - allowing basic authentication');
             
             // When GoHighLevel is disabled, try to extract a better name
             let userName = credentials.name;
@@ -370,7 +395,19 @@ export const authOptions: NextAuthOptions = {
               console.log('✅ New user OAuth registration allowed - proceeding');
             }
           } else {
-            console.log('ℹ️ OAuth login attempt (not registration) - proceeding normally');
+            // This is a login attempt - check if user exists
+            console.log('ℹ️ OAuth login attempt detected - validating user existence');
+            
+            if (!existingUserCheck.exists) {
+              // User trying to login but doesn't exist - block login
+              console.log('❌ BLOCKING: Non-existent user attempting OAuth login');
+              console.log('- User Email:', user.email);
+              console.log('- User should create account first');
+              
+              throw new Error('NON_EXISTENT_USER_LOGIN_ATTEMPT');
+            } else {
+              console.log('✅ Existing user OAuth login allowed - proceeding');
+            }
           }
           
           // **ENHANCED: Step 4 - Process user action based on registration vs login**
@@ -411,6 +448,9 @@ export const authOptions: NextAuthOptions = {
             return false;
           } else if (error.message === 'OAUTH_REGISTRATION_DISABLED') {
             console.log('🚫 Blocking OAuth registration - GoHighLevel integration disabled');
+            return false;
+          } else if (error.message === 'NON_EXISTENT_USER_LOGIN_ATTEMPT') {
+            console.log('🚫 Blocking OAuth login for non-existent user');
             return false;
           }
         }
