@@ -32,8 +32,56 @@ const RegisterModal: React.FC<RegisterModalProps> = ({
   });
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState('');
+  const [isCheckingUser, setIsCheckingUser] = useState(false);
 
   if (!isOpen) return null;
+
+  const checkUserExistence = async (email: string) => {
+    try {
+      const response = await fetch(`/api/check-existing-user?email=${encodeURIComponent(email)}`);
+      const result = await response.json();
+      return result;
+    } catch (error) {
+      console.error('Error checking user existence:', error);
+      return { success: false, exists: false };
+    }
+  };
+
+  const validateUserFlow = async (email: string) => {
+    if (!email || !email.includes('@')) {
+      setError('Please enter a valid email address');
+      return false;
+    }
+
+    setIsCheckingUser(true);
+    setError('');
+    
+    try {
+      const userCheck = await checkUserExistence(email);
+      
+      if (userCheck.success) {
+        if (!isLogin && userCheck.exists) {
+          // User trying to register but already exists
+          setError(`This email is already registered. Please sign in instead.`);
+          setIsCheckingUser(false);
+          return false;
+        } else if (isLogin && !userCheck.exists) {
+          // User trying to login but doesn't exist
+          setError(`No account found with this email. Please create an account first.`);
+          setIsCheckingUser(false);
+          return false;
+        }
+      }
+      
+      setIsCheckingUser(false);
+      return true;
+    } catch (error) {
+      console.error('Error validating user flow:', error);
+      setIsCheckingUser(false);
+      // Continue anyway if validation fails to prevent blocking legitimate users
+      return true;
+    }
+  };
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>) => {
     setFormData({
@@ -60,6 +108,13 @@ const RegisterModal: React.FC<RegisterModalProps> = ({
     e.preventDefault();
     setIsLoading(true);
     setError('');
+    
+    // Validate user flow before proceeding
+    const isValidFlow = await validateUserFlow(formData.email);
+    if (!isValidFlow) {
+      setIsLoading(false);
+      return;
+    }
     
     try {
       if (!isLogin) {
@@ -170,7 +225,21 @@ const RegisterModal: React.FC<RegisterModalProps> = ({
     console.log('🚀 isLogin mode:', isLogin);
     console.log('🚀 formData:', formData);
     
-    // Skip validation entirely for login mode - existing users shouldn't need qualification questions
+    // For OAuth, we need an email to check user existence
+    if (!formData.email || !formData.email.includes('@')) {
+      setError('Please enter your email address first to proceed with Google authentication');
+      setIsLoading(false);
+      return;
+    }
+
+    // Validate user flow for OAuth as well
+    const isValidFlow = await validateUserFlow(formData.email);
+    if (!isValidFlow) {
+      setIsLoading(false);
+      return;
+    }
+    
+    // Skip qualification questions validation entirely for login mode - existing users shouldn't need qualification questions
     if (!isLogin) {
       console.log('🚀 REGISTRATION MODE: Validating fields');
       
@@ -304,6 +373,29 @@ const RegisterModal: React.FC<RegisterModalProps> = ({
           {error && (
             <div className="mb-4 p-3 bg-red-500/10 border border-red-500/20 rounded-xl">
               <p className="text-red-400 text-sm text-center">{error}</p>
+              {/* Quick switch buttons for flow mismatches */}
+              {(error.includes('already registered') && !isLogin) && (
+                <button
+                  onClick={() => {
+                    setIsLogin(true);
+                    setError('');
+                  }}
+                  className="mt-2 text-green-400 hover:text-green-300 text-sm font-semibold transition-colors block mx-auto"
+                >
+                  Switch to Sign In →
+                </button>
+              )}
+              {(error.includes('No account found') && isLogin) && (
+                <button
+                  onClick={() => {
+                    setIsLogin(false);
+                    setError('');
+                  }}
+                  className="mt-2 text-green-400 hover:text-green-300 text-sm font-semibold transition-colors block mx-auto"
+                >
+                  Create Account Instead →
+                </button>
+              )}
             </div>
           )}
 
@@ -363,7 +455,7 @@ const RegisterModal: React.FC<RegisterModalProps> = ({
           {/* Google Auth Button */}
           <button
             onClick={handleGoogleAuth}
-            disabled={isLoading}
+            disabled={isLoading || isCheckingUser}
             className="w-full flex items-center justify-center gap-3 bg-white text-gray-900 py-3 px-4 rounded-xl font-semibold hover:bg-gray-100 transition-all duration-200 mb-6 disabled:opacity-50 disabled:cursor-not-allowed"
           >
             <svg className="w-5 h-5" viewBox="0 0 24 24">
@@ -466,13 +558,13 @@ const RegisterModal: React.FC<RegisterModalProps> = ({
             {/* Submit Button */}
             <button
               type="submit"
-              disabled={isLoading}
+              disabled={isLoading || isCheckingUser}
               className="w-full bg-gradient-to-r from-green-600 to-emerald-600 text-white py-3 px-4 rounded-xl font-semibold hover:from-green-700 hover:to-emerald-700 transition-all duration-200 disabled:opacity-50 disabled:cursor-not-allowed"
             >
-              {isLoading ? (
+              {isLoading || isCheckingUser ? (
                 <div className="flex items-center justify-center gap-2">
                   <div className="w-5 h-5 border-2 border-white/30 border-t-white rounded-full animate-spin" />
-                  {isLogin ? 'Signing in...' : 'Creating account...'}
+                  {isCheckingUser ? 'Checking account...' : isLogin ? 'Signing in...' : 'Creating account...'}
                 </div>
               ) : (
                 isLogin ? 'Sign In' : 'Create Account'
