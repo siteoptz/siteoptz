@@ -1,5 +1,28 @@
 # SiteOptz Deployment Guide
 
+## ⚠️ CRITICAL DEPLOYMENT RULE ⚠️
+
+**This repository MUST ONLY deploy to the `siteoptz-ai` Vercel project.**
+
+### Project Configuration:
+- **GitHub Repository**: `siteoptz/siteoptz`
+- **Vercel Project Name**: `siteoptz-ai` (NOT `siteoptz`)
+- **Production URL**: `https://siteoptz.ai`
+- **Project ID**: `prj_XdYmhBJVh0mX7RX82lw3LaeAWjSM`
+
+### Enforcement:
+- The `.vercel/project.json` file locks deployments to `siteoptz-ai`
+- Manual deployments with `vercel --prod` will deploy to `siteoptz-ai`
+- GitHub integration auto-deploys to `siteoptz-ai` on push to main
+
+### If deployments go to wrong project:
+```bash
+rm -rf .vercel
+vercel link --project=siteoptz-ai --yes
+```
+
+---
+
 ## Prerequisites
 
 - Node.js 18+ and npm 9+
