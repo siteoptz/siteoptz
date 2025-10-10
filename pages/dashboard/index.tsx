@@ -41,14 +41,20 @@ export const getServerSideProps: GetServerSideProps = async (context) => {
     };
   }
 
-  // Get user's actual plan from server-side detection
+  // Get user's actual plan from server-side detection with enhanced debugging
+  console.log(`🔍 Dashboard Router: Starting plan detection for ${session.user.email}`);
+  console.log(`🔍 Session data:`, JSON.stringify(session, null, 2));
+  
   const userPlanData = await getUserPlanServerSide(session.user.email);
   const userPlan = userPlanData.plan;
+  
+  console.log(`🔍 Detected plan data:`, JSON.stringify(userPlanData, null, 2));
+  console.log(`🔍 Final plan:`, userPlan);
   
   // Redirect to plan-specific dashboard page
   const planDashboardUrl = `/dashboard/${userPlan}`;
   
-  console.log(`Dashboard router: Redirecting ${session.user.email} with ${userPlan} plan to ${planDashboardUrl}`);
+  console.log(`🚀 Dashboard router: Redirecting ${session.user.email} with ${userPlan} plan to ${planDashboardUrl}`);
   
   return {
     redirect: {
