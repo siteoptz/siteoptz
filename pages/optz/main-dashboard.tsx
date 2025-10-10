@@ -27,7 +27,7 @@ import {
   canAccessDashboard,
   getUpgradeUrl,
   OptzSession 
-} from '../lib/optz-session';
+} from '../../lib/optz-session';
 
 interface Widget {
   id: string;
