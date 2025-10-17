@@ -76,6 +76,15 @@ export default async function handler(req, res) {
       });
     }
 
+    // Debug: Log the contact data to see what we're getting
+    console.log('Contact found:', {
+      id: contact.id,
+      email: contact.email,
+      tags: contact.tags,
+      firstName: contact.firstName,
+      lastName: contact.lastName
+    });
+
     // Extract plan from tags
     const planTags = {
       'siteoptz-plan-free': 'free',
@@ -84,14 +93,34 @@ export default async function handler(req, res) {
       'siteoptz-plan-enterprise': 'enterprise'
     };
 
-    let userPlan = 'free';
-    if (contact.tags && Array.isArray(contact.tags)) {
-      for (const tag of contact.tags) {
-        if (planTags[tag]) {
-          userPlan = planTags[tag];
+    let userPlan = 'free'; // Default to free if no plan tag found
+    
+    // Check if tags exist and extract plan
+    if (contact.tags) {
+      // Tags might be an array of strings or array of objects
+      const tagList = Array.isArray(contact.tags) ? contact.tags : [];
+      
+      console.log('Tags found:', tagList);
+      
+      // Check each tag
+      for (const tag of tagList) {
+        // Tag might be a string or an object with name property
+        const tagName = typeof tag === 'string' ? tag : (tag.name || tag.tag || '');
+        
+        console.log('Checking tag:', tagName);
+        
+        // Check if this is a plan tag
+        if (planTags[tagName]) {
+          userPlan = planTags[tagName];
+          console.log('Plan found:', userPlan);
           break;
         }
       }
+    }
+    
+    // If no plan tag found, log warning
+    if (userPlan === 'free' && (!contact.tags || contact.tags.length === 0)) {
+      console.warn('No plan tags found for user:', email, '- defaulting to free plan');
     }
 
     // Create user session data

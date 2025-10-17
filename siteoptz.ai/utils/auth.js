@@ -76,25 +76,40 @@ class SiteOptzAuth {
         body: JSON.stringify({ email, password })
       });
 
+      // Log response for debugging
+      console.log('Login API response status:', response.status);
+      
       const data = await response.json();
+      console.log('Login API response data:', data);
 
       if (data.success) {
         // Save user data
         this.saveUser(data.user);
         
+        // Log successful login for debugging
+        console.log('Login successful:', {
+          email: data.user.email,
+          plan: data.user.plan,
+          redirectUrl: data.redirectUrl
+        });
+        
         // Dispatch success event
         this.dispatchAuthEvent('login', data.user);
         
+        // Ensure we have a valid redirect URL with the plan
+        const redirectUrl = data.redirectUrl || `https://optz.siteoptz.ai/dashboard/${data.user.plan || 'free'}`;
+        
         // Redirect to dashboard after short delay
         setTimeout(() => {
-          window.location.href = data.redirectUrl;
+          console.log('Redirecting to:', redirectUrl);
+          window.location.href = redirectUrl;
         }, 1500);
         
         return {
           success: true,
           user: data.user,
           message: data.message,
-          redirectUrl: data.redirectUrl
+          redirectUrl: redirectUrl
         };
       } else {
         // Handle specific error types
