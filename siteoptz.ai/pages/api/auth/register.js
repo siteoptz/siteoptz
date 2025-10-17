@@ -123,7 +123,7 @@ export default async function handler(req, res) {
       success: true,
       message: 'Account created successfully! Welcome to SiteOptz.ai!',
       user: userData,
-      redirectUrl: `https://optz.siteoptz.ai/dashboard/${plan}`
+      redirectUrl: `https://siteoptz.ai/dashboard/${plan}`
     });
 
   } catch (error) {

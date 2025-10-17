@@ -97,7 +97,7 @@ class SiteOptzAuth {
         this.dispatchAuthEvent('login', data.user);
         
         // Ensure we have a valid redirect URL with the plan
-        const redirectUrl = data.redirectUrl || `https://optz.siteoptz.ai/dashboard/${data.user.plan || 'free'}`;
+        const redirectUrl = data.redirectUrl || `https://siteoptz.ai/dashboard/${data.user.plan || 'free'}`;
         
         // Redirect to dashboard after short delay
         setTimeout(() => {

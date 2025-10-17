@@ -139,7 +139,7 @@ export default async function handler(req, res) {
       success: true,
       message: 'Login successful',
       user: userData,
-      redirectUrl: `https://optz.siteoptz.ai/dashboard/${userPlan}`
+      redirectUrl: `https://siteoptz.ai/dashboard/${userPlan}`
     });
 
   } catch (error) {

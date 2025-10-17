@@ -182,7 +182,7 @@ export default function TestLogin() {
         <h4>Known Test User:</h4>
         <p>Email: test-auth@example.com</p>
         <p>Expected Plan: pro</p>
-        <p>Expected Redirect: https://optz.siteoptz.ai/dashboard/pro</p>
+        <p>Expected Redirect: https://siteoptz.ai/dashboard/pro</p>
       </div>
 
       <div style={{ 
