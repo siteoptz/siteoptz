@@ -36,7 +36,7 @@ export default function Navigation() {
   const handleDashboardClick = (e) => {
     e.preventDefault();
     if (user && user.plan) {
-      window.location.href = `https://optz.siteoptz.ai/dashboard/${user.plan}`;
+      window.location.href = `https://siteoptz.ai/dashboard/${user.plan}`;
     }
   };
 
@@ -59,7 +59,7 @@ export default function Navigation() {
               <span className="user-email">{user.email}</span>
               <span className="user-plan">{user.plan}</span>
               <a 
-                href={`https://optz.siteoptz.ai/dashboard/${user.plan}`}
+                href={`https://siteoptz.ai/dashboard/${user.plan}`}
                 onClick={handleDashboardClick}
                 className="dashboard-link"
               >
