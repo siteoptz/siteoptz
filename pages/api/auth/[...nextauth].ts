@@ -463,25 +463,19 @@ export const authOptions: NextAuthOptions = {
     async redirect({ url, baseUrl }) {
       console.log('🔄 NextAuth redirect callback - URL:', url, 'BaseURL:', baseUrl);
       
-      // Check if request is from optz.siteoptz.ai subdomain
-      const isWhiteLabelSubdomain = baseUrl.includes('optz.siteoptz.ai');
+      // Always use siteoptz.ai as the base URL, never optz.siteoptz.ai
+      const correctBaseUrl = baseUrl.replace('optz.siteoptz.ai', 'siteoptz.ai');
       
       // Redirect to dashboard or desired page after sign-in
       if (url.startsWith('/')) {
-        return `${baseUrl}${url}`
-      } else if (new URL(url).origin === baseUrl) {
+        return `${correctBaseUrl}${url}`
+      } else if (new URL(url).origin === correctBaseUrl) {
         return url
-      }
-      
-      // Redirect to white-label dashboard for subdomain users
-      if (isWhiteLabelSubdomain) {
-        console.log('🏷️ White-label subdomain detected, redirecting to white-label dashboard');
-        return `${baseUrl}/dashboard/white-label`
       }
       
       // Use smart dashboard router that checks user plan server-side
       console.log('🎯 Redirecting to dashboard router for plan detection');
-      return `${baseUrl}/dashboard`
+      return `${correctBaseUrl}/dashboard`
     },
   },
   pages: {

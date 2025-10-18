@@ -22,7 +22,6 @@ const nextConfig = {
     imageSizes: [16, 32, 48, 64, 96, 128, 256, 384],
     domains: [
       'siteoptz.ai',
-      'optz.siteoptz.ai',
       'upload.wikimedia.org',
       'cdn.openai.com',
       'assets.claude.ai',

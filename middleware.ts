@@ -34,96 +34,66 @@ export async function middleware(request: NextRequest) {
   const pathname = request.nextUrl.pathname
   const hostname = request.headers.get('host') || ''
   
-  // Handle optz subdomain routing with SSO
-  if (hostname === 'optz.siteoptz.ai') {
-    console.log('Optz subdomain detected:', pathname);
+  // Redirect any optz.siteoptz.ai requests to siteoptz.ai
+  if (hostname === 'optz.siteoptz.ai' || hostname.includes('optz.siteoptz.ai')) {
+    console.log('Redirecting from optz.siteoptz.ai to siteoptz.ai:', pathname);
+    const newUrl = new URL(request.url);
+    newUrl.hostname = 'siteoptz.ai';
+    return NextResponse.redirect(newUrl, { status: 301 });
+  }
+  
+  // Handle SSO token in query params (for any domain)
+  const ssoToken = request.nextUrl.searchParams.get('sso_token');
+  
+  if (ssoToken) {
+    // Verify the SSO token
+    const ssoData = verifySSOToken(ssoToken);
     
-    // Check for SSO token in query params
-    const ssoToken = request.nextUrl.searchParams.get('sso_token');
-    
-    if (ssoToken) {
-      // Verify the SSO token
-      const ssoData = verifySSOToken(ssoToken);
+    if (ssoData) {
+      // Valid SSO token - set cookies for authenticated session
+      const response = NextResponse.next();
       
-      if (ssoData) {
-        // Valid SSO token - set cookies for authenticated session
-        const response = NextResponse.next();
-        
-        // Set authentication cookies
-        response.cookies.set('optz-sso-email', ssoData.email, {
-          httpOnly: true,
-          secure: true,
-          sameSite: 'lax',
-          maxAge: 60 * 60 * 24 // 24 hours
-        });
-        
-        response.cookies.set('optz-sso-plan', ssoData.plan, {
-          httpOnly: true,
-          secure: true,
-          sameSite: 'lax',
-          maxAge: 60 * 60 * 24 // 24 hours
-        });
-        
-        response.cookies.set('optz-authenticated', 'true', {
-          httpOnly: true,
-          secure: true,
-          sameSite: 'lax',
-          maxAge: 60 * 60 * 24 // 24 hours
-        });
-        
-        // Remove SSO token from URL and redirect
-        const url = request.nextUrl.clone();
-        url.searchParams.delete('sso_token');
-        return NextResponse.redirect(url);
-      }
-    }
-    
-    // Check if user has valid authentication cookies
-    const isAuthenticated = request.cookies.get('optz-authenticated')?.value === 'true';
-    const userEmail = request.cookies.get('optz-sso-email')?.value;
-    const userPlan = request.cookies.get('optz-sso-plan')?.value;
-    
-    // Allow authenticated users to access all dashboard routes
-    if (isAuthenticated && userEmail && userPlan) {
-      console.log('User authenticated via SSO:', userEmail, 'Plan:', userPlan);
-      // Continue with normal subdomain routing
-    } else if (pathname.startsWith('/dashboard')) {
-      // For unauthenticated dashboard access, redirect to main site
-      console.log('Unauthenticated dashboard access, redirecting to main site');
-      const mainSiteUrl = `https://siteoptz.ai${pathname}`;
-      return NextResponse.redirect(mainSiteUrl);
-    }
-    
-    // Handle root path
-    if (pathname === '/') {
+      // Set authentication cookies
+      response.cookies.set('sso-email', ssoData.email, {
+        httpOnly: true,
+        secure: true,
+        sameSite: 'lax',
+        maxAge: 60 * 60 * 24 // 24 hours
+      });
+      
+      response.cookies.set('sso-plan', ssoData.plan, {
+        httpOnly: true,
+        secure: true,
+        sameSite: 'lax',
+        maxAge: 60 * 60 * 24 // 24 hours
+      });
+      
+      response.cookies.set('authenticated', 'true', {
+        httpOnly: true,
+        secure: true,
+        sameSite: 'lax',
+        maxAge: 60 * 60 * 24 // 24 hours
+      });
+      
+      // Remove SSO token from URL and redirect
       const url = request.nextUrl.clone();
-      url.pathname = '/optz';
-      return NextResponse.rewrite(url);
+      url.searchParams.delete('sso_token');
+      return NextResponse.redirect(url);
     }
-    
-    // Handle auth routes
-    if (pathname.startsWith('/auth/')) {
-      const url = request.nextUrl.clone();
-      url.pathname = pathname.replace('/auth/', '/optz/auth/');
-      console.log('Rewriting auth route:', pathname, '→', url.pathname);
-      return NextResponse.rewrite(url);
-    }
-    
-    // Handle dashboard routes
-    if (pathname.startsWith('/dashboard')) {
-      const url = request.nextUrl.clone();
-      url.pathname = pathname.replace('/dashboard', '/optz/dashboard');
-      console.log('Rewriting dashboard route:', pathname, '→', url.pathname);
-      return NextResponse.rewrite(url);
-    }
-    
-    // Handle any other routes (except API and Next.js internal routes)
-    if (!pathname.startsWith('/optz/') && !pathname.startsWith('/api/') && !pathname.startsWith('/_next/')) {
-      const url = request.nextUrl.clone();
-      url.pathname = '/optz' + pathname;
-      console.log('Rewriting general route:', pathname, '→', url.pathname);
-      return NextResponse.rewrite(url);
-    }
+  }
+  
+  // Check if user has valid authentication cookies
+  const isAuthenticated = request.cookies.get('authenticated')?.value === 'true';
+  const userEmail = request.cookies.get('sso-email')?.value;
+  const userPlan = request.cookies.get('sso-plan')?.value;
+  
+  // Allow authenticated users to access all dashboard routes
+  if (isAuthenticated && userEmail && userPlan) {
+    console.log('User authenticated via SSO:', userEmail, 'Plan:', userPlan);
+    // Continue with normal routing
+  } else if (pathname.startsWith('/dashboard')) {
+    // For unauthenticated dashboard access, check NextAuth session
+    console.log('Checking authentication for dashboard access');
   }
   
   // Handle incorrect compare URL formats
