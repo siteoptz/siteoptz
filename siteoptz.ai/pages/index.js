@@ -18,7 +18,7 @@ export default function Home() {
       <p>AI-Powered Tools for Your Business</p>
       
       <div style={{ marginTop: '2rem' }}>
-        <a href="#login" style={{ 
+        <a href="/auth-login" style={{ 
           padding: '0.75rem 2rem', 
           background: '#4CAF50', 
           color: 'white', 

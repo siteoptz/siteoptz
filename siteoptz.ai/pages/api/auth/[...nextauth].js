@@ -15,8 +15,8 @@ export default function handler(req, res) {
   }
   
   if (path === 'signin' || path === 'signIn') {
-    // Redirect to our login
-    return res.redirect(302, '/#login');
+    // Redirect to our STANDALONE login page (bypasses all NextAuth)
+    return res.redirect(302, '/auth-login');
   }
   
   if (path === 'callback/google') {
@@ -34,6 +34,6 @@ export default function handler(req, res) {
     return res.status(200).json({});
   }
   
-  // For any other NextAuth route, redirect to login
-  return res.redirect(302, '/#login');
+  // For any other NextAuth route, redirect to standalone login
+  return res.redirect(302, '/auth-login');
 }
