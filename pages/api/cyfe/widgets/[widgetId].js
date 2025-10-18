@@ -31,8 +31,8 @@ export default async function handler(req, res) {
           ...widgetData,
           accessedBy: session.user.email,
           accessTime: new Date().toISOString(),
-          dashboardUrl: `https://optz.siteoptz.ai/widget/${widgetId}`,
-          embedUrl: `https://optz.siteoptz.ai/embed/widget/${widgetId}`
+          dashboardUrl: `https://siteoptz.ai/widget/${widgetId}`,
+          embedUrl: `https://siteoptz.ai/embed/widget/${widgetId}`
         };
 
         console.log(`✅ Returning widget data for ${widgetId} to ${session.user.email}`);

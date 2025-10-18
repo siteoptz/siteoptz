@@ -30,7 +30,7 @@ export default async function handler(req, res) {
           status: widget.status || 'active',
           lastUpdated: widget.lastUpdated || new Date().toISOString(),
           canAccess: true,
-          dashboardUrl: `https://optz.siteoptz.ai/widget/${widget.id}`
+          dashboardUrl: `https://siteoptz.ai/widget/${widget.id}`
         }));
 
         console.log(`✅ Returning ${enhancedWidgets.length} widgets to ${session.user.email}`);

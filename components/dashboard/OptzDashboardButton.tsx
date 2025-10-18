@@ -29,7 +29,7 @@ const createSSOToken = (email: string, plan: string): string => {
 // Get the appropriate optz subdomain dashboard URL with SSO token
 const getOptzDashboardUrl = (plan: string, email?: string): string => {
   // Direct to optz.siteoptz.ai with plan-specific routing
-  const baseUrl = 'https://optz.siteoptz.ai';
+  const baseUrl = 'https://siteoptz.ai';
   
   // Route to different dashboards based on plan
   const dashboardPaths = {

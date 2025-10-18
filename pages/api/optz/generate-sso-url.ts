@@ -62,7 +62,7 @@ export default async function handler(
     };
     
     const path = dashboardPaths[plan] || dashboardPaths.free;
-    const ssoUrl = `https://optz.siteoptz.ai${path}?sso_token=${ssoToken}`;
+    const ssoUrl = `https://siteoptz.ai${path}?sso_token=${ssoToken}`;
     
     console.log('Generated SSO URL for:', email, 'Plan:', plan);
     

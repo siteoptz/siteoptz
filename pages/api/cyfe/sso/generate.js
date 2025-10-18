@@ -41,11 +41,11 @@ export default async function handler(req, res) {
           name: session.user.name,
           id: session.user.id || session.user.email
         },
-        domain: 'optz.siteoptz.ai',
+        domain: 'siteoptz.ai',
         dashboardUrls: {
-          full: `https://optz.siteoptz.ai/dashboard?token=${ssoData.token}`,
-          widgets: `https://optz.siteoptz.ai/widgets?token=${ssoData.token}`,
-          embed: `https://optz.siteoptz.ai/embed?token=${ssoData.token}`
+          full: `https://siteoptz.ai/dashboard?token=${ssoData.token}`,
+          widgets: `https://siteoptz.ai/widgets?token=${ssoData.token}`,
+          embed: `https://siteoptz.ai/embed?token=${ssoData.token}`
         },
         expires: new Date(Date.now() + 3600000).toISOString(), // 1 hour
         generatedAt: new Date().toISOString()
