@@ -1,21 +1,33 @@
-// Disable NextAuth - Use custom GoHighLevel authentication instead
+// Completely override NextAuth to prevent optz.siteoptz.ai redirects
 export default function handler(req, res) {
-  // Redirect to custom auth endpoints
   const { nextauth } = req.query;
   
-  if (nextauth && nextauth[0] === 'signin') {
-    // Redirect to homepage with login hash
+  console.log('NextAuth route intercepted:', nextauth);
+  
+  // Handle all OAuth callbacks
+  if (nextauth && (nextauth[0] === 'callback' || nextauth.includes('callback'))) {
+    console.log('OAuth callback intercepted, redirecting to dashboard');
+    // For OAuth callbacks, redirect to /dashboard which will handle plan-based routing
+    return res.redirect(302, '/dashboard');
+  }
+  
+  // Handle signin requests
+  if (nextauth && (nextauth[0] === 'signin' || nextauth.includes('signin'))) {
+    console.log('Signin request intercepted, redirecting to login');
     return res.redirect(302, '/#login');
   }
   
-  if (nextauth && nextauth[0] === 'callback') {
-    // Redirect OAuth callbacks to homepage
-    // This prevents the optz.siteoptz.ai redirect
+  // Handle signout requests
+  if (nextauth && (nextauth[0] === 'signout' || nextauth.includes('signout'))) {
+    console.log('Signout request intercepted, redirecting to homepage');
     return res.redirect(302, '/');
   }
   
-  // For any other NextAuth routes, return an error
+  // Block all other NextAuth routes
+  console.log('Blocking NextAuth route:', req.url);
   return res.status(404).json({ 
-    error: 'NextAuth is disabled. Please use the custom authentication at /#login' 
+    error: 'NextAuth is disabled',
+    message: 'This authentication method is no longer supported. Please use /#login',
+    route: req.url
   });
 }
