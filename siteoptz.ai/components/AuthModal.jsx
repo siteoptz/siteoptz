@@ -227,20 +227,25 @@ export default function AuthModal() {
 
         <div className="auth-modal-footer">
           {mode === 'login' ? (
-            <p>
-              Don't have an account?{' '}
-              <a 
-                href="#register" 
-                onClick={(e) => {
-                  e.preventDefault();
-                  setMode('register');
-                  setError(null);
-                  setSuccess(null);
-                }}
-              >
-                Create Account
-              </a>
-            </p>
+            <>
+              <p>
+                Don't have an account?{' '}
+                <a 
+                  href="#register" 
+                  onClick={(e) => {
+                    e.preventDefault();
+                    setMode('register');
+                    setError(null);
+                    setSuccess(null);
+                  }}
+                >
+                  Create Account
+                </a>
+              </p>
+              <p style={{ marginTop: '1rem', fontSize: '0.9rem', color: '#999' }}>
+                Note: Google/OAuth login is temporarily disabled. Please use email/password.
+              </p>
+            </>
           ) : (
             <p>
               Already have an account?{' '}
