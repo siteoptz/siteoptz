@@ -118,9 +118,8 @@ export default function AutoLoginPage({ success, message, redirectUrl, error }: 
 export const getServerSideProps: GetServerSideProps<AutoLoginPageProps> = async (context) => {
   const { sso_token, signature, redirect, auto_login, plan } = context.query;
   
-  // Check if we're on the optz subdomain
+  // Check the current host
   const host = context.req.headers.host;
-  const isOptzDomain = host?.includes('optz.siteoptz.ai');
   
   if (!sso_token || !signature) {
     return {
@@ -167,9 +166,9 @@ export const getServerSideProps: GetServerSideProps<AutoLoginPageProps> = async 
   const redirectParam = Array.isArray(redirect) ? redirect[0] : redirect;
   let redirectUrl = redirectParam || `/dashboard/${plan || tokenData.plan}`;
   
-  // If on optz subdomain, use full URL
-  if (isOptzDomain) {
-    redirectUrl = `https://optz.siteoptz.ai${redirectUrl}`;
+  // Always use siteoptz.ai domain
+  if (!redirectUrl.startsWith('http')) {
+    redirectUrl = `https://siteoptz.ai${redirectUrl}`;
   }
   
   // If auto_login is true, redirect immediately

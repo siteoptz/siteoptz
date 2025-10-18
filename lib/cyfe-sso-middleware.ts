@@ -20,7 +20,7 @@ interface AutoLoginUrlParams {
 
 export class CyfeSSOMiddleware {
   private static SECRET = process.env.CYFE_SSO_SECRET || process.env.NEXTAUTH_SECRET || 'default-sso-secret';
-  private static DOMAIN = process.env.NEXT_PUBLIC_OPTZ_DOMAIN || 'https://optz.siteoptz.ai';
+  private static DOMAIN = process.env.NEXT_PUBLIC_SITE_URL || 'https://siteoptz.ai';
 
   /**
    * Generate a secure SSO token for Cyfe auto-login

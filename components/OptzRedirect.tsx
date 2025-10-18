@@ -10,8 +10,8 @@ export const OptzRedirect: React.FC<OptzRedirectProps> = ({
   path = ''
 }) => {
   useEffect(() => {
-    // Redirect to optz.siteoptz.ai
-    const baseUrl = 'https://optz.siteoptz.ai';
+    // Redirect to siteoptz.ai
+    const baseUrl = 'https://siteoptz.ai';
     const redirectPath = path || `/dashboard/${plan}`;
     const fullUrl = `${baseUrl}${redirectPath}`;
     
