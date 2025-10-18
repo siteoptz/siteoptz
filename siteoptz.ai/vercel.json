@@ -1,0 +1,42 @@
+{
+  "buildCommand": "next build",
+  "framework": "nextjs",
+  "cleanUrls": true,
+  "trailingSlash": false,
+  "redirects": [
+    {
+      "source": "/api/auth/:path*",
+      "destination": "/auth-login",
+      "permanent": false
+    },
+    {
+      "source": "/dashboard",
+      "destination": "/auth-login",
+      "permanent": false,
+      "has": [
+        {
+          "type": "cookie",
+          "key": "next-auth.session-token",
+          "value": ""
+        }
+      ]
+    }
+  ],
+  "rewrites": [
+    {
+      "source": "/dashboard",
+      "destination": "/pages/dashboard"
+    }
+  ],
+  "headers": [
+    {
+      "source": "/(.*)",
+      "headers": [
+        {
+          "key": "X-Frame-Options",
+          "value": "DENY"
+        }
+      ]
+    }
+  ]
+}
