@@ -1,6 +1,5 @@
 // Email Service for Auto-Login Links
 import nodemailer from 'nodemailer';
-import type { CyfeDashboard } from './cyfe-provisioning';
 
 interface EmailResult {
   success: boolean;
@@ -13,7 +12,7 @@ interface AutoLoginEmailParams {
   firstName: string;
   loginUrl: string;
   plan: string;
-  dashboards: CyfeDashboard[];
+  dashboards: any[];
   credentials?: {
     username: string;
     password: string;

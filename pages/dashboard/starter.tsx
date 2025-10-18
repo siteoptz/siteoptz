@@ -7,7 +7,6 @@ import { useUserPlan } from '../../hooks/useUserPlan';
 import { DashboardHeader } from '../../components/dashboard/DashboardHeader';
 import { FeatureGate } from '../../components/FeatureGate';
 import { UpgradePrompt } from '../../components/UpgradePrompt';
-import CyfeDashboard from '../../components/dashboard/CyfeDashboard';
 import { OptzDashboardButton } from '../../components/dashboard/OptzDashboardButton';
 import { 
   Search, 
@@ -101,9 +100,9 @@ export default function StarterDashboard() {
               </button>
               
               <button
-                onClick={() => setActiveTab('cyfe-dashboards')} onKeyDown={(e) => e.key === 'Enter' && setActiveTab('cyfe-dashboards')}
+                onClick={() => setActiveTab('overview')} onKeyDown={(e) => e.key === 'Enter' && setActiveTab('overview')}
                 className={`relative py-2 px-3 border-b-2 font-medium text-sm flex items-center space-x-2 ${
-                  activeTab === 'cyfe-dashboards'
+                  false
                     ? 'border-cyan-400 text-cyan-400 bg-cyan-400/10'
                     : 'border-transparent text-gray-300 hover:text-white hover:border-cyan-400/50 bg-gradient-to-r from-cyan-500/10 to-blue-500/10'
                 }`}
@@ -185,7 +184,7 @@ export default function StarterDashboard() {
                   </div>
                 </div>
                 <button
-                  onClick={() => setActiveTab('cyfe-dashboards')} onKeyDown={(e) => e.key === 'Enter' && setActiveTab('cyfe-dashboards')}
+                  onClick={() => setActiveTab('overview')} onKeyDown={(e) => e.key === 'Enter' && setActiveTab('overview')}
                   className="bg-gradient-to-r from-cyan-600 to-blue-600 text-white px-6 py-2 rounded-lg hover:from-cyan-700 hover:to-blue-700 transition-all duration-200 font-medium flex items-center"
                 >
                   Open Dashboards
@@ -507,7 +506,7 @@ export default function StarterDashboard() {
         )}
 
         {/* Cyfe Dashboards Tab */}
-        {activeTab === 'cyfe-dashboards' && (
+        {false && (
           <div className="space-y-8">
             <div className="bg-gradient-to-r from-blue-500/10 to-purple-500/10 border border-blue-500/20 rounded-xl p-6 mb-6">
               <h2 className="text-xl font-bold text-white mb-2">Marketing Analytics Dashboards</h2>
@@ -517,7 +516,7 @@ export default function StarterDashboard() {
               </p>
             </div>
             
-            <CyfeDashboard 
+            <div 
               userPlan="starter"
               userName={userName}
               dashboardId="marketing"

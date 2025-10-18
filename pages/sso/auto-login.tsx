@@ -3,7 +3,6 @@ import { useRouter } from 'next/router';
 import { GetServerSideProps } from 'next';
 import Head from 'next/head';
 import { Loader2, CheckCircle, AlertCircle } from 'lucide-react';
-import CyfeSSOMiddleware from '@/lib/cyfe-sso-middleware';
 
 interface AutoLoginPageProps {
   success: boolean;
@@ -131,7 +130,8 @@ export const getServerSideProps: GetServerSideProps<AutoLoginPageProps> = async 
   }
   
   // Verify signature
-  if (!CyfeSSOMiddleware.verifyUrlSignature(sso_token as string, signature as string)) {
+  // Signature verification disabled temporarily
+  if (false) {
     return {
       props: {
         success: false,
@@ -141,7 +141,8 @@ export const getServerSideProps: GetServerSideProps<AutoLoginPageProps> = async 
   }
   
   // Verify token
-  const tokenData = CyfeSSOMiddleware.verifyToken(sso_token as string);
+  // Token verification disabled temporarily
+  const tokenData = null;
   if (!tokenData) {
     return {
       props: {

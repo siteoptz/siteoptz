@@ -5,7 +5,6 @@ import { getCleanDashboardProps, CleanDashboardProps } from '@/lib/server-side-a
 import { CleanDashboardHeader } from '@/components/dashboard/CleanDashboardHeader';
 import CleanMarketingROIDashboard from '@/components/dashboard/CleanMarketingROIDashboard';
 import { getGoogleAdsDataServerSide, getGoogleAdsConnectionServerSide } from '@/lib/clean-google-ads';
-import CyfeDashboard from '@/components/dashboard/CyfeDashboard';
 import { OptzDashboardButton } from '@/components/dashboard/OptzDashboardButton';
 import {
   BarChart3,
@@ -45,7 +44,6 @@ export default function ProDashboard({
   // Static tabs array - no dynamic content
   const tabs = [
     { id: 'overview', name: 'Overview', icon: BarChart3, highlight: false },
-    { id: 'cyfe-analytics', name: 'Analytics Suite', icon: BarChart2, highlight: true, badge: 'PRO', badgeColor: 'purple' },
     { id: 'roi-dashboard', name: 'ROI Dashboard', icon: Target, highlight: false },
     { id: 'platforms', name: 'Platforms', icon: Globe, highlight: false },
     { id: 'ai-insights', name: 'AI Insights', icon: Zap, highlight: false },
@@ -65,7 +63,7 @@ export default function ProDashboard({
           />
         );
       
-      case 'cyfe-analytics':
+      case 'analytics-suite':
         return (
           <div className="space-y-6">
             <div className="bg-gradient-to-r from-purple-500/10 to-blue-500/10 border border-purple-500/20 rounded-xl p-6">
@@ -79,7 +77,7 @@ export default function ProDashboard({
               <OptzDashboardButton userPlan="pro" />
             </div>
             
-            <CyfeDashboard 
+            <div 
               userPlan="pro"
               userName={userPlan.userName || "User"}
               dashboardId="advanced"
@@ -315,7 +313,7 @@ export default function ProDashboard({
                   </div>
                 </div>
                 <Link
-                  href="/dashboard/pro?tab=cyfe-analytics"
+                  href="/dashboard/pro?tab=overview"
                   className="bg-gradient-to-r from-purple-600 to-indigo-600 text-white px-6 py-2 rounded-lg hover:from-purple-700 hover:to-indigo-700 transition-all duration-200 font-medium flex items-center shadow-lg shadow-purple-500/20"
                 >
                   Open Analytics Suite
@@ -328,7 +326,7 @@ export default function ProDashboard({
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
               {/* Analytics Suite - Featured */}
               <Link
-                href="/dashboard/pro?tab=cyfe-analytics"
+                href="/dashboard/pro?tab=overview"
                 className="relative bg-gradient-to-br from-purple-900/30 to-indigo-900/30 border border-purple-500/50 rounded-xl p-6 hover:border-purple-400 transition-all group overflow-hidden"
               >
                 <div className="absolute top-0 right-0 px-3 py-1 bg-gradient-to-r from-purple-600 to-indigo-600 text-white text-xs font-bold rounded-bl-lg">

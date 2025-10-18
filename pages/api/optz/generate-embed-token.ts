@@ -1,7 +1,6 @@
 import { NextApiRequest, NextApiResponse } from 'next';
 import { getServerSession } from 'next-auth/next';
 import { authOptions } from '../auth/[...nextauth]';
-import CyfeSSOMiddleware from '@/lib/cyfe-sso-middleware';
 
 export default async function handler(
   req: NextApiRequest,
