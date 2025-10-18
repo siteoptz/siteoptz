@@ -1,20 +1,23 @@
 import { NextResponse } from 'next/server';
 
 export function middleware(request) {
+  const hostname = request.headers.get('host') || '';
   const url = request.nextUrl;
   
-  console.log('Middleware: Processing request to', url.pathname);
+  console.log('Middleware: Request from', hostname, 'to', url.pathname);
   
-  // CRITICAL: Block any redirect to optz.siteoptz.ai
-  // Check if the response is trying to redirect to optz.siteoptz.ai
-  const response = NextResponse.next();
+  // CRITICAL: If request is to optz.siteoptz.ai, redirect to siteoptz.ai
+  if (hostname.includes('optz.siteoptz.ai')) {
+    console.log('REDIRECT: optz.siteoptz.ai -> siteoptz.ai');
+    const newUrl = new URL(url.pathname + url.search, 'https://siteoptz.ai');
+    return NextResponse.redirect(newUrl);
+  }
   
-  // If this is a dashboard route, ensure it stays on siteoptz.ai
+  // Handle dashboard routes
   if (url.pathname.startsWith('/dashboard')) {
-    console.log('Middleware: Dashboard route detected, ensuring it stays on siteoptz.ai');
+    console.log('Middleware: Dashboard route detected');
     
-    // If user is not authenticated (no session cookie), redirect to login
-    // Otherwise, let the dashboard page handle the routing
+    // Check for authentication
     const hasSession = request.cookies.get('next-auth.session-token') || 
                       request.cookies.get('__Secure-next-auth.session-token') ||
                       request.cookies.get('siteoptz_user');
@@ -24,7 +27,7 @@ export function middleware(request) {
       return NextResponse.redirect(new URL('/#login', request.url));
     }
     
-    // Allow the request to continue to our dashboard page
+    // Allow the request to continue
     return NextResponse.next();
   }
   
