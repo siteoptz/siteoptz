@@ -77,62 +77,19 @@ export default function ProDashboard({
               <OptzDashboardButton userPlan="pro" />
             </div>
             
-            <div 
-              userPlan="pro"
-              userName={userPlan.userName || "User"}
-              dashboardId="advanced"
-              apiData={{
-                metrics: {
-                  'revenue-attribution': 15420,
-                  'customer-ltv': 2847,
-                  'churn-rate': 3.2,
-                  'acquisition-cost': 127
-                },
-                chartData: {
-                  'predictive-analytics': {
-                    labels: ['Q1', 'Q2', 'Q3', 'Q4 (Projected)'],
-                    datasets: [{
-                      label: 'Revenue Projection',
-                      data: [450000, 520000, 610000, 750000],
-                      backgroundColor: 'rgba(147, 51, 234, 0.2)',
-                      borderColor: '#9333EA'
-                    }]
-                  },
-                  'revenue-attribution': {
-                    labels: ['Organic', 'Paid Search', 'Social', 'Email', 'Direct'],
-                    datasets: [{
-                      label: 'Revenue by Channel',
-                      data: [35, 28, 18, 12, 7],
-                      backgroundColor: ['#3B82F6', '#10B981', '#F59E0B', '#EF4444', '#8B5CF6']
-                    }]
-                  }
-                },
-                tableData: {
-                  'cohort-analysis': {
-                    headers: ['Cohort', 'Month 1', 'Month 2', 'Month 3', 'Month 6', 'Month 12'],
-                    rows: [
-                      ['Jan 2024', '100%', '85%', '72%', '61%', '45%'],
-                      ['Feb 2024', '100%', '88%', '75%', '64%', '48%'],
-                      ['Mar 2024', '100%', '91%', '78%', '67%', '51%'],
-                      ['Apr 2024', '100%', '89%', '76%', '65%', '-'],
-                      ['May 2024', '100%', '92%', '79%', '-', '-']
-                    ]
-                  }
-                },
-                gaugeData: {
-                  'customer-satisfaction': {
-                    value: 8.7,
-                    min: 0,
-                    max: 10
-                  },
-                  'net-promoter-score': {
-                    value: 72,
-                    min: -100,
-                    max: 100
-                  }
-                }
-              }}
-            />
+            <div className="bg-black border border-gray-800 rounded-xl p-6">
+              <h3 className="text-xl font-semibold text-white mb-4">Analytics Suite</h3>
+              <p className="text-gray-400">
+                Advanced analytics and reporting features are coming soon. Pro users will have access to:
+              </p>
+              <ul className="mt-4 space-y-2 text-gray-300">
+                <li>• Revenue attribution tracking</li>
+                <li>• Customer lifetime value analysis</li>
+                <li>• Predictive analytics</li>
+                <li>• Cohort analysis</li>
+                <li>• Custom reporting</li>
+              </ul>
+            </div>
           </div>
         );
       
@@ -455,15 +412,6 @@ export default function ProDashboard({
                 >
                   <IconComponent className="w-4 h-4" />
                   <span className="font-medium">{tab.name}</span>
-                  {tab.badge && (
-                    <span className={`ml-2 px-2 py-0.5 text-xs rounded-full font-bold ${
-                      tab.badgeColor === 'purple' 
-                        ? 'bg-purple-100 text-purple-800'
-                        : 'bg-blue-100 text-blue-800'
-                    }`}>
-                      {tab.badge}
-                    </span>
-                  )}
                   {tab.highlight && (
                     <Sparkles className="absolute -top-1 -right-1 w-4 h-4 text-yellow-400" />
                   )}

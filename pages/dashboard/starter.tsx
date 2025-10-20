@@ -516,46 +516,18 @@ export default function StarterDashboard() {
               </p>
             </div>
             
-            <div 
-              userPlan="starter"
-              userName={userName}
-              dashboardId="marketing"
-              apiData={{
-                metrics: {
-                  'roas-tracker': 4.2,
-                  'campaign-performance': 85,
-                  'conversion-funnel': 2.8
-                },
-                chartData: {
-                  'conversion-funnel': {
-                    labels: ['Visitors', 'Leads', 'Opportunities', 'Customers'],
-                    datasets: [{
-                      label: 'Conversion Funnel',
-                      data: [10000, 3000, 800, 240],
-                      backgroundColor: '#3B82F6',
-                      borderColor: '#1D4ED8'
-                    }]
-                  }
-                },
-                tableData: {
-                  'campaign-performance': {
-                    headers: ['Campaign', 'Spend', 'Clicks', 'ROAS'],
-                    rows: [
-                      ['Search Campaign', '$5,420', '3,200', '5.8x'],
-                      ['Display Campaign', '$3,200', '2,150', '3.9x'],
-                      ['Video Campaign', '$4,800', '2,585', '4.1x']
-                    ]
-                  }
-                },
-                gaugeData: {
-                  'roas-tracker': {
-                    value: 4.2,
-                    min: 0,
-                    max: 10
-                  }
-                }
-              }}
-            />
+            <div className="bg-black border border-gray-800 rounded-xl p-6">
+              <h3 className="text-xl font-semibold text-white mb-4">Analytics Dashboard</h3>
+              <p className="text-gray-400">
+                Analytics features are being updated. Starter users will have access to:
+              </p>
+              <ul className="mt-4 space-y-2 text-gray-300">
+                <li>• Campaign performance tracking</li>
+                <li>• Conversion funnel analysis</li>
+                <li>• ROAS tracking</li>
+                <li>• Basic reporting</li>
+              </ul>
+            </div>
           </div>
         )}
 
