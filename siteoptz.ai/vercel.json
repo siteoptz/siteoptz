@@ -5,11 +5,6 @@
   "trailingSlash": false,
   "redirects": [
     {
-      "source": "/api/auth/:path*",
-      "destination": "/auth-login",
-      "permanent": false
-    },
-    {
       "source": "/dashboard",
       "destination": "/auth-login",
       "permanent": false,
