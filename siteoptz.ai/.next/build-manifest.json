@@ -5,81 +5,81 @@
   "devFiles": [],
   "ampDevFiles": [],
   "lowPriorityFiles": [
-    "static/UskxSnm7UN8YCKrP5pDJ6/_buildManifest.js",
-    "static/UskxSnm7UN8YCKrP5pDJ6/_ssgManifest.js"
+    "static/3i_N2LzLS6vuKUwIgEHIs/_buildManifest.js",
+    "static/3i_N2LzLS6vuKUwIgEHIs/_ssgManifest.js"
   ],
   "rootMainFiles": [],
   "pages": {
     "/": [
       "static/chunks/webpack-ee7e63bc15b31913.js",
-      "static/chunks/framework-14efab3c3d1ed63b.js",
-      "static/chunks/main-5699a34a79274300.js",
-      "static/chunks/pages/index-64ccb32b6e2c2f54.js"
+      "static/chunks/framework-64ad27b21261a9ce.js",
+      "static/chunks/main-35d458cbc07a9081.js",
+      "static/chunks/pages/index-84d084a76a6b1fc6.js"
     ],
     "/_app": [
       "static/chunks/webpack-ee7e63bc15b31913.js",
-      "static/chunks/framework-14efab3c3d1ed63b.js",
-      "static/chunks/main-5699a34a79274300.js",
+      "static/chunks/framework-64ad27b21261a9ce.js",
+      "static/chunks/main-35d458cbc07a9081.js",
       "static/css/13d06dd5684fa12a.css",
-      "static/chunks/pages/_app-bf45cd18e423a208.js"
+      "static/chunks/pages/_app-f9ccd4ca7afb12e6.js"
     ],
     "/_error": [
       "static/chunks/webpack-ee7e63bc15b31913.js",
-      "static/chunks/framework-14efab3c3d1ed63b.js",
-      "static/chunks/main-5699a34a79274300.js",
-      "static/chunks/pages/_error-88e38b962650355f.js"
+      "static/chunks/framework-64ad27b21261a9ce.js",
+      "static/chunks/main-35d458cbc07a9081.js",
+      "static/chunks/pages/_error-7a92967bea80186d.js"
     ],
     "/auth-login": [
       "static/chunks/webpack-ee7e63bc15b31913.js",
-      "static/chunks/framework-14efab3c3d1ed63b.js",
-      "static/chunks/main-5699a34a79274300.js",
-      "static/chunks/pages/auth-login-464a53fda2599298.js"
+      "static/chunks/framework-64ad27b21261a9ce.js",
+      "static/chunks/main-35d458cbc07a9081.js",
+      "static/chunks/pages/auth-login-8e56b66495d694fe.js"
     ],
     "/compare": [
       "static/chunks/webpack-ee7e63bc15b31913.js",
-      "static/chunks/framework-14efab3c3d1ed63b.js",
-      "static/chunks/main-5699a34a79274300.js",
-      "static/chunks/872-01ce578a22ae9abc.js",
-      "static/chunks/894-b99ae5b865535e74.js",
-      "static/chunks/533-f037c9fcebb05eef.js",
-      "static/chunks/pages/compare-5ce9d12a0766ef85.js"
+      "static/chunks/framework-64ad27b21261a9ce.js",
+      "static/chunks/main-35d458cbc07a9081.js",
+      "static/chunks/959-52cb9edc7b1f41c4.js",
+      "static/chunks/664-955dfd5c4af35840.js",
+      "static/chunks/821-88f76f4449d2c25d.js",
+      "static/chunks/pages/compare-021e88ce7556cbe1.js"
     ],
     "/compare/[tool]": [
       "static/chunks/webpack-ee7e63bc15b31913.js",
-      "static/chunks/framework-14efab3c3d1ed63b.js",
-      "static/chunks/main-5699a34a79274300.js",
-      "static/chunks/872-01ce578a22ae9abc.js",
-      "static/chunks/894-b99ae5b865535e74.js",
-      "static/chunks/533-f037c9fcebb05eef.js",
-      "static/chunks/637-350873cebcc55274.js",
-      "static/chunks/pages/compare/[tool]-ec72d8640a47f340.js"
+      "static/chunks/framework-64ad27b21261a9ce.js",
+      "static/chunks/main-35d458cbc07a9081.js",
+      "static/chunks/959-52cb9edc7b1f41c4.js",
+      "static/chunks/664-955dfd5c4af35840.js",
+      "static/chunks/821-88f76f4449d2c25d.js",
+      "static/chunks/537-ba455f322a883a3d.js",
+      "static/chunks/pages/compare/[tool]-ffd3e86b71e6221a.js"
     ],
     "/compare/chatgpt-vs-claude": [
       "static/chunks/webpack-ee7e63bc15b31913.js",
-      "static/chunks/framework-14efab3c3d1ed63b.js",
-      "static/chunks/main-5699a34a79274300.js",
-      "static/chunks/872-01ce578a22ae9abc.js",
-      "static/chunks/533-f037c9fcebb05eef.js",
-      "static/chunks/637-350873cebcc55274.js",
-      "static/chunks/pages/compare/chatgpt-vs-claude-041729abf588000e.js"
+      "static/chunks/framework-64ad27b21261a9ce.js",
+      "static/chunks/main-35d458cbc07a9081.js",
+      "static/chunks/959-52cb9edc7b1f41c4.js",
+      "static/chunks/821-88f76f4449d2c25d.js",
+      "static/chunks/537-ba455f322a883a3d.js",
+      "static/chunks/pages/compare/chatgpt-vs-claude-8910b389226b10f7.js"
     ],
     "/dashboard": [
       "static/chunks/webpack-ee7e63bc15b31913.js",
-      "static/chunks/framework-14efab3c3d1ed63b.js",
-      "static/chunks/main-5699a34a79274300.js",
-      "static/chunks/pages/dashboard-f820d6460afdf475.js"
+      "static/chunks/framework-64ad27b21261a9ce.js",
+      "static/chunks/main-35d458cbc07a9081.js",
+      "static/chunks/pages/dashboard-c52b71fdd55cb100.js"
     ],
     "/dashboard/[plan]": [
       "static/chunks/webpack-ee7e63bc15b31913.js",
-      "static/chunks/framework-14efab3c3d1ed63b.js",
-      "static/chunks/main-5699a34a79274300.js",
-      "static/chunks/pages/dashboard/[plan]-7c54e90c7eac94a9.js"
+      "static/chunks/framework-64ad27b21261a9ce.js",
+      "static/chunks/main-35d458cbc07a9081.js",
+      "static/chunks/pages/dashboard/[plan]-49acf41fb18bdab9.js"
     ],
     "/test-login": [
       "static/chunks/webpack-ee7e63bc15b31913.js",
-      "static/chunks/framework-14efab3c3d1ed63b.js",
-      "static/chunks/main-5699a34a79274300.js",
-      "static/chunks/pages/test-login-2932d7d100256278.js"
+      "static/chunks/framework-64ad27b21261a9ce.js",
+      "static/chunks/main-35d458cbc07a9081.js",
+      "static/chunks/pages/test-login-dc3fc9e0bdb256d9.js"
     ]
   },
   "ampFirstPages": []

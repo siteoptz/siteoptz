@@ -38,6 +38,6 @@ export function middleware(request) {
 export const config = {
   matcher: [
     // Match all paths except static files, auth pages, and API routes
-    '/((?!_next/static|_next/image|favicon.ico|auth-login|auth-register|api/auth/login|api/auth/register).*)',
+    '/((?!_next/static|_next/image|favicon.ico|auth-login|auth-register|api/auth).*)',
   ],
 };
