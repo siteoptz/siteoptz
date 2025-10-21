@@ -1,5 +1,7 @@
 import NextAuth, { NextAuthOptions } from 'next-auth'
 import GoogleProvider from 'next-auth/providers/google'
+import { JWT } from 'next-auth/jwt'
+import { Session } from 'next-auth'
 
 // Helper function to check if user exists in GoHighLevel
 async function searchGHLContact(email: string) {
@@ -98,93 +100,127 @@ export const authOptions: NextAuthOptions = {
     GoogleProvider({
       clientId: process.env.GOOGLE_CLIENT_ID!,
       clientSecret: process.env.GOOGLE_CLIENT_SECRET!,
+      authorization: {
+        params: {
+          prompt: "consent",
+          access_type: "offline",
+          response_type: "code"
+        }
+      }
     }),
   ],
   secret: process.env.NEXTAUTH_SECRET,
+  session: {
+    strategy: 'jwt',
+    maxAge: 30 * 24 * 60 * 60, // 30 days
+  },
   pages: {
     signIn: '/login',
-    error: '/auth/error',
+    error: '/login', // Redirect errors to login page
   },
   callbacks: {
     async signIn({ user, account, profile }) {
-      console.log('🔥 OAuth Sign In Attempt:', user.email);
+      console.log('🔥 OAuth Sign In Attempt:', {
+        email: user?.email,
+        provider: account?.provider,
+        profileEmail: profile?.email
+      });
+      
+      // CRITICAL: Check if Google OAuth credentials are properly configured
+      if (account?.provider === 'google') {
+        if (!process.env.GOOGLE_CLIENT_ID || !process.env.GOOGLE_CLIENT_SECRET || 
+            process.env.GOOGLE_CLIENT_ID.includes('your-') || 
+            process.env.GOOGLE_CLIENT_SECRET.includes('your-')) {
+          console.error('❌ Google OAuth not properly configured!');
+          console.error('Please set GOOGLE_CLIENT_ID and GOOGLE_CLIENT_SECRET in Vercel environment variables');
+          return false; // This will cause the OAuthCallback error
+        }
+      }
       
       // Only process Google OAuth
       if (account?.provider !== 'google') {
         return true;
       }
 
+      // Validate we have an email
+      if (!user?.email) {
+        console.error('❌ No email provided from Google OAuth');
+        return false;
+      }
+
       try {
         // Check if user exists in GoHighLevel
-        const existingContact = await searchGHLContact(user.email!);
+        const existingContact = await searchGHLContact(user.email);
         
         if (!existingContact) {
           // New user - create in GoHighLevel with free plan
           console.log('🆕 New user via OAuth, creating in GHL:', user.email);
-          const newContact = await createGHLContact(
-            user.email!,
+          await createGHLContact(
+            user.email,
             user.name || 'User',
             'free' // Default to free plan for OAuth signups
           );
-          
-          if (!newContact && process.env.GHL_API_KEY) {
-            // If GHL is configured but creation failed, still allow sign in
-            // User will get free plan by default
-            console.error('⚠️ Failed to create GHL contact, but allowing sign in with free plan');
-            // Don't block the sign in - let them authenticate
-            return true;
-          }
         } else {
           console.log('✅ Existing user found in GHL:', user.email);
         }
         
+        // ALWAYS return true to allow sign in
+        // Even if GHL operations fail, we want users to be able to authenticate
         return true;
       } catch (error) {
         console.error('⚠️ Sign in callback error:', error);
-        // Always allow sign in even if GHL integration fails
-        // Users will get default free plan if GHL is unavailable
-        console.log('⚠️ GHL integration error, but allowing sign in with free plan');
+        // Still allow sign in even if GHL integration fails
         return true;
       }
     },
     
     async redirect({ url, baseUrl }) {
-      console.log('🔄 Redirect callback - URL:', url, 'BaseURL:', baseUrl);
+      console.log('🔄 Redirect callback:', { url, baseUrl });
       
-      // After successful sign in, always redirect to dashboard
-      // The dashboard will determine the correct plan-specific route
-      if (url.includes('/api/auth/callback/google') || 
-          url === baseUrl || 
-          url === baseUrl + '/' ||
-          url === baseUrl + '/login') {
+      // Remove any hash fragments from the URL
+      const cleanUrl = url.split('#')[0];
+      
+      // After successful sign in, redirect to dashboard
+      if (cleanUrl.includes('/api/auth/callback/google') || 
+          cleanUrl === baseUrl || 
+          cleanUrl === baseUrl + '/' ||
+          cleanUrl.includes('/login')) {
         console.log('✅ Redirecting to dashboard after OAuth sign in');
-        return baseUrl + '/dashboard';
+        return `${baseUrl}/dashboard`;
+      }
+      
+      // Handle error redirects
+      if (cleanUrl.includes('error=OAuthCallback')) {
+        console.log('❌ OAuth error detected, redirecting to login with error');
+        return `${baseUrl}/login?error=OAuthCallback`;
       }
       
       // Allow internal redirects
-      if (url.startsWith('/')) {
-        return `${baseUrl}${url}`;
+      if (cleanUrl.startsWith('/')) {
+        return `${baseUrl}${cleanUrl}`;
       }
       
       // Allow same-origin redirects
       try {
-        const urlObj = new URL(url);
+        const urlObj = new URL(cleanUrl);
         const baseUrlObj = new URL(baseUrl);
         if (urlObj.origin === baseUrlObj.origin) {
-          return url;
+          return cleanUrl;
         }
       } catch (error) {
-        console.error('Invalid redirect URL:', url);
+        console.error('Invalid redirect URL:', cleanUrl);
       }
       
       // Default redirect to dashboard
-      return baseUrl + '/dashboard';
+      return `${baseUrl}/dashboard`;
     },
     
-    async jwt({ token, user, account }) {
+    async jwt({ token, user, account }: { token: JWT; user?: any; account?: any }) {
       // On initial sign in, fetch user data from GHL
       if (account && user) {
         token.accessToken = account.access_token;
+        token.email = user.email;
+        token.name = user.name;
         
         try {
           // Get user's plan from GoHighLevel
@@ -206,11 +242,13 @@ export const authOptions: NextAuthOptions = {
       return token;
     },
     
-    async session({ session, token }) {
+    async session({ session, token }: { session: Session; token: JWT }) {
       // Add plan to session
       if (session.user) {
         (session.user as any).plan = token.plan || 'free';
-        console.log('📋 Session: User plan is:', (session.user as any).plan);
+        (session.user as any).email = token.email;
+        (session.user as any).name = token.name;
+        console.log('📋 Session created for:', token.email, 'with plan:', token.plan);
       }
       
       if (token.accessToken) {
@@ -220,7 +258,27 @@ export const authOptions: NextAuthOptions = {
       return session;
     },
   },
-  debug: process.env.NODE_ENV === 'development',
+  debug: true, // Enable debug mode to see more details about the error
+  events: {
+    async signIn({ user, account, profile }) {
+      console.log('✅ SignIn Event:', { 
+        email: user?.email, 
+        provider: account?.provider 
+      });
+    },
+    async signOut({ session, token }) {
+      console.log('👋 SignOut Event:', session?.user?.email);
+    },
+    async createUser({ user }) {
+      console.log('🆕 User Created:', user.email);
+    },
+    async session({ session, token }) {
+      console.log('📋 Session Event:', session?.user?.email);
+    },
+    async error(error) {
+      console.error('❌ NextAuth Error:', error);
+    }
+  }
 }
 
 export default NextAuth(authOptions)

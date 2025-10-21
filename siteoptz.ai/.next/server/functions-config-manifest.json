@@ -1,1 +1,1 @@
-{"version":1,"functions":{"/api/auth/[...nextauth]":{},"/compare/chatgpt-vs-claude":{},"/compare/[tool]":{},"/compare":{}}}
+{"version":1,"functions":{"/api/auth/[...nextauth]":{},"/compare/[tool]":{},"/compare":{},"/compare/chatgpt-vs-claude":{}}}
