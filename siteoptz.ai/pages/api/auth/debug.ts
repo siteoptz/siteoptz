@@ -22,6 +22,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     diagnostics: {
       nextauth_configured: !!process.env.GOOGLE_CLIENT_ID && !!process.env.GOOGLE_CLIENT_SECRET && !!process.env.NEXTAUTH_SECRET,
       ghl_configured: !!process.env.GHL_API_KEY && !!process.env.GHL_LOCATION_ID,
+      ghl_connection: '' as string,
     }
   };
 
