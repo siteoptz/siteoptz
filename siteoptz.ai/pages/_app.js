@@ -1,10 +1,11 @@
 import { useEffect } from 'react';
+import { SessionProvider } from 'next-auth/react';
 import AuthModal from '../components/AuthModal';
 import Navigation from '../components/Navigation';
 import { getAuth } from '../utils/auth';
 import '../styles/globals.css';
 
-function MyApp({ Component, pageProps }) {
+function MyApp({ Component, pageProps: { session, ...pageProps } }) {
   useEffect(() => {
     // CRITICAL: Prevent any redirect to optz.siteoptz.ai
     const originalLocation = window.location.replace.bind(window.location);
@@ -50,11 +51,11 @@ function MyApp({ Component, pageProps }) {
   }, []);
 
   return (
-    <>
+    <SessionProvider session={session}>
       <Navigation />
       <Component {...pageProps} />
       <AuthModal />
-    </>
+    </SessionProvider>
   );
 }
 
