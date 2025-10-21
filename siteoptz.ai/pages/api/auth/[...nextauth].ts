@@ -128,9 +128,11 @@ export const authOptions: NextAuthOptions = {
           );
           
           if (!newContact && process.env.GHL_API_KEY) {
-            // If GHL is configured but creation failed, block sign in
-            console.error('❌ Failed to create GHL contact, blocking sign in');
-            return false;
+            // If GHL is configured but creation failed, still allow sign in
+            // User will get free plan by default
+            console.error('⚠️ Failed to create GHL contact, but allowing sign in with free plan');
+            // Don't block the sign in - let them authenticate
+            return true;
           }
         } else {
           console.log('✅ Existing user found in GHL:', user.email);
@@ -138,25 +140,44 @@ export const authOptions: NextAuthOptions = {
         
         return true;
       } catch (error) {
-        console.error('❌ Sign in callback error:', error);
-        // If GHL integration fails but is not configured, allow sign in
-        if (!process.env.GHL_API_KEY) {
-          console.log('⚠️ GHL not configured, allowing sign in');
-          return true;
-        }
-        return false;
+        console.error('⚠️ Sign in callback error:', error);
+        // Always allow sign in even if GHL integration fails
+        // Users will get default free plan if GHL is unavailable
+        console.log('⚠️ GHL integration error, but allowing sign in with free plan');
+        return true;
       }
     },
     
     async redirect({ url, baseUrl }) {
-      // Redirect to dashboard after sign in
-      if (url === baseUrl + '/api/auth/callback/google' || url === baseUrl + '/') {
+      console.log('🔄 Redirect callback - URL:', url, 'BaseURL:', baseUrl);
+      
+      // After successful sign in, always redirect to dashboard
+      // The dashboard will determine the correct plan-specific route
+      if (url.includes('/api/auth/callback/google') || 
+          url === baseUrl || 
+          url === baseUrl + '/' ||
+          url === baseUrl + '/login') {
+        console.log('✅ Redirecting to dashboard after OAuth sign in');
         return baseUrl + '/dashboard';
       }
       
-      if (url.startsWith('/')) return `${baseUrl}${url}`;
-      else if (new URL(url).origin === baseUrl) return url;
+      // Allow internal redirects
+      if (url.startsWith('/')) {
+        return `${baseUrl}${url}`;
+      }
       
+      // Allow same-origin redirects
+      try {
+        const urlObj = new URL(url);
+        const baseUrlObj = new URL(baseUrl);
+        if (urlObj.origin === baseUrlObj.origin) {
+          return url;
+        }
+      } catch (error) {
+        console.error('Invalid redirect URL:', url);
+      }
+      
+      // Default redirect to dashboard
       return baseUrl + '/dashboard';
     },
     
