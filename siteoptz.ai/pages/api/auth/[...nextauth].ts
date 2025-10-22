@@ -274,9 +274,6 @@ export const authOptions: NextAuthOptions = {
     },
     async session({ session, token }) {
       console.log('📋 Session Event:', session?.user?.email);
-    },
-    async error(error) {
-      console.error('❌ NextAuth Error:', error);
     }
   }
 }
