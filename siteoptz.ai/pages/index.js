@@ -36,9 +36,9 @@ export default function Home() {
       </div>
       
       <div style={{ marginTop: '3rem', padding: '1rem', background: '#f5f5f5', borderRadius: '8px' }}>
-        <h3>Simple Email/Password Authentication</h3>
-        <p>No OAuth, No Google Sign-in - Just enter your email and password to access your dashboard.</p>
-        <p>Your plan is determined by your GoHighLevel tags.</p>
+        <h3>AI-Powered Business Tools</h3>
+        <p>Get started with our comprehensive suite of AI tools designed for your business growth.</p>
+        <p>Book a consultation to learn how we can help transform your operations.</p>
       </div>
     </div>
   );

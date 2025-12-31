@@ -1,1 +1,0 @@
-self.__SSG_MANIFEST=new Set(["\u002Fcompare","\u002Fcompare\u002F[tool]","\u002Fcompare\u002Fchatgpt-vs-claude"]);self.__SSG_MANIFEST_CB&&self.__SSG_MANIFEST_CB()
