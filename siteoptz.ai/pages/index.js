@@ -18,26 +18,19 @@ export default function Home() {
       <p>AI-Powered Tools for Your Business</p>
       
       <div style={{ marginTop: '2rem' }}>
-        <a href="/auth-login" style={{ 
-          padding: '0.75rem 2rem', 
-          background: '#4CAF50', 
-          color: 'white', 
-          textDecoration: 'none',
-          borderRadius: '6px',
-          display: 'inline-block',
-          marginRight: '1rem'
-        }}>
-          Login
-        </a>
-        
-        <a href="#register" style={{ 
-          padding: '0.75rem 2rem', 
-          background: '#2196F3', 
-          color: 'white', 
-          textDecoration: 'none',
-          borderRadius: '6px',
-          display: 'inline-block'
-        }}>
+        <a 
+          href="https://api.leadconnectorhq.com/widget/booking/yPjkVmsauPst8XlrOQUl" 
+          target="_blank" 
+          rel="noopener noreferrer"
+          style={{ 
+            padding: '0.75rem 2rem', 
+            background: '#4CAF50', 
+            color: 'white', 
+            textDecoration: 'none',
+            borderRadius: '6px',
+            display: 'inline-block'
+          }}
+        >
           Get Started
         </a>
       </div>
