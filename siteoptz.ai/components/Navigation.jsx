@@ -132,26 +132,12 @@ export default function Navigation() {
           align-items: center;
         }
 
-        .auth-btn-login,
         .auth-btn-register {
           padding: 0.5rem 1rem;
           border-radius: 6px;
           font-weight: 500;
           text-decoration: none;
           transition: all 0.3s;
-        }
-
-        .auth-btn-login {
-          color: #4CAF50;
-          border: 1px solid #4CAF50;
-        }
-
-        .auth-btn-login:hover {
-          background: #4CAF50;
-          color: white;
-        }
-
-        .auth-btn-register {
           background: #4CAF50;
           color: white;
         }
