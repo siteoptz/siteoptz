@@ -14,7 +14,7 @@ export default function KidsLandingPage() {
         keywords={['kids coding', 'learn AI', 'coding for kids', 'AI education', 'kids programming', 'learn to code']}
       />
       
-      <Layout className="bg-gradient-to-b from-blue-50 via-white to-purple-50">
+      <Layout className="bg-gradient-to-br from-black via-gray-900 to-black">
         {/* Hero Section */}
         <section className="max-w-7xl mx-auto px-6 py-20 text-center">
           <div className="flex justify-center mb-6">
@@ -24,7 +24,7 @@ export default function KidsLandingPage() {
             Don&apos;t just use AI.<br />
             <span className="text-blue-600">Build with it.</span>
           </h1>
-          <p className="text-xl text-gray-600 mb-8 max-w-2xl mx-auto">
+          <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
             Kids are already using ChatGPT and AI image generators. 
             Now learn to build your own AI apps with our interactive platform.
           </p>
@@ -47,10 +47,10 @@ export default function KidsLandingPage() {
         </section>
 
         {/* Problem Statement */}
-        <section className="max-w-4xl mx-auto px-6 py-12 bg-white rounded-2xl shadow-lg mb-12">
+        <section className="max-w-4xl mx-auto px-6 py-12 bg-black border border-gray-800 rounded-2xl shadow-lg mb-12">
           <div className="text-center">
-            <h2 className="text-3xl font-bold mb-4 text-gray-900">Kids are already using AI</h2>
-            <p className="text-lg text-gray-600 mb-6">
+            <h2 className="text-3xl font-bold mb-4 text-white">Kids are already using AI</h2>
+            <p className="text-lg text-gray-300 mb-6">
               They&apos;re asking ChatGPT to write their book reports. They&apos;re generating images for school projects. 
               They&apos;re growing up in a world where you describe what you want and a machine makes it.
             </p>
@@ -62,7 +62,7 @@ export default function KidsLandingPage() {
         
         {/* Features */}
         <section className="max-w-7xl mx-auto px-6 py-16">
-          <h2 className="text-3xl font-bold text-center mb-12 text-gray-900">Why Kids Love Learning Here</h2>
+          <h2 className="text-3xl font-bold text-center mb-12 text-white">Why Kids Love Learning Here</h2>
           <div className="grid md:grid-cols-3 gap-8">
             <FeatureCard
               icon={<Code className="w-8 h-8" />}
@@ -126,8 +126,8 @@ export default function KidsLandingPage() {
 
         {/* CTA */}
         <section className="max-w-4xl mx-auto px-6 py-16 text-center">
-          <h2 className="text-3xl font-bold mb-4 text-gray-900">Ready to Build Your First AI App?</h2>
-          <p className="text-xl text-gray-600 mb-8">
+          <h2 className="text-3xl font-bold mb-4 text-white">Ready to Build Your First AI App?</h2>
+          <p className="text-xl text-gray-300 mb-8">
             Join thousands of kids already building with AI
           </p>
           <Link
@@ -145,10 +145,10 @@ export default function KidsLandingPage() {
 
 function FeatureCard({ icon, title, description }: { icon: React.ReactNode; title: string; description: string }) {
   return (
-    <div className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition">
-      <div className="text-blue-600 mb-4">{icon}</div>
-      <h3 className="text-xl font-bold mb-2 text-gray-900">{title}</h3>
-      <p className="text-gray-600">{description}</p>
+    <div className="bg-black border border-gray-800 p-6 rounded-lg shadow-md hover:shadow-lg transition">
+      <div className="text-blue-400 mb-4">{icon}</div>
+      <h3 className="text-xl font-bold mb-2 text-white">{title}</h3>
+      <p className="text-gray-300">{description}</p>
     </div>
   );
 }
