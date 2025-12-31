@@ -71,10 +71,20 @@ export default function Navigation() {
             </div>
           ) : (
             <>
-              <a href="#login" className="auth-btn-login">
+              <a 
+                href="https://api.leadconnectorhq.com/widget/booking/yPjkVmsauPst8XlrOQUl" 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                className="auth-btn-login"
+              >
                 Login
               </a>
-              <a href="#register" className="auth-btn-register">
+              <a 
+                href="https://api.leadconnectorhq.com/widget/booking/yPjkVmsauPst8XlrOQUl" 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                className="auth-btn-register"
+              >
                 Get Started
               </a>
             </>
