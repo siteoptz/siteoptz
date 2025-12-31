@@ -380,39 +380,14 @@ const Header: React.FC = () => {
                 )}
               </div>
             ) : (
-              <>
-                {router.pathname === '/' ? (
-                  <>
-                    <button
-                      onClick={() => window.location.hash = 'login'}
-                      className="px-4 py-2 text-gray-300 hover:text-white font-medium text-sm transition-colors"
-                    >
-                      Log In
-                    </button>
-                    <button
-                      onClick={() => window.location.hash = 'register'}
-                      className="px-6 py-2.5 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-lg font-semibold text-sm hover:from-blue-700 hover:to-purple-700 transform hover:scale-105 transition-all duration-200 shadow-lg hover:shadow-xl"
-                    >
-                      Get Started
-                    </button>
-                  </>
-                ) : (
-                  <>
-                    <Link
-                      href="/#login"
-                      className="px-4 py-2 text-gray-300 hover:text-white font-medium text-sm transition-colors"
-                    >
-                      Log In
-                    </Link>
-                    <Link
-                      href="/#register"
-                      className="px-6 py-2.5 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-lg font-semibold text-sm hover:from-blue-700 hover:to-purple-700 transform hover:scale-105 transition-all duration-200 shadow-lg hover:shadow-xl"
-                    >
-                      Get Started
-                    </Link>
-                  </>
-                )}
-              </>
+              <a
+                href="https://api.leadconnectorhq.com/widget/booking/yPjkVmsauPst8XlrOQUl"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="px-6 py-2.5 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-lg font-semibold text-sm hover:from-blue-700 hover:to-purple-700 transform hover:scale-105 transition-all duration-200 shadow-lg hover:shadow-xl"
+              >
+                Get Started
+              </a>
             )}
           </div>
 
@@ -675,83 +650,24 @@ const Header: React.FC = () => {
                   </div>
                 ) : (
                   <div style={{ display: 'flex', flexDirection: 'column', gap: '12px' }}>
-                    {router.pathname === '/' ? (
-                      <>
-                        <button
-                          onClick={() => {
-                            closeMenu();
-                            window.location.hash = 'login';
-                          }}
-                          style={{ 
-                            display: 'block', 
-                            width: '100%', 
-                            padding: '16px', 
-                            background: 'rgba(255,255,255,0.1)', 
-                            color: 'white',
-                            textAlign: 'center',
-                            borderRadius: '8px',
-                            fontWeight: '600',
-                            fontSize: '16px',
-                            border: 'none',
-                            cursor: 'pointer'
-                          }}
-                        >Log In</button>
-                        <button
-                          onClick={() => {
-                            closeMenu();
-                            window.location.hash = 'register';
-                          }}
-                          style={{ 
-                            display: 'block', 
-                            width: '100%', 
-                            padding: '16px', 
-                            background: 'linear-gradient(to right, #06b6d4, #2563eb)', 
-                            color: 'white',
-                            textAlign: 'center',
-                            borderRadius: '8px',
-                            fontWeight: '600',
-                            fontSize: '16px',
-                            border: 'none',
-                            cursor: 'pointer'
-                          }}
-                        >Get Started</button>
-                      </>
-                    ) : (
-                      <>
-                        <Link
-                          href="/#login"
-                          onClick={closeMenu}
-                          style={{ 
-                            display: 'block', 
-                            width: '100%', 
-                            padding: '16px', 
-                            background: 'rgba(255,255,255,0.1)', 
-                            color: 'white',
-                            textAlign: 'center',
-                            borderRadius: '8px',
-                            fontWeight: '600',
-                            fontSize: '16px',
-                            textDecoration: 'none'
-                          }}
-                        >Log In</Link>
-                        <Link
-                          href="/#register"
-                          onClick={closeMenu}
-                          style={{ 
-                            display: 'block', 
-                            width: '100%', 
-                            padding: '16px', 
-                            background: 'linear-gradient(to right, #06b6d4, #2563eb)', 
-                            color: 'white',
-                            textAlign: 'center',
-                            borderRadius: '8px',
-                            fontWeight: '600',
-                            fontSize: '16px',
-                            textDecoration: 'none'
-                          }}
-                        >Get Started</Link>
-                      </>
-                    )}
+                    <a
+                      href="https://api.leadconnectorhq.com/widget/booking/yPjkVmsauPst8XlrOQUl"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      onClick={closeMenu}
+                      style={{ 
+                        display: 'block', 
+                        width: '100%', 
+                        padding: '16px', 
+                        background: 'linear-gradient(to right, #06b6d4, #2563eb)', 
+                        color: 'white',
+                        textAlign: 'center',
+                        borderRadius: '8px',
+                        fontWeight: '600',
+                        fontSize: '16px',
+                        textDecoration: 'none'
+                      }}
+                    >Get Started</a>
                   </div>
                 )}
               </div>
