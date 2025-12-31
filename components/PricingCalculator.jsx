@@ -235,7 +235,7 @@ const PricingCalculator = ({ selectedTools = [] }) => {
 
                     <div className="pt-3 border-t border-gray-200">
                       <a
-                        href={tool.affiliate_link}
+                        href="https://api.leadconnectorhq.com/widget/booking/yPjkVmsauPst8XlrOQUl"
                         target="_blank"
                         rel="noopener noreferrer"
                         className="w-full bg-blue-600 hover:bg-blue-700 text-white py-2 px-4 rounded-md text-sm font-medium text-center block transition-colors"
