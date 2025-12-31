@@ -70,24 +70,14 @@ export default function Navigation() {
               </button>
             </div>
           ) : (
-            <>
-              <a 
-                href="https://api.leadconnectorhq.com/widget/booking/yPjkVmsauPst8XlrOQUl" 
-                target="_blank" 
-                rel="noopener noreferrer" 
-                className="auth-btn-login"
-              >
-                Login
-              </a>
-              <a 
-                href="https://api.leadconnectorhq.com/widget/booking/yPjkVmsauPst8XlrOQUl" 
-                target="_blank" 
-                rel="noopener noreferrer" 
-                className="auth-btn-register"
-              >
-                Get Started
-              </a>
-            </>
+            <a 
+              href="https://api.leadconnectorhq.com/widget/booking/yPjkVmsauPst8XlrOQUl" 
+              target="_blank" 
+              rel="noopener noreferrer" 
+              className="auth-btn-register"
+            >
+              Get Started
+            </a>
           )}
         </div>
       </div>
