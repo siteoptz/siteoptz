@@ -145,6 +145,12 @@ const Header: React.FC = () => {
       hasDropdown: false
     },
     { 
+      name: 'Kids', 
+      href: '/kids', 
+      current: router.pathname.startsWith('/kids'),
+      hasDropdown: false
+    },
+    { 
       name: 'Community', 
       href: '/community', 
       current: router.pathname === '/community', 
@@ -459,6 +465,19 @@ const Header: React.FC = () => {
                 display: 'block',
                 fontWeight: '600'
               }}>All Tools</Link>
+              
+              <Link href="/kids" onClick={closeMenu} style={{ 
+                color: router.pathname.startsWith('/kids') ? '#06b6d4' : 'white',
+                backgroundColor: router.pathname.startsWith('/kids') ? 'rgba(6, 182, 212, 0.1)' : 'transparent',
+                textDecoration: 'none', 
+                fontSize: '18px', 
+                padding: '16px', 
+                borderRadius: '8px',
+                borderBottom: '1px solid rgba(255,255,255,0.1)',
+                transition: 'all 0.2s ease',
+                display: 'block',
+                fontWeight: '600'
+              }}>Kids</Link>
               
               <Link href="/community" onClick={closeMenu} style={{ 
                 color: router.pathname === '/community' ? '#06b6d4' : 'white',
