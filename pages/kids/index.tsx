@@ -1,6 +1,5 @@
 import React from 'react';
 import Link from 'next/link';
-import Layout from '../../components/Layout';
 import SEOHead from '../../components/SEOHead';
 import { Rocket, Code, Users, Shield, Sparkles, ArrowRight, Play } from 'lucide-react';
 
@@ -14,7 +13,7 @@ export default function KidsLandingPage() {
         keywords={['kids coding', 'learn AI', 'coding for kids', 'AI education', 'kids programming', 'learn to code']}
       />
       
-      <Layout className="bg-gradient-to-br from-black via-gray-900 to-black">
+      <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-black">
         {/* Hero Section */}
         <section className="max-w-7xl mx-auto px-6 py-20 text-center">
           <div className="flex justify-center mb-6">
@@ -138,7 +137,7 @@ export default function KidsLandingPage() {
             Try the Playground
           </Link>
         </section>
-      </Layout>
+      </div>
     </>
   );
 }

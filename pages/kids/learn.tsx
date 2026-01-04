@@ -1,8 +1,7 @@
 import React from 'react';
-import Layout from '../../components/Layout';
 import SEOHead from '../../components/SEOHead';
 import Link from 'next/link';
-import { ArrowLeft, Book, Code, Sparkles, Rocket } from 'lucide-react';
+import { ArrowLeft, Code, Sparkles, Rocket } from 'lucide-react';
 
 export default function KidsLearnPage() {
   return (
@@ -13,7 +12,7 @@ export default function KidsLearnPage() {
         canonicalUrl="https://siteoptz.ai/kids/learn"
       />
       
-      <Layout className="bg-gradient-to-b from-blue-50 via-white to-purple-50">
+      <div className="min-h-screen bg-gradient-to-b from-blue-50 via-white to-purple-50 py-16 lg:py-20">
         <div className="max-w-7xl mx-auto px-6 py-12">
           <Link 
             href="/kids" 
@@ -129,7 +128,7 @@ export default function KidsLearnPage() {
             </Link>
           </div>
         </div>
-      </Layout>
+      </div>
     </>
   );
 }

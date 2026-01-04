@@ -1,5 +1,4 @@
 import React from 'react';
-import Layout from '../../components/Layout';
 import SEOHead from '../../components/SEOHead';
 import Link from 'next/link';
 import { ArrowLeft, Sparkles, Info } from 'lucide-react';
@@ -15,7 +14,7 @@ export default function KidsPlaygroundPage() {
         keywords={['kids AI playground', 'safe AI tools', 'AI experimentation', 'kids coding', 'AI education']}
       />
       
-      <Layout className="bg-gradient-to-br from-black via-gray-900 to-black">
+      <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-black py-16 lg:py-20">
         <div className="max-w-7xl mx-auto px-6 py-12">
           <Link 
             href="/kids" 
@@ -80,7 +79,7 @@ export default function KidsPlaygroundPage() {
             </div>
           </div>
         </div>
-      </Layout>
+      </div>
     </>
   );
 }

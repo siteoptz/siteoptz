@@ -1,5 +1,4 @@
 import React from 'react';
-import Layout from '../../components/Layout';
 import SEOHead from '../../components/SEOHead';
 import Link from 'next/link';
 import { ArrowLeft, Shield, Users, BarChart, Mail, CheckCircle } from 'lucide-react';
@@ -13,7 +12,7 @@ export default function KidsParentsPage() {
         canonicalUrl="https://siteoptz.ai/kids/parents"
       />
       
-      <Layout className="bg-gradient-to-br from-black via-gray-900 to-black">
+      <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-black py-16 lg:py-20">
         <div className="max-w-7xl mx-auto px-6 py-12">
           <Link 
             href="/kids" 
@@ -130,7 +129,7 @@ export default function KidsParentsPage() {
             </div>
           </div>
         </div>
-      </Layout>
+      </div>
     </>
   );
 }

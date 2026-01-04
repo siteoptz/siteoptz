@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import Layout from '../../../../components/Layout';
 import SEOHead from '../../../../components/SEOHead';
 import Link from 'next/link';
 import { ArrowLeft, ArrowRight, Sparkles, Brain, Bot, Lightbulb, CheckCircle } from 'lucide-react';
@@ -234,7 +233,7 @@ export default function WhatIsAIPage() {
         canonicalUrl="https://siteoptz.ai/kids/learn/explorer/what-is-ai"
       />
       
-      <Layout className="bg-gradient-to-br from-black via-gray-900 to-black">
+      <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-black py-16 lg:py-20">
         <div className="max-w-4xl mx-auto px-6 py-12">
           <Link 
             href="/kids/learn/explorer" 
@@ -297,7 +296,7 @@ export default function WhatIsAIPage() {
             )}
           </div>
         </div>
-      </Layout>
+      </div>
     </>
   );
 }

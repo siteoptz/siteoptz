@@ -1,5 +1,4 @@
 import React from 'react';
-import Layout from '../../../components/Layout';
 import SEOHead from '../../../components/SEOHead';
 import Link from 'next/link';
 import { ArrowLeft, BookOpen, Sparkles, Target, Users, Shield, CheckCircle } from 'lucide-react';
@@ -65,7 +64,7 @@ export default function ExplorerLevelPage() {
         canonicalUrl="https://siteoptz.ai/kids/learn/explorer"
       />
       
-      <Layout className="bg-gradient-to-b from-purple-50 via-blue-50 to-white">
+      <div className="min-h-screen bg-gradient-to-b from-purple-50 via-blue-50 to-white py-16 lg:py-20">
         <div className="max-w-6xl mx-auto px-6 py-12">
           <Link 
             href="/kids/learn" 
@@ -176,7 +175,7 @@ export default function ExplorerLevelPage() {
             </Link>
           </div>
         </div>
-      </Layout>
+      </div>
     </>
   );
 }

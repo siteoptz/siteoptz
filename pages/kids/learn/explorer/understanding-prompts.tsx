@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import Layout from '../../../../components/Layout';
 import SEOHead from '../../../../components/SEOHead';
 import Link from 'next/link';
 import { ArrowLeft, ArrowRight, MessageSquare, Lightbulb, CheckCircle, XCircle } from 'lucide-react';
@@ -318,7 +317,7 @@ export default function UnderstandingPromptsPage() {
         canonicalUrl="https://siteoptz.ai/kids/learn/explorer/understanding-prompts"
       />
       
-      <Layout className="bg-gradient-to-b from-purple-50 via-blue-50 to-white">
+      <div className="min-h-screen bg-gradient-to-b from-purple-50 via-blue-50 to-white py-16 lg:py-20">
         <div className="max-w-4xl mx-auto px-6 py-12">
           <Link 
             href="/kids/learn/explorer" 
@@ -381,7 +380,7 @@ export default function UnderstandingPromptsPage() {
             )}
           </div>
         </div>
-      </Layout>
+      </div>
     </>
   );
 }
