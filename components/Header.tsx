@@ -92,6 +92,7 @@ const Header: React.FC = () => {
     categories: false,
     tools: false,
     industries: false,
+    kidsAI: false,
     resources: false,
   });
   
@@ -130,6 +131,13 @@ const Header: React.FC = () => {
     { name: 'Aerospace & Defense AI', industry: 'Aerospace & Defense' }
   ];
 
+  // Kids AI dropdown menu items
+  const kidsAIMenuItems = [
+    { name: 'Safe AI Tools Directory', href: '/kids-ai' },
+    { name: 'Pricing Plans', href: '/kids-ai/pricing' },
+    { name: 'Safety Guide', href: '/kids-ai/safety' }
+  ];
+
   const navigation = [
     { 
       name: 'Top AI Tools', 
@@ -145,10 +153,11 @@ const Header: React.FC = () => {
       hasDropdown: false
     },
     { 
-      name: 'Kids', 
-      href: '/kids', 
+      name: 'Kids AI', 
+      href: '/kids-ai', 
       current: router.pathname.startsWith('/kids'),
-      hasDropdown: false
+      hasDropdown: true,
+      isKidsAI: true
     },
     { 
       name: 'Community', 
@@ -184,6 +193,7 @@ const Header: React.FC = () => {
       categories: false,
       tools: false,
       industries: false,
+      kidsAI: false,
       resources: false,
     });
   };
@@ -272,7 +282,7 @@ const Header: React.FC = () => {
           {/* Desktop Navigation */}
           <div className="hidden lg:flex items-center space-x-1">
             {navigation.map((item) => (
-              <div key={item.name}>
+              <div key={item.name} className={item.hasDropdown ? 'relative group' : ''}>
                 {item.external ? (
                   <a
                     href={item.href}
@@ -296,9 +306,70 @@ const Header: React.FC = () => {
                     }`}
                   >
                     <span>{item.name}</span>
+                    {item.hasDropdown && <ChevronDown className="w-4 h-4" />}
                   </Link>
                 )}
-                {/* Dropdowns temporarily disabled for debugging */}
+                
+                {/* Kids AI Dropdown */}
+                {item.isKidsAI && item.hasDropdown && (
+                  <div className="absolute left-0 mt-2 w-64 bg-white rounded-lg shadow-lg border border-gray-200 py-2 z-50 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
+                    {kidsAIMenuItems.map((subItem, idx) => (
+                      <Link
+                        key={idx}
+                        href={subItem.href}
+                        className="block px-4 py-3 text-gray-700 hover:bg-gray-50 transition-colors"
+                      >
+                        <div className="font-medium">{subItem.name}</div>
+                      </Link>
+                    ))}
+                  </div>
+                )}
+                
+                {/* Categories Dropdown (existing logic) */}
+                {item.isCategory && item.hasDropdown && (
+                  <div className="absolute left-0 mt-2 w-96 bg-white rounded-lg shadow-lg border border-gray-200 py-2 z-50 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
+                    <div className="grid grid-cols-1 gap-1">
+                      {accordionCategories.map((category) => (
+                        <div key={category.name} className="p-2">
+                          <button
+                            onClick={() => toggleDesktopCategoryAccordion(category.name)}
+                            className="w-full text-left px-2 py-1 font-semibold text-gray-900 hover:text-blue-600 transition-colors"
+                          >
+                            {category.name}
+                          </button>
+                          {desktopCategoryAccordions[category.name] && (
+                            <div className="ml-4 mt-1 space-y-1">
+                              {category.subcategories.map((subcategory) => (
+                                <Link
+                                  key={subcategory.value}
+                                  href={getCategoryUrl(subcategory.value)}
+                                  className="block px-2 py-1 text-sm text-gray-600 hover:text-blue-600 hover:bg-gray-50 rounded transition-colors"
+                                >
+                                  {getCategoryDisplayName(subcategory.value)}
+                                </Link>
+                              ))}
+                            </div>
+                          )}
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                )}
+                
+                {/* Industries Dropdown (existing logic) */}
+                {item.isIndustry && item.hasDropdown && (
+                  <div className="absolute left-0 mt-2 w-80 bg-white rounded-lg shadow-lg border border-gray-200 py-2 z-50 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
+                    {industryMenuItems.map((industryItem, idx) => (
+                      <Link
+                        key={idx}
+                        href={`/industries/${industrySlugMap[industryItem.industry] || industryItem.industry.toLowerCase().replace(/ & | /g, '-').replace(/[^a-z0-9-]/g, '')}`}
+                        className="block px-4 py-3 text-gray-700 hover:bg-gray-50 transition-colors"
+                      >
+                        <div className="font-medium">{industryItem.name}</div>
+                      </Link>
+                    ))}
+                  </div>
+                )}
               </div>
             ))}
           </div>
@@ -466,18 +537,58 @@ const Header: React.FC = () => {
                 fontWeight: '600'
               }}>All Tools</Link>
               
-              <Link href="/kids" onClick={closeMenu} style={{ 
-                color: router.pathname.startsWith('/kids') ? '#06b6d4' : 'white',
-                backgroundColor: router.pathname.startsWith('/kids') ? 'rgba(6, 182, 212, 0.1)' : 'transparent',
-                textDecoration: 'none', 
-                fontSize: '18px', 
-                padding: '16px', 
-                borderRadius: '8px',
+              {/* Kids AI Section with Accordion */}
+              <div style={{ 
                 borderBottom: '1px solid rgba(255,255,255,0.1)',
-                transition: 'all 0.2s ease',
-                display: 'block',
-                fontWeight: '600'
-              }}>Kids</Link>
+                borderRadius: '8px'
+              }}>
+                <button 
+                  onClick={() => toggleMobileAccordion('kidsAI')} 
+                  style={{ 
+                    width: '100%',
+                    textAlign: 'left',
+                    color: router.pathname.startsWith('/kids') ? '#06b6d4' : 'white',
+                    backgroundColor: router.pathname.startsWith('/kids') ? 'rgba(6, 182, 212, 0.1)' : 'transparent',
+                    border: 'none',
+                    fontSize: '18px', 
+                    padding: '16px', 
+                    borderRadius: '8px',
+                    transition: 'all 0.2s ease',
+                    display: 'flex',
+                    justifyContent: 'space-between',
+                    alignItems: 'center',
+                    fontWeight: '600',
+                    cursor: 'pointer'
+                  }}
+                >
+                  Kids AI
+                  {mobileAccordions.kidsAI ? <ChevronUp className="w-4 h-4" /> : <ChevronDown className="w-4 h-4" />}
+                </button>
+                {mobileAccordions.kidsAI && (
+                  <div style={{ paddingLeft: '16px', paddingBottom: '8px' }}>
+                    {kidsAIMenuItems.map((item, index) => (
+                      <Link
+                        key={index}
+                        href={item.href}
+                        onClick={closeMenu}
+                        style={{
+                          color: router.pathname === item.href ? '#06b6d4' : '#d1d5db',
+                          textDecoration: 'none',
+                          fontSize: '16px',
+                          padding: '12px 16px',
+                          borderRadius: '6px',
+                          transition: 'all 0.2s ease',
+                          display: 'block',
+                          fontWeight: '500',
+                          marginBottom: '4px'
+                        }}
+                      >
+                        {item.name}
+                      </Link>
+                    ))}
+                  </div>
+                )}
+              </div>
               
               <Link href="/community" onClick={closeMenu} style={{ 
                 color: router.pathname === '/community' ? '#06b6d4' : 'white',
