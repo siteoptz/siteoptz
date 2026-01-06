@@ -608,7 +608,7 @@ export default function KidsAIChatbotBuilder() {
                     <div className="bg-blue-900 rounded-lg p-3">
                       <p className="text-blue-200 text-sm font-medium">Sample Greeting:</p>
                       <p className="text-white text-sm mt-1">
-                        "{personalities.find(p => p.id === selectedPersonality)?.greeting}"
+                        &quot;{personalities.find(p => p.id === selectedPersonality)?.greeting}&quot;
                       </p>
                     </div>
 
@@ -651,7 +651,7 @@ export default function KidsAIChatbotBuilder() {
                     </p>
                     
                     <div className="bg-gray-800 rounded-lg p-4 text-left">
-                      <h4 className="text-sm font-bold text-blue-400 mb-2">🧠 What You'll Learn:</h4>
+                      <h4 className="text-sm font-bold text-blue-400 mb-2">🧠 What You&apos;ll Learn:</h4>
                       <ul className="text-sm text-gray-300 space-y-1">
                         <li>• How AI chatbots understand and respond</li>
                         <li>• Creating different AI personalities</li>
@@ -830,7 +830,7 @@ export default function KidsAIChatbotBuilder() {
                 <div className="text-4xl mb-3">👂</div>
                 <h3 className="text-lg font-bold mb-2">1. Listen & Understand</h3>
                 <p className="text-sm opacity-80">
-                  Your chatbot reads your message and understands what you're asking about.
+                  Your chatbot reads your message and understands what you&apos;re asking about.
                 </p>
               </div>
               

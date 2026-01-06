@@ -573,7 +573,7 @@ export default function KidsAIGameMaker() {
                     </p>
                     
                     <div className="bg-gray-800 rounded-lg p-4 text-left">
-                      <h4 className="text-sm font-bold text-purple-400 mb-2">🧠 What You'll Learn:</h4>
+                      <h4 className="text-sm font-bold text-purple-400 mb-2">🧠 What You&apos;ll Learn:</h4>
                       <ul className="text-sm text-gray-300 space-y-1">
                         <li>• Game design and storytelling</li>
                         <li>• Character development and plot structure</li>
@@ -672,7 +672,7 @@ export default function KidsAIGameMaker() {
                     <div className="p-8 text-center">
                       <div className="text-6xl mb-4">🎉</div>
                       <h2 className="text-3xl font-bold text-white mb-2">Congratulations!</h2>
-                      <p className="text-gray-300 mb-4">You completed "{currentGame.title}"!</p>
+                      <p className="text-gray-300 mb-4">You completed &quot;{currentGame.title}&quot;!</p>
                       <p className="text-yellow-400 font-bold mb-6">Final Score: {gameplayState.score} points</p>
                       <button
                         onClick={() => setGameplayState({ currentLevel: 0, score: 0, playerChoices: [] })}

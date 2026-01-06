@@ -528,7 +528,7 @@ export default function KidsAIImageCreator() {
                   
                   {/* What Kids Learn */}
                   <div className="bg-gray-800 rounded-lg p-4 text-left">
-                    <h4 className="text-sm font-bold text-blue-400 mb-2">🧠 What You'll Learn:</h4>
+                    <h4 className="text-sm font-bold text-blue-400 mb-2">🧠 What You&apos;ll Learn:</h4>
                     <ul className="text-sm text-gray-300 space-y-1">
                       <li>• How AI creates images from text descriptions</li>
                       <li>• Writing effective prompts for AI art tools</li>
@@ -552,6 +552,15 @@ export default function KidsAIImageCreator() {
                     key={image.id}
                     className="bg-gray-800 rounded-lg overflow-hidden cursor-pointer hover:transform hover:scale-105 transition-all duration-200"
                     onClick={() => setCurrentImage(image)}
+                    onKeyDown={(e) => {
+                      if (e.key === 'Enter' || e.key === ' ') {
+                        e.preventDefault();
+                        setCurrentImage(image);
+                      }
+                    }}
+                    tabIndex={0}
+                    role="button"
+                    aria-label={`View image: ${image.title}`}
                   >
                     <img
                       src={image.imageUrl}
