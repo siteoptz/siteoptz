@@ -24,7 +24,7 @@ export default function KidsAIPricing() {
               Choose Your Kids AI Plan
             </h1>
             <p className="text-xl text-gray-300 mb-6 max-w-2xl mx-auto">
-              Get access to 200+ safety-certified, COPPA-compliant AI tools for children
+              Get access to 200+ safety-certified AI tools PLUS our revolutionary AI coding platform for children
             </p>
             <div className="flex justify-center gap-4 flex-wrap">
               <SafetyBadge type="coppa" />
@@ -162,6 +162,50 @@ export default function KidsAIPricing() {
                 </div>
               </div>
             ))}
+          </div>
+
+          {/* AI Coding Platform Highlight */}
+          <div className="bg-gradient-to-r from-purple-900 to-blue-900 rounded-2xl p-8 mb-8 border border-purple-700">
+            <div className="text-center mb-6">
+              <div className="text-5xl mb-4">🚀</div>
+              <h2 className="text-3xl font-bold text-white mb-4">NEW: AI Coding Platform Included!</h2>
+              <p className="text-lg text-gray-200 max-w-3xl mx-auto">
+                All paid plans now include access to our revolutionary AI coding platform where kids build 
+                real projects using OpenAI, DALL-E, and other AI APIs in a safe environment.
+              </p>
+            </div>
+            
+            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+              <div className="bg-black/30 backdrop-blur rounded-xl p-6 text-center">
+                <div className="text-3xl mb-3">📚</div>
+                <h3 className="text-lg font-bold text-white mb-2">Story Generators</h3>
+                <p className="text-gray-300 text-sm">Create interactive stories with AI</p>
+              </div>
+              <div className="bg-black/30 backdrop-blur rounded-xl p-6 text-center">
+                <div className="text-3xl mb-3">🖼️</div>
+                <h3 className="text-lg font-bold text-white mb-2">Image Creators</h3>
+                <p className="text-gray-300 text-sm">Generate art with DALL-E AI</p>
+              </div>
+              <div className="bg-black/30 backdrop-blur rounded-xl p-6 text-center">
+                <div className="text-3xl mb-3">🤖</div>
+                <h3 className="text-lg font-bold text-white mb-2">Smart Chatbots</h3>
+                <p className="text-gray-300 text-sm">Build AI assistants that learn</p>
+              </div>
+              <div className="bg-black/30 backdrop-blur rounded-xl p-6 text-center">
+                <div className="text-3xl mb-3">🎮</div>
+                <h3 className="text-lg font-bold text-white mb-2">AI Games</h3>
+                <p className="text-gray-300 text-sm">Create intelligent game companions</p>
+              </div>
+            </div>
+            
+            <div className="text-center mt-6">
+              <Link
+                href="/kids-ai/coding"
+                className="bg-white text-purple-800 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors inline-flex items-center gap-2"
+              >
+                Explore Coding Platform 🚀
+              </Link>
+            </div>
           </div>
 
           {/* FAQ Section */}

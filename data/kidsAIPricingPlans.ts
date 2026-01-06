@@ -31,18 +31,21 @@ export const kidsAIPricingPlans: KidsAIPricingPlans = {
       '✓ Browse 200+ safety-certified AI tools',
       '✓ COPPA compliance verification',
       '✓ Age-appropriate filtering (5-8, 9-12, 13-18)',
+      '✓ Full AI Coding Platform access',
+      '✓ Explorer & Creator level projects',
+      '✓ Real AI APIs (OpenAI GPT-4, basic DALL-E)',
       '✓ Progress tracking dashboard',
+      '✓ Project sharing with friends',
       '✓ Parent review access',
       '✓ Safety alerts & recommendations',
       '✓ Educational value ratings',
-      '✓ Cost comparison tools',
-      '✓ Email support',
-      '✓ 10 saved tools'
+      '✓ Email support'
     ],
     limitations: [
+      '✗ No Builder or Innovator levels',
       '✗ No classroom management',
       '✗ No bulk student tracking',
-      '✗ No school district features'
+      '✗ No advanced AI model training'
     ],
     stripePriceId: 'price_parent_pro_monthly', // Replace with actual Stripe price ID
     upgradeTo: 'educator',
@@ -58,6 +61,8 @@ export const kidsAIPricingPlans: KidsAIPricingPlans = {
     description: 'Ideal for teachers and homeschooling parents',
     features: [
       '✓ Everything in Parent Pro',
+      '✓ All 4 coding levels (Explorer to Innovator)',
+      '✓ Advanced AI APIs (DALL-E 3, custom models)',
       '✓ Classroom management tools',
       '✓ Student progress dashboards',
       '✓ Lesson plan integration',
@@ -66,7 +71,6 @@ export const kidsAIPricingPlans: KidsAIPricingPlans = {
       '✓ Student activity tracking',
       '✓ Parent communication tools',
       '✓ Priority email support',
-      '✓ Unlimited saved tools',
       '✓ Team collaboration (up to 5 teachers)'
     ],
     limitations: [
@@ -86,7 +90,10 @@ export const kidsAIPricingPlans: KidsAIPricingPlans = {
     description: 'Complete AI implementation for schools and districts',
     features: [
       '✓ Everything in Educator',
-      '✓ District-wide tool licensing',
+      '✓ Custom AI model training for students',
+      '✓ District-wide coding platform deployment',
+      '✓ Advanced project collaboration tools',
+      '✓ AI ethics & safety curriculum',
       '✓ Custom implementation support',
       '✓ Teacher training programs',
       '✓ COPPA compliance audits',
@@ -95,9 +102,6 @@ export const kidsAIPricingPlans: KidsAIPricingPlans = {
       '✓ Priority support (24/7)',
       '✓ Unlimited users',
       '✓ Custom reporting & analytics',
-      '✓ Parent communication portal',
-      '✓ Safety monitoring dashboard',
-      '✓ Bulk student progress tracking',
       '✓ White-label options'
     ],
     limitations: [],
@@ -143,20 +147,23 @@ export const kidsAIFreeTier = {
   name: 'Free',
   price: 0,
   period: 'forever',
-  description: 'Basic access to safety-certified AI tools for kids',
+  description: 'Basic access to safety-certified AI tools plus beginner coding projects',
   features: [
     '✓ Browse 50+ free AI tools',
     '✓ Basic safety information',
     '✓ Age range filtering',
     '✓ COPPA compliance badges',
-    '✓ Basic tool descriptions'
+    '✓ 2 free AI coding projects (Explorer level)',
+    '✓ Basic story generator project',
+    '✓ Simple chatbot tutorial'
   ],
   limitations: [
     '✗ Limited tool details',
     '✗ No progress tracking',
     '✗ No parent reviews',
-    '✗ No safety recommendations',
-    '✗ No cost comparisons'
+    '✗ Only Explorer level projects',
+    '✗ No advanced AI APIs (DALL-E, GPT-4)',
+    '✗ No project sharing features'
   ]
 };
 

@@ -134,6 +134,7 @@ const Header: React.FC = () => {
   // Kids AI dropdown menu items
   const kidsAIMenuItems = [
     { name: 'Safe AI Tools Directory', href: '/kids-ai' },
+    { name: 'AI Coding Platform', href: '/kids-ai/coding' },
     { name: 'Pricing Plans', href: '/kids-ai/pricing' },
     { name: 'Safety Guide', href: '/kids-ai/safety' }
   ];
