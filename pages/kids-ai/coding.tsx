@@ -42,13 +42,32 @@ export default function KidsAICodingPlatform() {
   ];
 
   const handleStartProject = (projectId: string) => {
-    // In real app, this would navigate to project builder
-    console.log('Starting project:', projectId);
-    // For now, show upgrade prompt if user is free tier
-    if (userTier === 'free') {
-      window.open('/kids-ai/pricing', '_blank');
+    // Map project IDs to actual project pages
+    const projectRoutes = {
+      'story-generator-basic': '/kids-ai/projects/story-generator',
+      'simple-chatbot': '/kids-ai/projects/chatbot-builder',
+      'color-palette-generator': '/kids-ai/projects/image-creator',
+      'simple-game-maker': '/kids-ai/projects/ai-game-maker',
+      'advanced-story-generator': '/kids-ai/projects/story-generator',
+      'image-generator': '/kids-ai/projects/image-creator',
+      'personality-chatbot': '/kids-ai/projects/chatbot-builder',
+      'multi-modal-app': '/kids-ai/projects/ai-game-maker',
+      'game-ai-companion': '/kids-ai/projects/ai-game-maker',
+      'learning-assistant': '/kids-ai/projects/chatbot-builder',
+      'custom-ai-model': '/kids-ai/projects/image-creator',
+      'ai-startup-simulator': '/kids-ai/projects/ai-game-maker',
+      'community-ai-tool': '/kids-ai/projects/story-generator'
+    };
+
+    const route = projectRoutes[projectId as keyof typeof projectRoutes];
+    
+    if (route) {
+      // Navigate to the actual project page
+      window.location.href = route;
     } else {
-      alert(`Starting project: ${projectId}\n\nThis would open the AI coding environment!`);
+      // Fallback for unknown projects
+      console.log('Starting project:', projectId);
+      alert(`Welcome to ${projectId}! This project is under development.`);
     }
   };
 
@@ -279,6 +298,20 @@ export default function KidsAICodingPlatform() {
               Join thousands of young innovators learning to code with artificial intelligence
             </p>
             
+            {userTier === 'free' && (
+              <div className="bg-white/10 rounded-lg p-4 mb-6">
+                <p className="text-sm opacity-90 mb-2">
+                  🎉 <strong>Free Access Includes:</strong>
+                </p>
+                <div className="text-sm opacity-80 grid md:grid-cols-2 gap-1 text-left max-w-2xl mx-auto">
+                  <div>• 4 AI Project Types</div>
+                  <div>• Story & Image Creation</div>
+                  <div>• Chatbot & Game Building</div>
+                  <div>• Save & Share Projects</div>
+                </div>
+              </div>
+            )}
+            
             <div className="flex gap-4 justify-center flex-wrap">
               {userTier === 'free' ? (
                 <>
@@ -286,7 +319,7 @@ export default function KidsAICodingPlatform() {
                     onClick={() => handleStartProject('story-generator-basic')}
                     className="bg-white text-blue-600 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-gray-100 transition-colors"
                   >
-                    Try Free Project
+                    Start Building for Free!
                   </button>
                   <Link
                     href="/kids-ai/pricing"

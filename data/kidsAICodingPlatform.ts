@@ -108,9 +108,26 @@ export const codingLevels: CodingLevel[] = [
           image: '/images/projects/color-palette-preview.jpg'
         },
         requiredLevel: 'explorer',
-        isPremium: true,
+        isPremium: false,
         completionRate: 82,
         category: 'creative'
+      },
+      {
+        id: 'simple-game-maker',
+        title: 'My First AI Game',
+        description: 'Create a simple interactive game with AI-powered choices and stories.',
+        icon: '🎮',
+        difficulty: 'Easy',
+        estimatedTime: '30 minutes',
+        skills: ['Game design basics', 'Story creation', 'Decision trees'],
+        aiApis: ['OpenAI GPT-3.5'],
+        preview: {
+          image: '/images/projects/simple-game-preview.jpg'
+        },
+        requiredLevel: 'explorer',
+        isPremium: false,
+        completionRate: 78,
+        category: 'game'
       }
     ]
   },
