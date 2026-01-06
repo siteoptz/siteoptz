@@ -388,7 +388,7 @@ export default function StoryGeneratorProject() {
                   <div className="text-6xl mb-4">📖</div>
                   <h3 className="text-xl font-bold text-white mb-2">Your Story Will Appear Here</h3>
                   <p className="text-gray-400">
-                    Select your story elements and click "Generate My Story!" to see the magic happen.
+                    Select your story elements and click &quot;Generate My Story!&quot; to see the magic happen.
                   </p>
                 </div>
               )}
