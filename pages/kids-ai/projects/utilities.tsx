@@ -149,7 +149,7 @@ export default function UtilitiesCategory() {
           <div className="bg-black border border-gray-800 rounded-2xl p-8 mb-16">
             <div className="grid md:grid-cols-2 gap-8">
               <div>
-                <h2 className="text-3xl font-bold text-white mb-4">🛠️ What You'll Build</h2>
+                <h2 className="text-3xl font-bold text-white mb-4">🛠️ What You&apos;ll Build</h2>
                 <div className="space-y-4 text-gray-300">
                   <div className="flex items-start gap-3">
                     <span className="text-blue-400 text-xl">📚</span>
@@ -176,7 +176,7 @@ export default function UtilitiesCategory() {
               </div>
 
               <div>
-                <h2 className="text-3xl font-bold text-white mb-4">🧠 Skills You'll Learn</h2>
+                <h2 className="text-3xl font-bold text-white mb-4">🧠 Skills You&apos;ll Learn</h2>
                 <div className="grid grid-cols-2 gap-3">
                   <div className="bg-gray-800 rounded-lg p-3">
                     <span className="text-sm font-medium text-gray-300">• Educational design</span>
@@ -215,7 +215,7 @@ export default function UtilitiesCategory() {
                 <div className="text-3xl mb-3">😵‍💫</div>
                 <h3 className="text-lg font-bold mb-2">Problem</h3>
                 <p className="text-sm opacity-90 mb-4">
-                  "Math homework is confusing and I need help understanding the concepts."
+                  &quot;Math homework is confusing and I need help understanding the concepts.&quot;
                 </p>
                 <div className="text-3xl mb-2">✨</div>
                 <h4 className="font-semibold mb-2">AI Solution</h4>
@@ -228,7 +228,7 @@ export default function UtilitiesCategory() {
                 <div className="text-3xl mb-3">🤯</div>
                 <h3 className="text-lg font-bold mb-2">Problem</h3>
                 <p className="text-sm opacity-90 mb-4">
-                  "I forget my daily activities and lose track of important tasks."
+                  &quot;I forget my daily activities and lose track of important tasks.&quot;
                 </p>
                 <div className="text-3xl mb-2">✨</div>
                 <h4 className="font-semibold mb-2">AI Solution</h4>
@@ -241,7 +241,7 @@ export default function UtilitiesCategory() {
                 <div className="text-3xl mb-3">😅</div>
                 <h3 className="text-lg font-bold mb-2">Problem</h3>
                 <p className="text-sm opacity-90 mb-4">
-                  "I want to learn Spanish but need someone to practice with."
+                  &quot;I want to learn Spanish but need someone to practice with.&quot;
                 </p>
                 <div className="text-3xl mb-2">✨</div>
                 <h4 className="font-semibold mb-2">AI Solution</h4>

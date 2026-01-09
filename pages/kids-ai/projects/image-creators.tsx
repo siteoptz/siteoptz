@@ -91,7 +91,7 @@ export default function ImageCreatorsCategory() {
           <div className="bg-black border border-gray-800 rounded-2xl p-8 mb-16">
             <div className="grid md:grid-cols-2 gap-8">
               <div>
-                <h2 className="text-3xl font-bold text-white mb-4">🖼️ What You'll Create</h2>
+                <h2 className="text-3xl font-bold text-white mb-4">🖼️ What You&apos;ll Create</h2>
                 <div className="space-y-4 text-gray-300">
                   <div className="flex items-start gap-3">
                     <span className="text-pink-400 text-xl">🎨</span>
@@ -118,7 +118,7 @@ export default function ImageCreatorsCategory() {
               </div>
 
               <div>
-                <h2 className="text-3xl font-bold text-white mb-4">🧠 Skills You'll Learn</h2>
+                <h2 className="text-3xl font-bold text-white mb-4">🧠 Skills You&apos;ll Learn</h2>
                 <div className="grid grid-cols-2 gap-3">
                   <div className="bg-gray-800 rounded-lg p-3">
                     <span className="text-sm font-medium text-gray-300">• Image prompting</span>
@@ -157,7 +157,7 @@ export default function ImageCreatorsCategory() {
                 <div className="text-4xl mb-3">🎨</div>
                 <h3 className="text-lg font-bold mb-2">DALL-E 3</h3>
                 <p className="text-sm opacity-80">
-                  OpenAI's most advanced image generation model for creating stunning artwork
+                  OpenAI&apos;s most advanced image generation model for creating stunning artwork
                 </p>
               </div>
               
@@ -259,8 +259,8 @@ export default function ImageCreatorsCategory() {
                 <div className="text-4xl mb-3">🎨</div>
                 <h4 className="font-bold mb-2">Emma, age 11</h4>
                 <p className="text-sm opacity-90">
-                  "I created an art generator that makes pictures of magical creatures! 
-                  My friends love using it to design characters for our stories."
+                  &quot;I created an art generator that makes pictures of magical creatures! 
+                  My friends love using it to design characters for our stories.&quot;
                 </p>
               </div>
               
@@ -268,8 +268,8 @@ export default function ImageCreatorsCategory() {
                 <div className="text-4xl mb-3">🌈</div>
                 <h4 className="font-bold mb-2">Alex, age 13</h4>
                 <p className="text-sm opacity-90">
-                  "My color palette tool helps my mom with her design work. 
-                  I learned how AI understands colors and emotions!"
+                  &quot;My color palette tool helps my mom with her design work. 
+                  I learned how AI understands colors and emotions!&quot;
                 </p>
               </div>
               
@@ -277,8 +277,8 @@ export default function ImageCreatorsCategory() {
                 <div className="text-4xl mb-3">🎭</div>
                 <h4 className="font-bold mb-2">Sofia, age 15</h4>
                 <p className="text-sm opacity-90">
-                  "I built a creative studio that turns my poems into art and music. 
-                  It's like having an AI creative partner!"
+                  &quot;I built a creative studio that turns my poems into art and music. 
+                  It&apos;s like having an AI creative partner!&quot;
                 </p>
               </div>
             </div>

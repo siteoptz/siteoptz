@@ -128,6 +128,57 @@ export const codingLevels: CodingLevel[] = [
         isPremium: false,
         completionRate: 78,
         category: 'game'
+      },
+      {
+        id: 'homework-helper',
+        title: 'AI Homework Buddy',
+        description: 'Create a helpful AI assistant that helps explain homework concepts and provides study tips.',
+        icon: '📚',
+        difficulty: 'Easy',
+        estimatedTime: '35 minutes',
+        skills: ['AI prompting', 'Educational design', 'Question formation'],
+        aiApis: ['OpenAI GPT-3.5'],
+        preview: {
+          image: '/images/projects/homework-helper-preview.jpg'
+        },
+        requiredLevel: 'explorer',
+        isPremium: false,
+        completionRate: 85,
+        category: 'utility'
+      },
+      {
+        id: 'daily-planner',
+        title: 'Smart Day Planner',
+        description: 'Build an AI-powered daily planner that helps kids organize their activities and tasks.',
+        icon: '📅',
+        difficulty: 'Easy',
+        estimatedTime: '40 minutes',
+        skills: ['Planning', 'Time management', 'AI assistance'],
+        aiApis: ['OpenAI GPT-3.5'],
+        preview: {
+          image: '/images/projects/daily-planner-preview.jpg'
+        },
+        requiredLevel: 'explorer',
+        isPremium: false,
+        completionRate: 78,
+        category: 'utility'
+      },
+      {
+        id: 'language-helper',
+        title: 'Language Learning Pal',
+        description: 'Create a friendly AI that helps you practice new languages through fun conversations.',
+        icon: '🌍',
+        difficulty: 'Easy',
+        estimatedTime: '45 minutes',
+        skills: ['Language learning', 'Conversation practice', 'Cultural awareness'],
+        aiApis: ['OpenAI GPT-3.5'],
+        preview: {
+          image: '/images/projects/language-helper-preview.jpg'
+        },
+        requiredLevel: 'explorer',
+        isPremium: false,
+        completionRate: 81,
+        category: 'utility'
       }
     ]
   },
