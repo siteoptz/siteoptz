@@ -124,7 +124,7 @@ const MathWizard = () => {
 
   useEffect(() => {
     generateProblem();
-  }, [selectedGrade, selectedTopic]);
+  }, [selectedGrade, selectedTopic]); // eslint-disable-line react-hooks/exhaustive-deps
 
   return (
     <div className="math-wizard">

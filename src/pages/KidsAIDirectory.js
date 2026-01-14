@@ -32,7 +32,7 @@ const KidsAIDirectory = () => {
 
     const results = searchTools(searchTerm, filters);
     setFilteredTools(results);
-  }, [selectedCategory, selectedAge, searchTerm, showWhiteLabelOnly]);
+  }, [selectedCategory, selectedAge, searchTerm, showWhiteLabelOnly, ageRanges]);
 
   const handleLaunchApp = (tool) => {
     // Navigate to the specific white-label app
@@ -82,7 +82,7 @@ const KidsAIDirectory = () => {
           
           <h1>🧒 SiteOptz Kids AI Hub</h1>
           <h2>Safe, Educational AI Apps Built Just for Children</h2>
-          <p>Discover our collection of proprietary, white-label AI tools designed specifically for kids' safety and learning</p>
+          <p>Discover our collection of proprietary, white-label AI tools designed specifically for kids&apos; safety and learning</p>
           
           <div className="hero-stats">
             <div className="hero-stat">
@@ -104,11 +104,11 @@ const KidsAIDirectory = () => {
             <div className="highlight-content">
               <h3>Why Our White-Label Apps Are Better</h3>
               <ul>
-                <li>✅ <strong>No Third-Party Data Collection</strong> - Your child's data stays safe</li>
+                <li>✅ <strong>No Third-Party Data Collection</strong> - Your child&apos;s data stays safe</li>
                 <li>✅ <strong>No External Links or Ads</strong> - Completely controlled environment</li>
                 <li>✅ <strong>Educational Focus</strong> - Designed by educators, not marketers</li>
                 <li>✅ <strong>Parent Controls</strong> - Full visibility and control over usage</li>
-                <li>✅ <strong>COPPA Compliant by Design</strong> - Built from the ground up for children's safety</li>
+                <li>✅ <strong>COPPA Compliant by Design</strong> - Built from the ground up for children&apos;s safety</li>
               </ul>
             </div>
           </div>
@@ -174,7 +174,7 @@ const KidsAIDirectory = () => {
               <div className="upgrade-content">
                 <strong>Want full access?</strong> Create a parent account to unlock detailed progress tracking, 
                 advanced safety controls, and premium learning features.
-                <a href="/kids-ai/pricing" className="upgrade-link">Learn More →</a>
+                <button onClick={() => navigate('/kids-ai/pricing')} className="upgrade-link">Learn More →</button>
               </div>
             </div>
           )}
@@ -250,7 +250,7 @@ const KidsAIDirectory = () => {
           <div className="safety-feature">
             <div className="safety-feature-icon">👨‍👩‍👧‍👦</div>
             <h4>Parent Controls</h4>
-            <p>Full visibility into your child's learning progress with comprehensive parent dashboards</p>
+            <p>Full visibility into your child&apos;s learning progress with comprehensive parent dashboards</p>
           </div>
           <div className="safety-feature">
             <div className="safety-feature-icon">🎓</div>

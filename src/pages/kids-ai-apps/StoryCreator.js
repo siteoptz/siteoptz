@@ -199,7 +199,7 @@ The End.`;
             <div className="empty-story">
               <div className="empty-icon">📝</div>
               <h3>Ready to Create!</h3>
-              <p>Fill out the form on the left and click "Create My Story" to see your magical tale appear here!</p>
+              <p>Fill out the form on the left and click &quot;Create My Story&quot; to see your magical tale appear here!</p>
             </div>
           )}
         </div>

@@ -258,6 +258,15 @@
   font-weight: bold;
   text-decoration: none;
   margin-left: 10px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-family: inherit;
+  font-size: inherit;
+}
+
+.upgrade-link:hover {
+  text-decoration: underline;
 }
 
 /* Featured Apps */
