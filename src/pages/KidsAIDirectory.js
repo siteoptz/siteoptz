@@ -240,7 +240,7 @@ const KidsAIDirectory = () => {
 
       {/* Safety Information Section */}
       <div className="safety-section">
-        <h3>🛡️ Your Child's Safety is Our Priority</h3>
+        <h3>🛡️ Your Child&apos;s Safety is Our Priority</h3>
         <div className="safety-features">
           <div className="safety-feature">
             <div className="safety-feature-icon">🔒</div>
