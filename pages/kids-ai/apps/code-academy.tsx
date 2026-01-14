@@ -206,6 +206,14 @@ export default function CodeAcademy() {
                     key={lesson.id}
                     className="bg-gray-800 border-2 border-gray-600 rounded-lg p-6 hover:border-green-400 transition-all cursor-pointer"
                     onClick={() => startLesson(lesson)}
+                    onKeyDown={(e) => {
+                      if (e.key === 'Enter' || e.key === ' ') {
+                        e.preventDefault();
+                        startLesson(lesson);
+                      }
+                    }}
+                    role="button"
+                    tabIndex={0}
                   >
                     <div className="text-3xl mb-4">💡</div>
                     <h3 className="text-white font-semibold text-lg mb-2">{lesson.title}</h3>
