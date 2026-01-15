@@ -1,5 +1,12 @@
 # Tool Addition PRD - Automated AI Tool Addition Workflow for SiteOptz.ai
 
+## CRITICAL DEPLOYMENT REQUIREMENTS
+⚠️ **ALL DEPLOYMENTS MUST USE THE MAIN REPOSITORY AND PROJECT:**
+- Repository: https://github.com/siteoptz/siteoptz 
+- Vercel Project: siteoptz/siteoptz 
+- Domain: https://siteoptz.ai
+- **NEVER USE siteoptz-scraping for deployments**
+
 ## Overview
 This PRD documents the automated system for adding new AI tools to SiteOptz.ai. The system enables scalable, consistent, and SEO-optimized tool additions with built-in quality control and duplicate detection.
 
