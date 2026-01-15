@@ -63,9 +63,28 @@ export default function KidsAIDirectory() {
   }, [selectedCategory, selectedAge, searchTerm, coppaOnly]);
 
   const handleViewDetails = (tool: KidsAITool) => {
-    // Navigate to tool detail page or show modal
-    console.log('View details for:', tool.name);
-    // In a real app, this might navigate to /kids-ai/tools/[toolId]
+    // Map SiteOptz tool IDs to their landing pages
+    const siteOptzToolPages: { [key: string]: string } = {
+      'siteoptz-learning-hub': '/kids-ai/tools/learning-hub',
+      'siteoptz-math-wizard': '/kids-ai/tools/math-wizard',
+      'siteoptz-homework-helper': '/kids-ai/tools/homework-helper',
+      'siteoptz-art-studio': '/kids-ai/tools/art-studio',
+      'siteoptz-story-creator': '/kids-ai/tools/story-creator',
+      'siteoptz-code-academy': '/kids-ai/tools/code-academy',
+      'siteoptz-logic-builder': '/kids-ai/tools/logic-builder',
+      'siteoptz-word-wizard': '/kids-ai/tools/word-wizard',
+      'siteoptz-science-lab': '/kids-ai/tools/science-lab'
+    };
+
+    // Check if this is a SiteOptz tool with a dedicated landing page
+    if (siteOptzToolPages[tool.id]) {
+      // Navigate to the tool's landing page
+      window.location.href = siteOptzToolPages[tool.id];
+    } else {
+      // For other tools, show modal or navigate to generic detail page
+      console.log('View details for:', tool.name);
+      // Could implement modal or generic detail page here
+    }
   };
 
   return (
