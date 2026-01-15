@@ -7,7 +7,7 @@ export default function LogicBuilderLanding() {
     <>
       <Head>
         <title>SiteOptz Logic Builder - AI-Powered Critical Thinking for Kids | Safe Puzzle Platform</title>
-        <meta name="description" content="Develop your child's critical thinking with SiteOptz Logic Builder. AI-powered puzzles and logic games. COPPA compliant with parental oversight. Start your 7-day free trial!" />
+        <meta name="description" content="Develop your child&apos;s critical thinking with SiteOptz Logic Builder. AI-powered puzzles and logic games. COPPA compliant with parental oversight. Start your 7-day free trial!" />
         <meta name="keywords" content="logic games kids, critical thinking children, puzzle games kids, AI brain training, safe educational games, COPPA compliant puzzles" />
         
         <meta property="og:title" content="SiteOptz Logic Builder - AI Critical Thinking for Kids" />
@@ -41,7 +41,7 @@ export default function LogicBuilderLanding() {
               <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">🧩 SiteOptz Logic Builder</h1>
               <p className="text-2xl text-orange-200 mb-8">AI-Powered Critical Thinking & Logic Games for Kids</p>
               <p className="text-xl text-gray-300 mb-12 leading-relaxed">
-                Supercharge your child's critical thinking skills! Our AI-powered logic puzzles and brain training games 
+                Supercharge your child&apos;s critical thinking skills! Our AI-powered logic puzzles and brain training games 
                 develop problem-solving abilities, logical reasoning, and analytical thinking in a fun, safe environment.
               </p>
               
@@ -59,10 +59,10 @@ export default function LogicBuilderLanding() {
             
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {[
-                { icon: "🧠", title: "AI-Adaptive Challenges", description: "Puzzles that automatically adjust difficulty based on your child's progress and skill level." },
+                { icon: "🧠", title: "AI-Adaptive Challenges", description: "Puzzles that automatically adjust difficulty based on your child&apos;s progress and skill level." },
                 { icon: "🛡️", title: "100% Safe Environment", description: "COPPA compliant with zero external content and complete parental oversight." },
                 { icon: "🏆", title: "Progressive Skill Building", description: "Structured learning path from basic logic to advanced problem-solving strategies." },
-                { icon: "📊", title: "Critical Thinking Analytics", description: "Track your child's logical reasoning development with detailed progress reports." },
+                { icon: "📊", title: "Critical Thinking Analytics", description: "Track your child&apos;s logical reasoning development with detailed progress reports." },
                 { icon: "🎯", title: "Multiple Logic Types", description: "Pattern recognition, spatial reasoning, deduction, sequences, and mathematical logic." },
                 { icon: "🎮", title: "Gamified Learning", description: "Turn brain training into fun adventures with achievements, levels, and rewards." }
               ].map((feature, index) => (
@@ -77,7 +77,7 @@ export default function LogicBuilderLanding() {
 
           <section className="text-center mb-16">
             <div className="bg-gradient-to-r from-green-600/20 to-orange-600/20 rounded-2xl p-12 border border-green-500/30">
-              <h2 className="text-4xl font-bold text-white mb-6">Build Your Child's Critical Thinking Skills</h2>
+              <h2 className="text-4xl font-bold text-white mb-6">Build Your Child&apos;s Critical Thinking Skills</h2>
               <div className="bg-white/10 backdrop-blur-sm rounded-xl p-8 max-w-md mx-auto mb-8">
                 <div className="text-3xl font-bold text-white mb-2">7-Day FREE Trial</div>
                 <div className="text-gray-300 mb-4">Then $19.99/month for unlimited access</div>

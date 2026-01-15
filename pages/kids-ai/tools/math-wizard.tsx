@@ -49,10 +49,10 @@ export default function MathWizardLanding() {
             
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {[
-                { icon: "🧮", title: "AI-Powered Personalization", description: "Adapts to your child's learning style and pace with visual, interactive explanations." },
+                { icon: "🧮", title: "AI-Powered Personalization", description: "Adapts to your child&apos;s learning style and pace with visual, interactive explanations." },
                 { icon: "🛡️", title: "100% Safe Environment", description: "COPPA compliant platform with complete parental oversight and zero external content." },
                 { icon: "🎯", title: "Comprehensive Curriculum", description: "From basic counting to advanced algebra - complete K-12 math curriculum coverage." },
-                { icon: "📊", title: "Progress Tracking", description: "Detailed analytics showing your child's math skill development and areas for improvement." },
+                { icon: "📊", title: "Progress Tracking", description: "Detailed analytics showing your child&apos;s math skill development and areas for improvement." },
                 { icon: "🎮", title: "Gamified Learning", description: "Math adventures, challenges, and rewards that make learning mathematics exciting and fun." },
                 { icon: "🏆", title: "Confidence Building", description: "Step-by-step guidance that builds mathematical confidence and eliminates math anxiety." }
               ].map((feature, index) => (

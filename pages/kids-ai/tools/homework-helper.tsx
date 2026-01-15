@@ -140,12 +140,12 @@ export default function HomeworkHelperLanding() {
                 {
                   icon: "📚",
                   title: "All Subject Coverage",
-                  description: "Math, Science, English, History, Geography, and more. Our AI tutor adapts to your child's grade level and curriculum requirements."
+                  description: "Math, Science, English, History, Geography, and more. Our AI tutor adapts to your child&apos;s grade level and curriculum requirements."
                 },
                 {
                   icon: "👨‍👩‍👧‍👦",
                   title: "Parental Dashboard",
-                  description: "Monitor your child's homework sessions, track subject areas they need help with, and review all AI interactions for transparency."
+                  description: "Monitor your child&apos;s homework sessions, track subject areas they need help with, and review all AI interactions for transparency."
                 },
                 {
                   icon: "🎯",
@@ -216,7 +216,7 @@ export default function HomeworkHelperLanding() {
           <section className="mb-16">
             <div className="text-center mb-12">
               <h2 className="text-4xl font-bold text-white mb-4">
-                Transform Your Child's Learning Experience
+                Transform Your Child&apos;s Learning Experience
               </h2>
             </div>
             
@@ -260,7 +260,7 @@ export default function HomeworkHelperLanding() {
                   role: "Mother of 3rd Grader"
                 },
                 {
-                  quote: "Finally, safe homework help! I love that I can see exactly what help my son is getting and ensure it's appropriate.",
+                  quote: "Finally, safe homework help! I love that I can see exactly what help my son is getting and ensure it&apos;s appropriate.",
                   author: "Carlos R.", 
                   role: "Homeschool Dad"
                 },

@@ -130,7 +130,7 @@ export default function CodeAcademyLanding() {
                 {
                   icon: "🤖",
                   title: "AI-Powered Learning",
-                  description: "Personalized coding lessons that adapt to your child's pace and learning style, with instant feedback and guidance."
+                  description: "Personalized coding lessons that adapt to your child&apos;s pace and learning style, with instant feedback and guidance."
                 },
                 {
                   icon: "🛡️",
@@ -145,7 +145,7 @@ export default function CodeAcademyLanding() {
                 {
                   icon: "📊",
                   title: "Progress Tracking",
-                  description: "Detailed parent dashboard showing your child's coding progress, completed projects, and skill development over time."
+                  description: "Detailed parent dashboard showing your child&apos;s coding progress, completed projects, and skill development over time."
                 },
                 {
                   icon: "🌱",
@@ -285,7 +285,7 @@ export default function CodeAcademyLanding() {
                 Give Your Child a Programming Head Start
               </h2>
               <p className="text-xl text-gray-300 mb-8">
-                Join thousands of families building their children's future with coding
+                Join thousands of families building their children&apos;s future with coding
               </p>
               
               <div className="bg-white/10 backdrop-blur-sm rounded-xl p-8 max-w-md mx-auto mb-8">
@@ -318,7 +318,7 @@ export default function CodeAcademyLanding() {
           <section className="mb-16">
             <div className="text-center mb-12">
               <h2 className="text-4xl font-bold text-white mb-4">
-                Your Child's Safety Is Our Priority
+                Your Child&apos;s Safety Is Our Priority
               </h2>
             </div>
             
@@ -342,7 +342,7 @@ export default function CodeAcademyLanding() {
                 {
                   icon: "📊",
                   title: "Parent Oversight",
-                  description: "Complete visibility and control over your child's learning"
+                  description: "Complete visibility and control over your child&apos;s learning"
                 }
               ].map((item, index) => (
                 <div key={index} className="bg-green-600/20 rounded-xl p-6 border border-green-500/30 text-center">
@@ -358,7 +358,7 @@ export default function CodeAcademyLanding() {
           <section className="text-center">
             <div className="bg-gradient-to-r from-blue-600/30 to-green-600/30 rounded-2xl p-12 border border-blue-500/50">
               <h2 className="text-4xl font-bold text-white mb-6">
-                Ready to Launch Your Child's Coding Journey?
+                Ready to Launch Your Child&apos;s Coding Journey?
               </h2>
               <p className="text-xl text-gray-300 mb-8">
                 Join over 15,000+ families using SiteOptz Code Academy

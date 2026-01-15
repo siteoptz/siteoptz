@@ -79,8 +79,8 @@ export default function LearningHubLanding() {
               </p>
               <p className="text-xl text-gray-300 mb-12 leading-relaxed">
                 Give your child a truly personalized education! Our AI Learning Hub adapts to your 
-                child's unique learning style, pace, and interests. With comprehensive curriculum 
-                coverage and complete safety, it's like having a personal tutor available 24/7.
+                child&apos;s unique learning style, pace, and interests. With comprehensive curriculum 
+                coverage and complete safety, it&apos;s like having a personal tutor available 24/7.
               </p>
               
               {/* CTA Buttons */}
@@ -130,7 +130,7 @@ export default function LearningHubLanding() {
                 {
                   icon: "🧠",
                   title: "Adaptive AI Learning",
-                  description: "Our AI continuously adjusts difficulty, pace, and teaching style based on your child's performance and learning preferences."
+                  description: "Our AI continuously adjusts difficulty, pace, and teaching style based on your child&apos;s performance and learning preferences."
                 },
                 {
                   icon: "🛡️",
@@ -145,12 +145,12 @@ export default function LearningHubLanding() {
                 {
                   icon: "📊",
                   title: "Advanced Progress Tracking",
-                  description: "Detailed analytics showing your child's strengths, areas for improvement, and personalized recommendations for continued growth."
+                  description: "Detailed analytics showing your child&apos;s strengths, areas for improvement, and personalized recommendations for continued growth."
                 },
                 {
                   icon: "🎯",
                   title: "Personalized Learning Paths",
-                  description: "Custom learning journeys that adapt to your child's interests, skills, and academic goals for maximum engagement."
+                  description: "Custom learning journeys that adapt to your child&apos;s interests, skills, and academic goals for maximum engagement."
                 },
                 {
                   icon: "🏆",
@@ -229,7 +229,7 @@ export default function LearningHubLanding() {
               <div>
                 <h3 className="text-2xl font-semibold text-white mb-6">🎯 Personalized Experience</h3>
                 <ul className="space-y-3 text-gray-300">
-                  <li>✅ Adapts to your child's learning pace</li>
+                  <li>✅ Adapts to your child&apos;s learning pace</li>
                   <li>✅ Identifies and strengthens weak areas</li>
                   <li>✅ Builds on existing knowledge and interests</li>
                   <li>✅ Provides appropriate challenge level</li>
@@ -270,7 +270,7 @@ export default function LearningHubLanding() {
                   role: "Homeschool Dad"
                 },
                 {
-                  quote: "My twins have completely different learning styles and the platform adapts to each one perfectly. It's like having two personal tutors!",
+                  quote: "My twins have completely different learning styles and the platform adapts to each one perfectly. It&apos;s like having two personal tutors!",
                   author: "Rachel M.",
                   role: "Parent & Educator"
                 }
@@ -364,7 +364,7 @@ export default function LearningHubLanding() {
           <section className="text-center">
             <div className="bg-gradient-to-r from-blue-600/30 to-purple-600/30 rounded-2xl p-12 border border-blue-500/50">
               <h2 className="text-4xl font-bold text-white mb-6">
-                Ready to Personalize Your Child's Education?
+                Ready to Personalize Your Child&apos;s Education?
               </h2>
               <p className="text-xl text-gray-300 mb-8">
                 Join over 18,000+ families using SiteOptz Learning Hub

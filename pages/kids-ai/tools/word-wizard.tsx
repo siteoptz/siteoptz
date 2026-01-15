@@ -7,7 +7,7 @@ export default function WordWizardLanding() {
     <>
       <Head>
         <title>SiteOptz Word Wizard - AI-Powered Language Learning for Kids | Safe Vocabulary Builder</title>
-        <meta name="description" content="Expand your child's vocabulary with SiteOptz Word Wizard. AI-powered language and reading platform for kids. COPPA compliant with parental oversight. Start your 7-day free trial!" />
+        <meta name="description" content="Expand your child&apos;s vocabulary with SiteOptz Word Wizard. AI-powered language and reading platform for kids. COPPA compliant with parental oversight. Start your 7-day free trial!" />
         <meta name="keywords" content="vocabulary builder kids, language learning children, reading skills AI, phonics app kids, safe language education, COPPA compliant reading app" />
         
         <meta property="og:title" content="SiteOptz Word Wizard - AI Language Learning for Kids" />
@@ -31,7 +31,7 @@ export default function WordWizardLanding() {
               <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">🔤 SiteOptz Word Wizard</h1>
               <p className="text-2xl text-amber-200 mb-8">AI-Powered Vocabulary & Language Learning for Kids</p>
               <p className="text-xl text-gray-300 mb-12 leading-relaxed">
-                Build your child's language superpowers! Our AI Word Wizard helps children master phonics, 
+                Build your child&apos;s language superpowers! Our AI Word Wizard helps children master phonics, 
                 expand vocabulary, improve reading comprehension, and develop strong communication skills through interactive learning.
               </p>
               
@@ -53,7 +53,7 @@ export default function WordWizardLanding() {
                 { icon: "🛡️", title: "100% Safe Environment", description: "COPPA compliant platform with voice processing that never leaves the device for complete privacy." },
                 { icon: "📖", title: "Comprehensive Reading Skills", description: "Phonics, sight words, vocabulary, reading comprehension, and fluency all in one platform." },
                 { icon: "📊", title: "Language Progress Tracking", description: "Detailed analytics showing vocabulary growth, reading level improvements, and communication development." },
-                { icon: "🎯", title: "Adaptive Difficulty", description: "Automatically adjusts word complexity and reading level based on your child's current abilities." },
+                { icon: "🎯", title: "Adaptive Difficulty", description: "Automatically adjusts word complexity and reading level based on your child&apos;s current abilities." },
                 { icon: "🌟", title: "Multi-Modal Learning", description: "Visual, auditory, and interactive learning approaches to accommodate different learning styles." }
               ].map((feature, index) => (
                 <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all">
@@ -67,7 +67,7 @@ export default function WordWizardLanding() {
 
           <section className="text-center mb-16">
             <div className="bg-gradient-to-r from-green-600/20 to-amber-600/20 rounded-2xl p-12 border border-green-500/30">
-              <h2 className="text-4xl font-bold text-white mb-6">Build Your Child's Language Foundation</h2>
+              <h2 className="text-4xl font-bold text-white mb-6">Build Your Child&apos;s Language Foundation</h2>
               <div className="bg-white/10 backdrop-blur-sm rounded-xl p-8 max-w-md mx-auto mb-8">
                 <div className="text-3xl font-bold text-white mb-2">7-Day FREE Trial</div>
                 <div className="text-gray-300 mb-4">Then $19.99/month for unlimited access</div>

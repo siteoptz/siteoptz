@@ -7,7 +7,7 @@ export default function StoryCreatorLanding() {
     <>
       <Head>
         <title>SiteOptz Story Creator - AI-Powered Creative Writing for Kids | Safe Storytelling Platform</title>
-        <meta name="description" content="Unleash your child's creativity with SiteOptz Story Creator. AI-assisted creative writing platform for kids. COPPA compliant with parental oversight. Start your 7-day free trial!" />
+        <meta name="description" content="Unleash your child&apos;s creativity with SiteOptz Story Creator. AI-assisted creative writing platform for kids. COPPA compliant with parental oversight. Start your 7-day free trial!" />
         <meta name="keywords" content="creative writing kids, storytelling platform children, AI writing assistant kids, safe writing app, COPPA compliant creative platform" />
         
         <meta property="og:title" content="SiteOptz Story Creator - AI Creative Writing for Kids" />
@@ -31,7 +31,7 @@ export default function StoryCreatorLanding() {
               <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">📖 SiteOptz Story Creator</h1>
               <p className="text-2xl text-violet-200 mb-8">AI-Powered Creative Writing & Storytelling for Kids</p>
               <p className="text-xl text-gray-300 mb-12 leading-relaxed">
-                Unleash your child's imagination! Our AI Story Creator helps children craft amazing stories 
+                Unleash your child&apos;s imagination! Our AI Story Creator helps children craft amazing stories 
                 with guided prompts, character development, and creative writing assistance in a completely safe environment.
               </p>
               
@@ -51,8 +51,8 @@ export default function StoryCreatorLanding() {
               {[
                 { icon: "✍️", title: "AI Writing Assistant", description: "Smart prompts and suggestions help children develop plots, characters, and dialogue naturally." },
                 { icon: "🛡️", title: "100% Safe Environment", description: "COPPA compliant platform with appropriate content filters and complete parental oversight." },
-                { icon: "📚", title: "Story Portfolio Building", description: "Create, save, and organize your child's stories into a digital portfolio for future sharing." },
-                { icon: "👨‍👩‍👧‍👦", title: "Family Sharing", description: "Parents can read, review, and celebrate their child's creative writing achievements." },
+                { icon: "📚", title: "Story Portfolio Building", description: "Create, save, and organize your child&apos;s stories into a digital portfolio for future sharing." },
+                { icon: "👨‍👩‍👧‍👦", title: "Family Sharing", description: "Parents can read, review, and celebrate their child&apos;s creative writing achievements." },
                 { icon: "🎭", title: "Genre Exploration", description: "Adventure, fantasy, mystery, sci-fi - explore different story types and writing styles." },
                 { icon: "🏆", title: "Creative Confidence", description: "Build writing skills and creative confidence through guided, supportive story creation." }
               ].map((feature, index) => (
@@ -67,7 +67,7 @@ export default function StoryCreatorLanding() {
 
           <section className="text-center mb-16">
             <div className="bg-gradient-to-r from-green-600/20 to-violet-600/20 rounded-2xl p-12 border border-green-500/30">
-              <h2 className="text-4xl font-bold text-white mb-6">Unlock Your Child's Storytelling Potential</h2>
+              <h2 className="text-4xl font-bold text-white mb-6">Unlock Your Child&apos;s Storytelling Potential</h2>
               <div className="bg-white/10 backdrop-blur-sm rounded-xl p-8 max-w-md mx-auto mb-8">
                 <div className="text-3xl font-bold text-white mb-2">7-Day FREE Trial</div>
                 <div className="text-gray-300 mb-4">Then $19.99/month for unlimited access</div>

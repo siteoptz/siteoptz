@@ -7,7 +7,7 @@ export default function ArtStudioLanding() {
     <>
       <Head>
         <title>SiteOptz Art Studio - AI-Powered Digital Art Platform for Kids | Safe Creative Learning</title>
-        <meta name="description" content="Unlock your child's creativity with SiteOptz Art Studio. Safe AI-powered digital art tools designed for kids. COPPA compliant with parental oversight. Start your 7-day free trial today!" />
+        <meta name="description" content="Unlock your child&apos;s creativity with SiteOptz Art Studio. Safe AI-powered digital art tools designed for kids. COPPA compliant with parental oversight. Start your 7-day free trial today!" />
         <meta name="keywords" content="kids art app, digital art for children, AI art tools kids, safe creative platform, children's digital art, COPPA compliant art app" />
         
         {/* Open Graph */}
@@ -78,7 +78,7 @@ export default function ArtStudioLanding() {
                 AI-Powered Digital Art Platform Designed Specifically for Kids
               </p>
               <p className="text-xl text-gray-300 mb-12 leading-relaxed">
-                Unlock your child's creative potential with our safe, AI-enhanced digital art platform. 
+                Unlock your child&apos;s creative potential with our safe, AI-enhanced digital art platform. 
                 From painting to 3D modeling, our COPPA-compliant tools inspire artistic expression 
                 while ensuring complete safety and parental oversight.
               </p>
@@ -145,7 +145,7 @@ export default function ArtStudioLanding() {
                 {
                   icon: "👨‍👩‍👧‍👦",
                   title: "Parental Dashboard",
-                  description: "Monitor your child's progress, view their creations, and receive detailed reports on their artistic development."
+                  description: "Monitor your child&apos;s progress, view their creations, and receive detailed reports on their artistic development."
                 },
                 {
                   icon: "🌟",
@@ -218,7 +218,7 @@ export default function ArtStudioLanding() {
                   role: "Homeschool Parent"
                 },
                 {
-                  quote: "The portfolio feature is incredible. We're saving all of Emma's artwork for her college applications. She's so proud!",
+                  quote: "The portfolio feature is incredible. We&apos;re saving all of Emma's artwork for her college applications. She's so proud!",
                   author: "Jessica L.",
                   role: "Art Teacher & Mom"
                 }
@@ -236,7 +236,7 @@ export default function ArtStudioLanding() {
           <section className="text-center mb-16">
             <div className="bg-gradient-to-r from-green-600/20 to-blue-600/20 rounded-2xl p-12 border border-green-500/30">
               <h2 className="text-4xl font-bold text-white mb-6">
-                Start Your Child's Creative Journey Today
+                Start Your Child&apos;s Creative Journey Today
               </h2>
               <p className="text-xl text-gray-300 mb-8">
                 Join thousands of families already using SiteOptz Art Studio
@@ -271,7 +271,7 @@ export default function ArtStudioLanding() {
           <section className="mb-16">
             <div className="text-center mb-12">
               <h2 className="text-4xl font-bold text-white mb-4">
-                Your Child's Safety Is Our Priority
+                Your Child&apos;s Safety Is Our Priority
               </h2>
             </div>
             
@@ -295,7 +295,7 @@ export default function ArtStudioLanding() {
                 {
                   icon: "📊",
                   title: "Parent Oversight",
-                  description: "Complete visibility into your child's activities"
+                  description: "Complete visibility into your child&apos;s activities"
                 }
               ].map((item, index) => (
                 <div key={index} className="bg-green-600/20 rounded-xl p-6 border border-green-500/30 text-center">
@@ -319,7 +319,7 @@ export default function ArtStudioLanding() {
               {[
                 {
                   question: "Is SiteOptz Art Studio really safe for my child?",
-                  answer: "Yes! We're fully COPPA compliant with no external content, no social features, and complete parental oversight. Your child creates in a completely safe, controlled environment."
+                  answer: "Yes! We&apos;re fully COPPA compliant with no external content, no social features, and complete parental oversight. Your child creates in a completely safe, controlled environment."
                 },
                 {
                   question: "What ages is this appropriate for?",
@@ -327,11 +327,11 @@ export default function ArtStudioLanding() {
                 },
                 {
                   question: "Can I cancel anytime?",
-                  answer: "Absolutely! Cancel anytime during your free trial or subscription with no penalties. Your child's artwork is always available for download."
+                  answer: "Absolutely! Cancel anytime during your free trial or subscription with no penalties. Your child&apos;s artwork is always available for download."
                 },
                 {
-                  question: "Will my child's artwork be private?",
-                  answer: "Yes! All artwork remains completely private to your family. We never share, sell, or use your child's creations for any purpose."
+                  question: "Will my child&apos;s artwork be private?",
+                  answer: "Yes! All artwork remains completely private to your family. We never share, sell, or use your child&apos;s creations for any purpose."
                 }
               ].map((faq, index) => (
                 <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
@@ -346,7 +346,7 @@ export default function ArtStudioLanding() {
           <section className="text-center">
             <div className="bg-gradient-to-r from-purple-600/30 to-blue-600/30 rounded-2xl p-12 border border-purple-500/50">
               <h2 className="text-4xl font-bold text-white mb-6">
-                Ready to Unlock Your Child's Creativity?
+                Ready to Unlock Your Child&apos;s Creativity?
               </h2>
               <p className="text-xl text-gray-300 mb-8">
                 Join over 10,000+ families using SiteOptz Art Studio

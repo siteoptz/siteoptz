@@ -31,7 +31,7 @@ export default function ScienceLabLanding() {
               <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">🔬 SiteOptz Science Lab</h1>
               <p className="text-2xl text-emerald-200 mb-8">AI-Powered Virtual Science Laboratory for Kids</p>
               <p className="text-xl text-gray-300 mb-12 leading-relaxed">
-                Spark your child's love for science! Our AI-powered virtual laboratory provides safe, 
+                Spark your child&apos;s love for science! Our AI-powered virtual laboratory provides safe, 
                 hands-on STEM experiences with realistic experiments, scientific method training, and discovery-based learning.
               </p>
               
@@ -67,7 +67,7 @@ export default function ScienceLabLanding() {
 
           <section className="text-center mb-16">
             <div className="bg-gradient-to-r from-green-600/20 to-emerald-600/20 rounded-2xl p-12 border border-green-500/30">
-              <h2 className="text-4xl font-bold text-white mb-6">Ignite Your Child's Scientific Curiosity</h2>
+              <h2 className="text-4xl font-bold text-white mb-6">Ignite Your Child&apos;s Scientific Curiosity</h2>
               <div className="bg-white/10 backdrop-blur-sm rounded-xl p-8 max-w-md mx-auto mb-8">
                 <div className="text-3xl font-bold text-white mb-2">7-Day FREE Trial</div>
                 <div className="text-gray-300 mb-4">Then $19.99/month for unlimited access</div>
