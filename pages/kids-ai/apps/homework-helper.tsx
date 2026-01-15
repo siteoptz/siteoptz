@@ -74,8 +74,8 @@ export default function HomeworkHelper() {
         id: '4',
         subject: 'English',
         question: 'What is a metaphor?',
-        answer: 'A comparison without using "like" or "as"',
-        explanation: 'A metaphor directly compares two unlike things without using "like" or "as". For example: "Life is a journey" compares life to a journey.',
+        answer: 'A comparison without using &quot;like&quot; or &quot;as&quot;',
+        explanation: 'A metaphor directly compares two unlike things without using &quot;like&quot; or &quot;as&quot;. For example: &quot;Life is a journey&quot; compares life to a journey.',
         difficulty: 'middle'
       }
     ]
@@ -291,33 +291,33 @@ export default function HomeworkHelper() {
                 <div className="bg-blue-600/10 border border-blue-600 rounded-lg p-4">
                   <h4 className="text-blue-400 font-semibold mb-2">🔢 Math Examples:</h4>
                   <ul className="text-gray-300 text-sm space-y-1">
-                    <li>• "How do I solve 3x + 7 = 22?"</li>
-                    <li>• "What&apos;s the area of a triangle?"</li>
-                    <li>• "How do I add fractions?"</li>
+                    <li>• &quot;How do I solve 3x + 7 = 22?&quot;</li>
+                    <li>• &quot;What&apos;s the area of a triangle?&quot;</li>
+                    <li>• &quot;How do I add fractions?&quot;</li>
                   </ul>
                 </div>
                 <div className="bg-green-600/10 border border-green-600 rounded-lg p-4">
                   <h4 className="text-green-400 font-semibold mb-2">🔬 Science Examples:</h4>
                   <ul className="text-gray-300 text-sm space-y-1">
-                    <li>• "What is photosynthesis?"</li>
-                    <li>• "How does gravity work?"</li>
-                    <li>• "What are the parts of a cell?"</li>
+                    <li>• &quot;What is photosynthesis?&quot;</li>
+                    <li>• &quot;How does gravity work?&quot;</li>
+                    <li>• &quot;What are the parts of a cell?&quot;</li>
                   </ul>
                 </div>
                 <div className="bg-purple-600/10 border border-purple-600 rounded-lg p-4">
                   <h4 className="text-purple-400 font-semibold mb-2">📚 English Examples:</h4>
                   <ul className="text-gray-300 text-sm space-y-1">
-                    <li>• "What&apos;s the difference between a simile and metaphor?"</li>
-                    <li>• "How do I write a thesis statement?"</li>
-                    <li>• "What are the parts of speech?"</li>
+                    <li>• &quot;What&apos;s the difference between a simile and metaphor?&quot;</li>
+                    <li>• &quot;How do I write a thesis statement?&quot;</li>
+                    <li>• &quot;What are the parts of speech?&quot;</li>
                   </ul>
                 </div>
                 <div className="bg-orange-600/10 border border-orange-600 rounded-lg p-4">
                   <h4 className="text-orange-400 font-semibold mb-2">🏛️ History Examples:</h4>
                   <ul className="text-gray-300 text-sm space-y-1">
-                    <li>• "What caused the American Revolution?"</li>
-                    <li>• "Who were the ancient Greeks?"</li>
-                    <li>• "What was the Industrial Revolution?"</li>
+                    <li>• &quot;What caused the American Revolution?&quot;</li>
+                    <li>• &quot;Who were the ancient Greeks?&quot;</li>
+                    <li>• &quot;What was the Industrial Revolution?&quot;</li>
                   </ul>
                 </div>
               </div>
