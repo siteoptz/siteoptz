@@ -6,6 +6,7 @@ import Head from 'next/head';
 import Link from 'next/link';
 import { getServerSession } from 'next-auth/next';
 import { authOptions } from '@/pages/api/auth/[...nextauth]';
+import { StartFreeTrialButton } from '@/components/TrialButton';
 
 interface OptzLandingProps {
   isAuthenticated: boolean;
@@ -95,12 +96,14 @@ export default function OptzLanding({ isAuthenticated, userEmail, host }: OptzLa
                   Open Dashboard
                 </Link>
               ) : (
-                <Link
-                  href="/api/auth/signin"
-                  className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white px-8 py-4 rounded-lg font-medium text-lg transition-colors"
+                <StartFreeTrialButton 
+                  plan="free"
+                  size="lg"
+                  redirectAfterSignIn="/dashboard/white-label"
+                  className="px-8 py-4 text-lg font-medium"
                 >
                   Get Started Free
-                </Link>
+                </StartFreeTrialButton>
               )}
               <Link
                 href="#features"
@@ -228,12 +231,14 @@ export default function OptzLanding({ isAuthenticated, userEmail, host }: OptzLa
               Access Your Dashboard
             </Link>
           ) : (
-            <Link
-              href="/api/auth/signin"
-              className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white px-8 py-4 rounded-lg font-medium text-lg transition-colors inline-block"
+            <StartFreeTrialButton 
+              plan="free"
+              size="lg"
+              redirectAfterSignIn="/dashboard/white-label"
+              className="inline-block px-8 py-4 text-lg font-medium"
             >
               Start Free Trial
-            </Link>
+            </StartFreeTrialButton>
           )}
         </div>
       </div>

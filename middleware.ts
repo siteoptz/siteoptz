@@ -82,6 +82,17 @@ export async function middleware(request: NextRequest) {
     }
   }
   
+  // Handle legacy signup URLs that might be hardcoded or cached
+  if (pathname === '/signup' && request.nextUrl.searchParams.has('plan')) {
+    const plan = request.nextUrl.searchParams.get('plan');
+    const trial = request.nextUrl.searchParams.get('trial');
+    const source = request.nextUrl.searchParams.get('source');
+    
+    // Ensure the signup page handles these parameters correctly
+    console.log('Processing signup URL with plan:', plan, 'trial:', trial, 'source:', source);
+    // Continue to signup page - it will handle the parameters
+  }
+
   // Check if user has valid authentication cookies
   const isAuthenticated = request.cookies.get('authenticated')?.value === 'true';
   const userEmail = request.cookies.get('sso-email')?.value;

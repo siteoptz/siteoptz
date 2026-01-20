@@ -3,6 +3,7 @@ import Link from 'next/link';
 import SEOHead from '../../components/SEOHead';
 import { kidsAIPricingPlans, kidsAIFreeTier } from '../../data/kidsAIPricingPlans';
 import SafetyBadge from '../../components/kids/SafetyBadge';
+import { StartFreeTrialButton, Start7DayTrialButton } from '../../components/TrialButton';
 
 export default function KidsAIPricing() {
   const plans = Object.values(kidsAIPricingPlans);
@@ -67,12 +68,13 @@ export default function KidsAIPricing() {
               </div>
               
               <div className="mt-6">
-                <Link
-                  href="/kids-ai"
+                <StartFreeTrialButton 
+                  plan="free"
+                  redirectAfterSignIn="/kids-ai"
                   className="bg-gray-700 text-white px-6 py-3 rounded-lg font-medium hover:bg-gray-600 transition-colors"
                 >
                   Start with Free Access
-                </Link>
+                </StartFreeTrialButton>
               </div>
             </div>
           </div>
@@ -141,16 +143,13 @@ export default function KidsAIPricing() {
                       Contact Sales
                     </Link>
                   ) : (
-                    <button
-                      onClick={() => {
-                        // In a real app, this would integrate with Stripe
-                        console.log(`Subscribe to ${plan.name}`);
-                        alert('Stripe integration would go here');
-                      }}
+                    <Start7DayTrialButton 
+                      plan="starter"
+                      redirectAfterSignIn="/kids-ai"
                       className="w-full bg-blue-600 text-white py-3 px-6 rounded-lg font-medium hover:bg-blue-700 transition-colors"
                     >
-                      Get Started
-                    </button>
+                      Start 7-Day Trial
+                    </Start7DayTrialButton>
                   )}
                   
                   <p className="text-xs text-gray-500 text-center">

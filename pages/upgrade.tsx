@@ -6,6 +6,7 @@ import { useStripeCheckout } from '../hooks/useStripeCheckout';
 import { useUpgradeFlow } from '../hooks/useUpgradeFlow';
 import { useUserPlan } from '../hooks/useUserPlan';
 import StripePaymentModal from '../components/StripePaymentModal';
+import { StartFreeTrialButton, Start7DayTrialButton } from '@/components/TrialButton';
 import Link from 'next/link';
 import { 
   Check, 

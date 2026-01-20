@@ -41,12 +41,17 @@ async function searchGHLContact(email: string) {
 }
 
 // Helper function to create new contact in GoHighLevel
-async function createGHLContact(email: string, name: string, plan: string = 'free') {
+async function createGHLContact(email: string, name: string, plan: string = 'free', isTrialUser: boolean = false) {
   try {
     if (!process.env.GHL_API_KEY || !process.env.GHL_LOCATION_ID) {
       console.log('GHL credentials not configured - skipping contact creation');
       return null;
     }
+
+    // Determine tags and source based on signup type
+    const tags = isTrialUser 
+      ? [`siteoptz-trial-${plan}`, 'trial-user', 'oauth-signup']
+      : [`siteoptz-plan-${plan}`, 'oauth-signup'];
 
     const response = await fetch('https://services.leadconnectorhq.com/contacts/', {
       method: 'POST',
@@ -59,8 +64,14 @@ async function createGHLContact(email: string, name: string, plan: string = 'fre
       body: JSON.stringify({
         email,
         name,
-        tags: [`siteoptz-plan-${plan}`],
-        source: 'Google OAuth'
+        tags: tags,
+        source: 'Google OAuth',
+        customFields: {
+          'signup_source': 'google_oauth',
+          'signup_date': new Date().toISOString(),
+          'is_trial_user': isTrialUser ? 'true' : 'false',
+          'initial_plan': plan
+        }
       })
     });
 
@@ -71,11 +82,69 @@ async function createGHLContact(email: string, name: string, plan: string = 'fre
     }
 
     const data = await response.json();
-    console.log('✅ Created new GHL contact:', email, 'with plan:', plan);
+    console.log('✅ Created new GHL contact:', email, 'Plan:', plan, 'Trial:', isTrialUser);
     return data.contact;
   } catch (error) {
     console.error('GHL create contact error:', error);
     return null;
+  }
+}
+
+// Helper function to add contact to trial pipeline
+async function addToTrialPipeline(contactId: string, trialType: string) {
+  try {
+    if (!process.env.GHL_API_KEY || !process.env.GHL_LOCATION_ID) {
+      console.log('GHL credentials not configured');
+      return false;
+    }
+
+    // Pipeline configuration for different trial types
+    const pipelineConfig = {
+      'free': {
+        pipelineId: process.env.GHL_FREE_TRIAL_PIPELINE_ID || 'default-free-pipeline',
+        stageId: process.env.GHL_FREE_TRIAL_STAGE_ID || 'new-free-user'
+      },
+      'starter': {
+        pipelineId: process.env.GHL_STARTER_TRIAL_PIPELINE_ID || 'default-starter-pipeline',
+        stageId: process.env.GHL_STARTER_TRIAL_STAGE_ID || 'new-starter-trial'
+      },
+      'pro': {
+        pipelineId: process.env.GHL_PRO_TRIAL_PIPELINE_ID || 'default-pro-pipeline',
+        stageId: process.env.GHL_PRO_TRIAL_STAGE_ID || 'new-pro-trial'
+      }
+    };
+
+    const config = pipelineConfig[trialType as keyof typeof pipelineConfig];
+    
+    const response = await fetch('https://services.leadconnectorhq.com/opportunities/', {
+      method: 'POST',
+      headers: {
+        'Authorization': `Bearer ${process.env.GHL_API_KEY}`,
+        'Version': '2021-07-28',
+        'Content-Type': 'application/json',
+        'Location-Id': process.env.GHL_LOCATION_ID
+      },
+      body: JSON.stringify({
+        contactId: contactId,
+        pipelineId: config.pipelineId,
+        pipelineStageId: config.stageId,
+        title: `SiteOptz ${trialType.toUpperCase()} Trial - OAuth Signup`,
+        monetaryValue: trialType === 'free' ? 0 : trialType === 'starter' ? 59 : 199,
+        source: 'Google OAuth Trial Signup'
+      })
+    });
+
+    if (!response.ok) {
+      const error = await response.text();
+      console.error('GHL pipeline addition failed:', error);
+      return false;
+    }
+
+    console.log('✅ Added contact to trial pipeline:', contactId, 'Type:', trialType);
+    return true;
+  } catch (error) {
+    console.error('GHL pipeline addition error:', error);
+    return false;
   }
 }
 
@@ -119,18 +188,39 @@ export const authOptions: NextAuthOptions = {
         const existingContact = await searchGHLContact(user.email!);
         
         if (!existingContact) {
-          // New user - create in GoHighLevel with free plan
-          console.log('🆕 New user via OAuth, creating in GHL:', user.email);
+          // New user - determine if this is a trial signup
+          // We can check for trial params in the callback URL or state
+          const callbackUrl = account?.callbackUrl || '';
+          const state = account?.state || '';
+          const isTrialSignup = typeof callbackUrl === 'string' && callbackUrl.includes('trial=true') || 
+                                 typeof state === 'string' && state.includes('trial') ||
+                                 typeof callbackUrl === 'string' && callbackUrl.includes('plan=');
+          
+          // Extract plan from callback URL if present
+          let plan = 'free';
+          if (typeof callbackUrl === 'string' && callbackUrl) {
+            const urlParams = new URLSearchParams(callbackUrl.split('?')[1] || '');
+            plan = urlParams.get('plan') || 'free';
+          }
+          
+          console.log('🆕 New user via OAuth:', user.email, 'Plan:', plan, 'Trial:', isTrialSignup);
+          
           const newContact = await createGHLContact(
             user.email!,
             user.name || 'User',
-            'free' // Default to free plan for OAuth signups
+            plan,
+            isTrialSignup
           );
           
           if (!newContact && process.env.GHL_API_KEY) {
             // If GHL is configured but creation failed, block sign in
             console.error('❌ Failed to create GHL contact, blocking sign in');
             return false;
+          }
+
+          // If this is a trial signup, add to trial pipeline
+          if (isTrialSignup && newContact) {
+            await addToTrialPipeline(newContact.id, plan);
           }
         } else {
           console.log('✅ Existing user found in GHL:', user.email);
