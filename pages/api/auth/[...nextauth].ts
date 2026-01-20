@@ -93,28 +93,52 @@ async function createGHLContact(email: string, name: string, plan: string = 'fre
 // Helper function to add contact to trial pipeline
 async function addToTrialPipeline(contactId: string, trialType: string) {
   try {
+    console.log('🔧 Attempting to add contact to pipeline:', { contactId, trialType });
+    
     if (!process.env.GHL_API_KEY || !process.env.GHL_LOCATION_ID) {
-      console.log('GHL credentials not configured');
+      console.error('❌ GHL credentials not configured:', {
+        hasApiKey: !!process.env.GHL_API_KEY,
+        hasLocationId: !!process.env.GHL_LOCATION_ID
+      });
       return false;
     }
 
     // Pipeline configuration for different trial types
     const pipelineConfig = {
       'free': {
-        pipelineId: process.env.GHL_FREE_TRIAL_PIPELINE_ID || 'default-free-pipeline',
-        stageId: process.env.GHL_FREE_TRIAL_STAGE_ID || 'new-free-user'
+        pipelineId: process.env.GHL_FREE_TRIAL_PIPELINE_ID || 'MISSING_FREE_PIPELINE_ID',
+        stageId: process.env.GHL_FREE_TRIAL_STAGE_ID || 'MISSING_FREE_STAGE_ID'
       },
       'starter': {
-        pipelineId: process.env.GHL_STARTER_TRIAL_PIPELINE_ID || 'default-starter-pipeline',
-        stageId: process.env.GHL_STARTER_TRIAL_STAGE_ID || 'new-starter-trial'
+        pipelineId: process.env.GHL_STARTER_TRIAL_PIPELINE_ID || 'MISSING_STARTER_PIPELINE_ID',
+        stageId: process.env.GHL_STARTER_TRIAL_STAGE_ID || 'MISSING_STARTER_STAGE_ID'
       },
       'pro': {
-        pipelineId: process.env.GHL_PRO_TRIAL_PIPELINE_ID || 'default-pro-pipeline',
-        stageId: process.env.GHL_PRO_TRIAL_STAGE_ID || 'new-pro-trial'
+        pipelineId: process.env.GHL_PRO_TRIAL_PIPELINE_ID || 'MISSING_PRO_PIPELINE_ID',
+        stageId: process.env.GHL_PRO_TRIAL_STAGE_ID || 'MISSING_PRO_STAGE_ID'
       }
     };
 
     const config = pipelineConfig[trialType as keyof typeof pipelineConfig];
+    
+    console.log('🔧 Pipeline config for', trialType, ':', config);
+    
+    // Check if we have valid pipeline IDs
+    if (config.pipelineId.startsWith('MISSING_') || config.stageId.startsWith('MISSING_')) {
+      console.error('❌ Missing pipeline configuration for trial type:', trialType, config);
+      return false;
+    }
+    
+    const requestBody = {
+      contactId: contactId,
+      pipelineId: config.pipelineId,
+      pipelineStageId: config.stageId,
+      title: `SiteOptz ${trialType.toUpperCase()} Trial - OAuth Signup`,
+      monetaryValue: trialType === 'free' ? 0 : trialType === 'starter' ? 59 : 199,
+      source: 'Google OAuth Trial Signup'
+    };
+    
+    console.log('🔧 Request body:', requestBody);
     
     const response = await fetch('https://services.leadconnectorhq.com/opportunities/', {
       method: 'POST',
@@ -124,26 +148,27 @@ async function addToTrialPipeline(contactId: string, trialType: string) {
         'Content-Type': 'application/json',
         'Location-Id': process.env.GHL_LOCATION_ID
       },
-      body: JSON.stringify({
-        contactId: contactId,
-        pipelineId: config.pipelineId,
-        pipelineStageId: config.stageId,
-        title: `SiteOptz ${trialType.toUpperCase()} Trial - OAuth Signup`,
-        monetaryValue: trialType === 'free' ? 0 : trialType === 'starter' ? 59 : 199,
-        source: 'Google OAuth Trial Signup'
-      })
+      body: JSON.stringify(requestBody)
     });
 
+    console.log('🔧 GHL API Response Status:', response.status);
+    
     if (!response.ok) {
       const error = await response.text();
-      console.error('GHL pipeline addition failed:', error);
+      console.error('❌ GHL pipeline addition failed:', {
+        status: response.status,
+        statusText: response.statusText,
+        error: error,
+        config: config
+      });
       return false;
     }
 
-    console.log('✅ Added contact to trial pipeline:', contactId, 'Type:', trialType);
+    const responseData = await response.json();
+    console.log('✅ Added contact to trial pipeline:', contactId, 'Type:', trialType, 'Response:', responseData);
     return true;
   } catch (error) {
-    console.error('GHL pipeline addition error:', error);
+    console.error('❌ GHL pipeline addition error:', error);
     return false;
   }
 }
@@ -192,9 +217,19 @@ export const authOptions: NextAuthOptions = {
           // We can check for trial params in the callback URL or state
           const callbackUrl = account?.callbackUrl || '';
           const state = account?.state || '';
-          const isTrialSignup = typeof callbackUrl === 'string' && callbackUrl.includes('trial=true') || 
-                                 typeof state === 'string' && state.includes('trial') ||
-                                 typeof callbackUrl === 'string' && callbackUrl.includes('plan=');
+          
+          console.log('🔍 OAuth Debug Info:', {
+            callbackUrl: callbackUrl,
+            state: state,
+            provider: account?.provider
+          });
+          
+          // More comprehensive trial detection
+          const isTrialSignup = (typeof callbackUrl === 'string' && callbackUrl.includes('trial=true')) || 
+                                (typeof state === 'string' && state.includes('trial')) ||
+                                (typeof callbackUrl === 'string' && callbackUrl.includes('plan=')) ||
+                                (typeof callbackUrl === 'string' && callbackUrl.includes('signup')) ||
+                                true; // For now, treat ALL new OAuth signups as trials
           
           // Extract plan from callback URL if present
           let plan = 'free';
@@ -220,7 +255,15 @@ export const authOptions: NextAuthOptions = {
 
           // If this is a trial signup, add to trial pipeline
           if (isTrialSignup && newContact) {
-            await addToTrialPipeline(newContact.id, plan);
+            console.log('🔧 Processing trial pipeline addition for:', user.email, 'Contact ID:', newContact.id);
+            const pipelineResult = await addToTrialPipeline(newContact.id, plan);
+            if (pipelineResult) {
+              console.log('✅ Successfully added to pipeline:', newContact.id, plan);
+            } else {
+              console.error('❌ Failed to add to pipeline:', newContact.id, plan);
+            }
+          } else {
+            console.log('🔧 Skipping pipeline addition:', { isTrialSignup, hasContact: !!newContact, email: user.email });
           }
         } else {
           console.log('✅ Existing user found in GHL:', user.email);
