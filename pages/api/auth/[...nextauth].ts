@@ -202,6 +202,7 @@ export const authOptions: NextAuthOptions = {
   callbacks: {
     async signIn({ user, account, profile }) {
       console.log('🔥 OAuth Sign In Attempt:', user.email);
+      console.log('🔥 DEBUG: NextAuth callback triggered at:', new Date().toISOString());
       
       // Only process Google OAuth
       if (account?.provider !== 'google') {
