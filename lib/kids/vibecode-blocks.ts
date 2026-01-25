@@ -126,6 +126,6 @@ function executeInSandbox(code: string): any {
     return func();
   } catch (error) {
     console.error('Execution error:', error);
-    return { error: error.message };
+    return { error: error instanceof Error ? error.message : 'Unknown error' };
   }
 }

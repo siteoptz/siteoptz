@@ -1,5 +1,5 @@
 // components/kids/VibecodeBlock.tsx
-import React from 'react';
+import React, { useRef } from 'react';
 import { useDrag } from 'react-dnd';
 import { VibecodeBlock } from '../../lib/kids/vibecode-blocks';
 
@@ -9,13 +9,17 @@ interface VibecodeBlockProps {
 }
 
 export default function VibecodeBlockComponent({ block, onSelect }: VibecodeBlockProps) {
-  const [{ isDragging }, drag] = useDrag({
+  const ref = useRef<HTMLDivElement>(null);
+  
+  const [{ isDragging }, drag] = useDrag(() => ({
     type: 'vibecode-block',
     item: { block },
     collect: (monitor) => ({
       isDragging: monitor.isDragging(),
     }),
-  });
+  }), [block]);
+
+  drag(ref);
 
   const handleClick = () => onSelect?.(block);
   
@@ -28,7 +32,7 @@ export default function VibecodeBlockComponent({ block, onSelect }: VibecodeBloc
 
   return (
     <div
-      ref={drag}
+      ref={ref}
       onClick={handleClick}
       onKeyDown={handleKeyDown}
       tabIndex={0}

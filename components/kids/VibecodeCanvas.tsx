@@ -1,37 +1,41 @@
 // components/kids/VibecodeCanvas.tsx
-import React, { useState } from 'react';
+import React, { useRef } from 'react';
 import { useDrop } from 'react-dnd';
 import { VibecodeBlock, BlockConnection } from '../../lib/kids/vibecode-blocks';
 
-interface VibecodeCanvasProps {
-  blocks: VibecodeBlock[];
+interface VibecodeCanvasProps<T extends VibecodeBlock = VibecodeBlock> {
+  blocks: T[];
   connections: BlockConnection[];
-  onBlocksChange: (blocks: VibecodeBlock[]) => void;
+  onBlocksChange: (blocks: T[]) => void;
   onConnectionsChange: (connections: BlockConnection[]) => void;
   onExecute: () => void;
 }
 
-export default function VibecodeCanvas({
+export default function VibecodeCanvas<T extends VibecodeBlock = VibecodeBlock>({
   blocks,
   connections,
   onBlocksChange,
   onConnectionsChange,
   onExecute,
-}: VibecodeCanvasProps) {
-  const [{ isOver }, drop] = useDrop({
+}: VibecodeCanvasProps<T>) {
+  const ref = useRef<HTMLDivElement>(null);
+  
+  const [{ isOver }, drop] = useDrop(() => ({
     accept: 'vibecode-block',
-    drop: (item: { block: VibecodeBlock }) => {
-      const newBlock = { ...item.block, id: `${item.block.id}-${Date.now()}` };
+    drop: (item: { block: T }) => {
+      const newBlock = { ...item.block, id: `${item.block.id}-${Date.now()}` } as T;
       onBlocksChange([...blocks, newBlock]);
     },
     collect: (monitor) => ({
       isOver: monitor.isOver(),
     }),
-  });
+  }), [blocks, onBlocksChange]);
+
+  drop(ref);
 
   return (
     <div
-      ref={drop}
+      ref={ref}
       className={`
         min-h-[400px] w-full border-2 border-dashed rounded-lg p-4
         ${isOver ? 'border-blue-500 bg-blue-50/10' : 'border-gray-600 bg-gray-900/50'}
