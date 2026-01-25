@@ -480,7 +480,7 @@ export default function StoryCreator() {
                               </div>
                             ) : (
                               <div className="text-center">
-                                <Image className="w-12 h-12 mx-auto mb-2 text-gray-400" alt="" />
+                                <Image className="w-12 h-12 mx-auto mb-2 text-gray-400" />
                                 <p className="text-gray-300">Generate AI Illustration</p>
                               </div>
                             )}
