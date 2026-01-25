@@ -17,19 +17,32 @@ export default function VibecodeBlockComponent({ block, onSelect }: VibecodeBloc
     }),
   });
 
+  const handleClick = () => onSelect?.(block);
+  
+  const handleKeyDown = (event: React.KeyboardEvent) => {
+    if (event.key === 'Enter' || event.key === ' ') {
+      event.preventDefault();
+      handleClick();
+    }
+  };
+
   return (
     <div
       ref={drag}
-      onClick={() => onSelect?.(block)}
+      onClick={handleClick}
+      onKeyDown={handleKeyDown}
+      tabIndex={0}
+      role="button"
+      aria-label={`${block.label} block - drag to canvas or press Enter to select`}
       className={`
         flex items-center gap-2 px-4 py-3 rounded-lg cursor-move
-        transition-all hover:scale-105
+        transition-all hover:scale-105 focus:outline-none focus:ring-2 focus:ring-blue-400
         ${isDragging ? 'opacity-50' : 'opacity-100'}
         bg-gradient-to-r ${getColorClass(block.color)}
       `}
       style={{ backgroundColor: block.color }}
     >
-      <span className="text-2xl">{block.icon}</span>
+      <span className="text-2xl" aria-hidden="true">{block.icon}</span>
       <span className="text-white font-semibold">{block.label}</span>
     </div>
   );
