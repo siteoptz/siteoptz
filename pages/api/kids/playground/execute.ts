@@ -1,6 +1,6 @@
 import { NextApiRequest, NextApiResponse } from 'next';
 import { getServerSession } from 'next-auth/next';
-import { authOptions } from '../../../auth/[...nextauth]';
+import { authOptions } from '../../auth/[...nextauth]';
 
 // Sandboxed code execution for kids
 // This is a simplified version - in production, use a proper sandbox like Docker or a dedicated service
