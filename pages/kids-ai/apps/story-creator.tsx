@@ -253,7 +253,7 @@ export default function StoryCreator() {
 
           {/* Educational Info */}
           <div className="mt-8 bg-blue-900/30 rounded-lg p-6">
-            <h3 className="text-xl font-bold text-white mb-3">🎓 What You're Learning</h3>
+            <h3 className="text-xl font-bold text-white mb-3">🎓 What You&apos;re Learning</h3>
             <ul className="text-gray-300 space-y-2">
               <li>✓ <strong>Sequencing</strong>: Blocks run in order, just like code</li>
               <li>✓ <strong>Variables</strong>: Character names and settings are stored data</li>
