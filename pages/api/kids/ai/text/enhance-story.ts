@@ -100,7 +100,7 @@ Maintain the same number of pages and keep the core story intact, but make it mo
       enhancedData = JSON.parse(responseContent);
     } catch (parseError) {
       // If JSON parsing fails, try to extract array from text
-      const arrayMatch = responseContent.match(/\[.*\]/s);
+      const arrayMatch = responseContent.match(/\[[\s\S]*\]/);
       if (arrayMatch) {
         enhancedData = JSON.parse(arrayMatch[0]);
       } else {
