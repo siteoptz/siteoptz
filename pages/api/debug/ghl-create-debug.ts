@@ -95,7 +95,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
         api_working: response.status !== 401,
         contact_created: response.ok && responseData?.contact?.id,
         error_type: !response.ok ? 'HTTP_ERROR' : null,
-        recommendations: []
+        recommendations: [] as string[]
       }
     };
 
