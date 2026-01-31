@@ -134,7 +134,7 @@ async function testGHLConnection() {
 
     // Test with a simple endpoint that should always work
     const response = await fetch(
-      `https://services.leadconnectorhq.com/locations/${process.env.GHL_LOCATION_ID}`,
+      `https://services.leadconnectorhq.com/contacts/?locationId=${process.env.GHL_LOCATION_ID}&limit=1`,
       {
         method: 'GET',
         headers: {
