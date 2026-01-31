@@ -249,9 +249,10 @@ export const authOptions: NextAuthOptions = {
           );
           
           if (!newContact && process.env.GHL_API_KEY) {
-            // If GHL is configured but creation failed, block sign in
-            console.error('❌ Failed to create GHL contact, blocking sign in');
-            return false;
+            // If GHL is configured but creation failed, log error but ALLOW sign in
+            console.error('⚠️ Failed to create GHL contact, but allowing sign in to proceed');
+            console.error('⚠️ User can still access the platform, but may not be tracked in GHL');
+            // Don't block sign in - GHL issues shouldn't prevent user access
           }
 
           // If this is a trial signup, add to trial pipeline
@@ -273,12 +274,10 @@ export const authOptions: NextAuthOptions = {
         return true;
       } catch (error) {
         console.error('❌ Sign in callback error:', error);
-        // If GHL integration fails but is not configured, allow sign in
-        if (!process.env.GHL_API_KEY) {
-          console.log('⚠️ GHL not configured, allowing sign in');
-          return true;
-        }
-        return false;
+        // Always allow sign in even if GHL integration fails
+        // Users shouldn't be blocked from accessing the platform due to CRM issues
+        console.log('⚠️ OAuth sign in proceeding despite GHL integration error');
+        return true;
       }
     },
     
