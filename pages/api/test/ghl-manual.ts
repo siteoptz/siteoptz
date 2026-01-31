@@ -80,14 +80,15 @@ async function createGHLContact(email: string, name: string, plan: string = 'fre
 
     if (!response.ok) {
       const error = await response.text();
-      console.error('❌ GHL create contact failed:', {
+      const errorDetails = {
         status: response.status,
         statusText: response.statusText,
         error: error,
         email: email,
         requestBody: { email, name, tags, source: 'Manual Test' }
-      });
-      return null;
+      };
+      console.error('❌ GHL create contact failed:', errorDetails);
+      return { error: errorDetails };
     }
 
     const data = await response.json();
@@ -166,13 +167,14 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       
       results.steps.push({
         step: 'create_contact',
-        success: !!newContact,
-        contact: newContact ? {
+        success: !!newContact && !newContact.error,
+        contact: newContact && !newContact.error ? {
           id: newContact.id,
           email: newContact.email,
           name: newContact.name,
           tags: newContact.tags
-        } : null
+        } : null,
+        error: newContact?.error || null
       });
     } else {
       results.steps.push({
