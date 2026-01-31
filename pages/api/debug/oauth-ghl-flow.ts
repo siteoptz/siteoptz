@@ -68,12 +68,6 @@ async function createGHLContact(email: string, name: string, plan: string = 'fre
         name,
         tags: tags,
         source: 'OAuth Flow Test',
-        customFields: {
-          'signup_source': 'oauth_flow_test',
-          'signup_date': new Date().toISOString(),
-          'is_trial_user': isTrialUser ? 'true' : 'false',
-          'initial_plan': plan
-        }
       })
     });
 

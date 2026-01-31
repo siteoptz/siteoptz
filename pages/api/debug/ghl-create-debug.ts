@@ -23,9 +23,6 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       name: name,
       tags: ['debug-test', 'api-test'],
       source: 'Debug Test',
-      customFields: {
-        'test_field': 'debug_value'
-      }
     };
 
     console.log('🔧 GHL Create Request Details:', {

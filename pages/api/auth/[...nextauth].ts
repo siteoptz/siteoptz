@@ -71,12 +71,6 @@ async function createGHLContact(email: string, name: string, plan: string = 'fre
         name,
         tags: tags,
         source: 'Google OAuth',
-        customFields: {
-          'signup_source': 'google_oauth',
-          'signup_date': new Date().toISOString(),
-          'is_trial_user': isTrialUser ? 'true' : 'false',
-          'initial_plan': plan
-        }
       })
     });
 

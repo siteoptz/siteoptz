@@ -69,12 +69,6 @@ async function createGHLContact(email: string, name: string, plan: string = 'fre
         name,
         tags: tags,
         source: 'Manual Test',
-        customFields: {
-          'signup_source': 'manual_test',
-          'signup_date': new Date().toISOString(),
-          'is_trial_user': isTrialUser ? 'true' : 'false',
-          'initial_plan': plan
-        }
       })
     });
 
