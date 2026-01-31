@@ -296,7 +296,6 @@ export const authOptions: NextAuthOptions = {
         return true;
       }
     },
-    },
     
     async redirect({ url, baseUrl }) {
       // Redirect to dashboard after sign in
