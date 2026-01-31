@@ -212,8 +212,11 @@ export const authOptions: NextAuthOptions = {
   },
   callbacks: {
     async signIn({ user, account, profile }) {
+      console.log('🔥🔥🔥 OAUTH CALLBACK STARTED 🔥🔥🔥');
       console.log('🔥 OAuth Sign In Attempt:', user.email);
       console.log('🔥 DEBUG: NextAuth callback triggered at:', new Date().toISOString());
+      console.log('🔥 Account Provider:', account?.provider);
+      console.log('🔥 User Info:', { email: user.email, name: user.name });
       
       // Only process Google OAuth
       if (account?.provider !== 'google') {
@@ -284,12 +287,15 @@ export const authOptions: NextAuthOptions = {
         
         return true;
       } catch (error) {
+        console.error('❌❌❌ SIGN IN CALLBACK ERROR ❌❌❌');
         console.error('❌ Sign in callback error:', error);
+        console.error('❌ Error stack:', error instanceof Error ? error.stack : 'No stack trace');
         // Always allow sign in even if GHL integration fails
         // Users shouldn't be blocked from accessing the platform due to CRM issues
         console.log('⚠️ OAuth sign in proceeding despite GHL integration error');
         return true;
       }
+    },
     },
     
     async redirect({ url, baseUrl }) {
