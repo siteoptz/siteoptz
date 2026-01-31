@@ -201,8 +201,8 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       recommendations: [] as string[]
     };
 
-    const failedTests = diagnostics.api_tests.filter(test => !test.success);
-    const allAuthErrors = diagnostics.api_tests.every(test => 
+    const failedTests = diagnostics.api_tests.filter((test: any) => !test.success);
+    const allAuthErrors = diagnostics.api_tests.every((test: any) => 
       test.status === 401 || (test.response && typeof test.response === 'object' && 
       test.response.message && test.response.message.includes('Invalid Private Integration token'))
     );
