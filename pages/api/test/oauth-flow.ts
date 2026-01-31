@@ -60,13 +60,13 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     const diagnostics = {
       timestamp: new Date().toISOString(),
       oauth_ready,
-      nextauth_config,
+      nextauth_config: nextAuthConfig,
       ghl_status,
       oauth_urls: {
         signin: `${process.env.NEXTAUTH_URL}/api/auth/signin/google`,
         callback: `${process.env.NEXTAUTH_URL}/api/auth/callback/google`,
       },
-      potential_issues: []
+      potential_issues: [] as string[]
     };
 
     // Add potential issues

@@ -4,9 +4,9 @@ import { CheckCircle, XCircle, AlertCircle, Loader } from 'lucide-react';
 
 const TestOAuthPage = () => {
   const { data: session, status } = useSession();
-  const [debugInfo, setDebugInfo] = useState(null);
+  const [debugInfo, setDebugInfo] = useState<any>(null);
   const [loading, setLoading] = useState(false);
-  const [testResults, setTestResults] = useState(null);
+  const [testResults, setTestResults] = useState<any>(null);
 
   const runDiagnostics = async () => {
     setLoading(true);
@@ -39,7 +39,7 @@ const TestOAuthPage = () => {
       console.error('Diagnostics failed:', error);
       setTestResults({
         oauth_ready: false,
-        error: error.message
+        error: error instanceof Error ? error.message : 'Unknown error'
       });
     } finally {
       setLoading(false);
@@ -141,7 +141,7 @@ const TestOAuthPage = () => {
                 <div className="mt-4">
                   <h4 className="text-white font-semibold mb-2">Issues Found:</h4>
                   <ul className="list-disc list-inside text-red-400 space-y-1">
-                    {testResults.issues.map((issue, idx) => (
+                    {testResults.issues.map((issue: string, idx: number) => (
                       <li key={idx}>{issue}</li>
                     ))}
                   </ul>
@@ -152,7 +152,7 @@ const TestOAuthPage = () => {
                 <div className="mt-4">
                   <h4 className="text-white font-semibold mb-2">Recommendations:</h4>
                   <ul className="list-disc list-inside text-blue-400 space-y-1">
-                    {testResults.recommendations.map((rec, idx) => (
+                    {testResults.recommendations.map((rec: string, idx: number) => (
                       <li key={idx}>{rec}</li>
                     ))}
                   </ul>
