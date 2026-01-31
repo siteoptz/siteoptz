@@ -22,7 +22,13 @@ async function searchGHLContact(email: string) {
     );
 
     if (!response.ok) {
-      console.error('GHL search failed:', response.status);
+      const errorText = await response.text();
+      console.error('❌ GHL search failed:', {
+        status: response.status,
+        statusText: response.statusText,
+        error: errorText,
+        email: email
+      });
       return null;
     }
 
@@ -77,7 +83,13 @@ async function createGHLContact(email: string, name: string, plan: string = 'fre
 
     if (!response.ok) {
       const error = await response.text();
-      console.error('GHL create contact failed:', error);
+      console.error('❌ GHL create contact failed:', {
+        status: response.status,
+        statusText: response.statusText,
+        error: error,
+        email: email,
+        requestBody: { email, name, tags, source: 'Google OAuth' }
+      });
       return null;
     }
 
