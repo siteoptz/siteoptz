@@ -8,13 +8,12 @@ async function testGHLSearch(email: string) {
     }
 
     const response = await fetch(
-      `https://services.leadconnectorhq.com/contacts/search/duplicate?email=${encodeURIComponent(email)}`,
+      `https://services.leadconnectorhq.com/contacts/search/duplicate?locationId=${process.env.GHL_LOCATION_ID}&email=${encodeURIComponent(email)}`,
       {
         method: 'GET',
         headers: {
           'Authorization': `Bearer ${process.env.GHL_API_KEY}`,
-          'Version': '2021-07-28',
-          'Location-Id': process.env.GHL_LOCATION_ID
+          'Version': '2021-07-28'
         }
       }
     );
@@ -59,6 +58,7 @@ async function testGHLCreate(email: string, name: string, plan: string = 'free',
       : [`siteoptz-plan-${plan}`, 'oauth-signup'];
 
     const requestBody = {
+      locationId: process.env.GHL_LOCATION_ID,
       email,
       name,
       tags: tags,
@@ -85,8 +85,7 @@ async function testGHLCreate(email: string, name: string, plan: string = 'free',
       headers: {
         'Authorization': `Bearer ${process.env.GHL_API_KEY}`,
         'Version': '2021-07-28',
-        'Content-Type': 'application/json',
-        'Location-Id': process.env.GHL_LOCATION_ID
+        'Content-Type': 'application/json'
       },
       body: JSON.stringify(requestBody)
     });
@@ -135,7 +134,7 @@ async function testGHLConnection() {
 
     // Test with a simple endpoint that should always work
     const response = await fetch(
-      'https://services.leadconnectorhq.com/locations/',
+      `https://services.leadconnectorhq.com/locations/${process.env.GHL_LOCATION_ID}`,
       {
         method: 'GET',
         headers: {
