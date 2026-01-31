@@ -113,7 +113,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
         response: responseData
       },
       alternative_test: alternativeTest,
-      recommendations: []
+      recommendations: [] as string[]
     };
 
     // Add recommendations based on results
