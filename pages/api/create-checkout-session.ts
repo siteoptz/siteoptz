@@ -21,6 +21,7 @@ export default async function handler(
   res: NextApiResponse
 ) {
   console.log('=== CREATE CHECKOUT SESSION API CALLED ===');
+  console.log('API Version: 2.0 - Fixed TypeScript compilation');
   console.log('Method:', req.method);
   console.log('Body:', req.body);
   
