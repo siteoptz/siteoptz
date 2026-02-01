@@ -94,7 +94,7 @@ export default function HomePage({}: HomePageProps) {
         'ROI Tracking Dashboard',
         'Monthly Implementation Webinars'
       ],
-      ctaText: (status === 'loading') ? 'Loading...' : (session?.user ? 'Upgrade Now' : 'Select'),
+      ctaText: session?.user ? 'Upgrade Now' : 'Get Started',
       ctaAction: async (e?: React.MouseEvent) => {
         e?.preventDefault();
         e?.stopPropagation();
@@ -130,7 +130,7 @@ export default function HomePage({}: HomePageProps) {
         'White-label AI Tool Reports',
         'API Access & Advanced Tools'
       ],
-      ctaText: (status === 'loading') ? 'Loading...' : (session?.user ? 'Upgrade Now' : 'Select'),
+      ctaText: session?.user ? 'Upgrade Now' : 'Get Started',
       ctaAction: async (e?: React.MouseEvent) => {
         e?.preventDefault();
         e?.stopPropagation();
@@ -681,42 +681,23 @@ export default function HomePage({}: HomePageProps) {
                       ))}
                     </ul>
                     
-                    {plan.name === 'STARTER' || plan.name === 'PRO' ? (
-                      <button
-                        onClick={async () => {
-                          try {
-                            setSelectedPlan(`${plan.name} Plan`);
-                            await initiateUpgrade(plan.name.toLowerCase() as 'starter' | 'pro', billingCycle);
-                          } catch (error) {
-                            console.error(`Upgrade error: ${error}`);
-                          }
-                        }}
-                        disabled={loading}
-                        className={`block w-full text-center px-6 py-3 font-semibold rounded-xl transition-all duration-200 group-hover:scale-105 ${
-                          loading
-                            ? 'bg-gray-600 text-gray-400 cursor-not-allowed'
-                            : plan.popular
-                            ? 'bg-gradient-to-r from-cyan-500 to-blue-600 text-white hover:from-cyan-400 hover:to-blue-500'
-                            : 'bg-gradient-to-r from-gray-700 to-gray-600 text-white hover:from-gray-600 hover:to-gray-500'
-                        }`}
-                      >
-                        {loading ? 'Processing...' : (isLoggedIn ? 'Upgrade Now' : 'Select')}
-                      </button>
-                    ) : (
-                      <button
-                        onClick={(e) => plan.ctaAction && plan.ctaAction(e)}
-                        disabled={status === 'loading'}
-                        className={`block w-full text-center px-6 py-3 font-semibold rounded-xl transition-all duration-200 group-hover:scale-105 ${
-                          status === 'loading'
-                            ? 'bg-gray-600 text-gray-400 cursor-not-allowed'
-                            : plan.name === 'FREE' 
-                            ? 'bg-gradient-to-r from-green-600 to-emerald-600 text-white hover:from-green-700 hover:to-emerald-700'
-                            : 'bg-gradient-to-r from-purple-600 to-violet-600 text-white hover:from-purple-700 hover:to-violet-700'
-                        }`}
-                      >
-                        {plan.ctaText}
-                      </button>
-                    )}
+                    <button
+                      onClick={(e) => plan.ctaAction && plan.ctaAction(e)}
+                      disabled={status === 'loading' || (plan.name === 'STARTER' || plan.name === 'PRO' ? loading : false)}
+                      className={`block w-full text-center px-6 py-3 font-semibold rounded-xl transition-all duration-200 group-hover:scale-105 ${
+                        (status === 'loading' || ((plan.name === 'STARTER' || plan.name === 'PRO') && loading))
+                          ? 'bg-gray-600 text-gray-400 cursor-not-allowed'
+                          : plan.name === 'FREE' 
+                          ? 'bg-gradient-to-r from-green-600 to-emerald-600 text-white hover:from-green-700 hover:to-emerald-700'
+                          : plan.name === 'ENTERPRISE'
+                          ? 'bg-gradient-to-r from-purple-600 to-violet-600 text-white hover:from-purple-700 hover:to-violet-700'
+                          : plan.popular
+                          ? 'bg-gradient-to-r from-cyan-500 to-blue-600 text-white hover:from-cyan-400 hover:to-blue-500'
+                          : 'bg-gradient-to-r from-gray-700 to-gray-600 text-white hover:from-gray-600 hover:to-gray-500'
+                      }`}
+                    >
+                      {(status === 'loading' || ((plan.name === 'STARTER' || plan.name === 'PRO') && loading)) ? 'Processing...' : plan.ctaText}
+                    </button>
                   </div>
                 );
               })}
