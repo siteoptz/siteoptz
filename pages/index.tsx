@@ -1,7 +1,7 @@
 import { GetStaticProps } from 'next';
 import Link from 'next/link';
 import { useState, useEffect } from 'react';
-import { useSession } from 'next-auth/react';
+import { useSession, signIn } from 'next-auth/react';
 import SEOHead from '../components/SEOHead';
 import { useStripeCheckout } from '../hooks/useStripeCheckout';
 import { useUpgradeFlow } from '../hooks/useUpgradeFlow';
@@ -69,9 +69,16 @@ export default function HomePage({}: HomePageProps) {
         'Weekly AI Trends Report'
       ],
       ctaText: 'Get Started',
-      ctaAction: () => {
-        setSelectedPlan('Free Plan');
-        setShowRegister(true);
+      ctaAction: async () => {
+        if (!session?.user) {
+          // Trigger OAuth sign-in for free plan
+          await signIn('google', {
+            callbackUrl: '/dashboard?plan=free&trial=false'
+          });
+        } else {
+          // User is already logged in, redirect to dashboard
+          window.location.href = '/dashboard';
+        }
       }
     },
     {
