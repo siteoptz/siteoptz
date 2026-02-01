@@ -32,7 +32,19 @@ export const useStripeCheckout = () => {
         body: JSON.stringify(options),
       });
 
-      const data = await response.json();
+      // Check if response has content before parsing JSON
+      const responseText = await response.text();
+      console.log('Raw response:', responseText);
+      
+      let data;
+      try {
+        data = responseText ? JSON.parse(responseText) : {};
+      } catch (parseError) {
+        console.error('JSON parse error:', parseError);
+        console.error('Response text:', responseText);
+        throw new Error(`Invalid API response: ${responseText || 'Empty response'}`);
+      }
+      
       console.log('Checkout session response:', data);
 
       if (!response.ok) {
