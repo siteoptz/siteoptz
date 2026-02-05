@@ -102,18 +102,22 @@ export default function HomePage({}: HomePageProps) {
         // Don't do anything if session is still loading
         if (status === 'loading') return;
         
+        clearError();
+        
         if (!session?.user) {
-          setSelectedPlan('Starter Plan');
-          setShowRegister(true);
+          // For non-logged-in users, use upgrade flow which will redirect to login then show payment modal
+          try {
+            await initiateUpgrade('starter', billingCycle);
+          } catch (err) {
+            console.error('Starter upgrade error:', err);
+          }
           return;
         }
-        clearError();
-        await redirectToCheckout({
-          plan: 'starter',
-          billingCycle,
-          successUrl: `${window.location.origin}/dashboard?upgraded=true&plan=starter`,
-          cancelUrl: `${window.location.origin}/?canceled=true`,
-        });
+        
+        // For logged-in users, show payment modal directly
+        setPaymentModalPlan('starter');
+        setBillingCycle(billingCycle);
+        setShowPaymentModal(true);
       }
     },
     {
@@ -138,18 +142,22 @@ export default function HomePage({}: HomePageProps) {
         // Don't do anything if session is still loading
         if (status === 'loading') return;
         
+        clearError();
+        
         if (!session?.user) {
-          setSelectedPlan('Pro Plan');
-          setShowRegister(true);
+          // For non-logged-in users, use upgrade flow which will redirect to login then show payment modal
+          try {
+            await initiateUpgrade('pro', billingCycle);
+          } catch (err) {
+            console.error('Pro upgrade error:', err);
+          }
           return;
         }
-        clearError();
-        await redirectToCheckout({
-          plan: 'pro',
-          billingCycle,
-          successUrl: `${window.location.origin}/dashboard?upgraded=true&plan=pro`,
-          cancelUrl: `${window.location.origin}/?canceled=true`,
-        });
+        
+        // For logged-in users, show payment modal directly
+        setPaymentModalPlan('pro');
+        setBillingCycle(billingCycle);
+        setShowPaymentModal(true);
       }
     },
     {
