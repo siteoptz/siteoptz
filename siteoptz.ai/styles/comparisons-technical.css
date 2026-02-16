@@ -1,0 +1,693 @@
+/* Technical Design System for Comparison Pages */
+/* Overrides for comparisons.css with monochromatic geometric aesthetic */
+
+/* Container and Layout */
+.comparison-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 var(--space-6);
+}
+
+/* Hero Section - Technical Style */
+.comparison-hero {
+  background: var(--surface-base);
+  color: var(--text-primary);
+  padding: var(--space-16) 0;
+  position: relative;
+}
+
+.comparison-hero::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: 
+    linear-gradient(var(--grid-line-default) var(--border-width), transparent var(--border-width)),
+    linear-gradient(90deg, var(--grid-line-default) var(--border-width), transparent var(--border-width));
+  background-size: var(--grid-size) var(--grid-size);
+  pointer-events: none;
+  opacity: 0.6;
+}
+
+/* Geometric accent lines */
+.comparison-hero::after {
+  content: '';
+  position: absolute;
+  top: 30%;
+  left: 0;
+  right: 0;
+  height: var(--border-width);
+  background: var(--grid-line-strong);
+  pointer-events: none;
+}
+
+.comparison-hero h1 {
+  font-size: var(--text-6xl);
+  font-weight: var(--font-weight-black);
+  text-align: center;
+  margin-bottom: var(--space-6);
+  line-height: var(--line-height-tight);
+  letter-spacing: var(--letter-spacing-tight);
+  text-transform: uppercase;
+  position: relative;
+  z-index: 1;
+}
+
+.comparison-hero p {
+  font-size: var(--text-lg);
+  text-align: center;
+  color: var(--text-secondary);
+  max-width: 600px;
+  margin: 0 auto;
+  letter-spacing: var(--letter-spacing-wide);
+  position: relative;
+  z-index: 1;
+}
+
+/* Tool Cards - Sharp Geometric Style */
+.tool-card {
+  background: var(--surface-raised);
+  border: var(--border-width) solid var(--border-default);
+  border-radius: 0;
+  padding: var(--space-7);
+  transition: var(--transition-normal);
+  box-shadow: var(--elevation-low);
+}
+
+.tool-card:hover {
+  background: var(--surface-elevated);
+  border-color: var(--border-strong);
+  box-shadow: var(--elevation-medium);
+  transform: none;
+}
+
+.tool-card.selected {
+  border-color: var(--interactive-default);
+  box-shadow: var(--elevation-medium);
+  background: var(--surface-elevated);
+}
+
+.tool-card.selected::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: var(--border-width-thick);
+  background: var(--interactive-default);
+}
+
+.tool-logo {
+  width: 60px;
+  height: 60px;
+  border-radius: 0;
+  padding: var(--space-3);
+  background: var(--surface-overlay);
+  border: var(--border-width) solid var(--border-subtle);
+  margin-bottom: var(--space-5);
+}
+
+.tool-logo img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  filter: contrast(1.2) brightness(1.1);
+}
+
+/* Rating System - Minimalist */
+.rating-stars {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  margin-bottom: var(--space-5);
+}
+
+.rating-stars .star {
+  color: var(--text-secondary);
+  font-size: var(--text-base);
+  width: 12px;
+  height: 12px;
+}
+
+.rating-number {
+  font-weight: var(--font-weight-medium);
+  margin-left: var(--space-3);
+  color: var(--text-primary);
+  font-family: var(--font-family-mono);
+}
+
+.rating-count {
+  color: var(--text-tertiary);
+  font-size: var(--text-sm);
+  margin-left: var(--space-2);
+  font-family: var(--font-family-mono);
+}
+
+/* Pricing Display - Technical Typography */
+.pricing-display {
+  font-size: var(--text-3xl);
+  font-weight: var(--font-weight-bold);
+  color: var(--text-primary);
+  margin-bottom: var(--space-2);
+  font-family: var(--font-family-mono);
+  letter-spacing: var(--letter-spacing-tight);
+}
+
+.pricing-period {
+  font-size: var(--text-base);
+  font-weight: var(--font-weight-normal);
+  color: var(--text-secondary);
+  text-transform: uppercase;
+  letter-spacing: var(--letter-spacing-wide);
+  font-family: var(--font-family-mono);
+}
+
+.pricing-note {
+  font-size: var(--text-sm);
+  color: var(--text-tertiary);
+  margin-top: var(--space-2);
+  font-family: var(--font-family-mono);
+}
+
+/* Feature Lists - Technical Style */
+.feature-list {
+  list-style: none;
+  padding: 0;
+  margin: var(--space-6) 0;
+}
+
+.feature-list li {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: var(--space-4);
+  font-size: var(--text-sm);
+  color: var(--text-primary);
+}
+
+.feature-list li::before {
+  content: "—";
+  color: var(--text-secondary);
+  font-weight: var(--font-weight-normal);
+  margin-right: var(--space-4);
+  margin-top: var(--space-1);
+  font-family: var(--font-family-mono);
+}
+
+.feature-list.advanced li::before {
+  content: ">";
+  color: var(--text-primary);
+}
+
+.feature-list.integration li::before {
+  content: "+";
+  color: var(--text-secondary);
+}
+
+/* Comparison Table - Technical Grid */
+.comparison-table {
+  background: var(--surface-raised);
+  border: var(--border-width) solid var(--border-default);
+  border-radius: 0;
+  overflow: hidden;
+  box-shadow: var(--elevation-low);
+  font-family: var(--font-family-mono);
+}
+
+.comparison-table th {
+  background: var(--surface-elevated);
+  padding: var(--space-5);
+  font-weight: var(--font-weight-medium);
+  text-align: left;
+  border-bottom: var(--border-width) solid var(--border-default);
+  color: var(--text-primary);
+  font-size: var(--text-sm);
+  text-transform: uppercase;
+  letter-spacing: var(--letter-spacing-wide);
+}
+
+.comparison-table td {
+  padding: var(--space-5);
+  border-bottom: var(--border-width) solid var(--border-subtle);
+  vertical-align: top;
+  color: var(--text-primary);
+  font-size: var(--text-sm);
+}
+
+.comparison-table tr:hover {
+  background: var(--surface-overlay);
+}
+
+.comparison-table .winner {
+  background: var(--surface-elevated);
+  font-weight: var(--font-weight-medium);
+  color: var(--text-primary);
+  border-left: var(--border-width-thick) solid var(--interactive-default);
+}
+
+.comparison-table .winner::after {
+  content: " ↗";
+  margin-left: var(--space-2);
+  color: var(--text-secondary);
+}
+
+/* Pricing Calculator - Technical Design */
+.pricing-calculator {
+  background: var(--surface-raised);
+  border: var(--border-width) solid var(--border-default);
+  border-radius: 0;
+  padding: var(--space-7);
+  margin: var(--space-8) 0;
+  box-shadow: var(--elevation-low);
+}
+
+.calculator-input {
+  margin-bottom: var(--space-6);
+}
+
+.calculator-input label {
+  display: block;
+  font-weight: var(--font-weight-medium);
+  margin-bottom: var(--space-3);
+  color: var(--text-primary);
+  font-size: var(--text-sm);
+  text-transform: uppercase;
+  letter-spacing: var(--letter-spacing-wide);
+}
+
+.calculator-input input,
+.calculator-input select {
+  width: 100%;
+  padding: var(--space-4);
+  border: var(--border-width) solid var(--border-default);
+  border-radius: 0;
+  font-size: var(--text-base);
+  background: var(--surface-base);
+  color: var(--text-primary);
+  font-family: var(--font-family-mono);
+  transition: var(--transition-fast);
+}
+
+.calculator-input input:focus,
+.calculator-input select:focus {
+  outline: none;
+  border-color: var(--interactive-default);
+  background: var(--surface-elevated);
+}
+
+.calculator-result {
+  background: var(--surface-elevated);
+  border: var(--border-width) solid var(--border-strong);
+  border-radius: 0;
+  padding: var(--space-6);
+  box-shadow: var(--elevation-medium);
+}
+
+.calculator-result h3 {
+  font-size: var(--text-lg);
+  font-weight: var(--font-weight-bold);
+  margin-bottom: var(--space-5);
+  color: var(--text-primary);
+  text-transform: uppercase;
+  letter-spacing: var(--letter-spacing-wide);
+}
+
+.calculator-total {
+  font-size: var(--text-5xl);
+  font-weight: var(--font-weight-black);
+  color: var(--text-primary);
+  margin: var(--space-5) 0;
+  font-family: var(--font-family-mono);
+  letter-spacing: var(--letter-spacing-tight);
+}
+
+.calculator-breakdown {
+  font-size: var(--text-sm);
+  color: var(--text-secondary);
+  margin-top: var(--space-3);
+  font-family: var(--font-family-mono);
+}
+
+/* FAQ Section - Technical Style */
+.faq-section {
+  margin: var(--space-12) 0;
+}
+
+.faq-item {
+  background: var(--surface-raised);
+  border: var(--border-width) solid var(--border-default);
+  border-radius: 0;
+  margin-bottom: var(--space-5);
+  box-shadow: var(--elevation-subtle);
+}
+
+.faq-question {
+  width: 100%;
+  text-align: left;
+  padding: var(--space-6);
+  font-weight: var(--font-weight-medium);
+  font-size: var(--text-base);
+  color: var(--text-primary);
+  background: none;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: var(--transition-normal);
+  text-transform: uppercase;
+  letter-spacing: var(--letter-spacing-wide);
+}
+
+.faq-question:hover {
+  background: var(--surface-overlay);
+}
+
+.faq-answer {
+  padding: 0 var(--space-6) var(--space-6);
+  color: var(--text-secondary);
+  line-height: var(--line-height-relaxed);
+  font-size: var(--text-sm);
+}
+
+.faq-toggle {
+  transition: var(--transition-normal);
+  color: var(--text-secondary);
+}
+
+.faq-toggle.open {
+  transform: rotate(180deg);
+}
+
+/* CTA Buttons - Technical Style */
+.cta-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--space-5) var(--space-7);
+  font-weight: var(--font-weight-medium);
+  border-radius: 0;
+  text-decoration: none;
+  transition: var(--transition-fast);
+  cursor: pointer;
+  border: var(--border-width) solid transparent;
+  font-size: var(--text-sm);
+  text-transform: uppercase;
+  letter-spacing: var(--letter-spacing-wide);
+  font-family: var(--font-family-primary);
+}
+
+.cta-button.primary {
+  background: var(--interactive-default);
+  color: var(--text-inverse);
+  border-color: var(--interactive-default);
+}
+
+.cta-button.primary:hover {
+  background: var(--interactive-hover);
+  border-color: var(--interactive-hover);
+  transform: none;
+  box-shadow: var(--elevation-low);
+}
+
+.cta-button.secondary {
+  background: transparent;
+  color: var(--interactive-default);
+  border-color: var(--interactive-default);
+}
+
+.cta-button.secondary:hover {
+  background: var(--interactive-default);
+  color: var(--text-inverse);
+  transform: none;
+}
+
+.cta-button.success {
+  background: var(--interactive-default);
+  color: var(--text-inverse);
+  border-color: var(--interactive-default);
+}
+
+.cta-button.success:hover {
+  background: var(--interactive-hover);
+  border-color: var(--interactive-hover);
+  transform: none;
+  box-shadow: var(--elevation-low);
+}
+
+/* Email Capture Modal - Technical Style */
+.email-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  padding: var(--space-5);
+  backdrop-filter: blur(4px);
+}
+
+.email-modal {
+  background: var(--surface-raised);
+  border: var(--border-width) solid var(--border-default);
+  border-radius: 0;
+  padding: var(--space-8);
+  max-width: 500px;
+  width: 100%;
+  max-height: 90vh;
+  overflow-y: auto;
+  box-shadow: var(--elevation-overlay);
+}
+
+.email-modal h3 {
+  font-size: var(--text-xl);
+  font-weight: var(--font-weight-bold);
+  margin-bottom: var(--space-5);
+  text-align: center;
+  color: var(--text-primary);
+  text-transform: uppercase;
+  letter-spacing: var(--letter-spacing-wide);
+}
+
+.email-modal p {
+  color: var(--text-secondary);
+  text-align: center;
+  margin-bottom: var(--space-8);
+  font-size: var(--text-sm);
+}
+
+.email-form {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-5);
+}
+
+.email-form input,
+.email-form select {
+  padding: var(--space-4);
+  border: var(--border-width) solid var(--border-default);
+  border-radius: 0;
+  font-size: var(--text-base);
+  background: var(--surface-base);
+  color: var(--text-primary);
+  font-family: var(--font-family-primary);
+}
+
+.email-form input:focus,
+.email-form select:focus {
+  outline: none;
+  border-color: var(--interactive-default);
+  background: var(--surface-elevated);
+}
+
+.email-form .form-actions {
+  display: flex;
+  gap: var(--space-5);
+  margin-top: var(--space-5);
+}
+
+.email-form .form-actions button {
+  flex: 1;
+  padding: var(--space-4);
+  border-radius: 0;
+  font-weight: var(--font-weight-medium);
+  cursor: pointer;
+  transition: var(--transition-fast);
+  font-size: var(--text-sm);
+  text-transform: uppercase;
+  letter-spacing: var(--letter-spacing-wide);
+}
+
+.email-form .cancel-btn {
+  background: transparent;
+  color: var(--text-secondary);
+  border: var(--border-width) solid var(--border-default);
+}
+
+.email-form .cancel-btn:hover {
+  background: var(--surface-overlay);
+  border-color: var(--border-strong);
+}
+
+.email-form .submit-btn {
+  background: var(--interactive-default);
+  color: var(--text-inverse);
+  border: var(--border-width) solid var(--interactive-default);
+}
+
+.email-form .submit-btn:hover {
+  background: var(--interactive-hover);
+  border-color: var(--interactive-hover);
+}
+
+.email-form .submit-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* Success State */
+.success-state {
+  text-align: center;
+}
+
+.success-icon {
+  width: 4rem;
+  height: 4rem;
+  background: var(--interactive-default);
+  border: var(--border-width) solid var(--interactive-default);
+  border-radius: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto var(--space-5);
+}
+
+.success-icon svg {
+  width: 2rem;
+  height: 2rem;
+  color: var(--text-inverse);
+}
+
+/* Loading States */
+.loading {
+  opacity: 0.6;
+  pointer-events: none;
+}
+
+.spinner {
+  display: inline-block;
+  width: 1rem;
+  height: 1rem;
+  border: 2px solid var(--border-subtle);
+  border-radius: 0;
+  border-top-color: var(--interactive-default);
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .comparison-hero {
+    padding: var(--space-12) 0;
+  }
+  
+  .comparison-hero h1 {
+    font-size: var(--text-4xl);
+  }
+  
+  .comparison-hero p {
+    font-size: var(--text-base);
+  }
+  
+  .tool-card {
+    padding: var(--space-6);
+  }
+  
+  .comparison-table {
+    font-size: var(--text-xs);
+  }
+  
+  .comparison-table th,
+  .comparison-table td {
+    padding: var(--space-4);
+  }
+  
+  .pricing-calculator {
+    padding: var(--space-6);
+  }
+  
+  .calculator-total {
+    font-size: var(--text-3xl);
+  }
+  
+  .email-modal {
+    margin: var(--space-5);
+    padding: var(--space-6);
+  }
+  
+  .container-technical {
+    padding: 0 var(--space-5);
+  }
+}
+
+@media (max-width: 480px) {
+  .comparison-hero {
+    padding: var(--space-10) 0;
+  }
+  
+  .comparison-hero h1 {
+    font-size: var(--text-3xl);
+  }
+  
+  .tool-card {
+    padding: var(--space-5);
+  }
+  
+  .faq-question {
+    padding: var(--space-5);
+    font-size: var(--text-sm);
+  }
+  
+  .faq-answer {
+    padding: 0 var(--space-5) var(--space-5);
+  }
+  
+  .cta-button {
+    padding: var(--space-4) var(--space-6);
+    font-size: var(--text-xs);
+  }
+}
+
+/* Remove animations and transitions for reduced motion preference */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* High contrast mode support */
+@media (prefers-contrast: high) {
+  .tool-card {
+    border-width: var(--border-width-thick);
+  }
+  
+  .button-technical {
+    border-width: var(--border-width-thick);
+  }
+  
+  .comparison-table th {
+    border-width: var(--border-width-thick);
+  }
+}

@@ -1,5 +1,5 @@
 import React from 'react';
-import { CleanGoogleAdsData, CleanGoogleAdsConnection } from '@/lib/clean-google-ads';
+import { CleanGoogleAdsData, CleanGoogleAdsConnection } from '../../lib/clean-google-ads';
 
 interface StaticMarketingROIDashboardProps {
   googleAdsData: CleanGoogleAdsData | null;

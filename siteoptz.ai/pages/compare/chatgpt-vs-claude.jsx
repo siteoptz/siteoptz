@@ -117,7 +117,7 @@ export default function ChatGPTvsClaudePage({ chatgpt, claude }) {
         }}
       />
 
-      <div className="min-h-screen bg-gray-50">
+      <div className="min-h-screen" style={{ backgroundColor: 'var(--surface-base)' }}>
         {/* Hero Section */}
         <HeroSection
           toolA={chatgpt}
@@ -126,15 +126,14 @@ export default function ChatGPTvsClaudePage({ chatgpt, claude }) {
         />
 
         {/* Quick Summary */}
-        <div className="bg-white py-16">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="section-technical" style={{ backgroundColor: 'var(--surface-raised)' }}>
+          <div className="container-technical">
             <div className="text-center mb-12">
-              <h2 className="text-3xl font-bold text-gray-900 mb-4">
-                ChatGPT vs Claude: The Ultimate Comparison
+              <h2 className="text-3xl font-black text-primary mb-6 tracking-tight uppercase">
+                CHATGPT VS CLAUDE: COMPREHENSIVE ANALYSIS
               </h2>
-              <p className="text-lg text-gray-600 max-w-4xl mx-auto">
-                Compare OpenAI's most popular AI assistant with Anthropic's advanced conversational AI. 
-                Both tools excel in different areas - discover which one fits your specific needs.
+              <p className="text-lg text-secondary max-w-4xl mx-auto font-mono tracking-wide">
+                OPENAI_CHATGPT // ANTHROPIC_CLAUDE // TECHNICAL_COMPARISON // OPTIMAL_SELECTION_MATRIX
               </p>
             </div>
 

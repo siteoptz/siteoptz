@@ -25,8 +25,7 @@ import {
   LineChart,
   Activity
 } from 'lucide-react';
-import { CleanGoogleAdsData, CleanGoogleAdsConnection } from '@/lib/clean-google-ads';
-import { formatCurrency, formatNumber, formatPercentage, getPerformanceColor, getPerformanceIcon } from '@/lib/clean-google-ads';
+import { CleanGoogleAdsData, CleanGoogleAdsConnection, formatCurrency, formatNumber, formatPercentage, getPerformanceColor, getPerformanceIcon } from '../../lib/clean-google-ads';
 
 // Simple date formatter - no hydration issues
 function formatDate(dateString: string): string {

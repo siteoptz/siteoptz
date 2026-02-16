@@ -10,65 +10,82 @@ export default function HeroSection({ toolA, toolB = null, className = '' }) {
   const isComparison = !!toolB;
   
   return (
-    <section className={`relative bg-gradient-to-br from-blue-600 via-purple-600 to-blue-800 py-16 lg:py-24 ${className}`}>
-      {/* Background overlay */}
-      <div className="absolute inset-0 bg-black opacity-10"></div>
+    <section className={`relative section-technical--hero ${className}`} style={{ backgroundColor: 'var(--surface-base)' }}>
+      {/* Technical grid background */}
+      <div className="absolute inset-0 opacity-40" style={{
+        backgroundImage: 'linear-gradient(var(--grid-line-default) var(--border-width), transparent var(--border-width)), linear-gradient(90deg, var(--grid-line-default) var(--border-width), transparent var(--border-width))',
+        backgroundSize: 'var(--grid-size) var(--grid-size)'
+      }}></div>
       
-      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Breadcrumb Navigation */}
+      {/* Geometric accent lines */}
+      <div className="absolute inset-0 pointer-events-none">
+        <div className="absolute top-1/3 left-0 w-full" style={{ height: 'var(--border-width)', backgroundColor: 'var(--grid-line-strong)' }}></div>
+        <div className="absolute bottom-1/3 left-0 w-full" style={{ height: 'var(--border-width)', backgroundColor: 'var(--grid-line-strong)' }}></div>
+        <div className="absolute top-0 left-1/4 h-full" style={{ width: 'var(--border-width)', backgroundColor: 'var(--grid-line-default)' }}></div>
+        <div className="absolute top-0 right-1/4 h-full" style={{ width: 'var(--border-width)', backgroundColor: 'var(--grid-line-default)' }}></div>
+      </div>
+      
+      <div className="container-technical relative z-10">
+        {/* Technical Breadcrumb Navigation */}
         <nav className="mb-8" aria-label="Breadcrumb">
-          <ol className="flex items-center space-x-2 text-blue-100 text-sm">
+          <ol className="flex items-center text-secondary font-mono text-xs tracking-wider uppercase">
             <li>
-              <a href="/" className="hover:text-white transition-colors">
-                Home
+              <a href="/" className="text-secondary hover:text-primary transition-fast">
+                [HOME]
               </a>
             </li>
-            <li><span className="mx-2">/</span></li>
+            <li><span className="mx-3 text-tertiary">&gt;</span></li>
             <li>
-              <a href="/compare" className="hover:text-white transition-colors">
-                AI Tools
+              <a href="/compare" className="text-secondary hover:text-primary transition-fast">
+                [AI_TOOLS]
               </a>
             </li>
-            <li><span className="mx-2">/</span></li>
+            <li><span className="mx-3 text-tertiary">&gt;</span></li>
             <li>
-              <a href="/compare" className="hover:text-white transition-colors">
-                {isComparison ? 'Compare' : 'Reviews'}
+              <a href="/compare" className="text-secondary hover:text-primary transition-fast">
+                [{isComparison ? 'COMPARE' : 'REVIEWS'}]
               </a>
             </li>
-            <li><span className="mx-2">/</span></li>
-            <li className="text-blue-200" aria-current="page">
-              {isComparison ? `${toolA.name} vs ${toolB.name}` : `${toolA.name} Review`}
+            <li><span className="mx-3 text-tertiary">&gt;</span></li>
+            <li className="text-primary" aria-current="page">
+              [{isComparison ? `${toolA.name.toUpperCase()}_VS_${toolB.name.toUpperCase()}` : `${toolA.name.toUpperCase()}_REVIEW`}]
             </li>
           </ol>
         </nav>
 
         {/* Main Hero Content */}
-        <div className="text-center mb-16">
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6">
+        <div className="hero-technical">
+          <h1 className="text-6xl font-black text-primary leading-tight tracking-tight mb-6">
             {isComparison ? (
               <>
-                {toolA.name} <span className="text-blue-200">vs</span> {toolB.name}
+                <span className="font-light block mb-2">{toolA.name.toUpperCase()}</span>
+                <span className="text-secondary font-normal text-4xl block mb-2">VS</span>
+                <span className="font-black">{toolB.name.toUpperCase()}</span>
               </>
             ) : (
               <>
-                {toolA.name} <span className="text-blue-200">Review</span>
+                <span className="font-light block mb-2">{toolA.name.toUpperCase()}</span>
+                <span className="text-secondary font-normal text-4xl">ANALYSIS</span>
               </>
             )}
           </h1>
           
-          <p className="text-xl md:text-2xl text-blue-100 mb-8 max-w-4xl mx-auto">
+          <p className="text-lg text-secondary mb-8 max-w-4xl mx-auto font-mono tracking-wide leading-relaxed">
             {isComparison 
-              ? `Complete comparison of features, pricing, and use cases. Find the best AI tool for your needs in 2025.`
-              : `Complete review of ${toolA.name}: features, pricing, pros & cons, and alternatives.`
+              ? `COMPREHENSIVE_COMPARISON // FEATURES_PRICING_USECASES // OPTIMAL_SELECTION_2025`
+              : `COMPLETE_ANALYSIS // ${toolA.name.toUpperCase()}_REVIEW // FEATURES_PRICING_ALTERNATIVES`
             }
           </p>
           
-          {/* Updated Badge */}
-          <div className="inline-flex items-center bg-green-500 text-white px-4 py-2 rounded-full text-sm font-medium mb-12">
-            <svg className="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
-              <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
-            </svg>
-            Updated for 2025 - Latest Pricing & Features
+          {/* Technical Status Badge */}
+          <div className="inline-flex items-center surface-raised border-default border-width text-primary px-6 py-3 text-sm font-medium tracking-wider uppercase mb-12" 
+               style={{ 
+                 backgroundColor: 'var(--surface-raised)', 
+                 border: 'var(--border-width) solid var(--border-default)', 
+                 color: 'var(--text-primary)' 
+               }}>
+            <div className="w-2 h-2 bg-white mr-3"></div>
+            STATUS: UPDATED_2025 // LATEST_DATA
           </div>
         </div>
 
@@ -81,21 +98,21 @@ export default function HeroSection({ toolA, toolB = null, className = '' }) {
           {isComparison && <ToolCard tool={toolB} />}
         </div>
 
-        {/* Quick Stats */}
-        <div className="mt-16 grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
-          <div className="bg-white bg-opacity-10 backdrop-blur-md rounded-xl p-6">
-            <div className="text-3xl font-bold text-white mb-2">2025</div>
-            <div className="text-blue-100">Latest Data</div>
+        {/* Technical Metrics */}
+        <div className="mt-16 grid grid-cols-1 md:grid-cols-3 gap-6 text-center">
+          <div className="card-technical">
+            <div className="text-3xl font-black text-primary mb-2 font-mono">2025</div>
+            <div className="text-secondary text-sm tracking-wider uppercase">DATA_VERSION</div>
           </div>
-          <div className="bg-white bg-opacity-10 backdrop-blur-md rounded-xl p-6">
-            <div className="text-3xl font-bold text-white mb-2">
-              {isComparison ? '5 Min' : '3 Min'}
+          <div className="card-technical">
+            <div className="text-3xl font-black text-primary mb-2 font-mono">
+              {isComparison ? '05:00' : '03:00'}
             </div>
-            <div className="text-blue-100">Read Time</div>
+            <div className="text-secondary text-sm tracking-wider uppercase">READ_TIME_MIN</div>
           </div>
-          <div className="bg-white bg-opacity-10 backdrop-blur-md rounded-xl p-6">
-            <div className="text-3xl font-bold text-white mb-2">Expert</div>
-            <div className="text-blue-100">Analysis</div>
+          <div className="card-technical">
+            <div className="text-3xl font-black text-primary mb-2 font-mono">EXPERT</div>
+            <div className="text-secondary text-sm tracking-wider uppercase">ANALYSIS_TYPE</div>
           </div>
         </div>
       </div>
@@ -109,47 +126,55 @@ export default function HeroSection({ toolA, toolB = null, className = '' }) {
 function ToolCard({ tool }) {
   const startingPrice = tool.pricing.plans.find(plan => plan.price > 0)?.price || 'Free';
   const formattedPrice = typeof startingPrice === 'number' 
-    ? `$${startingPrice}/month` 
+    ? `$${startingPrice}/MONTH` 
     : startingPrice === 'Custom' 
-      ? 'Custom Pricing' 
-      : startingPrice;
+      ? 'CUSTOM_PRICING' 
+      : 'FREE_TIER';
 
   return (
-    <div className="bg-white bg-opacity-10 backdrop-blur-md rounded-2xl p-8 border border-white border-opacity-20 hover:bg-opacity-15 transition-all duration-300">
-      <div className="text-center mb-6">
+    <div className="card-technical">
+      <div className="text-left mb-6">
         {/* Tool Logo */}
-        <div className="w-20 h-20 mx-auto mb-4 bg-white rounded-xl p-3 shadow-lg">
+        <div className="w-16 h-16 mb-4 surface-overlay border-subtle border-width p-3" 
+             style={{ 
+               backgroundColor: 'var(--surface-overlay)', 
+               border: 'var(--border-width) solid var(--border-subtle)' 
+             }}>
           <Image
             src={tool.logo}
             alt={`${tool.name} AI tool logo - ${tool.vendor} artificial intelligence platform`}
-            width={80}
-            height={80}
+            width={64}
+            height={64}
             className="w-full h-full object-contain"
+            style={{ filter: 'contrast(1.2) brightness(1.1)' }}
           />
         </div>
         
         {/* Tool Info */}
-        <h2 className="text-2xl font-bold text-white mb-2">{tool.name}</h2>
-        <p className="text-blue-100 text-sm mb-2">{tool.tagline}</p>
-        <p className="text-blue-100 text-sm mb-4">{tool.description}</p>
+        <h2 className="text-2xl font-bold text-primary mb-2 tracking-tight">{tool.name.toUpperCase()}</h2>
+        <p className="text-secondary text-sm mb-2 font-mono tracking-wider">{tool.tagline?.toUpperCase()}</p>
+        <p className="text-tertiary text-sm mb-4 leading-relaxed">{tool.description}</p>
         
-        {/* Rating */}
+        {/* Technical Rating */}
         {tool.rating && (
-          <div className="flex items-center justify-center mb-4">
+          <div className="flex items-center mb-4">
             <div className="flex items-center">
-              {[...Array(5)].map((_, i) => (
-                <svg
-                  key={i}
-                  className={`w-4 h-4 ${i < Math.floor(tool.rating) ? 'text-yellow-400' : 'text-gray-300'}`}
-                  fill="currentColor"
-                  viewBox="0 0 20 20"
-                  aria-hidden="true"
-                >
-                  <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                </svg>
-              ))}
-              <span className="ml-2 text-white text-sm">
-                {tool.rating} ({tool.reviewCount?.toLocaleString() || 0} reviews)
+              <span className="text-primary text-lg font-mono font-bold mr-3">
+                {tool.rating.toFixed(1)}
+              </span>
+              <div className="flex items-center">
+                {[...Array(5)].map((_, i) => (
+                  <div
+                    key={i}
+                    className="w-2 h-2 mr-1"
+                    style={{ 
+                      backgroundColor: i < Math.floor(tool.rating) ? 'var(--text-primary)' : 'var(--text-tertiary)' 
+                    }}
+                  ></div>
+                ))}
+              </div>
+              <span className="ml-3 text-tertiary text-sm font-mono">
+                [{tool.reviewCount?.toLocaleString() || 0}_REVIEWS]
               </span>
             </div>
           </div>
@@ -158,23 +183,12 @@ function ToolCard({ tool }) {
 
       {/* Key Features */}
       <div className="mb-6">
-        <h3 className="text-lg font-semibold text-white mb-3">Key Features</h3>
-        <ul className="space-y-2">
+        <h3 className="text-base font-medium text-primary mb-4 tracking-wider uppercase">CORE_FEATURES</h3>
+        <ul className="space-y-3">
           {tool.features.core.slice(0, 4).map((feature, index) => (
-            <li key={index} className="flex items-start text-blue-100 text-sm">
-              <svg 
-                className="w-4 h-4 text-green-400 mt-0.5 mr-2 flex-shrink-0" 
-                fill="currentColor" 
-                viewBox="0 0 20 20"
-                aria-hidden="true"
-              >
-                <path 
-                  fillRule="evenodd" 
-                  d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" 
-                  clipRule="evenodd" 
-                />
-              </svg>
-              {feature}
+            <li key={index} className="flex items-start text-secondary text-sm">
+              <span className="text-tertiary mr-3 font-mono">—</span>
+              {feature.toUpperCase()}
             </li>
           ))}
         </ul>
@@ -182,46 +196,44 @@ function ToolCard({ tool }) {
 
       {/* Pricing Preview */}
       <div className="mb-6">
-        <h3 className="text-lg font-semibold text-white mb-2">Starting Price</h3>
-        <div className="text-3xl font-bold text-white">
+        <h3 className="text-base font-medium text-primary mb-2 tracking-wider uppercase">PRICING_START</h3>
+        <div className="text-2xl font-bold text-primary font-mono tracking-tight">
           {formattedPrice}
           {tool.pricing.freeTier && (
-            <span className="text-base font-normal text-green-300 ml-2">
-              Free tier available
-            </span>
+            <div className="text-sm font-normal text-secondary mt-1 font-mono">
+              [FREE_TIER_AVAILABLE]
+            </div>
           )}
         </div>
       </div>
 
       {/* Use Cases */}
       <div className="mb-6">
-        <h3 className="text-lg font-semibold text-white mb-2">Best For</h3>
+        <h3 className="text-base font-medium text-primary mb-3 tracking-wider uppercase">OPTIMAL_FOR</h3>
         <div className="flex flex-wrap gap-2">
           {tool.useCases.slice(0, 3).map((useCase, index) => (
             <span 
               key={index}
-              className="bg-blue-500 bg-opacity-30 text-blue-100 px-2 py-1 rounded text-xs"
+              className="text-tertiary px-2 py-1 text-xs font-mono tracking-wider border-tertiary border-width"
+              style={{ 
+                color: 'var(--text-tertiary)', 
+                border: 'var(--border-width) solid var(--border-subtle)' 
+              }}
             >
-              {useCase}
+              {useCase.toUpperCase()}
             </span>
           ))}
         </div>
       </div>
 
-      {/* CTA Buttons */}
+      {/* Technical CTA Buttons */}
       <div className="space-y-3">
-        <TryNowButton 
-          tool={tool}
-          size="medium"
-          fullWidth
-          className="bg-blue-600 hover:bg-blue-700"
-        />
-        <LearnMoreButton 
-          tool={tool}
-          size="medium"
-          variant="outline"
-          className="border-white text-white hover:bg-white hover:text-blue-600"
-        />
+        <button className="button-technical w-full">
+          ACCESS_TOOL
+        </button>
+        <button className="button-technical--outline w-full">
+          TECHNICAL_SPECS
+        </button>
       </div>
     </div>
   );

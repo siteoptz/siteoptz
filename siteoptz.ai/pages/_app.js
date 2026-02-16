@@ -8,38 +8,34 @@ import '../styles/globals.css';
 function MyApp({ Component, pageProps: { session, ...pageProps } }) {
   useEffect(() => {
     // CRITICAL: Prevent any redirect to optz.siteoptz.ai
-    const originalLocation = window.location.replace.bind(window.location);
-    const originalHref = Object.getOwnPropertyDescriptor(window.location, 'href');
+    // Use a safer approach that doesn't override browser methods
     
-    // Override location.href setter to block optz.siteoptz.ai redirects
-    Object.defineProperty(window.location, 'href', {
-      set: function(url) {
-        if (url && url.includes('optz.siteoptz.ai')) {
-          console.error('BLOCKED redirect to optz.siteoptz.ai:', url);
-          // Redirect to siteoptz.ai instead
-          const newUrl = url.replace('https://optz.siteoptz.ai', 'https://siteoptz.ai')
-                           .replace('http://optz.siteoptz.ai', 'https://siteoptz.ai');
-          console.log('Redirecting to:', newUrl);
-          originalHref.set.call(window.location, newUrl);
-        } else {
-          originalHref.set.call(window.location, url);
+    // Function to check and fix URLs
+    const checkAndFixRedirects = () => {
+      // Monitor for any programmatic redirects in the application
+      if (typeof window !== 'undefined') {
+        // Log current URL for debugging
+        console.log('Current URL:', window.location.href);
+        
+        // Check if current URL contains optz.siteoptz.ai and redirect if needed
+        if (window.location.href.includes('optz.siteoptz.ai')) {
+          console.error('BLOCKED: Currently on optz.siteoptz.ai, redirecting to siteoptz.ai');
+          const newUrl = window.location.href
+            .replace('https://optz.siteoptz.ai', 'https://siteoptz.ai')
+            .replace('http://optz.siteoptz.ai', 'https://siteoptz.ai');
+          
+          // Use a clean redirect approach
+          window.location.href = newUrl;
+          return;
         }
-      },
-      get: originalHref.get
-    });
-    
-    // Override location.replace to block optz.siteoptz.ai redirects
-    window.location.replace = function(url) {
-      if (url && url.includes('optz.siteoptz.ai')) {
-        console.error('BLOCKED replace to optz.siteoptz.ai:', url);
-        const newUrl = url.replace('https://optz.siteoptz.ai', 'https://siteoptz.ai')
-                         .replace('http://optz.siteoptz.ai', 'https://siteoptz.ai');
-        console.log('Replacing with:', newUrl);
-        originalLocation(newUrl);
-      } else {
-        originalLocation(url);
       }
     };
+    
+    // Run the check immediately
+    checkAndFixRedirects();
+    
+    // Set up interval to periodically check (as a safety net)
+    const intervalId = setInterval(checkAndFixRedirects, 1000);
     
     // Initialize authentication system
     const auth = getAuth();
@@ -48,6 +44,11 @@ function MyApp({ Component, pageProps: { session, ...pageProps } }) {
     if (auth && auth.isAuthenticated()) {
       console.log('User is authenticated:', auth.getCurrentUser());
     }
+    
+    // Cleanup interval on unmount
+    return () => {
+      clearInterval(intervalId);
+    };
   }, []);
 
   return (

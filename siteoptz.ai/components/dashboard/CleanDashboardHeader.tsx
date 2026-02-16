@@ -1,5 +1,5 @@
 import React from 'react';
-import { UserPlan } from '@/lib/server-side-auth';
+import { UserPlan } from '../../types/userPlan';
 import { Crown, User, Settings, Bell, LogOut } from 'lucide-react';
 import Link from 'next/link';
 
@@ -9,8 +9,8 @@ interface CleanDashboardHeaderProps {
 }
 
 export function CleanDashboardHeader({ userPlan, currentPage }: CleanDashboardHeaderProps) {
-  const planDisplayName = getPlanDisplayName(userPlan.plan);
-  const planColor = getPlanColor(userPlan.plan);
+  const planDisplayName = getPlanDisplayName(userPlan);
+  const planColor = getPlanColor(userPlan);
 
   return (
     <header className="bg-black border-b border-gray-800">
@@ -28,7 +28,7 @@ export function CleanDashboardHeader({ userPlan, currentPage }: CleanDashboardHe
             {/* Plan Badge */}
             <div className={`px-3 py-1 rounded-full text-xs font-medium ${planColor} bg-gray-800 border border-gray-700`}>
               <div className="flex items-center space-x-1">
-                {userPlan.plan !== 'free' && <Crown className="w-3 h-3" />}
+                {userPlan !== 'free' && <Crown className="w-3 h-3" />}
                 <span>{planDisplayName}</span>
               </div>
             </div>
@@ -45,7 +45,7 @@ export function CleanDashboardHeader({ userPlan, currentPage }: CleanDashboardHe
               Dashboard
             </Link>
             
-            {userPlan.plan === 'pro' && (
+            {userPlan === 'pro' && (
               <>
                 <Link 
                   href="/dashboard/pro?tab=roi-dashboard" 
@@ -97,8 +97,8 @@ export function CleanDashboardHeader({ userPlan, currentPage }: CleanDashboardHe
                 <User className="w-4 h-4 text-white" />
               </div>
               <div className="hidden md:block">
-                <div className="text-sm font-medium text-white">{userPlan.userName}</div>
-                <div className="text-xs text-gray-400">{userPlan.plan} plan</div>
+                <div className="text-sm font-medium text-white">{userName}</div>
+                <div className="text-xs text-gray-400">{userPlan} plan</div>
               </div>
             </div>
 
