@@ -287,7 +287,7 @@ const nextConfig = {
         destination: '/compare',
         permanent: false,
         statusCode: 302,
-      }
+      },
       // Tools with trailing slash
       {
         source: '/tools/',
