@@ -100,11 +100,7 @@ const FreePlanContent: React.FC = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div className="space-y-16">
           {currentContent.sections.map((section, index) => (
-            <div key={section.id} className={`rounded-2xl p-8 ${
-              activeTab === 'roi-measurement' 
-                ? 'bg-gradient-to-r from-blue-900/20 to-purple-900/20 border border-gray-700' 
-                : 'bg-black border border-gray-800'
-            }`}>
+            <div key={section.id} className="bg-gradient-to-r from-blue-900/20 to-purple-900/20 border border-gray-700 rounded-2xl p-8">
               <h2 className="text-3xl font-bold text-white mb-6">{section.title}</h2>
               
               {/* Content HTML */}
