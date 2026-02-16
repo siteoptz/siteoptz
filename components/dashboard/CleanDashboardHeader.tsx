@@ -1,16 +1,17 @@
 import React from 'react';
-import { UserPlan } from '@/lib/server-side-auth';
+import { UserPlan } from '../types/userPlan';
 import { Crown, User, Settings, Bell, LogOut } from 'lucide-react';
 import Link from 'next/link';
 
 interface CleanDashboardHeaderProps {
   userPlan: UserPlan;
   currentPage?: string;
+  userName?: string;
 }
 
-export function CleanDashboardHeader({ userPlan, currentPage }: CleanDashboardHeaderProps) {
-  const planDisplayName = getPlanDisplayName(userPlan.plan);
-  const planColor = getPlanColor(userPlan.plan);
+export function CleanDashboardHeader({ userPlan, currentPage, userName = "User" }: CleanDashboardHeaderProps) {
+  const planDisplayName = getPlanDisplayName(userPlan);
+  const planColor = getPlanColor(userPlan);
 
   return (
     <header className="bg-black border-b border-gray-800">
@@ -28,7 +29,7 @@ export function CleanDashboardHeader({ userPlan, currentPage }: CleanDashboardHe
             {/* Plan Badge */}
             <div className={`px-3 py-1 rounded-full text-xs font-medium ${planColor} bg-gray-800 border border-gray-700`}>
               <div className="flex items-center space-x-1">
-                {userPlan.plan !== 'free' && <Crown className="w-3 h-3" />}
+                {userPlan !== 'free' && <Crown className="w-3 h-3" />}
                 <span>{planDisplayName}</span>
               </div>
             </div>
@@ -45,7 +46,7 @@ export function CleanDashboardHeader({ userPlan, currentPage }: CleanDashboardHe
               Dashboard
             </Link>
             
-            {userPlan.plan === 'pro' && (
+            {userPlan === 'pro' && (
               <>
                 <Link 
                   href="/dashboard/pro?tab=roi-dashboard" 
@@ -64,12 +65,12 @@ export function CleanDashboardHeader({ userPlan, currentPage }: CleanDashboardHe
                   Platforms
                 </Link>
                 <Link 
-                  href="/dashboard/pro?tab=ai-insights" 
+                  href="/dashboard/pro?tab=insights" 
                   className={`text-sm font-medium transition-colors ${
-                    currentPage === 'ai-insights' ? 'text-white' : 'text-gray-400 hover:text-white'
+                    currentPage === 'insights' ? 'text-white' : 'text-gray-400 hover:text-white'
                   }`}
                 >
-                  AI Insights
+                  Insights
                 </Link>
               </>
             )}
@@ -97,8 +98,8 @@ export function CleanDashboardHeader({ userPlan, currentPage }: CleanDashboardHe
                 <User className="w-4 h-4 text-white" />
               </div>
               <div className="hidden md:block">
-                <div className="text-sm font-medium text-white">{userPlan.userName}</div>
-                <div className="text-xs text-gray-400">{userPlan.plan} plan</div>
+                <div className="text-sm font-medium text-white">{userName}</div>
+                <div className="text-xs text-gray-400">{userPlan} plan</div>
               </div>
             </div>
 
@@ -117,22 +118,22 @@ export function CleanDashboardHeader({ userPlan, currentPage }: CleanDashboardHe
 }
 
 // Helper functions
-function getPlanDisplayName(plan: string): string {
+function getPlanDisplayName(plan: UserPlan): string {
   switch (plan) {
     case 'free': return 'Free';
     case 'starter': return 'Starter';
     case 'pro': return 'Pro';
-    case 'enterprise': return 'Enterprise';
+    case 'premium': return 'Premium';
     default: return 'Unknown';
   }
 }
 
-function getPlanColor(plan: string): string {
+function getPlanColor(plan: UserPlan): string {
   switch (plan) {
     case 'free': return 'text-gray-400';
     case 'starter': return 'text-blue-400';
     case 'pro': return 'text-purple-400';
-    case 'enterprise': return 'text-green-400';
+    case 'premium': return 'text-green-400';
     default: return 'text-gray-400';
   }
 }
