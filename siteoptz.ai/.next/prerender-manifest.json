@@ -1,0 +1,118 @@
+{
+  "version": 4,
+  "routes": {
+    "/compare/chatgpt": {
+      "initialRevalidateSeconds": false,
+      "srcRoute": "/compare/[tool]",
+      "dataRoute": "/_next/data/IIDDI-cQHWtHfbyI3VTnj/compare/chatgpt.json",
+      "allowHeader": [
+        "host",
+        "x-matched-path",
+        "x-prerender-revalidate",
+        "x-prerender-revalidate-if-generated",
+        "x-next-revalidated-tags",
+        "x-next-revalidate-tag-token"
+      ]
+    },
+    "/compare/claude": {
+      "initialRevalidateSeconds": false,
+      "srcRoute": "/compare/[tool]",
+      "dataRoute": "/_next/data/IIDDI-cQHWtHfbyI3VTnj/compare/claude.json",
+      "allowHeader": [
+        "host",
+        "x-matched-path",
+        "x-prerender-revalidate",
+        "x-prerender-revalidate-if-generated",
+        "x-next-revalidated-tags",
+        "x-next-revalidate-tag-token"
+      ]
+    },
+    "/compare/gemini": {
+      "initialRevalidateSeconds": false,
+      "srcRoute": "/compare/[tool]",
+      "dataRoute": "/_next/data/IIDDI-cQHWtHfbyI3VTnj/compare/gemini.json",
+      "allowHeader": [
+        "host",
+        "x-matched-path",
+        "x-prerender-revalidate",
+        "x-prerender-revalidate-if-generated",
+        "x-next-revalidated-tags",
+        "x-next-revalidate-tag-token"
+      ]
+    },
+    "/compare/jasper-ai": {
+      "initialRevalidateSeconds": false,
+      "srcRoute": "/compare/[tool]",
+      "dataRoute": "/_next/data/IIDDI-cQHWtHfbyI3VTnj/compare/jasper-ai.json",
+      "allowHeader": [
+        "host",
+        "x-matched-path",
+        "x-prerender-revalidate",
+        "x-prerender-revalidate-if-generated",
+        "x-next-revalidated-tags",
+        "x-next-revalidate-tag-token"
+      ]
+    },
+    "/compare/perplexity": {
+      "initialRevalidateSeconds": false,
+      "srcRoute": "/compare/[tool]",
+      "dataRoute": "/_next/data/IIDDI-cQHWtHfbyI3VTnj/compare/perplexity.json",
+      "allowHeader": [
+        "host",
+        "x-matched-path",
+        "x-prerender-revalidate",
+        "x-prerender-revalidate-if-generated",
+        "x-next-revalidated-tags",
+        "x-next-revalidate-tag-token"
+      ]
+    },
+    "/compare": {
+      "initialRevalidateSeconds": false,
+      "srcRoute": null,
+      "dataRoute": "/_next/data/IIDDI-cQHWtHfbyI3VTnj/compare.json",
+      "allowHeader": [
+        "host",
+        "x-matched-path",
+        "x-prerender-revalidate",
+        "x-prerender-revalidate-if-generated",
+        "x-next-revalidated-tags",
+        "x-next-revalidate-tag-token"
+      ]
+    },
+    "/compare/chatgpt-vs-claude": {
+      "initialRevalidateSeconds": false,
+      "srcRoute": null,
+      "dataRoute": "/_next/data/IIDDI-cQHWtHfbyI3VTnj/compare/chatgpt-vs-claude.json",
+      "allowHeader": [
+        "host",
+        "x-matched-path",
+        "x-prerender-revalidate",
+        "x-prerender-revalidate-if-generated",
+        "x-next-revalidated-tags",
+        "x-next-revalidate-tag-token"
+      ]
+    }
+  },
+  "dynamicRoutes": {
+    "/compare/[tool]": {
+      "routeRegex": "^/compare/([^/]+?)(?:/)?$",
+      "dataRoute": "/_next/data/IIDDI-cQHWtHfbyI3VTnj/compare/[tool].json",
+      "fallback": false,
+      "dataRouteRegex": "^/_next/data/IIDDI\\-cQHWtHfbyI3VTnj/compare/([^/]+?)\\.json$",
+      "allowHeader": [
+        "host",
+        "x-matched-path",
+        "x-prerender-revalidate",
+        "x-prerender-revalidate-if-generated",
+        "x-next-revalidated-tags",
+        "x-next-revalidate-tag-token"
+      ]
+    }
+  },
+  "notFoundRoutes": [],
+  "preview": {
+    "previewModeId": "9d3f1b58319e1c41ce3c221b5333a6b3",
+    "previewModeSigningKey": "7dca5d92e5e0c1dd223d70ae2ff3367a29b0f88a5176bcd641d258a1a8ff81f3",
+    "previewModeEncryptionKey": "312a20c8e370adfb5739df1c04ae79a28acf26d2c215cf60ba1f104c30b40d01"
+  }
+}

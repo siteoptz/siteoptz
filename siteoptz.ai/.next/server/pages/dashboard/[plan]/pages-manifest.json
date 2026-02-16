@@ -1,0 +1,3 @@
+{
+  "/dashboard/[plan]": "pages/dashboard/[plan].js"
+}

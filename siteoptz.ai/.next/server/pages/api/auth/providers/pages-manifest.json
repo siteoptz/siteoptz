@@ -1,0 +1,3 @@
+{
+  "/api/auth/providers": "pages/api/auth/providers.js"
+}

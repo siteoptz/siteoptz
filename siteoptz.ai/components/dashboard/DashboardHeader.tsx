@@ -53,22 +53,22 @@ export const DashboardHeader: React.FC<DashboardHeaderProps> = ({
   const navigationItems = [
     {
       name: 'Overview',
-      href: `/dashboard/${userPlan.plan}`,
+      href: `/dashboard/${userPlan}`,
       icon: Zap
     },
     {
       name: 'Billing',
-      href: `/dashboard/${userPlan.plan}/billing`,
+      href: `/dashboard/${userPlan}/billing`,
       icon: CreditCard
     },
     {
       name: 'Notifications',
-      href: `/dashboard/${userPlan.plan}/notifications`,
+      href: `/dashboard/${userPlan}/notifications`,
       icon: MessageSquare
     },
     {
       name: 'Settings',
-      href: `/dashboard/${userPlan.plan}/settings`,
+      href: `/dashboard/${userPlan}/settings`,
       icon: Settings
     }
   ];
@@ -107,8 +107,8 @@ export const DashboardHeader: React.FC<DashboardHeaderProps> = ({
           <div className="flex items-center space-x-4">
             <div className="flex items-center space-x-2">
               <Zap className="w-4 h-4 text-cyan-400" />
-              <span className={`px-3 py-1 rounded-full text-sm font-medium ${getPlanColor(userPlan.plan)}`}>
-                {userPlan.plan.charAt(0).toUpperCase() + userPlan.plan.slice(1)} Plan
+              <span className={`px-3 py-1 rounded-full text-sm font-medium ${getPlanColor(userPlan)}`}>
+                {userPlan.charAt(0).toUpperCase() + userPlan.slice(1)} Plan
               </span>
               <button
                 onClick={handleRefreshPlan}

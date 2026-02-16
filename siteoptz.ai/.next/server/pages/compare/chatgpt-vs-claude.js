@@ -1,0 +1,12 @@
+var R=require("../../chunks/ssr/[turbopack]_runtime.js")("server/pages/compare/chatgpt-vs-claude.js")
+R.c("server/chunks/ssr/[root-of-the-server]__b7a31656._.js")
+R.c("server/chunks/ssr/node_modules_next_dist_esm_build_templates_pages_050e7e12.js")
+R.c("server/chunks/ssr/node_modules_next_50b405d0._.js")
+R.c("server/chunks/ssr/[root-of-the-server]__33abe4b8._.js")
+R.c("server/chunks/ssr/_9c817612._.js")
+R.c("server/chunks/ssr/components_comparison_PricingCalculator_jsx_45b82eba._.js")
+R.c("server/chunks/ssr/[externals]__28aa5c54._.js")
+R.c("server/chunks/ssr/[root-of-the-server]__ca6884b2._.js")
+R.c("server/chunks/ssr/[root-of-the-server]__5ad79a3c._.js")
+R.m(73375)
+module.exports=R.m(73375).exports
