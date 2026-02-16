@@ -1,0 +1,100 @@
+/** @type {import('tailwindcss').Config} */
+module.exports = {
+  content: [
+    "./pages/**/*.{js,ts,jsx,tsx}",
+    "./components/**/*.{js,ts,jsx,tsx}",
+    "./utils/**/*.{js,ts,jsx,tsx}",
+    "./styles/**/*.{css,scss}",
+  ],
+  theme: {
+    extend: {
+      colors: {
+        // Technical design system colors
+        'surface-base': 'var(--surface-base)',
+        'surface-raised': 'var(--surface-raised)', 
+        'surface-elevated': 'var(--surface-elevated)',
+        'text-primary': 'var(--text-primary)',
+        'text-secondary': 'var(--text-secondary)',
+        'text-tertiary': 'var(--text-tertiary)',
+        'border-default': 'var(--border-default)',
+        'border-subtle': 'var(--border-subtle)',
+        'border-strong': 'var(--border-strong)',
+        'interactive-default': 'var(--interactive-default)',
+        'interactive-hover': 'var(--interactive-hover)',
+      },
+      fontFamily: {
+        'sans': ['var(--font-family-primary)', 'InterVariable', 'Inter', 'system-ui', 'sans-serif'],
+        'mono': ['var(--font-family-mono)', 'JetBrains Mono', 'SF Mono', 'Monaco', 'Consolas', 'monospace'],
+      },
+      spacing: {
+        '1': 'var(--space-1)',
+        '2': 'var(--space-2)', 
+        '3': 'var(--space-3)',
+        '4': 'var(--space-4)',
+        '5': 'var(--space-5)',
+        '6': 'var(--space-6)',
+        '7': 'var(--space-7)',
+        '8': 'var(--space-8)',
+        '9': 'var(--space-9)',
+        '10': 'var(--space-10)',
+        '12': 'var(--space-12)',
+        '16': 'var(--space-16)',
+        '20': 'var(--space-20)',
+      },
+      borderRadius: {
+        'none': '0',
+        'sharp': '0',
+      },
+      fontSize: {
+        'xs': 'var(--text-xs)',
+        'sm': 'var(--text-sm)', 
+        'base': 'var(--text-base)',
+        'lg': 'var(--text-lg)',
+        'xl': 'var(--text-xl)',
+        '2xl': 'var(--text-2xl)',
+        '3xl': 'var(--text-3xl)',
+        '4xl': 'var(--text-4xl)',
+        '5xl': 'var(--text-5xl)',
+        '6xl': 'var(--text-6xl)',
+        '7xl': 'var(--text-7xl)',
+      },
+      letterSpacing: {
+        'tight': 'var(--letter-spacing-tight)',
+        'normal': 'var(--letter-spacing-normal)',
+        'wide': 'var(--letter-spacing-wide)',
+        'wider': 'var(--letter-spacing-wider)',
+      },
+      lineHeight: {
+        'tight': 'var(--line-height-tight)',
+        'normal': 'var(--line-height-normal)', 
+        'relaxed': 'var(--line-height-relaxed)',
+      },
+      fontWeight: {
+        'light': 'var(--font-weight-light)',
+        'normal': 'var(--font-weight-normal)',
+        'medium': 'var(--font-weight-medium)', 
+        'semibold': 'var(--font-weight-semibold)',
+        'bold': 'var(--font-weight-bold)',
+        'black': 'var(--font-weight-black)',
+      },
+      boxShadow: {
+        'none': 'var(--elevation-none)',
+        'subtle': 'var(--elevation-subtle)',
+        'low': 'var(--elevation-low)',
+        'medium': 'var(--elevation-medium)',
+        'high': 'var(--elevation-high)',
+        'overlay': 'var(--elevation-overlay)',
+      },
+      transitionDuration: {
+        'fast': 'var(--duration-fast)',
+        'normal': 'var(--duration-normal)', 
+        'slow': 'var(--duration-slow)',
+      },
+    },
+  },
+  plugins: [],
+  // Disable default preflight to use our custom design system
+  corePlugins: {
+    preflight: false,
+  },
+}
