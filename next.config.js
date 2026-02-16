@@ -265,41 +265,29 @@ const nextConfig = {
         permanent: true,
         statusCode: 301,
       },
-      // Categories - redirect category subpages to tools (but not main /categories page)
+      // SEO-OPTIMIZED REDIRECTS: Smart redirects that preserve functionality while improving SEO
+      // Instead of killing pages, we redirect invalid/broken URLs to valid alternatives
+      
+      // Only redirect invalid category paths, not valid ones
       {
-        source: '/categories/:path+',
-        destination: '/tools',
-        permanent: true,
-        statusCode: 301,
+        source: '/categories/ai-automation',
+        destination: '/categories',
+        permanent: false, // Temporary redirect to preserve link juice
+        statusCode: 302,
       },
-      // Compare pages - redirect all tool comparisons to tools
       {
-        source: '/compare/:tool1/vs/:tool2',
-        destination: '/tools',
-        permanent: true,
-        statusCode: 301,
+        source: '/categories/code-generation', 
+        destination: '/categories',
+        permanent: false,
+        statusCode: 302,
       },
-      // Case studies - redirect all case study pages to tools
+      // Keep comparison pages ACTIVE - only redirect broken comparison URLs to compare index
       {
-        source: '/case-studies/:path*',
-        destination: '/tools',
-        permanent: true,
-        statusCode: 301,
-      },
-      // Analysis pages - redirect analysis pages to tools
-      {
-        source: '/analysis/:path*',
-        destination: '/tools',
-        permanent: true,
-        statusCode: 301,
-      },
-      // Tools subdirectories - redirect to main tools page
-      {
-        source: '/tools/:path+',
-        destination: '/tools',
-        permanent: true,
-        statusCode: 301,
-      },
+        source: '/compare/invalid-:tool1/vs/invalid-:tool2',
+        destination: '/compare',
+        permanent: false,
+        statusCode: 302,
+      }
       // Tools with trailing slash
       {
         source: '/tools/',

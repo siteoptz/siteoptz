@@ -214,26 +214,31 @@ class SitemapGenerator {
       }
       
       let toolPagesAdded = 0;
-      let skippedPages = 0;
+      let dynamicPagesAdded = 0;
       const validSlugs = new Set();
       
       for (const tool of toolData) {
-        if (tool.slug) {
-          // Only add review URLs if the corresponding page file exists
+        if (tool.slug && tool.name) {
+          // Add ALL tools to sitemap - pages will be generated dynamically
+          // Priority: Existing pages get higher priority, dynamic pages get standard priority
+          const priority = existingReviewFiles.has(tool.slug) ? 0.8 : 0.7;
+          const changefreq = existingReviewFiles.has(tool.slug) ? 'weekly' : 'monthly';
+          
+          this.addUrl(`/reviews/${tool.slug}`, priority, changefreq, tool.last_updated || tool.updated_at, 'tools');
+          validSlugs.add(tool.slug);
+          
           if (existingReviewFiles.has(tool.slug)) {
-            this.addUrl(`/reviews/${tool.slug}`, 0.8, 'weekly', tool.last_updated || tool.updated_at, 'tools');
-            validSlugs.add(tool.slug);
             toolPagesAdded += 1;
           } else {
-            skippedPages += 1;
+            dynamicPagesAdded += 1;
           }
         }
       }
 
       console.log(`✅ Added ${toolPagesAdded} review pages with existing files`);
-      if (skippedPages > 0) {
-        console.log(`📝 Skipped ${skippedPages} tools without review page files`);
-      }
+      console.log(`🚀 Added ${dynamicPagesAdded} dynamic review pages`);
+      console.log(`📊 Total tool pages in sitemap: ${toolPagesAdded + dynamicPagesAdded}`);
+      
       if (Object.keys(slugRedirects).length > 0) {
         console.log(`📝 Note: ${Object.keys(slugRedirects).length} slug redirects identified for cleanup`);
       }
@@ -266,16 +271,44 @@ class SitemapGenerator {
 
       const toolData = JSON.parse(fs.readFileSync(toolDataPath, 'utf8'));
       
-      // Generate popular comparisons
+      // Generate comprehensive popular comparisons for SEO recovery
       const popularComparisons = [
+        // Top AI models
         ['chatgpt', 'claude'],
-        ['chatgpt', 'gemini'],
+        ['chatgpt', 'gemini'], 
         ['claude', 'gemini'],
         ['chatgpt', 'copilot'],
-        ['claude', 'llama'],
+        ['claude', 'perplexity'],
         ['chatgpt', 'perplexity'],
         ['gemini', 'copilot'],
-        ['claude', 'perplexity']
+        ['claude', 'llama'],
+        
+        // Content creation tools
+        ['jasper', 'copy-ai'],
+        ['jasper', 'writesonic'],
+        ['copy-ai', 'writesonic'],
+        ['jasper', 'chatgpt'],
+        ['grammarly', 'chatgpt'],
+        
+        // Image generation
+        ['midjourney', 'dall-e'],
+        ['stable-diffusion', 'midjourney'],
+        ['dall-e', 'stable-diffusion'],
+        
+        // Business tools
+        ['notion-ai', 'chatgpt'],
+        ['slack-ai', 'microsoft-copilot'],
+        ['salesforce-einstein', 'hubspot-ai'],
+        
+        // Code generation
+        ['github-copilot', 'codeium'],
+        ['github-copilot', 'tabnine'],
+        ['codeium', 'tabnine'],
+        
+        // Popular vs new
+        ['chatgpt', 'claude-3'],
+        ['gpt-4', 'claude-3'],
+        ['gemini-pro', 'gpt-4']
       ];
 
       let addedComparisons = 0;
