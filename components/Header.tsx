@@ -538,8 +538,8 @@ const Header: React.FC = () => {
                 fontWeight: '600'
               }}>All Tools</Link>
               
-              {/* Kids AI Section with Accordion */}
-              <div style={{ 
+              {/* Kids AI Section with Accordion - HIDDEN */}
+              {/* <div style={{ 
                 borderBottom: '1px solid rgba(255,255,255,0.1)',
                 borderRadius: '8px'
               }}>
@@ -589,7 +589,7 @@ const Header: React.FC = () => {
                     ))}
                   </div>
                 )}
-              </div>
+              </div> */}
               
               <Link href="/community" onClick={closeMenu} style={{ 
                 color: router.pathname === '/community' ? '#06b6d4' : 'white',
