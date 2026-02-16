@@ -153,13 +153,13 @@ const Header: React.FC = () => {
       current: router.pathname.startsWith('/tools'),
       hasDropdown: false
     },
-    { 
-      name: 'Kids AI', 
-      href: '/kids-ai', 
-      current: router.pathname.startsWith('/kids'),
-      hasDropdown: true,
-      isKidsAI: true
-    },
+    // { 
+    //   name: 'Kids AI', 
+    //   href: '/kids-ai', 
+    //   current: router.pathname.startsWith('/kids'),
+    //   hasDropdown: true,
+    //   isKidsAI: true
+    // },
     { 
       name: 'Community', 
       href: '/community', 
