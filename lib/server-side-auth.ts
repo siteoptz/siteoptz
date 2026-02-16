@@ -5,25 +5,12 @@ import { GetServerSidePropsContext } from 'next';
 import { getServerSession } from 'next-auth/next';
 import { authOptions } from '@/pages/api/auth/[...nextauth]';
 
-export interface UserPlan {
-  id: string;
-  plan: 'free' | 'starter' | 'pro' | 'enterprise';
-  status: 'active' | 'inactive' | 'cancelled';
-  billingCycle: 'monthly' | 'yearly';
+import { UserPlan as UserPlanType } from '../types/userPlan';
+
+export interface UserPlan extends Omit<UserPlanType, 'startDate' | 'nextBilling'> {
   startDate: string; // ISO string for JSON serialization
+  nextBilling?: string; // ISO string for JSON serialization
   userName: string;
-  features: string[];
-  limitations: string[];
-  usage: {
-    comparisons: number;
-    consultations: number;
-    teamMembers: number;
-  };
-  limits: {
-    dailyComparisons: number;
-    monthlyConsultations: number;
-    maxTeamMembers: number;
-  };
 }
 
 export interface CleanDashboardProps {

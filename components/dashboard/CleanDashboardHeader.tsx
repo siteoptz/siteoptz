@@ -1,5 +1,5 @@
 import React from 'react';
-import { UserPlan } from '../../types/userPlan';
+import { UserPlan } from '../../lib/server-side-auth';
 import { Crown, User, Settings, Bell, LogOut } from 'lucide-react';
 import Link from 'next/link';
 
