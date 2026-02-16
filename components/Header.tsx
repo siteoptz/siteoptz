@@ -311,8 +311,8 @@ const Header: React.FC = () => {
                   </Link>
                 )}
                 
-                {/* Kids AI Dropdown */}
-                {item.isKidsAI && item.hasDropdown && (
+                {/* Kids AI Dropdown - HIDDEN */}
+                {/* {item.isKidsAI && item.hasDropdown && (
                   <div className="absolute left-0 mt-2 w-64 bg-white rounded-lg shadow-lg border border-gray-200 py-2 z-50 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
                     {kidsAIMenuItems.map((subItem, idx) => (
                       <Link
@@ -324,7 +324,7 @@ const Header: React.FC = () => {
                       </Link>
                     ))}
                   </div>
-                )}
+                )} */}
                 
                 {/* Categories Dropdown (existing logic) */}
                 {item.isCategory && item.hasDropdown && (
