@@ -29,7 +29,7 @@ export function CleanDashboardHeader({ userPlan, currentPage, userName = "User" 
             {/* Plan Badge */}
             <div className={`px-3 py-1 rounded-full text-xs font-medium ${planColor} bg-gray-800 border border-gray-700`}>
               <div className="flex items-center space-x-1">
-                {userPlan !== 'free' && <Crown className="w-3 h-3" />}
+                {userPlan.plan !== 'free' && <Crown className="w-3 h-3" />}
                 <span>{planDisplayName}</span>
               </div>
             </div>
@@ -46,7 +46,7 @@ export function CleanDashboardHeader({ userPlan, currentPage, userName = "User" 
               Dashboard
             </Link>
             
-            {userPlan === 'pro' && (
+            {userPlan.plan === 'pro' && (
               <>
                 <Link 
                   href="/dashboard/pro?tab=roi-dashboard" 
@@ -99,7 +99,7 @@ export function CleanDashboardHeader({ userPlan, currentPage, userName = "User" 
               </div>
               <div className="hidden md:block">
                 <div className="text-sm font-medium text-white">{userName}</div>
-                <div className="text-xs text-gray-400">{userPlan} plan</div>
+                <div className="text-xs text-gray-400">{userPlan.plan} plan</div>
               </div>
             </div>
 
@@ -118,22 +118,22 @@ export function CleanDashboardHeader({ userPlan, currentPage, userName = "User" 
 }
 
 // Helper functions
-function getPlanDisplayName(plan: UserPlan): string {
-  switch (plan) {
+function getPlanDisplayName(userPlan: UserPlan): string {
+  switch (userPlan.plan) {
     case 'free': return 'Free';
     case 'starter': return 'Starter';
     case 'pro': return 'Pro';
-    case 'premium': return 'Premium';
+    case 'enterprise': return 'Enterprise';
     default: return 'Unknown';
   }
 }
 
-function getPlanColor(plan: UserPlan): string {
-  switch (plan) {
+function getPlanColor(userPlan: UserPlan): string {
+  switch (userPlan.plan) {
     case 'free': return 'text-gray-400';
     case 'starter': return 'text-blue-400';
     case 'pro': return 'text-purple-400';
-    case 'premium': return 'text-green-400';
+    case 'enterprise': return 'text-green-400';
     default: return 'text-gray-400';
   }
 }
