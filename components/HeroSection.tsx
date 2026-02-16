@@ -4,14 +4,9 @@ import { ArrowRight, Calendar, Users, TrendingUp, CheckCircle, Sparkles, Shield 
 
 const HeroSection: React.FC = () => {
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
-      {/* Background Elements */}
-      <div className="absolute inset-0 pointer-events-none">
-        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-64 h-64 bg-cyan-500/10 rounded-full blur-3xl animate-pulse delay-500"></div>
-      </div>
-
-      {/* Grid Overlay */}
-      <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.02)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.02)_1px,transparent_1px)] bg-[size:100px_100px] pointer-events-none"></div>
+    <section className="relative min-h-screen flex items-center justify-center overflow-hidden" style={{backgroundColor: 'var(--color-background)'}}>
+      {/* Clean professional background */}
+      <div className="absolute inset-0 pointer-events-none" style={{background: 'radial-gradient(ellipse at center, rgba(37, 99, 235, 0.03) 0%, transparent 70%)'}}></div>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
         <div className="text-center relative z-10">
@@ -20,27 +15,27 @@ const HeroSection: React.FC = () => {
             href="https://api.leadconnectorhq.com/widget/booking/yPjkVmsauPst8XlrOQUl"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-cyan-500/20 to-blue-500/20 backdrop-blur-md border border-cyan-400/30 rounded-full text-white/90 text-sm font-medium mb-8 hover:bg-gradient-to-r hover:from-cyan-500/30 hover:to-blue-500/30 transition-all duration-300 cursor-pointer transform hover:scale-105"
+            className="inline-flex items-center gap-3 px-6 py-2 surface-professional text-white text-sm font-medium tracking-wide mb-12 transition-normal hover:bg-surface-elevated cursor-pointer"
           >
-            <Calendar className="w-4 h-4 text-cyan-400" />
-            <span className="text-cyan-400 font-bold">FREE</span>
-            <span>30-Minute Strategy Session</span>
-            <span className="text-xs bg-cyan-400 text-black px-2 py-1 rounded-full font-bold">$2,500 VALUE</span>
+            <Calendar className="w-4 h-4" />
+            <span className="font-bold">FREE</span>
+            <span>30-MINUTE STRATEGY SESSION</span>
+            <span className="text-xs bg-white text-black px-2 py-1 font-bold">$2,500 VALUE</span>
           </a>
 
           {/* Main Heading */}
-          <h1 className="text-5xl lg:text-7xl xl:text-8xl font-bold mb-8 leading-[1.1] lg:leading-[1.05]">
-            <span className="block text-white mb-4">Stop Wasting Money on</span>
-            <span className="block text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-blue-400 to-purple-400 animate-gradient pb-2">
-              Wrong AI Tools
+          <h1 className="text-5xl lg:text-7xl xl:text-8xl font-black mb-12 leading-tight tracking-tight">
+            <span className="block text-white mb-6 font-light">STOP WASTING MONEY ON</span>
+            <span className="block text-white mb-6 font-black">
+              WRONG AI TOOLS
             </span>
-            <span className="block text-white mt-4">Get Expert Implementation</span>
+            <span className="block text-gray-400 text-3xl lg:text-5xl font-normal tracking-wider">GET EXPERT IMPLEMENTATION</span>
           </h1>
 
           {/* Subtitle */}
-          <p className="text-xl lg:text-2xl text-gray-300 max-w-4xl mx-auto mb-12 leading-relaxed font-light">
-            Fortune 500 AI Implementation Experts. We&apos;ve deployed 500+ AI solutions generating $50M+ in productivity gains. 
-            Get your custom AI transformation roadmap that delivers measurable ROI in 90 days.
+          <p className="text-lg lg:text-xl text-gray-400 max-w-4xl mx-auto mb-16 leading-relaxed font-normal tracking-wide">
+            FORTUNE 500 AI IMPLEMENTATION EXPERTS / 500+ AI SOLUTIONS DEPLOYED / $50M+ PRODUCTIVITY GAINS GENERATED<br/>
+            CUSTOM AI TRANSFORMATION ROADMAP / MEASURABLE ROI IN 90 DAYS
           </p>
 
           {/* Primary CTA */}
@@ -49,7 +44,7 @@ const HeroSection: React.FC = () => {
               href="https://api.leadconnectorhq.com/widget/booking/yPjkVmsauPst8XlrOQUl"
               target="_blank"
               rel="noopener noreferrer"
-              className="group inline-flex items-center gap-3 px-12 py-6 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-bold text-xl rounded-2xl hover:from-cyan-400 hover:to-blue-500 transition-all duration-300 shadow-2xl hover:shadow-cyan-500/25 transform hover:scale-105"
+              className="group inline-flex items-center gap-3 px-12 py-6 button-professional--accent text-white font-bold text-xl transition-all duration-300 shadow-2xl transform hover:scale-105"
             >
               <Calendar className="w-6 h-6 group-hover:animate-bounce" />
               Book Free Strategy Session
@@ -61,7 +56,7 @@ const HeroSection: React.FC = () => {
           <div className="flex flex-col sm:flex-row gap-6 justify-center items-center mb-12">
             <Link 
               href="/tools"
-              className="group inline-flex items-center gap-3 px-8 py-4 bg-white/10 backdrop-blur-md border border-white/20 text-white font-semibold text-lg rounded-xl hover:bg-white/15 transition-all duration-300"
+              className="group inline-flex items-center gap-3 px-8 py-4 surface-elevated text-white font-semibold text-lg transition-all duration-300"
             >
               <TrendingUp className="w-5 h-5" />
               View Our Tool Database
@@ -69,7 +64,10 @@ const HeroSection: React.FC = () => {
             <span className="text-gray-400 font-medium">or</span>
             <Link 
               href="/compare"
-              className="inline-flex items-center gap-2 text-cyan-400 hover:text-cyan-300 font-semibold transition-colors"
+              className="inline-flex items-center gap-2 font-semibold transition-colors" 
+              style={{color: 'var(--color-text-accent)'}} 
+              onMouseEnter={(e) => e.currentTarget.style.color = '#1D4ED8'} 
+              onMouseLeave={(e) => e.currentTarget.style.color = 'var(--color-text-accent)'}
             >
               Compare Solutions
               <ArrowRight className="w-4 h-4" />
@@ -78,35 +76,35 @@ const HeroSection: React.FC = () => {
 
           {/* Value Props */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12 max-w-4xl mx-auto">
-            <div className="bg-white/5 backdrop-blur-md border border-white/10 rounded-xl p-6">
-              <div className="text-2xl font-bold text-cyan-400 mb-2">AI Strategy Audit</div>
-              <div className="text-sm text-gray-300">Complete current-state analysis & gaps identification</div>
-              <div className="text-xs text-cyan-400 font-semibold mt-1">$5,000 Value</div>
+            <div className="card-professional">
+              <div className="text-2xl font-bold mb-2" style={{color: 'var(--color-text-primary)'}}>AI Strategy Audit</div>
+              <div className="text-sm" style={{color: 'var(--color-text-secondary)'}}>Complete current-state analysis & gaps identification</div>
+              <div className="text-xs font-semibold mt-1" style={{color: 'var(--color-text-accent)'}}>$5,000 Value</div>
             </div>
-            <div className="bg-white/5 backdrop-blur-md border border-white/10 rounded-xl p-6">
-              <div className="text-2xl font-bold text-blue-400 mb-2">Custom Roadmap</div>
-              <div className="text-sm text-gray-300">90-day implementation plan with ROI projections</div>
-              <div className="text-xs text-blue-400 font-semibold mt-1">$3,500 Value</div>
+            <div className="card-professional">
+              <div className="text-2xl font-bold mb-2" style={{color: 'var(--color-text-primary)'}}>Custom Roadmap</div>
+              <div className="text-sm" style={{color: 'var(--color-text-secondary)'}}>90-day implementation plan with ROI projections</div>
+              <div className="text-xs font-semibold mt-1" style={{color: 'var(--color-text-accent)'}}>$3,500 Value</div>
             </div>
-            <div className="bg-white/5 backdrop-blur-md border border-white/10 rounded-xl p-6">
-              <div className="text-2xl font-bold text-purple-400 mb-2">Executive Briefing</div>
-              <div className="text-sm text-gray-300">C-suite presentation & budget justification</div>
-              <div className="text-xs text-purple-400 font-semibold mt-1">$2,000 Value</div>
+            <div className="card-professional">
+              <div className="text-2xl font-bold mb-2" style={{color: 'var(--color-text-primary)'}}>Executive Briefing</div>
+              <div className="text-sm" style={{color: 'var(--color-text-secondary)'}}>C-suite presentation & budget justification</div>
+              <div className="text-xs font-semibold mt-1" style={{color: 'var(--color-text-accent)'}}>$2,000 Value</div>
             </div>
           </div>
 
           {/* Guarantees */}
-          <div className="flex flex-wrap justify-center items-center gap-8 mb-12 text-sm text-gray-400">
+          <div className="flex flex-wrap justify-center items-center gap-8 mb-12 text-sm" style={{color: 'var(--color-text-secondary)'}}>
             <div className="flex items-center gap-2">
-              <Shield className="w-4 h-4 text-cyan-400" />
+              <Shield className="w-4 h-4" style={{color: 'var(--color-text-accent)'}} />
               <span>Fortune 500 Methodology</span>
             </div>
             <div className="flex items-center gap-2">
-              <CheckCircle className="w-4 h-4 text-cyan-400" />
+              <CheckCircle className="w-4 h-4" style={{color: 'var(--color-text-accent)'}} />
               <span>ROI Guarantee or Refund</span>
             </div>
             <div className="flex items-center gap-2">
-              <CheckCircle className="w-4 h-4 text-cyan-400" />
+              <CheckCircle className="w-4 h-4" style={{color: 'var(--color-text-accent)'}} />
               <span>Expert Implementation Team</span>
             </div>
           </div>
@@ -114,27 +112,27 @@ const HeroSection: React.FC = () => {
           {/* Stats Row - Consulting Focused */}
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mt-16 max-w-4xl mx-auto">
             <div className="text-center">
-              <div className="text-3xl lg:text-4xl font-bold text-white mb-2">$50M+</div>
-              <div className="text-gray-400 text-sm">Productivity Gains Generated</div>
+              <div className="text-3xl lg:text-4xl font-bold mb-2" style={{color: 'var(--color-text-primary)'}}>$50M+</div>
+              <div className="text-sm" style={{color: 'var(--color-text-secondary)'}}>Productivity Gains Generated</div>
             </div>
             <div className="text-center">
-              <div className="text-3xl lg:text-4xl font-bold text-cyan-400 mb-2">Fortune 500</div>
-              <div className="text-gray-400 text-sm">Companies Served</div>
+              <div className="text-3xl lg:text-4xl font-bold mb-2" style={{color: 'var(--color-text-accent)'}}>Fortune 500</div>
+              <div className="text-sm" style={{color: 'var(--color-text-secondary)'}}>Companies Served</div>
             </div>
             <div className="text-center">
-              <div className="text-3xl lg:text-4xl font-bold text-blue-400 mb-2">15x</div>
-              <div className="text-gray-400 text-sm">Average ROI Delivered</div>
+              <div className="text-3xl lg:text-4xl font-bold mb-2" style={{color: 'var(--color-text-accent)'}}>15x</div>
+              <div className="text-sm" style={{color: 'var(--color-text-secondary)'}}>Average ROI Delivered</div>
             </div>
             <div className="text-center">
-              <div className="text-3xl lg:text-4xl font-bold text-purple-400 mb-2">90</div>
-              <div className="text-gray-400 text-sm">Days to Measurable Results</div>
+              <div className="text-3xl lg:text-4xl font-bold mb-2" style={{color: 'var(--color-text-accent)'}}>90</div>
+              <div className="text-sm" style={{color: 'var(--color-text-secondary)'}}>Days to Measurable Results</div>
             </div>
           </div>
         </div>
       </div>
 
-      {/* Floating Elements */}
-      <div className="absolute top-1/2 right-20 w-12 h-12 bg-gradient-to-br from-blue-400 to-cyan-400 rounded-xl opacity-20 animate-float delay-500 pointer-events-none"></div>
+      {/* Subtle accent element */}
+      <div className="absolute top-1/2 right-20 w-12 h-12 opacity-10 animate-float delay-500 pointer-events-none" style={{backgroundColor: 'var(--color-text-accent)', borderRadius: 'var(--radius-small)'}}></div>
     </section>
   );
 };
