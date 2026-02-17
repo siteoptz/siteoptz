@@ -42,8 +42,8 @@ const ClientsSlider: React.FC = () => {
             {duplicatedClients.map((client, index) => (
               <div
                 key={`${client.name}-${index}`}
-                className="flex-none mx-3 md:mx-8 flex items-center justify-center group cursor-pointer"
-                style={{ minWidth: '220px', height: '100px' }}
+                className="flex-none mx-1 md:mx-8 flex items-center justify-center group cursor-pointer"
+                style={{ minWidth: '160px', height: '100px' }}
               >
                 <div className="text-center transform group-hover:scale-110 transition-all duration-300">
                   <div className="relative w-32 h-16 md:w-40 md:h-20 filter grayscale invert opacity-60 group-hover:opacity-90 transition-all duration-300">
@@ -90,7 +90,10 @@ const ClientsSlider: React.FC = () => {
 
         @media (max-width: 768px) {
           .animate-infinite-scroll {
-            animation: scroll 21.33s linear infinite !important;
+            animation: scroll 12s linear infinite !important;
+          }
+          .animate-infinite-scroll > div {
+            min-width: 140px !important;
           }
         }
       `}</style>
