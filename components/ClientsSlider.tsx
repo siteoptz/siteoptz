@@ -32,10 +32,6 @@ const ClientsSlider: React.FC = () => {
 
         {/* Slider Container */}
         <div className="relative py-8">
-          {/* Gradient overlays for fade effect */}
-          <div className="absolute left-0 top-0 w-32 h-full bg-gradient-to-r from-black via-black/90 to-transparent z-10 pointer-events-none"></div>
-          <div className="absolute right-0 top-0 w-32 h-full bg-gradient-to-l from-black via-black/90 to-transparent z-10 pointer-events-none"></div>
-          
           {/* Sliding Container */}
           <div 
             className="flex animate-infinite-scroll hover:pause-animation"
