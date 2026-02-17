@@ -541,7 +541,7 @@ const UpgradePage: React.FC = () => {
               {/* AI Tool Discovery & Analysis */}
               <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-gray-700">
                 <h3 className="text-2xl font-bold text-white mb-8 text-center">
-                  🚀 AI Tool Discovery & Analysis
+                  AI Tool Discovery & Analysis
                 </h3>
                 <p className="text-gray-400 text-center mb-8 max-w-2xl mx-auto">
                   Stop wasting months researching AI tools. Get instant access to pre-validated tools with 50+ hours of analysis already done for you.
@@ -609,7 +609,7 @@ const UpgradePage: React.FC = () => {
               {/* Implementation & Strategy */}
               <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-gray-700">
                 <h3 className="text-2xl font-bold text-white mb-8 text-center">
-                  🎯 Implementation & Strategy
+                  Implementation & Strategy
                 </h3>
                 <p className="text-gray-400 text-center mb-8 max-w-2xl mx-auto">
                   50+ hours of implementation research done for you on every AI tool. Get expert guidance to implement faster and avoid costly mistakes.
@@ -677,7 +677,7 @@ const UpgradePage: React.FC = () => {
               {/* Expert Support & Consulting */}
               <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-gray-700">
                 <h3 className="text-2xl font-bold text-white mb-8 text-center">
-                  👨‍💼 Expert Support & Consulting
+                  Expert Support & Consulting
                 </h3>
                 <p className="text-gray-400 text-center mb-8 max-w-2xl mx-auto">
                   Get expert guidance to implement AI tools faster and avoid costly mistakes. Our AI implementation experts are here to help.
@@ -752,7 +752,7 @@ const UpgradePage: React.FC = () => {
               {/* Team & Collaboration */}
               <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-gray-700">
                 <h3 className="text-2xl font-bold text-white mb-8 text-center">
-                  👥 Team & Collaboration
+                  Team & Collaboration
                 </h3>
                 <p className="text-gray-400 text-center mb-8 max-w-2xl mx-auto">
                   Scale AI implementation across your team with collaboration tools and management features.
@@ -820,7 +820,7 @@ const UpgradePage: React.FC = () => {
               {/* Advanced Features & Integrations */}
               <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-gray-700">
                 <h3 className="text-2xl font-bold text-white mb-8 text-center">
-                  ⚡ Advanced Features & Integrations
+                  Advanced Features & Integrations
                 </h3>
                 <p className="text-gray-400 text-center mb-8 max-w-2xl mx-auto">
                   Get custom research in minutes, not weeks. AI agents work 24/7 for you with advanced integrations and automation.
