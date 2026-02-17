@@ -113,8 +113,8 @@ const HeroSection: React.FC = () => {
               <div className="text-sm" style={{color: 'var(--color-text-secondary)'}}>Productivity Gains Generated</div>
             </div>
             <div className="text-center">
-              <div className="text-3xl lg:text-4xl font-bold mb-2" style={{color: 'var(--color-text-accent)'}}>Fortune 500</div>
-              <div className="text-sm" style={{color: 'var(--color-text-secondary)'}}>Companies Served</div>
+              <div className="text-3xl lg:text-4xl font-bold mb-2" style={{color: 'var(--color-text-accent)'}}>90%</div>
+              <div className="text-sm" style={{color: 'var(--color-text-secondary)'}}>Client Retention Rate</div>
             </div>
             <div className="text-center">
               <div className="text-3xl lg:text-4xl font-bold mb-2" style={{color: 'var(--color-text-accent)'}}>15x</div>
