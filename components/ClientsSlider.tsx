@@ -50,7 +50,7 @@ const ClientsSlider: React.FC = () => {
                 style={{ minWidth: '220px', height: '100px' }}
               >
                 <div className="text-center transform group-hover:scale-110 transition-all duration-300">
-                  <div className="relative w-32 h-16 md:w-40 md:h-20 brightness-0 invert opacity-60 group-hover:opacity-100 transition-all duration-300">
+                  <div className="relative w-32 h-16 md:w-40 md:h-20 filter grayscale invert opacity-60 group-hover:opacity-90 transition-all duration-300">
                     <Image
                       src={client.logo}
                       alt={client.alt}

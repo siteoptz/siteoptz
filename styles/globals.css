@@ -1,16 +1,27 @@
+@import url('./design-system.css');
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-/* Global styles for better SEO and UX */
+/* Technical Design System Override */
 @layer base {
   html {
     scroll-behavior: smooth;
+    background-color: var(--color-background);
+    font-family: var(--font-sans);
   }
   
   body {
-    @apply text-white antialiased bg-gradient-to-br from-black via-gray-900 to-black min-h-screen;
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    background-color: var(--color-background);
+    color: var(--color-text-primary);
+    font-family: var(--font-sans);
+    font-weight: var(--font-normal);
+    line-height: var(--leading-normal);
+    letter-spacing: var(--tracking-normal);
+    min-height: 100vh;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
   }
   
   /* Ensure images are responsive by default */
@@ -18,14 +29,15 @@
     @apply max-w-full h-auto;
   }
   
-  /* Focus styles for better accessibility */
+  /* Technical focus styles */
   *:focus {
-    @apply outline-none ring-2 ring-blue-500 ring-offset-2;
+    outline: var(--border-width-thick) solid var(--color-interactive-default);
+    outline-offset: 2px;
   }
   
-  /* Custom scrollbar styles */
+  /* Minimal scrollbar */
   ::-webkit-scrollbar {
-    @apply w-2;
+    width: 8px;
   }
   
   /* Podcast content styling */
@@ -65,38 +77,73 @@
   }
   
   ::-webkit-scrollbar-track {
-    @apply bg-gray-100;
+    background-color: var(--color-surface);
   }
   
   ::-webkit-scrollbar-thumb {
-    @apply bg-gray-400 rounded-full;
+    background-color: var(--color-border-default);
+    border-radius: var(--radius-sharp);
   }
   
   ::-webkit-scrollbar-thumb:hover {
-    @apply bg-gray-500;
+    background-color: var(--color-border-strong);
   }
 }
 
 @layer components {
-  /* Reusable component styles */
+  /* Professional component system */
   .btn-primary {
-    @apply bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-6 rounded-lg transition-colors duration-200 focus:ring-2 focus:ring-blue-500 focus:ring-offset-2;
+    background-color: var(--color-interactive-default);
+    color: var(--color-text-inverse);
+    border: var(--border-width-default) solid var(--color-interactive-default);
+    border-radius: var(--radius-small);
+    padding: var(--space-3) var(--space-6);
+    font-weight: var(--font-semibold);
+    font-size: var(--text-sm);
+    letter-spacing: var(--tracking-normal);
+    transition: var(--transition-normal);
+  }
+  
+  .btn-primary:hover {
+    background-color: var(--color-interactive-hover);
+    border-color: var(--color-interactive-hover);
+    box-shadow: var(--glow-subtle);
+    transform: translateY(-1px);
   }
   
   .btn-secondary {
-    @apply bg-gray-200 hover:bg-gray-300 text-gray-900 font-semibold py-3 px-6 rounded-lg transition-colors duration-200 focus:ring-2 focus:ring-gray-500 focus:ring-offset-2;
+    background-color: transparent;
+    color: var(--color-text-secondary);
+    border: var(--border-width-default) solid var(--color-border-default);
+    border-radius: var(--radius-small);
+    padding: var(--space-3) var(--space-6);
+    font-weight: var(--font-semibold);
+    font-size: var(--text-sm);
+    letter-spacing: var(--tracking-normal);
+    transition: var(--transition-normal);
+  }
+  
+  .btn-secondary:hover {
+    background-color: var(--color-surface-overlay);
+    border-color: var(--color-border-strong);
+    color: var(--color-text-primary);
+    transform: translateY(-1px);
   }
   
   .card {
-    @apply bg-black rounded-lg border border-gray-800 p-6 shadow-sm;
+    background-color: var(--color-surface);
+    border: var(--border-width-default) solid var(--color-border-default);
+    border-radius: var(--radius-small);
+    padding: var(--space-6);
+    box-shadow: var(--elevation-low);
+    transition: var(--transition-normal);
   }
   
-  .card-dark {
-    @apply bg-black/90 backdrop-blur-md rounded-lg border border-gray-700 p-6 text-white;
-  }
-  
-  .card-hover {
-    @apply hover:shadow-xl hover:scale-105 transition-all duration-300;
+  .card:hover {
+    background-color: var(--color-surface-elevated);
+    border-color: var(--color-border-strong);
+    box-shadow: var(--elevation-medium);
+    transform: translateY(-1px);
   }
   
   /* Loading states */
@@ -119,18 +166,48 @@
 }
 
 @layer utilities {
-  /* Custom utility classes */
-  .text-gradient {
-    @apply bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent;
+  /* Technical utilities */
+  .text-technical {
+    color: var(--color-text-primary);
+    font-family: var(--font-sans);
+    letter-spacing: var(--tracking-wide);
   }
   
-  /* Mobile overflow prevention */
+  .surface-professional {
+    background-color: var(--color-surface);
+    border: var(--border-width-default) solid var(--color-border-subtle);
+    border-radius: var(--radius-small);
+  }
+  
+  .surface-elevated {
+    background-color: var(--color-surface-elevated);
+    border: var(--border-width-default) solid var(--color-border-default);
+    border-radius: var(--radius-small);
+    box-shadow: var(--elevation-low);
+  }
+  
   .mobile-safe {
-    @apply overflow-x-hidden max-w-full;
+    overflow-x: hidden;
+    max-width: 100%;
   }
   
   .mobile-grid {
-    @apply grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--space-4);
+  }
+  
+  @media (min-width: 640px) {
+    .mobile-grid {
+      grid-template-columns: repeat(2, 1fr);
+      gap: var(--space-6);
+    }
+  }
+  
+  @media (min-width: 1024px) {
+    .mobile-grid {
+      grid-template-columns: repeat(3, 1fr);
+    }
   }
   
   /* Mobile menu scrolling */

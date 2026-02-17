@@ -97,7 +97,7 @@ const BasicComparisons = ({ tools }) => {
       {remainingComparisons === 0 && (
         <div className="bg-gradient-to-r from-orange-900/50 to-red-900/50 border border-orange-800 rounded-lg p-4 mb-6">
           <div className="flex items-center gap-3">
-            <div className="text-orange-400">⚠️</div>
+            <div className="w-5 h-5 rounded-full bg-orange-400 flex items-center justify-center text-orange-900 text-xs font-bold">!</div>
             <div>
               <h3 className="text-orange-300 font-medium">Daily Limit Reached</h3>
               <p className="text-orange-200/80 text-sm">
@@ -165,14 +165,14 @@ const BasicComparisons = ({ tools }) => {
               </div>
               
               <div className="flex justify-between text-xs text-gray-400">
-                <span>{tool1.overview?.category || 'AI Tool'}</span>
-                <span>{tool2.overview?.category || 'AI Tool'}</span>
+                <span>{tool1.overview?.category || 'Software Tool'}</span>
+                <span>{tool2.overview?.category || 'Software Tool'}</span>
               </div>
               
               {isDisabled && (
                 <div className="absolute inset-0 flex items-center justify-center bg-black/80 rounded-lg">
                   <div className="text-center">
-                    <div className="text-gray-400 text-sm mb-1">🔒</div>
+                    <div className="w-6 h-6 rounded-full bg-gray-600 flex items-center justify-center text-gray-300 text-xs font-bold mb-1">L</div>
                     <div className="text-gray-300 text-xs">Upgrade for access</div>
                   </div>
                 </div>
@@ -188,7 +188,7 @@ const BasicComparisons = ({ tools }) => {
             href="/compare"
             className="text-cyan-400 hover:text-cyan-300 text-sm underline"
           >
-            Browse all AI tool comparisons →
+            Browse all tool comparisons →
           </Link>
         </div>
       )}

@@ -6,29 +6,29 @@ const CommunitySupport = () => {
 
   const helpArticles = [
     {
-      title: "Getting Started with AI Tools",
-      description: "Complete beginner's guide to choosing and using AI tools effectively",
+      title: "Getting Started with Software Tools",
+      description: "Complete beginner's guide to choosing and using software tools effectively",
       category: "Beginner",
       readTime: "5 min",
       link: "/guides/getting-started"
     },
     {
-      title: "AI Tool Comparison Guide",
-      description: "How to compare AI tools and choose the right one for your needs",
+      title: "Software Tool Comparison Guide",
+      description: "How to compare software tools and choose the right one for your needs",
       category: "Guide",
       readTime: "8 min",
       link: "/guides/comparison-guide"
     },
     {
-      title: "Free vs Paid AI Tools",
-      description: "Understanding when to upgrade from free to paid AI tool plans",
+      title: "Free vs Paid Software Tools",
+      description: "Understanding when to upgrade from free to paid software tool plans",
       category: "Planning",
       readTime: "6 min",
       link: "/guides/free-vs-paid"
     },
     {
-      title: "AI Tool Security Best Practices",
-      description: "Keep your data safe while using AI tools for business",
+      title: "Software Tool Security Best Practices",
+      description: "Keep your data safe while using software tools for business",
       category: "Security",
       readTime: "7 min",
       link: "/guides/security-best-practices"
@@ -37,32 +37,36 @@ const CommunitySupport = () => {
 
   const communityFeatures = [
     {
-      icon: "💬",
+      iconClass: "w-6 h-6 bg-blue-600 rounded-lg flex items-center justify-center text-white text-sm font-bold",
+      iconText: "C",
       title: "Community Discussions",
-      description: "Join discussions about AI tools with other users",
+      description: "Join discussions about software tools with other users",
       action: "Join Discord",
       actionLink: "#",
       comingSoon: true
     },
     {
-      icon: "📚",
+      iconClass: "w-6 h-6 bg-green-600 rounded-lg flex items-center justify-center text-white text-sm font-bold",
+      iconText: "K",
       title: "Knowledge Base",
-      description: "Browse our comprehensive database of AI tool guides",
+      description: "Browse our comprehensive database of software tool guides",
       action: "Browse Articles",
       actionLink: "/guides"
     },
     {
-      icon: "🎯",
+      iconClass: "w-6 h-6 bg-purple-600 rounded-lg flex items-center justify-center text-white text-sm font-bold",
+      iconText: "R",
       title: "Tool Recommendations",
-      description: "Get personalized AI tool recommendations",
+      description: "Get personalized software tool recommendations",
       action: "Get Recommendations",
       actionLink: "#",
       comingSoon: true
     },
     {
-      icon: "📧",
+      iconClass: "w-6 h-6 bg-cyan-600 rounded-lg flex items-center justify-center text-white text-sm font-bold",
+      iconText: "S",
       title: "Expert Support",
-      description: "Direct email support from our AI specialists",
+      description: "Direct email support from our software specialists",
       action: "Contact Us",
       actionLink: "mailto:support@siteoptz.ai"
     }
@@ -70,12 +74,12 @@ const CommunitySupport = () => {
 
   const faqs = [
     {
-      question: "How do I choose the right AI tool?",
+      question: "How do I choose the right software tool?",
       answer: "Start by identifying your specific needs, budget, and technical requirements. Use our comparison tool to evaluate different options side by side."
     },
     {
-      question: "Are free AI tools worth using?",
-      answer: "Free AI tools can be excellent for personal use and small projects. However, paid versions typically offer better performance, more features, and priority support."
+      question: "Are free software tools worth using?",
+      answer: "Free software tools can be excellent for personal use and small projects. However, paid versions typically offer better performance, more features, and priority support."
     },
     {
       question: "How often are tool reviews updated?",
@@ -164,7 +168,7 @@ const CommunitySupport = () => {
                   </div>
                 )}
                 <div className="flex items-start gap-3">
-                  <div className="text-2xl">{feature.icon}</div>
+                  <div className={feature.iconClass}>{feature.iconText}</div>
                   <div className="flex-1">
                     <h3 className="font-medium text-white mb-1">{feature.title}</h3>
                     <p className="text-sm text-gray-400 mb-3">{feature.description}</p>

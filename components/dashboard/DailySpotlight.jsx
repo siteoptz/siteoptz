@@ -32,8 +32,8 @@ const DailySpotlight = ({ tools }) => {
   return (
     <div className="bg-black border border-gray-800 rounded-lg p-6 hover:border-gray-700 transition-colors">
       <div className="flex items-center gap-3 mb-4">
-        <div className="w-2 h-2 bg-cyan-400 rounded-full animate-pulse"></div>
-        <h2 className="text-lg font-semibold text-white">Daily AI Tool Spotlight</h2>
+        <div className="w-2 h-2 bg-cyan-400 rounded-full"></div>
+        <h2 className="text-lg font-semibold text-white">Featured Tool</h2>
       </div>
       
       <div className="flex items-start gap-4">
@@ -93,7 +93,7 @@ const DailySpotlight = ({ tools }) => {
                 </div>
               )}
               <div className="text-gray-400 text-sm">
-                {spotlightTool.overview?.category || 'AI Tool'}
+                {spotlightTool.overview?.category || 'Software Tool'}
               </div>
             </div>
             
