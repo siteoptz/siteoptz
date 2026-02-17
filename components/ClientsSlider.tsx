@@ -46,7 +46,7 @@ const ClientsSlider: React.FC = () => {
                 style={{ minWidth: '160px', height: '100px' }}
               >
                 <div className="text-center transform group-hover:scale-110 transition-all duration-300">
-                  <div className="relative w-32 h-16 md:w-40 md:h-20 filter grayscale invert opacity-60 group-hover:opacity-90 transition-all duration-300">
+                  <div className="relative w-24 h-12 md:w-40 md:h-20 filter grayscale invert opacity-60 group-hover:opacity-90 transition-all duration-300">
                     <Image
                       src={client.logo}
                       alt={client.alt}
@@ -93,7 +93,7 @@ const ClientsSlider: React.FC = () => {
             animation: scroll 12s linear infinite !important;
           }
           .animate-infinite-scroll > div {
-            min-width: 140px !important;
+            min-width: 100px !important;
           }
         }
       `}</style>
