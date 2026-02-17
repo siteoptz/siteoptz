@@ -7,7 +7,6 @@ const ClientsSlider: React.FC = () => {
     { name: 'Nestlé', logo: 'https://siteoptz.com/wp-content/uploads/siteoptz-img-1.jpg', alt: 'Nestlé Logo' },
     { name: 'Duracell', logo: 'https://siteoptz.com/wp-content/uploads/siteoptz-img-10.jpg', alt: 'Duracell Logo' },
     { name: 'AT&T', logo: 'https://siteoptz.com/wp-content/uploads/siteoptz-img-15.jpg', alt: 'AT&T Logo' },
-    { name: 'Reliant', logo: 'RELIANT', alt: 'Reliant Logo' }, // Keeping text as no image provided
     { name: 'US Air Force', logo: 'https://siteoptz.com/wp-content/uploads/siteoptz-img-13.jpg', alt: 'US Air Force Logo' },
     { name: 'PNC', logo: 'https://siteoptz.com/wp-content/uploads/siteoptz-img-6.jpg', alt: 'PNC Logo' },
     { name: 'American Express', logo: 'https://siteoptz.com/wp-content/uploads/siteoptz-img-11.jpg', alt: 'American Express Logo' },
@@ -50,22 +49,16 @@ const ClientsSlider: React.FC = () => {
                 className="flex-none mx-6 md:mx-8 flex items-center justify-center group cursor-pointer"
                 style={{ minWidth: '220px', height: '100px' }}
               >
-                <div className="text-center transform group-hover:scale-110 transition-all duration-300 group-hover:bg-white/5 rounded-lg p-4 group-hover:shadow-lg group-hover:shadow-blue-500/20">
-                  {client.logo.startsWith('http') ? (
-                    <div className="relative w-32 h-16 md:w-40 md:h-20 filter grayscale group-hover:grayscale-0 transition-all duration-300 opacity-70 group-hover:opacity-100">
-                      <Image
-                        src={client.logo}
-                        alt={client.alt}
-                        fill
-                        className="object-contain"
-                        sizes="(max-width: 768px) 128px, 160px"
-                      />
-                    </div>
-                  ) : (
-                    <div className="text-lg md:text-xl lg:text-2xl font-bold text-gray-400 group-hover:text-white transition-colors duration-300 tracking-wider font-mono">
-                      {client.logo}
-                    </div>
-                  )}
+                <div className="text-center transform group-hover:scale-110 transition-all duration-300">
+                  <div className="relative w-32 h-16 md:w-40 md:h-20 brightness-0 invert opacity-60 group-hover:opacity-100 transition-all duration-300">
+                    <Image
+                      src={client.logo}
+                      alt={client.alt}
+                      fill
+                      className="object-contain"
+                      sizes="(max-width: 768px) 128px, 160px"
+                    />
+                  </div>
                 </div>
               </div>
             ))}
