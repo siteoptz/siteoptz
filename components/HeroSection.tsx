@@ -15,7 +15,7 @@ const HeroSection: React.FC = () => {
             href="https://api.leadconnectorhq.com/widget/booking/yPjkVmsauPst8XlrOQUl"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-3 px-6 py-2 surface-professional text-white text-sm font-medium tracking-wide mb-12 transition-normal hover:bg-surface-elevated cursor-pointer"
+            className="inline-flex items-center gap-3 px-6 py-2.5 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-lg font-semibold text-sm hover:from-blue-700 hover:to-purple-700 transform hover:scale-105 transition-all duration-200 shadow-lg hover:shadow-xl mb-12 cursor-pointer"
           >
             <Calendar className="w-4 h-4" />
             <span className="font-bold">FREE</span>
