@@ -5,10 +5,9 @@ import { X, Mail, Lock, User, Building, Target, Loader2 } from 'lucide-react';
 interface SignUpModalProps {
   isOpen: boolean;
   onClose: () => void;
-  onSwitchToSignIn?: () => void;
 }
 
-const SignUpModal: React.FC<SignUpModalProps> = ({ isOpen, onClose, onSwitchToSignIn }) => {
+const SignUpModal: React.FC<SignUpModalProps> = ({ isOpen, onClose }) => {
   const [step, setStep] = useState<'auth' | 'questions'>('auth');
   const [loading, setLoading] = useState(false);
   const [formData, setFormData] = useState({
@@ -248,7 +247,7 @@ const SignUpModal: React.FC<SignUpModalProps> = ({ isOpen, onClose, onSwitchToSi
                 <button
                   onClick={() => {
                     onClose();
-                    onSwitchToSignIn?.();
+                    signIn('google', { callbackUrl: '/dashboard' });
                   }}
                   className="text-cyan-400 hover:text-cyan-300 transition-colors"
                 >

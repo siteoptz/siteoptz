@@ -2,12 +2,11 @@ import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import { useRouter } from 'next/router';
-import { useSession, signOut } from 'next-auth/react';
+import { useSession, signOut, signIn } from 'next-auth/react';
 import { Menu, X, ChevronDown, ChevronUp, User, LogOut, Bell, Settings, CreditCard, Zap } from 'lucide-react';
 import { toolCategories, getCategoryUrl, getCategoryDisplayName } from '../config/categories';
 import { industries, industrySlugMap } from '../content/industryContent';
 import SignUpModal from './auth/SignUpModal';
-import SignInModal from './auth/SignInModal';
 
 // Accordion category structure for AI Categories dropdown
 const accordionCategories = [
@@ -73,7 +72,6 @@ const Header: React.FC = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [showUserDropdown, setShowUserDropdown] = useState(false);
   const [showSignUpModal, setShowSignUpModal] = useState(false);
-  const [showSignInModal, setShowSignInModal] = useState(false);
   const router = useRouter();
   const { data: session, status } = useSession();
   // Simple session state management with timeout
@@ -440,7 +438,7 @@ const Header: React.FC = () => {
             ) : (
               <div className="flex items-center space-x-3">
                 <button
-                  onClick={() => setShowSignInModal(true)}
+                  onClick={() => signIn('google', { callbackUrl: '/dashboard' })}
                   className="px-4 py-2 text-gray-300 hover:text-white rounded-lg font-medium text-sm hover:bg-gray-800 transition-all duration-200"
                 >
                   Log In
@@ -758,7 +756,7 @@ const Header: React.FC = () => {
                     <button
                       onClick={() => {
                         closeMenu();
-                        setShowSignInModal(true);
+                        signIn('google', { callbackUrl: '/dashboard' });
                       }}
                       style={{ 
                         display: 'block', 
@@ -806,18 +804,6 @@ const Header: React.FC = () => {
       <SignUpModal 
         isOpen={showSignUpModal} 
         onClose={() => setShowSignUpModal(false)}
-        onSwitchToSignIn={() => {
-          setShowSignUpModal(false);
-          setShowSignInModal(true);
-        }}
-      />
-      <SignInModal 
-        isOpen={showSignInModal} 
-        onClose={() => setShowSignInModal(false)}
-        onSwitchToSignUp={() => {
-          setShowSignInModal(false);
-          setShowSignUpModal(true);
-        }}
       />
     </header>
   );
