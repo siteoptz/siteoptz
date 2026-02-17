@@ -44,7 +44,7 @@ const HeroSection: React.FC = () => {
               href="https://api.leadconnectorhq.com/widget/booking/yPjkVmsauPst8XlrOQUl"
               target="_blank"
               rel="noopener noreferrer"
-              className="group inline-flex items-center gap-3 px-12 py-6 button-professional--accent text-white font-bold text-xl transition-all duration-300 shadow-2xl transform hover:scale-105"
+              className="group inline-flex items-center gap-3 px-6 py-2.5 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-lg font-semibold text-sm hover:from-blue-700 hover:to-purple-700 transform hover:scale-105 transition-all duration-200 shadow-lg hover:shadow-xl"
             >
               <Calendar className="w-6 h-6 group-hover:animate-bounce" />
               Book Free Strategy Session
@@ -56,7 +56,7 @@ const HeroSection: React.FC = () => {
           <div className="flex flex-col sm:flex-row gap-6 justify-center items-center mb-12">
             <Link 
               href="/tools"
-              className="group inline-flex items-center gap-3 px-8 py-4 surface-elevated text-white font-semibold text-lg transition-all duration-300"
+              className="group inline-flex items-center gap-3 px-6 py-2.5 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-lg font-semibold text-sm hover:from-blue-700 hover:to-purple-700 transform hover:scale-105 transition-all duration-200 shadow-lg hover:shadow-xl"
             >
               <TrendingUp className="w-5 h-5" />
               View Our Tool Database
@@ -64,10 +64,7 @@ const HeroSection: React.FC = () => {
             <span className="text-gray-400 font-medium">or</span>
             <Link 
               href="/compare"
-              className="inline-flex items-center gap-2 font-semibold transition-colors" 
-              style={{color: 'var(--color-text-accent)'}} 
-              onMouseEnter={(e) => e.currentTarget.style.color = '#1D4ED8'} 
-              onMouseLeave={(e) => e.currentTarget.style.color = 'var(--color-text-accent)'}
+              className="inline-flex items-center gap-2 px-6 py-2.5 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-lg font-semibold text-sm hover:from-blue-700 hover:to-purple-700 transform hover:scale-105 transition-all duration-200 shadow-lg hover:shadow-xl"
             >
               Compare Solutions
               <ArrowRight className="w-4 h-4" />
