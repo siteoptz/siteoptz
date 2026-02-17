@@ -161,13 +161,6 @@ const Header: React.FC = () => {
     //   isKidsAI: true
     // },
     { 
-      name: 'Community', 
-      href: '/community', 
-      current: router.pathname === '/community', 
-      hasDropdown: false,
-      external: false
-    },
-    { 
       name: 'Pricing', 
       href: '/upgrade', 
       current: router.pathname === '/upgrade', 
@@ -284,32 +277,17 @@ const Header: React.FC = () => {
           <div className="hidden lg:flex items-center space-x-1">
             {navigation.map((item) => (
               <div key={item.name} className={item.hasDropdown ? 'relative group' : ''}>
-                {item.external ? (
-                  <a
-                    href={item.href}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className={`px-4 py-2 rounded-lg text-sm font-medium flex items-center space-x-1 ${
-                      item.current
-                        ? 'bg-gray-800 text-white shadow-sm'
-                        : 'text-gray-300 hover:text-white hover:bg-gray-800'
-                    }`}
-                  >
-                    <span>{item.name}</span>
-                  </a>
-                ) : (
-                  <Link
-                    href={item.href}
-                    className={`px-4 py-2 rounded-lg text-sm font-medium flex items-center space-x-1 ${
-                      item.current
-                        ? 'bg-gray-800 text-white shadow-sm'
-                        : 'text-gray-300 hover:text-white hover:bg-gray-800'
-                    }`}
-                  >
-                    <span>{item.name}</span>
-                    {item.hasDropdown && <ChevronDown className="w-4 h-4" />}
-                  </Link>
-                )}
+                <Link
+                  href={item.href}
+                  className={`px-4 py-2 rounded-lg text-sm font-medium flex items-center space-x-1 ${
+                    item.current
+                      ? 'bg-gray-800 text-white shadow-sm'
+                      : 'text-gray-300 hover:text-white hover:bg-gray-800'
+                  }`}
+                >
+                  <span>{item.name}</span>
+                  {item.hasDropdown && <ChevronDown className="w-4 h-4" />}
+                </Link>
                 
                 {/* Kids AI Dropdown - HIDDEN */}
                 {/* {item.isKidsAI && item.hasDropdown && (
@@ -458,14 +436,20 @@ const Header: React.FC = () => {
                 )}
               </div>
             ) : (
-              <a
-                href="https://api.leadconnectorhq.com/widget/booking/yPjkVmsauPst8XlrOQUl"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="px-6 py-2.5 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-lg font-semibold text-sm hover:from-blue-700 hover:to-purple-700 transform hover:scale-105 transition-all duration-200 shadow-lg hover:shadow-xl"
-              >
-                Get Started
-              </a>
+              <div className="flex items-center space-x-3">
+                <Link
+                  href="/auth/signin"
+                  className="px-4 py-2 text-gray-300 hover:text-white rounded-lg font-medium text-sm hover:bg-gray-800 transition-all duration-200"
+                >
+                  Log In
+                </Link>
+                <Link
+                  href="/auth/signup"
+                  className="px-6 py-2.5 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-lg font-semibold text-sm hover:from-blue-700 hover:to-purple-700 transform hover:scale-105 transition-all duration-200 shadow-lg hover:shadow-xl"
+                >
+                  Sign Up
+                </Link>
+              </div>
             )}
           </div>
 
@@ -591,18 +575,6 @@ const Header: React.FC = () => {
                 )}
               </div> */}
               
-              <Link href="/community" onClick={closeMenu} style={{ 
-                color: router.pathname === '/community' ? '#06b6d4' : 'white',
-                backgroundColor: router.pathname === '/community' ? 'rgba(6, 182, 212, 0.1)' : 'transparent',
-                textDecoration: 'none', 
-                fontSize: '18px', 
-                padding: '16px', 
-                borderRadius: '8px',
-                borderBottom: '1px solid rgba(255,255,255,0.1)',
-                transition: 'all 0.2s ease',
-                display: 'block',
-                fontWeight: '600'
-              }}>Community</Link>
               
               <Link href="/upgrade" onClick={closeMenu} style={{ 
                 color: router.pathname === '/upgrade' ? '#06b6d4' : 'white',
@@ -781,10 +753,25 @@ const Header: React.FC = () => {
                   </div>
                 ) : (
                   <div style={{ display: 'flex', flexDirection: 'column', gap: '12px' }}>
-                    <a
-                      href="https://api.leadconnectorhq.com/widget/booking/yPjkVmsauPst8XlrOQUl"
-                      target="_blank"
-                      rel="noopener noreferrer"
+                    <Link
+                      href="/auth/signin"
+                      onClick={closeMenu}
+                      style={{ 
+                        display: 'block', 
+                        width: '100%', 
+                        padding: '16px', 
+                        background: 'rgba(255,255,255,0.1)', 
+                        color: 'white',
+                        textAlign: 'center',
+                        borderRadius: '8px',
+                        fontWeight: '600',
+                        fontSize: '16px',
+                        textDecoration: 'none',
+                        marginBottom: '12px'
+                      }}
+                    >Log In</Link>
+                    <Link
+                      href="/auth/signup"
                       onClick={closeMenu}
                       style={{ 
                         display: 'block', 
@@ -798,7 +785,7 @@ const Header: React.FC = () => {
                         fontSize: '16px',
                         textDecoration: 'none'
                       }}
-                    >Get Started</a>
+                    >Sign Up</Link>
                   </div>
                 )}
               </div>
