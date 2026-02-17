@@ -16,6 +16,7 @@ import { Search, TrendingUp, Zap, CheckCircle, Sparkles, Brain, BarChart3, Targe
 import ExternalLink from '../components/ExternalLink';
 import { authoritativeLinks } from '../utils/externalLinks';
 import HeroSection from '../components/HeroSection';
+import ClientsSlider from '../components/ClientsSlider';
 import UpgradeButton from '../components/UpgradeButton';
 import StripePaymentModal from '../components/StripePaymentModal';
 import CommunitySection from '../components/CommunitySection';
@@ -406,7 +407,9 @@ export default function HomePage({}: HomePageProps) {
 
         {/* Hero Section */}
         <HeroSection />
-
+        
+        {/* Clients Slider */}
+        <ClientsSlider />
 
         {/* Stop Guessing Section */}
         <section className="py-16 bg-gray-900/50">
