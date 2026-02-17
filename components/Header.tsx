@@ -6,7 +6,8 @@ import { useSession, signOut } from 'next-auth/react';
 import { Menu, X, ChevronDown, ChevronUp, User, LogOut, Bell, Settings, CreditCard, Zap } from 'lucide-react';
 import { toolCategories, getCategoryUrl, getCategoryDisplayName } from '../config/categories';
 import { industries, industrySlugMap } from '../content/industryContent';
-// Modals removed from Header to prevent navigation stalling
+import SignUpModal from './auth/SignUpModal';
+import SignInModal from './auth/SignInModal';
 
 // Accordion category structure for AI Categories dropdown
 const accordionCategories = [
@@ -70,8 +71,9 @@ const accordionCategories = [
 const Header: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
-  // Modal states removed to prevent navigation stalling
   const [showUserDropdown, setShowUserDropdown] = useState(false);
+  const [showSignUpModal, setShowSignUpModal] = useState(false);
+  const [showSignInModal, setShowSignInModal] = useState(false);
   const router = useRouter();
   const { data: session, status } = useSession();
   // Simple session state management with timeout
@@ -437,18 +439,18 @@ const Header: React.FC = () => {
               </div>
             ) : (
               <div className="flex items-center space-x-3">
-                <Link
-                  href="/auth/signin"
+                <button
+                  onClick={() => setShowSignInModal(true)}
                   className="px-4 py-2 text-gray-300 hover:text-white rounded-lg font-medium text-sm hover:bg-gray-800 transition-all duration-200"
                 >
                   Log In
-                </Link>
-                <Link
-                  href="/auth/signup"
+                </button>
+                <button
+                  onClick={() => setShowSignUpModal(true)}
                   className="px-6 py-2.5 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-lg font-semibold text-sm hover:from-blue-700 hover:to-purple-700 transform hover:scale-105 transition-all duration-200 shadow-lg hover:shadow-xl"
                 >
                   Sign Up
-                </Link>
+                </button>
               </div>
             )}
           </div>
@@ -753,9 +755,11 @@ const Header: React.FC = () => {
                   </div>
                 ) : (
                   <div style={{ display: 'flex', flexDirection: 'column', gap: '12px' }}>
-                    <Link
-                      href="/auth/signin"
-                      onClick={closeMenu}
+                    <button
+                      onClick={() => {
+                        closeMenu();
+                        setShowSignInModal(true);
+                      }}
                       style={{ 
                         display: 'block', 
                         width: '100%', 
@@ -766,13 +770,16 @@ const Header: React.FC = () => {
                         borderRadius: '8px',
                         fontWeight: '600',
                         fontSize: '16px',
-                        textDecoration: 'none',
+                        border: 'none',
+                        cursor: 'pointer',
                         marginBottom: '12px'
                       }}
-                    >Log In</Link>
-                    <Link
-                      href="/auth/signup"
-                      onClick={closeMenu}
+                    >Log In</button>
+                    <button
+                      onClick={() => {
+                        closeMenu();
+                        setShowSignUpModal(true);
+                      }}
                       style={{ 
                         display: 'block', 
                         width: '100%', 
@@ -783,9 +790,10 @@ const Header: React.FC = () => {
                         borderRadius: '8px',
                         fontWeight: '600',
                         fontSize: '16px',
-                        textDecoration: 'none'
+                        border: 'none',
+                        cursor: 'pointer'
                       }}
-                    >Sign Up</Link>
+                    >Sign Up</button>
                   </div>
                 )}
               </div>
@@ -794,7 +802,23 @@ const Header: React.FC = () => {
         )}
       </nav>
 
-      {/* Modals removed from Header - they are now on the why-us page */}
+      {/* Authentication Modals */}
+      <SignUpModal 
+        isOpen={showSignUpModal} 
+        onClose={() => setShowSignUpModal(false)}
+        onSwitchToSignIn={() => {
+          setShowSignUpModal(false);
+          setShowSignInModal(true);
+        }}
+      />
+      <SignInModal 
+        isOpen={showSignInModal} 
+        onClose={() => setShowSignInModal(false)}
+        onSwitchToSignUp={() => {
+          setShowSignInModal(false);
+          setShowSignUpModal(true);
+        }}
+      />
     </header>
   );
 };
