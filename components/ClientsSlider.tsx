@@ -40,7 +40,7 @@ const ClientsSlider: React.FC = () => {
           <div 
             className="flex animate-infinite-scroll hover:pause-animation"
             style={{
-              animation: 'scroll 40s linear infinite'
+              animation: 'scroll 32s linear infinite'
             }}
           >
             {duplicatedClients.map((client, index) => (
