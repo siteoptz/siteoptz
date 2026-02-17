@@ -1,19 +1,20 @@
 import React from 'react';
+import Image from 'next/image';
 
 const ClientsSlider: React.FC = () => {
-  // Client logos data - using company names that will be styled as logos
+  // Client logos data - using actual logo images
   const clients = [
-    { name: 'Nestlé', logo: 'NESTLÉ', color: 'text-red-400' },
-    { name: 'Duracell', logo: 'DURACELL', color: 'text-orange-400' },
-    { name: 'AT&T', logo: 'AT&T', color: 'text-blue-400' },
-    { name: 'Reliant', logo: 'RELIANT', color: 'text-green-400' },
-    { name: 'US Air Force', logo: 'U.S. AIR FORCE', color: 'text-blue-300' },
-    { name: 'PNC', logo: 'PNC', color: 'text-yellow-400' },
-    { name: 'American Express', logo: 'AMERICAN EXPRESS', color: 'text-blue-500' },
-    { name: 'Proactiv', logo: 'PROACTIV', color: 'text-purple-400' },
-    { name: 'Vancouver 2010', logo: 'VANCOUVER 2010', color: 'text-cyan-400' },
-    { name: 'P&G', logo: 'P&G', color: 'text-indigo-400' },
-    { name: 'NRG', logo: 'NRG', color: 'text-emerald-400' },
+    { name: 'Nestlé', logo: 'https://siteoptz.com/wp-content/uploads/siteoptz-img-1.jpg', alt: 'Nestlé Logo' },
+    { name: 'Duracell', logo: 'https://siteoptz.com/wp-content/uploads/siteoptz-img-10.jpg', alt: 'Duracell Logo' },
+    { name: 'AT&T', logo: 'https://siteoptz.com/wp-content/uploads/siteoptz-img-15.jpg', alt: 'AT&T Logo' },
+    { name: 'Reliant', logo: 'RELIANT', alt: 'Reliant Logo' }, // Keeping text as no image provided
+    { name: 'US Air Force', logo: 'https://siteoptz.com/wp-content/uploads/siteoptz-img-13.jpg', alt: 'US Air Force Logo' },
+    { name: 'PNC', logo: 'https://siteoptz.com/wp-content/uploads/siteoptz-img-6.jpg', alt: 'PNC Logo' },
+    { name: 'American Express', logo: 'https://siteoptz.com/wp-content/uploads/siteoptz-img-11.jpg', alt: 'American Express Logo' },
+    { name: 'Proactiv', logo: 'https://siteoptz.com/wp-content/uploads/siteoptz-img-7.jpg', alt: 'Proactiv Logo' },
+    { name: 'Vancouver 2010', logo: 'https://siteoptz.com/wp-content/uploads/siteoptz-img-8.jpg', alt: 'Vancouver 2010 Logo' },
+    { name: 'P&G', logo: 'https://siteoptz.com/wp-content/uploads/siteoptz-img-4.jpg', alt: 'P&G Logo' },
+    { name: 'NRG', logo: 'https://siteoptz.com/wp-content/uploads/siteoptz-img-9.jpg', alt: 'NRG Logo' },
   ];
 
   // Duplicate the clients array to create seamless infinite scroll
@@ -50,9 +51,21 @@ const ClientsSlider: React.FC = () => {
                 style={{ minWidth: '220px', height: '100px' }}
               >
                 <div className="text-center transform group-hover:scale-110 transition-all duration-300 group-hover:bg-white/5 rounded-lg p-4 group-hover:shadow-lg group-hover:shadow-blue-500/20">
-                  <div className={`text-lg md:text-xl lg:text-2xl font-bold ${client.color} group-hover:text-white transition-colors duration-300 tracking-wider font-mono`}>
-                    {client.logo}
-                  </div>
+                  {client.logo.startsWith('http') ? (
+                    <div className="relative w-32 h-16 md:w-40 md:h-20 filter grayscale group-hover:grayscale-0 transition-all duration-300 opacity-70 group-hover:opacity-100">
+                      <Image
+                        src={client.logo}
+                        alt={client.alt}
+                        fill
+                        className="object-contain"
+                        sizes="(max-width: 768px) 128px, 160px"
+                      />
+                    </div>
+                  ) : (
+                    <div className="text-lg md:text-xl lg:text-2xl font-bold text-gray-400 group-hover:text-white transition-colors duration-300 tracking-wider font-mono">
+                      {client.logo}
+                    </div>
+                  )}
                 </div>
               </div>
             ))}
