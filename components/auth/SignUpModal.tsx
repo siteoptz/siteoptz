@@ -67,7 +67,7 @@ const SignUpModal: React.FC<SignUpModalProps> = ({ isOpen, onClose }) => {
         {/* Instructions */}
         <div className="p-4 border-t border-gray-800 bg-black rounded-b-xl">
           <p className="text-center text-gray-300 text-sm">
-            Complete the form above to submit your discovery call application. You'll be redirected to create your account after submission.
+            Complete the form above to submit your discovery call application. You&apos;ll be redirected to create your account after submission.
           </p>
           
           <p className="text-center text-gray-400 text-xs mt-2">
