@@ -48,7 +48,7 @@ export default function SignUpPage() {
             Complete Your Sign-Up
           </h1>
           <p className="text-gray-300 mb-6">
-            Thank you for filling out our discovery form. We're now setting up your account...
+            Thank you for filling out our discovery form. We&apos;re now setting up your account...
           </p>
           
           <div className="flex items-center justify-center">
