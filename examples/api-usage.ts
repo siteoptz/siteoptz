@@ -48,10 +48,13 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
         const encodedData = req.query.qualifying as string;
         const decodedData = JSON.parse(decodeURIComponent(encodedData));
         qualifyingData = {
+          email: session.user?.email || '',
+          name: session.user?.name || '',
           business: decodedData.b,
           bottlenecks: decodedData.bt,
           currentAIUsage: decodedData.ai,
-          priorityOutcome: decodedData.po
+          priorityOutcome: decodedData.po,
+          timestamp: new Date().toISOString()
         };
         console.log('✅ Retrieved from URL params:', qualifyingData);
       } catch (error) {
