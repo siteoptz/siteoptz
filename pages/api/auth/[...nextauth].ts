@@ -46,7 +46,7 @@ async function searchGHLContact(email: string) {
 }
 
 // Helper function to create new contact in GoHighLevel
-async function createGHLContact(email: string, name: string, plan: string = 'free', isTrialUser: boolean = false) {
+async function createGHLContact(email: string, name: string, plan: string = 'free', isTrialUser: boolean = false, qualifyingData?: any) {
   try {
     if (!process.env.GHL_API_KEY || !process.env.GHL_LOCATION_ID) {
       console.log('GHL credentials not configured - skipping contact creation');
@@ -58,6 +58,49 @@ async function createGHLContact(email: string, name: string, plan: string = 'fre
       ? [`siteoptz-trial-${plan}`, 'trial-user', 'oauth-signup']
       : [`siteoptz-plan-${plan}`, 'oauth-signup'];
 
+    // Add discovery-application tag if qualifying data exists
+    if (qualifyingData) {
+      tags.push('discovery-application', 'signup-form');
+    }
+
+    // Build custom fields from qualifying data
+    const customFields = [];
+    if (qualifyingData) {
+      if (qualifyingData.business) {
+        customFields.push({
+          id: 'Q1: Clinic Website (If any)',
+          field_value: qualifyingData.business
+        });
+      }
+      if (qualifyingData.bottlenecks) {
+        customFields.push({
+          id: 'Q2: What are the top 1–2 bottlenecks in your business right now where you believe AI could save you the most time or money?',
+          field_value: qualifyingData.bottlenecks
+        });
+      }
+      if (qualifyingData.currentAIUsage) {
+        customFields.push({
+          id: 'Q3: How are you currently using AI tools in your business today?',
+          field_value: qualifyingData.currentAIUsage
+        });
+      }
+      if (qualifyingData.priorityOutcome) {
+        customFields.push({
+          id: 'Q4: If SiteOptz.ai could fully automate one outcome for you over the next 90 days, which would you prioritize first?',
+          field_value: qualifyingData.priorityOutcome
+        });
+      }
+    }
+
+    const requestBody = {
+      locationId: process.env.GHL_LOCATION_ID,
+      email,
+      name,
+      tags: tags,
+      source: qualifyingData ? 'SiteOptz SignUp Form' : 'Google OAuth',
+      ...(customFields.length > 0 && { customFields })
+    };
+
     const response = await fetch('https://services.leadconnectorhq.com/contacts/', {
       method: 'POST',
       headers: {
@@ -65,13 +108,7 @@ async function createGHLContact(email: string, name: string, plan: string = 'fre
         'Version': '2021-07-28',
         'Content-Type': 'application/json'
       },
-      body: JSON.stringify({
-        locationId: process.env.GHL_LOCATION_ID,
-        email,
-        name,
-        tags: tags,
-        source: 'Google OAuth',
-      })
+      body: JSON.stringify(requestBody)
     });
 
     if (!response.ok) {
@@ -81,13 +118,13 @@ async function createGHLContact(email: string, name: string, plan: string = 'fre
         statusText: response.statusText,
         error: error,
         email: email,
-        requestBody: { email, name, tags, source: 'Google OAuth' }
+        requestBody
       });
       return null;
     }
 
     const data = await response.json();
-    console.log('✅ Created new GHL contact:', email, 'Plan:', plan, 'Trial:', isTrialUser);
+    console.log('✅ Created new GHL contact:', email, 'Plan:', plan, 'Trial:', isTrialUser, 'With qualifying data:', !!qualifyingData);
     return data.contact;
   } catch (error) {
     console.error('GHL create contact error:', error);
@@ -233,6 +270,27 @@ export const authOptions: NextAuthOptions = {
             provider: account?.provider
           });
           
+          // Extract qualifying data from callback URL
+          let qualifyingData = null;
+          if (typeof callbackUrl === 'string' && callbackUrl.includes('qualifying=')) {
+            try {
+              const urlParams = new URLSearchParams(callbackUrl.split('?')[1] || '');
+              const encodedData = urlParams.get('qualifying');
+              if (encodedData) {
+                const decodedData = JSON.parse(decodeURIComponent(encodedData));
+                qualifyingData = {
+                  business: decodedData.b,
+                  bottlenecks: decodedData.bt,
+                  currentAIUsage: decodedData.ai,
+                  priorityOutcome: decodedData.po
+                };
+                console.log('🔍 Extracted qualifying data from URL:', qualifyingData);
+              }
+            } catch (error) {
+              console.error('Error parsing qualifying data:', error);
+            }
+          }
+          
           // More comprehensive trial detection
           const isTrialSignup = (typeof callbackUrl === 'string' && callbackUrl.includes('trial=true')) || 
                                 (typeof state === 'string' && state.includes('trial')) ||
@@ -247,13 +305,14 @@ export const authOptions: NextAuthOptions = {
             plan = urlParams.get('plan') || 'free';
           }
           
-          console.log('🆕 New user via OAuth:', user.email, 'Plan:', plan, 'Trial:', isTrialSignup);
+          console.log('🆕 New user via OAuth:', user.email, 'Plan:', plan, 'Trial:', isTrialSignup, 'Has qualifying data:', !!qualifyingData);
           
           const newContact = await createGHLContact(
             user.email!,
             user.name || 'User',
             plan,
-            isTrialSignup
+            isTrialSignup,
+            qualifyingData
           );
           
           if (!newContact && process.env.GHL_API_KEY) {

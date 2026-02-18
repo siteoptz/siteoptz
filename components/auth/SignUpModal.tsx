@@ -50,53 +50,45 @@ const SignUpModal: React.FC<SignUpModalProps> = ({ isOpen, onClose }) => {
     { value: 'Competitive advantage in market', label: 'Competitive advantage in market' }
   ];
 
-  const submitToGHL = async (formData: any) => {
-    try {
-      // Submit directly to GHL form endpoint
-      const response = await fetch('/api/submit-ghl-form', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({
-          formId: 'sugm3qdEBmvskAdbKwaS',
-          ...formData
-        })
-      });
-
-      if (!response.ok) {
-        throw new Error('Failed to submit to GHL');
-      }
-
-      console.log('Successfully submitted to GHL');
-      return true;
-    } catch (error) {
-      console.error('GHL submission error:', error);
-      return false;
-    }
-  };
+  // Note: GHL submission is now handled by NextAuth callback integration
 
   const handleGoogleOAuth = async () => {
+    console.log('handleGoogleOAuth called with formData:', formData);
+    
     if (!formData.name || !formData.email || !formData.bottlenecks || !formData.currentAIUsage || !formData.priorityOutcome) {
+      console.log('Form validation failed - missing required fields');
       alert('Please fill out all required fields before continuing.');
       return;
     }
 
+    console.log('Form validation passed, starting OAuth process');
     setLoading(true);
     
     try {
-      // Submit to GHL first
-      const ghlSuccess = await submitToGHL(formData);
+      // Store qualifying data in sessionStorage for NextAuth callback to use
+      const qualifyingData = {
+        business: formData.business || '',
+        bottlenecks: formData.bottlenecks || '',
+        currentAIUsage: formData.currentAIUsage || '',
+        priorityOutcome: formData.priorityOutcome || '',
+        timestamp: new Date().toISOString()
+      };
       
-      if (ghlSuccess) {
-        console.log('Form data submitted to GHL, proceeding with OAuth');
-      } else {
-        console.log('GHL submission failed, but proceeding with OAuth');
-      }
+      sessionStorage.setItem('signup_qualifying_data', JSON.stringify(qualifyingData));
+      console.log('Stored qualifying data in sessionStorage:', qualifyingData);
 
-      // Proceed with Google OAuth
+      // Encode qualifying data for URL (as backup method)
+      const encodedData = encodeURIComponent(JSON.stringify({
+        b: formData.business || '',
+        bt: formData.bottlenecks || '',
+        ai: formData.currentAIUsage || '',
+        po: formData.priorityOutcome || ''
+      }));
+
+      // Proceed with Google OAuth - NextAuth will handle GHL integration
+      console.log('Starting Google OAuth...');
       await signIn('google', {
-        callbackUrl: '/dashboard?signup=true',
+        callbackUrl: `/dashboard?signup=true&qualifying=${encodedData}`,
         redirect: true
       });
       

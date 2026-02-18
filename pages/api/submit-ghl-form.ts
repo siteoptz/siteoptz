@@ -1,12 +1,26 @@
 import { NextApiRequest, NextApiResponse } from 'next';
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
+  console.log('GHL API endpoint called with method:', req.method);
+  console.log('Request body received:', req.body);
+  
   if (req.method !== 'POST') {
     return res.status(405).json({ error: 'Method not allowed' });
   }
 
   try {
     const { formId, name, email, phone, business, bottlenecks, currentAIUsage, priorityOutcome } = req.body;
+    
+    console.log('Extracted form data:', {
+      formId,
+      name,
+      email,
+      phone,
+      business,
+      bottlenecks,
+      currentAIUsage,
+      priorityOutcome
+    });
 
     if (!process.env.GHL_API_KEY || !process.env.GHL_LOCATION_ID) {
       console.error('GHL credentials not configured');
