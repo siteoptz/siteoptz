@@ -22,7 +22,7 @@ export default function Dashboard() {
     const { signup, source } = router.query;
     
     if (signup === 'true' && source === 'ghl') {
-      setWelcomeMessage('Thank you for completing our discovery form! Your responses have been submitted and we\'ll be in touch soon.');
+      setWelcomeMessage('Thank you for completing our discovery form! Your responses have been submitted and we&apos;ll be in touch soon.');
       
       // Clean up URL parameters
       router.replace('/dashboard', undefined, { shallow: true });
