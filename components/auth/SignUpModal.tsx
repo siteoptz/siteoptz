@@ -81,29 +81,23 @@ const SignUpModal: React.FC<SignUpModalProps> = ({ isOpen, onClose }) => {
         {/* Embedded GHL Form */}
         <div className="p-0 overflow-y-auto max-h-[calc(90vh-180px)] ghl-form-container">
           <style jsx>{`
-            /* Hide bottom of iframe to cover submit button */
+            /* Cut off iframe to hide submit button */
             .ghl-form-container {
               position: relative;
               overflow: hidden;
+              height: 450px;
             }
-            .ghl-form-container::after {
-              content: '';
-              position: absolute;
-              bottom: 0;
-              left: 0;
-              right: 0;
-              height: 80px;
-              background: linear-gradient(transparent, #000000);
-              pointer-events: none;
-              z-index: 2;
+            .ghl-form-container iframe {
+              margin-bottom: -100px !important;
             }
           `}</style>
           <iframe
             src="https://api.leadconnectorhq.com/widget/form/sugm3qdEBmvskAdbKwaS"
             style={{
               width: '100%',
-              height: '500px',
-              border: 'none'
+              height: '550px',
+              border: 'none',
+              marginBottom: '-100px'
             }}
             id="inline-sugm3qdEBmvskAdbKwaS" 
             data-layout="{'id':'INLINE'}"
@@ -114,7 +108,7 @@ const SignUpModal: React.FC<SignUpModalProps> = ({ isOpen, onClose }) => {
             data-deactivation-type="neverDeactivate"
             data-deactivation-value=""
             data-form-name="Discovery Call Application"
-            data-height="500"
+            data-height="550"
             data-layout-iframe-id="inline-sugm3qdEBmvskAdbKwaS"
             data-form-id="sugm3qdEBmvskAdbKwaS"
             title="Discovery Call Application"
@@ -123,15 +117,10 @@ const SignUpModal: React.FC<SignUpModalProps> = ({ isOpen, onClose }) => {
 
         {/* Google OAuth and Existing User Options */}
         <div className="p-6 border-t border-gray-800 bg-black rounded-b-xl">
-          {/* Divider */}
-          <div className="relative mb-6">
-            <div className="absolute inset-0 flex items-center">
-              <div className="w-full border-t border-gray-800" />
-            </div>
-            <div className="relative flex justify-center text-sm">
-              <span className="px-3 bg-black text-gray-400">or</span>
-            </div>
-          </div>
+          {/* Instruction Text */}
+          <p className="text-center text-gray-300 text-sm mb-4">
+            Complete the form above, then click below to create your account
+          </p>
 
           {/* Google OAuth Button */}
           <button
@@ -149,7 +138,7 @@ const SignUpModal: React.FC<SignUpModalProps> = ({ isOpen, onClose }) => {
                   <path fill="currentColor" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z"/>
                   <path fill="currentColor" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"/>
                 </svg>
-                Submit & Continue with Google
+                Create Account with Google
               </>
             )}
           </button>
