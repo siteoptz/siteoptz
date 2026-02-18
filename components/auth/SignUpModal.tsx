@@ -1,6 +1,6 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import { signIn } from 'next-auth/react';
-import { X, Loader2 } from 'lucide-react';
+import { X, ChevronDown, Loader2, User, Mail, Phone, Building } from 'lucide-react';
 
 interface SignUpModalProps {
   isOpen: boolean;
@@ -9,83 +9,102 @@ interface SignUpModalProps {
 
 const SignUpModal: React.FC<SignUpModalProps> = ({ isOpen, onClose }) => {
   const [loading, setLoading] = useState(false);
+  const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+    phone: '',
+    business: '',
+    bottlenecks: '',
+    currentAIUsage: '',
+    priorityOutcome: ''
+  });
+
+  const bottleneckOptions = [
+    { value: '', label: 'What are the top 1–2 bottlenecks in your business right now where you believe AI could save you the most time or money?' },
+    { value: 'Lead Generation and Qualification', label: 'Lead Generation and Qualification' },
+    { value: 'Reporting & Analytics', label: 'Reporting & Analytics' },
+    { value: 'Content Creation and Marketing', label: 'Content Creation and Marketing' },
+    { value: 'Client Follow-Up and Communication', label: 'Client Follow-Up and Communication' },
+    { value: 'Data Analysis and Insights', label: 'Data Analysis and Insights' },
+    { value: 'Process Automation and Workflows', label: 'Process Automation and Workflows' },
+    { value: 'Customer service and support', label: 'Customer service and support' },
+    { value: 'Project Management and Tracking', label: 'Project Management and Tracking' }
+  ];
+
+  const currentAIUsageOptions = [
+    { value: '', label: 'How are you currently using AI tools in your business today?' },
+    { value: 'No use yet, just exploring options.', label: 'No use yet, just exploring options.' },
+    { value: 'Experimenting personally with AI tools', label: 'Experimenting personally with AI tools' },
+    { value: 'A few workflows in ops/marketing', label: 'A few workflows in ops/marketing' },
+    { value: 'Deeply integrated into core processes', label: 'Deeply integrated into core processes' }
+  ];
+
+  const priorityOutcomeOptions = [
+    { value: '', label: 'If SiteOptz.ai could fully automate one outcome for you over the next 90 days, which would you prioritize first?' },
+    { value: 'More qualified leads', label: 'More qualified leads' },
+    { value: 'Better client visibility/reporting', label: 'Better client visibility/reporting' },
+    { value: 'Faster decision making from data', label: 'Faster decision making from data' },
+    { value: 'Reduced operational costs', label: 'Reduced operational costs' },
+    { value: 'Increased team productivity', label: 'Increased team productivity' },
+    { value: 'Improved customer satisfaction', label: 'Improved customer satisfaction' },
+    { value: 'Competitive advantage in market', label: 'Competitive advantage in market' }
+  ];
+
+  const submitToGHL = async (formData: any) => {
+    try {
+      // Submit directly to GHL form endpoint
+      const response = await fetch('/api/submit-ghl-form', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          formId: 'sugm3qdEBmvskAdbKwaS',
+          ...formData
+        })
+      });
+
+      if (!response.ok) {
+        throw new Error('Failed to submit to GHL');
+      }
+
+      console.log('Successfully submitted to GHL');
+      return true;
+    } catch (error) {
+      console.error('GHL submission error:', error);
+      return false;
+    }
+  };
 
   const handleGoogleOAuth = async () => {
+    if (!formData.name || !formData.email || !formData.bottlenecks || !formData.currentAIUsage || !formData.priorityOutcome) {
+      alert('Please fill out all required fields before continuing.');
+      return;
+    }
+
     setLoading(true);
     
     try {
-      // Try to trigger form submission in the iframe
-      const iframe = document.getElementById('inline-sugm3qdEBmvskAdbKwaS') as HTMLIFrameElement;
+      // Submit to GHL first
+      const ghlSuccess = await submitToGHL(formData);
       
-      if (iframe && iframe.contentWindow) {
-        // Try to send a message to the iframe to submit the form
-        try {
-          iframe.contentWindow.postMessage({
-            type: 'SUBMIT_FORM',
-            formId: 'sugm3qdEBmvskAdbKwaS'
-          }, '*');
-          
-          // Wait a moment for potential form submission
-          setTimeout(() => {
-            // Proceed with Google OAuth regardless of form submission success
-            signIn('google', {
-              callbackUrl: '/dashboard?signup=true',
-              redirect: true
-            });
-          }, 2000);
-          
-        } catch (postMessageError) {
-          console.log('PostMessage failed, proceeding with OAuth');
-          // If postMessage fails, proceed with OAuth immediately
-          await signIn('google', {
-            callbackUrl: '/dashboard?signup=true',
-            redirect: true
-          });
-        }
+      if (ghlSuccess) {
+        console.log('Form data submitted to GHL, proceeding with OAuth');
       } else {
-        // If iframe not accessible, proceed with OAuth
-        await signIn('google', {
-          callbackUrl: '/dashboard?signup=true',
-          redirect: true
-        });
+        console.log('GHL submission failed, but proceeding with OAuth');
       }
+
+      // Proceed with Google OAuth
+      await signIn('google', {
+        callbackUrl: '/dashboard?signup=true',
+        redirect: true
+      });
       
     } catch (error) {
-      console.error('Google OAuth error:', error);
+      console.error('OAuth error:', error);
       setLoading(false);
     }
   };
-  useEffect(() => {
-    if (isOpen) {
-      // Load the GHL form embed script when modal opens
-      const script = document.createElement('script');
-      script.src = 'https://link.msgsndr.com/js/form_embed.js';
-      script.async = true;
-      script.onload = () => {
-        console.log('GHL form script loaded');
-      };
-      document.head.appendChild(script);
-
-      // Listen for messages from the iframe
-      const handleMessage = (event: MessageEvent) => {
-        // Listen for form submission success from GHL
-        if (event.data && event.data.type === 'FORM_SUBMITTED') {
-          console.log('GHL form submitted successfully');
-        }
-      };
-
-      window.addEventListener('message', handleMessage);
-
-      return () => {
-        // Clean up script and event listener when modal closes
-        const existingScript = document.querySelector('script[src="https://link.msgsndr.com/js/form_embed.js"]');
-        if (existingScript) {
-          document.head.removeChild(existingScript);
-        }
-        window.removeEventListener('message', handleMessage);
-      };
-    }
-  }, [isOpen]);
 
   if (!isOpen) return null;
 
@@ -116,48 +135,151 @@ const SignUpModal: React.FC<SignUpModalProps> = ({ isOpen, onClose }) => {
           </button>
         </div>
 
-        {/* Embedded GHL Form */}
-        <div className="p-0 overflow-y-auto max-h-[calc(90vh-180px)] ghl-form-container">
-          <style jsx>{`
-            /* Show complete form but hide submit button area */
-            .ghl-form-container {
-              position: relative;
-              overflow: hidden;
-              height: 500px;
-            }
-            .ghl-form-container iframe {
-              margin-bottom: -80px !important;
-            }
-          `}</style>
-          <iframe
-            src="https://api.leadconnectorhq.com/widget/form/sugm3qdEBmvskAdbKwaS"
-            style={{
-              width: '100%',
-              height: '580px',
-              border: 'none',
-              marginBottom: '-80px'
-            }}
-            id="inline-sugm3qdEBmvskAdbKwaS" 
-            data-layout="{'id':'INLINE'}"
-            data-trigger-type="alwaysShow"
-            data-trigger-value=""
-            data-activation-type="alwaysActivated"
-            data-activation-value=""
-            data-deactivation-type="neverDeactivate"
-            data-deactivation-value=""
-            data-form-name="Discovery Call Application"
-            data-height="580"
-            data-layout-iframe-id="inline-sugm3qdEBmvskAdbKwaS"
-            data-form-id="sugm3qdEBmvskAdbKwaS"
-            title="Discovery Call Application"
-          />
+        {/* Custom Form Fields */}
+        <div className="p-6 overflow-y-auto max-h-[calc(90vh-180px)]">
+          <form className="space-y-6">
+            {/* Name Field */}
+            <div>
+              <label className="block text-sm font-medium text-gray-300 mb-2">
+                Full Name *
+              </label>
+              <div className="relative">
+                <User className="absolute left-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-gray-400" />
+                <input
+                  type="text"
+                  value={formData.name}
+                  onChange={(e) => setFormData(prev => ({ ...prev, name: e.target.value }))}
+                  className="w-full pl-10 pr-4 py-3 bg-gray-900 border border-gray-800 rounded-lg text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                  placeholder="Enter your full name"
+                  required
+                />
+              </div>
+            </div>
+
+            {/* Email Field */}
+            <div>
+              <label className="block text-sm font-medium text-gray-300 mb-2">
+                Email Address *
+              </label>
+              <div className="relative">
+                <Mail className="absolute left-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-gray-400" />
+                <input
+                  type="email"
+                  value={formData.email}
+                  onChange={(e) => setFormData(prev => ({ ...prev, email: e.target.value }))}
+                  className="w-full pl-10 pr-4 py-3 bg-gray-900 border border-gray-800 rounded-lg text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                  placeholder="Enter your email address"
+                  required
+                />
+              </div>
+            </div>
+
+            {/* Phone Field */}
+            <div>
+              <label className="block text-sm font-medium text-gray-300 mb-2">
+                Phone Number
+              </label>
+              <div className="relative">
+                <Phone className="absolute left-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-gray-400" />
+                <input
+                  type="tel"
+                  value={formData.phone}
+                  onChange={(e) => setFormData(prev => ({ ...prev, phone: e.target.value }))}
+                  className="w-full pl-10 pr-4 py-3 bg-gray-900 border border-gray-800 rounded-lg text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                  placeholder="Enter your phone number"
+                />
+              </div>
+            </div>
+
+            {/* Business Name */}
+            <div>
+              <label className="block text-sm font-medium text-gray-300 mb-2">
+                Business Name
+              </label>
+              <div className="relative">
+                <Building className="absolute left-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-gray-400" />
+                <input
+                  type="text"
+                  value={formData.business}
+                  onChange={(e) => setFormData(prev => ({ ...prev, business: e.target.value }))}
+                  className="w-full pl-10 pr-4 py-3 bg-gray-900 border border-gray-800 rounded-lg text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                  placeholder="Enter your business name"
+                />
+              </div>
+            </div>
+
+            {/* Question 1: Bottlenecks */}
+            <div>
+              <label className="block text-sm font-medium text-gray-300 mb-2">
+                What are the top 1–2 bottlenecks in your business right now? *
+              </label>
+              <div className="relative">
+                <select
+                  value={formData.bottlenecks}
+                  onChange={(e) => setFormData(prev => ({ ...prev, bottlenecks: e.target.value }))}
+                  className="w-full appearance-none px-4 py-3 bg-gray-900 border border-gray-800 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                  required
+                >
+                  {bottleneckOptions.map((option) => (
+                    <option key={option.value} value={option.value} className="bg-gray-900">
+                      {option.label}
+                    </option>
+                  ))}
+                </select>
+                <ChevronDown className="absolute right-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-gray-400 pointer-events-none" />
+              </div>
+            </div>
+
+            {/* Question 2: Current AI Usage */}
+            <div>
+              <label className="block text-sm font-medium text-gray-300 mb-2">
+                How are you currently using AI tools? *
+              </label>
+              <div className="relative">
+                <select
+                  value={formData.currentAIUsage}
+                  onChange={(e) => setFormData(prev => ({ ...prev, currentAIUsage: e.target.value }))}
+                  className="w-full appearance-none px-4 py-3 bg-gray-900 border border-gray-800 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                  required
+                >
+                  {currentAIUsageOptions.map((option) => (
+                    <option key={option.value} value={option.value} className="bg-gray-900">
+                      {option.label}
+                    </option>
+                  ))}
+                </select>
+                <ChevronDown className="absolute right-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-gray-400 pointer-events-none" />
+              </div>
+            </div>
+
+            {/* Question 3: Priority Outcome */}
+            <div>
+              <label className="block text-sm font-medium text-gray-300 mb-2">
+                What would you prioritize automating first? *
+              </label>
+              <div className="relative">
+                <select
+                  value={formData.priorityOutcome}
+                  onChange={(e) => setFormData(prev => ({ ...prev, priorityOutcome: e.target.value }))}
+                  className="w-full appearance-none px-4 py-3 bg-gray-900 border border-gray-800 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                  required
+                >
+                  {priorityOutcomeOptions.map((option) => (
+                    <option key={option.value} value={option.value} className="bg-gray-900">
+                      {option.label}
+                    </option>
+                  ))}
+                </select>
+                <ChevronDown className="absolute right-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-gray-400 pointer-events-none" />
+              </div>
+            </div>
+          </form>
         </div>
 
-        {/* Google OAuth and Existing User Options */}
+        {/* Google OAuth Section */}
         <div className="p-6 border-t border-gray-800 bg-black rounded-b-xl">
-          {/* Instruction Text */}
           <p className="text-center text-gray-300 text-sm mb-4">
-            Complete all fields above, then click below to submit your application and create your account
+            Complete all required fields above, then create your account
           </p>
 
           {/* Google OAuth Button */}
