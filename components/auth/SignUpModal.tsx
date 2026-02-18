@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { signIn } from 'next-auth/react';
-import { X, Mail, Lock, User, Building, Target, Loader2 } from 'lucide-react';
+import { X, Mail, Lock, User, Building, ChevronDown, Loader2 } from 'lucide-react';
 
 interface SignUpModalProps {
   isOpen: boolean;
@@ -15,42 +15,66 @@ const SignUpModal: React.FC<SignUpModalProps> = ({ isOpen, onClose }) => {
     password: '',
     name: '',
     business: '',
-    interests: [] as string[],
-    goals: [] as string[]
+    bottlenecks: '',
+    currentAIUsage: '',
+    priorityOutcome: ''
   });
 
-  const interestOptions = [
-    'AI Strategy & Planning',
-    'Content Creation & Marketing',
-    'Data Analysis & Insights',
-    'Process Automation',
-    'Customer Service & Support',
-    'Sales & Lead Generation',
-    'Product Development',
-    'Cost Optimization'
+  const bottleneckOptions = [
+    { value: '', label: 'Select your top bottlenecks...' },
+    { value: 'lead-generation', label: 'Lead generation and qualification' },
+    { value: 'reporting-analytics', label: 'Reporting and analytics' },
+    { value: 'content-creation', label: 'Content creation and marketing' },
+    { value: 'client-follow-up', label: 'Client follow-up and communication' },
+    { value: 'data-analysis', label: 'Data analysis and insights' },
+    { value: 'process-automation', label: 'Process automation and workflows' },
+    { value: 'customer-service', label: 'Customer service and support' },
+    { value: 'project-management', label: 'Project management and tracking' }
   ];
 
-  const goalOptions = [
-    'Increase Productivity',
-    'Reduce Operational Costs',
-    'Improve Customer Experience',
-    'Scale Business Operations',
-    'Generate More Leads',
-    'Enhance Decision Making',
-    'Automate Repetitive Tasks',
-    'Stay Competitive'
+  const currentAIUsageOptions = [
+    { value: '', label: 'Select your current AI usage...' },
+    { value: 'no-use', label: 'No use yet - just exploring options' },
+    { value: 'experimenting', label: 'Experimenting personally with AI tools' },
+    { value: 'few-workflows', label: 'A few workflows in ops/marketing' },
+    { value: 'deeply-integrated', label: 'Deeply integrated into core processes' }
+  ];
+
+  const priorityOutcomeOptions = [
+    { value: '', label: 'Select your top priority...' },
+    { value: 'qualified-leads', label: 'More qualified leads' },
+    { value: 'client-reporting', label: 'Better client visibility/reporting' },
+    { value: 'faster-decisions', label: 'Faster decision-making from data' },
+    { value: 'cost-reduction', label: 'Reduced operational costs' },
+    { value: 'team-productivity', label: 'Increased team productivity' },
+    { value: 'customer-satisfaction', label: 'Improved customer satisfaction' },
+    { value: 'competitive-advantage', label: 'Competitive advantage in market' }
   ];
 
   const handleGoogleSignUp = async () => {
-    setLoading(true);
-    try {
-      await signIn('google', {
-        callbackUrl: '/dashboard?signup=true',
-        redirect: true
-      });
-    } catch (error) {
-      console.error('Google sign up error:', error);
-      setLoading(false);
+    if (step === 'auth') {
+      // Move to questions step for Google OAuth users
+      setStep('questions');
+    } else {
+      // Complete signup with Google OAuth
+      setLoading(true);
+      try {
+        // Store qualifying data in localStorage for the OAuth callback
+        localStorage.setItem('signupQualifyingData', JSON.stringify({
+          business: formData.business,
+          bottlenecks: formData.bottlenecks,
+          currentAIUsage: formData.currentAIUsage,
+          priorityOutcome: formData.priorityOutcome
+        }));
+        
+        await signIn('google', {
+          callbackUrl: '/dashboard?signup=true',
+          redirect: true
+        });
+      } catch (error) {
+        console.error('Google sign up error:', error);
+        setLoading(false);
+      }
     }
   };
 
@@ -72,42 +96,11 @@ const SignUpModal: React.FC<SignUpModalProps> = ({ isOpen, onClose }) => {
 
   const handleQuestionSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    setLoading(true);
     
-    try {
-      // TODO: Send qualifying data to backend/GHL
-      console.log('User qualifying data:', {
-        business: formData.business,
-        interests: formData.interests,
-        goals: formData.goals
-      });
-      
-      // Close modal and redirect
-      onClose();
-      window.location.href = '/dashboard';
-    } catch (error) {
-      console.error('Question submission error:', error);
-    }
-    setLoading(false);
+    // Trigger Google OAuth with qualifying data
+    handleGoogleSignUp();
   };
 
-  const handleInterestToggle = (interest: string) => {
-    setFormData(prev => ({
-      ...prev,
-      interests: prev.interests.includes(interest)
-        ? prev.interests.filter(i => i !== interest)
-        : [...prev.interests, interest]
-    }));
-  };
-
-  const handleGoalToggle = (goal: string) => {
-    setFormData(prev => ({
-      ...prev,
-      goals: prev.goals.includes(goal)
-        ? prev.goals.filter(g => g !== goal)
-        : [...prev.goals, goal]
-    }));
-  };
 
   if (!isOpen) return null;
 
@@ -277,75 +270,69 @@ const SignUpModal: React.FC<SignUpModalProps> = ({ isOpen, onClose }) => {
                   </div>
                 </div>
 
-                {/* Main Interests */}
+                {/* Question 1: Bottlenecks */}
                 <div>
-                  <label className="block text-sm font-medium text-gray-300 mb-3">
-                    What are your main interests? (Select all that apply)
+                  <label className="block text-sm font-medium text-gray-300 mb-2">
+                    What are the top 1–2 bottlenecks in your business right now where you believe AI could save you the most time or money?
                   </label>
-                  <div className="grid grid-cols-1 gap-2">
-                    {interestOptions.map((interest) => (
-                      <label
-                        key={interest}
-                        className="flex items-center p-3 bg-gray-900 border border-gray-800 rounded-lg cursor-pointer hover:bg-gray-800 transition-colors"
-                      >
-                        <input
-                          type="checkbox"
-                          checked={formData.interests.includes(interest)}
-                          onChange={() => handleInterestToggle(interest)}
-                          className="sr-only"
-                        />
-                        <div
-                          className={`w-4 h-4 rounded border-2 mr-3 flex items-center justify-center ${
-                            formData.interests.includes(interest)
-                              ? 'bg-blue-600 border-blue-600'
-                              : 'border-gray-600'
-                          }`}
-                        >
-                          {formData.interests.includes(interest) && (
-                            <svg className="w-3 h-3 text-white" fill="currentColor" viewBox="0 0 20 20">
-                              <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-                            </svg>
-                          )}
-                        </div>
-                        <span className="text-white text-sm">{interest}</span>
-                      </label>
-                    ))}
+                  <div className="relative">
+                    <select
+                      value={formData.bottlenecks}
+                      onChange={(e) => setFormData(prev => ({ ...prev, bottlenecks: e.target.value }))}
+                      className="w-full appearance-none px-4 py-3 bg-gray-900 border border-gray-800 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                      required
+                    >
+                      {bottleneckOptions.map((option) => (
+                        <option key={option.value} value={option.value} className="bg-gray-900">
+                          {option.label}
+                        </option>
+                      ))}
+                    </select>
+                    <ChevronDown className="absolute right-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-gray-400 pointer-events-none" />
                   </div>
                 </div>
 
-                {/* Goals */}
+                {/* Question 2: Current AI Usage */}
                 <div>
-                  <label className="block text-sm font-medium text-gray-300 mb-3">
-                    What are your goals? (Select all that apply)
+                  <label className="block text-sm font-medium text-gray-300 mb-2">
+                    How are you currently using AI tools in your business today?
                   </label>
-                  <div className="grid grid-cols-1 gap-2">
-                    {goalOptions.map((goal) => (
-                      <label
-                        key={goal}
-                        className="flex items-center p-3 bg-gray-900 border border-gray-800 rounded-lg cursor-pointer hover:bg-gray-800 transition-colors"
-                      >
-                        <input
-                          type="checkbox"
-                          checked={formData.goals.includes(goal)}
-                          onChange={() => handleGoalToggle(goal)}
-                          className="sr-only"
-                        />
-                        <div
-                          className={`w-4 h-4 rounded border-2 mr-3 flex items-center justify-center ${
-                            formData.goals.includes(goal)
-                              ? 'bg-blue-600 border-blue-600'
-                              : 'border-gray-600'
-                          }`}
-                        >
-                          {formData.goals.includes(goal) && (
-                            <svg className="w-3 h-3 text-white" fill="currentColor" viewBox="0 0 20 20">
-                              <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-                            </svg>
-                          )}
-                        </div>
-                        <span className="text-white text-sm">{goal}</span>
-                      </label>
-                    ))}
+                  <div className="relative">
+                    <select
+                      value={formData.currentAIUsage}
+                      onChange={(e) => setFormData(prev => ({ ...prev, currentAIUsage: e.target.value }))}
+                      className="w-full appearance-none px-4 py-3 bg-gray-900 border border-gray-800 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                      required
+                    >
+                      {currentAIUsageOptions.map((option) => (
+                        <option key={option.value} value={option.value} className="bg-gray-900">
+                          {option.label}
+                        </option>
+                      ))}
+                    </select>
+                    <ChevronDown className="absolute right-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-gray-400 pointer-events-none" />
+                  </div>
+                </div>
+
+                {/* Question 3: Priority Outcome */}
+                <div>
+                  <label className="block text-sm font-medium text-gray-300 mb-2">
+                    If SiteOptz.ai could fully automate one outcome for you over the next 90 days, which would you prioritize first?
+                  </label>
+                  <div className="relative">
+                    <select
+                      value={formData.priorityOutcome}
+                      onChange={(e) => setFormData(prev => ({ ...prev, priorityOutcome: e.target.value }))}
+                      className="w-full appearance-none px-4 py-3 bg-gray-900 border border-gray-800 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                      required
+                    >
+                      {priorityOutcomeOptions.map((option) => (
+                        <option key={option.value} value={option.value} className="bg-gray-900">
+                          {option.label}
+                        </option>
+                      ))}
+                    </select>
+                    <ChevronDown className="absolute right-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-gray-400 pointer-events-none" />
                   </div>
                 </div>
 
@@ -359,7 +346,7 @@ const SignUpModal: React.FC<SignUpModalProps> = ({ isOpen, onClose }) => {
                   </button>
                   <button
                     type="submit"
-                    disabled={loading || !formData.business || formData.interests.length === 0 || formData.goals.length === 0}
+                    disabled={loading || !formData.business || !formData.bottlenecks || !formData.currentAIUsage || !formData.priorityOutcome}
                     className="flex-1 px-4 py-3 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-lg font-semibold hover:from-blue-700 hover:to-purple-700 transition-all duration-200 disabled:opacity-50 disabled:cursor-not-allowed"
                   >
                     {loading ? (
@@ -368,7 +355,7 @@ const SignUpModal: React.FC<SignUpModalProps> = ({ isOpen, onClose }) => {
                         Completing...
                       </div>
                     ) : (
-                      'Complete Setup'
+                      'Continue with Google'
                     )}
                   </button>
                 </div>
