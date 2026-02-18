@@ -64,7 +64,7 @@ async function createGHLContact(email: string, name: string, plan: string = 'fre
     }
 
     // Build custom fields from qualifying data
-    const customFields = [];
+    const customFields: Array<{id: string, field_value: string}> = [];
     if (qualifyingData) {
       console.log('🔧 Building custom fields from qualifying data:', qualifyingData);
       
