@@ -30,19 +30,19 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
         source: 'SiteOptz SignUp Form',
         customFields: [
           {
-            id: 'business_name',
+            id: 'Q1: Clinic Website (If any)',
             field_value: business || ''
           },
           {
-            id: 'bottlenecks',
+            id: 'Q2: What are the top 1–2 bottlenecks in your business right now where you believe AI could save you the most time or money?',
             field_value: bottlenecks || ''
           },
           {
-            id: 'ai_usage',
+            id: 'Q3: How are you currently using AI tools in your business today?',
             field_value: currentAIUsage || ''
           },
           {
-            id: 'priority_outcome',
+            id: 'Q4: If SiteOptz.ai could fully automate one outcome for you over the next 90 days, which would you prioritize first?',
             field_value: priorityOutcome || ''
           }
         ]

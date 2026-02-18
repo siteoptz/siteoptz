@@ -20,7 +20,7 @@ const SignUpModal: React.FC<SignUpModalProps> = ({ isOpen, onClose }) => {
   });
 
   const bottleneckOptions = [
-    { value: '', label: 'What are the top 1–2 bottlenecks in your business right now where you believe AI could save you the most time or money?' },
+    { value: '', label: 'Q2: What are the top 1–2 bottlenecks in your business right now where you believe AI could save you the most time or money?' },
     { value: 'Lead Generation and Qualification', label: 'Lead Generation and Qualification' },
     { value: 'Reporting & Analytics', label: 'Reporting & Analytics' },
     { value: 'Content Creation and Marketing', label: 'Content Creation and Marketing' },
@@ -32,7 +32,7 @@ const SignUpModal: React.FC<SignUpModalProps> = ({ isOpen, onClose }) => {
   ];
 
   const currentAIUsageOptions = [
-    { value: '', label: 'How are you currently using AI tools in your business today?' },
+    { value: '', label: 'Q3: How are you currently using AI tools in your business today?' },
     { value: 'No use yet, just exploring options.', label: 'No use yet, just exploring options.' },
     { value: 'Experimenting personally with AI tools', label: 'Experimenting personally with AI tools' },
     { value: 'A few workflows in ops/marketing', label: 'A few workflows in ops/marketing' },
@@ -40,7 +40,7 @@ const SignUpModal: React.FC<SignUpModalProps> = ({ isOpen, onClose }) => {
   ];
 
   const priorityOutcomeOptions = [
-    { value: '', label: 'If SiteOptz.ai could fully automate one outcome for you over the next 90 days, which would you prioritize first?' },
+    { value: '', label: 'Q4: If SiteOptz.ai could fully automate one outcome for you over the next 90 days, which would you prioritize first?' },
     { value: 'More qualified leads', label: 'More qualified leads' },
     { value: 'Better client visibility/reporting', label: 'Better client visibility/reporting' },
     { value: 'Faster decision making from data', label: 'Faster decision making from data' },
@@ -191,10 +191,10 @@ const SignUpModal: React.FC<SignUpModalProps> = ({ isOpen, onClose }) => {
               </div>
             </div>
 
-            {/* Business Name */}
+            {/* Clinic Website */}
             <div>
               <label className="block text-sm font-medium text-gray-300 mb-2">
-                Business Name
+                Clinic Website (If any)
               </label>
               <div className="relative">
                 <Building className="absolute left-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-gray-400" />
@@ -203,15 +203,15 @@ const SignUpModal: React.FC<SignUpModalProps> = ({ isOpen, onClose }) => {
                   value={formData.business}
                   onChange={(e) => setFormData(prev => ({ ...prev, business: e.target.value }))}
                   className="w-full pl-10 pr-4 py-3 bg-gray-900 border border-gray-800 rounded-lg text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                  placeholder="Enter your business name"
+                  placeholder="Enter your clinic website URL (optional)"
                 />
               </div>
             </div>
 
-            {/* Question 1: Bottlenecks */}
+            {/* Question 2: Bottlenecks */}
             <div>
               <label className="block text-sm font-medium text-gray-300 mb-2">
-                What are the top 1–2 bottlenecks in your business right now? *
+                What are the top 1–2 bottlenecks in your business right now where you believe AI could save you the most time or money? *
               </label>
               <div className="relative">
                 <select
@@ -230,10 +230,10 @@ const SignUpModal: React.FC<SignUpModalProps> = ({ isOpen, onClose }) => {
               </div>
             </div>
 
-            {/* Question 2: Current AI Usage */}
+            {/* Question 3: Current AI Usage */}
             <div>
               <label className="block text-sm font-medium text-gray-300 mb-2">
-                How are you currently using AI tools? *
+                How are you currently using AI tools in your business today? *
               </label>
               <div className="relative">
                 <select
@@ -252,10 +252,10 @@ const SignUpModal: React.FC<SignUpModalProps> = ({ isOpen, onClose }) => {
               </div>
             </div>
 
-            {/* Question 3: Priority Outcome */}
+            {/* Question 4: Priority Outcome */}
             <div>
               <label className="block text-sm font-medium text-gray-300 mb-2">
-                What would you prioritize automating first? *
+                If SiteOptz.ai could fully automate one outcome for you over the next 90 days, which would you prioritize first? *
               </label>
               <div className="relative">
                 <select
