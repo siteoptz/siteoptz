@@ -54,7 +54,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
           bottlenecks: decodedData.bt,
           currentAIUsage: decodedData.ai,
           priorityOutcome: decodedData.po,
-          timestamp: new Date().toISOString()
+          timestamp: Date.now()
         };
         console.log('✅ Retrieved from URL params:', qualifyingData);
       } catch (error) {
