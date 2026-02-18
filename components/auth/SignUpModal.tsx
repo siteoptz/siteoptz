@@ -62,7 +62,6 @@ const SignUpModal: React.FC<SignUpModalProps> = ({ isOpen, onClose }) => {
             data-form-id="sugm3qdEBmvskAdbKwaS"
             title="Discovery Call Application"
           />
-          <script src="https://link.msgsndr.com/js/form_embed.js"></script>
         </div>
 
         {/* Instructions */}
