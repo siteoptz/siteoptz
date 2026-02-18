@@ -13,16 +13,43 @@ const SignUpModal: React.FC<SignUpModalProps> = ({ isOpen, onClose }) => {
   const handleGoogleOAuth = async () => {
     setLoading(true);
     
-    // Note: Due to CORS/iframe restrictions, we cannot directly access the form data
-    // The user must fill out the form, then click our Google OAuth button
-    // The form data will be submitted to GHL when the user completes the form in the iframe
-    // Then they proceed with Google OAuth for account creation
-    
     try {
-      await signIn('google', {
-        callbackUrl: '/dashboard?signup=true',
-        redirect: true
-      });
+      // Try to trigger form submission in the iframe
+      const iframe = document.getElementById('inline-sugm3qdEBmvskAdbKwaS') as HTMLIFrameElement;
+      
+      if (iframe && iframe.contentWindow) {
+        // Try to send a message to the iframe to submit the form
+        try {
+          iframe.contentWindow.postMessage({
+            type: 'SUBMIT_FORM',
+            formId: 'sugm3qdEBmvskAdbKwaS'
+          }, '*');
+          
+          // Wait a moment for potential form submission
+          setTimeout(() => {
+            // Proceed with Google OAuth regardless of form submission success
+            signIn('google', {
+              callbackUrl: '/dashboard?signup=true',
+              redirect: true
+            });
+          }, 2000);
+          
+        } catch (postMessageError) {
+          console.log('PostMessage failed, proceeding with OAuth');
+          // If postMessage fails, proceed with OAuth immediately
+          await signIn('google', {
+            callbackUrl: '/dashboard?signup=true',
+            redirect: true
+          });
+        }
+      } else {
+        // If iframe not accessible, proceed with OAuth
+        await signIn('google', {
+          callbackUrl: '/dashboard?signup=true',
+          redirect: true
+        });
+      }
+      
     } catch (error) {
       console.error('Google OAuth error:', error);
       setLoading(false);
@@ -39,12 +66,23 @@ const SignUpModal: React.FC<SignUpModalProps> = ({ isOpen, onClose }) => {
       };
       document.head.appendChild(script);
 
+      // Listen for messages from the iframe
+      const handleMessage = (event: MessageEvent) => {
+        // Listen for form submission success from GHL
+        if (event.data && event.data.type === 'FORM_SUBMITTED') {
+          console.log('GHL form submitted successfully');
+        }
+      };
+
+      window.addEventListener('message', handleMessage);
+
       return () => {
-        // Clean up script when modal closes (optional - could keep for performance)
+        // Clean up script and event listener when modal closes
         const existingScript = document.querySelector('script[src="https://link.msgsndr.com/js/form_embed.js"]');
         if (existingScript) {
           document.head.removeChild(existingScript);
         }
+        window.removeEventListener('message', handleMessage);
       };
     }
   }, [isOpen]);
@@ -81,23 +119,23 @@ const SignUpModal: React.FC<SignUpModalProps> = ({ isOpen, onClose }) => {
         {/* Embedded GHL Form */}
         <div className="p-0 overflow-y-auto max-h-[calc(90vh-180px)] ghl-form-container">
           <style jsx>{`
-            /* Cut off iframe to hide submit button */
+            /* Show complete form but hide submit button area */
             .ghl-form-container {
               position: relative;
               overflow: hidden;
-              height: 450px;
+              height: 500px;
             }
             .ghl-form-container iframe {
-              margin-bottom: -100px !important;
+              margin-bottom: -80px !important;
             }
           `}</style>
           <iframe
             src="https://api.leadconnectorhq.com/widget/form/sugm3qdEBmvskAdbKwaS"
             style={{
               width: '100%',
-              height: '550px',
+              height: '580px',
               border: 'none',
-              marginBottom: '-100px'
+              marginBottom: '-80px'
             }}
             id="inline-sugm3qdEBmvskAdbKwaS" 
             data-layout="{'id':'INLINE'}"
@@ -108,7 +146,7 @@ const SignUpModal: React.FC<SignUpModalProps> = ({ isOpen, onClose }) => {
             data-deactivation-type="neverDeactivate"
             data-deactivation-value=""
             data-form-name="Discovery Call Application"
-            data-height="550"
+            data-height="580"
             data-layout-iframe-id="inline-sugm3qdEBmvskAdbKwaS"
             data-form-id="sugm3qdEBmvskAdbKwaS"
             title="Discovery Call Application"
@@ -119,7 +157,7 @@ const SignUpModal: React.FC<SignUpModalProps> = ({ isOpen, onClose }) => {
         <div className="p-6 border-t border-gray-800 bg-black rounded-b-xl">
           {/* Instruction Text */}
           <p className="text-center text-gray-300 text-sm mb-4">
-            Complete the form above, then click below to create your account
+            Complete all fields above, then click below to submit your application and create your account
           </p>
 
           {/* Google OAuth Button */}
