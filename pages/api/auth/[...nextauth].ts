@@ -66,9 +66,21 @@ async function createGHLContact(email: string, name: string, plan: string = 'fre
     // Build custom fields from qualifying data
     const customFields = [];
     if (qualifyingData) {
+      console.log('🔧 Building custom fields from qualifying data:', qualifyingData);
+      
       if (qualifyingData.business) {
+        // Try multiple possible field ID formats
         customFields.push({
           id: 'Q1: Clinic Website (If any)',
+          field_value: qualifyingData.business
+        });
+        // Also try simplified versions as backup
+        customFields.push({
+          id: 'clinic_website',
+          field_value: qualifyingData.business
+        });
+        customFields.push({
+          id: 'business_website',
           field_value: qualifyingData.business
         });
       }
@@ -77,10 +89,26 @@ async function createGHLContact(email: string, name: string, plan: string = 'fre
           id: 'Q2: What are the top 1–2 bottlenecks in your business right now where you believe AI could save you the most time or money?',
           field_value: qualifyingData.bottlenecks
         });
+        customFields.push({
+          id: 'bottlenecks',
+          field_value: qualifyingData.bottlenecks
+        });
+        customFields.push({
+          id: 'business_bottlenecks',
+          field_value: qualifyingData.bottlenecks
+        });
       }
       if (qualifyingData.currentAIUsage) {
         customFields.push({
           id: 'Q3: How are you currently using AI tools in your business today?',
+          field_value: qualifyingData.currentAIUsage
+        });
+        customFields.push({
+          id: 'ai_usage',
+          field_value: qualifyingData.currentAIUsage
+        });
+        customFields.push({
+          id: 'current_ai_usage',
           field_value: qualifyingData.currentAIUsage
         });
       }
@@ -89,7 +117,17 @@ async function createGHLContact(email: string, name: string, plan: string = 'fre
           id: 'Q4: If SiteOptz.ai could fully automate one outcome for you over the next 90 days, which would you prioritize first?',
           field_value: qualifyingData.priorityOutcome
         });
+        customFields.push({
+          id: 'priority_outcome',
+          field_value: qualifyingData.priorityOutcome
+        });
+        customFields.push({
+          id: 'automation_priority',
+          field_value: qualifyingData.priorityOutcome
+        });
       }
+      
+      console.log('🔧 Custom fields array length:', customFields.length);
     }
 
     const requestBody = {
@@ -101,6 +139,8 @@ async function createGHLContact(email: string, name: string, plan: string = 'fre
       ...(customFields.length > 0 && { customFields })
     };
 
+    console.log('🔧 GHL API Request Body:', JSON.stringify(requestBody, null, 2));
+    
     const response = await fetch('https://services.leadconnectorhq.com/contacts/', {
       method: 'POST',
       headers: {
@@ -110,6 +150,9 @@ async function createGHLContact(email: string, name: string, plan: string = 'fre
       },
       body: JSON.stringify(requestBody)
     });
+
+    console.log('🔧 GHL API Response Status:', response.status);
+    console.log('🔧 GHL API Response Headers:', Object.fromEntries(response.headers.entries()));
 
     if (!response.ok) {
       const error = await response.text();
@@ -125,6 +168,7 @@ async function createGHLContact(email: string, name: string, plan: string = 'fre
 
     const data = await response.json();
     console.log('✅ Created new GHL contact:', email, 'Plan:', plan, 'Trial:', isTrialUser, 'With qualifying data:', !!qualifyingData);
+    console.log('🔧 GHL Response Data:', JSON.stringify(data, null, 2));
     return data.contact;
   } catch (error) {
     console.error('GHL create contact error:', error);
@@ -272,12 +316,16 @@ export const authOptions: NextAuthOptions = {
           
           // Extract qualifying data from callback URL
           let qualifyingData = null;
+          console.log('🔍 Checking for qualifying data in callback URL:', callbackUrl);
           if (typeof callbackUrl === 'string' && callbackUrl.includes('qualifying=')) {
             try {
+              console.log('🔍 Found qualifying parameter in URL');
               const urlParams = new URLSearchParams(callbackUrl.split('?')[1] || '');
               const encodedData = urlParams.get('qualifying');
+              console.log('🔍 Encoded data:', encodedData);
               if (encodedData) {
                 const decodedData = JSON.parse(decodeURIComponent(encodedData));
+                console.log('🔍 Decoded data:', decodedData);
                 qualifyingData = {
                   business: decodedData.b,
                   bottlenecks: decodedData.bt,
@@ -287,8 +335,10 @@ export const authOptions: NextAuthOptions = {
                 console.log('🔍 Extracted qualifying data from URL:', qualifyingData);
               }
             } catch (error) {
-              console.error('Error parsing qualifying data:', error);
+              console.error('❌ Error parsing qualifying data:', error);
             }
+          } else {
+            console.log('🔍 No qualifying data found in callback URL');
           }
           
           // More comprehensive trial detection
