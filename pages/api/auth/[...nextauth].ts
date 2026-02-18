@@ -245,6 +245,63 @@ async function addToTrialPipeline(contactId: string, trialType: string) {
   }
 }
 
+// Helper function to submit qualifying data to GHL form submissions endpoint
+async function submitToGHLFormSubmissions(email: string, name: string, qualifyingData: any) {
+  try {
+    if (!process.env.GHL_API_KEY || !process.env.GHL_LOCATION_ID) {
+      console.log('GHL credentials not configured - skipping form submission');
+      return null;
+    }
+
+    console.log('🔧 Preparing form submission data for GHL:', qualifyingData);
+
+    // Submit directly to the form submissions endpoint you provided
+    const formSubmissionData = {
+      locationId: process.env.GHL_LOCATION_ID,
+      formId: 'sugm3qdEBmvskAdbKwaS', // Your form ID
+      email: email,
+      name: name,
+      // Try to match the form field structure
+      'Q1: Clinic Website (If any)': qualifyingData.business || '',
+      'Q2: What are the top 1–2 bottlenecks in your business right now where you believe AI could save you the most time or money?': qualifyingData.bottlenecks || '',
+      'Q3: How are you currently using AI tools in your business today?': qualifyingData.currentAIUsage || '',
+      'Q4: If SiteOptz.ai could fully automate one outcome for you over the next 90 days, which would you prioritize first?': qualifyingData.priorityOutcome || ''
+    };
+
+    console.log('🔧 Form submission request body:', JSON.stringify(formSubmissionData, null, 2));
+
+    const response = await fetch('https://app.gohighlevel.com/v2/location/ECu5ScdYFmB0WnhvYoBU/form-builder/submissions', {
+      method: 'POST',
+      headers: {
+        'Authorization': `Bearer ${process.env.GHL_API_KEY}`,
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(formSubmissionData)
+    });
+
+    console.log('🔧 GHL Form Submission Response Status:', response.status);
+    console.log('🔧 GHL Form Submission Response Headers:', Object.fromEntries(response.headers.entries()));
+
+    if (!response.ok) {
+      const error = await response.text();
+      console.error('❌ GHL form submission failed:', {
+        status: response.status,
+        statusText: response.statusText,
+        error: error,
+        endpoint: 'form-builder/submissions'
+      });
+      return null;
+    }
+
+    const data = await response.json();
+    console.log('✅ Successfully submitted qualifying data to GHL form:', data);
+    return data;
+  } catch (error) {
+    console.error('GHL form submission error:', error);
+    return null;
+  }
+}
+
 // Helper function to extract plan from GHL contact tags
 function extractPlanFromTags(tags: string[]): string {
   if (!tags || !Array.isArray(tags)) return 'free';
@@ -350,6 +407,12 @@ export const authOptions: NextAuthOptions = {
             isTrialSignup,
             qualifyingData
           );
+          
+          // Also submit qualifying data directly to GHL form submissions
+          if (qualifyingData) {
+            console.log('🔧 Submitting qualifying data to GHL form submissions endpoint');
+            await submitToGHLFormSubmissions(user.email!, user.name || 'User', qualifyingData);
+          }
           
           if (!newContact && process.env.GHL_API_KEY) {
             // If GHL is configured but creation failed, log error but ALLOW sign in
