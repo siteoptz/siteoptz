@@ -68,66 +68,40 @@ async function createGHLContact(email: string, name: string, plan: string = 'fre
     if (qualifyingData) {
       console.log('🔧 Building custom fields from qualifying data:', qualifyingData);
       
-      if (qualifyingData.business) {
-        // Try multiple possible field ID formats
-        customFields.push({
-          id: 'Q1: Clinic Website (If any)',
-          field_value: qualifyingData.business
-        });
-        // Also try simplified versions as backup
-        customFields.push({
-          id: 'clinic_website',
-          field_value: qualifyingData.business
-        });
-        customFields.push({
-          id: 'business_website',
-          field_value: qualifyingData.business
-        });
-      }
-      if (qualifyingData.bottlenecks) {
-        customFields.push({
-          id: 'Q2: What are the top 1–2 bottlenecks in your business right now where you believe AI could save you the most time or money?',
-          field_value: qualifyingData.bottlenecks
-        });
-        customFields.push({
-          id: 'bottlenecks',
-          field_value: qualifyingData.bottlenecks
-        });
-        customFields.push({
-          id: 'business_bottlenecks',
-          field_value: qualifyingData.bottlenecks
-        });
-      }
-      if (qualifyingData.currentAIUsage) {
-        customFields.push({
-          id: 'Q3: How are you currently using AI tools in your business today?',
-          field_value: qualifyingData.currentAIUsage
-        });
-        customFields.push({
-          id: 'ai_usage',
-          field_value: qualifyingData.currentAIUsage
-        });
-        customFields.push({
-          id: 'current_ai_usage',
-          field_value: qualifyingData.currentAIUsage
-        });
-      }
-      if (qualifyingData.priorityOutcome) {
-        customFields.push({
-          id: 'Q4: If SiteOptz.ai could fully automate one outcome for you over the next 90 days, which would you prioritize first?',
-          field_value: qualifyingData.priorityOutcome
-        });
-        customFields.push({
-          id: 'priority_outcome',
-          field_value: qualifyingData.priorityOutcome
-        });
-        customFields.push({
-          id: 'automation_priority',
-          field_value: qualifyingData.priorityOutcome
-        });
-      }
+      // Create a comprehensive test with all possible field formats
+      const fieldMappings = [
+        // Try the exact display names you provided
+        { key: 'business', value: qualifyingData.business, ids: ['Q1: Clinic Website (If any)'] },
+        { key: 'bottlenecks', value: qualifyingData.bottlenecks, ids: ['Q2: What are the top 1–2 bottlenecks in your business right now where you believe AI could save you the most time or money?'] },
+        { key: 'currentAIUsage', value: qualifyingData.currentAIUsage, ids: ['Q3: How are you currently using AI tools in your business today?'] },
+        { key: 'priorityOutcome', value: qualifyingData.priorityOutcome, ids: ['Q4: If SiteOptz.ai could fully automate one outcome for you over the next 90 days, which would you prioritize first?'] },
+        
+        // Try simplified field names
+        { key: 'business', value: qualifyingData.business, ids: ['clinic_website', 'business_website', 'website'] },
+        { key: 'bottlenecks', value: qualifyingData.bottlenecks, ids: ['bottlenecks', 'business_bottlenecks', 'challenges'] },
+        { key: 'currentAIUsage', value: qualifyingData.currentAIUsage, ids: ['ai_usage', 'current_ai_usage', 'ai_tools'] },
+        { key: 'priorityOutcome', value: qualifyingData.priorityOutcome, ids: ['priority_outcome', 'automation_priority', 'desired_outcome'] },
+        
+        // Try common GHL custom field patterns
+        { key: 'business', value: qualifyingData.business, ids: ['custom_field_1', 'q1', 'field1'] },
+        { key: 'bottlenecks', value: qualifyingData.bottlenecks, ids: ['custom_field_2', 'q2', 'field2'] },
+        { key: 'currentAIUsage', value: qualifyingData.currentAIUsage, ids: ['custom_field_3', 'q3', 'field3'] },
+        { key: 'priorityOutcome', value: qualifyingData.priorityOutcome, ids: ['custom_field_4', 'q4', 'field4'] }
+      ];
+      
+      fieldMappings.forEach(mapping => {
+        if (mapping.value) {
+          mapping.ids.forEach(id => {
+            customFields.push({
+              id: id,
+              field_value: mapping.value
+            });
+          });
+        }
+      });
       
       console.log('🔧 Custom fields array length:', customFields.length);
+      console.log('🔧 All custom field attempts:', customFields.map(f => f.id));
     }
 
     const requestBody = {
@@ -161,8 +135,20 @@ async function createGHLContact(email: string, name: string, plan: string = 'fre
         statusText: response.statusText,
         error: error,
         email: email,
+        customFieldsAttempted: customFields.length,
         requestBody
       });
+      
+      // Try to parse error for custom field specific issues
+      try {
+        const errorData = JSON.parse(error);
+        if (errorData.message && errorData.message.includes('custom')) {
+          console.error('🔍 Custom field related error detected:', errorData);
+        }
+      } catch (e) {
+        // Error wasn't JSON, continue
+      }
+      
       return null;
     }
 
