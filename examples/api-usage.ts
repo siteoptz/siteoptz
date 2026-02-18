@@ -2,8 +2,8 @@
 
 import { NextApiRequest, NextApiResponse } from 'next';
 import { getServerSession } from 'next-auth/next';
-import { authOptions } from '../api/auth/[...nextauth]';
-import { retrieveQualifyingData } from '../../lib/signup-bridge';
+import { authOptions } from '../pages/api/auth/[...nextauth]';
+import { retrieveQualifyingData } from '../lib/signup-bridge';
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   try {
