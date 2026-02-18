@@ -67,6 +67,9 @@ export default function Document() {
             `,
           }}
         />
+        
+        {/* GoHighLevel Form Embed Script */}
+        <script src="https://link.msgsndr.com/js/form_embed.js" async />
       </Head>
       <body>
         <Main />

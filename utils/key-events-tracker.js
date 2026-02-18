@@ -27,19 +27,19 @@ export const initKeyEventsTracking = (config = {}) => {
     }
   }
   
-  // Send any offline events
-  sendOfflineEvents();
+  // Send any offline events - TEMPORARILY DISABLED
+  // sendOfflineEvents();
   
-  // Set up periodic offline event sending
-  setInterval(sendOfflineEvents, 30000);
+  // Set up periodic offline event sending - TEMPORARILY DISABLED
+  // setInterval(sendOfflineEvents, 30000);
   
-  // Track initial page view
-  trackKeyEvent('page_view', {
-    page_title: document.title,
-    page_location: window.location.href,
-    referrer: document.referrer,
-    debug_mode: isDebugMode
-  });
+  // Track initial page view - TEMPORARILY DISABLED
+  // trackKeyEvent('page_view', {
+  //   page_title: document.title,
+  //   page_location: window.location.href,
+  //   referrer: document.referrer,
+  //   debug_mode: isDebugMode
+  // });
   
   // Set up error tracking
   window.addEventListener('error', (event) => {
@@ -619,11 +619,11 @@ const getCTAPriority = (position) => {
 const setupAdvancedTracking = () => {
   if (typeof window === 'undefined') return;
   
-  // Send any offline events
-  sendOfflineEvents();
+  // Send any offline events - TEMPORARILY DISABLED
+  // sendOfflineEvents();
   
-  // Set up periodic offline event sending
-  setInterval(sendOfflineEvents, 30000); // Every 30 seconds
+  // Set up periodic offline event sending - TEMPORARILY DISABLED
+  // setInterval(sendOfflineEvents, 30000); // Every 30 seconds
   
   // Set up error tracking
   window.addEventListener('error', (event) => {

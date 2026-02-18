@@ -330,11 +330,7 @@ export const authOptions: NextAuthOptions = {
   },
   callbacks: {
     async signIn({ user, account, profile }) {
-      console.log('🔥🔥🔥 OAUTH CALLBACK STARTED 🔥🔥🔥');
-      console.log('🔥 OAuth Sign In Attempt:', user.email);
-      console.log('🔥 DEBUG: NextAuth callback triggered at:', new Date().toISOString());
-      console.log('🔥 Account Provider:', account?.provider);
-      console.log('🔥 User Info:', { email: user.email, name: user.name });
+      console.log('🔄 OAuth Sign In:', user.email, 'Provider:', account?.provider);
       
       // Only process Google OAuth
       if (account?.provider !== 'google') {
@@ -346,92 +342,19 @@ export const authOptions: NextAuthOptions = {
         const existingContact = await searchGHLContact(user.email!);
         
         if (!existingContact) {
-          // New user - determine if this is a trial signup
-          // We can check for trial params in the callback URL or state
-          const callbackUrl = account?.callbackUrl || '';
-          const state = account?.state || '';
-          
-          console.log('🔍 OAuth Debug Info:', {
-            callbackUrl: callbackUrl,
-            state: state,
-            provider: account?.provider
-          });
-          
-          // Extract qualifying data from callback URL
-          let qualifyingData = null;
-          console.log('🔍 Checking for qualifying data in callback URL:', callbackUrl);
-          if (typeof callbackUrl === 'string' && callbackUrl.includes('qualifying=')) {
-            try {
-              console.log('🔍 Found qualifying parameter in URL');
-              const urlParams = new URLSearchParams(callbackUrl.split('?')[1] || '');
-              const encodedData = urlParams.get('qualifying');
-              console.log('🔍 Encoded data:', encodedData);
-              if (encodedData) {
-                const decodedData = JSON.parse(decodeURIComponent(encodedData));
-                console.log('🔍 Decoded data:', decodedData);
-                qualifyingData = {
-                  business: decodedData.b,
-                  bottlenecks: decodedData.bt,
-                  currentAIUsage: decodedData.ai,
-                  priorityOutcome: decodedData.po
-                };
-                console.log('🔍 Extracted qualifying data from URL:', qualifyingData);
-              }
-            } catch (error) {
-              console.error('❌ Error parsing qualifying data:', error);
-            }
-          } else {
-            console.log('🔍 No qualifying data found in callback URL');
-          }
-          
-          // More comprehensive trial detection
-          const isTrialSignup = (typeof callbackUrl === 'string' && callbackUrl.includes('trial=true')) || 
-                                (typeof state === 'string' && state.includes('trial')) ||
-                                (typeof callbackUrl === 'string' && callbackUrl.includes('plan=')) ||
-                                (typeof callbackUrl === 'string' && callbackUrl.includes('signup')) ||
-                                true; // For now, treat ALL new OAuth signups as trials
-          
-          // Extract plan from callback URL if present
-          let plan = 'free';
-          if (typeof callbackUrl === 'string' && callbackUrl) {
-            const urlParams = new URLSearchParams(callbackUrl.split('?')[1] || '');
-            plan = urlParams.get('plan') || 'free';
-          }
-          
-          console.log('🆕 New user via OAuth:', user.email, 'Plan:', plan, 'Trial:', isTrialSignup, 'Has qualifying data:', !!qualifyingData);
+          // New user - create basic GHL contact
+          // (Qualifying data is already submitted directly from the form)
+          console.log('🆕 New user via OAuth:', user.email);
           
           const newContact = await createGHLContact(
             user.email!,
             user.name || 'User',
-            plan,
-            isTrialSignup,
-            qualifyingData
+            'free',
+            true
           );
           
-          // Also submit qualifying data directly to GHL form submissions
-          if (qualifyingData) {
-            console.log('🔧 Submitting qualifying data to GHL form submissions endpoint');
-            await submitToGHLFormSubmissions(user.email!, user.name || 'User', qualifyingData);
-          }
-          
           if (!newContact && process.env.GHL_API_KEY) {
-            // If GHL is configured but creation failed, log error but ALLOW sign in
             console.error('⚠️ Failed to create GHL contact, but allowing sign in to proceed');
-            console.error('⚠️ User can still access the platform, but may not be tracked in GHL');
-            // Don't block sign in - GHL issues shouldn't prevent user access
-          }
-
-          // If this is a trial signup, add to trial pipeline
-          if (isTrialSignup && newContact) {
-            console.log('🔧 Processing trial pipeline addition for:', user.email, 'Contact ID:', newContact.id);
-            const pipelineResult = await addToTrialPipeline(newContact.id, plan);
-            if (pipelineResult) {
-              console.log('✅ Successfully added to pipeline:', newContact.id, plan);
-            } else {
-              console.error('❌ Failed to add to pipeline:', newContact.id, plan);
-            }
-          } else {
-            console.log('🔧 Skipping pipeline addition:', { isTrialSignup, hasContact: !!newContact, email: user.email });
           }
         } else {
           console.log('✅ Existing user found in GHL:', user.email);
@@ -450,15 +373,28 @@ export const authOptions: NextAuthOptions = {
     },
     
     async redirect({ url, baseUrl }) {
-      // Redirect to dashboard after sign in
-      if (url === baseUrl + '/api/auth/callback/google' || url === baseUrl + '/') {
+      console.log('🔧 NextAuth redirect:', { url, baseUrl });
+      
+      // Only redirect OAuth callbacks to dashboard, not the homepage
+      if (url === baseUrl + '/api/auth/callback/google') {
+        console.log('🔧 Redirecting OAuth callback to dashboard');
         return baseUrl + '/dashboard';
       }
       
-      if (url.startsWith('/')) return `${baseUrl}${url}`;
-      else if (new URL(url).origin === baseUrl) return url;
+      // Allow normal navigation to homepage without redirecting
+      if (url === baseUrl + '/' || url === baseUrl) {
+        console.log('🔧 Allowing normal homepage access');
+        return url;
+      }
       
-      return baseUrl + '/dashboard';
+      // Handle relative URLs
+      if (url.startsWith('/')) return `${baseUrl}${url}`;
+      
+      // Handle same-origin URLs
+      if (new URL(url).origin === baseUrl) return url;
+      
+      // Default fallback for external URLs
+      return baseUrl;
     },
     
     async jwt({ token, user, account }) {
