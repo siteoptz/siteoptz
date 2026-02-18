@@ -7,7 +7,7 @@ import { useSession } from 'next-auth/react';
 export default function DashboardExample() {
   const { data: session } = useSession();
   const router = useRouter();
-  const [qualifyingData, setQualifyingData] = useState(null);
+  const [qualifyingData, setQualifyingData] = useState<any>(null);
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
