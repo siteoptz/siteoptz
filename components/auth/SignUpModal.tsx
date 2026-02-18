@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { signIn } from 'next-auth/react';
-import { X, Mail, Lock, User, Building, ChevronDown, Loader2 } from 'lucide-react';
+import { X, Building, ChevronDown, Loader2 } from 'lucide-react';
 
 interface SignUpModalProps {
   isOpen: boolean;
@@ -11,9 +11,6 @@ const SignUpModal: React.FC<SignUpModalProps> = ({ isOpen, onClose }) => {
   const [step, setStep] = useState<'auth' | 'questions'>('auth');
   const [loading, setLoading] = useState(false);
   const [formData, setFormData] = useState({
-    email: '',
-    password: '',
-    name: '',
     business: '',
     bottlenecks: '',
     currentAIUsage: '',
@@ -78,21 +75,6 @@ const SignUpModal: React.FC<SignUpModalProps> = ({ isOpen, onClose }) => {
     }
   };
 
-  const handleCredentialSignUp = async (e: React.FormEvent) => {
-    e.preventDefault();
-    if (!formData.email || !formData.password || !formData.name) return;
-    
-    setLoading(true);
-    try {
-      // TODO: Implement credential-based signup
-      // This would require adding CredentialsProvider back to NextAuth config
-      console.log('Credential signup:', formData);
-      setStep('questions');
-    } catch (error) {
-      console.error('Credential sign up error:', error);
-    }
-    setLoading(false);
-  };
 
   const handleQuestionSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -155,87 +137,7 @@ const SignUpModal: React.FC<SignUpModalProps> = ({ isOpen, onClose }) => {
                 )}
               </button>
 
-              {/* Divider */}
-              <div className="relative my-6">
-                <div className="absolute inset-0 flex items-center">
-                  <div className="w-full border-t border-gray-800" />
-                </div>
-                <div className="relative flex justify-center text-sm">
-                  <span className="px-3 bg-black text-gray-400">or</span>
-                </div>
-              </div>
-
-              {/* Email/Password Form */}
-              <form onSubmit={handleCredentialSignUp} className="space-y-4">
-                <div>
-                  <label className="block text-sm font-medium text-gray-300 mb-2">
-                    Full Name
-                  </label>
-                  <div className="relative">
-                    <User className="absolute left-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-gray-400" />
-                    <input
-                      type="text"
-                      value={formData.name}
-                      onChange={(e) => setFormData(prev => ({ ...prev, name: e.target.value }))}
-                      className="w-full pl-10 pr-4 py-3 bg-gray-900 border border-gray-800 rounded-lg text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                      placeholder="Enter your full name"
-                      required
-                    />
-                  </div>
-                </div>
-
-                <div>
-                  <label className="block text-sm font-medium text-gray-300 mb-2">
-                    Email Address
-                  </label>
-                  <div className="relative">
-                    <Mail className="absolute left-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-gray-400" />
-                    <input
-                      type="email"
-                      value={formData.email}
-                      onChange={(e) => setFormData(prev => ({ ...prev, email: e.target.value }))}
-                      className="w-full pl-10 pr-4 py-3 bg-gray-900 border border-gray-800 rounded-lg text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                      placeholder="Enter your email"
-                      required
-                    />
-                  </div>
-                </div>
-
-                <div>
-                  <label className="block text-sm font-medium text-gray-300 mb-2">
-                    Password
-                  </label>
-                  <div className="relative">
-                    <Lock className="absolute left-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-gray-400" />
-                    <input
-                      type="password"
-                      value={formData.password}
-                      onChange={(e) => setFormData(prev => ({ ...prev, password: e.target.value }))}
-                      className="w-full pl-10 pr-4 py-3 bg-gray-900 border border-gray-800 rounded-lg text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                      placeholder="Create a password"
-                      required
-                      minLength={8}
-                    />
-                  </div>
-                </div>
-
-                <button
-                  type="submit"
-                  disabled={loading || !formData.email || !formData.password || !formData.name}
-                  className="w-full px-4 py-3 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-lg font-semibold hover:from-blue-700 hover:to-purple-700 transition-all duration-200 disabled:opacity-50 disabled:cursor-not-allowed"
-                >
-                  {loading ? (
-                    <div className="flex items-center justify-center gap-2">
-                      <Loader2 className="w-5 h-5 animate-spin" />
-                      Creating Account...
-                    </div>
-                  ) : (
-                    'Create Account'
-                  )}
-                </button>
-              </form>
-
-              <p className="text-center text-gray-400 text-sm mt-4">
+              <p className="text-center text-gray-400 text-sm">
                 Already have an account?{' '}
                 <button
                   onClick={() => {
