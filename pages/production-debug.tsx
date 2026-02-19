@@ -2,7 +2,11 @@ import React, { useState } from 'react';
 
 export default function ProductionDebug() {
   const [email, setEmail] = useState('');
-  const [results, setResults] = useState<any>(null);
+  const [results, setResults] = useState<{
+    store?: any;
+    check?: any;
+    oauth?: any;
+  }>({});
   const [loading, setLoading] = useState(false);
   const [step, setStep] = useState(1);
 
