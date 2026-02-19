@@ -165,8 +165,8 @@ export default function TestSignupFlow() {
               <h3 className="text-white font-medium mb-2">Test Instructions:</h3>
               <ol className="text-gray-300 text-sm space-y-1 list-decimal list-inside">
                 <li>Fill out the form data above</li>
-                <li>Click "Store Form Data" to simulate the modal form submission</li>
-                <li>Click "Start OAuth Flow" to simulate the OAuth redirect</li>
+                <li>Click &quot;Store Form Data&quot; to simulate the modal form submission</li>
+                <li>Click &quot;Start OAuth Flow&quot; to simulate the OAuth redirect</li>
                 <li>Complete Google authentication</li>
                 <li>Check that form data appears in GHL with all fields</li>
               </ol>
