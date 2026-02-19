@@ -203,11 +203,11 @@ export default function ProductionDebug() {
             <h3 className="text-white font-medium mb-2">How to Use:</h3>
             <ol className="text-gray-300 text-sm space-y-1 list-decimal list-inside">
               <li>Enter your test email address above</li>
-              <li>Click "Store Test Form Data" - this simulates filling out the modal form</li>
-              <li>Click "Check Stored Data" to verify the data was stored correctly</li>
-              <li>Click "Simulate OAuth Callback" - this tests the exact same code path as real OAuth</li>
+              <li>Click &quot;Store Test Form Data&quot; - this simulates filling out the modal form</li>
+              <li>Click &quot;Check Stored Data&quot; to verify the data was stored correctly</li>
+              <li>Click &quot;Simulate OAuth Callback&quot; - this tests the exact same code path as real OAuth</li>
               <li>Check the results to see if form data was retrieved and sent to GHL</li>
-              <li>Optionally: Click "Test Real OAuth Flow" to test with actual Google OAuth</li>
+              <li>Optionally: Click &quot;Test Real OAuth Flow&quot; to test with actual Google OAuth</li>
             </ol>
             <div className="mt-4 p-3 bg-yellow-900 border border-yellow-600 rounded">
               <p className="text-yellow-200 text-sm">
