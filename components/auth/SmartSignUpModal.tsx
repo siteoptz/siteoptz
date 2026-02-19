@@ -138,6 +138,10 @@ const SmartSignUpModal: React.FC<SmartSignUpModalProps> = ({ isOpen, onClose }) 
         <div 
           className="absolute inset-0 bg-black/80 backdrop-blur-sm"
           onClick={onClose}
+          onKeyDown={(e) => e.key === 'Escape' && onClose()}
+          role="button"
+          tabIndex={0}
+          aria-label="Close modal"
         />
         
         {/* Modal */}
