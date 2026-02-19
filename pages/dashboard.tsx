@@ -3,11 +3,15 @@ import { useSession, signOut } from 'next-auth/react';
 import { useRouter } from 'next/router';
 import Head from 'next/head';
 import { LogOut, User, CheckCircle } from 'lucide-react';
+import StripePaymentModal from '../components/StripePaymentModal';
 
 export default function Dashboard() {
   const { data: session, status } = useSession();
   const router = useRouter();
   const [welcomeMessage, setWelcomeMessage] = useState('');
+  const [showPaymentModal, setShowPaymentModal] = useState(false);
+  const [paymentPlan, setPaymentPlan] = useState<'starter' | 'pro'>('starter');
+  const [billingCycle, setBillingCycle] = useState<'monthly' | 'yearly'>('yearly');
 
   useEffect(() => {
     if (status === 'loading') return;
@@ -18,7 +22,23 @@ export default function Dashboard() {
       return;
     }
 
-    // Redirect to dashboard/free for authenticated users
+    // Check for upgrade intent from URL parameters
+    const { signup, plan, billing } = router.query;
+    
+    if (signup === 'true' && plan && (plan === 'starter' || plan === 'pro')) {
+      console.log('🆕 New signup with upgrade intent detected:', { plan, billing });
+      
+      // Show payment modal for upgrade
+      setPaymentPlan(plan as 'starter' | 'pro');
+      setBillingCycle(billing as 'monthly' | 'yearly' || 'yearly');
+      setShowPaymentModal(true);
+      
+      // Clean URL parameters after extracting info
+      router.replace('/dashboard', undefined, { shallow: true });
+      return;
+    }
+
+    // Redirect to dashboard/free for normal authenticated users
     router.push('/dashboard/free');
   }, [session, status, router]);
 
@@ -140,6 +160,25 @@ export default function Dashboard() {
           </div>
         </main>
       </div>
+
+      {/* Stripe Payment Modal - For upgrade after signup */}
+      <StripePaymentModal
+        isOpen={showPaymentModal}
+        onClose={() => {
+          setShowPaymentModal(false);
+          // After closing modal, redirect to free dashboard
+          router.push('/dashboard/free');
+        }}
+        plan={paymentPlan}
+        billingCycle={billingCycle}
+        onSuccess={(plan) => {
+          console.log(`Successfully upgraded to ${plan}`);
+          setShowPaymentModal(false);
+        }}
+        onError={(error) => {
+          console.error(`Payment error: ${error}`);
+        }}
+      />
     </>
   );
 }

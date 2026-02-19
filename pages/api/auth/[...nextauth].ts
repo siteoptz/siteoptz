@@ -401,11 +401,11 @@ export const authOptions: NextAuthOptions = {
     async redirect({ url, baseUrl }) {
       console.log('🔧 NextAuth redirect:', { url, baseUrl });
       
-      // Only redirect OAuth callbacks to dashboard, not the homepage
-      if (url === baseUrl + '/api/auth/callback/google') {
-        console.log('🔧 Redirecting OAuth callback to dashboard');
-        return baseUrl + '/dashboard';
-      }
+      // Handle relative URLs
+      if (url.startsWith('/')) return `${baseUrl}${url}`;
+      
+      // Handle same-origin URLs
+      if (new URL(url).origin === baseUrl) return url;
       
       // Allow normal navigation to homepage without redirecting
       if (url === baseUrl + '/' || url === baseUrl) {
@@ -413,14 +413,10 @@ export const authOptions: NextAuthOptions = {
         return url;
       }
       
-      // Handle relative URLs
-      if (url.startsWith('/')) return `${baseUrl}${url}`;
-      
-      // Handle same-origin URLs
-      if (new URL(url).origin === baseUrl) return url;
-      
-      // Default fallback for external URLs
-      return baseUrl;
+      // For OAuth callbacks, respect the original callbackUrl instead of forcing /dashboard
+      // This allows SmartSignUpModal to set specific redirect URLs with plan/billing info
+      console.log('🔧 Using provided redirect URL:', url);
+      return url;
     },
     
     async jwt({ token, user, account }) {
