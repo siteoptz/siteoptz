@@ -330,10 +330,16 @@ export const authOptions: NextAuthOptions = {
   },
   callbacks: {
     async signIn({ user, account, profile }) {
-      console.log('🔄 OAuth Sign In:', user.email, 'Provider:', account?.provider);
+      console.log('🔄🔄🔄 REAL OAUTH SIGNIN CALLBACK 🔄🔄🔄');
+      console.log('📧 User Email:', user.email);
+      console.log('🏢 Provider:', account?.provider);
+      console.log('📊 Account Object:', JSON.stringify(account, null, 2));
+      console.log('👤 Profile Object:', JSON.stringify(profile, null, 2));
+      console.log('⏰ Timestamp:', new Date().toISOString());
       
       // Only process Google OAuth
       if (account?.provider !== 'google') {
+        console.log('⚠️ Non-Google provider, skipping custom logic');
         return true;
       }
 
@@ -348,24 +354,51 @@ export const authOptions: NextAuthOptions = {
           // Try to retrieve stored form data
           let formData = null;
           try {
-            console.log('🔍 Checking for stored form data...');
+            console.log('🔍🔍🔍 CHECKING FOR STORED FORM DATA 🔍🔍🔍');
+            console.log('📧 Looking for email:', user.email);
+            
             const baseUrl = process.env.NEXTAUTH_URL || 'http://localhost:3000';
-            const formDataResponse = await fetch(`${baseUrl}/api/store-form-data?email=${encodeURIComponent(user.email!)}`, {
+            console.log('🌐 Base URL:', baseUrl);
+            
+            const fetchUrl = `${baseUrl}/api/store-form-data?email=${encodeURIComponent(user.email!)}`;
+            console.log('📡 Fetch URL:', fetchUrl);
+            
+            const formDataResponse = await fetch(fetchUrl, {
               method: 'GET'
             });
             
+            console.log('📥 Form data response status:', formDataResponse.status);
+            console.log('📥 Form data response ok:', formDataResponse.ok);
+            
             if (formDataResponse.ok) {
               const result = await formDataResponse.json();
+              console.log('📋 Form data API result:', JSON.stringify(result, null, 2));
+              
               if (result.success && result.data) {
                 formData = result.data;
-                console.log('✅ Retrieved stored form data:', formData);
+                console.log('✅✅✅ RETRIEVED STORED FORM DATA ✅✅✅');
+                console.log('📝 Form data contents:', JSON.stringify(formData, null, 2));
+              } else {
+                console.log('❌ Form data API returned success=false or no data');
               }
+            } else {
+              const errorText = await formDataResponse.text();
+              console.log('❌ Form data fetch failed with status:', formDataResponse.status);
+              console.log('❌ Error response:', errorText);
             }
           } catch (error) {
-            console.error('❌ Error retrieving form data:', error);
+            console.error('❌❌❌ ERROR RETRIEVING FORM DATA ❌❌❌');
+            console.error('Error details:', error);
+            console.error('Error message:', error instanceof Error ? error.message : 'Unknown error');
           }
           
           // Create GHL contact with form data (if available)
+          console.log('🏗️🏗️🏗️ CREATING GHL CONTACT 🏗️🏗️🏗️');
+          console.log('📧 Email:', user.email);
+          console.log('👤 Name:', formData?.name || user.name || 'User');
+          console.log('📋 Has form data:', !!formData);
+          console.log('📝 Form data for GHL:', formData ? JSON.stringify(formData, null, 2) : 'None');
+          
           const newContact = await createGHLContact(
             user.email!,
             formData?.name || user.name || 'User',
@@ -374,14 +407,20 @@ export const authOptions: NextAuthOptions = {
             formData // This will include all the qualification answers
           );
           
+          console.log('🏆 GHL Contact Creation Result:', JSON.stringify(newContact, null, 2));
+          
           if (!newContact && process.env.GHL_API_KEY) {
-            console.error('⚠️ Failed to create GHL contact, but allowing sign in to proceed');
+            console.error('⚠️⚠️⚠️ FAILED TO CREATE GHL CONTACT ⚠️⚠️⚠️');
+            console.error('But allowing sign in to proceed');
           } else if (newContact && formData) {
-            console.log('✅ GHL contact created with form data:', {
+            console.log('✅✅✅ GHL CONTACT CREATED WITH FORM DATA ✅✅✅');
+            console.log('Contact details:', {
               id: newContact.id,
               email: user.email,
               hasFormData: true
             });
+          } else if (newContact && !formData) {
+            console.log('⚠️ GHL contact created but WITHOUT form data');
           }
         } else {
           console.log('✅ Existing user found in GHL:', user.email);
