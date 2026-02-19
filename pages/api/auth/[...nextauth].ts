@@ -363,79 +363,23 @@ export const authOptions: NextAuthOptions = {
         const existingContact = await searchGHLContact(user.email!);
         
         if (!existingContact) {
-          // New user - try to retrieve stored form data and create GHL contact
+          // New user - create basic GHL contact
           addOAuthLog(`🆕 New user via OAuth: ${user.email}`);
           
-          // Try to retrieve stored form data
-          let formData = null;
-          try {
-            addOAuthLog('🔍🔍🔍 CHECKING FOR STORED FORM DATA 🔍🔍🔍');
-            addOAuthLog(`📧 Looking for email: ${user.email}`);
-            
-            const baseUrl = process.env.NEXTAUTH_URL || 'http://localhost:3000';
-            addOAuthLog(`🌐 Base URL: ${baseUrl}`);
-            
-            const fetchUrl = `${baseUrl}/api/store-form-data?email=${encodeURIComponent(user.email!)}`;
-            addOAuthLog(`📡 Fetch URL: ${fetchUrl}`);
-            
-            const formDataResponse = await fetch(fetchUrl, {
-              method: 'GET'
-            });
-            
-            addOAuthLog(`📥 Form data response status: ${formDataResponse.status}`);
-            addOAuthLog(`📥 Form data response ok: ${formDataResponse.ok}`);
-            
-            if (formDataResponse.ok) {
-              const result = await formDataResponse.json();
-              addOAuthLog(`📋 Form data API result: ${JSON.stringify(result, null, 2)}`);
-              
-              if (result.success && result.data) {
-                formData = result.data;
-                addOAuthLog('✅✅✅ RETRIEVED STORED FORM DATA ✅✅✅');
-                addOAuthLog(`📝 Form data contents: ${JSON.stringify(formData, null, 2)}`);
-              } else {
-                addOAuthLog('❌ Form data API returned success=false or no data');
-              }
-            } else {
-              const errorText = await formDataResponse.text();
-              addOAuthLog(`❌ Form data fetch failed with status: ${formDataResponse.status}`);
-              addOAuthLog(`❌ Error response: ${errorText}`);
-            }
-          } catch (error) {
-            addOAuthLog('❌❌❌ ERROR RETRIEVING FORM DATA ❌❌❌');
-            addOAuthLog(`Error details: ${error}`);
-            addOAuthLog(`Error message: ${error instanceof Error ? error.message : 'Unknown error'}`);
-          }
-          
-          // Create GHL contact with form data (if available)
-          addOAuthLog('🏗️🏗️🏗️ CREATING GHL CONTACT 🏗️🏗️🏗️');
-          addOAuthLog(`📧 Email: ${user.email}`);
-          addOAuthLog(`👤 Name: ${formData?.name || user.name || 'User'}`);
-          addOAuthLog(`📋 Has form data: ${!!formData}`);
-          addOAuthLog(`📝 Form data for GHL: ${formData ? JSON.stringify(formData, null, 2) : 'None'}`);
+          // Create GHL contact (simple version without form data)
+          addOAuthLog('🏗️ Creating basic GHL contact for new user');
           
           const newContact = await createGHLContact(
             user.email!,
-            formData?.name || user.name || 'User',
+            user.name || 'User',
             'free',
-            true,
-            formData // This will include all the qualification answers
+            false // Not a trial user, just basic signup
           );
           
-          addOAuthLog(`🏆 GHL Contact Creation Result: ${JSON.stringify(newContact, null, 2)}`);
-          
-          if (!newContact && process.env.GHL_API_KEY) {
-            addOAuthLog('⚠️⚠️⚠️ FAILED TO CREATE GHL CONTACT ⚠️⚠️⚠️');
-            addOAuthLog('But allowing sign in to proceed');
-          } else if (newContact && formData) {
-            addOAuthLog('✅✅✅ GHL CONTACT CREATED WITH FORM DATA ✅✅✅');
-            addOAuthLog(`Contact details: ${JSON.stringify({
-              id: newContact.id,
-              email: user.email,
-              hasFormData: true
-            }, null, 2)}`);
-          } else if (newContact && !formData) {
-            addOAuthLog('⚠️ GHL contact created but WITHOUT form data');
+          if (newContact) {
+            addOAuthLog(`✅ GHL contact created successfully: ${newContact.id}`);
+          } else {
+            addOAuthLog('⚠️ Failed to create GHL contact, but allowing sign in');
           }
         } else {
           addOAuthLog(`✅ Existing user found in GHL: ${user.email}`);

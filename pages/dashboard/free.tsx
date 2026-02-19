@@ -34,18 +34,11 @@ export default function FreeDashboard() {
 
   // Handle new signup welcome messages
   useEffect(() => {
-    const { signup, source } = router.query;
+    const { signup } = router.query;
     
     if (signup === 'true') {
       console.log('🆕 New signup detected');
-      
-      if (source === 'form') {
-        setWelcomeMessage('Welcome to SiteOptz! Your discovery application has been submitted and your account is ready. We&apos;ll be in touch soon to discuss your AI automation needs.');
-        console.log('✅ User completed form-based signup flow');
-      } else if (source === 'ghl') {
-        setWelcomeMessage('Welcome to SiteOptz! Your discovery form has been submitted and we&apos;ll be in touch soon.');
-        console.log('✅ User completed GHL-based signup flow');
-      }
+      setWelcomeMessage('Welcome to SiteOptz! Your account has been created successfully. Explore our AI automation tools to streamline your business operations.');
       
       // Clean up URL parameters
       router.replace('/dashboard/free', undefined, { shallow: true });

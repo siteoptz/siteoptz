@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { signIn } from 'next-auth/react';
-import { X, ChevronDown, Loader2, User, Mail, Phone, Building } from 'lucide-react';
+import { X, Loader2, Mail } from 'lucide-react';
 import ExistingUserModal from './ExistingUserModal';
 
 interface SmartSignUpModalProps {
@@ -13,46 +13,8 @@ const SmartSignUpModal: React.FC<SmartSignUpModalProps> = ({ isOpen, onClose }) 
   const [checkingUser, setCheckingUser] = useState(false);
   const [showExistingUserModal, setShowExistingUserModal] = useState(false);
   const [existingUserData, setExistingUserData] = useState<any>(null);
-  const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    phone: '',
-    business: '',
-    bottlenecks: '',
-    currentAIUsage: '',
-    priorityOutcome: ''
-  });
+  const [email, setEmail] = useState('');
 
-  const bottleneckOptions = [
-    { value: '', label: 'Q2: What are the top 1–2 bottlenecks in your business right now where you believe AI could save you the most time or money?' },
-    { value: 'Lead Generation and Qualification', label: 'Lead Generation and Qualification' },
-    { value: 'Reporting & Analytics', label: 'Reporting & Analytics' },
-    { value: 'Content Creation and Marketing', label: 'Content Creation and Marketing' },
-    { value: 'Client Follow-Up and Communication', label: 'Client Follow-Up and Communication' },
-    { value: 'Data Analysis and Insights', label: 'Data Analysis and Insights' },
-    { value: 'Process Automation and Workflows', label: 'Process Automation and Workflows' },
-    { value: 'Customer service and support', label: 'Customer service and support' },
-    { value: 'Project Management and Tracking', label: 'Project Management and Tracking' }
-  ];
-
-  const currentAIUsageOptions = [
-    { value: '', label: 'Q3: How are you currently using AI tools in your business today?' },
-    { value: 'No use yet, just exploring options.', label: 'No use yet, just exploring options.' },
-    { value: 'Experimenting personally with AI tools', label: 'Experimenting personally with AI tools' },
-    { value: 'A few workflows in ops/marketing', label: 'A few workflows in ops/marketing' },
-    { value: 'Deeply integrated into core processes', label: 'Deeply integrated into core processes' }
-  ];
-
-  const priorityOutcomeOptions = [
-    { value: '', label: 'Q4: If SiteOptz.ai could fully automate one outcome for you over the next 90 days, which would you prioritize first?' },
-    { value: 'More qualified leads', label: 'More qualified leads' },
-    { value: 'Better client visibility/reporting', label: 'Better client visibility/reporting' },
-    { value: 'Faster decision making from data', label: 'Faster decision making from data' },
-    { value: 'Reduced operational costs', label: 'Reduced operational costs' },
-    { value: 'Increased team productivity', label: 'Increased team productivity' },
-    { value: 'Improved customer satisfaction', label: 'Improved customer satisfaction' },
-    { value: 'Competitive advantage in market', label: 'Competitive advantage in market' }
-  ];
 
   // Check for existing user when email is entered
   const checkUserExists = async (email: string) => {
@@ -84,50 +46,31 @@ const SmartSignUpModal: React.FC<SmartSignUpModalProps> = ({ isOpen, onClose }) 
 
   // Debounced email check
   React.useEffect(() => {
-    if (!formData.email) return;
+    if (!email) return;
 
     const timeoutId = setTimeout(() => {
-      checkUserExists(formData.email);
+      checkUserExists(email);
     }, 1000);
 
     return () => clearTimeout(timeoutId);
-  }, [formData.email]);
+  }, [email]);
 
-  const handleSubmit = async () => {
-    if (!formData.name || !formData.email || !formData.bottlenecks || !formData.currentAIUsage || !formData.priorityOutcome) {
-      alert('Please fill out all required fields before continuing.');
+  const handleGoogleSignUp = async () => {
+    if (!email || !email.includes('@')) {
+      alert('Please enter a valid email address.');
       return;
     }
 
     setLoading(true);
     
     try {
-      // Store form data temporarily for use after OAuth
-      console.log('📦 Storing form data before OAuth...');
-      const storeResponse = await fetch('/api/store-form-data', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(formData)
+      // Close modal and start Google OAuth directly
+      onClose();
+      signIn('google', { 
+        callbackUrl: '/dashboard/free?signup=true'
       });
-
-      if (storeResponse.ok) {
-        console.log('✅ Form data stored successfully');
-      } else {
-        console.warn('⚠️ Failed to store form data, continuing with OAuth');
-      }
-
-      // Close modal and redirect to OAuth signup with form data flag
-      onClose();
-      window.location.href = `/auth/signup?source=form&email=${encodeURIComponent(formData.email)}`;
-      
     } catch (error) {
-      console.error('❌ Error during form data storage:', error);
-      // Still redirect to OAuth on error
-      onClose();
-      window.location.href = `/auth/signup?source=form&email=${encodeURIComponent(formData.email)}`;
-    } finally {
+      console.error('❌ Error during OAuth:', error);
       setLoading(false);
     }
   };
@@ -150,9 +93,9 @@ const SmartSignUpModal: React.FC<SmartSignUpModalProps> = ({ isOpen, onClose }) 
         {/* Modal */}
         <div className="relative bg-black border border-gray-800 rounded-xl max-w-2xl w-full max-h-[90vh] overflow-hidden">
           {/* Header */}
-          <div className="flex items-center justify-between p-4 border-b border-gray-800">
-            <h2 className="text-xl font-bold text-white">
-              Discovery Call Application
+          <div className="flex items-center justify-between p-6 border-b border-gray-800">
+            <h2 className="text-2xl font-bold text-white">
+              Join SiteOptz.ai
             </h2>
             <button
               onClick={onClose}
@@ -162,163 +105,62 @@ const SmartSignUpModal: React.FC<SmartSignUpModalProps> = ({ isOpen, onClose }) 
             </button>
           </div>
 
-          {/* Form Fields */}
-          <div className="p-6 overflow-y-auto max-h-[calc(90vh-180px)]">
-            <div className="space-y-6">
-              {/* Name Field */}
-              <div>
-                <label className="block text-sm font-medium text-gray-300 mb-2">
-                  Full Name *
-                </label>
-                <div className="relative">
-                  <User className="absolute left-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-gray-400" />
-                  <input
-                    type="text"
-                    value={formData.name}
-                    onChange={(e) => setFormData(prev => ({ ...prev, name: e.target.value }))}
-                    className="w-full pl-10 pr-4 py-3 bg-gray-900 border border-gray-800 rounded-lg text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-blue-500"
-                    placeholder="Enter your full name"
-                  />
-                </div>
-              </div>
+          {/* Content */}
+          <div className="p-6">
+            <div className="text-center mb-8">
+              <h3 className="text-xl font-semibold text-white mb-3">
+                Get Started with AI Automation
+              </h3>
+              <p className="text-gray-400 mb-6">
+                Join thousands of businesses using SiteOptz.ai to streamline their operations with AI-powered solutions.
+              </p>
+            </div>
 
-              {/* Email Field with User Check */}
-              <div>
-                <label className="block text-sm font-medium text-gray-300 mb-2">
-                  Email Address *
-                </label>
-                <div className="relative">
-                  <Mail className="absolute left-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-gray-400" />
-                  <input
-                    type="email"
-                    value={formData.email}
-                    onChange={(e) => setFormData(prev => ({ ...prev, email: e.target.value }))}
-                    className="w-full pl-10 pr-12 py-3 bg-gray-900 border border-gray-800 rounded-lg text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-blue-500"
-                    placeholder="Enter your email address"
-                  />
-                  {checkingUser && (
-                    <div className="absolute right-3 top-1/2 transform -translate-y-1/2">
-                      <Loader2 className="w-5 h-5 text-blue-500 animate-spin" />
-                    </div>
-                  )}
-                </div>
-              </div>
-
-              {/* Phone Field */}
-              <div>
-                <label className="block text-sm font-medium text-gray-300 mb-2">
-                  Phone Number
-                </label>
-                <div className="relative">
-                  <Phone className="absolute left-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-gray-400" />
-                  <input
-                    type="tel"
-                    value={formData.phone}
-                    onChange={(e) => setFormData(prev => ({ ...prev, phone: e.target.value }))}
-                    className="w-full pl-10 pr-4 py-3 bg-gray-900 border border-gray-800 rounded-lg text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-blue-500"
-                    placeholder="Enter your phone number"
-                  />
-                </div>
-              </div>
-
-              {/* Business Field */}
-              <div>
-                <label className="block text-sm font-medium text-gray-300 mb-2">
-                  Business Website
-                </label>
-                <div className="relative">
-                  <Building className="absolute left-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-gray-400" />
-                  <input
-                    type="text"
-                    value={formData.business}
-                    onChange={(e) => setFormData(prev => ({ ...prev, business: e.target.value }))}
-                    className="w-full pl-10 pr-4 py-3 bg-gray-900 border border-gray-800 rounded-lg text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-blue-500"
-                    placeholder="Enter your business website (optional)"
-                  />
-                </div>
-              </div>
-
-              {/* Bottlenecks Dropdown */}
-              <div>
-                <label className="block text-sm font-medium text-gray-300 mb-2">
-                  Business Bottlenecks *
-                </label>
-                <div className="relative">
-                  <select
-                    value={formData.bottlenecks}
-                    onChange={(e) => setFormData(prev => ({ ...prev, bottlenecks: e.target.value }))}
-                    className="w-full px-4 py-3 bg-gray-900 border border-gray-800 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-blue-500 appearance-none"
-                  >
-                    {bottleneckOptions.map((option) => (
-                      <option key={option.value} value={option.value}>
-                        {option.label}
-                      </option>
-                    ))}
-                  </select>
-                  <ChevronDown className="absolute right-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-gray-400 pointer-events-none" />
-                </div>
-              </div>
-
-              {/* AI Usage Dropdown */}
-              <div>
-                <label className="block text-sm font-medium text-gray-300 mb-2">
-                  Current AI Usage *
-                </label>
-                <div className="relative">
-                  <select
-                    value={formData.currentAIUsage}
-                    onChange={(e) => setFormData(prev => ({ ...prev, currentAIUsage: e.target.value }))}
-                    className="w-full px-4 py-3 bg-gray-900 border border-gray-800 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-blue-500 appearance-none"
-                  >
-                    {currentAIUsageOptions.map((option) => (
-                      <option key={option.value} value={option.value}>
-                        {option.label}
-                      </option>
-                    ))}
-                  </select>
-                  <ChevronDown className="absolute right-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-gray-400 pointer-events-none" />
-                </div>
-              </div>
-
-              {/* Priority Outcome Dropdown */}
-              <div>
-                <label className="block text-sm font-medium text-gray-300 mb-2">
-                  Priority Outcome *
-                </label>
-                <div className="relative">
-                  <select
-                    value={formData.priorityOutcome}
-                    onChange={(e) => setFormData(prev => ({ ...prev, priorityOutcome: e.target.value }))}
-                    className="w-full px-4 py-3 bg-gray-900 border border-gray-800 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-blue-500 appearance-none"
-                  >
-                    {priorityOutcomeOptions.map((option) => (
-                      <option key={option.value} value={option.value}>
-                        {option.label}
-                      </option>
-                    ))}
-                  </select>
-                  <ChevronDown className="absolute right-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-gray-400 pointer-events-none" />
-                </div>
+            {/* Email Field for User Check */}
+            <div className="mb-6">
+              <label className="block text-sm font-medium text-gray-300 mb-2">
+                Email Address
+              </label>
+              <div className="relative">
+                <Mail className="absolute left-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-gray-400" />
+                <input
+                  type="email"
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)}
+                  className="w-full pl-10 pr-12 py-3 bg-gray-900 border border-gray-800 rounded-lg text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                  placeholder="Enter your email address"
+                />
+                {checkingUser && (
+                  <div className="absolute right-3 top-1/2 transform -translate-y-1/2">
+                    <Loader2 className="w-5 h-5 text-blue-500 animate-spin" />
+                  </div>
+                )}
               </div>
             </div>
-          </div>
 
-          {/* Footer */}
-          <div className="p-6 border-t border-gray-800">
+            {/* Google Sign Up Button */}
             <button
-              onClick={handleSubmit}
-              disabled={loading || checkingUser}
-              className="w-full flex items-center justify-center gap-3 px-4 py-3 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-lg font-semibold hover:from-blue-700 hover:to-purple-700 transition-colors disabled:opacity-50 disabled:cursor-not-allowed mb-4"
+              onClick={handleGoogleSignUp}
+              disabled={loading || checkingUser || !email}
+              className="w-full flex items-center justify-center gap-3 px-4 py-4 bg-white text-gray-900 rounded-lg font-semibold hover:bg-gray-100 transition-colors disabled:opacity-50 disabled:cursor-not-allowed mb-4"
             >
               {loading ? (
                 <Loader2 className="w-5 h-5 animate-spin" />
               ) : (
-                'Submit & Create Account'
+                <>
+                  <svg className="w-5 h-5" viewBox="0 0 24 24">
+                    <path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/>
+                    <path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/>
+                    <path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z"/>
+                    <path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"/>
+                  </svg>
+                  Continue with Google
+                </>
               )}
             </button>
 
-            <p className="text-center text-gray-400 text-xs">
-              Existing user?{' '}
+            <p className="text-center text-gray-400 text-sm">
+              Already have an account?{' '}
               <button
                 onClick={() => {
                   onClose();
