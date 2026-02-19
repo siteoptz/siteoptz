@@ -177,8 +177,8 @@ export default function HomePage({}: HomePageProps) {
       ctaText: 'Contact Sales',
       ctaAction: () => {
         if (!session?.user) {
-          // Show SmartSignUpModal for existing/new user detection
-          setShowSmartSignUpModal(true);
+          setSelectedPlan('Enterprise Plan');
+          setShowRegister(true);
         } else {
           window.open('https://api.leadconnectorhq.com/widget/booking/yPjkVmsauPst8XlrOQUl', '_blank');
         }
