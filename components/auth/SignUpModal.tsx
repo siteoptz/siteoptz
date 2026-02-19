@@ -1,6 +1,7 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { signIn } from 'next-auth/react';
 import { X } from 'lucide-react';
+import ExistingUserModal from './ExistingUserModal';
 
 interface SignUpModalProps {
   isOpen: boolean;
@@ -8,6 +9,62 @@ interface SignUpModalProps {
 }
 
 const SignUpModal: React.FC<SignUpModalProps> = ({ isOpen, onClose }) => {
+  const [showExistingUserModal, setShowExistingUserModal] = useState(false);
+  const [existingUserData, setExistingUserData] = useState<any>(null);
+
+  // Handle when form detects existing user
+  const handleExistingUser = (userEmail: string, userData: any) => {
+    setExistingUserData({ email: userEmail, ...userData });
+    setShowExistingUserModal(true);
+  };
+
+  // Listen for form submission events from the GHL iframe
+  React.useEffect(() => {
+    const handleMessage = async (event: MessageEvent) => {
+      // Check if message is from GHL form
+      if (event.origin !== 'https://api.leadconnectorhq.com') return;
+      
+      try {
+        const data = event.data;
+        
+        // Check if this is a form submission event
+        if (data.type === 'form_submit' || data.eventType === 'submit') {
+          console.log('🔍 GHL form submitted, checking for existing user...');
+          
+          const email = data.email || data.formData?.email;
+          
+          if (email) {
+            // Check if user exists before allowing form to proceed
+            const response = await fetch('/api/check-user-exists', {
+              method: 'POST',
+              headers: {
+                'Content-Type': 'application/json',
+              },
+              body: JSON.stringify({ email })
+            });
+
+            const result = await response.json();
+            
+            if (result.exists) {
+              console.log('⚠️ Existing user detected, showing sign-in modal');
+              handleExistingUser(email, result.contact);
+              return; // Prevent form submission
+            }
+          }
+        }
+      } catch (error) {
+        console.error('Error handling form message:', error);
+      }
+    };
+
+    if (isOpen) {
+      window.addEventListener('message', handleMessage);
+    }
+
+    return () => {
+      window.removeEventListener('message', handleMessage);
+    };
+  }, [isOpen]);
 
   if (!isOpen) return null;
 
@@ -84,6 +141,19 @@ const SignUpModal: React.FC<SignUpModalProps> = ({ isOpen, onClose }) => {
           </p>
         </div>
       </div>
+
+      {/* Existing User Modal */}
+      {showExistingUserModal && existingUserData && (
+        <ExistingUserModal
+          isOpen={showExistingUserModal}
+          onClose={() => {
+            setShowExistingUserModal(false);
+            setExistingUserData(null);
+          }}
+          userEmail={existingUserData.email}
+          userName={existingUserData.name}
+        />
+      )}
     </div>
   );
 };

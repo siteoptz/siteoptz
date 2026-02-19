@@ -6,7 +6,7 @@ import { useSession, signOut, signIn } from 'next-auth/react';
 import { Menu, X, ChevronDown, ChevronUp, User, LogOut, Bell, Settings, CreditCard, Zap } from 'lucide-react';
 import { toolCategories, getCategoryUrl, getCategoryDisplayName } from '../config/categories';
 import { industries, industrySlugMap } from '../content/industryContent';
-import SignUpModal from './auth/SignUpModal';
+import SmartSignUpModal from './auth/SmartSignUpModal';
 
 // Accordion category structure for AI Categories dropdown
 const accordionCategories = [
@@ -801,7 +801,7 @@ const Header: React.FC = () => {
       </nav>
 
       {/* Authentication Modals */}
-      <SignUpModal 
+      <SmartSignUpModal 
         isOpen={showSignUpModal} 
         onClose={() => setShowSignUpModal(false)}
       />
