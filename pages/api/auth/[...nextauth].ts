@@ -349,7 +349,8 @@ export const authOptions: NextAuthOptions = {
           let formData = null;
           try {
             console.log('🔍 Checking for stored form data...');
-            const formDataResponse = await fetch(`${process.env.NEXTAUTH_URL}/api/store-form-data?email=${encodeURIComponent(user.email!)}`, {
+            const baseUrl = process.env.NEXTAUTH_URL || 'http://localhost:3000';
+            const formDataResponse = await fetch(`${baseUrl}/api/store-form-data?email=${encodeURIComponent(user.email!)}`, {
               method: 'GET'
             });
             

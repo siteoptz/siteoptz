@@ -71,27 +71,44 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       let mostRecentKey = null;
       let mostRecentTimestamp = 0;
       
+      console.log('🔍 Searching form data store for email:', email);
+      console.log('📊 Current store size:', formDataStore.size);
+      
       for (const [key, data] of formDataStore.entries()) {
+        console.log('🗂️ Checking entry:', key, 'for email:', data.email);
         if (data.email === email && data.timestamp > mostRecentTimestamp) {
           mostRecentData = data;
           mostRecentKey = key;
           mostRecentTimestamp = data.timestamp;
+          console.log('🎯 Found matching entry:', key);
         }
       }
       
       if (mostRecentData) {
-        // Clean up the retrieved data
-        if (mostRecentKey) {
-          formDataStore.delete(mostRecentKey);
-        }
+        // IMPORTANT: Don't delete immediately - keep for OAuth callback attempts
+        // Only mark as retrieved and set shorter cleanup timer
+        console.log('✅ Retrieved form data for:', email, 'Key:', mostRecentKey);
+        console.log('📝 Form data contents:', JSON.stringify(mostRecentData, null, 2));
         
-        console.log('✅ Retrieved form data for:', email);
+        // Set a shorter cleanup timer (5 minutes instead of immediate deletion)
+        // This allows for OAuth callback retries while still cleaning up
+        setTimeout(() => {
+          if (mostRecentKey && formDataStore.has(mostRecentKey)) {
+            formDataStore.delete(mostRecentKey);
+            console.log('🧹 Delayed cleanup of retrieved form data:', mostRecentKey);
+          }
+        }, 5 * 60 * 1000); // 5 minutes
+        
         return res.status(200).json({
           success: true,
           data: mostRecentData
         });
       } else {
         console.log('ℹ️ No form data found for:', email);
+        console.log('📋 Available entries in store:');
+        for (const [key, data] of formDataStore.entries()) {
+          console.log('  -', key, 'email:', data.email, 'age:', Date.now() - data.timestamp, 'ms');
+        }
         return res.status(404).json({
           success: false,
           message: 'No form data found'
