@@ -105,19 +105,8 @@ export default function HomePage({}: HomePageProps) {
         
         clearError();
         
-        if (!session?.user) {
-          // For non-logged-in users, use upgrade flow which will redirect to login then show payment modal
-          try {
-            await initiateUpgrade('starter', billingCycle);
-          } catch (err) {
-            console.error('Starter upgrade error:', err);
-          }
-          return;
-        }
-        
-        // For logged-in users, show payment modal directly
+        // Always show payment modal for both logged-in and non-logged-in users
         setPaymentModalPlan('starter');
-        setBillingCycle(billingCycle);
         setShowPaymentModal(true);
       }
     },
@@ -145,19 +134,8 @@ export default function HomePage({}: HomePageProps) {
         
         clearError();
         
-        if (!session?.user) {
-          // For non-logged-in users, use upgrade flow which will redirect to login then show payment modal
-          try {
-            await initiateUpgrade('pro', billingCycle);
-          } catch (err) {
-            console.error('Pro upgrade error:', err);
-          }
-          return;
-        }
-        
-        // For logged-in users, show payment modal directly
+        // Always show payment modal for both logged-in and non-logged-in users
         setPaymentModalPlan('pro');
-        setBillingCycle(billingCycle);
         setShowPaymentModal(true);
       }
     },
