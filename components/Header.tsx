@@ -438,7 +438,7 @@ const Header: React.FC = () => {
             ) : (
               <div className="flex items-center space-x-3">
                 <button
-                  onClick={() => signIn('google', { callbackUrl: '/dashboard' })}
+                  onClick={() => signIn('google', { callbackUrl: '/dashboard/free' })}
                   className="px-4 py-2 text-gray-300 hover:text-white rounded-lg font-medium text-sm hover:bg-gray-800 transition-all duration-200"
                 >
                   Log In
@@ -756,7 +756,7 @@ const Header: React.FC = () => {
                     <button
                       onClick={() => {
                         closeMenu();
-                        signIn('google', { callbackUrl: '/dashboard' });
+                        signIn('google', { callbackUrl: '/dashboard/free' });
                       }}
                       style={{ 
                         display: 'block', 

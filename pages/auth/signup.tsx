@@ -24,9 +24,9 @@ export default function SignUpPage() {
         // Just need to complete OAuth flow
         console.log('🔄 Starting OAuth for GHL form user');
         
-        // Start Google OAuth with callback to dashboard
+        // Start Google OAuth with callback to dashboard/free
         signIn('google', { 
-          callbackUrl: '/dashboard?signup=true&source=ghl' 
+          callbackUrl: '/dashboard/free?signup=true&source=ghl' 
         });
       } else {
         // Redirect to homepage if no source

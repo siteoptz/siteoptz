@@ -18,15 +18,8 @@ export default function Dashboard() {
       return;
     }
 
-    // Check if this user came from GHL form
-    const { signup, source } = router.query;
-    
-    if (signup === 'true' && source === 'ghl') {
-      setWelcomeMessage('Thank you for completing our discovery form! Your responses have been submitted and we&apos;ll be in touch soon.');
-      
-      // Clean up URL parameters
-      router.replace('/dashboard', undefined, { shallow: true });
-    }
+    // Redirect to dashboard/free for authenticated users
+    router.push('/dashboard/free');
   }, [session, status, router]);
 
   if (status === 'loading') {

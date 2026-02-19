@@ -75,7 +75,7 @@ const SignUpModal: React.FC<SignUpModalProps> = ({ isOpen, onClose }) => {
             <button
               onClick={() => {
                 onClose();
-                signIn('google', { callbackUrl: '/dashboard' });
+                signIn('google', { callbackUrl: '/dashboard/free' });
               }}
               className="text-cyan-400 hover:text-cyan-300 transition-colors"
             >
