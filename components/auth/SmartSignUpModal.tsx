@@ -6,9 +6,11 @@ import ExistingUserModal from './ExistingUserModal';
 interface SmartSignUpModalProps {
   isOpen: boolean;
   onClose: () => void;
+  plan?: 'starter' | 'pro';
+  billingCycle?: 'monthly' | 'yearly';
 }
 
-const SmartSignUpModal: React.FC<SmartSignUpModalProps> = ({ isOpen, onClose }) => {
+const SmartSignUpModal: React.FC<SmartSignUpModalProps> = ({ isOpen, onClose, plan, billingCycle = 'yearly' }) => {
   const [loading, setLoading] = useState(false);
   const [checkingUser, setCheckingUser] = useState(false);
   const [showExistingUserModal, setShowExistingUserModal] = useState(false);
@@ -66,8 +68,16 @@ const SmartSignUpModal: React.FC<SmartSignUpModalProps> = ({ isOpen, onClose }) 
     try {
       // Close modal and start Google OAuth directly
       onClose();
+      
+      // Determine callback URL based on plan
+      let callbackUrl = '/dashboard/free?signup=true';
+      if (plan) {
+        // For paid plans, redirect to dashboard with upgrade flag
+        callbackUrl = `/dashboard?signup=true&plan=${plan}&billing=${billingCycle}`;
+      }
+      
       signIn('google', { 
-        callbackUrl: '/dashboard/free?signup=true'
+        callbackUrl
       });
     } catch (error) {
       console.error('❌ Error during OAuth:', error);

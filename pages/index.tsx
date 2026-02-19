@@ -34,6 +34,7 @@ export default function HomePage({}: HomePageProps) {
   const [showPaymentModal, setShowPaymentModal] = useState(false);
   const [paymentModalPlan, setPaymentModalPlan] = useState<'starter' | 'pro'>('starter');
   const [showSmartSignUpModal, setShowSmartSignUpModal] = useState(false);
+  const [signUpPlan, setSignUpPlan] = useState<'starter' | 'pro' | undefined>(undefined);
   const { redirectToCheckout, loading, error, clearError } = useStripeCheckout();
   const { data: session, status } = useSession();
   const { isLoggedIn, intendedUpgrade, initiateUpgrade, completeUpgrade } = useUpgradeFlow();
@@ -1078,12 +1079,23 @@ export default function HomePage({}: HomePageProps) {
         onError={(error) => {
           console.error(`Payment error: ${error}`);
         }}
+        onLoginRequired={() => {
+          // When payment modal detects non-logged-in user, show SmartSignUpModal
+          setSignUpPlan(paymentModalPlan);
+          setShowPaymentModal(false);
+          setShowSmartSignUpModal(true);
+        }}
       />
 
       {/* Smart SignUp Modal - For existing/new user detection */}
       <SmartSignUpModal
         isOpen={showSmartSignUpModal}
-        onClose={() => setShowSmartSignUpModal(false)}
+        onClose={() => {
+          setShowSmartSignUpModal(false);
+          setSignUpPlan(undefined);
+        }}
+        plan={signUpPlan}
+        billingCycle={billingCycle}
       />
     </>
   );

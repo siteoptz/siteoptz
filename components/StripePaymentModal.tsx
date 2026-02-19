@@ -22,6 +22,7 @@ interface StripePaymentModalProps {
   billingCycle?: 'monthly' | 'yearly';
   onSuccess?: (plan: string) => void;
   onError?: (error: string) => void;
+  onLoginRequired?: () => void;
 }
 
 interface PlanDetails {
@@ -41,7 +42,8 @@ export default function StripePaymentModal({
   plan,
   billingCycle = 'yearly',
   onSuccess,
-  onError
+  onError,
+  onLoginRequired
 }: StripePaymentModalProps) {
   const { data: session, status } = useSession();
   const { redirectToCheckout, loading, error, clearError } = useStripeCheckout();
@@ -123,13 +125,28 @@ export default function StripePaymentModal({
         });
       }
 
-      // Use the initiateUpgrade function from useUpgradeFlow hook
-      // This handles both logged-in and non-logged-in users properly
-      await initiateUpgrade(plan as 'starter' | 'pro', billingCycle);
+      // Check if user is logged in
+      if (!session?.user) {
+        // For non-logged-in users, trigger login required callback
+        setIsProcessing(false);
+        setStep('confirm');
+        
+        if (onLoginRequired) {
+          onLoginRequired();
+        } else {
+          // Fallback to original behavior if no callback provided
+          await initiateUpgrade(plan as 'starter' | 'pro', billingCycle);
+        }
+        return;
+      }
 
-      // If we reach here, the upgrade was initiated successfully
-      // For non-logged-in users, they will be redirected to login
-      // For logged-in users, they will be redirected to Stripe
+      // For logged-in users, proceed directly to Stripe checkout
+      await redirectToCheckout({
+        plan,
+        billingCycle,
+        successUrl: `${window.location.origin}/dashboard?upgraded=true&plan=${plan}`,
+        cancelUrl: `${window.location.origin}/upgrade?canceled=true`,
+      });
       
       // Call success callback if provided
       if (onSuccess) {
