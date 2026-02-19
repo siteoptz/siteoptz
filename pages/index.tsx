@@ -7,6 +7,7 @@ import { useStripeCheckout } from '../hooks/useStripeCheckout';
 import { useUpgradeFlow } from '../hooks/useUpgradeFlow';
 import LoginModal from '../components/LoginModal';
 import RegisterModal from '../components/RegisterModal';
+import SmartSignUpModal from '../components/auth/SmartSignUpModal';
 import { 
   getPageConfig, 
   generateSoftwareApplicationSchema,
@@ -32,6 +33,7 @@ export default function HomePage({}: HomePageProps) {
   const [billingCycle, setBillingCycle] = useState<'monthly' | 'yearly'>('yearly');
   const [showPaymentModal, setShowPaymentModal] = useState(false);
   const [paymentModalPlan, setPaymentModalPlan] = useState<'starter' | 'pro'>('starter');
+  const [showSmartSignUpModal, setShowSmartSignUpModal] = useState(false);
   const { redirectToCheckout, loading, error, clearError } = useStripeCheckout();
   const { data: session, status } = useSession();
   const { isLoggedIn, intendedUpgrade, initiateUpgrade, completeUpgrade } = useUpgradeFlow();
@@ -72,10 +74,8 @@ export default function HomePage({}: HomePageProps) {
       ctaText: 'Get Started',
       ctaAction: async () => {
         if (!session?.user) {
-          // Trigger OAuth sign-in for free plan
-          await signIn('google', {
-            callbackUrl: '/dashboard?plan=free&trial=false'
-          });
+          // Show SmartSignUpModal for existing/new user detection
+          setShowSmartSignUpModal(true);
         } else {
           // User is already logged in, redirect to dashboard
           window.location.href = '/dashboard';
@@ -177,8 +177,8 @@ export default function HomePage({}: HomePageProps) {
       ctaText: 'Contact Sales',
       ctaAction: () => {
         if (!session?.user) {
-          setSelectedPlan('Enterprise Plan');
-          setShowRegister(true);
+          // Show SmartSignUpModal for existing/new user detection
+          setShowSmartSignUpModal(true);
         } else {
           window.open('https://api.leadconnectorhq.com/widget/booking/yPjkVmsauPst8XlrOQUl', '_blank');
         }
@@ -1100,6 +1100,12 @@ export default function HomePage({}: HomePageProps) {
         onError={(error) => {
           console.error(`Payment error: ${error}`);
         }}
+      />
+
+      {/* Smart SignUp Modal - For existing/new user detection */}
+      <SmartSignUpModal
+        isOpen={showSmartSignUpModal}
+        onClose={() => setShowSmartSignUpModal(false)}
       />
     </>
   );
