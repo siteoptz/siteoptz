@@ -16,12 +16,19 @@ export default function SignUpPage() {
         return;
       }
       
-      // Get source from URL parameters
-      const { source } = router.query;
+      // Get source and email from URL parameters
+      const { source, email } = router.query;
       
-      if (source === 'ghl') {
+      if (source === 'form' && email) {
+        // User came from our form - form data is stored temporarily
+        console.log('🔄 Starting OAuth for form user with stored data');
+        
+        // Start Google OAuth with callback to dashboard/free, including email for data retrieval
+        signIn('google', { 
+          callbackUrl: `/dashboard/free?signup=true&source=form&email=${encodeURIComponent(email as string)}` 
+        });
+      } else if (source === 'ghl') {
         // User came from GHL form - their data is already in GHL
-        // Just need to complete OAuth flow
         console.log('🔄 Starting OAuth for GHL form user');
         
         // Start Google OAuth with callback to dashboard/free
@@ -29,7 +36,7 @@ export default function SignUpPage() {
           callbackUrl: '/dashboard/free?signup=true&source=ghl' 
         });
       } else {
-        // Redirect to homepage if no source
+        // Redirect to homepage if no valid source
         router.push('/');
       }
     };

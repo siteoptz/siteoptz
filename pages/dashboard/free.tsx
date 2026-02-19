@@ -1,8 +1,9 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { GetServerSideProps } from 'next';
 import { getServerSession } from 'next-auth/next';
 import { authOptions } from '../api/auth/[...nextauth]';
 import { useUserPlan } from '../../hooks/useUserPlan';
+import { useRouter } from 'next/router';
 import { DashboardHeader } from '../../components/dashboard/DashboardHeader';
 import { FeatureGate } from '../../components/FeatureGate';
 import { UpgradePrompt } from '../../components/UpgradePrompt';
@@ -28,6 +29,28 @@ import Link from 'next/link';
 
 export default function FreeDashboard() {
   const { userPlan, loading } = useUserPlan();
+  const router = useRouter();
+  const [welcomeMessage, setWelcomeMessage] = useState('');
+
+  // Handle new signup welcome messages
+  useEffect(() => {
+    const { signup, source } = router.query;
+    
+    if (signup === 'true') {
+      console.log('🆕 New signup detected');
+      
+      if (source === 'form') {
+        setWelcomeMessage('Welcome to SiteOptz! Your discovery application has been submitted and your account is ready. We&apos;ll be in touch soon to discuss your AI automation needs.');
+        console.log('✅ User completed form-based signup flow');
+      } else if (source === 'ghl') {
+        setWelcomeMessage('Welcome to SiteOptz! Your discovery form has been submitted and we&apos;ll be in touch soon.');
+        console.log('✅ User completed GHL-based signup flow');
+      }
+      
+      // Clean up URL parameters
+      router.replace('/dashboard/free', undefined, { shallow: true });
+    }
+  }, [router]);
 
   if (loading || !userPlan) {
     return (
@@ -59,6 +82,23 @@ export default function FreeDashboard() {
       <DashboardHeader userPlan={userPlan} userName={userPlan.userName || "User"} />
 
       <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+        {/* New User Welcome Message */}
+        {welcomeMessage && (
+          <div className="mb-8 bg-gradient-to-r from-green-900/50 to-blue-900/50 border border-green-700 rounded-lg p-6">
+            <div className="flex items-start">
+              <CheckCircle className="w-6 h-6 text-green-400 mt-0.5 mr-3 flex-shrink-0" />
+              <div>
+                <h2 className="text-lg font-semibold text-white mb-2">
+                  Account Created Successfully!
+                </h2>
+                <p className="text-gray-300">
+                  {welcomeMessage}
+                </p>
+              </div>
+            </div>
+          </div>
+        )}
+
         {/* Welcome Section */}
         <div className="mb-8">
           <h1 className="text-3xl font-bold text-white mb-2">

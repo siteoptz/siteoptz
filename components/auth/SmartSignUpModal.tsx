@@ -102,8 +102,9 @@ const SmartSignUpModal: React.FC<SmartSignUpModalProps> = ({ isOpen, onClose }) 
     setLoading(true);
     
     try {
-      // Submit to GHL first
-      const ghlResponse = await fetch('/api/submit-to-ghl', {
+      // Store form data temporarily for use after OAuth
+      console.log('📦 Storing form data before OAuth...');
+      const storeResponse = await fetch('/api/store-form-data', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -111,19 +112,21 @@ const SmartSignUpModal: React.FC<SmartSignUpModalProps> = ({ isOpen, onClose }) 
         body: JSON.stringify(formData)
       });
 
-      if (ghlResponse.ok) {
-        console.log('✅ Successfully submitted to GHL');
+      if (storeResponse.ok) {
+        console.log('✅ Form data stored successfully');
+      } else {
+        console.warn('⚠️ Failed to store form data, continuing with OAuth');
       }
 
-      // Close modal and redirect to OAuth signup
+      // Close modal and redirect to OAuth signup with form data flag
       onClose();
-      window.location.href = '/auth/signup?source=ghl';
+      window.location.href = `/auth/signup?source=form&email=${encodeURIComponent(formData.email)}`;
       
     } catch (error) {
-      console.error('❌ Error during submission:', error);
+      console.error('❌ Error during form data storage:', error);
       // Still redirect to OAuth on error
       onClose();
-      window.location.href = '/auth/signup?source=ghl';
+      window.location.href = `/auth/signup?source=form&email=${encodeURIComponent(formData.email)}`;
     } finally {
       setLoading(false);
     }

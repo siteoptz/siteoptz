@@ -342,19 +342,45 @@ export const authOptions: NextAuthOptions = {
         const existingContact = await searchGHLContact(user.email!);
         
         if (!existingContact) {
-          // New user - create basic GHL contact
-          // (Qualifying data is already submitted directly from the form)
+          // New user - try to retrieve stored form data and create GHL contact
           console.log('🆕 New user via OAuth:', user.email);
           
+          // Try to retrieve stored form data
+          let formData = null;
+          try {
+            console.log('🔍 Checking for stored form data...');
+            const formDataResponse = await fetch(`${process.env.NEXTAUTH_URL}/api/store-form-data?email=${encodeURIComponent(user.email!)}`, {
+              method: 'GET'
+            });
+            
+            if (formDataResponse.ok) {
+              const result = await formDataResponse.json();
+              if (result.success && result.data) {
+                formData = result.data;
+                console.log('✅ Retrieved stored form data:', formData);
+              }
+            }
+          } catch (error) {
+            console.error('❌ Error retrieving form data:', error);
+          }
+          
+          // Create GHL contact with form data (if available)
           const newContact = await createGHLContact(
             user.email!,
-            user.name || 'User',
+            formData?.name || user.name || 'User',
             'free',
-            true
+            true,
+            formData // This will include all the qualification answers
           );
           
           if (!newContact && process.env.GHL_API_KEY) {
             console.error('⚠️ Failed to create GHL contact, but allowing sign in to proceed');
+          } else if (newContact && formData) {
+            console.log('✅ GHL contact created with form data:', {
+              id: newContact.id,
+              email: user.email,
+              hasFormData: true
+            });
           }
         } else {
           console.log('✅ Existing user found in GHL:', user.email);
