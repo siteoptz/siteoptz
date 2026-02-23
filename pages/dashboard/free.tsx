@@ -9,6 +9,7 @@ import { FeatureGate } from '../../components/FeatureGate';
 import { UpgradePrompt } from '../../components/UpgradePrompt';
 import FreePlanContent from '../../components/dashboard/FreePlanContent';
 import { OptzDashboardButton } from '../../components/dashboard/OptzDashboardButton';
+import { GoogleServicesConnection } from '../../components/dashboard/GoogleServicesConnection';
 import { 
   Search, 
   Calendar, 
@@ -31,10 +32,11 @@ export default function FreeDashboard() {
   const { userPlan, loading } = useUserPlan();
   const router = useRouter();
   const [welcomeMessage, setWelcomeMessage] = useState('');
+  const [connectedServices, setConnectedServices] = useState<string[]>([]);
 
-  // Handle new signup welcome messages
+  // Handle new signup welcome messages and Google services connection success
   useEffect(() => {
-    const { signup } = router.query;
+    const { signup, success, services } = router.query;
     
     if (signup === 'true') {
       console.log('🆕 New signup detected');
@@ -42,6 +44,17 @@ export default function FreeDashboard() {
       
       // Clean up URL parameters
       router.replace('/dashboard/free', undefined, { shallow: true });
+    }
+    
+    // Handle Google services connection success
+    if (success && services) {
+      const connectedServicesList = (services as string).split(',');
+      setWelcomeMessage(`🎉 Successfully connected Google services: ${connectedServicesList.join(', ')}. You can now access enhanced analytics and insights!`);
+      
+      // Clean up URL parameters after showing success
+      setTimeout(() => {
+        router.replace('/dashboard/free', undefined, { shallow: true });
+      }, 5000);
     }
   }, [router]);
 
@@ -105,6 +118,13 @@ export default function FreeDashboard() {
         {/* Dashboard Access */}
         <div className="mb-8">
           <OptzDashboardButton userPlan="free" />
+        </div>
+
+        {/* Google Services Integration */}
+        <div className="mb-8">
+          <GoogleServicesConnection 
+            onConnectionChange={setConnectedServices}
+          />
         </div>
 
         {/* Daily Usage Overview */}

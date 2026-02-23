@@ -32,14 +32,15 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     
     // Store the account connection
     const connectionData = {
-      platform: 'google-ads',
+      platform: 'google-ads' as const,
       accountId: accountId,
       accountInfo: accountInfo as GoogleAdsAccount,
       accessToken,
       refreshToken,
       connectedAt: new Date().toISOString(),
       userId: session.user.email,
-      expiresAt: Date.now() + (3600 * 1000)
+      expiresAt: Date.now() + (3600 * 1000),
+      scope: 'https://www.googleapis.com/auth/adwords'
     };
     
     storeGoogleAdsAccount(session.user.email, connectionData);

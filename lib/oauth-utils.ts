@@ -97,7 +97,7 @@ export const generateGoogleAdsAuthUrl = () => {
     const params = new URLSearchParams({
       client_id: clientId,
       redirect_uri: redirectUri,
-      scope: 'https://www.googleapis.com/auth/adwords https://www.googleapis.com/auth/analytics.readonly',
+      scope: 'https://www.googleapis.com/auth/adwords https://www.googleapis.com/auth/webmasters.readonly https://www.googleapis.com/auth/tagmanager.readonly https://www.googleapis.com/auth/analytics.readonly',
       response_type: 'code',
       access_type: 'offline',
       prompt: 'consent',
@@ -145,7 +145,7 @@ export const generateGoogleAnalyticsAuthUrl = () => {
   return `https://accounts.google.com/o/oauth2/v2/auth?${params.toString()}`;
 };
 
-// Combined Google Auth URL for both Ads and Analytics
+// Combined Google Auth URL for both Ads and Analytics (legacy)
 export const generateCombinedGoogleAuthUrl = () => {
   const clientId = getGoogleClientId();
   const baseUrl = getBaseUrl();
@@ -158,7 +158,7 @@ export const generateCombinedGoogleAuthUrl = () => {
   const params = new URLSearchParams({
     client_id: clientId,
     redirect_uri: `${baseUrl}/api/marketing-platforms/google/callback`,
-    scope: 'https://www.googleapis.com/auth/adwords https://www.googleapis.com/auth/analytics.readonly https://www.googleapis.com/auth/analytics.manage.users.readonly',
+    scope: 'https://www.googleapis.com/auth/adwords https://www.googleapis.com/auth/webmasters.readonly https://www.googleapis.com/auth/tagmanager.readonly https://www.googleapis.com/auth/analytics.readonly https://www.googleapis.com/auth/analytics.manage.users.readonly',
     response_type: 'code',
     access_type: 'offline',
     prompt: 'consent',
@@ -166,6 +166,63 @@ export const generateCombinedGoogleAuthUrl = () => {
   });
   
   return `https://accounts.google.com/o/oauth2/v2/auth?${params.toString()}`;
+};
+
+// Unified Google Services Auth URL for Ads, Search Console, Tag Manager, and Analytics
+export const generateUnifiedGoogleServicesAuthUrl = () => {
+  try {
+    const clientId = getGoogleClientId();
+    const baseUrl = getBaseUrl();
+    
+    logOAuthDebugInfo('generateUnifiedGoogleServicesAuthUrl', {
+      clientId: clientId ? `${clientId.substring(0, 20)}...` : 'not set',
+      baseUrl,
+      environment: process.env.NODE_ENV,
+      hasClientId: !!clientId
+    });
+    
+    if (!clientId) {
+      const errorMsg = 'Google Client ID not found in environment variables';
+      console.error('❌', errorMsg);
+      throw new Error(errorMsg);
+    }
+
+    const redirectUri = `${baseUrl}/api/marketing-platforms/google-unified/callback`;
+    
+    // Validate redirect URI
+    try {
+      new URL(redirectUri);
+    } catch (error) {
+      throw new Error(`Invalid redirect URI: ${redirectUri}`);
+    }
+
+    const params = new URLSearchParams({
+      client_id: clientId,
+      redirect_uri: redirectUri,
+      scope: 'https://www.googleapis.com/auth/adwords https://www.googleapis.com/auth/webmasters.readonly https://www.googleapis.com/auth/tagmanager.readonly https://www.googleapis.com/auth/analytics.readonly',
+      response_type: 'code',
+      access_type: 'offline',
+      prompt: 'consent',
+      state: 'google_unified_auth_state',
+      include_granted_scopes: 'true'
+    });
+    
+    const authUrl = `https://accounts.google.com/o/oauth2/v2/auth?${params.toString()}`;
+    
+    logOAuthDebugInfo('generateUnifiedGoogleServicesAuthUrl - Success', {
+      authUrlLength: authUrl.length,
+      redirectUri,
+      hasRequiredParams: !!(clientId && redirectUri)
+    });
+    
+    return authUrl;
+  } catch (error) {
+    console.error('❌ Error generating Unified Google Services Auth URL:', error);
+    logOAuthDebugInfo('generateUnifiedGoogleServicesAuthUrl - Error', {
+      error: error instanceof Error ? error.message : 'Unknown error'
+    });
+    return '#'; // Safe fallback
+  }
 };
 
 export const generateMetaAuthUrl = () => {

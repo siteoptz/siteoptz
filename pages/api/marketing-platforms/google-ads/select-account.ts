@@ -31,7 +31,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 
     // Store the selected account information using Google Ads client
     const connectionData = {
-      platform: 'google-ads',
+      platform: 'google-ads' as const,
       accountId: accountId,
       accountInfo: {
         customer_id: accountId,
@@ -46,7 +46,8 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       refreshToken: credentials.refresh_token,
       connectedAt: new Date().toISOString(),
       userId: session.user.email,
-      expiresAt: credentials.expires_at || (Date.now() + (3600 * 1000))
+      expiresAt: credentials.expires_at || (Date.now() + (3600 * 1000)),
+      scope: credentials.scope || 'https://www.googleapis.com/auth/adwords'
     };
     
     storeGoogleAdsAccount(session.user.email, connectionData);
