@@ -274,7 +274,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
         bounceRate: 42.3,
         avgSessionDuration: 145.7,
         pageViews: totals.pageViews,
-        dateRange: `${timeframe.replace('_', ' ').replace('last ', 'Last ')}`,
+        dateRange: `${(timeframe as string).replace('_', ' ').replace('last ', 'Last ')}`,
         newUsers: Math.floor(totals.users * 0.65),
         returningUsers: Math.floor(totals.users * 0.35),
         conversionRate: Math.round((totals.conversions / totals.sessions) * 100 * 100) / 100,
