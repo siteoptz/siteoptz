@@ -10,6 +10,7 @@ import { UpgradePrompt } from '../../components/UpgradePrompt';
 import FreePlanContent from '../../components/dashboard/FreePlanContent';
 import { OptzDashboardButton } from '../../components/dashboard/OptzDashboardButton';
 import { GoogleServicesConnection } from '../../components/dashboard/GoogleServicesConnection';
+import { GoogleServicesDashboard } from '../../components/dashboard/GoogleServicesDashboard';
 import { 
   Search, 
   Calendar, 
@@ -126,6 +127,13 @@ export default function FreeDashboard() {
             onConnectionChange={setConnectedServices}
           />
         </div>
+
+        {/* Google Services Dashboard - Show only if services are connected */}
+        {connectedServices.length > 0 && (
+          <div className="mb-8">
+            <GoogleServicesDashboard />
+          </div>
+        )}
 
         {/* Daily Usage Overview */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
