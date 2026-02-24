@@ -63,24 +63,58 @@ export const GoogleServicesConnection: React.FC<GoogleServicesConnectionProps> =
     }
   };
 
-  // Load connection status
+  // Load connection status from NextAuth session
   const loadServiceStatus = async () => {
     if (!session?.user?.email) return;
 
     try {
       setLoading(true);
-      const response = await fetch('/api/marketing-platforms/google-unified/status');
       
-      if (!response.ok) {
-        throw new Error(`Failed to load status: ${response.status}`);
-      }
+      // Check if we have Google tokens in the session
+      const hasGoogleTokens = !!(session as any)?.accessToken && !!(session as any)?.googleScope;
+      const googleScope = (session as any)?.googleScope || '';
       
-      const data = await response.json();
-      setServices(data.services || []);
+      console.log('🔐 Checking session tokens:', {
+        hasAccessToken: !!(session as any)?.accessToken,
+        hasRefreshToken: !!(session as any)?.refreshToken,
+        scope: googleScope
+      });
       
-      const connectedServices = data.services
-        ?.filter((service: GoogleServiceStatus) => service.isConnected)
-        ?.map((service: GoogleServiceStatus) => service.platform) || [];
+      // Determine which services are connected based on granted scopes
+      const serviceStatuses = Object.keys(serviceConfig).map(platform => {
+        let isConnected = false;
+        
+        if (hasGoogleTokens) {
+          switch (platform) {
+            case 'google-ads':
+              isConnected = googleScope.includes('https://www.googleapis.com/auth/adwords');
+              break;
+            case 'search-console':
+              isConnected = googleScope.includes('https://www.googleapis.com/auth/webmasters.readonly');
+              break;
+            case 'tag-manager':
+              isConnected = googleScope.includes('https://www.googleapis.com/auth/tagmanager.readonly');
+              break;
+            case 'analytics':
+              isConnected = googleScope.includes('https://www.googleapis.com/auth/analytics.readonly');
+              break;
+          }
+        }
+        
+        return {
+          platform,
+          isConnected,
+          lastConnected: isConnected ? new Date().toISOString() : undefined,
+          accountInfo: isConnected ? { connected: true } : null,
+          scope: isConnected ? googleScope : null
+        };
+      });
+      
+      setServices(serviceStatuses);
+      
+      const connectedServices = serviceStatuses
+        .filter(service => service.isConnected)
+        .map(service => service.platform);
       
       onConnectionChange?.(connectedServices);
       
@@ -92,62 +126,28 @@ export const GoogleServicesConnection: React.FC<GoogleServicesConnectionProps> =
     }
   };
 
-  // Connect to Google services
+  // Connect to Google services via NextAuth
   const handleConnect = () => {
     setError(null);
     
-    // Generate the unified OAuth URL with all scopes
-    const baseUrl = window.location.origin;
-    const clientId = process.env.NEXT_PUBLIC_GOOGLE_CLIENT_ID;
-    
-    if (!clientId) {
-      setError('Google Client ID not configured');
-      return;
-    }
-    
-    const params = new URLSearchParams({
-      client_id: clientId,
-      redirect_uri: `${baseUrl}/api/marketing-platforms/google-unified/callback`,
-      scope: [
-        'https://www.googleapis.com/auth/adwords',
-        'https://www.googleapis.com/auth/webmasters.readonly', 
-        'https://www.googleapis.com/auth/tagmanager.readonly',
-        'https://www.googleapis.com/auth/analytics.readonly'
-      ].join(' '),
-      response_type: 'code',
-      access_type: 'offline',
-      prompt: 'consent',
-      state: 'google_unified_auth_state',
-      include_granted_scopes: 'true'
-    });
-    
-    const authUrl = `https://accounts.google.com/o/oauth2/v2/auth?${params.toString()}`;
-    window.location.href = authUrl;
+    // Use NextAuth to sign in with Google (which now includes all our scopes)
+    // This will trigger a re-authentication with the expanded scopes
+    const currentUrl = window.location.href;
+    window.location.href = `/api/auth/signin?callbackUrl=${encodeURIComponent(currentUrl)}`;
   };
 
-  // Disconnect a specific service
+  // Disconnect all Google services (NextAuth-based approach)
   const handleDisconnect = async (platform: string) => {
     if (!session?.user?.email) return;
 
-    try {
-      setLoading(true);
-      const response = await fetch('/api/marketing-platforms/google-unified/disconnect', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ platform })
-      });
-      
-      if (!response.ok) {
-        throw new Error(`Failed to disconnect: ${response.status}`);
-      }
-      
-      await loadServiceStatus();
-      
-    } catch (error) {
-      console.error('Error disconnecting service:', error);
-      setError(`Failed to disconnect ${platform}`);
-    } finally {
-      setLoading(false);
+    // Since we're using NextAuth tokens, disconnecting means signing out completely
+    // Individual service disconnection isn't possible with this approach
+    const confirmed = confirm(
+      'This will sign you out completely since all Google services use the same authentication. Continue?'
+    );
+    
+    if (confirmed) {
+      window.location.href = '/api/auth/signout';
     }
   };
 

@@ -139,7 +139,7 @@ export async function verifyPlanAccess(
       hasAccess: false,
       userPlan: 'free',
       requestedPlan: requiredPlan,
-      redirectTo: '/auth/signin'
+      redirectTo: '/api/auth/signin'
     };
   }
   

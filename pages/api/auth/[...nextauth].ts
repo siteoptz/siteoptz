@@ -1,16 +1,8 @@
 import NextAuth, { NextAuthOptions } from 'next-auth'
 import GoogleProvider from 'next-auth/providers/google'
 
-// Import the logging function
-let addOAuthLog: (message: string) => void;
-try {
-  // Dynamically import to avoid build issues
-  const loggingModule = require('./debug/oauth-logs');
-  addOAuthLog = loggingModule.addOAuthLog;
-} catch (error) {
-  // Fallback if logging module not available
-  addOAuthLog = (message: string) => console.log(`[OAuth Log] ${message}`);
-}
+// Simple logging function
+const addOAuthLog = (message: string) => console.log(`[OAuth Log] ${message}`);
 
 // Helper function to check if user exists in GoHighLevel
 async function searchGHLContact(email: string) {
@@ -332,13 +324,26 @@ export const authOptions: NextAuthOptions = {
     GoogleProvider({
       clientId: process.env.GOOGLE_CLIENT_ID!,
       clientSecret: process.env.GOOGLE_CLIENT_SECRET!,
+      authorization: {
+        params: {
+          scope: [
+            'openid',
+            'email',
+            'profile',
+            'https://www.googleapis.com/auth/adwords',
+            'https://www.googleapis.com/auth/webmasters.readonly',
+            'https://www.googleapis.com/auth/tagmanager.readonly',
+            'https://www.googleapis.com/auth/analytics.readonly'
+          ].join(' ')
+        }
+      }
     }),
   ],
   secret: process.env.NEXTAUTH_SECRET,
-  pages: {
-    signIn: '/login',
-    error: '/auth/error',
-  },
+  // pages: {
+  //   signIn: '/login',
+  //   error: '/auth/error',
+  // },
   callbacks: {
     async signIn({ user, account, profile }) {
       const logMessage = `🔄🔄🔄 REAL OAUTH SIGNIN CALLBACK 🔄🔄🔄`;
@@ -420,9 +425,19 @@ export const authOptions: NextAuthOptions = {
     },
     
     async jwt({ token, user, account }) {
-      // On initial sign in, fetch user data from GHL
+      // On initial sign in, fetch user data from GHL and store Google tokens
       if (account && user) {
         token.accessToken = account.access_token;
+        token.refreshToken = account.refresh_token;
+        token.googleScope = account.scope;
+        token.expiresAt = account.expires_at;
+        
+        console.log('🔐 JWT: Stored Google OAuth tokens:', {
+          hasAccessToken: !!account.access_token,
+          hasRefreshToken: !!account.refresh_token,
+          scope: account.scope,
+          expiresAt: account.expires_at
+        });
         
         try {
           // Get user's plan from GoHighLevel
@@ -445,14 +460,24 @@ export const authOptions: NextAuthOptions = {
     },
     
     async session({ session, token }) {
-      // Add plan to session
+      // Add plan and Google tokens to session
       if (session.user) {
         (session.user as any).plan = token.plan || 'free';
         console.log('📋 Session: User plan is:', (session.user as any).plan);
       }
       
+      // Add Google OAuth tokens to session for Google Services integration
       if (token.accessToken) {
         (session as any).accessToken = token.accessToken;
+        (session as any).refreshToken = token.refreshToken;
+        (session as any).googleScope = token.googleScope;
+        (session as any).expiresAt = token.expiresAt;
+        
+        console.log('🔐 Session: Google tokens available:', {
+          hasAccessToken: !!token.accessToken,
+          hasRefreshToken: !!token.refreshToken,
+          scope: token.googleScope
+        });
       }
       
       return session;
