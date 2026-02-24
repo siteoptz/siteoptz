@@ -440,16 +440,22 @@ export const authOptions: NextAuthOptions = {
       // Handle same-origin URLs
       if (new URL(url).origin === baseUrl) return url;
       
+      // Fix localhost port mismatch - redirect localhost:3000 to localhost:3001
+      if (url.includes('localhost:3000') && baseUrl.includes('localhost:3001')) {
+        const fixedUrl = url.replace('localhost:3000', 'localhost:3001');
+        console.log('🔧 Fixed localhost port mismatch:', fixedUrl);
+        return fixedUrl;
+      }
+      
       // Allow normal navigation to homepage without redirecting
       if (url === baseUrl + '/' || url === baseUrl) {
         console.log('🔧 Allowing normal homepage access');
         return url;
       }
       
-      // For OAuth callbacks, respect the original callbackUrl instead of forcing /dashboard
-      // This allows SmartSignUpModal to set specific redirect URLs with plan/billing info
-      console.log('🔧 Using provided redirect URL:', url);
-      return url;
+      // Default to base URL for development
+      console.log('🔧 Defaulting to baseUrl:', baseUrl);
+      return baseUrl;
     },
     
     async jwt({ token, user, account }) {
