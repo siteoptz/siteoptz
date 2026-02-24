@@ -120,40 +120,25 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     console.log('🔍 Fetching Google Ads data for user:', session.user.email);
     console.log('📊 Parameters:', { accountId, timeframe, comparison });
 
-    // Generate enhanced mock data with MCC support, chart data, and comparisons
-    const mockAccounts: MCCAccount[] = [
+    // Fetch real Google Ads MCC accounts
+    const realAccounts = await fetchGoogleAdsAccounts(accessToken);
+    
+    // If we have real accounts, use them; otherwise fall back to mock data for development
+    const accounts: MCCAccount[] = realAccounts.length > 0 ? realAccounts : [
       {
         customerId: '123-456-7890',
-        name: 'SiteOptz Main Account',
-        descriptiveName: 'SiteOptz Primary Ads Account',
+        name: 'Demo Account',
+        descriptiveName: 'Demo Google Ads Account',
         currencyCode: 'USD',
         timeZone: 'America/Los_Angeles',
         accountType: 'STANDARD',
-        testAccount: false
-      },
-      {
-        customerId: '123-456-7891',
-        name: 'SiteOptz E-commerce',
-        descriptiveName: 'SiteOptz Shopping Campaigns',
-        currencyCode: 'USD',
-        timeZone: 'America/Los_Angeles',
-        accountType: 'STANDARD',
-        testAccount: false
-      },
-      {
-        customerId: '123-456-7892',
-        name: 'SiteOptz International',
-        descriptiveName: 'SiteOptz Global Campaigns',
-        currencyCode: 'EUR',
-        timeZone: 'Europe/London',
-        accountType: 'STANDARD',
-        testAccount: false
+        testAccount: true
       }
     ];
 
     const selectedAccount = accountId 
-      ? mockAccounts.find(acc => acc.customerId === accountId) || mockAccounts[0]
-      : mockAccounts[0];
+      ? accounts.find(acc => acc.customerId === accountId) || accounts[0]
+      : accounts[0];
 
     // Generate chart data based on timeframe
     const generateChartData = (timeframe: string): ChartDataPoint[] => {
@@ -238,7 +223,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     const comparisonData = generateComparison();
 
     const mockData: GoogleAdsData = {
-      accounts: mockAccounts,
+      accounts: accounts,
       selectedAccount,
       campaigns: [
         {
@@ -310,9 +295,98 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   }
 }
 
-// TODO: Implement actual Google Ads API integration
-async function fetchGoogleAdsData(accessToken: string, refreshToken: string): Promise<GoogleAdsData> {
-  // This would integrate with the Google Ads API
-  // For now, returning mock data
-  throw new Error('Not implemented yet');
+// Function to fetch real Google Ads accounts from Google Ads API
+async function fetchGoogleAdsAccounts(accessToken: string): Promise<MCCAccount[]> {
+  try {
+    console.log('🔍 Fetching real Google Ads accounts...');
+    
+    // First, get the customer ID to use for the query
+    const customerResponse = await fetch('https://googleads.googleapis.com/v14/customers:listAccessibleCustomers', {
+      headers: {
+        'Authorization': `Bearer ${accessToken}`,
+        'developer-token': process.env.GOOGLE_ADS_DEVELOPER_TOKEN || '',
+        'Content-Type': 'application/json',
+      },
+    });
+
+    if (!customerResponse.ok) {
+      console.error('Failed to fetch accessible customers:', customerResponse.status);
+      return [];
+    }
+
+    const customerData = await customerResponse.json();
+    console.log('📊 Accessible customers:', customerData);
+
+    if (!customerData.resourceNames || customerData.resourceNames.length === 0) {
+      console.log('No accessible customers found');
+      return [];
+    }
+
+    // Extract customer IDs from resource names
+    const customerIds = customerData.resourceNames.map((resourceName: string) => {
+      const match = resourceName.match(/customers\/(\d+)/);
+      return match ? match[1] : null;
+    }).filter((id: string | null) => id !== null);
+
+    console.log('📊 Customer IDs found:', customerIds);
+
+    // Fetch details for each customer
+    const accounts: MCCAccount[] = [];
+    
+    for (const customerId of customerIds) {
+      try {
+        const accountResponse = await fetch(`https://googleads.googleapis.com/v14/customers/${customerId}/googleAds:search`, {
+          method: 'POST',
+          headers: {
+            'Authorization': `Bearer ${accessToken}`,
+            'developer-token': process.env.GOOGLE_ADS_DEVELOPER_TOKEN || '',
+            'login-customer-id': customerId,
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify({
+            query: `
+              SELECT 
+                customer.id,
+                customer.descriptive_name,
+                customer.currency_code,
+                customer.time_zone,
+                customer.test_account,
+                customer.manager
+              FROM customer 
+              WHERE customer.id = ${customerId}
+            `
+          }),
+        });
+
+        if (accountResponse.ok) {
+          const accountData = await accountResponse.json();
+          console.log(`📊 Account data for ${customerId}:`, accountData);
+          
+          if (accountData.results && accountData.results.length > 0) {
+            const customer = accountData.results[0].customer;
+            accounts.push({
+              customerId: customer.id,
+              name: customer.descriptiveName || `Account ${customer.id}`,
+              descriptiveName: customer.descriptiveName || `Google Ads Account ${customer.id}`,
+              currencyCode: customer.currencyCode || 'USD',
+              timeZone: customer.timeZone || 'America/Los_Angeles',
+              accountType: customer.manager ? 'MANAGER' : 'STANDARD',
+              testAccount: customer.testAccount || false
+            });
+          }
+        } else {
+          console.error(`Failed to fetch account details for ${customerId}:`, accountResponse.status);
+        }
+      } catch (error) {
+        console.error(`Error fetching account details for ${customerId}:`, error);
+      }
+    }
+
+    console.log('✅ Successfully fetched Google Ads accounts:', accounts);
+    return accounts;
+
+  } catch (error) {
+    console.error('Error fetching Google Ads accounts:', error);
+    return [];
+  }
 }
