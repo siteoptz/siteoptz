@@ -146,37 +146,24 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     console.log('🔍 Fetching Analytics data for user:', session.user.email);
     console.log('📊 Parameters:', { propertyId, timeframe, comparison });
 
-    // Generate enhanced mock data with multiple properties, chart data, and comparisons
-    const mockProperties: AnalyticsProperty[] = [
+    // Fetch real Google Analytics properties
+    const realProperties = await fetchAnalyticsProperties(accessToken);
+    
+    // If we have real properties, use them; otherwise fall back to mock data for development
+    const properties: AnalyticsProperty[] = realProperties.length > 0 ? realProperties : [
       {
         propertyId: '123456789',
-        displayName: 'SiteOptz Main Website',
-        websiteUrl: 'https://siteoptz.ai',
+        displayName: 'Demo Property',
+        websiteUrl: 'https://demo.example.com',
         industryCategory: 'TECHNOLOGY',
         timeZone: 'America/Los_Angeles',
         currencyCode: 'USD'
-      },
-      {
-        propertyId: '123456790',
-        displayName: 'SiteOptz Blog',
-        websiteUrl: 'https://blog.siteoptz.ai',
-        industryCategory: 'TECHNOLOGY',
-        timeZone: 'America/Los_Angeles',
-        currencyCode: 'USD'
-      },
-      {
-        propertyId: '123456791',
-        displayName: 'SiteOptz Europe',
-        websiteUrl: 'https://eu.siteoptz.ai',
-        industryCategory: 'TECHNOLOGY',
-        timeZone: 'Europe/London',
-        currencyCode: 'EUR'
       }
     ];
 
     const selectedProperty = propertyId 
-      ? mockProperties.find(prop => prop.propertyId === propertyId) || mockProperties[0]
-      : mockProperties[0];
+      ? properties.find(prop => prop.propertyId === propertyId) || properties[0]
+      : properties[0];
 
     // Generate chart data based on timeframe
     const generateAnalyticsChartData = (timeframe: string): AnalyticsChartDataPoint[] => {
@@ -266,7 +253,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     const comparisonData = generateAnalyticsComparison();
 
     const mockData: AnalyticsData = {
-      properties: mockProperties,
+      properties: properties,
       selectedProperty,
       overview: {
         totalUsers: totals.users,
@@ -428,5 +415,76 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       error: 'Failed to fetch Analytics data',
       details: error instanceof Error ? error.message : 'Unknown error'
     });
+  }
+}
+
+// Function to fetch real Analytics properties from Google Analytics Admin API
+async function fetchAnalyticsProperties(accessToken: string): Promise<AnalyticsProperty[]> {
+  try {
+    console.log('🔍 Fetching real Google Analytics properties...');
+    
+    // First, get all accounts accessible to the user
+    const accountsResponse = await fetch('https://analyticsadmin.googleapis.com/v1beta/accounts', {
+      headers: {
+        'Authorization': `Bearer ${accessToken}`,
+        'Content-Type': 'application/json',
+      },
+    });
+
+    if (!accountsResponse.ok) {
+      console.error('Failed to fetch Analytics accounts:', accountsResponse.status);
+      return [];
+    }
+
+    const accountsData = await accountsResponse.json();
+    console.log('📊 Analytics accounts:', accountsData);
+
+    if (!accountsData.accounts || accountsData.accounts.length === 0) {
+      console.log('No Analytics accounts found');
+      return [];
+    }
+
+    // Fetch properties for each account
+    const properties: AnalyticsProperty[] = [];
+    
+    for (const account of accountsData.accounts) {
+      try {
+        const propertiesResponse = await fetch(`https://analyticsadmin.googleapis.com/v1beta/${account.name}/properties`, {
+          headers: {
+            'Authorization': `Bearer ${accessToken}`,
+            'Content-Type': 'application/json',
+          },
+        });
+
+        if (propertiesResponse.ok) {
+          const propertiesData = await propertiesResponse.json();
+          console.log(`📊 Properties for ${account.name}:`, propertiesData);
+          
+          if (propertiesData.properties && propertiesData.properties.length > 0) {
+            for (const property of propertiesData.properties) {
+              properties.push({
+                propertyId: property.name.split('/').pop() || property.name,
+                displayName: property.displayName || `Property ${property.name}`,
+                websiteUrl: property.websiteUrl || '',
+                industryCategory: property.industryCategory || 'UNSPECIFIED',
+                timeZone: property.timeZone || 'UTC',
+                currencyCode: property.currencyCode || 'USD'
+              });
+            }
+          }
+        } else {
+          console.error(`Failed to fetch properties for ${account.name}:`, propertiesResponse.status);
+        }
+      } catch (error) {
+        console.error(`Error fetching properties for ${account.name}:`, error);
+      }
+    }
+
+    console.log('✅ Successfully fetched Analytics properties:', properties);
+    return properties;
+
+  } catch (error) {
+    console.error('Error fetching Analytics properties:', error);
+    return [];
   }
 }
