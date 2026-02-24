@@ -6,7 +6,6 @@ import { useSession } from 'next-auth/react';
 import { 
   BarChart3, 
   Search, 
-  Tag, 
   Megaphone,
   TrendingUp,
   Users,
@@ -91,7 +90,6 @@ interface EnhancedAnalyticsData {
 interface ServiceData {
   ads?: EnhancedAdsData;
   searchConsole?: any;
-  tagManager?: any;
   analytics?: EnhancedAnalyticsData;
 }
 
@@ -111,7 +109,6 @@ export const EnhancedGoogleServicesDashboard: React.FC<DashboardProps> = ({ clas
   const [selectedAnalyticsProperty, setSelectedAnalyticsProperty] = useState<string>('');
   const [timeframe, setTimeframe] = useState<string>('last_30_days');
   const [comparison, setComparison] = useState<boolean>(false);
-  const [activeTab, setActiveTab] = useState<'overview' | 'ads' | 'analytics' | 'search' | 'tagmanager'>('overview');
 
   const fetchServiceData = async () => {
     if (!session?.user?.email) return;
@@ -138,7 +135,6 @@ export const EnhancedGoogleServicesDashboard: React.FC<DashboardProps> = ({ clas
       const endpoints = [
         `/api/google-services/ads/data?${params.toString()}`,
         '/api/google-services/search-console/data',
-        '/api/google-services/tag-manager/data',
         `/api/google-services/analytics/data?${params.toString()}`
       ];
 
@@ -150,7 +146,7 @@ export const EnhancedGoogleServicesDashboard: React.FC<DashboardProps> = ({ clas
       
       responses.forEach((result, index) => {
         if (result.status === 'fulfilled' && result.value.success) {
-          const serviceKey = ['ads', 'searchConsole', 'tagManager', 'analytics'][index] as keyof ServiceData;
+          const serviceKey = ['ads', 'searchConsole', 'analytics'][index] as keyof ServiceData;
           newData[serviceKey] = result.value.data;
         } else {
           console.warn(`Failed to fetch data from service ${index}:`, result);
@@ -296,9 +292,9 @@ export const EnhancedGoogleServicesDashboard: React.FC<DashboardProps> = ({ clas
       <div className="bg-black border border-gray-800 rounded-xl p-6">
         <div className="flex flex-col lg:flex-row lg:items-center justify-between mb-6 space-y-4 lg:space-y-0">
           <div>
-            <h2 className="text-2xl font-bold text-white mb-2">Enhanced Google Services Dashboard</h2>
+            <h2 className="text-2xl font-bold text-white mb-2">Google Services Dashboard</h2>
             <p className="text-gray-400">
-              Advanced analytics with account selection, timeframes, and visual comparisons
+              Google Ads and Analytics with account selection, timeframes, and visual comparisons
             </p>
           </div>
           
@@ -315,27 +311,6 @@ export const EnhancedGoogleServicesDashboard: React.FC<DashboardProps> = ({ clas
           </div>
         </div>
 
-        {/* Account Selectors */}
-        <div className="flex flex-wrap items-center gap-4 mb-4">
-          {data.ads?.accounts && data.ads.accounts.length > 0 && (
-            <AccountSelector
-              accounts={data.ads.accounts}
-              selectedAccount={selectedAdsAccount}
-              onAccountChange={setSelectedAdsAccount}
-              label="Select Google Ads Account"
-            />
-          )}
-          
-          {data.analytics?.properties && data.analytics.properties.length > 0 && (
-            <AccountSelector
-              accounts={data.analytics.properties}
-              selectedAccount={selectedAnalyticsProperty}
-              onAccountChange={setSelectedAnalyticsProperty}
-              label="Select Analytics Property"
-            />
-          )}
-        </div>
-        
         {lastUpdated && (
           <p className="text-xs text-gray-500">
             Last updated: {new Date(lastUpdated).toLocaleString()}
@@ -353,133 +328,73 @@ export const EnhancedGoogleServicesDashboard: React.FC<DashboardProps> = ({ clas
         </div>
       )}
 
-      {/* Tab Navigation */}
-      <div className="bg-black border border-gray-800 rounded-xl p-6">
-        <div className="flex space-x-1 mb-6">
-          {[
-            { id: 'overview', label: 'Overview', icon: BarChart3 },
-            { id: 'ads', label: 'Google Ads', icon: Megaphone },
-            { id: 'analytics', label: 'Analytics', icon: TrendingUp },
-            { id: 'search', label: 'Search Console', icon: Search },
-            { id: 'tagmanager', label: 'Tag Manager', icon: Tag }
-          ].map(tab => (
-            <button
-              key={tab.id}
-              onClick={() => setActiveTab(tab.id as any)}
-              className={`flex items-center space-x-2 px-4 py-2 rounded-lg transition-colors ${
-                activeTab === tab.id 
-                  ? 'bg-blue-600 text-white' 
-                  : 'bg-gray-800 text-gray-400 hover:bg-gray-700'
-              }`}
-            >
-              <tab.icon className="w-4 h-4" />
-              <span>{tab.label}</span>
-            </button>
-          ))}
-        </div>
-
-        {/* Tab Content */}
-        {activeTab === 'overview' && (
-          <div className="space-y-6">
-            {/* Quick Stats Grid */}
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
-              {data.ads && (
-                <div className="bg-gray-900 border border-gray-700 rounded-lg p-4">
-                  <div className="flex items-center justify-between mb-2">
-                    <Megaphone className="w-5 h-5 text-blue-400" />
-                    <span className="text-xs text-gray-500">Google Ads</span>
-                  </div>
-                  <div className="text-2xl font-bold text-white">${data.ads.summary?.totalCost?.toFixed(2)}</div>
-                  <div className="text-sm text-gray-400">Total Spend</div>
-                </div>
-              )}
-
-              {data.analytics && (
-                <div className="bg-gray-900 border border-gray-700 rounded-lg p-4">
-                  <div className="flex items-center justify-between mb-2">
-                    <Users className="w-5 h-5 text-green-400" />
-                    <span className="text-xs text-gray-500">Analytics</span>
-                  </div>
-                  <div className="text-2xl font-bold text-white">{data.analytics.overview?.totalUsers?.toLocaleString()}</div>
-                  <div className="text-sm text-gray-400">Total Users</div>
-                </div>
-              )}
-
-              {data.analytics && (
-                <div className="bg-gray-900 border border-gray-700 rounded-lg p-4">
-                  <div className="flex items-center justify-between mb-2">
-                    <Eye className="w-5 h-5 text-purple-400" />
-                    <span className="text-xs text-gray-500">Page Views</span>
-                  </div>
-                  <div className="text-2xl font-bold text-white">{data.analytics.overview?.pageViews?.toLocaleString()}</div>
-                  <div className="text-sm text-gray-400">Total Views</div>
-                </div>
-              )}
-
-              {data.analytics && (
-                <div className="bg-gray-900 border border-gray-700 rounded-lg p-4">
-                  <div className="flex items-center justify-between mb-2">
-                    <Activity className="w-5 h-5 text-red-400" />
-                    <span className="text-xs text-gray-500">Real-time</span>
-                  </div>
-                  <div className="text-2xl font-bold text-white">{data.analytics.realTimeUsers?.activeUsers}</div>
-                  <div className="text-sm text-gray-400">Active Users</div>
-                </div>
-              )}
+      {/* Google Ads Section */}
+      {data.ads && (
+        <div className="bg-black border border-gray-800 rounded-xl p-6">
+          <div className="flex flex-col lg:flex-row lg:items-center justify-between mb-6 space-y-4 lg:space-y-0">
+            <div className="flex items-center space-x-3">
+              <Megaphone className="w-6 h-6 text-blue-400" />
+              <h2 className="text-xl font-bold text-white">Google Ads</h2>
             </div>
-
-            {/* Comparison Section */}
-            {comparison && (data.ads?.comparison || data.analytics?.comparison) && (
-              <div className="space-y-4">
-                <h3 className="text-lg font-semibold text-white">Period Comparison</h3>
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
-                  {data.ads?.comparison && (
-                    <>
-                      <ComparisonCard
-                        current={data.ads.comparison.current.impressions}
-                        previous={data.ads.comparison.previous.impressions}
-                        change={data.ads.comparison.change.impressions}
-                        metric="Impressions"
-                        icon={Eye}
-                      />
-                      <ComparisonCard
-                        current={data.ads.comparison.current.clicks}
-                        previous={data.ads.comparison.previous.clicks}
-                        change={data.ads.comparison.change.clicks}
-                        metric="Clicks"
-                        icon={MousePointer}
-                      />
-                    </>
-                  )}
-                  
-                  {data.analytics?.comparison && (
-                    <>
-                      <ComparisonCard
-                        current={data.analytics.comparison.current.users}
-                        previous={data.analytics.comparison.previous.users}
-                        change={data.analytics.comparison.change.users}
-                        metric="Users"
-                        icon={Users}
-                      />
-                      <ComparisonCard
-                        current={data.analytics.comparison.current.sessions}
-                        previous={data.analytics.comparison.previous.sessions}
-                        change={data.analytics.comparison.change.sessions}
-                        metric="Sessions"
-                        icon={Activity}
-                      />
-                    </>
-                  )}
+            
+            {/* Google Ads Account Selector */}
+            {data.ads.accounts && data.ads.accounts.length > 0 && (
+              <div className="flex items-center space-x-4">
+                <AccountSelector
+                  accounts={data.ads.accounts}
+                  selectedAccount={selectedAdsAccount}
+                  onAccountChange={setSelectedAdsAccount}
+                  label="Select Ads Account"
+                />
+                <div className="text-sm text-gray-400">
+                  {data.ads.accounts.length} account(s) available
                 </div>
               </div>
             )}
           </div>
-        )}
 
-        {activeTab === 'ads' && data.ads && (
           <div className="space-y-6">
+            {/* Ads Summary Cards */}
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+              <div className="bg-gray-900 border border-gray-700 rounded-lg p-4">
+                <div className="flex items-center justify-between mb-2">
+                  <DollarSign className="w-5 h-5 text-green-400" />
+                  <span className="text-xs text-gray-500">Total Spend</span>
+                </div>
+                <div className="text-2xl font-bold text-white">${data.ads.summary?.totalCost?.toFixed(2)}</div>
+                <div className="text-sm text-gray-400">{data.ads.timeframe}</div>
+              </div>
+
+              <div className="bg-gray-900 border border-gray-700 rounded-lg p-4">
+                <div className="flex items-center justify-between mb-2">
+                  <Eye className="w-5 h-5 text-blue-400" />
+                  <span className="text-xs text-gray-500">Impressions</span>
+                </div>
+                <div className="text-2xl font-bold text-white">{data.ads.summary?.totalImpressions?.toLocaleString()}</div>
+                <div className="text-sm text-gray-400">CTR: {data.ads.summary?.avgCtr}%</div>
+              </div>
+
+              <div className="bg-gray-900 border border-gray-700 rounded-lg p-4">
+                <div className="flex items-center justify-between mb-2">
+                  <MousePointer className="w-5 h-5 text-purple-400" />
+                  <span className="text-xs text-gray-500">Clicks</span>
+                </div>
+                <div className="text-2xl font-bold text-white">{data.ads.summary?.totalClicks?.toLocaleString()}</div>
+                <div className="text-sm text-gray-400">CPC: ${data.ads.summary?.avgCpc?.toFixed(2)}</div>
+              </div>
+
+              <div className="bg-gray-900 border border-gray-700 rounded-lg p-4">
+                <div className="flex items-center justify-between mb-2">
+                  <TrendingUp className="w-5 h-5 text-orange-400" />
+                  <span className="text-xs text-gray-500">Conversions</span>
+                </div>
+                <div className="text-2xl font-bold text-white">{data.ads.summary?.totalConversions}</div>
+                <div className="text-sm text-gray-400">Rate: {data.ads.summary?.conversionRate}%</div>
+              </div>
+            </div>
+
+            {/* Ads Charts */}
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
-              {/* Ads Performance Chart */}
               <div className="bg-gray-900 border border-gray-700 rounded-lg p-4">
                 <h3 className="text-lg font-semibold text-white mb-4 flex items-center">
                   <LineChart className="w-5 h-5 mr-2" />
@@ -488,7 +403,6 @@ export const EnhancedGoogleServicesDashboard: React.FC<DashboardProps> = ({ clas
                 <SimpleLineChart data={data.ads.chartData} dataKey="impressions" color="#3B82F6" />
               </div>
 
-              {/* Clicks Chart */}
               <div className="bg-gray-900 border border-gray-700 rounded-lg p-4">
                 <h3 className="text-lg font-semibold text-white mb-4 flex items-center">
                   <LineChart className="w-5 h-5 mr-2" />
@@ -498,7 +412,44 @@ export const EnhancedGoogleServicesDashboard: React.FC<DashboardProps> = ({ clas
               </div>
             </div>
 
-            {/* Campaigns List */}
+            {/* Comparison Section for Ads */}
+            {comparison && data.ads.comparison && (
+              <div className="space-y-4">
+                <h3 className="text-lg font-semibold text-white">Period Comparison</h3>
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+                  <ComparisonCard
+                    current={data.ads.comparison.current.impressions}
+                    previous={data.ads.comparison.previous.impressions}
+                    change={data.ads.comparison.change.impressions}
+                    metric="Impressions"
+                    icon={Eye}
+                  />
+                  <ComparisonCard
+                    current={data.ads.comparison.current.clicks}
+                    previous={data.ads.comparison.previous.clicks}
+                    change={data.ads.comparison.change.clicks}
+                    metric="Clicks"
+                    icon={MousePointer}
+                  />
+                  <ComparisonCard
+                    current={data.ads.comparison.current.cost}
+                    previous={data.ads.comparison.previous.cost}
+                    change={data.ads.comparison.change.cost}
+                    metric="Cost"
+                    icon={DollarSign}
+                  />
+                  <ComparisonCard
+                    current={data.ads.comparison.current.conversions}
+                    previous={data.ads.comparison.previous.conversions}
+                    change={data.ads.comparison.change.conversions}
+                    metric="Conversions"
+                    icon={TrendingUp}
+                  />
+                </div>
+              </div>
+            )}
+
+            {/* Campaigns Table */}
             {data.ads.campaigns && data.ads.campaigns.length > 0 && (
               <div className="bg-gray-900 border border-gray-700 rounded-lg p-4">
                 <h3 className="text-lg font-semibold text-white mb-4">Campaign Performance</h3>
@@ -511,6 +462,7 @@ export const EnhancedGoogleServicesDashboard: React.FC<DashboardProps> = ({ clas
                         <th className="text-right py-2">Clicks</th>
                         <th className="text-right py-2">Cost</th>
                         <th className="text-right py-2">Conversions</th>
+                        <th className="text-right py-2">Status</th>
                       </tr>
                     </thead>
                     <tbody>
@@ -521,6 +473,15 @@ export const EnhancedGoogleServicesDashboard: React.FC<DashboardProps> = ({ clas
                           <td className="py-3 text-right text-gray-300">{campaign.clicks?.toLocaleString()}</td>
                           <td className="py-3 text-right text-gray-300">${campaign.cost?.toFixed(2)}</td>
                           <td className="py-3 text-right text-gray-300">{campaign.conversions}</td>
+                          <td className="py-3 text-right">
+                            <span className={`px-2 py-1 rounded text-xs ${
+                              campaign.status === 'ENABLED' 
+                                ? 'bg-green-500/20 text-green-400' 
+                                : 'bg-gray-500/20 text-gray-400'
+                            }`}>
+                              {campaign.status}
+                            </span>
+                          </td>
                         </tr>
                       ))}
                     </tbody>
@@ -529,12 +490,76 @@ export const EnhancedGoogleServicesDashboard: React.FC<DashboardProps> = ({ clas
               </div>
             )}
           </div>
-        )}
+        </div>
+      )}
 
-        {activeTab === 'analytics' && data.analytics && (
+      {/* Google Analytics Section */}
+      {data.analytics && (
+        <div className="bg-black border border-gray-800 rounded-xl p-6">
+          <div className="flex flex-col lg:flex-row lg:items-center justify-between mb-6 space-y-4 lg:space-y-0">
+            <div className="flex items-center space-x-3">
+              <TrendingUp className="w-6 h-6 text-green-400" />
+              <h2 className="text-xl font-bold text-white">Google Analytics</h2>
+            </div>
+            
+            {/* Analytics Property Selector */}
+            {data.analytics.properties && data.analytics.properties.length > 0 && (
+              <div className="flex items-center space-x-4">
+                <AccountSelector
+                  accounts={data.analytics.properties}
+                  selectedAccount={selectedAnalyticsProperty}
+                  onAccountChange={setSelectedAnalyticsProperty}
+                  label="Select Analytics Property"
+                />
+                <div className="text-sm text-gray-400">
+                  {data.analytics.properties.length} property(s) available
+                </div>
+              </div>
+            )}
+          </div>
+
           <div className="space-y-6">
+            {/* Analytics Summary Cards */}
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+              <div className="bg-gray-900 border border-gray-700 rounded-lg p-4">
+                <div className="flex items-center justify-between mb-2">
+                  <Users className="w-5 h-5 text-blue-400" />
+                  <span className="text-xs text-gray-500">Total Users</span>
+                </div>
+                <div className="text-2xl font-bold text-white">{data.analytics.overview?.totalUsers?.toLocaleString()}</div>
+                <div className="text-sm text-gray-400">{data.analytics.timeframe}</div>
+              </div>
+
+              <div className="bg-gray-900 border border-gray-700 rounded-lg p-4">
+                <div className="flex items-center justify-between mb-2">
+                  <Eye className="w-5 h-5 text-purple-400" />
+                  <span className="text-xs text-gray-500">Page Views</span>
+                </div>
+                <div className="text-2xl font-bold text-white">{data.analytics.overview?.pageViews?.toLocaleString()}</div>
+                <div className="text-sm text-gray-400">Bounce: {data.analytics.overview?.bounceRate}%</div>
+              </div>
+
+              <div className="bg-gray-900 border border-gray-700 rounded-lg p-4">
+                <div className="flex items-center justify-between mb-2">
+                  <Activity className="w-5 h-5 text-orange-400" />
+                  <span className="text-xs text-gray-500">Sessions</span>
+                </div>
+                <div className="text-2xl font-bold text-white">{data.analytics.overview?.totalSessions?.toLocaleString()}</div>
+                <div className="text-sm text-gray-400">Avg: {data.analytics.overview?.avgSessionDuration}s</div>
+              </div>
+
+              <div className="bg-gray-900 border border-gray-700 rounded-lg p-4">
+                <div className="flex items-center justify-between mb-2">
+                  <Clock className="w-5 h-5 text-red-400" />
+                  <span className="text-xs text-gray-500">Real-time</span>
+                </div>
+                <div className="text-2xl font-bold text-white">{data.analytics.realTimeUsers?.activeUsers}</div>
+                <div className="text-sm text-gray-400">Active Users</div>
+              </div>
+            </div>
+
+            {/* Analytics Charts */}
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
-              {/* Users Chart */}
               <div className="bg-gray-900 border border-gray-700 rounded-lg p-4">
                 <h3 className="text-lg font-semibold text-white mb-4 flex items-center">
                   <LineChart className="w-5 h-5 mr-2" />
@@ -543,7 +568,6 @@ export const EnhancedGoogleServicesDashboard: React.FC<DashboardProps> = ({ clas
                 <SimpleLineChart data={data.analytics.chartData} dataKey="users" color="#8B5CF6" />
               </div>
 
-              {/* Page Views Chart */}
               <div className="bg-gray-900 border border-gray-700 rounded-lg p-4">
                 <h3 className="text-lg font-semibold text-white mb-4 flex items-center">
                   <LineChart className="w-5 h-5 mr-2" />
@@ -553,7 +577,44 @@ export const EnhancedGoogleServicesDashboard: React.FC<DashboardProps> = ({ clas
               </div>
             </div>
 
-            {/* Top Pages */}
+            {/* Comparison Section for Analytics */}
+            {comparison && data.analytics.comparison && (
+              <div className="space-y-4">
+                <h3 className="text-lg font-semibold text-white">Period Comparison</h3>
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+                  <ComparisonCard
+                    current={data.analytics.comparison.current.users}
+                    previous={data.analytics.comparison.previous.users}
+                    change={data.analytics.comparison.change.users}
+                    metric="Users"
+                    icon={Users}
+                  />
+                  <ComparisonCard
+                    current={data.analytics.comparison.current.sessions}
+                    previous={data.analytics.comparison.previous.sessions}
+                    change={data.analytics.comparison.change.sessions}
+                    metric="Sessions"
+                    icon={Activity}
+                  />
+                  <ComparisonCard
+                    current={data.analytics.comparison.current.pageViews}
+                    previous={data.analytics.comparison.previous.pageViews}
+                    change={data.analytics.comparison.change.pageViews}
+                    metric="Page Views"
+                    icon={Eye}
+                  />
+                  <ComparisonCard
+                    current={data.analytics.comparison.current.conversions}
+                    previous={data.analytics.comparison.previous.conversions}
+                    change={data.analytics.comparison.change.conversions}
+                    metric="Conversions"
+                    icon={TrendingUp}
+                  />
+                </div>
+              </div>
+            )}
+
+            {/* Top Pages Table */}
             {data.analytics.topPages && data.analytics.topPages.length > 0 && (
               <div className="bg-gray-900 border border-gray-700 rounded-lg p-4">
                 <h3 className="text-lg font-semibold text-white mb-4">Top Pages</h3>
@@ -561,7 +622,7 @@ export const EnhancedGoogleServicesDashboard: React.FC<DashboardProps> = ({ clas
                   <table className="w-full text-sm">
                     <thead>
                       <tr className="text-gray-400 border-b border-gray-700">
-                        <th className="text-left py-2">Page</th>
+                        <th className="text-left py-2">Page Title</th>
                         <th className="text-right py-2">Views</th>
                         <th className="text-right py-2">Unique Views</th>
                         <th className="text-right py-2">Avg. Time</th>
@@ -584,18 +645,24 @@ export const EnhancedGoogleServicesDashboard: React.FC<DashboardProps> = ({ clas
               </div>
             )}
           </div>
-        )}
+        </div>
+      )}
 
-        {/* Placeholder content for other tabs */}
-        {(activeTab === 'search' || activeTab === 'tagmanager') && (
+      {/* Search Console Placeholder */}
+      {data.searchConsole && (
+        <div className="bg-black border border-gray-800 rounded-xl p-6">
+          <div className="flex items-center space-x-3 mb-6">
+            <Search className="w-6 h-6 text-yellow-400" />
+            <h2 className="text-xl font-bold text-white">Search Console</h2>
+          </div>
           <div className="text-center py-12">
             <div className="text-gray-400 mb-2">
-              {activeTab === 'search' ? 'Search Console' : 'Tag Manager'} detailed view coming soon
+              Search Console detailed view coming soon
             </div>
             <p className="text-gray-500 text-sm">Enhanced charts and analytics for this service will be available in the next update</p>
           </div>
-        )}
-      </div>
+        </div>
+      )}
     </div>
   );
 };
