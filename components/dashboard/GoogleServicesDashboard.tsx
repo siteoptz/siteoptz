@@ -20,11 +20,122 @@ import {
   Activity
 } from 'lucide-react';
 
+interface ActivePage {
+  page: string;
+  users: number;
+}
+
+interface RealTimeUsers {
+  activeUsers: number;
+  activePages: ActivePage[];
+}
+
+interface AnalyticsOverview {
+  totalUsers: number;
+  totalSessions: number;
+  bounceRate: number;
+  avgSessionDuration: number;
+  pageViews: number;
+  dateRange: string;
+}
+
+interface TopPage {
+  pagePath: string;
+  pageTitle: string;
+  views: number;
+  uniquePageviews: number;
+  avgTimeOnPage: number;
+  bounceRate: number;
+}
+
+interface TrafficSource {
+  source: string;
+  medium: string;
+  sessions: number;
+  users: number;
+  newUsers: number;
+  bounceRate: number;
+}
+
+interface AnalyticsData {
+  overview: AnalyticsOverview;
+  realTimeUsers: RealTimeUsers;
+  topPages: TopPage[];
+  trafficSources: TrafficSource[];
+}
+
+interface SearchConsoleQuery {
+  query: string;
+  clicks: number;
+  impressions: number;
+  ctr: number;
+  position: number;
+}
+
+interface SearchConsolePage {
+  page: string;
+  clicks: number;
+  impressions: number;
+  ctr: number;
+  position: number;
+}
+
+interface SearchConsoleData {
+  performance: {
+    totalClicks: number;
+    totalImpressions: number;
+    avgCtr: number;
+    avgPosition: number;
+    dateRange: string;
+  };
+  topQueries: SearchConsoleQuery[];
+  topPages: SearchConsolePage[];
+}
+
+interface Campaign {
+  id: string;
+  name: string;
+  status: string;
+  impressions: number;
+  clicks: number;
+  cost: number;
+  conversions: number;
+}
+
+interface AdsData {
+  campaigns: Campaign[];
+  summary: {
+    totalImpressions: number;
+    totalClicks: number;
+    totalCost: number;
+    totalConversions: number;
+    avgCtr: number;
+    avgCpc: number;
+  };
+}
+
+interface TagManagerTag {
+  name: string;
+  type: string;
+}
+
+interface TagManagerTrigger {
+  name: string;
+  type: string;
+}
+
+interface TagManagerData {
+  containers: any[];
+  tags: TagManagerTag[];
+  triggers: TagManagerTrigger[];
+  variables: any[];
+}
+
 interface ServiceData {
-  ads?: any;
-  searchConsole?: any;
-  tagManager?: any;
-  analytics?: any;
+  ads?: AdsData;
+  searchConsole?: SearchConsoleData;
+  tagManager?: TagManagerData;
+  analytics?: AnalyticsData;
 }
 
 interface DashboardProps {
@@ -358,7 +469,7 @@ const ServiceDetailTabs: React.FC<{ data: ServiceData }> = ({ data }) => {
 };
 
 // Detailed view components for each service
-const GoogleAdsDetailView: React.FC<{ data: any }> = ({ data }) => (
+const GoogleAdsDetailView: React.FC<{ data: AdsData }> = ({ data }) => (
   <div className="space-y-6">
     <h3 className="text-xl font-semibold text-white">Campaign Performance</h3>
     <div className="overflow-x-auto">
@@ -374,7 +485,7 @@ const GoogleAdsDetailView: React.FC<{ data: any }> = ({ data }) => (
           </tr>
         </thead>
         <tbody>
-          {data.campaigns.map((campaign: any, index: number) => (
+          {data.campaigns.map((campaign: Campaign, index: number) => (
             <tr key={index} className="border-b border-gray-800">
               <td className="text-white py-3">{campaign.name}</td>
               <td className="py-3">
@@ -396,14 +507,14 @@ const GoogleAdsDetailView: React.FC<{ data: any }> = ({ data }) => (
   </div>
 );
 
-const SearchConsoleDetailView: React.FC<{ data: any }> = ({ data }) => (
+const SearchConsoleDetailView: React.FC<{ data: SearchConsoleData }> = ({ data }) => (
   <div className="space-y-6">
     <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
       {/* Top Queries */}
       <div>
         <h4 className="text-lg font-semibold text-white mb-4">Top Search Queries</h4>
         <div className="space-y-2">
-          {data.topQueries.map((query: any, index: number) => (
+          {data.topQueries.map((query: SearchConsoleQuery, index: number) => (
             <div key={index} className="bg-gray-800/50 rounded-lg p-3">
               <div className="flex justify-between items-center mb-2">
                 <span className="text-white text-sm">{query.query}</span>
@@ -422,7 +533,7 @@ const SearchConsoleDetailView: React.FC<{ data: any }> = ({ data }) => (
       <div>
         <h4 className="text-lg font-semibold text-white mb-4">Top Pages</h4>
         <div className="space-y-2">
-          {data.topPages.map((page: any, index: number) => (
+          {data.topPages.map((page: SearchConsolePage, index: number) => (
             <div key={index} className="bg-gray-800/50 rounded-lg p-3">
               <div className="flex justify-between items-center mb-2">
                 <span className="text-white text-sm truncate">{page.page}</span>
@@ -440,14 +551,14 @@ const SearchConsoleDetailView: React.FC<{ data: any }> = ({ data }) => (
   </div>
 );
 
-const AnalyticsDetailView: React.FC<{ data: any }> = ({ data }) => (
+const AnalyticsDetailView: React.FC<{ data: AnalyticsData }> = ({ data }) => (
   <div className="space-y-6">
     <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
       {/* Top Pages */}
       <div>
         <h4 className="text-lg font-semibold text-white mb-4">Top Pages</h4>
         <div className="space-y-2">
-          {data.topPages.map((page: any, index: number) => (
+          {data.topPages.map((page: TopPage, index: number) => (
             <div key={index} className="bg-gray-800/50 rounded-lg p-3">
               <div className="text-white text-sm mb-1">{page.pageTitle}</div>
               <div className="text-gray-400 text-xs mb-2">{page.pagePath}</div>
@@ -464,7 +575,7 @@ const AnalyticsDetailView: React.FC<{ data: any }> = ({ data }) => (
       <div>
         <h4 className="text-lg font-semibold text-white mb-4">Traffic Sources</h4>
         <div className="space-y-2">
-          {data.trafficSources.map((source: any, index: number) => (
+          {data.trafficSources.map((source: TrafficSource, index: number) => (
             <div key={index} className="bg-gray-800/50 rounded-lg p-3">
               <div className="flex justify-between items-center mb-2">
                 <span className="text-white text-sm">{source.source} / {source.medium}</span>
@@ -482,14 +593,14 @@ const AnalyticsDetailView: React.FC<{ data: any }> = ({ data }) => (
   </div>
 );
 
-const TagManagerDetailView: React.FC<{ data: any }> = ({ data }) => (
+const TagManagerDetailView: React.FC<{ data: TagManagerData }> = ({ data }) => (
   <div className="space-y-6">
     <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
       {/* Tags */}
       <div>
         <h4 className="text-lg font-semibold text-white mb-4">Active Tags</h4>
         <div className="space-y-2">
-          {data.tags.map((tag: any, index: number) => (
+          {data.tags.map((tag: TagManagerTag, index: number) => (
             <div key={index} className="bg-gray-800/50 rounded-lg p-3">
               <div className="text-white text-sm mb-1">{tag.name}</div>
               <div className="text-gray-400 text-xs">Type: {tag.type}</div>
@@ -502,7 +613,7 @@ const TagManagerDetailView: React.FC<{ data: any }> = ({ data }) => (
       <div>
         <h4 className="text-lg font-semibold text-white mb-4">Triggers</h4>
         <div className="space-y-2">
-          {data.triggers.map((trigger: any, index: number) => (
+          {data.triggers.map((trigger: TagManagerTrigger, index: number) => (
             <div key={index} className="bg-gray-800/50 rounded-lg p-3">
               <div className="text-white text-sm mb-1">{trigger.name}</div>
               <div className="text-gray-400 text-xs">Type: {trigger.type}</div>
