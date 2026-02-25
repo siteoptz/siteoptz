@@ -145,11 +145,23 @@ export const EnhancedGoogleServicesDashboard: React.FC<DashboardProps> = ({ clas
       const newData: ServiceData = {};
       
       responses.forEach((result, index) => {
+        const serviceNames = ['Google Ads', 'Search Console', 'Analytics'];
+        const serviceKey = ['ads', 'searchConsole', 'analytics'][index] as keyof ServiceData;
+        
         if (result.status === 'fulfilled' && result.value.success) {
-          const serviceKey = ['ads', 'searchConsole', 'analytics'][index] as keyof ServiceData;
           newData[serviceKey] = result.value.data;
+          
+          // Log debug information for Google Ads specifically
+          if (serviceKey === 'ads' && result.value.debugInfo) {
+            console.log(`🔧 ${serviceNames[index]} Debug Info:`, {
+              dataSource: result.value.dataSource,
+              statusMessage: result.value.statusMessage,
+              debugInfo: result.value.debugInfo,
+              apiError: result.value.apiError
+            });
+          }
         } else {
-          console.warn(`Failed to fetch data from service ${index}:`, result);
+          console.warn(`Failed to fetch data from ${serviceNames[index]}:`, result);
         }
       });
 
@@ -660,6 +672,48 @@ export const EnhancedGoogleServicesDashboard: React.FC<DashboardProps> = ({ clas
               Search Console detailed view coming soon
             </div>
             <p className="text-gray-500 text-sm">Enhanced charts and analytics for this service will be available in the next update</p>
+          </div>
+        </div>
+      )}
+
+      {/* Debug Information Panel */}
+      {process.env.NODE_ENV === 'development' && data.ads && (
+        <div className="bg-red-900/20 border border-red-800 rounded-xl p-6 mt-6">
+          <div className="flex items-center space-x-3 mb-4">
+            <AlertCircle className="w-5 h-5 text-red-400" />
+            <h3 className="text-lg font-semibold text-red-400">Debug Information (Development Only)</h3>
+          </div>
+          <div className="space-y-4 text-sm">
+            <div className="grid grid-cols-2 gap-4">
+              <div>
+                <span className="text-gray-400">Data Source:</span>
+                <span className="ml-2 text-white font-mono">{(data.ads as any).dataSource || 'unknown'}</span>
+              </div>
+              <div>
+                <span className="text-gray-400">Real Accounts:</span>
+                <span className="ml-2 text-white font-mono">{(data.ads as any).debugInfo?.realAccountsCount || 0}</span>
+              </div>
+              <div>
+                <span className="text-gray-400">Has Dev Token:</span>
+                <span className="ml-2 text-white font-mono">{(data.ads as any).debugInfo?.hasGoogleAdsDevToken ? 'Yes' : 'No'}</span>
+              </div>
+              <div>
+                <span className="text-gray-400">Selected Test Account:</span>
+                <span className="ml-2 text-white font-mono">{(data.ads as any).debugInfo?.selectedAccountIsTest ? 'Yes' : 'No'}</span>
+              </div>
+            </div>
+            {(data.ads as any).statusMessage && (
+              <div className="mt-4 p-3 bg-gray-800 rounded">
+                <span className="text-gray-400">Status:</span>
+                <span className="ml-2 text-white">{(data.ads as any).statusMessage}</span>
+              </div>
+            )}
+            {(data.ads as any).apiError && (
+              <div className="mt-4 p-3 bg-red-900/30 rounded">
+                <span className="text-red-400">API Error:</span>
+                <pre className="ml-2 text-red-300 text-xs mt-1 overflow-auto">{(data.ads as any).apiError}</pre>
+              </div>
+            )}
           </div>
         </div>
       )}

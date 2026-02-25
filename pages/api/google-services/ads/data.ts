@@ -121,7 +121,19 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     console.log('📊 Parameters:', { accountId, timeframe, comparison });
 
     // Fetch real Google Ads MCC accounts
+    console.log('🔍 Attempting to fetch real Google Ads accounts...');
     const { accounts: realAccounts, error: apiError } = await fetchGoogleAdsAccounts(accessToken);
+    
+    console.log('📊 Google Ads API Response:', {
+      realAccountsFound: realAccounts.length,
+      apiError,
+      accounts: realAccounts.map(acc => ({
+        customerId: acc.customerId,
+        name: acc.name,
+        accountType: acc.accountType,
+        testAccount: acc.testAccount
+      }))
+    });
     
     // Determine if we're using real or mock data
     const isUsingMockData = realAccounts.length === 0;
@@ -146,11 +158,33 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     let realCampaigns: Campaign[] = [];
     let realChartData: ChartDataPoint[] = [];
     
+    console.log('🔍 Campaign data fetch conditions:', {
+      isUsingMockData,
+      hasSelectedAccount: !!selectedAccount,
+      selectedAccountDetails: selectedAccount ? {
+        customerId: selectedAccount.customerId,
+        name: selectedAccount.name,
+        testAccount: selectedAccount.testAccount,
+        accountType: selectedAccount.accountType
+      } : null,
+      willFetchRealData: !isUsingMockData && selectedAccount && !selectedAccount.testAccount
+    });
+    
     if (!isUsingMockData && selectedAccount && !selectedAccount.testAccount) {
       console.log('🚀 Fetching real campaign data for account:', selectedAccount.customerId);
       const campaignData = await fetchRealCampaignData(selectedAccount.customerId, accessToken, timeframe as string);
       realCampaigns = campaignData.campaigns;
       realChartData = campaignData.chartData;
+      console.log('📊 Real campaign data fetched:', {
+        campaignsCount: realCampaigns.length,
+        chartDataCount: realChartData.length
+      });
+    } else {
+      console.log('⚠️ Using mock data because:', {
+        reason: isUsingMockData ? 'No real accounts found' : 
+                !selectedAccount ? 'No account selected' :
+                selectedAccount.testAccount ? 'Selected account is test account' : 'Unknown'
+      });
     }
 
     // Generate chart data based on timeframe
@@ -325,6 +359,20 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
         campaignsCount: realCampaigns.length,
         chartDataPoints: realChartData.length,
         selectedAccountType: selectedAccount?.accountType || 'unknown'
+      },
+      debugInfo: {
+        isUsingMockData,
+        hasRealAccounts: realAccounts.length > 0,
+        realAccountsCount: realAccounts.length,
+        selectedAccountId: selectedAccount?.customerId,
+        selectedAccountIsTest: selectedAccount?.testAccount,
+        hasGoogleAdsDevToken: !!process.env.GOOGLE_ADS_DEVELOPER_TOKEN,
+        availableAccounts: accounts.map(acc => ({
+          id: acc.customerId,
+          name: acc.name,
+          isTest: acc.testAccount,
+          type: acc.accountType
+        }))
       },
       lastUpdated: new Date().toISOString()
     });
