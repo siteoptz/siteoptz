@@ -104,11 +104,14 @@ export const EnhancedGoogleServicesDashboard: React.FC<DashboardProps> = ({ clas
   const [error, setError] = useState<string | null>(null);
   const [lastUpdated, setLastUpdated] = useState<string | null>(null);
   
-  console.log('🎯 EnhancedGoogleServicesDashboard rendering with data:', {
-    hasAdsData: !!data.ads,
-    adsAccounts: data.ads?.accounts?.length || 0,
-    dataKeys: Object.keys(data)
-  });
+  // Only log in development when data changes
+  if (process.env.NODE_ENV === 'development' && data.ads) {
+    console.log('🎯 Dashboard data updated:', {
+      hasAdsData: !!data.ads,
+      adsAccounts: data.ads?.accounts?.length || 0,
+      dataKeys: Object.keys(data)
+    });
+  }
   
   // UI State
   const [selectedAdsAccount, setSelectedAdsAccount] = useState<string>('');
@@ -692,8 +695,8 @@ export const EnhancedGoogleServicesDashboard: React.FC<DashboardProps> = ({ clas
         </div>
       )}
 
-      {/* Debug Information Panel - Always show for now */}
-      {data.ads && (
+      {/* Debug Information Panel - Development only */}
+      {process.env.NODE_ENV === 'development' && data.ads && (
         <div className="bg-red-900/20 border border-red-800 rounded-xl p-6 mt-6">
           <div className="flex items-center space-x-3 mb-4">
             <AlertCircle className="w-5 h-5 text-red-400" />
