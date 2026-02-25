@@ -21,17 +21,29 @@ export const useUserPlan = () => {
 
   const fetchUserPlan = async () => {
     try {
-      const response = await fetch('/api/user/plan');
+      console.log('📋 Fetching user plan...');
+      
+      // Add timeout to prevent hanging
+      const controller = new AbortController();
+      const timeoutId = setTimeout(() => controller.abort(), 10000); // 10 second timeout
+      
+      const response = await fetch('/api/user/plan', {
+        signal: controller.signal
+      });
+      
+      clearTimeout(timeoutId);
       
       if (!response.ok) {
-        throw new Error(`Failed to fetch plan: ${response.status}`);
+        throw new Error(`Failed to fetch plan: ${response.status} ${response.statusText}`);
       }
       
       const plan = await response.json();
+      console.log('📋 Successfully fetched user plan:', plan.plan);
       setUserPlan(plan);
     } catch (error) {
       console.error('Failed to fetch user plan:', error);
-      // Default to free plan
+      console.log('📋 Falling back to default free plan');
+      // Always fall back to free plan on any error
       setUserPlan(getDefaultFreePlan());
     } finally {
       setLoading(false);

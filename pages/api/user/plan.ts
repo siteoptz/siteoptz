@@ -281,6 +281,43 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     res.status(200).json(userPlan);
   } catch (error) {
     console.error('Error fetching user plan:', error);
-    res.status(500).json({ error: 'Internal server error' });
+    
+    // Get session again for error handling
+    const errorSession = await getServerSession(req, res, authOptions);
+    
+    // Always return a default free plan instead of throwing an error
+    const defaultPlan = {
+      id: errorSession?.user?.email || 'user',
+      plan: 'free',
+      status: 'active',
+      billingCycle: 'monthly',
+      startDate: new Date().toISOString(),
+      userName: errorSession?.user?.name || 'User',
+      features: [
+        'Daily AI tool spotlight',
+        'Basic tool comparisons',
+        'Community support',
+        'Basic implementation guides'
+      ],
+      limitations: [
+        'Limited to 3 comparisons/day',
+        'No expert consultation',
+        'Limited tool access',
+        'No team features'
+      ],
+      usage: {
+        comparisons: 0,
+        consultations: 0,
+        teamMembers: 1
+      },
+      limits: {
+        dailyComparisons: 3,
+        monthlyConsultations: 0,
+        maxTeamMembers: 1
+      }
+    };
+
+    console.log('📋 Returning default free plan due to error');
+    res.status(200).json(defaultPlan);
   }
 }

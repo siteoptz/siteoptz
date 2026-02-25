@@ -34,6 +34,7 @@ export default function FreeDashboard() {
   const router = useRouter();
   const [welcomeMessage, setWelcomeMessage] = useState('');
   const [connectedServices, setConnectedServices] = useState<string[]>([]);
+  const [loadingTimeout, setLoadingTimeout] = useState(false);
 
   // Handle new signup welcome messages and Google services connection success
   useEffect(() => {
@@ -64,7 +65,19 @@ export default function FreeDashboard() {
     }
   }, [router.query.signup, router.query.success, router.query.services]); // Use specific query parameters instead of entire query object
 
-  if (loading || !userPlan) {
+  // Add a fallback timeout to prevent infinite loading
+  useEffect(() => {
+    const timeoutId = setTimeout(() => {
+      if (loading) {
+        console.warn('⚠️ Dashboard loading timeout reached, showing fallback content');
+        setLoadingTimeout(true);
+      }
+    }, 15000); // 15 second timeout
+
+    return () => clearTimeout(timeoutId);
+  }, [loading]);
+
+  if ((loading || !userPlan) && !loadingTimeout) {
     return (
       <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-black flex items-center justify-center">
         <div className="text-white text-center">
@@ -75,7 +88,31 @@ export default function FreeDashboard() {
     );
   }
 
-  if (!userPlan || userPlan.plan !== 'free') {
+  // If we hit timeout but still don't have a plan, create a default one
+  const effectiveUserPlan = userPlan || {
+    id: 'fallback-free',
+    plan: 'free',
+    status: 'active',
+    billingCycle: 'monthly',
+    startDate: new Date(),
+    userName: 'User',
+    features: [
+      'Daily AI tool spotlight',
+      'Basic tool comparisons',
+      'Community support',
+      'Basic implementation guides'
+    ],
+    limitations: [
+      'Limited to 3 comparisons/day',
+      'No expert consultation',
+      'Limited tool access',
+      'No team features'
+    ],
+    usage: { comparisons: 0, consultations: 0, teamMembers: 1 },
+    limits: { dailyComparisons: 3, monthlyConsultations: 0, maxTeamMembers: 1 }
+  };
+
+  if (effectiveUserPlan.plan !== 'free') {
     return (
       <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-black flex items-center justify-center">
         <div className="text-center text-white">
@@ -91,7 +128,7 @@ export default function FreeDashboard() {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-black">
-      <DashboardHeader userPlan={userPlan} userName={userPlan.userName || "User"} />
+      <DashboardHeader userPlan={effectiveUserPlan} userName={effectiveUserPlan.userName || "User"} />
 
       <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
         {/* New User Welcome Message */}
@@ -147,10 +184,10 @@ export default function FreeDashboard() {
               <div>
                 <p className="text-gray-400 text-sm">Daily Comparisons</p>
                 <p className="text-2xl font-bold text-white">
-                  {userPlan.usage.comparisons}/{userPlan.limits.dailyComparisons}
+                  {effectiveUserPlan.usage.comparisons}/{effectiveUserPlan.limits.dailyComparisons}
                 </p>
                 <p className="text-cyan-400 text-xs mt-1">
-                  {userPlan.limits.dailyComparisons - userPlan.usage.comparisons} remaining today
+                  {effectiveUserPlan.limits.dailyComparisons - effectiveUserPlan.usage.comparisons} remaining today
                 </p>
               </div>
               <Search className="w-8 h-8 text-cyan-400" />
@@ -159,11 +196,11 @@ export default function FreeDashboard() {
               <div 
                 className="bg-cyan-500 h-2 rounded-full" 
                 style={{ 
-                  width: `${Math.min((userPlan.usage.comparisons / userPlan.limits.dailyComparisons) * 100, 100)}%` 
+                  width: `${Math.min((effectiveUserPlan.usage.comparisons / effectiveUserPlan.limits.dailyComparisons) * 100, 100)}%` 
                 }}
               />
             </div>
-            {userPlan.usage.comparisons >= userPlan.limits.dailyComparisons && (
+            {effectiveUserPlan.usage.comparisons >= effectiveUserPlan.limits.dailyComparisons && (
               <p className="text-red-400 text-xs mt-2">Daily limit reached</p>
             )}
           </div>
@@ -248,19 +285,19 @@ export default function FreeDashboard() {
             <h2 className="text-xl font-bold text-white">AI Tool Comparisons</h2>
             <div className="flex items-center space-x-2">
               <span className="text-sm text-gray-400">
-                {userPlan.usage.comparisons}/{userPlan.limits.dailyComparisons} used today
+                {effectiveUserPlan.usage.comparisons}/{effectiveUserPlan.limits.dailyComparisons} used today
               </span>
               <div className="w-20 bg-gray-700 rounded-full h-2">
                 <div
                   className="bg-cyan-500 h-2 rounded-full"
-                  style={{ width: `${(userPlan.usage.comparisons / userPlan.limits.dailyComparisons) * 100}%` }}
+                  style={{ width: `${(effectiveUserPlan.usage.comparisons / effectiveUserPlan.limits.dailyComparisons) * 100}%` }}
                 />
               </div>
             </div>
           </div>
           
           <FeatureGate
-            userPlan={userPlan}
+            userPlan={effectiveUserPlan}
             requiredPlan="free"
             feature="basic tool comparisons"
           >
@@ -274,13 +311,13 @@ export default function FreeDashboard() {
                 />
                 <button 
                   className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-6 py-2 rounded-lg hover:from-blue-700 hover:to-purple-700 transition-all duration-200"
-                  disabled={userPlan.usage.comparisons >= userPlan.limits.dailyComparisons}
+                  disabled={effectiveUserPlan.usage.comparisons >= effectiveUserPlan.limits.dailyComparisons}
                 >
                   Compare
                 </button>
               </div>
               
-              {userPlan.usage.comparisons >= userPlan.limits.dailyComparisons && (
+              {effectiveUserPlan.usage.comparisons >= effectiveUserPlan.limits.dailyComparisons && (
                 <div className="bg-amber-500/10 border border-amber-500/20 rounded-lg p-4">
                   <div className="flex items-center justify-between">
                     <div>
@@ -356,7 +393,7 @@ export default function FreeDashboard() {
             Free Plan Limitations
           </h2>
           <div className="grid md:grid-cols-2 gap-4">
-            {userPlan.limitations?.map((limitation, index) => (
+            {effectiveUserPlan.limitations?.map((limitation, index) => (
               <div key={index} className="flex items-center text-amber-300">
                 <AlertCircle className="w-4 h-4 text-amber-400 mr-3 flex-shrink-0" />
                 {limitation}
