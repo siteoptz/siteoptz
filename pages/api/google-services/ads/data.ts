@@ -119,6 +119,10 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 
     console.log('🔍 Fetching Google Ads data for user:', session.user.email);
     console.log('📊 Parameters:', { accountId, timeframe, comparison });
+    console.log('🔑 Developer Token Status:', {
+      present: !!process.env.GOOGLE_ADS_DEVELOPER_TOKEN,
+      value: process.env.GOOGLE_ADS_DEVELOPER_TOKEN ? 'fD-KrR2G6Ja-PIrhIryrTQ...' : 'MISSING'
+    });
 
     // Fetch real Google Ads MCC accounts
     console.log('🔍 Attempting to fetch real Google Ads accounts...');
@@ -419,7 +423,12 @@ async function fetchGoogleAdsAccounts(accessToken: string): Promise<{accounts: M
       const errorText = await customerResponse.text();
       console.error('❌ Failed to fetch accessible customers:', customerResponse.status, errorText);
       console.error('🔧 Developer token configured:', !!process.env.GOOGLE_ADS_DEVELOPER_TOKEN);
-      console.error('🔧 Developer token value:', process.env.GOOGLE_ADS_DEVELOPER_TOKEN ? 'PRESENT' : 'MISSING');
+      console.error('🔧 Developer token value:', process.env.GOOGLE_ADS_DEVELOPER_TOKEN ? 'fD-KrR2G6Ja-PIrhIryrTQ...' : 'MISSING');
+      console.error('🔧 Access token available:', !!accessToken);
+      console.error('🔧 Request headers would be:', {
+        'Authorization': `Bearer ${accessToken ? 'PRESENT' : 'MISSING'}`,
+        'developer-token': process.env.GOOGLE_ADS_DEVELOPER_TOKEN ? 'fD-KrR2G6Ja-PIrhIryrTQ...' : 'MISSING'
+      });
       return { 
         accounts: [], 
         error: `Google Ads API error ${customerResponse.status}: ${errorText}. This may indicate that Google Ads API access is not enabled for this account or the developer token needs approval.` 

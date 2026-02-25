@@ -4,6 +4,11 @@ const nextConfig = {
   swcMinify: true,
   compress: true,
   
+  // Vercel-specific optimizations for Sharp
+  experimental: {
+    optimizeCss: true,
+  },
+  
   // Pick one style and link to it everywhere to avoid slash-normalization redirects
   trailingSlash: false,           // be consistent
   

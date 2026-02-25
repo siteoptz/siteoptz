@@ -104,6 +104,12 @@ export const EnhancedGoogleServicesDashboard: React.FC<DashboardProps> = ({ clas
   const [error, setError] = useState<string | null>(null);
   const [lastUpdated, setLastUpdated] = useState<string | null>(null);
   
+  console.log('🎯 EnhancedGoogleServicesDashboard rendering with data:', {
+    hasAdsData: !!data.ads,
+    adsAccounts: data.ads?.accounts?.length || 0,
+    dataKeys: Object.keys(data)
+  });
+  
   // UI State
   const [selectedAdsAccount, setSelectedAdsAccount] = useState<string>('');
   const [selectedAnalyticsProperty, setSelectedAnalyticsProperty] = useState<string>('');
@@ -148,17 +154,27 @@ export const EnhancedGoogleServicesDashboard: React.FC<DashboardProps> = ({ clas
         const serviceNames = ['Google Ads', 'Search Console', 'Analytics'];
         const serviceKey = ['ads', 'searchConsole', 'analytics'][index] as keyof ServiceData;
         
+        console.log(`📊 ${serviceNames[index]} API Response:`, result);
+        
         if (result.status === 'fulfilled' && result.value.success) {
-          newData[serviceKey] = result.value.data;
-          
-          // Log debug information for Google Ads specifically
-          if (serviceKey === 'ads' && result.value.debugInfo) {
+          // Store the entire response for Google Ads to access debug info
+          if (serviceKey === 'ads') {
+            newData[serviceKey] = {
+              ...result.value.data,
+              dataSource: result.value.dataSource,
+              statusMessage: result.value.statusMessage,
+              debugInfo: result.value.debugInfo,
+              apiError: result.value.apiError
+            };
+            
             console.log(`🔧 ${serviceNames[index]} Debug Info:`, {
               dataSource: result.value.dataSource,
               statusMessage: result.value.statusMessage,
               debugInfo: result.value.debugInfo,
               apiError: result.value.apiError
             });
+          } else {
+            newData[serviceKey] = result.value.data;
           }
         } else {
           console.warn(`Failed to fetch data from ${serviceNames[index]}:`, result);
@@ -676,8 +692,8 @@ export const EnhancedGoogleServicesDashboard: React.FC<DashboardProps> = ({ clas
         </div>
       )}
 
-      {/* Debug Information Panel */}
-      {process.env.NODE_ENV === 'development' && data.ads && (
+      {/* Debug Information Panel - Always show for now */}
+      {data.ads && (
         <div className="bg-red-900/20 border border-red-800 rounded-xl p-6 mt-6">
           <div className="flex items-center space-x-3 mb-4">
             <AlertCircle className="w-5 h-5 text-red-400" />
