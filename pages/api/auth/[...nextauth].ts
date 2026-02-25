@@ -440,9 +440,9 @@ export const authOptions: NextAuthOptions = {
       // Handle same-origin URLs
       if (new URL(url).origin === baseUrl) return url;
       
-      // Fix localhost port mismatch - redirect localhost:3000 to localhost:3001
-      if (url.includes('localhost:3000') && baseUrl.includes('localhost:3001')) {
-        const fixedUrl = url.replace('localhost:3000', 'localhost:3001');
+      // Fix localhost port mismatch - redirect to correct port
+      if (url.includes('localhost:') && baseUrl.includes('localhost:3000')) {
+        const fixedUrl = url.replace(/localhost:\d+/, 'localhost:3000');
         console.log('🔧 Fixed localhost port mismatch:', fixedUrl);
         return fixedUrl;
       }
@@ -503,9 +503,15 @@ export const authOptions: NextAuthOptions = {
       // Add Google OAuth tokens to session for Google Services integration
       if (token.accessToken) {
         (session as any).accessToken = token.accessToken;
-        (session as any).refreshToken = token.refreshToken;
-        (session as any).googleScope = token.googleScope;
-        (session as any).expiresAt = token.expiresAt;
+        if (token.refreshToken) {
+          (session as any).refreshToken = token.refreshToken;
+        }
+        if (token.googleScope) {
+          (session as any).googleScope = token.googleScope;
+        }
+        if (token.expiresAt) {
+          (session as any).expiresAt = token.expiresAt;
+        }
         
         console.log('🔐 Session: Google tokens available:', {
           hasAccessToken: !!token.accessToken,

@@ -3,48 +3,31 @@ import { useSession } from 'next-auth/react';
 import { UserPlan } from '../types/userPlan';
 
 export const useUserPlan = () => {
-  const { data: session } = useSession();
+  const { data: session, status } = useSession();
   const [userPlan, setUserPlan] = useState<UserPlan | null>(null);
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    // Debounce the API call to prevent rapid successive requests
-    const timeoutId = setTimeout(() => {
-      if (session?.user) {
-        fetchUserPlan();
-      } else {
-        setUserPlan(null);
-        setLoading(false);
-      }
-    }, 100); // 100ms debounce
+    // Only proceed if session status is resolved
+    if (status === 'loading') return;
     
-    return () => clearTimeout(timeoutId);
-  }, [session]);
-  
-  // Also refetch when window regains focus to ensure fresh data
-  useEffect(() => {
-    const handleFocus = () => {
-      if (session?.user) {
-        console.log('Window focused - refreshing user plan');
-        fetchUserPlan();
-      }
-    };
-    
-    window.addEventListener('focus', handleFocus);
-    return () => window.removeEventListener('focus', handleFocus);
-  }, [session]);
+    if (session?.user) {
+      fetchUserPlan();
+    } else {
+      setUserPlan(null);
+      setLoading(false);
+    }
+  }, [session?.user?.email, status]); // Use email instead of user object to prevent unnecessary re-renders
 
   const fetchUserPlan = async () => {
     try {
-      // Add cache busting to ensure fresh data
-      const response = await fetch(`/api/user/plan?t=${Date.now()}`);
+      const response = await fetch('/api/user/plan');
       
       if (!response.ok) {
         throw new Error(`Failed to fetch plan: ${response.status}`);
       }
       
       const plan = await response.json();
-      console.log('📋 Fetched user plan:', plan.plan);
       setUserPlan(plan);
     } catch (error) {
       console.error('Failed to fetch user plan:', error);

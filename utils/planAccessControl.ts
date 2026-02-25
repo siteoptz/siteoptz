@@ -174,7 +174,6 @@ export function withPlanProtection(requiredPlan: UserPlan) {
     
     return {
       props: {
-        session,
         userPlan: verification.userPlan,
       },
     };

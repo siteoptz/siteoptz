@@ -43,8 +43,10 @@ export default function FreeDashboard() {
       console.log('🆕 New signup detected');
       setWelcomeMessage('Welcome to SiteOptz! Your account has been created successfully. Explore our AI automation tools to streamline your business operations.');
       
-      // Clean up URL parameters
-      router.replace('/dashboard/free', undefined, { shallow: true });
+      // Clean up URL parameters without triggering reload
+      const url = new URL(window.location.href);
+      url.searchParams.delete('signup');
+      window.history.replaceState({}, '', url.toString());
     }
     
     // Handle Google services connection success
@@ -52,12 +54,15 @@ export default function FreeDashboard() {
       const connectedServicesList = (services as string).split(',');
       setWelcomeMessage(`🎉 Successfully connected Google services: ${connectedServicesList.join(', ')}. You can now access enhanced analytics and insights!`);
       
-      // Clean up URL parameters after showing success
+      // Clean up URL parameters after showing success without triggering reload
       setTimeout(() => {
-        router.replace('/dashboard/free', undefined, { shallow: true });
+        const url = new URL(window.location.href);
+        url.searchParams.delete('success');
+        url.searchParams.delete('services');
+        window.history.replaceState({}, '', url.toString());
       }, 5000);
     }
-  }, [router]);
+  }, [router.query.signup, router.query.success, router.query.services]); // Use specific query parameters instead of entire query object
 
   if (loading || !userPlan) {
     return (
@@ -445,7 +450,5 @@ export default function FreeDashboard() {
   );
 }
 
-// Use the plan protection HOF
-import { withPlanProtection } from '../../utils/planAccessControl';
-
-export const getServerSideProps: GetServerSideProps = withPlanProtection('free');
+// No server-side authentication - handled client-side
+// This avoids session serialization issues completely

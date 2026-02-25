@@ -4,6 +4,7 @@
 import { NextApiRequest, NextApiResponse } from 'next';
 import { getServerSession } from 'next-auth/next';
 import { authOptions } from '../../auth/[...nextauth]';
+import { getValidAccessToken } from '../../../../lib/google-token-utils';
 
 interface AnalyticsProperty {
   propertyId: string;
@@ -124,10 +125,10 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       return res.status(401).json({ error: 'Not authenticated' });
     }
 
-    const accessToken = (session as any).accessToken;
+    const accessToken = await getValidAccessToken(req);
     
     if (!accessToken) {
-      return res.status(401).json({ error: 'No Google access token found' });
+      return res.status(401).json({ error: 'No Google access token found or token refresh failed' });
     }
 
     // Check if Analytics scope is available
@@ -147,13 +148,15 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     console.log('📊 Parameters:', { propertyId, timeframe, comparison });
 
     // Fetch real Google Analytics properties
-    const realProperties = await fetchAnalyticsProperties(accessToken);
+    const { properties: realProperties, error: apiError } = await fetchAnalyticsProperties(accessToken);
     
-    // If we have real properties, use them; otherwise fall back to mock data for development
+    // Determine if we're using real or mock data
+    const isUsingMockData = realProperties.length === 0;
+    
     const properties: AnalyticsProperty[] = realProperties.length > 0 ? realProperties : [
       {
         propertyId: '123456789',
-        displayName: 'Demo Property',
+        displayName: 'Demo Property (Mock Data)',
         websiteUrl: 'https://demo.example.com',
         industryCategory: 'TECHNOLOGY',
         timeZone: 'America/Los_Angeles',
@@ -406,6 +409,8 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     return res.status(200).json({
       success: true,
       data: mockData,
+      dataSource: isUsingMockData ? 'mock' : 'real',
+      apiError: isUsingMockData ? apiError : null,
       lastUpdated: new Date().toISOString()
     });
 
@@ -419,7 +424,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 }
 
 // Function to fetch real Analytics properties from Google Analytics Admin API
-async function fetchAnalyticsProperties(accessToken: string): Promise<AnalyticsProperty[]> {
+async function fetchAnalyticsProperties(accessToken: string): Promise<{properties: AnalyticsProperty[], error: string | null}> {
   try {
     console.log('🔍 Fetching real Google Analytics properties...');
     
@@ -432,8 +437,12 @@ async function fetchAnalyticsProperties(accessToken: string): Promise<AnalyticsP
     });
 
     if (!accountsResponse.ok) {
-      console.error('Failed to fetch Analytics accounts:', accountsResponse.status);
-      return [];
+      const errorText = await accountsResponse.text();
+      console.error('Failed to fetch Analytics accounts:', accountsResponse.status, errorText);
+      return { 
+        properties: [], 
+        error: `Analytics API error ${accountsResponse.status}: ${errorText}. This may indicate that Analytics API access is not properly configured or the OAuth consent screen needs additional permissions.` 
+      };
     }
 
     const accountsData = await accountsResponse.json();
@@ -441,7 +450,7 @@ async function fetchAnalyticsProperties(accessToken: string): Promise<AnalyticsP
 
     if (!accountsData.accounts || accountsData.accounts.length === 0) {
       console.log('No Analytics accounts found');
-      return [];
+      return { properties: [], error: 'No Analytics accounts found. Your Google account may not have access to any Analytics properties.' };
     }
 
     // Fetch properties for each account
@@ -481,10 +490,10 @@ async function fetchAnalyticsProperties(accessToken: string): Promise<AnalyticsP
     }
 
     console.log('✅ Successfully fetched Analytics properties:', properties);
-    return properties;
+    return { properties, error: null };
 
   } catch (error) {
     console.error('Error fetching Analytics properties:', error);
-    return [];
+    return { properties: [], error: `Failed to fetch Analytics properties: ${error instanceof Error ? error.message : 'Unknown error'}` };
   }
 }
