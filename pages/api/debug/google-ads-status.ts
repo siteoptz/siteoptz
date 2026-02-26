@@ -50,15 +50,62 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       console.log('🧪 Testing Google Ads API call...');
       
       try {
-        const testResponse = await fetch('https://googleads.googleapis.com/v14/customers:listAccessibleCustomers', {
-          method: 'POST',
+        // Try multiple API versions to find the working one
+        let testResponse;
+        let apiVersion = 'unknown';
+        
+        // Try v19 (newest according to documentation)
+        testResponse = await fetch('https://googleads.googleapis.com/v19/customers:listAccessibleCustomers', {
+          method: 'GET',
           headers: {
             'Authorization': `Bearer ${accessToken}`,
             'developer-token': process.env.GOOGLE_ADS_DEVELOPER_TOKEN,
             'Content-Type': 'application/json',
           },
-          body: JSON.stringify({})
         });
+        
+        if (testResponse.ok) {
+          apiVersion = 'v19';
+        } else {
+          // Try v17
+          testResponse = await fetch('https://googleads.googleapis.com/v17/customers:listAccessibleCustomers', {
+            method: 'GET',
+            headers: {
+              'Authorization': `Bearer ${accessToken}`,
+              'developer-token': process.env.GOOGLE_ADS_DEVELOPER_TOKEN,
+              'Content-Type': 'application/json',
+            },
+          });
+          
+          if (testResponse.ok) {
+            apiVersion = 'v17';
+          } else {
+            // Try v16
+            testResponse = await fetch('https://googleads.googleapis.com/v16/customers:listAccessibleCustomers', {
+              method: 'GET',
+              headers: {
+                'Authorization': `Bearer ${accessToken}`,
+                'developer-token': process.env.GOOGLE_ADS_DEVELOPER_TOKEN,
+                'Content-Type': 'application/json',
+              },
+            });
+            
+            if (testResponse.ok) {
+              apiVersion = 'v16';
+            } else {
+              // Fallback to v14
+              testResponse = await fetch('https://googleads.googleapis.com/v14/customers:listAccessibleCustomers', {
+                method: 'GET',
+                headers: {
+                  'Authorization': `Bearer ${accessToken}`,
+                  'developer-token': process.env.GOOGLE_ADS_DEVELOPER_TOKEN,
+                  'Content-Type': 'application/json',
+                },
+              });
+              apiVersion = 'v14';
+            }
+          }
+        }
 
         const responseText = await testResponse.text();
         
@@ -66,6 +113,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
           status: testResponse.status,
           statusText: testResponse.statusText,
           success: testResponse.ok,
+          apiVersion: apiVersion,
           responsePreview: responseText.substring(0, 500) + (responseText.length > 500 ? '...' : ''),
           headers: Object.fromEntries(testResponse.headers.entries())
         };
