@@ -398,24 +398,28 @@ async function fetchGoogleAdsAccounts(accessToken: string): Promise<{accounts: M
     
     // Try multiple approaches to get Google Ads data
     
-    // Approach 1: Try the Google Ads API v14 (current implementation)
+    // Approach 1: Try the correct Google Ads API v14 endpoint format (POST method)
     let customerResponse = await fetch('https://googleads.googleapis.com/v14/customers:listAccessibleCustomers', {
+      method: 'POST',
       headers: {
         'Authorization': `Bearer ${accessToken}`,
         'developer-token': process.env.GOOGLE_ADS_DEVELOPER_TOKEN || '',
         'Content-Type': 'application/json',
       },
+      body: JSON.stringify({})
     });
 
-    // If v14 fails, try v13
+    // If v14 fails, try v15 (newer version)
     if (!customerResponse.ok) {
-      console.log('🔄 Google Ads API v14 failed, trying v13...');
-      customerResponse = await fetch('https://googleads.googleapis.com/v13/customers:listAccessibleCustomers', {
+      console.log('🔄 Google Ads API v14 failed, trying v15...');
+      customerResponse = await fetch('https://googleads.googleapis.com/v15/customers:listAccessibleCustomers', {
+        method: 'POST',
         headers: {
           'Authorization': `Bearer ${accessToken}`,
           'developer-token': process.env.GOOGLE_ADS_DEVELOPER_TOKEN || '',
           'Content-Type': 'application/json',
         },
+        body: JSON.stringify({})
       });
     }
 

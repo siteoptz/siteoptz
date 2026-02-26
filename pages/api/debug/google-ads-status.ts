@@ -51,11 +51,13 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       
       try {
         const testResponse = await fetch('https://googleads.googleapis.com/v14/customers:listAccessibleCustomers', {
+          method: 'POST',
           headers: {
             'Authorization': `Bearer ${accessToken}`,
             'developer-token': process.env.GOOGLE_ADS_DEVELOPER_TOKEN,
             'Content-Type': 'application/json',
           },
+          body: JSON.stringify({})
         });
 
         const responseText = await testResponse.text();
