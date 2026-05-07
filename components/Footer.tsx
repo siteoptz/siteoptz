@@ -83,7 +83,7 @@ const Footer: React.FC = () => {
     { name: 'Data Room', href: '/data-room' },
     { name: 'Resources', href: '/resources' },
     { name: 'Kids Coding', href: '/kids' },
-    { name: 'Case Studies', href: '/tools' },
+    { name: 'Case Studies', href: '/case-studies' },
     { name: 'AI Library', href: '/tools' },
     { name: 'Webinars', href: '/webinars' },
     { name: 'Developers', href: '/docs/api' },
