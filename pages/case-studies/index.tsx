@@ -36,41 +36,79 @@ export default function CaseStudiesIndex({ caseStudies }: CaseStudiesIndexProps)
       </Head>
 
       <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-black">
-        {/* Hero Section */}
-        <section className="bg-gradient-to-br from-blue-600 via-purple-600 to-pink-600 text-white py-20">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="text-center">
-              <div className="flex justify-center gap-2 mb-6">
-                <Award className="w-8 h-8 text-yellow-300" />
-                <span className="text-yellow-300 font-semibold">Proven Results</span>
+        {/* Hero Section - Matching Homepage Styling */}
+        <section className="relative min-h-screen flex items-center justify-center overflow-hidden" style={{backgroundColor: 'var(--color-background)'}}>
+          {/* Clean professional background */}
+          <div className="absolute inset-0 pointer-events-none" style={{background: 'radial-gradient(ellipse at center, rgba(37, 99, 235, 0.03) 0%, transparent 70%)'}}></div>
+
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+            <div className="text-center relative z-10">
+              {/* Badge */}
+              <div className="inline-flex items-center gap-3 px-6 py-2.5 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-lg font-semibold text-sm hover:from-blue-700 hover:to-purple-700 transform hover:scale-105 transition-all duration-200 shadow-lg hover:shadow-xl mb-12">
+                <Award className="w-4 h-4" />
+                <span className="font-bold">PROVEN RESULTS</span>
+                <span>REAL AI SUCCESS STORIES</span>
               </div>
               
-              <h1 className="text-4xl md:text-6xl font-bold mb-6">
-                Real AI Success Stories
+              {/* Main Heading */}
+              <h1 className="text-5xl lg:text-7xl xl:text-8xl font-black mb-12 leading-tight tracking-tight">
+                <span className="block text-white mb-6 font-light">SEE HOW COMPANIES</span>
+                <span className="block text-white mb-6 font-black">
+                  ACHIEVED 300% ROI
+                </span>
+                <span className="block text-gray-400 text-3xl lg:text-5xl font-normal tracking-wider">WITH STRATEGIC AI IMPLEMENTATION</span>
               </h1>
               
-              <p className="text-xl md:text-2xl text-blue-100 mb-8 max-w-3xl mx-auto">
-                See how companies like yours achieved 200-400% ROI with strategic AI implementation. 
-                Real results, measurable outcomes, proven strategies.
+              {/* Subtitle */}
+              <p className="text-lg lg:text-xl text-gray-400 max-w-4xl mx-auto mb-16 leading-relaxed font-normal tracking-wide">
+                REAL RESULTS / MEASURABLE OUTCOMES / PROVEN STRATEGIES<br/>
+                {caseStudies.length}+ SUCCESS STORIES / $50M+ IN SAVINGS GENERATED / 90-DAY IMPLEMENTATION
               </p>
 
-              {/* Stats */}
-              <div className="flex flex-wrap justify-center gap-8 mb-12">
-                <div className="bg-white/10 backdrop-blur-sm rounded-lg px-6 py-4">
-                  <div className="text-3xl font-bold">{caseStudies.length}+</div>
-                  <div className="text-blue-100">Case Studies</div>
+              {/* Primary CTAs */}
+              <div className="flex flex-col sm:flex-row gap-6 justify-center items-center mb-12">
+                <button
+                  onClick={() => window.open('https://api.leadconnectorhq.com/widget/booking/yPjkVmsauPst8XlrOQUl', '_blank')}
+                  className="group inline-flex items-center gap-3 px-6 py-2.5 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-lg font-semibold text-sm hover:from-blue-700 hover:to-purple-700 transform hover:scale-105 transition-all duration-200 shadow-lg hover:shadow-xl"
+                >
+                  <TrendingUp className="w-5 h-5 group-hover:animate-bounce" />
+                  Get Your Success Story
+                  <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+                </button>
+                <span className="text-gray-400 font-medium">or</span>
+                <a 
+                  href="#case-studies"
+                  className="inline-flex items-center gap-2 px-6 py-2.5 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-lg font-semibold text-sm hover:from-blue-700 hover:to-purple-700 transform hover:scale-105 transition-all duration-200 shadow-lg hover:shadow-xl"
+                >
+                  Browse Success Stories
+                  <ArrowRight className="w-4 h-4" />
+                </a>
+              </div>
+
+              {/* Stats Grid - Using Homepage Style */}
+              <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mt-16 max-w-4xl mx-auto">
+                <div className="text-center">
+                  <div className="text-3xl lg:text-4xl font-bold mb-2" style={{color: 'var(--color-text-primary)'}}>{caseStudies.length}+</div>
+                  <div className="text-sm" style={{color: 'var(--color-text-secondary)'}}>Success Stories</div>
                 </div>
-                <div className="bg-white/10 backdrop-blur-sm rounded-lg px-6 py-4">
-                  <div className="text-3xl font-bold">300%</div>
-                  <div className="text-blue-100">Avg ROI</div>
+                <div className="text-center">
+                  <div className="text-3xl lg:text-4xl font-bold mb-2" style={{color: 'var(--color-text-accent)'}}>300%</div>
+                  <div className="text-sm" style={{color: 'var(--color-text-secondary)'}}>Average ROI</div>
                 </div>
-                <div className="bg-white/10 backdrop-blur-sm rounded-lg px-6 py-4">
-                  <div className="text-3xl font-bold">$2.5M</div>
-                  <div className="text-blue-100">Avg Savings</div>
+                <div className="text-center">
+                  <div className="text-3xl lg:text-4xl font-bold mb-2" style={{color: 'var(--color-text-accent)'}}>$50M+</div>
+                  <div className="text-sm" style={{color: 'var(--color-text-secondary)'}}>Total Savings Generated</div>
+                </div>
+                <div className="text-center">
+                  <div className="text-3xl lg:text-4xl font-bold mb-2" style={{color: 'var(--color-text-accent)'}}>90</div>
+                  <div className="text-sm" style={{color: 'var(--color-text-secondary)'}}>Days to Results</div>
                 </div>
               </div>
             </div>
           </div>
+
+          {/* Subtle accent element */}
+          <div className="absolute top-1/2 right-20 w-12 h-12 opacity-10 animate-float delay-500 pointer-events-none" style={{backgroundColor: 'var(--color-text-accent)', borderRadius: 'var(--radius-small)'}}></div>
         </section>
 
         {/* Featured Case Studies */}
