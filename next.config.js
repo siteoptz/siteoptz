@@ -300,6 +300,46 @@ const nextConfig = {
         destination: '/tools',
         permanent: true,
         statusCode: 301,
+      },
+      
+      // Case studies redirects - fix 404 errors by redirecting to similar existing case studies
+      {
+        source: '/case-studies/finance-fraud-detection',
+        destination: '/case-studies/fintech-fraud-detection',
+        permanent: true,
+        statusCode: 301,
+      },
+      {
+        source: '/case-studies/manufacturing-predictive',
+        destination: '/case-studies/manufacturex-predictive-maintenance',
+        permanent: true,
+        statusCode: 301,
+      },
+      {
+        source: '/case-studies/legal-document-review',
+        destination: '/case-studies/legaltech-contract-analysis',
+        permanent: true,
+        statusCode: 301,
+      },
+      {
+        source: '/case-studies/ecommerce-personalization',
+        destination: '/case-studies/retailmax-inventory-ai',
+        permanent: true,
+        statusCode: 301,
+      },
+      {
+        source: '/case-studies/logistics-optimization',
+        destination: '/case-studies/logicorp-route-optimization',
+        permanent: true,
+        statusCode: 301,
+      },
+      
+      // Consultation redirect - redirect to contact/about page
+      {
+        source: '/consultation',
+        destination: '/contact',
+        permanent: true,
+        statusCode: 301,
       }
     ];
   },
