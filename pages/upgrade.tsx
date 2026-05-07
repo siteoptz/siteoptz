@@ -322,7 +322,17 @@ const UpgradePage: React.FC = () => {
       <Head>
         <title>Upgrade Your Plan - SiteOptz AI Tools Platform</title>
         <meta name="description" content="Unlock unlimited AI tool comparisons, expert consultations, and implementation support. Transform your business with AI." />
+        
+        {/* Canonical URL and Open Graph to prevent duplicate content */}
         <link rel="canonical" href="https://siteoptz.ai/upgrade" />
+        <meta property="og:url" content="https://siteoptz.ai/upgrade" />
+        <meta property="og:title" content="Upgrade Your Plan - SiteOptz AI Tools Platform" />
+        <meta property="og:description" content="Unlock unlimited AI tool comparisons, expert consultations, and implementation support. Transform your business with AI." />
+        <meta property="og:type" content="website" />
+        
+        {/* Additional meta tags to reinforce canonical domain */}
+        <meta name="robots" content="index, follow" />
+        <meta httpEquiv="content-language" content="en-US" />
       </Head>
 
       <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-black">
