@@ -194,16 +194,25 @@ export default function Webinars() {
       "@type": "ItemList",
       "numberOfItems": upcomingWebinars.length + onDemandWebinars.length,
       "itemListElement": [...upcomingWebinars, ...onDemandWebinars].map((webinar, index) => ({
-        "@type": "Event",
+        "@type": "ListItem",
         "position": index + 1,
-        "name": webinar.title,
-        "description": webinar.description,
-        "startDate": (webinar as any).date || (webinar as any).recordedDate,
-        "eventAttendanceMode": "https://schema.org/OnlineEventAttendanceMode",
-        "eventStatus": "https://schema.org/EventScheduled",
-        "organizer": {
-          "@type": "Organization",
-          "name": "SiteOptz"
+        "item": {
+          "@type": "Event",
+          "name": webinar.title,
+          "description": webinar.description,
+          "startDate": (webinar as any).date || (webinar as any).recordedDate,
+          "eventAttendanceMode": "https://schema.org/OnlineEventAttendanceMode",
+          "eventStatus": "https://schema.org/EventScheduled",
+          "location": {
+            "@type": "VirtualLocation",
+            "url": "https://siteoptz.ai/webinars",
+            "name": "SiteOptz Virtual Event Platform"
+          },
+          "organizer": {
+            "@type": "Organization",
+            "name": "SiteOptz",
+            "url": "https://siteoptz.ai"
+          }
         }
       }))
     }

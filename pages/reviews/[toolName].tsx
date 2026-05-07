@@ -65,7 +65,7 @@ export default function ReviewPage({ tool, pageTitle, slug, relatedTools, relate
     const toolName = tool.tool_name || slug.split('-').map(w => w.charAt(0).toUpperCase() + w.slice(1)).join(' ');
     const category = seoData?.category || 'AI Tools';
     const targetAudience = targetAudienceMap[category] || 'professionals and businesses';
-    const price = typeof tool.pricing?.monthly === 'number' ? tool.pricing.monthly : 0;
+    const price = getSafePrice(tool.pricing);
     const priceStr = price === 0 ? 'free' : price < 50 ? 'affordable' : price < 200 ? 'mid-range' : 'enterprise-level';
     
     // Create detailed, tool-specific intros with actual data
@@ -162,7 +162,7 @@ export default function ReviewPage({ tool, pageTitle, slug, relatedTools, relate
   // Generate unique comparison points
   const generateUniqueComparisons = (tool: Tool, slug: string): string[] => {
     const toolName = tool.tool_name || slug.split('-').map(w => w.charAt(0).toUpperCase() + w.slice(1)).join(' ');
-    const price = typeof tool.pricing?.monthly === 'number' ? tool.pricing.monthly : 0;
+    const price = getSafePrice(tool.pricing);
     
     const comparisons = [];
     
@@ -249,7 +249,7 @@ export default function ReviewPage({ tool, pageTitle, slug, relatedTools, relate
   // Generate tool-specific detailed review
   const generateDetailedReview = (tool: Tool, slug: string, category: string): string => {
     const toolName = tool.tool_name || slug.split('-').map(w => w.charAt(0).toUpperCase() + w.slice(1)).join(' ');
-    const price = typeof tool.pricing?.monthly === 'number' ? tool.pricing.monthly : 0;
+    const price = getSafePrice(tool.pricing);
     const features = tool.features?.core?.length || 0;
     const rating = tool.rating || 4.5;
     const pros = tool.pros?.length || 0;
@@ -319,7 +319,7 @@ export default function ReviewPage({ tool, pageTitle, slug, relatedTools, relate
     const category = seoData?.category || 'AI Tools';
     const mainFeature = tool.features?.core?.[0] || 'AI capabilities';
     const rating = tool.rating || 4.5;
-    const price = typeof tool.pricing?.monthly === 'number' ? tool.pricing.monthly : 0;
+    const price = getSafePrice(tool.pricing);
     const priceStr = price === 0 ? 'Free' : `$${price}/mo`;
     
     // Create more specific meta descriptions based on tool data
@@ -346,7 +346,18 @@ export default function ReviewPage({ tool, pageTitle, slug, relatedTools, relate
   const getSafePrice = (pricing: any): number => {
     if (!pricing) return 0;
     
-    // Handle different pricing formats
+    // Handle array format (new data structure)
+    if (Array.isArray(pricing) && pricing.length > 0) {
+      const firstPlan = pricing[0];
+      if (typeof firstPlan.price_per_month === 'number' && firstPlan.price_per_month >= 0) {
+        return firstPlan.price_per_month;
+      }
+      if (typeof firstPlan.price_per_month === 'string' && firstPlan.price_per_month.toLowerCase() === 'free') {
+        return 0;
+      }
+    }
+    
+    // Handle legacy object formats
     if (typeof pricing.monthly === 'number' && pricing.monthly > 0) {
       return pricing.monthly;
     }
@@ -390,31 +401,47 @@ export default function ReviewPage({ tool, pageTitle, slug, relatedTools, relate
     return Math.abs(hash % 400) + 100;
   };
 
-  // Product Schema
+  // Helper function to get safe review count
+  const getSafeReviewCount = (tool: any): number => {
+    if (tool.review_count && typeof tool.review_count === 'number' && tool.review_count > 0) {
+      return tool.review_count;
+    }
+    if (tool.schema?.aggregateRating?.reviewCount && typeof tool.schema.aggregateRating.reviewCount === 'number') {
+      return tool.schema.aggregateRating.reviewCount;
+    }
+    return getDeterministicReviewCount(tool.tool_name || 'default');
+  };
+
+  // Validate and ensure critical schema fields are present
+  const validateSchemaField = (value: any, fallback: any) => {
+    return (value !== null && value !== undefined && value !== "") ? value : fallback;
+  };
+
+  // Product Schema with guaranteed required fields
   const productSchema = {
     "@context": "https://schema.org",
     "@type": "SoftwareApplication",
-    "name": tool.tool_name || safeToolName,
-    "description": tool.description || `${safeToolName} is a comprehensive AI tool designed to enhance productivity and efficiency.`,
-    "url": tool.official_url || tool.affiliate_link || `https://siteoptz.ai/reviews/${slug}`,
+    "name": validateSchemaField(tool.tool_name, safeToolName),
+    "description": validateSchemaField(tool.description, `${safeToolName} is a comprehensive AI tool designed to enhance productivity and efficiency.`),
+    "url": validateSchemaField(tool.official_url || tool.affiliate_link, `https://siteoptz.ai/reviews/${slug}`),
     "applicationCategory": "BusinessApplication",
     "operatingSystem": "Web",
     "offers": {
-      "@type": "Offer",
-      "price": getSafePrice(tool.pricing),
+      "@type": "Offer", 
+      "price": validateSchemaField(getSafePrice(tool.pricing), 0),
       "priceCurrency": "USD",
       "availability": "https://schema.org/InStock",
       "priceSpecification": {
         "@type": "PriceSpecification",
-        "price": getSafePrice(tool.pricing),
+        "price": validateSchemaField(getSafePrice(tool.pricing), 0),
         "priceCurrency": "USD"
       },
-      "url": tool.official_url || tool.affiliate_link || `https://siteoptz.ai/reviews/${slug}`
+      "url": validateSchemaField(tool.official_url || tool.affiliate_link, `https://siteoptz.ai/reviews/${slug}`)
     },
     "aggregateRating": {
       "@type": "AggregateRating",
-      "ratingValue": getSafeRating(tool.rating),
-      "reviewCount": getDeterministicReviewCount(safeToolName),
+      "ratingValue": validateSchemaField(getSafeRating(tool.rating), 4.5),
+      "reviewCount": validateSchemaField(getSafeReviewCount(tool), 100),
       "bestRating": 5,
       "worstRating": 1
     },

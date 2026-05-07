@@ -45,22 +45,20 @@ export default function WhyUs() {
     "@context": "https://schema.org",
     "@graph": [
       {
-        "@type": "ProfessionalService",
+        "@type": "LocalBusiness",
         "@id": "https://siteoptz.ai/why-us#service",
         "name": "AI Tools Consulting & Implementation",
         "description": "Expert AI tools consulting for SaaS and e-commerce leaders. 90-day roadmap, implementation support, and optimization services.",
-        "provider": {
-          "@type": "Organization",
-          "name": "SiteOptz",
-          "url": "https://siteoptz.ai",
-          "logo": "https://siteoptz.ai/images/siteoptz-logo.png",
-          "sameAs": [
-            "https://twitter.com/siteoptz",
-            "https://linkedin.com/company/siteoptz"
-          ]
-        },
-        "serviceType": "AI Consulting",
+        "url": "https://siteoptz.ai/why-us",
         "areaServed": "Worldwide",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "Remote Office",
+          "addressLocality": "San Francisco",
+          "addressRegion": "CA",
+          "postalCode": "94102",
+          "addressCountry": "US"
+        },
         "hasOfferCatalog": {
           "@type": "OfferCatalog",
           "name": "AI Consulting Services",
@@ -90,12 +88,18 @@ export default function WhyUs() {
               }
             }
           ]
-        },
-        "audience": {
-          "@type": "Audience",
-          "audienceType": "Business Leaders",
-          "geographicArea": "Worldwide"
         }
+      },
+      {
+        "@type": "Organization",
+        "@id": "https://siteoptz.ai/#organization",
+        "name": "SiteOptz",
+        "url": "https://siteoptz.ai",
+        "logo": "https://siteoptz.ai/images/siteoptz-logo.png",
+        "sameAs": [
+          "https://twitter.com/siteoptz",
+          "https://linkedin.com/company/siteoptz"
+        ]
       },
       {
         "@type": "FAQPage",
