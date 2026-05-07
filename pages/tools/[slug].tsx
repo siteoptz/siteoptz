@@ -48,10 +48,9 @@ interface ToolPageProps {
   tool: Tool;
   relatedTools: Tool[];
   faqs: any[];
-  allTools: Tool[];
 }
 
-export default function ToolPage({ tool, relatedTools, faqs, allTools }: ToolPageProps) {
+export default function ToolPage({ tool, relatedTools, faqs }: ToolPageProps) {
   const router = useRouter();
 
   if (router.isFallback) {
@@ -389,8 +388,7 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
     props: {
       tool,
       relatedTools,
-      faqs,
-      allTools: tools
+      faqs
     },
     revalidate: 3600
   };

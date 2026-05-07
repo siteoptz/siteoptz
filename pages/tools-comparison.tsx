@@ -28,15 +28,18 @@ export async function getStaticProps() {
   const toolsPath = path.join(process.cwd(), "public", "data", "aiToolsData.json");
   const faqPath = path.join(process.cwd(), "public", "data", "faqData.json");
 
-  const toolsData = JSON.parse(fs.readFileSync(toolsPath, "utf-8"));
+  const allTools = JSON.parse(fs.readFileSync(toolsPath, "utf-8"));
   const faqData = JSON.parse(fs.readFileSync(faqPath, "utf-8"));
+
+  // Limit to top 50 tools to reduce page size
+  const popularTools = allTools.slice(0, 50);
 
   // Convert FAQ data to flat array for the FAQ component
   const allFaqs = Object.values(faqData).flat();
 
   return {
     props: {
-      tools: toolsData,
+      tools: popularTools,
       faqs: allFaqs,
     },
     // Revalidate every hour

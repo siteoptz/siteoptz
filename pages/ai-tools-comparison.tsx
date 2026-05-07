@@ -471,9 +471,12 @@ export const getStaticProps: GetStaticProps = async () => {
     const faqPath = path.join(process.cwd(), 'public/data/faqData.json');
     const faqs = JSON.parse(fs.readFileSync(faqPath, 'utf8'));
     
+    // Limit to top 50 tools to reduce page size
+    const popularTools = tools.slice(0, 50);
+    
     return {
       props: {
-        tools,
+        tools: popularTools,
         faqs
       },
       // Revalidate every hour (3600 seconds)

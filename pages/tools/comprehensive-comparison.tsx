@@ -580,9 +580,12 @@ export const getStaticProps: GetStaticProps = async () => {
       .sort((a, b) => (b.rating || 0) - (a.rating || 0))
       .slice(0, 6);
     
+    // Limit to top 50 tools to reduce page size  
+    const popularTools = tools.slice(0, 50);
+    
     return {
       props: {
-        tools,
+        tools: popularTools,
         faqs,
         featuredTools
       },

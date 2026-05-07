@@ -227,13 +227,24 @@ export const getStaticProps: GetStaticProps = async () => {
   const aiToolsPath = path.join(process.cwd(), 'public/data/aiToolsData.json');
   const faqPath = path.join(process.cwd(), 'public/data/faqData.json');
   
-  const tools = JSON.parse(fs.readFileSync(aiToolsPath, 'utf8'));
-  const faqs = JSON.parse(fs.readFileSync(faqPath, 'utf8'));
+  const allTools = JSON.parse(fs.readFileSync(aiToolsPath, 'utf8'));
+  const allFaqs = JSON.parse(fs.readFileSync(faqPath, 'utf8'));
+  
+  // Load only top 50 popular tools for comparison to reduce page size
+  const popularTools = allTools.slice(0, 50);
+  
+  // Get FAQs for only the popular tools
+  const relevantFaqs: { [key: string]: any[] } = {};
+  popularTools.forEach((tool: any) => {
+    if (allFaqs[tool.id]) {
+      relevantFaqs[tool.id] = allFaqs[tool.id];
+    }
+  });
   
   return {
     props: {
-      tools,
-      faqs
+      tools: popularTools,
+      faqs: relevantFaqs
     },
     revalidate: 3600 // Revalidate every hour
   };
