@@ -34,6 +34,14 @@ export async function middleware(request: NextRequest) {
   const pathname = request.nextUrl.pathname
   const hostname = request.headers.get('host') || ''
   
+  // Redirect any www.siteoptz.ai requests to siteoptz.ai (canonical domain)
+  if (hostname === 'www.siteoptz.ai' || hostname.includes('www.siteoptz.ai')) {
+    console.log('Redirecting from www.siteoptz.ai to siteoptz.ai:', pathname);
+    const newUrl = new URL(request.url);
+    newUrl.hostname = 'siteoptz.ai';
+    return NextResponse.redirect(newUrl, { status: 301 });
+  }
+  
   // Redirect any optz.siteoptz.ai requests to siteoptz.ai
   if (hostname === 'optz.siteoptz.ai' || hostname.includes('optz.siteoptz.ai')) {
     console.log('Redirecting from optz.siteoptz.ai to siteoptz.ai:', pathname);

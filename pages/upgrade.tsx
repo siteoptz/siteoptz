@@ -322,6 +322,7 @@ const UpgradePage: React.FC = () => {
       <Head>
         <title>Upgrade Your Plan - SiteOptz AI Tools Platform</title>
         <meta name="description" content="Unlock unlimited AI tool comparisons, expert consultations, and implementation support. Transform your business with AI." />
+        <link rel="canonical" href="https://siteoptz.ai/upgrade" />
       </Head>
 
       <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-black">
