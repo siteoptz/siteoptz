@@ -422,21 +422,55 @@ export async function getStaticProps() {
     const limitedTools = unifiedTools.slice(0, 50);
     
     // Transform data to match the expected format for compare page
-    const aiToolsData = limitedTools.map(tool => ({
-      id: tool.id || tool.slug,
-      name: tool.name || tool.tool_name || tool.toolName,
-      category: tool.overview?.category || tool.category,
-      description: (tool.overview?.description || tool.description || '').substring(0, 200),
-      overview: { 
-        description: (tool.overview?.description || tool.description || '').substring(0, 200) 
-      },
-      features: (tool.features?.core || tool.features || []).slice(0, 5),
-      pricing: {
-        monthly: tool.pricing?.[0]?.price_per_month || tool.pricing?.monthly || 0
-      },
-      logo: tool.logo || `/images/tools/${tool.slug}-logo.svg`,
-      rating: tool.rating || 4.5
-    }));
+    const aiToolsData = limitedTools.map((tool, index) => {
+      // Ensure all values are serializable
+      const safeId = typeof tool.id === 'string' ? tool.id : 
+                     typeof tool.slug === 'string' ? tool.slug : 
+                     `tool-${index}`;
+      
+      const safeName = typeof tool.name === 'string' ? tool.name :
+                       typeof tool.tool_name === 'string' ? tool.tool_name :
+                       typeof tool.toolName === 'string' ? tool.toolName :
+                       `Tool ${index + 1}`;
+      
+      const safeCategory = typeof (tool.overview?.category) === 'string' ? tool.overview.category :
+                           typeof tool.category === 'string' ? tool.category :
+                           'AI Tools';
+      
+      const safeDescription = typeof (tool.overview?.description) === 'string' ? tool.overview.description.substring(0, 200) :
+                              typeof tool.description === 'string' ? tool.description.substring(0, 200) :
+                              '';
+      
+      const safeFeatures = Array.isArray(tool.features?.core) ? tool.features.core.slice(0, 5) :
+                           Array.isArray(tool.features) ? tool.features.slice(0, 5) :
+                           [];
+      
+      const safeMonthlyPrice = typeof tool.pricing?.[0]?.price_per_month === 'number' ? tool.pricing[0].price_per_month :
+                               typeof tool.pricing?.monthly === 'number' ? tool.pricing.monthly :
+                               0;
+      
+      const safeLogo = typeof tool.logo === 'string' ? tool.logo :
+                       typeof tool.slug === 'string' ? `/images/tools/${tool.slug}-logo.svg` :
+                       `/images/tools/${safeId}-logo.svg`;
+      
+      const safeRating = typeof tool.rating === 'number' && tool.rating > 0 ? tool.rating : 4.5;
+      
+      return {
+        id: safeId,
+        name: safeName,
+        category: safeCategory,
+        description: safeDescription,
+        overview: { 
+          description: safeDescription
+        },
+        features: safeFeatures,
+        pricing: {
+          monthly: safeMonthlyPrice
+        },
+        logo: safeLogo,
+        rating: safeRating
+      };
+    });
     
     return {
       props: {
