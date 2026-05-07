@@ -1,7 +1,10 @@
 import { GetStaticProps } from 'next';
+import { useState } from 'react';
 import Link from 'next/link';
 import Head from 'next/head';
 import { loadUnifiedToolsData } from '../../utils/unifiedDataAdapter';
+import fs from 'fs';
+import path from 'path';
 
 interface Tool {
   tool_name: string;
@@ -16,23 +19,52 @@ interface Tool {
 }
 
 interface ReviewsIndexProps {
-  tools: Tool[];
+  initialReviews: Tool[];
+  totalCount: number;
   categories: string[];
 }
 
-export default function ReviewsIndex({ tools, categories }: ReviewsIndexProps) {
-  const toolsByCategory = tools.reduce((acc: any, tool: Tool) => {
-    const category = tool.category || 'Other';
+export default function ReviewsIndex({ initialReviews, totalCount, categories }: ReviewsIndexProps) {
+  const [reviews, setReviews] = useState(initialReviews);
+  const [selectedCategory, setSelectedCategory] = useState('All');
+  const [searchQuery, setSearchQuery] = useState('');
+  const [currentPage, setCurrentPage] = useState(1);
+  const [totalPages, setTotalPages] = useState(1);
+  const [isLoading, setIsLoading] = useState(false);
+
+  // Client-side data loading
+  const loadReviews = async (page = 1, category = 'All', search = '') => {
+    setIsLoading(true);
+    try {
+      const params = new URLSearchParams({
+        page: page.toString(),
+        limit: '30',
+        ...(category !== 'All' && { category }),
+        ...(search && { search })
+      });
+      
+      const response = await fetch(`/api/reviews?${params}`);
+      const data = await response.json();
+      
+      setReviews(data.reviews);
+      setCurrentPage(data.pagination.currentPage);
+      setTotalPages(data.pagination.totalPages);
+    } catch (error) {
+      console.error('Error loading reviews:', error);
+    }
+    setIsLoading(false);
+  };
+
+  // Group reviews by category for display
+  const reviewsByCategory = reviews.reduce((acc: any, review: Tool) => {
+    const category = review.category || 'Other';
     if (!acc[category]) acc[category] = [];
-    acc[category].push(tool);
+    acc[category].push(review);
     return acc;
   }, {});
 
-  // Sort categories and tools
-  const sortedCategories = Object.keys(toolsByCategory).sort();
-  sortedCategories.forEach(category => {
-    toolsByCategory[category].sort((a: Tool, b: Tool) => b.rating - a.rating);
-  });
+  // Sort categories
+  const sortedCategories = Object.keys(reviewsByCategory).sort();
 
   return (
     <>
@@ -59,7 +91,7 @@ export default function ReviewsIndex({ tools, categories }: ReviewsIndexProps) {
           {/* Stats */}
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-16">
             <div className="bg-black border border-gray-800 rounded-xl p-6 text-center">
-              <div className="text-3xl font-bold text-cyan-400 mb-2">{tools.length}</div>
+              <div className="text-3xl font-bold text-cyan-400 mb-2">{totalCount}</div>
               <div className="text-gray-400">Tools Reviewed</div>
             </div>
             <div className="bg-black border border-gray-800 rounded-xl p-6 text-center">
@@ -76,18 +108,25 @@ export default function ReviewsIndex({ tools, categories }: ReviewsIndexProps) {
             </div>
           </div>
 
+          {/* Loading State */}
+          {isLoading && (
+            <div className="flex justify-center items-center py-20">
+              <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-cyan-400"></div>
+            </div>
+          )}
+
           {/* Tools by Category */}
-          {sortedCategories.map(category => (
+          {!isLoading && sortedCategories.map(category => (
             <div key={category} className="mb-16">
               <div className="flex items-center justify-between mb-8">
                 <h2 className="text-3xl font-bold text-white">{category}</h2>
                 <span className="px-4 py-2 bg-gray-800 text-gray-300 rounded-full text-sm">
-                  {toolsByCategory[category].length} tools
+                  {reviewsByCategory[category].length} tools
                 </span>
               </div>
 
               <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-                {toolsByCategory[category].map((tool: Tool) => {
+                {reviewsByCategory[category].map((tool: Tool) => {
                   const toolSlug = tool.slug || tool.tool_name.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-+|-+$/g, '');
                   return (
                     <Link key={tool.tool_name} href={`/reviews/${toolSlug}`}>
@@ -156,17 +195,28 @@ export default function ReviewsIndex({ tools, categories }: ReviewsIndexProps) {
 }
 
 export const getStaticProps: GetStaticProps = async () => {
-  const fs = require('fs');
-  const path = require('path');
-  
   const allTools = loadUnifiedToolsData(fs, path);
   
+  // Load only first 20 tools for initial SSR
+  const initialReviews = allTools
+    .slice(0, 20)
+    .map((tool: any) => ({
+      tool_name: tool.name || tool.tool_name,
+      slug: tool.slug,
+      category: tool.overview?.category || tool.category,
+      description: tool.overview?.description || tool.description,
+      logo_url: tool.logo || `/images/tools/${tool.slug}-logo.svg`,
+      rating: tool.rating || 4.5,
+      pricing: { monthly: tool.pricing?.[0]?.price_per_month || 0 }
+    }));
+  
   // Get unique categories
-  const categories = [...new Set(allTools.map((tool: any) => tool.category))].sort();
+  const categories = [...new Set(allTools.map((tool: any) => tool.overview?.category || tool.category).filter(Boolean))].sort();
   
   return {
     props: {
-      tools: allTools,
+      initialReviews,
+      totalCount: allTools.length,
       categories
     }
   };

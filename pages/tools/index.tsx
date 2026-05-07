@@ -13,8 +13,9 @@ import ToolLogo from "../../components/ToolLogo";
 export async function getStaticProps() {
   const faqPath = path.join(process.cwd(), "data", "faq-data.json");
   
-  // Load unified tools data from both old and new datasets
+  // Load only a small subset for initial SSR (first 20 tools)
   const allTools = loadUnifiedToolsData(fs, path);
+  const initialTools = allTools.slice(0, 20);
   
   // Get actual categories from the data
   const actualCategories = getAllCategories(allTools);
@@ -27,20 +28,58 @@ export async function getStaticProps() {
 
   return {
     props: {
-      tools: allTools,
-      categories: actualCategories, // Use actual categories from data
+      initialTools,
+      totalCount: allTools.length,
+      categories: actualCategories,
       faqs: faqData,
     },
   };
 }
 
-export default function ToolsPage({ tools, categories, faqs }: { tools: any[], categories: string[], faqs: any }) {
-  const [selectedTool, setSelectedTool] = useState(tools[0]);
+export default function ToolsPage({ initialTools, totalCount, categories, faqs }: { 
+  initialTools: any[], 
+  totalCount: number, 
+  categories: string[], 
+  faqs: any 
+}) {
+  const [tools, setTools] = useState(initialTools);
+  const [selectedTool, setSelectedTool] = useState(initialTools[0]);
   const [selectedCategory, setSelectedCategory] = useState('All');
   const [searchQuery, setSearchQuery] = useState('');
-  const [filteredTools, setFilteredTools] = useState(tools);
+  const [filteredTools, setFilteredTools] = useState(initialTools);
+  const [currentPage, setCurrentPage] = useState(1);
+  const [totalPages, setTotalPages] = useState(1);
+  const [isLoading, setIsLoading] = useState(false);
   const pageConfig = getPageConfig('tools');
   const router = useRouter();
+
+  // Client-side data loading function
+  const loadTools = async (page = 1, category = 'All', search = '') => {
+    setIsLoading(true);
+    try {
+      const params = new URLSearchParams({
+        page: page.toString(),
+        limit: '50',
+        ...(category !== 'All' && { category }),
+        ...(search && { search })
+      });
+      
+      const response = await fetch(`/api/tools?${params}`);
+      const data = await response.json();
+      
+      setTools(data.tools);
+      setFilteredTools(data.tools);
+      setCurrentPage(data.pagination.currentPage);
+      setTotalPages(data.pagination.totalPages);
+      
+      if (data.tools.length > 0) {
+        setSelectedTool(data.tools[0]);
+      }
+    } catch (error) {
+      console.error('Error loading tools:', error);
+    }
+    setIsLoading(false);
+  };
 
   // Load saved selection from localStorage
   useEffect(() => {
@@ -51,37 +90,30 @@ export default function ToolsPage({ tools, categories, faqs }: { tools: any[], c
     }
   }, [tools]);
 
-  // Handle category from URL query parameter
+  // Handle category from URL query parameter and load data
   useEffect(() => {
-    if (router.isReady && router.query.category) {
-      const categoryFromUrl = decodeURIComponent(router.query.category as string);
+    if (router.isReady) {
+      const categoryFromUrl = router.query.category 
+        ? decodeURIComponent(router.query.category as string) 
+        : 'All';
+      
       if (categoryFromUrl !== selectedCategory) {
         setSelectedCategory(categoryFromUrl);
+        loadTools(1, categoryFromUrl, searchQuery);
       }
     }
   }, [router.isReady, router.query.category]);
 
-  // Filter tools based on category and search
+  // Handle search changes
   useEffect(() => {
-    let filtered = tools;
-    
-    // Apply category filter
-    if (selectedCategory !== 'All') {
-      filtered = getToolsByCategory(filtered, selectedCategory);
-    }
-    
-    // Apply search filter
-    if (searchQuery.trim()) {
-      filtered = searchTools(filtered, searchQuery);
-    }
-    
-    setFilteredTools(filtered);
-    
-    // Update selected tool if current one is not in filtered results
-    if (filtered.length > 0 && selectedTool && !filtered.find(t => t.tool_name === selectedTool?.tool_name)) {
-      setSelectedTool(filtered[0]);
-    }
-  }, [selectedCategory, searchQuery, tools]);
+    const delayedSearch = setTimeout(() => {
+      if (router.isReady) {
+        loadTools(1, selectedCategory, searchQuery);
+      }
+    }, 300); // Debounce search
+
+    return () => clearTimeout(delayedSearch);
+  }, [searchQuery]);
 
   // Redirect to review page when user changes selection in dropdown
   const handleToolChange = (toolName: string) => {
@@ -104,6 +136,9 @@ export default function ToolsPage({ tools, categories, faqs }: { tools: any[], c
       // Add/update category parameter
       router.push(`/tools/?category=${encodeURIComponent(category)}`, undefined, { shallow: true });
     }
+    
+    // Load new data
+    loadTools(1, category, searchQuery);
   };
 
   // Handle search input change

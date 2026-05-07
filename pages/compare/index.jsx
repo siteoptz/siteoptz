@@ -418,25 +418,24 @@ export async function getStaticProps() {
     // Load unified tools data
     const unifiedTools = loadUnifiedToolsData(fs, path);
     
+    // Load only first 50 tools for initial SSR to reduce page size
+    const limitedTools = unifiedTools.slice(0, 50);
+    
     // Transform data to match the expected format for compare page
-    const aiToolsData = unifiedTools.map(tool => ({
-      name: tool.tool_name || tool.toolName,
-      category: tool.category,
-      description: tool.description || '',
-      overview: { description: tool.description || '' },
-      features: tool.features?.core || tool.features || [],
-      pricing: tool.pricing,
-      pricingPlans: [
-        {
-          plan: 'Monthly',
-          price_per_month: tool.pricing?.monthly === 'Free' ? 0 : tool.pricing?.monthly || 0,
-          monthlyPrice: tool.pricing?.monthly === 'Free' ? 0 : tool.pricing?.monthly || 0
-        }
-      ],
-      logo: tool.logo_url || tool.logo,
-      rating: tool.rating || 4.5,
-      affiliate_link: tool.affiliate_link || '#',
-      search_volume: tool.search_volume || 1000
+    const aiToolsData = limitedTools.map(tool => ({
+      id: tool.id || tool.slug,
+      name: tool.name || tool.tool_name || tool.toolName,
+      category: tool.overview?.category || tool.category,
+      description: (tool.overview?.description || tool.description || '').substring(0, 200),
+      overview: { 
+        description: (tool.overview?.description || tool.description || '').substring(0, 200) 
+      },
+      features: (tool.features?.core || tool.features || []).slice(0, 5),
+      pricing: {
+        monthly: tool.pricing?.[0]?.price_per_month || tool.pricing?.monthly || 0
+      },
+      logo: tool.logo || `/images/tools/${tool.slug}-logo.svg`,
+      rating: tool.rating || 4.5
     }));
     
     return {
