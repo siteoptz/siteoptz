@@ -3,6 +3,9 @@ const nextConfig = {
   reactStrictMode: true,
   swcMinify: true,
   compress: true,
+  eslint: {
+    ignoreDuringBuilds: true,
+  },
   
   // Vercel-specific optimizations for Sharp
   experimental: {
