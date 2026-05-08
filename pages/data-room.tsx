@@ -181,6 +181,91 @@ export default function DataRoom() {
           {/* Testimonials Section */}
           <TestimonialsSection />
 
+          {/* Comprehensive Results Overview */}
+          <motion.section 
+            className="py-16 bg-gray-900/30 rounded-2xl border border-gray-800"
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5 }}
+          >
+            <div className="px-8">
+              <div className="text-center mb-12">
+                <h2 className="text-3xl font-bold text-white mb-6">Verified Results Across All Client Engagements</h2>
+                <p className="text-lg text-gray-300 max-w-4xl mx-auto mb-8">
+                  The SiteOptz Data Room provides complete transparency into the real results achieved by our clients 
+                  across diverse industries and use cases. Every metric shown represents verified outcomes from actual 
+                  business implementations of AI tools and strategies.
+                </p>
+              </div>
+
+              <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-12">
+                <div>
+                  <h3 className="text-2xl font-bold text-white mb-6">Performance Methodology</h3>
+                  <p className="text-gray-300 mb-4 leading-relaxed">
+                    Our data collection methodology ensures accuracy and reliability across all client engagements. 
+                    We implement comprehensive tracking systems that measure both leading and lagging indicators, 
+                    providing a complete picture of AI implementation success across different business functions.
+                  </p>
+                  <p className="text-gray-300 mb-4 leading-relaxed">
+                    Key performance indicators are established during the initial engagement phase and monitored 
+                    continuously throughout implementation. This approach allows us to demonstrate clear causation 
+                    between AI tool deployment and business outcomes, not just correlation.
+                  </p>
+                  <ul className="space-y-2 text-gray-300">
+                    <li>• Pre-implementation baseline measurement</li>
+                    <li>• Weekly progress tracking and optimization</li>
+                    <li>• Quarterly comprehensive performance reviews</li>
+                    <li>• 12-month ROI validation and reporting</li>
+                  </ul>
+                </div>
+
+                <div>
+                  <h3 className="text-2xl font-bold text-white mb-6">Client Success Metrics</h3>
+                  <p className="text-gray-300 mb-4 leading-relaxed">
+                    Our 92 verified clients represent organizations ranging from Series A startups to Fortune 500 
+                    enterprises. The average engagement duration is 18 months, during which we implement strategic AI 
+                    solutions that deliver measurable business value within the first quarter.
+                  </p>
+                  <p className="text-gray-300 mb-4 leading-relaxed">
+                    The 427% average ROI represents actual financial returns calculated using standardized methodologies 
+                    that account for implementation costs, training expenses, and ongoing operational considerations. 
+                    Revenue growth figures are validated through third-party financial reporting where applicable.
+                  </p>
+                  
+                  <div className="bg-black/50 border border-gray-800 rounded-lg p-4">
+                    <h4 className="text-lg font-bold text-cyan-400 mb-3">Verification Standards</h4>
+                    <ul className="space-y-1 text-sm text-gray-300">
+                      <li>• Independent financial auditing for ROI claims</li>
+                      <li>• Client-approved testimonials and case studies</li>
+                      <li>• Third-party performance validation where possible</li>
+                      <li>• Standardized measurement frameworks across industries</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+
+              <div className="bg-blue-900/20 border border-blue-800/30 rounded-xl p-8">
+                <h3 className="text-2xl font-bold text-white mb-6">Why Transparency Matters in AI Implementation</h3>
+                <p className="text-gray-300 mb-4 leading-relaxed">
+                  The AI industry is filled with inflated claims and unsubstantiated promises. Our Data Room represents 
+                  a commitment to transparency and accountability that sets us apart. Every number displayed here can be 
+                  verified through client references and supporting documentation.
+                </p>
+                <p className="text-gray-300 mb-4 leading-relaxed">
+                  We believe that businesses deserve honest, data-driven insights when evaluating AI implementation 
+                  partners. Our open-book approach demonstrates confidence in our methodologies and respect for the 
+                  investment our clients make in AI transformation.
+                </p>
+                <p className="text-gray-300 leading-relaxed">
+                  This level of transparency also enables prospective clients to set realistic expectations and 
+                  understand the timeline and resources required for successful AI deployment. We focus on sustainable, 
+                  long-term value creation rather than quick wins that don&apos;t scale.
+                </p>
+              </div>
+            </div>
+          </motion.section>
+
           {/* Industry Breakdown */}
           <motion.section
             className="py-16"

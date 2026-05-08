@@ -196,10 +196,75 @@ export default function CategoriesPage({ categories, totalTools, featuredTools, 
               <p className="text-xl sm:text-2xl font-semibold text-cyan-400 mb-6 px-2 sm:px-0">
                 Turning AI Into ROI
               </p>
-              <p className="text-lg sm:text-xl text-gray-300 max-w-3xl mx-auto px-2 sm:px-0">
+              <p className="text-lg sm:text-xl text-gray-300 max-w-3xl mx-auto px-2 sm:px-0 mb-8">
                 Browse {totalTools} AI tools across {categories.length} categories. 
                 Find the perfect AI solution for your specific needs.
               </p>
+              
+              {/* Enhanced Content Section */}
+              <div className="max-w-4xl mx-auto text-left px-4 sm:px-6 lg:px-0 mb-16">
+                <div className="bg-gray-900/50 border border-gray-800 rounded-2xl p-8 mb-8">
+                  <h2 className="text-2xl font-bold text-white mb-6">Complete AI Tool Directory by Category</h2>
+                  <p className="text-gray-300 mb-4 leading-relaxed">
+                    SiteOptz maintains the most comprehensive directory of AI tools across all business categories. 
+                    Our expert team has evaluated over {totalTools} AI solutions to help you find the perfect technology 
+                    stack for your specific needs and use cases.
+                  </p>
+                  <p className="text-gray-300 mb-4 leading-relaxed">
+                    Each category contains thoroughly researched tools with detailed feature comparisons, pricing analysis, 
+                    user reviews, and implementation guides. Whether you&apos;re looking for content creation, automation, 
+                    data analysis, or specialized industry solutions, our categorized approach saves you time and ensures 
+                    you make informed decisions.
+                  </p>
+                  <p className="text-gray-300 mb-6 leading-relaxed">
+                    From startup-friendly free tools to enterprise-grade platforms, we cover the entire spectrum of AI 
+                    solutions. Our categories are regularly updated with the latest AI innovations and include both 
+                    established market leaders and promising emerging technologies.
+                  </p>
+                  
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div>
+                      <h3 className="text-lg font-semibold text-cyan-400 mb-3">Popular Categories</h3>
+                      <ul className="space-y-2 text-gray-300">
+                        <li>• Content Creation & Writing Tools</li>
+                        <li>• AI Automation & Workflow</li>
+                        <li>• Data Analysis & Business Intelligence</li>
+                        <li>• Image & Video Generation</li>
+                        <li>• Marketing & SEO Optimization</li>
+                      </ul>
+                    </div>
+                    <div>
+                      <h3 className="text-lg font-semibold text-cyan-400 mb-3">Enterprise Solutions</h3>
+                      <ul className="space-y-2 text-gray-300">
+                        <li>• Customer Service Automation</li>
+                        <li>• Sales & CRM Enhancement</li>
+                        <li>• HR & Recruitment Tools</li>
+                        <li>• Financial Analysis & Forecasting</li>
+                        <li>• Code Generation & Development</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                
+                <div className="bg-blue-900/20 border border-blue-800/30 rounded-2xl p-8">
+                  <h2 className="text-2xl font-bold text-white mb-6">Why Choose Category-Based AI Tool Selection?</h2>
+                  <p className="text-gray-300 mb-4 leading-relaxed">
+                    Browsing AI tools by category helps you identify solutions that specifically address your business 
+                    challenges. Rather than overwhelming you with hundreds of random tools, our categorized approach 
+                    allows you to focus on relevant technologies that can deliver immediate value.
+                  </p>
+                  <p className="text-gray-300 mb-4 leading-relaxed">
+                    Each category page includes detailed tool comparisons, feature matrices, pricing guides, and 
+                    implementation timelines. We also provide category-specific best practices, common use cases, 
+                    and ROI benchmarks to help you make data-driven decisions about your AI investments.
+                  </p>
+                  <p className="text-gray-300 leading-relaxed">
+                    Our category system is designed by AI implementation experts who understand the practical 
+                    challenges of deploying AI tools in real business environments. We focus on tools that deliver 
+                    measurable results and integrate seamlessly with existing business processes.
+                  </p>
+                </div>
+              </div>
             </div>
 
 
