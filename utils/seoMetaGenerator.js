@@ -1,7 +1,7 @@
 // SEO Meta Generator for AI Tools Comparison Pages
 // Based on keyword research from PRD and existing data
 
-const generateComparisonSEO = (tool1, tool2, year = '2025') => {
+const generateComparisonSEO = (tool1, tool2, year = '2026') => {
   const combinedName = `${tool1.name} vs ${tool2.name}`;
   
   return {
@@ -40,7 +40,7 @@ const generateComparisonSEO = (tool1, tool2, year = '2025') => {
   };
 };
 
-const generateToolSEO = (tool, year = '2025') => {
+const generateToolSEO = (tool, year = '2026') => {
   return {
     title: `${tool.name} Review ${year}: Pricing, Features & Alternatives | SiteOptz`,
     description: `Complete ${tool.name} review for ${year}. ${tool.overview?.description?.substring(0, 120) || 'AI-powered tool analysis'}... Compare pricing, features & alternatives.`,
@@ -73,7 +73,7 @@ const generateToolSEO = (tool, year = '2025') => {
   };
 };
 
-const generateCategorySEO = (category, year = '2025') => {
+const generateCategorySEO = (category, year = '2026') => {
   const toolCount = 25; // Dynamic based on actual tools in category
   
   return {

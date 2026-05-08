@@ -78,7 +78,7 @@ export default function ComparePage({ tools, faqs }: ComparePageProps) {
   );
 
   // SEO Data
-  const pageTitle = "Compare AI Tools - ChatGPT vs Claude vs Gemini [2025]";
+  const pageTitle = "Compare AI Tools - ChatGPT vs Claude vs Gemini [2026]";
   const pageDescription = "Compare the best AI tools side-by-side. See pricing, features, and performance benchmarks for ChatGPT, Claude, Gemini, and more.";
   const canonicalUrl = "https://siteoptz.ai/tools/compare";
 

@@ -4,7 +4,7 @@ import SEOHead from '../components/SEOHead';
 import { buildCanonicalUrl } from '../seo/meta-config';
 
 export default function CookiePolicy() {
-  const lastUpdated = "January 3, 2025";
+  const lastUpdated = "January 3, 2026";
   
   return (
     <>

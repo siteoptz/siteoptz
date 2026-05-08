@@ -24,7 +24,7 @@ const titleUpdates = {
   // Template patterns for dynamic pages
   templates: {
     comparison: {
-      pattern: /(.+) vs (.+) 2025 - Complete Comparison & Review \| SiteOptz/g,
+      pattern: /(.+) vs (.+) 2026 - Complete Comparison & Review \| SiteOptz/g,
       replacement: '$1 vs $2 | SiteOptz',
       files: [
         'pages/compare/[tool1]/vs/[tool2].tsx',
@@ -42,8 +42,8 @@ const titleUpdates = {
     },
     
     review: {
-      pattern: /(.+) Review — Features, Pricing, Pros & Cons \[2025\]/g,
-      replacement: '$1 Review [2025]',
+      pattern: /(.+) Review — Features, Pricing, Pros & Cons \[2026\]/g,
+      replacement: '$1 Review [2026]',
       files: [
         'pages/reviews/[tool].tsx',
         'utils/reviewSeoUtils.js'

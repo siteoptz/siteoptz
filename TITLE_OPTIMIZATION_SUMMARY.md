@@ -13,8 +13,8 @@
 ## 🔧 Optimization Techniques Applied
 
 ### 1. **Removed Redundant Phrases**
-- `"2025 - Complete Comparison & Review | SiteOptz"` → removed
-- `"Review — Features, Pricing, Pros & Cons [2025]"` → removed
+- `"2026 - Complete Comparison & Review | SiteOptz"` → removed
+- `"Review — Features, Pricing, Pros & Cons [2026]"` → removed
 - `"| AI Case Study | SiteOptz"` → removed
 - `"AI & Automation Podcasts - SiteOptz.ai"` → removed
 
@@ -50,9 +50,9 @@ Examples:
 
 ### Review Pages (14 pages)
 Examples:
-- **6Sense Review:** `6Sense AI Review [2025]` (23 chars)
-- **Brainybear Review:** `Brainybear AI Chatbot Builder Review [2025]` (44 chars)
-- **Consensus Review:** `Consensus AI Research Review [2025]` (35 chars)
+- **6Sense Review:** `6Sense AI Review [2026]` (23 chars)
+- **Brainybear Review:** `Brainybear AI Chatbot Builder Review [2026]` (44 chars)
+- **Consensus Review:** `Consensus AI Research Review [2026]` (35 chars)
 
 ### Podcast Pages (15 pages)
 Examples:

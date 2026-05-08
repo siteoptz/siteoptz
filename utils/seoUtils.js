@@ -3,24 +3,24 @@ import aiToolsData from '../aiToolsData.json';
 // Generate meta title for comparison pages
 export const generateMetaTitle = (tool1, tool2 = null, type = 'comparison') => {
   if (type === 'comparison' && tool1 && tool2) {
-    return `${tool1} vs ${tool2}: Complete Comparison [2025] | SiteOptz`;
+    return `${tool1} vs ${tool2}: Complete Comparison [2026] | SiteOptz`;
   } else if (type === 'review' && tool1) {
-    return `${tool1} Review & Pricing [2025] | SiteOptz`;
+    return `${tool1} Review & Pricing [2026] | SiteOptz`;
   } else if (type === 'category' && tool1) {
-    return `Best ${tool1} AI Tools [2025] | Complete Guide | SiteOptz`;
+    return `Best ${tool1} AI Tools [2026] | Complete Guide | SiteOptz`;
   } else {
-    return 'AI Tools Comparison & Reviews [2025] | SiteOptz';
+    return 'AI Tools Comparison & Reviews [2026] | SiteOptz';
   }
 };
 
 // Generate meta description for comparison pages
 export const generateMetaDescription = (tool1, tool2 = null, type = 'comparison') => {
   if (type === 'comparison' && tool1 && tool2) {
-    return `Compare ${tool1} vs ${tool2} pricing, features, and use cases. Find the best AI tool for your needs in 2025. Expert analysis, real user reviews, and pricing breakdown.`;
+    return `Compare ${tool1} vs ${tool2} pricing, features, and use cases. Find the best AI tool for your needs in 2026. Expert analysis, real user reviews, and pricing breakdown.`;
   } else if (type === 'review' && tool1) {
     return `${tool1} review: pricing, features, pros & cons, and alternatives. Expert analysis with real user feedback and implementation tips.`;
   } else if (type === 'category' && tool1) {
-    return `Compare the best ${tool1} AI tools in 2025. Expert reviews, pricing analysis, and feature comparisons to help you choose the right tool.`;
+    return `Compare the best ${tool1} AI tools in 2026. Expert reviews, pricing analysis, and feature comparisons to help you choose the right tool.`;
   } else {
     return 'Compare the best AI tools for content creation, SEO, social media, and more. Expert reviews, pricing analysis, and feature comparisons.';
   }
@@ -88,7 +88,7 @@ export const generateComparisonSchema = (tool1, tool2 = null) => {
         },
         "featureList": tool.features.core.join(', '),
         "screenshot": tool.logo_url,
-        "softwareVersion": "2025",
+        "softwareVersion": "2026",
         "publisher": {
           "@type": "Organization",
           "name": tool.vendor
@@ -206,7 +206,7 @@ export const generateProductSchema = (toolName) => {
     },
     "featureList": tool.features.core.join(', '),
     "screenshot": tool.logo_url,
-    "softwareVersion": "2025",
+    "softwareVersion": "2026",
     "publisher": {
       "@type": "Organization",
       "name": tool.vendor,

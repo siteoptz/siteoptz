@@ -1366,7 +1366,7 @@ export const categoryContent: Record<string, any> = {
 
   "Best Voice AI Tools": {
     seo: {
-      title: "AI Voice Generator 2025 - Best Text to Speech AI Tools",
+      title: "AI Voice Generator 2026 - Best Text to Speech AI Tools",
       description: "Compare top AI voice generators for text to speech, voice cloning & synthesis. Realistic AI voices for business. 79 voice AI tools reviewed. Start free.",
       keywords: [
         "ai voice generator", "text to speech ai", "ai voice cloning", "voice synthesis ai", 
@@ -1512,9 +1512,9 @@ export const categoryContent: Record<string, any> = {
 
   "Email Marketing": {
     seo: {
-      title: "Best AI Email Marketing Tools for Higher Conversions 2025 | SiteOptz",
+      title: "Best AI Email Marketing Tools for Higher Conversions 2026 | SiteOptz",
       description: "Boost email ROI with AI-powered marketing automation. Compare top tools for personalization, optimization, and campaign management. Real business results included.",
-      keywords: ["AI email marketing", "email automation tools", "email personalization AI", "marketing automation", "email campaign optimization", "AI email tools 2025", "automated email marketing"]
+      keywords: ["AI email marketing", "email automation tools", "email personalization AI", "marketing automation", "email campaign optimization", "AI email tools 2026", "automated email marketing"]
     },
     hero: {
       title: "AI Email Marketing Tools for Higher ROI",
@@ -1653,9 +1653,9 @@ export const categoryContent: Record<string, any> = {
 
   "Paid Search & PPC": {
     seo: {
-      title: "Best AI PPC Tools for Paid Search Optimization 2025 | SiteOptz",
+      title: "Best AI PPC Tools for Paid Search Optimization 2026 | SiteOptz",
       description: "Maximize PPC ROI with AI-powered bid management and campaign optimization. Compare top tools for Google Ads, Facebook Ads, and multi-platform management.",
-      keywords: ["AI PPC tools", "paid search optimization", "AI bid management", "PPC automation", "Google Ads AI", "Facebook Ads optimization", "AI advertising tools 2025"]
+      keywords: ["AI PPC tools", "paid search optimization", "AI bid management", "PPC automation", "Google Ads AI", "Facebook Ads optimization", "AI advertising tools 2026"]
     },
     hero: {
       title: "AI PPC Tools for Paid Search Success",
@@ -1794,9 +1794,9 @@ export const categoryContent: Record<string, any> = {
 
   "Research & Education": {
     seo: {
-      title: "Best AI Research & Education Tools for Learning 2025 | SiteOptz",
+      title: "Best AI Research & Education Tools for Learning 2026 | SiteOptz",
       description: "Enhance research and education with AI-powered tools. Compare platforms for academic research, content creation, and learning optimization. Real case studies included.",
-      keywords: ["AI research tools", "AI education platforms", "academic research AI", "AI learning tools", "educational technology", "research automation", "AI for education 2025"]
+      keywords: ["AI research tools", "AI education platforms", "academic research AI", "AI learning tools", "educational technology", "research automation", "AI for education 2026"]
     },
     hero: {
       title: "AI Research & Education Tools for Learning Excellence",
@@ -1934,7 +1934,7 @@ export const categoryContent: Record<string, any> = {
   },
   "UX": {
     seo: {
-      title: "Best AI UX Design Tools 2025 - User Experience AI Software Reviews",
+      title: "Best AI UX Design Tools 2026 - User Experience AI Software Reviews",
       description: "Discover the top AI-powered UX design tools for creating exceptional user experiences. Compare features, pricing, and reviews of leading UX AI platforms to enhance your design workflow.",
       keywords: [
         "AI UX design tools",
@@ -2081,7 +2081,7 @@ export const categoryContent: Record<string, any> = {
   },
   "Website Builder": {
     seo: {
-      title: "Best AI Website Builder Tools 2025 - Create Websites with AI",
+      title: "Best AI Website Builder Tools 2026 - Create Websites with AI",
       description: "Compare the top AI website builders for creating professional websites automatically. Reviews, pricing, and features of leading AI-powered website creation platforms.",
       keywords: [
         "AI website builder",

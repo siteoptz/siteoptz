@@ -12,11 +12,11 @@ const path = require('path');
 const optimizationRules = {
   // Remove redundant phrases
   removePhrases: [
-    '2025 - Complete Comparison & Review',
+    '2026 - Complete Comparison & Review',
     'Complete Comparison & Review',
     '- Complete Comparison & Review',
-    'Review — Features, Pricing, Pros & Cons [2025]',
-    'Review 2025: Complete Feature Analysis & Pricing',
+    'Review — Features, Pricing, Pros & Cons [2026]',
+    'Review 2026: Complete Feature Analysis & Pricing',
     '| AI Case Study | SiteOptz',
     '| SiteOptz',
     'AI & Automation Podcasts - SiteOptz.ai',
@@ -261,12 +261,12 @@ function processTitleOptimization() {
   if (summary.comparisons.length > 0) {
     console.log('\\n3. **Comparison Pages**: Update comparison page title template');
     console.log('   - Shorten tool names where possible');
-    console.log('   - Remove redundant "2025 - Complete Comparison" text');
+    console.log('   - Remove redundant "2026 - Complete Comparison" text');
   }
   
   if (summary.reviews.length > 0) {
     console.log('\\n4. **Review Pages**: Update review page title template');
-    console.log('   - Simplify "Features, Pricing, Pros & Cons [2025]" format');
+    console.log('   - Simplify "Features, Pricing, Pros & Cons [2026]" format');
     console.log('   - Focus on tool name and year');
   }
   

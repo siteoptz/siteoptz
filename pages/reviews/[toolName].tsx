@@ -466,7 +466,7 @@ export default function ReviewPage({ tool, pageTitle, slug, relatedTools, relate
       "name": "SiteOptz",
       "url": "https://siteoptz.ai"
     },
-    "datePublished": "2025-01-15",
+    "datePublished": "2026-01-15",
     "dateModified": new Date().toISOString().split('T')[0],
     "reviewRating": {
       "@type": "Rating",
@@ -514,7 +514,7 @@ export default function ReviewPage({ tool, pageTitle, slug, relatedTools, relate
     const templates = [
       `${toolName} review: ${rating}/5 rated ${category.toLowerCase()} tool with ${mainFeature}. Starting at ${priceStr}. Features, pros, cons & alternatives.`,
       `Comprehensive ${toolName} review covering ${mainFeature}, pricing (${priceStr}), and ${tool.features?.core?.length || 5}+ features. Expert ${category.toLowerCase()} tool analysis.`,
-      `${toolName} ${category.toLowerCase()} platform review: ${mainFeature}, ${priceStr} pricing, user feedback. Compare features & alternatives for 2025.`,
+      `${toolName} ${category.toLowerCase()} platform review: ${mainFeature}, ${priceStr} pricing, user feedback. Compare features & alternatives for 2026.`,
       `Expert ${toolName} review: ${category.toLowerCase()} tool with ${mainFeature}. ${rating}/5 rating, ${priceStr} pricing. Features, pros, cons & comparison.`
     ];
     
@@ -607,7 +607,7 @@ export default function ReviewPage({ tool, pageTitle, slug, relatedTools, relate
       <Head>
         <title>{pageTitle}</title>
         <meta name="description" content={metaDescription} />
-        <meta name="keywords" content={`${safeToolName} review, ${safeToolName} features, ${safeToolName} pricing, ${safeToolName} pros and cons, ${safeToolName} alternatives, AI tools 2025`} />
+        <meta name="keywords" content={`${safeToolName} review, ${safeToolName} features, ${safeToolName} pricing, ${safeToolName} pros and cons, ${safeToolName} alternatives, AI tools 2026`} />
         <meta name="author" content="SiteOptz" />
         <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
         
@@ -619,7 +619,7 @@ export default function ReviewPage({ tool, pageTitle, slug, relatedTools, relate
         <meta property="og:site_name" content="SiteOptz" />
         <meta property="og:locale" content="en_US" />
         <meta property="article:author" content="SiteOptz" />
-        <meta property="article:published_time" content="2025-01-15T00:00:00Z" />
+        <meta property="article:published_time" content="2026-01-15T00:00:00Z" />
         <meta property="article:modified_time" content={new Date().toISOString()} />
         <meta property="article:section" content="Technology" />
         <meta property="article:tag" content={`${safeToolName}, AI Tools, Review`} />
@@ -1412,7 +1412,7 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
       slug.split('-').map(word => word.charAt(0).toUpperCase() + word.slice(1)).join(' ')
         .replace(/\bAi\b/g, 'AI').replace(/\bApi\b/g, 'API').replace(/\bSeo\b/g, 'SEO').replace(/\bUx\b/g, 'UX');
     
-    return `${toolName} Review — Features, Pricing, Pros & Cons [2025]`;
+    return `${toolName} Review — Features, Pricing, Pros & Cons [2026]`;
   };
 
   const pageTitle = generateSafeTitle(tool, toolSlug);

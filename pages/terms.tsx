@@ -4,7 +4,7 @@ import { motion } from 'framer-motion';
 import { Scale, Shield, Eye, Clock } from 'lucide-react';
 
 export default function Terms() {
-  const lastUpdated = 'January 15, 2025';
+  const lastUpdated = 'January 15, 2026';
 
   const sections = [
     {

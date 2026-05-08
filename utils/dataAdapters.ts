@@ -192,7 +192,7 @@ export function sortTools(tools: any[], sortBy: 'name' | 'price' | 'rating' | 'r
 // Generate meta tags for SEO
 export function generateMetaTags(tool: any) {
   return {
-    title: tool.meta?.title || `${tool.name} Review, Pricing & Features [2025]`,
+    title: tool.meta?.title || `${tool.name} Review, Pricing & Features [2026]`,
     description: tool.meta?.description || `Compare ${tool.name} to other AI tools. See pricing, features, and performance benchmarks.`,
     keywords: [
       tool.name,
