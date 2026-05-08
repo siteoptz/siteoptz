@@ -1,5 +1,5 @@
 import { GetStaticPaths, GetStaticProps } from 'next';
-import { useState } from 'react';
+import { useState, useMemo } from 'react';
 import Head from 'next/head';
 import Image from 'next/image';
 import Link from 'next/link';
@@ -383,10 +383,100 @@ export default function ReviewPage({ tool, pageTitle, slug, relatedTools, relate
     return industryTemplates[category] || `The ${category.toLowerCase()} industry continues to evolve rapidly, with ${toolName}'s ${specificFeature} representing the latest advancement in AI-powered solutions. Organizations implementing tools like ${toolName} gain competitive advantages through ${mainBenefit} and enhanced operational capabilities. The platform's comprehensive approach to ${category.toLowerCase()} challenges positions it as a strategic asset for forward-thinking businesses.`;
   };
 ;
-  // Generate safe tool name for H1 and other elements
-  const safeToolName = tool.tool_name && tool.tool_name.trim() ? tool.tool_name : 
-    slug.split('-').map(word => word.charAt(0).toUpperCase() + word.slice(1)).join(' ')
-      .replace(/\bAi\b/g, 'AI').replace(/\bApi\b/g, 'API').replace(/\bSeo\b/g, 'SEO').replace(/\bUx\b/g, 'UX');
+  // Memoize expensive computations
+  const safeToolName = useMemo(() => 
+    tool.tool_name && tool.tool_name.trim() ? tool.tool_name : 
+      slug.split('-').map(word => word.charAt(0).toUpperCase() + word.slice(1)).join(' ')
+        .replace(/\bAi\b/g, 'AI').replace(/\bApi\b/g, 'API').replace(/\bSeo\b/g, 'SEO').replace(/\bUx\b/g, 'UX'),
+    [tool.tool_name, slug]
+  );
+
+  const safePrice = useMemo(() => getSafePrice(tool.pricing), [tool.pricing]);
+  const safeRating = useMemo(() => getSafeRating(tool.rating), [tool.rating]);
+  const safeReviewCount = useMemo(() => getSafeReviewCount(tool), [tool]);
+  const category = useMemo(() => seoData?.category || 'AI Tools', [seoData?.category]);
+
+  // Memoize content generation to avoid expensive recalculations
+  const uniqueIntro = useMemo(() => generateUniqueIntro(tool, slug), [tool, slug]);
+  const uniqueUseCases = useMemo(() => generateUniqueUseCases(tool, slug, category), [tool, slug, category]);
+  const uniqueComparisons = useMemo(() => generateUniqueComparisons(tool, slug), [tool, slug]);
+  const detailedReview = useMemo(() => generateDetailedReview(tool, slug, category), [tool, slug, category]);
+  const industryInsights = useMemo(() => generateIndustryInsights(tool, slug, category), [tool, slug, category]);
+  const implementationTimeline = useMemo(() => generateImplementationTimeline(tool, slug), [tool, slug]);
+
+  // Memoize schema generation
+  const productSchema = useMemo(() => ({
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": ensureRequiredField(tool.tool_name, safeToolName),
+    "description": ensureRequiredField(tool.description, `${safeToolName} is a comprehensive AI tool designed to enhance productivity and efficiency for businesses and professionals.`),
+    "url": ensureRequiredField(tool.official_url || tool.affiliate_link, `https://siteoptz.ai/reviews/${slug}`),
+    "applicationCategory": "BusinessApplication",
+    "operatingSystem": "Web",
+    "offers": {
+      "@type": "Offer", 
+      "price": ensureRequiredField(safePrice, 0, 'number'),
+      "priceCurrency": "USD",
+      "availability": "https://schema.org/InStock",
+      "priceSpecification": {
+        "@type": "PriceSpecification",
+        "price": ensureRequiredField(safePrice, 0, 'number'),
+        "priceCurrency": "USD"
+      },
+      "url": ensureRequiredField(tool.official_url || tool.affiliate_link, `https://siteoptz.ai/reviews/${slug}`)
+    },
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": ensureRequiredField(safeRating, 4.5, 'number'),
+      "reviewCount": ensureRequiredField(safeReviewCount, 100, 'number'),
+      "bestRating": 5,
+      "worstRating": 1
+    },
+    "author": {
+      "@type": "Organization",
+      "name": "SiteOptz",
+      "url": "https://siteoptz.ai"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "SiteOptz",
+      "url": "https://siteoptz.ai"
+    }
+  }), [tool, safeToolName, safePrice, safeRating, safeReviewCount, slug]);
+
+  // Review Schema
+  const reviewSchema = useMemo(() => ({
+    "@context": "https://schema.org",
+    "@type": "Review",
+    "itemReviewed": {
+      "@type": "SoftwareApplication",
+      "name": tool.tool_name || safeToolName,
+      "description": tool.description || `${safeToolName} is a comprehensive AI tool designed to enhance productivity and efficiency.`,
+      "url": tool.official_url || tool.affiliate_link || `https://siteoptz.ai/reviews/${slug}`,
+      "applicationCategory": "BusinessApplication",
+      "operatingSystem": "Web"
+    },
+    "author": {
+      "@type": "Organization",
+      "name": "SiteOptz",
+      "url": "https://siteoptz.ai"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "SiteOptz",
+      "url": "https://siteoptz.ai"
+    },
+    "datePublished": "2025-01-15",
+    "dateModified": new Date().toISOString().split('T')[0],
+    "reviewRating": {
+      "@type": "Rating",
+      "ratingValue": safeRating,
+      "bestRating": 5,
+      "worstRating": 1
+    },
+    "reviewBody": `Comprehensive review of ${safeToolName} covering features, pricing, pros, cons, and use cases. Our expert analysis examines ${safeToolName}'s capabilities, user experience, and overall value proposition to help you make an informed decision.`
+  }), [tool, safeToolName, safeRating, slug]);
+
   const [activeTab, setActiveTab] = useState<'overview' | 'features' | 'pricing' | 'use-cases' | 'pros-cons' | 'faq'>('overview');
 
   // If we have a SEO-optimized version, use it instead
@@ -396,7 +486,7 @@ export default function ReviewPage({ tool, pageTitle, slug, relatedTools, relate
         loading: () => <div className="min-h-screen bg-black flex items-center justify-center">
           <div className="text-white">Loading...</div>
         </div>,
-        ssr: false, // Disable SSR for dynamic components
+        ssr: true, // Enable SSR for better performance
         // Add timeout for failed imports
       });
       
@@ -442,85 +532,6 @@ export default function ReviewPage({ tool, pageTitle, slug, relatedTools, relate
   
 
 
-
-
-
-  // Product Schema with guaranteed required fields for Google compliance
-  const safePrice = getSafePrice(tool.pricing);
-  const safeRating = getSafeRating(tool.rating);
-  const safeReviewCount = getSafeReviewCount(tool);
-  
-  const productSchema = {
-    "@context": "https://schema.org",
-    "@type": "SoftwareApplication",
-    "name": ensureRequiredField(tool.tool_name, safeToolName),
-    "description": ensureRequiredField(tool.description, `${safeToolName} is a comprehensive AI tool designed to enhance productivity and efficiency for businesses and professionals.`),
-    "url": ensureRequiredField(tool.official_url || tool.affiliate_link, `https://siteoptz.ai/reviews/${slug}`),
-    "applicationCategory": "BusinessApplication",
-    "operatingSystem": "Web",
-    "offers": {
-      "@type": "Offer", 
-      "price": ensureRequiredField(safePrice, 0, 'number'),
-      "priceCurrency": "USD",
-      "availability": "https://schema.org/InStock",
-      "priceSpecification": {
-        "@type": "PriceSpecification",
-        "price": ensureRequiredField(safePrice, 0, 'number'),
-        "priceCurrency": "USD"
-      },
-      "url": ensureRequiredField(tool.official_url || tool.affiliate_link, `https://siteoptz.ai/reviews/${slug}`)
-    },
-    "aggregateRating": {
-      "@type": "AggregateRating",
-      "ratingValue": ensureRequiredField(safeRating, 4.5, 'number'),
-      "reviewCount": ensureRequiredField(safeReviewCount, 100, 'number'),
-      "bestRating": 5,
-      "worstRating": 1
-    },
-    "author": {
-      "@type": "Organization",
-      "name": "SiteOptz",
-      "url": "https://siteoptz.ai"
-    },
-    "publisher": {
-      "@type": "Organization",
-      "name": "SiteOptz",
-      "url": "https://siteoptz.ai"
-    }
-  };
-
-  // Review Schema
-  const reviewSchema = {
-    "@context": "https://schema.org",
-    "@type": "Review",
-    "itemReviewed": {
-      "@type": "SoftwareApplication",
-      "name": tool.tool_name || safeToolName,
-      "description": tool.description || `${safeToolName} is a comprehensive AI tool designed to enhance productivity and efficiency.`,
-      "url": tool.official_url || tool.affiliate_link || `https://siteoptz.ai/reviews/${slug}`,
-      "applicationCategory": "BusinessApplication",
-      "operatingSystem": "Web"
-    },
-    "author": {
-      "@type": "Organization",
-      "name": "SiteOptz",
-      "url": "https://siteoptz.ai"
-    },
-    "publisher": {
-      "@type": "Organization",
-      "name": "SiteOptz",
-      "url": "https://siteoptz.ai"
-    },
-    "datePublished": "2025-01-15",
-    "dateModified": new Date().toISOString().split('T')[0],
-    "reviewRating": {
-      "@type": "Rating",
-      "ratingValue": getSafeRating(tool.rating),
-      "bestRating": 5,
-      "worstRating": 1
-    },
-    "reviewBody": `Comprehensive review of ${safeToolName} covering features, pricing, pros, cons, and use cases. Our expert analysis examines ${safeToolName}'s capabilities, user experience, and overall value proposition to help you make an informed decision.`
-  };
 
   // FAQ Schema - Create sample FAQs since not in data
   const sampleFaqs = [
@@ -641,14 +652,13 @@ export default function ReviewPage({ tool, pageTitle, slug, relatedTools, relate
       </Head>
 
       <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-black relative overflow-hidden">
-        {/* Animated Background Elements */}
+        {/* Simplified Background Elements */}
         <div className="absolute inset-0 pointer-events-none">
-          
-          <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-64 h-64 bg-cyan-500/10 rounded-full blur-3xl animate-pulse delay-500"></div>
+          <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-64 h-64 bg-cyan-500/5 rounded-full"></div>
         </div>
 
         {/* Grid Overlay */}
-        <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.02)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.02)_1px,transparent_1px)] bg-[size:100px_100px] pointer-events-none"></div>
+        <div className="absolute inset-0 bg-gray-900/5 pointer-events-none"></div>
 
         {/* Hero Section */}
         <section className="relative z-10 py-20">
@@ -783,7 +793,7 @@ export default function ReviewPage({ tool, pageTitle, slug, relatedTools, relate
                 {/* Unique intro paragraph to prevent duplicate content */}
                 <div className="mb-8 p-6 bg-black border border-gray-800 rounded-xl">
                   <p className="text-gray-300 leading-relaxed">
-                    {generateUniqueIntro(tool, slug)}
+                    {uniqueIntro}
                   </p>
                 </div>
 
@@ -792,7 +802,7 @@ export default function ReviewPage({ tool, pageTitle, slug, relatedTools, relate
                   <h2 className="text-2xl font-bold text-white mb-6">Our {safeToolName} Review</h2>
                   <div className="bg-gradient-to-r from-blue-900/10 to-purple-900/10 border border-blue-800/30 rounded-xl p-6">
                     <div className="text-gray-300 leading-relaxed whitespace-pre-line">
-                      {generateDetailedReview(tool, slug, seoData?.category || 'AI Tools')}
+                      {detailedReview}
                     </div>
                   </div>
                 </div>
@@ -801,7 +811,7 @@ export default function ReviewPage({ tool, pageTitle, slug, relatedTools, relate
                 <div className="mb-12">
                   <h2 className="text-2xl font-bold text-white mb-6">Key Use Cases for {safeToolName}</h2>
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                    {generateUniqueUseCases(tool, slug, seoData?.category || 'AI Tools').map((useCase, index) => (
+                    {uniqueUseCases.map((useCase, index) => (
                       <div key={index} className="bg-gray-900/50 border border-gray-800 rounded-lg p-4">
                         <div className="flex items-start">
                           <svg className="w-5 h-5 text-cyan-400 mt-1 mr-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -818,7 +828,7 @@ export default function ReviewPage({ tool, pageTitle, slug, relatedTools, relate
                 <div className="mb-12 p-6 bg-gradient-to-r from-cyan-900/20 to-blue-900/20 border border-cyan-800/30 rounded-xl">
                   <h2 className="text-2xl font-bold text-white mb-4">Industry Context & Market Position</h2>
                   <p className="text-gray-300 leading-relaxed">
-                    {generateIndustryInsights(tool, slug, seoData?.category || 'AI Tools')}
+                    {industryInsights}
                   </p>
                 </div>
 
@@ -826,7 +836,7 @@ export default function ReviewPage({ tool, pageTitle, slug, relatedTools, relate
                 <div className="mb-12">
                   <h2 className="text-2xl font-bold text-white mb-6">How {safeToolName} Compares</h2>
                   <ul className="space-y-3">
-                    {generateUniqueComparisons(tool, slug).map((comparison, index) => (
+                    {uniqueComparisons.map((comparison, index) => (
                       <li key={index} className="flex items-start">
                         <svg className="w-5 h-5 text-green-400 mt-1 mr-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" />
@@ -841,7 +851,7 @@ export default function ReviewPage({ tool, pageTitle, slug, relatedTools, relate
                 <div className="mb-12">
                   <h2 className="text-2xl font-bold text-white mb-6">Implementation Timeline for {safeToolName}</h2>
                   <div className="space-y-6">
-                    {generateImplementationTimeline(tool, slug).map((phase, index) => (
+                    {implementationTimeline.map((phase, index) => (
                       <div key={index} className="bg-black border border-gray-800 rounded-xl p-6">
                         <h3 className="text-lg font-semibold text-cyan-400 mb-3">{phase.phase}</h3>
                         <ul className="space-y-2">
