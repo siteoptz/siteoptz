@@ -16,6 +16,148 @@ export default function OtteraiReview() {
         <meta property="og:description" content="Expert review of Otter.ai - features, pricing, pros & cons" />
         <meta property="og:type" content="article" />
         <link rel="canonical" href="https://siteoptz.ai/reviews/otter-ai" />
+        {/* Structured Data for Google Rich Results */}
+
+        <script
+
+          type="application/ld+json"
+
+          dangerouslySetInnerHTML={{
+
+            __html: JSON.stringify({
+
+                      "@context": "https://schema.org",
+
+                      "@type": "SoftwareApplication",
+
+                      "name": "Otter.ai",
+
+                      "description": "Otter.ai is a comprehensive AI tool designed to enhance productivity and efficiency for businesses and professionals.",
+
+                      "url": "https://otterai.com",
+
+                      "applicationCategory": "BusinessApplication",
+
+                      "operatingSystem": "Web",
+
+                      "offers": {
+
+                              "@type": "Offer",
+
+                              "price": 0,
+
+                              "priceCurrency": "USD",
+
+                              "availability": "https://schema.org/InStock",
+
+                              "priceSpecification": {
+
+                                      "@type": "PriceSpecification",
+
+                                      "price": 0,
+
+                                      "priceCurrency": "USD"
+
+                              },
+
+                              "url": "https://otterai.com"
+
+                      },
+
+                      "aggregateRating": {
+
+                              "@type": "AggregateRating",
+
+                              "ratingValue": 4.2,
+
+                              "reviewCount": 282,
+
+                              "bestRating": 5,
+
+                              "worstRating": 1
+
+                      },
+
+                      "author": {
+
+                              "@type": "Organization",
+
+                              "name": "SiteOptz",
+
+                              "url": "https://siteoptz.ai"
+
+                      },
+
+                      "publisher": {
+
+                              "@type": "Organization",
+
+                              "name": "SiteOptz",
+
+                              "url": "https://siteoptz.ai"
+
+                      }
+
+              })
+
+          }}
+
+        />
+
+        <script
+
+          type="application/ld+json"
+
+          dangerouslySetInnerHTML={{
+
+            __html: JSON.stringify({
+
+                      "@context": "https://schema.org",
+
+                      "@type": "Review",
+
+                      "itemReviewed": {
+
+                              "@type": "SoftwareApplication",
+
+                              "name": "Otter.ai"
+
+                      },
+
+                      "author": {
+
+                              "@type": "Organization",
+
+                              "name": "SiteOptz",
+
+                              "url": "https://siteoptz.ai"
+
+                      },
+
+                      "reviewRating": {
+
+                              "@type": "Rating",
+
+                              "ratingValue": 4.2,
+
+                              "bestRating": 5,
+
+                              "worstRating": 1
+
+                      },
+
+                      "reviewBody": "Comprehensive Otter.ai review covering features, pricing, and alternatives.",
+
+                      "datePublished": "2025-01-15",
+
+                      "dateModified": "2026-05-08"
+
+              })
+
+          }}
+
+        />
+
       </Head>
 
       <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-black">

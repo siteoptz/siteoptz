@@ -7,31 +7,53 @@ import FAQSection from '../../components/comparison/FAQSection';
 import ExpertCTASection from '../../components/ExpertCTASection';
 
 export default function SocialPilotReviewPage() {
-  // Schema markup for SEO
+    // Primary SoftwareApplication Schema for Google compliance
+  const softwareSchema = {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "SocialPilot",
+    "description": "SocialPilot is a comprehensive social media management tool supporting 10+ platforms with team collaboration and white-label solutions.",
+    "applicationCategory": "BusinessApplication",
+    "url": "https://www.socialpilot.co",
+    "operatingSystem": "Web",
+    "offers": {
+      "@type": "Offer",
+      "price": 25,
+      "priceCurrency": "USD",
+      "availability": "https://schema.org/InStock",
+      "priceSpecification": {
+        "@type": "PriceSpecification",
+        "price": 25,
+        "priceCurrency": "USD"
+      },
+      "url": "https://www.socialpilot.co"
+    },
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": 4.5,
+      "reviewCount": 1200,
+      "bestRating": 5,
+      "worstRating": 1
+    },
+    "author": {
+      "@type": "Organization",
+      "name": "SiteOptz",
+      "url": "https://siteoptz.ai"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "SiteOptz",
+      "url": "https://siteoptz.ai"
+    }
+  };
+
+  // Review Schema (secondary)
   const reviewSchema = {
     "@context": "https://schema.org",
     "@type": "Review",
     "itemReviewed": {
       "@type": "SoftwareApplication",
-      "name": "SocialPilot",
-      "description": "SocialPilot is a comprehensive social media management tool supporting 10+ platforms with team collaboration and white-label solutions.",
-      "applicationCategory": "Social Media",
-      "url": "https://www.socialpilot.co",
-      "operatingSystem": "Web, iOS, Android",
-      "offers": {
-        "@type": "Offer",
-        "price": "25.50",
-        "priceCurrency": "USD",
-        "availability": "https://schema.org/InStock",
-        "priceValidUntil": new Date(Date.now() + 365 * 24 * 60 * 60 * 1000).toISOString().split('T')[0]
-      },
-      "aggregateRating": {
-        "@type": "AggregateRating",
-        "ratingValue": 4.5,
-        "reviewCount": 1200,
-        "bestRating": 5,
-        "worstRating": 1
-      }
+      "name": "SocialPilot"
     },
     "author": {
       "@type": "Organization",
@@ -44,7 +66,9 @@ export default function SocialPilotReviewPage() {
       "bestRating": 5,
       "worstRating": 1
     },
-    "reviewBody": "Comprehensive SocialPilot review covering features, pricing, and alternatives for social media management."
+    "reviewBody": "Comprehensive SocialPilot review covering features, pricing, and alternatives.",
+    "datePublished": "2025-01-15",
+    "dateModified": new Date().toISOString().split('T')[0]
   };
 
   const breadcrumbSchema = {

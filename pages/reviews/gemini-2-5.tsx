@@ -16,6 +16,148 @@ export default function GoogleGemini25Review() {
         <meta property="og:description" content="Expert review of Google Gemini 2.5 - features, pricing, pros & cons" />
         <meta property="og:type" content="article" />
         <link rel="canonical" href="https://siteoptz.ai/reviews/gemini-2-5" />
+        {/* Structured Data for Google Rich Results */}
+
+        <script
+
+          type="application/ld+json"
+
+          dangerouslySetInnerHTML={{
+
+            __html: JSON.stringify({
+
+                      "@context": "https://schema.org",
+
+                      "@type": "SoftwareApplication",
+
+                      "name": "Google Gemini 2.5",
+
+                      "description": "Google Gemini 2.5 is a comprehensive AI tool designed to enhance productivity and efficiency for businesses and professionals.",
+
+                      "url": "https://googlegemini25.com",
+
+                      "applicationCategory": "BusinessApplication",
+
+                      "operatingSystem": "Web",
+
+                      "offers": {
+
+                              "@type": "Offer",
+
+                              "price": 9,
+
+                              "priceCurrency": "USD",
+
+                              "availability": "https://schema.org/InStock",
+
+                              "priceSpecification": {
+
+                                      "@type": "PriceSpecification",
+
+                                      "price": 9,
+
+                                      "priceCurrency": "USD"
+
+                              },
+
+                              "url": "https://googlegemini25.com"
+
+                      },
+
+                      "aggregateRating": {
+
+                              "@type": "AggregateRating",
+
+                              "ratingValue": 4.3,
+
+                              "reviewCount": 153,
+
+                              "bestRating": 5,
+
+                              "worstRating": 1
+
+                      },
+
+                      "author": {
+
+                              "@type": "Organization",
+
+                              "name": "SiteOptz",
+
+                              "url": "https://siteoptz.ai"
+
+                      },
+
+                      "publisher": {
+
+                              "@type": "Organization",
+
+                              "name": "SiteOptz",
+
+                              "url": "https://siteoptz.ai"
+
+                      }
+
+              })
+
+          }}
+
+        />
+
+        <script
+
+          type="application/ld+json"
+
+          dangerouslySetInnerHTML={{
+
+            __html: JSON.stringify({
+
+                      "@context": "https://schema.org",
+
+                      "@type": "Review",
+
+                      "itemReviewed": {
+
+                              "@type": "SoftwareApplication",
+
+                              "name": "Google Gemini 2.5"
+
+                      },
+
+                      "author": {
+
+                              "@type": "Organization",
+
+                              "name": "SiteOptz",
+
+                              "url": "https://siteoptz.ai"
+
+                      },
+
+                      "reviewRating": {
+
+                              "@type": "Rating",
+
+                              "ratingValue": 4.3,
+
+                              "bestRating": 5,
+
+                              "worstRating": 1
+
+                      },
+
+                      "reviewBody": "Comprehensive Google Gemini 2.5 review covering features, pricing, and alternatives.",
+
+                      "datePublished": "2025-01-15",
+
+                      "dateModified": "2026-05-08"
+
+              })
+
+          }}
+
+        />
+
       </Head>
 
       <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-black">

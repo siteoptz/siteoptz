@@ -1,0 +1,176 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://siteoptz.ai/schemas/suppression.schema.json",
+  "title": "Agent Stack Suppression Schema",
+  "description": "Schema for validating agent stack suppression records",
+  "type": "object",
+  "required": [
+    "id",
+    "type", 
+    "status",
+    "severity",
+    "rule_id",
+    "scope",
+    "introduced_on",
+    "expiry",
+    "owner",
+    "rationale",
+    "issue_link",
+    "last_reviewed"
+  ],
+  "properties": {
+    "id": {
+      "type": "string",
+      "pattern": "^(SEC|REV|UI)-[0-9]{3,4}$",
+      "description": "Unique identifier following pattern TYPE-### format"
+    },
+    "type": {
+      "type": "string",
+      "enum": ["security", "review", "ui"],
+      "description": "Category of suppression"
+    },
+    "status": {
+      "type": "string",
+      "enum": ["active", "resolved", "expired"],
+      "description": "Current status of the suppression"
+    },
+    "severity": {
+      "type": "string",
+      "enum": ["critical", "high", "medium", "low"],
+      "description": "Severity level of the suppressed issue"
+    },
+    "rule_id": {
+      "type": "string",
+      "minLength": 1,
+      "description": "Identifier of the specific rule being suppressed"
+    },
+    "scope": {
+      "type": "string",
+      "minLength": 1,
+      "description": "File paths, components, or areas affected by the suppression"
+    },
+    "introduced_on": {
+      "type": "string",
+      "format": "date",
+      "description": "Date when the suppression was first added"
+    },
+    "expiry": {
+      "type": "string",
+      "format": "date", 
+      "description": "Date when the suppression should expire"
+    },
+    "owner": {
+      "type": "string",
+      "minLength": 1,
+      "description": "Person or team responsible for resolving the issue"
+    },
+    "rationale": {
+      "type": "string",
+      "minLength": 10,
+      "description": "Detailed justification for accepting the risk or deferring the fix"
+    },
+    "issue_link": {
+      "type": "string",
+      "format": "uri",
+      "description": "Link to tracking issue for resolution"
+    },
+    "last_reviewed": {
+      "type": "string",
+      "format": "date",
+      "description": "Date of most recent review of this suppression"
+    },
+    "tool": {
+      "type": "string",
+      "description": "Security scanning tool that flagged the issue (required for security type)"
+    },
+    "lane": {
+      "type": "string",
+      "enum": ["correctness", "architecture", "style", "performance", "regression"],
+      "description": "Review lane that flagged the issue (required for review type)"
+    },
+    "category": {
+      "type": "string", 
+      "enum": ["design_system", "accessibility", "mobile_experience", "performance", "user_flow"],
+      "description": "UI category that flagged the issue (required for ui type)"
+    },
+    "impacted_flows": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "User flows impacted by the UI issue (required for ui type)"
+    },
+    "approver": {
+      "type": "string",
+      "description": "Person who approved the suppression (required for critical severity)"
+    },
+    "resolution": {
+      "type": "string",
+      "description": "Description of how the issue was resolved (for resolved status)"
+    },
+    "resolution_date": {
+      "type": "string",
+      "format": "date",
+      "description": "Date when the issue was resolved (for resolved status)"
+    },
+    "resolved_by": {
+      "type": "string",
+      "description": "Person who resolved the issue (for resolved status)"
+    },
+    "mitigation": {
+      "type": "string",
+      "description": "Temporary mitigation measures in place while issue remains suppressed"
+    }
+  },
+  "allOf": [
+    {
+      "if": {
+        "properties": { "type": { "const": "security" } }
+      },
+      "then": {
+        "required": ["tool"]
+      }
+    },
+    {
+      "if": {
+        "properties": { "type": { "const": "review" } }
+      },
+      "then": {
+        "required": ["lane"]
+      }
+    },
+    {
+      "if": {
+        "properties": { "type": { "const": "ui" } }
+      },
+      "then": {
+        "required": ["category", "impacted_flows"]
+      }
+    },
+    {
+      "if": {
+        "properties": { "severity": { "const": "critical" } }
+      },
+      "then": {
+        "required": ["approver"]
+      }
+    },
+    {
+      "if": {
+        "properties": { "severity": { "const": "high" } }
+      },
+      "then": {
+        "required": ["approver"]
+      }
+    },
+    {
+      "if": {
+        "properties": { "status": { "const": "resolved" } }
+      },
+      "then": {
+        "required": ["resolution", "resolution_date", "resolved_by"]
+      }
+    }
+  ],
+  "additionalProperties": false
+}

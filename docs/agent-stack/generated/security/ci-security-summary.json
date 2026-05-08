@@ -1,0 +1,8 @@
+{
+  "conclusion": "failure",
+  "security_status": "CRITICAL",
+  "blocking_issues": 1308,
+  "warning_issues": 306,
+  "enforcement_phase": 1,
+  "scan_timestamp": "2026-05-08T00:31:44.659Z"
+}

@@ -24,6 +24,148 @@ export default function SpeechkiTextToSpeechAiReview() {
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content={title} />
         <meta name="twitter:description" content={description} />
+        {/* Structured Data for Google Rich Results */}
+
+        <script
+
+          type="application/ld+json"
+
+          dangerouslySetInnerHTML={{
+
+            __html: JSON.stringify({
+
+                      "@context": "https://schema.org",
+
+                      "@type": "SoftwareApplication",
+
+                      "name": "Speechki Text To Speech Ai",
+
+                      "description": "Speechki Text To Speech Ai is a comprehensive AI tool designed to enhance productivity and efficiency for businesses and professionals.",
+
+                      "url": "https://speechkitexttospeechai.com",
+
+                      "applicationCategory": "BusinessApplication",
+
+                      "operatingSystem": "Web",
+
+                      "offers": {
+
+                              "@type": "Offer",
+
+                              "price": 19,
+
+                              "priceCurrency": "USD",
+
+                              "availability": "https://schema.org/InStock",
+
+                              "priceSpecification": {
+
+                                      "@type": "PriceSpecification",
+
+                                      "price": 19,
+
+                                      "priceCurrency": "USD"
+
+                              },
+
+                              "url": "https://speechkitexttospeechai.com"
+
+                      },
+
+                      "aggregateRating": {
+
+                              "@type": "AggregateRating",
+
+                              "ratingValue": 4.4,
+
+                              "reviewCount": 344,
+
+                              "bestRating": 5,
+
+                              "worstRating": 1
+
+                      },
+
+                      "author": {
+
+                              "@type": "Organization",
+
+                              "name": "SiteOptz",
+
+                              "url": "https://siteoptz.ai"
+
+                      },
+
+                      "publisher": {
+
+                              "@type": "Organization",
+
+                              "name": "SiteOptz",
+
+                              "url": "https://siteoptz.ai"
+
+                      }
+
+              })
+
+          }}
+
+        />
+
+        <script
+
+          type="application/ld+json"
+
+          dangerouslySetInnerHTML={{
+
+            __html: JSON.stringify({
+
+                      "@context": "https://schema.org",
+
+                      "@type": "Review",
+
+                      "itemReviewed": {
+
+                              "@type": "SoftwareApplication",
+
+                              "name": "Speechki Text To Speech Ai"
+
+                      },
+
+                      "author": {
+
+                              "@type": "Organization",
+
+                              "name": "SiteOptz",
+
+                              "url": "https://siteoptz.ai"
+
+                      },
+
+                      "reviewRating": {
+
+                              "@type": "Rating",
+
+                              "ratingValue": 4.4,
+
+                              "bestRating": 5,
+
+                              "worstRating": 1
+
+                      },
+
+                      "reviewBody": "Comprehensive Speechki Text To Speech Ai review covering features, pricing, and alternatives.",
+
+                      "datePublished": "2025-01-15",
+
+                      "dateModified": "2026-05-08"
+
+              })
+
+          }}
+
+        />
+
       </Head>
 
       <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-black relative overflow-hidden">

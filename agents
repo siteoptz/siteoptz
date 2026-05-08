@@ -1,0 +1,41 @@
+#!/bin/bash
+
+# Agent Stack Bookmark Script
+# Usage: ./agents [command]
+
+case "$1" in
+    "help"|"view"|"")
+        echo "🤖 Agent Stack Commands:"
+        echo "npm run agent:memory:check        # Cross-session project memory"
+        echo "npm run agent:plan               # Interactive planning assistant"
+        echo "npm run agent:review             # Run all review lanes"
+        echo "npm run agent:review:ci          # CI mode (non-interactive)"
+        echo "npm run agent:security           # Interactive security scan"
+        echo "npm run agent:security:ci        # CI mode security scan"
+        echo "npm run agent:ui-review          # Frontend design review"
+        echo "npm run agent:orchestrate        # CEO/EM/QA/Release coordination"
+        echo "npm run agent:suppressions:validate   # Validate all suppressions"
+        echo ""
+        echo "📖 Full guide: ./agents full"
+        echo "🏥 Health check: ./agents health"
+        ;;
+    "full")
+        if command -v code >/dev/null 2>&1; then
+            code AGENT_STACK.md
+        elif command -v vim >/dev/null 2>&1; then
+            vim AGENT_STACK.md
+        else
+            cat AGENT_STACK.md
+        fi
+        ;;
+    "health")
+        echo "🏥 Running agent health checks..."
+        npm run agent:memory:check && \
+        npm run agent:review:ci && \
+        npm run agent:security:ci && \
+        npm run agent:suppressions:validate
+        ;;
+    *)
+        echo "Usage: ./agents [help|full|health]"
+        ;;
+esac

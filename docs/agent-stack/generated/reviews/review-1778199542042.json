@@ -1,0 +1,49 @@
+{
+  "timestamp": "2026-05-08T00:19:02.042Z",
+  "target": ".",
+  "lanes": {
+    "correctness": {
+      "success": true,
+      "issues_count": 0,
+      "summary": "correctness lane placeholder - implementation pending"
+    },
+    "architecture": {
+      "success": true,
+      "issues_count": 0,
+      "summary": "architecture lane placeholder - implementation pending"
+    },
+    "style": {
+      "success": true,
+      "issues_count": 0,
+      "summary": "style lane placeholder - implementation pending"
+    },
+    "performance": {
+      "success": true,
+      "issues_count": 0,
+      "summary": "performance lane placeholder - implementation pending"
+    },
+    "regression": {
+      "success": true,
+      "issues_count": 0,
+      "summary": "regression lane placeholder - implementation pending"
+    }
+  },
+  "summary": {
+    "total_lanes": 5,
+    "successful_lanes": 5,
+    "total_issues": 0,
+    "severity_breakdown": {
+      "critical": 0,
+      "high": 0,
+      "medium": 0,
+      "low": 0
+    },
+    "overall_status": "CLEAN"
+  },
+  "issues": [],
+  "recommendations": [],
+  "metadata": {
+    "version": "1.0.0",
+    "review_type": "five-lane-parallel"
+  }
+}

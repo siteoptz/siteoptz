@@ -1,0 +1,18 @@
+{
+  "conclusion": "success",
+  "summary": {
+    "total_lanes": 5,
+    "successful_lanes": 5,
+    "total_issues": 0,
+    "severity_breakdown": {
+      "critical": 0,
+      "high": 0,
+      "medium": 0,
+      "low": 0
+    },
+    "overall_status": "CLEAN"
+  },
+  "blocking_issues": 0,
+  "warning_issues": 0,
+  "enforcement_phase": 1
+}

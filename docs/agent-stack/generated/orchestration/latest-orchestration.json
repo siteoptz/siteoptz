@@ -1,0 +1,88 @@
+{
+  "timestamp": "2026-05-08T00:20:45.222Z",
+  "workflow_type": "Feature Release Workflow",
+  "orchestration_results": {
+    "workflow": "Feature Release Workflow",
+    "phases": [
+      {
+        "name": "Business Validation",
+        "roles": [
+          "ceo"
+        ],
+        "gates": [
+          {
+            "name": "business_requirements",
+            "roles": [
+              "ceo"
+            ],
+            "status": "warning",
+            "message": "No planning documents found",
+            "timestamp": "2026-05-08T00:20:45.221Z"
+          },
+          {
+            "name": "success_metrics",
+            "roles": [
+              "ceo"
+            ],
+            "status": "warning",
+            "message": "Success metrics should be defined",
+            "timestamp": "2026-05-08T00:20:45.221Z"
+          }
+        ],
+        "status": "warning",
+        "timestamp": "2026-05-08T00:20:45.220Z"
+      },
+      {
+        "name": "Technical Planning",
+        "roles": [
+          "em"
+        ],
+        "gates": [
+          {
+            "name": "technical_plan",
+            "roles": [
+              "em"
+            ],
+            "status": "failed",
+            "message": "No technical planning documents found",
+            "timestamp": "2026-05-08T00:20:45.222Z"
+          }
+        ],
+        "status": "failed",
+        "timestamp": "2026-05-08T00:20:45.222Z"
+      }
+    ],
+    "overall_status": "failed",
+    "recommendations": []
+  },
+  "governance_summary": {
+    "total_phases": 2,
+    "passed_phases": 0,
+    "warning_phases": 1,
+    "failed_phases": 1,
+    "overall_status": "failed"
+  },
+  "release_readiness": {
+    "ready": false,
+    "level": "not_ready",
+    "reason": "1 phase(s) failed",
+    "approval_required": "security_lead"
+  },
+  "recommendations": [
+    {
+      "priority": "medium",
+      "action": "Review warnings in Business Validation phase",
+      "phase": "Business Validation"
+    },
+    {
+      "priority": "critical",
+      "action": "Address failures in Technical Planning phase before proceeding",
+      "phase": "Technical Planning"
+    }
+  ],
+  "metadata": {
+    "version": "1.0.0",
+    "agent_stack": "gStack orchestration",
+    "auto_deploy": false
+  }
+}

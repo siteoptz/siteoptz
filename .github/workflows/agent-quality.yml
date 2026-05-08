@@ -1,0 +1,346 @@
+name: Agent Stack Quality
+
+on:
+  push:
+    branches: [ main, develop ]
+  pull_request:
+    branches: [ main ]
+  workflow_dispatch:
+
+env:
+  NODE_VERSION: '18'
+
+jobs:
+  code-review:
+    name: Five-Lane Code Review
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      pull-requests: write
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+      with:
+        fetch-depth: 0
+
+    - name: Setup Node.js
+      uses: actions/setup-node@v4
+      with:
+        node-version: ${{ env.NODE_VERSION }}
+        cache: 'npm'
+
+    - name: Install dependencies
+      run: npm ci
+
+    - name: Run five-lane code review
+      id: review
+      run: npm run agent:review:ci
+      continue-on-error: true  # Phase 1: warn only
+      env:
+        GITHUB_SHA: ${{ github.sha }}
+        GITHUB_PR_NUMBER: ${{ github.event.pull_request.number }}
+
+    - name: Upload review artifacts
+      if: always()
+      uses: actions/upload-artifact@v4
+      with:
+        name: code-review-results
+        path: |
+          docs/agent-stack/generated/reviews/
+        retention-days: 30
+
+    - name: Comment on PR (Code Review)
+      if: github.event_name == 'pull_request' && always()
+      uses: actions/github-script@v7
+      with:
+        script: |
+          const fs = require('fs');
+          const path = 'docs/agent-stack/generated/reviews/ci-summary.md';
+          
+          if (fs.existsSync(path)) {
+            const comment = fs.readFileSync(path, 'utf8');
+            
+            // Find existing review comment
+            const { data: comments } = await github.rest.issues.listComments({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              issue_number: context.payload.pull_request.number,
+            });
+            
+            const botComment = comments.find(comment => 
+              comment.user.type === 'Bot' && 
+              comment.body.includes('🔍 Code Review Summary')
+            );
+            
+            if (botComment) {
+              // Update existing comment
+              await github.rest.issues.updateComment({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                comment_id: botComment.id,
+                body: comment
+              });
+            } else {
+              // Create new comment
+              await github.rest.issues.createComment({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                issue_number: context.payload.pull_request.number,
+                body: comment
+              });
+            }
+          }
+
+  ui-review:
+    name: UI/Design Review
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      pull-requests: write
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+
+    - name: Setup Node.js
+      uses: actions/setup-node@v4
+      with:
+        node-version: ${{ env.NODE_VERSION }}
+        cache: 'npm'
+
+    - name: Install dependencies
+      run: npm ci
+
+    - name: Run UI/design review
+      id: ui-review
+      run: npm run agent:ui-review
+      continue-on-error: true  # Phase 1: warn only
+
+    - name: Upload UI review artifacts
+      if: always()
+      uses: actions/upload-artifact@v4
+      with:
+        name: ui-review-results
+        path: |
+          docs/agent-stack/generated/ui/
+        retention-days: 30
+
+    - name: Check UI compliance
+      if: always()
+      run: |
+        echo "UI review completed"
+        
+        # Read UI review results
+        if [ -f "docs/agent-stack/generated/ui/latest-ui-review.json" ]; then
+          UI_STATUS=$(jq -r '.summary.ui_status' docs/agent-stack/generated/ui/latest-ui-review.json)
+          DARK_THEME=$(jq -r '.siteoptz_compliance.dark_theme_compliance' docs/agent-stack/generated/ui/latest-ui-review.json)
+          A11Y_SCORE=$(jq -r '.siteoptz_compliance.accessibility_score' docs/agent-stack/generated/ui/latest-ui-review.json)
+          
+          echo "UI status: $UI_STATUS"
+          echo "Dark theme compliance: $DARK_THEME"
+          echo "Accessibility score: $A11Y_SCORE"
+          
+          # Check for SiteOptz mandatory requirements
+          if [ "$DARK_THEME" = "false" ]; then
+            echo "❌ Dark theme compliance violation detected"
+            echo "ui-critical-issue=true" >> $GITHUB_OUTPUT
+          fi
+          
+          if [ "$A11Y_SCORE" -lt "80" ]; then
+            echo "⚠️ Low accessibility score: $A11Y_SCORE%"
+            echo "ui-accessibility-warning=true" >> $GITHUB_OUTPUT
+          fi
+          
+          echo "ui-status=$UI_STATUS" >> $GITHUB_OUTPUT
+        else
+          echo "❌ UI review results not found"
+          echo "ui-status=error" >> $GITHUB_OUTPUT
+        fi
+      id: ui-check
+
+  memory-check:
+    name: Memory Check
+    runs-on: ubuntu-latest
+    if: github.event_name == 'pull_request'
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+
+    - name: Setup Node.js
+      uses: actions/setup-node@v4
+      with:
+        node-version: ${{ env.NODE_VERSION }}
+        cache: 'npm'
+
+    - name: Install dependencies
+      run: npm ci
+
+    - name: Run memory check
+      id: memory
+      run: npm run agent:memory:check
+      continue-on-error: true
+
+    - name: Upload memory check results
+      if: always()
+      uses: actions/upload-artifact@v4
+      with:
+        name: memory-check-results
+        path: |
+          docs/agent-stack/generated/memory-check.json
+        retention-days: 7
+
+    - name: Check memory status
+      if: always()
+      run: |
+        if [ -f "docs/agent-stack/generated/memory-check.json" ]; then
+          MEMORY_STATUS=$(jq -r '.memory_status' docs/agent-stack/generated/memory-check.json)
+          CRITICAL_ISSUES=$(jq -r '.summary.critical' docs/agent-stack/generated/memory-check.json)
+          
+          echo "Memory status: $MEMORY_STATUS"
+          echo "Critical memory issues: $CRITICAL_ISSUES"
+          
+          if [ "$MEMORY_STATUS" = "DEGRADED" ] && [ "$CRITICAL_ISSUES" -gt "0" ]; then
+            echo "⚠️ Memory degradation detected with critical issues"
+            echo "memory-warning=true" >> $GITHUB_OUTPUT
+          fi
+        fi
+      id: memory-check
+
+  process-gate:
+    name: Process Gate Check
+    runs-on: ubuntu-latest
+    if: github.event_name == 'pull_request'
+    needs: [code-review, ui-review, memory-check]
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+
+    - name: Check for protected path changes
+      run: |
+        # Define protected paths for SiteOptz
+        PROTECTED_PATHS=(
+          "pages/api/"
+          "public/data/"
+          "utils/seo"
+          "components/SEO"
+          ".env*"
+          "package.json"
+        )
+        
+        # Get changed files
+        CHANGED_FILES=$(git diff --name-only origin/main...HEAD)
+        echo "Changed files:"
+        echo "$CHANGED_FILES"
+        
+        PROTECTED_CHANGES=""
+        for path in "${PROTECTED_PATHS[@]}"; do
+          if echo "$CHANGED_FILES" | grep -q "$path"; then
+            PROTECTED_CHANGES="$PROTECTED_CHANGES\n- $path"
+          fi
+        done
+        
+        if [ -n "$PROTECTED_CHANGES" ]; then
+          echo "🔒 Protected path changes detected:"
+          echo -e "$PROTECTED_CHANGES"
+          echo "protected-changes=true" >> $GITHUB_OUTPUT
+          
+          # Check for required artifacts
+          PLAN_FILES=$(find docs/agent-stack/plans/ -name "*.md" -newer origin/main 2>/dev/null || true)
+          REVIEW_FILES=$(find docs/agent-stack/reviews/ -name "*-review.md" -newer origin/main 2>/dev/null || true)
+          
+          echo "Recent plan files: $PLAN_FILES"
+          echo "Recent review files: $REVIEW_FILES"
+          
+          if [ -z "$PLAN_FILES" ]; then
+            echo "⚠️ No planning document found for protected path changes"
+            echo "missing-plan=true" >> $GITHUB_OUTPUT
+          fi
+          
+          if [ -z "$REVIEW_FILES" ]; then
+            echo "⚠️ No self-review document found for protected path changes"
+            echo "missing-review=true" >> $GITHUB_OUTPUT
+          fi
+        else
+          echo "No protected path changes detected"
+          echo "protected-changes=false" >> $GITHUB_OUTPUT
+        fi
+      id: protected-check
+
+    - name: Comment on process gate violations
+      if: steps.protected-check.outputs.protected-changes == 'true'
+      uses: actions/github-script@v7
+      with:
+        script: |
+          const missingPlan = ${{ steps.protected-check.outputs.missing-plan == 'true' }};
+          const missingReview = ${{ steps.protected-check.outputs.missing-review == 'true' }};
+          
+          if (missingPlan || missingReview) {
+            let comment = "## 🚧 Process Gate Check\n\n";
+            comment += "This PR modifies protected paths and requires additional documentation:\n\n";
+            
+            if (missingPlan) {
+              comment += "❌ **Missing Planning Document**\n";
+              comment += "- Run `npm run agent:plan create` to create a planning document\n";
+              comment += "- Document the approach and risks for protected path changes\n\n";
+            }
+            
+            if (missingReview) {
+              comment += "❌ **Missing Self-Review Document**\n";
+              comment += "- Run `npm run agent:self-review create` to document implementation details\n";
+              comment += "- Include testing evidence and validation results\n\n";
+            }
+            
+            comment += "**Protected paths modified:**\n";
+            comment += "- API routes, data files, SEO components, or configuration\n\n";
+            comment += "*Note: This is currently advisory (Phase 1). Future phases may block merging.*\n";
+            
+            await github.rest.issues.createComment({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              issue_number: context.payload.pull_request.number,
+              body: comment
+            });
+          }
+
+  quality-summary:
+    name: Quality Summary
+    runs-on: ubuntu-latest
+    needs: [code-review, ui-review, memory-check, process-gate]
+    if: always() && github.event_name == 'pull_request'
+
+    steps:
+    - name: Generate quality summary
+      uses: actions/github-script@v7
+      with:
+        script: |
+          const jobs = [
+            { name: 'Code Review', result: '${{ needs.code-review.result }}' },
+            { name: 'UI Review', result: '${{ needs.ui-review.result }}' },
+            { name: 'Memory Check', result: '${{ needs.memory-check.result }}' },
+            { name: 'Process Gate', result: '${{ needs.process-gate.result }}' }
+          ];
+          
+          let comment = "## 📊 Agent Stack Quality Summary\n\n";
+          comment += "| Check | Status | Phase 1 Mode |\n";
+          comment += "|-------|--------|--------------|\n";
+          
+          for (const job of jobs) {
+            const emoji = job.result === 'success' ? '✅' : 
+                         job.result === 'failure' ? '❌' : '⚠️';
+            const mode = "Advisory";
+            comment += `| ${job.name} | ${emoji} ${job.result} | ${mode} |\n`;
+          }
+          
+          comment += "\n**Current Enforcement Phase:** 1 (Warning Only)\n";
+          comment += "All quality checks are currently advisory. Future phases will progressively enforce blocking based on severity.\n\n";
+          comment += "*Agent Stack v1.0.0 - [Documentation](docs/agent-stack/README.md)*\n";
+          
+          await github.rest.issues.createComment({
+            owner: context.repo.owner,
+            repo: context.repo.repo,
+            issue_number: context.payload.pull_request.number,
+            body: comment
+          });

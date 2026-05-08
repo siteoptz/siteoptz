@@ -7,31 +7,53 @@ import FAQSection from '../../components/comparison/FAQSection';
 import ExpertCTASection from '../../components/ExpertCTASection';
 
 export default function SocialChampReviewPage() {
-  // Schema markup for SEO
+    // Primary SoftwareApplication Schema for Google compliance
+  const softwareSchema = {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "Social Champ",
+    "description": "Social Champ is a feature-rich social media tool with support for 11 platforms including BlueSky, Threads, and Mastodon with competitive pricing.",
+    "applicationCategory": "BusinessApplication",
+    "url": "https://www.socialchamp.com",
+    "operatingSystem": "Web",
+    "offers": {
+      "@type": "Offer",
+      "price": 26,
+      "priceCurrency": "USD",
+      "availability": "https://schema.org/InStock",
+      "priceSpecification": {
+        "@type": "PriceSpecification",
+        "price": 26,
+        "priceCurrency": "USD"
+      },
+      "url": "https://www.socialchamp.com"
+    },
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": 4.4,
+      "reviewCount": 980,
+      "bestRating": 5,
+      "worstRating": 1
+    },
+    "author": {
+      "@type": "Organization",
+      "name": "SiteOptz",
+      "url": "https://siteoptz.ai"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "SiteOptz",
+      "url": "https://siteoptz.ai"
+    }
+  };
+
+  // Review Schema (secondary)
   const reviewSchema = {
     "@context": "https://schema.org",
     "@type": "Review",
     "itemReviewed": {
       "@type": "SoftwareApplication",
-      "name": "Social Champ",
-      "description": "Social Champ is a feature-rich social media tool with support for 11 platforms including BlueSky, Threads, and Mastodon with competitive pricing.",
-      "applicationCategory": "Social Media",
-      "url": "https://www.socialchamp.com",
-      "operatingSystem": "Web, iOS, Android",
-      "offers": {
-        "@type": "Offer",
-        "price": "26",
-        "priceCurrency": "USD",
-        "availability": "https://schema.org/InStock",
-        "priceValidUntil": new Date(Date.now() + 365 * 24 * 60 * 60 * 1000).toISOString().split('T')[0]
-      },
-      "aggregateRating": {
-        "@type": "AggregateRating",
-        "ratingValue": 4.4,
-        "reviewCount": 980,
-        "bestRating": 5,
-        "worstRating": 1
-      }
+      "name": "Social Champ"
     },
     "author": {
       "@type": "Organization",
@@ -44,7 +66,9 @@ export default function SocialChampReviewPage() {
       "bestRating": 5,
       "worstRating": 1
     },
-    "reviewBody": "Comprehensive Social Champ review covering features, pricing, and alternatives for social media management."
+    "reviewBody": "Comprehensive Social Champ review covering features, pricing, and alternatives.",
+    "datePublished": "2025-01-15",
+    "dateModified": new Date().toISOString().split('T')[0]
   };
 
   const breadcrumbSchema = {

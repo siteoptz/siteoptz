@@ -1,0 +1,98 @@
+{
+  "validation_date": "2026-05-08T00:31:28.016Z",
+  "schema_path": "docs/agent-stack/suppression.schema.json",
+  "suppressions_path": "docs/agent-stack/generated/suppressions.json",
+  "validation_result": "FAIL",
+  "stats": {
+    "total": 10,
+    "by_type": {
+      "security": 4,
+      "review": 3,
+      "ui": 3
+    },
+    "by_status": {
+      "active": 10
+    },
+    "by_severity": {
+      "medium": 5,
+      "low": 5
+    },
+    "expired": 0,
+    "expiring_soon": 1
+  },
+  "errors": [
+    {
+      "message": "Schema violation in SEC-001:  must NOT have additional properties",
+      "suppressionId": "SEC-001"
+    },
+    {
+      "message": "Suppression SEC-001 duration (31 days) exceeds maximum of 30 days",
+      "suppressionId": "SEC-001"
+    },
+    {
+      "message": "Schema violation in SEC-002:  must NOT have additional properties",
+      "suppressionId": "SEC-002"
+    },
+    {
+      "message": "Schema violation in SEC-003:  must NOT have additional properties",
+      "suppressionId": "SEC-003"
+    },
+    {
+      "message": "Suppression SEC-003 duration (92 days) exceeds maximum of 90 days",
+      "suppressionId": "SEC-003"
+    },
+    {
+      "message": "Schema violation in SEC-004:  must NOT have additional properties",
+      "suppressionId": "SEC-004"
+    },
+    {
+      "message": "Schema violation in REV-001:  must NOT have additional properties",
+      "suppressionId": "REV-001"
+    },
+    {
+      "message": "Suppression REV-001 duration (92 days) exceeds maximum of 30 days",
+      "suppressionId": "REV-001"
+    },
+    {
+      "message": "Schema violation in REV-002:  must NOT have additional properties",
+      "suppressionId": "REV-002"
+    },
+    {
+      "message": "Schema violation in REV-003:  must NOT have additional properties",
+      "suppressionId": "REV-003"
+    },
+    {
+      "message": "Schema violation in UI-001:  must NOT have additional properties",
+      "suppressionId": "UI-001"
+    },
+    {
+      "message": "Suppression UI-001 duration (61 days) exceeds maximum of 30 days",
+      "suppressionId": "UI-001"
+    },
+    {
+      "message": "Schema violation in UI-002:  must NOT have additional properties",
+      "suppressionId": "UI-002"
+    },
+    {
+      "message": "Schema violation in UI-003:  must NOT have additional properties",
+      "suppressionId": "UI-003"
+    },
+    {
+      "message": "Suppression UI-003 duration (92 days) exceeds maximum of 30 days",
+      "suppressionId": "UI-003"
+    }
+  ],
+  "warnings": [
+    {
+      "message": "Suppression SEC-004 expires in 6 days",
+      "suppressionId": "SEC-004"
+    }
+  ],
+  "summary": {
+    "total_suppressions": 10,
+    "errors_count": 15,
+    "warnings_count": 1,
+    "expired_count": 0,
+    "expiring_soon_count": 1
+  }
+}

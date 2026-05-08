@@ -7,31 +7,53 @@ import FAQSection from '../../components/comparison/FAQSection';
 import ExpertCTASection from '../../components/ExpertCTASection';
 
 export default function ContentStudioReviewPage() {
-  // Schema markup for SEO
+  // Primary SoftwareApplication Schema for Google compliance
+  const softwareSchema = {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "ContentStudio",
+    "description": "ContentStudio is a content marketing-focused social media tool with content curation and automation features.",
+    "applicationCategory": "BusinessApplication",
+    "url": "https://contentstudio.io",
+    "operatingSystem": "Web",
+    "offers": {
+      "@type": "Offer",
+      "price": 25,
+      "priceCurrency": "USD",
+      "availability": "https://schema.org/InStock",
+      "priceSpecification": {
+        "@type": "PriceSpecification",
+        "price": 25,
+        "priceCurrency": "USD"
+      },
+      "url": "https://contentstudio.io"
+    },
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": 4.3,
+      "reviewCount": 800,
+      "bestRating": 5,
+      "worstRating": 1
+    },
+    "author": {
+      "@type": "Organization",
+      "name": "SiteOptz",
+      "url": "https://siteoptz.ai"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "SiteOptz",
+      "url": "https://siteoptz.ai"
+    }
+  };
+
+  // Review Schema (secondary)
   const reviewSchema = {
     "@context": "https://schema.org",
     "@type": "Review",
     "itemReviewed": {
       "@type": "SoftwareApplication",
-      "name": "ContentStudio",
-      "description": "ContentStudio is a content marketing-focused social media tool with content curation and automation features.",
-      "applicationCategory": "Social Media",
-      "url": "https://contentstudio.io",
-      "operatingSystem": "Web, iOS, Android",
-      "offers": {
-        "@type": "Offer",
-        "price": "25",
-        "priceCurrency": "USD",
-        "availability": "https://schema.org/InStock",
-        "priceValidUntil": new Date(Date.now() + 365 * 24 * 60 * 60 * 1000).toISOString().split('T')[0]
-      },
-      "aggregateRating": {
-        "@type": "AggregateRating",
-        "ratingValue": 4.3,
-        "reviewCount": 800,
-        "bestRating": 5,
-        "worstRating": 1
-      }
+      "name": "ContentStudio"
     },
     "author": {
       "@type": "Organization",
@@ -44,7 +66,9 @@ export default function ContentStudioReviewPage() {
       "bestRating": 5,
       "worstRating": 1
     },
-    "reviewBody": "Comprehensive ContentStudio review covering features, pricing, and alternatives for content marketing-focused social media management."
+    "reviewBody": "Comprehensive ContentStudio review covering features, pricing, and alternatives for content marketing-focused social media management.",
+    "datePublished": "2025-01-15",
+    "dateModified": new Date().toISOString().split('T')[0]
   };
 
   const breadcrumbSchema = {
@@ -161,6 +185,10 @@ export default function ContentStudioReviewPage() {
         <meta name="msapplication-TileColor" content="#000000" />
         
         {/* Schema Markup */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(softwareSchema) }}
+        />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(reviewSchema) }}

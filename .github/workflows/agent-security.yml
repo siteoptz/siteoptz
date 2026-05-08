@@ -1,0 +1,206 @@
+name: Agent Stack Security
+
+on:
+  push:
+    branches: [ main, develop ]
+  pull_request:
+    branches: [ main ]
+  workflow_dispatch:
+
+env:
+  NODE_VERSION: '18'
+
+jobs:
+  security-scan:
+    name: Security Scan
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      security-events: write
+      pull-requests: write
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+      with:
+        fetch-depth: 0
+
+    - name: Setup Node.js
+      uses: actions/setup-node@v4
+      with:
+        node-version: ${{ env.NODE_VERSION }}
+        cache: 'npm'
+
+    - name: Install dependencies
+      run: npm ci
+
+    - name: Parse and validate suppressions
+      run: npm run agent:suppressions:validate
+      continue-on-error: true  # Phase 1: warn only
+
+    - name: Run security scan
+      id: security
+      run: npm run agent:security:ci
+      continue-on-error: true  # Phase 1: warn only
+      env:
+        GITHUB_SHA: ${{ github.sha }}
+        GITHUB_PR_NUMBER: ${{ github.event.pull_request.number }}
+
+    - name: Upload security results (SARIF)
+      if: always()
+      uses: github/codeql-action/upload-sarif@v2
+      with:
+        sarif_file: docs/agent-stack/generated/security/security-results.sarif
+      continue-on-error: true
+
+    - name: Upload security artifacts
+      if: always()
+      uses: actions/upload-artifact@v4
+      with:
+        name: security-scan-results
+        path: |
+          docs/agent-stack/generated/security/
+          docs/agent-stack/generated/suppressions.json
+        retention-days: 30
+
+    - name: Comment on PR (Security)
+      if: github.event_name == 'pull_request' && always()
+      uses: actions/github-script@v7
+      with:
+        script: |
+          const fs = require('fs');
+          const path = 'docs/agent-stack/generated/security/ci-security-summary.md';
+          
+          if (fs.existsSync(path)) {
+            const comment = fs.readFileSync(path, 'utf8');
+            
+            // Find existing security comment
+            const { data: comments } = await github.rest.issues.listComments({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              issue_number: context.payload.pull_request.number,
+            });
+            
+            const botComment = comments.find(comment => 
+              comment.user.type === 'Bot' && 
+              comment.body.includes('🛡️ Security Scan Summary')
+            );
+            
+            if (botComment) {
+              // Update existing comment
+              await github.rest.issues.updateComment({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                comment_id: botComment.id,
+                body: comment
+              });
+            } else {
+              // Create new comment
+              await github.rest.issues.createComment({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                issue_number: context.payload.pull_request.number,
+                body: comment
+              });
+            }
+          }
+
+    - name: Check security status
+      if: always()
+      run: |
+        echo "Security scan completed"
+        
+        # Read CI summary to determine status
+        if [ -f "docs/agent-stack/generated/security/ci-security-summary.json" ]; then
+          CONCLUSION=$(jq -r '.conclusion' docs/agent-stack/generated/security/ci-security-summary.json)
+          BLOCKING_ISSUES=$(jq -r '.blocking_issues' docs/agent-stack/generated/security/ci-security-summary.json)
+          
+          echo "Security conclusion: $CONCLUSION"
+          echo "Blocking issues: $BLOCKING_ISSUES"
+          
+          # In Phase 1, we continue on error but log the status
+          if [ "$CONCLUSION" = "failure" ]; then
+            echo "⚠️ Security issues found (Phase 1: warn-only mode)"
+            echo "security-status=warning" >> $GITHUB_OUTPUT
+          else
+            echo "✅ Security scan passed"
+            echo "security-status=success" >> $GITHUB_OUTPUT
+          fi
+        else
+          echo "❌ Security scan results not found"
+          echo "security-status=error" >> $GITHUB_OUTPUT
+        fi
+      id: security-check
+
+    # Future: Uncomment these lines when moving to Phase 2+ enforcement
+    # - name: Fail on security issues (Phase 2+)
+    #   if: steps.security-check.outputs.security-status == 'warning'
+    #   run: |
+    #     echo "❌ Failing build due to security issues (Phase 2+ enforcement)"
+    #     exit 1
+
+  suppressions-audit:
+    name: Suppressions Audit
+    runs-on: ubuntu-latest
+    if: github.event_name == 'pull_request'
+    
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+      with:
+        fetch-depth: 0
+
+    - name: Setup Node.js
+      uses: actions/setup-node@v4
+      with:
+        node-version: ${{ env.NODE_VERSION }}
+        cache: 'npm'
+
+    - name: Install dependencies
+      run: npm ci
+
+    - name: Check for suppression changes
+      run: |
+        # Check if suppression files were modified
+        CHANGED_FILES=$(git diff --name-only origin/main...HEAD)
+        SUPPRESSION_CHANGES=$(echo "$CHANGED_FILES" | grep -E "(security-suppressions|review-suppressions|ui-suppressions)\.md" || true)
+        
+        if [ -n "$SUPPRESSION_CHANGES" ]; then
+          echo "🔍 Suppression files modified:"
+          echo "$SUPPRESSION_CHANGES"
+          echo "suppression-changes=true" >> $GITHUB_OUTPUT
+          
+          # Parse and validate
+          npm run agent:suppressions:validate
+          
+          # Generate suppression change report
+          echo "## 📋 Suppression Changes" > suppression-report.md
+          echo "" >> suppression-report.md
+          echo "The following suppression files were modified:" >> suppression-report.md
+          echo "$SUPPRESSION_CHANGES" | sed 's/^/- /' >> suppression-report.md
+          echo "" >> suppression-report.md
+          echo "Please ensure all changes follow the suppression guidelines and include proper justification." >> suppression-report.md
+          
+        else
+          echo "No suppression file changes detected"
+          echo "suppression-changes=false" >> $GITHUB_OUTPUT
+        fi
+      id: check-suppressions
+
+    - name: Comment on suppression changes
+      if: steps.check-suppressions.outputs.suppression-changes == 'true'
+      uses: actions/github-script@v7
+      with:
+        script: |
+          const fs = require('fs');
+          
+          if (fs.existsSync('suppression-report.md')) {
+            const comment = fs.readFileSync('suppression-report.md', 'utf8');
+            
+            await github.rest.issues.createComment({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              issue_number: context.payload.pull_request.number,
+              body: comment
+            });
+          }

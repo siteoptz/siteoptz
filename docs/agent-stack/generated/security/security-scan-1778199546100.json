@@ -1,0 +1,4117 @@
+{
+  "timestamp": "2026-05-08T00:19:06.100Z",
+  "target": ".",
+  "scan_type": "comprehensive",
+  "scanners_run": [
+    "secrets",
+    "dependencies",
+    "files",
+    "patterns"
+  ],
+  "suppressions_loaded": 0,
+  "summary": {
+    "total_issues": 346,
+    "severity_breakdown": {
+      "critical": 57,
+      "high": 236,
+      "medium": 53,
+      "low": 0
+    },
+    "security_status": "CRITICAL"
+  },
+  "issues": [
+    {
+      "severity": "critical",
+      "message": "API Keys",
+      "timestamp": "2026-05-08T00:19:04.070Z",
+      "file": ".env.ghl.example",
+      "line": 5,
+      "match": "API_KEY=your_ghl_api_key_here",
+      "scanner": "secrets"
+    },
+    {
+      "severity": "critical",
+      "message": "API Keys",
+      "timestamp": "2026-05-08T00:19:04.070Z",
+      "file": ".env.ghl.example",
+      "line": 10,
+      "match": "API_KEY=your_cyfe_api_key_here",
+      "scanner": "secrets"
+    },
+    {
+      "severity": "critical",
+      "message": "API Keys",
+      "timestamp": "2026-05-08T00:19:04.070Z",
+      "file": ".env.ghl.example",
+      "line": 20,
+      "match": "API_KEY=your_sendgrid_api_key_here",
+      "scanner": "secrets"
+    },
+    {
+      "severity": "high",
+      "message": "Database URLs",
+      "timestamp": "2026-05-08T00:19:04.070Z",
+      "file": ".env.ghl.example",
+      "line": 33,
+      "match": "DATABASE_URL=your_database_connection_string",
+      "scanner": "secrets"
+    },
+    {
+      "severity": "high",
+      "message": "Environment Secrets",
+      "timestamp": "2026-05-08T00:19:04.070Z",
+      "file": ".env.ghl.example",
+      "line": 6,
+      "match": "SECRET=your_webhook_secret_here",
+      "scanner": "secrets"
+    },
+    {
+      "severity": "high",
+      "message": "Environment Secrets",
+      "timestamp": "2026-05-08T00:19:04.070Z",
+      "file": ".env.ghl.example",
+      "line": 15,
+      "match": "SECRET=generate_a_strong_secret_key_here",
+      "scanner": "secrets"
+    },
+    {
+      "severity": "high",
+      "message": "Environment Secrets",
+      "timestamp": "2026-05-08T00:19:04.070Z",
+      "file": ".env.ghl.example",
+      "line": 37,
+      "match": "SECRET=your_nextauth_secret_here",
+      "scanner": "secrets"
+    },
+    {
+      "severity": "critical",
+      "message": "API Keys",
+      "timestamp": "2026-05-08T00:19:04.071Z",
+      "file": ".env.local",
+      "line": 21,
+      "match": "API_KEY=your-gohighlevel-api-key",
+      "scanner": "secrets"
+    },
+    {
+      "severity": "critical",
+      "message": "API Keys",
+      "timestamp": "2026-05-08T00:19:04.071Z",
+      "file": ".env.local",
+      "line": 30,
+      "match": "API_KEY=your-gohighlevel-api-key",
+      "scanner": "secrets"
+    },
+    {
+      "severity": "high",
+      "message": "Environment Secrets",
+      "timestamp": "2026-05-08T00:19:04.071Z",
+      "file": ".env.local",
+      "line": 3,
+      "match": "SECRET=lJ2OGLvjPKjUmhTDZNWwrI9HfRoNPWNt1DsqYjlYa9Y=",
+      "scanner": "secrets"
+    },
+    {
+      "severity": "high",
+      "message": "Environment Secrets",
+      "timestamp": "2026-05-08T00:19:04.071Z",
+      "file": ".env.local",
+      "line": 13,
+      "match": "SECRET=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",
+      "scanner": "secrets"
+    },
+    {
+      "severity": "critical",
+      "message": "API Keys",
+      "timestamp": "2026-05-08T00:19:04.071Z",
+      "file": ".env.local.example",
+      "line": 22,
+      "match": "API_KEY=your-gohighlevel-api-key",
+      "scanner": "secrets"
+    },
+    {
+      "severity": "critical",
+      "message": "API Keys",
+      "timestamp": "2026-05-08T00:19:04.071Z",
+      "file": ".env.local.example",
+      "line": 31,
+      "match": "API_KEY=your-gohighlevel-api-key",
+      "scanner": "secrets"
+    },
+    {
+      "severity": "high",
+      "message": "Environment Secrets",
+      "timestamp": "2026-05-08T00:19:04.071Z",
+      "file": ".env.local.example",
+      "line": 3,
+      "match": "SECRET=your-secret-key-here-change-in-production",
+      "scanner": "secrets"
+    },
+    {
+      "severity": "high",
+      "message": "Environment Secrets",
+      "timestamp": "2026-05-08T00:19:04.071Z",
+      "file": ".env.local.example",
+      "line": 13,
+      "match": "SECRET=your-google-client-secret",
+      "scanner": "secrets"
+    },
+    {
+      "severity": "critical",
+      "message": "API Keys",
+      "timestamp": "2026-05-08T00:19:04.073Z",
+      "file": "AI-TOOLS-SCRAPING-README.md",
+      "line": 69,
+      "match": "API_KEY=fc-6e7e6312953b47069452e67509d9f857",
+      "scanner": "secrets"
+    },
+    {
+      "severity": "critical",
+      "message": "API Keys",
+      "timestamp": "2026-05-08T00:19:04.074Z",
+      "file": "AI_KIDS_CODING_PLATFORM_RECOMMENDATIONS.md",
+      "line": 604,
+      "match": "API_KEY=\nGOOGLE_SAFE_SEARCH_API_KEY",
+      "scanner": "secrets"
+    },
+    {
+      "severity": "high",
+      "message": "Environment Secrets",
+      "timestamp": "2026-05-08T00:19:04.075Z",
+      "file": "COMPREHENSIVE_OAUTH_FIX.md",
+      "line": 30,
+      "match": "SECRET=your_google_client_secret_from_console",
+      "scanner": "secrets"
+    },
+    {
+      "severity": "high",
+      "message": "Environment Secrets",
+      "timestamp": "2026-05-08T00:19:04.076Z",
+      "file": "COMPREHENSIVE_OAUTH_FIX.md",
+      "line": 32,
+      "match": "SECRET=generate_random_secret_here",
+      "scanner": "secrets"
+    },
+    {
+      "severity": "critical",
+      "message": "API Keys",
+      "timestamp": "2026-05-08T00:19:04.076Z",
+      "file": "CYFE_API_INTEGRATION_STEPS.md",
+      "line": 452,
+      "match": "API_KEY=your_cyfe_api_key_here",
+      "scanner": "secrets"
+    },
+    {
+      "severity": "high",
+      "message": "Environment Secrets",
+      "timestamp": "2026-05-08T00:19:04.076Z",
+      "file": "CYFE_API_INTEGRATION_STEPS.md",
+      "line": 458,
+      "match": "SECRET=your_sso_secret_here",
+      "scanner": "secrets"
+    },
+    {
+      "severity": "high",
+      "message": "Environment Secrets",
+      "timestamp": "2026-05-08T00:19:04.076Z",
+      "file": "CYFE_CLIENT_MANAGEMENT.md",
+      "line": 119,
+      "match": "PASSWORD=your-app-password",
+      "scanner": "secrets"
+    },
+    {
+      "severity": "high",
+      "message": "Environment Secrets",
+      "timestamp": "2026-05-08T00:19:04.076Z",
+      "file": "CYFE_CLIENT_MANAGEMENT.md",
+      "line": 172,
+      "match": "password: `Ab3$9kL2mN8p`",
+      "scanner": "secrets"
+    },
+    {
+      "severity": "high",
+      "message": "Environment Secrets",
+      "timestamp": "2026-05-08T00:19:04.077Z",
+      "file": "DASHBOARD_INTEGRATION_STRATEGY.md",
+      "line": 105,
+      "match": "Secret = process.env.POWERBI_CLIENT_SECRET;",
+      "scanner": "secrets"
+    },
+    {
+      "severity": "high",
+      "message": "Environment Secrets",
+      "timestamp": "2026-05-08T00:19:04.077Z",
+      "file": "DASHBOARD_INTEGRATION_STRATEGY.md",
+      "line": 118,
+      "match": "secret: this.clientSecret,",
+      "scanner": "secrets"
+    },
+    {
+      "severity": "high",
+      "message": "Environment Secrets",
+      "timestamp": "2026-05-08T00:19:04.077Z",
+      "file": "DASHBOARD_INTEGRATION_STRATEGY.md",
+      "line": 372,
+      "match": "SECRET=your_client_secret\"",
+      "scanner": "secrets"
+    },
+    {
+      "severity": "critical",
+      "message": "API Keys",
+      "timestamp": "2026-05-08T00:19:04.077Z",
+      "file": "DEPLOYMENT.md",
+      "line": 46,
+      "match": "API_KEY=your_sendgrid_api_key_here",
+      "scanner": "secrets"
+    },
+    {
+      "severity": "high",
+      "message": "Database URLs",
+      "timestamp": "2026-05-08T00:19:04.078Z",
+      "file": "DOCKER_SETUP_COMPLETE.md",
+      "line": 115,
+      "match": "DATABASE_URL=postgresql://siteoptz:siteoptz123@localhost:5432/siteoptz",
+      "scanner": "secrets"
+    },
+    {
+      "severity": "critical",
+      "message": "API Keys",
+      "timestamp": "2026-05-08T00:19:04.078Z",
+      "file": "EMAIL_SETUP_GUIDE.md",
+      "line": 9,
+      "match": "API_KEY=your_sendgrid_api_key_here",
+      "scanner": "secrets"
+    },
+    {
+      "severity": "critical",
+      "message": "API Keys",
+      "timestamp": "2026-05-08T00:19:04.078Z",
+      "file": "ENVIRONMENT_SETUP.md",
+      "line": 23,
+      "match": "API_KEY=your_ghl_api_key_here",
+      "scanner": "secrets"
+    },
+    {
+      "severity": "high",
+      "message": "Environment Secrets",
+      "timestamp": "2026-05-08T00:19:04.078Z",
+      "file": "ENVIRONMENT_SETUP.md",
+      "line": 10,
+      "match": "SECRET=whsec_...",
+      "scanner": "secrets"
+    },
+    {
+      "severity": "high",
+      "message": "Environment Secrets",
+      "timestamp": "2026-05-08T00:19:04.079Z",
+      "file": "ENVIRONMENT_SETUP.md",
+      "line": 45,
+      "match": "SECRET=your_nextauth_secret",
+      "scanner": "secrets"
+    },
+    {
+      "severity": "critical",
+      "message": "API Keys",
+      "timestamp": "2026-05-08T00:19:04.080Z",
+      "file": "GOHIGHLEVEL_INTEGRATION.md",
+      "line": 74,
+      "match": "API_KEY=your-gohighlevel-api-key",
+      "scanner": "secrets"
+    },
+    {
+      "severity": "critical",
+      "message": "API Keys",
+      "timestamp": "2026-05-08T00:19:04.080Z",
+      "file": "GOHIGHLEVEL_INTEGRATION.md",
+      "line": 83,
+      "match": "API_KEY=your-gohighlevel-api-key",
+      "scanner": "secrets"
+    },
+    {
+      "severity": "critical",
+      "message": "API Keys",
+      "timestamp": "2026-05-08T00:19:04.080Z",
+      "file": "GOHIGHLEVEL_SETUP.md",
+      "line": 41,
+      "match": "API_KEY=your_gohighlevel_api_key_here",
+      "scanner": "secrets"
+    },
+    {
+      "severity": "critical",
+      "message": "API Keys",
+      "timestamp": "2026-05-08T00:19:04.080Z",
+      "file": "GOHIGHLEVEL_SETUP.md",
+      "line": 45,
+      "match": "API_KEY=your_sendgrid_api_key_here",
+      "scanner": "secrets"
+    },
+    {
+      "severity": "high",
+      "message": "Environment Secrets",
+      "timestamp": "2026-05-08T00:19:04.080Z",
+      "file": "GOOGLE_ADS_CONNECTION_FIX.md",
+      "line": 19,
+      "match": "SECRET=your_google_client_secret_here",
+      "scanner": "secrets"
+    },
+    {
+      "severity": "high",
+      "message": "Environment Secrets",
+      "timestamp": "2026-05-08T00:19:04.081Z",
+      "file": "GOOGLE_ADS_IMPLEMENTATION_PLAN.md",
+      "line": 98,
+      "match": "SECRET=your_google_client_secret_here",
+      "scanner": "secrets"
+    },
+    {
+      "severity": "high",
+      "message": "Environment Secrets",
+      "timestamp": "2026-05-08T00:19:04.081Z",
+      "file": "GOOGLE_OAUTH_FIX_GUIDE.md",
+      "line": 40,
+      "match": "SECRET=your_actual_google_client_secret_here",
+      "scanner": "secrets"
+    },
+    {
+      "severity": "high",
+      "message": "Environment Secrets",
+      "timestamp": "2026-05-08T00:19:04.081Z",
+      "file": "GOOGLE_OAUTH_FIX_GUIDE.md",
+      "line": 78,
+      "match": "Secret: !!process.env.GOOGLE_CLIENT_SECRET",
+      "scanner": "secrets"
+    },
+    {
+      "severity": "critical",
+      "message": "API Keys",
+      "timestamp": "2026-05-08T00:19:04.081Z",
+      "file": "GOOGLE_OAUTH_INTEGRATION_GUIDE.md",
+      "line": 60,
+      "match": "API_KEY=your_twitter_api_key",
+      "scanner": "secrets"
+    },
+    {
+      "severity": "high",
+      "message": "Environment Secrets",
+      "timestamp": "2026-05-08T00:19:04.081Z",
+      "file": "GOOGLE_OAUTH_INTEGRATION_GUIDE.md",
+      "line": 11,
+      "match": "Secret: process.env.GOOGLE_CLIENT_SECRET",
+      "scanner": "secrets"
+    },
+    {
+      "severity": "high",
+      "message": "Environment Secrets",
+      "timestamp": "2026-05-08T00:19:04.081Z",
+      "file": "GOOGLE_OAUTH_INTEGRATION_GUIDE.md",
+      "line": 44,
+      "match": "SECRET=your_existing_google_client_secret",
+      "scanner": "secrets"
+    },
+    {
+      "severity": "high",
+      "message": "Environment Secrets",
+      "timestamp": "2026-05-08T00:19:04.081Z",
+      "file": "GOOGLE_OAUTH_INTEGRATION_GUIDE.md",
+      "line": 52,
+      "match": "SECRET=your_meta_app_secret",
+      "scanner": "secrets"
+    },
+    {
+      "severity": "high",
+      "message": "Environment Secrets",
+      "timestamp": "2026-05-08T00:19:04.081Z",
+      "file": "GOOGLE_OAUTH_INTEGRATION_GUIDE.md",
+      "line": 55,
+      "match": "SECRET=your_tiktok_app_secret",
+      "scanner": "secrets"
+    },
+    {
+      "severity": "high",
+      "message": "Environment Secrets",
+      "timestamp": "2026-05-08T00:19:04.081Z",
+      "file": "GOOGLE_OAUTH_INTEGRATION_GUIDE.md",
+      "line": 58,
+      "match": "SECRET=your_linkedin_client_secret",
+      "scanner": "secrets"
+    },
+    {
+      "severity": "high",
+      "message": "Environment Secrets",
+      "timestamp": "2026-05-08T00:19:04.081Z",
+      "file": "GOOGLE_OAUTH_INTEGRATION_GUIDE.md",
+      "line": 61,
+      "match": "SECRET=your_twitter_api_secret",
+      "scanner": "secrets"
+    },
+    {
+      "severity": "high",
+      "message": "Environment Secrets",
+      "timestamp": "2026-05-08T00:19:04.081Z",
+      "file": "GOOGLE_OAUTH_INTEGRATION_GUIDE.md",
+      "line": 120,
+      "match": "SECRET=your_existing_google_client_secret",
+      "scanner": "secrets"
+    },
+    {
+      "severity": "high",
+      "message": "Environment Secrets",
+      "timestamp": "2026-05-08T00:19:04.081Z",
+      "file": "GOOGLE_SERVICES_SETUP.md",
+      "line": 62,
+      "match": "SECRET=your_actual_client_secret_from_step_4",
+      "scanner": "secrets"
+    },
+    {
+      "severity": "high",
+      "message": "Environment Secrets",
+      "timestamp": "2026-05-08T00:19:04.081Z",
+      "file": "GOOGLE_SERVICES_SETUP.md",
+      "line": 63,
+      "match": "SECRET=generate_random_32_char_string",
+      "scanner": "secrets"
+    },
+    {
+      "severity": "critical",
+      "message": "API Keys",
+      "timestamp": "2026-05-08T00:19:04.081Z",
+      "file": "GUIDE_INTEGRATION_SETUP.md",
+      "line": 59,
+      "match": "API_KEY=your_actual_gohighlevel_api_key",
+      "scanner": "secrets"
+    },
+    {
+      "severity": "critical",
+      "message": "API Keys",
+      "timestamp": "2026-05-08T00:19:04.083Z",
+      "file": "IMPLEMENTATION_GUIDE.md",
+      "line": 155,
+      "match": "API_KEY=your_anthropic_api_key_here",
+      "scanner": "secrets"
+    },
+    {
+      "severity": "high",
+      "message": "Database URLs",
+      "timestamp": "2026-05-08T00:19:04.083Z",
+      "file": "IMPLEMENTATION_GUIDE.md",
+      "line": 149,
+      "match": "DATABASE_URL=postgresql://user:password@localhost:5432/siteoptz_dashboard",
+      "scanner": "secrets"
+    },
+    {
+      "severity": "high",
+      "message": "Environment Secrets",
+      "timestamp": "2026-05-08T00:19:04.083Z",
+      "file": "IMPLEMENTATION_GUIDE.md",
+      "line": 159,
+      "match": "SECRET=your_google_client_secret",
+      "scanner": "secrets"
+    },
+    {
+      "severity": "high",
+      "message": "Environment Secrets",
+      "timestamp": "2026-05-08T00:19:04.083Z",
+      "file": "IMPLEMENTATION_GUIDE.md",
+      "line": 161,
+      "match": "SECRET=your_meta_client_secret",
+      "scanner": "secrets"
+    },
+    {
+      "severity": "critical",
+      "message": "API Keys",
+      "timestamp": "2026-05-08T00:19:04.085Z",
+      "file": "OAUTH_ACCESS_DENIED_FIX.md",
+      "line": 71,
+      "match": "API_KEY=your_gohighlevel_api_key",
+      "scanner": "secrets"
+    },
+    {
+      "severity": "high",
+      "message": "Environment Secrets",
+      "timestamp": "2026-05-08T00:19:04.086Z",
+      "file": "OAUTH_ACCESS_DENIED_FIX.md",
+      "line": 66,
+      "match": "SECRET=your_google_client_secret_from_step_1",
+      "scanner": "secrets"
+    },
+    {
+      "severity": "high",
+      "message": "Environment Secrets",
+      "timestamp": "2026-05-08T00:19:04.086Z",
+      "file": "OAUTH_ACCESS_DENIED_FIX.md",
+      "line": 68,
+      "match": "SECRET=generate_a_random_32_character_string",
+      "scanner": "secrets"
+    },
+    {
+      "severity": "high",
+      "message": "Environment Secrets",
+      "timestamp": "2026-05-08T00:19:04.086Z",
+      "file": "OAUTH_ACCESS_DENIED_FIX.md",
+      "line": 126,
+      "match": "secret: !!process.env.GOOGLE_CLIENT_SECRET,",
+      "scanner": "secrets"
+    },
+    {
+      "severity": "high",
+      "message": "Environment Secrets",
+      "timestamp": "2026-05-08T00:19:04.086Z",
+      "file": "OAUTH_ACCESS_DENIED_FIX.md",
+      "line": 128,
+      "match": "secret: !!process.env.NEXTAUTH_SECRET,",
+      "scanner": "secrets"
+    },
+    {
+      "severity": "critical",
+      "message": "API Keys",
+      "timestamp": "2026-05-08T00:19:04.086Z",
+      "file": "OAUTH_IMPLEMENTATION_GUIDE.md",
+      "line": 30,
+      "match": "API_KEY=your_twitter_api_key",
+      "scanner": "secrets"
+    },
+    {
+      "severity": "high",
+      "message": "Environment Secrets",
+      "timestamp": "2026-05-08T00:19:04.086Z",
+      "file": "OAUTH_IMPLEMENTATION_GUIDE.md",
+      "line": 14,
+      "match": "SECRET=your_google_client_secret",
+      "scanner": "secrets"
+    },
+    {
+      "severity": "high",
+      "message": "Environment Secrets",
+      "timestamp": "2026-05-08T00:19:04.086Z",
+      "file": "OAUTH_IMPLEMENTATION_GUIDE.md",
+      "line": 19,
+      "match": "SECRET=your_meta_app_secret",
+      "scanner": "secrets"
+    },
+    {
+      "severity": "high",
+      "message": "Environment Secrets",
+      "timestamp": "2026-05-08T00:19:04.086Z",
+      "file": "OAUTH_IMPLEMENTATION_GUIDE.md",
+      "line": 23,
+      "match": "SECRET=your_tiktok_app_secret",
+      "scanner": "secrets"
+    },
+    {
+      "severity": "high",
+      "message": "Environment Secrets",
+      "timestamp": "2026-05-08T00:19:04.086Z",
+      "file": "OAUTH_IMPLEMENTATION_GUIDE.md",
+      "line": 27,
+      "match": "SECRET=your_linkedin_client_secret",
+      "scanner": "secrets"
+    },
+    {
+      "severity": "high",
+      "message": "Environment Secrets",
+      "timestamp": "2026-05-08T00:19:04.086Z",
+      "file": "OAUTH_IMPLEMENTATION_GUIDE.md",
+      "line": 31,
+      "match": "SECRET=your_twitter_api_secret",
+      "scanner": "secrets"
+    },
+    {
+      "severity": "high",
+      "message": "Environment Secrets",
+      "timestamp": "2026-05-08T00:19:04.086Z",
+      "file": "OAUTH_IMPLEMENTATION_GUIDE.md",
+      "line": 210,
+      "match": "secret: process.env.GOOGLE_CLIENT_SECRET!,",
+      "scanner": "secrets"
+    },
+    {
+      "severity": "high",
+      "message": "Environment Secrets",
+      "timestamp": "2026-05-08T00:19:04.086Z",
+      "file": "OAUTH_IMPLEMENTATION_GUIDE.md",
+      "line": 275,
+      "match": "secret: process.env.META_APP_SECRET!,",
+      "scanner": "secrets"
+    },
+    {
+      "severity": "critical",
+      "message": "API Keys",
+      "timestamp": "2026-05-08T00:19:04.086Z",
+      "file": "OAUTH_SETUP_GUIDE.md",
+      "line": 248,
+      "match": "API_KEY=your_twitter_api_key",
+      "scanner": "secrets"
+    },
+    {
+      "severity": "critical",
+      "message": "API Keys",
+      "timestamp": "2026-05-08T00:19:04.086Z",
+      "file": "OAUTH_SETUP_GUIDE.md",
+      "line": 280,
+      "match": "API_KEY=your_twitter_api_key",
+      "scanner": "secrets"
+    },
+    {
+      "severity": "critical",
+      "message": "Private Keys",
+      "timestamp": "2026-05-08T00:19:04.086Z",
+      "file": "OAUTH_SETUP_GUIDE.md",
+      "line": 178,
+      "match": "-----BEGIN PRIVATE KEY-----",
+      "scanner": "secrets"
+    },
+    {
+      "severity": "high",
+      "message": "Environment Secrets",
+      "timestamp": "2026-05-08T00:19:04.086Z",
+      "file": "OAUTH_SETUP_GUIDE.md",
+      "line": 50,
+      "match": "SECRET=your_google_client_secret",
+      "scanner": "secrets"
+    },
+    {
+      "severity": "high",
+      "message": "Environment Secrets",
+      "timestamp": "2026-05-08T00:19:04.086Z",
+      "file": "OAUTH_SETUP_GUIDE.md",
+      "line": 104,
+      "match": "SECRET=your_meta_app_secret",
+      "scanner": "secrets"
+    },
+    {
+      "severity": "high",
+      "message": "Environment Secrets",
+      "timestamp": "2026-05-08T00:19:04.086Z",
+      "file": "OAUTH_SETUP_GUIDE.md",
+      "line": 139,
+      "match": "SECRET=your_tiktok_app_secret",
+      "scanner": "secrets"
+    },
+    {
+      "severity": "high",
+      "message": "Environment Secrets",
+      "timestamp": "2026-05-08T00:19:04.086Z",
+      "file": "OAUTH_SETUP_GUIDE.md",
+      "line": 214,
+      "match": "SECRET=your_linkedin_client_secret",
+      "scanner": "secrets"
+    },
+    {
+      "severity": "high",
+      "message": "Environment Secrets",
+      "timestamp": "2026-05-08T00:19:04.086Z",
+      "file": "OAUTH_SETUP_GUIDE.md",
+      "line": 249,
+      "match": "SECRET=your_twitter_api_secret",
+      "scanner": "secrets"
+    },
+    {
+      "severity": "high",
+      "message": "Environment Secrets",
+      "timestamp": "2026-05-08T00:19:04.086Z",
+      "file": "OAUTH_SETUP_GUIDE.md",
+      "line": 251,
+      "match": "SECRET=your_access_token_secret",
+      "scanner": "secrets"
+    },
+    {
+      "severity": "high",
+      "message": "Environment Secrets",
+      "timestamp": "2026-05-08T00:19:04.086Z",
+      "file": "OAUTH_SETUP_GUIDE.md",
+      "line": 264,
+      "match": "SECRET=your_google_client_secret",
+      "scanner": "secrets"
+    },
+    {
+      "severity": "high",
+      "message": "Environment Secrets",
+      "timestamp": "2026-05-08T00:19:04.086Z",
+      "file": "OAUTH_SETUP_GUIDE.md",
+      "line": 269,
+      "match": "SECRET=your_meta_app_secret",
+      "scanner": "secrets"
+    },
+    {
+      "severity": "high",
+      "message": "Environment Secrets",
+      "timestamp": "2026-05-08T00:19:04.086Z",
+      "file": "OAUTH_SETUP_GUIDE.md",
+      "line": 273,
+      "match": "SECRET=your_tiktok_app_secret",
+      "scanner": "secrets"
+    },
+    {
+      "severity": "high",
+      "message": "Environment Secrets",
+      "timestamp": "2026-05-08T00:19:04.086Z",
+      "file": "OAUTH_SETUP_GUIDE.md",
+      "line": 277,
+      "match": "SECRET=your_linkedin_client_secret",
+      "scanner": "secrets"
+    },
+    {
+      "severity": "high",
+      "message": "Environment Secrets",
+      "timestamp": "2026-05-08T00:19:04.086Z",
+      "file": "OAUTH_SETUP_GUIDE.md",
+      "line": 281,
+      "match": "SECRET=your_twitter_api_secret",
+      "scanner": "secrets"
+    },
+    {
+      "severity": "high",
+      "message": "Environment Secrets",
+      "timestamp": "2026-05-08T00:19:04.086Z",
+      "file": "OAUTH_SETUP_INSTRUCTIONS.md",
+      "line": 39,
+      "match": "SECRET=your-actual-google-client-secret-here",
+      "scanner": "secrets"
+    },
+    {
+      "severity": "high",
+      "message": "Environment Secrets",
+      "timestamp": "2026-05-08T00:19:04.086Z",
+      "file": "OAUTH_SETUP_INSTRUCTIONS.md",
+      "line": 42,
+      "match": "SECRET=generate-a-secure-random-string-here",
+      "scanner": "secrets"
+    },
+    {
+      "severity": "high",
+      "message": "Environment Secrets",
+      "timestamp": "2026-05-08T00:19:04.087Z",
+      "file": "OAUTH_UTILITY_USAGE_EXAMPLE.md",
+      "line": 33,
+      "match": "SECRET=your_existing_google_client_secret",
+      "scanner": "secrets"
+    },
+    {
+      "severity": "high",
+      "message": "Environment Secrets",
+      "timestamp": "2026-05-08T00:19:04.087Z",
+      "file": "OAUTH_UTILITY_USAGE_EXAMPLE.md",
+      "line": 42,
+      "match": "SECRET=your_meta_app_secret",
+      "scanner": "secrets"
+    },
+    {
+      "severity": "high",
+      "message": "Environment Secrets",
+      "timestamp": "2026-05-08T00:19:04.087Z",
+      "file": "OAUTH_UTILITY_USAGE_EXAMPLE.md",
+      "line": 44,
+      "match": "SECRET=your_tiktok_app_secret",
+      "scanner": "secrets"
+    },
+    {
+      "severity": "critical",
+      "message": "API Keys",
+      "timestamp": "2026-05-08T00:19:04.087Z",
+      "file": "OTP_PRODUCTION_GUIDE.md",
+      "line": 24,
+      "match": "API_KEY=your_sendgrid_api_key",
+      "scanner": "secrets"
+    },
+    {
+      "severity": "high",
+      "message": "Environment Secrets",
+      "timestamp": "2026-05-08T00:19:04.087Z",
+      "file": "POWERBI_DEPLOYMENT_GUIDE_COMPLETE.md",
+      "line": 146,
+      "match": "SECRET=your_client_secret_here",
+      "scanner": "secrets"
+    },
+    {
+      "severity": "critical",
+      "message": "API Keys",
+      "timestamp": "2026-05-08T00:19:04.090Z",
+      "file": "TRIAL_OAUTH_SETUP.md",
+      "line": 27,
+      "match": "API_KEY=your_gohighlevel_api_key_here",
+      "scanner": "secrets"
+    },
+    {
+      "severity": "high",
+      "message": "Environment Secrets",
+      "timestamp": "2026-05-08T00:19:04.090Z",
+      "file": "TRIAL_OAUTH_SETUP.md",
+      "line": 20,
+      "match": "SECRET=your_google_oauth_client_secret",
+      "scanner": "secrets"
+    },
+    {
+      "severity": "high",
+      "message": "Environment Secrets",
+      "timestamp": "2026-05-08T00:19:04.090Z",
+      "file": "TRIAL_OAUTH_SETUP.md",
+      "line": 22,
+      "match": "SECRET=your_nextauth_secret_here",
+      "scanner": "secrets"
+    },
+    {
+      "severity": "high",
+      "message": "Environment Secrets",
+      "timestamp": "2026-05-08T00:19:04.090Z",
+      "file": "UPGRADE_SYSTEM_README.md",
+      "line": 111,
+      "match": "SECRET=your-secret-key",
+      "scanner": "secrets"
+    },
+    {
+      "severity": "high",
+      "message": "Environment Secrets",
+      "timestamp": "2026-05-08T00:19:04.090Z",
+      "file": "UPGRADE_SYSTEM_README.md",
+      "line": 114,
+      "match": "SECRET=your-google-client-secret",
+      "scanner": "secrets"
+    },
+    {
+      "severity": "high",
+      "message": "Environment Secrets",
+      "timestamp": "2026-05-08T00:19:04.091Z",
+      "file": "WHITE_LABEL_MARKETING_DASHBOARD_PLAN.md",
+      "line": 248,
+      "match": "Secret = process.env.GOOGLE_CLIENT_SECRET;",
+      "scanner": "secrets"
+    },
+    {
+      "severity": "high",
+      "message": "Environment Secrets",
+      "timestamp": "2026-05-08T00:19:04.091Z",
+      "file": "WHITE_LABEL_MARKETING_DASHBOARD_PLAN.md",
+      "line": 277,
+      "match": "secret: this.clientSecret,",
+      "scanner": "secrets"
+    },
+    {
+      "severity": "critical",
+      "message": "API Keys",
+      "timestamp": "2026-05-08T00:19:04.215Z",
+      "file": "check-ghl-api.js",
+      "line": 19,
+      "match": "apiKey === 'your_gohighlevel_api_key_here'",
+      "scanner": "secrets"
+    },
+    {
+      "severity": "high",
+      "message": "Environment Secrets",
+      "timestamp": "2026-05-08T00:19:04.231Z",
+      "file": "components/dashboard/OptzDashboardButton.tsx",
+      "line": 12,
+      "match": "secret = process.env.NEXT_PUBLIC_SSO_SECRET",
+      "scanner": "secrets"
+    },
+    {
+      "severity": "critical",
+      "message": "API Keys",
+      "timestamp": "2026-05-08T00:19:04.242Z",
+      "file": "crawl-b12-directory.js",
+      "line": 8,
+      "match": "apiKey: 'fc-6e7e6312953b47069452e67509d9f857'",
+      "scanner": "secrets"
+    },
+    {
+      "severity": "critical",
+      "message": "API Keys",
+      "timestamp": "2026-05-08T00:19:04.242Z",
+      "file": "crawl-real-tool-data.js",
+      "line": 7,
+      "match": "API_KEY = 'fc-6e7e6312953b47069452e67509d9f857'",
+      "scanner": "secrets"
+    },
+    {
+      "severity": "high",
+      "message": "Environment Secrets",
+      "timestamp": "2026-05-08T00:19:04.263Z",
+      "file": "dataforseo-advanced.js",
+      "line": 9,
+      "match": "password: process.env.DATAFORSEO_PASSWORD",
+      "scanner": "secrets"
+    },
+    {
+      "severity": "high",
+      "message": "Environment Secrets",
+      "timestamp": "2026-05-08T00:19:04.263Z",
+      "file": "dataforseo-advanced.js",
+      "line": 20,
+      "match": "password: CONFIG.password",
+      "scanner": "secrets"
+    },
+    {
+      "severity": "high",
+      "message": "Environment Secrets",
+      "timestamp": "2026-05-08T00:19:04.264Z",
+      "file": "dataforseo-batch.js",
+      "line": 6,
+      "match": "password = \"8215cb0ce338b385\"",
+      "scanner": "secrets"
+    },
+    {
+      "severity": "high",
+      "message": "Environment Secrets",
+      "timestamp": "2026-05-08T00:19:04.264Z",
+      "file": "dataforseo-batch.js",
+      "line": 12,
+      "match": "password: password",
+      "scanner": "secrets"
+    },
+    {
+      "severity": "high",
+      "message": "Environment Secrets",
+      "timestamp": "2026-05-08T00:19:04.264Z",
+      "file": "dataforseo_mcp_setup.md",
+      "line": 35,
+      "match": "PASSWORD=your_password_here",
+      "scanner": "secrets"
+    },
+    {
+      "severity": "high",
+      "message": "Environment Secrets",
+      "timestamp": "2026-05-08T00:19:04.264Z",
+      "file": "dataforseo_mcp_setup.md",
+      "line": 173,
+      "match": "PASSWORD=your_password_here",
+      "scanner": "secrets"
+    },
+    {
+      "severity": "high",
+      "message": "Environment Secrets",
+      "timestamp": "2026-05-08T00:19:04.264Z",
+      "file": "dataforseo_mcp_setup.md",
+      "line": 180,
+      "match": "Password = process.env.DATAFORSEO_PASSWORD;",
+      "scanner": "secrets"
+    },
+    {
+      "severity": "high",
+      "message": "Environment Secrets",
+      "timestamp": "2026-05-08T00:19:04.264Z",
+      "file": "debug-oauth-issue.js",
+      "line": 12,
+      "match": "SECRET: ${process.env.NEXTAUTH_SECRET",
+      "scanner": "secrets"
+    },
+    {
+      "severity": "high",
+      "message": "Environment Secrets",
+      "timestamp": "2026-05-08T00:19:04.264Z",
+      "file": "debug-oauth-issue.js",
+      "line": 14,
+      "match": "SECRET: ${process.env.GOOGLE_CLIENT_SECRET",
+      "scanner": "secrets"
+    },
+    {
+      "severity": "high",
+      "message": "Environment Secrets",
+      "timestamp": "2026-05-08T00:19:04.264Z",
+      "file": "debug_dataforseo.js",
+      "line": 5,
+      "match": "PASSWORD = '8215cb0ce338b385'",
+      "scanner": "secrets"
+    },
+    {
+      "severity": "high",
+      "message": "Environment Secrets",
+      "timestamp": "2026-05-08T00:19:04.265Z",
+      "file": "docker-compose.yml",
+      "line": 52,
+      "match": "PASSWORD=siteoptz123",
+      "scanner": "secrets"
+    },
+    {
+      "severity": "high",
+      "message": "Environment Secrets",
+      "timestamp": "2026-05-08T00:19:04.265Z",
+      "file": "env.example",
+      "line": 3,
+      "match": "PASSWORD=your_api_password",
+      "scanner": "secrets"
+    },
+    {
+      "severity": "high",
+      "message": "Environment Secrets",
+      "timestamp": "2026-05-08T00:19:04.267Z",
+      "file": "examples/postdoserx/CLAUDE_IMPLEMENTATION_BRIEF_POSTDOSERX.md",
+      "line": 43,
+      "match": "SECRET=<openssl",
+      "scanner": "secrets"
+    },
+    {
+      "severity": "high",
+      "message": "Environment Secrets",
+      "timestamp": "2026-05-08T00:19:04.267Z",
+      "file": "examples/postdoserx/CLAUDE_IMPLEMENTATION_BRIEF_POSTDOSERX.md",
+      "line": 49,
+      "match": "SECRET=whsec_...",
+      "scanner": "secrets"
+    },
+    {
+      "severity": "high",
+      "message": "Environment Secrets",
+      "timestamp": "2026-05-08T00:19:04.267Z",
+      "file": "examples/postdoserx/CLAUDE_IMPLEMENTATION_BRIEF_POSTDOSERX.md",
+      "line": 314,
+      "match": "Secret = process.env.STRIPE_WEBHOOK_SECRET;",
+      "scanner": "secrets"
+    },
+    {
+      "severity": "high",
+      "message": "Environment Secrets",
+      "timestamp": "2026-05-08T00:19:04.267Z",
+      "file": "examples/postdoserx/CLAUDE_IMPLEMENTATION_BRIEF_POSTDOSERX.md",
+      "line": 399,
+      "match": "secret = process.env.STRIPE_SECRET_KEY;",
+      "scanner": "secrets"
+    },
+    {
+      "severity": "high",
+      "message": "Environment Secrets",
+      "timestamp": "2026-05-08T00:19:04.267Z",
+      "file": "examples/postdoserx/CLAUDE_IMPLEMENTATION_BRIEF_POSTDOSERX.md",
+      "line": 451,
+      "match": "secret: process.env.NEXTAUTH_SECRET`.",
+      "scanner": "secrets"
+    },
+    {
+      "severity": "high",
+      "message": "Environment Secrets",
+      "timestamp": "2026-05-08T00:19:04.267Z",
+      "file": "examples/postdoserx/POSTDOSERX_AUTH_FLOW.md",
+      "line": 36,
+      "match": "SECRET=whsec_...",
+      "scanner": "secrets"
+    },
+    {
+      "severity": "high",
+      "message": "Environment Secrets",
+      "timestamp": "2026-05-08T00:19:04.267Z",
+      "file": "examples/postdoserx/after-checkout.tsx",
+      "line": 56,
+      "match": "secret = process.env.STRIPE_SECRET_KEY;",
+      "scanner": "secrets"
+    },
+    {
+      "severity": "high",
+      "message": "Environment Secrets",
+      "timestamp": "2026-05-08T00:19:04.268Z",
+      "file": "examples/postdoserx/stripe-webhook.ts",
+      "line": 37,
+      "match": "Secret = process.env.STRIPE_WEBHOOK_SECRET;",
+      "scanner": "secrets"
+    },
+    {
+      "severity": "high",
+      "message": "Environment Secrets",
+      "timestamp": "2026-05-08T00:19:04.273Z",
+      "file": "fixed_dataforseo_research.js",
+      "line": 5,
+      "match": "PASSWORD = '8215cb0ce338b385'",
+      "scanner": "secrets"
+    },
+    {
+      "severity": "critical",
+      "message": "API Keys",
+      "timestamp": "2026-05-08T00:19:04.275Z",
+      "file": "ghl-403-deep-troubleshooting.md",
+      "line": 165,
+      "match": "apiKey = 'pit-848fd970-d975-46b3-8c05-9da212a7bd17'",
+      "scanner": "secrets"
+    },
+    {
+      "severity": "critical",
+      "message": "API Keys",
+      "timestamp": "2026-05-08T00:19:04.276Z",
+      "file": "ghl-api-token-configuration.md",
+      "line": 81,
+      "match": "API_KEY=your_new_or_updated_api_key_here",
+      "scanner": "secrets"
+    },
+    {
+      "severity": "critical",
+      "message": "API Keys",
+      "timestamp": "2026-05-08T00:19:04.276Z",
+      "file": "ghl-location-access-fix.md",
+      "line": 112,
+      "match": "apiKey = 'YOUR_NEW_API_KEY_HERE'",
+      "scanner": "secrets"
+    },
+    {
+      "severity": "critical",
+      "message": "API Keys",
+      "timestamp": "2026-05-08T00:19:04.276Z",
+      "file": "grafana/GRAFANA_SETUP.md",
+      "line": 61,
+      "match": "API_KEY=eyJrIjoiT0tTcGFUbGFRZHVBNTdUcmJaOWJnMUlpR0ZIbWFONmFUMjAzNDFsNTIiLCJuIjoic2l0ZW9wdHotaW50ZWdyYXRpb24iLCJpZCI6MX0",
+      "scanner": "secrets"
+    },
+    {
+      "severity": "high",
+      "message": "Environment Secrets",
+      "timestamp": "2026-05-08T00:19:04.277Z",
+      "file": "grafana/README.md",
+      "line": 28,
+      "match": "Password: `siteoptz2024`",
+      "scanner": "secrets"
+    },
+    {
+      "severity": "high",
+      "message": "Environment Secrets",
+      "timestamp": "2026-05-08T00:19:04.277Z",
+      "file": "grafana/README.md",
+      "line": 33,
+      "match": "Password: `siteoptz2024`",
+      "scanner": "secrets"
+    },
+    {
+      "severity": "high",
+      "message": "Environment Secrets",
+      "timestamp": "2026-05-08T00:19:04.277Z",
+      "file": "grafana/README.md",
+      "line": 201,
+      "match": "PASSWORD=secure_password",
+      "scanner": "secrets"
+    },
+    {
+      "severity": "high",
+      "message": "Environment Secrets",
+      "timestamp": "2026-05-08T00:19:04.277Z",
+      "file": "grafana/README.md",
+      "line": 202,
+      "match": "PASSWORD=secure_db_password",
+      "scanner": "secrets"
+    },
+    {
+      "severity": "high",
+      "message": "Environment Secrets",
+      "timestamp": "2026-05-08T00:19:04.277Z",
+      "file": "grafana/README.md",
+      "line": 203,
+      "match": "PASSWORD=secure_redis_password",
+      "scanner": "secrets"
+    },
+    {
+      "severity": "high",
+      "message": "Environment Secrets",
+      "timestamp": "2026-05-08T00:19:04.277Z",
+      "file": "grafana/docker-compose.yml",
+      "line": 12,
+      "match": "PASSWORD=siteoptz2024",
+      "scanner": "secrets"
+    },
+    {
+      "severity": "high",
+      "message": "Environment Secrets",
+      "timestamp": "2026-05-08T00:19:04.277Z",
+      "file": "grafana/docker-compose.yml",
+      "line": 52,
+      "match": "PASSWORD=siteoptz2024",
+      "scanner": "secrets"
+    },
+    {
+      "severity": "high",
+      "message": "Environment Secrets",
+      "timestamp": "2026-05-08T00:19:04.278Z",
+      "file": "grafana/provisioning/datasources/datasource.yml",
+      "line": 12,
+      "match": "password: siteoptz123",
+      "scanner": "secrets"
+    },
+    {
+      "severity": "high",
+      "message": "Environment Secrets",
+      "timestamp": "2026-05-08T00:19:04.278Z",
+      "file": "grafana/provisioning/datasources/datasources.yml",
+      "line": 12,
+      "match": "password: siteoptz2024",
+      "scanner": "secrets"
+    },
+    {
+      "severity": "high",
+      "message": "Environment Secrets",
+      "timestamp": "2026-05-08T00:19:04.282Z",
+      "file": "lib/database/connection.js",
+      "line": 22,
+      "match": "password = process.env.DB_PASSWORD",
+      "scanner": "secrets"
+    },
+    {
+      "severity": "high",
+      "message": "Environment Secrets",
+      "timestamp": "2026-05-08T00:19:04.283Z",
+      "file": "lib/email-service.ts",
+      "line": 122,
+      "match": "Password:</strong>",
+      "scanner": "secrets"
+    },
+    {
+      "severity": "high",
+      "message": "Environment Secrets",
+      "timestamp": "2026-05-08T00:19:04.283Z",
+      "file": "lib/email-service.ts",
+      "line": 243,
+      "match": "Password: ${credentials.password}",
+      "scanner": "secrets"
+    },
+    {
+      "severity": "high",
+      "message": "Environment Secrets",
+      "timestamp": "2026-05-08T00:19:04.283Z",
+      "file": "lib/google-ads-api.ts",
+      "line": 91,
+      "match": "secret: process.env.GOOGLE_CLIENT_SECRET,",
+      "scanner": "secrets"
+    },
+    {
+      "severity": "high",
+      "message": "Environment Secrets",
+      "timestamp": "2026-05-08T00:19:04.284Z",
+      "file": "lib/google-token-utils.ts",
+      "line": 5,
+      "match": "secret: process.env.NEXTAUTH_SECRET",
+      "scanner": "secrets"
+    },
+    {
+      "severity": "high",
+      "message": "Environment Secrets",
+      "timestamp": "2026-05-08T00:19:04.284Z",
+      "file": "lib/google-token-utils.ts",
+      "line": 24,
+      "match": "secret: process.env.GOOGLE_CLIENT_SECRET!,",
+      "scanner": "secrets"
+    },
+    {
+      "severity": "high",
+      "message": "Environment Secrets",
+      "timestamp": "2026-05-08T00:19:04.284Z",
+      "file": "lib/integrations/oauth/google-oauth.js",
+      "line": 5,
+      "match": "Secret = process.env.GOOGLE_CLIENT_SECRET;",
+      "scanner": "secrets"
+    },
+    {
+      "severity": "high",
+      "message": "Environment Secrets",
+      "timestamp": "2026-05-08T00:19:04.284Z",
+      "file": "lib/integrations/oauth/google-oauth.js",
+      "line": 42,
+      "match": "secret: this.clientSecret,",
+      "scanner": "secrets"
+    },
+    {
+      "severity": "high",
+      "message": "Environment Secrets",
+      "timestamp": "2026-05-08T00:19:04.284Z",
+      "file": "lib/integrations/oauth/google-oauth.js",
+      "line": 76,
+      "match": "secret: this.clientSecret,",
+      "scanner": "secrets"
+    },
+    {
+      "severity": "high",
+      "message": "Environment Secrets",
+      "timestamp": "2026-05-08T00:19:04.284Z",
+      "file": "lib/integrations/oauth/linkedin-oauth.js",
+      "line": 5,
+      "match": "Secret = process.env.LINKEDIN_CLIENT_SECRET;",
+      "scanner": "secrets"
+    },
+    {
+      "severity": "high",
+      "message": "Environment Secrets",
+      "timestamp": "2026-05-08T00:19:04.284Z",
+      "file": "lib/integrations/oauth/linkedin-oauth.js",
+      "line": 40,
+      "match": "secret: this.clientSecret,",
+      "scanner": "secrets"
+    },
+    {
+      "severity": "high",
+      "message": "Environment Secrets",
+      "timestamp": "2026-05-08T00:19:04.284Z",
+      "file": "lib/integrations/oauth/linkedin-oauth.js",
+      "line": 74,
+      "match": "secret: this.clientSecret,",
+      "scanner": "secrets"
+    },
+    {
+      "severity": "high",
+      "message": "Environment Secrets",
+      "timestamp": "2026-05-08T00:19:04.284Z",
+      "file": "lib/integrations/oauth/meta-oauth.js",
+      "line": 5,
+      "match": "Secret = process.env.META_CLIENT_SECRET;",
+      "scanner": "secrets"
+    },
+    {
+      "severity": "high",
+      "message": "Environment Secrets",
+      "timestamp": "2026-05-08T00:19:04.284Z",
+      "file": "lib/integrations/oauth/meta-oauth.js",
+      "line": 42,
+      "match": "secret: this.clientSecret,",
+      "scanner": "secrets"
+    },
+    {
+      "severity": "high",
+      "message": "Environment Secrets",
+      "timestamp": "2026-05-08T00:19:04.284Z",
+      "file": "lib/integrations/oauth/meta-oauth.js",
+      "line": 77,
+      "match": "secret: this.clientSecret,",
+      "scanner": "secrets"
+    },
+    {
+      "severity": "high",
+      "message": "Environment Secrets",
+      "timestamp": "2026-05-08T00:19:04.285Z",
+      "file": "lib/integrations/oauth/tiktok-oauth.js",
+      "line": 5,
+      "match": "Secret = process.env.TIKTOK_CLIENT_SECRET;",
+      "scanner": "secrets"
+    },
+    {
+      "severity": "high",
+      "message": "Environment Secrets",
+      "timestamp": "2026-05-08T00:19:04.285Z",
+      "file": "lib/integrations/oauth/tiktok-oauth.js",
+      "line": 43,
+      "match": "secret: this.clientSecret,",
+      "scanner": "secrets"
+    },
+    {
+      "severity": "high",
+      "message": "Environment Secrets",
+      "timestamp": "2026-05-08T00:19:04.285Z",
+      "file": "lib/integrations/oauth/tiktok-oauth.js",
+      "line": 82,
+      "match": "secret: this.clientSecret,",
+      "scanner": "secrets"
+    },
+    {
+      "severity": "high",
+      "message": "Environment Secrets",
+      "timestamp": "2026-05-08T00:19:04.285Z",
+      "file": "lib/oauth-utils.ts",
+      "line": 282,
+      "match": "Secret = process.env.GOOGLE_CLIENT_SECRET",
+      "scanner": "secrets"
+    },
+    {
+      "severity": "high",
+      "message": "Environment Secrets",
+      "timestamp": "2026-05-08T00:19:04.285Z",
+      "file": "lib/oauth-utils.ts",
+      "line": 286,
+      "match": "Secret: !!clientSecret,",
+      "scanner": "secrets"
+    },
+    {
+      "severity": "high",
+      "message": "Environment Secrets",
+      "timestamp": "2026-05-08T00:19:04.285Z",
+      "file": "lib/oauth-utils.ts",
+      "line": 315,
+      "match": "secret: clientSecret,",
+      "scanner": "secrets"
+    },
+    {
+      "severity": "high",
+      "message": "Environment Secrets",
+      "timestamp": "2026-05-08T00:19:04.285Z",
+      "file": "lib/oauth-utils.ts",
+      "line": 421,
+      "match": "Secret = process.env.GOOGLE_CLIENT_SECRET",
+      "scanner": "secrets"
+    },
+    {
+      "severity": "high",
+      "message": "Environment Secrets",
+      "timestamp": "2026-05-08T00:19:04.285Z",
+      "file": "lib/oauth-utils.ts",
+      "line": 425,
+      "match": "Secret: !!clientSecret,",
+      "scanner": "secrets"
+    },
+    {
+      "severity": "high",
+      "message": "Environment Secrets",
+      "timestamp": "2026-05-08T00:19:04.285Z",
+      "file": "lib/oauth-utils.ts",
+      "line": 451,
+      "match": "secret: clientSecret,",
+      "scanner": "secrets"
+    },
+    {
+      "severity": "high",
+      "message": "Environment Secrets",
+      "timestamp": "2026-05-08T00:19:04.285Z",
+      "file": "lib/oauth-utils.ts",
+      "line": 682,
+      "match": "secret: process.env.META_APP_SECRET!,",
+      "scanner": "secrets"
+    },
+    {
+      "severity": "high",
+      "message": "Environment Secrets",
+      "timestamp": "2026-05-08T00:19:04.285Z",
+      "file": "lib/oauth-utils.ts",
+      "line": 699,
+      "match": "secret: process.env.TIKTOK_APP_SECRET!,",
+      "scanner": "secrets"
+    },
+    {
+      "severity": "high",
+      "message": "Environment Secrets",
+      "timestamp": "2026-05-08T00:19:04.285Z",
+      "file": "lib/oauth-utils.ts",
+      "line": 718,
+      "match": "secret: process.env.LINKEDIN_CLIENT_SECRET!,",
+      "scanner": "secrets"
+    },
+    {
+      "severity": "high",
+      "message": "Environment Secrets",
+      "timestamp": "2026-05-08T00:19:04.286Z",
+      "file": "lib/powerbi-service.js",
+      "line": 7,
+      "match": "Secret = process.env.POWERBI_CLIENT_SECRET;",
+      "scanner": "secrets"
+    },
+    {
+      "severity": "high",
+      "message": "Environment Secrets",
+      "timestamp": "2026-05-08T00:19:04.286Z",
+      "file": "lib/powerbi-service.js",
+      "line": 23,
+      "match": "secret: this.clientSecret,",
+      "scanner": "secrets"
+    },
+    {
+      "severity": "high",
+      "message": "Environment Secrets",
+      "timestamp": "2026-05-08T00:19:04.290Z",
+      "file": "marketing-roi-tracker/DEPLOYMENT.md",
+      "line": 45,
+      "match": "SECRET=your-super-secret-jwt-key-change-this-in-production",
+      "scanner": "secrets"
+    },
+    {
+      "severity": "high",
+      "message": "Environment Secrets",
+      "timestamp": "2026-05-08T00:19:04.290Z",
+      "file": "marketing-roi-tracker/VERCEL_DEPLOYMENT.md",
+      "line": 29,
+      "match": "SECRET=your-super-secret-jwt-key",
+      "scanner": "secrets"
+    },
+    {
+      "severity": "high",
+      "message": "Environment Secrets",
+      "timestamp": "2026-05-08T00:19:04.292Z",
+      "file": "marketing-roi-tracker/backend/services/platformIntegrations.js",
+      "line": 60,
+      "match": "Secret = process.env[`${platform.toUpperCase()}_CLIENT_SECRET`];",
+      "scanner": "secrets"
+    },
+    {
+      "severity": "high",
+      "message": "Environment Secrets",
+      "timestamp": "2026-05-08T00:19:04.292Z",
+      "file": "marketing-roi-tracker/backend/services/platformIntegrations.js",
+      "line": 71,
+      "match": "secret: clientSecret,",
+      "scanner": "secrets"
+    },
+    {
+      "severity": "high",
+      "message": "Environment Secrets",
+      "timestamp": "2026-05-08T00:19:04.292Z",
+      "file": "marketing-roi-tracker/backend/services/platformIntegrations.js",
+      "line": 81,
+      "match": "secret: clientSecret,",
+      "scanner": "secrets"
+    },
+    {
+      "severity": "high",
+      "message": "Environment Secrets",
+      "timestamp": "2026-05-08T00:19:04.292Z",
+      "file": "marketing-roi-tracker/backend/services/platformIntegrations.js",
+      "line": 90,
+      "match": "secret: clientSecret,",
+      "scanner": "secrets"
+    },
+    {
+      "severity": "high",
+      "message": "Environment Secrets",
+      "timestamp": "2026-05-08T00:19:04.292Z",
+      "file": "marketing-roi-tracker/deploy.sh",
+      "line": 48,
+      "match": "SECRET=your-super-secret-jwt-key-change-this-in-production",
+      "scanner": "secrets"
+    },
+    {
+      "severity": "high",
+      "message": "Environment Secrets",
+      "timestamp": "2026-05-08T00:19:04.292Z",
+      "file": "marketing-roi-tracker/docker-compose.yml",
+      "line": 15,
+      "match": "SECRET=${JWT_SECRET:-your-super-secret-jwt-key}",
+      "scanner": "secrets"
+    },
+    {
+      "severity": "high",
+      "message": "Environment Secrets",
+      "timestamp": "2026-05-08T00:19:04.302Z",
+      "file": "oauth-conditional-logic-instructions.md",
+      "line": 692,
+      "match": "SECRET=your-secret-key",
+      "scanner": "secrets"
+    },
+    {
+      "severity": "high",
+      "message": "Environment Secrets",
+      "timestamp": "2026-05-08T00:19:04.303Z",
+      "file": "oauth-conditional-logic-instructions.md",
+      "line": 694,
+      "match": "SECRET=your-google-client-secret",
+      "scanner": "secrets"
+    },
+    {
+      "severity": "high",
+      "message": "Environment Secrets",
+      "timestamp": "2026-05-08T00:19:04.308Z",
+      "file": "pages/api/auth/[...nextauth].simple.ts",
+      "line": 9,
+      "match": "Secret: process.env.GOOGLE_CLIENT_SECRET!,",
+      "scanner": "secrets"
+    },
+    {
+      "severity": "high",
+      "message": "Environment Secrets",
+      "timestamp": "2026-05-08T00:19:04.308Z",
+      "file": "pages/api/auth/[...nextauth].simple.ts",
+      "line": 12,
+      "match": "secret: process.env.NEXTAUTH_SECRET,",
+      "scanner": "secrets"
+    },
+    {
+      "severity": "high",
+      "message": "Environment Secrets",
+      "timestamp": "2026-05-08T00:19:04.308Z",
+      "file": "pages/api/auth/[...nextauth].ts",
+      "line": 326,
+      "match": "Secret: process.env.GOOGLE_CLIENT_SECRET!,",
+      "scanner": "secrets"
+    },
+    {
+      "severity": "high",
+      "message": "Environment Secrets",
+      "timestamp": "2026-05-08T00:19:04.308Z",
+      "file": "pages/api/auth/[...nextauth].ts",
+      "line": 342,
+      "match": "secret: process.env.NEXTAUTH_SECRET,",
+      "scanner": "secrets"
+    },
+    {
+      "severity": "high",
+      "message": "Environment Secrets",
+      "timestamp": "2026-05-08T00:19:04.309Z",
+      "file": "pages/api/auth/nextauth.complex.backup.ts",
+      "line": 14,
+      "match": "Secret: process.env.GOOGLE_CLIENT_SECRET",
+      "scanner": "secrets"
+    },
+    {
+      "severity": "high",
+      "message": "Environment Secrets",
+      "timestamp": "2026-05-08T00:19:04.309Z",
+      "file": "pages/api/auth/nextauth.complex.backup.ts",
+      "line": 43,
+      "match": "password === 'otp-verified'",
+      "scanner": "secrets"
+    },
+    {
+      "severity": "high",
+      "message": "Environment Secrets",
+      "timestamp": "2026-05-08T00:19:04.309Z",
+      "file": "pages/api/auth/nextauth.complex.backup.ts",
+      "line": 46,
+      "match": "password === 'otp-verified'",
+      "scanner": "secrets"
+    },
+    {
+      "severity": "high",
+      "message": "Environment Secrets",
+      "timestamp": "2026-05-08T00:19:04.309Z",
+      "file": "pages/api/auth/nextauth.complex.backup.ts",
+      "line": 490,
+      "match": "secret: process.env.NEXTAUTH_SECRET",
+      "scanner": "secrets"
+    },
+    {
+      "severity": "high",
+      "message": "Environment Secrets",
+      "timestamp": "2026-05-08T00:19:04.309Z",
+      "file": "pages/api/clients/create.ts",
+      "line": 96,
+      "match": "Password:</strong>",
+      "scanner": "secrets"
+    },
+    {
+      "severity": "high",
+      "message": "Environment Secrets",
+      "timestamp": "2026-05-08T00:19:04.309Z",
+      "file": "pages/api/clients/create.ts",
+      "line": 156,
+      "match": "Password = generatePassword();",
+      "scanner": "secrets"
+    },
+    {
+      "severity": "high",
+      "message": "Environment Secrets",
+      "timestamp": "2026-05-08T00:19:04.309Z",
+      "file": "pages/api/clients/create.ts",
+      "line": 165,
+      "match": "password: hashedPassword,",
+      "scanner": "secrets"
+    },
+    {
+      "severity": "high",
+      "message": "Environment Secrets",
+      "timestamp": "2026-05-08T00:19:04.309Z",
+      "file": "pages/api/clients/create.ts",
+      "line": 188,
+      "match": "password: plainPassword,",
+      "scanner": "secrets"
+    },
+    {
+      "severity": "high",
+      "message": "Environment Secrets",
+      "timestamp": "2026-05-08T00:19:04.309Z",
+      "file": "pages/api/clients/create.ts",
+      "line": 210,
+      "match": "password: plainPassword",
+      "scanner": "secrets"
+    },
+    {
+      "severity": "high",
+      "message": "Environment Secrets",
+      "timestamp": "2026-05-08T00:19:04.309Z",
+      "file": "pages/api/clients/create.ts",
+      "line": 258,
+      "match": "password: string):",
+      "scanner": "secrets"
+    },
+    {
+      "severity": "high",
+      "message": "Environment Secrets",
+      "timestamp": "2026-05-08T00:19:04.311Z",
+      "file": "pages/api/debug-checkout.ts",
+      "line": 13,
+      "match": "Secret: !!process.env.STRIPE_SECRET_KEY,",
+      "scanner": "secrets"
+    },
+    {
+      "severity": "high",
+      "message": "Environment Secrets",
+      "timestamp": "2026-05-08T00:19:04.311Z",
+      "file": "pages/api/debug-env.ts",
+      "line": 18,
+      "match": "SECRET: !!process.env.GOOGLE_CLIENT_SECRET,",
+      "scanner": "secrets"
+    },
+    {
+      "severity": "high",
+      "message": "Environment Secrets",
+      "timestamp": "2026-05-08T00:19:04.311Z",
+      "file": "pages/api/debug-env.ts",
+      "line": 20,
+      "match": "SECRET: !!process.env.NEXTAUTH_SECRET,",
+      "scanner": "secrets"
+    },
+    {
+      "severity": "high",
+      "message": "Environment Secrets",
+      "timestamp": "2026-05-08T00:19:04.311Z",
+      "file": "pages/api/debug-ghl-production.ts",
+      "line": 6,
+      "match": "Secret = req.query.secret;",
+      "scanner": "secrets"
+    },
+    {
+      "severity": "high",
+      "message": "Environment Secrets",
+      "timestamp": "2026-05-08T00:19:04.311Z",
+      "file": "pages/api/debug-ghl-production.ts",
+      "line": 8,
+      "match": "Secret === 'debug123'",
+      "scanner": "secrets"
+    },
+    {
+      "severity": "high",
+      "message": "Environment Secrets",
+      "timestamp": "2026-05-08T00:19:04.311Z",
+      "file": "pages/api/debug-ghl-production.ts",
+      "line": 11,
+      "match": "secret=debug123'",
+      "scanner": "secrets"
+    },
+    {
+      "severity": "high",
+      "message": "Environment Secrets",
+      "timestamp": "2026-05-08T00:19:04.311Z",
+      "file": "pages/api/debug-oauth.ts",
+      "line": 5,
+      "match": "Secret = process.env.GOOGLE_CLIENT_SECRET;",
+      "scanner": "secrets"
+    },
+    {
+      "severity": "high",
+      "message": "Environment Secrets",
+      "timestamp": "2026-05-08T00:19:04.312Z",
+      "file": "pages/api/env-check.ts",
+      "line": 29,
+      "match": "secret === process.env.DEBUG_SECRET",
+      "scanner": "secrets"
+    },
+    {
+      "severity": "high",
+      "message": "Environment Secrets",
+      "timestamp": "2026-05-08T00:19:04.312Z",
+      "file": "pages/api/env-check.ts",
+      "line": 29,
+      "match": "secret === 'debug123'",
+      "scanner": "secrets"
+    },
+    {
+      "severity": "high",
+      "message": "Environment Secrets",
+      "timestamp": "2026-05-08T00:19:04.316Z",
+      "file": "pages/api/marketing-platforms/google-ads/auth.ts",
+      "line": 69,
+      "match": "secret: process.env.GOOGLE_ADS_CLIENT_SECRET,",
+      "scanner": "secrets"
+    },
+    {
+      "severity": "high",
+      "message": "Environment Secrets",
+      "timestamp": "2026-05-08T00:19:04.317Z",
+      "file": "pages/api/optz/generate-sso-url.ts",
+      "line": 8,
+      "match": "secret = process.env.NEXTAUTH_SECRET",
+      "scanner": "secrets"
+    },
+    {
+      "severity": "high",
+      "message": "Environment Secrets",
+      "timestamp": "2026-05-08T00:19:04.319Z",
+      "file": "pages/api/test-auth.ts",
+      "line": 11,
+      "match": "SECRET: process.env.NEXTAUTH_SECRET",
+      "scanner": "secrets"
+    },
+    {
+      "severity": "high",
+      "message": "Environment Secrets",
+      "timestamp": "2026-05-08T00:19:04.319Z",
+      "file": "pages/api/test-auth.ts",
+      "line": 15,
+      "match": "Secret: process.env.GOOGLE_CLIENT_SECRET",
+      "scanner": "secrets"
+    },
+    {
+      "severity": "high",
+      "message": "Environment Secrets",
+      "timestamp": "2026-05-08T00:19:04.361Z",
+      "file": "pages/settings/clients.tsx",
+      "line": 92,
+      "match": "Password: ${data.client.temporaryPassword}\\n\\nCredentials",
+      "scanner": "secrets"
+    },
+    {
+      "severity": "high",
+      "message": "Environment Secrets",
+      "timestamp": "2026-05-08T00:19:04.607Z",
+      "file": "real_keyword_research.js",
+      "line": 5,
+      "match": "PASSWORD = '8215cb0ce338b385'",
+      "scanner": "secrets"
+    },
+    {
+      "severity": "high",
+      "message": "Environment Secrets",
+      "timestamp": "2026-05-08T00:19:04.617Z",
+      "file": "run-seo-sample.js",
+      "line": 18,
+      "match": "password: process.env.DATAFORSEO_PASSWORD",
+      "scanner": "secrets"
+    },
+    {
+      "severity": "high",
+      "message": "Environment Secrets",
+      "timestamp": "2026-05-08T00:19:04.617Z",
+      "file": "run-seo-sample.js",
+      "line": 44,
+      "match": "password: CONFIG.dataforseo.password",
+      "scanner": "secrets"
+    },
+    {
+      "severity": "critical",
+      "message": "API Keys",
+      "timestamp": "2026-05-08T00:19:04.619Z",
+      "file": "scrapers/neil-patel-scraper.js",
+      "line": 7,
+      "match": "apiKey = 'fc-6e7e6312953b47069452e67509d9f857'",
+      "scanner": "secrets"
+    },
+    {
+      "severity": "critical",
+      "message": "API Keys",
+      "timestamp": "2026-05-08T00:19:04.620Z",
+      "file": "scraping/.env",
+      "line": 2,
+      "match": "API_KEY=fc-6e7e6312953b47069452e67509d9f857",
+      "scanner": "secrets"
+    },
+    {
+      "severity": "critical",
+      "message": "API Keys",
+      "timestamp": "2026-05-08T00:19:04.620Z",
+      "file": "scraping/comprehensive-ai-scraper.js",
+      "line": 9,
+      "match": "apiKey: 'fc-6e7e6312953b47069452e67509d9f857'",
+      "scanner": "secrets"
+    },
+    {
+      "severity": "critical",
+      "message": "API Keys",
+      "timestamp": "2026-05-08T00:19:04.631Z",
+      "file": "scraping/discover-new-tools.js",
+      "line": 7,
+      "match": "API_KEY = 'fc-6e7e6312953b47069452e67509d9f857'",
+      "scanner": "secrets"
+    },
+    {
+      "severity": "critical",
+      "message": "API Keys",
+      "timestamp": "2026-05-08T00:19:04.631Z",
+      "file": "scraping/fixed-ai-scraper.js",
+      "line": 6,
+      "match": "apiKey: 'fc-6e7e6312953b47069452e67509d9f857'",
+      "scanner": "secrets"
+    },
+    {
+      "severity": "high",
+      "message": "Environment Secrets",
+      "timestamp": "2026-05-08T00:19:04.641Z",
+      "file": "scripts/dataforseo-ai-automation.js",
+      "line": 5,
+      "match": "password = '8215cb0ce338b385'",
+      "scanner": "secrets"
+    },
+    {
+      "severity": "high",
+      "message": "Environment Secrets",
+      "timestamp": "2026-05-08T00:19:04.641Z",
+      "file": "scripts/dataforseo-ai-automation.js",
+      "line": 9,
+      "match": "password: password",
+      "scanner": "secrets"
+    },
+    {
+      "severity": "high",
+      "message": "Environment Secrets",
+      "timestamp": "2026-05-08T00:19:04.641Z",
+      "file": "scripts/dataforseo-ai-keywords-opportunities.js",
+      "line": 5,
+      "match": "password = '8215cb0ce338b385'",
+      "scanner": "secrets"
+    },
+    {
+      "severity": "high",
+      "message": "Environment Secrets",
+      "timestamp": "2026-05-08T00:19:04.641Z",
+      "file": "scripts/dataforseo-ai-keywords-opportunities.js",
+      "line": 9,
+      "match": "password: password",
+      "scanner": "secrets"
+    },
+    {
+      "severity": "high",
+      "message": "Environment Secrets",
+      "timestamp": "2026-05-08T00:19:04.641Z",
+      "file": "scripts/dataforseo-basic.mjs",
+      "line": 18,
+      "match": "password: \"8215cb0ce338b385\"",
+      "scanner": "secrets"
+    },
+    {
+      "severity": "high",
+      "message": "Environment Secrets",
+      "timestamp": "2026-05-08T00:19:04.641Z",
+      "file": "scripts/dataforseo-basic.mjs",
+      "line": 104,
+      "match": "password: \"8215cb0ce338b385\"",
+      "scanner": "secrets"
+    },
+    {
+      "severity": "high",
+      "message": "Environment Secrets",
+      "timestamp": "2026-05-08T00:19:04.641Z",
+      "file": "scripts/dataforseo-batch.js",
+      "line": 5,
+      "match": "password = \"8215cb0ce338b385\"",
+      "scanner": "secrets"
+    },
+    {
+      "severity": "high",
+      "message": "Environment Secrets",
+      "timestamp": "2026-05-08T00:19:04.641Z",
+      "file": "scripts/dataforseo-batch.js",
+      "line": 9,
+      "match": "password: password",
+      "scanner": "secrets"
+    },
+    {
+      "severity": "high",
+      "message": "Environment Secrets",
+      "timestamp": "2026-05-08T00:19:04.641Z",
+      "file": "scripts/dataforseo-batch.mjs",
+      "line": 10,
+      "match": "password = \"8215cb0ce338b385\"",
+      "scanner": "secrets"
+    },
+    {
+      "severity": "high",
+      "message": "Environment Secrets",
+      "timestamp": "2026-05-08T00:19:04.641Z",
+      "file": "scripts/dataforseo-batch.mjs",
+      "line": 14,
+      "match": "password: password",
+      "scanner": "secrets"
+    },
+    {
+      "severity": "high",
+      "message": "Environment Secrets",
+      "timestamp": "2026-05-08T00:19:04.641Z",
+      "file": "scripts/dataforseo-comprehensive.js",
+      "line": 5,
+      "match": "password = '8215cb0ce338b385'",
+      "scanner": "secrets"
+    },
+    {
+      "severity": "high",
+      "message": "Environment Secrets",
+      "timestamp": "2026-05-08T00:19:04.641Z",
+      "file": "scripts/dataforseo-comprehensive.js",
+      "line": 9,
+      "match": "password: password",
+      "scanner": "secrets"
+    },
+    {
+      "severity": "high",
+      "message": "Environment Secrets",
+      "timestamp": "2026-05-08T00:19:04.641Z",
+      "file": "scripts/dataforseo-debug.mjs",
+      "line": 12,
+      "match": "password: \"8215cb0ce338b385\"",
+      "scanner": "secrets"
+    },
+    {
+      "severity": "high",
+      "message": "Environment Secrets",
+      "timestamp": "2026-05-08T00:19:04.642Z",
+      "file": "scripts/dataforseo-final.mjs",
+      "line": 18,
+      "match": "password: \"8215cb0ce338b385\"",
+      "scanner": "secrets"
+    },
+    {
+      "severity": "high",
+      "message": "Environment Secrets",
+      "timestamp": "2026-05-08T00:19:04.642Z",
+      "file": "scripts/dataforseo-keywords.mjs",
+      "line": 13,
+      "match": "password: \"8215cb0ce338b385\"",
+      "scanner": "secrets"
+    },
+    {
+      "severity": "high",
+      "message": "Environment Secrets",
+      "timestamp": "2026-05-08T00:19:04.642Z",
+      "file": "scripts/dataforseo-keywords.mjs",
+      "line": 22,
+      "match": "password: config.password",
+      "scanner": "secrets"
+    },
+    {
+      "severity": "high",
+      "message": "Environment Secrets",
+      "timestamp": "2026-05-08T00:19:04.642Z",
+      "file": "scripts/dataforseo-lite.mjs",
+      "line": 18,
+      "match": "password: \"8215cb0ce338b385\"",
+      "scanner": "secrets"
+    },
+    {
+      "severity": "high",
+      "message": "Environment Secrets",
+      "timestamp": "2026-05-08T00:19:04.642Z",
+      "file": "scripts/dataforseo-paid-search.js",
+      "line": 5,
+      "match": "password = '8215cb0ce338b385'",
+      "scanner": "secrets"
+    },
+    {
+      "severity": "high",
+      "message": "Environment Secrets",
+      "timestamp": "2026-05-08T00:19:04.642Z",
+      "file": "scripts/dataforseo-paid-search.js",
+      "line": 9,
+      "match": "password: password",
+      "scanner": "secrets"
+    },
+    {
+      "severity": "high",
+      "message": "Environment Secrets",
+      "timestamp": "2026-05-08T00:19:04.642Z",
+      "file": "scripts/dataforseo-seo-category.js",
+      "line": 5,
+      "match": "password = '8215cb0ce338b385'",
+      "scanner": "secrets"
+    },
+    {
+      "severity": "high",
+      "message": "Environment Secrets",
+      "timestamp": "2026-05-08T00:19:04.642Z",
+      "file": "scripts/dataforseo-seo-category.js",
+      "line": 9,
+      "match": "password: password",
+      "scanner": "secrets"
+    },
+    {
+      "severity": "high",
+      "message": "Environment Secrets",
+      "timestamp": "2026-05-08T00:19:04.642Z",
+      "file": "scripts/dataforseo-seo-comprehensive.js",
+      "line": 5,
+      "match": "password = '8215cb0ce338b385'",
+      "scanner": "secrets"
+    },
+    {
+      "severity": "high",
+      "message": "Environment Secrets",
+      "timestamp": "2026-05-08T00:19:04.642Z",
+      "file": "scripts/dataforseo-seo-comprehensive.js",
+      "line": 9,
+      "match": "password: password",
+      "scanner": "secrets"
+    },
+    {
+      "severity": "high",
+      "message": "Environment Secrets",
+      "timestamp": "2026-05-08T00:19:04.642Z",
+      "file": "scripts/dataforseo-working.mjs",
+      "line": 18,
+      "match": "password: \"8215cb0ce338b385\"",
+      "scanner": "secrets"
+    },
+    {
+      "severity": "high",
+      "message": "Environment Secrets",
+      "timestamp": "2026-05-08T00:19:04.645Z",
+      "file": "scripts/industry-ai-keywords-research.js",
+      "line": 5,
+      "match": "password = '8215cb0ce338b385'",
+      "scanner": "secrets"
+    },
+    {
+      "severity": "high",
+      "message": "Environment Secrets",
+      "timestamp": "2026-05-08T00:19:04.645Z",
+      "file": "scripts/industry-ai-keywords-research.js",
+      "line": 9,
+      "match": "password: password",
+      "scanner": "secrets"
+    },
+    {
+      "severity": "high",
+      "message": "Environment Secrets",
+      "timestamp": "2026-05-08T00:19:04.646Z",
+      "file": "scripts/industry-keyword-research-v2.mjs",
+      "line": 20,
+      "match": "password: \"8215cb0ce338b385\"",
+      "scanner": "secrets"
+    },
+    {
+      "severity": "high",
+      "message": "Environment Secrets",
+      "timestamp": "2026-05-08T00:19:04.646Z",
+      "file": "scripts/industry-keyword-research-working.mjs",
+      "line": 20,
+      "match": "password: \"8215cb0ce338b385\"",
+      "scanner": "secrets"
+    },
+    {
+      "severity": "high",
+      "message": "Environment Secrets",
+      "timestamp": "2026-05-08T00:19:04.646Z",
+      "file": "scripts/industry-keyword-research.mjs",
+      "line": 20,
+      "match": "password: \"8215cb0ce338b385\"",
+      "scanner": "secrets"
+    },
+    {
+      "severity": "high",
+      "message": "Environment Secrets",
+      "timestamp": "2026-05-08T00:19:04.646Z",
+      "file": "scripts/keyword-research.js",
+      "line": 8,
+      "match": "password = process.env.DATAFORSEO_PASSWORD",
+      "scanner": "secrets"
+    },
+    {
+      "severity": "high",
+      "message": "Environment Secrets",
+      "timestamp": "2026-05-08T00:19:04.648Z",
+      "file": "scripts/test-dataforseo.mjs",
+      "line": 7,
+      "match": "password: \"8215cb0ce338b385\"",
+      "scanner": "secrets"
+    },
+    {
+      "severity": "high",
+      "message": "Environment Secrets",
+      "timestamp": "2026-05-08T00:19:04.665Z",
+      "file": "seo-optimization/review-page-optimizer.js",
+      "line": 22,
+      "match": "password: process.env.DATAFORSEO_PASSWORD",
+      "scanner": "secrets"
+    },
+    {
+      "severity": "high",
+      "message": "Environment Secrets",
+      "timestamp": "2026-05-08T00:19:04.665Z",
+      "file": "seo-optimization/review-page-optimizer.js",
+      "line": 48,
+      "match": "password: CONFIG.dataforseo.password",
+      "scanner": "secrets"
+    },
+    {
+      "severity": "critical",
+      "message": "API Keys",
+      "timestamp": "2026-05-08T00:19:04.666Z",
+      "file": "siteoptz.ai/.env.production",
+      "line": 5,
+      "match": "API_KEY=pit-8954f181-e668-4613-80d6-c7b4aa8594b8",
+      "scanner": "secrets"
+    },
+    {
+      "severity": "high",
+      "message": "Environment Secrets",
+      "timestamp": "2026-05-08T00:19:04.666Z",
+      "file": "siteoptz.ai/.env.production",
+      "line": 11,
+      "match": "SECRET=MUST_BE_SET_IN_VERCEL_DASHBOARD",
+      "scanner": "secrets"
+    },
+    {
+      "severity": "high",
+      "message": "Environment Secrets",
+      "timestamp": "2026-05-08T00:19:04.667Z",
+      "file": "siteoptz.ai/.env.production",
+      "line": 22,
+      "match": "SECRET=MUST_BE_SET_IN_VERCEL_DASHBOARD",
+      "scanner": "secrets"
+    },
+    {
+      "severity": "critical",
+      "message": "API Keys",
+      "timestamp": "2026-05-08T00:19:04.667Z",
+      "file": "siteoptz.ai/OAUTH_FIX_DEPLOYMENT.md",
+      "line": 41,
+      "match": "API_KEY=pit-8954f181-e668-4613-80d6-c7b4aa8594b8",
+      "scanner": "secrets"
+    },
+    {
+      "severity": "high",
+      "message": "Environment Secrets",
+      "timestamp": "2026-05-08T00:19:04.667Z",
+      "file": "siteoptz.ai/OAUTH_FIX_DEPLOYMENT.md",
+      "line": 38,
+      "match": "SECRET=<your-actual-client-secret>",
+      "scanner": "secrets"
+    },
+    {
+      "severity": "high",
+      "message": "Environment Secrets",
+      "timestamp": "2026-05-08T00:19:04.667Z",
+      "file": "siteoptz.ai/OAUTH_FIX_DEPLOYMENT.md",
+      "line": 39,
+      "match": "SECRET=<generate-with:",
+      "scanner": "secrets"
+    },
+    {
+      "severity": "critical",
+      "message": "API Keys",
+      "timestamp": "2026-05-08T00:19:04.667Z",
+      "file": "siteoptz.ai/OAUTH_FIX_DEPLOYMENT_INSTRUCTIONS.md",
+      "line": 43,
+      "match": "API_KEY=pit-8954f181-e668-4613-80d6-c7b4aa8594b8",
+      "scanner": "secrets"
+    },
+    {
+      "severity": "high",
+      "message": "Environment Secrets",
+      "timestamp": "2026-05-08T00:19:04.667Z",
+      "file": "siteoptz.ai/OAUTH_FIX_DEPLOYMENT_INSTRUCTIONS.md",
+      "line": 40,
+      "match": "SECRET=<your-google-client-secret>",
+      "scanner": "secrets"
+    },
+    {
+      "severity": "high",
+      "message": "Environment Secrets",
+      "timestamp": "2026-05-08T00:19:04.667Z",
+      "file": "siteoptz.ai/OAUTH_FIX_DEPLOYMENT_INSTRUCTIONS.md",
+      "line": 41,
+      "match": "SECRET=<generated-secret>",
+      "scanner": "secrets"
+    },
+    {
+      "severity": "critical",
+      "message": "API Keys",
+      "timestamp": "2026-05-08T00:19:04.667Z",
+      "file": "siteoptz.ai/README.md",
+      "line": 56,
+      "match": "API_KEY=your_mailchimp_api_key",
+      "scanner": "secrets"
+    },
+    {
+      "severity": "critical",
+      "message": "API Keys",
+      "timestamp": "2026-05-08T00:19:04.667Z",
+      "file": "siteoptz.ai/README.md",
+      "line": 60,
+      "match": "API_KEY=your_convertkit_api_key",
+      "scanner": "secrets"
+    },
+    {
+      "severity": "critical",
+      "message": "API Keys",
+      "timestamp": "2026-05-08T00:19:04.667Z",
+      "file": "siteoptz.ai/README.md",
+      "line": 65,
+      "match": "API_KEY=your_sendgrid_api_key",
+      "scanner": "secrets"
+    },
+    {
+      "severity": "high",
+      "message": "Environment Secrets",
+      "timestamp": "2026-05-08T00:19:04.671Z",
+      "file": "siteoptz.ai/components/dashboard/OptzDashboardButton.tsx",
+      "line": 12,
+      "match": "secret = process.env.NEXT_PUBLIC_SSO_SECRET",
+      "scanner": "secrets"
+    },
+    {
+      "severity": "high",
+      "message": "Environment Secrets",
+      "timestamp": "2026-05-08T00:19:04.674Z",
+      "file": "siteoptz.ai/pages/api/auth/[...nextauth].ts",
+      "line": 102,
+      "match": "Secret: process.env.GOOGLE_CLIENT_SECRET!,",
+      "scanner": "secrets"
+    },
+    {
+      "severity": "high",
+      "message": "Environment Secrets",
+      "timestamp": "2026-05-08T00:19:04.674Z",
+      "file": "siteoptz.ai/pages/api/auth/[...nextauth].ts",
+      "line": 112,
+      "match": "secret: process.env.NEXTAUTH_SECRET,",
+      "scanner": "secrets"
+    },
+    {
+      "severity": "high",
+      "message": "Environment Secrets",
+      "timestamp": "2026-05-08T00:19:04.674Z",
+      "file": "siteoptz.ai/pages/api/auth/debug.ts",
+      "line": 12,
+      "match": "SECRET: process.env.GOOGLE_CLIENT_SECRET",
+      "scanner": "secrets"
+    },
+    {
+      "severity": "high",
+      "message": "Environment Secrets",
+      "timestamp": "2026-05-08T00:19:04.674Z",
+      "file": "siteoptz.ai/pages/api/auth/debug.ts",
+      "line": 13,
+      "match": "SECRET: process.env.NEXTAUTH_SECRET",
+      "scanner": "secrets"
+    },
+    {
+      "severity": "high",
+      "message": "Environment Secrets",
+      "timestamp": "2026-05-08T00:19:04.676Z",
+      "file": "siteoptz.ai/scripts/verify-oauth.js",
+      "line": 95,
+      "match": "secret: process.env.NEXTAUTH_SECRET'",
+      "scanner": "secrets"
+    },
+    {
+      "severity": "high",
+      "message": "Environment Secrets",
+      "timestamp": "2026-05-08T00:19:04.727Z",
+      "file": "test-google-oauth.js",
+      "line": 11,
+      "match": "SECRET = process.env.GOOGLE_CLIENT_SECRET",
+      "scanner": "secrets"
+    },
+    {
+      "severity": "high",
+      "message": "Environment Secrets",
+      "timestamp": "2026-05-08T00:19:04.727Z",
+      "file": "test-google-oauth.js",
+      "line": 124,
+      "match": "Secret: [REDACTED]'",
+      "scanner": "secrets"
+    },
+    {
+      "severity": "high",
+      "message": "Environment Secrets",
+      "timestamp": "2026-05-08T00:19:04.728Z",
+      "file": "test-production-detailed.js",
+      "line": 36,
+      "match": "secret=debug123`);",
+      "scanner": "secrets"
+    },
+    {
+      "severity": "high",
+      "message": "Environment Secrets",
+      "timestamp": "2026-05-08T00:19:04.735Z",
+      "file": "ultimate-ga4-test.html",
+      "line": 192,
+      "match": "secret=${apiSecret}`,",
+      "scanner": "secrets"
+    },
+    {
+      "severity": "critical",
+      "message": "API Keys",
+      "timestamp": "2026-05-08T00:19:04.737Z",
+      "file": "user-registration-ghl-api.md",
+      "line": 803,
+      "match": "API_KEY=your_gohighlevel_api_key_here",
+      "scanner": "secrets"
+    },
+    {
+      "severity": "critical",
+      "message": "API Keys",
+      "timestamp": "2026-05-08T00:19:04.737Z",
+      "file": "user-registration-ghl-api.md",
+      "line": 808,
+      "match": "API_KEY=your_sendgrid_api_key_here",
+      "scanner": "secrets"
+    },
+    {
+      "severity": "high",
+      "message": "Environment Secrets",
+      "timestamp": "2026-05-08T00:19:04.739Z",
+      "file": "vercel-env-verification-guide.md",
+      "line": 91,
+      "match": "secret=debug123",
+      "scanner": "secrets"
+    },
+    {
+      "severity": "critical",
+      "message": "API Keys",
+      "timestamp": "2026-05-08T00:19:04.741Z",
+      "file": "wordpress-package/CLAUDE-AI-IMPLEMENTATION-INSTRUCTIONS.md",
+      "line": 305,
+      "match": "API_KEY=your-firecrawl-api-key-here",
+      "scanner": "secrets"
+    },
+    {
+      "severity": "critical",
+      "message": "API Keys",
+      "timestamp": "2026-05-08T00:19:04.741Z",
+      "file": "wordpress-package/CUSTOMIZATION-GUIDE.md",
+      "line": 595,
+      "match": "api_key = 'your-mailchimp-api-key'",
+      "scanner": "secrets"
+    },
+    {
+      "severity": "critical",
+      "message": "API Keys",
+      "timestamp": "2026-05-08T00:19:04.741Z",
+      "file": "wordpress-package/CUSTOMIZATION-GUIDE.md",
+      "line": 620,
+      "match": "api_key = 'your-convertkit-api-key'",
+      "scanner": "secrets"
+    },
+    {
+      "severity": "high",
+      "message": "Environment Secrets",
+      "timestamp": "2026-05-08T00:19:04.741Z",
+      "file": "wordpress-package/DEPLOYMENT-GUIDE.md",
+      "line": 361,
+      "match": "Password = SITEOPTZ_SENDGRID_API_KEY;",
+      "scanner": "secrets"
+    },
+    {
+      "severity": "critical",
+      "message": "API Keys",
+      "timestamp": "2026-05-08T00:19:04.742Z",
+      "file": "wordpress-package/SPECIFIC-TOOLS-SCRAPING-README.md",
+      "line": 77,
+      "match": "API_KEY=\"your-firecrawl-api-key-here\"",
+      "scanner": "secrets"
+    },
+    {
+      "severity": "high",
+      "message": "Database URLs",
+      "timestamp": "2026-05-08T00:19:04.743Z",
+      "file": "wordpress-package/VERCEL-DEPLOYMENT-GUIDE.md",
+      "line": 1062,
+      "match": "DATABASE_URL=your-database-url",
+      "scanner": "secrets"
+    },
+    {
+      "severity": "high",
+      "message": "Database URLs",
+      "timestamp": "2026-05-08T00:19:04.743Z",
+      "file": "wordpress-package/VERCEL-GITHUB-DEPLOYMENT-GUIDE.md",
+      "line": 857,
+      "match": "DATABASE_URL=your-database-url",
+      "scanner": "secrets"
+    },
+    {
+      "severity": "critical",
+      "message": "Vulnerable dependency: @aws-sdk/xml-builder",
+      "timestamp": "2026-05-08T00:19:05.848Z",
+      "vulnerability": {
+        "name": "@aws-sdk/xml-builder",
+        "severity": "critical",
+        "isDirect": false,
+        "via": [
+          "fast-xml-parser"
+        ],
+        "effects": [],
+        "range": "3.894.0 - 3.972.4",
+        "nodes": [
+          "node_modules/@aws-sdk/xml-builder"
+        ],
+        "fixAvailable": true
+      },
+      "package": "@aws-sdk/xml-builder",
+      "scanner": "dependencies"
+    },
+    {
+      "severity": "high",
+      "message": "Vulnerable dependency: @next/eslint-plugin-next",
+      "timestamp": "2026-05-08T00:19:05.848Z",
+      "vulnerability": {
+        "name": "@next/eslint-plugin-next",
+        "severity": "high",
+        "isDirect": false,
+        "via": [
+          "glob"
+        ],
+        "effects": [
+          "eslint-config-next"
+        ],
+        "range": "14.0.5-canary.0 - 15.0.0-rc.1",
+        "nodes": [
+          "node_modules/@next/eslint-plugin-next"
+        ],
+        "fixAvailable": true
+      },
+      "package": "@next/eslint-plugin-next",
+      "scanner": "dependencies"
+    },
+    {
+      "severity": "high",
+      "message": "Vulnerable dependency: axios",
+      "timestamp": "2026-05-08T00:19:05.848Z",
+      "vulnerability": {
+        "name": "axios",
+        "severity": "high",
+        "isDirect": true,
+        "via": [
+          {
+            "source": 1116673,
+            "name": "axios",
+            "dependency": "axios",
+            "title": "Axios has a NO_PROXY Hostname Normalization Bypass that Leads to SSRF",
+            "url": "https://github.com/advisories/GHSA-3p68-rc4w-qgx5",
+            "severity": "moderate",
+            "cwe": [
+              "CWE-441",
+              "CWE-918"
+            ],
+            "cvss": {
+              "score": 4.8,
+              "vectorString": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:L/I:L/A:N"
+            },
+            "range": ">=1.0.0 <1.15.0"
+          },
+          {
+            "source": 1116675,
+            "name": "axios",
+            "dependency": "axios",
+            "title": "Axios has Unrestricted Cloud Metadata Exfiltration via Header Injection Chain",
+            "url": "https://github.com/advisories/GHSA-fvcv-3m26-pcqx",
+            "severity": "moderate",
+            "cwe": [
+              "CWE-113",
+              "CWE-444",
+              "CWE-918"
+            ],
+            "cvss": {
+              "score": 4.8,
+              "vectorString": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:L/I:L/A:N"
+            },
+            "range": ">=1.0.0 <1.15.0"
+          },
+          {
+            "source": 1117574,
+            "name": "axios",
+            "dependency": "axios",
+            "title": "Axios: Authentication Bypass via Prototype Pollution Gadget in `validateStatus` Merge Strategy",
+            "url": "https://github.com/advisories/GHSA-w9j2-pvgh-6h63",
+            "severity": "moderate",
+            "cwe": [
+              "CWE-287",
+              "CWE-1321"
+            ],
+            "cvss": {
+              "score": 4.8,
+              "vectorString": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:L/I:L/A:N"
+            },
+            "range": ">=1.0.0 <1.15.1"
+          },
+          {
+            "source": 1117576,
+            "name": "axios",
+            "dependency": "axios",
+            "title": "Axios: Incomplete Fix for CVE-2025-62718 — NO_PROXY Protection Bypassed via RFC 1122 Loopback Subnet (127.0.0.0/8) in Axios 1.15.0",
+            "url": "https://github.com/advisories/GHSA-pmwg-cvhr-8vh7",
+            "severity": "high",
+            "cwe": [
+              "CWE-183",
+              "CWE-441",
+              "CWE-918"
+            ],
+            "cvss": {
+              "score": 7.2,
+              "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:L/I:L/A:N"
+            },
+            "range": ">=1.0.0 <1.15.1"
+          },
+          {
+            "source": 1117577,
+            "name": "axios",
+            "dependency": "axios",
+            "title": "Axios: Invisible JSON Response Tampering via Prototype Pollution Gadget in `parseReviver`",
+            "url": "https://github.com/advisories/GHSA-3w6x-2g7m-8v23",
+            "severity": "moderate",
+            "cwe": [
+              "CWE-915",
+              "CWE-1321"
+            ],
+            "cvss": {
+              "score": 6.5,
+              "vectorString": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:L/I:H/A:N"
+            },
+            "range": ">=1.0.0 <1.15.2"
+          },
+          {
+            "source": 1117578,
+            "name": "axios",
+            "dependency": "axios",
+            "title": "Axios has prototype pollution read-side gadgets in HTTP adapter that allow credential injection and request hijacking",
+            "url": "https://github.com/advisories/GHSA-q8qp-cvcw-x6jj",
+            "severity": "high",
+            "cwe": [
+              "CWE-1321"
+            ],
+            "cvss": {
+              "score": 7.4,
+              "vectorString": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:N"
+            },
+            "range": ">=1.0.0 <1.15.2"
+          },
+          {
+            "source": 1117580,
+            "name": "axios",
+            "dependency": "axios",
+            "title": "Axios: Null Byte Injection via Reverse-Encoding in AxiosURLSearchParams",
+            "url": "https://github.com/advisories/GHSA-xhjh-pmcv-23jw",
+            "severity": "low",
+            "cwe": [
+              "CWE-116",
+              "CWE-626"
+            ],
+            "cvss": {
+              "score": 3.7,
+              "vectorString": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:N/I:L/A:N"
+            },
+            "range": ">=1.0.0 <1.15.1"
+          },
+          {
+            "source": 1117581,
+            "name": "axios",
+            "dependency": "axios",
+            "title": "Axios: CRLF Injection in multipart/form-data body via unsanitized blob.type in formDataToStream",
+            "url": "https://github.com/advisories/GHSA-445q-vr5w-6q77",
+            "severity": "moderate",
+            "cwe": [
+              "CWE-93"
+            ],
+            "cvss": {
+              "score": 5.3,
+              "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:L/A:N"
+            },
+            "range": ">=1.0.0 <1.15.1"
+          },
+          {
+            "source": 1117583,
+            "name": "axios",
+            "dependency": "axios",
+            "title": "Axios: no_proxy bypass via IP alias allows SSRF",
+            "url": "https://github.com/advisories/GHSA-m7pr-hjqh-92cm",
+            "severity": "moderate",
+            "cwe": [
+              "CWE-918"
+            ],
+            "cvss": {
+              "score": 6.8,
+              "vectorString": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:C/C:H/I:N/A:N"
+            },
+            "range": ">=1.0.0 <1.15.1"
+          },
+          {
+            "source": 1117585,
+            "name": "axios",
+            "dependency": "axios",
+            "title": "Axios: unbounded recursion in toFormData causes DoS via deeply nested request data",
+            "url": "https://github.com/advisories/GHSA-62hf-57xw-28j9",
+            "severity": "moderate",
+            "cwe": [
+              "CWE-674"
+            ],
+            "cvss": {
+              "score": 7.5,
+              "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H"
+            },
+            "range": ">=1.0.0 <1.15.1"
+          },
+          {
+            "source": 1117587,
+            "name": "axios",
+            "dependency": "axios",
+            "title": "Axios' HTTP adapter-streamed uploads bypass maxBodyLength when maxRedirects: 0",
+            "url": "https://github.com/advisories/GHSA-5c9x-8gcm-mpgx",
+            "severity": "moderate",
+            "cwe": [
+              "CWE-770"
+            ],
+            "cvss": {
+              "score": 5.3,
+              "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:L"
+            },
+            "range": ">=1.0.0 <1.15.1"
+          },
+          {
+            "source": 1117589,
+            "name": "axios",
+            "dependency": "axios",
+            "title": "Axios: HTTP adapter streamed responses bypass maxContentLength",
+            "url": "https://github.com/advisories/GHSA-vf2m-468p-8v99",
+            "severity": "moderate",
+            "cwe": [
+              "CWE-770"
+            ],
+            "cvss": {
+              "score": 5.3,
+              "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:L"
+            },
+            "range": ">=1.0.0 <1.15.1"
+          },
+          {
+            "source": 1117591,
+            "name": "axios",
+            "dependency": "axios",
+            "title": "Axios: Prototype Pollution Gadgets - Response Tampering, Data Exfiltration, and Request Hijacking",
+            "url": "https://github.com/advisories/GHSA-pf86-5x62-jrwf",
+            "severity": "high",
+            "cwe": [
+              "CWE-1321"
+            ],
+            "cvss": {
+              "score": 7.4,
+              "vectorString": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:N"
+            },
+            "range": ">=1.0.0 <1.15.1"
+          },
+          {
+            "source": 1117593,
+            "name": "axios",
+            "dependency": "axios",
+            "title": "Axios: Header Injection via Prototype Pollution",
+            "url": "https://github.com/advisories/GHSA-6chq-wfr3-2hj9",
+            "severity": "high",
+            "cwe": [
+              "CWE-113",
+              "CWE-1321"
+            ],
+            "cvss": {
+              "score": 7.4,
+              "vectorString": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:N"
+            },
+            "range": ">=1.0.0 <1.15.1"
+          },
+          {
+            "source": 1117595,
+            "name": "axios",
+            "dependency": "axios",
+            "title": "Axios: XSRF Token Cross-Origin Leakage via Prototype Pollution Gadget in `withXSRFToken` Boolean Coercion",
+            "url": "https://github.com/advisories/GHSA-xx6v-rp6x-q39c",
+            "severity": "moderate",
+            "cwe": [
+              "CWE-183",
+              "CWE-201"
+            ],
+            "cvss": {
+              "score": 5.4,
+              "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:L/I:L/A:N"
+            },
+            "range": ">=1.0.0 <1.15.1"
+          }
+        ],
+        "effects": [],
+        "range": "1.0.0 - 1.15.1",
+        "nodes": [
+          "node_modules/axios"
+        ],
+        "fixAvailable": true
+      },
+      "package": "axios",
+      "scanner": "dependencies"
+    },
+    {
+      "severity": "critical",
+      "message": "Vulnerable dependency: basic-ftp",
+      "timestamp": "2026-05-08T00:19:05.848Z",
+      "vulnerability": {
+        "name": "basic-ftp",
+        "severity": "critical",
+        "isDirect": false,
+        "via": [
+          {
+            "source": 1113518,
+            "name": "basic-ftp",
+            "dependency": "basic-ftp",
+            "title": "Basic FTP has Path Traversal Vulnerability in its downloadToDir() method",
+            "url": "https://github.com/advisories/GHSA-5rq4-664w-9x2c",
+            "severity": "critical",
+            "cwe": [
+              "CWE-22"
+            ],
+            "cvss": {
+              "score": 9.1,
+              "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:H/A:H"
+            },
+            "range": "<5.2.0"
+          },
+          {
+            "source": 1116454,
+            "name": "basic-ftp",
+            "dependency": "basic-ftp",
+            "title": "basic-ftp: Incomplete CRLF Injection Protection Allows Arbitrary FTP Command Execution via Credentials and MKD Commands",
+            "url": "https://github.com/advisories/GHSA-6v7q-wjvx-w8wg",
+            "severity": "high",
+            "cwe": [
+              "CWE-93"
+            ],
+            "cvss": {
+              "score": 8.2,
+              "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:H/A:L"
+            },
+            "range": "<=5.2.1"
+          },
+          {
+            "source": 1117083,
+            "name": "basic-ftp",
+            "dependency": "basic-ftp",
+            "title": "basic-ftp vulnerable to denial of service via unbounded memory consumption in Client.list()",
+            "url": "https://github.com/advisories/GHSA-rp42-5vxx-qpwr",
+            "severity": "high",
+            "cwe": [
+              "CWE-400",
+              "CWE-770"
+            ],
+            "cvss": {
+              "score": 7.5,
+              "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H"
+            },
+            "range": "<=5.2.2"
+          },
+          {
+            "source": 1117726,
+            "name": "basic-ftp",
+            "dependency": "basic-ftp",
+            "title": "basic-ftp allows a malicious FTP server to cause client-side denial of service via unbounded multiline control response buffering",
+            "url": "https://github.com/advisories/GHSA-rpmf-866q-6p89",
+            "severity": "high",
+            "cwe": [
+              "CWE-400",
+              "CWE-770"
+            ],
+            "cvss": {
+              "score": 7.5,
+              "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H"
+            },
+            "range": "<=5.3.0"
+          }
+        ],
+        "effects": [],
+        "range": "<=5.3.0",
+        "nodes": [
+          "node_modules/basic-ftp"
+        ],
+        "fixAvailable": true
+      },
+      "package": "basic-ftp",
+      "scanner": "dependencies"
+    },
+    {
+      "severity": "high",
+      "message": "Vulnerable dependency: eslint-config-next",
+      "timestamp": "2026-05-08T00:19:05.848Z",
+      "vulnerability": {
+        "name": "eslint-config-next",
+        "severity": "high",
+        "isDirect": true,
+        "via": [
+          "@next/eslint-plugin-next"
+        ],
+        "effects": [],
+        "range": "14.0.5-canary.0 - 15.0.0-rc.1",
+        "nodes": [
+          "node_modules/eslint-config-next"
+        ],
+        "fixAvailable": true
+      },
+      "package": "eslint-config-next",
+      "scanner": "dependencies"
+    },
+    {
+      "severity": "critical",
+      "message": "Vulnerable dependency: fast-xml-parser",
+      "timestamp": "2026-05-08T00:19:05.848Z",
+      "vulnerability": {
+        "name": "fast-xml-parser",
+        "severity": "critical",
+        "isDirect": false,
+        "via": [
+          {
+            "source": 1113568,
+            "name": "fast-xml-parser",
+            "dependency": "fast-xml-parser",
+            "title": "fast-xml-parser has an entity encoding bypass via regex injection in DOCTYPE entity names",
+            "url": "https://github.com/advisories/GHSA-m7jm-9gc2-mpf2",
+            "severity": "critical",
+            "cwe": [
+              "CWE-185"
+            ],
+            "cvss": {
+              "score": 9.3,
+              "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:L/I:H/A:N"
+            },
+            "range": ">=5.0.0 <5.3.5"
+          },
+          {
+            "source": 1113569,
+            "name": "fast-xml-parser",
+            "dependency": "fast-xml-parser",
+            "title": "fast-xml-parser affected by DoS through entity expansion in DOCTYPE (no expansion limit)",
+            "url": "https://github.com/advisories/GHSA-jmr7-xgp7-cmfj",
+            "severity": "high",
+            "cwe": [
+              "CWE-776"
+            ],
+            "cvss": {
+              "score": 7.5,
+              "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H"
+            },
+            "range": ">=5.0.0 <5.3.6"
+          },
+          {
+            "source": 1114153,
+            "name": "fast-xml-parser",
+            "dependency": "fast-xml-parser",
+            "title": "fast-xml-parser has stack overflow in XMLBuilder with preserveOrder",
+            "url": "https://github.com/advisories/GHSA-fj3w-jwp8-x2g3",
+            "severity": "low",
+            "cwe": [
+              "CWE-120"
+            ],
+            "cvss": {
+              "score": 0,
+              "vectorString": null
+            },
+            "range": ">=5.0.0 <5.3.8"
+          },
+          {
+            "source": 1115339,
+            "name": "fast-xml-parser",
+            "dependency": "fast-xml-parser",
+            "title": "fast-xml-parser affected by numeric entity expansion bypassing all entity expansion limits (incomplete fix for CVE-2026-26278)",
+            "url": "https://github.com/advisories/GHSA-8gc5-j5rx-235r",
+            "severity": "high",
+            "cwe": [
+              "CWE-776"
+            ],
+            "cvss": {
+              "score": 7.5,
+              "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H"
+            },
+            "range": ">=5.0.0 <5.5.6"
+          },
+          {
+            "source": 1116307,
+            "name": "fast-xml-parser",
+            "dependency": "fast-xml-parser",
+            "title": "Entity Expansion Limits Bypassed When Set to Zero Due to JavaScript Falsy Evaluation in fast-xml-parser",
+            "url": "https://github.com/advisories/GHSA-jp2q-39xq-3w4g",
+            "severity": "moderate",
+            "cwe": [
+              "CWE-1284"
+            ],
+            "cvss": {
+              "score": 5.9,
+              "vectorString": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:N/I:N/A:H"
+            },
+            "range": ">=5.0.0 <5.5.7"
+          },
+          {
+            "source": 1116957,
+            "name": "fast-xml-parser",
+            "dependency": "fast-xml-parser",
+            "title": "fast-xml-parser XMLBuilder: XML Comment and CDATA Injection via Unescaped Delimiters",
+            "url": "https://github.com/advisories/GHSA-gh4j-gqv2-49f6",
+            "severity": "moderate",
+            "cwe": [
+              "CWE-91"
+            ],
+            "cvss": {
+              "score": 6.1,
+              "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N"
+            },
+            "range": "<5.7.0"
+          }
+        ],
+        "effects": [
+          "@aws-sdk/xml-builder"
+        ],
+        "range": "<=5.6.0",
+        "nodes": [
+          "node_modules/fast-xml-parser"
+        ],
+        "fixAvailable": true
+      },
+      "package": "fast-xml-parser",
+      "scanner": "dependencies"
+    },
+    {
+      "severity": "high",
+      "message": "Vulnerable dependency: flatted",
+      "timestamp": "2026-05-08T00:19:05.848Z",
+      "vulnerability": {
+        "name": "flatted",
+        "severity": "high",
+        "isDirect": false,
+        "via": [
+          {
+            "source": 1114526,
+            "name": "flatted",
+            "dependency": "flatted",
+            "title": "flatted vulnerable to unbounded recursion DoS in parse() revive phase",
+            "url": "https://github.com/advisories/GHSA-25h7-pfq9-p65f",
+            "severity": "high",
+            "cwe": [
+              "CWE-674"
+            ],
+            "cvss": {
+              "score": 7.5,
+              "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H"
+            },
+            "range": "<3.4.0"
+          },
+          {
+            "source": 1115357,
+            "name": "flatted",
+            "dependency": "flatted",
+            "title": "Prototype Pollution via parse() in NodeJS flatted",
+            "url": "https://github.com/advisories/GHSA-rf6f-7fwh-wjgh",
+            "severity": "high",
+            "cwe": [
+              "CWE-1321"
+            ],
+            "cvss": {
+              "score": 0,
+              "vectorString": null
+            },
+            "range": "<=3.4.1"
+          }
+        ],
+        "effects": [],
+        "range": "<=3.4.1",
+        "nodes": [
+          "node_modules/flatted"
+        ],
+        "fixAvailable": true
+      },
+      "package": "flatted",
+      "scanner": "dependencies"
+    },
+    {
+      "severity": "critical",
+      "message": "Vulnerable dependency: form-data",
+      "timestamp": "2026-05-08T00:19:05.848Z",
+      "vulnerability": {
+        "name": "form-data",
+        "severity": "critical",
+        "isDirect": false,
+        "via": [
+          {
+            "source": 1109540,
+            "name": "form-data",
+            "dependency": "form-data",
+            "title": "form-data uses unsafe random function in form-data for choosing boundary",
+            "url": "https://github.com/advisories/GHSA-fjxv-7rqg-78g4",
+            "severity": "critical",
+            "cwe": [
+              "CWE-330"
+            ],
+            "cvss": {
+              "score": 0,
+              "vectorString": null
+            },
+            "range": "<2.5.4"
+          }
+        ],
+        "effects": [
+          "request"
+        ],
+        "range": "<2.5.4",
+        "nodes": [
+          "node_modules/request/node_modules/form-data"
+        ],
+        "fixAvailable": false
+      },
+      "package": "form-data",
+      "scanner": "dependencies"
+    },
+    {
+      "severity": "high",
+      "message": "Vulnerable dependency: glob",
+      "timestamp": "2026-05-08T00:19:05.848Z",
+      "vulnerability": {
+        "name": "glob",
+        "severity": "high",
+        "isDirect": true,
+        "via": [
+          {
+            "source": 1109842,
+            "name": "glob",
+            "dependency": "glob",
+            "title": "glob CLI: Command injection via -c/--cmd executes matches with shell:true",
+            "url": "https://github.com/advisories/GHSA-5j98-mcp5-4vw2",
+            "severity": "high",
+            "cwe": [
+              "CWE-78"
+            ],
+            "cvss": {
+              "score": 7.5,
+              "vectorString": "CVSS:3.1/AV:N/AC:H/PR:L/UI:N/S:U/C:H/I:H/A:H"
+            },
+            "range": ">=10.2.0 <10.5.0"
+          }
+        ],
+        "effects": [
+          "@next/eslint-plugin-next"
+        ],
+        "range": "10.2.0 - 10.4.5",
+        "nodes": [
+          "node_modules/glob"
+        ],
+        "fixAvailable": true
+      },
+      "package": "glob",
+      "scanner": "dependencies"
+    },
+    {
+      "severity": "high",
+      "message": "Vulnerable dependency: markdown-pdf",
+      "timestamp": "2026-05-08T00:19:05.848Z",
+      "vulnerability": {
+        "name": "markdown-pdf",
+        "severity": "high",
+        "isDirect": true,
+        "via": [
+          {
+            "source": 1102452,
+            "name": "markdown-pdf",
+            "dependency": "markdown-pdf",
+            "title": "markdown-pdf vulnerable to local file read via server side cross-site scripting (XSS)",
+            "url": "https://github.com/advisories/GHSA-qghr-877h-f9jh",
+            "severity": "high",
+            "cwe": [
+              "CWE-79"
+            ],
+            "cvss": {
+              "score": 7.5,
+              "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N"
+            },
+            "range": "<=11.0.0"
+          },
+          "phantomjs-prebuilt",
+          "tmp"
+        ],
+        "effects": [],
+        "range": "*",
+        "nodes": [
+          "node_modules/markdown-pdf"
+        ],
+        "fixAvailable": false
+      },
+      "package": "markdown-pdf",
+      "scanner": "dependencies"
+    },
+    {
+      "severity": "high",
+      "message": "Vulnerable dependency: minimatch",
+      "timestamp": "2026-05-08T00:19:05.848Z",
+      "vulnerability": {
+        "name": "minimatch",
+        "severity": "high",
+        "isDirect": false,
+        "via": [
+          {
+            "source": 1113459,
+            "name": "minimatch",
+            "dependency": "minimatch",
+            "title": "minimatch has a ReDoS via repeated wildcards with non-matching literal in pattern",
+            "url": "https://github.com/advisories/GHSA-3ppc-4f35-3m26",
+            "severity": "high",
+            "cwe": [
+              "CWE-1333"
+            ],
+            "cvss": {
+              "score": 0,
+              "vectorString": null
+            },
+            "range": "<3.1.3"
+          },
+          {
+            "source": 1113465,
+            "name": "minimatch",
+            "dependency": "minimatch",
+            "title": "minimatch has a ReDoS via repeated wildcards with non-matching literal in pattern",
+            "url": "https://github.com/advisories/GHSA-3ppc-4f35-3m26",
+            "severity": "high",
+            "cwe": [
+              "CWE-1333"
+            ],
+            "cvss": {
+              "score": 0,
+              "vectorString": null
+            },
+            "range": ">=9.0.0 <9.0.6"
+          },
+          {
+            "source": 1113538,
+            "name": "minimatch",
+            "dependency": "minimatch",
+            "title": "minimatch has ReDoS: matchOne() combinatorial backtracking via multiple non-adjacent GLOBSTAR segments",
+            "url": "https://github.com/advisories/GHSA-7r86-cg39-jmmj",
+            "severity": "high",
+            "cwe": [
+              "CWE-407"
+            ],
+            "cvss": {
+              "score": 7.5,
+              "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H"
+            },
+            "range": "<3.1.3"
+          },
+          {
+            "source": 1113544,
+            "name": "minimatch",
+            "dependency": "minimatch",
+            "title": "minimatch has ReDoS: matchOne() combinatorial backtracking via multiple non-adjacent GLOBSTAR segments",
+            "url": "https://github.com/advisories/GHSA-7r86-cg39-jmmj",
+            "severity": "high",
+            "cwe": [
+              "CWE-407"
+            ],
+            "cvss": {
+              "score": 7.5,
+              "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H"
+            },
+            "range": ">=9.0.0 <9.0.7"
+          },
+          {
+            "source": 1113546,
+            "name": "minimatch",
+            "dependency": "minimatch",
+            "title": "minimatch ReDoS: nested *() extglobs generate catastrophically backtracking regular expressions",
+            "url": "https://github.com/advisories/GHSA-23c5-xmqv-rm74",
+            "severity": "high",
+            "cwe": [
+              "CWE-1333"
+            ],
+            "cvss": {
+              "score": 7.5,
+              "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H"
+            },
+            "range": "<3.1.4"
+          },
+          {
+            "source": 1113552,
+            "name": "minimatch",
+            "dependency": "minimatch",
+            "title": "minimatch ReDoS: nested *() extglobs generate catastrophically backtracking regular expressions",
+            "url": "https://github.com/advisories/GHSA-23c5-xmqv-rm74",
+            "severity": "high",
+            "cwe": [
+              "CWE-1333"
+            ],
+            "cvss": {
+              "score": 7.5,
+              "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H"
+            },
+            "range": ">=9.0.0 <9.0.7"
+          }
+        ],
+        "effects": [],
+        "range": "<=3.1.3 || 9.0.0 - 9.0.6",
+        "nodes": [
+          "node_modules/@typescript-eslint/typescript-estree/node_modules/minimatch",
+          "node_modules/glob/node_modules/minimatch",
+          "node_modules/minimatch"
+        ],
+        "fixAvailable": true
+      },
+      "package": "minimatch",
+      "scanner": "dependencies"
+    },
+    {
+      "severity": "high",
+      "message": "Vulnerable dependency: next",
+      "timestamp": "2026-05-08T00:19:05.848Z",
+      "vulnerability": {
+        "name": "next",
+        "severity": "high",
+        "isDirect": true,
+        "via": [
+          {
+            "source": 1112593,
+            "name": "next",
+            "dependency": "next",
+            "title": "Next.js self-hosted applications vulnerable to DoS via Image Optimizer remotePatterns configuration",
+            "url": "https://github.com/advisories/GHSA-9g9p-9gw9-jx7f",
+            "severity": "moderate",
+            "cwe": [
+              "CWE-400",
+              "CWE-770"
+            ],
+            "cvss": {
+              "score": 5.9,
+              "vectorString": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:N/I:N/A:H"
+            },
+            "range": ">=10.0.0 <15.5.10"
+          },
+          {
+            "source": 1112653,
+            "name": "next",
+            "dependency": "next",
+            "title": "Next.js HTTP request deserialization can lead to DoS when using insecure React Server Components",
+            "url": "https://github.com/advisories/GHSA-h25m-26qc-wcjf",
+            "severity": "high",
+            "cwe": [
+              "CWE-400",
+              "CWE-502"
+            ],
+            "cvss": {
+              "score": 7.5,
+              "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H"
+            },
+            "range": ">=13.0.0 <15.0.8"
+          },
+          {
+            "source": 1114897,
+            "name": "next",
+            "dependency": "next",
+            "title": "Next.js: HTTP request smuggling in rewrites",
+            "url": "https://github.com/advisories/GHSA-ggv3-7p47-pfv8",
+            "severity": "moderate",
+            "cwe": [
+              "CWE-444"
+            ],
+            "cvss": {
+              "score": 0,
+              "vectorString": null
+            },
+            "range": ">=9.5.0 <15.5.13"
+          },
+          {
+            "source": 1114940,
+            "name": "next",
+            "dependency": "next",
+            "title": "Next.js: Unbounded next/image disk cache growth can exhaust storage",
+            "url": "https://github.com/advisories/GHSA-3x4c-7xq6-9pq8",
+            "severity": "moderate",
+            "cwe": [
+              "CWE-400"
+            ],
+            "cvss": {
+              "score": 0,
+              "vectorString": null
+            },
+            "range": ">=10.0.0 <15.5.14"
+          },
+          {
+            "source": 1116376,
+            "name": "next",
+            "dependency": "next",
+            "title": "Next.js has a Denial of Service with Server Components",
+            "url": "https://github.com/advisories/GHSA-q4gf-8mx6-v5v3",
+            "severity": "high",
+            "cwe": [
+              "CWE-770"
+            ],
+            "cvss": {
+              "score": 7.5,
+              "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H"
+            },
+            "range": ">=13.0.0 <15.5.15"
+          },
+          "postcss"
+        ],
+        "effects": [],
+        "range": "9.3.4-canary.0 - 16.3.0-canary.5",
+        "nodes": [
+          "node_modules/next"
+        ],
+        "fixAvailable": {
+          "name": "next",
+          "version": "16.2.6",
+          "isSemVerMajor": true
+        }
+      },
+      "package": "next",
+      "scanner": "dependencies"
+    },
+    {
+      "severity": "high",
+      "message": "Vulnerable dependency: picomatch",
+      "timestamp": "2026-05-08T00:19:05.848Z",
+      "vulnerability": {
+        "name": "picomatch",
+        "severity": "high",
+        "isDirect": false,
+        "via": [
+          {
+            "source": 1115549,
+            "name": "picomatch",
+            "dependency": "picomatch",
+            "title": "Picomatch: Method Injection in POSIX Character Classes causes incorrect Glob Matching",
+            "url": "https://github.com/advisories/GHSA-3v7f-55p6-f55p",
+            "severity": "moderate",
+            "cwe": [
+              "CWE-1321"
+            ],
+            "cvss": {
+              "score": 5.3,
+              "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:L/A:N"
+            },
+            "range": "<2.3.2"
+          },
+          {
+            "source": 1115551,
+            "name": "picomatch",
+            "dependency": "picomatch",
+            "title": "Picomatch: Method Injection in POSIX Character Classes causes incorrect Glob Matching",
+            "url": "https://github.com/advisories/GHSA-3v7f-55p6-f55p",
+            "severity": "moderate",
+            "cwe": [
+              "CWE-1321"
+            ],
+            "cvss": {
+              "score": 5.3,
+              "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:L/A:N"
+            },
+            "range": ">=4.0.0 <4.0.4"
+          },
+          {
+            "source": 1115552,
+            "name": "picomatch",
+            "dependency": "picomatch",
+            "title": "Picomatch has a ReDoS vulnerability via extglob quantifiers",
+            "url": "https://github.com/advisories/GHSA-c2c7-rcm5-vvqj",
+            "severity": "high",
+            "cwe": [
+              "CWE-1333"
+            ],
+            "cvss": {
+              "score": 7.5,
+              "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H"
+            },
+            "range": "<2.3.2"
+          },
+          {
+            "source": 1115554,
+            "name": "picomatch",
+            "dependency": "picomatch",
+            "title": "Picomatch has a ReDoS vulnerability via extglob quantifiers",
+            "url": "https://github.com/advisories/GHSA-c2c7-rcm5-vvqj",
+            "severity": "high",
+            "cwe": [
+              "CWE-1333"
+            ],
+            "cvss": {
+              "score": 7.5,
+              "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H"
+            },
+            "range": ">=4.0.0 <4.0.4"
+          }
+        ],
+        "effects": [],
+        "range": "<=2.3.1 || 4.0.0 - 4.0.3",
+        "nodes": [
+          "node_modules/picomatch",
+          "node_modules/tinyglobby/node_modules/picomatch"
+        ],
+        "fixAvailable": true
+      },
+      "package": "picomatch",
+      "scanner": "dependencies"
+    },
+    {
+      "severity": "critical",
+      "message": "Vulnerable dependency: protobufjs",
+      "timestamp": "2026-05-08T00:19:05.848Z",
+      "vulnerability": {
+        "name": "protobufjs",
+        "severity": "critical",
+        "isDirect": false,
+        "via": [
+          {
+            "source": 1117571,
+            "name": "protobufjs",
+            "dependency": "protobufjs",
+            "title": "Arbitrary code execution in protobufjs",
+            "url": "https://github.com/advisories/GHSA-xq3m-2v4x-88gg",
+            "severity": "critical",
+            "cwe": [
+              "CWE-94"
+            ],
+            "cvss": {
+              "score": 9.8,
+              "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H"
+            },
+            "range": "<7.5.5"
+          }
+        ],
+        "effects": [],
+        "range": "<7.5.5",
+        "nodes": [
+          "node_modules/protobufjs"
+        ],
+        "fixAvailable": true
+      },
+      "package": "protobufjs",
+      "scanner": "dependencies"
+    },
+    {
+      "severity": "critical",
+      "message": "Vulnerable dependency: request",
+      "timestamp": "2026-05-08T00:19:05.848Z",
+      "vulnerability": {
+        "name": "request",
+        "severity": "critical",
+        "isDirect": false,
+        "via": [
+          {
+            "source": 1096727,
+            "name": "request",
+            "dependency": "request",
+            "title": "Server-Side Request Forgery in Request",
+            "url": "https://github.com/advisories/GHSA-p8p7-x288-28g6",
+            "severity": "moderate",
+            "cwe": [
+              "CWE-918"
+            ],
+            "cvss": {
+              "score": 6.1,
+              "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N"
+            },
+            "range": "<=2.88.2"
+          },
+          "form-data",
+          "qs",
+          "tough-cookie"
+        ],
+        "effects": [
+          "phantomjs-prebuilt"
+        ],
+        "range": "*",
+        "nodes": [
+          "node_modules/request"
+        ],
+        "fixAvailable": false
+      },
+      "package": "request",
+      "scanner": "dependencies"
+    },
+    {
+      "severity": "medium",
+      "message": "Sensitive file found: Environment file",
+      "timestamp": "2026-05-08T00:19:05.860Z",
+      "file": "scraping/.env",
+      "scanner": "files"
+    },
+    {
+      "severity": "medium",
+      "message": "Sensitive file found: Environment file",
+      "timestamp": "2026-05-08T00:19:05.861Z",
+      "file": "sendgrid.env",
+      "scanner": "files"
+    },
+    {
+      "severity": "medium",
+      "message": "Direct innerHTML assignment may enable XSS",
+      "timestamp": "2026-05-08T00:19:05.865Z",
+      "file": "GA4_DEBUG_SETUP_GUIDE.md",
+      "line": 351,
+      "match": ".innerHTML =",
+      "scanner": "patterns"
+    },
+    {
+      "severity": "medium",
+      "message": "Direct innerHTML assignment may enable XSS",
+      "timestamp": "2026-05-08T00:19:05.865Z",
+      "file": "GA4_DEBUG_SETUP_GUIDE.md",
+      "line": 370,
+      "match": ".innerHTML =",
+      "scanner": "patterns"
+    },
+    {
+      "severity": "medium",
+      "message": "Direct innerHTML assignment may enable XSS",
+      "timestamp": "2026-05-08T00:19:05.893Z",
+      "file": "browser-extension/content.js",
+      "line": 123,
+      "match": ".innerHTML =",
+      "scanner": "patterns"
+    },
+    {
+      "severity": "medium",
+      "message": "Direct innerHTML assignment may enable XSS",
+      "timestamp": "2026-05-08T00:19:05.894Z",
+      "file": "browser-extension/popup.js",
+      "line": 82,
+      "match": ".innerHTML =",
+      "scanner": "patterns"
+    },
+    {
+      "severity": "medium",
+      "message": "Direct innerHTML assignment may enable XSS",
+      "timestamp": "2026-05-08T00:19:05.894Z",
+      "file": "browser-extension/popup.js",
+      "line": 139,
+      "match": ".innerHTML =",
+      "scanner": "patterns"
+    },
+    {
+      "severity": "medium",
+      "message": "Direct innerHTML assignment may enable XSS",
+      "timestamp": "2026-05-08T00:19:05.894Z",
+      "file": "browser-extension/popup.js",
+      "line": 149,
+      "match": ".innerHTML =",
+      "scanner": "patterns"
+    },
+    {
+      "severity": "medium",
+      "message": "Direct innerHTML assignment may enable XSS",
+      "timestamp": "2026-05-08T00:19:05.894Z",
+      "file": "browser-extension/popup.js",
+      "line": 182,
+      "match": ".innerHTML =",
+      "scanner": "patterns"
+    },
+    {
+      "severity": "medium",
+      "message": "Direct innerHTML assignment may enable XSS",
+      "timestamp": "2026-05-08T00:19:05.894Z",
+      "file": "browser-extension/popup.js",
+      "line": 192,
+      "match": ".innerHTML =",
+      "scanner": "patterns"
+    },
+    {
+      "severity": "medium",
+      "message": "document.write can be exploited for XSS",
+      "timestamp": "2026-05-08T00:19:05.906Z",
+      "file": "debug-ga4-url.html",
+      "line": 17,
+      "match": "document.write(",
+      "scanner": "patterns"
+    },
+    {
+      "severity": "medium",
+      "message": "document.write can be exploited for XSS",
+      "timestamp": "2026-05-08T00:19:05.906Z",
+      "file": "debug-ga4-url.html",
+      "line": 18,
+      "match": "document.write(",
+      "scanner": "patterns"
+    },
+    {
+      "severity": "medium",
+      "message": "Direct innerHTML assignment may enable XSS",
+      "timestamp": "2026-05-08T00:19:05.908Z",
+      "file": "enable-ga4-debug.html",
+      "line": 207,
+      "match": ".innerHTML =",
+      "scanner": "patterns"
+    },
+    {
+      "severity": "medium",
+      "message": "Direct innerHTML assignment may enable XSS",
+      "timestamp": "2026-05-08T00:19:05.908Z",
+      "file": "enable-ga4-debug.html",
+      "line": 210,
+      "match": ".innerHTML =",
+      "scanner": "patterns"
+    },
+    {
+      "severity": "medium",
+      "message": "Direct innerHTML assignment may enable XSS",
+      "timestamp": "2026-05-08T00:19:05.910Z",
+      "file": "force-debug-mode.html",
+      "line": 90,
+      "match": ".innerHTML =",
+      "scanner": "patterns"
+    },
+    {
+      "severity": "medium",
+      "message": "Direct innerHTML assignment may enable XSS",
+      "timestamp": "2026-05-08T00:19:05.910Z",
+      "file": "force-debug-mode.html",
+      "line": 157,
+      "match": ".innerHTML =",
+      "scanner": "patterns"
+    },
+    {
+      "severity": "medium",
+      "message": "Direct innerHTML assignment may enable XSS",
+      "timestamp": "2026-05-08T00:19:05.910Z",
+      "file": "ga4-diagnostic.html",
+      "line": 178,
+      "match": ".innerHTML =",
+      "scanner": "patterns"
+    },
+    {
+      "severity": "medium",
+      "message": "Direct innerHTML assignment may enable XSS",
+      "timestamp": "2026-05-08T00:19:05.910Z",
+      "file": "ga4-diagnostic.html",
+      "line": 212,
+      "match": ".innerHTML =",
+      "scanner": "patterns"
+    },
+    {
+      "severity": "medium",
+      "message": "Direct innerHTML assignment may enable XSS",
+      "timestamp": "2026-05-08T00:19:05.910Z",
+      "file": "ga4-diagnostic.html",
+      "line": 258,
+      "match": ".innerHTML =",
+      "scanner": "patterns"
+    },
+    {
+      "severity": "medium",
+      "message": "Direct innerHTML assignment may enable XSS",
+      "timestamp": "2026-05-08T00:19:05.910Z",
+      "file": "ga4-diagnostic.html",
+      "line": 268,
+      "match": ".innerHTML =",
+      "scanner": "patterns"
+    },
+    {
+      "severity": "medium",
+      "message": "Direct innerHTML assignment may enable XSS",
+      "timestamp": "2026-05-08T00:19:05.910Z",
+      "file": "ga4-diagnostic.html",
+      "line": 299,
+      "match": ".innerHTML =",
+      "scanner": "patterns"
+    },
+    {
+      "severity": "medium",
+      "message": "Direct innerHTML assignment may enable XSS",
+      "timestamp": "2026-05-08T00:19:05.911Z",
+      "file": "ga4-diagnostic.html",
+      "line": 332,
+      "match": ".innerHTML =",
+      "scanner": "patterns"
+    },
+    {
+      "severity": "medium",
+      "message": "Direct innerHTML assignment may enable XSS",
+      "timestamp": "2026-05-08T00:19:05.911Z",
+      "file": "ga4-diagnostic.html",
+      "line": 345,
+      "match": ".innerHTML =",
+      "scanner": "patterns"
+    },
+    {
+      "severity": "medium",
+      "message": "Direct innerHTML assignment may enable XSS",
+      "timestamp": "2026-05-08T00:19:05.911Z",
+      "file": "ga4-diagnostic.html",
+      "line": 361,
+      "match": ".innerHTML =",
+      "scanner": "patterns"
+    },
+    {
+      "severity": "medium",
+      "message": "Direct innerHTML assignment may enable XSS",
+      "timestamp": "2026-05-08T00:19:05.911Z",
+      "file": "ga4-diagnostic.html",
+      "line": 381,
+      "match": ".innerHTML =",
+      "scanner": "patterns"
+    },
+    {
+      "severity": "medium",
+      "message": "Direct innerHTML assignment may enable XSS",
+      "timestamp": "2026-05-08T00:19:05.911Z",
+      "file": "ga4-diagnostic.html",
+      "line": 404,
+      "match": ".innerHTML =",
+      "scanner": "patterns"
+    },
+    {
+      "severity": "medium",
+      "message": "document.write can be exploited for XSS",
+      "timestamp": "2026-05-08T00:19:05.915Z",
+      "file": "lighthouse-report.json",
+      "line": 4108,
+      "match": "document.write(",
+      "scanner": "patterns"
+    },
+    {
+      "severity": "medium",
+      "message": "document.write can be exploited for XSS",
+      "timestamp": "2026-05-08T00:19:05.915Z",
+      "file": "lighthouse-report.json",
+      "line": 4109,
+      "match": "document.write(",
+      "scanner": "patterns"
+    },
+    {
+      "severity": "medium",
+      "message": "document.write can be exploited for XSS",
+      "timestamp": "2026-05-08T00:19:05.915Z",
+      "file": "lighthouse-report.json",
+      "line": 4109,
+      "match": "document.write(",
+      "scanner": "patterns"
+    },
+    {
+      "severity": "medium",
+      "message": "Direct innerHTML assignment may enable XSS",
+      "timestamp": "2026-05-08T00:19:05.916Z",
+      "file": "manual-debug-mode.html",
+      "line": 87,
+      "match": ".innerHTML =",
+      "scanner": "patterns"
+    },
+    {
+      "severity": "medium",
+      "message": "Direct innerHTML assignment may enable XSS",
+      "timestamp": "2026-05-08T00:19:05.916Z",
+      "file": "manual-debug-mode.html",
+      "line": 99,
+      "match": ".innerHTML =",
+      "scanner": "patterns"
+    },
+    {
+      "severity": "medium",
+      "message": "Direct innerHTML assignment may enable XSS",
+      "timestamp": "2026-05-08T00:19:05.919Z",
+      "file": "minimal-ga4-test.html",
+      "line": 28,
+      "match": ".innerHTML =",
+      "scanner": "patterns"
+    },
+    {
+      "severity": "high",
+      "message": "Use of eval() can lead to code injection",
+      "timestamp": "2026-05-08T00:19:05.923Z",
+      "file": "pages/api/kids/playground/execute.ts",
+      "line": 102,
+      "match": "eval(",
+      "scanner": "patterns"
+    },
+    {
+      "severity": "high",
+      "message": "Use of eval() can lead to code injection",
+      "timestamp": "2026-05-08T00:19:05.923Z",
+      "file": "pages/api/kids/playground/execute.ts",
+      "line": 115,
+      "match": "eval(",
+      "scanner": "patterns"
+    },
+    {
+      "severity": "medium",
+      "message": "Direct innerHTML assignment may enable XSS",
+      "timestamp": "2026-05-08T00:19:05.926Z",
+      "file": "pages/compare/index.jsx",
+      "line": 272,
+      "match": ".innerHTML =",
+      "scanner": "patterns"
+    },
+    {
+      "severity": "medium",
+      "message": "Direct innerHTML assignment may enable XSS",
+      "timestamp": "2026-05-08T00:19:05.926Z",
+      "file": "pages/compare/index.jsx",
+      "line": 350,
+      "match": ".innerHTML =",
+      "scanner": "patterns"
+    },
+    {
+      "severity": "medium",
+      "message": "Direct innerHTML assignment may enable XSS",
+      "timestamp": "2026-05-08T00:19:06.033Z",
+      "file": "public/js/siteoptz-widget.js",
+      "line": 243,
+      "match": ".innerHTML =",
+      "scanner": "patterns"
+    },
+    {
+      "severity": "medium",
+      "message": "Direct innerHTML assignment may enable XSS",
+      "timestamp": "2026-05-08T00:19:06.033Z",
+      "file": "public/js/siteoptz-widget.js",
+      "line": 294,
+      "match": ".innerHTML =",
+      "scanner": "patterns"
+    },
+    {
+      "severity": "medium",
+      "message": "Direct innerHTML assignment may enable XSS",
+      "timestamp": "2026-05-08T00:19:06.033Z",
+      "file": "public/js/siteoptz-widget.js",
+      "line": 316,
+      "match": ".innerHTML =",
+      "scanner": "patterns"
+    },
+    {
+      "severity": "medium",
+      "message": "Direct innerHTML assignment may enable XSS",
+      "timestamp": "2026-05-08T00:19:06.033Z",
+      "file": "public/js/siteoptz-widget.js",
+      "line": 320,
+      "match": ".innerHTML =",
+      "scanner": "patterns"
+    },
+    {
+      "severity": "medium",
+      "message": "Direct innerHTML assignment may enable XSS",
+      "timestamp": "2026-05-08T00:19:06.033Z",
+      "file": "public/js/siteoptz-widget.js",
+      "line": 475,
+      "match": ".innerHTML =",
+      "scanner": "patterns"
+    },
+    {
+      "severity": "medium",
+      "message": "Direct innerHTML assignment may enable XSS",
+      "timestamp": "2026-05-08T00:19:06.033Z",
+      "file": "public/js/siteoptz-widget.js",
+      "line": 520,
+      "match": ".innerHTML =",
+      "scanner": "patterns"
+    },
+    {
+      "severity": "medium",
+      "message": "Direct innerHTML assignment may enable XSS",
+      "timestamp": "2026-05-08T00:19:06.033Z",
+      "file": "public/js/siteoptz-widget.js",
+      "line": 540,
+      "match": ".innerHTML =",
+      "scanner": "patterns"
+    },
+    {
+      "severity": "medium",
+      "message": "Direct innerHTML assignment may enable XSS",
+      "timestamp": "2026-05-08T00:19:06.033Z",
+      "file": "public/js/siteoptz-widget.js",
+      "line": 548,
+      "match": ".innerHTML =",
+      "scanner": "patterns"
+    },
+    {
+      "severity": "medium",
+      "message": "Direct innerHTML assignment may enable XSS",
+      "timestamp": "2026-05-08T00:19:06.033Z",
+      "file": "public/js/siteoptz-widget.js",
+      "line": 552,
+      "match": ".innerHTML =",
+      "scanner": "patterns"
+    },
+    {
+      "severity": "high",
+      "message": "Use of eval() can lead to code injection",
+      "timestamp": "2026-05-08T00:19:06.050Z",
+      "file": "scripts/agent/security.js",
+      "line": 229,
+      "match": "eval(",
+      "scanner": "patterns"
+    },
+    {
+      "severity": "high",
+      "message": "Use of eval() can lead to code injection",
+      "timestamp": "2026-05-08T00:19:06.050Z",
+      "file": "scripts/agent/security.js",
+      "line": 232,
+      "match": "eval(",
+      "scanner": "patterns"
+    },
+    {
+      "severity": "medium",
+      "message": "Direct innerHTML assignment may enable XSS",
+      "timestamp": "2026-05-08T00:19:06.088Z",
+      "file": "ultimate-ga4-test.html",
+      "line": 73,
+      "match": ".innerHTML =",
+      "scanner": "patterns"
+    },
+    {
+      "severity": "medium",
+      "message": "Direct innerHTML assignment may enable XSS",
+      "timestamp": "2026-05-08T00:19:06.089Z",
+      "file": "ultimate-ga4-test.html",
+      "line": 102,
+      "match": ".innerHTML =",
+      "scanner": "patterns"
+    },
+    {
+      "severity": "medium",
+      "message": "Direct innerHTML assignment may enable XSS",
+      "timestamp": "2026-05-08T00:19:06.089Z",
+      "file": "ultimate-ga4-test.html",
+      "line": 110,
+      "match": ".innerHTML =",
+      "scanner": "patterns"
+    },
+    {
+      "severity": "medium",
+      "message": "Direct innerHTML assignment may enable XSS",
+      "timestamp": "2026-05-08T00:19:06.089Z",
+      "file": "ultimate-ga4-test.html",
+      "line": 126,
+      "match": ".innerHTML =",
+      "scanner": "patterns"
+    },
+    {
+      "severity": "medium",
+      "message": "Direct innerHTML assignment may enable XSS",
+      "timestamp": "2026-05-08T00:19:06.089Z",
+      "file": "ultimate-ga4-test.html",
+      "line": 129,
+      "match": ".innerHTML =",
+      "scanner": "patterns"
+    },
+    {
+      "severity": "medium",
+      "message": "Direct innerHTML assignment may enable XSS",
+      "timestamp": "2026-05-08T00:19:06.089Z",
+      "file": "ultimate-ga4-test.html",
+      "line": 174,
+      "match": ".innerHTML =",
+      "scanner": "patterns"
+    },
+    {
+      "severity": "medium",
+      "message": "Direct innerHTML assignment may enable XSS",
+      "timestamp": "2026-05-08T00:19:06.089Z",
+      "file": "ultimate-ga4-test.html",
+      "line": 201,
+      "match": ".innerHTML =",
+      "scanner": "patterns"
+    },
+    {
+      "severity": "medium",
+      "message": "Direct innerHTML assignment may enable XSS",
+      "timestamp": "2026-05-08T00:19:06.089Z",
+      "file": "ultimate-ga4-test.html",
+      "line": 204,
+      "match": ".innerHTML =",
+      "scanner": "patterns"
+    },
+    {
+      "severity": "medium",
+      "message": "Direct innerHTML assignment may enable XSS",
+      "timestamp": "2026-05-08T00:19:06.089Z",
+      "file": "ultimate-ga4-test.html",
+      "line": 208,
+      "match": ".innerHTML =",
+      "scanner": "patterns"
+    },
+    {
+      "severity": "medium",
+      "message": "Direct innerHTML assignment may enable XSS",
+      "timestamp": "2026-05-08T00:19:06.096Z",
+      "file": "wordpress-package/theme/functions-premium.php",
+      "line": 970,
+      "match": ".innerHTML =",
+      "scanner": "patterns"
+    }
+  ],
+  "recommendations": [
+    {
+      "priority": "immediate",
+      "action": "Address 57 critical security issue(s) immediately",
+      "category": "security"
+    },
+    {
+      "priority": "high",
+      "action": "Review and resolve 236 high-risk security issue(s)",
+      "category": "security"
+    },
+    {
+      "priority": "high",
+      "action": "Move hardcoded secrets to environment variables",
+      "category": "secrets"
+    },
+    {
+      "priority": "medium",
+      "action": "Update vulnerable dependencies",
+      "category": "dependencies"
+    }
+  ],
+  "metadata": {
+    "version": "1.0.0",
+    "agent_stack": true
+  }
+}

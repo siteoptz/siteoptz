@@ -7,31 +7,53 @@ import FAQSection from '../../components/comparison/FAQSection';
 import ExpertCTASection from '../../components/ExpertCTASection';
 
 export default function LoomlyReviewPage() {
-  // Schema markup for SEO
+    // Primary SoftwareApplication Schema for Google compliance
+  const softwareSchema = {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "Loomly",
+    "description": "Loomly is a collaborative social media platform with content calendars, optimization tools, and team workflows for enhanced productivity.",
+    "applicationCategory": "BusinessApplication",
+    "url": "https://www.loomly.com",
+    "operatingSystem": "Web",
+    "offers": {
+      "@type": "Offer",
+      "price": 25,
+      "priceCurrency": "USD",
+      "availability": "https://schema.org/InStock",
+      "priceSpecification": {
+        "@type": "PriceSpecification",
+        "price": 25,
+        "priceCurrency": "USD"
+      },
+      "url": "https://www.loomly.com"
+    },
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": 4.6,
+      "reviewCount": 1250,
+      "bestRating": 5,
+      "worstRating": 1
+    },
+    "author": {
+      "@type": "Organization",
+      "name": "SiteOptz",
+      "url": "https://siteoptz.ai"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "SiteOptz",
+      "url": "https://siteoptz.ai"
+    }
+  };
+
+  // Review Schema (secondary)
   const reviewSchema = {
     "@context": "https://schema.org",
     "@type": "Review",
     "itemReviewed": {
       "@type": "SoftwareApplication",
-      "name": "Loomly",
-      "description": "Loomly is a collaborative social media platform with content calendars, optimization tools, and team workflows for enhanced productivity.",
-      "applicationCategory": "Social Media",
-      "url": "https://www.loomly.com",
-      "operatingSystem": "Web, iOS, Android",
-      "offers": {
-        "@type": "Offer",
-        "price": "25",
-        "priceCurrency": "USD",
-        "availability": "https://schema.org/InStock",
-        "priceValidUntil": new Date(Date.now() + 365 * 24 * 60 * 60 * 1000).toISOString().split('T')[0]
-      },
-      "aggregateRating": {
-        "@type": "AggregateRating",
-        "ratingValue": 4.6,
-        "reviewCount": 1250,
-        "bestRating": 5,
-        "worstRating": 1
-      }
+      "name": "Loomly"
     },
     "author": {
       "@type": "Organization",
@@ -44,7 +66,9 @@ export default function LoomlyReviewPage() {
       "bestRating": 5,
       "worstRating": 1
     },
-    "reviewBody": "Comprehensive Loomly review covering features, pricing, and alternatives for social media management."
+    "reviewBody": "Comprehensive Loomly review covering features, pricing, and alternatives.",
+    "datePublished": "2025-01-15",
+    "dateModified": new Date().toISOString().split('T')[0]
   };
 
   const breadcrumbSchema = {

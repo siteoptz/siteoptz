@@ -54,7 +54,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
         let testResponse;
         let apiVersion = 'unknown';
         
-        // Try v19 (newest according to documentation)
+        // Try v19 (newest according to documentation) - without login-customer-id first
         testResponse = await fetch('https://googleads.googleapis.com/v19/customers:listAccessibleCustomers', {
           method: 'GET',
           headers: {
@@ -63,6 +63,21 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
             'Content-Type': 'application/json',
           },
         });
+        
+        // If v19 fails, try v16 which is commonly supported
+        if (!testResponse.ok) {
+          testResponse = await fetch('https://googleads.googleapis.com/v16/customers:listAccessibleCustomers', {
+            method: 'GET',
+            headers: {
+              'Authorization': `Bearer ${accessToken}`,
+              'developer-token': process.env.GOOGLE_ADS_DEVELOPER_TOKEN,
+              'Content-Type': 'application/json',
+            },
+          });
+          if (testResponse.ok) {
+            apiVersion = 'v16';
+          }
+        }
         
         if (testResponse.ok) {
           apiVersion = 'v19';

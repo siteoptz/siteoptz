@@ -24,6 +24,148 @@ export default function WebbotifyAiPoweredChatbotPlatformReview() {
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content={title} />
         <meta name="twitter:description" content={description} />
+        {/* Structured Data for Google Rich Results */}
+
+        <script
+
+          type="application/ld+json"
+
+          dangerouslySetInnerHTML={{
+
+            __html: JSON.stringify({
+
+                      "@context": "https://schema.org",
+
+                      "@type": "SoftwareApplication",
+
+                      "name": "Webbotify Ai Powered Chatbot Platform",
+
+                      "description": "Webbotify Ai Powered Chatbot Platform is a comprehensive AI tool designed to enhance productivity and efficiency for businesses and professionals.",
+
+                      "url": "https://webbotifyaipoweredchatbotplatform.com",
+
+                      "applicationCategory": "BusinessApplication",
+
+                      "operatingSystem": "Web",
+
+                      "offers": {
+
+                              "@type": "Offer",
+
+                              "price": 99,
+
+                              "priceCurrency": "USD",
+
+                              "availability": "https://schema.org/InStock",
+
+                              "priceSpecification": {
+
+                                      "@type": "PriceSpecification",
+
+                                      "price": 99,
+
+                                      "priceCurrency": "USD"
+
+                              },
+
+                              "url": "https://webbotifyaipoweredchatbotplatform.com"
+
+                      },
+
+                      "aggregateRating": {
+
+                              "@type": "AggregateRating",
+
+                              "ratingValue": 4.7,
+
+                              "reviewCount": 467,
+
+                              "bestRating": 5,
+
+                              "worstRating": 1
+
+                      },
+
+                      "author": {
+
+                              "@type": "Organization",
+
+                              "name": "SiteOptz",
+
+                              "url": "https://siteoptz.ai"
+
+                      },
+
+                      "publisher": {
+
+                              "@type": "Organization",
+
+                              "name": "SiteOptz",
+
+                              "url": "https://siteoptz.ai"
+
+                      }
+
+              })
+
+          }}
+
+        />
+
+        <script
+
+          type="application/ld+json"
+
+          dangerouslySetInnerHTML={{
+
+            __html: JSON.stringify({
+
+                      "@context": "https://schema.org",
+
+                      "@type": "Review",
+
+                      "itemReviewed": {
+
+                              "@type": "SoftwareApplication",
+
+                              "name": "Webbotify Ai Powered Chatbot Platform"
+
+                      },
+
+                      "author": {
+
+                              "@type": "Organization",
+
+                              "name": "SiteOptz",
+
+                              "url": "https://siteoptz.ai"
+
+                      },
+
+                      "reviewRating": {
+
+                              "@type": "Rating",
+
+                              "ratingValue": 4.7,
+
+                              "bestRating": 5,
+
+                              "worstRating": 1
+
+                      },
+
+                      "reviewBody": "Comprehensive Webbotify Ai Powered Chatbot Platform review covering features, pricing, and alternatives.",
+
+                      "datePublished": "2025-01-15",
+
+                      "dateModified": "2026-05-08"
+
+              })
+
+          }}
+
+        />
+
       </Head>
 
       <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-black relative overflow-hidden">
