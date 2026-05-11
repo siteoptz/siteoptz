@@ -410,7 +410,7 @@ export default function HomePage({}: HomePageProps) {
                     "Unclear which AI tools actually drive ROI for your business model",
                     "Tool sprawl with multiple AI subscriptions that don't talk to each other", 
                     "Slow implementation because your team lacks technical AI expertise",
-                    "Missing SEO and website performance opportunities from AI integration"
+                    "No documentation of which AI tools touch customer data — blocking enterprise deals and Series A diligence"
                   ].map((pain, index) => (
                     <div key={index} className="flex items-start space-x-3">
                       <div className="w-6 h-6 rounded-full bg-red-500/20 border border-red-500 flex items-center justify-center flex-shrink-0 mt-1">

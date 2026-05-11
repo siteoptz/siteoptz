@@ -35,7 +35,7 @@ const HeroSection: React.FC = () => {
           {/* Subtitle */}
           <p className="text-lg lg:text-xl text-gray-400 max-w-4xl mx-auto mb-16 leading-relaxed font-normal tracking-wide">
             FORTUNE 500 AI IMPLEMENTATION EXPERTS / 500+ AI SOLUTIONS DEPLOYED / $50M+ PRODUCTIVITY GAINS GENERATED<br/>
-            CUSTOM AI TRANSFORMATION ROADMAP / MEASURABLE ROI IN 90 DAYS
+            CUSTOM AI ROADMAP · MEASURABLE ROI IN 90 DAYS · AUDIT-READY GOVERNANCE IN 14
           </p>
 
           {/* Primary CTA */}
@@ -53,7 +53,15 @@ const HeroSection: React.FC = () => {
           </div>
 
           {/* Secondary CTA */}
-          <div className="flex flex-col sm:flex-row gap-6 justify-center items-center mb-12">
+          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">
+            <Link 
+              href="/ai-governance#scorecard"
+              className="group inline-flex items-center gap-3 px-6 py-2.5 bg-gradient-to-r from-orange-600 to-red-600 text-white rounded-lg font-semibold text-sm hover:from-orange-700 hover:to-red-700 transform hover:scale-105 transition-all duration-200 shadow-lg hover:shadow-xl"
+            >
+              <Shield className="w-5 h-5" />
+              Run Free AI Risk Scorecard
+            </Link>
+            <span className="text-gray-400 font-medium">or</span>
             <Link 
               href="/tools"
               className="group inline-flex items-center gap-3 px-6 py-2.5 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-lg font-semibold text-sm hover:from-blue-700 hover:to-purple-700 transform hover:scale-105 transition-all duration-200 shadow-lg hover:shadow-xl"
@@ -61,18 +69,10 @@ const HeroSection: React.FC = () => {
               <TrendingUp className="w-5 h-5" />
               View Our Tool Database
             </Link>
-            <span className="text-gray-400 font-medium">or</span>
-            <Link 
-              href="/compare"
-              className="inline-flex items-center gap-2 px-6 py-2.5 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-lg font-semibold text-sm hover:from-blue-700 hover:to-purple-700 transform hover:scale-105 transition-all duration-200 shadow-lg hover:shadow-xl"
-            >
-              Compare Solutions
-              <ArrowRight className="w-4 h-4" />
-            </Link>
           </div>
 
           {/* Value Props */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12 max-w-4xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12 max-w-5xl mx-auto">
             <div className="card-professional">
               <div className="text-2xl font-bold mb-2" style={{color: 'var(--color-text-primary)'}}>AI Strategy Audit</div>
               <div className="text-sm" style={{color: 'var(--color-text-secondary)'}}>Complete current-state analysis & gaps identification</div>
@@ -87,6 +87,11 @@ const HeroSection: React.FC = () => {
               <div className="text-2xl font-bold mb-2" style={{color: 'var(--color-text-primary)'}}>Executive Briefing</div>
               <div className="text-sm" style={{color: 'var(--color-text-secondary)'}}>C-suite presentation & budget justification</div>
               <div className="text-xs font-semibold mt-1" style={{color: 'var(--color-text-accent)'}}>$2,000 Value</div>
+            </div>
+            <div className="card-professional">
+              <div className="text-2xl font-bold mb-2" style={{color: 'var(--color-text-primary)'}}>AI Risk Scorecard</div>
+              <div className="text-sm" style={{color: 'var(--color-text-secondary)'}}>Compliance risk assessment & mitigation plan</div>
+              <div className="text-xs font-semibold mt-1" style={{color: 'var(--color-text-accent)'}}>$1,500 Value</div>
             </div>
           </div>
 
