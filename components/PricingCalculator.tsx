@@ -26,6 +26,8 @@ interface PricingCalculatorProps {
   plans?: PricingPlan[];
   toolName?: string;
   enablePersistence?: boolean;
+  // AI Governance specific props
+  complianceColumn?: string[];
 }
 
 export default function PricingCalculator({ 
@@ -33,7 +35,8 @@ export default function PricingCalculator({
   onEmailSubmit, 
   plans, 
   toolName, 
-  enablePersistence 
+  enablePersistence,
+  complianceColumn
 }: PricingCalculatorProps) {
   // Convert tools to plans format if tools are provided
   const convertedPlans = tools ? tools.flatMap(tool => 

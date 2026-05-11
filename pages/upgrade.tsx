@@ -104,18 +104,18 @@ const UpgradePage: React.FC = () => {
       name: 'Free',
       price: 0,
       period: 'forever',
-      description: 'Get started with daily AI insights',
+      description: 'Get started with AI compliance basics',
       features: [
-        'Daily AI tool spotlight',
-        'Basic tool comparisons',
-        'Limited to 3 comparisons/day',
+        'AI Risk Self-Assessment',
+        '10-question scorecard',
+        'Basic risk identification',
         'Community support',
-        'Basic implementation guides'
+        'Basic compliance guides'
       ],
       limitations: [
         'No expert consultation',
-        'Limited tool access',
-        'No team features',
+        'Limited compliance features',
+        'No audit documentation',
         'No priority support'
       ],
       ctaText: 'Current Plan',
@@ -129,14 +129,14 @@ const UpgradePage: React.FC = () => {
       period: billingCycle === 'yearly' ? '/year' : '/month',
       description: 'Perfect for growing businesses',
       features: [
-        'Unlimited AI tool comparisons',
-        'Advanced filtering & search',
-        'Implementation roadmaps',
+        'AI tool inventory template',
+        '5 starter policy templates',
+        'Basic compliance checklist',
         'Weekly expert webinars',
         'Priority email support',
-        'ROI tracking dashboard',
-        'Export comparison reports',
-        'Custom tool recommendations'
+        'Risk assessment dashboard',
+        'Export compliance reports',
+        'Custom policy recommendations'
       ],
       ctaText: 'Upgrade Now',
       color: 'blue',
@@ -148,17 +148,17 @@ const UpgradePage: React.FC = () => {
       price: billingCycle === 'yearly' ? 1997 : 199,
       originalPrice: billingCycle === 'yearly' ? 2997 : 299,
       period: billingCycle === 'yearly' ? '/year' : '/month',
-      description: 'For teams serious about AI transformation',
+      description: 'For teams serious about AI compliance',
       features: [
         'Everything in Starter',
-        '1-on-1 expert consultations (4/month)',
-        'Custom implementation plans',
+        'Full Compliance Copilot dashboard',
+        'Risk register generation',
+        'Framework mapping (NIST, ISO)',
         'Team collaboration tools',
-        'API access',
-        'White-label reports',
-        'Advanced analytics',
+        'White-label audit reports',
+        'Advanced risk analytics',
         'Priority phone support',
-        'Quarterly business reviews'
+        'Quarterly compliance reviews'
       ],
       ctaText: 'Upgrade Now',
       color: 'purple',
@@ -168,17 +168,17 @@ const UpgradePage: React.FC = () => {
       name: 'Enterprise',
       price: billingCycle === 'yearly' ? 4997 : 499,
       period: billingCycle === 'yearly' ? '/year' : '/month',
-      description: 'Complete AI transformation partner',
+      description: 'Complete AI governance partner',
       features: [
         'Everything in Pro',
-        'Unlimited consultations',
+        'Audit-ready documentation package',
+        'Customer/investor data room',
+        'Quarterly compliance review',
         'Dedicated success manager',
-        'Custom training programs',
-        'SLA guarantees',
         'Custom integrations',
-        'On-site workshops',
+        'On-site compliance workshops',
         'Executive reporting',
-        'Strategic planning sessions'
+        'Strategic compliance planning'
       ],
       ctaText: 'Upgrade Now',
       color: 'gradient',
@@ -215,19 +215,19 @@ const UpgradePage: React.FC = () => {
     {
       name: "Sarah Chen",
       role: "CTO at TechStart",
-      content: "SiteOptz helped us save 20+ hours per week on AI tool research. The ROI was immediate.",
+      content: "We had three enterprise deals stalled on AI questionnaires we couldn't answer. SiteOptz turned that around in two weeks. All three closed.",
       rating: 5
     },
     {
       name: "Michael Rodriguez",
       role: "CEO at GrowthCo",
-      content: "The expert consultations alone are worth 10x the price. Game-changing for our AI strategy.",
+      content: "Our Series B data room was missing exactly one thing. SiteOptz filled it in 10 days.",
       rating: 5
     },
     {
       name: "Emily Watson",
       role: "Operations Director",
-      content: "We increased productivity by 35% in just 3 months. The implementation roadmaps are gold.",
+      content: "The compliance documentation package saved us 6 months of work and passed our SOC 2 audit on the first try.",
       rating: 5
     }
   ];
@@ -320,14 +320,14 @@ const UpgradePage: React.FC = () => {
   return (
     <>
       <Head>
-        <title>Upgrade Your Plan - SiteOptz AI Tools Platform</title>
-        <meta name="description" content="Unlock unlimited AI tool comparisons, expert consultations, and implementation support. Transform your business with AI." />
+        <title>Upgrade Your Plan - SiteOptz AI Governance & Compliance Platform</title>
+        <meta name="description" content="Unlock comprehensive AI compliance features, expert consultations, and governance documentation. Secure enterprise deals with audit-ready AI governance." />
         
         {/* Canonical URL and Open Graph to prevent duplicate content */}
         <link rel="canonical" href="https://siteoptz.ai/upgrade" />
         <meta property="og:url" content="https://siteoptz.ai/upgrade" />
-        <meta property="og:title" content="Upgrade Your Plan - SiteOptz AI Tools Platform" />
-        <meta property="og:description" content="Unlock unlimited AI tool comparisons, expert consultations, and implementation support. Transform your business with AI." />
+        <meta property="og:title" content="Upgrade Your Plan - SiteOptz AI Governance & Compliance Platform" />
+        <meta property="og:description" content="Unlock comprehensive AI compliance features, expert consultations, and governance documentation. Secure enterprise deals with audit-ready AI governance." />
         <meta property="og:type" content="website" />
         
         {/* Additional meta tags to reinforce canonical domain */}
@@ -345,13 +345,13 @@ const UpgradePage: React.FC = () => {
             </div>
             
             <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
-              Stop Wasting Months on 
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-600"> AI Tool Research</span>
+              Stop Losing Deals on 
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-600"> AI Compliance Questions</span>
             </h1>
             
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Get expert guidance, proven frameworks, and implementation support to transform your business with AI. 
-              Join 10,000+ companies already seeing results.
+              Get audit-ready AI governance documentation, expert compliance guidance, and proven frameworks to secure enterprise deals. 
+              Join 10,000+ companies already passing their AI audits.
             </p>
 
             {/* Current Plan Status */}
@@ -371,18 +371,18 @@ const UpgradePage: React.FC = () => {
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-16">
               <div className="bg-gray-800/50 backdrop-blur-sm rounded-lg p-6 border border-gray-700">
                 <Clock className="w-10 h-10 text-blue-400 mb-4 mx-auto" />
-                <h3 className="text-lg font-semibold text-white mb-2">Save 20+ Hours/Week</h3>
-                <p className="text-gray-400 text-sm">Stop endless research. Get instant, curated recommendations.</p>
+                <h3 className="text-lg font-semibold text-white mb-2">Audit-Ready in 14 Days</h3>
+                <p className="text-gray-400 text-sm">Stop failed compliance audits. Get instant, audit-ready documentation.</p>
               </div>
               <div className="bg-gray-800/50 backdrop-blur-sm rounded-lg p-6 border border-gray-700">
                 <TrendingUp className="w-10 h-10 text-green-400 mb-4 mx-auto" />
-                <h3 className="text-lg font-semibold text-white mb-2">30% Productivity Gain</h3>
-                <p className="text-gray-400 text-sm">Implement the right tools with expert guidance.</p>
+                <h3 className="text-lg font-semibold text-white mb-2">Close Enterprise Deals</h3>
+                <p className="text-gray-400 text-sm">Pass procurement reviews with audit-ready documentation.</p>
               </div>
               <div className="bg-gray-800/50 backdrop-blur-sm rounded-lg p-6 border border-gray-700">
                 <DollarSign className="w-10 h-10 text-yellow-400 mb-4 mx-auto" />
-                <h3 className="text-lg font-semibold text-white mb-2">10x ROI Guaranteed</h3>
-                <p className="text-gray-400 text-sm">Or your money back. We&apos;re that confident.</p>
+                <h3 className="text-lg font-semibold text-white mb-2">Secure Series A Funding</h3>
+                <p className="text-gray-400 text-sm">Complete data rooms with AI governance documentation.</p>
               </div>
             </div>
 
@@ -542,20 +542,20 @@ const UpgradePage: React.FC = () => {
                 Compare Plans
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Choose the plan that matches your AI implementation needs. All plans include our core AI tool database and expert analysis.
+                Choose the plan that matches your AI compliance needs. All plans include our AI Compliance Copilot and expert governance support.
               </p>
             </div>
 
             {/* Feature Comparison Tables */}
             <div className="space-y-16">
               
-              {/* AI Tool Discovery & Analysis */}
+              {/* AI Compliance & Risk Assessment */}
               <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-gray-700">
                 <h3 className="text-2xl font-bold text-white mb-8 text-center">
-                  AI Tool Discovery & Analysis
+                  AI Compliance & Risk Assessment
                 </h3>
                 <p className="text-gray-400 text-center mb-8 max-w-2xl mx-auto">
-                  Stop wasting months researching AI tools. Get instant access to pre-validated tools with 50+ hours of analysis already done for you.
+                  Stop failing enterprise procurement with missing AI governance documentation. Get audit-ready compliance documentation in 14 days.
                 </p>
                 
                 <div className="overflow-x-auto">
@@ -571,42 +571,42 @@ const UpgradePage: React.FC = () => {
                     </thead>
                     <tbody className="text-sm">
                       <tr className="border-b border-gray-800">
-                        <td className="py-4 px-6 text-gray-300">Daily AI Tool Spotlight</td>
+                        <td className="py-4 px-6 text-gray-300">AI Risk Self-Assessment</td>
                         <td className="text-center py-4 px-6 text-green-400">✓</td>
                         <td className="text-center py-4 px-6 text-green-400 bg-blue-500/10">✓</td>
                         <td className="text-center py-4 px-6 text-green-400">✓</td>
                         <td className="text-center py-4 px-6 text-green-400">✓</td>
                       </tr>
                       <tr className="border-b border-gray-800">
-                        <td className="py-4 px-6 text-gray-300">AI Tool Database Access</td>
-                        <td className="text-center py-4 px-6 text-gray-500">Limited (3/day)</td>
-                        <td className="text-center py-4 px-6 text-green-400 bg-blue-500/10">Unlimited</td>
+                        <td className="py-4 px-6 text-gray-300">AI Policy Templates</td>
+                        <td className="text-center py-4 px-6 text-gray-500">Basic (1 template)</td>
+                        <td className="text-center py-4 px-6 text-green-400 bg-blue-500/10">5 Templates</td>
                         <td className="text-center py-4 px-6 text-green-400">Unlimited</td>
                         <td className="text-center py-4 px-6 text-green-400">Unlimited</td>
                       </tr>
                       <tr className="border-b border-gray-800">
-                        <td className="py-4 px-6 text-gray-300">Advanced Filtering & Search</td>
+                        <td className="py-4 px-6 text-gray-300">Compliance Framework Mapping</td>
                         <td className="text-center py-4 px-6 text-gray-500">Basic</td>
                         <td className="text-center py-4 px-6 text-green-400 bg-blue-500/10">✓</td>
                         <td className="text-center py-4 px-6 text-green-400">✓</td>
                         <td className="text-center py-4 px-6 text-green-400">✓</td>
                       </tr>
                       <tr className="border-b border-gray-800">
-                        <td className="py-4 px-6 text-gray-300">Trend Analysis & Market Signals</td>
-                        <td className="text-center py-4 px-6 text-gray-500">Daily Only</td>
+                        <td className="py-4 px-6 text-gray-300">Risk Register Generation</td>
+                        <td className="text-center py-4 px-6 text-gray-500">Manual</td>
                         <td className="text-center py-4 px-6 text-green-400 bg-blue-500/10">✓</td>
                         <td className="text-center py-4 px-6 text-green-400">✓</td>
                         <td className="text-center py-4 px-6 text-green-400">✓</td>
                       </tr>
                       <tr className="border-b border-gray-800">
-                        <td className="py-4 px-6 text-gray-300">Custom Tool Recommendations</td>
+                        <td className="py-4 px-6 text-gray-300">Custom Compliance Reports</td>
                         <td className="text-center py-4 px-6 text-gray-500">-</td>
                         <td className="text-center py-4 px-6 text-green-400 bg-blue-500/10">✓</td>
                         <td className="text-center py-4 px-6 text-green-400">✓</td>
                         <td className="text-center py-4 px-6 text-green-400">✓</td>
                       </tr>
                       <tr className="border-b border-gray-800">
-                        <td className="py-4 px-6 text-gray-300">Pro Tool Picks (Top 5%)</td>
+                        <td className="py-4 px-6 text-gray-300">Full Compliance Copilot Dashboard</td>
                         <td className="text-center py-4 px-6 text-gray-500">-</td>
                         <td className="text-center py-4 px-6 text-gray-500">-</td>
                         <td className="text-center py-4 px-6 text-green-400">✓</td>
@@ -617,13 +617,13 @@ const UpgradePage: React.FC = () => {
                 </div>
               </div>
 
-              {/* Implementation & Strategy */}
+              {/* Governance Documentation & Support */}
               <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-gray-700">
                 <h3 className="text-2xl font-bold text-white mb-8 text-center">
-                  Implementation & Strategy
+                  Governance Documentation & Support
                 </h3>
                 <p className="text-gray-400 text-center mb-8 max-w-2xl mx-auto">
-                  50+ hours of implementation research done for you on every AI tool. Get expert guidance to implement faster and avoid costly mistakes.
+                  Complete audit-ready documentation packages with expert support. Get governance frameworks mapped and policies ready for any enterprise procurement.
                 </p>
                 
                 <div className="overflow-x-auto">
@@ -639,42 +639,42 @@ const UpgradePage: React.FC = () => {
                     </thead>
                     <tbody className="text-sm">
                       <tr className="border-b border-gray-800">
-                        <td className="py-4 px-6 text-gray-300">Implementation Roadmaps</td>
-                        <td className="text-center py-4 px-6 text-gray-500">Basic (3 guides)</td>
-                        <td className="text-center py-4 px-6 text-green-400 bg-blue-500/10">50+ Guides</td>
+                        <td className="py-4 px-6 text-gray-300">Audit-Ready Documentation Package</td>
+                        <td className="text-center py-4 px-6 text-gray-500">Basic (self-assessment)</td>
+                        <td className="text-center py-4 px-6 text-green-400 bg-blue-500/10">Policy Templates</td>
                         <td className="text-center py-4 px-6 text-green-400">50+ Guides</td>
                         <td className="text-center py-4 px-6 text-green-400">50+ Guides</td>
                       </tr>
                       <tr className="border-b border-gray-800">
-                        <td className="py-4 px-6 text-gray-300">ROI Analysis & Calculations</td>
-                        <td className="text-center py-4 px-6 text-gray-500">Daily Only</td>
+                        <td className="py-4 px-6 text-gray-300">Framework Mapping (NIST, ISO, SOC 2)</td>
+                        <td className="text-center py-4 px-6 text-gray-500">Basic</td>
                         <td className="text-center py-4 px-6 text-green-400 bg-blue-500/10">✓</td>
                         <td className="text-center py-4 px-6 text-green-400">✓</td>
                         <td className="text-center py-4 px-6 text-green-400">✓</td>
                       </tr>
                       <tr className="border-b border-gray-800">
-                        <td className="py-4 px-6 text-gray-300">Integration Planning</td>
-                        <td className="text-center py-4 px-6 text-gray-500">Daily Only</td>
+                        <td className="py-4 px-6 text-gray-300">Customer/Investor Data Room Support</td>
+                        <td className="text-center py-4 px-6 text-gray-500">Basic</td>
                         <td className="text-center py-4 px-6 text-green-400 bg-blue-500/10">✓</td>
                         <td className="text-center py-4 px-6 text-green-400">✓</td>
                         <td className="text-center py-4 px-6 text-green-400">✓</td>
                       </tr>
                       <tr className="border-b border-gray-800">
-                        <td className="py-4 px-6 text-gray-300">Risk Assessment</td>
-                        <td className="text-center py-4 px-6 text-gray-500">Daily Only</td>
+                        <td className="py-4 px-6 text-gray-300">Quarterly Compliance Reviews</td>
+                        <td className="text-center py-4 px-6 text-gray-500">Manual</td>
                         <td className="text-center py-4 px-6 text-green-400 bg-blue-500/10">✓</td>
                         <td className="text-center py-4 px-6 text-green-400">✓</td>
                         <td className="text-center py-4 px-6 text-green-400">✓</td>
                       </tr>
                       <tr className="border-b border-gray-800">
-                        <td className="py-4 px-6 text-gray-300">Custom Implementation Plans</td>
+                        <td className="py-4 px-6 text-gray-300">Custom Compliance Consultation</td>
                         <td className="text-center py-4 px-6 text-gray-500">-</td>
                         <td className="text-center py-4 px-6 text-gray-500">-</td>
                         <td className="text-center py-4 px-6 text-green-400">✓</td>
                         <td className="text-center py-4 px-6 text-green-400">✓</td>
                       </tr>
                       <tr className="border-b border-gray-800">
-                        <td className="py-4 px-6 text-gray-300">Strategic Planning Sessions</td>
+                        <td className="py-4 px-6 text-gray-300">On-Site Compliance Workshops</td>
                         <td className="text-center py-4 px-6 text-gray-500">-</td>
                         <td className="text-center py-4 px-6 text-gray-500">-</td>
                         <td className="text-center py-4 px-6 text-gray-500">-</td>
@@ -691,7 +691,7 @@ const UpgradePage: React.FC = () => {
                   Expert Support & Consulting
                 </h3>
                 <p className="text-gray-400 text-center mb-8 max-w-2xl mx-auto">
-                  Get expert guidance to implement AI tools faster and avoid costly mistakes. Our AI implementation experts are here to help.
+                  Get expert compliance guidance to pass audits and secure enterprise deals. Our AI governance experts are here to help you succeed.
                 </p>
                 
                 <div className="overflow-x-auto">
@@ -721,14 +721,14 @@ const UpgradePage: React.FC = () => {
                         <td className="text-center py-4 px-6 text-green-400">✓</td>
                       </tr>
                       <tr className="border-b border-gray-800">
-                        <td className="py-4 px-6 text-gray-300">Weekly Expert Webinars</td>
+                        <td className="py-4 px-6 text-gray-300">Weekly Compliance Webinars</td>
                         <td className="text-center py-4 px-6 text-gray-500">-</td>
                         <td className="text-center py-4 px-6 text-green-400 bg-blue-500/10">✓</td>
                         <td className="text-center py-4 px-6 text-green-400">✓</td>
                         <td className="text-center py-4 px-6 text-green-400">✓</td>
                       </tr>
                       <tr className="border-b border-gray-800">
-                        <td className="py-4 px-6 text-gray-300">1-on-1 Expert Consultations</td>
+                        <td className="py-4 px-6 text-gray-300">1-on-1 Compliance Consultations</td>
                         <td className="text-center py-4 px-6 text-gray-500">-</td>
                         <td className="text-center py-4 px-6 text-gray-500">-</td>
                         <td className="text-center py-4 px-6 text-green-400">4/month</td>

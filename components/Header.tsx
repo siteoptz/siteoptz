@@ -148,6 +148,12 @@ const Header: React.FC = () => {
       isCategory: true
     },
     { 
+      name: 'AI Governance', 
+      href: '/ai-governance', 
+      current: router.pathname === '/ai-governance',
+      hasDropdown: false
+    },
+    { 
       name: 'All Tools', 
       href: '/tools', 
       current: router.pathname.startsWith('/tools'),
@@ -508,6 +514,19 @@ const Header: React.FC = () => {
                 display: 'block',
                 fontWeight: '600'
               }}>Top AI Tools</Link>
+              
+              <Link href="/ai-governance" onClick={closeMenu} style={{ 
+                color: router.pathname === '/ai-governance' ? '#06b6d4' : 'white',
+                backgroundColor: router.pathname === '/ai-governance' ? 'rgba(6, 182, 212, 0.1)' : 'transparent',
+                textDecoration: 'none', 
+                fontSize: '18px', 
+                padding: '16px', 
+                borderRadius: '8px',
+                borderBottom: '1px solid rgba(255,255,255,0.1)',
+                transition: 'all 0.2s ease',
+                display: 'block',
+                fontWeight: '600'
+              }}>AI Governance</Link>
               
               <Link href="/tools" onClick={closeMenu} style={{ 
                 color: router.pathname.startsWith('/tools') ? '#06b6d4' : 'white',
