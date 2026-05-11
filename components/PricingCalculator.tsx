@@ -19,6 +19,11 @@ interface Tool {
   [key: string]: any;
 }
 
+interface AdditionalColumn {
+  label: string;
+  rowsByPlanId: Record<string, string>;
+}
+
 interface PricingCalculatorProps {
   tools?: Tool[];
   onEmailSubmit?: (email: string, data?: any) => void;
@@ -28,6 +33,7 @@ interface PricingCalculatorProps {
   enablePersistence?: boolean;
   // AI Governance specific props
   complianceColumn?: string[];
+  additionalColumn?: AdditionalColumn;
 }
 
 export default function PricingCalculator({ 
@@ -36,7 +42,8 @@ export default function PricingCalculator({
   plans, 
   toolName, 
   enablePersistence,
-  complianceColumn
+  complianceColumn,
+  additionalColumn
 }: PricingCalculatorProps) {
   // Convert tools to plans format if tools are provided
   const convertedPlans = tools ? tools.flatMap(tool => 
@@ -289,6 +296,41 @@ export default function PricingCalculator({
               Apply
             </button>
           </div>
+        </div>
+      )}
+
+      {/* Additional column comparison table */}
+      {additionalColumn && (
+        <div className="mt-6">
+          <h3 className="text-lg font-medium mb-4">{additionalColumn.label}</h3>
+          <table className="w-full">
+            <thead>
+              <tr className="border-b border-gray-700">
+                <th className="text-left py-4 px-6 text-gray-400 font-medium">Plan</th>
+                <th className="text-left py-4 px-6 text-gray-400 font-medium">Price</th>
+                <th className="text-left py-4 px-6 text-gray-400 font-medium">{additionalColumn.label}</th>
+              </tr>
+            </thead>
+            <tbody className="text-sm">
+              {convertedPlans.map((plan) => {
+                const planId = plan.name;
+                const additionalContent = additionalColumn.rowsByPlanId[planId];
+                
+                // Dev-only validation warning
+                if (process.env.NODE_ENV === 'development' && !additionalContent) {
+                  console.warn(`AdditionalColumn missing content for plan ID: "${planId}"`);
+                }
+                
+                return (
+                  <tr key={planId} className="border-b border-gray-800">
+                    <td className="py-4 px-6 text-gray-300">{plan.name}</td>
+                    <td className="py-4 px-6 text-gray-300">{plan.price}</td>
+                    <td className="py-4 px-6 text-gray-300">{additionalContent || ''}</td>
+                  </tr>
+                );
+              })}
+            </tbody>
+          </table>
         </div>
       )}
 
