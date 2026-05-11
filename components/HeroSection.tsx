@@ -33,9 +33,9 @@ const HeroSection: React.FC = () => {
           </h1>
 
           {/* Subtitle */}
-          <p className="text-lg lg:text-xl text-gray-400 max-w-4xl mx-auto mb-16 leading-relaxed font-normal tracking-wide">
+          <p className="text-lg lg:text-xl text-gray-400 max-w-5xl mx-auto mb-16 leading-relaxed font-normal tracking-wide">
             FORTUNE 500 AI IMPLEMENTATION EXPERTS / 500+ AI SOLUTIONS DEPLOYED / $50M+ PRODUCTIVITY GAINS GENERATED<br/>
-            CUSTOM AI ROADMAP · MEASURABLE ROI IN 90 DAYS · AUDIT-READY GOVERNANCE IN 14
+            CUSTOM AI ROADMAP · MEASURABLE ROI IN 90 DAYS · AUDIT-READY&nbsp;GOVERNANCE&nbsp;IN&nbsp;14
           </p>
 
           {/* Primary CTA */}

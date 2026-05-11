@@ -18,7 +18,7 @@ import {
 interface LeadMagnetModalProps {
   isOpen: boolean;
   onClose: () => void;
-  resourceType: 'playbook' | 'framework' | 'both' | 'ai-chatbot-implementation' | 'ai-content-generation' | 'ai-data-analysis' | 'ai-healthcare-2024' | 'gpt4-turbo-business' | 'q4-2024-ai-market' | 'claude3-vs-gpt4' | 'fintech-ai-2024' | 'manufacturing-ai-2024' | 'claude-ai-business-setup' | 'ai-tools-comparison-video' | 'ai-integration-masterclass';
+  resourceType: 'playbook' | 'framework' | 'both' | 'ai-chatbot-implementation' | 'ai-content-generation' | 'ai-data-analysis' | 'ai-healthcare-2024' | 'gpt4-turbo-business' | 'q4-2024-ai-market' | 'claude3-vs-gpt4' | 'fintech-ai-2024' | 'manufacturing-ai-2024' | 'claude-ai-business-setup' | 'ai-tools-comparison-video' | 'ai-integration-masterclass' | 'founders-guide';
   source?: string;
 }
 
@@ -253,6 +253,20 @@ const LeadMagnetModal: React.FC<LeadMagnetModalProps> = ({
       ],
       downloadUrl: '/videos/ai-integration-masterclass',
       color: 'orange'
+    },
+    'founders-guide': {
+      title: "The Founder's Guide to AI Compliance Before Your Series A",
+      subtitle: '15-page comprehensive guide',
+      description: 'What to fix in the next 30 days so AI questions stop killing your deals. Based on 500+ real implementations.',
+      benefits: [
+        'The 5 questions every modern VC will ask about AI',
+        '7 compliance gaps that kill enterprise deals',
+        'Your minimum viable AI governance program',
+        'Sample AI Acceptable Use Policy (copy-paste ready)',
+        '30-day action plan with week-by-week implementation'
+      ],
+      downloadUrl: '/founders-guide-placeholder.pdf',
+      color: 'blue'
     }
   };
 
