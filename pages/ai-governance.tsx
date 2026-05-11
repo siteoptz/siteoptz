@@ -19,8 +19,85 @@ import {
 import FAQSection from '../components/FAQSection';
 import ClientsSlider from '../components/ClientsSlider';
 import PricingCalculator from '../components/PricingCalculator';
+import { Table } from '../components/Table';
+
+interface ComparisonData {
+  attribute: string;
+  legal: string;
+  vanta: string;
+  diy: string;
+  siteoptz: string;
+}
 
 export default function AIGovernancePage() {
+  const handleGovernanceEmailCapture = async (email: string, data: any) => {
+    const response = await fetch('/api/email-capture', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        email,
+        tool: 'AI Governance Copilot',
+        selectedPlan: data.selectedPlan,
+        source: 'ai-governance-page',
+        additionalData: {
+          governance_interest: true,
+          compliance_tier: data.selectedPlan,
+          page_section: 'pricing_calculator',
+          timestamp: new Date().toISOString()
+        }
+      })
+    });
+    
+    if (response.ok) {
+      console.log('Governance lead captured successfully');
+    }
+  };
+
+  const comparisonData: ComparisonData[] = [
+    {
+      attribute: 'Setup cost',
+      legal: '$5,000–$15,000',
+      vanta: '$25,000+',
+      diy: '200+ hours',
+      siteoptz: '$0'
+    },
+    {
+      attribute: 'Monthly cost',
+      legal: '$300/hour as needed',
+      vanta: '$1,500–$4,000/mo',
+      diy: 'Internal salary',
+      siteoptz: 'Included in plan'
+    },
+    {
+      attribute: 'AI-specific',
+      legal: '❌ Generic legal',
+      vanta: '⚠️ Bolt-on module',
+      diy: '❌',
+      siteoptz: '✅ Built for AI'
+    },
+    {
+      attribute: 'Requires security team',
+      legal: '❌',
+      vanta: '✅ Yes',
+      diy: '✅ Yes',
+      siteoptz: '❌ No'
+    },
+    {
+      attribute: 'Time to audit-ready',
+      legal: '8–12 weeks',
+      vanta: '4–6 months',
+      diy: '6+ months',
+      siteoptz: '14 days'
+    },
+    {
+      attribute: 'Updates as you change',
+      legal: '❌ Static docs',
+      vanta: '⚠️ Manual',
+      diy: '❌',
+      siteoptz: '✅ Auto-updates'
+    }
+  ];
+
   // Pricing data with compliance column
   const pricingPlans = [
     {
@@ -147,7 +224,7 @@ export default function AIGovernancePage() {
               {/* Dual CTAs */}
               <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-8">
                 <Link
-                  href="/ai-governance#scorecard"
+                  href="/ai-governance/scorecard"
                   className="group inline-flex items-center gap-3 px-8 py-4 bg-gradient-to-r from-orange-600 to-red-600 text-white font-bold text-lg rounded-xl hover:from-orange-700 hover:to-red-700 transition-all transform hover:scale-105 shadow-lg hover:shadow-xl"
                 >
                   <Shield className="w-6 h-6" />
@@ -405,73 +482,16 @@ export default function AIGovernancePage() {
                 How We Compare
               </h2>
               
-              <div className="overflow-x-auto">
-                <table className="w-full">
-                  <thead>
-                    <tr className="border-b border-gray-700">
-                      <th className="text-left py-4 px-6 text-gray-400 font-medium">Feature</th>
-                      <th className="text-center py-4 px-6 text-gray-400 font-medium">Legal Counsel</th>
-                      <th className="text-center py-4 px-6 text-gray-400 font-medium">Vanta / Drata</th>
-                      <th className="text-center py-4 px-6 text-gray-400 font-medium">DIY Internal</th>
-                      <th className="text-center py-4 px-6 text-white font-medium bg-blue-500/20">SiteOptz AI Compliance Copilot</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    {[
-                      {
-                        feature: "Setup cost",
-                        legal: "$5,000–$15,000",
-                        vanta: "$25,000+", 
-                        diy: "200+ hours",
-                        siteoptz: "$0"
-                      },
-                      {
-                        feature: "Monthly cost",
-                        legal: "$300/hour as needed",
-                        vanta: "$1,500–$4,000/mo",
-                        diy: "Internal salary", 
-                        siteoptz: "Included in plan"
-                      },
-                      {
-                        feature: "AI-specific",
-                        legal: "❌ Generic legal",
-                        vanta: "⚠️ Bolt-on module",
-                        diy: "❌",
-                        siteoptz: "✅ Built for AI"
-                      },
-                      {
-                        feature: "Requires security team",
-                        legal: "❌",
-                        vanta: "✅ Yes",
-                        diy: "✅ Yes",
-                        siteoptz: "❌ No"
-                      },
-                      {
-                        feature: "Time to audit-ready",
-                        legal: "8–12 weeks",
-                        vanta: "4–6 months", 
-                        diy: "6+ months",
-                        siteoptz: "14 days"
-                      },
-                      {
-                        feature: "Updates as you change",
-                        legal: "❌ Static docs",
-                        vanta: "⚠️ Manual",
-                        diy: "❌",
-                        siteoptz: "✅ Auto-updates"
-                      }
-                    ].map((row, index) => (
-                      <tr key={index} className="border-b border-gray-800">
-                        <td className="py-4 px-6 text-gray-300 font-medium">{row.feature}</td>
-                        <td className="py-4 px-6 text-center text-gray-400">{row.legal}</td>
-                        <td className="py-4 px-6 text-center text-gray-400">{row.vanta}</td>
-                        <td className="py-4 px-6 text-center text-gray-400">{row.diy}</td>
-                        <td className="py-4 px-6 text-center text-white font-semibold bg-blue-500/10">{row.siteoptz}</td>
-                      </tr>
-                    ))}
-                  </tbody>
-                </table>
-              </div>
+              <Table<ComparisonData>
+                data={comparisonData}
+                columns={[
+                  { key: 'attribute', label: '', align: 'left' },
+                  { key: 'legal', label: 'Legal counsel', align: 'center' },
+                  { key: 'vanta', label: 'Vanta / Drata', align: 'center' },
+                  { key: 'diy', label: 'DIY internal', align: 'center' },
+                  { key: 'siteoptz', label: 'SiteOptz AI Compliance Copilot', align: 'center', highlighted: true }
+                ]}
+              />
             </div>
           </div>
         </section>
@@ -489,38 +509,20 @@ export default function AIGovernancePage() {
             </div>
 
             <div className="bg-black border border-gray-800 rounded-2xl p-8">
-              <div className="overflow-x-auto">
-                <table className="w-full">
-                  <thead>
-                    <tr className="border-b border-gray-700">
-                      <th className="text-left py-4 px-6 text-gray-400 font-medium">Plan</th>
-                      <th className="text-center py-4 px-6 text-gray-400 font-medium">Price</th>
-                      <th className="text-left py-4 px-6 text-white font-medium bg-blue-500/20">Compliance Layer Included</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    {pricingPlans.map((plan, index) => (
-                      <tr key={plan.name} className="border-b border-gray-800">
-                        <td className="py-4 px-6">
-                          <div className="font-bold text-white text-lg">{plan.name}</div>
-                          <div className="text-sm text-gray-400 mt-1">
-                            {plan.features.slice(0, 2).join(" • ")}
-                          </div>
-                        </td>
-                        <td className="py-4 px-6 text-center">
-                          <div className="text-2xl font-bold text-white">
-                            {plan.price === "0" ? "Free" : `$${plan.price}`}
-                            {plan.price !== "0" && <span className="text-sm text-gray-400">/year</span>}
-                          </div>
-                        </td>
-                        <td className="py-4 px-6">
-                          <div className="text-gray-300">{complianceFeatures[index]}</div>
-                        </td>
-                      </tr>
-                    ))}
-                  </tbody>
-                </table>
-              </div>
+              <PricingCalculator
+                plans={pricingPlans}
+                additionalColumn={{
+                  label: "Compliance Layer Included",
+                  rowsByPlanId: {
+                    "Free": "AI Risk Self-Assessment (10-question scorecard)",
+                    "Starter": "+ AI tool inventory template + 5 starter policy templates",
+                    "Pro": "+ Full Compliance Copilot dashboard + risk register + framework mapping",
+                    "Enterprise": "+ Audit-ready documentation package + customer/investor data room + quarterly compliance review"
+                  }
+                }}
+                onEmailSubmit={handleGovernanceEmailCapture}
+                toolName="AI Governance Copilot"
+              />
             </div>
 
             <div className="text-center mt-8">
@@ -617,7 +619,7 @@ export default function AIGovernancePage() {
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-8">
               <Link
-                href="/ai-governance#scorecard"
+                href="/ai-governance/scorecard"
                 className="group inline-flex items-center gap-3 px-8 py-4 bg-gradient-to-r from-orange-600 to-red-600 text-white font-bold text-lg rounded-xl hover:from-orange-700 hover:to-red-700 transition-all transform hover:scale-105 shadow-lg hover:shadow-xl"
               >
                 <Zap className="w-6 h-6" />
