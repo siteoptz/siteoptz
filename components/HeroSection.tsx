@@ -55,7 +55,7 @@ const HeroSection: React.FC = () => {
           {/* Secondary CTA */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">
             <Link 
-              href="/ai-governance#scorecard"
+              href="/ai-governance/scorecard"
               className="group inline-flex items-center gap-3 px-6 py-2.5 bg-gradient-to-r from-orange-600 to-red-600 text-white rounded-lg font-semibold text-sm hover:from-orange-700 hover:to-red-700 transform hover:scale-105 transition-all duration-200 shadow-lg hover:shadow-xl"
             >
               <Shield className="w-5 h-5" />

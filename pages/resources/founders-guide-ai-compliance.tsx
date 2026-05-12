@@ -247,7 +247,7 @@ export default function FoundersGuideAiCompliance() {
                 Take our 5-minute AI Compliance Readiness Scorecard to get a personalized version of this guide based on your specific gaps.
               </p>
               <Link
-                href="/ai-governance#scorecard"
+                href="/ai-governance/scorecard"
                 className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-orange-600 to-red-600 text-white font-bold text-lg rounded-xl hover:from-orange-700 hover:to-red-700 transition-all transform hover:scale-105 shadow-lg hover:shadow-xl"
               >
                 <Zap className="w-6 h-6 mr-3" />

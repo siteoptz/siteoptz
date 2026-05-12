@@ -581,7 +581,7 @@ export default function AIComplianceScorecardPage() {
                     </Link>
                     
                     <Link
-                      href="/ai-governance#scorecard"
+                      href="/ai-governance"
                       className="block px-6 py-3 bg-gray-700 text-white rounded-lg hover:bg-gray-600 transition-colors"
                     >
                       Learn More About AI Governance
