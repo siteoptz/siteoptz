@@ -347,7 +347,7 @@ export default function AIGovernancePage() {
             <div className="text-center mb-16">
               <h1 className="text-4xl md:text-5xl lg:text-7xl font-bold text-white mb-8 leading-tight">
                 YOUR AI STACK IS A LIABILITY<br />
-                <span className="text-red-400">UNTIL YOU CAN PROVE IT ISN'T</span>
+                <span className="text-red-400">UNTIL YOU CAN PROVE IT ISN&apos;T</span>
               </h1>
               <p className="text-xl lg:text-2xl text-gray-300 max-w-4xl mx-auto mb-8 leading-relaxed">
                 You picked the right AI tools. You deployed them for ROI. Now your biggest customer wants a risk assessment, 
@@ -406,7 +406,7 @@ export default function AIGovernancePage() {
                 Your AI Stack Just Became a Sales Blocker
               </h2>
               <p className="text-xl text-gray-300 mb-12">
-                Three things changed in 2025–2026 that turned AI compliance from "nice to have" into "deal-killer":
+                Three things changed in 2025–2026 that turned AI compliance from &quot;nice to have&quot; into &quot;deal-killer&quot;:
               </p>
             </div>
 
@@ -415,7 +415,7 @@ export default function AIGovernancePage() {
                 {
                   icon: Building,
                   title: "Enterprise procurement now asks",
-                  description: "Every Fortune 500 RFP now includes AI risk questions. Companies that can't answer them lose the deal — usually without ever knowing why."
+                  description: "Every Fortune 500 RFP now includes AI risk questions. Companies that can&apos;t answer them lose the deal — usually without ever knowing why."
                 },
                 {
                   icon: TrendingUp,
@@ -527,7 +527,7 @@ export default function AIGovernancePage() {
 
             <div className="text-center mt-12">
               <p className="text-xl text-cyan-400 font-semibold">
-                If your buyer asks "are you compliant with X?" — the answer is in the dashboard.
+                If your buyer asks &quot;are you compliant with X?&quot; — the answer is in the dashboard.
               </p>
             </div>
           </div>
@@ -594,10 +594,10 @@ export default function AIGovernancePage() {
 
             <div className="grid md:grid-cols-2 gap-8">
               {[
-                "You're approaching an enterprise deal and procurement is asking AI risk questions you can't answer in your sleep.",
-                "You're raising a round and your data room is missing the AI governance section every modern VC now expects.",
-                "You're scaling past 25 employees and 'we don't really have an AI policy' stopped being a defensible answer six months ago.",
-                "You're in healthcare, finance, legal, or HR tech and AI regulation in your industry is moving faster than your legal team can read."
+                "You&apos;re approaching an enterprise deal and procurement is asking AI risk questions you can&apos;t answer in your sleep.",
+                "You&apos;re raising a round and your data room is missing the AI governance section every modern VC now expects.",
+                "You&apos;re scaling past 25 employees and &apos;we don&apos;t really have an AI policy&apos; stopped being a defensible answer six months ago.",
+                "You&apos;re in healthcare, finance, legal, or HR tech and AI regulation in your industry is moving faster than your legal team can read."
               ].map((scenario, index) => (
                 <div key={index} className="bg-black border border-gray-800 rounded-xl p-6">
                   <div className="flex items-start gap-4">
@@ -640,7 +640,7 @@ export default function AIGovernancePage() {
                 Pricing — Integrated Across All Tiers
               </h2>
               <p className="text-xl text-gray-300 mb-8">
-                AI Compliance Copilot isn't a separate product. It's layered into every SiteOptz plan.
+                AI Compliance Copilot isn&apos;t a separate product. It&apos;s layered into every SiteOptz plan.
               </p>
             </div>
 
@@ -702,7 +702,7 @@ export default function AIGovernancePage() {
                   ))}
                 </div>
                 <blockquote className="text-lg text-gray-300 mb-4">
-                  "We had three enterprise deals stalled on AI questionnaires we couldn't answer. SiteOptz turned that around in two weeks. All three closed."
+                  &quot;We had three enterprise deals stalled on AI questionnaires we couldn&apos;t answer. SiteOptz turned that around in two weeks. All three closed.&quot;
                 </blockquote>
                 <div className="text-sm text-gray-400">
                   — Client, Series B SaaS Company
@@ -716,7 +716,7 @@ export default function AIGovernancePage() {
                   ))}
                 </div>
                 <blockquote className="text-lg text-gray-300 mb-4">
-                  "Our Series B data room was missing exactly one thing. SiteOptz filled it in 10 days."
+                  &quot;Our Series B data room was missing exactly one thing. SiteOptz filled it in 10 days.&quot;
                 </blockquote>
                 <div className="text-sm text-gray-400">
                   — CTO, FinTech Startup
@@ -743,11 +743,11 @@ export default function AIGovernancePage() {
         <section className="py-20">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-              Stop Losing Deals to a Question You Should've Answered Last Quarter
+              Stop Losing Deals to a Question You Should&apos;ve Answered Last Quarter
             </h2>
             <p className="text-xl text-gray-300 mb-8">
               Your competitors are showing up to enterprise meetings with AI governance docs in hand. 
-              Your investors are asking what you don't yet have. Your auditors are about to.
+              Your investors are asking what you don&apos;t yet have. Your auditors are about to.
             </p>
             <p className="text-2xl font-bold text-cyan-400 mb-12">
               Run the free AI Risk Scorecard now. Get your top 3 gaps in 5 minutes.

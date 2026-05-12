@@ -220,7 +220,7 @@ export default function AIComplianceScorecardPage() {
                 </p>
                 
                 <div className="bg-black border border-gray-800 rounded-2xl p-8 mb-8 max-w-2xl mx-auto">
-                  <h2 className="text-2xl font-bold text-white mb-6">You'll get:</h2>
+                  <h2 className="text-2xl font-bold text-white mb-6">You&apos;ll get:</h2>
                   <div className="space-y-4 text-left">
                     <div className="flex items-start gap-3">
                       <CheckCircle className="w-6 h-6 text-green-400 mt-1" />
