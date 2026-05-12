@@ -58,6 +58,7 @@
     "@heroicons/react": "^2.2.0",
     "@hookform/resolvers": "^3.3.0",
     "@mendable/firecrawl-js": "^1.29.3",
+    "@nivo/radar": "^0.99.0",
     "@playwright/test": "^1.58.2",
     "@stripe/stripe-js": "^7.9.0",
     "@types/bcryptjs": "^2.4.6",
