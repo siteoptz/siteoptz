@@ -99,6 +99,69 @@ const addToGoHighLevel = async (data) => {
         customFields: [],
         source: 'Newsletter Subscription - SiteOptz Website',
       };
+    } else if (data.additionalData?.scorecardResults) {
+      // AI Compliance Scorecard submission
+      const { additionalData } = data;
+      const { scorecardResults } = additionalData;
+      
+      ghlData = {
+        ...ghlData,
+        firstName: '',
+        lastName: '',
+        email: data.email,
+        phone: '',
+        tags: [
+          'New Lead',  // This tag triggers the 'New Lead Workflow'
+          'AI Compliance Scorecard',
+          `Score: ${scorecardResults.scorePercentage}%`,
+          `Band: ${scorecardResults.scoreBand}`,
+          `Qualification: ${scorecardResults.qualificationTier || additionalData.leadQualifiers?.qualificationTier}`,
+          `Company: ${additionalData.company || 'Not provided'}`,
+          `Role: ${additionalData.role}`,
+          `Completed: ${new Date().toLocaleDateString('en-US', { month: 'short', year: 'numeric' })}`
+        ],
+        customFields: [
+          // Contact Information
+          { key: 'ai_contact_role', value: additionalData.role || '' },
+          { key: 'company_size', value: additionalData.companySize || '' },
+          
+          // Scorecard Results
+          { key: 'scorecard_total_score', value: scorecardResults.totalScore || 0 },
+          { key: 'scorecard_band', value: scorecardResults.scoreBand || '' },
+          { key: 'scorecard_percentage', value: scorecardResults.scorePercentage || 0 },
+          { key: 'qualification_tier', value: scorecardResults.qualificationTier || additionalData.leadQualifiers?.qualificationTier || '' },
+          { key: 'scorecard_question_scores', value: JSON.stringify(scorecardResults.questionScores || {}) },
+          { key: 'scorecard_top_gaps', value: JSON.stringify(scorecardResults.topGaps || []) },
+          { key: 'scorecard_completion_time', value: additionalData.scorecardResults.completionTimeSeconds || 0 },
+          { key: 'scorecard_recommended_action', value: scorecardResults.recommendedActionAtSubmission || '' },
+          { key: 'scorecard_version', value: additionalData.scorecardResults.scorecardVersion || 'v1.0' },
+          
+          // Attribution & Analytics
+          { key: 'utm_source', value: additionalData.utm_source || '' },
+          { key: 'utm_medium', value: additionalData.utm_medium || '' },
+          { key: 'utm_campaign', value: additionalData.utm_campaign || '' },
+          { key: 'scorecard_completed_at', value: scorecardResults.completedAt || new Date().toISOString() },
+          { key: 'scorecard_page_source', value: additionalData.scorecardResults.pageSource || 'scorecard-standalone' }
+        ],
+        source: 'AI Compliance Scorecard - SiteOptz Website',
+      };
+    } else if (data.tool === 'AI Governance Copilot') {
+      // Homepage governance form submission
+      ghlData = {
+        ...ghlData,
+        firstName: '',
+        lastName: '',
+        email: data.email,
+        phone: '',
+        tags: [
+          'New Lead',  // This tag triggers the 'New Lead Workflow'
+          'AI Governance Copilot',
+          'Homepage Form Submission',
+          `Submitted: ${new Date().toLocaleDateString('en-US', { month: 'short', year: 'numeric' })}`
+        ],
+        customFields: [],
+        source: 'AI Governance Copilot - SiteOptz Website',
+      };
     } else {
       // Pricing quote or other submission
       ghlData = {
