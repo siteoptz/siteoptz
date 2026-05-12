@@ -57,7 +57,12 @@ export default function AIComplianceScorecardPage() {
 
   // Answer selection
   const handleAnswerSelect = (questionId: string, value: number) => {
-    setAnswers(prev => ({ ...prev, [questionId]: value }));
+    console.log('Answer selected:', { questionId, value });
+    setAnswers(prev => {
+      const newAnswers = { ...prev, [questionId]: value };
+      console.log('Updated answers:', newAnswers);
+      return newAnswers;
+    });
   };
   
   // Question navigation
@@ -322,7 +327,11 @@ export default function AIComplianceScorecardPage() {
                     </button>
                     
                     <button
-                      onClick={nextQuestion}
+                      onClick={() => {
+                        const currentAnswer = answers[QUESTIONS_CONFIG[currentQuestion].id];
+                        console.log('Next button clicked. Current answer:', currentAnswer, 'Disabled?', currentAnswer === undefined);
+                        nextQuestion();
+                      }}
                       disabled={answers[QUESTIONS_CONFIG[currentQuestion].id] === undefined}
                       className="px-6 py-3 bg-gradient-to-r from-orange-600 to-red-600 text-white rounded-lg hover:from-orange-700 hover:to-red-700 disabled:opacity-50 disabled:cursor-not-allowed inline-flex items-center gap-2"
                     >
