@@ -22,7 +22,8 @@ const tableVariants = {
     headerCellHighlighted: "py-4 px-6 text-white font-medium bg-blue-500/20",
     body: "text-sm",
     row: "border-b border-gray-800", 
-    cell: "py-4 px-6 text-gray-300"
+    cell: "py-4 px-6 text-gray-300",
+    cellHighlighted: "py-4 px-6 text-white font-semibold bg-blue-500/10"
   }
 }
 
@@ -66,7 +67,9 @@ export function Table<T>({ data, columns, variant = 'default' }: TableProps<T>) 
             {columns.map((column, colIndex) => (
               <td
                 key={colIndex}
-                className={`${styles.cell} ${getAlignmentClass(column.align)}`}
+                className={`${
+                  column.highlighted ? styles.cellHighlighted : styles.cell
+                } ${getAlignmentClass(column.align)}`}
               >
                 {getCellValue(row, column)}
               </td>

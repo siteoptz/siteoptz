@@ -32,13 +32,13 @@ interface ComparisonData {
 export default function AIGovernancePage() {
   const handleGovernanceEmailCapture = async (email: string, data: any) => {
     const response = await fetch('/api/email-capture', {
-      method: 'POST',
+      method: 'POST', 
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({
         email,
         tool: 'AI Governance Copilot',
         selectedPlan: data.selectedPlan,
-        source: 'ai-governance-page',
+        source: 'ai-governance-pricing',
         additionalData: {
           governance_interest: true,
           compliance_tier: data.selectedPlan,
@@ -202,6 +202,142 @@ export default function AIGovernancePage() {
         <meta name="twitter:title" content="AI Compliance Copilot | AI Governance & Risk Management for SMBs" />
         <meta name="twitter:description" content="Document every AI tool, map every compliance risk, and generate audit-ready policies in days — not months." />
         <meta name="twitter:image" content="https://siteoptz.ai/images/ai-governance-og.jpg" />
+        
+        {/* Structured Data */}
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "WebPage",
+            "name": "AI Compliance Copilot | AI Governance & Risk Management for SMBs",
+            "description": "Document every AI tool, map every compliance risk, and generate audit-ready policies in days — not months. Built for companies that need to close enterprise deals and pass due diligence without a $50,000 governance platform.",
+            "url": "https://siteoptz.ai/ai-governance",
+            "mainEntity": {
+              "@type": "Service",
+              "name": "AI Compliance Copilot",
+              "description": "AI governance and risk management solution for SMBs",
+              "provider": {
+                "@type": "Organization",
+                "name": "SiteOptz",
+                "url": "https://siteoptz.ai",
+                "logo": "https://siteoptz.ai/images/siteoptz-logo.png"
+              },
+              "serviceType": "AI Governance Consulting",
+              "areaServed": "Global",
+              "audience": {
+                "@type": "Audience",
+                "audienceType": "SMBs under $50M revenue"
+              },
+              "offers": [
+                {
+                  "@type": "Offer",
+                  "name": "Free AI Risk Scorecard",
+                  "price": "0",
+                  "priceCurrency": "USD",
+                  "availability": "https://schema.org/InStock"
+                },
+                {
+                  "@type": "Offer", 
+                  "name": "Starter Plan",
+                  "price": "497",
+                  "priceCurrency": "USD",
+                  "priceSpecification": {
+                    "@type": "UnitPriceSpecification",
+                    "price": 497,
+                    "priceCurrency": "USD",
+                    "unitText": "per year"
+                  },
+                  "availability": "https://schema.org/InStock"
+                },
+                {
+                  "@type": "Offer",
+                  "name": "Pro Plan", 
+                  "price": "1997",
+                  "priceCurrency": "USD",
+                  "priceSpecification": {
+                    "@type": "UnitPriceSpecification",
+                    "price": 1997,
+                    "priceCurrency": "USD",
+                    "unitText": "per year"
+                  },
+                  "availability": "https://schema.org/InStock"
+                },
+                {
+                  "@type": "Offer",
+                  "name": "Enterprise Plan",
+                  "price": "4997", 
+                  "priceCurrency": "USD",
+                  "priceSpecification": {
+                    "@type": "UnitPriceSpecification",
+                    "price": 4997,
+                    "priceCurrency": "USD",
+                    "unitText": "per year"
+                  },
+                  "availability": "https://schema.org/InStock"
+                }
+              ],
+              "hasOfferCatalog": {
+                "@type": "OfferCatalog",
+                "name": "AI Compliance Services",
+                "itemListElement": [
+                  {
+                    "@type": "Offer",
+                    "itemOffered": {
+                      "@type": "Service",
+                      "name": "AI Tool Inventory & Risk Assessment"
+                    }
+                  },
+                  {
+                    "@type": "Offer", 
+                    "itemOffered": {
+                      "@type": "Service",
+                      "name": "Policy Generation & Documentation"
+                    }
+                  },
+                  {
+                    "@type": "Offer",
+                    "itemOffered": {
+                      "@type": "Service",
+                      "name": "Compliance Framework Mapping"
+                    }
+                  },
+                  {
+                    "@type": "Offer",
+                    "itemOffered": {
+                      "@type": "Service", 
+                      "name": "Audit-Ready Documentation Package"
+                    }
+                  }
+                ]
+              }
+            },
+            "breadcrumb": {
+              "@type": "BreadcrumbList",
+              "itemListElement": [
+                {
+                  "@type": "ListItem",
+                  "position": 1,
+                  "name": "Home",
+                  "item": "https://siteoptz.ai"
+                },
+                {
+                  "@type": "ListItem", 
+                  "position": 2,
+                  "name": "AI Governance",
+                  "item": "https://siteoptz.ai/ai-governance"
+                }
+              ]
+            },
+            "publisher": {
+              "@type": "Organization",
+              "name": "SiteOptz",
+              "url": "https://siteoptz.ai",
+              "logo": {
+                "@type": "ImageObject",
+                "url": "https://siteoptz.ai/images/siteoptz-logo.png"
+              }
+            }
+          })}
+        </script>
       </Head>
 
       <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-black">
