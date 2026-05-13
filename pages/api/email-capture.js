@@ -776,8 +776,8 @@ export default async function handler(req, res) {
       prepareAndSendEmail(emailData)
     ];
     
-    // Only add to GoHighLevel if enabled
-    const isGHLEnabled = process.env.ENABLE_GHL === 'true';
+    // Only add to GoHighLevel if credentials are present
+    const isGHLEnabled = !!(process.env.GHL_API_KEY && process.env.GHL_LOCATION_ID);
     if (isGHLEnabled) {
       promises.push(addToGoHighLevel(emailData));
     }
