@@ -186,6 +186,18 @@ const addToGoHighLevel = async (data) => {
 
     console.log('Sending contact form data to GoHighLevel:', JSON.stringify(ghlData, null, 2));
 
+    console.log('=== GHL DIAGNOSTIC: Pre-Request ===');
+    console.log('Request URL:', `${GHL_API_BASE}/contacts/`);
+    console.log('Request Method: POST');
+    console.log('Request Headers:', {
+      'Authorization': `Bearer ${GHL_API_KEY ? '[REDACTED-' + GHL_API_KEY.length + '-chars]' : 'NULL'}`,
+      'Content-Type': 'application/json',
+      'Version': '2021-04-15',
+      'Location-Id': GHL_LOCATION_ID || 'NULL'
+    });
+    console.log('Request Payload:', JSON.stringify(ghlData, null, 2));
+    console.log('==========================================');
+
     const response = await fetch(`${GHL_API_BASE}/contacts/`, {
       method: 'POST',
       headers: {
@@ -198,14 +210,41 @@ const addToGoHighLevel = async (data) => {
     });
 
     console.log('GoHighLevel Contact Form API Response Status:', response.status);
+
+    console.log('=== GHL DIAGNOSTIC: Post-Response ===');
+    console.log('Response Status:', response.status);
+    console.log('Response Status Text:', response.statusText);
+    console.log('Response Headers:', Object.fromEntries(response.headers.entries()));
+    console.log('Response OK:', response.ok);
+    console.log('==========================================');
     
     if (!response.ok) {
       const errorText = await response.text();
+      console.log('=== GHL DIAGNOSTIC: Error Response Body ===');
+      console.log('Error Text:', errorText);
+      console.log('Error Text Type:', typeof errorText);
+      console.log('Error Text Length:', errorText.length);
+      console.log('Full Response Details:', {
+        status: response.status,
+        statusText: response.statusText,
+        headers: Object.fromEntries(response.headers.entries()),
+        body: errorText
+      });
+      console.log('================================================');
       console.error('GoHighLevel Contact Form API error:', errorText);
       throw new Error(`GoHighLevel API error: ${response.status} - ${errorText}`);
     }
 
     const result = await response.json();
+    console.log('=== GHL DIAGNOSTIC: Success Response Body ===');
+    console.log('Success Result:', JSON.stringify(result, null, 2));
+    console.log('Contact ID Present:', !!result.contact?.id);
+    console.log('Contact Details:', {
+      id: result.contact?.id,
+      email: result.contact?.email,
+      created: !!result.contact
+    });
+    console.log('=================================================');
     console.log('GoHighLevel Contact Form Success:', result);
     console.log('Contact ID:', result.contact?.id);
     
@@ -253,6 +292,13 @@ const addToGoHighLevel = async (data) => {
     console.log('=======================================================');
     return result;
   } catch (error) {
+    console.log('=== GHL DIAGNOSTIC: Exception Caught ===');
+    console.log('Error Name:', error.name);
+    console.log('Error Message:', error.message);
+    console.log('Error Stack:', error.stack);
+    console.log('Error Object:', JSON.stringify(error, Object.getOwnPropertyNames(error)));
+    console.log('Is Network Error:', error.message?.includes('fetch'));
+    console.log('=============================================');
     console.error('Error adding contact form lead to GoHighLevel:', error);
     return null;
   }
