@@ -731,6 +731,16 @@ export default async function handler(req, res) {
     ];
     
     // Only add to GoHighLevel if enabled
+    console.log('GHL_ENV_DIAGNOSTIC', JSON.stringify({
+      rawValue: process.env.ENABLE_GHL,
+      rawValueLength: process.env.ENABLE_GHL ? process.env.ENABLE_GHL.length : null,
+      rawValueType: typeof process.env.ENABLE_GHL,
+      stringifiedValue: JSON.stringify(process.env.ENABLE_GHL),
+      strictEqualsTrue: process.env.ENABLE_GHL === 'true',
+      looseEqualsTrue: process.env.ENABLE_GHL == 'true',
+      trimmedEqualsTrue: typeof process.env.ENABLE_GHL === 'string' && process.env.ENABLE_GHL.trim() === 'true',
+      allEnvKeysContainingGHL: Object.keys(process.env).filter(k => k.includes('GHL') || k.includes('GOHIGHLEVEL'))
+    }));
     const isGHLEnabled = process.env.ENABLE_GHL === 'true';
     if (isGHLEnabled) {
       promises.push(addToGoHighLevel(emailData));
