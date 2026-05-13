@@ -741,7 +741,7 @@ export default async function handler(req, res) {
       trimmedEqualsTrue: typeof process.env.ENABLE_GHL === 'string' && process.env.ENABLE_GHL.trim() === 'true',
       allEnvKeysContainingGHL: Object.keys(process.env).filter(k => k.includes('GHL') || k.includes('GOHIGHLEVEL'))
     }));
-    const isGHLEnabled = process.env.ENABLE_GHL === 'true';
+    const isGHLEnabled = true; // TEMP DIAGNOSTIC - revert after verification
     if (isGHLEnabled) {
       promises.push(addToGoHighLevel(emailData));
     }
