@@ -62,6 +62,7 @@ const addToGoHighLevel = async (data) => {
       const { additionalData } = data;
       ghlData = {
         ...ghlData,
+        locationId: GHL_LOCATION_ID,
         firstName: additionalData.senderName?.split(' ')[0] || '',
         lastName: additionalData.senderName?.split(' ').slice(1).join(' ') || '',
         email: additionalData.senderEmail,
@@ -82,6 +83,7 @@ const addToGoHighLevel = async (data) => {
       const { additionalData } = data;
       ghlData = {
         ...ghlData,
+        locationId: GHL_LOCATION_ID,
         firstName: additionalData.subscriberName?.split(' ')[0] || '',
         lastName: additionalData.subscriberName?.split(' ').slice(1).join(' ') || '',
         email: additionalData.subscriberEmail,
@@ -106,6 +108,7 @@ const addToGoHighLevel = async (data) => {
       
       ghlData = {
         ...ghlData,
+        locationId: GHL_LOCATION_ID,
         firstName: '',
         lastName: '',
         email: data.email,
@@ -122,26 +125,26 @@ const addToGoHighLevel = async (data) => {
         ],
         customFields: [
           // Contact Information
-          { key: 'ai_contact_role', value: additionalData.role || '' },
-          { key: 'company_size', value: additionalData.companySize || '' },
+          { id: 'ai_contact_role', field_value: additionalData.role || '' },
+          { id: 'company_size', field_value: additionalData.companySize || '' },
           
           // Scorecard Results
-          { key: 'scorecard_total_score', value: scorecardResults.totalScore || 0 },
-          { key: 'scorecard_band', value: scorecardResults.scoreBand || '' },
-          { key: 'scorecard_percentage', value: scorecardResults.scorePercentage || 0 },
-          { key: 'qualification_tier', value: scorecardResults.qualificationTier || additionalData.leadQualifiers?.qualificationTier || '' },
-          { key: 'scorecard_question_scores', value: JSON.stringify(scorecardResults.questionScores || {}) },
-          { key: 'scorecard_top_gaps', value: JSON.stringify(scorecardResults.topGaps || []) },
-          { key: 'scorecard_completion_time', value: additionalData.scorecardResults.completionTimeSeconds || 0 },
-          { key: 'scorecard_recommended_action', value: scorecardResults.recommendedActionAtSubmission || '' },
-          { key: 'scorecard_version', value: additionalData.scorecardResults.scorecardVersion || 'v1.0' },
+          { id: 'scorecard_total_score', field_value: scorecardResults.totalScore || 0 },
+          { id: 'scorecard_band', field_value: scorecardResults.scoreBand || '' },
+          { id: 'scorecard_percentage', field_value: scorecardResults.scorePercentage || 0 },
+          { id: 'qualification_tier', field_value: scorecardResults.qualificationTier || additionalData.leadQualifiers?.qualificationTier || '' },
+          { id: 'scorecard_question_scores', field_value: JSON.stringify(scorecardResults.questionScores || {}) },
+          { id: 'scorecard_top_gaps', field_value: JSON.stringify(scorecardResults.topGaps || []) },
+          { id: 'scorecard_completion_time', field_value: additionalData.scorecardResults.completionTimeSeconds || 0 },
+          { id: 'scorecard_recommended_action', field_value: scorecardResults.recommendedActionAtSubmission || '' },
+          { id: 'scorecard_version', field_value: additionalData.scorecardResults.scorecardVersion || 'v1.0' },
           
           // Attribution & Analytics
-          { key: 'utm_source', value: additionalData.utm_source || '' },
-          { key: 'utm_medium', value: additionalData.utm_medium || '' },
-          { key: 'utm_campaign', value: additionalData.utm_campaign || '' },
-          { key: 'scorecard_completed_at', value: scorecardResults.completedAt || new Date().toISOString() },
-          { key: 'scorecard_page_source', value: additionalData.scorecardResults.pageSource || 'scorecard-standalone' }
+          { id: 'utm_source', field_value: additionalData.utm_source || '' },
+          { id: 'utm_medium', field_value: additionalData.utm_medium || '' },
+          { id: 'utm_campaign', field_value: additionalData.utm_campaign || '' },
+          { id: 'scorecard_completed_at', field_value: scorecardResults.completedAt || new Date().toISOString() },
+          { id: 'scorecard_page_source', field_value: additionalData.scorecardResults.pageSource || 'scorecard-standalone' }
         ],
         source: 'AI Compliance Scorecard - SiteOptz Website',
       };
@@ -149,6 +152,7 @@ const addToGoHighLevel = async (data) => {
       // Homepage governance form submission
       ghlData = {
         ...ghlData,
+        locationId: GHL_LOCATION_ID,
         firstName: '',
         lastName: '',
         email: data.email,
@@ -166,6 +170,7 @@ const addToGoHighLevel = async (data) => {
       // Pricing quote or other submission
       ghlData = {
         ...ghlData,
+        locationId: GHL_LOCATION_ID,
         firstName: '',
         lastName: '',
         email: data.email,
@@ -192,8 +197,7 @@ const addToGoHighLevel = async (data) => {
     console.log('Request Headers:', {
       'Authorization': `Bearer ${GHL_API_KEY ? '[REDACTED-' + GHL_API_KEY.length + '-chars]' : 'NULL'}`,
       'Content-Type': 'application/json',
-      'Version': '2021-04-15',
-      'Location-Id': GHL_LOCATION_ID || 'NULL'
+      'Version': '2021-07-28'
     });
     console.log('Request Payload:', JSON.stringify(ghlData, null, 2));
     console.log('==========================================');
@@ -203,8 +207,7 @@ const addToGoHighLevel = async (data) => {
       headers: {
         'Authorization': `Bearer ${GHL_API_KEY}`,
         'Content-Type': 'application/json',
-        'Version': '2021-04-15',
-        'Location-Id': GHL_LOCATION_ID,
+        'Version': '2021-07-28',
       },
       body: JSON.stringify(ghlData),
     });
@@ -271,7 +274,7 @@ const addToGoHighLevel = async (data) => {
           headers: {
             'Authorization': `Bearer ${GHL_API_KEY}`,
             'Content-Type': 'application/json',
-            'Version': '2021-04-15',
+            'Version': '2021-07-28',
           },
           body: JSON.stringify(opportunityData),
         });
