@@ -342,45 +342,45 @@ export default function AIGovernancePage() {
 
       <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-black">
         {/* Hero Section */}
-        <section className="pt-24 pb-16">
+        <section className="pt-20 pb-12 px-4">
           <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="text-center mb-16">
-              <h1 className="text-4xl md:text-5xl lg:text-7xl font-bold text-white mb-8 leading-tight">
+            <div className="text-center mb-12 sm:mb-16">
+              <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold text-white mb-6 sm:mb-8 leading-tight">
                 YOUR AI STACK IS A LIABILITY<br />
                 <span className="text-red-400">UNTIL YOU CAN PROVE IT ISN&apos;T</span>
               </h1>
-              <p className="text-xl lg:text-2xl text-gray-300 max-w-4xl mx-auto mb-8 leading-relaxed">
+              <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-gray-300 max-w-4xl mx-auto mb-6 sm:mb-8 leading-relaxed px-2">
                 You picked the right AI tools. You deployed them for ROI. Now your biggest customer wants a risk assessment, 
                 your investor wants AI governance documentation, and your auditor wants a register of every model that touches customer data.
               </p>
-              <p className="text-2xl lg:text-3xl font-bold text-cyan-400 mb-12">
+              <p className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-bold text-cyan-400 mb-8 sm:mb-12 px-2">
                 We give you all three — in 14 days, not 14 months.
               </p>
               
               {/* Dual CTAs */}
-              <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-8">
+              <div className="flex flex-col gap-3 sm:gap-4 justify-center items-center mb-6 sm:mb-8 px-4">
                 <Link
                   href="/ai-governance/scorecard"
-                  className="group inline-flex items-center gap-3 px-8 py-4 bg-gradient-to-r from-orange-600 to-red-600 text-white font-bold text-lg rounded-xl hover:from-orange-700 hover:to-red-700 transition-all transform hover:scale-105 shadow-lg hover:shadow-xl"
+                  className="group inline-flex items-center gap-2 sm:gap-3 px-4 sm:px-6 md:px-8 py-3 sm:py-4 bg-gradient-to-r from-orange-600 to-red-600 text-white font-bold text-sm sm:text-base md:text-lg rounded-lg sm:rounded-xl hover:from-orange-700 hover:to-red-700 transition-all transform hover:scale-105 shadow-lg hover:shadow-xl w-full sm:w-auto text-center"
                 >
-                  <Shield className="w-6 h-6" />
-                  Run My Free AI Risk Scorecard
-                  <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+                  <Shield className="w-4 h-4 sm:w-5 sm:h-5 md:w-6 md:h-6" />
+                  <span className="truncate">Run My Free AI Risk Scorecard</span>
+                  <ArrowRight className="w-4 h-4 sm:w-5 sm:h-5 group-hover:translate-x-1 transition-transform" />
                 </Link>
                 <a
                   href="https://api.leadconnectorhq.com/widget/booking/yPjkVmsauPst8XlrOQUl"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="group inline-flex items-center gap-3 px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-bold text-lg rounded-xl hover:from-blue-700 hover:to-purple-700 transition-all transform hover:scale-105 shadow-lg hover:shadow-xl"
+                  className="group inline-flex items-center gap-2 sm:gap-3 px-4 sm:px-6 md:px-8 py-3 sm:py-4 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-bold text-sm sm:text-base md:text-lg rounded-lg sm:rounded-xl hover:from-blue-700 hover:to-purple-700 transition-all transform hover:scale-105 shadow-lg hover:shadow-xl w-full sm:w-auto text-center"
                 >
-                  <Users className="w-6 h-6" />
-                  Book a Compliance Strategy Call
-                  <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+                  <Users className="w-4 h-4 sm:w-5 sm:h-5 md:w-6 md:h-6" />
+                  <span className="truncate">Book a Compliance Strategy Call</span>
+                  <ArrowRight className="w-4 h-4 sm:w-5 sm:h-5 group-hover:translate-x-1 transition-transform" />
                 </a>
               </div>
 
               {/* Trust indicators */}
-              <div className="flex flex-wrap justify-center items-center gap-6 text-sm text-gray-400">
+              <div className="flex flex-col sm:flex-row flex-wrap justify-center items-center gap-3 sm:gap-4 md:gap-6 text-xs sm:text-sm text-gray-400 px-4">
                 <div className="flex items-center gap-2">
                   <CheckCircle className="w-4 h-4 text-green-400" />
                   <span>Built for companies under $50M revenue</span>
@@ -399,18 +399,18 @@ export default function AIGovernancePage() {
         </section>
 
         {/* Problem Section */}
-        <section className="py-16 bg-gray-900/50">
+        <section className="py-12 sm:py-16 bg-gray-900/50">
           <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="text-center mb-12">
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+            <div className="text-center mb-8 sm:mb-12">
+              <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-4 sm:mb-6">
                 Your AI Stack Just Became a Sales Blocker
               </h2>
-              <p className="text-xl text-gray-300 mb-12">
+              <p className="text-base sm:text-lg md:text-xl text-gray-300 mb-8 sm:mb-12 px-2">
                 Three things changed in 2025–2026 that turned AI compliance from &quot;nice to have&quot; into &quot;deal-killer&quot;:
               </p>
             </div>
 
-            <div className="grid md:grid-cols-3 gap-8 mb-12">
+            <div className="grid gap-6 sm:gap-8 md:grid-cols-3 mb-8 sm:mb-12">
               {[
                 {
                   icon: Building,
@@ -438,8 +438,8 @@ export default function AIGovernancePage() {
               ))}
             </div>
 
-            <div className="text-center">
-              <p className="text-xl text-gray-300">
+            <div className="text-center px-2">
+              <p className="text-base sm:text-lg md:text-xl text-gray-300">
                 The companies that win are the ones that show up with documentation already in hand. Everyone else watches deals slip.
               </p>
             </div>
@@ -447,19 +447,19 @@ export default function AIGovernancePage() {
         </section>
 
         {/* Solution Section */}
-        <section className="py-16">
+        <section className="py-12 sm:py-16">
           <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="text-center mb-12">
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+            <div className="text-center mb-8 sm:mb-12">
+              <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-4 sm:mb-6">
                 Meet the AI Compliance Copilot
               </h2>
-              <p className="text-xl text-gray-300 max-w-4xl mx-auto mb-8">
+              <p className="text-base sm:text-lg md:text-xl text-gray-300 max-w-4xl mx-auto mb-6 sm:mb-8 px-2">
                 A single dashboard that scans your AI stack, maps every compliance risk, and generates the documentation your buyers, investors, and auditors need.
               </p>
-              <h3 className="text-2xl font-bold text-white mb-8">What it does</h3>
+              <h3 className="text-lg sm:text-xl md:text-2xl font-bold text-white mb-6 sm:mb-8">What it does</h3>
             </div>
 
-            <div className="grid md:grid-cols-2 gap-8">
+            <div className="grid gap-6 sm:gap-8 md:grid-cols-2">
               {[
                 {
                   icon: Target,
@@ -495,18 +495,18 @@ export default function AIGovernancePage() {
         </section>
 
         {/* Frameworks Section */}
-        <section className="py-16 bg-gray-900/50">
+        <section className="py-12 sm:py-16 bg-gray-900/50">
           <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="text-center mb-12">
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+            <div className="text-center mb-8 sm:mb-12">
+              <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-4 sm:mb-6">
                 Frameworks We Cover
               </h2>
-              <p className="text-xl text-gray-300 mb-8">
+              <p className="text-base sm:text-lg md:text-xl text-gray-300 mb-6 sm:mb-8 px-2">
                 Pre-mapped to the regulations and frameworks your buyers care about:
               </p>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+            <div className="grid gap-3 sm:gap-4 md:grid-cols-2 lg:grid-cols-3">
               {[
                 "EU AI Act — risk classification, prohibited practices, high-risk system documentation",
                 "NIST AI Risk Management Framework (AI RMF 1.0) — Govern, Map, Measure, Manage", 
@@ -525,8 +525,8 @@ export default function AIGovernancePage() {
               ))}
             </div>
 
-            <div className="text-center mt-12">
-              <p className="text-xl text-cyan-400 font-semibold">
+            <div className="text-center mt-8 sm:mt-12 px-2">
+              <p className="text-base sm:text-lg md:text-xl text-cyan-400 font-semibold">
                 If your buyer asks &quot;are you compliant with X?&quot; — the answer is in the dashboard.
               </p>
             </div>
@@ -534,15 +534,15 @@ export default function AIGovernancePage() {
         </section>
 
         {/* How It Works Section */}
-        <section className="py-16">
+        <section className="py-12 sm:py-16">
           <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="text-center mb-16">
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+            <div className="text-center mb-12 sm:mb-16">
+              <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-4 sm:mb-6">
                 How It Works (4 Steps)
               </h2>
             </div>
 
-            <div className="space-y-8">
+            <div className="space-y-6 sm:space-y-8">
               {[
                 {
                   step: "1",
@@ -569,13 +569,13 @@ export default function AIGovernancePage() {
                   days: "Day 12–14"
                 }
               ].map((step, index) => (
-                <div key={index} className="flex items-start gap-6">
-                  <div className="w-12 h-12 bg-gradient-to-r from-blue-600 to-purple-600 rounded-full flex items-center justify-center flex-shrink-0">
-                    <span className="text-white font-bold text-lg">{step.step}</span>
+                <div key={index} className="flex items-start gap-4 sm:gap-6">
+                  <div className="w-10 h-10 sm:w-12 sm:h-12 bg-gradient-to-r from-blue-600 to-purple-600 rounded-full flex items-center justify-center flex-shrink-0">
+                    <span className="text-white font-bold text-base sm:text-lg">{step.step}</span>
                   </div>
                   <div className="flex-1">
-                    <h3 className="text-xl font-bold text-white mb-2">{step.title}</h3>
-                    <p className="text-gray-300">{step.description}</p>
+                    <h3 className="text-lg sm:text-xl font-bold text-white mb-2">{step.title}</h3>
+                    <p className="text-sm sm:text-base text-gray-300">{step.description}</p>
                   </div>
                 </div>
               ))}
@@ -584,25 +584,25 @@ export default function AIGovernancePage() {
         </section>
 
         {/* Who This Is For Section */}
-        <section className="py-16 bg-gray-900/50">
+        <section className="py-12 sm:py-16 bg-gray-900/50">
           <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="text-center mb-12">
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-8">
+            <div className="text-center mb-8 sm:mb-12">
+              <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-6 sm:mb-8">
                 Who This Is For
               </h2>
             </div>
 
-            <div className="grid md:grid-cols-2 gap-8">
+            <div className="grid gap-6 sm:gap-8 md:grid-cols-2">
               {[
                 "You&apos;re approaching an enterprise deal and procurement is asking AI risk questions you can&apos;t answer in your sleep.",
                 "You&apos;re raising a round and your data room is missing the AI governance section every modern VC now expects.",
                 "You&apos;re scaling past 25 employees and &apos;we don&apos;t really have an AI policy&apos; stopped being a defensible answer six months ago.",
                 "You&apos;re in healthcare, finance, legal, or HR tech and AI regulation in your industry is moving faster than your legal team can read."
               ].map((scenario, index) => (
-                <div key={index} className="bg-black border border-gray-800 rounded-xl p-6">
-                  <div className="flex items-start gap-4">
-                    <CheckCircle className="w-6 h-6 text-cyan-400 flex-shrink-0 mt-1" />
-                    <p className="text-gray-300 text-lg">{scenario}</p>
+                <div key={index} className="bg-black border border-gray-800 rounded-xl p-4 sm:p-6">
+                  <div className="flex items-start gap-3 sm:gap-4">
+                    <CheckCircle className="w-5 h-5 sm:w-6 sm:h-6 text-cyan-400 flex-shrink-0 mt-1" />
+                    <p className="text-gray-300 text-sm sm:text-base md:text-lg">{scenario}</p>
                   </div>
                 </div>
               ))}
@@ -611,40 +611,42 @@ export default function AIGovernancePage() {
         </section>
 
         {/* Comparison Table */}
-        <section className="py-16">
+        <section className="py-12 sm:py-16">
           <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="bg-black border border-gray-800 rounded-2xl p-8">
-              <h2 className="text-3xl font-bold text-white text-center mb-8">
+            <div className="bg-black border border-gray-800 rounded-xl sm:rounded-2xl p-4 sm:p-6 md:p-8">
+              <h2 className="text-2xl sm:text-3xl font-bold text-white text-center mb-6 sm:mb-8">
                 How We Compare
               </h2>
               
-              <Table<ComparisonData>
-                data={comparisonData}
-                columns={[
-                  { key: 'attribute', label: '', align: 'left' },
-                  { key: 'legal', label: 'Legal counsel', align: 'center' },
-                  { key: 'vanta', label: 'Vanta / Drata', align: 'center' },
-                  { key: 'diy', label: 'DIY internal', align: 'center' },
-                  { key: 'siteoptz', label: 'SiteOptz AI Compliance Copilot', align: 'center', highlighted: true }
-                ]}
-              />
+              <div className="overflow-x-auto">
+                <Table<ComparisonData>
+                  data={comparisonData}
+                  columns={[
+                    { key: 'attribute', label: '', align: 'left' },
+                    { key: 'legal', label: 'Legal counsel', align: 'center' },
+                    { key: 'vanta', label: 'Vanta / Drata', align: 'center' },
+                    { key: 'diy', label: 'DIY internal', align: 'center' },
+                    { key: 'siteoptz', label: 'SiteOptz AI Compliance Copilot', align: 'center', highlighted: true }
+                  ]}
+                />
+              </div>
             </div>
           </div>
         </section>
 
         {/* Pricing Section */}
-        <section className="py-16 bg-gray-900/50">
+        <section className="py-12 sm:py-16 bg-gray-900/50">
           <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="text-center mb-12">
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+            <div className="text-center mb-8 sm:mb-12">
+              <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-4 sm:mb-6">
                 Pricing — Integrated Across All Tiers
               </h2>
-              <p className="text-xl text-gray-300 mb-8">
+              <p className="text-base sm:text-lg md:text-xl text-gray-300 mb-6 sm:mb-8 px-2">
                 AI Compliance Copilot isn&apos;t a separate product. It&apos;s layered into every SiteOptz plan.
               </p>
             </div>
 
-            <div className="bg-black border border-gray-800 rounded-2xl p-8">
+            <div className="bg-black border border-gray-800 rounded-xl sm:rounded-2xl p-4 sm:p-6 md:p-8">
               <PricingCalculator
                 plans={pricingPlans}
                 additionalColumn={{
@@ -661,15 +663,15 @@ export default function AIGovernancePage() {
               />
             </div>
 
-            <div className="text-center mt-8">
-              <p className="text-gray-300 mb-6">
+            <div className="text-center mt-6 sm:mt-8">
+              <p className="text-sm sm:text-base text-gray-300 mb-4 sm:mb-6 px-2">
                 Need standalone compliance without the full implementation suite? 
                 Ask about the <strong className="text-white">Compliance Copilot Add-On</strong> ($99–$299/mo).
               </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <div className="flex flex-col gap-3 sm:gap-4 justify-center px-4">
                 <Link
                   href="/upgrade"
-                  className="inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-purple-700 transition-colors"
+                  className="inline-flex items-center justify-center gap-2 px-4 sm:px-6 py-3 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold text-sm sm:text-base rounded-lg hover:from-blue-700 hover:to-purple-700 transition-colors w-full sm:w-auto"
                 >
                   See Full Pricing
                   <ArrowRight className="w-4 h-4" />
@@ -678,7 +680,7 @@ export default function AIGovernancePage() {
                   href="https://api.leadconnectorhq.com/widget/booking/yPjkVmsauPst8XlrOQUl"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-green-600 to-cyan-600 text-white font-semibold rounded-lg hover:from-green-700 hover:to-cyan-700 transition-colors"
+                  className="inline-flex items-center justify-center gap-2 px-4 sm:px-6 py-3 bg-gradient-to-r from-green-600 to-cyan-600 text-white font-semibold text-sm sm:text-base rounded-lg hover:from-green-700 hover:to-cyan-700 transition-colors w-full sm:w-auto"
                 >
                   Talk to a Compliance Consultant
                   <ArrowRight className="w-4 h-4" />
@@ -692,16 +694,16 @@ export default function AIGovernancePage() {
         <ClientsSlider />
 
         {/* Customer Testimonials */}
-        <section className="py-16">
+        <section className="py-12 sm:py-16">
           <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="grid md:grid-cols-2 gap-8">
-              <div className="bg-black border border-gray-800 rounded-xl p-8">
+            <div className="grid gap-6 sm:gap-8 md:grid-cols-2">
+              <div className="bg-black border border-gray-800 rounded-xl p-6 sm:p-8">
                 <div className="flex items-start gap-1 mb-4">
                   {[...Array(5)].map((_, i) => (
                     <div key={i} className="w-4 h-4 text-yellow-400 fill-current">⭐</div>
                   ))}
                 </div>
-                <blockquote className="text-lg text-gray-300 mb-4">
+                <blockquote className="text-base sm:text-lg text-gray-300 mb-4">
                   &quot;We had three enterprise deals stalled on AI questionnaires we couldn&apos;t answer. SiteOptz turned that around in two weeks. All three closed.&quot;
                 </blockquote>
                 <div className="text-sm text-gray-400">
@@ -709,13 +711,13 @@ export default function AIGovernancePage() {
                 </div>
               </div>
 
-              <div className="bg-black border border-gray-800 rounded-xl p-8">
+              <div className="bg-black border border-gray-800 rounded-xl p-6 sm:p-8">
                 <div className="flex items-start gap-1 mb-4">
                   {[...Array(5)].map((_, i) => (
                     <div key={i} className="w-4 h-4 text-yellow-400 fill-current">⭐</div>
                   ))}
                 </div>
-                <blockquote className="text-lg text-gray-300 mb-4">
+                <blockquote className="text-base sm:text-lg text-gray-300 mb-4">
                   &quot;Our Series B data room was missing exactly one thing. SiteOptz filled it in 10 days.&quot;
                 </blockquote>
                 <div className="text-sm text-gray-400">
@@ -727,10 +729,10 @@ export default function AIGovernancePage() {
         </section>
 
         {/* FAQ Section */}
-        <section className="py-16 bg-gray-900/50">
+        <section className="py-12 sm:py-16 bg-gray-900/50">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="text-center mb-12">
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+            <div className="text-center mb-8 sm:mb-12">
+              <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-4 sm:mb-6">
                 Frequently Asked Questions
               </h2>
             </div>
@@ -740,41 +742,41 @@ export default function AIGovernancePage() {
         </section>
 
         {/* Final CTA */}
-        <section className="py-20">
+        <section className="py-12 sm:py-16 md:py-20">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-4 sm:mb-6">
               Stop Losing Deals to a Question You Should&apos;ve Answered Last Quarter
             </h2>
-            <p className="text-xl text-gray-300 mb-8">
+            <p className="text-base sm:text-lg md:text-xl text-gray-300 mb-6 sm:mb-8 px-2">
               Your competitors are showing up to enterprise meetings with AI governance docs in hand. 
               Your investors are asking what you don&apos;t yet have. Your auditors are about to.
             </p>
-            <p className="text-2xl font-bold text-cyan-400 mb-12">
+            <p className="text-lg sm:text-xl md:text-2xl font-bold text-cyan-400 mb-8 sm:mb-12 px-2">
               Run the free AI Risk Scorecard now. Get your top 3 gaps in 5 minutes.
             </p>
 
-            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-8">
+            <div className="flex flex-col gap-3 sm:gap-4 justify-center items-center mb-6 sm:mb-8 px-4">
               <Link
                 href="/ai-governance/scorecard"
-                className="group inline-flex items-center gap-3 px-8 py-4 bg-gradient-to-r from-orange-600 to-red-600 text-white font-bold text-lg rounded-xl hover:from-orange-700 hover:to-red-700 transition-all transform hover:scale-105 shadow-lg hover:shadow-xl"
+                className="group inline-flex items-center gap-2 sm:gap-3 px-4 sm:px-6 md:px-8 py-3 sm:py-4 bg-gradient-to-r from-orange-600 to-red-600 text-white font-bold text-sm sm:text-base md:text-lg rounded-lg sm:rounded-xl hover:from-orange-700 hover:to-red-700 transition-all transform hover:scale-105 shadow-lg hover:shadow-xl w-full sm:w-auto text-center"
               >
-                <Zap className="w-6 h-6" />
-                Start Free Scorecard
-                <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+                <Zap className="w-4 h-4 sm:w-5 sm:h-5 md:w-6 md:h-6" />
+                <span className="truncate">Start Free Scorecard</span>
+                <ArrowRight className="w-4 h-4 sm:w-5 sm:h-5 group-hover:translate-x-1 transition-transform" />
               </Link>
               <a
                 href="https://api.leadconnectorhq.com/widget/booking/yPjkVmsauPst8XlrOQUl"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="group inline-flex items-center gap-3 px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-bold text-lg rounded-xl hover:from-blue-700 hover:to-purple-700 transition-all transform hover:scale-105 shadow-lg hover:shadow-xl"
+                className="group inline-flex items-center gap-2 sm:gap-3 px-4 sm:px-6 md:px-8 py-3 sm:py-4 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-bold text-sm sm:text-base md:text-lg rounded-lg sm:rounded-xl hover:from-blue-700 hover:to-purple-700 transition-all transform hover:scale-105 shadow-lg hover:shadow-xl w-full sm:w-auto text-center"
               >
-                <Users className="w-6 h-6" />
-                Book a Strategy Call
-                <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+                <Users className="w-4 h-4 sm:w-5 sm:h-5 md:w-6 md:h-6" />
+                <span className="truncate">Book a Strategy Call</span>
+                <ArrowRight className="w-4 h-4 sm:w-5 sm:h-5 group-hover:translate-x-1 transition-transform" />
               </a>
             </div>
 
-            <div className="flex flex-wrap justify-center items-center gap-6 text-sm text-gray-400">
+            <div className="flex flex-col sm:flex-row flex-wrap justify-center items-center gap-3 sm:gap-4 md:gap-6 text-xs sm:text-sm text-gray-400 px-4">
               <div className="flex items-center gap-2">
                 <CheckCircle className="w-4 h-4 text-green-400" />
                 <span>No credit card</span>
