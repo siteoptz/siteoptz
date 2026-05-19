@@ -104,6 +104,13 @@ export default function TrialButton({
       return;
     }
 
+    // DEFENSIVE FIX: Clear any residual session state before OAuth
+    try {
+      await signOut({ redirect: false });
+    } catch (error) {
+      console.log('No session to clear:', error);
+    }
+
     // Initiate Google OAuth flow for new users
     try {
       const trialType = variant === 'start-7-day-trial' ? '7-day' : plan;
@@ -112,6 +119,10 @@ export default function TrialButton({
       await signIn('google', {
         callbackUrl: callbackUrl,
         redirect: true,
+        // Force Google account picker to prevent Chrome from auto-selecting previous account
+        authorizationParams: {
+          prompt: 'select_account'
+        }
       });
 
       // Track OAuth initiation

@@ -12,16 +12,6 @@ export default function SignupPage() {
   // Get query parameters
   const { plan, trial, source } = router.query;
 
-  // If user is already signed in, redirect to appropriate page
-  useEffect(() => {
-    if (session?.user) {
-      if (plan === 'kids-ai') {
-        router.push('/kids-ai');
-      } else {
-        router.push('/dashboard');
-      }
-    }
-  }, [session, plan, router]);
 
   // If loading, show loading state
   if (status === 'loading') {
