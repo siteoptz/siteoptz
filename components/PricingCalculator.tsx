@@ -303,34 +303,36 @@ export default function PricingCalculator({
       {additionalColumn && (
         <div className="mt-6">
           <h3 className="text-lg font-medium mb-4">{additionalColumn.label}</h3>
-          <table className="w-full">
-            <thead>
-              <tr className="border-b border-gray-700">
-                <th className="text-left py-4 px-6 text-gray-400 font-medium">Plan</th>
-                <th className="text-left py-4 px-6 text-gray-400 font-medium">Price</th>
-                <th className="text-left py-4 px-6 text-gray-400 font-medium">{additionalColumn.label}</th>
-              </tr>
-            </thead>
-            <tbody className="text-sm">
-              {convertedPlans.map((plan) => {
-                const planId = plan.name;
-                const additionalContent = additionalColumn.rowsByPlanId[planId];
-                
-                // Dev-only validation warning
-                if (process.env.NODE_ENV === 'development' && !additionalContent) {
-                  console.warn(`AdditionalColumn missing content for plan ID: "${planId}"`);
-                }
-                
-                return (
-                  <tr key={planId} className="border-b border-gray-800">
-                    <td className="py-4 px-6 text-gray-300">{plan.name}</td>
-                    <td className="py-4 px-6 text-gray-300">{plan.price}</td>
-                    <td className="py-4 px-6 text-gray-300">{additionalContent || ''}</td>
-                  </tr>
-                );
-              })}
-            </tbody>
-          </table>
+          <div className="overflow-x-auto">
+            <table className="w-full">
+              <thead>
+                <tr className="border-b border-gray-700">
+                  <th className="text-left py-3 px-2 sm:py-4 sm:px-6 text-gray-400 font-medium text-xs sm:text-sm">Plan</th>
+                  <th className="text-left py-3 px-2 sm:py-4 sm:px-6 text-gray-400 font-medium text-xs sm:text-sm">Price</th>
+                  <th className="text-left py-3 px-2 sm:py-4 sm:px-6 text-gray-400 font-medium text-xs sm:text-sm">{additionalColumn.label}</th>
+                </tr>
+              </thead>
+              <tbody className="text-sm">
+                {convertedPlans.map((plan) => {
+                  const planId = plan.name;
+                  const additionalContent = additionalColumn.rowsByPlanId[planId];
+                  
+                  // Dev-only validation warning
+                  if (process.env.NODE_ENV === 'development' && !additionalContent) {
+                    console.warn(`AdditionalColumn missing content for plan ID: "${planId}"`);
+                  }
+                  
+                  return (
+                    <tr key={planId} className="border-b border-gray-800">
+                      <td className="py-3 px-2 sm:py-4 sm:px-6 text-gray-300 text-xs sm:text-sm">{plan.name}</td>
+                      <td className="py-3 px-2 sm:py-4 sm:px-6 text-gray-300 text-xs sm:text-sm">{plan.price}</td>
+                      <td className="py-3 px-2 sm:py-4 sm:px-6 text-gray-300 text-xs sm:text-sm">{additionalContent || ''}</td>
+                    </tr>
+                  );
+                })}
+              </tbody>
+            </table>
+          </div>
         </div>
       )}
 
