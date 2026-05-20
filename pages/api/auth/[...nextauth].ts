@@ -334,7 +334,9 @@ export const authOptions: NextAuthOptions = {
             'https://www.googleapis.com/auth/webmasters.readonly',
             'https://www.googleapis.com/auth/tagmanager.readonly',
             'https://www.googleapis.com/auth/analytics.readonly'
-          ].join(' ')
+          ].join(' '),
+          prompt: 'select_account',
+          access_type: 'offline'
         }
       }
     }),

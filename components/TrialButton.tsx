@@ -116,14 +116,9 @@ export default function TrialButton({
       const trialType = variant === 'start-7-day-trial' ? '7-day' : plan;
       const callbackUrl = `${window.location.origin}${redirectAfterSignIn}?plan=${plan}&trial=true&oauth=success`;
 
-      await signIn('google', {
-        callbackUrl: callbackUrl,
-        redirect: true,
-        // Force Google account picker to prevent Chrome from auto-selecting previous account
-        authorizationParams: {
-          prompt: 'select_account'
-        }
-      });
+      // Force Google account picker by using direct URL with prompt parameter
+      const oauthUrl = `/api/auth/signin/google?callbackUrl=${encodeURIComponent(callbackUrl)}&prompt=select_account`;
+      window.location.href = oauthUrl;
 
       // Track OAuth initiation
       if (typeof window !== 'undefined' && window.gtag) {
