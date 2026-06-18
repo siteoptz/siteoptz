@@ -40,6 +40,8 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   return res.status(200).json({
     contactId,
     customFieldsCount: customFields.length,
+    fullFirstFieldRaw: JSON.stringify(customFields[0] ?? null, null, 2),
+    fullFirstFieldKeys: customFields[0] ? Object.keys(customFields[0]) : [],
     customFieldsPreview: customFields.slice(0, 10),
     scorecardRelatedFields,
   });
