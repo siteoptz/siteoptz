@@ -11,7 +11,8 @@ function getGhlCredentials(): { apiKey: string; locationId: string } {
   return { apiKey, locationId };
 }
 
-async function findGhlContactId(email: string): Promise<string | null> {
+// TODO: revert to unexported `async function` once debug-contact.ts is removed
+export async function findGhlContactId(email: string): Promise<string | null> {
   const { apiKey, locationId } = getGhlCredentials();
 
   console.log(`[COMPLIANCE_DIAG] findGhlContactId: searching for email="${email}"`);
@@ -47,7 +48,8 @@ async function findGhlContactId(email: string): Promise<string | null> {
   return contactId;
 }
 
-async function fetchFullGhlContact(contactId: string): Promise<Record<string, unknown>> {
+// TODO: revert to unexported `async function` once debug-contact.ts is removed
+export async function fetchFullGhlContact(contactId: string): Promise<Record<string, unknown>> {
   const { apiKey } = getGhlCredentials();
 
   console.log(`[COMPLIANCE_DIAG] fetchFullGhlContact: fetching contactId="${contactId}"`);
