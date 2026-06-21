@@ -1,3 +1,4 @@
+import { GHL_FIELD_IDS } from './compliance-config';
 import type { ScorecardData, ComplianceProfile } from './compliance-config';
 
 const GHL_API_BASE = 'https://services.leadconnectorhq.com';
@@ -11,11 +12,8 @@ function getGhlCredentials(): { apiKey: string; locationId: string } {
   return { apiKey, locationId };
 }
 
-// TODO: revert to unexported `async function` once debug-contact.ts is removed
-export async function findGhlContactId(email: string): Promise<string | null> {
+async function findGhlContactId(email: string): Promise<string | null> {
   const { apiKey, locationId } = getGhlCredentials();
-
-  console.log(`[COMPLIANCE_DIAG] findGhlContactId: searching for email="${email}"`);
 
   const response = await fetch(
     `${GHL_API_BASE}/contacts/search/duplicate?email=${encodeURIComponent(email)}&locationId=${encodeURIComponent(locationId)}`,
@@ -29,30 +27,19 @@ export async function findGhlContactId(email: string): Promise<string | null> {
     }
   );
 
-  console.log(`[COMPLIANCE_DIAG] findGhlContactId: GHL response status=${response.status}`);
-
   if (!response.ok) {
     const errorText = await response.text();
-    console.log(`[COMPLIANCE_DIAG] findGhlContactId: non-ok response body="${errorText}"`);
     throw new Error(`GHL contact search failed: ${response.status} - ${errorText}`);
   }
 
   const data = (await response.json()) as Record<string, unknown>;
   const contact = data.contact as Record<string, unknown> | undefined;
 
-  console.log(`[COMPLIANCE_DIAG] findGhlContactId: data.contact exists=${!!contact}`);
-
-  const contactId = contact?.id ? String(contact.id) : null;
-  console.log(`[COMPLIANCE_DIAG] findGhlContactId: returning contactId=${contactId}`);
-
-  return contactId;
+  return contact?.id ? String(contact.id) : null;
 }
 
-// TODO: revert to unexported `async function` once debug-contact.ts is removed
-export async function fetchFullGhlContact(contactId: string): Promise<Record<string, unknown>> {
+async function fetchFullGhlContact(contactId: string): Promise<Record<string, unknown>> {
   const { apiKey } = getGhlCredentials();
-
-  console.log(`[COMPLIANCE_DIAG] fetchFullGhlContact: fetching contactId="${contactId}"`);
 
   const response = await fetch(
     `${GHL_API_BASE}/contacts/${encodeURIComponent(contactId)}`,
@@ -66,28 +53,12 @@ export async function fetchFullGhlContact(contactId: string): Promise<Record<str
     }
   );
 
-  console.log(`[COMPLIANCE_DIAG] fetchFullGhlContact: GHL response status=${response.status}`);
-
   if (!response.ok) {
     const errorText = await response.text();
-    console.log(`[COMPLIANCE_DIAG] fetchFullGhlContact: non-ok response body="${errorText}"`);
     throw new Error(`GHL contact fetch failed: ${response.status} - ${errorText}`);
   }
 
-  const result = (await response.json()) as Record<string, unknown>;
-  const contact = result.contact as Record<string, unknown> | undefined;
-
-  console.log(`[COMPLIANCE_DIAG] fetchFullGhlContact: result.contact exists=${!!contact}`);
-
-  const customFields = contact?.customFields;
-  if (Array.isArray(customFields) && customFields.length > 0) {
-    const preview = JSON.stringify(customFields).slice(0, 200);
-    console.log(`[COMPLIANCE_DIAG] fetchFullGhlContact: customFields preview="${preview}"`);
-  } else {
-    console.log(`[COMPLIANCE_DIAG] fetchFullGhlContact: no customFields (value=${JSON.stringify(customFields)})`);
-  }
-
-  return result;
+  return (await response.json()) as Record<string, unknown>;
 }
 
 function getCustomFieldValue(
@@ -103,33 +74,20 @@ function getCustomFieldValue(
 
 export async function getScorecardData(userEmail: string): Promise<ScorecardData | null> {
   const contactId = await findGhlContactId(userEmail);
-  console.log(`[COMPLIANCE_DIAG] getScorecardData: findGhlContactId returned=${contactId}`);
 
-  if (!contactId) {
-    console.log(`[COMPLIANCE_DIAG] getScorecardData: returning null — no GHL contact found for email`);
-    return null;
-  }
+  if (!contactId) return null;
 
   const result = await fetchFullGhlContact(contactId);
   const contact = result.contact as Record<string, unknown> | undefined;
-  console.log(`[COMPLIANCE_DIAG] getScorecardData: fetchFullGhlContact contact exists=${!!contact}`);
 
-  if (!contact) {
-    console.log(`[COMPLIANCE_DIAG] getScorecardData: returning null — fetchFullGhlContact returned no contact`);
-    return null;
-  }
+  if (!contact) return null;
 
   const fields = (contact.customFields as Array<{ key?: string; id?: string; value?: string; field_value?: unknown }>) ?? [];
-  const scoreRaw = getCustomFieldValue(fields, 'scorecard_total_score');
-  const band = getCustomFieldValue(fields, 'scorecard_band');
-  const completedAt = getCustomFieldValue(fields, 'scorecard_completed_at');
+  const scoreRaw = getCustomFieldValue(fields, GHL_FIELD_IDS.SCORECARD_PERCENTAGE);
+  const band = getCustomFieldValue(fields, GHL_FIELD_IDS.SCORECARD_BAND);
+  const completedAt = getCustomFieldValue(fields, GHL_FIELD_IDS.SCORECARD_COMPLETED_AT);
 
-  console.log(`[COMPLIANCE_DIAG] getScorecardData: extracted scoreRaw=${scoreRaw}, band=${band}, completedAt=${completedAt}`);
-
-  if (!band || scoreRaw === null) {
-    console.log(`[COMPLIANCE_DIAG] getScorecardData: returning null — missing required fields (band=${band}, scoreRaw=${scoreRaw})`);
-    return null;
-  }
+  if (!band || scoreRaw === null) return null;
 
   return {
     score: Number(scoreRaw),
