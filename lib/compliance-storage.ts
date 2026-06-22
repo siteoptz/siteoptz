@@ -12,8 +12,7 @@ function getGhlCredentials(): { apiKey: string; locationId: string } {
   return { apiKey, locationId };
 }
 
-// TODO(temporary): re-exported for debug-contact diagnostic endpoint — revert to unexported after field UUIDs confirmed
-export async function findGhlContactId(email: string): Promise<string | null> {
+async function findGhlContactId(email: string): Promise<string | null> {
   const { apiKey, locationId } = getGhlCredentials();
 
   const response = await fetch(
@@ -39,8 +38,7 @@ export async function findGhlContactId(email: string): Promise<string | null> {
   return contact?.id ? String(contact.id) : null;
 }
 
-// TODO(temporary): re-exported for debug-contact diagnostic endpoint — revert to unexported after field UUIDs confirmed
-export async function fetchFullGhlContact(contactId: string): Promise<Record<string, unknown>> {
+async function fetchFullGhlContact(contactId: string): Promise<Record<string, unknown>> {
   const { apiKey } = getGhlCredentials();
 
   const response = await fetch(
