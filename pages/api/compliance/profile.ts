@@ -1,7 +1,24 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 import { getServerSession } from 'next-auth/next';
 import { authOptions } from '@/pages/api/auth/[...nextauth]';
-import { getComplianceProfile } from '@/lib/compliance-storage';
+import { getComplianceProfile, updateChecklist, updateAITools } from '@/lib/compliance-storage';
+import type { AIToolEntry } from '@/lib/compliance-config';
+
+const VALID_VENDORS = ['OpenAI', 'Anthropic', 'Google', 'AWS', 'Other'] as const;
+const VALID_SENSITIVITIES = ['Customer', 'Internal', 'Public', 'Unknown'] as const;
+const VALID_STATUSES = ['Active', 'Reviewed', 'Shadow'] as const;
+
+function isValidTool(tool: unknown): tool is AIToolEntry {
+  if (!tool || typeof tool !== 'object') return false;
+  const t = tool as Record<string, unknown>;
+  return (
+    typeof t.id === 'string' && t.id.length > 0 &&
+    typeof t.name === 'string' && t.name.length > 0 &&
+    typeof t.vendor === 'string' && (VALID_VENDORS as readonly string[]).includes(t.vendor) &&
+    typeof t.sensitivity === 'string' && (VALID_SENSITIVITIES as readonly string[]).includes(t.sensitivity) &&
+    typeof t.status === 'string' && (VALID_STATUSES as readonly string[]).includes(t.status)
+  );
+}
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   const session = await getServerSession(req, res, authOptions);
@@ -22,8 +39,51 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   }
 
   if (req.method === 'PATCH') {
-    // Placeholder: PATCH body not implemented in Chunk 1
-    return res.status(501).json({ error: 'Not implemented' });
+    const { action } = req.body ?? {};
+
+    if (action === 'toggle_checklist') {
+      const { itemId, completed } = req.body;
+      if (typeof itemId !== 'string' || !itemId || typeof completed !== 'boolean') {
+        return res.status(400).json({
+          error: 'toggle_checklist requires itemId (string) and completed (boolean)',
+        });
+      }
+      try {
+        const state = await updateChecklist(session.user.email, itemId, completed);
+        return res.status(200).json(state);
+      } catch (error) {
+        console.error('Compliance checklist update error:', error);
+        return res.status(500).json({
+          error: error instanceof Error ? error.message : 'Failed to update checklist',
+        });
+      }
+    }
+
+    if (action === 'update_tools') {
+      const { tools } = req.body;
+      if (!Array.isArray(tools)) {
+        return res.status(400).json({ error: 'update_tools requires tools (array)' });
+      }
+      if (tools.length > 20) {
+        return res.status(400).json({ error: 'Too many tools (max 20)' });
+      }
+      if (!tools.every(isValidTool)) {
+        return res.status(400).json({
+          error: 'Invalid tool entry. Each tool requires: id, name, vendor (OpenAI|Anthropic|Google|AWS|Other), sensitivity (Customer|Internal|Public|Unknown), status (Active|Reviewed|Shadow)',
+        });
+      }
+      try {
+        const state = await updateAITools(session.user.email, tools);
+        return res.status(200).json(state);
+      } catch (error) {
+        console.error('Compliance AI tools update error:', error);
+        return res.status(500).json({
+          error: error instanceof Error ? error.message : 'Failed to update AI tools',
+        });
+      }
+    }
+
+    return res.status(400).json({ error: 'action must be "toggle_checklist" or "update_tools"' });
   }
 
   return res.status(405).json({ error: 'Method not allowed' });

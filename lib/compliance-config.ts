@@ -10,10 +10,30 @@ export interface ScorecardData {
   completedAt: string | null;
 }
 
+export interface ChecklistItem {
+  id: string;
+  label: string;
+}
+
+export interface AIToolEntry {
+  id: string;            // generated client-side, stored in GHL
+  name: string;
+  vendor: 'OpenAI' | 'Anthropic' | 'Google' | 'AWS' | 'Other';
+  sensitivity: 'Customer' | 'Internal' | 'Public' | 'Unknown';
+  status: 'Active' | 'Reviewed' | 'Shadow';
+}
+
+export interface ComplianceState {
+  checklistState: Record<string, boolean>;  // itemId -> completed
+  aiTools: AIToolEntry[];
+}
+
 export interface ComplianceProfile {
   email: string;
   hasScorecard: boolean;
   scorecardData: ScorecardData | null;
+  checklistState: Record<string, boolean>;
+  aiTools: AIToolEntry[];
 }
 
 export const SCORE_BANDS = {
@@ -36,3 +56,64 @@ export const GHL_FIELD_IDS = {
   COMPLIANCE_CHECKLIST: 'rFxoGvPsvgR2XI7mU2JL',
   COMPLIANCE_AI_TOOLS: 'w6xkevytIHgTwE9sobCh',
 } as const;
+
+export const CHECKLIST_ITEMS: ChecklistItem[] = [
+  { id: 'doc_ai_tools', label: 'Document every AI tool touching customer data' },
+  { id: 'draft_aup', label: 'Draft AI acceptable use policy (template ready in Documents)' },
+  { id: 'assign_owner', label: 'Assign one owner for AI vendor security questions' },
+  { id: 'identify_blockers', label: 'Identify your top 3 enterprise deal blockers' },
+  { id: 'schedule_block', label: 'Schedule a 2-hour block this week to start the response' },
+];
+
+export const FRAMEWORK_TAGS_BY_CATEGORY: Record<string, string[]> = {
+  'AI Tool Inventory': [
+    'NIST AI RMF: MAP 1.1',
+    'ISO 42001: 6.1.2',
+    'EU AI Act Art. 51',
+  ],
+  'Data Sensitivity Mapping': [
+    'NIST AI RMF: MAP 2.2',
+    'SOC 2: CC6.1',
+    'GDPR Art. 35',
+  ],
+  'Vendor Due Diligence': [
+    'SOC 2: CC9.2',
+    'NIST AI RMF: GOVERN 6.2',
+    'ISO 27001: A.15.1',
+  ],
+  'AI Acceptable Use Policy': [
+    'NIST AI RMF: GOVERN 1.1',
+    'ISO 42001: 5.2',
+    'EU AI Act Art. 9',
+  ],
+  'Regulatory Classification': [
+    'EU AI Act Art. 6',
+    'NIST AI RMF: MAP 1.5',
+    'ISO 42001: 4.1',
+  ],
+  'Risk Register': [
+    'NIST AI RMF: MEASURE 2.2',
+    'SOC 2: CC3.2',
+    'ISO 27001: 6.1.2',
+  ],
+  'Customer & Contractual Obligations': [
+    'GDPR Art. 28',
+    'EU AI Act Art. 13',
+    'SOC 2: CC2.3',
+  ],
+  'Team Training': [
+    'NIST AI RMF: GOVERN 4.1',
+    'EU AI Act Art. 4',
+    'ISO 42001: 7.3',
+  ],
+  'Incident Response': [
+    'NIST AI RMF: RESPOND 1.1',
+    'SOC 2: CC7.3',
+    'ISO 27001: A.16.1',
+  ],
+  'Executive Ownership': [
+    'NIST AI RMF: GOVERN 2.2',
+    'ISO 42001: 5.1',
+    'EU AI Act Art. 17',
+  ],
+};
