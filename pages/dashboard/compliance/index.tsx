@@ -4,48 +4,49 @@ import Link from 'next/link';
 import { useEffect, useState } from 'react';
 import { getServerSession } from 'next-auth/next';
 import { authOptions } from '@/pages/api/auth/[...nextauth]';
+import type { AIToolEntry, ComplianceProfile } from '@/lib/compliance-config';
+import { CHECKLIST_ITEMS } from '@/lib/compliance-config';
+import ComplianceDashboardLayout from '@/components/compliance/ComplianceDashboardLayout';
+import DealReadinessHeader from '@/components/compliance/DealReadinessHeader';
+import WeeklyChecklist from '@/components/compliance/WeeklyChecklist';
+import GapCard from '@/components/compliance/GapCard';
+import AIToolTracker from '@/components/compliance/AIToolTracker';
 
-interface ScorecardState {
-  status: 'loading' | 'has-scorecard' | 'no-scorecard' | 'error';
-  score: number | null;
-  band: string | null;
-  completedAt: string | null;
-  error: string | null;
-}
+type PageStatus = 'loading' | 'has-scorecard' | 'no-scorecard' | 'error';
 
 interface Props {
   userEmail: string;
 }
 
 export default function ComplianceDashboard({ userEmail }: Props) {
-  const [state, setState] = useState<ScorecardState>({
-    status: 'loading',
-    score: null,
-    band: null,
-    completedAt: null,
-    error: null,
-  });
+  const [status, setStatus] = useState<PageStatus>('loading');
+  const [profile, setProfile] = useState<ComplianceProfile | null>(null);
+  const [checklistState, setChecklistState] = useState<Record<string, boolean>>({});
+  const [aiTools, setAITools] = useState<AIToolEntry[]>([]);
+  const [error, setError] = useState<string | null>(null);
 
   useEffect(() => {
-    fetch('/api/compliance/scorecard')
+    fetch('/api/compliance/profile')
       .then((res) => res.json())
-      .then((data: { error?: string; hasScorecard?: boolean; score?: number; band?: string; completedAt?: string }) => {
+      .then((data: ComplianceProfile & { error?: string }) => {
         if (data.error) {
-          setState({ status: 'error', score: null, band: null, completedAt: null, error: data.error });
+          setStatus('error');
+          setError(data.error);
         } else if (!data.hasScorecard) {
-          setState({ status: 'no-scorecard', score: null, band: null, completedAt: null, error: null });
+          setStatus('no-scorecard');
+          setProfile(data);
+          setChecklistState(data.checklistState ?? {});
+          setAITools(data.aiTools ?? []);
         } else {
-          setState({
-            status: 'has-scorecard',
-            score: data.score ?? null,
-            band: data.band ?? null,
-            completedAt: data.completedAt ?? null,
-            error: null,
-          });
+          setStatus('has-scorecard');
+          setProfile(data);
+          setChecklistState(data.checklistState ?? {});
+          setAITools(data.aiTools ?? []);
         }
       })
       .catch(() => {
-        setState({ status: 'error', score: null, band: null, completedAt: null, error: 'Failed to load scorecard data' });
+        setStatus('error');
+        setError('Failed to load dashboard data');
       });
   }, []);
 
@@ -54,58 +55,79 @@ export default function ComplianceDashboard({ userEmail }: Props) {
       <Head>
         <title>Deal Readiness Board | SiteOptz</title>
       </Head>
-      <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-black">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
-          <h1 className="text-3xl font-bold text-white mb-2">Deal Readiness Board</h1>
-          <p className="text-gray-400 mb-8">{userEmail}</p>
+      <ComplianceDashboardLayout userEmail={userEmail}>
+        {status === 'loading' && (
+          <div className="bg-black border border-gray-800 rounded-xl p-8">
+            <p className="text-gray-300">Loading your scorecard data...</p>
+          </div>
+        )}
 
-          {state.status === 'loading' && (
-            <div className="bg-black border border-gray-800 rounded-xl p-8">
-              <p className="text-gray-300">Loading your scorecard data...</p>
-            </div>
-          )}
+        {status === 'has-scorecard' && profile?.scorecardData && (
+          <div className="space-y-6">
+            <DealReadinessHeader
+              score={profile.scorecardData.score}
+              band={profile.scorecardData.band}
+              completedAt={profile.scorecardData.completedAt}
+            />
 
-          {state.status === 'has-scorecard' && (
-            <div className="bg-black border border-gray-800 rounded-xl p-8">
-              <div className="mb-6">
-                <div className="text-5xl font-bold text-white mb-2">
-                  {state.score}
-                  <span className="text-2xl text-gray-400">/100</span>
-                </div>
-                <div className="text-xl font-semibold text-cyan-400 mb-1">{state.band}</div>
-                {state.completedAt && (
-                  <p className="text-gray-400 text-sm">
-                    Completed {new Date(state.completedAt).toLocaleDateString()}
-                  </p>
-                )}
-              </div>
-              <p className="text-gray-500 text-sm">Full dashboard components coming soon.</p>
-            </div>
-          )}
+            <WeeklyChecklist
+              items={CHECKLIST_ITEMS}
+              initialState={checklistState}
+              onUpdate={setChecklistState}
+            />
 
-          {state.status === 'no-scorecard' && (
-            <div className="bg-black border border-gray-800 rounded-xl p-8 text-center">
-              <h2 className="text-xl font-bold text-white mb-4">No Scorecard Yet</h2>
-              <p className="text-gray-300 mb-6">
-                Take the AI Compliance Readiness Scorecard to see your deal readiness score.
+            {profile.scorecardData.topGaps.slice(0, 3).map((gap, i) => (
+              <GapCard
+                key={`${gap.category}-${i}`}
+                category={gap.category}
+                priority={gap.priority}
+              />
+            ))}
+
+            <AIToolTracker
+              initialTools={aiTools}
+              onUpdate={setAITools}
+            />
+
+            <div className="bg-black border border-gray-800 rounded-xl p-6">
+              <p className="text-gray-400 text-sm">
+                Documents — coming in Chunk 3. Two free templates and locked previews.
               </p>
-              <Link
-                href="/ai-governance/scorecard"
-                className="inline-block px-6 py-3 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-purple-700 transition-all"
-              >
-                Take the Scorecard
-              </Link>
             </div>
-          )}
 
-          {state.status === 'error' && (
-            <div className="bg-black border border-red-800 rounded-xl p-8">
-              <h2 className="text-xl font-bold text-red-400 mb-2">Error Loading Data</h2>
-              <p className="text-gray-300">{state.error}</p>
+            <div className="bg-black border border-gray-800 rounded-xl p-6 text-center">
+              <p className="text-gray-300 text-sm">
+                Need this done in days, not weeks?{' '}
+                <a href="#" className="text-cyan-400 hover:text-cyan-300 transition-colors">
+                  See Starter ($497/yr) →
+                </a>
+              </p>
             </div>
-          )}
-        </div>
-      </div>
+          </div>
+        )}
+
+        {status === 'no-scorecard' && (
+          <div className="bg-black border border-gray-800 rounded-xl p-8 text-center">
+            <h2 className="text-xl font-bold text-white mb-4">No Scorecard Yet</h2>
+            <p className="text-gray-300 mb-6">
+              Take the AI Compliance Readiness Scorecard to see your deal readiness score.
+            </p>
+            <Link
+              href="/ai-governance/scorecard"
+              className="inline-block px-6 py-3 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-purple-700 transition-all"
+            >
+              Take the Scorecard
+            </Link>
+          </div>
+        )}
+
+        {status === 'error' && (
+          <div className="bg-black border border-red-800 rounded-xl p-8">
+            <h2 className="text-xl font-bold text-red-400 mb-2">Error Loading Data</h2>
+            <p className="text-gray-300">{error}</p>
+          </div>
+        )}
+      </ComplianceDashboardLayout>
     </>
   );
 }
