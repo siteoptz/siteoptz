@@ -1,5 +1,5 @@
 import { GHL_FIELD_IDS } from './compliance-config';
-import type { ScorecardData, ComplianceProfile, AIToolEntry, ComplianceState } from './compliance-config';
+import type { ScorecardData, ScorecardGap, ComplianceProfile, AIToolEntry, ComplianceState } from './compliance-config';
 
 const GHL_API_BASE = 'https://services.leadconnectorhq.com';
 
@@ -132,6 +132,7 @@ export async function getScorecardData(userEmail: string): Promise<ScorecardData
   const scoreRaw = getCustomFieldValue(fields, GHL_FIELD_IDS.SCORECARD_PERCENTAGE);
   const band = getCustomFieldValue(fields, GHL_FIELD_IDS.SCORECARD_BAND);
   const completedAt = getCustomFieldValue(fields, GHL_FIELD_IDS.SCORECARD_COMPLETED_AT);
+  const topGapsRaw = getCustomFieldValue(fields, GHL_FIELD_IDS.SCORECARD_TOP_GAPS);
 
   if (!band || scoreRaw === null) return null;
 
@@ -139,6 +140,7 @@ export async function getScorecardData(userEmail: string): Promise<ScorecardData
     score: Number(scoreRaw),
     band: band as ScorecardData['band'],
     completedAt,
+    topGaps: parseJsonField<ScorecardGap[]>(topGapsRaw, 'SCORECARD_TOP_GAPS', []),
   };
 }
 

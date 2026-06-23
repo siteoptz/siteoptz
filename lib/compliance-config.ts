@@ -4,10 +4,17 @@ export type ScorecardBand =
   | 'Mostly Ready'
   | 'Audit-Ready';
 
+export interface ScorecardGap {
+  category: string;
+  score: number;
+  priority: 'critical' | 'high' | 'medium' | 'low';
+}
+
 export interface ScorecardData {
   score: number;
   band: ScorecardBand;
   completedAt: string | null;
+  topGaps: ScorecardGap[];
 }
 
 export interface ChecklistItem {
@@ -53,6 +60,7 @@ export const GHL_FIELD_IDS = {
   SCORECARD_PERCENTAGE: '2jNSoItwPya7aev34Wmg',
   SCORECARD_BAND: '6MTa9lHQC9OJk7xf6Gsu',
   SCORECARD_COMPLETED_AT: 'C2m9o4usV3ZljD0VY0hK',
+  SCORECARD_TOP_GAPS: 'U4te8hlCjx2Fkf34p4tz',
   COMPLIANCE_CHECKLIST: 'rFxoGvPsvgR2XI7mU2JL',
   COMPLIANCE_AI_TOOLS: 'w6xkevytIHgTwE9sobCh',
 } as const;
