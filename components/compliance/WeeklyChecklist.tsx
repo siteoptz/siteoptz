@@ -21,7 +21,8 @@ export default function WeeklyChecklist({ items, initialState, onUpdate }: Props
   );
   const [saveError, setSaveError] = useState<string | null>(null);
   const timerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
-  const pendingRef = useRef<{ itemId: string; completed: boolean } | null>(null);
+  const prevStateRef = useRef<Record<string, boolean>>(buildInitialChecked(items, initialState));
+  const pendingStateRef = useRef<Record<string, boolean>>(buildInitialChecked(items, initialState));
 
   useEffect(() => {
     return () => {
@@ -35,11 +36,14 @@ export default function WeeklyChecklist({ items, initialState, onUpdate }: Props
     return () => clearTimeout(t);
   }, [saveError]);
 
-  function flushToggle(pending: { itemId: string; completed: boolean }) {
+  function flushChecklist(stateToSave: Record<string, boolean>) {
+    const beforeFailure = prevStateRef.current;
+    prevStateRef.current = stateToSave;
+
     fetch('/api/compliance/profile', {
       method: 'PATCH',
       headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ action: 'toggle_checklist', itemId: pending.itemId, completed: pending.completed }),
+      body: JSON.stringify({ action: 'set_checklist', checklistState: stateToSave }),
     })
       .then((res) => {
         if (!res.ok) throw new Error('save failed');
@@ -49,30 +53,22 @@ export default function WeeklyChecklist({ items, initialState, onUpdate }: Props
         onUpdate(data.checklistState);
       })
       .catch(() => {
-        setChecked((prev) => ({ ...prev, [pending.itemId]: !pending.completed }));
+        setChecked(beforeFailure);
+        prevStateRef.current = beforeFailure;
         setSaveError("Couldn't save — try again");
       });
   }
 
   function handleToggle(itemId: string) {
     const newValue = !checked[itemId];
-    setChecked((prev) => ({ ...prev, [itemId]: newValue }));
+    const newChecked = { ...checked, [itemId]: newValue };
 
-    if (pendingRef.current && pendingRef.current.itemId !== itemId) {
-      if (timerRef.current) clearTimeout(timerRef.current);
-      const toFlush = pendingRef.current;
-      pendingRef.current = null;
-      flushToggle(toFlush);
-    }
-
-    pendingRef.current = { itemId, completed: newValue };
+    setChecked(newChecked);
+    pendingStateRef.current = newChecked;
 
     if (timerRef.current) clearTimeout(timerRef.current);
     timerRef.current = setTimeout(() => {
-      const pending = pendingRef.current;
-      if (!pending) return;
-      pendingRef.current = null;
-      flushToggle(pending);
+      flushChecklist(pendingStateRef.current);
     }, 1000);
   }
 
