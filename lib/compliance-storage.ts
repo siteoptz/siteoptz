@@ -155,25 +155,22 @@ export async function getComplianceState(userEmail: string): Promise<ComplianceS
   return extractComplianceStateFromContact(contact);
 }
 
-export async function updateChecklist(
+export async function setChecklistState(
   userEmail: string,
-  itemId: string,
-  completed: boolean
+  checklistState: Record<string, boolean>
 ): Promise<ComplianceState> {
   const contactId = await findGhlContactId(userEmail);
   if (!contactId) throw new Error(`No GHL contact found for ${userEmail}`);
 
-  const result = await fetchFullGhlContact(contactId);
-  const contact = result.contact as Record<string, unknown> | undefined;
-  const current = contact ? extractComplianceStateFromContact(contact) : { checklistState: {}, aiTools: [] };
-
-  const updatedChecklistState: Record<string, boolean> = { ...current.checklistState, [itemId]: completed };
-
   await writeCustomFieldsToGhl(contactId, [
-    { id: GHL_FIELD_IDS.COMPLIANCE_CHECKLIST, field_value: JSON.stringify(updatedChecklistState) },
+    { id: GHL_FIELD_IDS.COMPLIANCE_CHECKLIST, field_value: JSON.stringify(checklistState) },
   ]);
 
-  return { checklistState: updatedChecklistState, aiTools: current.aiTools };
+  const result = await fetchFullGhlContact(contactId);
+  const contact = result.contact as Record<string, unknown> | undefined;
+  const current = contact ? extractComplianceStateFromContact(contact) : { checklistState, aiTools: [] };
+
+  return { checklistState, aiTools: current.aiTools };
 }
 
 export async function updateAITools(

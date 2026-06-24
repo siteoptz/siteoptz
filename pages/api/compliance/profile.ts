@@ -1,7 +1,7 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 import { getServerSession } from 'next-auth/next';
 import { authOptions } from '@/pages/api/auth/[...nextauth]';
-import { getComplianceProfile, updateChecklist, updateAITools } from '@/lib/compliance-storage';
+import { getComplianceProfile, setChecklistState, updateAITools } from '@/lib/compliance-storage';
 import type { AIToolEntry } from '@/lib/compliance-config';
 
 const VALID_VENDORS = ['OpenAI', 'Anthropic', 'Google', 'AWS', 'Other'] as const;
@@ -41,15 +41,21 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   if (req.method === 'PATCH') {
     const { action } = req.body ?? {};
 
-    if (action === 'toggle_checklist') {
-      const { itemId, completed } = req.body;
-      if (typeof itemId !== 'string' || !itemId || typeof completed !== 'boolean') {
+    if (action === 'set_checklist') {
+      const { checklistState } = req.body;
+      if (
+        typeof checklistState !== 'object' ||
+        checklistState === null ||
+        Array.isArray(checklistState) ||
+        Object.keys(checklistState as Record<string, unknown>).length > 50 ||
+        !Object.values(checklistState as Record<string, unknown>).every((v) => typeof v === 'boolean')
+      ) {
         return res.status(400).json({
-          error: 'toggle_checklist requires itemId (string) and completed (boolean)',
+          error: 'set_checklist requires checklistState (object with string keys and boolean values, max 50 keys)',
         });
       }
       try {
-        const state = await updateChecklist(session.user.email, itemId, completed);
+        const state = await setChecklistState(session.user.email, checklistState as Record<string, boolean>);
         return res.status(200).json(state);
       } catch (error) {
         console.error('Compliance checklist update error:', error);
@@ -83,7 +89,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       }
     }
 
-    return res.status(400).json({ error: 'action must be "toggle_checklist" or "update_tools"' });
+    return res.status(400).json({ error: 'action must be "set_checklist" or "update_tools"' });
   }
 
   return res.status(405).json({ error: 'Method not allowed' });
