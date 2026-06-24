@@ -5,12 +5,13 @@ import { useEffect, useState } from 'react';
 import { getServerSession } from 'next-auth/next';
 import { authOptions } from '@/pages/api/auth/[...nextauth]';
 import type { AIToolEntry, ComplianceProfile } from '@/lib/compliance-config';
-import { CHECKLIST_ITEMS } from '@/lib/compliance-config';
+import { CHECKLIST_ITEMS, COMPLIANCE_DOCUMENTS } from '@/lib/compliance-config';
 import ComplianceDashboardLayout from '@/components/compliance/ComplianceDashboardLayout';
 import DealReadinessHeader from '@/components/compliance/DealReadinessHeader';
 import WeeklyChecklist from '@/components/compliance/WeeklyChecklist';
 import GapCard from '@/components/compliance/GapCard';
 import AIToolTracker from '@/components/compliance/AIToolTracker';
+import DocumentsSection from '@/components/compliance/DocumentsSection';
 
 type PageStatus = 'loading' | 'has-scorecard' | 'no-scorecard' | 'error';
 
@@ -89,18 +90,14 @@ export default function ComplianceDashboard({ userEmail }: Props) {
               onUpdate={setAITools}
             />
 
-            <div className="bg-black border border-gray-800 rounded-xl p-6">
-              <p className="text-gray-400 text-sm">
-                Documents — coming in Chunk 3. Two free templates and locked previews.
-              </p>
-            </div>
+            <DocumentsSection documents={COMPLIANCE_DOCUMENTS} />
 
             <div className="bg-black border border-gray-800 rounded-xl p-6 text-center">
               <p className="text-gray-300 text-sm">
                 Need this done in days, not weeks?{' '}
-                <a href="#" className="text-cyan-400 hover:text-cyan-300 transition-colors">
+                <Link href="/upgrade" className="text-cyan-400 hover:text-cyan-300 transition-colors">
                   See Starter ($497/yr) →
-                </a>
+                </Link>
               </p>
             </div>
           </div>
