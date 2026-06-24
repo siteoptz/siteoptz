@@ -35,6 +35,15 @@ export interface ComplianceState {
   aiTools: AIToolEntry[];
 }
 
+export interface ComplianceDocument {
+  id: string;
+  title: string;
+  description: string;
+  meta: string;            // short descriptor, e.g. "2 pages · editable"
+  access: 'free' | 'locked';
+  downloadUrl?: string;    // present only for free documents
+}
+
 export interface ComplianceProfile {
   email: string;
   hasScorecard: boolean;
@@ -71,6 +80,50 @@ export const CHECKLIST_ITEMS: ChecklistItem[] = [
   { id: 'assign_owner', label: 'Assign one owner for AI vendor security questions' },
   { id: 'identify_blockers', label: 'Identify your top 3 enterprise deal blockers' },
   { id: 'schedule_block', label: 'Schedule a 2-hour block this week to start the response' },
+];
+
+// Governance template library shown in the dashboard Documents section.
+// Free documents are downloadable now; locked documents are previews that
+// convert to the Starter plan. Source templates live in
+// docs/governance-launch/templates/ — free copies are served from public/.
+export const COMPLIANCE_DOCUMENTS: ComplianceDocument[] = [
+  {
+    id: 'aup',
+    title: 'AI Acceptable Use Policy',
+    description: 'A 2-page, fill-in-the-blank policy your team can adopt this week — approved tools, prohibited uses, data rules, and a signature block.',
+    meta: 'Word doc · 2 pages · framework-mapped',
+    access: 'free',
+    downloadUrl: '/downloads/governance/ai-acceptable-use-policy.docx',
+  },
+  {
+    id: 'vendor_checklist',
+    title: 'AI Vendor Review Checklist',
+    description: 'One page per vendor: SOC 2, sub-processors, training terms, data residency, DPA, and breach SLA — with a clear approve/reject decision guide.',
+    meta: 'Word doc · checklist',
+    access: 'free',
+    downloadUrl: '/downloads/governance/ai-vendor-review-checklist.docx',
+  },
+  {
+    id: 'inventory',
+    title: 'AI Tool Inventory',
+    description: 'The single spreadsheet that anchors your whole program — every tool, owner, data sensitivity, and review date, including shadow AI.',
+    meta: 'Spreadsheet template',
+    access: 'locked',
+  },
+  {
+    id: 'risk_register',
+    title: 'AI Risk Register',
+    description: 'Score and track your top AI risks with likelihood × impact, existing controls, mitigation plans, and named owners.',
+    meta: 'Scored register',
+    access: 'locked',
+  },
+  {
+    id: 'incident_plan',
+    title: 'AI Incident Response Plan',
+    description: 'A one-page runbook: incident roles, severity levels, response steps, breach-notification protocol, and post-incident review.',
+    meta: '1 page · runbook',
+    access: 'locked',
+  },
 ];
 
 export const FRAMEWORK_TAGS_BY_CATEGORY: Record<string, string[]> = {
