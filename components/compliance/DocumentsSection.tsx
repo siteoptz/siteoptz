@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import Link from 'next/link';
 import type { ComplianceDocument } from '@/lib/compliance-config';
 
@@ -28,6 +29,8 @@ function FreeDocumentCard({ doc }: { doc: ComplianceDocument }) {
 }
 
 function LockedDocumentCard({ doc }: { doc: ComplianceDocument }) {
+  const [expanded, setExpanded] = useState(false);
+
   return (
     <div className="bg-gray-950 border border-gray-800 rounded-lg p-5 flex flex-col">
       <div className="flex items-start justify-between gap-3 mb-2">
@@ -48,8 +51,37 @@ function LockedDocumentCard({ doc }: { doc: ComplianceDocument }) {
           Locked
         </span>
       </div>
-      <p className="text-gray-500 text-sm leading-snug mb-3">{doc.description}</p>
-      <p className="text-gray-600 text-xs mb-4">{doc.meta}</p>
+      <p className="text-gray-500 text-sm leading-snug mb-1">{doc.description}</p>
+      <p className="text-gray-600 text-xs mb-3">{doc.meta}</p>
+
+      {doc.previewSections && doc.previewSections.length > 0 && (
+        <>
+          <button
+            type="button"
+            onClick={() => setExpanded((prev) => !prev)}
+            className="self-start text-xs text-cyan-400 hover:text-cyan-300 hover:underline mb-3 transition-colors"
+          >
+            {expanded ? 'Hide contents ▴' : 'Preview contents ▾'}
+          </button>
+
+          {expanded && (
+            <div className="border-t border-gray-800 pt-3 mb-4">
+              <ul className="space-y-1.5">
+                {doc.previewSections.map((section) => (
+                  <li key={section.heading} className="text-xs leading-snug">
+                    <span className="text-gray-300">{section.heading}</span>
+                    <span className="text-gray-500"> — {section.valueProp}</span>
+                  </li>
+                ))}
+              </ul>
+              {doc.appendixSummary && (
+                <p className="text-xs text-gray-500 italic mt-2">{doc.appendixSummary}</p>
+              )}
+            </div>
+          )}
+        </>
+      )}
+
       <Link
         href="/upgrade"
         className="mt-auto inline-flex items-center justify-center px-4 py-2 text-sm font-medium border border-gray-700 text-cyan-400 rounded-lg hover:border-cyan-600 hover:text-cyan-300 transition-colors"
