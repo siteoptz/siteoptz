@@ -35,13 +35,20 @@ export interface ComplianceState {
   aiTools: AIToolEntry[];
 }
 
+export interface DocumentPreviewSection {
+  heading: string;
+  valueProp: string;
+}
+
 export interface ComplianceDocument {
   id: string;
   title: string;
   description: string;
   meta: string;            // short descriptor, e.g. "2 pages · editable"
   access: 'free' | 'locked';
-  downloadUrl?: string;    // present only for free documents
+  downloadUrl?: string;        // present only for free
+  previewSections?: DocumentPreviewSection[];  // present only for locked
+  appendixSummary?: string;    // single-line appendix descriptor for locked docs
 }
 
 export interface ComplianceProfile {
@@ -109,6 +116,20 @@ export const COMPLIANCE_DOCUMENTS: ComplianceDocument[] = [
     description: 'The single spreadsheet that anchors your whole program — every tool, owner, data sensitivity, and review date, including shadow AI.',
     meta: 'Spreadsheet template',
     access: 'locked',
+    previewSections: [
+      { heading: 'Purpose & Scope', valueProp: "what's in scope (every ML/AI feature) and what's not" },
+      { heading: 'Roles & Ownership (RACI)', valueProp: "who's accountable, responsible, consulted, informed" },
+      { heading: 'Inventory Data Dictionary', valueProp: 'every field defined with allowed values for auditability' },
+      { heading: 'Master Inventory Register', valueProp: 'the canonical 17-column tracking table' },
+      { heading: 'Data Flow Mapping', valueProp: 'source → AI tool → destination for sensitive data' },
+      { heading: 'Shadow AI Discovery Toolkit', valueProp: '5 methods + keyword list to find unsanctioned tools' },
+      { heading: 'Tool Intake & Approval Workflow', valueProp: 'request → triage → review → decision → register' },
+      { heading: 'Classification Matrix', valueProp: 'sensitivity × criticality determines review cadence and approver' },
+      { heading: 'Lifecycle Management', valueProp: 'onboarding, in-life reviews, retirement with audit trail' },
+      { heading: 'Dashboards & Metrics', valueProp: "5 KPIs you'll cite in customer questionnaires" },
+      { heading: 'Review Cadence & Change Log', valueProp: 'monthly ritual + versioned change history' },
+    ],
+    appendixSummary: 'Plus: Framework Mapping appendix, Worked Example, Employee Survey, Intake Form',
   },
   {
     id: 'risk_register',
@@ -116,6 +137,22 @@ export const COMPLIANCE_DOCUMENTS: ComplianceDocument[] = [
     description: 'Score and track your top AI risks with likelihood × impact, existing controls, mitigation plans, and named owners.',
     meta: 'Scored register',
     access: 'locked',
+    previewSections: [
+      { heading: 'Purpose & Scope', valueProp: 'covers every AI use case from the inventory' },
+      { heading: 'Risk Management Methodology', valueProp: 'Govern → Identify → Assess → Treat → Monitor loop' },
+      { heading: 'Roles & Responsibilities', valueProp: 'register owner, risk owners, acceptance approver' },
+      { heading: 'Risk Taxonomy', valueProp: '10 categories from privacy to reputational to financial' },
+      { heading: 'Scoring Framework', valueProp: '1-5 likelihood × impact, inherent vs. residual scoring' },
+      { heading: 'Risk Appetite & Tolerance', valueProp: 'bands, hard lines, sign-off requirements' },
+      { heading: 'Control Library', valueProp: 'reusable controls mapped to each risk category' },
+      { heading: 'Master Risk Register', valueProp: 'the canonical 13-column tracking table' },
+      { heading: 'Risk Treatment Plans', valueProp: 'per-risk treatment plan template for every High risk' },
+      { heading: 'EU AI Act High-Risk Classification Worksheet', valueProp: 'provider vs. deployer, prohibited check' },
+      { heading: 'Bias & Fairness Assessment Module', valueProp: 'when AI affects people, run this assessment' },
+      { heading: 'Monitoring, KRIs & Reporting', valueProp: 'monthly KPIs + board-ready quarterly summary' },
+      { heading: 'Review Cadence & Change Log', valueProp: 'quarterly review + versioned change history' },
+    ],
+    appendixSummary: 'Plus: Framework Mapping, 5 Worked Examples, Control-to-Framework Crosswalk, Acceptance Sign-off',
   },
   {
     id: 'incident_plan',
@@ -123,6 +160,23 @@ export const COMPLIANCE_DOCUMENTS: ComplianceDocument[] = [
     description: 'A one-page runbook: incident roles, severity levels, response steps, breach-notification protocol, and post-incident review.',
     meta: '1 page · runbook',
     access: 'locked',
+    previewSections: [
+      { heading: 'Purpose & Scope', valueProp: 'detect, respond to, and learn from AI incidents' },
+      { heading: 'Definitions & Incident Taxonomy', valueProp: '7 incident types with concrete examples' },
+      { heading: 'Roles & Responsibilities', valueProp: 'Incident Lead, Tech Lead, Comms, Exec Sponsor, Scribe' },
+      { heading: 'Severity Classification Matrix', valueProp: 'SEV-1/2/3 with response time targets' },
+      { heading: 'Incident Lifecycle', valueProp: 'Detect → Triage → Contain → Eradicate → Recover → Review' },
+      { heading: 'Detection & Monitoring Sources', valueProp: 'where AI incidents typically surface' },
+      { heading: 'Type-Specific Playbooks', valueProp: '6 playbooks: data exposure, prompt injection, harmful output, vendor breach, outage, shadow AI' },
+      { heading: 'Communication Plan', valueProp: 'internal, customer, regulator, vendor, public — with owners' },
+      { heading: 'Regulatory Notification Decision Tree', valueProp: 'GDPR 72hr, EU AI Act, US state laws, sector rules' },
+      { heading: 'Evidence & Forensics Handling', valueProp: 'preserve before changing; snapshot first' },
+      { heading: 'Post-Incident Review', valueProp: 'blameless review with corrective actions in 5 business days' },
+      { heading: 'Testing & Tabletop Exercises', valueProp: 'twice a year + after major change, with scenarios' },
+      { heading: 'Contact Directory & Escalation Tree', valueProp: 'who to call at 2am, in order' },
+      { heading: 'Plan Maintenance & Version Control', valueProp: 'annual review + after every SEV-1/2' },
+    ],
+    appendixSummary: 'Plus: Framework Mapping, Notification Templates, Incident Log, 3 Tabletop Scenarios',
   },
 ];
 
