@@ -21,6 +21,49 @@ interface FormData {
   companySize: string;
 }
 
+const CTA_BY_BAND: Record<string, { primary: { label: string; href: string }; secondary: { label: string; href: string } }> = {
+  'Critical Risk': {
+    primary: {
+      label: 'Get your Deal Readiness Board',
+      href: '/dashboard/compliance'
+    },
+    secondary: {
+      label: 'Book a compliance strategy call',
+      href: 'https://api.leadconnectorhq.com/widget/booking/yPjkVmsauPst8XlrOQUl'
+    },
+  },
+  'Foundational Gaps': {
+    primary: {
+      label: 'Get your Deal Readiness Board',
+      href: '/dashboard/compliance'
+    },
+    secondary: {
+      label: 'See Starter — $497/yr',
+      href: '/upgrade'
+    },
+  },
+  'Mostly Ready': {
+    primary: {
+      label: 'See Pro — full Compliance Copilot',
+      href: '/upgrade'
+    },
+    secondary: {
+      label: 'Get your Deal Readiness Board',
+      href: '/dashboard/compliance'
+    },
+  },
+  'Audit-Ready': {
+    primary: {
+      label: 'See Enterprise — audit-ready docs + data room',
+      href: '/upgrade'
+    },
+    secondary: {
+      label: 'Talk to us about consulting',
+      href: '/contact'
+    },
+  },
+};
+
 export default function AIComplianceScorecardPage() {
   // Core state
   const [currentStep, setCurrentStep] = useState<ScorecardStep>('intro');
@@ -148,8 +191,9 @@ export default function AIComplianceScorecardPage() {
   };
   
   // Generate results for display
-  const results = Object.keys(answers).length === QUESTIONS_CONFIG.length ? 
+  const results = Object.keys(answers).length === QUESTIONS_CONFIG.length ?
     generateScorecardResults(answers) : null;
+  const bandCTAs = results ? CTA_BY_BAND[results.band.band] : undefined;
 
   return (
     <>
@@ -572,21 +616,45 @@ export default function AIComplianceScorecardPage() {
                   <h2 className="text-2xl font-bold text-white mb-4">Recommended Next Steps</h2>
                   <p className="text-gray-300 mb-8">{results.band.priority}</p>
                   
-                  <div className="space-y-4">
-                    <Link
-                      href="/ai-governance"
-                      className="block px-8 py-4 bg-gradient-to-r from-orange-600 to-red-600 text-white font-bold rounded-lg hover:from-orange-700 hover:to-red-700 transition-colors"
-                    >
-                      {results.band.recommendedAction}
-                    </Link>
-                    
-                    <Link
-                      href="/ai-governance"
-                      className="block px-6 py-3 bg-gray-700 text-white rounded-lg hover:bg-gray-600 transition-colors"
-                    >
-                      Learn More About AI Governance
-                    </Link>
-                  </div>
+                  {bandCTAs && (
+                    <div className="space-y-3 sm:space-y-4">
+                      {bandCTAs.primary.href.startsWith('http') ? (
+                        <a
+                          href={bandCTAs.primary.href}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="inline-flex items-center justify-center w-full sm:w-auto px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-purple-700 transition-colors"
+                        >
+                          {bandCTAs.primary.label}
+                        </a>
+                      ) : (
+                        <Link
+                          href={bandCTAs.primary.href}
+                          className="inline-flex items-center justify-center w-full sm:w-auto px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-purple-700 transition-colors"
+                        >
+                          {bandCTAs.primary.label}
+                        </Link>
+                      )}
+
+                      {bandCTAs.secondary.href.startsWith('http') ? (
+                        <a
+                          href={bandCTAs.secondary.href}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="block mt-3 text-sm text-cyan-400 underline hover:text-cyan-300 transition-colors"
+                        >
+                          {bandCTAs.secondary.label}
+                        </a>
+                      ) : (
+                        <Link
+                          href={bandCTAs.secondary.href}
+                          className="block mt-3 text-sm text-cyan-400 underline hover:text-cyan-300 transition-colors"
+                        >
+                          {bandCTAs.secondary.label}
+                        </Link>
+                      )}
+                    </div>
+                  )}
                 </div>
               </div>
             )}
