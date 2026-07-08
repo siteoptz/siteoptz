@@ -1,4 +1,5 @@
 import { MongoClient } from 'mongodb';
+import { getScoreBand } from '../../lib/scorecard-config';
 const { sendEmail } = require('../../lib/email-service');
 
 // GoHighLevel API configuration
@@ -565,6 +566,94 @@ Interests: ${additionalData.interests?.join(', ') || 'None specified'}
 Source: ${source}
 Tool/Category: ${additionalData.tool || additionalData.category || 'General'}
 Timestamp: ${new Date().toLocaleString()}
+    `;
+  } else if (
+    additionalData?.scorecardResults &&
+    typeof (additionalData.scorecardResults.scorePercentage ?? additionalData.scorecardResults.totalScore) === 'number' &&
+    additionalData.scorecardResults.scoreBand
+  ) {
+    // AI Compliance Scorecard results email
+    const { scorecardResults } = additionalData;
+    const score = scorecardResults.scorePercentage ?? scorecardResults.totalScore;
+    const bandLabel = scorecardResults.scoreBand;
+    const band = getScoreBand(scorecardResults.totalScore ?? score);
+    const bandPriorityText = band?.priority ?? '';
+    const topGaps = Array.isArray(scorecardResults.topGaps) ? scorecardResults.topGaps.slice(0, 3) : [];
+
+    subject = `Your AI Compliance Readiness Score: ${bandLabel}`;
+
+    const whatThisMeansHtml = bandPriorityText
+      ? `<p style="margin: 16px 0;">\n    <strong>What this means:</strong> ${bandPriorityText}\n  </p>`
+      : '';
+    const gapItemsHtml = topGaps
+      .map(gap => `<li style="margin-bottom: 4px;">${gap.category} (score: ${gap.score}/10)</li>`)
+      .join('\n    ');
+
+    htmlContent = `
+<html>
+<body style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif; max-width: 560px; margin: 0 auto; padding: 24px; color: #1a1a1a; line-height: 1.5;">
+
+  <h1 style="font-size: 20px; margin: 0 0 16px 0;">Your AI Compliance Readiness Score</h1>
+
+  <div style="background: #f5f5f5; padding: 16px; border-radius: 6px; margin-bottom: 16px;">
+    <div style="font-size: 32px; font-weight: bold;">${score} / 100</div>
+    <div style="font-size: 16px; color: #666;">${bandLabel}</div>
+  </div>
+
+  ${whatThisMeansHtml}
+
+  <h3 style="font-size: 15px; margin: 24px 0 8px 0;">Your top 3 gaps:</h3>
+  <ul style="margin: 0 0 24px 0; padding-left: 20px;">
+    ${gapItemsHtml}
+  </ul>
+
+  <p style="margin: 24px 0 16px 0;">
+    <strong>Next step:</strong> See your full Deal Readiness Board
+    with your personalized checklist, framework mapping, and remediation plan.
+  </p>
+
+  <p style="margin: 24px 0;">
+    <a href="https://siteoptz.ai/dashboard/compliance"
+       style="display: inline-block; background: #2563eb; color: #ffffff;
+              padding: 12px 24px; border-radius: 6px; text-decoration: none;
+              font-weight: 600;">
+      See Your Deal Readiness Board &rarr;
+    </a>
+  </p>
+
+  <p style="margin: 24px 0 8px 0; font-size: 13px; color: #666;">
+    Sign in with the same email you used for the scorecard to access your data.
+  </p>
+
+  <hr style="border: none; border-top: 1px solid #e5e5e5; margin: 32px 0 16px 0;">
+
+  <p style="font-size: 12px; color: #999; margin: 0;">
+    SiteOptz &middot; Deal Readiness Board
+  </p>
+
+</body>
+</html>
+    `;
+
+    const gapItemsText = topGaps
+      .map(gap => `- ${gap.category} (score: ${gap.score}/10)`)
+      .join('\n');
+
+    textContent = `
+Your AI Compliance Readiness Score
+
+${score} / 100 - ${bandLabel}
+${bandPriorityText ? `\nWhat this means: ${bandPriorityText}\n` : ''}
+Your top 3 gaps:
+${gapItemsText}
+
+Next step: See your full Deal Readiness Board with your personalized checklist, framework mapping, and remediation plan.
+
+See Your Deal Readiness Board: https://siteoptz.ai/dashboard/compliance
+
+Sign in with the same email you used for the scorecard to access your data.
+
+SiteOptz - Deal Readiness Board
     `;
   } else {
     // Default pricing quote email
