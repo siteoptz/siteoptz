@@ -46,8 +46,192 @@ const isValidEmail = (email) => {
   return emailRegex.test(email);
 };
 
+// --- V2 (search-then-upsert) helpers for the scorecard path only ---
+// Mirrors the request patterns already used in lib/compliance-storage.ts
+// (same host, auth, and Version header) so scorecard writes land on the
+// same contact record the dashboard reads back via search-by-email.
+
+const findExistingGhlContact = async (email) => {
+  const response = await fetch(
+    `${GHL_API_BASE}/contacts/search/duplicate?email=${encodeURIComponent(email)}&locationId=${encodeURIComponent(GHL_LOCATION_ID)}`,
+    {
+      method: 'GET',
+      headers: {
+        'Authorization': `Bearer ${GHL_API_KEY}`,
+        'Content-Type': 'application/json',
+        'Version': '2021-07-28',
+      },
+    }
+  );
+
+  if (!response.ok) {
+    const errorText = await response.text();
+    throw new Error(`GHL contact search failed: ${response.status} - ${errorText}`);
+  }
+
+  const data = await response.json();
+  const contact = data.contact;
+  return contact?.id ? String(contact.id) : null;
+};
+
+const updateGhlContactFields = async (contactId, customFields) => {
+  const response = await fetch(
+    `${GHL_API_BASE}/contacts/${encodeURIComponent(contactId)}`,
+    {
+      method: 'PUT',
+      headers: {
+        'Authorization': `Bearer ${GHL_API_KEY}`,
+        'Content-Type': 'application/json',
+        'Version': '2021-07-28',
+      },
+      body: JSON.stringify({ customFields }),
+    }
+  );
+
+  if (!response.ok) {
+    const errorText = await response.text();
+    throw new Error(`GHL contact update failed: ${response.status} - ${errorText}`);
+  }
+
+  return await response.json();
+};
+
+const createGhlContactV2 = async (email, customFields, extraFields) => {
+  const response = await fetch(`${GHL_API_BASE}/contacts/`, {
+    method: 'POST',
+    headers: {
+      'Authorization': `Bearer ${GHL_API_KEY}`,
+      'Content-Type': 'application/json',
+      'Version': '2021-07-28',
+    },
+    body: JSON.stringify({
+      locationId: GHL_LOCATION_ID,
+      email,
+      customFields,
+      ...extraFields,
+    }),
+  });
+
+  if (!response.ok) {
+    const errorText = await response.text();
+    throw new Error(`GHL contact create failed: ${response.status} - ${errorText}`);
+  }
+
+  return await response.json();
+};
+
+// Scorecard-specific write: search by email first, update if found,
+// create only if no existing contact — replaces the old create-only path.
+const addScorecardToGhlV2 = async (data) => {
+  const { additionalData } = data;
+  const { scorecardResults } = additionalData;
+  const email = data.email;
+
+  const customFields = [
+    // Contact Information
+    { id: 'ai_contact_role', field_value: additionalData.role || '' },
+    { id: 'company_size', field_value: additionalData.companySize || '' },
+
+    // Scorecard Results
+    { id: 'scorecard_total_score', field_value: scorecardResults.totalScore || 0 },
+    { id: 'scorecard_band', field_value: scorecardResults.scoreBand || '' },
+    { id: 'scorecard_percentage', field_value: scorecardResults.scorePercentage || 0 },
+    { id: 'qualification_tier', field_value: scorecardResults.qualificationTier || additionalData.leadQualifiers?.qualificationTier || '' },
+    { id: 'scorecard_question_scores', field_value: JSON.stringify(scorecardResults.questionScores || {}) },
+    { id: 'scorecard_top_gaps', field_value: JSON.stringify(scorecardResults.topGaps || []) },
+    { id: 'scorecard_completion_time', field_value: additionalData.scorecardResults.completionTimeSeconds || 0 },
+    { id: 'scorecard_recommended_action', field_value: scorecardResults.recommendedActionAtSubmission || '' },
+    { id: 'scorecard_version', field_value: additionalData.scorecardResults.scorecardVersion || 'v1.0' },
+
+    // Attribution & Analytics
+    { id: 'utm_source', field_value: additionalData.utm_source || '' },
+    { id: 'utm_medium', field_value: additionalData.utm_medium || '' },
+    { id: 'utm_campaign', field_value: additionalData.utm_campaign || '' },
+    { id: 'scorecard_completed_at', field_value: scorecardResults.completedAt || new Date().toISOString() },
+    { id: 'scorecard_page_source', field_value: additionalData.scorecardResults.pageSource || 'scorecard-standalone' }
+  ];
+
+  const tags = [
+    'New Lead',  // This tag triggers the 'New Lead Workflow'
+    'AI Compliance Scorecard',
+    `Score: ${scorecardResults.scorePercentage}%`,
+    `Band: ${scorecardResults.scoreBand}`,
+    `Qualification: ${scorecardResults.qualificationTier || additionalData.leadQualifiers?.qualificationTier}`,
+    `Company: ${additionalData.company || 'Not provided'}`,
+    `Role: ${additionalData.role}`,
+    `Completed: ${new Date().toLocaleDateString('en-US', { month: 'short', year: 'numeric' })}`
+  ];
+
+  let contactId = null;
+  try {
+    contactId = await findExistingGhlContact(email);
+  } catch (searchError) {
+    console.error('GHL V2 scorecard contact search failed, falling through to create:', searchError);
+    contactId = null;
+  }
+
+  let result;
+  try {
+    if (contactId) {
+      const updateResult = await updateGhlContactFields(contactId, customFields);
+      result = { contact: { id: contactId, email, ...(updateResult?.contact || {}) } };
+    } else {
+      result = await createGhlContactV2(email, customFields, {
+        firstName: '',
+        lastName: '',
+        phone: '',
+        tags,
+        source: 'AI Compliance Scorecard - SiteOptz Website',
+      });
+      contactId = result?.contact?.id ? String(result.contact.id) : null;
+    }
+  } catch (writeError) {
+    console.error('GHL V2 scorecard contact write failed:', writeError);
+    return null;
+  }
+
+  if (contactId) {
+    try {
+      const opportunityData = {
+        name: `${email} - AI Compliance Scorecard`,
+        contactId,
+        status: 'open',
+        monetaryValue: 0,
+        source: 'AI Compliance Scorecard - SiteOptz Website',
+        customFields: []
+      };
+
+      const oppResponse = await fetch(`${GHL_API_BASE}/opportunities/`, {
+        method: 'POST',
+        headers: {
+          'Authorization': `Bearer ${GHL_API_KEY}`,
+          'Content-Type': 'application/json',
+          'Version': '2021-07-28',
+        },
+        body: JSON.stringify(opportunityData),
+      });
+
+      if (oppResponse.ok) {
+        const oppResult = await oppResponse.json();
+        result.opportunity = oppResult.opportunity;
+      } else {
+        const errorText = await oppResponse.text();
+        console.error('Failed to create Opportunity (scorecard V2):', errorText);
+      }
+    } catch (oppError) {
+      console.error('Error creating Opportunity (scorecard V2):', oppError);
+    }
+  }
+
+  return result;
+};
+
 // Add lead to GoHighLevel CRM
 const addToGoHighLevel = async (data) => {
+  if (data.additionalData?.scorecardResults) {
+    return await addScorecardToGhlV2(data);
+  }
+
   try {
     console.log('=== GoHighLevel Contact Form Integration Debug ===');
     console.log('API Key exists:', !!GHL_API_KEY);
@@ -101,53 +285,6 @@ const addToGoHighLevel = async (data) => {
         ],
         customFields: [],
         source: 'Newsletter Subscription - SiteOptz Website',
-      };
-    } else if (data.additionalData?.scorecardResults) {
-      // AI Compliance Scorecard submission
-      const { additionalData } = data;
-      const { scorecardResults } = additionalData;
-      
-      ghlData = {
-        ...ghlData,
-        locationId: GHL_LOCATION_ID,
-        firstName: '',
-        lastName: '',
-        email: data.email,
-        phone: '',
-        tags: [
-          'New Lead',  // This tag triggers the 'New Lead Workflow'
-          'AI Compliance Scorecard',
-          `Score: ${scorecardResults.scorePercentage}%`,
-          `Band: ${scorecardResults.scoreBand}`,
-          `Qualification: ${scorecardResults.qualificationTier || additionalData.leadQualifiers?.qualificationTier}`,
-          `Company: ${additionalData.company || 'Not provided'}`,
-          `Role: ${additionalData.role}`,
-          `Completed: ${new Date().toLocaleDateString('en-US', { month: 'short', year: 'numeric' })}`
-        ],
-        customFields: [
-          // Contact Information
-          { id: 'ai_contact_role', field_value: additionalData.role || '' },
-          { id: 'company_size', field_value: additionalData.companySize || '' },
-          
-          // Scorecard Results
-          { id: 'scorecard_total_score', field_value: scorecardResults.totalScore || 0 },
-          { id: 'scorecard_band', field_value: scorecardResults.scoreBand || '' },
-          { id: 'scorecard_percentage', field_value: scorecardResults.scorePercentage || 0 },
-          { id: 'qualification_tier', field_value: scorecardResults.qualificationTier || additionalData.leadQualifiers?.qualificationTier || '' },
-          { id: 'scorecard_question_scores', field_value: JSON.stringify(scorecardResults.questionScores || {}) },
-          { id: 'scorecard_top_gaps', field_value: JSON.stringify(scorecardResults.topGaps || []) },
-          { id: 'scorecard_completion_time', field_value: additionalData.scorecardResults.completionTimeSeconds || 0 },
-          { id: 'scorecard_recommended_action', field_value: scorecardResults.recommendedActionAtSubmission || '' },
-          { id: 'scorecard_version', field_value: additionalData.scorecardResults.scorecardVersion || 'v1.0' },
-          
-          // Attribution & Analytics
-          { id: 'utm_source', field_value: additionalData.utm_source || '' },
-          { id: 'utm_medium', field_value: additionalData.utm_medium || '' },
-          { id: 'utm_campaign', field_value: additionalData.utm_campaign || '' },
-          { id: 'scorecard_completed_at', field_value: scorecardResults.completedAt || new Date().toISOString() },
-          { id: 'scorecard_page_source', field_value: additionalData.scorecardResults.pageSource || 'scorecard-standalone' }
-        ],
-        source: 'AI Compliance Scorecard - SiteOptz Website',
       };
     } else if (data.tool === 'AI Governance Copilot') {
       // Homepage governance form submission
