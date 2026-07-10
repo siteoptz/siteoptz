@@ -39,7 +39,7 @@ export default function Dashboard() {
     }
 
     // Redirect to dashboard/free for normal authenticated users
-    router.push('/dashboard/free');
+    router.push('/dashboard/compliance');
   }, [session, status, router]);
 
   if (status === 'loading') {
