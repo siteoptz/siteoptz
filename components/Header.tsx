@@ -7,6 +7,7 @@ import { Menu, X, ChevronDown, ChevronUp, User, LogOut, Bell, Settings, CreditCa
 import { toolCategories, getCategoryUrl, getCategoryDisplayName } from '../config/categories';
 import { industries, industrySlugMap } from '../content/industryContent';
 import SmartSignUpModal from './auth/SmartSignUpModal';
+import { DEFAULT_AUTHED_LANDING } from '@/lib/routing-config';
 
 // Accordion category structure for AI Categories dropdown
 const accordionCategories = [
@@ -444,7 +445,7 @@ const Header: React.FC = () => {
             ) : (
               <div className="flex items-center space-x-3">
                 <button
-                  onClick={() => signIn('google', { callbackUrl: '/dashboard/free' })}
+                  onClick={() => signIn('google', { callbackUrl: DEFAULT_AUTHED_LANDING })}
                   className="px-4 py-2 text-gray-300 hover:text-white rounded-lg font-medium text-sm hover:bg-gray-800 transition-all duration-200"
                 >
                   Log In
@@ -775,7 +776,7 @@ const Header: React.FC = () => {
                     <button
                       onClick={() => {
                         closeMenu();
-                        signIn('google', { callbackUrl: '/dashboard/free' });
+                        signIn('google', { callbackUrl: DEFAULT_AUTHED_LANDING });
                       }}
                       style={{ 
                         display: 'block', 

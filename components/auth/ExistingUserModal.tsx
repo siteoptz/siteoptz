@@ -1,6 +1,7 @@
 import React from 'react';
 import { signIn } from 'next-auth/react';
 import { X, User, ArrowRight } from 'lucide-react';
+import { DEFAULT_AUTHED_LANDING } from '@/lib/routing-config';
 
 interface ExistingUserModalProps {
   isOpen: boolean;
@@ -20,7 +21,7 @@ const ExistingUserModal: React.FC<ExistingUserModalProps> = ({
 
   const handleSignIn = () => {
     onClose();
-    signIn('google', { callbackUrl: '/dashboard/free' });
+    signIn('google', { callbackUrl: DEFAULT_AUTHED_LANDING });
   };
 
   return (

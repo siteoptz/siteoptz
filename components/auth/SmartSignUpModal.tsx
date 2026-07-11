@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { signIn } from 'next-auth/react';
 import { X, Loader2, Mail } from 'lucide-react';
 import ExistingUserModal from './ExistingUserModal';
+import { DEFAULT_AUTHED_LANDING, SIGNUP_LANDING } from '@/lib/routing-config';
 
 interface SmartSignUpModalProps {
   isOpen: boolean;
@@ -70,7 +71,7 @@ const SmartSignUpModal: React.FC<SmartSignUpModalProps> = ({ isOpen, onClose, pl
       onClose();
       
       // Determine callback URL based on plan
-      let callbackUrl = '/dashboard/free?signup=true';
+      let callbackUrl = SIGNUP_LANDING;
       if (plan) {
         // For paid plans, redirect to dashboard with upgrade flag
         callbackUrl = `/dashboard?signup=true&plan=${plan}&billing=${billingCycle}`;
@@ -174,7 +175,7 @@ const SmartSignUpModal: React.FC<SmartSignUpModalProps> = ({ isOpen, onClose, pl
               <button
                 onClick={() => {
                   onClose();
-                  signIn('google', { callbackUrl: '/dashboard/free' });
+                  signIn('google', { callbackUrl: DEFAULT_AUTHED_LANDING });
                 }}
                 className="text-cyan-400 hover:text-cyan-300 transition-colors"
               >

@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { signIn } from 'next-auth/react';
 import { X } from 'lucide-react';
 import ExistingUserModal from './ExistingUserModal';
+import { DEFAULT_AUTHED_LANDING } from '@/lib/routing-config';
 
 interface SignUpModalProps {
   isOpen: boolean;
@@ -132,7 +133,7 @@ const SignUpModal: React.FC<SignUpModalProps> = ({ isOpen, onClose }) => {
             <button
               onClick={() => {
                 onClose();
-                signIn('google', { callbackUrl: '/dashboard/free' });
+                signIn('google', { callbackUrl: DEFAULT_AUTHED_LANDING });
               }}
               className="text-cyan-400 hover:text-cyan-300 transition-colors"
             >
