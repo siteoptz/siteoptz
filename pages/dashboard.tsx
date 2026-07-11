@@ -4,6 +4,7 @@ import { useRouter } from 'next/router';
 import Head from 'next/head';
 import { LogOut, User, CheckCircle } from 'lucide-react';
 import StripePaymentModal from '../components/StripePaymentModal';
+import { DEFAULT_AUTHED_LANDING } from '@/lib/routing-config';
 
 export default function Dashboard() {
   const { data: session, status } = useSession();
@@ -38,8 +39,8 @@ export default function Dashboard() {
       return;
     }
 
-    // Redirect to dashboard/free for normal authenticated users
-    router.push('/dashboard/compliance');
+    // Redirect to default landing for normal authenticated users
+    router.push(DEFAULT_AUTHED_LANDING);
   }, [session, status, router]);
 
   if (status === 'loading') {
