@@ -270,7 +270,7 @@ const UpgradePage: React.FC = () => {
           body: JSON.stringify({
             plan: 'enterprise',
             billingCycle: billingCycle,
-            successUrl: `${window.location.origin}/dashboard/enterprise?upgrade=success`,
+            successUrl: `${window.location.origin}/dashboard/compliance?upgrade=success`,
             cancelUrl: `${window.location.origin}/upgrade?canceled=true`,
           }),
         });
