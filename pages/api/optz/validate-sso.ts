@@ -1,5 +1,5 @@
 import { NextApiRequest, NextApiResponse } from 'next';
-import { validateSSOToken } from './generate-sso-token';
+import { validateSSOToken } from './_sso-token-store';
 
 /**
  * Validate SSO token and return client session data

@@ -4,7 +4,6 @@ import Link from 'next/link';
 import { useRouter } from 'next/router';
 import { 
   HomeIcon, 
-  ChartBarIcon, 
   CogIcon, 
   LightBulbIcon,
   PlayIcon,
@@ -22,7 +21,6 @@ export default function Sidebar({ activeTab, onTabChange, collapsed, onToggleCol
     { id: 'overview', name: 'Overview', icon: HomeIcon, href: '/dashboard' },
     { id: 'google-ads', name: 'Google Ads', icon: MagnifyingGlassIcon, href: '/dashboard/google-ads' },
     { id: 'meta-ads', name: 'Meta Ads', icon: DevicePhoneMobileIcon, href: '/dashboard/meta-ads' },
-    { id: 'analytics', name: 'Analytics', icon: ChartBarIcon, href: '/dashboard/analytics' },
     { id: 'search-console', name: 'Search Console', icon: MagnifyingGlassIcon, href: '/dashboard/search-console' },
     { id: 'tiktok-ads', name: 'TikTok Ads', icon: PlayIcon, href: '/dashboard/tiktok-ads' },
     { id: 'linkedin-ads', name: 'LinkedIn Ads', icon: BriefcaseIcon, href: '/dashboard/linkedin-ads' },
