@@ -80,9 +80,7 @@ const Header: React.FC = () => {
   const [isMounted, setIsMounted] = useState(false);
   const isAuthenticated = status === 'authenticated' && !!session?.user;
   const isLoading = isMounted && status === 'loading' && !hasSessionTimeout;
-  
-  // Default to 'free' plan for header navigation - specific plan logic handled server-side
-  const plan = 'free';
+
   const isUnauthenticated = status === 'unauthenticated';
   
   // Desktop category accordion states
@@ -403,12 +401,12 @@ const Header: React.FC = () => {
 
                     {/* Menu Items */}
                     <div className="py-1">
-                      <Link href={`/dashboard/${(session?.user as any)?.plan || 'free'}`} className="flex items-center px-4 py-2 text-gray-700 hover:bg-gray-50 transition-colors">
+                      <Link href={DEFAULT_AUTHED_LANDING} className="flex items-center px-4 py-2 text-gray-700 hover:bg-gray-50 transition-colors">
                         <User className="w-4 h-4 mr-3" />
                         Dashboard
                       </Link>
                       
-                      <Link href={`/dashboard/${plan}/notifications`} className="flex items-center px-4 py-2 text-gray-700 hover:bg-gray-50 transition-colors">
+                      <Link href={DEFAULT_AUTHED_LANDING} className="flex items-center px-4 py-2 text-gray-700 hover:bg-gray-50 transition-colors">
                         <Bell className="w-4 h-4 mr-3" />
                         Notifications
                       </Link>
@@ -418,12 +416,12 @@ const Header: React.FC = () => {
                         Upgrade
                       </Link>
                       
-                      <Link href={`/dashboard/${plan}/settings`} className="flex items-center px-4 py-2 text-gray-700 hover:bg-gray-50 transition-colors">
+                      <Link href={DEFAULT_AUTHED_LANDING} className="flex items-center px-4 py-2 text-gray-700 hover:bg-gray-50 transition-colors">
                         <Settings className="w-4 h-4 mr-3" />
                         Account Settings
                       </Link>
                       
-                      <Link href={`/dashboard/${plan}/billing`} className="flex items-center px-4 py-2 text-gray-700 hover:bg-gray-50 transition-colors">
+                      <Link href={DEFAULT_AUTHED_LANDING} className="flex items-center px-4 py-2 text-gray-700 hover:bg-gray-50 transition-colors">
                         <CreditCard className="w-4 h-4 mr-3" />
                         Billing & Subscription
                       </Link>
@@ -664,7 +662,7 @@ const Header: React.FC = () => {
                     </div>
 
                     {/* Menu Items */}
-                    <Link href={`/dashboard/${(session?.user as any)?.plan || 'free'}`} onClick={closeMenu} style={{ 
+                    <Link href={DEFAULT_AUTHED_LANDING} onClick={closeMenu} style={{ 
                       display: 'flex',
                       alignItems: 'center',
                       gap: '12px',
@@ -680,7 +678,7 @@ const Header: React.FC = () => {
                       Dashboard
                     </Link>
                     
-                    <Link href={`/dashboard/${plan}/notifications`} onClick={closeMenu} style={{ 
+                    <Link href={DEFAULT_AUTHED_LANDING} onClick={closeMenu} style={{ 
                       display: 'flex',
                       alignItems: 'center',
                       gap: '12px',
@@ -712,7 +710,7 @@ const Header: React.FC = () => {
                       Upgrade
                     </Link>
                     
-                    <Link href={`/dashboard/${plan}/settings`} onClick={closeMenu} style={{ 
+                    <Link href={DEFAULT_AUTHED_LANDING} onClick={closeMenu} style={{ 
                       display: 'flex',
                       alignItems: 'center',
                       gap: '12px',
@@ -728,7 +726,7 @@ const Header: React.FC = () => {
                       Account Settings
                     </Link>
                     
-                    <Link href={`/dashboard/${plan}/billing`} onClick={closeMenu} style={{ 
+                    <Link href={DEFAULT_AUTHED_LANDING} onClick={closeMenu} style={{ 
                       display: 'flex',
                       alignItems: 'center',
                       gap: '12px',
