@@ -1,6 +1,8 @@
 import { useState } from 'react';
 import Link from 'next/link';
+import { useSession } from 'next-auth/react';
 import type { ComplianceDocument } from '@/lib/compliance-config';
+import { hasAccessToTier } from '@/lib/entitlements';
 
 interface Props {
   documents: ComplianceDocument[];
@@ -28,7 +30,7 @@ function FreeDocumentCard({ doc }: { doc: ComplianceDocument }) {
   );
 }
 
-function LockedDocumentCard({ doc }: { doc: ComplianceDocument }) {
+function LockedDocumentCard({ doc, canDownload }: { doc: ComplianceDocument; canDownload: boolean }) {
   const [expanded, setExpanded] = useState(false);
 
   return (
@@ -53,6 +55,16 @@ function LockedDocumentCard({ doc }: { doc: ComplianceDocument }) {
       </div>
       <p className="text-gray-500 text-sm leading-snug mb-1">{doc.description}</p>
       <p className="text-gray-600 text-xs mb-3">{doc.meta}</p>
+
+      {canDownload && doc.downloadUrl && (
+        <a
+          href={doc.downloadUrl}
+          download
+          className="inline-flex items-center justify-center px-4 py-2 text-sm font-medium bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-lg hover:from-blue-700 hover:to-purple-700 transition-all mb-3"
+        >
+          Download template
+        </a>
+      )}
 
       {doc.previewSections && doc.previewSections.length > 0 && (
         <>
@@ -82,17 +94,20 @@ function LockedDocumentCard({ doc }: { doc: ComplianceDocument }) {
         </>
       )}
 
-      <Link
-        href="/upgrade"
-        className="mt-auto inline-flex items-center justify-center px-4 py-2 text-sm font-medium border border-gray-700 text-cyan-400 rounded-lg hover:border-cyan-600 hover:text-cyan-300 transition-colors"
-      >
-        Unlock with Starter →
-      </Link>
+      {!canDownload && (
+        <Link
+          href="/upgrade"
+          className="mt-auto inline-flex items-center justify-center px-4 py-2 text-sm font-medium border border-gray-700 text-cyan-400 rounded-lg hover:border-cyan-600 hover:text-cyan-300 transition-colors"
+        >
+          Unlock with Starter →
+        </Link>
+      )}
     </div>
   );
 }
 
 export default function DocumentsSection({ documents }: Props) {
+  const { data: session } = useSession();
   const freeDocs = documents.filter((d) => d.access === 'free');
   const lockedDocs = documents.filter((d) => d.access === 'locked');
 
@@ -123,9 +138,13 @@ export default function DocumentsSection({ documents }: Props) {
             <div className="flex-1 h-px bg-gray-800" />
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
-            {lockedDocs.map((doc) => (
-              <LockedDocumentCard key={doc.id} doc={doc} />
-            ))}
+            {lockedDocs.map((doc) => {
+              const canDownload =
+                doc.access === 'locked' &&
+                !!doc.requiredTier &&
+                hasAccessToTier((session?.user as any)?.plan, doc.requiredTier);
+              return <LockedDocumentCard key={doc.id} doc={doc} canDownload={canDownload} />;
+            })}
           </div>
         </>
       )}

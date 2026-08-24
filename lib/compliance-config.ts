@@ -1,3 +1,5 @@
+import type { Tier } from '@/lib/entitlements';
+
 export type ScorecardBand =
   | 'Critical Risk'
   | 'Foundational Gaps'
@@ -46,9 +48,10 @@ export interface ComplianceDocument {
   description: string;
   meta: string;            // short descriptor, e.g. "2 pages · editable"
   access: 'free' | 'locked';
-  downloadUrl?: string;        // present only for free
+  downloadUrl?: string;        // present for free docs and entitled locked docs
   previewSections?: DocumentPreviewSection[];  // present only for locked
   appendixSummary?: string;    // single-line appendix descriptor for locked docs
+  requiredTier?: Tier;         // only set on locked documents
 }
 
 export interface ComplianceProfile {
@@ -116,6 +119,8 @@ export const COMPLIANCE_DOCUMENTS: ComplianceDocument[] = [
     description: 'The single spreadsheet that anchors your whole program — every tool, owner, data sensitivity, and review date, including shadow AI.',
     meta: 'Spreadsheet template',
     access: 'locked',
+    downloadUrl: '/api/compliance/download-paid?doc=inventory',
+    requiredTier: 'starter',
     previewSections: [
       { heading: 'Purpose & Scope', valueProp: "what's in scope (every ML/AI feature) and what's not" },
       { heading: 'Roles & Ownership (RACI)', valueProp: "who's accountable, responsible, consulted, informed" },
@@ -137,6 +142,8 @@ export const COMPLIANCE_DOCUMENTS: ComplianceDocument[] = [
     description: 'Score and track your top AI risks with likelihood × impact, existing controls, mitigation plans, and named owners.',
     meta: 'Scored register',
     access: 'locked',
+    downloadUrl: '/api/compliance/download-paid?doc=risk_register',
+    requiredTier: 'starter',
     previewSections: [
       { heading: 'Purpose & Scope', valueProp: 'covers every AI use case from the inventory' },
       { heading: 'Risk Management Methodology', valueProp: 'Govern → Identify → Assess → Treat → Monitor loop' },
@@ -160,6 +167,8 @@ export const COMPLIANCE_DOCUMENTS: ComplianceDocument[] = [
     description: 'A one-page runbook: incident roles, severity levels, response steps, breach-notification protocol, and post-incident review.',
     meta: '1 page · runbook',
     access: 'locked',
+    downloadUrl: '/api/compliance/download-paid?doc=incident_plan',
+    requiredTier: 'starter',
     previewSections: [
       { heading: 'Purpose & Scope', valueProp: 'detect, respond to, and learn from AI incidents' },
       { heading: 'Definitions & Incident Taxonomy', valueProp: '7 incident types with concrete examples' },
