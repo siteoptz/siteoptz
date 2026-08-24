@@ -17,9 +17,18 @@ type PageStatus = 'loading' | 'has-scorecard' | 'no-scorecard' | 'error';
 
 interface Props {
   userEmail: string;
+  plan: string;
 }
 
-export default function ComplianceDashboard({ userEmail }: Props) {
+const UPSELL_BY_TIER: Record<string, { prefix: string; cta: string } | null> = {
+  free: { prefix: 'Need this done in days, not weeks?', cta: 'See Starter ($497/yr) →' },
+  starter: { prefix: 'Ready for the full playbook?', cta: 'See Pro ($1,997/yr) →' },
+  pro: { prefix: 'Need audit-ready docs + data room?', cta: 'See Enterprise ($4,997/yr) →' },
+  enterprise: null,
+};
+
+export default function ComplianceDashboard({ userEmail, plan }: Props) {
+  const upsell = plan in UPSELL_BY_TIER ? UPSELL_BY_TIER[plan] : UPSELL_BY_TIER.free;
   const [status, setStatus] = useState<PageStatus>('loading');
   const [profile, setProfile] = useState<ComplianceProfile | null>(null);
   const [checklistState, setChecklistState] = useState<Record<string, boolean>>({});
@@ -92,14 +101,16 @@ export default function ComplianceDashboard({ userEmail }: Props) {
 
             <DocumentsSection documents={COMPLIANCE_DOCUMENTS} />
 
-            <div className="bg-black border border-gray-800 rounded-xl p-6 text-center">
-              <p className="text-gray-300 text-sm">
-                Need this done in days, not weeks?{' '}
-                <Link href="/upgrade" className="text-cyan-400 hover:text-cyan-300 transition-colors">
-                  See Starter ($497/yr) →
-                </Link>
-              </p>
-            </div>
+            {upsell && (
+              <div className="bg-black border border-gray-800 rounded-xl p-6 text-center">
+                <p className="text-gray-300 text-sm">
+                  {upsell.prefix}{' '}
+                  <Link href="/upgrade" className="text-cyan-400 hover:text-cyan-300 transition-colors">
+                    {upsell.cta}
+                  </Link>
+                </p>
+              </div>
+            )}
           </div>
         )}
 
@@ -144,6 +155,7 @@ export const getServerSideProps: GetServerSideProps = async (context) => {
   return {
     props: {
       userEmail: session.user.email,
+      plan: (session.user as any).plan || 'free',
     },
   };
 };
