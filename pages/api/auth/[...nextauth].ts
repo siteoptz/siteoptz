@@ -308,14 +308,23 @@ async function submitToGHLFormSubmissions(email: string, name: string, qualifyin
 // Helper function to extract plan from GHL contact tags
 function extractPlanFromTags(tags: string[]): string {
   if (!tags || !Array.isArray(tags)) return 'free';
-  
-  const planTag = tags.find(tag => tag.startsWith('siteoptz-plan-'));
-  if (planTag) {
-    const plan = planTag.replace('siteoptz-plan-', '');
-    console.log('📋 Extracted plan from GHL tags:', plan);
-    return plan;
+
+  const tierNames = ['starter', 'pro', 'enterprise'];
+
+  // Try each known plan tag format
+  for (const tag of tags) {
+    for (const tier of tierNames) {
+      if (
+        tag === `siteoptz-plan-${tier}` ||   // siteoptz-plan-starter format (older)
+        tag === `plan-${tier}` ||            // plan-starter format (extractTagsFromPlan in siteoptz-gohighlevel.js)
+        tag === `${tier}-plan`               // starter-plan format (user-management-service.ts)
+      ) {
+        console.log('📋 Extracted plan from GHL tags:', tier);
+        return tier;
+      }
+    }
   }
-  
+
   return 'free';
 }
 
