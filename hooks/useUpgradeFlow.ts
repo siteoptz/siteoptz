@@ -2,6 +2,7 @@ import { useState, useEffect, useCallback } from 'react';
 import { useSession } from 'next-auth/react';
 import { useRouter } from 'next/router';
 import { useStripeCheckout } from './useStripeCheckout';
+import { STRIPE_SUCCESS_URL_PATH } from '@/lib/routing-config';
 
 interface UpgradeFlowState {
   isLoggedIn: boolean;
@@ -160,7 +161,7 @@ export function useUpgradeFlow(): UpgradeFlowState & UpgradeFlowActions {
       await redirectToCheckout({
         plan,
         billingCycle,
-        successUrl: `${window.location.origin}/dashboard?upgraded=true&plan=${plan}`,
+        successUrl: `${window.location.origin}${STRIPE_SUCCESS_URL_PATH}`,
         cancelUrl: `${window.location.origin}/upgrade?canceled=true`,
       });
 

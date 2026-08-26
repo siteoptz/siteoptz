@@ -2,6 +2,7 @@ import { NextApiRequest, NextApiResponse } from 'next';
 import { getServerSession } from 'next-auth';
 import { authOptions } from './auth/[...nextauth]';
 import Stripe from 'stripe';
+import { STRIPE_SUCCESS_URL_PATH } from '@/lib/routing-config';
 
 const stripe = new Stripe(process.env.STRIPE_SECRET_KEY!, {
   apiVersion: '2025-08-27.basil',
@@ -95,7 +96,7 @@ export default async function handler(
         },
       ],
       mode: 'subscription',
-      success_url: successUrl || `${process.env.NEXTAUTH_URL}/dashboard?session_id={CHECKOUT_SESSION_ID}`,
+      success_url: successUrl || `${process.env.NEXTAUTH_URL}${STRIPE_SUCCESS_URL_PATH}`,
       cancel_url: cancelUrl || `${process.env.NEXTAUTH_URL}/upgrade?canceled=true`,
       metadata: {
         plan,

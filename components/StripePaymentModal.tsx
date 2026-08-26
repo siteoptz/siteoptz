@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { useSession } from 'next-auth/react';
 import { useStripeCheckout } from '../hooks/useStripeCheckout';
 import { useUpgradeFlow } from '../hooks/useUpgradeFlow';
+import { STRIPE_SUCCESS_URL_PATH } from '@/lib/routing-config';
 import { 
   X, 
   CreditCard, 
@@ -144,7 +145,7 @@ export default function StripePaymentModal({
       await redirectToCheckout({
         plan,
         billingCycle,
-        successUrl: `${window.location.origin}/dashboard?upgraded=true&plan=${plan}`,
+        successUrl: `${window.location.origin}${STRIPE_SUCCESS_URL_PATH}`,
         cancelUrl: `${window.location.origin}/upgrade?canceled=true`,
       });
       
