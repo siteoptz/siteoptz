@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { useSession } from 'next-auth/react';
 import { useRouter } from 'next/router';
 import { useStripeCheckout } from '../hooks/useStripeCheckout';
+import { STRIPE_SUCCESS_URL_PATH } from '@/lib/routing-config';
 import { 
   CreditCard, 
   User, 
@@ -124,7 +125,7 @@ export default function UpgradeButton({
       await redirectToCheckout({
         plan,
         billingCycle,
-        successUrl: `${window.location.origin}/dashboard?upgraded=true&plan=${plan}`,
+        successUrl: `${window.location.origin}${STRIPE_SUCCESS_URL_PATH}`,
         cancelUrl: `${window.location.origin}/upgrade?canceled=true`,
       });
 

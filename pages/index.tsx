@@ -5,6 +5,7 @@ import { useSession, signIn } from 'next-auth/react';
 import SEOHead from '../components/SEOHead';
 import { useStripeCheckout } from '../hooks/useStripeCheckout';
 import { useUpgradeFlow } from '../hooks/useUpgradeFlow';
+import { STRIPE_SUCCESS_URL_PATH } from '@/lib/routing-config';
 import LoginModal from '../components/LoginModal';
 import RegisterModal from '../components/RegisterModal';
 import SmartSignUpModal from '../components/auth/SmartSignUpModal';
@@ -1039,14 +1040,14 @@ export default function HomePage({}: HomePageProps) {
             await redirectToCheckout({
               plan: 'starter',
               billingCycle,
-              successUrl: `${window.location.origin}/dashboard?upgraded=true&plan=starter`,
+              successUrl: `${window.location.origin}${STRIPE_SUCCESS_URL_PATH}`,
               cancelUrl: `${window.location.origin}/dashboard?canceled=true`,
             });
           } else if (planName.includes('Pro')) {
             await redirectToCheckout({
               plan: 'pro',
               billingCycle,
-              successUrl: `${window.location.origin}/dashboard?upgraded=true&plan=pro`,
+              successUrl: `${window.location.origin}${STRIPE_SUCCESS_URL_PATH}`,
               cancelUrl: `${window.location.origin}/dashboard?canceled=true`,
             });
           }

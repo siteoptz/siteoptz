@@ -5,6 +5,7 @@ import Head from 'next/head';
 import { useStripeCheckout } from '../hooks/useStripeCheckout';
 import { useUpgradeFlow } from '../hooks/useUpgradeFlow';
 import { useUserPlan } from '../hooks/useUserPlan';
+import { STRIPE_SUCCESS_URL_PATH } from '@/lib/routing-config';
 import StripePaymentModal from '../components/StripePaymentModal';
 import { StartFreeTrialButton, Start7DayTrialButton } from '@/components/TrialButton';
 import Link from 'next/link';
@@ -270,7 +271,7 @@ const UpgradePage: React.FC = () => {
           body: JSON.stringify({
             plan: 'enterprise',
             billingCycle: billingCycle,
-            successUrl: `${window.location.origin}/dashboard/compliance?upgrade=success`,
+            successUrl: `${window.location.origin}${STRIPE_SUCCESS_URL_PATH}`,
             cancelUrl: `${window.location.origin}/upgrade?canceled=true`,
           }),
         });
@@ -1061,7 +1062,7 @@ const UpgradePage: React.FC = () => {
             completeUpgrade(plan);
             console.log(`Successfully upgraded to ${plan}`);
             // Redirect to dashboard or show success message
-            router.push('/dashboard?upgraded=true');
+            router.push(STRIPE_SUCCESS_URL_PATH);
           }}
           onError={(error) => {
             console.error(`Payment error: ${error}`);
