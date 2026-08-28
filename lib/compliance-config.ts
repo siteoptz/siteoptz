@@ -187,6 +187,32 @@ export const COMPLIANCE_DOCUMENTS: ComplianceDocument[] = [
     ],
     appendixSummary: 'Plus: Framework Mapping, Notification Templates, Incident Log, 3 Tabletop Scenarios',
   },
+  {
+    id: 'data_governance',
+    title: 'AI Data Governance Policy',
+    description: 'The full policy that governs how your company handles data flowing to AI systems — classification, vendor rules, lifecycle, subject rights, and enforcement. Aligned to NIST AI RMF, ISO 42001, and EU AI Act.',
+    meta: 'Policy · ~7,700 words · 6 appendices',
+    access: 'locked',
+    downloadUrl: '/api/compliance/download-paid?doc=data_governance',
+    requiredTier: 'starter',
+    previewSections: [
+      { heading: 'Purpose & Scope', valueProp: 'tiered governance intensity based on data risk, not blanket rules' },
+      { heading: 'Definitions', valueProp: '14 terms including AI Agent, Model Memorization, Controller/Processor with practical framing' },
+      { heading: 'Roles & Responsibilities', valueProp: 'Data Governance Lead, System Owners, Data Stewards, Security, Legal — sized for Series A-B' },
+      { heading: 'Data Classification for AI Use', valueProp: '5-tier framework (Public → Regulated) with clear rules per tier' },
+      { heading: 'Determining Whether a Provider Trains on Customer Data', valueProp: 'how to actually verify per provider, not assume' },
+      { heading: 'Approved AI Systems & Vendors', valueProp: 'approval workflow, vendor requirements, prohibited uses with near-miss examples' },
+      { heading: 'Exception Process', valueProp: 'documented path for edge cases so exceptions don\'t become shadow AI' },
+      { heading: 'Shadow AI Discovery', valueProp: 'detection methods framed as coaching, not punishment' },
+      { heading: 'Data Lifecycle Management', valueProp: 'collection, storage, use, retention, deletion, cross-border transfer including DPF' },
+      { heading: 'Training Data Governance', valueProp: 'permitted sources, prohibited sources with copyright/TOS legal callout, quality and bias review' },
+      { heading: 'Third-Party AI Provider Management', valueProp: 'contract requirements, DPA baseline, provider baseline maintenance (no aging vendor claims)' },
+      { heading: 'Data Subject Rights', valueProp: 'access, erasure, objection, automated decision-making across GDPR, EU AI Act, Colorado AI Act, sector guidance' },
+      { heading: 'Incident Response for Data Issues', valueProp: 'AI-specific incident triggers linked to your Incident Response Plan' },
+      { heading: 'Monitoring, Training, Enforcement', valueProp: 'practical minimums for smaller teams; graduated response to violations as learning culture' },
+    ],
+    appendixSummary: 'Plus: RACI Matrix, Classification Decision Tree, Vendor Approval Checklist, DPA Negotiation Topics, DSR Response Template, Tiered Audit Checklist',
+  },
 ];
 
 export const FRAMEWORK_TAGS_BY_CATEGORY: Record<string, string[]> = {
