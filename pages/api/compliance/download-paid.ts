@@ -13,6 +13,7 @@ const DOC_FILENAMES: Record<string, string> = {
   inventory: 'ai-tool-inventory-paid.docx',
   risk_register: 'ai-risk-register-paid.docx',
   incident_plan: 'ai-incident-response-plan-paid.docx',
+  data_governance: 'ai-data-governance-policy-paid.docx',
 };
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {

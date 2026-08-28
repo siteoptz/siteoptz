@@ -48,3 +48,6 @@ Thumbs.db.env.local
 sendgrid.env
 .env.vercel
 .env
+
+# Word/Office lock files
+~$*
