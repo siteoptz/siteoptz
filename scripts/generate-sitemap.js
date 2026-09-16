@@ -529,8 +529,12 @@ Sitemap: ${this.baseUrl}/sitemap.xml
 # Disallow admin areas (if any)
 Disallow: /admin/
 Disallow: /api/
-Disallow: /_next/
 Disallow: /scripts/
+
+# Explicitly allow Next.js build assets (JS, CSS, optimized images)
+# These are required for Google to render and index pages correctly
+Allow: /_next/static/
+Allow: /_next/image
 
 # Allow important pages
 Allow: /tools/
