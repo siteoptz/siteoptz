@@ -187,6 +187,10 @@ export default function SendibleReviewPage() {
         {/* Schema Markup */}
         <script
           type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(softwareSchema) }}
+        />
+        <script
+          type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(reviewSchema) }}
         />
         <script
